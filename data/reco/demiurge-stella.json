@@ -1,0 +1,56 @@
+{
+  "Counter": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Counterattack", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>HP",
+    "Note": "PvP:Vanguard's Charm3Mage's Charm2\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Rogue's Charm",
+      "Executioner's Charm",
+      "Vanguard's Charm",
+      "Mage's Charm"  
+    ]
+  },
+  "Revenge": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Revenge", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>HP",
+    "Note": "PvP:Vanguard's Charm3Mage's Charm2\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Rogue's Charm",
+      "Executioner's Charm",
+      "Vanguard's Charm",
+      "Mage's Charm"  
+    ]
+  }
+}

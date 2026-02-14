@@ -1,0 +1,400 @@
+{
+  "ID": "2000046",
+  "Fullname": "Rico",
+  "Fullname_jp": "リコ",
+  "Fullname_kr": "리코",
+  "Fullname_zh": "黎可",
+  "Rarity": 1,
+  "Element": "Earth",
+  "Class": "Ranger",
+  "SubClass": "Tactician",
+  "rank": "D",
+  "role": "support",
+  "skill_priority": {
+    "First": {
+      "prio": 2
+    },
+    "Second": {
+      "prio": 3
+    },
+    "Ultimate": {
+      "prio": 1
+    }
+  },
+  "Chain_Type": "Join",
+  "gift": "Luxury",
+  "VoiceActor": "VA. Faye Mata",
+  "VoiceActor_jp": "CV. 結木梢",
+  "VoiceActor_kr": "CV. 윤은서",
+  "VoiceActor_zh": "CV. 结木梢",
+  "transcend": {
+    "1": null,
+    "2": "ATK DEF HP +5%",
+    "2_jp": "ATK DEF HP +5%",
+    "2_kr": "ATK DEF HP +5%",
+    "2_zh": "ATK DEF HP +5%",
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4": "ATK DEF HP +16%\n+2% Accuracy\n+1 Chain Passive Weakness Gauge damage",
+    "4_jp": "ATK DEF HP +16%\n命中+2%\nチェーンパッシブのWGダメージ+1",
+    "4_kr": "ATK DEF HP +16%\n명중 +2%\n체인 패시브의 WG 감소량 +1",
+    "4_zh": "ATK DEF HP +16%\n命中+2%\n连携被动技能的WG降低量+1",
+    "5": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "6": "ATK DEF HP +30%\n+2% Accuracy\n+25 Action Points at battle start",
+    "6_jp": "ATK DEF HP +30%\n命中+2%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n명중 +2%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n命中+2%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "4601",
+      "IconName": "Skill_First_2000046",
+      "SkillType": "SKT_FIRST",
+      "name": "Investment Shot",
+      "name_jp": "財テクショット",
+      "name_kr": "재테크 샷",
+      "name_zh": "投资射击",
+      "true_desc": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to increase the target's <color=#28d9ed>Ultimate Skill cooldown</color> by <color=#28d9ed>1 turn</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>10%</color>の確率で対象の<color=#28d9ed>必殺スキルのターン</color>を<color=#28d9ed>1ターン</color>増加させる。",
+      "true_desc_kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상의 <color=#28d9ed>필살기 쿨타임</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+      "true_desc_zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标的<color=#28d9ed>必杀技冷却时间</color>减少<color=#28d9ed>1回合</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+10% effect chance"
+        ],
+        "5_jp": [
+          "効果発生率+10%"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "5_zh": [
+          "效果触发几率+10%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [],
+      "debuff": [
+        "BT_COOL3_CHARGE"
+      ],
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "4602",
+      "IconName": "Skill_Second_2000046",
+      "SkillType": "SKT_SECOND",
+      "name": "Financial Therapy",
+      "name_jp": "お金みーっけ♪",
+      "name_kr": "금융 치료",
+      "name_zh": "金融治疗",
+      "true_desc": "Heals the caster's Health by <color=#28d9ed>50%</color>.",
+      "true_desc_jp": "自分のHPを<color=#28d9ed>50%</color>回復する。",
+      "true_desc_kr": "자신의 체력을 <color=#28d9ed>50%</color> 회복합니다.",
+      "true_desc_zh": "使自身的生命值恢复<color=#28d9ed>50%</color>。",
+      "enhancement": {
+        "2": [
+          "+2 turns Increased Accuracy duration"
+        ],
+        "2_jp": [
+          "スキル使用時、命中UP+2ターン"
+        ],
+        "2_kr": [
+          "스킬 사용 시 명중 증가 +2턴"
+        ],
+        "2_zh": [
+          "使用技能时命中提升+2回合"
+        ],
+        "3": [
+          "Increases Effectiveness Chance +15%"
+        ],
+        "3_jp": [
+          "効果命中発動確率増加+15%"
+        ],
+        "3_kr": [
+          "효과 적중 발동 확률 증가 +15%"
+        ],
+        "3_zh": [
+          "效果命中发动概率提升+15%"
+        ],
+        "4": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_zh": [
+          "冷却时间-1回合"
+        ],
+        "5": [
+          "Increases Effectiveness Chance +20%"
+        ],
+        "5_jp": [
+          "効果命中発動確率増加+20%"
+        ],
+        "5_kr": [
+          "효과 적중 발동 확률 증가 +20%"
+        ],
+        "5_zh": [
+          "效果命中发动概率提升+20%"
+        ]
+      },
+      "cd": "4",
+      "wgr": 4,
+      "buff": [
+        "BT_HEAL_BASED_TARGET",
+        "BT_STAT|ST_BUFF_CHANCE"
+      ],
+      "debuff": [],
+      "offensive": false,
+      "target": "mono"
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "4603",
+      "IconName": "Skill_Ultimate_2000046",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Settling the Balance",
+      "name_jp": "お会計の時間でーす♪",
+      "name_kr": "잔금 처리",
+      "name_zh": "交付尾款",
+      "true_desc": "Attacks an enemy and has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>85%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+      "true_desc_kr": "적을 공격하고 <color=#28d9ed>85%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+      "true_desc_zh": "攻击敌人,并有<color=#28d9ed>85%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+20% damage"
+        ],
+        "4_jp": [
+          "ダメージ+20%"
+        ],
+        "4_kr": [
+          "피해량 +20%"
+        ],
+        "4_zh": [
+          "伤害量+20%"
+        ],
+        "5": [
+          "+15% effect chance",
+          "-1 turn Skill Cooldown"
+        ],
+        "5_jp": [
+          "効果発生率+15%",
+          "スキルターン-1ターン"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +15%",
+          "스킬 쿨타임 -1턴"
+        ],
+        "5_zh": [
+          "效果触发几率+15%",
+          "冷却时间-1回合"
+        ]
+      },
+      "cd": "5",
+      "wgr": 2,
+      "buff": [
+        "BT_STAT|ST_BUFF_CHANCE"
+      ],
+      "debuff": [
+        "BT_STUN"
+      ],
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "Increases Effectiveness Increase by +1 turn after attacking",
+          "effect_jp": "攻撃後、効果命中UP+1ターン",
+          "effect_kr": "공격 후 효과 적중 증가 +1턴",
+          "effect_zh": "攻击后,效果命中提升+1回合",
+          "cost": 60,
+          "level": 1,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_2": {
+          "effect": "Increases Effectiveness Increase duration by +1 turn",
+          "effect_jp": "効果命中UP+1ターン",
+          "effect_kr": "효과 적중 증가 지속 +1턴",
+          "effect_zh": "效果命中提升+1回合",
+          "cost": 90,
+          "level": 2,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_3": {
+          "effect": "Changes to Increases Effectiveness Increase duration before attacking",
+          "effect_jp": "攻撃前、効果命中UPに変更",
+          "effect_kr": "공격 전 효과 적중 증가로 변경",
+          "effect_zh": "攻击前变更为效果命中提升",
+          "cost": 120,
+          "level": 3,
+          "offensive": true,
+          "target": "mono"
+        }
+      },
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "4604",
+      "IconName": "Skill_ChainPassive_Earth_Join",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>20%</color> chance to remove <color=#28d9ed>2</color> <color=#28d9ed>buff(s)</color> from the target.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、APを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>20%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2個</color>解除する。",
+      "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>20%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제합니다.",
+      "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>20%</color>的几率解除目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>。",
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_AP_CHARGE"
+      ],
+      "debuff": [],
+      "dual_debuff": [
+        "BT_REMOVE_BUFF"
+      ],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono"
+    }
+  }
+}

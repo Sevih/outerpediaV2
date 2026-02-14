@@ -1,0 +1,143 @@
+{
+  "id": "4176132",
+  "Name": {
+    "en": "Knight of Hope Meteos",
+    "kr": "광명의 기사 메테우스",
+    "jp": "光明の騎士・メテウス",
+    "zh": "光明骑士梅修斯"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 25,
+  "icons": "4076102",
+  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Defeat Knight of Hope Normal",
+      "kr": "광명의 기사 처치 일반",
+      "jp": "光明の騎士討伐(ノーマル)",
+      "zh": "击杀光明骑士普通"
+    },
+    "mode": {
+      "en": "Joint Challenge",
+      "kr": "합동 챌린지",
+      "jp": "共同作戦",
+      "zh": "联合挑战"
+    },
+    "area_id": {
+      "en": "90500000",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Lead Me to the Enemy...",
+        "kr": "적은 어디냐...",
+        "jp": "敵はどこだ...",
+        "zh": "敌人在哪里......"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Prioritizes attacking the <color=#28d9ed>leftmost</color> enemy.",
+        "kr": "가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다.",
+        "jp": "一番<color=#28d9ed>左側</color>にいる敵を優先的に攻撃する。",
+        "zh": "优先攻击处于最<color=#28d9ed>左侧</color>的敌人。"
+      },
+      "icon": "Skill_First_4176002"
+    },
+    {
+      "name": {
+        "en": "You Must be the Enemy...",
+        "kr": "네가 적인가...",
+        "jp": "オマエが敵か...",
+        "zh": "敌人就是你吗......"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\nIncreases damage of this attack inversely proportional to the number of targets.",
+        "kr": "적 전체를 공격합니다.\\n이 공격은 대상이 적을 수록 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与える。\\nこの攻撃は対象の数が少ないほど、ダメージがUPする。",
+        "zh": "攻击全体敌人。\\n该攻击目标越少,则伤害越高。"
+      },
+      "icon": "Skill_Second_4176002"
+    },
+    {
+      "name": {
+        "en": "Protect the Royal Family...",
+        "kr": "왕가를 지킨다...",
+        "jp": "王家を守る...",
+        "zh": "必须守护王室......"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Triggered Effect) When an enemy is killed by <color=#28d9ed>Lead Me to the Enemy.../You Must be the Enemy...</color>, or when attacking a non-<color=#28d9ed>Mage</color> target with <color=#28d9ed>Lead Me to the Enemy...</color>, attacks all enemies.\\nThis attack ignores the target's Defense by <color=#28d9ed>100%</color>.",
+        "kr": "(발동 효과) <color=#28d9ed>적은 어디냐... / 네가 적인가...</color>로 적을 처치하거나, <color=#28d9ed>적은 어디냐...</color>의 공격 대상이 <color=#28d9ed>마법형</color>이 아닐 경우 적 전체에게 공격합니다.\\n이 공격은 대상의 방어력을 <color=#28d9ed>100%</color> 무시합니다.",
+        "jp": "(発動効果)<color=#28d9ed>【敵はどこだ...】/【オマエが敵か...】</color>で敵を倒した場合、または<color=#28d9ed>【敵はどこだ...】</color>で攻撃した対象が<color=#28d9ed>魔法型</color>以外の場合、敵全体にダメージを与える。\\nこの攻撃は対象の防御力を<color=#28d9ed>100%</color>無視する。",
+        "zh": "(触发效果)使用<color=#28d9ed>敌人在哪里....../敌人就是你吗......</color>击杀敌人,或者<color=#28d9ed>敌人在哪里......</color>的攻击目标为非<color=#28d9ed>魔法型</color>时,攻击全体敌人。\\n该攻击无视目标防御力的<color=#28d9ed>100%</color>。"
+      },
+      "icon": "Skill_Ultimate_4176002"
+    },
+    {
+      "name": {
+        "en": "Oath of Meteos",
+        "kr": "메테우스의 맹세",
+        "jp": "メテウスの誓い",
+        "zh": "梅修斯的誓言"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nLight enemies gain <color=#28d9ed>40%</color> increased <color=#28d9ed>Penetration</color>. (Permanent)\\nIncreases the Priority Increase efficiency of all enemies by <color=#28d9ed>100%</color>, but reduces their <color=#28d9ed>Speed</color> by <color=#28d9ed>50%</color>.\\nEnemies that use non-attack skills take <color=#28d9ed>100%</color> increased Critical Damage. (Max 3 stacks)\\nIncreases the caster's Defense by <color=#28d9ed>500</color> each turn, but resets upon being inflicted with <color=#28d9ed>Break</color>.\\nDamage taken from Curse and Fixed Damage does not exceed <color=#28d9ed>10000</color> respectively.",
+        "kr": "(패시브 효과)\\n명속성 적은 <color=#28d9ed>관통력</color>이 <color=#28d9ed>40%</color> 증가합니다. (영구 지속)\\n적 전체의 행동 게이지 증가 효율을 <color=#28d9ed>100%</color> 증가시키는 대신 <color=#28d9ed>속도</color>가 <color=#28d9ed>50%</color> 감소합니다.\\n공격이 아닌 스킬을 사용한 적은 치명 피해가 <color=#28d9ed>100%</color> 증가합니다. (최대 3회 누적)\\n매 턴 자신의 방어력이 <color=#28d9ed>500</color> 증가하지만, <color=#28d9ed>브레이크 시</color> 초기화 됩니다.\\n저주 및 고정 피해로 받는 피해는 각각 <color=#28d9ed>10000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\n光属性の敵は<color=#28d9ed>貫通力</color>が<color=#28d9ed>40%</color>UPする。(永続効果)\\n敵全体の行動ゲージUPの効率を<color=#28d9ed>100%</color>UPさせる代わりに、<color=#28d9ed>スピード</color>を<color=#28d9ed>50%</color>DOWNさせる。\\n攻撃以外のスキルを使用した敵は会心ダメージが<color=#28d9ed>100%</color>UPする。(最大3回まで累積)\\n毎ターン、自分の防御力が<color=#28d9ed>500</color>UPするが、<color=#28d9ed>ブレイク時</color>リセットされる。\\n呪い/固定ダメージで受けるダメージはそれぞれ<color=#28d9ed>10000</color>を超えない。",
+        "zh": "(被动效果)\\n光属性敌人的<color=#28d9ed>穿透力</color>提升<color=#28d9ed>40%</color>。(永久持续)\\n使全体敌人的行动值提升效率提升<color=#28d9ed>100%</color>,但<color=#28d9ed>速度</color>降低<color=#28d9ed>50%</color>。\\n使用非攻击类技能的敌人造成的暴击伤害提升<color=#28d9ed>100%</color>。(最多可叠加3次)\\n每回合自身防御力提升<color=#28d9ed>500</color>,<color=#28d9ed>力竭时</color>重置。\\n因诅咒和固定伤害而所受伤害分别不超过<color=#28d9ed>10000</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Every 4 turns, becomes <color=#28d9ed>Enraged</color>.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable Attack Up / Damage Reduction effect to the caster for 3 turns, and recovers WG by 30%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>I Offer My Life...</color>: Used when Enraged ends.\\nRemoves all <color=#28d9ed>buffs</color> from all enemies, then deals lethal damage. Enemies killed by this attack cannot be Resurrected or Revived.",
+        "kr": "4턴마다<color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>이 목숨을 바쳐서......</color> : 광폭화 종료 시 사용.\\n적 전체의 강화 효과를 해제 후, 치명적인 피해를 입힙니다. 해당 공격에 피해를 받아 사망 시 부활 및 소생 효과가 발생하지 않습니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを30%回復する。狂暴化は3ターン持続する。\\n\\n<color=#28d9ed>この命にかけて......</color>:狂暴化終了時に使用する。\\n敵全体の<color=#28d9ed>強化効果</color>を解除した後、致命的なダメージを与える。この攻撃で倒れた敵は復活・蘇生できない。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合,并恢复WG 30%。狂暴化持续3回合。\\n\\n<color=#28d9ed>献身之志......</color>:狂暴化结束时发动。\\n解除全体敌人的<color=#28d9ed>强化效果</color>后造成致命伤害。因该攻击死亡的敌人无法触发复活或再生效果。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED_RESURRECTION"
+      ]
+    },
+    {
+      "name": {
+        "en": "I Offer My Life...",
+        "kr": "이 목숨을 바쳐서......",
+        "jp": "この命を捧げて......",
+        "zh": "献身之志......"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "50000005",
+  "Name": {
+    "en": "Vlada",
+    "kr": "블라다",
+    "jp": "ヴラダ",
+    "zh": "布拉达"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 100,
+  "icons": "2000073",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "First-Rate Adventurer Promotion Challenge",
+      "kr": "일류 모험가 승급 챌린지",
+      "jp": "一流冒険者昇級チャレンジ",
+      "zh": "一流冒险家晋升挑战"
+    },
+    "mode": {
+      "en": "Challenge",
+      "kr": "도전",
+      "jp": "チャレンジ",
+      "zh": "挑战"
+    },
+    "area_id": {
+      "en": "70600102",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ballad of a Soldier",
+        "kr": "병사의 시",
+        "jp": "兵士の詩",
+        "zh": "战士之诗"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and inflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>4 turn(s)</color>. This effect cannot be removed.",
+        "kr": "적을 공격하고 대상에게 <color=#28d9ed>4턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다. 이 효과는 해제되지 않습니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>4ターン</color>の間付与する。この効果は解除されない。",
+        "zh": "攻击敌人,并对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>4回合</color>。该效果不会被解除。"
+      },
+      "icon": "Skill_First_2000073",
+      "debuff":["IG_Buff_Dot_Burn_Interruption_D"]
+    },
+    {
+      "name": {
+        "en": "Paths of Glory",
+        "kr": "영광의 길",
+        "jp": "栄光への道",
+        "zh": "荣耀之路"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. Detonates all Burned stacks on the target, and increases damage dealt by detonation by <color=#28d9ed>100%</color>.",
+        "kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>100%</color>UPする。",
+        "zh": "攻击全体敌人。使目标的所有烧伤爆发,且因爆发造成的伤害提升<color=#28d9ed>100%</color>。"
+      },
+      "icon": "Skill_Second_2000073",
+      "debuff":["BT_IMMEDIATELY_2000092"]
+    },
+    {
+      "name": {
+        "en": "Apocalypse Now",
+        "kr": "지옥의 묵시록",
+        "jp": "地獄の黙示録",
+        "zh": "地狱启示录"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, then attacks.\\nAfter attacking, inflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>4 turn(s)</color>. This effect cannot be removed.",
+        "kr": "적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제 후 공격합니다.\\n공격 후 대상에게 <color=#28d9ed>4턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다. 이 효과는 해제되지 않습니다.",
+        "jp": "敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除した後、敵全体にダメージを与える。\\n攻撃後、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>4ターン</color>の間付与する。この効果は解除されない。",
+        "zh": "解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>后发动攻击。\\n攻击后,对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>4回合</color>。该效果不会被解除。"
+      },
+      "icon": "Skill_Ultimate_2000073",
+      "debuff":["BT_REMOVE_BUFF","IG_Buff_Dot_Burn_Interruption_D"]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "51100002-2",
+  "Name": {
+    "en": "Irregular Machine Gun",
+    "kr": "이레귤러 기관총",
+    "jp": "イレギュラー・機関銃",
+    "zh": "机关枪异型怪"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Fire",
+  "level": 130,
+  "icons": "4011072",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Iron Stretcher (Very Hard)",
+      "kr": "아이언 스트래쳐 (베리 하드)",
+      "jp": "アイアンストレッチャー(ベリーハード)",
+      "zh": "钢铁伸展者 (极难)"
+    },
+    "mode": {
+      "en": "Pursuit Operation",
+      "kr": "추격 섬멸전",
+      "jp": "追撃殲滅戦",
+      "zh": "追击歼灭战"
+    },
+    "area_id": {
+      "en": "72000003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Close-Range Shot",
+        "kr": "초근접 사격",
+        "jp": "超接近射撃",
+        "zh": "超近射击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>화상</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Arrow_1_Fire",
+      "debuff":["BT_DOT_BURN"]
+    }
+  ]
+}

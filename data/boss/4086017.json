@@ -1,0 +1,145 @@
+{
+  "id": "4086017",
+  "Name": {
+    "en": "Walking Fortress Vault Venion",
+    "kr": "보행요새 발트베니온",
+    "jp": "歩行要塞バルトベニオン",
+    "zh": "移动要塞瓦尔特贝尼翁"
+  },
+  "Surname": {
+    "en": "Pioneer's Will",
+    "kr": "개척의 의지",
+    "jp": "開拓の意志",
+    "zh": "开拓的意志"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 80,
+  "icons": "4086013",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE",
+  "StatBuffImmune": "ST_DEF",
+  "location": {
+    "dungeon": {
+      "en": "Extreme League",
+      "kr": "익스트림 리그",
+      "jp": "エクストリームリーグ",
+      "zh": "极限联赛"
+    },
+    "mode": {
+      "en": "World Boss",
+      "kr": "월드 보스",
+      "jp": "ワールドボス",
+      "zh": "世界首领"
+    },
+    "area_id": {
+      "en": "55200104",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Trailblazing",
+        "kr": "험로 개척",
+        "jp": "険路開拓",
+        "zh": "开辟险路"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nPrioritizes the enemy on the far <color=#28d9ed>left</color>. During this attack, <color=#28d9ed>Penetration</color> increases by <color=#28d9ed>30%</color>.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다. 해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.",
+        "jp": "敵単体にダメージを与える。\\n<color=#28d9ed>最も左側</color>の敵を優先して攻撃する。該当攻撃時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>30%</color>上昇する。",
+        "zh": "攻击敌人。\\n优先攻击<color=#28d9ed>最左侧</color>的敌人。该次攻击<color=#28d9ed>穿透力</color>提高<color=#28d9ed>30%</color>。"
+      },
+      "icon": "Skill_First_4086013"
+    },
+    {
+      "name": {
+        "en": "Ground Blast",
+        "kr": "대지 발파",
+        "jp": "大地発破",
+        "zh": "爆破大地"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and grants 【Environmental Change Response】 or 【Weather Variable Response】 effect for <color=#28d9ed>3 turn(s)</color>.\\n\\nThe effect already granted when attacking will not be applied, and effects will not be removed when inflicted with Break.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color> 동안 유지되는 【환경 변화 대응】 혹은 【기상 변수 대응】 효과를 획득 합니다.\\n\\n공격 시 보유중인 효과는 발생하지 않으며, 브레이크 시 해제되지 않습니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>3ターン</color>の間【環境変更対応】または【気象変数対応】効果を獲得する。\\n\\n攻撃時、付与されている効果は発動されず、ブレイク時に解除されない。",
+        "zh": "攻击全体敌人,并获得【应对环境变化】或【应对气象变数】效果,持续<color=#28d9ed>3回合</color>。\\n\\n攻击时不会触发已附带的效果,力竭时不会被解除。"
+      },
+      "icon": "Skill_Second_4086013",
+      "buff":["UNIQUE_VENION_B","UNIQUE_VENION_A"]
+    },
+    {
+      "name": {
+        "en": "MG-102 Pioneer Cannon",
+        "kr": "MG-102 개척포",
+        "jp": "MG-102開拓砲",
+        "zh": "MG-102开拓炮"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. This attack penetrates <color=#28d9ed>30%</color> of the target's Defense.\\nAccording to the unique effect granted, the following effects will be applied:\\n\\n【Environmental Change Response】: Increases Priority of Fire/Water/Earth enemies by only <color=#28d9ed>80%</color>.\\n\\n【Weather Variable Response】: Increases Priority of Light/Dark enemies by only <color=#28d9ed>80%</color>.",
+        "kr": "적 전체를 공격합니다. 해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.\\n보유한 고유 효과에 따라 이하의 효과가 적용됩니다.\\n\\n【환경 변화 대응】 : 화/수/지속성 적의 행동 게이지는 <color=#28d9ed>80%</color>만 회복 됩니다. \\n\\n【기상 변수 대응】 : 명/암속성 적의 행동 게이지는 <color=#28d9ed>80%</color>만 회복 됩니다.",
+        "jp": "敵全体にダメージを与える。このスキルは、貫通力が<color=#28d9ed>30%</color>UPする。\\n自分に【環境変更対応】または【気象変数対応】がある場合、次の効果が発動する。\\n\\n【環境変更対応】:敵が火・水・地属性の場合、対象は行動ゲージを<color=#28d9ed>80%</color>のみ回復する。\\n\\n【気象変数対応】:敵が光・闇属性の場合、対象は行動ゲージを<color=#28d9ed>80%</color>のみ回復する。",
+        "zh": "攻击全体敌人。发动该攻击时穿透力提升\\n<color=#28d9ed>30%</color>。\\n根据附带的固有效果触发以下效果。\\n\\n【应对环境变化】:火属性/水属性/土属性敌人的行动值仅恢复<color=#28d9ed>80%</color>。\\n\\n【应对气象变数】:光属性/暗属性敌人的行动值仅恢复<color=#28d9ed>80%</color>。"
+      },
+      "icon": "Skill_Ultimate_4086013",
+      "buff":["BT_ACTION_GAUGE"]
+    },
+    {
+      "name": {
+        "en": "Defense System (Error)",
+        "kr": "방어 시스템(오류)",
+        "jp": "防衛システム(エラー)",
+        "zh": "防御系统(错误)"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)Takes increased damage from Fire-, Water-, and Earth-attribute enemies, and enemies always attack with a <color=#28d9ed>favorable attribute</color>.\\n\\nAll enemies' Speed becomes <color=#28d9ed>0</color>, and they are afflicted with <color=#28d9ed>Extra Skill Disabled</color> and <color=#28d9ed>Extra Turn Disabled</color> (permanent).\\nAfter your attack, increases all enemies' Priority by <color=#28d9ed>100%</color> (may be limited to <color=#28d9ed>80%</color> under certain conditions).\\n\\nDamage from <color=#28d9ed>Cursed/Fixed Damage</color> cannot exceed <color=#28d9ed>10000</color>/<color=#28d9ed>20000</color> respectively. However, <color=#28d9ed>Fixed Damage</color> received from <color=#28d9ed>Skill Chains</color> can be up to <color=#28d9ed>50000</color>.",
+        "kr": "(패시브 효과)화속성, 수속성, 지속성 적에게 받는 피해가 증가하고, 적은 항상 유리한 상성으로 공격합니다.\\n\\n적 전체의 속도는 <color=#28d9ed>0</color>이 되고, <color=#28d9ed>추가 스킬 봉인</color>과 <color=#28d9ed>추가 턴 봉인</color>이 부여됩니다. (영구 지속)\\n자신의 공격 후 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 증가 시킵니다. 단, 조건에 따라 <color=#28d9ed>80%</color>만 증가할 수 있습니다.\\n\\n<color=#28d9ed>저주/고정 피해</color>의 피해는 각각 <color=#28d9ed>10000/20000</color>을 초과하지 않습니다.\\n단, <color=#28d9ed>스킬 체인</color>으로 받는 <color=#28d9ed>고정 피해</color>는 최대 <color=#28d9ed>50000</color>까지 피해를 입을 수 있습니다.",
+        "jp": "(パッシブ効果)<color=#28d9ed>火/水/地属性</color>の敵から受けるダメージが増加し、敵は常に<color=#28d9ed>有利属性</color>で攻撃する。\\n\\n敵全体のスピードは<color=#28d9ed>0</color>となり、<color=#28d9ed>追加スキル封印</color>と<color=#28d9ed>追加ターン封印</color>が付与されます(永続)。\\n自分の攻撃後、敵全体の行動ゲージを<color=#28d9ed>100%</color>増加させます(条件により<color=#28d9ed>80%</color>まで)。\\n\\n<color=#28d9ed>呪い/固定ダメージ</color>はそれぞれ<color=#28d9ed>10000/20000</color>を超えません。なお、<color=#28d9ed>チェーンスキル</color>による<color=#28d9ed>固定ダメージ</color>は最大<color=#28d9ed>50000</color>まで受けます。",
+        "zh": "(被动效果)来自<color=#28d9ed>火/水/土</color>属性敌人的伤害提高,且敌人攻击时始终具有<color=#28d9ed>属性优势</color>。\\n\\n敌方全体速度变为<color=#28d9ed>0</color>,并获得<color=#28d9ed>额外技能封印</color>与<color=#28d9ed>额外回合封印</color>(永久)。\\n自身攻击后,使敌方全体行动值增加<color=#28d9ed>100%</color>(在特定条件下仅增加至<color=#28d9ed>80%</color>)。\\n\\n来自<color=#28d9ed>诅咒/固定伤害</color>的伤害上限分别为<color=#28d9ed>10000</color>/<color=#28d9ed>20000</color>。但由<color=#28d9ed>连携技能</color>造成的<color=#28d9ed>固定伤害</color>上限为<color=#28d9ed>50000</color>。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "debuff":["BT_SEAL_ADDITIVE_ATTACK_IR","BT_SEAL_ADDITIVE_TURN_IR"],
+      "buff":["BT_ACTION_GAUGE"]
+    },
+    {
+      "name": {
+        "en": "Challenger's Spirit",
+        "kr": "도전자의 기백",
+        "jp": "挑戦者の気迫",
+        "zh": "挑战者的气魄"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)The enemy team gains courage against despair, receiving <color=#28d9ed>special effects</color> based on their roles.\\n\\nStriker: +60% Critical Damage to all allies per Striker ally\\nMage: +15% ATK to all allies per Mage ally\\nDefender: On action, heals all allies by +3% HP\\nRanger: On action, grants all allies a Shield for 2 turns\\nHealer: On action, reduces the boss's WG by 2\\n\\nEnemy team's Skill Chain damage increases per ally of the same attribute.\\nWG damage taken from <color=#28d9ed>Assist</color> and <color=#28d9ed>Skill Chains</color> is reduced by <color=#28d9ed>100%</color>.",
+        "kr": "(패시브 효과) 적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격형 동료 한 명당 아군 전체의 치명 피해 +60% \\n마법형 : 마법형 동료 한 명당 아군 전체의 공격력 +15% \\n방어형 : 행동 시 아군 전체의 +3% 체력 회복\\n속도형 : 행동 시 아군 전체에게 2턴 동안 실드 부여\\n회복형 : 행동 시 보스의 WG 2 감소 \\n\\n적 팀은 동일 속성 동료 한 명당 스킬 체인 피해량이 증가합니다.\\n<color=#28d9ed>협공</color> 및 <color=#28d9ed>스킬 체인</color>으로 받는 WG 피해량이 <color=#28d9ed>100%</color> 감소합니다.",
+        "jp": "(パッシブ効果)敵チームは絶望に立ち向かう勇気を得て、職業に応じた<color=#28d9ed>特別な効果</color>を獲得する。\\n\\n攻撃型:攻撃型の味方1人につき味方全体の会心ダメージ+60%\\n魔法型:魔法型の味方1人につき味方全体の攻撃力+15%\\n防御型:行動時、味方全体を+3%回復\\nスピード型:行動時、味方全体に2ターンのシールド付与\\n回復型:行動時、ボスのWGを2減少\\n\\n敵チームは同一属性の味方1人ごとにチェーンスキルのダメージが増加する。\\n<color=#28d9ed>連携</color>および<color=#28d9ed>チェーンスキル</color>から受けるWGダメージは<color=#28d9ed>100%</color>減少する。",
+        "zh": "(被动效果)敌方队伍获得对抗绝望的勇气,并根据其职业获得<color=#28d9ed>特殊效果</color>。\\n\\n攻击型:每名攻击型友方使我方全体暴击伤害+60%\\n魔法型:每名魔法型友方使我方全体攻击力+15%\\n防御型:行动时,为我方全体回复+3%生命\\n速度型:行动时,为我方全体赋予2回合护盾\\n治疗型:行动时,使首领怪物的WG降低2\\n\\n敌方队伍每名相同属性的队员都会提高其连携技能伤害。\\n来自<color=#28d9ed>协同</color>与<color=#28d9ed>连携技能</color>的WG伤害<color=#28d9ed>100%</color>减少。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff":["UNIQUE_VENION_C"]
+    },
+    {
+      "name": {
+        "en": "Quasar Bombardment",
+        "kr": "퀘이사 포격",
+        "jp": "クエーサー砲撃",
+        "zh": "类星体炮击"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086013"
+    }
+  ]
+}

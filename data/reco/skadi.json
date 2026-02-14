@@ -1,0 +1,44 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Gorgon's Vanity [Ranger]",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Ranger]",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>CHC>ACC>ATK=CHD",
+    "Note": "Critical Hit Chance only up to 50%",
+    "Talisman": [
+      "Rogue's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "Augment Swift": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Augmentation", "count": 2 },
+        { "name": "Swiftness", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "DEF>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "Augment Defense": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Augmentation", "count": 2 },
+        { "name": "Defense", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "DEF>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "Swift Immu": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "DEF>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "Counter": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Counterattack", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "DEF>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}

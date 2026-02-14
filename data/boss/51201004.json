@@ -1,0 +1,157 @@
+{
+  "id": "51201004",
+  "Name": {
+    "en": "Irregular Queen",
+    "kr": "이레귤러 퀸",
+    "jp": "イレギュラークイーン",
+    "zh": "异型怪女王"
+  },
+  "Surname": {
+    "en": "Emblem of Evolution",
+    "kr": "진화의 상징",
+    "jp": "進化の化身",
+    "zh": "进化象征"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 115,
+  "icons": "4089001",
+  "BuffImmune": "BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Irregular Queen (Hard)",
+      "kr": "이레귤러 퀸 (하드)",
+      "jp": "イレギュラークイーン(ハード)",
+      "zh": "异型怪女王 (困难)"
+    },
+    "mode": {
+      "en": "Pursuit Operation",
+      "kr": "추격 섬멸전",
+      "jp": "追撃殲滅戦",
+      "zh": "追击歼灭战"
+    },
+    "area_id": {
+      "en": "72000032",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Completion: Heat Ray Spray",
+        "kr": "완성 : 열광선 난사",
+        "jp": "完成:熱光線乱射",
+        "zh": "完成:热射线扫射"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nIf it lands as a Critical Hit, deals increased critical damage.",
+        "kr": "적을 공격합니다.\\n이 공격이 치명 공격으로 적중할 경우 치명 피해가 증가합니다.",
+        "jp": "敵にダメージを与える。\\nこの攻撃が会心ダメージとして命中する場合、会心ダメージがUPする。",
+        "zh": "攻击敌人。\\n若本次攻击以暴击命中,将提高暴击伤害。"
+      },
+      "icon": "Skill_First_4089001"
+    },
+    {
+      "name": {
+        "en": "Completion: Mutation Spread",
+        "kr": "완성 : 변이체 확산",
+        "jp": "完成:変異体拡散",
+        "zh": "完成:变异体扩散"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\nRemoves all <color=#28d9ed>buffs</color> from all enemies, and inflicts <color=#28d9ed>Taunted</color> for <color=#28d9ed>3 turn(s)</color>.\\nIf this attack scores a critical hit, removes all <color=#28d9ed>debuffs</color> from the caster.",
+        "kr": "적 전체를 공격합니다.\\n적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고, <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>도발</color>을 부여합니다.\\n이 공격이 치명 공격으로 적중할 경우 자신의 <color=#28d9ed>약화 효과</color>를 모두 해제합니다.",
+        "jp": "敵全体にダメージを与える。\\n敵全体の<color=#28d9ed>強化効果</color>をすべて解除し、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>挑発</color>する。\\nこのスキルで会心が発生した場合、自分の<color=#28d9ed>弱体効果</color>をすべて解除する。",
+        "zh": "攻击全体敌人。\\n解除全体敌人的所有<color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>3回合</color>。\\n当该攻击以暴击命中时,解除自身所有<color=#28d9ed>弱化效果</color>。"
+      },
+      "icon": "Skill_Second_4089001",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_AGGRO"
+      ],
+      "buff": [
+        "BT_REMOVE_DEBUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Completion: Rising Malice",
+        "kr": "완성 : 솟아나는 악의",
+        "jp": "完成:湧き上がる悪意",
+        "zh": "完成:涌现的恶意"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and grants increased <color=#28d9ed>Critical Hit Chance</color> to the caster for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 증가시킵니다.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>3ターン</color>の間UPさせる。",
+        "zh": "攻击全体敌人,并使自身<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4089001",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Incomplete Reproduction: Omega",
+        "kr": "불완전 재현 : 오메가",
+        "jp": "不完全再現:オメガ",
+        "zh": "不完全再现:奥米伽"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>10000</color>.\\nWhen inflicted with a debuff, counterattacks with <color=#28d9ed>Completion: Mutation Spread</color>, and when counterattacking, always scores a critical hit.\\nWhen the caster is not inflicted with a debuff, takes no Weakness Gauge damage.",
+        "kr": "저주, 고정 피해로 받는 피해는 최대 <color=#28d9ed>10000</color>을 초과하지 않습니다.\\n약화 효과 피격 시 <color=#28d9ed>완성 : 변이체 확산</color>으로 반격하며, 반격 시 반드시 치명 공격이 발생합니다.\\n약화 효과가 없다면 WG 피해를 받지 않습니다.",
+        "jp": "受ける呪い/固定ダメージは<color=#28d9ed>10000</color>を超えない。\\n弱体効果を付与された時、<color=#28d9ed>【完成:変異体拡散】</color>で反撃し、反撃時、必ず会心が発生する。\\n弱体効果がない場合、WGダメージを受けない。",
+        "zh": "诅咒、固定伤害造成的伤害最多不会超过\\n<color=#28d9ed>10000</color>。\\n受到弱化效果攻击时,<color=#28d9ed>完成:变异体扩散</color>进行反击,反击时必发生暴击。\\n若不存在弱化效果,则不会受到WG伤害。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_STAT|ST_COUNTER_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> each time Health is reduced by <color=#28d9ed>40,000</color>.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Evolution: Rising Evil</color>: Used when Enraged ends. Deals great damage to all enemies.",
+        "kr": "체력이 <color=#28d9ed>40000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>진화 : 융기하는 악의</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
+        "jp": "HPが<color=#28d9ed>40,000</color>DOWNするたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間継続する。\\n\\n<color=#28d9ed>【進化:目覚める邪心】</color>:【狂暴化】終了時に使用する。\\n敵全体に大ダメージを与える。",
+        "zh": "生命值每降低<color=#28d9ed>40000</color>,则进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>进化:龙之恶意</color>:狂暴化结束时发动。\\n对全体敌人造成巨额伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

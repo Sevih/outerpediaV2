@@ -1,0 +1,170 @@
+{
+  "id": "440400474-1-1",
+  "Name": {
+    "en": "Chimera",
+    "kr": "키메라",
+    "jp": "キメラ",
+    "zh": "奇美拉"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 120,
+  "icons": "4034002",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Chimera (Stage 5)",
+      "kr": "키메라 (5단계)",
+      "jp": "キメラ(5段階)",
+      "zh": "奇美拉(第5阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70801105",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Scratch",
+        "kr": "할퀴기",
+        "jp": "引っかき",
+        "zh": "抓击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack prioritizes the <color=#28d9ed>leftmost</color> enemy. Inflicts reduced <color=#28d9ed>Defense</color> on the caster for <color=#28d9ed>2 turn(s)</color>if a <color=#28d9ed>Defender</color> enemy was attacked.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다. 대상이 <color=#28d9ed>방어형</color>일 경우 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>2턴</color> 동안 감소합니다.",
+        "jp": "敵単体にダメージを与え、一番<color=#28d9ed>左側</color>にいる敵を優先的に攻撃する。\\n対象が<color=#28d9ed>防御型</color>の場合、自分の<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間DOWNする。",
+        "zh": "攻击敌人。\\n优先攻击最<color=#28d9ed>左侧</color>的敌人。目标为<color=#28d9ed>防御型</color>敌人时,自身的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_4034002",
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Flamethrower",
+        "kr": "화염 방사",
+        "jp": "火炎放射",
+        "zh": "火焰喷射"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. Inflicts reduced <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color> on all targets after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 대상 전체의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>2턴</color> 동안 감소합니다.",
+        "jp": "敵全体にダメージを与えた後、対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击全体敌人。攻击后,使全体目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4034002",
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Roar",
+        "kr": "포효",
+        "jp": "咆哮",
+        "zh": "咆哮"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Grants increased <color=#28d9ed>Attack</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>3 turn(s)</color> after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>공격력</color>과 <color=#28d9ed>방어력</color>이 증가합니다.",
+        "jp": "敵全体にダメージを与えた後、自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>防御力</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "zh": "攻击全体敌人。攻击后,<color=#28d9ed>攻击力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4034002",
+      "buff": [
+        "BT_STAT|ST_DEF",
+        "BT_STAT|ST_ATK"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dangerous Merged Beast",
+        "kr": "합성 마수의 위협",
+        "jp": "合成魔獣の脅威",
+        "zh": "合成魔兽的威胁"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces damage dealt to Earth element enemies and increases damage taken from them. Reduces Effectiveness and Resilience of non-Earth element enemies.\\nIncreases damage taken from enemy Strikers.",
+        "kr": "(패시브 효과)\\n지속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다. 지속성이 아닌 적의 효과 적중과 효과 저항이 감소합니다.\\n공격형 적에게 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。地属性以外の敵の効果命中・抵抗をDOWNさせる。\\n攻撃型の敵から受けるダメージがUPする。",
+        "zh": "(被动效果)\\n对土属性敌人造成的伤害降低,所受伤害提升。使非土属性敌人的效果命中和效果抵抗降低。\\n使攻击型敌人造成的伤害提升。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "debuff": [
+        "BT_STAT|ST_BUFF_CHANCE_IR",
+        "BT_STAT|ST_BUFF_RESIST_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns, and increases Attack and Speed by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants the caster irremovable Increased Attack / Reduced Damage and Barrier effects for 3 turns, and restores Weakness Gauge by 10%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Chomp Chomp Gulp</color>: Used when Enraged ends.\\nAttacks all enemies.",
+        "kr": "4턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/대미지 감소와 실드 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>와그작와그작꿀꺽</color> : 광폭화 종료 시 사용.\\n적 전체를 공격합니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>5%</color>UPする。この効果は最大3回まで累積し、ブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWNとシールド効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【ムシャムシャ、ゴクリ】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化状态</color>,并使攻击力和速度提升<color=#28d9ed>5%</color>。该效果最多可叠加3次,且将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低及护盾效果,持续3回合,并使WG恢复10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>大快朵颐</color>:狂暴化结束时发动。\\n攻击全体敌人。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_BARRIER",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

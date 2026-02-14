@@ -1,0 +1,409 @@
+{
+  "ID": "2000022",
+  "Fullname": "Noa",
+  "Fullname_jp": "ノア",
+  "Fullname_kr": "노아",
+  "Fullname_zh": "诺雅",
+  "Rarity": 3,
+  "Element": "Earth",
+  "Class": "Striker",
+  "SubClass": "Attacker",
+  "rank": "C",
+  "rank_pvp": "C",
+  "role": "dps",
+  "tags": [
+    "free",
+    "ignore-defense"
+  ],
+  "skill_priority": {
+    "First": {
+      "prio": 2
+    },
+    "Second": {
+      "prio": 1
+    },
+    "Ultimate": {
+      "prio": 3
+    }
+  },
+  "Chain_Type": "Finish",
+  "gift": "Science",
+  "VoiceActor": "VA. Xanthe Huynh",
+  "VoiceActor_jp": "CV. 加藤英美里",
+  "VoiceActor_kr": "CV.방연지",
+  "VoiceActor_zh": "CV. 加藤英美里",
+  "transcend": {
+    "1": null,
+    "1_zh": null,
+    "2": null,
+    "2_zh": null,
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\n+4% Ally Team Critical Damage\n+1 Chain Passive Weakness Gauge damage",
+    "4_1_jp": "ATK DEF HP +16%\n味方の会心ダメージ+4%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 치명 피해 +4%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n友军暴击伤害+4%\n连携被动技能的WG降低量+1",
+    "4_2": "ATK DEF HP +19%",
+    "4_2_zh": "ATK DEF HP +19%",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "5_2": "ATK DEF HP +25%",
+    "5_2_zh": "ATK DEF HP +25%",
+    "5_3": "ATK DEF HP +28%",
+    "5_3_zh": "ATK DEF HP +28%",
+    "6": "ATK DEF HP +30%\n+4% Ally Team Critical Damage\n+25 Action Points at battle start",
+    "6_jp": "ATK DEF HP +30%\n味方の会心ダメージ+4%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n아군 치명 피해 +4%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n友军暴击伤害+4%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "2201",
+      "IconName": "Skill_First_2000022",
+      "SkillType": "SKT_FIRST",
+      "name": "Kaizer Knuckle",
+      "name_jp": "カイザーナックル",
+      "name_kr": "카이저 너클",
+      "name_zh": "凯撒铁拳",
+      "true_desc": "Attacks an enemy. Obtains <color=#28d9ed>1</color> <color=#28d9ed>Kaizer Energy (Unique Resource)</color> if used during the caster's turn.",
+      "true_desc_jp": "敵単体にダメージを与え、自分のターンの場合<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。",
+      "true_desc_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 획득합니다.",
+      "true_desc_zh": "攻击敌人,若处于自身回合,则获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+10% damage"
+        ],
+        "5_jp": [
+          "ダメージ+10%"
+        ],
+        "5_kr": [
+          "피해량 +10%"
+        ],
+        "5_zh": [
+          "伤害量+10%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [],
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "Increases Critical Chance of Burst Skill by 100%",
+          "effect_jp": "バーストスキルの会心率+100%",
+          "effect_kr": "버스트 스킬의 치명 확률 +100%",
+          "effect_zh": "爆发技能暴击率+100%",
+          "cost": 80,
+          "level": 1,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_2": {
+          "effect": "Reduces Noa Kaizer X Cooldown by 2 turns",
+          "effect_jp": "【ノアカイザーX】スキルターン-2ターン",
+          "effect_kr": "노아 카이저X 쿨타임 -2턴",
+          "effect_zh": "诺雅凯撒X冷却时间-2回合",
+          "cost": 120,
+          "level": 2,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_3": {
+          "effect": "Resets Noa Kaizer X Cooldown",
+          "effect_jp": "【ノアカイザーX】スキルターン初期化",
+          "effect_kr": "노아 카이저X 쿨타임 초기화",
+          "effect_zh": "重置诺雅凯撒X冷却时间",
+          "cost": 160,
+          "level": 3,
+          "offensive": true,
+          "target": "mono"
+        }
+      },
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "2202",
+      "IconName": "Skill_Second_2000022",
+      "SkillType": "SKT_SECOND",
+      "name": "Kaizer Cannon",
+      "name_jp": "カイザーキャノン",
+      "name_kr": "카이저 캐논",
+      "name_zh": "凯撒加农炮",
+      "true_desc": "(Triggered Effect) If <color=#28d9ed>Kaizer Knuckle</color> scores a critical hit during the caster's turn, activates <color=#28d9ed>Kaizer Cannon</color> as an additional attack. Attacks all enemies, dealing damage proportional to the target's <color=#28d9ed>Max Health</color>. Obtains <color=#28d9ed>1</color> additional <color=#28d9ed>Kaizer Energy (Unique Resource)</color>.",
+      "true_desc_jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加で<color=#28d9ed>【カイザーキャノン】</color>を発動し、<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。<color=#28d9ed>【カイザーキャノン】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
+      "true_desc_zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中,则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人,目标的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "Increases damage proportional to the target's Max Health"
+        ],
+        "3_jp": [
+          "対象の最大HPが高いほどダメージUP"
+        ],
+        "3_kr": [
+          "대상 최대 체력 비례 피해 증가"
+        ],
+        "3_zh": [
+          "伤害随目标生命值上限等比提升"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "Increases damage proportional to the target's Max Health"
+        ],
+        "5_jp": [
+          "対象の最大HPが高いほどダメージUP"
+        ],
+        "5_kr": [
+          "대상 최대 체력 비례 피해 증가"
+        ],
+        "5_zh": [
+          "伤害随目标生命值上限等比提升"
+        ]
+      },
+      "wgr": 1,
+      "buff": [
+        "BT_EXTRA_ATTACK_ON_TURN_END"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "multi"
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "2203",
+      "IconName": "Skill_Ultimate_2000022",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Noa Kaizer X",
+      "name_jp": "ノアカイザーX",
+      "name_kr": "노아 카이저X",
+      "name_zh": "诺雅凯撒X",
+      "true_desc": "Attacks all enemies. Increases the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>. When <color=#28d9ed>Kaizer Energy (Unique Resource)</color> owned is <color=#28d9ed>5</color>, consumes all to increase damage dealt proportional to the target's <color=#28d9ed>Max Health</color>.",
+      "true_desc_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#28d9ed>【固有資源:カイザーエナジー】</color>が<color=#28d9ed>5個</color>ある場合、すべて消費してダメージを与える。このダメージは対象の<color=#28d9ed>最大HP</color>が高いほどUPする。",
+      "true_desc_kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
+      "true_desc_zh": "攻击所有敌人,并使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。当持有<color=#28d9ed>5个</color><color=#28d9ed>固有资源:凯撒能量</color>时,消耗全部,并根据目标的<color=#28d9ed>生命值上限</color>等比提升伤害量。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "Increases damage proportional to the target's Max Health"
+        ],
+        "3_jp": [
+          "対象の最大HPが高いほどダメージUP"
+        ],
+        "3_kr": [
+          "대상 최대 체력 비례 피해 증가"
+        ],
+        "3_zh": [
+          "伤害随目标生命值上限等比提升"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "Increases damage proportional to the target's Max Health",
+          "+10% damage"
+        ],
+        "5_jp": [
+          "対象の最大HPが高いほどダメージUP",
+          "ダメージ+10%"
+        ],
+        "5_kr": [
+          "대상 최대 체력 비례 피해 증가",
+          "피해량 +10%"
+        ],
+        "5_zh": [
+          "伤害随目标生命值上限等比提升",
+          "伤害量+10%"
+        ]
+      },
+      "wgr": 2,
+      "cd": "5",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "multi"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "2204",
+      "IconName": "Skill_ChainPassive_Earth_Finish",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Finish Effect</color>: Generates <color=#28d9ed>25</color> Chain Points after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: The damage increases proportional to the target's <color=#28d9ed>Max Health</color>.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color>:対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해량이 증가합니다.",
+      "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使CP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:目标的<color=#28d9ed>生命值上限</color>越高,则伤害量越高。",
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_CP_CHARGE"
+      ],
+      "debuff": [],
+      "dual_buff": [],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono"
+    }
+  }
+}

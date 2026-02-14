@@ -1,0 +1,95 @@
+{
+  "PvP": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "ACC>EFF>SPD>ATK",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm"
+      
+    ]
+  },
+  "PvE - effi": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Effectiveness", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "ACC>EFF>SPD>ATK",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm"
+      
+    ]
+  },
+  "PvE - accu": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Accuracy", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "ACC>EFF>SPD>ATK",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm"
+      
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "id": "50000002",
+  "Name": {
+    "en": "Astei",
+    "kr": "아스테",
+    "jp": "アステ",
+    "zh": "奥斯黛"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 100,
+  "icons": "4500043",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Senior Adventurer Promotion Challenge",
+      "kr": "수석 모험가 승급 챌린지",
+      "jp": "首席冒険者昇級チャレンジ",
+      "zh": "首席冒险家晋升挑战"
+    },
+    "mode": {
+      "en": "Challenge",
+      "kr": "도전",
+      "jp": "チャレンジ",
+      "zh": "挑战"
+    },
+    "area_id": {
+      "en": "70600101",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "The Gods in Heaven",
+        "kr": "하늘에는 신이",
+        "jp": "天にありては神",
+        "zh": "天上有神"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>6 turn(s)</color>. If the caster already has increased <color=#28d9ed>Critical Damage</color>, activates <color=#28d9ed>The People on Earth</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>6턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다. <color=#28d9ed>치명 피해</color>가 증가한 상태라면 <color=#28d9ed>땅에는 인간이</color>를 사용합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>会心率</color>が<color=#28d9ed>6ターン</color>の間UPする。<color=#28d9ed>会心ダメージ</color>がUPした状態の場合、<color=#28d9ed>【地にありては者】</color>を使用する。",
+        "zh": "攻击敌人,并使<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>6回合</color>。若<color=#28d9ed>暴击伤害</color>处于提升的状态,则使用<color=#28d9ed>地上有人类</color>。"
+      },
+      "icon": "Skill_First_2000059",
+      "buff":["BT_ADDITIVE_ATTACK_ON_EVENT","BT_STAT|ST_CRITICAL_RATE"]
+    },
+    {
+      "name": {
+        "en": "The People on Earth",
+        "kr": "땅에는 인간이",
+        "jp": "地にありては者",
+        "zh": "地上有人类"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and grants increased <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>6 turn(s)</color>. If the caster already has increased <color=#28d9ed>Critical Hit Chance</color>, inflicts <color=#28d9ed>Petrified</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>6턴</color> 동안 <color=#28d9ed>치명 피해</color>가 증가합니다. <color=#28d9ed>치명 확률</color>이 증가한 상태라면 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>석화</color>를 부여합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>6ターン</color>の間UPする。<color=#28d9ed>会心率</color>がUPした状態の場合、敵全体に<color=#28d9ed>石化</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并使<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>6回合</color>。若<color=#28d9ed>暴击率</color>处于提升状态,则对全体敌人造成<color=#28d9ed>石化</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Dark",
+      "buff":["BT_STAT|ST_CRITICAL_DMG_RATE"],
+      "debuff":["BT_STONE"]
+    },
+    {
+      "name": {
+        "en": "Sanctuary for All",
+        "kr": "만물에게 안식을",
+        "jp": "万物にありては安息",
+        "zh": "赋予万物安息"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy. If the target is inflicted with <color=#28d9ed>Petrified</color>, it becomes an irremovable <color=#28d9ed>Petrified</color> that lasts for <color=#28d9ed>6 turn(s)</color>. This attack ignores the target's Resilience and Immunity.",
+        "kr": "적을 공격합니다. 공격 대상이 <color=#28d9ed>석화</color> 상태라면 <color=#28d9ed>6턴</color> 동안 해제가 불가능한 <color=#28d9ed>석화</color>로 변경합니다. 이 공격은 대상의 효과 저항과 면역을 무시합니다.",
+        "jp": "敵単体にダメージを与える。対象が<color=#28d9ed>石化</color>状態の場合、解除不可能な<color=#28d9ed>石化</color>に切り替わり、<color=#28d9ed>6ターン</color>の間付与する。この攻撃は、対象の効果抵抗と免疫を無視する。",
+        "zh": "攻击敌人。若攻击目标处于<color=#28d9ed>石化</color>状态,则变更为无法解除的<color=#28d9ed>石化</color>,持续<color=#28d9ed>6回合</color>。该攻击无视目标的效果抵抗与免疫。"
+      },
+      "icon": "Skill_Ultimate_2000059",
+      "debuff":["BT_STONE_IR"]
+    },
+    {
+      "name": {
+        "en": "Rocks for the Garden",
+        "kr": "정원에는 수석을",
+        "jp": "箱庭にありては石",
+        "zh": "花园里的观赏石"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the end of the turn, inflicts <color=#28d9ed>Petrified</color> on a random enemy for <color=#28d9ed>2 turn(s)</color>.\\n\\nReduces Weakness Gauge damage taken by <color=#28d9ed>90%</color> when not <color=#28d9ed>Enraged</color>.",
+        "kr": "(패시브 효과)\\n턴 종료 시, 무작위 적 한 명에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.\\n\\n<color=#28d9ed>광폭화</color> 상태가 아니라면 받는 WG 피해량을 <color=#28d9ed>90%</color> 감소시킵니다.",
+        "jp": "(パッシブ効果)\\nターン終了時、ランダムの敵単体に<color=#28d9ed>石化</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#28d9ed>狂暴化</color>状態でない場合、受けるWGダメージが<color=#28d9ed>90%</color>DOWNする。",
+        "zh": "(被动效果)\\n回合结束时,使随机1名敌人陷入<color=#28d9ed>石化</color>状态,持续<color=#28d9ed>2回合</color>。\\n\\n若未处于<color=#28d9ed>狂暴化</color>状态,则使受到的WG伤害量降低<color=#28d9ed>90%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "debuff":["BT_STONE"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>An Inadequate World</color>: Used when Enraged ends.\\nDeals lethal damage to all enemies.",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>세계의 한계</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.",
+        "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP・ダメージDOWNを3ターンの間付与する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【世界の果て】</color>:【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。",
+        "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>世界的极限</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

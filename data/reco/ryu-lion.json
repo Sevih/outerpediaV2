@@ -1,0 +1,58 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>CHC>ATK=CHD>ACC",
+    "Note": "PvP:Rogue's Charm3Sage's Charm2\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Rogue's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Pene": {
+    "Weapon": [
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>CHC>ATK=CHD>ACC",
+    "Note": "PvP:Rogue's Charm3Sage's Charm2\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Rogue's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

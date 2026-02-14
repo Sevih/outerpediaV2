@@ -1,0 +1,176 @@
+{
+  "id": "440400174-7-1",
+  "Name": {
+    "en": "Prototype EX-78",
+    "kr": "EX-78 시범기",
+    "jp": "試作機:EX-78",
+    "zh": "EX-78示范机"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 120,
+  "icons": "4048001",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_AGGRO,BT_STUN,BT_SILENCE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "location": {
+    "dungeon": {
+      "en": "Ex-78 Combat Deployment (Stage 5)",
+      "kr": "Ex-78 실전배치기 (5단계)",
+      "jp": "実戦配備機・Ex-78(5段階)",
+      "zh": "Ex-78实战部署器(第5阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70401105",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Guardian Slash",
+        "kr": "가디언 슬래쉬",
+        "jp": "ガーディアンスラッシュ",
+        "zh": "守护者劈斩"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack prioritizes the <color=#28d9ed>leftmost</color> enemy, and when the target is not a <color=#28d9ed>Defender</color>, reduces <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>60%</color> and inflicts irremovable <color=#28d9ed>Silenced</color> for <color=#28d9ed>4 turn(s)</color>. Afterward, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>60%</color>.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격하며 대상이 <color=#28d9ed>방어형</color>이 아닐 경우, 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-60%</color> 감소시키고 <color=#28d9ed>4턴</color> 동안 해제 불가능한 <color=#28d9ed>침묵</color>을 부여합니다. 이후, 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>60%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>左側の敵</color>を優先的に攻撃し、<color=#28d9ed>防御型</color>以外の敵を攻撃した場合、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-60%</color>DOWNさせ、解除不可能な<color=#28d9ed>沈黙</color>を<color=#28d9ed>4ターン</color>の間付与する。その後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>60%</color>UPさせる。",
+        "zh": "攻击敌人。\\n优先攻击最<color=#28d9ed>左侧</color>的敌人,若目标不是<color=#28d9ed>防御型</color>,则使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-60%</color>,并使其陷入无法被解除的<color=#28d9ed>沉默</color>状态,持续<color=#28d9ed>4回合</color>。之后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>60%</color>。"
+      },
+      "icon": "Skill_First_4044001",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff":["BT_SILENCE_IR"]
+    },
+    {
+      "name": {
+        "en": "Guardian Cutter",
+        "kr": "가디언 커터",
+        "jp": "ガーディアンカッター",
+        "zh": "守护者切割器"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and inflicts <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4044001",
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
+    },
+    {
+      "name": {
+        "en": "Electric Cannon",
+        "kr": "일렉트릭 캐논",
+        "jp": "エレクトリックキャノン",
+        "zh": "雷电加农炮"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. When the target is inflicted with <color=#28d9ed>Shocked</color>, has a <color=#28d9ed>100%</color> chance to inflict irremovable <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>5 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>감전</color>을 보유한 대상에게는 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>5턴</color> 동안 해제 불가능한 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与える。<color=#28d9ed>感電</color>状態の対象には、<color=#28d9ed>100%</color>の確率で解除不可能な<color=#28d9ed>スタン</color>を<color=#28d9ed>5ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。有<color=#28d9ed>100%</color>的几率对附带<color=#28d9ed>触电</color>效果的目标造成无法被解除的<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>5回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4044001",
+      "debuff": [
+        "BT_STUN_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Kill Mode",
+        "kr": "제노사이드 모드",
+        "jp": "ジェノサイドモード",
+        "zh": "屠杀模式"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) At the start of the turn, grants increased Accuracy for <color=#28d9ed>1 turn(s)</color> and removes <color=#28d9ed>1</color> debuff(s) from the caster.\\n\\nAfter attacking, inflicts <color=#28d9ed>Stunned</color> on targets inflicted with <color=#28d9ed>Shocked</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "(패시브 효과) 턴 시작 시 <color=#28d9ed>1턴</color> 동안 명중이 증가하고, 자신이 보유한 약화 효과를 <color=#28d9ed>1</color>개 해제시킵니다.\\n\\n공격 후 <color=#28d9ed>감전</color>을 보유한 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "(パッシブ効果)ターン開始時、命中が<color=#28d9ed>1ターン</color>の間UPする。自分の弱体効果を<color=#28d9ed>1個</color>解除する。\\n\\n攻撃後、<color=#28d9ed>感電</color>状態の対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "(被动效果)回合开始时,命中提升,持续<color=#28d9ed>1回合</color>,解除自身附带的<color=#28d9ed>1</color>个弱化效果。\\n\\n攻击后,对附带<color=#28d9ed>触电</color>效果的目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "debuff": [
+        "BT_STUN"
+      ],
+      "buff": [
+        "BT_REMOVE_DEBUFF","BT_STAT|ST_ACCURACY"
+      ]
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers 30% Weakness Gauge. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Stun Cannon</color>: Used when Enraged ends.\\nAttacks all enemies. Has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>2 turn(s)</color>, then permanently grants irremovable <color=#28d9ed>increased Critical Hit Chance</color> to the caster.\\nThe <color=#28d9ed>Stunned</color> effect ignores the target's <color=#28d9ed>Resilience</color>.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>스턴 캐논</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만든 뒤, 자신에게 해제 불가능한 <color=#28d9ed>치명 확률 증가</color>를 영구적으로 부여합니다.\\n<color=#28d9ed>스턴</color> 효과는 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを30%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【スタンキャノン】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>2ターン</color>の間付与した後、自分の<color=#28d9ed>会心率</color>を永続的にUPする。この効果は解除されない。\\n<color=#28d9ed>スタン</color>は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复\\n30%。狂暴化持续3回合。\\n\\n<color=#28d9ed>晕眩加农炮</color>:狂暴化结束时发动。\\n攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>2回合</color>后,使自身永久获得无法被解除的<color=#28d9ed>暴击率提升</color>效果。\\n<color=#28d9ed>晕眩</color>效果无视目标的<color=#28d9ed>效果抵抗</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_CRITICAL_RATE_IR",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff": [
+        
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

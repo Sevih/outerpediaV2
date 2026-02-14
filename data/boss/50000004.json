@@ -1,0 +1,140 @@
+{
+  "id": "50000004",
+  "Name": {
+    "en": "Drakhan",
+    "kr": "드레이칸",
+    "jp": "ドレイカーン",
+    "zh": "德雷坎"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Light",
+  "level": 100,
+  "icons": "2000063",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "First-Rate Adventurer Promotion Challenge",
+      "kr": "일류 모험가 승급 챌린지",
+      "jp": "一流冒険者昇級チャレンジ",
+      "zh": "一流冒险家晋升挑战"
+    },
+    "mode": {
+      "en": "Challenge",
+      "kr": "도전",
+      "jp": "チャレンジ",
+      "zh": "挑战"
+    },
+    "area_id": {
+      "en": "70600102",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Conqueror's Fang",
+        "kr": "정복자의 송곳니",
+        "jp": "征服者の牙",
+        "zh": "征服者的利齿"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Deals <color=#28d9ed>30%</color> of the target's Max Health as fixed damage before attacking an enemy.",
+        "kr": "대상 최대 체력의 <color=#28d9ed>30%</color> 만큼 고정 피해를 입힌 후 적을 공격합니다.",
+        "jp": "対象の最大HP<color=#28d9ed>30%</color>の固定ダメージを与えた後、敵単体にダメージを与える。",
+        "zh": "对目标造成相当于其生命值上限<color=#28d9ed>30%</color>的固定伤害后,攻击敌人。"
+      },
+      "icon": "Skill_First_2000063",
+      "debuff":["BT_FIXED_DAMAGE"]
+    },
+    {
+      "name": {
+        "en": "Doom Heralding Cry",
+        "kr": "멸망을 부르는 함성",
+        "jp": "滅亡をもたらす叫び",
+        "zh": "灭亡呐喊"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and reduces <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>100%</color>.",
+        "kr": "적을 공격하고, 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-100%</color>DOWNさせる。",
+        "zh": "攻击敌人,并使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-100%</color>。"
+      },
+      "icon": "Skill_Second_2000063",
+      "buff":["BT_ACTION_GAUGE"]
+    },
+    {
+      "name": {
+        "en": "Dragon Ruler's Breath",
+        "kr": "용왕의 숨결",
+        "jp": "竜王の息吹",
+        "zh": "龙王吐息"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy. Inflicts <color=#28d9ed>instant death</color> on the target if the target's <color=#28d9ed>current Health</color> is <color=#28d9ed>30%</color> or below.",
+        "kr": "적을 공격합니다. 대상의 <color=#28d9ed>현재 체력</color>이 <color=#28d9ed>30%</color> 이하라면 대상을 <color=#28d9ed>즉사</color>시킵니다.",
+        "jp": "敵単体にダメージを与える。対象の<color=#28d9ed>残りHP</color>が<color=#28d9ed>30%</color>以下の場合、対象を<color=#28d9ed>即死</color>させる。",
+        "zh": "攻击敌人。若目标的<color=#28d9ed>当前生命值</color>在<color=#28d9ed>30%</color>以下,则使目标<color=#28d9ed>即死</color>。"
+      },
+      "icon": "Skill_Ultimate_2000063",
+      "debuff":["BT_KILL"]
+    },
+    {
+      "name": {
+        "en": "Dragon's Solitude",
+        "kr": "용의 고독",
+        "jp": "竜の孤独",
+        "zh": "龙的孤独"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, grants <color=#28d9ed>Invulnerability</color> to all allies for <color=#28d9ed>3 turn(s)</color>. Killing an enemy creates the same effect, and this effect is irremovable.\\nWhen taking a critical hit, fully reduces the cooldown of <color=#28d9ed>Dragon Ruler's Breath</color>, and increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>35%</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 시 아군 전체에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>무적</color>을 부여합니다. 적을 처치하면 동일한 효과가 생성되며, 이 효과는 해제되지 않습니다.\\n치명 공격 당할 시 <color=#28d9ed>용왕의 숨결</color>의 쿨타임이 모두 감소하며, 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>35%</color> 증가시킵니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、味方全体に<color=#28d9ed>無敵</color>を<color=#28d9ed>3ターン</color>の間付与する。敵を倒した場合にも同じ効果が付与され、この効果は解除されない。\\n会心ダメージを受けた時、<color=#28d9ed>【竜王の息吹】</color>のスキルターンが初期化し、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>35%</color>UPさせる。",
+        "zh": "(被动效果)\\n战斗开始时,对全体友军造成<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>3回合</color>。若击杀敌人,则触发相同效果,且该效果不会被解除。\\n受到暴击时,使<color=#28d9ed>龙王吐息</color>的冷却时间全部降低,且使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>35%</color>。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff":["BT_INVINCIBLE_IR","BT_COOL_CHARGE"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Does not take Weakness Gauge damage permanently. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Dragon of Conquest</color>: Used when Enraged ends.\\nPermanently increases <color=#28d9ed>Speed</color> and enhances <color=#28d9ed>Dragon Ruler's Breath</color> to target all enemies. These effects cannot be removed.",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 영구적으로 WG피해를 받지 않습니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>정복의 용</color> : 광폭화 종료 시 사용.\\n영구적으로 <color=#28d9ed>속도</color>가 증가하고, <color=#28d9ed>용왕의 숨결</color>의 공격 범위가 적 전체로 확대됩니다. 이 효과들은 해제되지 않습니다.",
+        "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:永続的にWGダメージを受けない。\\n\\n<color=#28d9ed>【征服の竜】</color>:【狂暴化】終了時に発動する。\\n永続的に<color=#28d9ed>スピード</color>がUPし、<color=#28d9ed>【竜王の息吹】</color>の攻撃範囲が全体攻撃に変わる。この効果は解除されない。",
+        "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:永久不会受到WG伤害。狂暴化持续3回合。\\n\\n<color=#28d9ed>征服之龙</color>:狂暴化结束时发动。\\n永久获得<color=#28d9ed>速度</color>提升,并使<color=#28d9ed>龙王吐息</color>的攻击范围扩大至全体敌人。这些效果不会被解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff":["BT_STAT|ST_SPEED_IR"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

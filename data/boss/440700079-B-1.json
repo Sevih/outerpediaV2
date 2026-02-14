@@ -1,0 +1,172 @@
+{
+  "id": "440700079-B-1",
+  "Name": {
+    "en": "Planetary Control Unit Epsilon",
+    "kr": "행성 제어 유닛 엡실론",
+    "jp": "惑星制御ユニット【エプシロン】",
+    "zh": "行星操纵单位埃普西隆"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 200,
+  "icons": "4076015",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Planetary Control Unit Epsilon (Stage 10)",
+      "kr": "행성 제어 유닛 엡실론 (10단계)",
+      "jp": "惑星制御ユニット・エプシロン(10段階)",
+      "zh": "行星操纵单位埃普西隆(第10阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70701010",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Braindead",
+        "kr": "데드 얼라이브",
+        "jp": "ブレインデッド",
+        "zh": "活死人"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack prioritizes the enemy's <color=#28d9ed>front line</color>. When attacking a non-<color=#28d9ed>Defender</color> enemy, attacks all enemies and grants increased <color=#28d9ed>Evasion</color> to the caster for <color=#28d9ed>5 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n<color=#28d9ed>전열</color>의 적을 우선적으로 공격합니다. <color=#28d9ed>방어형</color>이 아닌 적 대상에게 공격 시, 적 전체를 공격하고 <color=#28d9ed>5턴</color>동안 <color=#28d9ed>회피</color>가 증가합니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>前</color>の敵を優先的に攻撃する。対象が<color=#28d9ed>防御型</color>以外の場合、敵全体にダメージを与え、<color=#28d9ed>回避</color>が<color=#28d9ed>5ターン</color>の間UPする。",
+        "zh": "攻击敌人。\\n优先攻击<color=#28d9ed>前排</color>敌人。攻击目标为非<color=#28d9ed>防御型</color>时,攻击全体敌人,并使<color=#28d9ed>回避</color>提升,持续<color=#28d9ed>5回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Earth",
+      "buff": [
+        "BT_STAT|ST_AVOID"
+      ]
+    },
+    {
+      "name": {
+        "en": "Hellraiser",
+        "kr": "헬레이저",
+        "jp": "ヘル・レイザー",
+        "zh": "猛鬼追魂"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Grants increased <color=#28d9ed>Defense</color> for <color=#28d9ed>5 turn(s)</color>.\\n\\nWhen granted increased <color=#28d9ed>Attack</color>, increases duration of <color=#28d9ed>buffs</color> granted to the caster by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "<color=#28d9ed>5턴</color>동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#28d9ed>공격력</color>이 증가한 상태라면 자신의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "jp": "<color=#28d9ed>防御力</color>が<color=#28d9ed>5ターン</color>の間UPする。\\n\\n<color=#28d9ed>攻撃力</color>がUPした状態の場合、自分の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "zh": "<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>5回合</color>。\\n\\n若<color=#28d9ed>攻击力</color>处于提升状态,则使自身<color=#28d9ed>强化效果</color>持续回合数增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Earth",
+      "buff": [
+        "BT_EXTEND_BUFF",
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Event Horizon",
+        "kr": "이벤트 호라이즌",
+        "jp": "イベント・ホライゾン",
+        "zh": "黑洞表面"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nGrants increased <color=#28d9ed>Attack</color> for <color=#28d9ed>5 turn(s)</color>.\\n\\nWhen granted increased <color=#28d9ed>Defense</color>, grants an <color=#28d9ed>extra turn</color>.",
+        "kr": "적 전체를 공격합니다.\\n<color=#28d9ed>5턴</color>동안 <color=#28d9ed>공격력</color>이 증가합니다.\\n\\n<color=#28d9ed>방어력</color>이 증가한 상태라면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "jp": "敵全体にダメージを与える。<color=#28d9ed>攻撃力</color>が\\n<color=#28d9ed>5ターン</color>の間UPする。\\n\\n<color=#28d9ed>防御力</color>がUPした状態の場合、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "zh": "攻击全体敌人。\\n<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>5回合</color>。\\n\\n若<color=#28d9ed>防御力</color>处于提升状态,则获得<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Earth",
+      "buff": [
+        "BT_ADDITIVE_TURN",
+        "BT_STAT|ST_ATK"
+      ]
+    },
+    {
+      "name": {
+        "en": "Final Destination",
+        "kr": "데스티네이션",
+        "jp": "デスティネーション",
+        "zh": "死神来了"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\n<color=#28d9ed>When granted increased Evasion</color>, does not take Weakness Gauge damage.\\nInflicts reduced <color=#28d9ed>Accuracy</color> on Water and Earth enemies.\\nReduces damage dealt to Fire enemies and increases damage taken from them, while increasing damage dealt to Water enemies and reduces damage taken from them.\\nThe damage dealt increases significantly every time someone dies.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>회피</color> 증가 효과를 보유하고 있으면 WG 피해를 입지 않습니다.\\n수속성 및 지속성인 적의 <color=#28d9ed>명중</color>을 감소시킵니다.\\n화속성 적에게 입히는 피해가 감소하고 받는 피해가 증가하지만, 수속성 적에게는 입히는 피해가 증가하고 받는 피해가 감소합니다.\\n자신이 입히는 피해량은 사망자가 발생할 때마다 크게 증가합니다.",
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>回避</color>がUPした状態の場合、WGダメージを受けない。\\n水・地属性の敵の<color=#28d9ed>命中</color>をDOWNさせる。\\n火属性の敵に与えるダメージがDOWNし、受けるダメージはUPするが、水属性の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n倒れた敵の数に応じて、自分が与えるダメージがUPする。",
+        "zh": "(被动效果)\\n<color=#28d9ed>若附带回避</color>提升效果,则不会受到WG伤害。\\n使水属性和土属性敌人的<color=#28d9ed>命中</color>降低。\\n对火属性敌人造成的伤害降低,且所受伤害提升;对水属性敌人造成的伤害提升,且所受伤害降低。\\n每当有一名单位阵亡,自身造成的伤害量大幅提升。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_STAT|ST_ACCURACY"
+      ]
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Planet Terror",
+        "kr": "플래닛 테러",
+        "jp": "プラネット・テラー",
+        "zh": "恐怖星球"
+      },
+      "type": "SKT_MONSTER_3",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, when all four enemy team members have same elements, increases damage taken. (Permanent)\\nWhen granted increased <color=#28d9ed>Defense</color> effect, greatly reduces damage taken.\\nEvery time inflicted with a debuff, grants increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 시 적 팀 4명이 모두 동일 속성이라면 받는 피해량이 증가합니다. (영구 지속)\\n<color=#28d9ed>방어력</color> 증가 효과를 보유하고 있으면 받는 피해량이 크게 감소합니다.\\n약화 효과 피격 시 마다 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>3턴</color> 증가 합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、敵全体がすべて同じ属性の場合、受けるダメージがUPする。(永続効果)\\n<color=#28d9ed>防御力</color>がUP状態の場合、受けるダメージが大幅にDOWNする。\\n弱体効果を付与された時、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>UPさせる。",
+        "zh": "(被动效果)\\n战斗开始时,若敌人队伍4名人员全部为相同属性,则所受伤害量提升。(永久持续)\\n若附带<color=#28d9ed>防御力</color>提升效果,则所受伤害量大幅降\\n低。\\n每当受到弱化效果攻击时,自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> each time Health is reduced by <color=#28d9ed>50,000</color>.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Suspiria</color>: Used when Enraged ends.\\nDeals heavy damage to all enemies.",
+        "kr": "체력이 <color=#28d9ed>50000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>서스페리아</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
+        "jp": "HPが<color=#28d9ed>50,000</color>DOWNするたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間継続する。\\n\\n<color=#28d9ed>【サスペリア】</color>:【狂暴化】終了時に使用する。\\n敵全体に大ダメージを与える。",
+        "zh": "生命值每降低<color=#28d9ed>50000</color>,则进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回\\n合。\\n\\n<color=#28d9ed>阴风阵阵</color>:狂暴化结束时发动。\\n对全体敌人造成巨额伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "id": "407600156",
+  "Name": {
+    "en": "Glicys",
+    "kr": "글리시스",
+    "jp": "グリシス",
+    "zh": "克里希丝"
+  },
+  "Surname": {
+    "en": "Frozen Queen",
+    "kr": "설원의 여왕",
+    "jp": "雪原の女王",
+    "zh": "冰原女王"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 70,
+  "icons": "4076001",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_DOT_POISON",
+  "location": {
+    "dungeon": {
+      "en": "Glicys (Stage 7)",
+      "kr": "글리시스 (7 단계)",
+      "jp": "グリシス(7段階)",
+      "zh": "克里希丝(第7阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Identification",
+      "kr": "특별 의뢰 : 정체 규명",
+      "jp": "特別依頼:正体究明",
+      "zh": "特别委托:查清身份"
+    },
+    "area_id": {
+      "en": "50202007",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Come Forth, Guards",
+        "kr": "근위병은 나오라",
+        "jp": "いでよ、近衛兵",
+        "zh": "出现吧,禁卫军"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and summons an Ice Revenant, her underling. Does not summon a new Ice Revenant if one is already present.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Frozen</color>.",
+        "kr": "적을 공격하고 그녀의 하수인인 얼음 망령을 소환합니다. 이미 얼음 망령이 존재한다면 소환하지 않습니다.\\n대상이 <color=#28d9ed>빙결</color> 상태라면 피해량이 증가합니다.",
+        "jp": "敵単体にダメージを与え、彼女の手下である【氷の亡霊】を召喚する。すでに【氷の亡霊】が戦場にいる場合は召喚しない。\\n対象が<color=#28d9ed>凍結</color>状態の場合、ダメージがUPする。",
+        "zh": "攻击敌人,并召唤她的手下冰霜亡灵。若已存在冰霜亡灵,则不会进行召唤。\\n目标处于<color=#28d9ed>冰冻</color>状态时,伤害量提升。"
+      },
+      "icon": "Skill_First_4076001"
+    },
+    {
+      "name": {
+        "en": "Break Apart",
+        "kr": "깨져라",
+        "jp": "壊れよ",
+        "zh": "破碎吧"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) Deals increased damage if the target is inflicted with <color=#28d9ed>Frozen</color>.\\n(Triggered Effect) When attacking a target inflicted with Frozen, performs an additional attack on all enemies and reduces Priority by <color=#28d9ed>20%</color>.",
+        "kr": "(패시브 효과) 대상이 <color=#28d9ed>빙결</color> 상태라면 피해량이 증가합니다.\\n(발동 효과) 빙결 대상 공격 시 적 전체에게 추가 공격을 사용하고, 행동 게이지를 <color=#28d9ed>-20%</color> 감소시킵니다.",
+        "jp": "(パッシブ効果)凍結状態の対象を攻撃時、敵全体に追加攻撃を与え、行動ゲージを<color=#28d9ed>-20%</color>DOWNさせる。\\n(発動効果)対象が<color=#28d9ed>凍結</color>状態の場合、ダメージがUPする。",
+        "zh": "(被动效果)目标若处于<color=#28d9ed>冰冻</color>状态,则伤害量提升。\\n(触发效果)攻击冰冻状态目标时,对全体敌人发动额外攻击,并使行动值提升<color=#28d9ed>-20%</color>。"
+      },
+      "icon": "Skill_Second_4076001",
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Receive Your Blessings",
+        "kr": "총애를 받으라",
+        "jp": "寵愛を受けよ",
+        "zh": "接受恩宠吧"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and reduces the <color=#28d9ed>Speed</color> of the targets, then summons an Ice Revenant. Does not summon a new Ice Revenant if one is already present.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Frozen</color>.",
+        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>속도</color>를 감소시킨 후 얼음 망령을 소환합니다. 이미 얼음 망령이 존재한다면 소환하지 않습니다.\\n대상이 <color=#28d9ed>빙결</color> 상태라면 피해량이 증가합니다.",
+        "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>スピード</color>をDOWNさせた後、【氷の亡霊】を召喚する。すでに【氷の亡霊】が戦場にいる場合は召喚しない。\\n対象が<color=#28d9ed>凍結</color>状態の場合、ダメージがUPする。",
+        "zh": "攻击全体敌人,并使目标的<color=#28d9ed>速度</color>降低后,召唤冰霜亡灵。若已存在冰霜亡灵,则不会进行召唤。\\n若目标处于<color=#28d9ed>冰冻</color>状态,则伤害量提升。"
+      },
+      "icon": "Skill_Ultimate_4076001",
+      "debuff": [
+        "BT_STAT|ST_SPEED"
+      ]
+    },
+    {
+      "name": {
+        "en": "You Stand Before the Queen",
+        "kr": "왕의 어전이다",
+        "jp": "王の御前である",
+        "zh": "国王在此"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces the damage Glicys takes by <color=#28d9ed>70%</color> when she does not have her underlings.\\n\\nIncreases damage dealt to non-Earth enemies and reduces damage taken from them.\\nReduces damage dealt to Earth enemies and increases damage taken from them.",
+        "kr": "(패시브 효과)\\n글리시스의 하수인들이 존재하지 않는다면, 글리시스가 받는 피해가 <color=#28d9ed>70%</color> 감소합니다.\\n\\n지속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n지속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n【グリシス】の手下がいない場合、【グリシス】に与えるダメージが<color=#28d9ed>70%</color>DOWNする。\\n\\n地属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "zh": "(被动效果)\\n若场上不存在克里希丝的手下,则使克里希丝所受伤害降低<color=#28d9ed>70%</color>。\\n\\n对非土属性敌人造成的伤害提升,且所受伤害降低。\\n对土属性角色造成的伤害降低,且所受伤害提升。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Reign and Rule",
+        "kr": "군림하고 통치한다",
+        "jp": "君臨し統治せん",
+        "zh": "君临统治"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nGlicys's underlings have the following abilities.\\n\\nIce Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Reduces the <color=#28d9ed>Defense</color> of all allies by <color=#28d9ed>1%</color> when hit. This effect stacks up to 20 times.\\nGiant Ice Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Frozen</color> on all enemies for <color=#28d9ed>1 turn(s)</color> when hit.",
+        "kr": "(패시브 효과)\\n글리시스의 하수인들은 다음과 같은 능력을 가집니다.\\n\\n얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키지만, 피격 시 아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>-1%</color> 감소시킵니다. 해당 효과는 최대 20회 누적됩니다.\\n거대 얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키고, 피격 시 <color=#28d9ed>80%</color> 확률로 적 전체를 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>시킵니다.",
+        "jp": "(パッシブ効果)\\n【グリシス】の手下は以下のような能力を持つ。\\n\\n【氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与するが、攻撃を受けた時、味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>-1%</color>DOWNさせる。この効果は最大20回まで累積する。\\n【零氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与し、攻撃を受けた時、<color=#28d9ed>80%</color>の確率で敵全体に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "(被动效果)\\n克里希丝的手下拥有以下能力。\\n\\n冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态;受到攻击时,使全体友军的<color=#28d9ed>防御力</color>降低<color=#28d9ed>-1%</color>。该效果最多可叠加20次。\\n巨型冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态;受到攻击时,有<color=#28d9ed>80%</color>的几率使全体敌人陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Passive_1_Water",
+      "debuff": [
+        "BT_FREEZE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>60%</color> of Max Health or lower, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Applies an irremovable effect that increases Effectiveness/Invulnerability for 3/1 turns, respectively, and recovers Weakness Gauge by 30%, then summons a Giant Ice Revenant underling. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Ice Nine</color>: Used when Enraged ends.\\nAttacks all enemies and inflicts Frozen on them. This effect ignores the target's Resilience.\\n\\n<color=#ffd732>If Enraged within 3 turns, grants 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 효과 적중 증가를 3턴/해제 가능한 무적 효과를 1턴 동안 부여하고 WG 30%를 회복한 뒤 그녀의 하수인인 거대 얼음 망령을 소환합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>아이스 나인</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 대상을 빙결 상태로 만듭니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>60%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な効果命中UPを3ターン、無敵を1ターンの間付与し、WGを30%回復した後、手下【零氷の亡霊】を召喚する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【アイスナイン】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に<color=#28d9ed>凍結</color>を付与する。この効果は対象の効果抵抗を無視する。\\n\\n<color=#ffd732>戦闘開始時から3ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>60%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的效果命中提升/无敌效果,分别持续3回合/1回合,并使WG恢复30%,同时召唤她的手下巨型冰霜亡灵。狂暴化持续3回合。\\n\\n<color=#28d9ed>九尺冰寒</color>:狂暴化结束时发动。\\n攻击全体敌人,并使目标陷入冰冻状态。该效果无视目标的效果抵抗。\\n\\n<color=#ffd732>在3回合内陷入狂暴化状态时,恢复80CP。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_CP_CHARGE",
+        "BT_INVINCIBLE",
+        "BT_STAT|ST_BUFF_CHANCE_IR"
+      ],
+      "debuff": [
+        "BT_FREEZE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Ice Nine",
+        "kr": "아이스 나인",
+        "jp": "アイスナイン",
+        "zh": "九尺冰寒"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

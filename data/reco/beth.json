@@ -1,0 +1,92 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD>EFF",
+    "Note": "Clock up if you want Turn cycling Bleed Team",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "High Crit": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Critical Strike", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD>EFF",
+    "Note": "Clock up if you want Turn cycling Bleed Team",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Penetration": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD>EFF",
+    "Note": "Clock up if you want Turn cycling Bleed Team",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ]
+  }
+}

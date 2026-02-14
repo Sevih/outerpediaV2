@@ -1,0 +1,67 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>EFF>ACC",
+    "Note": "PvP:Assassin's Charm3Vanguard's Charm2\nPvE:Executioner's Charm3Sage's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Assassin's Charm"
+      
+    ]
+  },
+  "Speed Immune": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>EFF>ACC",
+    "Note": "PvP:Assassin's Charm3Vanguard's Charm2\nPvE:Executioner's Charm3Vanguard's Charm2Sage's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Assassin's Charm"
+      
+    ]
+  }
+}

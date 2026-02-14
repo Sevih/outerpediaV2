@@ -1,0 +1,52 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Sublime Melody",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Gorgon's Vanity [Mage]",
+        "mainStat": "EFF"
+      },
+      {
+        "name": "Spirit of Unification",
+        "mainStat": "EFF"
+      },
+      {
+        "name": "Queen of Prism",
+        "mainStat": "EFF"
+      },
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        {
+          "name": "Speed",
+          "count": 4
+        }
+      ]
+    ],
+    "SubstatPrio": "EFF>SPD>ACC>ATK=CHC>CHD",
+    "Note": "Effectiveness until ~270 or target reached",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Tactician's Charm"
+    ]
+  }
+}

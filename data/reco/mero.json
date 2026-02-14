@@ -1,0 +1,99 @@
+{
+  "Support": {
+    "Weapon": [
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Heartunder's Blade",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Gorgon's Vanity [Ranger]",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Ranger]",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>CHC>ATK>CHD>ACC",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "DPS Revenge": {
+    "Weapon": [
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Revenge", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "CHC>ATK>CHD>ACC=SPD",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Vanguard's Charm"
+    ]
+  },
+  "DPS Pen": {
+    "Weapon": [
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "CHC>ATK>CHD>ACC=SPD",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Vanguard's Charm"
+    ]
+  }
+}

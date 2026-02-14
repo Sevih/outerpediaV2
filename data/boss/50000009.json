@@ -1,0 +1,122 @@
+{
+  "id": "50000009",
+  "Name": {
+    "en": "K",
+    "kr": "케이",
+    "jp": "ケイ",
+    "zh": "凯伊"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Fire",
+  "level": 100,
+  "icons": "2000001",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Supreme Adventurer Promotion Challenge 2",
+      "kr": "특급 모험가 승급 챌린지 2",
+      "jp": "特級冒険者昇級チャレンジ2",
+      "zh": "特级冒险家晋升挑战2"
+    },
+    "mode": {
+      "en": "Challenge",
+      "kr": "도전",
+      "jp": "チャレンジ",
+      "zh": "挑战"
+    },
+    "area_id": {
+      "en": "70600104",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shield Rush",
+        "kr": "실드 러시",
+        "jp": "シールドラッシュ",
+        "zh": "护盾突击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from the target.",
+        "kr": "적을 공격하고 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제합니다.",
+        "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除する。",
+        "zh": "攻击敌人,并解除目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。"
+      },
+      "icon": "Skill_First_2000001",
+      "debuff":["BT_REMOVE_BUFF"]
+    },
+    {
+      "name": {
+        "en": "Sliding Uppercut",
+        "kr": "슬라이딩 어퍼",
+        "jp": "スライディングアッパー",
+        "zh": "滑动上勾拳"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and inflicts <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>3턴</color> 동안 대상을 <color=#28d9ed>도발</color>합니다.",
+        "jp": "敵単体にダメージを与え、対象を<color=#28d9ed>3ターン</color>の間<color=#28d9ed>挑発</color>する。",
+        "zh": "攻击敌人,并对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Second_2000001",
+      "debuff":["BT_AGGRO"]
+    },
+    {
+      "name": {
+        "en": "Raging Storm",
+        "kr": "레이징 스톰",
+        "jp": "レイジングストーム",
+        "zh": "肆虐风暴"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and decreases all targets' <color=#28d9ed>ATK</color> for <color=#28d9ed>3</color> turns.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>3턴</color> 동안 대상 전체의 <color=#28d9ed>공격력</color>을 감소시킵니다.",
+        "jp": "敵全体にダメージを与え、対象全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>3</color>ターンの間DOWNさせる。",
+        "zh": "攻击全体敌人,并在<color=#28d9ed>3</color>回合内降低所有目标的<color=#28d9ed>攻击力</color>。"
+      },
+      "icon": "Skill_Ultimate_2000001",
+      "debuff":["BT_STAT|ST_ATK"]
+    },
+    {
+      "name": {
+        "en": "Chain Passive",
+        "kr": "체인 패시브",
+        "jp": "チェーンパッシブ",
+        "zh": "连携被动"
+      },
+      "type": "SKT_CHAIN_PASSIVE",
+      "description": {
+        "en": "<color=#ffd732>Dual Attack Effect</color>: Greatly increases Dual Attack damage.",
+        "kr": "<color=#ffd732>협공 효과</color> : 협공 피해량이 크게 증가합니다.",
+        "jp": "<color=#ffd732>連携効果</color>:連携のダメージが大幅にUPする。",
+        "zh": "<color=#ffd732>夹攻效果</color>:夹攻伤害量大幅提升。"
+      },
+      "icon": "Skill_ChainPassive_Fire_Finish"
+    },
+    {
+      "name": {
+        "en": "Vengeance Is Mine",
+        "kr": "복수는 나의 것",
+        "jp": "復讐は我が物",
+        "zh": "我要复仇"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "When hit, increases <color=#28d9ed>Penetration</color> by <color=#28d9ed>25%</color>. (Max 4 stacks)",
+        "kr": "피격 시 <color=#28d9ed>관통력</color>이 <color=#28d9ed>25%</color> 증가합니다. (최대 4회 누적)",
+        "jp": "ダメージを受けた時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>25%</color>UPする。(最大4回まで累積)",
+        "zh": "受到攻击时,使<color=#28d9ed>穿透力</color>提升<color=#28d9ed>250</color>。(最多可叠加4次)"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}

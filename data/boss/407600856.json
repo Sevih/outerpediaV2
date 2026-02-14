@@ -1,0 +1,186 @@
+{
+  "id": "407600856",
+  "Name": {
+    "en": "Ars Nova",
+    "kr": "아르스 노바",
+    "jp": "アルス・ノーヴァ",
+    "zh": "艺术新星"
+  },
+  "Surname": {
+    "en": "Giant of Light",
+    "kr": "빛의 거인",
+    "jp": "光の巨人",
+    "zh": "光之巨人"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 70,
+  "icons": "4076008",
+  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Ars Nova (Stage 7)",
+      "kr": "아르스 노바 (7 단계)",
+      "jp": "アルス・ノーヴァ(7段階)",
+      "zh": "艺术新星(第7阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Identification",
+      "kr": "특별 의뢰 : 정체 규명",
+      "jp": "特別依頼:正体究明",
+      "zh": "特别委托:查清身份"
+    },
+    "area_id": {
+      "en": "50204007",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "The Fourth Art",
+        "kr": "제 4의 예술",
+        "jp": "第4の芸術",
+        "zh": "第4艺术"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and increases <color=#28d9ed>Counterattack Chance</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>반격 확률</color>이 증가합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>反撃発生率</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并使<color=#28d9ed>反击率</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_4076008",
+      "buff": [
+        "BT_STAT|ST_COUNTER_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Gregorian Chant",
+        "kr": "그레고리오 성가",
+        "jp": "グレゴリオ聖歌",
+        "zh": "格里高利圣咏"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Unbuffable</color> on all targets for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>2턴</color> 동안 대상 모두에게 <color=#28d9ed>강화 불가</color>를 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象全体に<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并对全体目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4076008",
+      "debuff": [
+        "BT_SEALED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Motet",
+        "kr": "모테트",
+        "jp": "モテット",
+        "zh": "经文歌"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Silenced</color> on all targets for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color> 동안 대상 모두에게 <color=#28d9ed>침묵</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象全体に<color=#28d9ed>沈黙</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并对全体目标造成<color=#28d9ed>沉默</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4076008",
+      "debuff": [
+        "BT_SILENCE"
+      ]
+    },
+    {
+      "name": {
+        "en": "The First Archbishop",
+        "kr": "초대 대주교",
+        "jp": "初代大司教",
+        "zh": "首任大主教"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAfter attacking, summons an Inferior Core.\\nInferior Core has the following ability:\\n\\n<color=#28d9ed>Hymn</color>: +10% Weakness Gauge for Ars Nova",
+        "kr": "(패시브 효과)\\n공격 후 열화 코어를 소환합니다.\\n열화 코어는 다음과 같은 능력을 가집니다.\\n\\n<color=#28d9ed>찬가</color> : 아르스 노바의 WG +10%",
+        "jp": "(パッシブ効果)\\n攻撃後、劣化コアを召喚する。\\n劣化コアは以下の能力を持つ。\\n\\n<color=#28d9ed>【賛歌】</color>:【アルス・ノーヴァ】のWGを10%UPさせる。",
+        "zh": "(被动效果)\\n攻击后,召唤烈火核心。\\n烈火核心拥有以下能力。\\n\\n<color=#28d9ed>赞歌</color>:艺术新星的WG+10%"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "The Boy Who Dreamed of Becoming a Musician",
+        "kr": "음악가를 꿈꿨던 소년",
+        "jp": "音楽家を夢見ていた少年",
+        "zh": "曾梦想成为音乐家的少年"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDoes not take Weakness Gauge damage when the enemy has <color=#28d9ed>150</color> or more Chain Points.\\nReduces damage taken from <color=#28d9ed>Fire, Water, and Earth</color> enemies, and increases damage taken from <color=#28d9ed>Light and Dark</color> enemies.",
+        "kr": "(패시브 효과)\\n적이 보유한 CP가 <color=#28d9ed>150</color> 이상일 때, WG 피해를 받지 않습니다.\\n<color=#28d9ed>화속성, 수속성, 지속성</color> 적에게 받는 피해가 감소하고, <color=#28d9ed>명속성 및 암속성</color> 적에게 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n敵のCPが<color=#28d9ed>150</color>以上の場合、WGダメージを受けない。\\n<color=#28d9ed>火・水・地属性</color>の敵から受けるダメージがDOWNし、<color=#28d9ed>光・闇属性</color>の敵から受けるダメージがUPする。",
+        "zh": "(被动效果)\\n若敌人持有的CP为<color=#28d9ed>150</color>以上,则不受WG伤害。\\n受到来自<color=#28d9ed>火属性、水属性、土属性</color>敌人的伤害降低,且受到来自<color=#28d9ed>光属性和暗属性</color>敌人的伤害\\n提升。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "The First King's Comrade",
+        "kr": "건국왕의 전우",
+        "jp": "初代王の戦友",
+        "zh": "开国大帝的战友"
+      },
+      "type": "SKT_MONSTER_3",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of the turn, deals fixed damage to all enemies. This damage increases by <color=#28d9ed>400</color> every turn.",
+        "kr": "(패시브 효과)\\n턴 시작 시 적 전체에게 고정 피해를 입힙니다. 이 피해는 매 턴 <color=#28d9ed>400</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\nターン開始時、敵全体に固定ダメージを与える。このダメージは毎ターン<color=#28d9ed>400</color>UPする。",
+        "zh": "(被动效果)\\n回合开始时,对全体敌人造成固定伤害。该伤害每回合提升<color=#28d9ed>400</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Cantata</color>: Used when Enraged ends.\\nDeals heavy damage to all enemies.\\n\\n<color=#ffd732>If enraged within 4 turns, grants 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>칸타타</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.\\n\\n<color=#ffd732>4턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP・ダメージDOWNを3ターンの間付与し、WGを30%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【カンタータ】</color>:【狂暴化】終了時に発動する。\\n敵全体に大ダメージを与える。\\n\\n<color=#ffd732>戦闘開始時から4ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复30%。狂暴化持续3回合。\\n\\n<color=#28d9ed>大合唱</color>:狂暴化结束时发动。\\n对全体敌人造成巨额伤害。\\n\\n<color=#ffd732>在4回合内陷入狂暴化状态时,恢复80CP</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_CP_CHARGE",
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Snow-white Embrace",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "PvP:Assassin's Charm3Executioner's Charm3\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Assassin's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "CritDmg": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Snow-white Embrace",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Critical Strike", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "PvP:Assassin's Charm3Executioner's Charm3\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Assassin's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "Pene": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Snow-white Embrace",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "PvP:Assassin's Charm3Executioner's Charm3\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Assassin's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}

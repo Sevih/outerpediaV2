@@ -1,0 +1,179 @@
+{
+  "Atk Mix": {
+    "Weapon": [
+      {
+        "name": "Meteor Mashers",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Attack", "count": 2 },
+        { "name": "Critical Strike", "count": 2 }
+      ],
+      [
+        { "name": "Attack", "count": 2 },
+        { "name": "Penetration", "count": 2 }
+      ],
+      [
+        { "name": "Attack", "count": 2 },
+        { "name": "Augmentation", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "CHC>ATK>EFF>SPD>CHD",
+    "Note": "",
+    "Talisman": [
+      "Rogue's Charm",
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Meteor Mashers",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "CHC>ATK>EFF>SPD>CHD",
+    "Note": "",
+    "Talisman": [
+      "Rogue's Charm",
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Pen": {
+    "Weapon": [
+      {
+        "name": "Meteor Mashers",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "CHC>ATK>EFF>SPD>CHD",
+    "Note": "",
+    "Talisman": [
+      "Rogue's Charm",
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Support": {
+    "Weapon": [
+      {
+        "name": "Meteor Mashers",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>EFF>CHC>ATK>CHD",
+    "Note": "",
+    "Talisman": [
+      "Rogue's Charm",
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  }
+}

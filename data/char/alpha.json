@@ -1,0 +1,405 @@
+{
+  "ID": "2000007",
+  "Fullname": "Alpha",
+  "Fullname_jp": "アルファ",
+  "Fullname_kr": "알파",
+  "Fullname_zh": "阿尔法",
+  "Rarity": 2,
+  "Element": "Water",
+  "Class": "Mage",
+  "SubClass": "Enchanter",
+  "rank": "D",
+  "role": "support",
+  "skill_priority": {
+    "First": {
+      "prio": 2
+    },
+    "Second": {
+      "prio": 3
+    },
+    "Ultimate": {
+      "prio": 1
+    }
+  },
+  "Chain_Type": "Join",
+  "gift": "Science",
+  "VoiceActor": "VA. Reba Buhr",
+  "VoiceActor_jp": "CV. 田村ゆかり",
+  "VoiceActor_kr": "CV. 이다은",
+  "VoiceActor_zh": "CV. 田村由加莉",
+  "transcend": {
+    "1": null,
+    "2": "ATK DEF HP +5%",
+    "2_jp": "ATK DEF HP +5%",
+    "2_kr": "ATK DEF HP +5%",
+    "2_zh": "ATK DEF HP +5%",
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4": "ATK DEF HP +16%\n+3% Effectiveness\n+1 Chain Passive Weakness Gauge damage",
+    "4_jp": "ATK DEF HP +16%\n効果命中+3%\nチェーンパッシブのWGダメージ+1",
+    "4_kr": "ATK DEF HP +16%\n효과 적중 +3%\n체인 패시브의 WG 감소량 +1",
+    "4_zh": "ATK DEF HP +16%\n效果命中+3%\n连携被动技能的WG降低量+1",
+    "5": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "6": "ATK DEF HP +30%\n+3% Effectiveness\n+25 Action Points at battle start",
+    "6_jp": "ATK DEF HP +30%\n効果命中+3%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n효과 적중 +3%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n效果命中+3%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "701",
+      "IconName": "Skill_First_2000007",
+      "SkillType": "SKT_FIRST",
+      "name": "Wailing Rhapsody",
+      "name_jp": "慟哭のラプソディ",
+      "name_kr": "통곡의 랩소디",
+      "name_zh": "痛哭狂想曲",
+      "true_desc": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to reduce the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+      "true_desc_kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+      "true_desc_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+10%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "3_zh": [
+          "效果触发几率+10%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+10% damage",
+          "+10% effect chance"
+        ],
+        "5_jp": [
+          "ダメージ+10%",
+          "効果発生率+10%"
+        ],
+        "5_kr": [
+          "피해량 +10%",
+          "효과 발동 확률 +10%"
+        ],
+        "5_zh": [
+          "伤害量+10%",
+          "效果触发几率+10%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [],
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ],
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "702",
+      "IconName": "Skill_Second_2000007",
+      "SkillType": "SKT_SECOND",
+      "name": "Valiant Concerto",
+      "name_jp": "勇猛のコンチェルト",
+      "name_kr": "용맹의 콘체르토",
+      "name_zh": "勇猛协奏曲",
+      "true_desc": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to decrease the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+      "true_desc_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+      "true_desc_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+      "true_desc_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+15% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+15%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "3_zh": [
+          "效果触发几率+15%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+10% damage",
+          "+15% effect chance"
+        ],
+        "5_jp": [
+          "ダメージ+10%",
+          "効果発生率+15%"
+        ],
+        "5_kr": [
+          "피해량 +10%",
+          "효과 발동 확률 +15%"
+        ],
+        "5_zh": [
+          "伤害量+10%",
+          "效果触发几率+15%"
+        ]
+      },
+      "cd": "3",
+      "wgr": 1,
+      "buff": [],
+      "debuff": [
+        "BT_STAT|ST_ATK"
+      ],
+      "offensive": true,
+      "target": "multi"
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "703",
+      "IconName": "Skill_Ultimate_2000007",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Night at the Opera",
+      "name_jp": "ナイト・オブ・ジ・オペラ",
+      "name_kr": "나이트 오브 디 오페라",
+      "name_zh": "歌剧之夜",
+      "true_desc": "Attacks all enemies and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+      "true_desc_jp": "敵全体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+      "true_desc_kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+      "true_desc_zh": "攻击全体敌人,并有<color=#28d9ed>50%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+20% effect chance"
+        ],
+        "5_jp": [
+          "効果発生率+20%"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +20%"
+        ],
+        "5_zh": [
+          "效果触发几率+20%"
+        ]
+      },
+      "cd": "5",
+      "wgr": 2,
+      "buff": [],
+      "debuff": [
+        "BT_STUN"
+      ],
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "Increases the chance to inflict Stunned by 15%",
+          "effect_jp": "スタン発生率+15%",
+          "effect_kr": "스턴 발생 확률 +15%",
+          "effect_zh": "晕眩触发几率+15%",
+          "cost": 80,
+          "level": 1,
+          "offensive": true,
+          "target": "multi"
+        },
+        "SKT_BURST_2": {
+          "effect": "Increases the chance to inflict Stunned by 15%",
+          "effect_jp": "スタン発生率+15%",
+          "effect_kr": "스턴 발생 확률 +15%",
+          "effect_zh": "晕眩触发几率+15%",
+          "cost": 160,
+          "level": 2,
+          "offensive": true,
+          "target": "multi"
+        },
+        "SKT_BURST_3": {
+          "effect": "Enhances Stunned\\n(Ignores Resilience)",
+          "effect_jp": "スタン強化\\n(効果抵抗無視)",
+          "effect_kr": "스턴 강화\\n(효과 저항 무시)",
+          "effect_zh": "强化晕眩\\n(无视效果抵抗)",
+          "cost": 200,
+          "level": 3,
+          "offensive": true,
+          "target": "multi"
+        }
+      },
+      "offensive": true,
+      "target": "multi"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "704",
+      "IconName": "Skill_ChainPassive_Water_Join",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to reduce Defense of the target for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to reduce <color=#28d9ed>Defense</color> of the target for <color=#28d9ed>2 turn(s)</color>.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の防御力を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+      "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 대상의 방어력을 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>을 감소시킵니다.",
+      "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的防御力降低,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率使敌人目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。",
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [],
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ],
+      "dual_debuff": [
+        "BT_STAT|ST_DEF"
+      ],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>ACC>EFF",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

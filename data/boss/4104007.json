@@ -1,0 +1,55 @@
+{
+  "id": "4104007",
+  "Name": {
+    "en": "Maxwell",
+    "kr": "맥스웰",
+    "jp": "マクスウェル",
+    "zh": "麦克斯威尔"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 52,
+  "icons": "2000028",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Puppet",
+      "kr": "꼭두각시",
+      "jp": "操り人形",
+      "zh": "提线木偶"
+    },
+    "mode": {
+      "en": "Story (Normal)",
+      "kr": "스토리(노멀)",
+      "jp": "ストーリー(ノーマル)",
+      "zh": "故事(普通)"
+    },
+    "area_id": {
+      "en": "8-5",
+      "kr": "8-5",
+      "jp": "8-5",
+      "zh": "8-5"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ray of Destruction",
+        "kr": "파열의 섬광",
+        "jp": "Xリッパ-",
+        "zh": "破裂闪光"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_First_2000028"
+    }
+  ]
+}

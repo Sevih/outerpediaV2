@@ -1,0 +1,143 @@
+{
+  "id": "51000029",
+  "Name": {
+    "en": "Vlada Assault Suit",
+    "kr": "블라다 중장기병",
+    "jp": "重装機兵ヴラダ",
+    "zh": "布拉达重骑兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 100,
+  "icons": "4044006",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Ful.Mi.NATION Assault Suit",
+      "kr": "주간토벌 - 이엑스플로 중장기병",
+      "jp": "ウィークリー討伐 - イエクスプローの重装機兵",
+      "zh": "每周讨伐 - 伊克斯普洛重骑兵"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600016",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Intense Output",
+        "kr": "강력한 출력",
+        "jp": "出力全開",
+        "zh": "强力输出"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies. After attacking, increases <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>25%</color>. (Max 4 stacks)",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>25%</color> 증가합니다. (최대 4회 누적)",
+        "jp": "敵全体にダメージを与える。攻撃後、<color=#28d9ed>会心率</color>を<color=#28d9ed>25%</color>UPさせる。(最大4回まで累積)",
+        "zh": "攻击全体敌人。攻击后,<color=#28d9ed>暴击率</color>提升<color=#28d9ed>25%</color>。(最多可叠加4次)"
+      },
+      "icon": "Skill_First_4044001"
+    },
+    {
+      "name": {
+        "en": "Overwhelming Performance",
+        "kr": "압도적인 성능",
+        "jp": "圧倒的な性能",
+        "zh": "压倒性的性能"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks one enemy. When the enemy is not granted a buff, greatly increases damage dealt.",
+        "kr": "적 한 명을 공격합니다. 강화 효과를 보유하지 않은 적에게 입히는 피해가 크게 증가합니다.",
+        "jp": "敵単体にダメージを与える。強化効果がない敵に与えるダメージが大幅にUPする。",
+        "zh": "攻击一名敌人。对未附带强化效果的敌人造成的伤害大幅提升。"
+      },
+      "icon": "Skill_Second_4044001"
+    },
+    {
+      "name": {
+        "en": "Fearsome Might",
+        "kr": "가공할 위력",
+        "jp": "恐れおののく威力",
+        "zh": "可怕的威力"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. After attacking, increases <color=#28d9ed>Speed</color> of the caster for <color=#28d9ed>3 turn(s)</color> and reduces <color=#28d9ed>Speed</color> of all enemies. This effect ignores the target's Resilience and Immunity.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가하고 적 전체의 <color=#28d9ed>속도</color>는 감소합니다. 이 효과는 대상의 효과 저항과 면역을 무시합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>3ターン</color>の間UPさせ、敵全体の<color=#28d9ed>スピード</color>をDOWNさせる。この効果は対象の効果抵抗と免疫を無視する。",
+        "zh": "攻击全体敌人。攻击后,自身的<color=#28d9ed>速度</color>提升,全体敌人的<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>3回合</color>。该效果无视目标的效果抵抗和免疫。"
+      },
+      "icon": "Skill_Ultimate_4044001",
+      "buff":["BT_STAT|ST_SPEED"],
+      "debuff":["BT_STAT|ST_SPEED"]
+    },
+    {
+      "name": {
+        "en": "Super Genius's Improvement",
+        "kr": "슈퍼 천재의 개량",
+        "jp": "スーパー天才の改良",
+        "zh": "超级天才改良"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nDoes not take Weakness Gauge damage from attacks that are not Revenge/Counterattack.\\nGreatly reduces damage taken from attacks that target all enemies.\\nReduces Critical Hit Chance of non-Earth enemies.",
+        "kr": "(패시브 효과)\\n복수/반격이 아닌 공격으로는 WG 피해를 받지 않습니다.\\n전체 공격으로 받는 피해가 크게 감소합니다.\\n지속성이 아닌 적의 치명 확률이 모두 감소합니다.",
+        "jp": "(パッシブ効果)\\n復讐/反撃以外の攻撃ではWGダメージを受けない。\\n全体攻撃で受けるダメージが大幅にDOWNする。\\n地属性以外の敵の会心率をすべてDOWNさせる。",
+        "zh": "(被动效果)\\n不会受到非复仇/反击攻击的WG伤害。\\n大幅降低全体攻击所受伤害。\\n非土属性敌人的暴击率全部降低。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "debuff":["BT_STAT|ST_CRITICAL_RATE_IR"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Super Genius's Bonus</color>: Used when Enraged ends.\\nAttacks all enemies and permanently inflicts <color=#28d9ed>Silenced</color> on them. This effect cannot be removed.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제 불가능한 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>슈퍼 천재가 넣은 보너스</color> : 광폭화 종료 시 사용.\\n적 전체를 공격 후 영구적으로 <color=#28d9ed>침묵</color>을 부여합니다. 이 효과는 해제되지 않습니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【スーパー天才のボーナス】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与えた後、<color=#28d9ed>沈黙</color>を永続的に付与する。この効果は解除されない。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>超级天才专属增益</color>:狂暴化结束时发动。\\n攻击全体敌人后,造成永久<color=#28d9ed>沉默</color>效果。该效果不会被解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff":["BT_SILENCE_IR"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

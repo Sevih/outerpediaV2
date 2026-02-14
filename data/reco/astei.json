@@ -1,0 +1,102 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Legacy of the Dream",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Immortal Pride",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Obsidian Oath",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF>EVA=RES",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Vanguard's Charm"
+    ]
+  },
+  "Immunity": {
+    "Weapon": [
+      {
+        "name": "Legacy of the Dream",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Immortal Pride",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Obsidian Oath",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Immunity", "count": 2 },
+        { "name": "Swiftness", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF>EVA=RES",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Vanguard's Charm"
+    ]
+  },
+  "Counterattack": {
+    "Weapon": [
+      {
+        "name": "Legacy of the Dream",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Immortal Pride",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Obsidian Oath",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Counterattack", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF>EVA=RES",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Vanguard's Charm"
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "id": "50000010",
+  "Name": {
+    "en": "Dahlia",
+    "kr": "달리아",
+    "jp": "ダリア",
+    "zh": "达利娅"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000090",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_REVERSE_HEAL_BASED_TARGET,BT_REVERSE_HEAL_BASED_CASTER,BT_DOT_CURSE",
+  "location": {
+    "dungeon": {
+      "en": "Supreme Adventurer Promotion Challenge 3",
+      "kr": "특급 모험가 승급 챌린지 3",
+      "jp": "特級冒険者昇級チャレンジ3",
+      "zh": "特级冒险家晋升挑战3"
+    },
+    "mode": {
+      "en": "Challenge",
+      "kr": "도전",
+      "jp": "チャレンジ",
+      "zh": "挑战"
+    },
+    "area_id": {
+      "en": "70600105",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Cold-Blooded Torture",
+        "kr": "냉혹한 고문",
+        "jp": "ルースレストーチャー",
+        "zh": "严刑拷打"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. When scoring a critical hit, reduces skill cooldown of <color=#28d9ed>Terminal Winter</color> by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격합니다. 치명 공격이 발생했다면 <color=#28d9ed>최후의 겨울</color>의 스킬 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与える。会心が発生した場合<color=#28d9ed>【フィンブルウィンター】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "zh": "攻击敌人。触发暴击时,使<color=#28d9ed>末日凛冬</color>的技能冷却时间降低<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000090",
+      "buff":["BT_COOL_CHARGE"]
+    },
+    {
+      "name": {
+        "en": "Untouchable One",
+        "kr": "언터쳐블 원",
+        "jp": "アンタッチャブル・ワン",
+        "zh": "触不可及"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy. After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격합니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "zh": "攻击敌人。攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "Skill_Second_2000090",
+      "buff":["BT_ACTION_GAUGE"]
+    },
+    {
+      "name": {
+        "en": "Terminal Winter",
+        "kr": "최후의 겨울",
+        "jp": "フィンブルウィンター",
+        "zh": "末日凛冬"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nThis attack <color=#28d9ed>completely ignores</color> the target's <color=#28d9ed>Defense</color>.",
+        "kr": "적 전체를 공격합니다.\\n이 공격은 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>모두 무시</color> 합니다.",
+        "jp": "敵全体にダメージを与える。\\nこの攻撃は対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>すべて無視</color>する。",
+        "zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>所有</color><color=#28d9ed>防御力</color>。"
+      },
+      "icon": "Skill_Ultimate_2000090"
+    },
+    {
+      "name": {
+        "en": "Eternal Frost",
+        "kr": "영겁의 냉기",
+        "jp": "永劫の冷気",
+        "zh": "永劫寒气"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Damage taken in one attack does not exceed <color=#28d9ed>6%</color> of the caster's Max Health. (Includes Dual Attacks and Additional Attacks)\\nRight after all attacks, does not trigger an enemy's Counterattack, Revenge, or Agile Response.\\n(Triggered Effect) Upon taking a critical hit, counterattacks with <color=#28d9ed>Cold-Blooded Torture</color>.",
+        "kr": "(패시브 효과) 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>6%</color>를 초과하지 않습니다. (협공 및 추가타 포함)\\n모든 공격 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.\\n(발동 효과) 치명 피격 시 대상에게 <color=#28d9ed>냉혹한 고문</color>으로 반격합니다.",
+        "jp": "(パッシブ効果)一度に受けるダメージが自分の最大HPの<color=#28d9ed>6%</color>を超えない。(連携・追加攻撃も含む)\\nすべての攻撃後には、敵の反撃、復讐、迅速対応が発動しない。\\n(発動効果)会心ダメージを受けた場合、対象に<color=#28d9ed>【ルースレストーチャー】</color>で反撃する。",
+        "zh": "(被动效果)单次所受伤害不会超过自身生命值上限的<color=#28d9ed>6%</color>。(包含夹攻与额外攻击)\\n所有攻击发动后,不会触发敌人的反击、复仇、迅速应对效果。\\n(触发效果)受到暴击时,对目标使用<color=#28d9ed>严刑拷打</color>进行反击。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "buff":["BT_SEAL_COUNTER","BT_STAT|ST_COUNTER_RATE"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>20%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Attacks all enemies. Does not take Weakness Gauge damage permanently, and increases Critical Hit Chance. This effect cannot be removed.",
+        "kr": "최대 체력의 <color=#28d9ed>20%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화</color> : 적 전체를 공격합니다. 영구적으로 WG피해를 받지 않고, 치명 확률이 증가합니다. 이 효과는 해제되지 않습니다.",
+        "jp": "最大HPの<color=#28d9ed>20%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:永続的にWGダメージを受けなくなり、会心率がUPする。この効果は解除されない。",
+        "zh": "若生命值降至上限的<color=#28d9ed>20%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:永久不会受到WG伤害,暴击率提升。该效果不会被解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff":["BT_STAT|ST_CRITICAL_RATE"]
+    }
+  ]
+}

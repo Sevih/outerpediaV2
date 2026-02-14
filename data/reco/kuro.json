@@ -1,0 +1,32 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "ATK%/HP%"
+      },
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%/HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>ACC",
+    "Note": "PvP:Mage's Charm3\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Mage's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}

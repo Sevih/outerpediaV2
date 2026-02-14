@@ -1,0 +1,417 @@
+{
+  "ID": "2000103",
+  "Fullname": "Luna",
+  "Fullname_jp": "ルナ",
+  "Fullname_kr": "루나",
+  "Fullname_zh": "露娜",
+  "Rarity": 3,
+  "Element": "Water",
+  "Class": "Defender",
+  "SubClass": "Phalanx",
+  "rank": "S",
+  "rank_pvp": "C",
+  "role": "support",
+  "skill_priority": {
+    "First": {
+      "prio": 1
+    },
+    "Second": {
+      "prio": 2
+    },
+    "Ultimate": {
+      "prio": 3
+    }
+  },
+  "Chain_Type": "Finish",
+  "gift": "Luxury",
+  "video": "3S8Omrhap5k",
+  "VoiceActor": "VA. Sam Slade",
+  "VoiceActor_jp": "CV. 久保ユリカ",
+  "VoiceActor_kr": "CV. Sam Slade",
+  "VoiceActor_zh": "CV. 久保由利香",
+  "transcend": {
+    "1": null,
+    "1_zh": null,
+    "2": null,
+    "2_zh": null,
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\n+3% Ally Team Resilience\n+1 Chain Passive Weakness Gauge damage",
+    "4_1_jp": "ATK DEF HP +16%\n味方の効果抵抗+3%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 효과 저항 +3%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n友军效果抵抗+3%\n连携被动技能的WG降低量+1",
+    "4_2": "ATK DEF HP +19%",
+    "4_2_zh": "ATK DEF HP +19%",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "5_2": "ATK DEF HP +25%",
+    "5_2_zh": "ATK DEF HP +25%",
+    "5_3": "ATK DEF HP +28%",
+    "5_3_zh": "ATK DEF HP +28%",
+    "6": "ATK DEF HP +30%\n+3% Ally Team Resilience\n+25 Action Points at battle start",
+    "6_jp": "ATK DEF HP +30%\n味方の効果抵抗+3%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n아군 효과 저항 +3%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n友军效果抵抗+3%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "10301",
+      "IconName": "Skill_First_2000103",
+      "SkillType": "SKT_FIRST",
+      "name": "Moonlight Slash",
+      "name_jp": "月光斬り",
+      "name_kr": "달빛 가르기",
+      "name_zh": "划破月光",
+      "true_desc": "Attacks an enemy, and if the caster has a Barrier, deals an Additional Attack.\\nAfter attacking, there is a <color=#28d9ed>20%</color> chance to trigger a Dual Attack by the ally with the highest Attack. If an Additional Attack occurs, the Dual Attack chance increases by <color=#28d9ed>30%</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、自分がシールド状態の場合、追加攻撃を与える。\\n攻撃後、攻撃力が最も高い味方単体に<color=#28d9ed>20%</color>の確率で連携を発生させ、追加攻撃発生時、連携発生率が<color=#28d9ed>30%</color>UPする。",
+      "true_desc_kr": "적을 공격하고, 실드를 보유한 상태라면 추가 공격을 입힙니다.\\n공격 후 <color=#28d9ed>20%</color> 확률로 가장 공격력이 높은 아군의 협공을 발생시키며, 추가 공격 발생 시 협공 확률이 <color=#28d9ed>30%</color> 증가합니다.",
+      "true_desc_zh": "攻击敌人,若目标为附带护盾的状态,则进行额外攻击。\\n攻击后,有<color=#28d9ed>20%</color>的几率使攻击力最高的友军发动夹攻,触发额外攻击时夹攻几率增加<color=#28d9ed>30%</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+15% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+15%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "3_zh": [
+          "效果触发几率+15%"
+        ],
+        "4": [
+          "+10% damage",
+          "+15% effect chance"
+        ],
+        "4_jp": [
+          "ダメージ+10%",
+          "効果発生率+15%"
+        ],
+        "4_kr": [
+          "피해량 +10%",
+          "효과 발동 확률 +15%"
+        ],
+        "4_zh": [
+          "伤害量+10%",
+          "效果触发几率+15%"
+        ],
+        "5": [
+          "+10% damage",
+          "+20% effect chance"
+        ],
+        "5_jp": [
+          "ダメージ+10%",
+          "効果発生率+20%"
+        ],
+        "5_kr": [
+          "피해량 +10%",
+          "효과 발동 확률 +20%"
+        ],
+        "5_zh": [
+          "伤害量+10%",
+          "效果触发几率+20%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [
+        "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "BT_CALL_BACKUP",
+        "BT_CALL_BACKUP_2"
+      ],
+      "debuff": [
+        "BT_WG_REVERSE_HEAL"
+      ],
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "Activates an additional attack\\nActivates Dual Attack with 1 ally",
+          "effect_jp": "追加攻撃確定\\n連携1体発生",
+          "effect_kr": "추가타 확정\\n아군 1명 협공 호출",
+          "effect_zh": "百分百额外攻击\\n呼叫1名友军发动夹攻",
+          "cost": 60,
+          "level": 1,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_2": {
+          "effect": "+1 Weakness Gauge damage",
+          "effect_jp": "WGダメージ+1",
+          "effect_kr": "WG 감소량 +1",
+          "effect_zh": "WG降低量+1",
+          "cost": 90,
+          "level": 2,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_3": {
+          "effect": "Activates Dual Attack with 2 allies",
+          "effect_jp": "連携2体発生",
+          "effect_kr": "아군 2명 협공 호출",
+          "effect_zh": "呼叫2名友军发动夹攻",
+          "cost": 120,
+          "level": 3,
+          "offensive": true,
+          "target": "mono"
+        }
+      },
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "10302",
+      "IconName": "Skill_Second_2000103",
+      "SkillType": "SKT_SECOND",
+      "name": "Hero's Emergence",
+      "name_jp": "英雄出現",
+      "name_kr": "영웅 출현",
+      "name_zh": "英雄现身",
+      "true_desc": "Removes <color=#28d9ed>1</color> a debuff from all allies and grants a Barrier for <color=#28d9ed>2</color> turns. Barrier Strength increases proportionally to the caster's max Health.",
+      "true_desc_jp": "味方全体の弱体効果を<color=#28d9ed>1個</color>解除した後、シールドを<color=#28d9ed>2ターン</color>の間付与する。自分の最大HPが高いほどシールド量がUPする。",
+      "true_desc_kr": "아군 전체의 약화 효과를 <color=#28d9ed>1개</color> 해제 후 <color=#28d9ed>2턴</color>동안 실드를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.",
+      "true_desc_zh": "解除全体友军<color=#28d9ed>1个</color>弱化效果后赋予护盾,持续<color=#28d9ed>2回合</color>。护盾效果根据自身生命值上限等比提升。",
+      "enhancement": {
+        "2": [
+          "-1 turn Skill Cooldown"
+        ],
+        "2_jp": [
+          "スキルターン-1ターン"
+        ],
+        "2_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "2_zh": [
+          "冷却时间-1回合"
+        ],
+        "3": [
+          "+1 debuff removed"
+        ],
+        "3_jp": [
+          "弱体効果解除+1"
+        ],
+        "3_kr": [
+          "약화 효과 해제 수량 +1"
+        ],
+        "3_zh": [
+          "弱化效果解除数量+1"
+        ],
+        "4": [
+          "+1 turn effect duration"
+        ],
+        "4_jp": [
+          "効果ターン+1ターン"
+        ],
+        "4_kr": [
+          "효과 지속 +1턴"
+        ],
+        "4_zh": [
+          "效果持续时间+1回合"
+        ],
+        "5": [
+          "+30% All Ally Priority (Excluding the caster)"
+        ],
+        "5_jp": [
+          "味方の行動ゲージUP+30%(自分を除く)"
+        ],
+        "5_kr": [
+          "아군 전체 행동 게이지 +30% (자신 제외)"
+        ],
+        "5_zh": [
+          "全体友军行动值+30%(自身除外)"
+        ]
+      },
+      "cd": "3",
+      "buff": [
+        "BT_REMOVE_DEBUFF",
+        "BT_SHIELD_BASED_CASTER",
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [],
+      "offensive": false,
+      "target": "mono"
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "10303",
+      "IconName": "Skill_Ultimate_2000103",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Someday I Will Reach the Moon",
+      "name_jp": "いつか月に届くもの",
+      "name_kr": "언젠가 달에 닿을 것",
+      "name_zh": "总有一天能触及月亮",
+      "true_desc": "Attacks all enemies. With a <color=#28d9ed>70%</color> chance, grants <color=#28d9ed>Unbuffable</color> on all targets for <color=#28d9ed>3</color> turns.",
+      "true_desc_jp": "敵全体にダメージを与える。対象全体に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>強化不可</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+      "true_desc_kr": "적 전체를 공격합니다. <color=#28d9ed>70%</color> 확률로 대상 모두에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.",
+      "true_desc_zh": "攻击全体敌人。有<color=#28d9ed>70%</color>的几率对所有目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>3回合</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+15% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+15%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "3_zh": [
+          "效果触发几率+15%"
+        ],
+        "4": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_zh": [
+          "冷却时间-1回合"
+        ],
+        "5": [
+          "+15% effect chance",
+          "Enhances Unbuffable (Ignores Resilience)"
+        ],
+        "5_jp": [
+          "効果発生率+15%",
+          "強化不可強化(効果抵抗無視)"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +15%",
+          "강화 불가 강화 (효과 저항 무시)"
+        ],
+        "5_zh": [
+          "效果触发几率+15%",
+          "强力无法强化(无视效果抵抗)"
+        ]
+      },
+      "wgr": 2,
+      "cd": "6",
+      "buff": [],
+      "debuff": [
+        "BT_SEALED"
+      ],
+      "offensive": true,
+      "target": "multi"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "10304",
+      "IconName": "Skill_ChainPassive_Water_Finish",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Finish Effect</color>: Recovers <color=#28d9ed>25</color> Chain Points after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Grants a Barrier for 1 turn proportional to the caster's Max Health after attacking.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、CPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分にシールドを1ターンの間付与する。自分の最大HPが高いほどシールド量がUPする。",
+      "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신에게 1턴 동안 자신의 최대 체력에 비례하여 실드를 부여합니다.",
+      "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使CP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身获得护盾,持续1回合。效果根据自身生命值上限等比提升。",
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_CP_CHARGE"
+      ],
+      "debuff": [],
+      "dual_buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+      
+    ]
+  },"Penetration": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+      
+    ]
+  },
+  "Critical Strike": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Clock Up",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Critical Strike", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+      
+    ]
+  }
+}

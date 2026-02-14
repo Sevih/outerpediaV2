@@ -1,0 +1,73 @@
+{
+  "id": "51000018",
+  "Name": {
+    "en": "Spare Core",
+    "kr": "예비 코어",
+    "jp": "予備のコア",
+    "zh": "预备核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 100,
+  "icons": "4151011",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Forest King",
+      "kr": "주간토벌 - 숲의 왕",
+      "jp": "ウィークリー討伐 - 森の王",
+      "zh": "每周讨伐 - 森林之王"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600008",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Proactive Entity Protection",
+        "kr": "능동적 개체 방어",
+        "jp": "能動的個体防御",
+        "zh": "主动个体防御"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies. After attacking, inflicts <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。攻击后,对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Dark",
+      "debuff":["BT_STUN"]
+    },
+    {
+      "name": {
+        "en": "Core Overdrive",
+        "kr": "코어 오버드라이브",
+        "jp": "コアオーバードライブ",
+        "zh": "核心过载"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, increases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.",
+        "kr": "(패시브 효과)\\n전투 개시 시점에 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>100%</color>UPする。",
+        "zh": "(被动效果)\\n在战斗开始时,使<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "buff":["BT_ACTION_GAUGE"]
+    }
+  ]
+}

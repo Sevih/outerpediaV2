@@ -1,0 +1,192 @@
+{
+  "id": "440600010-B-1",
+  "Name": {
+    "en": "Planet Purification Unit",
+    "kr": "행성 정화 유닛",
+    "jp": "惑星浄化ユニット",
+    "zh": "净化行星单位"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 200,
+  "icons": "4076011",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Planet Purification Unit (Stage 10)",
+      "kr": "행성 정화 유닛 (10단계)",
+      "jp": "惑星浄化ユニット(10段階)",
+      "zh": "净化行星单位(第10阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70601010",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Command: Restrain",
+        "kr": "명령 : 제압",
+        "jp": "命令:制圧",
+        "zh": "命令:压制"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nPrioritizes attacking the <color=#28d9ed>leftmost</color> enemy. When attacking a non-<color=#28d9ed>Ranger</color> enemy, inflicts <color=#28d9ed>Stunned</color> and <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다. <color=#28d9ed>속도형</color>이 아닌 적 공격 시 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>과 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>左側</color>にいる敵を優先的に攻撃する。<color=#28d9ed>スピード型</color>ではない敵を攻撃時、対象に<color=#28d9ed>スタン</color>と<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人。\\n优先攻击处于<color=#28d9ed>左侧</color>的敌人。当攻击非<color=#28d9ed>速度型</color>敌人时,对目标造成<color=#28d9ed>晕眩</color>和<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_4054001",
+      "debuff": [
+        "BT_DOT_BURN",
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Command: Incapacitate",
+        "kr": "명령 : 무력화",
+        "jp": "命令:無力化",
+        "zh": "命令:无效化"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、敵全体に<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4054001",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Command: Destroy",
+        "kr": "명령 : 파괴",
+        "jp": "命令:破壊",
+        "zh": "命令:破坏"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Removes all <color=#28d9ed>buffs</color> from the enemy, then attacks. Deals increased damage to enemies that are not Healers.\\nPrioritizes attacking Healer enemies first.",
+        "kr": "적의 <color=#28d9ed>강화 효과</color>를 모두 해제 후 공격합니다. 회복형이 아닌 적에게 입히는 피해가 증가합니다.\\n이 공격은 회복형 적을 우선적으로 공격합니다.",
+        "jp": "敵の<color=#28d9ed>強化効果</color>をすべて解除した後、ダメージを与える。回復型ではない敵に与えるダメージがUPする。\\nこの攻撃は回復型の敵を優先的に攻撃する。",
+        "zh": "解除敌人的所有<color=#28d9ed>强化效果</color>后,发动攻击。对非恢复型敌人造成的伤害提升。\\n此攻击优先攻击恢复型敌人。"
+      },
+      "icon": "Skill_Ultimate_4054001",
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Terminal: Protect Weakness",
+        "kr": "단말 : 약점 보호",
+        "jp": "端末:弱点保護",
+        "zh": "终端:保护弱点"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIf a <color=#28d9ed>Spare Core</color> is present, does not take Weakness Gauge damage.\\n\\nGrants a <color=#28d9ed>barrier</color> for <color=#28d9ed>3 turn(s)</color> when attacking an enemy inflicted with Burned.\\n\\nReduces damage dealt to Water enemies and increases damage taken from them, and increases damage dealt to Earth enemies and reduces damage taken from them.\\nIncreases damage taken from Dual Attacks and Skill Chains.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>예비 코어</color>가 존재한다면 WG피해를 받지 않습니다.\\n\\n화상 보유 적 공격 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>실드</color>를 획득합니다.\\n\\n수속성 적에게 입히는 피해가 감소하고 받는 피해가 증가하지만, 지속성 적에게는 입히는 피해가 증가하고 받는 피해가 감소합니다.\\n협공과 스킬 체인으로 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n戦場に<color=#28d9ed>【予備のコア】</color>がいる場合、WGダメージを受けない。\\n\\n火傷状態の敵を攻撃時、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>3ターン</color>の間付与する。\\n\\n水属性の敵に与えるダメージがDOWNし、受けるダメージがUPするが、地属性の敵には与えるダメージがUPし、受けるダメージがDOWNする。\\n連携とチェーンスキルで受けるダメージがUPする。",
+        "zh": "(被动效果)\\n若存在<color=#28d9ed>预备核心</color>,则不会受到WG伤害。\\n\\n攻击附带烧伤的敌人时,获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>3回合</color>。\\n\\n对水属性敌人造成的伤害降低,所受伤害提升;对土属性造成的伤害提升,所受伤害降低。\\n夹攻和连锁技能的所受伤害提升。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER",
+        "BT_SHIELD_BASED_TARGET"
+      ]
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Command: Obstruct",
+        "kr": "명령 : 저지",
+        "jp": "命令:阻止",
+        "zh": "命令:阻止"
+      },
+      "type": "SKT_MONSTER_3",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of a turn, resurrects (Greater) all <color=#28d9ed>Spare Cores</color>.\\nIncreases <color=#28d9ed>Priority</color> of surviving Spare Cores by <color=#28d9ed>15%</color>.\\n\\n(Triggered Effect) When an enemy uses a non-attack skill,\\nactivates <color=#28d9ed>Command: Restrain</color> on the target.",
+        "kr": "(패시브 효과)\\n턴 시작 시 <color=#28d9ed>예비 코어</color>를 모두 부활(강화)시킵니다.\\n살아있던 예비코어는 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.\\n\\n(발동 효과) 적이 공격이 아닌 스킬 사용 시,\\n대상에게 <color=#28d9ed>명령 : 제압</color>을 사용합니다.",
+        "jp": "(パッシブ効果)\\nターン開始時、<color=#28d9ed>【予備のコア】</color>をすべて復活(強化)させる。\\nすでに戦場にいる【予備のコア】は<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>15%</color>UPする。\\n\\n(発動効果)敵が攻撃以外のスキルを使用時、\\n対象に<color=#28d9ed>【命令:制圧】</color>を発動する。",
+        "zh": "(被动效果)\\n回合开始时,复活(强化)所有<color=#28d9ed>预备核心</color>。\\n使存活的预备核心<color=#28d9ed>行动值</color>提升<color=#28d9ed>15%</color>。\\n\\n(触发效果)使用非攻击类技能攻击敌人时,\\n对目标发动<color=#28d9ed>命令:压制</color>。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_RESURRECTION"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Whenever Health is reduced by <color=#28d9ed>50000</color>, becomes <color=#28d9ed>Enraged</color>.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Initiate World Transformation</color>: Used when Enraged ends.\\nRemoves all <color=#28d9ed>buffs</color> from all enemies and deals heavy damage. This attack ignores the target's <color=#28d9ed>Defense</color> and <color=#28d9ed>Resilience</color>.",
+        "kr": "체력이 <color=#28d9ed>50000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>세계 변용 개시</color> : 광폭화 종료 시 사용.\\n적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 큰 피해를 입힙니다. 이 공격은 대상의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 저항</color>을 무시합니다.",
+        "jp": "HPが<color=#28d9ed>50,000</color>DOWNするたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【世界変容の始まり】</color>:【狂暴化】終了時に発動する。\\n敵全体の<color=#28d9ed>強化効果</color>をすべて解除した後、大ダメージを与える。この攻撃は対象の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果抵抗</color>を無視する。",
+        "zh": "生命值每降低<color=#28d9ed>50000</color>,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>世界之变开始</color>:狂暴化结束时发动。\\n解除全体敌人的所有<color=#28d9ed>强化效果</color>,并造成巨额伤害。该攻击无视目标的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果抵抗</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "51000025",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "kr": "변형된 열화 코어",
+    "jp": "異形の劣化コア",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 100,
+  "icons": "4151014",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Ars Nova",
+      "kr": "주간토벌 - 아르스 노바",
+      "jp": "ウィークリー討伐 - アルス・ノーヴァ",
+      "zh": "每周讨伐 - 艺术新星"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600012",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Hymn",
+        "kr": "찬가",
+        "jp": "賛歌",
+        "zh": "赞歌"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Recovers Ars Nova's Weakness Gauge by <color=#28d9ed>10%</color>.",
+        "kr": "아르스 노바의 WG를 <color=#28d9ed>10%</color> 회복합니다.",
+        "jp": "【アルス・ノーヴァ】のWGを<color=#28d9ed>10%</color>回復する。",
+        "zh": "使艺术新星的WG恢复<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Light"
+    },
+    {
+      "name": {
+        "en": "Core Overdrive",
+        "kr": "코어 오버드라이브",
+        "jp": "コアオーバードライブ",
+        "zh": "核心过载"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces the enemy's Chain Points by <color=#28d9ed>15</color> upon death.",
+        "kr": "(패시브 효과)\\n사망 시 적의 CP를 <color=#28d9ed>15</color> 감소시킵니다.",
+        "jp": "(パッシブ効果)\\n倒れた時、敵のCPを<color=#28d9ed>15</color>DOWNさせる。",
+        "zh": "(被动效果)\\n死亡时,使敌人CP降低<color=#28d9ed>15</color>。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "debuff": [
+        "BT_CP_CHARGE"
+      ]
+    }
+  ]
+}

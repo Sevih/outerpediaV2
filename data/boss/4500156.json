@@ -1,0 +1,118 @@
+{
+  "id": "4500156",
+  "Name": {
+    "en": "Vlada",
+    "kr": "블라다",
+    "jp": "ヴラダ",
+    "zh": "布拉达"
+  },
+  "Surname": {
+    "en": "Demiurge",
+    "kr": "데미우르고스",
+    "jp": "デミウルゴス",
+    "zh": "创世之神"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000075",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Conqueror and Destroyer",
+      "kr": "정복자와 파괴자",
+      "jp": "征服者と破壊者",
+      "zh": "征服者和破坏者"
+    },
+    "mode": {
+      "en": "Story (Normal)",
+      "kr": "스토리(노멀)",
+      "jp": "ストーリー(ノーマル)",
+      "zh": "故事(普通)"
+    },
+    "area_id": {
+      "en": "10-12",
+      "kr": "10-12",
+      "jp": "10-12",
+      "zh": "10-12"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Twin Mega Cannon",
+        "kr": "트윈 메가 캐논",
+        "jp": "ツイン・メガキャノン",
+        "zh": "双兆加农炮"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>skill cooldowns</color> of the target by <color=#28d9ed>1 turn</color>. This effect ignores the target's Resilience.",
+        "kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 증가시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>増加させる。この効果は対象の効果抵抗を無視する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>技能冷却时间</color>增加<color=#28d9ed>1回合</color>。该效果无视目标的效果抵抗。"
+      },
+      "icon": "Skill_First_2000075",
+      "debuff": [
+        "BT_COOL_CHARGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Crush Gear",
+        "kr": "크러시 기어",
+        "jp": "クラッシュギア",
+        "zh": "激斗战车"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) When an ally uses an attack that targets all enemies, activates <color=#ffd732>Heavy Metal Raptor</color>.\\n\\n<color=#ffd732>Heavy Metal Raptor</color>: Deals <color=#28d9ed>30%</color> of the target's Max Health as fixed damage before attacking an enemy.",
+        "kr": "(발동 효과) 아군이 전체 공격 시 <color=#ffd732>헤비메탈 랩터</color>를 사용합니다.\\n\\n<color=#ffd732>헤비메탈 랩터</color> : 대상 최대 체력의 <color=#28d9ed>30%</color> 만큼 고정 피해를 입힌 후 적을 공격합니다.",
+        "jp": "(発動効果)味方が全体攻撃時、<color=#28d9ed>【へヴィメタルラプター】</color>を発動する。\\n\\n<color=#ffd732>【へヴィメタルラプター】<color=#ffd732>:対象の最大HP</color>30%</color>の固定ダメージを与えた後、敵単体にダメージを与える。",
+        "zh": "(触发效果)友军发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>。\\n\\n<color=#ffd732>重金属猛禽</color>:对目标造成其生命值上限<color=#28d9ed>30%</color>的固定伤害后,攻击敌人。"
+      },
+      "icon": "Skill_Second_2000075",
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_TARGET"
+      ]
+    },
+    {
+      "name": {
+        "en": "Destruction Blade",
+        "kr": "디스트럭션 블레이드",
+        "jp": "デストラクションブレード",
+        "zh": "破坏之剑"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Has a <color=#28d9ed>100%</color> chance to remove <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, and attacks all enemies.\\nAfter attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nThese effects ignore the target's Resilience.",
+        "kr": "<color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>강화 불가</color>를 부여합니다.\\n이 효과들은 대상의 효과 저항을 무시합니다.",
+        "jp": "<color=#28d9ed>100%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除し、 敵全体にダメージを与える。\\n攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこの効果は対象の効果抵抗を無視する。",
+        "zh": "有<color=#28d9ed>100%</color>的几率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>2回合</color>。\\n该效果无视目标的效果抵抗。"
+      },
+      "icon": "Skill_Ultimate_2000075",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Heavy Metal Eagle",
+        "kr": "헤비메탈 이글",
+        "jp": "ヘヴィメタルイーグル",
+        "zh": "重金属老鹰"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces the enemy's Speed by <color=#28d9ed>5%</color> each turn. This effect ignores the target's Resilience. (Max 20 stacks)",
+        "kr": "(패시브 효과)\\n매 턴 적의 속도가 <color=#28d9ed>-5%</color> 감소합니다. 이 효과는 대상의 효과 저항을 무시합니다. (최대 20회 누적)",
+        "jp": "(パッシブ効果)\\n毎ターン敵のスピードが<color=#28d9ed>-5%</color>DOWNする。この効果は対象の効果抵抗を無視する。(最大20回まで累積)",
+        "zh": "(被动效果)\\n每回合使敌人的速度降低<color=#28d9ed>-5%</color>。该效果无视目标的效果抵抗。(最多可叠加20次)"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

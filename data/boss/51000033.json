@@ -1,0 +1,72 @@
+{
+  "id": "51000033",
+  "Name": {
+    "en": "Sand Soldier Spear",
+    "kr": "모래 병사 창",
+    "jp": "砂の兵士〈槍〉",
+    "zh": "沙漠长矛兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Earth",
+  "level": 100,
+  "icons": "4001201",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Anubis Guardian",
+      "kr": "주간토벌 - 아누비스 가디언",
+      "jp": "ウィークリー討伐 - アヌビスガーディアン",
+      "zh": "每周讨伐 - 阿努比斯守护者"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600018",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Sand Spear",
+        "kr": "샌드 스피어",
+        "jp": "サンドスピア",
+        "zh": "沙漠之矛"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>35%</color> chance to grant increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>35%</color>확률로 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>35%</color>の確率で自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>35%</color>的几率使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire",
+      "buff":["BT_STAT|ST_DEF"]
+    },
+    {
+      "name": {
+        "en": "Desert Scorpion",
+        "kr": "데저트 스콜피온",
+        "jp": "デザートスコーピオン",
+        "zh": "沙漠蝎子"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy. When the caster is granted increased <color=#28d9ed>Defense</color>, recovers Health of all allies by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격합니다. 자신의 <color=#28d9ed>방어력</color>이 증가한 상태라면 아군 전체의 체력을 <color=#28d9ed>10%</color>만큼 회복시킵니다.",
+        "jp": "敵単体にダメージを与える。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、味方全体のHPを<color=#28d9ed>10%</color>回復する。",
+        "zh": "攻击敌人。若自身处于<color=#28d9ed>防御力</color>提升状态,则使全体友军生命值恢复<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Attack_Spear_1_Fire"
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "id": "404400362",
+  "Name": {
+    "en": "Sacreed Guardian",
+    "kr": "세이크리드 가디언",
+    "jp": "セイクリッドガーディアン",
+    "zh": "圣科利德守护者"
+  },
+  "Surname": {
+    "en": "Divine Blade",
+    "kr": "신의 칼날",
+    "jp": "神の刃",
+    "zh": "神之刃"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Light",
+  "level": 120,
+  "icons": "4044003",
+  "BuffImmune": "BT_FREEZE,BT_STONE,BT_SILENCE,BT_SEALED",
+  "StatBuffImmune": "ST_ACCURACY,ST_BUFF_CHANCE,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Sacreed Guardian (Stage 13)",
+      "kr": "세이크리드 가디언 (13 단계)",
+      "jp": "セイクリッドガーディアン(13段階)",
+      "zh": "圣科利德守护者(第13阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Ecology Study",
+      "kr": "특별 의뢰 : 생태 조사",
+      "jp": "特別依頼:生態調査",
+      "zh": "特别委托:生态调查"
+    },
+    "area_id": {
+      "en": "50104013",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Sacreed Arrow",
+        "kr": "세이크리드 애로우",
+        "jp": "セイクリッドアロー",
+        "zh": "圣科利德之箭"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. Increases the Priority of Inferior Cores by <color=#28d9ed>40%</color> after attacking.",
+        "kr": "적을 공격합니다. 공격 후 열화 코어의 행동 게이지를 <color=#28d9ed>40%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与える。攻撃後、【劣化コア】の行動ゲージを<color=#28d9ed>40%</color>UPさせる。",
+        "zh": "攻击敌人。攻击后,使烈火核心的行动值提升\\n<color=#28d9ed>40%</color>。"
+      },
+      "icon": "Skill_First_4044003",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Holy Shine Ball",
+        "kr": "홀리 샤인 볼",
+        "jp": "ホーリーシャインボール",
+        "zh": "圣光之球"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Removes all <color=#28d9ed>buffs</color> from all enemies and attacks.",
+        "kr": "적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 공격합니다.",
+        "jp": "敵全体の<color=#28d9ed>強化効果</color>をすべて解除し、敵全体にダメージを与える。",
+        "zh": "解除全体敌人的所有<color=#28d9ed>强化效果</color>,并进行攻击。"
+      },
+      "icon": "Skill_Second_4044003",
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Divine Blade",
+        "kr": "디바인 블레이드",
+        "jp": "ディバインブレード",
+        "zh": "神圣之剑"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. The damage of this skill increases with every use.",
+        "kr": "적 전체를 공격합니다. 이 스킬은 사용할 때마다 피해량이 증가합니다.",
+        "jp": "敵全体にダメージを与える。このスキルは、使用するたびに与えるダメージがUPする。",
+        "zh": "攻击全体敌人。每次使用该技能时,伤害量都会提升。"
+      },
+      "icon": "Skill_Ultimate_4044003"
+    },
+    {
+      "name": {
+        "en": "Singer of Praises",
+        "kr": "찬송하는 자",
+        "jp": "賛美する者",
+        "zh": "颂唱者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces the duration of <color=#28d9ed>debuffs</color> on the caster by <color=#28d9ed>1 turn</color> at the start of each turn.\\n\\nIf the caster has a <color=#28d9ed>buff</color> at the end of the turn, inflicts <color=#28d9ed>Stunned</color> on all enemies for <color=#28d9ed>1 turn(s)</color> and grants <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>1 turn(s)</color>. Additionally, increases <color=#28d9ed>Attack</color> of the caster by <color=#28d9ed>15%</color>. (Max 20 times)",
+        "kr": "(패시브 효과)\\n매 턴 시작 시 자신이 보유한 <color=#28d9ed>약화 효과</color>가 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n턴 종료 시 <color=#28d9ed>강화 효과</color>를 보유하고 있었다면, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>회복형</color>을 제외한 적 전체에게 <color=#28d9ed>스턴</color>을 부여하고(효과 저항 무시), 자신에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>무적</color>을 부여합니다. 추가로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>15%</color> 증가시킵니다. (최대 20회)",
+        "jp": "(パッシブ効果)\\n毎ターン開始時、自分の<color=#28d9ed>弱体効果</color>が<color=#28d9ed>1ターン</color>減少する。\\n\\nターン終了時、自分に<color=#28d9ed>強化効果</color>がある場合、<color=#28d9ed>回復型</color>以外の敵全体に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与し、自分には<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。また、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>15%</color>UPさせる。この効果は最大20回まで累積する。",
+        "zh": "(被动效果)\\n每回合开始时,使自身附带的<color=#28d9ed>弱化效果</color>减少<color=#28d9ed>1回合</color>。\\n\\n回合结束时,若附带<color=#28d9ed>强化效果</color>,则对除<color=#28d9ed>恢复型</color>以外的全体敌人施加<color=#28d9ed>眩晕</color>效果,持续<color=#28d9ed>1回合</color>(无视效果抵抗),并使自身获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。此外,使自身的<color=#28d9ed>攻击力</color>额外提升<color=#28d9ed>15%</color>。(最多可叠加20次)"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_INVINCIBLE",
+        "BT_EXTEND_DEBUFF"
+      ],
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Upholder of the Law",
+        "kr": "율령을 받드는 자",
+        "jp": "律令を受け入れる者",
+        "zh": "奉律者"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage taken from <color=#28d9ed>Dark</color> enemies and reduces damage dealt to them. Reduces Weakness Gauge damage taken from non-<color=#28d9ed>Dark</color> enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.\\nRight after using any skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>암속성</color> 적에게 받는 피해가 증가하고 입히는 피해가 감소합니다. <color=#28d9ed>암속성</color>이 아닌 적에게 받는 WG 피해가 <color=#28d9ed>50%</color> 감소하며, 입히는 피해가 증가하고 받는 피해가 감소합니다.\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>10000</color>을 초과하지 않습니다.\\n모든 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>闇属性</color>の敵から受けるダメージがUPし、与えるダメージがDOWNする。<color=#28d9ed>闇属性</color>以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。闇属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>10000</color>を超えない。\\nすべてのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "(被动效果)\\n受到的<color=#28d9ed>暗属性</color>敌人的伤害提升,且造成的伤害降低。受到的非<color=#28d9ed>暗属性</color>敌人的WG伤害降低<color=#28d9ed>50%</color>,且造成的伤害提升,所受伤害降低。\\n首领受到的<color=#28d9ed>诅咒/固定伤害</color>不超过<color=#28d9ed>10000</color>。\\n所有技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
+    },
+    {
+      "name": {
+        "en": "Upholder of the Law",
+        "kr": "율령을 받드는 자",
+        "jp": "律令を受け入れる者",
+        "zh": "奉律者"
+      },
+      "type": "SKT_MONSTER_3",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage taken from <color=#28d9ed>Dark</color> enemies and reduces damage dealt to them. Reduces Weakness Gauge damage taken from non-<color=#28d9ed>Dark</color> enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>암속성</color> 적에게 받는 피해가 증가하고 입히는 피해가 감소합니다. <color=#28d9ed>암속성</color>이 아닌 적에게 받는 WG 피해가 <color=#28d9ed>50%</color> 감소하며, 입히는 피해가 증가하고 받는 피해가 감소합니다.",
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>闇属性</color>の敵から受けるダメージがUPし、与えるダメージがDOWNする。<color=#28d9ed>闇属性</color>以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。<color=#28d9ed>闇属性</color>以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。",
+        "zh": "(被动效果)\\n受到来自<color=#28d9ed>暗属性</color>敌人的伤害提升,对其造成的伤害降低。受到来自非<color=#28d9ed>暗属性</color>敌人的WG伤害降低<color=#28d9ed>50%</color>,且造成的伤害提升,所受伤害降低。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers 10% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Divinity Manifest</color>: Used when Enraged ends.\\nAttacks all enemies. Grants increased <color=#28d9ed>Critical Hit Chance</color> until inflicted with Break.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, 10%의 WG를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>신성 강림</color> : 광폭화 종료 시 사용.\\n적 전체를 공격합니다. 브레이크 되기 전까지 <color=#28d9ed>치명 확률</color>이 증가합니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP、ダメージDOWN、シールド効果を3ターンの間付与し、WG10%を回復する。【狂暴化】は4ターンの間持続する。\\n\\n<color=#28d9ed>【神聖降臨】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与える。ブレイクするまで自分の<color=#28d9ed>会心発生率</color>がUPする。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,使WG恢复10%。狂暴化持续4回合。\\n\\n<color=#28d9ed>神圣降临</color>:狂暴化结束时发动。\\n攻击全体敌人。使<color=#28d9ed>暴击率</color>提升,持续至进入力竭状态为止。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR",
+        "BT_STAT|ST_CRITICAL_RATE_IR"
+      ],
+      "debuff": [
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

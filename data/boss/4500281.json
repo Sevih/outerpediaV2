@@ -1,0 +1,105 @@
+{
+  "id": "4500281",
+  "Name": {
+    "en": "Maxie",
+    "kr": "맥시",
+    "jp": "マキシー",
+    "zh": "麦克茜"
+  },
+  "Surname": {
+    "en": "The Unconstrained Twin",
+    "kr": "자유로운 쌍둥이",
+    "jp": "自由気ままな双子",
+    "zh": "自由双胞胎"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Fire",
+  "level": 165,
+  "icons": "2000081",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Top Fiend Officer",
+      "kr": "마족 최고 간부",
+      "jp": "魔族最高幹部",
+      "zh": "魔族高层"
+    },
+    "mode": {
+      "en": "Story (Hard)",
+      "kr": "스토리(하드)",
+      "jp": "ストーリー(ハード)",
+      "zh": "故事(困难)"
+    },
+    "area_id": {
+      "en": "4-10",
+      "kr": "4-10",
+      "jp": "4-10",
+      "zh": "4-10"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Playing with Fire",
+        "kr": "불장난이야",
+        "jp": "火遊びしましょ♪",
+        "zh": "火焰戏法"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and increases Priority of the caster by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
+        "zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "Skill_First_2000081",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Together as One",
+        "kr": "둘이서 하나",
+        "jp": "ふたりでひとり",
+        "zh": "两人同心"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) When an ally <color=#28d9ed>Mage</color> attacks, activates an additional attack on the enemy with the highest Attack. After attacking, increases Priority of the caster by <color=#28d9ed>40%</color>.",
+        "kr": "(발동 효과) 아군의 <color=#28d9ed>마법형</color> 캐릭터가 공격했을 때 공격력이 가장 높은 적에게 추가 공격을 합니다. 공격 후 자신의 행동 게이지가 <color=#28d9ed>40%</color> 증가합니다.",
+        "jp": "(発動効果)<color=#28d9ed>魔法型</color>の味方が攻撃時、攻撃力が最も高い敵単体に追加攻撃を与える。攻撃後、自分の行動ゲージが<color=#28d9ed>40%</color>UPする。",
+        "zh": "(触发效果)友军中<color=#28d9ed>魔法型</color>角色攻击时,对攻击力最高的敌人发动额外攻击。攻击后,自身行动值提升<color=#28d9ed>40%</color>。"
+      },
+      "icon": "Skill_Second_2000081",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Little Sister Attack!",
+        "kr": "여동생 어택!",
+        "jp": "妹アタック!",
+        "zh": "妹妹突击!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and inflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>. (Applied 2 times)\\nAfter attacking, grants increased <color=#28d9ed>Attack</color> and <color=#28d9ed>Penetration</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다. (2회 적용)\\n공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>관통력</color>을 증가시킵니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>火傷</color>2個を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>貫通力</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+        "zh": "攻击全体敌人,并使目标陷入<color=#28d9ed>烧伤</color>状态,持续<color=#28d9ed>2回合</color>。(叠加2次)\\n攻击后,使自身<color=#28d9ed>攻击力</color>和<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000081",
+      "buff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE",
+        "BT_STAT|ST_ATK"
+      ],
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
+    }
+  ]
+}

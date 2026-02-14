@@ -1,0 +1,32 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "ATK%/HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Search and Destroy",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ACC>EFF",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ]
+  }
+}

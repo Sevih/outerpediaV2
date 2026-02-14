@@ -1,0 +1,123 @@
+{
+  "id": "51000015",
+  "Name": {
+    "en": "Planet Purification Unit",
+    "kr": "행성 정화 유닛",
+    "jp": "惑星浄化ユニット",
+    "zh": "净化行星单位"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 100,
+  "icons": "4076015",
+  "BuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Epsilon",
+      "kr": "주간토벌 - 엡실론",
+      "jp": "ウィークリー討伐 - イプシロン",
+      "zh": "每周讨伐 - 埃普西隆"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600007",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Braindead",
+        "kr": "데드 얼라이브",
+        "jp": "ブレインデッド",
+        "zh": "活死人"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks 2 enemies.\\nReduces <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>30%</color>.",
+        "kr": "적 2인을 공격합니다.\\n대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시킵니다.",
+        "jp": "敵2体にダメージを与える。\\n対象の行動ゲージを<color=#28d9ed>-30%</color>DOWNさせる。",
+        "zh": "攻击2名敌人。\\n使目标的<color=#28d9ed>行动值降低</color><color=#28d9ed>-30%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Dark",
+      "debuff":["BT_ACTION_GAUGE"]
+    },
+    {
+      "name": {
+        "en": "Hellraiser",
+        "kr": "헬레이저",
+        "jp": "ヘル・レイザー",
+        "zh": "猛鬼追魂"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. After attacking, increases <color=#28d9ed>Critical Hit Chance</color> of all allies by <color=#28d9ed>25%</color>. (Max 4 stacks)",
+        "kr": "적 전체를 공격합니다. 공격 후 아군 전체의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>25%</color> 증가합니다. (최대 4회 누적)",
+        "jp": "敵全体にダメージを与える。攻撃後、味方全体の<color=#28d9ed>会心率</color>を<color=#28d9ed>25%</color>UPさせる。(最大4回まで累積)",
+        "zh": "攻击全体敌人。攻击后,全体友军的<color=#28d9ed>暴击率</color>提升<color=#28d9ed>25%</color>。(最多可叠加4次)"
+      },
+      "icon": "MT_Attack_Smash_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Event Horizon",
+        "kr": "이벤트 호라이즌",
+        "jp": "イベント・ホライゾン",
+        "zh": "黑洞表面"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and inflicts reduced <color=#28d9ed>Speed</color> on all targets for <color=#28d9ed>3 turn(s)</color>.\\n<color=#28d9ed>Resurrects (Greater)</color> all slain allies.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color> 동안 대상 모두의 <color=#28d9ed>속도</color>를 감소시킵니다.\\n사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다.",
+        "jp": "敵全体にダメージを与え、対象全体の<color=#28d9ed>スピード</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。\\n倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。",
+        "zh": "攻击全体敌人,并使全体目标的<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>3回合</color>。\\n使死亡的友军全体<color=#28d9ed>复活(强化)</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Dark",
+      "buff":["BT_RESURRECTION"],
+      "debuff":["BT_STAT|ST_SPEED"]
+    },
+    {
+      "name": {
+        "en": "Final Destination",
+        "kr": "데스티네이션",
+        "jp": "デスティネーション",
+        "zh": "死神来了"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen an ally except for the caster remains alive, reduces damage taken and does not take Weakness Gauge damage.",
+        "kr": "(패시브 효과)\\n자신을 제외한 아군이 생존 시 받는 피해가 감소하고 WG 피해를 받지 않습니다.",
+        "jp": "(パッシブ効果)\\n戦場に自分を除く味方がいる場合、受けるダメージがDOWNし、WGダメージを受けない。",
+        "zh": "(被动效果)\\n除自身外存活其他友军时,所受伤害降低,且不会受到WG伤害。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns, and grants Invulnerability to all allies except the caster for 3 turn(s).",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, 자신을 제외한 아군에게 3턴 동안 무적을 부여합니다.",
+        "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、自分を除く味方全体に無敵を3ターンの間付与する。",
+        "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使除自身外的友军获得无敌效果,持续3回合。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff":["BT_STAT|ST_ATK_IR","BT_DAMGE_TAKEN","BT_INVINCIBLE_IR"]
+    }
+  ]
+}

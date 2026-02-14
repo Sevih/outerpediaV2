@@ -1,0 +1,32 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Heartunder's Blade",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD/ATK%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>ACC>EFF>CHC",
+    "Note": "",
+    "Talisman": [
+      "Mage's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}

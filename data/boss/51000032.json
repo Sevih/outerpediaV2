@@ -1,0 +1,72 @@
+{
+  "id": "51000032",
+  "Name": {
+    "en": "Sand Soldier Khopesh",
+    "kr": "모래 병사 코피스",
+    "jp": "砂の兵士〈鎌〉",
+    "zh": "沙漠弯刀兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 100,
+  "icons": "4001201",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Anubis Guardian",
+      "kr": "주간토벌 - 아누비스 가디언",
+      "jp": "ウィークリー討伐 - アヌビスガーディアン",
+      "zh": "每周讨伐 - 阿努比斯守护者"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600018",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Sand Cutter",
+        "kr": "샌드 커터",
+        "jp": "サンドカッター",
+        "zh": "沙漠切割者"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to grant increased <color=#28d9ed>Speed</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color>확률로 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Light",
+      "buff":["BT_STAT|ST_SPEED"]
+    },
+    {
+      "name": {
+        "en": "Desert Eagle",
+        "kr": "데저트 이글",
+        "jp": "デザートイーグル",
+        "zh": "沙漠之鹰"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "kr": "적 전체를 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "zh": "攻击全体敌人。\\n自身的<color=#28d9ed>速度</color>越高,则该技能的伤害越高。"
+      },
+      "icon": "MT_Attack_Arrow_1_Light"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "4500046",
+  "Name": {
+    "en": "Sterope",
+    "kr": "스테로페",
+    "jp": "ステロペ",
+    "zh": "史提洛佩"
+  },
+  "Surname": {
+    "en": "Sacreed Lightning",
+    "kr": "세이크리드의 번개",
+    "jp": "雷の使徒",
+    "zh": "圣科利德雷之使徒"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Earth",
+  "level": 100,
+  "icons": "2000057",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "An Unpleasant Reunion",
+      "kr": "달갑지 않은 재회",
+      "jp": "嫌気がさす再会",
+      "zh": "不情愿的重逢"
+    },
+    "mode": {
+      "en": "Story (Hard)",
+      "kr": "스토리(하드)",
+      "jp": "ストーリー(ハード)",
+      "zh": "故事(困难)"
+    },
+    "area_id": {
+      "en": "4-10",
+      "kr": "4-10",
+      "jp": "4-10",
+      "zh": "4-10"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shatter!",
+        "kr": "부서져라!",
+        "jp": "紫電撃砕",
+        "zh": "粉身碎骨!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. If Sterope had a buff before attacking, activates an additional attack on the same target and grants <color=#28d9ed>Divine Retribution</color>.\\n\\n<color=#28d9ed>Divine Retribution</color>: Increases damage dealt by all allies by <color=#28d9ed>4%</color>. (Max 15 stacks)",
+        "kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
+        "jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
+        "zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)"
+      },
+      "icon": "Skill_First_2000057"
+    },
+    {
+      "name": {
+        "en": "Begin the Crusade",
+        "kr": "성전 개시",
+        "jp": "雷光",
+        "zh": "圣战开启"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, inflicts <color=#28d9ed>Keraunos</color> on allies and enemies for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 후 <color=#28d9ed>3턴</color> 동안 아군과 적군에게 <color=#28d9ed>케라우노스</color>를 부여합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、味方・敵全体に<color=#28d9ed>【ケラウノス】</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "(被动效果)\\n战斗开始后,对友军和敌军造成<color=#28d9ed>雷霆</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Second_2000057",
+      "debuff": [
+        "UNIQUE_KERAUNOS"
+      ]
+    },
+    {
+      "name": {
+        "en": "Fight Ferociously!",
+        "kr": "용맹하게 싸워라!",
+        "jp": "イージス・サンクチュアリ",
+        "zh": "勇敢战斗吧!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Grants increased <color=#28d9ed>Accuracy</color> and <color=#28d9ed>Effectiveness</color> to all allies for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>명중</color>과 <color=#28d9ed>효과 적중</color>을 증가시킵니다.",
+        "jp": "味方全体の<color=#28d9ed>命中</color>と<color=#28d9ed>効果命中</color>を<color=#28d9ed>3ターン</color>の間UPさせる。",
+        "zh": "使全体友军的<color=#28d9ed>命中</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000057",
+      "buff": [
+        "BT_STAT|ST_ACCURACY",
+        "BT_STAT|ST_BUFF_CHANCE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Blind Faith",
+        "kr": "맹목적인 믿음",
+        "jp": "盲目的な信仰",
+        "zh": "盲目的信任"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen hit, deals <color=#28d9ed>500</color> fixed damage to all enemies.\\nWhen an enemy uses a non-attack skill, recovers Weakness Gauge of all allies by <color=#28d9ed>4</color> and Health by <color=#28d9ed>3%</color>.",
+        "kr": "(패시브 효과)\\n피격 시 적 전체에게 <color=#28d9ed>500</color>의 고정피해를 입힙니다.\\n적이 공격이 아닌 스킬 사용 시, 아군 전체의 WG를 <color=#28d9ed>4</color>, 체력을 <color=#28d9ed>3%</color> 회복합니다.",
+        "jp": "(パッシブ効果)\\nダメージを受けた場合、敵全体に<color=#28d9ed>500</color>の固定ダメージを与える。\\n敵が攻撃以外のスキルを使用時、味方全体のWGを<color=#28d9ed>4</color>、HPを<color=#28d9ed>3%</color>回復させる。",
+        "zh": "(被动效果)\\n受到攻击时,对全体敌人造成<color=#28d9ed>500</color>的固定伤害。\\n敌人使用非攻击类技能时,使全体友军的WG恢复<color=#28d9ed>4</color>,生命值恢复<color=#28d9ed>3%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "debuff": [
+        "BT_FIXED_DAMAGE"
+      ]
+    }
+  ]
+}

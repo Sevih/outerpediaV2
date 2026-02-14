@@ -1,0 +1,166 @@
+{
+  "id": "440500079-B-1",
+  "Name": {
+    "en": "Guardian of the Golden Land",
+    "kr": "황금향의 가디언",
+    "jp": "黄金郷のガーディアン",
+    "zh": "黄金乡的守护者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 200,
+  "icons": "4044007",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Guardian of the Golden Land (Stage 10)",
+      "kr": "황금향의 가디언 (10단계)",
+      "jp": "黄金郷のガーディアン(10段階)",
+      "zh": "黄金乡的守护者(第10阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70501020",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Flames of Judgment",
+        "kr": "심판의 불길",
+        "jp": "裁きの炎",
+        "zh": "审判之火"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack prioritizes the <color=#28d9ed>leftmost</color> enemy, and if the target is a non-<color=#28d9ed>Defender</color>, inflicts <color=#28d9ed>Stunned</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격하며 대상이 <color=#28d9ed>방어형</color>이 아닐 경우 <color=#28d9ed>2턴</color> 동안  <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>左側</color>にいる敵を優先的に攻撃し、対象が<color=#28d9ed>防御型</color>でない場合、<color=#28d9ed>スタン</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人。\\n优先攻击最<color=#28d9ed>左侧</color>的敌人,若目标非<color=#28d9ed>防御型</color>,则对其造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Arrow_1_Dark",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Mad Sun's Mirage",
+        "kr": "광양의 신기루",
+        "jp": "日輪の蜃気楼",
+        "zh": "狂阳之海市蜃楼"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect)\\nWhen defeating an enemy, increases Priority of the caster by <color=#28d9ed>100%</color>.\\n\\n(Triggered Effect)\\nWhen an enemy uses a non-attack skill, deals minor damage, but deals heavy damage to targets inflicted with <color=#28d9ed>Stunned</color>. After attacking, removes all <color=#28d9ed>debuffs</color> from the target.",
+        "kr": "(패시브 효과)\\n적 처치 시 자신의 행동 게이지를 <color=#28d9ed>100%</color> 증가시킵니다.\\n\\n(발동 효과)\\n적이 공격이 아닌 스킬 사용 시 약한 피해를 입히지만, <color=#28d9ed>스턴</color>을 보유한 대상에게는 큰 피해를 입힙니다. 공격 후 대상의 <color=#28d9ed>약화 효과</color>를 모두 해제시킵니다",
+        "jp": "(パッシブ効果)\\n敵を倒した時、自分の行動ゲージを<color=#28d9ed>100%</color>UPさせる。\\n\\n(発動効果)\\n敵が攻撃以外のスキルを使用時、小さなダメージを与えるが、<color=#28d9ed>スタン</color>状態の対象には大ダメージを与える。攻撃後、対象の<color=#28d9ed>弱体効果</color>をすべて解除する。",
+        "zh": "(被动效果)\\n击杀敌人时,使自身行动值提升<color=#28d9ed>100%</color>。\\n\\n(触发效果)\\n敌人使用非攻击类技能时造成较低伤害,但对附带<color=#28d9ed>晕眩</color>效果的目标造成巨额伤害。攻击后,解除目标附带的所有<color=#28d9ed>弱化效果</color>。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_REMOVE_DEBUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Flood of Life and Death",
+        "kr": "생과 사의 범람",
+        "jp": "生と死の氾濫",
+        "zh": "生与死的洪流"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and inflicts <color=#28d9ed>Stunned</color> on Mage enemies for <color=#28d9ed>9 turn(s)</color>. When there is no Mage enemy, inflicts <color=#28d9ed>Taunted</color> on all enemies for <color=#28d9ed>9 turn(s)</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>9턴</color>동안 마법형 적에게 <color=#28d9ed>스턴</color>을 부여합니다. 마법형 적이 없다면 적 전체에게 <color=#28d9ed>9턴</color> 동안 <color=#28d9ed>도발</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、魔法型の敵に<color=#28d9ed>スタン</color>を<color=#28d9ed>9ターン</color>の間付与する。魔法型の敵が戦場にいない場合、敵全体を<color=#28d9ed>9ターン</color>の間<color=#28d9ed>挑発</color>する。",
+        "zh": "攻击全体敌人,对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>9回合</color>。若无魔法型敌人,则对全体敌人造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>9回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Dark",
+      "debuff": [
+        "BT_AGGRO",
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Sand Cannot Be Broken",
+        "kr": "모래는 부술 수 없다",
+        "jp": "砂は砕けない",
+        "zh": "不损磐沙"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "If all enemies have different Battle Type, increases Weakness Gauge damage taken by Skill Chains by <color=#28d9ed>100%</color>.\\nReduces damage taken from enemies, but takes greater damage upon being inflicted with Break.\\nReduces damage taken from non-Light enemies, and increases damage dealt to them.",
+        "kr": "적의 배틀 타입이 모두 다르다면 스킬 체인으로 받는 WG 피해가 <color=#28d9ed>100%</color> 증가합니다.\\n적에게 받는 피해가 감소하는 대신, 브레이크 시 더 큰 피해를 받습니다.\\n명속성이 아닌 적에게 받는 피해가 감소하고, 주는 피해가 증가합니다.",
+        "jp": "敵全体の戦闘タイプがそれぞれ違う場合、チェーンスキルで受けるWGダメージが<color=#28d9ed>100%</color>UPする。\\n敵から受けるダメージがDOWNするが、ブレイク状態の場合、より大ダメージを受ける。\\n光属性以外の敵から受けるダメージがDOWNし、与えるダメージがUPする。",
+        "zh": "若敌人的战斗类型无重复,则因连携技能受到的WG伤害提升<color=#28d9ed>100%</color>。\\n来自敌人的伤害降低,但力竭时将承受更高伤害。\\n来自非光属性敌人的伤害降低,且造成伤害提升。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> each time Health is reduced by <color=#28d9ed>50,000</color>.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Golden, For Eternity</color>: Used when Enraged ends.\\nDeals heavy damage to all enemies.",
+        "kr": "체력이 <color=#28d9ed>50000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>황금이여, 영원하라</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
+        "jp": "HPが<color=#28d9ed>50,000</color>DOWNするたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間継続する。\\n\\n<color=#28d9ed>【黄金よ、永遠に】</color>:【狂暴化】終了時に使用する。\\n敵全体に大ダメージを与える。",
+        "zh": "生命值每降低<color=#28d9ed>50000</color>,则进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>唯黄金恒久</color>:狂暴化结束时发动。\\n对全体敌人造成巨额伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

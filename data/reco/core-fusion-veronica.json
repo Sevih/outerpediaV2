@@ -1,0 +1,97 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Gorgon's Wrath [Defender]",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Defender]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "PEN%/HP%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Gorgon's Vanity [Defender]",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>CHC>CHD>ACC=DEF",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Swift Counter": {
+    "Weapon": [
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Gorgon's Wrath [Defender]",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Defender]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "PEN%/HP%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Gorgon's Vanity [Defender]",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Counterattack", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>CHC>CHD>ACC=DEF",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

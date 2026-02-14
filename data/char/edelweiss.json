@@ -1,0 +1,407 @@
+{
+  "ID": "2000072",
+  "Fullname": "Edelweiss",
+  "Fullname_jp": "エーデルバイス",
+  "Fullname_kr": "에델바이스",
+  "Fullname_zh": "艾妲尔薇斯",
+  "Rarity": 3,
+  "Element": "Water",
+  "Class": "Ranger",
+  "SubClass": "Tactician",
+  "rank": "B",
+  "rank_pvp": "C",
+  "role": "sustain",
+  "tags": [
+    "ignore-defense"
+  ],
+  "skill_priority": {
+    "First": {
+      "prio": 3
+    },
+    "Second": {
+      "prio": 2
+    },
+    "Ultimate": {
+      "prio": 1
+    }
+  },
+  "Chain_Type": "Join",
+  "gift": "Craftwork",
+  "video": "XFkW_wEwvUQ",
+  "VoiceActor": "VA. Courtney Lin",
+  "VoiceActor_jp": "CV. 影山灯",
+  "VoiceActor_kr": "CV. 원에스더",
+  "VoiceActor_zh": "CV. 影山灯",
+  "transcend": {
+    "1": null,
+    "2": null,
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\nAllies Damage Increase +2%\nChain Passive WG reduction +1",
+    "4_1_jp": "ATK DEF HP +16%\n味方のダメージ+2%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 피해 증가 +2%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n我方造成伤害提升2%\n连携被动技能的WG降低量+1",
+    "4_2": "ATK DEF HP +19%",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "5_2": "ATK DEF HP +25%",
+    "5_3": "ATK DEF HP +28%",
+    "6": "ATK DEF HP +30%\nAllies Damage Increase +2%\nOn entry, AP +25",
+    "6_jp": "ATK DEF HP +30%\n味方のダメージ+2%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n아군 피해 증가 +2%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n我方造成伤害提升2%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "7201",
+      "IconName": "Skill_First_2000072",
+      "SkillType": "SKT_FIRST",
+      "name": "Ninja Variety Combo",
+      "name_jp": "ニンジャのバラエティコンボ",
+      "name_kr": "닌자 버라이어티 콤보",
+      "name_zh": "忍者组合技",
+      "true_desc": "Attacks an enemy, and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Unbuffable</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>強化不可</color>を2ターンの間付与する。\\nこのスキルは自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "적을 공격하고, <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+      "true_desc_zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>2回合</color>。\\n该技能根据自身<color=#28d9ed>生命值上限</color>等比提升伤害。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+10%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "3_zh": [
+          "效果触发几率+10%"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "+15% effect chance"
+        ],
+        "5_jp": [
+          "効果発生率+15%"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "5_zh": [
+          "效果触发几率+15%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [
+        "BT_SEALED"
+      ],
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "Increases the chance to inflict Unbuffable by 50%",
+          "effect_jp": "強化不可発生率+50%",
+          "effect_kr": "강화 불가 발동 확률 +50%",
+          "effect_zh": "无法强化效果触发几率+50%",
+          "cost": 60,
+          "level": 1,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_2": {
+          "effect": "Reduces Ninjutsu, Waterspout Technique Cooldown by 1 turn",
+          "effect_jp": "【忍法・竜巻の術】の\\nスキルターン-1ターン",
+          "effect_kr": "인법 용오름의 술 쿨타임 -1턴",
+          "effect_zh": "忍者龙卷风之术冷却时间-1回合",
+          "cost": 90,
+          "level": 2,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_3": {
+          "effect": "Changed to Enhanced Skill\\nResets Ninjutsu, Waterspout Technique Cooldown",
+          "effect_jp": "強化スキルに変更\\n【忍法・竜巻の術】の\\nスキルターン初期化",
+          "effect_kr": "강화 스킬로 교체\\n인법 용오름의 술 쿨타임 초기화",
+          "effect_zh": "转化为强化技能\\n忍者龙卷风之术冷却时间重置",
+          "cost": 120,
+          "level": 3,
+          "offensive": true,
+          "target": "mono"
+        }
+      },
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "7202",
+      "IconName": "Skill_Second_2000072",
+      "SkillType": "SKT_SECOND",
+      "name": "Elf-Style Hand Seals",
+      "name_jp": "エルフ流・九字忍法",
+      "name_kr": "엘프식 구자인법",
+      "name_zh": "精灵式九字密印",
+      "true_desc": "(Passive Effect) At the start of battle, grants <color=#28d9ed>A Ninja's Afterimage</color> to the caster. \\n(Triggered Effect) When an ally is inflicted with a debuff, activates an <color=#28d9ed>Agile Response</color>. Removes 1 <color=#28d9ed>debuff</color> from all allies, and has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>1 turn(s)</color>.",
+      "true_desc_jp": "(パッシブ効果)戦闘開始時、<color=#28d9ed>【ニンジャの残像】</color>を付与する。\\n(発動効果)味方に弱体効果がある場合、<color=#28d9ed>【迅速対応】</color>が発動する。\\n【迅速対応】:味方全体の<color=#28d9ed>弱体効果</color>を1個解除し、敵全体に<color=#28d9ed>85%</color>の確率で<color=#28d9ed>回復不可</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+      "true_desc_kr": "(패시브 효과)전투 시작 시, 자신에게 <color=#28d9ed>닌자의 잔상</color>을 부여합니다. \\n(발동 효과)아군에게 약화 효과 적용 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n아군 전체 <color=#28d9ed>약화 효과</color>를 1개 해제하고, 적 전체에게 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>1턴</color>동안 <color=#28d9ed>회복불가</color>를 부여합니다.",
+      "true_desc_zh": "(被动效果)战斗开始时,使自身获得<color=#28d9ed>忍者的残像</color>效果。\\n(触发效果)友军附带弱化效果时,触发<color=#28d9ed>迅速应对</color>\\n效果。\\n解除全体友军的1个<color=#28d9ed>弱化效果</color>,并有\\n<color=#28d9ed>85%</color>的几率对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>1回合</color>。",
+      "enhancement": {
+        "2": [
+          "+15% effect chance"
+        ],
+        "2_jp": [
+          "効果発生率+15%"
+        ],
+        "2_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "2_zh": [
+          "效果触发几率+15%"
+        ],
+        "3": [
+          "+1 turn effect duration"
+        ],
+        "3_jp": [
+          "効果ターン+1ターン"
+        ],
+        "3_kr": [
+          "효과 지속 +1턴"
+        ],
+        "3_zh": [
+          "效果持续时间+1回合"
+        ],
+        "4": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_zh": [
+          "冷却时间-1回合"
+        ],
+        "5": [
+          "+1 turn effect duration"
+        ],
+        "5_jp": [
+          "効果ターン+1ターン"
+        ],
+        "5_kr": [
+          "효과 지속 +1턴"
+        ],
+        "5_zh": [
+          "效果持续时间+1回合"
+        ]
+      },
+      "cd": "4",
+      "buff": [
+        "IG_Buff_Effect_2000072_Interruption",
+        "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK",
+        "BT_REMOVE_DEBUFF"
+      ],
+      "debuff": [
+        "BT_SEALED_RECEIVE_HEAL"
+      ],
+      "offensive": false,
+      "target": "multi"
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "7203",
+      "IconName": "Skill_Ultimate_2000072",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Ninjutsu, Waterspout Technique",
+      "name_jp": "忍法・竜巻の術",
+      "name_kr": "인법 용오름의 술",
+      "name_zh": "忍者龙卷风之术",
+      "true_desc": "Attacks all enemies. When there is more than one target, ignores 30% of the target's Defense. When there is only one target, ignores <color=#28d9ed>50%</color> of the target's Defense and steals <color=#28d9ed>all</color> <color=#28d9ed>buffs</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and additionally increases proportional to missing Health.",
+      "true_desc_jp": "敵全体にダメージを与える。対象が単体ではない場合は防御力を30%無視する。対象が単体だった場合は防御力を<color=#28d9ed>50%</color>無視し、<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\nこのスキルは自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、自分の残りHPが低いほどダメージが追加でUPする。",
+      "true_desc_kr": "적 전체를 공격합니다. 대상이 한명이 아니라면 방어력을 30% 무시합니다. 대상이 한 명이라면 방어력을 <color=#28d9ed>50%</color> 무시하고 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
+      "true_desc_zh": "攻击全体敌人。若目标并非只有1个,则无视\\n30%的防御力;若目标只有1个,则无视<color=#28d9ed>50%</color>的防御力,并夺取<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n该技能根据自身<color=#28d9ed>生命值上限</color>等比提升伤害,并根据损失的生命值等比提升额外伤害。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+25% Ignored Defense to a single target"
+        ],
+        "3_jp": [
+          "敵単体の防御力無視+25%"
+        ],
+        "3_kr": [
+          "단일 대상 방어력 무시 +25%"
+        ],
+        "3_zh": [
+          "无视单一目标防御力+25%"
+        ],
+        "4": [
+          "+20% damage",
+          "-1 turn Skill Cooldown"
+        ],
+        "4_jp": [
+          "ダメージ+20%",
+          "スキルターン-1ターン"
+        ],
+        "4_kr": [
+          "피해량 +20%",
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_zh": [
+          "伤害量+20%",
+          "冷却时间-1回合"
+        ],
+        "5": [
+          "+25% Ignored Defense to a single target"
+        ],
+        "5_jp": [
+          "敵単体の防御力無視+25%"
+        ],
+        "5_kr": [
+          "단일 대상 방어력 무시 +25%"
+        ],
+        "5_zh": [
+          "无视单一目标防御力+25%"
+        ]
+      },
+      "wgr": 2,
+      "cd": "5",
+      "buff": [],
+      "debuff": [
+        "BT_STEAL_BUFF"
+      ],
+      "offensive": true,
+      "target": "multi"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "7204",
+      "IconName": "Skill_ChainPassive_Water_Join",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>2 turns</color>.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+      "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color>확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>강화 불가</color> 상태로 만듭니다.",
+      "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_AP_CHARGE"
+      ],
+      "debuff": [],
+      "dual_debuff": [
+        "BT_SEALED"
+      ],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono"
+    }
+  }
+}

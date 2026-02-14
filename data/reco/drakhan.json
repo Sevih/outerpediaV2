@@ -1,0 +1,62 @@
+{
+  "Counter": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Clock Up",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "A Prima Vista",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Counterattack", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>HP>CHC>CHD",
+    "Note": "",
+    "Talisman": [      
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Clock Up",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "A Prima Vista",
+        "mainStat": "ATK%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>HP>CHC>CHD",
+    "Note": "",
+    "Talisman": [      
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "401400251",
+  "Name": {
+    "en": "Tyrant Toddler",
+    "kr": "타일런트 유생체",
+    "jp": "タイラントの幼生",
+    "zh": "幼体泰兰特"
+  },
+  "Surname": {
+    "en": "S-Class Threat",
+    "kr": "S급 위험종",
+    "jp": "S級危険種",
+    "zh": "S级危险种"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 25,
+  "icons": "4076005",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_SEALED_RECEIVE_HEAL",
+  "location": {
+    "dungeon": {
+      "en": "Tyrant Toddler (Stage 2)",
+      "kr": "타일런트 유생체 (2 단계)",
+      "jp": "タイラントの幼生(2段階)",
+      "zh": "幼体泰兰特(第2阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Ecology Study",
+      "kr": "특별 의뢰 : 생태 조사",
+      "jp": "特別依頼:生態調査",
+      "zh": "特别委托:生态调查"
+    },
+    "area_id": {
+      "en": "50102002",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Primordial Intimidation",
+        "kr": "고대종의 위협",
+        "jp": "古代種の脅威",
+        "zh": "古代种族的威胁"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies and heals the caster by <color=#28d9ed>5%</color> of Max Health after using this skill.",
+        "kr": "적 전체를 공격하고 자신 최대 체력의 <color=#28d9ed>5%</color>를 회복합니다.",
+        "jp": "敵全体にダメージを与え、自分の最大HPの<color=#28d9ed>5%</color>を回復する。",
+        "zh": "攻击全体敌人,并使自身恢复生命值上限的<color=#28d9ed>5%</color>。"
+      },
+      "icon": "Skill_First_4014002_Water"
+    },
+    {
+      "name": {
+        "en": "Breath of Destruction",
+        "kr": "파멸의 숨결",
+        "jp": "破滅の息吹",
+        "zh": "破灭的吐息"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体を攻撃する。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_Ultimate_4014002_Water"
+    },
+    {
+      "name": {
+        "en": "Unstable Earth",
+        "kr": "불안정한 대지",
+        "jp": "不安定な大地",
+        "zh": "不稳定的大地"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, inflicts <color=#28d9ed>Bleeding</color> and <color=#28d9ed>Poisoned</color> on the caster and all enemies for 9 turns.\\n\\nIncreases the Speed of Healer and Defender enemies by <color=#28d9ed>50%</color>.\\n\\nIncreases damage dealt to non-Earth enemies and reduces damage taken from them.\\nReduces damage dealt to Earth enemies and increases damage taken from them.",
+        "kr": "(패시브 효과)\\n9턴 동안 자신과 적 전체는 <color=#28d9ed>출혈</color>, <color=#28d9ed>중독</color>을 가진 채로 전투를 시작합니다.\\n\\n적의 회복형 및 방어형 캐릭터의 속도를 <color=#28d9ed>50%</color> 증가시킵니다.\\n\\n지속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n지속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分と敵全体に<color=#28d9ed>出血</color>と<color=#28d9ed>中毒</color>を9ターンの間付与する。\\n\\n回復・防御型の敵のスピードを<color=#28d9ed>50%</color>UPさせる。\\n\\n地属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "zh": "(被动效果)\\n使自身和全体敌人以<color=#28d9ed>出血</color>、<color=#28d9ed>中毒</color>状态开始战斗,持续9回合。\\n\\n使恢复型和防御型敌人的速度提升<color=#28d9ed>50%</color>。\\n\\n对非土属性敌人造成的伤害提升,且所受伤害降低。\\n对土属性敌人造成的伤害降低,且所受伤害提升。"
+      },
+      "icon": "MT_Passive_1_Water",
+      "debuff": [
+        "BT_DOT_BLEED",
+        "BT_DOT_POISON"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns and increases Attack and Speed by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Deals a large amount of damage to all enemies upon becoming Enraged, but receives damage equal to <color=#28d9ed>20%</color> of Max Health. After dealing damage, recovers 30% Weakness Gauge. This Enraged has no duration.",
+        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 광폭화 돌입과 함께 적 전체에게 큰 피해를 입히지만, 최대 체력의 <color=#28d9ed>20%</color>의 피해를 입습니다. 피해를 입힌 후 WG 30%를 회복합니다. 광폭화 유지 시간은 없습니다.",
+        "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>5%</color>UPする。この効果は最大3回まで累積し、ブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:【狂暴化】状態になる際、敵全体に大ダメージを与えるが、最大HPの<color=#28d9ed>20%</color>のダメージを受ける。ダメージを与えた後WGを30%回復する。【狂暴化】の持続ターンはない。",
+        "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>5%</color>。该效果最多可叠加3次,且将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:陷入狂暴化时,对全体敌人造成巨额伤害,使自身受到相当于生命值上限<color=#28d9ed>20%</color>的伤害。造成伤害后,使WG恢复30%。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

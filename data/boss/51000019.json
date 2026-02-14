@@ -1,0 +1,137 @@
+{
+  "id": "51000019",
+  "Name": {
+    "en": "Schattenmeister Schwartz",
+    "kr": "샤텐 마이스터 슈바르츠",
+    "jp": "シャッテンマイスター・シュヴァルツ",
+    "zh": "夜影团长施瓦兹"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 100,
+  "icons": "4004001",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_DOT_BLEED",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Schattenmeister Schwartz",
+      "kr": "주간토벌 - 샤텐 마이스터 슈바르츠",
+      "jp": "ウィークリー討伐 - シュヴァルツ",
+      "zh": "每周讨伐 - 夜影团长施瓦兹"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600009",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Schatten Spitze",
+        "kr": "샤텐슈피체",
+        "jp": "シャッテンシュピッツェ",
+        "zh": "夜影荆棘"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis skill prioritizes the enemy's front line.",
+        "kr": "적을 공격합니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、一番前の敵を優先的に攻撃する。",
+        "zh": "攻击敌人。\\n该技能优先攻击处于前排的敌人。"
+      },
+      "icon": "Skill_First_4004001"
+    },
+    {
+      "name": {
+        "en": "Schatten Einbruch",
+        "kr": "아인드링겐 폰 샤텐",
+        "jp": "アインドリンゲン・フォン・シャッテン",
+        "zh": "夜影突袭"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and summons 2 Shadow Beasts.\\nIf one or more Shadow Beast remains, increases damage dealt.",
+        "kr": "적을 공격하고 섀도우 비스트 2마리를 소환합니다.\\n생존한 섀도우 비스트가 한 마리 이상 있었다면 적에게 입히는 피해가 증가합니다.",
+        "jp": "敵単体にダメージを与え、【シャドウビースト】を2体召喚する。\\n戦場に【シャドウビースト】が1体以上いる場合、敵に与えるダメージがUPする。",
+        "zh": "攻击敌人,并召唤2只暗影兽。\\n若存活的暗影兽为1只以上,则对敌人造成的伤害提升。"
+      },
+      "icon": "Skill_Second_4004001"
+    },
+    {
+      "name": {
+        "en": "König des Alptraums",
+        "kr": "쾨니히 다스 알브트라움",
+        "jp": "ケーニヒ・ダス・アルプトラウム",
+        "zh": "噩梦之主"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and increases damage of all allies every time it's used.\\nAfter attacking, increases <color=#28d9ed>Critical Hit Chance</color> of all allies by <color=#28d9ed>25%</color>. (Max 4 stacks)",
+        "kr": "적 전체를 공격하고, 사용할 때마다 아군 전체의 피해가 증가합니다.\\n공격 후 아군 전체의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>25%</color> 증가합니다. (최대 4회 누적)",
+        "jp": "敵全体にダメージを与え、このスキルを使用するたびに味方全体のダメージがUPする。\\n攻撃後、味方全体の<color=#28d9ed>会心率</color>が<color=#28d9ed>25%</color>UPする。(最大4回まで累積)",
+        "zh": "攻击全体敌人,每次使用时全体友军的伤害提升。\\n攻击后,全体友军的<color=#28d9ed>暴击率</color>提升<color=#28d9ed>25%</color>。(最多可叠加4次)"
+      },
+      "icon": "Skill_Ultimate_4004001"
+    },
+    {
+      "name": {
+        "en": "Clown de Taraguedia",
+        "kr": "클라운 데 타라괴디아",
+        "jp": "クラウン・デ・タラグェディア",
+        "zh": "跳梁小丑"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAlways inflicts <color=#28d9ed>Unbuffable</color> on all enemies. This effect cannot be removed.\\nIncreases damage dealt against non-Dark enemies and reduces Weakness Gauge damage taken from them.\\nReduces damage dealt to Dark enemies and increases damage taken from them.",
+        "kr": "(패시브 효과)\\n적 전체에게 항상 <color=#28d9ed>강화 불가</color>를 부여합니다. 이 효과는 해제되지 않습니다.\\n암속성이 아닌 적에게 입히는 피해가 증가하고, 받는 WG 피해가 감소합니다.\\n암속성에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n敵全体に<color=#28d9ed>強化不可</color>を永続的に付与する。この効果は解除されない。\\n闇属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n闇属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "zh": "(被动效果)\\n对全体敌人始终造成<color=#28d9ed>无法强化</color>效果。该效果不会被解除。\\n对非暗属性敌人造成的伤害提升,且所受WG伤害降低。\\n对暗属性敌人造成的伤害降低,且所受伤害提升。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "debuff":["IG_Buff_Effect_Sealed_Interruption_D"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an effect to the caster that increases Attack and reduces damage taken for 3 turns, and grants Invulnerability to all allies except for the caster for 2 turn(s). These effects cannot be removed. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Vampiric Creature</color>: Used when Enraged ends.\\nDeals lethal damage to all enemies.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, 자신을 제외한 아군에게 2턴 동안 무적을 부여합니다. 이 효과들은 해제되지 않습니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>뱀피릭 크리쳐</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、自分を除く味方に無敵を2ターンの間付与する。この効果は解除されない。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【ヴァンピリック・クリーチャー】</color>:【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。使除自身外的友军获得无敌效果,持续2回合。这些效果不会被解除。狂暴化持续3回合。\\n\\n<color=#28d9ed>召唤吸血鬼</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff":["BT_STAT|ST_ATK_IR","BT_DAMGE_TAKEN","BT_INVINCIBLE_IR"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

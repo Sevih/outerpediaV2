@@ -1,0 +1,79 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Exquisite Death",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Executioner's Charm3Sage's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Swift Immu": {
+    "Weapon": [
+      {
+        "name": "Exquisite Death",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Executioner's Charm3Sage's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

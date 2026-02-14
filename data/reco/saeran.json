@@ -1,0 +1,69 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Emblem of Dominance",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Obsidian Oath",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Saint's Ring",
+        "mainStat": "EVA/HH"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF>EVA",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Executioner's Charm3Vanguard's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Swift Immu": {
+    "Weapon": [
+      {
+        "name": "Emblem of Dominance",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Obsidian Oath",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Saint's Ring",
+        "mainStat": "EVA/HH"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF>EVA",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Executioner's Charm3Vanguard's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm"
+    ]
+  }
+}

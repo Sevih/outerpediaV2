@@ -1,0 +1,166 @@
+{
+  "id": "440400079-B-1",
+  "Name": {
+    "en": "Vladi Max",
+    "kr": "블라디 맥스",
+    "jp": "ブラッディマックス",
+    "zh": "血腥麦克斯"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 200,
+  "icons": "4044004",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_DOT_BLEED,BT_DOT_POISON",
+  "location": {
+    "dungeon": {
+      "en": "Gornolf, Ruler of the Snowy Kingdom (Stage 10)",
+      "kr": "설국의 지배자 고르노프 (10단계)",
+      "jp": "雪国の支配者・ゴルノルフ(10段階)",
+      "zh": "雪国统治者戈尔诺夫(第10阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70401020",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Vladi Cannon",
+        "kr": "블라디 캐논",
+        "jp": "ブラッディマックス",
+        "zh": "血腥加农炮"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack prioritizes the <color=#28d9ed>leftmost</color> enemy, and if the target is a <color=#28d9ed>Defender</color>, inflicts <color=#28d9ed>Stunned</color> for <color=#28d9ed>1 turn(s)</color>.\\nIf the target is a non-<color=#28d9ed>Defender</color>, inflicts <color=#28d9ed>Stunned</color> for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격하며 대상이 <color=#28d9ed>방어형</color>일 경우 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color>을 부여합니다.\\n대상이 <color=#28d9ed>방어형</color>이 아닐 경우 <color=#28d9ed>3턴</color> 동안  <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>左側</color>にいる敵を優先的に攻撃し、対象が<color=#28d9ed>防御型</color>の場合、<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n対象が<color=#28d9ed>防御型</color>でない場合、<color=#28d9ed>スタン</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "攻击敌人。\\n优先攻击最<color=#28d9ed>左侧</color>的敌人,且若目标为<color=#28d9ed>防御型</color>,则造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。\\n若目标非<color=#28d9ed>防御型</color>,则造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "MT_Attack_Arrow_1_Light",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Vladi Strike",
+        "kr": "블라디 스트라이크",
+        "jp": "ブラッディストライク",
+        "zh": "血腥打击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. Increases damage dealt when the target is inflicted with a debuff.\\nInflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color> when used on the caster's turn.",
+        "kr": "적 전체를 공격합니다. 해제 가능한 약화 효과를 보유한 대상에게 입히는 피해가 증가합니다.\\n자신의 턴에 사용 시, 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与える。対象に解除可能な弱体効果がある場合、与えるダメージがUPする。\\nこのスキルを自分のターンに使用した場合、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。对附带可解除弱化效果的目标造成伤害提升。\\n在自身回合使用时,对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Light",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Vladi Full Burst",
+        "kr": "블라디 풀 버스트",
+        "jp": "ブラッディフルバースト",
+        "zh": "血腥全爆"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and grants increased <color=#28d9ed>Attack/Critical Hit Chance</color> to the caster for <color=#28d9ed>2 turn(s)</color>. Grants increased <color=#28d9ed>Accuracy</color> to the caster for <color=#28d9ed>2 turns</color>if there is an enemy is inflicted with Burned after the attack.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력/치명 확률</color>을 증가시킵니다. 공격 후 화상을 보유한 적이 있다면 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>명중</color>이 증가합니다.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力と会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。攻撃後、火傷状態の敵がいる場合、自分の<color=#28d9ed>命中</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+        "zh": "攻击全体敌人,并使自身<color=#28d9ed>攻击力/暴击率</color>提升,持续<color=#28d9ed>2回合</color>。攻击后,若有附带烧伤状态的敌人,则使自身的<color=#28d9ed>命中</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Light",
+      "buff": [
+        "BT_STAT|ST_ACCURACY",
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Instigate and Fabricate",
+        "kr": "선동과 날조",
+        "jp": "煽動と捏造",
+        "zh": "煽动捏造"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nGreatly reduces damage taken from enemies with lower Accuracy than the caster, but reduces damage dealt to enemies with higher Accuracy.\\nIncreases damage taken from Dark enemies.",
+        "kr": "(패시브 효과)\\n자신보다 명중이 낮은 적에게 받는 피해가 크게 감소하지만, 명중이 높은 적에게는 주는 피해가 감소합니다.\\n암속성 적에게 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n自分より命中が低い敵から受けるダメージが大幅にDOWNするが、自分より命中が高い敵には与えるダメージがDOWNする。\\n闇属性の敵から受けるダメージがUPする。",
+        "zh": "(被动效果)\\n来自命中低于自身敌人的伤害大幅降低,但对命中高于自身敌人造成的伤害也会降低。\\n暗属性敌人造成的伤害提升。"
+      },
+      "icon": "MT_Attack_Claw_1_Light"
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> each time Health is reduced by <color=#28d9ed>50,000</color>.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>In the Name of the General</color>: Used when Enraged ends.\\nDeals great damage to all enemies.",
+        "kr": "체력이 <color=#28d9ed>50000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>대원수의 이름으로</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
+        "jp": "HPが<color=#28d9ed>50,000</color>DOWNするたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間継続する。\\n\\n<color=#28d9ed>【大元帥の名において】</color>:【狂暴化】終了時に使用する。\\n敵全体に大ダメージを与える。",
+        "zh": "生命值每降低<color=#28d9ed>50000</color>,则进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>以大元帅之名</color>:狂暴化结束时发动。\\n对全体敌人造成巨额伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

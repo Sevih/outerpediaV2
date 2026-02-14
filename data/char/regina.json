@@ -1,0 +1,420 @@
+{
+  "ID": "2000067",
+  "Fullname": "Regina",
+  "Fullname_jp": "レジーナ",
+  "Fullname_kr": "레지나",
+  "Fullname_zh": "蕾吉纳",
+  "Rarity": 3,
+  "Element": "Light",
+  "Class": "Mage",
+  "SubClass": "Wizard",
+  "rank": "A",
+  "rank_pvp": "A",
+  "role": "dps",
+  "tags": [
+    "ignore-defense"
+  ],
+  "skill_priority": {
+    "First": {
+      "prio": 2
+    },
+    "Second": {
+      "prio": 3
+    },
+    "Ultimate": {
+      "prio": 1
+    }
+  },
+  "Chain_Type": "Finish",
+  "gift": "Craftwork",
+  "video": "C_z5A8XMF60",
+  "VoiceActor": "VA. Darcy Rose Byrnes",
+  "VoiceActor_jp": "CV. 福原綾香",
+  "VoiceActor_kr": "CV. 박이서",
+  "VoiceActor_zh": "CV. 福原绫香",
+  "transcend": {
+    "1": null,
+    "2": null,
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\n+3% Ally Team Critical Hit Chance\n+1 Chain Passive Weakness Gauge damage",
+    "4_1_jp": "ATK DEF HP +16%\n味方の会心率+3%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 치명 확률 +3%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n友军暴击率+3%\n连携被动技能的WG降低量+1",
+    "4_2": "ATK DEF HP +19%",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "5_2": "ATK DEF HP +25%",
+    "5_3": "ATK DEF HP +28%",
+    "6": "ATK DEF HP +30%\n+3% Ally Team Critical Hit Chance\n+25 Action Points at battle start",
+    "6_jp": "ATK DEF HP +30%\n味方の会心率+3%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n아군 치명 확률 +3%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n友军暴击率+3%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "6701",
+      "IconName": "Skill_First_2000067",
+      "SkillType": "SKT_FIRST",
+      "name": "Magician's Choice",
+      "name_jp": "マジシャンズセレクト",
+      "name_kr": "매지션즈 셀렉트",
+      "name_zh": "魔术师的选择",
+      "true_desc": "Attacks an enemy and increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Crit Rate</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。",
+      "true_desc_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%)",
+      "true_desc_zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。\\n该技能伤害随自身的<color=#28d9ed>暴击率</color>提升(最大50%)。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Priority"
+        ],
+        "3_jp": [
+          "行動ゲージ5%UP"
+        ],
+        "3_kr": [
+          "행동 게이지 +5%"
+        ],
+        "3_zh": [
+          "行动值+5%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+5% Priority",
+          "+10% damage"
+        ],
+        "5_jp": [
+          "行動ゲージ5%UP",
+          "ダメージ+10%"
+        ],
+        "5_kr": [
+          "행동 게이지 +5%",
+          "피해량 +10%"
+        ],
+        "5_zh": [
+          "行动值+5%",
+          "伤害量+10%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_ADDITIVE_TURN",
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [],
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "+1 Regina's World stack\\nIncreases damage",
+          "effect_jp": "レジーナワールド+1回\\nダメージUP",
+          "effect_kr": "레지나의 세계 +1회\\n피해 증가",
+          "effect_zh": "蕾吉纳的世界+1次\\n伤害提升",
+          "cost": 120,
+          "level": 1,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_2": {
+          "effect": "Increases damage",
+          "effect_jp": "ダメージUP",
+          "effect_kr": "피해 증가",
+          "effect_zh": "伤害提升",
+          "cost": 180,
+          "level": 2,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_3": {
+          "effect": "Resets The Show Must Go On Cooldown\\nExtra Turn",
+          "effect_jp": "【ショー・マスト・\\nゴーオン】のスキル\\nターン初期化\\n追加ターン",
+          "effect_kr": "쇼 머스트 고 온 쿨타임 초기화\\n추가 턴",
+          "effect_zh": "演出不能停冷却时间重置\\n额外回合",
+          "cost": 300,
+          "level": 3,
+          "offensive": true,
+          "target": "mono"
+        }
+      },
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "6702",
+      "IconName": "Skill_Second_2000067",
+      "SkillType": "SKT_SECOND",
+      "name": "It's Checkmate!",
+      "name_jp": "チェックメイトです。",
+      "name_kr": "체크메이트예요",
+      "name_zh": "致胜一步",
+      "true_desc": "(Passive Effect) Regina always gains +10% Miss Chance, and upon entering battle, triggers <color=#28d9ed>Regina's World</color> <color=#28d9ed>1</color> time(s). This effect's count decreases when caster is hit.\\n(Trigger Effect) When an enemy attack results in a miss, <color=#28d9ed>Show Must Go On</color>'s Cooldown is reduced by <color=#28d9ed>1</color> turn. Counterattacks the attacker when hit. Damage dealt increases in proportion to the caster's <color=#28d9ed>Critical Hit Chance</color> (up to 50%).",
+      "true_desc_jp": "(パッシブ効果) 自身の<color=#28d9ed>ミスヒット発生率</color>が10%UPし、戦闘開始時、<color=#28d9ed>【レジーナワールド】</color>を<color=#28d9ed>1回</color>発生させる。この効果は被弾時に回数が減少する。\\n(発動効果) <color=#28d9ed>ミスヒット発生時</color>、<color=#28d9ed>【ショウ・マスト・ゴー・オン】</color>のスキルターンが<color=#28d9ed>1ターン</color>減少する。被弾時、対象に反撃する。\\nこのスキルは自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。",
+      "true_desc_kr": "(패시브 효과) 레지나는 항상 빗나감 확률이 10% 증가하며, 전투 입장 시 <color=#28d9ed>레지나의 세계</color>를 <color=#28d9ed>1회</color> 발생시킵니다. 이 효과는 피격 시 횟수가 차감됩니다.\\n(발동 효과) 적 공격이 빗나감 발생 시 <color=#28d9ed>쇼 머스트 고 온</color>의 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다. 피격 시 대상에게 반격합니다.\\n이 스킬은 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%)",
+      "true_desc_zh": "(被动效果)蕾吉纳的闪避概率始终提高10%,进入战斗时触发<color=#28d9ed>蕾吉纳的世界</color><color=#28d9ed>1</color>次。受到攻击时,该效果的次数会减少。\\n(触发效果)当敌方攻击发生闪避时,<color=#28d9ed>演出不能停</color>的冷却时间减少<color=#28d9ed>1</color>回合。被攻击时对目标进行反击。\\n该技能的伤害会随着自身<color=#28d9ed>暴击率</color>提高而增加。(最多50%)",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+1 turn Increased Miss Rate after counterattacking"
+        ],
+        "4_jp": [
+          "反撃後、ミスヒット発生率UP+1ターン"
+        ],
+        "4_kr": [
+          "반격 후 빗나감 확률 증가 +1턴"
+        ],
+        "4_zh": [
+          "反击后闪避概率提升+1回合"
+        ],
+        "5": [
+          "+15% damage",
+          "+1 Regina's World stack"
+        ],
+        "5_jp": [
+          "ダメージ+15%",
+          "レジーナワールド+1回"
+        ],
+        "5_kr": [
+          "피해량 +15%",
+          "레지나의 세계 +1회"
+        ],
+        "5_zh": [
+          "伤害量+15%",
+          "蕾吉纳的世界+1次"
+        ]
+      },
+      "cd": "3",
+      "buff": [
+        "BT_COOL3_CHARGE",
+        "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER",
+        "SYS_BUFF_AVOID_UP",
+        "IG_Buff_Effect_2000067_Interruption"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "6703",
+      "IconName": "Skill_Ultimate_2000067",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "The Show Must Go On",
+      "name_jp": "ショー・マスト・ゴーオン",
+      "name_kr": "쇼 머스트 고 온",
+      "name_zh": "演出不能停",
+      "true_desc": "Dispels all buff effects from the target and attacks an enemy. After attacking, grants <color=#28d9ed>Regina's World</color> <color=#28d9ed>1 time(s)</color>. This effect decreases by 1 count when hit.\\nIgnores <color=#28d9ed>30%</color> of the target's Defense, and damage dealt increases proportional to the caster's <color=#28d9ed>Critical Hit Chance</color>. The dispelling effect ignores the target's Resilience.",
+      "true_desc_jp": "対象の強化効果をすべて解除し、敵単体にダメージを与える。攻撃後、<color=#28d9ed>【レジーナワールド】</color>を<color=#28d9ed>1回</color>発生させる。\\nこの効果は被弾時に回数が減少する。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。\\n強化解除効果は対象の効果抵抗を無視する。",
+      "true_desc_kr": "대상의 강화 효과를 모두 해제하고 적을 공격합니다. 공격 후 <color=#28d9ed>레지나의 세계</color>를 <color=#28d9ed>1회</color> 발생시킵니다. 이 효과는 피격 시 횟수가 차감됩니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color>무시하며, 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%) 강화 해제 효과는 대상의 효과 저항을 무시합니다.",
+      "true_desc_zh": "解除目标所有强化效果并攻击敌人。攻击后,生成<color=#28d9ed>1次</color><color=#28d9ed>蕾吉娜的世界</color>。该效果受到攻击时次数减少。\\n该技能无视目标<color=#28d9ed>30%</color>的防御力,且伤害随自身的<color=#28d9ed>暴击率</color>提升。解除强化效果无视目标的效果抵抗。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+1 Regina's World stack"
+        ],
+        "4_jp": [
+          "レジーナワールド+1回"
+        ],
+        "4_kr": [
+          "레지나의 세계 +1회"
+        ],
+        "4_zh": [
+          "蕾吉纳的世界+1次"
+        ],
+        "5": [
+          "+20% damage",
+          "-1 turn Skill Cooldown"
+        ],
+        "5_jp": [
+          "ダメージ+20%",
+          "スキルターン-1ターン"
+        ],
+        "5_kr": [
+          "피해량 +20%",
+          "스킬 쿨타임 -1턴"
+        ],
+        "5_zh": [
+          "伤害量+20%",
+          "冷却时间-1回合"
+        ]
+      },
+      "cd": "6",
+      "wgr": 2,
+      "buff": [
+        "IG_Buff_Effect_2000067_Interruption"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ],
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "6704",
+      "IconName": "Skill_ChainPassive_Light_Finish",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase Attack of all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>30%</color>.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の攻撃力を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。",
+      "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.",
+      "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的攻击力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。",
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ],
+      "debuff": [],
+      "dual_buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono"
+    }
+  }
+}

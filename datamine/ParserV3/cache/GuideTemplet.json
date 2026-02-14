@@ -1,0 +1,1874 @@
+[
+  {
+    "ID": "101",
+    "GroupID": "1",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_MENU_BATTLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "102",
+    "GroupID": "1",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_BATTLE_01_NAME",
+    "ImageName": "GUIDE_BATTLE_01,GUIDE_BATTLE_01_02",
+    "DescriptionNameID": "SYS_GUIDE_BATTLE_01_DESC,SYS_GUIDE_BATTLE_01_02_DESC"
+  },
+  {
+    "ID": "103",
+    "GroupID": "1",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_BATTLE_02_NAME",
+    "ImageName": "GUIDE_BATTLE_02",
+    "DescriptionNameID": "SYS_GUIDE_BATTLE_02_DESC"
+  },
+  {
+    "ID": "104",
+    "GroupID": "1",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_BATTLE_03_NAME",
+    "ImageName": "GUIDE_CHARACTER_06",
+    "DescriptionNameID": "SYS_GUIDE_BATTLE_03_DESC"
+  },
+  {
+    "ID": "105",
+    "GroupID": "1",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_BATTLE_04_NAME",
+    "ImageName": "GUIDE_BATTLE_04",
+    "DescriptionNameID": "SYS_GUIDE_BATTLE_04_DESC"
+  },
+  {
+    "ID": "106",
+    "GroupID": "1",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_BATTLE_05_NAME",
+    "ImageName": "GUIDE_BATTLE_05,GUIDE_BATTLE_06",
+    "DescriptionNameID": "SYS_GUIDE_BATTLE_05_DESC,SYS_GUIDE_BATTLE_06_DESC"
+  },
+  {
+    "ID": "107",
+    "GroupID": "1",
+    "Type": "2",
+    "Sort": "7",
+    "NameID": "SYS_SKILL_CHAIN",
+    "ImageName": "GUIDE_BATTLE_07,GUIDE_BATTLE_08",
+    "DescriptionNameID": "SYS_GUIDE_BATTLE_07_DESC,SYS_GUIDE_BATTLE_08_DESC"
+  },
+  {
+    "ID": "108",
+    "GroupID": "1",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUIDE_BATTLE_07_NAME",
+    "ImageName": "GUIDE_BATTLE_09",
+    "DescriptionNameID": "SYS_GUIDE_BATTLE_09_DESC"
+  },
+  {
+    "ID": "109",
+    "GroupID": "1",
+    "Type": "2",
+    "Sort": "9",
+    "NameID": "SYS_GUIDE_BATTLE_08_NAME",
+    "ImageName": "GUIDE_BATTLE_10,GUIDE_BATTLE_11",
+    "DescriptionNameID": "SYS_GUIDE_BATTLE_10_DESC,SYS_GUIDE_BATTLE_11_DESC"
+  },
+  {
+    "ID": "201",
+    "GroupID": "2",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_CHARACTER",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "202",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_CHARACTER_01_NAME",
+    "ImageName": "GUIDE_CHARACTER_01",
+    "DescriptionNameID": "SYS_GUIDE_CHARACTER_01_DESC"
+  },
+  {
+    "ID": "203",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_CHARACTER_02_NAME",
+    "ImageName": "GUIDE_CHARACTER_02",
+    "DescriptionNameID": "SYS_GUIDE_CHARACTER_02_DESC"
+  },
+  {
+    "ID": "204",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_CHARACTER_07_NAME",
+    "ImageName": "GUIDE_CHARACTER_07",
+    "DescriptionNameID": "SYS_GUIDE_CHARACTER_07_DESC"
+  },
+  {
+    "ID": "205",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_CHARACTER_INFO",
+    "ImageName": "GUIDE_CHARACTER_03",
+    "DescriptionNameID": "SYS_GUIDE_CHARACTER_03_DESC"
+  },
+  {
+    "ID": "206",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_CHARACTER_04_NAME",
+    "ImageName": "GUIDE_CHARACTER_04",
+    "DescriptionNameID": "SYS_GUIDE_CHARACTER_04_DESC"
+  },
+  {
+    "ID": "207",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "7",
+    "NameID": "SYS_GUIDE_CHARACTER_05_NAME",
+    "ImageName": "GUIDE_CHARACTER_05",
+    "DescriptionNameID": "SYS_GUIDE_CHARACTER_05_DESC"
+  },
+  {
+    "ID": "208",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUIDE_CHARACTER_06_NAME",
+    "ImageName": "GUIDE_CHARACTER_06",
+    "DescriptionNameID": "SYS_GUIDE_CHARACTER_06_DESC"
+  },
+  {
+    "ID": "209",
+    "GroupID": "2",
+    "Type": "1",
+    "Sort": "9",
+    "NameID": "SYS_GUIDE_CHARUPGRADE_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "210",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "10",
+    "NameID": "SYS_GUIDE_CHARLVUP_TITLE",
+    "ImageName": "GUIDE_CHARUPGRADE_01",
+    "DescriptionNameID": "SYS_GUIDE_CHARUPGRADE_01_DESC"
+  },
+  {
+    "ID": "211",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "11",
+    "NameID": "SYS_GUIDE_CHAREVOLUTION_TITLE",
+    "ImageName": "GUIDE_CHARUPGRADE_02_1,GUIDE_CHARUPGRADE_02_2",
+    "DescriptionNameID": "SYS_GUIDE_CHARUPGRADE_02_1_DESC,SYS_GUIDE_CHARUPGRADE_02_2_DESC"
+  },
+  {
+    "ID": "212",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "12",
+    "NameID": "SYS_GUIDE_CHARUPGRADE_03_NAME",
+    "ImageName": "GUIDE_CHARUPGRADE_03",
+    "DescriptionNameID": "SYS_GUIDE_CHARUPGRADE_03_DESC"
+  },
+  {
+    "ID": "213",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "13",
+    "NameID": "SYS_GUIDE_CHARTRANSCEND_TITLE",
+    "ImageName": "GUIDE_CHARUPGRADE_04",
+    "DescriptionNameID": "SYS_GUIDE_CHARUPGRADE_04_DESC"
+  },
+  {
+    "ID": "214",
+    "GroupID": "2",
+    "Type": "1",
+    "Sort": "14",
+    "NameID": "SYS_GUIDE_CHAREQUIP_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "215",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "15",
+    "NameID": "SYS_GUIDE_CHAREQUIP_01_NAME",
+    "ImageName": "GUIDE_CHAREQUIP_01",
+    "DescriptionNameID": "SYS_GUIDE_CHAREQUIP_01_DESC"
+  },
+  {
+    "ID": "216",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "16",
+    "NameID": "SYS_IT_SPECIAL",
+    "ImageName": "GUIDE_ITEMEQUIP_05",
+    "DescriptionNameID": "SYS_GUIDE_CHAREQUIP_02_DESC"
+  },
+  {
+    "ID": "217",
+    "GroupID": "2",
+    "Type": "1",
+    "Sort": "17",
+    "NameID": "SYS_FRIENDSHIP",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "218",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "18",
+    "NameID": "SYS_FRIENDSHIP",
+    "ImageName": "GUIDE_TRUST_01",
+    "DescriptionNameID": "SYS_GUIDE_TRUST_01_DESC"
+  },
+  {
+    "ID": "219",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "19",
+    "NameID": "SYS_PRESENT",
+    "ImageName": "GUIDE_TRUST_02",
+    "DescriptionNameID": "SYS_GUIDE_TRUST_02_DESC"
+  },
+  {
+    "ID": "220",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "20",
+    "NameID": "SYS_EXPRESSION",
+    "ImageName": "GUIDE_TRUST_03",
+    "DescriptionNameID": "SYS_GUIDE_TRUST_03_DESC"
+  },
+  {
+    "ID": "221",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "21",
+    "NameID": "SYS_VOICE",
+    "ImageName": "GUIDE_TRUST_04",
+    "DescriptionNameID": "SYS_GUIDE_TRUST_04_DESC"
+  },
+  {
+    "ID": "222",
+    "GroupID": "2",
+    "Type": "1",
+    "Sort": "22",
+    "NameID": "SYS_GUIDE_CHAR_GIFT_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "223",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "23",
+    "NameID": "SYS_GUIDE_CHAR_GIFT_TITLE",
+    "ImageName": "GUIDE_GIFT_01_1,GUIDE_GIFT_01_2,GUIDE_GIFT_01_3,GUIDE_GIFT_01_4",
+    "DescriptionNameID": "SYS_GUIDE_CHAR_GIFT_01_1_DESC,SYS_GUIDE_CHAR_GIFT_01_2_DESC,SYS_GUIDE_CHAR_GIFT_01_3_DESC,SYS_GUIDE_CHAR_GIFT_01_4_DESC"
+  },
+  {
+    "ID": "301",
+    "GroupID": "3",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_MENU_INVENTORY",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "302",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_MENU_INVENTORY",
+    "ImageName": "GUIDE_ITEM_01",
+    "DescriptionNameID": "SYS_GUIDE_ITEM_01_DESC"
+  },
+  {
+    "ID": "303",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_ITEM_02_NAME",
+    "ImageName": "GUIDE_ITEM_02",
+    "DescriptionNameID": "SYS_GUIDE_ITEM_02_DESC"
+  },
+  {
+    "ID": "304",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_ITEM_03_NAME",
+    "ImageName": "GUIDE_ITEM_03",
+    "DescriptionNameID": "SYS_GUIDE_ITEM_03_DESC"
+  },
+  {
+    "ID": "305",
+    "GroupID": "3",
+    "Type": "1",
+    "Sort": "5",
+    "NameID": "SYS_IT_EQUIP",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "306",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_ITEMEQUIP_01_NAME",
+    "ImageName": "GUIDE_ITEMEQUIP_01",
+    "DescriptionNameID": "SYS_GUIDE_ITEMEQUIP_01_DESC"
+  },
+  {
+    "ID": "307",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "7",
+    "NameID": "SYS_GUIDE_ITEMEQUIP_02_NAME",
+    "ImageName": "GUIDE_ITEMEQUIP_02",
+    "DescriptionNameID": "SYS_GUIDE_ITEMEQUIP_02_DESC"
+  },
+  {
+    "ID": "308",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUIDE_ITEMEQUIP_03_NAME",
+    "ImageName": "GUIDE_ITEMEQUIP_03",
+    "DescriptionNameID": "SYS_GUIDE_ITEMEQUIP_03_DESC"
+  },
+  {
+    "ID": "309",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "9",
+    "NameID": "SYS_GUIDE_ITEMEQUIP_04_NAME",
+    "ImageName": "GUIDE_ITEMEQUIP_04_1,GUIDE_ITEMEQUIP_04_2",
+    "DescriptionNameID": "SYS_GUIDE_ITEMEQUIP_04_1_DESC,SYS_GUIDE_ITEMEQUIP_04_2_DESC"
+  },
+  {
+    "ID": "310",
+    "GroupID": "3",
+    "Type": "1",
+    "Sort": "10",
+    "NameID": "SYS_GUIDE_EQUIPUPGRADE_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "311",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "11",
+    "NameID": "SYS_ITEMUPGRADE_TITLE",
+    "ImageName": "GUIDE_EQUIPUPGRADE_01",
+    "DescriptionNameID": "SYS_GUIDE_EQUIPUPGRADE_01_DESC"
+  },
+  {
+    "ID": "312",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "12",
+    "NameID": "SYS_GUIDE_EQUIPUPGRADE_02_NAME",
+    "ImageName": "GUIDE_EQUIPUPGRADE_02",
+    "DescriptionNameID": "SYS_GUIDE_EQUIPUPGRADE_02_DESC"
+  },
+  {
+    "ID": "313",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "13",
+    "NameID": "SYS_GUIDE_EQUIPUPGRADE_03_NAME",
+    "ImageName": "GUIDE_EQUIPUPGRADE_03",
+    "DescriptionNameID": "SYS_GUIDE_EQUIPUPGRADE_03_DESC"
+  },
+  {
+    "ID": "314",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "14",
+    "NameID": "SYS_GUIDE_EQUIPUPGRADE_04_NAME",
+    "ImageName": "GUIDE_EQUIPUPGRADE_04_1,GUIDE_EQUIPUPGRADE_04_2,GUIDE_EQUIPUPGRADE_04_3",
+    "DescriptionNameID": "SYS_GUIDE_EQUIPUPGRADE_04_1_DESC,SYS_GUIDE_EQUIPUPGRADE_04_2_DESC,SYS_GUIDE_EQUIPUPGRADE_04_3_DESC"
+  },
+  {
+    "ID": "315",
+    "GroupID": "3",
+    "Type": "1",
+    "Sort": "15",
+    "NameID": "SYS_EQUIPMENT_SPECIAL",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "316",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "16",
+    "NameID": "SYS_EQUIP_EXCLUSIVE",
+    "ImageName": "GUIDE_ITEMEQUIP_05,GUIDE_ITEMEQUIP_05_1",
+    "DescriptionNameID": "SYS_GUIDE_ITEMEQUIP_05_DESC,SYS_GUIDE_ITEMEQUIP_05_1_DESC"
+  },
+  {
+    "ID": "317",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "17",
+    "NameID": "SYS_EQUIP_OOPARTS",
+    "ImageName": "GUIDE_ITEMEQUIP_05,GUIDE_ITEMEQUIP_05_2",
+    "DescriptionNameID": "SYS_GUIDE_ITEMEQUIP_06_DESC,SYS_GUIDE_ITEMEQUIP_06_1_DESC"
+  },
+  {
+    "ID": "401",
+    "GroupID": "4",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_MISSION",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "402",
+    "GroupID": "4",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_MISSION_01_NAME",
+    "ImageName": "GUIDE_MISSION_01",
+    "DescriptionNameID": "SYS_GUIDE_MISSION_01_DESC"
+  },
+  {
+    "ID": "403",
+    "GroupID": "4",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_MISSION_02_NAME",
+    "ImageName": "GUIDE_MISSION_02",
+    "DescriptionNameID": "SYS_GUIDE_MISSION_02_DESC"
+  },
+  {
+    "ID": "501",
+    "GroupID": "5",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_GACHA_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "502",
+    "GroupID": "5",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GACHA_TITLE",
+    "ImageName": "GUIDE_RECRUIT_01",
+    "DescriptionNameID": "SYS_GUIDE_RECRUIT_01_DESC"
+  },
+  {
+    "ID": "503",
+    "GroupID": "5",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GACHA_RECRUIT_RATE_INFO",
+    "ImageName": "GUIDE_RECRUIT_02",
+    "DescriptionNameID": "SYS_GUIDE_RECRUIT_02_DESC"
+  },
+  {
+    "ID": "504",
+    "GroupID": "5",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_RECRUIT_03_NAME",
+    "ImageName": "GUIDE_RECRUIT_03",
+    "DescriptionNameID": "SYS_GUIDE_RECRUIT_03_DESC"
+  },
+  {
+    "ID": "505",
+    "GroupID": "5",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_RECRUIT_04_NAME",
+    "ImageName": "GUIDE_RECRUIT_04",
+    "DescriptionNameID": "SYS_GUIDE_RECRUIT_04_DESC"
+  },
+  {
+    "ID": "601",
+    "GroupID": "6",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_GUIDE_AREA_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "602",
+    "GroupID": "6",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_AREA_01_NAME",
+    "ImageName": "GUIDE_AREA_01",
+    "DescriptionNameID": "SYS_GUIDE_AREA_01_DESC"
+  },
+  {
+    "ID": "603",
+    "GroupID": "6",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_AREA_02_NAME",
+    "ImageName": "GUIDE_AREA_02",
+    "DescriptionNameID": "SYS_GUIDE_AREA_02_DESC"
+  },
+  {
+    "ID": "604",
+    "GroupID": "6",
+    "Type": "1",
+    "Sort": "4",
+    "NameID": "SYS_DUNGEON_MODE_INFO_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "605",
+    "GroupID": "6",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_DUNGEON_MODE_INFO_TITLE",
+    "ImageName": "GUIDE_DUNGEON_01",
+    "DescriptionNameID": "SYS_GUIDE_DUNGEON_01_DESC"
+  },
+  {
+    "ID": "606",
+    "GroupID": "6",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_DUNGEON_02_NAME",
+    "ImageName": "GUIDE_DUNGEON_02",
+    "DescriptionNameID": "SYS_GUIDE_DUNGEON_02_DESC"
+  },
+  {
+    "ID": "607",
+    "GroupID": "6",
+    "Type": "1",
+    "Sort": "7",
+    "NameID": "SYS_MENU_TEAM",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "608",
+    "GroupID": "6",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_MENU_TEAM",
+    "ImageName": "GUIDE_TEAMDECK_01",
+    "DescriptionNameID": "SYS_GUIDE_TEAMDECK_01_DESC"
+  },
+  {
+    "ID": "609",
+    "GroupID": "6",
+    "Type": "2",
+    "Sort": "9",
+    "NameID": "SYS_GUIDE_TEAMDECK_02_NAME",
+    "ImageName": "GUIDE_TEAMDECK_02",
+    "DescriptionNameID": "SYS_GUIDE_TEAMDECK_02_DESC"
+  },
+  {
+    "ID": "701",
+    "GroupID": "7",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_GUIDE_PVE_GOLD_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "702",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_PVE_GOLD_01_NAME",
+    "ImageName": "GUIDE_PVE_GOLD_01",
+    "DescriptionNameID": "SYS_GUIDE_PVE_GOLD_01_DESC"
+  },
+  {
+    "ID": "703",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_PVE_GOLD_02_NAME",
+    "ImageName": "GUIDE_PVE_GOLD_02",
+    "DescriptionNameID": "SYS_GUIDE_PVE_GOLD_02_DESC"
+  },
+  {
+    "ID": "704",
+    "GroupID": "7",
+    "Type": "1",
+    "Sort": "4",
+    "NameID": "SYS_EXP_DUNGEON",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "705",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_PVE_EXP_01_NAME",
+    "ImageName": "GUIDE_PVE_EXP_01",
+    "DescriptionNameID": "SYS_GUIDE_PVE_EXP_01_DESC"
+  },
+  {
+    "ID": "706",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_PVE_EXP_02_NAME",
+    "ImageName": "GUIDE_PVE_EXP_02,GUIDE_PVE_EXP_03",
+    "DescriptionNameID": "SYS_GUIDE_PVE_EXP_02_DESC,SYS_GUIDE_PVE_EXP_03_DESC"
+  },
+  {
+    "ID": "707",
+    "GroupID": "7",
+    "Type": "1",
+    "Sort": "7",
+    "NameID": "SYS_DAYOFWEEK_DUNGEON",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "708",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUIDE_PVE_EVO_01_NAME",
+    "ImageName": "GUIDE_PVE_EVO_01",
+    "DescriptionNameID": "SYS_GUIDE_PVE_EVO_01_DESC"
+  },
+  {
+    "ID": "709",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "9",
+    "NameID": "SYS_GUIDE_PVE_EVO_02_NAME",
+    "ImageName": "GUIDE_PVE_EVO_02",
+    "DescriptionNameID": "SYS_GUIDE_PVE_EVO_02_DESC"
+  },
+  {
+    "ID": "710",
+    "GroupID": "7",
+    "Type": "1",
+    "Sort": "10",
+    "NameID": "SYS_RAID_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "711",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "11",
+    "NameID": "SYS_PVE_RAID_A",
+    "ImageName": "GUIDE_PVE_RAID_01",
+    "DescriptionNameID": "SYS_GUIDE_PVE_RAID_01_DESC"
+  },
+  {
+    "ID": "712",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "12",
+    "NameID": "SYS_PVE_RAID_B",
+    "ImageName": "GUIDE_PVE_RAID_02",
+    "DescriptionNameID": "SYS_GUIDE_PVE_RAID_02_DESC"
+  },
+  {
+    "ID": "713",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "13",
+    "NameID": "SYS_GUIDE_PVE_RAID_03_NAME",
+    "ImageName": "GUIDE_PVE_RAID_03",
+    "DescriptionNameID": "SYS_GUIDE_PVE_RAID_03_DESC"
+  },
+  {
+    "ID": "714",
+    "GroupID": "7",
+    "Type": "1",
+    "Sort": "14",
+    "NameID": "SYS_PVE_TOWER",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "715",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "15",
+    "NameID": "SYS_GUIDE_PVE_TOWER_01_NAME",
+    "ImageName": "GUIDE_PVE_TOWER_01",
+    "DescriptionNameID": "SYS_GUIDE_PVE_TOWER_01_DESC"
+  },
+  {
+    "ID": "716",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "16",
+    "NameID": "SYS_GUIDE_PVE_TOWER_HARD_01_NAME",
+    "ImageName": "GUIDE_PVE_TOWER_02",
+    "DescriptionNameID": "SYS_GUIDE_PVE_TOWER_HARD_01_DESC"
+  },
+  {
+    "ID": "717",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "17",
+    "NameID": "SYS_GUIDE_PVE_TOWER_VERY_HARD_01_NAME",
+    "ImageName": "GUIDE_PVE_TOWER_03",
+    "DescriptionNameID": "SYS_GUIDE_PVE_TOWER_VERY_HARD_01_DESC"
+  },
+  {
+    "ID": "718",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "18",
+    "NameID": "SYS_GUIDE_PVE_TOWER_SKIP_01_NAME",
+    "ImageName": "GUIDE_PVE_TOWER_04",
+    "DescriptionNameID": "SYS_GUIDE_PVE_TOWER_SKIP_01_DESC"
+  },
+  {
+    "ID": "719",
+    "GroupID": "7",
+    "Type": "1",
+    "Sort": "19",
+    "NameID": "SYS_PVE_TOWER_ELEMENTAL",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "720",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "20",
+    "NameID": "SYS_GUIDE_PVE_TOWER_ELEMENT_01_NAME",
+    "ImageName": "GUIDE_PVE_TOWER_ELEMENT_01",
+    "DescriptionNameID": "SYS_GUIDE_PVE_TOWER_ELEMENT_01_DESC"
+  },
+  {
+    "ID": "721",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "21",
+    "NameID": "SYS_GUIDE_PVE_TOWER_ELEMENT_02_NAME",
+    "ImageName": "GUIDE_PVE_TOWER_ELEMENT_02",
+    "DescriptionNameID": "SYS_GUIDE_PVE_TOWER_ELEMENT_02_DESC"
+  },
+  {
+    "ID": "722",
+    "GroupID": "7",
+    "Type": "1",
+    "Sort": "22",
+    "NameID": "SYS_PVE_REMAINS",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "723",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "23",
+    "NameID": "SYS_GUIDE_PVE_REMAIN_01_NAME",
+    "ImageName": "GUIDE_PVE_REMAIN_01",
+    "DescriptionNameID": "SYS_GUIDE_PVE_REMAIN_01_DESC"
+  },
+  {
+    "ID": "724",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "24",
+    "NameID": "SYS_REMAINS_FIELDBUFF",
+    "ImageName": "GUIDE_PVE_REMAIN_02",
+    "DescriptionNameID": "SYS_GUIDE_PVE_REMAIN_02_DESC"
+  },
+  {
+    "ID": "725",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "25",
+    "NameID": "SYS_GUIDE_PVE_REMAIN_04_NAME",
+    "ImageName": "GUIDE_PVE_REMAIN_03",
+    "DescriptionNameID": "SYS_GUIDE_PVE_REMAIN_03_DESC"
+  },
+  {
+    "ID": "726",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "26",
+    "NameID": "SYS_ARTIFACT",
+    "ImageName": "GUIDE_PVE_REMAIN_04",
+    "DescriptionNameID": "SYS_GUIDE_PVE_REMAIN_04_DESC"
+  },
+  {
+    "ID": "727",
+    "GroupID": "7",
+    "Type": "1",
+    "Sort": "27",
+    "NameID": "SYS_PIECE_DUNGEON",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "728",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "28",
+    "NameID": "SYS_GUIDE_PIECE_DUNGEON_01_NAME",
+    "ImageName": "GUIDE_PIECE_DUNGEON_01",
+    "DescriptionNameID": "SYS_GUIDE_PIECE_DUNGEON_01_DESC"
+  },
+  {
+    "ID": "729",
+    "GroupID": "7",
+    "Type": "2",
+    "Sort": "29",
+    "NameID": "SYS_PIECE_REWARD_TITLE",
+    "ImageName": "GUIDE_PIECE_DUNGEON_02",
+    "DescriptionNameID": "SYS_GUIDE_PIECE_DUNGEON_02_DESC"
+  },
+  {
+    "ID": "801",
+    "GroupID": "8",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_MENU_PVP",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "802",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_PVP_01_NAME",
+    "ImageName": "GUIDE_PVP_01",
+    "DescriptionNameID": "SYS_GUIDE_PVP_01_DESC"
+  },
+  {
+    "ID": "803",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_PVP_02_NAME",
+    "ImageName": "GUIDE_PVP_02",
+    "DescriptionNameID": "SYS_GUIDE_PVP_02_DESC"
+  },
+  {
+    "ID": "804",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_PVP_03_NAME",
+    "ImageName": "GUIDE_PVP_03",
+    "DescriptionNameID": "SYS_GUIDE_PVP_03_DESC"
+  },
+  {
+    "ID": "805",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_PVP_04_NAME",
+    "ImageName": "GUIDE_PVP_04,GUIDE_PVP_04_2",
+    "DescriptionNameID": "SYS_GUIDE_PVP_04_DESC,SYS_GUIDE_PVP_04_2_DESC"
+  },
+  {
+    "ID": "806",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_PVP_05_NAME",
+    "ImageName": "GUIDE_PVP_05",
+    "DescriptionNameID": "SYS_GUIDE_PVP_05_DESC"
+  },
+  {
+    "ID": "807",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "7",
+    "NameID": "SYS_REWARD_INFO",
+    "ImageName": "GUIDE_PVP_06,GUIDE_PVP_06_2,GUIDE_PVP_06_3",
+    "DescriptionNameID": "SYS_GUIDE_PVP_06_DESC,SYS_GUIDE_PVP_06_2_DESC,SYS_GUIDE_PVP_06_3_DESC"
+  },
+  {
+    "ID": "808",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUIDE_PVP_07_NAME",
+    "ImageName": "GUIDE_PVP_07_1,GUIDE_PVP_07_2",
+    "DescriptionNameID": "SYS_GUIDE_PVP_07_1_DESC,SYS_GUIDE_PVP_07_2_DESC"
+  },
+  {
+    "ID": "809",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "9",
+    "NameID": "SYS_GUIDE_PVP_08_NAME",
+    "ImageName": "GUIDE_PVP_08",
+    "DescriptionNameID": "SYS_GUIDE_PVP_08_DESC"
+  },
+  {
+    "ID": "810",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "10",
+    "NameID": "SYS_GUIDE_PVP_09_NAME",
+    "ImageName": "GUIDE_PVP_09",
+    "DescriptionNameID": "SYS_GUIDE_PVP_09_DESC"
+  },
+  {
+    "ID": "811",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "11",
+    "NameID": "SYS_GUIDE_PVP_10_NAME",
+    "ImageName": "GUIDE_PVP_10",
+    "DescriptionNameID": "SYS_GUIDE_PVP_10_DESC"
+  },
+  {
+    "ID": "821",
+    "GroupID": "8",
+    "Type": "1",
+    "Sort": "21",
+    "NameID": "SYS_MENU_FRIENDSHIP_PVP",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "822",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "22",
+    "NameID": "SYS_GUIDE_FRIENDSHIP_PVP_01_NAME",
+    "ImageName": "GUIDE_FRIENDSHIP_PVP_01",
+    "DescriptionNameID": "SYS_GUIDE_FRIENDSHIP_PVP_01_DESC"
+  },
+  {
+    "ID": "823",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "23",
+    "NameID": "SYS_GUIDE_FRIENDSHIP_PVP_02_NAME",
+    "ImageName": "GUIDE_REALTIME_PVP_03",
+    "DescriptionNameID": "SYS_GUIDE_FRIENDSHIP_PVP_02_DESC"
+  },
+  {
+    "ID": "824",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "24",
+    "NameID": "SYS_GUIDE_FRIENDSHIP_PVP_03_NAME",
+    "ImageName": "GUIDE_REALTIME_PVP_04",
+    "DescriptionNameID": "SYS_GUIDE_FRIENDSHIP_PVP_03_DESC"
+  },
+  {
+    "ID": "825",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "25",
+    "NameID": "SYS_GUIDE_FRIENDSHIP_PVP_04_NAME",
+    "ImageName": "GUIDE_REALTIME_PVP_05",
+    "DescriptionNameID": "SYS_GUIDE_FRIENDSHIP_PVP_04_DESC"
+  },
+  {
+    "ID": "826",
+    "GroupID": "8",
+    "Type": "2",
+    "Sort": "26",
+    "NameID": "SYS_GUIDE_FRIENDSHIP_PVP_05_NAME",
+    "ImageName": "GUIDE_FRIENDSHIP_PVP_05",
+    "DescriptionNameID": "SYS_GUIDE_FRIENDSHIP_PVP_05_DESC"
+  },
+  {
+    "ID": "901",
+    "GroupID": "9",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_SIDE_STORY_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "902",
+    "GroupID": "9",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_SIDESTORY_01_NAME",
+    "ImageName": "GUIDE_SIDESTORY_01",
+    "DescriptionNameID": "SYS_GUIDE_SIDESTORY_01_DESC"
+  },
+  {
+    "ID": "903",
+    "GroupID": "9",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_SIDESTORY_02_NAME",
+    "ImageName": "GUIDE_SIDESTORY_02",
+    "DescriptionNameID": "SYS_GUIDE_SIDESTORY_02_DESC"
+  },
+  {
+    "ID": "904",
+    "GroupID": "9",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_SIDESTORY_03_NAME",
+    "ImageName": "GUIDE_SIDESTORY_03",
+    "DescriptionNameID": "SYS_GUIDE_SIDESTORY_03_DESC"
+  },
+  {
+    "ID": "1001",
+    "GroupID": "10",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_MENU_AGIT",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1002",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_AGIT_01_NAME",
+    "ImageName": "GUIDE_AGIT_01",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_01_DESC"
+  },
+  {
+    "ID": "1003",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_AGIT_02_NAME",
+    "ImageName": "GUIDE_AGIT_02",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_02_DESC"
+  },
+  {
+    "ID": "1004",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_ASSET_FACILITY",
+    "ImageName": "GUIDE_AGIT_03",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_03_DESC"
+  },
+  {
+    "ID": "1005",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_MENU_AETHER",
+    "ImageName": "GUIDE_AGIT_04_1,GUIDE_AGIT_04_2",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_04_1_DESC,SYS_GUIDE_AGIT_04_2_DESC"
+  },
+  {
+    "ID": "1006",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_MENU_DETACHMENT",
+    "ImageName": "GUIDE_AGIT_05",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_05_DESC"
+  },
+  {
+    "ID": "1007",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "7",
+    "NameID": "SYS_GUIDE_AGIT_06_NAME",
+    "ImageName": "GUIDE_AGIT_06",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_06_DESC"
+  },
+  {
+    "ID": "1008",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUIDE_AGIT_07_NAME",
+    "ImageName": "GUIDE_AGIT_07",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_07_DESC"
+  },
+  {
+    "ID": "1009",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "9",
+    "NameID": "SYS_MENU_CRAFTING",
+    "ImageName": "GUIDE_AGIT_08",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_08_DESC"
+  },
+  {
+    "ID": "1010",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "10",
+    "NameID": "SYS_GUIDE_AGIT_09_NAME",
+    "ImageName": "GUIDE_AGIT_09",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_09_DESC"
+  },
+  {
+    "ID": "1011",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "11",
+    "NameID": "SYS_GUIDE_AGIT_10_NAME",
+    "ImageName": "GUIDE_AGIT_10",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_10_DESC"
+  },
+  {
+    "ID": "1012",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "12",
+    "NameID": "SYS_GUIDE_AGIT_11_NAME",
+    "ImageName": "GUIDE_AGIT_11",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_11_DESC"
+  },
+  {
+    "ID": "1013",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "13",
+    "NameID": "SYS_GUIDE_AGIT_12_NAME",
+    "ImageName": "GUIDE_AGIT_12",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_12_DESC"
+  },
+  {
+    "ID": "1014",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "14",
+    "NameID": "SYS_GUIDE_AGIT_17_NAME",
+    "ImageName": "GUIDE_AGIT_17_1,GUIDE_AGIT_17_2,GUIDE_AGIT_17_3",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_17_DESC_1,SYS_GUIDE_AGIT_17_DESC_2,SYS_GUIDE_AGIT_17_DESC_3"
+  },
+  {
+    "ID": "1015",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "15",
+    "NameID": "SYS_GUIDE_AGIT_13_NAME",
+    "ImageName": "GUIDE_AGIT_13_1,GUIDE_AGIT_13_2",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_13_DESC_1,SYS_GUIDE_AGIT_13_DESC_2"
+  },
+  {
+    "ID": "1016",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "16",
+    "NameID": "SYS_GUIDE_AGIT_14_NAME",
+    "ImageName": "GUIDE_AGIT_14",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_14_DESC"
+  },
+  {
+    "ID": "1017",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "17",
+    "NameID": "SYS_GUIDE_AGIT_15_NAME",
+    "ImageName": "GUIDE_AGIT_15",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_15_DESC"
+  },
+  {
+    "ID": "1018",
+    "GroupID": "10",
+    "Type": "2",
+    "Sort": "18",
+    "NameID": "SYS_GUIDE_AGIT_16_NAME",
+    "ImageName": "GUIDE_AGIT_16",
+    "DescriptionNameID": "SYS_GUIDE_AGIT_16_DESC"
+  },
+  {
+    "ID": "1101",
+    "GroupID": "11",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_MENU_GUILD",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1102",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUILD_CEATE",
+    "ImageName": "GUIDE_GUILD_01",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_01_DESC"
+  },
+  {
+    "ID": "1103",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_GUILD_02_NAME",
+    "ImageName": "GUIDE_GUILD_02_1,GUIDE_GUILD_02_2",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_02_1_DESC,SYS_GUIDE_GUILD_02_2_DESC"
+  },
+  {
+    "ID": "1104",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_GUILD_03_NAME",
+    "ImageName": "GUIDE_GUILD_03",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_03_DESC"
+  },
+  {
+    "ID": "1105",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUILD_MEMBER_TITLE",
+    "ImageName": "GUIDE_GUILD_04_1,GUIDE_GUILD_04_2,GUIDE_GUILD_04_3,GUIDE_GUILD_04_4",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_04_1_DESC,SYS_GUIDE_GUILD_04_2_DESC,SYS_GUIDE_GUILD_04_3_DESC,SYS_GUIDE_GUILD_04_4_DESC"
+  },
+  {
+    "ID": "1106",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUILD_MONOLITH_TITLE",
+    "ImageName": "GUIDE_GUILD_05",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_05_DESC"
+  },
+  {
+    "ID": "1107",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "7",
+    "NameID": "SYS_GUILD_SHOP_TITLE",
+    "ImageName": "GUIDE_GUILD_06",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_06_DESC"
+  },
+  {
+    "ID": "1108",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUILD_DUNGEON_TITLE",
+    "ImageName": "GUIDE_GUILD_07",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_07_DESC"
+  },
+  {
+    "ID": "1201",
+    "GroupID": "12",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_MENU_ARCHIVE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1202",
+    "GroupID": "12",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_ACHIEVE_01_NAME",
+    "ImageName": "GUIDE_ACHIEVE_01",
+    "DescriptionNameID": "SYS_GUIDE_ACHIEVE_01_DESC"
+  },
+  {
+    "ID": "1203",
+    "GroupID": "12",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_ACHIEVE_CHARACTER",
+    "ImageName": "GUIDE_ACHIEVE_02_1,GUIDE_ACHIEVE_02_2",
+    "DescriptionNameID": "SYS_GUIDE_ACHIEVE_02_1_DESC,SYS_GUIDE_ACHIEVE_02_2_DESC"
+  },
+  {
+    "ID": "1204",
+    "GroupID": "12",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_ACHIEVE_REALATION",
+    "ImageName": "GUIDE_ACHIEVE_03",
+    "DescriptionNameID": "SYS_GUIDE_ACHIEVE_03_DESC"
+  },
+  {
+    "ID": "1205",
+    "GroupID": "12",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_ACHIEVE_EQUIP",
+    "ImageName": "GUIDE_ACHIEVE_04",
+    "DescriptionNameID": "SYS_GUIDE_ACHIEVE_04_DESC"
+  },
+  {
+    "ID": "1206",
+    "GroupID": "12",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_ACHIEVE_STORY",
+    "ImageName": "GUIDE_ACHIEVE_05",
+    "DescriptionNameID": "SYS_GUIDE_ACHIEVE_05_DESC"
+  },
+  {
+    "ID": "1301",
+    "GroupID": "13",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "LOBBY_CUSTOM_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1302",
+    "GroupID": "13",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_LOBBY_01_NAME",
+    "ImageName": "GUIDE_LOBBY_01",
+    "DescriptionNameID": "SYS_GUIDE_LOBBY_01_DESC"
+  },
+  {
+    "ID": "1303",
+    "GroupID": "13",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_LOBBY_02_NAME",
+    "ImageName": "GUIDE_LOBBY_02",
+    "DescriptionNameID": "SYS_GUIDE_LOBBY_02_DESC"
+  },
+  {
+    "ID": "1304",
+    "GroupID": "13",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_LOBBY_03_NAME",
+    "ImageName": "GUIDE_LOBBY_03",
+    "DescriptionNameID": "SYS_GUIDE_LOBBY_03_DESC"
+  },
+  {
+    "ID": "1111",
+    "GroupID": "11",
+    "Type": "1",
+    "Sort": "11",
+    "NameID": "SYS_GUILD_RAID_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1112",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "12",
+    "NameID": "SYS_GUIDE_GUILD_RAID_01_NAME",
+    "ImageName": "GUIDE_GUILD_RAID_01",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_RAID_01_DESC"
+  },
+  {
+    "ID": "1113",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "13",
+    "NameID": "SYS_GUIDE_GUILD_RAID_02_NAME",
+    "ImageName": "GUIDE_GUILD_RAID_02",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_RAID_02_DESC"
+  },
+  {
+    "ID": "1114",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "14",
+    "NameID": "SYS_GUIDE_GUILD_RAID_08_NAME",
+    "ImageName": "GUIDE_GUILD_RAID_07_1,GUIDE_GUILD_RAID_07_2,GUIDE_GUILD_RAID_08_1",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_RAID_08_DESC_1,SYS_GUIDE_GUILD_RAID_08_DESC_2,SYS_GUIDE_GUILD_RAID_06_7_DESC"
+  },
+  {
+    "ID": "1115",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "15",
+    "NameID": "SYS_GUIDE_GUILD_RAID_03_NAME",
+    "ImageName": "GUIDE_GUILD_RAID_03",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_RAID_03_DESC"
+  },
+  {
+    "ID": "1116",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "16",
+    "NameID": "SYS_GUIDE_GUILD_RAID_04_NAME",
+    "ImageName": "GUIDE_GUILD_RAID_04",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_RAID_04_DESC"
+  },
+  {
+    "ID": "1117",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "17",
+    "NameID": "SYS_GUIDE_GUILD_RAID_05_NAME",
+    "ImageName": "GUIDE_GUILD_RAID_05",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_RAID_05_DESC"
+  },
+  {
+    "ID": "1118",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "18",
+    "NameID": "SYS_GUIDE_GUILD_RAID_06_NAME",
+    "ImageName": "GUIDE_GUILD_RAID_01,GUIDE_GUILD_RAID_06_2,GUIDE_GUILD_RAID_06_3,GUIDE_GUILD_RAID_06_4,GUIDE_GUILD_RAID_06_6,GUIDE_GUILD_RAID_06_5",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_RAID_06_1_DESC,SYS_GUIDE_GUILD_RAID_06_2_DESC,SYS_GUIDE_GUILD_RAID_06_3_DESC,SYS_GUIDE_GUILD_RAID_06_4_DESC,SYS_GUIDE_GUILD_RAID_06_6_DESC,SYS_GUIDE_GUILD_RAID_06_5_DESC"
+  },
+  {
+    "ID": "1119",
+    "GroupID": "11",
+    "Type": "2",
+    "Sort": "19",
+    "NameID": "SYS_GUIDE_GUILD_RAID_07_NAME",
+    "ImageName": "GUIDE_GUILD_RAID_07",
+    "DescriptionNameID": "SYS_GUIDE_GUILD_RAID_07_DESC"
+  },
+  {
+    "ID": "1401",
+    "GroupID": "14",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_WORLD_BOSS_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1402",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_01_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_01",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_01_DESC"
+  },
+  {
+    "ID": "1403",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_02_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_02_1,GUIDE_WORLD_BOSS_02_2,GUIDE_WORLD_BOSS_02_3,GUIDE_WORLD_BOSS_02_4",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_02_1_DESC,SYS_GUIDE_WORLD_BOSS_02_2_DESC,SYS_GUIDE_WORLD_BOSS_02_3_DESC,SYS_GUIDE_WORLD_BOSS_02_4_DESC"
+  },
+  {
+    "ID": "1404",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_11_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_11_1,GUIDE_WORLD_BOSS_11_2",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_11_1_DESC,SYS_GUIDE_WORLD_BOSS_11_2_DESC"
+  },
+  {
+    "ID": "1405",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_12_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_12_1,GUIDE_WORLD_BOSS_12_2",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_12_1_DESC,SYS_GUIDE_WORLD_BOSS_12_2_DESC"
+  },
+  {
+    "ID": "1406",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_03_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_03",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_03_DESC"
+  },
+  {
+    "ID": "1407",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "7",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_04_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_04",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_04_DESC"
+  },
+  {
+    "ID": "1408",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_05_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_05",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_05_DESC"
+  },
+  {
+    "ID": "1409",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "9",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_06_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_06",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_06_DESC"
+  },
+  {
+    "ID": "1410",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "10",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_13_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_13",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_13_DESC"
+  },
+  {
+    "ID": "1411",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "11",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_07_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_07",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_07_DESC"
+  },
+  {
+    "ID": "1412",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "12",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_08_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_08",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_08_DESC"
+  },
+  {
+    "ID": "1413",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "13",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_09_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_09_1,GUIDE_WORLD_BOSS_09_2,GUIDE_WORLD_BOSS_09_3",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_09_1_DESC,SYS_GUIDE_WORLD_BOSS_09_2_DESC,SYS_GUIDE_WORLD_BOSS_09_3_DESC"
+  },
+  {
+    "ID": "1414",
+    "GroupID": "14",
+    "Type": "2",
+    "Sort": "14",
+    "NameID": "SYS_GUIDE_WORLD_BOSS_10_NAME",
+    "ImageName": "GUIDE_WORLD_BOSS_10",
+    "DescriptionNameID": "SYS_GUIDE_WORLD_BOSS_10_DESC"
+  },
+  {
+    "ID": "1501",
+    "GroupID": "15",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_GUIDE_EXPLORATION_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1502",
+    "GroupID": "15",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_EXPLORATION_01_NAME",
+    "ImageName": "GUIDE_EXPLORATION_01_1,GUIDE_EXPLORATION_01_2,GUIDE_EXPLORATION_01_3,GUIDE_EXPLORATION_01_4",
+    "DescriptionNameID": "SYS_GUIDE_EXPLORATION_01_1_DESC,SYS_GUIDE_EXPLORATION_01_2_DESC,SYS_GUIDE_EXPLORATION_01_3_DESC,SYS_GUIDE_EXPLORATION_01_4_DESC"
+  },
+  {
+    "ID": "1503",
+    "GroupID": "15",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_EXPLORATION_02_NAME",
+    "ImageName": "GUIDE_EXPLORATION_02",
+    "DescriptionNameID": "SYS_GUIDE_EXPLORATION_02_DESC"
+  },
+  {
+    "ID": "1504",
+    "GroupID": "15",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_EXPLORATION_03_NAME",
+    "ImageName": "GUIDE_EXPLORATION_03",
+    "DescriptionNameID": "SYS_GUIDE_EXPLORATION_03_DESC"
+  },
+  {
+    "ID": "1505",
+    "GroupID": "15",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_EXPLORATION_04_NAME",
+    "ImageName": "GUIDE_EXPLORATION_01_1,GUIDE_EXPLORATION_01_3",
+    "DescriptionNameID": "SYS_GUIDE_EXPLORATION_04_1_DESC,SYS_GUIDE_EXPLORATION_04_2_DESC"
+  },
+  {
+    "ID": "1601",
+    "GroupID": "16",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_GUIDE_ADVENTURE_LICENSE_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1602",
+    "GroupID": "16",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_ADVENTURE_LICENSE_01_NAME",
+    "ImageName": "GUIDE_ADVENTURE_LICENSE_01_1,GUIDE_ADVENTURE_LICENSE_01_2",
+    "DescriptionNameID": "SYS_GUIDE_ADVENTURE_LICENSE_01_1_DESC,SYS_GUIDE_ADVENTURE_LICENSE_01_2_DESC"
+  },
+  {
+    "ID": "1603",
+    "GroupID": "16",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_ADVENTURE_LICENSE_02_NAME",
+    "ImageName": "GUIDE_ADVENTURE_LICENSE_02_1,GUIDE_ADVENTURE_LICENSE_02_2",
+    "DescriptionNameID": "SYS_GUIDE_ADVENTURE_LICENSE_02_1_DESC,SYS_GUIDE_ADVENTURE_LICENSE_02_2_DESC"
+  },
+  {
+    "ID": "1604",
+    "GroupID": "16",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_ADVENTURE_LICENSE_03_NAME",
+    "ImageName": "GUIDE_ADVENTURE_LICENSE_03_1,GUIDE_ADVENTURE_LICENSE_03_2",
+    "DescriptionNameID": "SYS_GUIDE_ADVENTURE_LICENSE_03_1_DESC,SYS_GUIDE_ADVENTURE_LICENSE_03_2_DESC"
+  },
+  {
+    "ID": "1605",
+    "GroupID": "16",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_ADVENTURE_LICENSE_04_NAME",
+    "ImageName": "GUIDE_ADVENTURE_LICENSE_04_1,GUIDE_ADVENTURE_LICENSE_04_2",
+    "DescriptionNameID": "SYS_GUIDE_ADVENTURE_LICENSE_04_1_DESC,SYS_GUIDE_ADVENTURE_LICENSE_04_2_DESC"
+  },
+  {
+    "ID": "1606",
+    "GroupID": "16",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_ADVENTURE_LICENSE_05_NAME",
+    "ImageName": "GUIDE_ADVENTURE_LICENSE_05_1",
+    "DescriptionNameID": "SYS_GUIDE_ADVENTURE_LICENSE_05_1_DESC"
+  },
+  {
+    "ID": "1701",
+    "GroupID": "17",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_GUIDE_IRREGULAR_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1702",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_IRREGULAR_01_NAME",
+    "ImageName": "GUIDE_IRREGULAR_01",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_01_DESC"
+  },
+  {
+    "ID": "1703",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_IRREGULAR_02_NAME",
+    "ImageName": "GUIDE_IRREGULAR_02",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_02_DESC"
+  },
+  {
+    "ID": "1704",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_IRREGULAR_03_NAME",
+    "ImageName": "GUIDE_IRREGULAR_03",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_03_DESC"
+  },
+  {
+    "ID": "1705",
+    "GroupID": "17",
+    "Type": "1",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_IRREGULAR_INVADE_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1706",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_IRREGULAR_INVADE_01_NAME",
+    "ImageName": "GUIDE_IRREGULAR_INVADE_01_1,GUIDE_IRREGULAR_INVADE_01_2",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_INVADE_01_1_DESC,SYS_GUIDE_IRREGULAR_INVADE_01_2_DESC"
+  },
+  {
+    "ID": "1707",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "7",
+    "NameID": "SYS_GUIDE_IRREGULAR_INVADE_02_NAME",
+    "ImageName": "GUIDE_IRREGULAR_INVADE_02_1,GUIDE_IRREGULAR_INVADE_02_2",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_INVADE_02_1_DESC,SYS_GUIDE_IRREGULAR_INVADE_02_2_DESC"
+  },
+  {
+    "ID": "1708",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUIDE_IRREGULAR_INVADE_03_NAME",
+    "ImageName": "GUIDE_IRREGULAR_INVADE_03",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_INVADE_03_DESC"
+  },
+  {
+    "ID": "1709",
+    "GroupID": "17",
+    "Type": "1",
+    "Sort": "9",
+    "NameID": "SYS_GUIDE_IRREGULAR_CHASE_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1710",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "10",
+    "NameID": "SYS_GUIDE_IRREGULAR_CHASE_01_NAME",
+    "ImageName": "GUIDE_IRREGULAR_CHASE_01_1,GUIDE_IRREGULAR_CHASE_01_2",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_CHASE_01_1_DESC,SYS_GUIDE_IRREGULAR_CHASE_01_2_DESC"
+  },
+  {
+    "ID": "1711",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "11",
+    "NameID": "SYS_GUIDE_IRREGULAR_CHASE_02_NAME",
+    "ImageName": "GUIDE_IRREGULAR_CHASE_02_1,GUIDE_IRREGULAR_CHASE_02_2",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_CHASE_02_1_DESC,SYS_GUIDE_IRREGULAR_CHASE_02_2_DESC"
+  },
+  {
+    "ID": "1712",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "12",
+    "NameID": "SYS_GUIDE_IRREGULAR_CHASE_03_NAME",
+    "ImageName": "GUIDE_IRREGULAR_CHASE_03",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_CHASE_03_DESC"
+  },
+  {
+    "ID": "1713",
+    "GroupID": "17",
+    "Type": "2",
+    "Sort": "13",
+    "NameID": "SYS_GUIDE_IRREGULAR_CHASE_04_NAME",
+    "ImageName": "GUIDE_IRREGULAR_CHASE_04",
+    "DescriptionNameID": "SYS_GUIDE_IRREGULAR_CHASE_04_DESC"
+  },
+  {
+    "ID": "1801",
+    "GroupID": "18",
+    "Type": "1",
+    "Sort": "1",
+    "NameID": "SYS_GUIDE_MONAD_GATE_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1802",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "2",
+    "NameID": "SYS_GUIDE_MONAD_GATE_01_NAME",
+    "ImageName": "GUIDE_MONAD_GATE_01_1,GUIDE_MONAD_GATE_01_2",
+    "DescriptionNameID": "SYS_GUIDE_MONAD_GATE_01_1_DESC,SYS_GUIDE_MONAD_GATE_01_2_DESC"
+  },
+  {
+    "ID": "1803",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_MONAD_GATE_02_NAME",
+    "ImageName": "GUIDE_MONAD_GATE_02_1,GUIDE_MONAD_GATE_02_2,GUIDE_MONAD_GATE_02_3",
+    "DescriptionNameID": "SYS_GUIDE_MONAD_GATE_02_1_DESC,SYS_GUIDE_MONAD_GATE_02_2_DESC,SYS_GUIDE_MONAD_GATE_02_3_DESC"
+  },
+  {
+    "ID": "1804",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_MONAD_GATE_03_NAME",
+    "ImageName": "GUIDE_MONAD_GATE_03",
+    "DescriptionNameID": "SYS_GUIDE_MONAD_GATE_03_1_DESC"
+  },
+  {
+    "ID": "1805",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_MONAD_GATE_04_NAME",
+    "ImageName": "GUIDE_MONAD_GATE_04",
+    "DescriptionNameID": "SYS_GUIDE_MONAD_GATE_04_1_DESC"
+  },
+  {
+    "ID": "1806",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_MONAD_GATE_05_NAME",
+    "ImageName": "GUIDE_MONAD_GATE_05",
+    "DescriptionNameID": "SYS_GUIDE_MONAD_GATE_05_1_DESC"
+  },
+  {
+    "ID": "1807",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "7",
+    "NameID": "SYS_GUIDE_MONAD_GATE_06_NAME",
+    "ImageName": "GUIDE_MONAD_GATE_06_1,GUIDE_MONAD_GATE_06_2,GUIDE_MONAD_GATE_06_3",
+    "DescriptionNameID": "SYS_GUIDE_MONAD_GATE_06_1_DESC,SYS_GUIDE_MONAD_GATE_06_2_DESC,SYS_GUIDE_MONAD_GATE_06_3_DESC"
+  },
+  {
+    "ID": "1808",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "8",
+    "NameID": "SYS_GUIDE_MONAD_GATE_07_NAME",
+    "ImageName": "GUIDE_MONAD_GATE_07_1,GUIDE_MONAD_GATE_07_2,GUIDE_MONAD_GATE_07_3",
+    "DescriptionNameID": "SYS_GUIDE_MONAD_GATE_07_1_DESC,SYS_GUIDE_MONAD_GATE_07_2_DESC,SYS_GUIDE_MONAD_GATE_07_3_DESC"
+  },
+  {
+    "ID": "1809",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "9",
+    "NameID": "SYS_GUIDE_MONAD_GATE_08_NAME",
+    "ImageName": "GUIDE_MONAD_GATE_08_1,GUIDE_MONAD_GATE_08_1,GUIDE_MONAD_GATE_08_2,GUIDE_MONAD_GATE_08_3,GUIDE_MONAD_GATE_08_4,GUIDE_MONAD_GATE_08_5",
+    "ImageName_fallback1": "SYS_GUIDE_MONAD_GATE_08_1_DESC,SYS_GUIDE_MONAD_GATE_08_2_DESC,SYS_GUIDE_MONAD_GATE_08_3_DESC,SYS_GUIDE_MONAD_GATE_08_4_DESC,SYS_GUIDE_MONAD_GATE_08_5_DESC"
+  }
+]

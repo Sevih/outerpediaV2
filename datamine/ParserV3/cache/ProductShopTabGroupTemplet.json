@@ -1,0 +1,172 @@
+[
+  {
+    "ID": "1",
+    "ProductMainCategory": "PMC_RECOMMEND",
+    "Order": "PACKAGE",
+    "ProductCategory": "PC_RECOMMEND"
+  },
+  {
+    "ID": "2",
+    "ProductMainCategory": "PMC_RECOMMEND",
+    "ShopTabType": "SPECIAL",
+    "Order": "1",
+    "ProductCategory": "PC_SPECIAL"
+  },
+  {
+    "ID": "3",
+    "ProductMainCategory": "PMC_RECOMMEND",
+    "ShopTabType": "SEASONAL",
+    "Order": "2",
+    "ProductCategory": "PC_SEASONAL"
+  },
+  {
+    "ID": "4",
+    "ProductMainCategory": "PMC_RECOMMEND",
+    "ShopTabType": "CUSTOM",
+    "Order": "3",
+    "ProductCategory": "PC_CUSTOM_PACKAGE"
+  },
+  {
+    "ID": "5",
+    "ProductMainCategory": "PMC_RECOMMEND",
+    "ShopTabType": "POPUP",
+    "Order": "4",
+    "Order_fallback1": "PC_POPUP"
+  },
+  {
+    "ID": "6",
+    "ProductMainCategory": "PMC_SUBSCRIBE",
+    "Order": "SUBSCRIBE",
+    "Order_fallback1": "PC_SUBSCRIBE"
+  },
+  {
+    "ID": "7",
+    "ProductMainCategory": "PMC_CRYSTAL",
+    "Order": "NORMAL",
+    "ProductCategory": "PC_NORMAL"
+  },
+  {
+    "ID": "8",
+    "ProductMainCategory": "PMC_CRYSTAL",
+    "ShopTabType": "CRYSTAL",
+    "Order": "1",
+    "ProductCategory": "PC_CRYSTAL"
+  },
+  {
+    "ID": "9",
+    "ProductMainCategory": "PMC_CRYSTAL",
+    "ShopTabType": "COSTUME",
+    "Order": "2",
+    "ProductCategory": "PC_COSTUME"
+  },
+  {
+    "ID": "10",
+    "ProductMainCategory": "PMC_CRYSTAL",
+    "ShopTabType": "GOODS",
+    "Order": "3",
+    "ProductCategory": "PC_GOODS"
+  },
+  {
+    "ID": "11",
+    "ProductMainCategory": "PMC_CRYSTAL",
+    "ShopTabType": "LIMITCRYSTAL",
+    "Order": "4",
+    "Order_fallback1": "PC_LIMITCRYSTAL"
+  },
+  {
+    "ID": "12",
+    "ProductMainCategory": "PMC_PACKAGE",
+    "Order": "GROWPACKAGE",
+    "ProductCategory": "PC_GROWPACKAGE"
+  },
+  {
+    "ID": "13",
+    "ProductMainCategory": "PMC_PACKAGE",
+    "ShopTabType": "TRANSCENDENT_PACK",
+    "Order": "1",
+    "ProductCategory": "PC_TRANSCENDENT_PACK"
+  },
+  {
+    "ID": "14",
+    "ProductMainCategory": "PMC_PACKAGE",
+    "ShopTabType": "COSTUME_PACKAGE",
+    "Order": "2",
+    "ProductCategory": "PC_COSTUME_PACKAGE"
+  },
+  {
+    "ID": "15",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "FRIENDSHIP",
+    "Order": "1",
+    "ProductCategory": "PC_FRIENDSHIP"
+  },
+  {
+    "ID": "16",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "PVP",
+    "Order": "2",
+    "ProductCategory": "PC_PVP"
+  },
+  {
+    "ID": "17",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "PVP_LEAGUE",
+    "Order": "3",
+    "ProductCategory": "PC_PVP_LEAGUE"
+  },
+  {
+    "ID": "18",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "PIECE",
+    "Order": "4",
+    "ProductCategory": "PC_PIECE"
+  },
+  {
+    "ID": "19",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "MEMORY_STAR",
+    "Order": "5",
+    "ProductCategory": "PC_MEMORY_STAR"
+  },
+  {
+    "ID": "20",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "REMAINS",
+    "Order": "6",
+    "ProductCategory": "PC_REMAINS"
+  },
+  {
+    "ID": "21",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "WORLD_BOSS",
+    "Order": "7",
+    "ProductCategory": "PC_WORLD_BOSS"
+  },
+  {
+    "ID": "22",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "TOWER",
+    "Order": "8",
+    "ProductCategory": "PC_TOWER"
+  },
+  {
+    "ID": "23",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "ADVENTURE_LICENSE",
+    "Order": "9",
+    "ProductCategory": "PC_ADVENTURE_LICENSE"
+  },
+  {
+    "ID": "24",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "ShopTabType": "RESEARCH",
+    "Order": "10",
+    "Order_fallback1": "PC_RESEARCH, PC_RESEARCH_2"
+  },
+  {
+    "ID": "25",
+    "ProductMainCategory": "PMC_CONTENTS",
+    "Order": "EVENT",
+    "Order_fallback1": "PC_EVENT_1, PC_EVENT_2, PC_ALWAYS_EVENT_1"
+  }
+]

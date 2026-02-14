@@ -1,0 +1,72 @@
+{
+  "Scaling": {
+      "Weapon": [
+      {
+      "name": "Force Field Generator",
+      "mainStat": "HP%"
+      }
+      ],
+      "Amulet": [
+        {
+          "name": "Coward's Treasure",
+          "mainStat": "HP%"
+          }
+      ],
+      "Set": [
+        [
+          { "name": "Swiftness", "count": 2 },
+          { "name": "Immunity", "count": 2 }
+        ]
+      ],
+      "SubstatPrio": "HP>DEF>SPD>CHC>CHD",
+      "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2", 
+      "Talisman":["Sage's Charm","Vanguard's Charm","Saint's Charm"]
+      },
+ "HP immune": {
+      "Weapon": [
+      {
+      "name": "Force Field Generator",
+      "mainStat": "HP%"
+      }
+      ],
+      "Amulet": [
+        {
+          "name": "Coward's Treasure",
+          "mainStat": "HP%"
+          }
+      ],
+      "Set": [
+        [
+          { "name": "Life", "count": 2 },
+          { "name": "Immunity", "count": 2 }
+        ]
+      ],
+      "SubstatPrio": "HP>DEF>SPD>CHC>CHD",
+      "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2", 
+      "Talisman":["Sage's Charm","Vanguard's Charm","Saint's Charm"]
+      },
+      "HP scaling": {
+           "Weapon": [
+           {
+           "name": "Force Field Generator",
+           "mainStat": "HP%"
+           }
+           ],
+           "Amulet": [
+             {
+               "name": "Coward's Treasure",
+               "mainStat": "HP%"
+               }
+           ],
+           "Set": [
+             [
+               { "name": "Swiftness", "count": 2 },
+               { "name": "Life", "count": 2 }
+             ]
+           ],
+           "SubstatPrio": "HP>DEF>SPD>CHC>CHD",
+           "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2", 
+           "Talisman":["Sage's Charm","Vanguard's Charm","Saint's Charm"]
+           }
+    
+}

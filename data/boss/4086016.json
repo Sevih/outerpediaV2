@@ -1,0 +1,145 @@
+{
+  "id": "4086016",
+  "Name": {
+    "en": "Uncharted Fortress Vault Venion",
+    "kr": "미답요새 발트베니온",
+    "jp": "未踏要塞バルトベニオン",
+    "zh": "未知要塞瓦尔特贝尼翁"
+  },
+  "Surname": {
+    "en": "Pioneer's Will",
+    "kr": "개척의 의지",
+    "jp": "開拓の意志",
+    "zh": "开拓的意志"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 90,
+  "icons": "4086014",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "StatBuffImmune": "ST_DEF",
+  "location": {
+    "dungeon": {
+      "en": "Very Hard League",
+      "kr": "베리 하드 리그",
+      "jp": "ベリーハードリーグ",
+      "zh": "极难联赛"
+    },
+    "mode": {
+      "en": "World Boss",
+      "kr": "월드 보스",
+      "jp": "ワールドボス",
+      "zh": "世界首领"
+    },
+    "area_id": {
+      "en": "55200103",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Trailblazing",
+        "kr": "험로 개척",
+        "jp": "険路開拓",
+        "zh": "开辟险路"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nAttacks the <color=#28d9ed>leftmost</color> enemy as a primary target.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>左側</color>にいる敵を優先的に攻撃する。",
+        "zh": "攻击敌人。\\n优先攻击处于最<color=#28d9ed>左侧</color>的敌人。"
+      },
+      "icon": "Skill_First_4086014"
+    },
+    {
+      "name": {
+        "en": "Ground Blast",
+        "kr": "대지 발파",
+        "jp": "大地発破",
+        "zh": "爆破大地"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and grants 【Remove Detection Interference】 or 【Exclude Unknown Variables】 effect for <color=#28d9ed>3 turn(s)</color>.\\n\\nThe effect already granted when attacking will not be applied, and effects will not be removed when inflicted with Break.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color> 동안 유지되는 【탐측 장해 제거】 혹은 【불특정 변수 배제】 효과를 획득 합니다.\\n\\n공격 시 보유중인 효과는 발생하지 않으며, 브레이크 시 해제되지 않습니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>3ターン</color>の間【探測障害除去】または【不特定変数の排除】効果を獲得する。\\n\\n攻撃時、付与されている効果は発動されず、ブレイク時に解除されない。",
+        "zh": "攻击全体敌人,并获得【扫除探测障碍】或【排除非特定变数】效果,持续<color=#28d9ed>3回合</color>。\\n\\n攻击时不会触发已附带的效果,力竭时不会被解除。"
+      },
+      "icon": "Skill_Second_4086014",
+      "buff":["UNIQUE_VENION_D","UNIQUE_VENION_E"]
+    },
+    {
+      "name": {
+        "en": "Emergency Protocol: Extermination",
+        "kr": "긴급 프로토콜 : 박멸",
+        "jp": "緊急プロトコル:撲滅",
+        "zh": "紧急协议:消灭"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Ignores Resilience and removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, then attacks all enemies.\\nAccording to the unique effect granted, the following effects will be applied:\\n\\n【Remove Detection Interference】: Inflicts <color=#28d9ed>instant death</color> on Fire/Water/Earth enemies.\\n\\n【Exclude Unknown Variables】: Inflicts <color=#28d9ed>instant death</color> on Light/Dark enemies.",
+        "kr": "적 전체의 효과 저항을 무시하고 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제한 이후 적 전체를 공격합니다.\\n보유한 고유 효과에 따라 이하의 효과가 적용됩니다.\\n\\n【탐측 장해 제거】 : 화/수/지속성 적을 <color=#28d9ed>즉사</color>시킵니다.\\n\\n【불특정 변수 배제】 : 명/암속성 적을 <color=#28d9ed>즉사</color>시킵니다.",
+        "jp": "敵全体の効果抵抗を無視し、<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除した後、敵全体にダメージを与える。\\n自分に【探測障害除去】または【不特定変数の排除】がある場合、次の効果が発動する。\\n\\n【探測障害除去】:敵が火・水・地属性の場合、<color=#28d9ed>即死</color>させる。\\n\\n【不特定変数の排除】:敵が光・闇属性の場合、<color=#28d9ed>即死</color>させる。",
+        "zh": "无视全体敌人的效果抵抗,并解除<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>后,攻击全体敌人。\\n根据持有的固有效果触发以下效果。\\n\\n【扫除探测障碍】:火属性/水属性/土属性角色<color=#28d9ed>即死</color>。\\n\\n【排除非特定变数】:光属性/暗属性角色<color=#28d9ed>即死</color>。"
+      },
+      "icon": "Skill_Ultimate_4086014",
+      "debuff":["BT_REMOVE_BUFF","BT_KILL"]
+    },
+    {
+      "name": {
+        "en": "Defense System (Overheating)",
+        "kr": "방어 시스템(과열)",
+        "jp": "防衛システム(過熱)",
+        "zh": "防御系统(过热)"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)Takes increased damage from Light and Dark enemies, and enemies always attack with a <color=#28d9ed>favorable attribute</color>.\\nTakes increased damage from AoE attacks.\\n\\nAll enemies' Speed becomes <color=#28d9ed>0</color>, and they are afflicted with <color=#28d9ed>Extra Skill Disabled</color> and <color=#28d9ed>Extra Turn Disabled</color> (permanent).\\nAfter your attack, increases all enemies' Priority by <color=#28d9ed>100%</color>.\\n\\nDamage from <color=#28d9ed>Curses/Fixed Damage</color> cannot exceed <color=#28d9ed>10000</color>/<color=#28d9ed>20000</color> respectively. However, <color=#28d9ed>Fixed Damage</color> from <color=#28d9ed>Skill Chains</color> can be up to <color=#28d9ed>50000</color>.\\n\\nOn battle entry, dispels all enemy buffs.\\nAt the start of turn, enemies at <color=#28d9ed>30%</color> HP or less have all buffs dispelled and their HP set to 1.",
+        "kr": "(패시브 효과)명속성 및 암속성 적에게 받는 피해가 증가하고, 적은 항상 유리한 상성으로 공격합니다.\\n전체 공격으로 받는 피해량이 증가합니다. \\n\\n적 전체의 속도는 <color=#28d9ed>0</color>이 되고, <color=#28d9ed>추가 스킬 봉인</color>과 <color=#28d9ed>추가 턴 봉인</color>이 부여됩니다. (영구 지속)\\n자신의 공격 후 적 전체에게 행동 게이지를 <color=#28d9ed>100%</color> 증가 시킵니다.\\n\\n<color=#28d9ed>저주/고정 피해</color>의 피해는 각각 <color=#28d9ed>10000/20000</color>을 초과하지 않습니다.\\n단, <color=#28d9ed>스킬 체인</color>으로 받는 <color=#28d9ed>고정 피해</color>는 최대 <color=#28d9ed>50000</color>까지 피해를 입을 수 있습니다.\\n\\n전투 입장 시 적 전체의 강화 효과를 모두 해제합니다.\\n턴 시작 시 체력 <color=#28d9ed>30%</color> 이하 적 캐릭터는 강화 효과를 모두 해제하고 체력이 1이 됩니다.",
+        "jp": "(パッシブ効果)<color=#28d9ed>光/闇属性</color>の敵から受けるダメージが増加し、敵は常に<color=#28d9ed>有利属性</color>で攻撃する。\\n<color=#28d9ed>全体攻撃</color>から受けるダメージが増加する。\\n\\n敵全体のスピードは<color=#28d9ed>0</color>となり、<color=#28d9ed>追加スキル封印</color>と<color=#28d9ed>追加ターン封印</color>が付与されます(永続)。\\n自分の攻撃後、敵全体の行動ゲージを<color=#28d9ed>100%</color>増加させる。\\n\\n<color=#28d9ed>呪い/固定ダメージ</color>はそれぞれ<color=#28d9ed>10000/20000</color>を超えません。なお、<color=#28d9ed>チェーンスキル</color>による<color=#28d9ed>固定ダメージ</color>は最大<color=#28d9ed>50000</color>まで受けます。\\n\\n戦闘開始時、敵全体の強化効果をすべて解除する。\\nターン開始時、体力<color=#28d9ed>30%</color>以下の敵は強化効果をすべて解除し、HPが1になる。",
+        "zh": "(被动效果)来自<color=#28d9ed>光/暗</color>属性敌人的伤害提高,且敌人攻击时始终具有<color=#28d9ed>属性优势</color>。\\n受到<color=#28d9ed>全体攻击</color>的伤害提高。\\n\\n敌方全体速度变为<color=#28d9ed>0</color>,并获得<color=#28d9ed>额外技能封印</color>与<color=#28d9ed>额外回合封印</color>(永久)。\\n自身攻击后,使敌方全体行动值增加<color=#28d9ed>100%</color>。\\n\\n来自<color=#28d9ed>诅咒/固定伤害</color>的伤害上限分别为<color=#28d9ed>10000</color>/<color=#28d9ed>20000</color>;但由<color=#28d9ed>连携技能</color>造成的<color=#28d9ed>固定伤害</color>上限为<color=#28d9ed>50000</color>。\\n\\n入场时,驱散敌方全体所有增益。\\n回合开始时,体力低于<color=#28d9ed>30%</color>的敌人将被驱散所有增益且生命值变为1。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "debuff":["BT_SEAL_ADDITIVE_ATTACK_IR","BT_SEAL_ADDITIVE_TURN_IR", "BT_REMOVE_BUFF"],
+      "buff":["BT_ACTION_GAUGE"]
+    },
+    {
+      "name": {
+        "en": "Hymn of Courage",
+        "kr": "용기의 찬가",
+        "jp": "勇気の讃歌",
+        "zh": "勇气的赞歌"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)The enemy team gains courage against despair, receiving <color=#28d9ed>special effects</color> based on their roles.\\n\\nStriker: +500% Critical Damage to all allies per Striker ally\\nMage: +125% ATK to all allies per Mage ally\\nDefender: On action, heals all allies by +5% HP\\nRanger: On action, grants all allies a Shield for 2 turns\\nHealer: On action, reduces the boss's WG by 3\\n\\nEnemy team's Skill Chain damage increases per ally of the same attribute.\\nWG damage taken from <color=#28d9ed>Assist</color> and <color=#28d9ed>Skill Chains</color> is reduced by <color=#28d9ed>100%</color>.",
+        "kr": "(패시브 효과) 적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격형 동료 한 명당 아군 전체의 치명 피해 +500% \\n마법형 : 마법형 동료 한 명당 아군 전체의 공격력 +125% \\n방어형 : 행동 시 아군 전체의 +5% 체력 회복\\n속도형 : 행동 시 아군 전체에게 2턴 동안 실드 부여 \\n회복형 : 행동 시 보스의 WG 3 감소 \\n\\n적 팀은 동일 속성 동료 한 명당 스킬 체인 피해량이 증가합니다.\\n<color=#28d9ed>협공</color> 및 <color=#28d9ed>스킬 체인</color>으로 받는 WG 피해량이 <color=#28d9ed>100%</color> 감소합니다.",
+        "jp": "(パッシブ効果)敵チームは絶望に立ち向かう勇気を得て、職業に応じた<color=#28d9ed>特別な効果</color>を獲得する。\\n\\n攻撃型:攻撃型の味方1人につき味方全体の会心ダメージ+500%\\n魔法型:魔法型の味方1人につき味方全体の攻撃力+125%\\n防御型:行動時、味方全体を+5%回復\\nスピード型:行動時、味方全体に2ターンのシールド付与\\n回復型:行動時、ボスのWGを3減少\\n\\n敵チームは同一属性の味方1人ごとにチェーンスキルのダメージが増加する。\\n<color=#28d9ed>連携</color>および<color=#28d9ed>チェーンスキル</color>から受けるWGダメージは<color=#28d9ed>100%</color>減少する。",
+        "zh": "(被动效果)敌方队伍获得对抗绝望的勇气,并根据其职业获得<color=#28d9ed>特殊效果</color>。\\n\\n攻击型:每名攻击型友方使我方全体暴击伤害+500%\\n魔法型:每名魔法型友方使我方全体攻击力+125%\\n防御型:行动时,为我方全体回复+5%生命\\n速度型:行动时,为我方全体赋予2回合护盾\\n治疗型:行动时,使Boss的WG降低3\\n\\n敌方队伍每名相同属性的队员都会提高其连携技能伤害。\\n来自<color=#28d9ed>协同</color>与<color=#28d9ed>连携技能</color>的WG伤害<color=#28d9ed>100%</color>减少。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "buff":["UNIQUE_VENION_C"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086014"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "50000008",
+  "Name": {
+    "en": "Eva",
+    "kr": "에바",
+    "jp": "エヴァ",
+    "zh": "艾娃"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Light",
+  "level": 100,
+  "icons": "2000084",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Supreme Adventurer Promotion Challenge 2",
+      "kr": "특급 모험가 승급 챌린지 2",
+      "jp": "特級冒険者昇級チャレンジ2",
+      "zh": "特级冒险家晋升挑战2"
+    },
+    "mode": {
+      "en": "Challenge",
+      "kr": "도전",
+      "jp": "チャレンジ",
+      "zh": "挑战"
+    },
+    "area_id": {
+      "en": "70600104",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ticking Clockwork",
+        "kr": "움직이는 시계태엽",
+        "jp": "動く時計軸",
+        "zh": "跳动的机械发条"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. After attacking, activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.",
+        "kr": "적을 공격합니다. 공격 후 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "jp": "敵単体にダメージを与える。攻撃後、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "zh": "攻击敌人。攻击后,使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。"
+      },
+      "icon": "Skill_First_2000084",
+      "buff":["BT_CALL_BACKUP"]
+    },
+    {
+      "name": {
+        "en": "Time Dilation",
+        "kr": "시간 팽창",
+        "jp": "時間膨張",
+        "zh": "时间膨胀"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy. After attacking, increases the duration of <color=#28d9ed>buff(s)</color> granted to allies by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격합니다. 공격 후 아군이 보유한 <color=#28d9ed>강화 효과</color>의 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与える。攻撃後、味方の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "zh": "攻击敌人。攻击后,使友军持附带的<color=#28d9ed>强化效果</color>持续回合增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000084",
+      "buff":["BT_EXTEND_BUFF"]
+    },
+    {
+      "name": {
+        "en": "Dreaming of You",
+        "kr": "당신을 위한 소망",
+        "jp": "マスターへの想い",
+        "zh": "为你之愿"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Grants <color=#28d9ed>Invulnerability</color> to all allies except for the caster for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "<color=#28d9ed>3턴</color> 동안 자신을 제외한 아군 전체에게 <color=#28d9ed>무적</color>을 부여합니다.",
+        "jp": "自分を除く味方全体に<color=#28d9ed>無敵</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "使除自身外的全体友军获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000084",
+      "buff":["BT_INVINCIBLE"]
+    },
+    {
+      "name": {
+        "en": "Reason for a Name",
+        "kr": "이름의 이유",
+        "jp": "名がある理由",
+        "zh": "名字的理由"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen hit with a Single Attack, reduces damage taken and does not take Weakness Gauge damage.",
+        "kr": "(패시브 효과)\\n단일 공격 피격 시 받는 피해가 감소하고, WG 피해를 받지 않습니다.",
+        "jp": "(パッシブ効果)\\n\\n単体攻撃を受けた場合、受けるダメージがDOWNし、WGダメージを受けない。",
+        "zh": "(被动效果)\\n受到单体攻击时,所受伤害降低,且不会受到WG伤害。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>60%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Time Paradox</color>: Used when Enraged ends.\\nRevives all slain allies.",
+        "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>타임 패러독스</color> : 광폭화 종료 시 사용.\\n사망한 아군을 모두 부활시킵니다.",
+        "jp": "最大HPの<color=#28d9ed>60%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP・ダメージDOWNを3ターンの間付与する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【タイムパラドックス】</color>:【狂暴化】終了時に発動する。\\n倒れた味方全体を復活させる。",
+        "zh": "若生命值降至上限的<color=#28d9ed>60%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>时间悖论</color>:狂暴化结束时发动。\\n使死亡的友军全体复活。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN",
+        "BT_RESURRECTION"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

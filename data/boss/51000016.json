@@ -1,0 +1,72 @@
+{
+  "id": "51000016",
+  "Name": {
+    "en": "Epsilon",
+    "kr": "엡실론",
+    "jp": "イプシロン",
+    "zh": "埃普西隆"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000070",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Epsilon",
+      "kr": "주간토벌 - 엡실론",
+      "jp": "ウィークリー討伐 - イプシロン",
+      "zh": "每周讨伐 - 埃普西隆"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600007",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Hellraiser",
+        "kr": "헬레이저",
+        "jp": "ヘル・レイザー",
+        "zh": "猛鬼追魂"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies, and recovers Health of surviving allies by <color=#28d9ed>15%</color>.\\n<color=#28d9ed>Resurrects (Greater)</color> all slain allies.",
+        "kr": "적 전체를 공격하고, 생존한 아군의 체력을 <color=#28d9ed>15%</color> 만큼 회복시킵니다.\\n사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다.",
+        "jp": "敵全体にダメージを与え、戦場にいる味方のHPを<color=#28d9ed>15%</color>回復する。\\n倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。",
+        "zh": "攻击全体敌人,并使存活友军的生命值恢复<color=#28d9ed>15%</color>。\\n使死亡的友军全体<color=#28d9ed>复活(强化)</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Dark",
+      "buff":["BT_RESURRECTION"]
+    },
+    {
+      "name": {
+        "en": "Final Destination",
+        "kr": "데스티네이션",
+        "jp": "デスティネーション",
+        "zh": "死神来了"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Speed by a random amount upon battle start and resurrection. (Max 75%)\\nUpon death, reduces Health of other Epsilon (OEM) by <color=#28d9ed>30% – 70%</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 및 부활 시 속도가 랜덤으로 증가합니다. (최대 75%)\\n사망 시 다른 엡실론(OEM)의 체력을 <color=#28d9ed>30% ~ 70%</color> 만큼 감소시킵니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時または復活時、スピードがランダムにUPする(最大75%UP)\\n倒れた時、別の【イプシロン(OEM)】のHPを<color=#28d9ed>30%~70%</color>DOWNさせる。",
+        "zh": "(被动效果)\\n战斗开始及复活时,速度随机提升。(最高75%)\\n死亡时,使其他埃普西隆(OEM)的生命值降低<color=#28d9ed>30%~70%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "ID": "2000057",
+  "Fullname": "Sterope",
+  "Fullname_jp": "ステロペ",
+  "Fullname_kr": "스테로페",
+  "Fullname_zh": "史提洛佩",
+  "Rarity": 3,
+  "Element": "Dark",
+  "Class": "Defender",
+  "SubClass": "Sweeper",
+  "rank": "B",
+  "rank_pvp": "B",
+  "role": "support",
+  "skill_priority": {
+    "First": {
+      "prio": 3
+    },
+    "Second": {
+      "prio": 2
+    },
+    "Ultimate": {
+      "prio": 1
+    }
+  },
+  "Chain_Type": "Start",
+  "gift": "Science",
+  "video": "VRSsXgkMdJ8",
+  "VoiceActor": "VA. Katelyn Gault",
+  "VoiceActor_jp": "CV. 山村響",
+  "VoiceActor_kr": "CV. 허예은",
+  "VoiceActor_zh": "CV. 山村响",
+  "transcend": {
+    "1": null,
+    "2": null,
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\n+2% Ally Team Evasion\n+1 Chain Passive Weakness Gauge damage",
+    "4_1_jp": "ATK DEF HP +16%\n味方の回避+2%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 회피 +2%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n友军回避+2%\n连携被动技能的WG降低量+1",
+    "4_2": "ATK DEF HP +19%",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "5_2": "ATK DEF HP +25%",
+    "5_3": "ATK DEF HP +28%",
+    "6": "ATK DEF HP +30%\n+2% Ally Team Evasion\n+25 Action Points at battle start",
+    "6_jp": "ATK DEF HP +30%\n味方の回避+2%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n아군 회피 +2%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n友军回避+2%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "5701",
+      "IconName": "Skill_First_2000057",
+      "SkillType": "SKT_FIRST",
+      "name": "Shatter!",
+      "name_jp": "紫電撃砕",
+      "name_kr": "부서져라!",
+      "name_zh": "粉身碎骨!",
+      "true_desc": "Attacks an enemy. If Sterope had a buff before attacking, activates an additional attack on the same target and grants <color=#28d9ed>Divine Retribution</color>.\\n\\n<color=#28d9ed>Divine Retribution</color>: Increases damage dealt by all allies by <color=#28d9ed>4%</color>. (Max 15 stacks)",
+      "true_desc_jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
+      "true_desc_kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
+      "true_desc_zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)",
+      "enhancement": {
+        "2": [
+          "+5% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [
+        "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "BT_STAT|ST_SPEED"
+      ],
+      "debuff": [
+        "BT_WG_REVERSE_HEAL"
+      ],
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "+1 WG damage with additional attacks\\nIncreases damage",
+          "effect_jp": "追加攻撃のWGダメージ +1\\nダメージUP",
+          "effect_kr": "추가타의 WG 피해량 +1\\n피해 증가",
+          "effect_zh": "额外攻击的WG伤害量+1\\n伤害提升",
+          "cost": 60,
+          "level": 1,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_2": {
+          "effect": "Increases Speed for 1 turn",
+          "effect_jp": "1ターンの間スピードUP",
+          "effect_kr": "1턴 동안 속도 증가",
+          "effect_zh": "速度提升,持续1回合",
+          "cost": 80,
+          "level": 2,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_3": {
+          "effect": "Changes to Enhanced Skill\\n5 Stacks of Divine Retribution",
+          "effect_jp": "強化スキルに変更\\n【神鳴り】5回累積",
+          "effect_kr": "강화 스킬로 교체\\n신의 천벌 5회 누적",
+          "effect_zh": "转化为强化技能\\n降下神罚叠加5次",
+          "cost": 120,
+          "level": 3,
+          "offensive": true,
+          "target": "mono"
+        }
+      },
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "5702",
+      "IconName": "Skill_Second_2000057",
+      "SkillType": "SKT_SECOND",
+      "name": "Begin the Crusade",
+      "name_jp": "雷光",
+      "name_kr": "성전 개시",
+      "name_zh": "圣战开启",
+      "true_desc": "(Passive Effect) At the start of battle, inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.",
+      "true_desc_jp": "(パッシブ効果)戦闘開始時、敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+      "true_desc_kr": "(패시브 효과) 전투 시작 후 <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
+      "true_desc_zh": "(被动效果)战斗开始后,对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。",
+      "enhancement": {
+        "2": [
+          "-1 turn enemy buff duration"
+        ],
+        "2_jp": [
+          "敵の強化効果ターン-1ターン"
+        ],
+        "2_kr": [
+          "적 강화 효과 지속 -1턴"
+        ],
+        "2_zh": [
+          "敌人强化效果持续时间-1回合"
+        ],
+        "3": [
+          "-10% counterattack damage taken by allies"
+        ],
+        "3_jp": [
+          "味方が反撃で受けるダメージ-10%"
+        ],
+        "3_kr": [
+          "반격 피격 시 팀 받는 피해  -10%"
+        ],
+        "3_zh": [
+          "受到反击时队伍所受伤害-10%"
+        ],
+        "4": [
+          "-10% counterattack damage taken by allies"
+        ],
+        "4_jp": [
+          "味方が反撃で受けるダメージ-10%"
+        ],
+        "4_kr": [
+          "반격 피격 시 팀 받는 피해  -10%"
+        ],
+        "4_zh": [
+          "受到反击时队伍所受伤害-10%"
+        ],
+        "5": [
+          "-10% counterattack damage taken by allies"
+        ],
+        "5_jp": [
+          "味方が反撃で受けるダメージ-10%"
+        ],
+        "5_kr": [
+          "반격 피격 시 팀 받는 피해  -10%"
+        ],
+        "5_zh": [
+          "受到反击时队伍所受伤害-10%"
+        ]
+      },
+      "buff": [],
+      "debuff": [
+        "BT_SEALED_RECEIVE_HEAL",
+        "BT_EXTEND_BUFF"
+      ],
+      "offensive": false,
+      "target": null
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "5703",
+      "IconName": "Skill_Ultimate_2000057",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Fight Ferociously!",
+      "name_jp": "イージス・サンクチュアリ",
+      "name_kr": "용맹하게 싸워라!",
+      "name_zh": "勇敢战斗吧!",
+      "true_desc": "Increases <color=#28d9ed>Defense</color> and <color=#28d9ed>Effectiveness</color> of all allies for <color=#28d9ed>2 turn(s)</color>, and inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.",
+      "true_desc_jp": "<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果命中</color>をUPさせ、<color=#28d9ed>2ターン</color>の間、敵全体に<color=#28d9ed>回復不可</color>を付与する。",
+      "true_desc_kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 적중</color>을 증가시키고, <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
+      "true_desc_zh": "使我方全体的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>,并对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "enhancement": {
+        "2": [
+          "-1 turn skill cooldowns on allies except caster"
+        ],
+        "2_jp": [
+          "自分を除く味方全体のスキルターン-1ターン"
+        ],
+        "2_kr": [
+          "자신을 제외한 아군 전체 쿨타임 -1턴"
+        ],
+        "2_zh": [
+          "除自身外的全体友军冷却时间-1回合"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+1 turn effect duration"
+        ],
+        "4_jp": [
+          "効果ターン+1ターン"
+        ],
+        "4_kr": [
+          "효과 지속 +1턴"
+        ],
+        "4_zh": [
+          "效果持续时间+1回合"
+        ],
+        "5": [
+          "-1 turn skill cooldowns on allies except caster"
+        ],
+        "5_jp": [
+          "自分を除く味方全体のスキルターン-1ターン"
+        ],
+        "5_kr": [
+          "자신을 제외한 아군 전체 쿨타임 -1턴"
+        ],
+        "5_zh": [
+          "除自身外的全体友军冷却时间-1回合"
+        ]
+      },
+      "cd": "5",
+      "buff": [
+        "BT_STAT|ST_DEF",
+        "BT_STAT|ST_BUFF_CHANCE",
+        "BT_COOL_CHARGE"
+      ],
+      "debuff": [
+        "BT_SEALED_RECEIVE_HEAL"
+      ],
+      "offensive": false,
+      "target": "mono"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "5704",
+      "IconName": "Skill_ChainPassive_Dark_Start",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Health</color>.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分の最大<color=#28d9ed>HP</color>が高いほど、与えるダメージがUPする。",
+      "true_desc_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다.",
+      "true_desc_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>生命值</color>越高,则伤害量越高。",
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_COOL_CHARGE"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono"
+    }
+  }
+}

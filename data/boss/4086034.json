@@ -1,0 +1,132 @@
+{
+  "id": "4086034",
+  "Name": {
+    "en": "Drakhan",
+    "kr": "드레이칸",
+    "jp": "ドレイカーン",
+    "zh": "德雷坎"
+  },
+  "Surname": {
+    "en": "Demiurge",
+    "kr": "데미우르고스",
+    "jp": "デミウルゴス",
+    "zh": "创世之神"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Light",
+  "level": 90,
+  "icons": "2000063",
+  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_REMOVE_BUFF,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Very Hard League",
+      "kr": "베리 하드 리그",
+      "jp": "ベリーハードリーグ",
+      "zh": "极难联赛"
+    },
+    "mode": {
+      "en": "World Boss",
+      "kr": "월드 보스",
+      "jp": "ワールドボス",
+      "zh": "世界首领"
+    },
+    "area_id": {
+      "en": "55500003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Conqueror's Fang",
+        "kr": "정복자의 송곳니",
+        "jp": "征服者の牙",
+        "zh": "征服者的利齿"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, prioritizing the enemy in front. Reduces the duration of <color=#28d9ed>buffs</color> on the target by <color=#28d9ed>1 turn</color>.",
+        "kr": "정면의 적을 우선적으로 공격합니다. 대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "前衛の敵を優先的に攻撃する。対象の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "zh": "优先攻击最前方的敌人。使目标的<color=#28d9ed>强化效果</color>持续回合减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000063",
+      "debuff":["BT_EXTEND_BUFF"]
+    },
+    {
+      "name": {
+        "en": "Doom Heralding Cry",
+        "kr": "멸망을 부르는 함성",
+        "jp": "滅亡をもたらす叫び",
+        "zh": "灭亡呐喊"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Prioritizes attacking the front enemy. If the target has no removable Enhancement Effect, greatly increases Damage. After the attack, ignores Resilience and steals <color=#28d9ed>all</color> of the target's <color=#28d9ed>Enhancement Effects</color>.",
+        "kr": "정면의 적을 우선적으로 공격합니다. 공격 시 대상이 해제 가능한 강화 효과가 없다면 피해량이 크게 증가합니다. 공격 후 효과 저항을 무시하고 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.",
+        "jp": "一番前の敵を優先的に攻撃する。攻撃時、対象に解除可能な強化効果を保有していない場合、ダメージが大幅にUPする。攻撃後、効果抵抗を無視し、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪い取る。",
+        "zh": "优先攻击最前方的敌人。攻击时,若目标未附带可解除的强化效果,则伤害量大幅提升。攻击后无视效果抵抗,并夺取目标<color=#28d9ed>所有</color>的<color=#28d9ed>强化效果</color>。"
+      },
+      "icon": "Skill_Second_2000063",
+      "debuff": [
+        "BT_STEAL_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dragon Ruler's Breath",
+        "kr": "용왕의 숨결",
+        "jp": "竜王の息吹",
+        "zh": "龙王吐息"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from the target. When scoring a critical hit on one or more enemies, fully reduces Chain Points.",
+        "kr": "적 전체를 공격합니다. 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제합니다. 한 명 이상의 적에게 치명 공격 시 CP를 모두 감소시킵니다.",
+        "jp": "敵全体にダメージを与える。対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除させる。1体以上の敵に会心が発生した場合、CPをすべてDOWNさせる。",
+        "zh": "攻击全体敌人。解除目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。对1名以上敌人发动暴击时,CP全部降低。"
+      },
+      "icon": "Skill_Ultimate_2000063",
+      "debuff":["BT_REMOVE_BUFF","BT_CP_CHARGE"]
+    },
+    {
+      "name": {
+        "en": "Dragon's Solitude",
+        "kr": "용의 고독",
+        "jp": "竜の孤独",
+        "zh": "龙的孤独"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAfter being hit, increases Priority by <color=#28d9ed>20%</color>.\\nWhen an enemy without an Enhancement Effect performs an action, restores Weakness Gauge by <color=#28d9ed>10</color>.\\nUpon Break, reduces caster's <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Damage</color> for 3 turns.\\nGains <color=#28d9ed>Special Effects</color> based on caster's Element. (Cannot stack the same element effect.)\\n\\nFire: All Ally Stats boost efficiency +70%\\nWater: All Ally Speed +10%\\nEarth: All Ally Critical Damage +50%\\nLight: All Ally Weakness Gauge Reduction +50%\\nDark: All Ally Attack +30%",
+        "kr": "(패시브 효과)\\n피격 후 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.\\n강화 효과 미보유 적 행동 시 WG <color=#28d9ed>10</color> 회복합니다.\\n브레이크 시 3턴 동안 자신의 <color=#28d9ed>공격력</color> 및 <color=#28d9ed>치명 피해</color>가 감소합니다. \\n자신의 속성에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다. (동일 속성 효과를 중복하여 획득 할 수 없습니다.) \\n\\n화속성 : 아군 전체 능력치 증가 효율 +70% \\n수속성 : 아군 전체 속도 +10% \\n지속성 : 아군 전체 치명 피해 +50% \\n명속성 : 아군 전체 WG 감소량 +50% \\n암속성 : 아군 전체 공격력 +30%",
+        "jp": "(パッシブ効果)\\nダメージを受けた後、行動ゲージが<color=#28d9ed>20%</color>アップする。\\n強化効果を保有していない敵が行動する時、WGを <color=#28d9ed>10</color>回復する。\\nブレイク時、3ターンの間自分の<color=#28d9ed>攻撃力</color>及び<color=#28d9ed>会心ダメージ</color>がDOWNする。\\n自分の属性に応じて<color=#28d9ed>特別な効果が</color>付与される。 (同じ属性効果は重複して獲得できません。) \\n\\n火属性:味方全体のステータスUP効率+70% \\n水属性:味方全体のスピード+10% \\n地属性:味方全体の会心ダメージ+50% \\n光属性:味方全体のWGダメージ+50% \\n闇属性:味方全体の攻撃力+30%",
+        "zh": "(被动效果)\\n受到攻击后,行动值提升<color=#28d9ed>20%</color>。\\n未持有强化效果的敌人行动时,WG恢复<color=#28d9ed>10</color>。\\n力竭时,使自身<color=#28d9ed>攻击力</color>和<color=#28d9ed>暴击伤害</color>降低,持续3回合。\\n根据自身属性获得<color=#28d9ed>特殊效果</color>。(相同属性效果无法叠加)\\n\\n火属性:全体友军能力值提升效率+70%\\n水属性:全体友军速度+10%\\n土属性:全体友军暴击伤害+50%\\n光属性:全体友军WG降低量+50%\\n暗属性:全体友军攻击力+30%"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Quasar Bombardment",
+        "kr": "퀘이사 포격",
+        "jp": "クエーサー砲撃",
+        "zh": "类星体炮击"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086013"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "50000006",
+  "Name": {
+    "en": "Vlada",
+    "kr": "블라다",
+    "jp": "ヴラダ",
+    "zh": "布拉达"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000075",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Supreme Adventurer Promotion Challenge 1",
+      "kr": "특급 모험가 승급 챌린지 1",
+      "jp": "特級冒険者昇級チャレンジ1",
+      "zh": "特级冒险家晋升挑战1"
+    },
+    "mode": {
+      "en": "Challenge",
+      "kr": "도전",
+      "jp": "チャレンジ",
+      "zh": "挑战"
+    },
+    "area_id": {
+      "en": "70600103",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Twin Mega Cannon",
+        "kr": "트윈 메가 캐논",
+        "jp": "ツイン・メガキャノン",
+        "zh": "双兆加农炮"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the target's Ultimate Skill cooldown by <color=#28d9ed>1 turn</color>.",
+        "kr": "적을 공격하고 대상의 필살기 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、対象の必殺スキルのターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "zh": "攻击敌人,并使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000075",
+      "debuff":["BT_COOL_CHARGE"]
+    },
+    {
+      "name": {
+        "en": "Crush Gear",
+        "kr": "크러시 기어",
+        "jp": "クラッシュギア",
+        "zh": "激斗战车"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect)\\nWhen the caster removes buffs from an enemy, gains <color=#28d9ed>Destroyer's Punishment</color> for <color=#28d9ed>2 turn(s)</color>.\\n(Triggered Effect) When the caster uses an attack that targets all enemies, uses <color=#ffd732>Heavy Metal Raptor</color>. (Excluding Skill Chains)\\n\\n<color=#ffd732>Heavy Metal Raptor</color>: Attacks all enemies.",
+        "kr": "(패시브 효과)\\n자신이 적의 강화 효과를 해제시키면 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>파괴자의 응징</color>을 획득합니다.\\n(발동 효과) 자신이 전체 공격 시 <color=#ffd732>헤비메탈 랩터</color>를 사용합니다. (스킬 체인 제외)\\n\\n<color=#ffd732>헤비메탈 랩터</color> : 적 전체를 공격합니다.",
+        "jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>:敵全体にダメージを与える。",
+        "zh": "(被动效果)\\n若自身解除敌人的强化效果,则获得<color=#28d9ed>破坏者的惩戒</color>,持续<color=#28d9ed>2回合</color>。\\n(触发效果)自身发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>:攻击全体敌人。"
+      },
+      "icon": "Skill_Second_2000075"
+    },
+    {
+      "name": {
+        "en": "Destruction Blade",
+        "kr": "디스트럭션 블레이드",
+        "jp": "デストラクションブレード",
+        "zh": "破坏之剑"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, then attacks.\\nAfter attacking, inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>5 turn(s)</color>.",
+        "kr": "적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제 후 공격합니다.\\n공격 후 <color=#28d9ed>5턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
+        "jp": "敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除した後、敵全体にダメージを与える。\\n攻撃後、敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>5ターン</color>の間付与する。",
+        "zh": "解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>后发动攻击。\\n攻击后,对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>5回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000075",
+      "debuff":["BT_REMOVE_BUFF","BT_SEALED_RECEIVE_HEAL"]
+    },
+    {
+      "name": {
+        "en": "Heavy Metal Eagle",
+        "kr": "헤비메탈 이글",
+        "jp": "ヘヴィメタルイーグル",
+        "zh": "重金属老鹰"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage dealt proportional to the number of debuffs inflicted on the target.\\nWhen inflicting a debuff on an enemy, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>15%</color>.",
+        "kr": "(패시브 효과)\\n대상이 보유한 약화효과가 많을수록 적에게 입히는 피해가 증가합니다.\\n적에게 약화 효과 적중 시 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.",
+        "jp": "(パッシブ効果)\\n対象の弱体効果の数が多いほど与えるダメージがUPする。\\n敵に弱体効果が付与された時、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復する。",
+        "zh": "(被动效果)\\n目标附带的弱化效果越多,对敌人造成的伤害越高。\\n对敌人造成弱化效果时,使全体友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>40%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Permanently inflicts <color=#28d9ed>increased damage taken</color> on all enemies. This effect ignores the target's Immunity and Resilience, and cannot be removed.",
+        "kr": "최대 체력의 <color=#28d9ed>40%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 영구적으로 <color=#28d9ed>받는 피해 증가</color>를 부여합니다. 이 효과는 대상의 면역과 효과 저항을 무시하며, 해제되지 않습니다.",
+        "jp": "最大HPの<color=#28d9ed>40%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:敵全体に<color=#28d9ed>受けるダメージUP</color>を永続的に付与する。この効果は対象の免疫と効果抵抗を無視し、解除されない。",
+        "zh": "若生命值降至上限的<color=#28d9ed>40%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:对全体敌人造成永久<color=#28d9ed>所受伤害提升</color>效果。该效果无视目标的免疫和效果抵抗,且不会被解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "debuff":["BT_DAMAGE_TAKEN_UP"]
+    }
+  ]
+}

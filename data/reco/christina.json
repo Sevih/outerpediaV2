@@ -1,0 +1,152 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Exquisite Death",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Charmer's Golden Chalice",
+        "mainStat": "HH%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "HP>DEF>SPD>EFF",
+    "Note": "", 
+    "Talisman": [
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Scale Immune": {
+    "Weapon": [
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Exquisite Death",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Charmer's Golden Chalice",
+        "mainStat": "HH%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>DEF>SPD>EFF",
+    "Note": "", 
+    "Talisman": [
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Scale Life": {
+    "Weapon": [
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Exquisite Death",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Charmer's Golden Chalice",
+        "mainStat": "HH%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Life", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>DEF>SPD>EFF",
+    "Note": "", 
+    "Talisman": [
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Counter": {
+    "Weapon": [
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Exquisite Death",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Charmer's Golden Chalice",
+        "mainStat": "HH%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Counterattack", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "HP>DEF>SPD>EFF",
+    "Note": "", 
+    "Talisman": [
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  }
+}

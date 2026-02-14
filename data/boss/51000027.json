@@ -1,0 +1,141 @@
+{
+  "id": "51000027",
+  "Name": {
+    "en": "Shadow of the Archdemon",
+    "kr": "마왕의 그림자",
+    "jp": "魔王の隻影",
+    "zh": "魔王弗洛森"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 100,
+  "icons": "4004004",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Shadow of the Archdemon",
+      "kr": "주간토벌 - 마왕의 그림자",
+      "jp": "ウィークリー討伐 - 魔王の影",
+      "zh": "每周讨伐 - 魔王的影子"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600014",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Tyrant Rush",
+        "kr": "마왕의 진격",
+        "jp": "魔王の進撃",
+        "zh": "魔王的进击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and reduces all skill cooldowns of the caster by <color=#28d9ed>1 turn</color>.",
+        "kr": "적을 공격하고 자신의 모든 스킬 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、自分のすべてのスキルのターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "zh": "攻击敌人,使自身的所有技能冷却时间降低<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_4004104",
+      "buff":["BT_COOL_CHARGE"]
+    },
+    {
+      "name": {
+        "en": "Conquest Rave",
+        "kr": "정복자의 압력",
+        "jp": "征服者の圧力",
+        "zh": "征服者的压力"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. After attacking, inflicts <color=#28d9ed>Buff Reversal</color> on the target.",
+        "kr": "적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>강화 역전</color>을 발생시킵니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、対象に<color=#28d9ed>強化逆転</color>を付与する。",
+        "zh": "攻击全体敌人。攻击后,使目标触发<color=#28d9ed>强化逆转</color>"
+      },
+      "icon": "Skill_Second_4004104",
+      "debuff":["BT_STATBUFF_CONVERT_TO_STATDEBUFF"]
+    },
+    {
+      "name": {
+        "en": "The Goal of All Life is Death",
+        "kr": "생명의 끝은 죽음",
+        "jp": "生命の果て、それは死",
+        "zh": "生命的尽头是死亡"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. After attacking, grants increased <color=#28d9ed>Speed / Critical Hit Chance / Critical Damage</color> to the caster and all enemies for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 자신과 적 전체의 <color=#28d9ed>속도/치명 확률/치명 피해</color>를 증가시킵니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、自分と敵全体の<color=#28d9ed>スピード/会心率/会心ダメージ</color>を<color=#28d9ed>3ターン</color>の間UPさせる。",
+        "zh": "攻击全体敌人。攻击后,使自身和全体敌人的<color=#28d9ed>速度/暴击率/暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4004104",
+      "buff":["BT_STAT|ST_SPEED","BT_STAT|ST_CRITICAL_RATE","BT_STAT|ST_CRITICAL_DMG_RATE"]
+    },
+    {
+      "name": {
+        "en": "False Authority",
+        "kr": "거짓된 위광",
+        "jp": "偽りの威光",
+        "zh": "虚假的威光"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nFully reduces Speed of non-Fire enemies. This effect cannot be removed.\\nAt the start of the turn, increases the duration of all buffs granted to the caster by <color=#28d9ed>1 turn</color>, and inflicts <color=#28d9ed>Stunned</color> on enemies inflicted with removable reduced stat effect for <color=#28d9ed>5 turn(s)</color>. This effect ignores the target's Resilience.\\nWhen the caster is granted a buff, does not take Weakness Gauge damage, and when inflicted with a debuff, recovers all Weakness Gauge.",
+        "kr": "(패시브 효과)\\n화속성이 아닌 적의 속도를 모두 감소시킵니다. 이 효과는 해제되지 않습니다.\\n턴 시작 시 자신의 모든 강화 효과의 지속 시간이 <color=#28d9ed>1턴</color> 증가하고, 해제 가능한 능력치 감소 효과를 보유한 적에게 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n자신이 강화 효과 보유 중에는 WG 피해를 받지 않고, 약화 효과 피격 시 WG를 모두 회복합니다.",
+        "jp": "(パッシブ効果)\\n火属性以外の敵のスピードをすべてDOWNさせる。この効果は解除されない。\\nターン開始時、自分のすべての強化効果の持続ターンが<color=#28d9ed>1ターン</color>増加し、解除可能なステータスDOWN効果が付与されている敵に<color=#28d9ed>スタン</color>を<color=#28d9ed>5ターン</color>の間付与する。この効果は対象の効果抵抗を無視する。\\n自分に強化効果がある場合、WGダメージを受けなくなり、弱体効果を付与された時、WGをすべて回復する。",
+        "zh": "(被动效果)\\n使非火属性敌人的速度全部降低。该效果不会被解除。\\n回合开始时,自身所有强化效果的持续时间提升<color=#28d9ed>1回合</color>,对附带可解除的能力值降低效果的敌人造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>5回合</color>。该效果无视目标的效果抵抗。\\n自身附带强化效果时,不会受到WG伤害,且受到弱化效果攻击时,恢复所有WG。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff":["BT_EXTEND_BUFF"],
+      "debuff":["BT_STUN"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Darkest Domination</color>: Used when Enraged ends.\\nAttacks all enemies and grants increased Attack to the caster for 3 turns. This effect cannot be removed.\\n\\n<color=#ffd732>If enraged within 2 turns, recovers 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>진실 너머의 거짓</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 3턴 동안 자신의 공격력이 증가합니다. 이 효과는 해제되지 않습니다.\\n\\n<color=#ffd732>2턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWNを3ターンの間付与する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【真実の向こうの偽り】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、自分の攻撃力が3ターンの間UPする。この効果は解除されない。\\n\\n<color=#ffd732>戦闘開始時から2ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>真实彼岸的谎言</color>:狂暴化结束时发动。\\n攻击全体敌人,自身攻击力提升,持续3回合。该效果不会被解除。\\n\\n<color=#ffd732>在2回合内陷入狂暴化状态时,恢复80CP</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff":["BT_STAT|ST_ATK_IR","BT_DAMGE_TAKEN","BT_CP_CHARGE"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

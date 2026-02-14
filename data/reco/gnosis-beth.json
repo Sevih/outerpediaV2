@@ -1,0 +1,101 @@
+{
+  "PvE - Speed": {
+    "Weapon": [
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%/HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Burning Soul",
+        "mainStat": "EFF"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "EFF"
+      }
+      ,
+      {
+        "name": "Steel Necklace",
+        "mainStat": "EFF"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "EFF>SPD>ACC=CHC",
+    "Note": "Try to add some attack if you play her in a dual attack team, that way she will land more DoTs.",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"      
+    ]
+  },
+  "PvE - Effectiveness": {
+    "Weapon": [
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%/HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Burning Soul",
+        "mainStat": "EFF"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "EFF"
+      }
+      ,
+      {
+        "name": "Steel Necklace",
+        "mainStat": "EFF"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Effectiveness", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "EFF>SPD>ACC=CHC",
+    "Note": "Try to add some attack if you play her in a dual attack team, that way she will land more DoTs.",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"      
+    ]
+  },
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%/HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>EFF>ACC",
+    "Note": "Try to add some attack if you play her in a dual attack team, that way she will land more DoTs.",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm",
+      "Mage's Charm"
+      
+    ]
+  }
+}

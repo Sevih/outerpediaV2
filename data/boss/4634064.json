@@ -1,0 +1,127 @@
+{
+  "id": "4634064",
+  "Name": {
+    "en": "Shichifuja",
+    "kr": "시치후샤",
+    "jp": "七歩蛇",
+    "zh": "七步蛇"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 25,
+  "icons": "4034004",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Defeat Shichifuja Normal",
+      "kr": "시치후샤 처치 일반",
+      "jp": "七歩蛇討伐(ノーマル)",
+      "zh": "击杀七步蛇普通"
+    },
+    "mode": {
+      "en": "Joint Challenge",
+      "kr": "합동 챌린지",
+      "jp": "共同作戦",
+      "zh": "联合挑战"
+    },
+    "area_id": {
+      "en": "90300000",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Creeping Toxin",
+        "kr": "엄습하는 맹독",
+        "jp": "急襲猛毒",
+        "zh": "剧毒来袭"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies, and inflicts Poisoned for <color=#28d9ed>3 turn(s)</color>.\\nWhen the <color=#28d9ed>leftmost</color> target is a non-<color=#28d9ed>Mage</color>, <color=#28d9ed>fully</color> recovers <color=#28d9ed>Weakness Gauge</color> of the caster.\\nIgnores the target's Resilience and Immunity.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color> 동안 중독을 부여합니다.\\n가장 <color=#28d9ed>좌측</color>에 편성된 대상이 <color=#28d9ed>마법형</color>이 아니라면 자신의 <color=#28d9ed>WG</color>를 <color=#28d9ed>모두</color> 회복합니다.\\n대상의 면역 효과와 효과 저항을 모두 무시합니다.",
+        "jp": "敵全体にダメージを与え、中毒を<color=#28d9ed>3ターン</color>の間付与する。\\n一番<color=#28d9ed>左側</color>に編成された対象が<color=#28d9ed>魔法型</color>ではない場合、自分の<color=#28d9ed>WG</color>を<color=#28d9ed>すべて</color>回復する。\\n対象の免疫と効果抵抗を無視する。",
+        "zh": "攻击全体敌人,并造成中毒效果,持续<color=#28d9ed>3回合</color>。\\n若配置于队伍最<color=#28d9ed>左侧</color>的目标非<color=#28d9ed>魔法型</color>,则恢复自身<color=#28d9ed>所有</color><color=#28d9ed>WG</color>。\\n无视目标的所有免疫效果和效果抵抗。"
+      },
+      "icon": "MT_Attack_Smash_1_Earth",
+      "debuff":["BT_DOT_POISON"]
+    },
+    {
+      "name": {
+        "en": "Higashiyama's Master",
+        "kr": "히가시야마의 주인",
+        "jp": "東山ノ主",
+        "zh": "东山的主人"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. When the target is inflicted with <color=#28d9ed>Poisoned</color>, reduces <color=#28d9ed>Defense</color> and <color=#28d9ed>Speed</color> for <color=#28d9ed>5 turn(s)</color>.\\nIgnores the target's Resilience and Immunity.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>중독</color>을 보유한 대상은 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>가 감소합니다.\\n대상의 면역 효과와 효과 저항을 모두 무시합니다.",
+        "jp": "敵全体にダメージを与える。<color=#28d9ed>中毒</color>状態の対象の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>を<color=#28d9ed>5ターン</color>の間DOWNさせる。\\n対象の免疫と効果抵抗を無視する。",
+        "zh": "攻击全体敌人。附带<color=#28d9ed>中毒</color>效果的目标<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>5回合</color>。\\n无视目标的免疫效果和效果抵抗。"
+      },
+      "icon": "MT_Attack_Hammer_1_Earth",
+      "debuff":["BT_STAT|ST_DEF","BT_STAT|ST_SPEED"]
+    },
+    {
+      "name": {
+        "en": "Miasmic Restriction",
+        "kr": "독안개의 결계",
+        "jp": "毒霧結界",
+        "zh": "毒雾的结界"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. When the target is inflicted with <color=#28d9ed>Poisoned</color>, increases damage dealt.\\nIncreases damage of this skill with every use.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>중독</color>을 보유한 대상에게 입히는 피해가 증가합니다.\\n이 스킬은 사용할 때마다 피해량이 증가합니다.",
+        "jp": "敵全体にダメージを与える。<color=#28d9ed>中毒</color>状態の対象に与えるダメージがUPする。\\nこのスキルは使用するたびにダメージがUPする。",
+        "zh": "攻击全体敌人。对附带<color=#28d9ed>中毒</color>效果的目标造成的伤害提升。\\n每次使用该技能时,伤害量都会提升。"
+      },
+      "icon": "MT_Attack_Claw_1_Earth"
+    },
+    {
+      "name": {
+        "en": "The Great Yokai's Servant",
+        "kr": "대요괴의 심복",
+        "jp": "大妖怪の心服",
+        "zh": "大妖怪的心腹"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces Attack of all enemies by <color=#28d9ed>90%</color>, but increases damage taken from enemies.\\nWhen an enemy uses skills other than Burst Skills, Dual Attacks, and Skill Chains, increases Priority of the caster by <color=#28d9ed>20%</color>, and reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>.\\nAt the start of the turn, recovers Weakness Gauge of the caster by <color=#28d9ed>10%</color>.\\nIncreases damage dealt by all skills inversely proportional to the number of targets.",
+        "kr": "(패시브 효과)\\n적 전체의 공격력을 <color=#28d9ed>-90%</color> 감소시키지만, 마법형 적에게 받는 피해가 크게 증가합니다.\\n적이 버스트, 협공, 스킬 체인이 아닌 스킬 사용 시 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시키며, 받는 WG 피해를 <color=#28d9ed>50%</color> 감소시킵니다.\\n턴 시작 시 자신의 WG를 <color=#28d9ed>10%</color> 회복합니다.\\n스킬 체인이 아닌 고정 피해 및 저주로 받는 피해는 <color=#28d9ed>1000</color>을 초과하지 않습니다.\\n모든 스킬은 대상이 적을 수록 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n敵全体の攻撃力を<color=#28d9ed>-90%</color>DOWNさせるが、魔法型の敵から受けるダメージが大幅にUPする。\\n敵がバーストスキル、連携、チェーンスキル以外のスキルを使用時、自分の行動ゲージが<color=#28d9ed>20%</color>UPし、受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。\\nターン開始時、自分のWGを<color=#28d9ed>10%</color>回復する。\\nチェーンスキル以外の固定ダメージ・呪いダメージは<color=#28d9ed>1000</color>を超えない。\\nすべてのスキルは対象が少ないほどダメージがUPする。",
+        "zh": "(被动效果)\\n使全体敌人的攻击力减少<color=#28d9ed>-90%</color>,但受到魔法型敌人的伤害大幅提升。\\n敌人使用除爆发、夹攻、连携技能以外的技能时,使自身行动值提升<color=#28d9ed>20%</color>,并使受到的WG伤害降低<color=#28d9ed>50%</color>。\\n回合开始时,自身WG恢复<color=#28d9ed>10%</color>。\\n受到的非连携技能固定伤害或诅咒伤害不会超过<color=#28d9ed>1000</color>。\\n目标数量越少,所有技能的伤害越高。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff":["BT_ACTION_GAUGE"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers Weakness Gauge by 30%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate</color>: Used when Enraged ends.\\nAttacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict an irremovable <color=#28d9ed>Poisoned</color> on the target for <color=#28d9ed>5 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color> and <color=#28d9ed>Immunity</color>.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>광폭화 필살기</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>5턴</color> 동안 대상을 해제 불가능한 <color=#28d9ed>중독</color> 상태로 만듭니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>과 <color=#28d9ed>면역</color>을 무시합니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UPとダメージDOWN効果を3ターンの間付与し、WGを30%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【必殺スキル】</color>:狂暴化終了時に使用する。\\n敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で解除不可能な<color=#28d9ed>中毒</color>を<color=#28d9ed>5ターン</color>の間付与する。\\nこのスキルは対象の<color=#28d9ed>効果抵抗</color>と<color=#28d9ed>免疫</color>を無視する。",
+        "zh": "每4回合切换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化突进</color>:3回合内赋予自身无法解除的攻击力提升/伤害降低效果,并恢复WG30%。狂暴化会持续3回合。\\n\\n<color=#28d9ed>狂暴化必杀技</color>:狂暴化结束时使用。\\n攻击全体敌人,且有<color=#28d9ed>100%</color>概率在<color=#28d9ed>5回合</color>内使目标陷入无法解除的<color=#28d9ed>中毒</color>状态。\\n该攻击会无视目标的<color=#28d9ed>效果抵抗</color>和<color=#28d9ed>免疫</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff":["BT_DOT_POISON_IR"]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "440400379-B-1",
+  "Name": {
+    "en": "Scientific Inheritance Devotee",
+    "kr": "과학 유산의 신봉자",
+    "jp": "科学遺産の信奉者",
+    "zh": "科学遗产的信奉者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 200,
+  "icons": "4076010",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Scientific Inheritance Devotee (Stage 10)",
+      "kr": "과학유산의 신봉자 (10단계)",
+      "jp": "科学遺産の信奉者(10段階)",
+      "zh": "科学遗产的信奉者(第10阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70801010",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Physical Lines of Force",
+        "kr": "전자기 4법칙",
+        "jp": "電磁気:Mの方程式",
+        "zh": "电磁气四法则"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. This attack prioritizes the <color=#28d9ed>leftmost</color> enemy. Grants the caster irremovable <color=#28d9ed>Immunity</color> for <color=#28d9ed>1 turn(s)</color> if a <color=#28d9ed>non-Defender</color> enemy was attacked.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다. <color=#28d9ed>방어형</color>이 아닌 적 공격 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color>을 획득합니다. (해제 불가)",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>左側</color>にいる敵を優先的に攻撃し、<color=#28d9ed>防御型</color>以外の敵を攻撃した場合、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>1ターン</color>の間付与する。(解除不可)",
+        "zh": "攻击敌人。\\n优先攻击最<color=#28d9ed>左侧</color>的敌人。攻击非<color=#28d9ed>防御型</color>的敌人时,获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>1回合</color>。(无法解除)"
+      },
+      "icon": "Skill_First_2000028",
+      "buff": [
+        "BT_IMMUNE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Maxwell's Wheel",
+        "kr": "회전혼합",
+        "jp": "回転混合",
+        "zh": "回转混合"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Grants the caster irremovable <color=#28d9ed>Increased Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "<color=#28d9ed>2턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다. (해제 불가)",
+        "jp": "自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>2ターン</color>の間UPする。(解除不可)",
+        "zh": "<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。(无法解除)"
+      },
+      "icon": "Skill_Second_2000028",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Irreversible Entropy",
+        "kr": "역전불가의 엔트로피",
+        "jp": "逆転不可のエントロピー",
+        "zh": "不可逆转的熵"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Grants increased <color=#28d9ed>Attack</color>, increased <color=#28d9ed>Defense</color>, and increased <color=#28d9ed>Speed</color> for <color=#28d9ed>3 turn(s)</color> after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>공격력</color>과 <color=#28d9ed>방어력</color>, <color=#28d9ed>속도</color>가 증가합니다.",
+        "jp": "敵全体にダメージを与えた後、自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "zh": "攻击全体敌人。攻击后,<color=#28d9ed>攻击力</color>、<color=#28d9ed>防御力</color>、<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000028",
+      "buff": [
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_DEF",
+        "BT_STAT|ST_SPEED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Happiness Without Pain",
+        "kr": "고통이 없다는 행복",
+        "jp": "苦しみのない幸せ",
+        "zh": "没有痛苦的幸福"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Triggered Effect) Activates an additional attack on all enemies upon scoring a critical hit. After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "kr": "(발동 효과) 치명 공격 시, 적 전체에게 추가타를 입힙니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
+        "jp": "(発動効果)会心発生時、敵全体に追加攻撃を与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>UPする。",
+        "zh": "(触发效果)发动暴击时,对全体敌人发动额外技能。攻击后,自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "When Truth is Denied",
+        "kr": "진리가 거부할 때",
+        "jp": "真理の拒絶",
+        "zh": "当真理拒绝时"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage taken from Mage enemies. Takes greater damage from Earth element enemy Mages.\\nReduces Critical Hit Chance and Effectiveness of Striker enemies. When inflicted with Poisoned, increases Weakness Gauge damage taken by <color=#28d9ed>300%</color>.\\nReduces damage dealt to Earth enemies and increases damage taken from them, but increases damage dealt to Fire enemies and reduces damage taken from them.",
+        "kr": "(패시브 효과)\\n마법형 적에게 받는 피해가 증가합니다. 지속성 마법형인 적에게는 더 큰 피해를 입습니다.\\n공격형 적의 치명 확률과 효과 적중이 감소합니다. 중독 보유 시 받는 WG 피해가 <color=#28d9ed>300%</color> 증가합니다.\\n지속성 적에게 입히는 피해가 감소하고 받는 피해가 증가하지만, 화속성 적에게는 입히는 피해가 증가하고 받는 피해가 감소합니다.",
+        "jp": "(パッシブ効果)\\n魔法型の敵から受けるダメージがUPする。地属性の魔法型の敵からは追加でダメージがUPする。\\n攻撃型の敵の会心率と効果命中がDOWNする。自分が中毒状態の場合、受けるWGダメージが<color=#28d9ed>300%</color>UPする。\\n地属性の敵に与えるダメージがDOWNし、受けるダメージがUPするが、火属性の敵には与えるダメージがUPし、受けるダメージがDOWNする。",
+        "zh": "(被动效果)\\n魔法型敌人造成的伤害增加,大土属性魔法型敌人会造成更大的伤害。\\n攻击型敌人的暴击率与效果命中减少。具有中毒时,受到的WG伤害增加<color=#28d9ed>300%</color>。\\n虽然对大土属性敌人造成的伤害减少,受到的伤害增加;但对火属性敌人造成的伤害增加,受到的伤害减少。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> each time Health is reduced by <color=#28d9ed>50,000</color>.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Removes all <color=#28d9ed>buffs</color> from all enemies before attacking. This attack ignores the target's <color=#28d9ed>Defense</color>.\\nIncreases damage dealt every time the caster becomes Enraged.",
+        "kr": "체력이 <color=#28d9ed>50000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제한 후 공격합니다. 이 공격은 대상의 <color=#28d9ed>방어력</color>을 무시합니다.\\n광폭화 할 때마다 피해량이 증가합니다.",
+        "jp": "HPが<color=#28d9ed>50000</color>DOWNするたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:敵全体の<color=#28d9ed>強化効果</color>をすべて解除した後ダメージを与える。この攻撃は対象の<color=#28d9ed>防御力</color>を無視する。\\n【狂暴化】状態になるたびに、ダメージがUPする。",
+        "zh": "每当生命力减少<color=#28d9ed>50000</color>时,转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化及必杀技</color>:解除全体敌人的所有<color=#28d9ed>强化效果</color>后发动攻击。此攻击无视目标的<color=#28d9ed>防御力</color>。\\n每当狂暴化时,伤害量增加。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

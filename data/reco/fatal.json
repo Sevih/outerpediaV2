@@ -1,0 +1,64 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+      
+    ]
+  },
+  "High Crit": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Critical Strike", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+      
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "407600259",
+  "Name": {
+    "en": "Blazing Knight Meteos",
+    "kr": "화염기사 메테우스",
+    "jp": "火炎の騎士メテウス",
+    "zh": "火焰骑士梅修斯"
+  },
+  "Surname": {
+    "en": "Protector of the Royal Family",
+    "kr": "왕가의 수호자",
+    "jp": "王国の守護騎士",
+    "zh": "皇家守护者"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 100,
+  "icons": "4076002",
+  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_DEF",
+  "location": {
+    "dungeon": {
+      "en": "Blazing Knight Meteos (Stage 10)",
+      "kr": "화염기사 메테우스 (10 단계)",
+      "jp": "火炎の騎士メテウス(10段階)",
+      "zh": "火焰骑士梅修斯(第10阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Identification",
+      "kr": "특별 의뢰 : 정체 규명",
+      "jp": "特別依頼:正体究明",
+      "zh": "特别委托:查清身份"
+    },
+    "area_id": {
+      "en": "50203010",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Lead Me to the Enemy...",
+        "kr": "적은 어디냐...",
+        "jp": "敵はどこだ...",
+        "zh": "敌人在哪里......"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nAttacks the <color=#28d9ed>leftmost</color> enemy as a primary target.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>左側</color>にいる敵を優先的に攻撃する。",
+        "zh": "攻击敌人。\\n优先攻击处于最<color=#28d9ed>左侧</color>的敌人。"
+      },
+      "icon": "Skill_First_4076002"
+    },
+    {
+      "name": {
+        "en": "Protect the Royal Family...",
+        "kr": "왕가를 지킨다...",
+        "jp": "王家を守る...",
+        "zh": "必须守护王室......"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) If Blazing Knight Meteos <color=#28d9ed>kills an enemy</color> (except by a Counterattack or an additional attack), he removes all <color=#28d9ed>buffs</color> from all enemies and deals lethal damage to all enemies. Targets killed by this attack cannot be Resurrected or Revived.",
+        "kr": "(발동 효과) 화염기사 메테우스가 반격, 추가타를 제외한 공격으로 <color=#28d9ed>적을 처치 시</color>, 적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 적 전체에게 치명적인 피해를 입힙니다. 해당 공격에 피해를 받아 사망 시 부활 및 소생 효과가 발생하지 않습니다.",
+        "jp": "(発動効果)【火炎の騎士メテウス】が反撃、追加攻撃以外のスキルで<color=#28d9ed>敵を倒した時</color>、敵全体の<color=#28d9ed>強化効果</color>をすべて解除し、敵全体に致命的なダメージを与える。この攻撃で倒れた敵は復活と蘇生ができなくなる。",
+        "zh": "(触发效果)火焰骑士梅修斯使用除反击、额外攻击以外的攻击<color=#28d9ed>击杀敌人时</color>,解除全体敌人的所有<color=#28d9ed>强化效果</color>,并对全体敌人造成致命伤害。因该攻击死亡时,将无法触发复活与苏醒效果。"
+      },
+      "icon": "Skill_Ultimate_4076002",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED_RESURRECTION"
+      ]
+    },
+    {
+      "name": {
+        "en": "Oath of Meteos",
+        "kr": "메테우스의 맹세",
+        "jp": "メテウスの誓い",
+        "zh": "梅修斯的誓言"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen an enemy uses a non-attack skill, recovers <color=#28d9ed>7</color> Weakness Gauge.\\n\\nIncreases damage dealt proportional to the number of debuffs on the caster, but reduces it if the target has a barrier.\\n\\nAgainst non-Water enemies, reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>, increases damage dealt, and reduces damage taken.\\nAgainst Water enemies, reduces damage dealt and increases damage taken.",
+        "kr": "(패시브 효과)\\n적이 공격이 아닌 스킬 사용 시 WG를 <color=#28d9ed>7</color> 회복합니다.\\n\\n자신이 보유한 약화 효과가 많을수록 공격 시 피해량이 증가하지만, 공격 대상이 실드를 보유하고 있을 때 공격 시 피해량이 감소합니다.\\n\\n수속성이 아닌 적에게 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소하며 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n수속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n敵が攻撃以外のスキルを使用時、WGが<color=#28d9ed>7</color>回復する。\\n\\n自分に弱体効果が多いほど与えるダメージがUPし、攻撃対象がシールド状態の場合、与えるダメージがDOWNする。\\n\\n水属性以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。水属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n水属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "zh": "(被动效果)\\n敌人使用非攻击类技能时,使WG恢复<color=#28d9ed>7</color>。\\n\\n自身附带的弱化效果越多,则攻击时伤害量越高,但若攻击目标持有护盾效果,则攻击时伤害量降低。\\n\\n受到非水属性敌人的WG伤害量降低<color=#28d9ed>50%</color>,并使对其造成的伤害量提升,且所受伤害降低。\\n对水属性敌人造成的伤害降低,且所受伤害提升。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "You Must be the Enemy...",
+        "kr": "네가 적인가...",
+        "jp": "オマエが敵か...",
+        "zh": "敌人就是你吗......"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> all enemies.",
+        "kr": "(발동 효과) 화염기사 메테우스는 피격 시 <color=#28d9ed>고유 자원 : 맹렬한 불씨</color>를 1개 획득합니다.\\n피격 후 <color=#28d9ed>고유 자원 : 맹렬한 불씨</color> 보유 수량이 5개라면, 적 전체에게 <color=#28d9ed>반격</color>을 사용합니다.",
+        "jp": "(発動効果)【火炎の騎士 メテウス】はダメージを受けた場合、<color=#28d9ed>【固有資源:猛烈な火種】</color>を1個獲得する。\\nダメージを受けた後、<color=#28d9ed>【固有資源:猛烈な火種】</color>が5個ある場合、敵全体に<color=#28d9ed>反撃</color>する。",
+        "zh": "(发动效果)火焰骑士梅修斯受击时,获得1个<color=#28d9ed>固有资源:猛烈火花</color>。\\n受击后,若具有5个<color=#28d9ed>固有资源:猛烈火花</color>,对全体敌人使用<color=#28d9ed>反击</color>。"
+      },
+      "icon": "Skill_Second_4076002",
+      "buff": [
+        "BT_STAT|ST_COUNTER_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>80%</color> of Max Health or lower. \\n\\n<color=#28d9ed>Enraged</color>: The caster gains an irremovable effect that increases Penetration and reduces damage taken for 3 turns, and recovers Weakness Gauge by 30%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>I Offer My Life...</color>: used when Enraged ends.\\nAttacks all enemies and deals lethal damage to them.\\n\\n<color=#ffd732>If Enraged within 1 turns, grants 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>80%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 관통력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>이 목숨을 바쳐서......</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하여 치명적인 피해를 입힙니다.\\n\\n<color=#ffd732>1턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>80%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な貫通力UPとダメージDOWN効果を3ターンの間付与し、WGを30%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【この命を捧げて...】</color>:【狂暴化】終了時に発動する。\\n敵全体を攻撃し、致命的なダメージを与える。\\n\\n<color=#ffd732>戦闘開始時から1ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>80%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的穿透力提升/伤害降低效果,持续3回合,并使WG恢复\\n30%。狂暴化持续3回合。\\n\\n<color=#28d9ed>献身之志......</color>:狂暴化结束时发动。\\n攻击全体敌人,并造成致命伤害。\\n\\n<color=#ffd732>在1回合内陷入狂暴化状态时,恢复80CP。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_CP_CHARGE",
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER2",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower. \\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Recovers Weakness Gauge by 30% and deals lethal damage to all enemies. This Enraged has no duration.",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : WG 30%를 회복하고, 적 전체에게 치명적인 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
+        "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:WGを30%回復し、敵全体に致命的なダメージを与える。【狂暴化】の持続ターンはない。",
+        "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:使WG恢复30%,并对全体敌人造成致命伤害。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

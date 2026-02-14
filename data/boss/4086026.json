@@ -1,0 +1,125 @@
+{
+  "id": "4086026",
+  "Name": {
+    "en": "Frozen Dragon of Phantasm Harshna",
+    "kr": "빙환제룡 하르슈나",
+    "jp": "氷幻帝竜ハルシュナ",
+    "zh": "冰幻帝龙赫索纳"
+  },
+  "Surname": {
+    "en": "Ancient Foe",
+    "kr": "고대의 숙적",
+    "jp": "古代の宿敵",
+    "zh": "远古宿敌"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 50,
+  "icons": "4086026",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_ACTION_GAUGE,BT_DOT_CURSE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Hard League",
+      "kr": "하드 리그",
+      "jp": "ハードリーグ",
+      "zh": "困难联赛"
+    },
+    "mode": {
+      "en": "World Boss",
+      "kr": "월드 보스",
+      "jp": "ワールドボス",
+      "zh": "世界首领"
+    },
+    "area_id": {
+      "en": "55600002",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Relentless Destruction",
+        "kr": "거침없는 파괴",
+        "jp": "迷いなき破壊",
+        "zh": "无尽破坏"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nPrioritizes attacking the <color=#28d9ed>leftmost</color> enemy.",
+        "kr": "적을 공격합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>左側</color>にいる敵を優先的に攻撃する。",
+        "zh": "攻击敌人。\\n优先攻击处于最<color=#28d9ed>左侧</color>的敌人。"
+      },
+      "icon": "Skill_First_4086026"
+    },
+    {
+      "name": {
+        "en": "Slaughtering Flutter",
+        "kr": "학살의 날개짓",
+        "jp": "虐殺の羽ばたき",
+        "zh": "屠杀振翅"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_Second_4086026"
+    },
+    {
+      "name": {
+        "en": "Advent of Ruin",
+        "kr": "몰락의 강림",
+        "jp": "没落の降臨",
+        "zh": "覆灭降临"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_Ultimate_4086026"
+    },
+    {
+      "name": {
+        "en": "Harbinger of Ruin",
+        "kr": "몰락을 가져오는 자",
+        "jp": "没落をもたらす者",
+        "zh": "覆灭之源"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "If the caster is not inflicted with a debuff, Weakness Gauge cannot be reduced.\\nIncreases Weakness Gauge damage taken from enemies granted Stealth by 100%.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increases Attack by 30%\\nMage: Increases Critical Damage by 50%\\nDefender: When hit by a single attack, grants Stealth for 2 turn(s)\\nRanger: Increases Effectiveness by 100%\\nHealer: Increases Priority recovery efficiency by 50%",
+        "kr": "자신이 약화 효과를 보유하지 않았다면 WG가 감소하지 않습니다.\\n은신 상태의 적에게 받는 WG 피해량이 100% 증가합니다.\\n자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격력 +30% \\n마법형 : 치명 피해 +50% \\n방어형 : 단일공격 피격 시 은신 2턴 \\n속도형 : 효과 적중 +100% \\n회복형 : 행동 게이지 회복 효율 +50%",
+        "jp": "自分に弱体効果がない場合、WGがDOWNしない。\\n隠れ身状態の敵から受けるWGダメージが100%UPする。\\n自分の戦闘タイプに応じて<color=#28d9ed>特別な効果</color>を獲得する。\\n\\n攻撃型:攻撃力+30%\\n魔法型:会心ダメージ+50%\\n防御型:単体攻撃を受けた場合、隠れ身を2ターンの間付与する。\\nスピード型:効果命中+100%\\n回復型:行動ゲージUPの効率+50%",
+        "zh": "若自身未附带弱化效果,则不会降低WG。\\n对隐身状态的敌人造成的WG伤害量增加\\n100%。\\n根据自身职业获得<color=#28d9ed>特殊效果</color>。\\n\\n攻击型:攻击力+30%\\n魔法型:暴击伤害+50%\\n防御型:受到单体攻击时,隐身状态持续2回合\\n速度型:效果命中+100%\\n恢复型:行动值恢复效率+50%"
+      },
+      "icon": "MT_Passive_1_Water",
+      "buff":["UNIQUE_DAHLIA_A"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086026"
+    }
+  ]
+}

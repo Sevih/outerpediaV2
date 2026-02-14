@@ -1,0 +1,60 @@
+{
+  "id": "51000002",
+  "Name": {
+    "en": "Dungeon Guardian Spear-Wielder",
+    "kr": "던전 가디언 스피어",
+    "jp": "ダンジョンガーディアン〈槍〉",
+    "zh": "长矛手暗堡守护者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Fire",
+  "level": 100,
+  "icons": "4041001",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+ "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Masterless Guardian",
+      "kr": "주간토벌 - 주인 잃은 가디언",
+      "jp": "ウィークリー討伐 - 主を失ったガーディアン",
+      "zh": "每周讨伐 - 失去主人的守护者"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600000",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Pile Bunker",
+        "kr": "파일 벙커",
+        "jp": "パイルバンカー",
+        "zh": "打桩槌"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and removes <color=#28d9ed>2</color> debuff(s) from the boss.\\nIncreases Priority by <color=#28d9ed>20%</color> and reduces the cooldown of <color=#28d9ed>Guardian Cannon</color> by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "지정한 적을 공격하고, 보스의 약화 효과를 <color=#28d9ed>2개</color> 해제합니다.\\n추가로 행 동게이지를 <color=#28d9ed>20%</color> 회복시키고, <color=#28d9ed>가디언 캐논</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、ボスの弱体効果を<color=#28d9ed>2個</color>解除する。\\n行動ゲージを<color=#28d9ed>20%</color>UPさせ、<color=#28d9ed>【ガーディアンキャノン】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "zh": "攻击指定敌人,并解除首领的<color=#28d9ed>2个</color>弱化效果。\\n使行动值恢复<color=#28d9ed>20%</color>,并使<color=#28d9ed>守护者加农炮</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire",
+      "buff": [
+        "BT_COOL_CHARGE",
+        "BT_ACTION_GAUGE",
+        "BT_REMOVE_DEBUFF"
+      ]
+    }
+  ]
+}

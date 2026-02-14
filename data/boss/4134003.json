@@ -1,0 +1,137 @@
+{
+  "id": "4134003",
+  "Name": {
+    "en": "Grand Calamari",
+    "kr": "그랑 칼라마리",
+    "jp": "グラン・カラマリー",
+    "zh": "海怪"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 85,
+  "icons": "4034003",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Grand Calamari on Deck",
+      "kr": "그랑 칼라마리 등장",
+      "jp": "グラン・カラマリー出現",
+      "zh": "海怪登场"
+    },
+    "mode": {
+      "en": "Story (Hard)",
+      "kr": "스토리(하드)",
+      "jp": "ストーリー(ハード)",
+      "zh": "故事(困难)"
+    },
+    "area_id": {
+      "en": "1-10",
+      "kr": "1-10",
+      "jp": "1-10",
+      "zh": "1-10"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Something Wriggly",
+        "kr": "꿈틀거리는 무언가",
+        "jp": "あやふやウネリ",
+        "zh": "蠢蠢欲动之物"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_First_4034003"
+    },
+    {
+      "name": {
+        "en": "Calamari's Call",
+        "kr": "칼라마리의 부름",
+        "jp": "カラマリーの雄たけび",
+        "zh": "海怪的召唤"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unbuffable</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4034003",
+      "debuff": [
+        "BT_SEALED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Terrifying Trapezohedron",
+        "kr": "두려운 부등변다면체",
+        "jp": "脅威の等辺多面体",
+        "zh": "可怖的偏方三八面体"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. After using this skill, increases duration of <color=#28d9ed>debuffs</color> on the target by <color=#28d9ed>1 turn</color> and damage increases if the target is inflicted with <color=#28d9ed>Stunned</color>.",
+        "kr": "적 전체를 공격합니다. 스킬 사용 후 대상이 보유하고 있는 <color=#28d9ed>약화 효과</color>의 지속 시간이 <color=#28d9ed>1턴</color> 증가하고, 대상이 <color=#28d9ed>스턴</color> 상태일 때 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与えた後、対象の<color=#28d9ed>弱体効果</color>の持続ターンを<color=#28d9ed>1ターン</color>増加させる。対象が<color=#28d9ed>スタン</color>状態の場合、ダメージがUPする。",
+        "zh": "攻击全体敌人。使用技能后,目标附带的<color=#28d9ed>弱化效果</color>持续时间增加<color=#28d9ed>1回合</color>,且目标处于<color=#28d9ed>晕眩</color>状态时,伤害提升。"
+      },
+      "icon": "Skill_Ultimate_4034003",
+      "debuff": [
+        "BT_EXTEND_DEBUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Deep Sea Horror",
+        "kr": "심해에서 온 공포",
+        "jp": "深海に潜る恐怖",
+        "zh": "深海恐怖"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAfter using this skill, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stunned</color> on the enemy with the highest Attack for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "(패시브 효과)\\n스킬 사용 후, <color=#28d9ed>100%</color> 확률로 가장 공격력이 높은 적 한 명을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "jp": "(パッシブ効果)\\nスキル使用後、攻撃力が最も高い敵単体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "(被动效果)\\n使用技能后,有<color=#28d9ed>100%</color>的几率使攻击力最高的1名敌人陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers Weakness Gauge by 10%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Attack of the Void</color>: Used when Enraged ends.\\nAttacks all enemies. Reduces the target's Priority by <color=#28d9ed>50%</color> and inflicts Burned for <color=#28d9ed>2 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.\\n\\n<color=#ffd732>If Enraged within 3 turns, grants 60 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>공허의 습격</color> : 광폭화 종료 시 사용.\\n적 전체를 공격합니다. 대상의 행동 게이지를 <color=#28d9ed>-50%</color> 감소시키고, <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 60의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWNを3ターンの間付与し、WGを10%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【ヴォイドアタック】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与える。対象の行動ゲージを<color=#28d9ed>[Buff_T_403400301_12_1]</color>DOWNさせ、火傷を<color=#28d9ed>2ターン</color>の間付与する。\\nこの攻撃は対象の<color=#28d9ed>効果抵抗</color>を無視する。\\n\\n<color=#ffd732>戦闘開始時から3ターン以内に【狂暴化】した場合、敵にCPを60獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>虚空入侵</color>:狂暴化结束时发动。\\n攻击全体敌人。使目标的行动值降低<color=#28d9ed>-50%</color>,并造成烧伤效果,持续<color=#28d9ed>2回合</color>。\\n该攻击无视目标的<color=#28d9ed>效果抵抗</color>。\\n\\n<color=#ffd732>在3回合内陷入狂暴化状态时,使CP恢复60。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR",
+        "BT_CP_CHARGE"
+      ],
+      "debuff": [
+        "BT_ACTION_GAUGE",
+        "BT_DOT_BURN"
+      ]
+    }
+  ]
+}

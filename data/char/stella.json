@@ -1,0 +1,413 @@
+{
+  "ID": "2000039",
+  "Fullname": "Stella",
+  "Fullname_jp": "ステラ",
+  "Fullname_kr": "스텔라",
+  "Fullname_zh": "斯黛拉",
+  "Rarity": 3,
+  "Element": "Light",
+  "Class": "Ranger",
+  "SubClass": "Vanguard",
+  "rank": "A",
+  "rank_pvp": "B",
+  "role": "support",
+  "tags": [
+    "ignore-defense",
+    "free"
+  ],
+  "skill_priority": {
+    "First": {
+      "prio": 3
+    },
+    "Second": {
+      "prio": 1
+    },
+    "Ultimate": {
+      "prio": 2
+    }
+  },
+  "Chain_Type": "Join",
+  "gift": "Luxury",
+  "video": "gpJqG0hrrKc",
+  "VoiceActor": "VA. Laura Post",
+  "VoiceActor_jp": "CV. 田中理恵",
+  "VoiceActor_kr": "CV.박지윤",
+  "VoiceActor_zh": "CV. 田中理惠",
+  "transcend": {
+    "1": null,
+    "1_zh": null,
+    "2": null,
+    "2_zh": null,
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\n+5% Ally Team Attack\n+1 Chain Passive Weakness Gauge damage",
+    "4_1_jp": "ATK DEF HP +16%\n味方の攻撃力+5%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 공격력 +5%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n友军攻击力+5%\n连携被动技能的WG降低量+1",
+    "4_2": "ATK DEF HP +19%",
+    "4_2_zh": "ATK DEF HP +19%",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "5_2": "ATK DEF HP +25%",
+    "5_2_zh": "ATK DEF HP +25%",
+    "5_3": "ATK DEF HP +28%",
+    "5_3_zh": "ATK DEF HP +28%",
+    "6": "ATK DEF HP +30%\n+5% Ally Team Attack\n+25 Action Points at battle start",
+    "6_jp": "ATK DEF HP +30%\n味方の攻撃力+5%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n아군 공격력 +5%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n友军攻击力+5%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "3901",
+      "IconName": "Skill_First_2000039",
+      "SkillType": "SKT_FIRST",
+      "name": "Fair Condemnation",
+      "name_jp": "平等なる断罪を",
+      "name_kr": "평등한 단죄를",
+      "name_zh": "平等的审判",
+      "true_desc": "Attacks 2 enemies, the target and the <color=#28d9ed>enemy with the highest Speed</color>. Has a <color=#28d9ed>60%</color> chance to reduce the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+      "true_desc_jp": "敵2体にダメージを与える。敵単体と<color=#28d9ed>最もスピードが速い敵</color>を攻撃する。<color=#28d9ed>60%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-20%</color>DOWNさせる。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "적 2인을 공격합니다. 지정한 대상과 <color=#28d9ed>속도가 가장 빠른 적</color>을 공격합니다. <color=#28d9ed>60%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-20%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+      "true_desc_zh": "攻击2名敌人。攻击所选目标和<color=#28d9ed>速度最快的敌人</color>。有<color=#28d9ed>60%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-20%</color>。\\n自身<color=#28d9ed>速度</color>越高,则该技能伤害越高。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+10%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "3_zh": [
+          "效果触发几率+10%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+10% effect chance"
+        ],
+        "5_jp": [
+          "効果発生率+10%"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "5_zh": [
+          "效果触发几率+10%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [],
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "Attacks all enemies\\nIncreases damage",
+          "effect_jp": "敵全体攻撃\\nダメージUP",
+          "effect_kr": "적 전체 공격\\n피해 증가",
+          "effect_zh": "攻击全体敌人\\n伤害提升",
+          "cost": 80,
+          "level": 1,
+          "offensive": true,
+          "target": "multi"
+        },
+        "SKT_BURST_2": {
+          "effect": "Increases damage",
+          "effect_jp": "ダメージUP",
+          "effect_kr": "피해 증가",
+          "effect_zh": "伤害提升",
+          "cost": 120,
+          "level": 2,
+          "offensive": true,
+          "target": "multi"
+        },
+        "SKT_BURST_3": {
+          "effect": "Changed to Enhanced Skill\\nPenetration increased.",
+          "effect_jp": "強化スキルに変更\\n貫通力UP",
+          "effect_kr": "강화 스킬로 교체\\n관통력 증가",
+          "effect_zh": "转化为强化技能\\n穿透力提升",
+          "cost": 160,
+          "level": 3,
+          "offensive": true,
+          "target": "multi"
+        }
+      },
+      "offensive": true,
+      "target": "duo"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "3902",
+      "IconName": "Skill_Second_2000039",
+      "SkillType": "SKT_SECOND",
+      "name": "Steely Oath",
+      "name_jp": "強固なる誓約を",
+      "name_kr": "굳건한 맹세를",
+      "name_zh": "坚定的誓言",
+      "true_desc": "(Passive Effect) Cannot be inflicted with <color=#28d9ed>Stunned</color>, <color=#28d9ed>Frozen</color>, or <color=#28d9ed>Petrified</color>.\\n(Triggered Effect) Prepares the <color=#28d9ed>Revenge</color> effect for every <color=#28d9ed>cooldown cycle</color> of the skill.\\nAttacks all enemies when <color=#28d9ed>Revenge</color> is activated.\\nThis skill deals damage proportional to the caster's <color=#28d9ed>Speed</color>.",
+      "true_desc_jp": "(パッシブ効果)<color=#28d9ed>スタン</color>、<color=#28d9ed>凍結</color>、<color=#28d9ed>石化</color>の影響を受けない。\\n(発動効果)スキルターンごとに<color=#28d9ed>【復讐】</color>を発動する。\\n<color=#28d9ed>【復讐】</color>:敵全体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "(패시브 효과) <color=#28d9ed>스턴</color>, <color=#28d9ed>빙결</color>, <color=#28d9ed>석화</color>의 영향을 받지 않습니다.\\n(발동 효과) 스킬의 <color=#28d9ed>쿨타임</color>마다 <color=#28d9ed>복수</color> 효과를 준비합니다.\\n<color=#28d9ed>복수</color> 발동 시 적 전체를 공격합니다.\\n자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+      "true_desc_zh": "(被动效果)不受<color=#28d9ed>晕眩</color>、<color=#28d9ed>冰冻</color>、<color=#28d9ed>石化</color>效果的影响。\\n(触发效果)每当技能处于<color=#28d9ed>冷却时间</color>时,<color=#28d9ed>复仇</color>效果待触发。\\n<color=#28d9ed>复仇</color>效果生效时,攻击全体敌人。\\n自身<color=#28d9ed>速度</color>越高,则伤害越高。",
+      "enhancement": {
+        "2": [
+          "-1 turn debuff durations",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "弱体効果のターン-1ターン",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "약화 효과 지속 -1턴",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "弱化效果持续时间-1回合",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+20% damage",
+          "-1 turn debuff durations"
+        ],
+        "5_jp": [
+          "ダメージ+20%",
+          "弱体効果のターン-1ターン"
+        ],
+        "5_kr": [
+          "피해량 +20%",
+          "약화 효과 지속 -1턴"
+        ],
+        "5_zh": [
+          "伤害量+20%",
+          "弱化效果持续时间-1回合"
+        ]
+      },
+      "wgr": 1,
+      "cd": "2",
+      "buff": [
+        "SYS_BUFF_REVENGE",
+        "BT_EXTEND_DEBUFF"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "multi"
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "3903",
+      "IconName": "Skill_Ultimate_2000039",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Unforgivable Sinner",
+      "name_jp": "許しがたき罪人",
+      "name_kr": "용서받지 못할 죄인",
+      "name_zh": "无法饶恕的罪人",
+      "true_desc": "Attacks an enemy and has a <color=#28d9ed>85%</color> chance to steal <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from the target.\\nIncreases damage dealt proportional to the caster's <color=#28d9ed>Speed</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "적을 공격하고 <color=#28d9ed>85%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+      "true_desc_zh": "攻击敌人,并有<color=#28d9ed>85%</color>的几率夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n自身的<color=#28d9ed>速度</color>越高,则该技能的伤害越高。",
+      "enhancement": {
+        "2": [
+          "-1 turn Skill Cooldown",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "スキルターン-1ターン",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "스킬 쿨타임 -1턴",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "冷却时间-1回合",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4": [
+          "+15% effect chance"
+        ],
+        "4_jp": [
+          "効果発生率+15%"
+        ],
+        "4_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "4_zh": [
+          "效果触发几率+15%"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
+      },
+      "wgr": 2,
+      "cd": "5",
+      "buff": [],
+      "debuff": [
+        "BT_STEAL_BUFF"
+      ],
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "3904",
+      "IconName": "Skill_ChainPassive_Light_Join",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to reduce <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>20%</color>.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-20%</color>DOWNさせる。",
+      "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color>의 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-20%</color> 감소시킵니다.",
+      "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-20%</color>。",
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_AP_CHARGE"
+      ],
+      "debuff": [],
+      "dual_debuff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD",
+    "Note": "Absolute Music for PvE\nPhysical Exorcism for PvP",
+    "Talisman": [      
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "High Crit": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Critical Strike", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD",
+    "Note": "Absolute Music for PvE\nPhysical Exorcism for PvP",
+    "Talisman": [      
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}

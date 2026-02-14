@@ -1,0 +1,148 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Iron Messiah",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Emblem of Dominance",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Royal Stinger",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Healer]",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Gorgon's Wrath [Healer]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Obsidian Oath",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Healer]",
+        "mainStat": "DMG RED"
+      },
+      {
+        "name": "Saint's Ring",
+        "mainStat": "DMG RED"
+      }
+    ],
+    "Set": [
+      [
+        {
+          "name": "Speed",
+          "count": 4
+        }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF=DMG RED=RES",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Swift-mix": {
+    "Weapon": [
+      {
+        "name": "Iron Messiah",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Emblem of Dominance",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Royal Stinger",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Healer]",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Gorgon's Wrath [Healer]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Obsidian Oath",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Healer]",
+        "mainStat": "DMG RED"
+      },
+      {
+        "name": "Saint's Ring",
+        "mainStat": "DMG RED"
+      }
+    ],
+    "Set": [
+      [
+        {
+          "name": "Swiftness",
+          "count": 2
+        },
+        {
+          "name": "Speed",
+          "count": 2
+        }
+      ],
+      [
+        {
+          "name": "Swiftness",
+          "count": 2
+        },
+        {
+          "name": "Counterattack",
+          "count": 2
+        }
+      ],
+      [
+        {
+          "name": "Swiftness",
+          "count": 2
+        },
+        {
+          "name": "Immunity",
+          "count": 2
+        }
+      ],
+      [
+        {
+          "name": "Swiftness",
+          "count": 2
+        },
+        {
+          "name": "Life",
+          "count": 2
+        }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF=DMG RED=RES",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

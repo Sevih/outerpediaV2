@@ -1,0 +1,155 @@
+{
+  "id": "4134065",
+  "Name": {
+    "en": "Deep Sea Guardian",
+    "kr": "심해 가디언",
+    "jp": "深海ガーディアン",
+    "zh": "深海守护者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 120,
+  "icons": "4034005",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Defeat Deep Sea Guardian Very Hard",
+      "kr": "심해 가디언 처치 베리 하드",
+      "jp": "深海ガーディアン討伐(ベリーハード)",
+      "zh": "击杀深海守护者极难"
+    },
+    "mode": {
+      "en": "Joint Challenge",
+      "kr": "합동 챌린지",
+      "jp": "共同作戦",
+      "zh": "联合挑战"
+    },
+    "area_id": {
+      "en": "90200200",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Humboldt Smash",
+        "kr": "홈볼트 스매시",
+        "jp": "フンボルトスマッシュ",
+        "zh": "巨鱿粉碎"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies. Inflicts <color=#28d9ed>Bleeding</color> on all targets for <color=#28d9ed>3</color> turns. If there is only 1 target, steal <color=#28d9ed>all</color> <color=#28d9ed>buffs</color>.",
+        "kr": "적 전체를 공격하고, 대상 전체에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. 대상이 한 명이라면 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.",
+        "jp": "敵全体にダメージを与え、対象全体に<color=#28d9ed>3ターン</color>の間<color=#28d9ed>出血</color>を付与する。対象が単体なら<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。",
+        "zh": "攻击全体敌人,对全体目标造成<color=#28d9ed>3回合</color>的<color=#28d9ed>出血</color>效果。若为单一目标,将夺取<color=#28d9ed>全部</color><color=#28d9ed>强化效果</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Water",
+      "debuff": [
+        "BT_DOT_BLEED",
+        "BT_STEAL_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Colossal Splash",
+        "kr": "콜로살 스플래시",
+        "jp": "コロッサルスプラッシュ",
+        "zh": "巨枪乌贼喷击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. Inflicts 2 <color=#28d9ed>Bleeding</color> on all targets for <color=#28d9ed>3</color> turns. (Ignores Immunity, Irremovable)",
+        "kr": "적 전체를 공격하고, 대상 전체에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>출혈</color> 2개를 부여합니다. (면역 무시, 해제 불가)",
+        "jp": "敵全体にダメージを与え、対象全体に<color=#28d9ed>3ターン</color>の間<color=#28d9ed>出血</color>2個を付与する。(免疫無視、解除不可)",
+        "zh": "攻击全体敌人,对全体目标造成2次<color=#28d9ed>3回合</color>的<color=#28d9ed>出血</color>效果。(无视免疫,无法解除)"
+      },
+      "icon": "MT_Attack_Magic_1_Water",
+      "debuff": [
+        "IG_Buff_Dot_Bleed_Interruption_D"
+      ]
+    },
+    {
+      "name": {
+        "en": "Architeuthis Cutter",
+        "kr": "아르키테우티스 커터",
+        "jp": "アルキテウティスカッター",
+        "zh": "托斯特巨鱿割绞"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. <color=#28d9ed>Detonates</color> all <color=#28d9ed>Bleeding</color> stacks on the target and grants <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>9</color> turns.",
+        "kr": "적 전체를 공격합니다. 대상의 <color=#28d9ed>출혈</color>을 모두 <color=#28d9ed>폭발</color>시키고, 자신은 <color=#28d9ed>9턴</color> 동안 <color=#28d9ed>무적</color> 상태가 됩니다.",
+        "jp": "敵全体にダメージを与える。対象の<color=#28d9ed>出血</color>をすべて<color=#28d9ed>破裂</color>させ、自分は<color=#28d9ed>9ターン</color>の間<color=#28d9ed>無敵</color>状態になる。",
+        "zh": "攻击全体敌人。使目标身上的<color=#28d9ed>出血</color>效果,全部<color=#28d9ed>爆发</color>,并使自身获得<color=#28d9ed>9回合</color>的<color=#28d9ed>无敌</color>状态。"
+      },
+      "icon": "MT_Attack_Hammer_1_Water",
+      "buff": [
+        "BT_INVINCIBLE"
+      ],
+      "debuff": [
+        "BT_IMMEDIATELY_BLEED"
+      ]
+    },
+    {
+      "name": {
+        "en": "The Peculiarities of Deep Sea Squid",
+        "kr": "심해 오징어의 특징",
+        "jp": "深海イカの特徴",
+        "zh": "深海鱿鱼的特征"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen any character with <color=#28d9ed>Invulnerability</color> gains a turn, their Ultimate Skill cooldown is reduced by <color=#28d9ed>1 turn</color>, regardless of whether they are an ally or enemy.\\nReduces all enemies' Effectiveness by <color=#28d9ed>90%</color> and increases the caster's Bleeding Damage Dealt by 100%.\\n\\nAt the end of the caster's turn, deals Fixed Damage equal to <color=#28d9ed>10%</color> of the target's Max Health to enemies without any buffs.\\nIncreases damage taken from Striker enemies, and greatly reduces damage taken from attacks that target all enemies.\\n<color=#28d9ed>Cursed/Fixed Damage</color> to the Boss cannot exceed <color=#28d9ed>10000</color>.\\n\\nDeals significantly more damage when attacking fewer targets.",
+        "kr": "(패시브 효과)\\n아군과 적군 구분없이 <color=#28d9ed>무적</color> 상태의 캐릭터가 턴을 획득했을 때 해당 캐릭터의 필살기 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n모든 적의 효과 적중이 <color=#28d9ed>90%</color> 감소하며, 자신이 입히는 출혈의 피해가 100% 증가합니다.\\n\\n자신의 턴 종료 시 강화 효과를 보유하지 않은 적에게 대상의 최대 체력의 <color=#28d9ed>10%</color> 만큼 고정 피해를 입힙니다.\\n공격형 적에게 받는 피해량이 증가하며, 전체 공격으로 받는 피해량은 감소합니다.\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>10000</color>을 초과하지 않습니다.\\n\\n대상이 적을수록 입히는 피해가 크게 증가합니다.",
+        "jp": "(パッシブ効果)\\n敵味方構わず<color=#28d9ed>無敵</color>状態のキャラクターがターンを獲得した時、当該キャラクターの必殺スキルターンが<color=#28d9ed>1ターン</color>DOWNする。\\n全ての敵の効果命中が<color=#28d9ed>90%</color>DOWNし、自分が与える出血ダメージが100%UPする。\\n\\n自分のターン終了時、強化効果を保有していない敵に対象の最大HPの<color=#28d9ed>10%</color>の固定ダメージを与える。\\n攻撃型の敵から受けるダメージがUPし、全体攻撃から受けるダメージはDOWNする。\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>10000</color>を超えない。\\n\\n対象が少ないほど、与えるダメージが大きくUPする。",
+        "zh": "(被动效果)\\n无论友军或敌军,轮到有<color=#28d9ed>无敌</color>状态的角色攻击的回合时,该角色的必杀技冷却时间降低<color=#28d9ed>1回合</color>。\\n全部敌人的效果命中降低<color=#28d9ed>90%</color>。自身造成的出血伤害提升100%。\\n\\n自身回合结束时,对未附带强化效果的敌方目标造成生命值上限<color=#28d9ed>10%</color>的固定伤害。\\n被攻击型敌人攻击时,所受伤害提升,但受到全体攻击时所受伤害降低。\\n首领受到的<color=#28d9ed>诅咒/固定伤害</color>的伤害量不会超过<color=#28d9ed>10000</color>。\\n\\n目标数量越少,则造成的伤害越高。"
+      },
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_COOL_CHARGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 3 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Restores 10% Weakness Gauge. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Thalassophobia</color>: Used when Enraged ends.\\nDeals heavy damage to all enemies.",
+        "kr": "3턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>탈라소포비아</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
+        "jp": "3ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は3ターン間持続する。\\n\\n<color=#28d9ed>【海洋恐怖症】</color>:【狂暴化】終了時に使用する。\\n敵全体に大ダメージを与える。",
+        "zh": "每3回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复\\n10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>深海恐惧症</color>:狂暴化结束时发动。\\n对全体敌人造成巨额伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage taken from Fire enemies by <color=#28d9ed>30%</color>, and increases damage taken from single-target attacks by <color=#28d9ed>20%</color>.\\n\\nReduces damage taken from area attacks by <color=#28d9ed>30%</color>, and increases Priority by <color=#28d9ed>20%</color> when hit.",
+        "kr": "(패시브 효과)\\n화속성 대상에게 받는 피해가 <color=#28d9ed>-30%</color> 증가하며, 단일 공격으로 받는 피해가 <color=#28d9ed>-20%</color> 증가합니다.\\n\\n범위 공격으로 받는 피해가 <color=#28d9ed>30%</color> 감소하며, 피격 시 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n火属性の敵から受けるダメージが<color=#28d9ed>-30%</color>UPし、単体攻撃で受けるダメージが<color=#28d9ed>-20%</color>UPする。\\n\\nダメージを受けた場合、行動ゲージが<color=#28d9ed>20%</color>UPし、範囲攻撃で受けるダメージが<color=#28d9ed>30%</color>DOWNする。",
+        "zh": "(被动效果)\\n使受到来自火属性目标的伤害提升<color=#28d9ed>-30%</color>,并使因单体攻击受到的伤害提升<color=#28d9ed>-20%</color>。\\n\\n使因范围攻击受到的伤害降低<color=#28d9ed>30%</color>,且在受到攻击时,使行动值提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

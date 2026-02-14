@@ -1,0 +1,155 @@
+{
+  "id": "4144004",
+  "Name": {
+    "en": "Vladi Max",
+    "kr": "블라디 맥스",
+    "jp": "ブラッディマックス",
+    "zh": "血腥麦克斯"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 110,
+  "icons": "4044004",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_DOT_BLEED,BT_DOT_POISON",
+  "location": {
+    "dungeon": {
+      "en": "Daddy, It Hurts",
+      "kr": "아파요, 아버지",
+      "jp": "父親の罵倒",
+      "zh": "父亲,好痛"
+    },
+    "mode": {
+      "en": "Story (Hard)",
+      "kr": "스토리(하드)",
+      "jp": "ストーリー(ハード)",
+      "zh": "故事(困难)"
+    },
+    "area_id": {
+      "en": "9-10",
+      "kr": "9-10",
+      "jp": "9-10",
+      "zh": "9-10"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Vladi Cannon",
+        "kr": "블라디 캐논",
+        "jp": "ブラッディマックス",
+        "zh": "血腥加农炮"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and reduces <color=#28d9ed>Chain Points</color> of the enemy team by <color=#28d9ed>12</color>.",
+        "kr": "적을 공격하고, 적 팀의 <color=#28d9ed>CP</color>를 <color=#28d9ed>12</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、敵の<color=#28d9ed>CP</color>を<color=#28d9ed>12</color>DOWNさせる。",
+        "zh": "攻击敌人,并使敌军<color=#28d9ed>CP</color>降低<color=#28d9ed>12</color>。"
+      },
+      "icon": "MT_Attack_Arrow_1_Light",
+      "debuff": [
+        "BT_CP_CHARGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Vladi Strike",
+        "kr": "블라디 스트라이크",
+        "jp": "ブラッディストライク",
+        "zh": "血腥打击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to reduce <color=#28d9ed>Defense</color> of the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>방어력</color>을 감소시킵니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を2ターンの間DOWNさせる。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Light",
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Vladi Full Burst",
+        "kr": "블라디 풀 버스트",
+        "jp": "ブラッディフルバースト",
+        "zh": "血腥全爆"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>20%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>2 turn(s)</color>. When the enemy is inflicted with reduced <color=#28d9ed>Defense</color>, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stunned</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>스턴</color>을 부여합니다. <color=#28d9ed>방어력</color>이 감소한 적에게는 <color=#28d9ed>스턴</color>이 <color=#28d9ed>100%</color> 확률로 발동합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>20%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>2ターン</color>の間付与する。<color=#28d9ed>防御力</color>がDOWNした状態の敵に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>スタン</color>を発動する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>20%</color>的几率对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>2回合</color>。有<color=#28d9ed>100%</color>的几率对<color=#28d9ed>防御力</color>降低的敌人造成<color=#28d9ed>晕眩</color>效果。"
+      },
+      "icon": "MT_Attack_Magic_1_Light",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Instigate and Fabricate",
+        "kr": "선동과 날조",
+        "jp": "煽動と捏造",
+        "zh": "煽动捏造"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nRight after all of Vladi Max's attacks, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "(패시브 효과)\\n블라디 맥스의 모든 공격 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "(パッシブ効果)\\nブラッディマックスのすべての攻撃後には、敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "(被动效果)\\n血腥麦克斯的所有攻击都不会触发敌人的反击、复仇、迅速应对。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>40%</color> of Max Health or lower, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns, and recovers Weakness Gauge by 10%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>In the Name of the General</color>: Used when Enraged ends.\\nReduces all enemies' <color=#28d9ed>Chain Points</color> and <color=#28d9ed>Action Points</color> by <color=#28d9ed>100%</color>.",
+        "kr": "최대 체력의 <color=#28d9ed>40%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>대원수의 이름으로</color> : 광폭화 종료 시 사용.\\n적 전체의 <color=#28d9ed>CP</color>와 <color=#28d9ed>AP</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
+        "jp": "最大HPの<color=#28d9ed>40%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UPとダメージDOWN効果を3ターンの間付与し、WG10%を回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【大元帥の名において】</color>:【狂暴化】終了時に発動する。\\n敵全体の<color=#28d9ed>CP</color>と<color=#28d9ed>AP</color>を<color=#28d9ed>-100%</color>DOWNさせる。",
+        "zh": "若生命值降至上限的<color=#28d9ed>40%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,且WG恢复10%。狂暴化持续3个回合。\\n\\n<color=#28d9ed>以大元帅之名</color>:狂暴化结束时使用。\\n使全体敌人的<color=#28d9ed>CP</color>和<color=#28d9ed>AP</color>降低<color=#28d9ed>-100%</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff": [
+        "BT_CP_CHARGE",
+        "BT_AP_CHARGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

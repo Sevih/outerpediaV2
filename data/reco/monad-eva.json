@@ -1,0 +1,53 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Emblem of Dominance",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Vanguard's Charm3Sage's Charm3",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Swift Counter": {
+    "Weapon": [
+      {
+        "name": "Emblem of Dominance",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Counterattack", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Vanguard's Charm3Sage's Charm3",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "440500174-9-1",
+  "Name": {
+    "en": "Android Sphinx",
+    "kr": "안드로 스핑크스",
+    "jp": "アンドロ・ スフィンクス",
+    "zh": "狮身人面像"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 120,
+  "icons": "4044008",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Android Sphinx (Stage 5)",
+      "kr": "안드로 스핑크스 (5단계)",
+      "jp": "アンドロ・ スフィンクス(5段階)",
+      "zh": "狮身人面像(第5阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70501105",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Sharp Question",
+        "kr": "날카로운 질문",
+        "jp": "穿つ問答",
+        "zh": "锐利质问"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and reduces the enemy's <color=#28d9ed>Chain Points</color> by <color=#28d9ed>30</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "적을 공격하고 적의 <color=#28d9ed>CP</color>를 <color=#28d9ed>30</color> 감소시킵니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "敵単体にダメージを与え、敵の<color=#28d9ed>CP</color>を<color=#28d9ed>30</color>DOWNさせる。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "攻击敌人,使敌人<color=#28d9ed>CP</color>降低<color=#28d9ed>30</color>。\\n该此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "Skill_First_4044008",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_CP_CHARGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Crushing Doubt",
+        "kr": "짓누르는 의구심",
+        "jp": "圧迫の疑念",
+        "zh": "沉重疑虑"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and inflicts <color=#28d9ed>Silenced</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>침묵</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>沈黙</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并对目标造成<color=#28d9ed>沉默</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4044008",
+      "debuff": [
+        "BT_SILENCE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Time Like an Arrow",
+        "kr": "쏜살같은 시간",
+        "jp": "刹那の矢",
+        "zh": "疾速时光"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. After attacking, removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from the target, and inflicts <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>3 turn(s)</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "적 전체를 공격합니다. 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제하고, <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除し、<color=#28d9ed>強化不可</color>を<color=#28d9ed>3ターン</color>の間付与する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "攻击全体敌人。攻击后,解除目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>3回合</color>。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "Skill_Ultimate_4044008",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED"
+      ],
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
+    },
+    {
+      "name": {
+        "en": "Weight of Wisdom",
+        "kr": "지혜의 무게",
+        "jp": "知恵の器",
+        "zh": "智慧之重"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Reduces damage taken from enemies, but takes greater damage upon being inflicted with Break.\\nIncreases Weakness Gauge damage taken by Dual Attacks and Skill Chains by <color=#28d9ed>100%</color>.",
+        "kr": "적에게 받는 피해가 감소하는 대신, 브레이크 시 더 큰 피해를 받습니다.\\n협공 및 스킬 체인으로 받는 WG 피해가 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "敵から受けるダメージがDOWNするが、ブレイク状態の場合、より大ダメージを受ける。\\n連携とチェーンスキルで受けるWGダメージが<color=#28d9ed>100%</color>UPする。",
+        "zh": "来自敌人的伤害降低,但力竭时将承受更高伤害。\\n因夹攻和连携技能而受到的WG伤害提升<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>The Price of a Wrong Answer</color>: Used when Enraged ends.\\nDeals lethal damage to all enemies.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제 불가능한 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>오답의 대가</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【過ちの代価】</color>:【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>错误代价</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    }
+  ]
+}

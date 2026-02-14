@@ -1,0 +1,112 @@
+{
+  "id": "50000007",
+  "Name": {
+    "en": "Drakhan",
+    "kr": "드레이칸",
+    "jp": "ドレイカーン",
+    "zh": "德雷坎"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 100,
+  "icons": "2000062",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Supreme Adventurer Promotion Challenge 1",
+      "kr": "특급 모험가 승급 챌린지 1",
+      "jp": "特級冒険者昇級チャレンジ1",
+      "zh": "特级冒险家晋升挑战1"
+    },
+    "mode": {
+      "en": "Challenge",
+      "kr": "도전",
+      "jp": "チャレンジ",
+      "zh": "挑战"
+    },
+    "area_id": {
+      "en": "70600103",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Dragon Tusk",
+        "kr": "드래곤 터스크",
+        "jp": "ドラゴンタスク",
+        "zh": "龙之利牙"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and inflicts <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000062",
+      "debuff": [
+        "BT_DOT_CURSE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Burning Fist",
+        "kr": "버닝 피스트",
+        "jp": "バーニングフィスト",
+        "zh": "燃烧之拳"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and inflicts <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>3 turn(s)</color>. This effect ignores the target's Resilience.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "적을 공격하고 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "敵単体にダメージを与える。対象に<color=#28d9ed>呪い</color>を<color=#28d9ed>3ターン</color>の間付与する。この効果は対象の効果抵抗を無視する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "攻击敌人,并对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>3回合</color>。该效果无视目标的效果抵抗。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "Skill_Second_2000062",
+      "debuff": [
+        "BT_DOT_CURSE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Conquering Dragon Meteor Fist",
+        "kr": "초패왕폭룡유성흑염권",
+        "jp": "超覇王暴竜流星黒炎拳",
+        "zh": "楚霸王暴龙流星黑焰拳"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy, and reduces <color=#28d9ed>Critical Hit Chance</color> of the target for <color=#28d9ed>2 turn(s)</color>. This effect ignores the target's Resilience.",
+        "kr": "적을 공격하고, 대상의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
+        "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。この効果は対象の効果抵抗を無視する。",
+        "zh": "攻击敌人,并使目标的<color=#28d9ed>暴击率</color>下降<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。"
+      },
+      "icon": "Skill_Ultimate_2000062",
+      "debuff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "This Is A Dragon's Strength!",
+        "kr": "이것이 용의 힘이다!",
+        "jp": "これが竜の力だ!",
+        "zh": "这就是龙之力!"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage dealt proportional to the number of debuffs inflicted on the target.\\nWhen inflicting a debuff on an enemy, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>15%</color>.",
+        "kr": "(패시브 효과)\\n대상이 보유한 약화효과가 많을수록 적에게 입히는 피해가 증가합니다.\\n적에게 약화 효과 적중 시 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.",
+        "jp": "(パッシブ効果)\\n対象の弱体効果の数が多いほど与えるダメージがUPする。\\n敵に弱体効果が付与された時、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復する。",
+        "zh": "(被动效果)\\n目标附带的弱化效果越多,对敌人造成的伤害越高。\\n对敌人命中弱化效果时,使全体友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

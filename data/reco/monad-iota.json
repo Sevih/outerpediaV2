@@ -1,0 +1,77 @@
+{
+  "Speed PvE": {
+    "Weapon": [
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%/HP%"
+      },
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%/HP%"
+      },
+      {
+        "name": "Meteor Mashers",
+        "mainStat": "ATK%/HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>EFF>CHC>ATK>CHD",
+    "Note": "",
+    "Talisman": [
+      "Rogue's Charm",
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Speed PvP": {
+    "Weapon": [
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%/HP%"
+      },
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%/HP%"
+      },
+      {
+        "name": "Meteor Mashers",
+        "mainStat": "ATK%/HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Ranger]",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>EFF>CHC>ATK>CHD",
+    "Note": "",
+    "Talisman": [
+      "Mage's Charm",
+      "Assassin's Charm"
+    ]
+  }
+}

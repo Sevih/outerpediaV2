@@ -1,0 +1,128 @@
+{
+  "id": "4086027",
+  "Name": {
+    "en": "Revenant Dragon Harshna",
+    "kr": "사백룡 하르슈나",
+    "jp": "死魄竜ハルシュナ",
+    "zh": "死魄龙赫索纳"
+  },
+  "Surname": {
+    "en": "Ancient Foe",
+    "kr": "고대의 숙적",
+    "jp": "古代の宿敵",
+    "zh": "远古宿敌"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 60,
+  "icons": "4086025",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Very Hard League",
+      "kr": "베리 하드 리그",
+      "jp": "ベリーハードリーグ",
+      "zh": "极难联赛"
+    },
+    "mode": {
+      "en": "World Boss",
+      "kr": "월드 보스",
+      "jp": "ワールドボス",
+      "zh": "世界首领"
+    },
+    "area_id": {
+      "en": "55600003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Rotten Claws",
+        "kr": "부패한 발톱",
+        "jp": "腐敗した爪",
+        "zh": "腐败之爪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nInflicts <color=#28d9ed>Poisoned</color> on the target for <color=#28d9ed>1 turn(s)</color>.\\nPrioritizes attacking the enemy's <color=#28d9ed>front line</color>.",
+        "kr": "적을 공격합니다.\\n대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>중독</color>를 부여합니다. \\n<color=#28d9ed>전열</color>에 있는 적을 우선적으로 공격합니다.",
+        "jp": "敵単体にダメージを与える。\\n対象に<color=#28d9ed>中毒</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n<color=#28d9ed>前衛</color>にいる敵を優先的に攻撃する。",
+        "zh": "攻击敌人。\\n对目标造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>1回合</color>。\\n优先攻击处于<color=#28d9ed>前排</color>的敌人。"
+      },
+      "icon": "Skill_First_4086025",
+      "debuff":["BT_DOT_POISON"]
+    },
+    {
+      "name": {
+        "en": "Vicious Chill",
+        "kr": "사악한 한기",
+        "jp": "邪悪な冷気",
+        "zh": "邪恶寒气"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\nInflicts <color=#28d9ed>Poisoned</color> 2 times on all targets for <color=#28d9ed>2 turn(s)</color>. (Irremovable)",
+        "kr": "적 전체를 공격합니다. \\n대상 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>중독</color>를 2회 부여합니다.(해제 불가)",
+        "jp": "敵全体にダメージを与える。\\n対象全体に<color=#28d9ed>中毒</color>2個を<color=#28d9ed>2ターン</color>の間付与する。(解除不可)",
+        "zh": "攻击全体敌人。\\n对全体目标造成2次<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>2回合</color>。\\n(无法解除)"
+      },
+      "icon": "Skill_Second_4086025",
+      "debuff":["BT_DOT_POISON_IR"]
+    },
+    {
+      "name": {
+        "en": "Struggle of the Dead",
+        "kr": "죽은 자의 몸부림",
+        "jp": "亡者のあがき",
+        "zh": "亡者的挣扎"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nWhen attacking, if the caster is granted a dispellable <color=#28d9ed>debuff</color>, inflicts Frozen on all targets for <color=#28d9ed>1 turn(s)</color>. (Irremovable)\\nThis attack penetrates <color=#28d9ed>30%</color> of the target's Defense.",
+        "kr": "적 전체를 공격합니다.\\n공격 시 자신이 해제 가능한 <color=#28d9ed>약화 효과</color>를 보유하고 있다면 대상 전체에게 <color=#28d9ed>1턴</color> 동안 빙결을 부여합니다. (해제 불가)\\n해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.",
+        "jp": "敵全体にダメージを与える。\\n攻撃時、自分に解除可能な<color=#28d9ed>弱体効果</color>がある場合、対象全体に凍結を<color=#28d9ed>1ターン</color>の間付与する。(解除不可)\\nこのスキルは、貫通力が<color=#28d9ed>30%</color>UPする。",
+        "zh": "攻击全体敌人。\\n攻击时,若自身附带可解除的<color=#28d9ed>弱化效果</color>,则对全体目标造成冰冻效果,持续<color=#28d9ed>1回合</color>。(无法解除)\\n发动该技能时,穿透力提升<color=#28d9ed>30%</color>。"
+      },
+      "icon": "Skill_Ultimate_4086025",
+      "debuff":["BT_FREEZE_IR"]
+    },
+    {
+      "name": {
+        "en": "The Awakened",
+        "kr": "잠에서 깨어난 자",
+        "jp": "目覚めし者",
+        "zh": "苏醒者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "When the caster is granted a dispellable debuff, Weakness Gauge cannot be reduced.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increases Attack by 30%\\nMage: Increases Critical Damage by 50%\\nDefender: When performing an action, inflicts reduced Defense on the Boss for 4 turns\\nRanger: When performing an action, deals 3% damage of the Boss's Health\\nHealer: Increases Priority recovery efficiency by 50%",
+        "kr": "자신이 해제 가능한 약화 효과를 보유 했다면 WG가 감소하지 않습니다.\\n자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격력 +30% \\n마법형 : 치명 피해 +50% \\n방어형 : 행동 시 보스의 방어력 감소 4턴 \\n속도형 : 행동 시 보스의 체력 3% 피해 \\n회복형 : 행동 게이지 회복 효율 +50%",
+        "jp": "自分に解除可能な弱体効果がある場合、WGがDOWNしない。\\n自分の戦闘タイプに応じて<color=#28d9ed>特別な効果</color>を獲得する。\\n\\n攻撃型:攻撃力+30%\\n魔法型:会心ダメージ+50%\\n防御型:行動時、ボスの防御力を4ターンの間DOWNさせる。\\nスピード型:行動時、ボスのHP3%のダメージを与える。\\n回復型:行動ゲージUPの効率+50%",
+        "zh": "若自身附带可解除的弱化效果,则不会降低\\nWG。\\n根据自身职业获得<color=#28d9ed>特殊效果</color>。\\n\\n攻击型:攻击力+30%\\n魔法型:暴击伤害+50%\\n防御型:行动时,首领防御力降低,持续4回合\\n速度型:行动时,对首领造成3%生命值的伤害\\n恢复型:行动值恢复效率+50%"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "buff":["UNIQUE_DAHLIA_A"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086025"
+    }
+  ]
+}

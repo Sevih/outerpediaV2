@@ -1,0 +1,64 @@
+{
+  "DPS": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>CHC>CHD>ATK",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Mage's Charm",
+      "Assassin's Charm"
+      
+    ]
+  },
+  "Support-DPS": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>CHC>CHD>ATK",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Mage's Charm",
+      "Assassin's Charm"
+      
+    ]
+  }
+}

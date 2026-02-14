@@ -1,0 +1,145 @@
+{
+  "id": "4114006",
+  "Name": {
+    "en": "Three Cries",
+    "kr": "세 울음소리",
+    "jp": "三つの鳴き声",
+    "zh": "三声啼哭"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 195,
+  "icons": "4014006",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_SILENCE,BT_AGGRO,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE,BT_ACTION_GAUGE,BT_STONE,BT_STUN",
+  "location": {
+    "dungeon": {
+      "en": "Three Cries",
+      "kr": "세 개의 울음소리",
+      "jp": "三つの鳴き声",
+      "zh": "三声啼哭"
+    },
+    "mode": {
+      "en": "Story (Hard)",
+      "kr": "스토리(하드)",
+      "jp": "ストーリー(ハード)",
+      "zh": "故事(困难)"
+    },
+    "area_id": {
+      "en": "1-10",
+      "kr": "1-10",
+      "jp": "1-10",
+      "zh": "1-10"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "My body is out of control...",
+        "kr": "몸이 제멋대로...",
+        "jp": "体が勝手に...",
+        "zh": "身体不由自主......"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks the enemy and inflicts <color=#28d9ed>Burn</color> for <color=#28d9ed>3 turn(s)</color>. (Ignores Immunity, Irremovable)\\nPrioritizes attacking the <color=#28d9ed>leftmost</color> enemy.\\nIf the target is not a <color=#28d9ed>Defender</color>, increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turns</color>. (Irremovable)\\n\\nIgnores <color=#28d9ed>30%</color> of the target's <color=#28d9ed>Defense</color>.",
+        "kr": "적을 공격하고 대상에게 <color=#28d9ed>화상</color>을 <color=#28d9ed>3턴</color> 동안 부여합니다.(면역 무시, 해제 불가)\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다. \\n공격 시 대상이 <color=#28d9ed>방어형</color>이 아니라면 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. (해제 불가)\n\\n대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 무시합니다.",
+        "jp": "敵を攻撃し、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>3ターン</color>の間付与する。(免疫無視、解除不可)\\n一番<color=#28d9ed>左</color>にいる敵を優先して攻撃する。\\n攻撃時、対象が<color=#28d9ed>防御型</color>でない場合、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。(解除不可)\\n\\n対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を貫通する。",
+        "zh": "攻击敌人,并对目标造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>3回合</color>。(无视免疫,无法解除)\\n优先攻击最<color=#28d9ed>左侧</color>的敌人。\\n攻击时,若目标不是<color=#28d9ed>防御型</color>,则使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。(无法解除)\\n\\n无视目标<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。"
+      },
+      "icon": "Skill_First_4014006",
+      "buff":["BT_STAT|ST_ATK_IR"],
+      "debuff":["BT_DOT_BURN_IR"]
+    },
+    {
+      "name": {
+        "en": "It's too hot...",
+        "kr": "너무 뜨거워...",
+        "jp": "熱すぎる...",
+        "zh": "好烫......"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\n\\nInflicts <color=#28d9ed>Burn</color> on all enemies for <color=#28d9ed>3 turn(s)</color> (Ignores Immunity).\\nIf the target has no <color=#28d9ed>Buffs</color>, inflicts additional <color=#28d9ed>Burn</color> for <color=#28d9ed>3 turn(s)</color>. (Ignores Immunity, Irremovable)\\n\\nDamage dealt increases against targets with <color=#28d9ed>Burn</color>.",
+        "kr": "적 전체를 공격합니다.\\n\\n적 전체에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>화상</color>을 부여하고(면역 무시)\\n<color=#28d9ed>강화 효과</color>가 없는 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>화상</color>을 추가로 부여합니다. (면역 무시, 해제 불가)\\n\\n<color=#28d9ed>화상</color>을 보유한 대상에 대한 피해량이 증가합니다.",
+        "jp": "敵全体を攻撃する。\\n\\n敵全体に<color=#28d9ed>3ターン</color>の間<color=#28d9ed>火傷</color>を付与し(免疫無視)、\\n<color=#28d9ed>強化効果</color>がない対象には<color=#28d9ed>3ターン</color>の間、<color=#28d9ed>火傷</color>を追加で付与する。(免疫無視、解除不可)\\n\\n<color=#28d9ed>火傷</color>状態の対象へのダメージがUPする。",
+        "zh": "攻击全体敌人。\\n\\n对全体敌人造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>3回合</color>(无视免疫),\\n并对没有<color=#28d9ed>强化效果</color>的目标额外造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>3回合</color>。(无视免疫,无法解除)\\n\\n对持有<color=#28d9ed>烧伤</color>的目标造成的伤害提升。"
+      },
+      "icon": "Skill_Second_4014006",
+      "debuff":["BT_DOT_BURN","BT_DOT_BURN_IR"]
+    },
+    {
+      "name": {
+        "en": "Please kill me...",
+        "kr": "제발 날 죽여줘...",
+        "jp": "お願い、殺して...",
+        "zh": "求求你杀了我......"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Before attacking, reduces the duration of <color=#28d9ed>Buffs</color> on all enemies by <color=#28d9ed>1 turn</color>, then attacks all enemies.\\n\\nInflicts <color=#28d9ed>Burn</color> for <color=#28d9ed>3 turns</color> on targets without <color=#28d9ed>Buffs</color>. (Ignores Immunity, cannot be dispelled)\\n\\nDamage dealt to targets with <color=#28d9ed>Burn</color> is increased.",
+        "kr": "공격 전 적 전체의 <color=#28d9ed>강화 효과</color> 지속 시간을 <color=#28d9ed>1턴</color> 감소시키고, 적 전체를 공격합니다.\\n\\n<color=#28d9ed>강화 효과</color>가 없는 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다. (면역 무시, 해제 불가)\\n\\n<color=#28d9ed>화상</color>을 보유한 대상에 대한 피해량이 증가합니다.",
+        "jp": "攻撃前に敵全体の<color=#28d9ed>強化効果</color>の持続時間を<color=#28d9ed>1ターン</color>減少させ、その後敵全体を攻撃する。\\n\\n<color=#28d9ed>強化効果</color>を持たない対象に、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>火傷</color>を付与する。(免疫無視、解除不可)\\n\\n<color=#28d9ed>火傷</color>を保有する対象への与ダメージが増加する。",
+        "zh": "攻击前使所有敌人的<color=#28d9ed>强化效果</color>持续时间减少<color=#28d9ed>1回合</color>,随后攻击全体敌人。\\n\\n对没有<color=#28d9ed>强化效果</color>的目标施加<color=#28d9ed>3回合</color>的<color=#28d9ed>灼烧</color>。(无视免疫,不可解除)\\n\\n对持有<color=#28d9ed>灼烧</color>的目标造成的伤害增加。"
+      },
+      "icon": "Skill_Ultimate_4014006",
+      "debuff":["BT_EXTEND_BUFF","BT_DOT_BURN_IR"]
+      
+    },
+    {
+      "name": {
+        "en": "Fused Test Subjects",
+        "kr": "융합된 실험체들",
+        "jp": "融合された実験体たち",
+        "zh": "融合的实验体们"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive)\\nIf the caster has no <color=#28d9ed>Debuffs</color>, WG damage taken is reduced by <color=#28d9ed>50%</color> and damage taken is reduced by <color=#28d9ed>100%</color>.\\nWhen a Light or Dark enemy ends its action, removes all <color=#28d9ed>Debuffs</color> from the caster and increases the caster's Action Gauge by <color=#28d9ed>100%</color>.\\nAt the start of each turn, increases the caster's <color=#28d9ed>Penetration</color> and <color=#28d9ed>Critical Chance</color> by <color=#28d9ed>20%</color>. (Stacks up to 4 times)\\n\\nDamage from <color=#28d9ed>Curse/Fixed Damage</color> dealt to the boss cannot exceed <color=#28d9ed>10000</color>.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>약화 효과</color>가 없는 상태라면 받는 WG 피해가 <color=#28d9ed>50%</color> 감소하고, 받는 피해가 <color=#28d9ed>100%</color> 감소합니다.\\n명속성 혹은 암속성 적의 행동 종료 시, 자신의 <color=#28d9ed>약화 효과</color>를 모두 제거하고 자신의 행동 게이지가 <color=#28d9ed>100%</color> 증가합니다.\\n매 턴 시작 시 자신의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>치명타 확률</color>이 <color=#28d9ed>20%</color> 증가합니다. (최대 4회 누적)\\n\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>10000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>弱体効果</color>がない場合、受けるWGダメージが<color=#28d9ed>50%</color>減少し、受けるダメージが<color=#28d9ed>100%</color>減少する。\\n光属性または闇属性の敵の行動終了時、自身の<color=#28d9ed>弱体効果</color>をすべて解除し、行動ゲージが<color=#28d9ed>100%</color>増加する。\\n毎ターン開始時、自身の<color=#28d9ed>貫通力</color>と<color=#28d9ed>クリティカル確率</color>が<color=#28d9ed>20%</color>増加する。(最大4回累積)\\n\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>は<color=#28d9ed>10000</color>を超えない。",
+        "zh": "(被动效果)\\n若自身没有<color=#28d9ed>弱化效果</color>,受到的WG伤害减少<color=#28d9ed>50%</color>,受到的伤害减少<color=#28d9ed>100%</color>。\\n光属性或暗属性敌人行动结束时,解除自身所有<color=#28d9ed>弱化效果</color>,并使自身行动条提升<color=#28d9ed>100%</color>。\\n每回合开始时,自身<color=#28d9ed>穿透力</color>与<color=#28d9ed>暴击率</color>提升<color=#28d9ed>20%</color>。(最多叠加4次)\\n\\nBoss所受到的<color=#28d9ed>诅咒/固定伤害</color>不会超过<color=#28d9ed>10000</color>。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "buff":["BT_REMOVE_DEBUFF"]
+    },
+    {
+      "name": {
+        "en": "Amorphous Subject",
+        "kr": "비정형의 피험자",
+        "jp": "非定形の被験者",
+        "zh": "非定型的受试者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive)\\nIf the caster does not have <color=#28d9ed>Freeze</color>, damage taken is reduced by <color=#28d9ed>200%</color>.\\n\\nAt the start of each turn, removes <color=#28d9ed>1</color> <color=#28d9ed>Debuff</color>.\\nIf the caster is <color=#28d9ed>Frozen</color> at the start of the turn, the duration of <color=#28d9ed>Debuffs</color> is reduced by <color=#28d9ed>1 turn</color>.\\n\\nWhen hit, the Action Gauge increases by <color=#28d9ed>25%</color>.\\nDamage dealt by the caster's <color=#28d9ed>Burn</color> is increased by <color=#28d9ed>50%</color>.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>빙결</color> 효과가 없는 상태라면 받는 피해가 <color=#28d9ed>200%</color> 감소합니다.\\n\\n턴 시작 시 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제하며\\n턴 시작 시 자신이 <color=#28d9ed>빙결</color> 상태라면 <color=#28d9ed>약화 효과</color>의 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n피격 시 행동 게이지가 <color=#28d9ed>25%</color> 증가합니다.\\n자신이 입히는 <color=#28d9ed>화상</color>의 피해가 <color=#28d9ed>50%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>凍結</color>状態でない場合、受けるダメージが<color=#28d9ed>200%</color>減少する。\\n\\nターン開始時、<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。\\nターン開始時に自身が<color=#28d9ed>凍結</color>状態の場合、<color=#28d9ed>弱体効果</color>の持続時間を<color=#28d9ed>1ターン</color>減少させる。\\n\\n被弾時、行動ゲージが<color=#28d9ed>25%</color>増加する。\\n自身が付与する<color=#28d9ed>火傷</color>のダメージが<color=#28d9ed>50%</color>増加する。",
+        "zh": "(被动效果)\\n若自身未处于<color=#28d9ed>冰冻</color>状态,受到的伤害减少<color=#28d9ed>200%</color>。\\n\\n每回合开始时,解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。\\n若回合开始时自身处于<color=#28d9ed>冰冻</color>状态,<color=#28d9ed>弱化效果</color>的持续时间减少<color=#28d9ed>1回合</color>。\\n\\n受到攻击时,行动条提升<color=#28d9ed>25%</color>。\\n自身施加的<color=#28d9ed>灼烧</color>伤害增加<color=#28d9ed>50%</color>。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "buff":["BT_REMOVE_DEBUFF","BT_ACTION_GAUGE","BT_EXTEND_DEBUFF"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state every 4 turns.\\n\\n<color=#28d9ed>Berserk Start</color>: Grants undispellable Attack Up/Damage Reduction effects to self for 3 turns and recovers 30% WG. Berserk lasts for 3 turns.\\n\\n<color=#28d9ed>Berserk End</color>: Deals massive damage to all enemies.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>광폭화 종료</color> : 적 전체에게 큰 피해를 줍니다.",
+        "jp": "4ターンごとに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入</color>:自分に解除不可の攻撃力UP/ダメージ減少効果を3ターンの間付与し、WGを30%回復する。狂暴化は3ターンの間持続する。\\n\\n<color=#28d9ed>狂暴化終了</color>:敵全体に大きなダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴</color>状态。\\n\\n<color=#28d9ed>进入狂暴</color>:赋予自身无法解除的攻击力提升/伤害减少效果,持续3回合,并恢复WG30%。狂暴持续3回合。\\n\\n<color=#28d9ed>狂暴结束</color>:对全体敌人造成大量伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN","BT_STAT|ST_ATK_IR"
+      ]
+    }
+  ]
+}

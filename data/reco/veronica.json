@@ -1,0 +1,73 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Force Field Generator",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD>HP",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Swift Counter": {
+    "Weapon": [
+      {
+        "name": "Force Field Generator",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Counterattack", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD>HP",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

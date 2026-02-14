@@ -1,0 +1,146 @@
+{
+  "id": "4086012",
+  "Name": {
+    "en": "Glorious Sentinel",
+    "kr": "영광의 파수병",
+    "jp": "栄光の番兵",
+    "zh": "荣耀哨兵"
+  },
+  "Surname": {
+    "en": "Herald of the New Age",
+    "kr": "새 시대의 전조",
+    "jp": "新時代の前兆",
+    "zh": "新时代先兆"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 110,
+  "icons": "4086008",
+  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Extreme League",
+      "jp": "エクストリームリーグ",
+      "kr": "익스트림 리그",
+      "zh": "极限联赛"
+    },
+    "mode": {
+      "en": "World Boss",
+      "kr": "월드 보스",
+      "jp": "ワールドボス",
+      "zh": "世界首领"
+    },
+    "area_id": {
+      "en": "55100004",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "High-Intensity Repulsor Beam",
+        "kr": "고출력 리펄서 빔",
+        "jp": "高出力リパルサー・ビーム",
+        "zh": "高输出冲击光束"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. When the enemy is inflicted with a debuff, scores a critical hit.",
+        "kr": "적을 공격합니다. 약화 효과를 보유한 적에게는 반드시 치명 공격이 발생합니다.",
+        "jp": "敵単体にダメージを与える。弱体効果がある敵には必ず会心が発生する。",
+        "zh": "攻击敌人。使附带弱化效果的敌人必定受到暴击攻击。"
+      },
+      "icon": "Skill_First_4086008"
+    },
+    {
+      "name": {
+        "en": "Meteor Shower",
+        "kr": "메테오 샤워",
+        "jp": "メテオシャワー",
+        "zh": "流星洗礼"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. When the target is inflicted with <color=#28d9ed>Shocked</color>, inflicts reduced <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>. This effect cannot be removed.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>감전</color>을 보유한 대상은 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>공격력</color>이 감소합니다. 이 효과는 해제시킬 수 없습니다.",
+        "jp": "敵全体にダメージを与える。<color=#28d9ed>感電</color>状態の対象は<color=#28d9ed>攻撃力</color>が<color=#28d9ed>2ターン</color>の間DOWNする。この効果は解除されない。",
+        "zh": "攻击全体敌人。附带<color=#28d9ed>触电</color>效果的目标<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。该效果无法被解除。"
+      },
+      "icon": "Skill_Second_4086008",      
+      "debuff":["BT_STAT|ST_ATK_IR"]
+    },
+    {
+      "name": {
+        "en": "Supernova Explosion",
+        "kr": "초신성 폭발",
+        "jp": "超新星爆発",
+        "zh": "超新星爆发"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>2 turn(s)</color>. This attack ignores the target's Immunity.\\n\\nAfter attacking, grants <color=#28d9ed>Core Energy</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다. 이 공격은 대상의 면역 효과를 무시합니다.\\n\\n공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>코어 에너지</color>를 획득합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。この攻撃は対象の免疫効果を無視する。\\n\\n攻撃後、自分に<color=#28d9ed>コアの力</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,有<color=#28d9ed>100%</color>的几率使目标陷入<color=#28d9ed>触电</color>状态,持续<color=#28d9ed>2回合</color>。该攻击无视目标的免疫效果。\\n\\n攻击后,获得<color=#28d9ed>核心能量</color>,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4086008",
+      "buff":["CORE_ENERGY"],
+      "debuff":["BT_DOT_LIGHTNING"]
+    },
+    {
+      "name": {
+        "en": "Heir of Glory",
+        "kr": "영광의 계승자",
+        "jp": "栄光の継承者",
+        "zh": "荣耀之继承者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Reduces Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\n\\nReduces damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains, and does not take Weakness Gauge damage.\\n\\nGreatly reduces damage taken by Fire, Water, and Earth enemies, and does not take Weakness Gauge damage.\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>30000</color>.",
+        "kr": "(패시브 효과)\\n명속성 및 암속성 적에게 받는 피해가 증가합니다. 화속성, 수속성, 지속성 적의 속도를 감소시킵니다. 이 효과는 해제되지 않습니다.\\n\\n버스트 스킬, 협공, 스킬 체인을 제외한 스킬로 받는 피해를 감소시키고, WG 피해를 받지 않습니다.\\n\\n화속성, 수속성, 지속성 적에게 받는 피해를 크게 감소시키고, WG 피해를 받지 않습니다.\\n<color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>30000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\n光・闇属性の敵から受けるダメージがUPする。火・水・地属性の敵のスピードをDOWNさせる。この効果は解除されない。\\n\\nバーストスキル、連携、チェーンスキル以外のスキルから受けるダメージをDOWNさせ、WGダメージを受けない。\\n\\n火・水・地属性の敵から受けるダメージを大幅にDOWNさせ、WGダメージを受けない。\\n<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>30000</color>を超えない。",
+        "zh": "(被动效果)\\n光属性和暗属性敌人带来的伤害提升。使火属性、水属性、土属性敌人的速度降低。该效果不会被解除。\\n\\n使除爆发技能、夹攻、连携技能以外的技能造成的伤害降低,且不受到WG伤害。\\n\\n使火属性、水属性、土属性敌人带来的伤害大幅降低,且不受到WG伤害。\\n<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>30000</color>。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "debuff":["BT_STAT|ST_SPEED_IR"]
+    },
+    {
+      "name": {
+        "en": "For the Glory of Old!",
+        "kr": "옛 영광을 위해!",
+        "jp": "かつての栄光のために!",
+        "zh": "为了昔日的荣耀!"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect) Grants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increased damage\\nMage: +50% Priority recovery efficiency\\nDefender: Inflicts reduced Defense on the Boss for 4 turns when performing an action\\nRanger: Reduces Health of the Boss by 3% when performing an action\\nHealer: Inflicts reduced Speed on the Boss for 4 turns when performing an action.\\n(Triggered Effect) After using <color=#28d9ed>High-Intensity Repulsor Beam</color> and <color=#28d9ed>Meteor Shower</color>, when granted <color=#28d9ed>Core Energy</color>, attacks all enemies.\\nAfter attacking, grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>5 turn(s)</color>, and <color=#28d9ed>fully</color> reduces <color=#28d9ed>Chain Points</color> of enemies.",
+        "kr": "(패시브 효과) 적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 피해 증가\\n마법형 : 행동 게이지 회복 효율 +50%\\n방어형 : 행동 시 보스의 방어력 감소 4턴\\n속도형 : 행동 시 보스 체력 -3%\\n회복형 : 행동 시 보스의 속도 감소 4턴\\n(발동 효과) <color=#28d9ed>고출력 리펄서 빔</color>, <color=#28d9ed>메테오 샤워</color> 사용 후, <color=#28d9ed>코어 에너지</color>를 보유하고 있었다면 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>속도</color>가 증가하고, 적의 <color=#28d9ed>CP</color>를 <color=#28d9ed>모두</color> 감소시킵니다.",
+        "jp": "(パッシブ効果)敵全体に【絶望に立ち向かう勇気】を付与する。自分の戦闘タイプに応じて<color=#28d9ed>特別な効果</color>を獲得する。\\n\\n攻撃型:ダメージUP\\n魔法型:行動ゲージUPの効率+50%\\n防御型:行動時、ボスの防御力DOWN4ターン\\nスピード型:行動時、ボスのHP -3%\\n回復型:行動時、ボスのスピードDOWN4ターン\\n(発動効果)<color=#28d9ed>【高出力リパルサー・ビーム】</color>、<color=#28d9ed>【メテオシャワー】</color>使用後、<color=#28d9ed>コアの力</color>がある場合、敵全体にダメージを与える。\\n攻撃後、<color=#28d9ed>スピード</color>が<color=#28d9ed>5ターン</color>の間UPし、敵の<color=#28d9ed>CP</color>を<color=#28d9ed>すべて</color>DOWNさせる。",
+        "zh": "(被动效果)敌人队伍获得对抗绝境的勇气。根据自身职业获得<color=#28d9ed>特殊效果</color>。\\n\\n攻击型:伤害提升\\n魔法型:行动值恢复效率+50%\\n防御型:行动时首领防御力降低4回合\\n速度型:行动时首领生命值降低3%\\n恢复型:行动时首领速度降低4回合\\n(触发效果)使用<color=#28d9ed>高输出冲击光束</color>、<color=#28d9ed>流星洗礼</color>后,若持有<color=#28d9ed>核心能量</color>,则攻击全体敌人。\\n攻击后,<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>5回合</color>,并降低敌人的<color=#28d9ed>所有</color><color=#28d9ed>CP</color>。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff":["UNIQUE_DAHLIA_A","BT_STAT|ST_SPEED"],
+      "debuff":["BT_CP_CHARGE"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086008"
+    }
+  ]
+}

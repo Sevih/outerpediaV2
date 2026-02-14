@@ -1,0 +1,32 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>ACC>EFF",
+    "Note": "Combination Simulator for PvP\nAbsolute Music for PvE",
+    "Talisman": [
+      "Rogue's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

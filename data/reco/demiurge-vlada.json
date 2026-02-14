@@ -1,0 +1,63 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD",
+    "Note": "PvP:Mage's Charm3\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Rogue's Charm",
+      "Executioner's Charm",
+      "Mage's Charm"  
+    ]
+  },
+  "Augment Immune": {
+    "Weapon": [
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Briareos's Recklessness [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Augmentation", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD",
+    "Note": "PvP:Mage's Charm3\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Rogue's Charm",
+      "Executioner's Charm",
+      "Mage's Charm"  
+    ]
+  }
+}

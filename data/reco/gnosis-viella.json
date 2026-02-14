@@ -1,0 +1,239 @@
+{
+  "PvE - Pen": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Striker]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "PEN%/HP%"
+      },
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%/HP%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "HP>SPD>EFF=ACC>CHC>CHD",
+    "Note": "Try to add some attack if you play her in a dual attack team, that way she will land more DoTs.",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+      
+    ]
+  },
+  "Pve - Life": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Striker]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "PEN%/HP%"
+      },
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%/HP%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Life", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "HP>SPD>EFF=ACC>CHC>CHD",
+    "Note": "Try to add some attack if you play her in a dual attack team, that way she will land more DoTs.",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+      
+    ]
+  },
+  "PvE - Pen / Life": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Striker]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "PEN%/HP%"
+      },
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%/HP%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Penetration", "count": 2 },
+         { "name": "Life", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>SPD>EFF=ACC>CHC>CHD",
+    "Note": "Try to add some attack if you play her in a dual attack team, that way she will land more DoTs.",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+      
+    ]
+  },
+  "PvP - Pen/Swift": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Striker]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "PEN%/HP%"
+      },
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%/HP%"
+      }
+    ], 
+    "Set": [
+      [
+         { "name": "Penetration", "count": 2 },
+         { "name": "Swiftness", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>CHC>CHD>SPD>EFF=ACC",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Mage's Charm"
+      
+    ]
+  },
+  "PvP - Life/Swift": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Striker]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "PEN%/HP%"
+      },
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%/HP%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Life", "count": 2 },
+         { "name": "Swiftness", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>CHC>CHD>SPD>EFF=ACC",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Mage's Charm"
+      
+    ]
+  },
+  "PvP - Speed/Swift": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Briareos's Recklessness [Striker]",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "PEN%/HP%"
+      },
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%/HP%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 2 },
+         { "name": "Swiftness", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>CHC>CHD>SPD>EFF=ACC",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Mage's Charm"      
+    ]
+  }
+}

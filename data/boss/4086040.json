@@ -1,0 +1,144 @@
+{
+  "id": "4086040",
+  "Name": {
+    "en": "Mecha Dragon of Death Ragnakeus",
+    "kr": "임종기룡 라그나케우스",
+    "jp": "臨終の機竜・ラグナケウス",
+    "zh": "死亡械龙拉格纳修斯"
+  },
+  "Surname": {
+    "en": "Ancient Vanquished",
+    "kr": "고대의 패자",
+    "jp": "古代の覇者",
+    "zh": "远古霸者"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 90,
+  "icons": "4086002",
+  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Very Hard League",
+      "kr": "베리 하드 리그",
+      "jp": "ベリーハードリーグ",
+      "zh": "极难联赛"
+    },
+    "mode": {
+      "en": "World Boss",
+      "kr": "월드 보스",
+      "jp": "ワールドボス",
+      "zh": "世界首领"
+    },
+    "area_id": {
+      "en": "55000003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Corroding Dragvider",
+        "kr": "부식의 드래그바이더",
+        "jp": "腐食のドラグバイダー",
+        "zh": "捕食之龙分裂"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_First_4086002"
+    },
+    {
+      "name": {
+        "en": "Eroding Breathstream",
+        "kr": "침식의 브레스트림",
+        "jp": "侵食のブレストリーム",
+        "zh": "侵蚀之息流"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_Second_4086002"
+    },
+    {
+      "name": {
+        "en": "Caustic Deathstroy",
+        "kr": "융식의 데스트로이",
+        "jp": "融食のデストロイ",
+        "zh": "溶蚀之死亡毁灭"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and grants a <color=#28d9ed>barrier</color> to the caster for <color=#28d9ed>8 turn(s)</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>8턴</color> 동안 <color=#28d9ed>실드</color>를 획득합니다.",
+        "jp": "敵全体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>8ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>8回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4086002",
+      "buff":["BT_SHIELD_BASED_CASTER"]
+    },
+    {
+      "name": {
+        "en": "Mecha Dragon of Death Ragnakeus",
+        "kr": "임종기룡 라그나케우스",
+        "jp": "臨終の機竜・ラグナケウス",
+        "zh": "死亡械龙拉格纳修斯"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Decreases Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>30%</color>.\\nReduces Weakness Gauge damage of skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted a barrier, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.",
+        "kr": "(패시브 효과)\\n명속성, 암속성 적에게 받는 피해가 증가합니다. 화속성, 수속성, 지속성 적의 속도를 감소시킵니다. 이 효과는 해제되지 않습니다.\\n피격 시 자신의 행동 게이지를 <color=#28d9ed>30%</color> 증가시킵니다.\\n버스트 스킬, 협공, 스킬 체인을 제외한 스킬로 인한 WG 피해를 <color=#28d9ed>50%</color> 감소시킵니다. 실드를 보유하고 있다면 받는 WG 피해가 <color=#28d9ed>100%</color> 감소합니다.\\n매 턴 WG를 <color=#28d9ed>10%</color> 회복합니다.\\n\\n<color=#28d9ed>저주/고정 피해</color>의 피해는 각각 <color=#28d9ed>10000/20000</color>을 초과하지 않습니다.(단, <color=#28d9ed>스킬 체인</color>의 고정 피해 효과는 제외)\\n\\n대상이 적을수록 입히는 피해가 크게 증가합니다.",
+        "jp": "(パッシブ効果)\\n光・闇属性の敵から受けるダメージがUPする。火・水・地属性の敵のスピードをDOWNさせる。この効果は解除されない。\\nダメージを受けた時、自分の行動ゲージを<color=#28d9ed>30%</color>UPさせる。\\nバーストスキル、連携、チェーンスキル以外のスキルによるWGダメージを<color=#28d9ed>50%</color>DOWNさせる。シールド状態の場合、受けるWGダメージが<color=#28d9ed>100%</color>DOWNする。\\n毎ターンWGを<color=#28d9ed>10%</color>回復する。\\n\\n<color=#28d9ed>呪い/固定ダメージ</color>のダメージはそれぞれ<color=#28d9ed>10000/20000</color>を超えない。(ただし、<color=#28d9ed>チェーンスキル</color>の固定ダメージは除く)\\n\\n対象が少ないほど与えるダメージが大幅にUPする。\\n\\n対象が少ないほど与えるダメージが大幅にUPする。",
+        "zh": "(被动效果)\\n光属性、暗属性敌人带来的伤害提升。使火属性、水属性、土属性敌人的速度降低。该效果不会被解除。\\n受到攻击时,使自身行动值提升<color=#28d9ed>30%</color>。\\n使除爆发技能、夹攻、连携技能以外的技能造成的WG伤害降低<color=#28d9ed>50%</color>。若持有护盾,则受到的WG伤害降低<color=#28d9ed>100%</color>。\\n每回合WG恢复<color=#28d9ed>10%</color>。\\n\\n<color=#28d9ed>诅咒/固定伤害</color>的伤害分别不超出<color=#28d9ed>10000/20000</color>(但<color=#28d9ed>连携技能</color>的固定伤害效果除外)。\\n\\n目标数量越少,则造成的伤害越高。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff":["BT_ACTION_GAUGE"],
+      "debuff":["BT_STAT|ST_SPEED_IR"]
+    },
+    {
+      "name": {
+        "en": "Emperor of Ruin",
+        "kr": "몰락의 황제",
+        "jp": "没落の皇帝",
+        "zh": "没落皇帝"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increased damage\\nMage: +50% Priority recovery efficiency\\nDefender: Inflicts reduced Defense on the Boss for 4 turns when performing an action\\nRanger: Inflicts reduced Resilience on the Boss for 4 turns when performing an action\\nHealer: Inflicts reduced Speed on the Boss for 4 turns when performing an action",
+        "kr": "(패시브 효과)\\n적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 피해 증가\\n마법형 : 행동 게이지 회복 효율 +50%\\n방어형 : 행동 시 보스의 방어력 감소 4턴\\n속도형 : 행동 시 보스의 효과 저항 감소 4턴\\n회복형 : 행동 시 보스의 속도 감소 4턴",
+        "jp": "(パッシブ効果)\\n敵全体に【絶望に立ち向かう勇気】を付与する。自分の戦闘タイプに応じて<color=#28d9ed>特別な効果</color>を得る。\\n\\n攻撃型:ダメージUP\\n魔法型:行動ゲージUPの効率+50%\\n防御型:行動時ボスの防御力を4ターンの間DOWNさせる。\\nスピード型:行動時ボスの効果抵抗を4ターンの間DOWNさせる。\\n回復型:行動時ボスのスピードを4ターンの間DOWNさせる。",
+        "zh": "(被动效果)\\n敌军获得面对绝境的勇气。根据自身职业获得<color=#28d9ed>特别效果</color>。\\n\\n攻击型:伤害提升\\n魔法型:行动值恢复效率+50%\\n防御型:行动时,首领防御力降低,持续4回合\\n速度型:行动时,首领的效果抵抗降低,持续4回合\\n恢复型:行动时,首领速度降低,持续4回合"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff":["UNIQUE_DAHLIA_A"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086002"
+    }
+  ]
+}

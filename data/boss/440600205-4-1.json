@@ -1,0 +1,152 @@
+{
+  "id": "440600205-4-1",
+  "Name": {
+    "en": "Strategic Defense Automaton",
+    "kr": "전술 전략방위 오토마톤",
+    "jp": "攻守両用型オートマタ",
+    "zh": "战略防卫机械人偶"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 120,
+  "icons": "2000052",
+  "BuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Strategic Defense Automaton (Stage 5)",
+      "kr": "전술 전략 방위 오토마톤 (5단계)",
+      "jp": "攻守両用型オートマタ(5段階)",
+      "zh": "战略防卫机械人偶(第5阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70601205",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Onslaught Drive",
+        "kr": "온슬로트 드라이브",
+        "jp": "オンスロットドライブ",
+        "zh": "蓄势猛攻"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nPrioritizes enemies in the <color=#28d9ed>front line</color>. When attacking a non-<color=#28d9ed>Ranger</color> enemies, inflicts <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n<color=#28d9ed>전열</color>의 적을 우선적으로 공격합니다. <color=#28d9ed>속도형</color>이 아닌 적 공격 시 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与える。\\n<color=#28d9ed>前衛</color>の敵を優先的に攻撃する。<color=#28d9ed>スピード型</color>以外の敵を攻撃時、対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人。\\n优先攻击<color=#28d9ed>前排</color>敌人。非<color=#28d9ed>速度型</color>敌人攻击时,对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000052",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Sigma Cannon",
+        "kr": "시그마 캐논",
+        "jp": "シグマキャノン",
+        "zh": "西格玛加农炮"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. <color=#28d9ed>Counterattacks</color> when hit for <color=#28d9ed>2 turn(s)</color> after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 피격 시 <color=#28d9ed>반격</color>합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後<color=#28d9ed>2ターン</color>の間、1度でもダメージを受けた場合、<color=#28d9ed>反撃</color>する。",
+        "zh": "攻击全体敌人。攻击后,在受到伤害时发动<color=#28d9ed>反击</color>,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000052",
+      "buff": [
+        "BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER"
+      ]
+    },
+    {
+      "name": {
+        "en": "Distortion Ray",
+        "kr": "디스토션 레이",
+        "jp": "ディストーションレイ",
+        "zh": "扭曲光线"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. After attacking, grants increased <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases inversely proportional to the number of targets.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>치명 피해</color>가 증가합니다.\\n대상의 수가 적을수록 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n対象が少ないほどダメージがUPする。",
+        "zh": "攻击全体敌人。攻击后,<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>。\\n目标数量越少,则该技能的伤害越高。"
+      },
+      "icon": "Skill_Ultimate_2000052",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dangerous Skies",
+        "kr": "창공의 위협",
+        "jp": "蒼空の脅威",
+        "zh": "苍穹的威胁"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces damage dealt to Water enemies, and increases damage taken from them. Reduces Effectiveness and Resilience of non-Water enemies.\\nIncreases damage taken from Ranger enemies.",
+        "kr": "(패시브 효과)\\n수속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다. 수속성이 아닌 적의 효과 적중과 효과 저항이 감소합니다.\\n속도형 적에게 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n水属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。水属性以外の敵の効果命中・効果抵抗をDOWNさせる。\\nスピード型の敵から受けるダメージがUPする。",
+        "zh": "(被动效果)\\n对水属性敌人造成的伤害降低,且所受伤害提升。非水属性敌人的效果命中和效果抵抗降低。\\n受到来自速度型敌人的伤害提升。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "debuff": [
+        "BT_STAT|ST_BUFF_CHANCE_IR",
+        "BT_STAT|ST_BUFF_RESIST_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every time the enemy performs 8 actions, and grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns, then activates Distortion Ray.",
+        "kr": "적이 8회 행동할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여 후 디스토션 레이를 사용합니다.",
+        "jp": "敵が8回行動するたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間継続する。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与した後、【ディストーションレイ】を使用する。",
+        "zh": "敌人每行动8次,便转化为<color=#28d9ed>狂暴化</color>状态,并使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:自身获得无法解除的攻击力提升/伤害降低效果,持续3回合后,使用扭曲光线。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    }
+  ]
+}

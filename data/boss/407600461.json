@@ -1,0 +1,106 @@
+{
+  "id": "407600461",
+  "Name": {
+    "en": "Mek'Ril",
+    "kr": "메그릴",
+    "jp": "メグリル",
+    "zh": "梅格里尔"
+  },
+  "Surname": {
+    "en": "Ancient Armored Beetle",
+    "kr": "태고의 중갑충",
+    "jp": "太古の重甲虫",
+    "zh": "太古重甲虫"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 120,
+  "icons": "4076004",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE,BT_SEALED",
+  "location": {
+    "dungeon": {
+      "en": "Dek'Ril & Mek'Ril (Stage 12)",
+      "kr": "데그릴 & 메그릴 (12 단계)",
+      "jp": "デグリル&メグリル(12段階)",
+      "zh": "泰格里尔&梅格里尔(第12阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Identification",
+      "kr": "특별 의뢰 : 정체 규명",
+      "jp": "特別依頼:正体究明",
+      "zh": "特别委托:查清身份"
+    },
+    "area_id": {
+      "en": "50201012",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Titius",
+        "kr": "티티우스",
+        "jp": "ティテュオス",
+        "zh": "提提乌斯"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Increases <color=#28d9ed>Dek'Ril</color>'s <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>, and grants <color=#28d9ed>Marked</color> to self for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "<color=#28d9ed>2턴</color> 동안 <color=#28d9ed>데그릴</color>의 <color=#28d9ed>공격력</color>을 증가시키고, 자신에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.",
+        "jp": "<color=#28d9ed>【デグリル】</color>の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、自分には<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "使<color=#28d9ed>泰格里尔</color>的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>,并对自身造成<color=#28d9ed>标记</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Earth",
+      "debuff": [
+        "BT_MARKING"
+      ],
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
+    },
+    {
+      "name": {
+        "en": "Protecting Partner",
+        "kr": "반려 보호",
+        "jp": "パートナー保護",
+        "zh": "伴侣保护"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle.\\n\\nGreatly reduces <color=#28d9ed>all allies'</color> <color=#28d9ed>damage taken</color> while the caster is alive. <color=#28d9ed>Damage Taken</color> Reduction is removed upon caster's death, but grants <color=#28d9ed>Invulnerability</color> and <color=#28d9ed>Increased Attack</color> to <color=#28d9ed>Dek'Ril</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "(패시브 효과)\\n전투 입장 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n자신이 생존해 있는 동안, <color=#28d9ed>아군 전체</color>의 <color=#28d9ed>받는 피해</color>가 크게 감소합니다. 자신이 사망 시 <color=#28d9ed>받는 피해</color> 감소 효과는 사라지지만, <color=#28d9ed>데그릴</color>에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>무적</color>과 <color=#28d9ed>공격력 증가</color> 효과를 발생시킵니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n自分が戦場にいる間、<color=#28d9ed>味方全体</color>の<color=#28d9ed>受けるダメージ</color>が大幅にDOWNする。自分が倒れた時、<color=#28d9ed>受けるダメージ</color>DOWN効果は消滅するが、<color=#28d9ed>【デグリル】</color>に<color=#28d9ed>無敵</color>と<color=#28d9ed>攻撃力UP</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "(被动效果)\\n进入战斗时,使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n在自身存活期间,使<color=#28d9ed>全体友军</color><color=#28d9ed>所受伤害</color>大幅降低。自身死亡时,<color=#28d9ed>所受伤害</color>降低效果会消失,但会使<color=#28d9ed>泰格里尔</color>获得<color=#28d9ed>无敌</color>和<color=#28d9ed>攻击力提升</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_INVINCIBLE",
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Survival Instinct",
+        "kr": "생존본능",
+        "jp": "生存本能",
+        "zh": "生存本能"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of a turn, if the caster is currently inflicted with <color=#28d9ed>Burned</color>, becomes <color=#28d9ed>Unhealable</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIncreases damage dealt to non-Fire enemies and reduces damage taken from them.\\nReduces damage dealt to Fire enemies and increases damage taken from them.",
+        "kr": "(패시브 효과)\\n턴 시작 시 <color=#28d9ed>화상</color> 상태라면, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color> 상태가 됩니다.\\n\\n화속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n화속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\nターン開始時、<color=#28d9ed>火傷</color>状態の場合、<color=#28d9ed>回復不可</color>を<color=#28d9ed>2ターン</color>の間付与される。\\n\\n火属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n火属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "zh": "(被动效果)\\n回合开始时,若处于<color=#28d9ed>烧伤</color>状态,则会陷入<color=#28d9ed>无法恢复</color>状态,持续<color=#28d9ed>2回合</color>。\\n\\n对非火属性敌人造成的伤害提升,且所受伤害降低。\\n对火属性角色造成的伤害降低,且所受伤害提升。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_SEALED_RECEIVE_HEAL"
+      ]
+    }
+  ]
+}

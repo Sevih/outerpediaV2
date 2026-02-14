@@ -1,0 +1,161 @@
+{
+  "id": "440400274-8-1",
+  "Name": {
+    "en": "Vlada Assault Suit",
+    "kr": "블라다 중장기병",
+    "jp": "重装機兵ヴラダ",
+    "zh": "布拉达重骑兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 120,
+  "icons": "4044006",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_DOT_BLEED,BT_DOT_POISON",
+  "location": {
+    "dungeon": {
+      "en": "Ful.Mi.NATION: Final Weapon (Stage 5)",
+      "kr": "이엑스플로 결전병기 (5단계)",
+      "jp": "イエクスプロー決戦兵器(5段階)",
+      "zh": "伊克斯普洛决战兵器(第5阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70401205",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Intense Output",
+        "kr": "강력한 출력",
+        "jp": "出力全開",
+        "zh": "强力输出"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>50%</color> chance to reduce <color=#28d9ed>Resilience</color> of the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>50%</color>확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 저항</color>을 감소 시킵니다.",
+        "jp": "敵全体にダメージを与える。<color=#28d9ed>50%</color>の確率で<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击全体敌人。有<color=#28d9ed>50%</color>的几率使<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_4044001",
+      "debuff":["BT_STAT|ST_BUFF_RESIST"]
+    },
+    {
+      "name": {
+        "en": "Overwhelming Performance",
+        "kr": "압도적인 성능",
+        "jp": "圧倒的な性能",
+        "zh": "压倒性的性能"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy, and when the target is inflicted with a debuff, ignores <color=#28d9ed>100%</color> of the target's Defense.\\nWhen the enemy is defeated, resets cooldown of <color=#28d9ed>Overwhelming Performance</color>, and gains an <color=#28d9ed>extra turn</color>.",
+        "kr": "적을 공격하고, 대상이 약화 효과가 있다면 방어력을 <color=#28d9ed>100%</color> 무시합니다.\\n적 처치 시 <color=#28d9ed>압도적인 성능</color> 쿨타임이 초기화 되며, <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "jp": "敵単体にダメージを与え、対象に弱体効果がある場合、防御力を<color=#28d9ed>100%</color>無視する。\\n敵が倒れた時、<color=#28d9ed>【圧倒的な性能】</color>のスキルターンが初期化され、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "zh": "攻击敌人,若目标附带弱化效果,则无视<color=#28d9ed>100%</color>的防御力。\\n击杀敌人时,<color=#28d9ed>压倒性性能</color>的冷却时间重置,且获得<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "Skill_Second_4044001",
+      "buff":["BT_COOL_CHARGE"]
+    },
+    {
+      "name": {
+        "en": "Fearsome Might",
+        "kr": "가공할 위력",
+        "jp": "恐れおののく威力",
+        "zh": "可怕的威力"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. When the target is inflicted with a debuff, ignores Resilience and Immunity and inflicts <color=#28d9ed>Stunned</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 약화 효과가 있는 대상은 효과 저항과 면역을 무시하고 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与える。対象に弱体効果がある場合、効果抵抗と免疫を無視し、<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。无视附带弱化效果目标的效果抵抗和免疫效果,并使其进入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4044001",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Super Genius's Improvement",
+        "kr": "슈퍼 천재의 개량",
+        "jp": "スーパー天才の改良",
+        "zh": "超级天才改良"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nUpon an enemy performing an action, when there is any enemy inflicted with a <color=#28d9ed>debuff</color>, inflicts a random debuff on that enemy for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "(패시브 효과)\\n적 행동 시 <color=#28d9ed>약화 효과</color>가 있는 적이 한명이라도 있으면 무작위 적 한명에게 약화 효과를 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "jp": "(パッシブ効果)\\n敵の行動時、敵に<color=#28d9ed>弱体効果</color>がある場合、ランダムの敵単体に弱体効果を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "(被动效果)\\n敌人行动时,若至少有1名敌人处于<color=#28d9ed>弱化效果</color>状态,则对随机1名造成弱化效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "debuff":["BT_RANDOM"]
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers Weakness Gauge by 10%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Super Genius's Bonus</color>: Used when Enraged ends.\\nAttacks all enemies.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>슈퍼 천재가 넣은 보너스</color> : 광폭화 종료 시 사용.\\n적 전체를 공격합니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は3ターン間持続する。\\n\\n<color=#28d9ed>【スーパー天才のボーナス】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复\\n10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>超级天才专属增益</color> :狂暴化结束时发动。\\n攻击全体敌人。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

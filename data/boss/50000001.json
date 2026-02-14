@@ -1,0 +1,145 @@
+{
+  "id": "50000001",
+  "Name": {
+    "en": "Stella",
+    "kr": "스텔라",
+    "jp": "ステラ",
+    "zh": "斯黛拉"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 100,
+  "icons": "4004003",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Professional Adventurer Promotion Challenge",
+      "kr": "프로 모험가 승급 챌린지",
+      "jp": "プロ冒険者昇級チャレンジ",
+      "zh": "专家冒险家晋升挑战"
+    },
+    "mode": {
+      "en": "Challenge",
+      "kr": "도전",
+      "jp": "チャレンジ",
+      "zh": "挑战"
+    },
+    "area_id": {
+      "en": "70600100",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Please Die",
+        "kr": "죽어주세요",
+        "jp": "死になさい",
+        "zh": "去死吧"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000053",
+      "debuff":["BT_DOT_CURSE"]
+    },
+    {
+      "name": {
+        "en": "Praise",
+        "kr": "경배하세요",
+        "jp": "崇拝なさい",
+        "zh": "敬畏吧"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Removes all <color=#28d9ed>buffs</color> from all enemies before attacking. Inflicts <color=#28d9ed>Unbuffable</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제 후 공격하고, 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.",
+        "jp": "敵全体の<color=#28d9ed>強化効果</color>をすべて解除した後、ダメージを与え、対象に<color=#28d9ed>強化不可</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "解除全体敌人的所有<color=#28d9ed>强化效果</color>后发动攻击,对目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000053",
+      "debuff":["BT_SEALED", "BT_REMOVE_BUFF"]
+    },
+    {
+      "name": {
+        "en": "Behold God's Might",
+        "kr": "신의 힘이에요",
+        "jp": "神の力です",
+        "zh": "神力"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and <color=#28d9ed>detonates</color> all <color=#28d9ed>Cursed</color> stacks on the target.",
+        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>저주</color>를 모두 <color=#28d9ed>폭발</color>시킵니다.",
+        "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>呪い</color>をすべて<color=#28d9ed>破裂</color>させる。",
+        "zh": "攻击全体敌人,并使目标受到的所有<color=#28d9ed>诅咒</color>效果<color=#28d9ed>爆炸</color>。"
+      },
+      "icon": "Skill_Ultimate_2000053",
+      "debuff":["BT_IMMEDIATELY_CURSE"]
+    },
+    {
+      "name": {
+        "en": "Unforgiving God",
+        "kr": "관대하지 않은 신",
+        "jp": "寛大ならざる神",
+        "zh": "无悯之神"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Counterattack Chance by <color=#28d9ed>50%</color>.\\nInflict <color=#28d9ed>Cursed</color> on all enemies at the start of each turn for <color=#28d9ed>2 turn(s)</color>.\\n\\nReduces damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>90%</color>, and reduces Weakness Gauge damage taken by <color=#28d9ed>90%</color> when not <color=#28d9ed>Enraged</color>.",
+        "kr": "(패시브 효과)\\n반격 확률이 <color=#28d9ed>50%</color> 증가합니다.\\n매 턴 시작 시 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.\\n\\n버스트 스킬, 협공, 스킬 체인을 제외한 스킬로 받는 피해를 <color=#28d9ed>90%</color> 감소시키고, <color=#28d9ed>광폭화</color> 상태가 아니라면 받는 WG 피해량을 <color=#28d9ed>90%</color> 감소시킵니다.",
+        "jp": "(パッシブ効果)\\n反撃発生率が<color=#28d9ed>50%</color>UPする。\\n毎ターン開始時、敵全体に<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\nバーストスキル、連携、チェーンスキル以外のスキルで受けるダメージを<color=#28d9ed>90%</color>DOWNさせ、<color=#28d9ed>狂暴化</color>状態でない場合、受けるWGダメージが<color=#28d9ed>90%</color>DOWNする。",
+        "zh": "(被动效果)\\n反击率提升<color=#28d9ed>50%</color>。\\n每回合开始时,对全体敌人造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n使受到除爆发技能、夹攻、连携技能外的技能伤害降低<color=#28d9ed>90%</color>,若未处于<color=#28d9ed>狂暴化</color>状态,则使受到的WG伤害量降低<color=#28d9ed>90%</color>。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "debuff":["BT_DOT_CURSE"],
+      "buff":["BT_STAT|ST_COUNTER_RATE"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>I Foresaw the Future</color>: Used when Enraged ends.\\nRemoves all debuffs from the caster, and recovers all skill cooldowns and Health.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>미래를 예지했어요.</color> : 광폭화 종료 시 사용.\\n자신의 모든 약화 효과를 해제하고, 스킬 쿨타임과 체력을 모두 회복시킵니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターン間持続する。\\n\\n<color=#28d9ed>【未来を予知しました】</color>:【狂暴化】終了時に発動する。\\n自分のすべての弱体効果を解除し、スキルターンを初期化し、HPをすべて回復する。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>预见未来</color>:狂暴化结束时发动。\\n解除自身全部弱化效果,恢复所有技能冷却时间和生命值。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN",
+        "BT_REMOVE_DEBUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

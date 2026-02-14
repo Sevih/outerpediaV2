@@ -1,0 +1,104 @@
+{
+  "Life Swift": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "HP%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Life", "count": 2 },
+        { "name": "Swiftness", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>CHC>CHD>ACC>SPD",
+    "Note": "", 
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  },  
+  "Life Augment": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "HP%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Life", "count": 2 },
+        { "name": "Augmentation", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>CHC>CHD>ACC>SPD",
+    "Note": "", 
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "Swift Augment": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "HP%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Augmentation", "count": 2 },
+        { "name": "Swiftness", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>CHC>CHD>ACC>SPD",
+    "Note": "", 
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "Scaling": {
+        "Weapon": [
+            {
+                "name": "Violent Sledgehammer",
+                "mainStat": "ATK%"
+            }
+        ],
+        "Amulet": [
+            {
+                "name": "Death's Hold",
+                "mainStat": "PEN%/CHD%"
+            },
+            {
+                "name": "A Prima Vista",
+                "mainStat": "DEF%/RES"
+            }
+        ],
+        "Set": [
+            [
+                {
+                    "name": "Revenge",
+                    "count": 4
+                }
+            ]
+        ],
+        "SubstatPrio": "ATK>CHC>CHD>HP=DEF",
+        "Note": "",
+        "Talisman": [
+            "Sage's Charm",
+            "Rogue's Charm",
+            "Executioner's Charm"
+        ]
+    }
+}

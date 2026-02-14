@@ -1,0 +1,74 @@
+{
+  "id": "51000005",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "kr": "변형된 열화 코어",
+    "jp": "異形の劣化コア",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 100,
+  "icons": "4151013",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Tyrant Toddler",
+      "kr": "주간토벌 - 타일런트 유생체",
+      "jp": "ウィークリー討伐 - タイラントの幼生",
+      "zh": "每周讨伐 - 幼体泰兰特"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Quick Freeze",
+        "kr": "급속 빙결",
+        "jp": "急速凍結",
+        "zh": "急速冻结"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Heals all allies' Health by <color=#28d9ed>10%</color>.",
+        "kr": "아군 전체의 체력을 <color=#28d9ed>10%</color> 회복시킵니다.",
+        "jp": "味方全体のHPを<color=#28d9ed>10%</color>回復する。",
+        "zh": "使全体友军的生命值恢复<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Water"
+    },
+    {
+      "name": {
+        "en": "Core Overdrive",
+        "kr": "코어 오버드라이브",
+        "jp": "コアオーバードライブ",
+        "zh": "核心过载"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color> at the start of battle.",
+        "kr": "(패시브 효과)\\n전투 개시 시점에 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>100%</color>UPする。",
+        "zh": "(被动效果)\\n在战斗开始时,使<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    }
+  ]
+}

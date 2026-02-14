@@ -1,0 +1,152 @@
+{
+  "id": "51200002",
+  "Name": {
+    "en": "Blockbuster",
+    "kr": "블록버스터",
+    "jp": "ブラックバスター",
+    "zh": "破坏猛兽"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 100,
+  "icons": "4013072",
+  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Blockbuster (Normal)",
+      "kr": "블록 버스터 (노멀)",
+      "jp": "ブラックバスター(ノーマル)",
+      "zh": "破坏猛兽 (普通)"
+    },
+    "mode": {
+      "en": "Pursuit Operation",
+      "kr": "추격 섬멸전",
+      "jp": "追撃殲滅戦",
+      "zh": "追击歼灭战"
+    },
+    "area_id": {
+      "en": "72000011",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Blood Bomb",
+        "kr": "혈액 폭탄",
+        "jp": "血液爆弾",
+        "zh": "血液炸弹"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_BLEED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Applause",
+        "kr": "박수치기",
+        "jp": "開手打ち",
+        "zh": "击掌"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy, and inflicts <color=#28d9ed>Stunned</color> on the enemy with the highest Attack for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고, 가장 공격력이 높은 적에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、攻撃力が最も高い敵単体に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>スタン</color>を付与する。",
+        "zh": "攻击敌人,并对攻击力最高的敌人造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Fire",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Launch Airstrike",
+        "kr": "공습 개시",
+        "jp": "空襲開始",
+        "zh": "空袭开始"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all targets, and inflicts <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 대상 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제하고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.",
+        "jp": "敵全体にダメージを与える。対象全体の<color=#28d9ed>強化効果</color>をすべて解除した後、<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。解除目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>,并对其造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Evolution: Detonation",
+        "kr": "진화 : 기폭",
+        "jp": "進化:起爆",
+        "zh": "进化:起爆"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>5000</color>.\\nGrants a random buff at the start of a turn.\\nUpon taking a critical hit, greatly reduces damage taken and recovers Weakness Gauge by <color=#28d9ed>50%</color>.",
+        "kr": "저주, 고정 피해로 받는 피해는 최대 <color=#28d9ed>10000</color>을 초과하지 않습니다.\\n턴 시작 시 무작위 강화 효과를 획득합니다.\\n치명 피격 시 받는 피해량이 크게 감소하고, WG를 <color=#28d9ed>50%</color> 회복합니다.",
+        "jp": "受ける呪い/固定ダメージは<color=#28d9ed>10000</color>を超えない。\\nターン開始時、自分にランダムな強化効果を付与する。\\n会心ダメージを受けた場合、受けるダメージが大幅にDOWNし、WGを<color=#28d9ed>50%</color>回復する。",
+        "zh": "诅咒、固定伤害造成的伤害最多不会超过\\n<color=#28d9ed>10000</color>。\\n回合开始时,获得随机强化效果。\\n受到暴击时,所受伤害量大幅降低,并恢复<color=#28d9ed>50%</color>的WG。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_RANDOM_STAT"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Command: Devastation</color>: Used when Enraged ends. Deals great damage to all enemies.",
+        "kr": "4턴마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>명령 : 초토화</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間継続する。\\n\\n<color=#28d9ed>【命令:根絶やし】</color>:【狂暴化】終了時に発動する。\\n敵全体に大ダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>命令:焦土化</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

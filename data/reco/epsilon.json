@@ -1,0 +1,106 @@
+{
+  "Augment Immune": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Immunity", "count": 2 },
+        { "name": "Augmentation", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Counter Immune": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Immunity", "count": 2 },
+        { "name": "Counterattack", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
+    ]
+  },"Speed": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
+    ]
+  },"High Crit": {
+    "Weapon": [
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Critical Strike", "count": 4}
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

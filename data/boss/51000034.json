@@ -1,0 +1,141 @@
+{
+  "id": "51000034",
+  "Name": {
+    "en": "Ravenous Wolf King, Ziggsaron",
+    "kr": "아랑왕 지그사론",
+    "jp": "餓狼王ジグサロン",
+    "zh": "饿狼王齐格萨龙"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 100,
+  "icons": "4079001",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Weekly Conquest - Ravenous Wolf King, Ziggsaron",
+      "kr": "주간토벌 - 아랑왕 지그사론",
+      "jp": "ウィークリー討伐 - 餓狼王ジグサロン",
+      "zh": "每周讨伐 - 饿狼王齐格萨龙"
+    },
+    "mode": {
+      "en": "Adventure License",
+      "kr": "모험 라이선스",
+      "jp": "冒険者ライセンス",
+      "zh": "冒险许可证"
+    },
+    "area_id": {
+      "en": "70600019",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Lunar Stigma",
+        "kr": "달의 낙인",
+        "jp": "月の烙印",
+        "zh": "月之烙印"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and removes <color=#28d9ed>2</color> <color=#28d9ed>buff(s)</color> from the target.\\nGreatly increases damage dealt against Ranger enemies.",
+        "kr": "적을 공격하고 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제합니다.\\n속도형에게 주는 피해가 크게 증가합니다.",
+        "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2個</color>解除する。\\nスピード型の敵に与えるダメージが大幅にUPする。",
+        "zh": "攻击敌人,并解除目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>。\\n对速度型造成的伤害大幅提升。"
+      },
+      "icon": "Skill_First_4079001",
+      "debuff":["BT_REMOVE_BUFF"]
+    },
+    {
+      "name": {
+        "en": "Full Moon's Roar",
+        "kr": "만월의 포효",
+        "jp": "満月の雄叫び",
+        "zh": "满月的咆哮"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Increases the duration of <color=#28d9ed>buff(s)</color> granted to the caster and all enemies by <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "자신과 적 전체의 <color=#28d9ed>강화 효과</color> 지속 턴이 <color=#28d9ed>2턴</color> 증가합니다.",
+        "jp": "自分と敵全体の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>2ターン</color>増加させる。",
+        "zh": "使自身和全体敌人的<color=#28d9ed>强化效果</color>持续回合提升<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4079001",
+      "debuff":["BT_EXTEND_BUFF"]
+    },
+    {
+      "name": {
+        "en": "Crescent Moon Blooms",
+        "kr": "초승달 그리기",
+        "jp": "三日月の舞",
+        "zh": "幻画新月"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. After attacking, increases <color=#28d9ed>Speed/Defense</color> of the caster for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>속도/방어력</color>이 증가합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、自分の<color=#28d9ed> スピード/防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせる。",
+        "zh": "攻击全体敌人。攻击后,自身的<color=#28d9ed>速度/防御力</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4079001",
+      "buff":["BT_STAT|ST_SPEED","BT_STAT|ST_DEF"]
+    },
+    {
+      "name": {
+        "en": "One Blessed By The Moon's Grace",
+        "kr": "달의 은총을 받은 자",
+        "jp": "月の恩寵を受けし者",
+        "zh": "承受月亮恩宠之人"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces <color=#28d9ed>Attack</color> of all enemies. This effect cannot be removed.\\nAt the start of the turn, inflicts <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>1 turn(s)</color>.\\nRight after all attacks, does not trigger an enemy's Counterattack, Revenge, or Agile Response.\\nReduces damage taken from non-Ranger enemies.\\nReduces Weakness Gauge damage taken from non-Water enemies by 50%.\\nReduces damage taken from non-Water enemies, and increases damage dealt to them.\\nIncreases damage taken from Water enemies, and reduces damage dealt to them.",
+        "kr": "(패시브 효과)\\n적 전체의 <color=#28d9ed>공격력</color>이 감소합니다. 이 효과는 해제되지 않습니다.\\n턴 시작 시 <color=#28d9ed>1턴</color> 동안 적 전체에게 <color=#28d9ed>강화 불가</color>를 부여합니다.\\n모든 공격 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.\\n속도형이 아닌 적에게 받는 피해가 감소합니다.\\n수속성이 아닌 적에게 받는 WG 피해가 50% 감소합니다.\\n수속성이 아닌 적에게 받는 피해가 감소하고, 입히는 피해가 증가합니다.\\n수속성 적에게 받는 피해가 증가하고, 입히는 피해가 감소합니다.",
+        "jp": "(パッシブ効果)\\n敵全体の<color=#28d9ed>攻撃力</color>がDOWNする。この効果は解除されない。\\nターン開始時、敵全体に<color=#28d9ed>強化不可</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nすべての攻撃後には、敵の反撃、復讐、迅速対応が発動しない。\\nスピード型以外の敵から受けるダメージがDOWNする。\\n水属性以外の敵から受けるWGダメージが50%DOWNする。\\n水属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n水属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "zh": "(被动效果)\\n全体敌人的<color=#28d9ed>攻击力</color>降低。该效果不会被解除。\\n回合开始时,对全体敌人造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>1回合</color>。\\n所有攻击发动后,不会触发敌人的反击、复仇、迅速应对效果。\\n受到来自非速度型敌人的伤害降低。\\n受到来自非水属性敌人的WG伤害降低50%。\\n受到来自非水属性敌人的伤害降低,对其造成的伤害提升。\\n受到来自水属性敌人的伤害提升,对其造成的伤害降低。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "buff":["BT_SEAL_COUNTER"],
+      "debuff":["BT_STAT|ST_ATK_IR","BT_SEALED"]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Moonfall, Death</color>: Used when Enraged ends.\\nDeals lethal damage to all enemies.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제 불가능한 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>낙월, 절명</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【落月、絶命】</color>:【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>落月与绝命</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff":["BT_STAT|ST_ATK_IR","BT_DAMGE_TAKEN"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "440700174-11-1",
+  "Name": {
+    "en": "Self-Styled Automaton",
+    "kr": "자칭 자동인형",
+    "jp": "自称オートマタ",
+    "zh": "自称机械人偶"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 120,
+  "icons": "2000099",
+  "BuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Self-Styled Automaton (Stage 5)",
+      "kr": "자칭 자동인형 (5단계)",
+      "jp": "自称オートマタ(5段階)",
+      "zh": "自称机械人偶(第5阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70701105",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Delta Burst",
+        "kr": "델타 버스트",
+        "jp": "デルタバースト",
+        "zh": "德尔塔爆发"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. This attack prioritizes the enemy's <color=#28d9ed>front line</color>. When attacking a <color=#28d9ed>non-Defender</color> enemy, inflicts <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n<color=#28d9ed>전열</color>의 적을 우선적으로 공격합니다. <color=#28d9ed>방어형</color>이 아닌 적 공격 시 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>前</color>の敵を優先的に攻撃する。<color=#28d9ed>防御型</color>以外の敵攻撃時、対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人。\\n优先攻击<color=#28d9ed>前排</color>敌人。非<color=#28d9ed>防御型</color>敌人攻击时,对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000099",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Code: Machine Gun Fist",
+        "kr": "코드 : 머신건 피스트",
+        "jp": "コード:マシンガンフィスト",
+        "zh": "代码:机枪拳"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect)\\nPrepares the <color=#28d9ed>Revenge</color> effect for every <color=#28d9ed>cooldown cycle</color> of the skill.\\nWhen <color=#28d9ed>Revenge</color> is activated, attacks the target and inflicts reduced <color=#28d9ed>Defense</color> for <color=#28d9ed>5 turn(s)</color>.",
+        "kr": "(발동 효과)\\n스킬의 <color=#28d9ed>쿨타임</color>마다 <color=#28d9ed>복수</color> 효과를 준비합니다.\\n<color=#28d9ed>복수</color> 발동 시 대상을 공격하고 <color=#28d9ed>5턴</color>동안 적 전체의 <color=#28d9ed>방어력</color>을 감소시킵니다.",
+        "jp": "(発動効果)<color=#28d9ed>スキルターン</color>ごとに<color=#28d9ed>【復讐】</color>を発動する。\\n<color=#28d9ed>【復讐】</color>:対象にダメージを与え、敵全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>5ターン</color>の間DOWNさせる。",
+        "zh": "(触发效果)\\n技能<color=#28d9ed>冷却时间</color>准备<color=#28d9ed>复仇</color>效果。\\n<color=#28d9ed>复仇</color>发动时,攻击目标,并使全体敌人的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>5回合</color>。"
+      },
+      "icon": "Skill_Second_2000099",
+      "buff": [
+        "SYS_BUFF_REVENGE"
+      ],
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Delta's Forbidden Technique",
+        "kr": "델타의 금지 기술",
+        "jp": "デルタの禁断の技",
+        "zh": "德尔塔禁术"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. After attacking, inflicts <color=#28d9ed>Stunned</color> on all enemies for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 대상 전체에게 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、対象全体に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。攻击后,对所有目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000099",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Delta's Forbidden Technique",
+        "kr": "델타의 금지 기술",
+        "jp": "デルタの禁断の技",
+        "zh": "德尔塔禁术"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces damage dealt to Fire enemies, and increases damage taken from them.\\nReduces Effectiveness and Resilience of non-Fire enemies.\\nIncreases damage taken from Mage enemies.",
+        "kr": "(패시브 효과)\\n화속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.\\n화속성이 아닌 적의 효과 적중과 효과 저항이 감소합니다.\\n마법형 적에게 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n火属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。\\n火属性以外の敵の効果命中・効果抵抗をDOWNさせる。\\n魔法型の敵から受けるダメージがUPする。",
+        "zh": "(被动效果)\\n对火属性敌人造成的伤害降低,且所受伤害提升。\\n非火属性敌人的效果命中和效果抵抗降低。\\n受到来自魔法型敌人的伤害提升。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "debuff": [
+        "BT_STAT|ST_BUFF_CHANCE_IR",
+        "BT_STAT|ST_BUFF_RESIST_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Deals heavy damage to all enemies.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> :  적 전체에게 큰 피해를 입힙니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:敵全体に大ダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:对全体敌人造成巨额伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "ID": "2000055",
+  "Fullname": "Aer",
+  "Fullname_jp": "アエル",
+  "Fullname_kr": "아에르",
+  "Fullname_zh": "艾耶尔",
+  "Rarity": 3,
+  "Element": "Fire",
+  "Class": "Striker",
+  "SubClass": "Attacker",
+  "rank": "S",
+  "rank_pvp": "C",
+  "role": "dps",
+  "tags": [
+    "free"
+  ],
+  "skill_priority": {
+    "First": {
+      "prio": 3
+    },
+    "Second": {
+      "prio": 2
+    },
+    "Ultimate": {
+      "prio": 1
+    }
+  },
+  "Chain_Type": "Join",
+  "gift": "Luxury",
+  "video": "X1IylquwEHY",
+  "VoiceActor": "VA. Anairis Quiñones",
+  "VoiceActor_jp": "CV. ファイルーズあい",
+  "VoiceActor_kr": "CV. 정혜원",
+  "VoiceActor_zh": "CV. 菲鲁兹·蓝",
+  "transcend": {
+    "1": null,
+    "2": null,
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\n+4% Ally Team Critical Damage\n+1 Chain Passive Weakness Gauge damage",
+    "4_1_jp": "ATK DEF HP +16%\n味方の会心ダメージ+4%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 치명 피해 +4%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n友军暴击伤害+4%\n连携被动技能的WG降低量+1",
+    "4_2": "ATK DEF HP +19%",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "5_2": "ATK DEF HP +25%",
+    "5_3": "ATK DEF HP +28%",
+    "6": "ATK DEF HP +30%\n+4% Ally Team Critical Damage\n+25 Action Points at battle start",
+    "6_jp": "ATK DEF HP +30%\n味方の会心ダメージ+4%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n아군 치명 피해 +4%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n友军暴击伤害+4%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "5501",
+      "IconName": "Skill_First_2000055",
+      "SkillType": "SKT_FIRST",
+      "name": "Whatever!",
+      "name_jp": "くるっとターン♪",
+      "name_kr": "어떻게든 되겠지!",
+      "name_zh": "顺其自然吧!",
+      "true_desc": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to grant the caster increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+      "true_desc_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+      "true_desc_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+10%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "3_zh": [
+          "效果触发几率+10%"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "+15% damage"
+        ],
+        "5_jp": [
+          "ダメージ+15%"
+        ],
+        "5_kr": [
+          "피해량 +15%"
+        ],
+        "5_zh": [
+          "伤害量+15%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "5502",
+      "IconName": "Skill_Second_2000055",
+      "SkillType": "SKT_SECOND",
+      "name": "To the Beach?",
+      "name_jp": "みんなもサーフィンしよっ!",
+      "name_kr": "여름으로 가는 물?",
+      "name_zh": "冲向夏天",
+      "true_desc": "When using this skill, <color=#28d9ed>removes all</color> <color=#28d9ed>buffs</color> on the target and attacks the enemy. If the caster is granted increased <color=#28d9ed>Critical Hit Chance</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. This attack bypasses the target's Resilience.",
+      "true_desc_jp": "スキル使用時、敵単体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、ダメージを与える。自分の<color=#28d9ed>会心率</color>がUPした状態の場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。この攻撃は対象の効果抵抗を無視する。",
+      "true_desc_kr": "스킬 사용 시 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 자신의 <color=#28d9ed>치명 확률</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 이 공격은 대상의 효과 저항을 무시합니다.",
+      "true_desc_zh": "使用技能时,使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>并攻击敌人。若自身的<color=#28d9ed>暴击率</color>处于提升状态,则使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。该攻击无视目标的效果抵抗。",
+      "enhancement": {
+        "2": [
+          "+5% Priority",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "行動ゲージ5%UP",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "행동 게이지 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "行动值+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "+5% Priority",
+          "+20% damage"
+        ],
+        "5_jp": [
+          "行動ゲージ5%UP",
+          "ダメージ+20%"
+        ],
+        "5_kr": [
+          "행동 게이지 +5%",
+          "피해량 +20%"
+        ],
+        "5_zh": [
+          "行动值+5%",
+          "伤害量+20%"
+        ]
+      },
+      "cd": "4",
+      "wgr": 1,
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ],
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "Increases damage (Additional increase against Earth enemies)",
+          "effect_jp": "ダメージUP\\n(地属性の敵には\\n追加でダメージUP)",
+          "effect_kr": "피해 증가 (지속성 적에게는 추가로 피해 증가)",
+          "effect_zh": "伤害提升\\n(对土属性敌人造成的额外伤害提升)",
+          "cost": 80,
+          "level": 1,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_2": {
+          "effect": "Increases damage",
+          "effect_jp": "ダメージUP",
+          "effect_kr": "피해 증가",
+          "effect_zh": "伤害提升",
+          "cost": 120,
+          "level": 2,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_3": {
+          "effect": "Changed to Enhanced Skill\\nResets Gone Surfing! cooldown",
+          "effect_jp": "強化スキルに変更\\n【ハデに決めちゃうし!】\\nスキルターン初期化",
+          "effect_kr": "강화 스킬로 교체\\n다들 서핑하러 갔대! 쿨타임 초기화",
+          "effect_zh": "转化为强化技能\\n大家都去冲浪了!的冷却时间重置",
+          "cost": 160,
+          "level": 3,
+          "offensive": true,
+          "target": "mono"
+        }
+      },
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "5503",
+      "IconName": "Skill_Ultimate_2000055",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Gone Surfing!",
+      "name_jp": "ハデに決めちゃうし!",
+      "name_kr": "다들 서핑하러 갔대!",
+      "name_zh": "大家都去冲浪了!",
+      "true_desc": "Attacks an enemy. Increases damage dealt to enemies with <color=#28d9ed>buffs</color>.\\nWhen the enemy has no <color=#28d9ed>buffs</color> or is defeated after this skill is used, grants an <color=#28d9ed>extra turn</color>.\\nThis skill deals increased damage to Earth bosses.",
+      "true_desc_jp": "敵単体にダメージを与える。対象に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\nスキル使用後、対象に<color=#28d9ed>強化効果</color>がない、または敵が倒れた場合、<color=#28d9ed>追加ターン</color>を獲得する。\\nこのスキルは地属性のボスに与えるダメージがUPする。",
+      "true_desc_kr": "적을 공격합니다. <color=#28d9ed>강화 효과</color>를 보유한 적에게 입히는 피해가 증가합니다.\\n스킬 사용 후 대상에게 적용된 <color=#28d9ed>강화 효과</color>가 없거나, 적이 처치된 경우 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬은 지속성 보스에게 입히는 피해가 증가합니다.",
+      "true_desc_zh": "攻击敌人。对附带<color=#28d9ed>强化效果</color>敌人造成的伤害\\n提升。\\n使用技能后,若目标未附带<color=#28d9ed>强化效果</color>,或击杀敌人,则获得<color=#28d9ed>额外回合</color>。\\n该技能对土属性首领造成的伤害提升。",
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
+      },
+      "cd": "5",
+      "wgr": 2,
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "5504",
+      "IconName": "Skill_ChainPassive_Fire_Start",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: Attacks an enemy and increases <color=#28d9ed>Attack</color> of the caster for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Attacks an enemy and has a <color=#28d9ed>40%</color> chance to increase <color=#28d9ed>Critical Hit Chance</color> of the caster for <color=#28d9ed>2 turn(s)</color>.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+      "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+      "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击敌人,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ],
+      "debuff": [],
+      "dual_buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Legacy of the Dream",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Immortal Pride",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Starlight Road",
+        "mainStat": "HP%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "HP>SPD>DEF>EVA>RES",
+    "Note": "PvP:Vanguard's Charm3",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Swift Immu": {
+    "Weapon": [
+      {
+        "name": "Legacy of the Dream",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Immortal Pride",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Starlight Road",
+        "mainStat": "HP%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>SPD>DEF>EVA>RES",
+    "Note": "PvP:Vanguard's Charm3",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Swift Life": {
+    "Weapon": [
+      {
+        "name": "Legacy of the Dream",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Immortal Pride",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Starlight Road",
+        "mainStat": "HP%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Life", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "HP>SPD>DEF>EVA>RES",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Executioner's Charm3Sage's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

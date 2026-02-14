@@ -1,0 +1,28 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>CHC>ACC>EFF",
+    "Note": "Critical Hit Chance up to 50%",
+    "Talisman": [
+      "Rogue's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

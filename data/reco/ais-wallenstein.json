@@ -1,0 +1,123 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD>ACC",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "High Crit": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Critical Strike", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD>ACC",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ]
+  }
+  ,
+  "Penetration": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD>ACC",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Revenge Ais": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Revenge", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD>ACC",
+    "Note": "",
+    "Talisman": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ]
+  }
+}

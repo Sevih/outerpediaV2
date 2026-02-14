@@ -1,0 +1,157 @@
+{
+  "id": "403400357",
+  "Name": {
+    "en": "Grand Calamari",
+    "kr": "그랑 칼라마리",
+    "jp": "グラン・カラマリー",
+    "zh": "海怪"
+  },
+  "Surname": {
+    "en": "Deep Sea Terror",
+    "kr": "심해의 공포",
+    "jp": "深海に潜む恐怖",
+    "zh": "深海恐怖"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 70,
+  "icons": "4034003",
+  "BuffImmune": "BT_AGGRO,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_REMOVE_BUFF,BT_EXTEND_BUFF",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Grand Calamari (Stage 8)",
+      "kr": "그랑 칼라마리 (8 단계)",
+      "jp": "グラン・カラマリー(8段階)",
+      "zh": "调查海怪(第8阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Ecology Study",
+      "kr": "특별 의뢰 : 생태 조사",
+      "jp": "特別依頼:生態調査",
+      "zh": "特别委托:生态调查"
+    },
+    "area_id": {
+      "en": "50105008",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Piercing Tentacle",
+        "kr": "관통 촉수",
+        "jp": "触手突き",
+        "zh": "穿透触手"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. After attacking, grants the caster <color=#28d9ed>Immunity</color> for <color=#28d9ed>1 turn(s)</color> and increases the duration of all <color=#28d9ed>buffs</color> on the caster by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color>을 획득하고, 보유한 모든 <color=#28d9ed>강화 효과</color>의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>1ターン</color>の間付与し、自分に付与されたすべての<color=#28d9ed>強化効果</color>を <color=#28d9ed>1ターン</color>増加させる。",
+        "zh": "攻击全体敌人。攻击后,获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>1回合</color>,并使附带的所有<color=#28d9ed>强化效果</color>持续时间增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_4034003",
+      "buff": [
+        "BT_EXTEND_BUFF",
+        "BT_IMMUNE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Deep Sea Might",
+        "kr": "심해의 위력",
+        "jp": "深海の威力",
+        "zh": "深海的威力"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. Grants increased <color=#28d9ed>Attack, Speed,</color> and <color=#28d9ed>Critical Hit Chance</color> to all allies and enemies for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 아군과 적군 모두의 <color=#28d9ed>공격력, 속도, 치명 확률</color>이 증가합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、味方全体の<color=#28d9ed>攻撃力・スピード・会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "攻击全体敌人。攻击后,使全体友军和敌军的<color=#28d9ed>攻击力、速度、暴击率</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4034003",
+      "buff": [
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_SPEED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Eldritch Terror",
+        "kr": "미지의 공포",
+        "jp": "未知なる恐怖",
+        "zh": "未知的恐惧"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Inflicts reduced <color=#28d9ed>Effectiveness</color> on all enemies for <color=#28d9ed>2 turn(s)</color> after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 적 전체의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안  감소시킵니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击全体敌人。攻击后,使全体敌人的<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4034003",
+      "debuff": [
+        "BT_STAT|ST_BUFF_CHANCE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Deep Sea Exploration Armor",
+        "kr": "해저 탐사용 장갑",
+        "jp": "海底用ガントレット",
+        "zh": "海底探索用手套"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage dealt proportional to the number of <color=#28d9ed>buffs</color> on the caster.\\n\\nIncreases the effectiveness of all <color=#28d9ed>reduced stat</color> effects on the caster by <color=#28d9ed>50%</color>.",
+        "kr": "(패시브 효과)\\n자신이 보유한 <color=#28d9ed>강화 효과</color> 수량에 비례하여 피해량이 증가합니다.\\n\\n자신에게 적용되는 <color=#28d9ed>능력치 감소</color> 효과가 <color=#28d9ed>50%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n自分に付与された<color=#28d9ed>強化効果</color>の数に応じて、与えるダメージがUPする。\\n\\n自分に付与された<color=#28d9ed>ステータスDOWN</color>の効果が通常より<color=#28d9ed>50%</color>UPする。",
+        "zh": "(被动效果)\\n根据自身附带的<color=#28d9ed>强化效果</color>数量等比提升伤害量。\\n\\n使自身附带的<color=#28d9ed>能力值降低</color>效果提升<color=#28d9ed>50%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Maritime Protection",
+        "kr": "해구의 보호",
+        "jp": "海淵の加護",
+        "zh": "海丘的保护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nIf the caster has a buff when attacked, reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>.\\nReduces damage taken from <color=#28d9ed>Fire, Water,</color> and <color=#28d9ed>Earth</color> enemies, and increases damage taken from <color=#28d9ed>Light and Dark</color> enemies.",
+        "kr": "(패시브 효과)\\n피격 시 강화 효과를 보유하고 있었다면 받는 WG 피해가 <color=#28d9ed>50%</color> 감소합니다.\\n<color=#28d9ed>화속성, 수속성, 지속성</color> 적에게 받는 피해가 감소하고, <color=#28d9ed>명속성 및 암속성</color> 적에게 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n攻撃を受けた時、自分に強化効果がある場合、受けるWGダメージが <color=#28d9ed>50%</color>DOWNする。\\n<color=#28d9ed>火・水・地属性</color>の敵から受けるダメージがDOWNし、<color=#28d9ed>光・闇属性</color>の敵から受けるダメージがUPする。",
+        "zh": "(被动效果)\\n受到攻击时,若附带强化效果,则使所受WG伤害降低<color=#28d9ed>50%</color>。\\n受到来自<color=#28d9ed>火属性、水属性、土属性</color>敌人的伤害降低,并使受到来自<color=#28d9ed>光属性、暗属性</color>敌人的伤害提升。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns. \\n\\n<color=#28d9ed>Enraged</color>: Inflicts an irremovable effect on all enemies that decreases Speed and Attack for 4 turn(s), and recovers 10% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Divinity Manifest</color>: Used when Enraged ends.\\nHeals for <color=#28d9ed>50%</color> of Max Health, and inflicts irremovable <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 적 전체에게 해제되지 않는 속도/공격력 감소 효과를 4턴 동안 부여하고, 10%의 WG를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>신성 강림</color> : 광폭화 종료 시 사용.\\n최대 체력의 <color=#28d9ed>50%</color>를 회복하고, 적 전체에게 <color=#28d9ed>3턴</color> 동안 해제되지 않는 <color=#28d9ed>강화 불가</color>를 부여합니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:敵全体に解除不可能なスピードDOWNと攻撃力DOWN効果を4ターンの間付与し、WGを10%回復する。【狂暴化】は4ターンの間持続する。\\n\\n<color=#28d9ed>【神聖降臨】</color>:【狂暴化】終了時に発動する。\\n自分の最大HPの<color=#28d9ed>50%</color>を回復し、敵全体に<color=#28d9ed>強化不可</color>を<color=#28d9ed>3ターン</color>の間付与する。(解除不可)",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:对全体敌人造成无法被解除的速度/攻击力降低效果,持续-30%回合,并使WG恢复10%。狂暴化持续4回合。\\n\\n<color=#28d9ed>神圣降临</color>:狂暴化结束时发动。\\n恢复生命值上限的<color=#28d9ed>50%</color>,并对全体敌人造成无法被解除的<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "debuff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_STAT|ST_SPEED_IR",
+        "IG_Buff_Effect_Sealed_Interruption_D"
+      ]
+    }
+  ]
+}

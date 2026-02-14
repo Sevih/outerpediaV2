@@ -1,0 +1,144 @@
+{
+  "id": "4086009",
+  "Name": {
+    "en": "Primordial Sentinel",
+    "kr": "태고의 파수병",
+    "jp": "太古の番兵",
+    "zh": "远古哨兵"
+  },
+  "Surname": {
+    "en": "Weapon of the Lost Age",
+    "kr": "잊힌 시대의 무기",
+    "jp": "忘れられた時代の武器",
+    "zh": "被遗忘时代的武器"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 60,
+  "icons": "4086007",
+  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_DOT_BURN,BT_DOT_CURSE,BT_DOT_BLEED,BT_DOT_POISON,BT_DOT_LIGHTNING,BT_DOT_2000092",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Very Hard League",
+      "kr": "베리 하드 리그",
+      "jp": "ベリーハードリーグ",
+      "zh": "极难联赛"
+    },
+    "mode": {
+      "en": "World Boss",
+      "kr": "월드 보스",
+      "jp": "ワールドボス",
+      "zh": "世界首领"
+    },
+    "area_id": {
+      "en": "55100003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Repulsor Beam",
+        "kr": "리펄서 빔",
+        "jp": "リパルサー・ビーム",
+        "zh": "冲击光束"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.",
+        "kr": "적을 공격합니다.",
+        "jp": "敵単体にダメージを与える。",
+        "zh": "攻击敌人。"
+      },
+      "icon": "Skill_First_4086007"
+    },
+    {
+      "name": {
+        "en": "Quasar Bombardment",
+        "kr": "퀘이사 포격",
+        "jp": "クエーサー砲撃",
+        "zh": "类星体炮击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. For each target inflicted with <color=#28d9ed>Shocked</color>, reduces <color=#28d9ed>Chain Points</color> of enemies by <color=#28d9ed>5</color>.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>감전</color>을 보유한 대상 한 명마다 적의 <color=#28d9ed>CP</color>를 <color=#28d9ed>5</color> 감소시킵니다.",
+        "jp": "敵全体にダメージを与える。<color=#28d9ed>感電</color>状態の対象1体ごとに敵の<color=#28d9ed>CP</color>を<color=#28d9ed>5</color>DOWNさせる。",
+        "zh": "攻击全体敌人。每名附带<color=#28d9ed>触电</color>的目标使敌人的<color=#28d9ed>CP</color>降低<color=#28d9ed>5</color>。"
+      },
+      "icon": "Skill_Second_4086007",
+      "debuff":["BT_CP_CHARGE"]
+    },
+    {
+      "name": {
+        "en": "Particle Disintegration",
+        "kr": "입자 붕괴",
+        "jp": "粒子崩壊",
+        "zh": "粒子衰变"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>2 turn(s)</color>. This attack ignores the target's Immunity.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다. 이 공격은 대상의 면역 효과를 무시합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。この攻撃は対象の免疫効果を無視する。",
+        "zh": "攻击全体敌人,有<color=#28d9ed>100%</color>几率使目标陷入<color=#28d9ed>触电</color>状态,持续<color=#28d9ed>2回合</color>。该攻击无视目标的免疫效果。"
+      },
+      "icon": "Skill_Ultimate_4086007",
+      "debuff":["BT_DOT_LIGHTNING"]
+    },
+    {
+      "name": {
+        "en": "Primordial Weapon",
+        "kr": "태고의 병기",
+        "jp": "太古の兵器",
+        "zh": "远古兵器"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage taken from Fire, Water, and Earth enemies.\\nInflicts <color=#28d9ed>Dual Attack Disabled</color> on all enemies, and reduces Speed of Light and Dark enemies. This effect cannot be removed until the Boss is killed.\\n\\nReduces damage taken from skills other than Burst Skills and Skill Chains, and reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>.\\n\\nGreatly reduces damage taken from Light and Dark enemies, and does not take Weakness Gauge damage.",
+        "kr": "(패시브 효과)\\n화속성, 수속성, 지속성 적에게 받는 피해가 증가합니다.\\n적 전체에게 <color=#28d9ed>협공 불가</color>를 부여하고, 명속성과 암속성 적의 속도를 감소시킵니다. 이 효과는 보스가 사망하기 전까지 해제되지 않습니다.\\n\\n버스트 스킬, 스킬 체인을 제외한 스킬로 받는 피해를 감소시키고, WG 피해를 <color=#28d9ed>50%</color> 감소시킵니다.\\n\\n명속성, 암속성 적에게 받는 피해를 크게 감소시키고, WG 피해를 받지 않습니다.",
+        "jp": "(パッシブ効果)\\n火・水・地属性の敵から受けるダメージがUPする。\\n敵全体に<color=#28d9ed>連携不可</color>を付与し、光・闇属性の敵のスピードをDOWNさせる。この効果はボスが倒れるまで解除されない。\\n\\nバーストスキル、チェーンスキル以外のスキルから受けるダメージをDOWNさせ、WGダメージを<color=#28d9ed>50%</color>DOWNさせる。\\n\\n光・闇属性の敵から受けるダメージを大幅にDOWNさせ、WGダメージを受けない。",
+        "zh": "(被动效果)\\n火属性、水属性、土属性敌人带来的伤害提升。\\n使全体敌人陷入<color=#28d9ed>无法夹攻</color>状态,并使光属性和暗属性敌人的速度降低。首领死亡前该效果不会被解除。\\n\\n使爆发技能、连携技能以外的技能造成的伤害降低,且WG伤害降低<color=#28d9ed>50%</color>。\\n\\n使光属性、暗属性敌人带来的伤害大幅降低,且不受到WG伤害。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "debuff":["BT_SEAL_BT_CALL_BACKUP_IR","BT_STAT|ST_SPEED_IR"]
+    },
+    {
+      "name": {
+        "en": "Totalizing Degradation!",
+        "kr": "모조리 분해하라!",
+        "jp": "残さず分解せよ!",
+        "zh": "统统分解吧!"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect) Grants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +50% Priority recovery efficiency\\nMage: Increased damage\\nDefender: Inflicts reduced Defense on the Boss for 4 turns when performing an action\\nRanger: Inflicts reduced Resilience on the Boss for 4 turns when performing an action\\nHealer: Inflicts reduced Speed on the Boss for 4 turns when performing an action.\\n(Triggered Effect) After using <color=#28d9ed>Repulsor Beam</color> and <color=#28d9ed>Quasar Bombardment</color>, when granted <color=#28d9ed>Core Energy</color>, attacks all enemies. After attacking, grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>5 turn(s)</color>.",
+        "kr": "(패시브 효과)적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 행동 게이지 회복 효율 +50%\\n마법형 : 피해 증가\\n방어형 : 행동 시 보스의 방어력 감소 4턴\\n속도형 : 행동 시 보스의 효과 저항 감소 4턴\\n회복형 : 행동 시 보스의 속도 감소 4턴\\n(발동 효과) <color=#28d9ed>리펄서 빔</color>, <color=#28d9ed>퀘이사 포격</color> 사용 후, <color=#28d9ed>코어 에너지</color>를 보유하고 있었다면 적 전체를 공격합니다. 공격 후 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>속도</color>가 증가합니다.",
+        "jp": "(パッシブ効果)敵全体に【絶望に立ち向かう勇気】を付与する。自分の戦闘タイプに応じて<color=#28d9ed>特別な効果</color>が付与される。\\n\\n攻撃型:行動ゲージUPの効率+50%\\n魔法型:ダメージUP\\n防御型:行動時、ボスの防御力DOWN4ターン\\nスピード型:行動時、ボスの効果抵抗DOWN4ターン\\n回復型:行動時、ボスのスピードDOWN4ターン\\n(発動効果)<color=#28d9ed>【リパルサー・ビーム】</color>、<color=#28d9ed>【クエーサー砲撃】</color>使用後、<color=#28d9ed>コアの力</color>がある場合、敵全体にダメージを与える。攻撃後、<color=#28d9ed>スピード</color>が<color=#28d9ed>5ターン</color>の間UPする。",
+        "zh": "(被动效果)使用<color=#28d9ed>冲击光束</color>、<color=#28d9ed>类星体炮击</color>后,若持有\\n<color=#28d9ed>核心能量</color>,则攻击全体敌人。\\n攻击后,使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>5回合</color>。\\n\\n敌人队伍获得面对绝境的勇气。根据自身职业获得<color=#28d9ed>特殊效果</color>。\\n\\n攻击型:行动值恢复效率+50%\\n魔法型:伤害提升\\n防御型:行动时首领防御力降低4回合\\n速度型:行动时首领效果抵抗降低4回合\\n恢复型:行动时首领速度降低4回合"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "buff":["UNIQUE_DAHLIA_A","BT_STAT|ST_SPEED"]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086007"
+    }
+  ]
+}

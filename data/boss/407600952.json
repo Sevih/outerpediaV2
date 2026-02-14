@@ -1,0 +1,154 @@
+{
+  "id": "407600952",
+  "Name": {
+    "en": "Amadeus",
+    "kr": "아마데우스",
+    "jp": "アマデウス",
+    "zh": "阿玛迪斯"
+  },
+  "Surname": {
+    "en": "Archdemon of the Dirge",
+    "kr": "장송의 마왕",
+    "jp": "葬送の魔王",
+    "zh": "送葬魔王"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 35,
+  "icons": "4076009",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "location": {
+    "dungeon": {
+      "en": "Amadeus (Stage 3)",
+      "kr": "아마데우스 (3 단계)",
+      "jp": "アマデウス(3段階)",
+      "zh": "阿玛迪斯(第3阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Identification",
+      "kr": "특별 의뢰 : 정체 규명",
+      "jp": "特別依頼:正体究明",
+      "zh": "特别委托:查清身份"
+    },
+    "area_id": {
+      "en": "50205003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Rondo of Blood",
+        "kr": "피의 론도",
+        "jp": "ブラッディロンド",
+        "zh": "血之回旋曲"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. After attacking, reduces the duration of <color=#28d9ed>buffs</color> on the target by <color=#28d9ed>1 turn</color>.",
+        "kr": "적을 공격합니다. 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与える。攻撃後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>減少させる。",
+        "zh": "攻击敌人。攻击后,使目标的<color=#28d9ed>强化效果</color>减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_4076009",
+      "debuff": [
+        "BT_EXTEND_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Concerto of the Midnight Sun",
+        "kr": "백야의 협주곡",
+        "jp": "白夜のコンチェルト",
+        "zh": "白夜协奏曲"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_Second_4076009"
+    },
+    {
+      "name": {
+        "en": "Symphony of the Night",
+        "kr": "월하의 야상곡",
+        "jp": "月下のノットゥルノ",
+        "zh": "月下夜曲"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>3 turn(s)</color> after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、<color=#28d9ed>会心発生率</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "zh": "攻击全体敌人。攻击后,<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4076009",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Prelude of Darkness",
+        "kr": "칠흑의 전주곡",
+        "jp": "漆黒の前奏曲",
+        "zh": "漆黑前奏曲"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen an enemy uses a non-attack skill, grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>5 turn(s)</color>. This effect cannot be removed.",
+        "kr": "(패시브 효과)\\n적이 공격이 아닌 스킬 사용 시, <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다. 이 효과는 해제되지 않습니다.",
+        "jp": "(パッシブ効果)\\n敵が攻撃以外のスキルを使用時、<color=#28d9ed>会心発生率</color>が<color=#28d9ed>5ターン</color>の間UPする。この効果は解除されない。",
+        "zh": "(被动效果)\\n敌人使用非攻击类技能时,使<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>5回合</color>。该效果不会被解除。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect that reduces damage taken and Harmony of Despair to the caster for 6 turns and restores 30% Weakness Gauge. Enraged lasts for 6 turns.\\n\\n<color=#28d9ed>Moonlit Nocturne</color>: Used when Enraged ends.\\nKills all enemies.\\n\\n<color=#ffd732>If enraged within 4 turns, grants 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 받는 피해 감소/절망의 하모니 효과를 6턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 6턴 동안 유지됩니다.\\n\\n<color=#28d9ed>월야의 녹턴</color> : 광폭화 종료 시 사용.\\n적 전체를 사망시킵니다.\\n\\n<color=#ffd732>4턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な受けるダメージDOWN・【絶望のハーモニー】を6ターンの間付与し、WGを30%回復する。【狂暴化】は6ターンの間持続する。\\n\\n<color=#28d9ed>【月夜のノクターン】</color>:【狂暴化】終了時に発動し、\\n敵全体を倒す。\\n\\n<color=#ffd732>戦闘開始時から4ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的所受伤害降低/绝望的和声效果,持续6回合,并使WG恢复30%。狂暴化持续6回合。\\n\\n<color=#28d9ed>月夜的夜曲</color>:狂暴化结束时发动。\\n使全体敌人死亡。\\n\\n<color=#ffd732>在4回合内陷入狂暴化状态时,恢复80CP。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_CP_CHARGE",
+        "BT_DAMGE_TAKEN",
+        "HARMONY_DESPAIR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Snow-white Embrace",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHD>CHC>SPD",
+    "Note": "You only need 50% Critical Hit Chance thanks to Noa Kaizer X",
+    "Talisman": [
+      "Mage's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "CritDmg": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Snow-white Embrace",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Critical Strike", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHD>CHC>SPD",
+    "Note": "You only need 50% Critical Hit Chance thanks to Noa Kaizer X",
+    "Talisman": [
+      "Mage's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "Pene": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Snow-white Embrace",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHD>CHC>SPD",
+    "Note": "You only need 50% Critical Hit Chance thanks to Noa Kaizer X",
+    "Talisman": [
+      "Mage's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "id": "4318052",
+  "Name": {
+    "en": "Annihilator",
+    "kr": "말살자",
+    "jp": "エクスタミネーター",
+    "zh": "歼灭者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 80,
+  "icons": "4018002",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_AGGRO,BT_SILENCE,BT_FREEZE,BT_STONE,BT_SEALED,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "location": {
+    "dungeon": {
+      "en": "Defeat the Annihilator Hard",
+      "kr": "말살자 처치 하드",
+      "jp": "抹殺者討伐(ハード)",
+      "zh": "击杀歼灭者困难"
+    },
+    "mode": {
+      "en": "Joint Challenge",
+      "kr": "합동 챌린지",
+      "jp": "共同作戦",
+      "zh": "联合挑战"
+    },
+    "area_id": {
+      "en": "90100100",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Target Acquired",
+        "kr": "타겟 포착",
+        "jp": "ターゲット解除",
+        "zh": "捕捉目标"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. Upon attack, gains a <color=#28d9ed>Barrier</color> for <color=#28d9ed>1 turns</color>.",
+        "kr": "적을 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 획득합니다.",
+        "jp": "敵単体にダメージを与える。攻撃後、<color=#28d9ed>1ターン</color>の間、<color=#28d9ed>シールド</color>を獲得する。",
+        "zh": "攻击敌人。攻击后,获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_4014002",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
+    },
+    {
+      "name": {
+        "en": "Neutralize All Fronts",
+        "kr": "전방위 무력화",
+        "jp": "前方無力化",
+        "zh": "全方位无力化"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. Upon attack, decreases all Enemies' <color=#28d9ed>Attack/Critical Hit Chance/Critical Damage</color> for <color=#28d9ed>9 turns,</color> and reduces the <color=#28d9ed>Priority Gauge</color> of all non-<color=#28d9ed>Healer</color> Enemies to zero.",
+        "kr": "적 전체를 공격합니다. 공격 후 적 전체의 <color=#28d9ed>공격력/치명 확률/치명 피해</color>를 <color=#28d9ed>9턴</color> 동안 감소시키고, <color=#28d9ed>회복형</color>이 아닌 적 전체의 <color=#28d9ed>행동 게이지</color>를 모두 감소시킵니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、敵全体の<color=#28d9ed>攻撃力/会心率/会心ダメージ</color>を<color=#28d9ed>9ターン</color>の間DOWNさせ、<color=#28d9ed>回復型</color>以外の敵全体の<color=#28d9ed>行動ゲージ</color>を全てDOWNさせる。",
+        "zh": "攻击全体敌人。攻击后,使全体敌人的<color=#28d9ed>攻击力/暴击率/暴击伤害</color>降低,持续<color=#28d9ed>9回合</color>。使非<color=#28d9ed>恢复型</color>全体敌人的<color=#28d9ed>行动值</color>全部减少。"
+      },
+      "icon": "Skill_Second_4014002",
+      "debuff": [
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Program Annihilation",
+        "kr": "프로그램 말살",
+        "jp": "プログラム壊滅",
+        "zh": "抹杀程序"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Upon attack, removes all <color=#28d9ed>Enhancement Effects</color> from all enemies and inflicts <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>9 turns</color>.\\nGrants an extra turn after attack.",
+        "kr": "적 전체를 공격합니다. 공격 후 적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제시키고, <color=#28d9ed>9턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.\\n공격 후 추가 턴을 획득합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、敵全体の<color=#28d9ed>強化効果</color>を全て解除させ、<color=#28d9ed>9ターン</color>の間<color=#28d9ed>強化不可</color>を付与する。\\n攻撃後、追加ターンを獲得する。",
+        "zh": "攻击全体敌人。攻击后,解除全体敌人的<color=#28d9ed>强化效果</color>,并赋予<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>9回合</color>。\\n攻击后,获得额外回合。"
+      },
+      "icon": "Skill_Ultimate_4014002",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Plasma Oscillations",
+        "kr": "플라즈마 진동",
+        "jp": "プラズマ波",
+        "zh": "等离子震荡"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nRight after all attacks, does not trigger an enemy's Counterattack, Revenge, or Agile Response.\\n\\nWhen hit by a single-target attack, final damage is reduced by <color=#28d9ed>70%</color>, and Weakness Gauge damage is not taken. Additionally, Weakness Gauge is recovered by <color=#28d9ed>3</color>. (Only the highest final damage reduction value applies.)\\n\\nWhen an Enemy uses a skill that is not an attack, they take <color=#28d9ed>10000</color> Fixed Damage twice.\\n\\nEach time an Enemy takes an action other than <color=#28d9ed>Burst Skill/Dual Attack/Skill Chain</color>, all Dark Enemies' damage increases by <color=#28d9ed>30%</color>.\\n\\nThe Action Point cost for non-Dark Enemies increases by <color=#28d9ed>50%</color>.\\n\\nThe<color=#28d9ed>Cursed/Fixed Damage</color> the boss receives cannot exceed <color=#28d9ed>10000</color>.\\n\\nAll attacks deal more damage the fewer targets there are.",
+        "kr": "(패시브 효과)\\n모든 공격 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.\\n\\n단일 공격으로 피격 시 최종 피해가 <color=#28d9ed>70%</color> 감소하고, WG 피해를 받지 않습니다. 추가로 WG를 <color=#28d9ed>3</color> 회복합니다. (최종 피해 감소는 가장 높은 값만 적용)\\n\\n적이 공격이 아닌 스킬 사용 시 <color=#28d9ed>10000</color>의 고정 피해를 2회 입습니다.\\n\\n적이 <color=#28d9ed>버스트 스킬/협공/스킬 체인</color>을 제외한 행동을 할 때마다 암속성 적 전체의 피해가 <color=#28d9ed>30%</color> 증가합니다.\\n\\n암속성이 아닌 적의 AP 소모량이 <color=#28d9ed>50%</color> 증가합니다.\\n\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>10000</color>을 초과하지 않습니다.\\n\\n모든 공격은 대상이 적을 수록 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\nすべての攻撃直後には敵の反撃、復讐、迅速対応が発動しない。\\n\\n単体攻撃でダメージを受けた場合、最終ダメージが<color=#28d9ed>70%</color>DOWNし、WGダメージを受けません。追加でWGを<color=#28d9ed>3</color>UPする。(最終ダメージDOWNは最も高い値のみ適用)\\n\\n敵が攻撃以外のスキルを使用した場合、<color=#28d9ed>10000</color>の固定ダメージを2回受ける。\\n\\n敵が<color=#28d9ed>バーストスキル/連携/チェーンスキル</color>を除く行動をするたびにを除くの敵全体のダメージが<color=#28d9ed>30%</color>増加する。\\n\\n闇属性以外の敵のAP消費量が<color=#28d9ed>50%</color>増加する。\\n\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>10000</color>を超えない。\\n\\nすべての攻撃は対象が少ないほどダメージがUPする。",
+        "zh": "(被动效果)\\n所有攻击发动后,不会触发敌人的反击、复仇、迅速应对效果。\\n\\n受到单体攻击时,最终伤害量降低<color=#28d9ed>70%</color>,不受到WG伤害。WG额外恢复<color=#28d9ed>3</color>。(降低最终伤害效果仅以最高值生效)\\n\\n敌人使用非攻击类技能时,受到2次<color=#28d9ed>10000</color>固定伤害。\\n\\n敌人执行<color=#28d9ed>爆发技能/夹攻/连携技能</color>以外的行动时,暗属性全体敌人的伤害增加<color=#28d9ed>30%</color>。\\n\\n非暗属性敌人的AP消耗量增加<color=#28d9ed>50%</color>。\\n\\n首领受到的<color=#28d9ed>诅咒/固定伤害</color>的伤害量无法超过<color=#28d9ed>10000</color>。\\n\\n所有攻击若目标数量越少,则伤害越高。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_SEAL_COUNTER",
+        ""
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases attack and reduces damage taken for 3 turns, and recovers Weakness Gauge by 10%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Used when Enraged ends.\\nAttacks all enemies, and resets skill cooldowns of <color=#28d9ed>all skills</color> of the caster.",
+        "kr": "4턴마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>광폭화 필살기</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고, 자신의 <color=#28d9ed>모든 스킬</color>의 쿨타임이 초기화 됩니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【必殺スキル】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、自分の<color=#28d9ed>すべてのスキル</color>のスキルターンを初期化する。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>狂暴化必杀技</color>:狂暴化结束时发动。\\n攻击全体敌人,并使自身<color=#28d9ed>所有技能</color>的冷却时间重置。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_COOL_CHARGE",
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

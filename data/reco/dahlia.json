@@ -1,0 +1,52 @@
+{
+  "Speed damage": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>>ACC>EFF",
+    "Note": "", 
+    "Talisman": [
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  },
+  "Speed Tanky": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      }
+    ], 
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>>ACC>EFF",
+    "Note": "", 
+    "Talisman": [
+      "Sage's Charm",
+      "Executioner's Charm"
+    ]
+  }
+}

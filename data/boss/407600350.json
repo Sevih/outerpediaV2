@@ -1,0 +1,132 @@
+{
+  "id": "407600350",
+  "Name": {
+    "en": "Dek'Ril",
+    "kr": "데그릴",
+    "jp": "デグリル",
+    "zh": "泰格里尔"
+  },
+  "Surname": {
+    "en": "Ancient Armored Beetle",
+    "kr": "태고의 중갑충",
+    "jp": "太古の重甲虫",
+    "zh": "太古重甲虫"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 25,
+  "icons": "4076003",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE,BT_SEALED",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Dek'Ril & Mek'Ril (Stage 1)",
+      "kr": "데그릴 & 메그릴 (1 단계)",
+      "jp": "デグリル&メグリル(1段階)",
+      "zh": "泰格里尔&梅格里尔(第1阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Identification",
+      "kr": "특별 의뢰 : 정체 규명",
+      "jp": "特別依頼:正体究明",
+      "zh": "特别委托:查清身份"
+    },
+    "area_id": {
+      "en": "50201001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Chiron",
+        "kr": "케이론",
+        "jp": "ケイロン",
+        "zh": "凯隆"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nAfter attacking, <color=#28d9ed>heals</color> <color=#28d9ed>Mek'Ril</color>'s Health.\\n\\nAfter attacking, increases all attacks' damage dealt by <color=#28d9ed>7%</color>.",
+        "kr": "적을 공격합니다.\\n공격 후 <color=#28d9ed>메그릴</color>의 체력을 <color=#28d9ed>회복</color>시킵니다.\\n\\n공격 후 모든 공격의 피해량이 <color=#28d9ed>7%</color> 증가합니다.",
+        "jp": "敵単体にダメージを与える。\\n攻撃後<color=#28d9ed>【メグリル】</color>のHPを<color=#28d9ed>回復</color>する。\\n\\n攻撃後、すべての攻撃のダメージが<color=#28d9ed>7%</color>UPする。",
+        "zh": "攻击敌人。\\n攻击后,使<color=#28d9ed>梅格里尔</color>的生命值<color=#28d9ed>恢复</color>。\\n\\n攻击后,使所有攻击的伤害量提升<color=#28d9ed>7%</color>。"
+      },
+      "icon": "Skill_First_4076003"
+    },
+    {
+      "name": {
+        "en": "Atlas",
+        "kr": "아틀라스",
+        "jp": "アトラス",
+        "zh": "阿特拉斯"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_Second_4076003"
+    },
+    {
+      "name": {
+        "en": "Survival Instinct",
+        "kr": "생존본능",
+        "jp": "生存本能",
+        "zh": "生存本能"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of a turn, if the caster is currently inflicted with <color=#28d9ed>Burned</color>, becomes <color=#28d9ed>Unhealable</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIncreases damage dealt to non-Fire enemies and reduces damage taken from them.\\nReduces damage dealt to Fire enemies and increases damage taken from them.",
+        "kr": "(패시브 효과)\\n턴 시작 시 <color=#28d9ed>화상</color> 상태라면, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color> 상태가 됩니다.\\n\\n화속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n화속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\nターン開始時、<color=#28d9ed>火傷</color>状態の場合、<color=#28d9ed>回復不可</color>を<color=#28d9ed>2ターン</color>の間付与される。\\n\\n火属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n火属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "zh": "(被动效果)\\n回合开始时,若处于<color=#28d9ed>烧伤</color>状态,则会陷入<color=#28d9ed>无法恢复</color>状态,持续<color=#28d9ed>2回合</color>。\\n\\n对非火属性敌人造成的伤害提升,且所受伤害降低。\\n对火属性角色造成的伤害降低,且所受伤害提升。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_SEALED_RECEIVE_HEAL"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>70%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 5 turns and recovers Weakness Gauge by 30%. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Aktaion</color>: Used when Enraged ends.\\nDeals a large amount of damage to a single enemy and heals all allies by <color=#28d9ed>30%</color>.\\n\\n<color=#ffd732>If Enraged within 2 turns, grants 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>70%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 5턴 동안 부여하고, WG 30%를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>악타이온</color> : 광폭화 종료 시 사용.\\n단일 적에게 큰 피해를 입히고 아군 전체의 체력 <color=#28d9ed>30%</color>를 회복합니다.\\n\\n<color=#ffd732>2턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>70%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を5ターンの間付与し、WG30%を回復する。【狂暴化】は4ターンの間持続する。\\n\\n<color=#28d9ed>【アクタイオン】</color>:【狂暴化】終了時に発動する。\\n敵単体に大ダメージを与え、味方全体のHPを<color=#28d9ed>30%</color>回復する。\\n\\n<color=#ffd732>戦闘開始時から2ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>70%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至陷入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续5回合,并使WG恢复30%。狂暴化持续4回合。\\n\\n<color=#28d9ed>阿克特翁</color>:狂暴化结束时发动。\\n对单一敌人造成巨额伤害,使全体友军的生命值恢复<color=#28d9ed>30%</color>。\\n\\n<color=#ffd732>在2回合内陷入狂暴化状态时,恢复80CP。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_CP_CHARGE",
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

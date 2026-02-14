@@ -1,0 +1,47 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%/HP%/DEF%"
+      },
+      {
+        "name": "Heartunder's Blade",
+        "mainStat": "ATK%/HP%/DEF%"
+      },
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%/HP%/DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Gorgon's Vanity [Ranger]",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Ranger]",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>>CHC>ACC>ATK=CHD=HP",
+    "Note": "",
+    "Talisman": [
+      "Rogue's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

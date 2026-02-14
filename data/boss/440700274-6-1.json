@@ -1,0 +1,154 @@
+{
+  "id": "440700274-6-1",
+  "Name": {
+    "en": "Astral Guardian",
+    "kr": "아스트랄 가디언",
+    "jp": "アストラルガーディアン",
+    "zh": "星际守护者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 120,
+  "icons": "4075003",
+  "BuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Astral Guardian (Stage 5)",
+      "kr": "아스트랄 가디언 (5단계)",
+      "jp": "アストラルガーディアン(5段階)",
+      "zh": "星际守护者(第5阶段)"
+    },
+    "mode": {
+      "en": "Guild Raid",
+      "kr": "길드 연합전",
+      "jp": "ギルド連合戦",
+      "zh": "公会联合战"
+    },
+    "area_id": {
+      "en": "70701205",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Dark Ball",
+        "kr": "다크 볼",
+        "jp": "ダークボール",
+        "zh": "暗影球"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. This attack prioritizes the enemy's <color=#28d9ed>front line</color>. When attacking a <color=#28d9ed>non-Defender</color> enemy, inflicts <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n<color=#28d9ed>전열</color>의 적을 우선적으로 공격합니다. <color=#28d9ed>방어형</color>이 아닌 적 공격 시 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与える。\\n一番<color=#28d9ed>前</color>の敵を優先的に攻撃する。<color=#28d9ed>防御型</color>以外の敵攻撃時、対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人。\\n优先攻击<color=#28d9ed>前排</color>敌人。非<color=#28d9ed>防御型</color>敌人攻击时,对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Dark",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dark Pressure",
+        "kr": "다크 프레셔",
+        "jp": "ダークプレッシャー",
+        "zh": "黑暗挤压"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. Inflicts <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>3 turn(s)</color> after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 대상 전체에게 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、対象全体に<color=#28d9ed>火傷</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。攻击后,对所有目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Dark",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Wormhole Crash",
+        "kr": "웜홀 크래쉬",
+        "jp": "ワームホールクラッシュ",
+        "zh": "虫洞粉碎"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. <color=#28d9ed>Detonates</color> all stacks of <color=#28d9ed>Burned</color> on the target after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 대상의 <color=#28d9ed>화상</color>을 모두 <color=#28d9ed>폭발</color>시킵니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、対象に付与された<color=#28d9ed>火傷</color>を<color=#28d9ed>破裂</color>させる。",
+        "zh": "攻击全体敌人。\\n攻击后,使目标受到的<color=#28d9ed>烧伤</color>效果全部<color=#28d9ed>爆炸</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Dark",
+      "debuff": [
+        "BT_IMMEDIATELY_BURN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Hostile Life-form Survey",
+        "kr": "적성 생물 조사",
+        "jp": "敵性生物調査",
+        "zh": "敌对生物调查"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces damage dealt to Fire enemies and increases damage taken from them. Reduces Effectiveness and Resilience of non-Fire enemies.",
+        "kr": "(패시브 효과)\\n화속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다. 화속성이 아닌 적의 효과 적중과 효과 저항이 감소합니다.",
+        "jp": "(パッシブ効果)\\n火属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。火属性以外の敵の効果命中と効果抵抗をDOWNさせる。",
+        "zh": "(被动效果)\\n对火属性敌人造成的伤害降低,且所受伤害提升。非火属性敌人的效果命中和效果抵抗降低。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "debuff": [
+        "BT_STAT|ST_BUFF_CHANCE_IR",
+        "BT_STAT|ST_BUFF_RESIST_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "First Oath",
+        "kr": "최초의 맹약",
+        "jp": "原初の盟約",
+        "zh": "最初誓约"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt to the Boss by <color=#28d9ed>Cursed/Fixed damage</color> cannot exceed <color=#28d9ed>20000</color>.",
+        "kr": "(패시브 효과)\\n보스가 받는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>20000</color>을 초과하지 않습니다.",
+        "jp": "(パッシブ効果)\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>20000</color>を超えない。",
+        "zh": "(被动效果)\\n首领所受<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>20000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers 10% Weakness Gauge. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Exhaust</color>: Used when Enraged ends.\\nAttacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Attack</color> on the target for <color=#28d9ed>3 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>이그저스트</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킵니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【エグゾースト】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>攻撃力</color>を<color=#28d9ed>3ターン</color>の間付与する。\\nこの攻撃は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>筋疲力尽</color>:狂暴化结束时发动。\\n攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>3回合</color>。\\n该攻击无视目标的<color=#28d9ed>效果抵抗</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff": [
+      ]
+    }
+  ]
+}

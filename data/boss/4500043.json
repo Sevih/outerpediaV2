@@ -1,0 +1,157 @@
+{
+  "id": "4500043",
+  "Name": {
+    "en": "Astei",
+    "kr": "아스테",
+    "jp": "アステ",
+    "zh": "奥斯黛"
+  },
+  "Surname": {
+    "en": "Archbishop of Sacreed",
+    "kr": "자애로운 대주교",
+    "jp": "セイクリッド大司教",
+    "zh": "圣科利德大主教"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 80,
+  "icons": "4500043",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Doll Garden's Caretaker",
+      "kr": "모형 정원의 관리자",
+      "jp": "箱庭の主",
+      "zh": "模型庄园的管理者"
+    },
+    "mode": {
+      "en": "Story (Normal)",
+      "kr": "스토리(노멀)",
+      "jp": "ストーリー(ノーマル)",
+      "zh": "故事(普通)"
+    },
+    "area_id": {
+      "en": "5-13",
+      "kr": "5-13",
+      "jp": "5-13",
+      "zh": "5-13"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "The Gods in Heaven",
+        "kr": "하늘에는 신이",
+        "jp": "天にありては神",
+        "zh": "天上有神"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>6 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>6턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>6ターン</color>の間UPする。",
+        "zh": "攻击敌人,并使<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>6回合</color>。"
+      },
+      "icon": "Skill_First_2000059",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "The People on Earth",
+        "kr": "땅에는 인간이",
+        "jp": "地にありては者",
+        "zh": "地上有人类"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and grants increased <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>6 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>6턴</color> 동안 <color=#28d9ed>치명 피해</color>가 증가합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>6ターン</color>の間UPする。",
+        "zh": "攻击敌人,并使<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>6回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Dark",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Sanctuary for All",
+        "kr": "만물에게 안식을",
+        "jp": "万物にありては安息",
+        "zh": "赋予万物安息"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. If the target is inflicted with <color=#28d9ed>Petrified</color>, it becomes an irremovable <color=#28d9ed>Petrified</color> that lasts for <color=#28d9ed>2 turn(s)</color>. This attack ignores the target's Resilience and Immunity.",
+        "kr": "적 전체를 공격합니다. 공격 대상이 <color=#28d9ed>석화</color> 상태라면 <color=#28d9ed>2턴</color> 동안 해제가 불가능한 <color=#28d9ed>석화</color>로 변경합니다. 이 공격은 대상의 효과 저항과 면역을 무시합니다.",
+        "jp": "敵全体にダメージを与える。攻撃対象が<color=#28d9ed>石化</color>状態の場合、解除不可能な<color=#28d9ed>石化</color>を<color=#28d9ed>2ターン</color>の間付与する。この攻撃は、対象の効果抵抗と免疫を無視する。",
+        "zh": "攻击全体敌人。若攻击目标处于<color=#28d9ed>石化</color>状态,则变更为无法解除的<color=#28d9ed>石化</color>,持续<color=#28d9ed>2回合</color>。该攻击无视目标的效果抵抗与免疫。"
+      },
+      "icon": "Skill_Ultimate_2000059",
+      "debuff": [
+        "BT_STONE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Rocks for the Garden",
+        "kr": "정원에는 수석을",
+        "jp": "箱庭にありては石",
+        "zh": "花园里的观赏石"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the end of the turn, inflicts <color=#28d9ed>Petrified</color> on a random enemy for <color=#28d9ed>1 turn(s)</color>.\\n\\nCan only receive Weakness Gauge damage while Enraged.",
+        "kr": "(패시브 효과)\\n턴 종료 시, 무작위 적 한 명에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.\\n\\n광폭화 중에만 WG 피해를 받습니다.",
+        "jp": "(パッシブ効果)\\nターン終了時、ランダムの敵単体に<color=#28d9ed>石化</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n狂暴化中のみWGダメージを受ける。",
+        "zh": "(被动效果)\\n回合结束时,使随机1名敌人陷入<color=#28d9ed>石化</color>状态,持续<color=#28d9ed>1回合</color>。\\n\\n仅在狂暴化时受到WG伤害。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "debuff": [
+        "BT_STONE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns, and recovers Weakness Gauge by 10%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>An Inadequate World</color>: Used when Enraged ends. Deals lethal damage to all enemies.\\n\\n<color=#ffd732>If Enraged within 3 turns, grants 60 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>세계의 한계</color> : 광폭화 종료 시 사용.\\n적에게 치명적인 피해를 입힙니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 60의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WG10%を回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【世界の果て】</color>:【狂暴化】終了時に発動する。\\n敵に致命的なダメージを与える。\\n\\n<color=#ffd732>3ターン以内に【狂暴化】した場合、敵にCPを60獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,且WG恢复10%。狂暴化持续3个回合。\\n\\n<color=#28d9ed>世界的极限</color>:狂暴化结束时发动。\\n对敌人造成致命伤害。\\n\\n<color=#ffd732>在3回合内陷入狂暴化状态时,恢复60CP。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR",
+        "BT_CP_CHARGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

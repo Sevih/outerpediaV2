@@ -1,0 +1,105 @@
+{
+  "id": "4500282",
+  "Name": {
+    "en": "Roxie",
+    "kr": "록시",
+    "jp": "ロキシー",
+    "zh": "萝克茜"
+  },
+  "Surname": {
+    "en": "The Sadistic Twin",
+    "kr": "가학적인 쌍둥이",
+    "jp": "嗜虐的な双子",
+    "zh": "虐待狂双胞胎"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 165,
+  "icons": "2000082",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Top Fiend Officer",
+      "kr": "마족 최고 간부",
+      "jp": "魔族最高幹部",
+      "zh": "魔族高层"
+    },
+    "mode": {
+      "en": "Story (Hard)",
+      "kr": "스토리(하드)",
+      "jp": "ストーリー(ハード)",
+      "zh": "故事(困难)"
+    },
+    "area_id": {
+      "en": "4-10",
+      "kr": "4-10",
+      "jp": "4-10",
+      "zh": "4-10"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Chilling, Isn't It?",
+        "kr": "짜릿하지?",
+        "jp": "痺れたでしょ?",
+        "zh": "刺激吧?"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Shocked</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when the caster is granted a buff.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 부여합니다.\\n이 스킬은 자신이 강화 효과 보유 시 피해가 증가합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは自分に強化効果がある場合、ダメージがUPする。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n自身附带强化效果时,该技能伤害量提升。"
+      },
+      "icon": "Skill_First_2000082",
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
+    },
+    {
+      "name": {
+        "en": "Help Me, Sis!",
+        "kr": "도와줘, 언니!",
+        "jp": "助けて、お姉さん!",
+        "zh": "姐姐帮我!"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) When an ally <color=#28d9ed>Ranger</color> attacks, activates an additional attack on the enemy with the highest Speed. After attacking, increases Priority of the caster by <color=#28d9ed>40%</color>, and grants increased Effectiveness to ally <color=#28d9ed>Mages</color> and <color=#28d9ed>Rangers</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "(발동 효과) 아군의 <color=#28d9ed>속도형</color> 캐릭터가 공격했을 때 속도가 가장 높은 적에게 추가 공격을 합니다. 공격 후 자신의 행동 게이지가 <color=#28d9ed>40%</color> 증가하며, 아군의 <color=#28d9ed>마법형</color>과 <color=#28d9ed>속도형</color> 캐릭터의 효과 적중을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "jp": "(発動効果)<color=#28d9ed>スピード型</color>の味方が攻撃時、スピードが最も高い敵単体に追加攻撃を与える。攻撃後、自分の行動ゲージが<color=#28d9ed>40%</color>UPし、<color=#28d9ed>魔法型</color>と<color=#28d9ed>スピード型</color>の味方の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "(触发效果)友军中<color=#28d9ed>速度型</color>角色攻击时,对速度最高的敌人发动额外攻击。攻击后,自身行动值提升<color=#28d9ed>40%</color>,并使友军中<color=#28d9ed>魔法型</color>和<color=#28d9ed>速度型</color>角色的效果命中提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000082",
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_STAT|ST_BUFF_CHANCE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Twin Tornado!",
+        "kr": "트윈 토네이도!",
+        "jp": "ツイントルネード!",
+        "zh": "双子龙卷风!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Inflicts <color=#28d9ed>Shocked</color> once on all enemies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. Damage dealt increases proportionally to the number of debuffs inflicted on the target. This skill always has elemental advantage.",
+        "kr": "적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 1회 부여하고 공격합니다. 이 공격은 대상의 약화 효과가 많을수록 피해가 증가합니다. 이 스킬은 항상 유리한 상성으로 적용됩니다.",
+        "jp": "敵全体に感電1個を2ターンの間付与し、ダメージを与える。この攻撃は対象の弱体効果の数に応じてダメージがUPする。このスキルは有利属性の攻撃判定になる。",
+        "zh": "对全体敌人造成1次<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>,并攻击。目标附带的弱化效果越多,则该攻击的伤害越高。该技能总是以优势属性施展。"
+      },
+      "icon": "Skill_Ultimate_2000082",
+      "buff": [
+        "BT_DMG_ELEMENT_SUPERIORITY"
+      ],
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
+    }
+  ]
+}

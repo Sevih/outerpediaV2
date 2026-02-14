@@ -1,0 +1,55 @@
+{
+  "Swift Immu": {
+    "Weapon": [
+      {
+        "name": "Emblem of Dominance",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF>EVA=RES",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  },
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Emblem of Dominance",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Resurrection Token",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>DEF>EVA=RES",
+    "Note": "",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Sage's Charm"
+    ]
+  }
+}

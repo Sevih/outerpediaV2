@@ -1,0 +1,80 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Spirit of Unification",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Mage's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "CritDmg": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Spirit of Unification",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Critical Strike", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Mage's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "Pene": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Spirit of Unification",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Penetration", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "",
+    "Talisman": [
+      "Mage's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}

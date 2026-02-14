@@ -1,0 +1,96 @@
+{
+  "id": "4500285",
+  "Name": {
+    "en": "Hilde",
+    "kr": "힐데",
+    "jp": "ヒルデ",
+    "zh": "希尔德"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Dark",
+  "level": 150,
+  "icons": "2000088",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "The Grand Escape Magic",
+      "kr": "희대의 탈출 마술",
+      "jp": "並はずれの脱出魔法",
+      "zh": "伟大的逃脱魔术"
+    },
+    "mode": {
+      "en": "Story (Normal)",
+      "kr": "스토리(노멀)",
+      "jp": "ストーリー(ノーマル)",
+      "zh": "故事(普通)"
+    },
+    "area_id": {
+      "en": "5-13",
+      "kr": "5-13",
+      "jp": "5-13",
+      "zh": "5-13"
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "L-Leave It To Me",
+        "kr": "마, 맡겨주세요",
+        "jp": "お、おまかせください",
+        "zh": "交、交给我吧"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and activates a <color=#28d9ed>Dual Attack</color> from two allies with the highest Attack.",
+        "kr": "적을 공격하고 가장 공격력이 높은 아군 2명의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "jp": "敵単体にダメージを与え、攻撃力が最も高い味方2体に<color=#28d9ed>連携</color>を発生させる。",
+        "zh": "攻击敌人,并使攻击力最高的2名友军发动<color=#28d9ed>夹攻</color>。"
+      },
+      "icon": "Skill_First_2000088",
+      "buff": [
+        "BT_CALL_BACKUP"
+      ]
+    },
+    {
+      "name": {
+        "en": "Come Here, Hound",
+        "kr": "와줘, 하운드",
+        "jp": "来て、ハウンド",
+        "zh": "来吧,哈恩德"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) After being hit, uses <color=#28d9ed>Come Here, Hound</color> on the enemy with the lowest Max Health. Has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Petrified</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "(발동 효과) 피격 후 최대 체력이 가장 낮은 적에게 <color=#28d9ed>와줘, 하운드</color>를 사용합니다. <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.",
+        "jp": "(発動効果)ダメージを受けた後、最大HPが最も低い敵単体に<color=#28d9ed>【来て、ハウンド】</color>を使用する。<color=#28d9ed>100%</color>の確率で対象に<color=#28d9ed>石化</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "(触发效果)受到攻击后,使生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>石化</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000088",
+      "debuff": [
+        "BT_STONE"
+      ]
+    },
+    {
+      "name": {
+        "en": "For Pandemonium!",
+        "kr": "판데모니움을 위해!",
+        "jp": "パンデモニウムのために!",
+        "zh": "为了万魔殿!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Reduces the duration of <color=#28d9ed>buffs</color> granted to the target by <color=#28d9ed>1 turn</color>, then attacks the enemy.\\nThis skill penetrates <color=#28d9ed>30%</color> of the target's Defense.",
+        "kr": "대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.",
+        "jp": "対象の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。",
+        "zh": "使目标的<color=#28d9ed>强化效果</color>持续回合数减少<color=#28d9ed>1回合</color>后,攻击敌人。\\n无视该技能目标的<color=#28d9ed>30%</color>防御力。"
+      },
+      "icon": "Skill_Ultimate_2000088",
+      "debuff": [
+        "BT_EXTEND_BUFF"
+      ]
+    }
+  ]
+}

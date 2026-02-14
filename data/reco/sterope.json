@@ -1,0 +1,140 @@
+{
+  "Support Speed": {
+    "Weapon": [
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>EFF",
+    "Note": "PvP:Vanguard's Charm3Mage's Charm2\nPvE:Executioner's Charm3Mage's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Mage's Charm"
+    ]
+  },
+  "Support Swift Immu": {
+    "Weapon": [
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "HP%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "SPD>HP>EFF",
+    "Note": "PvP:Vanguard's Charm3Mage's Charm2\nPvE:Executioner's Charm3Mage's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Mage's Charm"
+    ]
+  },
+  "SubDPS Speed": {
+    "Weapon": [
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Force Field Generator",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Speed", "count": 4 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "PvP:Vanguard's Charm3Mage's Charm2\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  },
+  "SubDPS Swift Immu": {
+    "Weapon": [
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Force Field Generator",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Swiftness", "count": 2 },
+        { "name": "Immunity", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "ATK>CHC>CHD>SPD",
+    "Note": "PvP:Vanguard's Charm3Mage's Charm2\nPvE:Executioner's Charm3Rogue's Charm2",
+    "Talisman": [
+      "Vanguard's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ]
+  }
+}
