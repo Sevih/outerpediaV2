@@ -343,7 +343,7 @@ class EELocalizationExtractor:
         st = str(row.get("StatType", ""))
         tt = str(row.get("TargetType", ""))
 
-        if t.startswith("BT_DMG_REDUCE"):
+        if t.startswith("BT_DMG"):
             base = f"SYS_{t}_"
         elif st.startswith("ST_"):
             base = f"SYS_STAT_{st[3:]}_"

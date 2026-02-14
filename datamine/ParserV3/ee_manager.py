@@ -252,7 +252,7 @@ class EEManager:
         st = str(row.get("StatType") or "")
         tt = str(row.get("TargetType") or "")
 
-        if t.startswith("BT_DMG_REDUCE"):
+        if t.startswith("BT_DMG"):
             base = f"SYS_{t}_"
         elif st.startswith("ST_"):
             base = f"SYS_STAT_{st[3:]}_"
