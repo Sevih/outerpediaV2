@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "next dev --port 3001",
+    "build": "npm run pipeline && next build",
+    "start": "next start --port 3001",
+    "lint": "eslint",
+    "pipeline": "tsx pipeline/run.ts",
+    "pipeline:step": "tsx pipeline/run.ts --step",
+    "pipeline:validate": "tsx pipeline/run.ts --validate"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -21,6 +24,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "4.21.0",
     "typescript": "^5"
   }
 }

@@ -1,0 +1,30 @@
+import { readFile } from 'fs/promises';
+import { join } from 'path';
+import type { Weapon, Amulet, Talisman, ArmorSet, ExclusiveEquipment } from '@/types/equipment';
+
+const EQUIP_DIR = join(process.cwd(), 'data/game/equipment');
+
+export async function getWeapons(): Promise<Weapon[]> {
+  const raw = await readFile(join(EQUIP_DIR, 'weapons.json'), 'utf-8');
+  return JSON.parse(raw) as Weapon[];
+}
+
+export async function getAmulets(): Promise<Amulet[]> {
+  const raw = await readFile(join(EQUIP_DIR, 'amulets.json'), 'utf-8');
+  return JSON.parse(raw) as Amulet[];
+}
+
+export async function getTalismans(): Promise<Talisman[]> {
+  const raw = await readFile(join(EQUIP_DIR, 'talismans.json'), 'utf-8');
+  return JSON.parse(raw) as Talisman[];
+}
+
+export async function getArmorSets(): Promise<ArmorSet[]> {
+  const raw = await readFile(join(EQUIP_DIR, 'sets.json'), 'utf-8');
+  return JSON.parse(raw) as ArmorSet[];
+}
+
+export async function getExclusiveEquipment(): Promise<Record<string, ExclusiveEquipment>> {
+  const raw = await readFile(join(EQUIP_DIR, 'exclusive.json'), 'utf-8');
+  return JSON.parse(raw) as Record<string, ExclusiveEquipment>;
+}
