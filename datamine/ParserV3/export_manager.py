@@ -37,7 +37,7 @@ class ExportManager:
 
         # Ensure directories exist
         self.char_export_path.mkdir(parents=True, exist_ok=True)
-        export_path.mkdir(parents=True, exist_ok=True)
+        EXPORT_FOLDER.mkdir(parents=True, exist_ok=True)
 
         # Load existing data
         self.buffs = self._load_json(self.buffs_path)

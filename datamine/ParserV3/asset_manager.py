@@ -26,18 +26,22 @@ logger = logging.getLogger(__name__)
 # Lazy import for WebPConverter to avoid circular imports
 _webp_converter = None
 
-from config import EXTRACTED_ASSETS, PUBLIC_CHARACTERS
+from config import (
+    EXTRACTED_ASSETS,
+    PUBLIC_CHAR_PORTRAIT, PUBLIC_CHAR_ATB, PUBLIC_CHAR_SKILLS,
+    PUBLIC_CHAR_FULL, PUBLIC_CHAR_EE,
+)
 
 # Source paths (extracted game files)
 SPRITE_SOURCE = EXTRACTED_ASSETS / "assets" / "editor" / "resources" / "sprite"
 ILLUST_SOURCE = EXTRACTED_ASSETS / "assets" / "editor" / "resources" / "prefabs" / "ui" / "illust"
 
 # Destination paths (public web assets)
-PORTRAIT_DEST = PUBLIC_CHARACTERS / "portrait"
-ATB_DEST = PUBLIC_CHARACTERS / "atb"
-SKILLS_DEST = PUBLIC_CHARACTERS / "skills"
-FULL_DEST = PUBLIC_CHARACTERS / "full"
-EX_DEST = PUBLIC_CHARACTERS / "ex"
+PORTRAIT_DEST = PUBLIC_CHAR_PORTRAIT
+ATB_DEST = PUBLIC_CHAR_ATB
+SKILLS_DEST = PUBLIC_CHAR_SKILLS
+FULL_DEST = PUBLIC_CHAR_FULL
+EX_DEST = PUBLIC_CHAR_EE
 
 
 class AssetManager:
