@@ -44,9 +44,9 @@ class EEBuffDebuffDialog(QDialog):
     def _load_effects(self):
         """Load buffs and debuffs from JSON files"""
         try:
-            project_root = Path(__file__).parent.parent.parent
-            buffs_path = project_root / "src" / "data" / "buffs.json"
-            debuffs_path = project_root / "src" / "data" / "debuffs.json"
+            from config import BUFFS_FILE, DEBUFFS_FILE
+            buffs_path = BUFFS_FILE
+            debuffs_path = DEBUFFS_FILE
 
             with open(buffs_path, 'r', encoding='utf-8') as f:
                 self.buffs_data = json.load(f)

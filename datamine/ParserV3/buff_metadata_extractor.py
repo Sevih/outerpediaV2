@@ -17,11 +17,8 @@ Author: ParserV3
 Date: 2025-10
 """
 from bytes_parser import Bytes_parser
-from pathlib import Path
+from config import BYTES_FOLDER
 import re
-
-BASE_PATH = Path(__file__).parent.parent
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
 
 
 class BuffMetadataExtractor:

@@ -34,12 +34,8 @@ Author: ParserV3
 Date: 2025-10
 """
 from bytes_parser import Bytes_parser
-from pathlib import Path
+from config import BYTES_FOLDER, EXPORT_FOLDER
 import json
-
-BASE_PATH = Path(__file__).parent.parent
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
-EXPORT_FOLDER = Path(__file__).parent / "export"
 
 class BuffExtractor:
     """Extract buffs and debuffs from BuffTemplet data"""

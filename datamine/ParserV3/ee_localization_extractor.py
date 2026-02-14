@@ -18,8 +18,7 @@ from cache_manager import CacheManager
 
 logger = logging.getLogger(__name__)
 
-# Paths
-BYTES_FOLDER = Path(__file__).parent.parent / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
+from config import BYTES_FOLDER
 
 class EELocalizationExtractor:
     """Extract Chinese Simplified localization for Exclusive Equipment"""

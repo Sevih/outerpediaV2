@@ -23,11 +23,7 @@ from text_utils import to_kebab_case
 
 logger = logging.getLogger(__name__)
 
-# Paths
-BASE_PATH = Path(__file__).parent.parent  # datamine folder
-PROJECT_ROOT = Path(__file__).parent.parent.parent  # outerpedia-clean folder
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
-EE_PATH = PROJECT_ROOT / "src" / "data" / "ee.json"
+from config import BYTES_FOLDER, EE_FILE as EE_PATH
 
 # Element constants
 ELEMENT_RE = re.compile(r"^(?:C[ET]T[_\- ]?)([A-Z]+)$")

@@ -26,21 +26,18 @@ logger = logging.getLogger(__name__)
 # Lazy import for WebPConverter to avoid circular imports
 _webp_converter = None
 
-# Base paths
-BASE_PATH = Path(__file__).parent.parent  # datamine folder
-PROJECT_ROOT = Path(__file__).parent.parent.parent  # outerpedia-clean folder
+from config import EXTRACTED_ASSETS, PUBLIC_CHARACTERS
 
 # Source paths (extracted game files)
-SPRITE_SOURCE = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "sprite"
-ILLUST_SOURCE = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "prefabs" / "ui" / "illust"
+SPRITE_SOURCE = EXTRACTED_ASSETS / "assets" / "editor" / "resources" / "sprite"
+ILLUST_SOURCE = EXTRACTED_ASSETS / "assets" / "editor" / "resources" / "prefabs" / "ui" / "illust"
 
 # Destination paths (public web assets)
-PUBLIC_BASE = PROJECT_ROOT / "public" / "images" / "characters"
-PORTRAIT_DEST = PUBLIC_BASE / "portrait"
-ATB_DEST = PUBLIC_BASE / "atb"
-SKILLS_DEST = PUBLIC_BASE / "skills"
-FULL_DEST = PUBLIC_BASE / "full"
-EX_DEST = PUBLIC_BASE / "ex"
+PORTRAIT_DEST = PUBLIC_CHARACTERS / "portrait"
+ATB_DEST = PUBLIC_CHARACTERS / "atb"
+SKILLS_DEST = PUBLIC_CHARACTERS / "skills"
+FULL_DEST = PUBLIC_CHARACTERS / "full"
+EX_DEST = PUBLIC_CHARACTERS / "ex"
 
 
 class AssetManager:

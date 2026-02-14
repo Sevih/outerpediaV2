@@ -24,15 +24,12 @@ Date: 2025-11
 """
 from character_extractor import CharacterExtractor
 from cache_manager import CacheManager
-from pathlib import Path
+from config import BYTES_FOLDER
 import json
 import re
 import html
 import unicodedata
 from typing import Dict, Any, Optional, List
-
-BASE_PATH = Path(__file__).parent.parent
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
 
 # Element constants (from ee_manager.py)
 ELEMENT_RE = re.compile(r"^(?:C[ET]T[_\- ]?)([A-Z]+)$")
@@ -483,7 +480,8 @@ class FusionExtractor:
             ee_key = to_kebab_case(fullname)
 
             # Path to ee.json
-            ee_json_path = BASE_PATH.parent / "src" / "data" / "ee.json"
+            from config import EE_FILE
+            ee_json_path = EE_FILE
 
             if not ee_json_path.exists():
                 print(f"Warning: ee.json not found at {ee_json_path}")
@@ -514,8 +512,9 @@ class FusionExtractor:
             import shutil
 
             # Source and destination paths
-            source_base = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources"
-            public_base = BASE_PATH.parent / "public" / "images" / "characters"
+            from config import EXTRACTED_ASSETS, PUBLIC_CHARACTERS
+            source_base = EXTRACTED_ASSETS / "assets" / "editor" / "resources"
+            public_base = PUBLIC_CHARACTERS
 
             # Create destination directories
             dest_portrait = public_base / "portrait"
@@ -645,7 +644,8 @@ class FusionExtractor:
             slug = to_kebab_case(original_data.get('Fullname', ''))
 
             # Path to original character JSON
-            char_json_path = BASE_PATH.parent / "src" / "data" / "char" / f"{slug}.json"
+            from config import CHAR_DATA
+            char_json_path = CHAR_DATA / f"{slug}.json"
 
             if not char_json_path.exists():
                 return []
@@ -677,7 +677,8 @@ class FusionExtractor:
             slug = to_kebab_case(original_data.get('Fullname', ''))
 
             # Path to original character JSON
-            char_json_path = BASE_PATH.parent / "src" / "data" / "char" / f"{slug}.json"
+            from config import CHAR_DATA
+            char_json_path = CHAR_DATA / f"{slug}.json"
 
             if not char_json_path.exists():
                 print(f"Warning: Original character JSON not found at {char_json_path}")
@@ -856,7 +857,8 @@ def main():
         data = extractor.extract()
 
         # Save to file first
-        output_file = BASE_PATH / "ParserV3" / "export" / f"core-fusion-{fusion_char_id}.json"
+        from config import EXPORT_FOLDER
+        output_file = EXPORT_FOLDER / f"core-fusion-{fusion_char_id}.json"
         output_file.parent.mkdir(parents=True, exist_ok=True)
 
         with open(output_file, 'w', encoding='utf-8') as f:

@@ -9,15 +9,12 @@ Date: 2025-10
 """
 from cache_manager import CacheManager
 from buff_extractor import BuffExtractor
-from pathlib import Path
+from config import BYTES_FOLDER
 import json
 import logging
 import re
 
 logger = logging.getLogger(__name__)
-
-BASE_PATH = Path(__file__).parent.parent
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
 
 # Precompile regex for buff tag replacement
 _BUFF_TAG_RE = re.compile(r"\[Buff_([CTV])_([^\]]+)\]")

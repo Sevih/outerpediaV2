@@ -21,11 +21,7 @@ from typing import List, Tuple
 
 logger = logging.getLogger(__name__)
 
-# Paths
-BASE_PATH = Path(__file__).parent.parent  # datamine folder
-PROJECT_ROOT = Path(__file__).parent.parent.parent  # outerpedia-clean folder
-CWEBP_PATH = BASE_PATH / "pngTowebp" / "bin" / "cwebp.exe"
-PUBLIC_BASE = PROJECT_ROOT / "public" / "images" / "characters"
+from config import CWEBP_PATH, PUBLIC_CHARACTERS as PUBLIC_BASE
 
 
 class WebPConverter:

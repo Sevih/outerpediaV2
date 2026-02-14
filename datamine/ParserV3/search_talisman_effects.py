@@ -5,9 +5,8 @@ from pathlib import Path
 import json
 from cache_manager import CacheManager
 
-BASE_PATH = Path(__file__).parent.parent
-bytes_folder = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
-cache = CacheManager(bytes_folder)
+from config import BYTES_FOLDER
+cache = CacheManager(BYTES_FOLDER)
 
 print("Loading data files...")
 text_item_data = cache.get_data("TextItem.bytes")

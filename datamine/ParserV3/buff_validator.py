@@ -17,14 +17,14 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Base paths
-PROJECT_ROOT = Path(__file__).parent.parent.parent  # outerpedia-clean folder
-CHAR_DATA_FOLDER = PROJECT_ROOT / "src" / "data" / "char"
-BUFFS_FILE = PROJECT_ROOT / "src" / "data" / "buffs.json"
-DEBUFFS_FILE = PROJECT_ROOT / "src" / "data" / "debuffs.json"
-EE_FILE = PROJECT_ROOT / "src" / "data" / "ee.json"
+from config import (
+    CHAR_DATA as CHAR_DATA_FOLDER,
+    BUFFS_FILE, DEBUFFS_FILE, EE_FILE,
+    PROJECT_ROOT, DATA_ROOT,
+)
+# These paths may not exist yet in v2
 GUIDES_CONTENTS_FOLDER = PROJECT_ROOT / "src" / "app" / "guides" / "_contents"
-GUILD_RAID_FOLDER = PROJECT_ROOT / "src" / "data" / "guides" / "guild-raid"
+GUILD_RAID_FOLDER = DATA_ROOT / "guides" / "guild-raid"
 
 
 class BuffValidator:

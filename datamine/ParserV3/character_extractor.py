@@ -32,13 +32,10 @@ from buff_extractor import BuffExtractor
 from cache_manager import CacheManager
 from mapping_loader import load_mappings
 from youtube_search import search_character_video
-from pathlib import Path
+from config import BYTES_FOLDER
 import json
 import sys
 import re
-
-BASE_PATH = Path(__file__).parent.parent
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
 
 # Precompile regex for buff tag replacement
 _BUFF_TAG_RE = re.compile(r"\[Buff_([CTV])_([^\]]+)\]")

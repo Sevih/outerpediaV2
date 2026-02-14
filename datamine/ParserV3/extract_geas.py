@@ -9,9 +9,9 @@ from pathlib import Path
 import json
 
 # Paths
-BASE_PATH = Path(__file__).parent.parent
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
-OUTPUT_FILE = Path(__file__).parent / "export" / "geas.json"
+from config import BYTES_FOLDER, EXPORT_FOLDER
+
+OUTPUT_FILE = EXPORT_FOLDER / "geas.json"
 
 def load_textskill():
     """Load TextSkill data and create lookup by IDSymbol"""
@@ -341,7 +341,8 @@ def extract_geas(silent=False):
             json.dump(merged_geas, f, ensure_ascii=False, indent=2)
 
         # Also export to src/data folder for the website
-        WEBSITE_OUTPUT = Path(__file__).parent.parent.parent / "src" / "data" / "geas.json"
+        from config import DATA_ROOT
+        WEBSITE_OUTPUT = DATA_ROOT / "geas.json"
         WEBSITE_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         with open(WEBSITE_OUTPUT, "w", encoding="utf-8") as f:
             json.dump(merged_geas, f, ensure_ascii=False, indent=2)

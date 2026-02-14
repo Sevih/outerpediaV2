@@ -28,17 +28,12 @@ class ExportManager:
 
     def __init__(self):
         # Paths
-        # ParserV3 -> datamine -> outerpedia-clean -> src -> data
-        project_root = Path(__file__).parent.parent.parent
-        src_data_path = project_root / "src" / "data"
+        from config import CHAR_DATA, BUFFS_FILE, DEBUFFS_FILE, IGNORED_EFFECTS_FILE, EXPORT_FOLDER
 
-        self.char_export_path = src_data_path / "char"
-        self.buffs_path = src_data_path / "buffs.json"
-        self.debuffs_path = src_data_path / "debuffs.json"
-
-        # ignored_effects stays in ParserV3/export
-        export_path = Path(__file__).parent / "export"
-        self.ignored_path = export_path / "ignored_effects.json"
+        self.char_export_path = CHAR_DATA
+        self.buffs_path = BUFFS_FILE
+        self.debuffs_path = DEBUFFS_FILE
+        self.ignored_path = IGNORED_EFFECTS_FILE
 
         # Ensure directories exist
         self.char_export_path.mkdir(parents=True, exist_ok=True)

@@ -11,7 +11,8 @@ class CacheManager:
 
     def __init__(self, bytes_folder, cache_folder=None):
         self.bytes_folder = Path(bytes_folder)
-        self.cache_folder = Path(cache_folder) if cache_folder else Path(__file__).parent / "cache"
+        from config import CACHE_FOLDER
+        self.cache_folder = Path(cache_folder) if cache_folder else CACHE_FOLDER
         self.cache_folder.mkdir(exist_ok=True)
 
     def _get_file_checksum(self, file_path):

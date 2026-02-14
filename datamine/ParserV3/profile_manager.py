@@ -18,11 +18,9 @@ from cache_manager import CacheManager
 
 logger = logging.getLogger(__name__)
 
-# Paths
-BASE_PATH = Path(__file__).parent.parent  # datamine folder
-PROJECT_ROOT = Path(__file__).parent.parent.parent  # outerpedia-clean folder
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
-PROFILES_PATH = PROJECT_ROOT / "src" / "data" / "character-profiles.json"
+from config import BYTES_FOLDER, DATA_ROOT
+
+PROFILES_PATH = DATA_ROOT / "character-profiles.json"
 
 # Surnames that should be included in fullname
 INCLUDE_SURNAME = [

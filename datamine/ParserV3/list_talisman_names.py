@@ -4,8 +4,8 @@ sys.stdout.reconfigure(encoding='utf-8')
 from pathlib import Path
 from cache_manager import CacheManager
 
-BASE_PATH = Path(__file__).parent.parent
-cache = CacheManager(BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary")
+from config import BYTES_FOLDER
+cache = CacheManager(BYTES_FOLDER)
 
 item_data = cache.get_data("ItemTemplet.bytes")
 text_item = cache.get_data("TextItem.bytes")

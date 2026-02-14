@@ -209,9 +209,8 @@ class MetadataInputDialog(QDialog):
     def _load_categories(self):
         """Load categories from effect_categories.json"""
         try:
-            # ParserV3 -> datamine -> outerpedia-clean -> src -> data
-            project_root = Path(__file__).parent.parent.parent
-            categories_path = project_root / "src" / "data" / "effect_categories.json"
+            from config import EFFECT_CATEGORIES_FILE
+            categories_path = EFFECT_CATEGORIES_FILE
             with open(categories_path, 'r', encoding='utf-8') as f:
                 categories_data = json.load(f)
 
@@ -244,14 +243,13 @@ class MetadataInputDialog(QDialog):
 
     def _browse_icon(self):
         """Browse for icon file"""
-        # ParserV3 -> datamine -> outerpedia-clean
-        project_root = Path(__file__).parent.parent.parent
+        from config import PUBLIC_IMAGES, EXTRACTED_ASSETS
 
         # Primary: public/images/ui/effect
-        primary_dir = project_root / "public" / "images" / "ui" / "effect"
+        primary_dir = PUBLIC_IMAGES / "ui" / "effect"
 
         # Backup: datamine/extracted_astudio/assets/editor/resources/sprite
-        backup_dir = project_root / "datamine" / "extracted_astudio" / "assets" / "editor" / "resources" / "sprite"
+        backup_dir = EXTRACTED_ASSETS / "assets" / "editor" / "resources" / "sprite"
 
         # Start in primary directory if it exists, otherwise backup
         start_dir = str(primary_dir) if primary_dir.exists() else str(backup_dir)

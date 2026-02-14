@@ -1,11 +1,8 @@
 """
 Mapping Loader - Dynamically load enum to text mappings from TextSystem.bytes
 """
-from pathlib import Path
 from cache_manager import CacheManager
-
-BASE_PATH = Path(__file__).parent.parent
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
+from config import BYTES_FOLDER
 
 def load_mappings():
     """

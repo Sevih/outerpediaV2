@@ -10,9 +10,7 @@ Injects results directly into src/data/char/{slug}.json files.
 import json
 from pathlib import Path
 
-CACHE_FOLDER = Path(__file__).parent / "cache"
-CHAR_DATA_FOLDER = Path(__file__).parent.parent.parent / "src" / "data" / "char"
-SRC_DATA_FOLDER = Path(__file__).parent.parent.parent / "src" / "data"
+from config import CACHE_FOLDER, CHAR_DATA as CHAR_DATA_FOLDER, DATA_ROOT as SRC_DATA_FOLDER
 
 # Skill types we care about
 RELEVANT_SKILL_TYPES = {

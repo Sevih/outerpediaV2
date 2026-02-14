@@ -59,32 +59,29 @@ logger = logging.getLogger(__name__)
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-# Base paths
-# __file__ is gui_qt.py in ParserV3 folder
-# gui_qt.py -> ParserV3 (parent) -> datamine (parent.parent) -> outerpedia-clean (parent.parent.parent)
-BASE_PATH = Path(__file__).parent.parent  # datamine folder
-BYTES_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
-PROJECT_ROOT = Path(__file__).parent.parent.parent  # outerpedia-clean folder
+from config import (
+    BYTES_FOLDER, DATAMINE_ROOT, PROJECT_ROOT, EXTRACTED_ASSETS,
+    CHAR_DATA, BOSS_DATA, DATA_ROOT, PUBLIC_IMAGES, PUBLIC_CHARACTERS,
+    BUFFS_FILE, DEBUFFS_FILE, EE_FILE, EQUIPMENT_DATA,
+)
 
 # Data paths
-CHAR_DATA_FOLDER = PROJECT_ROOT / "src" / "data" / "char"  # For export
-BOSS_DATA_FOLDER = PROJECT_ROOT / "src" / "data" / "boss"  # For boss export
+CHAR_DATA_FOLDER = CHAR_DATA
+BOSS_DATA_FOLDER = BOSS_DATA
 
 # Audio paths
-BGM_OUTPUT_FOLDER = PROJECT_ROOT / "public" / "audio" / "AudioClip"  # Where BGM files go
-BGM_MAPPING_FOLDER = PROJECT_ROOT / "src" / "data"  # Where bgm_mapping.json goes
+BGM_OUTPUT_FOLDER = PROJECT_ROOT / "public" / "audio" / "AudioClip"
+BGM_MAPPING_FOLDER = DATA_ROOT
 
 # Image paths
-SPRITE_SOURCE_FOLDER = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "sprite"
-BOSS_SKILL_IMAGE_FOLDER = PROJECT_ROOT / "public" / "images" / "characters" / "boss" / "skill"
-BOSS_PORTRAIT_IMAGE_FOLDER = PROJECT_ROOT / "public" / "images" / "characters" / "boss" / "portrait"
-BOSS_MINI_IMAGE_FOLDER = PROJECT_ROOT / "public" / "images" / "characters" / "boss" / "mini"
+SPRITE_SOURCE_FOLDER = EXTRACTED_ASSETS / "assets" / "editor" / "resources" / "sprite"
+BOSS_SKILL_IMAGE_FOLDER = PUBLIC_IMAGES / "characters" / "boss" / "skill"
+BOSS_PORTRAIT_IMAGE_FOLDER = PUBLIC_IMAGES / "characters" / "boss" / "portrait"
+BOSS_MINI_IMAGE_FOLDER = PUBLIC_IMAGES / "characters" / "boss" / "mini"
 
 # Validate paths on startup
 if not CHAR_DATA_FOLDER.exists():
     logger.warning(f"CHAR_DATA_FOLDER does not exist: {CHAR_DATA_FOLDER.absolute()}")
-    logger.warning(f"Current file: {Path(__file__).absolute()}")
-    logger.warning(f"BASE_PATH: {BASE_PATH.absolute()}")
     logger.warning(f"PROJECT_ROOT: {PROJECT_ROOT.absolute()}")
 
 
@@ -1126,7 +1123,7 @@ class CharacterTab(QWidget):
         kebab_name = to_kebab_case(fullname)
 
         # Public image paths (destination)
-        public_base = PROJECT_ROOT / "public" / "images" / "characters"
+        public_base = PUBLIC_CHARACTERS
 
         # Asset mapping: label name -> (file path, max width, max height, scale mode)
         asset_configs = {
@@ -2391,11 +2388,11 @@ class BossTabV2(QWidget):
             return
 
         # Paths
-        json_path = PROJECT_ROOT / 'src' / 'data' / 'boss' / f'{monster_id}.json'
-        skill_img_dir = PROJECT_ROOT / 'public' / 'images' / 'characters' / 'boss' / 'skill'
-        mini_img_dir = PROJECT_ROOT / 'public' / 'images' / 'characters' / 'boss' / 'mini'
-        portrait_img_dir = PROJECT_ROOT / 'public' / 'images' / 'characters' / 'boss' / 'portrait'
-        sprite_dir = BASE_PATH / 'extracted_astudio' / 'assets' / 'editor' / 'resources' / 'sprite'
+        json_path = BOSS_DATA / f'{monster_id}.json'
+        skill_img_dir = BOSS_SKILL_IMAGE_FOLDER
+        mini_img_dir = BOSS_MINI_IMAGE_FOLDER
+        portrait_img_dir = BOSS_PORTRAIT_IMAGE_FOLDER
+        sprite_dir = SPRITE_SOURCE_FOLDER
 
         # Check if JSON already exists
         if json_path.exists():
@@ -3174,9 +3171,9 @@ class BuffReviewDialog(QDialog):
         try:
             # Determine which file to update
             if item_type == "Buff":
-                json_path = PROJECT_ROOT / "src" / "data" / "buffs.json"
+                json_path = BUFFS_FILE
             else:  # Debuff
-                json_path = PROJECT_ROOT / "src" / "data" / "debuffs.json"
+                json_path = DEBUFFS_FILE
 
             # Load current JSON data
             with open(json_path, 'r', encoding='utf-8') as f:
@@ -3434,7 +3431,7 @@ class LocalizationTab(QWidget):
             self.char_combo.clear()
 
             # Load EE JSON file
-            EE_DATA_FILE = Path(__file__).parent.parent.parent / "src" / "data" / "ee.json"
+            EE_DATA_FILE = EE_FILE
 
             if not EE_DATA_FILE.exists():
                 error_msg = f"EE data file not found: {EE_DATA_FILE}"
@@ -3587,8 +3584,8 @@ class LocalizationTab(QWidget):
             bytes_field = lang_config["bytes_field"]
 
             # Load buffs.json and debuffs.json
-            buffs_path = PROJECT_ROOT / "src" / "data" / "buffs.json"
-            debuffs_path = PROJECT_ROOT / "src" / "data" / "debuffs.json"
+            buffs_path = BUFFS_FILE
+            debuffs_path = DEBUFFS_FILE
 
             if not buffs_path.exists() or not debuffs_path.exists():
                 QMessageBox.critical(self, "Error", "buffs.json or debuffs.json not found!")
@@ -4134,8 +4131,8 @@ class LocalizationTab(QWidget):
         """Apply selected translations to buffs.json and debuffs.json"""
         try:
             # Load current JSON files
-            buffs_path = PROJECT_ROOT / "src" / "data" / "buffs.json"
-            debuffs_path = PROJECT_ROOT / "src" / "data" / "debuffs.json"
+            buffs_path = BUFFS_FILE
+            debuffs_path = DEBUFFS_FILE
 
             with open(buffs_path, 'r', encoding='utf-8') as f:
                 buffs_data = json.load(f)
@@ -4302,7 +4299,7 @@ class LocalizationTab(QWidget):
 
             else:  # EE
                 # Load ee.json file
-                EE_DATA_FILE = Path(__file__).parent.parent.parent / "src" / "data" / "ee.json"
+                EE_DATA_FILE = EE_FILE
 
                 if not EE_DATA_FILE.exists():
                     QMessageBox.warning(self, "Warning", f"EE data file not found: {EE_DATA_FILE}")
@@ -4587,7 +4584,7 @@ class LocalizationTab(QWidget):
         self.current_char_json = self._reorder_ee_json(self.current_char_json)
 
         # Load full ee.json file
-        EE_DATA_FILE = Path(__file__).parent.parent.parent / "src" / "data" / "ee.json"
+        EE_DATA_FILE = EE_FILE
 
         with open(EE_DATA_FILE, 'r', encoding='utf-8') as f:
             ee_data = json.load(f)
@@ -5009,7 +5006,7 @@ class LocalizationTab(QWidget):
             suffix = lang_config["suffix"]
 
             # Load EE JSON file
-            EE_DATA_FILE = Path(__file__).parent.parent.parent / "src" / "data" / "ee.json"
+            EE_DATA_FILE = EE_FILE
 
             if not EE_DATA_FILE.exists():
                 QMessageBox.critical(self, "Error", f"EE data file not found: {EE_DATA_FILE}")
@@ -5484,7 +5481,7 @@ class CoreFusionTab(QWidget):
             ee_key = to_kebab_case(char_fullname)
 
             # Load ee.json
-            ee_json_path = Path(__file__).parent.parent.parent / "src" / "data" / "ee.json"
+            ee_json_path = EE_FILE
             try:
                 with open(ee_json_path, 'r', encoding='utf-8') as f:
                     ee_data = json.load(f)
@@ -5555,7 +5552,7 @@ class CoreFusionTab(QWidget):
             return
 
         # Base paths for images
-        public_images = Path(__file__).parent.parent.parent / "public" / "images" / "characters"
+        public_images = PUBLIC_CHARACTERS
 
         # Define images to display
         images_to_show = [
@@ -5866,7 +5863,7 @@ class EquipmentTab(QWidget):
         from cache_manager import CacheManager
 
         # Load data files
-        bytes_folder = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
+        bytes_folder = BYTES_FOLDER
         cache = CacheManager(bytes_folder)
 
         item_data = cache.get_data("ItemTemplet.bytes")
@@ -6418,16 +6415,16 @@ class EquipmentTab(QWidget):
         try:
             # Determine file path based on mode
             if self.current_mode == "Weapons":
-                file_path = PROJECT_ROOT / "src" / "data" / "weapon.json"
+                file_path = EQUIPMENT_DATA / "weapon.json"
                 item_type = "weapons"
             elif self.current_mode == "Amulets":
-                file_path = PROJECT_ROOT / "src" / "data" / "amulet.json"
+                file_path = EQUIPMENT_DATA / "accessory.json"
                 item_type = "amulets"
             elif self.current_mode == "Sets":
-                file_path = PROJECT_ROOT / "src" / "data" / "sets.json"
+                file_path = EQUIPMENT_DATA / "sets.json"
                 item_type = "sets"
             elif self.current_mode == "Talisman":
-                file_path = PROJECT_ROOT / "src" / "data" / "talisman.json"
+                file_path = EQUIPMENT_DATA / "talisman.json"
                 item_type = "talismans"
             else:
                 QMessageBox.warning(self, "Warning", f"Save not implemented for {self.current_mode}")
@@ -6474,7 +6471,7 @@ class EquipmentTab(QWidget):
         from cache_manager import CacheManager
 
         # Load data files
-        bytes_folder = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
+        bytes_folder = BYTES_FOLDER
         cache = CacheManager(bytes_folder)
 
         item_data = cache.get_data("ItemTemplet.bytes")
@@ -6488,7 +6485,7 @@ class EquipmentTab(QWidget):
 
         # Load existing amulet.json to get mainStats
         existing_amulets = {}
-        amulet_file = PROJECT_ROOT / "src" / "data" / "amulet.json"
+        amulet_file = EQUIPMENT_DATA / "accessory.json"
         try:
             with open(amulet_file, 'r', encoding='utf-8') as f:
                 existing_data = json.load(f)
@@ -6993,7 +6990,7 @@ class EquipmentTab(QWidget):
         from cache_manager import CacheManager
 
         # Load data files
-        bytes_folder = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
+        bytes_folder = BYTES_FOLDER
         cache = CacheManager(bytes_folder)
 
         special_option_data = cache.get_data("ItemSpecialOptionTemplet.bytes")
@@ -7307,7 +7304,7 @@ class EquipmentTab(QWidget):
         # Initialize cache
         from cache_manager import CacheManager
 
-        bytes_folder = BASE_PATH / "extracted_astudio" / "assets" / "editor" / "resources" / "templetbinary"
+        bytes_folder = BYTES_FOLDER
         cache = CacheManager(bytes_folder)
 
         # Load required data files
@@ -7585,7 +7582,7 @@ class ParserV3MainWindow(QMainWindow):
         self.setGeometry(100, 100, 1400, 900)
 
         # Set window icon
-        icon_path = PROJECT_ROOT / "public" / "images" / "logo.png"
+        icon_path = PUBLIC_IMAGES / "logo.png"
         if icon_path.exists():
             self.setWindowIcon(QIcon(str(icon_path)))
         else:
@@ -7811,7 +7808,7 @@ class ParserV3MainWindow(QMainWindow):
             import os
 
             # Paths
-            base_dir = BASE_PATH
+            base_dir = DATAMINE_ROOT
             assetstudio_path = base_dir / "AssetStudioModCLI_net9_win64" / "AssetStudioModCLI.exe"
             input_dir = base_dir / "files"
             output_dir = base_dir / "extracted_astudio"
@@ -8041,7 +8038,7 @@ class ParserV3MainWindow(QMainWindow):
 
         try:
             # Paths
-            base_dir = BASE_PATH
+            base_dir = DATAMINE_ROOT
             assetstudio_path = base_dir / "AssetStudioModCLI_net9_win64" / "AssetStudioModCLI.exe"
             input_dir = base_dir / "files"
             temp_output_dir = base_dir / "extracted_bgm_temp"
