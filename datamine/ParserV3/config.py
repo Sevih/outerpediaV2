@@ -23,6 +23,7 @@ BOSS_DATA = DATA_ROOT / "boss"
 EQUIPMENT_DATA = DATA_ROOT / "equipment"
 EFFECTS_DATA = DATA_ROOT / "effects"
 RECO_DATA = DATA_ROOT / "reco"
+GENERATED_DATA = DATA_ROOT / "generated"
 
 # Specific data files
 BUFFS_FILE = EFFECTS_DATA / "buffs.json"
