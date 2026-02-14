@@ -32,7 +32,6 @@ import os
 from character_extractor import CharacterExtractor
 from cache_manager import CacheManager
 from json_comparator import JSONComparator
-from text_utils import to_kebab_case
 from export_manager import ExportManager
 from bytes_parser import Bytes_parser
 from export_dialogs_qt import MetadataInputDialog
@@ -1120,8 +1119,6 @@ class CharacterTab(QWidget):
             return
 
         char_id = self.current_char_id
-        fullname = self.current_data.get('Fullname', 'Unknown')
-        kebab_name = to_kebab_case(fullname)
 
         # Public image paths (destination)
         public_base = PUBLIC_CHARACTERS
@@ -1135,7 +1132,7 @@ class CharacterTab(QWidget):
             "Skill 2": (public_base / "skills" / f"Skill_Second_{char_id}.png", 30, 30, Qt.AspectRatioMode.KeepAspectRatio),
             "Skill Ultimate": (public_base / "skills" / f"Skill_Ultimate_{char_id}.png", 30, 30, Qt.AspectRatioMode.KeepAspectRatio),
             "Full Art": (public_base / "full" / f"IMG_{char_id}.png", 200, 9999, Qt.AspectRatioMode.KeepAspectRatio),
-            "EX Equipment": (public_base / "ex" / f"{kebab_name}.png", 30, 30, Qt.AspectRatioMode.KeepAspectRatio)
+            "EX Equipment": (public_base / "ee" / f"{char_id}.png", 30, 30, Qt.AspectRatioMode.KeepAspectRatio)
         }
 
         # Load and display each asset
@@ -1217,9 +1214,9 @@ class CharacterTab(QWidget):
 
         try:
             fullname = self.current_data.get('Fullname', '')
-            filename = to_kebab_case(fullname) + '.json'
+            filename = self.current_char_id + '.json'
 
-            # Destination: src/data/char/
+            # Destination: data/char/
             live_path = CHAR_DATA_FOLDER / filename
 
             # Validate buffs/debuffs before saving
@@ -1300,8 +1297,7 @@ class CharacterTab(QWidget):
             ee_updated = False
             if ee_dict:
                 # Get existing buffs/debuffs/rank if any
-                kebab_name = to_kebab_case(fullname)
-                existing_ee = ee_manager.ee_data.get(kebab_name, {})
+                existing_ee = ee_manager.ee_data.get(self.current_char_id, {})
                 existing_buffs = existing_ee.get('buff', [])
                 existing_debuffs = existing_ee.get('debuff', [])
                 existing_rank = existing_ee.get('rank', '')
@@ -1333,7 +1329,7 @@ class CharacterTab(QWidget):
                     # Update EE file
                     self.status_label.setText(f"Updating EE...")
                     QApplication.processEvents()
-                    ee_updated = ee_manager.update_ee(fullname, ee_dict)
+                    ee_updated = ee_manager.update_ee(self.current_char_id, ee_dict)
                 else:
                     # User cancelled
                     ee_msg = "EE update cancelled"
@@ -1391,8 +1387,7 @@ class CharacterTab(QWidget):
         if not self.current_data:
             return
 
-        fullname = self.current_data.get('Fullname', '')
-        filename = to_kebab_case(fullname) + '.json'
+        filename = self.current_char_id + '.json'
 
         # Try data/char/
         json_path = CHAR_DATA_FOLDER / filename
@@ -1452,7 +1447,7 @@ class CharacterTab(QWidget):
                 msg += "- No extracted data\n"
             if not self.existing_data:
                 msg += f"- No existing JSON found\n"
-                msg += f"  Expected at: {CHAR_DATA_FOLDER / (to_kebab_case(self.current_data.get('Fullname', '')) + '.json')}"
+                msg += f"  Expected at: {CHAR_DATA_FOLDER / (self.current_char_id + '.json')}"
             QMessageBox.warning(self, "Warning", msg)
             return
 
@@ -5477,16 +5472,14 @@ class CoreFusionTab(QWidget):
             self.content_text.setPlainText(json_str)
 
             # Display EE info from ee.json
-            from text_utils import to_kebab_case
-            char_fullname = self.extracted_data.get('Fullname', '')
-            ee_key = to_kebab_case(char_fullname)
+            char_id = self.extracted_data.get('ID', '')
 
             # Load ee.json
             ee_json_path = EE_FILE
             try:
                 with open(ee_json_path, 'r', encoding='utf-8') as f:
                     ee_data = json.load(f)
-                    ee_info = ee_data.get(ee_key, {})
+                    ee_info = ee_data.get(char_id, {})
 
                 if ee_info and ee_info.get('name'):
                     # EE data found
@@ -5572,11 +5565,10 @@ class CoreFusionTab(QWidget):
                 images_to_show.append((skill_name, skill_file))
 
         # Add EX equipment image if available
-        from text_utils import to_kebab_case
-        char_fullname = data.get('Fullname', '')
-        if char_fullname:
-            ex_filename = to_kebab_case(char_fullname) + ".png"
-            images_to_show.append(("EX Equipment", public_images / "ex" / ex_filename))
+        char_id = data.get('ID', '')
+        if char_id:
+            ex_filename = char_id + ".png"
+            images_to_show.append(("EX Equipment", public_images / "ee" / ex_filename))
 
         # Display each image
         for img_name, img_path in images_to_show:
@@ -5631,7 +5623,8 @@ class CoreFusionTab(QWidget):
             else:
                 base_name = char_name
 
-            filename = f"core-fusion-{to_kebab_case(base_name)}.json"
+            char_id = self.extracted_data.get('ID', '')
+            filename = f"{char_id}.json"
             output_path = CHAR_DATA_FOLDER / filename
 
             # Save JSON

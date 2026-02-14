@@ -9,7 +9,7 @@ Asset types:
 2. ATB Mini: IG_Turn_{id}.png and IG_Turn_{id}_E.png -> public/images/characters/atb
 3. Skills: Skill_First_{id}.png, Skill_Second_{id}.png, Skill_Ultimate_{id}.png -> public/images/characters/skills
 4. Full Art: IMG_{id}.png -> public/images/characters/full
-5. Exclusive Equipment: TI_Equipment_EX_{id}.png -> public/images/characters/ex (renamed to {kebab-fullname}.png)
+5. Exclusive Equipment: TI_Equipment_EX_{id}.png -> public/images/characters/ee (renamed to {id}.png)
 
 Author: ParserV3
 Date: 2025-10
@@ -19,7 +19,6 @@ from pathlib import Path
 import shutil
 import logging
 from typing import Dict, List, Tuple
-from text_utils import to_kebab_case
 
 logger = logging.getLogger(__name__)
 
@@ -148,9 +147,9 @@ class AssetManager:
         else:
             missing.append(f"Full Art (IMG_{character_id}.png)")
 
-        # 5. Exclusive Equipment: TI_Equipment_EX_{id}.png -> {kebab-fullname}.png
+        # 5. Exclusive Equipment: TI_Equipment_EX_{id}.png -> {id}.png
         ex_source_name = f"TI_Equipment_EX_{character_id}.png"
-        ex_dest_name = f"{to_kebab_case(fullname)}.png"
+        ex_dest_name = f"{character_id}.png"
         ex_status = self._copy_asset(
             SPRITE_SOURCE / ex_source_name,
             EX_DEST / ex_dest_name,

@@ -474,10 +474,8 @@ class FusionExtractor:
             ee_data: EE data dictionary
         """
         try:
-            from text_utils import to_kebab_case
-
-            # Get kebab-case key from fullname
-            ee_key = to_kebab_case(fullname)
+            # Get character ID as key
+            ee_key = self.fusion_char_id
 
             # Path to ee.json
             from config import EE_FILE
@@ -577,15 +575,10 @@ class FusionExtractor:
                 char_extractor = CharacterExtractor(self.fusion_char_id)
                 char_data = char_extractor.extract()
 
-                from text_utils import to_kebab_case
-                fusion_prefix = self._get_fusion_prefix()
-                fullname = f"{fusion_prefix['en']} {char_data.get('Fullname', '')}"
-                slug = to_kebab_case(fullname)
-
-                dest_file = dest_ex / f"{slug}.png"
+                dest_file = dest_ex / f"{self.fusion_char_id}.png"
                 if not dest_file.exists():
                     shutil.copy2(ex_files[0], dest_file)
-                    print(f"✓ Copied EX: TI_Equipment_EX_{self.fusion_char_id}.png -> {slug}.png")
+                    print(f"✓ Copied EX: TI_Equipment_EX_{self.fusion_char_id}.png -> {self.fusion_char_id}.png")
                     copied_count += 1
                 else:
                     print(f"  Skipped EX (already exists)")
@@ -639,13 +632,9 @@ class FusionExtractor:
             char_extractor = CharacterExtractor(original_char_id)
             original_data = char_extractor.extract()
 
-            # Get the slug from Fullname
-            from text_utils import to_kebab_case
-            slug = to_kebab_case(original_data.get('Fullname', ''))
-
-            # Path to original character JSON
+            # Path to original character JSON (keyed by ID)
             from config import CHAR_DATA
-            char_json_path = CHAR_DATA / f"{slug}.json"
+            char_json_path = CHAR_DATA / f"{original_char_id}.json"
 
             if not char_json_path.exists():
                 return []
@@ -673,12 +662,9 @@ class FusionExtractor:
             original_data = char_extractor.extract()
 
             # Get the slug from Fullname
-            from text_utils import to_kebab_case
-            slug = to_kebab_case(original_data.get('Fullname', ''))
-
-            # Path to original character JSON
+            # Path to original character JSON (keyed by ID)
             from config import CHAR_DATA
-            char_json_path = CHAR_DATA / f"{slug}.json"
+            char_json_path = CHAR_DATA / f"{original_char_id}.json"
 
             if not char_json_path.exists():
                 print(f"Warning: Original character JSON not found at {char_json_path}")

@@ -132,6 +132,8 @@
         "BT_UNDEAD"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "(White Night) After attacking, Attack +1 Turn\\n(Polar Night) After attacking, +20% Priority",
@@ -163,9 +165,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "11902",
@@ -402,14 +402,14 @@
         "BT_AP_CHARGE"
       ],
       "debuff": [],
-      "dual_buff": [
-        "BT_ACTION_GAUGE",
-        "BT_STAT|ST_ATK"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_ACTION_GAUGE",
+        "BT_STAT|ST_ATK"
+      ]
     }
   }
 }

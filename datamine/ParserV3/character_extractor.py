@@ -40,6 +40,15 @@ import re
 # Precompile regex for buff tag replacement
 _BUFF_TAG_RE = re.compile(r"\[Buff_([CTV])_([^\]]+)\]")
 
+# Skill classification constants
+OFFENSIVE_TARGETS = {'ENEMY', 'ENEMY,ENEMY'}
+RANGE_TO_TARGET = {
+    'SINGLE': 'mono',
+    'DOUBLE': 'duo',
+    'DOUBLE_SPEED': 'duo',
+    'ALL': 'multi',
+}
+
 class CharacterExtractor:
     """Extract complete character data from bytes files"""
 
@@ -638,6 +647,13 @@ class CharacterExtractor:
             skill = char_skills['SKT_CHAIN_PASSIVE']
             self.char_data['skills']['SKT_CHAIN_PASSIVE'] = self._process_skill(skill)
 
+            # Chain: hardcode classification (always offensive AoE in-game)
+            self.char_data['skills']['SKT_CHAIN_PASSIVE']['offensive'] = True
+            self.char_data['skills']['SKT_CHAIN_PASSIVE']['target'] = 'multi'
+            # Dual attack: always offensive single target
+            self.char_data['skills']['SKT_CHAIN_PASSIVE']['dual_offensive'] = True
+            self.char_data['skills']['SKT_CHAIN_PASSIVE']['dual_target'] = 'mono'
+
             # Extract chain & dual buffs/debuffs
             self._extract_chain_dual_buffs()
 
@@ -745,6 +761,12 @@ class CharacterExtractor:
             tags = buff_debuff_data.get('tags', [])
             if tags:
                 skill_data['_tags'] = tags  # Prefix with _ to mark as temporary
+
+        # Skill classification: offensive + target
+        target_team = skill.get('TargetTeamType', '')
+        range_type = skill.get('RangeType', '')
+        skill_data['offensive'] = target_team in OFFENSIVE_TARGETS
+        skill_data['target'] = RANGE_TO_TARGET.get(range_type)
 
         return skill_data
 
@@ -1110,6 +1132,37 @@ class CharacterExtractor:
 
                     skill_119['debuff'] = merged_debuffs
 
+                    # Merge classification (offensive OR, target merge if different)
+                    off_119 = skill_119.get('offensive', False)
+                    off_120 = skill_120.get('offensive', False)
+                    skill_119['offensive'] = off_119 or off_120
+
+                    tgt_119 = skill_119.get('target')
+                    tgt_120 = skill_120.get('target')
+                    if tgt_119 == tgt_120 or tgt_120 is None:
+                        pass  # Keep tgt_119
+                    elif tgt_119 is None:
+                        skill_119['target'] = tgt_120
+                    else:
+                        skill_119['target'] = [tgt_119, tgt_120]
+
+                    # Merge burst classification if both have burnEffect
+                    burn_119 = skill_119.get('burnEffect', {})
+                    burn_120 = skill_120.get('burnEffect', {})
+                    for bk in burn_119:
+                        if bk in burn_120:
+                            b119 = burn_119[bk]
+                            b120 = burn_120[bk]
+                            b119['offensive'] = b119.get('offensive', False) or b120.get('offensive', False)
+                            bt119 = b119.get('target')
+                            bt120 = b120.get('target')
+                            if bt119 == bt120 or bt120 is None:
+                                pass
+                            elif bt119 is None:
+                                b119['target'] = bt120
+                            else:
+                                b119['target'] = [bt119, bt120]
+
                     # Merge dual_buff/dual_debuff (chain passive only)
                     if skill_name == 'SKT_CHAIN_PASSIVE':
                         # Merge dual_buff
@@ -1231,7 +1284,8 @@ class CharacterExtractor:
 
                 burst_skills[skill_type] = {
                     'icon_name': icon_name,
-                    'skill_id': skill_id
+                    'skill_id': skill_id,
+                    'raw_skill': skill,
                 }
 
                 # Get description
@@ -1271,13 +1325,20 @@ class CharacterExtractor:
                             cost = int(cost_value)
                         # else: keep cost = 0 for invalid values like 'TRUE'
 
+                    # Classify burst skill
+                    raw = data.get('raw_skill', {})
+                    burst_offensive = raw.get('TargetTeamType', '') in OFFENSIVE_TARGETS
+                    burst_target = RANGE_TO_TARGET.get(raw.get('RangeType', ''))
+
                     burnEffect[burst_type] = {
                         "effect": data.get('effect', ''),
                         "effect_jp": data.get('effect_jp', ''),
                         "effect_kr": data.get('effect_kr', ''),
                         "effect_zh": data.get('effect_zh', ''),
                         "cost": cost,
-                        "level": i
+                        "level": i,
+                        "offensive": burst_offensive,
+                        "target": burst_target,
                     }
 
             # Add burnEffect to the base skill

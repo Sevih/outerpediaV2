@@ -19,7 +19,6 @@ import unicodedata
 from typing import Dict, Any, Optional, List
 from bytes_parser import Bytes_parser
 from cache_manager import CacheManager
-from text_utils import to_kebab_case
 
 logger = logging.getLogger(__name__)
 
@@ -114,7 +113,7 @@ class EEManager:
         """Get {en, jp, kr} for a key"""
         row = idx.get(key, {})
         if not row:
-            return {"en": "", "jp": "", "kr": ""}
+            return {"en": "", "jp": "", "kr": "", "zh": ""}
         return self._pick_langs(row)
 
     def _get_element(self, character_id: str, inverse: bool = False) -> Optional[str]:
@@ -411,34 +410,32 @@ class EEManager:
             return True
         return re.search(rf"\b{re.escape(hero_id)}\b", s) is not None
 
-    def update_ee(self, fullname: str, ee_dict: dict) -> bool:
+    def update_ee(self, character_id: str, ee_dict: dict) -> bool:
         """
         Update or add EE in ee.json
 
         Args:
-            fullname: Character fullname (will be converted to kebab-case for key)
+            character_id: Character ID (used as key in ee.json)
             ee_dict: EE data
 
         Returns:
             True if updated/added, False if no change
         """
-        # Use kebab-case as key (like "k", "charlotte", "gnosis-eva")
-        key = to_kebab_case(fullname)
-        existing = self.ee_data.get(key)
+        existing = self.ee_data.get(character_id)
 
         # Check if different
         if existing == ee_dict:
-            logger.info(f"EE for {fullname} ({key}) is already up to date")
+            logger.info(f"EE for {character_id} is already up to date")
             return False
 
         # Update
-        self.ee_data[key] = ee_dict
+        self.ee_data[character_id] = ee_dict
         self._save_ee_data()
 
         if existing:
-            logger.info(f"Updated EE for {fullname} ({key})")
+            logger.info(f"Updated EE for {character_id}")
         else:
-            logger.info(f"Added new EE for {fullname} ({key})")
+            logger.info(f"Added new EE for {character_id}")
 
         return True
 
@@ -458,4 +455,4 @@ class EEManager:
         if not ee_dict:
             return False
 
-        return self.update_ee(fullname, ee_dict)
+        return self.update_ee(character_id, ee_dict)

@@ -113,8 +113,6 @@ class WebPConverter:
         Returns:
             Tuple of (converted_count, skipped_count)
         """
-        from text_utils import to_kebab_case
-
         converted = 0
         skipped = 0
 
@@ -136,10 +134,8 @@ class WebPConverter:
         # Full Art
         asset_paths.append(PUBLIC_BASE / "full" / f"IMG_{character_id}.png")
 
-        # EX Equipment (requires fullname)
-        if fullname:
-            kebab_name = to_kebab_case(fullname)
-            asset_paths.append(PUBLIC_BASE / "ex" / f"{kebab_name}.png")
+        # EX Equipment
+        asset_paths.append(PUBLIC_BASE / "ee" / f"{character_id}.png")
 
         # Convert each asset
         for asset_path in asset_paths:

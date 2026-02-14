@@ -19,7 +19,6 @@ Date: 2025-10
 """
 from pathlib import Path
 import json
-from text_utils import to_kebab_case
 from buff_metadata_extractor import BuffMetadataExtractor
 
 
@@ -112,7 +111,7 @@ class ExportManager:
         filtered_char_data = self._filter_ignored_effects(char_data, all_buffs, all_debuffs)
 
         # Export character JSON (with ignored effects removed)
-        filename = to_kebab_case(char_data['Fullname']) + '.json'
+        filename = char_data['ID'] + '.json'
         export_path = self.char_export_path / filename
 
         with open(export_path, 'w', encoding='utf-8') as f:

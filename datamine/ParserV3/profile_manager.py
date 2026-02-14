@@ -150,32 +150,32 @@ class ProfileManager:
 
         return profile
 
-    def update_profile(self, fullname: str, profile_data: dict) -> bool:
+    def update_profile(self, character_id: str, profile_data: dict) -> bool:
         """
         Update or add a profile in character-profiles.json
 
         Args:
-            fullname: English fullname (key in JSON)
+            character_id: Character ID (used as key in JSON)
             profile_data: Profile dict to add/update
 
         Returns:
             True if updated/added, False if no change
         """
-        existing = self.profiles.get(fullname)
+        existing = self.profiles.get(character_id)
 
         # Check if profile is different
         if existing == profile_data:
-            logger.info(f"Profile for {fullname} is already up to date")
+            logger.info(f"Profile for {character_id} is already up to date")
             return False
 
         # Update profile
-        self.profiles[fullname] = profile_data
+        self.profiles[character_id] = profile_data
         self._save_profiles()
 
         if existing:
-            logger.info(f"Updated profile for {fullname}")
+            logger.info(f"Updated profile for {character_id}")
         else:
-            logger.info(f"Added new profile for {fullname}")
+            logger.info(f"Added new profile for {character_id}")
 
         return True
 
@@ -198,4 +198,4 @@ class ProfileManager:
         if not profile:
             return False
 
-        return self.update_profile(fullname, profile)
+        return self.update_profile(character_id, profile)
