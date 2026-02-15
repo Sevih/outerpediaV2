@@ -3,10 +3,10 @@
  * To add a language: add one entry here. Everything else derives automatically.
  */
 export const LANGUAGES = {
-  en: { label: 'English', abbrev: 'EN', flag: 'gb', subdomain: '', isDefault: true },
-  jp: { label: '日本語', abbrev: 'JP', flag: 'jp', subdomain: 'jp', isDefault: false },
-  kr: { label: '한국어', abbrev: 'KR', flag: 'kr', subdomain: 'kr', isDefault: false },
-  zh: { label: '中文', abbrev: 'ZH', flag: 'cn', subdomain: 'zh', isDefault: false },
+  en: { label: 'English', abbrev: 'EN', flag: 'gb', subdomain: '', htmlLang: 'en', isDefault: true },
+  jp: { label: '日本語', abbrev: 'JP', flag: 'jp', subdomain: 'jp', htmlLang: 'ja', isDefault: false },
+  kr: { label: '한국어', abbrev: 'KR', flag: 'kr', subdomain: 'kr', htmlLang: 'ko', isDefault: false },
+  zh: { label: '中文', abbrev: 'ZH', flag: 'cn', subdomain: 'zh', htmlLang: 'zh', isDefault: false },
 } as const;
 
 /** All language keys — derived from LANGUAGES */

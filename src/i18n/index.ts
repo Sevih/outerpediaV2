@@ -1,0 +1,28 @@
+import { cache } from 'react';
+import type { Lang } from '@/lib/i18n/config';
+import type { TranslationKey } from './locales/en';
+
+export type { TranslationKey };
+export type Messages = Record<TranslationKey, string>;
+export type TFunction = (key: TranslationKey, vars?: Record<string, string | number>) => string;
+
+/** Load messages for a language (cached per request) */
+export const loadMessages = cache(async (lang: Lang): Promise<Messages> => {
+  const mod = await import(`./locales/${lang}.ts`);
+  return mod.default;
+});
+
+/** Create a translation function from a messages dict */
+export function makeT(messages: Messages): TFunction {
+  return (key, vars) => {
+    const template = messages[key] ?? key;
+    if (!vars) return template;
+    return template.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? `{${k}}`));
+  };
+}
+
+/** Get a translation function for Server Components (cached per request) */
+export const getT = cache(async (lang: Lang): Promise<TFunction> => {
+  const messages = await loadMessages(lang);
+  return makeT(messages);
+});

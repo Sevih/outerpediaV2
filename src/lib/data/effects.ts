@@ -2,7 +2,7 @@ import { readFile } from 'fs/promises';
 import { join } from 'path';
 import type { Effect } from '@/types/effect';
 
-const EFFECTS_DIR = join(process.cwd(), 'data/game/effects');
+const EFFECTS_DIR = join(process.cwd(), 'data/effects');
 
 /** Get all buffs */
 export async function getBuffs(): Promise<Effect[]> {

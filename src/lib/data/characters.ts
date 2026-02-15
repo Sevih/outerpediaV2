@@ -2,7 +2,7 @@ import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 import type { Character, CharacterIndex } from '@/types/character';
 
-const CHARS_DIR = join(process.cwd(), 'data/game/characters');
+const CHARS_DIR = join(process.cwd(), 'data/character');
 const INDEX_PATH = join(process.cwd(), 'data/generated/characters-index.json');
 
 /** Get a single character by slug */

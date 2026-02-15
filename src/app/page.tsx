@@ -1,7 +1,7 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold">Outerpedia v2</h1>
-    </main>
-  );
+import { redirect } from 'next/navigation';
+import { DEFAULT_LANG } from '@/lib/i18n/config';
+
+/** Root page redirects to default language. Middleware handles this too, but this is a safety net. */
+export default function RootPage() {
+  redirect(`/${DEFAULT_LANG}`);
 }

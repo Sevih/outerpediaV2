@@ -2,7 +2,7 @@ import { readFile } from 'fs/promises';
 import { join } from 'path';
 import type { Boss, BossIndexEntry } from '@/types/boss';
 
-const BOSSES_DIR = join(process.cwd(), 'data/game/bosses');
+const BOSSES_DIR = join(process.cwd(), 'data/boss');
 const INDEX_PATH = join(process.cwd(), 'data/generated/boss-index.json');
 
 /** Get a single boss by ID */
