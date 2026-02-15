@@ -5,7 +5,7 @@ Determines for each character skill:
 2. Target count: mono (single), duo (double), or multi (AoE)
 
 Uses cached CharacterTemplet.json and CharacterSkillTemplet.json.
-Injects results directly into src/data/char/{slug}.json files.
+Injects results directly into data/character/{id}.json files.
 """
 import json
 from pathlib import Path

@@ -6,7 +6,7 @@ For each character:
 2. Merge manual fields from existing JSON (rank, rank_pvp, role, skill_priority, video)
 3. Filter ignored effects via ExportManager
 4. Reorder JSON fields
-5. Save to data/char/{id}.json
+5. Save to data/character/{id}.json
 6. Copy assets (portrait, ATB, skills, full art, EE) + WebP conversion
 
 For EE:
@@ -162,7 +162,7 @@ def merge_manual_fields(extracted: dict, existing: dict) -> dict:
 
 
 def run_batch_characters():
-    """Extract all characters and save to data/char/"""
+    """Extract all characters and save to data/character/"""
     char_files = sorted(CHAR_DATA.glob("*.json"))
     total = len(char_files)
     print(f"Characters: {total} files found\n")

@@ -104,7 +104,7 @@ Game Files (.bytes)
 2. Enter character ID (e.g., `2000066` for Charlotte)
 3. Click "Extract"
 4. Review JSON comparison
-5. Click "Export to src/data/char" if satisfied
+5. Click "Export to data/character" if satisfied
 
 ### Extract a Core Fusion Character (GUI)
 
@@ -113,7 +113,7 @@ Game Files (.bytes)
 3. Select a Core Fusion character from dropdown (or enter ID manually)
 4. Click "Extract Core Fusion"
 5. Review JSON preview
-6. Click "Save to src/data/char/" to export
+6. Click "Save to data/character/" to export
 
 ### Extract a Character (CLI)
 
@@ -196,7 +196,7 @@ ParserV3/
 2. Run extraction: `python gui_qt.py` → Enter ID → Extract
 3. Review missing buffs/debuffs (dialog will appear)
 4. Fill metadata or mark as ignored
-5. Export to `src/data/char/{character-name}.json`
+5. Export to `data/character/{character-name}.json`
 6. Copy assets automatically (portraits, skills, ATB, full art)
 
 ### Update Exclusive Equipment

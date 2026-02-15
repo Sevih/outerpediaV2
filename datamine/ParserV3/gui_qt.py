@@ -1208,7 +1208,7 @@ class CharacterTab(QWidget):
         self.status_label.setText("[OK] Manual fields auto-updated")
 
     def _replace_live_file(self):
-        """Replace the live file in src/data/char/ with the exported file"""
+        """Replace the live file in data/character/ with the exported file"""
         if not self.current_data:
             QMessageBox.warning(self, "Warning", "No character data available")
             return
@@ -1217,7 +1217,7 @@ class CharacterTab(QWidget):
             fullname = self.current_data.get('Fullname', '')
             filename = self.current_char_id + '.json'
 
-            # Destination: data/char/
+            # Destination: data/character/
             live_path = CHAR_DATA_FOLDER / filename
 
             # Validate buffs/debuffs before saving
@@ -1261,7 +1261,7 @@ class CharacterTab(QWidget):
             reply = QMessageBox.question(
                 self,
                 "Confirm Save",
-                f"Save character data?\n\nFile: {filename}\n\nLocation: src/data/char/\n\nThis will {action} the file!",
+                f"Save character data?\n\nFile: {filename}\n\nLocation: data/character/\n\nThis will {action} the file!",
                 QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
                 QMessageBox.StandardButton.No
             )
@@ -1355,7 +1355,7 @@ class CharacterTab(QWidget):
                 "Save Complete",
                 f"Character data saved successfully!\n\n"
                 f"File: {filename}\n"
-                f"Location: src/data/char/\n\n"
+                f"Location: data/character/\n\n"
                 f"{profile_msg}\n"
                 f"{ee_msg}"
             )
@@ -1390,7 +1390,7 @@ class CharacterTab(QWidget):
 
         filename = self.current_char_id + '.json'
 
-        # Try data/char/
+        # Try data/character/
         json_path = CHAR_DATA_FOLDER / filename
 
         logger.info(f"Looking for existing JSON: {json_path}")
@@ -3364,7 +3364,7 @@ class LocalizationTab(QWidget):
         main_layout.addWidget(self.preview_text)
 
     def _load_character_list(self):
-        """Load list of characters from existing JSON files in src/data/char/"""
+        """Load list of characters from existing JSON files in data/character/"""
         try:
             logger.info(f"Loading characters from: {CHAR_DATA_FOLDER}")
             logger.info(f"CHAR_DATA_FOLDER exists: {CHAR_DATA_FOLDER.exists()}")
@@ -5610,7 +5610,7 @@ class CoreFusionTab(QWidget):
         self.images_container_layout.addStretch()
 
     def _save_fusion(self):
-        """Save Core Fusion data to src/data/char/"""
+        """Save Core Fusion data to data/character/"""
         if not self.extracted_data:
             QMessageBox.warning(self, "No Data", "No extracted data to save")
             return

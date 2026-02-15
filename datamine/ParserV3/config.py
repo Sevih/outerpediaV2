@@ -18,7 +18,7 @@ EXPORT_FOLDER = PARSER_ROOT / "export"
 
 # Project data (static, imported from v1)
 DATA_ROOT = PROJECT_ROOT / "data"
-CHAR_DATA = DATA_ROOT / "char"
+CHAR_DATA = DATA_ROOT / "character"
 BOSS_DATA = DATA_ROOT / "boss"
 EQUIPMENT_DATA = DATA_ROOT / "equipment"
 EFFECTS_DATA = DATA_ROOT / "effects"

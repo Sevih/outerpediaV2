@@ -1,7 +1,7 @@
 """
-Batch Profile Extraction - Extract profiles for all characters in data/char/
+Batch Profile Extraction - Extract profiles for all characters in data/character/
 
-Reads each {ID}.json from data/char/, extracts profile data from .bytes files,
+Reads each {ID}.json from data/character/, extracts profile data from .bytes files,
 and writes the result to data/character-profiles.json.
 """
 

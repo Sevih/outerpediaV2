@@ -8,7 +8,7 @@ from pathlib import Path
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 V1_CHAR = Path("C:/Users/colli/OneDrive/Documents/Projet perso/outerpedia-clean/src/data/char")
-V2_CHAR = Path("../../data/char")
+V2_CHAR = Path("../../data/character")
 V1_SLUG_MAP = Path("C:/Users/colli/OneDrive/Documents/Projet perso/outerpedia-clean/src/data/_SlugToChar.json")
 
 # Build ID -> slug mapping from v1

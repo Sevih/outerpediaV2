@@ -1,5 +1,5 @@
 """
-JSON Comparator - Compare extracted character JSON with existing JSON in src/data/char
+JSON Comparator - Compare extracted character JSON with existing JSON in data/character
 
 This module provides deep comparison between two JSON objects and identifies:
 - Added fields (new in extracted)
@@ -49,7 +49,7 @@ class JSONComparator:
 
         Args:
             extracted_data: Newly extracted character JSON (dict)
-            existing_data: Existing character JSON from src/data/char (dict)
+            existing_data: Existing character JSON from data/character (dict)
         """
         self.extracted = extracted_data
         self.existing = existing_data
