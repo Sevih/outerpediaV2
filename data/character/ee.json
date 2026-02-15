@@ -1110,6 +1110,30 @@
       "BT_STUN"
     ]
   },
+  "2000053": {
+    "name": "Ksai's Core",
+    "name_jp": "ザイのコア",
+    "name_kr": "크사이의 코어",
+    "name_zh": "科赛的核心",
+    "mainStat": "Reduced DMG Taken vs Dark",
+    "mainStat_jp": "闇属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "암속성 대상 받는 피해 감소",
+    "mainStat_zh": "暗属性所受伤害降低",
+    "effect": "When using <color=#28d9ed>Flight of Abraxas</color>, grants 30 Action Points",
+    "effect_jp": "<color=#28d9ed>【アブラクサスの飛翔】</color>使用時、APが+30UPする。",
+    "effect_kr": "<color=#28d9ed>아브락사스의 비상</color> 사용 시 AP +30",
+    "effect_zh": "使用<color=#28d9ed>阿布拉克萨斯的悲伤</color>时,AP+30",
+    "effect10": "When using <color=#28d9ed>Merciless God</color>, increases Action Points by 30",
+    "effect10_jp": "<color=#28d9ed>【寛大ならざる神】</color>使用時、APを+30獲得する。",
+    "effect10_kr": "<color=#28d9ed>관대하지 않은 신</color> 사용 시 AP +30",
+    "effect10_zh": "使用<color=#28d9ed>无悯之神</color>时,AP+30",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "C",
+    "buff": [
+      "BT_AP_CHARGE"
+    ],
+    "debuff": []
+  },
   "2000054": {
     "name": "Finn the Shark",
     "name_jp": "アオイ",
@@ -2304,6 +2328,30 @@
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "C",
     "buff": [],
+    "debuff": []
+  },
+  "2000110": {
+    "name": "Lawless Immutable Ruler",
+    "name_jp": "無法不変の万物操縦",
+    "name_kr": "무법불변 만물조종",
+    "name_zh": "无法不变 万物操纵",
+    "mainStat": "DMG Increase vs Dark",
+    "mainStat_jp": "闇属性対象ダメージUP",
+    "mainStat_kr": "암속성 대상 피해 증가",
+    "mainStat_zh": "对暗属性目标造成 伤害提升",
+    "effect": "Increases damage dealt by allies to Bosses +50%",
+    "effect_jp": "味方がボスに与えるダメージ+50%",
+    "effect_kr": "아군이 보스에게 입히는 피해 +50%",
+    "effect_zh": "友军对首领造成的伤害+50%",
+    "effect10": "Increases Priority of the ally with the highest Attack by +25% after using <color=#28d9ed>Repent!</color> while in <color=#28d9ed>Mandala</color> state",
+    "effect10_jp": "<color=#28d9ed>曼荼羅</color>状態で<color=#28d9ed>懺悔なさい!</color>使用後、 攻撃力が最も高い味方の行動ゲージ+25%",
+    "effect10_kr": "<color=#28d9ed>만다라</color> 상태에서 <color=#28d9ed>참회하세요!</color> 사용 후 공격력이 가장 높은 아군의 행동 게이지 +25%",
+    "effect10_zh": "<color=#28d9ed>曼荼罗</color>状态下使用<color=#28d9ed>忏悔吧!</color>后,攻击力最高的友军行动值+25%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "A",
+    "buff": [
+      "BT_ACTION_GAUGE"
+    ],
     "debuff": []
   },
   "2000111": {
