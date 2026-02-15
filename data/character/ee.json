@@ -93,6 +93,28 @@
     ],
     "debuff": []
   },
+  "2000008": {
+    "name": "Sword of Sorrows",
+    "name_jp": "悲悼のつるぎ",
+    "name_kr": "슬픔의 칼날",
+    "name_zh": "悲伤之刃",
+    "mainStat": "Reduces Water Damage Taken",
+    "mainStat_jp": "水属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "수속성 대상 받는 피해 감소",
+    "mainStat_zh": "水属性所受伤害降低",
+    "effect": "Damage dealt increases by 50% (Excluding critical hits) Speed increases by 40",
+    "effect_jp": "ダメージが+50%UPする。(会心ダメージは除く)スピードが40UPする。",
+    "effect_kr": "피해량 +50% (치명 공격 제외) 속도 +40",
+    "effect_zh": "伤害量+50%(暴击除外) 速度+40",
+    "effect10": "+50% damage dealt to Water enemies (Does not have any effect on elemental advantage)",
+    "effect10_jp": "水属性の敵に与えるダメージ +50%(有利な相性攻撃の影響を受けない)",
+    "effect10_kr": "수속성 적에게 입히는 피해 +50% (유리한 상성 공격의 영향을 받지 않음)",
+    "effect10_zh": "对<color=#28d9ed>水属性</color>敌人造成的伤害+50%(不受克制属性攻击影响)",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "S",
+    "buff": [],
+    "debuff": []
+  },
   "2000010": {
     "name": "Trust",
     "name_jp": "信の剣",
@@ -593,6 +615,30 @@
     ],
     "debuff": []
   },
+  "2000032": {
+    "name": "Secret Cooking Utensils",
+    "name_jp": "秘伝の調理道具",
+    "name_kr": "비전 요리 기구",
+    "name_zh": "独门烹饪道具",
+    "mainStat": "Effectiveness (To: Earth)",
+    "mainStat_jp": "地属性の対象の効果命中",
+    "mainStat_kr": "지속성 대상 효과 적중",
+    "mainStat_zh": "土属性效果命中",
+    "effect": "When using <color=#28d9ed>Fine Dining</color>, increases the Attack of the wearer for 1 turn(s)",
+    "effect_jp": "<color=#28d9ed>【こんがり飛燕脚】</color>使用時、自分の攻撃力を1ターンの間UPする。",
+    "effect_kr": "<color=#28d9ed>파인다이닝</color> 사용 시 1턴 동안 자신의 공격력 증가",
+    "effect_zh": "使用<color=#28d9ed>精致餐饮</color>时,使自身攻击力提升,持 续1回合",
+    "effect10": "When using <color=#28d9ed>Fine Dining</color>, increases the Attack of the wearer for 2 turn(s)",
+    "effect10_jp": "<color=#28d9ed>【こんがり飛燕脚】</color>使用時、自分の攻撃力を2ターンの間UPする。",
+    "effect10_kr": "<color=#28d9ed>파인다이닝</color> 사용 시 2턴 동안 자신의 공격력 증가",
+    "effect10_zh": "使用<color=#28d9ed>精致餐饮</color>时,使自身攻击力提升,持续2回合",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "C",
+    "buff": [
+      "BT_STAT|ST_ATK"
+    ],
+    "debuff": []
+  },
   "2000033": {
     "name": "Titanic Anchor",
     "name_jp": "タイタンアンカー",
@@ -991,6 +1037,28 @@
     "buff": [
       "BT_AP_CHARGE"
     ],
+    "debuff": []
+  },
+  "2000051": {
+    "name": "O.P.B.",
+    "name_jp": "O.P.B",
+    "name_kr": "O.P.B",
+    "name_zh": "O.P.B",
+    "mainStat": "Reduces Water Damage Taken",
+    "mainStat_jp": "水属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "수속성 대상 받는 피해 감소",
+    "mainStat_zh": "水属性所受伤害降低",
+    "effect": "Increases the chance to Counterattack proportional to missing Health (max 50%)",
+    "effect_jp": "残りHPが低いほど反撃発生率がUPする。(反撃発生率は最大50%までUP)",
+    "effect_kr": "체력이 감소할수록 반격 확률 증가 (최대 50%)",
+    "effect_zh": "生命值越低,反击率越高(最多50%)",
+    "effect10": "+30 Resilience",
+    "effect10_jp": "効果抵抗+30",
+    "effect10_kr": "효과 저항 +30",
+    "effect10_zh": "效果抵抗+30",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "B",
+    "buff": [],
     "debuff": []
   },
   "2000052": {

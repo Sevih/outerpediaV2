@@ -352,6 +352,27 @@ class EEManager:
             elif buff_match_main:
                 effect10_obj = self._localize_effect_with_buff(effect10_obj, buff_match_main)
 
+            # Resolve remaining [ValueN] / [+ValueN] / [-ValueN] from numbered buffs
+            numbered_buffs: Dict[int, Dict[str, Any]] = {}
+            for r in buff_rows:
+                bid = str(r.get("BuffID") or "")
+                if bid.startswith(buff_key_base + "_"):
+                    suffix = bid[len(buff_key_base) + 1:]
+                    if suffix.isdigit():
+                        numbered_buffs[int(suffix)] = r
+
+            for n, nb in numbered_buffs.items():
+                at = str(nb.get("ApplyingType") or "")
+                vr = str(nb.get("Value") or "")
+                for lang_key in ("en", "jp", "kr", "zh"):
+                    vs = self._fmt_value(at, vr, nb, lang=lang_key)
+                    for obj in (effect_obj, effect10_obj):
+                        t = obj[lang_key]
+                        t = t.replace(f"[Value{n}]", vs)
+                        t = t.replace(f"[+Value{n}]", vs if vs.startswith("+") else f"+{vs}")
+                        t = t.replace(f"[-Value{n}]", vs if vs.startswith("-") else f"-{vs}")
+                        obj[lang_key] = t
+
             # Main stat resolution
             mainstat_option_rows = [r for r in itemopt_rows if self._option_row_matches_hero(r, character_id)]
 
