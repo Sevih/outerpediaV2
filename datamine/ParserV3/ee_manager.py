@@ -194,6 +194,8 @@ class EEManager:
         key = raw.lower()
 
         if key == "value":
+            if not value_str:
+                return f"[{name}]"
             # Avoid doubling sign: [-Value] with value_str="-60" → "-60" not "--60"
             if prefix and value_str.startswith(prefix):
                 return value_str
@@ -205,22 +207,23 @@ class EEManager:
                 v = float(raw)
                 return f"{(v/10.0):g}%"
             except Exception:
-                return ""
+                return f"[{name}]"
 
         if key in ("turn", "turnduration", "duration"):
             raw = str(buff_row.get("TurnDuration") or buff_row.get("Duration") or "").strip()
             if not raw:
-                return ""
+                return f"[{name}]"
             try:
                 n = int(float(raw))
                 if n < 0:
-                    return ""
+                    return f"[{name}]"
                 return str(n)
             except Exception:
                 return raw
 
         if key == "buffstartcool":
-            return str(buff_row.get("BuffStartCool") or buff_row.get("BuffCool") or buff_row.get("StartCool") or "").strip()
+            val = str(buff_row.get("BuffStartCool") or buff_row.get("BuffCool") or buff_row.get("StartCool") or "").strip()
+            return val if val else f"[{name}]"
 
         return f"[{name}]"
 
@@ -343,23 +346,45 @@ class EEManager:
                 buff_key_upgrade = f"{buff_key_base}_ADD"
                 buff_match_upgrade = next((r for r in buff_rows if str(r.get("BuffID")) == buff_key_upgrade), None)
 
-            # Apply buff values to effect texts
+            # Collect related buffs, split base vs upgrade, exclude _old
+            base_buffs = []
+            upgrade_buffs = []
+            for r in buff_rows:
+                bid = str(r.get("BuffID") or "")
+                if not bid.startswith(buff_key_base):
+                    continue
+                if "_old" in bid.lower():
+                    continue
+                if bid.endswith("_CHANGE") or bid.endswith("_ADD"):
+                    upgrade_buffs.append(r)
+                else:
+                    base_buffs.append(r)
+
+            # Apply buff values to effect texts (loop resolves [Value], [Rate], [Turn]...)
+            # Unresolved placeholders are kept as [name] so next buff can try
             if buff_match_main:
                 effect_obj = self._localize_effect_with_buff(effect_obj, buff_match_main)
+            for buff in base_buffs:
+                effect_obj = self._localize_effect_with_buff(effect_obj, buff)
 
             if buff_match_upgrade:
                 effect10_obj = self._localize_effect_with_buff(effect10_obj, buff_match_upgrade)
+            elif upgrade_buffs:
+                effect10_obj = self._localize_effect_with_buff(effect10_obj, upgrade_buffs[0])
             elif buff_match_main:
                 effect10_obj = self._localize_effect_with_buff(effect10_obj, buff_match_main)
+            for buff in upgrade_buffs:
+                effect10_obj = self._localize_effect_with_buff(effect10_obj, buff)
+            for buff in base_buffs:
+                effect10_obj = self._localize_effect_with_buff(effect10_obj, buff)
 
             # Resolve remaining [ValueN] / [+ValueN] / [-ValueN] from numbered buffs
             numbered_buffs: Dict[int, Dict[str, Any]] = {}
-            for r in buff_rows:
+            for r in base_buffs:
                 bid = str(r.get("BuffID") or "")
-                if bid.startswith(buff_key_base + "_"):
-                    suffix = bid[len(buff_key_base) + 1:]
-                    if suffix.isdigit():
-                        numbered_buffs[int(suffix)] = r
+                suffix = bid[len(buff_key_base) + 1:] if bid.startswith(buff_key_base + "_") else ""
+                if suffix.isdigit():
+                    numbered_buffs[int(suffix)] = r
 
             for n, nb in numbered_buffs.items():
                 at = str(nb.get("ApplyingType") or "")

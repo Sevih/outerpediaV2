@@ -1,0 +1,460 @@
+{
+  "ID": "2000098",
+  "Fullname": "Liselotte",
+  "Fullname_jp": "リーゼロッテ",
+  "Fullname_kr": "리젤로테",
+  "Fullname_zh": "莉婕洛特",
+  "Rarity": 3,
+  "Element": "Fire",
+  "Class": "Healer",
+  "SubClass": "Sage",
+  "rank": "A",
+  "rank_pvp": "A",
+  "role": "sustain",
+  "skill_priority": {
+    "First": {
+      "prio": 3
+    },
+    "Second": {
+      "prio": 2
+    },
+    "Ultimate": {
+      "prio": 1
+    }
+  },
+  "Chain_Type": "Finish",
+  "gift": "Magic Tool",
+  "VoiceActor": "VA. Alejandra Reynoso",
+  "VoiceActor_jp": "CV. 矢野優美華",
+  "VoiceActor_kr": "CV. 김서현",
+  "VoiceActor_zh": "CV. 矢野优美华",
+  "transcend": {
+    "1": null,
+    "2": null,
+    "3": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\n+5 Ally Team Speed\n+1 Chain Passive Weakness Gauge damage",
+    "4_1_jp": "ATK DEF HP +16%\n味方のスピード+5\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 속도 +5\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n友军速度+5\n连携被动技能的WG降低量+1",
+    "4_2": "ATK DEF HP +19%",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
+    "5_2": "ATK DEF HP +25%",
+    "5_3": "ATK DEF HP +28%",
+    "6": "ATK DEF HP +30%\n+5 Ally Team Speed\n+25 Action Points at battle start",
+    "6_jp": "ATK DEF HP +30%\n味方のスピード+5\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n아군 속도 +5\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n友军速度+5\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "9801",
+      "IconName": "Skill_First_2000098",
+      "SkillType": "SKT_FIRST",
+      "name": "Fake Meteor",
+      "name_jp": "模造流星",
+      "name_kr": "모조 유성",
+      "name_zh": "伪流星",
+      "true_desc_levels": {
+        "1": "Attacks an enemy, and heals the ally with the lowest Health by <color=#28d9ed>5%</color>.",
+        "1_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを<color=#28d9ed>5%</color>回復する。",
+        "1_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>5%</color> 회복시킵니다.",
+        "1_zh": "攻击敌人,并恢复生命值最低的友军<color=#28d9ed>5%</color>生命\\n值。",
+        "2": "Attacks an enemy, and heals the ally with the lowest Health by <color=#28d9ed>5%</color>.",
+        "2_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを<color=#28d9ed>5%</color>回復する。",
+        "2_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>5%</color> 회복시킵니다.",
+        "2_zh": "攻击敌人,并恢复生命值最低的友军<color=#28d9ed>5%</color>生命\\n值。",
+        "3": "Attacks an enemy, and heals the ally with the lowest Health by <color=#28d9ed>10%</color>.",
+        "3_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを<color=#28d9ed>10%</color>回復する。",
+        "3_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>10%</color> 회복시킵니다.",
+        "3_zh": "攻击敌人,并恢复生命值最低的友军<color=#28d9ed>10%</color>生命\\n值。",
+        "4": "Attacks an enemy, and heals the ally with the lowest Health by <color=#28d9ed>10%</color>.",
+        "4_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを<color=#28d9ed>10%</color>回復する。",
+        "4_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>10%</color> 회복시킵니다.",
+        "4_zh": "攻击敌人,并恢复生命值最低的友军<color=#28d9ed>10%</color>生命\\n值。",
+        "5": "Attacks an enemy, and heals the ally with the lowest Health by <color=#28d9ed>15%</color>.",
+        "5_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを<color=#28d9ed>15%</color>回復する。",
+        "5_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>15%</color> 회복시킵니다.",
+        "5_zh": "攻击敌人,并恢复生命值最低的友军<color=#28d9ed>15%</color>生命\\n值。"
+      },
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% healing"
+        ],
+        "3_jp": [
+          "HP回復量+5%"
+        ],
+        "3_kr": [
+          "체력 회복량 +5%"
+        ],
+        "3_zh": [
+          "生命值恢复量+5%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+5% healing"
+        ],
+        "5_jp": [
+          "HP回復量+5%"
+        ],
+        "5_kr": [
+          "체력 회복량 +5%"
+        ],
+        "5_zh": [
+          "生命值恢复量+5%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [
+        "BT_AP_CHARGE",
+        "BT_SHIELD_BASED_TARGET"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "mono",
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "Effects are applied to all allies",
+          "effect_jp": "味方全体に効果適用",
+          "effect_kr": "아군 전체에게 효과 적용",
+          "effect_zh": "对全体友军发动效果",
+          "cost": 70,
+          "level": 1,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_2": {
+          "effect": "Target AP +50 (excluding the caster)",
+          "effect_jp": "対象のAP+50(自分以外)",
+          "effect_kr": "대상 AP +50 (자신 제외)",
+          "effect_zh": "目标AP+50(自身除外)",
+          "cost": 105,
+          "level": 2,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_3": {
+          "effect": "+2 turns of Barrier (proportional to target Health)",
+          "effect_jp": "シールド追加+2ターン\\n(対象のHPが高いほどシールド量UP)",
+          "effect_kr": "실드 추가 +2턴(대상 체력 비례)",
+          "effect_zh": "额外护盾+2回合(根据目标生命值等比)",
+          "cost": 140,
+          "level": 3,
+          "offensive": true,
+          "target": "mono"
+        }
+      }
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "9802",
+      "IconName": "Skill_Second_2000098",
+      "SkillType": "SKT_SECOND",
+      "name": "Blessing of the Stars",
+      "name_jp": "星の祝福",
+      "name_kr": "별의 축복",
+      "name_zh": "星辰的祝福",
+      "true_desc_levels": {
+        "1": "(Triggered Effect)\\nWhen an ally uses an attack that targets all enemies, all allies gain <color=#28d9ed>Barrier</color> and <color=#28d9ed>Defense</color> increase for <color=#28d9ed>1 turns.</color>The amount of the Barrier strength is proportional to the target's Max Health.",
+        "1_jp": "(発動効果)\\n味方が全体攻撃時、味方全体に<color=#28d9ed>シールド</color>と<color=#28d9ed>防御力</color>UPを<color=#28d9ed>1ターン</color>の間付与する。シールド量は対象の最大HPが高いほどUPする。",
+        "1_kr": "(발동 효과)\\n아군이 전체 공격을 했을 때, 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>방어력</color> 증가를 부여합니다. 실드량은 대상 최대 체력에 비례합니다.",
+        "1_zh": "(触发效果)\\n友军发动全体攻击时,赋予全体友军<color=#28d9ed>护盾</color>和<color=#28d9ed>防御力</color>增加效果,持续<color=#28d9ed>1回合</color>。护盾量根据目标生命值上限等比提升。",
+        "2": "(Triggered Effect)\\nWhen an ally uses an attack that targets all enemies, all allies gain <color=#28d9ed>Barrier</color> and <color=#28d9ed>Defense</color> increase for <color=#28d9ed>1 turns.</color>The amount of the Barrier strength is proportional to the target's Max Health.",
+        "2_jp": "(発動効果)\\n味方が全体攻撃時、味方全体に<color=#28d9ed>シールド</color>と<color=#28d9ed>防御力</color>UPを<color=#28d9ed>1ターン</color>の間付与する。シールド量は対象の最大HPが高いほどUPする。",
+        "2_kr": "(발동 효과)\\n아군이 전체 공격을 했을 때, 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>방어력</color> 증가를 부여합니다. 실드량은 대상 최대 체력에 비례합니다.",
+        "2_zh": "(触发效果)\\n友军发动全体攻击时,赋予全体友军<color=#28d9ed>护盾</color>和<color=#28d9ed>防御力</color>增加效果,持续<color=#28d9ed>1回合</color>。护盾量根据目标生命值上限等比提升。",
+        "3": "(Triggered Effect)\\nWhen an ally uses an attack that targets all enemies, all allies gain <color=#28d9ed>Barrier</color> and <color=#28d9ed>Defense</color> increase for <color=#28d9ed>1 turns.</color>The amount of the Barrier strength is proportional to the target's Max Health.",
+        "3_jp": "(発動効果)\\n味方が全体攻撃時、味方全体に<color=#28d9ed>シールド</color>と<color=#28d9ed>防御力</color>UPを<color=#28d9ed>1ターン</color>の間付与する。シールド量は対象の最大HPが高いほどUPする。",
+        "3_kr": "(발동 효과)\\n아군이 전체 공격을 했을 때, 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>방어력</color> 증가를 부여합니다. 실드량은 대상 최대 체력에 비례합니다.",
+        "3_zh": "(触发效果)\\n友军发动全体攻击时,赋予全体友军<color=#28d9ed>护盾</color>和<color=#28d9ed>防御力</color>增加效果,持续<color=#28d9ed>1回合</color>。护盾量根据目标生命值上限等比提升。",
+        "4": "(Triggered Effect)\\nWhen an ally uses an attack that targets all enemies, all allies gain <color=#28d9ed>Barrier</color> and <color=#28d9ed>Defense</color> increase for <color=#28d9ed>2 turns.</color>The amount of the Barrier strength is proportional to the target's Max Health.",
+        "4_jp": "(発動効果)\\n味方が全体攻撃時、味方全体に<color=#28d9ed>シールド</color>と<color=#28d9ed>防御力</color>UPを<color=#28d9ed>2ターン</color>の間付与する。シールド量は対象の最大HPが高いほどUPする。",
+        "4_kr": "(발동 효과)\\n아군이 전체 공격을 했을 때, 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>방어력</color> 증가를 부여합니다. 실드량은 대상 최대 체력에 비례합니다.",
+        "4_zh": "(触发效果)\\n友军发动全体攻击时,赋予全体友军<color=#28d9ed>护盾</color>和<color=#28d9ed>防御力</color>增加效果,持续<color=#28d9ed>2回合</color>。护盾量根据目标生命值上限等比提升。",
+        "5": "(Triggered Effect)\\nWhen an ally uses an attack that targets all enemies, all allies gain <color=#28d9ed>Barrier</color> and <color=#28d9ed>Defense</color> increase for <color=#28d9ed>2 turns.</color>The amount of the Barrier strength is proportional to the target's Max Health.",
+        "5_jp": "(発動効果)\\n味方が全体攻撃時、味方全体に<color=#28d9ed>シールド</color>と<color=#28d9ed>防御力</color>UPを<color=#28d9ed>2ターン</color>の間付与する。シールド量は対象の最大HPが高いほどUPする。",
+        "5_kr": "(발동 효과)\\n아군이 전체 공격을 했을 때, 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>방어력</color> 증가를 부여합니다. 실드량은 대상 최대 체력에 비례합니다.",
+        "5_zh": "(触发效果)\\n友军发动全体攻击时,赋予全体友军<color=#28d9ed>护盾</color>和<color=#28d9ed>防御力</color>增加效果,持续<color=#28d9ed>2回合</color>。护盾量根据目标生命值上限等比提升。"
+      },
+      "enhancement": {
+        "2": [
+          "Enhances Barrier strength"
+        ],
+        "2_jp": [
+          "シールド強化"
+        ],
+        "2_kr": [
+          "실드 강화"
+        ],
+        "2_zh": [
+          "护盾强化"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+1 turn effect duration"
+        ],
+        "4_jp": [
+          "効果ターン+1ターン"
+        ],
+        "4_kr": [
+          "효과 지속 +1턴"
+        ],
+        "4_zh": [
+          "效果持续时间+1回合"
+        ],
+        "5": [
+          "Enhances Barrier strength"
+        ],
+        "5_jp": [
+          "シールド強化"
+        ],
+        "5_kr": [
+          "실드 강화"
+        ],
+        "5_zh": [
+          "护盾强化"
+        ]
+      },
+      "cd": "4",
+      "buff": [
+        "BT_SHIELD_BASED_TARGET",
+        "BT_STAT|ST_DEF",
+        "BT_EXTRA_ATTACK_ON_TURN_END"
+      ],
+      "debuff": [],
+      "offensive": false,
+      "target": "multi"
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "9803",
+      "IconName": "Skill_Ultimate_2000098",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Astra Luminous",
+      "name_jp": "アストラ・ルミナス",
+      "name_kr": "아스트라 루미너스",
+      "name_zh": "奥斯黛拉·露米纳斯",
+      "true_desc_levels": {
+        "1": "Removes all debuffs and heals all allies by <color=#28d9ed>15%</color>. Also reduces Skill Cooldowns of all allies excluding the caster by <color=#28d9ed>1 turn</color>.",
+        "1_jp": "味方全体のすべての弱体効果を解除し、味方全体のHPを<color=#28d9ed>15%</color>回復する。また、自分を除く味方全体のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "1_kr": "아군 전체의 모든 약화 효과를 해제하고, 아군 전체의 체력을 <color=#28d9ed>15%</color> 회복시킵니다. 그리고 자신을 제외한 아군 전체의 스킬 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "1_zh": "解除全体友军的所有弱化效果,恢复全体友军\\n<color=#28d9ed>15%</color>生命值。并使除了自身以外的全体友军技能冷却时间减少<color=#28d9ed>1回合</color>。",
+        "2": "Removes all debuffs and heals all allies by <color=#28d9ed>25%</color>. Also reduces Skill Cooldowns of all allies excluding the caster by <color=#28d9ed>1 turn</color>.",
+        "2_jp": "味方全体のすべての弱体効果を解除し、味方全体のHPを<color=#28d9ed>25%</color>回復する。また、自分を除く味方全体のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "2_kr": "아군 전체의 모든 약화 효과를 해제하고, 아군 전체의 체력을 <color=#28d9ed>25%</color> 회복시킵니다. 그리고 자신을 제외한 아군 전체의 스킬 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "2_zh": "解除全体友军的所有弱化效果,恢复全体友军\\n<color=#28d9ed>25%</color>生命值。并使除了自身以外的全体友军技能冷却时间减少<color=#28d9ed>1回合</color>。",
+        "3": "Removes all debuffs and heals all allies by <color=#28d9ed>25%</color>. Also reduces Skill Cooldowns of all allies excluding the caster by <color=#28d9ed>1 turn</color>.",
+        "3_jp": "味方全体のすべての弱体効果を解除し、味方全体のHPを<color=#28d9ed>25%</color>回復する。また、自分を除く味方全体のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "3_kr": "아군 전체의 모든 약화 효과를 해제하고, 아군 전체의 체력을 <color=#28d9ed>25%</color> 회복시킵니다. 그리고 자신을 제외한 아군 전체의 스킬 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "3_zh": "解除全体友军的所有弱化效果,恢复全体友军\\n<color=#28d9ed>25%</color>生命值。并使除了自身以外的全体友军技能冷却时间减少<color=#28d9ed>1回合</color>。",
+        "4": "Removes all debuffs and heals all allies by <color=#28d9ed>35%</color>. Also reduces Skill Cooldowns of all allies excluding the caster by <color=#28d9ed>1 turn</color>.",
+        "4_jp": "味方全体のすべての弱体効果を解除し、味方全体のHPを<color=#28d9ed>35%</color>回復する。また、自分を除く味方全体のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "4_kr": "아군 전체의 모든 약화 효과를 해제하고, 아군 전체의 체력을 <color=#28d9ed>35%</color> 회복시킵니다. 그리고 자신을 제외한 아군 전체의 스킬 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "4_zh": "解除全体友军的所有弱化效果,恢复全体友军\\n<color=#28d9ed>35%</color>生命值。并使除了自身以外的全体友军技能冷却时间减少<color=#28d9ed>1回合</color>。",
+        "5": "Removes all debuffs and heals all allies by <color=#28d9ed>35%</color>. Also reduces Skill Cooldowns of all allies excluding the caster by <color=#28d9ed>2 turns</color>.",
+        "5_jp": "味方全体のすべての弱体効果を解除し、味方全体のHPを<color=#28d9ed>35%</color>回復する。また、自分を除く味方全体のスキルターンを<color=#28d9ed>2ターン</color>減少させる。",
+        "5_kr": "아군 전체의 모든 약화 효과를 해제하고, 아군 전체의 체력을 <color=#28d9ed>35%</color> 회복시킵니다. 그리고 자신을 제외한 아군 전체의 스킬 쿨타임을 <color=#28d9ed>2턴</color> 감소시킵니다.",
+        "5_zh": "解除全体友军的所有弱化效果,恢复全体友军\\n<color=#28d9ed>35%</color>生命值。并使除了自身以外的全体友军技能冷却时间减少<color=#28d9ed>2回合</color>。"
+      },
+      "enhancement": {
+        "2": [
+          "+10% healing"
+        ],
+        "2_jp": [
+          "HP回復量+10%"
+        ],
+        "2_kr": [
+          "체력 회복량 +10%"
+        ],
+        "2_zh": [
+          "生命值恢复量+10%"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+10% healing"
+        ],
+        "4_jp": [
+          "HP回復量+10%"
+        ],
+        "4_kr": [
+          "체력 회복량 +10%"
+        ],
+        "4_zh": [
+          "生命值恢复量+10%"
+        ],
+        "5": [
+          "-1 turn skill cooldowns on allies except caster"
+        ],
+        "5_jp": [
+          "自分を除く味方全体のスキルターン-1ターン"
+        ],
+        "5_kr": [
+          "자신을 제외한 아군 전체 쿨타임 -1턴"
+        ],
+        "5_zh": [
+          "除自身外的全体友军冷却时间-1回合"
+        ]
+      },
+      "cd": "5",
+      "buff": [
+        "BT_REMOVE_DEBUFF",
+        "BT_COOL_CHARGE"
+      ],
+      "debuff": [],
+      "offensive": false,
+      "target": "multi"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "9804",
+      "IconName": "Skill_ChainPassive_Fire_Finish",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants all allies a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2</color> turns with a chance of <color=#28d9ed>100%</color>. Barrier strength proportional to the target's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, heals the ally with the lowest Health by 15%.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、味方全体に<color=#28d9ed>シールド</color>を付与する。シールド量は対象のHPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方のHPを15%回復する。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 대상의 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 15% 회복시킵니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据目标生命值等比提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,恢复生命值最低的友军\\n15%生命值。",
+        "2": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants all allies a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2</color> turns with a chance of <color=#28d9ed>100%</color>. Barrier strength proportional to the target's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, heals the ally with the lowest Health by 15%.",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、味方全体に<color=#28d9ed>シールド</color>を付与する。シールド量は対象のHPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方のHPを15%回復する。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 대상의 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 15% 회복시킵니다.",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据目标生命值等比提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,恢复生命值最低的友军\\n15%生命值。",
+        "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants all allies a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2</color> turns with a chance of <color=#28d9ed>100%</color>. Barrier strength proportional to the target's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, heals the ally with the lowest Health by 15%.",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、味方全体に<color=#28d9ed>シールド</color>を付与する。シールド量は対象のHPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方のHPを15%回復する。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 대상의 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 15% 회복시킵니다.",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据目标生命值等比提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,恢复生命值最低的友军\\n15%生命值。",
+        "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants all allies a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2</color> turns with a chance of <color=#28d9ed>100%</color>. Barrier strength proportional to the target's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, heals the ally with the lowest Health by 15%.",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、味方全体に<color=#28d9ed>シールド</color>を付与する。シールド量は対象のHPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方のHPを15%回復する。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 대상의 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 15% 회복시킵니다.",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据目标生命值等比提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,恢复生命值最低的友军\\n15%生命值。",
+        "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants all allies a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2</color> turns with a chance of <color=#28d9ed>100%</color>. Barrier strength proportional to the target's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, heals the ally with the lowest Health by 15%.",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、味方全体に<color=#28d9ed>シールド</color>を付与する。シールド量は対象のHPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方のHPを15%回復する。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 대상의 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 15% 회복시킵니다.",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据目标生命值等比提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,恢复生命值最低的友军\\n15%生命值。"
+      },
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_SHIELD_BASED_TARGET"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
+    }
+  }
+}
