@@ -221,6 +221,9 @@ class EEManager:
 
         return f"[{name}]"
 
+    # Words that indicate the preceding value is a probability (rate ÷10 → %)
+    _RATE_CONTEXT_WORDS = ('chance', '확률', '確率', '几率', '機率')
+
     def _apply_placeholders(self, text: str, buff_row: Dict[str, Any], value_str: str) -> str:
         """Replace all placeholders in text"""
         if not text:
@@ -230,6 +233,18 @@ class EEManager:
             name = m.group(1)
             suffix = m.group(2) or ""
             val = self._resolve_placeholder(name, buff_row, value_str)
+
+            # If value is a raw number followed by a probability word → format as rate
+            if "%" not in val and name.strip("+-").lower() == "value":
+                after = text[m.end():m.end() + 20]
+                if any(w in after for w in self._RATE_CONTEXT_WORDS):
+                    try:
+                        iv = int(float(val))
+                        result = iv / 10
+                        val = f"{int(result)}%" if result == int(result) else f"{result}%"
+                    except (ValueError, TypeError):
+                        pass
+
             return val + (suffix if "%" not in val else "")
 
         return re.sub(r"\[([+A-Za-z_]+)\](\s*%)?", repl, text)

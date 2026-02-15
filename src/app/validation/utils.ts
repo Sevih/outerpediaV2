@@ -33,6 +33,7 @@ function normalizeForCompare(s: string): string {
     .replace(/\\n/g, ' ')
     .replace(/[\s\u3000]+/g, ' ')
     .trim()
+    .toLowerCase()
 }
 
 function isObject(val: unknown): val is Record<string, unknown> {
@@ -114,8 +115,9 @@ export function deepDiff(
   // Arrays
   if (Array.isArray(v1) && Array.isArray(v2)) {
     if (!arraysEqual(v1, v2)) {
-      // Skip diff when V1 is superset for buff/debuff in skills (V1 had manual extras)
       const fieldName = currentPath.split('.').pop() || ''
+
+      // Skip diff when V1 is superset for buff/debuff in skills (V1 had manual extras)
       if (isSkillChild && SKILL_SUPERSET_FIELDS.has(fieldName)) {
         const v1Arr = v1 as string[]
         const v2Arr = v2 as string[]
@@ -124,6 +126,15 @@ export function deepDiff(
           return diffs
         }
       }
+
+      // Skip diff when string arrays only differ by case
+      if (v1.length === v2.length && v1.every((val, i) =>
+        typeof val === 'string' && typeof v2[i] === 'string' &&
+        normalizeForCompare(val) === normalizeForCompare(v2[i] as string)
+      )) {
+        return diffs
+      }
+
       diffs.push({ path: currentPath, type: 'changed', merge: getMergeSource(currentPath), v1: truncateValue(v1), v2: truncateValue(v2) })
     }
     return diffs

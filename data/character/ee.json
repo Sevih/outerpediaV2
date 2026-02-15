@@ -71,6 +71,31 @@
     ],
     "debuff": []
   },
+  "2000017": {
+    "name": "Baptismal Icon",
+    "name_jp": "洗礼用の聖火",
+    "name_kr": "세례용 성화",
+    "name_zh": "洗礼圣火",
+    "mainStat": "Earth Damage Increase",
+    "mainStat_jp": "地属性対象ダメージUP",
+    "mainStat_kr": "지속성 대상 피해 증가",
+    "mainStat_zh": "对地属性伤害提升",
+    "effect": "Reduces the cooldown of all skills by 1 turn(s) upon scoring a critical hit",
+    "effect_jp": "会心発生時、すべてのスキルターンが1ターン減少する。",
+    "effect_kr": "치명 공격 시 모든 스킬 쿨타임 1턴 감소",
+    "effect_zh": "发动暴击时,使所有技能冷却时间减少1 回合",
+    "effect10": "When using <color=#28d9ed>Quo Vadis</color>, grants increased Critical Hit Chance to the wearer for 1 turn(s)",
+    "effect10_jp": "<color=#28d9ed>【クォ・ヴァディス】</color>使用時、自分の会心率が1ターンの間UPする。",
+    "effect10_kr": "<color=#28d9ed>쿠오 바디스</color> 사용 시 자신의 치명 확률 1턴",
+    "effect10_zh": "使用<color=#28d9ed>君往何处</color>时,自身的暴击率1回合",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "A",
+    "buff": [
+      "BT_COOL_CHARGE",
+      "BT_STAT|ST_CRITICAL_RATE"
+    ],
+    "debuff": []
+  },
   "2000020": {
     "name": "The Book of Folk and Tall Tales",
     "name_jp": "メルヘンテイルズ",
@@ -92,6 +117,54 @@
     "rank": "S",
     "buff": [
       "BT_STAT|ST_SPEED"
+    ],
+    "debuff": []
+  },
+  "2000025": {
+    "name": "Demonic Twin",
+    "name_jp": "デモニックツイン",
+    "name_kr": "데모닉 트윈",
+    "name_zh": "恶魔双子",
+    "mainStat": "Fire Damage Increase",
+    "mainStat_jp": "火属性対象ダメージUP",
+    "mainStat_kr": "화속성 대상 피해 증가",
+    "mainStat_zh": "对火属性伤害提升",
+    "effect": "When an enemy is inflicted with Bleeding at the end of their turn, increases the Priority of the wearer by 70%",
+    "effect_jp": "出血状態の敵がターン終了時、自分の行動ゲージが+70%UPする。",
+    "effect_kr": "행동 종료한 적이 출혈 보유 시 자신의 행동 게이지 +70%",
+    "effect_zh": "行动结束的敌人附带出血效果时,使自身行动值+70%",
+    "effect10": "Increases self Effectiveness +100%",
+    "effect10_jp": "自分の効果命中+100%UP",
+    "effect10_kr": "자신의 효과 적중 증가 +100%",
+    "effect10_zh": "自身效果命中+100%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "S",
+    "buff": [
+      "BT_ACTION_GAUGE"
+    ],
+    "debuff": []
+  },
+  "2000031": {
+    "name": "Receptionist's Essentials",
+    "name_jp": "受付嬢の必需品",
+    "name_kr": "접수원의 필수품",
+    "name_zh": "接收员的必需品",
+    "mainStat": "Reduces Fire Damage Taken",
+    "mainStat_jp": "火属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "화속성 대상 받는 피해 감소",
+    "mainStat_zh": "火属性所受伤害降低",
+    "effect": "When using <color=#28d9ed>Storm Crystal</color>, increases the Priority of the wearer by 15%",
+    "effect_jp": "<color=#28d9ed>【アストラクリスタル】</color>使用時、自分の行動ゲージが+15%UPする。",
+    "effect_kr": "<color=#28d9ed>스톰 크리스탈</color> 사용 시 자신의 행동 게이지 +15%",
+    "effect_zh": "使用<color=#28d9ed>风暴水晶</color>时,自身行动值+15%",
+    "effect10": "When using <color=#28d9ed>Storm Crystal</color>, damage dealt increases proportional to the caster's Speed (Max 100%)",
+    "effect10_jp": "<color=#28d9ed>【アストラクリスタル】</color>使用時、自分のスピードが高いほどダメージがUPする。 (最大 100%までUP)",
+    "effect10_kr": "<color=#28d9ed>스톰 크리스탈</color> 사용 시 자신의 속도에 비례하여 피해 증가 (최대 100%)",
+    "effect10_zh": "使用<color=#28d9ed>风暴水晶</color>时,根据自身的速度等比提升伤害(最多100%)",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "C",
+    "buff": [
+      "BT_ACTION_GAUGE"
     ],
     "debuff": []
   },
@@ -141,6 +214,30 @@
       "BT_STEAL_BUFF"
     ]
   },
+  "2000045": {
+    "name": "Magnolia Student ID",
+    "name_jp": "マグノリア学生証",
+    "name_kr": "매그놀리아 학생증",
+    "name_zh": "麦格诺里亚学生证",
+    "mainStat": "Fire Damage Increase",
+    "mainStat_jp": "火属性対象ダメージUP",
+    "mainStat_kr": "화속성 대상 피해 증가",
+    "mainStat_zh": "对火属性伤害提升",
+    "effect": "If <color=#28d9ed>Water Ball</color> defeats an enemy, has a 70% chance to gain an extra turn",
+    "effect_jp": "<color=#28d9ed>【ウォータープリズン】</color>で敵を倒した時、 70%の確率で追加ターンを獲得する。",
+    "effect_kr": "<color=#28d9ed>워터 볼</color>로 적 처치 시 70% 확률로 추가 턴 획득",
+    "effect_zh": "使用<color=#28d9ed>水球</color>击杀敌人时,有70%的几率获得 额外回合",
+    "effect10": "If <color=#28d9ed>Water Ball</color> defeats an enemy, has a 100% chance to gain an extra turn",
+    "effect10_jp": "<color=#28d9ed>【ウォータープリズン】</color>で敵を倒した時、100%の確率で追加ターンを獲得する。",
+    "effect10_kr": "<color=#28d9ed>워터 볼</color>로 적 처치 시 100% 확률로 추가 턴 획득",
+    "effect10_zh": "使用<color=#28d9ed>水球</color>击杀敌人时,有100%的几率获得额外回合",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "D",
+    "buff": [
+      "BT_ADDITIVE_TURN"
+    ],
+    "debuff": []
+  },
   "2000055": {
     "name": "Super Board",
     "name_jp": "スーパーボード",
@@ -186,6 +283,30 @@
       "BT_ACTION_GAUGE"
     ],
     "debuff": []
+  },
+  "2000061": {
+    "name": "Love Is War",
+    "name_jp": "恋は戦争",
+    "name_kr": "사랑은 전쟁",
+    "name_zh": "爱情是战争",
+    "mainStat": "Effectiveness (To: Earth)",
+    "mainStat_jp": "地属性の対象の効果命中",
+    "mainStat_kr": "지속성 대상 효과 적중",
+    "mainStat_zh": "土属性效果命中",
+    "effect": "Increases Effectiveness +100%",
+    "effect_jp": "自分の効果命中UP+100%",
+    "effect_kr": "자신의 효과 적중 증가 +100%",
+    "effect_zh": "自身效果命中提升+100%",
+    "effect10": "Max Health +35%",
+    "effect10_jp": "自分の最大HP+35%",
+    "effect10_kr": "자신 최대 체력 +35%",
+    "effect10_zh": "自身最大生命值+35%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "S",
+    "buff": [],
+    "debuff": [
+      "BT_EXTEND_BUFF"
+    ]
   },
   "2000064": {
     "name": "Juzumaru Tsunetsugu",
@@ -233,6 +354,53 @@
     "buff": [],
     "debuff": []
   },
+  "2000066": {
+    "name": "Detective's Emblem",
+    "name_jp": "名探偵のしるし",
+    "name_kr": "명탐정의 상징",
+    "name_zh": "名侦探的象征",
+    "mainStat": "Effectiveness (To: Water)",
+    "mainStat_jp": "水属性の対象の効果命中",
+    "mainStat_kr": "수속성 대상 효과 적중",
+    "mainStat_zh": "水属性效果命中",
+    "effect": "Increases Priority of the wearer by 30% when <color=#28d9ed>Thinking Time</color> activates",
+    "effect_jp": "<color=#28d9ed>【シンキングタイム】</color>使用時、自分の行動ゲージが+30%UPする。",
+    "effect_kr": "<color=#28d9ed>씽킹 타임</color> 발동 시 자신의 행동게이지 +30%",
+    "effect_zh": "触发<color=#28d9ed>思考时间</color>时,使自身行动值+30%",
+    "effect10": "Increases Action Points of Mage allies by 20 when using <color=#28d9ed>Thinking Time</color>",
+    "effect10_jp": "<color=#28d9ed>【シンキングタイム】</color>使用時、 魔法型の仲間がAPを+20獲得する。",
+    "effect10_kr": "<color=#28d9ed>씽킹 타임</color> 발동 시 마법형 아군의 AP +20",
+    "effect10_zh": "使用<color=#28d9ed>思考时间</color>时,魔法型友军AP+20",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "A",
+    "buff": [
+      "BT_AP_CHARGE",
+      "BT_ACTION_GAUGE"
+    ],
+    "debuff": []
+  },
+  "2000076": {
+    "name": "Exceptional Aura",
+    "name_jp": "とてつもないオーラ",
+    "name_kr": "독보적인 오라",
+    "name_zh": "独特光环",
+    "mainStat": "Earth Damage Increase",
+    "mainStat_jp": "地属性対象ダメージUP",
+    "mainStat_kr": "지속성 대상 피해 증가",
+    "mainStat_zh": "对地属性伤害提升",
+    "effect": "Increases damage of allies with a Barrier",
+    "effect_jp": "シールド状態の仲間のダメージがUPする。",
+    "effect_kr": "실드를 보유한 동료의 피해량 증가",
+    "effect_zh": "使附带护盾的同伴伤害量提升",
+    "effect10": "Greatly increases damage of allies with a Barrier",
+    "effect10_jp": "シールド状態の仲間のダメージが大幅にUPする。",
+    "effect10_kr": "실드를 보유한 동료의 피해량 크게 증가",
+    "effect10_zh": "使附带护盾的同伴伤害量大幅提升",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "B",
+    "buff": [],
+    "debuff": []
+  },
   "2000077": {
     "name": "Guardian's Qualification",
     "name_jp": "守護者の資格",
@@ -252,6 +420,28 @@
     "effect10_zh": "防御力<color=#28d9ed>+20%</color>",
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "B",
+    "buff": [],
+    "debuff": []
+  },
+  "2000089": {
+    "name": "Logos",
+    "name_jp": "ロゴス",
+    "name_kr": "로고스",
+    "name_zh": "洛格斯",
+    "mainStat": "Reduces Fire Damage Taken",
+    "mainStat_jp": "火属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "화속성 대상 받는 피해 감소",
+    "mainStat_zh": "火属性所受伤害降低",
+    "effect": "Ignores <color=#28d9ed>30%</color> of the target's Defense when activating <color=#28d9ed>Disassembly Analysis</color>",
+    "effect_jp": "<color=#28d9ed>【解体分析】</color>発動時、対象の防御力を<color=#28d9ed>30%</color>無視する。",
+    "effect_kr": "<color=#28d9ed>해체 분석</color> 발동 시 대상의 방어력 <color=#28d9ed>30%</color> 무시",
+    "effect_zh": "<color=#28d9ed>分解分析</color>触发时,无视目标的<color=#28d9ed>30%</color>防御力",
+    "effect10": "<color=#28d9ed>+20%</color> Defense",
+    "effect10_jp": "防御力<color=#28d9ed>+20%</color>",
+    "effect10_kr": "방어력 <color=#28d9ed>+20%</color>",
+    "effect10_zh": "防御力<color=#28d9ed>+20%</color>",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "S",
     "buff": [],
     "debuff": []
   },
