@@ -569,6 +569,30 @@
     "buff": [],
     "debuff": []
   },
+  "2000035": {
+    "name": "Crimson Holy Grail",
+    "name_jp": "鮮血の聖杯",
+    "name_kr": "선혈빛 성배",
+    "name_zh": "血光圣杯",
+    "mainStat": "Effectiveness (To: Light)",
+    "mainStat_jp": "光属性の対象の効果命中",
+    "mainStat_kr": "명속성 대상 효과 적중",
+    "mainStat_zh": "光属性效果命中",
+    "effect": "Increases damage dealt to enemies with Bleeding",
+    "effect_jp": "出血状態の敵に味方が与えるダメージがUPする。",
+    "effect_kr": "출혈 보유 적에게 아군이 입히는 피해 증가",
+    "effect_zh": "提升友军对处于出血状态敌人造成的伤害",
+    "effect10": "When using an attack that targets all enemies, inflicts Bleeding on the target for 2 turn(s) (Ignores Immunity, Irremovable)",
+    "effect10_jp": "全体攻撃を使用時、対象全体に出血を+2ターンの間付与する。(免疫無視、解除不可)",
+    "effect10_kr": "전체 공격 시 대상 전체에게 출혈 +2턴 (면역 무시, 해제 불가)",
+    "effect10_zh": "全体攻击时对所有目标造成出血+2回合(无视免疫、无法解除)",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "C",
+    "buff": [],
+    "debuff": [
+      "IG_Buff_Dot_Bleed_Interruption_D"
+    ]
+  },
   "2000036": {
     "name": "Perfect Medical Bag",
     "name_jp": "万能往診カバン",
@@ -1237,6 +1261,30 @@
       "BT_WG_REVERSE_HEAL"
     ]
   },
+  "2000072": {
+    "name": "Ninja Scroll",
+    "name_jp": "ニンジャのニンポー帳",
+    "name_kr": "닌자의 인법첩",
+    "name_zh": "忍者的忍术秘籍",
+    "mainStat": "Effectiveness (To: Fire)",
+    "mainStat_jp": "火属性の対象の効果命中",
+    "mainStat_kr": "화속성 대상 효과 적중",
+    "mainStat_zh": "火属性效果命中",
+    "effect": "Increases the wearer's Health by +35%",
+    "effect_jp": "自分の最大HPが+35%UPする。",
+    "effect_kr": "자신의 체력 증가 +35%",
+    "effect_zh": "自身生命值提升+35%",
+    "effect10": "When using <color=#28d9ed>Ninjutsu, Waterspout Technique</color>, grants Stealth for 1 turn(s)",
+    "effect10_jp": "<color=#28d9ed>【忍法・竜巻の術】</color>使用時、 隠れ身を1ターンの間付与する。",
+    "effect10_kr": "<color=#28d9ed>인법 용오름의 술</color> 사용 시 은신 1턴",
+    "effect10_zh": "使用<color=#28d9ed>忍者龙卷风之术</color>时,隐身1回合",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "A",
+    "buff": [
+      "BT_STEALTHED"
+    ],
+    "debuff": []
+  },
   "2000073": {
     "name": "Adaptable Gatling",
     "name_jp": "可変式ガトリング",
@@ -1583,6 +1631,52 @@
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "A",
     "buff": [],
+    "debuff": []
+  },
+  "2000089": {
+    "name": "Logos",
+    "name_jp": "ロゴス",
+    "name_kr": "로고스",
+    "name_zh": "洛格斯",
+    "mainStat": "Reduces Fire Damage Taken",
+    "mainStat_jp": "火属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "화속성 대상 받는 피해 감소",
+    "mainStat_zh": "火属性所受伤害降低",
+    "effect": "Ignores <color=#28d9ed>30%</color> of the target's Defense when activating <color=#28d9ed>Disassembly Analysis</color>",
+    "effect_jp": "<color=#28d9ed>【解体分析】</color>発動時、対象の防御力を<color=#28d9ed>30%</color>無視する。",
+    "effect_kr": "<color=#28d9ed>해체 분석</color> 발동 시 대상의 방어력 <color=#28d9ed>30%</color> 무시",
+    "effect_zh": "<color=#28d9ed>分解分析</color>触发时,无视目标的<color=#28d9ed>30%</color>防御力",
+    "effect10": "<color=#28d9ed>+20%</color> Defense",
+    "effect10_jp": "防御力<color=#28d9ed>+20%</color>",
+    "effect10_kr": "방어력 <color=#28d9ed>+20%</color>",
+    "effect10_zh": "防御力<color=#28d9ed>+20%</color>",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "S",
+    "buff": [],
+    "debuff": []
+  },
+  "2000090": {
+    "name": "Deadly Ice",
+    "name_jp": "デッドリーアイス",
+    "name_kr": "데들리 아이스",
+    "name_zh": "致命冰霜",
+    "mainStat": "Light Damage Increase",
+    "mainStat_jp": "光属性対象ダメージUP",
+    "mainStat_kr": "명속성 대상 피해 증가",
+    "mainStat_zh": "对光属性伤害提升",
+    "effect": "When scoring a critical hit, grants a Barrier for 1 turn(s) (proportional to Attack)",
+    "effect_jp": "会心が発生した場合、シールドを1ターンの間付与する。 (攻撃力が高いほどシールド量がUP)",
+    "effect_kr": "치명 공격 시 실드 1턴 (공격력 비례)",
+    "effect_zh": "暴击攻击时护盾1回合(与攻击力成正比)",
+    "effect10": "Increases damage dealt by <color=#28d9ed>Terminal Winter</color> by 30%",
+    "effect10_jp": "<color=#28d9ed>【フィンブルウィンター】</color>のダメージが+30%UPする。",
+    "effect10_kr": "<color=#28d9ed>최후의 겨울</color>의 피해량 +30%",
+    "effect10_zh": "<color=#28d9ed>末日凛冬</color>的伤害量+30%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "S",
+    "buff": [
+      "BT_SHIELD_BASED_CASTER"
+    ],
     "debuff": []
   },
   "2000093": {
