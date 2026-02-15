@@ -4,7 +4,7 @@ const ROOT = process.cwd();
 
 export const PATHS = {
   // Static data (imported from v1)
-  characters: join(ROOT, 'data/char'),
+  characters: join(ROOT, 'data/character'),
   bosses: join(ROOT, 'data/boss'),
   equipment: join(ROOT, 'data/equipment'),
   effects: join(ROOT, 'data/effects'),
