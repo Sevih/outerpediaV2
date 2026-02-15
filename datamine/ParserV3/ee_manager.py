@@ -182,10 +182,19 @@ class EEManager:
 
     def _resolve_placeholder(self, name: str, buff_row: Dict[str, Any], value_str: str) -> str:
         """Resolve placeholder in text"""
-        key = name.strip("[]").lstrip("+").lstrip("-").lower()
+        raw = name.strip("[]")
+        # Preserve +/- prefix from placeholder (e.g. [+value] → "+100%")
+        prefix = ""
+        if raw.startswith("+"):
+            prefix = "+"
+            raw = raw[1:]
+        elif raw.startswith("-"):
+            prefix = "-"
+            raw = raw[1:]
+        key = raw.lower()
 
         if key == "value":
-            return value_str
+            return prefix + value_str
 
         if key == "rate":
             raw = str(buff_row.get("CreateRate") or "")
