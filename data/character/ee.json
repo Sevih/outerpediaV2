@@ -23,6 +23,28 @@
       "BT_REMOVE_BUFF"
     ]
   },
+  "2000002": {
+    "name": "Blade of Destiny",
+    "name_jp": "牙双冥剣",
+    "name_kr": "데스티니 블레이드",
+    "name_zh": "命运之剑",
+    "mainStat": "Light Damage Increase",
+    "mainStat_jp": "光属性対象ダメージUP",
+    "mainStat_kr": "명속성 대상 피해 증가",
+    "mainStat_zh": "对光属性伤害提升",
+    "effect": "Increases Critical Damage by 3% after killing an enemy (Max 5 stacks)",
+    "effect_jp": "敵を倒した時、会心ダメージが3%UPする。(最大5回まで累積)",
+    "effect_kr": "적 처치 시 치명 피해 3% 증가 (최대 5회 누적)",
+    "effect_zh": "击杀敌人时,暴击伤害提升3%\\n(最多可叠加5次)",
+    "effect10": "Increases Critical Damage by 5% after killing an enemy (Max 5 stacks)",
+    "effect10_jp": "敵を倒した時、会心ダメージが5%UPする。(最大5回まで累積)",
+    "effect10_kr": "적 처치 시 치명 피해 5% 증가 (최대 5회 누적)",
+    "effect10_zh": "击杀敌人时,暴击伤害提升5%(最多可叠加5次)",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "D",
+    "buff": [],
+    "debuff": []
+  },
   "2000003": {
     "name": "Glacial Bow",
     "name_jp": "グレイシャルボウ",
@@ -70,6 +92,28 @@
       "BT_STAT|ST_ATK",
       "BT_STAT|ST_DEF"
     ],
+    "debuff": []
+  },
+  "2000005": {
+    "name": "Cleaning Brush",
+    "name_jp": "お掃除ブラシ",
+    "name_kr": "물청소 브러시",
+    "name_zh": "清洁刷",
+    "mainStat": "DMG Increase vs Earth",
+    "mainStat_jp": "地属性対象ダメージUP",
+    "mainStat_kr": "지속성 대상 피해 증가",
+    "mainStat_zh": "对土属性目标造成 伤害提升",
+    "effect": "When using <color=#28d9ed>Meowteor Shower</color> or <color=#28d9ed>Walpurgis' Light!</color>, increases damage dealt inversely proportional to the number of targets.",
+    "effect_jp": "<color=#28d9ed>【ねこ座流星群】</color>または<color=#28d9ed>【ワルプルギスの光!】</color>使用時、対象の数が少ないほどダメージがUPする。",
+    "effect_kr": "<color=#28d9ed>야옹자리 유성군</color> 혹은 <color=#28d9ed>발푸르기스의 빛!</color> 사용 시 대상이 적을수록 피해량 증가",
+    "effect_zh": "使用<color=#28d9ed>喵喵座流星群</color>或<color=#28d9ed>瓦尔普吉斯之光!</color>时,目标越少,伤害量越高。",
+    "effect10": "When using <color=#28d9ed>Meowteor Shower</color> or <color=#28d9ed>Walpurgis' Light!</color>, increases Penetration by <color=#28d9ed>30%</color> when there is only one target.",
+    "effect10_jp": "<color=#28d9ed>【ねこ座流星群】</color>または<color=#28d9ed>【ワルプルギスの光!】</color>使用時、対象が単体の場合、貫通力が<color=#28d9ed>+30%</color>UPする。",
+    "effect10_kr": "<color=#28d9ed>야옹자리 유성군</color> 혹은 <color=#28d9ed>발푸르기스의 빛!</color> 사용 시 대상이 한 명이라면 관통력 <color=#28d9ed>+30%</color>",
+    "effect10_zh": "使用<color=#28d9ed>喵喵座流星群</color>或<color=#28d9ed>瓦尔普吉斯之光!</color>时,若目标为1名,穿透力<color=#28d9ed>+30%</color>。",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "B",
+    "buff": [],
     "debuff": []
   },
   "2000006": {
@@ -138,6 +182,30 @@
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "S",
     "buff": [],
+    "debuff": []
+  },
+  "2000009": {
+    "name": "Prism Lens",
+    "name_jp": "プリズムレンズ",
+    "name_kr": "프리즘 렌즈",
+    "name_zh": "三棱镜",
+    "mainStat": "Reduces Dark Damage Taken",
+    "mainStat_jp": "闇属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "암속성 대상 받는 피해 감소",
+    "mainStat_zh": "暗属性所受伤害降低",
+    "effect": "When using <color=#28d9ed>Generating Boundary</color>, reduces the cooldown of <color=#28d9ed>Healing</color> by 1 turn(s)",
+    "effect_jp": "<color=#28d9ed>【結界を生成する。】</color>使用時、<color=#28d9ed>【治癒を開始する。】</color>のスキルターンが1ターン減少する。",
+    "effect_kr": "<color=#28d9ed>결계를 생성합니다.</color> 사용 시 <color=#28d9ed>치유합니다.</color>의 쿨타임 1턴 감소",
+    "effect_zh": "使用<color=#28d9ed>形成结界。</color>时,使<color=#28d9ed>治愈。</color>的冷却时间 减少1回合",
+    "effect10": "When using <color=#28d9ed>Generating Boundary</color>, resets the cooldown of <color=#28d9ed>Healing</color>",
+    "effect10_jp": "<color=#28d9ed>【結界を生成する。】</color>使用時、 <color=#28d9ed>【治癒を開始する。】</color>のスキルターンが初期化する。",
+    "effect10_kr": "<color=#28d9ed>결계를 생성합니다.</color> 사용 시 <color=#28d9ed>치유합니다.</color>의 쿨타임 초기화",
+    "effect10_zh": "<color=#28d9ed>形成结界。</color>使用时,使<color=#28d9ed>治愈。</color>的冷却时间重置",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "C",
+    "buff": [
+      "BT_COOL_CHARGE"
+    ],
     "debuff": []
   },
   "2000010": {
@@ -235,6 +303,30 @@
       "BT_STAT|ST_SPEED"
     ],
     "debuff": []
+  },
+  "2000014": {
+    "name": "Master's Gift",
+    "name_jp": "ご主人様の贈り物",
+    "name_kr": "주인님의 선물",
+    "name_zh": "主人的礼物",
+    "mainStat": "Effectiveness vs Fire",
+    "mainStat_jp": "火属性の対象の効果命中",
+    "mainStat_kr": "화속성 대상 효과 적중",
+    "mainStat_zh": "火属性效果命中",
+    "effect": "When using <color=#28d9ed>Welcome!</color>, inflicts Cursed 2 times on the target for 2 turn(s)",
+    "effect_jp": "<color=#28d9ed>【いらっしゃいませ~】</color>使用時、敵単体に呪い2個を2ターンの間付与する。",
+    "effect_kr": "<color=#28d9ed>어서 오세요~</color> 사용 시 대상에게 2턴 동안 저주 2개 부여",
+    "effect_zh": "使用<color=#28d9ed>欢迎光临~</color>时,对目标造成2个诅咒 效果,持续2回合",
+    "effect10": "When using <color=#28d9ed>Let Me Serve You Tea!</color>, inflicts Cursed 2 times on the target for 2 turn(s)",
+    "effect10_jp": "<color=#28d9ed>【お茶でもいかがですか?!】</color>使用時、対象に呪い2個を2ターンの間付与する。",
+    "effect10_kr": "<color=#28d9ed>차를 대접할게요~</color> 사용 시 대상에게 2턴 동안 저주 2개 부여",
+    "effect10_zh": "使用<color=#28d9ed>请用茶~</color>时,对目标造成2个诅咒效果,持续2回合",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "S",
+    "buff": [],
+    "debuff": [
+      "BT_DOT_CURSE"
+    ]
   },
   "2000015": {
     "name": "Iron Claws of Calamity",
@@ -683,6 +775,28 @@
     "effect10_zh": "使用<color=#28d9ed>准备好了吗?是,船长!</color>时,若目标为1名,穿透力<color=#28d9ed>+30%</color>",
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "B",
+    "buff": [],
+    "debuff": []
+  },
+  "2000034": {
+    "name": "Hati",
+    "name_jp": "ハティ",
+    "name_kr": "하티",
+    "name_zh": "哈提",
+    "mainStat": "Reduced DMG Taken vs Earth",
+    "mainStat_jp": "地属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "지속성 대상 받는 피해 감소",
+    "mainStat_zh": "土属性所受伤害降低",
+    "effect": "Increases Speed proportional to missing Health",
+    "effect_jp": "残りHPが低いほどスピードがUPする。",
+    "effect_kr": "체력이 감소할수록 속도 증가",
+    "effect_zh": "生命值越低,速度越高",
+    "effect10": "Increases Attack proportional to missing Health",
+    "effect10_jp": "自分の残りHPが低いほど攻撃力がUPする。",
+    "effect10_kr": "체력이 감소할수록 공격력 증가",
+    "effect10_zh": "生命值越低,攻击力越高",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "A",
     "buff": [],
     "debuff": []
   },
@@ -2008,6 +2122,54 @@
     ],
     "debuff": []
   },
+  "2000091": {
+    "name": "True Salvation",
+    "name_jp": "真の救い",
+    "name_kr": "진정한 구원",
+    "name_zh": "真正的救赎",
+    "mainStat": "Reduces Dark Damage Taken",
+    "mainStat_jp": "闇属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "암속성 대상 받는 피해 감소",
+    "mainStat_zh": "暗属性所受伤害降低",
+    "effect": "Increases Effectiveness of the wearer by 100% <color=#28d9ed>+50%</color> damage against Boss monsters",
+    "effect_jp": "自分の効果命中を+100%UPさせる。 ボスに与えるダメージが+50%UPする。",
+    "effect_kr": "자신의 효과 적중 증가 +100% 보스에게 입히는 피해 +50%",
+    "effect_zh": "自身效果命中提升+100% 对首领造成的伤害+50%",
+    "effect10": "When using <color=#28d9ed>Rules of Salvation</color> against Boss, reduces all skill cooldowns by <color=#28d9ed>1</color> turn",
+    "effect10_jp": "ボスに<color=#28d9ed>【救世の戒葎】</color>使用時、 すべてのスキルターンを<color=#28d9ed>1</color>ターン減少する。",
+    "effect10_kr": "보스에게 <color=#28d9ed>구세의 계율</color> 사용 시 모든 스킬 쿨타임 <color=#28d9ed>-1</color>턴",
+    "effect10_zh": "对首领使用<color=#28d9ed>救世戒律</color>时,所有技能的冷却时间<color=#28d9ed>-1</color>回合",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "S",
+    "buff": [
+      "BT_COOL_CHARGE"
+    ],
+    "debuff": []
+  },
+  "2000092": {
+    "name": "Everlasting Grudge",
+    "name_jp": "尽きぬ怨み",
+    "name_kr": "마르지 않는 앙심",
+    "name_zh": "积怨未消",
+    "mainStat": "Reduces Dark Damage Taken",
+    "mainStat_jp": "闇属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "암속성 대상 받는 피해 감소",
+    "mainStat_zh": "暗属性所受伤害降低",
+    "effect": "Increases damage dealt by Eternal Bleeding on Bosses by <color=#28d9ed>50%</color>",
+    "effect_jp": "ボスに与える【絶えざる出血】のダメージが<color=#28d9ed>+50%</color>UPする。",
+    "effect_kr": "보스 대상 영원한 출혈의 피해 <color=#28d9ed>+50%</color>",
+    "effect_zh": "首领目标的永恒出血伤害<color=#28d9ed>+50%</color>",
+    "effect10": "Right after using <color=#28d9ed>Pure Blood's Punishment</color>, does not trigger an enemy's Counterattack, Revenge, or Agile Response",
+    "effect10_jp": "<color=#28d9ed>【鮮血の懲罰】</color>のスキルでは敵の反撃/復讐/迅速対応が発動しない。",
+    "effect10_kr": "<color=#28d9ed>선혈의 징벌</color> 사용 직후 적 반격/복수/신속대응 불가",
+    "effect10_zh": "使用<color=#28d9ed>血刃惩戒</color>后,不会触发敌人反击、复仇、迅速应对",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "S",
+    "buff": [
+      "BT_SEAL_COUNTER"
+    ],
+    "debuff": []
+  },
   "2000093": {
     "name": "Earnest Love",
     "name_jp": "熱烈な愛",
@@ -2308,6 +2470,28 @@
     "buff": [],
     "debuff": []
   },
+  "2000107": {
+    "name": "Omertà",
+    "name_jp": "オメルタ",
+    "name_kr": "오메르타",
+    "name_zh": "沉默守則(Omertà)",
+    "mainStat": "Effectiveness vs Fire",
+    "mainStat_jp": "火属性の対象の効果命中",
+    "mainStat_kr": "화속성 대상 효과 적중",
+    "mainStat_zh": "火属性效果命中",
+    "effect": "Increases damage dealt to targets inflicted with Bleeding",
+    "effect_jp": "味方が出血効果対象に与えるダメージ増加",
+    "effect_kr": "아군이 출혈 보유 대상에게 입히는 피해 증가",
+    "effect_zh": "我方对处于出血状态的敌人造成的伤害提高",
+    "effect10": "+50% Bleed damage dealt by allies",
+    "effect10_jp": "味方が与える出血ダメージ 50%",
+    "effect10_kr": "아군이 입히는 출혈 피해 50%",
+    "effect10_zh": "我方造成的出血伤害 +50%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "B",
+    "buff": [],
+    "debuff": []
+  },
   "2000108": {
     "name": "Mortician's Coffin",
     "name_jp": "葬儀屋の棺",
@@ -2329,6 +2513,30 @@
     "rank": "C",
     "buff": [],
     "debuff": []
+  },
+  "2000109": {
+    "name": "Innate Malice",
+    "name_jp": "天賦の悪意",
+    "name_kr": "천부의 악의",
+    "name_zh": "天赋的恶意",
+    "mainStat": "Light Damage Increase",
+    "mainStat_jp": "光属性対象ダメージUP",
+    "mainStat_kr": "명속성 대상 피해 증가",
+    "mainStat_zh": "对光属性伤害提升",
+    "effect": "When hit, <color=#28d9ed>Corrosive Poison</color> 2 turn to all enemies (Activated only once every 2 turns, Ignores Resilience)",
+    "effect_jp": "ダメージを受けた場合、敵全体に<color=#28d9ed>酸性の毒液</color> 2ターン (2ターンに一度のみ発動、効果抵抗無視)",
+    "effect_kr": "피격 시 적 전체에게 <color=#28d9ed>산성독</color> 2턴(2턴에 1회, 효과 저항 무시)",
+    "effect_zh": "受到攻击时,对所有敌人施加<color=#28d9ed>酸性毒液</color>2回合(每2回合触发1次,效果抵抗无视)",
+    "effect10": "Ignores <color=#28d9ed>30%</color> of the target's Defense when attacking.",
+    "effect10_jp": "攻撃時、対象の防御力無視<color=#28d9ed>30%</color>",
+    "effect10_kr": "공격 시 대상 방어력 <color=#28d9ed>30%</color> 무시",
+    "effect10_zh": "攻击时无视目标<color=#28d9ed>30%</color>防御力",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "A",
+    "buff": [],
+    "debuff": [
+      "BT_DOT_POISON2"
+    ]
   },
   "2000110": {
     "name": "Lawless Immutable Ruler",
