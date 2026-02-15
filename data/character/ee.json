@@ -359,6 +359,30 @@
     "buff": [],
     "debuff": []
   },
+  "2000023": {
+    "name": "Cloud Relic",
+    "name_jp": "クラウドレリック",
+    "name_kr": "클라우드 렐릭",
+    "name_zh": "云之遗迹",
+    "mainStat": "Reduces Water Damage Taken",
+    "mainStat_jp": "水属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "수속성 대상 받는 피해 감소",
+    "mainStat_zh": "水属性所受伤害降低",
+    "effect": "When using <color=#28d9ed>Gaze Upon Us</color>, increases the Priority of all allies by 10%",
+    "effect_jp": "<color=#28d9ed>【我らをご照覧あれ】</color>使用時、味方全体の行動ゲージが+10%UPする。",
+    "effect_kr": "<color=#28d9ed>우리를 굽어 살피소서</color> 사용 시 모든 아군의 행동 게이지 +10%",
+    "effect_zh": "使用<color=#28d9ed>庇佑降临</color>时,使全体友军的行动值+10%",
+    "effect10": "When using <color=#28d9ed>Gaze Upon Us</color>, increases the Priority of all allies by 20%",
+    "effect10_jp": "<color=#28d9ed>【我らをご照覧あれ】</color>使用時、 味方全体の行動ゲージが+20%UPする。",
+    "effect10_kr": "<color=#28d9ed>우리를 굽어 살피소서</color> 사용 시 모든 아군의 행동 게이지 +20%",
+    "effect10_zh": "使用<color=#28d9ed>庇佑降临</color>时,使全体友军的行动值+20%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "B",
+    "buff": [
+      "BT_ACTION_GAUGE"
+    ],
+    "debuff": []
+  },
   "2000024": {
     "name": "Cyclone Changer",
     "name_jp": "サイクロン・チェンジャー",
@@ -569,6 +593,32 @@
     ],
     "debuff": []
   },
+  "2000038": {
+    "name": "Love and Peace",
+    "name_jp": "ラブ&ピース",
+    "name_kr": "러브 앤 피스",
+    "name_zh": "爱与和平",
+    "mainStat": "Reduces Fire Damage Taken",
+    "mainStat_jp": "火属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "화속성 대상 받는 피해 감소",
+    "mainStat_zh": "火属性所受伤害降低",
+    "effect": "When using <color=#28d9ed>Dropping the Beat!</color>, increases Weakness Gauge damage by 1",
+    "effect_jp": "<color=#28d9ed>【ドロップ・ザ・ビ~ト!】</color>のWGダメージが1UPする。",
+    "effect_kr": "<color=#28d9ed>비트 갑니다!</color>의 WG 피해량 +1",
+    "effect_zh": "<color=#28d9ed>跟随节奏!</color>的WG伤害量+1",
+    "effect10": "When using <color=#28d9ed>Dropping the Beat!</color>, has a 30% chance to reduce the cooldown of <color=#28d9ed>It's Party Time</color> by 1 turn(s)",
+    "effect10_jp": "<color=#28d9ed>【ドロップ・ザ・ビ~ト!】</color>使用時、 30%の確率で<color=#28d9ed>【パ~ティ~タイム!】</color>のスキルターンが1ターン減少する。",
+    "effect10_kr": "<color=#28d9ed>비트 갑니다!</color> 사용 시 30% 확률로 <color=#28d9ed>파티 시간이야!</color>의 쿨타임 1턴 감소",
+    "effect10_zh": "使用<color=#28d9ed>跟随节奏!</color>时,有30%的几率使<color=#28d9ed>派对时间到了!</color>的冷却时间减少1回合",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "C",
+    "buff": [
+      "BT_COOL2_CHARGE"
+    ],
+    "debuff": [
+      "BT_WG_REVERSE_HEAL"
+    ]
+  },
   "2000040": {
     "name": "The Great Communicator",
     "name_jp": "立派な対話手段",
@@ -682,6 +732,54 @@
     "rank": "D",
     "buff": [
       "BT_AP_CHARGE"
+    ],
+    "debuff": []
+  },
+  "2000045": {
+    "name": "Magnolia Student ID",
+    "name_jp": "マグノリア学生証",
+    "name_kr": "매그놀리아 학생증",
+    "name_zh": "麦格诺里亚学生证",
+    "mainStat": "Fire Damage Increase",
+    "mainStat_jp": "火属性対象ダメージUP",
+    "mainStat_kr": "화속성 대상 피해 증가",
+    "mainStat_zh": "对火属性伤害提升",
+    "effect": "If <color=#28d9ed>Water Ball</color> defeats an enemy, has a 70% chance to gain an extra turn",
+    "effect_jp": "<color=#28d9ed>【ウォータープリズン】</color>で敵を倒した時、 70%の確率で追加ターンを獲得する。",
+    "effect_kr": "<color=#28d9ed>워터 볼</color>로 적 처치 시 70% 확률로 추가 턴 획득",
+    "effect_zh": "使用<color=#28d9ed>水球</color>击杀敌人时,有70%的几率获得 额外回合",
+    "effect10": "If <color=#28d9ed>Water Ball</color> defeats an enemy, has a 100% chance to gain an extra turn",
+    "effect10_jp": "<color=#28d9ed>【ウォータープリズン】</color>で敵を倒した時、100%の確率で追加ターンを獲得する。",
+    "effect10_kr": "<color=#28d9ed>워터 볼</color>로 적 처치 시 100% 확률로 추가 턴 획득",
+    "effect10_zh": "使用<color=#28d9ed>水球</color>击杀敌人时,有100%的几率获得额外回合",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "D",
+    "buff": [
+      "BT_ADDITIVE_TURN"
+    ],
+    "debuff": []
+  },
+  "2000046": {
+    "name": "Automatic Bowgun",
+    "name_jp": "オートマチックボウガン",
+    "name_kr": "오토매틱 보우건",
+    "name_zh": "自动手弩",
+    "mainStat": "Effectiveness (To: Water)",
+    "mainStat_jp": "水属性の対象の効果命中",
+    "mainStat_kr": "수속성 대상 효과 적중",
+    "mainStat_zh": "水属性效果命中",
+    "effect": "When using <color=#28d9ed>Financial Therapy</color>, increases Priority by 50%",
+    "effect_jp": "<color=#28d9ed>【お金みーっけ♪】</color>使用時、行動ゲージが+50%UPする。",
+    "effect_kr": "<color=#28d9ed>금융 치료</color> 사용 시 행동 게이지 +50%",
+    "effect_zh": "使用<color=#28d9ed>金融治疗</color>时,行动值+50%",
+    "effect10": "Increases self Effectiveness +50%",
+    "effect10_jp": "自分の効果命中+50%UP",
+    "effect10_kr": "자신의 효과 적중 증가 +50%",
+    "effect10_zh": "自身效果命中+50%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "B",
+    "buff": [
+      "BT_ACTION_GAUGE"
     ],
     "debuff": []
   },
@@ -821,6 +919,30 @@
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "D",
     "buff": [],
+    "debuff": []
+  },
+  "2000058": {
+    "name": "Divine Warmth",
+    "name_jp": "神のぬくもり",
+    "name_kr": "신의 온기",
+    "name_zh": "神之温煦",
+    "mainStat": "Reduces Earth Damage Taken",
+    "mainStat_jp": "地属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "지속성 대상 받는 피해 감소",
+    "mainStat_zh": "土属性所受伤害降低",
+    "effect": "When an ally team member is hit, increase self Priority +5%",
+    "effect_jp": "味方が攻撃を受けた時、自分の行動ゲージが+5%UP",
+    "effect_kr": "아군 팀 피격 시 자신 행동 게이지 +5%",
+    "effect_zh": "当友军受到攻击时,自身行动值+5%",
+    "effect10": "When an ally team member is hit, increase self Priority +8%",
+    "effect10_jp": "味方が攻撃を受けた時、自分の行動ゲージが+8%UP",
+    "effect10_kr": "아군 팀 피격 시 자신 행동 게이지 +8%",
+    "effect10_zh": "当友军受到攻击时,自身行动值+8%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "B",
+    "buff": [
+      "BT_ACTION_GAUGE"
+    ],
     "debuff": []
   },
   "2000059": {
@@ -1163,6 +1285,50 @@
     ],
     "debuff": []
   },
+  "2000075": {
+    "name": "Adaptable Twin Blades",
+    "name_jp": "可変式翼",
+    "name_kr": "가변형 쌍익",
+    "name_zh": "可变双翼",
+    "mainStat": "Effectiveness (To: Light)",
+    "mainStat_jp": "光属性の対象の効果命中",
+    "mainStat_kr": "명속성 대상 효과 적중",
+    "mainStat_zh": "光属性效果命中",
+    "effect": "Increases all attack damage (Proportional to target's Max Health)",
+    "effect_jp": "すべてのスキルダメージがUPする。 (対象の最大HPが高いほどダメージUP)",
+    "effect_kr": "모든 공격 피해 증가 (대상 최대 체력 비례)",
+    "effect_zh": "所有攻击伤害提升 (根据目标生命值上限等比)",
+    "effect10": "When using a Burst Skill, increases Effectiveness of the wearer by 50%",
+    "effect10_jp": "バーストスキル使用時、自分の効果命中を+50%UPさせる。",
+    "effect10_kr": "버스트 스킬 사용 시 자신의 효과 적중 +50%",
+    "effect10_zh": "使用爆发技能时,自身效果命中+50%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "A",
+    "buff": [],
+    "debuff": []
+  },
+  "2000076": {
+    "name": "Exceptional Aura",
+    "name_jp": "とてつもないオーラ",
+    "name_kr": "독보적인 오라",
+    "name_zh": "独特光环",
+    "mainStat": "Earth Damage Increase",
+    "mainStat_jp": "地属性対象ダメージUP",
+    "mainStat_kr": "지속성 대상 피해 증가",
+    "mainStat_zh": "对地属性伤害提升",
+    "effect": "Increases damage of allies with a Barrier",
+    "effect_jp": "シールド状態の仲間のダメージがUPする。",
+    "effect_kr": "실드를 보유한 동료의 피해량 증가",
+    "effect_zh": "使附带护盾的同伴伤害量提升",
+    "effect10": "Greatly increases damage of allies with a Barrier",
+    "effect10_jp": "シールド状態の仲間のダメージが大幅にUPする。",
+    "effect10_kr": "실드를 보유한 동료의 피해량 크게 증가",
+    "effect10_zh": "使附带护盾的同伴伤害量大幅提升",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "B",
+    "buff": [],
+    "debuff": []
+  },
   "2000077": {
     "name": "Guardian's Qualification",
     "name_jp": "守護者の資格",
@@ -1487,6 +1653,30 @@
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "S",
     "buff": [],
+    "debuff": []
+  },
+  "2000096": {
+    "name": "Desperate",
+    "name_jp": "デスペレート",
+    "name_kr": "데스퍼러트",
+    "name_zh": "绝望之剑",
+    "mainStat": "Reduces Dark Damage Taken",
+    "mainStat_jp": "闇属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "암속성 대상 받는 피해 감소",
+    "mainStat_zh": "暗属性所受伤害降低",
+    "effect": "When hit, increases Priority by 25% (Activated only once every 2 turns)",
+    "effect_jp": "ダメージを受けた場合、行動ゲージが+25%UPする。 (2ターンに一度のみ発動)",
+    "effect_kr": "피격 시 행동 게이지 +25% (2턴에 1회만 발동)",
+    "effect_zh": "受到攻击时,行动值+25%(2回合仅能发动1次)",
+    "effect10": "When hit, increases Priority by 50% (Activated only once every 2 turns)",
+    "effect10_jp": "ダメージを受けた場合、行動ゲージが+50%UPする。 (2ターンに一度のみ発動)",
+    "effect10_kr": "피격 시 행동 게이지 +50% (2턴에 1회만 발동)",
+    "effect10_zh": "受到攻击时,行动值+50%(2回合仅能发动1次)",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "B",
+    "buff": [
+      "BT_ACTION_GAUGE"
+    ],
     "debuff": []
   },
   "2000097": {
