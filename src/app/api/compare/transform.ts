@@ -3,11 +3,22 @@ const LANG_SUFFIXES = ['_jp', '_kr', '_zh'] as const
 // Fields whose keys need localized ordering (1, 1_jp, 1_kr, 1_zh, 2, ...)
 const LOCALIZED_KEY_FIELDS = new Set(['transcend', 'true_desc_levels', 'enhancement'])
 
-// Get keys in localized order: 1, 1_jp, 1_kr, 1_zh, 2, 2_jp, ...
+// Base key pattern: "1", "4_1", "5_2", etc.
+const BASE_KEY_RE = /^\d+(_\d+)?$/
+
+// Sort base keys numerically: 1, 2, 3, 4_1, 4_2, 5_1, 5_2, 5_3, 6
+function sortBaseKeys(a: string, b: string): number {
+  const [aMaj, aMin] = a.split('_').map(Number)
+  const [bMaj, bMin] = b.split('_').map(Number)
+  if (aMaj !== bMaj) return aMaj - bMaj
+  return (aMin ?? 0) - (bMin ?? 0)
+}
+
+// Get keys in localized order: 1, 1_jp, 1_kr, 1_zh, 2, 2_jp, ..., 4_1, 4_1_jp, ...
 function getLocalizedKeyOrder(obj: Record<string, unknown>): string[] {
   const baseKeys = Object.keys(obj)
-    .filter(k => /^\d+$/.test(k))
-    .sort((a, b) => Number(a) - Number(b))
+    .filter(k => BASE_KEY_RE.test(k))
+    .sort(sortBaseKeys)
 
   const ordered: string[] = []
   for (const base of baseKeys) {
@@ -59,7 +70,7 @@ function stringifyValue(value: unknown, indent: number, fieldName: string): stri
 // e.g. if "2" === "2_jp" === "2_kr" === "2_zh", only keep "2"
 function deduplicateLocalized(obj: Record<string, unknown>): Record<string, unknown> {
   const result: Record<string, unknown> = {}
-  const baseKeys = Object.keys(obj).filter(k => /^\d+$/.test(k))
+  const baseKeys = Object.keys(obj).filter(k => BASE_KEY_RE.test(k))
 
   for (const base of baseKeys) {
     result[base] = obj[base]
