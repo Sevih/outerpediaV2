@@ -10,7 +10,7 @@ const V2_EE_FILE = path.join(PROJECT_ROOT, 'data', 'equipment', 'ee.json')
 const VALIDATED_DIR = path.join(PROJECT_ROOT, 'data', 'character')
 const VALIDATED_EE_FILE = path.join(VALIDATED_DIR, 'ee.json')
 
-const V1_MERGE_FIELDS = ['tags'] as const
+const V1_MERGE_FIELDS = ['tags', 'hasCoreFusion', 'coreFusionId'] as const
 
 export async function POST() {
   try {

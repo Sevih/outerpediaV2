@@ -501,6 +501,30 @@
     "buff": [],
     "debuff": []
   },
+  "2000029": {
+    "name": "Bag of Rare Seeds",
+    "name_jp": "希少種子のポッケ",
+    "name_kr": "희귀 종자 주머니",
+    "name_zh": "一袋稀有种子",
+    "mainStat": "Effectiveness (To: Water)",
+    "mainStat_jp": "水属性の対象の効果命中",
+    "mainStat_kr": "수속성 대상 효과 적중",
+    "mainStat_zh": "水属性效果命中",
+    "effect": "Increases damage proportional to the caster's Speed",
+    "effect_jp": "スピードが高いほどダメージがUPする。",
+    "effect_kr": "속도에 비례하여 피해량 증가",
+    "effect_zh": "根据速度等比提升伤害量",
+    "effect10": "When using <color=#28d9ed>Destroy Civilization</color>, if the target is inflicted with Poisoned, increases the duration of buffs granted to all allies by <color=#28d9ed>1</color> turn",
+    "effect10_jp": "<color=#28d9ed>【大自然の刃】</color>で中毒状態の敵を攻撃時、味方全体の強化効果の効果ターンを<color=#28d9ed>+1</color>ターン増加する。",
+    "effect10_kr": "<color=#28d9ed>문명을 파괴하라</color>로 중독 보유 대상 공격 시 아군 전체의 강화 효과 <color=#28d9ed>+1</color>턴",
+    "effect10_zh": "使用<color=#28d9ed>破坏文明吧</color>攻击持有附带中毒效果的目标时,使全体友军的强化效果<color=#28d9ed>+1</color>回合",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "D",
+    "buff": [
+      "BT_EXTEND_BUFF"
+    ],
+    "debuff": []
+  },
   "2000030": {
     "name": "The Blacksmith's Devotion",
     "name_jp": "鍛冶屋の信念",
@@ -617,6 +641,28 @@
     ],
     "debuff": []
   },
+  "2000037": {
+    "name": "Elysion",
+    "name_jp": "エリシオン",
+    "name_kr": "엘리시온",
+    "name_zh": "极乐世界",
+    "mainStat": "Reduces Fire Damage Taken",
+    "mainStat_jp": "火属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "화속성 대상 받는 피해 감소",
+    "mainStat_zh": "火属性所受伤害降低",
+    "effect": "Increases damage proportional to Max Health",
+    "effect_jp": "最大HPが高いほどダメージがUPする。",
+    "effect_kr": "최대 체력에 비례하여 피해량 증가",
+    "effect_zh": "根据生命值上限等比提升伤害量",
+    "effect10": "+20% Max Health",
+    "effect10_jp": "最大HP +20%",
+    "effect10_kr": "최대 체력 +20%",
+    "effect10_zh": "生命值上限+20%",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "D",
+    "buff": [],
+    "debuff": []
+  },
   "2000038": {
     "name": "Love and Peace",
     "name_jp": "ラブ&ピース",
@@ -641,6 +687,30 @@
     ],
     "debuff": [
       "BT_WG_REVERSE_HEAL"
+    ]
+  },
+  "2000039": {
+    "name": "Sidewinder",
+    "name_jp": "サイドワインダー",
+    "name_kr": "사이드 와인더",
+    "name_zh": "响尾蛇",
+    "mainStat": "Dark Damage Increase",
+    "mainStat_jp": "闇属性対象ダメージUP",
+    "mainStat_kr": "암속성 대상 피해 증가",
+    "mainStat_zh": "对暗属性伤害提升",
+    "effect": "When using <color=#28d9ed>Unforgivable Sinner</color>, decreases the Priority of the target by 30%",
+    "effect_jp": "<color=#28d9ed>【許しがたき罪人】</color>使用時、対象の行動ゲージが-30%DOWNする。",
+    "effect_kr": "<color=#28d9ed>용서받지 못할 죄인</color> 사용 시 대상의 행동 게이지 -30%",
+    "effect_zh": "使用<color=#28d9ed>无法饶恕的罪人</color>时,目标的行动值 -30%",
+    "effect10": "When using <color=#28d9ed>Unforgivable Sinner</color>, increases Penetration by <color=#28d9ed>30%</color>",
+    "effect10_jp": "<color=#28d9ed>【許しがたき罪人】</color>使用時、 貫通力が<color=#28d9ed>+30%</color>UPする。",
+    "effect10_kr": "<color=#28d9ed>용서받지 못할 죄인</color> 사용 시 관통력 <color=#28d9ed>+30%</color>",
+    "effect10_zh": "使用<color=#28d9ed>无法饶恕的罪人</color>时,穿透力<color=#28d9ed>+30%</color>",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "A",
+    "buff": [],
+    "debuff": [
+      "BT_ACTION_GAUGE"
     ]
   },
   "2000040": {
@@ -1932,6 +2002,28 @@
     "effect10_zh": "我方受到攻击时,<color=#28d9ed>「蓝色热情」</color>+2(每回合1次)",
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "A",
+    "buff": [],
+    "debuff": []
+  },
+  "2000108": {
+    "name": "Mortician's Coffin",
+    "name_jp": "葬儀屋の棺",
+    "name_kr": "장의사의 관",
+    "name_zh": "殯葬師之棺",
+    "mainStat": "Reduces Water Damage Taken",
+    "mainStat_jp": "水属性の対象の受ける ダメージDOWN",
+    "mainStat_kr": "수속성 대상 받는 피해 감소",
+    "mainStat_zh": "水属性所受伤害降低",
+    "effect": "Increases Max Health of Earth allies by +30%",
+    "effect_jp": "地属性の味方の最大HP +30%",
+    "effect_kr": "지속성 아군 최대 체력 +30%",
+    "effect_zh": "土属性友军生命值上限+30%",
+    "effect10": "Increases damage dealt by allies to targets afflicted with Poison",
+    "effect10_jp": "味方が中毒を保有している対象に与えるダメージUP",
+    "effect10_kr": "아군이 중독 보유 대상에게 입히는 피해 증가",
+    "effect10_zh": "友军对中毒目标造成的伤害提升",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "C",
     "buff": [],
     "debuff": []
   },

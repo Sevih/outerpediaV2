@@ -11,7 +11,7 @@ const VALIDATED_DIR = path.join(PROJECT_ROOT, 'data', 'character')
 const VALIDATED_EE_FILE = path.join(VALIDATED_DIR, 'ee.json')
 
 // Fields to merge from V1 into V2
-const V1_MERGE_FIELDS = ['tags'] as const
+const V1_MERGE_FIELDS = ['tags', 'hasCoreFusion', 'coreFusionId'] as const
 
 function mergeV1Fields(v2Data: Record<string, unknown>, slug: string): Record<string, unknown> {
   const v1Path = path.join(V1_CHAR_DIR, `${slug}.json`)

@@ -194,6 +194,9 @@ class EEManager:
         key = raw.lower()
 
         if key == "value":
+            # Avoid doubling sign: [-Value] with value_str="-60" → "-60" not "--60"
+            if prefix and value_str.startswith(prefix):
+                return value_str
             return prefix + value_str
 
         if key == "rate":
@@ -247,7 +250,7 @@ class EEManager:
 
             return val + (suffix if "%" not in val else "")
 
-        return re.sub(r"\[([+A-Za-z_]+)\](\s*%)?", repl, text)
+        return re.sub(r"\[([+\-A-Za-z_]+)\](\s*%)?", repl, text)
 
     def _localize_effect_with_buff(self, effect_obj: Dict[str, str], buff_row: Dict[str, Any]) -> Dict[str, str]:
         """Apply value formatting and replace placeholders (with language-specific formatting)"""

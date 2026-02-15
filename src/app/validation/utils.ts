@@ -14,10 +14,10 @@ const IGNORED_V2_ONLY_FIELDS = new Set([
 ])
 
 // Fields merged from V1 on validation
-const V1_MERGE_FIELDS = new Set(['tags'])
+const V1_MERGE_FIELDS = new Set(['tags', 'hasCoreFusion', 'coreFusionId'])
 
 // Top-level fields to skip entirely in diff (merged from V1, diff is noise)
-const ALWAYS_IGNORED_FIELDS = new Set(['tags'])
+const ALWAYS_IGNORED_FIELDS = new Set(['tags', 'hasCoreFusion', 'coreFusionId'])
 
 // Skill fields to skip when added (always present in V2 format, even if empty)
 const IGNORED_ADDED_SKILL_FIELDS = new Set(['dual_buff', 'dual_debuff'])
