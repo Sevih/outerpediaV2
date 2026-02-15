@@ -10,10 +10,6 @@
   "SubClass": "Wizard",
   "rank": "B",
   "role": "dps",
-  "tags": [
-    "ignore-defense",
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -68,6 +64,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>1ターン</color>の間UPする。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的概率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to increase the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的概率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to increase the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的概率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>75%</color> chance to increase the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>75%</color>の確率で自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>75%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>75%</color>的概率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>75%</color> chance to increase the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>75%</color>の確率で自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>75%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>75%</color>的概率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to increase the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -147,6 +165,28 @@
       "true_desc_jp": "敵2体にダメージを与える。\\n自分の<color=#28d9ed>攻撃力</color>がUPした状態の場合、敵全体にダメージを与える。",
       "true_desc_kr": "적 2인을 공격합니다.\\n자신이 <color=#28d9ed>공격력</color>이 증가한 상태라면 적 전체를 공격합니다.",
       "true_desc_zh": "攻击2名敌人。\\n若自身<color=#28d9ed>攻击力</color>处于提升状态,则攻击全体敌人。",
+      "true_desc_levels": {
+        "1": "Attacks 2 enemies.\\nAttacks all enemies if the caster's <color=#28d9ed>Attack</color> is currently increased.",
+        "1_jp": "敵2体にダメージを与える。\\n自分の<color=#28d9ed>攻撃力</color>がUPした状態の場合、敵全体にダメージを与える。",
+        "1_kr": "적 2인을 공격합니다.\\n자신이 <color=#28d9ed>공격력</color>이 증가한 상태라면 적 전체를 공격합니다.",
+        "1_zh": "攻击2名敌人。\\n若自身<color=#28d9ed>攻击力</color>处于提升状态,则攻击全体敌人。",
+        "2": "Attacks 2 enemies.\\nAttacks all enemies if the caster's <color=#28d9ed>Attack</color> is currently increased.",
+        "2_jp": "敵2体にダメージを与える。\\n自分の<color=#28d9ed>攻撃力</color>がUPした状態の場合、敵全体にダメージを与える。",
+        "2_kr": "적 2인을 공격합니다.\\n자신이 <color=#28d9ed>공격력</color>이 증가한 상태라면 적 전체를 공격합니다.",
+        "2_zh": "攻击2名敌人。\\n若自身<color=#28d9ed>攻击力</color>处于提升状态,则攻击全体敌人。",
+        "3": "Attacks 2 enemies.\\nAttacks all enemies if the caster's <color=#28d9ed>Attack</color> is currently increased.",
+        "3_jp": "敵2体にダメージを与える。\\n自分の<color=#28d9ed>攻撃力</color>がUPした状態の場合、敵全体にダメージを与える。",
+        "3_kr": "적 2인을 공격합니다.\\n자신이 <color=#28d9ed>공격력</color>이 증가한 상태라면 적 전체를 공격합니다.",
+        "3_zh": "攻击2名敌人。\\n若自身<color=#28d9ed>攻击力</color>处于提升状态,则攻击全体敌人。",
+        "4": "Attacks 2 enemies.\\nAttacks all enemies if the caster's <color=#28d9ed>Attack</color> is currently increased.",
+        "4_jp": "敵2体にダメージを与える。\\n自分の<color=#28d9ed>攻撃力</color>がUPした状態の場合、敵全体にダメージを与える。",
+        "4_kr": "적 2인을 공격합니다.\\n자신이 <color=#28d9ed>공격력</color>이 증가한 상태라면 적 전체를 공격합니다.",
+        "4_zh": "攻击2名敌人。\\n若自身<color=#28d9ed>攻击力</color>处于提升状态,则攻击全体敌人。",
+        "5": "Attacks 2 enemies.\\nAttacks all enemies if the caster's <color=#28d9ed>Attack</color> is currently increased.",
+        "5_jp": "敵2体にダメージを与える。\\n自分の<color=#28d9ed>攻撃力</color>がUPした状態の場合、敵全体にダメージを与える。",
+        "5_kr": "적 2인을 공격합니다.\\n자신이 <color=#28d9ed>공격력</color>이 증가한 상태라면 적 전체를 공격합니다.",
+        "5_zh": "攻击2名敌人。\\n若自身<color=#28d9ed>攻击力</color>处于提升状态,则攻击全体敌人。"
+      },
       "enhancement": {
         "2": [
           "+15% damage",
@@ -201,10 +241,12 @@
           "冷却时间-1回合"
         ]
       },
-      "wgr": 1,
       "cd": "4",
+      "wgr": 1,
       "buff": [],
       "debuff": [],
+      "offensive": true,
+      "target": "duo",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage",
@@ -236,9 +278,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "duo"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "503",
@@ -252,6 +292,28 @@
       "true_desc_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n<color=#28d9ed>地属性</color>対象に与えるダメージが<color=#28d9ed>20%</color>追加で増加する。",
       "true_desc_kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.\\n지속성 대상에 대한 피해량이 추가로 <color=#28d9ed>20%</color> 증가합니다.",
       "true_desc_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高自身<color=#28d9ed>攻击力</color>。\\n对<color=#28d9ed>土属性</color>目标额外造成<color=#28d9ed>20%</color>伤害。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and increases your <color=#28d9ed>ATK</color> for <color=#28d9ed>2</color> turns.\\nDeals an additional <color=#28d9ed>20%</color> damage to Earth-attribute targets.",
+        "1_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n<color=#28d9ed>地属性</color>対象に与えるダメージが<color=#28d9ed>20%</color>追加で増加する。",
+        "1_kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.\\n지속성 대상에 대한 피해량이 추가로 <color=#28d9ed>20%</color> 증가합니다.",
+        "1_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高自身<color=#28d9ed>攻击力</color>。\\n对<color=#28d9ed>土属性</color>目标额外造成<color=#28d9ed>20%</color>伤害。",
+        "2": "Attacks all enemies and increases your <color=#28d9ed>ATK</color> for <color=#28d9ed>2</color> turns.\\nDeals an additional <color=#28d9ed>20%</color> damage to Earth-attribute targets.",
+        "2_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n<color=#28d9ed>地属性</color>対象に与えるダメージが<color=#28d9ed>20%</color>追加で増加する。",
+        "2_kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.\\n지속성 대상에 대한 피해량이 추가로 <color=#28d9ed>20%</color> 증가합니다.",
+        "2_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高自身<color=#28d9ed>攻击力</color>。\\n对<color=#28d9ed>土属性</color>目标额外造成<color=#28d9ed>20%</color>伤害。",
+        "3": "Attacks all enemies and increases your <color=#28d9ed>ATK</color> for <color=#28d9ed>2</color> turns.\\nDeals an additional <color=#28d9ed>20%</color> damage to Earth-attribute targets.",
+        "3_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n<color=#28d9ed>地属性</color>対象に与えるダメージが<color=#28d9ed>20%</color>追加で増加する。",
+        "3_kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.\\n지속성 대상에 대한 피해량이 추가로 <color=#28d9ed>20%</color> 증가합니다.",
+        "3_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高自身<color=#28d9ed>攻击力</color>。\\n对<color=#28d9ed>土属性</color>目标额外造成<color=#28d9ed>20%</color>伤害。",
+        "4": "Attacks all enemies and increases your <color=#28d9ed>ATK</color> for <color=#28d9ed>2</color> turns.\\nDeals an additional <color=#28d9ed>20%</color> damage to Earth-attribute targets.",
+        "4_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n<color=#28d9ed>地属性</color>対象に与えるダメージが<color=#28d9ed>20%</color>追加で増加する。",
+        "4_kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.\\n지속성 대상에 대한 피해량이 추가로 <color=#28d9ed>20%</color> 증가합니다.",
+        "4_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高自身<color=#28d9ed>攻击力</color>。\\n对<color=#28d9ed>土属性</color>目标额外造成<color=#28d9ed>20%</color>伤害。",
+        "5": "Attacks all enemies and increases your <color=#28d9ed>ATK</color> for <color=#28d9ed>2</color> turns.\\nDeals an additional <color=#28d9ed>20%</color> damage to Earth-attribute targets.",
+        "5_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n<color=#28d9ed>地属性</color>対象に与えるダメージが<color=#28d9ed>20%</color>追加で増加する。",
+        "5_kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.\\n지속성 대상에 대한 피해량이 추가로 <color=#28d9ed>20%</color> 증가합니다.",
+        "5_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高自身<color=#28d9ed>攻击力</color>。\\n对<color=#28d9ed>土属性</color>目标额外造成<color=#28d9ed>20%</color>伤害。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -327,6 +389,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(初手)</color>:このスキルチェーン攻撃の間、味方全体の攻撃力がUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
       "true_desc_kr": "<color=#ffd732>체인 스타터 효과</color> : 해당 스킬 체인 공격 동안 모든 아군의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
       "true_desc_zh": "<color=#ffd732>连携起始效果</color>:该连携技能攻击期间,我方全体攻击力提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Starter Effect</color>: Increases Attack of all allies during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase own <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:このスキルチェーン攻撃の間、味方全体の攻撃力がUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 해당 스킬 체인 공격 동안 모든 아군의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "1_zh": "<color=#ffd732>连携起始效果</color>:该连携技能攻击期间,我方全体攻击力提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "2": "<color=#ffd732>Chain Starter Effect</color>: Increases Attack of all allies during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase own <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:このスキルチェーン攻撃の間、味方全体の攻撃力がUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 해당 스킬 체인 공격 동안 모든 아군의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "2_zh": "<color=#ffd732>连携起始效果</color>:该连携技能攻击期间,我方全体攻击力提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "3": "<color=#ffd732>Chain Starter Effect</color>: Increases Attack of all allies during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase own <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:このスキルチェーン攻撃の間、味方全体の攻撃力がUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 해당 스킬 체인 공격 동안 모든 아군의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "3_zh": "<color=#ffd732>连携起始效果</color>:该连携技能攻击期间,我方全体攻击力提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "4": "<color=#ffd732>Chain Starter Effect</color>: Increases Attack of all allies during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase own <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:このスキルチェーン攻撃の間、味方全体の攻撃力がUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 해당 스킬 체인 공격 동안 모든 아군의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "4_zh": "<color=#ffd732>连携起始效果</color>:该连携技能攻击期间,我方全体攻击力提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "5": "<color=#ffd732>Chain Starter Effect</color>: Increases Attack of all allies during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase own <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:このスキルチェーン攻撃の間、味方全体の攻撃力がUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 해당 스킬 체인 공격 동안 모든 아군의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "5_zh": "<color=#ffd732>连携起始效果</color>:该连携技能攻击期间,我方全体攻击力提升。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -392,15 +476,14 @@
         "BT_STAT|ST_ATK"
       ],
       "debuff": [],
-      "dual_buff": [
-        "BT_STAT|ST_ATK"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_STAT|ST_ATK"
+      ],
+      "dual_debuff": []
     }
-  },
-  "hasCoreFusion": true,
-  "coreFusionId": "2700005"
+  }
 }

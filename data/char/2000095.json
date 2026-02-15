@@ -68,6 +68,28 @@
       "true_desc_jp": "敵単体にダメージを与える。攻撃後、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
       "true_desc_kr": "적을 공격합니다. 공격 후 대상에게 <color=#28d9ed>1턴</color>동안 지속되는 <color=#28d9ed>화상</color>을 부여합니다.",
       "true_desc_zh": "攻击敌人。攻击后,对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy. After attacking, inflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "敵単体にダメージを与える。攻撃後、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "1_kr": "적을 공격합니다. 공격 후 대상에게 <color=#28d9ed>1턴</color>동안 지속되는 <color=#28d9ed>화상</color>을 부여합니다.",
+        "1_zh": "攻击敌人。攻击后,对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "2": "Attacks an enemy. After attacking, inflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "敵単体にダメージを与える。攻撃後、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "2_kr": "적을 공격합니다. 공격 후 대상에게 <color=#28d9ed>1턴</color>동안 지속되는 <color=#28d9ed>화상</color>을 부여합니다.",
+        "2_zh": "攻击敌人。攻击后,对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "3": "Attacks an enemy. After attacking, inflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "敵単体にダメージを与える。攻撃後、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "3_kr": "적을 공격합니다. 공격 후 대상에게 <color=#28d9ed>1턴</color>동안 지속되는 <color=#28d9ed>화상</color>을 부여합니다.",
+        "3_zh": "攻击敌人。攻击后,对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "4": "Attacks an enemy. After attacking, inflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "敵単体にダメージを与える。攻撃後、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "4_kr": "적을 공격합니다. 공격 후 대상에게 <color=#28d9ed>1턴</color>동안 지속되는 <color=#28d9ed>화상</color>을 부여합니다.",
+        "4_zh": "攻击敌人。攻击后,对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "5": "Attacks an enemy. After attacking, inflicts <color=#28d9ed>Burned</color> 2 times on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "敵単体にダメージを与える。攻撃後、対象に<color=#28d9ed>火傷</color>2個を<color=#28d9ed>1ターン</color>の間付与する。",
+        "5_kr": "적을 공격합니다. 공격 후 대상에게 <color=#28d9ed>1턴</color>동안 지속되는 <color=#28d9ed>화상</color>을 2회 부여합니다.",
+        "5_zh": "攻击敌人。攻击后,对目标造成2次<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -137,6 +159,8 @@
         "BT_DOT_BURN",
         "IG_Buff_Dot_Burn_Interruption_D"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage\\n+1 turn Burned duration",
@@ -168,9 +192,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "9502",
@@ -184,6 +206,28 @@
       "true_desc_jp": "(パッシブ効果)攻撃力が<color=#28d9ed>10%</color>UPする。\\n\\n(発動効果)<color=#28d9ed>【迅速な連携】</color>または<color=#28d9ed>【アルゴ・ウェスタ】</color>使用後、<color=#28d9ed>【処女神の恩寵】</color>を付与する。",
       "true_desc_kr": "(패시브 효과) 공격력이 <color=#28d9ed>10%</color> 증가합니다.\\n\\n(발동 효과) <color=#28d9ed>신속한 연계</color> 또는 <color=#28d9ed>아르고 베스타</color> 사용 후, <color=#28d9ed>처녀신의 은총</color>을 부여합니다.",
       "true_desc_zh": "(被动效果)攻击力提升<color=#28d9ed>10%</color>。\\n\\n(触发效果)使用<color=#28d9ed>迅速连击</color>或<color=#28d9ed>圣火英烈斩</color>后,获得<color=#28d9ed>处女神的恩宠</color>效果。",
+      "true_desc_levels": {
+        "1": "(Passive Effect) Increases Attack by <color=#28d9ed>10%</color>.\\n\\n(Triggered Effect) After using <color=#28d9ed>Swift Chain</color> or <color=#28d9ed>Argo Vesta</color>, grants <color=#28d9ed>Grace of the Virgin Goddess</color>.",
+        "1_jp": "(パッシブ効果)攻撃力が<color=#28d9ed>10%</color>UPする。\\n\\n(発動効果)<color=#28d9ed>【迅速な連携】</color>または<color=#28d9ed>【アルゴ・ウェスタ】</color>使用後、<color=#28d9ed>【処女神の恩寵】</color>を付与する。",
+        "1_kr": "(패시브 효과) 공격력이 <color=#28d9ed>10%</color> 증가합니다.\\n\\n(발동 효과) <color=#28d9ed>신속한 연계</color> 또는 <color=#28d9ed>아르고 베스타</color> 사용 후, <color=#28d9ed>처녀신의 은총</color>을 부여합니다.",
+        "1_zh": "(被动效果)攻击力提升<color=#28d9ed>10%</color>。\\n\\n(触发效果)使用<color=#28d9ed>迅速连击</color>或<color=#28d9ed>圣火英烈斩</color>后,获得<color=#28d9ed>处女神的恩宠</color>效果。",
+        "2": "(Passive Effect) Increases Attack by <color=#28d9ed>10%</color>.\\n\\n(Triggered Effect) After using <color=#28d9ed>Swift Chain</color> or <color=#28d9ed>Argo Vesta</color>, grants <color=#28d9ed>Grace of the Virgin Goddess</color>.",
+        "2_jp": "(パッシブ効果)攻撃力が<color=#28d9ed>10%</color>UPする。\\n\\n(発動効果)<color=#28d9ed>【迅速な連携】</color>または<color=#28d9ed>【アルゴ・ウェスタ】</color>使用後、<color=#28d9ed>【処女神の恩寵】</color>を付与する。",
+        "2_kr": "(패시브 효과) 공격력이 <color=#28d9ed>10%</color> 증가합니다.\\n\\n(발동 효과) <color=#28d9ed>신속한 연계</color> 또는 <color=#28d9ed>아르고 베스타</color> 사용 후, <color=#28d9ed>처녀신의 은총</color>을 부여합니다.",
+        "2_zh": "(被动效果)攻击力提升<color=#28d9ed>10%</color>。\\n\\n(触发效果)使用<color=#28d9ed>迅速连击</color>或<color=#28d9ed>圣火英烈斩</color>后,获得<color=#28d9ed>处女神的恩宠</color>效果。",
+        "3": "(Passive Effect) Increases Attack by <color=#28d9ed>20%</color>.\\n\\n(Triggered Effect) After using <color=#28d9ed>Swift Chain</color> or <color=#28d9ed>Argo Vesta</color>, grants <color=#28d9ed>Grace of the Virgin Goddess</color>.",
+        "3_jp": "(パッシブ効果)攻撃力が<color=#28d9ed>20%</color>UPする。\\n\\n(発動効果)<color=#28d9ed>【迅速な連携】</color>または<color=#28d9ed>【アルゴ・ウェスタ】</color>使用後、<color=#28d9ed>【処女神の恩寵】</color>を付与する。",
+        "3_kr": "(패시브 효과) 공격력이 <color=#28d9ed>20%</color> 증가합니다.\\n\\n(발동 효과) <color=#28d9ed>신속한 연계</color> 또는 <color=#28d9ed>아르고 베스타</color> 사용 후, <color=#28d9ed>처녀신의 은총</color>을 부여합니다.",
+        "3_zh": "(被动效果)攻击力提升<color=#28d9ed>20%</color>。\\n\\n(触发效果)使用<color=#28d9ed>迅速连击</color>或<color=#28d9ed>圣火英烈斩</color>后,获得<color=#28d9ed>处女神的恩宠</color>效果。",
+        "4": "(Passive Effect) Increases Attack by <color=#28d9ed>20%</color>.\\n\\n(Triggered Effect) After using <color=#28d9ed>Swift Chain</color> or <color=#28d9ed>Argo Vesta</color>, grants <color=#28d9ed>Grace of the Virgin Goddess</color>.",
+        "4_jp": "(パッシブ効果)攻撃力が<color=#28d9ed>20%</color>UPする。\\n\\n(発動効果)<color=#28d9ed>【迅速な連携】</color>または<color=#28d9ed>【アルゴ・ウェスタ】</color>使用後、<color=#28d9ed>【処女神の恩寵】</color>を付与する。",
+        "4_kr": "(패시브 효과) 공격력이 <color=#28d9ed>20%</color> 증가합니다.\\n\\n(발동 효과) <color=#28d9ed>신속한 연계</color> 또는 <color=#28d9ed>아르고 베스타</color> 사용 후, <color=#28d9ed>처녀신의 은총</color>을 부여합니다.",
+        "4_zh": "(被动效果)攻击力提升<color=#28d9ed>20%</color>。\\n\\n(触发效果)使用<color=#28d9ed>迅速连击</color>或<color=#28d9ed>圣火英烈斩</color>后,获得<color=#28d9ed>处女神的恩宠</color>效果。",
+        "5": "(Passive Effect) Increases Attack by <color=#28d9ed>30%</color>.\\n\\n(Triggered Effect) After using <color=#28d9ed>Swift Chain</color> or <color=#28d9ed>Argo Vesta</color>, grants <color=#28d9ed>Grace of the Virgin Goddess</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "5_jp": "(パッシブ効果)攻撃力が<color=#28d9ed>30%</color>UPする。\\n\\n(発動効果)<color=#28d9ed>【迅速な連携】</color>または<color=#28d9ed>【アルゴ・ウェスタ】</color>使用後、<color=#28d9ed>【処女神の恩寵】</color>を付与する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "5_kr": "(패시브 효과) 공격력이 <color=#28d9ed>30%</color> 증가합니다.\\n\\n(발동 효과) <color=#28d9ed>신속한 연계</color> 또는 <color=#28d9ed>아르고 베스타</color> 사용 후, <color=#28d9ed>처녀신의 은총</color>을 부여합니다.\\n이 스킬 발동 직후에는 적의 반격/복수/신속 대응이 발생하지 않습니다.",
+        "5_zh": "(被动效果)攻击力提升<color=#28d9ed>30%</color>。\\n\\n(触发效果)使用<color=#28d9ed>迅速连击</color>或<color=#28d9ed>圣火英烈斩</color>后,获得<color=#28d9ed>处女神的恩宠</color>效果。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown"
@@ -243,8 +287,7 @@
       "buff": [
         "BT_SEAL_COUNTER",
         "BT_ACTION_GAUGE",
-        "BT_COOL3_CHARGE",
-        "GRACE_OF_THE_VIRGIN_GODDESS"
+        "BT_COOL3_CHARGE"
       ],
       "debuff": [],
       "offensive": false,
@@ -262,6 +305,28 @@
       "true_desc_jp": "<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間自分の<color=#28d9ed>攻撃力</color>をUPした後、敵全体にダメージを与える。\\n攻撃後、対象全体にそれぞれ<color=#28d9ed>70%</color>の確率で解除不可能な<color=#28d9ed>火傷</color>2個を<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "<color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>을 증가시킨 후, 적 전체를 공격합니다.\\n공격 후 대상 전체에게 각각 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 해제 불가능한 <color=#28d9ed>화상</color>을 2회 부여합니다.",
       "true_desc_zh": "有<color=#28d9ed>70%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,攻击全体敌人。\\n攻击后,各有<color=#28d9ed>70%</color>的几率对全体目标造成2次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Has a <color=#28d9ed>70%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\nAfter attacking, has a <color=#28d9ed>70%</color> chance each to inflict irremovable <color=#28d9ed>Burned</color> 2 times on all targets for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間自分の<color=#28d9ed>攻撃力</color>をUPした後、敵全体にダメージを与える。\\n攻撃後、対象全体にそれぞれ<color=#28d9ed>70%</color>の確率で解除不可能な<color=#28d9ed>火傷</color>2個を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "<color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>을 증가시킨 후, 적 전체를 공격합니다.\\n공격 후 대상 전체에게 각각 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 해제 불가능한 <color=#28d9ed>화상</color>을 2회 부여합니다.",
+        "1_zh": "有<color=#28d9ed>70%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,攻击全体敌人。\\n攻击后,各有<color=#28d9ed>70%</color>的几率对全体目标造成2次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "2": "Has a <color=#28d9ed>70%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\nAfter attacking, has a <color=#28d9ed>70%</color> chance each to inflict irremovable <color=#28d9ed>Burned</color> 2 times on all targets for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間自分の<color=#28d9ed>攻撃力</color>をUPした後、敵全体にダメージを与える。\\n攻撃後、対象全体にそれぞれ<color=#28d9ed>70%</color>の確率で解除不可能な<color=#28d9ed>火傷</color>2個を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "<color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>을 증가시킨 후, 적 전체를 공격합니다.\\n공격 후 대상 전체에게 각각 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 해제 불가능한 <color=#28d9ed>화상</color>을 2회 부여합니다.",
+        "2_zh": "有<color=#28d9ed>70%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,攻击全体敌人。\\n攻击后,各有<color=#28d9ed>70%</color>的几率对全体目标造成2次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "3": "Has a <color=#28d9ed>70%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\nAfter attacking, has a <color=#28d9ed>70%</color> chance each to inflict irremovable <color=#28d9ed>Burned</color> 2 times on all targets for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間自分の<color=#28d9ed>攻撃力</color>をUPした後、敵全体にダメージを与える。\\n攻撃後、対象全体にそれぞれ<color=#28d9ed>70%</color>の確率で解除不可能な<color=#28d9ed>火傷</color>2個を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "<color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>을 증가시킨 후, 적 전체를 공격합니다.\\n공격 후 대상 전체에게 각각 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 해제 불가능한 <color=#28d9ed>화상</color>을 2회 부여합니다.",
+        "3_zh": "有<color=#28d9ed>70%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,攻击全体敌人。\\n攻击后,各有<color=#28d9ed>70%</color>的几率对全体目标造成2次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "4": "Has a <color=#28d9ed>85%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\nAfter attacking, has a <color=#28d9ed>85%</color> chance each to inflict irremovable <color=#28d9ed>Burned</color> 2 times on all targets for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "<color=#28d9ed>85%</color>の確率で<color=#28d9ed>2ターン</color>の間自分の<color=#28d9ed>攻撃力</color>をUPした後、敵全体にダメージを与える。\\n攻撃後、対象全体にそれぞれ<color=#28d9ed>85%</color>の確率で解除不可能な<color=#28d9ed>火傷</color>2個を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "<color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>을 증가시킨 후, 적 전체를 공격합니다.\\n공격 후 대상 전체에게 각각 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 해제 불가능한 <color=#28d9ed>화상</color>을 2회 부여합니다.",
+        "4_zh": "有<color=#28d9ed>85%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,攻击全体敌人。\\n攻击后,各有<color=#28d9ed>85%</color>的几率对全体目标造成2次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "5": "Has a <color=#28d9ed>100%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>3 turn(s)</color>, then attacks all enemies.\\nAfter attacking, has a <color=#28d9ed>100%</color> chance each to inflict irremovable <color=#28d9ed>Burned</color> 2 times on all targets for <color=#28d9ed>3 turn(s)</color>.",
+        "5_jp": "<color=#28d9ed>100%</color>の確率で<color=#28d9ed>3ターン</color>の間自分の<color=#28d9ed>攻撃力</color>をUPした後、敵全体にダメージを与える。\\n攻撃後、対象全体にそれぞれ<color=#28d9ed>100%</color>の確率で解除不可能な<color=#28d9ed>火傷</color>2個を<color=#28d9ed>3ターン</color>の間付与する。",
+        "5_kr": "<color=#28d9ed>100%</color> 확률로 <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>공격력</color>을 증가시킨 후, 적 전체를 공격합니다.\\n공격 후 대상 전체에게 각각 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>3턴</color> 동안 지속되는 해제 불가능한 <color=#28d9ed>화상</color>을 2회 부여합니다.",
+        "5_zh": "有<color=#28d9ed>100%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>3回合</color>后,攻击全体敌人。\\n攻击后,各有<color=#28d9ed>100%</color>的几率对全体目标造成2次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -347,6 +412,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。(対象の効果抵抗無視)\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1</color>ターンの間付与する。(対象の効果抵抗無視)",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果:</color>攻击后,对全体敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,对敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on all enemies for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on the enemy for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。(対象の効果抵抗無視)\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1</color>ターンの間付与する。(対象の効果抵抗無視)",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果:</color>攻击后,对全体敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,对敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on all enemies for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on the enemy for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。(対象の効果抵抗無視)\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1</color>ターンの間付与する。(対象の効果抵抗無視)",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果:</color>攻击后,对全体敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,对敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on all enemies for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on the enemy for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。(対象の効果抵抗無視)\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1</color>ターンの間付与する。(対象の効果抵抗無視)",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果:</color>攻击后,对全体敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,对敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on all enemies for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on the enemy for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。(対象の効果抵抗無視)\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1</color>ターンの間付与する。(対象の効果抵抗無視)",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果:</color>攻击后,对全体敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,对敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on all enemies for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts irremovable <color=#28d9ed>Burned</color> once on the enemy for <color=#28d9ed>1 turn(s)</color>. (Ignores the target's Resilience)",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。(対象の効果抵抗無視)\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に解除不可能な<color=#28d9ed>火傷</color>を<color=#28d9ed>1</color>ターンの間付与する。(対象の効果抵抗無視)",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적에게 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color>을 1회 부여합니다. (대상의 효과 저항 무시)",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果:</color>攻击后,对全体敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,对敌人造成1次无法解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。(无视目标效果抵抗)"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -412,13 +499,14 @@
       "debuff": [
         "IG_Buff_Dot_Burn_Interruption_D"
       ],
-      "dual_debuff": [
-        "IG_Buff_Dot_Burn_Interruption_D"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": [
+        "IG_Buff_Dot_Burn_Interruption_D"
+      ]
     }
   }
 }

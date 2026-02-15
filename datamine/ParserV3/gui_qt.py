@@ -1066,6 +1066,7 @@ class CharacterTab(QWidget):
                 skill_field_order = [
                     'name', 'name_jp', 'name_kr', 'name_zh',
                     'true_desc', 'true_desc_jp', 'true_desc_kr', 'true_desc_zh',
+                    'true_desc_levels',
                     'cd',
                     'wgr',
                     'buff',

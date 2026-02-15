@@ -11,9 +11,6 @@
   "rank": "S",
   "rank_pvp": "C",
   "role": "dps",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -68,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to grant the caster increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to grant the caster increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to grant the caster increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to grant the caster increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to grant the caster increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -143,6 +162,28 @@
       "true_desc_jp": "スキル使用時、敵単体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、ダメージを与える。自分の<color=#28d9ed>会心率</color>がUPした状態の場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。この攻撃は対象の効果抵抗を無視する。",
       "true_desc_kr": "스킬 사용 시 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 자신의 <color=#28d9ed>치명 확률</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 이 공격은 대상의 효과 저항을 무시합니다.",
       "true_desc_zh": "使用技能时,使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>并攻击敌人。若自身的<color=#28d9ed>暴击率</color>处于提升状态,则使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。该攻击无视目标的效果抵抗。",
+      "true_desc_levels": {
+        "1": "When using this skill, <color=#28d9ed>removes all</color> <color=#28d9ed>buffs</color> on the target and attacks the enemy. If the caster is granted increased <color=#28d9ed>Critical Hit Chance</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. This attack bypasses the target's Resilience.",
+        "1_jp": "スキル使用時、敵単体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、ダメージを与える。自分の<color=#28d9ed>会心率</color>がUPした状態の場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。この攻撃は対象の効果抵抗を無視する。",
+        "1_kr": "스킬 사용 시 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 자신의 <color=#28d9ed>치명 확률</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 이 공격은 대상의 효과 저항을 무시합니다.",
+        "1_zh": "使用技能时,使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>并攻击敌人。若自身的<color=#28d9ed>暴击率</color>处于提升状态,则使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。该攻击无视目标的效果抵抗。",
+        "2": "When using this skill, <color=#28d9ed>removes all</color> <color=#28d9ed>buffs</color> on the target and attacks the enemy. If the caster is granted increased <color=#28d9ed>Critical Hit Chance</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color>. This attack bypasses the target's Resilience.",
+        "2_jp": "スキル使用時、敵単体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、ダメージを与える。自分の<color=#28d9ed>会心率</color>がUPした状態の場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>25%</color>UPさせる。この攻撃は対象の効果抵抗を無視する。",
+        "2_kr": "스킬 사용 시 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 자신의 <color=#28d9ed>치명 확률</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>25%</color> 증가시킵니다. 이 공격은 대상의 효과 저항을 무시합니다.",
+        "2_zh": "使用技能时,使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>并攻击敌人。若自身的<color=#28d9ed>暴击率</color>处于提升状态,则使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。该攻击无视目标的效果抵抗。",
+        "3": "When using this skill, <color=#28d9ed>removes all</color> <color=#28d9ed>buffs</color> on the target and attacks the enemy. If the caster is granted increased <color=#28d9ed>Critical Hit Chance</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color>. This attack bypasses the target's Resilience.",
+        "3_jp": "スキル使用時、敵単体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、ダメージを与える。自分の<color=#28d9ed>会心率</color>がUPした状態の場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>25%</color>UPさせる。この攻撃は対象の効果抵抗を無視する。",
+        "3_kr": "스킬 사용 시 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 자신의 <color=#28d9ed>치명 확률</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>25%</color> 증가시킵니다. 이 공격은 대상의 효과 저항을 무시합니다.",
+        "3_zh": "使用技能时,使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>并攻击敌人。若自身的<color=#28d9ed>暴击率</color>处于提升状态,则使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。该攻击无视目标的效果抵抗。",
+        "4": "When using this skill, <color=#28d9ed>removes all</color> <color=#28d9ed>buffs</color> on the target and attacks the enemy. If the caster is granted increased <color=#28d9ed>Critical Hit Chance</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color>. This attack bypasses the target's Resilience.",
+        "4_jp": "スキル使用時、敵単体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、ダメージを与える。自分の<color=#28d9ed>会心率</color>がUPした状態の場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>25%</color>UPさせる。この攻撃は対象の効果抵抗を無視する。",
+        "4_kr": "스킬 사용 시 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 자신의 <color=#28d9ed>치명 확률</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>25%</color> 증가시킵니다. 이 공격은 대상의 효과 저항을 무시합니다.",
+        "4_zh": "使用技能时,使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>并攻击敌人。若自身的<color=#28d9ed>暴击率</color>处于提升状态,则使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。该攻击无视目标的效果抵抗。",
+        "5": "When using this skill, <color=#28d9ed>removes all</color> <color=#28d9ed>buffs</color> on the target and attacks the enemy. If the caster is granted increased <color=#28d9ed>Critical Hit Chance</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>. This attack bypasses the target's Resilience.",
+        "5_jp": "スキル使用時、敵単体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、ダメージを与える。自分の<color=#28d9ed>会心率</color>がUPした状態の場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。この攻撃は対象の効果抵抗を無視する。",
+        "5_kr": "스킬 사용 시 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 자신의 <color=#28d9ed>치명 확률</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다. 이 공격은 대상의 효과 저항을 무시합니다.",
+        "5_zh": "使用技能时,使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>并攻击敌人。若自身的<color=#28d9ed>暴击率</color>处于提升状态,则使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。该攻击无视目标的效果抵抗。"
+      },
       "enhancement": {
         "2": [
           "+5% Priority",
@@ -210,6 +251,8 @@
       "debuff": [
         "BT_REMOVE_BUFF"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage (Additional increase against Earth enemies)",
@@ -241,9 +284,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "5503",
@@ -257,6 +298,28 @@
       "true_desc_jp": "敵単体にダメージを与える。対象に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\nスキル使用後、対象に<color=#28d9ed>強化効果</color>がない、または敵が倒れた場合、<color=#28d9ed>追加ターン</color>を獲得する。\\nこのスキルは地属性のボスに与えるダメージがUPする。",
       "true_desc_kr": "적을 공격합니다. <color=#28d9ed>강화 효과</color>를 보유한 적에게 입히는 피해가 증가합니다.\\n스킬 사용 후 대상에게 적용된 <color=#28d9ed>강화 효과</color>가 없거나, 적이 처치된 경우 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬은 지속성 보스에게 입히는 피해가 증가합니다.",
       "true_desc_zh": "攻击敌人。对附带<color=#28d9ed>强化效果</color>敌人造成的伤害\\n提升。\\n使用技能后,若目标未附带<color=#28d9ed>强化效果</color>,或击杀敌人,则获得<color=#28d9ed>额外回合</color>。\\n该技能对土属性首领造成的伤害提升。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy. Increases damage dealt to enemies with <color=#28d9ed>buffs</color>.\\nWhen the enemy has no <color=#28d9ed>buffs</color> or is defeated after this skill is used, grants an <color=#28d9ed>extra turn</color>.\\nThis skill deals increased damage to Earth bosses.",
+        "1_jp": "敵単体にダメージを与える。対象に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\nスキル使用後、対象に<color=#28d9ed>強化効果</color>がない、または敵が倒れた場合、<color=#28d9ed>追加ターン</color>を獲得する。\\nこのスキルは地属性のボスに与えるダメージがUPする。",
+        "1_kr": "적을 공격합니다. <color=#28d9ed>강화 효과</color>를 보유한 적에게 입히는 피해가 증가합니다.\\n스킬 사용 후 대상에게 적용된 <color=#28d9ed>강화 효과</color>가 없거나, 적이 처치된 경우 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬은 지속성 보스에게 입히는 피해가 증가합니다.",
+        "1_zh": "攻击敌人。对附带<color=#28d9ed>强化效果</color>敌人造成的伤害\\n提升。\\n使用技能后,若目标未附带<color=#28d9ed>强化效果</color>,或击杀敌人,则获得<color=#28d9ed>额外回合</color>。\\n该技能对土属性首领造成的伤害提升。",
+        "2": "Attacks an enemy. Increases damage dealt to enemies with <color=#28d9ed>buffs</color>.\\nWhen the enemy has no <color=#28d9ed>buffs</color> or is defeated after this skill is used, grants an <color=#28d9ed>extra turn</color>.\\nThis skill deals increased damage to Earth bosses.",
+        "2_jp": "敵単体にダメージを与える。対象に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\nスキル使用後、対象に<color=#28d9ed>強化効果</color>がない、または敵が倒れた場合、<color=#28d9ed>追加ターン</color>を獲得する。\\nこのスキルは地属性のボスに与えるダメージがUPする。",
+        "2_kr": "적을 공격합니다. <color=#28d9ed>강화 효과</color>를 보유한 적에게 입히는 피해가 증가합니다.\\n스킬 사용 후 대상에게 적용된 <color=#28d9ed>강화 효과</color>가 없거나, 적이 처치된 경우 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬은 지속성 보스에게 입히는 피해가 증가합니다.",
+        "2_zh": "攻击敌人。对附带<color=#28d9ed>强化效果</color>敌人造成的伤害\\n提升。\\n使用技能后,若目标未附带<color=#28d9ed>强化效果</color>,或击杀敌人,则获得<color=#28d9ed>额外回合</color>。\\n该技能对土属性首领造成的伤害提升。",
+        "3": "Attacks an enemy. Increases damage dealt to enemies with <color=#28d9ed>buffs</color>.\\nWhen the enemy has no <color=#28d9ed>buffs</color> or is defeated after this skill is used, grants an <color=#28d9ed>extra turn</color>.\\nThis skill deals increased damage to Earth bosses.",
+        "3_jp": "敵単体にダメージを与える。対象に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\nスキル使用後、対象に<color=#28d9ed>強化効果</color>がない、または敵が倒れた場合、<color=#28d9ed>追加ターン</color>を獲得する。\\nこのスキルは地属性のボスに与えるダメージがUPする。",
+        "3_kr": "적을 공격합니다. <color=#28d9ed>강화 효과</color>를 보유한 적에게 입히는 피해가 증가합니다.\\n스킬 사용 후 대상에게 적용된 <color=#28d9ed>강화 효과</color>가 없거나, 적이 처치된 경우 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬은 지속성 보스에게 입히는 피해가 증가합니다.",
+        "3_zh": "攻击敌人。对附带<color=#28d9ed>强化效果</color>敌人造成的伤害\\n提升。\\n使用技能后,若目标未附带<color=#28d9ed>强化效果</color>,或击杀敌人,则获得<color=#28d9ed>额外回合</color>。\\n该技能对土属性首领造成的伤害提升。",
+        "4": "Attacks an enemy. Increases damage dealt to enemies with <color=#28d9ed>buffs</color>.\\nWhen the enemy has no <color=#28d9ed>buffs</color> or is defeated after this skill is used, grants an <color=#28d9ed>extra turn</color>.\\nThis skill deals increased damage to Earth bosses.",
+        "4_jp": "敵単体にダメージを与える。対象に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\nスキル使用後、対象に<color=#28d9ed>強化効果</color>がない、または敵が倒れた場合、<color=#28d9ed>追加ターン</color>を獲得する。\\nこのスキルは地属性のボスに与えるダメージがUPする。",
+        "4_kr": "적을 공격합니다. <color=#28d9ed>강화 효과</color>를 보유한 적에게 입히는 피해가 증가합니다.\\n스킬 사용 후 대상에게 적용된 <color=#28d9ed>강화 효과</color>가 없거나, 적이 처치된 경우 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬은 지속성 보스에게 입히는 피해가 증가합니다.",
+        "4_zh": "攻击敌人。对附带<color=#28d9ed>强化效果</color>敌人造成的伤害\\n提升。\\n使用技能后,若目标未附带<color=#28d9ed>强化效果</color>,或击杀敌人,则获得<color=#28d9ed>额外回合</color>。\\n该技能对土属性首领造成的伤害提升。",
+        "5": "Attacks an enemy. Increases damage dealt to enemies with <color=#28d9ed>buffs</color>.\\nWhen the enemy has no <color=#28d9ed>buffs</color> or is defeated after this skill is used, grants an <color=#28d9ed>extra turn</color>.\\nThis skill deals increased damage to Earth bosses.",
+        "5_jp": "敵単体にダメージを与える。対象に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\nスキル使用後、対象に<color=#28d9ed>強化効果</color>がない、または敵が倒れた場合、<color=#28d9ed>追加ターン</color>を獲得する。\\nこのスキルは地属性のボスに与えるダメージがUPする。",
+        "5_kr": "적을 공격합니다. <color=#28d9ed>강화 효과</color>를 보유한 적에게 입히는 피해가 증가합니다.\\n스킬 사용 후 대상에게 적용된 <color=#28d9ed>강화 효과</color>가 없거나, 적이 처치된 경우 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬은 지속성 보스에게 입히는 피해가 증가합니다.",
+        "5_zh": "攻击敌人。对附带<color=#28d9ed>强化效果</color>敌人造成的伤害\\n提升。\\n使用技能后,若目标未附带<color=#28d9ed>强化效果</color>,或击杀敌人,则获得<color=#28d9ed>额外回合</color>。\\n该技能对土属性首领造成的伤害提升。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -332,6 +395,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击敌人,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: Attacks an enemy and increases <color=#28d9ed>Attack</color> of the caster for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Attacks an enemy and has a <color=#28d9ed>40%</color> chance to increase <color=#28d9ed>Critical Hit Chance</color> of the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击敌人,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: Attacks an enemy and increases <color=#28d9ed>Attack</color> of the caster for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Attacks an enemy and has a <color=#28d9ed>40%</color> chance to increase <color=#28d9ed>Critical Hit Chance</color> of the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击敌人,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: Attacks an enemy and increases <color=#28d9ed>Attack</color> of the caster for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Attacks an enemy and has a <color=#28d9ed>40%</color> chance to increase <color=#28d9ed>Critical Hit Chance</color> of the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击敌人,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: Attacks an enemy and increases <color=#28d9ed>Attack</color> of the caster for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Attacks an enemy and has a <color=#28d9ed>40%</color> chance to increase <color=#28d9ed>Critical Hit Chance</color> of the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击敌人,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: Attacks an enemy and increases <color=#28d9ed>Attack</color> of the caster for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Attacks an enemy and has a <color=#28d9ed>40%</color> chance to increase <color=#28d9ed>Critical Hit Chance</color> of the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击敌人,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击敌人,并有<color=#28d9ed>40%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -397,13 +482,14 @@
         "BT_STAT|ST_ATK"
       ],
       "debuff": [],
-      "dual_buff": [
-        "BT_STAT|ST_CRITICAL_RATE"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ],
+      "dual_debuff": []
     }
   }
 }

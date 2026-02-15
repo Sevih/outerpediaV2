@@ -11,9 +11,6 @@
   "rank": "A",
   "rank_pvp": "C",
   "role": "dps",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -30,13 +27,11 @@
   "video": "FSHheOc6AkI",
   "VoiceActor": "VA. Val Rodriguez",
   "VoiceActor_jp": "CV. 本渡楓",
-  "VoiceActor_kr": "CV.김연우",
+  "VoiceActor_kr": "CV. 김연우",
   "VoiceActor_zh": "CV. 本渡枫",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -46,15 +41,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 치명 피해 +4%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军暴击伤害+4%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+4% Ally Team Critical Damage\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方の会心ダメージ+4%\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 치명 피해 +4%\n입장 시 AP +25",
@@ -73,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。対象が火属性の場合<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>40%</color>UPさせる。",
       "true_desc_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>40%</color> 증가시킵니다.",
       "true_desc_zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>40%</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. Increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color> if the target was a Fire enemy.",
+        "1_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。対象が火属性の場合<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>40%</color>UPさせる。",
+        "1_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>40%</color> 증가시킵니다.",
+        "1_zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>40%</color>。",
+        "2": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. Increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color> if the target was a Fire enemy.",
+        "2_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。対象が火属性の場合<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>40%</color>UPさせる。",
+        "2_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>40%</color> 증가시킵니다.",
+        "2_zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>40%</color>。",
+        "3": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. Increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color> if the target was a Fire enemy.",
+        "3_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。対象が火属性の場合<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>40%</color>UPさせる。",
+        "3_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>40%</color> 증가시킵니다.",
+        "3_zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>40%</color>。",
+        "4": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. Increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color> if the target was a Fire enemy.",
+        "4_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。対象が火属性の場合<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>40%</color>UPさせる。",
+        "4_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>40%</color> 증가시킵니다.",
+        "4_zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>40%</color>。",
+        "5": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. Increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color> if the target was a Fire enemy.",
+        "5_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。対象が火属性の場合<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>40%</color>UPさせる。",
+        "5_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>40%</color> 증가시킵니다.",
+        "5_zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>40%</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -145,9 +159,31 @@
       "name_kr": "나찰 가르기",
       "name_zh": "分裂罗刹",
       "true_desc": "Attacks all enemies.\\nThis skill is always treated as having a <color=#28d9ed>favorable attribute</color> and its cooldown resets if you have a buff.\\nEach time you use <color=#28d9ed>Rending Rakshasa</color>, your <color=#28d9ed>Critical Damage</color> increases by <color=#28d9ed>7%</color> (up to 5 stacks).",
-      "true_desc_jp": "敵全体を攻撃します。\\nこのスキルは常に<color=#28d9ed>有利属性</color>として扱われ、強化効果を保有している場合、スキルターンが初期化されます。\\n<color=#28d9ed>羅刹斬り</color>を使用するたびに<color=#28d9ed>クリティカルダメージ</color>が<color=#28d9ed>7%</color>上昇します(最大5回累積)。",
+      "true_desc_jp": "敵全体にダメージを与える。\\nこのスキルは常に<color=#28d9ed>有利属性</color>として扱われ、強化効果を保有している場合、スキルターンが初期化されます。\\n<color=#28d9ed>羅刹斬り</color>を使用するたびに<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>7%</color>上昇する(最大5回累積)。",
       "true_desc_kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과 보유 시 쿨타임이 초기화됩니다.\\n<color=#28d9ed>나찰 가르기</color>를 사용할 때마다 <color=#28d9ed>치명 피해량</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
       "true_desc_zh": "攻击全体敌人。\\n此技能始终视为<color=#28d9ed>属性克制</color>,且在拥有增益时会重置冷却。\\n每次使用<color=#28d9ed>罗刹斩</color>,自身<color=#28d9ed>暴击伤害</color>提高<color=#28d9ed>7%</color>(最多叠加5次)。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies.\\nThis skill is always treated as having a <color=#28d9ed>favorable attribute</color> and its cooldown resets if you have a buff.\\nEach time you use <color=#28d9ed>Rending Rakshasa</color>, your <color=#28d9ed>Critical Damage</color> increases by <color=#28d9ed>7%</color> (up to 5 stacks).",
+        "1_jp": "敵全体にダメージを与える。\\nこのスキルは常に<color=#28d9ed>有利属性</color>として扱われ、強化効果を保有している場合、スキルターンが初期化されます。\\n<color=#28d9ed>羅刹斬り</color>を使用するたびに<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>7%</color>上昇する(最大5回累積)。",
+        "1_kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과 보유 시 쿨타임이 초기화됩니다.\\n<color=#28d9ed>나찰 가르기</color>를 사용할 때마다 <color=#28d9ed>치명 피해량</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
+        "1_zh": "攻击全体敌人。\\n此技能始终视为<color=#28d9ed>属性克制</color>,且在拥有增益时会重置冷却。\\n每次使用<color=#28d9ed>罗刹斩</color>,自身<color=#28d9ed>暴击伤害</color>提高<color=#28d9ed>7%</color>(最多叠加5次)。",
+        "2": "Attacks all enemies.\\nThis skill is always treated as having a <color=#28d9ed>favorable attribute</color> and its cooldown resets if you have a buff.\\nEach time you use <color=#28d9ed>Rending Rakshasa</color>, your <color=#28d9ed>Critical Damage</color> increases by <color=#28d9ed>7%</color> (up to 5 stacks).",
+        "2_jp": "敵全体にダメージを与える。\\nこのスキルは常に<color=#28d9ed>有利属性</color>として扱われ、強化効果を保有している場合、スキルターンが初期化されます。\\n<color=#28d9ed>羅刹斬り</color>を使用するたびに<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>7%</color>上昇する(最大5回累積)。",
+        "2_kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과 보유 시 쿨타임이 초기화됩니다.\\n<color=#28d9ed>나찰 가르기</color>를 사용할 때마다 <color=#28d9ed>치명 피해량</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
+        "2_zh": "攻击全体敌人。\\n此技能始终视为<color=#28d9ed>属性克制</color>,且在拥有增益时会重置冷却。\\n每次使用<color=#28d9ed>罗刹斩</color>,自身<color=#28d9ed>暴击伤害</color>提高<color=#28d9ed>7%</color>(最多叠加5次)。",
+        "3": "Attacks all enemies.\\nThis skill is always treated as having a <color=#28d9ed>favorable attribute</color> and its cooldown resets if you have a buff.\\nEach time you use <color=#28d9ed>Rending Rakshasa</color>, your <color=#28d9ed>Critical Damage</color> increases by <color=#28d9ed>7%</color> (up to 5 stacks).",
+        "3_jp": "敵全体にダメージを与える。\\nこのスキルは常に<color=#28d9ed>有利属性</color>として扱われ、強化効果を保有している場合、スキルターンが初期化されます。\\n<color=#28d9ed>羅刹斬り</color>を使用するたびに<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>7%</color>上昇する(最大5回累積)。",
+        "3_kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과 보유 시 쿨타임이 초기화됩니다.\\n<color=#28d9ed>나찰 가르기</color>를 사용할 때마다 <color=#28d9ed>치명 피해량</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
+        "3_zh": "攻击全体敌人。\\n此技能始终视为<color=#28d9ed>属性克制</color>,且在拥有增益时会重置冷却。\\n每次使用<color=#28d9ed>罗刹斩</color>,自身<color=#28d9ed>暴击伤害</color>提高<color=#28d9ed>7%</color>(最多叠加5次)。",
+        "4": "Attacks all enemies.\\nThis skill is always treated as having a <color=#28d9ed>favorable attribute</color> and its cooldown resets if you have a buff.\\nEach time you use <color=#28d9ed>Rending Rakshasa</color>, your <color=#28d9ed>Critical Damage</color> increases by <color=#28d9ed>7%</color> (up to 5 stacks).",
+        "4_jp": "敵全体にダメージを与える。\\nこのスキルは常に<color=#28d9ed>有利属性</color>として扱われ、強化効果を保有している場合、スキルターンが初期化されます。\\n<color=#28d9ed>羅刹斬り</color>を使用するたびに<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>7%</color>上昇する(最大5回累積)。",
+        "4_kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과 보유 시 쿨타임이 초기화됩니다.\\n<color=#28d9ed>나찰 가르기</color>를 사용할 때마다 <color=#28d9ed>치명 피해량</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
+        "4_zh": "攻击全体敌人。\\n此技能始终视为<color=#28d9ed>属性克制</color>,且在拥有增益时会重置冷却。\\n每次使用<color=#28d9ed>罗刹斩</color>,自身<color=#28d9ed>暴击伤害</color>提高<color=#28d9ed>7%</color>(最多叠加5次)。",
+        "5": "Attacks all enemies.\\nThis skill is always treated as having a <color=#28d9ed>favorable attribute</color> and its cooldown resets if you have a buff.\\nEach time you use <color=#28d9ed>Rending Rakshasa</color>, your <color=#28d9ed>Critical Damage</color> increases by <color=#28d9ed>7%</color> (up to 5 stacks).",
+        "5_jp": "敵全体にダメージを与える。\\nこのスキルは常に<color=#28d9ed>有利属性</color>として扱われ、強化効果を保有している場合、スキルターンが初期化されます。\\n<color=#28d9ed>羅刹斬り</color>を使用するたびに<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>7%</color>上昇する(最大5回累積)。",
+        "5_kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과 보유 시 쿨타임이 초기화됩니다.\\n<color=#28d9ed>나찰 가르기</color>를 사용할 때마다 <color=#28d9ed>치명 피해량</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
+        "5_zh": "攻击全体敌人。\\n此技能始终视为<color=#28d9ed>属性克制</color>,且在拥有增益时会重置冷却。\\n每次使用<color=#28d9ed>罗刹斩</color>,自身<color=#28d9ed>暴击伤害</color>提高<color=#28d9ed>7%</color>(最多叠加5次)。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -206,14 +242,17 @@
           "伤害量+15%"
         ]
       },
-      "wgr": 1,
       "cd": "4",
+      "wgr": 1,
       "buff": [
         "BT_DMG_ELEMENT_SUPERIORITY",
         "BT_COOL2_CHARGE",
+        "BT_STAT|ST_CRITICAL_DMG_RATE",
         "BT_COOL3_CHARGE"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage\\nReduces Doujikiri Yasutsuna Cooldown by 1 turn",
@@ -245,9 +284,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "multi"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "1903",
@@ -258,9 +295,31 @@
       "name_kr": "도지기리 야스츠나",
       "name_zh": "童子切安纲",
       "true_desc": "When using this skill, increases own <color=#28d9ed>Critical Chance</color> for <color=#28d9ed>2</color> turns and attacks all enemies. \\nEach time <color=#28d9ed>Dojigiri Yasutsuna</color> is used, increases own <color=#28d9ed>Attack</color> by <color=#28d9ed>15%</color>. (Stacks up to 3 times)",
-      "true_desc_jp": "スキル使用時、<color=#28d9ed>2</color>ターンの間、自身の<color=#28d9ed>クリティカル発生率</color>を<color=#28d9ed>上昇</color>させ、敵全体を攻撃する。\\n<color=#28d9ed>童子切安綱</color>を使用するたびに、自身の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>15%</color>上昇する。(最大3回まで累積)",
+      "true_desc_jp": "スキル使用時、<color=#28d9ed>2</color>ターンの間、自分の<color=#28d9ed>会心発生率</color>を<color=#28d9ed>上昇</color>させ、敵全体にダメージを与える。\\n<color=#28d9ed>童子切安綱</color>を使用するたびに、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>15%</color>上昇する。(最大3回まで累積)",
       "true_desc_kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>증가</color>시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>15%</color> 증가합니다. (최대 3회 누적)",
       "true_desc_zh": "使用技能时,自身<color=#28d9ed>暴击率</color>提升<color=#28d9ed>2</color>回合并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,自身<color=#28d9ed>攻击力</color>提升<color=#28d9ed>15%</color>。(最多叠加3次)",
+      "true_desc_levels": {
+        "1": "When using this skill, increases own <color=#28d9ed>Critical Chance</color> for <color=#28d9ed>2</color> turns and attacks all enemies. \\nEach time <color=#28d9ed>Dojigiri Yasutsuna</color> is used, increases own <color=#28d9ed>Attack</color> by <color=#28d9ed>15%</color>. (Stacks up to 3 times)",
+        "1_jp": "スキル使用時、<color=#28d9ed>2</color>ターンの間、自分の<color=#28d9ed>会心発生率</color>を<color=#28d9ed>上昇</color>させ、敵全体にダメージを与える。\\n<color=#28d9ed>童子切安綱</color>を使用するたびに、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>15%</color>上昇する。(最大3回まで累積)",
+        "1_kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>증가</color>시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>15%</color> 증가합니다. (최대 3회 누적)",
+        "1_zh": "使用技能时,自身<color=#28d9ed>暴击率</color>提升<color=#28d9ed>2</color>回合并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,自身<color=#28d9ed>攻击力</color>提升<color=#28d9ed>15%</color>。(最多叠加3次)",
+        "2": "When using this skill, increases own <color=#28d9ed>Critical Chance</color> for <color=#28d9ed>2</color> turns and attacks all enemies. \\nEach time <color=#28d9ed>Dojigiri Yasutsuna</color> is used, increases own <color=#28d9ed>Attack</color> by <color=#28d9ed>15%</color>. (Stacks up to 3 times)",
+        "2_jp": "スキル使用時、<color=#28d9ed>2</color>ターンの間、自分の<color=#28d9ed>会心発生率</color>を<color=#28d9ed>上昇</color>させ、敵全体にダメージを与える。\\n<color=#28d9ed>童子切安綱</color>を使用するたびに、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>15%</color>上昇する。(最大3回まで累積)",
+        "2_kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>증가</color>시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>15%</color> 증가합니다. (최대 3회 누적)",
+        "2_zh": "使用技能时,自身<color=#28d9ed>暴击率</color>提升<color=#28d9ed>2</color>回合并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,自身<color=#28d9ed>攻击力</color>提升<color=#28d9ed>15%</color>。(最多叠加3次)",
+        "3": "When using this skill, increases own <color=#28d9ed>Critical Chance</color> for <color=#28d9ed>2</color> turns and attacks all enemies. \\nEach time <color=#28d9ed>Dojigiri Yasutsuna</color> is used, increases own <color=#28d9ed>Attack</color> by <color=#28d9ed>15%</color>. (Stacks up to 3 times)",
+        "3_jp": "スキル使用時、<color=#28d9ed>2</color>ターンの間、自分の<color=#28d9ed>会心発生率</color>を<color=#28d9ed>上昇</color>させ、敵全体にダメージを与える。\\n<color=#28d9ed>童子切安綱</color>を使用するたびに、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>15%</color>上昇する。(最大3回まで累積)",
+        "3_kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>증가</color>시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>15%</color> 증가합니다. (최대 3회 누적)",
+        "3_zh": "使用技能时,自身<color=#28d9ed>暴击率</color>提升<color=#28d9ed>2</color>回合并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,自身<color=#28d9ed>攻击力</color>提升<color=#28d9ed>15%</color>。(最多叠加3次)",
+        "4": "When using this skill, increases own <color=#28d9ed>Critical Chance</color> for <color=#28d9ed>2</color> turns and attacks all enemies. \\nEach time <color=#28d9ed>Dojigiri Yasutsuna</color> is used, increases own <color=#28d9ed>Attack</color> by <color=#28d9ed>15%</color>. (Stacks up to 3 times)",
+        "4_jp": "スキル使用時、<color=#28d9ed>2</color>ターンの間、自分の<color=#28d9ed>会心発生率</color>を<color=#28d9ed>上昇</color>させ、敵全体にダメージを与える。\\n<color=#28d9ed>童子切安綱</color>を使用するたびに、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>15%</color>上昇する。(最大3回まで累積)",
+        "4_kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>증가</color>시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>15%</color> 증가합니다. (최대 3회 누적)",
+        "4_zh": "使用技能时,自身<color=#28d9ed>暴击率</color>提升<color=#28d9ed>2</color>回合并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,自身<color=#28d9ed>攻击力</color>提升<color=#28d9ed>15%</color>。(最多叠加3次)",
+        "5": "When using this skill, increases own <color=#28d9ed>Critical Chance</color> for <color=#28d9ed>2</color> turns and attacks all enemies. \\nEach time <color=#28d9ed>Dojigiri Yasutsuna</color> is used, increases own <color=#28d9ed>Attack</color> by <color=#28d9ed>15%</color>. (Stacks up to 3 times)",
+        "5_jp": "スキル使用時、<color=#28d9ed>2</color>ターンの間、自分の<color=#28d9ed>会心発生率</color>を<color=#28d9ed>上昇</color>させ、敵全体にダメージを与える。\\n<color=#28d9ed>童子切安綱</color>を使用するたびに、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>15%</color>上昇する。(最大3回まで累積)",
+        "5_kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>증가</color>시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>15%</color> 증가합니다. (최대 3회 누적)",
+        "5_zh": "使用技能时,自身<color=#28d9ed>暴击率</color>提升<color=#28d9ed>2</color>回合并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,自身<color=#28d9ed>攻击力</color>提升<color=#28d9ed>15%</color>。(最多叠加3次)"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -319,10 +378,11 @@
           "伤害量+15%"
         ]
       },
-      "wgr": 2,
       "cd": "5",
+      "wgr": 2,
       "buff": [
-        "BT_STAT|ST_CRITICAL_RATE"
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_ATK"
       ],
       "debuff": [],
       "offensive": true,
@@ -340,6 +400,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:この攻撃は敵の属性を無視し、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>UPする。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携技能攻击总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: The caster's Skill Chain attacks always have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:この攻撃は敵の属性を無視し、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>UPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携技能攻击总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: The caster's Skill Chain attacks always have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:この攻撃は敵の属性を無視し、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>UPする。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携技能攻击总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: The caster's Skill Chain attacks always have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:この攻撃は敵の属性を無視し、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>UPする。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携技能攻击总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: The caster's Skill Chain attacks always have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:この攻撃は敵の属性を無視し、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>UPする。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携技能攻击总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: The caster's Skill Chain attacks always have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:この攻撃は敵の属性を無視し、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>UPする。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携技能攻击总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -401,17 +483,16 @@
       "wgr": 3,
       "wgr_dual": 1,
       "cd": null,
-      "buff": [
-        "BT_DMG_ELEMENT_SUPERIORITY"
-      ],
+      "buff": [],
       "debuff": [],
-      "dual_buff": [
-        "BT_ACTION_GAUGE"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "dual_debuff": []
     }
   }
 }

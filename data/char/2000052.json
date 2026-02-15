@@ -11,9 +11,6 @@
   "rank": "D",
   "rank_pvp": "D",
   "role": "support",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -25,17 +22,14 @@
       "prio": 1
     }
   },
-  "Chain_Type": "Finish",
   "gift": "Science",
   "VoiceActor": "VA. Stephanie Southerland",
   "VoiceActor_jp": "CV. 長谷川育美",
-  "VoiceActor_kr": "CV.이명호",
+  "VoiceActor_kr": "CV. 이명호",
   "VoiceActor_zh": "CV. 长谷川育美",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -45,15 +39,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 공격력 +5%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军攻击力+5%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+5% Ally Team Attack\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方の攻撃力+5%\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 공격력 +5%\n입장 시 AP +25",
@@ -72,6 +63,28 @@
       "true_desc_jp": "敵単体を攻撃する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>1</color>ターンの間<color=#28d9ed>スタン</color>状態にする。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
       "true_desc_kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
       "true_desc_zh": "攻击一名敌人。\\n若目标处于<color=#28d9ed>感电</color>状态,有<color=#28d9ed>50%</color>的几率使其陷入<color=#28d9ed>眩晕</color>,持续<color=#28d9ed>1</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>50%</color> chance to <color=#28d9ed>Stun</color> them for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "1_jp": "敵単体を攻撃する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>1</color>ターンの間<color=#28d9ed>スタン</color>状態にする。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "1_kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "1_zh": "攻击一名敌人。\\n若目标处于<color=#28d9ed>感电</color>状态,有<color=#28d9ed>50%</color>的几率使其陷入<color=#28d9ed>眩晕</color>,持续<color=#28d9ed>1</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "2": "Attacks an enemy.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>50%</color> chance to <color=#28d9ed>Stun</color> them for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "2_jp": "敵単体を攻撃する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>1</color>ターンの間<color=#28d9ed>スタン</color>状態にする。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "2_kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "2_zh": "攻击一名敌人。\\n若目标处于<color=#28d9ed>感电</color>状态,有<color=#28d9ed>50%</color>的几率使其陷入<color=#28d9ed>眩晕</color>,持续<color=#28d9ed>1</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "3": "Attacks an enemy.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>60%</color> chance to <color=#28d9ed>Stun</color> them for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "3_jp": "敵単体を攻撃する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>1</color>ターンの間<color=#28d9ed>スタン</color>状態にする。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "3_kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "3_zh": "攻击一名敌人。\\n若目标处于<color=#28d9ed>感电</color>状态,有<color=#28d9ed>60%</color>的几率使其陷入<color=#28d9ed>眩晕</color>,持续<color=#28d9ed>1</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "4": "Attacks an enemy.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>60%</color> chance to <color=#28d9ed>Stun</color> them for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "4_jp": "敵単体を攻撃する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>1</color>ターンの間<color=#28d9ed>スタン</color>状態にする。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "4_kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "4_zh": "攻击一名敌人。\\n若目标处于<color=#28d9ed>感电</color>状态,有<color=#28d9ed>60%</color>的几率使其陷入<color=#28d9ed>眩晕</color>,持续<color=#28d9ed>1</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "5": "Attacks an enemy.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>70%</color> chance to <color=#28d9ed>Stun</color> them for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "5_jp": "敵単体を攻撃する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>1</color>ターンの間<color=#28d9ed>スタン</color>状態にする。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "5_kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "5_zh": "攻击一名敌人。\\n若目标处于<color=#28d9ed>感电</color>状态,有<color=#28d9ed>70%</color>的几率使其陷入<color=#28d9ed>眩晕</color>,持续<color=#28d9ed>1</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -132,7 +145,9 @@
       },
       "wgr": 1,
       "cd": null,
-      "buff": [],
+      "buff": [
+        "BT_IMMUNE"
+      ],
       "debuff": [
         "BT_STUN"
       ],
@@ -148,9 +163,31 @@
       "name_kr": "화력 지원 : 호밍 레이저",
       "name_zh": "火力支援:导航镭射",
       "true_desc": "Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Electrocution</color> for <color=#28d9ed>2</color> turns.\\nAfter attacking, increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
-      "true_desc_jp": "敵全体を攻撃し、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>感電</color>を<color=#28d9ed>2</color>ターン付与する。\\n攻撃後、自身の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1</color>ターンの間上昇させる。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+      "true_desc_jp": "敵全体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>感電</color>を<color=#28d9ed>2</color>ターン付与する。\\n攻撃後、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1</color>ターンの間上昇させる。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
       "true_desc_kr": "적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>감전</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n공격 후, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
       "true_desc_zh": "攻击全体敌人,有<color=#28d9ed>80%</color>几率对目标施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n攻击后,自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Electrocution</color> for <color=#28d9ed>2</color> turns.\\nAfter attacking, increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "1_jp": "敵全体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>感電</color>を<color=#28d9ed>2</color>ターン付与する。\\n攻撃後、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1</color>ターンの間上昇させる。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "1_kr": "적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>감전</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n공격 후, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "1_zh": "攻击全体敌人,有<color=#28d9ed>80%</color>几率对目标施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n攻击后,自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "2": "Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Electrocution</color> for <color=#28d9ed>2</color> turns.\\nAfter attacking, increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "2_jp": "敵全体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>感電</color>を<color=#28d9ed>2</color>ターン付与する。\\n攻撃後、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1</color>ターンの間上昇させる。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "2_kr": "적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>감전</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n공격 후, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "2_zh": "攻击全体敌人,有<color=#28d9ed>80%</color>几率对目标施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n攻击后,自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "3": "Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Electrocution</color> for <color=#28d9ed>2</color> turns.\\nAfter attacking, increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "3_jp": "敵全体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>感電</color>を<color=#28d9ed>2</color>ターン付与する。\\n攻撃後、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "3_kr": "적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>감전</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n공격 후, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "3_zh": "攻击全体敌人,有<color=#28d9ed>80%</color>几率对目标施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n攻击后,自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "4": "Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Electrocution</color> for <color=#28d9ed>2</color> turns.\\nAfter attacking, increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "4_jp": "敵全体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>感電</color>を<color=#28d9ed>2</color>ターン付与する。\\n攻撃後、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "4_kr": "적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>감전</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n공격 후, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "4_zh": "攻击全体敌人,有<color=#28d9ed>80%</color>几率对目标施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n攻击后,自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "5": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Electrocution</color> for <color=#28d9ed>2</color> turns.\\nAfter attacking, increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Tower of Transcendence.",
+        "5_jp": "敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象に<color=#28d9ed>感電</color>を<color=#28d9ed>2</color>ターン付与する。\\n攻撃後、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "5_kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>감전</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n공격 후, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "5_zh": "攻击全体敌人,有<color=#28d9ed>100%</color>几率对目标施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n攻击后,自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -213,8 +250,8 @@
           "伤害量+10%"
         ]
       },
-      "wgr": 1,
       "cd": "4",
+      "wgr": 1,
       "buff": [
         "BT_STAT|ST_ATK",
         "BT_STAT|ST_COUNTER_RATE"
@@ -222,6 +259,8 @@
       "debuff": [
         "BT_DOT_LIGHTNING"
       ],
+      "offensive": true,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage\\nIncreases Counterattack chance",
@@ -253,9 +292,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "multi"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "5203",
@@ -266,9 +303,31 @@
       "name_kr": "애드온 : 런처 스트라이크",
       "name_zh": "附加装置:炮战强袭",
       "true_desc": "Attacks all enemies.\\nFor each damaged target, increases all allies' <color=#28d9ed>Priority</color> by <color=#28d9ed>2.5%</color>.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>80%</color> chance to apply <color=#28d9ed>Electrocution</color> again for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Skyward Tower.",
-      "true_desc_jp": "敵全体を攻撃する。\\nダメージを与えた対象1体ごとに、味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>2.5%</color>増加する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>80%</color>の確率でさらに<color=#28d9ed>2</color>ターンの間<color=#28d9ed>感電</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+      "true_desc_jp": "敵全体にダメージを与える。\\nダメージを与えた対象1体ごとに、味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>2.5%</color>増加する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>80%</color>の確率でさらに<color=#28d9ed>2</color>ターンの間<color=#28d9ed>感電</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
       "true_desc_kr": "적 전체를 공격합니다.\\n피해를 준 대상마다 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>2.5%</color> 증가합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안  <color=#28d9ed>감전</color>을 추가로 부여합니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
       "true_desc_zh": "攻击全体敌人。\\n每击中一个目标,己方全体<color=#28d9ed>行动值</color>增加<color=#28d9ed>2.5%</color>。\\n若目标处于<color=#28d9ed>感电</color>状态,则有<color=#28d9ed>80%</color>几率再次施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies.\\nFor each damaged target, increases all allies' <color=#28d9ed>Priority</color> by <color=#28d9ed>2.5%</color>.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>80%</color> chance to apply <color=#28d9ed>Electrocution</color> again for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Skyward Tower.",
+        "1_jp": "敵全体にダメージを与える。\\nダメージを与えた対象1体ごとに、味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>2.5%</color>増加する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>80%</color>の確率でさらに<color=#28d9ed>2</color>ターンの間<color=#28d9ed>感電</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "1_kr": "적 전체를 공격합니다.\\n피해를 준 대상마다 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>2.5%</color> 증가합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안  <color=#28d9ed>감전</color>을 추가로 부여합니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "1_zh": "攻击全体敌人。\\n每击中一个目标,己方全体<color=#28d9ed>行动值</color>增加<color=#28d9ed>2.5%</color>。\\n若目标处于<color=#28d9ed>感电</color>状态,则有<color=#28d9ed>80%</color>几率再次施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "2": "Attacks all enemies.\\nFor each damaged target, increases all allies' <color=#28d9ed>Priority</color> by <color=#28d9ed>2.5%</color>.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>80%</color> chance to apply <color=#28d9ed>Electrocution</color> again for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Skyward Tower.",
+        "2_jp": "敵全体にダメージを与える。\\nダメージを与えた対象1体ごとに、味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>2.5%</color>増加する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>80%</color>の確率でさらに<color=#28d9ed>2</color>ターンの間<color=#28d9ed>感電</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "2_kr": "적 전체를 공격합니다.\\n피해를 준 대상마다 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>2.5%</color> 증가합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안  <color=#28d9ed>감전</color>을 추가로 부여합니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "2_zh": "攻击全体敌人。\\n每击中一个目标,己方全体<color=#28d9ed>行动值</color>增加<color=#28d9ed>2.5%</color>。\\n若目标处于<color=#28d9ed>感电</color>状态,则有<color=#28d9ed>80%</color>几率再次施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "3": "Attacks all enemies.\\nFor each damaged target, increases all allies' <color=#28d9ed>Priority</color> by <color=#28d9ed>2.5%</color>.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>80%</color> chance to apply <color=#28d9ed>Electrocution</color> again for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Skyward Tower.",
+        "3_jp": "敵全体にダメージを与える。\\nダメージを与えた対象1体ごとに、味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>2.5%</color>増加する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>80%</color>の確率でさらに<color=#28d9ed>2</color>ターンの間<color=#28d9ed>感電</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "3_kr": "적 전체를 공격합니다.\\n피해를 준 대상마다 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>2.5%</color> 증가합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안  <color=#28d9ed>감전</color>을 추가로 부여합니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "3_zh": "攻击全体敌人。\\n每击中一个目标,己方全体<color=#28d9ed>行动值</color>增加<color=#28d9ed>2.5%</color>。\\n若目标处于<color=#28d9ed>感电</color>状态,则有<color=#28d9ed>80%</color>几率再次施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "4": "Attacks all enemies.\\nFor each damaged target, increases all allies' <color=#28d9ed>Priority</color> by <color=#28d9ed>2.5%</color>.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>100%</color> chance to apply <color=#28d9ed>Electrocution</color> again for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Skyward Tower.",
+        "4_jp": "敵全体にダメージを与える。\\nダメージを与えた対象1体ごとに、味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>2.5%</color>増加する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>100%</color>の確率でさらに<color=#28d9ed>2</color>ターンの間<color=#28d9ed>感電</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "4_kr": "적 전체를 공격합니다.\\n피해를 준 대상마다 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>2.5%</color> 증가합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안  <color=#28d9ed>감전</color>을 추가로 부여합니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "4_zh": "攻击全体敌人。\\n每击中一个目标,己方全体<color=#28d9ed>行动值</color>增加<color=#28d9ed>2.5%</color>。\\n若目标处于<color=#28d9ed>感电</color>状态,则有<color=#28d9ed>100%</color>几率再次施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。",
+        "5": "Attacks all enemies.\\nFor each damaged target, increases all allies' <color=#28d9ed>Priority</color> by <color=#28d9ed>5%</color>.\\nIf the target is <color=#28d9ed>Electrified</color>, has a <color=#28d9ed>100%</color> chance to apply <color=#28d9ed>Electrocution</color> again for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Guardian of the Tower</color>: Increases damage dealt in Skyward Tower.",
+        "5_jp": "敵全体にダメージを与える。\\nダメージを与えた対象1体ごとに、味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>5%</color>増加する。\\n対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>100%</color>の確率でさらに<color=#28d9ed>2</color>ターンの間<color=#28d9ed>感電</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加。",
+        "5_kr": "적 전체를 공격합니다.\\n피해를 준 대상마다 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>5%</color> 증가합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안  <color=#28d9ed>감전</color>을 추가로 부여합니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.",
+        "5_zh": "攻击全体敌人。\\n每击中一个目标,己方全体<color=#28d9ed>行动值</color>增加<color=#28d9ed>5%</color>。\\n若目标处于<color=#28d9ed>感电</color>状态,则有<color=#28d9ed>100%</color>几率再次施加<color=#28d9ed>感电</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>塔之管理员</color>:在飞天之塔中造成的伤害增加。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown",
@@ -331,8 +390,8 @@
           "伤害量+10%"
         ]
       },
-      "wgr": 2,
       "cd": "5",
+      "wgr": 2,
       "buff": [
         "BT_ACTION_GAUGE"
       ],
@@ -351,9 +410,31 @@
       "name_kr": "체인 패시브",
       "name_zh": "连携被动",
       "true_desc": "<color=#ffd732>Chain Finish</color>: After attacking, grants all allies <color=#28d9ed>Exploit Weakness</color> for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Assist</color>: If the target is <color=#28d9ed>Shocked</color>, has a <color=#28d9ed>70%</color> chance to <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Keeper of the Tower</color>: Deals increased damage in the Skyward Tower (applies to Chain Finish & Assist).",
-      "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2</color>ターン付与します。\\n\\n<color=#ffd732>連携</color>:対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>1</color>ターンの<color=#28d9ed>スタン</color>を付与します。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加します(チェーン効果(トドメ)/連携に適用)。",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2</color>ターン付与する。\\n\\n<color=#ffd732>連携</color>:対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>1</color>ターンの<color=#28d9ed>スタン</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加する(チェーン効果(トドメ)/連携に適用)。",
       "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.(체인 피니시 및 협공)",
       "true_desc_zh": "<color=#ffd732>连锁终结</color>:攻击后,为我方全体赋予<color=#28d9ed>弱点攻略</color><color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>协同</color>:目标处于<color=#28d9ed>感电</color>时,有<color=#28d9ed>70%</color>几率赋予<color=#28d9ed>1</color>回合<color=#28d9ed>眩晕</color>。\\n\\n<color=#ffd732>塔之管理者</color>:在飞天之塔中造成的伤害提高(适用于连锁终结与协同)。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish</color>: After attacking, grants all allies <color=#28d9ed>Exploit Weakness</color> for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Assist</color>: If the target is <color=#28d9ed>Shocked</color>, has a <color=#28d9ed>70%</color> chance to <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Keeper of the Tower</color>: Deals increased damage in the Skyward Tower (applies to Chain Finish & Assist).",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2</color>ターン付与する。\\n\\n<color=#ffd732>連携</color>:対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>1</color>ターンの<color=#28d9ed>スタン</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加する(チェーン効果(トドメ)/連携に適用)。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.(체인 피니시 및 협공)",
+        "1_zh": "<color=#ffd732>连锁终结</color>:攻击后,为我方全体赋予<color=#28d9ed>弱点攻略</color><color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>协同</color>:目标处于<color=#28d9ed>感电</color>时,有<color=#28d9ed>70%</color>几率赋予<color=#28d9ed>1</color>回合<color=#28d9ed>眩晕</color>。\\n\\n<color=#ffd732>塔之管理者</color>:在飞天之塔中造成的伤害提高(适用于连锁终结与协同)。",
+        "2": "<color=#ffd732>Chain Finish</color>: After attacking, grants all allies <color=#28d9ed>Exploit Weakness</color> for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Assist</color>: If the target is <color=#28d9ed>Shocked</color>, has a <color=#28d9ed>70%</color> chance to <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Keeper of the Tower</color>: Deals increased damage in the Skyward Tower (applies to Chain Finish & Assist).",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2</color>ターン付与する。\\n\\n<color=#ffd732>連携</color>:対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>1</color>ターンの<color=#28d9ed>スタン</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加する(チェーン効果(トドメ)/連携に適用)。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.(체인 피니시 및 협공)",
+        "2_zh": "<color=#ffd732>连锁终结</color>:攻击后,为我方全体赋予<color=#28d9ed>弱点攻略</color><color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>协同</color>:目标处于<color=#28d9ed>感电</color>时,有<color=#28d9ed>70%</color>几率赋予<color=#28d9ed>1</color>回合<color=#28d9ed>眩晕</color>。\\n\\n<color=#ffd732>塔之管理者</color>:在飞天之塔中造成的伤害提高(适用于连锁终结与协同)。",
+        "3": "<color=#ffd732>Chain Finish</color>: After attacking, grants all allies <color=#28d9ed>Exploit Weakness</color> for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Assist</color>: If the target is <color=#28d9ed>Shocked</color>, has a <color=#28d9ed>70%</color> chance to <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Keeper of the Tower</color>: Deals increased damage in the Skyward Tower (applies to Chain Finish & Assist).",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2</color>ターン付与する。\\n\\n<color=#ffd732>連携</color>:対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>1</color>ターンの<color=#28d9ed>スタン</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加する(チェーン効果(トドメ)/連携に適用)。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.(체인 피니시 및 협공)",
+        "3_zh": "<color=#ffd732>连锁终结</color>:攻击后,为我方全体赋予<color=#28d9ed>弱点攻略</color><color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>协同</color>:目标处于<color=#28d9ed>感电</color>时,有<color=#28d9ed>70%</color>几率赋予<color=#28d9ed>1</color>回合<color=#28d9ed>眩晕</color>。\\n\\n<color=#ffd732>塔之管理者</color>:在飞天之塔中造成的伤害提高(适用于连锁终结与协同)。",
+        "4": "<color=#ffd732>Chain Finish</color>: After attacking, grants all allies <color=#28d9ed>Exploit Weakness</color> for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Assist</color>: If the target is <color=#28d9ed>Shocked</color>, has a <color=#28d9ed>70%</color> chance to <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Keeper of the Tower</color>: Deals increased damage in the Skyward Tower (applies to Chain Finish & Assist).",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2</color>ターン付与する。\\n\\n<color=#ffd732>連携</color>:対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>1</color>ターンの<color=#28d9ed>スタン</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加する(チェーン効果(トドメ)/連携に適用)。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.(체인 피니시 및 협공)",
+        "4_zh": "<color=#ffd732>连锁终结</color>:攻击后,为我方全体赋予<color=#28d9ed>弱点攻略</color><color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>协同</color>:目标处于<color=#28d9ed>感电</color>时,有<color=#28d9ed>70%</color>几率赋予<color=#28d9ed>1</color>回合<color=#28d9ed>眩晕</color>。\\n\\n<color=#ffd732>塔之管理者</color>:在飞天之塔中造成的伤害提高(适用于连锁终结与协同)。",
+        "5": "<color=#ffd732>Chain Finish</color>: After attacking, grants all allies <color=#28d9ed>Exploit Weakness</color> for <color=#28d9ed>2</color> turns.\\n\\n<color=#ffd732>Assist</color>: If the target is <color=#28d9ed>Shocked</color>, has a <color=#28d9ed>70%</color> chance to <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turns.\\n\\n<color=#ffd732>Keeper of the Tower</color>: Deals increased damage in the Skyward Tower (applies to Chain Finish & Assist).",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2</color>ターン付与する。\\n\\n<color=#ffd732>連携</color>:対象が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>1</color>ターンの<color=#28d9ed>スタン</color>を付与する。\\n\\n<color=#ffd732>塔の管理者</color>:飛天の塔で与えるダメージが増加する(チェーン効果(トドメ)/連携に適用)。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상이 <color=#28d9ed>감전</color> 상태라면 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안  <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n\\n<color=#ffd732>탑의 관리자</color> : 비천의 탑에서 피해량이 증가합니다.(체인 피니시 및 협공)",
+        "5_zh": "<color=#ffd732>连锁终结</color>:攻击后,为我方全体赋予<color=#28d9ed>弱点攻略</color><color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>协同</color>:目标处于<color=#28d9ed>感电</color>时,有<color=#28d9ed>70%</color>几率赋予<color=#28d9ed>1</color>回合<color=#28d9ed>眩晕</color>。\\n\\n<color=#ffd732>塔之管理者</color>:在飞天之塔中造成的伤害提高(适用于连锁终结与协同)。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -419,13 +500,14 @@
         "BT_DMG_TARGET_BREAK"
       ],
       "debuff": [],
-      "dual_debuff": [
-        "BT_STUN"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": [
+        "BT_STUN"
+      ]
     }
   }
 }

@@ -728,6 +728,25 @@ class CharacterExtractor:
             if descriptions_zh:
                 skill_data['true_desc_zh'] = '\n'.join(descriptions_zh)
 
+            # Extract true_desc_levels (all 5 levels)
+            # DescID has exactly 5 comma-separated refs: positions 0-4 = levels 1-5
+            if len(desc_ids) == 5:
+                true_desc_levels = {}
+                for level_idx, desc_ref in enumerate(desc_ids):
+                    level_num = str(level_idx + 1)
+                    desc_texts = self._get_skill_text(desc_ref)
+                    if desc_texts:
+                        true_desc_levels[level_num] = desc_texts.get('English', '') or ''
+                        true_desc_levels[f"{level_num}_jp"] = desc_texts.get('Japanese', '') or ''
+                        true_desc_levels[f"{level_num}_kr"] = desc_texts.get('Korean', '') or ''
+                        true_desc_levels[f"{level_num}_zh"] = desc_texts.get('China_Simplified', '') or ''
+                    else:
+                        true_desc_levels[level_num] = ''
+                        true_desc_levels[f"{level_num}_jp"] = ''
+                        true_desc_levels[f"{level_num}_kr"] = ''
+                        true_desc_levels[f"{level_num}_zh"] = ''
+                skill_data['true_desc_levels'] = true_desc_levels
+
         # Get enhancement levels (2-5)
         skill_data['enhancement'] = self._get_enhancement_levels(name_id)
 
@@ -1379,18 +1398,31 @@ class CharacterExtractor:
                     self.char_data['skills'][burst_base_skill]['debuff'] = existing_debuffs
 
     def _load_buff_for_placeholder(self, buff_id: str, level: str = "1") -> dict:
-        """Load buff data for placeholder replacement (always use level 1 for descriptions)"""
-        # Use BuffExtractor's all_buffs
+        """Load buff data for placeholder replacement.
+        Tries exact level first, then falls back to closest available level."""
         all_buffs = self.buff_extractor.all_buffs
 
-        # Find buff by BuffID and Level
+        # Find buff by BuffID and exact Level
         for buff in all_buffs:
             if buff.get('BuffID') == buff_id and buff.get('Level') == level:
                 return buff
 
+        # Fallback: find closest available level (try descending from requested level)
+        if level != "1":
+            target = int(level)
+            # Try lower levels first, then higher
+            for fallback_lvl in range(target - 1, 0, -1):
+                for buff in all_buffs:
+                    if buff.get('BuffID') == buff_id and buff.get('Level') == str(fallback_lvl):
+                        return buff
+            for fallback_lvl in range(target + 1, 6):
+                for buff in all_buffs:
+                    if buff.get('BuffID') == buff_id and buff.get('Level') == str(fallback_lvl):
+                        return buff
+
         return {}
 
-    def _replace_buff_tags(self, desc_txt: str, lang: str = "en") -> str:
+    def _replace_buff_tags(self, desc_txt: str, lang: str = "en", buff_level: str = "1") -> str:
         """
         Replace [Buff_C_ID], [Buff_T_ID], [Buff_V_ID] with values.
         - [Buff_C_xxx]: CreateRate (application rate in %)
@@ -1400,6 +1432,7 @@ class CharacterExtractor:
         Args:
             desc_txt: Description text with placeholders
             lang: Language ("en", "jp", "kr", "zh") - for English, remove negative signs
+            buff_level: Buff level to use for placeholder lookup (matches skill level)
         """
         if not isinstance(desc_txt, str):
             return desc_txt
@@ -1409,7 +1442,7 @@ class CharacterExtractor:
             buff_id = match.group(2)    # buff ID
 
             # Load buff data
-            data = self._load_buff_for_placeholder(buff_id)
+            data = self._load_buff_for_placeholder(buff_id, level=buff_level)
             if not data:
                 return "?"
 
@@ -1494,6 +1527,28 @@ class CharacterExtractor:
 
                 # Replace tags IN PLACE
                 skill[field_name] = self._replace_buff_tags(desc_text, lang=lang)
+
+            # Process true_desc_levels dict
+            levels = skill.get('true_desc_levels')
+            if levels:
+                for key in list(levels.keys()):
+                    val = levels[key]
+                    if not val or "[" not in val:
+                        continue
+                    # Determine language and level number from key
+                    if key.endswith("_jp"):
+                        lvl_lang = "jp"
+                        lvl_num = key.replace("_jp", "")
+                    elif key.endswith("_kr"):
+                        lvl_lang = "kr"
+                        lvl_num = key.replace("_kr", "")
+                    elif key.endswith("_zh"):
+                        lvl_lang = "zh"
+                        lvl_num = key.replace("_zh", "")
+                    else:
+                        lvl_lang = "en"
+                        lvl_num = key
+                    levels[key] = self._replace_buff_tags(val, lang=lvl_lang, buff_level=lvl_num)
 
 
 def main():

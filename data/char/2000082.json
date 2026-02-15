@@ -27,13 +27,11 @@
   "video": "lyNQ73PBPZg",
   "VoiceActor": "VA. Risa Mei",
   "VoiceActor_jp": "CV. 指出毬亞",
-  "VoiceActor_kr": "CV. Risa Mei",
+  "VoiceActor_kr": "CV. 김채린",
   "VoiceActor_zh": "CV. 指出毬亚",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -43,15 +41,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 치명 확률 +3%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军暴击率+3%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+3% Ally Team Critical Hit Chance\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方の会心率+3%\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 치명 확률 +3%\n입장 시 AP +25",
@@ -70,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは自分に強化効果がある場合、ダメージがUPする。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 부여합니다.\\n이 스킬은 자신이 강화 효과 보유 시 피해가 증가합니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n自身附带强化效果时,该技能伤害量提升。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy, and has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Shocked</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when the caster is granted a buff.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは自分に強化効果がある場合、ダメージがUPする。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 부여합니다.\\n이 스킬은 자신이 강화 효과 보유 시 피해가 증가합니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n自身附带强化效果时,该技能伤害量提升。",
+        "2": "Attacks an enemy, and has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Shocked</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when the caster is granted a buff.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは自分に強化効果がある場合、ダメージがUPする。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 부여합니다.\\n이 스킬은 자신이 강화 효과 보유 시 피해가 증가합니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n自身附带强化效果时,该技能伤害量提升。",
+        "3": "Attacks an enemy, and has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Shocked</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when the caster is granted a buff.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは自分に強化効果がある場合、ダメージがUPする。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 부여합니다.\\n이 스킬은 자신이 강화 효과 보유 시 피해가 증가합니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n自身附带强化效果时,该技能伤害量提升。",
+        "4": "Attacks an enemy, and has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Shocked</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when the caster is granted a buff.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは自分に強化効果がある場合、ダメージがUPする。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 부여합니다.\\n이 스킬은 자신이 강화 효과 보유 시 피해가 증가합니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n自身附带强化效果时,该技能伤害量提升。",
+        "5": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Shocked</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when the caster is granted a buff.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは自分に強化効果がある場合、ダメージがUPする。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 부여합니다.\\n이 스킬은 자신이 강화 효과 보유 시 피해가 증가합니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n自身附带强化效果时,该技能伤害量提升。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -133,6 +150,8 @@
         "BT_DOT_LIGHTNING",
         "BT_EXTEND_DEBUFF"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Shocked Chance +50%\\nInflicts an additional Shocked for 2 turns",
@@ -164,9 +183,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "8202",
@@ -180,6 +197,28 @@
       "true_desc_jp": "(発動効果)<color=#28d9ed>スピード型</color>の味方が攻撃時、スピードが最も高い敵単体に追加攻撃を与える。攻撃後、自分の行動ゲージが<color=#28d9ed>25%</color>UPし、<color=#28d9ed>魔法型</color>と<color=#28d9ed>スピード型</color>の味方の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。",
       "true_desc_kr": "(발동 효과) 아군의 <color=#28d9ed>속도형</color> 캐릭터가 공격했을 때 속도가 가장 높은 적에게 추가 공격을 합니다. 공격 후 자신의 행동 게이지가 <color=#28d9ed>25%</color> 증가하며, 아군의 <color=#28d9ed>마법형</color>과 <color=#28d9ed>속도형</color> 캐릭터의 효과 적중을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
       "true_desc_zh": "(触发效果)友军中<color=#28d9ed>速度型</color>角色攻击时,对速度最高的敌人发动额外攻击。攻击后,自身行动值提升<color=#28d9ed>25%</color>,并使友军中<color=#28d9ed>魔法型</color>和<color=#28d9ed>速度型</color>角色的效果命中提升,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "(Triggered Effect) When an ally <color=#28d9ed>Ranger</color> attacks, activates an additional attack on the enemy with the highest Speed. After attacking, increases Priority of the caster by <color=#28d9ed>25%</color>, and grants increased Effectiveness to ally <color=#28d9ed>Mages</color> and <color=#28d9ed>Rangers</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "(発動効果)<color=#28d9ed>スピード型</color>の味方が攻撃時、スピードが最も高い敵単体に追加攻撃を与える。攻撃後、自分の行動ゲージが<color=#28d9ed>25%</color>UPし、<color=#28d9ed>魔法型</color>と<color=#28d9ed>スピード型</color>の味方の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "1_kr": "(발동 효과) 아군의 <color=#28d9ed>속도형</color> 캐릭터가 공격했을 때 속도가 가장 높은 적에게 추가 공격을 합니다. 공격 후 자신의 행동 게이지가 <color=#28d9ed>25%</color> 증가하며, 아군의 <color=#28d9ed>마법형</color>과 <color=#28d9ed>속도형</color> 캐릭터의 효과 적중을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "1_zh": "(触发效果)友军中<color=#28d9ed>速度型</color>角色攻击时,对速度最高的敌人发动额外攻击。攻击后,自身行动值提升<color=#28d9ed>25%</color>,并使友军中<color=#28d9ed>魔法型</color>和<color=#28d9ed>速度型</color>角色的效果命中提升,持续<color=#28d9ed>2回合</color>。",
+        "2": "(Triggered Effect) When an ally <color=#28d9ed>Ranger</color> attacks, activates an additional attack on the enemy with the highest Speed. After attacking, increases Priority of the caster by <color=#28d9ed>25%</color>, and grants increased Effectiveness to ally <color=#28d9ed>Mages</color> and <color=#28d9ed>Rangers</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "(発動効果)<color=#28d9ed>スピード型</color>の味方が攻撃時、スピードが最も高い敵単体に追加攻撃を与える。攻撃後、自分の行動ゲージが<color=#28d9ed>25%</color>UPし、<color=#28d9ed>魔法型</color>と<color=#28d9ed>スピード型</color>の味方の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "2_kr": "(발동 효과) 아군의 <color=#28d9ed>속도형</color> 캐릭터가 공격했을 때 속도가 가장 높은 적에게 추가 공격을 합니다. 공격 후 자신의 행동 게이지가 <color=#28d9ed>25%</color> 증가하며, 아군의 <color=#28d9ed>마법형</color>과 <color=#28d9ed>속도형</color> 캐릭터의 효과 적중을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "2_zh": "(触发效果)友军中<color=#28d9ed>速度型</color>角色攻击时,对速度最高的敌人发动额外攻击。攻击后,自身行动值提升<color=#28d9ed>25%</color>,并使友军中<color=#28d9ed>魔法型</color>和<color=#28d9ed>速度型</color>角色的效果命中提升,持续<color=#28d9ed>2回合</color>。",
+        "3": "(Triggered Effect) When an ally <color=#28d9ed>Ranger</color> attacks, activates an additional attack on the enemy with the highest Speed. After attacking, increases Priority of the caster by <color=#28d9ed>25%</color>, and grants increased Effectiveness to ally <color=#28d9ed>Mages</color> and <color=#28d9ed>Rangers</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "(発動効果)<color=#28d9ed>スピード型</color>の味方が攻撃時、スピードが最も高い敵単体に追加攻撃を与える。攻撃後、自分の行動ゲージが<color=#28d9ed>25%</color>UPし、<color=#28d9ed>魔法型</color>と<color=#28d9ed>スピード型</color>の味方の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "3_kr": "(발동 효과) 아군의 <color=#28d9ed>속도형</color> 캐릭터가 공격했을 때 속도가 가장 높은 적에게 추가 공격을 합니다. 공격 후 자신의 행동 게이지가 <color=#28d9ed>25%</color> 증가하며, 아군의 <color=#28d9ed>마법형</color>과 <color=#28d9ed>속도형</color> 캐릭터의 효과 적중을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "3_zh": "(触发效果)友军中<color=#28d9ed>速度型</color>角色攻击时,对速度最高的敌人发动额外攻击。攻击后,自身行动值提升<color=#28d9ed>25%</color>,并使友军中<color=#28d9ed>魔法型</color>和<color=#28d9ed>速度型</color>角色的效果命中提升,持续<color=#28d9ed>2回合</color>。",
+        "4": "(Triggered Effect) When an ally <color=#28d9ed>Ranger</color> attacks, activates an additional attack on the enemy with the highest Speed. After attacking, increases Priority of the caster by <color=#28d9ed>40%</color>, and grants increased Effectiveness to ally <color=#28d9ed>Mages</color> and <color=#28d9ed>Rangers</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "(発動効果)<color=#28d9ed>スピード型</color>の味方が攻撃時、スピードが最も高い敵単体に追加攻撃を与える。攻撃後、自分の行動ゲージが<color=#28d9ed>40%</color>UPし、<color=#28d9ed>魔法型</color>と<color=#28d9ed>スピード型</color>の味方の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "4_kr": "(발동 효과) 아군의 <color=#28d9ed>속도형</color> 캐릭터가 공격했을 때 속도가 가장 높은 적에게 추가 공격을 합니다. 공격 후 자신의 행동 게이지가 <color=#28d9ed>40%</color> 증가하며, 아군의 <color=#28d9ed>마법형</color>과 <color=#28d9ed>속도형</color> 캐릭터의 효과 적중을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "4_zh": "(触发效果)友军中<color=#28d9ed>速度型</color>角色攻击时,对速度最高的敌人发动额外攻击。攻击后,自身行动值提升<color=#28d9ed>40%</color>,并使友军中<color=#28d9ed>魔法型</color>和<color=#28d9ed>速度型</color>角色的效果命中提升,持续<color=#28d9ed>2回合</color>。",
+        "5": "(Triggered Effect) When an ally <color=#28d9ed>Ranger</color> attacks, activates an additional attack on the enemy with the highest Speed. After attacking, increases Priority of the caster by <color=#28d9ed>40%</color>, and grants increased Effectiveness to ally <color=#28d9ed>Mages</color> and <color=#28d9ed>Rangers</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "(発動効果)<color=#28d9ed>スピード型</color>の味方が攻撃時、スピードが最も高い敵単体に追加攻撃を与える。攻撃後、自分の行動ゲージが<color=#28d9ed>40%</color>UPし、<color=#28d9ed>魔法型</color>と<color=#28d9ed>スピード型</color>の味方の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "5_kr": "(발동 효과) 아군의 <color=#28d9ed>속도형</color> 캐릭터가 공격했을 때 속도가 가장 높은 적에게 추가 공격을 합니다. 공격 후 자신의 행동 게이지가 <color=#28d9ed>40%</color> 증가하며, 아군의 <color=#28d9ed>마법형</color>과 <color=#28d9ed>속도형</color> 캐릭터의 효과 적중을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "5_zh": "(触发效果)友军中<color=#28d9ed>速度型</color>角色攻击时,对速度最高的敌人发动额外攻击。攻击后,自身行动值提升<color=#28d9ed>40%</color>,并使友军中<color=#28d9ed>魔法型</color>和<color=#28d9ed>速度型</color>角色的效果命中提升,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -234,11 +273,10 @@
           "伤害量+15%"
         ]
       },
-      "wgr": 1,
       "cd": "4",
+      "wgr": 1,
       "buff": [
         "BT_ACTION_GAUGE",
-        "BT_EXTRA_ATTACK_ON_TURN_END",
         "BT_STAT|ST_BUFF_CHANCE"
       ],
       "debuff": [],
@@ -257,6 +295,28 @@
       "true_desc_jp": "敵全体に感電1個を2ターンの間付与し、ダメージを与える。この攻撃は対象の弱体効果の数に応じてダメージがUPする。このスキルは有利属性の攻撃判定になる。",
       "true_desc_kr": "적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 1회 부여하고 공격합니다. 이 공격은 대상의 약화 효과가 많을수록 피해가 증가합니다. 이 스킬은 항상 유리한 상성으로 적용됩니다.",
       "true_desc_zh": "对全体敌人造成1次<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>,并攻击。目标附带的弱化效果越多,则该攻击的伤害越高。该技能总是以优势属性施展。",
+      "true_desc_levels": {
+        "1": "Inflicts <color=#28d9ed>Shocked</color> once on all enemies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. Damage dealt increases proportionally to the number of debuffs inflicted on the target. This skill always has elemental advantage.",
+        "1_jp": "敵全体に感電1個を2ターンの間付与し、ダメージを与える。この攻撃は対象の弱体効果の数に応じてダメージがUPする。このスキルは有利属性の攻撃判定になる。",
+        "1_kr": "적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 1회 부여하고 공격합니다. 이 공격은 대상의 약화 효과가 많을수록 피해가 증가합니다. 이 스킬은 항상 유리한 상성으로 적용됩니다.",
+        "1_zh": "对全体敌人造成1次<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>,并攻击。目标附带的弱化效果越多,则该攻击的伤害越高。该技能总是以优势属性施展。",
+        "2": "Inflicts <color=#28d9ed>Shocked</color> once on all enemies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. Damage dealt increases proportionally to the number of debuffs inflicted on the target. This skill always has elemental advantage.",
+        "2_jp": "敵全体に感電1個を2ターンの間付与し、ダメージを与える。この攻撃は対象の弱体効果の数に応じてダメージがUPする。このスキルは有利属性の攻撃判定になる。",
+        "2_kr": "적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 1회 부여하고 공격합니다. 이 공격은 대상의 약화 효과가 많을수록 피해가 증가합니다. 이 스킬은 항상 유리한 상성으로 적용됩니다.",
+        "2_zh": "对全体敌人造成1次<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>,并攻击。目标附带的弱化效果越多,则该攻击的伤害越高。该技能总是以优势属性施展。",
+        "3": "Inflicts <color=#28d9ed>Shocked</color> once on all enemies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. Damage dealt increases proportionally to the number of debuffs inflicted on the target. This skill always has elemental advantage.",
+        "3_jp": "敵全体に感電1個を2ターンの間付与し、ダメージを与える。この攻撃は対象の弱体効果の数に応じてダメージがUPする。このスキルは有利属性の攻撃判定になる。",
+        "3_kr": "적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 1회 부여하고 공격합니다. 이 공격은 대상의 약화 효과가 많을수록 피해가 증가합니다. 이 스킬은 항상 유리한 상성으로 적용됩니다.",
+        "3_zh": "对全体敌人造成1次<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>,并攻击。目标附带的弱化效果越多,则该攻击的伤害越高。该技能总是以优势属性施展。",
+        "4": "Inflicts <color=#28d9ed>Shocked</color> once on all enemies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. Damage dealt increases proportionally to the number of debuffs inflicted on the target. This skill always has elemental advantage.",
+        "4_jp": "敵全体に感電1個を2ターンの間付与し、ダメージを与える。この攻撃は対象の弱体効果の数に応じてダメージがUPする。このスキルは有利属性の攻撃判定になる。",
+        "4_kr": "적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 1회 부여하고 공격합니다. 이 공격은 대상의 약화 효과가 많을수록 피해가 증가합니다. 이 스킬은 항상 유리한 상성으로 적용됩니다.",
+        "4_zh": "对全体敌人造成1次<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>,并攻击。目标附带的弱化效果越多,则该攻击的伤害越高。该技能总是以优势属性施展。",
+        "5": "Inflicts <color=#28d9ed>Shocked</color> twice on all enemies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. Damage dealt increases proportionally to the number of debuffs inflicted on the target. This skill always has elemental advantage.",
+        "5_jp": "敵全体に感電2個を2ターンの間付与し、ダメージを与える。この攻撃は対象の弱体効果の数に応じてダメージがUPする。このスキルは有利属性の攻撃判定になる。",
+        "5_kr": "적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 <color=#28d9ed>감전</color>을 2회 부여하고 공격합니다. 이 공격은 대상의 약화 효과가 많을수록 피해가 증가합니다. 이 스킬은 항상 유리한 상성으로 적용됩니다.",
+        "5_zh": "对全体敌人造成2次<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>,并攻击。目标附带的弱化效果越多,则该攻击的伤害越高。该技能总是以优势属性施展。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -311,8 +371,8 @@
           "效果数量+1"
         ]
       },
-      "wgr": 2,
       "cd": "5",
+      "wgr": 2,
       "buff": [
         "BT_DMG_ELEMENT_SUPERIORITY"
       ],
@@ -334,6 +394,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を2ターンの間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で感電を<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能起始效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成触电效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率造成触电效果,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Starter Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict Shocked on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to inflict Shocked for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を2ターンの間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で感電を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.",
+        "1_zh": "<color=#ffd732>连携技能起始效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成触电效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率造成触电效果,持续<color=#28d9ed>2回合</color>。",
+        "2": "<color=#ffd732>Chain Starter Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict Shocked on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to inflict Shocked for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を2ターンの間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で感電を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.",
+        "2_zh": "<color=#ffd732>连携技能起始效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成触电效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率造成触电效果,持续<color=#28d9ed>2回合</color>。",
+        "3": "<color=#ffd732>Chain Starter Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict Shocked on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to inflict Shocked for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を2ターンの間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で感電を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.",
+        "3_zh": "<color=#ffd732>连携技能起始效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成触电效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率造成触电效果,持续<color=#28d9ed>2回合</color>。",
+        "4": "<color=#ffd732>Chain Starter Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict Shocked on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to inflict Shocked for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を2ターンの間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で感電を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.",
+        "4_zh": "<color=#ffd732>连携技能起始效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成触电效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率造成触电效果,持续<color=#28d9ed>2回合</color>。",
+        "5": "<color=#ffd732>Chain Starter Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict Shocked on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to inflict Shocked for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を2ターンの間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で感電を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 지속되는 감전을 부여합니다.",
+        "5_zh": "<color=#ffd732>连携技能起始效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成触电效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率造成触电效果,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -399,13 +481,14 @@
       "debuff": [
         "BT_DOT_LIGHTNING"
       ],
-      "dual_debuff": [
-        "BT_DOT_LIGHTNING"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
     }
   }
 }

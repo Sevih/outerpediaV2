@@ -11,9 +11,6 @@
   "rank": "B",
   "rank_pvp": "B",
   "role": "support",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -67,6 +64,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的概率使自身的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>70%</color> chance to increase the caster's <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的概率使自身的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>70%</color> chance to increase the caster's <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的概率使自身的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>85%</color> chance to increase the caster's <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>85%</color>の確率で自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>85%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>85%</color>的概率使自身的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to increase the caster's <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to increase the caster's <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -142,10 +161,32 @@
       "name_jp": "帽子屋さんのティーカップ",
       "name_kr": "모자 장수의 찻잔",
       "name_zh": "疯帽子的茶杯",
-      "true_desc": "When using this skill, has a <color=#28d9ed>70%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them.\\nAfter attacking, inflicts reduced <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1</color> turn(s) on all enemies and decreases the <color=#28d9ed>Speed</color> of <color=#28d9ed>Water</color> enemies for <color=#28d9ed>1</color> turn(s).\nFor each target damaged, increases own <color=#28d9ed>Action Gauge</color> by <color=#28d9ed>25%</color>.",
+      "true_desc": "When using this skill, has a <color=#28d9ed>70%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them.\\nAfter attacking, inflicts reduced <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1</color> turn(s) on all enemies and decreases the <color=#28d9ed>Speed</color> of <color=#28d9ed>Water</color> enemies for <color=#28d9ed>1</color> turn(s).\nFor each target damaged, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color>.",
       "true_desc_jp": "スキル使用時、<color=#28d9ed>70%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。\\n攻撃後、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ、水属性敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。 ダメージを与えた対象1体につき自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>25%</color>UPする。",
       "true_desc_kr": "스킬 사용 시 <color=#28d9ed>70%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 수속성 적의  <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 감소시킵니다. 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
       "true_desc_zh": "使用技能时,有<color=#28d9ed>70%</color>的几率解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,使全体敌人<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>水属性</color>敌人的<color=#28d9ed>速度</color>降低<color=#28d9ed>1</color>回合。且每对1个目标造成伤害,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。",
+      "true_desc_levels": {
+        "1": "When using this skill, has a <color=#28d9ed>70%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them.\\nAfter attacking, inflicts reduced <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1</color> turn(s) on all enemies and decreases the <color=#28d9ed>Speed</color> of <color=#28d9ed>Water</color> enemies for <color=#28d9ed>1</color> turn(s).\nFor each target damaged, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color>.",
+        "1_jp": "スキル使用時、<color=#28d9ed>70%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。\\n攻撃後、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ、水属性敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。 ダメージを与えた対象1体につき自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>25%</color>UPする。",
+        "1_kr": "스킬 사용 시 <color=#28d9ed>70%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 수속성 적의  <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 감소시킵니다. 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
+        "1_zh": "使用技能时,有<color=#28d9ed>70%</color>的几率解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,使全体敌人<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>水属性</color>敌人的<color=#28d9ed>速度</color>降低<color=#28d9ed>1</color>回合。且每对1个目标造成伤害,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。",
+        "2": "When using this skill, has a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them.\\nAfter attacking, inflicts reduced <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1</color> turn(s) on all enemies and decreases the <color=#28d9ed>Speed</color> of <color=#28d9ed>Water</color> enemies for <color=#28d9ed>1</color> turn(s).\nFor each target damaged, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color>.",
+        "2_jp": "スキル使用時、<color=#28d9ed>85%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。\\n攻撃後、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ、水属性敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。 ダメージを与えた対象1体につき自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>25%</color>UPする。",
+        "2_kr": "스킬 사용 시 <color=#28d9ed>85%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 수속성 적의  <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 감소시킵니다. 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
+        "2_zh": "使用技能时,有<color=#28d9ed>85%</color>的几率解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,使全体敌人<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>水属性</color>敌人的<color=#28d9ed>速度</color>降低<color=#28d9ed>1</color>回合。且每对1个目标造成伤害,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。",
+        "3": "When using this skill, has a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them.\\nAfter attacking, inflicts reduced <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1</color> turn(s) on all enemies and decreases the <color=#28d9ed>Speed</color> of <color=#28d9ed>Water</color> enemies for <color=#28d9ed>1</color> turn(s).\nFor each target damaged, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color>.",
+        "3_jp": "スキル使用時、<color=#28d9ed>85%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。\\n攻撃後、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ、水属性敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。 ダメージを与えた対象1体につき自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>25%</color>UPする。",
+        "3_kr": "스킬 사용 시 <color=#28d9ed>85%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 수속성 적의  <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 감소시킵니다. 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
+        "3_zh": "使用技能时,有<color=#28d9ed>85%</color>的几率解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,使全体敌人<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>水属性</color>敌人的<color=#28d9ed>速度</color>降低<color=#28d9ed>1</color>回合。且每对1个目标造成伤害,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。",
+        "4": "When using this skill, has a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them.\\nAfter attacking, inflicts reduced <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1</color> turn(s) on all enemies and decreases the <color=#28d9ed>Speed</color> of <color=#28d9ed>Water</color> enemies for <color=#28d9ed>1</color> turn(s).\nFor each target damaged, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color>.",
+        "4_jp": "スキル使用時、<color=#28d9ed>85%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。\\n攻撃後、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ、水属性敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。 ダメージを与えた対象1体につき自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>25%</color>UPする。",
+        "4_kr": "스킬 사용 시 <color=#28d9ed>85%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 수속성 적의  <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 감소시킵니다. 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
+        "4_zh": "使用技能时,有<color=#28d9ed>85%</color>的几率解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,使全体敌人<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>水属性</color>敌人的<color=#28d9ed>速度</color>降低<color=#28d9ed>1</color>回合。且每对1个目标造成伤害,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。",
+        "5": "When using this skill, has a <color=#28d9ed>100%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them.\\nAfter attacking, inflicts reduced <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1</color> turn(s) on all enemies and decreases the <color=#28d9ed>Speed</color> of <color=#28d9ed>Water</color> enemies for <color=#28d9ed>1</color> turn(s).\nFor each target damaged, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color>.",
+        "5_jp": "スキル使用時、<color=#28d9ed>100%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。\\n攻撃後、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ、水属性敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。 ダメージを与えた対象1体につき自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>25%</color>UPする。",
+        "5_kr": "스킬 사용 시 <color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 수속성 적의  <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 감소시킵니다. 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
+        "5_zh": "使用技能时,有<color=#28d9ed>100%</color>的几率解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,使全体敌人<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>水属性</color>敌人的<color=#28d9ed>速度</color>降低<color=#28d9ed>1</color>回合。且每对1个目标造成伤害,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。"
+      },
       "enhancement": {
         "2": [
           "+15% chance to remove buffs",
@@ -215,6 +256,8 @@
         "BT_STAT|ST_BUFF_CHANCE",
         "BT_STAT|ST_SPEED"
       ],
+      "offensive": true,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage\\nReduces Alice in Wonderland Cooldown by 1 turn",
@@ -246,9 +289,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "multi"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "2003",
@@ -262,6 +303,28 @@
       "true_desc_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象に<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nまた、<color=#28d9ed>処刑!処刑!</color>を<color=#28d9ed>2ターン</color>間付与する。\\n\\n<color=#28d9ed>処刑!処刑!</color>: 地属性の敵から受けるダメージUP(解除不可)",
       "true_desc_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n또한 <color=#28d9ed>사형! 사형!</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n\\n<color=#28d9ed>사형! 사형!</color>: 지속성 적에게 받는 피해 증가.",
       "true_desc_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的几率对目标施加<color=#28d9ed>无法强化</color>,持续<color=#28d9ed>2回合</color>。\\n同时赋予<color=#28d9ed>“处刑!处刑!”</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#28d9ed>处刑!处刑!</color>:受到来自<color=#28d9ed>持续属性</color>敌人的伤害增加。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>2 turn(s)</color>. \\nApplies <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2turn(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "1_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象に<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nまた、<color=#28d9ed>処刑!処刑!</color>を<color=#28d9ed>2ターン</color>間付与する。\\n\\n<color=#28d9ed>処刑!処刑!</color>: 地属性の敵から受けるダメージUP(解除不可)",
+        "1_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n또한 <color=#28d9ed>사형! 사형!</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n\\n<color=#28d9ed>사형! 사형!</color>: 지속성 적에게 받는 피해 증가.",
+        "1_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的几率对目标施加<color=#28d9ed>无法强化</color>,持续<color=#28d9ed>2回合</color>。\\n同时赋予<color=#28d9ed>“处刑!处刑!”</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#28d9ed>处刑!处刑!</color>:受到来自<color=#28d9ed>持续属性</color>敌人的伤害增加。",
+        "2": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>2 turn(s)</color>. \\nApplies <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2turn(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "2_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象に<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nまた、<color=#28d9ed>処刑!処刑!</color>を<color=#28d9ed>2ターン</color>間付与する。\\n\\n<color=#28d9ed>処刑!処刑!</color>: 地属性の敵から受けるダメージUP(解除不可)",
+        "2_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n또한 <color=#28d9ed>사형! 사형!</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n\\n<color=#28d9ed>사형! 사형!</color>: 지속성 적에게 받는 피해 증가.",
+        "2_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的几率对目标施加<color=#28d9ed>无法强化</color>,持续<color=#28d9ed>2回合</color>。\\n同时赋予<color=#28d9ed>“处刑!处刑!”</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#28d9ed>处刑!处刑!</color>:受到来自<color=#28d9ed>持续属性</color>敌人的伤害增加。",
+        "3": "Attacks all enemies and has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>2 turn(s)</color>. \\nApplies <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2turn(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "3_jp": "敵全体にダメージを与え、<color=#28d9ed>85%</color>の確率で対象に<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nまた、<color=#28d9ed>処刑!処刑!</color>を<color=#28d9ed>2ターン</color>間付与する。\\n\\n<color=#28d9ed>処刑!処刑!</color>: 地属性の敵から受けるダメージUP(解除不可)",
+        "3_kr": "적 전체를 공격하고 <color=#28d9ed>85%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n또한 <color=#28d9ed>사형! 사형!</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n\\n<color=#28d9ed>사형! 사형!</color>: 지속성 적에게 받는 피해 증가.",
+        "3_zh": "攻击全体敌人,并有<color=#28d9ed>85%</color>的几率对目标施加<color=#28d9ed>无法强化</color>,持续<color=#28d9ed>2回合</color>。\\n同时赋予<color=#28d9ed>“处刑!处刑!”</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#28d9ed>处刑!处刑!</color>:受到来自<color=#28d9ed>持续属性</color>敌人的伤害增加。",
+        "4": "Attacks all enemies and has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>2 turn(s)</color>. \\nApplies <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2turn(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "4_jp": "敵全体にダメージを与え、<color=#28d9ed>85%</color>の確率で対象に<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nまた、<color=#28d9ed>処刑!処刑!</color>を<color=#28d9ed>2ターン</color>間付与する。\\n\\n<color=#28d9ed>処刑!処刑!</color>: 地属性の敵から受けるダメージUP(解除不可)",
+        "4_kr": "적 전체를 공격하고 <color=#28d9ed>85%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n또한 <color=#28d9ed>사형! 사형!</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n\\n<color=#28d9ed>사형! 사형!</color>: 지속성 적에게 받는 피해 증가.",
+        "4_zh": "攻击全体敌人,并有<color=#28d9ed>85%</color>的几率对目标施加<color=#28d9ed>无法强化</color>,持续<color=#28d9ed>2回合</color>。\\n同时赋予<color=#28d9ed>“处刑!处刑!”</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#28d9ed>处刑!处刑!</color>:受到来自<color=#28d9ed>持续属性</color>敌人的伤害增加。",
+        "5": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>3 turn(s)</color>. \\nApplies <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2turn(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "5_jp": "敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象に<color=#28d9ed>強化不可</color>を<color=#28d9ed>3ターン</color>の間付与する。\\nまた、<color=#28d9ed>処刑!処刑!</color>を<color=#28d9ed>2ターン</color>間付与する。\\n\\n<color=#28d9ed>処刑!処刑!</color>: 地属性の敵から受けるダメージUP(解除不可)",
+        "5_kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n또한 <color=#28d9ed>사형! 사형!</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n\\n<color=#28d9ed>사형! 사형!</color>: 지속성 적에게 받는 피해 증가.",
+        "5_zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标施加<color=#28d9ed>无法强化</color>,持续<color=#28d9ed>3回合</color>。\\n同时赋予<color=#28d9ed>“处刑!处刑!”</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#28d9ed>处刑!处刑!</color>:受到来自<color=#28d9ed>持续属性</color>敌人的伤害增加。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown",
@@ -342,6 +405,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体の強化効果を<color=#28d9ed>1つ</color>解除する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間<color=#28d9ed>効果命中</color>がUPする。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체의 강화 효과를 <color=#28d9ed>1개</color> 해제합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,解除全体敌人<color=#28d9ed>1个</color>强化效果。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, removes <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from all enemies.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体の強化効果を<color=#28d9ed>1つ</color>解除する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間<color=#28d9ed>効果命中</color>がUPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체의 강화 효과를 <color=#28d9ed>1개</color> 해제합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,解除全体敌人<color=#28d9ed>1个</color>强化效果。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, removes <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from all enemies.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体の強化効果を<color=#28d9ed>1つ</color>解除する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間<color=#28d9ed>効果命中</color>がUPする。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체의 강화 효과를 <color=#28d9ed>1개</color> 해제합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,解除全体敌人<color=#28d9ed>1个</color>强化效果。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, removes <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from all enemies.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体の強化効果を<color=#28d9ed>1つ</color>解除する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間<color=#28d9ed>効果命中</color>がUPする。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체의 강화 효과를 <color=#28d9ed>1개</color> 해제합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,解除全体敌人<color=#28d9ed>1个</color>强化效果。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, removes <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from all enemies.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体の強化効果を<color=#28d9ed>1つ</color>解除する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間<color=#28d9ed>効果命中</color>がUPする。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체의 강화 효과를 <color=#28d9ed>1개</color> 해제합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,解除全体敌人<color=#28d9ed>1个</color>强化效果。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, removes <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from all enemies.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体の強化効果を<color=#28d9ed>1つ</color>解除する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間<color=#28d9ed>効果命中</color>がUPする。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체의 강화 효과를 <color=#28d9ed>1개</color> 해제합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,解除全体敌人<color=#28d9ed>1个</color>强化效果。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率使<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -407,13 +492,14 @@
       "debuff": [
         "BT_REMOVE_BUFF"
       ],
-      "dual_buff": [
-        "BT_STAT|ST_BUFF_CHANCE"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_STAT|ST_BUFF_CHANCE"
+      ],
+      "dual_debuff": []
     }
   }
 }

@@ -12,8 +12,7 @@
   "rank_pvp": "S",
   "role": "sustain",
   "tags": [
-    "ignore-defense",
-    "free"
+    "ignore-defense"
   ],
   "skill_priority": {
     "First": {
@@ -69,6 +68,28 @@
       "true_desc_jp": "敵単体にダメージを与える。対象の最大HPが自分の最大HP以下の時、<color=#28d9ed>75%</color>の確率で攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
       "true_desc_kr": "적을 공격합니다. <color=#28d9ed>75%</color> 확률로 대상의 최대 체력이 자신의 최대 체력 이하일 때 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
       "true_desc_zh": "攻击敌人,有<color=#28d9ed>75%</color>的几率在目标的生命值上限在自身生命值上限以下时,使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy. Has a <color=#28d9ed>75%</color> chance to activate a <color=#28d9ed>Dual Attack</color> from the ally with the highest attack if the target's Max Health is lower than the caster's Max Health.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "1_jp": "敵単体にダメージを与える。対象の最大HPが自分の最大HP以下の時、<color=#28d9ed>75%</color>の確率で攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "1_kr": "적을 공격합니다. <color=#28d9ed>75%</color> 확률로 대상의 최대 체력이 자신의 최대 체력 이하일 때 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "1_zh": "攻击敌人,有<color=#28d9ed>75%</color>的几率在目标的生命值上限在自身生命值上限以下时,使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "2": "Attacks an enemy. Has a <color=#28d9ed>75%</color> chance to activate a <color=#28d9ed>Dual Attack</color> from the ally with the highest attack if the target's Max Health is lower than the caster's Max Health.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "2_jp": "敵単体にダメージを与える。対象の最大HPが自分の最大HP以下の時、<color=#28d9ed>75%</color>の確率で攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "2_kr": "적을 공격합니다. <color=#28d9ed>75%</color> 확률로 대상의 최대 체력이 자신의 최대 체력 이하일 때 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "2_zh": "攻击敌人,有<color=#28d9ed>75%</color>的几率在目标的生命值上限在自身生命值上限以下时,使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "3": "Attacks an enemy. Has a <color=#28d9ed>85%</color> chance to activate a <color=#28d9ed>Dual Attack</color> from the ally with the highest attack if the target's Max Health is lower than the caster's Max Health.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "3_jp": "敵単体にダメージを与える。対象の最大HPが自分の最大HP以下の時、<color=#28d9ed>85%</color>の確率で攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "3_kr": "적을 공격합니다. <color=#28d9ed>85%</color> 확률로 대상의 최대 체력이 자신의 최대 체력 이하일 때 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "3_zh": "攻击敌人,有<color=#28d9ed>85%</color>的几率在目标的生命值上限在自身生命值上限以下时,使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "4": "Attacks an enemy. Has a <color=#28d9ed>85%</color> chance to activate a <color=#28d9ed>Dual Attack</color> from the ally with the highest attack if the target's Max Health is lower than the caster's Max Health.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "4_jp": "敵単体にダメージを与える。対象の最大HPが自分の最大HP以下の時、<color=#28d9ed>85%</color>の確率で攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "4_kr": "적을 공격합니다. <color=#28d9ed>85%</color> 확률로 대상의 최대 체력이 자신의 최대 체력 이하일 때 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "4_zh": "攻击敌人,有<color=#28d9ed>85%</color>的几率在目标的生命值上限在自身生命值上限以下时,使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "5": "Attacks an enemy. Has a <color=#28d9ed>100%</color> chance to activate a <color=#28d9ed>Dual Attack</color> from the ally with the highest attack if the target's Max Health is lower than the caster's Max Health.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "5_jp": "敵単体にダメージを与える。対象の最大HPが自分の最大HP以下の時、<color=#28d9ed>100%</color>の確率で攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "5_kr": "적을 공격합니다. <color=#28d9ed>100%</color> 확률로 대상의 최대 체력이 자신의 최대 체력 이하일 때 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "5_zh": "攻击敌人,有<color=#28d9ed>100%</color>的几率在目标的生命值上限在自身生命值上限以下时,使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -131,6 +152,8 @@
         "BT_CALL_BACKUP_2"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Guaranteed Dual Attack",
@@ -162,9 +185,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "8802",
@@ -178,6 +199,28 @@
       "true_desc_jp": "(パッシブ効果)スタンの影響を受けない。味方が全体攻撃で受けるダメージを<color=#28d9ed>15%</color>DOWNさせ、味方が受けるダメージの<color=#28d9ed>30%</color>を代わりに受ける。(より高い効果がある場合、この効果は適用されない)\\n(発動効果)ダメージを受けた後、最大HPが最も低い敵単体に<color=#28d9ed>【来て、ハウンド】</color>を使用する。<color=#28d9ed>75%</color>の確率で、対象に<color=#28d9ed>石化</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
       "true_desc_kr": "(패시브 효과) 스턴의 영향을 받지 않습니다. 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>15%</color> 감소시키고, 아군이 받는 피해의 <color=#28d9ed>30%</color>를 대신 입습니다. (가장 수치가 높은 효과만 적용됩니다.)\\n\\n(발동 효과) 피격 후 최대 체력이 가장 낮은 적에게 <color=#28d9ed>와줘, 하운드</color>를 사용합니다. <color=#28d9ed>75%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
       "true_desc_zh": "(被动效果)不受晕眩的影响。友军遭受全体攻击所受伤害降低<color=#28d9ed>15%</color>,代替友军承受<color=#28d9ed>30%</color>的所受伤害。(仅对数值最高的效果生效)\\n\\n(触发效果)受到攻击时,对生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>75%</color>几率使目标<color=#28d9ed>石化</color>,持续<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+      "true_desc_levels": {
+        "1": "(Passive Effect) Unaffected by Stunned. Reduces damage taken by allies from attacks that target all enemies by <color=#28d9ed>15%</color> and <color=#28d9ed>30%</color> of damage dealt to allies is redirected to the caster. (Only the effect with the highest value is applied.)\\n\\n(Triggered Effect) After being hit, uses <color=#28d9ed>Come Here, Hound</color> on the enemy with the lowest Max Health. Has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>Petrified</color> on the target for <color=#28d9ed> 1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "1_jp": "(パッシブ効果)スタンの影響を受けない。味方が全体攻撃で受けるダメージを<color=#28d9ed>15%</color>DOWNさせ、味方が受けるダメージの<color=#28d9ed>30%</color>を代わりに受ける。(より高い効果がある場合、この効果は適用されない)\\n(発動効果)ダメージを受けた後、最大HPが最も低い敵単体に<color=#28d9ed>【来て、ハウンド】</color>を使用する。<color=#28d9ed>75%</color>の確率で、対象に<color=#28d9ed>石化</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "1_kr": "(패시브 효과) 스턴의 영향을 받지 않습니다. 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>15%</color> 감소시키고, 아군이 받는 피해의 <color=#28d9ed>30%</color>를 대신 입습니다. (가장 수치가 높은 효과만 적용됩니다.)\\n\\n(발동 효과) 피격 후 최대 체력이 가장 낮은 적에게 <color=#28d9ed>와줘, 하운드</color>를 사용합니다. <color=#28d9ed>75%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "1_zh": "(被动效果)不受晕眩的影响。友军遭受全体攻击所受伤害降低<color=#28d9ed>15%</color>,代替友军承受<color=#28d9ed>30%</color>的所受伤害。(仅对数值最高的效果生效)\\n\\n(触发效果)受到攻击时,对生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>75%</color>几率使目标<color=#28d9ed>石化</color>,持续<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "2": "(Passive Effect) Unaffected by Stunned. Reduces damage taken by allies from attacks that target all enemies by <color=#28d9ed>15%</color> and <color=#28d9ed>30%</color> of damage dealt to allies is redirected to the caster. (Only the effect with the highest value is applied.)\\n\\n(Triggered Effect) After being hit, uses <color=#28d9ed>Come Here, Hound</color> on the enemy with the lowest Max Health. Has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>Petrified</color> on the target for <color=#28d9ed> 1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "2_jp": "(パッシブ効果)スタンの影響を受けない。味方が全体攻撃で受けるダメージを<color=#28d9ed>15%</color>DOWNさせ、味方が受けるダメージの<color=#28d9ed>30%</color>を代わりに受ける。(より高い効果がある場合、この効果は適用されない)\\n(発動効果)ダメージを受けた後、最大HPが最も低い敵単体に<color=#28d9ed>【来て、ハウンド】</color>を使用する。<color=#28d9ed>75%</color>の確率で、対象に<color=#28d9ed>石化</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "2_kr": "(패시브 효과) 스턴의 영향을 받지 않습니다. 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>15%</color> 감소시키고, 아군이 받는 피해의 <color=#28d9ed>30%</color>를 대신 입습니다. (가장 수치가 높은 효과만 적용됩니다.)\\n\\n(발동 효과) 피격 후 최대 체력이 가장 낮은 적에게 <color=#28d9ed>와줘, 하운드</color>를 사용합니다. <color=#28d9ed>75%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "2_zh": "(被动效果)不受晕眩的影响。友军遭受全体攻击所受伤害降低<color=#28d9ed>15%</color>,代替友军承受<color=#28d9ed>30%</color>的所受伤害。(仅对数值最高的效果生效)\\n\\n(触发效果)受到攻击时,对生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>75%</color>几率使目标<color=#28d9ed>石化</color>,持续<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "3": "(Passive Effect) Unaffected by Stunned. Reduces damage taken by allies from attacks that target all enemies by <color=#28d9ed>15%</color> and <color=#28d9ed>30%</color> of damage dealt to allies is redirected to the caster. (Only the effect with the highest value is applied.)\\n\\n(Triggered Effect) After being hit, uses <color=#28d9ed>Come Here, Hound</color> on the enemy with the lowest Max Health. Has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>Petrified</color> on the target for <color=#28d9ed> 1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "3_jp": "(パッシブ効果)スタンの影響を受けない。味方が全体攻撃で受けるダメージを<color=#28d9ed>15%</color>DOWNさせ、味方が受けるダメージの<color=#28d9ed>30%</color>を代わりに受ける。(より高い効果がある場合、この効果は適用されない)\\n(発動効果)ダメージを受けた後、最大HPが最も低い敵単体に<color=#28d9ed>【来て、ハウンド】</color>を使用する。<color=#28d9ed>75%</color>の確率で、対象に<color=#28d9ed>石化</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "3_kr": "(패시브 효과) 스턴의 영향을 받지 않습니다. 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>15%</color> 감소시키고, 아군이 받는 피해의 <color=#28d9ed>30%</color>를 대신 입습니다. (가장 수치가 높은 효과만 적용됩니다.)\\n\\n(발동 효과) 피격 후 최대 체력이 가장 낮은 적에게 <color=#28d9ed>와줘, 하운드</color>를 사용합니다. <color=#28d9ed>75%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "3_zh": "(被动效果)不受晕眩的影响。友军遭受全体攻击所受伤害降低<color=#28d9ed>15%</color>,代替友军承受<color=#28d9ed>30%</color>的所受伤害。(仅对数值最高的效果生效)\\n\\n(触发效果)受到攻击时,对生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>75%</color>几率使目标<color=#28d9ed>石化</color>,持续<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "4": "(Passive Effect) Unaffected by Stunned. Reduces damage taken by allies from attacks that target all enemies by <color=#28d9ed>15%</color> and <color=#28d9ed>30%</color> of damage dealt to allies is redirected to the caster. (Only the effect with the highest value is applied.)\\n\\n(Triggered Effect) After being hit, uses <color=#28d9ed>Come Here, Hound</color> on the enemy with the lowest Max Health. Has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Petrified</color> on the target for <color=#28d9ed> 1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "4_jp": "(パッシブ効果)スタンの影響を受けない。味方が全体攻撃で受けるダメージを<color=#28d9ed>15%</color>DOWNさせ、味方が受けるダメージの<color=#28d9ed>30%</color>を代わりに受ける。(より高い効果がある場合、この効果は適用されない)\\n(発動効果)ダメージを受けた後、最大HPが最も低い敵単体に<color=#28d9ed>【来て、ハウンド】</color>を使用する。<color=#28d9ed>85%</color>の確率で、対象に<color=#28d9ed>石化</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "4_kr": "(패시브 효과) 스턴의 영향을 받지 않습니다. 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>15%</color> 감소시키고, 아군이 받는 피해의 <color=#28d9ed>30%</color>를 대신 입습니다. (가장 수치가 높은 효과만 적용됩니다.)\\n\\n(발동 효과) 피격 후 최대 체력이 가장 낮은 적에게 <color=#28d9ed>와줘, 하운드</color>를 사용합니다. <color=#28d9ed>85%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "4_zh": "(被动效果)不受晕眩的影响。友军遭受全体攻击所受伤害降低<color=#28d9ed>15%</color>,代替友军承受<color=#28d9ed>30%</color>的所受伤害。(仅对数值最高的效果生效)\\n\\n(触发效果)受到攻击时,对生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>85%</color>几率使目标<color=#28d9ed>石化</color>,持续<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "5": "(Passive Effect) Unaffected by Stunned. Reduces damage taken by allies from attacks that target all enemies by <color=#28d9ed>15%</color> and <color=#28d9ed>30%</color> of damage dealt to allies is redirected to the caster. (Only the effect with the highest value is applied.)\\n\\n(Triggered Effect) After being hit, uses <color=#28d9ed>Come Here, Hound</color> on the enemy with the lowest Max Health. Has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Petrified</color> on the target for <color=#28d9ed> 1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "5_jp": "(パッシブ効果)スタンの影響を受けない。味方が全体攻撃で受けるダメージを<color=#28d9ed>15%</color>DOWNさせ、味方が受けるダメージの<color=#28d9ed>30%</color>を代わりに受ける。(より高い効果がある場合、この効果は適用されない)\\n(発動効果)ダメージを受けた後、最大HPが最も低い敵単体に<color=#28d9ed>【来て、ハウンド】</color>を使用する。<color=#28d9ed>100%</color>の確率で、対象に<color=#28d9ed>石化</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "5_kr": "(패시브 효과) 스턴의 영향을 받지 않습니다. 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>15%</color> 감소시키고, 아군이 받는 피해의 <color=#28d9ed>30%</color>를 대신 입습니다. (가장 수치가 높은 효과만 적용됩니다.)\\n\\n(발동 효과) 피격 후 최대 체력이 가장 낮은 적에게 <color=#28d9ed>와줘, 하운드</color>를 사용합니다. <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "5_zh": "(被动效果)不受晕眩的影响。友军遭受全体攻击所受伤害降低<color=#28d9ed>15%</color>,代替友军承受<color=#28d9ed>30%</color>的所受伤害。(仅对数值最高的效果生效)\\n\\n(触发效果)受到攻击时,对生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>100%</color>几率使目标<color=#28d9ed>石化</color>,持续<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -259,6 +302,28 @@
       "true_desc_jp": "対象の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
       "true_desc_kr": "대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
       "true_desc_zh": "使目标的<color=#28d9ed>强化效果</color>持续回合数减少<color=#28d9ed>1回合</color>后,攻击敌人。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+      "true_desc_levels": {
+        "1": "Reduces the duration of <color=#28d9ed>buffs</color> granted to the target by <color=#28d9ed>1 turn</color>, then attacks the enemy.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "1_jp": "対象の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "1_kr": "대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "1_zh": "使目标的<color=#28d9ed>强化效果</color>持续回合数减少<color=#28d9ed>1回合</color>后,攻击敌人。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "2": "Reduces the duration of <color=#28d9ed>buffs</color> granted to the target by <color=#28d9ed>1 turn</color>, then attacks the enemy.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "2_jp": "対象の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "2_kr": "대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "2_zh": "使目标的<color=#28d9ed>强化效果</color>持续回合数减少<color=#28d9ed>1回合</color>后,攻击敌人。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "3": "Reduces the duration of <color=#28d9ed>buffs</color> granted to the target by <color=#28d9ed>1 turn</color>, then attacks the enemy.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "3_jp": "対象の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "3_kr": "대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "3_zh": "使目标的<color=#28d9ed>强化效果</color>持续回合数减少<color=#28d9ed>1回合</color>后,攻击敌人。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "4": "Reduces the duration of <color=#28d9ed>buffs</color> granted to the target by <color=#28d9ed>1 turn</color>, then attacks the enemy.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "4_jp": "対象の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "4_kr": "대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "4_zh": "使目标的<color=#28d9ed>强化效果</color>持续回合数减少<color=#28d9ed>1回合</color>后,攻击敌人。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "5": "Reduces the duration of <color=#28d9ed>buffs</color> on the target by <color=#28d9ed>1 turn</color>, then attacks the enemy.\\nThis skill ignores <color=#28d9ed>30%</color> of the target's Defense, and damage dealt increases proportional to Max Health instead of Attack.",
+        "5_jp": "対象の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "5_kr": "대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며, 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "5_zh": "使目标的<color=#28d9ed>强化效果</color>持续回合数减少<color=#28d9ed>1回合</color>后,攻击敌人。\\n无视此技能目标的<color=#28d9ed>30%</color>防御力,并根据生命值上限而非攻击力等比提升伤害。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -334,6 +399,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに最大HPが高いほどダメージがUPする。",
       "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 효과 적중이 증가합니다. \\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升自身连携技能伤害,攻击后有<color=#28d9ed>100%</color>的几率使全体友军的效果命中提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack, and after attacking, has a <color=#28d9ed>100%</color> chance to grant increased Effectiveness to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 효과 적중이 증가합니다. \\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升自身连携技能伤害,攻击后有<color=#28d9ed>100%</color>的几率使全体友军的效果命中提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
+        "2": "<color=#ffd732>Chain Finish Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack, and after attacking, has a <color=#28d9ed>100%</color> chance to grant increased Effectiveness to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 효과 적중이 증가합니다. \\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升自身连携技能伤害,攻击后有<color=#28d9ed>100%</color>的几率使全体友军的效果命中提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
+        "3": "<color=#ffd732>Chain Finish Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack, and after attacking, has a <color=#28d9ed>100%</color> chance to grant increased Effectiveness to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 효과 적중이 증가합니다. \\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升自身连携技能伤害,攻击后有<color=#28d9ed>100%</color>的几率使全体友军的效果命中提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
+        "4": "<color=#ffd732>Chain Finish Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack, and after attacking, has a <color=#28d9ed>100%</color> chance to grant increased Effectiveness to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 효과 적중이 증가합니다. \\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升自身连携技能伤害,攻击后有<color=#28d9ed>100%</color>的几率使全体友军的效果命中提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
+        "5": "<color=#ffd732>Chain Finish Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack, and after attacking, has a <color=#28d9ed>100%</color> chance to grant increased Effectiveness to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の効果命中を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 효과 적중이 증가합니다. \\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升自身连携技能伤害,攻击后有<color=#28d9ed>100%</color>的几率使全体友军的效果命中提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",

@@ -11,9 +11,6 @@
   "rank": "B",
   "rank_pvp": "A",
   "role": "sustain",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -28,15 +25,13 @@
   "Chain_Type": "Join",
   "gift": "Natural Object",
   "video": "3WCXBVQRQls",
-  "VoiceActor": "VA. None",
+  "VoiceActor": "VA. Analesa Fisher & Keith Silverstein",
   "VoiceActor_jp": "CV. 藤田茜&竹内栄治",
-  "VoiceActor_kr": "CV.이은조 / 이주승",
+  "VoiceActor_kr": "CV. 이은조&이주승",
   "VoiceActor_zh": "CV. 藤田茜&竹内荣治",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -46,15 +41,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 속도 +5\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军速度+5\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+5 Ally Team Speed\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方のスピード+5\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 속도 +5\n입장 시 AP +25",
@@ -73,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>7%</color>回復する。",
       "true_desc_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>7%</color> 회복시킵니다.",
       "true_desc_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>7%</color>的<color=#28d9ed>生命值</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>7%</color>.",
+        "1_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>7%</color>回復する。",
+        "1_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>7%</color> 회복시킵니다.",
+        "1_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>7%</color>的<color=#28d9ed>生命值</color>。",
+        "2": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>7%</color>.",
+        "2_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>7%</color>回復する。",
+        "2_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>7%</color> 회복시킵니다.",
+        "2_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>7%</color>的<color=#28d9ed>生命值</color>。",
+        "3": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>10%</color>.",
+        "3_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>10%</color>回復する。",
+        "3_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>10%</color> 회복시킵니다.",
+        "3_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。",
+        "4": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>10%</color>.",
+        "4_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>10%</color>回復する。",
+        "4_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>10%</color> 회복시킵니다.",
+        "4_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。",
+        "5": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>13%</color>.",
+        "5_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>13%</color>回復する。",
+        "5_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "5_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>13%</color>的<color=#28d9ed>生命值</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -138,6 +152,8 @@
         "BT_EXTEND_DEBUFF"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Effects are applied to all allies",
@@ -169,9 +185,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "5402",
@@ -182,9 +196,31 @@
       "name_kr": "상어는 친구",
       "name_zh": "鲨鱼是朋友",
       "true_desc": "Restores all allies' <color=#28d9ed>HP</color> by <color=#28d9ed>15%</color> and reduces the duration of debuffs by <color=#28d9ed>2 turns</color>.",
-      "true_desc_jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復し、弱体効果の持続時間を<color=#28d9ed>2ターン</color>減少させる。",
+      "true_desc_jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復し、弱体効果の持続時間を<color=#28d9ed>2ターン</color>DOWNさせる。",
       "true_desc_kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>2턴</color> 감소시킵니다.",
       "true_desc_zh": "为我方全体恢复<color=#28d9ed>15%</color><color=#28d9ed>生命值</color>,并将减益效果的持续时间缩短<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Restores all allies' <color=#28d9ed>HP</color> by <color=#28d9ed>15%</color> and reduces the duration of debuffs by <color=#28d9ed>2 turns</color>.",
+        "1_jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復し、弱体効果の持続時間を<color=#28d9ed>2ターン</color>DOWNさせる。",
+        "1_kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>2턴</color> 감소시킵니다.",
+        "1_zh": "为我方全体恢复<color=#28d9ed>15%</color><color=#28d9ed>生命值</color>,并将减益效果的持续时间缩短<color=#28d9ed>2回合</color>。",
+        "2": "Restores all allies' <color=#28d9ed>HP</color> by <color=#28d9ed>15%</color> and reduces the duration of debuffs by <color=#28d9ed>2 turns</color>.",
+        "2_jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復し、弱体効果の持続時間を<color=#28d9ed>2ターン</color>DOWNさせる。",
+        "2_kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>2턴</color> 감소시킵니다.",
+        "2_zh": "为我方全体恢复<color=#28d9ed>15%</color><color=#28d9ed>生命值</color>,并将减益效果的持续时间缩短<color=#28d9ed>2回合</color>。",
+        "3": "Restores all allies' <color=#28d9ed>HP</color> by <color=#28d9ed>25%</color> and reduces the duration of debuffs by <color=#28d9ed>2 turns</color>.",
+        "3_jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>25%</color>回復し、弱体効果の持続時間を<color=#28d9ed>2ターン</color>DOWNさせる。",
+        "3_kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>25%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>2턴</color> 감소시킵니다.",
+        "3_zh": "为我方全体恢复<color=#28d9ed>25%</color><color=#28d9ed>生命值</color>,并将减益效果的持续时间缩短<color=#28d9ed>2回合</color>。",
+        "4": "Restores all allies' <color=#28d9ed>HP</color> by <color=#28d9ed>35%</color> and reduces the duration of debuffs by <color=#28d9ed>2 turns</color>.",
+        "4_jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>35%</color>回復し、弱体効果の持続時間を<color=#28d9ed>2ターン</color>DOWNさせる。",
+        "4_kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>35%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>2턴</color> 감소시킵니다.",
+        "4_zh": "为我方全体恢复<color=#28d9ed>35%</color><color=#28d9ed>生命值</color>,并将减益效果的持续时间缩短<color=#28d9ed>2回合</color>。",
+        "5": "Restores all allies' <color=#28d9ed>HP</color> by <color=#28d9ed>35%</color> and reduces the duration of debuffs by <color=#28d9ed>2 turns</color>.",
+        "5_jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>35%</color>回復し、弱体効果の持続時間を<color=#28d9ed>2ターン</color>DOWNさせる。",
+        "5_kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>35%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>2턴</color> 감소시킵니다.",
+        "5_zh": "为我方全体恢复<color=#28d9ed>35%</color><color=#28d9ed>生命值</color>,并将减益效果的持续时间缩短<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown"
@@ -255,6 +291,28 @@
       "true_desc_jp": "戦場にいる味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。",
       "true_desc_kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
       "true_desc_zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的全体友军<color=#28d9ed>复活(强化)</color>。随后使全体友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。",
+      "true_desc_levels": {
+        "1": "Grants increased <color=#28d9ed>Attack</color> to surviving allies for <color=#28d9ed>2 turn(s)</color>, then <color=#28d9ed>Resurrects (Greater)</color> all slain allies. Afterward, <color=#28d9ed>heals</color> all allies by <color=#28d9ed>15%</color>.",
+        "1_jp": "戦場にいる味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。",
+        "1_kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
+        "1_zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的全体友军<color=#28d9ed>复活(强化)</color>。随后使全体友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。",
+        "2": "Grants increased <color=#28d9ed>Attack</color> to surviving allies for <color=#28d9ed>2 turn(s)</color>, then <color=#28d9ed>Resurrects (Greater)</color> all slain allies. Afterward, <color=#28d9ed>heals</color> all allies by <color=#28d9ed>15%</color>.",
+        "2_jp": "戦場にいる味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。",
+        "2_kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
+        "2_zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的全体友军<color=#28d9ed>复活(强化)</color>。随后使全体友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。",
+        "3": "Grants increased <color=#28d9ed>Attack</color> to surviving allies for <color=#28d9ed>2 turn(s)</color>, then <color=#28d9ed>Resurrects (Greater)</color> all slain allies. Afterward, <color=#28d9ed>heals</color> all allies by <color=#28d9ed>25%</color>.",
+        "3_jp": "戦場にいる味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>25%</color>回復させる。",
+        "3_kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>25%</color>만큼 회복시킵니다.",
+        "3_zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的全体友军<color=#28d9ed>复活(强化)</color>。随后使全体友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>25%</color>。",
+        "4": "Grants increased <color=#28d9ed>Attack</color> to surviving allies for <color=#28d9ed>2 turn(s)</color>, then <color=#28d9ed>Resurrects (Greater)</color> all slain allies. Afterward, <color=#28d9ed>heals</color> all allies by <color=#28d9ed>25%</color>.",
+        "4_jp": "戦場にいる味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>25%</color>回復させる。",
+        "4_kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>25%</color>만큼 회복시킵니다.",
+        "4_zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的全体友军<color=#28d9ed>复活(强化)</color>。随后使全体友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>25%</color>。",
+        "5": "Grants increased <color=#28d9ed>Attack</color> to surviving allies for <color=#28d9ed>2 turn(s)</color>, then <color=#28d9ed>Resurrects (Greater)</color> all slain allies. Afterward, <color=#28d9ed>heals</color> all allies by <color=#28d9ed>35%</color>.",
+        "5_jp": "戦場にいる味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>35%</color>回復させる。",
+        "5_kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>35%</color>만큼 회복시킵니다.",
+        "5_zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的全体友军<color=#28d9ed>复活(强化)</color>。随后使全体友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>35%</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown"
@@ -309,8 +367,8 @@
           "生命值恢复量+10%"
         ]
       },
-      "wgr": 7,
       "cd": "7",
+      "wgr": 7,
       "buff": [
         "BT_STAT|ST_ATK",
         "BT_RESURRECTION"
@@ -331,6 +389,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>13%</color>回復させる。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>13%</color> 회복시킵니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>13%</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, <color=#28d9ed>heals</color> the caster and the ally with the lowest Health by <color=#28d9ed>15%</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>13%</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>13%</color>回復させる。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>13%</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, <color=#28d9ed>heals</color> the caster and the ally with the lowest Health by <color=#28d9ed>15%</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>13%</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>13%</color>回復させる。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>13%</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, <color=#28d9ed>heals</color> the caster and the ally with the lowest Health by <color=#28d9ed>15%</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>13%</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>13%</color>回復させる。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>13%</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, <color=#28d9ed>heals</color> the caster and the ally with the lowest Health by <color=#28d9ed>15%</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>13%</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>13%</color>回復させる。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>13%</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, <color=#28d9ed>heals</color> the caster and the ally with the lowest Health by <color=#28d9ed>15%</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>13%</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>13%</color>回復させる。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>13%</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -394,11 +474,12 @@
       "cd": null,
       "buff": [],
       "debuff": [],
-      "dual_buff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

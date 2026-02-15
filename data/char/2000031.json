@@ -37,18 +37,18 @@
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
     "3_zh": "ATK DEF HP +10%",
-    "4": "ATK DEF HP +16%\n+2% Accuracy\n+1 Chain Passive Weakness Gauge damage",
-    "4_jp": "ATK DEF HP +16%\n命中+2%\nチェーンパッシブのWGダメージ+1",
-    "4_kr": "ATK DEF HP +16%\n명중 +2%\n체인 패시브의 WG 감소량 +1",
-    "4_zh": "ATK DEF HP +16%\n命中+2%\n连携被动技能的WG降低量+1",
+    "4": "ATK DEF HP +16%\nDamage Increase +2%\nChain Passive WG reduction +1",
+    "4_jp": "ATK DEF HP +16%\nダメージ+2%\nチェーンパッシブのWGダメージ+1",
+    "4_kr": "ATK DEF HP +16%\n피해 증가 +2%\n체인 패시브의 WG 감소량 +1",
+    "4_zh": "ATK DEF HP +16%\n造成伤害提升2%\n连携被动技能的WG降低量+1",
     "5": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_zh": "ATK DEF HP +22%\n解锁3阶爆发",
-    "6": "ATK DEF HP +30%\n+2% Accuracy\n+25 Action Points at battle start",
-    "6_jp": "ATK DEF HP +30%\n命中+2%\n戦闘開始時、AP+25",
-    "6_kr": "ATK DEF HP +30%\n명중 +2%\n입장 시 AP +25",
-    "6_zh": "ATK DEF HP +30%\n命中+2%\n入场时AP+25"
+    "6": "ATK DEF HP +30%\nDamage Increase +2%\nOn entry, AP +25",
+    "6_jp": "ATK DEF HP +30%\nダメージ+2%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n피해 증가 +2%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n造成伤害提升2%\n入场时AP+25"
   },
   "skills": {
     "SKT_FIRST": {
@@ -63,6 +63,28 @@
       "true_desc_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
       "true_desc_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
       "true_desc_zh": "攻击敌人。\\n自身<color=#28d9ed>速度</color>越高,则该技能的伤害越高。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy.\\nDeals damage proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "1_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "1_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "1_zh": "攻击敌人。\\n自身<color=#28d9ed>速度</color>越高,则该技能的伤害越高。",
+        "2": "Attacks an enemy.\\nDeals damage proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "2_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "2_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "2_zh": "攻击敌人。\\n自身<color=#28d9ed>速度</color>越高,则该技能的伤害越高。",
+        "3": "Attacks an enemy.\\nDeals damage proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "3_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "3_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "3_zh": "攻击敌人。\\n自身<color=#28d9ed>速度</color>越高,则该技能的伤害越高。",
+        "4": "Attacks an enemy.\\nDeals damage proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "4_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "4_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "4_zh": "攻击敌人。\\n自身<color=#28d9ed>速度</color>越高,则该技能的伤害越高。",
+        "5": "Attacks an enemy.\\nDeals damage proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "5_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "5_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "5_zh": "攻击敌人。\\n自身<color=#28d9ed>速度</color>越高,则该技能的伤害越高。"
+      },
       "enhancement": {
         "2": [
           "+5% damage",
@@ -136,6 +158,28 @@
       "true_desc_jp": "<color=#28d9ed>1ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>をUPさせる。",
       "true_desc_kr": "<color=#28d9ed>1턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 증가시킵니다.",
       "true_desc_zh": "使我方全体的<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Increases <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> of all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "<color=#28d9ed>1ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>をUPさせる。",
+        "1_kr": "<color=#28d9ed>1턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 증가시킵니다.",
+        "1_zh": "使我方全体的<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "2": "Increases <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> of all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "<color=#28d9ed>1ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>をUPさせる。",
+        "2_kr": "<color=#28d9ed>1턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 증가시킵니다.",
+        "2_zh": "使我方全体的<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "3": "Increases <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> of all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "<color=#28d9ed>1ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>をUPさせる。",
+        "3_kr": "<color=#28d9ed>1턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 증가시킵니다.",
+        "3_zh": "使我方全体的<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "4": "Increases <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> of all allies for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>をUPさせる。",
+        "4_kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 증가시킵니다.",
+        "4_zh": "使我方全体的<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "5": "Increases <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> of all allies for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>をUPさせる。",
+        "5_kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 증가시킵니다.",
+        "5_zh": "使我方全体的<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown"
@@ -207,6 +251,28 @@
       "true_desc_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で味方全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>増加させる。",
       "true_desc_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
       "true_desc_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的几率使全体友军的<color=#28d9ed>强化效果</color>持续时间增加<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to increase the duration of <color=#28d9ed>buffs</color> for all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で味方全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>増加させる。",
+        "1_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "1_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的几率使全体友军的<color=#28d9ed>强化效果</color>持续时间增加<color=#28d9ed>1回合</color>。",
+        "2": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to increase the duration of <color=#28d9ed>buffs</color> for all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で味方全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>増加させる。",
+        "2_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "2_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的几率使全体友军的<color=#28d9ed>强化效果</color>持续时间增加<color=#28d9ed>1回合</color>。",
+        "3": "Attacks all enemies and has a <color=#28d9ed>85%</color> chance to increase the duration of <color=#28d9ed>buffs</color> for all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "敵全体にダメージを与え、<color=#28d9ed>85%</color>の確率で味方全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>増加させる。",
+        "3_kr": "적 전체를 공격하고 <color=#28d9ed>85%</color> 확률로 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "3_zh": "攻击全体敌人,并有<color=#28d9ed>85%</color>的几率使全体友军的<color=#28d9ed>强化效果</color>持续时间增加<color=#28d9ed>1回合</color>。",
+        "4": "Attacks all enemies and has a <color=#28d9ed>85%</color> chance to increase the duration of <color=#28d9ed>buffs</color> for all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "敵全体にダメージを与え、<color=#28d9ed>85%</color>の確率で味方全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>増加させる。",
+        "4_kr": "적 전체를 공격하고 <color=#28d9ed>85%</color> 확률로 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "4_zh": "攻击全体敌人,并有<color=#28d9ed>85%</color>的几率使全体友军的<color=#28d9ed>强化效果</color>持续时间增加<color=#28d9ed>1回合</color>。",
+        "5": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to increase the duration of <color=#28d9ed>buffs</color> for all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>増加させる。",
+        "5_kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "5_zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使全体友军的<color=#28d9ed>强化效果</color>持续时间增加<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% damage",
@@ -272,6 +338,8 @@
         "BT_STAT|ST_SPEED"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases Speed for 1 turn",
@@ -303,9 +371,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "multi"
+      }
     },
     "SKT_CHAIN_PASSIVE": {
       "NameIDSymbol": "3104",
@@ -319,6 +385,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、APを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:この攻撃は、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>25</color>의 AP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 이 공격은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使AP恢复\\n<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>速度</color>越高,则伤害量越高。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Action Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、APを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:この攻撃は、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>25</color>의 AP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 이 공격은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使AP恢复\\n<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>速度</color>越高,则伤害量越高。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Action Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、APを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:この攻撃は、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>25</color>의 AP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 이 공격은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使AP恢复\\n<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>速度</color>越高,则伤害量越高。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Action Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、APを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:この攻撃は、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>25</color>의 AP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 이 공격은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使AP恢复\\n<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>速度</color>越高,则伤害量越高。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Action Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、APを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:この攻撃は、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>25</color>의 AP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 이 공격은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使AP恢复\\n<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>速度</color>越高,则伤害量越高。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Action Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、APを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:この攻撃は、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>25</color>의 AP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 이 공격은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使AP恢复\\n<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>速度</color>越高,则伤害量越高。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -387,7 +475,9 @@
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

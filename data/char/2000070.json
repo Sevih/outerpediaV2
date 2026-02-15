@@ -11,9 +11,6 @@
   "rank": "D",
   "rank_pvp": "B",
   "role": "dps",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -68,6 +65,28 @@
       "true_desc_jp": "敵2体にダメージを与え、<color=#28d9ed>20%</color>の確率で自分の<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>を保有している場合、ダメージがUPする。",
       "true_desc_kr": "적 2인을 공격하고 <color=#28d9ed>20%</color> 확률로 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
       "true_desc_zh": "攻击2名敌人,并有<color=#28d9ed>20%</color>的概率使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。\\n\\n若目标持有<color=#28d9ed>护盾</color>,该技能伤害提升。",
+      "true_desc_levels": {
+        "1": "Attacks 2 enemies and has a <color=#28d9ed>20%</color> chance to increase own <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.\\n\\nDamage dealt increases if the target has a <color=#28d9ed>Barrier</color>.",
+        "1_jp": "敵2体にダメージを与え、<color=#28d9ed>20%</color>の確率で自分の<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>を保有している場合、ダメージがUPする。",
+        "1_kr": "적 2인을 공격하고 <color=#28d9ed>20%</color> 확률로 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "1_zh": "攻击2名敌人,并有<color=#28d9ed>20%</color>的概率使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。\\n\\n若目标持有<color=#28d9ed>护盾</color>,该技能伤害提升。",
+        "2": "Attacks 2 enemies and has a <color=#28d9ed>20%</color> chance to increase own <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.\\n\\nDamage dealt increases if the target has a <color=#28d9ed>Barrier</color>.",
+        "2_jp": "敵2体にダメージを与え、<color=#28d9ed>20%</color>の確率で自分の<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>を保有している場合、ダメージがUPする。",
+        "2_kr": "적 2인을 공격하고 <color=#28d9ed>20%</color> 확률로 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "2_zh": "攻击2名敌人,并有<color=#28d9ed>20%</color>的概率使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。\\n\\n若目标持有<color=#28d9ed>护盾</color>,该技能伤害提升。",
+        "3": "Attacks 2 enemies and has a <color=#28d9ed>35%</color> chance to increase own <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.\\n\\nDamage dealt increases if the target has a <color=#28d9ed>Barrier</color>.",
+        "3_jp": "敵2体にダメージを与え、<color=#28d9ed>35%</color>の確率で自分の<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>を保有している場合、ダメージがUPする。",
+        "3_kr": "적 2인을 공격하고 <color=#28d9ed>35%</color> 확률로 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "3_zh": "攻击2名敌人,并有<color=#28d9ed>35%</color>的概率使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。\\n\\n若目标持有<color=#28d9ed>护盾</color>,该技能伤害提升。",
+        "4": "Attacks 2 enemies and has a <color=#28d9ed>35%</color> chance to increase own <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.\\n\\nDamage dealt increases if the target has a <color=#28d9ed>Barrier</color>.",
+        "4_jp": "敵2体にダメージを与え、<color=#28d9ed>35%</color>の確率で自分の<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>を保有している場合、ダメージがUPする。",
+        "4_kr": "적 2인을 공격하고 <color=#28d9ed>35%</color> 확률로 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "4_zh": "攻击2名敌人,并有<color=#28d9ed>35%</color>的概率使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。\\n\\n若目标持有<color=#28d9ed>护盾</color>,该技能伤害提升。",
+        "5": "Attacks 2 enemies and has a <color=#28d9ed>50%</color> chance to increase own <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.\\n\\nDamage dealt increases if the target has a <color=#28d9ed>Barrier</color>.",
+        "5_jp": "敵2体にダメージを与え、<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>を保有している場合、ダメージがUPする。",
+        "5_kr": "적 2인을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "5_zh": "攻击2名敌人,并有<color=#28d9ed>50%</color>的概率使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。\\n\\n若目标持有<color=#28d9ed>护盾</color>,该技能伤害提升。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -143,10 +162,32 @@
       "name_jp": "破裂の人形",
       "name_kr": "파열의 인형",
       "name_zh": "破裂人偶",
-      "true_desc": "Attacks all enemies and reduces the <color=#28d9ed>Action Points</color> of all enemies by <color=#28d9ed>20</color>.\\n\\nIf the target has a <color=#28d9ed>barrier</color>, damage dealt increases.",
+      "true_desc": "Attacks all enemies and reduces the <color=#28d9ed>Action Points</color> of all enemies by <color=#28d9ed>20</color>.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
       "true_desc_jp": "敵全体にダメージを与える。敵全体の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>DOWNさせる。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
       "true_desc_kr": "적 전체를 공격하고, 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 감소시킵니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
       "true_desc_zh": "攻击全体敌人,并使全体敌人的<color=#28d9ed>AP</color>降低<color=#28d9ed>20</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and reduces the <color=#28d9ed>Action Points</color> of all enemies by <color=#28d9ed>20</color>.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "1_jp": "敵全体にダメージを与える。敵全体の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>DOWNさせる。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "1_kr": "적 전체를 공격하고, 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 감소시킵니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "1_zh": "攻击全体敌人,并使全体敌人的<color=#28d9ed>AP</color>降低<color=#28d9ed>20</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+        "2": "Attacks all enemies and reduces the <color=#28d9ed>Action Points</color> of all enemies by <color=#28d9ed>20</color>.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "2_jp": "敵全体にダメージを与える。敵全体の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>DOWNさせる。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "2_kr": "적 전체를 공격하고, 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 감소시킵니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "2_zh": "攻击全体敌人,并使全体敌人的<color=#28d9ed>AP</color>降低<color=#28d9ed>20</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+        "3": "Attacks all enemies and reduces the <color=#28d9ed>Action Points</color> of all enemies by <color=#28d9ed>30</color>.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "3_jp": "敵全体にダメージを与える。敵全体の<color=#28d9ed>AP</color>を<color=#28d9ed>30</color>DOWNさせる。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "3_kr": "적 전체를 공격하고, 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>30</color> 감소시킵니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "3_zh": "攻击全体敌人,并使全体敌人的<color=#28d9ed>AP</color>降低<color=#28d9ed>30</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+        "4": "Attacks all enemies and reduces the <color=#28d9ed>Action Points</color> of all enemies by <color=#28d9ed>30</color>.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "4_jp": "敵全体にダメージを与える。敵全体の<color=#28d9ed>AP</color>を<color=#28d9ed>30</color>DOWNさせる。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "4_kr": "적 전체를 공격하고, 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>30</color> 감소시킵니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "4_zh": "攻击全体敌人,并使全体敌人的<color=#28d9ed>AP</color>降低<color=#28d9ed>30</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+        "5": "Attacks all enemies and reduces the <color=#28d9ed>Action Points</color> of all enemies by <color=#28d9ed>40</color>.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "5_jp": "敵全体にダメージを与える。敵全体の<color=#28d9ed>AP</color>を<color=#28d9ed>40</color>DOWNさせる。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "5_kr": "적 전체를 공격하고, 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>40</color> 감소시킵니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "5_zh": "攻击全体敌人,并使全体敌人的<color=#28d9ed>AP</color>降低<color=#28d9ed>40</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -205,13 +246,15 @@
           "伤害量+20%"
         ]
       },
-      "wgr": 1,
       "cd": "4",
+      "wgr": 1,
       "buff": [],
       "debuff": [
         "BT_AP_CHARGE",
         "BT_REMOVE_BUFF"
       ],
+      "offensive": true,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage\\n+1 buff removed",
@@ -243,9 +286,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "multi"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "7003",
@@ -255,10 +296,32 @@
       "name_jp": "ワールド・イズ・アワーズ",
       "name_kr": "더 월드 이즈 아워즈",
       "name_zh": "世界属于我们",
-      "true_desc": "Attacks all enemies and recovers the <color=#28d9ed>Action Points</color> of the caster by <color=#28d9ed>35</color> for each target damaged.\\n\\nIf the target has a <color=#28d9ed>barrier</color>, damage dealt increases.",
+      "true_desc": "Attacks all enemies and recovers the <color=#28d9ed>Action Points</color> of the caster by <color=#28d9ed>35</color> for each target damaged.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
       "true_desc_jp": "敵全体にダメージを与え、ダメージを与えた対象1体ごとに、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>35</color>獲得する。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
       "true_desc_kr": "적 전체를 공격하고, 피해를 준 대상마다 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>35</color> 회복합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
       "true_desc_zh": "攻击全体敌人,每对1个目标造成伤害,则使自身<color=#28d9ed>AP</color>恢复<color=#28d9ed>35</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and recovers the <color=#28d9ed>Action Points</color> of the caster by <color=#28d9ed>35</color> for each target damaged.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "1_jp": "敵全体にダメージを与え、ダメージを与えた対象1体ごとに、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>35</color>獲得する。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "1_kr": "적 전체를 공격하고, 피해를 준 대상마다 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>35</color> 회복합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "1_zh": "攻击全体敌人,每对1个目标造成伤害,则使自身<color=#28d9ed>AP</color>恢复<color=#28d9ed>35</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+        "2": "Attacks all enemies and recovers the <color=#28d9ed>Action Points</color> of the caster by <color=#28d9ed>35</color> for each target damaged.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "2_jp": "敵全体にダメージを与え、ダメージを与えた対象1体ごとに、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>35</color>獲得する。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "2_kr": "적 전체를 공격하고, 피해를 준 대상마다 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>35</color> 회복합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "2_zh": "攻击全体敌人,每对1个目标造成伤害,则使自身<color=#28d9ed>AP</color>恢复<color=#28d9ed>35</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+        "3": "Attacks all enemies and recovers the <color=#28d9ed>Action Points</color> of the caster by <color=#28d9ed>35</color> for each target damaged.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "3_jp": "敵全体にダメージを与え、ダメージを与えた対象1体ごとに、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>35</color>獲得する。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "3_kr": "적 전체를 공격하고, 피해를 준 대상마다 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>35</color> 회복합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "3_zh": "攻击全体敌人,每对1个目标造成伤害,则使自身<color=#28d9ed>AP</color>恢复<color=#28d9ed>35</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+        "4": "Attacks all enemies and recovers the <color=#28d9ed>Action Points</color> of the caster by <color=#28d9ed>35</color> for each target damaged.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "4_jp": "敵全体にダメージを与え、ダメージを与えた対象1体ごとに、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>35</color>獲得する。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "4_kr": "적 전체를 공격하고, 피해를 준 대상마다 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>35</color> 회복합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "4_zh": "攻击全体敌人,每对1个目标造成伤害,则使自身<color=#28d9ed>AP</color>恢复<color=#28d9ed>35</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。",
+        "5": "Attacks all enemies.\\nAfter attacking, grants <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>1 turn(s)</color> and recovers the <color=#28d9ed>Action Points</color> of the caster by <color=#28d9ed>35</color> for each target damaged.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "5_jp": "敵全体にダメージを与える。\\n攻撃後、自分に<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与し、ダメージを与えた対象1体ごとに、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>35</color>獲得する。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "5_kr": "적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>무적</color>을 획득하고, 피해를 준 대상마다 <color=#28d9ed>AP</color>를 <color=#28d9ed>35</color> 회복합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "5_zh": "攻击全体敌人。\\n攻击后,获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1</color>回合,每对1个目标造成伤害,则使<color=#28d9ed>AP</color>恢复<color=#28d9ed>35</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -335,10 +398,32 @@
       "name_jp": "チェーンパッシブ",
       "name_kr": "체인 패시브",
       "name_zh": "连携被动",
-      "true_desc": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: If the target has a <color=#28d9ed>barrier</color>, damage dealt increases.",
+      "true_desc": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: If the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
       "true_desc_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>シールド</color>状態の対象に与えるダメージがUPする。",
       "true_desc_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>실드</color>를 보유한 대상에게 입히는 피해가 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:对附带<color=#28d9ed>护盾</color>效果的目标造成的伤害提升。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: If the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>シールド</color>状態の対象に与えるダメージがUPする。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>실드</color>를 보유한 대상에게 입히는 피해가 증가합니다.",
+        "1_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:对附带<color=#28d9ed>护盾</color>效果的目标造成的伤害提升。",
+        "2": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: If the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>シールド</color>状態の対象に与えるダメージがUPする。",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>실드</color>를 보유한 대상에게 입히는 피해가 증가합니다.",
+        "2_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:对附带<color=#28d9ed>护盾</color>效果的目标造成的伤害提升。",
+        "3": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: If the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>シールド</color>状態の対象に与えるダメージがUPする。",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>실드</color>를 보유한 대상에게 입히는 피해가 증가합니다.",
+        "3_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:对附带<color=#28d9ed>护盾</color>效果的目标造成的伤害提升。",
+        "4": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: If the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>シールド</color>状態の対象に与えるダメージがUPする。",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>실드</color>를 보유한 대상에게 입히는 피해가 증가합니다.",
+        "4_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:对附带<color=#28d9ed>护盾</color>效果的目标造成的伤害提升。",
+        "5": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: If the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>シールド</color>状態の対象に与えるダメージがUPする。",
+        "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>실드</color>를 보유한 대상에게 입히는 피해가 증가합니다.",
+        "5_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:对附带<color=#28d9ed>护盾</color>效果的目标造成的伤害提升。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",

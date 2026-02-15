@@ -11,9 +11,6 @@
   "rank": "B",
   "rank_pvp": "B",
   "role": "support",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 2
@@ -68,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
       "true_desc_kr": "적 대상을 공격하고 <color=#28d9ed>1턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
       "true_desc_zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n该技能根据防御力而非攻击力等比提升伤害。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color> proportional to the caster's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "1_jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "1_kr": "적 대상을 공격하고 <color=#28d9ed>1턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "1_zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n该技能根据防御力而非攻击力等比提升伤害。",
+        "2": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color> proportional to the caster's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "2_jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "2_kr": "적 대상을 공격하고 <color=#28d9ed>1턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "2_zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n该技能根据防御力而非攻击力等比提升伤害。",
+        "3": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color> proportional to the caster's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "3_jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "3_kr": "적 대상을 공격하고 <color=#28d9ed>1턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "3_zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n该技能根据防御力而非攻击力等比提升伤害。",
+        "4": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>2 turn(s)</color> proportional to the caster's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "4_jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "4_kr": "적 대상을 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "4_zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。\\n该技能根据防御力而非攻击力等比提升伤害。",
+        "5": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>2 turn(s)</color> proportional to the caster's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "5_jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "5_kr": "적 대상을 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "5_zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。\\n该技能根据防御力而非攻击力等比提升伤害。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -132,6 +151,8 @@
         "BT_SHIELD_BASED_CASTER"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Grants Barrier to all allies (proportional to Defense)",
@@ -163,9 +184,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "7702",
@@ -179,6 +198,28 @@
       "true_desc_jp": "(発動効果)味方全体の防御力を<color=#28d9ed>1ターン</color>の間UPさせ、敵全体にダメージを与える。<color=#28d9ed>水属性</color>の敵にカッパの防御力分の固定ダメージを追加で与える。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
       "true_desc_kr": "(발동 효과) 아군의 방어력을 <color=#28d9ed>1턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
       "true_desc_zh": "(触发效果)使友军防御力提升,持续<color=#28d9ed>1回合</color>后攻击全体敌人。对<color=#28d9ed>水属性</color>敌人额外造成相当于卡帕防御力数值的固定伤害。\\n该技能根据防御力而非攻击力等比提升伤害。",
+      "true_desc_levels": {
+        "1": "(Triggered Effect) Grants increased Defense to all allies for <color=#28d9ed>1 turn(s)</color>, then attacks all enemies. <color=#28d9ed>Water</color> enemies take additional fixed damage equal to Kappa's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "1_jp": "(発動効果)味方全体の防御力を<color=#28d9ed>1ターン</color>の間UPさせ、敵全体にダメージを与える。<color=#28d9ed>水属性</color>の敵にカッパの防御力分の固定ダメージを追加で与える。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "1_kr": "(발동 효과) 아군의 방어력을 <color=#28d9ed>1턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "1_zh": "(触发效果)使友军防御力提升,持续<color=#28d9ed>1回合</color>后攻击全体敌人。对<color=#28d9ed>水属性</color>敌人额外造成相当于卡帕防御力数值的固定伤害。\\n该技能根据防御力而非攻击力等比提升伤害。",
+        "2": "(Triggered Effect) Grants increased Defense to all allies for <color=#28d9ed>1 turn(s)</color>, then attacks all enemies. <color=#28d9ed>Water</color> enemies take additional fixed damage equal to Kappa's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "2_jp": "(発動効果)味方全体の防御力を<color=#28d9ed>1ターン</color>の間UPさせ、敵全体にダメージを与える。<color=#28d9ed>水属性</color>の敵にカッパの防御力分の固定ダメージを追加で与える。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "2_kr": "(발동 효과) 아군의 방어력을 <color=#28d9ed>1턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "2_zh": "(触发效果)使友军防御力提升,持续<color=#28d9ed>1回合</color>后攻击全体敌人。对<color=#28d9ed>水属性</color>敌人额外造成相当于卡帕防御力数值的固定伤害。\\n该技能根据防御力而非攻击力等比提升伤害。",
+        "3": "(Triggered Effect) Grants increased Defense to all allies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. <color=#28d9ed>Water</color> enemies take additional fixed damage equal to Kappa's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "3_jp": "(発動効果)味方全体の防御力を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。<color=#28d9ed>水属性</color>の敵にカッパの防御力分の固定ダメージを追加で与える。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "3_kr": "(발동 효과) 아군의 방어력을 <color=#28d9ed>2턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "3_zh": "(触发效果)使友军防御力提升,持续<color=#28d9ed>2回合</color>后攻击全体敌人。对<color=#28d9ed>水属性</color>敌人额外造成相当于卡帕防御力数值的固定伤害。\\n该技能根据防御力而非攻击力等比提升伤害。",
+        "4": "(Triggered Effect) Grants increased Defense to all allies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. <color=#28d9ed>Water</color> enemies take additional fixed damage equal to Kappa's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "4_jp": "(発動効果)味方全体の防御力を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。<color=#28d9ed>水属性</color>の敵にカッパの防御力分の固定ダメージを追加で与える。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "4_kr": "(발동 효과) 아군의 방어력을 <color=#28d9ed>2턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "4_zh": "(触发效果)使友军防御力提升,持续<color=#28d9ed>2回合</color>后攻击全体敌人。对<color=#28d9ed>水属性</color>敌人额外造成相当于卡帕防御力数值的固定伤害。\\n该技能根据防御力而非攻击力等比提升伤害。",
+        "5": "(Triggered Effect) Grants increased Defense to all allies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. <color=#28d9ed>Water</color> enemies take additional fixed damage equal to Kappa's Defense.\\nDamage dealt increases proportional to Defense instead of Attack, and additionally increases proportional to the target's missing Health.",
+        "5_jp": "(発動効果)味方全体の防御力を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。<color=#28d9ed>水属性</color>の敵にカッパの防御力分の固定ダメージを追加で与える。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。また、対象の残りHPが低いほどダメージがUPする。",
+        "5_kr": "(발동 효과) 아군의 방어력을 <color=#28d9ed>2턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다. 추가로 대상의 잃은 체력 비율에 비례하여 피해가 증가합니다.",
+        "5_zh": "(触发效果)使友军防御力提升,持续<color=#28d9ed>2回合</color>后攻击全体敌人。对<color=#28d9ed>水属性</color>敌人额外造成相当于卡帕防御力数值的固定伤害。\\n该技能根据防御力而非攻击力等比提升伤害。根据目标损失的生命值比例额外等比提升伤害。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -240,8 +281,7 @@
       "cd": "6",
       "wgr": 920,
       "buff": [
-        "BT_STAT|ST_DEF",
-        "BT_EXTRA_ATTACK_ON_TURN_END"
+        "BT_STAT|ST_DEF"
       ],
       "debuff": [
         "BT_REVERSE_HEAL_BASED_CASTER"
@@ -261,6 +301,28 @@
       "true_desc_jp": "自分と対象のすべての強化効果と弱体効果を<color=#28d9ed>すべて</color>解除し、敵単体にダメージを与える。\\n対象が<color=#28d9ed>水属性</color>、または<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【追放】</color>を使用する。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージが大幅にUPする。",
       "true_desc_kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 크게 증가합니다.",
       "true_desc_zh": "解除自身和目标附带的<color=#28d9ed>所有</color>强化效果和弱化效果,并攻击敌人。\\n敌人为<color=#28d9ed>水属性</color>或被<color=#28d9ed>击杀</color>时使用<color=#28d9ed>驱逐</color>。\\n该技能根据防御力而非攻击力等比大幅提升\\n伤害。",
+      "true_desc_levels": {
+        "1": "Removes <color=#28d9ed>all</color> buffs and debuffs from the caster and target, and attacks an enemy.\\nWhen the enemy is <color=#28d9ed>Water</color> element or <color=#28d9ed>killed</color>, activates <color=#28d9ed>Exile</color>.\\nDamage dealt greatly increases proportional to Defense instead of Attack.",
+        "1_jp": "自分と対象のすべての強化効果と弱体効果を<color=#28d9ed>すべて</color>解除し、敵単体にダメージを与える。\\n対象が<color=#28d9ed>水属性</color>、または<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【追放】</color>を使用する。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージが大幅にUPする。",
+        "1_kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 크게 증가합니다.",
+        "1_zh": "解除自身和目标附带的<color=#28d9ed>所有</color>强化效果和弱化效果,并攻击敌人。\\n敌人为<color=#28d9ed>水属性</color>或被<color=#28d9ed>击杀</color>时使用<color=#28d9ed>驱逐</color>。\\n该技能根据防御力而非攻击力等比大幅提升\\n伤害。",
+        "2": "Removes <color=#28d9ed>all</color> buffs and debuffs from the caster and target, and attacks an enemy.\\nWhen the enemy is <color=#28d9ed>Water</color> element or <color=#28d9ed>killed</color>, activates <color=#28d9ed>Exile</color>.\\nDamage dealt greatly increases proportional to Defense instead of Attack.",
+        "2_jp": "自分と対象のすべての強化効果と弱体効果を<color=#28d9ed>すべて</color>解除し、敵単体にダメージを与える。\\n対象が<color=#28d9ed>水属性</color>、または<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【追放】</color>を使用する。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージが大幅にUPする。",
+        "2_kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 크게 증가합니다.",
+        "2_zh": "解除自身和目标附带的<color=#28d9ed>所有</color>强化效果和弱化效果,并攻击敌人。\\n敌人为<color=#28d9ed>水属性</color>或被<color=#28d9ed>击杀</color>时使用<color=#28d9ed>驱逐</color>。\\n该技能根据防御力而非攻击力等比大幅提升\\n伤害。",
+        "3": "Removes <color=#28d9ed>all</color> buffs and debuffs from the caster and target, and attacks an enemy. (Ignores the target's Resilience)\\nWhen the enemy is <color=#28d9ed>Water</color> element or <color=#28d9ed>killed</color>, activates <color=#28d9ed>Exile</color>.\\nDamage dealt greatly increases proportional to Defense instead of Attack.",
+        "3_jp": "自分と対象のすべての強化効果と弱体効果を<color=#28d9ed>すべて</color>解除し、敵単体にダメージを与える。(対象の効果抵抗を無視する)\\n対象が<color=#28d9ed>水属性</color>、または<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【追放】</color>を使用する。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージが大幅にUPする。",
+        "3_kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.(대상의 효과 저항 무시)\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 크게 증가합니다.",
+        "3_zh": "解除自身和目标附带的<color=#28d9ed>所有</color>强化效果和弱化效果,并攻击敌人。(无视目标效果抵抗)\\n敌人为<color=#28d9ed>水属性</color>或被<color=#28d9ed>击杀</color>时使用<color=#28d9ed>驱逐</color>。\\n该技能根据防御力而非攻击力等比大幅提升\\n伤害。",
+        "4": "Removes <color=#28d9ed>all</color> buffs and debuffs from the caster and target, and attacks an enemy. (Ignores the target's Resilience)\\nWhen the enemy is <color=#28d9ed>Water</color> element or <color=#28d9ed>killed</color>, activates <color=#28d9ed>Exile</color>.\\nDamage dealt greatly increases proportional to Defense instead of Attack.",
+        "4_jp": "自分と対象のすべての強化効果と弱体効果を<color=#28d9ed>すべて</color>解除し、敵単体にダメージを与える。(対象の効果抵抗を無視する)\\n対象が<color=#28d9ed>水属性</color>、または<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【追放】</color>を使用する。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージが大幅にUPする。",
+        "4_kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.(대상의 효과 저항 무시)\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 크게 증가합니다.",
+        "4_zh": "解除自身和目标附带的<color=#28d9ed>所有</color>强化效果和弱化效果,并攻击敌人。(无视目标效果抵抗)\\n敌人为<color=#28d9ed>水属性</color>或被<color=#28d9ed>击杀</color>时使用<color=#28d9ed>驱逐</color>。\\n该技能根据防御力而非攻击力等比大幅提升\\n伤害。",
+        "5": "Removes <color=#28d9ed>all</color> buffs and debuffs from the caster and target, and attacks an enemy. (Ignores the target's Resilience)\\nWhen the enemy is <color=#28d9ed>Water</color> element or <color=#28d9ed>killed</color>, activates <color=#28d9ed>Exile</color>.\\nDamage dealt greatly increases proportional to Defense instead of Attack, and additionally increases proportional to the target's missing Health.",
+        "5_jp": "自分と対象のすべての強化効果と弱体効果を<color=#28d9ed>すべて</color>解除し、敵単体にダメージを与える。(対象の効果抵抗を無視する)\\n対象が<color=#28d9ed>水属性</color>、または<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【追放】</color>を使用する。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージが大幅にUPする。また、対象の残りHPが低いほどダメージがUPする。",
+        "5_kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.(대상의 효과 저항 무시)\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 크게 증가하며, 추가로 대상의 잃은 체력 비율에 비례하여 피해가 증가합니다.",
+        "5_zh": "解除自身和目标附带的<color=#28d9ed>所有</color>强化效果和弱化效果,并攻击敌人。(无视目标效果抵抗)\\n敌人为<color=#28d9ed>水属性</color>或被<color=#28d9ed>击杀</color>时使用<color=#28d9ed>驱逐</color>。\\n该技能根据防御力而非攻击力等比大幅提升伤害,且根据目标损失的生命值比例额外等比提升伤害。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -342,6 +404,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하고, 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升自身连携技能攻击的伤害,并在攻击后使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Skill Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and after attacking, grants increased <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하고, 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升自身连携技能攻击的伤害,并在攻击后使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "2": "<color=#ffd732>Skill Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and after attacking, grants increased <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하고, 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升自身连携技能攻击的伤害,并在攻击后使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "3": "<color=#ffd732>Skill Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and after attacking, grants increased <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하고, 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升自身连携技能攻击的伤害,并在攻击后使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "4": "<color=#ffd732>Skill Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and after attacking, grants increased <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하고, 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升自身连携技能攻击的伤害,并在攻击后使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "5": "<color=#ffd732>Skill Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and after attacking, grants increased <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のチェーンスキルが攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、攻撃後、<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하고, 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升自身连携技能攻击的伤害,并在攻击后使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",

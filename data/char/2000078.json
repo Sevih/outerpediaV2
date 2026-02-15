@@ -12,8 +12,7 @@
   "rank_pvp": "D",
   "role": "dps",
   "tags": [
-    "ignore-defense",
-    "free"
+    "ignore-defense"
   ],
   "skill_priority": {
     "First": {
@@ -31,13 +30,11 @@
   "video": "kW0h_1-SYv4",
   "VoiceActor": "VA. Anjali Kunapaneni",
   "VoiceActor_jp": "CV. 高柳知葉",
-  "VoiceActor_kr": "CV. Anjali Kunapaneni",
+  "VoiceActor_kr": "CV. 유영",
   "VoiceActor_zh": "CV. 高柳知叶",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -47,15 +44,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 공격력 +5%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军攻击力+5%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+5% Ally Team Attack\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方の攻撃力+5%\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 공격력 +5%\n입장 시 AP +25",
@@ -74,6 +68,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\nこのスキルは<color=#28d9ed>隠れ身</color>状態の場合、ダメージがUPする。",
       "true_desc_kr": "적 대상을 공격하고 <color=#28d9ed>25%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n이 스킬은 <color=#28d9ed>은신</color> 보유 시 피해량이 증가합니다.",
       "true_desc_zh": "攻击敌人目标,并有<color=#28d9ed>25%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n附带<color=#28d9ed>隐身</color>效果时,该技能伤害量提升。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy, and has a <color=#28d9ed>25%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when granted <color=#28d9ed>Stealth</color>.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\nこのスキルは<color=#28d9ed>隠れ身</color>状態の場合、ダメージがUPする。",
+        "1_kr": "적 대상을 공격하고 <color=#28d9ed>25%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n이 스킬은 <color=#28d9ed>은신</color> 보유 시 피해량이 증가합니다.",
+        "1_zh": "攻击敌人目标,并有<color=#28d9ed>25%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n附带<color=#28d9ed>隐身</color>效果时,该技能伤害量提升。",
+        "2": "Attacks an enemy, and has a <color=#28d9ed>25%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when granted <color=#28d9ed>Stealth</color>.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\nこのスキルは<color=#28d9ed>隠れ身</color>状態の場合、ダメージがUPする。",
+        "2_kr": "적 대상을 공격하고 <color=#28d9ed>25%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n이 스킬은 <color=#28d9ed>은신</color> 보유 시 피해량이 증가합니다.",
+        "2_zh": "攻击敌人目标,并有<color=#28d9ed>25%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n附带<color=#28d9ed>隐身</color>效果时,该技能伤害量提升。",
+        "3": "Attacks an enemy, and has a <color=#28d9ed>25%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when granted <color=#28d9ed>Stealth</color>.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\nこのスキルは<color=#28d9ed>隠れ身</color>状態の場合、ダメージがUPする。",
+        "3_kr": "적 대상을 공격하고 <color=#28d9ed>25%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n이 스킬은 <color=#28d9ed>은신</color> 보유 시 피해량이 증가합니다.",
+        "3_zh": "攻击敌人目标,并有<color=#28d9ed>25%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n附带<color=#28d9ed>隐身</color>效果时,该技能伤害量提升。",
+        "4": "Attacks an enemy, and has a <color=#28d9ed>25%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when granted <color=#28d9ed>Stealth</color>.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\nこのスキルは<color=#28d9ed>隠れ身</color>状態の場合、ダメージがUPする。",
+        "4_kr": "적 대상을 공격하고 <color=#28d9ed>25%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n이 스킬은 <color=#28d9ed>은신</color> 보유 시 피해량이 증가합니다.",
+        "4_zh": "攻击敌人目标,并有<color=#28d9ed>25%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n附带<color=#28d9ed>隐身</color>效果时,该技能伤害量提升。",
+        "5": "Attacks an enemy, and has a <color=#28d9ed>40%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases when granted <color=#28d9ed>Stealth</color>.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\nこのスキルは<color=#28d9ed>隠れ身</color>状態の場合、ダメージがUPする。",
+        "5_kr": "적 대상을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n이 스킬은 <color=#28d9ed>은신</color> 보유 시 피해량이 증가합니다.",
+        "5_zh": "攻击敌人目标,并有<color=#28d9ed>40%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n附带<color=#28d9ed>隐身</color>效果时,该技能伤害量提升。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -149,6 +165,28 @@
       "true_desc_jp": "自分の弱体効果を<color=#28d9ed>1</color>個解除し、<color=#28d9ed>スピード</color>UP効果を<color=#28d9ed>2ターン</color>の間付与した後、敵単体にダメージを与える。自分に<color=#28d9ed>隠れ身</color>効果を<color=#28d9ed>1ターン</color>の間付与する。",
       "true_desc_kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>1</color>개 제거하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color> 증가 효과를 부여한 뒤 적 대상을 공격합니다. 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>은신</color> 효과를 부여합니다.",
       "true_desc_zh": "解除自身附带的<color=#28d9ed>1</color>个弱化效果,并获得<color=#28d9ed>速度</color>提升效果,持续<color=#28d9ed>2回合</color>后,攻击敌人目标。使自身获得<color=#28d9ed>隐身</color>效果,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Removes <color=#28d9ed>1</color> debuff(s) from the caster and grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy. Grants <color=#28d9ed>Stealth</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "自分の弱体効果を<color=#28d9ed>1</color>個解除し、<color=#28d9ed>スピード</color>UP効果を<color=#28d9ed>2ターン</color>の間付与した後、敵単体にダメージを与える。自分に<color=#28d9ed>隠れ身</color>効果を<color=#28d9ed>1ターン</color>の間付与する。",
+        "1_kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>1</color>개 제거하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color> 증가 효과를 부여한 뒤 적 대상을 공격합니다. 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>은신</color> 효과를 부여합니다.",
+        "1_zh": "解除自身附带的<color=#28d9ed>1</color>个弱化效果,并获得<color=#28d9ed>速度</color>提升效果,持续<color=#28d9ed>2回合</color>后,攻击敌人目标。使自身获得<color=#28d9ed>隐身</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "2": "Removes <color=#28d9ed>1</color> debuff(s) from the caster and grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy. Grants <color=#28d9ed>Stealth</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "自分の弱体効果を<color=#28d9ed>1</color>個解除し、<color=#28d9ed>スピード</color>UP効果を<color=#28d9ed>2ターン</color>の間付与した後、敵単体にダメージを与える。自分に<color=#28d9ed>隠れ身</color>効果を<color=#28d9ed>1ターン</color>の間付与する。",
+        "2_kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>1</color>개 제거하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color> 증가 효과를 부여한 뒤 적 대상을 공격합니다. 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>은신</color> 효과를 부여합니다.",
+        "2_zh": "解除自身附带的<color=#28d9ed>1</color>个弱化效果,并获得<color=#28d9ed>速度</color>提升效果,持续<color=#28d9ed>2回合</color>后,攻击敌人目标。使自身获得<color=#28d9ed>隐身</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "3": "Removes <color=#28d9ed>1</color> debuff(s) from the caster and grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy. Grants <color=#28d9ed>Stealth</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "自分の弱体効果を<color=#28d9ed>1</color>個解除し、<color=#28d9ed>スピード</color>UP効果を<color=#28d9ed>2ターン</color>の間付与した後、敵単体にダメージを与える。自分に<color=#28d9ed>隠れ身</color>効果を<color=#28d9ed>1ターン</color>の間付与する。",
+        "3_kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>1</color>개 제거하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color> 증가 효과를 부여한 뒤 적 대상을 공격합니다. 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>은신</color> 효과를 부여합니다.",
+        "3_zh": "解除自身附带的<color=#28d9ed>1</color>个弱化效果,并获得<color=#28d9ed>速度</color>提升效果,持续<color=#28d9ed>2回合</color>后,攻击敌人目标。使自身获得<color=#28d9ed>隐身</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "4": "Removes <color=#28d9ed>1</color> debuff(s) from the caster and grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy. Grants <color=#28d9ed>Stealth</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "自分の弱体効果を<color=#28d9ed>1</color>個解除し、<color=#28d9ed>スピード</color>UP効果を<color=#28d9ed>2ターン</color>の間付与した後、敵単体にダメージを与える。自分に<color=#28d9ed>隠れ身</color>効果を<color=#28d9ed>1ターン</color>の間付与する。",
+        "4_kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>1</color>개 제거하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color> 증가 효과를 부여한 뒤 적 대상을 공격합니다. 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>은신</color> 효과를 부여합니다.",
+        "4_zh": "解除自身附带的<color=#28d9ed>1</color>个弱化效果,并获得<color=#28d9ed>速度</color>提升效果,持续<color=#28d9ed>2回合</color>后,攻击敌人目标。使自身获得<color=#28d9ed>隐身</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "5": "Removes <color=#28d9ed>all</color> debuffs from the caster and grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy. Grants <color=#28d9ed>Stealth</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "自分の弱体効果を<color=#28d9ed>すべて</color>解除し、<color=#28d9ed>スピード</color>UP効果を<color=#28d9ed>2ターン</color>の間付与した後、敵単体にダメージを与える。自分に<color=#28d9ed>隠れ身</color>効果を<color=#28d9ed>1ターン</color>の間付与する。",
+        "5_kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>모두</color> 제거하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color> 증가 효과를 부여한 뒤 적 대상을 공격합니다. 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>은신</color> 효과를 부여합니다.",
+        "5_zh": "解除自身附带的<color=#28d9ed>所有</color>弱化效果,并获得<color=#28d9ed>速度</color>提升效果,持续<color=#28d9ed>2回合</color>后,攻击敌人目标。使自身获得<color=#28d9ed>隐身</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -203,14 +241,16 @@
           "解除自身所有弱化效果"
         ]
       },
-      "wgr": 1,
       "cd": "4",
+      "wgr": 1,
       "buff": [
         "BT_REMOVE_DEBUFF",
         "BT_STAT|ST_SPEED",
         "BT_STEALTHED"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage",
@@ -242,9 +282,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "7803",
@@ -258,6 +296,28 @@
       "true_desc_jp": "敵単体にダメージを与え、敵を倒した場合、<color=#28d9ed>追加ターン</color>を獲得する。対象がボスの場合、防御力を<color=#28d9ed>50%</color>無視する。<color=#28d9ed>隠れ身</color>状態の場合、このスキルで倒れた敵は復活と蘇生ができなくなる。",
       "true_desc_kr": "적을 공격하고, 적을 처치 했을 때 <color=#28d9ed>추가 턴</color>을 획득합니다. 보스 대상으로 공격 시 방어력을 <color=#28d9ed>50%</color>무시 합니다. <color=#28d9ed>은신</color> 보유 중 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
       "true_desc_zh": "攻击敌人,并击杀敌人时,获得<color=#28d9ed>额外回合</color>。以首领为目标攻击时,无视<color=#28d9ed>50%</color>的防御力。因该技能死亡且附带<color=#28d9ed>隐身</color>效果的敌人无法触发复活与苏醒效果。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy, and when the enemy is killed, grants an <color=#28d9ed>extra turn</color>. When attacking a Boss, ignores <color=#28d9ed>50%</color> of the target's Defense. When granted <color=#28d9ed>Stealth</color>, enemies killed by this skill cannot be Resurrected or Revived.",
+        "1_jp": "敵単体にダメージを与え、敵を倒した場合、<color=#28d9ed>追加ターン</color>を獲得する。対象がボスの場合、防御力を<color=#28d9ed>50%</color>無視する。<color=#28d9ed>隠れ身</color>状態の場合、このスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "1_kr": "적을 공격하고, 적을 처치 했을 때 <color=#28d9ed>추가 턴</color>을 획득합니다. 보스 대상으로 공격 시 방어력을 <color=#28d9ed>50%</color>무시 합니다. <color=#28d9ed>은신</color> 보유 중 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "1_zh": "攻击敌人,并击杀敌人时,获得<color=#28d9ed>额外回合</color>。以首领为目标攻击时,无视<color=#28d9ed>50%</color>的防御力。因该技能死亡且附带<color=#28d9ed>隐身</color>效果的敌人无法触发复活与苏醒效果。",
+        "2": "Attacks an enemy, and when the enemy is killed, grants an <color=#28d9ed>extra turn</color>. When attacking a Boss, ignores <color=#28d9ed>50%</color> of the target's Defense. When granted <color=#28d9ed>Stealth</color>, enemies killed by this skill cannot be Resurrected or Revived.",
+        "2_jp": "敵単体にダメージを与え、敵を倒した場合、<color=#28d9ed>追加ターン</color>を獲得する。対象がボスの場合、防御力を<color=#28d9ed>50%</color>無視する。<color=#28d9ed>隠れ身</color>状態の場合、このスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "2_kr": "적을 공격하고, 적을 처치 했을 때 <color=#28d9ed>추가 턴</color>을 획득합니다. 보스 대상으로 공격 시 방어력을 <color=#28d9ed>50%</color>무시 합니다. <color=#28d9ed>은신</color> 보유 중 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "2_zh": "攻击敌人,并击杀敌人时,获得<color=#28d9ed>额外回合</color>。以首领为目标攻击时,无视<color=#28d9ed>50%</color>的防御力。因该技能死亡且附带<color=#28d9ed>隐身</color>效果的敌人无法触发复活与苏醒效果。",
+        "3": "Attacks an enemy, and when the enemy is killed, grants an <color=#28d9ed>extra turn</color>. When attacking a Boss, ignores <color=#28d9ed>75%</color> of the target's Defense. When granted <color=#28d9ed>Stealth</color>, enemies killed by this skill cannot be Resurrected or Revived.",
+        "3_jp": "敵単体にダメージを与え、敵を倒した場合、<color=#28d9ed>追加ターン</color>を獲得する。対象がボスの場合、防御力を<color=#28d9ed>75%</color>無視する。<color=#28d9ed>隠れ身</color>状態の場合、このスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "3_kr": "적을 공격하고, 적을 처치 했을 때 <color=#28d9ed>추가 턴</color>을 획득합니다. 보스 대상으로 공격 시 방어력을 <color=#28d9ed>75%</color>무시 합니다. <color=#28d9ed>은신</color> 보유 중 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "3_zh": "攻击敌人,并击杀敌人时,获得<color=#28d9ed>额外回合</color>。以首领为目标攻击时,无视<color=#28d9ed>75%</color>的防御力。因该技能死亡且附带<color=#28d9ed>隐身</color>效果的敌人无法触发复活与苏醒效果。",
+        "4": "Attacks an enemy, and when the enemy is killed, grants an <color=#28d9ed>extra turn</color>. When attacking a Boss, ignores <color=#28d9ed>75%</color> of the target's Defense. When granted <color=#28d9ed>Stealth</color>, enemies killed by this skill cannot be Resurrected or Revived.",
+        "4_jp": "敵単体にダメージを与え、敵を倒した場合、<color=#28d9ed>追加ターン</color>を獲得する。対象がボスの場合、防御力を<color=#28d9ed>75%</color>無視する。<color=#28d9ed>隠れ身</color>状態の場合、このスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "4_kr": "적을 공격하고, 적을 처치 했을 때 <color=#28d9ed>추가 턴</color>을 획득합니다. 보스 대상으로 공격 시 방어력을 <color=#28d9ed>75%</color>무시 합니다. <color=#28d9ed>은신</color> 보유 중 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "4_zh": "攻击敌人,并击杀敌人时,获得<color=#28d9ed>额外回合</color>。以首领为目标攻击时,无视<color=#28d9ed>75%</color>的防御力。因该技能死亡且附带<color=#28d9ed>隐身</color>效果的敌人无法触发复活与苏醒效果。",
+        "5": "Attacks an enemy, and when the enemy is killed, grants an <color=#28d9ed>extra turn</color>. When attacking a Boss, ignores <color=#28d9ed>100%</color> of the target's Defense. When granted <color=#28d9ed>Stealth</color>, enemies killed by this skill cannot be Resurrected or Revived.",
+        "5_jp": "敵単体にダメージを与え、敵を倒した場合、<color=#28d9ed>追加ターン</color>を獲得する。対象がボスの場合、防御力を<color=#28d9ed>100%</color>無視する。<color=#28d9ed>隠れ身</color>状態の場合、このスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "5_kr": "적을 공격하고, 적을 처치 했을 때 <color=#28d9ed>추가 턴</color>을 획득합니다. 보스 대상으로 공격 시 방어력을 <color=#28d9ed>100%</color>무시 합니다. <color=#28d9ed>은신</color> 보유 중 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "5_zh": "攻击敌人,并击杀敌人时,获得<color=#28d9ed>额外回合</color>。以首领为目标攻击时,无视<color=#28d9ed>100%</color>的防御力。因该技能死亡且附带<color=#28d9ed>隐身</color>效果的敌人无法触发复活与苏醒效果。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -338,6 +398,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
       "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>공격력</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>40%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to grant increased <color=#28d9ed>Attack</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>40%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>공격력</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>40%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "2": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to grant increased <color=#28d9ed>Attack</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>40%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>공격력</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>40%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to grant increased <color=#28d9ed>Attack</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>40%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>공격력</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>40%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to grant increased <color=#28d9ed>Attack</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>40%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>공격력</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>40%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to grant increased <color=#28d9ed>Attack</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>40%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>공격력</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>40%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -403,13 +485,14 @@
         "BT_STAT|ST_ATK"
       ],
       "debuff": [],
-      "dual_buff": [
-        "BT_STAT|ST_ATK"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_STAT|ST_ATK"
+      ],
+      "dual_debuff": []
     }
   }
 }

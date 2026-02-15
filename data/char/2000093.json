@@ -39,10 +39,10 @@
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
     "3_zh": "ATK DEF HP +10%",
-    "4_1": "ATK DEF HP +16%\n+30 Accuracy\n+1 Chain Passive Weakness Gauge damage",
-    "4_1_jp": "ATK DEF HP +16%\n命中+30\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n명중 +30\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n命中+30\n连携被动效果的WG降低量+1",
+    "4_1": "ATK DEF HP +16%\nDamage Increase +5%\nChain Passive WG reduction +1",
+    "4_1_jp": "ATK DEF HP +16%\nダメージ+5%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n피해 증가 +5%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n造成伤害提升5%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\n+25 Action Points at battle start",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n戦闘開始時、AP+25",
@@ -69,6 +69,28 @@
       "true_desc_jp": "敵単体にダメージを与え、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。",
       "true_desc_kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.",
       "true_desc_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>10%</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy, and increases Priority of the caster by <color=#28d9ed>10%</color>.",
+        "1_jp": "敵単体にダメージを与え、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。",
+        "1_kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.",
+        "1_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>10%</color>。",
+        "2": "Attacks an enemy, and increases Priority of the caster by <color=#28d9ed>10%</color>.",
+        "2_jp": "敵単体にダメージを与え、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。",
+        "2_kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.",
+        "2_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>10%</color>。",
+        "3": "Attacks an enemy, and increases Priority of the caster by <color=#28d9ed>20%</color>.",
+        "3_jp": "敵単体にダメージを与え、自分の行動ゲージが<color=#28d9ed>20%</color>UPする。",
+        "3_kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.",
+        "3_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。",
+        "4": "Attacks an enemy, and increases Priority of the caster by <color=#28d9ed>20%</color>.",
+        "4_jp": "敵単体にダメージを与え、自分の行動ゲージが<color=#28d9ed>20%</color>UPする。",
+        "4_kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.",
+        "4_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。",
+        "5": "Attacks an enemy, and increases Priority of the caster by <color=#28d9ed>30%</color>.",
+        "5_jp": "敵単体にダメージを与え、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "5_kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
+        "5_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>30%</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -144,6 +166,28 @@
       "true_desc_jp": "(パッシブ効果)ターン開始時、自分に<color=#28d9ed>ランダムのステータスUP効果</color>を<color=#28d9ed>2ターン</color>の間付与する。(すでに付与されている効果以外の強化効果が付与される。)\\n\\n(アクティブ効果)敵単体にダメージを与える。このスキルは自分のスピードが高いほどダメージがUPする。",
       "true_desc_kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
       "true_desc_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。",
+      "true_desc_levels": {
+        "1": "(Passive Effect) At the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>. (Buffs already granted to the caster will not be applied.)\\n\\n(Active Effect) Attacks an enemy. This skill's damage dealt increases proportional to the caster's Speed.",
+        "1_jp": "(パッシブ効果)ターン開始時、自分に<color=#28d9ed>ランダムのステータスUP効果</color>を<color=#28d9ed>2ターン</color>の間付与する。(すでに付与されている効果以外の強化効果が付与される。)\\n\\n(アクティブ効果)敵単体にダメージを与える。このスキルは自分のスピードが高いほどダメージがUPする。",
+        "1_kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
+        "1_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。",
+        "2": "(Passive Effect) At the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>. (Buffs already granted to the caster will not be applied.)\\n\\n(Active Effect) Attacks an enemy. This skill's damage dealt increases proportional to the caster's Speed.",
+        "2_jp": "(パッシブ効果)ターン開始時、自分に<color=#28d9ed>ランダムのステータスUP効果</color>を<color=#28d9ed>2ターン</color>の間付与する。(すでに付与されている効果以外の強化効果が付与される。)\\n\\n(アクティブ効果)敵単体にダメージを与える。このスキルは自分のスピードが高いほどダメージがUPする。",
+        "2_kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
+        "2_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。",
+        "3": "(Passive Effect) At the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>. (Buffs already granted to the caster will not be applied.)\\n\\n(Active Effect) Attacks an enemy. This skill's damage dealt increases proportional to the caster's Speed.",
+        "3_jp": "(パッシブ効果)ターン開始時、自分に<color=#28d9ed>ランダムのステータスUP効果</color>を<color=#28d9ed>2ターン</color>の間付与する。(すでに付与されている効果以外の強化効果が付与される。)\\n\\n(アクティブ効果)敵単体にダメージを与える。このスキルは自分のスピードが高いほどダメージがUPする。",
+        "3_kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
+        "3_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。",
+        "4": "(Passive Effect) At the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>. (Buffs already granted to the caster will not be applied.)\\n\\n(Active Effect) Attacks an enemy. This skill's damage dealt increases proportional to the caster's Speed.",
+        "4_jp": "(パッシブ効果)ターン開始時、自分に<color=#28d9ed>ランダムのステータスUP効果</color>を<color=#28d9ed>2ターン</color>の間付与する。(すでに付与されている効果以外の強化効果が付与される。)\\n\\n(アクティブ効果)敵単体にダメージを与える。このスキルは自分のスピードが高いほどダメージがUPする。",
+        "4_kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
+        "4_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。",
+        "5": "(Passive Effect) At the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>. (Buffs already granted to the caster will not be applied.)\\n\\n(Active Effect) Attacks an enemy. This skill's damage dealt increases proportional to the caster's Speed.",
+        "5_jp": "(パッシブ効果)ターン開始時、自分に<color=#28d9ed>ランダムのステータスUP効果</color>を<color=#28d9ed>2ターン</color>の間付与する。(すでに付与されている効果以外の強化効果が付与される。)\\n\\n(アクティブ効果)敵単体にダメージを与える。このスキルは自分のスピードが高いほどダメージがUPする。",
+        "5_kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
+        "5_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -207,10 +251,11 @@
       "buff": [
         "BT_ADDITIVE_TURN",
         "BT_CASTER_COPY_BUFF",
-        "BT_STAT|ST_PIERCE_POWER_RATE",
-        "BT_RANDOM_STAT"
+        "BT_STAT|ST_PIERCE_POWER_RATE"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Gains an extra turn",
@@ -242,9 +287,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "9303",
@@ -258,6 +301,28 @@
       "true_desc_jp": "敵全体にダメージを与える。味方全体に<color=#28d9ed>【強化効果プレゼント】</color>を使用する。<color=#28d9ed>【強化効果プレゼント】</color>の強化効果は<color=#28d9ed>1ターン</color>の間持続する。\\nこのスキルは自分のスピードが高いほどダメージがUPし、味方全体の<color=#28d9ed>強化効果</color>が多いほどダメージがUPする。",
       "true_desc_kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>1턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다.",
       "true_desc_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies, and uses <color=#28d9ed>Gift of Buffs</color> on all allies. <color=#28d9ed>Gifted</color> buffs last for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to the caster's Speed, and additionally increases proportional to the number of <color=#28d9ed>buffs</color> granted to all allies.",
+        "1_jp": "敵全体にダメージを与える。味方全体に<color=#28d9ed>【強化効果プレゼント】</color>を使用する。<color=#28d9ed>【強化効果プレゼント】</color>の強化効果は<color=#28d9ed>1ターン</color>の間持続する。\\nこのスキルは自分のスピードが高いほどダメージがUPし、味方全体の<color=#28d9ed>強化効果</color>が多いほどダメージがUPする。",
+        "1_kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>1턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다.",
+        "1_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。",
+        "2": "Attacks all enemies, and uses <color=#28d9ed>Gift of Buffs</color> on all allies. <color=#28d9ed>Gifted</color> buffs last for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to the caster's Speed, and additionally increases proportional to the number of <color=#28d9ed>buffs</color> granted to all allies.",
+        "2_jp": "敵全体にダメージを与える。味方全体に<color=#28d9ed>【強化効果プレゼント】</color>を使用する。<color=#28d9ed>【強化効果プレゼント】</color>の強化効果は<color=#28d9ed>1ターン</color>の間持続する。\\nこのスキルは自分のスピードが高いほどダメージがUPし、味方全体の<color=#28d9ed>強化効果</color>が多いほどダメージがUPする。",
+        "2_kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>1턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다.",
+        "2_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。",
+        "3": "Attacks all enemies, and uses <color=#28d9ed>Gift of Buffs</color> on all allies. <color=#28d9ed>Gifted</color> buffs last for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to the caster's Speed, and additionally increases proportional to the number of <color=#28d9ed>buffs</color> granted to all allies.",
+        "3_jp": "敵全体にダメージを与える。味方全体に<color=#28d9ed>【強化効果プレゼント】</color>を使用する。<color=#28d9ed>【強化効果プレゼント】</color>の強化効果は<color=#28d9ed>1ターン</color>の間持続する。\\nこのスキルは自分のスピードが高いほどダメージがUPし、味方全体の<color=#28d9ed>強化効果</color>が多いほどダメージがUPする。",
+        "3_kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>1턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다.",
+        "3_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。",
+        "4": "Attacks all enemies, and uses <color=#28d9ed>Gift of Buffs</color> on all allies. <color=#28d9ed>Gifted</color> buffs last for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to the caster's Speed, and additionally increases proportional to the number of <color=#28d9ed>buffs</color> granted to all allies.",
+        "4_jp": "敵全体にダメージを与える。味方全体に<color=#28d9ed>【強化効果プレゼント】</color>を使用する。<color=#28d9ed>【強化効果プレゼント】</color>の強化効果は<color=#28d9ed>1ターン</color>の間持続する。\\nこのスキルは自分のスピードが高いほどダメージがUPし、味方全体の<color=#28d9ed>強化効果</color>が多いほどダメージがUPする。",
+        "4_kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>1턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다.",
+        "4_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。",
+        "5": "Attacks all enemies, and uses <color=#28d9ed>Gift of Buffs</color> on all allies. <color=#28d9ed>Gifted</color> buffs last for <color=#28d9ed>2 turn(s)</color>.\\nThis skill's damage dealt increases proportional to the caster's Speed, and additionally increases proportional to the number of <color=#28d9ed>buffs</color> granted to all allies.",
+        "5_jp": "敵全体にダメージを与える。味方全体に<color=#28d9ed>【強化効果プレゼント】</color>を使用する。<color=#28d9ed>【強化効果プレゼント】</color>の強化効果は<color=#28d9ed>2ターン</color>の間持続する。\\nこのスキルは自分のスピードが高いほどダメージがUPし、味方全体の<color=#28d9ed>強化効果</color>が多いほどダメージがUPする。",
+        "5_kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>2턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다.",
+        "5_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>2回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -318,7 +383,6 @@
       },
       "cd": "5",
       "buff": [
-        "BT_DMG_OWNER_TEAM_BUFF",
         "BT_CASTER_COPY_BUFF"
       ],
       "debuff": [],
@@ -337,6 +401,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases Priority of the caster by <color=#28d9ed>30%</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases Priority of the caster by <color=#28d9ed>30%</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases Priority of the caster by <color=#28d9ed>30%</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases Priority of the caster by <color=#28d9ed>30%</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases Priority of the caster by <color=#28d9ed>30%</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -402,13 +488,14 @@
         "BT_AP_CHARGE"
       ],
       "debuff": [],
-      "dual_buff": [
-        "BT_ACTION_GAUGE"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "dual_debuff": []
     }
   }
 }

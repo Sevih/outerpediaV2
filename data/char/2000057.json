@@ -36,10 +36,10 @@
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
     "3_zh": "ATK DEF HP +10%",
-    "4_1": "ATK DEF HP +16%\n+2% Ally Team Evasion\n+1 Chain Passive Weakness Gauge damage",
-    "4_1_jp": "ATK DEF HP +16%\n味方の回避+2%\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n아군 회피 +2%\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n友军回避+2%\n连携被动技能的WG降低量+1",
+    "4_1": "ATK DEF HP +16%\nAllies' DMG Reduction +2.4%\nChain Passive WG reduction +1",
+    "4_1_jp": "ATK DEF HP +16%\n味方の被ダメDOWN+2.4%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 받는 피해 감소 +2.4%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n我方受伤害降低减少+2.4%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
@@ -47,10 +47,10 @@
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\n+2% Ally Team Evasion\n+25 Action Points at battle start",
-    "6_jp": "ATK DEF HP +30%\n味方の回避+2%\n戦闘開始時、AP+25",
-    "6_kr": "ATK DEF HP +30%\n아군 회피 +2%\n입장 시 AP +25",
-    "6_zh": "ATK DEF HP +30%\n友军回避+2%\n入场时AP+25"
+    "6": "ATK DEF HP +30%\nAllies' DMG Reduction +2.4%\nOn entry, AP +25",
+    "6_jp": "ATK DEF HP +30%\n味方の被ダメDOWN+2.4%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n아군 받는 피해 감소 +2.4%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n我方受伤害降低减少+2.4%\n入场时AP+25"
   },
   "skills": {
     "SKT_FIRST": {
@@ -65,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
       "true_desc_kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
       "true_desc_zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)",
+      "true_desc_levels": {
+        "1": "Attacks an enemy. If Sterope had a buff before attacking, activates an additional attack on the same target and grants <color=#28d9ed>Divine Retribution</color>.\\n\\n<color=#28d9ed>Divine Retribution</color>: Increases damage dealt by all allies by <color=#28d9ed>4%</color>. (Max 15 stacks)",
+        "1_jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
+        "1_kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
+        "1_zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)",
+        "2": "Attacks an enemy. If Sterope had a buff before attacking, activates an additional attack on the same target and grants <color=#28d9ed>Divine Retribution</color>.\\n\\n<color=#28d9ed>Divine Retribution</color>: Increases damage dealt by all allies by <color=#28d9ed>4%</color>. (Max 15 stacks)",
+        "2_jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
+        "2_kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
+        "2_zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)",
+        "3": "Attacks an enemy. If Sterope had a buff before attacking, activates an additional attack on the same target and grants <color=#28d9ed>Divine Retribution</color>.\\n\\n<color=#28d9ed>Divine Retribution</color>: Increases damage dealt by all allies by <color=#28d9ed>4%</color>. (Max 15 stacks)",
+        "3_jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
+        "3_kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
+        "3_zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)",
+        "4": "Attacks an enemy. If Sterope had a buff before attacking, activates an additional attack on the same target and grants <color=#28d9ed>Divine Retribution</color>.\\n\\n<color=#28d9ed>Divine Retribution</color>: Increases damage dealt by all allies by <color=#28d9ed>4%</color>. (Max 15 stacks)",
+        "4_jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
+        "4_kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
+        "4_zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)",
+        "5": "Attacks an enemy. If Sterope had a buff before attacking, activates an additional attack on the same target and grants <color=#28d9ed>Divine Retribution</color>.\\n\\n<color=#28d9ed>Divine Retribution</color>: Increases damage dealt by all allies by <color=#28d9ed>4%</color>. (Max 15 stacks)",
+        "5_jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
+        "5_kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
+        "5_zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)"
+      },
       "enhancement": {
         "2": [
           "+5% damage",
@@ -128,6 +150,8 @@
       "debuff": [
         "BT_WG_REVERSE_HEAL"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "+1 WG damage with additional attacks\\nIncreases damage",
@@ -159,9 +183,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "5702",
@@ -175,6 +197,28 @@
       "true_desc_jp": "(パッシブ効果)戦闘開始時、敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>3ターン</color>の間付与する。",
       "true_desc_kr": "(패시브 효과) 전투 시작 후 <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
       "true_desc_zh": "(被动效果)战斗开始后,对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。",
+      "true_desc_levels": {
+        "1": "(Passive Effect) At the start of battle, inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.",
+        "1_jp": "(パッシブ効果)戦闘開始時、敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "1_kr": "(패시브 효과) 전투 시작 후 <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
+        "1_zh": "(被动效果)战斗开始后,对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。",
+        "2": "(Passive Effect) At the start of battle, inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.\\n\\nWhen an enemy activates a <color=#28d9ed>Counterattack, Revenge, or Agile Response</color>, reduces the duration of enemy buffs by <color=#28d9ed>1 turn</color>.",
+        "2_jp": "(パッシブ効果)戦闘開始時、敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>3ターン</color>の間付与する。\\n\\n敵が<color=#28d9ed>反撃、復讐、迅速対応</color>発動時、敵全体の強化効果の持続ターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "2_kr": "(패시브 효과) 전투 시작 후 <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n\\n적이 <color=#28d9ed>반격, 복수, 신속 대응</color> 사용 시, 적 전체의 강화 효과 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "2_zh": "(被动效果)战斗开始后,对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。\\n\\n敌人发动<color=#28d9ed>反击、复仇、迅速应对</color>时,使全体敌人的强化效果持续时间减少<color=#28d9ed>1回合</color>。",
+        "3": "(Passive Effect) After the start of battle, inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.\\n\\nWhen an enemy activates a <color=#28d9ed>Counterattack, Revenge, or Agile Response</color>, reduces allies' damage taken by <color=#28d9ed>10%</color> and reduces the duration of buffs on all enemies by <color=#28d9ed>1 turn</color>.",
+        "3_jp": "(パッシブ効果)戦闘開始時、敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>3ターン</color>の間付与する。\\n\\n敵が<color=#28d9ed>反撃、復讐、迅速対応</color>発動時、味方全体の受けるダメージを10%DOWNさせ、敵全体の強化効果の持続ターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "3_kr": "(패시브 효과) 전투 시작 후 <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n\\n적이 <color=#28d9ed>반격, 복수, 신속 대응</color> 사용 시, 아군의 받는 피해를 <color=#28d9ed>10%</color> 감소시키고 적 전체의 강화 효과 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "3_zh": "(被动效果)战斗开始后,对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。\\n\\n敌人发动<color=#28d9ed>反击、复仇、迅速应对</color>时,使友军的所受伤害降低<color=#28d9ed>10%</color>,并使全体敌人的强化效果持续时间减少<color=#28d9ed>1回合</color>。",
+        "4": "(Passive Effect) After the start of battle, inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.\\n\\nWhen an enemy activates a <color=#28d9ed>Counterattack, Revenge, or Agile Response</color>, reduces allies' damage taken by <color=#28d9ed>20%</color> and reduces the duration of buffs on all enemies by <color=#28d9ed>1 turn</color>.",
+        "4_jp": "(パッシブ効果)戦闘開始時、敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>3ターン</color>の間付与する。\\n\\n敵が<color=#28d9ed>反撃、復讐、迅速対応</color>発動時、味方全体の受けるダメージを20%DOWNさせ、敵全体の強化効果の持続ターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "4_kr": "(패시브 효과) 전투 시작 후 <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n\\n적이 <color=#28d9ed>반격, 복수, 신속 대응</color> 사용 시, 아군의 받는 피해를 <color=#28d9ed>20%</color> 감소시키고 적 전체의 강화 효과 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "4_zh": "(被动效果)战斗开始后,对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。\\n\\n敌人发动<color=#28d9ed>反击、复仇、迅速应对</color>时,使友军的所受伤害降低<color=#28d9ed>20%</color>,并使全体敌人的强化效果持续时间减少<color=#28d9ed>1回合</color>。",
+        "5": "(Passive Effect) After the start of battle, inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.\\n\\nWhen an enemy activates a <color=#28d9ed>Counterattack, Revenge, or Agile Response</color>, reduces allies' damage taken by <color=#28d9ed>30%</color> and reduces the duration of buffs on all enemies by <color=#28d9ed>1 turn</color>.",
+        "5_jp": "(パッシブ効果)戦闘開始時、敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>3ターン</color>の間付与する。\\n\\n敵が<color=#28d9ed>反撃、復讐、迅速対応</color>発動時、味方全体の受けるダメージを30%DOWNさせ、敵全体の強化効果の持続ターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "5_kr": "(패시브 효과) 전투 시작 후 <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n\\n적이 <color=#28d9ed>반격, 복수, 신속 대응</color> 사용 시, 아군의 받는 피해를 <color=#28d9ed>30%</color> 감소시키고 적 전체의 강화 효과 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "5_zh": "(被动效果)战斗开始后,对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。\\n\\n敌人发动<color=#28d9ed>反击、复仇、迅速应对</color>时,使友军的所受伤害降低<color=#28d9ed>30%</color>,并使全体敌人的强化效果持续时间减少<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn enemy buff duration"
@@ -245,6 +289,28 @@
       "true_desc_jp": "<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果命中</color>をUPさせ、<color=#28d9ed>2ターン</color>の間、敵全体に<color=#28d9ed>回復不可</color>を付与する。",
       "true_desc_kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 적중</color>을 증가시키고, <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
       "true_desc_zh": "使我方全体的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>,并对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Increases <color=#28d9ed>Defense</color> and <color=#28d9ed>Effectiveness</color> of all allies for <color=#28d9ed>2 turn(s)</color>, and inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果命中</color>をUPさせ、<color=#28d9ed>2ターン</color>の間、敵全体に<color=#28d9ed>回復不可</color>を付与する。",
+        "1_kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 적중</color>을 증가시키고, <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
+        "1_zh": "使我方全体的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>,并对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "2": "Increases <color=#28d9ed>Defense</color> and <color=#28d9ed>Effectiveness</color> of all allies for <color=#28d9ed>2 turn(s)</color>, and inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nDecreases <color=#28d9ed>Skill Cooldowns</color> of all allies (excluding self) by <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果命中</color>をUPさせ、<color=#28d9ed>2ターン</color>の間、敵全体に<color=#28d9ed>回復不可</color>を付与する。\\n自分を除く味方全体の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。",
+        "2_kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 적중</color>을 증가시키고,  <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n자신을 제외한 아군 전체의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "2_zh": "使我方全体的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>,并对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。\\n使除自身外我方全体的<color=#28d9ed>技能冷却时间</color>减少<color=#28d9ed>1回合</color>。",
+        "3": "Increases <color=#28d9ed>Defense</color> and <color=#28d9ed>Effectiveness</color> of all allies for <color=#28d9ed>2 turn(s)</color>, and inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nDecreases <color=#28d9ed>Skill Cooldowns</color> of all allies (excluding self) by <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果命中</color>をUPさせ、<color=#28d9ed>2ターン</color>の間、敵全体に<color=#28d9ed>回復不可</color>を付与する。\\n自分を除く味方全体の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。",
+        "3_kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 적중</color>을 증가시키고,  <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n자신을 제외한 아군 전체의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "3_zh": "使我方全体的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>,并对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。\\n使除自身外我方全体的<color=#28d9ed>技能冷却时间</color>减少<color=#28d9ed>1回合</color>。",
+        "4": "Increases <color=#28d9ed>Defense</color> and <color=#28d9ed>Effectiveness</color> of all allies for <color=#28d9ed>3 turn(s)</color>, and inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.\\nDecreases <color=#28d9ed>Skill Cooldowns</color> of all allies (excluding self) by <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "<color=#28d9ed>3ターン</color>の間、味方全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果命中</color>をUPさせ、<color=#28d9ed>3ターン</color>の間、敵全体に<color=#28d9ed>回復不可</color>を付与する。\\n自分を除く味方全体の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。",
+        "4_kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 적중</color>을 증가시키고,  <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n자신을 제외한 아군 전체의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "4_zh": "使我方全体的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>3回合</color>,并对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。\\n使除自身外我方全体的<color=#28d9ed>技能冷却时间</color>减少<color=#28d9ed>1回合</color>。",
+        "5": "Increases <color=#28d9ed>Defense</color> and <color=#28d9ed>Effectiveness</color> of all allies for <color=#28d9ed>3 turn(s)</color>, and inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.\\nDecreases <color=#28d9ed>Skill Cooldowns</color> of all allies (excluding self) by <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "<color=#28d9ed>3ターン</color>の間、味方全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果命中</color>をUPさせ、<color=#28d9ed>3ターン</color>の間、敵全体に<color=#28d9ed>回復不可</color>を付与する。\\n自分を除く味方全体の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>2ターン</color>減少させる。",
+        "5_kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 적중</color>을 증가시키고,  <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n자신을 제외한 아군 전체의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>2턴</color> 감소시킵니다.",
+        "5_zh": "使我方全体的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>3回合</color>,并对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。\\n使除自身外我方全体的<color=#28d9ed>技能冷却时间</color>减少<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn skill cooldowns on allies except caster"
@@ -319,6 +385,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分の最大<color=#28d9ed>HP</color>が高いほど、与えるダメージがUPする。",
       "true_desc_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>生命值</color>越高,则伤害量越高。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Health</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分の最大<color=#28d9ed>HP</color>が高いほど、与えるダメージがUPする。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다.",
+        "1_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>生命值</color>越高,则伤害量越高。",
+        "2": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Health</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分の最大<color=#28d9ed>HP</color>が高いほど、与えるダメージがUPする。",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다.",
+        "2_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>生命值</color>越高,则伤害量越高。",
+        "3": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Health</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分の最大<color=#28d9ed>HP</color>が高いほど、与えるダメージがUPする。",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다.",
+        "3_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>生命值</color>越高,则伤害量越高。",
+        "4": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Health</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分の最大<color=#28d9ed>HP</color>が高いほど、与えるダメージがUPする。",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다.",
+        "4_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>生命值</color>越高,则伤害量越高。",
+        "5": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportional to the caster's <color=#28d9ed>Health</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分の最大<color=#28d9ed>HP</color>が高いほど、与えるダメージがUPする。",
+        "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다.",
+        "5_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>生命值</color>越高,则伤害量越高。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -387,7 +475,9 @@
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

@@ -30,13 +30,11 @@
   "video": "xmzgtcPHmT4",
   "VoiceActor": "VA. Courtney Lin",
   "VoiceActor_jp": "CV. 小倉唯",
-  "VoiceActor_kr": "CV. Courtney Lin",
+  "VoiceActor_kr": "CV. 이새아",
   "VoiceActor_zh": "CV. 小仓唯",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -46,15 +44,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 체력 +20%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军生命值+20%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\nWhen using Ticking Clockwork, Changes to Dual Attack with 2 allies",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n【動く時計軸】使用時、連携2体発生",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n움직이는 시계태엽 사용 시 2명 협공으로 변경",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n使用跳动的机械发条时,2名变更为夹攻。",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\nAt the start of battle, seals extra skill of all enemies by 1 turn (Ignores Resilience)\n+25 Action Points at the start of battle",
     "6_jp": "ATK DEF HP +30%\n戦闘開始時、 敵全体に追加 スキル 封印+1ターン (効果抵抗 無視)\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n전투 입장 시 적 전체에게 추가 스킬 봉인 +1턴 (효과 저항 무시)\n입장 시 AP +25",
@@ -73,6 +68,28 @@
       "true_desc_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを【エヴァ】の最大HPの<color=#28d9ed>5%</color>回復させる。\\n攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
       "true_desc_kr": "적을 공격하고, 체력 상황이 가장 나쁜 아군의 체력을 에바 최대 체력의 <color=#28d9ed>5%</color>만큼 회복시킵니다.\\n가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
       "true_desc_zh": "攻击敌人,并使生命值最低友军的生命值恢复相当于艾娃生命值上限<color=#28d9ed>5%</color>。\\n使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy. Heals the ally with the lowest Health by <color=#28d9ed>5%</color> of Eva's Max Health.\\nActivates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.",
+        "1_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを【エヴァ】の最大HPの<color=#28d9ed>5%</color>回復させる。\\n攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "1_kr": "적을 공격하고, 체력 상황이 가장 나쁜 아군의 체력을 에바 최대 체력의 <color=#28d9ed>5%</color>만큼 회복시킵니다.\\n가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "1_zh": "攻击敌人,并使生命值最低友军的生命值恢复相当于艾娃生命值上限<color=#28d9ed>5%</color>。\\n使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+        "2": "Attacks an enemy. Heals the ally with the lowest Health by <color=#28d9ed>5%</color> of Eva's Max Health.\\nActivates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.",
+        "2_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを【エヴァ】の最大HPの<color=#28d9ed>5%</color>回復させる。\\n攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "2_kr": "적을 공격하고, 체력 상황이 가장 나쁜 아군의 체력을 에바 최대 체력의 <color=#28d9ed>5%</color>만큼 회복시킵니다.\\n가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "2_zh": "攻击敌人,并使生命值最低友军的生命值恢复相当于艾娃生命值上限<color=#28d9ed>5%</color>。\\n使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+        "3": "Attacks an enemy. Heals the ally with the lowest Health by <color=#28d9ed>7%</color> of Eva's Max Health.\\nActivates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.",
+        "3_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを【エヴァ】の最大HPの<color=#28d9ed>7%</color>回復させる。\\n攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "3_kr": "적을 공격하고, 체력 상황이 가장 나쁜 아군의 체력을 에바 최대 체력의 <color=#28d9ed>7%</color>만큼 회복시킵니다.\\n가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "3_zh": "攻击敌人,并使生命值最低友军的生命值恢复相当于艾娃生命值上限<color=#28d9ed>7%</color>。\\n使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+        "4": "Attacks an enemy. Heals the ally with the lowest Health by <color=#28d9ed>10%</color> of Eva's Max Health.\\nActivates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.",
+        "4_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを【エヴァ】の最大HPの<color=#28d9ed>10%</color>回復させる。\\n攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "4_kr": "적을 공격하고, 체력 상황이 가장 나쁜 아군의 체력을 에바 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다.\\n가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "4_zh": "攻击敌人,并使生命值最低友军的生命值恢复相当于艾娃生命值上限<color=#28d9ed>10%</color>。\\n使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+        "5": "Attacks an enemy. Heals the ally with the lowest Health by <color=#28d9ed>13%</color> of Eva's Max Health.\\nActivates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.",
+        "5_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを【エヴァ】の最大HPの<color=#28d9ed>13%</color>回復させる。\\n攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "5_kr": "적을 공격하고, 체력 상황이 가장 나쁜 아군의 체력을 에바 최대 체력의 <color=#28d9ed>13%</color>만큼 회복시킵니다.\\n가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "5_zh": "攻击敌人,并使生命值最低友军的生命值恢复相当于艾娃生命值上限<color=#28d9ed>13%</color>。\\n使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -136,11 +153,11 @@
       "buff": [
         "BT_AP_CHARGE",
         "BT_REMOVE_DEBUFF",
-        "BT_REVIVAL",
-        "BT_CALL_BACKUP_2",
-        "BT_CALL_BACKUP"
+        "BT_REVIVAL"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Effects are applied to all allies",
@@ -172,9 +189,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "8402",
@@ -188,6 +203,28 @@
       "true_desc_jp": "(パッシブ効果)凍結、沈黙の影響を受けない。\\n(発動効果)味方に<color=#28d9ed>弱体効果</color>がある場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n迅速対応発動時、味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1ターン</color>減少し、敵全体に<color=#28d9ed>追加スキル封印</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
       "true_desc_kr": "(패시브 효과) 빙결, 침묵의 영향을 받지 않습니다.\\n(발동 효과) 아군에게 <color=#28d9ed>약화 효과</color> 적용 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n신속대응 발동 시 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1턴</color> 감소시키고, <color=#28d9ed>1턴</color> 동안 적 전체에게 <color=#28d9ed>추가 스킬 봉인</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속대응이 발동하지 않습니다.",
       "true_desc_zh": "(被动效果)不受冰冻、沉默的影响。\\n(触发效果)友军受到<color=#28d9ed>弱化效果</color>时,触发<color=#28d9ed>迅速应对</color>效果。\\n迅速应对触发时,使全体友军的<color=#28d9ed>弱化效果</color>减少<color=#28d9ed>1回合</color>,并对全体敌人造成<color=#28d9ed>额外技能封印</color>,持续<color=#28d9ed>1回合</color>。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。",
+      "true_desc_levels": {
+        "1": "(Passive Effect) Cannot be inflicted with Frozen or Silenced.\\n(Triggered Effect) When an ally is inflicted with a <color=#28d9ed>debuff</color>, activates an <color=#28d9ed>Agile Response</color>.\\nWhen Agile Response is activated, reduces the duration of all <color=#28d9ed>debuff(s)</color> inflicted on allies by <color=#28d9ed>1 turn</color> and inflicts <color=#28d9ed>Seal Extra Skill</color> on all enemies for <color=#28d9ed>1 turn(s)</color>. The enemy's Counterattack, Revenge, and Agile Response cannot activate immediately after using this skill.",
+        "1_jp": "(パッシブ効果)凍結、沈黙の影響を受けない。\\n(発動効果)味方に<color=#28d9ed>弱体効果</color>がある場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n迅速対応発動時、味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1ターン</color>減少し、敵全体に<color=#28d9ed>追加スキル封印</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "1_kr": "(패시브 효과) 빙결, 침묵의 영향을 받지 않습니다.\\n(발동 효과) 아군에게 <color=#28d9ed>약화 효과</color> 적용 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n신속대응 발동 시 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1턴</color> 감소시키고, <color=#28d9ed>1턴</color> 동안 적 전체에게 <color=#28d9ed>추가 스킬 봉인</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속대응이 발동하지 않습니다.",
+        "1_zh": "(被动效果)不受冰冻、沉默的影响。\\n(触发效果)友军受到<color=#28d9ed>弱化效果</color>时,触发<color=#28d9ed>迅速应对</color>效果。\\n迅速应对触发时,使全体友军的<color=#28d9ed>弱化效果</color>减少<color=#28d9ed>1回合</color>,并对全体敌人造成<color=#28d9ed>额外技能封印</color>,持续<color=#28d9ed>1回合</color>。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。",
+        "2": "(Passive Effect) Cannot be inflicted with Frozen or Silenced.\\n(Triggered Effect) When an ally is inflicted with a <color=#28d9ed>debuff</color>, activates an <color=#28d9ed>Agile Response</color>.\\nWhen Agile Response is activated, reduces the duration of all <color=#28d9ed>debuff(s)</color> inflicted on allies by <color=#28d9ed>1 turn</color> and inflicts <color=#28d9ed>Seal Extra Skill</color> on all enemies for <color=#28d9ed>1 turn(s)</color>. The enemy's Counterattack, Revenge, and Agile Response cannot activate immediately after using this skill.",
+        "2_jp": "(パッシブ効果)凍結、沈黙の影響を受けない。\\n(発動効果)味方に<color=#28d9ed>弱体効果</color>がある場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n迅速対応発動時、味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1ターン</color>減少し、敵全体に<color=#28d9ed>追加スキル封印</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "2_kr": "(패시브 효과) 빙결, 침묵의 영향을 받지 않습니다.\\n(발동 효과) 아군에게 <color=#28d9ed>약화 효과</color> 적용 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n신속대응 발동 시 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1턴</color> 감소시키고, <color=#28d9ed>1턴</color> 동안 적 전체에게 <color=#28d9ed>추가 스킬 봉인</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속대응이 발동하지 않습니다.",
+        "2_zh": "(被动效果)不受冰冻、沉默的影响。\\n(触发效果)友军受到<color=#28d9ed>弱化效果</color>时,触发<color=#28d9ed>迅速应对</color>效果。\\n迅速应对触发时,使全体友军的<color=#28d9ed>弱化效果</color>减少<color=#28d9ed>1回合</color>,并对全体敌人造成<color=#28d9ed>额外技能封印</color>,持续<color=#28d9ed>1回合</color>。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。",
+        "3": "(Passive Effect) Cannot be inflicted with Frozen or Silenced.\\n(Triggered Effect) When an ally is inflicted with a <color=#28d9ed>debuff</color>, activates an <color=#28d9ed>Agile Response</color>.\\nWhen Agile Response is activated, reduces the duration of all <color=#28d9ed>debuff(s)</color> inflicted on allies by <color=#28d9ed>2 turns</color> and inflicts <color=#28d9ed>Seal Extra Skill</color> on all enemies for <color=#28d9ed>1 turn(s)</color>. The enemy's Counterattack, Revenge, and Agile Response cannot activate immediately after using this skill.",
+        "3_jp": "(パッシブ効果)凍結、沈黙の影響を受けない。\\n(発動効果)味方に<color=#28d9ed>弱体効果</color>がある場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n迅速対応発動時、味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>2ターン</color>減少し、敵全体に<color=#28d9ed>追加スキル封印</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "3_kr": "(패시브 효과) 빙결, 침묵의 영향을 받지 않습니다.\\n(발동 효과) 아군에게 <color=#28d9ed>약화 효과</color> 적용 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n신속대응 발동 시 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>2턴</color> 감소시키고, <color=#28d9ed>1턴</color> 동안 적 전체에게 <color=#28d9ed>추가 스킬 봉인</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속대응이 발동하지 않습니다.",
+        "3_zh": "(被动效果)不受冰冻、沉默的影响。\\n(触发效果)友军受到<color=#28d9ed>弱化效果</color>时,触发<color=#28d9ed>迅速应对</color>效果。\\n迅速应对触发时,使全体友军的<color=#28d9ed>弱化效果</color>减少<color=#28d9ed>2回合</color>,并对全体敌人造成<color=#28d9ed>额外技能封印</color>,持续<color=#28d9ed>1回合</color>。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。",
+        "4": "(Passive Effect) Cannot be inflicted with Frozen or Silenced.\\n(Triggered Effect) When an ally is inflicted with a <color=#28d9ed>debuff</color>, activates an <color=#28d9ed>Agile Response</color>.\\nWhen Agile Response is activated, reduces the duration of all <color=#28d9ed>debuff(s)</color> inflicted on allies by <color=#28d9ed>2 turns</color> and inflicts <color=#28d9ed>Seal Extra Skill</color> on all enemies for <color=#28d9ed>1 turn(s)</color>. The enemy's Counterattack, Revenge, and Agile Response cannot activate immediately after using this skill.",
+        "4_jp": "(パッシブ効果)凍結、沈黙の影響を受けない。\\n(発動効果)味方に<color=#28d9ed>弱体効果</color>がある場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n迅速対応発動時、味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>2ターン</color>減少し、敵全体に<color=#28d9ed>追加スキル封印</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "4_kr": "(패시브 효과) 빙결, 침묵의 영향을 받지 않습니다.\\n(발동 효과) 아군에게 <color=#28d9ed>약화 효과</color> 적용 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n신속대응 발동 시 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>2턴</color> 감소시키고, <color=#28d9ed>1턴</color> 동안 적 전체에게 <color=#28d9ed>추가 스킬 봉인</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속대응이 발동하지 않습니다.",
+        "4_zh": "(被动效果)不受冰冻、沉默的影响。\\n(触发效果)友军受到<color=#28d9ed>弱化效果</color>时,触发<color=#28d9ed>迅速应对</color>效果。\\n迅速应对触发时,使全体友军的<color=#28d9ed>弱化效果</color>减少<color=#28d9ed>2回合</color>,并对全体敌人造成<color=#28d9ed>额外技能封印</color>,持续<color=#28d9ed>1回合</color>。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。",
+        "5": "(Passive Effect) Cannot be inflicted with Frozen or Silenced.\\n(Triggered Effect) When an ally is inflicted with a <color=#28d9ed>debuff</color>, activates an <color=#28d9ed>Agile Response</color>.\\nWhen Agile Response is activated, reduces the duration of all <color=#28d9ed>debuff(s)</color> inflicted on allies by <color=#28d9ed>2 turns</color> and inflicts <color=#28d9ed>Seal Extra Skill</color> on all enemies for <color=#28d9ed>1 turn(s)</color>. This effect ignores the target's Resilience.\\nThe enemy's Counterattack, Revenge, and Agile Response cannot activate immediately after using this skill.",
+        "5_jp": "(パッシブ効果)凍結、沈黙の影響を受けない。\\n(発動効果)味方に<color=#28d9ed>弱体効果</color>がある場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n迅速対応発動時、味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>2ターン</color>減少し、敵全体に<color=#28d9ed>追加スキル封印</color>を<color=#28d9ed>1ターン</color>の間付与する。この効果は対象の効果抵抗を無視する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "5_kr": "(패시브 효과) 빙결, 침묵의 영향을 받지 않습니다.\\n(발동 효과) 아군에게 <color=#28d9ed>약화 효과</color> 적용 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n신속대응 발동 시 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>2턴</color> 감소시키고, <color=#28d9ed>1턴</color> 동안 적 전체에게 <color=#28d9ed>추가 스킬 봉인</color>을 부여합니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속대응이 발동하지 않습니다.",
+        "5_zh": "(被动效果)不受冰冻、沉默的影响。\\n(触发效果)友军受到<color=#28d9ed>弱化效果</color>时,触发<color=#28d9ed>迅速应对</color>效果。\\n迅速应对触发时,使全体友军的<color=#28d9ed>弱化效果</color>减少<color=#28d9ed>2回合</color>,并对全体敌人造成<color=#28d9ed>额外技能封印</color>,持续<color=#28d9ed>1回合</color>。该效果无视目标的效果抵抗。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown"
@@ -262,6 +299,28 @@
       "true_desc_jp": "味方全体の<color=#28d9ed>HP</color>を【エヴァ】の最大HPの<color=#28d9ed>10%</color>回復させ、<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
       "true_desc_kr": "아군 전체의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color>를 증가시킵니다.",
       "true_desc_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>10%</color>,使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>10%</color> of Eva's Max Health and increases <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "味方全体の<color=#28d9ed>HP</color>を【エヴァ】の最大HPの<color=#28d9ed>10%</color>回復させ、<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "1_kr": "아군 전체의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color>를 증가시킵니다.",
+        "1_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>10%</color>,使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "2": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>10%</color> of Eva's Max Health and increases <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "味方全体の<color=#28d9ed>HP</color>を【エヴァ】の最大HPの<color=#28d9ed>10%</color>回復させ、<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "2_kr": "아군 전체의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color>를 증가시킵니다.",
+        "2_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>10%</color>,使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "3": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>20%</color> of Eva's Max Health and increases <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "味方全体の<color=#28d9ed>HP</color>を【エヴァ】の最大HPの<color=#28d9ed>20%</color>回復させ、<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "3_kr": "아군 전체의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color>를 증가시킵니다.",
+        "3_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>20%</color>,使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "4": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>30%</color> of Eva's Max Health and increases <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "味方全体の<color=#28d9ed>HP</color>を【エヴァ】の最大HPの<color=#28d9ed>30%</color>回復させ、<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "4_kr": "아군 전체의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>30%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color>를 증가시킵니다.",
+        "4_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>30%</color>,使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "5": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>30%</color> of Eva's Max Health.\\nGrants <color=#28d9ed>Invulnerability</color> to all allies for <color=#28d9ed>1 turn(s)</color> and <color=#28d9ed>Increased Speed</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "味方全体の<color=#28d9ed>HP</color>を【エヴァ】の最大HPの<color=#28d9ed>30%</color>回復させる。\\n味方全体に<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>、<color=#28d9ed>スピードUP</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "아군 전체의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>30%</color>만큼 회복시킵니다.\\n아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>무적</color>과 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도 증가</color>를 부여합니다.",
+        "5_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>30%</color>。\\n使全体友军获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>,且<color=#28d9ed>速度提升</color>,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown"
@@ -337,6 +396,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>をエヴァの最大HPの<color=#28d9ed>13%</color>回復させる。",
       "true_desc_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>13%</color> 회복시킵니다.",
       "true_desc_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>13%</color> 。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Starter Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers the <color=#28d9ed>Health</color> of the ally with the lowest Health by <color=#28d9ed>13%</color> of Eva's Max Health.",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>をエヴァの最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "1_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>13%</color> 。",
+        "2": "<color=#ffd732>Chain Starter Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers the <color=#28d9ed>Health</color> of the ally with the lowest Health by <color=#28d9ed>13%</color> of Eva's Max Health.",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>をエヴァの最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "2_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>13%</color> 。",
+        "3": "<color=#ffd732>Chain Starter Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers the <color=#28d9ed>Health</color> of the ally with the lowest Health by <color=#28d9ed>13%</color> of Eva's Max Health.",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>をエヴァの最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "3_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>13%</color> 。",
+        "4": "<color=#ffd732>Chain Starter Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers the <color=#28d9ed>Health</color> of the ally with the lowest Health by <color=#28d9ed>13%</color> of Eva's Max Health.",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>をエヴァの最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "4_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>13%</color> 。",
+        "5": "<color=#ffd732>Chain Starter Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers the <color=#28d9ed>Health</color> of the ally with the lowest Health by <color=#28d9ed>13%</color> of Eva's Max Health.",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>をエヴァの最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 에바 최대 체력의 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "5_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低友军的<color=#28d9ed>生命值</color>恢复相当于艾娃生命值上限的<color=#28d9ed>13%</color> 。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -402,11 +483,12 @@
       "debuff": [
         "BT_WG_REVERSE_HEAL"
       ],
-      "dual_buff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

@@ -25,15 +25,13 @@
   "Chain_Type": "Join",
   "gift": "Natural Object",
   "video": "nFY3ash9VM8",
-  "VoiceActor": "VA. None",
+  "VoiceActor": "VA. Kelly Ohanian",
   "VoiceActor_jp": "CV. 渡部紗弓",
-  "VoiceActor_kr": "CV.성예원",
+  "VoiceActor_kr": "CV. 성예원",
   "VoiceActor_zh": "CV. 渡部纱弓",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -43,15 +41,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 공격력 +5%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军攻击力+5%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+5% Ally Team Attack\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方の攻撃力+5%\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 공격력 +5%\n입장 시 AP +25",
@@ -70,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、<color=#28d9ed>味方全体</color>の<color=#28d9ed>行動ゲージ</color>をUPさせる。",
       "true_desc_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 <color=#28d9ed>아군 전체</color>에게 효과가 적용됩니다.",
       "true_desc_zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,将对<color=#28d9ed>全体友军</color>生效。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, the effect is applied to <color=#28d9ed>all allies</color>.",
+        "1_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、<color=#28d9ed>味方全体</color>の<color=#28d9ed>行動ゲージ</color>をUPさせる。",
+        "1_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 <color=#28d9ed>아군 전체</color>에게 효과가 적용됩니다.",
+        "1_zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,将对<color=#28d9ed>全体友军</color>生效。",
+        "2": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, the effect is applied to <color=#28d9ed>all allies</color>.",
+        "2_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>UPさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、<color=#28d9ed>味方全体</color>の<color=#28d9ed>行動ゲージ</color>をUPさせる。",
+        "2_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>15%</color> 증가시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 <color=#28d9ed>아군 전체</color>에게 효과가 적용됩니다.",
+        "2_zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>15%</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,将对<color=#28d9ed>全体友军</color>生效。",
+        "3": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, the effect is applied to <color=#28d9ed>all allies</color>.",
+        "3_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>UPさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、<color=#28d9ed>味方全体</color>の<color=#28d9ed>行動ゲージ</color>をUPさせる。",
+        "3_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>15%</color> 증가시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 <color=#28d9ed>아군 전체</color>에게 효과가 적용됩니다.",
+        "3_zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>15%</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,将对<color=#28d9ed>全体友军</color>生效。",
+        "4": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, the effect is applied to <color=#28d9ed>all allies</color>.",
+        "4_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>UPさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、<color=#28d9ed>味方全体</color>の<color=#28d9ed>行動ゲージ</color>をUPさせる。",
+        "4_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>15%</color> 증가시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 <color=#28d9ed>아군 전체</color>에게 효과가 적용됩니다.",
+        "4_zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>15%</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,将对<color=#28d9ed>全体友军</color>生效。",
+        "5": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, the effect is applied to <color=#28d9ed>all allies</color>.",
+        "5_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、<color=#28d9ed>味方全体</color>の<color=#28d9ed>行動ゲージ</color>をUPさせる。",
+        "5_kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 <color=#28d9ed>아군 전체</color>에게 효과가 적용됩니다.",
+        "5_zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,将对<color=#28d9ed>全体友军</color>生效。"
+      },
       "enhancement": {
         "2": [
           "+5% Priority",
@@ -133,6 +150,8 @@
       "debuff": [
         "BT_DOT_POISON"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "+1 turn Fierce Offensive\\n+2 turns of Poisoned on target",
@@ -164,9 +183,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "5602",
@@ -180,6 +197,28 @@
       "true_desc_jp": "(発動効果)味方が自分のターンで敵に弱体効果を付与した場合、<color=#28d9ed>【大地の烈斬】</color>を使用する。\\n\\n<color=#28d9ed>【大地の烈斬】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>1ターン</color>の間付与する。対象が<color=#28d9ed>回復型</color>の場合、追加で<color=#28d9ed>沈黙</color>を付与する。",
       "true_desc_kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>결정 쇄도</color>를 사용합니다.\\n\\n<color=#28d9ed>결정 쇄도</color> : 적 전체를 공격하고 <color=#28d9ed>1턴</color> 동안 대상 전체의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상이 <color=#28d9ed>회복형</color>이라면 추가적으로 <color=#28d9ed>침묵</color>을 부여합니다.",
       "true_desc_zh": "(触发效果)友军在自身回合对敌人造成弱化效果时,使用<color=#28d9ed>晶体风暴</color>。\\n\\n<color=#28d9ed>晶体风暴</color>:攻击全体敌人,并使全体目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,对全体敌人造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>1回合</color>。若目标为<color=#28d9ed>恢复型</color>,则额外造成<color=#28d9ed>沉默</color>效果。",
+      "true_desc_levels": {
+        "1": "(Triggered Effect) Activates <color=#28d9ed>Crystal Storm</color> when an ally lands a debuff on their turn.\\n\\n<color=#28d9ed>Crystal Storm</color>: Attacks all enemies, and inflicts reduced <color=#28d9ed>Attack</color> on all targets for <color=#28d9ed>1 turn(s)</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, inflicts <color=#28d9ed>Poisoned</color> on all enemies for <color=#28d9ed>1 turn(s)</color>. If the target is a <color=#28d9ed>Healer</color>, additionally inflicts <color=#28d9ed>Silenced</color>.",
+        "1_jp": "(発動効果)味方が自分のターンで敵に弱体効果を付与した場合、<color=#28d9ed>【大地の烈斬】</color>を使用する。\\n\\n<color=#28d9ed>【大地の烈斬】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>1ターン</color>の間付与する。対象が<color=#28d9ed>回復型</color>の場合、追加で<color=#28d9ed>沈黙</color>を付与する。",
+        "1_kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>결정 쇄도</color>를 사용합니다.\\n\\n<color=#28d9ed>결정 쇄도</color> : 적 전체를 공격하고 <color=#28d9ed>1턴</color> 동안 대상 전체의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상이 <color=#28d9ed>회복형</color>이라면 추가적으로 <color=#28d9ed>침묵</color>을 부여합니다.",
+        "1_zh": "(触发效果)友军在自身回合对敌人造成弱化效果时,使用<color=#28d9ed>晶体风暴</color>。\\n\\n<color=#28d9ed>晶体风暴</color>:攻击全体敌人,并使全体目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,对全体敌人造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>1回合</color>。若目标为<color=#28d9ed>恢复型</color>,则额外造成<color=#28d9ed>沉默</color>效果。",
+        "2": "(Triggered Effect) Activates <color=#28d9ed>Crystal Storm</color> when an ally lands a debuff on their turn.\\n\\n<color=#28d9ed>Crystal Storm</color>: Attacks all enemies, and inflicts reduced <color=#28d9ed>Attack</color> on all targets for <color=#28d9ed>1 turn(s)</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, inflicts <color=#28d9ed>Poisoned</color> on all enemies for <color=#28d9ed>1 turn(s)</color>. If the target is a <color=#28d9ed>Healer</color>, additionally inflicts <color=#28d9ed>Silenced</color>.",
+        "2_jp": "(発動効果)味方が自分のターンで敵に弱体効果を付与した場合、<color=#28d9ed>【大地の烈斬】</color>を使用する。\\n\\n<color=#28d9ed>【大地の烈斬】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>1ターン</color>の間付与する。対象が<color=#28d9ed>回復型</color>の場合、追加で<color=#28d9ed>沈黙</color>を付与する。",
+        "2_kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>결정 쇄도</color>를 사용합니다.\\n\\n<color=#28d9ed>결정 쇄도</color> : 적 전체를 공격하고 <color=#28d9ed>1턴</color> 동안 대상 전체의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상이 <color=#28d9ed>회복형</color>이라면 추가적으로 <color=#28d9ed>침묵</color>을 부여합니다.",
+        "2_zh": "(触发效果)友军在自身回合对敌人造成弱化效果时,使用<color=#28d9ed>晶体风暴</color>。\\n\\n<color=#28d9ed>晶体风暴</color>:攻击全体敌人,并使全体目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,对全体敌人造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>1回合</color>。若目标为<color=#28d9ed>恢复型</color>,则额外造成<color=#28d9ed>沉默</color>效果。",
+        "3": "(Triggered Effect) Activates <color=#28d9ed>Crystal Storm</color> when an ally lands a debuff on their turn.\\n\\n<color=#28d9ed>Crystal Storm</color>: Attacks all enemies, and inflicts reduced <color=#28d9ed>Attack</color> on all targets for <color=#28d9ed>2 turn(s)</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, inflicts <color=#28d9ed>Poisoned</color> on all enemies for <color=#28d9ed>2 turn(s)</color>. If the target is a <color=#28d9ed>Healer</color>, additionally inflicts <color=#28d9ed>Silenced</color>.",
+        "3_jp": "(発動効果)味方が自分のターンで敵に弱体効果を付与した場合、<color=#28d9ed>【大地の烈斬】</color>を使用する。\\n\\n<color=#28d9ed>【大地の烈斬】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>2ターン</color>の間付与する。対象が<color=#28d9ed>回復型</color>の場合、追加で<color=#28d9ed>沈黙</color>を付与する。",
+        "3_kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>결정 쇄도</color>를 사용합니다.\\n\\n<color=#28d9ed>결정 쇄도</color> : 적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 대상 전체의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상이 <color=#28d9ed>회복형</color>이라면 추가적으로 <color=#28d9ed>침묵</color>을 부여합니다.",
+        "3_zh": "(触发效果)友军在自身回合对敌人造成弱化效果时,使用<color=#28d9ed>晶体风暴</color>。\\n\\n<color=#28d9ed>晶体风暴</color>:攻击全体敌人,并使全体目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,对全体敌人造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>2回合</color>。若目标为<color=#28d9ed>恢复型</color>,则额外造成<color=#28d9ed>沉默</color>效果。",
+        "4": "(Triggered Effect) Activates <color=#28d9ed>Crystal Storm</color> when an ally lands a debuff on their turn.\\n\\n<color=#28d9ed>Crystal Storm</color>: Attacks all enemies, and inflicts reduced <color=#28d9ed>Attack</color> on all targets for <color=#28d9ed>2 turn(s)</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, inflicts <color=#28d9ed>Poisoned</color> on all enemies for <color=#28d9ed>2 turn(s)</color>. If the target is a <color=#28d9ed>Healer</color>, additionally inflicts <color=#28d9ed>Silenced</color>.",
+        "4_jp": "(発動効果)味方が自分のターンで敵に弱体効果を付与した場合、<color=#28d9ed>【大地の烈斬】</color>を使用する。\\n\\n<color=#28d9ed>【大地の烈斬】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>2ターン</color>の間付与する。対象が<color=#28d9ed>回復型</color>の場合、追加で<color=#28d9ed>沈黙</color>を付与する。",
+        "4_kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>결정 쇄도</color>를 사용합니다.\\n\\n<color=#28d9ed>결정 쇄도</color> : 적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 대상 전체의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상이 <color=#28d9ed>회복형</color>이라면 추가적으로 <color=#28d9ed>침묵</color>을 부여합니다.",
+        "4_zh": "(触发效果)友军在自身回合对敌人造成弱化效果时,使用<color=#28d9ed>晶体风暴</color>。\\n\\n<color=#28d9ed>晶体风暴</color>:攻击全体敌人,并使全体目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,对全体敌人造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>2回合</color>。若目标为<color=#28d9ed>恢复型</color>,则额外造成<color=#28d9ed>沉默</color>效果。",
+        "5": "(Triggered Effect) Activates <color=#28d9ed>Crystal Storm</color> when an ally lands a debuff on their turn.\\n\\n<color=#28d9ed>Crystal Storm</color>: Attacks all enemies, and inflicts reduced <color=#28d9ed>Attack</color> on all targets for <color=#28d9ed>2 turn(s)</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, inflicts <color=#28d9ed>Poisoned</color> on all enemies for <color=#28d9ed>2 turn(s)</color>. If the target is a <color=#28d9ed>Healer</color>, additionally inflicts <color=#28d9ed>Silenced</color>.",
+        "5_jp": "(発動効果)味方が自分のターンで敵に弱体効果を付与した場合、<color=#28d9ed>【大地の烈斬】</color>を使用する。\\n\\n<color=#28d9ed>【大地の烈斬】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>2ターン</color>の間付与する。対象が<color=#28d9ed>回復型</color>の場合、追加で<color=#28d9ed>沈黙</color>を付与する。",
+        "5_kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>결정 쇄도</color>를 사용합니다.\\n\\n<color=#28d9ed>결정 쇄도</color> : 적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 대상 전체의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상이 <color=#28d9ed>회복형</color>이라면 추가적으로 <color=#28d9ed>침묵</color>을 부여합니다.",
+        "5_zh": "(触发效果)友军在自身回合对敌人造成弱化效果时,使用<color=#28d9ed>晶体风暴</color>。\\n\\n<color=#28d9ed>晶体风暴</color>:攻击全体敌人,并使全体目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,对全体敌人造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>2回合</color>。若目标为<color=#28d9ed>恢复型</color>,则额外造成<color=#28d9ed>沉默</color>效果。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown",
@@ -238,10 +277,10 @@
           "伤害量+20%"
         ]
       },
-      "wgr": 1,
       "cd": "4",
+      "wgr": 1,
       "buff": [
-        "BT_EXTRA_ATTACK_ON_TURN_END"
+        "BT_RUN_PASSIVE_SKILL_ON_TURN_END_TEAM"
       ],
       "debuff": [
         "BT_SILENCE",
@@ -263,6 +302,28 @@
       "true_desc_jp": "敵全体にダメージを与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせ、<color=#28d9ed>【アースエッジ】</color>を<color=#28d9ed>2ターン</color>の間獲得する。",
       "true_desc_kr": "적 전체를 공격합니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>매서운 공세</color>를 획득합니다.",
       "true_desc_zh": "攻击全体敌人。攻击后,使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>30%</color>,并获得<color=#28d9ed>猛烈攻势</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies. After attacking, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>, and grants <color=#28d9ed>Fierce Offensive</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "敵全体にダメージを与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせ、<color=#28d9ed>【アースエッジ】</color>を<color=#28d9ed>2ターン</color>の間獲得する。",
+        "1_kr": "적 전체를 공격합니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>매서운 공세</color>를 획득합니다.",
+        "1_zh": "攻击全体敌人。攻击后,使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>30%</color>,并获得<color=#28d9ed>猛烈攻势</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "2": "Attacks all enemies. After attacking, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>, and grants <color=#28d9ed>Fierce Offensive</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "敵全体にダメージを与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせ、<color=#28d9ed>【アースエッジ】</color>を<color=#28d9ed>2ターン</color>の間獲得する。",
+        "2_kr": "적 전체를 공격합니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>매서운 공세</color>를 획득합니다.",
+        "2_zh": "攻击全体敌人。攻击后,使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>30%</color>,并获得<color=#28d9ed>猛烈攻势</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "3": "Attacks all enemies. After attacking, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>, and grants <color=#28d9ed>Fierce Offensive</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "敵全体にダメージを与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせ、<color=#28d9ed>【アースエッジ】</color>を<color=#28d9ed>2ターン</color>の間獲得する。",
+        "3_kr": "적 전체를 공격합니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>매서운 공세</color>를 획득합니다.",
+        "3_zh": "攻击全体敌人。攻击后,使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>30%</color>,并获得<color=#28d9ed>猛烈攻势</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "4": "Attacks all enemies. After attacking, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>, and grants <color=#28d9ed>Fierce Offensive</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "敵全体にダメージを与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせ、<color=#28d9ed>【アースエッジ】</color>を<color=#28d9ed>2ターン</color>の間獲得する。",
+        "4_kr": "적 전체를 공격합니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>매서운 공세</color>를 획득합니다.",
+        "4_zh": "攻击全体敌人。攻击后,使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>30%</color>,并获得<color=#28d9ed>猛烈攻势</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "5": "Attacks all enemies. After attacking, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>, and grants <color=#28d9ed>Fierce Offensive</color> for <color=#28d9ed>3 turn(s)</color>.",
+        "5_jp": "敵全体にダメージを与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせ、<color=#28d9ed>【アースエッジ】</color>を<color=#28d9ed>3ターン</color>の間獲得する。",
+        "5_kr": "적 전체를 공격합니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시키고, <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>매서운 공세</color>를 획득합니다.",
+        "5_zh": "攻击全体敌人。攻击后,使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>30%</color>,并获得<color=#28d9ed>猛烈攻势</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown",
@@ -321,8 +382,8 @@
           "伤害量+15%"
         ]
       },
-      "wgr": 2,
       "cd": "5",
+      "wgr": 2,
       "buff": [
         "IG_Buff_2000056_Interruption",
         "BT_ACTION_GAUGE"
@@ -343,6 +404,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "1_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "2_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "3_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "4_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "5_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -408,13 +491,14 @@
         "BT_AP_CHARGE"
       ],
       "debuff": [],
-      "dual_buff": [
-        "BT_ACTION_GAUGE"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "dual_debuff": []
     }
   }
 }

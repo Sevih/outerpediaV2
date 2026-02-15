@@ -38,18 +38,18 @@
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
     "3_zh": "ATK DEF HP +10%",
-    "4": "ATK DEF HP +16%\n+2% Evasion\n+1 Chain Passive Weakness Gauge damage",
-    "4_jp": "ATK DEF HP +16%\n回避+2%\nチェーンパッシブのWGダメージ+1",
-    "4_kr": "ATK DEF HP +16%\n회피 +2%\n체인 패시브의 WG 감소량 +1",
-    "4_zh": "ATK DEF HP +16%\n回避+2%\n连携被动技能的WG降低量+1",
+    "4": "ATK DEF HP +16%\nDMG Reduction +2.4%\nChain Passive WG reduction +1",
+    "4_jp": "ATK DEF HP +16%\n被ダメDOWN+2.4%\nチェーンパッシブのWGダメージ+1",
+    "4_kr": "ATK DEF HP +16%\n받는 피해 감소 +2.4%\n체인 패시브의 WG 감소량 +1",
+    "4_zh": "ATK DEF HP +16%\n受伤害降低减少+2.4%\n连携被动技能的WG降低量+1",
     "5": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_zh": "ATK DEF HP +22%\n解锁3阶爆发",
-    "6": "ATK DEF HP +30%\n+2% Evasion\n+25 Action Points at battle start",
-    "6_jp": "ATK DEF HP +30%\n回避+2%\n戦闘開始時、AP+25",
-    "6_kr": "ATK DEF HP +30%\n회피 +2%\n입장 시 AP +25",
-    "6_zh": "ATK DEF HP +30%\n回避+2%\n入场时AP+25"
+    "6": "ATK DEF HP +30%\nDMG Reduction +2.4%\nOn entry, AP +25",
+    "6_jp": "ATK DEF HP +30%\n被ダメDOWN+2.4%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n받는 피해 감소 +2.4%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n受伤害降低减少+2.4%\n入场时AP+25"
   },
   "skills": {
     "SKT_FIRST": {
@@ -64,6 +64,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -143,6 +165,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -211,6 +255,8 @@
       "debuff": [
         "BT_AGGRO"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Changes to Enhanced Attack\\nActivates Dual Attack with 1 ally",
@@ -223,7 +269,7 @@
           "target": "mono"
         },
         "SKT_BURST_2": {
-          "effect": "Grants barrier (proportional to Attack)",
+          "effect": "Grants Barrier (proportional to Attack)",
           "effect_jp": "シールド付与\\n(攻撃力が高いほどシールド量がUP)",
           "effect_kr": "실드 추가(공격력 비례)",
           "effect_zh": "生成护盾(与攻击力成正比)",
@@ -242,9 +288,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "103",
@@ -258,6 +302,28 @@
       "true_desc_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。\\n\\n<color=#ffd732>イレギュラーモンスター</color>への攻撃時、与えるダメージがUPし、自分を除く味方のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
       "true_desc_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가하고 자신을 제외한 아군의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
       "true_desc_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。\\n\\n攻击<color=#ffd732>异型怪</color>时伤害量提升,并使除自身外我军的技能冷却时间减少<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to decrease the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIncreases damage dealt when attacking an <color=#ffd732>Irregular Monster</color>, and decreases Skill Cooldown of allies (excluding self) by <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。\\n\\n<color=#ffd732>イレギュラーモンスター</color>への攻撃時、与えるダメージがUPし、自分を除く味方のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
+        "1_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가하고 자신을 제외한 아군의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
+        "1_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。\\n\\n攻击<color=#ffd732>异型怪</color>时伤害量提升,并使除自身外我军的技能冷却时间减少<color=#28d9ed>1回合</color>。",
+        "2": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to decrease the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIncreases damage dealt when attacking an <color=#ffd732>Irregular Monster</color>, and decreases Skill Cooldown of allies (excluding self) by <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。\\n\\n<color=#ffd732>イレギュラーモンスター</color>への攻撃時、与えるダメージがUPし、自分を除く味方のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
+        "2_kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가하고 자신을 제외한 아군의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
+        "2_zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。\\n\\n攻击<color=#ffd732>异型怪</color>时伤害量提升,并使除自身外我军的技能冷却时间减少<color=#28d9ed>1回合</color>。",
+        "3": "Attacks all enemies and has a <color=#28d9ed>85%</color> chance to decrease the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIncreases damage dealt when attacking an <color=#ffd732>Irregular Monster</color>, and decreases Skill Cooldown of allies (excluding self) by <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "敵全体にダメージを与え、<color=#28d9ed>85%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。\\n\\n<color=#ffd732>イレギュラーモンスター</color>への攻撃時、与えるダメージがUPし、自分を除く味方のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
+        "3_kr": "적 전체를 공격하고 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가하고 자신을 제외한 아군의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
+        "3_zh": "攻击全体敌人,并有<color=#28d9ed>85%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。\\n\\n攻击<color=#ffd732>异型怪</color>时伤害量提升,并使除自身外我军的技能冷却时间减少<color=#28d9ed>1回合</color>。",
+        "4": "Attacks all enemies and has a <color=#28d9ed>85%</color> chance to decrease the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIncreases damage dealt when attacking an <color=#ffd732>Irregular Monster</color>, and decreases Skill Cooldown of allies (excluding self) by <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "敵全体にダメージを与え、<color=#28d9ed>85%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。\\n\\n<color=#ffd732>イレギュラーモンスター</color>への攻撃時、与えるダメージがUPし、自分を除く味方のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
+        "4_kr": "적 전체를 공격하고 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가하고 자신을 제외한 아군의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
+        "4_zh": "攻击全体敌人,并有<color=#28d9ed>85%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。\\n\\n攻击<color=#ffd732>异型怪</color>时伤害量提升,并使除自身外我军的技能冷却时间减少<color=#28d9ed>1回合</color>。",
+        "5": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to decrease the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIncreases damage dealt when attacking an <color=#ffd732>Irregular Monster</color>, and decreases Skill Cooldown of allies (excluding self) by <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。\\n\\n<color=#ffd732>イレギュラーモンスター</color>への攻撃時、与えるダメージがUPし、自分を除く味方のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
+        "5_kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가하고 자신을 제외한 아군의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
+        "5_zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。\\n\\n攻击<color=#ffd732>异型怪</color>时伤害量提升,并使除自身外我军的技能冷却时间减少<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -339,6 +405,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
       "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
       "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish Effect</color>: After attacking, reduces all allies' skill cooldowns by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "2": "<color=#ffd732>Chain Finish Effect</color>: After attacking, reduces all allies' skill cooldowns by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, reduces all allies' skill cooldowns by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, reduces all allies' skill cooldowns by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, reduces all allies' skill cooldowns by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>50%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -404,13 +492,14 @@
         "BT_COOL_CHARGE"
       ],
       "debuff": [],
-      "dual_debuff": [
-        "BT_REMOVE_BUFF"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     }
   }
 }

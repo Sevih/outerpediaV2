@@ -45,10 +45,10 @@
     "4_1_kr": "ATK DEF HP +16%\n암속성 아군 속도 +15\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n暗属性我方速度+15\n连携被动WG减少量+1",
     "4_2": "ATK DEF HP +19%",
-    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\nWhen using Eradicate Creation, changes to a double Dual Attack. \nUpon entering battle, AP +50",
-    "5_1_jp": "ATK DEF HP +22%\nバースト3段階解放\n【被造物排除】使用時、2人の連携攻撃に変更\n戦闘開始時、AP+50",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n피조물 제거 사용 시 2명 협공으로 변경\n전투 입장 시 AP +50",
-    "5_1_zh": "ATK DEF HP +22%\n解锁爆裂3阶段\n使用[清除造物]时,变更为2人夹攻\n入场时AP+50",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\n+50% Critical Damage Increase to Dark ally\n+50 AP upon entry",
+    "5_1_jp": "ATK DEF HP +22%\nバースト3段階解放\n闇属性の味方の会心ダメージUP+50%\n戦闘開始時、AP+50",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n암속성 아군 치명 피해 증가 +50%\n전투 입장 시 AP +50",
+    "5_1_zh": "ATK DEF HP +22%\n解锁爆裂3阶段\n暗属性我方暴击伤害提升+50%\n入场时AP+50",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+5 Black Sun upon entry\n+1 Turn Speed Increase upon entry",
@@ -69,6 +69,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で最も攻撃力が高い味方の連携を発生させる。\\n\\n闇属性の味方が連携する場合、連携ダメージを<color=#28d9ed>50%</color>UPさせ、WGをさらに<color=#28d9ed>1</color>減少させる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
       "true_desc_kr": "적을 공격하고, <color=#28d9ed>70%</color> 확률로 가장 공격력이 높은 아군의 협공을 발생시킵니다.\\n\\n암속성 아군이 협공을 할 경우 협공 피해량을 <color=#28d9ed>50%</color> 증가시키고 WG를 추가로 <color=#28d9ed>1</color> 감소시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的概率使攻击力最高的我方发动夹攻。\\n\\n若暗属性我方发动协攻,使协攻伤害提升<color=#28d9ed>50%</color>,并额外减少<color=#28d9ed>1</color>点WG。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+      "true_desc_levels": {
+        "1": "Attacks the enemy and, with a <color=#28d9ed>70%</color> chance, triggers a Dual Attack from the ally with the highest Attack.\\n\\n\nIf the Dual Attack is performed by a Dark ally, increases Dual Attack damage by <color=#28d9ed>50%</color> and additionally reduces WG by <color=#28d9ed>1</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>1</color> stacks of the <color=#28d9ed>unique resource: Black Sun</color>.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で最も攻撃力が高い味方の連携を発生させる。\\n\\n闇属性の味方が連携する場合、連携ダメージを<color=#28d9ed>50%</color>UPさせ、WGをさらに<color=#28d9ed>1</color>減少させる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "1_kr": "적을 공격하고, <color=#28d9ed>70%</color> 확률로 가장 공격력이 높은 아군의 협공을 발생시킵니다.\\n\\n암속성 아군이 협공을 할 경우 협공 피해량을 <color=#28d9ed>50%</color> 증가시키고 WG를 추가로 <color=#28d9ed>1</color> 감소시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的概率使攻击力最高的我方发动夹攻。\\n\\n若暗属性我方发动协攻,使协攻伤害提升<color=#28d9ed>50%</color>,并额外减少<color=#28d9ed>1</color>点WG。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+        "2": "Attacks the enemy and, with a <color=#28d9ed>70%</color> chance, triggers a Dual Attack from the ally with the highest Attack.\\n\\n\nIf the Dual Attack is performed by a Dark ally, increases Dual Attack damage by <color=#28d9ed>50%</color> and additionally reduces WG by <color=#28d9ed>1</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>1</color> stacks of the <color=#28d9ed>unique resource: Black Sun</color>.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で最も攻撃力が高い味方の連携を発生させる。\\n\\n闇属性の味方が連携する場合、連携ダメージを<color=#28d9ed>50%</color>UPさせ、WGをさらに<color=#28d9ed>1</color>減少させる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "2_kr": "적을 공격하고, <color=#28d9ed>70%</color> 확률로 가장 공격력이 높은 아군의 협공을 발생시킵니다.\\n\\n암속성 아군이 협공을 할 경우 협공 피해량을 <color=#28d9ed>50%</color> 증가시키고 WG를 추가로 <color=#28d9ed>1</color> 감소시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的概率使攻击力最高的我方发动夹攻。\\n\\n若暗属性我方发动协攻,使协攻伤害提升<color=#28d9ed>50%</color>,并额外减少<color=#28d9ed>1</color>点WG。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+        "3": "Attacks the enemy and, with a <color=#28d9ed>85%</color> chance, triggers a Dual Attack from the ally with the highest Attack.\\n\\n\nIf the Dual Attack is performed by a Dark ally, increases Dual Attack damage by <color=#28d9ed>50%</color> and additionally reduces WG by <color=#28d9ed>1</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>1</color> stacks of the <color=#28d9ed>unique resource: Black Sun</color>.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>85%</color>の確率で最も攻撃力が高い味方の連携を発生させる。\\n\\n闇属性の味方が連携する場合、連携ダメージを<color=#28d9ed>50%</color>UPさせ、WGをさらに<color=#28d9ed>1</color>減少させる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "3_kr": "적을 공격하고, <color=#28d9ed>85%</color> 확률로 가장 공격력이 높은 아군의 협공을 발생시킵니다.\\n\\n암속성 아군이 협공을 할 경우 협공 피해량을 <color=#28d9ed>50%</color> 증가시키고 WG를 추가로 <color=#28d9ed>1</color> 감소시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>85%</color>的概率使攻击力最高的我方发动夹攻。\\n\\n若暗属性我方发动协攻,使协攻伤害提升<color=#28d9ed>50%</color>,并额外减少<color=#28d9ed>1</color>点WG。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+        "4": "Attacks the enemy and, with a <color=#28d9ed>85%</color> chance, triggers a Dual Attack from the ally with the highest Attack.\\n\\n\nIf the Dual Attack is performed by a Dark ally, increases Dual Attack damage by <color=#28d9ed>50%</color> and additionally reduces WG by <color=#28d9ed>1</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>1</color> stacks of the <color=#28d9ed>unique resource: Black Sun</color>.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>85%</color>の確率で最も攻撃力が高い味方の連携を発生させる。\\n\\n闇属性の味方が連携する場合、連携ダメージを<color=#28d9ed>50%</color>UPさせ、WGをさらに<color=#28d9ed>1</color>減少させる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "4_kr": "적을 공격하고, <color=#28d9ed>85%</color> 확률로 가장 공격력이 높은 아군의 협공을 발생시킵니다.\\n\\n암속성 아군이 협공을 할 경우 협공 피해량을 <color=#28d9ed>50%</color> 증가시키고 WG를 추가로 <color=#28d9ed>1</color> 감소시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>85%</color>的概率使攻击力最高的我方发动夹攻。\\n\\n若暗属性我方发动协攻,使协攻伤害提升<color=#28d9ed>50%</color>,并额外减少<color=#28d9ed>1</color>点WG。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+        "5": "Attacks the enemy and, with a <color=#28d9ed>100%</color> chance, triggers a Dual Attack from the ally with the highest Attack.\\n\\n\nIf the Dual Attack is performed by a Dark ally, increases Dual Attack damage by <color=#28d9ed>50%</color> and additionally reduces WG by <color=#28d9ed>1</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>1</color> stacks of the <color=#28d9ed>unique resource: Black Sun</color>.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で最も攻撃力が高い味方の連携を発生させる。\\n\\n闇属性の味方が連携する場合、連携ダメージを<color=#28d9ed>50%</color>UPさせ、WGをさらに<color=#28d9ed>1</color>減少させる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "5_kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 가장 공격력이 높은 아군의 협공을 발생시킵니다.\\n\\n암속성 아군이 협공을 할 경우 협공 피해량을 <color=#28d9ed>50%</color> 증가시키고 WG를 추가로 <color=#28d9ed>1</color> 감소시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>100%</color>的概率使攻击力最高的我方发动夹攻。\\n\\n若暗属性我方发动协攻,使协攻伤害提升<color=#28d9ed>50%</color>,并额外减少<color=#28d9ed>1</color>点WG。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -126,9 +148,7 @@
       "wgr": 1,
       "cd": null,
       "buff": [
-        "BT_CALL_BACKUP",
-        "BT_CALL_BACKUP_2",
-        "BT_WG_DMG"
+        "BT_CALL_BACKUP"
       ],
       "debuff": [],
       "offensive": true,
@@ -146,6 +166,28 @@
       "true_desc_jp": "攻撃前、闇属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。 \\n味方全体の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、\\n行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
       "true_desc_kr": "스킬 사용 전 암속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고 적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시킨 뒤 \\n행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
       "true_desc_zh": "使用技能前,使暗属性我方全体的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n使我方全体的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,随后使<color=#28d9ed>行动值</color>增加<color=#28d9ed>10%</color>。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+      "true_desc_levels": {
+        "1": "Before using the skill, increases <color=#28d9ed>Penetration</color> of all Dark allies for <color=#28d9ed>2</color> turns then attacks all enemies.\\n\nIncreases <color=#28d9ed>Critical Damage</color> of all allies for <color=#28d9ed>2</color> turns and increases Priority by <color=#28d9ed>10%</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>1</color> stacks of the unique resource: <color=#28d9ed>Black Sun</color>.",
+        "1_jp": "攻撃前、闇属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。 \\n味方全体の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、\\n行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "1_kr": "스킬 사용 전 암속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고 적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시킨 뒤 \\n행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
+        "1_zh": "使用技能前,使暗属性我方全体的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n使我方全体的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,随后使<color=#28d9ed>行动值</color>增加<color=#28d9ed>10%</color>。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+        "2": "Before using the skill, increases <color=#28d9ed>Penetration</color> of all Dark allies for <color=#28d9ed>2</color> turns then attacks all enemies.\\n\nIncreases <color=#28d9ed>Critical Damage</color> of all allies for <color=#28d9ed>2</color> turns and increases Priority by <color=#28d9ed>10%</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>1</color> stacks of the unique resource: <color=#28d9ed>Black Sun</color>.",
+        "2_jp": "攻撃前、闇属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。 \\n味方全体の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、\\n行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "2_kr": "스킬 사용 전 암속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고 적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시킨 뒤 \\n행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
+        "2_zh": "使用技能前,使暗属性我方全体的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n使我方全体的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,随后使<color=#28d9ed>行动值</color>增加<color=#28d9ed>10%</color>。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+        "3": "Before using the skill, increases <color=#28d9ed>Penetration</color> of all Dark allies for <color=#28d9ed>2</color> turns then attacks all enemies.\\n\nIncreases <color=#28d9ed>Critical Damage</color> of all allies for <color=#28d9ed>2</color> turns and increases Priority by <color=#28d9ed>10%</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>1</color> stacks of the unique resource: <color=#28d9ed>Black Sun</color>.",
+        "3_jp": "攻撃前、闇属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。 \\n味方全体の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、\\n行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "3_kr": "스킬 사용 전 암속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고 적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시킨 뒤 \\n행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>1개</color> 획득합니다.",
+        "3_zh": "使用技能前,使暗属性我方全体的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n使我方全体的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,随后使<color=#28d9ed>行动值</color>增加<color=#28d9ed>10%</color>。\\n\\n攻击后,获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+        "4": "Before using the skill, increases <color=#28d9ed>Penetration</color> of all Dark allies for <color=#28d9ed>2</color> turns then attacks all enemies.\\n\nIncreases <color=#28d9ed>Critical Damage</color> of all allies for <color=#28d9ed>2</color> turns and increases Priority by <color=#28d9ed>10%</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>2</color> stacks of the unique resource: <color=#28d9ed>Black Sun</color>.",
+        "4_jp": "攻撃前、闇属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。 \\n味方全体の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、\\n行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>2個</color>獲得する。",
+        "4_kr": "스킬 사용 전 암속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고 적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시킨 뒤 \\n행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>2개</color> 획득합니다.",
+        "4_zh": "使用技能前,使暗属性我方全体的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n使我方全体的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,随后使<color=#28d9ed>行动值</color>增加<color=#28d9ed>10%</color>。\\n\\n攻击后,获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:黑太阳</color>。",
+        "5": "Before using the skill, increases <color=#28d9ed>Penetration</color> of all Dark allies for <color=#28d9ed>3</color> turns then attacks all enemies.\\n\nIncreases <color=#28d9ed>Critical Damage</color> of all allies for <color=#28d9ed>3</color> turns and increases Priority by <color=#28d9ed>20%</color>.\\n\\n\nAfter attacking, gains <color=#28d9ed>2</color> stacks of the unique resource: <color=#28d9ed>Black Sun</color>.",
+        "5_jp": "攻撃前、闇属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>3ターン</color>の間UPさせ、敵全体にダメージを与える。 \\n味方全体の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>3ターン</color>の間UPさせた後、\\n行動ゲージを<color=#28d9ed>20%</color>UPさせる。\\n\\n攻撃後、<color=#28d9ed>【固有資源:黒い太陽】</color>を<color=#28d9ed>2個</color>獲得する。",
+        "5_kr": "스킬 사용 전 암속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>3턴</color> 동안 증가시키고 적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>3턴</color> 동안 증가시킨 뒤 \\n행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.\\n\\n공격 후 <color=#28d9ed>고유 자원 : 검은 태양</color>을 <color=#28d9ed>2개</color> 획득합니다.",
+        "5_zh": "使用技能前,使暗属性我方全体的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。\\n使我方全体的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>,随后使<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。\\n\\n攻击后,获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:黑太阳</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -214,6 +256,8 @@
         "BT_STAT|ST_ATK"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Gains additional Black Sun +1\\nWG Reduction +1",
@@ -245,9 +289,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "multi"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "11103",
@@ -257,10 +299,32 @@
       "name_jp": "コード・ラー",
       "name_kr": "코드 라",
       "name_zh": "拉的法则",
-      "true_desc": "<color=#28d9ed>Unique Resource: Can be used when you have Black Sun 5.</color>\\nBefore using the skill, decreases all enemies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3 turn(s)</color> and attacks all enemies.\\nThis skill's damage increases by <color=#28d9ed>50%</color> each time it is used.(Stacks up to 3 times)\\nAfter attacking, makes all enemies <color=#28d9ed>Golden Curse</color> for <color=#28d9ed>1 turn(s)</color>.\\n\\nIgnores <color=#28d9ed>30%</color> of the target's <color=#28d9ed>Defense</color> and\\nIf the target is a boss, ignores <color=#28d9ed>100%</color> of <color=#28d9ed>Defense</color>.",
-      "true_desc_jp": "<color=#28d9ed>【固有資源:黒い太陽】</color>が5個ある場合、使用できる。\\nスキル使用前、敵全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせ、敵全体にダメージを与える。\\nこのスキルは使用するたびにダメージが<color=#28d9ed>50%</color>UPする(最大3回累積)。\\n攻撃後、敵全体を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>【黄金の呪い】</color>状態にする。\\n\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視し、\\n対象がボスの場合、<color=#28d9ed>防御力</color>を<color=#28d9ed>100%</color>無視する。",
-      "true_desc_kr": "<color=#28d9ed>고유 자원 : 검은 태양 5개 보유 시 사용 가능합니다.</color>\\n스킬 사용 전 적 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시키고 적 전체를 공격합니다.\\n이 스킬은 사용할 때마다 피해가 <color=#28d9ed>50%</color> 증가합니다.(최대 3회 누적)\\n공격 후 적 전체를 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>황금의 저주</color> 상태로 만듭니다.\\n\\n대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시하고\\n대상이 보스인 경우 <color=#28d9ed>방어력</color>을 <color=#28d9ed>100%</color> 무시합니다.",
-      "true_desc_zh": "<color=#28d9ed>持有5个固有资源:黑太阳时可以使用。</color>\\n使用技能前,使全体敌人的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。\\n该技能每次使用时伤害提升<color=#28d9ed>50%</color>。(最多叠加3次)\\n攻击后,使全体敌人进入<color=#28d9ed>黄金诅咒</color>状态,持续<color=#28d9ed>1回合</color>。\\n\\n无视目标<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>,\\n若目标为首领,无视<color=#28d9ed>100%</color><color=#28d9ed>防御力</color>。",
+      "true_desc": "<color=#28d9ed>Unique Resource: Requires 5 of Black Sun to be used.</color>\\n\nBefore attacking, decreases all enemies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3</color> turns, then attacks all enemies.\\n\\n\nInflicts <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turn on non-Light targets and inflicts <color=#28d9ed>Golden Curse</color> for <color=#28d9ed>1</color> turn on Light targets.\\n\\n\nIf the target is a Boss, ignores <color=#28d9ed>Defense</color> by <color=#28d9ed>100%</color>.",
+      "true_desc_jp": "<color=#28d9ed>【固有資源:黒い太陽】</color>が5個ある場合、使用できる。\\nスキル使用前、敵全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせ、敵全体にダメージを与える。 \\n\\n光属性でない対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与し、光属性である対象に<color=#28d9ed>黄金の呪い</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n対象がボスの場合、<color=#28d9ed>防御力</color>を<color=#28d9ed>100%</color>無視する。",
+      "true_desc_kr": "<color=#28d9ed>고유 자원 : 검은 태양 5개 보유 시 사용 가능합니다.</color>\\n스킬 사용 전 적 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시키고 적 전체를 공격합니다.\\n\\n명속성이 아닌 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만들고, 명속성인 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>황금의 저주</color> 상태로 만듭니다.\\n\\n대상이 보스인 경우 <color=#28d9ed>방어력</color>을 <color=#28d9ed>100%</color> 무시합니다.",
+      "true_desc_zh": "<color=#28d9ed>持有5个固有资源:黑太阳时可以使用。</color>\\n使用技能前,使全体敌人的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。\\n\\n使非光属性目标进入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>1回合</color>;使光属性目标进入<color=#28d9ed>黄金诅咒</color>状态,持续<color=#28d9ed>1回合</color>。\\n\\n若目标为首领,无视<color=#28d9ed>100%</color><color=#28d9ed>防御力</color>。",
+      "true_desc_levels": {
+        "1": "<color=#28d9ed>Unique Resource: Requires 5 of Black Sun to be used.</color>\\n\nBefore attacking, decreases all enemies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3</color> turns, then attacks all enemies.\\n\\n\nInflicts <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turn on non-Light targets and inflicts <color=#28d9ed>Golden Curse</color> for <color=#28d9ed>1</color> turn on Light targets.\\n\\n\nIf the target is a Boss, ignores <color=#28d9ed>Defense</color> by <color=#28d9ed>100%</color>.",
+        "1_jp": "<color=#28d9ed>【固有資源:黒い太陽】</color>が5個ある場合、使用できる。\\nスキル使用前、敵全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせ、敵全体にダメージを与える。 \\n\\n光属性でない対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与し、光属性である対象に<color=#28d9ed>黄金の呪い</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n対象がボスの場合、<color=#28d9ed>防御力</color>を<color=#28d9ed>100%</color>無視する。",
+        "1_kr": "<color=#28d9ed>고유 자원 : 검은 태양 5개 보유 시 사용 가능합니다.</color>\\n스킬 사용 전 적 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시키고 적 전체를 공격합니다.\\n\\n명속성이 아닌 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만들고, 명속성인 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>황금의 저주</color> 상태로 만듭니다.\\n\\n대상이 보스인 경우 <color=#28d9ed>방어력</color>을 <color=#28d9ed>100%</color> 무시합니다.",
+        "1_zh": "<color=#28d9ed>持有5个固有资源:黑太阳时可以使用。</color>\\n使用技能前,使全体敌人的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。\\n\\n使非光属性目标进入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>1回合</color>;使光属性目标进入<color=#28d9ed>黄金诅咒</color>状态,持续<color=#28d9ed>1回合</color>。\\n\\n若目标为首领,无视<color=#28d9ed>100%</color><color=#28d9ed>防御力</color>。",
+        "2": "<color=#28d9ed>Unique Resource: Requires 5 of Black Sun to be used.</color>\\n\nBefore attacking, decreases all enemies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3</color> turns, then attacks all enemies.\\n\\n\nInflicts <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turn on non-Light targets and inflicts <color=#28d9ed>Golden Curse</color> for <color=#28d9ed>1</color> turn on Light targets.\\n\\n\nIf the target is a Boss, ignores <color=#28d9ed>Defense</color> by <color=#28d9ed>100%</color>.",
+        "2_jp": "<color=#28d9ed>【固有資源:黒い太陽】</color>が5個ある場合、使用できる。\\nスキル使用前、敵全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせ、敵全体にダメージを与える。 \\n\\n光属性でない対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与し、光属性である対象に<color=#28d9ed>黄金の呪い</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n対象がボスの場合、<color=#28d9ed>防御力</color>を<color=#28d9ed>100%</color>無視する。",
+        "2_kr": "<color=#28d9ed>고유 자원 : 검은 태양 5개 보유 시 사용 가능합니다.</color>\\n스킬 사용 전 적 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시키고 적 전체를 공격합니다.\\n\\n명속성이 아닌 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만들고, 명속성인 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>황금의 저주</color> 상태로 만듭니다.\\n\\n대상이 보스인 경우 <color=#28d9ed>방어력</color>을 <color=#28d9ed>100%</color> 무시합니다.",
+        "2_zh": "<color=#28d9ed>持有5个固有资源:黑太阳时可以使用。</color>\\n使用技能前,使全体敌人的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。\\n\\n使非光属性目标进入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>1回合</color>;使光属性目标进入<color=#28d9ed>黄金诅咒</color>状态,持续<color=#28d9ed>1回合</color>。\\n\\n若目标为首领,无视<color=#28d9ed>100%</color><color=#28d9ed>防御力</color>。",
+        "3": "<color=#28d9ed>Unique Resource: Requires 5 of Black Sun to be used.</color>\\n\nBefore attacking, decreases all enemies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3</color> turns, then attacks all enemies.\\n\\n\nInflicts <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turn on non-Light targets and inflicts <color=#28d9ed>Golden Curse</color> for <color=#28d9ed>1</color> turn on Light targets.\\n\\n\nIf the target is a Boss, ignores <color=#28d9ed>Defense</color> by <color=#28d9ed>100%</color>.",
+        "3_jp": "<color=#28d9ed>【固有資源:黒い太陽】</color>が5個ある場合、使用できる。\\nスキル使用前、敵全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせ、敵全体にダメージを与える。 \\n\\n光属性でない対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与し、光属性である対象に<color=#28d9ed>黄金の呪い</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n対象がボスの場合、<color=#28d9ed>防御力</color>を<color=#28d9ed>100%</color>無視する。",
+        "3_kr": "<color=#28d9ed>고유 자원 : 검은 태양 5개 보유 시 사용 가능합니다.</color>\\n스킬 사용 전 적 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시키고 적 전체를 공격합니다.\\n\\n명속성이 아닌 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만들고, 명속성인 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>황금의 저주</color> 상태로 만듭니다.\\n\\n대상이 보스인 경우 <color=#28d9ed>방어력</color>을 <color=#28d9ed>100%</color> 무시합니다.",
+        "3_zh": "<color=#28d9ed>持有5个固有资源:黑太阳时可以使用。</color>\\n使用技能前,使全体敌人的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。\\n\\n使非光属性目标进入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>1回合</color>;使光属性目标进入<color=#28d9ed>黄金诅咒</color>状态,持续<color=#28d9ed>1回合</color>。\\n\\n若目标为首领,无视<color=#28d9ed>100%</color><color=#28d9ed>防御力</color>。",
+        "4": "<color=#28d9ed>Unique Resource: Requires 5 of Black Sun to be used.</color>\\n\nBefore attacking, decreases all enemies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3</color> turns, then attacks all enemies.\\n\\n\nInflicts <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turn on non-Light targets and inflicts <color=#28d9ed>Golden Curse</color> for <color=#28d9ed>1</color> turn on Light targets.\\n\\n\nIf the target is a Boss, ignores <color=#28d9ed>Defense</color> by <color=#28d9ed>100%</color>.",
+        "4_jp": "<color=#28d9ed>【固有資源:黒い太陽】</color>が5個ある場合、使用できる。\\nスキル使用前、敵全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせ、敵全体にダメージを与える。 \\n\\n光属性でない対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与し、光属性である対象に<color=#28d9ed>黄金の呪い</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n対象がボスの場合、<color=#28d9ed>防御力</color>を<color=#28d9ed>100%</color>無視する。",
+        "4_kr": "<color=#28d9ed>고유 자원 : 검은 태양 5개 보유 시 사용 가능합니다.</color>\\n스킬 사용 전 적 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시키고 적 전체를 공격합니다.\\n\\n명속성이 아닌 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만들고, 명속성인 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>황금의 저주</color> 상태로 만듭니다.\\n\\n대상이 보스인 경우 <color=#28d9ed>방어력</color>을 <color=#28d9ed>100%</color> 무시합니다.",
+        "4_zh": "<color=#28d9ed>持有5个固有资源:黑太阳时可以使用。</color>\\n使用技能前,使全体敌人的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。\\n\\n使非光属性目标进入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>1回合</color>;使光属性目标进入<color=#28d9ed>黄金诅咒</color>状态,持续<color=#28d9ed>1回合</color>。\\n\\n若目标为首领,无视<color=#28d9ed>100%</color><color=#28d9ed>防御力</color>。",
+        "5": "<color=#28d9ed>Unique Resource: Requires 5 of Black Sun to be used.</color>\\n\nBefore attacking, decreases all enemies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3</color> turns, then attacks all enemies.\\n\\n\nInflicts <color=#28d9ed>Stun</color> for <color=#28d9ed>1</color> turn on non-Light targets and inflicts <color=#28d9ed>Golden Curse</color> for <color=#28d9ed>1</color> turn on Light targets.\\n\\n\nIf the target is a Boss, ignores <color=#28d9ed>Defense</color> by <color=#28d9ed>100%</color>.\\n\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "5_jp": "<color=#28d9ed>【固有資源:黒い太陽】</color>を5個ある場合、使用できる。\\nスキル使用前、敵全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせ、敵全体にダメージを与える。 \\n\\n光属性でない対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与し、光属性である対象に<color=#28d9ed>黄金の呪い</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n対象がボスの場合、<color=#28d9ed>防御力</color>を<color=#28d9ed>100%</color>無視する。\\nこのスキルの直後、敵の反撃、復讐、迅速対応は発動しない。",
+        "5_kr": "<color=#28d9ed>고유 자원 : 검은 태양 5개 보유 시 사용 가능합니다.</color>\\n스킬 사용 전 적 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시키고 적 전체를 공격합니다.\\n\\n명속성이 아닌 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만들고, 명속성인 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>황금의 저주</color> 상태로 만듭니다.\\n\\n대상이 보스인 경우 <color=#28d9ed>방어력</color>을 <color=#28d9ed>100%</color> 무시합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "5_zh": "<color=#28d9ed>持有5个固有资源:黑太阳时可以使用。</color>\\n使用技能前,使全体敌人的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。\\n\\n使非光属性目标进入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>1回合</color>;使光属性目标进入<color=#28d9ed>黄金诅咒</color>状态,持续<color=#28d9ed>1回合</color>。\\n\\n若目标为首领,无视<color=#28d9ed>100%</color><color=#28d9ed>防御力</color>。\\n该技能结束后,不会触发敌人的反击、复仇、迅速应对。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -321,8 +385,8 @@
       ],
       "debuff": [
         "BT_GOLDEN_CURSE",
-        "BT_STAT|ST_ATK_IR",
-        "BT_STAT|ST_CRITICAL_DMG_RATE_IR",
+        "BT_STAT|ST_ATK",
+        "BT_STUN",
         "BT_STAT|ST_DEF"
       ],
       "offensive": true,
@@ -340,6 +404,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象に<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>回復する。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>표식</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,对目标施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>2回合</color>。<color=#ffd732>夹攻效果</color>:攻击后,恢复<color=#28d9ed>行动值20%</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Marked</color> on the target for <color=#28d9ed>2 turn(s)</color>.<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象に<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>回復する。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>표식</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,对目标施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>2回合</color>。<color=#ffd732>夹攻效果</color>:攻击后,恢复<color=#28d9ed>行动值20%</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Marked</color> on the target for <color=#28d9ed>2 turn(s)</color>.<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象に<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>回復する。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>표식</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,对目标施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>2回合</color>。<color=#ffd732>夹攻效果</color>:攻击后,恢复<color=#28d9ed>行动值20%</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Marked</color> on the target for <color=#28d9ed>2 turn(s)</color>.<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象に<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>回復する。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>표식</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,对目标施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>2回合</color>。<color=#ffd732>夹攻效果</color>:攻击后,恢复<color=#28d9ed>行动值20%</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Marked</color> on the target for <color=#28d9ed>2 turn(s)</color>.<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象に<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>回復する。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>표식</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,对目标施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>2回合</color>。<color=#ffd732>夹攻效果</color>:攻击后,恢复<color=#28d9ed>行动值20%</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Marked</color> on the target for <color=#28d9ed>2 turn(s)</color>.<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象に<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>回復する。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>표식</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,对目标施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>2回合</color>。<color=#ffd732>夹攻效果</color>:攻击后,恢复<color=#28d9ed>行动值20%</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -405,13 +491,14 @@
       "debuff": [
         "BT_MARKING"
       ],
-      "dual_buff": [
-        "BT_ACTION_GAUGE"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "dual_debuff": []
     }
   }
 }

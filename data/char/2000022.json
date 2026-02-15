@@ -11,10 +11,6 @@
   "rank": "C",
   "rank_pvp": "C",
   "role": "dps",
-  "tags": [
-    "free",
-    "ignore-defense"
-  ],
   "skill_priority": {
     "First": {
       "prio": 2
@@ -30,13 +26,11 @@
   "gift": "Science",
   "VoiceActor": "VA. Xanthe Huynh",
   "VoiceActor_jp": "CV. 加藤英美里",
-  "VoiceActor_kr": "CV.방연지",
+  "VoiceActor_kr": "CV. 방연지",
   "VoiceActor_zh": "CV. 加藤英美里",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -46,15 +40,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 치명 피해 +4%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军暴击伤害+4%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+4% Ally Team Critical Damage\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方の会心ダメージ+4%\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 치명 피해 +4%\n입장 시 AP +25",
@@ -73,6 +64,28 @@
       "true_desc_jp": "敵単体にダメージを与え、自分のターンの場合<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。",
       "true_desc_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 획득합니다.",
       "true_desc_zh": "攻击敌人,若处于自身回合,则获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy. Obtains <color=#28d9ed>1</color> <color=#28d9ed>Kaizer Energy (Unique Resource)</color> if used during the caster's turn.",
+        "1_jp": "敵単体にダメージを与え、自分のターンの場合<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "1_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 획득합니다.",
+        "1_zh": "攻击敌人,若处于自身回合,则获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+        "2": "Attacks an enemy. Obtains <color=#28d9ed>1</color> <color=#28d9ed>Kaizer Energy (Unique Resource)</color> if used during the caster's turn.",
+        "2_jp": "敵単体にダメージを与え、自分のターンの場合<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "2_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 획득합니다.",
+        "2_zh": "攻击敌人,若处于自身回合,则获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+        "3": "Attacks an enemy. Obtains <color=#28d9ed>1</color> <color=#28d9ed>Kaizer Energy (Unique Resource)</color> if used during the caster's turn.",
+        "3_jp": "敵単体にダメージを与え、自分のターンの場合<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "3_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 획득합니다.",
+        "3_zh": "攻击敌人,若处于自身回合,则获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+        "4": "Attacks an enemy. Obtains <color=#28d9ed>1</color> <color=#28d9ed>Kaizer Energy (Unique Resource)</color> if used during the caster's turn.",
+        "4_jp": "敵単体にダメージを与え、自分のターンの場合<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "4_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 획득합니다.",
+        "4_zh": "攻击敌人,若处于自身回合,则获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+        "5": "Attacks an enemy. Obtains <color=#28d9ed>1</color> <color=#28d9ed>Kaizer Energy (Unique Resource)</color> if used during the caster's turn.",
+        "5_jp": "敵単体にダメージを与え、自分のターンの場合<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。",
+        "5_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 획득합니다.",
+        "5_zh": "攻击敌人,若处于自身回合,则获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -134,6 +147,8 @@
         "BT_COOL3_CHARGE"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases Critical Chance of Burst Skill by 100%",
@@ -165,9 +180,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "2202",
@@ -181,6 +194,28 @@
       "true_desc_jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加で<color=#28d9ed>【カイザーキャノン】</color>を発動し、<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。<color=#28d9ed>【カイザーキャノン】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
       "true_desc_kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
       "true_desc_zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中,则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人,目标的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+      "true_desc_levels": {
+        "1": "(Triggered Effect) If <color=#28d9ed>Kaizer Knuckle</color> scores a critical hit during the caster's turn, activates <color=#28d9ed>Kaizer Cannon</color> as an additional attack. Attacks all enemies, dealing damage proportional to the target's <color=#28d9ed>Max Health</color>. Obtains <color=#28d9ed>1</color> additional <color=#28d9ed>Kaizer Energy (Unique Resource)</color>.",
+        "1_jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加で<color=#28d9ed>【カイザーキャノン】</color>を発動し、<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。<color=#28d9ed>【カイザーキャノン】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "1_kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
+        "1_zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中,则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人,目标的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+        "2": "(Triggered Effect) If <color=#28d9ed>Kaizer Knuckle</color> scores a critical hit during the caster's turn, activates <color=#28d9ed>Kaizer Cannon</color> as an additional attack. Attacks all enemies, dealing damage proportional to the target's <color=#28d9ed>Max Health</color>. Obtains <color=#28d9ed>1</color> additional <color=#28d9ed>Kaizer Energy (Unique Resource)</color>.",
+        "2_jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加で<color=#28d9ed>【カイザーキャノン】</color>を発動し、<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。<color=#28d9ed>【カイザーキャノン】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "2_kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
+        "2_zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中,则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人,目标的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+        "3": "(Triggered Effect) If <color=#28d9ed>Kaizer Knuckle</color> scores a critical hit during the caster's turn, activates <color=#28d9ed>Kaizer Cannon</color> as an additional attack. Attacks all enemies, dealing damage proportional to the target's <color=#28d9ed>Max Health</color>. Obtains <color=#28d9ed>1</color> additional <color=#28d9ed>Kaizer Energy (Unique Resource)</color>.",
+        "3_jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加で<color=#28d9ed>【カイザーキャノン】</color>を発動し、<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。<color=#28d9ed>【カイザーキャノン】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "3_kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
+        "3_zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中,则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人,目标的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+        "4": "(Triggered Effect) If <color=#28d9ed>Kaizer Knuckle</color> scores a critical hit during the caster's turn, activates <color=#28d9ed>Kaizer Cannon</color> as an additional attack. Attacks all enemies, dealing damage proportional to the target's <color=#28d9ed>Max Health</color>. Obtains <color=#28d9ed>1</color> additional <color=#28d9ed>Kaizer Energy (Unique Resource)</color>.",
+        "4_jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加で<color=#28d9ed>【カイザーキャノン】</color>を発動し、<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。<color=#28d9ed>【カイザーキャノン】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "4_kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
+        "4_zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中,则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人,目标的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。",
+        "5": "(Triggered Effect) If <color=#28d9ed>Kaizer Knuckle</color> scores a critical hit during the caster's turn, activates <color=#28d9ed>Kaizer Cannon</color> as an additional attack. Attacks all enemies, dealing damage proportional to the target's <color=#28d9ed>Max Health</color>. Obtains <color=#28d9ed>1</color> additional <color=#28d9ed>Kaizer Energy (Unique Resource)</color>.",
+        "5_jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加で<color=#28d9ed>【カイザーキャノン】</color>を発動し、<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>1個</color>獲得する。<color=#28d9ed>【カイザーキャノン】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "5_kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
+        "5_zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中,则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人,目标的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -236,9 +271,7 @@
         ]
       },
       "wgr": 1,
-      "buff": [
-        "BT_EXTRA_ATTACK_ON_TURN_END"
-      ],
+      "buff": [],
       "debuff": [],
       "offensive": true,
       "target": "multi"
@@ -255,6 +288,28 @@
       "true_desc_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#28d9ed>【固有資源:カイザーエナジー】</color>が<color=#28d9ed>5個</color>ある場合、すべて消費してダメージを与える。このダメージは対象の<color=#28d9ed>最大HP</color>が高いほどUPする。",
       "true_desc_kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
       "true_desc_zh": "攻击所有敌人,并使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。当持有<color=#28d9ed>5个</color><color=#28d9ed>固有资源:凯撒能量</color>时,消耗全部,并根据目标的<color=#28d9ed>生命值上限</color>等比提升伤害量。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies. Increases the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>. When <color=#28d9ed>Kaizer Energy (Unique Resource)</color> owned is <color=#28d9ed>5</color>, consumes all to increase damage dealt proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "1_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#28d9ed>【固有資源:カイザーエナジー】</color>が<color=#28d9ed>5個</color>ある場合、すべて消費してダメージを与える。このダメージは対象の<color=#28d9ed>最大HP</color>が高いほどUPする。",
+        "1_kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
+        "1_zh": "攻击所有敌人,并使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。当持有<color=#28d9ed>5个</color><color=#28d9ed>固有资源:凯撒能量</color>时,消耗全部,并根据目标的<color=#28d9ed>生命值上限</color>等比提升伤害量。",
+        "2": "Attacks all enemies. Increases the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>. When <color=#28d9ed>Kaizer Energy (Unique Resource)</color> owned is <color=#28d9ed>5</color>, consumes all to increase damage dealt proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "2_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#28d9ed>【固有資源:カイザーエナジー】</color>が<color=#28d9ed>5個</color>ある場合、すべて消費してダメージを与える。このダメージは対象の<color=#28d9ed>最大HP</color>が高いほどUPする。",
+        "2_kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
+        "2_zh": "攻击所有敌人,并使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。当持有<color=#28d9ed>5个</color><color=#28d9ed>固有资源:凯撒能量</color>时,消耗全部,并根据目标的<color=#28d9ed>生命值上限</color>等比提升伤害量。",
+        "3": "Attacks all enemies. Increases the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>. When <color=#28d9ed>Kaizer Energy (Unique Resource)</color> owned is <color=#28d9ed>5</color>, consumes all to increase damage dealt proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "3_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#28d9ed>【固有資源:カイザーエナジー】</color>が<color=#28d9ed>5個</color>ある場合、すべて消費してダメージを与える。このダメージは対象の<color=#28d9ed>最大HP</color>が高いほどUPする。",
+        "3_kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
+        "3_zh": "攻击所有敌人,并使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。当持有<color=#28d9ed>5个</color><color=#28d9ed>固有资源:凯撒能量</color>时,消耗全部,并根据目标的<color=#28d9ed>生命值上限</color>等比提升伤害量。",
+        "4": "Attacks all enemies. Increases the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>. When <color=#28d9ed>Kaizer Energy (Unique Resource)</color> owned is <color=#28d9ed>5</color>, consumes all to increase damage dealt proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "4_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#28d9ed>【固有資源:カイザーエナジー】</color>が<color=#28d9ed>5個</color>ある場合、すべて消費してダメージを与える。このダメージは対象の<color=#28d9ed>最大HP</color>が高いほどUPする。",
+        "4_kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
+        "4_zh": "攻击所有敌人,并使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。当持有<color=#28d9ed>5个</color><color=#28d9ed>固有资源:凯撒能量</color>时,消耗全部,并根据目标的<color=#28d9ed>生命值上限</color>等比提升伤害量。",
+        "5": "Attacks all enemies. Increases the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>. When <color=#28d9ed>Kaizer Energy (Unique Resource)</color> owned is <color=#28d9ed>5</color>, consumes all to increase damage dealt proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "5_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n<color=#28d9ed>【固有資源:カイザーエナジー】</color>が<color=#28d9ed>5個</color>ある場合、すべて消費してダメージを与える。このダメージは対象の<color=#28d9ed>最大HP</color>が高いほどUPする。",
+        "5_kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
+        "5_zh": "攻击所有敌人,并使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。当持有<color=#28d9ed>5个</color><color=#28d9ed>固有资源:凯撒能量</color>时,消耗全部,并根据目标的<color=#28d9ed>生命值上限</color>等比提升伤害量。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -313,8 +368,8 @@
           "伤害量+10%"
         ]
       },
-      "wgr": 2,
       "cd": "5",
+      "wgr": 2,
       "buff": [
         "BT_STAT|ST_CRITICAL_RATE"
       ],
@@ -334,6 +389,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color>:対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
       "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해량이 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使CP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:目标的<color=#28d9ed>生命值上限</color>越高,则伤害量越高。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish Effect</color>: Generates <color=#28d9ed>25</color> Chain Points after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: The damage increases proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color>:対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해량이 증가합니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使CP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:目标的<color=#28d9ed>生命值上限</color>越高,则伤害量越高。",
+        "2": "<color=#ffd732>Chain Finish Effect</color>: Generates <color=#28d9ed>25</color> Chain Points after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: The damage increases proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color>:対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해량이 증가합니다.",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使CP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:目标的<color=#28d9ed>生命值上限</color>越高,则伤害量越高。",
+        "3": "<color=#ffd732>Chain Finish Effect</color>: Generates <color=#28d9ed>25</color> Chain Points after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: The damage increases proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color>:対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해량이 증가합니다.",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使CP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:目标的<color=#28d9ed>生命值上限</color>越高,则伤害量越高。",
+        "4": "<color=#ffd732>Chain Finish Effect</color>: Generates <color=#28d9ed>25</color> Chain Points after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: The damage increases proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color>:対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해량이 증가합니다.",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使CP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:目标的<color=#28d9ed>生命值上限</color>越高,则伤害量越高。",
+        "5": "<color=#ffd732>Chain Finish Effect</color>: Generates <color=#28d9ed>25</color> Chain Points after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: The damage increases proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color>:対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해량이 증가합니다.",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使CP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:目标的<color=#28d9ed>生命值上限</color>越高,则伤害量越高。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -399,11 +476,12 @@
         "BT_CP_CHARGE"
       ],
       "debuff": [],
-      "dual_buff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

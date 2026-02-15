@@ -11,9 +11,6 @@
   "rank": "B",
   "rank_pvp": "C",
   "role": "sustain",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -29,13 +26,11 @@
   "gift": "Natural Object",
   "VoiceActor": "VA. Brianna Knickerbocker",
   "VoiceActor_jp": "CV. 伊藤静",
-  "VoiceActor_kr": "CV.강시현",
+  "VoiceActor_kr": "CV. 강시현",
   "VoiceActor_zh": "CV. 伊藤静",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -45,15 +40,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 체력 +5%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军生命值+5%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+5% Ally Team Health\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方のHP+5%\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 체력 +5%\n입장 시 AP +25",
@@ -68,10 +60,32 @@
       "name_jp": "光よ",
       "name_kr": "빛이여",
       "name_zh": "光明啊",
-      "true_desc": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.\\n Also heals the ally with the lowest Health for <color=#28d9ed>5%</color>.",
+      "true_desc": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.\\n Also heals the ally with the lowest Health for <color=#28d9ed>5%</color>.\\nInflict <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2 turns(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。\\nまた、残りHPが最も低い味方単体のHPを<color=#28d9ed>5%</color>回復する。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.\\n또한 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>5%</color> 회복시킵니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率解除全体友军<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。\\n并恢复生命值最低友军<color=#28d9ed>5%</color>生命值。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.\\n Also heals the ally with the lowest Health for <color=#28d9ed>5%</color>.\\nInflict <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2 turns(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。\\nまた、残りHPが最も低い味方単体のHPを<color=#28d9ed>5%</color>回復する。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.\\n또한 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>5%</color> 회복시킵니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率解除全体友军<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。\\n并恢复生命值最低友军<color=#28d9ed>5%</color>生命值。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>65%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.\\n Also heals the ally with the lowest Health for <color=#28d9ed>5%</color>.\\nInflict <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2 turns(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>65%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。\\nまた、残りHPが最も低い味方単体のHPを<color=#28d9ed>5%</color>回復する。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>65%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.\\n또한 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>5%</color> 회복시킵니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>65%</color>的几率解除全体友军<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。\\n并恢复生命值最低友军<color=#28d9ed>5%</color>生命值。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>65%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.\\n Also heals the ally with the lowest Health for <color=#28d9ed>5%</color>.\\nInflict <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2 turns(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>65%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。\\nまた、残りHPが最も低い味方単体のHPを<color=#28d9ed>5%</color>回復する。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>65%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.\\n또한 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>5%</color> 회복시킵니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>65%</color>的几率解除全体友军<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。\\n并恢复生命值最低友军<color=#28d9ed>5%</color>生命值。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>65%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.\\n Also heals the ally with the lowest Health for <color=#28d9ed>5%</color>.\\nInflict <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2 turns(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>65%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。\\nまた、残りHPが最も低い味方単体のHPを<color=#28d9ed>5%</color>回復する。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>65%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.\\n또한 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>5%</color> 회복시킵니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>65%</color>的几率解除全体友军<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。\\n并恢复生命值最低友军<color=#28d9ed>5%</color>生命值。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.\\n Also heals the ally with the lowest Health for <color=#28d9ed>15%</color>.\\nInflict <color=#28d9ed>Execution Time!</color> for <color=#28d9ed>2 turns(s)</color>.\\n\\n<color=#28d9ed>Execution time!</color>: Increases damage taken from Earth enemies.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。\\nまた、残りHPが最も低い味方単体のHPを<color=#28d9ed>15%</color>回復する。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.\\n또한 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>15%</color> 회복시킵니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率解除全体友军<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。\\n并恢复生命值最低友军<color=#28d9ed>15%</color>生命值。"
+      },
       "enhancement": {
         "2": [
           "+15% effect chance",
@@ -149,8 +163,30 @@
       "name_zh": "庇佑降临",
       "true_desc": "Heals all allies' <color=#28d9ed>Health</color> by <color=#28d9ed>15%</color> of Saeran's Max Health. Additionally, recovers all other allies' <color=#28d9ed>Action Points</color> by <color=#28d9ed>25</color>. Removes <color=#28d9ed>1</color><color=#28d9ed>Debuff</color>of all Earth allies including the caster and grants <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>1</color> turn(s). (The amount of healing is proportional to the target's Max Health).",
       "true_desc_jp": "味方全体の<color=#28d9ed>HP</color>を【セイラン】の最大HPの<color=#28d9ed>15%</color>回復させ、【セイラン】を除く味方全体が<color=#28d9ed>AP</color>を<color=#28d9ed>25</color>獲得する。\\nまた、持続性味方の <color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除し、<color=#28d9ed>1ターン</color>の間<color=#28d9ed>継続回復</color>を付与する。(回復量は対象の最大HPが高いほどUP)",
-      "true_desc_kr": "아군 전체의 <color=#28d9ed>체력</color>을 세이란 최대 체력의 <color=#28d9ed>15%</color>만큼 회복시키고, 세이란을 제외한 아군의 <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color> 회복시킵니다.\n그리고 모든 지속성 아군의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시키고, <color=#28d9ed>1턴</color>동안 <color=#28d9ed>지속 회복</color>을 걸어줍니다. (대상의 최대 체력에 비례하여 회복합니다.)",
+      "true_desc_kr": "아군 전체의 <color=#28d9ed>체력</color>을 세이란 최대 체력의 <color=#28d9ed>15%</color> 만큼 회복시키고, 세이란을 제외한 아군의 <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color> 회복시킵니다.\n그리고 모든 지속성 아군의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시키고, <color=#28d9ed>1턴</color>동안 <color=#28d9ed>지속 회복</color>을 걸어줍니다. (대상의 최대 체력에 비례하여 회복합니다.)",
       "true_desc_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于萨伊蓝最大生命值<color=#28d9ed>15%</color>,并使除萨伊蓝外的友军<color=#28d9ed>AP</color>恢复<color=#28d9ed>25</color>。\\n同时为所有<color=#28d9ed>持续属性</color>友军解除1个<color=#28d9ed>弱化效果</color>,并赋予<color=#28d9ed>1回合</color><color=#28d9ed>持续恢复</color>。(恢复量与目标最大生命值成比例)",
+      "true_desc_levels": {
+        "1": "Heals all allies' <color=#28d9ed>Health</color> by <color=#28d9ed>15%</color> of Saeran's Max Health. Additionally, recovers all other allies' <color=#28d9ed>Action Points</color> by <color=#28d9ed>25</color>. Removes <color=#28d9ed>1</color><color=#28d9ed>Debuff</color>of all Earth allies including the caster and grants <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>1</color> turn(s). (The amount of healing is proportional to the target's Max Health).",
+        "1_jp": "味方全体の<color=#28d9ed>HP</color>を【セイラン】の最大HPの<color=#28d9ed>15%</color>回復させ、【セイラン】を除く味方全体が<color=#28d9ed>AP</color>を<color=#28d9ed>25</color>獲得する。\\nまた、持続性味方の <color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除し、<color=#28d9ed>1ターン</color>の間<color=#28d9ed>継続回復</color>を付与する。(回復量は対象の最大HPが高いほどUP)",
+        "1_kr": "아군 전체의 <color=#28d9ed>체력</color>을 세이란 최대 체력의 <color=#28d9ed>15%</color> 만큼 회복시키고, 세이란을 제외한 아군의 <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color> 회복시킵니다.\n그리고 모든 지속성 아군의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시키고, <color=#28d9ed>1턴</color>동안 <color=#28d9ed>지속 회복</color>을 걸어줍니다. (대상의 최대 체력에 비례하여 회복합니다.)",
+        "1_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于萨伊蓝最大生命值<color=#28d9ed>15%</color>,并使除萨伊蓝外的友军<color=#28d9ed>AP</color>恢复<color=#28d9ed>25</color>。\\n同时为所有<color=#28d9ed>持续属性</color>友军解除1个<color=#28d9ed>弱化效果</color>,并赋予<color=#28d9ed>1回合</color><color=#28d9ed>持续恢复</color>。(恢复量与目标最大生命值成比例)",
+        "2": "Heals all allies' <color=#28d9ed>Health</color> by <color=#28d9ed>20%</color> of Saeran's Max Health. Additionally, recovers all other allies' <color=#28d9ed>Action Points</color> by <color=#28d9ed>25</color>. Removes <color=#28d9ed>1</color><color=#28d9ed>Debuff</color>of all Earth allies including the caster and grants <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>1</color> turn(s). (The amount of healing is proportional to the target's Max Health).",
+        "2_jp": "味方全体の<color=#28d9ed>HP</color>を【セイラン】の最大HPの<color=#28d9ed>20%</color>回復させ、【セイラン】を除く味方全体が<color=#28d9ed>AP</color>を<color=#28d9ed>25</color>獲得する。\\nまた、持続性味方の <color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除し、<color=#28d9ed>1ターン</color>の間<color=#28d9ed>継続回復</color>を付与する。(回復量は対象の最大HPが高いほどUP)",
+        "2_kr": "아군 전체의 <color=#28d9ed>체력</color>을 세이란 최대 체력의 <color=#28d9ed>20%</color> 만큼 회복시키고, 세이란을 제외한 아군의 <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color> 회복시킵니다.\n그리고 모든 지속성 아군의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시키고, <color=#28d9ed>1턴</color>동안 <color=#28d9ed>지속 회복</color>을 걸어줍니다. (대상의 최대 체력에 비례하여 회복합니다.)",
+        "2_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于萨伊蓝最大生命值<color=#28d9ed>20%</color>,并使除萨伊蓝外的友军<color=#28d9ed>AP</color>恢复<color=#28d9ed>25</color>。\\n同时为所有<color=#28d9ed>持续属性</color>友军解除1个<color=#28d9ed>弱化效果</color>,并赋予<color=#28d9ed>1回合</color><color=#28d9ed>持续恢复</color>。(恢复量与目标最大生命值成比例)",
+        "3": "Heals all allies' <color=#28d9ed>Health</color> by <color=#28d9ed>25%</color> of Saeran's Max Health. Additionally, recovers all other allies' <color=#28d9ed>Action Points</color> by <color=#28d9ed>25</color>. Removes <color=#28d9ed>1</color><color=#28d9ed>Debuff</color>of all Earth allies including the caster and grants <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>1</color> turn(s). (The amount of healing is proportional to the target's Max Health).",
+        "3_jp": "味方全体の<color=#28d9ed>HP</color>を【セイラン】の最大HPの<color=#28d9ed>25%</color>回復させ、【セイラン】を除く味方全体が<color=#28d9ed>AP</color>を<color=#28d9ed>25</color>獲得する。\\nまた、持続性味方の <color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除し、<color=#28d9ed>1ターン</color>の間<color=#28d9ed>継続回復</color>を付与する。(回復量は対象の最大HPが高いほどUP)",
+        "3_kr": "아군 전체의 <color=#28d9ed>체력</color>을 세이란 최대 체력의 <color=#28d9ed>25%</color> 만큼 회복시키고, 세이란을 제외한 아군의 <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color> 회복시킵니다.\n그리고 모든 지속성 아군의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시키고, <color=#28d9ed>1턴</color>동안 <color=#28d9ed>지속 회복</color>을 걸어줍니다. (대상의 최대 체력에 비례하여 회복합니다.)",
+        "3_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于萨伊蓝最大生命值<color=#28d9ed>25%</color>,并使除萨伊蓝外的友军<color=#28d9ed>AP</color>恢复<color=#28d9ed>25</color>。\\n同时为所有<color=#28d9ed>持续属性</color>友军解除1个<color=#28d9ed>弱化效果</color>,并赋予<color=#28d9ed>1回合</color><color=#28d9ed>持续恢复</color>。(恢复量与目标最大生命值成比例)",
+        "4": "Heals all allies' <color=#28d9ed>Health</color> by <color=#28d9ed>35%</color> of Saeran's Max Health. Additionally, recovers all other allies' <color=#28d9ed>Action Points</color> by <color=#28d9ed>25</color>. Removes <color=#28d9ed>1</color><color=#28d9ed>Debuff</color>of all Earth allies including the caster and grants <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>1</color> turn(s). (The amount of healing is proportional to the target's Max Health).",
+        "4_jp": "味方全体の<color=#28d9ed>HP</color>を【セイラン】の最大HPの<color=#28d9ed>35%</color>回復させ、【セイラン】を除く味方全体が<color=#28d9ed>AP</color>を<color=#28d9ed>25</color>獲得する。\\nまた、持続性味方の <color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除し、<color=#28d9ed>1ターン</color>の間<color=#28d9ed>継続回復</color>を付与する。(回復量は対象の最大HPが高いほどUP)",
+        "4_kr": "아군 전체의 <color=#28d9ed>체력</color>을 세이란 최대 체력의 <color=#28d9ed>35%</color> 만큼 회복시키고, 세이란을 제외한 아군의 <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color> 회복시킵니다.\n그리고 모든 지속성 아군의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시키고, <color=#28d9ed>1턴</color>동안 <color=#28d9ed>지속 회복</color>을 걸어줍니다. (대상의 최대 체력에 비례하여 회복합니다.)",
+        "4_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于萨伊蓝最大生命值<color=#28d9ed>35%</color>,并使除萨伊蓝外的友军<color=#28d9ed>AP</color>恢复<color=#28d9ed>25</color>。\\n同时为所有<color=#28d9ed>持续属性</color>友军解除1个<color=#28d9ed>弱化效果</color>,并赋予<color=#28d9ed>1回合</color><color=#28d9ed>持续恢复</color>。(恢复量与目标最大生命值成比例)",
+        "5": "Heals all allies' <color=#28d9ed>Health</color> by <color=#28d9ed>35%</color> of Saeran's Max Health. Additionally, recovers all other allies' <color=#28d9ed>Action Points</color> by <color=#28d9ed>25</color>. Removes <color=#28d9ed>1</color><color=#28d9ed>Debuff</color>of all Earth allies including the caster and grants <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>1</color> turn(s). (The amount of healing is proportional to the target's Max Health).",
+        "5_jp": "味方全体の<color=#28d9ed>HP</color>を【セイラン】の最大HPの<color=#28d9ed>35%</color>回復させ、【セイラン】を除く味方全体が<color=#28d9ed>AP</color>を<color=#28d9ed>25</color>獲得する。\\nまた、持続性味方の <color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除し、<color=#28d9ed>1ターン</color>の間<color=#28d9ed>継続回復</color>を付与する。(回復量は対象の最大HPが高いほどUP)",
+        "5_kr": "아군 전체의 <color=#28d9ed>체력</color>을 세이란 최대 체력의 <color=#28d9ed>35%</color> 만큼 회복시키고, 세이란을 제외한 아군의 <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color> 회복시킵니다.\n그리고 모든 지속성 아군의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시키고, <color=#28d9ed>1턴</color>동안 <color=#28d9ed>지속 회복</color>을 걸어줍니다. (대상의 최대 체력에 비례하여 회복합니다.)",
+        "5_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于萨伊蓝最大生命值<color=#28d9ed>35%</color>,并使除萨伊蓝外的友军<color=#28d9ed>AP</color>恢复<color=#28d9ed>25</color>。\\n同时为所有<color=#28d9ed>持续属性</color>友军解除1个<color=#28d9ed>弱化效果</color>,并赋予<color=#28d9ed>1回合</color><color=#28d9ed>持续恢复</color>。(恢复量与目标最大生命值成比例)"
+      },
       "enhancement": {
         "2": [
           "+5% healing"
@@ -201,7 +237,6 @@
           "冷却时间-1回合"
         ]
       },
-      "wgr": 4,
       "cd": "4",
       "buff": [
         "BT_AP_CHARGE",
@@ -210,6 +245,8 @@
         "BT_REVIVAL"
       ],
       "debuff": [],
+      "offensive": false,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Health Recovery +15%\\nTarget Action Points +25",
@@ -241,9 +278,7 @@
           "offensive": false,
           "target": "multi"
         }
-      },
-      "offensive": false,
-      "target": "multi"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "2303",
@@ -255,8 +290,30 @@
       "name_zh": "神明复苏",
       "true_desc": "Heals one ally by <color=#28d9ed>55%</color> and reduces the target's <color=#28d9ed>Skill Cooldown</color> by <color=#28d9ed>1turns(s)</color>. Additionally, removes all of the target's <color=#28d9ed>Debuff</color> and increases the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>50%</color>. \\nGrants <color=#28d9ed>Invulnerability</color> and <color=#28d9ed>Increase Attack</color> for <color=#28d9ed>2 turn(s)</color> if the target is an Earth ally.",
       "true_desc_jp": "味方単体のHPを<color=#28d9ed>55%</color>回復させた後、対象の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。また、対象のすべての<color=#28d9ed>弱体効果</color>を解除し、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>50%</color>UPさせる。\\n地属性対象に<color=#28d9ed>無敵</color>と<color=#28d9ed>攻撃力UP</color>を<color=#28d9ed>2ターン</color>の間付与する。",
-      "true_desc_kr": "아군 한 명의 체력을 <color=#28d9ed>55%</color> 회복시킨 후, 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다. 그리고 대상의 모든 <color=#28d9ed>약화 효과</color>를 해제하고 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.\\n대상이 지속성인 경우 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>무적</color>과 <color=#28d9ed>공격력</color>증가를 부여합니다.",
+      "true_desc_kr": "아군 한 명의 체력을 <color=#28d9ed>55%</color> 회복시킨 후, 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다. 그리고 대상의 모든 <color=#28d9ed>약화 효과</color>를 해제하고 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.\\n대상이 지속성인 경우 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무적</color>과 <color=#28d9ed>공격력</color> 증가를 부여합니다.",
       "true_desc_zh": "使1名友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>55%</color>,并减少目标的<color=#28d9ed>技能冷却时间</color><color=#28d9ed>1</color>回合。\\n解除目标的全部<color=#28d9ed>弱化效果</color>,并提升其<color=#28d9ed>行动值</color><color=#28d9ed>50%</color>。\\n若目标为<color=#28d9ed>持续属性</color>友军,则赋予<color=#28d9ed>无敌</color>与<color=#28d9ed>攻击力提升</color>,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Heals one ally by <color=#28d9ed>55%</color> and reduces the target's <color=#28d9ed>Skill Cooldown</color> by <color=#28d9ed>1turns(s)</color>. Additionally, removes all of the target's <color=#28d9ed>Debuff</color> and increases the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>50%</color>. \\nGrants <color=#28d9ed>Invulnerability</color> and <color=#28d9ed>Increase Attack</color> for <color=#28d9ed>2 turn(s)</color> if the target is an Earth ally.",
+        "1_jp": "味方単体のHPを<color=#28d9ed>55%</color>回復させた後、対象の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。また、対象のすべての<color=#28d9ed>弱体効果</color>を解除し、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>50%</color>UPさせる。\\n地属性対象に<color=#28d9ed>無敵</color>と<color=#28d9ed>攻撃力UP</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "아군 한 명의 체력을 <color=#28d9ed>55%</color> 회복시킨 후, 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다. 그리고 대상의 모든 <color=#28d9ed>약화 효과</color>를 해제하고 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.\\n대상이 지속성인 경우 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무적</color>과 <color=#28d9ed>공격력</color> 증가를 부여합니다.",
+        "1_zh": "使1名友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>55%</color>,并减少目标的<color=#28d9ed>技能冷却时间</color><color=#28d9ed>1</color>回合。\\n解除目标的全部<color=#28d9ed>弱化效果</color>,并提升其<color=#28d9ed>行动值</color><color=#28d9ed>50%</color>。\\n若目标为<color=#28d9ed>持续属性</color>友军,则赋予<color=#28d9ed>无敌</color>与<color=#28d9ed>攻击力提升</color>,持续<color=#28d9ed>2回合</color>。",
+        "2": "Heals one ally by <color=#28d9ed>70%</color> and reduces the target's <color=#28d9ed>Skill Cooldown</color> by <color=#28d9ed>1turns(s)</color>. Additionally, removes all of the target's <color=#28d9ed>Debuff</color> and increases the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>50%</color>. \\nGrants <color=#28d9ed>Invulnerability</color> and <color=#28d9ed>Increase Attack</color> for <color=#28d9ed>2 turn(s)</color> if the target is an Earth ally.",
+        "2_jp": "味方単体のHPを<color=#28d9ed>70%</color>回復させた後、対象の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。また、対象のすべての<color=#28d9ed>弱体効果</color>を解除し、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>50%</color>UPさせる。\\n地属性対象に<color=#28d9ed>無敵</color>と<color=#28d9ed>攻撃力UP</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "아군 한 명의 체력을 <color=#28d9ed>70%</color> 회복시킨 후, 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다. 그리고 대상의 모든 <color=#28d9ed>약화 효과</color>를 해제하고 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.\\n대상이 지속성인 경우 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무적</color>과 <color=#28d9ed>공격력</color> 증가를 부여합니다.",
+        "2_zh": "使1名友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>70%</color>,并减少目标的<color=#28d9ed>技能冷却时间</color><color=#28d9ed>1</color>回合。\\n解除目标的全部<color=#28d9ed>弱化效果</color>,并提升其<color=#28d9ed>行动值</color><color=#28d9ed>50%</color>。\\n若目标为<color=#28d9ed>持续属性</color>友军,则赋予<color=#28d9ed>无敌</color>与<color=#28d9ed>攻击力提升</color>,持续<color=#28d9ed>2回合</color>。",
+        "3": "Heals one ally by <color=#28d9ed>85%</color> and reduces the target's <color=#28d9ed>Skill Cooldown</color> by <color=#28d9ed>1turns(s)</color>. Additionally, removes all of the target's <color=#28d9ed>Debuff</color> and increases the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>50%</color>. \\nGrants <color=#28d9ed>Invulnerability</color> and <color=#28d9ed>Increase Attack</color> for <color=#28d9ed>2 turn(s)</color> if the target is an Earth ally.",
+        "3_jp": "味方単体のHPを<color=#28d9ed>85%</color>回復させた後、対象の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。また、対象のすべての<color=#28d9ed>弱体効果</color>を解除し、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>50%</color>UPさせる。\\n地属性対象に<color=#28d9ed>無敵</color>と<color=#28d9ed>攻撃力UP</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "아군 한 명의 체력을 <color=#28d9ed>85%</color> 회복시킨 후, 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다. 그리고 대상의 모든 <color=#28d9ed>약화 효과</color>를 해제하고 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.\\n대상이 지속성인 경우 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무적</color>과 <color=#28d9ed>공격력</color> 증가를 부여합니다.",
+        "3_zh": "使1名友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>85%</color>,并减少目标的<color=#28d9ed>技能冷却时间</color><color=#28d9ed>1</color>回合。\\n解除目标的全部<color=#28d9ed>弱化效果</color>,并提升其<color=#28d9ed>行动值</color><color=#28d9ed>50%</color>。\\n若目标为<color=#28d9ed>持续属性</color>友军,则赋予<color=#28d9ed>无敌</color>与<color=#28d9ed>攻击力提升</color>,持续<color=#28d9ed>2回合</color>。",
+        "4": "Heals one ally by <color=#28d9ed>100%</color> and reduces the target's <color=#28d9ed>Skill Cooldown</color> by <color=#28d9ed>1turns(s)</color>. Additionally, removes all of the target's <color=#28d9ed>Debuff</color> and increases the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>50%</color>. \\nGrants <color=#28d9ed>Invulnerability</color> and <color=#28d9ed>Increase Attack</color> for <color=#28d9ed>2 turn(s)</color> if the target is an Earth ally.",
+        "4_jp": "味方単体のHPを<color=#28d9ed>100%</color>回復させた後、対象の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。また、対象のすべての<color=#28d9ed>弱体効果</color>を解除し、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>50%</color>UPさせる。\\n地属性対象に<color=#28d9ed>無敵</color>と<color=#28d9ed>攻撃力UP</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "아군 한 명의 체력을 <color=#28d9ed>100%</color> 회복시킨 후, 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다. 그리고 대상의 모든 <color=#28d9ed>약화 효과</color>를 해제하고 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.\\n대상이 지속성인 경우 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무적</color>과 <color=#28d9ed>공격력</color> 증가를 부여합니다.",
+        "4_zh": "使1名友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>100%</color>,并减少目标的<color=#28d9ed>技能冷却时间</color><color=#28d9ed>1</color>回合。\\n解除目标的全部<color=#28d9ed>弱化效果</color>,并提升其<color=#28d9ed>行动值</color><color=#28d9ed>50%</color>。\\n若目标为<color=#28d9ed>持续属性</color>友军,则赋予<color=#28d9ed>无敌</color>与<color=#28d9ed>攻击力提升</color>,持续<color=#28d9ed>2回合</color>。",
+        "5": "Heals one ally by <color=#28d9ed>100%</color> and reduces the target's <color=#28d9ed>Skill Cooldown</color> by <color=#28d9ed>2turns(s)</color>. Additionally, removes all of the target's <color=#28d9ed>Debuff</color> and increases the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>. \\nGrants <color=#28d9ed>Invulnerability</color> and <color=#28d9ed>Increase Attack</color> for <color=#28d9ed>2 turn(s)</color> if the target is an Earth ally.",
+        "5_jp": "味方単体のHPを<color=#28d9ed>100%</color>回復させた後、対象の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>2ターン</color>減少させる。また、対象のすべての<color=#28d9ed>弱体効果</color>を解除し、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>100%</color>UPさせる。\\n地属性対象に<color=#28d9ed>無敵</color>と<color=#28d9ed>攻撃力UP</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "아군 한 명의 체력을 <color=#28d9ed>100%</color> 회복시킨 후, 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>2턴</color> 감소시킵니다. 그리고 대상의 모든 <color=#28d9ed>약화 효과</color>를 해제하고 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>100%</color> 증가시킵니다.\\n대상이 지속성인 경우 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무적</color>과 <color=#28d9ed>공격력</color> 증가를 부여합니다.",
+        "5_zh": "使1名友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>100%</color>,并减少目标的<color=#28d9ed>技能冷却时间</color><color=#28d9ed>2</color>回合。\\n解除目标的全部<color=#28d9ed>弱化效果</color>,并提升其<color=#28d9ed>行动值</color><color=#28d9ed>100%</color>。\\n若目标为<color=#28d9ed>持续属性</color>友军,则赋予<color=#28d9ed>无敌</color>与<color=#28d9ed>攻击力提升</color>,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+15% healing"
@@ -339,6 +396,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の攻撃力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。",
       "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
       "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的攻击力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率解除全体友军的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase all allies' Attack for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の攻撃力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的攻击力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率解除全体友军的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。",
+        "2": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase all allies' Attack for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の攻撃力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的攻击力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率解除全体友军的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。",
+        "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase all allies' Attack for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の攻撃力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的攻击力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率解除全体友军的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。",
+        "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase all allies' Attack for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の攻撃力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的攻击力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率解除全体友军的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。",
+        "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase all allies' Attack for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from all allies.",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の攻撃力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 공격력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的攻击力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率解除全体友军的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -404,13 +483,14 @@
         "BT_STAT|ST_ATK"
       ],
       "debuff": [],
-      "dual_buff": [
-        "BT_REMOVE_DEBUFF"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_REMOVE_DEBUFF"
+      ],
+      "dual_debuff": []
     }
   }
 }

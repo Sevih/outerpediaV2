@@ -11,9 +11,6 @@
   "rank": "A",
   "rank_pvp": "D",
   "role": "support",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -68,6 +65,28 @@
       "true_desc_jp": "敵2体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
       "true_desc_kr": "적 2인을 공격하고 <color=#28d9ed>70%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
       "true_desc_zh": "攻击2名敌人,并有<color=#28d9ed>70%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks 2 enemies and has a <color=#28d9ed>70%</color> chance to reduce the targets' <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "敵2体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "1_kr": "적 2인을 공격하고 <color=#28d9ed>70%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "1_zh": "攻击2名敌人,并有<color=#28d9ed>70%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。",
+        "2": "Attacks 2 enemies and has a <color=#28d9ed>70%</color> chance to reduce the targets' <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "敵2体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "2_kr": "적 2인을 공격하고 <color=#28d9ed>70%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "2_zh": "攻击2名敌人,并有<color=#28d9ed>70%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。",
+        "3": "Attacks 2 enemies and has a <color=#28d9ed>85%</color> chance to reduce the targets' <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "敵2体にダメージを与え、<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "3_kr": "적 2인을 공격하고 <color=#28d9ed>85%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "3_zh": "攻击2名敌人,并有<color=#28d9ed>85%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。",
+        "4": "Attacks 2 enemies and has a <color=#28d9ed>85%</color> chance to reduce the targets' <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "敵2体にダメージを与え、<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "4_kr": "적 2인을 공격하고 <color=#28d9ed>85%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "4_zh": "攻击2名敌人,并有<color=#28d9ed>85%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。",
+        "5": "Attacks 2 enemies and has a <color=#28d9ed>100%</color> chance to reduce the targets' <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "敵2体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "5_kr": "적 2인을 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "5_zh": "攻击2名敌人,并有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -147,6 +166,28 @@
       "true_desc_jp": "敵2体にダメージを与える。\\n<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1つ</color>解除し、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n対象が地属性の場合、ミスが発生せず<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
       "true_desc_kr": "적 2인을 공격합니다.\\n<color=#28d9ed>85%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
       "true_desc_zh": "攻击2名敌人。\\n有<color=#28d9ed>85%</color>的概率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避,并使<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks 2 enemies.\\nHas a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "敵2体にダメージを与える。\\n<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1つ</color>解除し、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n対象が地属性の場合、ミスが発生せず<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "1_kr": "적 2인을 공격합니다.\\n<color=#28d9ed>85%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "1_zh": "攻击2名敌人。\\n有<color=#28d9ed>85%</color>的概率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避,并使<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
+        "2": "Attacks 2 enemies.\\nHas a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "敵2体にダメージを与える。\\n<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1つ</color>解除し、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n対象が地属性の場合、ミスが発生せず<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "2_kr": "적 2인을 공격합니다.\\n<color=#28d9ed>85%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "2_zh": "攻击2名敌人。\\n有<color=#28d9ed>85%</color>的概率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避,并使<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
+        "3": "Attacks 2 enemies.\\nHas a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "敵2体にダメージを与える。\\n<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1つ</color>解除し、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n対象が地属性の場合、ミスが発生せず<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "3_kr": "적 2인을 공격합니다.\\n<color=#28d9ed>85%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "3_zh": "攻击2名敌人。\\n有<color=#28d9ed>85%</color>的概率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避,并使<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
+        "4": "Attacks 2 enemies.\\nHas a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>2</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "敵2体にダメージを与える。\\n<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2つ</color>解除し、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n対象が地属性の場合、ミスが発生せず<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "4_kr": "적 2인을 공격합니다.\\n<color=#28d9ed>85%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "4_zh": "攻击2名敌人。\\n有<color=#28d9ed>85%</color>的概率解除目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避,并使<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
+        "5": "Attacks 2 enemies.\\nHas a <color=#28d9ed>100%</color> chance to remove <color=#28d9ed>2</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "敵2体にダメージを与える。\\n<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2つ</color>解除し、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n対象が地属性の場合、ミスが発生せず<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "5_kr": "적 2인을 공격합니다.\\n<color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "5_zh": "攻击2名敌人。\\n有<color=#28d9ed>100%</color>的概率解除目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避,并使<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -216,6 +257,8 @@
         "BT_DOT_BURN",
         "BT_STEAL_BUFF"
       ],
+      "offensive": true,
+      "target": "duo",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Changes to Single Attack\\nGreatly increases damage\\nIncreased Effectiveness for 2 turns before using skill",
@@ -247,9 +290,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "duo"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "4303",
@@ -263,6 +304,28 @@
       "true_desc_jp": "敵2体にダメージを与え、<color=#28d9ed>85%</color>の確率で<color=#28d9ed>2ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>85%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>回復不可</color>を付与する。\\n対象が地属性の場合、ミスが発生しない。",
       "true_desc_kr": "적 2인을 공격하고 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n추가로 <color=#28d9ed>85%</color> 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않습니다.",
       "true_desc_zh": "攻击2名敌人,并有<color=#28d9ed>85%</color>的概率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>。\\n此外,有<color=#28d9ed>85%</color>的概率对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避。",
+      "true_desc_levels": {
+        "1": "Attacks 2 enemies and has a <color=#28d9ed>85%</color> chance to decrease <color=#28d9ed>Defense</color> and <color=#28d9ed>Speed</color> of all enemies for <color=#28d9ed>2 turn(s)</color>.\\nAdditionally, has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss.",
+        "1_jp": "敵2体にダメージを与え、<color=#28d9ed>85%</color>の確率で<color=#28d9ed>2ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>85%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>回復不可</color>を付与する。\\n対象が地属性の場合、ミスが発生しない。",
+        "1_kr": "적 2인을 공격하고 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n추가로 <color=#28d9ed>85%</color> 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않습니다.",
+        "1_zh": "攻击2名敌人,并有<color=#28d9ed>85%</color>的概率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>。\\n此外,有<color=#28d9ed>85%</color>的概率对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避。",
+        "2": "Attacks 2 enemies and has a <color=#28d9ed>85%</color> chance to decrease <color=#28d9ed>Defense</color> and <color=#28d9ed>Speed</color> of all enemies for <color=#28d9ed>2 turn(s)</color>.\\nAdditionally, has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss.",
+        "2_jp": "敵2体にダメージを与え、<color=#28d9ed>85%</color>の確率で<color=#28d9ed>2ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>85%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>回復不可</color>を付与する。\\n対象が地属性の場合、ミスが発生しない。",
+        "2_kr": "적 2인을 공격하고 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n추가로 <color=#28d9ed>85%</color> 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않습니다.",
+        "2_zh": "攻击2名敌人,并有<color=#28d9ed>85%</color>的概率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>。\\n此外,有<color=#28d9ed>85%</color>的概率对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避。",
+        "3": "Attacks 2 enemies and has a <color=#28d9ed>100%</color> chance to decrease <color=#28d9ed>Defense</color> and <color=#28d9ed>Speed</color> of all enemies for <color=#28d9ed>2 turn(s)</color>.\\nAdditionally, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss.",
+        "3_jp": "敵2体にダメージを与え、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>100%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>回復不可</color>を付与する。\\n対象が地属性の場合、ミスが発生しない。",
+        "3_kr": "적 2인을 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n추가로 <color=#28d9ed>100%</color> 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않습니다.",
+        "3_zh": "攻击2名敌人,并有<color=#28d9ed>100%</color>的概率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>。\\n此外,有<color=#28d9ed>100%</color>的概率对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避。",
+        "4": "Attacks 2 enemies and has a <color=#28d9ed>100%</color> chance to decrease <color=#28d9ed>Defense</color> and <color=#28d9ed>Speed</color> of all enemies for <color=#28d9ed>2 turn(s)</color>.\\nAdditionally, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss.",
+        "4_jp": "敵2体にダメージを与え、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>100%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>回復不可</color>を付与する。\\n対象が地属性の場合、ミスが発生しない。",
+        "4_kr": "적 2인을 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n추가로 <color=#28d9ed>100%</color> 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않습니다.",
+        "4_zh": "攻击2名敌人,并有<color=#28d9ed>100%</color>的概率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>。\\n此外,有<color=#28d9ed>100%</color>的概率对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避。",
+        "5": "Attacks 2 enemies and has a <color=#28d9ed>100%</color> chance to decrease <color=#28d9ed>Defense</color> and <color=#28d9ed>Speed</color> of all enemies for <color=#28d9ed>3 turn(s)</color>.\\nAdditionally, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss.",
+        "5_jp": "敵2体にダメージを与え、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>3ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>100%</color>の確率で敵全体に<color=#28d9ed>3ターン</color>の間<color=#28d9ed>回復不可</color>を付与する。\\n対象が地属性の場合、ミスが発生しない。",
+        "5_kr": "적 2인을 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>3턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n추가로 <color=#28d9ed>100%</color> 확률로 적 전체에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않습니다.",
+        "5_zh": "攻击2名敌人,并有<color=#28d9ed>100%</color>的概率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>3回合</color>。\\n此外,有<color=#28d9ed>100%</color>的概率对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。\\n若目标为地属性,则不会发生闪避。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -344,6 +407,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
       "true_desc_zh": "<color=#ffd732>连携技能同行效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的防御力降低,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Defense</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "1_zh": "<color=#ffd732>连携技能同行效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的防御力降低,持续<color=#28d9ed>2回合</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Defense</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "2_zh": "<color=#ffd732>连携技能同行效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的防御力降低,持续<color=#28d9ed>2回合</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Defense</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "3_zh": "<color=#ffd732>连携技能同行效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的防御力降低,持续<color=#28d9ed>2回合</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Defense</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "4_zh": "<color=#ffd732>连携技能同行效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的防御力降低,持续<color=#28d9ed>2回合</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Defense</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체에게 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "5_zh": "<color=#ffd732>连携技能同行效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的防御力降低,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -409,13 +494,14 @@
         "BT_DMG_TARGET_BREAK"
       ],
       "debuff": [],
-      "dual_debuff": [
-        "BT_STAT|ST_DEF"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": [
+        "BT_STAT|ST_DEF"
+      ]
     }
   }
 }

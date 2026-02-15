@@ -10,9 +10,6 @@
   "SubClass": "Bruiser",
   "rank": "D",
   "role": "dps",
-  "tags": [
-    "ignore-defense"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -28,11 +25,10 @@
   "gift": "Luxury",
   "VoiceActor": "VA. Faye Mata",
   "VoiceActor_jp": "CV. 大津愛理",
-  "VoiceActor_kr": "CV.가빈",
+  "VoiceActor_kr": "CV. 가빈",
   "VoiceActor_zh": "CV. 大津爱理",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": "ATK DEF HP +5%",
     "2_jp": "ATK DEF HP +5%",
     "2_kr": "ATK DEF HP +5%",
@@ -67,6 +63,28 @@
       "true_desc_jp": "敵単体にダメージを与え、ダメージの<color=#28d9ed>10%</color>のHPを<color=#28d9ed>回復</color>する。",
       "true_desc_kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 체력을 <color=#28d9ed>회복</color>합니다.",
       "true_desc_zh": "攻击敌人,并<color=#28d9ed>恢复</color>相当于伤害量<color=#28d9ed>10%</color>的生命值。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and <color=#28d9ed>recovers</color> <color=#28d9ed>10%</color> of damage dealt as Health.",
+        "1_jp": "敵単体にダメージを与え、ダメージの<color=#28d9ed>10%</color>のHPを<color=#28d9ed>回復</color>する。",
+        "1_kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 체력을 <color=#28d9ed>회복</color>합니다.",
+        "1_zh": "攻击敌人,并<color=#28d9ed>恢复</color>相当于伤害量<color=#28d9ed>10%</color>的生命值。",
+        "2": "Attacks an enemy and <color=#28d9ed>recovers</color> <color=#28d9ed>10%</color> of damage dealt as Health.",
+        "2_jp": "敵単体にダメージを与え、ダメージの<color=#28d9ed>10%</color>のHPを<color=#28d9ed>回復</color>する。",
+        "2_kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 체력을 <color=#28d9ed>회복</color>합니다.",
+        "2_zh": "攻击敌人,并<color=#28d9ed>恢复</color>相当于伤害量<color=#28d9ed>10%</color>的生命值。",
+        "3": "Attacks an enemy and <color=#28d9ed>recovers</color> <color=#28d9ed>10%</color> of damage dealt as Health.",
+        "3_jp": "敵単体にダメージを与え、ダメージの<color=#28d9ed>10%</color>のHPを<color=#28d9ed>回復</color>する。",
+        "3_kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 체력을 <color=#28d9ed>회복</color>합니다.",
+        "3_zh": "攻击敌人,并<color=#28d9ed>恢复</color>相当于伤害量<color=#28d9ed>10%</color>的生命值。",
+        "4": "Attacks an enemy and <color=#28d9ed>recovers</color> <color=#28d9ed>10%</color> of damage dealt as Health.",
+        "4_jp": "敵単体にダメージを与え、ダメージの<color=#28d9ed>10%</color>のHPを<color=#28d9ed>回復</color>する。",
+        "4_kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 체력을 <color=#28d9ed>회복</color>합니다.",
+        "4_zh": "攻击敌人,并<color=#28d9ed>恢复</color>相当于伤害量<color=#28d9ed>10%</color>的生命值。",
+        "5": "Attacks an enemy and <color=#28d9ed>recovers</color> <color=#28d9ed>10%</color> of damage dealt as Health.",
+        "5_jp": "敵単体にダメージを与え、ダメージの<color=#28d9ed>10%</color>のHPを<color=#28d9ed>回復</color>する。",
+        "5_kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 체력을 <color=#28d9ed>회복</color>합니다.",
+        "5_zh": "攻击敌人,并<color=#28d9ed>恢复</color>相当于伤害量<color=#28d9ed>10%</color>的生命值。"
+      },
       "enhancement": {
         "2": [
           "+5% damage",
@@ -123,7 +141,9 @@
       },
       "wgr": 1,
       "cd": null,
-      "buff": [],
+      "buff": [
+        "BT_STAT|ST_VAMPIRIC"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono"
@@ -136,10 +156,32 @@
       "name_jp": "虚空断",
       "name_kr": "겁쟁이는 죽어라!!",
       "name_zh": "胆小鬼去死吧!",
-      "true_desc": "Attacks an enemy.\\nIf the target has a <color=#28d9ed>barrier</color>, they take increased damage.",
+      "true_desc": "Attacks an enemy.\\nIf the target has a <color=#28d9ed>Barrier</color>, they take increased damage.",
       "true_desc_jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
       "true_desc_kr": "적을 공격합니다.\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
       "true_desc_zh": "攻击敌人。\\n目标附带<color=#28d9ed>护盾</color>效果时,使该技能的伤害提升。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy.\\nIf the target has a <color=#28d9ed>Barrier</color>, they take increased damage.",
+        "1_jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "1_kr": "적을 공격합니다.\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "1_zh": "攻击敌人。\\n目标附带<color=#28d9ed>护盾</color>效果时,使该技能的伤害提升。",
+        "2": "Attacks an enemy.\\nIf the target has a <color=#28d9ed>Barrier</color>, they take increased damage.",
+        "2_jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "2_kr": "적을 공격합니다.\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "2_zh": "攻击敌人。\\n目标附带<color=#28d9ed>护盾</color>效果时,使该技能的伤害提升。",
+        "3": "Attacks an enemy.\\nIf the target has a <color=#28d9ed>Barrier</color>, they take increased damage.",
+        "3_jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "3_kr": "적을 공격합니다.\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "3_zh": "攻击敌人。\\n目标附带<color=#28d9ed>护盾</color>效果时,使该技能的伤害提升。",
+        "4": "Attacks an enemy.\\nIf the target has a <color=#28d9ed>Barrier</color>, they take increased damage.",
+        "4_jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "4_kr": "적을 공격합니다.\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "4_zh": "攻击敌人。\\n目标附带<color=#28d9ed>护盾</color>效果时,使该技能的伤害提升。",
+        "5": "Attacks an enemy.\\nIf the target has a <color=#28d9ed>Barrier</color>, they take increased damage.",
+        "5_jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "5_kr": "적을 공격합니다.\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "5_zh": "攻击敌人。\\n目标附带<color=#28d9ed>护盾</color>效果时,使该技能的伤害提升。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -194,8 +236,8 @@
           "伤害量+20%"
         ]
       },
-      "wgr": 1,
       "cd": "4",
+      "wgr": 1,
       "buff": [],
       "debuff": [],
       "offensive": true,
@@ -213,6 +255,28 @@
       "true_desc_jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>残りHP</color>が低いほどダメージがUPする。",
       "true_desc_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
       "true_desc_zh": "攻击敌人。\\n自身的<color=#28d9ed>当前生命值</color>越低,则该技能的伤害越高。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>missing Health</color>.",
+        "1_jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>残りHP</color>が低いほどダメージがUPする。",
+        "1_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
+        "1_zh": "攻击敌人。\\n自身的<color=#28d9ed>当前生命值</color>越低,则该技能的伤害越高。",
+        "2": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>missing Health</color>.",
+        "2_jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>残りHP</color>が低いほどダメージがUPする。",
+        "2_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
+        "2_zh": "攻击敌人。\\n自身的<color=#28d9ed>当前生命值</color>越低,则该技能的伤害越高。",
+        "3": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>missing Health</color>.",
+        "3_jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>残りHP</color>が低いほどダメージがUPする。",
+        "3_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
+        "3_zh": "攻击敌人。\\n自身的<color=#28d9ed>当前生命值</color>越低,则该技能的伤害越高。",
+        "4": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>missing Health</color>.",
+        "4_jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>残りHP</color>が低いほどダメージがUPする。",
+        "4_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
+        "4_zh": "攻击敌人。\\n自身的<color=#28d9ed>当前生命值</color>越低,则该技能的伤害越高。",
+        "5": "Attacks an enemy.\\nThe damage increases proportional to the caster's <color=#28d9ed>missing Health</color>. Targets with <color=#28d9ed>Barriers</color> take increased damage.",
+        "5_jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>残りHP</color>が低いほどダメージがUPし、対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "5_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가하며 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "5_zh": "攻击敌人。\\n自身的<color=#28d9ed>当前生命值</color>越低,则该技能的伤害越高,且目标附带<color=#28d9ed>护盾</color>效果时,伤害提升。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -256,7 +320,7 @@
         ],
         "5": [
           "+10% damage",
-          "Increases damage to targets with barriers"
+          "Increases damage to targets with Barriers"
         ],
         "5_jp": [
           "ダメージ+10%",
@@ -271,10 +335,12 @@
           "对附带护盾效果的目标造成的伤害提升"
         ]
       },
-      "wgr": 2,
       "cd": "5",
+      "wgr": 2,
       "buff": [],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage",
@@ -306,9 +372,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_CHAIN_PASSIVE": {
       "NameIDSymbol": "3404",
@@ -322,6 +386,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のHPを<color=#28d9ed>25%</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、与えたダメージの<color=#28d9ed>10%</color>を<color=#28d9ed>回復</color>する。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 체력 <color=#28d9ed>25%</color>를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 입힌 피해의 <color=#28d9ed>10%</color>를 <color=#28d9ed>회복</color>합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:使自身生命值恢复<color=#28d9ed>25%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,<color=#28d9ed>恢复</color>造成伤害的<color=#28d9ed>10%</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: Heals <color=#28d9ed>25%</color> of the caster's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> <color=#28d9ed>10%</color> of damage dealt.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のHPを<color=#28d9ed>25%</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、与えたダメージの<color=#28d9ed>10%</color>を<color=#28d9ed>回復</color>する。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 체력 <color=#28d9ed>25%</color>를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 입힌 피해의 <color=#28d9ed>10%</color>를 <color=#28d9ed>회복</color>합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:使自身生命值恢复<color=#28d9ed>25%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,<color=#28d9ed>恢复</color>造成伤害的<color=#28d9ed>10%</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: Heals <color=#28d9ed>25%</color> of the caster's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> <color=#28d9ed>10%</color> of damage dealt.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のHPを<color=#28d9ed>25%</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、与えたダメージの<color=#28d9ed>10%</color>を<color=#28d9ed>回復</color>する。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 체력 <color=#28d9ed>25%</color>를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 입힌 피해의 <color=#28d9ed>10%</color>를 <color=#28d9ed>회복</color>합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:使自身生命值恢复<color=#28d9ed>25%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,<color=#28d9ed>恢复</color>造成伤害的<color=#28d9ed>10%</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: Heals <color=#28d9ed>25%</color> of the caster's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> <color=#28d9ed>10%</color> of damage dealt.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のHPを<color=#28d9ed>25%</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、与えたダメージの<color=#28d9ed>10%</color>を<color=#28d9ed>回復</color>する。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 체력 <color=#28d9ed>25%</color>를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 입힌 피해의 <color=#28d9ed>10%</color>를 <color=#28d9ed>회복</color>합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:使自身生命值恢复<color=#28d9ed>25%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,<color=#28d9ed>恢复</color>造成伤害的<color=#28d9ed>10%</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: Heals <color=#28d9ed>25%</color> of the caster's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> <color=#28d9ed>10%</color> of damage dealt.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のHPを<color=#28d9ed>25%</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、与えたダメージの<color=#28d9ed>10%</color>を<color=#28d9ed>回復</color>する。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 체력 <color=#28d9ed>25%</color>를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 입힌 피해의 <color=#28d9ed>10%</color>를 <color=#28d9ed>회복</color>합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:使自身生命值恢复<color=#28d9ed>25%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,<color=#28d9ed>恢复</color>造成伤害的<color=#28d9ed>10%</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: Heals <color=#28d9ed>25%</color> of the caster's Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> <color=#28d9ed>10%</color> of damage dealt.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分のHPを<color=#28d9ed>25%</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、与えたダメージの<color=#28d9ed>10%</color>を<color=#28d9ed>回復</color>する。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 체력 <color=#28d9ed>25%</color>를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 입힌 피해의 <color=#28d9ed>10%</color>를 <color=#28d9ed>회복</color>합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:使自身生命值恢复<color=#28d9ed>25%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,<color=#28d9ed>恢复</color>造成伤害的<color=#28d9ed>10%</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -385,11 +471,12 @@
       "cd": null,
       "buff": [],
       "debuff": [],
-      "dual_buff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

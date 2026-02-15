@@ -11,9 +11,6 @@
   "rank": "A",
   "rank_pvp": "A",
   "role": "sustain",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -68,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack if the caster's <color=#28d9ed>Defense</color> is currently increased.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack if the caster's <color=#28d9ed>Defense</color> is currently increased.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack if the caster's <color=#28d9ed>Defense</color> is currently increased.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>60%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>60%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>60%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack if the caster's <color=#28d9ed>Defense</color> is currently increased.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>60%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>60%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>60%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack if the caster's <color=#28d9ed>Defense</color> is currently increased.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -135,6 +154,8 @@
       "debuff": [
         "BT_AGGRO"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Guaranteed Dual Attack\\nIncreased damage",
@@ -166,9 +187,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "3702",
@@ -182,6 +201,28 @@
       "true_desc_jp": "(パッシブ効果)ターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。その後、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
       "true_desc_kr": "(패시브 효과) 턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다. 이후 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
       "true_desc_zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。",
+      "true_desc_levels": {
+        "1": "(Passive Effect) Removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from the caster at the start of the turn. Grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "1_jp": "(パッシブ効果)ターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。その後、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
+        "1_kr": "(패시브 효과) 턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다. 이후 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
+        "1_zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。",
+        "2": "(Passive Effect) Removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from the caster at the start of the turn. Grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "2_jp": "(パッシブ効果)ターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。その後、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
+        "2_kr": "(패시브 효과) 턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다. 이후 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
+        "2_zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。",
+        "3": "(Passive Effect) Removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from the caster at the start of the turn. Grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "3_jp": "(パッシブ効果)ターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。その後、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
+        "3_kr": "(패시브 효과) 턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다. 이후 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
+        "3_zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。",
+        "4": "(Passive Effect) Removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from the caster at the start of the turn. Grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "4_jp": "(パッシブ効果)ターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。その後、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
+        "4_kr": "(패시브 효과) 턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다. 이후 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
+        "4_zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。",
+        "5": "(Passive Effect) Removes <color=#28d9ed>2</color> <color=#28d9ed>debuff(s)</color> from the caster at the start of the turn. Grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "5_jp": "(パッシブ効果)ターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>2個</color>解除する。その後、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
+        "5_kr": "(패시브 효과) 턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>2</color>개 제거합니다. 이후 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
+        "5_zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>2</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。"
+      },
       "enhancement": {
         "2": [
           "Enhances Barrier strength"
@@ -256,6 +297,28 @@
       "true_desc_jp": "敵全体にダメージを与え、味方全体の<color=#28d9ed>防御力</color>と自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n攻撃後、<color=#28d9ed>100%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1</color>個解除する。",
       "true_desc_kr": "적 전체를 공격하고 아군 전체의 <color=#28d9ed>방어력</color>과 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n공격 후, <color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.",
       "true_desc_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高我方全体<color=#28d9ed>防御力</color>与自身<color=#28d9ed>效果命中</color>。\\n攻击后,有<color=#28d9ed>100%</color>的几率驱散敌方全体<color=#28d9ed>1</color>个增益效果。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and increases all allies' <color=#28d9ed>DEF</color> and your <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2</color> turns.\\nAfter attacking, has a <color=#28d9ed>100%</color> chance to remove <color=#28d9ed>1</color> buff(s) from all enemies.",
+        "1_jp": "敵全体にダメージを与え、味方全体の<color=#28d9ed>防御力</color>と自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>2</color>ターンの間上昇させる。\\n攻撃後、<color=#28d9ed>100%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1</color>個解除する。",
+        "1_kr": "적 전체를 공격하고 아군 전체의 <color=#28d9ed>방어력</color>과 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n공격 후, <color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.",
+        "1_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高我方全体<color=#28d9ed>防御力</color>与自身<color=#28d9ed>效果命中</color>。\\n攻击后,有<color=#28d9ed>100%</color>的几率驱散敌方全体<color=#28d9ed>1</color>个增益效果。",
+        "2": "Attacks all enemies and increases all allies' <color=#28d9ed>DEF</color> and your <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2</color> turns.\\nAfter attacking, removes <color=#28d9ed>1</color> buff(s) from all enemies.\\nThis effect ignores the targets' <color=#28d9ed>Resilience</color>.",
+        "2_jp": "敵全体にダメージを与え、味方全体の<color=#28d9ed>防御力</color>と自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>2</color>ターン上昇させる。\\n攻撃後、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1</color>個解除する。\\nこの効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "2_kr": "적 전체를 공격하고 아군 전체의 <color=#28d9ed>방어력</color>과 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n공격 후, 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "2_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高我方全体<color=#28d9ed>防御力</color>与自身<color=#28d9ed>效果命中</color>。\\n攻击后,驱散敌方全体<color=#28d9ed>1</color>个增益效果。\\n该效果无视目标<color=#28d9ed>效果抵抗</color>。",
+        "3": "Attacks all enemies and increases all allies' <color=#28d9ed>DEF</color> and your <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2</color> turns.\\nAfter attacking, removes <color=#28d9ed>1</color> buff(s) from all enemies.\\nThis effect ignores the targets' <color=#28d9ed>Resilience</color>.",
+        "3_jp": "敵全体にダメージを与え、味方全体の<color=#28d9ed>防御力</color>と自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>2</color>ターン上昇させる。\\n攻撃後、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1</color>個解除する。\\nこの効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "3_kr": "적 전체를 공격하고 아군 전체의 <color=#28d9ed>방어력</color>과 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n공격 후, 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "3_zh": "攻击全体敌人,并在<color=#28d9ed>2</color>回合内提高我方全体<color=#28d9ed>防御力</color>与自身<color=#28d9ed>效果命中</color>。\\n攻击后,驱散敌方全体<color=#28d9ed>1</color>个增益效果。\\n该效果无视目标<color=#28d9ed>效果抵抗</color>。",
+        "4": "Attacks all enemies and increases all allies' <color=#28d9ed>DEF</color> and your <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>3</color> turns.\\nAfter attacking, removes <color=#28d9ed>1</color> buff(s) from all enemies.\\nThis effect ignores the targets' <color=#28d9ed>Resilience</color>.",
+        "4_jp": "敵全体にダメージを与え、味方全体の<color=#28d9ed>防御力</color>と自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>3</color>ターン上昇させる。\\n攻撃後、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1</color>個解除する。\\nこの効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "4_kr": "적 전체를 공격하고 아군 전체의 <color=#28d9ed>방어력</color>과 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다.\\n공격 후, 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "4_zh": "攻击全体敌人,并在<color=#28d9ed>3</color>回合内提高我方全体<color=#28d9ed>防御力</color>与自身<color=#28d9ed>效果命中</color>。\\n攻击后,驱散敌方全体<color=#28d9ed>1</color>个增益效果。\\n该效果无视目标<color=#28d9ed>效果抵抗</color>。",
+        "5": "Attacks all enemies and increases all allies' <color=#28d9ed>DEF</color> and your <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>3</color> turns.\\nAfter attacking, removes <color=#28d9ed>1</color> buff(s) from all enemies.\\nThis effect ignores the targets' <color=#28d9ed>Resilience</color>.",
+        "5_jp": "敵全体にダメージを与え、味方全体の<color=#28d9ed>防御力</color>と自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>3</color>ターン上昇させる。\\n攻撃後、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1</color>個解除する。\\nこの効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "5_kr": "적 전체를 공격하고 아군 전체의 <color=#28d9ed>방어력</color>과 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다.\\n공격 후, 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "5_zh": "攻击全体敌人,并在<color=#28d9ed>3</color>回合内提高我方全体<color=#28d9ed>防御力</color>与自身<color=#28d9ed>效果命中</color>。\\n攻击后,驱散敌方全体<color=#28d9ed>1</color>个增益效果。\\n该效果无视目标<color=#28d9ed>效果抵抗</color>。"
+      },
       "enhancement": {
         "2": [
           "Enhances Buff Removal (Ignores Resilience)",
@@ -314,7 +377,8 @@
       "wgr": 2,
       "buff": [
         "BT_STAT|ST_DEF",
-        "BT_STAT|ST_BUFF_CHANCE"
+        "BT_STAT|ST_BUFF_CHANCE",
+        "BT_STAT|ST_ATK"
       ],
       "debuff": [
         "BT_REMOVE_BUFF",
@@ -335,6 +399,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で対象を<color=#28d9ed>挑発</color>する。",
       "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 대상을 <color=#28d9ed>도발</color>합니다.",
       "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase the Defense of all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で対象を<color=#28d9ed>挑発</color>する。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 대상을 <color=#28d9ed>도발</color>합니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果。",
+        "2": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase the Defense of all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target.",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で対象を<color=#28d9ed>挑発</color>する。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 대상을 <color=#28d9ed>도발</color>합니다.",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果。",
+        "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase the Defense of all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target.",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で対象を<color=#28d9ed>挑発</color>する。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 대상을 <color=#28d9ed>도발</color>합니다.",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果。",
+        "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase the Defense of all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target.",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で対象を<color=#28d9ed>挑発</color>する。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 대상을 <color=#28d9ed>도발</color>합니다.",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果。",
+        "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase the Defense of all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target.",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で味方全体の防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で対象を<color=#28d9ed>挑発</color>する。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 대상을 <color=#28d9ed>도발</color>합니다.",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -400,15 +486,14 @@
         "BT_STAT|ST_DEF"
       ],
       "debuff": [],
-      "dual_debuff": [
-        "BT_AGGRO"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": [
+        "BT_AGGRO"
+      ]
     }
-  },
-  "hasCoreFusion": true,
-  "coreFusionId": "2700037"
+  }
 }

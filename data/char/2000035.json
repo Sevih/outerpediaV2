@@ -11,9 +11,6 @@
   "rank": "C",
   "rank_pvp": "D",
   "role": "support",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -68,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>65%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>65%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>65%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>65%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>65%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>65%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>65%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>65%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -147,6 +166,28 @@
       "true_desc_jp": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
       "true_desc_zh": "(被动效果) 战斗开始时,使速度最高的1名敌人无视目标的效果抵抗,并造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会\\n被解除。\\n\\n(主动效果) 攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "1_zh": "(被动效果) 战斗开始时,使速度最高的1名敌人无视目标的效果抵抗,并造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会\\n被解除。\\n\\n(主动效果) 攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "2": "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "2_zh": "(被动效果) 战斗开始时,使速度最高的1名敌人无视目标的效果抵抗,并造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会\\n被解除。\\n\\n(主动效果) 攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "3": "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "3_zh": "(被动效果) 战斗开始时,使速度最高的1名敌人无视目标的效果抵抗,并造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会\\n被解除。\\n\\n(主动效果) 攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "4": "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "4_zh": "(被动效果) 战斗开始时,使速度最高的1名敌人无视目标的效果抵抗,并造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会\\n被解除。\\n\\n(主动效果) 攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "5": "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "5_zh": "(被动效果) 战斗开始时,使速度最高的1名敌人无视目标的效果抵抗,并造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会\\n被解除。\\n\\n(主动效果) 攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -205,14 +246,15 @@
           "伤害量+20%"
         ]
       },
-      "wgr": 1,
       "cd": "4",
-      "buff": [
-        "PUREBLOOD_DOMINION"
-      ],
+      "wgr": 1,
+      "buff": [],
       "debuff": [
-        "BT_DOT_BLEED"
+        "BT_DOT_BLEED",
+        "IG_Buff_Dot_Bleed_Interruption_D"
       ],
+      "offensive": true,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Increases damage\\nInflicts 1 Additional Bleeding effect",
@@ -244,9 +286,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "multi"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "3503",
@@ -260,6 +300,28 @@
       "true_desc_jp": "スキル使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPし、スキル使用後<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。",
       "true_desc_kr": "스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가하고 스킬 사용 후 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킵니다.",
       "true_desc_zh": "使用技能时,解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。若目标处于<color=#28d9ed>出血</color>状态,则使伤害提升,且使用技能后<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>。",
+      "true_desc_levels": {
+        "1": "When using this skill, removes <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them. Deals increased damage and inflicts <color=#28d9ed>Reduced Defense</color> for <color=#28d9ed>3 turn(s)</color> if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
+        "1_jp": "スキル使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPし、スキル使用後<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。",
+        "1_kr": "스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가하고 스킬 사용 후 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킵니다.",
+        "1_zh": "使用技能时,解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。若目标处于<color=#28d9ed>出血</color>状态,则使伤害提升,且使用技能后<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>。",
+        "2": "When using this skill, removes <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them. Deals increased damage and inflicts <color=#28d9ed>Reduced Defense</color> for <color=#28d9ed>3 turn(s)</color> if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
+        "2_jp": "スキル使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPし、スキル使用後<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。",
+        "2_kr": "스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가하고 스킬 사용 후 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킵니다.",
+        "2_zh": "使用技能时,解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。若目标处于<color=#28d9ed>出血</color>状态,则使伤害提升,且使用技能后<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>。",
+        "3": "When using this skill, removes <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them. Deals increased damage and inflicts <color=#28d9ed>Reduced Defense</color> for <color=#28d9ed>3 turn(s)</color> if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
+        "3_jp": "スキル使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPし、スキル使用後<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。",
+        "3_kr": "스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가하고 스킬 사용 후 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킵니다.",
+        "3_zh": "使用技能时,解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。若目标处于<color=#28d9ed>出血</color>状态,则使伤害提升,且使用技能后<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>。",
+        "4": "When using this skill, removes <color=#28d9ed>2</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them. Deals increased damage and inflicts <color=#28d9ed>Reduced Defense</color> for <color=#28d9ed>3 turn(s)</color> if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
+        "4_jp": "スキル使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2個</color>解除し、敵全体にダメージを与える。対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPし、スキル使用後<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。",
+        "4_kr": "스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제하고 적 전체를 공격합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가하고 스킬 사용 후 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킵니다.",
+        "4_zh": "使用技能时,解除全体敌人的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。若目标处于<color=#28d9ed>出血</color>状态,则使伤害提升,且使用技能后<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>。",
+        "5": "When using this skill, removes <color=#28d9ed>2</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them. Deals increased damage and inflicts <color=#28d9ed>Reduced Defense</color> for <color=#28d9ed>3 turn(s)</color> if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
+        "5_jp": "スキル使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2個</color>解除し、敵全体にダメージを与える。対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPし、スキル使用後<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。",
+        "5_kr": "스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제하고 적 전체를 공격합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가하고 스킬 사용 후 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킵니다.",
+        "5_zh": "使用技能时,解除全体敌人的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。若目标处于<color=#28d9ed>出血</color>状态,则使伤害提升,且使用技能后<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -340,6 +402,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵全体に<color=#28d9ed>100%</color>の確率で出血を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 출혈을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:有<color=#28d9ed>100%</color>的几率对全体敌人造成出血效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: Has a <color=#28d9ed>100%</color> chance to inflict Bleeding on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵全体に<color=#28d9ed>100%</color>の確率で出血を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 출혈을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:有<color=#28d9ed>100%</color>的几率对全体敌人造成出血效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: Has a <color=#28d9ed>100%</color> chance to inflict Bleeding on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵全体に<color=#28d9ed>100%</color>の確率で出血を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 출혈을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:有<color=#28d9ed>100%</color>的几率对全体敌人造成出血效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: Has a <color=#28d9ed>100%</color> chance to inflict Bleeding on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵全体に<color=#28d9ed>100%</color>の確率で出血を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 출혈을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:有<color=#28d9ed>100%</color>的几率对全体敌人造成出血效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: Has a <color=#28d9ed>100%</color> chance to inflict Bleeding on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵全体に<color=#28d9ed>100%</color>の確率で出血を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 출혈을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:有<color=#28d9ed>100%</color>的几率对全体敌人造成出血效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: Has a <color=#28d9ed>100%</color> chance to inflict Bleeding on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:敵全体に<color=#28d9ed>100%</color>の確率で出血を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 출혈을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:有<color=#28d9ed>100%</color>的几率对全体敌人造成出血效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>80%</color>的几率造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -405,13 +489,14 @@
       "debuff": [
         "BT_DOT_BLEED"
       ],
-      "dual_debuff": [
-        "BT_DOT_BLEED"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": [
+        "BT_DOT_BLEED"
+      ]
     }
   }
 }

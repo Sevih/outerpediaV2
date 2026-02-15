@@ -25,11 +25,10 @@
   "gift": "Magic Tool",
   "VoiceActor": "VA. Courtney Lin",
   "VoiceActor_jp": "CV. 芹澤優",
-  "VoiceActor_kr": "CV.김도희",
+  "VoiceActor_kr": "CV. 김도희",
   "VoiceActor_zh": "CV. 芹泽优",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": "ATK DEF HP +5%",
     "2_jp": "ATK DEF HP +5%",
     "2_kr": "ATK DEF HP +5%",
@@ -64,6 +63,28 @@
       "true_desc_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>60%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>60%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>60%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>60%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -143,6 +164,28 @@
       "true_desc_jp": "敵全体にダメージを与え、対象に<color=#28d9ed>35%</color>の確率で<color=#28d9ed>火傷</color>を最大2個<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "적 전체를 공격하고 <color=#28d9ed>35%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다. (2회 적용)",
       "true_desc_zh": "攻击全体敌人,并有<color=#28d9ed>35%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。(可叠加2次)",
+      "true_desc_levels": {
+        "1": "Attacks all enemies. Has a <color=#28d9ed>35%</color> chance to inflict <color=#28d9ed>Burned</color> 2 times on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "敵全体にダメージを与え、対象に<color=#28d9ed>35%</color>の確率で<color=#28d9ed>火傷</color>を最大2個<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "적 전체를 공격하고 <color=#28d9ed>35%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다. (2회 적용)",
+        "1_zh": "攻击全体敌人,并有<color=#28d9ed>35%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。(可叠加2次)",
+        "2": "Attacks all enemies. Has a <color=#28d9ed>35%</color> chance to inflict <color=#28d9ed>Burned</color> 2 times on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "敵全体にダメージを与え、対象に<color=#28d9ed>35%</color>の確率で<color=#28d9ed>火傷</color>を最大2個<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "적 전체를 공격하고 <color=#28d9ed>35%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다. (2회 적용)",
+        "2_zh": "攻击全体敌人,并有<color=#28d9ed>35%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。(可叠加2次)",
+        "3": "Attacks all enemies. Has a <color=#28d9ed>40%</color> chance to inflict <color=#28d9ed>Burned</color> 2 times on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "敵全体にダメージを与え、対象に<color=#28d9ed>40%</color>の確率で<color=#28d9ed>火傷</color>を最大2個<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "적 전체를 공격하고 <color=#28d9ed>40%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다. (2회 적용)",
+        "3_zh": "攻击全体敌人,并有<color=#28d9ed>40%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。(可叠加2次)",
+        "4": "Attacks all enemies. Has a <color=#28d9ed>40%</color> chance to inflict <color=#28d9ed>Burned</color> 2 times on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "敵全体にダメージを与え、対象に<color=#28d9ed>40%</color>の確率で<color=#28d9ed>火傷</color>を最大2個<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "적 전체를 공격하고 <color=#28d9ed>40%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다. (2회 적용)",
+        "4_zh": "攻击全体敌人,并有<color=#28d9ed>40%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。(可叠加2次)",
+        "5": "Attacks all enemies. Has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Burned</color> 2 times on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "敵全体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>火傷</color>を最大2個<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다. (2회 적용)",
+        "5_zh": "攻击全体敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。(可叠加2次)"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -201,14 +244,16 @@
           "效果触发几率+10%"
         ]
       },
-      "wgr": 1,
       "cd": "3",
+      "wgr": 1,
       "buff": [
         "BT_ADDITIVE_TURN"
       ],
       "debuff": [
         "BT_DOT_BURN"
       ],
+      "offensive": true,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Gains an extra turn",
@@ -240,9 +285,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "multi"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "403",
@@ -256,6 +299,28 @@
       "true_desc_jp": "敵全体にダメージを与える。\\n対象が<color=#28d9ed>火傷</color>状態の場合、ダメージがUPする。",
       "true_desc_kr": "적 전체를 공격합니다.\\n대상이 <color=#28d9ed>화상</color> 상태라면 피해가 증가합니다.",
       "true_desc_zh": "攻击全体敌人。\\n若目标处于<color=#28d9ed>烧伤</color>状态,则伤害提升。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Burned</color>.",
+        "1_jp": "敵全体にダメージを与える。\\n対象が<color=#28d9ed>火傷</color>状態の場合、ダメージがUPする。",
+        "1_kr": "적 전체를 공격합니다.\\n대상이 <color=#28d9ed>화상</color> 상태라면 피해가 증가합니다.",
+        "1_zh": "攻击全体敌人。\\n若目标处于<color=#28d9ed>烧伤</color>状态,则伤害提升。",
+        "2": "Attacks all enemies.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Burned</color>.",
+        "2_jp": "敵全体にダメージを与える。\\n対象が<color=#28d9ed>火傷</color>状態の場合、ダメージがUPする。",
+        "2_kr": "적 전체를 공격합니다.\\n대상이 <color=#28d9ed>화상</color> 상태라면 피해가 증가합니다.",
+        "2_zh": "攻击全体敌人。\\n若目标处于<color=#28d9ed>烧伤</color>状态,则伤害提升。",
+        "3": "Attacks all enemies.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Burned</color>.",
+        "3_jp": "敵全体にダメージを与える。\\n対象が<color=#28d9ed>火傷</color>状態の場合、ダメージがUPする。",
+        "3_kr": "적 전체를 공격합니다.\\n대상이 <color=#28d9ed>화상</color> 상태라면 피해가 증가합니다.",
+        "3_zh": "攻击全体敌人。\\n若目标处于<color=#28d9ed>烧伤</color>状态,则伤害提升。",
+        "4": "Attacks all enemies.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Burned</color>.",
+        "4_jp": "敵全体にダメージを与える。\\n対象が<color=#28d9ed>火傷</color>状態の場合、ダメージがUPする。",
+        "4_kr": "적 전체를 공격합니다.\\n대상이 <color=#28d9ed>화상</color> 상태라면 피해가 증가합니다.",
+        "4_zh": "攻击全体敌人。\\n若目标处于<color=#28d9ed>烧伤</color>状态,则伤害提升。",
+        "5": "Attacks all enemies.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Burned</color>.",
+        "5_jp": "敵全体にダメージを与える。\\n対象が<color=#28d9ed>火傷</color>状態の場合、ダメージがUPする。",
+        "5_kr": "적 전체를 공격합니다.\\n대상이 <color=#28d9ed>화상</color> 상태라면 피해가 증가합니다.",
+        "5_zh": "攻击全体敌人。\\n若目标处于<color=#28d9ed>烧伤</color>状态,则伤害提升。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -310,8 +375,8 @@
           "伤害量+15%"
         ]
       },
-      "wgr": 2,
       "cd": "3",
+      "wgr": 2,
       "buff": [],
       "debuff": [],
       "offensive": true,
@@ -329,6 +394,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对敌人目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对敌人目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对敌人目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对敌人目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对敌人目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对敌人目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -394,13 +481,14 @@
       "debuff": [
         "BT_DOT_BURN"
       ],
-      "dual_debuff": [
-        "BT_DOT_BURN"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": [
+        "BT_DOT_BURN"
+      ]
     }
   }
 }

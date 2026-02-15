@@ -25,11 +25,10 @@
   "gift": "Natural Object",
   "VoiceActor": "VA. Stephanie Southerland",
   "VoiceActor_jp": "CV. 渕上舞",
-  "VoiceActor_kr": "CV.김나율",
+  "VoiceActor_kr": "CV. 김나율",
   "VoiceActor_zh": "CV. 渕上舞",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": "ATK DEF HP +5%",
     "2_jp": "ATK DEF HP +5%",
     "2_kr": "ATK DEF HP +5%",
@@ -64,6 +63,28 @@
       "true_desc_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を、自分の最大HPの<color=#28d9ed>1.5%</color>回復する。",
       "true_desc_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>1.5%</color> 만큼 회복시킵니다.",
       "true_desc_zh": "攻击敌人,并使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>1.5%</color>的<color=#28d9ed>生命值</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy. <color=#28d9ed>Heals</color> the ally with the lowest Health for <color=#28d9ed>1.5%</color> of Lyla's Max Health.",
+        "1_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を、自分の最大HPの<color=#28d9ed>1.5%</color>回復する。",
+        "1_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>1.5%</color> 만큼 회복시킵니다.",
+        "1_zh": "攻击敌人,并使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>1.5%</color>的<color=#28d9ed>生命值</color>。",
+        "2": "Attacks an enemy. <color=#28d9ed>Heals</color> the ally with the lowest Health for <color=#28d9ed>1.5%</color> of Lyla's Max Health.",
+        "2_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を、自分の最大HPの<color=#28d9ed>1.5%</color>回復する。",
+        "2_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>1.5%</color> 만큼 회복시킵니다.",
+        "2_zh": "攻击敌人,并使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>1.5%</color>的<color=#28d9ed>生命值</color>。",
+        "3": "Attacks an enemy. <color=#28d9ed>Heals</color> the ally with the lowest Health for <color=#28d9ed>2.5%</color> of Lyla's Max Health.",
+        "3_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を、自分の最大HPの<color=#28d9ed>2.5%</color>回復する。",
+        "3_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>2.5%</color> 만큼 회복시킵니다.",
+        "3_zh": "攻击敌人,并使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>2.5%</color>的<color=#28d9ed>生命值</color>。",
+        "4": "Attacks an enemy. <color=#28d9ed>Heals</color> the ally with the lowest Health for <color=#28d9ed>2.5%</color> of Lyla's Max Health.",
+        "4_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を、自分の最大HPの<color=#28d9ed>2.5%</color>回復する。",
+        "4_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>2.5%</color> 만큼 회복시킵니다.",
+        "4_zh": "攻击敌人,并使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>2.5%</color>的<color=#28d9ed>生命值</color>。",
+        "5": "Attacks an enemy. <color=#28d9ed>Heals</color> the ally with the lowest Health for <color=#28d9ed>3.5%</color> of Lyla's Max Health.",
+        "5_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を、自分の最大HPの<color=#28d9ed>3.5%</color>回復する。",
+        "5_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>3.5%</color> 만큼 회복시킵니다.",
+        "5_zh": "攻击敌人,并使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>3.5%</color>的<color=#28d9ed>生命值</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -141,6 +162,28 @@
       "true_desc_jp": "(パッシブ効果)味方が受ける全体攻撃のダメージを<color=#28d9ed>5%</color>DOWNさせる。この効果は【ライラ】が倒れても持続する。\\n\\n敵から全体攻撃を受けた場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。",
       "true_desc_kr": "(패시브 효과) 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>5%</color> 감소시킵니다.\\n\\n(발동 효과) 전체 공격 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
       "true_desc_zh": "(被动效果)使友军所受的全体攻击伤害降低\\n<color=#28d9ed>5%</color>。\\n\\n(触发效果)受到全体攻击时,发动<color=#28d9ed>迅速应对</color>\\n效果。\\n使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "(Passive Effect) Reduces damage taken by allies from attacks that target all allies by <color=#28d9ed>5%</color>.\\n\\n(Triggered Effect) Upon taking damage from an attack that targets all allies, activates an <color=#28d9ed>Agile Response</color> effect.\\nGrants all allies <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "(パッシブ効果)味方が受ける全体攻撃のダメージを<color=#28d9ed>5%</color>DOWNさせる。この効果は【ライラ】が倒れても持続する。\\n\\n敵から全体攻撃を受けた場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "1_kr": "(패시브 효과) 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>5%</color> 감소시킵니다.\\n\\n(발동 효과) 전체 공격 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "1_zh": "(被动效果)使友军所受的全体攻击伤害降低\\n<color=#28d9ed>5%</color>。\\n\\n(触发效果)受到全体攻击时,发动<color=#28d9ed>迅速应对</color>\\n效果。\\n使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "2": "(Passive Effect) Reduces damage taken by allies from attacks that target all allies by <color=#28d9ed>5%</color>.\\n\\n(Triggered Effect) Upon taking damage from an attack that targets all allies, activates an <color=#28d9ed>Agile Response</color> effect.\\nGrants all allies <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "(パッシブ効果)味方が受ける全体攻撃のダメージを<color=#28d9ed>5%</color>DOWNさせる。この効果は【ライラ】が倒れても持続する。\\n\\n敵から全体攻撃を受けた場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "2_kr": "(패시브 효과) 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>5%</color> 감소시킵니다.\\n\\n(발동 효과) 전체 공격 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "2_zh": "(被动效果)使友军所受的全体攻击伤害降低\\n<color=#28d9ed>5%</color>。\\n\\n(触发效果)受到全体攻击时,发动<color=#28d9ed>迅速应对</color>\\n效果。\\n使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "3": "(Passive Effect) Reduces damage taken by allies from attacks that target all allies by <color=#28d9ed>10%</color>.\\n\\n(Triggered Effect) Upon taking damage from an attack that targets all allies, activates an <color=#28d9ed>Agile Response</color> effect.\\nGrants all allies <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "(パッシブ効果)味方が受ける全体攻撃のダメージを<color=#28d9ed>10%</color>DOWNさせる。この効果は【ライラ】が倒れても持続する。\\n\\n敵から全体攻撃を受けた場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "3_kr": "(패시브 효과) 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>10%</color> 감소시킵니다.\\n\\n(발동 효과) 전체 공격 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "3_zh": "(被动效果)使友军所受的全体攻击伤害降低\\n<color=#28d9ed>10%</color>。\\n\\n(触发效果)受到全体攻击时,发动<color=#28d9ed>迅速应对</color>\\n效果。\\n使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "4": "(Passive Effect) Reduces damage taken by allies from attacks that target all allies by <color=#28d9ed>10%</color>.\\n\\n(Triggered Effect) Upon taking damage from an attack that targets all allies, activates an <color=#28d9ed>Agile Response</color> effect.\\nGrants all allies <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "(パッシブ効果)味方が受ける全体攻撃のダメージを<color=#28d9ed>10%</color>DOWNさせる。この効果は【ライラ】が倒れても持続する。\\n\\n敵から全体攻撃を受けた場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "(패시브 효과) 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>10%</color> 감소시킵니다.\\n\\n(발동 효과) 전체 공격 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "4_zh": "(被动效果)使友军所受的全体攻击伤害降低\\n<color=#28d9ed>10%</color>。\\n\\n(触发效果)受到全体攻击时,发动<color=#28d9ed>迅速应对</color>\\n效果。\\n使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>2回合</color>。",
+        "5": "(Passive Effect) Reduces damage taken by allies from attacks that target all allies by <color=#28d9ed>15%</color>.\\n\\n(Triggered Effect) Upon taking damage from an attack that targets all allies, activates an <color=#28d9ed>Agile Response</color> effect.\\nGrants all allies <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "(パッシブ効果)味方が受ける全体攻撃のダメージを<color=#28d9ed>15%</color>DOWNさせる。この効果は【ライラ】が倒れても持続する。\\n\\n敵から全体攻撃を受けた場合、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "(패시브 효과) 아군들이 전체 공격으로 받는 피해를 <color=#28d9ed>15%</color> 감소시킵니다.\\n\\n(발동 효과) 전체 공격 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "5_zh": "(被动效果)使友军所受的全体攻击伤害降低\\n<color=#28d9ed>15%</color>。\\n\\n(触发效果)受到全体攻击时,发动<color=#28d9ed>迅速应对</color>\\n效果。\\n使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown"
@@ -195,7 +238,6 @@
           "冷却时间-1回合"
         ]
       },
-      "wgr": 3,
       "cd": "3",
       "buff": [
         "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK",
@@ -217,6 +259,28 @@
       "true_desc_jp": "味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与し、<color=#28d9ed>70%</color>の確率で味方全体の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
       "true_desc_kr": "아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color>동안 부여하고, <color=#28d9ed>70%</color> 확률로 아군 전체의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
       "true_desc_zh": "使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>,并有<color=#28d9ed>70%</color>的几率使全体友军的<color=#28d9ed>效果抵抗</color>增加<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn</color>. Has a <color=#28d9ed>70%</color> chance to grant <color=#28d9ed>Increased Resilience</color> to all allies for <color=#28d9ed>1 turn</color>.",
+        "1_jp": "味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与し、<color=#28d9ed>70%</color>の確率で味方全体の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "1_kr": "아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color>동안 부여하고, <color=#28d9ed>70%</color> 확률로 아군 전체의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "1_zh": "使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>,并有<color=#28d9ed>70%</color>的几率使全体友军的<color=#28d9ed>效果抵抗</color>增加<color=#28d9ed>1回合</color>。",
+        "2": "Grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn</color>. Has a <color=#28d9ed>85%</color> chance to grant <color=#28d9ed>Increased Resilience</color> to all allies for <color=#28d9ed>1 turn</color>.",
+        "2_jp": "味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与し、<color=#28d9ed>85%</color>の確率で味方全体の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "2_kr": "아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color>동안 부여하고, <color=#28d9ed>85%</color> 확률로 아군 전체의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "2_zh": "使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>,并有<color=#28d9ed>85%</color>的几率使全体友军的<color=#28d9ed>效果抵抗</color>增加<color=#28d9ed>1回合</color>。",
+        "3": "Grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn</color>. Has a <color=#28d9ed>85%</color> chance to grant <color=#28d9ed>Increased Resilience</color> to all allies for <color=#28d9ed>1 turn</color>.",
+        "3_jp": "味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与し、<color=#28d9ed>85%</color>の確率で味方全体の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "3_kr": "아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color>동안 부여하고, <color=#28d9ed>85%</color> 확률로 아군 전체의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "3_zh": "使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>,并有<color=#28d9ed>85%</color>的几率使全体友军的<color=#28d9ed>效果抵抗</color>增加<color=#28d9ed>1回合</color>。",
+        "4": "Grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn</color>. Has a <color=#28d9ed>100%</color> chance to grant <color=#28d9ed>Increased Resilience</color> to all allies for <color=#28d9ed>1 turn</color>.",
+        "4_jp": "味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与し、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "4_kr": "아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color>동안 부여하고, <color=#28d9ed>100%</color> 확률로 아군 전체의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "4_zh": "使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>,并有<color=#28d9ed>100%</color>的几率使全体友军的<color=#28d9ed>效果抵抗</color>增加<color=#28d9ed>1回合</color>。",
+        "5": "Grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn</color>. Has a <color=#28d9ed>100%</color> chance to grant <color=#28d9ed>Increased Resilience</color> to all allies for <color=#28d9ed>1 turn</color>.",
+        "5_jp": "味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与し、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "5_kr": "아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color>동안 부여하고, <color=#28d9ed>100%</color> 확률로 아군 전체의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "5_zh": "使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>,并有<color=#28d9ed>100%</color>的几率使全体友军的<color=#28d9ed>效果抵抗</color>增加<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+15% Resilience effect activation chance"
@@ -275,9 +339,11 @@
         "BT_AP_CHARGE"
       ],
       "debuff": [],
+      "offensive": false,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
-          "effect": "Adds a barrier (Proportional to target's Health)",
+          "effect": "Adds a Barrier (Proportional to target's Health)",
           "effect_jp": "シールド追加\\n(対象のHPが高いほど\\nシールド量UP)",
           "effect_kr": "실드 추가 (대상 체력 비례)",
           "effect_zh": "额外护盾(根据目标生命值等比)",
@@ -287,7 +353,7 @@
           "target": "mono"
         },
         "SKT_BURST_2": {
-          "effect": "Enhances barrier strength",
+          "effect": "Enhances Barrier strength",
           "effect_jp": "シールド強化",
           "effect_kr": "실드 강화",
           "effect_zh": "护盾强化",
@@ -306,9 +372,7 @@
           "offensive": false,
           "target": "mono"
         }
-      },
-      "offensive": false,
-      "target": "multi"
+      }
     },
     "SKT_CHAIN_PASSIVE": {
       "NameIDSymbol": "4704",
@@ -322,6 +386,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 攻撃後、残りHPが最も低い味方単体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を自分の最大HPの<color=#28d9ed>3.5%</color>回復させる。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>3.5%</color> 만큼 회복시킵니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>3.5%</color>的<color=#28d9ed>生命值</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health for <color=#28d9ed>3.5%</color> of Lyla's Max Health.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 攻撃後、残りHPが最も低い味方単体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を自分の最大HPの<color=#28d9ed>3.5%</color>回復させる。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>3.5%</color> 만큼 회복시킵니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>3.5%</color>的<color=#28d9ed>生命值</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health for <color=#28d9ed>3.5%</color> of Lyla's Max Health.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 攻撃後、残りHPが最も低い味方単体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を自分の最大HPの<color=#28d9ed>3.5%</color>回復させる。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>3.5%</color> 만큼 회복시킵니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>3.5%</color>的<color=#28d9ed>生命值</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health for <color=#28d9ed>3.5%</color> of Lyla's Max Health.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 攻撃後、残りHPが最も低い味方単体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を自分の最大HPの<color=#28d9ed>3.5%</color>回復させる。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>3.5%</color> 만큼 회복시킵니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>3.5%</color>的<color=#28d9ed>生命值</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health for <color=#28d9ed>3.5%</color> of Lyla's Max Health.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 攻撃後、残りHPが最も低い味方単体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を自分の最大HPの<color=#28d9ed>3.5%</color>回復させる。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>3.5%</color> 만큼 회복시킵니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>3.5%</color>的<color=#28d9ed>生命值</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health for <color=#28d9ed>3.5%</color> of Lyla's Max Health.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 攻撃後、残りHPが最も低い味方単体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を自分の最大HPの<color=#28d9ed>3.5%</color>回復させる。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 라일라 최대 체력의 <color=#28d9ed>3.5%</color> 만큼 회복시킵니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于莱拉生命值上限<color=#28d9ed>3.5%</color>的<color=#28d9ed>生命值</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -387,11 +473,12 @@
         "BT_CONTINU_HEAL"
       ],
       "debuff": [],
-      "dual_buff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

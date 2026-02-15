@@ -56,6 +56,7 @@
     "6_kr": "ATK DEF HP +30%\n치명 확률 +65%\n공격 전 대상이 강화 효과 미보유 시 행동 게이지 +20%",
     "6_zh": "ATK DEF HP +30%\n暴击率+65%\n攻击前目标未附带强化效果时行动值+20%"
   },
+  "limited": true,
   "skills": {
     "SKT_FIRST": {
       "NameIDSymbol": "8501",
@@ -69,6 +70,28 @@
       "true_desc_jp": "敵全体にダメージを与える。自分のターンに敵を倒した時、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
       "true_desc_kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
       "true_desc_zh": "攻击全体敌人。自身回合击杀敌人时,有<color=#28d9ed>60%</color>几率获得<color=#28d9ed>额外回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies. When an enemy is killed on the caster's turn, has a <color=#28d9ed>60%</color> chance to grant an <color=#28d9ed>extra turn</color> to the caster.",
+        "1_jp": "敵全体にダメージを与える。自分のターンに敵を倒した時、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
+        "1_kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "1_zh": "攻击全体敌人。自身回合击杀敌人时,有<color=#28d9ed>60%</color>几率获得<color=#28d9ed>额外回合</color>。",
+        "2": "Attacks all enemies. When an enemy is killed on the caster's turn, has a <color=#28d9ed>60%</color> chance to grant an <color=#28d9ed>extra turn</color> to the caster.",
+        "2_jp": "敵全体にダメージを与える。自分のターンに敵を倒した時、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
+        "2_kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "2_zh": "攻击全体敌人。自身回合击杀敌人时,有<color=#28d9ed>60%</color>几率获得<color=#28d9ed>额外回合</color>。",
+        "3": "Attacks all enemies. When an enemy is killed on the caster's turn, has a <color=#28d9ed>75%</color> chance to grant an <color=#28d9ed>extra turn</color> to the caster.",
+        "3_jp": "敵全体にダメージを与える。自分のターンに敵を倒した時、<color=#28d9ed>75%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
+        "3_kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>75%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "3_zh": "攻击全体敌人。自身回合击杀敌人时,有<color=#28d9ed>75%</color>几率获得<color=#28d9ed>额外回合</color>。",
+        "4": "Attacks all enemies. When an enemy is killed on the caster's turn, has a <color=#28d9ed>75%</color> chance to grant an <color=#28d9ed>extra turn</color> to the caster.",
+        "4_jp": "敵全体にダメージを与える。自分のターンに敵を倒した時、<color=#28d9ed>75%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
+        "4_kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>75%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "4_zh": "攻击全体敌人。自身回合击杀敌人时,有<color=#28d9ed>75%</color>几率获得<color=#28d9ed>额外回合</color>。",
+        "5": "Attacks all enemies. When an enemy is killed on the caster's turn, has a <color=#28d9ed>100%</color> chance to grant an <color=#28d9ed>extra turn</color> to the caster.",
+        "5_jp": "敵全体にダメージを与える。自分のターンに敵を倒した時、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
+        "5_kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "5_zh": "攻击全体敌人。自身回合击杀敌人时,有<color=#28d9ed>100%</color>几率获得<color=#28d9ed>额外回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -144,6 +167,28 @@
       "true_desc_jp": "敵単体にダメージを与えた後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\n対象が<color=#28d9ed>ボス</color>か、<color=#28d9ed>強化効果</color>がない場合、追加攻撃を与える。",
       "true_desc_kr": "적을 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
       "true_desc_zh": "攻击敌人后,夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n若目标为<color=#28d9ed>首领</color>或未附带<color=#28d9ed>强化效果</color>,则造成额外攻击。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy, then steals <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> of the target.\\nWhen the target is a <color=#28d9ed>Boss</color> or is not granted a <color=#28d9ed>buff</color>, activates an additional attack.",
+        "1_jp": "敵単体にダメージを与えた後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\n対象が<color=#28d9ed>ボス</color>か、<color=#28d9ed>強化効果</color>がない場合、追加攻撃を与える。",
+        "1_kr": "적을 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
+        "1_zh": "攻击敌人后,夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n若目标为<color=#28d9ed>首领</color>或未附带<color=#28d9ed>强化效果</color>,则造成额外攻击。",
+        "2": "Attacks an enemy, then steals <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> of the target.\\nWhen the target is a <color=#28d9ed>Boss</color> or is not granted a <color=#28d9ed>buff</color>, activates an additional attack.",
+        "2_jp": "敵単体にダメージを与えた後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\n対象が<color=#28d9ed>ボス</color>か、<color=#28d9ed>強化効果</color>がない場合、追加攻撃を与える。",
+        "2_kr": "적을 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
+        "2_zh": "攻击敌人后,夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n若目标为<color=#28d9ed>首领</color>或未附带<color=#28d9ed>强化效果</color>,则造成额外攻击。",
+        "3": "Attacks an enemy, then steals <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> of the target.\\nWhen the target is a <color=#28d9ed>Boss</color> or is not granted a <color=#28d9ed>buff</color>, activates an additional attack.",
+        "3_jp": "敵単体にダメージを与えた後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\n対象が<color=#28d9ed>ボス</color>か、<color=#28d9ed>強化効果</color>がない場合、追加攻撃を与える。",
+        "3_kr": "적을 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
+        "3_zh": "攻击敌人后,夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n若目标为<color=#28d9ed>首领</color>或未附带<color=#28d9ed>强化效果</color>,则造成额外攻击。",
+        "4": "Attacks an enemy, then steals <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> of the target.\\nWhen the target is a <color=#28d9ed>Boss</color> or is not granted a <color=#28d9ed>buff</color>, activates an additional attack.",
+        "4_jp": "敵単体にダメージを与えた後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\n対象が<color=#28d9ed>ボス</color>か、<color=#28d9ed>強化効果</color>がない場合、追加攻撃を与える。",
+        "4_kr": "적을 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
+        "4_zh": "攻击敌人后,夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n若目标为<color=#28d9ed>首领</color>或未附带<color=#28d9ed>强化效果</color>,则造成额外攻击。",
+        "5": "Steals <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from an enemy, then attacks the target. Ignores the target's Resilience.\\nWhen the target is a <color=#28d9ed>Boss</color> or is not granted a <color=#28d9ed>buff</color>, activates an additional attack.",
+        "5_jp": "敵単体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪った後、対象にダメージを与える。対象の効果抵抗を無視する。\\n対象が<color=#28d9ed>ボス</color>か、<color=#28d9ed>強化効果</color>がない場合、追加攻撃を与える。",
+        "5_kr": "적 한 명의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗은 후 대상을 공격합니다. 대상의 효과 저항을 무시합니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
+        "5_zh": "夺取一名敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>后攻击目标。无视目标的效果抵抗。\\n若目标为<color=#28d9ed>首领</color>或未附带<color=#28d9ed>强化效果</color>,则造成额外攻击。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -209,8 +254,11 @@
         "BT_ADDITIVE_TURN"
       ],
       "debuff": [
-        "BT_STEAL_BUFF"
+        "BT_STEAL_BUFF",
+        "BT_RESOURCE_DOWN"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Changes to Enhanced Attack\\nIncreases damage",
@@ -242,9 +290,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "8503",
@@ -258,6 +304,28 @@
       "true_desc_jp": "対象に解除可能な<color=#28d9ed>強化効果</color>がない場合、<color=#28d9ed>【サプライズサンドキャッスル】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。このスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。\\n攻撃後、対象の<color=#28d9ed>固有資源</color>の数をすべて減少させる。(効果抵抗および免疫無視)",
       "true_desc_kr": "대상이 해제 가능한 <color=#28d9ed>강화 효과</color>를 가지고 있지 않다면 <color=#28d9ed>서프라이즈 샌드 캐슬</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다. 이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다. \\n공격 후 대상이 보유한 <color=#28d9ed>고유 자원</color>의 수량을 모두 감소시킵니다. (대상의 효과저항 및 면역 무시)",
       "true_desc_zh": "若目标未附带可解除的<color=#28d9ed>强化效果</color>,则使<color=#28d9ed>惊喜沙堡</color>的冷却时间减少<color=#28d9ed>1回合</color>后,攻击敌人。该技能无视目标的<color=#28d9ed>30%</color>防御力。\\n攻击后,使目标持有的<color=#28d9ed>固有资源</color>数量全部降低。(无视目标的效果抵抗和免疫效果)",
+      "true_desc_levels": {
+        "1": "When the target is not granted a dispellable <color=#28d9ed>buff</color>, reduces cooldown of <color=#28d9ed>Surprise Sand Castle</color> by <color=#28d9ed>1 turn(s)</color>, then attacks the enemy. This skill ignores <color=#28d9ed>30%</color> of the target's Defense.\\nAfter attacking, reduces all of the target's <color=#28d9ed>Unique Resource</color> count. (Ignores the target's Resilience and Immunity)",
+        "1_jp": "対象に解除可能な<color=#28d9ed>強化効果</color>がない場合、<color=#28d9ed>【サプライズサンドキャッスル】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。このスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。\\n攻撃後、対象の<color=#28d9ed>固有資源</color>の数をすべて減少させる。(効果抵抗および免疫無視)",
+        "1_kr": "대상이 해제 가능한 <color=#28d9ed>강화 효과</color>를 가지고 있지 않다면 <color=#28d9ed>서프라이즈 샌드 캐슬</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다. 이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다. \\n공격 후 대상이 보유한 <color=#28d9ed>고유 자원</color>의 수량을 모두 감소시킵니다. (대상의 효과저항 및 면역 무시)",
+        "1_zh": "若目标未附带可解除的<color=#28d9ed>强化效果</color>,则使<color=#28d9ed>惊喜沙堡</color>的冷却时间减少<color=#28d9ed>1回合</color>后,攻击敌人。该技能无视目标的<color=#28d9ed>30%</color>防御力。\\n攻击后,使目标持有的<color=#28d9ed>固有资源</color>数量全部降低。(无视目标的效果抵抗和免疫效果)",
+        "2": "When the target is not granted a dispellable <color=#28d9ed>buff</color>, reduces cooldown of <color=#28d9ed>Surprise Sand Castle</color> by <color=#28d9ed>1 turn(s)</color>, then attacks the enemy. This skill ignores <color=#28d9ed>30%</color> of the target's Defense.\\nAfter attacking, reduces all of the target's <color=#28d9ed>Unique Resource</color> count. (Ignores the target's Resilience and Immunity)",
+        "2_jp": "対象に解除可能な<color=#28d9ed>強化効果</color>がない場合、<color=#28d9ed>【サプライズサンドキャッスル】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。このスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。\\n攻撃後、対象の<color=#28d9ed>固有資源</color>の数をすべて減少させる。(効果抵抗および免疫無視)",
+        "2_kr": "대상이 해제 가능한 <color=#28d9ed>강화 효과</color>를 가지고 있지 않다면 <color=#28d9ed>서프라이즈 샌드 캐슬</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다. 이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다. \\n공격 후 대상이 보유한 <color=#28d9ed>고유 자원</color>의 수량을 모두 감소시킵니다. (대상의 효과저항 및 면역 무시)",
+        "2_zh": "若目标未附带可解除的<color=#28d9ed>强化效果</color>,则使<color=#28d9ed>惊喜沙堡</color>的冷却时间减少<color=#28d9ed>1回合</color>后,攻击敌人。该技能无视目标的<color=#28d9ed>30%</color>防御力。\\n攻击后,使目标持有的<color=#28d9ed>固有资源</color>数量全部降低。(无视目标的效果抵抗和免疫效果)",
+        "3": "When the target is not granted a dispellable <color=#28d9ed>buff</color>, reduces cooldown of <color=#28d9ed>Surprise Sand Castle</color> by <color=#28d9ed>1 turn(s)</color>, then attacks the enemy. This skill ignores <color=#28d9ed>30%</color> of the target's Defense.\\nAfter attacking, reduces all of the target's <color=#28d9ed>Unique Resource</color> count. (Ignores the target's Resilience and Immunity)",
+        "3_jp": "対象に解除可能な<color=#28d9ed>強化効果</color>がない場合、<color=#28d9ed>【サプライズサンドキャッスル】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。このスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。\\n攻撃後、対象の<color=#28d9ed>固有資源</color>の数をすべて減少させる。(効果抵抗および免疫無視)",
+        "3_kr": "대상이 해제 가능한 <color=#28d9ed>강화 효과</color>를 가지고 있지 않다면 <color=#28d9ed>서프라이즈 샌드 캐슬</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다. 이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다. \\n공격 후 대상이 보유한 <color=#28d9ed>고유 자원</color>의 수량을 모두 감소시킵니다. (대상의 효과저항 및 면역 무시)",
+        "3_zh": "若目标未附带可解除的<color=#28d9ed>强化效果</color>,则使<color=#28d9ed>惊喜沙堡</color>的冷却时间减少<color=#28d9ed>1回合</color>后,攻击敌人。该技能无视目标的<color=#28d9ed>30%</color>防御力。\\n攻击后,使目标持有的<color=#28d9ed>固有资源</color>数量全部降低。(无视目标的效果抵抗和免疫效果)",
+        "4": "When the target is not granted a dispellable <color=#28d9ed>buff</color>, reduces cooldown of <color=#28d9ed>Surprise Sand Castle</color> by <color=#28d9ed>1 turn(s)</color>, then attacks the enemy. This skill ignores <color=#28d9ed>30%</color> of the target's Defense.\\nAfter attacking, reduces all of the target's <color=#28d9ed>Unique Resource</color> count. (Ignores the target's Resilience and Immunity)",
+        "4_jp": "対象に解除可能な<color=#28d9ed>強化効果</color>がない場合、<color=#28d9ed>【サプライズサンドキャッスル】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。このスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。\\n攻撃後、対象の<color=#28d9ed>固有資源</color>の数をすべて減少させる。(効果抵抗および免疫無視)",
+        "4_kr": "대상이 해제 가능한 <color=#28d9ed>강화 효과</color>를 가지고 있지 않다면 <color=#28d9ed>서프라이즈 샌드 캐슬</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다. 이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다. \\n공격 후 대상이 보유한 <color=#28d9ed>고유 자원</color>의 수량을 모두 감소시킵니다. (대상의 효과저항 및 면역 무시)",
+        "4_zh": "若目标未附带可解除的<color=#28d9ed>强化效果</color>,则使<color=#28d9ed>惊喜沙堡</color>的冷却时间减少<color=#28d9ed>1回合</color>后,攻击敌人。该技能无视目标的<color=#28d9ed>30%</color>防御力。\\n攻击后,使目标持有的<color=#28d9ed>固有资源</color>数量全部降低。(无视目标的效果抵抗和免疫效果)",
+        "5": "When the target is not granted a dispellable <color=#28d9ed>buff</color>, <color=#28d9ed>fully</color> reduces cooldown of <color=#28d9ed>Surprise Sand Castle</color>, then attacks the enemy. This skill ignores <color=#28d9ed>30%</color> of the target's Defense.\\nAfter attacking, reduces all of the target's <color=#28d9ed>Unique Resource</color> count. (Ignores the target's Resilience and Immunity)",
+        "5_jp": "対象に解除可能な<color=#28d9ed>強化効果</color>がない場合、<color=#28d9ed>【サプライズサンドキャッスル】</color>のスキルターンを<color=#28d9ed>すべて</color>減少させた後、敵単体にダメージを与える。このスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。\\n攻撃後、対象の<color=#28d9ed>固有資源</color>の数をすべて減少させる。(効果抵抗および免疫無視)",
+        "5_kr": "대상이 해제 가능한 <color=#28d9ed>강화 효과</color>를 가지고 있지 않다면 <color=#28d9ed>서프라이즈 샌드 캐슬</color>의 쿨타임을 <color=#28d9ed>모두</color> 감소시킨 후 적을 공격합니다. 이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n공격 후 대상이 보유한 <color=#28d9ed>고유 자원</color>의 수량을 모두 감소시킵니다. (대상의 효과저항 및 면역 무시)",
+        "5_zh": "若目标未附带可解除的<color=#28d9ed>强化效果</color>,则使<color=#28d9ed>惊喜沙堡</color>的冷却时间<color=#28d9ed>全部</color>减少后,攻击敌人。该技能无视目标的<color=#28d9ed>30%</color>防御力。\\n攻击后,使目标持有的<color=#28d9ed>固有资源</color>数量全部降低。(无视目标的效果抵抗和免疫效果)"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -335,6 +403,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
       "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
       "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后使WG额外减少<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后使WG额外减少<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "2": "<color=#ffd732>Chain Finish Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后使WG额外减少<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后使WG额外减少<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后使WG额外减少<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后使WG额外减少<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -400,14 +490,14 @@
       "debuff": [
         "BT_WG_REVERSE_HEAL"
       ],
-      "dual_buff": [
-        "BT_ACTION_GAUGE"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "dual_debuff": []
     }
-  },
-  "limited": true
+  }
 }

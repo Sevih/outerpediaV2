@@ -27,13 +27,11 @@
   "video": "TAmYHXMoGJQ",
   "VoiceActor": "VA. Sarah Williams",
   "VoiceActor_jp": "CV. 鬼頭明里",
-  "VoiceActor_kr": "CV.장예나",
+  "VoiceActor_kr": "CV. 장예나",
   "VoiceActor_zh": "CV. 鬼头明里",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -43,15 +41,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 효과 저항 +3%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军效果抵抗+3%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+3% Ally Team Resilience\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方の効果抵抗+3%\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 효과 저항 +3%\n입장 시 AP +25",
@@ -70,6 +65,28 @@
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>3%</color>UPさせる。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>3%</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率使全体友军的<color=#28d9ed>行动值</color>恢复<color=#28d9ed>3%</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to increase the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>3%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>3%</color>UPさせる。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>3%</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率使全体友军的<color=#28d9ed>行动值</color>恢复<color=#28d9ed>3%</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to increase the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>3%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>3%</color>UPさせる。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>3%</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率使全体友军的<color=#28d9ed>行动值</color>恢复<color=#28d9ed>3%</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to increase the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>3%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>3%</color>UPさせる。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>3%</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率使全体友军的<color=#28d9ed>行动值</color>恢复<color=#28d9ed>3%</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to increase the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>3%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>3%</color>UPさせる。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>3%</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率使全体友军的<color=#28d9ed>行动值</color>恢复<color=#28d9ed>3%</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to increase the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>3%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>3%</color>UPさせる。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>3%</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使全体友军的<color=#28d9ed>行动值</color>恢复<color=#28d9ed>3%</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -145,6 +162,28 @@
       "true_desc_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
       "true_desc_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
       "true_desc_zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
+      "true_desc_levels": {
+        "1": "Increases all allies' <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "1_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "1_zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "2": "Grants increased <color=#28d9ed>Defense</color> to all allies for <color=#28d9ed>2 turn(s)</color> and grants increased <color=#28d9ed>Counterattack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、自分に<color=#28d9ed>反撃</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고, 자신의 <color=#28d9ed>반격</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "2_zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>,并使自身的<color=#28d9ed>反击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "3": "Grants increased <color=#28d9ed>Defense</color> to all allies for <color=#28d9ed>2 turn(s)</color> and grants increased <color=#28d9ed>Counterattack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、自分に<color=#28d9ed>反撃</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고, 자신의 <color=#28d9ed>반격</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "3_zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>,并使自身的<color=#28d9ed>反击率</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "4": "Grants increased <color=#28d9ed>Defense</color> to all allies for <color=#28d9ed>3 turn(s)</color> and grants increased <color=#28d9ed>Counterattack</color> to the caster for <color=#28d9ed>3 turn(s)</color>.",
+        "4_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせ、自分に<color=#28d9ed>反撃</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "4_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 증가시키고, 자신의 <color=#28d9ed>반격</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다.",
+        "4_zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>,并使自身的<color=#28d9ed>反击率</color>提升,持续<color=#28d9ed>3回合</color>。",
+        "5": "Grants increased <color=#28d9ed>Defense</color> to all allies for <color=#28d9ed>3 turn(s)</color> and grants increased <color=#28d9ed>Counterattack</color> to the caster for <color=#28d9ed>3 turn(s)</color>.",
+        "5_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせ、自分に<color=#28d9ed>反撃</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "5_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 증가시키고, 자신의 <color=#28d9ed>반격</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다.",
+        "5_zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>,并使自身的<color=#28d9ed>反击率</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+2 turns Counterattack on caster"
@@ -195,7 +234,6 @@
           "冷却时间-1回合"
         ]
       },
-      "wgr": null,
       "cd": "6",
       "buff": [
         "BT_STAT|ST_DEF",
@@ -204,6 +242,8 @@
         "BT_ADDITIVE_TURN"
       ],
       "debuff": [],
+      "offensive": false,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Heals caster by 15%",
@@ -235,9 +275,7 @@
           "offensive": false,
           "target": "mono"
         }
-      },
-      "offensive": false,
-      "target": "mono"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "2103",
@@ -251,6 +289,28 @@
       "true_desc_jp": "敵全体にダメージを与え、<color=#28d9ed>60%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
       "true_desc_kr": "적 전체를 공격하고 <color=#28d9ed>60%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
       "true_desc_zh": "攻击全体敌人,并有<color=#28d9ed>60%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "1_jp": "敵全体にダメージを与え、<color=#28d9ed>60%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "1_kr": "적 전체를 공격하고 <color=#28d9ed>60%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "1_zh": "攻击全体敌人,并有<color=#28d9ed>60%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "2": "Attacks all enemies.\\nHas a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>, and grants <color=#28d9ed>Immunity</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "2_jp": "敵全体にダメージを与える。\\n<color=#28d9ed>60%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>し、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "2_kr": "적 전체를 공격합니다.\\n<color=#28d9ed>60%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 자신은 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color>을 얻습니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "2_zh": "攻击全体敌人。\\n有<color=#28d9ed>60%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>,并使自身获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>1回合</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "3": "Attacks all enemies.\\nHas a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>, and grants <color=#28d9ed>Immunity</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "3_jp": "敵全体にダメージを与える。\\n<color=#28d9ed>80%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>し、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "3_kr": "적 전체를 공격합니다.\\n<color=#28d9ed>80%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 자신은 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color>을 얻습니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "3_zh": "攻击全体敌人。\\n有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>,并使自身获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>1回合</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "4": "Attacks all enemies.\\nHas a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>, and grants <color=#28d9ed>Immunity</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "4_jp": "敵全体にダメージを与える。\\n<color=#28d9ed>80%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>し、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "4_kr": "적 전체를 공격합니다.\\n<color=#28d9ed>80%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 자신은 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color>을 얻습니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "4_zh": "攻击全体敌人。\\n有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>,并使自身获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>1回合</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "5": "Attacks all enemies.\\nHas a <color=#28d9ed>80%</color> chance to ignore the target's Resilience and inflict <color=#28d9ed>Taunted</color> for <color=#28d9ed>1 turn(s)</color>. Grants <color=#28d9ed>Immunity</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "5_jp": "敵全体にダメージを与える。\\n<color=#28d9ed>80%</color>の確率で対象の効果抵抗を無視し、対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。この時、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "5_kr": "적 전체를 공격합니다.\\n<color=#28d9ed>80%</color> 확률로 대상의 효과 저항을 무시하고 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하며 자신은 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color>을 얻습니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "5_zh": "攻击全体敌人。\\n有<color=#28d9ed>80%</color>的几率无视目标的效果抵抗,并对其造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>,且使自身获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>1回合</color>。\\n自身的<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
+      },
       "enhancement": {
         "2": [
           "+1 turn Immunity duration on self",
@@ -313,8 +373,8 @@
           "伤害量+20%"
         ]
       },
-      "wgr": 2,
       "cd": "5",
+      "wgr": 2,
       "buff": [
         "BT_IMMUNE"
       ],
@@ -336,6 +396,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>HP</color>を回復する。回復量は自分の防御力が高いほどUPする。",
       "true_desc_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>체력</color>을 회복합니다. 회복량은 자신의 방어력에 비례하여 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:有<color=#28d9ed>50%</color>的几率使自身的<color=#28d9ed>生命值</color>恢复。根据自身防御力等比提升恢复量。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Has a <color=#28d9ed>50%</color> chance to <color=#28d9ed>heal</color> the caster. The amount healed is proportional to the caster's Defense.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>HP</color>を回復する。回復量は自分の防御力が高いほどUPする。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>체력</color>을 회복합니다. 회복량은 자신의 방어력에 비례하여 증가합니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:有<color=#28d9ed>50%</color>的几率使自身的<color=#28d9ed>生命值</color>恢复。根据自身防御力等比提升恢复量。",
+        "2": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Has a <color=#28d9ed>50%</color> chance to <color=#28d9ed>heal</color> the caster. The amount healed is proportional to the caster's Defense.",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>HP</color>を回復する。回復量は自分の防御力が高いほどUPする。",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>체력</color>을 회복합니다. 회복량은 자신의 방어력에 비례하여 증가합니다.",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:有<color=#28d9ed>50%</color>的几率使自身的<color=#28d9ed>生命值</color>恢复。根据自身防御力等比提升恢复量。",
+        "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Has a <color=#28d9ed>50%</color> chance to <color=#28d9ed>heal</color> the caster. The amount healed is proportional to the caster's Defense.",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>HP</color>を回復する。回復量は自分の防御力が高いほどUPする。",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>체력</color>을 회복합니다. 회복량은 자신의 방어력에 비례하여 증가합니다.",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:有<color=#28d9ed>50%</color>的几率使自身的<color=#28d9ed>生命值</color>恢复。根据自身防御力等比提升恢复量。",
+        "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Has a <color=#28d9ed>50%</color> chance to <color=#28d9ed>heal</color> the caster. The amount healed is proportional to the caster's Defense.",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>HP</color>を回復する。回復量は自分の防御力が高いほどUPする。",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>체력</color>을 회복합니다. 회복량은 자신의 방어력에 비례하여 증가합니다.",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:有<color=#28d9ed>50%</color>的几率使自身的<color=#28d9ed>生命值</color>恢复。根据自身防御力等比提升恢复量。",
+        "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, grants <color=#28d9ed>Find Weakness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Has a <color=#28d9ed>50%</color> chance to <color=#28d9ed>heal</color> the caster. The amount healed is proportional to the caster's Defense.",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、味方全体に<color=#28d9ed>弱点攻略</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>HP</color>を回復する。回復量は自分の防御力が高いほどUPする。",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>약점 공략</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>체력</color>을 회복합니다. 회복량은 자신의 방어력에 비례하여 증가합니다.",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使全体友军获得<color=#28d9ed>攻击破绽</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:有<color=#28d9ed>50%</color>的几率使自身的<color=#28d9ed>生命值</color>恢复。根据自身防御力等比提升恢复量。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -401,11 +483,12 @@
         "BT_DMG_TARGET_BREAK"
       ],
       "debuff": [],
-      "dual_buff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

@@ -11,7 +11,6 @@
   "rank": "A",
   "rank_pvp": "C",
   "role": "support",
-  "tags": [],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -26,7 +25,7 @@
   "Chain_Type": "Join",
   "gift": "Luxury",
   "video": "Q7fCc5re3a4",
-  "VoiceActor": "VA. Yukinari Toa",
+  "VoiceActor": "VA. Marie Westbrook",
   "VoiceActor_jp": "CV. 行成とあ",
   "VoiceActor_kr": "CV. 비주언",
   "VoiceActor_zh": "CV. 行成桃姬",
@@ -66,6 +65,28 @@
       "true_desc_jp": "敵にダメージを与え。対象に<color=#28d9ed>40%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "적을 공격합니다. <color=#28d9ed>40%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标陷入<color=#28d9ed>出血</color>状态,持续<color=#28d9ed>2</color>回合。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy. Has a <color=#28d9ed>40%</color> chance to inflict <color=#28d9ed>Bleed</color> for <color=#28d9ed>2 turns</color>.",
+        "1_jp": "敵にダメージを与え。対象に<color=#28d9ed>40%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "적을 공격합니다. <color=#28d9ed>40%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标陷入<color=#28d9ed>出血</color>状态,持续<color=#28d9ed>2</color>回合。",
+        "2": "Attacks an enemy. Has a <color=#28d9ed>40%</color> chance to inflict <color=#28d9ed>Bleed</color> for <color=#28d9ed>2 turns</color>.",
+        "2_jp": "敵にダメージを与え。対象に<color=#28d9ed>40%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "적을 공격합니다. <color=#28d9ed>40%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标陷入<color=#28d9ed>出血</color>状态,持续<color=#28d9ed>2</color>回合。",
+        "3": "Attacks an enemy. Has a <color=#28d9ed>55%</color> chance to inflict <color=#28d9ed>Bleed</color> for <color=#28d9ed>2 turns</color>.",
+        "3_jp": "敵にダメージを与え。対象に<color=#28d9ed>55%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "적을 공격합니다. <color=#28d9ed>55%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>55%</color>的几率使目标陷入<color=#28d9ed>出血</color>状态,持续<color=#28d9ed>2</color>回合。",
+        "4": "Attacks an enemy. Has a <color=#28d9ed>55%</color> chance to inflict <color=#28d9ed>Bleed</color> for <color=#28d9ed>2 turns</color>.",
+        "4_jp": "敵にダメージを与え。対象に<color=#28d9ed>55%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "적을 공격합니다. <color=#28d9ed>55%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>55%</color>的几率使目标陷入<color=#28d9ed>出血</color>状态,持续<color=#28d9ed>2</color>回合。",
+        "5": "Attacks an enemy. Has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Bleed</color> for <color=#28d9ed>2 turns</color>.",
+        "5_jp": "敵にダメージを与え。対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "적을 공격합니다. <color=#28d9ed>70%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率使目标陷入<color=#28d9ed>出血</color>状态,持续<color=#28d9ed>2</color>回合。"
+      },
       "enhancement": {
         "2": [
           "+1 Weakness Gauge damage",
@@ -129,12 +150,14 @@
         "BT_DOT_BLEED",
         "BT_EXTEND_DEBUFF"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
-          "effect": "+30% Bleed activation chance\nInflicts an additional 2 turn Bleed",
-          "effect_jp": "出血発生率+30%\n出血追加+2ターン",
-          "effect_kr": "출혈 확률 +30%\n출혈 추가+2턴",
-          "effect_zh": "出血概率 +30%\n出血持续 +2回合",
+          "effect": "",
+          "effect_jp": "",
+          "effect_kr": "",
+          "effect_zh": "",
           "cost": 80,
           "level": 1,
           "offensive": true,
@@ -151,18 +174,16 @@
           "target": "mono"
         },
         "SKT_BURST_3": {
-          "effect": "Replaced with an Enhanced Skill\nExtra Turn\nAttacks All Enemies",
-          "effect_jp": "強化スキル変更\n追加ターン\n敵全体に攻撃",
-          "effect_kr": "강화 스킬로 교체\n추가 턴\n적 전체 공격",
-          "effect_zh": "替换为强化技能\n追加回合\n攻击全体敌人",
+          "effect": "",
+          "effect_jp": "",
+          "effect_kr": "",
+          "effect_zh": "",
           "cost": 160,
           "level": 3,
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "10702",
@@ -176,6 +197,28 @@
       "true_desc_jp": "スキル使用前、水属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵にダメージを与える。\\n攻撃後、<color=#28d9ed>70%</color>の確率で敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ,\\nさらに<color=#28d9ed>70%</color>の確率で、<color=#28d9ed>回復不可</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nまた、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
       "true_desc_kr": "스킬 사용 전, 수속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다\\n공격 후, <color=#28d9ed>70%</color> 확률로 적의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 감소시키고\\n<color=#28d9ed>70%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\n또한 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
       "true_desc_zh": "在使用技能前,使全体水属性友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>1</color>回合,并攻击敌人。\\n攻击后,有<color=#28d9ed>70%</color>的概率降低敌人的<color=#28d9ed>速度</color>,持续<color=#28d9ed>1</color>回合;\\n并有<color=#28d9ed>70%</color>的概率使目标陷入<color=#28d9ed>无法恢复</color>状态,持续<color=#28d9ed>1</color>回合。\\n此外,使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。",
+      "true_desc_levels": {
+        "1": "Before attacking, increase all Water allies' <color=#28d9ed>Penetration</color> for <color=#28d9ed>1 turn</color>, then attacks an enemy.\\nAfter attacking, has a <color=#28d9ed>70%</color> chance to decrease the enemy's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color> and a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Unhealable</color> for <color=#28d9ed>1 turn(s)</color>.\\nAdditionally increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "1_jp": "スキル使用前、水属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵にダメージを与える。\\n攻撃後、<color=#28d9ed>70%</color>の確率で敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ,\\nさらに<color=#28d9ed>70%</color>の確率で、<color=#28d9ed>回復不可</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nまた、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
+        "1_kr": "스킬 사용 전, 수속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다\\n공격 후, <color=#28d9ed>70%</color> 확률로 적의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 감소시키고\\n<color=#28d9ed>70%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\n또한 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "1_zh": "在使用技能前,使全体水属性友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>1</color>回合,并攻击敌人。\\n攻击后,有<color=#28d9ed>70%</color>的概率降低敌人的<color=#28d9ed>速度</color>,持续<color=#28d9ed>1</color>回合;\\n并有<color=#28d9ed>70%</color>的概率使目标陷入<color=#28d9ed>无法恢复</color>状态,持续<color=#28d9ed>1</color>回合。\\n此外,使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。",
+        "2": "Before attacking, increase all Water allies' <color=#28d9ed>Penetration</color> for <color=#28d9ed>1 turn</color>, then attacks an enemy.\\nAfter attacking, has a <color=#28d9ed>70%</color> chance to decrease the enemy's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color> and a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Unhealable</color> for <color=#28d9ed>1 turn(s)</color>.\\nAdditionally increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "2_jp": "スキル使用前、水属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵にダメージを与える。\\n攻撃後、<color=#28d9ed>70%</color>の確率で敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ,\\nさらに<color=#28d9ed>70%</color>の確率で、<color=#28d9ed>回復不可</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nまた、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
+        "2_kr": "스킬 사용 전, 수속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다\\n공격 후, <color=#28d9ed>70%</color> 확률로 적의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 감소시키고\\n<color=#28d9ed>70%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\n또한 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "2_zh": "在使用技能前,使全体水属性友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>1</color>回合,并攻击敌人。\\n攻击后,有<color=#28d9ed>70%</color>的概率降低敌人的<color=#28d9ed>速度</color>,持续<color=#28d9ed>1</color>回合;\\n并有<color=#28d9ed>70%</color>的概率使目标陷入<color=#28d9ed>无法恢复</color>状态,持续<color=#28d9ed>1</color>回合。\\n此外,使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。",
+        "3": "Before attacking, increase all Water allies' <color=#28d9ed>Penetration</color> for <color=#28d9ed>1 turn</color>, then attacks an enemy.\\nAfter attacking, has a <color=#28d9ed>85%</color> chance to decrease the enemy's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color> and a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Unhealable</color> for <color=#28d9ed>1 turn(s)</color>.\\nAdditionally increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "3_jp": "スキル使用前、水属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵にダメージを与える。\\n攻撃後、<color=#28d9ed>85%</color>の確率で敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ,\\nさらに<color=#28d9ed>85%</color>の確率で、<color=#28d9ed>回復不可</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nまた、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
+        "3_kr": "스킬 사용 전, 수속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다\\n공격 후, <color=#28d9ed>85%</color> 확률로 적의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 감소시키고\\n<color=#28d9ed>85%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\n또한 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "3_zh": "在使用技能前,使全体水属性友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>1</color>回合,并攻击敌人。\\n攻击后,有<color=#28d9ed>85%</color>的概率降低敌人的<color=#28d9ed>速度</color>,持续<color=#28d9ed>1</color>回合;\\n并有<color=#28d9ed>85%</color>的概率使目标陷入<color=#28d9ed>无法恢复</color>状态,持续<color=#28d9ed>1</color>回合。\\n此外,使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。",
+        "4": "Before attacking, increase all Water allies' <color=#28d9ed>Penetration</color> for <color=#28d9ed>1 turn</color>, then attacks an enemy.\\nAfter attacking, has a <color=#28d9ed>85%</color> chance to decrease the enemy's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color> and a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Unhealable</color> for <color=#28d9ed>1 turn(s)</color>.\\nAdditionally increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "4_jp": "スキル使用前、水属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵にダメージを与える。\\n攻撃後、<color=#28d9ed>85%</color>の確率で敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ,\\nさらに<color=#28d9ed>85%</color>の確率で、<color=#28d9ed>回復不可</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nまた、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
+        "4_kr": "스킬 사용 전, 수속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다\\n공격 후, <color=#28d9ed>85%</color> 확률로 적의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 감소시키고\\n<color=#28d9ed>85%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\n또한 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "4_zh": "在使用技能前,使全体水属性友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>1</color>回合,并攻击敌人。\\n攻击后,有<color=#28d9ed>85%</color>的概率降低敌人的<color=#28d9ed>速度</color>,持续<color=#28d9ed>1</color>回合;\\n并有<color=#28d9ed>85%</color>的概率使目标陷入<color=#28d9ed>无法恢复</color>状态,持续<color=#28d9ed>1</color>回合。\\n此外,使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。",
+        "5": "Before attacking, increase all Water allies' <color=#28d9ed>Penetration</color> for <color=#28d9ed>1 turn</color>, then attacks an enemy.\\nAfter attacking, has a <color=#28d9ed>100%</color> chance to decrease the enemy's <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color> and a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unhealable</color> for <color=#28d9ed>2 turn(s)</color>.\\nAdditionally increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "5_jp": "スキル使用前、水属性の味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵にダメージを与える。\\n攻撃後、<color=#28d9ed>100%</color>の確率で敵の<color=#28d9ed>スピード</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ,\\nさらに<color=#28d9ed>100%</color>の確率で、<color=#28d9ed>回復不可</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nまた、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
+        "5_kr": "스킬 사용 전, 수속성 아군 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다\\n공격 후, <color=#28d9ed>100%</color> 확률로 적의 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 감소시키고\\n<color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\n또한 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "5_zh": "在使用技能前,使全体水属性友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>1</color>回合,并攻击敌人。\\n攻击后,有<color=#28d9ed>100%</color>的概率降低敌人的<color=#28d9ed>速度</color>,持续<color=#28d9ed>2</color>回合;\\n并有<color=#28d9ed>100%</color>的概率使目标陷入<color=#28d9ed>无法恢复</color>状态,持续<color=#28d9ed>2</color>回合。\\n此外,使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。"
+      },
       "enhancement": {
         "2": [
           "+1 Weakness Gauge damage",
@@ -259,6 +302,28 @@
       "true_desc_jp": "スキル使用前、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPし、対象の防御力を<color=#28d9ed>2ターン</color>の間DOWNさせてから、敵にダメージを与える。\\n攻撃後, 対象の<color=#28d9ed>スピード</color>がDOWNしている場合、<color=#28d9ed>60%</color>の確率で敵全体に凍結と出血を<color=#28d9ed>1ターン</color>の間付与する。\\nさらに、対象の<color=#28d9ed>弱体効果</color>が多いほどダメージがUPし、\\n対象が<color=#28d9ed>出血</color>状態の場合、<color=#28d9ed>規律執行</color>で追加攻撃を与える。\\n対象がボスの場合、ボスのWGを2追加でDOWNさせる。",
       "true_desc_kr": "스킬 사용 전, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킨 뒤, 적을 공격합니다.\\n공격 후, 대상의 <color=#28d9ed>속도</color>가 감소한 상태라면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>과 <color=#28d9ed>출혈</color>을 부여합니다.\\n대상에게 걸린 <color=#28d9ed>약화</color> 효과가 많을 수록 피해가 증가합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 <color=#28d9ed>규율 집행</color>으로 추가 공격하고\\n대상이 보스인 경우 WG를 2 추가로 감소시킵니다.",
       "true_desc_zh": "在使用技能前,使自身的<color=#28d9ed>攻擊力</color>提升,持續<color=#28d9ed>1回合</color>,並降低目標的<color=#28d9ed>防禦力</color>,持續<color=#28d9ed>2</color>回合,之後攻擊敵人。\\n攻擊後,若目標的<color=#28d9ed>速度</color>已降低,則有<color=#28d9ed>60%</color>機率賦予其<color=#28d9ed>冰凍</color>與<color=#28d9ed>出血</color>效果,持續<color=#28d9ed>1</color>回合。\\n目標身上的<color=#28d9ed>弱化效果</color>越多,造成的傷害越高。\\n若目標處於<color=#28d9ed>出血</color>狀態,則會追加使用<color=#28d9ed>規律執行</color>進行攻擊。\\n若目標為首領,則額外降低其2點WG。",
+      "true_desc_levels": {
+        "1": "Before attacking, increases the caster's <color=#28d9ed>Attack</color> for 1 turn and has a 100% chance to decrease the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy.\\nAfter attacking, if the target's <color=#28d9ed>Speed</color> is decreased, has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Freeze</color> and <color=#28d9ed>Bleed</color> for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases according to the number of <color=#28d9ed>Debuff</color> effects on the target, and if the target is affected by <color=#28d9ed>Bleed</color>, performs an additional attack with <color=#28d9ed>Execution of Discipline</color>.\\nIf the target is a Boss, additionally decreases the Boss's Weakness Gauge by 2.",
+        "1_jp": "スキル使用前、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPし、対象の防御力を<color=#28d9ed>2ターン</color>の間DOWNさせてから、敵にダメージを与える。\\n攻撃後, 対象の<color=#28d9ed>スピード</color>がDOWNしている場合、<color=#28d9ed>60%</color>の確率で敵全体に凍結と出血を<color=#28d9ed>1ターン</color>の間付与する。\\nさらに、対象の<color=#28d9ed>弱体効果</color>が多いほどダメージがUPし、\\n対象が<color=#28d9ed>出血</color>状態の場合、<color=#28d9ed>規律執行</color>で追加攻撃を与える。\\n対象がボスの場合、ボスのWGを2追加でDOWNさせる。",
+        "1_kr": "스킬 사용 전, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킨 뒤, 적을 공격합니다.\\n공격 후, 대상의 <color=#28d9ed>속도</color>가 감소한 상태라면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>과 <color=#28d9ed>출혈</color>을 부여합니다.\\n대상에게 걸린 <color=#28d9ed>약화</color> 효과가 많을 수록 피해가 증가합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 <color=#28d9ed>규율 집행</color>으로 추가 공격하고\\n대상이 보스인 경우 WG를 2 추가로 감소시킵니다.",
+        "1_zh": "在使用技能前,使自身的<color=#28d9ed>攻擊力</color>提升,持續<color=#28d9ed>1回合</color>,並降低目標的<color=#28d9ed>防禦力</color>,持續<color=#28d9ed>2</color>回合,之後攻擊敵人。\\n攻擊後,若目標的<color=#28d9ed>速度</color>已降低,則有<color=#28d9ed>60%</color>機率賦予其<color=#28d9ed>冰凍</color>與<color=#28d9ed>出血</color>效果,持續<color=#28d9ed>1</color>回合。\\n目標身上的<color=#28d9ed>弱化效果</color>越多,造成的傷害越高。\\n若目標處於<color=#28d9ed>出血</color>狀態,則會追加使用<color=#28d9ed>規律執行</color>進行攻擊。\\n若目標為首領,則額外降低其2點WG。",
+        "2": "Before attacking, increases the caster's <color=#28d9ed>Attack</color> for 1 turn and has a 100% chance to decrease the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy.\\nAfter attacking, if the target's <color=#28d9ed>Speed</color> is decreased, has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Freeze</color> and <color=#28d9ed>Bleed</color> for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases according to the number of <color=#28d9ed>Debuff</color> effects on the target, and if the target is affected by <color=#28d9ed>Bleed</color>, performs an additional attack with <color=#28d9ed>Execution of Discipline</color>.\\nIf the target is a Boss, additionally decreases the Boss's Weakness Gauge by 2.",
+        "2_jp": "スキル使用前、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPし、対象の防御力を<color=#28d9ed>2ターン</color>の間DOWNさせてから、敵にダメージを与える。\\n攻撃後, 対象の<color=#28d9ed>スピード</color>がDOWNしている場合、<color=#28d9ed>60%</color>の確率で敵全体に凍結と出血を<color=#28d9ed>1ターン</color>の間付与する。\\nさらに、対象の<color=#28d9ed>弱体効果</color>が多いほどダメージがUPし、\\n対象が<color=#28d9ed>出血</color>状態の場合、<color=#28d9ed>規律執行</color>で追加攻撃を与える。\\n対象がボスの場合、ボスのWGを2追加でDOWNさせる。",
+        "2_kr": "스킬 사용 전, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킨 뒤, 적을 공격합니다.\\n공격 후, 대상의 <color=#28d9ed>속도</color>가 감소한 상태라면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>과 <color=#28d9ed>출혈</color>을 부여합니다.\\n대상에게 걸린 <color=#28d9ed>약화</color> 효과가 많을 수록 피해가 증가합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 <color=#28d9ed>규율 집행</color>으로 추가 공격하고\\n대상이 보스인 경우 WG를 2 추가로 감소시킵니다.",
+        "2_zh": "在使用技能前,使自身的<color=#28d9ed>攻擊力</color>提升,持續<color=#28d9ed>1回合</color>,並降低目標的<color=#28d9ed>防禦力</color>,持續<color=#28d9ed>2</color>回合,之後攻擊敵人。\\n攻擊後,若目標的<color=#28d9ed>速度</color>已降低,則有<color=#28d9ed>60%</color>機率賦予其<color=#28d9ed>冰凍</color>與<color=#28d9ed>出血</color>效果,持續<color=#28d9ed>1</color>回合。\\n目標身上的<color=#28d9ed>弱化效果</color>越多,造成的傷害越高。\\n若目標處於<color=#28d9ed>出血</color>狀態,則會追加使用<color=#28d9ed>規律執行</color>進行攻擊。\\n若目標為首領,則額外降低其2點WG。",
+        "3": "Before attacking, increases the caster's <color=#28d9ed>Attack</color> for 1 turn and has a 100% chance to decrease the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy.\\nAfter attacking, if the target's <color=#28d9ed>Speed</color> is decreased, has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Freeze</color> and <color=#28d9ed>Bleed</color> for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases according to the number of <color=#28d9ed>Debuff</color> effects on the target, and if the target is affected by <color=#28d9ed>Bleed</color>, performs an additional attack with <color=#28d9ed>Execution of Discipline</color>.\\nIf the target is a Boss, additionally decreases the Boss's Weakness Gauge by 2.",
+        "3_jp": "スキル使用前、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPし、対象の防御力を<color=#28d9ed>2ターン</color>の間DOWNさせてから、敵にダメージを与える。\\n攻撃後, 対象の<color=#28d9ed>スピード</color>がDOWNしている場合、<color=#28d9ed>80%</color>の確率で敵全体に凍結と出血を<color=#28d9ed>1ターン</color>の間付与する。\\nさらに、対象の<color=#28d9ed>弱体効果</color>が多いほどダメージがUPし、\\n対象が<color=#28d9ed>出血</color>状態の場合、<color=#28d9ed>規律執行</color>で追加攻撃を与える。\\n対象がボスの場合、ボスのWGを2追加でDOWNさせる。",
+        "3_kr": "스킬 사용 전, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킨 뒤, 적을 공격합니다.\\n공격 후, 대상의 <color=#28d9ed>속도</color>가 감소한 상태라면 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>과 <color=#28d9ed>출혈</color>을 부여합니다.\\n대상에게 걸린 <color=#28d9ed>약화</color> 효과가 많을 수록 피해가 증가합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 <color=#28d9ed>규율 집행</color>으로 추가 공격하고\\n대상이 보스인 경우 WG를 2 추가로 감소시킵니다.",
+        "3_zh": "在使用技能前,使自身的<color=#28d9ed>攻擊力</color>提升,持續<color=#28d9ed>1回合</color>,並降低目標的<color=#28d9ed>防禦力</color>,持續<color=#28d9ed>2</color>回合,之後攻擊敵人。\\n攻擊後,若目標的<color=#28d9ed>速度</color>已降低,則有<color=#28d9ed>80%</color>機率賦予其<color=#28d9ed>冰凍</color>與<color=#28d9ed>出血</color>效果,持續<color=#28d9ed>1</color>回合。\\n目標身上的<color=#28d9ed>弱化效果</color>越多,造成的傷害越高。\\n若目標處於<color=#28d9ed>出血</color>狀態,則會追加使用<color=#28d9ed>規律執行</color>進行攻擊。\\n若目標為首領,則額外降低其2點WG。",
+        "4": "Before attacking, increases the caster's <color=#28d9ed>Attack</color> for 1 turn and has a 100% chance to decrease the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy.\\nAfter attacking, if the target's <color=#28d9ed>Speed</color> is decreased, has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Freeze</color> and <color=#28d9ed>Bleed</color> for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases according to the number of <color=#28d9ed>Debuff</color> effects on the target, and if the target is affected by <color=#28d9ed>Bleed</color>, performs an additional attack with <color=#28d9ed>Execution of Discipline</color>.\\nIf the target is a Boss, additionally decreases the Boss's Weakness Gauge by 2.",
+        "4_jp": "スキル使用前、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPし、対象の防御力を<color=#28d9ed>2ターン</color>の間DOWNさせてから、敵にダメージを与える。\\n攻撃後, 対象の<color=#28d9ed>スピード</color>がDOWNしている場合、<color=#28d9ed>80%</color>の確率で敵全体に凍結と出血を<color=#28d9ed>1ターン</color>の間付与する。\\nさらに、対象の<color=#28d9ed>弱体効果</color>が多いほどダメージがUPし、\\n対象が<color=#28d9ed>出血</color>状態の場合、<color=#28d9ed>規律執行</color>で追加攻撃を与える。\\n対象がボスの場合、ボスのWGを2追加でDOWNさせる。",
+        "4_kr": "스킬 사용 전, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킨 뒤, 적을 공격합니다.\\n공격 후, 대상의 <color=#28d9ed>속도</color>가 감소한 상태라면 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>과 <color=#28d9ed>출혈</color>을 부여합니다.\\n대상에게 걸린 <color=#28d9ed>약화</color> 효과가 많을 수록 피해가 증가합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 <color=#28d9ed>규율 집행</color>으로 추가 공격하고\\n대상이 보스인 경우 WG를 2 추가로 감소시킵니다.",
+        "4_zh": "在使用技能前,使自身的<color=#28d9ed>攻擊力</color>提升,持續<color=#28d9ed>1回合</color>,並降低目標的<color=#28d9ed>防禦力</color>,持續<color=#28d9ed>2</color>回合,之後攻擊敵人。\\n攻擊後,若目標的<color=#28d9ed>速度</color>已降低,則有<color=#28d9ed>80%</color>機率賦予其<color=#28d9ed>冰凍</color>與<color=#28d9ed>出血</color>效果,持續<color=#28d9ed>1</color>回合。\\n目標身上的<color=#28d9ed>弱化效果</color>越多,造成的傷害越高。\\n若目標處於<color=#28d9ed>出血</color>狀態,則會追加使用<color=#28d9ed>規律執行</color>進行攻擊。\\n若目標為首領,則額外降低其2點WG。",
+        "5": "Before attacking, increases the caster's <color=#28d9ed>Attack</color> for 1 turn and has a 100% chance to decrease the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>3 turn(s)</color>, then attacks an enemy.\\nAfter attacking, if the target's <color=#28d9ed>Speed</color> is decreased, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Freeze</color> and <color=#28d9ed>Bleed</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases according to the number of <color=#28d9ed>Debuff</color> effects on the target, and if the target is affected by <color=#28d9ed>Bleed</color>, performs an additional attack with <color=#28d9ed>Execution of Discipline</color>.\\nIf the target is a Boss, additionally decreases the Boss's Weakness Gauge by 2.",
+        "5_jp": "スキル使用前、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPし、対象の防御力を<color=#28d9ed>3ターン</color>の間DOWNさせてから、敵にダメージを与える。\\n攻撃後, 対象の<color=#28d9ed>スピード</color>がDOWNしている場合、<color=#28d9ed>100%</color>の確率で敵全体に凍結と出血を<color=#28d9ed>2ターン</color>の間付与する。\\nさらに、対象の<color=#28d9ed>弱体効果</color>が多いほどダメージがUPし、\\n対象が<color=#28d9ed>出血</color>状態の場合、<color=#28d9ed>規律執行</color>で追加攻撃を与える。\\n対象がボスの場合、ボスのWGを2追加でDOWNさせる。",
+        "5_kr": "스킬 사용 전, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킨 뒤, 적을 공격합니다.\\n공격 후, 대상의 <color=#28d9ed>속도</color>가 감소한 상태라면 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>빙결</color>과 <color=#28d9ed>출혈</color>을 부여합니다.\\n대상에게 걸린 <color=#28d9ed>약화</color> 효과가 많을 수록 피해가 증가합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 <color=#28d9ed>규율 집행</color>으로 추가 공격하고\\n대상이 보스인 경우 WG를 2 추가로 감소시킵니다.",
+        "5_zh": "在使用技能前,使自身的<color=#28d9ed>攻擊力</color>提升,持續<color=#28d9ed>1回合</color>,並降低目標的<color=#28d9ed>防禦力</color>,持續<color=#28d9ed>3</color>回合,之後攻擊敵人。\\n攻擊後,若目標的<color=#28d9ed>速度</color>已降低,則有<color=#28d9ed>100%</color>機率賦予其<color=#28d9ed>冰凍</color>與<color=#28d9ed>出血</color>效果,持續<color=#28d9ed>2</color>回合。\\n目標身上的<color=#28d9ed>弱化效果</color>越多,造成的傷害越高。\\n若目標處於<color=#28d9ed>出血</color>狀態,則會追加使用<color=#28d9ed>規律執行</color>進行攻擊。\\n若目標為首領,則額外降低其2點WG。"
+      },
       "enhancement": {
         "2": [
           "+1 Weakness Gauge damage",
@@ -320,8 +385,8 @@
       "cd": "5",
       "wgr": 2,
       "buff": [
-        "BT_STAT|ST_ATK",
-        "BT_RUN_ACTIVE_SKILL_ON_TURN_END"
+        "BT_RUN_ACTIVE_SKILL_ON_TURN_END",
+        "BT_STAT|ST_ATK"
       ],
       "debuff": [
         "BT_STAT|ST_DEF",
@@ -340,10 +405,32 @@
       "name_jp": "チェーンパッシブ",
       "name_kr": "체인 패시브",
       "name_zh": "连携被动",
-      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on all enemies with a <color=#28d9ed>100%</color> chance for <color=#28d9ed>2 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on the target with a 60%</color> chance for <color=#28d9ed>2</color> turns.",
+      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on all enemies with a <color=#28d9ed>100%</color> chance for <color=#28d9ed>2 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on the target with a <color=#28d9ed>60%</color> chance for <color=#28d9ed>2</color> turns.",
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>출혈</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 부여합니다.",
       "true_desc_zh": "<color=#ffd732>连携同伴效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>60%</color>概率对目标施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on all enemies with a <color=#28d9ed>100%</color> chance for <color=#28d9ed>2 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on the target with a <color=#28d9ed>60%</color> chance for <color=#28d9ed>2</color> turns.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>출혈</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 부여합니다.",
+        "1_zh": "<color=#ffd732>连携同伴效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>60%</color>概率对目标施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on all enemies with a <color=#28d9ed>100%</color> chance for <color=#28d9ed>2 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on the target with a <color=#28d9ed>60%</color> chance for <color=#28d9ed>2</color> turns.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>출혈</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 부여합니다.",
+        "2_zh": "<color=#ffd732>连携同伴效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>60%</color>概率对目标施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on all enemies with a <color=#28d9ed>100%</color> chance for <color=#28d9ed>2 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on the target with a <color=#28d9ed>60%</color> chance for <color=#28d9ed>2</color> turns.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>출혈</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 부여합니다.",
+        "3_zh": "<color=#ffd732>连携同伴效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>60%</color>概率对目标施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on all enemies with a <color=#28d9ed>100%</color> chance for <color=#28d9ed>2 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on the target with a <color=#28d9ed>60%</color> chance for <color=#28d9ed>2</color> turns.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>출혈</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 부여합니다.",
+        "4_zh": "<color=#ffd732>连携同伴效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>60%</color>概率对目标施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on all enemies with a <color=#28d9ed>100%</color> chance for <color=#28d9ed>2 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, inflicts <color=#28d9ed>Bleed</color> on the target with a <color=#28d9ed>60%</color> chance for <color=#28d9ed>2</color> turns.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、対象全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>출혈</color>을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 부여합니다.",
+        "5_zh": "<color=#ffd732>连携同伴效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>60%</color>概率对目标施加<color=#28d9ed>出血</color>,持续<color=#28d9ed>2</color>回合。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -409,13 +496,14 @@
       "debuff": [
         "BT_DOT_BLEED"
       ],
-      "dual_debuff": [
-        "BT_DOT_BLEED"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": [
+        "BT_DOT_BLEED"
+      ]
     }
   }
 }

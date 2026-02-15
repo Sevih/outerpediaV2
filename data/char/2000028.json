@@ -12,8 +12,7 @@
   "rank_pvp": "C",
   "role": "dps",
   "tags": [
-    "ignore-defense",
-    "free"
+    "ignore-defense"
   ],
   "skill_priority": {
     "First": {
@@ -30,13 +29,11 @@
   "gift": "Magic Tool",
   "VoiceActor": "VA. Brent Mukai",
   "VoiceActor_jp": "CV. 森川智之",
-  "VoiceActor_kr": "CV.곽윤상",
+  "VoiceActor_kr": "CV. 곽윤상",
   "VoiceActor_zh": "CV. 森川智之",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": null,
-    "2_zh": null,
     "3": "ATK DEF HP +10%",
     "3_jp": "ATK DEF HP +10%",
     "3_kr": "ATK DEF HP +10%",
@@ -46,15 +43,12 @@
     "4_1_kr": "ATK DEF HP +16%\n아군 치명 확률 +3%\n체인 패시브의 WG 감소량 +1",
     "4_1_zh": "ATK DEF HP +16%\n友军暴击率+3%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
-    "4_2_zh": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
-    "5_2_zh": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "5_3_zh": "ATK DEF HP +28%",
     "6": "ATK DEF HP +30%\n+3% Ally Team Critical Hit Chance\n+25 Action Points at battle start",
     "6_jp": "ATK DEF HP +30%\n味方の会心率+3%\n戦闘開始時、AP+25",
     "6_kr": "ATK DEF HP +30%\n아군 치명 확률 +3%\n입장 시 AP +25",
@@ -73,6 +67,28 @@
       "true_desc_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>1個</color>獲得する。対象が少ないほどダメージがUPする。",
       "true_desc_kr": "적 전체를 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>1개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
       "true_desc_zh": "攻击全体敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and increases <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>. The damage dealt is inversely proportional to the number of targets. If it is the caster's turn, obtains <color=#28d9ed>1</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color>.",
+        "1_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>1個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "1_kr": "적 전체를 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>1개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "1_zh": "攻击全体敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+        "2": "Attacks all enemies and increases <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>. The damage dealt is inversely proportional to the number of targets. If it is the caster's turn, obtains <color=#28d9ed>2</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color>.",
+        "2_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "2_kr": "적 전체를 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "2_zh": "攻击全体敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+        "3": "Attacks all enemies and increases <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>. The damage dealt is inversely proportional to the number of targets. If it is the caster's turn, obtains <color=#28d9ed>2</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color>.",
+        "3_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "3_kr": "적 전체를 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "3_zh": "攻击全体敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+        "4": "Attacks all enemies and increases <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>. The damage dealt is inversely proportional to the number of targets. If it is the caster's turn, obtains <color=#28d9ed>2</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color>.",
+        "4_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "4_kr": "적 전체를 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "4_zh": "攻击全体敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+        "5": "Attacks all enemies and increases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>. The damage dealt is inversely proportional to the number of targets. If it is the caster's turn, obtains <color=#28d9ed>2</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color>.",
+        "5_jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "5_kr": "적 전체를 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "5_zh": "攻击全体敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。"
+      },
       "enhancement": {
         "2": [
           "+1 Revelation of Truth",
@@ -152,6 +168,28 @@
       "true_desc_jp": "敵全体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>減少させる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
       "true_desc_kr": "적 전체를 공격하고 대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
       "true_desc_zh": "攻击全体敌人,并使目标<color=#28d9ed>强化效果</color>的持续回合数减少<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and reduces the duration of <color=#28d9ed>buffs</color> on each target that took damage by <color=#28d9ed>1 turn</color>. Obtains <color=#28d9ed>2</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color> if used during the caster's turn. The damage dealt is inversely proportional to the number of targets.",
+        "1_jp": "敵全体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>減少させる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "1_kr": "적 전체를 공격하고 대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "1_zh": "攻击全体敌人,并使目标<color=#28d9ed>强化效果</color>的持续回合数减少<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+        "2": "Attacks all enemies and reduces the duration of <color=#28d9ed>buffs</color> on each target that took damage by <color=#28d9ed>1 turn</color>. Obtains <color=#28d9ed>2</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color> if used during the caster's turn. The damage dealt is inversely proportional to the number of targets.",
+        "2_jp": "敵全体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>減少させる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "2_kr": "적 전체를 공격하고 대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "2_zh": "攻击全体敌人,并使目标<color=#28d9ed>强化效果</color>的持续回合数减少<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+        "3": "Attacks all enemies and reduces the duration of <color=#28d9ed>buffs</color> on each target that took damage by <color=#28d9ed>1 turn</color>. Obtains <color=#28d9ed>2</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color> if used during the caster's turn. The damage dealt is inversely proportional to the number of targets.",
+        "3_jp": "敵全体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>減少させる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "3_kr": "적 전체를 공격하고 대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "3_zh": "攻击全体敌人,并使目标<color=#28d9ed>强化效果</color>的持续回合数减少<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+        "4": "Attacks all enemies and reduces the duration of <color=#28d9ed>buffs</color> on each target that took damage by <color=#28d9ed>1 turn</color>. Obtains <color=#28d9ed>2</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color> if used during the caster's turn. The damage dealt is inversely proportional to the number of targets.",
+        "4_jp": "敵全体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>減少させる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "4_kr": "적 전체를 공격하고 대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "4_zh": "攻击全体敌人,并使目标<color=#28d9ed>强化效果</color>的持续回合数减少<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。",
+        "5": "Attacks all enemies and reduces the duration of <color=#28d9ed>buffs</color> on each target that took damage by <color=#28d9ed>1 turn</color>. Obtains <color=#28d9ed>3</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color> if used during the caster's turn. The damage dealt is inversely proportional to the number of targets.",
+        "5_jp": "敵全体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>減少させる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>3個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "5_kr": "적 전체를 공격하고 대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>3개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "5_zh": "攻击全体敌人,并使目标<color=#28d9ed>强化效果</color>的持续回合数减少<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>3个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -210,14 +248,16 @@
           "伤害量+15%"
         ]
       },
-      "wgr": 1,
       "cd": "5",
+      "wgr": 1,
       "buff": [
         "BT_INVINCIBLE"
       ],
       "debuff": [
         "BT_EXTEND_BUFF"
       ],
+      "offensive": true,
+      "target": "multi",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Gains 2 additional Revelation of Truth\\nIncreases damage",
@@ -249,9 +289,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "multi"
+      }
     },
     "SKT_ULTIMATE": {
       "NameIDSymbol": "2803",
@@ -265,6 +303,28 @@
       "true_desc_jp": "このスキルは<color=#28d9ed>【固有資源:真理の啓示】が5個ある場合、使用できる。</color>\\n敵全体にダメージを与え、対象が少ないほどダメージがUPする。このスキルは、貫通力が<color=#28d9ed>30%</color>UPする。",
       "true_desc_kr": "<color=#28d9ed>고유 자원 : 진리의 계시 5개 보유 시 사용 가능합니다.</color>\\n적 전체를 공격하고 대상의 수가 적을수록 피해가 증가합니다. 해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.",
       "true_desc_zh": "<color=#28d9ed>持有5个固有资源:真理的启示时可以使用。</color>\\n攻击全体敌人,目标数量越少,则该技能的伤害越高。发动该攻击时,穿透力提升<color=#28d9ed>30%</color>。",
+      "true_desc_levels": {
+        "1": "<color=#28d9ed>Requires 5 Revelations of Truth (Unique Resource) to be used.</color>\\nAttacks all enemies. Damage dealt is inversely proportional to the number of targets. This attack penetrates <color=#28d9ed>30%</color> of the target's Defense.",
+        "1_jp": "このスキルは<color=#28d9ed>【固有資源:真理の啓示】が5個ある場合、使用できる。</color>\\n敵全体にダメージを与え、対象が少ないほどダメージがUPする。このスキルは、貫通力が<color=#28d9ed>30%</color>UPする。",
+        "1_kr": "<color=#28d9ed>고유 자원 : 진리의 계시 5개 보유 시 사용 가능합니다.</color>\\n적 전체를 공격하고 대상의 수가 적을수록 피해가 증가합니다. 해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.",
+        "1_zh": "<color=#28d9ed>持有5个固有资源:真理的启示时可以使用。</color>\\n攻击全体敌人,目标数量越少,则该技能的伤害越高。发动该攻击时,穿透力提升<color=#28d9ed>30%</color>。",
+        "2": "<color=#28d9ed>Requires 5 Revelations of Truth (Unique Resource) to be used.</color>\\nAttacks all enemies. Damage dealt is inversely proportional to the number of targets. This attack penetrates <color=#28d9ed>30%</color> of the target's Defense.",
+        "2_jp": "このスキルは<color=#28d9ed>【固有資源:真理の啓示】が5個ある場合、使用できる。</color>\\n敵全体にダメージを与え、対象が少ないほどダメージがUPする。このスキルは、貫通力が<color=#28d9ed>30%</color>UPする。",
+        "2_kr": "<color=#28d9ed>고유 자원 : 진리의 계시 5개 보유 시 사용 가능합니다.</color>\\n적 전체를 공격하고 대상의 수가 적을수록 피해가 증가합니다. 해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.",
+        "2_zh": "<color=#28d9ed>持有5个固有资源:真理的启示时可以使用。</color>\\n攻击全体敌人,目标数量越少,则该技能的伤害越高。发动该攻击时,穿透力提升<color=#28d9ed>30%</color>。",
+        "3": "<color=#28d9ed>Requires 5 Revelations of Truth (Unique Resource) to be used.</color>\\nAttacks all enemies. Damage dealt is inversely proportional to the number of targets. This attack penetrates <color=#28d9ed>30%</color> of the target's Defense.",
+        "3_jp": "このスキルは<color=#28d9ed>【固有資源:真理の啓示】が5個ある場合、使用できる。</color>\\n敵全体にダメージを与え、対象が少ないほどダメージがUPする。このスキルは、貫通力が<color=#28d9ed>30%</color>UPする。",
+        "3_kr": "<color=#28d9ed>고유 자원 : 진리의 계시 5개 보유 시 사용 가능합니다.</color>\\n적 전체를 공격하고 대상의 수가 적을수록 피해가 증가합니다. 해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.",
+        "3_zh": "<color=#28d9ed>持有5个固有资源:真理的启示时可以使用。</color>\\n攻击全体敌人,目标数量越少,则该技能的伤害越高。发动该攻击时,穿透力提升<color=#28d9ed>30%</color>。",
+        "4": "<color=#28d9ed>Requires 5 Revelations of Truth (Unique Resource) to be used.</color>\\nAttacks all enemies. Damage dealt is inversely proportional to the number of targets. This attack penetrates <color=#28d9ed>30%</color> of the target's Defense.",
+        "4_jp": "このスキルは<color=#28d9ed>【固有資源:真理の啓示】が5個ある場合、使用できる。</color>\\n敵全体にダメージを与え、対象が少ないほどダメージがUPする。このスキルは、貫通力が<color=#28d9ed>30%</color>UPする。",
+        "4_kr": "<color=#28d9ed>고유 자원 : 진리의 계시 5개 보유 시 사용 가능합니다.</color>\\n적 전체를 공격하고 대상의 수가 적을수록 피해가 증가합니다. 해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.",
+        "4_zh": "<color=#28d9ed>持有5个固有资源:真理的启示时可以使用。</color>\\n攻击全体敌人,目标数量越少,则该技能的伤害越高。发动该攻击时,穿透力提升<color=#28d9ed>30%</color>。",
+        "5": "<color=#28d9ed>Requires 5 Revelations of Truth (Unique Resource) to be used.</color>\\nAttacks all enemies. Damage dealt is inversely proportional to the number of targets. This attack penetrates <color=#28d9ed>30%</color> of the target's Defense.",
+        "5_jp": "このスキルは<color=#28d9ed>【固有資源:真理の啓示】が5個ある場合、使用できる。</color>\\n敵全体にダメージを与え、対象が少ないほどダメージがUPする。このスキルは、貫通力が<color=#28d9ed>30%</color>UPする。",
+        "5_kr": "<color=#28d9ed>고유 자원 : 진리의 계시 5개 보유 시 사용 가능합니다.</color>\\n적 전체를 공격하고 대상의 수가 적을수록 피해가 증가합니다. 해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.",
+        "5_zh": "<color=#28d9ed>持有5个固有资源:真理的启示时可以使用。</color>\\n攻击全体敌人,目标数量越少,则该技能的伤害越高。发动该攻击时,穿透力提升<color=#28d9ed>30%</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -337,6 +397,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>攻撃力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>공격력</color>이 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, grants increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>攻撃力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>1回合</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, grants increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>攻撃力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>1回合</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, grants increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>攻撃力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>1回合</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, grants increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>攻撃力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>1回合</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, grants increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>攻撃力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -402,13 +484,14 @@
         "BT_AP_CHARGE"
       ],
       "debuff": [],
-      "dual_buff": [
-        "BT_STAT|ST_ATK"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_STAT|ST_ATK"
+      ],
+      "dual_debuff": []
     }
   }
 }

@@ -25,11 +25,10 @@
   "gift": "Luxury",
   "VoiceActor": "VA. Stephanie Panisello",
   "VoiceActor_jp": "CV. 首藤志奈",
-  "VoiceActor_kr": "CV.김아롱",
+  "VoiceActor_kr": "CV. 김아롱",
   "VoiceActor_zh": "CV. 首藤志奈",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": "ATK DEF HP +5%",
     "2_jp": "ATK DEF HP +5%",
     "2_kr": "ATK DEF HP +5%",
@@ -64,6 +63,28 @@
       "true_desc_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>5%</color>回復させる。",
       "true_desc_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>5%</color> 회복시킵니다.",
       "true_desc_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>5%</color>的<color=#28d9ed>生命值</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest current Health by <color=#28d9ed>5%</color> of the target's Max Health.",
+        "1_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>5%</color>回復させる。",
+        "1_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>5%</color> 회복시킵니다.",
+        "1_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>5%</color>的<color=#28d9ed>生命值</color>。",
+        "2": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest current Health by <color=#28d9ed>5%</color> of the target's Max Health.",
+        "2_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>5%</color>回復させる。",
+        "2_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>5%</color> 회복시킵니다.",
+        "2_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>5%</color>的<color=#28d9ed>生命值</color>。",
+        "3": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest current Health by <color=#28d9ed>7%</color> of the target's Max Health.",
+        "3_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>7%</color>回復させる。",
+        "3_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>7%</color> 회복시킵니다.",
+        "3_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>7%</color>的<color=#28d9ed>生命值</color>。",
+        "4": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest current Health by <color=#28d9ed>7%</color> of the target's Max Health.",
+        "4_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>7%</color>回復させる。",
+        "4_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>7%</color> 회복시킵니다.",
+        "4_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>7%</color>的<color=#28d9ed>生命值</color>。",
+        "5": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest current Health by <color=#28d9ed>10%</color> of the target's Max Health.",
+        "5_jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>10%</color>回復させる。",
+        "5_kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>10%</color> 회복시킵니다.",
+        "5_zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -124,6 +145,8 @@
         "BT_AP_CHARGE"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Effects are applied to all allies",
@@ -155,9 +178,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "3802",
@@ -171,6 +192,28 @@
       "true_desc_jp": "対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
       "true_desc_kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
       "true_desc_zh": "解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+      "true_desc_levels": {
+        "1": "Removes <color=#28d9ed>1</color> <color=#28d9ed> buff(s)</color> from the target.",
+        "1_jp": "対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "1_kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "1_zh": "解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "2": "Removes <color=#28d9ed>1</color> <color=#28d9ed> buff(s)</color> from the target.",
+        "2_jp": "対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "2_kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "2_zh": "解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。",
+        "3": "Removes <color=#28d9ed>2</color> <color=#28d9ed> buff(s)</color> from the target.",
+        "3_jp": "対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2個</color>解除する。",
+        "3_kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제합니다.",
+        "3_zh": "解除目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>。",
+        "4": "Removes <color=#28d9ed>2</color> <color=#28d9ed> buff(s)</color> from the target.",
+        "4_jp": "対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2個</color>解除する。",
+        "4_kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제합니다.",
+        "4_zh": "解除目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>。",
+        "5": "Removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from the target.",
+        "5_jp": "対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除する。",
+        "5_kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제합니다.",
+        "5_zh": "解除目标的<color=#28d9ed>所有</color>的<color=#28d9ed>强化效果</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown"
@@ -241,6 +284,28 @@
       "true_desc_jp": "味方全体のHPを<color=#28d9ed>5%</color>回復させ、<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。弱体効果がある対象は、HP回復量が<color=#28d9ed>5%</color>UPする。",
       "true_desc_kr": "아군 전체의 체력을 <color=#28d9ed>5%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>5%</color> 증가합니다.",
       "true_desc_zh": "使全体友军的生命值恢复<color=#28d9ed>5%</color>,并解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。使附带弱化效果的目标,恢复量额外提升<color=#28d9ed>5%</color>。",
+      "true_desc_levels": {
+        "1": "Heals all allies by <color=#28d9ed>5%</color> and removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color>. The healing is increased by <color=#28d9ed>5%</color> on targets inflicted with a debuff.",
+        "1_jp": "味方全体のHPを<color=#28d9ed>5%</color>回復させ、<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。弱体効果がある対象は、HP回復量が<color=#28d9ed>5%</color>UPする。",
+        "1_kr": "아군 전체의 체력을 <color=#28d9ed>5%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>5%</color> 증가합니다.",
+        "1_zh": "使全体友军的生命值恢复<color=#28d9ed>5%</color>,并解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。使附带弱化效果的目标,恢复量额外提升<color=#28d9ed>5%</color>。",
+        "2": "Heals all allies by <color=#28d9ed>5%</color> and removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color>. The healing is increased by <color=#28d9ed>5%</color> on targets inflicted with a debuff.",
+        "2_jp": "味方全体のHPを<color=#28d9ed>5%</color>回復させ、<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。弱体効果がある対象は、HP回復量が<color=#28d9ed>5%</color>UPする。",
+        "2_kr": "아군 전체의 체력을 <color=#28d9ed>5%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>5%</color> 증가합니다.",
+        "2_zh": "使全体友军的生命值恢复<color=#28d9ed>5%</color>,并解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。使附带弱化效果的目标,恢复量额外提升<color=#28d9ed>5%</color>。",
+        "3": "Heals all allies by <color=#28d9ed>15%</color> and removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color>. The healing is increased by <color=#28d9ed>15%</color> on targets inflicted with a debuff.",
+        "3_jp": "味方全体のHPを<color=#28d9ed>15%</color>回復させ、<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。弱体効果がある対象は、HP回復量が<color=#28d9ed>15%</color>UPする。",
+        "3_kr": "아군 전체의 체력을 <color=#28d9ed>15%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>15%</color> 증가합니다.",
+        "3_zh": "使全体友军的生命值恢复<color=#28d9ed>15%</color>,并解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。使附带弱化效果的目标,恢复量额外提升<color=#28d9ed>15%</color>。",
+        "4": "Heals all allies by <color=#28d9ed>15%</color> and removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color>. The healing is increased by <color=#28d9ed>15%</color> on targets inflicted with a debuff.",
+        "4_jp": "味方全体のHPを<color=#28d9ed>15%</color>回復させ、<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。弱体効果がある対象は、HP回復量が<color=#28d9ed>15%</color>UPする。",
+        "4_kr": "아군 전체의 체력을 <color=#28d9ed>15%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>15%</color> 증가합니다.",
+        "4_zh": "使全体友军的生命值恢复<color=#28d9ed>15%</color>,并解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。使附带弱化效果的目标,恢复量额外提升<color=#28d9ed>15%</color>。",
+        "5": "Heals all allies by <color=#28d9ed>15%</color> and removes <color=#28d9ed>2</color> <color=#28d9ed>debuff(s)</color>. The healing is increased by <color=#28d9ed>15%</color> on targets inflicted with a debuff.",
+        "5_jp": "味方全体のHPを<color=#28d9ed>15%</color>回復させ、<color=#28d9ed>弱体効果</color>を<color=#28d9ed>2個</color>解除する。弱体効果がある対象は、HP回復量が<color=#28d9ed>15%</color>UPする。",
+        "5_kr": "아군 전체의 체력을 <color=#28d9ed>15%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>2개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>15%</color> 증가합니다.",
+        "5_zh": "使全体友军的生命值恢复<color=#28d9ed>15%</color>,并解除<color=#28d9ed>2个</color><color=#28d9ed>弱化效果</color>。使附带弱化效果的目标,恢复量额外提升<color=#28d9ed>15%</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown"
@@ -311,6 +376,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体のHPを回復する。回復量は対象の最大HPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を回復させる。回復量は自分の最大HPが高いほどUPする。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군의 체력을 회복합니다. 회복량은 대상의 최대 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 회복시킵니다. 회복량은 자신의 최대 체력에 비례합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,恢复生命值最低的友军生命值。恢复量与目标的生命值上限成正比。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复<color=#28d9ed>生命值</color>。恢复量与自身的生命值上限成正比。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, heals the ally with the lowest Health. The amount of healing is proportional to the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health. The amount of healing is proportional to the caster's Max Health.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体のHPを回復する。回復量は対象の最大HPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を回復させる。回復量は自分の最大HPが高いほどUPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군의 체력을 회복합니다. 회복량은 대상의 최대 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 회복시킵니다. 회복량은 자신의 최대 체력에 비례합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,恢复生命值最低的友军生命值。恢复量与目标的生命值上限成正比。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复<color=#28d9ed>生命值</color>。恢复量与自身的生命值上限成正比。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, heals the ally with the lowest Health. The amount of healing is proportional to the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health. The amount of healing is proportional to the caster's Max Health.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体のHPを回復する。回復量は対象の最大HPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を回復させる。回復量は自分の最大HPが高いほどUPする。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군의 체력을 회복합니다. 회복량은 대상의 최대 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 회복시킵니다. 회복량은 자신의 최대 체력에 비례합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,恢复生命值最低的友军生命值。恢复量与目标的生命值上限成正比。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复<color=#28d9ed>生命值</color>。恢复量与自身的生命值上限成正比。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, heals the ally with the lowest Health. The amount of healing is proportional to the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health. The amount of healing is proportional to the caster's Max Health.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体のHPを回復する。回復量は対象の最大HPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を回復させる。回復量は自分の最大HPが高いほどUPする。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군의 체력을 회복합니다. 회복량은 대상의 최대 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 회복시킵니다. 회복량은 자신의 최대 체력에 비례합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,恢复生命值最低的友军生命值。恢复量与目标的生命值上限成正比。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复<color=#28d9ed>生命值</color>。恢复量与自身的生命值上限成正比。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, heals the ally with the lowest Health. The amount of healing is proportional to the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health. The amount of healing is proportional to the caster's Max Health.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体のHPを回復する。回復量は対象の最大HPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を回復させる。回復量は自分の最大HPが高いほどUPする。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군의 체력을 회복합니다. 회복량은 대상의 최대 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 회복시킵니다. 회복량은 자신의 최대 체력에 비례합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,恢复生命值最低的友军生命值。恢复量与目标的生命值上限成正比。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复<color=#28d9ed>生命值</color>。恢复量与自身的生命值上限成正比。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, heals the ally with the lowest Health. The amount of healing is proportional to the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, <color=#28d9ed>heals</color> the ally with the lowest Health. The amount of healing is proportional to the caster's Max Health.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方単体のHPを回復する。回復量は対象の最大HPが高いほどUPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を回復させる。回復量は自分の最大HPが高いほどUPする。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 가장 체력 상황이 나쁜 아군의 체력을 회복합니다. 회복량은 대상의 최대 체력에 비례합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 회복시킵니다. 회복량은 자신의 최대 체력에 비례합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,恢复生命值最低的友军生命值。恢复量与目标的生命值上限成正比。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复<color=#28d9ed>生命值</color>。恢复量与自身的生命值上限成正比。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -374,11 +461,12 @@
       "cd": null,
       "buff": [],
       "debuff": [],
-      "dual_buff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

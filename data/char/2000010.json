@@ -25,11 +25,10 @@
   "gift": "Craftwork",
   "VoiceActor": "VA. G.K. Bowes",
   "VoiceActor_jp": "CV. 櫻庭有紗",
-  "VoiceActor_kr": "CV.윤은서",
+  "VoiceActor_kr": "CV. 윤은서",
   "VoiceActor_zh": "CV. 樱庭有纱",
   "transcend": {
     "1": null,
-    "1_zh": null,
     "2": "ATK DEF HP +5%",
     "2_jp": "ATK DEF HP +5%",
     "2_kr": "ATK DEF HP +5%",
@@ -64,6 +63,28 @@
       "true_desc_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
       "true_desc_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
       "true_desc_zh": "攻击敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "1_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "1_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "1_zh": "攻击敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "2": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "2_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "2_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "2_zh": "攻击敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "3": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "3_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "3_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "3_zh": "攻击敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "4": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "4_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "4_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "4_zh": "攻击敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。",
+        "5": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "5_jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "5_kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "5_zh": "攻击敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
+      },
       "enhancement": {
         "2": [
           "+5% damage",
@@ -124,6 +145,8 @@
         "BT_CALL_BACKUP"
       ],
       "debuff": [],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Activates Dual Attack with 1 ally",
@@ -155,9 +178,7 @@
           "offensive": true,
           "target": "mono"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "1002",
@@ -171,6 +192,28 @@
       "true_desc_jp": "(発動効果)自分がダメージを受けた場合、<color=#28d9ed>40%</color>の確率で<color=#28d9ed>反撃</color>する。",
       "true_desc_kr": "(발동 효과) 자신이 공격받았을 때 <color=#28d9ed>40%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
       "true_desc_zh": "(触发效果)自身受到攻击时,有<color=#28d9ed>40%</color>的几率发动<color=#28d9ed>反击</color>。",
+      "true_desc_levels": {
+        "1": "(Triggered Effect) Has a <color=#28d9ed>40%</color> chance to <color=#28d9ed>Counterattack</color> when the caster is attacked.",
+        "1_jp": "(発動効果)自分がダメージを受けた場合、<color=#28d9ed>40%</color>の確率で<color=#28d9ed>反撃</color>する。",
+        "1_kr": "(발동 효과) 자신이 공격받았을 때 <color=#28d9ed>40%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
+        "1_zh": "(触发效果)自身受到攻击时,有<color=#28d9ed>40%</color>的几率发动<color=#28d9ed>反击</color>。",
+        "2": "(Triggered Effect) Has a <color=#28d9ed>40%</color> chance to <color=#28d9ed>Counterattack</color> when the caster is attacked.",
+        "2_jp": "(発動効果)自分がダメージを受けた場合、<color=#28d9ed>40%</color>の確率で<color=#28d9ed>反撃</color>する。",
+        "2_kr": "(발동 효과) 자신이 공격받았을 때 <color=#28d9ed>40%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
+        "2_zh": "(触发效果)自身受到攻击时,有<color=#28d9ed>40%</color>的几率发动<color=#28d9ed>反击</color>。",
+        "3": "(Triggered Effect) Has a <color=#28d9ed>50%</color> chance to <color=#28d9ed>Counterattack</color> when the caster is attacked.",
+        "3_jp": "(発動効果)自分がダメージを受けた場合、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>反撃</color>する。",
+        "3_kr": "(발동 효과) 자신이 공격받았을 때 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
+        "3_zh": "(触发效果)自身受到攻击时,有<color=#28d9ed>50%</color>的几率发动<color=#28d9ed>反击</color>。",
+        "4": "(Triggered Effect) Has a <color=#28d9ed>50%</color> chance to <color=#28d9ed>Counterattack</color> when the caster is attacked.",
+        "4_jp": "(発動効果)自分がダメージを受けた場合、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>反撃</color>する。",
+        "4_kr": "(발동 효과) 자신이 공격받았을 때 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
+        "4_zh": "(触发效果)自身受到攻击时,有<color=#28d9ed>50%</color>的几率发动<color=#28d9ed>反击</color>。",
+        "5": "(Triggered Effect) Has a <color=#28d9ed>60%</color> chance to <color=#28d9ed>Counterattack</color> when the caster is attacked.",
+        "5_jp": "(発動効果)自分がダメージを受けた場合、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>反撃</color>する。",
+        "5_kr": "(발동 효과) 자신이 공격받았을 때 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
+        "5_zh": "(触发效果)自身受到攻击时,有<color=#28d9ed>60%</color>的几率发动<color=#28d9ed>反击</color>。"
+      },
       "enhancement": {
         "2": [
           "+15% Counterattack damage",
@@ -245,6 +288,28 @@
       "true_desc_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
       "true_desc_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
       "true_desc_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and increases the <color=#28d9ed>Defense</color> of the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "1_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "1_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "2": "Attacks an enemy and increases the <color=#28d9ed>Defense</color> of the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "2_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "2_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "3": "Attacks an enemy and increases the <color=#28d9ed>Defense</color> of the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "3_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "3_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "4": "Attacks an enemy and increases the <color=#28d9ed>Defense</color> of the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "4_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "4_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "5": "Attacks an enemy and increases the <color=#28d9ed>Defense</color> of the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "5_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "5_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -303,8 +368,8 @@
           "冷却时间-1回合"
         ]
       },
-      "wgr": 2,
       "cd": "4",
+      "wgr": 2,
       "buff": [
         "BT_STAT|ST_DEF"
       ],
@@ -324,6 +389,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
       "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase Defense for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to increase <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase Defense for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to increase <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase Defense for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to increase <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase Defense for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to increase <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase Defense for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to increase <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で防御力が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 방어력이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -389,13 +476,14 @@
         "BT_STAT|ST_DEF"
       ],
       "debuff": [],
-      "dual_buff": [
-        "BT_STAT|ST_DEF"
-      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [
+        "BT_STAT|ST_DEF"
+      ],
+      "dual_debuff": []
     }
   }
 }

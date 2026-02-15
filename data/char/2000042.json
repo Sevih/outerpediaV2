@@ -11,9 +11,6 @@
   "rank": "C",
   "rank_pvp": "B",
   "role": "sustain",
-  "tags": [
-    "free"
-  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -63,10 +60,32 @@
       "name_jp": "正義の獅子四連撃",
       "name_kr": "정의의 사자사연격",
       "name_zh": "正义使者四连击",
-      "true_desc": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to gain a <color=#28d9ed>barrier</color> for <color=#28d9ed>2 turn(s)</color>. The barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+      "true_desc": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to gain a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
       "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間獲得する。自分の<color=#28d9ed>防御力</color>が高いほど、シールド量がUPする。",
       "true_desc_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
       "true_desc_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身的<color=#28d9ed>防御力</color>越高,则护盾量越高。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to gain a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間獲得する。自分の<color=#28d9ed>防御力</color>が高いほど、シールド量がUPする。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
+        "1_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身的<color=#28d9ed>防御力</color>越高,则护盾量越高。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to gain a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間獲得する。自分の<color=#28d9ed>防御力</color>が高いほど、シールド量がUPする。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
+        "2_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身的<color=#28d9ed>防御力</color>越高,则护盾量越高。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to gain a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間獲得する。自分の<color=#28d9ed>防御力</color>が高いほど、シールド量がUPする。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
+        "3_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身的<color=#28d9ed>防御力</color>越高,则护盾量越高。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to gain a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間獲得する。自分の<color=#28d9ed>防御力</color>が高いほど、シールド量がUPする。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
+        "4_zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身的<color=#28d9ed>防御力</color>越高,则护盾量越高。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to gain a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間獲得する。自分の<color=#28d9ed>防御力</color>が高いほど、シールド量がUPする。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
+        "5_zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身的<color=#28d9ed>防御力</color>越高,则护盾量越高。"
+      },
       "enhancement": {
         "2": [
           "+10% damage",
@@ -110,7 +129,7 @@
         ],
         "5": [
           "+15% damage",
-          "Enhances barrier strength"
+          "Enhances Barrier strength"
         ],
         "5_jp": [
           "ダメージ+15%",
@@ -133,6 +152,8 @@
       "debuff": [
         "BT_AGGRO"
       ],
+      "offensive": true,
+      "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
           "effect": "Inflicts Taunted for 1 turn\\nIncreases damage",
@@ -164,9 +185,7 @@
           "offensive": true,
           "target": "multi"
         }
-      },
-      "offensive": true,
-      "target": "mono"
+      }
     },
     "SKT_SECOND": {
       "NameIDSymbol": "4202",
@@ -180,9 +199,31 @@
       "true_desc_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
       "true_desc_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
       "true_desc_zh": "使我方全体的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Increases <color=#28d9ed>Defense</color> of all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "1_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "1_zh": "使我方全体的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。",
+        "2": "Increases <color=#28d9ed>Defense</color> of all allies for <color=#28d9ed>1 turn(s)</color>, and grants a <color=#28d9ed>Barrier</color> equal to <color=#28d9ed>50%</color> of Leo's <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、レオの<color=#28d9ed>防御力</color>の<color=#28d9ed>50%</color>分の<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "2_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 레오 <color=#28d9ed>방어력</color>의 <color=#28d9ed>50%</color>에 해당하는 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "2_zh": "使我方全体的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>,并赋予相当于莱奥<color=#28d9ed>防御力50%</color>的<color=#28d9ed>护盾</color>,持续<color=#28d9ed>1回合</color>。",
+        "3": "Increases <color=#28d9ed>Defense</color> of all allies for <color=#28d9ed>1 turn(s)</color>, and grants a <color=#28d9ed>Barrier</color> equal to <color=#28d9ed>50%</color> of Leo's <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、レオの<color=#28d9ed>防御力</color>の<color=#28d9ed>50%</color>分の<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "3_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 레오 <color=#28d9ed>방어력</color>의 <color=#28d9ed>50%</color>에 해당하는 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "3_zh": "使我方全体的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>,并赋予相当于莱奥<color=#28d9ed>防御力50%</color>的<color=#28d9ed>护盾</color>,持续<color=#28d9ed>1回合</color>。",
+        "4": "Increases <color=#28d9ed>Defense</color> of all allies for <color=#28d9ed>1 turn(s)</color>, and grants a <color=#28d9ed>Barrier</color> equal to <color=#28d9ed>100%</color> of Leo's <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、レオの<color=#28d9ed>防御力</color>の<color=#28d9ed>100%</color>分の<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "4_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 레오 <color=#28d9ed>방어력</color>의 <color=#28d9ed>100%</color>에 해당하는 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "4_zh": "使我方全体的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>,并赋予相当于莱奥<color=#28d9ed>防御力100%</color>的<color=#28d9ed>护盾</color>,持续<color=#28d9ed>1回合</color>。",
+        "5": "Increases <color=#28d9ed>Defense</color> of all allies for <color=#28d9ed>2 turn(s)</color>, and grants a <color=#28d9ed>Barrier</color> equal to <color=#28d9ed>100%</color> of Leo's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "5_jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、レオの<color=#28d9ed>防御力</color>の<color=#28d9ed>100%</color>分の<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고, 레오 <color=#28d9ed>방어력</color>의 <color=#28d9ed>100%</color>에 해당하는 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "5_zh": "使我方全体的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>,并赋予相当于莱奥<color=#28d9ed>防御力100%</color>的<color=#28d9ed>护盾</color>,持续<color=#28d9ed>2回合</color>。"
+      },
       "enhancement": {
         "2": [
-          "Gains barrier (proportional to Defense)"
+          "Gains Barrier (proportional to Defense)"
         ],
         "2_jp": [
           "シールド追加(防御力が高いほどシールド量がUP)"
@@ -206,7 +247,7 @@
           "冷却时间-1回合"
         ],
         "4": [
-          "Enhances barrier strength"
+          "Enhances Barrier strength"
         ],
         "4_jp": [
           "シールド強化"
@@ -231,7 +272,6 @@
         ]
       },
       "cd": "4",
-      "wgr": 4,
       "buff": [
         "BT_STAT|ST_DEF",
         "BT_SHIELD_BASED_CASTER"
@@ -252,6 +292,28 @@
       "true_desc_jp": "敵全体にダメージを与え、味方全体にそれぞれ<color=#28d9ed>70%</color>の確率で<color=#28d9ed>効果抵抗UP</color>と<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。",
       "true_desc_kr": "적 전체를 공격하고 아군 전체에게 각각 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>효과 저항 증가</color>와 <color=#28d9ed>무적</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
       "true_desc_zh": "攻击全体敌人,并各有<color=#28d9ed>70%</color>的几率使全体友军获得<color=#28d9ed>效果抵抗提升</color>和<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。",
+      "true_desc_levels": {
+        "1": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to grant <color=#28d9ed>Increased Resilience</color> and <color=#28d9ed>Invulnerability</color> to each ally for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "敵全体にダメージを与え、味方全体にそれぞれ<color=#28d9ed>70%</color>の確率で<color=#28d9ed>効果抵抗UP</color>と<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "1_kr": "적 전체를 공격하고 아군 전체에게 각각 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>효과 저항 증가</color>와 <color=#28d9ed>무적</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "1_zh": "攻击全体敌人,并各有<color=#28d9ed>70%</color>的几率使全体友军获得<color=#28d9ed>效果抵抗提升</color>和<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "2": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to grant <color=#28d9ed>Increased Resilience</color> and <color=#28d9ed>Invulnerability</color> to each ally for <color=#28d9ed>1 turn(s)</color>.",
+        "2_jp": "敵全体にダメージを与え、味方全体にそれぞれ<color=#28d9ed>70%</color>の確率で<color=#28d9ed>効果抵抗UP</color>と<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "2_kr": "적 전체를 공격하고 아군 전체에게 각각 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>효과 저항 증가</color>와 <color=#28d9ed>무적</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "2_zh": "攻击全体敌人,并各有<color=#28d9ed>70%</color>的几率使全体友军获得<color=#28d9ed>效果抵抗提升</color>和<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "3": "Attacks all enemies and has a <color=#28d9ed>85%</color> chance to grant <color=#28d9ed>Increased Resilience</color> and <color=#28d9ed>Invulnerability</color> to each ally for <color=#28d9ed>1 turn(s)</color>.",
+        "3_jp": "敵全体にダメージを与え、味方全体にそれぞれ<color=#28d9ed>85%</color>の確率で<color=#28d9ed>効果抵抗UP</color>と<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "3_kr": "적 전체를 공격하고 아군 전체에게 각각 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>효과 저항 증가</color>와 <color=#28d9ed>무적</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "3_zh": "攻击全体敌人,并各有<color=#28d9ed>85%</color>的几率使全体友军获得<color=#28d9ed>效果抵抗提升</color>和<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "4": "Attacks all enemies and has a <color=#28d9ed>85%</color> chance to grant <color=#28d9ed>Increased Resilience</color> and <color=#28d9ed>Invulnerability</color> to each ally for <color=#28d9ed>1 turn(s)</color>.",
+        "4_jp": "敵全体にダメージを与え、味方全体にそれぞれ<color=#28d9ed>85%</color>の確率で<color=#28d9ed>効果抵抗UP</color>と<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "4_kr": "적 전체를 공격하고 아군 전체에게 각각 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>효과 저항 증가</color>와 <color=#28d9ed>무적</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "4_zh": "攻击全体敌人,并各有<color=#28d9ed>85%</color>的几率使全体友军获得<color=#28d9ed>效果抵抗提升</color>和<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "5": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to grant <color=#28d9ed>Increased Resilience</color> and <color=#28d9ed>Invulnerability</color> to each ally for <color=#28d9ed>1 turn(s)</color>.",
+        "5_jp": "敵全体にダメージを与え、味方全体にそれぞれ<color=#28d9ed>100%</color>の確率で<color=#28d9ed>効果抵抗UP</color>と<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "5_kr": "적 전체를 공격하고 아군 전체에게 각각 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>효과 저항 증가</color>와 <color=#28d9ed>무적</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
+        "5_zh": "攻击全体敌人,并各有<color=#28d9ed>100%</color>的几率使全体友军获得<color=#28d9ed>效果抵抗提升</color>和<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
       "enhancement": {
         "2": [
           "-1 turn Skill Cooldown",
@@ -332,6 +394,28 @@
       "true_desc_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#fff95f>連携効果</color>:自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
       "true_desc_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
       "true_desc_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>防御力</color>越高,则伤害量越高。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportionally to the caster's <color=#28d9ed>Defense</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#fff95f>連携効果</color>:自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
+        "1_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>防御力</color>越高,则伤害量越高。",
+        "2": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportionally to the caster's <color=#28d9ed>Defense</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#fff95f>連携効果</color>:自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
+        "2_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>防御力</color>越高,则伤害量越高。",
+        "3": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportionally to the caster's <color=#28d9ed>Defense</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#fff95f>連携効果</color>:自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
+        "3_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>防御力</color>越高,则伤害量越高。",
+        "4": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportionally to the caster's <color=#28d9ed>Defense</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#fff95f>連携効果</color>:自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
+        "4_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>防御力</color>越高,则伤害量越高。",
+        "5": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces the skill cooldowns of all allies by <color=#28d9ed>1 turns</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage increases proportionally to the caster's <color=#28d9ed>Defense</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#fff95f>連携効果</color>:自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
+        "5_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的<color=#28d9ed>防御力</color>越高,则伤害量越高。"
+      },
       "enhancement": {
         "2": [
           "+5% Dual Attack and Skill Chain damage",
@@ -400,7 +484,9 @@
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }
