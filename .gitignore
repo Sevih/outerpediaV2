@@ -27,10 +27,12 @@
 # generated data (rebuilt by pipeline)
 /data/generated/
 
-# datamine cache
+# datamine - ignore all except ParserV3 source
+/datamine/*
 !/datamine/ParserV3/
 /datamine/ParserV3/cache/
-/datamine/
+/datamine/ParserV3/export/
+__pycache__/
 
 # debug
 npm-debug.log*

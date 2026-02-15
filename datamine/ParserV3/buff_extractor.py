@@ -248,9 +248,14 @@ class BuffExtractor:
 
             # Determine if buff or debuff
             # Priority: TargetType > BuffDebuffType
+            # Exception: when TargetType=ME but BuffDebuffType says DEBUFF (e.g. BT_MARKING)
             if target_type:
                 if target_type.startswith('MY_TEAM') or target_type.startswith('ME'):
-                    results.append((identifier, True))
+                    # Check if BuffDebuffType overrides (e.g. DEBUFF_IGNORE_RESIST on ME)
+                    if 'DEBUFF' in buff_debuff_type:
+                        results.append((identifier, False))
+                    else:
+                        results.append((identifier, True))
                 elif target_type.startswith('ENEMY'):
                     results.append((identifier, False))
                 else:

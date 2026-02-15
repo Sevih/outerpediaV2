@@ -874,21 +874,33 @@ class CharacterExtractor:
         if wg_val and str(wg_val).isdigit():
             wg = int(wg_val)
 
-        # Check if skill is non-damaging (buff/heal/debuff only) by checking ApproachType
+        # Check if skill is non-damaging (buff/heal/debuff only)
         # These skills should have wgr=null even if WGReduce is set in data
         skill_info = self.skill_index.get(skill_id)
         if skill_info:
-            approach_type = skill_info.get('ApproachType', '')
-            # Non-damaging skills: CAST_BUFF, HEAL, GUARD, etc.
             non_damaging_types = ['CAST_BUFF', 'HEAL', 'GUARD', 'NONE', 'CAST_DEBUFF']
+
+            # Check ApproachType (primary field)
+            approach_type = skill_info.get('ApproachType', '') or ''
             if approach_type in non_damaging_types:
+                wg = None
+
+            # Check ApproachTime (some skills use this instead of ApproachType)
+            # Only CAST_BUFF and HEAL are safe here - CAST_DEBUFF/NONE can still deal damage
+            approach_time = skill_info.get('ApproachTime', '') or ''
+            if approach_time in ['CAST_BUFF', 'HEAL', 'GUARD']:
+                wg = None
+
+            # Passive skills have no wgr (TriggerNameSkip=PASSIVE)
+            trigger = skill_info.get('TriggerNameSkip', '') or ''
+            if trigger == 'PASSIVE':
                 wg = None
 
             # Also check fallback fields for CAST_BUFF/CAST_DEBUFF
             # Some skills don't have ApproachType but have it in fallback fields
-            if not approach_type or approach_type == '':
+            if not approach_type and not approach_time:
                 for key, value in skill_info.items():
-                    if 'fallback' in key and value in ['CAST_BUFF', 'CAST_DEBUFF', 'HEAL']:
+                    if 'fallback' in key and value in non_damaging_types:
                         wg = None
                         break
 
@@ -1021,11 +1033,15 @@ class CharacterExtractor:
 
         if backup_buff_id:
             backup_result = self.buff_extractor.extract_from_buff_ids(backup_buff_id)
-            # Always store as lists for consistency
-            if backup_result.get('buff') and len(backup_result['buff']) > 0:
-                chain_passive_skill['dual_buff'] = backup_result['buff']
-            if backup_result.get('debuff') and len(backup_result['debuff']) > 0:
-                chain_passive_skill['dual_debuff'] = backup_result['debuff']
+
+            # Filter out heal/internal effects that are not meaningful for dual attacks
+            DUAL_IGNORE = {'BT_HEAL_BASED_CASTER', 'BT_HEAL_BASED_TARGET', 'BT_STAT|ST_VAMPIRIC'}
+            dual_buffs = [b for b in backup_result.get('buff', []) if b not in DUAL_IGNORE]
+            dual_debuffs = backup_result.get('debuff', [])
+
+            # Always set both keys when backup exists for consistency
+            chain_passive_skill['dual_buff'] = dual_buffs
+            chain_passive_skill['dual_debuff'] = dual_debuffs
 
         # Check for Heavy Strike in Dual Attack Effect description
         desc = chain_passive_skill.get('true_desc', '')
