@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+// TODO: restore when page links are implemented
+// import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
@@ -57,6 +58,7 @@ export default async function ChangelogPage({ params }: Props) {
               </div>
 
               <h2 className="mb-2 text-lg font-semibold">
+                {/* TODO: restore Link when pages are implemented
                 {entry.url ? (
                   <Link
                     href={`/${lang}${entry.url}`}
@@ -66,7 +68,8 @@ export default async function ChangelogPage({ params }: Props) {
                   </Link>
                 ) : (
                   entry.title
-                )}
+                )} */}
+                {entry.title}
               </h2>
 
               <ul className="space-y-1 text-sm text-zinc-300">
