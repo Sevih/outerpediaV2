@@ -20,11 +20,11 @@ export default function HeaderClient() {
   const { lang, t } = useI18n();
 
   return (
-    <header className="sticky top-0 z-[60] border-b border-zinc-800 bg-black/60 backdrop-blur supports-[backdrop-filter]:bg-black/40">
+    <header className="sticky top-0 z-60 border-b border-zinc-800 bg-black/60 backdrop-blur supports-backdrop-filter:bg-black/40">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link href={`/${lang}`} className="flex items-center gap-3">
-          <span className="relative inline-block h-[28px] w-[28px]">
+          <span className="relative inline-block h-7 w-7">
             <Image
               src="/favicon.ico"
               alt="Outerpedia"
@@ -49,7 +49,7 @@ export default function HeaderClient() {
               title={t(item.key)}
             >
               {/* Icon: lg+ only */}
-              <span className="relative hidden h-[18px] w-[18px] shrink-0 lg:inline-block">
+              <span className="relative hidden h-4.5 w-4.5 shrink-0 lg:inline-block">
                 <Image
                   src={`/images/ui/nav/${item.icon}.webp`}
                   alt=""
@@ -88,7 +88,7 @@ export default function HeaderClient() {
 
       {/* Mobile nav dropdown */}
       {open && (
-        <div className="relative z-[60] border-t border-zinc-800 md:hidden">
+        <div className="relative z-60 border-t border-zinc-800 md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3">
             {NAV_ITEMS.map((item) => (
               <Link
@@ -98,7 +98,7 @@ export default function HeaderClient() {
                 onClick={() => setOpen(false)}
                 aria-label={t(item.key)}
               >
-                <span className="relative inline-block h-[18px] w-[18px]">
+                <span className="relative inline-block h-4.5 w-4.5">
                   <Image
                     src={`/images/ui/nav/${item.icon}.webp`}
                     alt=""

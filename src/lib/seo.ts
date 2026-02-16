@@ -4,23 +4,32 @@ import type { Lang } from '@/lib/i18n/config';
 
 const SITE_NAME = 'Outerpedia';
 const BASE_DOMAIN = 'outerpedia.com';
-const DEFAULT_OG_IMAGE = '/images/ui/og_home.jpg';
+const DEFAULT_OG_IMAGE = '/images/ui/og_default.png';
+
+/** Base URL for the current environment (Vercel, dev, or production) */
+export function getBaseUrl(): string {
+  const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+  if (vercelUrl) return `https://${vercelUrl}`;
+  if (process.env.NODE_ENV === 'development') return `http://localhost:${process.env.PORT ?? '3001'}`;
+  return `https://${BASE_DOMAIN}`;
+}
 
 /** Build the full URL for a given language and path */
 export function buildUrl(lang: Lang, path = ''): string {
-  // Normalize: strip root "/" to avoid trailing-slash redirect loops
   const segment = path === '/' ? '' : path;
+  const base = getBaseUrl();
 
-  // On Vercel: path-based routing, no subdomains
-  const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
-  if (vercelUrl) {
-    return `https://${vercelUrl}/${lang}${segment}`;
+  // Vercel & dev: path-based routing
+  if (!base.includes(BASE_DOMAIN)) {
+    return `${base}/${lang}${segment}`;
   }
 
   // Production: subdomain-based routing
   const sub = LANGUAGES[lang].subdomain;
-  const prefix = sub ? `${sub}.` : '';
-  return `https://${prefix}${BASE_DOMAIN}${segment}`;
+  if (sub) {
+    return `https://${sub}.${BASE_DOMAIN}${segment}`;
+  }
+  return `${base}${segment}`;
 }
 
 /** Build hreflang alternates for a given path */
