@@ -14,8 +14,8 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-6 text-sm text-zinc-400 md:flex-row md:flex-wrap md:justify-between">
         {/* Version info */}
         <p className="text-center md:text-left">
-          &copy; {new Date().getFullYear()} Outerpedia v{appVersion} &ndash;
-          Fanmade Database for Outerplane.
+          &copy; {new Date().getFullYear()} Outerpedia v{appVersion} &ndash;{' '}
+          {t('footer.tagline')}
         </p>
 
         {/* Outerpedia links */}
@@ -45,19 +45,19 @@ export default function Footer() {
             href={`/${lang}/legal`}
             className="hover:text-zinc-200"
           >
-            Legal Notice
+            {t('footer.legal_notice')}
           </Link>
           <Link
             href={`/${lang}/changelog`}
             className="hover:text-zinc-200"
           >
-            Changelog
+            {t('changelog.title')}
           </Link>
           <Link
             href={`/${lang}/contributors`}
             className="hover:text-zinc-200"
           >
-            Contributors
+            {t('contributors.title')}
           </Link>
         </nav>
 
@@ -73,7 +73,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-zinc-200"
           >
-            Official Website
+            {t('footer.official_website')}
           </a>
           <Link
             href="https://discord.com/invite/77mVJcJByq"
@@ -125,10 +125,7 @@ export default function Footer() {
 
       {/* Disclaimer */}
       <p className="mx-auto max-w-4xl px-4 pb-6 text-center text-xs leading-snug text-zinc-500">
-        Outerpedia is an unofficial fan-made project. All content related to{' '}
-        <i>Outerplane</i>, including characters, images, and other game assets,
-        is the property of VAGAMES CORP. This website is not affiliated with,
-        endorsed by, or sponsored by VAGAMES CORP in any way.
+        {t('footer.disclaimer')}
       </p>
     </footer>
   );

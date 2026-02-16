@@ -16,11 +16,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-export default function ToolsPage() {
+export default async function ToolsPage({ params }: Props) {
+  const { lang } = await params;
+  const t = await loadMessages(lang as Lang);
+
   return (
     <div className="mx-auto max-w-6xl p-6">
-      <h1 className="text-3xl font-bold">Outerplane Tools &amp; Utilities</h1>
-      <p className="mt-2 text-zinc-400">Coming soon.</p>
+      <h1 className="text-3xl font-bold">{t['page.tools.title']}</h1>
+      <p className="mt-2 text-zinc-400">{t['common.coming_soon']}</p>
     </div>
   );
 }

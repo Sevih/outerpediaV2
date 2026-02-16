@@ -17,12 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Home({ params }: Props) {
-  const { lang: _lang } = await params;
+  const { lang } = await params;
+  const t = await loadMessages(lang);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-4">
-      <h1 className="h1-page">Outerpedia — Outerplane Wiki &amp; Database</h1>
-      <p>Coming soon.</p>
+      <h1 className="h1-page">{t['page.home.title']}</h1>
+      <p>{t['common.coming_soon']}</p>
     </main>
   );
 }

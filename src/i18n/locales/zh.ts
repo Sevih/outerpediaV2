@@ -16,10 +16,12 @@ const zh: Record<TranslationKey, string> = {
   'common.none': '无',
   'common.back': '返回',
   'common.loading': '加载中...',
+  'common.coming_soon': '即将推出。',
 
   'contributors.title': '贡献者',
   'contributors.description':
     '感谢所有做出贡献的人们，你们帮助本站(Outerpedia)成为了异域战记社区的宝贵资源。',
+  'contributors.favorite_character': '最喜欢的角色：',
 
   'changelog.title': '更新日志',
   'changelog.description': '追踪Outerpedia全部更新改动——攻略、角色、工具等。',
@@ -28,16 +30,30 @@ const zh: Record<TranslationKey, string> = {
   'page.home.title': 'Outerpedia — 异域战记 Wiki & 数据库',
   'page.home.description':
     'Outerpedia是异域战记的社区驱动维基和数据库。查找角色配装、节奏榜、攻略指南、装备推荐等。',
+  'page.characters.title': '异域战记 角色数据库',
   'page.characters.description':
     '浏览异域战记全部角色。按属性、职业、稀有度筛选。查看配装、技能和队伍推荐。',
+  'page.equipments.title': '异域战记 装备数据库',
   'page.equipments.description':
     '探索异域战记全部装备。武器、护符、宝物、套装效果数据对比。',
+  'page.tierlist.title': '异域战记 节奏榜',
   'page.tierlist.description':
     '异域战记节奏榜。按角色定位和内容类型排名。定期更新最新版本。',
+  'page.tools.title': '异域战记 工具 & 实用程序',
   'page.tools.description':
     '异域战记工具：装备求解器、队伍规划器、抽卡模拟器、进度追踪器等。',
+  'page.guides.title': '异域战记 攻略指南',
   'page.guides.description':
     '异域战记攻略指南。冒险关卡、Boss战、公会突袭、世界Boss、新手攻略。',
+  'page.legal.title': '法律声明 & 免责条款',
+  'page.legal.description':
+    'Outerpedia法律声明、免责条款及内容使用政策 — 非官方异域战记粉丝项目。',
+
+  'footer.tagline': '异域战记粉丝制作数据库。',
+  'footer.legal_notice': '法律声明',
+  'footer.official_website': '官方网站',
+  'footer.disclaimer':
+    'Outerpedia是非官方粉丝制作项目。与异域战记相关的所有内容（包括角色、图片及其他游戏资产）均为VAGAMES CORP所有。本网站与VAGAMES CORP无任何关联、认可或赞助关系。',
 
   'error.404': '页面未找到',
   'error.500': '出现错误',

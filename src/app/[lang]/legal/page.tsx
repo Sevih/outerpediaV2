@@ -2,17 +2,18 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
+import { loadMessages } from '@/i18n';
 
 type Props = { params: Promise<{ lang: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
+  const t = await loadMessages(lang as Lang);
   return createPageMetadata({
     lang: lang as Lang,
     path: '/legal',
-    title: 'Legal Notice & Disclaimer',
-    description:
-      'Legal notice, disclaimer, and content usage policy for Outerpedia — an unofficial Outerplane fan project.',
+    title: t['page.legal.title'],
+    description: t['page.legal.description'],
     keywords: [
       'outerpedia legal notice',
       'terms of service',

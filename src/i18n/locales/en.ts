@@ -17,11 +17,13 @@ const en = {
   'common.none': 'None',
   'common.back': 'Back',
   'common.loading': 'Loading...',
+  'common.coming_soon': 'Coming soon.',
 
   // Contributors
   'contributors.title': 'Outerpedia Contributors',
   'contributors.description':
     'Thank you to everyone who has contributed to making Outerpedia a valuable resource for the Outerplane community.',
+  'contributors.favorite_character': 'Favorite Character:',
 
   // Changelog
   'changelog.title': 'Changelog',
@@ -29,20 +31,35 @@ const en = {
     'Track all updates made to Outerpedia: guides, characters, tools, and more.',
   'changelog.view_full': 'View full changelog',
 
-  // Page metadata (titles reuse nav.* keys, only descriptions here)
+  // Page metadata
   'page.home.title': 'Outerpedia — Outerplane Wiki & Database',
   'page.home.description':
     'Outerpedia is a community-driven wiki and database for Outerplane. Find character builds, tier lists, guides, equipment recommendations, and more.',
+  'page.characters.title': 'Outerplane Characters Database',
   'page.characters.description':
     'Browse all Outerplane characters. Filter by element, class, and rarity. Find builds, skills, and team recommendations.',
+  'page.equipments.title': 'Outerplane Equipment Database',
   'page.equipments.description':
     'Explore all Outerplane weapons, amulets, talismans, and armor sets. Compare stats and find the best gear for your characters.',
+  'page.tierlist.title': 'Outerplane Tier List',
   'page.tierlist.description':
     'Outerplane tier list ranking all characters by role and content type. Updated regularly with the latest meta.',
+  'page.tools.title': 'Outerplane Tools & Utilities',
   'page.tools.description':
     'Outerplane tools: gear solver, team planner, pull simulator, progress tracker, and more.',
+  'page.guides.title': 'Outerplane Guides',
   'page.guides.description':
     'Outerplane guides for adventure stages, boss fights, guild raids, world bosses, and beginner tips.',
+  'page.legal.title': 'Legal Notice & Disclaimer',
+  'page.legal.description':
+    'Legal notice, disclaimer, and content usage policy for Outerpedia — an unofficial Outerplane fan project.',
+
+  // Footer
+  'footer.tagline': 'Fanmade Database for Outerplane.',
+  'footer.legal_notice': 'Legal Notice',
+  'footer.official_website': 'Official Website',
+  'footer.disclaimer':
+    'Outerpedia is an unofficial fan-made project. All content related to Outerplane, including characters, images, and other game assets, is the property of VAGAMES CORP. This website is not affiliated with, endorsed by, or sponsored by VAGAMES CORP in any way.',
 
   // Errors
   'error.404': 'Page not found',

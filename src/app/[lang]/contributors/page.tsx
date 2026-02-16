@@ -53,7 +53,7 @@ export default async function ContributorsPage({ params }: Props) {
                   <p className="mb-2 text-sm text-cyan-400">{c.role}</p>
                   {c.favoriteCharacter && (
                     <p className="mb-2 text-sm text-zinc-400">
-                      <span className="text-zinc-500">Favorite Character:</span>{' '}
+                      <span className="text-zinc-500">{t['contributors.favorite_character']}</span>{' '}
                       {c.favoriteCharacter}
                     </p>
                   )}

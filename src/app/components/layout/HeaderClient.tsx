@@ -52,7 +52,7 @@ export default function HeaderClient() {
               <span className="relative hidden h-4.5 w-4.5 shrink-0 lg:inline-block">
                 <Image
                   src={`/images/ui/nav/${item.icon}.webp`}
-                  alt=""
+                  alt={t(item.key)}
                   fill
                   sizes="18px"
                   className="object-contain"
@@ -101,7 +101,7 @@ export default function HeaderClient() {
                 <span className="relative inline-block h-4.5 w-4.5">
                   <Image
                     src={`/images/ui/nav/${item.icon}.webp`}
-                    alt=""
+                    alt={t(item.key)}
                     fill
                     sizes="18px"
                     className="object-contain"

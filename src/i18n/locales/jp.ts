@@ -16,10 +16,12 @@ const jp: Record<TranslationKey, string> = {
   'common.none': 'なし',
   'common.back': '戻る',
   'common.loading': '読み込み中...',
+  'common.coming_soon': '近日公開',
 
   'contributors.title': 'コントリビューター',
   'contributors.description':
     'OuterpediaをOuterplaneコミュニティにとって価値あるリソースにするために貢献してくださったすべての方々に感謝します。',
+  'contributors.favorite_character': 'お気に入りキャラクター：',
 
   'changelog.title': '更新履歴',
   'changelog.description':
@@ -29,16 +31,30 @@ const jp: Record<TranslationKey, string> = {
   'page.home.title': 'Outerpedia — アウタープレーン Wiki & データベース',
   'page.home.description':
     'Outerpediaはアウタープレーンのコミュニティ主導のWikiとデータベースです。キャラクタービルド、ティアリスト、攻略ガイド、装備推奨など。',
+  'page.characters.title': 'アウタープレーン キャラクターデータベース',
   'page.characters.description':
     'アウタープレーンの全キャラクターを閲覧。属性、クラス、レアリティでフィルター。ビルド、スキル、チーム編成を確認。',
+  'page.equipments.title': 'アウタープレーン 装備データベース',
   'page.equipments.description':
     'アウタープレーンの全装備を探索。武器、アミュレット、タリスマン、セット効果のステータス比較。',
+  'page.tierlist.title': 'アウタープレーン ティアリスト',
   'page.tierlist.description':
     'アウタープレーンのティアリスト。役割・コンテンツ別にキャラクターをランキング。最新メタに対応。',
+  'page.tools.title': 'アウタープレーン ツール & ユーティリティ',
   'page.tools.description':
     'アウタープレーンのツール：装備ソルバー、チームプランナー、ガチャシミュレーター、進捗トラッカーなど。',
+  'page.guides.title': 'アウタープレーン 攻略ガイド',
   'page.guides.description':
     'アウタープレーン攻略ガイド。冒険ステージ、ボス戦、ギルドレイド、ワールドボス、初心者向けのヒント。',
+  'page.legal.title': '法的通知 & 免責事項',
+  'page.legal.description':
+    'Outerpediaの法的通知、免責事項、およびコンテンツ使用ポリシー — 非公式アウタープレーンファンプロジェクト。',
+
+  'footer.tagline': 'アウタープレーンのファンメイドデータベース。',
+  'footer.legal_notice': '法的通知',
+  'footer.official_website': '公式サイト',
+  'footer.disclaimer':
+    'Outerpediaは非公式のファンメイドプロジェクトです。キャラクター、画像、その他のゲームアセットを含むアウタープレーンに関するすべてのコンテンツはVAGAMES CORPの所有物です。本サイトはVAGAMES CORPとの提携、承認、またはスポンサーシップを受けていません。',
 
   'error.404': 'ページが見つかりません',
   'error.500': 'エラーが発生しました',

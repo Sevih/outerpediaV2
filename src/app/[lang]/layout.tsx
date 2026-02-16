@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { LANGUAGES, isValidLang, LANGS } from '@/lib/i18n/config';
 import { loadMessages } from '@/i18n';
 import { I18nProvider } from '@/lib/contexts/I18nContext';
+import { buildUrl } from '@/lib/seo';
+import type { Lang } from '@/lib/i18n/config';
 import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 
@@ -19,6 +21,7 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!isValidLang(lang)) return {};
 
+  const t = await loadMessages(lang);
   const config = LANGUAGES[lang];
 
   return {
@@ -26,14 +29,10 @@ export async function generateMetadata({
       default: 'Outerpedia',
       template: '%s | Outerpedia',
     },
-    description: 'Outerplane wiki and database',
+    description: t['page.home.description'],
     alternates: {
       languages: Object.fromEntries(
-        LANGS.map((l) => {
-          const sub = LANGUAGES[l].subdomain;
-          const prefix = sub ? `${sub}.` : '';
-          return [LANGUAGES[l].htmlLang, `https://${prefix}outerpedia.com`];
-        })
+        LANGS.map((l) => [LANGUAGES[l].htmlLang, buildUrl(l as Lang, '/')])
       ),
     },
     openGraph: {
