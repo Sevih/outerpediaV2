@@ -25,6 +25,14 @@ export const ELEMENT_BG: Record<ElementType, string> = {
   Dark: 'bg-dark',
 };
 
+export const ELEMENT_BORDER: Record<ElementType, string> = {
+  Fire: 'border-fire',
+  Water: 'border-water',
+  Earth: 'border-earth',
+  Light: 'border-light',
+  Dark: 'border-dark',
+};
+
 // ── Rarities (character star rating) ──
 
 export const RARITY_TEXT: Record<RarityType, string> = {

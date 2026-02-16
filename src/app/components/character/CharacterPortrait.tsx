@@ -1,5 +1,10 @@
 import Image from 'next/image';
+import charIndex from '@data/generated/characters-index.json';
 import type { ElementType, ClassType, RarityType } from '@/types/enums';
+import type { CharacterIndex } from '@/types/character';
+import { ELEMENT_BORDER } from '@/lib/theme';
+
+const characters = charIndex as Record<string, CharacterIndex>;
 
 // Extra zoom to crop tightly on the face (parent overflow-hidden clips the excess)
 const FACE_ZOOM = 1.5;
@@ -30,9 +35,13 @@ export type CharacterPortraitSize = keyof typeof SIZES;
 
 type Props = {
   id: string;
-  name: string;
+  /** Alt text override (resolved from index if omitted) */
+  name?: string;
+  /** Element override (resolved from index if omitted) */
   element?: ElementType;
+  /** Class override (resolved from index if omitted) */
   classType?: ClassType;
+  /** Rarity override (resolved from index if omitted) */
   rarity?: RarityType;
   size?: CharacterPortraitSize;
   /** CSS object-position override (auto-resolved from CROP_OVERRIDES if omitted) */
@@ -45,10 +54,10 @@ type Props = {
 
 export default function CharacterPortrait({
   id,
-  name,
-  element,
-  classType,
-  rarity,
+  name: nameOverride,
+  element: elementOverride,
+  classType: classOverride,
+  rarity: rarityOverride,
   size = 'md',
   cropPosition,
   showIcons = false,
@@ -56,11 +65,17 @@ export default function CharacterPortrait({
   className = '',
   priority = false,
 }: Props) {
+  const char = characters[id];
+  const name = nameOverride ?? char?.Fullname ?? id;
+  const element = elementOverride ?? char?.Element;
+  const classType = classOverride ?? char?.Class;
+  const rarity = rarityOverride ?? char?.Rarity;
+
   const s = SIZES[size];
   const position = cropPosition ?? CROP_OVERRIDES[id] ?? DEFAULT_CROP;
 
   return (
-    <div className={`relative overflow-hidden rounded ${s.cls} ${className}`}>
+    <div className={`relative overflow-hidden rounded-lg border-2 ${element ? ELEMENT_BORDER[element] : 'border-gray-600'} bg-gray-900 ${s.cls} ${className}`}>
       <Image
         fill
         sizes={`${Math.round(s.px * FACE_ZOOM)}px`}
