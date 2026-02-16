@@ -29,6 +29,21 @@ const en = {
     'Track all updates made to Outerpedia: guides, characters, tools, and more.',
   'changelog.view_full': 'View full changelog',
 
+  // Page metadata (titles reuse nav.* keys, only descriptions here)
+  'page.home.title': 'Outerpedia — Outerplane Wiki & Database',
+  'page.home.description':
+    'Outerpedia is a community-driven wiki and database for Outerplane. Find character builds, tier lists, guides, equipment recommendations, and more.',
+  'page.characters.description':
+    'Browse all Outerplane characters. Filter by element, class, and rarity. Find builds, skills, and team recommendations.',
+  'page.equipments.description':
+    'Explore all Outerplane weapons, amulets, talismans, and armor sets. Compare stats and find the best gear for your characters.',
+  'page.tierlist.description':
+    'Outerplane tier list ranking all characters by role and content type. Updated regularly with the latest meta.',
+  'page.tools.description':
+    'Outerplane tools: gear solver, team planner, pull simulator, progress tracker, and more.',
+  'page.guides.description':
+    'Outerplane guides for adventure stages, boss fights, guild raids, world bosses, and beginner tips.',
+
   // Errors
   'error.404': 'Page not found',
   'error.500': 'Something went wrong',

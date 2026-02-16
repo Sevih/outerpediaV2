@@ -26,6 +26,20 @@ const jp: Record<TranslationKey, string> = {
     'Outerpedia の更新情報（ガイド、キャラクター、ツールなど）を確認できます。',
   'changelog.view_full': 'すべての更新履歴を見る',
 
+  'page.home.title': 'Outerpedia — アウタープレーン Wiki & データベース',
+  'page.home.description':
+    'Outerpediaはアウタープレーンのコミュニティ主導のWikiとデータベースです。キャラクタービルド、ティアリスト、攻略ガイド、装備推奨など。',
+  'page.characters.description':
+    'アウタープレーンの全キャラクターを閲覧。属性、クラス、レアリティでフィルター。ビルド、スキル、チーム編成を確認。',
+  'page.equipments.description':
+    'アウタープレーンの全装備を探索。武器、アミュレット、タリスマン、セット効果のステータス比較。',
+  'page.tierlist.description':
+    'アウタープレーンのティアリスト。役割・コンテンツ別にキャラクターをランキング。最新メタに対応。',
+  'page.tools.description':
+    'アウタープレーンのツール：装備ソルバー、チームプランナー、ガチャシミュレーター、進捗トラッカーなど。',
+  'page.guides.description':
+    'アウタープレーン攻略ガイド。冒険ステージ、ボス戦、ギルドレイド、ワールドボス、初心者向けのヒント。',
+
   'error.404': 'ページが見つかりません',
   'error.500': 'エラーが発生しました',
   'error.back_home': 'ホームに戻る',

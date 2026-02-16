@@ -26,6 +26,20 @@ const kr: Record<TranslationKey, string> = {
     'Outerpedia의 모든 업데이트(가이드, 캐릭터, 도구 등)를 확인하세요.',
   'changelog.view_full': '전체 변경 로그 보기',
 
+  'page.home.title': 'Outerpedia — 아우터플레인 위키 & 데이터베이스',
+  'page.home.description':
+    'Outerpedia는 아우터플레인의 커뮤니티 기반 위키 및 데이터베이스입니다. 캐릭터 빌드, 티어 리스트, 공략 가이드, 장비 추천 등.',
+  'page.characters.description':
+    '아우터플레인의 모든 캐릭터를 탐색하세요. 속성, 클래스, 희귀도로 필터링. 빌드, 스킬, 팀 추천 확인.',
+  'page.equipments.description':
+    '아우터플레인의 모든 장비를 탐색하세요. 무기, 아뮬렛, 탈리스만, 세트 효과 비교.',
+  'page.tierlist.description':
+    '아우터플레인 티어 리스트. 역할 및 콘텐츠별 캐릭터 순위. 최신 메타 반영.',
+  'page.tools.description':
+    '아우터플레인 도구: 장비 솔버, 팀 플래너, 뽑기 시뮬레이터, 진행 트래커 등.',
+  'page.guides.description':
+    '아우터플레인 공략 가이드. 모험 스테이지, 보스전, 길드 레이드, 월드 보스, 초보자 팁.',
+
   'error.404': '페이지를 찾을 수 없습니다',
   'error.500': '문제가 발생했습니다',
   'error.back_home': '홈으로 돌아가기',
