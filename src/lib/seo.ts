@@ -8,6 +8,13 @@ const DEFAULT_OG_IMAGE = '/images/ui/og_home.jpg';
 
 /** Build the full URL for a given language and path */
 export function buildUrl(lang: Lang, path = ''): string {
+  // On Vercel: path-based routing, no subdomains
+  const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+  if (vercelUrl) {
+    return `https://${vercelUrl}/${lang}${path}`;
+  }
+
+  // Production: subdomain-based routing
   const sub = LANGUAGES[lang].subdomain;
   const prefix = sub ? `${sub}.` : '';
   return `https://${prefix}${BASE_DOMAIN}${path}`;
