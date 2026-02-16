@@ -7,13 +7,34 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import type { TranslationKey } from '@/i18n';
 
-const NAV_ITEMS = [
-  { key: 'nav.characters' as TranslationKey, href: '/characters', icon: 'CM_EtcMenu_Colleague', short: 'Chars' },
-  { key: 'nav.equipment' as TranslationKey, href: '/equipments', icon: 'CM_EtcMenu_Inventory', short: 'Equip' },
-  { key: 'nav.tierlist' as TranslationKey, href: '/tierlist', icon: 'CM_Mission_Icon_Weekly', short: 'Tier' },
-  { key: 'nav.utilities' as TranslationKey, href: '/tools', icon: 'CM_EtcMenu_Setting', short: 'Tools' },
-  { key: 'nav.guides' as TranslationKey, href: '/guides', icon: 'CM_EtcMenu_Character_Book', short: 'Guides' },
-] as const;
+type NavItem = {
+  key: TranslationKey;
+  shortKey: TranslationKey;
+  href: string;
+  icon: string;
+};
+
+const NAV_ITEMS: NavItem[] = [
+  { key: 'nav.characters', shortKey: 'nav.characters.short', href: '/characters', icon: 'CM_EtcMenu_Colleague' },
+  { key: 'nav.equipment', shortKey: 'nav.equipment.short', href: '/equipments', icon: 'CM_EtcMenu_Inventory' },
+  { key: 'nav.tierlist', shortKey: 'nav.tierlist.short', href: '/tierlist', icon: 'CM_Mission_Icon_Weekly' },
+  { key: 'nav.utilities', shortKey: 'nav.utilities.short', href: '/tools', icon: 'CM_EtcMenu_Setting' },
+  { key: 'nav.guides', shortKey: 'nav.guides.short', href: '/guides', icon: 'CM_EtcMenu_Character_Book' },
+];
+
+function NavIcon({ src, alt }: { src: string; alt: string }) {
+  return (
+    <span className="relative inline-block h-4.5 w-4.5 shrink-0">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="18px"
+        className="object-contain"
+      />
+    </span>
+  );
+}
 
 export default function HeaderClient() {
   const [open, setOpen] = useState(false);
@@ -49,18 +70,12 @@ export default function HeaderClient() {
               title={t(item.key)}
             >
               {/* Icon: lg+ only */}
-              <span className="relative hidden h-4.5 w-4.5 shrink-0 lg:inline-block">
-                <Image
-                  src={`/images/ui/nav/${item.icon}.webp`}
-                  alt={t(item.key)}
-                  fill
-                  sizes="18px"
-                  className="object-contain"
-                />
+              <span className="hidden lg:inline-block">
+                <NavIcon src={`/images/ui/nav/${item.icon}.webp`} alt={t(item.key)} />
               </span>
 
               {/* Short label: md to xl */}
-              <span className="whitespace-nowrap xl:hidden">{item.short}</span>
+              <span className="whitespace-nowrap xl:hidden">{t(item.shortKey)}</span>
 
               {/* Full label: xl+ */}
               <span className="hidden whitespace-nowrap xl:inline">
@@ -98,15 +113,7 @@ export default function HeaderClient() {
                 onClick={() => setOpen(false)}
                 aria-label={t(item.key)}
               >
-                <span className="relative inline-block h-4.5 w-4.5">
-                  <Image
-                    src={`/images/ui/nav/${item.icon}.webp`}
-                    alt={t(item.key)}
-                    fill
-                    sizes="18px"
-                    className="object-contain"
-                  />
-                </span>
+                <NavIcon src={`/images/ui/nav/${item.icon}.webp`} alt={t(item.key)} />
                 <span>{t(item.key)}</span>
               </Link>
             ))}

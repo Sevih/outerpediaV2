@@ -25,7 +25,7 @@ export default async function TierlistPage({ params }: Props) {
   const t = await loadMessages(lang as Lang);
 
   return (
-    <div className="mx-auto max-w-6xl p-6">
+    <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
       <h1 className="text-3xl font-bold">{t['page.tierlist.title']}</h1>
       <p className="mt-2 text-zinc-400">{t['common.coming_soon']}</p>
     </div>

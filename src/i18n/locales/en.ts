@@ -57,13 +57,65 @@ const en = {
   'page.legal.title': 'Legal Notice & Disclaimer',
   'page.legal.description':
     'Legal notice, disclaimer, and content usage policy for Outerpedia — an unofficial Outerplane fan project.',
+  'page.promo_codes.title': 'Outerplane Active Promo Codes',
+  'page.promo_codes.description':
+    'All active Outerplane promo codes. Redeem them in-game for free rewards: ether, recruitment tickets, and more.',
+  'promo_codes.expired': 'Expired Codes',
+
+  // Homepage sections
+  'home.cta.characters': 'Browse Characters',
+  'home.section.banners': 'Currently Pullable',
+  'home.section.codes': 'Active Promo Codes',
+  'home.section.beginner': 'New to Outerplane?',
+  'home.beginner.desc': 'Start your journey with these beginner-friendly guides:',
+  'home.beginner.faq': 'Beginner FAQ',
+  'home.beginner.faq.desc': 'common questions and answers for new players.',
+  'home.beginner.freeheroes': 'Free Heroes & Starter Banners',
+  'home.beginner.freeheroes.desc': 'who to pull and how to start efficiently.',
+  'home.beginner.stats': 'Statistics & Combat Basics',
+  'home.beginner.stats.desc': 'understand stats and how combat works.',
+  'home.beginner.gear': 'Gear',
+  'home.beginner.gear.desc': 'how equipment works and how to upgrade it.',
+  'home.beginner.growth': 'Hero Growth',
+  'home.beginner.growth.desc': 'leveling, transcendence, affinity, and more.',
+  'home.beginner.footer': 'Perfect for first-time players',
+  'home.section.updates': 'Recent Updates',
+  'home.codes.copy': 'Copy',
+  'home.codes.copied': 'Copied!',
+  'home.codes.empty': 'No active codes right now.',
+  'home.codes.view_all': 'View all {count} active codes',
+  'home.banner.ends_in': 'Ends in',
+  'home.banner.ended': 'Ended',
+
+  // Navigation (short labels for md-xl breakpoint)
+  'nav.characters.short': 'Chars',
+  'nav.equipment.short': 'Equip',
+  'nav.tierlist.short': 'Tier',
+  'nav.utilities.short': 'Tools',
+  'nav.guides.short': 'Guides',
 
   // Footer
   'footer.tagline': 'Fanmade Database for Outerplane.',
   'footer.legal_notice': 'Legal Notice',
   'footer.official_website': 'Official Website',
+  'footer.social.github': 'GitHub',
+  'footer.social.evamains_discord': 'EvaMains Discord',
+  'footer.social.official_discord': 'Official Discord',
+  'footer.social.reddit': 'Reddit',
+  'footer.social.youtube': 'YouTube',
+  'footer.social.official_x': 'Official X (Twitter)',
+  'footer.social.publisher_x': 'Publisher X (Twitter)',
   'footer.disclaimer':
     'Outerpedia is an unofficial fan-made project. All content related to Outerplane, including characters, images, and other game assets, is the property of VAGAMES CORP. This website is not affiliated with, endorsed by, or sponsored by VAGAMES CORP in any way.',
+
+  // Legal page content
+  'legal.heading': 'Legal Notice & Disclaimer | Outerpedia',
+  'legal.p1': 'This notice serves as a legal disclaimer for Outerpedia, an unofficial, fan-made project dedicated to the game Outerplane. All names, images, and other assets used on this site are the property of VAGAMES CORP or their respective owners. This site is not affiliated with, endorsed by, or sponsored by VAGAMES CORP.',
+  'legal.p2': 'This website was created strictly for non-commercial, educational, and informational purposes. No advertisements, donations, tracking tools, or monetization mechanisms are used.',
+  'legal.p3': 'Outerpedia does not host or redistribute game files. All visual assets are displayed for commentary and documentation purposes only. No content is made available for download or reuse.',
+  'legal.p4': 'If you are the rightful owner of any content featured on this site and would like it removed, you may contact us or our hosting provider directly. We will respond to any takedown request promptly.',
+  'legal.hosting': 'Hosting Provider',
+  'legal.p5': 'This site is maintained by a private individual. In accordance with French law (LCEN), identification information may be disclosed to judicial authorities upon legal request via our hosting provider.',
 
   // Errors
   'error.404': 'Page not found',

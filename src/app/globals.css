@@ -15,11 +15,11 @@
   --color-foreground: var(--foreground);
 
   /* ── Elements ── */
-  --color-fire: #f87171;
-  --color-water: #60a5fa;
-  --color-earth: #34d399;
-  --color-light: #fcd34d;
-  --color-dark: #c084fc;
+  --color-fire: #ff6b6b;
+  --color-water: #4dabf7;
+  --color-earth: #51cf66;
+  --color-light: #ffe066;
+  --color-dark: #cc5de8;
 
   /* ── Classes ── */
   --color-class: #fb923c;
@@ -184,6 +184,32 @@ body {
   height: 12px;
   background: url('/images/ui/common/CM_Result_Victory_Bg.png') center bottom / contain no-repeat;
   pointer-events: none;
+}
+
+@layer components {
+  .card {
+    border-radius: 0.5rem;
+    border: 1px solid rgb(39 39 42);
+    background: rgb(24 24 27 / 0.6);
+  }
+
+  .card-interactive {
+    border-radius: 0.5rem;
+    border: 1px solid rgb(39 39 42);
+    background: rgb(24 24 27 / 0.6);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    &:hover {
+      border-color: rgb(63 63 70);
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.3);
+    }
+  }
+}
+
+/* Fix perf: background-attachment fixed causes repaints on mobile Safari */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
 }
 
 .scroll-offset {

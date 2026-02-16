@@ -26,44 +26,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function LegalNoticePage({ params }: Props) {
-  await params;
+  const { lang } = await params;
+  const t = await loadMessages(lang as Lang);
 
   return (
-    <main className="mx-auto max-w-3xl p-4">
+    <main className="mx-auto max-w-3xl px-4 py-6 md:px-6">
       <h1 className="mb-6 text-3xl font-bold">
-        Legal Notice & Disclaimer | Outerpedia
+        {t['legal.heading']}
       </h1>
 
-      <p className="mb-4">
-        This notice serves as a legal disclaimer for{' '}
-        <strong>Outerpedia</strong>, an unofficial, fan-made project dedicated to
-        the game <strong>Outerplane</strong>. All names, images, and other assets
-        used on this site are the property of <strong>VAGAMES CORP</strong> or
-        their respective owners. This site is not affiliated with, endorsed by,
-        or sponsored by VAGAMES CORP.
-      </p>
+      <p className="mb-4">{t['legal.p1']}</p>
+      <p className="mb-4">{t['legal.p2']}</p>
+      <p className="mb-4">{t['legal.p3']}</p>
+      <p className="mb-4">{t['legal.p4']}</p>
 
-      <p className="mb-4">
-        This website was created strictly for non-commercial, educational, and
-        informational purposes. No advertisements, donations, tracking tools, or
-        monetization mechanisms are used.
-      </p>
-
-      <p className="mb-4">
-        <strong>
-          Outerpedia does not host or redistribute game files.
-        </strong>{' '}
-        All visual assets are displayed for commentary and documentation
-        purposes only. No content is made available for download or reuse.
-      </p>
-
-      <p className="mb-4">
-        If you are the rightful owner of any content featured on this site and
-        would like it removed, you may contact us or our hosting provider
-        directly. We will respond to any takedown request promptly.
-      </p>
-
-      <h2 className="mt-8 mb-3 text-xl font-semibold">Hosting Provider</h2>
+      <h2 className="mt-8 mb-3 text-xl font-semibold">{t['legal.hosting']}</h2>
       <p className="mb-2">
         OVH SAS
         <br />
@@ -80,9 +57,7 @@ export default async function LegalNoticePage({ params }: Props) {
       </p>
 
       <p className="mt-6 text-sm text-zinc-500">
-        This site is maintained by a private individual. In accordance with
-        French law (LCEN), identification information may be disclosed to
-        judicial authorities upon legal request via our hosting provider.
+        {t['legal.p5']}
       </p>
     </main>
   );

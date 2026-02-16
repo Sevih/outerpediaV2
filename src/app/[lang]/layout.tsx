@@ -5,6 +5,7 @@ import { loadMessages } from '@/i18n';
 import { I18nProvider } from '@/lib/contexts/I18nContext';
 import { buildUrl } from '@/lib/seo';
 import type { Lang } from '@/lib/i18n/config';
+import { setRequestLang } from '@/lib/i18n/server';
 import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 
@@ -54,6 +55,7 @@ export default async function LangLayout({
     notFound();
   }
 
+  setRequestLang(lang);
   const messages = await loadMessages(lang);
 
   return (

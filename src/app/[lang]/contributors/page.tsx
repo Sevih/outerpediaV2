@@ -23,7 +23,7 @@ export default async function ContributorsPage({ params }: Props) {
   const t = await loadMessages(lang as Lang);
 
   return (
-    <div className="mx-auto max-w-4xl p-6">
+    <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
       <h1 className="mx-auto mb-4 text-3xl font-bold">{t['contributors.title']}</h1>
 
       <p className="mx-auto mb-8 max-w-2xl text-center text-zinc-400">

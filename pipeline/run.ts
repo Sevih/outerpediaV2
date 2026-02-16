@@ -8,13 +8,7 @@ type Step = {
 
 // Pipeline steps — executed in order
 const steps: Step[] = [
-  // Steps will be added as they are implemented
-  // { name: 'characters', run: () => import('./steps/01-generate-characters').then(m => m.run()) },
-  // { name: 'equipment', run: () => import('./steps/02-generate-equipment').then(m => m.run()) },
-  // { name: 'effects', run: () => import('./steps/03-generate-effects').then(m => m.run()) },
-  // { name: 'bosses', run: () => import('./steps/04-generate-bosses').then(m => m.run()) },
-  // { name: 'indexes', run: () => import('./steps/05-generate-indexes').then(m => m.run()) },
-  // { name: 'validate', run: () => import('./steps/06-validate').then(m => m.run()) },
+  { name: 'characters-index', run: () => import('./steps/characters-index').then(m => m.run()) },
 ];
 
 async function main() {

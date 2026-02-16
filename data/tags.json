@@ -1,0 +1,86 @@
+{
+    "ignore-defense": {
+        "label": "Ignores Defense",
+        "label_jp": "防御無視",
+        "label_kr": "방어 무시",
+        "label_zh": "无视防御",
+        "image": "/images/ui/tags/ignore-defense.webp",
+        "desc": "These characters have an inherent effect that ignores part of the target's Defense. It can come from skills, Exclusive Equipment, or Transcendence upgrades.",
+        "desc_jp": "対象の防御力の一部を無視する固有効果を持つキャラクター。スキル、専用装備、または超越アップグレードから得られます。",
+        "desc_kr": "대상의 방어력 일부를 무시하는 고유 효과를 가진 캐릭터입니다. 스킬, 전용 장비, 또는 초월 업그레이드에서 얻을 수 있습니다.",
+        "desc_zh": "这些角色拥有无视目标部分防御的固有效果。可来自技能、专属装备或超越升级。",
+        "type": "mechanic"
+    },
+    "premium": {
+        "label": "Premium Units",
+        "label_jp": "プレミアムユニット",
+        "label_kr": "프리미엄 유닛",
+        "label_zh": "高级单位",
+        "image": "/images/ui/tags/premium.webp",
+        "desc": "These characters can only be obtained through special events or Premium banners.",
+        "desc_jp": "特別イベントまたはプレミアムバナーでのみ入手可能なキャラクター。",
+        "desc_kr": "특별 이벤트 또는 프리미엄 배너에서만 획득할 수 있는 캐릭터입니다.",
+        "desc_zh": "这些角色只能通过特殊活动或高级卡池获得。",
+        "type": "unit-type"
+    },
+    "limited": {
+        "label": "Festival Units",
+        "label_jp": "フェスユニット",
+        "label_kr": "페스티벌 유닛",
+        "label_zh": "限定单位",
+        "image": "/images/ui/tags/limited.webp",
+        "desc": "These characters are time-limited and only available during specific banners.",
+        "desc_jp": "期間限定で、特定のバナー期間中のみ入手可能なキャラクター。",
+        "desc_kr": "기간 한정으로 특정 배너 기간에만 획득할 수 있는 캐릭터입니다.",
+        "desc_zh": "这些角色为限时角色，仅在特定卡池期间可获得。",
+        "type": "unit-type"
+    },
+    "seasonal": {
+        "label": "Seasonal Units",
+        "label_jp": "季節限定ユニット",
+        "label_kr": "시즌 유닛",
+        "label_zh": "季节单位",
+        "image": "/images/ui/tags/seasonal.webp",
+        "desc": "These characters are limited and tied to seasonal events like Halloween or Christmas.",
+        "desc_jp": "ハロウィンやクリスマスなどの季節イベントに関連した限定キャラクター。",
+        "desc_kr": "할로윈이나 크리스마스 같은 시즌 이벤트와 연결된 한정 캐릭터입니다.",
+        "desc_zh": "这些角色为限定角色，与万圣节或圣诞节等季节活动相关。",
+        "type": "unit-type"
+    },
+    "collab": {
+        "label": "Collab Units",
+        "label_jp": "コラボユニット",
+        "label_kr": "콜라보 유닛",
+        "label_zh": "联动单位",
+        "image": "/images/ui/tags/collab.webp",
+        "desc": "These characters are limited to crossovers events with other franchises. They are the least likely to return.",
+        "desc_jp": "他作品とのコラボイベント限定のキャラクター。復刻の可能性が最も低いです。",
+        "desc_kr": "다른 프랜차이즈와의 크로스오버 이벤트에 한정된 캐릭터입니다. 복각 가능성이 가장 낮습니다.",
+        "desc_zh": "这些角色限定于与其他作品的联动活动。复刻可能性最低。",
+        "type": "unit-type"
+    },
+    "free": {
+        "label": "Free Units",
+        "label_jp": "無料ユニット",
+        "label_kr": "무료 유닛",
+        "label_zh": "免费单位",
+        "image": "/images/ui/tags/free.webp",
+        "desc": "These characters can be obtained for free. You can check where to obtain them under Guides > General Guides > Free Heroes & Starter Banners.",
+        "desc_jp": "無料で入手可能なキャラクター。入手方法はガイド > 一般ガイド > 無料ヒーロー＆初心者バナーで確認できます。",
+        "desc_kr": "무료로 획득할 수 있는 캐릭터입니다. 획득 방법은 가이드 > 일반 가이드 > 무료 영웅 & 초보자 배너에서 확인할 수 있습니다.",
+        "desc_zh": "这些角色可以免费获得。获取方式请查看指南 > 通用指南 > 免费英雄与新手卡池。",
+        "type": "unit-type"
+    },
+    "core-fusion": {
+        "label": "Core Fusion",
+        "label_jp": "コアフュージョン",
+        "label_kr": "코어 퓨전",
+        "label_zh": "核心融合",
+        "image": "/images/ui/tags/core-fusion.webp",
+        "desc": "Core Fusion units are upgraded versions of existing characters, obtained through the Core Fusion system.",
+        "desc_jp": "コアフュージョンユニットは、コアフュージョンシステムを通じて入手できる既存キャラクターの強化版です。",
+        "desc_kr": "코어 퓨전 유닛은 코어 퓨전 시스템을 통해 획득할 수 있는 기존 캐릭터의 강화 버전입니다.",
+        "desc_zh": "核心融合单位是通过核心融合系统获得的现有角色的升级版本。",
+        "type": "unit-type"
+    }
+}

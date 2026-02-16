@@ -1,13 +1,12 @@
-'use client';
-
 import Link from 'next/link';
 import { FaGithub, FaDiscord, FaReddit, FaYoutube, FaTwitter } from 'react-icons/fa';
-import { useI18n } from '@/lib/contexts/I18nContext';
+import { getRequestLang } from '@/lib/i18n/server';
+import { getT } from '@/i18n';
 
-export default function Footer() {
-  const { lang, t } = useI18n();
+export default async function Footer() {
+  const lang = getRequestLang();
+  const t = await getT(lang);
   const appVersion = process.env.NEXT_PUBLIC_APP_VERSION || 'dev';
-  const officialWebsite = t('link.officialwebsite');
 
   return (
     <footer className="mt-6 border-t border-zinc-800 bg-black/40">
@@ -30,7 +29,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-zinc-200"
           >
-            <FaGithub /> GitHub
+            <FaGithub /> {t('footer.social.github')}
           </Link>
           <Link
             href="https://discord.com/invite/keGhVQWsHv"
@@ -39,7 +38,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-zinc-200"
           >
-            <FaDiscord /> EvaMains Discord
+            <FaDiscord /> {t('footer.social.evamains_discord')}
           </Link>
           <Link
             href={`/${lang}/legal`}
@@ -67,7 +66,7 @@ export default function Footer() {
           className="flex flex-wrap justify-center gap-4"
         >
           <a
-            href={officialWebsite}
+            href={t('link.officialwebsite')}
             aria-label="Outerplane Official Homepage"
             target="_blank"
             rel="noopener noreferrer"
@@ -82,7 +81,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-zinc-200"
           >
-            <FaDiscord /> Official Discord
+            <FaDiscord /> {t('footer.social.official_discord')}
           </Link>
           <Link
             href="https://www.reddit.com/r/OUTERPLANE_Publisher/"
@@ -91,7 +90,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-zinc-200"
           >
-            <FaReddit /> Reddit
+            <FaReddit /> {t('footer.social.reddit')}
           </Link>
           <Link
             href="https://www.youtube.com/@OUTERPLANE_OFFICIAL"
@@ -100,7 +99,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-zinc-200"
           >
-            <FaYoutube /> YouTube
+            <FaYoutube /> {t('footer.social.youtube')}
           </Link>
           <Link
             href="https://x.com/outerplane"
@@ -109,7 +108,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-zinc-200"
           >
-            <FaTwitter /> Official X (Twitter)
+            <FaTwitter /> {t('footer.social.official_x')}
           </Link>
           <Link
             href="https://x.com/M9_outerplane"
@@ -118,7 +117,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-zinc-200"
           >
-            <FaTwitter /> Official Publisher X (Twitter)
+            <FaTwitter /> {t('footer.social.publisher_x')}
           </Link>
         </nav>
       </div>

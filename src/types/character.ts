@@ -1,5 +1,5 @@
 import type { WithLocalizedFields } from './common';
-import type { ElementType, ClassType, RarityType, RoleType, SkillKey } from './enums';
+import type { ElementType, ClassType, RarityType, RoleType, ChainType, SkillKey } from './enums';
 
 export type GiftPreference = {
   type: string;
@@ -38,13 +38,20 @@ export type Character = WithLocalizedFields<
   'VoiceActor'
 >;
 
-/** Lightweight character entry for indexes/lists */
+/** Lightweight character entry (value in the ID-keyed index) */
 export type CharacterIndex = WithLocalizedFields<{
-  ID: string;
   Fullname: string;
   slug: string;
   Element: ElementType;
   Class: ClassType;
   Rarity: RarityType;
   role: RoleType;
+  Chain_Type: ChainType;
+  tags: string[];
 }, 'Fullname'>;
+
+/** ID-keyed character index map */
+export type CharacterIndexMap = Record<string, CharacterIndex>;
+
+/** English Fullname → character ID reverse map */
+export type CharacterNameToIdMap = Record<string, string>;

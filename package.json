@@ -9,7 +9,9 @@
     "lint": "eslint",
     "pipeline": "tsx pipeline/run.ts",
     "pipeline:step": "tsx pipeline/run.ts --step",
-    "pipeline:validate": "tsx pipeline/run.ts --validate"
+    "pipeline:validate": "tsx pipeline/run.ts --validate",
+    "images": "tsx scripts/convert-images.ts",
+    "images:watch": "tsx scripts/convert-images.ts --watch"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -24,6 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "sharp": "0.34.5",
     "tailwindcss": "^4",
     "tsx": "4.21.0",
     "typescript": "^5"
