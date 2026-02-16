@@ -8,3 +8,4 @@ export {
   getArmorSets,
   getExclusiveEquipment,
 } from './equipment';
+export { getItems } from './items';

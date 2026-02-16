@@ -6,18 +6,27 @@ export type BossSkill = {
   description: LangMap;
   type: string;
   icon: string;
-  buff: string[];
-  debuff: string[];
+  buff?: string[];
+  debuff?: string[];
 };
 
 export type Boss = {
-  ID: string;
-  name: LangMap;
+  id: string;
+  Name: LangMap;
+  Surname: LangMap | null;
+  IncludeSurname: boolean;
   element: ElementType;
   class: ClassType;
+  level: number;
+  icons: string;
   skills: BossSkill[];
   BuffImmune: string;
   StatBuffImmune: string;
+  location: {
+    dungeon: LangMap;
+    mode: LangMap;
+    area_id: LangMap;
+  };
 };
 
 export type BossIndexEntry = {
