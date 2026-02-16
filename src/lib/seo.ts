@@ -4,7 +4,7 @@ import type { Lang } from '@/lib/i18n/config';
 
 const SITE_NAME = 'Outerpedia';
 const BASE_DOMAIN = 'outerpedia.com';
-const DEFAULT_OG_IMAGE = '/images/ui/og_default.png';
+const DEFAULT_OG_IMAGE = '/images/ui/og_default.jpg';
 
 /** Base URL for the current environment (Vercel, dev, or production) */
 export function getBaseUrl(): string {
