@@ -7,6 +7,8 @@ import { loadMessages } from '@/i18n';
 import { getChangelog } from '@/lib/changelog';
 import type { ChangelogType } from '@/types/changelog';
 
+export const revalidate = 86400;
+
 type Props = { params: Promise<{ lang: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -57,20 +59,9 @@ export default async function ChangelogPage({ params }: Props) {
                 </span>
               </div>
 
-              <h2 className="mb-2 text-lg font-semibold">
-                {/* TODO: restore Link when pages are implemented
-                {entry.url ? (
-                  <Link
-                    href={`/${lang}${entry.url}`}
-                    className="text-cyan-400 hover:underline"
-                  >
-                    {entry.title}
-                  </Link>
-                ) : (
-                  entry.title
-                )} */}
+              <p className="h2-style mb-2">
                 {entry.title}
-              </h2>
+              </p>
 
               <ul className="space-y-1 text-sm text-zinc-300">
                 {entry.content.map((line, j) => (

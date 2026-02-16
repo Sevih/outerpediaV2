@@ -3,6 +3,8 @@ import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
 
+export const revalidate = 86400;
+
 type Props = { params: Promise<{ lang: Lang }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

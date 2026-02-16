@@ -95,6 +95,28 @@
     }
   }
 
+  .h2-style {
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    width: fit-content;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      pointer-events: none;
+      background-image: url('/images/ui/common/CM_Result_Victory_Line.png');
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
   h3 {
     font-size: 1.5rem;
     line-height: 2rem;
