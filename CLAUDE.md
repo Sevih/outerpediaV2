@@ -194,6 +194,41 @@ All colors defined as CSS custom properties in `@theme inline`:
 - Effects: `--color-buff`, `--color-debuff`
 - Font: `--font-sans` = Paybooc Bold (game font) with Geist Sans fallback
 
+## Typography — Heading Presets
+
+All headings (h1–h5) have base styles in `@layer base` with game-asset bottom decorations forming a warm→cool color gradient. Tailwind utility classes always override these defaults.
+
+### Size hierarchy
+| Level | Size | Weight | Decoration |
+|-------|------|--------|------------|
+| h1 | 2.25rem (36px) | 700 | `CM_Result_Victory_Bg` — warm red/orange, 4px |
+| h2 | 1.875rem (30px) | 700 | `CM_Result_Victory_Line` — warm yellow→pink, 3px |
+| h3 | 1.5rem (24px) | 600 | `CM_Gradation_Bg` — gold (CSS filter), 3px |
+| h4 | 1.25rem (20px) | 600 | `CM_Gauge_CharacterInfo` — green, 2px |
+| h5 | 1.125rem (18px) | 600 | `CM_Gauge_AccountInfo` — blue, 2px |
+
+### Page title variant
+Use `.h1-page` class for main page headings — adds `CM_Desc_Bg` background + thick `CM_Result_Victory_Bg` bottom bar (12px).
+```html
+<h1 className="h1-page">Characters</h1>
+```
+
+### Decoration images
+All in `/images/ui/common/` (sourced from game datamine `CM_` prefix = Common UI).
+
+### Overriding defaults
+Since presets are in `@layer base`, any Tailwind class wins:
+```html
+<!-- Uses preset decoration + size -->
+<h2>Section Title</h2>
+
+<!-- Override size, keeps decoration -->
+<h2 className="text-lg">Smaller Section</h2>
+
+<!-- Remove decoration entirely -->
+<h2 className="after:hidden">No Decoration</h2>
+```
+
 ## Next.js Conventions
 
 - **Server components by default**, `'use client'` only when needed (hooks, interactivity)
