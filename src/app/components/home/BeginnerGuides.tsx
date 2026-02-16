@@ -1,5 +1,15 @@
 import type { Lang } from '@/lib/i18n/config';
 import type { Messages } from '@/i18n';
+import parseText from '@/lib/parse-text';
+
+const DEMO_TEXT =
+  'In Outerplane, each hero has an Element like {E/Fire} and a Class like {C/Ranger}. ' +
+  'Stats such as {S/ATK} and {S/SPD} determine combat performance. ' +
+  'Buffs like {B/BT_STAT|ST_ATK} boost your team, while debuffs like {D/BT_DOT_BURN} punish enemies over time. ' +
+  'Equip your heroes with weapons like {I-W/Surefire Greatsword}, amulets like {I-A/Death\'s Hold}, ' +
+  'talismans like {I-T/Executioner\'s Charm}, and armor sets like {AS/Attack Set} for maximum power. ' +
+  'Some heroes like {P/Valentine} have powerful skills such as {SK/Valentine|S3} and unique exclusive equipment like {EE/Valentine}. ' +
+  'Don\'t forget to use items like {I-I/Sandwich} to keep your team going!';
 
 const GUIDES = [
   { key: 'faq', nameKey: 'home.beginner.faq', descKey: 'home.beginner.faq.desc' },
@@ -35,6 +45,13 @@ export default function BeginnerGuides({ t }: Props) {
         <p className="mt-4 text-xs italic text-zinc-500">
           {t['home.beginner.footer']}
         </p>
+
+        {/* Inline components demo */}
+        <div className="mt-6 border-t border-white/5 pt-4">
+          <p className="text-sm leading-relaxed text-zinc-300">
+            {parseText(DEMO_TEXT)}
+          </p>
+        </div>
       </div>
     </section>
   );
