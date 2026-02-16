@@ -156,6 +156,7 @@ export default function CharacterCard({
                 alt=""
                 width={s.starSize}
                 height={s.starSize}
+                style={{ width: 'auto', height: 'auto' }}
               />
             ))}
           </div>
@@ -173,6 +174,7 @@ export default function CharacterCard({
             alt={element}
             width={s.iconSize}
             height={s.iconSize}
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
       )}
@@ -185,6 +187,7 @@ export default function CharacterCard({
             alt={classType}
             width={s.classIconSize}
             height={s.classIconSize}
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
       )}
