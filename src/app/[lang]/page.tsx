@@ -8,12 +8,14 @@ type Props = { params: Promise<{ lang: Lang }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   const t = await loadMessages(lang);
-  return createPageMetadata({
+  const meta = createPageMetadata({
     lang,
     path: '/',
     title: t['page.home.title'],
     description: t['page.home.description'],
   });
+  // Bypass layout template — home title already includes site name
+  return { ...meta, title: { absolute: t['page.home.title'] } };
 }
 
 export default async function Home({ params }: Props) {

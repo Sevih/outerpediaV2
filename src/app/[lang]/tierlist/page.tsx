@@ -1,18 +1,22 @@
 import type { Metadata } from 'next';
 import type { Lang } from '@/lib/i18n/config';
-import { createPageMetadata } from '@/lib/seo';
-import { loadMessages } from '@/i18n';
+import { createPageMetadata, getMonthYear } from '@/lib/seo';
+import { getT, loadMessages } from '@/i18n';
+
+export const revalidate = 86400;
 
 type Props = { params: Promise<{ lang: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
-  const t = await loadMessages(lang as Lang);
+  const l = lang as Lang;
+  const t = await getT(l);
+  const monthYear = getMonthYear(l);
   return createPageMetadata({
-    lang: lang as Lang,
+    lang: l,
     path: '/tierlist',
-    title: t['nav.tierlist'],
-    description: t['page.tierlist.description'],
+    title: t('page.tierlist.meta_title', { monthYear }),
+    description: t('page.tierlist.description', { monthYear }),
   });
 }
 

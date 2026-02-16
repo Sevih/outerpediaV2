@@ -32,20 +32,24 @@ const kr: Record<TranslationKey, string> = {
   'page.home.description':
     'Outerpedia는 아우터플레인의 커뮤니티 기반 위키 및 데이터베이스입니다. 캐릭터 빌드, 티어 리스트, 공략 가이드, 장비 추천 등.',
   'page.characters.title': '아우터플레인 캐릭터 데이터베이스',
+  'page.characters.meta_title': '아우터플레인 캐릭터 데이터베이스 – {monthYear}',
   'page.characters.description':
-    '아우터플레인의 모든 캐릭터를 탐색하세요. 속성, 클래스, 희귀도로 필터링. 빌드, 스킬, 팀 추천 확인.',
+    '아우터플레인의 모든 캐릭터를 탐색하세요. 속성, 클래스, 희귀도로 필터링. 빌드, 스킬, 팀 추천 확인. {monthYear} 업데이트.',
   'page.equipments.title': '아우터플레인 장비 데이터베이스',
+  'page.equipments.meta_title': '아우터플레인 장비 데이터베이스 – {monthYear}',
   'page.equipments.description':
-    '아우터플레인의 모든 장비를 탐색하세요. 무기, 아뮬렛, 탈리스만, 세트 효과 비교.',
+    '아우터플레인의 모든 장비를 탐색하세요. 무기, 아뮬렛, 탈리스만, 세트 효과 비교. {monthYear} 업데이트.',
   'page.tierlist.title': '아우터플레인 티어 리스트',
+  'page.tierlist.meta_title': '아우터플레인 티어 리스트 – {monthYear}',
   'page.tierlist.description':
-    '아우터플레인 티어 리스트. 역할 및 콘텐츠별 캐릭터 순위. 최신 메타 반영.',
+    '아우터플레인 티어 리스트. 역할 및 콘텐츠별 캐릭터 순위. {monthYear} 업데이트.',
   'page.tools.title': '아우터플레인 도구 & 유틸리티',
   'page.tools.description':
     '아우터플레인 도구: 장비 솔버, 팀 플래너, 뽑기 시뮬레이터, 진행 트래커 등.',
   'page.guides.title': '아우터플레인 공략 가이드',
   'page.guides.description':
     '아우터플레인 공략 가이드. 모험 스테이지, 보스전, 길드 레이드, 월드 보스, 초보자 팁.',
+  'page.contributors.title': '프로젝트 기여자',
   'page.legal.title': '법적 고지 & 면책 조항',
   'page.legal.description':
     'Outerpedia의 법적 고지, 면책 조항, 콘텐츠 사용 정책 — 비공식 아우터플레인 팬 프로젝트.',

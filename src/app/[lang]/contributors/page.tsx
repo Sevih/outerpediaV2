@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createPageMetadata({
     lang: lang as Lang,
     path: '/contributors',
-    title: t['contributors.title'],
+    title: t['page.contributors.title'],
     description: t['contributors.description'],
   });
 }

@@ -32,20 +32,24 @@ const jp: Record<TranslationKey, string> = {
   'page.home.description':
     'Outerpediaはアウタープレーンのコミュニティ主導のWikiとデータベースです。キャラクタービルド、ティアリスト、攻略ガイド、装備推奨など。',
   'page.characters.title': 'アウタープレーン キャラクターデータベース',
+  'page.characters.meta_title': 'アウタープレーン キャラクターデータベース – {monthYear}',
   'page.characters.description':
-    'アウタープレーンの全キャラクターを閲覧。属性、クラス、レアリティでフィルター。ビルド、スキル、チーム編成を確認。',
+    'アウタープレーンの全キャラクターを閲覧。属性、クラス、レアリティでフィルター。ビルド、スキル、チーム編成を確認。{monthYear}更新。',
   'page.equipments.title': 'アウタープレーン 装備データベース',
+  'page.equipments.meta_title': 'アウタープレーン 装備データベース – {monthYear}',
   'page.equipments.description':
-    'アウタープレーンの全装備を探索。武器、アミュレット、タリスマン、セット効果のステータス比較。',
+    'アウタープレーンの全装備を探索。武器、アミュレット、タリスマン、セット効果のステータス比較。{monthYear}更新。',
   'page.tierlist.title': 'アウタープレーン ティアリスト',
+  'page.tierlist.meta_title': 'アウタープレーン ティアリスト – {monthYear}',
   'page.tierlist.description':
-    'アウタープレーンのティアリスト。役割・コンテンツ別にキャラクターをランキング。最新メタに対応。',
+    'アウタープレーンのティアリスト。役割・コンテンツ別にキャラクターをランキング。{monthYear}更新。',
   'page.tools.title': 'アウタープレーン ツール & ユーティリティ',
   'page.tools.description':
     'アウタープレーンのツール：装備ソルバー、チームプランナー、ガチャシミュレーター、進捗トラッカーなど。',
   'page.guides.title': 'アウタープレーン 攻略ガイド',
   'page.guides.description':
     'アウタープレーン攻略ガイド。冒険ステージ、ボス戦、ギルドレイド、ワールドボス、初心者向けのヒント。',
+  'page.contributors.title': 'プロジェクト コントリビューター',
   'page.legal.title': '法的通知 & 免責事項',
   'page.legal.description':
     'Outerpediaの法的通知、免責事項、およびコンテンツ使用ポリシー — 非公式アウタープレーンファンプロジェクト。',

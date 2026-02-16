@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createPageMetadata({
     lang: lang as Lang,
     path: '/tools',
-    title: t['nav.utilities'],
+    title: t['page.tools.title'],
     description: t['page.tools.description'],
   });
 }

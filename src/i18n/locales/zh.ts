@@ -31,20 +31,24 @@ const zh: Record<TranslationKey, string> = {
   'page.home.description':
     'Outerpedia是异域战记的社区驱动维基和数据库。查找角色配装、节奏榜、攻略指南、装备推荐等。',
   'page.characters.title': '异域战记 角色数据库',
+  'page.characters.meta_title': '异域战记 角色数据库 – {monthYear}',
   'page.characters.description':
-    '浏览异域战记全部角色。按属性、职业、稀有度筛选。查看配装、技能和队伍推荐。',
+    '浏览异域战记全部角色。按属性、职业、稀有度筛选。查看配装、技能和队伍推荐。{monthYear}更新。',
   'page.equipments.title': '异域战记 装备数据库',
+  'page.equipments.meta_title': '异域战记 装备数据库 – {monthYear}',
   'page.equipments.description':
-    '探索异域战记全部装备。武器、护符、宝物、套装效果数据对比。',
+    '探索异域战记全部装备。武器、护符、宝物、套装效果数据对比。{monthYear}更新。',
   'page.tierlist.title': '异域战记 节奏榜',
+  'page.tierlist.meta_title': '异域战记 节奏榜 – {monthYear}',
   'page.tierlist.description':
-    '异域战记节奏榜。按角色定位和内容类型排名。定期更新最新版本。',
+    '异域战记节奏榜。按角色定位和内容类型排名。{monthYear}更新。',
   'page.tools.title': '异域战记 工具 & 实用程序',
   'page.tools.description':
     '异域战记工具：装备求解器、队伍规划器、抽卡模拟器、进度追踪器等。',
   'page.guides.title': '异域战记 攻略指南',
   'page.guides.description':
     '异域战记攻略指南。冒险关卡、Boss战、公会突袭、世界Boss、新手攻略。',
+  'page.contributors.title': '项目贡献者',
   'page.legal.title': '法律声明 & 免责条款',
   'page.legal.description':
     'Outerpedia法律声明、免责条款及内容使用政策 — 非官方异域战记粉丝项目。',

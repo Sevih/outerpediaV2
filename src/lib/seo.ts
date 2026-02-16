@@ -2,6 +2,12 @@ import type { Metadata } from 'next';
 import { LANGUAGES, LANGS } from '@/lib/i18n/config';
 import type { Lang } from '@/lib/i18n/config';
 
+/** Locale-aware "Month Year" string for dynamic SEO titles (e.g. "February 2026") */
+export function getMonthYear(lang: Lang): string {
+  const now = new Date();
+  return now.toLocaleString(LANGUAGES[lang].htmlLang, { month: 'long', year: 'numeric' });
+}
+
 const SITE_NAME = 'Outerpedia';
 const BASE_DOMAIN = 'outerpedia.com';
 const DEFAULT_OG_IMAGE = '/images/ui/og_default.jpg';

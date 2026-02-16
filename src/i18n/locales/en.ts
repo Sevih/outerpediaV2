@@ -36,20 +36,24 @@ const en = {
   'page.home.description':
     'Outerpedia is a community-driven wiki and database for Outerplane. Find character builds, tier lists, guides, equipment recommendations, and more.',
   'page.characters.title': 'Outerplane Characters Database',
+  'page.characters.meta_title': 'Outerplane Characters Database – {monthYear}',
   'page.characters.description':
-    'Browse all Outerplane characters. Filter by element, class, and rarity. Find builds, skills, and team recommendations.',
+    'Browse all Outerplane characters. Filter by element, class, and rarity. Find builds, skills, and team recommendations. Updated {monthYear}.',
   'page.equipments.title': 'Outerplane Equipment Database',
+  'page.equipments.meta_title': 'Outerplane Equipment Database – {monthYear}',
   'page.equipments.description':
-    'Explore all Outerplane weapons, amulets, talismans, and armor sets. Compare stats and find the best gear for your characters.',
+    'Explore all Outerplane weapons, amulets, talismans, and armor sets. Compare stats and find the best gear for your characters. Updated {monthYear}.',
   'page.tierlist.title': 'Outerplane Tier List',
+  'page.tierlist.meta_title': 'Outerplane Tier List – {monthYear}',
   'page.tierlist.description':
-    'Outerplane tier list ranking all characters by role and content type. Updated regularly with the latest meta.',
+    'Outerplane tier list ranking all characters by role and content type. Updated {monthYear}.',
   'page.tools.title': 'Outerplane Tools & Utilities',
   'page.tools.description':
     'Outerplane tools: gear solver, team planner, pull simulator, progress tracker, and more.',
   'page.guides.title': 'Outerplane Guides',
   'page.guides.description':
     'Outerplane guides for adventure stages, boss fights, guild raids, world bosses, and beginner tips.',
+  'page.contributors.title': 'Project Contributors',
   'page.legal.title': 'Legal Notice & Disclaimer',
   'page.legal.description':
     'Legal notice, disclaimer, and content usage policy for Outerpedia — an unofficial Outerplane fan project.',
