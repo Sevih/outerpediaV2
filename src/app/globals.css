@@ -59,6 +59,7 @@
   h1, h2, h3, h4, h5 {
     position: relative;
     padding-bottom: 0.5rem;
+    width: fit-content;
   }
 
   h1, h2, h3, h4, h5 {
@@ -163,6 +164,7 @@ body {
 
 .h1-page {
   position: relative;
+  width: auto;
   text-align: center;
   color: white;
   -webkit-text-fill-color: white;

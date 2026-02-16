@@ -35,11 +35,12 @@ export default async function LegalNoticePage({ params }: Props) {
       </h1>
 
       <p className="mb-4">
-        <strong>Outerpedia</strong> is an unofficial, fan-made project dedicated
-        to the game <strong>Outerplane</strong>. All names, images, and other
-        assets used on this site are the property of{' '}
-        <strong>VAGAMES CORP</strong> or their respective owners. This site is
-        not affiliated with, endorsed by, or sponsored by VAGAMES CORP.
+        This notice serves as a legal disclaimer for{' '}
+        <strong>Outerpedia</strong>, an unofficial, fan-made project dedicated to
+        the game <strong>Outerplane</strong>. All names, images, and other assets
+        used on this site are the property of <strong>VAGAMES CORP</strong> or
+        their respective owners. This site is not affiliated with, endorsed by,
+        or sponsored by VAGAMES CORP.
       </p>
 
       <p className="mb-4">

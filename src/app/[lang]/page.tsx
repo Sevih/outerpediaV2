@@ -27,6 +27,9 @@ export default async function Home({ params }: Props) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-4">
       <h1 className="h1-page">{t['page.home.title']}</h1>
+      <p className="max-w-xl text-center text-zinc-400">
+        {t['page.home.description']}
+      </p>
       <p>{t['common.coming_soon']}</p>
     </main>
   );
