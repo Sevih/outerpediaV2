@@ -5,7 +5,7 @@ export default async function Home({
 }: {
   params: Promise<{ lang: Lang }>;
 }) {
-  const { lang } = await params;
+  const { lang: _lang } = await params;
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-4">
