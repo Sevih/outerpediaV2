@@ -127,7 +127,7 @@ export default function SkillInline({ character, skill }: Props) {
   return (
     <InlineTooltip content={tooltip}>
       <button type="button" className="cursor-default">
-        <span className="inline-flex items-center gap-0.5 text-equipment">
+        <span className="inline-flex items-center gap-0.5 align-middle text-equipment">
           <span className="relative inline-block h-4.5 w-4.5 shrink-0">
             <Image src={iconPath} alt="" fill sizes="18px" className="object-contain" />
           </span>

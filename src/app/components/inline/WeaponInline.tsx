@@ -60,7 +60,7 @@ export function EquipmentBadge({ icon, bg, label, color = 'text-equipment' }: {
   color?: string;
 }) {
   return (
-    <span className={`inline-flex items-center gap-0.5 ${color}`}>
+    <span className={`inline-flex items-center gap-0.5 align-middle ${color}`}>
       <span className="relative inline-block h-4.5 w-4.5 shrink-0">
         <Image src={bg} alt="" fill sizes="18px" className="object-contain" />
         <Image src={icon} alt="" fill sizes="18px" className="object-contain" />

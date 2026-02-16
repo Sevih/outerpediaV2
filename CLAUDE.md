@@ -11,6 +11,7 @@ Game: **Outerplane**
 ## Shell Environment
 
 - Uses Git Bash, never use `>nul` or `chcp` (Windows CMD syntax)
+- Python is `python` (not `python3`) — Windows has Python 3 at `python`
 - For UTF-8 issues in Python, write to JSON file instead of print()
 
 ## Project Architecture
@@ -123,6 +124,9 @@ Single source of truth: `LANGUAGES`, `LANGS`, `DEFAULT_LANG`, `isValidLang()`. N
 - `en.ts` exports `TranslationKey` type (source of truth)
 - `jp.ts`, `kr.ts`, `zh.ts` are typed as `Record<TranslationKey, string>`
 - Key format: `section.key` (e.g., `nav.characters`, `changelog.title`)
+- **Line alignment**: Keys and section comments must appear at the same line numbers across all 4 files. Long values that span 2 lines must be split consistently in every locale.
+- **No duplicate keys**: Don't create a new key if an existing one already covers the same text and context.
+- **Naming consistency**: Follow the established `section.subsection.key` pattern (e.g., `sys.class.passive.striker`, `sys.subclass.info.attacker`).
 
 ### Localization Patterns
 
@@ -238,6 +242,7 @@ Since presets are in `@layer base`, any Tailwind class wins:
 
 ## Coding Standards
 
+- **Tailwind: always use canonical classes** — never use arbitrary values like `h-[72px]` when a standard class exists (`h-18`). Check Tailwind v4 spacing scale before using `[Xpx]` syntax.
 - No emojis unless explicitly requested
 - Character names must match `data/character/*.json` filenames exactly
 - Slugs are kebab-case, used as primary identifiers (never filter/group on localized fields)

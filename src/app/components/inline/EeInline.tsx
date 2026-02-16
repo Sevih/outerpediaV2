@@ -42,8 +42,8 @@ export default function EeInline({ name }: Props) {
   const tooltip = (
     <div className="flex gap-2">
       <div className="relative h-10 w-10 shrink-0">
-        <Image src="/images/bg/CT_Slot_legendary.webp" alt="" fill sizes="40px" className="object-contain" />
-        <Image src={`/images/characters/ex/${slug}.webp`} alt="" fill sizes="40px" className="object-contain" />
+        <Image src="/images/items/TI_Slot_Unique.png" alt="" fill sizes="40px" className="object-contain" />
+        <Image src={`/images/characters/ee/${slug}.webp`} alt="" fill sizes="40px" className="object-contain" />
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-debuff">{eeName}</span>
@@ -58,8 +58,8 @@ export default function EeInline({ name }: Props) {
     <InlineTooltip content={tooltip}>
       <button type="button" className="cursor-default">
         <EquipmentBadge
-          icon={`/images/characters/ex/${slug}.webp`}
-          bg="/images/bg/CT_Slot_legendary.webp"
+          icon={`/images/characters/ee/${slug}.webp`}
+          bg="/images/items/TI_Slot_Unique.png"
           label={eeName}
           color="text-debuff"
         />

@@ -4,6 +4,21 @@ export const ELEMENTS: ElementType[] = ['Fire', 'Water', 'Earth', 'Light', 'Dark
 export type ClassType = 'Striker' | 'Defender' | 'Ranger' | 'Healer' | 'Mage';
 export const CLASSES: ClassType[] = ['Striker', 'Defender', 'Ranger', 'Healer', 'Mage'];
 
+export type SubClassType =
+  | 'Attacker' | 'Bruiser'
+  | 'Sweeper' | 'Phalanx'
+  | 'Tactician' | 'Vanguard'
+  | 'Sage' | 'Reliever'
+  | 'Wizard' | 'Enchanter';
+
+export const SUBCLASSES: Record<ClassType, [SubClassType, SubClassType]> = {
+  Striker: ['Attacker', 'Bruiser'],
+  Defender: ['Sweeper', 'Phalanx'],
+  Ranger: ['Tactician', 'Vanguard'],
+  Healer: ['Sage', 'Reliever'],
+  Mage: ['Wizard', 'Enchanter'],
+};
+
 export type ChainType = 'Start' | 'Join' | 'Finish';
 export const CHAIN_TYPES: ChainType[] = ['Start', 'Join', 'Finish'];
 

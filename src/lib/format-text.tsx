@@ -61,14 +61,14 @@ export function toKebabCase(input: string): string {
 
 /**
  * Get the rarity background image path.
+ * Maps game rarities to TI_Slot_* images in /images/items/.
  */
 export function getRarityBgPath(rarity: string): string {
-  const normalized = rarity.charAt(0).toUpperCase() + rarity.slice(1).toLowerCase();
   const map: Record<string, string> = {
-    Normal: 'normal',
-    Superior: 'superior',
-    Epic: 'epic',
-    Legendary: 'legendary',
+    normal: 'Normal',
+    superior: 'Magic',
+    epic: 'Rare',
+    legendary: 'Unique',
   };
-  return `/images/bg/CT_Slot_${map[normalized] ?? 'normal'}.webp`;
+  return `/images/items/TI_Slot_${map[rarity.toLowerCase()] ?? 'Normal'}.png`;
 }

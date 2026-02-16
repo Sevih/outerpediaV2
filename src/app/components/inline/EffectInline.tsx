@@ -29,15 +29,21 @@ export default function EffectInline({ name, type }: Props) {
   const label = l(effect, 'label', lang);
   const description = l(effect, 'description', lang);
   const color = type === 'buff' ? 'text-buff' : 'text-debuff';
-  const tooltipBg = type === 'buff' ? 'bg-sky-900/80' : 'bg-red-900/80';
+  const tooltipBg = type === 'buff' ? 'bg-[#1a4a6e]' : 'bg-[#6e2a27]';
+
+  // Irremovable effects (icon contains "Interruption") keep their native colors
+  const isIrremovable = effect.icon.includes('Interruption');
+  const imageFilter = isIrremovable ? undefined : `${type}-icon`;
+
+  const iconPath = `/images/ui/effect/${effect.icon}.webp`;
 
   const tooltip = (
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-1.5">
-        <span className="relative h-4 w-4 shrink-0">
-          <Image src={`/images/ui/effect/${effect.icon}.webp`} alt="" fill sizes="16px" className="object-contain" />
+        <span className="relative h-6 w-6 shrink-0 rounded bg-black">
+          <Image src={iconPath} alt="" fill sizes="24px" className={`object-contain ${imageFilter ?? ''}`} />
         </span>
-        <span className={`text-sm font-bold ${color}`}>{label}</span>
+        <span className="text-sm font-bold text-white">{label}</span>
       </div>
       <p className="text-xs text-neutral-200">{formatEffectText(description)}</p>
     </div>
@@ -45,9 +51,10 @@ export default function EffectInline({ name, type }: Props) {
 
   return (
     <InlineIcon
-      icon={`/images/ui/effect/${effect.icon}.webp`}
+      icon={iconPath}
       label={label}
       color={color}
+      imageClassName={imageFilter}
       tooltip={tooltip}
       tooltipBg={tooltipBg}
     />

@@ -9,7 +9,9 @@ const DEMO_TEXT =
   'Equip your heroes with weapons like {I-W/Surefire Greatsword}, amulets like {I-A/Death\'s Hold}, ' +
   'talismans like {I-T/Executioner\'s Charm}, and armor sets like {AS/Attack Set} for maximum power. ' +
   'Some heroes like {P/Valentine} have powerful skills such as {SK/Valentine|S3} and unique exclusive equipment like {EE/Valentine}. ' +
-  'Don\'t forget to use items like {I-I/Sandwich} to keep your team going!';
+  'Don\'t forget to use items like {I-I/Sandwich} to keep your team going!\n' +
+  'Portrait crop test: {P/Edelweiss}, {P/Demiurge Vlada}, {P/Kitsune of Eternity Tamamo-no-Mae}, ' +
+  '{P/Vlada}, {P/Kuro}, {P/Tamamo-no-Mae}, {P/Maxie}, {P/Monad Eva}.';
 
 const GUIDES = [
   { key: 'faq', nameKey: 'home.beginner.faq', descKey: 'home.beginner.faq.desc' },

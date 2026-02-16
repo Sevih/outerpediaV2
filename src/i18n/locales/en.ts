@@ -1,3 +1,5 @@
+// Source of truth — exports TranslationKey type
+
 const en = {
   // Navigation
   'nav.home': 'Home',
@@ -137,6 +139,13 @@ const en = {
   'sys.class.mage': 'Mage',
   'sys.class.healer': 'Healer',
 
+  // Class passives (AP generation & bonus)
+  'sys.class.passive.striker': 'Generates 5 Action Points at the start of turn. Generates 20 Action Points when attacking. Increases Critical Hit Chance by 5%.',
+  'sys.class.passive.defender': 'Generates 5 Action Points at the start of turn. Generates 35 Action Points when hit. Increases Defense by 15%.',
+  'sys.class.passive.ranger': 'Generates 20 Action Points at the start of turn.',
+  'sys.class.passive.healer': 'Generates 5 Action Points at the start of turn. Generates 25 Action Points when an ally is hit. Increases Health by 10%.',
+  'sys.class.passive.mage': 'Generates 5 Action Points at the start of turn. Generates Action Points when using skills. Increases Attack by 10%.',
+
   // Subclasses
   'sys.subclass.attacker': 'Attacker',
   'sys.subclass.bruiser': 'Bruiser',
@@ -148,6 +157,18 @@ const en = {
   'sys.subclass.phalanx': 'Phalanx',
   'sys.subclass.reliever': 'Reliever',
   'sys.subclass.sage': 'Sage',
+
+  // Subclass descriptions
+  'sys.subclass.info.attacker': 'A brave warrior who crushes enemies with high Attack.',
+  'sys.subclass.info.bruiser': 'A brawler who specializes in prolonged battles with balanced offensive and defensive skills.',
+  'sys.subclass.info.wizard': 'A master of magic who wreaks havoc on the battlefield with powerful spells.',
+  'sys.subclass.info.enchanter': 'A mastermind in battles who weakens enemies with a variety of additional effects.',
+  'sys.subclass.info.vanguard': 'A leader who dominates the enemy with high Speed.',
+  'sys.subclass.info.tactician': 'A master strategist who gets the upper hand in battles by granting buffs to allies.',
+  'sys.subclass.info.sweeper': 'A combat specialist who waits patiently for an opening.',
+  'sys.subclass.info.phalanx': 'A defensive specialist who stands their ground to protect their allies.',
+  'sys.subclass.info.reliever': 'A savior who heals allies in moments of peril.',
+  'sys.subclass.info.sage': 'A support specialist who thwarts the enemy\'s attempts to hamper their allies by granting them various effects.',
 
   // Stats
   'sys.stat.atk': 'Attack',

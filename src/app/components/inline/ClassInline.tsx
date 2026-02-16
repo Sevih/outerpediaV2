@@ -9,10 +9,13 @@ type Props = {
 
 export default function ClassInline({ name, subclass }: Props) {
   const displayName = subclass || name;
+  const icon = subclass
+    ? `/images/ui/class/CM_Sub_Class_${subclass}.png`
+    : `/images/ui/class/CM_Class_${name}.webp`;
 
   return (
     <InlineIcon
-      icon={`/images/ui/class/${name.toLowerCase()}.webp`}
+      icon={icon}
       label={displayName}
       color="text-class"
       underline={false}

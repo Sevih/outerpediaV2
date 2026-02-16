@@ -8,6 +8,7 @@ type Props = {
   label: string;
   color?: string;
   underline?: boolean;
+  imageClassName?: string;
   tooltip?: React.ReactNode;
   tooltipBg?: string;
 };
@@ -21,18 +22,19 @@ export default function InlineIcon({
   label,
   color = 'text-white',
   underline = true,
+  imageClassName,
   tooltip,
   tooltipBg,
 }: Props) {
   const inner = (
-    <span className={`inline-flex items-center gap-0.5 ${color}`}>
+    <span className={`inline-flex items-center gap-0.5 align-middle ${color}`}>
       <span className="relative inline-block h-4.5 w-4.5 shrink-0">
         <Image
           src={icon}
           alt=""
           fill
           sizes="18px"
-          className="object-contain"
+          className={`object-contain ${imageClassName ?? ''}`}
         />
       </span>
       <span className={underline ? 'underline' : ''}>{label}</span>

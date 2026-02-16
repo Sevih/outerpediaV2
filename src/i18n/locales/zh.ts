@@ -1,6 +1,7 @@
 import type { TranslationKey } from './en';
 
 const zh: Record<TranslationKey, string> = {
+  // Navigation
   'nav.home': '主页',
   'nav.characters': '角色',
   'nav.equipment': '装备',
@@ -8,8 +9,10 @@ const zh: Record<TranslationKey, string> = {
   'nav.utilities': '实用工具',
   'nav.tierlist': '节奏榜',
 
+  // Links
   'link.officialwebsite': 'https://outerplane.vagames.kr/index_en.html',
 
+  // Common
   'common.search': '搜索',
   'common.filter': '筛选',
   'common.all': '全部',
@@ -18,15 +21,19 @@ const zh: Record<TranslationKey, string> = {
   'common.loading': '加载中...',
   'common.coming_soon': '即将推出。',
 
+  // Contributors
   'contributors.title': '贡献者',
   'contributors.description':
     '感谢所有做出贡献的人们，你们帮助本站(Outerpedia)成为了异域战记社区的宝贵资源。',
   'contributors.favorite_character': '最喜欢的角色：',
 
+  // Changelog
   'changelog.title': '更新日志',
-  'changelog.description': '追踪Outerpedia全部更新改动——攻略、角色、工具等。',
+  'changelog.description':
+    '追踪Outerpedia全部更新改动——攻略、角色、工具等。',
   'changelog.view_full': '查看完整更新日志',
 
+  // Page metadata
   'page.home.title': 'Outerpedia — 异域战记 Wiki & 数据库',
   'page.home.description':
     'Outerpedia是异域战记的社区驱动维基和数据库。查找角色配装、节奏榜、攻略指南、装备推荐等。',
@@ -57,6 +64,7 @@ const zh: Record<TranslationKey, string> = {
     '异域战记全部有效兑换码。在游戏中兑换免费奖励：以太、招募券等。',
   'promo_codes.expired': '已过期兑换码',
 
+  // Homepage sections
   'home.cta.characters': '查看角色',
   'home.section.banners': '当前限定角色',
   'home.section.codes': '有效兑换码',
@@ -81,12 +89,14 @@ const zh: Record<TranslationKey, string> = {
   'home.banner.ends_in': '剩余',
   'home.banner.ended': '已结束',
 
+  // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': '角色',
   'nav.equipment.short': '装备',
   'nav.tierlist.short': '榜单',
   'nav.utilities.short': '工具',
   'nav.guides.short': '攻略',
 
+  // Footer
   'footer.tagline': '异域战记粉丝制作数据库。',
   'footer.legal_notice': '法律声明',
   'footer.official_website': '官方网站',
@@ -100,6 +110,7 @@ const zh: Record<TranslationKey, string> = {
   'footer.disclaimer':
     'Outerpedia是非官方粉丝制作项目。与异域战记相关的所有内容（包括角色、图片及其他游戏资产）均为VAGAMES CORP所有。本网站与VAGAMES CORP无任何关联、认可或赞助关系。',
 
+  // Legal page content
   'legal.heading': '法律声明 & 免责条款 | Outerpedia',
   'legal.p1': '本声明为Outerpedia（一个专注于游戏Outerplane的非官方粉丝项目）的法律免责声明。本站使用的所有名称、图像和其他资产均为VAGAMES CORP或其各自所有者的财产。本站与VAGAMES CORP无任何关联、认可或赞助关系。',
   'legal.p2': '本网站仅为非商业、教育和信息目的而创建。不使用任何广告、捐赠、跟踪工具或盈利机制。',
@@ -108,23 +119,34 @@ const zh: Record<TranslationKey, string> = {
   'legal.hosting': '托管服务商',
   'legal.p5': '本站由个人维护。根据法国法律(LCEN)，在通过我们的托管服务商收到法律请求时，可向司法机关披露身份信息。',
 
+  // Errors
   'error.404': '页面未找到',
   'error.500': '出现错误',
   'error.back_home': '返回首页',
   'error.try_again': '重试',
 
+  // Elements
   'sys.element.fire': '火',
   'sys.element.water': '水',
   'sys.element.earth': '土',
   'sys.element.light': '光',
   'sys.element.dark': '暗',
 
+  // Classes
   'sys.class.defender': '防御型',
   'sys.class.striker': '攻击型',
   'sys.class.ranger': '速度型',
   'sys.class.mage': '魔法型',
   'sys.class.healer': '恢复型',
 
+  // Class passives (AP generation & bonus)
+  'sys.class.passive.striker': '回合开始时，恢复5AP。攻击时，恢复20AP。暴击率提升5%。',
+  'sys.class.passive.defender': '回合开始时，恢复5AP。受到攻击时，恢复35AP。防御力提升15%。',
+  'sys.class.passive.ranger': '回合开始时恢复20AP。',
+  'sys.class.passive.healer': '回合开始时，恢复5AP。 友军受到攻击时，获得25AP。生命值提升10%。',
+  'sys.class.passive.mage': '回合开始时，恢复5AP。使用技能时，分别获得AP。攻击力提升10%。',
+
+  // Subclasses
   'sys.subclass.attacker': '战士',
   'sys.subclass.bruiser': '决斗家',
   'sys.subclass.wizard': '巫师',
@@ -136,6 +158,19 @@ const zh: Record<TranslationKey, string> = {
   'sys.subclass.reliever': '救援者',
   'sys.subclass.sage': '贤者',
 
+  // Subclass descriptions
+  'sys.subclass.info.attacker': '拥有强大攻击力，能够迅速粉碎敌人。',
+  'sys.subclass.info.bruiser': '攻防实力兼具，擅长持久战。',
+  'sys.subclass.info.wizard': '以强力技能横扫战场。',
+  'sys.subclass.info.enchanter': '利用多种附加效果，伺机攻击敌人弱点。',
+  'sys.subclass.info.vanguard': '快速接近，并瞬间制服敌人。',
+  'sys.subclass.info.tactician': '赋予友军有利效果，使战斗优于我方。',
+  'sys.subclass.info.sweeper': '沉着应对攻击，并窥视进攻机会。',
+  'sys.subclass.info.phalanx': '身为防护专家，善于保护友军。',
+  'sys.subclass.info.reliever': '能够在危急时刻恢复友军。',
+  'sys.subclass.info.sage': '赋予多种效果，阻断敌人妨碍。',
+
+  // Stats
   'sys.stat.atk': '攻击力',
   'sys.stat.def': '防御力',
   'sys.stat.hp': '生命值',

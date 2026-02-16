@@ -215,3 +215,13 @@ body {
 .scroll-offset {
   scroll-margin-top: 5rem;
 }
+
+/* Buff/debuff icon color filters — recolor white game icons.
+   Exception: Interruption icons (irremovable) keep their native colors. */
+img.buff-icon:not([src*="Interruption"]) {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(97%) saturate(932%) hue-rotate(180deg) brightness(1.2);
+}
+
+img.debuff-icon:not([src*="Interruption"]) {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(100%) saturate(2345%) hue-rotate(-10deg) brightness(102%) contrast(105%);
+}

@@ -17,7 +17,7 @@ export default function ElementInline({ element }: Props) {
 
   return (
     <InlineIcon
-      icon={`/images/ui/elem/${element.toLowerCase()}.webp`}
+      icon={`/images/ui/elem/CM_Element_${element}.webp`}
       label={element}
       color={ELEMENT_TEXT[el]}
       underline={false}

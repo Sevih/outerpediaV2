@@ -1,6 +1,7 @@
 import type { TranslationKey } from './en';
 
 const kr: Record<TranslationKey, string> = {
+  // Navigation
   'nav.home': '홈',
   'nav.characters': '캐릭터',
   'nav.equipment': '장비',
@@ -8,8 +9,10 @@ const kr: Record<TranslationKey, string> = {
   'nav.utilities': '유틸리티',
   'nav.tierlist': '티어 리스트',
 
+  // Links
   'link.officialwebsite': 'https://outerplane.vagames.kr/index.html',
 
+  // Common
   'common.search': '검색',
   'common.filter': '필터',
   'common.all': '전체',
@@ -18,16 +21,19 @@ const kr: Record<TranslationKey, string> = {
   'common.loading': '로딩 중...',
   'common.coming_soon': '곧 공개 예정.',
 
+  // Contributors
   'contributors.title': '기여자',
   'contributors.description':
     'Outerpedia를 Outerplane 커뮤니티를 위한 가치 있는 리소스로 만드는 데 기여해 주신 모든 분들께 감사드립니다.',
   'contributors.favorite_character': '최애 캐릭터:',
 
+  // Changelog
   'changelog.title': '변경 로그',
   'changelog.description':
     'Outerpedia의 모든 업데이트(가이드, 캐릭터, 도구 등)를 확인하세요.',
   'changelog.view_full': '전체 변경 로그 보기',
 
+  // Page metadata
   'page.home.title': 'Outerpedia — 아우터플레인 위키 & 데이터베이스',
   'page.home.description':
     'Outerpedia는 아우터플레인의 커뮤니티 기반 위키 및 데이터베이스입니다. 캐릭터 빌드, 티어 리스트, 공략 가이드, 장비 추천 등.',
@@ -58,6 +64,7 @@ const kr: Record<TranslationKey, string> = {
     '아우터플레인 유효한 프로모 코드 목록. 게임 내에서 교환하여 무료 보상 획득: 에테르, 모집 티켓 등.',
   'promo_codes.expired': '만료된 코드',
 
+  // Homepage sections
   'home.cta.characters': '캐릭터 보기',
   'home.section.banners': '현재 픽업 중',
   'home.section.codes': '유효한 프로모 코드',
@@ -82,12 +89,14 @@ const kr: Record<TranslationKey, string> = {
   'home.banner.ends_in': '남은 시간',
   'home.banner.ended': '종료',
 
+  // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': '캐릭터',
   'nav.equipment.short': '장비',
   'nav.tierlist.short': '티어',
   'nav.utilities.short': '도구',
   'nav.guides.short': '가이드',
 
+  // Footer
   'footer.tagline': '아우터플레인 팬메이드 데이터베이스.',
   'footer.legal_notice': '법적 고지',
   'footer.official_website': '공식 웹사이트',
@@ -101,6 +110,7 @@ const kr: Record<TranslationKey, string> = {
   'footer.disclaimer':
     'Outerpedia는 비공식 팬메이드 프로젝트입니다. 캐릭터, 이미지 및 기타 게임 에셋을 포함한 아우터플레인 관련 모든 콘텐츠는 VAGAMES CORP의 재산입니다. 이 웹사이트는 VAGAMES CORP와 어떠한 제휴, 보증 또는 후원 관계도 없습니다.',
 
+  // Legal page content
   'legal.heading': '법적 고지 & 면책 조항 | Outerpedia',
   'legal.p1': '이 고지는 Outerpedia(게임 Outerplane 전용 비공식 팬메이드 프로젝트)의 법적 면책 조항입니다. 본 사이트에서 사용된 모든 이름, 이미지 및 기타 자산은 VAGAMES CORP 또는 각 소유자의 재산입니다. 본 사이트는 VAGAMES CORP와 어떠한 제휴, 보증 또는 후원 관계도 없습니다.',
   'legal.p2': '이 웹사이트는 비영리, 교육 및 정보 제공 목적으로만 제작되었습니다. 광고, 기부, 추적 도구 또는 수익화 메커니즘은 사용되지 않습니다.',
@@ -109,23 +119,34 @@ const kr: Record<TranslationKey, string> = {
   'legal.hosting': '호스팅 제공업체',
   'legal.p5': '본 사이트는 개인이 운영합니다. 프랑스 법(LCEN)에 따라 호스팅 제공업체를 통해 법적 요청 시 사법 당국에 신원 정보를 공개할 수 있습니다.',
 
+  // Errors
   'error.404': '페이지를 찾을 수 없습니다',
   'error.500': '문제가 발생했습니다',
   'error.back_home': '홈으로 돌아가기',
   'error.try_again': '다시 시도',
 
+  // Elements
   'sys.element.fire': '화',
   'sys.element.water': '수',
   'sys.element.earth': '지',
   'sys.element.light': '명',
   'sys.element.dark': '암',
 
+  // Classes
   'sys.class.defender': '방어형',
   'sys.class.striker': '공격형',
   'sys.class.ranger': '속도형',
   'sys.class.mage': '마법형',
   'sys.class.healer': '회복형',
 
+  // Class passives (AP generation & bonus)
+  'sys.class.passive.striker': '턴 시작 시 AP 5 회복. 공격 시 AP 20 회복. 치명 확률 5% 증가.',
+  'sys.class.passive.defender': '턴 시작 시 AP 5 회복. 피격 시 AP 35 회복. 방어력 15% 증가.',
+  'sys.class.passive.ranger': '턴 시작 시 AP 20 회복.',
+  'sys.class.passive.healer': '턴 시작 시 AP 5 회복. 아군 피격 시 AP 25 획득. 체력 10% 증가.',
+  'sys.class.passive.mage': '턴 시작 시 AP 5 회복. 스킬 사용 시 개별 AP 획득. 공격력 10% 증가.',
+
+  // Subclasses
   'sys.subclass.attacker': '어태커',
   'sys.subclass.bruiser': '브루저',
   'sys.subclass.wizard': '위저드',
@@ -137,6 +158,19 @@ const kr: Record<TranslationKey, string> = {
   'sys.subclass.reliever': '릴리버',
   'sys.subclass.sage': '세이지',
 
+  // Subclass descriptions
+  'sys.subclass.info.attacker': '높은 공격력으로 적을 분쇄하는 용맹한 전사.',
+  'sys.subclass.info.bruiser': '공방의 균형이 잘 잡혀 있어, 장기전에 특화된 싸움꾼.',
+  'sys.subclass.info.wizard': '강력한 스킬로 전장을 휩쓸어버리는 마법의 대가.',
+  'sys.subclass.info.enchanter': '다양한 부가 효과로 적의 약체화를 노리는 전장의 조율사.',
+  'sys.subclass.info.vanguard': '빠른 스피드로 적을 순식간에 제압하는 선봉장.',
+  'sys.subclass.info.tactician': '아군에게 이로운 효과를 부여해 우위를 점하는 전략가.',
+  'sys.subclass.info.sweeper': '침착하게 공격을 견디며 기회를 엿보는 전투의 프로.',
+  'sys.subclass.info.phalanx': '아군 보호에 특화된 방어의 스페셜리스트.',
+  'sys.subclass.info.reliever': '위기 상황에서 아군을 회복시키는 구원자.',
+  'sys.subclass.info.sage': '다양한 효과를 부여해 적의 방해를 끊어내는 지원가.',
+
+  // Stats
   'sys.stat.atk': '공격력',
   'sys.stat.def': '방어력',
   'sys.stat.hp': '체력',
