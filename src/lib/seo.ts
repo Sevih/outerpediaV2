@@ -8,16 +8,19 @@ const DEFAULT_OG_IMAGE = '/images/ui/og_home.jpg';
 
 /** Build the full URL for a given language and path */
 export function buildUrl(lang: Lang, path = ''): string {
+  // Normalize: strip root "/" to avoid trailing-slash redirect loops
+  const segment = path === '/' ? '' : path;
+
   // On Vercel: path-based routing, no subdomains
   const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
   if (vercelUrl) {
-    return `https://${vercelUrl}/${lang}${path}`;
+    return `https://${vercelUrl}/${lang}${segment}`;
   }
 
   // Production: subdomain-based routing
   const sub = LANGUAGES[lang].subdomain;
   const prefix = sub ? `${sub}.` : '';
-  return `https://${prefix}${BASE_DOMAIN}${path}`;
+  return `https://${prefix}${BASE_DOMAIN}${segment}`;
 }
 
 /** Build hreflang alternates for a given path */
