@@ -18,8 +18,8 @@ const SIZES = {
     starPos: 'top-0.25 right-0.25',
     starPt: 'pt-2.5',
     starGap: '-space-y-0.5',
-    starSlot: 'w-[10px] h-[57px]',
-    starOffset: '',
+    slotWidth: 10,
+    slotHeight: 57,
     badgeClass: '',
   },
   md: {
@@ -36,8 +36,8 @@ const SIZES = {
     starPos: 'top-1 right-0.75',
     starPt: 'pt-3',
     starGap: '-space-y-0.5',
-    starSlot: 'w-[13px] h-[78px]',
-    starOffset: '',
+    slotWidth: 13,
+    slotHeight: 78,
     badgeClass: 'w-[60px] top-1.5 left-0.5',
   },
   lg: {
@@ -54,8 +54,8 @@ const SIZES = {
     starPos: 'top-1 right-0.75',
     starPt: 'pt-3.5',
     starGap: '-space-y-0.75',
-    starSlot: 'w-[17px] h-[94px]',
-    starOffset: '',
+    slotWidth: 17,
+    slotHeight: 94,
     badgeClass: 'w-[75px] top-2 left-0.5',
   },
 } as const;
@@ -140,15 +140,17 @@ export default function CharacterCard({
       {showStars && rarity && (
         <div className={`absolute ${s.starPos} z-10`} role="img" aria-label={`${rarity} star rarity`}>
           {/* Dark slot background */}
-          <Image
-            src="/images/ui/star/CM_Character_Thumbnail_Star_Slot.webp"
-            alt=""
-            width={0}
-            height={0}
-            className={s.starSlot}
-          />
+          <div className="relative" style={{ width: s.slotWidth, height: s.slotHeight }}>
+            <Image
+              src="/images/ui/star/CM_Character_Thumbnail_Star_Slot.webp"
+              alt=""
+              fill
+              sizes={`${s.slotWidth}px`}
+              className="object-contain"
+            />
+          </div>
           {/* Stars overlaid on the slot */}
-          <div className={`absolute inset-0 flex flex-col items-center justify-start ${s.starGap} ${s.starPt} ${s.starOffset}`}>
+          <div className={`absolute inset-0 flex flex-col items-center justify-start ${s.starGap} ${s.starPt}`}>
             {Array.from({ length: rarity }, (_, i) => (
               <Image
                 key={i}
@@ -156,7 +158,7 @@ export default function CharacterCard({
                 alt=""
                 width={s.starSize}
                 height={s.starSize}
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ width: s.starSize, height: s.starSize }}
               />
             ))}
           </div>
