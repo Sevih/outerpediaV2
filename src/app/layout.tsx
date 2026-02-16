@@ -32,10 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="dark" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${paybooc.variable} antialiased`}
-      >
+    <html className={`dark ${geistSans.variable} ${geistMono.variable} ${paybooc.variable}`} suppressHydrationWarning>
+      <body className="antialiased">
         {children}
         <div id="portal-root" />
       </body>
