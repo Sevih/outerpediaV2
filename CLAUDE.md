@@ -242,6 +242,7 @@ Since presets are in `@layer base`, any Tailwind class wins:
 
 ## Coding Standards
 
+- **Always ensure good desktop + mobile rendering** — every component and page must look good on both desktop and mobile. Think responsive from the start.
 - **Tailwind: always use canonical classes** — never use arbitrary values like `h-[72px]` when a standard class exists (`h-18`). Check Tailwind v4 spacing scale before using `[Xpx]` syntax.
 - No emojis unless explicitly requested
 - Character names must match `data/character/*.json` filenames exactly

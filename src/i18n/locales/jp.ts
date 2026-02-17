@@ -63,6 +63,11 @@ const jp: Record<TranslationKey, string> = {
   'page.promo_codes.description':
     'アウタープレーンの有効なプロモコード一覧。ゲーム内で引き換えて無料報酬を獲得：エーテル、募集チケットなど。',
   'promo_codes.expired': '期限切れコード',
+  'promo_codes.active': '有効',
+  'promo_codes.upcoming': '近日公開',
+  'promo_codes.validity': '{start} — {end}',
+  'promo_codes.redeem_android': 'Android: メニュー → 設定 → クーポン',
+  'promo_codes.redeem_ios': 'iOS: <a href="https://coupon.outerplane.vagames.co.kr:39009/coupon" target="_blank" rel="noopener noreferrer" class="underline text-cyan-400">公式サイトで引き換え</a>',
 
   // Homepage sections
   'home.cta.characters': 'キャラクター一覧',

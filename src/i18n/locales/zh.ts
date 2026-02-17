@@ -63,6 +63,11 @@ const zh: Record<TranslationKey, string> = {
   'page.promo_codes.description':
     '异域战记全部有效兑换码。在游戏中兑换免费奖励：以太、招募券等。',
   'promo_codes.expired': '已过期兑换码',
+  'promo_codes.active': '有效',
+  'promo_codes.upcoming': '即将开放',
+  'promo_codes.validity': '{start} — {end}',
+  'promo_codes.redeem_android': 'Android: 菜单 → 设置 → 兑换码',
+  'promo_codes.redeem_ios': 'iOS: <a href="https://coupon.outerplane.vagames.co.kr:39009/coupon" target="_blank" rel="noopener noreferrer" class="underline text-cyan-400">在官网兑换</a>',
 
   // Homepage sections
   'home.cta.characters': '查看角色',

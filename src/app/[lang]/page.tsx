@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
@@ -43,10 +44,23 @@ export default async function Home({ params }: Props) {
   ]);
 
   return (
-    <main className="mx-auto max-w-6xl space-y-12 px-4 py-6 md:space-y-16 md:px-6">
+    <main>
+      {/* Banner — full width, cropped top & bottom */}
+      <div className="relative h-48 w-full md:h-72 lg:h-80">
+        <Image
+          src="/images/banner.webp"
+          alt="Outerpedia — Outerplane Wiki & Database"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <h1 className="sr-only">{t['page.home.title']}</h1>
+      </div>
+
+      <div className="mx-auto max-w-6xl space-y-12 px-4 py-6 md:space-y-16 md:px-6">
       {/* Hero */}
       <section className="flex flex-col items-center gap-4 text-center">
-        <h1 className="h1-page">{t['page.home.title']}</h1>
         <p className="max-w-xl text-zinc-400">{t['page.home.description']}</p>
         <Link
           href={`/${lang}/characters`}
@@ -78,6 +92,7 @@ export default async function Home({ params }: Props) {
 
       {/* Recent Updates */}
       <RecentUpdates lang={lang} t={t} />
+      </div>
     </main>
   );
 }

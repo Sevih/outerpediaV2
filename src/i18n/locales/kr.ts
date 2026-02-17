@@ -63,6 +63,11 @@ const kr: Record<TranslationKey, string> = {
   'page.promo_codes.description':
     '아우터플레인 유효한 프로모 코드 목록. 게임 내에서 교환하여 무료 보상 획득: 에테르, 모집 티켓 등.',
   'promo_codes.expired': '만료된 코드',
+  'promo_codes.active': '유효',
+  'promo_codes.upcoming': '예정',
+  'promo_codes.validity': '{start} — {end}',
+  'promo_codes.redeem_android': 'Android: 메뉴 → 설정 → 쿠폰',
+  'promo_codes.redeem_ios': 'iOS: <a href="https://coupon.outerplane.vagames.co.kr:39009/coupon" target="_blank" rel="noopener noreferrer" class="underline text-cyan-400">공식 웹사이트에서 교환</a>',
 
   // Homepage sections
   'home.cta.characters': '캐릭터 보기',

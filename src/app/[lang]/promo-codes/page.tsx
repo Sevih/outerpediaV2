@@ -45,11 +45,18 @@ export default async function PromoCodesPage({ params }: Props) {
 
       <PromoCodes
         codes={promoCodes}
+        showAll
         t={{
           title: t['home.section.codes'],
           copy: t['home.codes.copy'],
           copied: t['home.codes.copied'],
           empty: t['home.codes.empty'],
+          active: t['promo_codes.active'],
+          expired: t['promo_codes.expired'],
+          upcoming: t['promo_codes.upcoming'],
+          validity: t['promo_codes.validity'],
+          redeemAndroid: t['promo_codes.redeem_android'],
+          redeemIos: t['promo_codes.redeem_ios'],
         }}
       />
     </main>

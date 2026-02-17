@@ -42,7 +42,7 @@ export default function HeaderClient() {
 
   return (
     <header className="sticky top-0 z-60 border-b border-zinc-800 bg-black/60 backdrop-blur supports-backdrop-filter:bg-black/40">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <div className="flex items-center justify-between px-4 py-3 md:px-8">
         {/* Logo */}
         <Link href={`/${lang}`} className="flex items-center gap-3">
           <span className="relative inline-block h-7 w-7">
@@ -104,7 +104,7 @@ export default function HeaderClient() {
       {/* Mobile nav dropdown */}
       {open && (
         <div className="relative z-60 border-t border-zinc-800 md:hidden">
-          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3">
+          <nav className="flex flex-col gap-1 px-4 py-3">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}

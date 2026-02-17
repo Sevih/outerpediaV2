@@ -63,6 +63,11 @@ const en = {
   'page.promo_codes.description':
     'All active Outerplane promo codes. Redeem them in-game for free rewards: ether, recruitment tickets, and more.',
   'promo_codes.expired': 'Expired Codes',
+  'promo_codes.active': 'Active',
+  'promo_codes.upcoming': 'Upcoming',
+  'promo_codes.validity': '{start} — {end}',
+  'promo_codes.redeem_android': 'Android: Menu → Settings → Coupon',
+  'promo_codes.redeem_ios': 'iOS: <a href="https://coupon.outerplane.vagames.co.kr:39009/coupon" target="_blank" rel="noopener noreferrer" class="underline text-cyan-400">Redeem on the official website</a>',
 
   // Homepage sections
   'home.cta.characters': 'Browse Characters',
