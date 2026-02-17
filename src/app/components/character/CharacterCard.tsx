@@ -2,12 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { ElementType, ClassType, RarityType } from '@/types/enums';
 import type { ReactNode } from 'react';
+import FitText from '@/app/components/ui/FitText';
 
 const SIZES = {
   sm: {
     container: 'h-[128px] w-[66px]',
     sizes: '66px',
-    nameText: 'text-[11px]',
+    namePx: { max: 11, min: 8 },
+    prefixPx: { max: 8, min: 6 },
     nameLeft: 'left-1.5',
     nameOverlay: false,
     iconSize: 18,
@@ -25,7 +27,8 @@ const SIZES = {
   md: {
     container: 'h-[192px] w-[100px]',
     sizes: '100px',
-    nameText: 'text-xs',
+    namePx: { max: 12, min: 9 },
+    prefixPx: { max: 9, min: 7 },
     nameLeft: 'left-2',
     nameOverlay: true,
     iconSize: 22,
@@ -43,7 +46,8 @@ const SIZES = {
   lg: {
     container: 'h-[231px] w-[120px]',
     sizes: '120px',
-    nameText: 'text-sm',
+    namePx: { max: 14, min: 10 },
+    prefixPx: { max: 10, min: 7 },
     nameLeft: 'left-2.5',
     nameOverlay: true,
     iconSize: 26,
@@ -80,6 +84,8 @@ export type CharacterCardSize = keyof typeof SIZES;
 export type Props = {
   id: string;
   name: string;
+  /** Title prefix displayed above the base name (e.g. "Demiurge" for "Demiurge Stella") */
+  prefix?: string | null;
   element?: ElementType;
   classType?: ClassType;
   rarity?: RarityType;
@@ -97,6 +103,7 @@ export type Props = {
 export default function CharacterCard({
   id,
   name,
+  prefix,
   element,
   classType,
   rarity,
@@ -196,12 +203,17 @@ export default function CharacterCard({
 
       {/* Name overlay — bottom left (md/lg only) */}
       {showName && s.nameOverlay && (
-        <p
+        <div
           style={{ WebkitTextStroke: '1px black', paintOrder: 'stroke fill' }}
-          className={`absolute bottom-4 ${s.nameLeft} z-10 max-w-[calc(100%-2rem)] font-bold leading-tight text-white line-clamp-2 ${s.nameText}`}
+          className={`absolute bottom-4 ${s.nameLeft} z-10 max-w-[calc(100%-2rem)] font-bold leading-tight text-white`}
         >
-          {name}
-        </p>
+          {prefix && (
+            <FitText max={s.prefixPx.max} min={s.prefixPx.min} className="text-zinc-300">{prefix}</FitText>
+          )}
+          <FitText max={s.namePx.max} min={s.namePx.min}>
+            {prefix ? name.replace(prefix, '').trim() : name}
+          </FitText>
+        </div>
       )}
     </div>
   );
@@ -221,9 +233,16 @@ export default function CharacterCard({
       <div className="flex flex-col items-center gap-1">
         {wrapper}
         {showName && !s.nameOverlay && (
-          <p className={`text-center leading-tight text-zinc-200 line-clamp-2 ${s.nameText}`} style={{ maxWidth: s.sizes, fontFamily: 'var(--font-geist-sans)' }}>
-            {name}
-          </p>
+          <div className="text-center leading-tight text-zinc-200" style={{ maxWidth: s.sizes, fontFamily: 'var(--font-geist-sans)' }}>
+            {prefix ? (
+              <>
+                <FitText max={s.prefixPx.max} min={s.prefixPx.min} className="text-zinc-400">{prefix}</FitText>
+                <FitText max={s.namePx.max} min={s.namePx.min}>{name.replace(prefix, '').trim()}</FitText>
+              </>
+            ) : (
+              <FitText max={s.namePx.max} min={s.namePx.min}>{name}</FitText>
+            )}
+          </div>
         )}
         {children}
       </div>

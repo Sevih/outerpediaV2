@@ -18,6 +18,7 @@ import { l } from '@/lib/i18n/localize';
 import type { WithLocalizedFields } from '@/types/common';
 import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
 import EffectIcon from '@/app/components/character/EffectIcon';
+import { splitCharacterName } from '@/lib/character-name';
 
 // ── URL encoding maps ──
 
@@ -148,18 +149,24 @@ function groupEffectsByCategory(
   const effectMap = new Map(allEffects.map(e => [e.name, e]));
   const groups = new Map<string, string[]>();
   const order: string[] = [];
+  const seen = new Set<string>();
 
   for (const name of effectNames) {
     const effect = effectMap.get(name);
     if (!effect) continue;
-    const category = effect.category || 'unique';
+    // Deduplicate variants: use canonical (group root) name
+    const canonical = effect.group || name;
+    if (seen.has(canonical)) continue;
+    seen.add(canonical);
+    const canonicalEffect = effectMap.get(canonical) || effect;
+    const category = canonicalEffect.category || 'unique';
     if (category === 'hidden') continue;
     if (!showUnique && category === 'unique') continue;
     if (!groups.has(category)) {
       groups.set(category, []);
       order.push(category);
     }
-    groups.get(category)!.push(name);
+    groups.get(category)!.push(canonical);
   }
 
   return order.map(category => ({
@@ -360,7 +367,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     characters.map(char => ({
       ...char,
       searchNames: getSearchableNames(char, LANGS),
-    })), [characters]);
+    })).sort((a, b) => l(a, 'Fullname', lang).localeCompare(l(b, 'Fullname', lang))), [characters, lang]);
 
   // ── Filtered characters ──
 
@@ -865,19 +872,23 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
 
       {/* Character grid */}
       <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
-        {filtered.map((char, index) => (
-          <ResponsiveCharacterCard
-            key={char.ID}
-            id={char.ID}
-            name={l(char, 'Fullname', lang)}
-            element={char.Element}
-            classType={char.Class}
-            rarity={char.Rarity}
-            tags={char.tags}
-            href={`/${lang}/characters/${char.slug}`}
-            priority={index <= 5}
-          />
-        ))}
+        {filtered.map((char, index) => {
+          const nameParts = splitCharacterName(char.ID, l(char, 'Fullname', lang), lang);
+          return (
+            <ResponsiveCharacterCard
+              key={char.ID}
+              id={char.ID}
+              name={l(char, 'Fullname', lang)}
+              prefix={nameParts.prefix}
+              element={char.Element}
+              classType={char.Class}
+              rarity={char.Rarity}
+              tags={char.tags}
+              href={`/${lang}/characters/${char.slug}`}
+              priority={index <= 5}
+            />
+          );
+        })}
       </div>
     </div>
   );
