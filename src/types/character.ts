@@ -100,3 +100,21 @@ export type CharacterIndexMap = Record<string, CharacterIndex>;
 
 /** English Fullname → character ID reverse map */
 export type CharacterNameToIdMap = Record<string, string>;
+
+/** Enriched character entry for the list page (includes filter data) */
+export type CharacterListEntry = WithLocalizedFields<{
+  ID: string;
+  Fullname: string;
+  slug: string;
+  Element: ElementType;
+  Class: ClassType;
+  SubClass: string;
+  Rarity: RarityType;
+  role: RoleType;
+  Chain_Type: ChainType;
+  gift: string;
+  tags: string[];
+  buff: string[];
+  debuff: string[];
+  effectsBySource: Partial<Record<SkillKey, { buff: string[]; debuff: string[] }>>;
+}, 'Fullname'>;

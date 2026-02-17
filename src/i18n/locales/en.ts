@@ -208,6 +208,71 @@ const en = {
   'sys.stat.cdmg_red': 'Crit Damage Reduction',
   'sys.stat.dmg_percentred': 'Damage Reduction %',
   'sys.stat.cdmg_percentred': 'Crit Damage Reduction %',
+
+  // Filters
+  'filters.rarity': 'Rarity',
+  'filters.elements': 'Elements',
+  'filters.classes': 'Classes',
+  'filters.roles.dps': 'DPS',
+  'filters.roles.support': 'Support',
+  'filters.roles.sustain': 'Sustain',
+
+  // Characters filters
+  'characters.filters.chains': 'Chains',
+  'characters.filters.roles': 'Roles',
+  'characters.filters.gifts': 'Gifts',
+  'characters.filters.showBuffs': 'Show Buffs/Debuffs Filters',
+  'characters.filters.hideBuffs': 'Hide Buffs/Debuffs Filters',
+  'characters.filters.showTags': 'Show Tags',
+  'characters.filters.hideTags': 'Hide Tags',
+  'characters.filters.reset': 'Reset filters',
+  'characters.filters.copy': 'Copy share link',
+  'characters.filters.copied': 'Copied!',
+  'characters.filters.unique': 'Show Unique Effects',
+  'characters.filters.and': 'AND',
+  'characters.filters.or': 'OR',
+  'characters.filters.buffs': 'Buffs',
+  'characters.filters.debuffs': 'Debuffs',
+  'characters.filters.sources.filterBySource': 'Filter by Source',
+  'characters.filters.sources.skill1': 'Skill 1',
+  'characters.filters.sources.skill2': 'Skill 2',
+  'characters.filters.sources.skill3': 'Skill 3',
+  'characters.filters.sources.chainPassive': 'Chain Passive',
+  'characters.filters.sources.dualAttack': 'Dual Attack',
+  'characters.filters.sources.exclusiveEquip': 'Exclusive Equipment',
+
+  // Characters common
+  'characters.loading': 'Loading characters...',
+  'characters.common.matches': '{count, plural, one {# match} other {# matches}}',
+
+  // Characters chains
+  'characters.chains.starter': 'Starter',
+  'characters.chains.companion': 'Companion',
+  'characters.chains.finisher': 'Finisher',
+
+  // Characters gifts
+  'characters.gifts.science': 'Science',
+  'characters.gifts.luxury': 'Luxury',
+  'characters.gifts.magicTool': 'Magic Tool',
+  'characters.gifts.craftwork': 'Craftwork',
+  'characters.gifts.naturalObject': 'Natural Object',
+
+  // Characters effects groups
+  'characters.effectsGroups.buff.statBoosts': 'Stat Boosts',
+  'characters.effectsGroups.buff.supporting': 'Supporting',
+  'characters.effectsGroups.buff.utility': 'Utility',
+  'characters.effectsGroups.buff.unique': 'Unique',
+  'characters.effectsGroups.buff.hidden': 'Hidden',
+  'characters.effectsGroups.debuff.statReduction': 'Stat Reduction',
+  'characters.effectsGroups.debuff.cc': 'Control Effects (CC)',
+  'characters.effectsGroups.debuff.dot': 'Damage Over Time (DoT)',
+  'characters.effectsGroups.debuff.utility': 'Utility Debuffs',
+  'characters.effectsGroups.debuff.unique': 'Unique',
+  'characters.effectsGroups.debuff.hidden': 'Hidden',
+
+  // Characters tags
+  'characters.tags.types.mechanic': 'Mechanic',
+  'characters.tags.types.unit-type': 'Unit Type',
 } as const;
 
 export default en;

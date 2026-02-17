@@ -1,4 +1,6 @@
-import { spawn, type ChildProcess } from 'child_process';
+import { spawn, execSync, type ChildProcess } from 'child_process';
+import { rmSync } from 'fs';
+import { join } from 'path';
 
 const children: ChildProcess[] = [];
 
@@ -20,14 +22,23 @@ function cleanup() {
 process.on('SIGINT', cleanup);
 process.on('SIGTERM', cleanup);
 
-// 1. Run image conversion (one-shot scan + watch)
+// 1. Clean .next cache
+const nextDir = join(process.cwd(), '.next');
+try { rmSync(nextDir, { recursive: true, force: true }); } catch {}
+console.log('[dev] Cleaned .next cache');
+
+// 2. Run pipeline (sync, before anything else)
+console.log('[dev] Running pipeline...');
+execSync('npx tsx pipeline/run.ts', { stdio: 'inherit' });
+
+// 2. Run image conversion (one-shot scan + watch)
 const imageWatcher = spawn('npx', ['tsx', 'scripts/convert-images.ts', '--watch'], {
   stdio: 'inherit',
   shell: true,
 });
 children.push(imageWatcher);
 
-// 2. Start Next.js dev server after a short delay
+// 3. Start Next.js dev server after a short delay
 setTimeout(() => {
   const nextDev = spawn('npx', ['next', 'dev', '--port', '3001'], {
     stdio: 'inherit',

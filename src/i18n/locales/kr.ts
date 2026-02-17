@@ -208,6 +208,71 @@ const kr: Record<TranslationKey, string> = {
   'sys.stat.cdmg_red': '받는 치명 피해 감소',
   'sys.stat.dmg_percentred': '받는 피해 감소 %',
   'sys.stat.cdmg_percentred': '받는 치명 피해 감소 %',
+
+  // Filters
+  'filters.rarity': '희귀도',
+  'filters.elements': '속성',
+  'filters.classes': '클래스',
+  'filters.roles.dps': 'DPS',
+  'filters.roles.support': '서포트',
+  'filters.roles.sustain': '탱커',
+
+  // Characters filters
+  'characters.filters.chains': '체인',
+  'characters.filters.roles': '역할',
+  'characters.filters.gifts': '선물',
+  'characters.filters.showBuffs': '버프/디버프 필터 보기',
+  'characters.filters.hideBuffs': '버프/디버프 필터 숨기기',
+  'characters.filters.showTags': '태그 보기',
+  'characters.filters.hideTags': '태그 숨기기',
+  'characters.filters.reset': '필터 초기화',
+  'characters.filters.copy': '공유 링크 복사',
+  'characters.filters.copied': '복사됨!',
+  'characters.filters.unique': '고유 효과 보기',
+  'characters.filters.and': '그리고',
+  'characters.filters.or': '또는',
+  'characters.filters.buffs': '버프',
+  'characters.filters.debuffs': '디버프',
+  'characters.filters.sources.filterBySource': '소스별 필터',
+  'characters.filters.sources.skill1': '스킬 1',
+  'characters.filters.sources.skill2': '스킬 2',
+  'characters.filters.sources.skill3': '스킬 3',
+  'characters.filters.sources.chainPassive': '체인 패시브',
+  'characters.filters.sources.dualAttack': '듀얼 어택',
+  'characters.filters.sources.exclusiveEquip': '전용 장비',
+
+  // Characters common
+  'characters.loading': '캐릭터 불러오는 중...',
+  'characters.common.matches': '{count, plural, one {#개 일치} other {#개 일치}}',
+
+  // Characters chains
+  'characters.chains.starter': '시작',
+  'characters.chains.companion': '연계',
+  'characters.chains.finisher': '마무리',
+
+  // Characters gifts
+  'characters.gifts.science': '과학',
+  'characters.gifts.luxury': '사치품',
+  'characters.gifts.magicTool': '마도구',
+  'characters.gifts.craftwork': '공예품',
+  'characters.gifts.naturalObject': '자연물',
+
+  // Characters effects groups
+  'characters.effectsGroups.buff.statBoosts': '스탯 상승',
+  'characters.effectsGroups.buff.supporting': '지원',
+  'characters.effectsGroups.buff.utility': '유틸리티',
+  'characters.effectsGroups.buff.unique': '고유',
+  'characters.effectsGroups.buff.hidden': '숨겨진 효과',
+  'characters.effectsGroups.debuff.statReduction': '스탯 감소',
+  'characters.effectsGroups.debuff.cc': '군중 제어 (CC)',
+  'characters.effectsGroups.debuff.dot': '지속 피해 (DoT)',
+  'characters.effectsGroups.debuff.utility': '유틸 디버프',
+  'characters.effectsGroups.debuff.unique': '고유',
+  'characters.effectsGroups.debuff.hidden': '숨겨진 효과',
+
+  // Characters tags
+  'characters.tags.types.mechanic': '메카닉',
+  'characters.tags.types.unit-type': '유닛 타입',
 };
 
 export default kr;

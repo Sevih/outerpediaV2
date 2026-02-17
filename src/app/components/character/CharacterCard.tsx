@@ -221,7 +221,7 @@ export default function CharacterCard({
       <div className="flex flex-col items-center gap-1">
         {wrapper}
         {showName && !s.nameOverlay && (
-          <p className={`text-center leading-tight text-zinc-200 line-clamp-2 ${s.nameText}`} style={{ maxWidth: s.sizes }}>
+          <p className={`text-center leading-tight text-zinc-200 line-clamp-2 ${s.nameText}`} style={{ maxWidth: s.sizes, fontFamily: 'var(--font-geist-sans)' }}>
             {name}
           </p>
         )}

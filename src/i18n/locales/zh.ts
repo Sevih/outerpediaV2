@@ -208,6 +208,71 @@ const zh: Record<TranslationKey, string> = {
   'sys.stat.cdmg_red': '受暴击伤害降低',
   'sys.stat.dmg_percentred': '受伤害降低 %',
   'sys.stat.cdmg_percentred': '受暴击伤害降低 %',
+
+  // Filters
+  'filters.rarity': '星级',
+  'filters.elements': '属性',
+  'filters.classes': '战斗类型',
+  'filters.roles.dps': '输出',
+  'filters.roles.support': '辅助',
+  'filters.roles.sustain': '奶/坦',
+
+  // Characters filters
+  'characters.filters.chains': '连携技能类型',
+  'characters.filters.roles': '角色定位',
+  'characters.filters.gifts': '礼物类型',
+  'characters.filters.showBuffs': '显示BUFF/DEBUFF筛选',
+  'characters.filters.hideBuffs': '隐藏BUFF/DEBUFF筛选',
+  'characters.filters.showTags': '显示标签',
+  'characters.filters.hideTags': '隐藏标签',
+  'characters.filters.reset': '清空筛选',
+  'characters.filters.copy': '复制分享链接',
+  'characters.filters.copied': '已复制！',
+  'characters.filters.unique': '显示角色独有效果',
+  'characters.filters.and': 'AND',
+  'characters.filters.or': 'OR',
+  'characters.filters.buffs': '增益BUFF',
+  'characters.filters.debuffs': '减益DEBUFF',
+  'characters.filters.sources.filterBySource': '选择技能：',
+  'characters.filters.sources.skill1': '基本技能',
+  'characters.filters.sources.skill2': '特殊技能',
+  'characters.filters.sources.skill3': '必杀技',
+  'characters.filters.sources.chainPassive': '连携被动',
+  'characters.filters.sources.dualAttack': '夹攻',
+  'characters.filters.sources.exclusiveEquip': '专属装备',
+
+  // Characters common
+  'characters.loading': '角色加载中……',
+  'characters.common.matches': '{count, plural, one {# 个匹配} other {# 个匹配}}',
+
+  // Characters chains
+  'characters.chains.starter': '起始',
+  'characters.chains.companion': '自由顺序',
+  'characters.chains.finisher': '收尾',
+
+  // Characters gifts
+  'characters.gifts.science': '科学',
+  'characters.gifts.luxury': '奢侈品',
+  'characters.gifts.magicTool': '魔法道具',
+  'characters.gifts.craftwork': '工艺品',
+  'characters.gifts.naturalObject': '自然物件',
+
+  // Characters effects groups
+  'characters.effectsGroups.buff.statBoosts': '能力值强化',
+  'characters.effectsGroups.buff.supporting': '支援效果',
+  'characters.effectsGroups.buff.utility': '其他效果',
+  'characters.effectsGroups.buff.unique': '独有效果',
+  'characters.effectsGroups.buff.hidden': '隐藏效果',
+  'characters.effectsGroups.debuff.statReduction': '能力值弱化',
+  'characters.effectsGroups.debuff.cc': '控制效果（控）',
+  'characters.effectsGroups.debuff.dot': '持续伤害（DOT）',
+  'characters.effectsGroups.debuff.utility': '其他效果',
+  'characters.effectsGroups.debuff.unique': '独有效果',
+  'characters.effectsGroups.debuff.hidden': '隐藏效果',
+
+  // Characters tags
+  'characters.tags.types.mechanic': '机制',
+  'characters.tags.types.unit-type': '获得方式',
 };
 
 export default zh;

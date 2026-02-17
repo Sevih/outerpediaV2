@@ -208,6 +208,71 @@ const jp: Record<TranslationKey, string> = {
   'sys.stat.cdmg_red': '被会心ダメDOWN',
   'sys.stat.dmg_percentred': '被ダメDOWN %',
   'sys.stat.cdmg_percentred': '被会心ダメDOWN %',
+
+  // Filters
+  'filters.rarity': 'レアリティ',
+  'filters.elements': '属性',
+  'filters.classes': 'クラス',
+  'filters.roles.dps': 'DPS',
+  'filters.roles.support': 'サポート',
+  'filters.roles.sustain': '耐久',
+
+  // Characters filters
+  'characters.filters.chains': 'チェイン',
+  'characters.filters.roles': '役割',
+  'characters.filters.gifts': '贈り物',
+  'characters.filters.showBuffs': 'バフ/デバフフィルターを表示',
+  'characters.filters.hideBuffs': 'バフ/デバフフィルターを非表示',
+  'characters.filters.showTags': 'タグを表示',
+  'characters.filters.hideTags': 'タグを非表示',
+  'characters.filters.reset': 'フィルターをリセット',
+  'characters.filters.copy': '共有リンクをコピー',
+  'characters.filters.copied': 'コピーしました！',
+  'characters.filters.unique': 'ユニーク効果を表示',
+  'characters.filters.and': 'かつ',
+  'characters.filters.or': 'または',
+  'characters.filters.buffs': 'バフ',
+  'characters.filters.debuffs': 'デバフ',
+  'characters.filters.sources.filterBySource': 'ソースでフィルタ',
+  'characters.filters.sources.skill1': 'スキル1',
+  'characters.filters.sources.skill2': 'スキル2',
+  'characters.filters.sources.skill3': 'スキル3',
+  'characters.filters.sources.chainPassive': 'チェーンパッシブ',
+  'characters.filters.sources.dualAttack': 'デュアルアタック',
+  'characters.filters.sources.exclusiveEquip': '専用装備',
+
+  // Characters common
+  'characters.loading': 'キャラクターを読み込み中...',
+  'characters.common.matches': '{count, plural, one {# 件一致} other {# 件一致}}',
+
+  // Characters chains
+  'characters.chains.starter': '開始',
+  'characters.chains.companion': '仲間',
+  'characters.chains.finisher': 'フィニッシャー',
+
+  // Characters gifts
+  'characters.gifts.science': '科学',
+  'characters.gifts.luxury': '高級品',
+  'characters.gifts.magicTool': '魔道具',
+  'characters.gifts.craftwork': '工芸品',
+  'characters.gifts.naturalObject': '自然物',
+
+  // Characters effects groups
+  'characters.effectsGroups.buff.statBoosts': 'ステータス強化',
+  'characters.effectsGroups.buff.supporting': '支援',
+  'characters.effectsGroups.buff.utility': 'ユーティリティ',
+  'characters.effectsGroups.buff.unique': 'ユニーク',
+  'characters.effectsGroups.buff.hidden': '隠し効果',
+  'characters.effectsGroups.debuff.statReduction': 'ステータス低下',
+  'characters.effectsGroups.debuff.cc': '行動制御 (CC)',
+  'characters.effectsGroups.debuff.dot': '持続ダメージ (DoT)',
+  'characters.effectsGroups.debuff.utility': 'ユーティリティデバフ',
+  'characters.effectsGroups.debuff.unique': 'ユニーク',
+  'characters.effectsGroups.debuff.hidden': '隠し効果',
+
+  // Characters tags
+  'characters.tags.types.mechanic': 'メカニック',
+  'characters.tags.types.unit-type': 'ユニットタイプ',
 };
 
 export default jp;
