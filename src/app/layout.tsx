@@ -11,6 +11,11 @@ export const metadata: Metadata = {
       'application/rss+xml': '/feed',
     },
   },
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'black-translucent',
+  },
 };
 
 const geistSans = Geist({
@@ -40,6 +45,11 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         <div id="portal-root" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js'))}`,
+          }}
+        />
       </body>
     </html>
   );

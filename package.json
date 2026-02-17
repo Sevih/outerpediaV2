@@ -5,14 +5,17 @@
   "scripts": {
     "dev": "tsx scripts/dev-with-images.ts",
     "dev:next": "next dev --port 3001",
-    "build": "npm run images && npm run pipeline && next build",
+    "set-version": "node scripts/set-version.js",
+    "build": "npm run set-version && npm run images && npm run pipeline && next build",
     "start": "next start --port 3001",
     "lint": "eslint",
     "pipeline": "tsx pipeline/run.ts",
     "pipeline:step": "tsx pipeline/run.ts --step",
     "pipeline:validate": "tsx pipeline/run.ts --validate",
     "images": "tsx scripts/convert-images.ts",
-    "images:watch": "tsx scripts/convert-images.ts --watch"
+    "images:watch": "tsx scripts/convert-images.ts --watch",
+    "commit": "node scripts/commit.mjs --skip-build",
+    "commit:fast": "node scripts/commit.mjs --skip-build"
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "1.1.15",

@@ -1,4 +1,8 @@
 import type { NextConfig } from "next";
+import { readFileSync } from "fs";
+
+// Read version from package.json (single source of truth)
+const { version } = JSON.parse(readFileSync("./package.json", "utf-8"));
 
 const securityHeaders = [
   { key: 'X-DNS-Prefetch-Control', value: 'on' },
@@ -28,6 +32,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  env: {
+    NEXT_PUBLIC_APP_VERSION: version,
+  },
+
   images: {
     unoptimized: true,
   },

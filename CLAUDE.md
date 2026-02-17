@@ -73,10 +73,15 @@ src/
 │   │   ├── error.tsx
 │   │   ├── layout.tsx     # Header + Footer + I18nProvider
 │   │   └── page.tsx       # Homepage
+│   ├── api/search-index/  # Serves characters-index.json to client (search)
+│   ├── feed/              # RSS 2.0 feed from changelog.json
+│   ├── manifest.ts        # PWA manifest (auto-served at /manifest.webmanifest)
 │   ├── components/
-│   │   └── layout/        # Header, HeaderClient, Footer, LanguageSwitcher
+│   │   ├── layout/        # Header, HeaderClient, Footer, LanguageSwitcher
+│   │   ├── ui/            # SearchModal, BackToTop, Breadcrumbs, etc.
+│   │   └── home/          # Homepage sections (DiscordBanner, etc.)
 │   ├── global-error.tsx
-│   ├── layout.tsx         # Root layout (fonts, metadataBase, portal-root)
+│   ├── layout.tsx         # Root layout (fonts, metadataBase, SW registration, PWA meta)
 │   ├── not-found.tsx      # Root 404
 │   ├── robots.ts
 │   └── sitemap.ts
@@ -87,6 +92,7 @@ src/
 │   ├── contexts/          # I18nContext (client), server-i18n
 │   ├── data/              # Data access layer
 │   ├── i18n/              # config.ts (LANGUAGES, Lang, LANGS), localize.ts
+│   ├── nav.ts             # Shared nav config (NAV_ITEMS, ALL_PAGES) for header + search
 │   ├── seo.ts             # createPageMetadata()
 │   └── theme.ts           # Design token helpers
 ├── types/                 # TypeScript type definitions
@@ -147,10 +153,14 @@ type LangMap = Partial<Record<Lang, string>>
 - `l(obj, field, lang)` — Get localized suffix field with English fallback
 - `lRec(record, lang)` — Get value from LangMap with English fallback
 
-### Routing
-- **Dev**: `localhost:3001/jp/characters/alice` (path segment `[lang]`)
-- **Prod**: `jp.outerpedia.com/characters/alice` (subdomain via middleware)
-- Code always uses `[lang]` App Router segment. LanguageSwitcher handles both modes.
+### Routing & Proxy (`src/proxy.ts`)
+
+**There is NO middleware.ts.** Next.js 16 deprecated middleware. Routing is handled by `src/proxy.ts`:
+- **Dev**: path-based → `localhost:3001/jp/characters` (stays as-is)
+- **Prod**: subdomain-based → `jp.outerpedia.com/characters` (rewritten to `/jp/characters`)
+- Paths without a valid lang prefix get redirected to `/{DEFAULT_LANG}{pathname}`
+- **Excluded from proxy**: `/_next`, `/api`, `/images`, `/feed`, and files with extensions (`.xml`, `.ico`, etc.)
+- To add a new root-level route (outside `[lang]`), add it to the exclusion list in `proxy.ts`
 
 ### Inline Tags
 Format `{X/value}` for inline component injection in text. These tags stay **identical across all languages**.
@@ -250,3 +260,43 @@ Since presets are in `@layer base`, any Tailwind class wins:
 - Slugs are kebab-case, used as primary identifiers (never filter/group on localized fields)
 - Stats in requirements are strings, not numbers
 - Proactively flag optimization opportunities (architecture, security, performance)
+
+## Versioning
+
+`package.json` version is the **single source of truth**.
+
+- `next.config.ts` reads it → exposes `NEXT_PUBLIC_APP_VERSION` (displayed in Footer)
+- `scripts/set-version.js` injects it into `public/sw.js` cache name
+- To bump: `node scripts/set-version.js 1.2.3` (updates `package.json` + SW)
+
+## PWA & Service Worker
+
+- **Manifest**: `src/app/manifest.ts` → auto-served at `/manifest.webmanifest`
+- **Service Worker**: `public/sw.js` — cache strategies:
+  - `_next/static/` → cache-first (filenames contain content hash)
+  - `/images/`, `/icons/`, fonts → stale-while-revalidate
+  - Pages, API → network-only
+- **Icons**: `public/icons/icon-192x192.png`, `icon-512x512.png`, `public/apple-touch-icon.png`
+- **Registration**: inline script in root `layout.tsx`
+- Cache name (`outerpedia-cache-vX.Y.Z`) auto-updated by `set-version.js` at build time
+
+## Search (`Ctrl+K`)
+
+- `SearchTrigger` (button) + `SearchModal` (command palette) in `src/app/components/ui/SearchModal.tsx`
+- Searches pages (from `src/lib/nav.ts` — shared config) and characters (from `/api/search-index`)
+- Navigation config: `NAV_ITEMS`, `EXTRA_PAGES`, `ALL_PAGES` in `nav.ts` — update there when adding pages
+
+## RSS Feed
+
+- Route handler at `src/app/feed/route.ts` → generates RSS 2.0 from `data/changelog.json`
+- **Must be excluded from proxy** in `src/proxy.ts` (root-level route, not under `[lang]`)
+
+## Scripts
+
+```bash
+npm run commit       # Version bump + git add/commit/push (no build, Vercel handles it)
+npm run commit:fast  # Same (alias)
+npm run set-version  # Sync package.json version → sw.js cache name
+npm run pipeline     # Run data generation pipeline
+npm run images       # Convert images to webp
+```

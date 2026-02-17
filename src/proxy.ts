@@ -10,11 +10,12 @@ import { DEFAULT_LANG, isValidLang } from '@/lib/i18n/config';
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Skip static assets and internal routes
+  // Skip static assets, API routes, and root-level routes
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
     pathname.startsWith('/images') ||
+    pathname.startsWith('/feed') ||
     pathname.includes('.')
   ) {
     return NextResponse.next();
