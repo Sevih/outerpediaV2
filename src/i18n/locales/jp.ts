@@ -91,6 +91,12 @@ const jp: Record<TranslationKey, string> = {
   'home.codes.copied': 'コピー済み！',
   'home.codes.empty': '現在有効なコードはありません。',
   'home.codes.view_all': '有効なコード{count}件をすべて見る',
+  'home.discord.title': 'Discordに参加しよう',
+  'home.discord.description':
+    '編成共有、質問、考察をコミュニティと一緒に楽しもう。',
+  'home.discord.join': '参加',
+  'home.discord.members': '{count}人のメンバー',
+  'home.discord.online': '{count}人がオンライン',
   'home.banner.ends_in': '残り',
   'home.banner.ended': '終了',
 

@@ -170,26 +170,26 @@ export default function CharacterCard({
 
       {/* Element icon — bottom right */}
       {showIcons && element && (
-        <div className={`absolute ${s.elemBottom} right-1 z-10`}>
+        <div className={`absolute ${s.elemBottom} right-1 z-10`} style={{ width: s.iconSize, height: s.iconSize }}>
           <Image
             src={`/images/ui/elem/CM_Element_${element}.webp`}
             alt={element}
-            width={s.iconSize}
-            height={s.iconSize}
-            style={{ width: 'auto', height: 'auto' }}
+            fill
+            sizes={`${s.iconSize}px`}
+            className="object-contain"
           />
         </div>
       )}
 
       {/* Class icon — above element */}
       {showIcons && classType && (
-        <div className={`absolute ${s.classBottom} right-1 z-10`}>
+        <div className={`absolute ${s.classBottom} right-1 z-10`} style={{ width: s.classIconSize, height: s.classIconSize }}>
           <Image
             src={`/images/ui/class/CM_Class_${classType}.webp`}
             alt={classType}
-            width={s.classIconSize}
-            height={s.classIconSize}
-            style={{ width: 'auto', height: 'auto' }}
+            fill
+            sizes={`${s.classIconSize}px`}
+            className="object-contain"
           />
         </div>
       )}

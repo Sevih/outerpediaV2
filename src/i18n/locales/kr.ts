@@ -91,6 +91,12 @@ const kr: Record<TranslationKey, string> = {
   'home.codes.copied': '복사됨!',
   'home.codes.empty': '현재 유효한 코드가 없습니다.',
   'home.codes.view_all': '유효한 코드 {count}개 모두 보기',
+  'home.discord.title': 'Discord에 참여하세요',
+  'home.discord.description':
+    '팀 편성 공유, 질문, 공략 토론을 커뮤니티와 함께하세요.',
+  'home.discord.join': '참여',
+  'home.discord.members': '{count}명의 멤버',
+  'home.discord.online': '{count}명 온라인',
   'home.banner.ends_in': '남은 시간',
   'home.banner.ended': '종료',
 

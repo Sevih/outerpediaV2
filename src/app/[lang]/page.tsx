@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 import type { Lang } from '@/lib/i18n/config';
@@ -10,6 +9,7 @@ import CurrentBanners from '@/app/components/home/CurrentBanners';
 import PromoCodes from '@/app/components/home/PromoCodes';
 import BeginnerGuides from '@/app/components/home/BeginnerGuides';
 import RecentUpdates from '@/app/components/home/RecentUpdates';
+import DiscordBanner from '@/app/components/home/DiscordBanner';
 
 export const revalidate = 86400;
 
@@ -60,15 +60,12 @@ export default async function Home({ params }: Props) {
 
       <div className="mx-auto max-w-6xl space-y-12 px-4 py-6 md:space-y-16 md:px-6">
       {/* Hero */}
-      <section className="flex flex-col items-center gap-4 text-center">
-        <p className="max-w-xl text-zinc-400">{t['page.home.description']}</p>
-        <Link
-          href={`/${lang}/characters`}
-          className="mt-2 inline-block rounded-lg bg-cyan-700 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-cyan-600"
-        >
-          {t['home.cta.characters']}
-        </Link>
+      <section className="text-center">
+        <p className="mx-auto max-w-2xl text-zinc-400">{t['page.home.description']}</p>
       </section>
+
+      {/* Discord */}
+      <DiscordBanner t={t} />
 
       {/* Desktop: left (banners + beginner) | right (codes spanning both rows) */}
       {/* Mobile: banners → codes → beginner */}
@@ -81,7 +78,7 @@ export default async function Home({ params }: Props) {
           <PromoCodes
             codes={promoCodes}
             lang={lang}
-            limit={8}
+            limit={5}
             t={{
               title: t['home.section.codes'],
               copy: t['home.codes.copy'],

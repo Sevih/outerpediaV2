@@ -91,6 +91,12 @@ const en = {
   'home.codes.copied': 'Copied!',
   'home.codes.empty': 'No active codes right now.',
   'home.codes.view_all': 'View all {count} active codes',
+  'home.discord.title': 'Join our Discord',
+  'home.discord.description':
+    'Share team comps, ask questions, or theorycraft together with the community.',
+  'home.discord.join': 'Join',
+  'home.discord.members': '{count} members',
+  'home.discord.online': '{count} online',
   'home.banner.ends_in': 'Ends in',
   'home.banner.ended': 'Ended',
 

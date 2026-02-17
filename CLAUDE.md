@@ -238,6 +238,7 @@ Since presets are in `@layer base`, any Tailwind class wins:
 - **Server components by default**, `'use client'` only when needed (hooks, interactivity)
 - `useMemo` for filters/sorts depending on props or state
 - Images: avoid fixed `width`/`height` — use container with `position: relative` + `<Image fill sizes="Xpx" className="object-contain" />`
+- **Image formats**: always use `.webp` in components. For metadata (OG images, Twitter cards), always use `.jpg` or `.png` — never `.webp` (some crawlers don't support it).
 - Favicon lives at `src/app/favicon.ico` (App Router convention)
 
 ## Coding Standards

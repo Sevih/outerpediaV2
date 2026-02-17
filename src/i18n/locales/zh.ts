@@ -91,6 +91,12 @@ const zh: Record<TranslationKey, string> = {
   'home.codes.copied': '已复制！',
   'home.codes.empty': '当前没有有效兑换码。',
   'home.codes.view_all': '查看全部{count}个有效兑换码',
+  'home.discord.title': '加入我们的Discord',
+  'home.discord.description':
+    '与社区一起分享队伍搭配、提问或进行理论研究。',
+  'home.discord.join': '加入',
+  'home.discord.members': '{count} 位成员',
+  'home.discord.online': '{count} 人在线',
   'home.banner.ends_in': '剩余',
   'home.banner.ended': '已结束',
 
