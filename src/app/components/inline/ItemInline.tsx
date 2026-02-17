@@ -23,7 +23,7 @@ export default function ItemInline({ name }: Props) {
 
   const label = l(item, 'name', lang);
   const description = l(item, 'description', lang);
-  const iconPath = `/images/items/${item.icon}.png`;
+  const iconPath = `/images/items/${item.icon}.webp`;
 
   const tooltip = (
     <div className="flex gap-2">

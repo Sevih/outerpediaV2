@@ -70,5 +70,5 @@ export function getRarityBgPath(rarity: string): string {
     epic: 'Rare',
     legendary: 'Unique',
   };
-  return `/images/items/TI_Slot_${map[rarity.toLowerCase()] ?? 'Normal'}.png`;
+  return `/images/items/TI_Slot_${map[rarity.toLowerCase()] ?? 'Normal'}.webp`;
 }

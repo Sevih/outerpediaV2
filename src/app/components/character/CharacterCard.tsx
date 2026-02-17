@@ -118,7 +118,7 @@ export default function CharacterCard({
       <Image
         fill
         sizes={s.sizes}
-        src={`/images/characters/portrait/CT_${id}.png`}
+        src={`/images/characters/portrait/CT_${id}.webp`}
         alt={name}
         className="object-cover"
         priority={priority}

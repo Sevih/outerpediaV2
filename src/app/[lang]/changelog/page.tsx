@@ -45,7 +45,7 @@ export default async function ChangelogPage({ params }: Props) {
           return (
             <article
               key={`${entry.date}-${i}`}
-              className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-5"
+              className="card p-5"
             >
               <div className="mb-2 flex items-center gap-3">
                 <time className="text-sm text-zinc-500">{entry.date}</time>

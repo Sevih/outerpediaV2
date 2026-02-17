@@ -56,7 +56,7 @@ export default function SetInline({ name }: Props) {
   return (
     <InlineTooltip content={tooltip}>
       <button type="button" className="cursor-default">
-        <EquipmentBadge icon={iconPath} bg="/images/items/TI_Slot_Unique.png" label={label} />
+        <EquipmentBadge icon={iconPath} bg="/images/items/TI_Slot_Unique.webp" label={label} />
       </button>
     </InlineTooltip>
   );

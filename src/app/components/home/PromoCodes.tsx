@@ -40,10 +40,10 @@ function getStatus(code: PromoCode, now: string): Status {
   return 'active';
 }
 
-const STATUS_STYLES: Record<Status, { badge: string; code: string }> = {
-  active: { badge: 'bg-green-600/20 text-green-400', code: 'text-cyan-400' },
-  upcoming: { badge: 'bg-yellow-600/20 text-yellow-400', code: 'text-yellow-400' },
-  expired: { badge: 'bg-zinc-700/50 text-zinc-500', code: 'text-zinc-500' },
+const STATUS_STYLES: Record<Status, { badge: string; code: string; icon: string }> = {
+  active: { badge: 'text-green-400', code: 'bg-green-600/20 text-green-300', icon: '✓' },
+  upcoming: { badge: 'text-yellow-400', code: 'bg-yellow-600/20 text-yellow-300', icon: '⏳' },
+  expired: { badge: 'text-zinc-500', code: 'bg-zinc-700/50 text-zinc-500', icon: '✗' },
 };
 
 export default function PromoCodes({ codes, lang, limit, showAll, t }: Props) {
@@ -119,10 +119,7 @@ export default function PromoCodes({ codes, lang, limit, showAll, t }: Props) {
         <p className="text-center text-sm text-zinc-500">{t.empty}</p>
       ) : (
         <>
-          <div className={limit && !showAll
-            ? 'space-y-3'
-            : 'grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'
-          }>
+          <div className={showAll ? 'space-y-3' : 'divide-y divide-zinc-800'}>
             {displayed.map((promo) => {
               const status = getStatus(promo, now);
               const styles = STATUS_STYLES[status];
@@ -130,27 +127,32 @@ export default function PromoCodes({ codes, lang, limit, showAll, t }: Props) {
               return (
                 <div
                   key={promo.code}
-                  className={`card flex flex-col gap-2 p-4 ${status === 'expired' ? 'opacity-60' : ''}`}
+                  className={showAll
+                    ? `card-interactive flex flex-col gap-2 p-4 ${status === 'expired' ? 'opacity-60' : ''}`
+                    : `flex flex-col gap-1.5 py-3 ${status === 'expired' ? 'opacity-60' : ''}`
+                  }
                 >
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex min-w-0 items-center gap-2">
-                      <p className={`truncate font-mono text-sm font-bold ${styles.code}`}>
-                        {promo.code}
-                      </p>
-                      {showAll && (
-                        <span className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-semibold ${styles.badge}`}>
-                          {statusLabel(status)}
-                        </span>
-                      )}
-                    </div>
+                  {/* Top row: Code + Copy + Validity + Status */}
+                  <div className="flex items-center gap-3">
+                    <span className={`shrink-0 rounded px-2.5 py-1 font-mono text-sm font-bold ${styles.code}`}>
+                      {promo.code}
+                    </span>
                     <button
                       onClick={() => handleCopy(promo.code)}
                       className="shrink-0 rounded bg-zinc-700 px-3 py-1.5 text-xs font-medium transition-colors hover:bg-zinc-600"
                     >
                       {copiedCode === promo.code ? t.copied : t.copy}
                     </button>
+                    <div className="flex-1" />
+                    {showAll && (
+                      <span className={`flex shrink-0 items-center gap-1.5 text-xs font-semibold ${styles.badge}`}>
+                        <span>{styles.icon}</span>
+                        {statusLabel(status)}
+                      </span>
+                    )}
                   </div>
 
+                  {/* Rewards */}
                   <div className="flex flex-col gap-1">
                     {Object.entries(promo.description).map(([item, qty]) => (
                       <span key={item} className="inline-flex items-center gap-1 text-xs text-zinc-400">
@@ -160,8 +162,9 @@ export default function PromoCodes({ codes, lang, limit, showAll, t }: Props) {
                     ))}
                   </div>
 
+                  {/* Validity */}
                   {showAll && (
-                    <p className="text-[11px] text-zinc-500">
+                    <p className="text-xs text-zinc-500">
                       {(t.validity ?? '{start} — {end}')
                         .replace('{start}', promo.start)
                         .replace('{end}', promo.end)}

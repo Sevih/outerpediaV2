@@ -70,27 +70,34 @@ export default async function Home({ params }: Props) {
         </Link>
       </section>
 
-      {/* Banners + Codes — side by side on desktop */}
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8">
-        <CurrentBanners t={t} />
-        <PromoCodes
-          codes={promoCodes}
-          lang={lang}
-          limit={5}
-          t={{
-            title: t['home.section.codes'],
-            copy: t['home.codes.copy'],
-            copied: t['home.codes.copied'],
-            empty: t['home.codes.empty'],
-            viewAll: t['home.codes.view_all'],
-          }}
-        />
+      {/* Desktop: left (banners + beginner) | right (codes spanning both rows) */}
+      {/* Mobile: banners → codes → beginner */}
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-[3fr_1fr] md:grid-rows-[auto_auto]">
+        <div className="order-1 md:order-0">
+          <CurrentBanners t={t} />
+        </div>
+
+        <div className="order-2 md:order-0 md:row-span-2">
+          <PromoCodes
+            codes={promoCodes}
+            lang={lang}
+            limit={8}
+            t={{
+              title: t['home.section.codes'],
+              copy: t['home.codes.copy'],
+              copied: t['home.codes.copied'],
+              empty: t['home.codes.empty'],
+              viewAll: t['home.codes.view_all'],
+            }}
+          />
+        </div>
+
+        <div className="order-3 md:order-0">
+          <BeginnerGuides lang={lang} t={t} />
+        </div>
       </div>
 
-      {/* Beginner Guides */}
-      <BeginnerGuides lang={lang} t={t} />
-
-      {/* Recent Updates */}
+      {/* Recent Updates — full width */}
       <RecentUpdates lang={lang} t={t} />
       </div>
     </main>

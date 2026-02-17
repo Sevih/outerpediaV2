@@ -1,5 +1,5 @@
 import sharp from 'sharp';
-import { readdir, stat, access } from 'fs/promises';
+import { readdir, stat } from 'fs/promises';
 import { join, extname, basename } from 'path';
 import { watch } from 'fs';
 
@@ -17,11 +17,14 @@ async function convertFile(filePath: string): Promise<void> {
 
   const webpPath = filePath.replace(/\.(png|jpe?g)$/i, '.webp');
 
-  // Skip if WebP already exists
+  // Skip if WebP already exists and is newer than source
   try {
-    await access(webpPath);
-    skipped++;
-    return;
+    const [srcStat, webpStat] = await Promise.all([stat(filePath), stat(webpPath)]);
+    if (webpStat.mtimeMs >= srcStat.mtimeMs) {
+      skipped++;
+      return;
+    }
+    // WebP exists but source is newer — reconvert
   } catch {
     // WebP doesn't exist, convert
   }

@@ -30,7 +30,7 @@ export default function BeginnerGuides({ t }: Props) {
   return (
     <section>
       <h2 className="mx-auto mb-6 text-2xl">{t['home.section.beginner']}</h2>
-      <div className="card p-5 md:p-6">
+      <div className="card-light p-5 md:p-6">
         <p className="mb-4 text-sm text-zinc-400">{t['home.beginner.desc']}</p>
         <ul className="space-y-2 text-sm">
           {GUIDES.map((guide) => (
