@@ -8,6 +8,7 @@ type Step = {
 
 // Pipeline steps — executed in order
 const steps: Step[] = [
+  { name: 'effect-group-map', run: () => import('./steps/effect-group-map').then(m => m.run()) },
   { name: 'characters-index', run: () => import('./steps/characters-index').then(m => m.run()) },
 ];
 

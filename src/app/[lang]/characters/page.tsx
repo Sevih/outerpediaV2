@@ -32,7 +32,7 @@ export default async function CharactersPage({ params }: Props) {
 
   return (
     <div className="mx-auto max-w-350 px-4 py-6 md:px-6">
-      <h1 className="text-3xl font-bold">{t['page.characters.title']}</h1>
+      <h1 className="mx-auto text-center text-3xl font-bold">{t['page.characters.title']}</h1>
       <CharactersPageClient characters={characters} lang={l} />
     </div>
   );

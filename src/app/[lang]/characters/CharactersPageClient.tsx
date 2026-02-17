@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef, useMemo, useDeferredValue } from 'react';
+import { useEffect, useState, useMemo, useRef, useDeferredValue } from 'react';
 import Image from 'next/image';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import LZString from 'lz-string';
@@ -68,21 +68,15 @@ function getSearchableNames(char: CharacterListEntry, langs: Lang[]): string[] {
   return langs.map(lang => norm(l(char, 'Fullname', lang))).filter(Boolean);
 }
 
-// Effect group map for variant deduplication
-let effectGroupMap = new Map<string, string>();
-
-function charHasEffect(char: CharacterListEntry, filterEffect: string, type: 'buff' | 'debuff'): boolean {
-  const charEffects = char[type] || [];
-  if (charEffects.includes(filterEffect)) return true;
-  for (const e of charEffects) {
-    const group = effectGroupMap.get(e);
-    if (group && group === filterEffect) return true;
-  }
-  return false;
+function charHasEffect(
+  char: CharacterListEntry, filterEffect: string, type: 'buff' | 'debuff',
+): boolean {
+  return (char[type] || []).includes(filterEffect);
 }
 
 function charHasEffectFromSources(
-  char: CharacterListEntry, filterEffect: string, type: 'buff' | 'debuff', sources: SkillKey[]
+  char: CharacterListEntry, filterEffect: string, type: 'buff' | 'debuff',
+  sources: SkillKey[],
 ): boolean {
   if (sources.length === 0) return charHasEffect(char, filterEffect, type);
   if (!char.effectsBySource) return charHasEffect(char, filterEffect, type);
@@ -90,13 +84,11 @@ function charHasEffectFromSources(
   for (const source of sources) {
     const sourceEffects = char.effectsBySource[source]?.[type] || [];
     if (sourceEffects.includes(filterEffect)) return true;
-    for (const e of sourceEffects) {
-      const group = effectGroupMap.get(e);
-      if (group && group === filterEffect) return true;
-    }
   }
   return false;
 }
+
+// ── URL encoding ──
 
 function encodeStateToZ(p: Payload): string {
   const compact: ZPayload = {
@@ -143,6 +135,8 @@ function decodeZToState(z?: string): Partial<Payload> | null {
   }
 }
 
+// ── Effect grouping ──
+
 function groupEffectsByCategory(
   effectNames: string[], allEffects: Effect[], type: 'buff' | 'debuff', showUnique: boolean
 ): { title: string; effects: string[] }[] {
@@ -154,7 +148,6 @@ function groupEffectsByCategory(
   for (const name of effectNames) {
     const effect = effectMap.get(name);
     if (!effect) continue;
-    // Deduplicate variants: use canonical (group root) name
     const canonical = effect.group || name;
     if (seen.has(canonical)) continue;
     seen.add(canonical);
@@ -210,11 +203,126 @@ function splitIntoRows<T>(arr: T[], rows = 2): T[][] {
   return out;
 }
 
+// ── Reusable filter components ──
+
+function IconFilterGroup<T extends string>({
+  label, items, filter, onToggle, onReset, imagePath,
+}: {
+  label: string;
+  items: { name: string; value: T | null }[];
+  filter: T[];
+  onToggle: (value: T) => void;
+  onReset: () => void;
+  imagePath: (value: T) => string;
+}) {
+  const { t } = useI18n();
+  return (
+    <div className="w-full flex flex-col items-center">
+      <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{label}</p>
+      <div className="flex gap-2 justify-center">
+        {items.map(item => (
+          <FilterPill
+            key={item.name}
+            title={item.name}
+            active={item.value === null ? filter.length === 0 : filter.includes(item.value)}
+            onClick={() => item.value ? onToggle(item.value) : onReset()}
+            className="w-9 h-9 px-0"
+          >
+            {item.value ? (
+              <div className="relative h-7 w-7">
+                <Image src={imagePath(item.value)} alt={item.value} fill sizes="28px" className="object-contain" />
+              </div>
+            ) : (
+              <span className="text-[11px]">{t('common.all')}</span>
+            )}
+          </FilterPill>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TextFilterGroup<T extends string>({
+  label, items, filter, onToggle, onReset,
+}: {
+  label: string;
+  items: { name: string; value: T | null }[];
+  filter: T[];
+  onToggle: (value: T) => void;
+  onReset: () => void;
+}) {
+  return (
+    <div className="w-full flex flex-col items-center">
+      <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{label}</p>
+      <div className="flex flex-wrap gap-2 justify-center">
+        {items.map(item => (
+          <FilterPill
+            key={item.name}
+            active={item.value === null ? filter.length === 0 : filter.includes(item.value)}
+            onClick={() => item.value ? onToggle(item.value) : onReset()}
+            className="h-8 px-2.5"
+          >
+            {item.name}
+          </FilterPill>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function EffectGroupGrid({
+  groups, effectsMap, selected, type, lang, onToggle, className,
+}: {
+  groups: { title: string; effects: string[] }[];
+  effectsMap: Map<string, Effect>;
+  selected: string[];
+  type: 'buff' | 'debuff';
+  lang: Lang;
+  onToggle: (effectKey: string) => void;
+  className: string;
+}) {
+  const { t } = useI18n();
+  const color = type === 'buff' ? 'text-cyan-300' : 'text-red-300';
+  return (
+    <div className={className}>
+      {groups.map((group, i) => (
+        <div key={`${type}-${i}`} className="rounded-xl bg-zinc-800/40 ring-1 ring-zinc-700 p-2">
+          <p className={`text-center ${color} font-semibold mb-2`}>
+            {t(group.title as TranslationKey)}
+          </p>
+          <div className="grid grid-cols-5 md:grid-cols-6 gap-1.5 justify-items-center">
+            {group.effects.map(effectKey => {
+              const effect = effectsMap.get(effectKey);
+              if (!effect) return null;
+              return (
+                <EffectIcon
+                  key={effectKey}
+                  effect={effect}
+                  type={type}
+                  lang={lang}
+                  selected={selected.includes(effectKey)}
+                  onClick={() => onToggle(effectKey)}
+                />
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ── Main component ──
 
 type ClientProps = {
   characters: CharacterListEntry[];
   lang: Lang;
+};
+
+type IndexedCharacter = CharacterListEntry & {
+  searchNames: string[];
+  displayName: string;
+  prefix: string | null;
 };
 
 export default function CharactersPageClient({ characters, lang }: ClientProps) {
@@ -250,9 +358,20 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   const [debuffsMetadata, setDebuffsMetadata] = useState<Effect[]>([]);
   const [tagsData, setTagsData] = useState<Record<string, TagMeta> | null>(null);
 
-  // URL sync refs
+  // Refs
   const lastSerializedRef = useRef('');
   const didHydrateFromURL = useRef(false);
+
+  // ── Toggle helper (auto-resets to [] when all values selected) ──
+
+  const toggleArray = <T,>(
+    setter: React.Dispatch<React.SetStateAction<T[]>>, value: T, allValues?: readonly T[],
+  ) => {
+    setter(prev => {
+      const next = prev.includes(value) ? prev.filter(v => v !== value) : [...prev, value];
+      return allValues && next.length === allValues.length ? [] : next;
+    });
+  };
 
   // ── Derived UI arrays ──
 
@@ -303,7 +422,6 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     return groupEffectsByCategory(allDebuffs, debuffsMetadata, 'debuff', showUniqueEffects);
   }, [allDebuffs, debuffsMetadata, showUniqueEffects]);
 
-  // Effect lookup maps for EffectIcon
   const buffsMap = useMemo(() =>
     new Map(buffsMetadata.map(e => [e.name, e])), [buffsMetadata]);
   const debuffsMap = useMemo(() =>
@@ -359,31 +477,41 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     setSourceFilter(p.sources ?? []);
   };
 
-  // ── Pre-indexed characters ──
-
-  type IndexedCharacter = CharacterListEntry & { searchNames: string[] };
+  // ── Pre-indexed characters (with pre-computed display name & prefix) ──
 
   const indexedCharacters = useMemo<IndexedCharacter[]>(() =>
-    characters.map(char => ({
-      ...char,
-      searchNames: getSearchableNames(char, LANGS),
-    })).sort((a, b) => l(a, 'Fullname', lang).localeCompare(l(b, 'Fullname', lang))), [characters, lang]);
+    characters.map(char => {
+      const displayName = l(char, 'Fullname', lang);
+      const nameParts = splitCharacterName(char.ID, displayName, lang);
+      return {
+        ...char,
+        searchNames: getSearchableNames(char, LANGS),
+        displayName,
+        prefix: nameParts.prefix,
+      };
+    }).sort((a, b) => a.displayName.localeCompare(b.displayName)), [characters, lang]);
 
-  // ── Filtered characters ──
+  // ── Filtered characters (Set-based lookups) ──
 
   const filtered = useMemo(() => {
     const q = norm(query);
+    const elemSet = new Set(elementFilter);
+    const classSet = new Set(classFilter);
+    const raritySet = new Set(rarityFilter);
+    const chainSet = new Set(chainFilter);
+    const giftSet = new Set(giftFilter);
+    const roleSet = new Set(roleFilter);
 
     return indexedCharacters.filter(char => {
       if (q && !char.searchNames.some(name => name.includes(q))) return false;
-      if (elementFilter.length && !elementFilter.includes(char.Element)) return false;
-      if (classFilter.length && !classFilter.includes(char.Class)) return false;
-      if (rarityFilter.length && !rarityFilter.includes(char.Rarity)) return false;
-      if (chainFilter.length && !chainFilter.includes(char.Chain_Type)) return false;
-      if (giftFilter.length && !giftFilter.includes(char.gift)) return false;
-      if (roleFilter.length && !roleFilter.includes(char.role)) return false;
+      if (elemSet.size && !elemSet.has(char.Element)) return false;
+      if (classSet.size && !classSet.has(char.Class)) return false;
+      if (raritySet.size && !raritySet.has(char.Rarity)) return false;
+      if (chainSet.size && !chainSet.has(char.Chain_Type)) return false;
+      if (giftSet.size && !giftSet.has(char.gift)) return false;
+      if (roleSet.size && !roleSet.has(char.role)) return false;
 
-      // Effect matching
+      // Effect matching (effects are pre-canonicalized in the pipeline)
       if (selectedBuffs.length || selectedDebuffs.length) {
         const hasBuffs = selectedBuffs.length > 0
           ? (effectLogic === 'AND'
@@ -432,14 +560,6 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
-  // Normalize "All" selections
-  useEffect(() => { if (elementFilter.length === ELEMENTS.length) setElementFilter([]); }, [elementFilter]);
-  useEffect(() => { if (classFilter.length === CLASSES.length) setClassFilter([]); }, [classFilter]);
-  useEffect(() => { if (rarityFilter.length === RARITIES.length) setRarityFilter([]); }, [rarityFilter]);
-  useEffect(() => { if (chainFilter.length === CHAIN_TYPES.length) setChainFilter([]); }, [chainFilter]);
-  useEffect(() => { if (giftFilter.length === GIFTS.length) setGiftFilter([]); }, [giftFilter]);
-  useEffect(() => { if (roleFilter.length === ROLES.length) setRoleFilter([]); }, [roleFilter]);
-
   // Lazy load buffs/debuffs metadata
   useEffect(() => {
     if (showFilters && buffsMetadata.length === 0) {
@@ -447,16 +567,8 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
         import('@data/effects/buffs.json'),
         import('@data/effects/debuffs.json'),
       ]).then(([buffsModule, debuffsModule]) => {
-        const buffs = buffsModule.default as Effect[];
-        const debuffs = debuffsModule.default as Effect[];
-        setBuffsMetadata(buffs);
-        setDebuffsMetadata(debuffs);
-        // Build effect group map
-        const newMap = new Map<string, string>();
-        [...buffs, ...debuffs].forEach(effect => {
-          if (effect.group) newMap.set(effect.name, effect.group);
-        });
-        effectGroupMap = newMap;
+        setBuffsMetadata(buffsModule.default as Effect[]);
+        setDebuffsMetadata(debuffsModule.default as Effect[]);
       });
     }
   }, [showFilters, buffsMetadata.length]);
@@ -517,14 +629,6 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     router.replace(pathname as never, { scroll: false });
   };
 
-  // ── Toggle helpers ──
-
-  const toggleArray = <T,>(setter: React.Dispatch<React.SetStateAction<T[]>>, value: T) => {
-    setter(prev => prev.includes(value) ? prev.filter(v => v !== value) : [...prev, value]);
-  };
-
-  // ── Has active filters ──
-
   const hasActiveFilters = Boolean(
     payload.el || payload.cl || payload.r || payload.chain || payload.gift
     || payload.role || payload.tags || payload.buffs || payload.debuffs
@@ -577,7 +681,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
           <FilterPill
             key={r}
             active={rarityFilter.includes(r)}
-            onClick={() => toggleArray(setRarityFilter, r)}
+            onClick={() => toggleArray(setRarityFilter, r, RARITIES)}
             className="h-8 px-3"
           >
             <div className="flex items-center -space-x-1">
@@ -591,106 +695,50 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
 
       {/* Elements + Classes */}
       <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center">
-        {/* Elements */}
-        <div className="w-full flex flex-col items-center">
-          <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('filters.elements')}</p>
-          <div className="flex gap-2 justify-center">
-            {ELEMENTS_UI.map(el => (
-              <FilterPill
-                key={el.name}
-                title={el.name}
-                active={el.value === null ? elementFilter.length === 0 : elementFilter.includes(el.value)}
-                onClick={() => el.value ? toggleArray(setElementFilter, el.value) : setElementFilter([])}
-                className="w-9 h-9 px-0"
-              >
-                {el.value ? (
-                  <div className="relative h-7 w-7">
-                    <Image src={`/images/ui/elem/CM_Element_${el.value}.webp`} alt={el.value} fill sizes="28px" className="object-contain" />
-                  </div>
-                ) : (
-                  <span className="text-[11px]">{t('common.all')}</span>
-                )}
-              </FilterPill>
-            ))}
-          </div>
-        </div>
-
-        {/* Classes */}
-        <div className="w-full flex flex-col items-center">
-          <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('filters.classes')}</p>
-          <div className="flex gap-2 justify-center">
-            {CLASSES_UI.map(cl => (
-              <FilterPill
-                key={cl.name}
-                title={cl.name}
-                active={cl.value === null ? classFilter.length === 0 : classFilter.includes(cl.value)}
-                onClick={() => cl.value ? toggleArray(setClassFilter, cl.value) : setClassFilter([])}
-                className="w-9 h-9 px-0"
-              >
-                {cl.value ? (
-                  <div className="relative h-7 w-7">
-                    <Image src={`/images/ui/class/CM_Class_${cl.value}.webp`} alt={cl.value} fill sizes="28px" className="object-contain" />
-                  </div>
-                ) : (
-                  <span className="text-[11px]">{t('common.all')}</span>
-                )}
-              </FilterPill>
-            ))}
-          </div>
-        </div>
+        <IconFilterGroup
+          label={t('filters.elements')}
+          items={ELEMENTS_UI}
+          filter={elementFilter}
+          onToggle={v => toggleArray(setElementFilter, v, ELEMENTS)}
+          onReset={() => setElementFilter([])}
+          imagePath={v => `/images/ui/elem/CM_Element_${v}.webp`}
+        />
+        <IconFilterGroup
+          label={t('filters.classes')}
+          items={CLASSES_UI}
+          filter={classFilter}
+          onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
+          onReset={() => setClassFilter([])}
+          imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
+        />
       </div>
 
       {/* Chains + Roles */}
       <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center">
-        {/* Chains */}
-        <div className="w-full flex flex-col items-center">
-          <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('characters.filters.chains')}</p>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {CHAINS_UI.map(ct => (
-              <FilterPill
-                key={ct.name}
-                active={ct.value === null ? chainFilter.length === 0 : chainFilter.includes(ct.value)}
-                onClick={() => ct.value ? toggleArray(setChainFilter, ct.value) : setChainFilter([])}
-                className="h-8 px-2.5"
-              >
-                {ct.name}
-              </FilterPill>
-            ))}
-          </div>
-        </div>
-
-        {/* Roles */}
-        <div className="w-full flex flex-col items-center">
-          <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('characters.filters.roles')}</p>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {ROLES_UI.map(r => (
-              <FilterPill
-                key={r.name}
-                active={r.value === null ? roleFilter.length === 0 : roleFilter.includes(r.value!)}
-                onClick={() => r.value === null ? setRoleFilter([]) : toggleArray(setRoleFilter, r.value)}
-                className="h-8 px-2.5"
-              >
-                {r.name}
-              </FilterPill>
-            ))}
-          </div>
-        </div>
+        <TextFilterGroup
+          label={t('characters.filters.chains')}
+          items={CHAINS_UI}
+          filter={chainFilter}
+          onToggle={v => toggleArray(setChainFilter, v, CHAIN_TYPES)}
+          onReset={() => setChainFilter([])}
+        />
+        <TextFilterGroup
+          label={t('characters.filters.roles')}
+          items={ROLES_UI}
+          filter={roleFilter}
+          onToggle={v => toggleArray(setRoleFilter, v, ROLES)}
+          onReset={() => setRoleFilter([])}
+        />
       </div>
 
       {/* Gifts */}
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">{t('characters.filters.gifts')}</p>
-      <div className="flex flex-wrap justify-center gap-2">
-        {GIFTS_UI.map(g => (
-          <FilterPill
-            key={g.name}
-            active={g.value === null ? giftFilter.length === 0 : giftFilter.includes(g.value)}
-            onClick={() => g.value ? toggleArray(setGiftFilter, g.value) : setGiftFilter([])}
-            className="h-8 px-2.5"
-          >
-            {g.name}
-          </FilterPill>
-        ))}
-      </div>
+      <TextFilterGroup
+        label={t('characters.filters.gifts')}
+        items={GIFTS_UI}
+        filter={giftFilter}
+        onToggle={v => toggleArray(setGiftFilter, v, GIFTS)}
+        onReset={() => setGiftFilter([])}
+      />
 
       {/* Toggle Buff/Debuff filters */}
       <div className="text-center mt-4">
@@ -738,63 +786,29 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
 
             {/* Buffs/Debuffs grid */}
             <div className="mx-auto max-w-5xl w-full rounded-2xl border border-zinc-700 bg-zinc-900/60 p-4">
-              {/* Buffs */}
-              <div className="w-full">
-                <p className="text-center text-xs uppercase tracking-wide text-cyan-300 mb-2">{t('characters.filters.buffs')}</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                  {buffGroups.map((group, i) => (
-                    <div key={`buff-${i}`} className="rounded-xl bg-zinc-800/40 ring-1 ring-zinc-700 p-2">
-                      <p className="text-center text-cyan-300 font-semibold mb-2">{t(group.title as TranslationKey)}</p>
-                      <div className="grid grid-cols-5 md:grid-cols-6 gap-1.5 justify-items-center">
-                        {group.effects.map(effectKey => {
-                          const effect = buffsMap.get(effectKey);
-                          if (!effect) return null;
-                          return (
-                            <EffectIcon
-                              key={effectKey}
-                              effect={effect}
-                              type="buff"
-                              lang={lang}
-                              selected={selectedBuffs.includes(effectKey)}
-                              onClick={() => toggleArray(setSelectedBuffs, effectKey)}
-                            />
-                          );
-                        })}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <p className="text-center text-xs uppercase tracking-wide text-cyan-300 mb-2">{t('characters.filters.buffs')}</p>
+              <EffectGroupGrid
+                groups={buffGroups}
+                effectsMap={buffsMap}
+                selected={selectedBuffs}
+                type="buff"
+                lang={lang}
+                onToggle={key => toggleArray(setSelectedBuffs, key)}
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"
+              />
 
               <div className="my-4 border-t border-zinc-700" />
 
-              {/* Debuffs */}
-              <div className="w-full">
-                <p className="text-center text-xs uppercase tracking-wide text-red-300 mb-2">{t('characters.filters.debuffs')}</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
-                  {debuffGroups.map((group, i) => (
-                    <div key={`debuff-${i}`} className="rounded-xl bg-zinc-800/40 ring-1 ring-zinc-700 p-2">
-                      <p className="text-center text-red-300 font-semibold mb-2">{t(group.title as TranslationKey)}</p>
-                      <div className="grid grid-cols-5 md:grid-cols-6 gap-1.5 justify-items-center">
-                        {group.effects.map(effectKey => {
-                          const effect = debuffsMap.get(effectKey);
-                          if (!effect) return null;
-                          return (
-                            <EffectIcon
-                              key={effectKey}
-                              effect={effect}
-                              type="debuff"
-                              lang={lang}
-                              selected={selectedDebuffs.includes(effectKey)}
-                              onClick={() => toggleArray(setSelectedDebuffs, effectKey)}
-                            />
-                          );
-                        })}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <p className="text-center text-xs uppercase tracking-wide text-red-300 mb-2">{t('characters.filters.debuffs')}</p>
+              <EffectGroupGrid
+                groups={debuffGroups}
+                effectsMap={debuffsMap}
+                selected={selectedDebuffs}
+                type="debuff"
+                lang={lang}
+                onToggle={key => toggleArray(setSelectedDebuffs, key)}
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3"
+              />
             </div>
           </div>
         )}
@@ -872,23 +886,20 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
 
       {/* Character grid */}
       <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
-        {filtered.map((char, index) => {
-          const nameParts = splitCharacterName(char.ID, l(char, 'Fullname', lang), lang);
-          return (
-            <ResponsiveCharacterCard
-              key={char.ID}
-              id={char.ID}
-              name={l(char, 'Fullname', lang)}
-              prefix={nameParts.prefix}
-              element={char.Element}
-              classType={char.Class}
-              rarity={char.Rarity}
-              tags={char.tags}
-              href={`/${lang}/characters/${char.slug}`}
-              priority={index <= 5}
-            />
-          );
-        })}
+        {filtered.map((char, index) => (
+          <ResponsiveCharacterCard
+            key={char.ID}
+            id={char.ID}
+            name={char.displayName}
+            prefix={char.prefix}
+            element={char.Element}
+            classType={char.Class}
+            rarity={char.Rarity}
+            tags={char.tags}
+            href={`/${lang}/characters/${char.slug}`}
+            priority={index <= 5}
+          />
+        ))}
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ export default async function EquipmentsPage({ params }: Props) {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
-      <h1 className="text-3xl font-bold">{t['page.equipments.title']}</h1>
+      <h1 className="mx-auto text-center text-3xl font-bold">{t['page.equipments.title']}</h1>
       <p className="mt-2 text-zinc-400">{t['common.coming_soon']}</p>
     </div>
   );

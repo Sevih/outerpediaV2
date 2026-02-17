@@ -13,7 +13,8 @@ type Props = {
 
 /**
  * Auto-shrinks text to fit on a single line within its container.
- * Starts at `max` px, reduces to `min` px if needed.
+ * Renders at `max` px and uses transform scale to shrink visually,
+ * avoiding font hinting issues at small sizes.
  */
 export default function FitText({ children, max, min, className }: Props) {
   const ref = useRef<HTMLDivElement>(null);
@@ -22,27 +23,23 @@ export default function FitText({ children, max, min, className }: Props) {
     const el = ref.current;
     if (!el) return;
 
-    // Reset to max size
+    // Reset
+    el.style.transform = '';
     el.style.fontSize = `${max}px`;
 
     if (el.scrollWidth <= el.clientWidth) return;
 
-    // Approximate ideal size via ratio, then fine-tune
-    const ratio = el.clientWidth / el.scrollWidth;
-    let size = Math.max(min, Math.round(max * ratio * 2) / 2);
-    el.style.fontSize = `${size}px`;
-
-    while (el.scrollWidth > el.clientWidth && size > min) {
-      size -= 0.5;
-      el.style.fontSize = `${size}px`;
-    }
+    // Scale down visually instead of changing font size
+    const minScale = min / max;
+    const scale = Math.max(minScale, el.clientWidth / el.scrollWidth);
+    el.style.transform = `scaleX(${scale})`;
   }, [children, max, min]);
 
   return (
     <div
       ref={ref}
       className={className}
-      style={{ fontSize: max, whiteSpace: 'nowrap' }}
+      style={{ fontSize: max, whiteSpace: 'nowrap', transformOrigin: 'left' }}
     >
       {children}
     </div>

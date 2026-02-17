@@ -25,9 +25,29 @@ type RawCharacter = {
   [key: string]: unknown;
 };
 
+async function loadGroupMap(): Promise<Map<string, string>> {
+  const [buffsRaw, debuffsRaw] = await Promise.all([
+    readFile(join(PATHS.effects, 'buffs.json'), 'utf-8'),
+    readFile(join(PATHS.effects, 'debuffs.json'), 'utf-8'),
+  ]);
+  const buffs = JSON.parse(buffsRaw) as { name: string; group?: string }[];
+  const debuffs = JSON.parse(debuffsRaw) as { name: string; group?: string }[];
+
+  const map = new Map<string, string>();
+  for (const effect of [...buffs, ...debuffs]) {
+    if (effect.group) map.set(effect.name, effect.group);
+  }
+  return map;
+}
+
 export async function run() {
-  const files = await readdir(PATHS.characters);
+  const [files, groupMap] = await Promise.all([
+    readdir(PATHS.characters),
+    loadGroupMap(),
+  ]);
   const jsonFiles = files.filter(f => f.endsWith('.json'));
+
+  const canonicalize = (name: string) => groupMap.get(name) || name;
 
   const entries = await Promise.all(
     jsonFiles.map(async (file) => {
@@ -48,27 +68,33 @@ export async function run() {
       };
 
       // ── List entry (enriched for filters) ──
-      const allBuffs = new Set<string>();
-      const allDebuffs = new Set<string>();
+      const allCanonicalBuffs = new Set<string>();
+      const allCanonicalDebuffs = new Set<string>();
       const effectsBySource: Record<string, { buff: string[]; debuff: string[] }> = {};
 
       if (char.skills) {
         for (const [key, skill] of Object.entries(char.skills)) {
           if (!skill) continue;
-          const skillBuffs = [...(skill.buff || [])];
-          const skillDebuffs = [...(skill.debuff || [])];
 
-          // Include dual attack effects for chain passive
-          if (key === 'SKT_CHAIN_PASSIVE') {
-            if (skill.dual_buff) skillBuffs.push(...skill.dual_buff);
-            if (skill.dual_debuff) skillDebuffs.push(...skill.dual_debuff);
-          }
+          // Collect raw effects (dedup within source)
+          const rawBuffs = [...new Set([
+            ...(skill.buff || []),
+            ...(key === 'SKT_CHAIN_PASSIVE' ? (skill.dual_buff || []) : []),
+          ])];
+          const rawDebuffs = [...new Set([
+            ...(skill.debuff || []),
+            ...(key === 'SKT_CHAIN_PASSIVE' ? (skill.dual_debuff || []) : []),
+          ])];
 
-          skillBuffs.forEach(b => allBuffs.add(b));
-          skillDebuffs.forEach(d => allDebuffs.add(d));
+          // Canonicalize and dedup per source
+          const canonicalBuffs = [...new Set(rawBuffs.map(canonicalize))];
+          const canonicalDebuffs = [...new Set(rawDebuffs.map(canonicalize))];
 
-          if (skillBuffs.length || skillDebuffs.length) {
-            effectsBySource[key] = { buff: skillBuffs, debuff: skillDebuffs };
+          canonicalBuffs.forEach(b => allCanonicalBuffs.add(b));
+          canonicalDebuffs.forEach(d => allCanonicalDebuffs.add(d));
+
+          if (canonicalBuffs.length || canonicalDebuffs.length) {
+            effectsBySource[key] = { buff: canonicalBuffs, debuff: canonicalDebuffs };
           }
         }
       }
@@ -85,8 +111,8 @@ export async function run() {
         Chain_Type: char.Chain_Type,
         gift: char.gift,
         tags: char.tags ?? [],
-        buff: [...allBuffs],
-        debuff: [...allDebuffs],
+        buff: [...allCanonicalBuffs],
+        debuff: [...allCanonicalDebuffs],
         effectsBySource,
       };
 
@@ -134,5 +160,5 @@ export async function run() {
 
   console.log(`  Generated ${entries.length} characters → ${indexPath}`);
   console.log(`  Generated name→id map → ${namePath}`);
-  console.log(`  Generated list (${entries.length} entries) → ${listPath}`);
+  console.log(`  Generated list (${entries.length} entries, canonical effects) → ${listPath}`);
 }

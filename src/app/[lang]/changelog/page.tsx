@@ -37,7 +37,7 @@ export default async function ChangelogPage({ params }: Props) {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 md:px-6">
-      <h1 className="mx-auto mb-8 text-3xl font-bold">{t['changelog.title']}</h1>
+      <h1 className="mx-auto mb-8 text-center text-3xl font-bold">{t['changelog.title']}</h1>
 
       <div className="space-y-4">
         {entries.map((entry, i) => {

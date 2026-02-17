@@ -11,6 +11,7 @@ const SIZES = {
     namePx: { max: 11, min: 8 },
     prefixPx: { max: 8, min: 6 },
     nameLeft: 'left-1.5',
+    nameMaxW: '',
     nameOverlay: false,
     iconSize: 18,
     classIconSize: 18,
@@ -27,9 +28,10 @@ const SIZES = {
   md: {
     container: 'h-[192px] w-[100px]',
     sizes: '100px',
-    namePx: { max: 12, min: 9 },
+    namePx: { max: 11, min: 9 },
     prefixPx: { max: 9, min: 7 },
-    nameLeft: 'left-2',
+    nameLeft: 'left-1.5',
+    nameMaxW: 'max-w-[calc(100%-0.75rem)]',
     nameOverlay: true,
     iconSize: 22,
     classIconSize: 24,
@@ -46,9 +48,10 @@ const SIZES = {
   lg: {
     container: 'h-[231px] w-[120px]',
     sizes: '120px',
-    namePx: { max: 14, min: 10 },
+    namePx: { max: 14, min: 12 },
     prefixPx: { max: 10, min: 7 },
-    nameLeft: 'left-2.5',
+    nameLeft: 'left-2',
+    nameMaxW: 'max-w-[calc(100%-0.75rem)]',
     nameOverlay: true,
     iconSize: 26,
     classIconSize: 26,
@@ -204,8 +207,8 @@ export default function CharacterCard({
       {/* Name overlay — bottom left (md/lg only) */}
       {showName && s.nameOverlay && (
         <div
-          style={{ WebkitTextStroke: '1px black', paintOrder: 'stroke fill' }}
-          className={`absolute bottom-4 ${s.nameLeft} z-10 max-w-[calc(100%-2rem)] font-bold leading-tight text-white`}
+          style={{ textShadow: '1px 0 1px #000, -1px 0 1px #000, 0 1px 1px #000, 0 -1px 1px #000' }}
+          className={`absolute bottom-4 ${s.nameLeft} z-10 ${s.nameMaxW} font-bold leading-tight text-white`}
         >
           {prefix && (
             <FitText max={s.prefixPx.max} min={s.prefixPx.min} className="text-zinc-300">{prefix}</FitText>
