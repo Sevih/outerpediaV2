@@ -100,6 +100,12 @@ const en = {
   'home.banner.ends_in': 'Ends in',
   'home.banner.ended': 'Ended',
 
+  // Search
+  'search.placeholder': 'Search characters, pages...',
+  'search.no_results': 'No results found',
+  'search.pages': 'Pages',
+  'search.characters': 'Characters',
+
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': 'Chars',
   'nav.equipment.short': 'Equip',

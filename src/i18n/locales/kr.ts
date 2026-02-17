@@ -100,6 +100,12 @@ const kr: Record<TranslationKey, string> = {
   'home.banner.ends_in': '남은 시간',
   'home.banner.ended': '종료',
 
+  // Search
+  'search.placeholder': '캐릭터, 페이지 검색...',
+  'search.no_results': '결과 없음',
+  'search.pages': '페이지',
+  'search.characters': '캐릭터',
+
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': '캐릭터',
   'nav.equipment.short': '장비',

@@ -100,6 +100,12 @@ const zh: Record<TranslationKey, string> = {
   'home.banner.ends_in': '剩余',
   'home.banner.ended': '已结束',
 
+  // Search
+  'search.placeholder': '搜索角色、页面...',
+  'search.no_results': '未找到结果',
+  'search.pages': '页面',
+  'search.characters': '角色',
+
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': '角色',
   'nav.equipment.short': '装备',

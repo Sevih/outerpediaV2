@@ -6,6 +6,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
+  alternates: {
+    types: {
+      'application/rss+xml': '/feed',
+    },
+  },
 };
 
 const geistSans = Geist({

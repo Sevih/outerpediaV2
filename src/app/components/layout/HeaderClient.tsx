@@ -2,25 +2,11 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
+import SearchModal, { SearchTrigger } from '@/app/components/ui/SearchModal';
 import { useI18n } from '@/lib/contexts/I18nContext';
-import type { TranslationKey } from '@/i18n';
-
-type NavItem = {
-  key: TranslationKey;
-  shortKey: TranslationKey;
-  href: string;
-  icon: string;
-};
-
-const NAV_ITEMS: NavItem[] = [
-  { key: 'nav.characters', shortKey: 'nav.characters.short', href: '/characters', icon: 'CM_EtcMenu_Colleague' },
-  { key: 'nav.equipment', shortKey: 'nav.equipment.short', href: '/equipments', icon: 'CM_EtcMenu_Inventory' },
-  { key: 'nav.tierlist', shortKey: 'nav.tierlist.short', href: '/tierlist', icon: 'CM_Mission_Icon_Weekly' },
-  { key: 'nav.utilities', shortKey: 'nav.utilities.short', href: '/tools', icon: 'CM_EtcMenu_Setting' },
-  { key: 'nav.guides', shortKey: 'nav.guides.short', href: '/guides', icon: 'CM_EtcMenu_Character_Book' },
-];
+import { NAV_ITEMS } from '@/lib/nav';
 
 function NavIcon({ src, alt }: { src: string; alt: string }) {
   return (
@@ -37,8 +23,22 @@ function NavIcon({ src, alt }: { src: string; alt: string }) {
 }
 
 export default function HeaderClient() {
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const { lang, t } = useI18n();
+
+  // Ctrl+K shortcut
+  const onGlobalKeyDown = useCallback((e: KeyboardEvent) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      setSearchOpen(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener('keydown', onGlobalKeyDown);
+    return () => document.removeEventListener('keydown', onGlobalKeyDown);
+  }, [onGlobalKeyDown]);
 
   return (
     <header className="sticky top-0 z-60 border-b border-zinc-800 bg-black/60 backdrop-blur supports-backdrop-filter:bg-black/40">
@@ -85,24 +85,31 @@ export default function HeaderClient() {
           ))}
         </nav>
 
-        {/* Desktop language switcher */}
-        <div className="hidden md:block">
+        {/* Desktop: search + language switcher */}
+        <div className="hidden items-center gap-1 md:flex">
+          <SearchTrigger onClick={() => setSearchOpen(true)} />
           <LanguageSwitcher />
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="rounded px-3 py-2 hover:bg-zinc-800 md:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label="Toggle menu"
-        >
-          &#9776;
-        </button>
+        {/* Mobile: search + hamburger */}
+        <div className="flex items-center gap-1 md:hidden">
+          <SearchTrigger onClick={() => setSearchOpen(true)} />
+          <button
+            className="rounded px-3 py-2 hover:bg-zinc-800"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-expanded={menuOpen}
+            aria-label="Toggle menu"
+          >
+            &#9776;
+          </button>
+        </div>
       </div>
 
+      {/* Search modal */}
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+
       {/* Mobile nav dropdown */}
-      {open && (
+      {menuOpen && (
         <div className="relative z-60 border-t border-zinc-800 md:hidden">
           <nav className="flex flex-col gap-1 px-4 py-3">
             {NAV_ITEMS.map((item) => (
@@ -110,7 +117,7 @@ export default function HeaderClient() {
                 key={item.href}
                 href={`/${lang}${item.href}`}
                 className="flex items-center gap-2 rounded px-3 py-2 hover:bg-zinc-800"
-                onClick={() => setOpen(false)}
+                onClick={() => setMenuOpen(false)}
                 aria-label={t(item.key)}
               >
                 <NavIcon src={`/images/ui/nav/${item.icon}.webp`} alt={t(item.key)} />

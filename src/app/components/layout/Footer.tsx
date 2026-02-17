@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaGithub, FaDiscord, FaReddit, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaDiscord, FaReddit, FaYoutube, FaTwitter, FaRss } from 'react-icons/fa';
 import { getRequestLang } from '@/lib/i18n/server';
 import { getT } from '@/i18n';
 
@@ -39,6 +39,15 @@ export default async function Footer() {
             className="inline-flex items-center gap-1 hover:text-zinc-200"
           >
             <FaDiscord /> {t('footer.social.evamains_discord')}
+          </Link>
+          <Link
+            href="/feed"
+            aria-label="RSS Feed"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 hover:text-zinc-200"
+          >
+            <FaRss /> RSS
           </Link>
           <Link
             href={`/${lang}/legal`}

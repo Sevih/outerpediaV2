@@ -100,6 +100,12 @@ const jp: Record<TranslationKey, string> = {
   'home.banner.ends_in': '残り',
   'home.banner.ended': '終了',
 
+  // Search
+  'search.placeholder': 'キャラクター、ページを検索...',
+  'search.no_results': '結果が見つかりません',
+  'search.pages': 'ページ',
+  'search.characters': 'キャラクター',
+
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': 'キャラ',
   'nav.equipment.short': '装備',
