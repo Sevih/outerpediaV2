@@ -20,6 +20,7 @@ const zh: Record<TranslationKey, string> = {
   'common.back': '返回',
   'common.loading': '加载中...',
   'common.coming_soon': '即将推出。',
+  'common.updated': '{monthYear} 更新',
 
   // Contributors
   'contributors.title': '贡献者',
@@ -273,6 +274,43 @@ const zh: Record<TranslationKey, string> = {
   // Characters tags
   'characters.tags.types.mechanic': '机制',
   'characters.tags.types.unit-type': '获得方式',
+
+  // Character detail page
+  'page.character.meta_title': '{name} — 技能、配装 & 节奏榜',
+  'page.character.meta_description': '{name}（{element} {classType}）— 技能详解、专属装备、推荐配装、节奏榜排名。',
+  'page.character.toc.overview': '概览',
+  'page.character.toc.ee_transcend': '专属装备 & 超越',
+  'page.character.toc.skills': '技能',
+  'page.character.toc.chain_dual': '连携 & 夹攻',
+  'page.character.toc.gear': '推荐装备',
+  'page.character.skill.cooldown': 'CD',
+  'page.character.skill.wgr': 'WG',
+  'page.character.skill.target_mono': '单体',
+  'page.character.skill.target_multi': '全体',
+  'page.character.skill.enhancement': '强化',
+  'page.character.skill.burn_cards': '爆发技能',
+  'page.character.skill.burn_cost': '消耗',
+  'page.character.skill.level': 'Lv.',
+  'page.character.ee.effect': '效果',
+  'page.character.ee.effect_max': '效果（Lv.10）',
+  'page.character.ee.main_stat': '主属性',
+  'page.character.ee.rank': '专属装备评级',
+  'page.character.ee.title': '专属装备',
+  'page.character.transcend.title': '超越',
+  'page.character.tier.pve': 'PvE评级',
+  'page.character.tier.pvp': 'PvP评级',
+  'page.character.gear.title': '推荐装备',
+  'page.character.gear.substat_prio': '副属性优先级',
+  'page.character.gear.note': '备注',
+  'page.character.gear.weapon': '武器',
+  'page.character.gear.amulet': '护符',
+  'page.character.gear.set': '套装',
+  'page.character.gear.talisman': '宝物',
+  'page.character.voice_actor': '配音',
+  'page.character.story': '故事',
+  'page.character.chain_effect': '连携效果',
+  'page.character.dual_effect': '夹攻效果',
+  'page.character.no_reco': '暂无推荐装备。',
 };
 
 export default zh;

@@ -20,6 +20,7 @@ const kr: Record<TranslationKey, string> = {
   'common.back': '뒤로',
   'common.loading': '로딩 중...',
   'common.coming_soon': '곧 공개 예정.',
+  'common.updated': '{monthYear} 업데이트',
 
   // Contributors
   'contributors.title': '기여자',
@@ -273,6 +274,43 @@ const kr: Record<TranslationKey, string> = {
   // Characters tags
   'characters.tags.types.mechanic': '메카닉',
   'characters.tags.types.unit-type': '유닛 타입',
+
+  // Character detail page
+  'page.character.meta_title': '{name} — 스킬, 빌드 & 티어',
+  'page.character.meta_description': '{name} ({element} {classType}) — 스킬 분석, 전용 장비, 추천 장비 빌드, 티어 랭킹.',
+  'page.character.toc.overview': '개요',
+  'page.character.toc.ee_transcend': '전용 장비 & 초월',
+  'page.character.toc.skills': '스킬',
+  'page.character.toc.chain_dual': '체인 & 협공',
+  'page.character.toc.gear': '추천 장비',
+  'page.character.skill.cooldown': 'CT',
+  'page.character.skill.wgr': 'WG',
+  'page.character.skill.target_mono': '단일 대상',
+  'page.character.skill.target_multi': '전체 대상',
+  'page.character.skill.enhancement': '강화',
+  'page.character.skill.burn_cards': '버스트 스킬',
+  'page.character.skill.burn_cost': '비용',
+  'page.character.skill.level': 'Lv.',
+  'page.character.ee.effect': '효과',
+  'page.character.ee.effect_max': '효과 (Lv.10)',
+  'page.character.ee.main_stat': '메인 스탯',
+  'page.character.ee.rank': '전용 장비 랭크',
+  'page.character.ee.title': '전용 장비',
+  'page.character.transcend.title': '초월',
+  'page.character.tier.pve': 'PvE 티어',
+  'page.character.tier.pvp': 'PvP 티어',
+  'page.character.gear.title': '추천 장비',
+  'page.character.gear.substat_prio': '서브 스탯 우선순위',
+  'page.character.gear.note': '비고',
+  'page.character.gear.weapon': '무기',
+  'page.character.gear.amulet': '아뮬렛',
+  'page.character.gear.set': '방어구 세트',
+  'page.character.gear.talisman': '탈리스만',
+  'page.character.voice_actor': '성우',
+  'page.character.story': '스토리',
+  'page.character.chain_effect': '체인 효과',
+  'page.character.dual_effect': '협공 효과',
+  'page.character.no_reco': '아직 추천 장비가 없습니다.',
 };
 
 export default kr;

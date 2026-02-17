@@ -20,6 +20,7 @@ const jp: Record<TranslationKey, string> = {
   'common.back': '戻る',
   'common.loading': '読み込み中...',
   'common.coming_soon': '近日公開',
+  'common.updated': '{monthYear} 更新',
 
   // Contributors
   'contributors.title': 'コントリビューター',
@@ -273,6 +274,43 @@ const jp: Record<TranslationKey, string> = {
   // Characters tags
   'characters.tags.types.mechanic': 'メカニック',
   'characters.tags.types.unit-type': 'ユニットタイプ',
+
+  // Character detail page
+  'page.character.meta_title': '{name} — スキル、ビルド & ティア',
+  'page.character.meta_description': '{name}（{element} {classType}）— スキル詳細、専用装備、推奨装備ビルド、ティアランキング。',
+  'page.character.toc.overview': '概要',
+  'page.character.toc.ee_transcend': '専用装備 & 超越',
+  'page.character.toc.skills': 'スキル',
+  'page.character.toc.chain_dual': 'チェーン & 連携',
+  'page.character.toc.gear': '推奨装備',
+  'page.character.skill.cooldown': 'CT',
+  'page.character.skill.wgr': 'WG',
+  'page.character.skill.target_mono': '単体',
+  'page.character.skill.target_multi': '全体',
+  'page.character.skill.enhancement': '強化',
+  'page.character.skill.burn_cards': 'バーストスキル',
+  'page.character.skill.burn_cost': 'コスト',
+  'page.character.skill.level': 'Lv.',
+  'page.character.ee.effect': '効果',
+  'page.character.ee.effect_max': '効果（Lv.10）',
+  'page.character.ee.main_stat': 'メインステータス',
+  'page.character.ee.rank': '専用装備ランク',
+  'page.character.ee.title': '専用装備',
+  'page.character.transcend.title': '超越',
+  'page.character.tier.pve': 'PvEティア',
+  'page.character.tier.pvp': 'PvPティア',
+  'page.character.gear.title': '推奨装備',
+  'page.character.gear.substat_prio': 'サブステータス優先度',
+  'page.character.gear.note': 'メモ',
+  'page.character.gear.weapon': '武器',
+  'page.character.gear.amulet': 'アミュレット',
+  'page.character.gear.set': '防具セット',
+  'page.character.gear.talisman': 'タリスマン',
+  'page.character.voice_actor': '声優',
+  'page.character.story': 'ストーリー',
+  'page.character.chain_effect': 'チェーン効果',
+  'page.character.dual_effect': '連携攻撃効果',
+  'page.character.no_reco': '推奨装備はまだありません。',
 };
 
 export default jp;

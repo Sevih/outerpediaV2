@@ -20,6 +20,7 @@ const en = {
   'common.back': 'Back',
   'common.loading': 'Loading...',
   'common.coming_soon': 'Coming soon.',
+  'common.updated': 'Updated {monthYear}',
 
   // Contributors
   'contributors.title': 'Outerpedia Contributors',
@@ -273,6 +274,43 @@ const en = {
   // Characters tags
   'characters.tags.types.mechanic': 'Mechanic',
   'characters.tags.types.unit-type': 'Unit Type',
+
+  // Character detail page
+  'page.character.meta_title': '{name} — Skills, Builds & Tier',
+  'page.character.meta_description': '{name} ({element} {classType}) — skills breakdown, exclusive equipment, recommended gear builds, and tier ranking on Outerpedia.',
+  'page.character.toc.overview': 'Overview',
+  'page.character.toc.ee_transcend': 'EE & Transcend',
+  'page.character.toc.skills': 'Skills',
+  'page.character.toc.chain_dual': 'Chain & Dual',
+  'page.character.toc.gear': 'Recommended Gear',
+  'page.character.skill.cooldown': 'CD',
+  'page.character.skill.wgr': 'WGR',
+  'page.character.skill.target_mono': 'Single Target',
+  'page.character.skill.target_multi': 'All Enemies',
+  'page.character.skill.enhancement': 'Enhancement',
+  'page.character.skill.burn_cards': 'Burn Cards',
+  'page.character.skill.burn_cost': 'Cost',
+  'page.character.skill.level': 'Lv.',
+  'page.character.ee.effect': 'Effect',
+  'page.character.ee.effect_max': 'Effect (Lv.10)',
+  'page.character.ee.main_stat': 'Main Stat',
+  'page.character.ee.rank': 'EE Rank',
+  'page.character.ee.title': 'Exclusive Equipment',
+  'page.character.transcend.title': 'Transcendence',
+  'page.character.tier.pve': 'PvE Tier',
+  'page.character.tier.pvp': 'PvP Tier',
+  'page.character.gear.title': 'Recommended Gear',
+  'page.character.gear.substat_prio': 'Substat Priority',
+  'page.character.gear.note': 'Notes',
+  'page.character.gear.weapon': 'Weapon',
+  'page.character.gear.amulet': 'Amulet',
+  'page.character.gear.set': 'Armor Set',
+  'page.character.gear.talisman': 'Talisman',
+  'page.character.voice_actor': 'Voice Actor',
+  'page.character.story': 'Story',
+  'page.character.chain_effect': 'Chain Effect',
+  'page.character.dual_effect': 'Dual Attack Effect',
+  'page.character.no_reco': 'No gear recommendation available yet.',
 } as const;
 
 export default en;

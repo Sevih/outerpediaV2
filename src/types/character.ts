@@ -1,4 +1,4 @@
-import type { WithLocalizedFields } from './common';
+import type { WithLocalizedFields, LangMap } from './common';
 import type { ElementType, ClassType, RarityType, RoleType, ChainType, SkillKey } from './enums';
 
 // ── Skill types ──
@@ -54,6 +54,16 @@ export type SkillPriority = {
 
 /** Transcendence levels 1-6 with localized descriptions (keys: "1"-"6" with _jp/_kr/_zh suffixes) */
 export type Transcendence = Record<string, string | null>;
+
+// ── Character profile (bio data from character-profiles.json) ──
+
+export type CharacterProfile = {
+  fullname: LangMap;
+  birthday?: string;
+  height?: string;
+  weight?: string;
+  story?: LangMap;
+};
 
 // ── Character ──
 
