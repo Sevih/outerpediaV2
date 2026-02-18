@@ -24,6 +24,7 @@ EQUIPMENT_DATA = DATA_ROOT / "equipment"
 EFFECTS_DATA = DATA_ROOT / "effects"
 RECO_DATA = DATA_ROOT / "reco"
 GENERATED_DATA = DATA_ROOT / "generated"
+CHARACTER_STATS_FILE = GENERATED_DATA / "character-stats.json"
 
 # Specific data files
 BUFFS_FILE = EFFECTS_DATA / "buffs.json"

@@ -37,6 +37,7 @@ from ee_manager import EEManager
 from export_manager import ExportManager
 from profile_manager import ProfileManager
 from asset_manager import AssetManager
+from extract_character_stats import run_extract_stats
 
 logging.basicConfig(
     level=logging.WARNING,
@@ -453,6 +454,10 @@ def main():
     print("\n--- Character Assets ---")
     asset_stats = run_batch_assets()
 
+    # 5. Character Stats (base stats at each evo step + premium)
+    print("\n--- Character Stats ---")
+    stats_result = run_extract_stats()
+
     # Write report
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     report = {
@@ -460,6 +465,7 @@ def main():
         "ee": ee_stats,
         "profiles": profile_stats,
         "assets": asset_stats,
+        "character_stats": stats_result,
     }
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)

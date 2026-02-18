@@ -10,6 +10,7 @@ type Step = {
 const steps: Step[] = [
   { name: 'effect-group-map', run: () => import('./steps/effect-group-map').then(m => m.run()) },
   { name: 'characters-index', run: () => import('./steps/characters-index').then(m => m.run()) },
+  { name: 'character-stats', run: () => import('./steps/character-stats').then(m => m.run()) },
 ];
 
 async function main() {
