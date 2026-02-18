@@ -28,11 +28,8 @@
 /data/generated/*
 !/data/generated/character-stats.json
 
-# datamine - ignore all except ParserV3 source
-/datamine/*
-!/datamine/ParserV3/
-/datamine/ParserV3/cache/
-/datamine/ParserV3/export/
+# datamine
+/datamine/
 __pycache__/
 
 # debug
