@@ -320,7 +320,7 @@ const en = {
   'page.character.chain_effect': 'Chain Effect',
   'page.character.dual_effect': 'Dual Attack Effect',
   'page.character.stats.title': 'Base Stats',
-  'page.character.stats.coming_soon': 'Coming soon',
+  'page.character.stats.class_passive': 'Class Passive',
   'page.character.no_reco': 'No gear recommendation available yet.',
 } as const;
 

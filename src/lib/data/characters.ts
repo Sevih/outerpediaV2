@@ -1,6 +1,6 @@
 import { readFile } from 'fs/promises';
 import { join } from 'path';
-import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile } from '@/types/character';
+import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile, CharacterStats } from '@/types/character';
 
 const CHARS_DIR = join(process.cwd(), 'data/character');
 const RECO_DIR = join(process.cwd(), 'data/reco');
@@ -9,6 +9,7 @@ const INDEX_PATH = join(process.cwd(), 'data/generated/characters-index.json');
 const NAME_TO_ID_PATH = join(process.cwd(), 'data/generated/characters-name-to-id.json');
 const LIST_PATH = join(process.cwd(), 'data/generated/characters-list.json');
 const SLUG_TO_ID_PATH = join(process.cwd(), 'data/generated/characters-slug-to-id.json');
+const STATS_PATH = join(process.cwd(), 'data/generated/character-stats.json');
 
 type SlugToIdMap = Record<string, string>;
 
@@ -82,6 +83,17 @@ export async function getCharacterProfile(id: string): Promise<CharacterProfile 
     const raw = await readFile(PROFILES_PATH, 'utf-8');
     const profiles = JSON.parse(raw) as Record<string, CharacterProfile>;
     return profiles[id] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/** Get base stats for a character by ID */
+export async function getCharacterStats(id: string): Promise<CharacterStats | null> {
+  try {
+    const raw = await readFile(STATS_PATH, 'utf-8');
+    const all = JSON.parse(raw) as Record<string, CharacterStats>;
+    return all[id] ?? null;
   } catch {
     return null;
   }

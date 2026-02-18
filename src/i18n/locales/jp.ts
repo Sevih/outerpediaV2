@@ -320,7 +320,7 @@ const jp: Record<TranslationKey, string> = {
   'page.character.chain_effect': 'チェーン効果',
   'page.character.dual_effect': '連携攻撃効果',
   'page.character.stats.title': '基本ステータス',
-  'page.character.stats.coming_soon': '準備中',
+  'page.character.stats.class_passive': 'クラスパッシブ',
   'page.character.no_reco': '推奨装備はまだありません。',
 };
 

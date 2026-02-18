@@ -4,7 +4,7 @@ import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
 import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT } from '@/i18n';
-import { getCharacter, getCharacterSlugs, getCharacterReco, getCharacterProfile } from '@/lib/data/characters';
+import { getCharacter, getCharacterSlugs, getCharacterReco, getCharacterProfile, getCharacterStats } from '@/lib/data/characters';
 import { getExclusiveEquipment, getWeapons, getAmulets, getTalismans, getArmorSets } from '@/lib/data/equipment';
 import { l } from '@/lib/i18n/localize';
 import { splitCharacterName } from '@/lib/character-name';
@@ -74,13 +74,17 @@ export default async function CharacterDetailPage({ params }: Props) {
 
   if (!character) notFound();
 
-  const profile = await getCharacterProfile(character.ID);
+  const [profile, stats] = await Promise.all([
+    getCharacterProfile(character.ID),
+    getCharacterStats(character.ID),
+  ]);
   const ee = eeMap[character.ID] ?? null;
 
   return (
     <CharacterDetailClient
       character={character}
       profile={profile}
+      stats={stats}
       ee={ee}
       reco={reco}
       tags={tagsRaw}

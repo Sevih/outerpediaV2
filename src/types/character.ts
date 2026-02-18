@@ -93,6 +93,42 @@ export type Character = WithLocalizedFields<
   'VoiceActor'
 >;
 
+// ── Character stats (from generated/character-stats.json) ──
+
+export type StatsStep = {
+  ATK: number;
+  DEF: number;
+  HP: number;
+  SPD: number;
+  EFF: number;
+  RES: number;
+  CHC: number;
+  CHD: number;
+  DMG_RED: number;
+  DMG_INC: number;
+  premium_value: number;
+};
+
+export type StatsPremium = {
+  skill_23: string;
+  buffID: string;
+  stat: string;
+  applyingType: 'OAT_RATE' | 'OAT_ADD';
+  rawValue: number;
+};
+
+export type CharacterStats = {
+  info: {
+    id: string;
+    class: string;
+    subclass: string;
+    element: string;
+    star: string;
+  };
+  premium: StatsPremium;
+  steps: Record<string, StatsStep>;
+};
+
 /** Lightweight character entry (value in the ID-keyed index) */
 export type CharacterIndex = WithLocalizedFields<{
   Fullname: string;

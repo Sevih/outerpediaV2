@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import type { Character, CharacterProfile } from '@/types/character';
+import type { Character, CharacterProfile, CharacterStats } from '@/types/character';
 import type { ExclusiveEquipment } from '@/types/equipment';
 import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
 import { useI18n } from '@/lib/contexts/I18nContext';
@@ -26,6 +26,7 @@ type TagEntry = {
 type Props = {
   character: Character;
   profile: CharacterProfile | null;
+  stats: CharacterStats | null;
   ee: ExclusiveEquipment | null;
   reco: Record<string, unknown> | null;
   tags: Record<string, TagEntry>;
@@ -38,6 +39,7 @@ type Props = {
 export default function CharacterDetailClient({
   character,
   profile,
+  stats,
   ee,
   reco,
   tags,
@@ -78,7 +80,7 @@ export default function CharacterDetailClient({
         tags={tags}
       />
 
-      <StatsRankingSection character={character} ee={ee} />
+      <StatsRankingSection character={character} stats={stats} ee={ee} />
 
       {hasEe && ee && (
         <EeSection character={character} ee={ee} />

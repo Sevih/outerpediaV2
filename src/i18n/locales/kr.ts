@@ -320,7 +320,7 @@ const kr: Record<TranslationKey, string> = {
   'page.character.chain_effect': '체인 효과',
   'page.character.dual_effect': '협공 효과',
   'page.character.stats.title': '기본 스탯',
-  'page.character.stats.coming_soon': '준비 중',
+  'page.character.stats.class_passive': '클래스 패시브',
   'page.character.no_reco': '아직 추천 장비가 없습니다.',
 };
 

@@ -320,7 +320,7 @@ const zh: Record<TranslationKey, string> = {
   'page.character.chain_effect': '连携效果',
   'page.character.dual_effect': '夹攻效果',
   'page.character.stats.title': '基础属性',
-  'page.character.stats.coming_soon': '即将推出',
+  'page.character.stats.class_passive': '职业被动',
   'page.character.no_reco': '暂无推荐装备。',
 };
 
