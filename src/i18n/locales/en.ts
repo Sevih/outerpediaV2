@@ -100,6 +100,10 @@ const en = {
   'home.discord.online': '{count} online',
   'home.banner.ends_in': 'Ends in',
   'home.banner.ended': 'Ended',
+  'home.resets.title': 'Server Resets',
+  'home.resets.daily': 'Daily',
+  'home.resets.weekly': 'Weekly',
+  'home.resets.monthly': 'Monthly',
 
   // Search
   'search.placeholder': 'Search characters, pages...',

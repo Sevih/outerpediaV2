@@ -17,52 +17,85 @@ type BurstEntry = {
   level: number;
   cost: number;
   effect: string;
+  offensive: boolean;
+  target: string;
+};
+
+/** Group burst entries by parent skill */
+type SkillBurstGroup = {
+  skillName: string;
+  skillIcon: string;
+  bursts: BurstEntry[];
 };
 
 export default function BurstSection({ character }: Props) {
   const { lang, t } = useI18n();
 
-  const bursts = useMemo<BurstEntry[]>(() => {
-    const result: BurstEntry[] = [];
+  const groups = useMemo<SkillBurstGroup[]>(() => {
+    const result: SkillBurstGroup[] = [];
     for (const key of SKILL_ORDER) {
       const skill = character.skills[key];
       if (!skill?.burnEffect) continue;
       const skillName = l(skill, 'name', lang);
+      const bursts: BurstEntry[] = [];
       for (const burn of Object.values(skill.burnEffect) as BurnEffect[]) {
-        result.push({
+        bursts.push({
           skillName,
           skillIcon: skill.IconName,
           level: burn.level,
           cost: burn.cost,
           effect: l(burn as unknown as Record<string, unknown>, 'effect', lang) as string,
+          offensive: burn.offensive,
+          target: burn.target,
         });
+      }
+      if (bursts.length) {
+        result.push({ skillName, skillIcon: skill.IconName, bursts });
       }
     }
     return result;
   }, [character.skills, lang]);
 
-  if (!bursts.length) return null;
+  if (!groups.length) return null;
 
   return (
     <section id="burst">
       <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.burst')}</h2>
 
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-        {bursts.map((burst) => (
-          <div key={`${burst.skillIcon}-${burst.level}`} className="rounded-xl border border-amber-500/20 bg-amber-950/10 p-4">
-            <div className="mb-2 flex items-center gap-2">
-              <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded border border-white/10 bg-zinc-800">
-                <Image src={`/images/characters/skills/${burst.skillIcon}.webp`} alt={burst.skillName} fill sizes="32px" className="object-contain" />
-              </div>
-              <div className="min-w-0">
-                <span className="text-xs text-zinc-400">{burst.skillName}</span>
-                <div className="flex items-center gap-2 text-xs">
-                  <span className="font-bold text-amber-400">{t('page.character.skill.level')}{burst.level}</span>
-                  <span className="text-zinc-500">{t('page.character.skill.burn_cost')}: {burst.cost}</span>
+      <div className="space-y-6">
+        {groups.map((group) => (
+          <div key={group.skillIcon}>
+            {/* Burst cards */}
+            <div className="flex flex-wrap justify-center gap-4">
+              {group.bursts.map((burst) => (
+                <div
+                  key={burst.level}
+                  className="relative w-44 shrink-0"
+                  style={{ aspectRatio: '220 / 310' }}
+                >
+                  {/* Card frame background */}
+                  <Image
+                    src={`/images/ui/skills/IG_Button_Burst_0${burst.level}.webp`}
+                    alt=""
+                    fill
+                    sizes="176px"
+                    className="pointer-events-none object-contain"
+                  />
+
+                  {/* Cost circle — top-right */}
+                  <div className="absolute top-[3%] right-[4%] flex h-7 w-7 items-center justify-center">
+                    <span className="font-game text-xs font-bold text-white">{burst.cost}</span>
+                  </div>
+
+                  {/* Effect text — bottom area */}
+                  <div className="absolute bottom-[5%] left-[5%] right-[10%] top-[48%] flex items-center overflow-y-auto px-1">
+                    <div className="w-full text-center text-[10px] leading-tight text-zinc-200">
+                      {formatEffectText(burst.effect)}
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-            <div className="text-sm leading-relaxed text-zinc-200">{formatEffectText(burst.effect)}</div>
           </div>
         ))}
       </div>

@@ -10,6 +10,7 @@ import PromoCodes from '@/app/components/home/PromoCodes';
 import BeginnerGuides from '@/app/components/home/BeginnerGuides';
 import RecentUpdates from '@/app/components/home/RecentUpdates';
 import DiscordBanner from '@/app/components/home/DiscordBanner';
+import ServerResets from '@/app/components/home/ServerResets';
 
 export const revalidate = 86400;
 
@@ -64,8 +65,11 @@ export default async function Home({ params }: Props) {
         <p className="mx-auto max-w-2xl text-zinc-400">{t['page.home.description']}</p>
       </section>
 
-      {/* Discord */}
-      <DiscordBanner t={t} />
+      {/* Discord + Server Resets */}
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-[1fr_auto]">
+        <DiscordBanner t={t} />
+        <ServerResets t={t} />
+      </div>
 
       {/* Desktop: left (banners + beginner) | right (codes spanning both rows) */}
       {/* Mobile: banners → codes → beginner */}

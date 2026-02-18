@@ -4,6 +4,7 @@ import type { Messages } from '@/i18n';
 import { getRequestLang } from '@/lib/i18n/server';
 import { l } from '@/lib/i18n/localize';
 import { getCharacterIndex } from '@/lib/data/characters';
+import { splitCharacterName } from '@/lib/character-name';
 import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
 import BannerCountdown from './BannerCountdown';
 
@@ -44,15 +45,20 @@ export default async function CurrentBanners({ t }: Props) {
           const char = charIndex[banner.id];
           if (!char) return null;
 
+          const displayName = l(char, 'Fullname', lang);
+          const { prefix } = splitCharacterName(banner.id, displayName, lang);
+
           return (
             <ResponsiveCharacterCard
               key={`${banner.id}-${banner.start}`}
               id={banner.id}
-              name={l(char, 'Fullname', lang)}
+              name={displayName}
+              prefix={prefix}
               element={char.Element}
               classType={char.Class}
               rarity={char.Rarity}
               tags={char.tags}
+              href={`/${lang}/characters/${char.slug}`}
             >
               <BannerCountdown
                 endDate={banner.end}

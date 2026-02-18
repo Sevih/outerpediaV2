@@ -100,6 +100,10 @@ const zh: Record<TranslationKey, string> = {
   'home.discord.online': '{count} 人在线',
   'home.banner.ends_in': '剩余',
   'home.banner.ended': '已结束',
+  'home.resets.title': '服务器重置',
+  'home.resets.daily': '每日',
+  'home.resets.weekly': '每周',
+  'home.resets.monthly': '每月',
 
   // Search
   'search.placeholder': '搜索角色、页面...',

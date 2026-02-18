@@ -23,7 +23,7 @@ type Props = {
   tags: Record<string, TagEntry>;
 };
 
-const UNIT_TYPE_ORDER = ['premium', 'limited', 'seasonal', 'collab'] as const;
+const UNIT_TYPE_ORDER = ['premium', 'limited', 'seasonal', 'collab', 'free'] as const;
 
 export default function OverviewSection({ character, profile, tags }: Props) {
   const { lang, t } = useI18n();

@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo, useRef, useDeferredValue } from 'react';
 import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 import LZString from 'lz-string';
+import effectsIndex from '@data/generated/effectsIndex.json';
 import type { CharacterListEntry } from '@/types/character';
 import type { Effect } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
@@ -22,15 +23,43 @@ import { splitCharacterName } from '@/lib/character-name';
 
 // ── URL encoding maps ──
 
-const ELEM_ID: Record<string, number> = { Fire: 1, Water: 2, Earth: 3, Light: 4, Dark: 5 };
-const CLASS_ID: Record<string, number> = { Striker: 1, Defender: 2, Ranger: 3, Healer: 4, Mage: 5 };
-const CHAIN_ID: Record<string, number> = { Start: 1, Join: 2, Finish: 3 };
-const GIFT_ID: Record<string, number> = { Science: 1, Luxury: 2, 'Magic Tool': 3, Craftwork: 4, 'Natural Object': 5 };
+// Bitfield maps: value → bit position (0-indexed)
+const ELEM_BIT: Record<string, number> = { Fire: 0, Water: 1, Earth: 2, Light: 3, Dark: 4 };
+const CLASS_BIT: Record<string, number> = { Striker: 0, Defender: 1, Ranger: 2, Healer: 3, Mage: 4 };
+const CHAIN_BIT: Record<string, number> = { Start: 0, Join: 1, Finish: 2 };
+const GIFT_BIT: Record<string, number> = { Science: 0, Luxury: 1, 'Magic Tool': 2, Craftwork: 3, 'Natural Object': 4 };
+const RARITY_BIT: Record<number, number> = { 1: 0, 2: 1, 3: 2 };
+const ROLE_BIT: Record<string, number> = { dps: 0, support: 1, sustain: 2 };
+const SRC_BIT: Record<string, number> = { SKT_FIRST: 0, SKT_SECOND: 1, SKT_ULTIMATE: 2, SKT_CHAIN_PASSIVE: 3, DUAL_ATTACK: 4 };
 
-const ELEM_INV = Object.fromEntries(Object.entries(ELEM_ID).map(([k, v]) => [v, k]));
-const CLASS_INV = Object.fromEntries(Object.entries(CLASS_ID).map(([k, v]) => [v, k]));
-const CHAIN_INV = Object.fromEntries(Object.entries(CHAIN_ID).map(([k, v]) => [v, k]));
-const GIFT_INV = Object.fromEntries(Object.entries(GIFT_ID).map(([k, v]) => [v, k]));
+// Inverse maps: bit position → value
+const ELEM_INV = Object.fromEntries(Object.entries(ELEM_BIT).map(([k, v]) => [v, k]));
+const CLASS_INV = Object.fromEntries(Object.entries(CLASS_BIT).map(([k, v]) => [v, k]));
+const CHAIN_INV = Object.fromEntries(Object.entries(CHAIN_BIT).map(([k, v]) => [v, k]));
+const GIFT_INV = Object.fromEntries(Object.entries(GIFT_BIT).map(([k, v]) => [v, k]));
+const RARITY_INV = Object.fromEntries(Object.entries(RARITY_BIT).map(([k, v]) => [v, Number(k)]));
+const ROLE_INV = Object.fromEntries(Object.entries(ROLE_BIT).map(([k, v]) => [v, k]));
+const SRC_INV = Object.fromEntries(Object.entries(SRC_BIT).map(([k, v]) => [v, k]));
+
+// Bitfield helpers
+function toBitfield<T extends string | number>(arr: T[], map: Record<T, number>): number {
+  let bits = 0;
+  for (const v of arr) if (v in map) bits |= 1 << map[v];
+  return bits;
+}
+function fromBitfield<T>(bits: number, inv: Record<number, T>, count: number): T[] {
+  const out: T[] = [];
+  for (let i = 0; i < count; i++) if (bits & (1 << i)) out.push(inv[i]);
+  return out;
+}
+
+// Index-based maps for buffs/debuffs/tags
+const BUFF_ID: Record<string, number> = effectsIndex.buffs;
+const DEBUFF_ID: Record<string, number> = effectsIndex.debuffs;
+const TAG_ID: Record<string, number> = (effectsIndex as Record<string, Record<string, number>>).tags ?? {};
+const BUFF_INV = Object.fromEntries(Object.entries(BUFF_ID).map(([k, v]) => [v, k]));
+const DEBUFF_INV = Object.fromEntries(Object.entries(DEBUFF_ID).map(([k, v]) => [v, k]));
+const TAG_INV = Object.fromEntries(Object.entries(TAG_ID).map(([k, v]) => [v, k]));
 
 // ── Tag types ──
 
@@ -49,11 +78,11 @@ type Payload = {
 };
 
 type ZPayload = {
-  e?: number[]; c?: number[]; r?: number[]; ch?: number[]; g?: number[];
-  b?: string[]; d?: string[];
+  e?: number; c?: number; r?: number; ch?: number; g?: number;
+  b?: number[]; d?: number[];
   l?: 0 | 1; q?: string;
-  r2?: string[]; t?: string[]; tl?: 0 | 1;
-  src?: string[]; u?: 0 | 1;
+  r2?: number; t?: number[]; tl?: 0 | 1;
+  src?: number; u?: 0 | 1;
 };
 
 // ── Helpers ──
@@ -91,21 +120,29 @@ function charHasEffectFromSources(
 // ── URL encoding ──
 
 function encodeStateToZ(p: Payload): string {
+  const eBits = isArr(p.el) ? toBitfield(p.el!, ELEM_BIT) : undefined;
+  const cBits = isArr(p.cl) ? toBitfield(p.cl!, CLASS_BIT) : undefined;
+  const rBits = isArr(p.r) ? toBitfield(p.r!, RARITY_BIT) : undefined;
+  const chBits = isArr(p.chain) ? toBitfield(p.chain!, CHAIN_BIT) : undefined;
+  const gBits = isArr(p.gift) ? toBitfield(p.gift!, GIFT_BIT) : undefined;
+  const r2Bits = isArr(p.role) ? toBitfield(p.role!, ROLE_BIT) : undefined;
+  const srcBits = isArr(p.sources) ? toBitfield(p.sources!, SRC_BIT) : undefined;
+
   const compact: ZPayload = {
-    e: isArr(p.el) ? p.el!.map(x => ELEM_ID[x]).filter(Boolean) : undefined,
-    c: isArr(p.cl) ? p.cl!.map(x => CLASS_ID[x]).filter(Boolean) : undefined,
-    r: isArr(p.r) ? p.r : undefined,
-    ch: isArr(p.chain) ? p.chain!.map(x => CHAIN_ID[x]).filter(Boolean) : undefined,
-    g: isArr(p.gift) ? p.gift!.map(x => GIFT_ID[x]).filter(Boolean) : undefined,
-    b: isArr(p.buffs) ? p.buffs : undefined,
-    d: isArr(p.debuffs) ? p.debuffs : undefined,
-    r2: isArr(p.role) ? p.role : undefined,
-    t: isArr(p.tags) ? p.tags : undefined,
+    e: eBits || undefined,
+    c: cBits || undefined,
+    r: rBits || undefined,
+    ch: chBits || undefined,
+    g: gBits || undefined,
+    b: isArr(p.buffs) ? p.buffs!.map(x => BUFF_ID[x]).filter(Boolean) : undefined,
+    d: isArr(p.debuffs) ? p.debuffs!.map(x => DEBUFF_ID[x]).filter(Boolean) : undefined,
+    r2: r2Bits || undefined,
+    t: isArr(p.tags) ? p.tags!.map(x => TAG_ID[x]).filter(Boolean) : undefined,
     l: p.logic === 'AND' ? 1 : undefined,
     q: p.q || undefined,
     u: p.uniq ? 1 : undefined,
     tl: p.tagLogic === 'AND' ? 1 : undefined,
-    src: isArr(p.sources) ? p.sources : undefined,
+    src: srcBits || undefined,
   };
   return LZString.compressToEncodedURIComponent(JSON.stringify(compact));
 }
@@ -115,20 +152,20 @@ function decodeZToState(z?: string): Partial<Payload> | null {
   try {
     const raw = JSON.parse(LZString.decompressFromEncodedURIComponent(z) || '{}') as ZPayload;
     return {
-      el: raw.e?.map(id => ELEM_INV[id]).filter(Boolean),
-      cl: raw.c?.map(id => CLASS_INV[id]).filter(Boolean),
-      r: raw.r,
-      chain: raw.ch?.map(id => CHAIN_INV[id]).filter(Boolean),
-      gift: raw.g?.map(id => GIFT_INV[id]).filter(Boolean),
-      buffs: raw.b ?? [],
-      debuffs: raw.d ?? [],
-      role: raw.r2 ?? [],
-      tags: raw.t ?? [],
+      el: raw.e ? fromBitfield(raw.e, ELEM_INV, 5) : [],
+      cl: raw.c ? fromBitfield(raw.c, CLASS_INV, 5) : [],
+      r: raw.r ? fromBitfield(raw.r, RARITY_INV, 3) : [],
+      chain: raw.ch ? fromBitfield(raw.ch, CHAIN_INV, 3) : [],
+      gift: raw.g ? fromBitfield(raw.g, GIFT_INV, 5) : [],
+      buffs: raw.b?.map(id => BUFF_INV[id]).filter(Boolean) ?? [],
+      debuffs: raw.d?.map(id => DEBUFF_INV[id]).filter(Boolean) ?? [],
+      role: raw.r2 ? fromBitfield(raw.r2, ROLE_INV, 3) : [],
+      tags: raw.t?.map(id => TAG_INV[id]).filter(Boolean) ?? [],
       logic: raw.l === 1 ? 'AND' : 'OR',
       q: raw.q,
       uniq: raw.u === 1,
       tagLogic: raw.tl === 1 ? 'AND' : 'OR',
-      sources: (raw.src ?? []) as SkillKey[],
+      sources: raw.src ? fromBitfield(raw.src, SRC_INV, 5) as SkillKey[] : [],
     };
   } catch {
     return null;
@@ -137,12 +174,14 @@ function decodeZToState(z?: string): Partial<Payload> | null {
 
 // ── Effect grouping ──
 
+const BUFF_CATEGORY_ORDER = ['statBoosts', 'supporting', 'utility', 'unique'];
+const DEBUFF_CATEGORY_ORDER = ['statReduction', 'cc', 'dot', 'utility', 'unique'];
+
 function groupEffectsByCategory(
   effectNames: string[], allEffects: Effect[], type: 'buff' | 'debuff', showUnique: boolean
 ): { title: string; effects: string[] }[] {
   const effectMap = new Map(allEffects.map(e => [e.name, e]));
   const groups = new Map<string, string[]>();
-  const order: string[] = [];
   const seen = new Set<string>();
 
   for (const name of effectNames) {
@@ -155,14 +194,17 @@ function groupEffectsByCategory(
     const category = canonicalEffect.category || 'unique';
     if (category === 'hidden') continue;
     if (!showUnique && category === 'unique') continue;
-    if (!groups.has(category)) {
-      groups.set(category, []);
-      order.push(category);
-    }
+    if (!groups.has(category)) groups.set(category, []);
     groups.get(category)!.push(canonical);
   }
 
-  return order.map(category => ({
+  const categoryOrder = type === 'buff' ? BUFF_CATEGORY_ORDER : DEBUFF_CATEGORY_ORDER;
+  const sortedCategories = [...groups.keys()].sort(
+    (a, b) => (categoryOrder.indexOf(a) === -1 ? 999 : categoryOrder.indexOf(a))
+           - (categoryOrder.indexOf(b) === -1 ? 999 : categoryOrder.indexOf(b))
+  );
+
+  return sortedCategories.map(category => ({
     title: `characters.effectsGroups.${type}.${category}`,
     effects: groups.get(category)!,
   }));
@@ -270,6 +312,91 @@ function TextFilterGroup<T extends string>({
   );
 }
 
+function CheckboxSelect({
+  title, effects, effectsMap, selected, type, lang, onToggle,
+}: {
+  title: string;
+  effects: string[];
+  effectsMap: Map<string, Effect>;
+  selected: string[];
+  type: 'buff' | 'debuff';
+  lang: Lang;
+  onToggle: (effectKey: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const count = effects.filter(k => selected.includes(k)).length;
+  const border = type === 'buff' ? 'ring-cyan-500/50' : 'ring-red-500/50';
+  const accent = type === 'buff' ? 'accent-cyan-500' : 'accent-red-500';
+  const color = type === 'buff' ? 'text-cyan-300' : 'text-red-300';
+
+  useEffect(() => {
+    if (!open) return;
+    const handleClick = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [open]);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        className={`w-full flex items-center justify-between rounded-lg bg-zinc-800 px-3 py-2 text-sm ring-1 ${open ? border : 'ring-zinc-700'}`}
+      >
+        <span className={`font-semibold ${color}`}>{title}</span>
+        <span className="flex items-center gap-1.5">
+          {count > 0 && (
+            <span className={`text-[10px] font-bold rounded-full px-1.5 py-0.5 ${type === 'buff' ? 'bg-cyan-500/30 text-cyan-300' : 'bg-red-500/30 text-red-300'}`}>
+              {count}
+            </span>
+          )}
+          <svg className={`h-4 w-4 text-zinc-400 transition-transform ${open ? 'rotate-180' : ''}`} viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+          </svg>
+        </span>
+      </button>
+      {open && (
+        <div className="absolute z-40 mt-1 w-full max-h-60 overflow-y-auto rounded-lg bg-zinc-800 ring-1 ring-zinc-600 shadow-xl">
+          {effects.map(effectKey => {
+            const effect = effectsMap.get(effectKey);
+            if (!effect) return null;
+            const effectLabel = l(effect, 'label', lang);
+            const isIrremovable = effect.icon.includes('Interruption');
+            const imageFilter = isIrremovable ? '' : `${type}-icon`;
+            const checked = selected.includes(effectKey);
+            return (
+              <label
+                key={effectKey}
+                className={`flex items-center gap-2 px-3 py-1.5 cursor-pointer select-none transition ${checked ? 'bg-zinc-700/60' : 'hover:bg-zinc-700/30'}`}
+              >
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={() => onToggle(effectKey)}
+                  className={`${accent} w-4 h-4 shrink-0`}
+                />
+                <span className="relative h-5 w-5 shrink-0 rounded bg-black">
+                  <Image
+                    src={`/images/ui/effect/${effect.icon}.webp`}
+                    alt=""
+                    fill
+                    sizes="20px"
+                    className={`object-contain ${imageFilter}`}
+                  />
+                </span>
+                <span className="text-xs text-zinc-200">{effectLabel}</span>
+              </label>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function EffectGroupGrid({
   groups, effectsMap, selected, type, lang, onToggle, className,
 }: {
@@ -284,31 +411,50 @@ function EffectGroupGrid({
   const { t } = useI18n();
   const color = type === 'buff' ? 'text-cyan-300' : 'text-red-300';
   return (
-    <div className={className}>
-      {groups.map((group, i) => (
-        <div key={`${type}-${i}`} className="rounded-xl bg-zinc-800/40 ring-1 ring-zinc-700 p-2">
-          <p className={`text-center ${color} font-semibold mb-2`}>
-            {t(group.title as TranslationKey)}
-          </p>
-          <div className="grid grid-cols-5 md:grid-cols-6 gap-1.5 justify-items-center">
-            {group.effects.map(effectKey => {
-              const effect = effectsMap.get(effectKey);
-              if (!effect) return null;
-              return (
-                <EffectIcon
-                  key={effectKey}
-                  effect={effect}
-                  type={type}
-                  lang={lang}
-                  selected={selected.includes(effectKey)}
-                  onClick={() => onToggle(effectKey)}
-                />
-              );
-            })}
+    <>
+      {/* Desktop: icon grid */}
+      <div className={`hidden md:grid ${className}`}>
+        {groups.map((group, i) => (
+          <div key={`${type}-${i}`} className="rounded-xl bg-zinc-800/40 ring-1 ring-zinc-700 p-2">
+            <p className={`text-center ${color} font-semibold mb-2`}>
+              {t(group.title as TranslationKey)}
+            </p>
+            <div className="grid grid-cols-7 gap-1 justify-items-center">
+              {group.effects.map(effectKey => {
+                const effect = effectsMap.get(effectKey);
+                if (!effect) return null;
+                return (
+                  <EffectIcon
+                    key={effectKey}
+                    effect={effect}
+                    type={type}
+                    lang={lang}
+                    selected={selected.includes(effectKey)}
+                    onClick={() => onToggle(effectKey)}
+                  />
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+
+      {/* Mobile: checkbox select dropdowns */}
+      <div className="md:hidden space-y-1.5">
+        {groups.map((group, i) => (
+          <CheckboxSelect
+            key={`${type}-m-${i}`}
+            title={t(group.title as TranslationKey)}
+            effects={group.effects}
+            effectsMap={effectsMap}
+            selected={selected}
+            type={type}
+            lang={lang}
+            onToggle={onToggle}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -793,7 +939,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
                 type="buff"
                 lang={lang}
                 onToggle={key => toggleArray(setSelectedBuffs, key)}
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"
+                className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"
               />
 
               <div className="my-4 border-t border-zinc-700" />
@@ -806,7 +952,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
                 type="debuff"
                 lang={lang}
                 onToggle={key => toggleArray(setSelectedDebuffs, key)}
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3"
+                className="grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3"
               />
             </div>
           </div>

@@ -100,6 +100,10 @@ const jp: Record<TranslationKey, string> = {
   'home.discord.online': '{count}人がオンライン',
   'home.banner.ends_in': '残り',
   'home.banner.ended': '終了',
+  'home.resets.title': 'サーバーリセット',
+  'home.resets.daily': 'デイリー',
+  'home.resets.weekly': 'ウィークリー',
+  'home.resets.monthly': 'マンスリー',
 
   // Search
   'search.placeholder': 'キャラクター、ページを検索...',

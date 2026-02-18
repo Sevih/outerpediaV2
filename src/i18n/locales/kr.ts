@@ -100,6 +100,10 @@ const kr: Record<TranslationKey, string> = {
   'home.discord.online': '{count}명 온라인',
   'home.banner.ends_in': '남은 시간',
   'home.banner.ended': '종료',
+  'home.resets.title': '서버 초기화',
+  'home.resets.daily': '일일',
+  'home.resets.weekly': '주간',
+  'home.resets.monthly': '월간',
 
   // Search
   'search.placeholder': '캐릭터, 페이지 검색...',
