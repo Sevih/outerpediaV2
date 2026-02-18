@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { FaSearch } from 'react-icons/fa';
@@ -74,12 +75,13 @@ export default function SearchModal({
   const charResults = useMemo(() => {
     if (!charIndex || !query.trim()) return [];
     const q = query.toLowerCase();
-    return Object.values(charIndex)
-      .filter((c) => {
+    return Object.entries(charIndex)
+      .filter(([, c]) => {
         const name = l(c, 'Fullname', lang);
         return name.toLowerCase().includes(q) || c.Fullname.toLowerCase().includes(q);
       })
-      .slice(0, 8);
+      .slice(0, 8)
+      .map(([id, c]) => ({ ...c, _id: id }));
   }, [charIndex, query, lang]);
 
   const allResults = useMemo(() => [
@@ -96,7 +98,7 @@ export default function SearchModal({
     if (item.type === 'page') {
       router.push(`/${lang}${item.href}` as never);
     } else {
-      router.push(`/${lang}/characters` as never);
+      router.push(`/${lang}/characters/${item.slug}` as never);
     }
     onClose();
   }, [allResults, lang, router, onClose]);
@@ -119,7 +121,7 @@ export default function SearchModal({
 
   if (!open) return null;
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-70 flex items-start justify-center pt-[15vh]" onClick={onClose}>
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
       <div
@@ -185,7 +187,7 @@ export default function SearchModal({
                   >
                     <div className="relative size-8 shrink-0 overflow-hidden rounded">
                       <Image
-                        src={`/images/characters/portrait/CT_${char.slug}.webp`}
+                        src={`/images/characters/portrait/CT_${char._id}.webp`}
                         alt={displayName}
                         fill
                         sizes="32px"
@@ -227,6 +229,7 @@ export default function SearchModal({
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

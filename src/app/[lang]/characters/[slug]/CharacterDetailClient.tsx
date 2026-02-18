@@ -7,9 +7,12 @@ import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import QuickToc, { type TocSection } from '@/app/components/character/QuickToc';
 import OverviewSection from '@/app/components/character/OverviewSection';
+import StatsRankingSection from '@/app/components/character/StatsRankingSection';
+import EeSection from '@/app/components/character/EeSection';
+import TranscendenceSection from '@/app/components/character/TranscendenceSection';
 import SkillsSection from '@/app/components/character/SkillsSection';
+import BurstSection from '@/app/components/character/BurstSection';
 import ChainDualSection from '@/app/components/character/ChainDualSection';
-import EeTranscendSection from '@/app/components/character/EeTranscendSection';
 import GearRecoSection from '@/app/components/character/GearRecoSection';
 
 type TagEntry = {
@@ -45,18 +48,25 @@ export default function CharacterDetailClient({
 }: Props) {
   const { t } = useI18n();
 
-  const hasEeOrTranscend = !!ee || !!character.transcend;
+  const hasEe = !!ee;
+  const hasTranscend = !!character.transcend;
   const hasChainPassive = !!character.skills.SKT_CHAIN_PASSIVE;
+  const hasBurst = !!(['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE'] as const).find(
+    (k) => character.skills[k]?.burnEffect && Object.keys(character.skills[k]!.burnEffect!).length > 0
+  );
 
   const sections = useMemo<TocSection[]>(() => {
     return [
       { id: 'overview', label: t('page.character.toc.overview') },
-      hasEeOrTranscend && { id: 'ee-transcend', label: t('page.character.toc.ee_transcend') },
+      { id: 'stats-ranking', label: t('page.character.toc.stats_ranking') },
+      hasEe && { id: 'ee', label: t('page.character.toc.ee') },
+      hasTranscend && { id: 'transcend', label: t('page.character.toc.transcend') },
       { id: 'skills', label: t('page.character.toc.skills') },
+      hasBurst && { id: 'burst', label: t('page.character.toc.burst') },
       hasChainPassive && { id: 'chain-dual', label: t('page.character.toc.chain_dual') },
       { id: 'gear', label: t('page.character.toc.gear') },
     ].filter(Boolean) as TocSection[];
-  }, [t, hasEeOrTranscend, hasChainPassive]);
+  }, [t, hasEe, hasTranscend, hasChainPassive, hasBurst]);
 
   return (
     <div className="mx-auto max-w-6xl space-y-10 px-4 py-6 md:px-6">
@@ -68,14 +78,21 @@ export default function CharacterDetailClient({
         tags={tags}
       />
 
-      {hasEeOrTranscend && (
-        <EeTranscendSection
-          character={character}
-          ee={ee}
-        />
+      <StatsRankingSection character={character} ee={ee} />
+
+      {hasEe && ee && (
+        <EeSection character={character} ee={ee} />
+      )}
+
+      {hasTranscend && (
+        <TranscendenceSection character={character} />
       )}
 
       <SkillsSection character={character} />
+
+      {hasBurst && (
+        <BurstSection character={character} />
+      )}
 
       {hasChainPassive && (
         <ChainDualSection character={character} />

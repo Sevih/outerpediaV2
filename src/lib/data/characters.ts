@@ -1,4 +1,4 @@
-import { readFile, readdir } from 'fs/promises';
+import { readFile } from 'fs/promises';
 import { join } from 'path';
 import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile } from '@/types/character';
 
@@ -8,23 +8,42 @@ const PROFILES_PATH = join(process.cwd(), 'data/character-profiles.json');
 const INDEX_PATH = join(process.cwd(), 'data/generated/characters-index.json');
 const NAME_TO_ID_PATH = join(process.cwd(), 'data/generated/characters-name-to-id.json');
 const LIST_PATH = join(process.cwd(), 'data/generated/characters-list.json');
+const SLUG_TO_ID_PATH = join(process.cwd(), 'data/generated/characters-slug-to-id.json');
 
-/** Get a single character by slug */
+type SlugToIdMap = Record<string, string>;
+
+let slugToIdCache: SlugToIdMap | null = null;
+
+/** Load and cache the slug → ID mapping */
+async function getSlugToId(): Promise<SlugToIdMap> {
+  if (slugToIdCache) return slugToIdCache;
+  const raw = await readFile(SLUG_TO_ID_PATH, 'utf-8');
+  slugToIdCache = JSON.parse(raw) as SlugToIdMap;
+  return slugToIdCache;
+}
+
+/** Resolve a readable slug to a character ID */
+export async function resolveSlug(slug: string): Promise<string | null> {
+  const map = await getSlugToId();
+  return map[slug] ?? null;
+}
+
+/** Get a single character by readable slug */
 export async function getCharacter(slug: string): Promise<Character | null> {
+  const id = await resolveSlug(slug);
+  if (!id) return null;
   try {
-    const raw = await readFile(join(CHARS_DIR, `${slug}.json`), 'utf-8');
+    const raw = await readFile(join(CHARS_DIR, `${id}.json`), 'utf-8');
     return JSON.parse(raw) as Character;
   } catch {
     return null;
   }
 }
 
-/** Get all character slugs */
+/** Get all character slugs (readable) */
 export async function getCharacterSlugs(): Promise<string[]> {
-  const files = await readdir(CHARS_DIR);
-  return files
-    .filter(f => f.endsWith('.json'))
-    .map(f => f.replace('.json', ''));
+  const map = await getSlugToId();
+  return Object.keys(map);
 }
 
 /** Get the ID-keyed character index */
@@ -45,10 +64,12 @@ export async function getCharactersForList(): Promise<CharacterListEntry[]> {
   return JSON.parse(raw) as CharacterListEntry[];
 }
 
-/** Get equipment recommendations for a character by slug (ID) */
+/** Get equipment recommendations for a character by readable slug */
 export async function getCharacterReco(slug: string): Promise<Record<string, unknown> | null> {
+  const id = await resolveSlug(slug);
+  if (!id) return null;
   try {
-    const raw = await readFile(join(RECO_DIR, `${slug}.json`), 'utf-8');
+    const raw = await readFile(join(RECO_DIR, `${id}.json`), 'utf-8');
     return JSON.parse(raw) as Record<string, unknown>;
   } catch {
     return null;

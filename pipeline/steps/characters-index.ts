@@ -25,6 +25,17 @@ type RawCharacter = {
   [key: string]: unknown;
 };
 
+/** Convert English Fullname to a URL-friendly slug */
+function toSlug(fullname: string): string {
+  return fullname
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')  // strip diacritics
+    .replace(/[']/g, '')                                // remove apostrophes
+    .replace(/[^a-z0-9-]+/g, '-')                       // non-alnum → dash
+    .replace(/-+/g, '-')                                 // collapse dashes
+    .replace(/^-|-$/g, '');                              // trim leading/trailing
+}
+
 async function loadGroupMap(): Promise<Map<string, string>> {
   const [buffsRaw, debuffsRaw] = await Promise.all([
     readFile(join(PATHS.effects, 'buffs.json'), 'utf-8'),
@@ -49,11 +60,32 @@ export async function run() {
 
   const canonicalize = (name: string) => groupMap.get(name) || name;
 
-  const entries = await Promise.all(
+  // First pass: load all characters and compute slugs
+  const rawEntries = await Promise.all(
     jsonFiles.map(async (file) => {
       const raw = await readFile(join(PATHS.characters, file), 'utf-8');
       const char: RawCharacter = JSON.parse(raw);
-      const slug = file.replace('.json', '');
+      return { char, fileId: file.replace('.json', '') };
+    })
+  );
+
+  // Generate unique slugs (detect collisions)
+  const slugCounts = new Map<string, number>();
+  for (const { char } of rawEntries) {
+    const s = toSlug(char.Fullname);
+    slugCounts.set(s, (slugCounts.get(s) || 0) + 1);
+  }
+  const slugUsed = new Map<string, number>();
+  function uniqueSlug(fullname: string): string {
+    const s = toSlug(fullname);
+    if ((slugCounts.get(s) || 0) <= 1) return s;
+    const n = (slugUsed.get(s) || 0) + 1;
+    slugUsed.set(s, n);
+    return n === 1 ? s : `${s}-${n}`;
+  }
+
+  const entries = rawEntries.map(({ char }) => {
+      const slug = uniqueSlug(char.Fullname);
 
       // ── Index entry (lightweight) ──
       const indexEntry: Record<string, unknown> = {
@@ -126,9 +158,8 @@ export async function run() {
         }
       }
 
-      return { id: char.ID, indexEntry, listEntry, fullname: char.Fullname };
-    })
-  );
+      return { id: char.ID, slug, indexEntry, listEntry, fullname: char.Fullname };
+  });
 
   // Sort by ID for stable output
   entries.sort((a, b) => a.id.localeCompare(b.id));
@@ -145,20 +176,29 @@ export async function run() {
     nameToId[fullname] = id;
   }
 
+  // Slug → ID map (for URL resolution)
+  const slugToId: Record<string, string> = {};
+  for (const { id, slug } of entries) {
+    slugToId[slug] = id;
+  }
+
   // Enriched list array for /characters page
   const list = entries.map(({ listEntry }) => listEntry);
 
   const indexPath = join(PATHS.generated, 'characters-index.json');
   const namePath = join(PATHS.generated, 'characters-name-to-id.json');
   const listPath = join(PATHS.generated, 'characters-list.json');
+  const slugPath = join(PATHS.generated, 'characters-slug-to-id.json');
 
   await Promise.all([
     writeFile(indexPath, JSON.stringify(index, null, 2)),
     writeFile(namePath, JSON.stringify(nameToId, null, 2)),
     writeFile(listPath, JSON.stringify(list)),
+    writeFile(slugPath, JSON.stringify(slugToId, null, 2)),
   ]);
 
   console.log(`  Generated ${entries.length} characters → ${indexPath}`);
   console.log(`  Generated name→id map → ${namePath}`);
   console.log(`  Generated list (${entries.length} entries, canonical effects) → ${listPath}`);
+  console.log(`  Generated slug→id map → ${slugPath}`);
 }

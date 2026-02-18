@@ -37,13 +37,11 @@ export default function EeInline({ name }: Props) {
   const eeName = l(ee, 'name', lang);
   const effect = l(ee, 'effect', lang);
   const effect10 = l(ee, 'effect10', lang);
-  const slug = char?.slug ?? charId;
-
   const tooltip = (
     <div className="flex gap-2">
       <div className="relative h-10 w-10 shrink-0">
         <Image src="/images/items/TI_Slot_Unique.webp" alt="" fill sizes="40px" className="object-contain" />
-        <Image src={`/images/characters/ee/${slug}.webp`} alt="" fill sizes="40px" className="object-contain" />
+        <Image src={`/images/characters/ee/${charId}.webp`} alt="" fill sizes="40px" className="object-contain" />
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-debuff">{eeName}</span>
@@ -58,7 +56,7 @@ export default function EeInline({ name }: Props) {
     <InlineTooltip content={tooltip}>
       <button type="button" className="cursor-default">
         <EquipmentBadge
-          icon={`/images/characters/ee/${slug}.webp`}
+          icon={`/images/characters/ee/${charId}.webp`}
           bg="/images/items/TI_Slot_Unique.webp"
           label={eeName}
           color="text-debuff"
