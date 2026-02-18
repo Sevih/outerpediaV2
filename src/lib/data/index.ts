@@ -9,3 +9,4 @@ export {
   getExclusiveEquipment,
 } from './equipment';
 export { getItems } from './items';
+export { getGiftMap, getGiftItems } from './gifts';

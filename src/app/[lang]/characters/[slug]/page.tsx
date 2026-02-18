@@ -6,6 +6,9 @@ import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT } from '@/i18n';
 import { getCharacter, getCharacterSlugs, getCharacterReco, getCharacterProfile, getCharacterStats } from '@/lib/data/characters';
 import { getExclusiveEquipment, getWeapons, getAmulets, getTalismans, getArmorSets } from '@/lib/data/equipment';
+import { getBuffs, getDebuffs } from '@/lib/data/effects';
+import { getGiftItems } from '@/lib/data/gifts';
+import type { Effect } from '@/types/effect';
 import { l } from '@/lib/i18n/localize';
 import { splitCharacterName } from '@/lib/character-name';
 import { readFile } from 'fs/promises';
@@ -50,8 +53,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createPageMetadata({
     lang,
     path: `/characters/${slug}`,
-    title: t('page.character.meta_title', { name, monthYear }),
-    description: t('page.character.meta_description', { name, monthYear, element, classType }),
+    title: t('page.character.meta_title', { name: fullname, monthYear }),
+    description: t('page.character.meta_description', { name: fullname, monthYear, element, classType }),
     ogImage: `/images/characters/full/IMG_${character.ID}.webp`,
   });
 }
@@ -59,7 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CharacterDetailPage({ params }: Props) {
   const { slug } = await params;
 
-  const [character, reco, eeMap, weapons, amulets, talismans, sets, tagsRaw] = await Promise.all([
+  const [character, reco, eeMap, weapons, amulets, talismans, sets, tagsRaw, giftItemsMap, buffsArr, debuffsArr] = await Promise.all([
     getCharacter(slug),
     getCharacterReco(slug),
     getExclusiveEquipment(),
@@ -70,7 +73,15 @@ export default async function CharacterDetailPage({ params }: Props) {
     readFile(join(process.cwd(), 'data/tags.json'), 'utf-8')
       .then((r) => JSON.parse(r) as Record<string, TagEntry>)
       .catch(() => ({} as Record<string, TagEntry>)),
+    getGiftItems(),
+    getBuffs(),
+    getDebuffs(),
   ]);
+
+  const buffMap: Record<string, Effect> = {};
+  for (const b of buffsArr) buffMap[b.name] = b;
+  const debuffMap: Record<string, Effect> = {};
+  for (const d of debuffsArr) debuffMap[d.name] = d;
 
   if (!character) notFound();
 
@@ -79,6 +90,7 @@ export default async function CharacterDetailPage({ params }: Props) {
     getCharacterStats(character.ID),
   ]);
   const ee = eeMap[character.ID] ?? null;
+  const giftItems = giftItemsMap[character.gift as keyof typeof giftItemsMap] ?? [];
 
   return (
     <CharacterDetailClient
@@ -92,6 +104,9 @@ export default async function CharacterDetailPage({ params }: Props) {
       amulets={amulets}
       talismans={talismans}
       sets={sets}
+      giftItems={giftItems}
+      buffMap={buffMap}
+      debuffMap={debuffMap}
     />
   );
 }

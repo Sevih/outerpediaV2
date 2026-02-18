@@ -30,26 +30,52 @@ export default function SkillCard({ skill }: Props) {
   const desc = getDescription(skill, level, lang);
   const maxLevel = Object.keys(skill.true_desc_levels).filter((k) => /^\d+$/.test(k)).length;
 
+  // Count WGR bonus and CD reduction from active enhancements (always check English text)
+  const enhancements = skill.enhancement as Record<string, string[]>;
+  let wgrBonus = 0;
+  let cdReduction = 0;
+  for (const lv of ['2', '3', '4', '5']) {
+    if (Number(level) < Number(lv)) continue;
+    const items = enhancements[lv] ?? [];
+    for (const item of items) {
+      if (item.includes('+1 Weakness Gauge damage')) wgrBonus++;
+      if (item.includes('-1 turn Skill Cooldown')) cdReduction++;
+    }
+  }
+  const adjustedWgr = skill.wgr + wgrBonus;
+  const adjustedCd = skill.cd ? Number(skill.cd) - cdReduction : null;
+
   return (
     <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-4">
       <div className="mb-3 flex items-start gap-3">
-        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg border border-white/10 bg-zinc-800">
-          <Image src={`/images/characters/skills/${skill.IconName}.webp`} alt={name} fill sizes="56px" className="object-contain" />
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden">
+          <Image src={`/images/characters/skills/${skill.IconName}.webp`} alt={name} fill sizes="56px" className="object-contain scale-83" />
+          <Image
+            src={`/images/ui/skills/Skill_Frame_${skill.SkillType === 'SKT_SECOND' ? 'Passive' : 'Attack'}.webp`}
+            alt=""
+            fill
+            sizes="72px"
+            className="pointer-events-none scale-100 object-contain"
+          />
         </div>
         <div className="min-w-0 flex-1">
           <h3 className="font-game text-lg font-bold">{name}</h3>
           <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
-            {skill.cd && <span className="rounded bg-zinc-800 px-1.5 py-0.5">{t('page.character.skill.cooldown')} {skill.cd}</span>}
-            <span className="rounded bg-zinc-800 px-1.5 py-0.5">{t('page.character.skill.wgr')} {skill.wgr}</span>
-            <span className="rounded bg-zinc-800 px-1.5 py-0.5">
-              {skill.target === 'mono' ? t('page.character.skill.target_mono') : t('page.character.skill.target_multi')}
-            </span>
+            {adjustedCd && <span className="rounded bg-zinc-800 px-1.5 py-0.5">{t('page.character.skill.cooldown')} {adjustedCd}</span>}
+            {!isNaN(adjustedWgr) && <span className="rounded bg-zinc-800 px-1.5 py-0.5">{t('page.character.skill.wgr')} {adjustedWgr}</span>}
+            {skill.target && (
+              <span className="rounded bg-zinc-800 px-1.5 py-0.5">
+                {t(`page.character.skill.target_${skill.target}${skill.offensive ? '' : '_ally'}` as Parameters<typeof t>[0])}
+              </span>
+            )}
           </div>
         </div>
       </div>
 
+      <BuffDebuffDisplay buffs={skill.buff} debuffs={skill.debuff} />
+
       {maxLevel > 1 && (
-        <div className="mb-3 flex items-center gap-1">
+        <div className="mt-3 mb-3 flex items-center gap-1">
           {Array.from({ length: maxLevel }, (_, i) => String(i + 1)).map((lv) => (
             <button
               key={lv}
@@ -66,7 +92,6 @@ export default function SkillCard({ skill }: Props) {
       )}
 
       <div className="mb-3 text-sm leading-relaxed text-zinc-200">{formatEffectText(desc)}</div>
-      <BuffDebuffDisplay buffs={skill.buff} debuffs={skill.debuff} />
 
       <div className="mt-4">
         <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">{t('page.character.skill.enhancement')}</h4>
@@ -74,8 +99,9 @@ export default function SkillCard({ skill }: Props) {
           {['2', '3', '4', '5'].map((lv) => {
             const items = getEnhancement(skill, lv, lang);
             if (!items.length) return null;
+            const active = Number(level) >= Number(lv);
             return (
-              <div key={lv} className="flex gap-2 text-xs">
+              <div key={lv} className={`flex gap-2 text-xs transition-opacity ${active ? '' : 'opacity-30'}`}>
                 <span className="shrink-0 font-semibold text-yellow-400">+{lv}</span>
                 <span className="text-zinc-300">{items.join(', ')}</span>
               </div>

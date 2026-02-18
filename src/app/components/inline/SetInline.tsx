@@ -4,7 +4,7 @@ import Image from 'next/image';
 import setsData from '@data/equipment/sets.json';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText } from '@/lib/format-text';
+import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
 import type { ArmorSet } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
@@ -56,7 +56,7 @@ export default function SetInline({ name }: Props) {
   return (
     <InlineTooltip content={tooltip}>
       <button type="button" className="cursor-default">
-        <EquipmentBadge icon={iconPath} bg="/images/items/TI_Slot_Unique.webp" label={label} />
+        <EquipmentBadge icon={iconPath} bg={getRarityBgPath('legendary')} label={label} />
       </button>
     </InlineTooltip>
   );

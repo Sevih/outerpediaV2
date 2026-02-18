@@ -33,7 +33,7 @@ export default function InlineTooltip({ children, content, bg = 'bg-neutral-800'
 
 /** Extract fill color from bg class for the arrow */
 function arrowClass(bg: string): string {
-  if (bg.includes('#1a4a6e')) return 'fill-[#1a4a6e]';
-  if (bg.includes('#6e2a27')) return 'fill-[#6e2a27]';
+  if (bg.includes('buff-bg')) return 'fill-buff-bg';
+  if (bg.includes('debuff-bg')) return 'fill-debuff-bg';
   return 'fill-neutral-800';
 }

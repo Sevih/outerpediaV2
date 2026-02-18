@@ -4,7 +4,10 @@ import { useMemo } from 'react';
 import type { Character, CharacterProfile, CharacterStats } from '@/types/character';
 import type { ExclusiveEquipment } from '@/types/equipment';
 import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
+import type { Item } from '@/types/item';
+import type { Effect } from '@/types/effect';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import QuickToc, { type TocSection } from '@/app/components/character/QuickToc';
 import OverviewSection from '@/app/components/character/OverviewSection';
 import StatsRankingSection from '@/app/components/character/StatsRankingSection';
@@ -34,6 +37,9 @@ type Props = {
   amulets: Amulet[];
   talismans: Talisman[];
   sets: ArmorSet[];
+  giftItems: Item[];
+  buffMap: Record<string, Effect>;
+  debuffMap: Record<string, Effect>;
 };
 
 export default function CharacterDetailClient({
@@ -47,6 +53,9 @@ export default function CharacterDetailClient({
   amulets,
   talismans,
   sets,
+  giftItems,
+  buffMap,
+  debuffMap,
 }: Props) {
   const { t } = useI18n();
 
@@ -71,42 +80,44 @@ export default function CharacterDetailClient({
   }, [t, hasEe, hasTranscend, hasChainPassive, hasBurst]);
 
   return (
-    <div className="mx-auto max-w-6xl space-y-10 px-4 py-6 md:px-6">
-      <QuickToc sections={sections} />
+    <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
+      <div className="mx-auto max-w-6xl space-y-10 px-4 py-6 md:px-6">
+        <QuickToc sections={sections} />
 
-      <OverviewSection
-        character={character}
-        profile={profile}
-        tags={tags}
-      />
+        <OverviewSection
+          character={character}
+          profile={profile}
+          tags={tags}
+        />
 
-      <StatsRankingSection character={character} stats={stats} ee={ee} />
+        <StatsRankingSection character={character} stats={stats} ee={ee} />
 
-      {hasEe && ee && (
-        <EeSection character={character} ee={ee} />
-      )}
+        {hasEe && ee && (
+          <EeSection character={character} ee={ee} giftItems={giftItems} />
+        )}
 
-      {hasTranscend && (
-        <TranscendenceSection character={character} />
-      )}
+        {hasTranscend && (
+          <TranscendenceSection character={character} />
+        )}
 
-      <SkillsSection character={character} />
+        <SkillsSection character={character} />
 
-      {hasBurst && (
-        <BurstSection character={character} />
-      )}
+        {hasBurst && (
+          <BurstSection character={character} />
+        )}
 
-      {hasChainPassive && (
-        <ChainDualSection character={character} />
-      )}
+        {hasChainPassive && (
+          <ChainDualSection character={character} />
+        )}
 
-      <GearRecoSection
-        reco={(reco ?? {}) as Record<string, never>}
-        weapons={weapons}
-        amulets={amulets}
-        talismans={talismans}
-        sets={sets}
-      />
-    </div>
+        <GearRecoSection
+          reco={(reco ?? {}) as Record<string, never>}
+          weapons={weapons}
+          amulets={amulets}
+          talismans={talismans}
+          sets={sets}
+        />
+      </div>
+    </EffectsProvider>
   );
 }

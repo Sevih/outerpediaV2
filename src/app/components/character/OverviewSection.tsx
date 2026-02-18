@@ -42,10 +42,12 @@ export default function OverviewSection({ character, profile, tags }: Props) {
   return (
     <section id="overview">
       <div className="mb-4 flex flex-col items-center text-center">
-        {prefix && (
-          <p className="text-lg tracking-wide">{prefix}</p>
-        )}
-        <h1 className="font-game text-3xl font-bold">{name}</h1>
+        <h1 className="font-game text-3xl font-bold">
+          {prefix && (
+            <span className="block text-lg font-normal tracking-wide">{prefix}</span>
+          )}
+          {name}
+        </h1>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-[360px_1fr]">

@@ -29,7 +29,7 @@ export default function EffectInline({ name, type }: Props) {
   const label = l(effect, 'label', lang);
   const description = l(effect, 'description', lang);
   const color = type === 'buff' ? 'text-buff' : 'text-debuff';
-  const tooltipBg = type === 'buff' ? 'bg-[#1a4a6e]' : 'bg-[#6e2a27]';
+  const tooltipBg = type === 'buff' ? 'bg-buff-bg' : 'bg-debuff-bg';
 
   // Irremovable effects (icon contains "Interruption") keep their native colors
   const isIrremovable = effect.icon.includes('Interruption');

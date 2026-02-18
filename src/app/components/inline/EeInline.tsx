@@ -6,7 +6,7 @@ import charIndex from '@data/generated/characters-index.json';
 import nameToId from '@data/generated/characters-name-to-id.json';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText } from '@/lib/format-text';
+import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
 import type { ExclusiveEquipment } from '@/types/equipment';
 import type { CharacterIndex } from '@/types/character';
 import InlineTooltip from './InlineTooltip';
@@ -40,7 +40,7 @@ export default function EeInline({ name }: Props) {
   const tooltip = (
     <div className="flex gap-2">
       <div className="relative h-10 w-10 shrink-0">
-        <Image src="/images/items/TI_Slot_Unique.webp" alt="" fill sizes="40px" className="object-contain" />
+        <Image src={getRarityBgPath('legendary')} alt="" fill sizes="40px" className="object-contain" />
         <Image src={`/images/characters/ee/${charId}.webp`} alt="" fill sizes="40px" className="object-contain" />
       </div>
       <div className="flex flex-col gap-0.5">
@@ -57,7 +57,7 @@ export default function EeInline({ name }: Props) {
       <button type="button" className="cursor-default">
         <EquipmentBadge
           icon={`/images/characters/ee/${charId}.webp`}
-          bg="/images/items/TI_Slot_Unique.webp"
+          bg={getRarityBgPath('legendary')}
           label={eeName}
           color="text-debuff"
         />
