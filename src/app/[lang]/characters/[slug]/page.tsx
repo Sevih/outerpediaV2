@@ -10,7 +10,6 @@ import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getGiftItems } from '@/lib/data/gifts';
 import type { Effect } from '@/types/effect';
 import { l } from '@/lib/i18n/localize';
-import { splitCharacterName } from '@/lib/character-name';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 import CharacterDetailClient from './CharacterDetailClient';
@@ -45,7 +44,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!character) return {};
 
   const fullname = l(character, 'Fullname', lang);
-  const { name } = splitCharacterName(character.ID, fullname, lang);
   const monthYear = getMonthYear(lang);
   const element = t(`sys.element.${character.Element.toLowerCase()}` as Parameters<typeof t>[0]);
   const classType = t(`sys.class.${character.Class.toLowerCase()}` as Parameters<typeof t>[0]);
