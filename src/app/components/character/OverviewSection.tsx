@@ -41,11 +41,11 @@ export default function OverviewSection({ character, profile, tags }: Props) {
 
   return (
     <section id="overview">
-      <div className="mb-4 text-center">
+      <div className="mb-4 flex flex-col items-center text-center">
         {prefix && (
-          <p className="text-sm tracking-wide text-zinc-400">{prefix}</p>
+          <p className="text-lg tracking-wide">{prefix}</p>
         )}
-        <h1 className="font-game text-4xl font-bold">{name}</h1>
+        <h1 className="font-game text-3xl font-bold">{name}</h1>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-[360px_1fr]">
@@ -77,7 +77,7 @@ export default function OverviewSection({ character, profile, tags }: Props) {
               {t(classKey)}
             </span>
             <span className="inline-flex items-center gap-1 text-zinc-300">
-              <Image src={`/images/ui/class/CM_Class_${character.SubClass}.webp`} alt={character.SubClass} width={24} height={24} />
+              <Image src={`/images/ui/class/CM_Sub_Class_${character.SubClass}.webp`} alt={character.SubClass} width={24} height={24} />
               {t(subclassKey)}
             </span>
           </div>
@@ -98,6 +98,29 @@ export default function OverviewSection({ character, profile, tags }: Props) {
             <div className="text-sm text-zinc-400">
               <span className="font-semibold text-zinc-300">{t('page.character.voice_actor')}</span>{' '}
               {voiceActor}
+            </div>
+          )}
+
+          {(profile?.birthday || profile?.height || profile?.weight) && (
+            <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-zinc-400">
+              {profile.birthday && (
+                <span>
+                  <span className="font-semibold text-zinc-300">{t('page.character.birthday')}</span>{' '}
+                  {profile.birthday}
+                </span>
+              )}
+              {profile.height && (
+                <span>
+                  <span className="font-semibold text-zinc-300">{t('page.character.height')}</span>{' '}
+                  {profile.height}
+                </span>
+              )}
+              {profile.weight && (
+                <span>
+                  <span className="font-semibold text-zinc-300">{t('page.character.weight')}</span>{' '}
+                  {profile.weight}
+                </span>
+              )}
             </div>
           )}
 
