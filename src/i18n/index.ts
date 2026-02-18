@@ -12,12 +12,24 @@ export const loadMessages = cache(async (lang: Lang): Promise<Messages> => {
   return mod.default;
 });
 
+/** Resolve ICU {var, plural, one {…} other {…}} patterns */
+function resolvePlurals(text: string, vars: Record<string, string | number>): string {
+  return text.replace(
+    /\{(\w+),\s*plural,\s*one\s*\{([^}]*)\}\s*other\s*\{([^}]*)\}\}/g,
+    (_, varName, one, other) => {
+      const count = Number(vars[varName] ?? 0);
+      return (count === 1 ? one : other).replace(/#/g, String(count));
+    },
+  );
+}
+
 /** Create a translation function from a messages dict */
 export function makeT(messages: Messages): TFunction {
   return (key, vars) => {
-    const template = messages[key] ?? key;
-    if (!vars) return template;
-    return template.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? `{${k}}`));
+    let text = messages[key] ?? key;
+    if (!vars) return text;
+    text = resolvePlurals(text, vars);
+    return text.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? `{${k}}`));
   };
 }
 

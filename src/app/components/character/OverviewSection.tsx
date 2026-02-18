@@ -126,7 +126,7 @@ export default function OverviewSection({ character, profile, tags }: Props) {
 
           {story && (
             <div className="mt-4">
-              <h3 className="mb-2 text-sm font-semibold text-zinc-300">{t('page.character.story')}</h3>
+              <h2 className="mb-2 text-sm font-semibold text-zinc-300">{t('page.character.story')}</h2>
               <div className="rounded-lg border border-white/5 bg-zinc-900/50 p-4 text-sm leading-relaxed text-zinc-300">
                 {formatEffectText(story)}
               </div>

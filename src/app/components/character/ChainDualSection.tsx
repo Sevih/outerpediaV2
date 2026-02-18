@@ -64,7 +64,7 @@ export default function ChainDualSection({ character }: Props) {
             />
           </div>
           <div>
-            <h4 className="font-game text-lg font-bold">{l(cp, 'name', lang)}</h4>
+            <h3 className="font-game text-lg font-bold">{l(cp, 'name', lang)}</h3>
             <div className="mt-1 flex items-center gap-2 text-xs text-zinc-400">
               <span className="rounded bg-zinc-800 px-1.5 py-0.5">
                 {t('page.character.skill.wgr')} {cp.wgr}
@@ -81,9 +81,9 @@ export default function ChainDualSection({ character }: Props) {
         {/* Chain effect */}
         {chain && (
           <div className="mb-4">
-            <h5 className="mb-1 text-xs font-semibold uppercase tracking-wider text-yellow-400">
+            <h4 className="mb-1 text-xs font-semibold uppercase tracking-wider text-yellow-400">
               {t('page.character.chain_effect')}
-            </h5>
+            </h4>
             <div className="text-sm leading-relaxed text-zinc-200">
               {formatEffectText(chain)}
             </div>
@@ -96,9 +96,9 @@ export default function ChainDualSection({ character }: Props) {
         {/* Dual attack effect */}
         {dual && (
           <div>
-            <h5 className="mb-1 text-xs font-semibold uppercase tracking-wider text-yellow-400">
+            <h4 className="mb-1 text-xs font-semibold uppercase tracking-wider text-yellow-400">
               {t('page.character.dual_effect')}
-            </h5>
+            </h4>
             <div className="text-sm leading-relaxed text-zinc-200">
               {formatEffectText(dual)}
             </div>
@@ -113,9 +113,9 @@ export default function ChainDualSection({ character }: Props) {
 
         {/* Enhancements */}
         <div className="mt-4">
-          <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
             {t('page.character.skill.enhancement')}
-          </h5>
+          </h4>
           <div className="space-y-1">
             {['2', '3', '4', '5'].map((lv) => {
               const items = getEnhancement(cp.enhancement as Record<string, string[]>, lv, lang);

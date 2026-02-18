@@ -37,7 +37,7 @@ export default function SkillCard({ skill }: Props) {
           <Image src={`/images/characters/skills/${skill.IconName}.webp`} alt={name} fill sizes="56px" className="object-contain" />
         </div>
         <div className="min-w-0 flex-1">
-          <h4 className="font-game text-lg font-bold">{name}</h4>
+          <h3 className="font-game text-lg font-bold">{name}</h3>
           <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
             {skill.cd && <span className="rounded bg-zinc-800 px-1.5 py-0.5">{t('page.character.skill.cooldown')} {skill.cd}</span>}
             <span className="rounded bg-zinc-800 px-1.5 py-0.5">{t('page.character.skill.wgr')} {skill.wgr}</span>
@@ -69,7 +69,7 @@ export default function SkillCard({ skill }: Props) {
       <BuffDebuffDisplay buffs={skill.buff} debuffs={skill.debuff} />
 
       <div className="mt-4">
-        <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">{t('page.character.skill.enhancement')}</h5>
+        <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">{t('page.character.skill.enhancement')}</h4>
         <div className="space-y-1">
           {['2', '3', '4', '5'].map((lv) => {
             const items = getEnhancement(skill, lv, lang);

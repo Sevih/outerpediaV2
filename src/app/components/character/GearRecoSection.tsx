@@ -169,9 +169,9 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
           {/* Substat priority */}
           {build.SubstatPrio && (
             <div className="mt-4">
-              <h4 className="mb-1 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-zinc-500">
                 {t('page.character.gear.substat_prio')}
-              </h4>
+              </h3>
               <p className="text-sm font-medium text-yellow-300">{build.SubstatPrio}</p>
             </div>
           )}
@@ -179,9 +179,9 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
           {/* Notes */}
           {build.Note && (
             <div className="mt-3">
-              <h4 className="mb-1 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-zinc-500">
                 {t('page.character.gear.note')}
-              </h4>
+              </h3>
               <p className="whitespace-pre-line text-sm text-zinc-300">{build.Note}</p>
             </div>
           )}
@@ -194,9 +194,9 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
 function GearCategory({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+      <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
         {label}
-      </h4>
+      </h3>
       <div className="space-y-2">{children}</div>
     </div>
   );
