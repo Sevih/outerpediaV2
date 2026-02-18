@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useMemo, useRef, useDeferredValue } from 'react';
 import Image from 'next/image';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import LZString from 'lz-string';
 import type { CharacterListEntry } from '@/types/character';
 import type { Effect } from '@/types/effect';
@@ -329,7 +329,6 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   const { t } = useI18n();
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   // Filter state
   const [elementFilter, setElementFilter] = useState<string[]>([]);
@@ -551,14 +550,14 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   useEffect(() => {
     if (didHydrateFromURL.current) return;
     didHydrateFromURL.current = true;
-    const z = searchParams.get('z');
+    const z = new URLSearchParams(window.location.search).get('z');
     const decoded = decodeZToState(z || undefined);
     if (decoded) {
       applyPayload(decoded);
       if ((decoded.buffs?.length || 0) + (decoded.debuffs?.length || 0) > 0) setShowFilters(true);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams]);
+  }, []);
 
   // Lazy load buffs/debuffs metadata
   useEffect(() => {
