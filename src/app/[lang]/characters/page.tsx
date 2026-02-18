@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata, getMonthYear } from '@/lib/seo';
@@ -34,7 +35,9 @@ export default async function CharactersPage({ params }: Props) {
     <div className="mx-auto max-w-350 px-4 py-6 md:px-6">
       <h1 className="mx-auto text-center text-3xl font-bold">{t['page.characters.title']}</h1>
       <p className="mt-1 mb-4 text-center text-sm text-zinc-400">{t['common.updated'].replace('{monthYear}', getMonthYear(l))}</p>
-      <CharactersPageClient characters={characters} lang={l} />
+      <Suspense>
+        <CharactersPageClient characters={characters} lang={l} />
+      </Suspense>
     </div>
   );
 }
