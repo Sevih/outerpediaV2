@@ -10,6 +10,7 @@ import { formatEffectText } from '@/lib/format-text';
 import type { Character, SkillData } from '@/types/character';
 import type { CharacterIndex } from '@/types/character';
 import type { SkillKey } from '@/types/enums';
+import type { TranslationKey } from '@/i18n/locales/en';
 import InlineTooltip from './InlineTooltip';
 
 const nameMap = nameToId as Record<string, string>;
@@ -30,19 +31,19 @@ const SKILL_MAP: Record<SkillShorthand, SkillKey> = {
   Chain: 'SKT_CHAIN_PASSIVE',
 };
 
-const SKILL_LABELS: Record<SkillShorthand, string> = {
-  S1: 'Skill 1',
-  S2: 'Skill 2',
-  S3: 'Ultimate',
-  Passive: 'Passive',
-  Chain: 'Chain',
+const SKILL_LABEL_KEYS: Record<SkillShorthand, TranslationKey> = {
+  S1: 'page.character.skill.type.s1',
+  S2: 'page.character.skill.type.s2',
+  S3: 'page.character.skill.type.ultimate',
+  Passive: 'page.character.skill.type.passive',
+  Chain: 'page.character.skill.type.chain',
 };
 
 // Module-level cache for loaded character data
 const charCache = new Map<string, Character>();
 
 export default function SkillInline({ character, skill }: Props) {
-  const { lang } = useI18n();
+  const { lang, t } = useI18n();
   const [charData, setCharData] = useState<Character | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -96,7 +97,7 @@ export default function SkillInline({ character, skill }: Props) {
   const charName = char ? l(char, 'Fullname', lang) : character;
 
   // Get max level description (level 5, fallback to lower)
-  const desc = getMaxLevelDesc(skillData, lang);
+  const { desc, level } = getMaxLevelDesc(skillData, lang);
 
   // Skill icon path
   const iconPath = skillData.IconName.startsWith('Skill_ChainPassive')
@@ -111,7 +112,7 @@ export default function SkillInline({ character, skill }: Props) {
         </span>
         <div>
           <span className="text-sm font-bold text-equipment">{skillName}</span>
-          <div className="text-xs text-neutral-400">{charName} - {SKILL_LABELS[skill]}</div>
+          <div className="text-xs text-neutral-400">{charName} - {t(SKILL_LABEL_KEYS[skill])}{level ? ` ${t('page.character.skill.level')}${level}` : ''}</div>
         </div>
       </div>
       <div className="flex gap-2 text-xs text-neutral-400">
@@ -139,16 +140,16 @@ export default function SkillInline({ character, skill }: Props) {
 }
 
 /** Get the highest level description available, localized */
-function getMaxLevelDesc(skill: SkillData, lang: string): string {
+function getMaxLevelDesc(skill: SkillData, lang: string): { desc: string; level: number | null } {
   const levels = skill.true_desc_levels;
-  if (!levels) return '';
+  if (!levels) return { desc: '', level: null };
 
   // Try from highest to lowest level
   for (let lv = 5; lv >= 1; lv--) {
     const key = lang === 'en' ? String(lv) : `${lv}_${lang}`;
-    if (levels[key]) return levels[key];
+    if (levels[key]) return { desc: levels[key], level: lv };
     // Fallback to English for this level
-    if (levels[String(lv)]) return levels[String(lv)];
+    if (levels[String(lv)]) return { desc: levels[String(lv)], level: lv };
   }
-  return '';
+  return { desc: '', level: null };
 }

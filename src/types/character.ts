@@ -147,6 +147,12 @@ export type CharacterIndexMap = Record<string, CharacterIndex>;
 /** English Fullname → character ID reverse map */
 export type CharacterNameToIdMap = Record<string, string>;
 
+/** Pros & cons editorial data for a character */
+export type CharacterProsCons = {
+  pros: string[];
+  cons: string[];
+};
+
 /** Enriched character entry for the list page (includes filter data) */
 export type CharacterListEntry = WithLocalizedFields<{
   ID: string;

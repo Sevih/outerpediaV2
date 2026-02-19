@@ -4,7 +4,7 @@ import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
 import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT } from '@/i18n';
-import { getCharacter, getCharacterSlugs, getCharacterReco, getCharacterProfile, getCharacterStats } from '@/lib/data/characters';
+import { getCharacter, getCharacterSlugs, getCharacterReco, getCharacterProfile, getCharacterStats, getCharacterProsCons } from '@/lib/data/characters';
 import { getExclusiveEquipment, getWeapons, getAmulets, getTalismans, getArmorSets } from '@/lib/data/equipment';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getGiftItems } from '@/lib/data/gifts';
@@ -60,9 +60,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CharacterDetailPage({ params }: Props) {
   const { slug } = await params;
 
-  const [character, reco, eeMap, weapons, amulets, talismans, sets, tagsRaw, giftItemsMap, buffsArr, debuffsArr] = await Promise.all([
+  const [character, reco, prosCons, eeMap, weapons, amulets, talismans, sets, tagsRaw, giftItemsMap, buffsArr, debuffsArr] = await Promise.all([
     getCharacter(slug),
     getCharacterReco(slug),
+    getCharacterProsCons(slug),
     getExclusiveEquipment(),
     getWeapons(),
     getAmulets(),
@@ -103,6 +104,7 @@ export default async function CharacterDetailPage({ params }: Props) {
       talismans={talismans}
       sets={sets}
       giftItems={giftItems}
+      prosCons={prosCons}
       buffMap={buffMap}
       debuffMap={debuffMap}
     />

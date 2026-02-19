@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import type { Character, CharacterProfile, CharacterStats } from '@/types/character';
+import type { Character, CharacterProfile, CharacterProsCons, CharacterStats } from '@/types/character';
 import type { ExclusiveEquipment } from '@/types/equipment';
 import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
 import type { Item } from '@/types/item';
@@ -17,6 +17,7 @@ import SkillsSection from '@/app/components/character/SkillsSection';
 import BurstSection from '@/app/components/character/BurstSection';
 import ChainDualSection from '@/app/components/character/ChainDualSection';
 import GearRecoSection from '@/app/components/character/GearRecoSection';
+import ProsConsSection from '@/app/components/character/ProsConsSection';
 
 type TagEntry = {
   label: string;
@@ -38,6 +39,7 @@ type Props = {
   talismans: Talisman[];
   sets: ArmorSet[];
   giftItems: Item[];
+  prosCons: CharacterProsCons | null;
   buffMap: Record<string, Effect>;
   debuffMap: Record<string, Effect>;
 };
@@ -54,11 +56,13 @@ export default function CharacterDetailClient({
   talismans,
   sets,
   giftItems,
+  prosCons,
   buffMap,
   debuffMap,
 }: Props) {
   const { t } = useI18n();
 
+  const hasProsCons = !!prosCons && (prosCons.pros.length > 0 || prosCons.cons.length > 0);
   const hasEe = !!ee;
   const hasTranscend = !!character.transcend;
   const hasChainPassive = !!character.skills.SKT_CHAIN_PASSIVE;
@@ -69,6 +73,7 @@ export default function CharacterDetailClient({
   const sections = useMemo<TocSection[]>(() => {
     return [
       { id: 'overview', label: t('page.character.toc.overview') },
+      hasProsCons && { id: 'pros-cons', label: t('page.character.toc.pros_cons') },
       { id: 'stats-ranking', label: t('page.character.toc.stats_ranking') },
       hasEe && { id: 'ee', label: t('page.character.toc.ee') },
       hasTranscend && { id: 'transcend', label: t('page.character.toc.transcend') },
@@ -77,7 +82,7 @@ export default function CharacterDetailClient({
       hasChainPassive && { id: 'chain-dual', label: t('page.character.toc.chain_dual') },
       { id: 'gear', label: t('page.character.toc.gear') },
     ].filter(Boolean) as TocSection[];
-  }, [t, hasEe, hasTranscend, hasChainPassive, hasBurst]);
+  }, [t, hasProsCons, hasEe, hasTranscend, hasChainPassive, hasBurst]);
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
@@ -89,6 +94,10 @@ export default function CharacterDetailClient({
           profile={profile}
           tags={tags}
         />
+
+        {hasProsCons && prosCons && (
+          <ProsConsSection prosCons={prosCons} />
+        )}
 
         <StatsRankingSection character={character} stats={stats} ee={ee} />
 
