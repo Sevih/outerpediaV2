@@ -2,6 +2,7 @@ import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 import { PATHS } from '../config';
 
+type EquipItem = { name: string; mainStats: string[] | null };
 type RecoGearEntry = { name: string; mainStat?: string };
 type RecoSetEntry = { name: string; count: number };
 type RecoBuild = {
@@ -15,20 +16,26 @@ type RecoBuild = {
 type RecoPresets = {
   talismans: Record<string, string[]>;
   sets: Record<string, RecoSetEntry[]>;
+  substats: Record<string, string>;
 };
 
 export async function run() {
-  // Load equipment reference data
-  const [weaponsRaw, amuletsRaw, talismansRaw, setsRaw, presetsRaw] = await Promise.all([
+  // Load equipment reference data + stats
+  const [weaponsRaw, amuletsRaw, talismansRaw, setsRaw, presetsRaw, statsRaw] = await Promise.all([
     readFile(join(PATHS.equipment, 'weapon.json'), 'utf-8'),
     readFile(join(PATHS.equipment, 'accessory.json'), 'utf-8'),
     readFile(join(PATHS.equipment, 'talisman.json'), 'utf-8'),
     readFile(join(PATHS.equipment, 'sets.json'), 'utf-8'),
     readFile(join(PATHS.reco, '_presets.json'), 'utf-8'),
+    readFile(join(process.cwd(), 'data/stats.json'), 'utf-8'),
   ]);
 
-  const weaponNames = new Set((JSON.parse(weaponsRaw) as { name: string }[]).map(w => w.name));
-  const amuletNames = new Set((JSON.parse(amuletsRaw) as { name: string }[]).map(a => a.name));
+  const weapons = JSON.parse(weaponsRaw) as EquipItem[];
+  const amulets = JSON.parse(amuletsRaw) as EquipItem[];
+  const weaponNames = new Set(weapons.map(w => w.name));
+  const amuletNames = new Set(amulets.map(a => a.name));
+  const weaponMap = new Map(weapons.map(w => [w.name, w]));
+  const amuletMap = new Map(amulets.map(a => [a.name, a]));
   const talismanNames = new Set((JSON.parse(talismansRaw) as { name: string }[]).map(t => t.name));
   const setNames = new Set((JSON.parse(setsRaw) as { name: string }[]).map(s => s.name));
   // Also accept short names without " Set" suffix (used in reco files)
@@ -36,6 +43,7 @@ export async function run() {
     (JSON.parse(setsRaw) as { name: string }[]).map(s => s.name.replace(/ Set$/, ''))
   );
   const presets: RecoPresets = JSON.parse(presetsRaw);
+  const validStats = new Set(Object.keys(JSON.parse(statsRaw) as Record<string, unknown>));
 
   // Load reco files
   const files = (await readdir(PATHS.reco)).filter(f => f.endsWith('.json') && f !== '_presets.json');
@@ -65,6 +73,16 @@ export async function run() {
           if (!weaponNames.has(w.name)) {
             console.warn(`  WARN ${ctx} Unknown weapon: "${w.name}"`);
             errorCount++;
+          } else if (w.mainStat) {
+            const item = weaponMap.get(w.name);
+            if (item?.mainStats) {
+              for (const s of w.mainStat.split('/')) {
+                if (!item.mainStats.includes(s)) {
+                  console.warn(`  WARN ${ctx} Weapon "${w.name}" has no mainStat "${s}" (valid: ${item.mainStats.join(', ')})`);
+                  errorCount++;
+                }
+              }
+            }
           }
         }
       }
@@ -75,6 +93,36 @@ export async function run() {
           if (!amuletNames.has(a.name)) {
             console.warn(`  WARN ${ctx} Unknown amulet: "${a.name}"`);
             errorCount++;
+          } else if (a.mainStat) {
+            const item = amuletMap.get(a.name);
+            if (item?.mainStats) {
+              for (const s of a.mainStat.split('/')) {
+                if (!item.mainStats.includes(s)) {
+                  console.warn(`  WARN ${ctx} Amulet "${a.name}" has no mainStat "${s}" (valid: ${item.mainStats.join(', ')})`);
+                  errorCount++;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Validate SubstatPrio (supports > and = separators, or preset ref)
+      if (build.SubstatPrio) {
+        const prio = build.SubstatPrio.startsWith('$')
+          ? presets.substats?.[build.SubstatPrio.slice(1)]
+          : presets.substats?.[build.SubstatPrio] ?? build.SubstatPrio;
+
+        if (!prio) {
+          console.warn(`  WARN ${ctx} Unknown SubstatPrio preset: "${build.SubstatPrio}"`);
+          errorCount++;
+        } else {
+          for (const s of prio.split(/[>=]/)) {
+            const stat = s.trim();
+            if (stat && !validStats.has(stat)) {
+              console.warn(`  WARN ${ctx} Unknown stat in SubstatPrio: "${stat}"`);
+              errorCount++;
+            }
           }
         }
       }

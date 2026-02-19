@@ -126,4 +126,5 @@ export type ResolvedCharacterReco = Record<string, ResolvedRecoBuild>;
 export type RecoPresets = {
   talismans: Record<string, string[]>;
   sets: Record<string, RecoSetEntry[]>;
+  substats: Record<string, string>;
 };

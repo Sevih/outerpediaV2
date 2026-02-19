@@ -17,7 +17,19 @@ function resolveBuild(build: RecoBuild, presets: RecoPresets): ResolvedRecoBuild
     ...build,
     Talisman: resolveTalismans(build.Talisman, presets),
     Set: resolveSets(build.Set, presets),
+    SubstatPrio: resolveSubstats(build.SubstatPrio, presets),
   };
+}
+
+function resolveSubstats(
+  val: string | undefined,
+  presets: RecoPresets
+): string | undefined {
+  if (!val) return undefined;
+  if (val.startsWith('$')) {
+    return presets.substats[val.slice(1)];
+  }
+  return presets.substats[val] ?? val;
 }
 
 function resolveTalismans(

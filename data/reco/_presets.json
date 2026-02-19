@@ -16,5 +16,13 @@
     "life4": [{ "name": "Life", "count": 4 }],
     "speed2swift2": [{ "name": "Speed", "count": 2 }, { "name": "Swiftness", "count": 2 }],
     "immu2swift2": [{ "name": "Immunity", "count": 2 }, { "name": "Swiftness", "count": 2 }]
+  },
+  "substats": {
+    "dps": "ATK>CHC>CHD>SPD",
+    "dps-pen": "ATK>CHC>CHD>PEN%",
+    "dps-speed": "SPD>ATK>CHC>CHD",
+    "support-eff": "SPD>EFF>HP>DEF",
+    "support-res": "SPD>RES>HP>DEF",
+    "tank": "SPD>HP>DEF>RES"
   }
 }

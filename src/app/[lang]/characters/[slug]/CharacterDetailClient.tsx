@@ -94,6 +94,11 @@ export default function CharacterDetailClient({
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-16 z-50 rounded bg-black/80 px-3 py-1.5 font-mono text-xs text-white shadow-lg select-all">
+          ID: {character.ID}
+        </div>
+      )}
       <div className="mx-auto max-w-6xl space-y-10 px-4 py-6 md:px-6">
         <QuickToc sections={sections} />
 
