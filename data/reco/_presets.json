@@ -1,0 +1,20 @@
+{
+  "talismans": {
+    "dps": ["Executioner's Charm", "Sage's Charm", "Rogue's Charm"],
+    "dps-mage": ["Executioner's Charm", "Mage's Charm", "Rogue's Charm"],
+    "dps-assassin": ["Executioner's Charm", "Assassin's Charm", "Rogue's Charm"],
+    "support": ["Vanguard's Charm", "Sage's Charm", "Tactician's Charm"],
+    "tank": ["Vanguard's Charm", "Sage's Charm", "Saint's Charm"]
+  },
+  "sets": {
+    "speed4": [{ "name": "Speed", "count": 4 }],
+    "attack4": [{ "name": "Attack", "count": 4 }],
+    "pen4": [{ "name": "Penetration", "count": 4 }],
+    "crit4": [{ "name": "Critical Strike", "count": 4 }],
+    "counter4": [{ "name": "Counterattack", "count": 4 }],
+    "revenge4": [{ "name": "Revenge", "count": 4 }],
+    "life4": [{ "name": "Life", "count": 4 }],
+    "speed2swift2": [{ "name": "Speed", "count": 2 }, { "name": "Swiftness", "count": 2 }],
+    "immu2swift2": [{ "name": "Immunity", "count": 2 }, { "name": "Swiftness", "count": 2 }]
+  }
+}

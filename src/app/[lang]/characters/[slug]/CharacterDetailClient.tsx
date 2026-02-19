@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react';
 import type { Character, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies } from '@/types/character';
-import type { ExclusiveEquipment } from '@/types/equipment';
+import type { ExclusiveEquipment, ResolvedCharacterReco } from '@/types/equipment';
 import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
 import type { Item } from '@/types/item';
 import type { Effect } from '@/types/effect';
@@ -34,7 +34,7 @@ type Props = {
   profile: CharacterProfile | null;
   stats: CharacterStats | null;
   ee: ExclusiveEquipment | null;
-  reco: Record<string, unknown> | null;
+  reco: ResolvedCharacterReco | null;
   tags: Record<string, TagEntry>;
   weapons: Weapon[];
   amulets: Amulet[];
@@ -132,7 +132,7 @@ export default function CharacterDetailClient({
         )}
 
         <GearRecoSection
-          reco={(reco ?? {}) as Record<string, never>}
+          reco={reco ?? {}}
           weapons={weapons}
           amulets={amulets}
           talismans={talismans}

@@ -12,6 +12,7 @@ const steps: Step[] = [
   { name: 'effects-index', run: () => import('./steps/effects-index').then(m => m.run()) },
   { name: 'characters-index', run: () => import('./steps/characters-index').then(m => m.run()) },
   { name: 'character-stats', run: () => import('./steps/character-stats').then(m => m.run()) },
+  { name: 'validate-reco', run: () => import('./steps/validate-reco').then(m => m.run()) },
 ];
 
 const NAME_PAD = Math.max(...steps.map(s => s.name.length));

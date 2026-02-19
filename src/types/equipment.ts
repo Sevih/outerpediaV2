@@ -95,3 +95,35 @@ export type ExclusiveEquipment = WithLocalizedFields<
   BaseExclusiveEquipment,
   'name' | 'mainStat' | 'effect' | 'effect10'
 >;
+
+// ── Gear Recommendations ──
+
+export type RecoGearEntry = { name: string; mainStat?: string };
+export type RecoSetEntry = { name: string; count: number };
+
+export type RecoBuild = {
+  Weapon?: RecoGearEntry[];
+  Amulet?: RecoGearEntry[];
+  Set?: (RecoSetEntry[] | string)[];
+  Talisman?: string[] | string;
+  SubstatPrio?: string;
+  Note?: string;
+};
+
+export type CharacterReco = Record<string, RecoBuild>;
+
+export type ResolvedRecoBuild = {
+  Weapon?: RecoGearEntry[];
+  Amulet?: RecoGearEntry[];
+  Set?: RecoSetEntry[][];
+  Talisman?: string[];
+  SubstatPrio?: string;
+  Note?: string;
+};
+
+export type ResolvedCharacterReco = Record<string, ResolvedRecoBuild>;
+
+export type RecoPresets = {
+  talismans: Record<string, string[]>;
+  sets: Record<string, RecoSetEntry[]>;
+};

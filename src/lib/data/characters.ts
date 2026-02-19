@@ -1,6 +1,7 @@
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies } from '@/types/character';
+import type { CharacterReco, RecoPresets } from '@/types/equipment';
 
 const CHARS_DIR = join(process.cwd(), 'data/character');
 const RECO_DIR = join(process.cwd(), 'data/reco');
@@ -68,15 +69,21 @@ export async function getCharactersForList(): Promise<CharacterListEntry[]> {
 }
 
 /** Get equipment recommendations for a character by readable slug */
-export async function getCharacterReco(slug: string): Promise<Record<string, unknown> | null> {
+export async function getCharacterReco(slug: string): Promise<CharacterReco | null> {
   const id = await resolveSlug(slug);
   if (!id) return null;
   try {
     const raw = await readFile(join(RECO_DIR, `${id}.json`), 'utf-8');
-    return JSON.parse(raw) as Record<string, unknown>;
+    return JSON.parse(raw) as CharacterReco;
   } catch {
     return null;
   }
+}
+
+/** Get reco presets (shared talisman/set templates) */
+export async function getRecoPresets(): Promise<RecoPresets> {
+  const raw = await readFile(join(RECO_DIR, '_presets.json'), 'utf-8');
+  return JSON.parse(raw) as RecoPresets;
 }
 
 /** Get a character's profile (bio, story) by ID */

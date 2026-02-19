@@ -2,22 +2,13 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
+import type { Weapon, Amulet, Talisman, ArmorSet, ResolvedCharacterReco } from '@/types/equipment';
 import { l } from '@/lib/i18n/localize';
 import { getRarityBgPath } from '@/lib/format-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
 
-type RecoBuild = {
-  Weapon?: { name: string; mainStat?: string }[];
-  Amulet?: { name: string; mainStat?: string }[];
-  Set?: { name: string; count: number }[][];
-  Talisman?: string[];
-  SubstatPrio?: string;
-  Note?: string;
-};
-
 type Props = {
-  reco: Record<string, RecoBuild>;
+  reco: ResolvedCharacterReco;
   weapons: Weapon[];
   amulets: Amulet[];
   talismans: Talisman[];
@@ -34,7 +25,7 @@ function findTalisman(talismans: Talisman[], name: string) {
   return talismans.find((t) => t.name === name);
 }
 function findSet(sets: ArmorSet[], name: string) {
-  return sets.find((s) => s.name === name);
+  return sets.find((s) => s.name === name || s.name === `${name} Set`);
 }
 
 export default function GearRecoSection({ reco, weapons, amulets, talismans, sets }: Props) {
