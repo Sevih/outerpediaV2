@@ -1,83 +1,504 @@
 {
   "talismans": {
-    "dps": [],
-    "dps-mage": [],
-    "dps-assassin": [],
-    "support": [],
-    "tank": [],
-    "CPplusVang": ["Vanguard's Charm","Sage's Charm", "Rogue's Charm","Executioner's Charm"],
-    "CPplusAssa": ["Assassin's Charm","Sage's Charm", "Rogue's Charm","Executioner's Charm"],
-    "CPdps": ["Sage's Charm", "Rogue's Charm","Executioner's Charm"],
-    "noCritCp": ["Sage's Charm", "Vanguard's Charm"],
-    "critAP": ["Executioner's Charm", "Mage's Charm", "Rogue's Charm"],
-    "v": ["Vanguard's Charm"],
-    "s": ["Sage's Charm"],
-    "aem": ["Assassin's Charm", "Executioner's Charm", "Mage's Charm"],
-    "aemrs": ["Assassin's Charm", "Executioner's Charm", "Mage's Charm", "Rogue's Charm", "Sage's Charm"],
-    "aer": ["Assassin's Charm", "Executioner's Charm", "Rogue's Charm"],
-    "aerv": ["Assassin's Charm", "Executioner's Charm", "Rogue's Charm", "Vanguard's Charm"],
-    "aesv": ["Assassin's Charm", "Executioner's Charm", "Sage's Charm", "Vanguard's Charm"],
-    "aet": ["Assassin's Charm", "Executioner's Charm", "Tactician's Charm"],
-    "am": ["Assassin's Charm", "Mage's Charm"],
-    "em": ["Executioner's Charm", "Mage's Charm"],
-    "emrsv": ["Executioner's Charm", "Mage's Charm", "Rogue's Charm", "Sage's Charm", "Vanguard's Charm"],
-    "emruv": ["Executioner's Charm", "Mage's Charm", "Rogue's Charm", "Undertaker's Charm", "Vanguard's Charm"],
-    "emrv": ["Executioner's Charm", "Mage's Charm", "Rogue's Charm", "Vanguard's Charm"],
-    "emv": ["Executioner's Charm", "Mage's Charm", "Vanguard's Charm"],
-    "erst": ["Executioner's Charm", "Rogue's Charm", "Sage's Charm", "Tactician's Charm"],
-    "erv": ["Executioner's Charm", "Rogue's Charm", "Vanguard's Charm"],
-    "esv": ["Executioner's Charm", "Sage's Charm", "Vanguard's Charm"],
-    "ev": ["Executioner's Charm", "Vanguard's Charm"],
-    "msv": ["Mage's Charm", "Sage's Charm", "Vanguard's Charm"],
-    "mv": ["Mage's Charm", "Vanguard's Charm"],
-    "rs": ["Rogue's Charm", "Sage's Charm"],
-    "rsv": ["Rogue's Charm", "Sage's Charm", "Vanguard's Charm"],
-    "ru": ["Rogue's Charm", "Undertaker's Charm"],
-    "sstv": ["Sage's Charm", "Saint's Charm", "Vanguard's Charm"],
-    "st": ["Saint's Charm"]
+    "CPplusVang": [
+      "Vanguard's Charm",
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ],
+    "CPplusAssa": [
+      "Assassin's Charm",
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ],
+    "CPdps": [
+      "Sage's Charm",
+      "Rogue's Charm",
+      "Executioner's Charm"
+    ],
+    "noCritCp": [
+      "Sage's Charm",
+      "Vanguard's Charm"
+    ],
+    "critAP": [
+      "Executioner's Charm",
+      "Mage's Charm",
+      "Rogue's Charm"
+    ],
+    "v": [
+      "Vanguard's Charm"
+    ],
+    "s": [
+      "Sage's Charm"
+    ],
+    "aem": [
+      "Assassin's Charm",
+      "Executioner's Charm",
+      "Mage's Charm"
+    ],
+    "aemrs": [
+      "Assassin's Charm",
+      "Executioner's Charm",
+      "Mage's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
+    ],
+    "aer": [
+      "Assassin's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm"
+    ],
+    "aerv": [
+      "Assassin's Charm",
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Vanguard's Charm"
+    ],
+    "aesv": [
+      "Assassin's Charm",
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Vanguard's Charm"
+    ],
+    "aet": [
+      "Assassin's Charm",
+      "Executioner's Charm",
+      "Tactician's Charm"
+    ],
+    "am": [
+      "Assassin's Charm",
+      "Mage's Charm"
+    ],
+    "em": [
+      "Executioner's Charm",
+      "Mage's Charm"
+    ],
+    "emrsv": [
+      "Executioner's Charm",
+      "Mage's Charm",
+      "Rogue's Charm",
+      "Sage's Charm",
+      "Vanguard's Charm"
+    ],
+    "emruv": [
+      "Executioner's Charm",
+      "Mage's Charm",
+      "Rogue's Charm",
+      "Undertaker's Charm",
+      "Vanguard's Charm"
+    ],
+    "emrv": [
+      "Executioner's Charm",
+      "Mage's Charm",
+      "Rogue's Charm",
+      "Vanguard's Charm"
+    ],
+    "emv": [
+      "Executioner's Charm",
+      "Mage's Charm",
+      "Vanguard's Charm"
+    ],
+    "erst": [
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Sage's Charm",
+      "Tactician's Charm"
+    ],
+    "erv": [
+      "Executioner's Charm",
+      "Rogue's Charm",
+      "Vanguard's Charm"
+    ],
+    "esv": [
+      "Executioner's Charm",
+      "Sage's Charm",
+      "Vanguard's Charm"
+    ],
+    "ev": [
+      "Executioner's Charm",
+      "Vanguard's Charm"
+    ],
+    "msv": [
+      "Mage's Charm",
+      "Sage's Charm",
+      "Vanguard's Charm"
+    ],
+    "mv": [
+      "Mage's Charm",
+      "Vanguard's Charm"
+    ],
+    "rs": [
+      "Rogue's Charm",
+      "Sage's Charm"
+    ],
+    "rsv": [
+      "Rogue's Charm",
+      "Sage's Charm",
+      "Vanguard's Charm"
+    ],
+    "ru": [
+      "Rogue's Charm",
+      "Undertaker's Charm"
+    ],
+    "sstv": [
+      "Sage's Charm",
+      "Saint's Charm",
+      "Vanguard's Charm"
+    ],
+    "st": [
+      "Saint's Charm"
+    ]
   },
   "sets": {
-    "s4": [{ "name": "Speed", "count": 4 }],
-    "a4": [{ "name": "Attack", "count": 4 }],
-    "p4": [{ "name": "Penetration", "count": 4 }],
-    "p2s2": [{ "name": "Penetration", "count": 2 },{ "name": "Speed", "count": 2 }],
-    "p2a2": [{ "name": "Penetration", "count": 2 },{ "name": "Attack", "count": 2 }],
-    "p2ag2": [{ "name": "Penetration", "count": 2 },{ "name": "Augmentation", "count": 2 }],
-    "p2chd2": [{ "name": "Penetration", "count": 2 },{ "name": "Critical Strike", "count": 2 }],
-    "p2i2": [{ "name": "Penetration", "count": 2 },{ "name": "Immunity", "count": 2 }],
-    "chd4": [{ "name": "Critical Strike", "count": 4 }],
-    "ct4": [{ "name": "Counterattack", "count": 4 }],
-    "r4": [{ "name": "Revenge", "count": 4 }],
-    "hp4": [{ "name": "Life", "count": 4 }],
-    "s2sw2": [{ "name": "Speed", "count": 2 }, { "name": "Swiftness", "count": 2 }],
-    "i2sw2": [{ "name": "Immunity", "count": 2 }, { "name": "Swiftness", "count": 2 }],
-    "ct2sw2": [{ "name": "Counterattack", "count": 2 }, { "name": "Swiftness", "count": 2 }],
-    "hp2sw2": [{ "name": "Life", "count": 2 }, { "name": "Swiftness", "count": 2 }],
-    "ag2i2": [{ "name": "Augmentation", "count": 2 }, { "name": "Immunity", "count": 2 }],
-    "hp2i2": [{ "name": "Life", "count": 2 }, { "name": "Immunity", "count": 2 }],
-    "ct2hp2": [{ "name": "Counterattack", "count": 2 }, { "name": "Life", "count": 2 }],
-    "a2ag2": [{ "name": "Attack", "count": 2 }, { "name": "Augmentation", "count": 2 }],
-    "ag2sw2": [{ "name": "Augmentation", "count": 2 }, { "name": "Swiftness", "count": 2 }],
-    "def4": [{ "name": "Defense", "count": 4 }],
-    "eff4": [{ "name": "Effectiveness", "count": 4 }],
-    "i4": [{ "name": "Immunity", "count": 4 }],
-    "eff2sw2": [{ "name": "Effectiveness", "count": 2 }, { "name": "Swiftness", "count": 2 }],
-    "acc2sw2": [{ "name": "Accuracy", "count": 2 }, { "name": "Swiftness", "count": 2 }],
-    "def2sw2": [{ "name": "Defense", "count": 2 }, { "name": "Swiftness", "count": 2 }],
-    "ag2def2": [{ "name": "Augmentation", "count": 2 }, { "name": "Defense", "count": 2 }],
-    "i2ct2": [{ "name": "Immunity", "count": 2 }, { "name": "Counterattack", "count": 2 }],
-    "s2i2": [{ "name": "Speed", "count": 2 }, { "name": "Immunity", "count": 2 }],
-    "i2def2": [{ "name": "Immunity", "count": 2 }, { "name": "Defense", "count": 2 }],
-    "i2a2": [{ "name": "Immunity", "count": 2 }, { "name": "Attack", "count": 2 }],
-    "hp2def2": [{ "name": "Life", "count": 2 }, { "name": "Defense", "count": 2 }],
-    "hp2ag2": [{ "name": "Life", "count": 2 }, { "name": "Augmentation", "count": 2 }],
-    "a2chd2": [{ "name": "Attack", "count": 2 }, { "name": "Critical Strike", "count": 2 }],
-    "a2p2": [{ "name": "Attack", "count": 2 }, { "name": "Penetration", "count": 2 }],
-    "p2hp2": [{ "name": "Penetration", "count": 2 }, { "name": "Life", "count": 2 }],
-    "p2sw2": [{ "name": "Penetration", "count": 2 }, { "name": "Swiftness", "count": 2 }]
+    "s4": [
+      {
+        "name": "Speed",
+        "count": 4
+      }
+    ],
+    "a4": [
+      {
+        "name": "Attack",
+        "count": 4
+      }
+    ],
+    "p4": [
+      {
+        "name": "Penetration",
+        "count": 4
+      }
+    ],
+    "p2s2": [
+      {
+        "name": "Penetration",
+        "count": 2
+      },
+      {
+        "name": "Speed",
+        "count": 2
+      }
+    ],
+    "p2a2": [
+      {
+        "name": "Penetration",
+        "count": 2
+      },
+      {
+        "name": "Attack",
+        "count": 2
+      }
+    ],
+    "p2ag2": [
+      {
+        "name": "Penetration",
+        "count": 2
+      },
+      {
+        "name": "Augmentation",
+        "count": 2
+      }
+    ],
+    "p2chd2": [
+      {
+        "name": "Penetration",
+        "count": 2
+      },
+      {
+        "name": "Critical Strike",
+        "count": 2
+      }
+    ],
+    "p2i2": [
+      {
+        "name": "Penetration",
+        "count": 2
+      },
+      {
+        "name": "Immunity",
+        "count": 2
+      }
+    ],
+    "chd4": [
+      {
+        "name": "Critical Strike",
+        "count": 4
+      }
+    ],
+    "ct4": [
+      {
+        "name": "Counterattack",
+        "count": 4
+      }
+    ],
+    "r4": [
+      {
+        "name": "Revenge",
+        "count": 4
+      }
+    ],
+    "hp4": [
+      {
+        "name": "Life",
+        "count": 4
+      }
+    ],
+    "s2sw2": [
+      {
+        "name": "Speed",
+        "count": 2
+      },
+      {
+        "name": "Swiftness",
+        "count": 2
+      }
+    ],
+    "i2sw2": [
+      {
+        "name": "Immunity",
+        "count": 2
+      },
+      {
+        "name": "Swiftness",
+        "count": 2
+      }
+    ],
+    "ct2sw2": [
+      {
+        "name": "Counterattack",
+        "count": 2
+      },
+      {
+        "name": "Swiftness",
+        "count": 2
+      }
+    ],
+    "hp2sw2": [
+      {
+        "name": "Life",
+        "count": 2
+      },
+      {
+        "name": "Swiftness",
+        "count": 2
+      }
+    ],
+    "ag2i2": [
+      {
+        "name": "Augmentation",
+        "count": 2
+      },
+      {
+        "name": "Immunity",
+        "count": 2
+      }
+    ],
+    "hp2i2": [
+      {
+        "name": "Life",
+        "count": 2
+      },
+      {
+        "name": "Immunity",
+        "count": 2
+      }
+    ],
+    "ct2hp2": [
+      {
+        "name": "Counterattack",
+        "count": 2
+      },
+      {
+        "name": "Life",
+        "count": 2
+      }
+    ],
+    "a2ag2": [
+      {
+        "name": "Attack",
+        "count": 2
+      },
+      {
+        "name": "Augmentation",
+        "count": 2
+      }
+    ],
+    "ag2sw2": [
+      {
+        "name": "Augmentation",
+        "count": 2
+      },
+      {
+        "name": "Swiftness",
+        "count": 2
+      }
+    ],
+    "def4": [
+      {
+        "name": "Defense",
+        "count": 4
+      }
+    ],
+    "eff4": [
+      {
+        "name": "Effectiveness",
+        "count": 4
+      }
+    ],
+    "i4": [
+      {
+        "name": "Immunity",
+        "count": 4
+      }
+    ],
+    "eff2sw2": [
+      {
+        "name": "Effectiveness",
+        "count": 2
+      },
+      {
+        "name": "Swiftness",
+        "count": 2
+      }
+    ],
+    "acc2sw2": [
+      {
+        "name": "Accuracy",
+        "count": 2
+      },
+      {
+        "name": "Swiftness",
+        "count": 2
+      }
+    ],
+    "def2sw2": [
+      {
+        "name": "Defense",
+        "count": 2
+      },
+      {
+        "name": "Swiftness",
+        "count": 2
+      }
+    ],
+    "ag2def2": [
+      {
+        "name": "Augmentation",
+        "count": 2
+      },
+      {
+        "name": "Defense",
+        "count": 2
+      }
+    ],
+    "i2ct2": [
+      {
+        "name": "Immunity",
+        "count": 2
+      },
+      {
+        "name": "Counterattack",
+        "count": 2
+      }
+    ],
+    "s2i2": [
+      {
+        "name": "Speed",
+        "count": 2
+      },
+      {
+        "name": "Immunity",
+        "count": 2
+      }
+    ],
+    "i2def2": [
+      {
+        "name": "Immunity",
+        "count": 2
+      },
+      {
+        "name": "Defense",
+        "count": 2
+      }
+    ],
+    "i2a2": [
+      {
+        "name": "Immunity",
+        "count": 2
+      },
+      {
+        "name": "Attack",
+        "count": 2
+      }
+    ],
+    "hp2def2": [
+      {
+        "name": "Life",
+        "count": 2
+      },
+      {
+        "name": "Defense",
+        "count": 2
+      }
+    ],
+    "hp2ag2": [
+      {
+        "name": "Life",
+        "count": 2
+      },
+      {
+        "name": "Augmentation",
+        "count": 2
+      }
+    ],
+    "a2chd2": [
+      {
+        "name": "Attack",
+        "count": 2
+      },
+      {
+        "name": "Critical Strike",
+        "count": 2
+      }
+    ],
+    "a2p2": [
+      {
+        "name": "Attack",
+        "count": 2
+      },
+      {
+        "name": "Penetration",
+        "count": 2
+      }
+    ],
+    "p2hp2": [
+      {
+        "name": "Penetration",
+        "count": 2
+      },
+      {
+        "name": "Life",
+        "count": 2
+      }
+    ],
+    "p2sw2": [
+      {
+        "name": "Penetration",
+        "count": 2
+      },
+      {
+        "name": "Swiftness",
+        "count": 2
+      }
+    ]
   },
   "substats": {
     "dps": "ATK>CHC>CHD>SPD>DMG UP%",
+    "sdps": "SPD>ATK>CHC>CHD>DMG UP%",
+    "dpsDef": "DEF>CHC>CHD>SPD>DMG UP%",
+    "dpsHP": "HP>CHC>CHD>SPD>DMG UP%",
+    "tankDef": "SPD>DEF>HP>DMG RED%=CDMG RED%>",
+    "tankHP": "SPD>HP>DEF>DMG RED%=CDMG RED%>",
     "tankDpsDef": "SPD>DEF>CHC>CHD>DMG UP%>HP",
     "tankDpsHP": "SPD>HP>CHC>CHD>DMG UP%>DEF"
   }
