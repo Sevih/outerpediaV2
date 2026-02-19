@@ -5,13 +5,20 @@
     "dps-assassin": [],
     "support": [],
     "tank": [],
-    "CPplusVang": ["Vanguard's Charm", "Executioner's Charm", "Sage's Charm", "Rogue's Charm"]
+    "CPplusVang": ["Vanguard's Charm","Sage's Charm", "Rogue's Charm","Executioner's Charm"],
+    "CPplusAssa": ["Assassin's Charm","Sage's Charm", "Rogue's Charm","Executioner's Charm"],
+    "CPdps": ["Sage's Charm", "Rogue's Charm","Executioner's Charm"]
   },
   "sets": {
     "s4": [{ "name": "Speed", "count": 4 }],
     "a4": [{ "name": "Attack", "count": 4 }],
     "p4": [{ "name": "Penetration", "count": 4 }],
-    "chc4": [{ "name": "Critical Strike", "count": 4 }],
+    "p2s2": [{ "name": "Penetration", "count": 2 },{ "name": "Speed", "count": 2 }],
+    "p2a2": [{ "name": "Penetration", "count": 2 },{ "name": "Attack", "count": 2 }],
+    "p2ag2": [{ "name": "Penetration", "count": 2 },{ "name": "Augmentation", "count": 2 }],
+    "p2chd2": [{ "name": "Penetration", "count": 2 },{ "name": "Critical Strike", "count": 2 }],
+    "p2i2": [{ "name": "Penetration", "count": 2 },{ "name": "Immunity", "count": 2 }],
+    "chd4": [{ "name": "Critical Strike", "count": 4 }],
     "ct4": [{ "name": "Counterattack", "count": 4 }],
     "r4": [{ "name": "Revenge", "count": 4 }],
     "hp4": [{ "name": "Life", "count": 4 }],
@@ -20,14 +27,7 @@
     "ct2sw2": [{ "name": "Counterattack", "count": 2 }, { "name": "Swiftness", "count": 2 }]
   },
   "substats": {
-    "dps": "ATK>CHC>CHD>SPD",
-    "dps-pen": "ATK>CHC>CHD>PEN%",
-    "dps-speed": "SPD>ATK>CHC>CHD",
-    "support-eff": "SPD>EFF>HP>DEF",
-    "support-res": "SPD>RES>HP>DEF",
-    "tank": "SPD>HP>DEF>RES",
-    "tankDef": "SPD>HP>DEF>RES",
-    "tankHP": "SPD>HP>DEF>RES",
+    "dps": "ATK>CHC>CHD>SPD>DMG UP%",
     "tankDpsDef": "SPD>DEF>CHC>CHD>DMG UP%>HP",
     "tankDpsHP": "SPD>HP>CHC>CHD>DMG UP%>DEF"
   }

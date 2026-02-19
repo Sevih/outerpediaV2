@@ -3,7 +3,10 @@
 import { useState } from 'react';
 import type { Weapon, Amulet, Talisman, ArmorSet, ResolvedCharacterReco } from '@/types/equipment';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { l } from '@/lib/i18n/localize';
+import parseText from '@/lib/parse-text';
 import { WeaponMiniCard, AmuletMiniCard, TalismanMiniCard, SetMiniCard, SubstatPrioBar } from '@/app/components/equipment';
+import Tabs from '@/app/components/ui/Tabs';
 
 type Props = {
   reco: ResolvedCharacterReco;
@@ -33,96 +36,93 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
     <section id="gear">
       <h2 className="mb-4 text-2xl font-bold">{t('page.character.gear.title')}</h2>
 
-      {/* Build tabs */}
-      {buildNames.length > 1 && (
-        <div className="mb-4 flex flex-wrap gap-2">
-          {buildNames.map((name) => (
-            <button
-              key={name}
-              onClick={() => setActiveBuild(name)}
-              className={[
-                'rounded-full px-4 py-1.5 text-sm font-medium transition ring-1',
-                name === activeBuild
-                  ? 'bg-yellow-500/20 text-yellow-300 ring-yellow-400/40'
-                  : 'bg-zinc-800 text-zinc-300 ring-white/10 hover:bg-zinc-700',
-              ].join(' ')}
-            >
-              {name}
-            </button>
-          ))}
-        </div>
-      )}
+      <Tabs
+        items={buildNames}
+        value={activeBuild}
+        onChange={setActiveBuild}
+        hashPrefix="build"
+        className="mb-4"
+      />
 
       {build && (
-        <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-4">
-          {/* Row 1: Weapon | Amulet | Set */}
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {/* Weapons */}
+        <div className="grid grid-cols-1 gap-6 rounded-xl border border-white/10 bg-zinc-900/60 p-4 md:grid-cols-3">
+          {/* Col 1: Weapon + Talisman — contents on mobile so children flatten into the single-col grid */}
+          <div className="contents md:block md:space-y-6">
             {build.Weapon && build.Weapon.length > 0 && (
-              <GearCategory label={t('page.character.gear.weapon')}>
-                {build.Weapon.map((w) => {
-                  const data = weapons.find((wp) => wp.name === w.name);
-                  return data ? (
-                    <WeaponMiniCard key={w.name} weapon={data} lang={lang} mainStat={w.mainStat} />
-                  ) : (
-                    <p key={w.name} className="text-sm text-zinc-400">{w.name}</p>
-                  );
-                })}
-              </GearCategory>
+              <div className="order-1 md:order-0">
+                <GearCategory label={t('page.character.gear.weapon')}>
+                  {build.Weapon.map((w) => {
+                    const data = weapons.find((wp) => wp.name === w.name);
+                    return data ? (
+                      <WeaponMiniCard key={w.name} weapon={data} lang={lang} mainStat={w.mainStat} />
+                    ) : (
+                      <p key={w.name} className="text-sm text-zinc-400">{w.name}</p>
+                    );
+                  })}
+                </GearCategory>
+              </div>
             )}
 
-            {/* Amulets */}
-            {build.Amulet && build.Amulet.length > 0 && (
-              <GearCategory label={t('page.character.gear.amulet')}>
-                {build.Amulet.map((a) => {
-                  const data = amulets.find((am) => am.name === a.name);
-                  return data ? (
-                    <AmuletMiniCard key={a.name} amulet={data} lang={lang} mainStat={a.mainStat} />
-                  ) : (
-                    <p key={a.name} className="text-sm text-zinc-400">{a.name}</p>
-                  );
-                })}
-              </GearCategory>
-            )}
-
-            {/* Sets */}
-            {build.Set && build.Set.length > 0 && (
-              <GearCategory label={t('page.character.gear.set')}>
-                {build.Set.map((combo, i) => (
-                  <SetMiniCard key={i} combo={combo} sets={sets} lang={lang} />
-                ))}
-              </GearCategory>
+            {build.Talisman && build.Talisman.length > 0 && (
+              <div className="order-4 md:order-0">
+                <GearCategory label={t('page.character.gear.talisman')}>
+                  {build.Talisman.map((name) => {
+                    const data = talismans.find((t) => t.name === name);
+                    return data ? (
+                      <TalismanMiniCard key={name} talisman={data} lang={lang} />
+                    ) : (
+                      <p key={name} className="text-sm text-zinc-400">{name}</p>
+                    );
+                  })}
+                </GearCategory>
+              </div>
             )}
           </div>
 
-          {/* Row 2: Talisman | Substat | Notes */}
-          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {/* Talismans */}
-            {build.Talisman && build.Talisman.length > 0 && (
-              <GearCategory label={t('page.character.gear.talisman')}>
-                {build.Talisman.map((name) => {
-                  const data = talismans.find((t) => t.name === name);
-                  return data ? (
-                    <TalismanMiniCard key={name} talisman={data} lang={lang} />
-                  ) : (
-                    <p key={name} className="text-sm text-zinc-400">{name}</p>
-                  );
-                })}
-              </GearCategory>
+          {/* Col 2: Amulet + Substat + Note */}
+          <div className="contents md:block md:space-y-6">
+            {build.Amulet && build.Amulet.length > 0 && (
+              <div className="order-2 md:order-0">
+                <GearCategory label={t('page.character.gear.amulet')}>
+                  {build.Amulet.map((a) => {
+                    const data = amulets.find((am) => am.name === a.name);
+                    return data ? (
+                      <AmuletMiniCard key={a.name} amulet={data} lang={lang} mainStat={a.mainStat} />
+                    ) : (
+                      <p key={a.name} className="text-sm text-zinc-400">{a.name}</p>
+                    );
+                  })}
+                </GearCategory>
+              </div>
             )}
 
-            {/* Substat priority */}
             {build.SubstatPrio && (
-              <GearCategory label={t('page.character.gear.substat_prio')}>
-                <SubstatPrioBar prio={build.SubstatPrio} />
-              </GearCategory>
+              <div className="order-5 md:order-0">
+                <GearCategory label={t('page.character.gear.substat_prio')}>
+                  <SubstatPrioBar prio={build.SubstatPrio} />
+                </GearCategory>
+              </div>
             )}
 
-            {/* Notes */}
-            {build.Note && (
-              <GearCategory label={t('page.character.gear.note')}>
-                <p className="whitespace-pre-line text-sm text-zinc-300">{build.Note}</p>
-              </GearCategory>
+            {l(build, 'Note', lang) && (
+              <div className="order-6 md:order-0">
+                <GearCategory label={t('page.character.gear.note')}>
+                  <p className="text-sm leading-relaxed text-zinc-300">{parseText(l(build, 'Note', lang))}</p>
+                </GearCategory>
+              </div>
+            )}
+          </div>
+
+          {/* Col 3: Set */}
+          <div className="contents md:block">
+            {build.Set && build.Set.length > 0 && (
+              <div className="order-3 md:order-0">
+                <GearCategory label={t('page.character.gear.set')}>
+                  {build.Set.map((combo, i) => (
+                    <SetMiniCard key={i} combo={combo} sets={sets} lang={lang} />
+                  ))}
+                </GearCategory>
+              </div>
             )}
           </div>
         </div>

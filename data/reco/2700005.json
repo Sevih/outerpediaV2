@@ -29,16 +29,12 @@
       }
     ],
     "Set": [
-      [
-        { "name": "Attack", "count": 4 }
-      ]
+      "a4"
     ],
-    "SubstatPrio": "CHC>ATK>CHD>SPD>ACC",
-    "Note": "{EE/The Supreme Witch's Companion} Sub DPS, {EE/Cleaning Brush} Main DPS",
+    "SubstatPrio": "$dps",
+    "Note": "{EE/Core Fusion Lisha} Sub DPS, {EE/Lisha} Main DPS",
     "Talisman": [
-      "Rogue's Charm",
-      "Sage's Charm",
-      "Executioner's Charm"
+      "$CPdps"
     ]
   },
   "Critical Strike": {
@@ -71,16 +67,12 @@
       }
     ],
     "Set": [
-      [
-        { "name": "Critical Strike", "count": 4 }
-      ]
+      "chd4"
     ],
-    "SubstatPrio": "CHC>ATK>CHD>SPD>ACC",
-    "Note": "{EE/The Supreme Witch's Companion} Sub DPS, {EE/Cleaning Brush} Main DPS",
+    "SubstatPrio": "$dps",
+    "Note": "{EE/Core Fusion Lisha} Sub DPS, {EE/Lisha} Main DPS",
     "Talisman": [
-      "Rogue's Charm",
-      "Sage's Charm",
-      "Executioner's Charm"
+      "$CPdps"
     ]
   },
   "Speed": {
@@ -113,16 +105,12 @@
       }
     ],
     "Set": [
-      [
-        { "name": "Speed", "count": 4 }
-      ]
+      "s4"
     ],
-    "SubstatPrio": "CHC>ATK>CHD>SPD>ACC",
-    "Note": "{EE/The Supreme Witch's Companion} Sub DPS, {EE/Cleaning Brush} Main DPS",
+    "SubstatPrio": "$dps",
+    "Note": "{EE/Core Fusion Lisha} Sub DPS, {EE/Lisha} Main DPS",
     "Talisman": [
-      "Rogue's Charm",
-      "Sage's Charm",
-      "Executioner's Charm"
+      "$CPdps"
     ]
   },
   "Pen combos": {
@@ -155,29 +143,15 @@
       }
     ],
     "Set": [
-      [
-        { "name": "Penetration", "count": 2 },
-        { "name": "Attack", "count": 2 }
-      ],
-      [
-        { "name": "Penetration", "count": 2 },
-        { "name": "Critical Strike", "count": 2 }
-      ],
-      [
-        { "name": "Penetration", "count": 2 },
-        { "name": "Augmentation", "count": 2 }
-      ],
-      [
-        { "name": "Penetration", "count": 2 },
-        { "name": "Speed", "count": 2 }
-      ]
+      "p2s2",
+      "p2a2",
+      "p2ag2",
+      "p2chd2"
     ],
-    "SubstatPrio": "CHC>ATK>CHD>SPD>ACC",
-    "Note": "{EE/The Supreme Witch's Companion} Sub DPS, {EE/Cleaning Brush} Main DPS",
+    "SubstatPrio": "$dps",
+    "Note": "{EE/Core Fusion Lisha} Sub DPS, {EE/Lisha} Main DPS",
     "Talisman": [
-      "Rogue's Charm",
-      "Sage's Charm",
-      "Executioner's Charm"
+      "$CPdps"
     ]
   },
   "Pen": {
@@ -194,16 +168,12 @@
       }
     ],
     "Set": [
-      [
-        { "name": "Penetration", "count": 4 }
-      ]
+      "p4"
     ],
-    "SubstatPrio": "CHC>ATK>CHD>SPD>ACC",
-    "Note": "{EE/The Supreme Witch's Companion} Sub DPS, {EE/Cleaning Brush} Main DPS",
+    "SubstatPrio": "$dps",
+    "Note": "{EE/Core Fusion Lisha} Sub DPS, {EE/Lisha} Main DPS",
     "Talisman": [
-      "Rogue's Charm",
-      "Sage's Charm",
-      "Executioner's Charm"
+      "$CPdps"
     ]
   }
 }

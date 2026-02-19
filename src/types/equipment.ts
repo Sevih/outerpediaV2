@@ -101,25 +101,25 @@ export type ExclusiveEquipment = WithLocalizedFields<
 export type RecoGearEntry = { name: string; mainStat?: string };
 export type RecoSetEntry = { name: string; count: number };
 
-export type RecoBuild = {
+export type RecoBuild = WithLocalizedFields<{
   Weapon?: RecoGearEntry[];
   Amulet?: RecoGearEntry[];
   Set?: (RecoSetEntry[] | string)[];
   Talisman?: string[] | string;
   SubstatPrio?: string;
   Note?: string;
-};
+}, 'Note'>;
 
 export type CharacterReco = Record<string, RecoBuild>;
 
-export type ResolvedRecoBuild = {
+export type ResolvedRecoBuild = WithLocalizedFields<{
   Weapon?: RecoGearEntry[];
   Amulet?: RecoGearEntry[];
   Set?: RecoSetEntry[][];
   Talisman?: string[];
   SubstatPrio?: string;
   Note?: string;
-};
+}, 'Note'>;
 
 export type ResolvedCharacterReco = Record<string, ResolvedRecoBuild>;
 

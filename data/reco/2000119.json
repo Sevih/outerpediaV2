@@ -27,64 +27,22 @@
         "name": "Briareos's Ambition [Mage]",
         "mainStat": "PEN%"
       }
-    ], 
+    ],
     "Set": [
       [
-        { "name": "Penetration", "count": 4 }
+        {
+          "name": "Penetration",
+          "count": 4
+        }
       ]
     ],
-    "SubstatPrio": "ATK>CHC>CHD>SPD>ACC",
+    "SubstatPrio": "$dps",
     "Note": "",
     "Talisman": [
-      "Rogue's Charm",
-      "Executioner's Charm",
-      "Vanguard's Charm",
-      "Assassin's Charm"  
-    ]
-  }, "Speed": {
-    "Weapon": [
-      {
-        "name": "Thumping Odyssey",
-        "mainStat": "ATK%"
-      },
-      {
-        "name": "Briareos's Recklessness [Mage]",
-        "mainStat": "ATK%"
-      },
-      {
-        "name": "Fire Grimoire",
-        "mainStat": "ATK%"
-      }
-    ],
-    "Amulet": [
-      {
-        "name": "Spirit of Unification",
-        "mainStat": "PEN%"
-      },
-      {
-        "name": "Queen of Prism",
-        "mainStat": "PEN%"
-      },
-      {
-        "name": "Briareos's Ambition [Mage]",
-        "mainStat": "PEN%"
-      }
-    ], 
-    "Set": [
-      [
-        { "name": "Speed", "count": 4 }
-      ]
-    ],
-    "SubstatPrio": "ATK>CHC>CHD>SPD>ACC",
-    "Note": "",
-    "Talisman": [
-      "Rogue's Charm",
-      "Executioner's Charm",
-      "Vanguard's Charm",
-      "Assassin's Charm"  
+      "$CPdps"
     ]
   },
-   "Critical Strike": {
+  "Speed": {
     "Weapon": [
       {
         "name": "Thumping Odyssey",
@@ -112,22 +70,17 @@
         "name": "Briareos's Ambition [Mage]",
         "mainStat": "PEN%"
       }
-    ], 
-    "Set": [
-      [
-        { "name": "Critical Strike", "count": 4 }
-      ]
     ],
-    "SubstatPrio": "ATK>CHC>CHD>SPD>ACC",
+    "Set": [
+      "s4"
+    ],
+    "SubstatPrio": "$dps",
     "Note": "",
     "Talisman": [
-      "Rogue's Charm",
-      "Executioner's Charm",
-      "Vanguard's Charm",
-      "Assassin's Charm"  
+      "$CPdps"
     ]
   },
-   "Pen mix": {
+  "Critical Strike": {
     "Weapon": [
       {
         "name": "Thumping Odyssey",
@@ -155,20 +108,61 @@
         "name": "Briareos's Ambition [Mage]",
         "mainStat": "PEN%"
       }
-    ], 
+    ],
     "Set": [
       [
-        { "name": "Penetration", "count": 2 },
-        { "name": "Speed", "count": 2 }
+        {
+          "name": "Critical Strike",
+          "count": 4
+        }
       ]
     ],
-    "SubstatPrio": "ATK>CHC>CHD>SPD>ACC",
-    "Note": "You can swap the 2 speed pieces for \nAttack\nAugmentation\nImmunity",
+    "SubstatPrio": "$dps",
+    "Note": "",
     "Talisman": [
-      "Rogue's Charm",
-      "Executioner's Charm",
-      "Vanguard's Charm",
-      "Assassin's Charm"  
+      "$CPdps"
+    ]
+  },
+  "Pen mix": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Briareos's Recklessness [Mage]",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Fire Grimoire",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Spirit of Unification",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Queen of Prism",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Briareos's Ambition [Mage]",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      "p2s2",
+      "p2a2",
+      "p2chd2",
+      "p2ag2",
+      "p2i2"
+    ],
+    "SubstatPrio": "$dps",
+    "Note": "",
+    "Talisman": [
+      "$CPdps"
     ]
   }
 }
