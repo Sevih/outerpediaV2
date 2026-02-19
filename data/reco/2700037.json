@@ -32,19 +32,10 @@
         "mainStat": "SPD"
       }
     ],
-    "Set": [
-      [
-        { "name": "Speed", "count": 4 }
-      ]
-    ],
-    "SubstatPrio": "SPD>HP>CHC>CHD>ACC=DEF",
+    "Set": ["s4"],
+    "SubstatPrio": "$tankDpsHP",
     "Note": "",
-    "Talisman": [
-      "Vanguard's Charm",
-      "Executioner's Charm",
-      "Rogue's Charm",
-      "Sage's Charm"
-    ]
+    "Talisman": "$CPplusVang"
   },
   "Swift Counter": {
     "Weapon": [

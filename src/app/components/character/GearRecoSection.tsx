@@ -1,11 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import type { Weapon, Amulet, Talisman, ArmorSet, ResolvedCharacterReco } from '@/types/equipment';
-import { l } from '@/lib/i18n/localize';
-import { getRarityBgPath } from '@/lib/format-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { WeaponMiniCard, AmuletMiniCard, TalismanMiniCard, SetMiniCard } from '@/app/components/equipment';
 
 type Props = {
   reco: ResolvedCharacterReco;
@@ -14,19 +12,6 @@ type Props = {
   talismans: Talisman[];
   sets: ArmorSet[];
 };
-
-function findWeapon(weapons: Weapon[], name: string) {
-  return weapons.find((w) => w.name === name);
-}
-function findAmulet(amulets: Amulet[], name: string) {
-  return amulets.find((a) => a.name === name);
-}
-function findTalisman(talismans: Talisman[], name: string) {
-  return talismans.find((t) => t.name === name);
-}
-function findSet(sets: ArmorSet[], name: string) {
-  return sets.find((s) => s.name === name || s.name === `${name} Set`);
-}
 
 export default function GearRecoSection({ reco, weapons, amulets, talismans, sets }: Props) {
   const { lang, t } = useI18n();
@@ -75,15 +60,11 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
             {build.Weapon && build.Weapon.length > 0 && (
               <GearCategory label={t('page.character.gear.weapon')}>
                 {build.Weapon.map((w) => {
-                  const data = findWeapon(weapons, w.name);
-                  return (
-                    <GearItem
-                      key={w.name}
-                      name={data ? l(data, 'name', lang) : w.name}
-                      image={data?.image}
-                      rarity={data?.rarity}
-                      mainStat={w.mainStat}
-                    />
+                  const data = weapons.find((wp) => wp.name === w.name);
+                  return data ? (
+                    <WeaponMiniCard key={w.name} weapon={data} lang={lang} mainStat={w.mainStat} />
+                  ) : (
+                    <p key={w.name} className="text-sm text-zinc-400">{w.name}</p>
                   );
                 })}
               </GearCategory>
@@ -93,15 +74,11 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
             {build.Amulet && build.Amulet.length > 0 && (
               <GearCategory label={t('page.character.gear.amulet')}>
                 {build.Amulet.map((a) => {
-                  const data = findAmulet(amulets, a.name);
-                  return (
-                    <GearItem
-                      key={a.name}
-                      name={data ? l(data, 'name', lang) : a.name}
-                      image={data?.image}
-                      rarity={data?.rarity}
-                      mainStat={a.mainStat}
-                    />
+                  const data = amulets.find((am) => am.name === a.name);
+                  return data ? (
+                    <AmuletMiniCard key={a.name} amulet={data} lang={lang} mainStat={a.mainStat} />
+                  ) : (
+                    <p key={a.name} className="text-sm text-zinc-400">{a.name}</p>
                   );
                 })}
               </GearCategory>
@@ -111,30 +88,7 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
             {build.Set && build.Set.length > 0 && (
               <GearCategory label={t('page.character.gear.set')}>
                 {build.Set.map((combo, i) => (
-                  <div key={i} className="flex flex-wrap items-center gap-2">
-                    {combo.map((piece) => {
-                      const data = findSet(sets, piece.name);
-                      return (
-                        <span key={piece.name} className="inline-flex items-center gap-1 text-sm">
-                          {data?.set_icon && (
-                            <div className="relative h-6 w-6">
-                              <Image
-                                src={`/images/ui/effect/${data.set_icon}.webp`}
-                                alt={piece.name}
-                                fill
-                                sizes="24px"
-                                className="object-contain"
-                              />
-                            </div>
-                          )}
-                          <span className="text-zinc-200">
-                            {data ? l(data, 'name', lang) : piece.name}
-                          </span>
-                          <span className="text-xs text-zinc-500">x{piece.count}</span>
-                        </span>
-                      );
-                    })}
-                  </div>
+                  <SetMiniCard key={i} combo={combo} sets={sets} lang={lang} />
                 ))}
               </GearCategory>
             )}
@@ -143,14 +97,11 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
             {build.Talisman && build.Talisman.length > 0 && (
               <GearCategory label={t('page.character.gear.talisman')}>
                 {build.Talisman.map((name) => {
-                  const data = findTalisman(talismans, name);
-                  return (
-                    <GearItem
-                      key={name}
-                      name={data ? l(data, 'name', lang) : name}
-                      image={data?.image}
-                      rarity={data?.rarity}
-                    />
+                  const data = talismans.find((t) => t.name === name);
+                  return data ? (
+                    <TalismanMiniCard key={name} talisman={data} lang={lang} />
+                  ) : (
+                    <p key={name} className="text-sm text-zinc-400">{name}</p>
                   );
                 })}
               </GearCategory>
@@ -189,47 +140,6 @@ function GearCategory({ label, children }: { label: string; children: React.Reac
         {label}
       </h3>
       <div className="space-y-2">{children}</div>
-    </div>
-  );
-}
-
-function GearItem({
-  name,
-  image,
-  rarity,
-  mainStat,
-}: {
-  name: string;
-  image?: string;
-  rarity?: string;
-  mainStat?: string;
-}) {
-  return (
-    <div className="flex items-center gap-2">
-      {image && (
-        <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded">
-          {rarity && (
-            <Image
-              src={getRarityBgPath(rarity)}
-              alt=""
-              fill
-              sizes="40px"
-              className="object-cover"
-            />
-          )}
-          <Image
-            src={`/images/items/${image}.webp`}
-            alt={name}
-            fill
-            sizes="40px"
-            className="relative object-contain p-0.5"
-          />
-        </div>
-      )}
-      <div>
-        <p className="text-sm text-zinc-200">{name}</p>
-        {mainStat && <p className="text-xs text-zinc-500">{mainStat}</p>}
-      </div>
     </div>
   );
 }

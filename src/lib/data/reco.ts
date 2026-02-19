@@ -41,7 +41,20 @@ function resolveTalismans(
     const key = val.startsWith('$') ? val.slice(1) : val;
     return presets.talismans[key];
   }
-  return val;
+  // Array: expand $preset refs inline, deduplicate
+  const result: string[] = [];
+  const seen = new Set<string>();
+  for (const item of val) {
+    if (item.startsWith('$')) {
+      const expanded = presets.talismans[item.slice(1)] ?? [];
+      for (const t of expanded) {
+        if (!seen.has(t)) { seen.add(t); result.push(t); }
+      }
+    } else {
+      if (!seen.has(item)) { seen.add(item); result.push(item); }
+    }
+  }
+  return result;
 }
 
 function resolveSets(

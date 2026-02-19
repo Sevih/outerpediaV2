@@ -129,11 +129,28 @@ export async function run() {
 
       // Validate talismans
       if (build.Talisman) {
-        const tals = typeof build.Talisman === 'string'
-          ? (build.Talisman.startsWith('$')
-              ? presets.talismans[build.Talisman.slice(1)]
-              : presets.talismans[build.Talisman])
-          : build.Talisman;
+        // Resolve to flat name list
+        let tals: string[] | undefined;
+        if (typeof build.Talisman === 'string') {
+          const key = build.Talisman.startsWith('$') ? build.Talisman.slice(1) : build.Talisman;
+          tals = presets.talismans[key];
+        } else {
+          // Array: expand $preset refs
+          tals = [];
+          for (const item of build.Talisman) {
+            if (item.startsWith('$')) {
+              const expanded = presets.talismans[item.slice(1)];
+              if (!expanded) {
+                console.warn(`  WARN ${ctx} Unknown talisman preset: "${item}"`);
+                errorCount++;
+              } else {
+                tals.push(...expanded);
+              }
+            } else {
+              tals.push(item);
+            }
+          }
+        }
 
         if (!tals) {
           console.warn(`  WARN ${ctx} Unknown talisman preset: "${build.Talisman}"`);
