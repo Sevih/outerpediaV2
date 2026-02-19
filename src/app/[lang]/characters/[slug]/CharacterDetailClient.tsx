@@ -19,6 +19,7 @@ import ChainDualSection from '@/app/components/character/ChainDualSection';
 import GearRecoSection from '@/app/components/character/GearRecoSection';
 import ProsConsSection from '@/app/components/character/ProsConsSection';
 import SynergiesSection from '@/app/components/character/SynergiesSection';
+import YouTubeEmbed from '@/app/components/ui/YouTubeEmbed';
 
 type TagEntry = {
   label: string;
@@ -70,6 +71,7 @@ export default function CharacterDetailClient({
   const hasTranscend = !!character.transcend;
   const hasChainPassive = !!character.skills.SKT_CHAIN_PASSIVE;
   const hasSynergies = !!partners && partners.partner.length > 0;
+  const hasVideo = !!character.video;
   const hasBurst = !!(['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE'] as const).find(
     (k) => character.skills[k]?.burnEffect && Object.keys(character.skills[k]!.burnEffect!).length > 0
   );
@@ -86,8 +88,9 @@ export default function CharacterDetailClient({
       hasChainPassive && { id: 'chain-dual', label: t('page.character.toc.chain_dual') },
       hasSynergies && { id: 'synergies', label: t('page.character.toc.synergies') },
       { id: 'gear', label: t('page.character.toc.gear') },
+      hasVideo && { id: 'video', label: t('page.character.toc.video') },
     ].filter(Boolean) as TocSection[];
-  }, [t, hasProsCons, hasEe, hasTranscend, hasChainPassive, hasBurst, hasSynergies]);
+  }, [t, hasProsCons, hasEe, hasTranscend, hasChainPassive, hasBurst, hasSynergies, hasVideo]);
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
@@ -135,6 +138,13 @@ export default function CharacterDetailClient({
           talismans={talismans}
           sets={sets}
         />
+
+        {hasVideo && (
+          <section id="video">
+            <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.video')}</h2>
+            <YouTubeEmbed videoId={character.video!} title={t('page.character.toc.video')} />
+          </section>
+        )}
       </div>
     </EffectsProvider>
   );
