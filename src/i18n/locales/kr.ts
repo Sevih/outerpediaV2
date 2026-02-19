@@ -293,6 +293,7 @@ const kr: Record<TranslationKey, string> = {
   'page.character.toc.gear': '추천 장비',
   'page.character.toc.video': '영상',
   'page.character.toc.pros_cons': '장단점',
+  'page.character.toc.synergies': '시너지',
   'page.character.pros': '장점',
   'page.character.cons': '단점',
   'page.character.skill.cooldown': 'CT',

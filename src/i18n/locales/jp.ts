@@ -293,6 +293,7 @@ const jp: Record<TranslationKey, string> = {
   'page.character.toc.gear': '推奨装備',
   'page.character.toc.video': '動画',
   'page.character.toc.pros_cons': '長所と短所',
+  'page.character.toc.synergies': 'シナジー',
   'page.character.pros': '長所',
   'page.character.cons': '短所',
   'page.character.skill.cooldown': 'CT',

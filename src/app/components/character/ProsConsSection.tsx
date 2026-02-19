@@ -2,6 +2,7 @@
 
 import type { CharacterProsCons } from '@/types/character';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { lRec } from '@/lib/i18n/localize';
 import parseText from '@/lib/parse-text';
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
 };
 
 export default function ProsConsSection({ prosCons }: Props) {
-  const { t } = useI18n();
+  const { lang, t } = useI18n();
 
   const { pros, cons } = prosCons;
   if (!pros.length && !cons.length) return null;
@@ -26,10 +27,10 @@ export default function ProsConsSection({ prosCons }: Props) {
           </h3>
           {pros.length > 0 ? (
             <ul className="space-y-2">
-              {pros.map((text, i) => (
+              {pros.map((entry, i) => (
                 <li key={i} className="flex gap-2 text-sm leading-relaxed text-zinc-300">
                   <span className="mt-0.5 shrink-0 text-emerald-400">+</span>
-                  <span>{parseText(text)}</span>
+                  <span>{parseText(lRec(entry, lang) ?? '')}</span>
                 </li>
               ))}
             </ul>
@@ -45,10 +46,10 @@ export default function ProsConsSection({ prosCons }: Props) {
           </h3>
           {cons.length > 0 ? (
             <ul className="space-y-2">
-              {cons.map((text, i) => (
+              {cons.map((entry, i) => (
                 <li key={i} className="flex gap-2 text-sm leading-relaxed text-zinc-300">
                   <span className="mt-0.5 shrink-0 text-red-400">−</span>
-                  <span>{parseText(text)}</span>
+                  <span>{parseText(lRec(entry, lang) ?? '')}</span>
                 </li>
               ))}
             </ul>

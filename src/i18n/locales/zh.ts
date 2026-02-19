@@ -293,6 +293,7 @@ const zh: Record<TranslationKey, string> = {
   'page.character.toc.gear': '推荐装备',
   'page.character.toc.video': '视频',
   'page.character.toc.pros_cons': '优缺点',
+  'page.character.toc.synergies': '协同',
   'page.character.pros': '优点',
   'page.character.cons': '缺点',
   'page.character.skill.cooldown': 'CD',

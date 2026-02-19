@@ -293,6 +293,7 @@ const en = {
   'page.character.toc.gear': 'Recommended Gear',
   'page.character.toc.video': 'Video',
   'page.character.toc.pros_cons': 'Pros & Cons',
+  'page.character.toc.synergies': 'Synergies',
   'page.character.pros': 'Strengths',
   'page.character.cons': 'Weaknesses',
   'page.character.skill.cooldown': 'CD',

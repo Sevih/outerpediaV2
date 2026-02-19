@@ -1,6 +1,6 @@
 import { readFile } from 'fs/promises';
 import { join } from 'path';
-import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile, CharacterProsCons, CharacterStats } from '@/types/character';
+import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies } from '@/types/character';
 
 const CHARS_DIR = join(process.cwd(), 'data/character');
 const RECO_DIR = join(process.cwd(), 'data/reco');
@@ -11,6 +11,7 @@ const LIST_PATH = join(process.cwd(), 'data/generated/characters-list.json');
 const SLUG_TO_ID_PATH = join(process.cwd(), 'data/generated/characters-slug-to-id.json');
 const STATS_PATH = join(process.cwd(), 'data/generated/character-stats.json');
 const PROS_CONS_PATH = join(process.cwd(), 'data/pros-cons.json');
+const PARTNERS_PATH = join(process.cwd(), 'data/partners.json');
 
 type SlugToIdMap = Record<string, string>;
 
@@ -105,6 +106,17 @@ export async function getCharacterProsCons(slug: string): Promise<CharacterProsC
   try {
     const raw = await readFile(PROS_CONS_PATH, 'utf-8');
     const all = JSON.parse(raw) as Record<string, CharacterProsCons>;
+    return all[slug] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/** Get synergy / partner data for a character by readable slug */
+export async function getCharacterPartners(slug: string): Promise<CharacterSynergies | null> {
+  try {
+    const raw = await readFile(PARTNERS_PATH, 'utf-8');
+    const all = JSON.parse(raw) as Record<string, CharacterSynergies>;
     return all[slug] ?? null;
   } catch {
     return null;

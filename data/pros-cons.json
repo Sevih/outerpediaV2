@@ -1,322 +1,322 @@
 {
     "valentine": {
         "pros": [
-            "easy to build",
-            "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} and {B/BT_STAT|ST_CRITICAL_DMG_RATE}"
+            { "en": "easy to build" },
+            { "en": "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} and {B/BT_STAT|ST_CRITICAL_DMG_RATE}" }
         ],
         "cons": [
-            "RNG reliant for her EE to activate",
-            "by making her too fast can make you waste a lot of turns"
+            { "en": "RNG reliant for her EE to activate" },
+            { "en": "by making her too fast can make you waste a lot of turns" }
         ]
     },
     "tamara": {
         "pros": [
-            "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} and {B/BT_STAT|ST_CRITICAL_DMG_RATE}",
-            "very flexible and usable in many teams",
-            "debuffing enemies with {D/BT_STAT|ST_DEF} {D/BT_SILENCE} {D/BT_MARKING} and {D/BT_COOL_CHARGE}"
+            { "en": "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} and {B/BT_STAT|ST_CRITICAL_DMG_RATE}" },
+            { "en": "very flexible and usable in many teams" },
+            { "en": "debuffing enemies with {D/BT_STAT|ST_DEF} {D/BT_SILENCE} {D/BT_MARKING} and {D/BT_COOL_CHARGE}" }
         ],
         "cons": [
-            "requires high stats to perform well",
-            "requires max skill upgrades for full potential"
+            { "en": "requires high stats to perform well" },
+            { "en": "requires max skill upgrades for full potential" }
         ]
     },
     "charlotte": {
         "pros": [
-            "easy to build",
-            "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} and {B/BT_STAT|ST_ATK}"
+            { "en": "easy to build" },
+            { "en": "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} and {B/BT_STAT|ST_ATK}" }
         ],
         "cons": [
-            "her skillset mainly supports mage-type characters",
-            "not helpful most of the time"
+            { "en": "her skillset mainly supports mage-type characters" },
+            { "en": "not helpful most of the time" }
         ]
     },
     "skadi": {
         "pros": [
-            "easy to build",
-            "buffing allies with {B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} and {B/BT_STAT|ST_BUFF_CHANCE}"
+            { "en": "easy to build" },
+            { "en": "buffing allies with {B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} and {B/BT_STAT|ST_BUFF_CHANCE}" }
         ],
         "cons": [
-            "needs max skill upgrades"
+            { "en": "needs max skill upgrades" }
         ]
     },
     "monad-eva": {
         "pros": [
-            "has built-in {B/BT_CALL_BACKUP}",
-            "supports the team with {B/BT_INVINCIBLE} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_REVIVAL} {B/BT_AP_CHARGE}"
+            { "en": "has built-in {B/BT_CALL_BACKUP}" },
+            { "en": "supports the team with {B/BT_INVINCIBLE} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_REVIVAL} {B/BT_AP_CHARGE}" }
         ],
         "cons": [
-            "needs 5-star transcendence for double {B/BT_CALL_BACKUP}",
-            "needs her exclusive equipment to heal when using {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}"
+            { "en": "needs 5-star transcendence for double {B/BT_CALL_BACKUP}" },
+            { "en": "needs her exclusive equipment to heal when using {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}" }
         ]
     },
     "nella": {
         "pros": [
-            "has built-in {B/BT_CALL_BACKUP}",
-            "supports the team with {B/BT_RESURRECTION} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_IMMUNE} {B/BT_AP_CHARGE}"
+            { "en": "has built-in {B/BT_CALL_BACKUP}" },
+            { "en": "supports the team with {B/BT_RESURRECTION} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_IMMUNE} {B/BT_AP_CHARGE}" }
         ],
         "cons": [
-            "has no way to cleanse debuffs outside preventing them with {B/BT_IMMUNE}"
+            { "en": "has no way to cleanse debuffs outside preventing them with {B/BT_IMMUNE}" }
         ]
     },
     "ame": {
         "pros": [
-            "deal increased damage against bosses",
-            "has innate critical chance"
+            { "en": "deal increased damage against bosses" },
+            { "en": "has innate critical chance" }
         ],
         "cons": [
-            "-"
+            { "en": "-" }
         ]
     },
     "rin": {
         "pros": [
-            "strong at clearing all enemies at once",
-            "self buff with {B/BT_STAT|ST_CRITICAL_RATE}",
-            "damage increases each time she uses a skill"
+            { "en": "strong at clearing all enemies at once" },
+            { "en": "self buff with {B/BT_STAT|ST_CRITICAL_RATE}" },
+            { "en": "damage increases each time she uses a skill" }
         ],
         "cons": [
-            "weak against bosses unless have max Exclusive Equipment"
+            { "en": "weak against bosses unless have max Exclusive Equipment" }
         ]
     },
     "vlada": {
         "pros": [
-            "{SK/Vlada|S3} resets everytime a enemy unit dies, perfect for wave clearing",
-            "{SK/Vlada|S2} detonates {D/BT_DOT_BURN} with increase damage(50%), 20% more if the enemy unit is earth",
-            "all skills ignore target's resilience",
-            "easy to build with attack stat",
-            "benefits from teammates who can extend {D/BT_DOT_BURN}"
+            { "en": "{SK/Vlada|S3} resets everytime a enemy unit dies, perfect for wave clearing" },
+            { "en": "{SK/Vlada|S2} detonates {D/BT_DOT_BURN} with increase damage(50%), 20% more if the enemy unit is earth" },
+            { "en": "all skills ignore target's resilience" },
+            { "en": "easy to build with attack stat" },
+            { "en": "benefits from teammates who can extend {D/BT_DOT_BURN}" }
         ],
         "cons": [
-            "dependant solely on attack stat",
-            "doesn't block reaction skills such as {B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE} and {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}",
-            "{D/BT_DOT_BURN} stacks disappear if the unit dies"
+            { "en": "dependant solely on attack stat" },
+            { "en": "doesn't block reaction skills such as {B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE} and {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}" },
+            { "en": "{D/BT_DOT_BURN} stacks disappear if the unit dies" }
         ]
     },
     "rey": {
         "pros": [
-            "strong against Irregular bosses",
-            "can take many extra turns with {B/BT_ADDITIVE_TURN} and {B/BT_COOL_CHARGE} combined",
-            "can prevent water- or healer-type enemies from being revived"
+            { "en": "strong against Irregular bosses" },
+            { "en": "can take many extra turns with {B/BT_ADDITIVE_TURN} and {B/BT_COOL_CHARGE} combined" },
+            { "en": "can prevent water- or healer-type enemies from being revived" }
         ],
         "cons": [
-            "can waste too many turns or die to DoT debuffs"
+            { "en": "can waste too many turns or die to DoT debuffs" }
         ]
     },
     "noa": {
         "pros": [
-            "Easy to build",
-            "Buffing herself damages with {B/BT_STAT|ST_CRITICAL_RATE}",
-            "After critting with basic attack on her turn will follow up with AoE"
+            { "en": "Easy to build" },
+            { "en": "Buffing herself damages with {B/BT_STAT|ST_CRITICAL_RATE}" },
+            { "en": "After critting with basic attack on her turn will follow up with AoE" }
         ],
         "cons": [
-            "Strong alternatives available in Start Dash",
-            "At risk in a fight that punishes AoE"
+            { "en": "Strong alternatives available in Start Dash" },
+            { "en": "At risk in a fight that punishes AoE" }
         ]
     },
     "eternal": {
         "pros": [
-            "Many useful debuffs, especially against {E/Earth} targets",
-            "Makes {E/Earth} element enemies significantly easier",
-            "2 target attacks are not considered single or AoE"
+            { "en": "Many useful debuffs, especially against {E/Earth} targets" },
+            { "en": "Makes {E/Earth} element enemies significantly easier" },
+            { "en": "2 target attacks are not considered single or AoE" }
         ],
         "cons": [
-            "Wants max skills to apply debuffs consistently",
-            "Can only apply {D/BT_STAT|ST_ATK} against {E/Earth} enemies"
+            { "en": "Wants max skills to apply debuffs consistently" },
+            { "en": "Can only apply {D/BT_STAT|ST_ATK} against {E/Earth} enemies" }
         ]
     },
     "laplace": {
         "pros": [
-            "Can give the whole team {B/BT_SHIELD_BASED_CASTER}",
-            "Strong chain finisher",
-            "{SK/Laplace|S3} will do more damage with more debuffs on the target"
+            { "en": "Can give the whole team {B/BT_SHIELD_BASED_CASTER}" },
+            { "en": "Strong chain finisher" },
+            { "en": "{SK/Laplace|S3} will do more damage with more debuffs on the target" }
         ],
         "cons": [
-            "Dependent on teammates to apply debuffs for high bonus damage"
+            { "en": "Dependent on teammates to apply debuffs for high bonus damage" }
         ]
     },
     "aer": {
         "pros": [
-            "Can {D/BT_REMOVE_BUFF} all enemy buffs, ignoring resilience",
-            "Very strong against Earth element bosses"
+            { "en": "Can {D/BT_REMOVE_BUFF} all enemy buffs, ignoring resilience" },
+            { "en": "Very strong against Earth element bosses" }
         ],
         "cons": [
-            "-"
+            { "en": "-" }
         ]
     },
     "kappa": {
         "pros": [
-            "All her attack scale purely from Defense stat",
-            "Increase all {E/Earth} element allies' damage with her EE"
+            { "en": "All her attack scale purely from Defense stat" },
+            { "en": "Increase all {E/Earth} element allies' damage with her EE" }
         ],
         "cons": [
-            "Difficult to build well early on because of Defense focus"
+            { "en": "Difficult to build well early on because of Defense focus" }
         ]
     },
     "beth": {
         "pros": [
-            "Strong fixed damage skills"
+            { "en": "Strong fixed damage skills" }
         ],
         "cons": [
-            "Wants {D/BT_DOT_BLEED} on her enemies and {B/BT_STAT|ST_PIERCE_POWER_RATE} on herself to function fully",
-            "Low {D/BT_DOT_BLEED} uptime when building for damage, so needs assistance"
+            { "en": "Wants {D/BT_DOT_BLEED} on her enemies and {B/BT_STAT|ST_PIERCE_POWER_RATE} on herself to function fully" },
+            { "en": "Low {D/BT_DOT_BLEED} uptime when building for damage, so needs assistance" }
         ]
     },
     "veronica": {
         "pros": [
-            "Will cleanse debuffs on herself every turn",
-            "Gives lowest health teammate {B/BT_SHIELD_BASED_CASTER} every turn",
-            "Can trigger {B/BT_CALL_BACKUP} easily"
+            { "en": "Will cleanse debuffs on herself every turn" },
+            { "en": "Gives lowest health teammate {B/BT_SHIELD_BASED_CASTER} every turn" },
+            { "en": "Can trigger {B/BT_CALL_BACKUP} easily" }
         ],
         "cons": [
-            "-"
+            { "en": "-" }
         ]
     },
     "mene": {
         "pros": [
-            "Can resurrect dead allies",
-            "Heals every turn"
+            { "en": "Can resurrect dead allies" },
+            { "en": "Heals every turn" }
         ],
         "cons": [
-            "Decreasing debuff duration may not always be enough"
+            { "en": "Decreasing debuff duration may not always be enough" }
         ]
     },
     "sigma": {
         "pros": [
-            "Good subdps in Skyward Tower",
-            "Strong {D/BT_DOT_LIGHTNING} support"
+            { "en": "Good subdps in Skyward Tower" },
+            { "en": "Strong {D/BT_DOT_LIGHTNING} support" }
         ],
         "cons": [
-            "Outclassed outside of Skyward Tower"
+            { "en": "Outclassed outside of Skyward Tower" }
         ]
     },
     "stella": {
         "pros": [
-            "Can't be stunned, frozen, or petrified",
-            "Frequent Debuff duration reduction via her Revenge",
-            "Delays enemy turns",
-            "{D/BT_STEAL_BUFF} is not considered {D/BT_REMOVE_BUFF}"
+            { "en": "Can't be stunned, frozen, or petrified" },
+            { "en": "Frequent Debuff duration reduction via her Revenge" },
+            { "en": "Delays enemy turns" },
+            { "en": "{D/BT_STEAL_BUFF} is not considered {D/BT_REMOVE_BUFF}" }
         ],
         "cons": [
-            "Debuffs duration decrease needs her to Revenge, and may not always be enough to remove them"
+            { "en": "Debuffs duration decrease needs her to Revenge, and may not always be enough to remove them" }
         ]
     },
     "akari": {
         "pros": [
-            "excellent PvP-oriented opener and control unit",
-            "prevents reaction skills like {B/BT_STAT|ST_COUNTER_RATE} or {B/SYS_BUFF_REVENGE} from triggering when using Saikashuu Gunnery",
-            "provides high utility with {D/BT_STAT|ST_DEF},{D/BT_STAT|ST_ATK},{D/BT_STAT|ST_BUFF_RESIST} and {D/BT_SEALED} debuffs",
-            "can extend existing debuffs, making her a great partner for units with debuff Inducing skills ",
-            "effective against bosses that rely on buffs by applying {D/BT_SEALED}"
+            { "en": "excellent PvP-oriented opener and control unit" },
+            { "en": "prevents reaction skills like {B/BT_STAT|ST_COUNTER_RATE} or {B/SYS_BUFF_REVENGE} from triggering when using Saikashuu Gunnery" },
+            { "en": "provides high utility with {D/BT_STAT|ST_DEF},{D/BT_STAT|ST_ATK},{D/BT_STAT|ST_BUFF_RESIST} and {D/BT_SEALED} debuffs" },
+            { "en": "can extend existing debuffs, making her a great partner for units with debuff Inducing skills" },
+            { "en": "effective against bosses that rely on buffs by applying {D/BT_SEALED}" }
         ],
         "cons": [
-            "primarily focused on PvP and High-End PvE, offering less value in general PvE progression",
-            "requires a specific team setup to maximize her debuff extension capabilities",
-            "requires Effectiveness to land debuffs consistently",
-            "requires max skill upgrades for debuffs to land consistently"
+            { "en": "primarily focused on PvP and High-End PvE, offering less value in general PvE progression" },
+            { "en": "requires a specific team setup to maximize her debuff extension capabilities" },
+            { "en": "requires Effectiveness to land debuffs consistently" },
+            { "en": "requires max skill upgrades for debuffs to land consistently" }
         ]
     },
     "alice": {
         "pros": [
-            "excellent utility mage with the ability to strip all buffs from enemies using {D/BT_REMOVE_BUFF}",
-            "provides consistent {D/BT_SEALED} to prevent enemies from regaining buffs",
-            "great for countering shield-heavy or immunity-reliant teams in PvP",
-            "valuable in specific PvE content like World Boss or Guild Raid where buff removal is mandatory",
-            "can boost own priority with {SK/Alice|S2}, Providing a smooth transition to {SK/Alice|S3}",
-            "can boost earth allies outgoing damage with {D/IG_Buff_2000020_Interruption_D}",
-            "If the enemy unit is {E/Water}, {SK/Alice|S2} does an additional effect of {D/BT_STAT|ST_SPEED}  "
+            { "en": "excellent utility mage with the ability to strip all buffs from enemies using {D/BT_REMOVE_BUFF}" },
+            { "en": "provides consistent {D/BT_SEALED} to prevent enemies from regaining buffs" },
+            { "en": "great for countering shield-heavy or immunity-reliant teams in PvP" },
+            { "en": "valuable in specific PvE content like World Boss or Guild Raid where buff removal is mandatory" },
+            { "en": "can boost own priority with {SK/Alice|S2}, Providing a smooth transition to {SK/Alice|S3}" },
+            { "en": "can boost earth allies outgoing damage with {D/IG_Buff_2000020_Interruption_D}" },
+            { "en": "If the enemy unit is {E/Water}, {SK/Alice|S2} does an additional effect of {D/BT_STAT|ST_SPEED}" }
         ],
         "cons": [
-            "highly dependent on effectiveness to ensure her debuffs and strips land",
-            "requires max skill upgrades for debuffs to land consistently",
-            "{SK/Alice|S2} is dependent on the number of units for the priority boost effect",
-            "doesn't block reaction skills such as {B/BT_STAT|ST_COUNTER_RATE} or {B/SYS_BUFF_REVENGE} from triggering"
+            { "en": "highly dependent on effectiveness to ensure her debuffs and strips land" },
+            { "en": "requires max skill upgrades for debuffs to land consistently" },
+            { "en": "{SK/Alice|S2} is dependent on the number of units for the priority boost effect" },
+            { "en": "doesn't block reaction skills such as {B/BT_STAT|ST_COUNTER_RATE} or {B/SYS_BUFF_REVENGE} from triggering" }
         ]
     },
     "dahlia": {
         "pros": [
-            "powerful crowd control with {D/BT_FREEZE} and {D/BT_STAT|ST_SPEED} reduction",
-            "{SK/Dahlia|S3} prevents enemy reaction skills such as {B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE} and {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}",
-            "{SK/Dahlia|S2} strips buffs from enemies, making her effective against units with buffs",
-            "high base speed along with EE allows her to contest the first turn in PvP",
-            "can boost own priority with 1st skill(Icicle Lance) ensuring a fast cycle between skill"
+            { "en": "powerful crowd control with {D/BT_FREEZE} and {D/BT_STAT|ST_SPEED} reduction" },
+            { "en": "{SK/Dahlia|S3} prevents enemy reaction skills such as {B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE} and {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}" },
+            { "en": "{SK/Dahlia|S2} strips buffs from enemies, making her effective against units with buffs" },
+            { "en": "high base speed along with EE allows her to contest the first turn in PvP" },
+            { "en": "can boost own priority with 1st skill(Icicle Lance) ensuring a fast cycle between skill" }
         ],
         "cons": [
-            "requires extremely high Speed gear to function as an opener in PvP",
-            "niche pick in PvE due to a lot of bosses having innate immunity against CC",
-            "Low sustain damage, offering less value in general PvE progression",
-            "requires max skill upgrades for debuffs to land consistently"
+            { "en": "requires extremely high Speed gear to function as an opener in PvP" },
+            { "en": "niche pick in PvE due to a lot of bosses having innate immunity against CC" },
+            { "en": "Low sustain damage, offering less value in general PvE progression" },
+            { "en": "requires max skill upgrades for debuffs to land consistently" }
         ]
     },
     "ais-wallenstein": {
         "pros": [
-            "high single-target damage output, especially against Bosses",
-            "damage scales significantly as her HP decreases, making her a strong comeback unit"
+            { "en": "high single-target damage output, especially against Bosses" },
+            { "en": "damage scales significantly as her HP decreases, making her a strong comeback unit" }
         ],
         "cons": [
-            "risky playstyle that requires her to be at low Health to maximize potential",
-            "limited availability as a collaboration unit, making her impossible to obtain or upgrade for new players"
+            { "en": "risky playstyle that requires her to be at low Health to maximize potential" },
+            { "en": "limited availability as a collaboration unit, making her impossible to obtain or upgrade for new players" }
         ]
     },
     "adelie": {
         "pros": [
-            "effective for clearing story waves due to AoE on her second skill",
-            "good low-investment option for new players lacking 3-star DPS units"
+            { "en": "effective for clearing story waves due to AoE on her second skill" },
+            { "en": "good low-investment option for new players lacking 3-star DPS units" }
         ],
         "cons": [
-            "low base stats as a 2-star unit make her fall off in late-game content",
-            "lacks the burst damage or utility of top-tier strikers",
-            "requires a specific kill condition or setup to trigger her cooldown reset reliably",
-            "very squishy and easy to one-shot in PvP environments"
+            { "en": "low base stats as a 2-star unit make her fall off in late-game content" },
+            { "en": "lacks the burst damage or utility of top-tier strikers" },
+            { "en": "requires a specific kill condition or setup to trigger her cooldown reset reliably" },
+            { "en": "very squishy and easy to one-shot in PvP environments" }
         ]
     },
     "gnosis-dahlia": {
         "pros": [
-            "top-tier striker with massive single-target burst potential",
-            "possesses a passive damage cap that prevents her from being one-shot by nuke skills",
-            "punishes enemy critical hits by triggering a counterattack"
+            { "en": "top-tier striker with massive single-target burst potential" },
+            { "en": "possesses a passive damage cap that prevents her from being one-shot by nuke skills" },
+            { "en": "punishes enemy critical hits by triggering a counterattack" }
         ],
         "cons": [
-            "heavily reliant on her passive, making her useless against units that prevents reaction skills from triggering",
-            "requires 100% crit rate to fully utilize EE",
-            "requires max transcendance to unlock full potential"
+            { "en": "heavily reliant on her passive, making her useless against units that prevents reaction skills from triggering" },
+            { "en": "requires 100% crit rate to fully utilize EE" },
+            { "en": "requires max transcendance to unlock full potential" }
         ]
     },
     "hanbyul-lee": {
         "pros": [
-            "grants {B/BT_STAT|ST_DEF} to the entire team, significantly increasing survivability",
-            "{SK/Hanbyul Lee|S1} allows her to push team priority combined with {SK/Hanbyul Lee|S2} or {B/BT_STAT|ST_COUNTER_RATE}, which can continuously trigger priority pushes"
+            { "en": "grants {B/BT_STAT|ST_DEF} to the entire team, significantly increasing survivability" },
+            { "en": "{SK/Hanbyul Lee|S1} allows her to push team priority combined with {SK/Hanbyul Lee|S2} or {B/BT_STAT|ST_COUNTER_RATE}, which can continuously trigger priority pushes" }
         ],
         "cons": [
-            "reliant on enemies attacking her to maximize her counter-based utility",
-            "can struggle against enemies that strip buffs or inflict {D/BT_SEALED}",
-            "{SK/Hanbyul Lee|S3} has only 80% chance to land taunt at max level"
+            { "en": "reliant on enemies attacking her to maximize her counter-based utility" },
+            { "en": "can struggle against enemies that strip buffs or inflict {D/BT_SEALED}" },
+            { "en": "{SK/Hanbyul Lee|S3} has only 80% chance to land taunt at max level" }
         ]
     },
     "christina": {
         "pros": [
-            "specialized tank designed to counter teams that rely on non-attack skills",
-            "{SK/Christina|S1} the ability to {D/BT_REMOVE_BUFF}",
-            "{SK/Christina|S3} prevents enemies reaction skills and from re-applying buffs by inflicting {D/BT_SEALED}",
-            "increases team damage output and team survibility when enemies use non-attack skills",
-            "generates Chain Points for the team, helping to cycle chain breaks faster"
+            { "en": "specialized tank designed to counter teams that rely on non-attack skills" },
+            { "en": "{SK/Christina|S1} the ability to {D/BT_REMOVE_BUFF}" },
+            { "en": "{SK/Christina|S3} prevents enemies reaction skills and from re-applying buffs by inflicting {D/BT_SEALED}" },
+            { "en": "increases team damage output and team survibility when enemies use non-attack skills" },
+            { "en": "generates Chain Points for the team, helping to cycle chain breaks faster" }
         ],
         "cons": [
-            "extremely niche usage, value drops significantly if the enemy team attacks directly without using non-attack skills or the enemy prevents/blocks {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} ",
-            "overshadowed by more versatile defenders for general PvE content progression",
-            "EE is required to consistently hit debuffs due to having low base effectiveness stat"
+            { "en": "extremely niche usage, value drops significantly if the enemy team attacks directly without using non-attack skills or the enemy prevents/blocks {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}" },
+            { "en": "overshadowed by more versatile defenders for general PvE content progression" },
+            { "en": "EE is required to consistently hit debuffs due to having low base effectiveness stat" }
         ]
     },
     "hilde": {
         "pros": [
-            "{SK/Hilde|S2} Has innate immunity to {D/BT_STUN} allows her to act consistently against control teams",
-            "{SK/Hilde|S2} significantly reduces damage taken by allies from AoE attacks, making her a strong anti-cleave unit",
-            "{SK/Hilde|S2} protects fragile allies by absorbing redirected damage",
-            "{SK/Hilde|S2} disrupts enemy momentum with reaction skills that can inflict {D/BT_STONE} when hit"
+            { "en": "{SK/Hilde|S2} Has innate immunity to {D/BT_STUN} allows her to act consistently against control teams" },
+            { "en": "{SK/Hilde|S2} significantly reduces damage taken by allies from AoE attacks, making her a strong anti-cleave unit" },
+            { "en": "{SK/Hilde|S2} protects fragile allies by absorbing redirected damage" },
+            { "en": "{SK/Hilde|S2} disrupts enemy momentum with reaction skills that can inflict {D/BT_STONE} when hit" }
         ],
         "cons": [
-            "reaction skills may not trigger against bosses/units that are immune to reactions or use non-attack skills",
-            "offers low offensive pressure compared to other bruiser tanks",
-            "vulnerable to {D/BT_SEALED} or Fixed Damage which bypasses her mitigation",
-            "{SK/Hilde|S1} primarily effective in PvP, less efficient for general PvE progression due to bosses/Enemies always have a higher HP"
+            { "en": "reaction skills may not trigger against bosses/units that are immune to reactions or use non-attack skills" },
+            { "en": "offers low offensive pressure compared to other bruiser tanks" },
+            { "en": "vulnerable to {D/BT_SEALED} or Fixed Damage which bypasses her mitigation" },
+            { "en": "{SK/Hilde|S1} primarily effective in PvP, less efficient for general PvE progression due to bosses/Enemies always have a higher HP" }
         ]
     }
 }

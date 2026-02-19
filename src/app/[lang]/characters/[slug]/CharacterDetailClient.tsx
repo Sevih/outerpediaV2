@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import type { Character, CharacterProfile, CharacterProsCons, CharacterStats } from '@/types/character';
+import type { Character, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies } from '@/types/character';
 import type { ExclusiveEquipment } from '@/types/equipment';
 import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
 import type { Item } from '@/types/item';
@@ -18,6 +18,7 @@ import BurstSection from '@/app/components/character/BurstSection';
 import ChainDualSection from '@/app/components/character/ChainDualSection';
 import GearRecoSection from '@/app/components/character/GearRecoSection';
 import ProsConsSection from '@/app/components/character/ProsConsSection';
+import SynergiesSection from '@/app/components/character/SynergiesSection';
 
 type TagEntry = {
   label: string;
@@ -40,6 +41,7 @@ type Props = {
   sets: ArmorSet[];
   giftItems: Item[];
   prosCons: CharacterProsCons | null;
+  partners: CharacterSynergies | null;
   buffMap: Record<string, Effect>;
   debuffMap: Record<string, Effect>;
 };
@@ -57,6 +59,7 @@ export default function CharacterDetailClient({
   sets,
   giftItems,
   prosCons,
+  partners,
   buffMap,
   debuffMap,
 }: Props) {
@@ -66,6 +69,7 @@ export default function CharacterDetailClient({
   const hasEe = !!ee;
   const hasTranscend = !!character.transcend;
   const hasChainPassive = !!character.skills.SKT_CHAIN_PASSIVE;
+  const hasSynergies = !!partners && partners.partner.length > 0;
   const hasBurst = !!(['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE'] as const).find(
     (k) => character.skills[k]?.burnEffect && Object.keys(character.skills[k]!.burnEffect!).length > 0
   );
@@ -80,9 +84,10 @@ export default function CharacterDetailClient({
       { id: 'skills', label: t('page.character.toc.skills') },
       hasBurst && { id: 'burst', label: t('page.character.toc.burst') },
       hasChainPassive && { id: 'chain-dual', label: t('page.character.toc.chain_dual') },
+      hasSynergies && { id: 'synergies', label: t('page.character.toc.synergies') },
       { id: 'gear', label: t('page.character.toc.gear') },
     ].filter(Boolean) as TocSection[];
-  }, [t, hasProsCons, hasEe, hasTranscend, hasChainPassive, hasBurst]);
+  }, [t, hasProsCons, hasEe, hasTranscend, hasChainPassive, hasBurst, hasSynergies]);
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
@@ -117,6 +122,10 @@ export default function CharacterDetailClient({
 
         {hasChainPassive && (
           <ChainDualSection character={character} />
+        )}
+
+        {hasSynergies && partners && (
+          <SynergiesSection synergies={partners} />
         )}
 
         <GearRecoSection

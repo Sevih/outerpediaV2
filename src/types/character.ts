@@ -149,8 +149,19 @@ export type CharacterNameToIdMap = Record<string, string>;
 
 /** Pros & cons editorial data for a character */
 export type CharacterProsCons = {
-  pros: string[];
-  cons: string[];
+  pros: LangMap[];
+  cons: LangMap[];
+};
+
+/** A synergy partner group (shared reason for 1+ heroes) */
+export type CharacterPartner = {
+  hero: string[];
+  reason: LangMap;
+};
+
+/** Synergy / partner data for a character */
+export type CharacterSynergies = {
+  partner: CharacterPartner[];
 };
 
 /** Enriched character entry for the list page (includes filter data) */

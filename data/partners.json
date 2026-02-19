@@ -1,0 +1,608 @@
+{
+  "aer": {
+    "partner": [
+      {
+        "hero": [
+          "valentine"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_ACTION_GAUGE} {B/BT_CALL_BACKUP}",
+          "kr": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_ACTION_GAUGE} {B/BT_CALL_BACKUP}",
+          "jp": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_ACTION_GAUGE} {B/BT_CALL_BACKUP}",
+          "zh": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_ACTION_GAUGE} {B/BT_CALL_BACKUP}"
+        }
+      },
+      {
+        "hero": [
+          "eternal"
+        ],
+        "reason": {
+          "en": "{D/BT_STAT|ST_DEF}",
+          "kr": "{D/BT_STAT|ST_DEF}",
+          "jp": "{D/BT_STAT|ST_DEF}",
+          "zh": "{D/BT_STAT|ST_DEF}"
+        }
+      },
+      {
+        "hero": [
+          "liselotte"
+        ],
+        "reason": {
+          "en": "S3's {B/BT_COOL_CHARGE} resets Aer's Skill 3-Skill 2 combo",
+          "kr": "S3의 {B/BT_COOL_CHARGE}가 Aer의 스킬 3-스킬 2 콤보를 초기화",
+          "jp": "S3の{B/BT_COOL_CHARGE}がAerのスキル3-スキル2コンボをリセット",
+          "zh": "S3的{B/BT_COOL_CHARGE}重置Aer的技能3-技能2连招"
+        }
+      }
+    ]
+  },
+  "ais-wallenstein": {
+    "partner": [
+      {
+        "hero": [
+          "monad-eva"
+        ],
+        "reason": {
+          "en": "{B/BT_CALL_BACKUP} to reduce Skill 3 cooldown",
+          "kr": "{B/BT_CALL_BACKUP}로 스킬 3 쿨다운 감소",
+          "jp": "{B/BT_CALL_BACKUP}でスキル3のクールダウンを短縮",
+          "zh": "{B/BT_CALL_BACKUP}减少技能3冷却时间"
+        }
+      },
+      {
+        "hero": [
+          "skadi"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_COOL_CHARGE}",
+          "kr": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_COOL_CHARGE}",
+          "jp": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_COOL_CHARGE}",
+          "zh": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_COOL_CHARGE}"
+        }
+      }
+    ]
+  },
+  "ame": {
+    "partner": [
+      {
+        "hero": [
+          "skadi"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} \n{B/BT_COOL_CHARGE} closes the gap in Ame's {B/IG_Buff_Effect_2000065_A_Interruption} and {B/IG_Buff_Effect_2000065_B_Interruption} uptime",
+          "kr": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} \n{B/BT_COOL_CHARGE}가 Ame의 {B/IG_Buff_Effect_2000065_A_Interruption} 및 {B/IG_Buff_Effect_2000065_B_Interruption} 유지 시간 공백을 메움",
+          "jp": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} \n{B/BT_COOL_CHARGE}がAmeの{B/IG_Buff_Effect_2000065_A_Interruption}と{B/IG_Buff_Effect_2000065_B_Interruption}の稼働時間のギャップを埋める",
+          "zh": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} \n{B/BT_COOL_CHARGE}填补Ame的{B/IG_Buff_Effect_2000065_A_Interruption}和{B/IG_Buff_Effect_2000065_B_Interruption}持续时间的空档"
+        }
+      },
+      {
+        "hero": [
+          "charlotte"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_ATK} {B/BT_ACTION_GAUGE} for {C/Mage}",
+          "kr": "{C/Mage}를 위한 {B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_ATK} {B/BT_ACTION_GAUGE}",
+          "jp": "{C/Mage}に{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_ATK} {B/BT_ACTION_GAUGE}を付与",
+          "zh": "为{C/Mage}提供{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_ATK} {B/BT_ACTION_GAUGE}"
+        }
+      }
+    ]
+  },
+  "bell-cranel": {
+    "partner": [
+      {
+        "hero": [
+          "vlada",
+          "maxie",
+          "ember"
+        ],
+        "reason": {
+          "en": "{D/BT_DOT_BURN} team",
+          "kr": "{D/BT_DOT_BURN} 팀",
+          "jp": "{D/BT_DOT_BURN}チーム",
+          "zh": "{D/BT_DOT_BURN}队伍"
+        }
+      }
+    ]
+  },
+  "beth": {
+    "partner": [
+      {
+        "hero": [
+          "eliza",
+          "francesca",
+          "fortuna"
+        ],
+        "reason": {
+          "en": "Also {C/Mage} with {I-W/Noblewoman's Guile}: More {D/BT_DOT_BLEED} uptime to enable Beth's extra effects",
+          "kr": "{I-W/Noblewoman's Guile}를 장착한 {C/Mage}: {D/BT_DOT_BLEED} 유지 시간 증가로 Beth의 추가 효과 발동",
+          "jp": "{I-W/Noblewoman's Guile}を装備した{C/Mage}: {D/BT_DOT_BLEED}の稼働時間増加でBethの追加効果を発動",
+          "zh": "装备{I-W/Noblewoman's Guile}的{C/Mage}: 更多{D/BT_DOT_BLEED}持续时间以触发Beth的额外效果"
+        }
+      }
+    ]
+  },
+  "caren": {
+    "partner": [
+      {
+        "hero": [
+          "veronica",
+          "summer-knight-s-dream-ember"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_DEF} support",
+          "kr": "{B/BT_STAT|ST_DEF} 서포트",
+          "jp": "{B/BT_STAT|ST_DEF}サポート",
+          "zh": "{B/BT_STAT|ST_DEF}辅助"
+        }
+      }
+    ]
+  },
+  "delta": {
+    "partner": [
+      {
+        "hero": [
+          "fran"
+        ],
+        "reason": {
+          "en": "Increased {B/BT_STAT|ST_COUNTER_RATE} buff uptime, {B/BT_ACTION_GAUGE} for highest max health",
+          "kr": "{B/BT_STAT|ST_COUNTER_RATE} 버프 유지 시간 증가, 최대 HP가 가장 높은 아군에게 {B/BT_ACTION_GAUGE}",
+          "jp": "{B/BT_STAT|ST_COUNTER_RATE}バフの稼働時間増加、最大HPが最も高い味方に{B/BT_ACTION_GAUGE}",
+          "zh": "增加{B/BT_STAT|ST_COUNTER_RATE}增益持续时间, 为最大生命值最高的角色提供{B/BT_ACTION_GAUGE}"
+        }
+      }
+    ]
+  },
+  "demiurge-astei": {
+    "partner": [
+      {
+        "hero": [
+          "maxwell"
+        ],
+        "reason": {
+          "en": "Strengthens ally {C/Mage}",
+          "kr": "아군 {C/Mage} 강화",
+          "jp": "味方{C/Mage}を強化",
+          "zh": "强化己方{C/Mage}"
+        }
+      },
+      {
+        "hero": [
+          "demiurge-delta"
+        ],
+        "reason": {
+          "en": "{B/IG_Buff_Effect_2000100_Interruption} after Demiurge Astei used her Skill 3",
+          "kr": "Demiurge Astei가 스킬 3을 사용한 후 {B/IG_Buff_Effect_2000100_Interruption}",
+          "jp": "Demiurge Asteiがスキル3を使用後に{B/IG_Buff_Effect_2000100_Interruption}",
+          "zh": "Demiurge Astei使用技能3后触发{B/IG_Buff_Effect_2000100_Interruption}"
+        }
+      }
+    ]
+  },
+  "demiurge-luna": {
+    "partner": [
+      {
+        "hero": [
+          "skadi"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_CRITICAL_RATE}, {B/BT_STAT|ST_CRITICAL_DMG_RATE} & {B/BT_STAT|ST_ATK}, {B/BT_COOL_CHARGE}",
+          "kr": "{B/BT_STAT|ST_CRITICAL_RATE}, {B/BT_STAT|ST_CRITICAL_DMG_RATE} & {B/BT_STAT|ST_ATK}, {B/BT_COOL_CHARGE}",
+          "jp": "{B/BT_STAT|ST_CRITICAL_RATE}, {B/BT_STAT|ST_CRITICAL_DMG_RATE} & {B/BT_STAT|ST_ATK}, {B/BT_COOL_CHARGE}",
+          "zh": "{B/BT_STAT|ST_CRITICAL_RATE}, {B/BT_STAT|ST_CRITICAL_DMG_RATE} & {B/BT_STAT|ST_ATK}, {B/BT_COOL_CHARGE}"
+        }
+      }
+    ]
+  },
+  "demiurge-stella": {
+    "partner": [
+      {
+        "hero": [
+          "monad-eva"
+        ],
+        "reason": {
+          "en": "{B/BT_CALL_BACKUP} and {B/BT_AP_CHARGE} to use her expensive Burst skills",
+          "kr": "{B/BT_CALL_BACKUP}과 {B/BT_AP_CHARGE}로 고비용 버스트 스킬 사용",
+          "jp": "{B/BT_CALL_BACKUP}と{B/BT_AP_CHARGE}で高コストバーストスキルを使用",
+          "zh": "{B/BT_CALL_BACKUP}和{B/BT_AP_CHARGE}用于释放高消耗爆发技能"
+        }
+      }
+    ]
+  },
+  "demiurge-vlada": {
+    "partner": [
+      {
+        "hero": [
+          "nella",
+          "monad-eva",
+          "demiurge-delta"
+        ],
+        "reason": {
+          "en": "{B/BT_AP_CHARGE} or {B/IG_Buff_Effect_2000100_Interruption} to let her use her Burst 3 every turn",
+          "kr": "{B/BT_AP_CHARGE} 또는 {B/IG_Buff_Effect_2000100_Interruption}로 매 턴 버스트 3 사용 가능",
+          "jp": "{B/BT_AP_CHARGE}または{B/IG_Buff_Effect_2000100_Interruption}で毎ターンバースト3を使用可能",
+          "zh": "{B/BT_AP_CHARGE}或{B/IG_Buff_Effect_2000100_Interruption}使其每回合可使用爆发3"
+        }
+      }
+    ]
+  },
+  "drakhan": {
+    "partner": [
+      {
+        "hero": [
+          "kitsune-of-eternity-tamamo-no-mae"
+        ],
+        "reason": {
+          "en": "Can {D/BT_IMMEDIATELY_2000092} {D/BT_DOT_CURSE}",
+          "kr": "{D/BT_DOT_CURSE}를 {D/BT_IMMEDIATELY_2000092} 가능",
+          "jp": "{D/BT_DOT_CURSE}を{D/BT_IMMEDIATELY_2000092}可能",
+          "zh": "可{D/BT_IMMEDIATELY_2000092} {D/BT_DOT_CURSE}"
+        }
+      },
+      {
+        "hero": [
+          "marian"
+        ],
+        "reason": {
+          "en": "More {D/BT_DOT_CURSE} stacks",
+          "kr": "더 많은 {D/BT_DOT_CURSE} 중첩",
+          "jp": "より多くの{D/BT_DOT_CURSE}スタック",
+          "zh": "更多{D/BT_DOT_CURSE}层数"
+        }
+      }
+    ]
+  },
+  "eliza": {
+    "partner": [
+      {
+        "hero": [
+          "beth",
+          "francesca"
+        ],
+        "reason": {
+          "en": "Stronger against enemies inflicted with {D/BT_DOT_BLEED}",
+          "kr": "{D/BT_DOT_BLEED} 상태의 적에게 더 강함",
+          "jp": "{D/BT_DOT_BLEED}状態の敵に対してより強力",
+          "zh": "对{D/BT_DOT_BLEED}状态的敌人造成更高伤害"
+        }
+      }
+    ]
+  },
+  "ember": {
+    "partner": [
+      {
+        "hero": [
+          "vlada",
+          "maxie",
+          "bell-cranel"
+        ],
+        "reason": {
+          "en": "{D/BT_DOT_BURN} team",
+          "kr": "{D/BT_DOT_BURN} 팀",
+          "jp": "{D/BT_DOT_BURN}チーム",
+          "zh": "{D/BT_DOT_BURN}队伍"
+        }
+      }
+    ]
+  },
+  "fatal": {
+    "partner": [
+      {
+        "hero": [
+          "gnosis-beth"
+        ],
+        "reason": {
+          "en": "Provides {B/BT_STEALTHED}",
+          "kr": "{B/BT_STEALTHED} 제공",
+          "jp": "{B/BT_STEALTHED}を付与",
+          "zh": "提供{B/BT_STEALTHED}"
+        }
+      }
+    ]
+  },
+  "gnosis-beth": {
+    "partner": [
+      {
+        "hero": [
+          "akari",
+          "kuro",
+          "roxie",
+          "maxie",
+          "ember",
+          "fortuna"
+        ],
+        "reason": {
+          "en": "{D/BT_EXTEND_DEBUFF}",
+          "kr": "{D/BT_EXTEND_DEBUFF}",
+          "jp": "{D/BT_EXTEND_DEBUFF}",
+          "zh": "{D/BT_EXTEND_DEBUFF}"
+        }
+      }
+    ]
+  },
+  "kitsune-of-eternity-tamamo-no-mae": {
+    "partner": [
+      {
+        "hero": [
+          "drakhan",
+          "marian"
+        ],
+        "reason": {
+          "en": "More {D/BT_DOT_CURSE} stacks",
+          "kr": "더 많은 {D/BT_DOT_CURSE} 중첩",
+          "jp": "より多くの{D/BT_DOT_CURSE}スタック",
+          "zh": "更多{D/BT_DOT_CURSE}层数"
+        }
+      },
+      {
+        "hero": [
+          "monad-eva"
+        ],
+        "reason": {
+          "en": "{B/BT_CALL_BACKUP}",
+          "kr": "{B/BT_CALL_BACKUP}",
+          "jp": "{B/BT_CALL_BACKUP}",
+          "zh": "{B/BT_CALL_BACKUP}"
+        }
+      }
+    ]
+  },
+  "marian": {
+    "partner": [
+      {
+        "hero": [
+          "kitsune-of-eternity-tamamo-no-mae"
+        ],
+        "reason": {
+          "en": "Can {D/BT_IMMEDIATELY_2000092} {D/BT_DOT_CURSE}",
+          "kr": "{D/BT_DOT_CURSE}를 {D/BT_IMMEDIATELY_2000092} 가능",
+          "jp": "{D/BT_DOT_CURSE}を{D/BT_IMMEDIATELY_2000092}可能",
+          "zh": "可{D/BT_IMMEDIATELY_2000092} {D/BT_DOT_CURSE}"
+        }
+      },
+      {
+        "hero": [
+          "drakhan"
+        ],
+        "reason": {
+          "en": "More {D/BT_DOT_CURSE} stacks",
+          "kr": "더 많은 {D/BT_DOT_CURSE} 중첩",
+          "jp": "より多くの{D/BT_DOT_CURSE}スタック",
+          "zh": "更多{D/BT_DOT_CURSE}层数"
+        }
+      },
+      {
+        "hero": [
+          "monad-eva",
+          "tamara",
+          "luna",
+          "veronica"
+        ],
+        "reason": {
+          "en": "{B/BT_CALL_BACKUP}",
+          "kr": "{B/BT_CALL_BACKUP}",
+          "jp": "{B/BT_CALL_BACKUP}",
+          "zh": "{B/BT_CALL_BACKUP}"
+        }
+      }
+    ]
+  },
+  "maxie": {
+    "partner": [
+      {
+        "hero": [
+          "roxie",
+          "notia"
+        ],
+        "reason": {
+          "en": "The twins will activate eachother's skills and apply debuffs to launch great combo attacks",
+          "kr": "쌍둥이가 서로의 스킬을 발동하고 디버프를 부여하여 강력한 콤보 공격 가능",
+          "jp": "双子がお互いのスキルを発動し、デバフを付与して強力なコンボ攻撃を発動",
+          "zh": "双胞胎可互相触发技能并施加减益以发动强力连击"
+        }
+      },
+      {
+        "hero": [
+          "vlada",
+          "ember",
+          "bell-cranel"
+        ],
+        "reason": {
+          "en": "{D/BT_DOT_BURN} team",
+          "kr": "{D/BT_DOT_BURN} 팀",
+          "jp": "{D/BT_DOT_BURN}チーム",
+          "zh": "{D/BT_DOT_BURN}队伍"
+        }
+      }
+    ]
+  },
+  "mero": {
+    "partner": [
+      {
+        "hero": [
+          "fran",
+          "delta",
+          "hanbyul-lee"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_COUNTER_RATE}, {B/BT_STAT|ST_VAMPIRIC} and {I-W/Gorgon's Wrath [Ranger]} allow her to keep her {B/BT_UNDEAD} active full time",
+          "kr": "{B/BT_STAT|ST_COUNTER_RATE}, {B/BT_STAT|ST_VAMPIRIC}와 {I-W/Gorgon's Wrath [Ranger]}로 {B/BT_UNDEAD} 상시 유지 가능",
+          "jp": "{B/BT_STAT|ST_COUNTER_RATE}、{B/BT_STAT|ST_VAMPIRIC}と{I-W/Gorgon's Wrath [Ranger]}で{B/BT_UNDEAD}を常時維持可能",
+          "zh": "{B/BT_STAT|ST_COUNTER_RATE}、{B/BT_STAT|ST_VAMPIRIC}和{I-W/Gorgon's Wrath [Ranger]}使其能持续保持{B/BT_UNDEAD}状态"
+        }
+      }
+    ]
+  },
+  "noa": {
+    "partner": [
+      {
+        "hero": [
+          "valentine"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_CRITICAL_RATE} so Noa doesn't need to use her Skill 3, {B/BT_STAT|ST_CRITICAL_DMG_RATE}, {B/BT_ACTION_GAUGE}, {B/BT_CALL_BACKUP}",
+          "kr": "{B/BT_STAT|ST_CRITICAL_RATE}로 Noa가 스킬 3을 사용할 필요 없음, {B/BT_STAT|ST_CRITICAL_DMG_RATE}, {B/BT_ACTION_GAUGE}, {B/BT_CALL_BACKUP}",
+          "jp": "{B/BT_STAT|ST_CRITICAL_RATE}でNoaがスキル3を使用不要、{B/BT_STAT|ST_CRITICAL_DMG_RATE}、{B/BT_ACTION_GAUGE}、{B/BT_CALL_BACKUP}",
+          "zh": "{B/BT_STAT|ST_CRITICAL_RATE}使Noa无需使用技能3, {B/BT_STAT|ST_CRITICAL_DMG_RATE}, {B/BT_ACTION_GAUGE}, {B/BT_CALL_BACKUP}"
+        }
+      }
+    ]
+  },
+  "notia": {
+    "partner": [
+      {
+        "hero": [
+          "tamara",
+          "roxie",
+          "maxie",
+          "demiurge-vlada",
+          "akari",
+          "eternal"
+        ],
+        "reason": {
+          "en": "Debuffers to activate Notia's Skill 2 consistently",
+          "kr": "Notia의 스킬 2를 안정적으로 발동시키는 디버퍼",
+          "jp": "Notiaのスキル2を安定して発動させるデバッファー",
+          "zh": "减益施加者以稳定触发Notia的技能2"
+        }
+      }
+    ]
+  },
+  "roxie": {
+    "partner": [
+      {
+        "hero": [
+          "tamara"
+        ],
+        "reason": {
+          "en": "Buffs and {B/BT_CALL_BACKUP}, Roxie wants a {C/Ranger} in the team to trigger her Skill 2",
+          "kr": "버프와 {B/BT_CALL_BACKUP}, Roxie는 스킬 2 발동을 위해 팀에 {C/Ranger}가 필요함",
+          "jp": "バフと{B/BT_CALL_BACKUP}、Roxieはスキル2発動のためにチームに{C/Ranger}が必要",
+          "zh": "增益和{B/BT_CALL_BACKUP}, Roxie需要队伍中有{C/Ranger}来触发技能2"
+        }
+      },
+      {
+        "hero": [
+          "maxie",
+          "notia"
+        ],
+        "reason": {
+          "en": "The twins will activate eachother's skills and apply debuffs to launch great combo attacks",
+          "kr": "쌍둥이가 서로의 스킬을 발동하고 디버프를 부여하여 강력한 콤보 공격 가능",
+          "jp": "双子がお互いのスキルを発動し、デバフを付与して強力なコンボ攻撃を発動",
+          "zh": "双胞胎可互相触发技能并施加减益以发动强力连击"
+        }
+      }
+    ]
+  },
+  "sigma": {
+    "partner": [
+      {
+        "hero": [
+          "roxie",
+          "philia"
+        ],
+        "reason": {
+          "en": "Better {D/BT_DOT_LIGHTNING} uptime to activate Sigma's extra effects",
+          "kr": "{D/BT_DOT_LIGHTNING} 유지 시간 증가로 Sigma의 추가 효과 발동",
+          "jp": "{D/BT_DOT_LIGHTNING}の稼働時間増加でSigmaの追加効果を発動",
+          "zh": "更多{D/BT_DOT_LIGHTNING}持续时间以触发Sigma的额外效果"
+        }
+      }
+    ]
+  },
+  "tamamo-no-mae": {
+    "partner": [
+      {
+        "hero": [
+          "demiurge-stella",
+          "ryu-lion",
+          "iota",
+          "laplace"
+        ],
+        "reason": {
+          "en": "{D/BT_FIXED_DAMAGE} Chain Finishers",
+          "kr": "{D/BT_FIXED_DAMAGE} 체인 피니셔",
+          "jp": "{D/BT_FIXED_DAMAGE}チェーンフィニッシャー",
+          "zh": "{D/BT_FIXED_DAMAGE}连锁终结者"
+        }
+      }
+    ]
+  },
+  "vlada": {
+    "partner": [
+      {
+        "hero": [
+          "bell-cranel",
+          "maxie",
+          "ember"
+        ],
+        "reason": {
+          "en": "{D/BT_DOT_BURN} team",
+          "kr": "{D/BT_DOT_BURN} 팀",
+          "jp": "{D/BT_DOT_BURN}チーム",
+          "zh": "{D/BT_DOT_BURN}队伍"
+        }
+      }
+    ]
+  },
+  "core-fusion-lisha": {
+    "partner": [
+      {
+        "hero": [
+          "{C/Mage}"
+        ],
+        "reason": {
+          "en": "Benefits from her EE and charges her EE+10 {B/BT_STAT|ST_ATK}",
+          "kr": "그녀의 EE 혜택을 받고 EE+10 {B/BT_STAT|ST_ATK}를 충전",
+          "jp": "彼女のEEの恩恵を受け、EE+10の{B/BT_STAT|ST_ATK}をチャージ",
+          "zh": "受益于她的EE并充能EE+10 {B/BT_STAT|ST_ATK}"
+        }
+      },
+      {
+        "hero": [
+          "liselotte"
+        ],
+        "reason": {
+          "en": "S3's {B/BT_COOL_CHARGE} to cycle skill 2 and 3 faster",
+          "kr": "S3의 {B/BT_COOL_CHARGE}로 스킬 2와 3을 더 빠르게 순환",
+          "jp": "S3の{B/BT_COOL_CHARGE}でスキル2と3をより早く回転",
+          "zh": "S3的{B/BT_COOL_CHARGE}加快技能2和3的循环"
+        }
+      },
+      {
+        "hero": [
+          "valentine"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_ACTION_GAUGE} {B/BT_CALL_BACKUP}",
+          "kr": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_ACTION_GAUGE} {B/BT_CALL_BACKUP}",
+          "jp": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_ACTION_GAUGE} {B/BT_CALL_BACKUP}",
+          "zh": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_ACTION_GAUGE} {B/BT_CALL_BACKUP}"
+        }
+      },
+      {
+        "hero": [
+          "holy-night-s-blessing-dianne"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_PIERCE_POWER_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK}",
+          "kr": "{B/BT_STAT|ST_PIERCE_POWER_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK}",
+          "jp": "{B/BT_STAT|ST_PIERCE_POWER_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK}",
+          "zh": "{B/BT_STAT|ST_PIERCE_POWER_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK}"
+        }
+      },
+      {
+        "hero": [
+          "skadi"
+        ],
+        "reason": {
+          "en": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_COOL_CHARGE}",
+          "kr": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_COOL_CHARGE}",
+          "jp": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_COOL_CHARGE}",
+          "zh": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK} {B/BT_COOL_CHARGE}"
+        }
+      }
+    ]
+  }
+}
