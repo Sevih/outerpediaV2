@@ -1,322 +1,1043 @@
 {
     "valentine": {
         "pros": [
-            { "en": "easy to build" },
-            { "en": "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} and {B/BT_STAT|ST_CRITICAL_DMG_RATE}" }
+            {
+                "en": "easy to build",
+                "jp": "育成が簡単",
+                "kr": "육성이 쉬움",
+                "zh": "容易培养"
+            },
+            {
+                "en": "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} and {B/BT_STAT|ST_CRITICAL_DMG_RATE}",
+                "jp": "{B/BT_STAT|ST_CRITICAL_RATE}と{B/BT_STAT|ST_CRITICAL_DMG_RATE}で味方の火力を強化",
+                "kr": "{B/BT_STAT|ST_CRITICAL_RATE}와 {B/BT_STAT|ST_CRITICAL_DMG_RATE}로 아군 피해량 증가",
+                "zh": "通过{B/BT_STAT|ST_CRITICAL_RATE}和{B/BT_STAT|ST_CRITICAL_DMG_RATE}提升队友伤害"
+            }
         ],
         "cons": [
-            { "en": "RNG reliant for her EE to activate" },
-            { "en": "by making her too fast can make you waste a lot of turns" }
+            {
+                "en": "RNG reliant for her EE to activate",
+                "jp": "専用装備の発動が運に依存",
+                "kr": "전용 장비 발동이 확률에 의존",
+                "zh": "专属装备触发依赖概率"
+            },
+            {
+                "en": "by making her too fast can make you waste a lot of turns",
+                "jp": "速度を上げすぎるとターンを無駄にしやすい",
+                "kr": "속도를 너무 높이면 턴 낭비가 발생할 수 있음",
+                "zh": "速度过快可能导致浪费大量回合"
+            }
         ]
     },
     "tamara": {
         "pros": [
-            { "en": "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} and {B/BT_STAT|ST_CRITICAL_DMG_RATE}" },
-            { "en": "very flexible and usable in many teams" },
-            { "en": "debuffing enemies with {D/BT_STAT|ST_DEF} {D/BT_SILENCE} {D/BT_MARKING} and {D/BT_COOL_CHARGE}" }
+            {
+                "en": "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} and {B/BT_STAT|ST_CRITICAL_DMG_RATE}",
+                "jp": "{B/BT_STAT|ST_CRITICAL_RATE}と{B/BT_STAT|ST_CRITICAL_DMG_RATE}で味方の火力を強化",
+                "kr": "{B/BT_STAT|ST_CRITICAL_RATE}와 {B/BT_STAT|ST_CRITICAL_DMG_RATE}로 아군 피해량 증가",
+                "zh": "通过{B/BT_STAT|ST_CRITICAL_RATE}和{B/BT_STAT|ST_CRITICAL_DMG_RATE}提升队友伤害"
+            },
+            {
+                "en": "very flexible and usable in many teams",
+                "jp": "汎用性が高く多くの編成で活躍できる",
+                "kr": "유연하며 다양한 팀에서 활용 가능",
+                "zh": "非常灵活，适用于多种队伍"
+            },
+            {
+                "en": "debuffing enemies with {D/BT_STAT|ST_DEF} {D/BT_SILENCE} {D/BT_MARKING} and {D/BT_COOL_CHARGE}",
+                "jp": "{D/BT_STAT|ST_DEF} {D/BT_SILENCE} {D/BT_MARKING} {D/BT_COOL_CHARGE}で敵を弱体化",
+                "kr": "{D/BT_STAT|ST_DEF} {D/BT_SILENCE} {D/BT_MARKING} {D/BT_COOL_CHARGE}로 적 약화",
+                "zh": "通过{D/BT_STAT|ST_DEF} {D/BT_SILENCE} {D/BT_MARKING}和{D/BT_COOL_CHARGE}削弱敌人"
+            }
         ],
         "cons": [
-            { "en": "requires high stats to perform well" },
-            { "en": "requires max skill upgrades for full potential" }
+            {
+                "en": "requires high stats to perform well",
+                "jp": "高いステータスが必要",
+                "kr": "높은 스탯이 필요",
+                "zh": "需要高属性才能发挥"
+            },
+            {
+                "en": "requires max skill upgrades for full potential",
+                "jp": "スキル最大強化が必要",
+                "kr": "스킬 최대 강화 필요",
+                "zh": "需要技能满级才能完全发挥"
+            }
         ]
     },
     "charlotte": {
         "pros": [
-            { "en": "easy to build" },
-            { "en": "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} and {B/BT_STAT|ST_ATK}" }
+            {
+                "en": "easy to build",
+                "jp": "育成が簡単",
+                "kr": "육성이 쉬움",
+                "zh": "容易培养"
+            },
+            {
+                "en": "buffing allies' damage with {B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} and {B/BT_STAT|ST_ATK}",
+                "jp": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK}で味方の火力を強化",
+                "kr": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_ATK}로 아군 피해량 증가",
+                "zh": "通过{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE}和{B/BT_STAT|ST_ATK}提升队友伤害"
+            }
         ],
         "cons": [
-            { "en": "her skillset mainly supports mage-type characters" },
-            { "en": "not helpful most of the time" }
+            {
+                "en": "her skillset mainly supports mage-type characters",
+                "jp": "スキルセットが主にメイジ系キャラを支援する",
+                "kr": "스킬셋이 주로 마법사 계열 캐릭터를 지원함",
+                "zh": "技能组主要支援法师类角色"
+            },
+            {
+                "en": "not helpful most of the time",
+                "jp": "大半の場面で役に立たない",
+                "kr": "대부분의 상황에서 도움이 되지 않음",
+                "zh": "大多数情况下帮助不大"
+            }
         ]
     },
     "skadi": {
         "pros": [
-            { "en": "easy to build" },
-            { "en": "buffing allies with {B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} and {B/BT_STAT|ST_BUFF_CHANCE}" }
+            {
+                "en": "easy to build",
+                "jp": "育成が簡単",
+                "kr": "육성이 쉬움",
+                "zh": "容易培养"
+            },
+            {
+                "en": "buffing allies with {B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} and {B/BT_STAT|ST_BUFF_CHANCE}",
+                "jp": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_BUFF_CHANCE}で味方を強化",
+                "kr": "{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE} {B/BT_STAT|ST_BUFF_CHANCE}로 아군 강화",
+                "zh": "通过{B/BT_STAT|ST_CRITICAL_RATE} {B/BT_STAT|ST_CRITICAL_DMG_RATE}和{B/BT_STAT|ST_BUFF_CHANCE}强化队友"
+            }
         ],
         "cons": [
-            { "en": "needs max skill upgrades" }
+            {
+                "en": "needs max skill upgrades",
+                "jp": "スキル最大強化が必要",
+                "kr": "스킬 최대 강화 필요",
+                "zh": "需要技能满级"
+            }
         ]
     },
     "monad-eva": {
         "pros": [
-            { "en": "has built-in {B/BT_CALL_BACKUP}" },
-            { "en": "supports the team with {B/BT_INVINCIBLE} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_REVIVAL} {B/BT_AP_CHARGE}" }
+            {
+                "en": "has built-in {B/BT_CALL_BACKUP}",
+                "jp": "{B/BT_CALL_BACKUP}を内蔵",
+                "kr": "내장 {B/BT_CALL_BACKUP} 보유",
+                "zh": "自带{B/BT_CALL_BACKUP}"
+            },
+            {
+                "en": "supports the team with {B/BT_INVINCIBLE} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_REVIVAL} {B/BT_AP_CHARGE}",
+                "jp": "{B/BT_INVINCIBLE} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_REVIVAL} {B/BT_AP_CHARGE}でチームを支援",
+                "kr": "{B/BT_INVINCIBLE} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_REVIVAL} {B/BT_AP_CHARGE}로 팀 지원",
+                "zh": "通过{B/BT_INVINCIBLE} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_REVIVAL} {B/BT_AP_CHARGE}支援团队"
+            }
         ],
         "cons": [
-            { "en": "needs 5-star transcendence for double {B/BT_CALL_BACKUP}" },
-            { "en": "needs her exclusive equipment to heal when using {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}" }
+            {
+                "en": "needs 5-star transcendence for double {B/BT_CALL_BACKUP}",
+                "jp": "{B/BT_CALL_BACKUP}二重発動には星5超越が必要",
+                "kr": "이중 {B/BT_CALL_BACKUP}을 위해 5성 초월 필요",
+                "zh": "需要5星超越才能双重{B/BT_CALL_BACKUP}"
+            },
+            {
+                "en": "needs her exclusive equipment to heal when using {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}",
+                "jp": "{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}使用時の回復には専用装備が必要",
+                "kr": "{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} 사용 시 힐을 위해 전용 장비 필요",
+                "zh": "使用{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}时需要专属装备才能回复"
+            }
         ]
     },
     "nella": {
         "pros": [
-            { "en": "has built-in {B/BT_CALL_BACKUP}" },
-            { "en": "supports the team with {B/BT_RESURRECTION} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_IMMUNE} {B/BT_AP_CHARGE}" }
+            {
+                "en": "has built-in {B/BT_CALL_BACKUP}",
+                "jp": "{B/BT_CALL_BACKUP}を内蔵",
+                "kr": "내장 {B/BT_CALL_BACKUP} 보유",
+                "zh": "自带{B/BT_CALL_BACKUP}"
+            },
+            {
+                "en": "supports the team with {B/BT_RESURRECTION} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_IMMUNE} {B/BT_AP_CHARGE}",
+                "jp": "{B/BT_RESURRECTION} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_IMMUNE} {B/BT_AP_CHARGE}でチームを支援",
+                "kr": "{B/BT_RESURRECTION} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_IMMUNE} {B/BT_AP_CHARGE}로 팀 지원",
+                "zh": "通过{B/BT_RESURRECTION} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} {B/BT_IMMUNE} {B/BT_AP_CHARGE}支援团队"
+            }
         ],
         "cons": [
-            { "en": "has no way to cleanse debuffs outside preventing them with {B/BT_IMMUNE}" }
+            {
+                "en": "has no way to cleanse debuffs outside preventing them with {B/BT_IMMUNE}",
+                "jp": "{B/BT_IMMUNE}での予防以外にデバフ解除手段がない",
+                "kr": "{B/BT_IMMUNE}로 예방하는 것 외에 디버프 해제 수단이 없음",
+                "zh": "除了通过{B/BT_IMMUNE}预防外，没有解除减益的手段"
+            }
         ]
     },
     "ame": {
         "pros": [
-            { "en": "deal increased damage against bosses" },
-            { "en": "has innate critical chance" }
+            {
+                "en": "deal increased damage against bosses",
+                "jp": "ボスに対してダメージが増加",
+                "kr": "보스에게 증가된 피해를 줌",
+                "zh": "对Boss造成更高伤害"
+            },
+            {
+                "en": "has innate critical chance",
+                "jp": "固有のクリティカル率を持つ",
+                "kr": "고유 치명타 확률 보유",
+                "zh": "拥有固有暴击率"
+            }
         ],
         "cons": [
-            { "en": "-" }
+            {
+                "en": "-"
+            }
         ]
     },
     "rin": {
         "pros": [
-            { "en": "strong at clearing all enemies at once" },
-            { "en": "self buff with {B/BT_STAT|ST_CRITICAL_RATE}" },
-            { "en": "damage increases each time she uses a skill" }
+            {
+                "en": "strong at clearing all enemies at once",
+                "jp": "全体殲滅が得意",
+                "kr": "적 전체를 한 번에 처치하는 데 강함",
+                "zh": "擅长一次性清除所有敌人"
+            },
+            {
+                "en": "self buff with {B/BT_STAT|ST_CRITICAL_RATE}",
+                "jp": "{B/BT_STAT|ST_CRITICAL_RATE}の自己バフ",
+                "kr": "{B/BT_STAT|ST_CRITICAL_RATE} 셀프 버프",
+                "zh": "自身{B/BT_STAT|ST_CRITICAL_RATE}增益"
+            },
+            {
+                "en": "damage increases each time she uses a skill",
+                "jp": "スキル使用ごとにダメージが増加",
+                "kr": "스킬 사용할 때마다 피해량 증가",
+                "zh": "每次使用技能时伤害增加"
+            }
         ],
         "cons": [
-            { "en": "weak against bosses unless have max Exclusive Equipment" }
+            {
+                "en": "weak against bosses unless have max Exclusive Equipment",
+                "jp": "専用装備が最大でないとボスに弱い",
+                "kr": "전용 장비가 최대가 아니면 보스에게 약함",
+                "zh": "专属装备未满级时对Boss较弱"
+            }
         ]
     },
     "vlada": {
         "pros": [
-            { "en": "{SK/Vlada|S3} resets everytime a enemy unit dies, perfect for wave clearing" },
-            { "en": "{SK/Vlada|S2} detonates {D/BT_DOT_BURN} with increase damage(50%), 20% more if the enemy unit is earth" },
-            { "en": "all skills ignore target's resilience" },
-            { "en": "easy to build with attack stat" },
-            { "en": "benefits from teammates who can extend {D/BT_DOT_BURN}" }
+            {
+                "en": "{SK/Vlada|S3} resets everytime a enemy unit dies, perfect for wave clearing",
+                "jp": "{SK/Vlada|S3}は敵が倒れるたびにリセットされ、ウェーブ殲滅に最適",
+                "kr": "{SK/Vlada|S3}는 적이 죽을 때마다 초기화되어 웨이브 클리어에 최적",
+                "zh": "{SK/Vlada|S3}在敌方死亡时重置，非常适合清波"
+            },
+            {
+                "en": "{SK/Vlada|S2} detonates {D/BT_DOT_BURN} with increase damage(50%), 20% more if the enemy unit is earth",
+                "jp": "{SK/Vlada|S2}は{D/BT_DOT_BURN}を起爆しダメージ50%増加、{E/Earth}属性の敵にはさらに20%増加",
+                "kr": "{SK/Vlada|S2}는 {D/BT_DOT_BURN}을 폭발시켜 피해 50% 증가, 적이 {E/Earth} 속성이면 20% 추가",
+                "zh": "{SK/Vlada|S2}引爆{D/BT_DOT_BURN}并增加50%伤害，对{E/Earth}属性敌人额外增加20%"
+            },
+            {
+                "en": "all skills ignore target's resilience",
+                "jp": "全スキルが対象の耐性を無視",
+                "kr": "모든 스킬이 대상의 인내를 무시",
+                "zh": "所有技能无视目标的韧性"
+            },
+            {
+                "en": "easy to build with attack stat",
+                "jp": "攻撃力だけで育成が簡単",
+                "kr": "공격력 스탯으로 육성이 쉬움",
+                "zh": "只需攻击属性即可轻松培养"
+            },
+            {
+                "en": "benefits from teammates who can extend {D/BT_DOT_BURN}",
+                "jp": "{D/BT_DOT_BURN}を延長できる味方と相性が良い",
+                "kr": "{D/BT_DOT_BURN}을 연장할 수 있는 팀원과 시너지",
+                "zh": "与能延长{D/BT_DOT_BURN}的队友配合良好"
+            }
         ],
         "cons": [
-            { "en": "dependant solely on attack stat" },
-            { "en": "doesn't block reaction skills such as {B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE} and {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}" },
-            { "en": "{D/BT_DOT_BURN} stacks disappear if the unit dies" }
+            {
+                "en": "dependant solely on attack stat",
+                "jp": "攻撃力のみに依存",
+                "kr": "공격력 스탯에만 의존",
+                "zh": "完全依赖攻击属性"
+            },
+            {
+                "en": "doesn't block reaction skills such as {B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE} and {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}",
+                "jp": "{B/BT_STAT|ST_COUNTER_RATE}や{B/SYS_BUFF_REVENGE}、{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}などの反撃スキルを封じない",
+                "kr": "{B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE}, {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} 등의 반응 스킬을 차단하지 않음",
+                "zh": "无法阻止{B/BT_STAT|ST_COUNTER_RATE}、{B/SYS_BUFF_REVENGE}和{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}等反应技能"
+            },
+            {
+                "en": "{D/BT_DOT_BURN} stacks disappear if the unit dies",
+                "jp": "ユニットが倒れると{D/BT_DOT_BURN}のスタックが消える",
+                "kr": "유닛이 죽으면 {D/BT_DOT_BURN} 중첩이 사라짐",
+                "zh": "单位死亡时{D/BT_DOT_BURN}层数消失"
+            }
         ]
     },
     "rey": {
         "pros": [
-            { "en": "strong against Irregular bosses" },
-            { "en": "can take many extra turns with {B/BT_ADDITIVE_TURN} and {B/BT_COOL_CHARGE} combined" },
-            { "en": "can prevent water- or healer-type enemies from being revived" }
+            {
+                "en": "strong against Irregular bosses",
+                "jp": "イレギュラーボスに強い",
+                "kr": "이레귤러 보스에게 강함",
+                "zh": "对异常Boss很强"
+            },
+            {
+                "en": "can take many extra turns with {B/BT_ADDITIVE_TURN} and {B/BT_COOL_CHARGE} combined",
+                "jp": "{B/BT_ADDITIVE_TURN}と{B/BT_COOL_CHARGE}の組み合わせで多くの追加ターンを獲得可能",
+                "kr": "{B/BT_ADDITIVE_TURN}과 {B/BT_COOL_CHARGE}의 조합으로 많은 추가 턴 획득 가능",
+                "zh": "通过{B/BT_ADDITIVE_TURN}和{B/BT_COOL_CHARGE}组合可获得大量额外回合"
+            },
+            {
+                "en": "can prevent water- or healer-type enemies from being revived",
+                "jp": "水属性やヒーラータイプの敵の復活を阻止できる",
+                "kr": "물 속성이나 힐러 타입 적의 부활을 방지할 수 있음",
+                "zh": "可以阻止水属性或治疗师类敌人复活"
+            }
         ],
         "cons": [
-            { "en": "can waste too many turns or die to DoT debuffs" }
+            {
+                "en": "can waste too many turns or die to DoT debuffs",
+                "jp": "ターンを使いすぎたり持続ダメージで倒れる可能性がある",
+                "kr": "턴을 너무 많이 소모하거나 지속 피해로 사망할 수 있음",
+                "zh": "可能浪费过多回合或因持续伤害死亡"
+            }
         ]
     },
     "noa": {
         "pros": [
-            { "en": "Easy to build" },
-            { "en": "Buffing herself damages with {B/BT_STAT|ST_CRITICAL_RATE}" },
-            { "en": "After critting with basic attack on her turn will follow up with AoE" }
+            {
+                "en": "Easy to build",
+                "jp": "育成が簡単",
+                "kr": "육성이 쉬움",
+                "zh": "容易培养"
+            },
+            {
+                "en": "Buffing herself damages with {B/BT_STAT|ST_CRITICAL_RATE}",
+                "jp": "{B/BT_STAT|ST_CRITICAL_RATE}で自身の火力を強化",
+                "kr": "{B/BT_STAT|ST_CRITICAL_RATE}로 자신의 피해량 증가",
+                "zh": "通过{B/BT_STAT|ST_CRITICAL_RATE}提升自身伤害"
+            },
+            {
+                "en": "After critting with basic attack on her turn will follow up with AoE",
+                "jp": "自分のターンで通常攻撃がクリティカルすると全体攻撃で追撃",
+                "kr": "자신의 턴에 기본 공격이 치명타 시 광역 추가 공격",
+                "zh": "自己回合基础攻击暴击后会追加群体攻击"
+            }
         ],
         "cons": [
-            { "en": "Strong alternatives available in Start Dash" },
-            { "en": "At risk in a fight that punishes AoE" }
+            {
+                "en": "Strong alternatives available in Start Dash",
+                "jp": "スタートダッシュでより強力な代替キャラが入手可能",
+                "kr": "스타트 대시에서 더 강한 대안을 얻을 수 있음",
+                "zh": "新手冲刺中有更强的替代角色"
+            },
+            {
+                "en": "At risk in a fight that punishes AoE",
+                "jp": "全体攻撃にペナルティのある戦闘ではリスクがある",
+                "kr": "광역 공격에 패널티가 있는 전투에서 위험",
+                "zh": "在惩罚群体攻击的战斗中有风险"
+            }
         ]
     },
     "eternal": {
         "pros": [
-            { "en": "Many useful debuffs, especially against {E/Earth} targets" },
-            { "en": "Makes {E/Earth} element enemies significantly easier" },
-            { "en": "2 target attacks are not considered single or AoE" }
+            {
+                "en": "Many useful debuffs, especially against {E/Earth} targets",
+                "jp": "多くの有用なデバフを持ち、特に{E/Earth}属性の敵に有効",
+                "kr": "다양한 유용한 디버프를 보유하며, 특히 {E/Earth} 대상에게 효과적",
+                "zh": "拥有众多有用的减益效果，尤其针对{E/Earth}属性目标"
+            },
+            {
+                "en": "Makes {E/Earth} element enemies significantly easier",
+                "jp": "{E/Earth}属性の敵を大幅に弱体化できる",
+                "kr": "{E/Earth} 속성 적을 상대하기 훨씬 쉽게 만듦",
+                "zh": "大幅降低{E/Earth}属性敌人的难度"
+            },
+            {
+                "en": "2 target attacks are not considered single or AoE",
+                "jp": "2体攻撃は単体攻撃にも全体攻撃にも該当しない",
+                "kr": "2대상 공격은 단일 대상이나 광역으로 간주되지 않음",
+                "zh": "双目标攻击不被视为单体或群体攻击"
+            }
         ],
         "cons": [
-            { "en": "Wants max skills to apply debuffs consistently" },
-            { "en": "Can only apply {D/BT_STAT|ST_ATK} against {E/Earth} enemies" }
+            {
+                "en": "Wants max skills to apply debuffs consistently",
+                "jp": "デバフを安定して付与するにはスキル最大強化が必要",
+                "kr": "디버프를 안정적으로 부여하려면 스킬 최대 강화 필요",
+                "zh": "需要技能满级才能稳定施加减益"
+            },
+            {
+                "en": "Can only apply {D/BT_STAT|ST_ATK} against {E/Earth} enemies",
+                "jp": "{D/BT_STAT|ST_ATK}は{E/Earth}属性の敵にのみ付与可能",
+                "kr": "{D/BT_STAT|ST_ATK}는 {E/Earth} 속성 적에게만 부여 가능",
+                "zh": "只能对{E/Earth}属性敌人施加{D/BT_STAT|ST_ATK}"
+            }
         ]
     },
     "laplace": {
         "pros": [
-            { "en": "Can give the whole team {B/BT_SHIELD_BASED_CASTER}" },
-            { "en": "Strong chain finisher" },
-            { "en": "{SK/Laplace|S3} will do more damage with more debuffs on the target" }
+            {
+                "en": "Can give the whole team {B/BT_SHIELD_BASED_CASTER}",
+                "jp": "チーム全体に{B/BT_SHIELD_BASED_CASTER}を付与可能",
+                "kr": "팀 전체에 {B/BT_SHIELD_BASED_CASTER} 부여 가능",
+                "zh": "可为全队提供{B/BT_SHIELD_BASED_CASTER}"
+            },
+            {
+                "en": "Strong chain finisher",
+                "jp": "優秀なチェインフィニッシャー",
+                "kr": "강력한 체인 피니셔",
+                "zh": "强力的连锁终结者"
+            },
+            {
+                "en": "{SK/Laplace|S3} will do more damage with more debuffs on the target",
+                "jp": "{SK/Laplace|S3}は対象のデバフが多いほどダメージが増加",
+                "kr": "{SK/Laplace|S3}는 대상의 디버프가 많을수록 피해 증가",
+                "zh": "{SK/Laplace|S3}对目标的减益越多伤害越高"
+            }
         ],
         "cons": [
-            { "en": "Dependent on teammates to apply debuffs for high bonus damage" }
+            {
+                "en": "Dependent on teammates to apply debuffs for high bonus damage",
+                "jp": "高いボーナスダメージには味方によるデバフ付与が必要",
+                "kr": "높은 보너스 피해를 위해 팀원의 디버프 부여에 의존",
+                "zh": "依赖队友施加减益才能获得高额外伤害"
+            }
         ]
     },
     "aer": {
         "pros": [
-            { "en": "Can {D/BT_REMOVE_BUFF} all enemy buffs, ignoring resilience" },
-            { "en": "Very strong against Earth element bosses" }
+            {
+                "en": "Can {D/BT_REMOVE_BUFF} all enemy buffs, ignoring resilience",
+                "jp": "耐性を無視して敵の全バフを{D/BT_REMOVE_BUFF}可能",
+                "kr": "인내를 무시하고 적의 모든 버프를 {D/BT_REMOVE_BUFF} 가능",
+                "zh": "可无视韧性{D/BT_REMOVE_BUFF}敌方所有增益"
+            },
+            {
+                "en": "Very strong against Earth element bosses",
+                "jp": "{E/Earth}属性ボスに非常に強い",
+                "kr": "{E/Earth} 속성 보스에게 매우 강함",
+                "zh": "对{E/Earth}属性Boss非常强力"
+            }
         ],
         "cons": [
-            { "en": "-" }
+            {
+                "en": "-"
+            }
         ]
     },
     "kappa": {
         "pros": [
-            { "en": "All her attack scale purely from Defense stat" },
-            { "en": "Increase all {E/Earth} element allies' damage with her EE" }
+            {
+                "en": "All her attack scale purely from Defense stat",
+                "jp": "全攻撃が防御力のみでスケーリング",
+                "kr": "모든 공격이 방어력 스탯으로만 스케일링",
+                "zh": "所有攻击纯粹基于防御属性"
+            },
+            {
+                "en": "Increase all {E/Earth} element allies' damage with her EE",
+                "jp": "専用装備で{E/Earth}属性味方全員のダメージを増加",
+                "kr": "전용 장비로 {E/Earth} 속성 아군 전체의 피해 증가",
+                "zh": "通过专属装备提升所有{E/Earth}属性队友的伤害"
+            }
         ],
         "cons": [
-            { "en": "Difficult to build well early on because of Defense focus" }
+            {
+                "en": "Difficult to build well early on because of Defense focus",
+                "jp": "防御力重視のため序盤の育成が難しい",
+                "kr": "방어력 중심이라 초반 육성이 어려움",
+                "zh": "由于以防御为主，前期培养较困难"
+            }
         ]
     },
     "beth": {
         "pros": [
-            { "en": "Strong fixed damage skills" }
+            {
+                "en": "Strong fixed damage skills",
+                "jp": "強力な固定ダメージスキル",
+                "kr": "강력한 고정 피해 스킬",
+                "zh": "强力的固定伤害技能"
+            }
         ],
         "cons": [
-            { "en": "Wants {D/BT_DOT_BLEED} on her enemies and {B/BT_STAT|ST_PIERCE_POWER_RATE} on herself to function fully" },
-            { "en": "Low {D/BT_DOT_BLEED} uptime when building for damage, so needs assistance" }
+            {
+                "en": "Wants {D/BT_DOT_BLEED} on her enemies and {B/BT_STAT|ST_PIERCE_POWER_RATE} on herself to function fully",
+                "jp": "完全に機能するには敵に{D/BT_DOT_BLEED}、自身に{B/BT_STAT|ST_PIERCE_POWER_RATE}が必要",
+                "kr": "완전히 기능하려면 적에게 {D/BT_DOT_BLEED}, 자신에게 {B/BT_STAT|ST_PIERCE_POWER_RATE}가 필요",
+                "zh": "需要敌人身上有{D/BT_DOT_BLEED}且自身拥有{B/BT_STAT|ST_PIERCE_POWER_RATE}才能完全发挥"
+            },
+            {
+                "en": "Low {D/BT_DOT_BLEED} uptime when building for damage, so needs assistance",
+                "jp": "火力重視の育成では{D/BT_DOT_BLEED}の維持率が低く、サポートが必要",
+                "kr": "피해 중심으로 세팅 시 {D/BT_DOT_BLEED} 유지율이 낮아 도움이 필요",
+                "zh": "以伤害为主培养时{D/BT_DOT_BLEED}维持率低，需要队友协助"
+            }
         ]
     },
     "veronica": {
         "pros": [
-            { "en": "Will cleanse debuffs on herself every turn" },
-            { "en": "Gives lowest health teammate {B/BT_SHIELD_BASED_CASTER} every turn" },
-            { "en": "Can trigger {B/BT_CALL_BACKUP} easily" }
+            {
+                "en": "Will cleanse debuffs on herself every turn",
+                "jp": "毎ターン自身のデバフを解除",
+                "kr": "매 턴 자신의 디버프 해제",
+                "zh": "每回合清除自身减益"
+            },
+            {
+                "en": "Gives lowest health teammate {B/BT_SHIELD_BASED_CASTER} every turn",
+                "jp": "毎ターンHP最低の味方に{B/BT_SHIELD_BASED_CASTER}を付与",
+                "kr": "매 턴 체력이 가장 낮은 아군에게 {B/BT_SHIELD_BASED_CASTER} 부여",
+                "zh": "每回合为血量最低的队友提供{B/BT_SHIELD_BASED_CASTER}"
+            },
+            {
+                "en": "Can trigger {B/BT_CALL_BACKUP} easily",
+                "jp": "{B/BT_CALL_BACKUP}を容易に発動可能",
+                "kr": "{B/BT_CALL_BACKUP}을 쉽게 발동 가능",
+                "zh": "可轻松触发{B/BT_CALL_BACKUP}"
+            }
         ],
         "cons": [
-            { "en": "-" }
+            {
+                "en": "-"
+            }
         ]
     },
     "mene": {
         "pros": [
-            { "en": "Can resurrect dead allies" },
-            { "en": "Heals every turn" }
+            {
+                "en": "Can resurrect dead allies",
+                "jp": "倒れた味方を復活できる",
+                "kr": "쓰러진 아군을 부활시킬 수 있음",
+                "zh": "可以复活阵亡的队友"
+            },
+            {
+                "en": "Heals every turn",
+                "jp": "毎ターン回復を行う",
+                "kr": "매 턴 힐 제공",
+                "zh": "每回合进行治疗"
+            }
         ],
         "cons": [
-            { "en": "Decreasing debuff duration may not always be enough" }
+            {
+                "en": "Decreasing debuff duration may not always be enough",
+                "jp": "デバフ持続時間の短縮だけでは不十分な場合がある",
+                "kr": "디버프 지속 시간 감소만으로는 충분하지 않을 수 있음",
+                "zh": "减少减益持续时间可能并不总是足够"
+            }
         ]
     },
     "sigma": {
         "pros": [
-            { "en": "Good subdps in Skyward Tower" },
-            { "en": "Strong {D/BT_DOT_LIGHTNING} support" }
+            {
+                "en": "Good subdps in Skyward Tower",
+                "jp": "天空の塔で優秀なサブアタッカー",
+                "kr": "하늘의 탑에서 우수한 서브딜러",
+                "zh": "在天空之塔中是优秀的副输出"
+            },
+            {
+                "en": "Strong {D/BT_DOT_LIGHTNING} support",
+                "jp": "優れた{D/BT_DOT_LIGHTNING}サポート",
+                "kr": "강력한 {D/BT_DOT_LIGHTNING} 서포트",
+                "zh": "强力的{D/BT_DOT_LIGHTNING}辅助"
+            }
         ],
         "cons": [
-            { "en": "Outclassed outside of Skyward Tower" }
+            {
+                "en": "Outclassed outside of Skyward Tower",
+                "jp": "天空の塔以外では他キャラに劣る",
+                "kr": "하늘의 탑 외에서는 다른 캐릭터에 밀림",
+                "zh": "在天空之塔以外被其他角色超越"
+            }
         ]
     },
     "stella": {
         "pros": [
-            { "en": "Can't be stunned, frozen, or petrified" },
-            { "en": "Frequent Debuff duration reduction via her Revenge" },
-            { "en": "Delays enemy turns" },
-            { "en": "{D/BT_STEAL_BUFF} is not considered {D/BT_REMOVE_BUFF}" }
+            {
+                "en": "Can't be stunned, frozen, or petrified",
+                "jp": "スタン・凍結・石化にならない",
+                "kr": "기절, 빙결, 석화에 걸리지 않음",
+                "zh": "不会被眩晕、冰冻或石化"
+            },
+            {
+                "en": "Frequent Debuff duration reduction via her Revenge",
+                "jp": "リベンジによる頻繁なデバフ持続時間短縮",
+                "kr": "리벤지를 통한 빈번한 디버프 지속 시간 감소",
+                "zh": "通过复仇频繁减少减益持续时间"
+            },
+            {
+                "en": "Delays enemy turns",
+                "jp": "敵のターンを遅延させる",
+                "kr": "적의 턴을 지연시킴",
+                "zh": "延迟敌方回合"
+            },
+            {
+                "en": "{D/BT_STEAL_BUFF} is not considered {D/BT_REMOVE_BUFF}",
+                "jp": "{D/BT_STEAL_BUFF}は{D/BT_REMOVE_BUFF}とみなされない",
+                "kr": "{D/BT_STEAL_BUFF}는 {D/BT_REMOVE_BUFF}로 간주되지 않음",
+                "zh": "{D/BT_STEAL_BUFF}不被视为{D/BT_REMOVE_BUFF}"
+            }
         ],
         "cons": [
-            { "en": "Debuffs duration decrease needs her to Revenge, and may not always be enough to remove them" }
+            {
+                "en": "Debuffs duration decrease needs her to Revenge, and may not always be enough to remove them",
+                "jp": "デバフ持続時間短縮にはリベンジが必要で、完全に解除できないことがある",
+                "kr": "디버프 지속 시간 감소에 리벤지가 필요하며, 항상 해제에 충분하지는 않음",
+                "zh": "减益持续时间减少需要她触发复仇，且不一定能完全解除"
+            }
         ]
     },
     "akari": {
         "pros": [
-            { "en": "excellent PvP-oriented opener and control unit" },
-            { "en": "prevents reaction skills like {B/BT_STAT|ST_COUNTER_RATE} or {B/SYS_BUFF_REVENGE} from triggering when using Saikashuu Gunnery" },
-            { "en": "provides high utility with {D/BT_STAT|ST_DEF},{D/BT_STAT|ST_ATK},{D/BT_STAT|ST_BUFF_RESIST} and {D/BT_SEALED} debuffs" },
-            { "en": "can extend existing debuffs, making her a great partner for units with debuff Inducing skills" },
-            { "en": "effective against bosses that rely on buffs by applying {D/BT_SEALED}" }
+            {
+                "en": "excellent PvP-oriented opener and control unit",
+                "jp": "PvP向けの優秀な先制・制御ユニット",
+                "kr": "PvP에 특화된 우수한 선제 및 제어 유닛",
+                "zh": "出色的PvP先手控制单位"
+            },
+            {
+                "en": "prevents reaction skills like {B/BT_STAT|ST_COUNTER_RATE} or {B/SYS_BUFF_REVENGE} from triggering when using Saikashuu Gunnery",
+                "jp": "最終砲撃使用時に{B/BT_STAT|ST_COUNTER_RATE}や{B/SYS_BUFF_REVENGE}などの反撃スキルを封じる",
+                "kr": "최종 포격 사용 시 {B/BT_STAT|ST_COUNTER_RATE}나 {B/SYS_BUFF_REVENGE} 등의 반응 스킬 발동을 방지",
+                "zh": "使用最终炮击时可阻止{B/BT_STAT|ST_COUNTER_RATE}或{B/SYS_BUFF_REVENGE}等反应技能触发"
+            },
+            {
+                "en": "provides high utility with {D/BT_STAT|ST_DEF},{D/BT_STAT|ST_ATK},{D/BT_STAT|ST_BUFF_RESIST} and {D/BT_SEALED} debuffs",
+                "jp": "{D/BT_STAT|ST_DEF} {D/BT_STAT|ST_ATK} {D/BT_STAT|ST_BUFF_RESIST}と{D/BT_SEALED}のデバフで高い実用性を提供",
+                "kr": "{D/BT_STAT|ST_DEF} {D/BT_STAT|ST_ATK} {D/BT_STAT|ST_BUFF_RESIST}와 {D/BT_SEALED} 디버프로 높은 유틸리티 제공",
+                "zh": "通过{D/BT_STAT|ST_DEF} {D/BT_STAT|ST_ATK} {D/BT_STAT|ST_BUFF_RESIST}和{D/BT_SEALED}减益提供高实用性"
+            },
+            {
+                "en": "can extend existing debuffs, making her a great partner for units with debuff Inducing skills",
+                "jp": "既存のデバフを延長でき、デバフ付与スキル持ちとの相性が良い",
+                "kr": "기존 디버프를 연장할 수 있어 디버프 부여 스킬을 가진 유닛과 좋은 시너지",
+                "zh": "可延长现有减益，与拥有减益技能的单位配合极佳"
+            },
+            {
+                "en": "effective against bosses that rely on buffs by applying {D/BT_SEALED}",
+                "jp": "{D/BT_SEALED}の付与でバフに依存するボスに有効",
+                "kr": "{D/BT_SEALED} 부여로 버프에 의존하는 보스에게 효과적",
+                "zh": "通过施加{D/BT_SEALED}有效对抗依赖增益的Boss"
+            }
         ],
         "cons": [
-            { "en": "primarily focused on PvP and High-End PvE, offering less value in general PvE progression" },
-            { "en": "requires a specific team setup to maximize her debuff extension capabilities" },
-            { "en": "requires Effectiveness to land debuffs consistently" },
-            { "en": "requires max skill upgrades for debuffs to land consistently" }
+            {
+                "en": "primarily focused on PvP and High-End PvE, offering less value in general PvE progression",
+                "jp": "PvPと高難度PvEに特化しており、一般的なPvE攻略では価値が低い",
+                "kr": "PvP와 고난이도 PvE에 특화되어 일반 PvE 진행에서는 가치가 낮음",
+                "zh": "主要面向PvP和高难度PvE，在一般PvE进度中价值较低"
+            },
+            {
+                "en": "requires a specific team setup to maximize her debuff extension capabilities",
+                "jp": "デバフ延長能力を最大化するには特定の編成が必要",
+                "kr": "디버프 연장 능력을 극대화하려면 특정 팀 구성 필요",
+                "zh": "需要特定队伍配置才能最大化减益延长能力"
+            },
+            {
+                "en": "requires Effectiveness to land debuffs consistently",
+                "jp": "デバフを安定して命中させるには効果命中が必要",
+                "kr": "디버프를 안정적으로 적중시키려면 효과 적중 필요",
+                "zh": "需要效果命中才能稳定施加减益"
+            },
+            {
+                "en": "requires max skill upgrades for debuffs to land consistently",
+                "jp": "デバフを安定して命中させるにはスキル最大強化が必要",
+                "kr": "디버프를 안정적으로 적중시키려면 스킬 최대 강화 필요",
+                "zh": "需要技能满级才能稳定命中减益"
+            }
         ]
     },
     "alice": {
         "pros": [
-            { "en": "excellent utility mage with the ability to strip all buffs from enemies using {D/BT_REMOVE_BUFF}" },
-            { "en": "provides consistent {D/BT_SEALED} to prevent enemies from regaining buffs" },
-            { "en": "great for countering shield-heavy or immunity-reliant teams in PvP" },
-            { "en": "valuable in specific PvE content like World Boss or Guild Raid where buff removal is mandatory" },
-            { "en": "can boost own priority with {SK/Alice|S2}, Providing a smooth transition to {SK/Alice|S3}" },
-            { "en": "can boost earth allies outgoing damage with {D/IG_Buff_2000020_Interruption_D}" },
-            { "en": "If the enemy unit is {E/Water}, {SK/Alice|S2} does an additional effect of {D/BT_STAT|ST_SPEED}" }
+            {
+                "en": "excellent utility mage with the ability to strip all buffs from enemies using {D/BT_REMOVE_BUFF}",
+                "jp": "{D/BT_REMOVE_BUFF}で敵の全バフを剥がせる優秀なユーティリティメイジ",
+                "kr": "{D/BT_REMOVE_BUFF}로 적의 모든 버프를 제거하는 우수한 유틸리티 마법사",
+                "zh": "出色的辅助法师，可通过{D/BT_REMOVE_BUFF}剥离敌方所有增益"
+            },
+            {
+                "en": "provides consistent {D/BT_SEALED} to prevent enemies from regaining buffs",
+                "jp": "{D/BT_SEALED}を安定して付与し敵のバフ再取得を阻止",
+                "kr": "{D/BT_SEALED}을 안정적으로 부여하여 적의 버프 재획득 방지",
+                "zh": "稳定施加{D/BT_SEALED}以阻止敌人重新获得增益"
+            },
+            {
+                "en": "great for countering shield-heavy or immunity-reliant teams in PvP",
+                "jp": "PvPでシールドや免疫に依存するチームへの対策に最適",
+                "kr": "PvP에서 보호막이나 면역에 의존하는 팀 상대에 최적",
+                "zh": "非常适合在PvP中对抗重护盾或依赖免疫的队伍"
+            },
+            {
+                "en": "valuable in specific PvE content like World Boss or Guild Raid where buff removal is mandatory",
+                "jp": "ワールドボスやギルドレイドなどバフ解除が必須のPvEコンテンツで有用",
+                "kr": "월드 보스나 길드 레이드 등 버프 해제가 필수인 PvE 콘텐츠에서 유용",
+                "zh": "在世界Boss或公会战等必须解除增益的PvE内容中很有价值"
+            },
+            {
+                "en": "can boost own priority with {SK/Alice|S2}, Providing a smooth transition to {SK/Alice|S3}",
+                "jp": "{SK/Alice|S2}で自身の優先度を上げ、{SK/Alice|S3}へスムーズに繋げる",
+                "kr": "{SK/Alice|S2}로 자신의 우선도를 올려 {SK/Alice|S3}로 자연스럽게 연계",
+                "zh": "可通过{SK/Alice|S2}提升自身优先度，顺利衔接{SK/Alice|S3}"
+            },
+            {
+                "en": "can boost earth allies outgoing damage with {D/IG_Buff_2000020_Interruption_D}",
+                "jp": "{D/IG_Buff_2000020_Interruption_D}で{E/Earth}属性味方の与ダメージを増加",
+                "kr": "{D/IG_Buff_2000020_Interruption_D}로 {E/Earth} 속성 아군의 피해량 증가",
+                "zh": "通过{D/IG_Buff_2000020_Interruption_D}提升{E/Earth}属性队友的输出伤害"
+            },
+            {
+                "en": "If the enemy unit is {E/Water}, {SK/Alice|S2} does an additional effect of {D/BT_STAT|ST_SPEED}",
+                "jp": "敵が{E/Water}属性の場合、{SK/Alice|S2}に{D/BT_STAT|ST_SPEED}の追加効果",
+                "kr": "적이 {E/Water} 속성이면 {SK/Alice|S2}에 {D/BT_STAT|ST_SPEED} 추가 효과",
+                "zh": "若敌方为{E/Water}属性，{SK/Alice|S2}会额外施加{D/BT_STAT|ST_SPEED}"
+            }
         ],
         "cons": [
-            { "en": "highly dependent on effectiveness to ensure her debuffs and strips land" },
-            { "en": "requires max skill upgrades for debuffs to land consistently" },
-            { "en": "{SK/Alice|S2} is dependent on the number of units for the priority boost effect" },
-            { "en": "doesn't block reaction skills such as {B/BT_STAT|ST_COUNTER_RATE} or {B/SYS_BUFF_REVENGE} from triggering" }
+            {
+                "en": "highly dependent on effectiveness to ensure her debuffs and strips land",
+                "jp": "デバフとバフ解除の命中に効果命中が大きく依存",
+                "kr": "디버프와 버프 해제 적중을 위해 효과 적중에 크게 의존",
+                "zh": "高度依赖效果命中以确保减益和剥离命中"
+            },
+            {
+                "en": "requires max skill upgrades for debuffs to land consistently",
+                "jp": "デバフを安定して命中させるにはスキル最大強化が必要",
+                "kr": "디버프를 안정적으로 적중시키려면 스킬 최대 강화 필요",
+                "zh": "需要技能满级才能稳定命中减益"
+            },
+            {
+                "en": "{SK/Alice|S2} is dependent on the number of units for the priority boost effect",
+                "jp": "{SK/Alice|S2}の優先度上昇効果はユニット数に依存",
+                "kr": "{SK/Alice|S2}의 우선도 상승 효과가 유닛 수에 의존",
+                "zh": "{SK/Alice|S2}的优先度提升效果取决于单位数量"
+            },
+            {
+                "en": "doesn't block reaction skills such as {B/BT_STAT|ST_COUNTER_RATE} or {B/SYS_BUFF_REVENGE} from triggering",
+                "jp": "{B/BT_STAT|ST_COUNTER_RATE}や{B/SYS_BUFF_REVENGE}などの反撃スキルを封じない",
+                "kr": "{B/BT_STAT|ST_COUNTER_RATE}나 {B/SYS_BUFF_REVENGE} 등의 반응 스킬 발동을 차단하지 않음",
+                "zh": "无法阻止{B/BT_STAT|ST_COUNTER_RATE}或{B/SYS_BUFF_REVENGE}等反应技能触发"
+            }
         ]
     },
     "dahlia": {
         "pros": [
-            { "en": "powerful crowd control with {D/BT_FREEZE} and {D/BT_STAT|ST_SPEED} reduction" },
-            { "en": "{SK/Dahlia|S3} prevents enemy reaction skills such as {B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE} and {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}" },
-            { "en": "{SK/Dahlia|S2} strips buffs from enemies, making her effective against units with buffs" },
-            { "en": "high base speed along with EE allows her to contest the first turn in PvP" },
-            { "en": "can boost own priority with 1st skill(Icicle Lance) ensuring a fast cycle between skill" }
+            {
+                "en": "powerful crowd control with {D/BT_FREEZE} and {D/BT_STAT|ST_SPEED} reduction",
+                "jp": "{D/BT_FREEZE}と{D/BT_STAT|ST_SPEED}低下による強力な行動制限",
+                "kr": "{D/BT_FREEZE}와 {D/BT_STAT|ST_SPEED} 감소를 통한 강력한 행동 제한",
+                "zh": "通过{D/BT_FREEZE}和{D/BT_STAT|ST_SPEED}降低进行强力控制"
+            },
+            {
+                "en": "{SK/Dahlia|S3} prevents enemy reaction skills such as {B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE} and {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}",
+                "jp": "{SK/Dahlia|S3}は{B/BT_STAT|ST_COUNTER_RATE} {B/SYS_BUFF_REVENGE} {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}などの反撃スキルを封じる",
+                "kr": "{SK/Dahlia|S3}는 {B/BT_STAT|ST_COUNTER_RATE}, {B/SYS_BUFF_REVENGE}, {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK} 등의 반응 스킬을 방지",
+                "zh": "{SK/Dahlia|S3}可阻止{B/BT_STAT|ST_COUNTER_RATE}、{B/SYS_BUFF_REVENGE}和{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}等反应技能"
+            },
+            {
+                "en": "{SK/Dahlia|S2} strips buffs from enemies, making her effective against units with buffs",
+                "jp": "{SK/Dahlia|S2}で敵のバフを剥がし、バフ持ちユニットに有効",
+                "kr": "{SK/Dahlia|S2}로 적의 버프를 제거하여 버프를 가진 유닛에게 효과적",
+                "zh": "{SK/Dahlia|S2}可剥离敌方增益，对拥有增益的单位很有效"
+            },
+            {
+                "en": "high base speed along with EE allows her to contest the first turn in PvP",
+                "jp": "高い基礎速度と専用装備でPvPの先手を争える",
+                "kr": "높은 기본 속도와 전용 장비로 PvP에서 선턴 경쟁 가능",
+                "zh": "高基础速度配合专属装备可在PvP中争夺先手"
+            },
+            {
+                "en": "can boost own priority with 1st skill(Icicle Lance) ensuring a fast cycle between skill",
+                "jp": "第1スキル（アイシクルランス）で自身の優先度を上げ、スキル間の素早い回転を確保",
+                "kr": "1번 스킬(아이시클 랜스)로 자신의 우선도를 올려 스킬 간 빠른 순환 보장",
+                "zh": "通过第1技能（冰柱之枪）提升自身优先度，确保技能间快速循环"
+            }
         ],
         "cons": [
-            { "en": "requires extremely high Speed gear to function as an opener in PvP" },
-            { "en": "niche pick in PvE due to a lot of bosses having innate immunity against CC" },
-            { "en": "Low sustain damage, offering less value in general PvE progression" },
-            { "en": "requires max skill upgrades for debuffs to land consistently" }
+            {
+                "en": "requires extremely high Speed gear to function as an opener in PvP",
+                "jp": "PvPで先手役として機能するには非常に高い速度装備が必要",
+                "kr": "PvP에서 선제 역할을 하려면 매우 높은 속도 장비 필요",
+                "zh": "需要极高速度装备才能在PvP中担任先手"
+            },
+            {
+                "en": "niche pick in PvE due to a lot of bosses having innate immunity against CC",
+                "jp": "多くのボスがCC免疫を持つためPvEではニッチな選択",
+                "kr": "많은 보스가 CC 면역을 가지고 있어 PvE에서는 한정적",
+                "zh": "由于很多Boss天生免疫控制，在PvE中属于小众选择"
+            },
+            {
+                "en": "Low sustain damage, offering less value in general PvE progression",
+                "jp": "持続火力が低く、一般的なPvE攻略では価値が低い",
+                "kr": "지속 피해량이 낮아 일반 PvE 진행에서 가치가 낮음",
+                "zh": "持续伤害较低，在一般PvE进度中价值不高"
+            },
+            {
+                "en": "requires max skill upgrades for debuffs to land consistently",
+                "jp": "デバフを安定して命中させるにはスキル最大強化が必要",
+                "kr": "디버프를 안정적으로 적중시키려면 스킬 최대 강화 필요",
+                "zh": "需要技能满级才能稳定命中减益"
+            }
         ]
     },
     "ais-wallenstein": {
         "pros": [
-            { "en": "high single-target damage output, especially against Bosses" },
-            { "en": "damage scales significantly as her HP decreases, making her a strong comeback unit" }
+            {
+                "en": "high single-target damage output, especially against Bosses",
+                "jp": "特にボス相手に高い単体火力",
+                "kr": "특히 보스에게 높은 단일 대상 피해",
+                "zh": "高单体伤害输出，尤其针对Boss"
+            },
+            {
+                "en": "damage scales significantly as her HP decreases, making her a strong comeback unit",
+                "jp": "HPが減るほどダメージが大幅に増加し、逆転力が高い",
+                "kr": "HP가 줄어들수록 피해가 크게 증가하여 역전에 강함",
+                "zh": "HP越低伤害越高，是强力的逆转单位"
+            }
         ],
         "cons": [
-            { "en": "risky playstyle that requires her to be at low Health to maximize potential" },
-            { "en": "limited availability as a collaboration unit, making her impossible to obtain or upgrade for new players" }
+            {
+                "en": "risky playstyle that requires her to be at low Health to maximize potential",
+                "jp": "最大限の力を発揮するには低HPが必要なリスキーなプレイスタイル",
+                "kr": "잠재력을 극대화하려면 낮은 체력이 필요한 위험한 플레이 스타일",
+                "zh": "需要低血量才能最大化潜力的高风险玩法"
+            },
+            {
+                "en": "limited availability as a collaboration unit, making her impossible to obtain or upgrade for new players",
+                "jp": "コラボ限定ユニットのため新規プレイヤーは入手・強化不可",
+                "kr": "콜라보 한정 유닛으로 신규 플레이어는 획득 및 강화 불가",
+                "zh": "作为联动限定单位，新玩家无法获取或升级"
+            }
         ]
     },
     "adelie": {
         "pros": [
-            { "en": "effective for clearing story waves due to AoE on her second skill" },
-            { "en": "good low-investment option for new players lacking 3-star DPS units" }
+            {
+                "en": "effective for clearing story waves due to AoE on her second skill",
+                "jp": "第2スキルの全体攻撃でストーリーのウェーブ殲滅に有効",
+                "kr": "2번 스킬의 광역 공격으로 스토리 웨이브 클리어에 효과적",
+                "zh": "凭借第2技能的群体攻击有效清理剧情关卡"
+            },
+            {
+                "en": "good low-investment option for new players lacking 3-star DPS units",
+                "jp": "3星アタッカーがいない新規プレイヤーの低投資な選択肢",
+                "kr": "3성 딜러가 없는 신규 플레이어를 위한 저투자 옵션",
+                "zh": "对于缺少3星输出角色的新玩家是不错的低投入选择"
+            }
         ],
         "cons": [
-            { "en": "low base stats as a 2-star unit make her fall off in late-game content" },
-            { "en": "lacks the burst damage or utility of top-tier strikers" },
-            { "en": "requires a specific kill condition or setup to trigger her cooldown reset reliably" },
-            { "en": "very squishy and easy to one-shot in PvP environments" }
+            {
+                "en": "low base stats as a 2-star unit make her fall off in late-game content",
+                "jp": "2星ユニットの低い基礎ステータスで後半コンテンツでは力不足",
+                "kr": "2성 유닛의 낮은 기본 스탯으로 후반 콘텐츠에서 약해짐",
+                "zh": "作为2星单位基础属性低，在后期内容中逐渐落后"
+            },
+            {
+                "en": "lacks the burst damage or utility of top-tier strikers",
+                "jp": "トップクラスのストライカーのバースト火力やユーティリティに欠ける",
+                "kr": "최상위 스트라이커의 버스트 피해나 유틸리티가 부족",
+                "zh": "缺乏顶级打手的爆发伤害或实用性"
+            },
+            {
+                "en": "requires a specific kill condition or setup to trigger her cooldown reset reliably",
+                "jp": "クールダウンリセットを安定して発動するには特定の撃破条件やセットアップが必要",
+                "kr": "쿨타임 초기화를 안정적으로 발동하려면 특정 처치 조건이나 셋업 필요",
+                "zh": "需要特定击杀条件或设置才能稳定触发冷却重置"
+            },
+            {
+                "en": "very squishy and easy to one-shot in PvP environments",
+                "jp": "非常に打たれ弱くPvPではワンショットされやすい",
+                "kr": "매우 연약하여 PvP에서 원샷당하기 쉬움",
+                "zh": "非常脆弱，在PvP中容易被秒杀"
+            }
         ]
     },
     "gnosis-dahlia": {
         "pros": [
-            { "en": "top-tier striker with massive single-target burst potential" },
-            { "en": "possesses a passive damage cap that prevents her from being one-shot by nuke skills" },
-            { "en": "punishes enemy critical hits by triggering a counterattack" }
+            {
+                "en": "top-tier striker with massive single-target burst potential",
+                "jp": "圧倒的な単体バースト火力を持つトップクラスのストライカー",
+                "kr": "압도적인 단일 대상 버스트 잠재력을 가진 최상위 스트라이커",
+                "zh": "拥有巨大单体爆发潜力的顶级打手"
+            },
+            {
+                "en": "possesses a passive damage cap that prevents her from being one-shot by nuke skills",
+                "jp": "被ダメージ上限のパッシブにより必殺スキルによるワンショットを防止",
+                "kr": "피해 상한 패시브로 누크 스킬에 의한 원샷 방지",
+                "zh": "拥有被动伤害上限，防止被爆发技能秒杀"
+            },
+            {
+                "en": "punishes enemy critical hits by triggering a counterattack",
+                "jp": "敵のクリティカルヒットに反撃で報復",
+                "kr": "적의 치명타에 반격으로 응징",
+                "zh": "通过反击惩罚敌方暴击"
+            }
         ],
         "cons": [
-            { "en": "heavily reliant on her passive, making her useless against units that prevents reaction skills from triggering" },
-            { "en": "requires 100% crit rate to fully utilize EE" },
-            { "en": "requires max transcendance to unlock full potential" }
+            {
+                "en": "heavily reliant on her passive, making her useless against units that prevents reaction skills from triggering",
+                "jp": "パッシブに大きく依存し、反撃スキルを封じるユニット相手には無力",
+                "kr": "패시브에 크게 의존하여 반응 스킬 발동을 방지하는 유닛 상대로는 무력",
+                "zh": "高度依赖被动技能，面对阻止反应技能触发的单位时无用"
+            },
+            {
+                "en": "requires 100% crit rate to fully utilize EE",
+                "jp": "専用装備を最大活用するにはクリティカル率100%が必要",
+                "kr": "전용 장비를 완전히 활용하려면 치명타 확률 100% 필요",
+                "zh": "需要100%暴击率才能完全利用专属装备"
+            },
+            {
+                "en": "requires max transcendance to unlock full potential",
+                "jp": "最大限の力を発揮するには最大超越が必要",
+                "kr": "풀 잠재력을 위해 최대 초월 필요",
+                "zh": "需要最大超越才能解锁全部潜力"
+            }
         ]
     },
     "hanbyul-lee": {
         "pros": [
-            { "en": "grants {B/BT_STAT|ST_DEF} to the entire team, significantly increasing survivability" },
-            { "en": "{SK/Hanbyul Lee|S1} allows her to push team priority combined with {SK/Hanbyul Lee|S2} or {B/BT_STAT|ST_COUNTER_RATE}, which can continuously trigger priority pushes" }
+            {
+                "en": "grants {B/BT_STAT|ST_DEF} to the entire team, significantly increasing survivability",
+                "jp": "チーム全体に{B/BT_STAT|ST_DEF}を付与し生存力を大幅に向上",
+                "kr": "팀 전체에 {B/BT_STAT|ST_DEF}를 부여하여 생존력 대폭 증가",
+                "zh": "为全队提供{B/BT_STAT|ST_DEF}，大幅提升生存能力"
+            },
+            {
+                "en": "{SK/Hanbyul Lee|S1} allows her to push team priority combined with {SK/Hanbyul Lee|S2} or {B/BT_STAT|ST_COUNTER_RATE}, which can continuously trigger priority pushes",
+                "jp": "{SK/Hanbyul Lee|S1}で{SK/Hanbyul Lee|S2}や{B/BT_STAT|ST_COUNTER_RATE}と組み合わせてチームの優先度を継続的に押し上げ可能",
+                "kr": "{SK/Hanbyul Lee|S1}로 {SK/Hanbyul Lee|S2}나 {B/BT_STAT|ST_COUNTER_RATE}와 조합하여 팀 우선도를 지속적으로 밀어올릴 수 있음",
+                "zh": "{SK/Hanbyul Lee|S1}配合{SK/Hanbyul Lee|S2}或{B/BT_STAT|ST_COUNTER_RATE}可持续推进团队优先度"
+            }
         ],
         "cons": [
-            { "en": "reliant on enemies attacking her to maximize her counter-based utility" },
-            { "en": "can struggle against enemies that strip buffs or inflict {D/BT_SEALED}" },
-            { "en": "{SK/Hanbyul Lee|S3} has only 80% chance to land taunt at max level" }
+            {
+                "en": "reliant on enemies attacking her to maximize her counter-based utility",
+                "jp": "反撃ベースの性能を最大化するには敵の攻撃を受ける必要がある",
+                "kr": "반격 기반 유틸리티를 극대화하려면 적의 공격을 받아야 함",
+                "zh": "需要敌方攻击她才能最大化反击效用"
+            },
+            {
+                "en": "can struggle against enemies that strip buffs or inflict {D/BT_SEALED}",
+                "jp": "バフ解除や{D/BT_SEALED}を付与する敵に苦戦する可能性がある",
+                "kr": "버프 해제나 {D/BT_SEALED}을 부여하는 적에게 약할 수 있음",
+                "zh": "面对剥离增益或施加{D/BT_SEALED}的敌人可能力不从心"
+            },
+            {
+                "en": "{SK/Hanbyul Lee|S3} has only 80% chance to land taunt at max level",
+                "jp": "{SK/Hanbyul Lee|S3}は最大レベルでも挑発の命中率が80%のみ",
+                "kr": "{SK/Hanbyul Lee|S3}는 최대 레벨에서도 도발 적중률이 80%에 불과",
+                "zh": "{SK/Hanbyul Lee|S3}满级时嘲讽命中率仅为80%"
+            }
         ]
     },
     "christina": {
         "pros": [
-            { "en": "specialized tank designed to counter teams that rely on non-attack skills" },
-            { "en": "{SK/Christina|S1} the ability to {D/BT_REMOVE_BUFF}" },
-            { "en": "{SK/Christina|S3} prevents enemies reaction skills and from re-applying buffs by inflicting {D/BT_SEALED}" },
-            { "en": "increases team damage output and team survibility when enemies use non-attack skills" },
-            { "en": "generates Chain Points for the team, helping to cycle chain breaks faster" }
+            {
+                "en": "specialized tank designed to counter teams that rely on non-attack skills",
+                "jp": "非攻撃スキルに依存するチームへの対策に特化したタンク",
+                "kr": "비공격 스킬에 의존하는 팀을 카운터하는 전문 탱커",
+                "zh": "专门用于克制依赖非攻击技能队伍的坦克"
+            },
+            {
+                "en": "{SK/Christina|S1} the ability to {D/BT_REMOVE_BUFF}",
+                "jp": "{SK/Christina|S1}で{D/BT_REMOVE_BUFF}が可能",
+                "kr": "{SK/Christina|S1}로 {D/BT_REMOVE_BUFF} 가능",
+                "zh": "{SK/Christina|S1}可以{D/BT_REMOVE_BUFF}"
+            },
+            {
+                "en": "{SK/Christina|S3} prevents enemies reaction skills and from re-applying buffs by inflicting {D/BT_SEALED}",
+                "jp": "{SK/Christina|S3}は{D/BT_SEALED}を付与して敵の反撃スキルとバフ再付与を阻止",
+                "kr": "{SK/Christina|S3}는 {D/BT_SEALED}을 부여하여 적의 반응 스킬과 버프 재부여를 방지",
+                "zh": "{SK/Christina|S3}通过施加{D/BT_SEALED}阻止敌方反应技能和重新获得增益"
+            },
+            {
+                "en": "increases team damage output and team survibility when enemies use non-attack skills",
+                "jp": "敵が非攻撃スキルを使用時にチームの火力と生存力を向上",
+                "kr": "적이 비공격 스킬 사용 시 팀의 피해량과 생존력 증가",
+                "zh": "敌方使用非攻击技能时提升团队伤害和生存能力"
+            },
+            {
+                "en": "generates Chain Points for the team, helping to cycle chain breaks faster",
+                "jp": "チームにチェインポイントを生成し、チェインブレイクの回転を加速",
+                "kr": "팀에 체인 포인트를 생성하여 체인 브레이크 순환을 가속",
+                "zh": "为团队生成连锁点数，加快连锁终结循环"
+            }
         ],
         "cons": [
-            { "en": "extremely niche usage, value drops significantly if the enemy team attacks directly without using non-attack skills or the enemy prevents/blocks {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}" },
-            { "en": "overshadowed by more versatile defenders for general PvE content progression" },
-            { "en": "EE is required to consistently hit debuffs due to having low base effectiveness stat" }
+            {
+                "en": "extremely niche usage, value drops significantly if the enemy team attacks directly without using non-attack skills or the enemy prevents/blocks {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}",
+                "jp": "非常にニッチな運用で、敵が非攻撃スキルを使わず直接攻撃する場合や{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}を封じられると価値が大幅に低下",
+                "kr": "매우 한정적인 활용으로, 적이 비공격 스킬 없이 직접 공격하거나 {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}를 차단하면 가치가 크게 하락",
+                "zh": "使用场景极为小众，若敌方直接攻击不使用非攻击技能或阻止{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}则价值大幅下降"
+            },
+            {
+                "en": "overshadowed by more versatile defenders for general PvE content progression",
+                "jp": "一般的なPvE攻略ではより汎用的なディフェンダーに劣る",
+                "kr": "일반 PvE 진행에서는 더 범용적인 디펜더에 밀림",
+                "zh": "在一般PvE进度中被更全面的防御者超越"
+            },
+            {
+                "en": "EE is required to consistently hit debuffs due to having low base effectiveness stat",
+                "jp": "基礎効果命中が低いためデバフの安定命中には専用装備が必要",
+                "kr": "기본 효과 적중이 낮아 디버프 안정 적중을 위해 전용 장비 필요",
+                "zh": "由于基础效果命中较低，需要专属装备才能稳定命中减益"
+            }
         ]
     },
     "hilde": {
         "pros": [
-            { "en": "{SK/Hilde|S2} Has innate immunity to {D/BT_STUN} allows her to act consistently against control teams" },
-            { "en": "{SK/Hilde|S2} significantly reduces damage taken by allies from AoE attacks, making her a strong anti-cleave unit" },
-            { "en": "{SK/Hilde|S2} protects fragile allies by absorbing redirected damage" },
-            { "en": "{SK/Hilde|S2} disrupts enemy momentum with reaction skills that can inflict {D/BT_STONE} when hit" }
+            {
+                "en": "{SK/Hilde|S2} Has innate immunity to {D/BT_STUN} allows her to act consistently against control teams",
+                "jp": "{SK/Hilde|S2}は{D/BT_STUN}への固有免疫を持ち、制御チーム相手でも安定して行動可能",
+                "kr": "{SK/Hilde|S2}는 {D/BT_STUN}에 대한 고유 면역을 가져 제어 팀 상대로도 안정적으로 행동 가능",
+                "zh": "{SK/Hilde|S2}拥有对{D/BT_STUN}的固有免疫，面对控制队伍也能稳定行动"
+            },
+            {
+                "en": "{SK/Hilde|S2} significantly reduces damage taken by allies from AoE attacks, making her a strong anti-cleave unit",
+                "jp": "{SK/Hilde|S2}は味方が受ける全体攻撃のダメージを大幅に軽減し、対クリーブの強力なユニット",
+                "kr": "{SK/Hilde|S2}는 아군이 받는 광역 공격 피해를 대폭 감소시켜 강력한 안티 광역딜 유닛",
+                "zh": "{SK/Hilde|S2}大幅减少队友受到的群体攻击伤害，是强力的反群攻单位"
+            },
+            {
+                "en": "{SK/Hilde|S2} protects fragile allies by absorbing redirected damage",
+                "jp": "{SK/Hilde|S2}はダメージを引き受けて脆い味方を保護",
+                "kr": "{SK/Hilde|S2}는 피해를 대신 받아 연약한 아군을 보호",
+                "zh": "{SK/Hilde|S2}通过吸收转移的伤害保护脆弱的队友"
+            },
+            {
+                "en": "{SK/Hilde|S2} disrupts enemy momentum with reaction skills that can inflict {D/BT_STONE} when hit",
+                "jp": "{SK/Hilde|S2}は被弾時に{D/BT_STONE}を付与する反撃スキルで敵の勢いを妨害",
+                "kr": "{SK/Hilde|S2}는 피격 시 {D/BT_STONE}을 부여하는 반응 스킬로 적의 기세를 방해",
+                "zh": "{SK/Hilde|S2}通过受击时施加{D/BT_STONE}的反应技能打断敌方节奏"
+            }
         ],
         "cons": [
-            { "en": "reaction skills may not trigger against bosses/units that are immune to reactions or use non-attack skills" },
-            { "en": "offers low offensive pressure compared to other bruiser tanks" },
-            { "en": "vulnerable to {D/BT_SEALED} or Fixed Damage which bypasses her mitigation" },
-            { "en": "{SK/Hilde|S1} primarily effective in PvP, less efficient for general PvE progression due to bosses/Enemies always have a higher HP" }
+            {
+                "en": "reaction skills may not trigger against bosses/units that are immune to reactions or use non-attack skills",
+                "jp": "反撃免疫のボス/ユニットや非攻撃スキル使用時は反撃スキルが発動しない場合がある",
+                "kr": "반응 면역인 보스/유닛이나 비공격 스킬 사용 시 반응 스킬이 발동하지 않을 수 있음",
+                "zh": "面对免疫反应的Boss/单位或使用非攻击技能时反应技能可能无法触发"
+            },
+            {
+                "en": "offers low offensive pressure compared to other bruiser tanks",
+                "jp": "他のブルーザータンクと比較して攻撃面の圧力が低い",
+                "kr": "다른 브루저 탱커와 비교하여 공격적 압박이 낮음",
+                "zh": "与其他战斗型坦克相比攻击压力较低"
+            },
+            {
+                "en": "vulnerable to {D/BT_SEALED} or Fixed Damage which bypasses her mitigation",
+                "jp": "{D/BT_SEALED}やダメージ軽減を貫通する固定ダメージに弱い",
+                "kr": "{D/BT_SEALED}이나 피해 감소를 무시하는 고정 피해에 취약",
+                "zh": "对{D/BT_SEALED}或绕过她减伤的固定伤害较为脆弱"
+            },
+            {
+                "en": "{SK/Hilde|S1} primarily effective in PvP, less efficient for general PvE progression due to bosses/Enemies always have a higher HP",
+                "jp": "{SK/Hilde|S1}は主にPvPで有効で、ボス/敵のHPが常に高いため一般的なPvE攻略では効率が低い",
+                "kr": "{SK/Hilde|S1}은 주로 PvP에서 효과적이며, 보스/적의 HP가 항상 높아 일반 PvE 진행에서는 효율이 낮음",
+                "zh": "{SK/Hilde|S1}主要在PvP中有效，由于Boss/敌人总是拥有更高HP，在一般PvE进度中效率较低"
+            }
         ]
     }
 }
