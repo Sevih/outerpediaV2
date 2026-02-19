@@ -94,7 +94,11 @@ function norm(s: unknown): string {
 }
 
 function getSearchableNames(char: CharacterListEntry, langs: Lang[]): string[] {
-  return langs.map(lang => norm(l(char, 'Fullname', lang))).filter(Boolean);
+  return [
+    ...langs.map(lang => norm(l(char, 'Fullname', lang))).filter(Boolean),
+    norm(char.ID),
+    norm(char.slug),
+  ];
 }
 
 function charHasEffect(

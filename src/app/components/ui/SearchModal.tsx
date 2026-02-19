@@ -76,9 +76,10 @@ export default function SearchModal({
     if (!charIndex || !query.trim()) return [];
     const q = query.toLowerCase();
     return Object.entries(charIndex)
-      .filter(([, c]) => {
+      .filter(([id, c]) => {
         const name = l(c, 'Fullname', lang);
-        return name.toLowerCase().includes(q) || c.Fullname.toLowerCase().includes(q);
+        return name.toLowerCase().includes(q) || c.Fullname.toLowerCase().includes(q)
+          || id.toLowerCase().includes(q) || c.slug.toLowerCase().includes(q);
       })
       .slice(0, 8)
       .map(([id, c]) => ({ ...c, _id: id }));
