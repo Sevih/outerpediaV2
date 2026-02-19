@@ -15,19 +15,17 @@
         "name": "Clock Up",
         "mainStat": "SPD"
       }
-    ], 
+    ],
     "Set": [
       "s4"
     ],
     "SubstatPrio": "ATK>CHC>CHD>SPD",
     "Note": "",
     "Talisman": [
-      "Executioner's Charm",
-      "Sage's Charm",
-      "Rogue's Charm"
-      
+      "$CPdps"
     ]
-  },"Penetration": {
+  },
+  "Penetration": {
     "Weapon": [
       {
         "name": "Surefire Greatsword",
@@ -43,17 +41,14 @@
         "name": "Clock Up",
         "mainStat": "SPD"
       }
-    ], 
+    ],
     "Set": [
       "p4"
     ],
     "SubstatPrio": "ATK>CHC>CHD>SPD",
     "Note": "",
     "Talisman": [
-      "Executioner's Charm",
-      "Sage's Charm",
-      "Rogue's Charm"
-      
+      "$CPdps"
     ]
   },
   "Critical Strike": {
@@ -72,17 +67,14 @@
         "name": "Clock Up",
         "mainStat": "SPD"
       }
-    ], 
+    ],
     "Set": [
       "chd4"
     ],
     "SubstatPrio": "ATK>CHC>CHD>SPD",
     "Note": "",
     "Talisman": [
-      "Executioner's Charm",
-      "Sage's Charm",
-      "Rogue's Charm"
-      
+      "$CPdps"
     ]
   }
 }

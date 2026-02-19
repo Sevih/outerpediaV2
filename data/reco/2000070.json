@@ -11,16 +11,14 @@
         "name": "Death's Hold",
         "mainStat": "PEN%"
       }
-    ], 
+    ],
     "Set": [
       "ag2i2"
     ],
     "SubstatPrio": "ATK>CHC>CHD>SPD",
     "Note": "",
     "Talisman": [
-      "Executioner's Charm",
-      "Rogue's Charm",
-      "Sage's Charm"
+      "$CPdps"
     ]
   },
   "Counter Immune": {
@@ -35,18 +33,17 @@
         "name": "Death's Hold",
         "mainStat": "PEN%"
       }
-    ], 
+    ],
     "Set": [
       "i2ct2"
     ],
     "SubstatPrio": "ATK>CHC>CHD>SPD",
     "Note": "",
     "Talisman": [
-      "Executioner's Charm",
-      "Rogue's Charm",
-      "Sage's Charm"
+      "$CPdps"
     ]
-  },"Speed": {
+  },
+  "Speed": {
     "Weapon": [
       {
         "name": "Violent Sledgehammer",
@@ -58,18 +55,17 @@
         "name": "Death's Hold",
         "mainStat": "PEN%"
       }
-    ], 
+    ],
     "Set": [
       "s4"
     ],
     "SubstatPrio": "ATK>CHC>CHD>SPD",
     "Note": "",
     "Talisman": [
-      "Executioner's Charm",
-      "Rogue's Charm",
-      "Sage's Charm"
+      "$CPdps"
     ]
-  },"High Crit": {
+  },
+  "High Crit": {
     "Weapon": [
       {
         "name": "Violent Sledgehammer",
@@ -81,16 +77,14 @@
         "name": "Death's Hold",
         "mainStat": "PEN%"
       }
-    ], 
+    ],
     "Set": [
       "chd4"
     ],
     "SubstatPrio": "ATK>CHC>CHD>SPD",
     "Note": "",
     "Talisman": [
-      "Executioner's Charm",
-      "Rogue's Charm",
-      "Sage's Charm"
+      "$CPdps"
     ]
   }
 }

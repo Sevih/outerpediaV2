@@ -23,18 +23,14 @@
         "name": "Death's Hold",
         "mainStat": "PEN%/HP%"
       }
-    ], 
+    ],
     "Set": [
       "p4"
     ],
     "SubstatPrio": "HP>SPD>EFF=ACC>CHC>CHD",
     "Note": "Try to add some attack if you play her in a dual attack team, that way she will land more DoTs.",
     "Talisman": [
-      "Vanguard's Charm",
-      "Sage's Charm",
-      "Rogue's Charm",
-      "Executioner's Charm"
-      
+      "$CPplusVang"
     ]
   },
   "Pve - Life": {
@@ -61,18 +57,14 @@
         "name": "Death's Hold",
         "mainStat": "PEN%/HP%"
       }
-    ], 
+    ],
     "Set": [
       "hp4"
     ],
     "SubstatPrio": "HP>SPD>EFF=ACC>CHC>CHD",
     "Note": "Try to add some attack if you play her in a dual attack team, that way she will land more DoTs.",
     "Talisman": [
-      "Vanguard's Charm",
-      "Sage's Charm",
-      "Rogue's Charm",
-      "Executioner's Charm"
-      
+      "$CPplusVang"
     ]
   },
   "PvE - Pen / Life": {
@@ -99,18 +91,14 @@
         "name": "Death's Hold",
         "mainStat": "PEN%/HP%"
       }
-    ], 
+    ],
     "Set": [
       "p2hp2"
     ],
     "SubstatPrio": "HP>SPD>EFF=ACC>CHC>CHD",
     "Note": "Try to add some attack if you play her in a dual attack team, that way she will land more DoTs.",
     "Talisman": [
-      "Vanguard's Charm",
-      "Sage's Charm",
-      "Rogue's Charm",
-      "Executioner's Charm"
-      
+      "$CPplusVang"
     ]
   },
   "PvP - Pen/Swift": {
@@ -137,7 +125,7 @@
         "name": "Death's Hold",
         "mainStat": "PEN%/HP%"
       }
-    ], 
+    ],
     "Set": [
       "p2sw2"
     ],
@@ -146,7 +134,6 @@
     "Talisman": [
       "Vanguard's Charm",
       "Mage's Charm"
-      
     ]
   },
   "PvP - Life/Swift": {
@@ -173,7 +160,7 @@
         "name": "Death's Hold",
         "mainStat": "PEN%/HP%"
       }
-    ], 
+    ],
     "Set": [
       "hp2sw2"
     ],
@@ -182,7 +169,6 @@
     "Talisman": [
       "Vanguard's Charm",
       "Mage's Charm"
-      
     ]
   },
   "PvP - Speed/Swift": {
@@ -209,7 +195,7 @@
         "name": "Death's Hold",
         "mainStat": "PEN%/HP%"
       }
-    ], 
+    ],
     "Set": [
       "s2sw2"
     ],
@@ -217,7 +203,7 @@
     "Note": "",
     "Talisman": [
       "Vanguard's Charm",
-      "Mage's Charm"      
+      "Mage's Charm"
     ]
   }
 }
