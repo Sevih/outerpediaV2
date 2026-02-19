@@ -26,16 +26,15 @@ export default function SynergiesSection({ synergies }: Props) {
         {t('page.character.toc.synergies')}
       </h2>
 
-      <div className="space-y-3">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         {synergies.partner.map((group, i) => (
           <div
             key={i}
-            className="flex flex-col gap-3 rounded-xl border border-white/10 bg-zinc-900/60 p-4 sm:flex-row sm:items-start sm:gap-4"
+            className="rounded-xl border border-white/10 bg-zinc-900/60 p-4"
           >
             {/* Partner heroes */}
-            <div className="flex shrink-0 flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {group.hero.map((entry, j) => {
-                // Inline tag (e.g. {C/Mage}) — render via parseText
                 if (entry.startsWith('{')) {
                   return (
                     <span key={j} className="flex items-center text-sm">
@@ -44,7 +43,6 @@ export default function SynergiesSection({ synergies }: Props) {
                   );
                 }
 
-                // Regular character slug
                 const id = slugToId[entry];
                 const char = id ? characters[id] : null;
 
@@ -60,9 +58,14 @@ export default function SynergiesSection({ synergies }: Props) {
                   <Link
                     key={j}
                     href={`/${lang}/characters/${entry}`}
-                    className="flex items-center gap-1.5 rounded-lg bg-zinc-800/80 px-2 py-1 transition-colors hover:bg-zinc-700/80"
+                    className="flex items-center gap-2 rounded-lg bg-zinc-800/80 pr-3 transition-colors hover:bg-zinc-700/80"
                   >
-                    <CharacterPortrait id={id} name={displayName} size="xs" />
+                    <CharacterPortrait
+                      id={id}
+                      name={displayName}
+                      size="sm"
+                      showIcons
+                    />
                     <span className="text-sm font-medium text-zinc-200">
                       {displayName}
                     </span>
@@ -72,9 +75,11 @@ export default function SynergiesSection({ synergies }: Props) {
             </div>
 
             {/* Reason */}
-            <p className="text-sm leading-relaxed text-zinc-400">
-              {parseText(lRec(group.reason, lang) ?? '')}
-            </p>
+            <div className="mt-3 border-t border-white/5 pt-3">
+              <p className="text-sm leading-relaxed text-zinc-300">
+                {parseText(lRec(group.reason, lang) ?? '')}
+              </p>
+            </div>
           </div>
         ))}
       </div>
