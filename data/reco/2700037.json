@@ -32,7 +32,9 @@
         "mainStat": "SPD"
       }
     ],
-    "Set": ["s4"],
+    "Set": [
+      "s4"
+    ],
     "SubstatPrio": "$tankDpsHP",
     "Note": "",
     "Talisman": "$CPplusVang"
@@ -71,18 +73,10 @@
       }
     ],
     "Set": [
-      [
-        { "name": "Swiftness", "count": 2 },
-        { "name": "Counterattack", "count": 2 }
-      ]
+      "ct2sw2"
     ],
-    "SubstatPrio": "SPD>HP>CHC>CHD>ACC=DEF",
+    "SubstatPrio": "$tankDpsHP",
     "Note": "",
-    "Talisman": [
-      "Vanguard's Charm",
-      "Executioner's Charm",
-      "Rogue's Charm",
-      "Sage's Charm"
-    ]
+    "Talisman": "$CPplusVang"
   }
 }

@@ -12,11 +12,12 @@
     "a4": [{ "name": "Attack", "count": 4 }],
     "p4": [{ "name": "Penetration", "count": 4 }],
     "chc4": [{ "name": "Critical Strike", "count": 4 }],
-    "counter4": [{ "name": "Counterattack", "count": 4 }],
+    "ct4": [{ "name": "Counterattack", "count": 4 }],
     "r4": [{ "name": "Revenge", "count": 4 }],
     "hp4": [{ "name": "Life", "count": 4 }],
-    "speed2swift2": [{ "name": "Speed", "count": 2 }, { "name": "Swiftness", "count": 2 }],
-    "immu2swift2": [{ "name": "Immunity", "count": 2 }, { "name": "Swiftness", "count": 2 }]
+    "s2sw2": [{ "name": "Speed", "count": 2 }, { "name": "Swiftness", "count": 2 }],
+    "i2sw2": [{ "name": "Immunity", "count": 2 }, { "name": "Swiftness", "count": 2 }],
+    "ct2sw2": [{ "name": "Counterattack", "count": 2 }, { "name": "Swiftness", "count": 2 }]
   },
   "substats": {
     "dps": "ATK>CHC>CHD>SPD",

@@ -191,7 +191,7 @@ function TierCard({ label, rank }: { label: string; rank: string }) {
       <div className="relative h-12 w-12">
         <Image
           src={`/images/ui/rank/IG_Event_Rank_${rank}.webp`}
-          alt={rank}
+          alt={rank ?? ''}
           fill
           sizes="48px"
           className="object-contain"

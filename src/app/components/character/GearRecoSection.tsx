@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import type { Weapon, Amulet, Talisman, ArmorSet, ResolvedCharacterReco } from '@/types/equipment';
 import { useI18n } from '@/lib/contexts/I18nContext';
-import { WeaponMiniCard, AmuletMiniCard, TalismanMiniCard, SetMiniCard } from '@/app/components/equipment';
+import { WeaponMiniCard, AmuletMiniCard, TalismanMiniCard, SetMiniCard, SubstatPrioBar } from '@/app/components/equipment';
 
 type Props = {
   reco: ResolvedCharacterReco;
@@ -55,7 +55,8 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
 
       {build && (
         <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-4">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {/* Row 1: Weapon | Amulet | Set */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {/* Weapons */}
             {build.Weapon && build.Weapon.length > 0 && (
               <GearCategory label={t('page.character.gear.weapon')}>
@@ -92,7 +93,10 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
                 ))}
               </GearCategory>
             )}
+          </div>
 
+          {/* Row 2: Talisman | Substat | Notes */}
+          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
             {/* Talismans */}
             {build.Talisman && build.Talisman.length > 0 && (
               <GearCategory label={t('page.character.gear.talisman')}>
@@ -106,27 +110,21 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
                 })}
               </GearCategory>
             )}
+
+            {/* Substat priority */}
+            {build.SubstatPrio && (
+              <GearCategory label={t('page.character.gear.substat_prio')}>
+                <SubstatPrioBar prio={build.SubstatPrio} />
+              </GearCategory>
+            )}
+
+            {/* Notes */}
+            {build.Note && (
+              <GearCategory label={t('page.character.gear.note')}>
+                <p className="whitespace-pre-line text-sm text-zinc-300">{build.Note}</p>
+              </GearCategory>
+            )}
           </div>
-
-          {/* Substat priority */}
-          {build.SubstatPrio && (
-            <div className="mt-4">
-              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-zinc-500">
-                {t('page.character.gear.substat_prio')}
-              </h3>
-              <p className="text-sm font-medium text-yellow-300">{build.SubstatPrio}</p>
-            </div>
-          )}
-
-          {/* Notes */}
-          {build.Note && (
-            <div className="mt-3">
-              <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-zinc-500">
-                {t('page.character.gear.note')}
-              </h3>
-              <p className="whitespace-pre-line text-sm text-zinc-300">{build.Note}</p>
-            </div>
-          )}
         </div>
       )}
     </section>
@@ -136,7 +134,7 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
 function GearCategory({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+      <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-200">
         {label}
       </h3>
       <div className="space-y-2">{children}</div>

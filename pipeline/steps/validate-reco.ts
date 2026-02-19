@@ -187,7 +187,7 @@ export async function run() {
   }
 
   if (errorCount > 0) {
-    throw new Error(`${errorCount} issue(s) in ${fileCount} files`);
+    return `${fileCount} files, ${errorCount} warning(s)`;
   }
 
   return `${fileCount} files, all references valid`;

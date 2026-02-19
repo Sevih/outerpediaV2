@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/characters/${slug}`,
     title: t('page.character.meta_title', { name: fullname, monthYear }),
     description: t('page.character.meta_description', { name: fullname, monthYear, element, classType }),
-    ogImage: `/images/characters/full/IMG_${character.ID}.webp`,
+    ogImage: `/images/characters/atb/IG_Turn_${character.ID}.webp`,
   });
 }
 

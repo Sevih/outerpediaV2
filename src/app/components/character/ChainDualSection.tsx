@@ -79,13 +79,6 @@ export default function ChainDualSection({ character }: Props) {
               sizes="56px"
               className="object-contain scale-83"
             />
-            <Image
-              src="/images/ui/skills/Skill_Frame_Passive.webp"
-              alt=""
-              fill
-              sizes="72px"
-              className="pointer-events-none scale-100 object-contain"
-            />
           </div>
           <div>
             <h3 className="font-game text-lg font-bold">{l(cp, 'name', lang)}</h3>

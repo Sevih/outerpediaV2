@@ -1,8 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import type { Talisman } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
+import { formatEffectText, formatScaledEffect } from '@/lib/format-text';
+import InlineTooltip from '@/app/components/inline/InlineTooltip';
 import EquipmentIcon from './EquipmentIcon';
 
 type Props = {
@@ -12,16 +15,81 @@ type Props = {
 
 export default function TalismanMiniCard({ talisman, lang }: Props) {
   const name = l(talisman, 'name', lang);
-  return (
+  const effectName = l(talisman, 'effect_name', lang)
+    ?.replace('Action Point', 'AP')
+    .replace('Chain Point', 'CP');
+  const effectDesc4 = l(talisman, 'effect_desc4', lang);
+  const effectDesc1 = l(talisman, 'effect_desc1', lang);
+
+  const tooltip = (
+    <div className="flex flex-col gap-1.5">
+      <div className="flex items-center gap-2">
+        <EquipmentIcon
+          src={`equipment/${talisman.image}`}
+          rarity={talisman.rarity}
+          alt={name}
+          size={50}
+          effectIcon={talisman.effect_icon}
+        />
+        <span className="text-sm font-bold text-equipment">{name}</span>
+      </div>
+
+      {/* Effect name pill */}
+      {effectName && (
+        <div className="inline-flex w-fit items-center gap-1.5 rounded-full bg-zinc-500/40 px-2.5 py-1">
+          {talisman.effect_icon && (
+            <div className="relative h-4 w-4 shrink-0">
+              <Image
+                src={`/images/ui/effect/${talisman.effect_icon}.webp`}
+                alt=""
+                fill
+                sizes="16px"
+                className="object-contain"
+              />
+            </div>
+          )}
+          <span className="text-xs text-buff">{effectName}</span>
+        </div>
+      )}
+
+      {/* Effect descriptions */}
+      {effectDesc1 && (
+        <p className="text-xs text-zinc-300">
+          <span className="text-zinc-500">Lv. 0</span> {formatEffectText(effectDesc1)}
+        </p>
+      )}
+      {effectDesc4 && effectDesc4 !== effectDesc1 && (
+        <p className="text-xs text-zinc-300">
+          <span className="text-zinc-500">Lv. 10</span> {formatScaledEffect(effectDesc4, effectDesc1)}
+        </p>
+      )}
+
+      {(talisman.source || talisman.boss) && (
+        <div className="text-xs text-zinc-500">
+          {talisman.source && <p><span className="text-zinc-400">Source:</span> {talisman.source}</p>}
+          {talisman.boss && <p><span className="text-zinc-400">Boss:</span> {talisman.boss}</p>}
+        </div>
+      )}
+    </div>
+  );
+
+  const card = (
     <div className="flex items-center gap-2">
       <EquipmentIcon
         src={`equipment/${talisman.image}`}
         rarity={talisman.rarity}
         alt={name}
+        effectIcon={talisman.effect_icon}
       />
       <div className="min-w-0">
         <p className="truncate text-sm text-zinc-200">{name}</p>
       </div>
     </div>
+  );
+
+  return (
+    <InlineTooltip content={tooltip}>
+      <div className="cursor-default">{card}</div>
+    </InlineTooltip>
   );
 }
