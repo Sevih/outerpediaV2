@@ -497,6 +497,7 @@
     "sdps": "SPD>ATK>CHC>CHD>DMG UP%",
     "dpsDef": "DEF>CHC>CHD>SPD>DMG UP%",
     "dpsHP": "HP>CHC>CHD>SPD>DMG UP%",
+    "dpsHPEff": "HP>CHC>CHD>EFF>SPD>DMG UP%",
     "tankDef": "SPD>DEF>HP>DMG RED%=CDMG RED%>",
     "tankHP": "SPD>HP>DEF>DMG RED%=CDMG RED%>",
     "tankDpsDef": "SPD>DEF>CHC>CHD>DMG UP%>HP",
@@ -507,6 +508,8 @@
     "tankSDpsHP": "SPD>HP>DEF>CHC>CHD>DMG RED%",
     "heal": "SPD>HP>DEF=DMG RED%=RES",
     "speedEff":"SPD>EFF",
-    "speedHPEff":"SPD>HP>EFF"
+    "speedHPEff":"SPD>HP>EFF",
+    "dpsEFF": "SPD>EFF>CHC>ATK>CHD>DMG UP%",
+    "subDpsCrit": "SPD>CHC>ATK>CHD>DMG UP%"
   }
 }
