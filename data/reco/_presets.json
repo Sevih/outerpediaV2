@@ -501,6 +501,10 @@
     "tankHP": "SPD>HP>DEF>DMG RED%=CDMG RED%>",
     "tankDpsDef": "SPD>DEF>CHC>CHD>DMG UP%>HP",
     "tankDpsHP": "SPD>HP>CHC>CHD>DMG UP%>DEF",
+    "tankDpsDefEFF": "SPD>DEF>CHC=EFF>CHD>DMG UP%>HP",
+    "tankDpsHPEFF": "SPD>HP>CHC=EFF>CHD>DMG UP%>DEF",
+    "tankSDpsDef": "SPD>DEF>HP>CHC>CHD>DMG RED%",
+    "tankSDpsHP": "SPD>HP>DEF>CHC>CHD>DMG RED%",
     "heal": "SPD>HP>DEF=DMG RED%=RES"
   }
 }
