@@ -1,74 +1,80 @@
 {
-"Speed": {
-"Weapon": [
-{
-"name": "Surefire Greatsword",
-"mainStat": "ATK%"
-},
-{
-"name": "Violent Sledgehammer",
-"mainStat": "ATK%"
-}
-],
-"Amulet": [
-{
-"name": "Glorious Radiance Legacy",
-"mainStat": "PEN"
-}
-],
-"Set": [
-"s4"
-],
-"SubstatPrio": "ATK>SPD>HP",
-"Note": "PvP:Assassin's Charm3Tactician's Charm2\nPvE:Executioner's Charm3",  
-"Talisman":["Assassin's Charm","Tactician's Charm","Executioner's Charm"]
-},
-"Counter": {
-"Weapon": [
-{
-"name": "Surefire Greatsword",
-"mainStat": "ATK%"
-},
-{
-"name": "Violent Sledgehammer",
-"mainStat": "ATK%"
-}
-],
-"Amulet": [
-{
-"name": "Glorious Radiance Legacy",
-"mainStat": "PEN"
-}
-],
-"Set": [
-"ct4"
-],
-"SubstatPrio": "ATK>SPD>HP",
-"Note": "PvP:Assassin's Charm3Tactician's Charm2\nPvE:Executioner's Charm3",  
-"Talisman":["Assassin's Charm","Tactician's Charm","Executioner's Charm"]
-},
-"Scaling": {
-"Weapon": [
-{
-"name": "Surefire Greatsword",
-"mainStat": "ATK%"
-},
-{
-"name": "Violent Sledgehammer",
-"mainStat": "ATK%"
-}
-],
-"Amulet": [
-{
-"name": "Glorious Radiance Legacy",
-"mainStat": "PEN"
-}
-],
-"Set": [
-"ct2sw2"
-],
-"SubstatPrio": "ATK>SPD>HP",
-"Note": "PvP:Assassin's Charm3Tactician's Charm2\nPvE:Sage's Charm3Executioner's Charm2",  
-"Talisman":["Assassin's Charm","Tactician's Charm","Executioner's Charm"]
-}
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Glorious Radiance Legacy",
+        "mainStat": "PEN"
+      }
+    ],
+    "Set": [
+      "s4"
+    ],
+    "SubstatPrio": "ATK>SPD>HP",
+    "Note": "PvP:Assassin's Charm3Tactician's Charm2\nPvE:Executioner's Charm3",
+    "Talisman": [
+      "$aet"
+    ]
+  },
+  "Counter": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Glorious Radiance Legacy",
+        "mainStat": "PEN"
+      }
+    ],
+    "Set": [
+      "ct4"
+    ],
+    "SubstatPrio": "ATK>SPD>HP",
+    "Note": "PvP:Assassin's Charm3Tactician's Charm2\nPvE:Executioner's Charm3",
+    "Talisman": [
+      "$aet"
+    ]
+  },
+  "Scaling": {
+    "Weapon": [
+      {
+        "name": "Surefire Greatsword",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Violent Sledgehammer",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Glorious Radiance Legacy",
+        "mainStat": "PEN"
+      }
+    ],
+    "Set": [
+      "ct2sw2"
+    ],
+    "SubstatPrio": "ATK>SPD>HP",
+    "Note": "PvP:Assassin's Charm3Tactician's Charm2\nPvE:Sage's Charm3Executioner's Charm2",
+    "Talisman": [
+      "$aet"
+    ]
+  }
 }

@@ -1,63 +1,68 @@
 {
   "Scaling": {
-      "Weapon": [
+    "Weapon": [
       {
-      "name": "Force Field Generator",
-      "mainStat": "HP%"
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
       }
-      ],
-      "Amulet": [
-        {
-          "name": "Coward's Treasure",
-          "mainStat": "HP%"
-          }
-      ],
-      "Set": [
-        "i2sw2"
-      ],
-      "SubstatPrio": "HP>DEF>SPD>CHC>CHD",
-      "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2", 
-      "Talisman":["Sage's Charm","Vanguard's Charm","Saint's Charm"]
-      },
- "HP immune": {
-      "Weapon": [
+    ],
+    "Amulet": [
       {
-      "name": "Force Field Generator",
-      "mainStat": "HP%"
+        "name": "Coward's Treasure",
+        "mainStat": "HP%"
       }
-      ],
-      "Amulet": [
-        {
-          "name": "Coward's Treasure",
-          "mainStat": "HP%"
-          }
-      ],
-      "Set": [
-        "hp2i2"
-      ],
-      "SubstatPrio": "HP>DEF>SPD>CHC>CHD",
-      "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2", 
-      "Talisman":["Sage's Charm","Vanguard's Charm","Saint's Charm"]
-      },
-      "HP scaling": {
-           "Weapon": [
-           {
-           "name": "Force Field Generator",
-           "mainStat": "HP%"
-           }
-           ],
-           "Amulet": [
-             {
-               "name": "Coward's Treasure",
-               "mainStat": "HP%"
-               }
-           ],
-           "Set": [
-             "hp2sw2"
-           ],
-           "SubstatPrio": "HP>DEF>SPD>CHC>CHD",
-           "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2", 
-           "Talisman":["Sage's Charm","Vanguard's Charm","Saint's Charm"]
-           }
-    
+    ],
+    "Set": [
+      "i2sw2"
+    ],
+    "SubstatPrio": "HP>DEF>SPD>CHC>CHD",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2",
+    "Talisman": [
+      "$sstv"
+    ]
+  },
+  "HP immune": {
+    "Weapon": [
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "HP%"
+      }
+    ],
+    "Set": [
+      "hp2i2"
+    ],
+    "SubstatPrio": "HP>DEF>SPD>CHC>CHD",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2",
+    "Talisman": [
+      "$sstv"
+    ]
+  },
+  "HP scaling": {
+    "Weapon": [
+      {
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "HP%"
+      }
+    ],
+    "Set": [
+      "hp2sw2"
+    ],
+    "SubstatPrio": "HP>DEF>SPD>CHC>CHD",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2",
+    "Talisman": [
+      "$sstv"
+    ]
+  }
 }

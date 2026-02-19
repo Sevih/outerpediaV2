@@ -1,66 +1,70 @@
 {
   "Speedy": {
-      "Weapon": [
+    "Weapon": [
       {
-      "name": "Force Field Generator",
-      "mainStat": "HP%"
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
       },
       {
-      "name": "Talisman of Animosities",
-      "mainStat": "HP%"
+        "name": "Talisman of Animosities",
+        "mainStat": "HP%"
       }
-      ],
-      "Amulet": [
+    ],
+    "Amulet": [
       {
-      "name": "Chalice of Longing",
-      "mainStat": "SPD"
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
       },
       {
         "name": "Unholy Exsultet",
         "mainStat": "SPD"
-        },
-        {
-          "name": "Coward's Treasure",
-          "mainStat": "HP%"
-          }
-      ],
-      "Set": [
+      },
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "HP%"
+      }
+    ],
+    "Set": [
       "s4"
-      ],
-      "SubstatPrio": "SPD>HP>CHC>ACC=ATK",
-      "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2", 
-      "Talisman":["Sage's Charm","Vanguard's Charm","Saint's Charm"]
-      },
+    ],
+    "SubstatPrio": "SPD>HP>CHC>ACC=ATK",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2",
+    "Talisman": [
+      "$sstv"
+    ]
+  },
   "Counter": {
-      "Weapon": [
+    "Weapon": [
       {
-      "name": "Force Field Generator",
-      "mainStat": "HP%"
+        "name": "Force Field Generator",
+        "mainStat": "HP%"
       },
       {
-      "name": "Talisman of Animosities",
-      "mainStat": "HP%"
+        "name": "Talisman of Animosities",
+        "mainStat": "HP%"
       }
-      ],
-      "Amulet": [
+    ],
+    "Amulet": [
       {
-      "name": "Chalice of Longing",
-      "mainStat": "SPD"
+        "name": "Chalice of Longing",
+        "mainStat": "SPD"
       },
       {
         "name": "Unholy Exsultet",
         "mainStat": "SPD"
-        },
-        {
-          "name": "Coward's Treasure",
-          "mainStat": "HP%"
-          }
-      ],
-      "Set": [
-      "ct4"
-      ],
-      "SubstatPrio": "SPD>HP>CHC>ACC=ATK",
-      "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2", 
-      "Talisman":["Sage's Charm","Vanguard's Charm","Saint's Charm"]
+      },
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "HP%"
       }
+    ],
+    "Set": [
+      "ct4"
+    ],
+    "SubstatPrio": "SPD>HP>CHC>ACC=ATK",
+    "Note": "PvP:Vanguard's Charm3\nPvE:Sage's Charm3Saint's Charm2",
+    "Talisman": [
+      "$sstv"
+    ]
+  }
 }
