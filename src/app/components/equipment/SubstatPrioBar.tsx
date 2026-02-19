@@ -7,11 +7,23 @@ const TOTAL_SEGMENTS = 6;
 type StatTier = { stats: string[]; filled: number };
 
 function parsePrio(raw: string): StatTier[] {
-  const tiers = raw.split('>').map((t) => t.trim().split('=').map((s) => s.trim()));
-  return tiers.map((stats, i) => ({
-    stats,
-    filled: Math.max(1, TOTAL_SEGMENTS - i),
-  }));
+  const tokens = raw.split('>');
+  const tiers: StatTier[] = [];
+  let level = 0;
+
+  for (const token of tokens) {
+    const trimmed = token.trim();
+    if (trimmed === '') {
+      // ">>" produces an empty token — skip an extra level
+      level++;
+      continue;
+    }
+    const stats = trimmed.split('=').map((s) => s.trim());
+    tiers.push({ stats, filled: Math.max(1, TOTAL_SEGMENTS - level) });
+    level++;
+  }
+
+  return tiers;
 }
 
 function PrioSegments({ filled }: { filled: number }) {
