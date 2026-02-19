@@ -9,13 +9,10 @@ export async function run() {
   // Skip gracefully if datamine is not available (e.g. on server)
   if (!existsSync(PATHS.parserV3) || !existsSync(script)) {
     const outputExists = existsSync(join(PATHS.generated, 'character-stats.json'));
-    console.log(`  Datamine not available, skipping Python extraction`);
     if (outputExists) {
-      console.log(`  Using existing character-stats.json from git`);
-    } else {
-      console.warn(`  WARNING: character-stats.json is missing and cannot be generated without datamine`);
+      return 'skipped (no datamine, using cached)';
     }
-    return;
+    return 'skipped (no datamine, no cache!)';
   }
 
   const output = await new Promise<string>((resolve, reject) => {
@@ -28,8 +25,11 @@ export async function run() {
     });
   });
 
-  // Forward Python script output
-  for (const line of output.split('\n')) {
-    if (line.trim()) console.log(`  ${line.trim()}`);
+  // Parse Python output for summary
+  if (output.includes('up to date') || output.includes('skipped')) {
+    return 'up to date';
   }
+  // Extract character count if available
+  const match = output.match(/(\d+)\s*character/i);
+  return match ? `${match[1]} characters extracted` : 'extracted';
 }

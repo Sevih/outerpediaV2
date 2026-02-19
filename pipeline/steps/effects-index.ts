@@ -54,8 +54,8 @@ export async function run() {
   const newBuffs = buffs.filter(b => !(b.name in existing.buffs)).length;
   const newDebuffs = debuffs.filter(d => !(d.name in existing.debuffs)).length;
   const newTags = Object.keys(tags).filter(k => !(k in existing.tags)).length;
-  console.log(`  ${Object.keys(index.buffs).length} buffs, ${Object.keys(index.debuffs).length} debuffs, ${Object.keys(index.tags).length} tags`);
-  if (newBuffs || newDebuffs || newTags) {
-    console.log(`  New: +${newBuffs} buffs, +${newDebuffs} debuffs, +${newTags} tags`);
-  }
+
+  const total = `${Object.keys(index.buffs).length} buffs, ${Object.keys(index.debuffs).length} debuffs, ${Object.keys(index.tags).length} tags`;
+  const newCount = newBuffs + newDebuffs + newTags;
+  return newCount ? `${total} (+${newCount} new)` : total;
 }

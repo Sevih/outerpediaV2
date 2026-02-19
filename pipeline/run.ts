@@ -3,7 +3,7 @@ import { PATHS } from './config';
 
 type Step = {
   name: string;
-  run: () => Promise<void>;
+  run: () => Promise<string | void>;
 };
 
 // Pipeline steps — executed in order
@@ -13,6 +13,8 @@ const steps: Step[] = [
   { name: 'characters-index', run: () => import('./steps/characters-index').then(m => m.run()) },
   { name: 'character-stats', run: () => import('./steps/character-stats').then(m => m.run()) },
 ];
+
+const NAME_PAD = Math.max(...steps.map(s => s.name.length));
 
 async function main() {
   const args = process.argv.slice(2);
@@ -24,10 +26,10 @@ async function main() {
     mkdirSync(PATHS.generated, { recursive: true });
   }
 
-  console.log('=== Outerpedia Pipeline ===\n');
+  console.log('\nPipeline\n');
 
   if (steps.length === 0) {
-    console.log('No steps configured yet. Add steps to pipeline/run.ts');
+    console.log('  No steps configured. Add steps to pipeline/run.ts');
     return;
   }
 
@@ -38,24 +40,30 @@ async function main() {
       : steps;
 
   if (toRun.length === 0) {
-    console.error(`Step "${stepFilter || 'validate'}" not found.`);
-    console.log('Available:', steps.map(s => s.name).join(', '));
+    console.error(`  Step "${stepFilter || 'validate'}" not found.`);
+    console.log('  Available:', steps.map(s => s.name).join(', '));
     process.exit(1);
   }
 
+  const totalStart = Date.now();
+
   for (const step of toRun) {
     const start = Date.now();
-    console.log(`[${step.name}] Running...`);
     try {
-      await step.run();
-      console.log(`[${step.name}] Done (${Date.now() - start}ms)`);
+      const summary = await step.run();
+      const name = step.name.padEnd(NAME_PAD);
+      const ms = Date.now() - start;
+      console.log(`  \x1b[32m✓\x1b[0m ${name}  ${summary || 'ok'} \x1b[2m(${ms}ms)\x1b[0m`);
     } catch (err) {
-      console.error(`[${step.name}] FAILED:`, err);
+      const name = step.name.padEnd(NAME_PAD);
+      const ms = Date.now() - start;
+      console.log(`  \x1b[31m✗\x1b[0m ${name}  FAILED \x1b[2m(${ms}ms)\x1b[0m`);
+      console.error(`\n  ${err}\n`);
       process.exit(1);
     }
   }
 
-  console.log('\n=== Pipeline complete ===');
+  console.log(`\nDone in ${Date.now() - totalStart}ms\n`);
 }
 
 main();

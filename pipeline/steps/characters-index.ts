@@ -197,8 +197,5 @@ export async function run() {
     writeFile(slugPath, JSON.stringify(slugToId, null, 2)),
   ]);
 
-  console.log(`  Generated ${entries.length} characters → ${indexPath}`);
-  console.log(`  Generated name→id map → ${namePath}`);
-  console.log(`  Generated list (${entries.length} entries, canonical effects) → ${listPath}`);
-  console.log(`  Generated slug→id map → ${slugPath}`);
+  return `${entries.length} characters, 4 index files`;
 }

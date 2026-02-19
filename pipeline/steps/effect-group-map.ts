@@ -24,5 +24,5 @@ export async function run() {
   const outPath = join(PATHS.generated, 'effect-group-map.json');
   await writeFile(outPath, JSON.stringify(groupMap, null, 2));
 
-  console.log(`  Generated ${Object.keys(groupMap).length} effect group mappings → ${outPath}`);
+  return `${Object.keys(groupMap).length} group mappings`;
 }
