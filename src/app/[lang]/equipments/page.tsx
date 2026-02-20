@@ -3,7 +3,6 @@ import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT, loadMessages } from '@/i18n';
 import { getWeapons, getAmulets, getTalismans, getArmorSets, getExclusiveEquipment } from '@/lib/data/equipment';
-import { getItems } from '@/lib/data/items';
 import { getCharactersForList } from '@/lib/data/characters';
 import { l as loc } from '@/lib/i18n/localize';
 import EquipmentsPageClient from './EquipmentsPageClient';
@@ -29,14 +28,13 @@ export default async function EquipmentsPage({ params }: Props) {
   const { lang } = await params;
   const l = lang as Lang;
 
-  const [messages, weapons, amulets, talismans, sets, ee, items, characters] = await Promise.all([
+  const [messages, weapons, amulets, talismans, sets, ee, characters] = await Promise.all([
     loadMessages(l),
     getWeapons(),
     getAmulets(),
     getTalismans(),
     getArmorSets(),
     getExclusiveEquipment(),
-    getItems(),
     getCharactersForList(),
   ]);
 
@@ -59,7 +57,6 @@ export default async function EquipmentsPage({ params }: Props) {
         sets={sets}
         ee={ee}
         eeCharNames={eeCharNames}
-        items={items}
         lang={l}
         messages={messages}
       />
