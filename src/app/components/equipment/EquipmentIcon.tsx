@@ -14,13 +14,20 @@ type Props = {
   effectIcon?: string | null;
   /** Class name (e.g., 'Striker') — shown middle-right */
   classType?: string | null;
+  /** Equipment level — displayed as overlapping star icons at the bottom of the image */
+  level?: number | string | null;
 };
 
 export default function EquipmentIcon({
   src, rarity, alt, size = 50, className = '',
-  effectIcon, classType,
+  effectIcon, classType, level,
 }: Props) {
   const badgeSize = 15;
+  const starCount = level ? Number(level) : 0;
+  const starSize = Math.round(size / 5);
+  // Each star overlaps the previous by ~30% of its width
+  const starOverlap = Math.round(starSize * 0.3);
+  const starsWidth = starCount > 0 ? starSize + (starCount - 1) * (starSize - starOverlap) : 0;
 
   return (
     <div
@@ -46,37 +53,62 @@ export default function EquipmentIcon({
 
       {/* Effect icon — top-right */}
       {effectIcon && (
-        <div
-          className="absolute right-0.5 top-0.5"
-          style={{ width: badgeSize, height: badgeSize }}
-        >
+        <div className="absolute right-0.5 top-0.5 h-5 w-5">
           <div className="relative h-full w-full">
             <Image
               src={`/images/ui/effect/${effectIcon}.webp`}
               alt=""
               fill
-              sizes={`${badgeSize}px`}
+              sizes="20px"
               className="object-contain"
             />
           </div>
         </div>
       )}
 
-      {/* Class icon — middle-right */}
+      {/* Class icon — bottom-right */}
       {classType && (
-        <div
-          className="absolute right-0.5 bottom-3"
-          style={{ width: badgeSize, height: badgeSize }}
-        >
+        <div className="absolute right-0.5 bottom-6 h-5 w-5">
           <div className="relative h-full w-full">
             <Image
               src={`/images/ui/class/CM_Class_${classType}.webp`}
               alt={classType}
               fill
-              sizes={`${badgeSize}px`}
+              sizes="20px"
               className="object-contain"
             />
           </div>
+        </div>
+      )}
+
+      {/* Stars — overlapping, centered at the bottom of the image */}
+      {starCount > 0 && (
+        <div
+          className="absolute bottom-1 left-1/2 flex"
+          style={{
+            width: starsWidth,
+            marginLeft: -starsWidth / 2,
+          }}
+        >
+          {Array.from({ length: starCount }, (_, i) => (
+            <div
+              key={i}
+              className="relative shrink-0"
+              style={{
+                width: starSize,
+                height: starSize,
+                marginLeft: i === 0 ? 0 : -starOverlap,
+              }}
+            >
+              <Image
+                src="/images/ui/star/CM_icon_star_y.webp"
+                alt=""
+                fill
+                sizes={`${starSize}px`}
+                className="object-contain drop-shadow-sm"
+              />
+            </div>
+          ))}
         </div>
       )}
     </div>

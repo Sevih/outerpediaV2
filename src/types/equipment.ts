@@ -96,6 +96,24 @@ export type ExclusiveEquipment = WithLocalizedFields<
   'name' | 'mainStat' | 'effect' | 'effect10'
 >;
 
+// ── Source / Drop ──
+
+export type EquipmentCategory = 'weapon' | 'amulet' | 'set' | 'talisman';
+
+export type SourceDropInfo = {
+  source: string | null;
+  boss: string | null;
+  mode: string | null;
+  sourceLabel: string;
+};
+
+export type EquipmentDropEntry = {
+  name: string;
+  category: EquipmentCategory;
+  class: ClassType | null;
+  rarity: ItemRarity;
+};
+
 // ── Gear Recommendations ──
 
 export type RecoGearEntry = { name: string; mainStat?: string };

@@ -24,7 +24,7 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
   if (!buildNames.length) {
     return (
       <section id="gear">
-        <h2 className="mb-4 text-2xl font-bold">{t('page.character.gear.title')}</h2>
+        <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.gear')}</h2>
         <p className="text-sm text-zinc-500">{t('page.character.no_reco')}</p>
       </section>
     );
@@ -34,7 +34,7 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
 
   return (
     <section id="gear">
-      <h2 className="mb-4 text-2xl font-bold">{t('page.character.gear.title')}</h2>
+      <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.gear')}</h2>
 
       <Tabs
         items={buildNames}

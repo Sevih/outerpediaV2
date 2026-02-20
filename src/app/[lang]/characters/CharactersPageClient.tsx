@@ -1028,7 +1028,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
             {t('characters.filters.reset')}
           </button>
           <button type="button" onClick={copyShareUrl} className="rounded bg-zinc-700 px-4 py-1 text-sm text-white hover:bg-cyan-600 transition">
-            {copied ? t('characters.filters.copied') : t('characters.filters.copy')}
+            {copied ? t('common.copied') : t('characters.filters.copy')}
           </button>
         </div>
       </div>

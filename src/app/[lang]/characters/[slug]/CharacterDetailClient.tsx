@@ -85,7 +85,7 @@ export default function CharacterDetailClient({
       { id: 'overview', label: t('page.character.toc.overview') },
       hasProsCons && { id: 'pros-cons', label: t('page.character.toc.pros_cons') },
       { id: 'stats-ranking', label: t('page.character.toc.stats_ranking') },
-      hasEe && { id: 'ee', label: t('page.character.toc.ee') },
+      hasEe && { id: 'ee', label: t('equip.tab.ee') },
       hasTranscend && { id: 'transcend', label: t('page.character.toc.transcend') },
       { id: 'skills', label: t('page.character.toc.skills') },
       hasBurst && { id: 'burst', label: t('page.character.toc.burst') },

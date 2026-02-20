@@ -15,3 +15,5 @@ export { default as WeaponCard } from './WeaponCard';
 export { default as AmuletCard } from './AmuletCard';
 export { default as TalismanCard } from './TalismanCard';
 export { default as SetCard } from './SetCard';
+export { default as EECard } from './EECard';
+export { default as ItemCard } from './ItemCard';

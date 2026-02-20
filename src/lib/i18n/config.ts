@@ -15,10 +15,13 @@ export type Lang = keyof typeof LANGUAGES;
 /** Array of all language keys */
 export const LANGS = Object.keys(LANGUAGES) as Lang[];
 
+/** Extract the key where isDefault is true — preserves the literal type */
+type DefaultLang = { [K in Lang]: (typeof LANGUAGES)[K]['isDefault'] extends true ? K : never }[Lang];
+
 /** The default language key */
 export const DEFAULT_LANG = (
   Object.entries(LANGUAGES).find(([, v]) => v.isDefault)?.[0] ?? 'en'
-) as Lang;
+) as DefaultLang;
 
 /** Non-default languages (used for suffix fields like name_jp) */
 export type SuffixLang = Exclude<Lang, typeof DEFAULT_LANG>;
