@@ -37,12 +37,12 @@ export type SkillKey =
   | 'EXCLUSIVE_EQUIP';
 
 export const SKILL_SOURCES: { key: SkillKey; labelKey: string }[] = [
-  { key: 'SKT_FIRST', labelKey: 'characters.filters.sources.skill1' },
-  { key: 'SKT_SECOND', labelKey: 'characters.filters.sources.skill2' },
+  { key: 'SKT_FIRST', labelKey: 'page.character.skill.type.s1' },
+  { key: 'SKT_SECOND', labelKey: 'page.character.skill.type.s2' },
   { key: 'SKT_ULTIMATE', labelKey: 'characters.filters.sources.skill3' },
   { key: 'SKT_CHAIN_PASSIVE', labelKey: 'characters.filters.sources.chainPassive' },
   { key: 'DUAL_ATTACK', labelKey: 'characters.filters.sources.dualAttack' },
-  { key: 'EXCLUSIVE_EQUIP', labelKey: 'characters.filters.sources.exclusiveEquip' },
+  { key: 'EXCLUSIVE_EQUIP', labelKey: 'equip.tab.ee' },
 ];
 
 // ── Chain type labels ──

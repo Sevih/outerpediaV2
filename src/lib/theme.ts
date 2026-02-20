@@ -73,3 +73,13 @@ export const CHAIN_TEXT: Record<ChainType, string> = {
   Join: 'text-chain-join',
   Finish: 'text-chain-finish',
 };
+
+// ── Filters ──
+
+export const FILTER = {
+  bg: 'bg-filter-bg',
+  active: 'bg-filter/25',
+  hover: 'hover:bg-filter/25',
+  ring: 'ring-filter-ring',
+  focusRing: 'focus-visible:ring-2 focus-visible:ring-filter-ring',
+} as const;

@@ -20,6 +20,7 @@ import type { WithLocalizedFields } from '@/types/common';
 import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
 import EffectIcon from '@/app/components/character/EffectIcon';
 import { splitCharacterName } from '@/lib/character-name';
+import { FILTER } from '@/lib/theme';
 
 // ── URL encoding maps ──
 
@@ -229,10 +230,10 @@ function FilterPill({
       aria-pressed={active}
       className={[
         'inline-flex items-center justify-center rounded cursor-pointer select-none transition',
-        active ? 'bg-cyan-500/25 text-white ring-1 ring-cyan-400' : 'bg-zinc-700/60 text-zinc-200 hover:bg-cyan-700',
+        active ? `${FILTER.active} text-white ring-1 ${FILTER.ring}` : `${FILTER.bg} text-zinc-200 ${FILTER.hover}`,
         'text-xs leading-none',
         '**:leading-none [&_img]:align-middle [&_img]:block',
-        'focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400',
+        `focus:outline-none ${FILTER.focusRing}`,
         className,
       ].filter(Boolean).join(' ')}
     >
@@ -794,7 +795,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
           value={rawQuery}
           onChange={e => setRawQuery(e.target.value)}
           placeholder={t('search.placeholder')}
-          className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-cyan-500 focus:outline-none"
+          className={`w-full rounded-lg border border-zinc-700 ${FILTER.bg} px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-filter focus:outline-none`}
         />
         {rawQuery && (
           <button
@@ -895,7 +896,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
           <button
             type="button"
             onClick={() => setShowFilters(s => !s)}
-            className="rounded bg-zinc-700 px-4 py-2 text-sm text-white hover:bg-cyan-600 transition"
+            className={`rounded ${FILTER.bg} px-4 py-2 text-sm text-white ${FILTER.hover} transition`}
           >
             {showFilters ? t('characters.filters.hideBuffs') : t('characters.filters.showBuffs')}
           </button>
@@ -905,14 +906,14 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
           <div className="flex flex-col items-center gap-2 w-full mt-3 mb-2">
             {/* Header controls */}
             <div className="flex justify-center gap-3 items-center">
-              <label htmlFor="show-unique" className="inline-flex items-center gap-2 h-9 px-3 rounded text-sm text-white cursor-pointer select-none bg-zinc-700 hover:bg-cyan-600 transition">
+              <label htmlFor="show-unique" className={`inline-flex items-center gap-2 h-9 px-3 rounded text-sm text-white cursor-pointer select-none ${FILTER.bg} ${FILTER.hover} transition`}>
                 <input type="checkbox" id="show-unique" checked={showUniqueEffects} onChange={() => setShowUniqueEffects(v => !v)} className="accent-cyan-500 w-4 h-4" />
                 {t('characters.filters.unique')}
               </label>
 
-              <div className="inline-grid grid-cols-2 rounded bg-zinc-700 text-xs">
-                <button type="button" className={`px-2 py-1 rounded-l ${effectLogic === 'AND' ? 'bg-cyan-600' : ''}`} onClick={() => setEffectLogic('AND')}>{t('characters.filters.and')}</button>
-                <button type="button" className={`px-2 py-1 rounded-r ${effectLogic === 'OR' ? 'bg-cyan-600' : ''}`} onClick={() => setEffectLogic('OR')}>{t('characters.filters.or')}</button>
+              <div className={`inline-grid grid-cols-2 rounded ${FILTER.bg} text-xs`}>
+                <button type="button" className={`px-2 py-1 rounded-l ${effectLogic === 'AND' ? FILTER.active : ''}`} onClick={() => setEffectLogic('AND')}>{t('characters.filters.and')}</button>
+                <button type="button" className={`px-2 py-1 rounded-r ${effectLogic === 'OR' ? FILTER.active : ''}`} onClick={() => setEffectLogic('OR')}>{t('characters.filters.or')}</button>
               </div>
             </div>
 
@@ -967,7 +968,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
           <button
             type="button"
             onClick={() => setShowTagsPanel(s => !s)}
-            className="rounded bg-zinc-700 px-4 py-2 text-sm text-white hover:bg-cyan-600 transition"
+            className={`rounded ${FILTER.bg} px-4 py-2 text-sm text-white ${FILTER.hover} transition`}
           >
             {showTagsPanel ? t('characters.filters.hideTags') : t('characters.filters.showTags')}
           </button>
@@ -976,9 +977,9 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
         {showTagsPanel && (
           <div className="w-full mt-2">
             <div className="flex justify-center gap-3 items-center mb-2">
-              <div className="inline-grid grid-cols-2 rounded bg-zinc-700 text-xs">
-                <button type="button" className={`px-2 py-1 rounded-l ${tagLogic === 'AND' ? 'bg-cyan-600' : ''}`} onClick={() => setTagLogic('AND')}>{t('characters.filters.and')}</button>
-                <button type="button" className={`px-2 py-1 rounded-r ${tagLogic === 'OR' ? 'bg-cyan-600' : ''}`} onClick={() => setTagLogic('OR')}>{t('characters.filters.or')}</button>
+              <div className={`inline-grid grid-cols-2 rounded ${FILTER.bg} text-xs`}>
+                <button type="button" className={`px-2 py-1 rounded-l ${tagLogic === 'AND' ? FILTER.active : ''}`} onClick={() => setTagLogic('AND')}>{t('characters.filters.and')}</button>
+                <button type="button" className={`px-2 py-1 rounded-r ${tagLogic === 'OR' ? FILTER.active : ''}`} onClick={() => setTagLogic('OR')}>{t('characters.filters.or')}</button>
               </div>
             </div>
             <div className="mx-auto max-w-5xl rounded-2xl border border-zinc-700 bg-zinc-900/60 p-4">
@@ -1024,10 +1025,10 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
 
         {/* Actions */}
         <div className="mt-4 mb-4 flex flex-wrap justify-center gap-4">
-          <button type="button" onClick={resetAll} className="rounded bg-zinc-700 px-4 py-1 text-sm text-white hover:bg-red-700 transition">
+          <button type="button" onClick={resetAll} className={`rounded ${FILTER.bg} px-4 py-1 text-sm text-white hover:bg-red-700 transition`}>
             {t('characters.filters.reset')}
           </button>
-          <button type="button" onClick={copyShareUrl} className="rounded bg-zinc-700 px-4 py-1 text-sm text-white hover:bg-cyan-600 transition">
+          <button type="button" onClick={copyShareUrl} className={`rounded ${FILTER.bg} px-4 py-1 text-sm text-white ${FILTER.hover} transition`}>
             {copied ? t('common.copied') : t('characters.filters.copy')}
           </button>
         </div>

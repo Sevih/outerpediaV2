@@ -9,6 +9,7 @@ import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { ALL_PAGES } from '@/lib/nav';
+import { FILTER } from '@/lib/theme';
 import type { CharacterIndexMap } from '@/types/character';
 
 
@@ -159,7 +160,7 @@ export default function SearchModal({
                   <button
                     key={page.href}
                     className={`flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm ${
-                      selectedIdx === idx ? 'bg-zinc-800 text-white' : 'text-zinc-300 hover:bg-zinc-800/50'
+                      selectedIdx === idx ? `${FILTER.active} text-white` : `text-zinc-300 ${FILTER.hover}`
                     }`}
                     onClick={() => navigate(idx)}
                     onMouseEnter={() => setSelectedIdx(idx)}
@@ -182,7 +183,7 @@ export default function SearchModal({
                   <button
                     key={char.slug}
                     className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm ${
-                      selectedIdx === idx ? 'bg-zinc-800 text-white' : 'text-zinc-300 hover:bg-zinc-800/50'
+                      selectedIdx === idx ? `${FILTER.active} text-white` : `text-zinc-300 ${FILTER.hover}`
                     }`}
                     onClick={() => navigate(idx)}
                     onMouseEnter={() => setSelectedIdx(idx)}
