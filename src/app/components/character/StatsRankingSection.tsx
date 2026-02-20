@@ -31,21 +31,21 @@ function lvFromKey(key: string): string {
 
 type StatDef = {
   key: keyof StatsStep;
-  statName: string;
+  displayKey?: string;
   isPercent: boolean;
 };
 
 const STAT_DEFS: StatDef[] = [
-  { key: 'ATK', statName: 'ATK', isPercent: false },
-  { key: 'DEF', statName: 'DEF', isPercent: false },
-  { key: 'HP', statName: 'HP', isPercent: false },
-  { key: 'SPD', statName: 'SPD', isPercent: false },
-  { key: 'CHC', statName: 'CHC', isPercent: true },
-  { key: 'CHD', statName: 'CHD', isPercent: true },
-  { key: 'DMG_INC', statName: 'DMG UP%', isPercent: true },
-  { key: 'DMG_RED', statName: 'DMG RED%', isPercent: true },
-  { key: 'EFF', statName: 'EFF', isPercent: false },
-  { key: 'RES', statName: 'RES', isPercent: false },
+  { key: 'ATK', isPercent: false },
+  { key: 'DEF', isPercent: false },
+  { key: 'HP', isPercent: false },
+  { key: 'SPD', isPercent: false },
+  { key: 'CHC', isPercent: true },
+  { key: 'CHD', isPercent: true },
+  { key: 'DMG_INC', displayKey: 'DMG UP%', isPercent: true },
+  { key: 'DMG_RED', displayKey: 'DMG RED%', isPercent: true },
+  { key: 'EFF', isPercent: false },
+  { key: 'RES', isPercent: false },
 ];
 
 function formatValue(value: number, isPercent: boolean): string {
@@ -101,7 +101,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
             <>
               {/* Stats list */}
               <div className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-                {STAT_DEFS.map(({ key, statName, isPercent }) => {
+                {STAT_DEFS.map(({ key, displayKey, isPercent }) => {
                   let value = currentStep[key] as number;
                   if (isStrikerAttacker3 && isMaxStep && (key === 'ATK' || key === 'DEF')) {
                     value -= 1;
@@ -111,7 +111,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
 
                   return (
                     <div key={key} className="flex items-center justify-between">
-                      <StatInline name={statName} />
+                      <StatInline name={displayKey ?? key} />
                       <span className="text-sm font-medium text-zinc-100">
                         {formatValue(value + premiumVal, isPercent)}
                         {premiumVal > 0 && (
