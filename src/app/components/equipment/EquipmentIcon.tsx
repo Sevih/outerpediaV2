@@ -22,7 +22,6 @@ export default function EquipmentIcon({
   src, rarity, alt, size = 50, className = '',
   effectIcon, classType, level,
 }: Props) {
-  const badgeSize = 15;
   const starCount = level ? Number(level) : 0;
   const starSize = Math.round(size / 5);
   // Each star overlaps the previous by ~30% of its width

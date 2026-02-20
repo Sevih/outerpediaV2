@@ -49,7 +49,7 @@ export default async function PromoCodesPage({ params }: Props) {
         t={{
           title: t['home.section.codes'],
           copy: t['home.codes.copy'],
-          copied: t['home.codes.copied'],
+          copied: t['common.copied'],
           empty: t['home.codes.empty'],
           active: t['promo_codes.active'],
           expired: t['promo_codes.expired'],

@@ -86,7 +86,7 @@ export default async function Home({ params }: Props) {
             t={{
               title: t['home.section.codes'],
               copy: t['home.codes.copy'],
-              copied: t['home.codes.copied'],
+              copied: t['common.copied'],
               empty: t['home.codes.empty'],
               viewAll: t['home.codes.view_all'],
             }}
