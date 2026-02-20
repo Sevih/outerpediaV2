@@ -29,11 +29,12 @@ export default function SetInline({ name }: Props) {
   const effect2 = l(set, 'effect_2_4', lang);
   const effect4 = l(set, 'effect_4_4', lang);
   const iconPath = `/images/equipment/TI_Equipment_Armor_${set.image_prefix}.webp`;
+  const setIconPath = `/images/ui/effect/${set.set_icon}.webp`;
 
   const tooltip = (
     <div className="flex gap-2">
       <div className="relative h-10 w-10 shrink-0">
-        <Image src={iconPath} alt="" fill sizes="40px" className="object-contain" />
+        <Image src={setIconPath} alt="" fill sizes="40px" className="object-contain" />
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-equipment">{label}</span>

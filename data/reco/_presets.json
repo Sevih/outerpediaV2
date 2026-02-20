@@ -26,6 +26,11 @@
       "Mage's Charm",
       "Rogue's Charm"
     ],
+    "elemcritAP": [
+      "Sage's Charm",
+      "Mage's Charm",
+      "Rogue's Charm"
+    ],
     "v": [
       "Vanguard's Charm"
     ],
@@ -148,6 +153,16 @@
     ],
     "st": [
       "Saint's Charm"
+    ],
+    "ats": [
+      "Assassin's Charm",
+      "Tactician's Charm",
+      "Sage's Charm"
+    ],
+    "mrs":[
+      "Mage's Charm",
+      "Rogue's Charm",
+      "Sage's Charm"
     ]
   },
   "sets": {
@@ -510,6 +525,7 @@
     "speedEff":"SPD>EFF",
     "speedHPEff":"SPD>HP>EFF",
     "dpsEFF": "SPD>EFF>CHC>ATK>CHD>DMG UP%",
-    "subDpsCrit": "SPD>CHC>ATK>CHD>DMG UP%"
+    "subDpsCrit": "SPD>CHC>ATK>CHD>DMG UP%",
+    "critAtkspd": "CHC>ATK>SPD>CHD>DMG UP%"
   }
 }

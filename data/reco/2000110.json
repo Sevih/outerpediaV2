@@ -32,9 +32,9 @@
       "p4"
     ],
     "SubstatPrio": "$sdps",
-    "Note": "",
+    "Note": "PvP : {I-T/Mage's Charm} or {I-T/Assassin's Charm}",
     "Talisman": [
-      "$aemrs"
+      "$CPdps"
     ]
   },
   "DPS speed": {
@@ -70,9 +70,9 @@
       "s4"
     ],
     "SubstatPrio": "$sdps",
-    "Note": "",
+    "Note": "PvP : {I-T/Mage's Charm} or {I-T/Assassin's Charm}",
     "Talisman": [
-      "$aemrs"
+      "$CPdps"
     ]
   },
   "DPS revenge": {
@@ -107,57 +107,48 @@
     "Set": [
       "r4"
     ],
-    "DPS attack": {
-      "Weapon": [
-        {
-          "name": "Rampaging Caracal",
-          "mainStat": "ATK%"
-        },
-        {
-          "name": "Heartunder's Blade",
-          "mainStat": "ATK%"
-        },
-        {
-          "name": "Meteor Mashers",
-          "mainStat": "ATK%"
-        }
-      ],
-      "Amulet": [
-        {
-          "name": "Burning Soul",
-          "mainStat": "PEN%"
-        },
-        {
-          "name": "Physical Exorcism",
-          "mainStat": "PEN%"
-        },
-        {
-          "name": "Absolute Music",
-          "mainStat": "ATK%"
-        }
-      ],
-      "Set": [
-        [
-          {
-            "name": "Attack",
-            "count": 4
-          }
-        ]
-      ],
-      "SubstatPrio": "CHC>ATK>SPD>CHD=ACC",
-      "Note": "",
-      "Talisman": [
-        "Rogue's Charm",
-        "Sage's Charm",
-        "Executioner's Charm",
-        "Mage's Charm",
-        "Assassin's Charm"
-      ]
-    },
     "SubstatPrio": "$sdps",
     "Note": "",
     "Talisman": [
       "$aemrs"
+    ]
+  },
+  "DPS attack": {
+    "Weapon": [
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Heartunder's Blade",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Meteor Mashers",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Absolute Music",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Set": [
+      "a4"
+    ],
+    "SubstatPrio": "$critAtkspd",
+    "Note": "PvP : {I-T/Mage's Charm} or {I-T/Assassin's Charm}",
+    "Talisman": [
+      "$CPdps"
     ]
   },
   "Sub-DPS": {
@@ -185,9 +176,9 @@
       "s4"
     ],
     "SubstatPrio": "$sdps",
-    "Note": "",
+    "Note": "PvP : {I-T/Mage's Charm} or {I-T/Assassin's Charm}",
     "Talisman": [
-      "$aemrs"
+      "$CPdps"
     ]
   },
   "Immu": {
@@ -223,9 +214,9 @@
       "i2a2"
     ],
     "SubstatPrio": "$sdps",
-    "Note": "You can pair Immunity set with Critical Strike or Augmentation as well",
+    "Note": "You can pair {AS/Immunity} with {AS/Augmentation} or {AS/Critical Strike} as well",
     "Talisman": [
-      "$aemrs"
+      "$CPdps"
     ]
   }
 }
