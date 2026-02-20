@@ -21,6 +21,8 @@ const jp: Record<TranslationKey, string> = {
   'common.loading': '読み込み中...',
   'common.coming_soon': '近日公開',
   'common.updated': '{monthYear} 更新',
+  'common.back_to_top': 'トップへ戻る',
+  'common.language': '言語',
 
   // Contributors
   'contributors.title': 'コントリビューター',
@@ -33,6 +35,10 @@ const jp: Record<TranslationKey, string> = {
   'changelog.description':
     'Outerpedia の更新情報（ガイド、キャラクター、ツールなど）を確認できます。',
   'changelog.view_full': 'すべての更新履歴を見る',
+  'changelog.type.feature': '新機能',
+  'changelog.type.update': '更新',
+  'changelog.type.fix': '修正',
+  'changelog.type.balance': 'バランス',
 
   // Page metadata
   'page.home.title': 'Outerpedia — アウタープレーン Wiki & データベース',
@@ -129,6 +135,7 @@ const jp: Record<TranslationKey, string> = {
   'footer.social.youtube': 'YouTube',
   'footer.social.official_x': '公式 X (Twitter)',
   'footer.social.publisher_x': 'パブリッシャー X (Twitter)',
+  'footer.social.rss': 'RSS',
   'footer.disclaimer':
     'Outerpediaは非公式のファンメイドプロジェクトです。キャラクター、画像、その他のゲームアセットを含むアウタープレーンに関するすべてのコンテンツはVAGAMES CORPの所有物です。本サイトはVAGAMES CORPとの提携、承認、またはスポンサーシップを受けていません。',
 

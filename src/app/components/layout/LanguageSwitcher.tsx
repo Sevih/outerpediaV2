@@ -15,7 +15,7 @@ function toFlag(code: string): string {
 }
 
 export default function LanguageSwitcher() {
-  const { lang } = useI18n();
+  const { lang, t } = useI18n();
   const pathname = usePathname();
 
   const onChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -51,9 +51,9 @@ export default function LanguageSwitcher() {
 
   return (
     <label className="inline-flex items-center gap-2 text-sm">
-      <span className="sr-only">Language</span>
+      <span className="sr-only">{t('common.language')}</span>
       <select
-        aria-label="Language"
+        aria-label={t('common.language')}
         className="rounded-md border border-zinc-700 bg-zinc-900 px-2 py-1"
         value={lang}
         onChange={onChange}

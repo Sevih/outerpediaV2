@@ -47,7 +47,7 @@ export default async function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-zinc-200"
           >
-            <FaRss /> RSS
+            <FaRss /> {t('footer.social.rss')}
           </Link>
           <Link
             href={`/${lang}/legal`}

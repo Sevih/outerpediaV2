@@ -97,9 +97,9 @@ export default function PromoCodes({ codes, lang, limit, showAll, t }: Props) {
   };
 
   const statusLabel = (s: Status) => {
-    if (s === 'active') return t.active ?? 'Active';
-    if (s === 'upcoming') return t.upcoming ?? 'Upcoming';
-    return t.expired ?? 'Expired';
+    if (s === 'active') return t.active ?? '';
+    if (s === 'upcoming') return t.upcoming ?? '';
+    return t.expired ?? '';
   };
 
   return (

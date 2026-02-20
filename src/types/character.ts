@@ -9,16 +9,13 @@ type LocalizedLevels = Record<string, string>;
 /** Localized enhancement levels (keys: "2"-"5" with _jp/_kr/_zh suffixes, values are string arrays) */
 type LocalizedEnhancements = Record<string, string[]>;
 
-export type BurnEffect = {
+export type BurnEffect = WithLocalizedFields<{
   effect: string;
-  effect_jp?: string;
-  effect_kr?: string;
-  effect_zh?: string;
   cost: number;
   level: number;
   offensive: boolean;
   target: string;
-};
+}, 'effect'>;
 
 export type SkillData = WithLocalizedFields<{
   name: string;

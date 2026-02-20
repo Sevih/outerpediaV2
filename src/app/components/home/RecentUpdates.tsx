@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import type { Messages } from '@/i18n';
+import type { TranslationKey } from '@/i18n/locales/en';
 import { getChangelog } from '@/lib/changelog';
 import type { ChangelogType } from '@/types/changelog';
 
-const TYPE_STYLES: Record<ChangelogType, { label: string; className: string }> =
-  {
-    feature: { label: 'FEATURE', className: 'bg-emerald-600/20 text-emerald-400' },
-    update: { label: 'UPDATE', className: 'bg-blue-600/20 text-blue-400' },
-    fix: { label: 'FIX', className: 'bg-red-600/20 text-red-400' },
-    balance: { label: 'BALANCE', className: 'bg-amber-600/20 text-amber-400' },
-  };
+const TYPE_STYLES: Record<ChangelogType, string> = {
+  feature: 'bg-emerald-600/20 text-emerald-400',
+  update: 'bg-blue-600/20 text-blue-400',
+  fix: 'bg-red-600/20 text-red-400',
+  balance: 'bg-amber-600/20 text-amber-400',
+};
 
 type Props = {
   lang: Lang;
@@ -24,16 +24,14 @@ export default function RecentUpdates({ lang, t }: Props) {
     <section>
       <h2 className="mx-auto mb-6 text-2xl">{t['home.section.updates']}</h2>
       <div className="space-y-3">
-        {entries.map((entry, i) => {
-          const style = TYPE_STYLES[entry.type];
-          return (
+        {entries.map((entry, i) => (
             <article key={`${entry.date}-${i}`} className="card p-4">
               <div className="mb-2 flex items-center gap-3">
                 <time className="text-sm text-zinc-500">{entry.date}</time>
                 <span
-                  className={`rounded px-2 py-0.5 text-xs font-semibold ${style.className}`}
+                  className={`rounded px-2 py-0.5 text-xs font-semibold uppercase ${TYPE_STYLES[entry.type]}`}
                 >
-                  {style.label}
+                  {t[`changelog.type.${entry.type}` as TranslationKey]}
                 </span>
               </div>
               <p className="h2-style mb-2">{entry.title}</p>
@@ -45,8 +43,7 @@ export default function RecentUpdates({ lang, t }: Props) {
                 ))}
               </ul>
             </article>
-          );
-        })}
+        ))}
       </div>
       <div className="mt-4 text-center">
         <Link

@@ -3,17 +3,15 @@
 import Link from 'next/link';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
+import type { WithLocalizedFields } from '@/types/common';
 import CharacterPortrait from './CharacterPortrait';
 
-export type CoreFusionLink = {
+export type CoreFusionLink = WithLocalizedFields<{
   id: string;
   slug: string;
   name: string;
-  name_jp?: string;
-  name_kr?: string;
-  name_zh?: string;
   type: 'core-fusion' | 'original';
-};
+}, 'name'>;
 
 type Props = {
   link: CoreFusionLink;

@@ -21,6 +21,8 @@ const en = {
   'common.loading': 'Loading...',
   'common.coming_soon': 'Coming soon.',
   'common.updated': 'Updated {monthYear}',
+  'common.back_to_top': 'Back to top',
+  'common.language': 'Language',
 
   // Contributors
   'contributors.title': 'Outerpedia Contributors',
@@ -33,6 +35,10 @@ const en = {
   'changelog.description':
     'Track all updates made to Outerpedia: guides, characters, tools, and more.',
   'changelog.view_full': 'View full changelog',
+  'changelog.type.feature': 'Feature',
+  'changelog.type.update': 'Update',
+  'changelog.type.fix': 'Fix',
+  'changelog.type.balance': 'Balance',
 
   // Page metadata
   'page.home.title': 'Outerpedia — Outerplane Wiki & Database',
@@ -129,6 +135,7 @@ const en = {
   'footer.social.youtube': 'YouTube',
   'footer.social.official_x': 'Official X (Twitter)',
   'footer.social.publisher_x': 'Publisher X (Twitter)',
+  'footer.social.rss': 'RSS',
   'footer.disclaimer':
     'Outerpedia is an unofficial fan-made project. All content related to Outerplane, including characters, images, and other game assets, is the property of VAGAMES CORP. This website is not affiliated with, endorsed by, or sponsored by VAGAMES CORP in any way.',
 

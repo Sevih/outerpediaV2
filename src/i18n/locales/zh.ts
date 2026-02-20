@@ -21,6 +21,8 @@ const zh: Record<TranslationKey, string> = {
   'common.loading': '加载中...',
   'common.coming_soon': '即将推出。',
   'common.updated': '{monthYear} 更新',
+  'common.back_to_top': '返回顶部',
+  'common.language': '语言',
 
   // Contributors
   'contributors.title': '贡献者',
@@ -33,6 +35,10 @@ const zh: Record<TranslationKey, string> = {
   'changelog.description':
     '追踪Outerpedia全部更新改动——攻略、角色、工具等。',
   'changelog.view_full': '查看完整更新日志',
+  'changelog.type.feature': '新功能',
+  'changelog.type.update': '更新',
+  'changelog.type.fix': '修复',
+  'changelog.type.balance': '平衡',
 
   // Page metadata
   'page.home.title': 'Outerpedia — 异域战记 Wiki & 数据库',
@@ -129,6 +135,7 @@ const zh: Record<TranslationKey, string> = {
   'footer.social.youtube': 'YouTube',
   'footer.social.official_x': '官方 X (Twitter)',
   'footer.social.publisher_x': '发行商 X (Twitter)',
+  'footer.social.rss': 'RSS',
   'footer.disclaimer':
     'Outerpedia是非官方粉丝制作项目。与异域战记相关的所有内容（包括角色、图片及其他游戏资产）均为VAGAMES CORP所有。本网站与VAGAMES CORP无任何关联、认可或赞助关系。',
 

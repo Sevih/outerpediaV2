@@ -54,7 +54,7 @@ export default function SkillCard({ skill }: Props) {
           </div>
           {skill.burnEffect && (
             <div className="absolute -top-1 -right-1 h-5 w-5">
-              <Image src="/images/ui/skills/CM_Skill_Icon_Burst.webp" alt="Burst" fill sizes="20px" className="object-contain" />
+              <Image src="/images/ui/skills/CM_Skill_Icon_Burst.webp" alt={t('page.character.toc.burst')} fill sizes="20px" className="object-contain" />
             </div>
           )}
         </div>

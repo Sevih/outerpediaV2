@@ -21,6 +21,8 @@ const kr: Record<TranslationKey, string> = {
   'common.loading': '로딩 중...',
   'common.coming_soon': '곧 공개 예정.',
   'common.updated': '{monthYear} 업데이트',
+  'common.back_to_top': '맨 위로',
+  'common.language': '언어',
 
   // Contributors
   'contributors.title': '기여자',
@@ -33,6 +35,10 @@ const kr: Record<TranslationKey, string> = {
   'changelog.description':
     'Outerpedia의 모든 업데이트(가이드, 캐릭터, 도구 등)를 확인하세요.',
   'changelog.view_full': '전체 변경 로그 보기',
+  'changelog.type.feature': '신기능',
+  'changelog.type.update': '업데이트',
+  'changelog.type.fix': '수정',
+  'changelog.type.balance': '밸런스',
 
   // Page metadata
   'page.home.title': 'Outerpedia — 아우터플레인 위키 & 데이터베이스',
@@ -129,6 +135,7 @@ const kr: Record<TranslationKey, string> = {
   'footer.social.youtube': 'YouTube',
   'footer.social.official_x': '공식 X (Twitter)',
   'footer.social.publisher_x': '퍼블리셔 X (Twitter)',
+  'footer.social.rss': 'RSS',
   'footer.disclaimer':
     'Outerpedia는 비공식 팬메이드 프로젝트입니다. 캐릭터, 이미지 및 기타 게임 에셋을 포함한 아우터플레인 관련 모든 콘텐츠는 VAGAMES CORP의 재산입니다. 이 웹사이트는 VAGAMES CORP와 어떠한 제휴, 보증 또는 후원 관계도 없습니다.',
 
