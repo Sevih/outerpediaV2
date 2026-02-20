@@ -4,7 +4,7 @@ import Image from 'next/image';
 import weaponsData from '@data/equipment/weapon.json';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
+import { formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
 import type { Weapon } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 
@@ -27,6 +27,7 @@ export default function WeaponInline({ name }: Props) {
     : weapon.effect_desc1
       ? l(weapon, 'effect_desc1', lang)
       : null;
+  const baseDesc = weapon.effect_desc1 ? l(weapon, 'effect_desc1', lang) : null;
 
   const tooltip = (
     <div className="flex gap-2">
@@ -37,8 +38,23 @@ export default function WeaponInline({ name }: Props) {
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-equipment">{label}</span>
         {weapon.class && <span className="text-xs text-neutral-400">{weapon.class}</span>}
-        {effectName && <span className="text-xs text-buff">{effectName}</span>}
-        {effectDesc && <p className="text-xs text-neutral-200">{formatEffectText(effectDesc)}</p>}
+        {effectName && (
+          <div className="inline-flex w-fit items-center gap-1.5 rounded-full bg-zinc-500/40 px-2.5 py-1">
+            {weapon.effect_icon && (
+              <div className="relative h-4 w-4 shrink-0">
+                <Image
+                  src={`/images/ui/effect/${weapon.effect_icon}.webp`}
+                  alt=""
+                  fill
+                  sizes="16px"
+                  className="object-contain"
+                />
+              </div>
+            )}
+            <span className="text-xs text-buff">Lv. 5 {effectName}</span>
+          </div>
+        )}
+        {effectDesc && <p className="text-xs text-neutral-200">{formatScaledEffect(effectDesc, baseDesc)}</p>}
       </div>
     </div>
   );

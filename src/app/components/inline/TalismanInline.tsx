@@ -4,7 +4,7 @@ import Image from 'next/image';
 import talismansData from '@data/equipment/talisman.json';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
+import { formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
 import type { Talisman } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
@@ -22,9 +22,11 @@ export default function TalismanInline({ name }: Props) {
   }
 
   const label = l(talisman, 'name', lang);
-  const effectName = l(talisman, 'effect_name', lang);
-  const effectLv1 = l(talisman, 'effect_desc1', lang);
-  const effectLv4 = l(talisman, 'effect_desc4', lang);
+  const effectName = l(talisman, 'effect_name', lang)
+    ?.replace('Action Point', 'AP')
+    .replace('Chain Point', 'CP');
+  const effectDesc1 = l(talisman, 'effect_desc1', lang);
+  const effectDesc4 = l(talisman, 'effect_desc4', lang);
 
   const tooltip = (
     <div className="flex gap-2">
@@ -34,12 +36,31 @@ export default function TalismanInline({ name }: Props) {
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-equipment">{label}</span>
-        <span className="text-xs text-buff">{effectName}</span>
-        {effectLv1 && (
-          <p className="text-xs text-neutral-400">{formatEffectText(effectLv1)}</p>
+        {effectName && (
+          <div className="inline-flex w-fit items-center gap-1.5 rounded-full bg-zinc-500/40 px-2.5 py-1">
+            {talisman.effect_icon && (
+              <div className="relative h-4 w-4 shrink-0">
+                <Image
+                  src={`/images/ui/effect/${talisman.effect_icon}.webp`}
+                  alt=""
+                  fill
+                  sizes="16px"
+                  className="object-contain"
+                />
+              </div>
+            )}
+            <span className="text-xs text-buff">{effectName}</span>
+          </div>
         )}
-        {effectLv4 && (
-          <p className="text-xs italic text-equipment">{formatEffectText(effectLv4)}</p>
+        {effectDesc1 && (
+          <p className="text-xs text-neutral-200">
+            <span className="text-zinc-500">Lv. 0</span> {formatScaledEffect(effectDesc1, effectDesc4)}
+          </p>
+        )}
+        {effectDesc4 && effectDesc4 !== effectDesc1 && (
+          <p className="text-xs text-neutral-200">
+            <span className="text-zinc-500">Lv. 10</span> {formatScaledEffect(effectDesc4, effectDesc1)}
+          </p>
         )}
       </div>
     </div>
