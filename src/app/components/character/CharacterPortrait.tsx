@@ -2,7 +2,7 @@ import Image from 'next/image';
 import charIndex from '@data/generated/characters-index.json';
 import type { ElementType, ClassType, RarityType } from '@/types/enums';
 import type { CharacterIndex } from '@/types/character';
-import { ELEMENT_BORDER } from '@/lib/theme';
+
 
 const characters = charIndex as Record<string, CharacterIndex>;
 
@@ -75,7 +75,7 @@ export default function CharacterPortrait({
   const position = cropPosition ?? CROP_OVERRIDES[id] ?? DEFAULT_CROP;
 
   return (
-    <div className={`relative overflow-hidden rounded-lg border-2 ${element ? ELEMENT_BORDER[element] : 'border-gray-600'} bg-gray-900 ${s.cls} ${className}`}>
+    <div className={`relative overflow-hidden rounded-lg border border-gray-700 bg-gray-900 ${s.cls} ${className}`}>
       <Image
         fill
         sizes={`${Math.round(s.px * FACE_ZOOM)}px`}

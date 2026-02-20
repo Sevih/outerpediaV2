@@ -19,6 +19,8 @@ import ChainDualSection from '@/app/components/character/ChainDualSection';
 import GearRecoSection from '@/app/components/character/GearRecoSection';
 import ProsConsSection from '@/app/components/character/ProsConsSection';
 import SynergiesSection from '@/app/components/character/SynergiesSection';
+import CoreFusionBanner from '@/app/components/character/CoreFusionBanner';
+import type { CoreFusionLink } from '@/app/components/character/CoreFusionBanner';
 import YouTubeEmbed from '@/app/components/ui/YouTubeEmbed';
 
 type TagEntry = {
@@ -45,6 +47,7 @@ type Props = {
   partners: CharacterSynergies | null;
   buffMap: Record<string, Effect>;
   debuffMap: Record<string, Effect>;
+  coreFusionLink: CoreFusionLink | null;
 };
 
 export default function CharacterDetailClient({
@@ -63,6 +66,7 @@ export default function CharacterDetailClient({
   partners,
   buffMap,
   debuffMap,
+  coreFusionLink,
 }: Props) {
   const { t } = useI18n();
 
@@ -107,6 +111,10 @@ export default function CharacterDetailClient({
           profile={profile}
           tags={tags}
         />
+
+        {coreFusionLink && (
+          <CoreFusionBanner link={coreFusionLink} />
+        )}
 
         {hasProsCons && prosCons && (
           <ProsConsSection prosCons={prosCons} />

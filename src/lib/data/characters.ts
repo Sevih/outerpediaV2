@@ -119,6 +119,23 @@ export async function getCharacterProsCons(slug: string): Promise<CharacterProsC
   }
 }
 
+/** Get a single character by ID (no slug resolution) */
+export async function getCharacterById(id: string): Promise<Character | null> {
+  try {
+    const raw = await readFile(join(CHARS_DIR, `${id}.json`), 'utf-8');
+    return JSON.parse(raw) as Character;
+  } catch {
+    return null;
+  }
+}
+
+/** Resolve a character ID to its readable slug */
+export async function resolveIdToSlug(id: string): Promise<string | null> {
+  const map = await getSlugToId();
+  const entry = Object.entries(map).find(([, v]) => v === id);
+  return entry ? entry[0] : null;
+}
+
 /** Get synergy / partner data for a character by readable slug */
 export async function getCharacterPartners(slug: string): Promise<CharacterSynergies | null> {
   try {

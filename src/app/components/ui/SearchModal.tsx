@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { FaSearch } from 'react-icons/fa';
+import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { ALL_PAGES } from '@/lib/nav';
@@ -186,15 +187,7 @@ export default function SearchModal({
                     onClick={() => navigate(idx)}
                     onMouseEnter={() => setSelectedIdx(idx)}
                   >
-                    <div className="relative size-8 shrink-0 overflow-hidden rounded">
-                      <Image
-                        src={`/images/characters/portrait/CT_${char._id}.webp`}
-                        alt={displayName}
-                        fill
-                        sizes="32px"
-                        className="object-cover"
-                      />
-                    </div>
+                    <CharacterPortrait id={char._id} name={displayName} size="xs" className="shrink-0" />
                     <span className="flex-1">{displayName}</span>
                     <div className="flex items-center gap-1">
                       <div className="relative size-4">

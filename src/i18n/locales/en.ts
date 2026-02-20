@@ -313,6 +313,12 @@ const en = {
   'page.character.skill.type.ultimate': 'Ultimate',
   'page.character.skill.type.passive': 'Passive',
   'page.character.skill.type.chain': 'Chain',
+  'page.character.skill.priority_title': 'Skill Upgrade Priority',
+  'page.character.skill.priority_rule_title': 'Skill up rule of thumb:',
+  'page.character.skill.priority_rule_1': 'Level 2 for Weakness Gauge damage',
+  'page.character.skill.priority_rule_2': 'Effect chance, effect duration & cooldown reductions.',
+  'page.character.skill.priority_rule_3': 'Damage increases (DPS only)',
+  'page.character.skill.priority_rule_chain': 'Chain passive can be left at level 2 until much later, the Weakness Gauge damage increase at level 5 is the only interesting part, so you can save skill manuals here until the more important skills are taken care of.',
   'page.character.ee.effect': 'Effect',
   'page.character.ee.effect_max': 'Effect (Lv.10)',
   'page.character.ee.main_stat': 'Main Stat',
@@ -338,6 +344,9 @@ const en = {
   'page.character.dual_effect': 'Dual Attack Effect',
   'page.character.stats.title': 'Base Stats',
   'page.character.stats.class_passive': 'Class Passive',
+  'page.character.core_fusion.available': 'Core Fusion available',
+  'page.character.core_fusion.original': 'Original character',
+  'page.character.core_fusion.skill_info': 'Unlocking Core Fusion costs {unlockCost} {material} (skills start at Lv.1). Each skill level upgrade costs {upgradeCost} {material} and raises all skills by 1 level. Total: {totalCost} {material} to fully max all skills.',
   'page.character.no_reco': 'No gear recommendation available yet.',
 } as const;
 

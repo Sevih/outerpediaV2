@@ -313,6 +313,12 @@ const kr: Record<TranslationKey, string> = {
   'page.character.skill.type.ultimate': '궁극기',
   'page.character.skill.type.passive': '패시브',
   'page.character.skill.type.chain': '체인',
+  'page.character.skill.priority_title': '스킬 강화 우선순위',
+  'page.character.skill.priority_rule_title': '스킬 강화 기본 규칙:',
+  'page.character.skill.priority_rule_1': '약점 게이지 데미지를 위해 레벨 2까지 올리기',
+  'page.character.skill.priority_rule_2': '효과 발동률, 효과 지속 시간, 쿨타임 감소',
+  'page.character.skill.priority_rule_3': '데미지 증가 (DPS 전용)',
+  'page.character.skill.priority_rule_chain': '체인 패시브는 나중까지 레벨 2로 두어도 됩니다. 레벨 5의 약점 게이지 데미지 증가만 중요하므로, 더 중요한 스킬이 완료될 때까지 스킬 교본을 아낄 수 있습니다.',
   'page.character.ee.effect': '효과',
   'page.character.ee.effect_max': '효과 (Lv.10)',
   'page.character.ee.main_stat': '메인 스탯',
@@ -338,6 +344,9 @@ const kr: Record<TranslationKey, string> = {
   'page.character.dual_effect': '협공 효과',
   'page.character.stats.title': '기본 스탯',
   'page.character.stats.class_passive': '클래스 패시브',
+  'page.character.core_fusion.available': '코어 융합 보유',
+  'page.character.core_fusion.original': '오리지널 캐릭터',
+  'page.character.core_fusion.skill_info': '코어 융합 해금에는 {material} {unlockCost}개가 필요합니다 (스킬 Lv.1부터 시작). 스킬 레벨 강화에는 {material} {upgradeCost}개를 소모하며, 모든 스킬 레벨이 1 상승합니다. 총: {totalCost}개의 {material}로 전체 최대화.',
   'page.character.no_reco': '아직 추천 장비가 없습니다.',
 };
 

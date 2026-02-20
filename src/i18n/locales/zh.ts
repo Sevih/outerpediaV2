@@ -313,6 +313,12 @@ const zh: Record<TranslationKey, string> = {
   'page.character.skill.type.ultimate': '必杀技',
   'page.character.skill.type.passive': '被动',
   'page.character.skill.type.chain': '连锁',
+  'page.character.skill.priority_title': '技能升级优先级',
+  'page.character.skill.priority_rule_title': '技能升级基本规则：',
+  'page.character.skill.priority_rule_1': '先升到2级以获得弱点条伤害',
+  'page.character.skill.priority_rule_2': '效果触发率、效果持续时间和冷却缩减',
+  'page.character.skill.priority_rule_3': '伤害提升（仅限DPS）',
+  'page.character.skill.priority_rule_chain': '连携被动可以保持2级不升，直到其他技能完成。5级的弱点条伤害提升是唯一有价值的部分，在更重要的技能升满之前可以节省技能书。',
   'page.character.ee.effect': '效果',
   'page.character.ee.effect_max': '效果（Lv.10）',
   'page.character.ee.main_stat': '主属性',
@@ -338,6 +344,9 @@ const zh: Record<TranslationKey, string> = {
   'page.character.dual_effect': '夹攻效果',
   'page.character.stats.title': '基础属性',
   'page.character.stats.class_passive': '职业被动',
+  'page.character.core_fusion.available': '核心融合可用',
+  'page.character.core_fusion.original': '原始角色',
+  'page.character.core_fusion.skill_info': '解锁核心融合需要{unlockCost}个{material}（技能从Lv.1开始）。每次升级消耗{upgradeCost}个{material}，所有技能等级提升1级。总计: {totalCost}个{material}即可全部满级。',
   'page.character.no_reco': '暂无推荐装备。',
 };
 

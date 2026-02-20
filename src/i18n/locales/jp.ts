@@ -313,6 +313,12 @@ const jp: Record<TranslationKey, string> = {
   'page.character.skill.type.ultimate': '必殺技',
   'page.character.skill.type.passive': 'パッシブ',
   'page.character.skill.type.chain': 'チェイン',
+  'page.character.skill.priority_title': 'スキル強化優先度',
+  'page.character.skill.priority_rule_title': 'スキル強化の基本ルール：',
+  'page.character.skill.priority_rule_1': '弱点ゲージダメージのためにレベル2まで上げる',
+  'page.character.skill.priority_rule_2': '効果発動率、効果持続時間、クールダウン短縮',
+  'page.character.skill.priority_rule_3': 'ダメージ増加（DPSのみ）',
+  'page.character.skill.priority_rule_chain': 'チェインパッシブはしばらくレベル2のままで構いません。レベル5の弱点ゲージダメージ増加だけが重要なので、より重要なスキルが完了するまでスキル教本を節約できます。',
   'page.character.ee.effect': '効果',
   'page.character.ee.effect_max': '効果（Lv.10）',
   'page.character.ee.main_stat': 'メインステータス',
@@ -338,6 +344,9 @@ const jp: Record<TranslationKey, string> = {
   'page.character.dual_effect': '連携攻撃効果',
   'page.character.stats.title': '基本ステータス',
   'page.character.stats.class_passive': 'クラスパッシブ',
+  'page.character.core_fusion.available': 'コアフュージョンあり',
+  'page.character.core_fusion.original': 'オリジナルキャラクター',
+  'page.character.core_fusion.skill_info': 'コアフュージョンの解放には{unlockCost}個の{material}が必要です（スキルはLv.1から開始）。スキルレベルの強化には{upgradeCost}個の{material}を消費し、全スキルのレベルが1上がります。合計: {totalCost}個の{material}で全スキル最大化。',
   'page.character.no_reco': '推奨装備はまだありません。',
 };
 

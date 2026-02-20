@@ -86,6 +86,19 @@ type BaseCharacter = {
   skill_priority?: SkillPriority;
   transcend?: Transcendence;
   skills: Partial<Record<SkillKey, SkillData>>;
+  hasCoreFusion?: boolean;
+  coreFusionId?: string;
+  fusionType?: string;
+  originalCharacter?: string;
+  fusionRequirements?: {
+    transcendence: number;
+    material: { id: string; quantity: number };
+  };
+  fusionLevels?: {
+    level: number;
+    requireItemID: string;
+    skillUpgrades: Record<string, { value: string; level: string | null }>;
+  }[];
 };
 
 export type Character = WithLocalizedFields<

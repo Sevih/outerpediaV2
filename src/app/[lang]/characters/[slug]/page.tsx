@@ -4,7 +4,7 @@ import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
 import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT } from '@/i18n';
-import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners } from '@/lib/data/characters';
+import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners, getCharacterById, resolveIdToSlug } from '@/lib/data/characters';
 import { getExclusiveEquipment, getWeapons, getAmulets, getTalismans, getArmorSets } from '@/lib/data/equipment';
 import { resolveRecoPresets } from '@/lib/data/reco';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
@@ -13,6 +13,7 @@ import type { Effect } from '@/types/effect';
 import { l } from '@/lib/i18n/localize';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
+import type { CoreFusionLink } from '@/app/components/character/CoreFusionBanner';
 import CharacterDetailClient from './CharacterDetailClient';
 
 export const revalidate = 86400;
@@ -94,6 +95,29 @@ export default async function CharacterDetailPage({ params }: Props) {
   const ee = eeMap[character.ID] ?? null;
   const giftItems = giftItemsMap[character.gift as keyof typeof giftItemsMap] ?? [];
 
+  // Resolve core-fusion cross-link
+  let coreFusionLink: CoreFusionLink | null = null;
+  const linkedId = character.hasCoreFusion ? character.coreFusionId
+    : character.fusionType === 'core-fusion' ? character.originalCharacter
+    : null;
+  if (linkedId) {
+    const [linkedChar, linkedSlug] = await Promise.all([
+      getCharacterById(linkedId),
+      resolveIdToSlug(linkedId),
+    ]);
+    if (linkedChar && linkedSlug) {
+      coreFusionLink = {
+        id: linkedId,
+        slug: linkedSlug,
+        name: linkedChar.Fullname,
+        name_jp: linkedChar.Fullname_jp,
+        name_kr: linkedChar.Fullname_kr,
+        name_zh: linkedChar.Fullname_zh,
+        type: character.hasCoreFusion ? 'core-fusion' : 'original',
+      };
+    }
+  }
+
   return (
     <CharacterDetailClient
       character={character}
@@ -111,6 +135,7 @@ export default async function CharacterDetailPage({ params }: Props) {
       partners={partners}
       buffMap={buffMap}
       debuffMap={debuffMap}
+      coreFusionLink={coreFusionLink}
     />
   );
 }
