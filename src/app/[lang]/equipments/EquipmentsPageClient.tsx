@@ -2,9 +2,11 @@
 
 import { useState, useMemo } from 'react';
 import type { Weapon, Amulet, Talisman, ArmorSet, ExclusiveEquipment } from '@/types/equipment';
+import type { Effect } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
 import type { Messages } from '@/i18n';
 import Tabs from '@/app/components/ui/Tabs';
+import { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import { WeaponCard, AmuletCard, TalismanCard, SetCard, EECard } from '@/app/components/equipment';
 
 const TAB_KEYS = ['weapons', 'accessories', 'sets', 'talismans', 'ee'] as const;
@@ -17,12 +19,14 @@ type Props = {
   sets: ArmorSet[];
   ee: Record<string, ExclusiveEquipment>;
   eeCharNames: Record<string, string>;
+  buffMap: Record<string, Effect>;
+  debuffMap: Record<string, Effect>;
   lang: Lang;
   messages: Messages;
 };
 
 export default function EquipmentsPageClient({
-  weapons, amulets, talismans, sets, ee, eeCharNames, lang, messages,
+  weapons, amulets, talismans, sets, ee, eeCharNames, buffMap, debuffMap, lang, messages,
 }: Props) {
   const [activeTab, setActiveTab] = useState<TabKey>('weapons');
 
@@ -34,6 +38,7 @@ export default function EquipmentsPageClient({
   );
 
   return (
+    <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
     <div className="flex flex-col gap-6">
       <Tabs
         items={[...TAB_KEYS]}
@@ -96,5 +101,6 @@ export default function EquipmentsPageClient({
       )}
 
     </div>
+    </EffectsProvider>
   );
 }

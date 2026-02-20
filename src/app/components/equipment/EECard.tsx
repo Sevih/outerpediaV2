@@ -4,7 +4,8 @@ import Image from 'next/image';
 import type { ExclusiveEquipment } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText, formatScaledEffect } from '@/lib/format-text';
+import { formatEffectText, formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
+import BuffDebuffDisplay from '@/app/components/character/BuffDebuffDisplay';
 
 type Props = {
   ee: ExclusiveEquipment;
@@ -23,14 +24,23 @@ export default function EECard({ ee, charId, charName, lang }: Props) {
     <div className="card flex flex-col gap-2 p-4">
       {/* Top row: character portrait + EE name/charName + rank */}
       <div className="flex items-start gap-3">
-        <div className="relative h-17.5 w-17.5 shrink-0 overflow-hidden rounded">
+        <div className="relative h-17.5 w-17.5 shrink-0 overflow-hidden rounded-lg">
           <Image
-            src={`/images/characters/ee/${charId}.webp`}
-            alt={name}
+            src={getRarityBgPath('legendary')}
+            alt=""
             fill
             sizes="70px"
             className="object-contain"
           />
+          <div className="absolute inset-1.5">
+            <Image
+              src={`/images/characters/ee/${charId}.webp`}
+              alt={name}
+              fill
+              sizes="58px"
+              className="object-contain"
+            />
+          </div>
         </div>
         <div className="flex min-w-0 flex-1 flex-col gap-1">
           <div className="flex items-start justify-between gap-2">
@@ -75,20 +85,7 @@ export default function EECard({ ee, charId, charName, lang }: Props) {
       )}
 
       {/* Full-width: buff/debuff icons */}
-      {(ee.buff.length > 0 || ee.debuff.length > 0) && (
-        <div className="flex flex-wrap gap-1">
-          {ee.buff.map((b) => (
-            <div key={b} className="relative h-5 w-5">
-              <Image src={`/images/ui/effect/${b}.webp`} alt={b} fill sizes="20px" className="object-contain" />
-            </div>
-          ))}
-          {ee.debuff.map((d) => (
-            <div key={d} className="relative h-5 w-5">
-              <Image src={`/images/ui/effect/${d}.webp`} alt={d} fill sizes="20px" className="object-contain" />
-            </div>
-          ))}
-        </div>
-      )}
+      <BuffDebuffDisplay buffs={ee.buff} debuffs={ee.debuff} />
     </div>
   );
 }
