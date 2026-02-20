@@ -162,7 +162,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
               </div>
             </>
           ) : (
-            <p className="text-sm italic text-zinc-500">No stats available</p>
+            <p className="text-sm italic text-zinc-500">{t('page.character.stats.no_data')}</p>
           )}
         </div>
 

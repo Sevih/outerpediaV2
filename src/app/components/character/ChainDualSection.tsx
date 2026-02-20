@@ -90,7 +90,7 @@ export default function ChainDualSection({ character }: Props) {
               )}
               {adjustedWgrDual !== undefined && (
                 <span className="rounded bg-zinc-800 px-1.5 py-0.5">
-                  Dual {t('page.character.skill.wgr')} {adjustedWgrDual}
+                  {t('page.character.skill.dual_wgr')} {adjustedWgrDual}
                 </span>
               )}
             </div>

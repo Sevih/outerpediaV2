@@ -92,7 +92,7 @@ export default function OverviewSection({ character, profile, tags }: Props) {
               </span>
             )}
             <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm text-white ring-1 ring-white/10 ${ROLE_BG[character.role]}`}>
-              {character.role.charAt(0).toUpperCase() + character.role.slice(1)}
+              {t(`filters.roles.${character.role}` as TranslationKey)}
             </span>
           </div>
 
