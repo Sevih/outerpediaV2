@@ -74,6 +74,7 @@ const jp: Record<TranslationKey, string> = {
   'equip.filter.level': 'レベル',
   'equip.filter.search': '名前で検索...',
   'equip.filter.searchEE': '名前またはキャラで検索...',
+  'equip.filter.more': 'その他のフィルター',
   'equip.source.sr.ecology': '特別依頼:生態調査',
   'equip.source.sr.identification': '特別依頼:正体究明',
   'equip.detail.mainstats': 'メインステータス候補',

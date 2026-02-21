@@ -165,6 +165,8 @@ export default function EquipmentsPageClient({
   const showLevelFilter = activeTab === 'weapons' || activeTab === 'accessories';
   const showSourceFilter = activeTab === 'weapons' || activeTab === 'accessories' || activeTab === 'sets';
   const showMainStatFilter = activeTab === 'accessories';
+  const hasAdvancedFilters = showClassFilter || showLevelFilter || showSourceFilter || showMainStatFilter;
+  const hasActiveAdvanced = classFilter.length > 0 || levelFilter.length > 0 || sourceFilter.length > 0 || mainStatFilter.length > 0;
   const searchPlaceholder = activeTab === 'ee' ? t('equip.filter.searchEE') : t('equip.filter.search');
 
   // ── Source pill renderer ──
@@ -226,125 +228,139 @@ export default function EquipmentsPageClient({
       <div className="flex flex-col gap-3 items-center">
         <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={searchPlaceholder} />
 
-        {showClassFilter && showLevelFilter && (
-          <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center w-full">
-            <IconFilterGroup
-              label={t('filters.classes')}
-              items={CLASSES_UI}
-              filter={classFilter}
-              onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
-              onReset={() => setClassFilter([])}
-              imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
-            />
-            <div className="w-full flex flex-col items-center">
-              <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('equip.filter.level')}</p>
-              <div className="flex gap-2 justify-center">
-                <FilterPill active={levelFilter.length === 0} onClick={() => setLevelFilter([])} className="h-8 px-3">
-                  {t('common.all')}
-                </FilterPill>
-                {LEVELS.map(lv => (
-                  <FilterPill
-                    key={lv}
-                    active={levelFilter.includes(lv)}
-                    onClick={() => toggleArray(setLevelFilter, lv, LEVELS)}
-                    className="h-8 px-3"
-                  >
-                    <div className="flex items-center -space-x-1">
-                      {Array.from({ length: lv }, (_, i) => (
-                        <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="star" width={14} height={14} style={{ width: 14, height: 14 }} />
+        {hasAdvancedFilters && (
+          <details className="w-full group">
+            <summary className="mx-auto flex w-fit cursor-pointer select-none items-center gap-1.5 text-xs text-zinc-400 hover:text-zinc-200 transition-colors">
+              <svg className="h-3 w-3 transition-transform group-open:rotate-90" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 2.5L8 6L4.5 9.5" /></svg>
+              {t('equip.filter.more')}
+              {hasActiveAdvanced && (
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-400" />
+              )}
+            </summary>
+
+            <div className="flex flex-col gap-3 items-center pt-3">
+              {showClassFilter && showLevelFilter && (
+                <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center w-full">
+                  <IconFilterGroup
+                    label={t('filters.classes')}
+                    items={CLASSES_UI}
+                    filter={classFilter}
+                    onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
+                    onReset={() => setClassFilter([])}
+                    imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
+                  />
+                  <div className="w-full flex flex-col items-center">
+                    <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('equip.filter.level')}</p>
+                    <div className="flex gap-2 justify-center">
+                      <FilterPill active={levelFilter.length === 0} onClick={() => setLevelFilter([])} className="h-8 px-3">
+                        {t('common.all')}
+                      </FilterPill>
+                      {LEVELS.map(lv => (
+                        <FilterPill
+                          key={lv}
+                          active={levelFilter.includes(lv)}
+                          onClick={() => toggleArray(setLevelFilter, lv, LEVELS)}
+                          className="h-8 px-3"
+                        >
+                          <div className="flex items-center -space-x-1">
+                            {Array.from({ length: lv }, (_, i) => (
+                              <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="star" width={14} height={14} style={{ width: 14, height: 14 }} />
+                            ))}
+                          </div>
+                        </FilterPill>
                       ))}
                     </div>
-                  </FilterPill>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {showClassFilter && !showLevelFilter && (
-          <IconFilterGroup
-            label={t('filters.classes')}
-            items={CLASSES_UI}
-            filter={classFilter}
-            onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
-            onReset={() => setClassFilter([])}
-            imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
-          />
-        )}
-
-        {showSourceFilter && (
-          <div className="w-full flex flex-col items-center">
-            <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('equip.filter.source')}</p>
-            {isGearTab ? (
-              <div className="flex flex-col gap-2 items-center">
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <FilterPill
-                    active={sourceFilter.length === 0}
-                    onClick={() => setSourceFilter([])}
-                    className="h-10 px-3"
-                  >
-                    {t('common.all')}
-                  </FilterPill>
-                  {gearBossFilters.map(renderSourcePill)}
-                </div>
-                {gearOtherFilters.length > 0 && (
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {gearOtherFilters.map(renderSourcePill)}
                   </div>
-                )}
-              </div>
-            ) : (
-              <div className="flex flex-wrap gap-2 justify-center">
-                <FilterPill
-                  active={sourceFilter.length === 0}
-                  onClick={() => setSourceFilter([])}
-                  className="h-10 px-3"
-                >
-                  {t('common.all')}
-                </FilterPill>
-                {setSourceFilters.map(renderSourcePill)}
-              </div>
-            )}
-          </div>
-        )}
+                </div>
+              )}
 
-        {showMainStatFilter && mainStatsOptions.length > 0 && (
-          <div className="w-full flex flex-col items-center">
-            <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('equip.detail.mainstats')}</p>
-            <div className="flex flex-wrap gap-2 justify-center">
-              <FilterPill
-                active={mainStatFilter.length === 0}
-                onClick={() => setMainStatFilter([])}
-                className="h-8 px-3"
-              >
-                {t('common.all')}
-              </FilterPill>
-              {mainStatsOptions.map(stat => {
-                const info = (statsData as Record<string, { label: string; icon: string }>)[stat];
-                return (
-                  <FilterPill
-                    key={stat}
-                    active={mainStatFilter.includes(stat)}
-                    onClick={() => toggleArray(setMainStatFilter, stat, mainStatsOptions)}
-                    title={info?.label ?? stat}
-                    className="h-8 px-2"
-                  >
-                    {info ? (
-                      <Image
-                        src={`/images/ui/effect/${info.icon}`}
-                        alt={info.label}
-                        width={20}
-                        height={20}
-                        style={{ width: 20, height: 20 }}
-                      />
-                    ) : (
-                      <span className="text-xs">{stat}</span>
-                    )}
-                  </FilterPill>
-                );
-              })}
+              {showClassFilter && !showLevelFilter && (
+                <IconFilterGroup
+                  label={t('filters.classes')}
+                  items={CLASSES_UI}
+                  filter={classFilter}
+                  onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
+                  onReset={() => setClassFilter([])}
+                  imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
+                />
+              )}
+
+              {showSourceFilter && (
+                <div className="w-full flex flex-col items-center">
+                  <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('equip.filter.source')}</p>
+                  {isGearTab ? (
+                    <div className="flex flex-col gap-2 items-center">
+                      <div className="flex flex-wrap gap-2 justify-center">
+                        <FilterPill
+                          active={sourceFilter.length === 0}
+                          onClick={() => setSourceFilter([])}
+                          className="h-10 px-3"
+                        >
+                          {t('common.all')}
+                        </FilterPill>
+                        {gearBossFilters.map(renderSourcePill)}
+                      </div>
+                      {gearOtherFilters.length > 0 && (
+                        <div className="flex flex-wrap gap-2 justify-center">
+                          {gearOtherFilters.map(renderSourcePill)}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <FilterPill
+                        active={sourceFilter.length === 0}
+                        onClick={() => setSourceFilter([])}
+                        className="h-10 px-3"
+                      >
+                        {t('common.all')}
+                      </FilterPill>
+                      {setSourceFilters.map(renderSourcePill)}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {showMainStatFilter && mainStatsOptions.length > 0 && (
+                <div className="w-full flex flex-col items-center">
+                  <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('equip.detail.mainstats')}</p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <FilterPill
+                      active={mainStatFilter.length === 0}
+                      onClick={() => setMainStatFilter([])}
+                      className="h-8 px-3"
+                    >
+                      {t('common.all')}
+                    </FilterPill>
+                    {mainStatsOptions.map(stat => {
+                      const info = (statsData as Record<string, { label: string; icon: string }>)[stat];
+                      return (
+                        <FilterPill
+                          key={stat}
+                          active={mainStatFilter.includes(stat)}
+                          onClick={() => toggleArray(setMainStatFilter, stat, mainStatsOptions)}
+                          title={info?.label ?? stat}
+                          className="h-8 px-2"
+                        >
+                          {info ? (
+                            <Image
+                              src={`/images/ui/effect/${info.icon}`}
+                              alt={info.label}
+                              width={20}
+                              height={20}
+                              style={{ width: 20, height: 20 }}
+                            />
+                          ) : (
+                            <span className="text-xs">{stat}</span>
+                          )}
+                        </FilterPill>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
+          </details>
         )}
       </div>
 

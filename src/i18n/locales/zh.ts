@@ -74,6 +74,7 @@ const zh: Record<TranslationKey, string> = {
   'equip.filter.level': '等级',
   'equip.filter.search': '按名称搜索...',
   'equip.filter.searchEE': '按名称或角色搜索...',
+  'equip.filter.more': '更多筛选',
   'equip.source.sr.ecology': '特别委托:生态调查',
   'equip.source.sr.identification': '特别委托:查清身份',
   'equip.detail.mainstats': '可选主属性',

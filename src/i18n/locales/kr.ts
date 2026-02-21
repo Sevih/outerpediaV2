@@ -74,6 +74,7 @@ const kr: Record<TranslationKey, string> = {
   'equip.filter.level': '레벨',
   'equip.filter.search': '이름으로 검색...',
   'equip.filter.searchEE': '이름 또는 캐릭터로 검색...',
+  'equip.filter.more': '더 많은 필터',
   'equip.source.sr.ecology': '특별 의뢰 : 생태 조사',
   'equip.source.sr.identification': '특별 의뢰 : 정체 규명',
   'equip.detail.mainstats': '가능한 메인 스탯',

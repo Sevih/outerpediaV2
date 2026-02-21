@@ -74,6 +74,7 @@ const en = {
   'equip.filter.level': 'Level',
   'equip.filter.search': 'Search by name...',
   'equip.filter.searchEE': 'Search by name or character...',
+  'equip.filter.more': 'More Filters',
   'equip.source.sr.ecology': 'Special Request: Ecology Study',
   'equip.source.sr.identification': 'Special Request: Identification',
   'equip.detail.mainstats': 'Possible Main Stats',
