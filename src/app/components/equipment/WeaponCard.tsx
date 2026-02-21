@@ -1,18 +1,23 @@
 'use client';
 
 import Image from 'next/image';
-import type { Weapon } from '@/types/equipment';
+import Link from 'next/link';
+import type { Weapon, BossDisplayMap } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
-import { formatScaledEffect } from '@/lib/format-text';
+import { useI18n } from '@/lib/contexts/I18nContext';
+import { formatScaledEffect, slugifyEquipment } from '@/lib/format-text';
 import EquipmentIcon from './EquipmentIcon';
+import EquipmentSource from './EquipmentSource';
 
 type Props = {
   weapon: Weapon;
   lang: Lang;
+  bossMap: BossDisplayMap;
 };
 
-export default function WeaponCard({ weapon, lang }: Props) {
+export default function WeaponCard({ weapon, lang, bossMap }: Props) {
+  const { t } = useI18n();
   const name = l(weapon, 'name', lang);
   const effectName = weapon.effect_name ? l(weapon, 'effect_name', lang) : null;
   const effectDesc4 = weapon.effect_desc4 ? l(weapon, 'effect_desc4', lang) : null;
@@ -20,7 +25,7 @@ export default function WeaponCard({ weapon, lang }: Props) {
   const effectDesc = effectDesc4 ?? effectDesc1;
 
   return (
-    <div className="card flex flex-col gap-2 p-4">
+    <Link href={`/${lang}/equipments/${slugifyEquipment(weapon.name)}`} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/class/effect pill */}
       <div className="flex items-start gap-3">
         <EquipmentIcon
@@ -47,7 +52,7 @@ export default function WeaponCard({ weapon, lang }: Props) {
                   className="object-contain"
                 />
               </div>
-              <span className="text-xs text-zinc-400">{weapon.class}</span>
+              <span className="text-xs text-zinc-400">{t(`sys.class.${weapon.class.toLowerCase()}` as Parameters<typeof t>[0])}</span>
             </div>
           )}
 
@@ -75,13 +80,7 @@ export default function WeaponCard({ weapon, lang }: Props) {
         <p className="text-xs text-zinc-300">{formatScaledEffect(effectDesc, effectDesc1)}</p>
       )}
 
-      {/* Full-width: source / boss */}
-      {(weapon.source || weapon.boss) && (
-        <div className="text-xs text-zinc-500">
-          {weapon.source && <p><span className="text-zinc-400">Source:</span> {weapon.source}</p>}
-          {weapon.boss && <p><span className="text-zinc-400">Boss:</span> {weapon.boss}</p>}
-        </div>
-      )}
-    </div>
+      <EquipmentSource source={weapon.source} boss={weapon.boss} equipName={weapon.name} bossMap={bossMap} lang={lang} />
+    </Link>
   );
 }

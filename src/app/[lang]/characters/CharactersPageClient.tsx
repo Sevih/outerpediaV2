@@ -21,6 +21,7 @@ import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharac
 import EffectIcon from '@/app/components/character/EffectIcon';
 import { splitCharacterName } from '@/lib/character-name';
 import { FILTER } from '@/lib/theme';
+import { FilterSearch, FilterPill, IconFilterGroup, TextFilterGroup } from '@/app/components/ui/FilterPills';
 
 // ── URL encoding maps ──
 
@@ -215,106 +216,12 @@ function groupEffectsByCategory(
   }));
 }
 
-// ── FilterPill ──
-
-function FilterPill({
-  active, children, onClick, className, title,
-}: {
-  active: boolean; children: React.ReactNode; onClick: () => void; title?: string; className?: string;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      title={title}
-      aria-pressed={active}
-      className={[
-        'inline-flex items-center justify-center rounded cursor-pointer select-none transition',
-        active ? `${FILTER.active} text-white ring-1 ${FILTER.ring}` : `${FILTER.bg} text-zinc-200 ${FILTER.hover}`,
-        'text-xs leading-none',
-        '**:leading-none [&_img]:align-middle [&_img]:block',
-        `focus:outline-none ${FILTER.focusRing}`,
-        className,
-      ].filter(Boolean).join(' ')}
-    >
-      {children}
-    </button>
-  );
-}
-
 function splitIntoRows<T>(arr: T[], rows = 2): T[][] {
   if (rows <= 1) return [arr];
   const perRow = Math.ceil(arr.length / rows);
   const out: T[][] = [];
   for (let i = 0; i < rows; i++) out.push(arr.slice(i * perRow, (i + 1) * perRow));
   return out;
-}
-
-// ── Reusable filter components ──
-
-function IconFilterGroup<T extends string>({
-  label, items, filter, onToggle, onReset, imagePath,
-}: {
-  label: string;
-  items: { name: string; value: T | null }[];
-  filter: T[];
-  onToggle: (value: T) => void;
-  onReset: () => void;
-  imagePath: (value: T) => string;
-}) {
-  const { t } = useI18n();
-  return (
-    <div className="w-full flex flex-col items-center">
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{label}</p>
-      <div className="flex gap-2 justify-center">
-        {items.map(item => (
-          <FilterPill
-            key={item.name}
-            title={item.name}
-            active={item.value === null ? filter.length === 0 : filter.includes(item.value)}
-            onClick={() => item.value ? onToggle(item.value) : onReset()}
-            className="w-9 h-9 px-0"
-          >
-            {item.value ? (
-              <div className="relative h-7 w-7">
-                <Image src={imagePath(item.value)} alt={item.value} fill sizes="28px" className="object-contain" />
-              </div>
-            ) : (
-              <span className="text-[11px]">{t('common.all')}</span>
-            )}
-          </FilterPill>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function TextFilterGroup<T extends string>({
-  label, items, filter, onToggle, onReset,
-}: {
-  label: string;
-  items: { name: string; value: T | null }[];
-  filter: T[];
-  onToggle: (value: T) => void;
-  onReset: () => void;
-}) {
-  return (
-    <div className="w-full flex flex-col items-center">
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{label}</p>
-      <div className="flex flex-wrap gap-2 justify-center">
-        {items.map(item => (
-          <FilterPill
-            key={item.name}
-            active={item.value === null ? filter.length === 0 : filter.includes(item.value)}
-            onClick={() => item.value ? onToggle(item.value) : onReset()}
-            className="h-8 px-2.5"
-          >
-            {item.name}
-          </FilterPill>
-        ))}
-      </div>
-    </div>
-  );
 }
 
 function CheckboxSelect({
@@ -789,24 +696,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   return (
     <div className="mx-auto max-w-350 px-2 md:px-4 space-y-3">
       {/* Search */}
-      <div className="relative mx-auto max-w-md">
-        <input
-          type="text"
-          value={rawQuery}
-          onChange={e => setRawQuery(e.target.value)}
-          placeholder={t('search.placeholder')}
-          className={`w-full rounded-lg border border-zinc-700 ${FILTER.bg} px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-filter focus:outline-none`}
-        />
-        {rawQuery && (
-          <button
-            type="button"
-            onClick={() => setRawQuery('')}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
-          >
-            &times;
-          </button>
-        )}
-      </div>
+      <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={t('search.placeholder')} />
 
       {/* Match count */}
       {hasActiveFilters && (

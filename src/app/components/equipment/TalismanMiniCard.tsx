@@ -63,13 +63,6 @@ export default function TalismanMiniCard({ talisman, lang }: Props) {
           <span className="text-zinc-500">Lv. 10</span> {formatScaledEffect(effectDesc4, effectDesc1)}
         </p>
       )}
-
-      {(talisman.source || talisman.boss) && (
-        <div className="text-xs text-zinc-500">
-          {talisman.source && <p><span className="text-zinc-400">Source:</span> {talisman.source}</p>}
-          {talisman.boss && <p><span className="text-zinc-400">Boss:</span> {talisman.boss}</p>}
-        </div>
-      )}
     </div>
   );
 

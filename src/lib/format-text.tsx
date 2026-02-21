@@ -119,6 +119,18 @@ export function toKebabCase(input: string): string {
 }
 
 /**
+ * Generate a URL-safe slug from an equipment name.
+ * All 253 equipment names (weapons, amulets, talismans, sets, EE) are unique.
+ */
+export function slugifyEquipment(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/['']/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+/**
  * Get the rarity background image path.
  * Maps game rarities to TI_Slot_* images in /images/ui/bg/.
  */

@@ -1,21 +1,24 @@
 'use client';
 
 import Image from 'next/image';
-import type { Weapon } from '@/types/equipment';
+import type { Weapon, BossDisplayMap } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
 import { formatScaledEffect } from '@/lib/format-text';
 import InlineTooltip from '@/app/components/inline/InlineTooltip';
+import { StatInline } from '@/app/components/inline';
 import EquipmentIcon from './EquipmentIcon';
+import EquipmentSource from './EquipmentSource';
 import { getStatMax } from './stat-ranges';
 
 type Props = {
   weapon: Weapon;
   lang: Lang;
   mainStat?: string;
+  bossMap: BossDisplayMap;
 };
 
-export default function WeaponMiniCard({ weapon, lang, mainStat }: Props) {
+export default function WeaponMiniCard({ weapon, lang, mainStat, bossMap }: Props) {
   const name = l(weapon, 'name', lang);
   const effectName = weapon.effect_name ? l(weapon, 'effect_name', lang) : null;
   const effectDesc4 = weapon.effect_desc4 ? l(weapon, 'effect_desc4', lang) : null;
@@ -40,7 +43,7 @@ export default function WeaponMiniCard({ weapon, lang, mainStat }: Props) {
             const max = getStatMax('weapons', stat, weapon.rarity, weapon.level);
             return (
               <div key={stat} className="flex items-center justify-between gap-4 text-xs">
-                <span className="text-zinc-300">{stat}</span>
+                <StatInline name={stat} />
                 {max && <span className="text-zinc-400">{max}</span>}
               </div>
             );
@@ -73,13 +76,7 @@ export default function WeaponMiniCard({ weapon, lang, mainStat }: Props) {
         <p className="text-xs text-zinc-300">{formatScaledEffect(effectDesc, effectDesc1)}</p>
       )}
 
-      {/* Source / Boss */}
-      {(weapon.source || weapon.boss) && (
-        <div className="text-xs text-zinc-500">
-          {weapon.source && <p><span className="text-zinc-400">Source:</span> {weapon.source}</p>}
-          {weapon.boss && <p><span className="text-zinc-400">Boss:</span> {weapon.boss}</p>}
-        </div>
-      )}
+      <EquipmentSource source={weapon.source} boss={weapon.boss} equipName={weapon.name} bossMap={bossMap} lang={lang} />
     </div>
   );
 
@@ -94,7 +91,11 @@ export default function WeaponMiniCard({ weapon, lang, mainStat }: Props) {
       />
       <div className="min-w-0">
         <p className="truncate text-sm text-zinc-200">{name}</p>
-        {mainStat && <p className="text-xs text-yellow-400">{mainStat}</p>}
+        {mainStat && (
+          <div className="flex flex-wrap gap-x-1 text-xs">
+            {mainStat.split('/').map((s) => <StatInline key={s} name={s} />)}
+          </div>
+        )}
       </div>
     </div>
   );

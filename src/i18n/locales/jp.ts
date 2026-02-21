@@ -24,6 +24,7 @@ const jp: Record<TranslationKey, string> = {
   'common.back_to_top': 'トップへ戻る',
   'common.language': '言語',
   'common.copied': 'コピー済み！',
+  'aria.toggle_menu': 'メニュー切替',
 
   // Contributors
   'contributors.title': 'コントリビューター',
@@ -65,6 +66,20 @@ const jp: Record<TranslationKey, string> = {
   'equip.items.material': '素材',
   'equip.items.present': 'プレゼント',
   'equip.items.box': 'ボックス',
+  'equip.source.event_shop': 'イベントショップ',
+  'equip.source.adventure_license': '冒険者ライセンス',
+  'equip.set.2piece': '2セット',
+  'equip.set.4piece': '4セット',
+  'equip.filter.source': 'ソース',
+  'equip.filter.level': 'レベル',
+  'equip.filter.search': '名前で検索...',
+  'equip.filter.searchEE': '名前またはキャラで検索...',
+  'equip.source.sr.ecology': '特別依頼:生態調査',
+  'equip.source.sr.identification': '特別依頼:正体究明',
+  'equip.detail.mainstats': 'メインステータス候補',
+  'equip.detail.recommended_by': '推奨キャラクター',
+  'equip.detail.owner': '所有者',
+  'equip.detail.mainstat': 'メインステータス',
   'page.tierlist.title': 'アウタープレーン ティアリスト',
   'page.tierlist.meta_title': 'アウタープレーン ティアリスト – {monthYear}',
   'page.tierlist.description':
@@ -172,6 +187,12 @@ const jp: Record<TranslationKey, string> = {
   'sys.element.earth': '地',
   'sys.element.light': '光',
   'sys.element.dark': '闇',
+
+  // Rarities
+  'sys.rarity.normal': 'ノーマル',
+  'sys.rarity.superior': 'レア',
+  'sys.rarity.epic': 'ユニーク',
+  'sys.rarity.legendary': 'レジェンド',
 
   // Classes
   'sys.class.defender': '防御型',

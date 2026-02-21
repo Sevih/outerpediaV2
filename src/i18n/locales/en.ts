@@ -24,6 +24,7 @@ const en = {
   'common.back_to_top': 'Back to top',
   'common.language': 'Language',
   'common.copied': 'Copied!',
+  'aria.toggle_menu': 'Toggle menu',
 
   // Contributors
   'contributors.title': 'Outerpedia Contributors',
@@ -65,6 +66,20 @@ const en = {
   'equip.items.material': 'Materials',
   'equip.items.present': 'Presents',
   'equip.items.box': 'Boxes',
+  'equip.source.event_shop': 'Event Shop',
+  'equip.source.adventure_license': 'Adventure License',
+  'equip.set.2piece': '2 set',
+  'equip.set.4piece': '4 set',
+  'equip.filter.source': 'Source',
+  'equip.filter.level': 'Level',
+  'equip.filter.search': 'Search by name...',
+  'equip.filter.searchEE': 'Search by name or character...',
+  'equip.source.sr.ecology': 'Special Request: Ecology Study',
+  'equip.source.sr.identification': 'Special Request: Identification',
+  'equip.detail.mainstats': 'Possible Main Stats',
+  'equip.detail.recommended_by': 'Recommended for',
+  'equip.detail.owner': 'Owner',
+  'equip.detail.mainstat': 'Main Stat',
   'page.tierlist.title': 'Outerplane Tier List',
   'page.tierlist.meta_title': 'Outerplane Tier List – {monthYear}',
   'page.tierlist.description':
@@ -172,6 +187,12 @@ const en = {
   'sys.element.earth': 'Earth',
   'sys.element.light': 'Light',
   'sys.element.dark': 'Dark',
+
+  // Rarities
+  'sys.rarity.normal': 'Normal',
+  'sys.rarity.superior': 'Superior',
+  'sys.rarity.epic': 'Epic',
+  'sys.rarity.legendary': 'Legendary',
 
   // Classes
   'sys.class.defender': 'Defender',

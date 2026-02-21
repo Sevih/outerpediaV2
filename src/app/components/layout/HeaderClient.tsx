@@ -98,7 +98,7 @@ export default function HeaderClient() {
             className="rounded px-3 py-2 hover:bg-zinc-800"
             onClick={() => setMenuOpen((v) => !v)}
             aria-expanded={menuOpen}
-            aria-label="Toggle menu"
+            aria-label={t('aria.toggle_menu')}
           >
             &#9776;
           </button>

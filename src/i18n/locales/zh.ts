@@ -24,6 +24,7 @@ const zh: Record<TranslationKey, string> = {
   'common.back_to_top': '返回顶部',
   'common.language': '语言',
   'common.copied': '已复制！',
+  'aria.toggle_menu': '切换菜单',
 
   // Contributors
   'contributors.title': '贡献者',
@@ -65,6 +66,20 @@ const zh: Record<TranslationKey, string> = {
   'equip.items.material': '素材',
   'equip.items.present': '礼物',
   'equip.items.box': '箱子',
+  'equip.source.event_shop': '活动商店',
+  'equip.source.adventure_license': '冒险许可证',
+  'equip.set.2piece': '2套',
+  'equip.set.4piece': '4套',
+  'equip.filter.source': '来源',
+  'equip.filter.level': '等级',
+  'equip.filter.search': '按名称搜索...',
+  'equip.filter.searchEE': '按名称或角色搜索...',
+  'equip.source.sr.ecology': '特别委托:生态调查',
+  'equip.source.sr.identification': '特别委托:查清身份',
+  'equip.detail.mainstats': '可选主属性',
+  'equip.detail.recommended_by': '推荐角色',
+  'equip.detail.owner': '所有者',
+  'equip.detail.mainstat': '主属性',
   'page.tierlist.title': '异域战记 节奏榜',
   'page.tierlist.meta_title': '异域战记 节奏榜 – {monthYear}',
   'page.tierlist.description':
@@ -172,6 +187,12 @@ const zh: Record<TranslationKey, string> = {
   'sys.element.earth': '土',
   'sys.element.light': '光',
   'sys.element.dark': '暗',
+
+  // Rarities
+  'sys.rarity.normal': '普通',
+  'sys.rarity.superior': '高级',
+  'sys.rarity.epic': '英雄',
+  'sys.rarity.legendary': '传说',
 
   // Classes
   'sys.class.defender': '防御型',

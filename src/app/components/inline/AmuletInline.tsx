@@ -14,7 +14,7 @@ const amulets = amuletsData as Amulet[];
 type Props = { name: string };
 
 export default function AmuletInline({ name }: Props) {
-  const { lang } = useI18n();
+  const { lang, t } = useI18n();
   const amulet = amulets.find((a) => a.name === name);
 
   if (!amulet) {
@@ -38,7 +38,7 @@ export default function AmuletInline({ name }: Props) {
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-equipment">{label}</span>
-        {amulet.class && <span className="text-xs text-neutral-400">{amulet.class}</span>}
+        {amulet.class && <span className="text-xs text-neutral-400">{t(`sys.class.${amulet.class.toLowerCase()}` as Parameters<typeof t>[0])}</span>}
         {effectName && (
           <div className="inline-flex w-fit items-center gap-1.5 rounded-full bg-zinc-500/40 px-2.5 py-1">
             {amulet.effect_icon && (

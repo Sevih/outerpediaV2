@@ -1,10 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Talisman } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText, formatScaledEffect } from '@/lib/format-text';
+import { formatEffectText, formatScaledEffect, slugifyEquipment } from '@/lib/format-text';
 import EquipmentIcon from './EquipmentIcon';
 
 type Props = {
@@ -21,7 +22,7 @@ export default function TalismanCard({ talisman, lang }: Props) {
   const effectDesc4 = l(talisman, 'effect_desc4', lang);
 
   return (
-    <div className="card flex flex-col gap-2 p-4">
+    <Link href={`/${lang}/equipments/${slugifyEquipment(talisman.name)}`} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/effect pill */}
       <div className="flex items-start gap-3">
         <EquipmentIcon
@@ -68,14 +69,6 @@ export default function TalismanCard({ talisman, lang }: Props) {
           {formatScaledEffect(effectDesc4, effectDesc1)}
         </p>
       )}
-
-      {/* Full-width: source / boss */}
-      {(talisman.source || talisman.boss) && (
-        <div className="text-xs text-zinc-500">
-          {talisman.source && <p><span className="text-zinc-400">Source:</span> {talisman.source}</p>}
-          {talisman.boss && <p><span className="text-zinc-400">Boss:</span> {talisman.boss}</p>}
-        </div>
-      )}
-    </div>
+    </Link>
   );
 }

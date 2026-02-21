@@ -1,17 +1,21 @@
 'use client';
 
 import Image from 'next/image';
-import type { ArmorSet, RecoSetEntry } from '@/types/equipment';
+import type { ArmorSet, RecoSetEntry, BossDisplayMap } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
+import { useI18n } from '@/lib/contexts/I18nContext';
+import type { TFunction } from '@/i18n';
 import { formatEffectText } from '@/lib/format-text';
 import InlineTooltip from '@/app/components/inline/InlineTooltip';
 import EquipmentIcon from './EquipmentIcon';
+import EquipmentSource from './EquipmentSource';
 
 type Props = {
   combo: RecoSetEntry[];
   sets: ArmorSet[];
   lang: Lang;
+  bossMap: BossDisplayMap;
 };
 
 const SLOTS_4 = ['Helmet', 'Armor', 'Gloves', 'Shoes'] as const;
@@ -22,7 +26,7 @@ function findSet(sets: ArmorSet[], name: string): ArmorSet | undefined {
   return sets.find((s) => s.name === name || s.name === `${name} Set`);
 }
 
-function SetPieceTooltip({ set, lang, show4Piece }: { set: ArmorSet; lang: Lang; show4Piece: boolean }) {
+function SetPieceTooltip({ set, lang, show4Piece, bossMap, t }: { set: ArmorSet; lang: Lang; show4Piece: boolean; bossMap: BossDisplayMap; t: TFunction }) {
   const name = l(set, 'name', lang);
   const effect2 = l(set, 'effect_2_4', lang);
   const effect4 = show4Piece ? l(set, 'effect_4_4', lang) : null;
@@ -47,24 +51,19 @@ function SetPieceTooltip({ set, lang, show4Piece }: { set: ArmorSet; lang: Lang;
       <div className="rounded bg-zinc-800 px-2 py-1 text-xs">
         {effect2 && (
           <div>
-            <span className="text-buff">2-Piece: </span>
+            <span className="text-buff">{t('equip.set.2piece')}: </span>
             <span className="text-zinc-300">{formatEffectText(effect2)}</span>
           </div>
         )}
         {effect4 && (
           <div className="mt-0.5">
-            <span className="text-buff">4-Piece: </span>
+            <span className="text-buff">{t('equip.set.4piece')}: </span>
             <span className="text-zinc-300">{formatEffectText(effect4)}</span>
           </div>
         )}
       </div>
 
-      {(set.source || set.boss) && (
-        <div className="text-xs text-zinc-500">
-          {set.source && <p><span className="text-zinc-400">Source:</span> {set.source}</p>}
-          {set.boss && <p><span className="text-zinc-400">Boss:</span> {set.boss}</p>}
-        </div>
-      )}
+      <EquipmentSource source={set.source} boss={set.boss} equipName={set.name} bossMap={bossMap} lang={lang} />
     </div>
   );
 }
@@ -86,7 +85,8 @@ function SetPieceIcons({ set, slots }: { set: ArmorSet; slots: readonly string[]
   );
 }
 
-export default function SetMiniCard({ combo, sets, lang }: Props) {
+export default function SetMiniCard({ combo, sets, lang, bossMap }: Props) {
+  const { t } = useI18n();
   const is4Piece = combo.length === 1 && combo[0].count === 4;
 
   if (is4Piece) {
@@ -94,7 +94,7 @@ export default function SetMiniCard({ combo, sets, lang }: Props) {
     if (!data) return <p className="text-sm text-zinc-400">{combo[0].name}</p>;
 
     return (
-      <InlineTooltip content={<SetPieceTooltip set={data} lang={lang} show4Piece />}>
+      <InlineTooltip content={<SetPieceTooltip set={data} lang={lang} show4Piece bossMap={bossMap} t={t} />}>
         <div className="inline-flex cursor-default flex-col items-center gap-0.5">
           <div className="flex items-center gap-1">
             <SetPieceIcons set={data} slots={SLOTS_4} />
@@ -115,7 +115,7 @@ export default function SetMiniCard({ combo, sets, lang }: Props) {
         if (!data) return <p key={piece.name} className="text-sm text-zinc-400">{piece.name}</p>;
 
         return (
-          <InlineTooltip key={piece.name} content={<SetPieceTooltip set={data} lang={lang} show4Piece={false} />}>
+          <InlineTooltip key={piece.name} content={<SetPieceTooltip set={data} lang={lang} show4Piece={false} bossMap={bossMap} t={t} />}>
             <div className="inline-flex cursor-default flex-col items-center gap-0.5">
               <div className="flex items-center gap-1">
                 <SetPieceIcons set={data} slots={slots} />

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { Weapon, Amulet, Talisman, ArmorSet, ResolvedCharacterReco } from '@/types/equipment';
+import type { Weapon, Amulet, Talisman, ArmorSet, ResolvedCharacterReco, BossDisplayMap } from '@/types/equipment';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import parseText from '@/lib/parse-text';
@@ -14,9 +14,10 @@ type Props = {
   amulets: Amulet[];
   talismans: Talisman[];
   sets: ArmorSet[];
+  bossMap: BossDisplayMap;
 };
 
-export default function GearRecoSection({ reco, weapons, amulets, talismans, sets }: Props) {
+export default function GearRecoSection({ reco, weapons, amulets, talismans, sets, bossMap }: Props) {
   const { lang, t } = useI18n();
   const buildNames = Object.keys(reco);
   const [activeBuild, setActiveBuild] = useState(buildNames[0] ?? '');
@@ -54,7 +55,7 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
                   {build.Weapon.map((w) => {
                     const data = weapons.find((wp) => wp.name === w.name);
                     return data ? (
-                      <WeaponMiniCard key={w.name} weapon={data} lang={lang} mainStat={w.mainStat} />
+                      <WeaponMiniCard key={w.name} weapon={data} lang={lang} mainStat={w.mainStat} bossMap={bossMap} />
                     ) : (
                       <p key={w.name} className="text-sm text-zinc-400">{w.name}</p>
                     );
@@ -87,7 +88,7 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
                   {build.Amulet.map((a) => {
                     const data = amulets.find((am) => am.name === a.name);
                     return data ? (
-                      <AmuletMiniCard key={a.name} amulet={data} lang={lang} mainStat={a.mainStat} />
+                      <AmuletMiniCard key={a.name} amulet={data} lang={lang} mainStat={a.mainStat} bossMap={bossMap} />
                     ) : (
                       <p key={a.name} className="text-sm text-zinc-400">{a.name}</p>
                     );
@@ -119,7 +120,7 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
               <div className="order-3 md:order-0">
                 <GearCategory label={t('page.character.gear.set')}>
                   {build.Set.map((combo, i) => (
-                    <SetMiniCard key={i} combo={combo} sets={sets} lang={lang} />
+                    <SetMiniCard key={i} combo={combo} sets={sets} lang={lang} bossMap={bossMap} />
                   ))}
                 </GearCategory>
               </div>

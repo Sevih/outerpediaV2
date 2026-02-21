@@ -13,7 +13,7 @@ const weapons = weaponsData as unknown as Weapon[];
 type Props = { name: string };
 
 export default function WeaponInline({ name }: Props) {
-  const { lang } = useI18n();
+  const { lang, t } = useI18n();
   const weapon = weapons.find((w) => w.name === name);
 
   if (!weapon) {
@@ -37,7 +37,7 @@ export default function WeaponInline({ name }: Props) {
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-equipment">{label}</span>
-        {weapon.class && <span className="text-xs text-neutral-400">{weapon.class}</span>}
+        {weapon.class && <span className="text-xs text-neutral-400">{t(`sys.class.${weapon.class.toLowerCase()}` as Parameters<typeof t>[0])}</span>}
         {effectName && (
           <div className="inline-flex w-fit items-center gap-1.5 rounded-full bg-zinc-500/40 px-2.5 py-1">
             {weapon.effect_icon && (

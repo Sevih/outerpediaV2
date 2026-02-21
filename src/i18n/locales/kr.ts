@@ -24,6 +24,7 @@ const kr: Record<TranslationKey, string> = {
   'common.back_to_top': '맨 위로',
   'common.language': '언어',
   'common.copied': '복사됨!',
+  'aria.toggle_menu': '메뉴 전환',
 
   // Contributors
   'contributors.title': '기여자',
@@ -65,6 +66,20 @@ const kr: Record<TranslationKey, string> = {
   'equip.items.material': '재료',
   'equip.items.present': '선물',
   'equip.items.box': '상자',
+  'equip.source.event_shop': '이벤트 상점',
+  'equip.source.adventure_license': '모험 라이선스',
+  'equip.set.2piece': '2세트',
+  'equip.set.4piece': '4세트',
+  'equip.filter.source': '출처',
+  'equip.filter.level': '레벨',
+  'equip.filter.search': '이름으로 검색...',
+  'equip.filter.searchEE': '이름 또는 캐릭터로 검색...',
+  'equip.source.sr.ecology': '특별 의뢰 : 생태 조사',
+  'equip.source.sr.identification': '특별 의뢰 : 정체 규명',
+  'equip.detail.mainstats': '가능한 메인 스탯',
+  'equip.detail.recommended_by': '추천 캐릭터',
+  'equip.detail.owner': '소유자',
+  'equip.detail.mainstat': '메인 스탯',
   'page.tierlist.title': '아우터플레인 티어 리스트',
   'page.tierlist.meta_title': '아우터플레인 티어 리스트 – {monthYear}',
   'page.tierlist.description':
@@ -172,6 +187,12 @@ const kr: Record<TranslationKey, string> = {
   'sys.element.earth': '지',
   'sys.element.light': '명',
   'sys.element.dark': '암',
+
+  // Rarities
+  'sys.rarity.normal': '일반',
+  'sys.rarity.superior': '고급',
+  'sys.rarity.epic': '영웅',
+  'sys.rarity.legendary': '전설',
 
   // Classes
   'sys.class.defender': '방어형',

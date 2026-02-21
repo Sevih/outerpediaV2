@@ -29,12 +29,24 @@ export type Boss = {
   };
 };
 
-export type BossIndexEntry = {
-  bossKey: string;
-  modes: Record<string, {
-    versions: Array<{
-      id: string;
-      label?: string;
-    }>;
-  }>;
+export type BossIndexVersion = {
+  id: string;
+  label: LangMap;
+  level: number;
 };
+
+export type BossIndexMode = {
+  name: LangMap;
+  versions: BossIndexVersion[];
+};
+
+export type BossIndexEntry = {
+  name: LangMap;
+  element: ElementType;
+  class: ClassType;
+  icons: string;
+  modes: Record<string, BossIndexMode>;
+};
+
+/** Full boss index keyed by English boss name */
+export type BossIndex = Record<string, BossIndexEntry>;

@@ -1,24 +1,29 @@
 'use client';
 
 import Image from 'next/image';
-import type { ArmorSet } from '@/types/equipment';
+import Link from 'next/link';
+import type { ArmorSet, BossDisplayMap } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText } from '@/lib/format-text';
+import { useI18n } from '@/lib/contexts/I18nContext';
+import { formatEffectText, slugifyEquipment } from '@/lib/format-text';
 import EquipmentIcon from './EquipmentIcon';
+import EquipmentSource from './EquipmentSource';
 
 type Props = {
   set: ArmorSet;
   lang: Lang;
+  bossMap: BossDisplayMap;
 };
 
-export default function SetCard({ set, lang }: Props) {
+export default function SetCard({ set, lang, bossMap }: Props) {
+  const { t } = useI18n();
   const name = l(set, 'name', lang);
   const effect2 = l(set, 'effect_2_4', lang) || l(set, 'effect_2_1', lang);
   const effect4 = l(set, 'effect_4_4', lang) || l(set, 'effect_4_1', lang);
 
   return (
-    <div className="card flex flex-col gap-2 p-4">
+    <Link href={`/${lang}/equipments/${slugifyEquipment(set.name)}`} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/class */}
       <div className="flex items-start gap-3">
         <EquipmentIcon
@@ -43,7 +48,7 @@ export default function SetCard({ set, lang }: Props) {
                   className="object-contain"
                 />
               </div>
-              <span className="text-xs text-zinc-400">{set.class}</span>
+              <span className="text-xs text-zinc-400">{t(`sys.class.${set.class.toLowerCase()}` as Parameters<typeof t>[0])}</span>
             </div>
           )}
         </div>
@@ -54,26 +59,20 @@ export default function SetCard({ set, lang }: Props) {
         <div className="text-xs">
           {effect2 && (
             <div>
-              <span className="text-buff">2-Piece: </span>
+              <span className="text-buff">{t('equip.set.2piece')}: </span>
               <span className="text-zinc-300">{formatEffectText(effect2)}</span>
             </div>
           )}
           {effect4 && (
             <div className="mt-0.5">
-              <span className="text-buff">4-Piece: </span>
+              <span className="text-buff">{t('equip.set.4piece')}: </span>
               <span className="text-zinc-300">{formatEffectText(effect4)}</span>
             </div>
           )}
         </div>
       )}
 
-      {/* Full-width: source / boss */}
-      {(set.source || set.boss) && (
-        <div className="text-xs text-zinc-500">
-          {set.source && <p><span className="text-zinc-400">Source:</span> {set.source}</p>}
-          {set.boss && <p><span className="text-zinc-400">Boss:</span> {set.boss}</p>}
-        </div>
-      )}
-    </div>
+      <EquipmentSource source={set.source} boss={set.boss} equipName={set.name} bossMap={bossMap} lang={lang} />
+    </Link>
   );
 }

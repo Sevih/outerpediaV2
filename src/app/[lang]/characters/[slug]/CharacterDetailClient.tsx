@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react';
 import type { Character, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies } from '@/types/character';
-import type { ExclusiveEquipment, ResolvedCharacterReco } from '@/types/equipment';
+import type { ExclusiveEquipment, ResolvedCharacterReco, BossDisplayMap } from '@/types/equipment';
 import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
 import type { Item } from '@/types/item';
 import type { Effect } from '@/types/effect';
@@ -48,6 +48,7 @@ type Props = {
   buffMap: Record<string, Effect>;
   debuffMap: Record<string, Effect>;
   coreFusionLink: CoreFusionLink | null;
+  bossMap: BossDisplayMap;
 };
 
 export default function CharacterDetailClient({
@@ -67,6 +68,7 @@ export default function CharacterDetailClient({
   buffMap,
   debuffMap,
   coreFusionLink,
+  bossMap,
 }: Props) {
   const { t } = useI18n();
 
@@ -150,6 +152,7 @@ export default function CharacterDetailClient({
           amulets={amulets}
           talismans={talismans}
           sets={sets}
+          bossMap={bossMap}
         />
 
         {hasVideo && (

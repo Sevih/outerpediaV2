@@ -1,4 +1,4 @@
-import type { WithLocalizedFields } from './common';
+import type { WithLocalizedFields, LangMap } from './common';
 import type { ClassType } from './enums';
 import type { ItemRarity } from '@/lib/theme';
 
@@ -105,6 +105,29 @@ export type SourceDropInfo = {
   boss: string | null;
   mode: string | null;
   sourceLabel: string;
+};
+
+/** Lightweight boss info for equipment source display (keyed by EN boss name) */
+export type BossDisplayInfo = {
+  name: LangMap;
+  icons: string;
+  element: string;
+  source: LangMap;
+};
+
+export type BossDisplayMap = Record<string, BossDisplayInfo>;
+
+/** Source filter option for equipment list page (computed server-side from actual data) */
+export type SourceFilterOption = {
+  key: string;
+  bossKeys: string[];
+  i18nKey?: string;
+};
+
+/** Irregular Extermination: equipment name pattern → boss names */
+export const IE_BOSS_MAP: Record<string, string[]> = {
+  Gorgon: ['Mutated Wyvre', 'Irregular Queen'],
+  Briareos: ['Iron Stretcher', 'Blockbuster'],
 };
 
 export type EquipmentDropEntry = {

@@ -6,6 +6,7 @@ import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT } from '@/i18n';
 import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners, getCharacterById, resolveIdToSlug } from '@/lib/data/characters';
 import { getExclusiveEquipment, getWeapons, getAmulets, getTalismans, getArmorSets } from '@/lib/data/equipment';
+import { getBossDisplayMap } from '@/lib/data/bosses';
 import { resolveRecoPresets } from '@/lib/data/reco';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getGiftItems } from '@/lib/data/gifts';
@@ -86,6 +87,16 @@ export default async function CharacterDetailPage({ params }: Props) {
   const debuffMap: Record<string, Effect> = {};
   for (const d of debuffsArr) debuffMap[d.name] = d;
 
+  // Build boss display map for equipment source rendering
+  const bossNames = new Set<string>();
+  for (const w of weapons) if (w.boss) bossNames.add(w.boss);
+  for (const a of amulets) if (a.boss) bossNames.add(a.boss);
+  for (const s of sets) if (s.boss) bossNames.add(s.boss);
+  for (const name of ['Mutated Wyvre', 'Irregular Queen', 'Iron Stretcher', 'Blockbuster']) {
+    bossNames.add(name);
+  }
+  const bossMap = await getBossDisplayMap([...bossNames]);
+
   if (!character) notFound();
 
   const [profile, stats] = await Promise.all([
@@ -136,6 +147,7 @@ export default async function CharacterDetailPage({ params }: Props) {
       buffMap={buffMap}
       debuffMap={debuffMap}
       coreFusionLink={coreFusionLink}
+      bossMap={bossMap}
     />
   );
 }

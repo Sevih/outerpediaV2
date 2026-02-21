@@ -14,7 +14,7 @@ const sets = setsData as ArmorSet[];
 type Props = { name: string };
 
 export default function SetInline({ name }: Props) {
-  const { lang } = useI18n();
+  const { lang, t } = useI18n();
 
   // Support both "Attack" and "Attack Set" formats
   const set = sets.find((s) =>
@@ -40,13 +40,13 @@ export default function SetInline({ name }: Props) {
         <span className="text-sm font-bold text-equipment">{label}</span>
         {effect2 && (
           <div>
-            <span className="text-xs text-buff">2-Piece: </span>
+            <span className="text-xs text-buff">{t('equip.set.2piece')}: </span>
             <span className="text-xs text-neutral-200">{formatEffectText(effect2)}</span>
           </div>
         )}
         {effect4 && (
           <div>
-            <span className="text-xs text-buff">4-Piece: </span>
+            <span className="text-xs text-buff">{t('equip.set.4piece')}: </span>
             <span className="text-xs text-neutral-200">{formatEffectText(effect4)}</span>
           </div>
         )}

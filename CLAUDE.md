@@ -191,7 +191,7 @@ Format `{X/value}` for inline component injection in text. These tags stay **ide
 
 ### Boss
 - Portrait: `/images/characters/boss/portrait/MT_{id}.webp`
-- Mini: `/images/characters/boss/mini/IG_Turn_{id}.webp`
+- ATB: `/images/characters/boss/atb/IG_Turn_{id}.webp`
 
 ### UI
 - Elements: `/images/ui/elem/{element}.webp` (lowercase)

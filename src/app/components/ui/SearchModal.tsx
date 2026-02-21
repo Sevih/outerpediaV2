@@ -14,10 +14,11 @@ import type { CharacterIndexMap } from '@/types/character';
 
 
 export function SearchTrigger({ onClick }: { onClick: () => void }) {
+  const { t } = useI18n();
   return (
     <button
       onClick={onClick}
-      aria-label="Search"
+      aria-label={t('common.search')}
       className="flex items-center gap-2 rounded-md px-2 py-2 text-sm text-zinc-400 hover:bg-zinc-800/60 hover:text-zinc-200"
     >
       <FaSearch className="text-xs" />

@@ -1,0 +1,127 @@
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import type { Lang } from '@/lib/i18n/config';
+import { LANGS } from '@/lib/i18n/config';
+import { createPageMetadata } from '@/lib/seo';
+import { loadMessages } from '@/i18n';
+import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment } from '@/lib/data/equipment';
+import { getCharacterIndex, resolveIdToSlug } from '@/lib/data/characters';
+import { getBuffs, getDebuffs } from '@/lib/data/effects';
+import { getBossDisplayMap } from '@/lib/data/bosses';
+import type { Effect } from '@/types/effect';
+import { l } from '@/lib/i18n/localize';
+import EquipmentDetailClient from './EquipmentDetailClient';
+
+export const revalidate = 86400;
+
+type Props = { params: Promise<{ lang: string; slug: string }> };
+
+const TYPE_LABELS: Record<string, string> = {
+  weapon: 'Weapon',
+  amulet: 'Accessory',
+  talisman: 'Talisman',
+  set: 'Armor Set',
+  ee: 'Exclusive Equipment',
+};
+
+export async function generateStaticParams() {
+  const slugs = await getAllEquipmentSlugs();
+  return LANGS.flatMap((lang) =>
+    slugs.map((slug) => ({ lang, slug }))
+  );
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang: rawLang, slug } = await params;
+  const lang = rawLang as Lang;
+  const equipment = await getEquipmentBySlug(slug);
+  if (!equipment) return {};
+
+  const name = l(equipment.data, 'name', lang);
+  const typeLabel = TYPE_LABELS[equipment.type] ?? '';
+
+  return createPageMetadata({
+    lang,
+    path: `/equipments/${slug}`,
+    title: `${name} — ${typeLabel}`,
+    description: `${name} — ${typeLabel} details, effects, and recommended characters on Outerpedia.`,
+  });
+}
+
+export default async function EquipmentDetailPage({ params }: Props) {
+  const { lang: rawLang, slug } = await params;
+  const lang = rawLang as Lang;
+
+  const equipment = await getEquipmentBySlug(slug);
+  if (!equipment) notFound();
+
+  const [messages, recoRefs, charIndex, buffsArr, debuffsArr] = await Promise.all([
+    loadMessages(lang),
+    getCharactersRecommendingEquipment(equipment.data.name, equipment.type),
+    getCharacterIndex(),
+    getBuffs(),
+    getDebuffs(),
+  ]);
+
+  const buffMap: Record<string, Effect> = {};
+  for (const b of buffsArr) buffMap[b.name] = b;
+  const debuffMap: Record<string, Effect> = {};
+  for (const d of debuffsArr) debuffMap[d.name] = d;
+
+  // Build boss map for source display
+  const bossNames = new Set<string>();
+  if (equipment.type === 'weapon' || equipment.type === 'amulet') {
+    if (equipment.data.boss) bossNames.add(equipment.data.boss);
+  } else if (equipment.type === 'set') {
+    if (equipment.data.boss) bossNames.add(equipment.data.boss);
+  } else if (equipment.type === 'talisman') {
+    if (equipment.data.boss) bossNames.add(equipment.data.boss);
+  }
+  // IE bosses
+  for (const name of ['Mutated Wyvre', 'Irregular Queen', 'Iron Stretcher', 'Blockbuster']) {
+    bossNames.add(name);
+  }
+  const bossMap = await getBossDisplayMap([...bossNames]);
+
+  // Resolve reco references to character info with slugs
+  const recoCharacters = await Promise.all(
+    recoRefs.map(async (ref) => {
+      const charInfo = charIndex[ref.characterId];
+      const charSlug = charInfo?.slug ?? await resolveIdToSlug(ref.characterId);
+      return {
+        id: ref.characterId,
+        name: charInfo ? l(charInfo, 'Fullname', lang) : ref.characterId,
+        slug: charSlug,
+        element: charInfo?.Element ?? null,
+        classType: charInfo?.Class ?? null,
+      };
+    })
+  );
+
+  // For EE: resolve owner character info
+  let eeOwner: { id: string; name: string; slug: string | null; element: string | null; classType: string | null } | null = null;
+  if (equipment.type === 'ee') {
+    const ownerInfo = charIndex[equipment.characterId];
+    const ownerSlug = ownerInfo?.slug ?? await resolveIdToSlug(equipment.characterId);
+    eeOwner = {
+      id: equipment.characterId,
+      name: ownerInfo ? l(ownerInfo, 'Fullname', lang) : equipment.characterId,
+      slug: ownerSlug,
+      element: ownerInfo?.Element ?? null,
+      classType: ownerInfo?.Class ?? null,
+    };
+  }
+
+  return (
+    <EquipmentDetailClient
+      equipment={equipment}
+      recoCharacters={recoCharacters}
+      eeOwner={eeOwner}
+      bossMap={bossMap}
+      buffMap={buffMap}
+      debuffMap={debuffMap}
+      messages={messages}
+      lang={lang}
+    />
+  );
+}

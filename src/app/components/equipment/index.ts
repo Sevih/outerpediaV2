@@ -1,6 +1,5 @@
-// TODO: Localize source/boss fields in all MiniCard & Card tooltips once boss pages are implemented
-
 export { default as EquipmentIcon } from './EquipmentIcon';
+export { default as EquipmentSource } from './EquipmentSource';
 
 // MiniCard variants (for gear reco, compact lists)
 export { default as WeaponMiniCard } from './WeaponMiniCard';
