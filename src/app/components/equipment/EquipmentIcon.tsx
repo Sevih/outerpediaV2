@@ -14,13 +14,15 @@ type Props = {
   effectIcon?: string | null;
   /** Class name (e.g., 'Striker') — shown middle-right */
   classType?: string | null;
+  /** Size of the effect/class overlay icons in pixels (default 16) */
+  overlaySize?: number;
   /** Equipment level — displayed as overlapping star icons at the bottom of the image */
   level?: number | string | null;
 };
 
 export default function EquipmentIcon({
   src, rarity, alt, size = 50, className = '',
-  effectIcon, classType, level,
+  effectIcon, classType, overlaySize = 16, level,
 }: Props) {
   const starCount = level ? Number(level) : 0;
   const starSize = Math.round(size / 5);
@@ -52,13 +54,16 @@ export default function EquipmentIcon({
 
       {/* Effect icon — top-right */}
       {effectIcon && (
-        <div className="absolute right-0.5 top-0.5 h-5 w-5">
+        <div
+          className="absolute right-0.5 top-0.5"
+          style={{ width: overlaySize, height: overlaySize }}
+        >
           <div className="relative h-full w-full">
             <Image
               src={`/images/ui/effect/${effectIcon}.webp`}
               alt=""
               fill
-              sizes="20px"
+              sizes={`${overlaySize}px`}
               className="object-contain"
             />
           </div>
@@ -67,13 +72,16 @@ export default function EquipmentIcon({
 
       {/* Class icon — bottom-right */}
       {classType && (
-        <div className="absolute right-0.5 bottom-6 h-5 w-5">
+        <div
+          className="absolute right-0.5"
+          style={{ width: overlaySize, height: overlaySize, bottom: size > 50 ? 20 : 8 }}
+        >
           <div className="relative h-full w-full">
             <Image
               src={`/images/ui/class/CM_Class_${classType}.webp`}
               alt={classType}
               fill
-              sizes="20px"
+              sizes={`${overlaySize}px`}
               className="object-contain"
             />
           </div>

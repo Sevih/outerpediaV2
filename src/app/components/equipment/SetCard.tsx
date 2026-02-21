@@ -26,6 +26,7 @@ export default function SetCard({ set, lang }: Props) {
           rarity={set.rarity}
           alt={name}
           size={70}
+          overlaySize={20}
           effectIcon={set.set_icon}
         />
         <div className="flex min-w-0 flex-1 flex-col gap-1">

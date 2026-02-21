@@ -29,6 +29,7 @@ export default function TalismanCard({ talisman, lang }: Props) {
           rarity={talisman.rarity}
           alt={name}
           size={70}
+          overlaySize={20}
           effectIcon={talisman.effect_icon}
           level={talisman.level}
         />

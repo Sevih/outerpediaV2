@@ -28,6 +28,7 @@ export default function WeaponCard({ weapon, lang }: Props) {
           rarity={weapon.rarity}
           alt={name}
           size={70}
+          overlaySize={20}
           effectIcon={weapon.effect_icon}
           classType={weapon.class}
           level={weapon.level}

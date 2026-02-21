@@ -28,6 +28,7 @@ export default function AmuletCard({ amulet, lang }: Props) {
           rarity={amulet.rarity}
           alt={name}
           size={70}
+          overlaySize={20}
           effectIcon={amulet.effect_icon}
           classType={amulet.class}
           level={amulet.level}
