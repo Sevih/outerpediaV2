@@ -10,6 +10,7 @@ import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 import BackToTop from '@/app/components/ui/BackToTop';
 import Breadcrumbs from '@/app/components/ui/Breadcrumbs';
+import { BreadcrumbProvider } from '@/lib/contexts/BreadcrumbContext';
 
 /** Pre-generate all language variants at build time */
 export function generateStaticParams() {
@@ -62,16 +63,18 @@ export default async function LangLayout({
 
   return (
     <I18nProvider lang={lang} messages={messages}>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `document.documentElement.lang="${LANGUAGES[lang].htmlLang}"`,
-        }}
-      />
-      <Header />
-      <Breadcrumbs />
-      <main className="flex-1">{children}</main>
-      <Footer />
-      <BackToTop />
+      <BreadcrumbProvider>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.lang="${LANGUAGES[lang].htmlLang}"`,
+          }}
+        />
+        <Header />
+        <Breadcrumbs />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <BackToTop />
+      </BreadcrumbProvider>
     </I18nProvider>
   );
 }

@@ -81,6 +81,7 @@ const kr: Record<TranslationKey, string> = {
   'equip.detail.recommended_by': '추천 캐릭터',
   'equip.detail.owner': '소유자',
   'equip.detail.mainstat': '메인 스탯',
+  'equip.detail.back': '전체 장비',
   'page.tierlist.title': '아우터플레인 티어 리스트',
   'page.tierlist.meta_title': '아우터플레인 티어 리스트 – {monthYear}',
   'page.tierlist.description':

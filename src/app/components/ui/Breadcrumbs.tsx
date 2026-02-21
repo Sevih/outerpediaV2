@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { useBreadcrumbLabel } from '@/lib/contexts/BreadcrumbContext';
 import type { TranslationKey } from '@/i18n';
 
 const SEGMENT_LABELS: Record<string, TranslationKey> = {
@@ -20,6 +21,7 @@ const SEGMENT_LABELS: Record<string, TranslationKey> = {
 export default function Breadcrumbs() {
   const pathname = usePathname();
   const { lang, t } = useI18n();
+  const breadcrumbOverride = useBreadcrumbLabel();
 
   // Remove lang prefix, split into segments
   const stripped = pathname.replace(`/${lang}`, '') || '/';
@@ -38,9 +40,11 @@ export default function Breadcrumbs() {
         </li>
         {segments.map((segment, i) => {
           const href = `/${lang}/${segments.slice(0, i + 1).join('/')}`;
-          const labelKey = SEGMENT_LABELS[segment];
-          const label = labelKey ? t(labelKey) : decodeURIComponent(segment);
           const isLast = i === segments.length - 1;
+          const labelKey = SEGMENT_LABELS[segment];
+          const label = isLast && breadcrumbOverride
+            ? breadcrumbOverride
+            : labelKey ? t(labelKey) : decodeURIComponent(segment);
 
           return (
             <li key={href} className="flex items-center gap-1.5">

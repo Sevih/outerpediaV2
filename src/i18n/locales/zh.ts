@@ -81,6 +81,7 @@ const zh: Record<TranslationKey, string> = {
   'equip.detail.recommended_by': '推荐角色',
   'equip.detail.owner': '所有者',
   'equip.detail.mainstat': '主属性',
+  'equip.detail.back': '全部装备',
   'page.tierlist.title': '异域战记 节奏榜',
   'page.tierlist.meta_title': '异域战记 节奏榜 – {monthYear}',
   'page.tierlist.description':

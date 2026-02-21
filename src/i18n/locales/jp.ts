@@ -81,6 +81,7 @@ const jp: Record<TranslationKey, string> = {
   'equip.detail.recommended_by': '推奨キャラクター',
   'equip.detail.owner': '所有者',
   'equip.detail.mainstat': 'メインステータス',
+  'equip.detail.back': '全装備',
   'page.tierlist.title': 'アウタープレーン ティアリスト',
   'page.tierlist.meta_title': 'アウタープレーン ティアリスト – {monthYear}',
   'page.tierlist.description':

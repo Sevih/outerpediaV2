@@ -81,6 +81,7 @@ const en = {
   'equip.detail.recommended_by': 'Recommended for',
   'equip.detail.owner': 'Owner',
   'equip.detail.mainstat': 'Main Stat',
+  'equip.detail.back': 'All Equipment',
   'page.tierlist.title': 'Outerplane Tier List',
   'page.tierlist.meta_title': 'Outerplane Tier List – {monthYear}',
   'page.tierlist.description':
