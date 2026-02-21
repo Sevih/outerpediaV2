@@ -52,6 +52,13 @@ export const ITEM_RARITY_TEXT: Record<ItemRarity, string> = {
   legendary: 'text-item-legendary',
 };
 
+export const ITEM_RARITY_BG: Record<ItemRarity, string> = {
+  normal: 'bg-item-normal/20',
+  superior: 'bg-item-superior/20',
+  epic: 'bg-item-epic/20',
+  legendary: 'bg-item-legendary/20',
+};
+
 // ── Roles ──
 
 export const ROLE_TEXT: Record<RoleType, string> = {

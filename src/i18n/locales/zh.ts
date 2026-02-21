@@ -82,6 +82,11 @@ const zh: Record<TranslationKey, string> = {
   'equip.detail.owner': '所有者',
   'equip.detail.mainstat': '主属性',
   'equip.detail.back': '全部装备',
+  'equip.detail.piece.helmet': '头盔',
+  'equip.detail.piece.armor': '铠甲',
+  'equip.detail.piece.gloves': '手套',
+  'equip.detail.piece.shoes': '鞋子',
+  'equip.detail.set_effects': '套装效果',
   'page.tierlist.title': '异域战记 节奏榜',
   'page.tierlist.meta_title': '异域战记 节奏榜 – {monthYear}',
   'page.tierlist.description':

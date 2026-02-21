@@ -82,6 +82,11 @@ const en = {
   'equip.detail.owner': 'Owner',
   'equip.detail.mainstat': 'Main Stat',
   'equip.detail.back': 'All Equipment',
+  'equip.detail.piece.helmet': 'Helmet',
+  'equip.detail.piece.armor': 'Armor',
+  'equip.detail.piece.gloves': 'Gloves',
+  'equip.detail.piece.shoes': 'Shoes',
+  'equip.detail.set_effects': 'Set Effects',
   'page.tierlist.title': 'Outerplane Tier List',
   'page.tierlist.meta_title': 'Outerplane Tier List – {monthYear}',
   'page.tierlist.description':

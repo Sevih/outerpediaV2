@@ -82,6 +82,11 @@ const jp: Record<TranslationKey, string> = {
   'equip.detail.owner': '所有者',
   'equip.detail.mainstat': 'メインステータス',
   'equip.detail.back': '全装備',
+  'equip.detail.piece.helmet': 'ヘルメット',
+  'equip.detail.piece.armor': 'アーマー',
+  'equip.detail.piece.gloves': 'グローブ',
+  'equip.detail.piece.shoes': 'シューズ',
+  'equip.detail.set_effects': 'セット効果',
   'page.tierlist.title': 'アウタープレーン ティアリスト',
   'page.tierlist.meta_title': 'アウタープレーン ティアリスト – {monthYear}',
   'page.tierlist.description':

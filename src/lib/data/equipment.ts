@@ -9,6 +9,73 @@ export { slugifyEquipment };
 const EQUIP_DIR = join(process.cwd(), 'data/equipment');
 const RECO_DIR = join(process.cwd(), 'data/reco');
 
+type StatRangesByRarity = Record<string, Record<string, [number, number]>>;
+type StatRangesJSON = Record<string, Record<string, StatRangesByRarity>>;
+
+/** Returns stat ranges for a given equipment category, rarity, and level */
+export async function getWeaponStatRanges(
+  rarity: string,
+  level: number
+): Promise<Record<string, [number, number]>> {
+  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
+  const data = JSON.parse(raw) as StatRangesJSON;
+  const weaponStats = data.weapons;
+  const result: Record<string, [number, number]> = {};
+  for (const [stat, rarities] of Object.entries(weaponStats)) {
+    const levels = rarities[rarity];
+    if (levels) {
+      const range = levels[String(level)];
+      if (range) result[stat] = range as [number, number];
+    }
+  }
+  return result;
+}
+
+/** Returns stat ranges for a given accessory rarity and level, filtered by mainStats */
+export async function getAccessoryStatRanges(
+  rarity: string,
+  level: number,
+  mainStats: string[] | null
+): Promise<Record<string, [number, number]>> {
+  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
+  const data = JSON.parse(raw) as StatRangesJSON;
+  const accStats = data.accessories;
+  const result: Record<string, [number, number]> = {};
+  for (const [stat, rarities] of Object.entries(accStats)) {
+    if (mainStats && !mainStats.includes(stat)) continue;
+    const levels = rarities[rarity];
+    if (levels) {
+      const range = levels[String(level)];
+      if (range) result[stat] = range as [number, number];
+    }
+  }
+  return result;
+}
+
+const ARMOR_PIECES = ['Helmet', 'Armor', 'Gloves', 'Shoes'] as const;
+export type ArmorPiece = typeof ARMOR_PIECES[number];
+export type ArmorSetStatRanges = Record<ArmorPiece, Record<string, [number, number]>>;
+
+/** Returns stat ranges for each armor piece (Helmet, Armor, Gloves, Shoes) */
+export async function getArmorSetStatRanges(): Promise<ArmorSetStatRanges> {
+  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
+  const data = JSON.parse(raw) as StatRangesJSON;
+  const result = {} as ArmorSetStatRanges;
+  for (const piece of ARMOR_PIECES) {
+    const pieceStats = data[piece];
+    result[piece] = {};
+    if (!pieceStats) continue;
+    for (const [stat, rarities] of Object.entries(pieceStats)) {
+      const levels = rarities['legendary'];
+      if (levels) {
+        const range = levels['6'];
+        if (range) result[piece][stat] = range as [number, number];
+      }
+    }
+  }
+  return result;
+}
+
 export async function getWeapons(): Promise<Weapon[]> {
   const raw = await readFile(join(EQUIP_DIR, 'weapon.json'), 'utf-8');
   return JSON.parse(raw) as Weapon[];

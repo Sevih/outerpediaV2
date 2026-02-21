@@ -28,9 +28,9 @@ export default function EquipmentSource({ source, boss, equipName, bossMap, lang
       const firstBoss = bossMap[bossNames[0]];
       const sourceLabel = firstBoss ? lRec(firstBoss.source, lang) : source;
       return (
-        <div className="text-xs text-zinc-500">
+        <div className="text-sm text-zinc-300">
           <p>{sourceLabel}</p>
-          <p className="text-zinc-300">
+          <p>
             {bossNames.map(n => lRec(bossMap[n]?.name, lang) || n).join(' / ')}
           </p>
         </div>
@@ -45,9 +45,9 @@ export default function EquipmentSource({ source, boss, equipName, bossMap, lang
   const sourceLabel = (rawSource && SOURCE_LABELS[rawSource]) ? lRec(SOURCE_LABELS[rawSource], lang) : rawSource;
 
   return (
-    <div className="text-xs text-zinc-500">
+    <div className="text-sm text-zinc-300">
       {sourceLabel && <p>{sourceLabel}</p>}
-      {bossName && <p className="text-zinc-300">{bossName}</p>}
+      {bossName && <p>{bossName}</p>}
     </div>
   );
 }

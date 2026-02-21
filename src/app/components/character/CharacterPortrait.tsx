@@ -86,25 +86,22 @@ export default function CharacterPortrait({
         priority={priority}
       />
 
-      {/* Element & class icons — bottom right, stacked */}
+      {/* Element icon — top right, Class icon — bottom right */}
       {showIcons && s.iconSize > 0 && (
         <>
           {element && (
-            <div className="absolute bottom-0.5 right-0.5 z-10">
+            <div className="absolute top-0.5 right-0.5 z-10">
               <Image
                 src={`/images/ui/elem/CM_Element_${element}.webp`}
                 alt={element}
                 width={s.iconSize}
                 height={s.iconSize}
-                className="drop-shadow-md"
+                className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
               />
             </div>
           )}
           {classType && (
-            <div
-              className="absolute right-0.5 z-10"
-              style={{ bottom: s.iconSize + 4 }}
-            >
+            <div className="absolute top-1/2 right-0.5 z-10 -translate-y-1/2">
               <Image
                 src={`/images/ui/class/CM_Class_${classType}.webp`}
                 alt={classType}

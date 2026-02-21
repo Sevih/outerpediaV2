@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Weapon, Amulet, Talisman, ArmorSet, ExclusiveEquipment, BossDisplayMap } from '@/types/equipment';
-import type { EquipmentLookup } from '@/lib/data/equipment';
+import type { EquipmentLookup, ArmorSetStatRanges } from '@/lib/data/equipment';
 import type { Effect } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
 import type { Messages } from '@/i18n';
@@ -12,11 +12,14 @@ import { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import BuffDebuffDisplay from '@/app/components/character/BuffDebuffDisplay';
 import EquipmentIcon from '@/app/components/equipment/EquipmentIcon';
 import EquipmentSource from '@/app/components/equipment/EquipmentSource';
+import CharacterPortrait from '@/app/components/character/CharacterPortrait';
+import StatInline from '@/app/components/inline/StatInline';
+import FitText from '@/app/components/ui/FitText';
 import { useBreadcrumbOverride } from '@/lib/contexts/BreadcrumbContext';
 import { l } from '@/lib/i18n/localize';
 import { formatEffectText, formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
 import type { ItemRarity } from '@/lib/theme';
-import { ITEM_RARITY_TEXT } from '@/lib/theme';
+import { ITEM_RARITY_TEXT, ITEM_RARITY_BG } from '@/lib/theme';
 
 type CharacterRef = {
   id: string;
@@ -33,6 +36,9 @@ type Props = {
   bossMap: BossDisplayMap;
   buffMap: Record<string, Effect>;
   debuffMap: Record<string, Effect>;
+  weaponStatRanges: Record<string, [number, number]> | null;
+  accessoryStatRanges: Record<string, [number, number]> | null;
+  armorSetStatRanges: ArmorSetStatRanges | null;
   messages: Messages;
   lang: Lang;
 };
@@ -47,7 +53,7 @@ export default function EquipmentDetailClient(props: Props) {
   );
 }
 
-function EquipmentDetailInner({ equipment, recoCharacters, eeOwner, bossMap, lang }: Props) {
+function EquipmentDetailInner({ equipment, recoCharacters, eeOwner, bossMap, weaponStatRanges, accessoryStatRanges, armorSetStatRanges, lang }: Props) {
   const { t } = useI18n();
   const equipName = l(equipment.data, 'name', lang);
   useBreadcrumbOverride(equipName);
@@ -57,10 +63,10 @@ function EquipmentDetailInner({ equipment, recoCharacters, eeOwner, bossMap, lan
       <Link href={`/${lang}/equipments`} className="inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-300">
         <span aria-hidden="true">&larr;</span> {t('equip.detail.back')}
       </Link>
-      {equipment.type === 'weapon' && <WeaponDetail weapon={equipment.data} lang={lang} bossMap={bossMap} t={t} />}
-      {equipment.type === 'amulet' && <AmuletDetail amulet={equipment.data} lang={lang} bossMap={bossMap} t={t} />}
+      {equipment.type === 'weapon' && <WeaponDetail weapon={equipment.data} lang={lang} bossMap={bossMap} statRanges={weaponStatRanges} t={t} />}
+      {equipment.type === 'amulet' && <AmuletDetail amulet={equipment.data} lang={lang} bossMap={bossMap} statRanges={accessoryStatRanges} t={t} />}
       {equipment.type === 'talisman' && <TalismanDetail talisman={equipment.data} lang={lang} bossMap={bossMap} t={t} />}
-      {equipment.type === 'set' && <SetDetail set={equipment.data} lang={lang} bossMap={bossMap} t={t} />}
+      {equipment.type === 'set' && <SetDetail set={equipment.data} lang={lang} bossMap={bossMap} statRanges={armorSetStatRanges} t={t} />}
       {equipment.type === 'ee' && eeOwner && <EEDetail ee={equipment.data} owner={eeOwner} lang={lang} />}
 
       {/* Recommended characters */}
@@ -80,11 +86,16 @@ function EquipmentDetailInner({ equipment, recoCharacters, eeOwner, bossMap, lan
 
 // ── Weapon detail ──
 
-function WeaponDetail({ weapon, lang, bossMap, t }: { weapon: Weapon; lang: Lang; bossMap: BossDisplayMap; t: ReturnType<typeof useI18n>['t'] }) {
+function WeaponDetail({ weapon, lang, bossMap, statRanges, t }: { weapon: Weapon; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null; t: ReturnType<typeof useI18n>['t'] }) {
   const name = l(weapon, 'name', lang);
   const effectName = weapon.effect_name ? l(weapon, 'effect_name', lang) : null;
   const effectDesc1 = weapon.effect_desc1 ? l(weapon, 'effect_desc1', lang) : null;
   const effectDesc4 = weapon.effect_desc4 ? l(weapon, 'effect_desc4', lang) : null;
+
+  const atkRange = statRanges?.['ATK'] ?? null;
+  const secondaryStats = statRanges
+    ? Object.entries(statRanges).filter(([k]) => k !== 'ATK')
+    : [];
 
   return (
     <>
@@ -97,7 +108,32 @@ function WeaponDetail({ weapon, lang, bossMap, t }: { weapon: Weapon; lang: Lang
           {weapon.class && <ClassBadge classType={weapon.class} t={t} />}
         </>}
       />
-      <EffectSection effectName={effectName} effectIcon={weapon.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} levelLabel={`Lv. ${weapon.level}`} t={t} />
+
+      {/* Main stats */}
+      {atkRange && (
+        <section className="card p-4">
+          <h3 className="after:hidden">{t('equip.detail.mainstats')}</h3>
+          <div className="mt-3 space-y-1.5 text-sm">
+            <div className="flex items-center justify-between">
+              <span className="font-bold text-zinc-200"><StatInline name="ATK" /></span>
+              <span className="tabular-nums text-zinc-300">{atkRange[0]} — {atkRange[1]}</span>
+            </div>
+            {secondaryStats.length > 0 && (
+              <>
+                <hr className="border-zinc-700/50" />
+                {secondaryStats.map(([stat, [min, max]]) => (
+                  <div key={stat} className="flex items-center justify-between">
+                    <span className="text-zinc-400"><StatInline name={stat} /></span>
+                    <span className="tabular-nums text-zinc-500">{min}% — {max}%</span>
+                  </div>
+                ))}
+              </>
+            )}
+          </div>
+        </section>
+      )}
+
+      <EffectSection effectName={effectName} effectIcon={weapon.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} t={t} />
       <SourceSection source={weapon.source} boss={weapon.boss} equipName={weapon.name} bossMap={bossMap} lang={lang} t={t} />
     </>
   );
@@ -105,11 +141,13 @@ function WeaponDetail({ weapon, lang, bossMap, t }: { weapon: Weapon; lang: Lang
 
 // ── Amulet detail ──
 
-function AmuletDetail({ amulet, lang, bossMap, t }: { amulet: Amulet; lang: Lang; bossMap: BossDisplayMap; t: ReturnType<typeof useI18n>['t'] }) {
+function AmuletDetail({ amulet, lang, bossMap, statRanges, t }: { amulet: Amulet; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null; t: ReturnType<typeof useI18n>['t'] }) {
   const name = l(amulet, 'name', lang);
   const effectName = amulet.effect_name ? l(amulet, 'effect_name', lang) : null;
   const effectDesc1 = amulet.effect_desc1 ? l(amulet, 'effect_desc1', lang) : null;
   const effectDesc4 = amulet.effect_desc4 ? l(amulet, 'effect_desc4', lang) : null;
+
+  const mainStats = amulet.mainStats ?? [];
 
   return (
     <>
@@ -122,14 +160,22 @@ function AmuletDetail({ amulet, lang, bossMap, t }: { amulet: Amulet; lang: Lang
           {amulet.class && <ClassBadge classType={amulet.class} t={t} />}
         </>}
       />
-      <EffectSection effectName={effectName} effectIcon={amulet.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} levelLabel={`Lv. ${amulet.level}`} t={t} />
-      {amulet.mainStats && amulet.mainStats.length > 0 && (
-        <section>
-          <h3>{t('equip.detail.mainstats')}</h3>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {amulet.mainStats.map((stat) => (
-              <span key={stat} className="rounded bg-zinc-800 px-2.5 py-1 text-sm text-zinc-300">{stat}</span>
-            ))}
+      <EffectSection effectName={effectName} effectIcon={amulet.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} t={t} />
+      {mainStats.length > 0 && (
+        <section className="card p-4">
+          <h3 className="after:hidden">{t('equip.detail.mainstats')}</h3>
+          <div className="mt-3 space-y-1.5 text-sm">
+            {mainStats.map((stat) => {
+              const range = statRanges?.[stat];
+              return (
+                <div key={stat} className="flex items-center justify-between">
+                  <span className="font-bold text-zinc-200"><StatInline name={stat} /></span>
+                  {range && (
+                    <span className="tabular-nums text-zinc-400">{range[0]}% — {range[1]}%</span>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </section>
       )}
@@ -177,7 +223,15 @@ function TalismanDetail({ talisman, lang, bossMap, t }: { talisman: Talisman; la
 
 // ── Set detail ──
 
-function SetDetail({ set, lang, bossMap, t }: { set: ArmorSet; lang: Lang; bossMap: BossDisplayMap; t: ReturnType<typeof useI18n>['t'] }) {
+const ARMOR_PIECE_KEYS = ['Helmet', 'Armor', 'Gloves', 'Shoes'] as const;
+const ARMOR_PIECE_I18N: Record<string, string> = {
+  Helmet: 'equip.detail.piece.helmet',
+  Armor: 'equip.detail.piece.armor',
+  Gloves: 'equip.detail.piece.gloves',
+  Shoes: 'equip.detail.piece.shoes',
+};
+
+function SetDetail({ set, lang, bossMap, statRanges, t }: { set: ArmorSet; lang: Lang; bossMap: BossDisplayMap; statRanges: ArmorSetStatRanges | null; t: ReturnType<typeof useI18n>['t'] }) {
   const name = l(set, 'name', lang);
   const effect21 = l(set, 'effect_2_1', lang);
   const effect24 = l(set, 'effect_2_4', lang);
@@ -196,32 +250,84 @@ function SetDetail({ set, lang, bossMap, t }: { set: ArmorSet; lang: Lang; bossM
         </>}
       />
 
-      <section className="card space-y-4 p-4">
-        {/* 2-piece bonus */}
-        {(effect21 || effect24) && (
-          <div>
-            <h4 className="text-buff after:hidden">{t('equip.set.2piece')}</h4>
-            <div className="mt-1 space-y-1 text-sm text-zinc-300">
-              {effect21 && <p><span className="text-zinc-500">Lv. 0 </span>{formatEffectText(effect21)}</p>}
-              {effect24 && effect24 !== effect21 && (
-                <p><span className="text-zinc-500">Lv. 10 </span>{formatScaledEffect(effect24, effect21)}</p>
-              )}
+      <section className="card p-4">
+        <div className="flex items-center gap-2">
+          {set.set_icon && (
+            <div className="relative h-6 w-6 shrink-0">
+              <Image src={`/images/ui/effect/${set.set_icon}.webp`} alt="" fill sizes="24px" className="object-contain" />
             </div>
-          </div>
-        )}
-        {/* 4-piece bonus */}
-        {(effect41 || effect44) && (
-          <div>
-            <h4 className="text-buff after:hidden">{t('equip.set.4piece')}</h4>
-            <div className="mt-1 space-y-1 text-sm text-zinc-300">
-              {effect41 && <p><span className="text-zinc-500">Lv. 0 </span>{formatEffectText(effect41)}</p>}
-              {effect44 && effect44 !== effect41 && (
-                <p><span className="text-zinc-500">Lv. 10 </span>{formatScaledEffect(effect44, effect41)}</p>
-              )}
-            </div>
-          </div>
-        )}
+          )}
+          <h3 className="after:hidden">{name} — {t('equip.detail.set_effects')}</h3>
+        </div>
+        <table className="mt-3 w-full text-sm">
+          <thead>
+            <tr className="text-zinc-500">
+              <th className="pb-1 text-left font-normal" />
+              {(effect21 || effect24) && <th className="pb-1 text-left font-bold text-buff">{t('equip.set.2piece')}</th>}
+              {(effect41 || effect44) && <th className="pb-1 text-left font-bold text-buff">{t('equip.set.4piece')}</th>}
+            </tr>
+          </thead>
+          <tbody>
+            {(effect21 || effect41) && (
+              <tr>
+                <td className="w-10 py-1.5 align-top text-zinc-500">T0</td>
+                {(effect21 || effect24) && <td className="py-1.5 align-top text-zinc-300">{effect21 ? formatEffectText(effect21) : '—'}</td>}
+                {(effect41 || effect44) && <td className="py-1.5 align-top text-zinc-300">{effect41 ? formatEffectText(effect41) : '—'}</td>}
+              </tr>
+            )}
+            {(effect24 || effect44) && (effect24 !== effect21 || effect44 !== effect41) && (
+              <tr>
+                <td className="w-10 py-1.5 align-top text-zinc-500">T4</td>
+                {(effect21 || effect24) && <td className="py-1.5 align-top text-zinc-300">{effect24 && effect24 !== effect21 ? formatScaledEffect(effect24, effect21) : effect21 ? formatEffectText(effect21) : '—'}</td>}
+                {(effect41 || effect44) && <td className="py-1.5 align-top text-zinc-300">{effect44 && effect44 !== effect41 ? formatScaledEffect(effect44, effect41) : effect41 ? formatEffectText(effect41) : '—'}</td>}
+              </tr>
+            )}
+          </tbody>
+        </table>
       </section>
+
+      {/* Armor piece stats */}
+      {statRanges && (
+        <section>
+          <h3>{t('equip.detail.mainstat')}</h3>
+          <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {ARMOR_PIECE_KEYS.map((piece) => {
+              const stats = statRanges[piece];
+              if (!stats || Object.keys(stats).length === 0) return null;
+              return (
+                <div key={piece} className="card flex items-center gap-3 p-3">
+                  {/* Icon */}
+                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded">
+                    <Image src={getRarityBgPath(set.rarity)} alt="" fill sizes="56px" className="object-cover" />
+                    <div className="absolute inset-0.5">
+                      <Image src={`/images/equipment/TI_Equipment_${piece}_${set.image_prefix}.webp`} alt="" fill sizes="52px" className="object-contain" />
+                    </div>
+                  </div>
+                  {/* Table */}
+                  <table className="flex-1 text-sm">
+                    <thead>
+                      <tr className="text-xs text-zinc-500">
+                        <th className="pb-1 text-left font-normal">{t(ARMOR_PIECE_I18N[piece] as Parameters<typeof t>[0])}</th>
+                        <th className="pb-1 text-right font-normal">Lv.0 T0</th>
+                        <th className="pb-1 text-right font-normal">Lv.10 T4</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {Object.entries(stats).map(([stat, [min, max]]) => (
+                        <tr key={stat}>
+                          <td className="py-0.5 text-zinc-300"><StatInline name={stat} /></td>
+                          <td className="py-0.5 text-right tabular-nums text-zinc-400">{min}{stat !== 'DEF' ? '%' : ''}</td>
+                          <td className="py-0.5 text-right tabular-nums text-zinc-300">{max}{stat !== 'DEF' ? '%' : ''}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       <SourceSection source={set.source} boss={set.boss} equipName={set.name} bossMap={bossMap} lang={lang} t={t} />
     </>
@@ -319,12 +425,11 @@ function HeroSection({ icon, name, badges }: { icon: React.ReactNode; name: stri
   );
 }
 
-function EffectSection({ effectName, effectIcon, effectDesc1, effectDesc4, levelLabel, t }: {
+function EffectSection({ effectName, effectIcon, effectDesc1, effectDesc4, t }: {
   effectName: string | null;
   effectIcon: string | null;
   effectDesc1: string | null;
   effectDesc4: string | null;
-  levelLabel: string;
   t: ReturnType<typeof useI18n>['t'];
 }) {
   if (!effectName && !effectDesc1) return null;
@@ -340,14 +445,14 @@ function EffectSection({ effectName, effectIcon, effectDesc1, effectDesc4, level
               <Image src={`/images/ui/effect/${effectIcon}.webp`} alt="" fill sizes="20px" className="object-contain" />
             </div>
           )}
-          <span className="text-sm text-buff">{levelLabel} {effectName}</span>
+          <span className="text-sm text-buff">{effectName}</span>
         </div>
       )}
 
       <div className="mt-3 space-y-2 text-sm text-zinc-300">
-        {effectDesc1 && <p><span className="text-zinc-500">Lv. 0 </span>{formatEffectText(effectDesc1)}</p>}
+        {effectDesc1 && <p><span className="text-zinc-500">T0 </span>{formatEffectText(effectDesc1)}</p>}
         {effectDesc4 && effectDesc4 !== effectDesc1 && (
-          <p><span className="text-zinc-500">{levelLabel} </span>{formatScaledEffect(effectDesc4, effectDesc1)}</p>
+          <p><span className="text-zinc-500">T4 </span>{formatScaledEffect(effectDesc4, effectDesc1)}</p>
         )}
       </div>
     </section>
@@ -382,7 +487,7 @@ function RarityBadge({ rarity }: { rarity: ItemRarity }) {
   const { t } = useI18n();
   const key = rarity.toLowerCase() as ItemRarity;
   const textCls = ITEM_RARITY_TEXT[key] ?? ITEM_RARITY_TEXT.normal;
-  const bgCls = textCls.replace('text-', 'bg-') + '/20';
+  const bgCls = ITEM_RARITY_BG[key] ?? ITEM_RARITY_BG.normal;
   const label = t(`sys.rarity.${key}` as Parameters<typeof t>[0]);
   return <span className={`rounded-full px-2.5 py-0.5 text-xs ${bgCls} ${textCls}`}>{label}</span>;
 }
@@ -399,31 +504,11 @@ function ClassBadge({ classType, t }: { classType: string; t: ReturnType<typeof 
 }
 
 function CharacterRefCard({ char, lang }: { char: CharacterRef; lang: Lang }) {
-  const { t } = useI18n();
   const content = (
-    <div className="card-interactive flex items-center gap-3 p-3">
-      <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-zinc-800">
-        <Image
-          src={`/images/characters/atb/IG_Turn_${char.id}.webp`}
-          alt={char.name}
-          fill
-          sizes="48px"
-          className="object-contain"
-        />
-      </div>
-      <div className="min-w-0">
-        <p className="truncate text-sm font-bold text-zinc-100">{char.name}</p>
-        {char.element && char.classType && (
-          <div className="flex items-center gap-1.5 text-xs text-zinc-400">
-            <div className="relative h-4 w-4 shrink-0">
-              <Image src={`/images/ui/elem/${char.element.toLowerCase()}.webp`} alt={char.element} fill sizes="16px" className="object-contain" />
-            </div>
-            <div className="relative h-4 w-4 shrink-0">
-              <Image src={`/images/ui/class/CM_Class_${char.classType}.webp`} alt={char.classType} fill sizes="16px" className="object-contain" />
-            </div>
-            <span>{t(`sys.class.${char.classType.toLowerCase()}` as Parameters<typeof t>[0])}</span>
-          </div>
-        )}
+    <div className="card-interactive flex flex-col items-center gap-2 p-3">
+      <CharacterPortrait id={char.id} name={char.name} size="md" showIcons />
+      <div className="w-full text-center font-bold text-zinc-100">
+        <FitText max={14} min={9}>{char.name}</FitText>
       </div>
     </div>
   );

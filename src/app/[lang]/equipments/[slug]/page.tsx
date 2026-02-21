@@ -4,7 +4,7 @@ import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
-import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment } from '@/lib/data/equipment';
+import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment, getWeaponStatRanges, getAccessoryStatRanges, getArmorSetStatRanges } from '@/lib/data/equipment';
 import { getCharacterIndex, resolveIdToSlug } from '@/lib/data/characters';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getBossDisplayMap } from '@/lib/data/bosses';
@@ -98,6 +98,25 @@ export default async function EquipmentDetailPage({ params }: Props) {
     })
   );
 
+  // Shuffle recommended characters for varied display
+  for (let i = recoCharacters.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [recoCharacters[i], recoCharacters[j]] = [recoCharacters[j], recoCharacters[i]];
+  }
+
+  // Compute stat ranges
+  const weaponStatRanges = equipment.type === 'weapon'
+    ? await getWeaponStatRanges(equipment.data.rarity, equipment.data.level)
+    : null;
+
+  const accessoryStatRanges = equipment.type === 'amulet'
+    ? await getAccessoryStatRanges(equipment.data.rarity, equipment.data.level, equipment.data.mainStats)
+    : null;
+
+  const armorSetStatRanges = equipment.type === 'set'
+    ? await getArmorSetStatRanges()
+    : null;
+
   // For EE: resolve owner character info
   let eeOwner: { id: string; name: string; slug: string | null; element: string | null; classType: string | null } | null = null;
   if (equipment.type === 'ee') {
@@ -120,6 +139,9 @@ export default async function EquipmentDetailPage({ params }: Props) {
       bossMap={bossMap}
       buffMap={buffMap}
       debuffMap={debuffMap}
+      weaponStatRanges={weaponStatRanges}
+      accessoryStatRanges={accessoryStatRanges}
+      armorSetStatRanges={armorSetStatRanges}
       messages={messages}
       lang={lang}
     />
