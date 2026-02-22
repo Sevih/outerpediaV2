@@ -38,6 +38,7 @@ export default function EquipmentSource({ source, boss, equipName, bossMap, lang
     }
   }
 
+  // TODO: When boss guides are implemented, display boss portrait/icon using bossInfo.icons and bossInfo.element
   // Special Request / other: resolve from boss field
   const bossInfo = boss ? bossMap[boss] : null;
   const bossName = bossInfo ? lRec(bossInfo.name, lang) : boss;

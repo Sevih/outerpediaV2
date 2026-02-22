@@ -178,10 +178,12 @@ const zh: Record<TranslationKey, string> = {
   'home.resets.monthly': '每月',
 
   // Search
-  'search.placeholder': '搜索角色、页面...',
+  'search.placeholder': '搜索角色、装备、攻略...',
   'search.no_results': '未找到结果',
   'search.pages': '页面',
   'search.characters': '角色',
+  'search.equipment': '装备',
+  'search.guides': '攻略',
 
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': '角色',

@@ -178,10 +178,12 @@ const jp: Record<TranslationKey, string> = {
   'home.resets.monthly': 'マンスリー',
 
   // Search
-  'search.placeholder': 'キャラクター、ページを検索...',
+  'search.placeholder': 'キャラクター、装備、ガイドを検索...',
   'search.no_results': '結果が見つかりません',
   'search.pages': 'ページ',
   'search.characters': 'キャラクター',
+  'search.equipment': '装備',
+  'search.guides': 'ガイド',
 
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': 'キャラ',

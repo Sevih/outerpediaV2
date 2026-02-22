@@ -7,10 +7,11 @@ import Image from 'next/image';
 import { FaSearch } from 'react-icons/fa';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import { useI18n } from '@/lib/contexts/I18nContext';
-import { l } from '@/lib/i18n/localize';
+import { l, lRec } from '@/lib/i18n/localize';
 import { ALL_PAGES } from '@/lib/nav';
 import { FILTER } from '@/lib/theme';
 import type { CharacterIndexMap } from '@/types/character';
+import type { SearchExtras, EquipmentSearchItem } from '@/app/api/search-index/extras/route';
 
 
 export function SearchTrigger({ onClick }: { onClick: () => void }) {
@@ -27,6 +28,20 @@ export function SearchTrigger({ onClick }: { onClick: () => void }) {
   );
 }
 
+const EQUIP_TYPE_LABELS: Record<EquipmentSearchItem['type'], string> = {
+  weapon: 'Weapon',
+  amulet: 'Accessory',
+  talisman: 'Talisman',
+  set: 'Set',
+  ee: 'EE',
+};
+
+function getEquipImage(item: EquipmentSearchItem): string {
+  if (item.type === 'set') return `/images/equipment/${item.image}.webp`;
+  if (item.type === 'ee') return `/images/ui/effect/${item.image}.webp`;
+  return `/images/equipment/${item.image}.webp`;
+}
+
 export default function SearchModal({
   open,
   onClose,
@@ -39,9 +54,10 @@ export default function SearchModal({
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState('');
   const [charIndex, setCharIndex] = useState<CharacterIndexMap | null>(null);
+  const [extras, setExtras] = useState<SearchExtras | null>(null);
   const [selectedIdx, setSelectedIdx] = useState(0);
 
-  // Load character index on first open
+  // Load search data on first open
   useEffect(() => {
     if (open && !charIndex) {
       fetch('/api/search-index')
@@ -49,7 +65,13 @@ export default function SearchModal({
         .then((data: CharacterIndexMap) => setCharIndex(data))
         .catch(() => {});
     }
-  }, [open, charIndex]);
+    if (open && !extras) {
+      fetch('/api/search-index/extras')
+        .then((r) => r.json())
+        .then((data: SearchExtras) => setExtras(data))
+        .catch(() => {});
+    }
+  }, [open, charIndex, extras]);
 
   // Focus input on open
   useEffect(() => {
@@ -88,10 +110,43 @@ export default function SearchModal({
       .map(([id, c]) => ({ ...c, _id: id }));
   }, [charIndex, query, lang]);
 
-  const allResults = useMemo(() => [
+  const equipResults = useMemo(() => {
+    if (!extras || !query.trim()) return [];
+    const q = query.toLowerCase();
+    return extras.equipment
+      .filter((e) => {
+        const localizedName = l(e, 'name', lang);
+        return localizedName.toLowerCase().includes(q) || e.name.toLowerCase().includes(q)
+          || e.slug.toLowerCase().includes(q);
+      })
+      .slice(0, 8);
+  }, [extras, query, lang]);
+
+  const guideResults = useMemo(() => {
+    if (!extras || !query.trim()) return [];
+    const q = query.toLowerCase();
+    return extras.guides
+      .filter((g) => {
+        const localizedTitle = lRec(g.title, lang);
+        return localizedTitle.toLowerCase().includes(q)
+          || (g.title.en ?? '').toLowerCase().includes(q)
+          || g.slug.toLowerCase().includes(q);
+      })
+      .slice(0, 5);
+  }, [extras, query, lang]);
+
+  type ResultItem =
+    | { type: 'page'; key: string; href: string }
+    | { type: 'char'; _id: string; slug: string; [k: string]: unknown }
+    | { type: 'equip'; slug: string; [k: string]: unknown }
+    | { type: 'guide'; slug: string; category: string; [k: string]: unknown };
+
+  const allResults = useMemo<ResultItem[]>(() => [
     ...pageResults.map((p) => ({ type: 'page' as const, ...p })),
     ...charResults.map((c) => ({ type: 'char' as const, ...c })),
-  ], [pageResults, charResults]);
+    ...equipResults.map((e) => ({ type: 'equip' as const, ...e })),
+    ...guideResults.map((g) => ({ type: 'guide' as const, ...g })),
+  ], [pageResults, charResults, equipResults, guideResults]);
 
   // Reset selection on results change
   useEffect(() => { setSelectedIdx(0); }, [allResults.length]);
@@ -101,8 +156,12 @@ export default function SearchModal({
     if (!item) return;
     if (item.type === 'page') {
       router.push(`/${lang}${item.href}` as never);
-    } else {
+    } else if (item.type === 'char') {
       router.push(`/${lang}/characters/${item.slug}` as never);
+    } else if (item.type === 'equip') {
+      router.push(`/${lang}/equipments/${item.slug}` as never);
+    } else if (item.type === 'guide') {
+      router.push(`/${lang}/guides/${item.category}/${item.slug}` as never);
     }
     onClose();
   }, [allResults, lang, router, onClose]);
@@ -124,6 +183,16 @@ export default function SearchModal({
   }, [allResults.length, selectedIdx, navigate, onClose]);
 
   if (!open) return null;
+
+  const charOffset = pageResults.length;
+  const equipOffset = charOffset + charResults.length;
+  const guideOffset = equipOffset + equipResults.length;
+
+  const hasNoResults = query.trim()
+    && pageResults.length === 0
+    && charResults.length === 0
+    && equipResults.length === 0
+    && guideResults.length === 0;
 
   return createPortal(
     <div className="fixed inset-0 z-70 flex items-start justify-center pt-[15vh]" onClick={onClose}>
@@ -178,7 +247,7 @@ export default function SearchModal({
             <div className="mt-1">
               <p className="px-2 py-1 text-xs font-semibold text-zinc-500">{t('search.characters')}</p>
               {charResults.map((char, i) => {
-                const idx = pageResults.length + i;
+                const idx = charOffset + i;
                 const displayName = l(char, 'Fullname', lang);
                 return (
                   <button
@@ -217,8 +286,73 @@ export default function SearchModal({
             </div>
           )}
 
+          {/* Equipment */}
+          {equipResults.length > 0 && (
+            <div className="mt-1">
+              <p className="px-2 py-1 text-xs font-semibold text-zinc-500">{t('search.equipment')}</p>
+              {equipResults.map((equip, i) => {
+                const idx = equipOffset + i;
+                const displayName = l(equip, 'name', lang);
+                return (
+                  <button
+                    key={equip.slug}
+                    className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm ${
+                      selectedIdx === idx ? `${FILTER.active} text-white` : `text-zinc-300 ${FILTER.hover}`
+                    }`}
+                    onClick={() => navigate(idx)}
+                    onMouseEnter={() => setSelectedIdx(idx)}
+                  >
+                    <div className="relative size-6 shrink-0">
+                      <Image
+                        src={getEquipImage(equip)}
+                        alt=""
+                        fill
+                        sizes="24px"
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="flex-1">{displayName}</span>
+                    <span className="text-xs text-zinc-500">{EQUIP_TYPE_LABELS[equip.type]}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Guides */}
+          {guideResults.length > 0 && (
+            <div className="mt-1">
+              <p className="px-2 py-1 text-xs font-semibold text-zinc-500">{t('search.guides')}</p>
+              {guideResults.map((guide, i) => {
+                const idx = guideOffset + i;
+                const displayTitle = lRec(guide.title, lang);
+                return (
+                  <button
+                    key={guide.slug}
+                    className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm ${
+                      selectedIdx === idx ? `${FILTER.active} text-white` : `text-zinc-300 ${FILTER.hover}`
+                    }`}
+                    onClick={() => navigate(idx)}
+                    onMouseEnter={() => setSelectedIdx(idx)}
+                  >
+                    <div className="relative size-6 shrink-0">
+                      <Image
+                        src={guide.categoryIcon}
+                        alt=""
+                        fill
+                        sizes="24px"
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="flex-1">{displayTitle}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
           {/* No results */}
-          {query.trim() && pageResults.length === 0 && charResults.length === 0 && (
+          {hasNoResults && (
             <p className="px-3 py-4 text-center text-sm text-zinc-500">
               {t('search.no_results')}
             </p>

@@ -178,10 +178,12 @@ const kr: Record<TranslationKey, string> = {
   'home.resets.monthly': '월간',
 
   // Search
-  'search.placeholder': '캐릭터, 페이지 검색...',
+  'search.placeholder': '캐릭터, 장비, 가이드 검색...',
   'search.no_results': '결과 없음',
   'search.pages': '페이지',
   'search.characters': '캐릭터',
+  'search.equipment': '장비',
+  'search.guides': '가이드',
 
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': '캐릭',

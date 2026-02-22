@@ -178,10 +178,12 @@ const en = {
   'home.resets.monthly': 'Monthly',
 
   // Search
-  'search.placeholder': 'Search characters, pages...',
+  'search.placeholder': 'Search characters, equipment, guides...',
   'search.no_results': 'No results found',
   'search.pages': 'Pages',
   'search.characters': 'Characters',
+  'search.equipment': 'Equipment',
+  'search.guides': 'Guides',
 
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': 'Chars',
