@@ -34,13 +34,13 @@ export default function StageBasedTeamSelector({ teamData, defaultStage }: Props
         />
       )}
 
-      {/* Element icon badge */}
+      {/* Stage icon badge */}
       {stageData.icon && (
         <div className="flex items-center justify-center gap-2">
           <span className="relative h-6 w-6">
             <Image
-              src={`/images/ui/elem/CM_Element_${stageData.icon.charAt(0).toUpperCase() + stageData.icon.slice(1)}.webp`}
-              alt={stageData.icon}
+              src={`/images/ui/${stageData.icon}.webp`}
+              alt=""
               fill
               sizes="24px"
               className="object-contain"
