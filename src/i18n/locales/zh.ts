@@ -147,6 +147,21 @@ const zh: Record<TranslationKey, string> = {
     '飞天之塔逐层解析：了解高层塔的最佳角色、队伍配合与战术策略。',
   'guides.category.other.desc': '不属于其他分类或已过时的攻略、新闻和内容。',
 
+  'guides.tips.tactical': '战术提示',
+  'guides.tips.strategy': '策略',
+  'guides.tips.general': '通用提示',
+  'guides.tips.important': '重要',
+  'guides.tips.mechanics': '机制',
+  'guides.tips.phase1': '阶段1',
+  'guides.tips.phase2': '阶段2',
+  'guides.recommended.title': '推荐角色',
+  'guides.recommended.phase1': '阶段1 — 推荐角色',
+  'guides.recommended.phase2': '阶段2 — 推荐角色',
+  'guides.combat_footage': '实战视频',
+  'guides.team_selector': '推荐队伍',
+  'guides.boss_display.immunities': '免疫',
+  'guides.boss_display.skills': '技能',
+
   'page.contributors.title': '项目贡献者',
   'page.legal.title': '法律声明 & 免责条款',
   'page.legal.description':

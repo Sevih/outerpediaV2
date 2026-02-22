@@ -30,10 +30,12 @@ export function EffectsProvider({
 type Props = {
   buffs: string[];
   debuffs: string[];
+  /** Show only icons (no label text) */
+  iconOnly?: boolean;
 };
 
 /** Render a row of buff/debuff effect icons */
-export default function BuffDebuffDisplay({ buffs, debuffs }: Props) {
+export default function BuffDebuffDisplay({ buffs, debuffs, iconOnly }: Props) {
   const { buffMap, debuffMap } = useContext(EffectsContext);
 
   if (!buffs.length && !debuffs.length) return null;
@@ -41,16 +43,16 @@ export default function BuffDebuffDisplay({ buffs, debuffs }: Props) {
   return (
     <div className="flex flex-wrap items-center gap-1.5">
       {buffs.map((b) => (
-        <EffectBadge key={b} effect={buffMap[b]} type="buff" />
+        <EffectBadge key={b} effect={buffMap[b]} type="buff" iconOnly={iconOnly} />
       ))}
       {debuffs.map((d) => (
-        <EffectBadge key={d} effect={debuffMap[d]} type="debuff" />
+        <EffectBadge key={d} effect={debuffMap[d]} type="debuff" iconOnly={iconOnly} />
       ))}
     </div>
   );
 }
 
-function EffectBadge({ effect, type }: { effect?: Effect; type: 'buff' | 'debuff' }) {
+function EffectBadge({ effect, type, iconOnly }: { effect?: Effect; type: 'buff' | 'debuff'; iconOnly?: boolean }) {
   const { lang } = useI18n();
 
   if (!effect) return null;
@@ -80,8 +82,8 @@ function EffectBadge({ effect, type }: { effect?: Effect; type: 'buff' | 'debuff
   return (
     <InlineTooltip content={tooltip} bg={tooltipBg}>
       <button type="button" className="cursor-default">
-        <div className={`flex items-center gap-1 rounded-md ${pillBg} py-0.5 pr-1.5 pl-0.5`}>
-          <span className="relative h-5 w-5 shrink-0 rounded bg-black">
+        <div className={`flex items-center gap-1 rounded-md ${iconOnly ? '' : `${pillBg} py-0.5 pr-1.5 pl-0.5`}`}>
+          <span className={`relative h-5 w-5 shrink-0 rounded ${iconOnly ? '' : 'bg-black'}`}>
             <Image
               src={iconPath}
               alt=""
@@ -90,7 +92,7 @@ function EffectBadge({ effect, type }: { effect?: Effect; type: 'buff' | 'debuff
               className={`object-contain ${imageFilter ?? ''}`}
             />
           </span>
-          <span className="text-[11px] font-semibold text-white">{label}</span>
+          {!iconOnly && <span className="text-[11px] font-semibold text-white">{label}</span>}
         </div>
       </button>
     </InlineTooltip>

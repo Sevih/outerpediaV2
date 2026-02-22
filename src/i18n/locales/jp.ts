@@ -147,6 +147,21 @@ const jp: Record<TranslationKey, string> = {
     '飛天の塔を登るためのフロア別攻略：最適キャラクター、チームシナジー、上層階の戦術。',
   'guides.category.other.desc': '他のカテゴリに該当しない、または最新でなくなったガイド、ニュース、コンテンツ。',
 
+  'guides.tips.tactical': '戦術のヒント',
+  'guides.tips.strategy': '戦略',
+  'guides.tips.general': '全般的なヒント',
+  'guides.tips.important': '重要',
+  'guides.tips.mechanics': 'メカニクス',
+  'guides.tips.phase1': 'フェーズ1',
+  'guides.tips.phase2': 'フェーズ2',
+  'guides.recommended.title': 'おすすめキャラクター',
+  'guides.recommended.phase1': 'フェーズ1 — おすすめキャラクター',
+  'guides.recommended.phase2': 'フェーズ2 — おすすめキャラクター',
+  'guides.combat_footage': '実戦動画',
+  'guides.team_selector': 'おすすめチーム',
+  'guides.boss_display.immunities': '免疫',
+  'guides.boss_display.skills': 'スキル',
+
   'page.contributors.title': 'プロジェクト コントリビューター',
   'page.legal.title': '法的通知 & 免責事項',
   'page.legal.description':

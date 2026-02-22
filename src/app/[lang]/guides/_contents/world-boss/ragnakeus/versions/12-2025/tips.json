@@ -1,0 +1,44 @@
+{
+  "strategy": [
+    {
+      "en": "The boss's main characteristic is its {B/BT_ACTION_GAUGE}. Fast units are recommended.",
+      "jp": "ボスの主な特徴は{B/BT_ACTION_GAUGE}です。速いユニットが推奨されます。",
+      "kr": "보스의 주요 특징은 {B/BT_ACTION_GAUGE}입니다. 빠른 유닛이 권장됩니다.",
+      "zh": "首领的主要特点是{B/BT_ACTION_GAUGE}。推荐使用速度快的单位。"
+    },
+    {
+      "en": "Anything that can limit priority gain is useful: {D/BT_DOT_POISON}, {D/BT_DOT_POISON2}, the {I-W/Sacreed Edge} weapon, or {P/Demiurge Vlada} (20% reduction at 4 stars, 50% at 5 stars).",
+      "jp": "行動ゲージ上昇を抑えるものが有効です：{D/BT_DOT_POISON}、{D/BT_DOT_POISON2}、{I-W/Sacreed Edge}武器、または{P/Demiurge Vlada}（4凸で20%減少、5凸で50%減少）。",
+      "kr": "행동 게이지 증가를 제한하는 것이 유용합니다: {D/BT_DOT_POISON}, {D/BT_DOT_POISON2}, {I-W/Sacreed Edge} 무기, 또는 {P/Demiurge Vlada} (4성에서 20% 감소, 5성에서 50% 감소).",
+      "zh": "任何能限制行动值增加的手段都很有用：{D/BT_DOT_POISON}、{D/BT_DOT_POISON2}、{I-W/Sacreed Edge}武器，或{P/Demiurge Vlada}（4星减少20%，5星减少50%）。"
+    },
+    {
+      "en": "Like most World Bosses, the best strategy is to break the boss as often as possible. Key focus areas are CP generation and Weakness Gauge damage.",
+      "jp": "他のワールドボスと同様、最良の戦略はボスをできるだけ頻繁にブレイクすることです。CP生成とWGダメージが重要なポイントです。",
+      "kr": "대부분의 월드 보스와 마찬가지로, 최선의 전략은 보스를 최대한 자주 브레이크하는 것입니다. CP 생성과 WG 피해가 핵심 포인트입니다.",
+      "zh": "与大多数世界首领一样，最佳策略是尽可能频繁地击破首领。CP生成和WG伤害是关键重点。"
+    }
+  ],
+  "phase1": [
+    {
+      "en": "Bring {D/BT_SEALED}, {D/BT_STEAL_BUFF}, or {D/BT_EXTEND_BUFF} to counter boss {B/BT_STAT|ST_DEF}.",
+      "jp": "ボスの{B/BT_STAT|ST_DEF}に対抗するため、{D/BT_SEALED}、{D/BT_STEAL_BUFF}、または{D/BT_EXTEND_BUFF}を持参してください。",
+      "kr": "보스의 {B/BT_STAT|ST_DEF}에 대응하기 위해 {D/BT_SEALED}, {D/BT_STEAL_BUFF}, 또는 {D/BT_EXTEND_BUFF}를 가져오세요.",
+      "zh": "携带{D/BT_SEALED}、{D/BT_STEAL_BUFF}或{D/BT_EXTEND_BUFF}来对抗首领的{B/BT_STAT|ST_DEF}。"
+    }
+  ],
+  "phase2": [
+    {
+      "en": "Bring {D/BT_REMOVE_BUFF}, {D/BT_STEAL_BUFF}, or {D/BT_SEALED} to counter boss {B/BT_SHIELD_BASED_CASTER}.",
+      "jp": "ボスの{B/BT_SHIELD_BASED_CASTER}に対抗するため、{D/BT_REMOVE_BUFF}、{D/BT_STEAL_BUFF}、または{D/BT_SEALED}を持参してください。",
+      "kr": "보스의 {B/BT_SHIELD_BASED_CASTER}에 대응하기 위해 {D/BT_REMOVE_BUFF}, {D/BT_STEAL_BUFF}, 또는 {D/BT_SEALED}를 가져오세요.",
+      "zh": "携带{D/BT_REMOVE_BUFF}、{D/BT_STEAL_BUFF}或{D/BT_SEALED}来对抗首领的{B/BT_SHIELD_BASED_CASTER}。"
+    },
+    {
+      "en": "{C/Defender} recommended to prevent the S3 reset if you want to bring {E/Fire}, {E/Earth}, {E/Water}.",
+      "jp": "{E/Fire}、{E/Earth}、{E/Water}を使う場合、S3リセットを防ぐために{C/Defender}を推奨。",
+      "kr": "{E/Fire}, {E/Earth}, {E/Water}를 사용할 경우 S3 리셋을 방지하기 위해 {C/Defender}를 권장합니다.",
+      "zh": "如果使用{E/Fire}、{E/Earth}、{E/Water}，推荐携带{C/Defender}来防止S3重置。"
+    }
+  ]
+}

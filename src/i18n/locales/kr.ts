@@ -147,6 +147,21 @@ const kr: Record<TranslationKey, string> = {
     '비천의 탑을 오르기 위한 층별 공략: 최적 캐릭터, 팀 시너지, 상층부 전술.',
   'guides.category.other.desc': '다른 카테고리에 해당하지 않거나 더 이상 최신이 아닌 가이드, 뉴스 및 콘텐츠.',
 
+  'guides.tips.tactical': '전술 팁',
+  'guides.tips.strategy': '전략',
+  'guides.tips.general': '일반 팁',
+  'guides.tips.important': '중요',
+  'guides.tips.mechanics': '메카닉스',
+  'guides.tips.phase1': '페이즈 1',
+  'guides.tips.phase2': '페이즈 2',
+  'guides.recommended.title': '추천 캐릭터',
+  'guides.recommended.phase1': '페이즈 1 — 추천 캐릭터',
+  'guides.recommended.phase2': '페이즈 2 — 추천 캐릭터',
+  'guides.combat_footage': '전투 영상',
+  'guides.team_selector': '추천 팀',
+  'guides.boss_display.immunities': '면역',
+  'guides.boss_display.skills': '스킬',
+
   'page.contributors.title': '프로젝트 기여자',
   'page.legal.title': '법적 고지 & 면책 조항',
   'page.legal.description':

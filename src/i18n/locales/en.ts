@@ -147,6 +147,21 @@ const en = {
     'Floor-by-floor strategies to climb Skyward Tower: optimal characters, team synergies, and tactics for higher floors.',
   'guides.category.other.desc': 'Guides, news, and content that doesn\'t fit into the other categories or is no longer up to date.',
 
+  'guides.tips.tactical': 'Tactical Tips',
+  'guides.tips.strategy': 'Strategy',
+  'guides.tips.general': 'General Tips',
+  'guides.tips.important': 'Important',
+  'guides.tips.mechanics': 'Mechanics',
+  'guides.tips.phase1': 'Phase 1',
+  'guides.tips.phase2': 'Phase 2',
+  'guides.recommended.title': 'Recommended Characters',
+  'guides.recommended.phase1': 'Phase 1 — Recommended Characters',
+  'guides.recommended.phase2': 'Phase 2 — Recommended Characters',
+  'guides.combat_footage': 'Combat Footage',
+  'guides.team_selector': 'Suggested Teams',
+  'guides.boss_display.immunities': 'Immunities',
+  'guides.boss_display.skills': 'Skills',
+
   'page.contributors.title': 'Project Contributors',
   'page.legal.title': 'Legal Notice & Disclaimer',
   'page.legal.description':

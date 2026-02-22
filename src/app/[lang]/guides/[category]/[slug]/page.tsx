@@ -63,7 +63,7 @@ export default async function GuideDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
+    <div className="px-4 py-6 md:px-6">
       <Link
         href={`/${lang}/guides/${category}`}
         className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-zinc-200 transition-colors"
