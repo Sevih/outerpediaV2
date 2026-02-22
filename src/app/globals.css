@@ -239,6 +239,26 @@ body {
   scroll-margin-top: 5rem;
 }
 
+/* ── Game-themed tabs ──────────────────────────────────── */
+
+.tab-game-active {
+  position: relative;
+}
+
+.tab-game-active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background-image: url('/images/ui/common/CM_Gradation_Bg.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: brightness(0.9) sepia(1) saturate(3) hue-rotate(-5deg);
+  pointer-events: none;
+}
+
 /* Buff/debuff icon color filters — recolor white game icons.
    Exception: Interruption icons (irremovable) keep their native colors. */
 img.buff-icon:not([src*="Interruption"]) {
@@ -251,9 +271,19 @@ img.debuff-icon:not([src*="Interruption"]) {
 
 /* ── 3D Carousel (team slots) ──────────────────────────── */
 
+.carousel-grid {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  gap: 12px 0;
+  grid-template-columns: repeat(2, 140px);
+  max-width: 320px;
+}
+
+/* Base: sm card (66×128) */
 .carousel-slot {
-  width: 200px;
-  height: 340px;
+  width: 140px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -261,10 +291,41 @@ img.debuff-icon:not([src*="Interruption"]) {
 }
 
 .carousel-scene {
-  width: 100px;
-  height: 192px;
-  perspective: 150px;
+  width: 66px;
+  height: 150px;
+  perspective: 120px;
   position: relative;
+}
+
+/* md: md card (100×192) */
+@media (min-width: 768px) {
+  .carousel-grid {
+    grid-template-columns: repeat(auto-fit, 200px);
+    max-width: 850px;
+    gap: 12px;
+  }
+  .carousel-slot {
+    width: 200px;
+    height: 340px;
+  }
+  .carousel-scene {
+    width: 100px;
+    height: 192px;
+    perspective: 150px;
+  }
+}
+
+/* lg: lg card (120×231) */
+@media (min-width: 1024px) {
+  .carousel-slot {
+    width: 200px;
+    height: 380px;
+  }
+  .carousel-scene {
+    width: 120px;
+    height: 231px;
+    perspective: 150px;
+  }
 }
 
 .carousel-scene .keen-slider {
@@ -297,8 +358,8 @@ img.debuff-icon:not([src*="Interruption"]) {
 .carousel-controls {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 6px;
+  margin-top: 4px;
 }
 
 .carousel-arrow {
@@ -312,4 +373,22 @@ img.debuff-icon:not([src*="Interruption"]) {
 
 .carousel-arrow:hover {
   opacity: 1;
+}
+
+.carousel-arrow-icon {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 768px) {
+  .carousel-controls {
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .carousel-arrow-icon {
+    width: 24px;
+    height: 24px;
+  }
 }

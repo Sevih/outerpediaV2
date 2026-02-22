@@ -57,10 +57,10 @@ export default function Tabs({
             aria-selected={isActive}
             onClick={() => handleClick(item)}
             className={[
-              'rounded-full px-4 py-1.5 text-sm font-medium transition ring-1',
+              'relative rounded px-4 py-2 text-sm font-medium transition-all',
               isActive
-                ? 'bg-yellow-500/20 text-yellow-300 ring-yellow-400/40'
-                : 'bg-zinc-800 text-zinc-300 ring-white/10 hover:bg-zinc-700',
+                ? 'tab-game-active bg-linear-to-b from-amber-500/15 to-transparent text-amber-300 border-t-2 border-t-amber-400/60 border-x border-b border-amber-500/20 shadow-[0_2px_16px_rgba(251,191,36,0.1)]'
+                : 'border border-transparent text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/50 hover:border-zinc-600/30',
             ].join(' ')}
           >
             {label}

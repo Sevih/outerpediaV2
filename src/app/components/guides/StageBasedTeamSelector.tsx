@@ -52,10 +52,7 @@ export default function StageBasedTeamSelector({ teamData, defaultStage }: Props
 
       {/* Team carousel grid */}
       <div className="flex justify-center overflow-x-hidden">
-        <div
-          className="grid justify-items-center gap-y-3 gap-x-0 lg:gap-x-3"
-          style={{ gridTemplateColumns: 'repeat(auto-fit, 200px)', maxWidth: '850px', justifyContent: 'center' }}
-        >
+        <div className="carousel-grid">
           {stageData.team.map((group, gi) => (
             <CarouselSlot key={`${activeStage}-${gi}`} characters={group} />
           ))}

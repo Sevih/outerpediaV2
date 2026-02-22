@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useKeenSlider, type KeenSliderPlugin } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import Image from 'next/image';
-import CharacterCard from '@/app/components/character/CharacterCard';
+import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { splitCharacterName } from '@/lib/character-name';
@@ -35,20 +35,17 @@ function resolveChar(name: string, lang: Lang): ResolvedChar | null {
   if (!entry) return null;
   const localizedName = l(entry, 'Fullname', lang) as string;
   const { prefix } = splitCharacterName(charId, localizedName, lang);
-  return {
-    charId,
-    localizedName,
-    prefix,
-    slug: entry.slug,
-    entry,
-  };
+  return { charId, localizedName, prefix, slug: entry.slug, entry };
 }
 
 const MAX_VISIBLE = 5;
 
 const carousel: KeenSliderPlugin = (slider) => {
+  // Compute Z from scene width (responsive via CSS media queries)
   function getZ(count: number): number {
-    return 165 + Math.max(0, (count - 5) * 15);
+    const sceneWidth = slider.container.parentElement?.offsetWidth ?? 100;
+    const base = Math.round(sceneWidth * 1.4);
+    return base + Math.max(0, (count - 5) * 15);
   }
 
   function rotate() {
@@ -78,6 +75,15 @@ const carousel: KeenSliderPlugin = (slider) => {
     });
   }
 
+  function layoutSlides() {
+    const z = getZ(slider.slides.length);
+    const deg = 360 / slider.slides.length;
+    slider.slides.forEach((el, idx) => {
+      el.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`;
+    });
+    rotate();
+  }
+
   slider.on('created', () => {
     // Force 3D styles — keen-slider sets inline overflow:hidden that kills 3D
     const c = slider.container;
@@ -87,14 +93,19 @@ const carousel: KeenSliderPlugin = (slider) => {
     c.style.width = '100%';
     c.style.height = '100%';
 
-    const z = getZ(slider.slides.length);
-    const deg = 360 / slider.slides.length;
-    slider.slides.forEach((el, idx) => {
-      el.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`;
+    slider.slides.forEach((el) => {
       el.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
     });
-    rotate();
+    layoutSlides();
     updateVisibility();
+
+    // Recalculate 3D positions when scene resizes (responsive breakpoints)
+    const scene = c.parentElement;
+    if (scene) {
+      const ro = new ResizeObserver(() => layoutSlides());
+      ro.observe(scene);
+      slider.on('destroyed', () => ro.disconnect());
+    }
   });
 
   slider.on('detailsChanged', () => {
@@ -102,6 +113,22 @@ const carousel: KeenSliderPlugin = (slider) => {
     updateVisibility();
   });
 };
+
+function CharCard({ c, lang }: { c: ResolvedChar; lang: string }) {
+  return (
+    <ResponsiveCharacterCard
+      id={c.charId}
+      name={c.localizedName}
+      prefix={c.prefix}
+      element={c.entry.Element}
+      classType={c.entry.Class}
+      rarity={c.entry.Rarity}
+      tags={c.entry.tags}
+      href={`/${lang}/characters/${c.slug}`}
+      size={{ base: 'sm', md: 'md', lg: 'lg' }}
+    />
+  );
+}
 
 export default function CarouselSlot({ characters }: Props) {
   const { lang } = useI18n();
@@ -129,20 +156,9 @@ export default function CarouselSlot({ characters }: Props) {
 
   // Single character — static card, no carousel
   if (resolved.length === 1) {
-    const c = resolved[0];
     return (
       <div className="carousel-slot">
-        <CharacterCard
-          id={c.charId}
-          name={c.localizedName}
-          prefix={c.prefix}
-          element={c.entry.Element}
-          classType={c.entry.Class}
-          rarity={c.entry.Rarity}
-          tags={c.entry.tags}
-          href={`/${lang}/characters/${c.slug}`}
-          size="md"
-        />
+        <CharCard c={resolved[0]} lang={lang} />
       </div>
     );
   }
@@ -154,54 +170,47 @@ export default function CarouselSlot({ characters }: Props) {
         <div ref={sliderRef} className="keen-slider">
           {resolved.map((c, idx) => (
             <div key={`${c.charId}-${idx}`} className="carousel-cell">
-              <CharacterCard
-                id={c.charId}
-                name={c.localizedName}
-                prefix={c.prefix}
-                element={c.entry.Element}
-                classType={c.entry.Class}
-                rarity={c.entry.Rarity}
-                tags={c.entry.tags}
-                href={`/${lang}/characters/${c.slug}`}
-                size="md"
-              />
+              <CharCard c={c} lang={lang} />
             </div>
           ))}
         </div>
       </div>
 
       {/* Navigation arrows */}
-      {resolved.length > 1 && (
-        <div className="carousel-controls">
-          <button
-            onClick={() => !isAnimating && instanceRef.current?.prev()}
-            aria-label="Previous"
-            className="carousel-arrow"
-            disabled={isAnimating}
-          >
+      <div className="carousel-controls">
+        <button
+          onClick={() => !isAnimating && instanceRef.current?.prev()}
+          aria-label="Previous"
+          className="carousel-arrow"
+          disabled={isAnimating}
+        >
+          <span className="carousel-arrow-icon rotate-180">
             <Image
               src="/images/ui/common/CM_Icon_Arrow_Story.webp"
               alt=""
-              width={24}
-              height={24}
-              className="rotate-180"
+              fill
+              sizes="24px"
+              className="object-contain"
             />
-          </button>
-          <button
-            onClick={() => !isAnimating && instanceRef.current?.next()}
-            aria-label="Next"
-            className="carousel-arrow"
-            disabled={isAnimating}
-          >
+          </span>
+        </button>
+        <button
+          onClick={() => !isAnimating && instanceRef.current?.next()}
+          aria-label="Next"
+          className="carousel-arrow"
+          disabled={isAnimating}
+        >
+          <span className="carousel-arrow-icon">
             <Image
               src="/images/ui/common/CM_Icon_Arrow_Story.webp"
               alt=""
-              width={24}
-              height={24}
+              fill
+              sizes="24px"
+              className="object-contain"
             />
-          </button>
-        </div>
-      )}
+          </span>
+        </button>
+      </div>
     </div>
   );
 }
