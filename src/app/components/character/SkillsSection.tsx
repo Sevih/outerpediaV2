@@ -1,9 +1,12 @@
 'use client';
 
 import { Fragment } from 'react';
+import Image from 'next/image';
 import type { Character } from '@/types/character';
 import type { SkillPriority } from '@/types/character';
+import type { SkillKey } from '@/types/enums';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { l } from '@/lib/i18n/localize';
 import ItemInline from '@/app/components/inline/ItemInline';
 import SkillCard from './SkillCard';
 
@@ -11,10 +14,10 @@ type Props = { character: Character };
 
 const SKILL_ORDER = ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE'] as const;
 
-const PRIORITY_LABEL_MAP: Record<keyof SkillPriority, Parameters<ReturnType<typeof useI18n>['t']>[0]> = {
-  First: 'page.character.skill.type.s1',
-  Second: 'page.character.skill.type.s2',
-  Ultimate: 'page.character.skill.type.ultimate',
+const PRIORITY_SKILL_KEY: Record<keyof SkillPriority, SkillKey> = {
+  First: 'SKT_FIRST',
+  Second: 'SKT_SECOND',
+  Ultimate: 'SKT_ULTIMATE',
 };
 
 /** Replace {material} placeholders with <ItemInline> components */
@@ -28,7 +31,7 @@ function renderWithMaterial(text: string, materialName: string) {
 }
 
 export default function SkillsSection({ character }: Props) {
-  const { t } = useI18n();
+  const { lang, t } = useI18n();
   const skills = SKILL_ORDER.map((key) => character.skills[key]).filter(Boolean);
 
   if (!skills.length) return null;
@@ -52,7 +55,14 @@ export default function SkillsSection({ character }: Props) {
     ? (Object.entries(character.skill_priority) as [keyof SkillPriority, { prio: number }][])
         .filter(([, v]) => v?.prio != null)
         .sort((a, b) => a[1].prio - b[1].prio)
-        .map(([key]) => ({ key, label: t(PRIORITY_LABEL_MAP[key]) }))
+        .map(([key]) => {
+          const skill = character.skills[PRIORITY_SKILL_KEY[key]];
+          return {
+            key,
+            name: skill ? l(skill, 'name', lang) : key,
+            icon: skill?.IconName ?? null,
+          };
+        })
     : null;
 
   return (
@@ -61,13 +71,29 @@ export default function SkillsSection({ character }: Props) {
 
       {priorityOrder && priorityOrder.length > 0 && (
         <div className="mb-6 max-w-2xl mx-auto">
-          <h3 className="mb-2 text-sm font-semibold text-zinc-300 after:hidden">{t('page.character.skill.priority_title')}</h3>
-          <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
-            {priorityOrder.map(({ key, label }, i) => (
+          <h3 className="font-game text-lg font-bold">{t('page.character.skill.priority_title')}</h3>
+          <div className="flex flex-wrap items-start justify-center gap-3 text-sm">
+            {priorityOrder.map(({ key, name, icon }, i) => (
               <Fragment key={key}>
-                {i > 0 && <span className="text-zinc-500">→</span>}
-                <span className="rounded bg-yellow-500/15 px-2.5 py-1 text-yellow-300 ring-1 ring-yellow-400/30 text-xs font-semibold">
-                  {i + 1}. {label}
+                {i > 0 && (
+                  <Image
+                    src="/images/ui/nav/IG_Chain_Arrow.webp"
+                    alt="→"
+                    width={24}
+                    height={24}
+                    className="mt-2.5"
+                  />
+                )}
+                <span className="flex flex-col items-center gap-1">
+                  {icon && (
+                    <Image
+                      src={`/images/characters/skills/${icon}.webp`}
+                      alt={name}
+                      width={36}
+                      height={36}
+                    />
+                  )}
+                  <span className="text-xs font-semibold text-yellow-300">{name}</span>
                 </span>
               </Fragment>
             ))}
