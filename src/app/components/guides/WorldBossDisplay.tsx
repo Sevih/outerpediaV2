@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
+import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import Tabs from '@/app/components/ui/Tabs';
 import BuffDebuffDisplay, { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import ElementInline from '@/app/components/inline/ElementInline';
@@ -149,7 +150,7 @@ function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
       <div className="flex items-start gap-2">
         <span className="relative h-8 w-8 shrink-0 rounded">
           <Image
-            src={`/images/characters/boss/skills/${skill.icon}.webp`}
+            src={`/images/characters/${(skill.icon.split('_').pop() ?? '').startsWith('2') ? '' : 'boss/'}skills/${skill.icon}.webp`}
             alt=""
             fill
             sizes="32px"
@@ -180,15 +181,19 @@ function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
     <div className="space-y-2">
       {/* Header */}
       <div className="card flex items-center gap-3 p-3">
-        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
-          <Image
-            src={`/images/characters/boss/portrait/MT_${boss.icons}.webp`}
-            alt={name}
-            fill
-            sizes="64px"
-            className="object-cover"
-          />
-        </div>
+        {boss.icons.startsWith('2') ? (
+          <CharacterPortrait id={boss.icons} size="md" />
+        ) : (
+          <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
+            <Image
+              src={`/images/characters/boss/portrait/MT_${boss.icons}.webp`}
+              alt={name}
+              fill
+              sizes="64px"
+              className="object-cover"
+            />
+          </div>
+        )}
         <div className="space-y-1.5">
           <div>
             <p className="text-base font-bold text-zinc-100">{name}</p>

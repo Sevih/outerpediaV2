@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
+import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import BuffDebuffDisplay, { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
@@ -144,7 +145,7 @@ function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
       <div className="flex items-start gap-2">
         <span className="relative h-8 w-8 shrink-0 rounded">
           <Image
-            src={`/images/characters/boss/skills/${skill.icon}.webp`}
+            src={`/images/characters/${(skill.icon.split('_').pop() ?? '').startsWith('2') ? '' : 'boss/'}skills/${skill.icon}.webp`}
             alt=""
             fill
             sizes="32px"
@@ -175,15 +176,19 @@ function BossHeader({ boss, lang }: { boss: Boss; lang: Lang }) {
 
   return (
     <div className="flex items-center gap-3 p-3">
-      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
-        <Image
-          src={`/images/characters/boss/portrait/MT_${boss.icons}.webp`}
-          alt={displayName}
-          fill
-          sizes="64px"
-          className="object-cover"
-        />
-      </div>
+      {boss.icons.startsWith('2') ? (
+        <CharacterPortrait id={boss.icons} size="md" />
+      ) : (
+        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
+          <Image
+            src={`/images/characters/boss/portrait/MT_${boss.icons}.webp`}
+            alt={displayName}
+            fill
+            sizes="64px"
+            className="object-cover"
+          />
+        </div>
+      )}
       <div>
         {!boss.IncludeSurname && surname && (
           <p className="text-xs text-zinc-400">{surname}</p>
@@ -280,8 +285,6 @@ export default function BossDisplay({ bossName, modeKey, defaultBossId, preloade
       setLoading(false);
     });
   }, [selectedId, loadBoss, defaultId, preloadedBoss]);
-
-  const selectedVersion = versions.find((v) => v.id === selectedId);
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
