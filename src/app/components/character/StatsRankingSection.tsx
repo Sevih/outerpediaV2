@@ -89,7 +89,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[2fr_1fr]">
         {/* Base stats */}
-        <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-4">
+        <div className="card rounded-xl p-4">
           <div className="mb-3 flex items-baseline justify-between">
             <h3 className="text-sm font-semibold text-zinc-300">{t('page.character.stats.title')}</h3>
             {stepKeys[stepIdx] && (
@@ -167,7 +167,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
         </div>
 
         {/* Ranking */}
-        <div className="flex flex-col items-center justify-center rounded-xl border border-white/10 bg-zinc-900/60 p-4">
+        <div className="card flex flex-col items-center justify-center rounded-xl p-4">
           <h3 className="mb-4 text-sm font-semibold text-zinc-300">{t('page.character.toc.ranking')}</h3>
           <div className="flex flex-wrap items-center justify-center gap-6">
             {ee && (

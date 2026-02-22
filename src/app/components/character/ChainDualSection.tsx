@@ -68,7 +68,7 @@ export default function ChainDualSection({ character }: Props) {
     <section id="chain-dual">
       <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.chain_dual')}</h2>
 
-      <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-4">
+      <div className="card rounded-xl p-4">
         {/* Icon + name */}
         <div className="mb-4 flex items-center gap-3">
           <div className="relative h-14 w-14 shrink-0 overflow-hidden">

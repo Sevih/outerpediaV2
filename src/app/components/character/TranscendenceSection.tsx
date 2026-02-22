@@ -17,7 +17,7 @@ export default function TranscendenceSection({ character }: Props) {
     <section id="transcend">
       <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.transcend')}</h2>
 
-      <div className="max-w-xl rounded-xl border border-white/10 bg-zinc-900/60 p-4">
+      <div className="card max-w-xl rounded-xl p-4">
         <TranscendenceSlider transcend={character.transcend} rarity={character.Rarity} />
       </div>
     </section>

@@ -72,7 +72,7 @@ export default function RecommendedCharacterList({
           return (
             <div
               key={i}
-              className="grid grid-cols-[auto_1fr] items-center gap-3 rounded-lg border border-white/5 bg-neutral-900/50 p-3"
+              className="card grid grid-cols-[auto_1fr] items-center gap-3 p-3"
             >
               {/* Character portraits — max 3 per row */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">

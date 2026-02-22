@@ -98,7 +98,7 @@ export default function SkillsSection({ character }: Props) {
               </Fragment>
             ))}
           </div>
-          <div className="mt-4 rounded-md border border-yellow-400/30 bg-yellow-900/30 px-4 py-3">
+          <div className="panel-warning mt-4 px-4 py-3">
             <p className="mb-2 text-xs font-semibold text-yellow-100/90">{t('page.character.skill.priority_rule_title')}</p>
             <ul className="ml-4 list-inside list-disc space-y-1 text-xs text-yellow-100/90">
               <li>{t('page.character.skill.priority_rule_1')}</li>
@@ -111,7 +111,7 @@ export default function SkillsSection({ character }: Props) {
       )}
 
       {fusionInfo && (
-        <div className="mb-4 rounded-lg border border-purple-500/30 bg-purple-950/20 px-4 py-3 text-sm text-zinc-300">
+        <div className="panel-feature mb-4 px-4 py-3 text-sm text-zinc-300">
           {renderWithMaterial(
             t('page.character.core_fusion.skill_info', {
               unlockCost: String(fusionInfo.unlockCost),

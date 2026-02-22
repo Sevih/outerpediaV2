@@ -44,7 +44,7 @@ export default function TacticalTips({ sections }: Props) {
       {sections.map((section, si) => (
         <div
           key={si}
-          className="rounded-lg border border-sky-500/30 bg-sky-950/20 p-4"
+          className="panel-info p-4"
         >
           <h4 className="mb-3 flex items-center gap-2">
             <svg className="h-5 w-5 shrink-0" fill="currentColor" viewBox="0 0 20 20">

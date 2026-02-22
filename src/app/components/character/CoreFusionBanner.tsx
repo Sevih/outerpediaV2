@@ -27,7 +27,7 @@ export default function CoreFusionBanner({ link }: Props) {
   return (
     <Link
       href={`/${lang}/characters/${link.slug}`}
-      className="group flex items-center gap-4 rounded-lg border border-purple-500/30 bg-purple-950/20 px-4 py-3 transition-colors hover:border-purple-400/50 hover:bg-purple-950/30"
+      className="panel-feature group flex items-center gap-4 px-4 py-3 transition-colors hover:border-purple-400/50 hover:bg-purple-950/30"
     >
       <CharacterPortrait id={link.id} size="sm" showIcons />
       <div className="min-w-0 flex-1">

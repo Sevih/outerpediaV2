@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
-import Tabs from '@/app/components/ui/Tabs';
 import BuffDebuffDisplay, { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
@@ -11,6 +10,7 @@ import { lRec } from '@/lib/i18n/localize';
 import { ELEMENT_TEXT } from '@/lib/theme';
 import buffsData from '@data/effects/buffs.json';
 import debuffsData from '@data/effects/debuffs.json';
+import bossIndex from '@data/generated/boss-index.json';
 import type { Boss, BossSkill } from '@/types/boss';
 import type { Effect } from '@/types/effect';
 import type { ElementType } from '@/types/enums';
@@ -22,25 +22,24 @@ for (const b of buffsData as Effect[]) buffMap[b.name] = b;
 const debuffMap: Record<string, Effect> = {};
 for (const d of debuffsData as Effect[]) debuffMap[d.name] = d;
 
-type WorldBossMode = 'Normal' | 'Hard' | 'Very Hard' | 'Extreme';
+/* ── Types ──────────────────────────────────────────────── */
 
-type WorldBossConfig = {
-  boss1Key: string;
-  boss2Key: string;
-  boss1Ids: Partial<Record<WorldBossMode, string>>;
-  boss2Ids: Partial<Record<WorldBossMode, string>>;
+type BossVersion = {
+  id: string;
+  label: LangMap;
+  level?: number;
+};
+
+type BossIndexEntry = {
+  modes: Record<string, { name: LangMap; versions: BossVersion[] }>;
 };
 
 type Props = {
-  config: WorldBossConfig;
-  defaultMode?: WorldBossMode;
-  /** Pre-loaded boss data keyed by ID — rendered at SSR time (no loading state) */
+  bossName: string;
+  modeKey?: string;
+  defaultBossId?: string;
   preloadedBosses?: Record<string, Boss>;
 };
-
-const ALL_MODES: WorldBossMode[] = ['Normal', 'Hard', 'Very Hard', 'Extreme'];
-
-const bossCache = new Map<string, Boss>();
 
 /* ── Locale-aware element / class token maps ──────────── */
 
@@ -62,20 +61,17 @@ function escapeRegex(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-/** Parse boss skill description: <color> tags, element/class names → inline components */
 function formatBossDesc(text: string, lang: Lang): React.ReactNode {
   if (!text) return null;
 
   const elemMap = ELEMENT_TOKENS[lang];
   const classMap = CLASS_TOKENS[lang];
 
-  // Sort tokens longest-first to avoid partial matches
   const allTokens = [...Object.keys(elemMap), ...Object.keys(classMap)]
     .sort((a, b) => b.length - a.length)
     .map(escapeRegex)
     .join('|');
 
-  // EN uses word boundaries; CJK does not
   const wb = lang === 'en' ? '\\b' : '';
   const tokenRegex = new RegExp(
     `<color=(#[0-9a-fA-F]{6})>(.*?)<\\/color>|\\\\n|\\n|${wb}(${allTokens})${wb}`,
@@ -115,10 +111,11 @@ function formatBossDesc(text: string, lang: Lang): React.ReactNode {
   return parts;
 }
 
-/** Normalize ST_ short names to full BT_STAT|ST_ format */
 function normalizeName(name: string): string {
   return name.startsWith('ST_') ? `BT_STAT|${name}` : name;
 }
+
+/* ── Sub-components ─────────────────────────────────────── */
 
 function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
   const { t } = useI18n();
@@ -142,10 +139,8 @@ function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
   const desc = lRec(skill.description as LangMap, lang);
   if (!name && !desc) return null;
 
-  const isPassive = skill.type.startsWith('SKT_MONSTER');
-
   return (
-    <div className={`p-3 ${isPassive ? 'panel-highlight' : 'card'}`}>
+    <div className="card p-3">
       <div className="flex items-start gap-2">
         <span className="relative h-8 w-8 shrink-0 rounded">
           <Image
@@ -172,59 +167,64 @@ function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
   );
 }
 
-function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
-  const name = lRec(boss.Name, lang);
+function BossHeader({ boss, lang }: { boss: Boss; lang: Lang }) {
+  const baseName = lRec(boss.Name, lang);
+  const surname = lRec(boss.Surname as LangMap, lang);
+  const displayName = boss.IncludeSurname && surname ? `${surname} ${baseName}` : baseName;
   const element = boss.element as ElementType;
 
   return (
-    <div className="space-y-2">
-      {/* Header */}
-      <div className="card flex items-center gap-3 p-3">
-        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
-          <Image
-            src={`/images/characters/boss/portrait/MT_${boss.icons}.webp`}
-            alt={name}
-            fill
-            sizes="64px"
-            className="object-cover"
-          />
-        </div>
-        <div className="space-y-1.5">
-          <div>
-            <p className="text-base font-bold text-zinc-100">{name}</p>
-            <div className="mt-1 flex items-center gap-2">
-              <span className="flex items-center gap-1">
-                <span className="relative h-4 w-4">
-                  <Image
-                    src={`/images/ui/elem/CM_Element_${element}.webp`}
-                    alt=""
-                    fill
-                    sizes="16px"
-                    className="object-contain"
-                  />
-                </span>
-                <span className={`text-xs ${ELEMENT_TEXT[element]}`}>{element}</span>
-              </span>
-              <span className="flex items-center gap-1">
-                <span className="relative h-4 w-4">
-                  <Image
-                    src={`/images/ui/class/CM_Class_${boss.class}.webp`}
-                    alt=""
-                    fill
-                    sizes="16px"
-                    className="object-contain"
-                  />
-                </span>
-                <span className="text-xs text-zinc-400">{boss.class}</span>
-              </span>
-              <span className="text-xs text-zinc-500">Lv.{boss.level}</span>
-            </div>
-          </div>
-          <ImmuneList immuneStr={boss.BuffImmune} statImmuneStr={boss.StatBuffImmune} />
+    <div className="flex items-center gap-3 p-3">
+      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
+        <Image
+          src={`/images/characters/boss/portrait/MT_${boss.icons}.webp`}
+          alt={displayName}
+          fill
+          sizes="64px"
+          className="object-cover"
+        />
+      </div>
+      <div>
+        {!boss.IncludeSurname && surname && (
+          <p className="text-xs text-zinc-400">{surname}</p>
+        )}
+        <p className="text-lg font-bold text-zinc-100">{displayName}</p>
+        <div className="mt-1 flex items-center gap-2">
+          <span className="flex items-center gap-1">
+            <span className="relative h-4 w-4">
+              <Image
+                src={`/images/ui/elem/CM_Element_${element}.webp`}
+                alt=""
+                fill
+                sizes="16px"
+                className="object-contain"
+              />
+            </span>
+            <span className={`text-xs ${ELEMENT_TEXT[element]}`}>{element}</span>
+          </span>
+          <span className="flex items-center gap-1">
+            <span className="relative h-4 w-4">
+              <Image
+                src={`/images/ui/class/CM_Class_${boss.class}.webp`}
+                alt=""
+                fill
+                sizes="16px"
+                className="object-contain"
+              />
+            </span>
+            <span className="text-xs text-zinc-400">{boss.class}</span>
+          </span>
+          <span className="text-xs text-zinc-500">Lv.{boss.level}</span>
         </div>
       </div>
+    </div>
+  );
+}
 
-      {/* Skills */}
+function BossDetails({ boss, lang }: { boss: Boss; lang: Lang }) {
+  return (
+    <div className="space-y-2">
+      <ImmuneList immuneStr={boss.BuffImmune} statImmuneStr={boss.StatBuffImmune} />
       {boss.skills
         .filter((s) => lRec(s.name as LangMap, lang) || lRec(s.description as LangMap, lang))
         .map((skill, i) => (
@@ -234,27 +234,27 @@ function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
   );
 }
 
-export default function WorldBossDisplay({ config, defaultMode = 'Extreme', preloadedBosses }: Props) {
+/* ── Main component ─────────────────────────────────────── */
+
+const bossCache = new Map<string, Boss>();
+
+export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
-  const [mode, setMode] = useState<WorldBossMode>(defaultMode);
 
-  // Resolve preloaded bosses for default mode (available at SSR time)
-  const preloadedBoss1 = preloadedBosses?.[config.boss1Ids[defaultMode] ?? ''] ?? null;
-  const preloadedBoss2 = preloadedBosses?.[config.boss2Ids[defaultMode] ?? ''] ?? null;
+  // Resolve versions from boss-index
+  const entry = (bossIndex as Record<string, BossIndexEntry>)[bossName];
+  const modes = entry?.modes ?? {};
+  const modeData = modeKey ? modes[modeKey] : Object.values(modes)[0];
+  const versions = modeData?.versions ?? [];
+  const defaultId = defaultBossId ?? versions[0]?.id;
+  const [selectedId, setSelectedId] = useState(defaultId);
 
-  const [boss1, setBoss1] = useState<Boss | null>(preloadedBoss1);
-  const [boss2, setBoss2] = useState<Boss | null>(preloadedBoss2);
-  const [loading, setLoading] = useState(!preloadedBoss1 && !preloadedBoss2);
+  const preloadedBoss = preloadedBosses?.[defaultId] ?? null;
+  const [boss, setBoss] = useState<Boss | null>(preloadedBoss);
+  const [loading, setLoading] = useState(!preloadedBoss);
 
-  // Determine which modes are available
-  const availableModes = ALL_MODES.filter(
-    (m) => config.boss1Ids[m] || config.boss2Ids[m]
-  );
-
-  const loadBoss = useCallback(async (id: string | undefined): Promise<Boss | null> => {
-    if (!id) return null;
-    // Check preloaded data first
+  const loadBoss = useCallback(async (id: string): Promise<Boss | null> => {
     if (preloadedBosses?.[id]) return preloadedBosses[id];
     const cached = bossCache.get(id);
     if (cached) return cached;
@@ -269,46 +269,49 @@ export default function WorldBossDisplay({ config, defaultMode = 'Extreme', prel
   }, [preloadedBosses]);
 
   useEffect(() => {
-    if (mode === defaultMode && (preloadedBoss1 || preloadedBoss2)) {
-      setBoss1(preloadedBoss1);
-      setBoss2(preloadedBoss2);
+    if (selectedId === defaultId && preloadedBoss) {
+      setBoss(preloadedBoss);
       return;
     }
 
     setLoading(true);
-    Promise.all([
-      loadBoss(config.boss1Ids[mode]),
-      loadBoss(config.boss2Ids[mode]),
-    ]).then(([b1, b2]) => {
-      setBoss1(b1);
-      setBoss2(b2);
+    loadBoss(selectedId).then((b) => {
+      setBoss(b);
       setLoading(false);
     });
-  }, [mode, config, loadBoss, defaultMode, preloadedBoss1, preloadedBoss2]);
+  }, [selectedId, loadBoss, defaultId, preloadedBoss]);
 
-  const activeBosses = [boss1, boss2].filter(Boolean) as Boss[];
+  const selectedVersion = versions.find((v) => v.id === selectedId);
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
       <div className="space-y-4">
-        {availableModes.length > 1 && (
-          <Tabs
-            items={availableModes}
-            value={mode}
-            onChange={(v) => setMode(v as WorldBossMode)}
-          />
-        )}
-
+        {/* Boss identity header */}
         {loading ? (
           <div className="py-8 text-center text-sm text-zinc-500">Loading...</div>
-        ) : activeBosses.length === 0 ? (
-          <div className="py-8 text-center text-sm text-zinc-500">No boss data</div>
+        ) : boss ? (
+          <>
+            <BossHeader boss={boss} lang={lang} />
+
+            {/* Stage selector — between header and details */}
+            {versions.length > 1 && (
+              <select
+                value={selectedId}
+                onChange={(e) => setSelectedId(e.target.value)}
+                className="rounded-lg border border-white/10 bg-zinc-800 px-3 py-2 text-sm text-zinc-200 outline-none focus:border-sky-500 transition-colors"
+              >
+                {versions.map((v) => (
+                  <option key={v.id} value={v.id}>
+                    {lRec(v.label, lang)}
+                  </option>
+                ))}
+              </select>
+            )}
+
+            <BossDetails boss={boss} lang={lang} />
+          </>
         ) : (
-          <div className={`grid gap-4 ${activeBosses.length > 1 ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
-            {activeBosses.map((boss) => (
-              <BossCard key={boss.id} boss={boss} lang={lang} />
-            ))}
-          </div>
+          <div className="py-8 text-center text-sm text-zinc-500">No boss data</div>
         )}
       </div>
     </EffectsProvider>

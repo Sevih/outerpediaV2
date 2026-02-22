@@ -46,7 +46,7 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
       />
 
       {build && (
-        <div className="grid grid-cols-1 gap-6 rounded-xl border border-white/10 bg-zinc-900/60 p-4 md:grid-cols-3">
+        <div className="card grid grid-cols-1 gap-6 rounded-xl p-4 md:grid-cols-3">
           {/* Col 1: Weapon + Talisman — contents on mobile so children flatten into the single-col grid */}
           <div className="contents md:block md:space-y-6">
             {build.Weapon && build.Weapon.length > 0 && (

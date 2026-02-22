@@ -30,7 +30,7 @@ export default function SynergiesSection({ synergies }: Props) {
         {synergies.partner.map((group, i) => (
           <div
             key={i}
-            className="rounded-xl border border-white/10 bg-zinc-900/60 p-4"
+            className="card rounded-xl p-4"
           >
             {/* Partner heroes */}
             <div className="flex flex-wrap gap-3">

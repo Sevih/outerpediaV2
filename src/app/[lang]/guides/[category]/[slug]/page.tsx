@@ -71,7 +71,7 @@ export default async function GuideDetailPage({ params }: Props) {
         &larr; {categoryTitle}
       </Link>
 
-      <h1 className="h1-page mt-4">{title}</h1>
+      <h1 className="mx-auto text-center text-3xl font-bold mt-4">{title}</h1>
       <div className="mt-2 flex items-center gap-3 text-xs text-zinc-500">
         <span>{t['page.guide.by'].replace('{author}', guide.author)}</span>
         <span>{t['page.guide.updated'].replace('{date}', guide.last_updated)}</span>

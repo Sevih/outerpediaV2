@@ -46,7 +46,7 @@ export default function GuideTemplate({
       <h2>{title}</h2>
 
       {disclaimer && (
-        <div className="rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-4 py-3 text-sm text-yellow-200">
+        <div className="panel-warning px-4 py-3 text-sm text-yellow-200">
           {disclaimer}
         </div>
       )}

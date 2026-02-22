@@ -32,7 +32,7 @@ export default function EeSection({ character, ee, giftItems }: Props) {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_auto]">
         {/* EE card */}
-        <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-4">
+        <div className="card rounded-xl p-4">
           <div className="flex items-start gap-4">
             {/* EE portrait */}
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg">
@@ -104,7 +104,7 @@ export default function EeSection({ character, ee, giftItems }: Props) {
 
         {/* Gifts card */}
         {giftItems.length > 0 && (
-          <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-4 md:w-52">
+          <div className="card rounded-xl p-4 md:w-52">
             <h3 className="flex items-center gap-1.5 after:hidden">
               <div className="relative h-5 w-5 shrink-0">
                 <Image

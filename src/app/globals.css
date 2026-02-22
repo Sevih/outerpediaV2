@@ -226,6 +226,44 @@ body {
       box-shadow: 0 4px 12px rgb(0 0 0 / 0.3);
     }
   }
+
+  /* ── Semantic panels ── */
+
+  .panel-info {
+    border-radius: 0.5rem;
+    border: 1px solid oklch(0.63 0.14 233 / 0.3);
+    background: oklch(0.22 0.05 233 / 0.2);
+  }
+
+  .panel-warning {
+    border-radius: 0.5rem;
+    border: 1px solid oklch(0.8 0.15 85 / 0.3);
+    background: oklch(0.35 0.08 85 / 0.2);
+  }
+
+  .panel-success {
+    border-radius: 0.5rem;
+    border: 1px solid oklch(0.7 0.15 165 / 0.2);
+    background: oklch(0.25 0.06 165 / 0.2);
+  }
+
+  .panel-danger {
+    border-radius: 0.5rem;
+    border: 1px solid oklch(0.63 0.2 25 / 0.2);
+    background: oklch(0.25 0.06 25 / 0.2);
+  }
+
+  .panel-feature {
+    border-radius: 0.5rem;
+    border: 1px solid oklch(0.63 0.2 300 / 0.3);
+    background: oklch(0.25 0.07 300 / 0.2);
+  }
+
+  .panel-highlight {
+    border-radius: 0.5rem;
+    border: 1px solid oklch(0.75 0.15 70 / 0.3);
+    background: oklch(0.28 0.07 70 / 0.2);
+  }
 }
 
 /* Fix perf: background-attachment fixed causes repaints on mobile Safari */

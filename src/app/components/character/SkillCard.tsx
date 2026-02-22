@@ -46,7 +46,7 @@ export default function SkillCard({ skill }: Props) {
   const adjustedCd = skill.cd ? Number(skill.cd) - cdReduction : null;
 
   return (
-    <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-4">
+    <div className="card rounded-xl p-4">
       <div className="mb-3 flex items-start gap-3">
         <div className="relative h-14 w-14 shrink-0">
           <div className="relative h-full w-full overflow-hidden">

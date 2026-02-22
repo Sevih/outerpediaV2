@@ -42,7 +42,7 @@ export default function RankingSection({ character, ee }: Props) {
 
 function TierCard({ label, rank }: { label: string; rank: string }) {
   return (
-    <div className="flex flex-col items-center rounded-xl border border-white/10 bg-zinc-900/60 px-6 py-3">
+    <div className="card flex flex-col items-center rounded-xl px-6 py-3">
       <span className="text-xs text-zinc-400">{label}</span>
       <div className="relative mt-1 h-8 w-8">
         <Image
