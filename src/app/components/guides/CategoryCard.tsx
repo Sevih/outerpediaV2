@@ -20,11 +20,11 @@ export default function CategoryCard({ slug, icon, count, lang, t }: Props) {
   return (
     <Link
       href={`/${lang}/guides/${slug}`}
-      className="group flex items-center gap-4 rounded-xl bg-zinc-800/60 p-4 ring-1 ring-white/5 transition hover:bg-zinc-700/60 hover:ring-white/10"
+      className="card-interactive group flex items-center gap-4 p-4 transition-colors"
     >
       <div className="relative h-12 w-12 shrink-0">
         <Image
-          src={icon}
+          src={`${icon}.webp`}
           alt=""
           fill
           sizes="48px"
@@ -32,10 +32,10 @@ export default function CategoryCard({ slug, icon, count, lang, t }: Props) {
         />
       </div>
       <div className="min-w-0 flex-1">
-        <h3 className="truncate text-sm font-semibold text-zinc-100 after:hidden">
+        <h3 className="text-sm font-semibold text-zinc-100 after:hidden">
           {title}
         </h3>
-        <p className="mt-0.5 truncate text-xs text-zinc-400">{description}</p>
+        <p className="mt-0.5 text-xs text-zinc-400">{description}</p>
       </div>
       <span className="shrink-0 rounded-full bg-zinc-700 px-2.5 py-0.5 text-xs font-medium text-zinc-300">
         {count}

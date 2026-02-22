@@ -24,6 +24,14 @@ const jp: Record<TranslationKey, string> = {
   'common.back_to_top': 'トップへ戻る',
   'common.language': '言語',
   'common.copied': 'コピー済み！',
+  'common.sort': '並べ替え',
+  'common.sort.order': 'デフォルト',
+  'common.sort.date_desc': '新しい順',
+  'common.sort.date_asc': '古い順',
+  'common.sort.name_asc': '名前 A→Z',
+  'common.sort.name_desc': '名前 Z→A',
+  'common.sort.author_asc': '著者 A→Z',
+  'common.sort.author_desc': '著者 Z→A',
   'aria.toggle_menu': 'メニュー切替',
 
   // Contributors

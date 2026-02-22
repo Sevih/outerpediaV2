@@ -6,6 +6,7 @@ export type GuideMeta = {
   title: LangMap;
   description: LangMap;
   icon: string;
+  order: number;
   author: string;
   last_updated: string;
 };
@@ -14,5 +15,6 @@ export type GuideCategory = {
   slug: string;
   icon: string;
   order: number;
+  sortable?: boolean;
   keywords?: string[];
 };

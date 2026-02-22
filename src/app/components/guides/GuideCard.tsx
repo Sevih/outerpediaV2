@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import type { GuideMeta } from '@/types/guide';
@@ -17,17 +18,28 @@ export default function GuideCard({ guide, lang, t }: Props) {
   return (
     <Link
       href={`/${lang}/guides/${guide.category}/${guide.slug}`}
-      className="group flex flex-col rounded-xl bg-zinc-800/60 p-4 ring-1 ring-white/5 transition hover:bg-zinc-700/60 hover:ring-white/10"
+      className="card-interactive group flex items-start gap-3 p-4 transition-colors"
     >
-      <h3 className="text-sm font-semibold text-zinc-100 after:hidden group-hover:text-yellow-300 transition-colors">
-        {title}
-      </h3>
-      {description && (
-        <p className="mt-1.5 line-clamp-2 text-xs text-zinc-400">{description}</p>
-      )}
-      <div className="mt-auto flex items-center gap-3 pt-3 text-xs text-zinc-500">
-        <span>{t['page.guide.by'].replace('{author}', guide.author)}</span>
-        <span>{guide.last_updated}</span>
+      <div className="relative h-10 w-10 shrink-0">
+        <Image
+          src={`/images/guides/${guide.icon}.webp`}
+          alt=""
+          fill
+          sizes="40px"
+          className="object-contain"
+        />
+      </div>
+      <div className="flex min-w-0 flex-1 flex-col">
+        <h3 className="text-sm font-semibold text-zinc-100 after:hidden group-hover:text-yellow-300 transition-colors">
+          {title}
+        </h3>
+        {description && (
+          <p className="mt-1.5 text-xs text-zinc-400">{description}</p>
+        )}
+        <div className="mt-auto flex items-center gap-3 pt-3 text-xs text-zinc-500">
+          <span>{t['page.guide.by'].replace('{author}', guide.author)}</span>
+          <span>{guide.last_updated}</span>
+        </div>
       </div>
     </Link>
   );

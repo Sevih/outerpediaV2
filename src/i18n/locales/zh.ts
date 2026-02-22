@@ -24,6 +24,14 @@ const zh: Record<TranslationKey, string> = {
   'common.back_to_top': '返回顶部',
   'common.language': '语言',
   'common.copied': '已复制！',
+  'common.sort': '排序',
+  'common.sort.order': '默认',
+  'common.sort.date_desc': '最新',
+  'common.sort.date_asc': '最旧',
+  'common.sort.name_asc': '名称 A→Z',
+  'common.sort.name_desc': '名称 Z→A',
+  'common.sort.author_asc': '作者 A→Z',
+  'common.sort.author_desc': '作者 Z→A',
   'aria.toggle_menu': '切换菜单',
 
   // Contributors

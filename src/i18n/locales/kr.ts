@@ -24,6 +24,14 @@ const kr: Record<TranslationKey, string> = {
   'common.back_to_top': '맨 위로',
   'common.language': '언어',
   'common.copied': '복사됨!',
+  'common.sort': '정렬',
+  'common.sort.order': '기본',
+  'common.sort.date_desc': '최신순',
+  'common.sort.date_asc': '오래된순',
+  'common.sort.name_asc': '이름 A→Z',
+  'common.sort.name_desc': '이름 Z→A',
+  'common.sort.author_asc': '작성자 A→Z',
+  'common.sort.author_desc': '작성자 Z→A',
   'aria.toggle_menu': '메뉴 전환',
 
   // Contributors

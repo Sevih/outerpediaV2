@@ -35,6 +35,14 @@ export async function getGuideCategories(): Promise<GuideCategory[]> {
     .sort((a, b) => a.order - b.order);
 }
 
+/** Single category by slug */
+export async function getGuideCategory(slug: string): Promise<GuideCategory | null> {
+  const raw = await loadCategories();
+  const data = raw[slug];
+  if (!data) return null;
+  return { slug, ...data };
+}
+
 /** List of valid category slugs */
 export async function getValidCategories(): Promise<string[]> {
   const raw = await loadCategories();

@@ -1,13 +1,58 @@
 {
-  "general-guides": { "icon": "/images/guides/CM_Adventure_SideStory.webp", "order": 1, "keywords": ["beginner", "tutorial", "game mechanics"] },
-  "adventure": { "icon": "/images/guides/CM_EtcMenu_Adventure.webp", "order": 2, "keywords": ["adventure", "story", "stage"] },
-  "adventure-license": { "icon": "/images/guides/T_Licence_Level_03.webp", "order": 3, "keywords": ["adventure license", "promotion"] },
-  "guild-raid": { "icon": "/images/guides/GD_Mark_07.webp", "order": 4, "keywords": ["guild raid", "guild boss"] },
-  "world-boss": { "icon": "/images/guides/CM_Adventure_WorldBoss.webp", "order": 5, "keywords": ["world boss"] },
-  "joint-boss": { "icon": "/images/guides/CM_Adventure_Cooperation.webp", "order": 6, "keywords": ["joint boss", "joint challenge"] },
-  "special-request": { "icon": "/images/guides/CM_Adventure_Challenge.webp", "order": 7, "keywords": ["special request"] },
-  "irregular-extermination": { "icon": "/images/guides/CM_Adventure_Irregular.webp", "order": 8, "keywords": ["irregular", "extermination"] },
-  "monad-gate": { "icon": "/images/guides/CM_Adventure_MonadGate.webp", "order": 9, "keywords": ["monad gate"] },
-  "skyward-tower": { "icon": "/images/guides/CT_Symbol_Automata.webp", "order": 10, "keywords": ["skyward tower", "tower"] },
-  "other": { "icon": "/images/guides/CM_EtcMenu_Character_Book.webp", "order": 11, "keywords": ["other", "misc"] }
+  "general-guides": {
+    "icon": "/images/guides/CM_EtcMenu_Side_Story",
+    "order": 1,
+    "sortable": true,
+    "keywords": ["beginner guide", "game mechanics", "tutorial", "how to play", "starter tips"]
+  },
+  "adventure": {
+    "icon": "/images/guides/CM_EtcMenu_Adventure",
+    "order": 2,
+    "keywords": ["adventure boss", "story boss", "stage guide", "battle strategy", "team composition"]
+  },
+  "adventure-license": {
+    "icon": "/images/guides/CM_Adventure_License",
+    "order": 3,
+    "keywords": ["adventure license", "promotion fight", "license battle", "boss strategy", "team composition"]
+  },
+  "guild-raid": {
+    "icon": "/images/guides/CM_Lobby_Sub_Guild",
+    "order": 4,
+    "keywords": ["guild raid", "raid strategy", "boss mechanics", "damage optimization", "high score"]
+  },
+  "world-boss": {
+    "icon": "/images/guides/CM_Adventure_WorldBoss",
+    "order": 5,
+    "keywords": ["world boss", "extreme league", "SSS rank", "damage optimization", "team rotation"]
+  },
+  "joint-boss": {
+    "icon": "/images/guides/CM_Adventure_Cooperation",
+    "order": 6,
+    "keywords": ["joint challenge", "co-op battle", "high score", "skill timing", "team synergy", "ranking tips"]
+  },
+  "special-request": {
+    "icon": "/images/guides/CM_EtcMenu_Challenge",
+    "order": 7,
+    "keywords": ["special request", "ecology study", "identification", "mission guide", "boss mechanics", "team synergy"]
+  },
+  "irregular-extermination": {
+    "icon": "/images/guides/CM_Irregular_Infiltrate",
+    "order": 8,
+    "keywords": ["irregular extermination", "irregular project", "boss guide", "team strategy", "stage guide"]
+  },
+  "monad-gate": {
+    "icon": "/images/guides/CM_Adventure_MonadGate",
+    "order": 9,
+    "keywords": ["monad gate", "true ending", "stage guide", "route choices", "story walkthrough"]
+  },
+  "skyward-tower": {
+    "icon": "/images/guides/CT_Symbol_Automaton",
+    "order": 10,
+    "keywords": ["tower climbing", "skyward tower", "floor guide", "endgame content", "high tier"]
+  },
+  "other": {
+    "icon": "/images/guides/CM_EtcMenu_Azit",
+    "order": 11,
+    "keywords": ["other", "misc", "tips", "outerplane guide"]
+  }
 }

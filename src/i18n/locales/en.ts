@@ -24,6 +24,14 @@ const en = {
   'common.back_to_top': 'Back to top',
   'common.language': 'Language',
   'common.copied': 'Copied!',
+  'common.sort': 'Sort',
+  'common.sort.order': 'Default',
+  'common.sort.date_desc': 'Newest',
+  'common.sort.date_asc': 'Oldest',
+  'common.sort.name_asc': 'Name A→Z',
+  'common.sort.name_desc': 'Name Z→A',
+  'common.sort.author_asc': 'Author A→Z',
+  'common.sort.author_desc': 'Author Z→A',
   'aria.toggle_menu': 'Toggle menu',
 
   // Contributors
