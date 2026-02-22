@@ -12,13 +12,22 @@ const RECO_DIR = join(process.cwd(), 'data/reco');
 type StatRangesByRarity = Record<string, Record<string, [number, number]>>;
 type StatRangesJSON = Record<string, Record<string, StatRangesByRarity>>;
 
+let statRangesCache: Record<string, unknown> | null = null;
+
+async function getStatRanges(): Promise<Record<string, unknown>> {
+  if (!statRangesCache) {
+    const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
+    statRangesCache = JSON.parse(raw);
+  }
+  return statRangesCache!;
+}
+
 /** Returns stat ranges for a given equipment category, rarity, and level */
 export async function getWeaponStatRanges(
   rarity: string,
   level: number
 ): Promise<Record<string, [number, number]>> {
-  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
-  const data = JSON.parse(raw) as StatRangesJSON;
+  const data = await getStatRanges() as StatRangesJSON;
   const weaponStats = data.weapons;
   const result: Record<string, [number, number]> = {};
   for (const [stat, rarities] of Object.entries(weaponStats)) {
@@ -37,8 +46,7 @@ export async function getAccessoryStatRanges(
   level: number,
   mainStats: string[] | null
 ): Promise<Record<string, [number, number]>> {
-  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
-  const data = JSON.parse(raw) as StatRangesJSON;
+  const data = await getStatRanges() as StatRangesJSON;
   const accStats = data.accessories;
   const result: Record<string, [number, number]> = {};
   for (const [stat, rarities] of Object.entries(accStats)) {
@@ -58,8 +66,7 @@ export type ArmorSetStatRanges = Record<ArmorPiece, Record<string, [number, numb
 
 /** Returns stat ranges for each armor piece (Helmet, Armor, Gloves, Shoes) */
 export async function getArmorSetStatRanges(): Promise<ArmorSetStatRanges> {
-  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
-  const data = JSON.parse(raw) as StatRangesJSON;
+  const data = await getStatRanges() as StatRangesJSON;
   const result = {} as ArmorSetStatRanges;
   for (const piece of ARMOR_PIECES) {
     const pieceStats = data[piece];
@@ -80,8 +87,7 @@ export type TalismanStatRanges = Record<string, [number, number]>;
 
 /** Returns stat ranges for talismans (flat map: stat → [min, max]) */
 export async function getTalismanStatRanges(): Promise<TalismanStatRanges> {
-  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
-  const data = JSON.parse(raw) as Record<string, unknown>;
+  const data = await getStatRanges();
   return (data.talismans as TalismanStatRanges) ?? {};
 }
 
@@ -99,8 +105,7 @@ export type EEStatRange = { key: string; range: [number, number] };
 export async function getEEStatRange(mainStat: string): Promise<EEStatRange | null> {
   const match = EE_STAT_KEY_MAP.find(m => m.test.test(mainStat));
   if (!match) return null;
-  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
-  const data = JSON.parse(raw) as Record<string, unknown>;
+  const data = await getStatRanges();
   const eeRanges = data.ee as Record<string, [number, number]> | undefined;
   if (!eeRanges) return null;
   const range = eeRanges[match.key];
@@ -119,7 +124,9 @@ export async function getAmulets(): Promise<Amulet[]> {
 
 export async function getTalismans(): Promise<Talisman[]> {
   const raw = await readFile(join(EQUIP_DIR, 'talisman.json'), 'utf-8');
-  return JSON.parse(raw) as Talisman[];
+  const data = JSON.parse(raw) as Talisman[];
+  for (const t of data) t.level = Number(t.level);
+  return data;
 }
 
 export async function getArmorSets(): Promise<ArmorSet[]> {
@@ -144,26 +151,21 @@ export type EquipmentLookup =
 // ── Lookup by slug ──
 
 export async function getEquipmentBySlug(slug: string): Promise<EquipmentLookup | null> {
-  const [weapons, amulets, talismans, sets, eeMap] = await Promise.all([
-    getWeapons(), getAmulets(), getTalismans(), getArmorSets(), getExclusiveEquipment(),
-  ]);
-
-  for (const w of weapons) {
+  for (const w of await getWeapons()) {
     if (slugifyEquipment(w.name) === slug) return { type: 'weapon', data: w };
   }
-  for (const a of amulets) {
+  for (const a of await getAmulets()) {
     if (slugifyEquipment(a.name) === slug) return { type: 'amulet', data: a };
   }
-  for (const t of talismans) {
+  for (const t of await getTalismans()) {
     if (slugifyEquipment(t.name) === slug) return { type: 'talisman', data: t };
   }
-  for (const s of sets) {
+  for (const s of await getArmorSets()) {
     if (slugifyEquipment(s.name) === slug) return { type: 'set', data: s };
   }
-  for (const [charId, ee] of Object.entries(eeMap)) {
+  for (const [charId, ee] of Object.entries(await getExclusiveEquipment())) {
     if (slugifyEquipment(ee.name) === slug) return { type: 'ee', data: ee, characterId: charId };
   }
-
   return null;
 }
 
@@ -201,13 +203,18 @@ export async function getCharactersRecommendingEquipment(
   const presetsRaw = await readFile(join(RECO_DIR, '_presets.json'), 'utf-8');
   const presets = JSON.parse(presetsRaw) as RecoPresets;
 
+  const recoFiles = files.filter(f => f !== '_presets.json' && f.endsWith('.json'));
+  const recoEntries = await Promise.all(
+    recoFiles.map(async (file) => {
+      const charId = file.replace('.json', '');
+      const raw = await readFile(join(RECO_DIR, file), 'utf-8');
+      return { charId, reco: JSON.parse(raw) as CharacterReco };
+    })
+  );
+
   const results: RecoReference[] = [];
 
-  for (const file of files) {
-    if (file === '_presets.json' || !file.endsWith('.json')) continue;
-    const charId = file.replace('.json', '');
-    const raw = await readFile(join(RECO_DIR, file), 'utf-8');
-    const reco = JSON.parse(raw) as CharacterReco;
+  for (const { charId, reco } of recoEntries) {
     const resolved = resolveRecoPresets(reco, presets);
 
     for (const [buildName, build] of Object.entries(resolved)) {

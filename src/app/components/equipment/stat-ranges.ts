@@ -1,7 +1,7 @@
 import statRangesData from '@data/equipment/statRanges.json';
 
 type RangeMap = Record<string, Record<string, Record<string, number[]>>>;
-const statRanges = statRangesData as Record<string, RangeMap>;
+const statRanges = statRangesData as unknown as Record<string, RangeMap>;
 
 /**
  * Get the max value of a main stat for a given equipment type, rarity, and level.

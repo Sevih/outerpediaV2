@@ -42,7 +42,7 @@ type BaseTalisman = {
   effect_desc1: string;
   effect_desc4: string;
   effect_icon: string;
-  level: string;
+  level: number;
   source: string | null;
   boss: string | null;
   mode: string | null;

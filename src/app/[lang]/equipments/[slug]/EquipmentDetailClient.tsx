@@ -69,10 +69,10 @@ function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwn
       <Link href={`/${lang}/equipments`} className="inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-300">
         <span aria-hidden="true">&larr;</span> {t('equip.detail.back')}
       </Link>
-      {equipment.type === 'weapon' && <WeaponDetail weapon={equipment.data} lang={lang} bossMap={bossMap} statRanges={weaponStatRanges} t={t} />}
-      {equipment.type === 'amulet' && <AmuletDetail amulet={equipment.data} lang={lang} bossMap={bossMap} statRanges={accessoryStatRanges} t={t} />}
-      {equipment.type === 'talisman' && <TalismanDetail talisman={equipment.data} lang={lang} bossMap={bossMap} statRanges={talismanStatRanges} t={t} />}
-      {equipment.type === 'set' && <SetDetail set={equipment.data} lang={lang} bossMap={bossMap} statRanges={armorSetStatRanges} t={t} />}
+      {equipment.type === 'weapon' && <WeaponDetail weapon={equipment.data} lang={lang} bossMap={bossMap} statRanges={weaponStatRanges} />}
+      {equipment.type === 'amulet' && <AmuletDetail amulet={equipment.data} lang={lang} bossMap={bossMap} statRanges={accessoryStatRanges} />}
+      {equipment.type === 'talisman' && <TalismanDetail talisman={equipment.data} lang={lang} bossMap={bossMap} statRanges={talismanStatRanges} />}
+      {equipment.type === 'set' && <SetDetail set={equipment.data} lang={lang} bossMap={bossMap} statRanges={armorSetStatRanges} />}
       {equipment.type === 'ee' && eeOwner && <EEDetail ee={equipment.data} owner={eeOwner} cfCompanion={eeCfCompanion} lang={lang} statRange={eeStatRange} />}
 
       {/* Recommended characters */}
@@ -97,7 +97,8 @@ function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwn
 
 // ── Weapon detail ──
 
-function WeaponDetail({ weapon, lang, bossMap, statRanges, t }: { weapon: Weapon; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null; t: ReturnType<typeof useI18n>['t'] }) {
+function WeaponDetail({ weapon, lang, bossMap, statRanges }: { weapon: Weapon; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null }) {
+  const { t } = useI18n();
   const name = l(weapon, 'name', lang);
   const effectName = weapon.effect_name ? l(weapon, 'effect_name', lang) : null;
   const effectDesc1 = weapon.effect_desc1 ? l(weapon, 'effect_desc1', lang) : null;
@@ -116,7 +117,7 @@ function WeaponDetail({ weapon, lang, bossMap, statRanges, t }: { weapon: Weapon
         badges={<>
           <TypeBadge label={t('equip.tab.weapons')} />
           <RarityBadge rarity={weapon.rarity} />
-          {weapon.class && <ClassBadge classType={weapon.class} t={t} />}
+          {weapon.class && <ClassBadge classType={weapon.class} />}
         </>}
       />
 
@@ -144,15 +145,16 @@ function WeaponDetail({ weapon, lang, bossMap, statRanges, t }: { weapon: Weapon
         </section>
       )}
 
-      <EffectSection effectName={effectName} effectIcon={weapon.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} t={t} />
-      <SourceSection source={weapon.source} boss={weapon.boss} equipName={weapon.name} bossMap={bossMap} lang={lang} t={t} />
+      <EffectSection effectName={effectName} effectIcon={weapon.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} />
+      <SourceSection source={weapon.source} boss={weapon.boss} equipName={weapon.name} bossMap={bossMap} lang={lang} />
     </>
   );
 }
 
 // ── Amulet detail ──
 
-function AmuletDetail({ amulet, lang, bossMap, statRanges, t }: { amulet: Amulet; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null; t: ReturnType<typeof useI18n>['t'] }) {
+function AmuletDetail({ amulet, lang, bossMap, statRanges }: { amulet: Amulet; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null }) {
+  const { t } = useI18n();
   const name = l(amulet, 'name', lang);
   const effectName = amulet.effect_name ? l(amulet, 'effect_name', lang) : null;
   const effectDesc1 = amulet.effect_desc1 ? l(amulet, 'effect_desc1', lang) : null;
@@ -168,10 +170,10 @@ function AmuletDetail({ amulet, lang, bossMap, statRanges, t }: { amulet: Amulet
         badges={<>
           <TypeBadge label={t('equip.tab.accessories')} />
           <RarityBadge rarity={amulet.rarity} />
-          {amulet.class && <ClassBadge classType={amulet.class} t={t} />}
+          {amulet.class && <ClassBadge classType={amulet.class} />}
         </>}
       />
-      <EffectSection effectName={effectName} effectIcon={amulet.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} t={t} />
+      <EffectSection effectName={effectName} effectIcon={amulet.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} />
       {mainStats.length > 0 && (
         <section className="card p-4">
           <h3 className="after:hidden">{t('equip.detail.mainstats')}</h3>
@@ -190,14 +192,15 @@ function AmuletDetail({ amulet, lang, bossMap, statRanges, t }: { amulet: Amulet
           </div>
         </section>
       )}
-      <SourceSection source={amulet.source} boss={amulet.boss} equipName={amulet.name} bossMap={bossMap} lang={lang} t={t} />
+      <SourceSection source={amulet.source} boss={amulet.boss} equipName={amulet.name} bossMap={bossMap} lang={lang} />
     </>
   );
 }
 
 // ── Talisman detail ──
 
-function TalismanDetail({ talisman, lang, bossMap, statRanges, t }: { talisman: Talisman; lang: Lang; bossMap: BossDisplayMap; statRanges: TalismanStatRanges | null; t: ReturnType<typeof useI18n>['t'] }) {
+function TalismanDetail({ talisman, lang, bossMap, statRanges }: { talisman: Talisman; lang: Lang; bossMap: BossDisplayMap; statRanges: TalismanStatRanges | null }) {
+  const { t } = useI18n();
   const name = l(talisman, 'name', lang);
   const effectName = l(talisman, 'effect_name', lang)
     ?.replace('Action Point', 'AP')
@@ -240,7 +243,7 @@ function TalismanDetail({ talisman, lang, bossMap, statRanges, t }: { talisman: 
           </div>
         </section>
       )}
-      <SourceSection source={talisman.source ?? undefined} boss={talisman.boss ?? undefined} equipName={talisman.name} bossMap={bossMap} lang={lang} t={t} />
+      <SourceSection source={talisman.source ?? undefined} boss={talisman.boss ?? undefined} equipName={talisman.name} bossMap={bossMap} lang={lang} />
     </>
   );
 }
@@ -255,7 +258,8 @@ const ARMOR_PIECE_I18N: Record<string, string> = {
   Shoes: 'equip.detail.piece.shoes',
 };
 
-function SetDetail({ set, lang, bossMap, statRanges, t }: { set: ArmorSet; lang: Lang; bossMap: BossDisplayMap; statRanges: ArmorSetStatRanges | null; t: ReturnType<typeof useI18n>['t'] }) {
+function SetDetail({ set, lang, bossMap, statRanges }: { set: ArmorSet; lang: Lang; bossMap: BossDisplayMap; statRanges: ArmorSetStatRanges | null }) {
+  const { t } = useI18n();
   const name = l(set, 'name', lang);
   const effect21 = l(set, 'effect_2_1', lang);
   const effect24 = l(set, 'effect_2_4', lang);
@@ -270,7 +274,7 @@ function SetDetail({ set, lang, bossMap, statRanges, t }: { set: ArmorSet; lang:
         badges={<>
           <TypeBadge label={t('equip.tab.sets')} />
           <RarityBadge rarity={set.rarity} />
-          {set.class && <ClassBadge classType={set.class} t={t} />}
+          {set.class && <ClassBadge classType={set.class} />}
         </>}
       />
 
@@ -353,7 +357,7 @@ function SetDetail({ set, lang, bossMap, statRanges, t }: { set: ArmorSet; lang:
         </section>
       )}
 
-      <SourceSection source={set.source} boss={set.boss} equipName={set.name} bossMap={bossMap} lang={lang} t={t} />
+      <SourceSection source={set.source} boss={set.boss} equipName={set.name} bossMap={bossMap} lang={lang} />
     </>
   );
 }
@@ -408,7 +412,7 @@ function EEDetail({ ee, owner, cfCompanion, lang, statRange }: { ee: ExclusiveEq
             <span className="font-bold text-zinc-200">{mainStat}</span>
             {statRange && (
               <span className="tabular-nums text-zinc-400">
-                {statRange.range[0]}{statRange.key !== 'EFF' ? '%' : ''} — {statRange.range[1]}{statRange.key !== 'EFF' ? '%' : ''}
+                {statRange.range[0]}% — {statRange.range[1]}%
               </span>
             )}
           </div>
@@ -457,13 +461,13 @@ function HeroSection({ icon, name, badges }: { icon: React.ReactNode; name: stri
   );
 }
 
-function EffectSection({ effectName, effectIcon, effectDesc1, effectDesc4, t }: {
+function EffectSection({ effectName, effectIcon, effectDesc1, effectDesc4 }: {
   effectName: string | null;
   effectIcon: string | null;
   effectDesc1: string | null;
   effectDesc4: string | null;
-  t: ReturnType<typeof useI18n>['t'];
 }) {
+  const { t } = useI18n();
   if (!effectName && !effectDesc1) return null;
 
   return (
@@ -491,14 +495,14 @@ function EffectSection({ effectName, effectIcon, effectDesc1, effectDesc4, t }: 
   );
 }
 
-function SourceSection({ source, boss, equipName, bossMap, lang, t }: {
+function SourceSection({ source, boss, equipName, bossMap, lang }: {
   source?: string;
   boss?: string;
   equipName: string;
   bossMap: BossDisplayMap;
   lang: Lang;
-  t: ReturnType<typeof useI18n>['t'];
 }) {
+  const { t } = useI18n();
   if (!source && !boss) return null;
 
   return (
@@ -524,7 +528,8 @@ function RarityBadge({ rarity }: { rarity: ItemRarity }) {
   return <span className={`rounded-full px-2.5 py-0.5 text-xs ${bgCls} ${textCls}`}>{label}</span>;
 }
 
-function ClassBadge({ classType, t }: { classType: string; t: ReturnType<typeof useI18n>['t'] }) {
+function ClassBadge({ classType }: { classType: string }) {
+  const { t } = useI18n();
   return (
     <div className="flex items-center gap-1 rounded-full bg-zinc-700 px-2.5 py-0.5">
       <div className="relative h-4 w-4 shrink-0">

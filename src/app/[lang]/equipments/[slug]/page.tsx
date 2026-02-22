@@ -9,6 +9,7 @@ import { getCharacterIndex, resolveIdToSlug } from '@/lib/data/characters';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getBossDisplayMap } from '@/lib/data/bosses';
 import type { Effect } from '@/types/effect';
+import { IE_BOSS_MAP } from '@/types/equipment';
 import { l } from '@/lib/i18n/localize';
 import EquipmentDetailClient from './EquipmentDetailClient';
 
@@ -16,12 +17,12 @@ export const revalidate = 86400;
 
 type Props = { params: Promise<{ lang: string; slug: string }> };
 
-const TYPE_LABELS: Record<string, string> = {
-  weapon: 'Weapon',
-  amulet: 'Accessory',
-  talisman: 'Talisman',
-  set: 'Armor Set',
-  ee: 'Exclusive Equipment',
+const TYPE_LABELS: Record<string, Record<Lang, string>> = {
+  weapon:   { en: 'Weapon', jp: '武器', kr: '무기', zh: '武器' },
+  amulet:   { en: 'Accessory', jp: 'アクセサリー', kr: '장신구', zh: '饰品' },
+  talisman: { en: 'Talisman', jp: 'タリスマン', kr: '부적', zh: '护符' },
+  set:      { en: 'Armor Set', jp: 'セット', kr: '세트', zh: '套装' },
+  ee:       { en: 'Exclusive Equipment', jp: '専用装備', kr: '전용 장비', zh: '专属装备' },
 };
 
 export async function generateStaticParams() {
@@ -38,13 +39,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!equipment) return {};
 
   const name = l(equipment.data, 'name', lang);
-  const typeLabel = TYPE_LABELS[equipment.type] ?? '';
+  const typeLabelMap = TYPE_LABELS[equipment.type];
+  const typeLabel = typeLabelMap?.[lang] ?? typeLabelMap?.en ?? '';
 
   return createPageMetadata({
     lang,
     path: `/equipments/${slug}`,
     title: `${name} — ${typeLabel}`,
-    description: `${name} — ${typeLabel} details, effects, and recommended characters on Outerpedia.`,
+    description: `${name} — ${typeLabel} | Outerpedia`,
   });
 }
 
@@ -77,9 +79,9 @@ export default async function EquipmentDetailPage({ params }: Props) {
   } else if (equipment.type === 'talisman') {
     if (equipment.data.boss) bossNames.add(equipment.data.boss);
   }
-  // IE bosses
-  for (const name of ['Mutated Wyvre', 'Irregular Queen', 'Iron Stretcher', 'Blockbuster']) {
-    bossNames.add(name);
+  // IE bosses (derived from IE_BOSS_MAP)
+  for (const names of Object.values(IE_BOSS_MAP)) {
+    for (const name of names) bossNames.add(name);
   }
   const bossMap = await getBossDisplayMap([...bossNames]);
 
@@ -128,8 +130,9 @@ export default async function EquipmentDetailPage({ params }: Props) {
     : null;
 
   // For EE: resolve owner character info + Core Fusion companion
-  let eeOwner: { id: string; name: string; slug: string | null; element: string | null; classType: string | null } | null = null;
-  let eeCfCompanion: typeof eeOwner = null;
+  type CharRef = { id: string; name: string; slug: string | null; element: string | null; classType: string | null };
+  let eeOwner: CharRef | null = null;
+  let eeCfCompanion: CharRef | null = null;
   if (equipment.type === 'ee') {
     const ownerInfo = charIndex[equipment.characterId];
     const ownerSlug = ownerInfo?.slug ?? await resolveIdToSlug(equipment.characterId);

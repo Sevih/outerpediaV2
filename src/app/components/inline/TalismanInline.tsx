@@ -9,7 +9,7 @@ import type { Talisman } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
 
-const talismans = talismansData as Talisman[];
+const talismans = talismansData as unknown as Talisman[];
 
 type Props = { name: string };
 
