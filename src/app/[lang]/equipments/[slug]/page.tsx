@@ -4,7 +4,7 @@ import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
-import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment, getWeaponStatRanges, getAccessoryStatRanges, getArmorSetStatRanges } from '@/lib/data/equipment';
+import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment, getWeaponStatRanges, getAccessoryStatRanges, getArmorSetStatRanges, getTalismanStatRanges, getEEStatRange } from '@/lib/data/equipment';
 import { getCharacterIndex, resolveIdToSlug } from '@/lib/data/characters';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getBossDisplayMap } from '@/lib/data/bosses';
@@ -98,11 +98,13 @@ export default async function EquipmentDetailPage({ params }: Props) {
     })
   );
 
-  // Shuffle recommended characters for varied display
+  // Shuffle recommended characters for varied display, limit to 15
+  const totalRecoCount = recoCharacters.length;
   for (let i = recoCharacters.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [recoCharacters[i], recoCharacters[j]] = [recoCharacters[j], recoCharacters[i]];
   }
+  recoCharacters.splice(15);
 
   // Compute stat ranges
   const weaponStatRanges = equipment.type === 'weapon'
@@ -117,8 +119,17 @@ export default async function EquipmentDetailPage({ params }: Props) {
     ? await getArmorSetStatRanges()
     : null;
 
-  // For EE: resolve owner character info
+  const talismanStatRanges = equipment.type === 'talisman'
+    ? await getTalismanStatRanges()
+    : null;
+
+  const eeStatRange = equipment.type === 'ee'
+    ? await getEEStatRange(equipment.data.mainStat)
+    : null;
+
+  // For EE: resolve owner character info + Core Fusion companion
   let eeOwner: { id: string; name: string; slug: string | null; element: string | null; classType: string | null } | null = null;
+  let eeCfCompanion: typeof eeOwner = null;
   if (equipment.type === 'ee') {
     const ownerInfo = charIndex[equipment.characterId];
     const ownerSlug = ownerInfo?.slug ?? await resolveIdToSlug(equipment.characterId);
@@ -129,19 +140,39 @@ export default async function EquipmentDetailPage({ params }: Props) {
       element: ownerInfo?.Element ?? null,
       classType: ownerInfo?.Class ?? null,
     };
+
+    // Base character (20xxxxx) can share EE with CF (27xxxxx)
+    if (equipment.characterId.startsWith('20')) {
+      const cfId = '27' + equipment.characterId.slice(2);
+      const cfInfo = charIndex[cfId];
+      if (cfInfo) {
+        const cfSlug = cfInfo.slug ?? await resolveIdToSlug(cfId);
+        eeCfCompanion = {
+          id: cfId,
+          name: l(cfInfo, 'Fullname', lang),
+          slug: cfSlug,
+          element: cfInfo.Element ?? null,
+          classType: cfInfo.Class ?? null,
+        };
+      }
+    }
   }
 
   return (
     <EquipmentDetailClient
       equipment={equipment}
       recoCharacters={recoCharacters}
+      totalRecoCount={totalRecoCount}
       eeOwner={eeOwner}
+      eeCfCompanion={eeCfCompanion}
       bossMap={bossMap}
       buffMap={buffMap}
       debuffMap={debuffMap}
       weaponStatRanges={weaponStatRanges}
       accessoryStatRanges={accessoryStatRanges}
       armorSetStatRanges={armorSetStatRanges}
+      talismanStatRanges={talismanStatRanges}
+      eeStatRange={eeStatRange}
       messages={messages}
       lang={lang}
     />

@@ -76,6 +76,37 @@ export async function getArmorSetStatRanges(): Promise<ArmorSetStatRanges> {
   return result;
 }
 
+export type TalismanStatRanges = Record<string, [number, number]>;
+
+/** Returns stat ranges for talismans (flat map: stat → [min, max]) */
+export async function getTalismanStatRanges(): Promise<TalismanStatRanges> {
+  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
+  const data = JSON.parse(raw) as Record<string, unknown>;
+  return (data.talismans as TalismanStatRanges) ?? {};
+}
+
+/** Map EE mainStat (EN) to a stat key in statRanges.ee */
+const EE_STAT_KEY_MAP: { test: RegExp; key: string }[] = [
+  { test: /Reduced DMG|Reduces.*Damage Taken/i, key: 'DMG RED%' },
+  { test: /DMG Increase|Damage Increase/i,      key: 'DMG UP%' },
+  { test: /Effectiveness/i,                      key: 'EFF' },
+  { test: /Critical Hit Chance/i,                key: 'CHC' },
+];
+
+export type EEStatRange = { key: string; range: [number, number] };
+
+/** Returns stat key + [min, max] range for an EE based on its mainStat string, or null */
+export async function getEEStatRange(mainStat: string): Promise<EEStatRange | null> {
+  const match = EE_STAT_KEY_MAP.find(m => m.test.test(mainStat));
+  if (!match) return null;
+  const raw = await readFile(join(EQUIP_DIR, 'statRanges.json'), 'utf-8');
+  const data = JSON.parse(raw) as Record<string, unknown>;
+  const eeRanges = data.ee as Record<string, [number, number]> | undefined;
+  if (!eeRanges) return null;
+  const range = eeRanges[match.key];
+  return range ? { key: match.key, range } : null;
+}
+
 export async function getWeapons(): Promise<Weapon[]> {
   const raw = await readFile(join(EQUIP_DIR, 'weapon.json'), 'utf-8');
   return JSON.parse(raw) as Weapon[];
@@ -190,7 +221,7 @@ export async function getCharactersRecommendingEquipment(
         found = build.Talisman.includes(equipmentName);
       } else if (equipmentType === 'set' && build.Set) {
         found = build.Set.some(combo =>
-          combo.some(entry => entry.name === equipmentName)
+          combo.some(entry => entry.name === equipmentName || `${entry.name} Set` === equipmentName)
         );
       }
 

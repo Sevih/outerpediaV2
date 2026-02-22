@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Weapon, Amulet, Talisman, ArmorSet, ExclusiveEquipment, BossDisplayMap } from '@/types/equipment';
-import type { EquipmentLookup, ArmorSetStatRanges } from '@/lib/data/equipment';
+import type { EquipmentLookup, ArmorSetStatRanges, TalismanStatRanges, EEStatRange } from '@/lib/data/equipment';
 import type { Effect } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
 import type { Messages } from '@/i18n';
@@ -21,6 +21,8 @@ import { formatEffectText, formatScaledEffect, getRarityBgPath } from '@/lib/for
 import type { ItemRarity } from '@/lib/theme';
 import { ITEM_RARITY_TEXT, ITEM_RARITY_BG } from '@/lib/theme';
 
+const statUnit = (stat: string) => stat.includes('%') || stat === 'CHC' || stat === 'CHD' ? '%' : '';
+
 type CharacterRef = {
   id: string;
   name: string;
@@ -32,13 +34,17 @@ type CharacterRef = {
 type Props = {
   equipment: EquipmentLookup;
   recoCharacters: CharacterRef[];
+  totalRecoCount: number;
   eeOwner: CharacterRef | null;
+  eeCfCompanion: CharacterRef | null;
   bossMap: BossDisplayMap;
   buffMap: Record<string, Effect>;
   debuffMap: Record<string, Effect>;
   weaponStatRanges: Record<string, [number, number]> | null;
   accessoryStatRanges: Record<string, [number, number]> | null;
   armorSetStatRanges: ArmorSetStatRanges | null;
+  talismanStatRanges: TalismanStatRanges | null;
+  eeStatRange: EEStatRange | null;
   messages: Messages;
   lang: Lang;
 };
@@ -53,7 +59,7 @@ export default function EquipmentDetailClient(props: Props) {
   );
 }
 
-function EquipmentDetailInner({ equipment, recoCharacters, eeOwner, bossMap, weaponStatRanges, accessoryStatRanges, armorSetStatRanges, lang }: Props) {
+function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwner, eeCfCompanion, bossMap, weaponStatRanges, accessoryStatRanges, armorSetStatRanges, talismanStatRanges, eeStatRange, lang }: Props) {
   const { t } = useI18n();
   const equipName = l(equipment.data, 'name', lang);
   useBreadcrumbOverride(equipName);
@@ -65,9 +71,9 @@ function EquipmentDetailInner({ equipment, recoCharacters, eeOwner, bossMap, wea
       </Link>
       {equipment.type === 'weapon' && <WeaponDetail weapon={equipment.data} lang={lang} bossMap={bossMap} statRanges={weaponStatRanges} t={t} />}
       {equipment.type === 'amulet' && <AmuletDetail amulet={equipment.data} lang={lang} bossMap={bossMap} statRanges={accessoryStatRanges} t={t} />}
-      {equipment.type === 'talisman' && <TalismanDetail talisman={equipment.data} lang={lang} bossMap={bossMap} t={t} />}
+      {equipment.type === 'talisman' && <TalismanDetail talisman={equipment.data} lang={lang} bossMap={bossMap} statRanges={talismanStatRanges} t={t} />}
       {equipment.type === 'set' && <SetDetail set={equipment.data} lang={lang} bossMap={bossMap} statRanges={armorSetStatRanges} t={t} />}
-      {equipment.type === 'ee' && eeOwner && <EEDetail ee={equipment.data} owner={eeOwner} lang={lang} />}
+      {equipment.type === 'ee' && eeOwner && <EEDetail ee={equipment.data} owner={eeOwner} cfCompanion={eeCfCompanion} lang={lang} statRange={eeStatRange} />}
 
       {/* Recommended characters */}
       {recoCharacters.length > 0 && (
@@ -78,6 +84,11 @@ function EquipmentDetailInner({ equipment, recoCharacters, eeOwner, bossMap, wea
               <CharacterRefCard key={char.id} char={char} lang={lang} />
             ))}
           </div>
+          {totalRecoCount > recoCharacters.length && (
+            <p className="mt-3 text-center text-sm text-zinc-500">
+              {t('equip.detail.and_more').replace('{n}', String(totalRecoCount - recoCharacters.length))}
+            </p>
+          )}
         </section>
       )}
     </div>
@@ -171,7 +182,7 @@ function AmuletDetail({ amulet, lang, bossMap, statRanges, t }: { amulet: Amulet
                 <div key={stat} className="flex items-center justify-between">
                   <span className="font-bold text-zinc-200"><StatInline name={stat} /></span>
                   {range && (
-                    <span className="tabular-nums text-zinc-400">{range[0]}% — {range[1]}%</span>
+                    <span className="tabular-nums text-zinc-400">{range[0]}{statUnit(stat)} — {range[1]}{statUnit(stat)}</span>
                   )}
                 </div>
               );
@@ -186,7 +197,7 @@ function AmuletDetail({ amulet, lang, bossMap, statRanges, t }: { amulet: Amulet
 
 // ── Talisman detail ──
 
-function TalismanDetail({ talisman, lang, bossMap, t }: { talisman: Talisman; lang: Lang; bossMap: BossDisplayMap; t: ReturnType<typeof useI18n>['t'] }) {
+function TalismanDetail({ talisman, lang, bossMap, statRanges, t }: { talisman: Talisman; lang: Lang; bossMap: BossDisplayMap; statRanges: TalismanStatRanges | null; t: ReturnType<typeof useI18n>['t'] }) {
   const name = l(talisman, 'name', lang);
   const effectName = l(talisman, 'effect_name', lang)
     ?.replace('Action Point', 'AP')
@@ -216,6 +227,19 @@ function TalismanDetail({ talisman, lang, bossMap, t }: { talisman: Talisman; la
           </div>
         </section>
       )}
+      {statRanges && Object.keys(statRanges).length > 0 && (
+        <section className="card p-4">
+          <h3 className="after:hidden">{t('equip.detail.mainstats')}</h3>
+          <div className="mt-3 space-y-1.5 text-sm">
+            {Object.entries(statRanges).map(([stat, [min, max]]) => (
+              <div key={stat} className="flex items-center justify-between">
+                <span className="font-bold text-zinc-200"><StatInline name={stat} /></span>
+                <span className="tabular-nums text-zinc-400">{min}% — {max}%</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
       <SourceSection source={talisman.source ?? undefined} boss={talisman.boss ?? undefined} equipName={talisman.name} bossMap={bossMap} lang={lang} t={t} />
     </>
   );
@@ -241,7 +265,7 @@ function SetDetail({ set, lang, bossMap, statRanges, t }: { set: ArmorSet; lang:
   return (
     <>
       <HeroSection
-        icon={<EquipmentIcon src={`equipment/TI_Equipment_Armor_${set.image_prefix}`} rarity={set.rarity} alt={name} size={96} overlaySize={28} effectIcon={set.set_icon} />}
+        icon={<EquipmentIcon src={`equipment/TI_Equipment_Armor_${set.image_prefix}`} rarity={set.rarity} alt={name} size={96} overlaySize={28} effectIcon={set.set_icon} level={6} />}
         name={name}
         badges={<>
           <TypeBadge label={t('equip.tab.sets')} />
@@ -316,8 +340,8 @@ function SetDetail({ set, lang, bossMap, statRanges, t }: { set: ArmorSet; lang:
                       {Object.entries(stats).map(([stat, [min, max]]) => (
                         <tr key={stat}>
                           <td className="py-0.5 text-zinc-300"><StatInline name={stat} /></td>
-                          <td className="py-0.5 text-right tabular-nums text-zinc-400">{min}{stat !== 'DEF' ? '%' : ''}</td>
-                          <td className="py-0.5 text-right tabular-nums text-zinc-300">{max}{stat !== 'DEF' ? '%' : ''}</td>
+                          <td className="py-0.5 text-right tabular-nums text-zinc-400">{min}{statUnit(stat)}</td>
+                          <td className="py-0.5 text-right tabular-nums text-zinc-300">{max}{statUnit(stat)}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -336,7 +360,7 @@ function SetDetail({ set, lang, bossMap, statRanges, t }: { set: ArmorSet; lang:
 
 // ── EE detail ──
 
-function EEDetail({ ee, owner, lang }: { ee: ExclusiveEquipment; owner: CharacterRef; lang: Lang }) {
+function EEDetail({ ee, owner, cfCompanion, lang, statRange }: { ee: ExclusiveEquipment; owner: CharacterRef; cfCompanion: CharacterRef | null; lang: Lang; statRange: EEStatRange | null }) {
   const { t } = useI18n();
   const name = l(ee, 'name', lang);
   const mainStat = l(ee, 'mainStat', lang);
@@ -370,16 +394,24 @@ function EEDetail({ ee, owner, lang }: { ee: ExclusiveEquipment; owner: Characte
       {/* Owner */}
       <section>
         <h3>{t('equip.detail.owner')}</h3>
-        <div className="mt-2">
+        <div className="mt-2 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
           <CharacterRefCard char={owner} lang={lang} />
+          {cfCompanion && <CharacterRefCard char={cfCompanion} lang={lang} />}
         </div>
       </section>
 
       {/* Main stat */}
       {mainStat && (
-        <section>
-          <h3>{t('equip.detail.mainstat')}</h3>
-          <span className="mt-2 inline-block rounded bg-zinc-800 px-3 py-1 text-sm text-zinc-300">{mainStat}</span>
+        <section className="card p-4">
+          <h3 className="after:hidden">{t('equip.detail.mainstat')}</h3>
+          <div className="mt-3 flex items-center justify-between text-sm">
+            <span className="font-bold text-zinc-200">{mainStat}</span>
+            {statRange && (
+              <span className="tabular-nums text-zinc-400">
+                {statRange.range[0]}{statRange.key !== 'EFF' ? '%' : ''} — {statRange.range[1]}{statRange.key !== 'EFF' ? '%' : ''}
+              </span>
+            )}
+          </div>
         </section>
       )}
 

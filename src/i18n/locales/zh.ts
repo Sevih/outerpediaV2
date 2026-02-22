@@ -87,6 +87,7 @@ const zh: Record<TranslationKey, string> = {
   'equip.detail.piece.gloves': '手套',
   'equip.detail.piece.shoes': '鞋子',
   'equip.detail.set_effects': '套装效果',
+  'equip.detail.and_more': '等{n}名角色',
   'page.tierlist.title': '异域战记 节奏榜',
   'page.tierlist.meta_title': '异域战记 节奏榜 – {monthYear}',
   'page.tierlist.description':

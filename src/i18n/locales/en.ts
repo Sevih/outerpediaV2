@@ -87,6 +87,7 @@ const en = {
   'equip.detail.piece.gloves': 'Gloves',
   'equip.detail.piece.shoes': 'Shoes',
   'equip.detail.set_effects': 'Set Effects',
+  'equip.detail.and_more': 'and {n} more',
   'page.tierlist.title': 'Outerplane Tier List',
   'page.tierlist.meta_title': 'Outerplane Tier List – {monthYear}',
   'page.tierlist.description':

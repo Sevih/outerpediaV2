@@ -87,6 +87,7 @@ const kr: Record<TranslationKey, string> = {
   'equip.detail.piece.gloves': '장갑',
   'equip.detail.piece.shoes': '신발',
   'equip.detail.set_effects': '세트 효과',
+  'equip.detail.and_more': '외 {n}명',
   'page.tierlist.title': '아우터플레인 티어 리스트',
   'page.tierlist.meta_title': '아우터플레인 티어 리스트 – {monthYear}',
   'page.tierlist.description':
