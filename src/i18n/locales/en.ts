@@ -98,6 +98,37 @@ const en = {
   'page.guides.title': 'Outerplane Guides',
   'page.guides.description':
     'Outerplane guides for adventure stages, boss fights, guild raids, world bosses, and beginner tips.',
+  'page.guides.meta_title': 'Outerplane Guides – {monthYear}',
+  'page.guide.meta_title': '{title} — Outerplane Guide',
+  'page.guide.by': 'By {author}',
+  'page.guide.updated': 'Updated {date}',
+
+  // Guide categories
+  'guides.category.general-guides': 'General Guides',
+  'guides.category.adventure': 'Adventure',
+  'guides.category.adventure-license': 'Adventure License',
+  'guides.category.guild-raid': 'Guild Raid',
+  'guides.category.world-boss': 'World Boss',
+  'guides.category.joint-boss': 'Joint Boss',
+  'guides.category.special-request': 'Special Request',
+  'guides.category.irregular-extermination': 'Irregular Extermination',
+  'guides.category.monad-gate': 'Monad Gate',
+  'guides.category.skyward-tower': 'Skyward Tower',
+  'guides.category.other': 'Other',
+
+  // Guide category descriptions
+  'guides.category.general-guides.desc': 'Beginner tips and game mechanics',
+  'guides.category.adventure.desc': 'Story stage boss guides',
+  'guides.category.adventure-license.desc': 'Promotion fight guides',
+  'guides.category.guild-raid.desc': 'Guild raid boss strategies',
+  'guides.category.world-boss.desc': 'World boss fight strategies',
+  'guides.category.joint-boss.desc': 'Joint boss challenge guides',
+  'guides.category.special-request.desc': 'Special request boss guides',
+  'guides.category.irregular-extermination.desc': 'Irregular extermination guides',
+  'guides.category.monad-gate.desc': 'Monad gate route guides',
+  'guides.category.skyward-tower.desc': 'Skyward tower floor guides',
+  'guides.category.other.desc': 'Other guides and tips',
+
   'page.contributors.title': 'Project Contributors',
   'page.legal.title': 'Legal Notice & Disclaimer',
   'page.legal.description':

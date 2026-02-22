@@ -42,9 +42,15 @@ export default function Breadcrumbs() {
           const href = `/${lang}/${segments.slice(0, i + 1).join('/')}`;
           const isLast = i === segments.length - 1;
           const labelKey = SEGMENT_LABELS[segment];
+          // Guide category segments: try guides.category.{slug} key
+          const guideCatKey = segments[i - 1] === 'guides'
+            ? `guides.category.${segment}` as TranslationKey
+            : undefined;
           const label = isLast && breadcrumbOverride
             ? breadcrumbOverride
-            : labelKey ? t(labelKey) : decodeURIComponent(segment);
+            : labelKey ? t(labelKey)
+            : guideCatKey && t(guideCatKey) !== guideCatKey ? t(guideCatKey)
+            : decodeURIComponent(segment);
 
           return (
             <li key={href} className="flex items-center gap-1.5">

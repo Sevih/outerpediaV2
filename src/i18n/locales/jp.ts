@@ -98,6 +98,37 @@ const jp: Record<TranslationKey, string> = {
   'page.guides.title': 'アウタープレーン 攻略ガイド',
   'page.guides.description':
     'アウタープレーン攻略ガイド。冒険ステージ、ボス戦、ギルドレイド、ワールドボス、初心者向けのヒント。',
+  'page.guides.meta_title': 'アウタープレーン 攻略ガイド – {monthYear}',
+  'page.guide.meta_title': '{title} — アウタープレーン 攻略ガイド',
+  'page.guide.by': '著者: {author}',
+  'page.guide.updated': '{date} 更新',
+
+  // Guide categories
+  'guides.category.general-guides': '総合ガイド',
+  'guides.category.adventure': '冒険',
+  'guides.category.adventure-license': '冒険者ライセンス',
+  'guides.category.guild-raid': 'ギルドレイド',
+  'guides.category.world-boss': 'ワールドボス',
+  'guides.category.joint-boss': 'ジョイントボス',
+  'guides.category.special-request': '特別依頼',
+  'guides.category.irregular-extermination': 'イレギュラー掃討',
+  'guides.category.monad-gate': 'モナドゲート',
+  'guides.category.skyward-tower': 'スカイワードタワー',
+  'guides.category.other': 'その他',
+
+  // Guide category descriptions
+  'guides.category.general-guides.desc': '初心者向けヒントとゲームメカニクス',
+  'guides.category.adventure.desc': 'ストーリーステージボス攻略',
+  'guides.category.adventure-license.desc': 'プロモーション戦闘攻略',
+  'guides.category.guild-raid.desc': 'ギルドレイドボス攻略',
+  'guides.category.world-boss.desc': 'ワールドボス攻略',
+  'guides.category.joint-boss.desc': 'ジョイントボスチャレンジ攻略',
+  'guides.category.special-request.desc': '特別依頼ボス攻略',
+  'guides.category.irregular-extermination.desc': 'イレギュラー掃討攻略',
+  'guides.category.monad-gate.desc': 'モナドゲートルート攻略',
+  'guides.category.skyward-tower.desc': 'スカイワードタワー階層攻略',
+  'guides.category.other.desc': 'その他のガイドとヒント',
+
   'page.contributors.title': 'プロジェクト コントリビューター',
   'page.legal.title': '法的通知 & 免責事項',
   'page.legal.description':

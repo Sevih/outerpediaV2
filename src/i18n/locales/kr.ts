@@ -98,6 +98,37 @@ const kr: Record<TranslationKey, string> = {
   'page.guides.title': '아우터플레인 공략 가이드',
   'page.guides.description':
     '아우터플레인 공략 가이드. 모험 스테이지, 보스전, 길드 레이드, 월드 보스, 초보자 팁.',
+  'page.guides.meta_title': '아우터플레인 공략 가이드 – {monthYear}',
+  'page.guide.meta_title': '{title} — 아우터플레인 공략 가이드',
+  'page.guide.by': '작성자: {author}',
+  'page.guide.updated': '{date} 업데이트',
+
+  // Guide categories
+  'guides.category.general-guides': '일반 가이드',
+  'guides.category.adventure': '모험',
+  'guides.category.adventure-license': '모험 라이선스',
+  'guides.category.guild-raid': '길드 레이드',
+  'guides.category.world-boss': '월드 보스',
+  'guides.category.joint-boss': '합동 보스',
+  'guides.category.special-request': '특별 의뢰',
+  'guides.category.irregular-extermination': '이레귤러 소탕',
+  'guides.category.monad-gate': '모나드 게이트',
+  'guides.category.skyward-tower': '스카이워드 타워',
+  'guides.category.other': '기타',
+
+  // Guide category descriptions
+  'guides.category.general-guides.desc': '초보자 팁 및 게임 메카닉',
+  'guides.category.adventure.desc': '스토리 스테이지 보스 공략',
+  'guides.category.adventure-license.desc': '프로모션 전투 공략',
+  'guides.category.guild-raid.desc': '길드 레이드 보스 전략',
+  'guides.category.world-boss.desc': '월드 보스 전투 전략',
+  'guides.category.joint-boss.desc': '합동 보스 챌린지 공략',
+  'guides.category.special-request.desc': '특별 의뢰 보스 공략',
+  'guides.category.irregular-extermination.desc': '이레귤러 소탕 공략',
+  'guides.category.monad-gate.desc': '모나드 게이트 루트 공략',
+  'guides.category.skyward-tower.desc': '스카이워드 타워 층 공략',
+  'guides.category.other.desc': '기타 가이드 및 팁',
+
   'page.contributors.title': '프로젝트 기여자',
   'page.legal.title': '법적 고지 & 면책 조항',
   'page.legal.description':

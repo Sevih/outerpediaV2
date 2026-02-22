@@ -98,6 +98,37 @@ const zh: Record<TranslationKey, string> = {
   'page.guides.title': '异域战记 攻略指南',
   'page.guides.description':
     '异域战记攻略指南。冒险关卡、Boss战、公会突袭、世界Boss、新手攻略。',
+  'page.guides.meta_title': '异域战记 攻略指南 – {monthYear}',
+  'page.guide.meta_title': '{title} — 异域战记攻略指南',
+  'page.guide.by': '作者: {author}',
+  'page.guide.updated': '{date} 更新',
+
+  // Guide categories
+  'guides.category.general-guides': '综合攻略',
+  'guides.category.adventure': '冒险',
+  'guides.category.adventure-license': '冒险许可证',
+  'guides.category.guild-raid': '公会突袭',
+  'guides.category.world-boss': '世界Boss',
+  'guides.category.joint-boss': '联合Boss',
+  'guides.category.special-request': '特别委托',
+  'guides.category.irregular-extermination': '异常讨伐',
+  'guides.category.monad-gate': '单子之门',
+  'guides.category.skyward-tower': '天穹之塔',
+  'guides.category.other': '其他',
+
+  // Guide category descriptions
+  'guides.category.general-guides.desc': '新手攻略和游戏机制',
+  'guides.category.adventure.desc': '剧情关卡Boss攻略',
+  'guides.category.adventure-license.desc': '晋升战斗攻略',
+  'guides.category.guild-raid.desc': '公会突袭Boss攻略',
+  'guides.category.world-boss.desc': '世界Boss攻略',
+  'guides.category.joint-boss.desc': '联合Boss挑战攻略',
+  'guides.category.special-request.desc': '特别委托Boss攻略',
+  'guides.category.irregular-extermination.desc': '异常讨伐攻略',
+  'guides.category.monad-gate.desc': '单子之门路线攻略',
+  'guides.category.skyward-tower.desc': '天穹之塔楼层攻略',
+  'guides.category.other.desc': '其他攻略和技巧',
+
   'page.contributors.title': '项目贡献者',
   'page.legal.title': '法律声明 & 免责条款',
   'page.legal.description':
