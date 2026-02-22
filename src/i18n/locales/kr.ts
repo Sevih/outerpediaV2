@@ -125,17 +125,27 @@ const kr: Record<TranslationKey, string> = {
   'guides.category.other': '기타',
 
   // Guide category descriptions
-  'guides.category.general-guides.desc': '초보자 팁 및 게임 메카닉',
-  'guides.category.adventure.desc': '스토리 스테이지 보스 공략',
-  'guides.category.adventure-license.desc': '프로모션 전투 공략',
-  'guides.category.guild-raid.desc': '길드 레이드 보스 전략',
-  'guides.category.world-boss.desc': '월드 보스 전투 전략',
-  'guides.category.joint-boss.desc': '합동 보스 챌린지 공략',
-  'guides.category.special-request.desc': '특별 의뢰 보스 공략',
-  'guides.category.irregular-extermination.desc': '이레귤러 소탕 공략',
-  'guides.category.monad-gate.desc': '모나드 게이트 루트 공략',
-  'guides.category.skyward-tower.desc': '스카이워드 타워 층 공략',
-  'guides.category.other.desc': '기타 가이드 및 팁',
+  'guides.category.general-guides.desc':
+    '게임 기초 마스터: 전투 메커닉, 캐릭터 성장, 장비 시스템, 초보자를 위한 필수 팁.',
+  'guides.category.adventure.desc':
+    '모험 모드의 강력한 보스를 공략하기 위한 상세 전략: 추천 팀 구성, 메커닉 설명, 스테이지 팁.',
+  'guides.category.adventure-license.desc':
+    '모험자 라이선스의 모든 전투 공략(승급전을 포함): 적 메커닉, 추천 팀, 각 스테이지별 전략을 안내합니다.',
+  'guides.category.guild-raid.desc':
+    '길드 레이드 완벽 공략: 보스 메커닉, 최적 팀 구성, 최고 점수를 위한 데미지 극대화 전술.',
+  'guides.category.world-boss.desc':
+    '익스트림 리그 월드 보스전에서 SSS 등급을 달성하기 위한 완벽 공략: 최적 팀 구성, 스킬 로테이션, 데미지 극대화.',
+  'guides.category.joint-boss.desc':
+    '합동 챌린지에서 높은 점수를 얻기 위한 고급 공략: 최적 팀 구성, 스킬 타이밍, 시너지 활용 팁.',
+  'guides.category.special-request.desc':
+    '특별 의뢰 미션 완벽 공략: 생태 조사 및 정체 규명. 보스 메커닉, 팀 시너지, 성공을 위한 핵심 전술을 소개합니다.',
+  'guides.category.irregular-extermination.desc':
+    '이레귤러 섬멸전 모드의 보스 공략: 보스 패턴, 추천 팀 구성, 각 스테이지별 효율적인 전략.',
+  'guides.category.monad-gate.desc':
+    '모나드 게이트 스테이지 공략: 진 엔딩에 도달하기 위한 경로 선택과 전략을 안내합니다.',
+  'guides.category.skyward-tower.desc':
+    '비천의 탑을 오르기 위한 층별 공략: 최적 캐릭터, 팀 시너지, 상층부 전술.',
+  'guides.category.other.desc': '다른 카테고리에 해당하지 않거나 더 이상 최신이 아닌 가이드, 뉴스 및 콘텐츠.',
 
   'page.contributors.title': '프로젝트 기여자',
   'page.legal.title': '법적 고지 & 면책 조항',

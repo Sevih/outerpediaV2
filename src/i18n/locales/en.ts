@@ -125,17 +125,27 @@ const en = {
   'guides.category.other': 'Other',
 
   // Guide category descriptions
-  'guides.category.general-guides.desc': 'Beginner tips and game mechanics',
-  'guides.category.adventure.desc': 'Story stage boss guides',
-  'guides.category.adventure-license.desc': 'Promotion fight guides',
-  'guides.category.guild-raid.desc': 'Guild raid boss strategies',
-  'guides.category.world-boss.desc': 'World boss fight strategies',
-  'guides.category.joint-boss.desc': 'Joint boss challenge guides',
-  'guides.category.special-request.desc': 'Special request boss guides',
-  'guides.category.irregular-extermination.desc': 'Irregular extermination guides',
-  'guides.category.monad-gate.desc': 'Monad gate route guides',
-  'guides.category.skyward-tower.desc': 'Skyward tower floor guides',
-  'guides.category.other.desc': 'Other guides and tips',
+  'guides.category.general-guides.desc':
+    'Master game fundamentals: combat mechanics, character progression, equipment systems, and essential beginner tips for new players.',
+  'guides.category.adventure.desc':
+    'Detailed strategies to defeat challenging Adventure bosses: recommended teams, mechanics explanation, and stage tips.',
+  'guides.category.adventure-license.desc':
+    'Guides for all Adventure License battles, including Promotion Fights: learn enemy mechanics, team recommendations, and strategies for every stage.',
+  'guides.category.guild-raid.desc':
+    'Comprehensive strategies for Guild Raids: boss mechanics, optimal team setups, and damage-maximizing tactics to achieve the highest raid scores.',
+  'guides.category.world-boss.desc':
+    'Comprehensive strategies to achieve SSS rank in Extreme League World Boss battles: optimal team setups, rotation timing, and damage maximization.',
+  'guides.category.joint-boss.desc':
+    'Score higher in Joint Challenge battles with advanced strategies: best team compositions, skill timing, and synergy tips for top rankings.',
+  'guides.category.special-request.desc':
+    'In-depth strategies for Special Request missions: Ecology Study and Identification. Learn boss mechanics, team synergies, and key tactics for success.',
+  'guides.category.irregular-extermination.desc':
+    'Boss guides for the Irregular Extermination Project mode: learn boss patterns, recommended teams, and effective strategies for each stage.',
+  'guides.category.monad-gate.desc':
+    'Stage guides for Monad Gate: recommended paths, choices, and strategies to reach the true ending of the mode.',
+  'guides.category.skyward-tower.desc':
+    'Floor-by-floor strategies to climb Skyward Tower: optimal characters, team synergies, and tactics for higher floors.',
+  'guides.category.other.desc': 'Guides, news, and content that doesn\'t fit into the other categories or is no longer up to date.',
 
   'page.contributors.title': 'Project Contributors',
   'page.legal.title': 'Legal Notice & Disclaimer',

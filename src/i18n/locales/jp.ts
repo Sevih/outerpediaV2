@@ -125,17 +125,27 @@ const jp: Record<TranslationKey, string> = {
   'guides.category.other': 'その他',
 
   // Guide category descriptions
-  'guides.category.general-guides.desc': '初心者向けヒントとゲームメカニクス',
-  'guides.category.adventure.desc': 'ストーリーステージボス攻略',
-  'guides.category.adventure-license.desc': 'プロモーション戦闘攻略',
-  'guides.category.guild-raid.desc': 'ギルドレイドボス攻略',
-  'guides.category.world-boss.desc': 'ワールドボス攻略',
-  'guides.category.joint-boss.desc': 'ジョイントボスチャレンジ攻略',
-  'guides.category.special-request.desc': '特別依頼ボス攻略',
-  'guides.category.irregular-extermination.desc': 'イレギュラー掃討攻略',
-  'guides.category.monad-gate.desc': 'モナドゲートルート攻略',
-  'guides.category.skyward-tower.desc': 'スカイワードタワー階層攻略',
-  'guides.category.other.desc': 'その他のガイドとヒント',
+  'guides.category.general-guides.desc':
+    'ゲームの基礎をマスター：戦闘メカニクス、キャラクター育成、装備システム、初心者向け必須ヒント。',
+  'guides.category.adventure.desc':
+    '冒険モードの強敵ボス攻略：おすすめチーム編成、メカニクス解説、ステージ攻略のヒント。',
+  'guides.category.adventure-license.desc':
+    '冒険者ライセンスの全バトル攻略（昇格戦を含む）：敵のメカニクス、推奨チーム、各ステージの攻略法を解説。',
+  'guides.category.guild-raid.desc':
+    'ギルドレイド完全攻略：ボスメカニクス、最適なチーム編成、最高スコアを狙うためのダメージ最大化戦術。',
+  'guides.category.world-boss.desc':
+    'エクストリームリーグのワールドボス戦でSSSランクを達成するための完全攻略：最適なチーム編成、スキルローテーション、ダメージ最大化。',
+  'guides.category.joint-boss.desc':
+    '共同作戦で高スコアを狙うための上級攻略：最適なチーム編成、スキルタイミング、シナジー活用のコツ。',
+  'guides.category.special-request.desc':
+    '特別依頼ミッション徹底攻略：生態調査と正体究明。ボスメカニクス、チームシナジー、勝利のための重要戦術を解説。',
+  'guides.category.irregular-extermination.desc':
+    'イレギュラー殲滅戦モードのボス攻略：ボスのパターン、推奨チーム、各ステージの効果的な戦略を紹介。',
+  'guides.category.monad-gate.desc':
+    'モナド・ゲートのステージ攻略：真エンディングに到達するためのルート選択と戦略を紹介。',
+  'guides.category.skyward-tower.desc':
+    '飛天の塔を登るためのフロア別攻略：最適キャラクター、チームシナジー、上層階の戦術。',
+  'guides.category.other.desc': '他のカテゴリに該当しない、または最新でなくなったガイド、ニュース、コンテンツ。',
 
   'page.contributors.title': 'プロジェクト コントリビューター',
   'page.legal.title': '法的通知 & 免責事項',

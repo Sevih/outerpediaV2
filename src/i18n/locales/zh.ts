@@ -125,17 +125,27 @@ const zh: Record<TranslationKey, string> = {
   'guides.category.other': '其他',
 
   // Guide category descriptions
-  'guides.category.general-guides.desc': '新手攻略和游戏机制',
-  'guides.category.adventure.desc': '剧情关卡Boss攻略',
-  'guides.category.adventure-license.desc': '晋升战斗攻略',
-  'guides.category.guild-raid.desc': '公会突袭Boss攻略',
-  'guides.category.world-boss.desc': '世界Boss攻略',
-  'guides.category.joint-boss.desc': '联合Boss挑战攻略',
-  'guides.category.special-request.desc': '特别委托Boss攻略',
-  'guides.category.irregular-extermination.desc': '异常讨伐攻略',
-  'guides.category.monad-gate.desc': '单子之门路线攻略',
-  'guides.category.skyward-tower.desc': '天穹之塔楼层攻略',
-  'guides.category.other.desc': '其他攻略和技巧',
+  'guides.category.general-guides.desc':
+    '掌握游戏基础机制：战斗、角色养成、装备以及新玩家需知。',
+  'guides.category.adventure.desc':
+    '击败具有挑战性的主线故事模式首领的详细策略：了解推荐队伍、关卡机制和阶段提示。',
+  'guides.category.adventure-license.desc':
+    '包含"晋升战斗"在内的冒险许可证指南——了解关卡机制、推荐队伍以及战斗策略。',
+  'guides.category.guild-raid.desc':
+    '公会突袭综合策略——学习首领机制、参考最佳队伍以获得最高伤害或是最高分数。',
+  'guides.category.world-boss.desc':
+    '在世界首领战极限联赛中实现SSS排名的综合策略：优化队伍设置、学习轮换技巧和伤害最大化策略。',
+  'guides.category.joint-boss.desc':
+    '使用高级战略在"联合挑战"中获得更高分：获悉顶尖排名的队伍组合、技能时机安排及协同技巧。',
+  'guides.category.special-request.desc':
+    '深入解析特别委托：生态调查/查清身份。 学习过关所需的首领机制、队伍配合和关键策略。',
+  'guides.category.irregular-extermination.desc':
+    '异形怪歼灭战首领攻略——了解每阶段首领的模式、推荐队伍和有效对策。',
+  'guides.category.monad-gate.desc':
+    '单子门攻略：抵达真结局的策略、选项以及推荐路线。',
+  'guides.category.skyward-tower.desc':
+    '飞天之塔逐层解析：了解高层塔的最佳角色、队伍配合与战术策略。',
+  'guides.category.other.desc': '不属于其他分类或已过时的攻略、新闻和内容。',
 
   'page.contributors.title': '项目贡献者',
   'page.legal.title': '法律声明 & 免责条款',
