@@ -56,6 +56,17 @@ export default function SearchModal({
   const [charIndex, setCharIndex] = useState<CharacterIndexMap | null>(null);
   const [extras, setExtras] = useState<SearchExtras | null>(null);
   const [selectedIdx, setSelectedIdx] = useState(0);
+  const [prevOpen, setPrevOpen] = useState(false);
+  const [prevResultsLen, setPrevResultsLen] = useState(0);
+
+  // Reset state when modal opens (adjust-state-during-render pattern)
+  if (open && !prevOpen) {
+    setPrevOpen(true);
+    setQuery('');
+    setSelectedIdx(0);
+  } else if (!open && prevOpen) {
+    setPrevOpen(false);
+  }
 
   // Load search data on first open
   useEffect(() => {
@@ -76,8 +87,6 @@ export default function SearchModal({
   // Focus input on open
   useEffect(() => {
     if (open) {
-      setQuery('');
-      setSelectedIdx(0);
       setTimeout(() => inputRef.current?.focus(), 50);
     }
   }, [open]);
@@ -144,12 +153,15 @@ export default function SearchModal({
   const allResults = useMemo<ResultItem[]>(() => [
     ...pageResults.map((p) => ({ type: 'page' as const, ...p })),
     ...charResults.map((c) => ({ type: 'char' as const, ...c })),
-    ...equipResults.map((e) => ({ type: 'equip' as const, ...e })),
+    ...equipResults.map((e) => ({ ...e, type: 'equip' as const })),
     ...guideResults.map((g) => ({ type: 'guide' as const, ...g })),
   ], [pageResults, charResults, equipResults, guideResults]);
 
-  // Reset selection on results change
-  useEffect(() => { setSelectedIdx(0); }, [allResults.length]);
+  // Reset selection on results change (adjust-state-during-render pattern)
+  if (allResults.length !== prevResultsLen) {
+    setPrevResultsLen(allResults.length);
+    setSelectedIdx(0);
+  }
 
   const navigate = useCallback((idx: number) => {
     const item = allResults[idx];

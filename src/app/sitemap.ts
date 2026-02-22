@@ -2,6 +2,10 @@ import type { MetadataRoute } from 'next';
 import { LANGS, LANGUAGES } from '@/lib/i18n/config';
 import type { Lang } from '@/lib/i18n/config';
 import { buildUrl } from '@/lib/seo';
+import { getCharacterSlugs } from '@/lib/data/characters';
+import { getAllEquipmentSlugs } from '@/lib/data/equipment';
+import { getValidCategories } from '@/lib/data/guides';
+import { getGuideSlugsWithCategories } from '@/lib/data/guides';
 
 /**
  * Static pages to include in the sitemap.
@@ -9,9 +13,15 @@ import { buildUrl } from '@/lib/seo';
  */
 const STATIC_PAGES = [
   '/',
-  // '/characters',
-  // '/equipments',
-  // '/guides',
+  '/characters',
+  '/equipments',
+  '/tierlist',
+  '/tools',
+  '/guides',
+  '/changelog',
+  '/contributors',
+  '/promo-codes',
+  '/legal',
 ];
 
 function buildAlternates(path: string) {
@@ -22,7 +32,7 @@ function buildAlternates(path: string) {
   return languages;
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
   // Static pages
@@ -34,7 +44,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // TODO: Add dynamic pages (characters, guides, etc.) as they are implemented
+  // Dynamic: character pages
+  const characterSlugs = await getCharacterSlugs();
+  for (const slug of characterSlugs) {
+    const path = `/characters/${slug}`;
+    entries.push({
+      url: buildUrl('en' as Lang, path),
+      lastModified: new Date(),
+      alternates: { languages: buildAlternates(path) },
+    });
+  }
+
+  // Dynamic: equipment pages
+  const equipmentSlugs = await getAllEquipmentSlugs();
+  for (const slug of equipmentSlugs) {
+    const path = `/equipments/${slug}`;
+    entries.push({
+      url: buildUrl('en' as Lang, path),
+      lastModified: new Date(),
+      alternates: { languages: buildAlternates(path) },
+    });
+  }
+
+  // Dynamic: guide category pages
+  const guideCategories = await getValidCategories();
+  for (const category of guideCategories) {
+    const path = `/guides/${category}`;
+    entries.push({
+      url: buildUrl('en' as Lang, path),
+      lastModified: new Date(),
+      alternates: { languages: buildAlternates(path) },
+    });
+  }
+
+  // Dynamic: individual guide pages
+  const guideSlugs = await getGuideSlugsWithCategories();
+  for (const { category, slug } of guideSlugs) {
+    const path = `/guides/${category}/${slug}`;
+    entries.push({
+      url: buildUrl('en' as Lang, path),
+      lastModified: new Date(),
+      alternates: { languages: buildAlternates(path) },
+    });
+  }
 
   return entries;
 }

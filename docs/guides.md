@@ -171,7 +171,45 @@ Supported tags:
 | `{I-W/name}` | Weapon inline | `{I-W/Sword of Light}` |
 | `{I-A/name}` | Amulet inline | `{I-A/Ring of Power}` |
 | `{I-T/name}` | Talisman inline | `{I-T/Sage's Charm}` |
+| `{I-I/name}` | Item inline (generic) | `{I-I/Free Ether}` |
 | `{AS/name}` | Armor Set inline | `{AS/Attack Set}` |
+
+### Direct component usage
+
+When text needs to wrap around inline components (characters, effects, skills), split the LangMap around the component:
+
+```tsx
+{lRec({ en: 'You get ', jp: '', kr: '', zh: '' }, lang)}
+<CharacterInline name="Mene" />
+{lRec({ en: ' for free.', jp: 'は無料です。', kr: '는 무료입니다.', zh: '免费获得。' }, lang)}
+```
+
+Available inline components for direct use:
+- `CharacterInline` — `@/app/components/inline/CharacterInline`
+- `EffectInline` — `@/app/components/inline/EffectInline`
+- `SkillInline` — `@/app/components/inline/SkillInline`
+
+### Headings inside guides
+
+Guide content lives inside `<GuideTemplate>` which already renders an `<h2>`. Use `h3`/`h4`/`h5` for sub-sections. Add `after:hidden` to suppress the default heading decoration from `globals.css`:
+
+```tsx
+<h3 className="text-2xl font-bold text-sky-400 border-l-4 border-sky-500 pl-4 after:hidden">
+  {lRec({ en: 'Section Title', jp: '...', kr: '...', zh: '...' }, lang)}
+</h3>
+```
+
+### Internal links
+
+Next.js typed routes don't recognize dynamic guide paths. Use `as never` on `href`:
+
+```tsx
+<Link href={"/guides/general-guides/premium-limited" as never} className="text-blue-400 underline">
+  {lRec({ en: 'link text', jp: '...', kr: '...', zh: '...' }, lang)}
+</Link>
+```
+
+This is the same pattern used in `CharacterInline`, `CharacterCard`, `Breadcrumbs`, etc.
 
 ### GuideTemplate with versions
 

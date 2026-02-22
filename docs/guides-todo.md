@@ -15,7 +15,7 @@ See `docs/guides.md` for architecture & data format.
 - [x] Search integration — `src/app/api/search-index/extras/route.ts`
 - [x] parse-text — `src/lib/parse-text.tsx` (inline tags B, D, E, C, S, P, EE, SK, I-W, I-A, I-T, AS)
 - [x] i18n keys — `guides.category.*`, `page.guide.*`, `nav.guides.*`
-- [x] Example content — `_contents/general-guides/beginner-faq.tsx`
+- [x] Full guide content — `_contents/general-guides/beginner-faq.tsx` (4 languages, inline components, parseText, BossIcon helper)
 
 ---
 
