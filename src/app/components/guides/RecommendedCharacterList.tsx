@@ -13,8 +13,7 @@ import type { TranslationKey } from '@/i18n/locales/en';
 const nameMap = nameToId as Record<string, string>;
 const indexMap = charIndex as Record<string, Record<string, unknown>>;
 
-const TITLE_PRESETS = ['default', 'phase1', 'phase2'] as const;
-type TitlePreset = (typeof TITLE_PRESETS)[number];
+type TitlePreset = 'default' | 'phase1' | 'phase2';
 
 const PRESET_KEYS: Record<TitlePreset, TranslationKey> = {
   default: 'guides.recommended.title',
@@ -76,7 +75,7 @@ export default function RecommendedCharacterList({
               className="grid grid-cols-[auto_1fr] items-center gap-3 rounded-lg border border-white/5 bg-neutral-900/50 p-3"
             >
               {/* Character portraits — max 3 per row */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
                 {chars.map((c) => (
                   <Link key={c.name} href={`/${lang}/characters/${c.slug}`}>
                     <CharacterPortrait
@@ -84,7 +83,7 @@ export default function RecommendedCharacterList({
                       name={c.localizedName}
                       size="sm"
                       showIcons
-                      className="transition-transform hover:scale-105"
+                      className="sm:h-16 sm:w-16 transition-transform hover:scale-105"
                     />
                   </Link>
                 ))}

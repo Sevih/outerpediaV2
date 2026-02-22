@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, type ReactNode } from 'react';
-import Tabs from '@/app/components/ui/Tabs';
+import VersionSelector from '@/app/components/ui/VersionSelector';
 
 type GuideVersion = {
   label: string;
@@ -56,7 +56,7 @@ export default function GuideTemplate({
       )}
 
       {versionKeys.length > 1 && (
-        <Tabs
+        <VersionSelector
           items={versionKeys}
           labels={versionLabels}
           value={activeVersion}
