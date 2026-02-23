@@ -35,7 +35,7 @@ export default function TowerRestrictionTabs({
                 'relative flex min-w-14 flex-col items-center gap-1 rounded px-3 py-1.5 text-sm font-medium transition-all',
                 isActive
                   ? 'tab-game-active bg-linear-to-b from-amber-500/15 to-transparent text-amber-300 border-t-2 border-t-amber-400/60 border-x border-b border-amber-500/20 shadow-[0_2px_16px_rgba(251,191,36,0.1)]'
-                  : 'border border-zinc-700/40 text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/50 hover:border-zinc-600/30',
+                  : 'opacity-50 border border-zinc-700/40 text-zinc-400 hover:opacity-80 hover:bg-zinc-800/50 hover:border-zinc-600/30',
               ].join(' ')}
             >
               <span className={[
