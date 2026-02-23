@@ -13,7 +13,7 @@ export type TowerFloorFixed = {
   minions?: string[];
   restrictions?: string[];
   recommended?: TowerCharacterRecommendation[];
-  reason?: LangMap;
+  reason?: LangMap[];
 };
 
 /** A random floor (VH tower — multiple possible boss+restriction sets) */
@@ -25,7 +25,7 @@ export type TowerFloorRandom = {
     minions?: string[];
     restrictions?: string[];
     recommended?: TowerCharacterRecommendation[];
-    reason?: LangMap;
+    reason?: LangMap[];
   }[];
 };
 
@@ -45,7 +45,7 @@ export type TowerPoolEntry = {
   boss_id: string;
   minions?: string[];
   restrictionSets: TowerRestrictionSet[];
-  reason?: LangMap;
+  reason?: LangMap[];
 };
 
 /** Full tower data (one JSON per tower) */

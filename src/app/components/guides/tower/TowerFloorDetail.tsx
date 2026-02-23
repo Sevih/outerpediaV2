@@ -53,7 +53,7 @@ function FloorContent({ boss, minions, restrictions, recommended, reason, lang }
   minions: Boss[];
   restrictions: LangMap[];
   recommended?: TowerCharacterRecommendation[];
-  reason?: string;
+  reason?: string[];
   lang: Lang;
 }) {
   const { t } = useI18n();
@@ -76,10 +76,12 @@ function FloorContent({ boss, minions, restrictions, recommended, reason, lang }
         </div>
       )}
 
-      {reason && (
+      {reason && reason.length > 0 && (
         <div>
           <h3 className="mb-3">{t('tower.advice')}</h3>
-          <p className="text-sm leading-relaxed text-zinc-300">{parseText(reason)}</p>
+          {reason.map((line, i) => (
+            <p key={i} className="text-sm leading-relaxed text-zinc-300">{parseText(line)}</p>
+          ))}
         </div>
       )}
 
@@ -133,7 +135,7 @@ export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defau
         <h4 className="mb-4 after:hidden">
           {t('tower.floor').replace('{n}', String(floor.floor))}
         </h4>
-        <FloorContent boss={boss} minions={minions} restrictions={restrictions} recommended={floor.recommended} reason={floor.reason ? lRec(floor.reason, lang) : undefined} lang={lang} />
+        <FloorContent boss={boss} minions={minions} restrictions={restrictions} recommended={floor.recommended} reason={floor.reason?.map(r => lRec(r, lang)).filter(Boolean) as string[] | undefined} lang={lang} />
       </div>
     );
   }
@@ -172,7 +174,7 @@ export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defau
         minions={minions}
         restrictions={restrictions}
         recommended={currentSet.recommended}
-        reason={currentSet.reason ? lRec(currentSet.reason, lang) : undefined}
+        reason={currentSet.reason?.map(r => lRec(r, lang)).filter(Boolean) as string[] | undefined}
         lang={lang}
       />
     </div>

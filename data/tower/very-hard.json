@@ -13,12 +13,14 @@
         {
           "boss_id": "40103020",
           "minions": ["40103056"],
-          "reason": {
-            "en": "Consistently inflict {D/BT_DOT_LIGHTNING} to deal damage, as she cleanses herself with {B/BT_REMOVE_DEBUFF} at the start of her turn.",
-            "jp": "",
-            "kr": "",
-            "zh": ""
-          },
+          "reason": [
+            {
+              "en": "Consistently inflict {D/BT_DOT_LIGHTNING} to deal damage, as she cleanses herself with {B/BT_REMOVE_DEBUFF} at the start of her turn.",
+              "jp": "",
+              "kr": "",
+              "zh": ""
+            }
+          ],
           "restrictions": [],
           "recommended": [
             {
@@ -35,12 +37,14 @@
         {
           "boss_id": "40103021",
           "minions": ["40103057"],
-          "reason": {
-            "en": "You need to {D/BT_STUN} both and keep the stun up in order to remove and prevent Iota from regaining her {B/BT_INVINCIBLE}.",
-            "jp": "",
-            "kr": "",
-            "zh": ""
-          },
+          "reason": [
+            {
+              "en": "You need to {D/BT_STUN} both and keep the stun up in order to remove and prevent Iota from regaining her {B/BT_INVINCIBLE}.",
+              "jp": "",
+              "kr": "",
+              "zh": ""
+            }
+          ],
           "restrictions": [],
           "recommended": [
             {
@@ -70,12 +74,14 @@
       "boss_id": "40103017",
       "minions": ["40103053"],
       "restrictions": [],
-      "reason": {
-        "en": "{D/BT_SILENCE} or {D/BT_SEALED_RESURRECTION} {P/Demiurge Astei} in order to disable her revival.",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
+      "reason": [
+        {
+          "en": "{D/BT_SILENCE} or {D/BT_SEALED_RESURRECTION} {P/Demiurge Astei} in order to disable her revival.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        }
+      ],
       "recommended": [
         {
           "names": ["2000013", "2000113", "2000060"],
@@ -111,17 +117,49 @@
       "boss_id": "40103019",
       "minions": ["40103054", "40103059"],
       "restrictions": [],
-      "reason": {
-        "en": "Support Unit to provide chain points, WG damage and healing.",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
+      "reason": [
+        {
+          "en": "Support Unit to provide chain points, WG damage and healing.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        },
+        {
+          "en": "Sturdy DPS units are recommended.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        },
+        {
+          "en": "Tank that can protect allies.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        }
+      ],
       "recommended": [
         {
-          "names": [],
+          "names": ["2000084", "2000113", "2000058"],
           "reason": {
-            "en": "",
+            "en": "{C/Healer} options.",
+            "jp": "",
+            "kr": "",
+            "zh": ""
+          }
+        },
+        {
+          "names": ["2700037", "2000103", "2000060", "2000012"],
+          "reason": {
+            "en": "{B/BT_CALL_BACKUP} support options.",
+            "jp": "",
+            "kr": "",
+            "zh": ""
+          }
+        },
+        {
+          "names": ["2000053", "2000089", "2000071", "2000119"],
+          "reason": {
+            "en": "Sturdy DPS units.",
             "jp": "",
             "kr": "",
             "zh": ""
@@ -134,11 +172,43 @@
       "boss_id": "40103018",
       "minions": ["40103055", "40103060"],
       "restrictions": [],
+      "reason": [
+        {
+          "en": "{P/Sterope} is recommended because {P/Demiurge Drakhan}'s counter is triggered by critical hits, she will reduce counter damage by 30% and will reduce all enemies buff duration by 1 turn.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        },
+        {
+          "en": "Sturdy DPS units are recommended.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        }
+      ],
       "recommended": [
         {
-          "names": [],
+          "names": ["2000057"],
           "reason": {
-            "en": "",
+            "en": "MvP on this boss fight.",
+            "jp": "",
+            "kr": "",
+            "zh": ""
+          }
+        },
+        {
+          "names": ["2000083", "2000054", "2000100", "2000084"],
+          "reason": {
+            "en": "{C/Healer} options with {B/BT_REVIVAL} or {B/BT_RESURRECTION}.",
+            "jp": "",
+            "kr": "",
+            "zh": ""
+          }
+        },
+        {
+          "names": ["2000053", "2000089", "2000071", "2000119"],
+          "reason": {
+            "en": "Sturdy DPS units.",
             "jp": "",
             "kr": "",
             "zh": ""
@@ -150,12 +220,14 @@
   "randomPool": [
     {
       "boss_id": "40103002",
-      "reason": {
-        "en": "Just focus {P/Mero}.",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
+      "reason": [
+        {
+          "en": "Just focus {P/Mero}.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        }
+      ],
       "restrictionSets": [
         {
           "restrictions": ["AtLeast1_Mage"],
@@ -232,14 +304,105 @@
     {
       "boss_id": "40103003",
       "minions": ["40103026", "40103027", "40103028"],
+      "reason": [
+        {
+          "en": "Buff steal is the key here.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        }
+      ],
       "restrictionSets": [
         {
-          "restrictions": [],
+          "restrictions": ["BanRanger"],
           "recommended": [
             {
-              "names": [],
+              "names": ["2000089","2000085"],
               "reason": {
-                "en": "",
+                "en": "{D/BT_STEAL_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["BanDark"],
+          "recommended": [
+            {
+              "names": ["2000089","2000085","2000041","2000039"],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Light"],
+          "recommended": [
+            {
+              "names": ["2000089","2000085","2000041"],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000039"],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options and validate the restriction.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Striker"],
+          "recommended": [
+            {
+              "names": ["2000041","2000039"],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000089","2000085"],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options and validate the restriction.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_2Star"],
+          "recommended": [
+            {
+              "names": ["2000089","2000085","2000039"],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000041"],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options and validate the restriction.",
                 "jp": "",
                 "kr": "",
                 "zh": ""

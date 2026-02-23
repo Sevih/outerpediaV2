@@ -107,10 +107,13 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap, de
         )}
 
         {/* Advice */}
-        {entry.reason && lRec(entry.reason, lang) && (
+        {entry.reason && entry.reason.length > 0 && (
           <div>
             <h3 className="mb-3">{t('tower.advice')}</h3>
-            <p className="text-sm leading-relaxed text-zinc-300">{parseText(lRec(entry.reason, lang))}</p>
+            {entry.reason.map((r, i) => {
+              const text = lRec(r, lang);
+              return text ? <p key={i} className="text-sm leading-relaxed text-zinc-300">{parseText(text)}</p> : null;
+            })}
           </div>
         )}
 
