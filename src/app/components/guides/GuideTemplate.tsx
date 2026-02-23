@@ -2,6 +2,7 @@
 
 import { useState, type ReactNode } from 'react';
 import VersionSelector from '@/app/components/ui/VersionSelector';
+import parseText from '@/lib/parse-text';
 
 type GuideVersion = {
   label: string;
@@ -52,7 +53,7 @@ export default function GuideTemplate({
       )}
 
       {introduction && (
-        <p className="text-sm leading-relaxed text-zinc-300">{introduction}</p>
+        <p className="text-sm leading-relaxed text-zinc-300">{parseText(introduction)}</p>
       )}
 
       {versionKeys.length > 1 && (
@@ -66,7 +67,7 @@ export default function GuideTemplate({
       )}
 
       {versions && activeVersion && versions[activeVersion] ? (
-        <div className="space-y-6">{versions[activeVersion].content}</div>
+        <div key={activeVersion} className="space-y-6">{versions[activeVersion].content}</div>
       ) : (
         children && <div className="space-y-6">{children}</div>
       )}

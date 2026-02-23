@@ -47,7 +47,7 @@ export default function RootLayout({
         <div id="portal-root" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `if('serviceWorker' in navigator){window.addEventListener('load',()=>{if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){navigator.serviceWorker.getRegistrations().then(r=>r.forEach(w=>w.unregister()))}else{navigator.serviceWorker.register('/sw.js')}})}`,
+            __html: `if('serviceWorker' in navigator){window.addEventListener('load',()=>{if(location.hostname==='localhost'||location.hostname==='127.0.0.1'||location.hostname.endsWith('.localhost')||location.hostname.endsWith('.local')){navigator.serviceWorker.getRegistrations().then(r=>r.forEach(w=>w.unregister()))}else{navigator.serviceWorker.register('/sw.js')}})}`,
           }}
         />
       </body>

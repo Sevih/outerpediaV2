@@ -1,4 +1,5 @@
 import type { WithLocalizedFields } from './common';
+import type { SuffixLang } from '@/lib/i18n/config';
 
 export type NoteEntry =
   | { type: 'p'; string: string }
@@ -49,7 +50,9 @@ type BaseStageData = {
   icon?: string;
 };
 
-export type StageData = WithLocalizedFields<BaseStageData, 'note'>;
+export type StageData = BaseStageData & {
+  [P in `note_${SuffixLang}`]?: NoteEntry[];
+};
 
 export type TeamData = {
   [key: string]: StageData;

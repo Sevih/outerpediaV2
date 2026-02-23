@@ -1,11 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import Tabs from '@/app/components/ui/Tabs';
 import CarouselSlot from '@/app/components/guides/CarouselSlot';
+import TeamNotes from '@/app/components/guides/TeamNotes';
 import { useI18n } from '@/lib/contexts/I18nContext';
-import type { TeamData } from '@/types/team';
+import type { Lang } from '@/types/common';
+import type { NoteEntry, TeamData } from '@/types/team';
 
 type Props = {
   teamData: TeamData;
@@ -13,13 +15,24 @@ type Props = {
 };
 
 export default function StageBasedTeamSelector({ teamData, defaultStage }: Props) {
-  const { t } = useI18n();
+  const { lang: rawLang, t } = useI18n();
+  const lang = rawLang as Lang;
   const stages = Object.keys(teamData);
   const [activeStage, setActiveStage] = useState(
     defaultStage && stages.includes(defaultStage) ? defaultStage : stages[0],
   );
 
   const stageData = teamData[activeStage];
+
+  const notes = useMemo((): NoteEntry[] | undefined => {
+    if (!stageData) return undefined;
+    if (lang !== 'en') {
+      const localized = stageData[`note_${lang}` as keyof typeof stageData] as NoteEntry[] | undefined;
+      if (localized) return localized;
+    }
+    return stageData.note;
+  }, [stageData, lang]);
+
   if (!stageData) return null;
 
   return (
@@ -58,6 +71,9 @@ export default function StageBasedTeamSelector({ teamData, defaultStage }: Props
           ))}
         </div>
       </div>
+
+      {/* Stage notes */}
+      {notes && notes.length > 0 && <TeamNotes notes={notes} />}
     </div>
   );
 }

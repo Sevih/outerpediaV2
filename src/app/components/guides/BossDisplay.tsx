@@ -40,6 +40,7 @@ type Props = {
   modeKey?: string;
   defaultBossId?: string;
   preloadedBosses?: Record<string, Boss>;
+  versionIds?: string[];
 };
 
 /* ── Locale-aware element / class token maps ──────────── */
@@ -243,17 +244,36 @@ function BossDetails({ boss, lang }: { boss: Boss; lang: Lang }) {
 
 const bossCache = new Map<string, Boss>();
 
-export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses }: Props) {
+export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses, versionIds }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
 
   // Resolve versions from boss-index
   const entry = (bossIndex as Record<string, BossIndexEntry>)[bossName];
   const modes = entry?.modes ?? {};
-  const modeData = modeKey ? modes[modeKey] : Object.values(modes)[0];
-  const versions = modeData?.versions ?? [];
+
+  type VersionWithMode = BossVersion & { modeName?: LangMap };
+
+  const versions: VersionWithMode[] = (() => {
+    if (versionIds) {
+      // Collect matching versions across all modes, enriched with mode name
+      const idSet = new Set(versionIds);
+      const result: VersionWithMode[] = [];
+      for (const mode of Object.values(modes)) {
+        for (const v of mode.versions) {
+          if (idSet.has(v.id)) result.push({ ...v, modeName: mode.name });
+        }
+      }
+      return result;
+    }
+    const modeData = modeKey ? modes[modeKey] : Object.values(modes)[0];
+    return modeData?.versions ?? [];
+  })();
+
+  const hasModeNames = versions.some((v) => v.modeName != null);
   const defaultId = defaultBossId ?? versions[0]?.id;
   const [selectedId, setSelectedId] = useState(defaultId);
+  const selectedVersion = versions.find((v) => v.id === selectedId);
 
   const preloadedBoss = preloadedBosses?.[defaultId] ?? null;
   const [boss, setBoss] = useState<Boss | null>(preloadedBoss);
@@ -298,17 +318,22 @@ export default function BossDisplay({ bossName, modeKey, defaultBossId, preloade
 
             {/* Stage selector — between header and details */}
             {versions.length > 1 && (
-              <select
-                value={selectedId}
-                onChange={(e) => setSelectedId(e.target.value)}
-                className="rounded-lg border border-white/10 bg-zinc-800 px-3 py-2 text-sm text-zinc-200 outline-none focus:border-sky-500 transition-colors"
-              >
-                {versions.map((v) => (
-                  <option key={v.id} value={v.id}>
-                    {lRec(v.label, lang)}
-                  </option>
-                ))}
-              </select>
+              <div className="space-y-1">
+                <select
+                  value={selectedId}
+                  onChange={(e) => setSelectedId(e.target.value)}
+                  className="rounded-lg border border-white/10 bg-zinc-800 px-3 py-2 text-sm text-zinc-200 outline-none focus:border-sky-500 transition-colors"
+                >
+                  {versions.map((v) => (
+                    <option key={v.id} value={v.id}>
+                      {hasModeNames && v.modeName ? lRec(v.modeName, lang) : lRec(v.label, lang)}
+                    </option>
+                  ))}
+                </select>
+                {hasModeNames && selectedVersion && (
+                  <p className="text-sm text-zinc-400">{lRec(selectedVersion.label, lang)}</p>
+                )}
+              </div>
             )}
 
             <BossDetails boss={boss} lang={lang} />
