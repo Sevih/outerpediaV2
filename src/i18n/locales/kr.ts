@@ -121,7 +121,7 @@ const kr: Record<TranslationKey, string> = {
   'guides.category.special-request': '특별 의뢰',
   'guides.category.irregular-extermination': '이레귤러 소탕',
   'guides.category.monad-gate': '모나드 게이트',
-  'guides.category.skyward-tower': '스카이워드 타워',
+  'guides.category.skyward-tower': '비천의 탑',
   'guides.category.other': '기타',
 
   // Guide category descriptions
@@ -144,7 +144,7 @@ const kr: Record<TranslationKey, string> = {
   'guides.category.monad-gate.desc':
     '모나드 게이트 스테이지 공략: 진 엔딩에 도달하기 위한 경로 선택과 전략을 안내합니다.',
   'guides.category.skyward-tower.desc':
-    '비천의 탑을 오르기 위한 층별 공략: 최적 캐릭터, 팀 시너지, 상층부 전술.',
+    '비천의 탑과 엘레멘탈 타워 공략: 팀 구성, 층별 메커닉, 공략 팁.',
   'guides.category.other.desc': '다른 카테고리에 해당하지 않거나 더 이상 최신이 아닌 가이드, 뉴스 및 콘텐츠.',
 
   'guides.tips.tactical': '전술 팁',
@@ -455,6 +455,40 @@ const kr: Record<TranslationKey, string> = {
   'page.character.core_fusion.original': '오리지널 캐릭터',
   'page.character.core_fusion.skill_info': '코어 융합 해금에는 {material} {unlockCost}개가 필요합니다 (스킬 Lv.1부터 시작). 스킬 레벨 강화에는 {material} {upgradeCost}개를 소모하며, 모든 스킬 레벨이 1 상승합니다. 총: {totalCost}개의 {material}로 전체 최대화.',
   'page.character.no_reco': '이 캐릭터의 추천 장비 정보가 아직 없습니다.',
+
+  // Monad Gate
+  'monad.rewards': '보상',
+  'monad.trueEndingChoices': '트루 엔딩 선택지',
+  'monad.ui.trueEndingPath': '트루 엔딩 루트',
+  'monad.ui.compact': '컴팩트',
+  'monad.ui.reset': '리셋',
+  'monad.ui.fullscreen': '전체화면',
+  'monad.ui.noOptions': '선택지가 없습니다.',
+  'monad.ui.required': '필요',
+  'monad.ui.unnamedPath': '(이름 없는 루트)',
+  // Node types
+  'monad.node.start': '탐사 시작 포인트',
+  'monad.node.tending': '트루 엔딩',
+  'monad.node.bending': '배드 엔딩',
+  'monad.node.nending': '노멀 엔딩',
+  'monad.node.path': '운명의 길',
+  'monad.node.relic': '유물 발굴',
+  'monad.node.moment': '정비의 시간',
+  'monad.node.combat': '교전 발생',
+  'monad.node.elite': '강적 조우',
+  'monad.node.eldritch': '미지의 영역',
+  'monad.node.pinnacle': '세계선의 정점',
+  'monad.node.final': '최종 관문',
+  'monad.node.saga': '세계선의 이야기',
+  'monad.node.unknown': '미답지역',
+  // Routes
+  'monad.route.1': '하얀 매의 나라',
+  'monad.route.2': '신성한 군도',
+  'monad.route.3': '하얀 눈과 강철의 나라',
+  'monad.route.4': '모래바람의 나라',
+  'monad.route.4.1': '모래바람의 나라 [전편]',
+  'monad.route.4.2': '모래바람의 나라 [후편]',
+  'monad.route.5': '극독의 영역',
 };
 
 export default kr;

@@ -121,7 +121,7 @@ const jp: Record<TranslationKey, string> = {
   'guides.category.special-request': '特別依頼',
   'guides.category.irregular-extermination': 'イレギュラー掃討',
   'guides.category.monad-gate': 'モナドゲート',
-  'guides.category.skyward-tower': 'スカイワードタワー',
+  'guides.category.skyward-tower': '飛天の塔',
   'guides.category.other': 'その他',
 
   // Guide category descriptions
@@ -144,7 +144,7 @@ const jp: Record<TranslationKey, string> = {
   'guides.category.monad-gate.desc':
     'モナド・ゲートのステージ攻略：真エンディングに到達するためのルート選択と戦略を紹介。',
   'guides.category.skyward-tower.desc':
-    '飛天の塔を登るためのフロア別攻略：最適キャラクター、チームシナジー、上層階の戦術。',
+    '飛天の塔とエレメンタルタワーの攻略：チーム編成、フロアメカニクス、攻略ヒント。',
   'guides.category.other.desc': '他のカテゴリに該当しない、または最新でなくなったガイド、ニュース、コンテンツ。',
 
   'guides.tips.tactical': '戦術のヒント',
@@ -455,6 +455,40 @@ const jp: Record<TranslationKey, string> = {
   'page.character.core_fusion.original': 'オリジナルキャラクター',
   'page.character.core_fusion.skill_info': 'コアフュージョンの解放には{unlockCost}個の{material}が必要です（スキルはLv.1から開始）。スキルレベルの強化には{upgradeCost}個の{material}を消費し、全スキルのレベルが1上がります。合計: {totalCost}個の{material}で全スキル最大化。',
   'page.character.no_reco': 'このキャラクターのおすすめ装備情報はまだありません。',
+
+  // Monad Gate
+  'monad.rewards': '報酬',
+  'monad.trueEndingChoices': 'トゥルーエンディング選択肢',
+  'monad.ui.trueEndingPath': 'トゥルーエンディングルート',
+  'monad.ui.compact': 'コンパクト',
+  'monad.ui.reset': 'リセット',
+  'monad.ui.fullscreen': 'フルスクリーン',
+  'monad.ui.noOptions': '選択肢がありません。',
+  'monad.ui.required': '必要',
+  'monad.ui.unnamedPath': '(名前なしルート)',
+  // Node types
+  'monad.node.start': '探索開始ポイント',
+  'monad.node.tending': 'TRUE END',
+  'monad.node.bending': 'BAD END',
+  'monad.node.nending': 'NORMAL END',
+  'monad.node.path': '運命の道',
+  'monad.node.relic': 'アーティファクト発掘',
+  'monad.node.moment': '整備の時間',
+  'monad.node.combat': '交戦発生',
+  'monad.node.elite': '強敵遭遇',
+  'monad.node.eldritch': '未知の領域',
+  'monad.node.pinnacle': '世界線の頂点',
+  'monad.node.final': '最終関門',
+  'monad.node.saga': '世界線の物語',
+  'monad.node.unknown': '未確認地域',
+  // Routes
+  'monad.route.1': '白い鷹の国',
+  'monad.route.2': '聖なる群島',
+  'monad.route.3': '白い雪と鋼の国',
+  'monad.route.4': '砂風の国',
+  'monad.route.4.1': '砂風の国【前編】',
+  'monad.route.4.2': '砂風の国【後編】',
+  'monad.route.5': '劇毒の領域',
 };
 
 export default jp;

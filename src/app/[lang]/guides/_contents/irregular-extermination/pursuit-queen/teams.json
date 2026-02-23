@@ -1,0 +1,145 @@
+{
+  "Classic Team": {
+    "icon": "SC_Buff_Stat_CriRate",
+    "team": [
+      ["Akari", "Drakhan", "Ember", "Kitsune of Eternity Tamamo-no-Mae"],
+      ["Gnosis Nella", "Iota", "Gnosis Viella"],
+      ["Regina", "Caren", "Gnosis Dahlia", "Holy Night's Blessing Dianne", "Demiurge Luna", "Ame", "Maxwell", "Demiurge Astei"],
+      ["Monad Eva", "Demiurge Delta", "Dianne", "Liselotte", "Viella", "Shu", "Tio"]
+    ],
+    "note": [],
+    "note_jp": [],
+    "note_kr": [],
+    "note_zh": []
+  },
+  "1 Run Public": {
+    "icon": "IG_Buff_Seal_Counter",
+    "team": [
+      ["Demiurge Stella", "Demiurge Luna"],
+      ["Drakhan"],
+      ["Regina"],
+      ["Monad Eva", "Viella"]
+    ],
+    "note": [
+      {
+        "type": "p",
+        "string": "This team requires precise setup but the payoff is that it doesn't rely on RNG."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Drakhan must be faster than the boss, and {P/Monad Eva} / {P/Regina} slower.",
+          "You don't want Drakhan's S3 to deal more than 40,000 damage on turn 1 — you want the boss to take one turn before enrage.",
+          "{P/Monad Eva} must be 5-star, use {I-A/Saint's Ring} and {I-T/Vanguard's Charm}, while the other 3 units run Rogue or Executioner."
+        ]
+      },
+      {
+        "type": "p",
+        "string": "Here is the fight opening:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Drakhan} starts with S3 to trigger a counter (giving {P/Monad Eva} +50 AP with {I-T/Vanguard's Charm} and +25 AP from allies being hit via healer passive).",
+          "Queen uses S2 (giving {P/Monad Eva} another +50 AP with {I-T/Vanguard's Charm} and +25 AP from allies being hit).",
+          "{P/Monad Eva} takes the turn with 150 AP (200 if 6-star with a +10 Vanguard), self-cleanses with {I-A/Saint's Ring}, and can use S1 Burn 3 to cleanse the team.",
+          "The rest of the fight is straightforward — use Chain Attack with {P/Drakhan} if the boss isn't broken or if S2 is available."
+        ]
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "このチームは正確なセットアップが必要だが、RNGに頼らないのが利点。"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Drakhanはボスより速く、{P/Monad Eva} / {P/Regina}は遅くする必要がある。",
+          "Drakhanの S3で1ターン目に40,000以上のダメージを与えないこと — 狂暴化前にボスに1ターン行動させたい。",
+          "{P/Monad Eva}は5覚醒で、{I-A/Saint's Ring}と{I-T/Vanguard's Charm}を装備。他の3体はRogueかExecutionerを装備。"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "戦闘の流れ："
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Drakhan}がS3で開始し、反撃を誘発（{I-T/Vanguard's Charm}で{P/Monad Eva}に+50 AP、ヒーラーパッシブで味方被弾時+25 AP）。",
+          "QueenがS2を使用（{I-T/Vanguard's Charm}で{P/Monad Eva}にさらに+50 AP、味方被弾時+25 AP）。",
+          "{P/Monad Eva}が150 AP（6覚醒+10 Vanguardなら200 AP）でターンを取り、{I-A/Saint's Ring}で自己解除、S1 Burn 3でチーム全体を解除できる。",
+          "残りの戦闘は単純 — ボスがブレイクしていないか、S2が使用可能なら{P/Drakhan}でチェインアタック。"
+        ]
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "이 팀은 정밀한 세팅이 필요하지만, RNG에 의존하지 않는 것이 장점이다."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Drakhan은 보스보다 빠르고, {P/Monad Eva} / {P/Regina}는 느려야 한다.",
+          "Drakhan의 S3가 1턴에 40,000 이상의 피해를 주지 않도록 해야 한다 — 광폭화 전에 보스가 1턴 행동하도록 한다.",
+          "{P/Monad Eva}는 5성이어야 하며, {I-A/Saint's Ring}과 {I-T/Vanguard's Charm}을 장착. 나머지 3명은 Rogue나 Executioner를 장착."
+        ]
+      },
+      {
+        "type": "p",
+        "string": "전투 시작:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Drakhan}이 S3로 시작하여 반격을 유도 ({I-T/Vanguard's Charm}으로 {P/Monad Eva}에게 +50 AP, 힐러 패시브로 아군 피격 시 +25 AP).",
+          "Queen이 S2 사용 ({I-T/Vanguard's Charm}으로 {P/Monad Eva}에게 추가 +50 AP, 아군 피격 시 +25 AP).",
+          "{P/Monad Eva}가 150 AP (6성 +10 Vanguard면 200 AP)로 턴을 가져오고, {I-A/Saint's Ring}으로 자가 해제, S1 Burn 3으로 팀 전체 해제 가능.",
+          "나머지 전투는 간단 — 보스가 브레이크되지 않았거나 S2가 사용 가능하면 {P/Drakhan}으로 체인 어택."
+        ]
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "这个队伍需要精确的配置，但好处是不依赖RNG。"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Drakhan必须比Boss快，{P/Monad Eva} / {P/Regina}必须更慢。",
+          "不要让Drakhan的S3在第1回合造成超过40,000伤害 — 要让Boss在狂暴化前行动一回合。",
+          "{P/Monad Eva}必须是5星，装备{I-A/Saint's Ring}和{I-T/Vanguard's Charm}，其他3个角色装备Rogue或Executioner。"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "战斗开局："
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Drakhan}以S3开场触发反击（{I-T/Vanguard's Charm}给{P/Monad Eva} +50 AP，治疗者被动在队友受击时+25 AP）。",
+          "Queen使用S2（{I-T/Vanguard's Charm}给{P/Monad Eva}再+50 AP，队友受击时+25 AP）。",
+          "{P/Monad Eva}以150 AP（6星+10 Vanguard则200 AP）获得回合，用{I-A/Saint's Ring}自我净化，可以用S1 Burn 3净化全队。",
+          "剩余战斗很简单 — 如果Boss没有破防或S2可用，就用{P/Drakhan}进行连锁攻击。"
+        ]
+      }
+    ]
+  },
+  "One Run Kill": {
+    "icon": "SC_Buff_detonate",
+    "team": [
+      ["Vlada"],
+      ["Iota", "Gnosis Nella", "Gnosis Viella"],
+      ["Maxie", "Akari", "Roxie", "Kuro", "Fortuna"],
+      ["Gnosis Beth", "Fatal"]
+    ],
+    "note": [],
+    "note_jp": [],
+    "note_kr": [],
+    "note_zh": []
+  }
+}

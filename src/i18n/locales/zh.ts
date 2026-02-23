@@ -121,7 +121,7 @@ const zh: Record<TranslationKey, string> = {
   'guides.category.special-request': '特别委托',
   'guides.category.irregular-extermination': '异常讨伐',
   'guides.category.monad-gate': '单子之门',
-  'guides.category.skyward-tower': '天穹之塔',
+  'guides.category.skyward-tower': '飞天之塔',
   'guides.category.other': '其他',
 
   // Guide category descriptions
@@ -144,7 +144,7 @@ const zh: Record<TranslationKey, string> = {
   'guides.category.monad-gate.desc':
     '单子门攻略：抵达真结局的策略、选项以及推荐路线。',
   'guides.category.skyward-tower.desc':
-    '飞天之塔逐层解析：了解高层塔的最佳角色、队伍配合与战术策略。',
+    '飞天之塔与元素之塔攻略：队伍搭配、楼层机制与攻略建议。',
   'guides.category.other.desc': '不属于其他分类或已过时的攻略、新闻和内容。',
 
   'guides.tips.tactical': '战术提示',
@@ -455,6 +455,40 @@ const zh: Record<TranslationKey, string> = {
   'page.character.core_fusion.original': '原始角色',
   'page.character.core_fusion.skill_info': '解锁核心融合需要{unlockCost}个{material}（技能从Lv.1开始）。每次升级消耗{upgradeCost}个{material}，所有技能等级提升1级。总计: {totalCost}个{material}即可全部满级。',
   'page.character.no_reco': '暂无推荐装备。',
+
+  // Monad Gate
+  'monad.rewards': '奖励',
+  'monad.trueEndingChoices': '真结局选择',
+  'monad.ui.trueEndingPath': '真结局路线',
+  'monad.ui.compact': '紧凑',
+  'monad.ui.reset': '重置',
+  'monad.ui.fullscreen': '全屏',
+  'monad.ui.noOptions': '没有可用选项。',
+  'monad.ui.required': '需要',
+  'monad.ui.unnamedPath': '(未命名路线)',
+  // Node types
+  'monad.node.start': '探查起点',
+  'monad.node.tending': '真结局',
+  'monad.node.bending': '坏结局',
+  'monad.node.nending': '普通结局',
+  'monad.node.path': '命运之路',
+  'monad.node.relic': '挖掘遗物',
+  'monad.node.moment': '整备时刻',
+  'monad.node.combat': '发生交战',
+  'monad.node.elite': '遭遇强敌',
+  'monad.node.eldritch': '未知领域',
+  'monad.node.pinnacle': '世界线的顶峰',
+  'monad.node.final': '最终关卡',
+  'monad.node.saga': '世界线的故事',
+  'monad.node.unknown': '未访区域',
+  // Routes
+  'monad.route.1': '白鹰之国',
+  'monad.route.2': '神圣群岛',
+  'monad.route.3': '白雪与钢铁之国',
+  'monad.route.4': '风沙之国',
+  'monad.route.4.1': '风沙之国【前篇】',
+  'monad.route.4.2': '风沙之国【后篇】',
+  'monad.route.5': '剧毒领域',
 };
 
 export default zh;

@@ -62,19 +62,22 @@ caddy.stderr?.on('data', (data: Buffer) => {
 // 4. Start Next.js dev server after a short delay
 setTimeout(() => {
   const nextDev = spawn('npx next dev', {
-    stdio: ['inherit', 'pipe', 'inherit'],
+    stdio: 'inherit',
     shell: true,
+    env: { ...process.env, FORCE_COLOR: '1' },
   });
   children.push(nextDev);
 
-  let nextReady = false;
-  nextDev.stdout?.on('data', (data: Buffer) => {
-    process.stdout.write(data);
-    if (!nextReady && data.toString().includes('Ready')) {
-      nextReady = true;
+  // Watch for "Ready" via a short poll on the dev server
+  const checkReady = setInterval(async () => {
+    try {
+      await fetch('http://localhost:3000', { signal: AbortSignal.timeout(500) });
+      clearInterval(checkReady);
       console.log('\n  \x1b[36m▲ Open:\x1b[0m  https://outerpedia.local\n');
+    } catch {
+      // Not ready yet
     }
-  });
+  }, 1000);
 
   nextDev.on('exit', (code) => {
     if (code !== null && code !== 0) {
