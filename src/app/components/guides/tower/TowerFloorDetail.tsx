@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
 import Tabs from '@/app/components/ui/Tabs';
@@ -30,22 +31,25 @@ function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
   const baseName = lRec(boss.Name, lang);
   const surname = lRec(boss.Surname as LangMap, lang);
   const displayName = boss.IncludeSurname && surname ? `${surname} ${baseName}` : baseName;
-  const isCharIcon = boss.icons.startsWith('2');
 
   return (
     <div className="flex items-center gap-3">
-      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
-        <Image
-          src={isCharIcon
-            ? `/images/characters/portrait/CT_${boss.icons}.webp`
-            : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
-          }
-          alt={displayName}
-          fill
-          sizes="64px"
-          className="object-cover"
-        />
-      </div>
+      {boss.icons.startsWith('2') ? (
+        <CharacterPortrait id={boss.icons} size="md" name={displayName} className="shrink-0" />
+      ) : (
+        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
+          <Image
+            src={boss.icons.startsWith('Skill_')
+              ? `/images/characters/${boss.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${boss.icons}.webp`
+              : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
+            }
+            alt={displayName}
+            fill
+            sizes="64px"
+            className="object-cover"
+          />
+        </div>
+      )}
       <div>
         {!boss.IncludeSurname && surname && (
           <p className="text-xs text-zinc-400">{surname}</p>
@@ -88,22 +92,25 @@ function RestrictionsList({ restrictions, lang }: { restrictions: LangMap[]; lan
 
 function MinionRow({ boss, lang }: { boss: Boss; lang: Lang }) {
   const name = lRec(boss.Name, lang);
-  const isCharIcon = boss.icons.startsWith('2');
 
   return (
     <div className="flex items-center gap-2">
-      <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded border border-white/10">
-        <Image
-          src={isCharIcon
-            ? `/images/characters/portrait/CT_${boss.icons}.webp`
-            : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
-          }
-          alt={name}
-          fill
-          sizes="32px"
-          className="object-cover"
-        />
-      </div>
+      {boss.icons.startsWith('2') ? (
+        <CharacterPortrait id={boss.icons} size="xs" name={name} className="shrink-0" />
+      ) : (
+        <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded border border-white/10">
+          <Image
+            src={boss.icons.startsWith('Skill_')
+              ? `/images/characters/${boss.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${boss.icons}.webp`
+              : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
+            }
+            alt={name}
+            fill
+            sizes="32px"
+            className="object-cover"
+          />
+        </div>
+      )}
       <span className="text-sm text-zinc-300">{name}</span>
       <ElementInline element={boss.element} />
       <ClassInline name={boss.class} />

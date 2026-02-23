@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useMemo } from 'react';
 import Image from 'next/image';
+import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import { lRec } from '@/lib/i18n/localize';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { isRandomFloor } from '@/types/tower';
@@ -50,7 +51,7 @@ function ItemButton({
       type="button"
       onClick={onClick}
       className={[
-        'flex items-center gap-2 rounded px-2 py-1.5 text-left text-sm transition-colors',
+        'flex items-center gap-2 rounded px-2 py-1 text-left text-xs transition-colors',
         isActive
           ? 'bg-amber-500/15 text-amber-200 ring-1 ring-amber-500/30'
           : 'text-zinc-300 hover:bg-zinc-800/60 hover:text-zinc-100',
@@ -64,23 +65,26 @@ function ItemButton({
 /* ── Boss portrait + name row ── */
 
 function BossRow({ boss, lang }: { boss: Boss; lang: Lang }) {
-  const isCharIcon = boss.icons.startsWith('2');
   const element = boss.element as ElementType;
 
   return (
     <>
-      <span className="relative h-6 w-6 shrink-0 overflow-hidden rounded">
-        <Image
-          src={isCharIcon
-            ? `/images/characters/portrait/CT_${boss.icons}.webp`
-            : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
-          }
-          alt=""
-          fill
-          sizes="24px"
-          className="object-cover"
-        />
-      </span>
+      {boss.icons.startsWith('2') ? (
+        <CharacterPortrait id={boss.icons} size="xxs" />
+      ) : (
+        <span className="relative h-5 w-5 shrink-0 overflow-hidden rounded">
+          <Image
+            src={boss.icons.startsWith('Skill_')
+              ? `/images/characters/${boss.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${boss.icons}.webp`
+              : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
+            }
+            alt=""
+            fill
+            sizes="20px"
+            className="object-cover"
+          />
+        </span>
+      )}
       <span className="min-w-0 flex-1 truncate">{lRec(boss.Name, lang)}</span>
       {element && (
         <span className="relative h-4 w-4 shrink-0">

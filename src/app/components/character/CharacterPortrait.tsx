@@ -25,6 +25,7 @@ const CROP_OVERRIDES: Record<string, string> = {
 };
 
 const SIZES = {
+  xxs: { px: 20, cls: 'h-5 w-5', iconSize: 0, starSize: 0 },
   xs: { px: 32, cls: 'h-8 w-8', iconSize: 0, starSize: 0 },
   sm: { px: 48, cls: 'h-12 w-12', iconSize: 15, starSize: 8 },
   md: { px: 64, cls: 'h-16 w-16', iconSize: 20, starSize: 10 },

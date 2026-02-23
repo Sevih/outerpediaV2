@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useMemo } from 'react';
 import Image from 'next/image';
+import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import { lRec } from '@/lib/i18n/localize';
 import { isRandomFloor } from '@/types/tower';
 import type { TowerFloor } from '@/types/tower';
@@ -70,8 +71,6 @@ export default function TowerFloorList({ floors, selectedFloor, onSelect, search
         const isRandom = isRandomFloor(floor);
         const element = boss?.element as ElementType | undefined;
         const bossName = boss ? lRec(boss.Name, lang) : '...';
-        const isCharIcon = boss?.icons.startsWith('2');
-
         return (
           <button
             key={floor.floor}
@@ -79,7 +78,7 @@ export default function TowerFloorList({ floors, selectedFloor, onSelect, search
             type="button"
             onClick={() => onSelect(floor.floor)}
             className={[
-              'flex items-center gap-2 rounded px-2 py-1.5 text-left text-sm transition-colors',
+              'flex items-center gap-2 rounded px-2 py-1 text-left text-xs transition-colors',
               isActive
                 ? 'bg-amber-500/15 text-amber-200 ring-1 ring-amber-500/30'
                 : 'text-zinc-300 hover:bg-zinc-800/60 hover:text-zinc-100',
@@ -92,18 +91,22 @@ export default function TowerFloorList({ floors, selectedFloor, onSelect, search
 
             {/* Boss mini portrait */}
             {boss && (
-              <span className="relative h-6 w-6 shrink-0 overflow-hidden rounded">
-                <Image
-                  src={isCharIcon
-                    ? `/images/characters/portrait/CT_${boss.icons}.webp`
-                    : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
-                  }
-                  alt=""
-                  fill
-                  sizes="24px"
-                  className="object-cover"
-                />
-              </span>
+              boss.icons.startsWith('2') ? (
+                <CharacterPortrait id={boss.icons} size="xxs" />
+              ) : (
+                <span className="relative h-5 w-5 shrink-0 overflow-hidden rounded">
+                  <Image
+                    src={boss.icons.startsWith('Skill_')
+                      ? `/images/characters/${boss.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${boss.icons}.webp`
+                      : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
+                    }
+                    alt=""
+                    fill
+                    sizes="20px"
+                    className="object-cover"
+                  />
+                </span>
+              )
             )}
 
             {/* Boss name */}
