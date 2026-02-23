@@ -1039,5 +1039,119 @@
                 "zh": "{SK/Hilde|S1}主要在PvP中有效，由于Boss/敌人总是拥有更高HP，在一般PvE进度中效率较低"
             }
         ]
+    },
+    "demiurge-drakhan": {
+        "pros": [
+            {
+                "en": "provides unparalleled team protection by absorbing 35% of ally damage through her buff {B/IG_Buff_2000063_Interruption}",
+                "jp": "味方のダメージの35%を吸収するバフ{B/IG_Buff_2000063_Interruption}により、比類のないチーム保護を提供",
+                "kr": "버프 {B/IG_Buff_2000063_Interruption}를 통해 아군 피해의 35%를 흡수하여 탁월한 팀 보호 제공",
+                "zh": "通过{B/IG_Buff_2000063_Interruption}吸收队友35%的伤害，提供无与伦比的团队保护"
+            },
+            {
+                "en": "{SK/Demiurge Drakhan|S2} grants massive {B/BT_SHIELD_BASED_CASTER}, {B/BT_STAT|ST_PIERCE_POWER_RATE}, and {B/BT_STAT|ST_DEF} to all allies",
+                "jp": "{SK/Demiurge Drakhan|S2}で味方全体に大量の{B/BT_SHIELD_BASED_CASTER}、{B/BT_STAT|ST_PIERCE_POWER_RATE}、{B/BT_STAT|ST_DEF}を付与",
+                "kr": "{SK/Demiurge Drakhan|S2}로 모든 아군에게 대량의 {B/BT_SHIELD_BASED_CASTER}, {B/BT_STAT|ST_PIERCE_POWER_RATE}, {B/BT_STAT|ST_DEF} 부여",
+                "zh": "{SK/Demiurge Drakhan|S2}为全体队友提供大量{B/BT_SHIELD_BASED_CASTER}、{B/BT_STAT|ST_PIERCE_POWER_RATE}和{B/BT_STAT|ST_DEF}"
+            },
+            {
+                "en": "good against units with revive-based abilities/accessory with anti-resurrection mechanics on her Burst and {SK/Demiurge Drakhan|S3} skill",
+                "jp": "バーストと{SK/Demiurge Drakhan|S3}に復活阻止効果があり、復活系のユニットやアクセサリーに強い",
+                "kr": "버스트와 {SK/Demiurge Drakhan|S3}의 부활 방지 효과로 부활 기반 유닛/장신구에 강력",
+                "zh": "爆发技和{SK/Demiurge Drakhan|S3}具有反复活机制，克制拥有复活能力的单位/饰品"
+            },
+            {
+                "en": "excellent turn cycling with her transcendance passive now granting a massive 25% Priority push when an ally critically hits (at 4-star)",
+                "jp": "超越パッシブにより味方がクリティカルヒット時に25%の行動順アップを付与し、優れたターン回転を実現（4星時）",
+                "kr": "초월 패시브로 아군 치명타 시 25%의 행동 게이지 증가를 부여하여 뛰어난 턴 순환 (4성 기준)",
+                "zh": "超越被动在队友暴击时提供25%行动值推进，拥有出色的回合循环能力（4星时）"
+            },
+            {
+                "en": "Exclusive Equipment provides team healing on a critical hit",
+                "jp": "専用装備でクリティカルヒット時にチーム回復を提供",
+                "kr": "전용 장비로 치명타 시 팀 전체 회복 제공",
+                "zh": "专属装备在暴击时为团队提供治疗"
+            },
+            {
+                "en": "strong PvE presence with increased Weakness Gauge reduction on her {SK/Demiurge Drakhan|S1} and {SK/Demiurge Drakhan|Chain}",
+                "jp": "{SK/Demiurge Drakhan|S1}と{SK/Demiurge Drakhan|Chain}でブレイクゲージ削りが増加し、PvEで強力",
+                "kr": "{SK/Demiurge Drakhan|S1}과 {SK/Demiurge Drakhan|Chain}의 약점 게이지 감소 증가로 강력한 PvE 성능",
+                "zh": "{SK/Demiurge Drakhan|S1}和{SK/Demiurge Drakhan|Chain}的弱点槽削减量增加，PvE表现强力"
+            }
+        ],
+        "cons": [
+            {
+                "en": "absorbing 35% of ally damage makes her extremely susceptible to dying quickly against heavy AoE cleave teams if her Max HP isn't exceptionally high",
+                "jp": "味方ダメージの35%を吸収するため、最大HPが十分に高くないと強力な範囲攻撃チームに対して非常に倒されやすい",
+                "kr": "아군 피해의 35%를 흡수하기 때문에 최대 HP가 충분히 높지 않으면 강력한 광역 팀에 매우 취약",
+                "zh": "吸收队友35%的伤害使她在面对强力范围攻击队伍时极易阵亡，除非最大生命值极高"
+            },
+            {
+                "en": "requires heavy investment, specifically her Level 10 Exclusive Equipment, to unlock her massive +35% Max Health boost",
+                "jp": "+35%最大HP増加を解放するにはレベル10の専用装備が必要で、大きな投資が求められる",
+                "kr": "+35% 최대 HP 증가를 해제하려면 레벨 10 전용 장비가 필요하여 많은 투자 필요",
+                "zh": "需要大量投资，特别是10级专属装备，才能解锁+35%最大生命值加成"
+            },
+            {
+                "en": "still heavily countered by units that inflict {D/BT_SEALED}, which prevents her team-wide barrier setup",
+                "jp": "{D/BT_SEALED}を付与するユニットに強く対策され、チーム全体のバリア展開が阻止される",
+                "kr": "{D/BT_SEALED}를 부여하는 유닛에 크게 카운터되어 팀 전체 배리어 설정이 차단됨",
+                "zh": "仍然被施加{D/BT_SEALED}的单位严重克制，无法展开全队护盾"
+            },
+            {
+                "en": "because she requires stacking immense amounts of Max HP, she is naturally vulnerable to enemies whose damage scales against the target's Max Health",
+                "jp": "大量の最大HPを積む必要があるため、対象の最大HPに応じてダメージが増加する敵に対して脆弱",
+                "kr": "막대한 최대 HP를 쌓아야 하므로 대상의 최대 HP에 비례하여 피해를 주는 적에게 취약",
+                "zh": "由于需要堆叠大量最大生命值，天然容易被伤害按目标最大生命值百分比计算的敌人克制"
+            }
+        ]
+    },
+    "cindy": {
+        "pros": [
+            {
+                "en": "excellent buffer who provides team-wide {B/BT_STAT|ST_ATK} and {B/BT_STAT|ST_SPEED} buffs",
+                "jp": "チーム全体に{B/BT_STAT|ST_ATK}と{B/BT_STAT|ST_SPEED}バフを付与する優秀なバッファー",
+                "kr": "팀 전체에 {B/BT_STAT|ST_ATK}과 {B/BT_STAT|ST_SPEED} 버프를 제공하는 우수한 버퍼",
+                "zh": "优秀的辅助，为全队提供{B/BT_STAT|ST_ATK}和{B/BT_STAT|ST_SPEED}增益"
+            },
+            {
+                "en": "high base Speed allows her to act first and set up cleave teams effectively",
+                "jp": "高い基礎速度により先手を取りやすく、速攻チームを効果的に構築可能",
+                "kr": "높은 기본 속도로 먼저 행동하여 속공 팀을 효과적으로 구성 가능",
+                "zh": "高基础速度使她能率先行动，有效组建速攻队伍"
+            },
+            {
+                "en": "great support with the ability to {B/BT_EXTEND_BUFF}",
+                "jp": "{B/BT_EXTEND_BUFF}能力を持つ優れたサポート",
+                "kr": "{B/BT_EXTEND_BUFF} 능력을 가진 뛰어난 서포터",
+                "zh": "拥有{B/BT_EXTEND_BUFF}能力的出色辅助"
+            },
+            {
+                "en": "great low-investment 2-star support unit for early to mid-game progression",
+                "jp": "低投資で使える2星サポートとして序盤から中盤の進行に最適",
+                "kr": "적은 투자로 사용 가능한 2성 서포터로 초반~중반 진행에 적합",
+                "zh": "低投入的2星辅助单位，适合前中期推进"
+            }
+        ],
+        "cons": [
+            {
+                "en": "lower base stats as a 2-star unit make her very squishy",
+                "jp": "2星ユニットのため基礎ステータスが低く非常に脆い",
+                "kr": "2성 유닛으로 기본 스탯이 낮아 매우 취약",
+                "zh": "作为2星单位基础属性较低，非常脆弱"
+            },
+            {
+                "en": "overshadowed in the late-game by premium 3-star buffers who offer more utility",
+                "jp": "終盤ではより多くの実用性を持つ3星バッファーに取って代わられる",
+                "kr": "후반에는 더 많은 유틸리티를 제공하는 프리미엄 3성 버퍼에 밀림",
+                "zh": "后期被提供更多功能的高级3星辅助所取代"
+            },
+            {
+                "en": "provides no defensive mitigation or healing, making her strictly an offensive support",
+                "jp": "防御軽減や回復を持たず、純粋な攻撃サポートに限定される",
+                "kr": "방어 감소나 회복이 없어 순수 공격 서포터로 제한됨",
+                "zh": "没有防御减伤或治疗能力，严格限于进攻型辅助"
+            }
+        ]
     }
 }

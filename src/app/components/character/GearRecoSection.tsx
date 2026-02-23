@@ -52,12 +52,12 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
             {build.Weapon && build.Weapon.length > 0 && (
               <div className="order-1 md:order-0">
                 <GearCategory label={t('page.character.gear.weapon')}>
-                  {build.Weapon.map((w) => {
+                  {build.Weapon.map((w, i) => {
                     const data = weapons.find((wp) => wp.name === w.name);
                     return data ? (
-                      <WeaponMiniCard key={w.name} weapon={data} lang={lang} mainStat={w.mainStat} bossMap={bossMap} />
+                      <WeaponMiniCard key={`${w.name}-${i}`} weapon={data} lang={lang} mainStat={w.mainStat} bossMap={bossMap} />
                     ) : (
-                      <p key={w.name} className="text-sm text-zinc-400">{w.name}</p>
+                      <p key={`${w.name}-${i}`} className="text-sm text-zinc-400">{w.name}</p>
                     );
                   })}
                 </GearCategory>
@@ -67,12 +67,12 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
             {build.Talisman && build.Talisman.length > 0 && (
               <div className="order-4 md:order-0">
                 <GearCategory label={t('page.character.gear.talisman')}>
-                  {build.Talisman.map((name) => {
+                  {build.Talisman.map((name, i) => {
                     const data = talismans.find((t) => t.name === name);
                     return data ? (
-                      <TalismanMiniCard key={name} talisman={data} lang={lang} />
+                      <TalismanMiniCard key={`${name}-${i}`} talisman={data} lang={lang} />
                     ) : (
-                      <p key={name} className="text-sm text-zinc-400">{name}</p>
+                      <p key={`${name}-${i}`} className="text-sm text-zinc-400">{name}</p>
                     );
                   })}
                 </GearCategory>
@@ -85,12 +85,12 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
             {build.Amulet && build.Amulet.length > 0 && (
               <div className="order-2 md:order-0">
                 <GearCategory label={t('page.character.gear.amulet')}>
-                  {build.Amulet.map((a) => {
+                  {build.Amulet.map((a, i) => {
                     const data = amulets.find((am) => am.name === a.name);
                     return data ? (
-                      <AmuletMiniCard key={a.name} amulet={data} lang={lang} mainStat={a.mainStat} bossMap={bossMap} />
+                      <AmuletMiniCard key={`${a.name}-${i}`} amulet={data} lang={lang} mainStat={a.mainStat} bossMap={bossMap} />
                     ) : (
-                      <p key={a.name} className="text-sm text-zinc-400">{a.name}</p>
+                      <p key={`${a.name}-${i}`} className="text-sm text-zinc-400">{a.name}</p>
                     );
                   })}
                 </GearCategory>
