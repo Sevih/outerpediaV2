@@ -2,7 +2,11 @@
   "floors": [
     {
       "floor": 1,
-      "boss_id": null,
+      "boss_id": "400101",
+      "minions": [
+        "400102",
+        "400103"
+      ],
       "restrictions": [
         "AtLeast2_2Star"
       ]

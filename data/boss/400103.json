@@ -1,0 +1,92 @@
+{
+  "id": "400103",
+  "Name": {
+    "en": "Flamberge",
+    "kr": "플랑베르쥬",
+    "jp": "フランベルジュ",
+    "zh": "弗朗贝尔修"
+  },
+  "Surname": {
+    "en": "Captain of the Annihilation Sect",
+    "kr": "섬격회 조장",
+    "jp": "喧嘩嫌いな【閃撃の会】会長",
+    "zh": "闪击会组长"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Earth",
+  "level": 100,
+  "icons": "2000050",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 1F",
+      "kr": "비천의 탑 [하드] 1층",
+      "jp": "飛天の塔【ハード】1階",
+      "zh": "飞天之塔【困难】第1层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Like A Fierce Whirlwind",
+        "kr": "맹렬한 질풍처럼",
+        "jp": "疾きこと風の如く",
+        "zh": "烈似疾风"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to increase a random ally's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 무작위 아군 한 명의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率でランダムの味方単体の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使随机1名友军的<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000050"
+    },
+    {
+      "name": {
+        "en": "Like A Peaceful Forest",
+        "kr": "조용한 숲처럼",
+        "jp": "徐かなること林の如く",
+        "zh": "寂如密林"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) Has a <color=#28d9ed>100%</color> chance to reduce the skill cooldown of <color=#28d9ed>Like a Noble Mountain</color> by <color=#28d9ed>1 turn(s)</color> upon taking a critical hit.",
+        "kr": "(패시브 효과) 치명 피격 시 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>고고한 산처럼</color>의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
+        "jp": "(パッシブ効果)会心ダメージを受けた場合、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>【動かざること山の如く】</color>のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
+        "zh": "(被动效果)受到暴击时,有<color=#28d9ed>100%</color>的几率使<color=#28d9ed>傲若孤山</color>的技能冷却时间减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000050"
+    },
+    {
+      "name": {
+        "en": "Like A Noble Mountain",
+        "kr": "고고한 산처럼",
+        "jp": "動かざること山の如く",
+        "zh": "傲若孤山"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Heals all allies' Health equal to <color=#28d9ed>35%</color> of Flamberge's <color=#28d9ed>Max Health</color>.",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 플랑베르쥬 최대 체력의 <color=#28d9ed>35%</color>만큼 회복시킵니다.",
+        "jp": "味方全体の<color=#28d9ed>HP</color>を【フランベルジュ】の最大HPの<color=#28d9ed>35%</color>回復させる。",
+        "zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于弗朗贝尔修生命值上限的<color=#28d9ed>35%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000050"
+    }
+  ]
+}
