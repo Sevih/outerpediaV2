@@ -28,8 +28,12 @@ export async function run() {
     });
   });
 
-  // Forward Python script output
-  for (const line of output.split('\n')) {
-    if (line.trim()) console.log(`  ${line.trim()}`);
+  // Parse Python output for a concise summary
+  if (output.includes('up_to_date') || output.includes('skipped')) {
+    return 'skipped (up to date)';
   }
+  // Extract count if present (e.g. "114 characters")
+  const countMatch = output.match(/(\d+)\s+character/);
+  if (countMatch) return `${countMatch[1]} characters`;
+  return 'updated';
 }

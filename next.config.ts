@@ -32,6 +32,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: [
+    'outerpedia.local',
+    '*.outerpedia.local',
+  ],
+
   env: {
     NEXT_PUBLIC_APP_VERSION: version,
   },

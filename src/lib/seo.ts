@@ -16,7 +16,7 @@ const DEFAULT_OG_IMAGE = '/images/ui/og_default.jpg';
 export function getBaseUrl(): string {
   const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
   if (vercelUrl) return `https://${vercelUrl}`;
-  if (process.env.NODE_ENV === 'development') return `http://localhost:${process.env.PORT ?? '3001'}`;
+  if (process.env.NODE_ENV === 'development') return `http://localhost:${process.env.PORT ?? '3000'}`;
   return `https://${BASE_DOMAIN}`;
 }
 

@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "tsx scripts/dev-with-images.ts",
-    "dev:next": "next dev --port 3001",
+    "dev:next": "next dev",
     "set-version": "node scripts/set-version.js",
     "build": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && npm run set-version && npm run images && npm run pipeline && next build",
-    "start": "next start --port 3001",
+    "start": "next start",
     "lint": "eslint",
     "pipeline": "tsx pipeline/run.ts",
     "pipeline:step": "tsx pipeline/run.ts --step",

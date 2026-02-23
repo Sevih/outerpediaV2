@@ -38,13 +38,43 @@ const imageWatcher = spawn('npx tsx scripts/convert-images.ts --watch', {
 });
 children.push(imageWatcher);
 
-// 3. Start Next.js dev server after a short delay
+// 3. Start Caddy reverse proxy (HTTPS subdomains → localhost:3000)
+console.log('[dev] Starting Caddy...');
+const caddy = spawn('caddy run --config Caddyfile', {
+  stdio: ['ignore', 'ignore', 'pipe'],
+  shell: true,
+});
+children.push(caddy);
+
+let caddyReady = false;
+caddy.stderr?.on('data', (data: Buffer) => {
+  const text = data.toString();
+  if (!caddyReady && text.includes('serving initial configuration')) {
+    caddyReady = true;
+    console.log('[dev] Caddy ready (https://outerpedia.local)');
+  }
+  // Only forward errors, ignoring expected startup 502s (Next.js not ready yet)
+  if (text.includes('"level":"error"') && !text.includes('"status":502')) {
+    process.stderr.write(text);
+  }
+});
+
+// 4. Start Next.js dev server after a short delay
 setTimeout(() => {
-  const nextDev = spawn('npx next dev --port 3001', {
-    stdio: 'inherit',
+  const nextDev = spawn('npx next dev', {
+    stdio: ['inherit', 'pipe', 'inherit'],
     shell: true,
   });
   children.push(nextDev);
+
+  let nextReady = false;
+  nextDev.stdout?.on('data', (data: Buffer) => {
+    process.stdout.write(data);
+    if (!nextReady && data.toString().includes('Ready')) {
+      nextReady = true;
+      console.log('\n  \x1b[36m▲ Open:\x1b[0m  https://outerpedia.local\n');
+    }
+  });
 
   nextDev.on('exit', (code) => {
     if (code !== null && code !== 0) {

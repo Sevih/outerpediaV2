@@ -28,16 +28,17 @@ export default function LanguageSwitcher() {
 
     if (isSubdomain) {
       // Production: switch subdomain
-      const { protocol, search, hash } = window.location;
+      const { protocol, port, search, hash } = window.location;
       const sub = LANGUAGES[target].subdomain;
       const prefix = sub ? `${sub}.` : '';
+      const portSuffix = port ? `:${port}` : '';
       // Strip lang prefix from path (proxy rewrote it, but pathname may include it)
       const segments = pathname.split('/');
       const cleanPath =
         segments[1] && isValidLang(segments[1])
           ? '/' + segments.slice(2).join('/')
           : pathname;
-      window.location.href = `${protocol}//${prefix}${BASE_DOMAIN}${cleanPath}${search}${hash}`;
+      window.location.href = `${protocol}//${prefix}${BASE_DOMAIN}${portSuffix}${cleanPath}${search}${hash}`;
       return;
     }
 
