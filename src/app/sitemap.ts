@@ -3,7 +3,6 @@ import { LANGS, LANGUAGES } from '@/lib/i18n/config';
 import type { Lang } from '@/lib/i18n/config';
 import { buildUrl } from '@/lib/seo';
 import { getCharacterSlugs } from '@/lib/data/characters';
-import { getAllEquipmentSlugs } from '@/lib/data/equipment';
 import { getValidCategories } from '@/lib/data/guides';
 import { getGuideSlugsWithCategories } from '@/lib/data/guides';
 
@@ -48,17 +47,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const characterSlugs = await getCharacterSlugs();
   for (const slug of characterSlugs) {
     const path = `/characters/${slug}`;
-    entries.push({
-      url: buildUrl('en' as Lang, path),
-      lastModified: new Date(),
-      alternates: { languages: buildAlternates(path) },
-    });
-  }
-
-  // Dynamic: equipment pages
-  const equipmentSlugs = await getAllEquipmentSlugs();
-  for (const slug of equipmentSlugs) {
-    const path = `/equipments/${slug}`;
     entries.push({
       url: buildUrl('en' as Lang, path),
       lastModified: new Date(),

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { l, lRec } from '@/lib/i18n/localize';
 import parseText from '@/lib/parse-text';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
@@ -39,6 +40,8 @@ export default function RecommendedCharacterList({
   idMode = false,
 }: Props) {
   const { lang, t } = useI18n();
+  const isDesktop = useMediaQuery('(min-width: 640px)');
+  const portraitSize = isDesktop ? 'md' : 'sm';
 
   function resolveTitle(): string | null {
     if (title === false) return null;
@@ -84,9 +87,9 @@ export default function RecommendedCharacterList({
                     <CharacterPortrait
                       id={c.charId}
                       name={c.localizedName}
-                      size="lg"
+                      size={portraitSize}
                       showIcons
-                      className="sm:h-16 sm:w-16 transition-transform hover:scale-105"
+                      className="transition-transform hover:scale-105"
                     />
                   </Link>
                 ))}
