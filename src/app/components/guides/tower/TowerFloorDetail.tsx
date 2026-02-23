@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Image from 'next/image';
 import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
@@ -8,14 +8,25 @@ import Tabs from '@/app/components/ui/Tabs';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { isRandomFloor } from '@/types/tower';
-import type { TowerFloor, TowerBossInfo } from '@/types/tower';
+import type { TowerFloor, TowerRestrictionMap } from '@/types/tower';
+import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
 
-/* ── Boss card (shared between fixed and random renders) ── */
+/* ── Resolve restriction IDs to LangMap objects ── */
 
-function BossCard({ boss, lang }: { boss: TowerBossInfo; lang: Lang }) {
-  const name = lRec(boss.name, lang);
+function resolveRestrictions(ids: string[], restrictionMap: TowerRestrictionMap): LangMap[] {
+  return ids
+    .map(id => restrictionMap[id])
+    .filter((r): r is LangMap => r != null);
+}
+
+/* ── Boss card (renders from Boss data) ── */
+
+function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
+  const baseName = lRec(boss.Name, lang);
+  const surname = lRec(boss.Surname as LangMap, lang);
+  const displayName = boss.IncludeSurname && surname ? `${surname} ${baseName}` : baseName;
   const isCharIcon = boss.icons.startsWith('2');
 
   return (
@@ -26,17 +37,21 @@ function BossCard({ boss, lang }: { boss: TowerBossInfo; lang: Lang }) {
             ? `/images/characters/portrait/CT_${boss.icons}.webp`
             : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
           }
-          alt={name}
+          alt={displayName}
           fill
           sizes="64px"
           className="object-cover"
         />
       </div>
       <div>
-        <p className="text-lg font-bold text-zinc-100">{name}</p>
+        {!boss.IncludeSurname && surname && (
+          <p className="text-xs text-zinc-400">{surname}</p>
+        )}
+        <p className="text-lg font-bold text-zinc-100">{displayName}</p>
         <div className="mt-1 flex items-center gap-2">
           <ElementInline element={boss.element} />
           <ClassInline name={boss.class} />
+          <span className="text-xs text-zinc-500">Lv.{boss.level}</span>
         </div>
       </div>
     </div>
@@ -66,24 +81,99 @@ function RestrictionsList({ restrictions, lang }: { restrictions: LangMap[]; lan
   );
 }
 
-/* ── Fixed floor detail ── */
+/* ── Minion row (compact boss display) ── */
 
-function FixedFloorContent({ boss, restrictions, lang }: {
-  boss: TowerBossInfo;
+function MinionRow({ boss, lang }: { boss: Boss; lang: Lang }) {
+  const name = lRec(boss.Name, lang);
+  const isCharIcon = boss.icons.startsWith('2');
+
+  return (
+    <div className="flex items-center gap-2">
+      <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded border border-white/10">
+        <Image
+          src={isCharIcon
+            ? `/images/characters/portrait/CT_${boss.icons}.webp`
+            : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
+          }
+          alt={name}
+          fill
+          sizes="32px"
+          className="object-cover"
+        />
+      </div>
+      <span className="text-sm text-zinc-300">{name}</span>
+      <ElementInline element={boss.element} />
+      <ClassInline name={boss.class} />
+      <span className="text-xs text-zinc-500">Lv.{boss.level}</span>
+    </div>
+  );
+}
+
+/* ── Floor content with boss + minions + restrictions ── */
+
+function RecommendedRow({ charIds }: { charIds: string[] }) {
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {charIds.map(id => (
+        <div key={id} className="relative h-10 w-10 shrink-0 overflow-hidden rounded border border-white/10">
+          <Image
+            src={`/images/characters/portrait/CT_${id}.webp`}
+            alt=""
+            fill
+            sizes="40px"
+            className="object-cover"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function FloorContent({ boss, minions, restrictions, recommended, lang }: {
+  boss: Boss | null;
+  minions: Boss[];
   restrictions: LangMap[];
+  recommended?: string[];
   lang: Lang;
 }) {
   const { t } = useI18n();
 
   return (
     <div className="space-y-4">
-      <BossCard boss={boss} lang={lang} />
+      {boss ? (
+        <BossCard boss={boss} lang={lang} />
+      ) : (
+        <div className="py-4 text-center text-sm text-zinc-500">Loading...</div>
+      )}
+
+      {minions.length > 0 && (
+        <div>
+          <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
+            {t('tower.minions')}
+          </h5>
+          <div className="space-y-2">
+            {minions.map(m => (
+              <MinionRow key={m.icons} boss={m} lang={lang} />
+            ))}
+          </div>
+        </div>
+      )}
+
       <div>
         <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
           {t('tower.restrictions')}
         </h5>
         <RestrictionsList restrictions={restrictions} lang={lang} />
       </div>
+
+      {recommended && recommended.length > 0 && (
+        <div>
+          <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
+            {t('tower.recommended')}
+          </h5>
+          <RecommendedRow charIds={recommended} />
+        </div>
+      )}
     </div>
   );
 }
@@ -92,20 +182,26 @@ function FixedFloorContent({ boss, restrictions, lang }: {
 
 type Props = {
   floor: TowerFloor;
+  bossMap: Record<string, Boss>;
+  restrictionMap: TowerRestrictionMap;
+  defaultSet?: number;
 };
 
-export default function TowerFloorDetail({ floor }: Props) {
+export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defaultSet }: Props) {
   const { lang: rawLang, t } = useI18n();
   const lang = rawLang as Lang;
-  const [activeSet, setActiveSet] = useState('0');
+  const [activeSet, setActiveSet] = useState(String(defaultSet ?? 0));
 
   if (!isRandomFloor(floor)) {
+    const boss = bossMap[floor.boss_id] ?? null;
+    const minions = (floor.minions ?? []).map(id => bossMap[id]).filter((b): b is Boss => b != null);
+    const restrictions = resolveRestrictions(floor.restrictions, restrictionMap);
     return (
       <div className="card p-4">
         <h4 className="mb-4 after:hidden">
           {t('tower.floor').replace('{n}', String(floor.floor))}
         </h4>
-        <FixedFloorContent boss={floor.boss} restrictions={floor.restrictions} lang={lang} />
+        <FloorContent boss={boss} minions={minions} restrictions={restrictions} recommended={floor.recommended} lang={lang} />
       </div>
     );
   }
@@ -115,6 +211,9 @@ export default function TowerFloorDetail({ floor }: Props) {
   const setLabels = floor.sets.map((_, i) => t('tower.set').replace('{n}', String(i + 1)));
   const activeIndex = Number(activeSet);
   const currentSet = floor.sets[activeIndex] ?? floor.sets[0];
+  const boss = bossMap[currentSet.boss_id] ?? null;
+  const minions = (currentSet.minions ?? []).map(id => bossMap[id]).filter((b): b is Boss => b != null);
+  const restrictions = resolveRestrictions(currentSet.restrictions, restrictionMap);
 
   return (
     <div className="card p-4">
@@ -139,9 +238,11 @@ export default function TowerFloorDetail({ floor }: Props) {
         className="mb-4"
       />
 
-      <FixedFloorContent
-        boss={currentSet.boss}
-        restrictions={currentSet.restrictions}
+      <FloorContent
+        boss={boss}
+        minions={minions}
+        restrictions={restrictions}
+        recommended={currentSet.recommended}
         lang={lang}
       />
     </div>

@@ -2,38 +2,18 @@
   "floors": [
     {
       "floor": 1,
-      "boss": {
-        "id": "401400250",
-        "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
-        "element": "Water",
-        "class": "Striker",
-        "icons": "4076005"
-      },
+      "boss_id": "401400250",
       "restrictions": []
     },
     {
       "floor": 2,
-      "boss": {
-        "id": "401400251",
-        "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
-        "element": "Water",
-        "class": "Striker",
-        "icons": "4076005"
-      },
+      "boss_id": "401400251",
       "restrictions": []
     },
     {
       "floor": 3,
-      "boss": {
-        "id": "401400252",
-        "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
-        "element": "Water",
-        "class": "Striker",
-        "icons": "4076005"
-      },
-      "restrictions": [
-        { "en": "No Healers allowed", "jp": "ヒーラー使用不可", "kr": "힐러 사용 불가", "zh": "不能使用治疗师" }
-      ]
+      "boss_id": "401400252",
+      "restrictions": ["BanHealer"]
     }
   ]
 }

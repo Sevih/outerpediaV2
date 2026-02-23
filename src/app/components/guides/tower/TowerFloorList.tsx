@@ -5,27 +5,27 @@ import Image from 'next/image';
 import { lRec } from '@/lib/i18n/localize';
 import { isRandomFloor } from '@/types/tower';
 import type { TowerFloor } from '@/types/tower';
+import type { Boss } from '@/types/boss';
 import type { Lang } from '@/lib/i18n/config';
 import type { ElementType } from '@/types/enums';
 
 type Props = {
   floors: TowerFloor[];
   selectedFloor: number | null;
-  onSelect: (floor: number) => void;
+  onSelect: (floor: number, set?: number) => void;
   search: string;
   lang: Lang;
+  bossMap: Record<string, Boss>;
 };
 
-/** Get the primary boss info for display (first set for random floors) */
-function getPrimaryBoss(floor: TowerFloor) {
-  if (isRandomFloor(floor)) {
-    return floor.sets[0]?.boss ?? null;
-  }
-  return floor.boss;
+/** Get the primary boss ID for display (first set for random floors) */
+function getPrimaryBossId(floor: TowerFloor): string | null {
+  if (isRandomFloor(floor)) return floor.sets[0]?.boss_id ?? null;
+  return floor.boss_id;
 }
 
 /** Check if a floor matches the search query */
-function matchesSearch(floor: TowerFloor, query: string, lang: Lang): boolean {
+function matchesSearch(floor: TowerFloor, query: string, lang: Lang, bossMap: Record<string, Boss>): boolean {
   if (!query) return true;
   const q = query.toLowerCase();
 
@@ -35,23 +35,23 @@ function matchesSearch(floor: TowerFloor, query: string, lang: Lang): boolean {
   // Match boss name(s)
   if (isRandomFloor(floor)) {
     return floor.sets.some(s => {
-      const name = lRec(s.boss.name, lang);
-      return name.toLowerCase().includes(q);
+      const boss = bossMap[s.boss_id];
+      if (!boss) return false;
+      return lRec(boss.Name, lang).toLowerCase().includes(q);
     });
   }
 
-  const name = lRec(floor.boss.name, lang);
-  return name.toLowerCase().includes(q);
+  const boss = bossMap[floor.boss_id];
+  if (!boss) return false;
+  return lRec(boss.Name, lang).toLowerCase().includes(q);
 }
 
-export default function TowerFloorList({ floors, selectedFloor, onSelect, search, lang }: Props) {
-  const listRef = useRef<HTMLDivElement>(null);
+export default function TowerFloorList({ floors, selectedFloor, onSelect, search, lang, bossMap }: Props) {
   const activeRef = useRef<HTMLButtonElement>(null);
 
-  // Filter floors based on search
   const filtered = useMemo(
-    () => floors.filter(f => matchesSearch(f, search, lang)),
-    [floors, search, lang],
+    () => floors.filter(f => matchesSearch(f, search, lang, bossMap)),
+    [floors, search, lang, bossMap],
   );
 
   // Scroll active floor into view
@@ -62,13 +62,14 @@ export default function TowerFloorList({ floors, selectedFloor, onSelect, search
   }, [selectedFloor]);
 
   return (
-    <div ref={listRef} className="flex flex-col gap-0.5 overflow-y-auto">
+    <div className="flex flex-col gap-0.5">
       {filtered.map(floor => {
-        const boss = getPrimaryBoss(floor);
+        const bossId = getPrimaryBossId(floor);
+        const boss = bossId ? bossMap[bossId] : null;
         const isActive = floor.floor === selectedFloor;
         const isRandom = isRandomFloor(floor);
         const element = boss?.element as ElementType | undefined;
-        const bossName = boss ? lRec(boss.name, lang) : '—';
+        const bossName = boss ? lRec(boss.Name, lang) : '...';
         const isCharIcon = boss?.icons.startsWith('2');
 
         return (

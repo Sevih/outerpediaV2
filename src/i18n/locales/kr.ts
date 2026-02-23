@@ -171,6 +171,11 @@ const kr: Record<TranslationKey, string> = {
   'tower.select_floor': '층을 선택하여 상세 정보 확인',
   'tower.set': '패턴 {n}',
   'tower.monthly_reset': '월간 리셋',
+  'tower.floor_20': '20층',
+  'tower.fixed_floors': '5 / 10 / 15층',
+  'tower.random_floors': '랜덤 층',
+  'tower.minions': '부하',
+  'tower.recommended': '추천',
 
   'page.contributors.title': '프로젝트 기여자',
   'page.legal.title': '법적 고지 & 면책 조항',

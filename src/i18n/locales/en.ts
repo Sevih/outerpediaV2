@@ -171,6 +171,11 @@ const en = {
   'tower.select_floor': 'Select a floor to view details',
   'tower.set': 'Set {n}',
   'tower.monthly_reset': 'Monthly Reset',
+  'tower.floor_20': 'Floor 20',
+  'tower.fixed_floors': 'Floors 5 / 10 / 15',
+  'tower.random_floors': 'Random Floors',
+  'tower.minions': 'Minions',
+  'tower.recommended': 'Recommended',
 
   'page.contributors.title': 'Project Contributors',
   'page.legal.title': 'Legal Notice & Disclaimer',

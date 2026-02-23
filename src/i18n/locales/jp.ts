@@ -171,6 +171,11 @@ const jp: Record<TranslationKey, string> = {
   'tower.select_floor': '階を選択して詳細を表示',
   'tower.set': 'パターン{n}',
   'tower.monthly_reset': '月間リセット',
+  'tower.floor_20': '20階',
+  'tower.fixed_floors': '5 / 10 / 15階',
+  'tower.random_floors': 'ランダムフロア',
+  'tower.minions': '取り巻き',
+  'tower.recommended': 'おすすめ',
 
   'page.contributors.title': 'プロジェクト コントリビューター',
   'page.legal.title': '法的通知 & 免責事項',

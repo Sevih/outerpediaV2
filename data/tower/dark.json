@@ -2,42 +2,18 @@
   "floors": [
     {
       "floor": 1,
-      "boss": {
-        "id": "401400250",
-        "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
-        "element": "Light",
-        "class": "Striker",
-        "icons": "4076005"
-      },
-      "restrictions": [
-        { "en": "Dark characters only", "jp": "闇属性キャラのみ", "kr": "암속성 캐릭터만", "zh": "仅限暗属性角色" }
-      ]
+      "boss_id": "401400250",
+      "restrictions": ["ForceDark"]
     },
     {
       "floor": 2,
-      "boss": {
-        "id": "401400251",
-        "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
-        "element": "Light",
-        "class": "Striker",
-        "icons": "4076005"
-      },
-      "restrictions": [
-        { "en": "Dark characters only", "jp": "闇属性キャラのみ", "kr": "암속성 캐릭터만", "zh": "仅限暗属性角色" }
-      ]
+      "boss_id": "401400251",
+      "restrictions": ["ForceDark"]
     },
     {
       "floor": 3,
-      "boss": {
-        "id": "401400252",
-        "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
-        "element": "Light",
-        "class": "Striker",
-        "icons": "4076005"
-      },
-      "restrictions": [
-        { "en": "Dark characters only", "jp": "闇属性キャラのみ", "kr": "암속성 캐릭터만", "zh": "仅限暗属性角色" }
-      ]
+      "boss_id": "401400252",
+      "restrictions": ["ForceDark"]
     }
   ]
 }

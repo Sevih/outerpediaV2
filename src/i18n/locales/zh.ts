@@ -171,6 +171,11 @@ const zh: Record<TranslationKey, string> = {
   'tower.select_floor': '选择楼层查看详情',
   'tower.set': '方案{n}',
   'tower.monthly_reset': '每月重置',
+  'tower.floor_20': '第20层',
+  'tower.fixed_floors': '第5 / 10 / 15层',
+  'tower.random_floors': '随机楼层',
+  'tower.minions': '随从',
+  'tower.recommended': '推荐',
 
   'page.contributors.title': '项目贡献者',
   'page.legal.title': '法律声明 & 免责条款',
