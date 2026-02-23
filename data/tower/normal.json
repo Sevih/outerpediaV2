@@ -3,7 +3,18 @@
     {
       "floor": 1,
       "boss_id": "401400250",
-      "restrictions": []
+      "restrictions": [],
+      "recommended": [
+        {
+          "names": ["2000001", "2000002"],
+          "reason": {
+            "en": "Easy clear with any strong DPS. {S/SPD} tuning helps.",
+            "jp": "強力なDPSで簡単クリア。{S/SPD}調整が有効。",
+            "kr": "강력한 DPS로 쉬운 클리어. {S/SPD} 조정이 도움됨.",
+            "zh": "用任何强力DPS轻松通关。{S/SPD}调整有帮助。"
+          }
+        }
+      ]
     },
     {
       "floor": 2,
@@ -13,7 +24,27 @@
     {
       "floor": 3,
       "boss_id": "401400252",
-      "restrictions": ["BanHealer"]
+      "restrictions": ["BanHealer"],
+      "recommended": [
+        {
+          "names": ["2000010"],
+          "reason": {
+            "en": "Self-sustain {C/Striker} — no healer needed thanks to lifesteal.",
+            "jp": "自己回復{C/Striker} — ライフスティールでヒーラー不要。",
+            "kr": "자가 회복 {C/Striker} — 흡혈로 힐러 불필요.",
+            "zh": "自回复{C/Striker}——凭借吸血不需要治疗师。"
+          }
+        },
+        {
+          "names": ["2000020"],
+          "reason": {
+            "en": "Strong {C/Defender} with {B/BT_SHIELD} to compensate no healer.",
+            "jp": "ヒーラーなしを{B/BT_SHIELD}で補う強力な{C/Defender}。",
+            "kr": "힐러 없음을 {B/BT_SHIELD}로 보완하는 강력한 {C/Defender}.",
+            "zh": "强力{C/Defender}，用{B/BT_SHIELD}弥补无治疗。"
+          }
+        }
+      ]
     }
   ]
 }

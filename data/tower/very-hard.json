@@ -11,11 +11,40 @@
       "restrictionSets": [
         {
           "restrictions": ["ForceFire"],
-          "recommended": ["2000001", "2000003", "2000005"]
+          "recommended": [
+            {
+              "names": ["2000001"],
+              "reason": {
+                "en": "Shines with {D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}. Use S3 after boss self-buffs to convert them into long debuffs.",
+                "jp": "{D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}で活躍。ボスの自己バフ後にS3を使用し、長時間のデバフに変換。",
+                "kr": "{D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}로 빛남. 보스 자체 버프 후 S3를 사용해 긴 디버프로 변환.",
+                "zh": "凭借{D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}大放异彩。在BOSS自我增益后使用S3将其转化为长时间减益。"
+              }
+            },
+            {
+              "names": ["2000003", "2000005"],
+              "reason": {
+                "en": "MVPs thanks to their repeated debuffs.",
+                "jp": "繰り返しデバフを付与できるためMVP。",
+                "kr": "반복적인 디버프 덕분에 MVP.",
+                "zh": "凭借持续的减益效果成为MVP。"
+              }
+            }
+          ]
         },
         {
           "restrictions": ["BanFire", "AtLeast1_2Star"],
-          "recommended": ["2000002", "2000004", "2000006"]
+          "recommended": [
+            {
+              "names": ["2000002", "2000004"],
+              "reason": {
+                "en": "Strong {E/Water} alternatives when fire is banned.",
+                "jp": "火属性禁止時の強力な{E/Water}代替キャラ。",
+                "kr": "화속성 금지 시 강력한 {E/Water} 대안.",
+                "zh": "火属性被禁时强力的{E/Water}替代角色。"
+              }
+            }
+          ]
         }
       ]
     },
@@ -24,7 +53,17 @@
       "restrictionSets": [
         {
           "restrictions": ["ForceWater"],
-          "recommended": ["2000002", "2000007", "2000008"]
+          "recommended": [
+            {
+              "names": ["2000002", "2000007"],
+              "reason": {
+                "en": "Top {E/Water} picks for this encounter.",
+                "jp": "この戦闘で最適な{E/Water}キャラ。",
+                "kr": "이 전투에 최적의 {E/Water} 선택.",
+                "zh": "此战斗中最佳{E/Water}角色。"
+              }
+            }
+          ]
         }
       ]
     },
@@ -38,7 +77,17 @@
       "floor": 5,
       "boss_id": "401400255",
       "restrictions": ["ForceDark"],
-      "recommended": ["2000004", "2000009", "2000010"]
+      "recommended": [
+        {
+          "names": ["2000004", "2000009"],
+          "reason": {
+            "en": "Best {E/Dark} carries for this floor.",
+            "jp": "このフロアの最強{E/Dark}キャラ。",
+            "kr": "이 층의 최고 {E/Dark} 캐리.",
+            "zh": "此楼层最佳{E/Dark}输出角色。"
+          }
+        }
+      ]
     },
     {
       "floor": 10,
@@ -57,7 +106,17 @@
         {
           "boss_id": "401400255",
           "restrictions": ["ForceDark"],
-          "recommended": ["2000004", "2000009"]
+          "recommended": [
+            {
+              "names": ["2000004", "2000009"],
+              "reason": {
+                "en": "Best {E/Dark} carries for this floor.",
+                "jp": "このフロアの最強{E/Dark}キャラ。",
+                "kr": "이 층의 최고 {E/Dark} 캐리.",
+                "zh": "此楼层最佳{E/Dark}输出角色。"
+              }
+            }
+          ]
         },
         {
           "boss_id": "401400256",

@@ -3,7 +3,18 @@
     {
       "floor": 1,
       "boss_id": "401400250",
-      "restrictions": ["ForceWater"]
+      "restrictions": ["ForceWater"],
+      "recommended": [
+        {
+          "names": ["2000002", "2000004"],
+          "reason": {
+            "en": "Top {E/Water} carries with high single-target damage.",
+            "jp": "高い単体ダメージを持つ最強{E/Water}キャラ。",
+            "kr": "높은 단일 대상 피해의 최고 {E/Water} 캐리.",
+            "zh": "高单体伤害的顶级{E/Water}输出。"
+          }
+        }
+      ]
     },
     {
       "floor": 2,
@@ -13,7 +24,18 @@
     {
       "floor": 3,
       "boss_id": "401400252",
-      "restrictions": ["ForceWater"]
+      "restrictions": ["ForceWater"],
+      "recommended": [
+        {
+          "names": ["2000006"],
+          "reason": {
+            "en": "Essential healer with {B/BT_STAT_DEF_UP} and {D/BT_SEALED}.",
+            "jp": "{B/BT_STAT_DEF_UP}と{D/BT_SEALED}を持つ必須ヒーラー。",
+            "kr": "{B/BT_STAT_DEF_UP}과 {D/BT_SEALED}을 가진 필수 힐러.",
+            "zh": "必备治疗师，拥有{B/BT_STAT_DEF_UP}和{D/BT_SEALED}。"
+          }
+        }
+      ]
     }
   ]
 }

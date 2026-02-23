@@ -1,8 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
+import Tabs from '@/app/components/ui/Tabs';
+import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
+import RestrictionIcons from './RestrictionIcons';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { TowerPoolEntry, TowerRestrictionMap, TowerRestrictionSet } from '@/types/tower';
@@ -16,40 +20,20 @@ type Props = {
   restrictionMap: TowerRestrictionMap;
 };
 
-/* ── Recommended character portraits ── */
+/* ── Restrictions list (bullet points) ── */
 
-function RecommendedRow({ charIds }: { charIds: string[] }) {
-  return (
-    <div className="flex flex-wrap gap-1.5">
-      {charIds.map(id => (
-        <div key={id} className="relative h-10 w-10 shrink-0 overflow-hidden rounded border border-white/10">
-          <Image
-            src={`/images/characters/portrait/CT_${id}.webp`}
-            alt=""
-            fill
-            sizes="40px"
-            className="object-cover"
-          />
-        </div>
-      ))}
-    </div>
-  );
-}
-
-/* ── Single restriction set (restrictions + recommended) ── */
-
-function RestrictionSetBlock({ set, restrictionMap, lang, t }: {
+function RestrictionsList({ set, restrictionMap, lang }: {
   set: TowerRestrictionSet;
   restrictionMap: TowerRestrictionMap;
   lang: Lang;
-  t: (key: string) => string;
 }) {
+  const { t } = useI18n();
   const resolved = set.restrictions
     .map(id => restrictionMap[id])
     .filter((r): r is LangMap => r != null);
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-3">
       {resolved.length > 0 ? (
         <ul className="space-y-1">
           {resolved.map((r, i) => (
@@ -64,20 +48,22 @@ function RestrictionSetBlock({ set, restrictionMap, lang, t }: {
       )}
 
       {set.recommended && set.recommended.length > 0 && (
-        <div>
-          <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-500">
-            {t('tower.recommended')}
-          </p>
-          <RecommendedRow charIds={set.recommended} />
-        </div>
+        <RecommendedCharacterList
+          title={false}
+          entries={set.recommended}
+          idMode
+        />
       )}
     </div>
   );
 }
 
+/* ── Main component ── */
+
 export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: Props) {
   const { lang: rawLang, t } = useI18n();
   const lang = rawLang as Lang;
+  const [activeSet, setActiveSet] = useState('0');
 
   const boss = bossMap[entry.boss_id] ?? null;
   const minions = (entry.minions ?? []).map(id => bossMap[id]).filter((b): b is Boss => b != null);
@@ -99,6 +85,7 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: 
   return (
     <div className="card p-4">
       <div className="space-y-4">
+        {/* Boss header */}
         <div className="flex items-center gap-3">
           <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
             <Image
@@ -125,6 +112,7 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: 
           </div>
         </div>
 
+        {/* Minions */}
         {minions.length > 0 && (
           <div>
             <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
@@ -168,28 +156,28 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: 
           {entry.restrictionSets.length === 0 ? (
             <p className="text-sm italic text-zinc-500">{t('tower.no_restrictions')}</p>
           ) : hasSingleSet ? (
-            <RestrictionSetBlock
+            <RestrictionsList
               set={entry.restrictionSets[0]}
               restrictionMap={restrictionMap}
               lang={lang}
-              t={t}
             />
           ) : (
-            <div className="space-y-4">
-              {entry.restrictionSets.map((set, si) => (
-                <div key={si} className="rounded-lg border border-zinc-700/30 bg-zinc-800/30 p-3">
-                  <p className="mb-2 text-xs font-medium text-zinc-400">
-                    {t('tower.set').replace('{n}', String(si + 1))}
-                  </p>
-                  <RestrictionSetBlock
-                    set={set}
-                    restrictionMap={restrictionMap}
-                    lang={lang}
-                    t={t}
-                  />
-                </div>
-              ))}
-            </div>
+            <>
+              <Tabs
+                items={entry.restrictionSets.map((_, i) => String(i))}
+                labels={entry.restrictionSets.map(set => (
+                  <RestrictionIcons restrictions={set.restrictions} />
+                ))}
+                value={activeSet}
+                onChange={setActiveSet}
+                className="mb-4"
+              />
+              <RestrictionsList
+                set={entry.restrictionSets[Number(activeSet)] ?? entry.restrictionSets[0]}
+                restrictionMap={restrictionMap}
+                lang={lang}
+              />
+            </>
           )}
         </div>
       </div>

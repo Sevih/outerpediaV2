@@ -3,17 +3,59 @@
     {
       "floor": 1,
       "boss_id": "401400253",
-      "restrictions": []
+      "restrictions": [],
+      "recommended": [
+        {
+          "names": ["2000003", "2000006"],
+          "reason": {
+            "en": "Flexible picks. {D/BT_STAT_SPD_DOWN} helps control the fight.",
+            "jp": "柔軟な選択肢。{D/BT_STAT_SPD_DOWN}で戦闘をコントロール。",
+            "kr": "유연한 선택. {D/BT_STAT_SPD_DOWN}으로 전투 컨트롤.",
+            "zh": "灵活的选择。{D/BT_STAT_SPD_DOWN}帮助控制战斗。"
+          }
+        }
+      ]
     },
     {
       "floor": 2,
       "boss_id": "401400254",
-      "restrictions": ["Max3"]
+      "restrictions": ["Max3"],
+      "recommended": [
+        {
+          "names": ["2000004"],
+          "reason": {
+            "en": "Solo carry potential with high {S/ATK} and {B/BT_STAT_CRIDMG_UP}.",
+            "jp": "高{S/ATK}と{B/BT_STAT_CRIDMG_UP}でソロキャリー可能。",
+            "kr": "높은 {S/ATK}와 {B/BT_STAT_CRIDMG_UP}으로 솔로 캐리 가능.",
+            "zh": "凭借高{S/ATK}和{B/BT_STAT_CRIDMG_UP}可单人通关。"
+          }
+        },
+        {
+          "names": ["2000008", "2000011"],
+          "reason": {
+            "en": "Support core for Max 3 — covers healing and {B/BT_STAT_DEF_UP}.",
+            "jp": "Max3のサポートコア — 回復と{B/BT_STAT_DEF_UP}をカバー。",
+            "kr": "Max 3의 서포트 코어 — 힐링과 {B/BT_STAT_DEF_UP} 담당.",
+            "zh": "Max 3的辅助核心——覆盖治疗和{B/BT_STAT_DEF_UP}。"
+          }
+        }
+      ]
     },
     {
       "floor": 3,
       "boss_id": "401400255",
-      "restrictions": ["BanHealer", "Max3"]
+      "restrictions": ["BanHealer", "Max3"],
+      "recommended": [
+        {
+          "names": ["2000005", "2000009"],
+          "reason": {
+            "en": "Must-have duo: {D/BT_STAT_ATK_DOWN} + burst for quick kill before you die.",
+            "jp": "必須コンビ：{D/BT_STAT_ATK_DOWN}＋バーストで素早く倒す。",
+            "kr": "필수 듀오: {D/BT_STAT_ATK_DOWN} + 버스트로 빠른 킬.",
+            "zh": "必带组合：{D/BT_STAT_ATK_DOWN}+爆发快速击杀。"
+          }
+        }
+      ]
     }
   ]
 }

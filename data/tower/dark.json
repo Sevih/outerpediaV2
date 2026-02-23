@@ -8,12 +8,43 @@
     {
       "floor": 2,
       "boss_id": "401400251",
-      "restrictions": ["ForceDark"]
+      "restrictions": ["ForceDark"],
+      "recommended": [
+        {
+          "names": ["2000015", "2000016"],
+          "reason": {
+            "en": "{E/Dark} powerhouses with {S/ATK} scaling and {B/BT_STAT_ATK_UP}.",
+            "jp": "{S/ATK}スケーリングと{B/BT_STAT_ATK_UP}を持つ{E/Dark}の主力。",
+            "kr": "{S/ATK} 스케일링과 {B/BT_STAT_ATK_UP}을 가진 {E/Dark} 주력.",
+            "zh": "拥有{S/ATK}成长和{B/BT_STAT_ATK_UP}的{E/Dark}主力。"
+          }
+        }
+      ]
     },
     {
       "floor": 3,
       "boss_id": "401400252",
-      "restrictions": ["ForceDark"]
+      "restrictions": ["ForceDark"],
+      "recommended": [
+        {
+          "names": ["2000017"],
+          "reason": {
+            "en": "Best {C/Defender} for survivability with {B/BT_STAT_DEF_UP} and taunt.",
+            "jp": "{B/BT_STAT_DEF_UP}と挑発を持つ最強{C/Defender}。",
+            "kr": "{B/BT_STAT_DEF_UP}과 도발을 가진 최고 {C/Defender}.",
+            "zh": "最佳{C/Defender}，拥有{B/BT_STAT_DEF_UP}和嘲讽。"
+          }
+        },
+        {
+          "names": ["2000018", "2000019"],
+          "reason": {
+            "en": "Sustained DPS with {D/BT_DOT_BLEED} and {D/BT_DOT_BURN}.",
+            "jp": "{D/BT_DOT_BLEED}と{D/BT_DOT_BURN}の持続DPS。",
+            "kr": "{D/BT_DOT_BLEED}과 {D/BT_DOT_BURN}의 지속 DPS.",
+            "zh": "凭借{D/BT_DOT_BLEED}和{D/BT_DOT_BURN}的持续输出。"
+          }
+        }
+      ]
     }
   ]
 }

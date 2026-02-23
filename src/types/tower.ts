@@ -1,12 +1,18 @@
 import type { LangMap } from './common';
 
+/** A group of recommended characters with a shared reason */
+export type TowerCharacterRecommendation = {
+  names: string[];   // Character IDs (e.g., "2000001")
+  reason: LangMap;
+};
+
 /** A fixed floor (elemental, normal, hard towers + fixed VH floors) */
 export type TowerFloorFixed = {
   floor: number;
   boss_id: string;
   minions?: string[];
   restrictions: string[];
-  recommended?: string[];
+  recommended?: TowerCharacterRecommendation[];
 };
 
 /** A random floor (VH tower — multiple possible boss+restriction sets) */
@@ -17,7 +23,7 @@ export type TowerFloorRandom = {
     boss_id: string;
     minions?: string[];
     restrictions: string[];
-    recommended?: string[];
+    recommended?: TowerCharacterRecommendation[];
   }[];
 };
 
@@ -29,7 +35,7 @@ export type TowerFloor = TowerFloorFixed | TowerFloorRandom;
 /** One restriction+recommendation combo for a pool boss */
 export type TowerRestrictionSet = {
   restrictions: string[];
-  recommended?: string[];
+  recommended?: TowerCharacterRecommendation[];
 };
 
 /** A boss+restrictions entry in a shared random pool (VH tower) */

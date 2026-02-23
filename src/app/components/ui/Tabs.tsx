@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 type TabsProps = {
   items: string[];
-  labels?: string[];
+  labels?: React.ReactNode[];
   value: string;
   onChange: (value: string) => void;
   hashPrefix?: string;

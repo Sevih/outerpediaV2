@@ -29,11 +29,14 @@ export type CharacterRecommendation = {
 type Props = {
   title?: TitlePreset | LangMap | false;
   entries: CharacterRecommendation[];
+  /** When true, names[] contains character IDs instead of character names */
+  idMode?: boolean;
 };
 
 export default function RecommendedCharacterList({
   title = 'default',
   entries,
+  idMode = false,
 }: Props) {
   const { lang, t } = useI18n();
 
@@ -61,11 +64,11 @@ export default function RecommendedCharacterList({
             : lRec(entry.reason, lang);
 
           const chars = entry.names.map((name) => {
-            const charId = nameMap[name];
+            const charId = idMode ? name : nameMap[name];
             if (!charId) return null;
-            const entry = indexMap[charId];
-            const localizedName = entry ? l(entry, 'Fullname', lang) : name;
-            const slug = (entry?.slug as string) ?? name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+            const charData = indexMap[charId];
+            const localizedName = charData ? l(charData, 'Fullname', lang) : name;
+            const slug = (charData?.slug as string) ?? name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
             return { name, charId, localizedName, slug };
           }).filter(Boolean) as { name: string; charId: string; localizedName: string; slug: string }[];
 
@@ -81,7 +84,7 @@ export default function RecommendedCharacterList({
                     <CharacterPortrait
                       id={c.charId}
                       name={c.localizedName}
-                      size="sm"
+                      size="lg"
                       showIcons
                       className="sm:h-16 sm:w-16 transition-transform hover:scale-105"
                     />

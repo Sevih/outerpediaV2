@@ -3,12 +3,43 @@
     {
       "floor": 1,
       "boss_id": "401400250",
-      "restrictions": ["ForceFire"]
+      "restrictions": ["ForceFire"],
+      "recommended": [
+        {
+          "names": ["2000001"],
+          "reason": {
+            "en": "Strong {E/Fire} DPS with {B/BT_STAT_ATK_UP} self-buff.",
+            "jp": "強力な{E/Fire}DPS。{B/BT_STAT_ATK_UP}自己バフ持ち。",
+            "kr": "강력한 {E/Fire} DPS. {B/BT_STAT_ATK_UP} 자체 버프.",
+            "zh": "强力{E/Fire}输出，自带{B/BT_STAT_ATK_UP}增益。"
+          }
+        }
+      ]
     },
     {
       "floor": 2,
       "boss_id": "401400251",
-      "restrictions": ["ForceFire"]
+      "restrictions": ["ForceFire"],
+      "recommended": [
+        {
+          "names": ["2000003", "2000005"],
+          "reason": {
+            "en": "Great {E/Fire} supports with {B/BT_STAT_SPD_UP} utility.",
+            "jp": "優秀な{E/Fire}サポート。{B/BT_STAT_SPD_UP}も付与。",
+            "kr": "훌륭한 {E/Fire} 서포터. {B/BT_STAT_SPD_UP} 유틸리티.",
+            "zh": "优秀的{E/Fire}辅助，提供{B/BT_STAT_SPD_UP}。"
+          }
+        },
+        {
+          "names": ["2000007"],
+          "reason": {
+            "en": "Backup DPS with {D/BT_STAT_DEF_DOWN} on S2.",
+            "jp": "S2で{D/BT_STAT_DEF_DOWN}を付与するサブDPS。",
+            "kr": "S2로 {D/BT_STAT_DEF_DOWN}을 부여하는 서브 DPS.",
+            "zh": "S2施加{D/BT_STAT_DEF_DOWN}的副输出。"
+          }
+        }
+      ]
     },
     {
       "floor": 3,

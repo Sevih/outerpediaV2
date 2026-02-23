@@ -1,14 +1,16 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
 import Tabs from '@/app/components/ui/Tabs';
+import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
+import RestrictionIcons from './RestrictionIcons';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { isRandomFloor } from '@/types/tower';
-import type { TowerFloor, TowerRestrictionMap } from '@/types/tower';
+import type { TowerFloor, TowerRestrictionMap, TowerCharacterRecommendation } from '@/types/tower';
 import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
@@ -109,31 +111,13 @@ function MinionRow({ boss, lang }: { boss: Boss; lang: Lang }) {
   );
 }
 
-/* ── Floor content with boss + minions + restrictions ── */
-
-function RecommendedRow({ charIds }: { charIds: string[] }) {
-  return (
-    <div className="flex flex-wrap gap-1.5">
-      {charIds.map(id => (
-        <div key={id} className="relative h-10 w-10 shrink-0 overflow-hidden rounded border border-white/10">
-          <Image
-            src={`/images/characters/portrait/CT_${id}.webp`}
-            alt=""
-            fill
-            sizes="40px"
-            className="object-cover"
-          />
-        </div>
-      ))}
-    </div>
-  );
-}
+/* ── Floor content with boss + minions + restrictions + recommended ── */
 
 function FloorContent({ boss, minions, restrictions, recommended, lang }: {
   boss: Boss | null;
   minions: Boss[];
   restrictions: LangMap[];
-  recommended?: string[];
+  recommended?: TowerCharacterRecommendation[];
   lang: Lang;
 }) {
   const { t } = useI18n();
@@ -171,7 +155,11 @@ function FloorContent({ boss, minions, restrictions, recommended, lang }: {
           <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
             {t('tower.recommended')}
           </h5>
-          <RecommendedRow charIds={recommended} />
+          <RecommendedCharacterList
+            title={false}
+            entries={recommended}
+            idMode
+          />
         </div>
       )}
     </div>
@@ -208,7 +196,9 @@ export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defau
 
   // Random floor
   const setItems = floor.sets.map((_, i) => String(i));
-  const setLabels = floor.sets.map((_, i) => t('tower.set').replace('{n}', String(i + 1)));
+  const setLabels = floor.sets.map(set => (
+    <RestrictionIcons restrictions={set.restrictions} />
+  ));
   const activeIndex = Number(activeSet);
   const currentSet = floor.sets[activeIndex] ?? floor.sets[0];
   const boss = bossMap[currentSet.boss_id] ?? null;

@@ -8,12 +8,34 @@
     {
       "floor": 2,
       "boss_id": "401400251",
-      "restrictions": ["ForceEarth"]
+      "restrictions": ["ForceEarth"],
+      "recommended": [
+        {
+          "names": ["2000008", "2000010"],
+          "reason": {
+            "en": "Solid {E/Earth} duo. Combine {D/BT_STAT_ATK_DOWN} with burst damage.",
+            "jp": "堅実な{E/Earth}コンビ。{D/BT_STAT_ATK_DOWN}とバーストダメージを組み合わせ。",
+            "kr": "견고한 {E/Earth} 듀오. {D/BT_STAT_ATK_DOWN}과 버스트 데미지 조합.",
+            "zh": "稳固的{E/Earth}组合。{D/BT_STAT_ATK_DOWN}配合爆发伤害。"
+          }
+        }
+      ]
     },
     {
       "floor": 3,
       "boss_id": "401400252",
-      "restrictions": ["ForceEarth"]
+      "restrictions": ["ForceEarth"],
+      "recommended": [
+        {
+          "names": ["2000009"],
+          "reason": {
+            "en": "Boss killer with {S/CHC} scaling and {B/BT_STAT_CRIDMG_UP}.",
+            "jp": "{S/CHC}スケーリングと{B/BT_STAT_CRIDMG_UP}のボスキラー。",
+            "kr": "{S/CHC} 스케일링과 {B/BT_STAT_CRIDMG_UP}의 보스 킬러.",
+            "zh": "凭借{S/CHC}成长和{B/BT_STAT_CRIDMG_UP}的Boss杀手。"
+          }
+        }
+      ]
     }
   ]
 }

@@ -3,7 +3,27 @@
     {
       "floor": 1,
       "boss_id": "401400250",
-      "restrictions": ["ForceLight"]
+      "restrictions": ["ForceLight"],
+      "recommended": [
+        {
+          "names": ["2000011"],
+          "reason": {
+            "en": "Excellent {E/Light} {C/Healer} with team-wide {B/BT_STAT_DEF_UP}.",
+            "jp": "チーム全体に{B/BT_STAT_DEF_UP}を付与する優秀な{E/Light}{C/Healer}。",
+            "kr": "팀 전체에 {B/BT_STAT_DEF_UP}을 부여하는 우수한 {E/Light} {C/Healer}.",
+            "zh": "为全队提供{B/BT_STAT_DEF_UP}的优秀{E/Light}{C/Healer}。"
+          }
+        },
+        {
+          "names": ["2000012", "2000013"],
+          "reason": {
+            "en": "Core DPS pair. Use S3 to apply {D/BT_STAT_DEF_DOWN} then burst.",
+            "jp": "コアDPSペア。S3で{D/BT_STAT_DEF_DOWN}を付与してからバースト。",
+            "kr": "핵심 DPS 쌍. S3로 {D/BT_STAT_DEF_DOWN} 부여 후 버스트.",
+            "zh": "核心输出搭档。用S3施加{D/BT_STAT_DEF_DOWN}后爆发。"
+          }
+        }
+      ]
     },
     {
       "floor": 2,
@@ -13,7 +33,18 @@
     {
       "floor": 3,
       "boss_id": "401400252",
-      "restrictions": ["ForceLight"]
+      "restrictions": ["ForceLight"],
+      "recommended": [
+        {
+          "names": ["2000014"],
+          "reason": {
+            "en": "MVP with {D/BT_STATBUFF_CONVERT_TO_STATDEBUFF} after boss self-buffs.",
+            "jp": "ボスの自己バフ後に{D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}でMVP。",
+            "kr": "보스 자체 버프 후 {D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}로 MVP.",
+            "zh": "在Boss自我增益后凭借{D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}成为MVP。"
+          }
+        }
+      ]
     }
   ]
 }
