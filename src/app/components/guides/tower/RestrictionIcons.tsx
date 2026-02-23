@@ -3,8 +3,8 @@ import Image from 'next/image';
 /* ── Restriction → visual mapping ── */
 
 type IconInfo =
-  | { type: 'element'; value: string; banned: boolean }
-  | { type: 'class'; value: string; banned: boolean }
+  | { type: 'element'; value: string; banned: boolean; atLeast?: number }
+  | { type: 'class'; value: string; banned: boolean; atLeast?: number }
   | { type: 'star'; stars: number; atLeast?: number }
   | { type: 'text'; label: string };
 
@@ -32,6 +32,30 @@ const RESTRICTION_ICON_MAP: Record<string, IconInfo> = {
   BanRanger:     { type: 'class', value: 'Ranger',    banned: true },
   BanHealer:     { type: 'class', value: 'Healer',    banned: true },
   BanMage:       { type: 'class', value: 'Mage',      banned: true },
+
+  // At least N element
+  AtLeast1_Fire:    { type: 'element', value: 'Fire',  banned: false, atLeast: 1 },
+  AtLeast2_Fire:    { type: 'element', value: 'Fire',  banned: false, atLeast: 2 },
+  AtLeast1_Water:   { type: 'element', value: 'Water', banned: false, atLeast: 1 },
+  AtLeast2_Water:   { type: 'element', value: 'Water', banned: false, atLeast: 2 },
+  AtLeast1_Earth:   { type: 'element', value: 'Earth', banned: false, atLeast: 1 },
+  AtLeast2_Earth:   { type: 'element', value: 'Earth', banned: false, atLeast: 2 },
+  AtLeast1_Light:   { type: 'element', value: 'Light', banned: false, atLeast: 1 },
+  AtLeast2_Light:   { type: 'element', value: 'Light', banned: false, atLeast: 2 },
+  AtLeast1_Dark:    { type: 'element', value: 'Dark',  banned: false, atLeast: 1 },
+  AtLeast2_Dark:    { type: 'element', value: 'Dark',  banned: false, atLeast: 2 },
+
+  // At least N class
+  AtLeast1_Striker:  { type: 'class', value: 'Striker',  banned: false, atLeast: 1 },
+  AtLeast2_Striker:  { type: 'class', value: 'Striker',  banned: false, atLeast: 2 },
+  AtLeast1_Defender: { type: 'class', value: 'Defender', banned: false, atLeast: 1 },
+  AtLeast2_Defender: { type: 'class', value: 'Defender', banned: false, atLeast: 2 },
+  AtLeast1_Ranger:   { type: 'class', value: 'Ranger',  banned: false, atLeast: 1 },
+  AtLeast2_Ranger:   { type: 'class', value: 'Ranger',  banned: false, atLeast: 2 },
+  AtLeast1_Healer:   { type: 'class', value: 'Healer',  banned: false, atLeast: 1 },
+  AtLeast2_Healer:   { type: 'class', value: 'Healer',  banned: false, atLeast: 2 },
+  AtLeast1_Mage:     { type: 'class', value: 'Mage',    banned: false, atLeast: 1 },
+  AtLeast2_Mage:     { type: 'class', value: 'Mage',    banned: false, atLeast: 2 },
 
   // Star restrictions
   Only3Star:      { type: 'star', stars: 3 },
@@ -68,29 +92,39 @@ export function RestrictionIcon({ id }: { id: string }) {
   switch (info.type) {
     case 'element':
       return (
-        <span className="relative inline-block h-7 w-7 shrink-0">
-          <Image
-            src={`/images/ui/elem/CM_Element_${info.value}.webp`}
-            alt={info.value}
-            fill
-            sizes="28px"
-            className="object-contain"
-          />
-          {info.banned && <BanOverlay />}
+        <span className="inline-flex items-center gap-0.5 shrink-0">
+          {info.atLeast != null && (
+            <span className="text-xs font-medium text-amber-300">{info.atLeast}×</span>
+          )}
+          <span className="relative inline-block h-7 w-7 shrink-0">
+            <Image
+              src={`/images/ui/elem/CM_Element_${info.value}.webp`}
+              alt={info.value}
+              fill
+              sizes="28px"
+              className="object-contain"
+            />
+            {info.banned && <BanOverlay />}
+          </span>
         </span>
       );
 
     case 'class':
       return (
-        <span className="relative inline-block h-7 w-7 shrink-0">
-          <Image
-            src={`/images/ui/class/CM_Class_${info.value}.webp`}
-            alt={info.value}
-            fill
-            sizes="28px"
-            className="object-contain"
-          />
-          {info.banned && <BanOverlay />}
+        <span className="inline-flex items-center gap-0.5 shrink-0">
+          {info.atLeast != null && (
+            <span className="text-xs font-medium text-amber-300">{info.atLeast}×</span>
+          )}
+          <span className="relative inline-block h-7 w-7 shrink-0">
+            <Image
+              src={`/images/ui/class/CM_Class_${info.value}.webp`}
+              alt={info.value}
+              fill
+              sizes="28px"
+              className="object-contain"
+            />
+            {info.banned && <BanOverlay />}
+          </span>
         </span>
       );
 

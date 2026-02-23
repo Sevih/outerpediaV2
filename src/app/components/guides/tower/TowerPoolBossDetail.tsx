@@ -1,11 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Tabs from '@/app/components/ui/Tabs';
 import BossCompactDisplay from '@/app/components/guides/BossCompactDisplay';
 import MinionsCompactDisplay from '@/app/components/guides/MinionsCompactDisplay';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
-import RestrictionIcons from './RestrictionIcons';
+import TowerRestrictionTabs from './TowerRestrictionTabs';
 import parseText from '@/lib/parse-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
@@ -47,13 +46,18 @@ function RestrictionsList({ set, restrictionMap, lang }: {
         <p className="text-sm italic text-zinc-500">{t('tower.no_restrictions')}</p>
       )}
 
-      {set.recommended && set.recommended.length > 0 && (
-        <RecommendedCharacterList
-          title={false}
-          entries={set.recommended}
-          idMode
-        />
-      )}
+      <div>
+        <h4 className="mb-3">{t('tower.recommended')}</h4>
+        {set.recommended && set.recommended.some(e => e.names.length > 0) ? (
+          <RecommendedCharacterList
+            title={false}
+            entries={set.recommended}
+            idMode
+          />
+        ) : (
+          <p className="text-sm italic text-zinc-500">{t('tower.no_recommended')}</p>
+        )}
+      </div>
     </div>
   );
 }
@@ -81,29 +85,31 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: 
   return (
     <div className="card p-4">
       <div className="space-y-4">
-        {/* Boss header */}
-        <BossCompactDisplay boss={boss} />
+        {/* Main Boss */}
+        <div>
+          <h3 className="mb-3">{t('tower.main_boss')}</h3>
+          <BossCompactDisplay boss={boss} />
+        </div>
 
         {/* Minions */}
         {minions.length > 0 && (
           <div>
-            <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
-              {t('tower.minions')}
-            </h5>
+            <h3 className="mb-3">{t('tower.minions')}</h3>
             <MinionsCompactDisplay minions={minions} />
           </div>
         )}
 
-        {/* Reason */}
+        {/* Advice */}
         {entry.reason && lRec(entry.reason, lang) && (
-          <p className="text-sm leading-relaxed text-zinc-300">{parseText(lRec(entry.reason, lang))}</p>
+          <div>
+            <h3 className="mb-3">{t('tower.advice')}</h3>
+            <p className="text-sm leading-relaxed text-zinc-300">{parseText(lRec(entry.reason, lang))}</p>
+          </div>
         )}
 
-        {/* Restrictions + Recommended */}
+        {/* Restrictions */}
         <div>
-          <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
-            {t('tower.restrictions')}
-          </h5>
+          <h3 className="mb-3">{t('tower.restrictions')}</h3>
 
           {entry.restrictionSets.length === 0 ? (
             <p className="text-sm italic text-zinc-500">{t('tower.no_restrictions')}</p>
@@ -115,11 +121,8 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: 
             />
           ) : (
             <>
-              <Tabs
-                items={entry.restrictionSets.map((_, i) => String(i))}
-                labels={entry.restrictionSets.map(set => (
-                  <RestrictionIcons restrictions={set.restrictions} />
-                ))}
+              <TowerRestrictionTabs
+                restrictionSets={entry.restrictionSets.map(s => s.restrictions)}
                 value={activeSet}
                 onChange={setActiveSet}
                 className="mb-4"

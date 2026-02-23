@@ -7,11 +7,53 @@
   },
   "floors": [
     {
+      "floor": 20,
+      "random": true,
+      "sets": [
+        {
+          "boss_id": "40103020",
+          "minions": ["40103056"],
+          "reason": {
+            "en": "Consistently inflict {D/BT_DOT_LIGHTNING} to deal damage, as she cleanses herself with {B/BT_REMOVE_DEBUFF} at the start of her turn.",
+            "jp": "",
+            "kr": "",
+            "zh": ""
+          },
+          "restrictions": [],
+          "recommended": [
+            {
+              "names": ["2000018","2000082","2000052"],
+              "reason": {
+                "en": "{D/BT_DOT_LIGHTNING} source",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "boss_id": "40103021",
+          "minions": ["40103057"],
+          "restrictions": [],
+          "recommended": [
+            {
+              "names": [],
+              "reason": {
+                "en": "",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "floor": 5,
       "boss_id": "40103017",
-      "minions": [
-        "40103053"
-      ],
+      "minions": ["40103053"],
       "restrictions": [],
       "recommended": [
         {
@@ -28,10 +70,7 @@
     {
       "floor": 10,
       "boss_id": "40103019",
-      "minions": [
-        "40103054",
-        "40103059"
-      ],
+      "minions": ["40103054", "40103059"],
       "restrictions": [],
       "recommended": [
         {
@@ -48,10 +87,7 @@
     {
       "floor": 15,
       "boss_id": "40103018",
-      "minions": [
-        "40103055",
-        "40103060"
-      ],
+      "minions": ["40103055", "40103060"],
       "restrictions": [],
       "recommended": [
         {
@@ -64,17 +100,20 @@
           }
         }
       ]
-    },
+    }
+  ],
+  "randomPool": [
     {
-      "floor": 20,
-      "random": true,
-      "sets": [
+      "boss_id": "40103002",
+      "reason": {
+        "en": "Just focus {P/Mero}.",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
+      "restrictionSets": [
         {
-          "boss_id": "40103020",
-          "minions": [
-            "40103056"
-          ],
-          "restrictions": [],
+          "restrictions": ["AtLeast1_Mage"],
           "recommended": [
             {
               "names": [],
@@ -88,11 +127,7 @@
           ]
         },
         {
-          "boss_id": "40103021",
-          "minions": [
-            "40103057"
-          ],
-          "restrictions": [],
+          "restrictions": ["BanDefender"],
           "recommended": [
             {
               "names": [],
@@ -104,16 +139,37 @@
               }
             }
           ]
-        }
-      ]
-    }
-  ],
-  "randomPool": [
-    {
-      "boss_id": "40103002",
-      "restrictionSets": [
+        },
         {
-          "restrictions": [],
+          "restrictions": ["BanWater"],
+          "recommended": [
+            {
+              "names": [],
+              "reason": {
+                "en": "",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["BanLight"],
+          "recommended": [
+            {
+              "names": [],
+              "reason": {
+                "en": "",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Water"],
           "recommended": [
             {
               "names": [],
@@ -130,11 +186,7 @@
     },
     {
       "boss_id": "40103003",
-      "minions": [
-        "40103026",
-        "40103027",
-        "40103028"
-      ],
+      "minions": ["40103026", "40103027", "40103028"],
       "restrictionSets": [
         {
           "restrictions": [],
@@ -154,11 +206,7 @@
     },
     {
       "boss_id": "40103004",
-      "minions": [
-        "40103031",
-        "40103029",
-        "40103030"
-      ],
+      "minions": ["40103031", "40103029", "40103030"],
       "restrictionSets": [
         {
           "restrictions": [],
@@ -178,11 +226,7 @@
     },
     {
       "boss_id": "40103005",
-      "minions": [
-        "40103032",
-        "40103033",
-        "40103028"
-      ],
+      "minions": ["40103032", "40103033", "40103028"],
       "restrictionSets": [
         {
           "restrictions": [],
@@ -202,11 +246,7 @@
     },
     {
       "boss_id": "40103006",
-      "minions": [
-        "40103036",
-        "40103034",
-        "40103035"
-      ],
+      "minions": ["40103036", "40103034", "40103035"],
       "restrictionSets": [
         {
           "restrictions": [],
@@ -226,11 +266,7 @@
     },
     {
       "boss_id": "40103009",
-      "minions": [
-        "40103039",
-        "40103040",
-        "40103038"
-      ],
+      "minions": ["40103039", "40103040", "40103038"],
       "restrictionSets": [
         {
           "restrictions": [],
@@ -250,11 +286,7 @@
     },
     {
       "boss_id": "40103010",
-      "minions": [
-        "40103042",
-        "40103041",
-        "40103043"
-      ],
+      "minions": ["40103042", "40103041", "40103043"],
       "restrictionSets": [
         {
           "restrictions": [],
@@ -274,9 +306,7 @@
     },
     {
       "boss_id": "40103012",
-      "minions": [
-        "40103045"
-      ],
+      "minions": ["40103045"],
       "restrictionSets": [
         {
           "restrictions": [],
@@ -296,10 +326,7 @@
     },
     {
       "boss_id": "40103013",
-      "minions": [
-        "40103046",
-        "40103047"
-      ],
+      "minions": ["40103046", "40103047"],
       "restrictionSets": [
         {
           "restrictions": [],
@@ -319,11 +346,7 @@
     },
     {
       "boss_id": "40103014",
-      "minions": [
-        "40103050",
-        "40103048",
-        "40103049"
-      ],
+      "minions": ["40103050", "40103048", "40103049"],
       "restrictionSets": [
         {
           "restrictions": [],
@@ -343,9 +366,7 @@
     },
     {
       "boss_id": "40103016",
-      "minions": [
-        "40103052"
-      ],
+      "minions": ["40103052"],
       "restrictionSets": [
         {
           "restrictions": [],

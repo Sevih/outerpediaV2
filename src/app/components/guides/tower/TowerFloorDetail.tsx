@@ -1,11 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Tabs from '@/app/components/ui/Tabs';
 import BossCompactDisplay from '@/app/components/guides/BossCompactDisplay';
 import MinionsCompactDisplay from '@/app/components/guides/MinionsCompactDisplay';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
-import RestrictionIcons from './RestrictionIcons';
+import TowerRestrictionTabs from './TowerRestrictionTabs';
 import parseText from '@/lib/parse-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
@@ -61,44 +60,46 @@ function FloorContent({ boss, minions, restrictions, recommended, reason, lang }
 
   return (
     <div className="space-y-4">
-      {boss ? (
-        <BossCompactDisplay boss={boss} />
-      ) : (
-        <div className="py-4 text-center text-sm text-zinc-500">Loading...</div>
-      )}
+      <div>
+        <h3 className="mb-3">{t('tower.main_boss')}</h3>
+        {boss ? (
+          <BossCompactDisplay boss={boss} />
+        ) : (
+          <div className="py-4 text-center text-sm text-zinc-500">Loading...</div>
+        )}
+      </div>
 
       {minions.length > 0 && (
         <div>
-          <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
-            {t('tower.minions')}
-          </h5>
+          <h3 className="mb-3">{t('tower.minions')}</h3>
           <MinionsCompactDisplay minions={minions} />
         </div>
       )}
 
+      {reason && (
+        <div>
+          <h3 className="mb-3">{t('tower.advice')}</h3>
+          <p className="text-sm leading-relaxed text-zinc-300">{parseText(reason)}</p>
+        </div>
+      )}
+
       <div>
-        <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
-          {t('tower.restrictions')}
-        </h5>
+        <h3 className="mb-3">{t('tower.restrictions')}</h3>
         <RestrictionsList restrictions={restrictions} lang={lang} />
       </div>
 
-      {reason && (
-        <p className="text-sm leading-relaxed text-zinc-300">{parseText(reason)}</p>
-      )}
-
-      {recommended && recommended.length > 0 && (
-        <div>
-          <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
-            {t('tower.recommended')}
-          </h5>
+      <div>
+        <h4 className="mb-3">{t('tower.recommended')}</h4>
+        {recommended && recommended.some(e => e.names.length > 0) ? (
           <RecommendedCharacterList
             title={false}
             entries={recommended}
             idMode
           />
-        </div>
-      )}
+        ) : (
+          <p className="text-sm italic text-zinc-500">{t('tower.no_recommended')}</p>
+        )}
+      </div>
     </div>
   );
 }
@@ -132,10 +133,6 @@ export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defau
   }
 
   // Random floor
-  const setItems = floor.sets.map((_, i) => String(i));
-  const setLabels = floor.sets.map(set => (
-    <RestrictionIcons restrictions={set.restrictions} />
-  ));
   const activeIndex = Number(activeSet);
   const currentSet = floor.sets[activeIndex] ?? floor.sets[0];
   const boss = bossMap[currentSet.boss_id] ?? null;
@@ -157,9 +154,8 @@ export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defau
         {t('tower.random_sets').replace('{n}', String(floor.sets.length))}
       </p>
 
-      <Tabs
-        items={setItems}
-        labels={setLabels}
+      <TowerRestrictionTabs
+        restrictionSets={floor.sets.map(s => s.restrictions ?? [])}
         value={activeSet}
         onChange={setActiveSet}
         className="mb-4"
