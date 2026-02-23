@@ -1,0 +1,55 @@
+{
+  "id": "404102296",
+  "Name": {
+    "en": "Stone Golem Shieldbearer",
+    "kr": "스톤 골렘 실드",
+    "jp": "ストーンゴーレム〈守〉",
+    "zh": "盾牌石魔像"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Water",
+  "level": 80,
+  "icons": "4041022",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 61F",
+      "kr": "비천의 탑 61층",
+      "jp": "飛天の塔61階",
+      "zh": "飞天之塔61层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101061",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shockwave",
+        "kr": "충격파",
+        "jp": "衝撃波",
+        "zh": "冲击波"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to reduce the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    }
+  ]
+}

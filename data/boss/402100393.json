@@ -1,0 +1,55 @@
+{
+  "id": "402100393",
+  "Name": {
+    "en": "Grandula Stinger",
+    "kr": "큰발거미 가시침",
+    "jp": "いばらの大足グモ",
+    "zh": "尖刺巨足蜘蛛"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Light",
+  "level": 50,
+  "icons": "4021003",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 31F",
+      "kr": "비천의 탑 31층",
+      "jp": "飛天の塔31階",
+      "zh": "飞天之塔31层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101031",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shoot Spikes",
+        "kr": "가시 발사",
+        "jp": "トゲ発射",
+        "zh": "发射荆棘"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Arrow_1_Fire"
+    }
+  ]
+}

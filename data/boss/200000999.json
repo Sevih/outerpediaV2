@@ -1,0 +1,108 @@
+{
+  "id": "200000999",
+  "Name": {
+    "en": "Eva",
+    "kr": "에바",
+    "jp": "エヴァ",
+    "zh": "艾娃"
+  },
+  "Surname": {
+    "en": "Faithful Automaton",
+    "kr": "충성스런 자동인형",
+    "jp": "主に忠実なオートマタ",
+    "zh": "忠诚的机械人偶"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000009",
+  "BuffImmune": "",
+  "StatBuffImmune": "HEAL",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 96F",
+      "kr": "비천의 탑 96층",
+      "jp": "飛天の塔96階",
+      "zh": "飞天之塔96层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101096",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Firing L.E.N.S.",
+        "kr": "렌즈를 날립니다.",
+        "jp": "レンズを発射する。",
+        "zh": "L.E.N.S.投射。"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>40%</color>의 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000009"
+    },
+    {
+      "name": {
+        "en": "Healing.",
+        "kr": "치유합니다.",
+        "jp": "治療を開始する。",
+        "zh": "治愈。"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Heals the selected ally's Health by <color=#28d9ed>40%</color>.",
+        "kr": "선택한 아군의 체력을 <color=#28d9ed>40%</color> 회복시킵니다.",
+        "jp": "味方単体のHPを<color=#28d9ed>40%</color>回復させる。",
+        "zh": "使所选友军的生命值恢复<color=#28d9ed>40%</color>。"
+      },
+      "icon": "Skill_Second_2000009"
+    },
+    {
+      "name": {
+        "en": "Generating Boundary.",
+        "kr": "결계를 생성합니다.",
+        "jp": "結界を生成する。",
+        "zh": "生成结界。"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Heals all allies's Health by <color=#28d9ed>35%</color> and grants a <color=#28d9ed>Barrier</color> that absorbs <color=#28d9ed>1500</color> damage for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "아군 전체의 체력을 <color=#28d9ed>35%</color> 회복시키고, <color=#28d9ed>1500</color>의 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "jp": "味方全体のHPを<color=#28d9ed>35%</color>回復させ、<color=#28d9ed>1500</color>の<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "使全体友军的生命值恢复<color=#28d9ed>35%</color>,并获得<color=#28d9ed>1500</color><color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000009"
+    },
+    {
+      "name": {
+        "en": "Unsung Sacrifice",
+        "kr": "보이지 않는 헌신",
+        "jp": "見えない献身",
+        "zh": "看不见的献身"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces <color=#28d9ed>K</color>'s damage taken by <color=#28d9ed>30%</color> while <color=#28d9ed>Eva</color> is alive.\\nRecovers <color=#28d9ed>K</color>'s <color=#28d9ed>Weakness Gauge</color> by <color=#28d9ed>8</color> at the start of the turn.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>에바</color>가 살아있는 동안 <color=#28d9ed>케이</color>가 받는 피해를 <color=#28d9ed>30%</color> 감소시킵니다. \\n턴 시작 시 <color=#28d9ed>케이</color>의 <color=#28d9ed>WG</color>를 <color=#28d9ed>8</color> 회복시킵니다.",
+        "jp": "(パッシブ効果)\\n戦場に<color=#28d9ed>【エヴァ】</color>がいる場合、<color=#28d9ed>【ケイ】</color>の受けるダメージが<color=#28d9ed>30%</color>DOWNする。\\nターン開始時、<color=#28d9ed>【ケイ】</color>の<color=#28d9ed>WG</color>を<color=#28d9ed>8</color>回復する。",
+        "zh": "(被动效果)\\n在<color=#28d9ed>艾娃</color>存活期间,使<color=#28d9ed>凯伊</color>所受伤害降低<color=#28d9ed>30%</color>。\\n回合开始时,使<color=#28d9ed>凯伊</color>的<color=#28d9ed>WG</color>恢复<color=#28d9ed>8</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

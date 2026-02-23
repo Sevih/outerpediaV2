@@ -1,0 +1,92 @@
+{
+  "id": "52000013",
+  "Name": {
+    "en": "Dolly",
+    "kr": "돌리",
+    "jp": "ドーリー",
+    "zh": "多莉"
+  },
+  "Surname": {
+    "en": "Sleeping Beauty",
+    "kr": "슬리핑 뷰티",
+    "jp": "おっとりゆるふわ獣人姫",
+    "zh": "睡美人"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 60,
+  "icons": "2000013",
+  "BuffImmune": "CAST_DEBUFF",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 10F",
+      "kr": "대지의 탑 10층",
+      "jp": "大地の塔10階",
+      "zh": "土之塔第10层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40222010",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "I Sleepwalk",
+        "kr": "몽유병이 있어요",
+        "jp": "まくら投げ",
+        "zh": "梦游症患者"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>[buff_c_tower_element_52121_0]</color> chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>[buff_t_tower_element_52121_0] turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52121_0]</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>[buff_t_tower_element_52121_0]턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52121_0]</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>[buff_t_tower_element_52121_0]ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>[buff_c_tower_element_52121_0]</color>的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>[buff_t_tower_element_52121_0]回合</color>。"
+      },
+      "icon": "Skill_First_2000013"
+    },
+    {
+      "name": {
+        "en": "Still Drowsy",
+        "kr": "자도자도 졸려요",
+        "jp": "眠気さそい",
+        "zh": "越睡越困"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "With a <color=#28d9ed>[buff_c_tower_element_52122_0]</color> chance, decreases all enemies' <color=#28d9ed>Speed</color> and <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>[buff_t_tower_element_52122_0]</color> turns.",
+        "kr": "<color=#28d9ed>[buff_c_tower_element_52122_0]</color> 확률로 적 전체의 <color=#28d9ed>속도</color>와 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>[buff_t_tower_element_52122_0]턴</color> 동안 감소시킵니다.",
+        "jp": "敵全体の<color=#28d9ed>スピード</color>と<color=#28d9ed>会心率</color>を<color=#28d9ed>[buff_c_tower_element_52122_0]</color>の確率で、<color=#28d9ed>[buff_t_tower_element_52122_0]</color>ターンの間DOWNさせる。",
+        "zh": "以<color=#28d9ed>[buff_c_tower_element_52122_0]</color>的概率在<color=#28d9ed>[buff_t_tower_element_52122_0]</color>回合内降低全体敌人的<color=#28d9ed>速度</color>和<color=#28d9ed>暴击率</color>。"
+      },
+      "icon": "Skill_Second_2000013"
+    },
+    {
+      "name": {
+        "en": "Sweet Dreams",
+        "kr": "잘자요 좋은 꿈",
+        "jp": "おやすみなさあい",
+        "zh": "晚安好梦"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>[buff_c_tower_element_52123_0]</color> chance to inflict <color=#28d9ed>Silenced</color> for <color=#28d9ed>[buff_t_tower_element_52123_0] turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>[buff_c_tower_element_52123_0]</color> 확률로 <color=#28d9ed>[buff_t_tower_element_52123_0]턴</color> 동안 <color=#28d9ed>침묵</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52123_0]</color>の確率で<color=#28d9ed>沈黙</color>を<color=#28d9ed>[buff_t_tower_element_52123_0]ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>[buff_c_tower_element_52123_0]</color>的几率使其陷入<color=#28d9ed>沉默</color>状态,持续<color=#28d9ed>[buff_t_tower_element_52123_0]回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000013"
+    }
+  ]
+}

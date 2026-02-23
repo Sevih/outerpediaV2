@@ -1,0 +1,92 @@
+{
+  "id": "52000058",
+  "Name": {
+    "en": "Astei",
+    "kr": "아스테",
+    "jp": "アステ",
+    "zh": "奥斯黛"
+  },
+  "Surname": {
+    "en": "Archbishop of Sacreed",
+    "kr": "자애로운 대주교",
+    "jp": "セイクリッド大司教",
+    "zh": "圣科利德大主教"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Fire",
+  "level": 76,
+  "icons": "2000058",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 18F",
+      "kr": "화염의 탑 18층",
+      "jp": "火の塔18階",
+      "zh": "火之塔第18层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202018",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "The Stars in Heaven",
+        "kr": "하늘에는 별이",
+        "jp": "天にありては星",
+        "zh": "天上有星星"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. Has a <color=#28d9ed>70%</color> chance to remove <color=#28d9ed>1</color> debuff from the caster after attacking.\\nWhen used on the caster's turn, has a <color=#28d9ed>30%</color> chance to activate <color=#28d9ed>The Flowers on Earth</color>. Increases the activation chance of <color=#28d9ed>The Flowers on Earth</color> by <color=#28d9ed>40%</color> if the caster has a buff.\\n\\nUnaffected by and has no effect on the cooldown of <color=#28d9ed>The Flowers on Earth</color>.",
+        "kr": "적을 공격합니다. 공격 후 <color=#28d9ed>70%</color> 확률로 자신의 약화 효과를 <color=#28d9ed>1</color>개 해제합니다.\\n자신의 턴에 사용 시, <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>땅에는 꽃이</color>를 사용합니다. 강화 효과보유 시에는 <color=#28d9ed>땅에는 꽃이</color>의 발동 확률이 <color=#28d9ed>40%</color> 증가합니다.\\n\\n<color=#28d9ed>땅에는 꽃이</color> 스킬 쿨타임의 영향을 주거나 받지 않습니다.",
+        "jp": "敵単体にダメージを与える。攻撃後、<color=#28d9ed>70%</color>の確率で自分の弱体効果を<color=#28d9ed>1個</color>解除する。\\n自分のターンにこのスキルを使用した場合、<color=#28d9ed>30%</color>の確率で<color=#28d9ed>【地にありては花】</color>を発動する。強化効果がある場合、<color=#28d9ed>【地にありては花】</color>の発動確率が<color=#28d9ed>40%</color>UPする。\\n\\n<color=#28d9ed>このスキルで発動された【地にありては花】</color>は【地にありては花】のスキルターンに影響を与えたり受けたりしない。",
+        "zh": "攻击敌人。攻击后,有<color=#28d9ed>70%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时,有<color=#28d9ed>30%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时,<color=#28d9ed>地上有花</color>的触发几率提升\\n<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。"
+      },
+      "icon": "Skill_First_2000058"
+    },
+    {
+      "name": {
+        "en": "The Flowers on Earth",
+        "kr": "땅에는 꽃이",
+        "jp": "地にありては花",
+        "zh": "地上有花"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>15%</color> of Astei's Max Health.",
+        "kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>15%</color> 만큼 회복시킵니다.",
+        "jp": "自分を除く味方全体の<color=#28d9ed>HP</color>を【アステ】の最大HPの<color=#28d9ed>15%</color>回復させる。",
+        "zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>15%</color>。"
+      },
+      "icon": "Skill_Second_2000058"
+    },
+    {
+      "name": {
+        "en": "The Love in Our Hearts",
+        "kr": "사람에게는 사랑이",
+        "jp": "人にありては愛",
+        "zh": "人类有爱"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>20%</color> of Astei's Max Health and grants <color=#28d9ed>Immunity</color> for <color=#28d9ed>2 turn(s)</color>.\\nInflicts reduced <color=#28d9ed>Critical Hit Chance</color> on all enemies for <color=#28d9ed>2 turn(s)</color>. This effect ignores the target's Resilience.",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>20%</color> 만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>면역</color>을 부여합니다.\\n적 전체의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
+        "jp": "味方全体の<color=#28d9ed>HP</color>を【アステ】の最大HPの<color=#28d9ed>20%</color>回復させ、味方全体に<color=#28d9ed>免疫</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n敵全体の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。この効果は対象の効果抵抗を無視する。",
+        "zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>20%</color>,并获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。"
+      },
+      "icon": "Skill_Ultimate_2000058"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "401903",
+  "Name": {
+    "en": "Snow",
+    "kr": "스노우",
+    "jp": "スノー",
+    "zh": "雪诺"
+  },
+  "Surname": {
+    "en": "Heat-Averse Frost Elf",
+    "kr": "더위타는 서리 엘프",
+    "jp": "暑がり屋のエルフ",
+    "zh": "怕热的冰霜精灵"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 118,
+  "icons": "2000003",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 19F",
+      "kr": "비천의 탑 [하드] 19층",
+      "jp": "飛天の塔【ハード】19階",
+      "zh": "飞天之塔【困难】第19层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102019",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Frigid Hail Fire",
+        "kr": "서리 엘프식 연사",
+        "jp": "ヘイルアロー",
+        "zh": "冰霜精灵式连射"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis skill prioritizes enemies on the front.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>凍結</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは、一番前の敵を優先的に攻撃する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使目标陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>2回合</color>。\\n该技能优先攻击处于前排的敌人。"
+      },
+      "icon": "Skill_First_2000003"
+    },
+    {
+      "name": {
+        "en": "Ice Chunk",
+        "kr": "고드름",
+        "jp": "フローズンショット",
+        "zh": "冰凌"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis skill prioritizes enemies on the front.",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>凍結</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは、一番前の敵を優先的に攻撃する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>2回合</color>。\\n该技能优先攻击处于前排的敌人。"
+      },
+      "icon": "Skill_Second_2000003"
+    },
+    {
+      "name": {
+        "en": "Frostblow",
+        "kr": "서릿발",
+        "jp": "ツィズル:霜柱",
+        "zh": "寒霜之箭"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and reduces the target's Priority by <color=#28d9ed>30%</color>.",
+        "kr": "적 전체를 공격하고 대상의 행동 게이지를 <color=#28d9ed>-30%</color> 감소시킵니다.",
+        "jp": "敵全体にダメージを与え、対象の行動ゲージを<color=#28d9ed>-30%</color>DOWNさせる。",
+        "zh": "攻击全体敌人,并使目标的行动值降低<color=#28d9ed>-30%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000003"
+    },
+    {
+      "name": {
+        "en": "Fury Stack IV",
+        "kr": "분노 중첩 IV",
+        "jp": "アンガースタック IV",
+        "zh": "愤怒叠加 IV"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>12.5%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>12.5%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>12.5%</color>UPする。",
+        "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>12.5%</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "400302",
+  "Name": {
+    "en": "Golden Goblin",
+    "kr": "황금 고블린",
+    "jp": "黄金ゴブリン",
+    "zh": "黄金哥布林"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 102,
+  "icons": "4011025",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 3F",
+      "kr": "비천의 탑 [하드] 3층",
+      "jp": "飛天の塔【ハード】3階",
+      "zh": "飞天之塔【困难】第3层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Golden Blessing II",
+        "kr": "황금의 축복 II",
+        "jp": "黄金の祝福II",
+        "zh": "黄金祝福II"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Grants <color=#28d9ed>Invulnerability</color> and increased <color=#28d9ed>Attack</color> to all allies for <color=#28d9ed>1 turn</color> and resets Ultimate Skill cooldowns.\\nGreatly increases damage dealt by the target with the highest attack at the cost of resetting their Priority.",
+        "kr": "아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>무적</color>과  <color=#28d9ed>공격력</color>증가를 부여하고 필살기 쿨타임을 초기화 시킵니다.\\n공격력이 가장 높은 대상의 피해량을 매우 크게 증가시키는 대신 행동 게이지를 초기화 시킵니다.",
+        "jp": "味方全体に<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与させ、味方全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。必殺スキルのターンが初期化する。\\n攻撃力が最も高い味方のダメージを大幅にUPさせる代わり、行動ゲージを最低までDOWNさせる。",
+        "zh": "使全体友军获得<color=#28d9ed>无敌</color>和<color=#28d9ed>攻击力</color>提升效果,持续<color=#28d9ed>1回合</color>,并重置必杀技冷却时间。\\n将重置行动值以代替大幅提升攻击力最高的目标的伤害量。"
+      },
+      "icon": "MT_Attack_Smash_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Golden Barrier",
+        "kr": "황금 방어막",
+        "jp": "ゴールデンシールド",
+        "zh": "黄金防护罩"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nGrants irremovable <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>2 turn(s)</color> at the start of battle.",
+        "kr": "(패시브 효과)\\n전투 입장 시, 자신에게 해제되지 않는 <color=#28d9ed>무적</color> 효과를 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "jp": "(パッシブ効果)\\n(パッシブ効果)\\n戦闘開始時、自分に解除不可能な<color=#28d9ed>無敵</color>効果を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "(被动效果)\\n战斗开始时,使自身获得无法被解除的<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}

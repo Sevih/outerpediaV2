@@ -1,0 +1,92 @@
+{
+  "id": "52000019",
+  "Name": {
+    "en": "Rin",
+    "kr": "린",
+    "jp": "リン",
+    "zh": "琳"
+  },
+  "Surname": {
+    "en": "Slayer of the Wild Spirits",
+    "kr": "백귀야행의 토벌자",
+    "jp": "百鬼夜行を鎮めた霊斬士",
+    "zh": "百鬼夜行的讨伐者"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 84,
+  "icons": "2000019",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 22F",
+      "kr": "물의 탑 22층",
+      "jp": "水の塔22階",
+      "zh": "水之塔第22层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212022",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Requiem",
+        "kr": "진혼",
+        "jp": "鎮魂",
+        "zh": "镇魂"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. Increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color> if the target was a Fire enemy.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。対象が火属性の場合、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。"
+      },
+      "icon": "Skill_First_2000019"
+    },
+    {
+      "name": {
+        "en": "Shura Slash",
+        "kr": "나찰 가르기",
+        "jp": "羅刹斬り",
+        "zh": "分裂罗刹"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\nThis attack always deals <color=#28d9ed>advantageous damage</color>. Resets cooldown if the caster has a buff.",
+        "kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과보유 시 쿨타임이 초기화됩니다.",
+        "jp": "敵全体にダメージを与える。\\nこのスキルは敵の属性を無視し、<color=#28d9ed>有利属性</color>の攻撃判定でダメージを与える。自分に強化効果がある場合、スキルターンが初期化する。",
+        "zh": "攻击全体敌人。\\n该技能总是以<color=#28d9ed>优势属性</color>施展,且附带强化效果时,冷却时间重置。"
+      },
+      "icon": "Skill_Second_2000019"
+    },
+    {
+      "name": {
+        "en": "Doujikiri Yasutsuna",
+        "kr": "도지기리 야스츠나",
+        "jp": "童子切安綱",
+        "zh": "童子切安纲"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "When using this skill, <color=#28d9ed>increases</color> the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\nEach time <color=#28d9ed>Doujikiri Yasutsuna</color> is used increases <color=#28d9ed>Attack</color> by <color=#28d9ed>7%</color>. (Max 3 stacks)",
+        "kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>증가</color>시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 3회 누적)",
+        "jp": "スキル使用時、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間<color=#28d9ed>UP</color>させ、敵全体にダメージを与える。\\n<color=#28d9ed>【童子切安綱】</color>を使用するたびに<color=#28d9ed>攻撃力</color>が<color=#28d9ed>7%</color>UPする。(最大3回累積)",
+        "zh": "使用技能时,使自身<color=#28d9ed>暴击率</color><color=#28d9ed>提升</color>,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,<color=#28d9ed>攻击力</color>都会提升<color=#28d9ed>7%</color>。(最多可叠加3次)"
+      },
+      "icon": "Skill_Ultimate_2000019"
+    }
+  ]
+}

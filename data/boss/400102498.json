@@ -1,0 +1,55 @@
+{
+  "id": "400102498",
+  "Name": {
+    "en": "Nightwatch Ballista",
+    "kr": "기사단 발리스타",
+    "jp": "騎士団兵〈バリスタ〉",
+    "zh": "骑士团弩兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Light",
+  "level": 100,
+  "icons": "4001024",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 82F",
+      "kr": "비천의 탑 82층",
+      "jp": "飛天の塔82階",
+      "zh": "飞天之塔82层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101082",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Intricate Shot",
+        "kr": "정교한 사격",
+        "jp": "精巧な射撃",
+        "zh": "精准射击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>1</color> turns, then attacks an enemy.",
+        "kr": "자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.",
+        "jp": "<color=#28d9ed>1</color>ターンの間、自身の<color=#28d9ed>攻撃力</color>を増加させ、敵単体にダメージを与える。",
+        "zh": "在<color=#28d9ed>1</color>回合内提高自身<color=#28d9ed>攻击力</color>,并攻击敌人。"
+      },
+      "icon": "MT_Attack_Arrow_1_Fire"
+    }
+  ]
+}

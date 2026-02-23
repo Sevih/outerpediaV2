@@ -1,0 +1,87 @@
+{
+  "id": "5050080",
+  "Name": {
+    "en": "Akari",
+    "kr": "아카리",
+    "jp": "アカリ",
+    "zh": "阿卡莉"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 97,
+  "icons": "2000064",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 32F",
+      "kr": "암흑의 탑 32층",
+      "jp": "闇の塔 32階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242032",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Saikashuu Gunnery",
+        "kr": "사이카슈 철포술",
+        "jp": "雑賀衆の鉄砲術",
+        "zh": "杂贺众铁炮术"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_First_2000064"
+    },
+    {
+      "name": {
+        "en": "Barrier of Ryouran",
+        "kr": "요란의 결계",
+        "jp": "擾乱結界",
+        "zh": "嘈杂的结界"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Second_2000064"
+    },
+    {
+      "name": {
+        "en": "Juzumaru Tsunetsugu",
+        "kr": "쥬즈마루 츠네츠구",
+        "jp": "数珠丸恒次",
+        "zh": "数珠丸恒次"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_2000064"
+    }
+  ]
+}

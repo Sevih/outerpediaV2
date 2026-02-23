@@ -1,0 +1,55 @@
+{
+  "id": "5050001",
+  "Name": {
+    "en": "Fiend Knight's Halberd",
+    "kr": "마족 기사 할버드",
+    "jp": "魔族騎士ハルバード",
+    "zh": "魔族戟兵骑士"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 40,
+  "icons": "4001401",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 1F",
+      "kr": "암흑의 탑 1층",
+      "jp": "闇の塔 1階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Demonic Strike",
+        "kr": "내려찍는 마성",
+        "jp": "魔性の裁断",
+        "zh": "魔性重击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to reduce <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>30%</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-30%</color>DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标<color=#28d9ed>行动值</color>降低<color=#28d9ed>-30%</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Dark"
+    }
+  ]
+}

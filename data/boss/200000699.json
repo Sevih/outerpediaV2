@@ -1,0 +1,108 @@
+{
+  "id": "200000699",
+  "Name": {
+    "en": "Sofia",
+    "kr": "소피아",
+    "jp": "ソフィア",
+    "zh": "索菲雅"
+  },
+  "Surname": {
+    "en": "A Sophisticated Lady",
+    "kr": "우아한 귀부인",
+    "jp": "優美な貴族騎士",
+    "zh": "优雅贵妇"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000006",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 99F",
+      "kr": "비천의 탑 99층",
+      "jp": "飛天の塔99階",
+      "zh": "飞天之塔99层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101099",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Lunge",
+        "kr": "런지",
+        "jp": "ランジ",
+        "zh": "弓步刺"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "Skill_First_2000006"
+    },
+    {
+      "name": {
+        "en": "Quick Assault",
+        "kr": "퀵 어설트",
+        "jp": "クイックアサルト",
+        "zh": "快速突击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and increases all allies' <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 아군 전체의 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、味方全体の<color=#28d9ed>スピード</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并使全体友军的<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000006"
+    },
+    {
+      "name": {
+        "en": "Noble Strike",
+        "kr": "노블 스트라이크",
+        "jp": "ノーブルストライク",
+        "zh": "壮丽打击"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy.\\nIf this attack kills an enemy, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>50%</color> and increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n이 공격으로 적을 처치하면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>50%</color> 증가하고 <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "jp": "敵単体にダメージを与える。\\nこの攻撃で敵を倒した時、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>50%</color>UPし、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "zh": "攻击敌人。\\n若该攻击致使敌人死亡,则使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>50%</color>,并使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000006"
+    },
+    {
+      "name": {
+        "en": "Fury Stack V",
+        "kr": "분노 중첩 V",
+        "jp": "アンガースタック V",
+        "zh": "愤怒叠加 V"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>15%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>15%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>15%</color>UPする。",
+        "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

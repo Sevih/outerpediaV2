@@ -1,0 +1,55 @@
+{
+  "id": "5203102",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "kr": "변형된 열화 코어",
+    "jp": "異形の劣化コア",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 131,
+  "icons": "4151011",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 31F",
+      "kr": "비천의 탑 [하드] 31층",
+      "jp": "飛天の塔【ハード】31階",
+      "zh": "飞天之塔【困难】第31层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102031",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Initiate Annihilation Sequence [Heat]",
+        "kr": "섬멸 시퀀스 가동 [고열]",
+        "jp": "殲滅シーケンス稼働【高熱】",
+        "zh": "歼灭代码启动【高温】"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Increases <color=#28d9ed>Attack</color> of an ally, and has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>Burned</color> on the enemy target for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "아군 한 명의 <color=#28d9ed>공격력</color>을 증가시키고, <color=#28d9ed>75%</color> 확률로 적 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "味方単体の<color=#28d9ed>攻撃力</color>をUPさせ、敵単体に<color=#28d9ed>75%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "使1名友军的<color=#28d9ed>攻击力</color>提升,并有<color=#28d9ed>75%</color>的几率对敌人目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "62005202",
+  "Name": {
+    "en": "Rey",
+    "kr": "레이",
+    "jp": "レイ",
+    "zh": "雷伊"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 150,
+  "icons": "2000087",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 70F",
+      "kr": "대지의 탑 70층",
+      "jp": "大地の塔70階",
+      "zh": "土之塔第70层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40222070",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Blade Dance",
+        "kr": "블레이드 댄스",
+        "jp": "ブレードダンス",
+        "zh": "剑刃之舞"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>2</color> <color=#28d9ed>Unique Resource: Natural Talent</color>.If the target is <color=#28d9ed>Water</color>, gains <color=#28d9ed>20</color> <color=#28d9ed>AP</color>.",
+        "kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>2개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
+        "jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>2</color>獲得。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得。",
+        "zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>2</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。"
+      },
+      "icon": "Skill_First_2000087"
+    },
+    {
+      "name": {
+        "en": "Pulse, Release!",
+        "kr": "펄스 전개",
+        "jp": "パルス全開",
+        "zh": "能量释放"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>2</color> <color=#28d9ed>Unique Resource: Natural Talent</color>. This skill ignores <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color> of <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> enemies. <color=#ffd732>Irregular Monsters</color>: Deals increased damage.",
+        "kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>2개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>2</color>獲得。 このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。 <color=#ffd732>イレギュラーモンスター</color>へのダメージ増加。",
+        "zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>2</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。"
+      },
+      "icon": "Skill_Second_2000087"
+    },
+    {
+      "name": {
+        "en": "Faster than Bullets!",
+        "kr": "총알보다 빠르게!",
+        "jp": "弾丸よりも早く!",
+        "zh": "快如子弹!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>2</color> <color=#28d9ed>Unique Resource: Natural Talent</color>. Enemies killed by this skill that are <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> cannot be revived, and bosses take increased damage. If holding <color=#28d9ed>5</color> <color=#28d9ed>Natural Talent</color>, consumes all to reset the cooldown of <color=#28d9ed>Faster Than a Bullet!</color> and ignore <color=#28d9ed>30%</color> <color=#28d9ed>Defense</color>. <color=#ffd732>Irregular Monsters</color>: Deals increased damage.",
+        "kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>2개</color> 획득합니다.\\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>2</color>獲得。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活・蘇生不可、ボスには追加ダメージ。<color=#28d9ed>天賦の才能</color>を<color=#28d9ed>5</color>所持している場合、全て消費して<color=#28d9ed>「弾丸より速く!」</color>のスキルターンを全回復し、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。<color=#ffd732>イレギュラーモンスター</color>へのダメージ増加。",
+        "zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>2</color><color=#28d9ed>「固有资源:天赋」</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活,对首领怪物造成的伤害提高。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。"
+      },
+      "icon": "Skill_Ultimate_2000087"
+    },
+    {
+      "name": {
+        "en": "Improvisation",
+        "kr": "임기응변",
+        "jp": "臨機応変",
+        "zh": "临机应变"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "When hit, grants all allies <color=#28d9ed>Defense Up</color> for <color=#28d9ed>2 turns</color>.",
+        "kr": "피격 시 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color> 증가를 부여합니다.",
+        "jp": "被撃時、味方全体に<color=#28d9ed>防御力増加</color>を<color=#28d9ed>2ターン</color>付与する。",
+        "zh": "受到攻击时,我方全体获得<color=#28d9ed>防御力提升</color>,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

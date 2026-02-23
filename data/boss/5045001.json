@@ -1,0 +1,92 @@
+{
+  "id": "5045001",
+  "Name": {
+    "en": "Eva",
+    "kr": "에바",
+    "jp": "エヴァ",
+    "zh": "艾娃"
+  },
+  "Surname": {
+    "en": "Faithful Automaton",
+    "kr": "충성스런 자동인형",
+    "jp": "主に忠実なオートマタ",
+    "zh": "忠诚的机械人偶"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Light",
+  "level": 50,
+  "icons": "2000009",
+  "BuffImmune": "BT_AGGRO",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 5F",
+      "kr": "빛의 탑 5층",
+      "jp": "光の塔 5階",
+      "zh": "光之塔 5层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232005",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Firing L.E.N.S.",
+        "kr": "렌즈를 날립니다.",
+        "jp": "レンズを発射する。",
+        "zh": "L.E.N.S.投射。"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>40%</color>의 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000009"
+    },
+    {
+      "name": {
+        "en": "Healing.",
+        "kr": "치유합니다.",
+        "jp": "治療を開始する。",
+        "zh": "治愈。"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Heals the selected ally's Health by <color=#28d9ed>40%</color>.",
+        "kr": "선택한 아군의 체력을 <color=#28d9ed>40%</color> 회복시킵니다.",
+        "jp": "味方単体のHPを<color=#28d9ed>40%</color>回復させる。",
+        "zh": "使所选友军的生命值恢复<color=#28d9ed>40%</color>。"
+      },
+      "icon": "Skill_Second_2000009"
+    },
+    {
+      "name": {
+        "en": "Generating Boundary.",
+        "kr": "결계를 생성합니다.",
+        "jp": "結界を生成する。",
+        "zh": "生成结界。"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Heals all allies's Health by <color=#28d9ed>35%</color> and grants a <color=#28d9ed>Barrier</color> that absorbs <color=#28d9ed>1500</color> damage for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "아군 전체의 체력을 <color=#28d9ed>35%</color> 회복시키고, <color=#28d9ed>1500</color>의 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "jp": "味方全体のHPを<color=#28d9ed>35%</color>回復させ、<color=#28d9ed>1500</color>の<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "使全体友军的生命值恢复<color=#28d9ed>35%</color>,并获得<color=#28d9ed>1500</color><color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000009"
+    }
+  ]
+}

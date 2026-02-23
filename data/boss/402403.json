@@ -1,0 +1,55 @@
+{
+  "id": "402403",
+  "Name": {
+    "en": "Maxwell",
+    "kr": "맥스웰",
+    "jp": "マクスウェル",
+    "zh": "麦克斯威尔"
+  },
+  "Surname": {
+    "en": "Heretic Mage",
+    "kr": "이단의 마법사",
+    "jp": "異端の魔法使い",
+    "zh": "异端魔法师"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 123,
+  "icons": "2000028",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "mode": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": null
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ray of Destruction",
+        "kr": "파열의 섬광",
+        "jp": "Xリッパ-",
+        "zh": "破裂闪光"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_First_2000028"
+    }
+  ]
+}

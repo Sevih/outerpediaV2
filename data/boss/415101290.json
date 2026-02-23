@@ -1,0 +1,71 @@
+{
+  "id": "415101290",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "kr": "변형된 열화 코어",
+    "jp": "異形の劣化コア",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 22,
+  "icons": "4151012",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 3F",
+      "kr": "비천의 탑 3층",
+      "jp": "飛天の塔3階",
+      "zh": "飞天之塔3层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Initiate Offensive Sequence [Poison]",
+        "kr": "공격 시퀀스 가동 [맹독]",
+        "jp": "攻撃シーケンス稼働【猛毒】",
+        "zh": "攻击代码启动【剧毒】"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Poisoned</color> on the enemy target for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "<color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다.",
+        "jp": "対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>中毒</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Core Overdrive",
+        "kr": "코어 오버드라이브",
+        "jp": "コアオーバードライブ",
+        "zh": "核心过载"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color> at the start of battle.",
+        "kr": "(패시브 효과)\\n전투 개시 시점에 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>100%</color>UPする。",
+        "zh": "(被动效果)\\n在战斗开始时,使<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "5203702",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "kr": "변형된 열화 코어",
+    "jp": "異形の劣化コア",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 137,
+  "icons": "4151015",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 37F",
+      "kr": "비천의 탑 [하드] 37층",
+      "jp": "飛天の塔【ハード】37階",
+      "zh": "飞天之塔【困难】第37层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102037",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Proactive Entity Degradation",
+        "kr": "능동적 개체 저하",
+        "jp": "能動的個体低下",
+        "zh": "主动个体削弱"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Reduced Attack</color> and <color=#28d9ed>Cursed</color> for <color=#28d9ed>2 turns</color>.",
+        "kr": "적 전체를 공격하여 <color=#28d9ed>공격력 감소</color> 및 <color=#28d9ed>저주</color>를 <color=#28d9ed>2턴</color>동안 부여합니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ、<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,造成<color=#28d9ed>攻击力降低</color>和<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Dark"
+    }
+  ]
+}

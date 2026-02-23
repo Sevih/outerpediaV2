@@ -1,0 +1,50 @@
+{
+  "id": "400102194",
+  "Name": {
+    "en": "Nightwatch Shieldbearer",
+    "kr": "기사단 실드",
+    "jp": "騎士団兵〈盾〉",
+    "zh": "骑士团盾牌兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Dark",
+  "level": 61,
+  "icons": "4001021",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "mode": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": null
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Robust Shield",
+        "kr": "굳건한 방패",
+        "jp": "強固なる盾",
+        "zh": "坚固的盾牌"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Fire"
+    }
+  ]
+}

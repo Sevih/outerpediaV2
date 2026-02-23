@@ -1,0 +1,108 @@
+{
+  "id": "401302",
+  "Name": {
+    "en": "Beth",
+    "kr": "베스",
+    "jp": "ベス",
+    "zh": "贝丝"
+  },
+  "Surname": {
+    "en": "Archdemon's Adorable Minion",
+    "kr": "마왕의 귀여운 권속",
+    "jp": "遊び大好き魔王の眷属♪",
+    "zh": "魔王的可爱眷属"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 112,
+  "icons": "2000025",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 13F",
+      "kr": "비천의 탑 [하드] 13층",
+      "jp": "飛天の塔【ハード】13階",
+      "zh": "飞天之塔【困难】第13层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102013",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Beware the Scissor Girl",
+        "kr": "가위질 소녀 주의보",
+        "jp": "チョキチョキ注意報",
+        "zh": "裁缝少女的警报"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to grant increased <color=#28d9ed>Penetration</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使自身的<color=#28d9ed>穿透力</color>效果提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000025"
+    },
+    {
+      "name": {
+        "en": "Surprise!",
+        "kr": "깜짝 놀랐지?",
+        "jp": "ビックリした?",
+        "zh": "吓了一大跳吧?"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>60%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>60%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000025"
+    },
+    {
+      "name": {
+        "en": "A Present for You!",
+        "kr": "널 위한 선물이야!",
+        "jp": "ぷれぜんとあげるー!",
+        "zh": "专属于你的礼物!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy.\\nDeals significantly increased damage if the caster's <color=#28d9ed>Penetration</color> is currently increased, and deals <color=#28d9ed>5%</color> of the target's Max Health as fixed damage if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
+        "kr": "적을 공격합니다.\\n자신의 <color=#28d9ed>관통력</color>이 증가한 상태라면 피해가 크게 증가하고, 대상이 <color=#28d9ed>출혈</color> 상태라면 대상 최대 체력의 <color=#28d9ed>5%</color> 만큼 고정 피해를 입힙니다.",
+        "jp": "敵単体にダメージを与える。\\n自分に<color=#28d9ed>貫通力</color>UPがある場合、ダメージが大幅にUPし、対象が<color=#28d9ed>出血</color>状態の場合、対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。",
+        "zh": "攻击敌人。\\n若自身的<color=#28d9ed>穿透力</color>处于提升状态,则使伤害大幅提升,并对处于<color=#28d9ed>出血</color>状态的目标造成相当于其生命值上限<color=#28d9ed>5%</color>的固定伤害。"
+      },
+      "icon": "Skill_Ultimate_2000025"
+    },
+    {
+      "name": {
+        "en": "Neural Amplification III",
+        "kr": "신경계 증폭 III",
+        "jp": "神経系増幅 III",
+        "zh": "精神系增幅 III"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Speed by <color=#28d9ed>10%</color> every time the caster takes a turn. (Max 5 stacks)",
+        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>10%</color> 증가합니다. (최대 5회 누적)",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、スピードが<color=#28d9ed>10%</color>UPする。(最大5回まで累積)",
+        "zh": "(被动效果)\\n每到自身回合时,使速度提升<color=#28d9ed>10%</color>。(最多可叠加5次)"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

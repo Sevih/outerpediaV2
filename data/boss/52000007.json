@@ -1,0 +1,92 @@
+{
+  "id": "52000007",
+  "Name": {
+    "en": "Alpha",
+    "kr": "알파",
+    "jp": "アルファ",
+    "zh": "阿尔法"
+  },
+  "Surname": {
+    "en": "The Mystery Girl",
+    "kr": "수수께끼의 소녀",
+    "jp": "謎に包まれたオートマタ",
+    "zh": "神秘少女"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 82,
+  "icons": "2000007",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 21F",
+      "kr": "물의 탑 21층",
+      "jp": "水の塔21階",
+      "zh": "水之塔第21层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212021",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Wailing Rhapsody",
+        "kr": "통곡의 랩소디",
+        "jp": "慟哭のラプソディ",
+        "zh": "痛哭狂想曲"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to reduce the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000007"
+    },
+    {
+      "name": {
+        "en": "Valiant Concerto",
+        "kr": "용맹의 콘체르토",
+        "jp": "勇猛のコンチェルト",
+        "zh": "勇猛协奏曲"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and, with a <color=#28d9ed>70%</color> chance, decreases targets' <color=#28d9ed>Attack</color> for <color=#28d9ed>2</color> turns.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2</color>ターンの間、減少させる。",
+        "zh": "攻击全体敌人,并以<color=#28d9ed>70%</color>的概率在<color=#28d9ed>2</color>回合内降低目标<color=#28d9ed>攻击力</color>。"
+      },
+      "icon": "Skill_Second_2000007"
+    },
+    {
+      "name": {
+        "en": "Night at the Opera",
+        "kr": "나이트 오브 디 오페라",
+        "jp": "ナイト・オブ・ジ・オペラ",
+        "zh": "歌剧之夜"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>50%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000007"
+    }
+  ]
+}

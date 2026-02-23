@@ -1,0 +1,87 @@
+{
+  "id": "5203802",
+  "Name": {
+    "en": "Tamamo-no-Mae",
+    "kr": "타마모노마에",
+    "jp": "タマモノマエ",
+    "zh": "玉藻前"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 138,
+  "icons": "2000080",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 38F",
+      "kr": "비천의 탑 [하드] 38층",
+      "jp": "飛天の塔【ハード】38階",
+      "zh": "飞天之塔【困难】第38层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102038",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Reign of Terror",
+        "kr": "포락지형",
+        "jp": "炮烙ノ形",
+        "zh": "炮烙之刑"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to reduce <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고, <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>을 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率造成<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000080"
+    },
+    {
+      "name": {
+        "en": "Petals of the Stone Mountain",
+        "kr": "석산의 꽃잎",
+        "jp": "石山の花弁",
+        "zh": "石山之花瓣"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\At the start of the turn, Resurrects (Greater) all dead allies and increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>10%</color>.",
+        "kr": "(패시브 효과)\\n턴 시작 시 사망한 모든 아군을 부활(강화)시키고, 본체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
+        "jp": "(パッシブ効果)\\nターン開始時、倒れたすべての味方を復活(強化)させ、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>10%</color>UPする。",
+        "zh": "(被动效果)\\n回合开始时,复活(强化)所有已死亡的友军,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Eightfold Inferno",
+        "kr": "팔열지옥",
+        "jp": "八熱地獄",
+        "zh": "八热地狱"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen using <color=#28d9ed>Encircled field</color>, increases all allies' <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>포락지형</color> 사용 시 <color=#28d9ed>1턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>炮烙ノ形</color>使用時、味方全体の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "zh": "(被动效果)\\n使用<color=#28d9ed>炮烙之刑</color>时,全体友军的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}

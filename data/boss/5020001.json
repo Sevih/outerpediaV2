@@ -1,0 +1,55 @@
+{
+  "id": "5020001",
+  "Name": {
+    "en": "Penguineer Sardine-Wielder",
+    "kr": "펭귄 해적 정어리",
+    "jp": "ペンギン海賊・イワシ",
+    "zh": "鱼叉手企鹅海盗"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 40,
+  "icons": "4011051",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 1F",
+      "kr": "물의 탑 1층",
+      "jp": "水の塔1階",
+      "zh": "水之塔第1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Try These Sarr-dines!",
+        "kr": "정어리 맛좀 볼래?",
+        "jp": "ほら、ニシンだよ!",
+        "zh": "要尝尝沙丁鱼的味道吗?"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to increase the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使自身<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Water"
+    }
+  ]
+}

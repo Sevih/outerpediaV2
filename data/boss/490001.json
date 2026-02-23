@@ -1,0 +1,87 @@
+{
+  "id": "490001",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "kr": "변형된 열화 코어",
+    "jp": "異形の劣化コア",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 101,
+  "icons": "4151013",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 2F",
+      "kr": "비천의 탑 [하드] 2층",
+      "jp": "飛天の塔【ハード】2階",
+      "zh": "飞天之塔【困难】第2层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102002",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Proactive Ally Support",
+        "kr": "능동적 아군 지원",
+        "jp": "能動的味方支援",
+        "zh": "主动支援友军"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Grants a <color=#28d9ed>Barrier</color> and increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turns</color> to the ally with the highest Attack, then increases their Priority by <color=#28d9ed>20%</color>.",
+        "kr": "공격력이 가장 높은 아군에게 <color=#28d9ed>실드</color>와 <color=#28d9ed>치명 확률</color> 증가 효과를 <color=#28d9ed>2턴</color>간 부여한 뒤, 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "jp": "攻撃力が最も高い味方単体に<color=#28d9ed>シールド</color>と<color=#28d9ed>会心率</color>UPを<color=#28d9ed>2ターン</color>の間付与し、行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
+        "zh": "使攻击力最高的友军获得<color=#28d9ed>护盾</color>效果和<color=#28d9ed>暴击率</color>提升效果,持续<color=#28d9ed>2回合</color>,随后使行动值提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Water"
+    },
+    {
+      "name": {
+        "en": "Core Overdrive",
+        "kr": "코어 오버드라이브",
+        "jp": "コアオーバードライブ",
+        "zh": "核心过载"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color> at the start of battle.",
+        "kr": "(패시브 효과)\\n전투 개시 시점에 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>100%</color>UPする。",
+        "zh": "(被动效果)\\n在战斗开始时,使<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Epsilon Pain Control I",
+        "kr": "엡실론의 고통 제어 I",
+        "jp": "イプシロンの苦痛制御I",
+        "zh": "埃普西隆痛苦控制I"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces damage taken from attacks that target all enemies by <color=#28d9ed>20%</color>.\\nIncreases damage taken from single-target attacks by <color=#28d9ed>20%</color>.",
+        "kr": "(패시브 효과)\\n전체 공격으로 입는 피해량이 <color=#28d9ed>20%</color> 감소합니다.\\n단일 공격으로 입는 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n全体攻撃で受けるダメージが<color=#28d9ed>20%</color>DOWNする。\\n単体攻撃で受けるダメージが<color=#28d9ed>20%</color>UPする。",
+        "zh": "(被动效果)\\n使因全体攻击受到的伤害量降低<color=#28d9ed>20%</color>。\\n使因单体攻击受到的伤害量提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

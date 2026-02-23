@@ -1,0 +1,55 @@
+{
+  "id": "405100395",
+  "Name": {
+    "en": "Ghost Hexxer",
+    "kr": "유령 커스",
+    "jp": "カースゴースト",
+    "zh": "诅咒幽灵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 70,
+  "icons": "4051003",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 51F",
+      "kr": "비천의 탑 51층",
+      "jp": "飛天の塔51階",
+      "zh": "飞天之塔51层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101051",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Vengeance",
+        "kr": "원한",
+        "jp": "怨恨",
+        "zh": "怨恨"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    }
+  ]
+}

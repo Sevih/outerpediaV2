@@ -1,0 +1,55 @@
+{
+  "id": "403100493",
+  "Name": {
+    "en": "Owlbear Totemist",
+    "kr": "아울베어 토템",
+    "jp": "聖なる仮面のオウルベア",
+    "zh": "图腾枭熊"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 53,
+  "icons": "4031004",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 34F",
+      "kr": "비천의 탑 34층",
+      "jp": "飛天の塔34階",
+      "zh": "飞天之塔34层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101034",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Mystic Scratch",
+        "kr": "신비한 할퀴기",
+        "jp": "神秘の引っかき",
+        "zh": "神秘抓击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Priority Gauge</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color>를 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-10%</color>DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-10%</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "62005103",
+  "Name": {
+    "en": "Dahlia",
+    "kr": "달리아",
+    "jp": "ダリア",
+    "zh": "达利娅"
+  },
+  "Surname": {
+    "en": "Archdemon of Hubris",
+    "kr": "오만의 마왕",
+    "jp": "傲慢の魔王",
+    "zh": "傲慢魔王"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 150,
+  "icons": "2000068",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 70F",
+      "kr": "물의 탑 70층",
+      "jp": "水の塔70階",
+      "zh": "水之塔第70层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212070",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Icicle Lance",
+        "kr": "아이시클 랜스",
+        "jp": "アイシクルランス",
+        "zh": "冰凌枪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>30%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。"
+      },
+      "icon": "Skill_First_2000068"
+    },
+    {
+      "name": {
+        "en": "Absolute Zero",
+        "kr": "앱솔루트 제로",
+        "jp": "絶対零度",
+        "zh": "绝对零度"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Removes <color=#28d9ed>2</color> buff(s), then attacks all enemies, and inflicts Frozen for 1 turn.",
+        "kr": "강화 효과를 <color=#28d9ed>2개</color> 해제 후 적 전체를 공격하고, 1턴 동안 빙결 상태로 만듭니다.",
+        "jp": "強化効果を<color=#28d9ed>2個</color>解除した後、敵全体にダメージを与え、凍結を1ターンの間付与する。",
+        "zh": "解除<color=#28d9ed>2个</color>强化效果后,攻击全体敌人,并对其造成冰冻效果,持续1回合。"
+      },
+      "icon": "Skill_Second_2000068"
+    },
+    {
+      "name": {
+        "en": "Diamond Dust",
+        "kr": "다이아몬드 더스트",
+        "jp": "ダイヤモンドダスト",
+        "zh": "钻石星尘"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nAfter attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Frozen</color> on all enemies for <color=#28d9ed>1 turn(s)</color> and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Reduced Speed</color> for <color=#28d9ed>2 turn(s)</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "적 전체를 공격합니다.\\n공격 후 적 전체에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>을 부여하고, <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도 감소</color>를 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "敵全体にダメージを与える。\\n攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与し、<color=#28d9ed>100%</color>の確率で敵全体の<color=#28d9ed>スピード</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "攻击全体敌人。\\n攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>冰冻</color>效果,持续<color=#28d9ed>1回合</color>,并有<color=#28d9ed>100%</color>的几率造成<color=#28d9ed>速度降低</color>,持续<color=#28d9ed>2回合</color>。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "Skill_Ultimate_2000068"
+    }
+  ]
+}

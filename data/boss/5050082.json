@@ -1,0 +1,87 @@
+{
+  "id": "5050082",
+  "Name": {
+    "en": "Kuro",
+    "kr": "쿠로",
+    "jp": "クロ",
+    "zh": "小黑"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 97,
+  "icons": "2000079",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 32F",
+      "kr": "암흑의 탑 32층",
+      "jp": "闇の塔 32階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242032",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Be My Friend!",
+        "kr": "친구 포착!",
+        "jp": "友だちみっけ!",
+        "zh": "捕获朋友!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
+        "kr": "적을 공격하고, <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で、<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率造成<color=#28d9ed>标记</color>效果,持续<color=#28d9ed>2回合</color>。\\n攻击后,若目标附带弱化效果,则造成目标生命值上限<color=#28d9ed>2%</color>的固定伤害。"
+      },
+      "icon": "Skill_First_2000079"
+    },
+    {
+      "name": {
+        "en": "It's Not Bedtime Yet!",
+        "kr": "아직 자기 싫어!",
+        "jp": "まだ眠たくない!",
+        "zh": "还不想睡!"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>100%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's counterattack, Revenge, or Agile Response.",
+        "kr": "(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>100%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>-100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "(発動効果)倒れた時、直ちにHPを<color=#28d9ed>10%</color>回復して<color=#28d9ed>復活</color>する。<color=#28d9ed>100%</color>の確率で、敵全体の行動ゲージを<color=#28d9ed>-100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "(触发效果)死亡后,立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>100%</color>的几率使全体敌人的行动值降低<color=#28d9ed>-100%</color>。此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "Skill_Second_2000079"
+    },
+    {
+      "name": {
+        "en": "Soulslayer Role-Play!",
+        "kr": "영참사 놀이!",
+        "jp": "霊斬士ごっこ",
+        "zh": "灵斩师游戏!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase the duration of debuffs by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with <color=#28d9ed>reduced stat</color> effects, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>75%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
+        "jp": "敵全体にダメージを与える。敵に<color=#28d9ed>75%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、<color=#28d9ed>ステータスDOWN</color>効果がない対象には対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
+        "zh": "攻击全体敌人。有<color=#28d9ed>75%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果,并无视免疫效果,且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后,对未附带<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>2%</color>的固定伤害。"
+      },
+      "icon": "Skill_Ultimate_2000079"
+    }
+  ]
+}

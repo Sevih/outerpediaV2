@@ -1,0 +1,55 @@
+{
+  "id": "5040003",
+  "Name": {
+    "en": "Paladin Mace-Wielder",
+    "kr": "신성 기사단 메이스",
+    "jp": "神聖騎士団〈槌矛〉",
+    "zh": "神圣骑士团锤矛兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Light",
+  "level": 45,
+  "icons": "4001063",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 3F",
+      "kr": "빛의 탑 3층",
+      "jp": "光の塔 3階",
+      "zh": "光之塔 3层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Mace Flurry",
+        "kr": "메이스 연격",
+        "jp": "槌矛連撃",
+        "zh": "钉头锤连击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Light"
+    }
+  ]
+}

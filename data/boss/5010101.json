@@ -1,0 +1,55 @@
+{
+  "id": "5010101",
+  "Name": {
+    "en": "Magnolia Guard Mage",
+    "kr": "매그놀리아 마법사 가드",
+    "jp": "マグノリアの魔法使い〈防〉",
+    "zh": "麦格诺里亚防御魔法师"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Fire",
+  "level": 42,
+  "icons": "4001041",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 2F",
+      "kr": "화염의 탑 2층",
+      "jp": "火の塔2階",
+      "zh": "火之塔第2层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202002",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Barrier Push",
+        "kr": "배리어 푸시",
+        "jp": "バリアプッシュ",
+        "zh": "势不可挡"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "kr": "적을 공격합니다. 이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "jp": "敵単体にダメージを与える。このスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "zh": "攻击敌人。自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    }
+  ]
+}

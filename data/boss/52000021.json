@@ -1,0 +1,92 @@
+{
+  "id": "52000021",
+  "Name": {
+    "en": "Hanbyul Lee",
+    "kr": "이한별",
+    "jp": "イ・ハンビョル",
+    "zh": "李寒星"
+  },
+  "Surname": {
+    "en": "Twinkling Little Angel",
+    "kr": "반짝반짝 작은 천사",
+    "jp": "天真爛漫☆天使ちゃん",
+    "zh": "闪耀的小天使"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Earth",
+  "level": 76,
+  "icons": "2000021",
+  "BuffImmune": "CAST_BUFF",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 18F",
+      "kr": "대지의 탑 18층",
+      "jp": "大地の塔18階",
+      "zh": "土之塔第18层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40222018",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Max! Heart Catch!",
+        "kr": "맥스! 하트캐치!",
+        "jp": "マックス☆ハートキャッチ",
+        "zh": "麦克斯!摄心!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>[buff_c_tower_element_52201_1]</color> chance to increase the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>[buff_v_tower_element_52201_1]</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52201_1]</color> 확률로 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[buff_v_tower_element_52201_1]</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52201_1]</color>の確率で味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>[buff_v_tower_element_52201_1]</color>UPする。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "zh": "攻击敌人,并有<color=#28d9ed>[buff_c_tower_element_52201_1]</color>的几率使全体友军的<color=#28d9ed>行动值</color>恢复<color=#28d9ed>[buff_v_tower_element_52201_1]</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
+      },
+      "icon": "Skill_First_2000021"
+    },
+    {
+      "name": {
+        "en": "Splash Star",
+        "kr": "스플래시 스타",
+        "jp": "スプラッシュ☆スター",
+        "zh": "星光四射"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Increases all allies' <color=#28d9ed>Defense</color> for <color=#28d9ed>[buff_t_tower_element_52202_0] turn(s)</color>.",
+        "kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[buff_t_tower_element_52202_0]턴</color> 동안 증가시킵니다.",
+        "jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>[buff_t_tower_element_52202_0]ターン</color>の間UPさせる。",
+        "zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52202_0]回合</color>。"
+      },
+      "icon": "Skill_Second_2000021"
+    },
+    {
+      "name": {
+        "en": "Twinkle Twinkle ☆",
+        "kr": "반짝반짝 ☆ 트윙클",
+        "jp": "キラキラ☆トゥインクル",
+        "zh": "一闪一闪☆亮晶晶"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>[buff_c_tower_element_52203_0]</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>[buff_t_tower_element_52203_0] turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>[buff_c_tower_element_52203_0]</color> 확률로 대상을 <color=#28d9ed>[buff_t_tower_element_52203_0]턴</color> 동안 <color=#28d9ed>도발</color>합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52203_0]</color>の確率で対象を<color=#28d9ed>[buff_t_tower_element_52203_0]ターン</color>の間<color=#28d9ed>挑発</color>する。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>[buff_c_tower_element_52203_0]</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>[buff_t_tower_element_52203_0]回合</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
+      },
+      "icon": "Skill_Ultimate_2000021"
+    }
+  ]
+}

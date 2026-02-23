@@ -1,0 +1,103 @@
+{
+  "id": "62005001",
+  "Name": {
+    "en": "Liselotte",
+    "kr": "리젤로테",
+    "jp": "リーゼロッテ",
+    "zh": "莉婕洛特"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 140,
+  "icons": "2000098",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 60F",
+      "kr": "화염의 탑 60층",
+      "jp": "火の塔60階",
+      "zh": "火之塔第60层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202060",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Fake Meteor",
+        "kr": "모조 유성",
+        "jp": "模造流星",
+        "zh": "伪流星"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and heals the ally with the lowest Health by <color=#28d9ed>15%</color>.",
+        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 체력을 <color=#28d9ed>15%</color> 회복시킵니다.",
+        "jp": "敵単体にダメージを与え、残りHPが最も低い味方単体のHPを<color=#28d9ed>15%</color>回復する。",
+        "zh": "攻击敌人,并恢复生命值最低的友军<color=#28d9ed>15%</color>生命\\n值。"
+      },
+      "icon": "Skill_First_2000098"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Stars",
+        "kr": "별의 축복",
+        "jp": "星の祝福",
+        "zh": "星辰的祝福"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect)\\nWhen an ally uses an attack that targets all enemies, all allies gain <color=#28d9ed>Barrier</color> and <color=#28d9ed>Defense</color> increase for <color=#28d9ed>2 turns.</color>The amount of the Barrier strength is proportional to the target's Max Health.",
+        "kr": "(발동 효과)\\n아군이 전체 공격을 했을 때, 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>방어력</color> 증가를 부여합니다. 실드량은 대상 최대 체력에 비례합니다.",
+        "jp": "(発動効果)\\n味方が全体攻撃時、味方全体に<color=#28d9ed>シールド</color>と<color=#28d9ed>防御力</color>UPを<color=#28d9ed>2ターン</color>の間付与する。シールド量は対象の最大HPが高いほどUPする。",
+        "zh": "(触发效果)\\n友军发动全体攻击时,赋予全体友军<color=#28d9ed>护盾</color>和<color=#28d9ed>防御力</color>增加效果,持续<color=#28d9ed>2回合</color>。护盾量根据目标生命值上限等比提升。"
+      },
+      "icon": "Skill_Second_2000098"
+    },
+    {
+      "name": {
+        "en": "Astra Luminous",
+        "kr": "아스트라 루미너스",
+        "jp": "アストラ・ルミナス",
+        "zh": "奥斯黛拉·露米纳斯"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Removes all debuffs and heals all allies by <color=#28d9ed>35%</color>. Also reduces Skill Cooldowns of all allies excluding the caster by <color=#28d9ed>1 turn</color>.",
+        "kr": "아군 전체의 모든 약화 효과를 해제하고, 아군 전체의 체력을 <color=#28d9ed>35%</color> 회복시킵니다. 그리고 자신을 제외한 아군 전체의 스킬 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "味方全体のすべての弱体効果を解除し、味方全体のHPを<color=#28d9ed>35%</color>回復する。また、自分を除く味方全体のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "zh": "解除全体友军的所有弱化效果,恢复全体友军\\n<color=#28d9ed>35%</color>生命值。并使除了自身以外的全体友军技能冷却时间减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000098"
+    },
+    {
+      "name": {
+        "en": "Noblesse Oblige",
+        "kr": "노블레스 오블리주",
+        "jp": "ノブレス・オブリージュ",
+        "zh": "贵族义务"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Allies with a Barrier take reduced damage.",
+        "kr": "실드를 보유한 아군이 받는 피해가 감소합니다.",
+        "jp": "シールドを持つ味方が受けるダメージが減少。",
+        "zh": "持有护盾的我方受到的伤害减少。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}

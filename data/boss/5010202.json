@@ -1,0 +1,55 @@
+{
+  "id": "5010202",
+  "Name": {
+    "en": "Dungeon Guardian Blade-Wielder",
+    "kr": "던전 가디언 블레이드",
+    "jp": "ダンジョンガーディアン〈刃〉",
+    "zh": "剑士暗堡守护者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 45,
+  "icons": "4041002",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 3F",
+      "kr": "화염의 탑 3층",
+      "jp": "火の塔3階",
+      "zh": "火之塔第3层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Plasma Sword",
+        "kr": "플라즈마 소드",
+        "jp": "プラズマソード",
+        "zh": "等离子剑"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    }
+  ]
+}

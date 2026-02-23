@@ -1,0 +1,108 @@
+{
+  "id": "401103",
+  "Name": {
+    "en": "Tio",
+    "kr": "티오",
+    "jp": "ティオ",
+    "zh": "蒂欧"
+  },
+  "Surname": {
+    "en": "Gentle Healer",
+    "kr": "다정한 치유사",
+    "jp": "親切な救護師",
+    "zh": "亲切的治疗师"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Fire",
+  "level": 110,
+  "icons": "2000036",
+  "BuffImmune": "",
+  "StatBuffImmune": "HEAL",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 11F",
+      "kr": "비천의 탑 [하드] 11층",
+      "jp": "飛天の塔【ハード】11階",
+      "zh": "飞天之塔【困难】第11层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102011",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Simple Self-defense",
+        "kr": "간단한 호신술",
+        "jp": "とっておきの護身武器",
+        "zh": "简易护身术"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
+        "jp": "敵単体にダメージを与え、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
+        "zh": "攻击敌人,并使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身<color=#28d9ed>生命值上限</color>越高,则护盾量越高。"
+      },
+      "icon": "Skill_First_2000036"
+    },
+    {
+      "name": {
+        "en": "Basic First Aid",
+        "kr": "기본적인 응급처치",
+        "jp": "基本的な応急処置",
+        "zh": "基本急救"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect)\\nThe <color=#28d9ed>Agile Response</color> effect is activated every <color=#28d9ed>2 turns</color>.\\nRemoves <color=#28d9ed>2</color> <color=#28d9ed>debuff(s)</color> and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>30%</color>.",
+        "kr": "(발동 효과)\\n<color=#28d9ed>2턴</color>마다 <color=#28d9ed>신속 대응</color>효과가 발생합니다.\\n아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>2</color>개 해제하고 <color=#28d9ed>체력</color>을 <color=#28d9ed>30%</color> 회복시킵니다.",
+        "jp": "(発動効果)\\n<color=#28d9ed>2ターン</color>ごとに<color=#28d9ed>【迅速対応】</color>効果を発動する。\\n味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>2</color>個解除し、<color=#28d9ed>HP</color>を<color=#28d9ed>30%</color>回復させる。",
+        "zh": "(触发效果)\\n每<color=#28d9ed>2回合</color>,触发<color=#28d9ed>迅速应对</color>效果。\\n解除全体友军的<color=#28d9ed>2</color>个<color=#28d9ed>弱化效果</color>,并使<color=#28d9ed>生命值</color>恢复<color=#28d9ed>30%</color>。"
+      },
+      "icon": "Skill_Second_2000036"
+    },
+    {
+      "name": {
+        "en": "This Shot Won't Hurt",
+        "kr": "하나도 안 아픈 주사",
+        "jp": "全然痛くないお注射",
+        "zh": "完全不痛的注射"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "<color=#28d9ed>Heals</color> selected ally by <color=#28d9ed>70%</color> and increases the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "선택한 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>70%</color> 회복시키고, <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "jp": "味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>70%</color>回復させ、<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "使所选友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>70%</color>,并使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000036"
+    },
+    {
+      "name": {
+        "en": "Epsilon Complex Enhancement IV",
+        "kr": "엡실론의 복합 강화 IV",
+        "jp": "イプシロンの複合強化IV",
+        "zh": "埃普西隆的综合强化IV"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Defense</color> by <color=#28d9ed>5%</color> when hit. (Max 10 stacks)\\nAdditionally, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>10%</color> when hit.\\n\\nWhen <color=#28d9ed>Tio</color> uses <color=#28d9ed>Basic First Aid</color>, she increases <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>20%</color>.",
+        "kr": "(패시브 효과)\\n피격 시, <color=#28d9ed>방어력</color>이 <color=#28d9ed>5%</color> 증가합니다.(최대 10회 누적)\\n추가로 피격 시 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.\\n\\n<color=#28d9ed>티오</color>는 <color=#28d9ed>기본적인 응급 처치</color> 사용 시 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "jp": "(パッシブ効果)\\nダメージを受けた場合、<color=#28d9ed>回避</color>が<color=#28d9ed>5%</color>UPする。(最大10回まで累積)\\nまた、ダメージを受けた場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。\\n\\n<color=#28d9ed>【ティオ】</color>が<color=#28d9ed>【基本的な応急処置】</color>使用時、味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "zh": "(被动效果)\\n受到攻击时,使<color=#28d9ed>回避</color>提升<color=#28d9ed>5%</color>。(最多可叠加10次)\\n额外受到攻击时,使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。\\n\\n当<color=#28d9ed>蒂欧</color>使用<color=#28d9ed>基本急救</color>时,使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

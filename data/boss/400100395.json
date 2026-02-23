@@ -1,0 +1,50 @@
+{
+  "id": "400100395",
+  "Name": {
+    "en": "SC0UT3R Pontiff",
+    "kr": "스카우터 제사장",
+    "jp": "スカウター長司祭",
+    "zh": "傀儡祭司长"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 78,
+  "icons": "4001003",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "mode": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": null
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Inflame",
+        "kr": "점화",
+        "jp": "点火",
+        "zh": "点火"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    }
+  ]
+}

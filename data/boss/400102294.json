@@ -1,0 +1,55 @@
+{
+  "id": "400102294",
+  "Name": {
+    "en": "Nightwatch Waraxe-Wielder",
+    "kr": "기사단 워액스",
+    "jp": "騎士団兵〈斧〉",
+    "zh": "骑士团战斧兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 60,
+  "icons": "4001022",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 41F",
+      "kr": "비천의 탑 41층",
+      "jp": "飛天の塔41階",
+      "zh": "飞天之塔41层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101041",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Castigate",
+        "kr": "처단",
+        "jp": "処断",
+        "zh": "处决"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Fire"
+    }
+  ]
+}

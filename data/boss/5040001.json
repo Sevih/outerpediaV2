@@ -1,0 +1,55 @@
+{
+  "id": "5040001",
+  "Name": {
+    "en": "Paladin Trident-Wielder",
+    "kr": "신성 기사단 트라이던트",
+    "jp": "神聖騎士団〈三戟〉",
+    "zh": "神圣骑士团叉戟兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 45,
+  "icons": "4001061",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 3F",
+      "kr": "빛의 탑 3층",
+      "jp": "光の塔 3階",
+      "zh": "光之塔 3层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Trident Thrust",
+        "kr": "삼지창 찌르기",
+        "jp": "三戟突き",
+        "zh": "三叉戟刺击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color>를 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-10%</color>DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-10%</color>。"
+      },
+      "icon": "MT_Attack_Spear_1_Water"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "5203902",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "kr": "변형된 열화 코어",
+    "jp": "異形の劣化コア",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 139,
+  "icons": "4151015",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 39F",
+      "kr": "비천의 탑 [하드] 39층",
+      "jp": "飛天の塔【ハード】39階",
+      "zh": "飞天之塔【困难】第39层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102039",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ally Support System",
+        "kr": "아군 지원 시스템",
+        "jp": "味方支援システム",
+        "zh": "友军支援系统"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Increases all allies' <color=#28d9ed>Attack</color>, <color=#28d9ed>Defense</color>, and <color=#28d9ed>Speed</color> at the start of the caster's turn.",
+        "kr": "자신의 턴 마다 아군 전체의 <color=#28d9ed>공격력</color>, <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 뒤, 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color>증가시킵니다.",
+        "jp": "自分のターンが来るたびに、味方全体の<color=#28d9ed>攻撃力</color>、<color=#28d9ed>防御力</color><color=#28d9ed>2ターン</color>間UPさせ、味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。",
+        "zh": "每到自身回合时,使全体友军的<color=#28d9ed>攻击力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>,并使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Flash Protocol",
+        "kr": "플래시 프로토콜",
+        "jp": "フラッシュプロトコル",
+        "zh": "协闪光协议"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "At the start of battle, takes the first turn.",
+        "kr": "전투 입장 시 가장 빠르게 턴을 획득합니다.",
+        "jp": "戦闘開始時、最速でターンを獲得する。",
+        "zh": "进入战斗时,最先获得回合。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

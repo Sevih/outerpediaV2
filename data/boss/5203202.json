@@ -1,0 +1,55 @@
+{
+  "id": "5203202",
+  "Name": {
+    "en": "Mutated Fiend Knight's Mace",
+    "kr": "변이된 마족 기사 몽둥이",
+    "jp": "変異した魔族騎士<こん棒>",
+    "zh": "变异魔族骑士棍棒"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 132,
+  "icons": "4011091",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 32F",
+      "kr": "비천의 탑 [하드] 32층",
+      "jp": "飛天の塔【ハード】32階",
+      "zh": "飞天之塔【困难】第32层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102032",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Cruel Flaying",
+        "kr": "잔혹한 무두질",
+        "jp": "残酷な鍛錬",
+        "zh": "残酷剥皮"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and grants <color=#28d9ed>Bleeding</color> for <color=#28d9ed>2</color> turns at a <color=#28d9ed>75%</color> chance.",
+        "kr": "적을 공격하고 <color=#28d9ed>75%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>75%</color>の確率で対象に<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>出血</color>を付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>75%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Earth"
+    }
+  ]
+}

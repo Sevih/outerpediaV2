@@ -1,0 +1,55 @@
+{
+  "id": "5040009",
+  "Name": {
+    "en": "Sacred Priest of Combat",
+    "kr": "신성 사제 전투",
+    "jp": "神聖司祭〈戦闘〉",
+    "zh": "神圣祭司战斗"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Light",
+  "level": 40,
+  "icons": "4001071",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 1F",
+      "kr": "빛의 탑 1층",
+      "jp": "光の塔 1階",
+      "zh": "光之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ploughing the Brine",
+        "kr": "수면 가르기",
+        "jp": "水面斬り",
+        "zh": "分水斩"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and grants increased <color=#28d9ed>Speed</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Water"
+    }
+  ]
+}

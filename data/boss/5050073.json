@@ -1,0 +1,76 @@
+{
+  "id": "5050073",
+  "Name": {
+    "en": "Faenan",
+    "kr": "파이난",
+    "jp": "ファイナン",
+    "zh": "菲楠"
+  },
+  "Surname": {
+    "en": "Curious Priestess",
+    "kr": "호기심 많은 사제",
+    "jp": "冒険に憧れる見習い神官",
+    "zh": "充满好奇心的祭司"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 66,
+  "icons": "2000027",
+  "BuffImmune": "HEAL",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 13F",
+      "kr": "암흑의 탑 13층",
+      "jp": "闇の塔 13階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242013",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Luster Explosion",
+        "kr": "광휘폭발",
+        "jp": "ライトバースト",
+        "zh": "光辉爆炸"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nDamage increases greatly if all other allies have died.",
+        "kr": "적을 공격합니다.\\n아군이 모두 사망한 상태라면 피해량이 매우 크게 증가합니다.",
+        "jp": "敵単体にダメージを与える。\\n味方全体が倒れている場合、ダメージがさらに大幅UPする。",
+        "zh": "攻击敌人。\\n若友军全部死亡,则使伤害量大幅提升。"
+      },
+      "icon": "Skill_First_2000027"
+    },
+    {
+      "name": {
+        "en": "Lunar Protection",
+        "kr": "달의 가호",
+        "jp": "月女神のご加護",
+        "zh": "月之庇护"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Fully heals the <color=#28d9ed>Health</color> of all allies except the caster.",
+        "kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 모두 회복시킵니다.",
+        "jp": "自分以外の味方全体の<color=#28d9ed>HP</color>を全回復させる。",
+        "zh": "使除自身外全体友军的<color=#28d9ed>生命值</color>全部恢复。"
+      },
+      "icon": "Skill_Ultimate_2000027"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "5050085",
+  "Name": {
+    "en": "Maxwell",
+    "kr": "맥스웰",
+    "jp": "マクスウェル",
+    "zh": "麦克斯威尔"
+  },
+  "Surname": {
+    "en": "Heretic Mage",
+    "kr": "이단의 마법사",
+    "jp": "異端の魔法使い",
+    "zh": "异端魔法师"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 90,
+  "icons": "2000028",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 25F",
+      "kr": "암흑의 탑 25층",
+      "jp": "闇の塔 25階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242025",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ray of Destruction",
+        "kr": "파열의 섬광",
+        "jp": "Xリッパ-",
+        "zh": "破裂闪光"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_First_2000028"
+    },
+    {
+      "name": {
+        "en": "Formless Lasso",
+        "kr": "무형의 올가미",
+        "jp": "無形の策略",
+        "zh": "无形圈套"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. After attacking, increases <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>50%</color> for <color=#28d9ed>3 turn(s)</color>. However, reduces <color=#28d9ed>Resilience</color> by <color=#28d9ed>100%</color> for <color=#28d9ed>2 turn(s)</color> as a side effect.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>50%</color> 증가하지만, 그 반동으로 <color=#28d9ed>2턴</color> 동안<color=#28d9ed> 효과 저항</color>이 <color=#28d9ed>100%</color> 감소합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後<color=#28d9ed>会心率</color>が<color=#28d9ed>3ターン</color>の間<color=#28d9ed>50%</color>UPするが、<color=#28d9ed>効果抵抗</color>が<color=#28d9ed>2ターン</color>の間<color=#28d9ed>100%</color>DOWNする。",
+        "zh": "攻击全体敌人。攻击后,使<color=#28d9ed>暴击率</color>提升<color=#28d9ed>50%</color>,持续<color=#28d9ed>3回合</color>,但其副作用会使<color=#28d9ed>效果抵抗</color>降低<color=#28d9ed>\\n100%</color>,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000028"
+    },
+    {
+      "name": {
+        "en": "Mana Converter",
+        "kr": "마력 전환 기구",
+        "jp": "マナ・エクスプロージョン",
+        "zh": "魔力转换器"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) Activates <color=#28d9ed>Mana Converter</color> and deals additional damage to all enemies if <color=#28d9ed>Ray of Destruction</color> scores a <color=#28d9ed>critical hit</color>.",
+        "kr": "(발동 효과) <color=#28d9ed>파열의 섬광</color>이 <color=#28d9ed>치명 공격</color>으로 적중하면, <color=#28d9ed>마력 전환 기구</color>가 활성화되어 적 전체에게 추가적인 피해를 입힙니다.",
+        "jp": "(発動効果)<color=#28d9ed>【Xリッパー】</color>で<color=#28d9ed>会心</color>が発生した場合、<color=#28d9ed>【マナ・エクスプロージョン】</color>を発動し、敵全体に追加でダメージを与える。",
+        "zh": "(触发效果)若<color=#28d9ed>破裂闪光</color>以<color=#28d9ed>暴击</color>命中,则激活<color=#28d9ed>魔力转换器</color>,对全体敌人造成额外伤害。"
+      },
+      "icon": "Skill_Second_2000028"
+    }
+  ]
+}

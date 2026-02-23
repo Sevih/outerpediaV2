@@ -1,0 +1,55 @@
+{
+  "id": "400105497",
+  "Name": {
+    "en": "Fiend Squad Leader",
+    "kr": "마족 행동대장",
+    "jp": "魔族の行動隊長",
+    "zh": "魔族执行队长"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 91,
+  "icons": "4001054",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 72F",
+      "kr": "비천의 탑 72층",
+      "jp": "飛天の塔72階",
+      "zh": "飞天之塔72层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101072",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Throw Knife",
+        "kr": "투검",
+        "jp": "投剣",
+        "zh": "斗剑"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    }
+  ]
+}

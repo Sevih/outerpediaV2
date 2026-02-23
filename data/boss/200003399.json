@@ -1,0 +1,108 @@
+{
+  "id": "200003399",
+  "Name": {
+    "en": "Adelie",
+    "kr": "아델리",
+    "jp": "アデリー",
+    "zh": "阿黛莉"
+  },
+  "Surname": {
+    "en": "Adorable Captain",
+    "kr": "깜찍한 캡틴",
+    "jp": "いたずらっ子な海賊船長",
+    "zh": "可爱的船长"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000033",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 97F",
+      "kr": "비천의 탑 97층",
+      "jp": "飛天の塔97階",
+      "zh": "飞天之塔97层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101097",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Sardines for Dinner!",
+        "kr": "저녁은 정어리다!",
+        "jp": "アデリーのイカリ",
+        "zh": "晚饭就是沙丁鱼!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to reduce the cooldown of <color=#28d9ed>Aye Aye, Captain!</color> by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 <color=#28d9ed>준비 됐나? 네, 선장님!</color> 스킬의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>10%</color>の確率で\\n<color=#28d9ed>【準備はいいか? はい、船長!】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使<color=#28d9ed>准备好了吗?是,船长!</color>的技能冷却时间减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000033"
+    },
+    {
+      "name": {
+        "en": "Savory Squid!",
+        "kr": "오징어는 맛있다!",
+        "jp": "かいぞくせんごっこ",
+        "zh": "鱿鱼很美味!"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\nIf this attack kills an enemy, this skill will not have a cooldown.",
+        "kr": "적 전체를 공격합니다.\\n이 스킬로 적을 처치하면 스킬의 쿨타임이 발생하지 않습니다.",
+        "jp": "敵全体にダメージを与える。\\nこのスキルで敵を倒した時、スキルターンが初期化する。",
+        "zh": "攻击全体敌人。\\n若该技能致使敌人死亡,则无冷却时间。"
+      },
+      "icon": "Skill_Second_2000033"
+    },
+    {
+      "name": {
+        "en": "Aye Aye, Captain!",
+        "kr": "준비 됐나? 네, 선장님!",
+        "jp": "準備はいいか? はい、船長!",
+        "zh": "准备好了吗?是,船长!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color> after using this skill.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>을 증가시킵니다.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "攻击全体敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000033"
+    },
+    {
+      "name": {
+        "en": "Super Regeneration I",
+        "kr": "초재생 I",
+        "jp": "超再生 I",
+        "zh": "超再生 I"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nRecovers Health of the caster by <color=#28d9ed>5%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>5%</color> 만큼 회복합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、自分のHPを<color=#28d9ed>5%</color>回復する。",
+        "zh": "(被动效果)\\n每到自身回合时,使自身生命值恢复<color=#28d9ed>5%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

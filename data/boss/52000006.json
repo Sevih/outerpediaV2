@@ -1,0 +1,92 @@
+{
+  "id": "52000006",
+  "Name": {
+    "en": "Sofia",
+    "kr": "소피아",
+    "jp": "ソフィア",
+    "zh": "索菲雅"
+  },
+  "Surname": {
+    "en": "A Sophisticated Lady",
+    "kr": "우아한 귀부인",
+    "jp": "優美な貴族騎士",
+    "zh": "优雅贵妇"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 78,
+  "icons": "2000006",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 19F",
+      "kr": "물의 탑 19층",
+      "jp": "水の塔19階",
+      "zh": "水之塔第19层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212019",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Lunge",
+        "kr": "런지",
+        "jp": "ランジ",
+        "zh": "弓步刺"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "Skill_First_2000006"
+    },
+    {
+      "name": {
+        "en": "Quick Assault",
+        "kr": "퀵 어설트",
+        "jp": "クイックアサルト",
+        "zh": "快速突击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000006"
+    },
+    {
+      "name": {
+        "en": "Noble Strike",
+        "kr": "노블 스트라이크",
+        "jp": "ノーブルストライク",
+        "zh": "壮丽打击"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy.\\nIf this attack kills an enemy, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>50%</color> and increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n이 공격으로 적을 처치하면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>50%</color> 증가하고 <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルで敵を倒した時、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>50%</color>UPし、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "zh": "攻击敌人。\\n若该攻击致使敌人死亡,则使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>50%</color>,并使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000006"
+    }
+  ]
+}

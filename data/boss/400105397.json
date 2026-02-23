@@ -1,0 +1,55 @@
+{
+  "id": "400105397",
+  "Name": {
+    "en": "Fiend Assassination Squad",
+    "kr": "마족 암살조",
+    "jp": "魔族の暗殺隊員",
+    "zh": "魔族暗杀队"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 91,
+  "icons": "4001053",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 72F",
+      "kr": "비천의 탑 72층",
+      "jp": "飛天の塔72階",
+      "zh": "飞天之塔72层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101072",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Demonic Bow",
+        "kr": "마궁",
+        "jp": "魔弓",
+        "zh": "魔弓"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the caster's Health by <color=#28d9ed>10%</color> of damage dealt.",
+        "kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 자신의 체력을 <color=#28d9ed>회복</color>합니다.",
+        "jp": "敵単体にダメージを与え、ダメージの<color=#28d9ed>10%</color>、自分のHPを<color=#28d9ed>回復</color>する。",
+        "zh": "攻击敌人,并使自身的生命值<color=#28d9ed>恢复</color>相当于伤害量的<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Attack_Arrow_1_Fire"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "400105297",
+  "Name": {
+    "en": "Fiend Extermination Squad",
+    "kr": "마족 섬멸조",
+    "jp": "魔族の殲滅隊員",
+    "zh": "魔族闪击队"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Fire",
+  "level": 90,
+  "icons": "4001052",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "mode": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": null
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Lightning Spear",
+        "kr": "뇌창",
+        "jp": "雷槍",
+        "zh": "雷枪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Spear_1_Fire"
+    }
+  ]
+}

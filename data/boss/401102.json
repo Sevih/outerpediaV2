@@ -1,0 +1,108 @@
+{
+  "id": "401102",
+  "Name": {
+    "en": "Iris",
+    "kr": "아이리스",
+    "jp": "アイリス",
+    "zh": "艾尔丽斯"
+  },
+  "Surname": {
+    "en": "Magnolia's Star Student",
+    "kr": "마법 학원의 우등생",
+    "jp": "火の精霊を操る優等生",
+    "zh": "魔法学院优等生"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 110,
+  "icons": "2000004",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 11F",
+      "kr": "비천의 탑 [하드] 11층",
+      "jp": "飛天の塔【ハード】11階",
+      "zh": "飞天之塔【困难】第11层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102011",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Twin Fireball",
+        "kr": "트윈 파이어볼",
+        "jp": "ツインファイアーボール",
+        "zh": "双火球"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000004"
+    },
+    {
+      "name": {
+        "en": "Flame Blast",
+        "kr": "플레임 블래스트",
+        "jp": "フレイムブラスト",
+        "zh": "火焰爆破"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. Has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Burned</color> 2 times on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다. (2회 적용)",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>火傷</color>を最大2個<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。(可叠加2次)"
+      },
+      "icon": "Skill_Second_2000004"
+    },
+    {
+      "name": {
+        "en": "Elemental Burst",
+        "kr": "엘레멘탈 버스트",
+        "jp": "エレメンタルバースト",
+        "zh": "元素爆发"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Burned</color>.",
+        "kr": "적 전체를 공격합니다.\\n대상이 <color=#28d9ed>화상</color> 상태라면 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与える。\\n対象が<color=#28d9ed>火傷</color>状態の場合、ダメージがUPする。",
+        "zh": "攻击全体敌人。\\n若目标处于<color=#28d9ed>烧伤</color>状态,则伤害提升。"
+      },
+      "icon": "Skill_Ultimate_2000004"
+    },
+    {
+      "name": {
+        "en": "Epsilon Complex Enhancement III",
+        "kr": "엡실론의 복합 강화 III",
+        "jp": "イプシロンの複合強化III",
+        "zh": "埃普西隆的综合强化III"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Speed</color> by <color=#28d9ed>5</color> when hit. (Max 10 stacks)\\nAdditionally, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>10%</color> when hit.\\n\\nGrants permanent and irremovable <color=#28d9ed>increased Effectiveness</color> to <color=#28d9ed>Iris</color> at the start of battle.",
+        "kr": "(패시브 효과)\\n피격 시, <color=#28d9ed>속도</color>가 <color=#28d9ed>5</color> 증가합니다.(최대 10회 누적)\\n추가로 피격 시 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.\\n\\n<color=#28d9ed>아이리스</color>는 전투 입장 시 해제 불가능한 <color=#28d9ed>효과 적중 증가</color>를 영구적으로 보유합니다.",
+        "jp": "(パッシブ効果)\\nダメージを受けた場合、<color=#28d9ed>スピード</color>が<color=#28d9ed>5</color>UPする。(最大10回まで累積)\\nまた、ダメージを受けた場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>【アイリス】</color>の<color=#28d9ed>効果命中</color>が永続的にUPする。この効果は解除されない。",
+        "zh": "(被动效果)\\n受到攻击时,使<color=#28d9ed>速度</color>提升<color=#28d9ed>5</color>。(最多可叠加10次)\\n额外受到攻击时,使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。\\n\\n使<color=#28d9ed>艾尔丽斯</color>在战斗开始时,永久获得无法被解除的<color=#28d9ed>效果命中提升</color>效果。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "401201291",
+  "Name": {
+    "en": "Reptil Javelin-Thrower",
+    "kr": "렙틸 자벨린",
+    "jp": "ジャベリン・レプタイル",
+    "zh": "标枪手蜥蜴人"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Water",
+  "level": 30,
+  "icons": "4012012",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "mode": {
+      "en": "",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": null
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Javelin Throw",
+        "kr": "자벨린 투척",
+        "jp": "ジャベリン投てき",
+        "zh": "投掷标枪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Attack_Spear_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Focused Throw",
+        "kr": "모아 던지기",
+        "jp": "まとめ投げ",
+        "zh": "集中投掷"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Attack_Spear_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Intimidating Strength",
+        "kr": "위협적인 완력",
+        "jp": "脅威的な腕力",
+        "zh": "惊人的腕力"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\n<color=#ffd732>Upon death, grants [Buff_V_common_monster_passive_AP] Action Points and 4 Chain Points for each remaining enemy.</color>\\n\\nIncreases <color=#28d9ed>Attack</color> proportional to <color=#28d9ed>missing Health</color>.",
+        "kr": "(패시브 효과)\\n<color=#ffd732>사망 시 적 한 명당 AP [Buff_V_common_monster_passive_AP], CP 4 씩 회복시킵니다.</color>\\n\\n자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "jp": "(パッシブ効果)\\n<color=#ffd732>倒れた時、敵全体にAPを[Buff_V_common_monster_passive_AP]、CPを4獲得させる。</color>\\n\\n自分の<color=#28d9ed>残りHP</color>が低いほど<color=#28d9ed>攻撃力</color>がUPする。",
+        "zh": "(被动效果)\\n<color=#ffd732>死亡时,使每个敌人的AP恢复[Buff_V_common_monster_passive_AP]、CP恢复4。</color>\\n\\n自身<color=#28d9ed>当前生命值</color>越低,则<color=#28d9ed>攻击力</color>越高。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

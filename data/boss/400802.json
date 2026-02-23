@@ -1,0 +1,108 @@
+{
+  "id": "400802",
+  "Name": {
+    "en": "Lily",
+    "kr": "릴리",
+    "jp": "リリィ",
+    "zh": "莉莉"
+  },
+  "Surname": {
+    "en": "The Li'l Ballista",
+    "kr": "리틀 발리스타",
+    "jp": "おちゃめなエルフ娘",
+    "zh": "小小弓弩手"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 107,
+  "icons": "2000011",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 8F",
+      "kr": "비천의 탑 [하드] 8층",
+      "jp": "飛天の塔【ハード】8階",
+      "zh": "飞天之塔【困难】第8层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102008",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Snow Rabbit Pursuit",
+        "kr": "눈토끼 쫓기",
+        "jp": "ぴょんぴょんアロー",
+        "zh": "雪兔追击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Marked</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>标记</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000011"
+    },
+    {
+      "name": {
+        "en": "Fox Hunt",
+        "kr": "여우 사냥",
+        "jp": "フロストアロー",
+        "zh": "狩猎狐狸"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and increases <color=#ffd732>Snow's</color> <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>4 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>4턴</color> 동안 <color=#ffd732>스노우</color>의 <color=#28d9ed>효과 적중</color>을 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#fff95f>【スノー】</color>の<color=#28d9ed>効果命中</color>を<color=#28d9ed>4ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并使<color=#ffd732>雪诺</color>的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>4回合</color>。"
+      },
+      "icon": "Skill_Second_2000011"
+    },
+    {
+      "name": {
+        "en": "Bear Hunt",
+        "kr": "곰잡이",
+        "jp": "クマさんを捕まえるアロー",
+        "zh": "猎熊者"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Attack</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000011"
+    },
+    {
+      "name": {
+        "en": "Frost Elf's Cheer",
+        "kr": "서리 엘프식 응원",
+        "jp": "フロストエルフのエール",
+        "zh": "冰霜精灵式应援"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen attacking, recovers <color=#ffd732>Snow</color>'s <color=#28d9ed>Health</color> and <color=#28d9ed>Weakness Gauge</color> by <color=#28d9ed>10%</color>.",
+        "kr": "(패시브 효과)\\n공격 시 <color=#ffd732>스노우</color>의 <color=#28d9ed>체력</color>과 <color=#28d9ed>WG</color>를 <color=#28d9ed>10%</color> 회복합니다.",
+        "jp": "(パッシブ効果)\\n攻撃時、<color=#fff95f>【スノー】</color>の<color=#28d9ed>HP</color>と<color=#28d9ed>WG</color>を<color=#28d9ed>10%</color>回復する。",
+        "zh": "(被动效果)\\n攻击时使<color=#ffd732>雪诺</color>的<color=#28d9ed>生命值</color>和<color=#28d9ed>WG</color>恢复<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

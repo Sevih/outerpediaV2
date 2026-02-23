@@ -1,0 +1,92 @@
+{
+  "id": "52000029",
+  "Name": {
+    "en": "Laine",
+    "kr": "레인",
+    "jp": "レイン",
+    "zh": "雷茵"
+  },
+  "Surname": {
+    "en": "Protector of the Forest",
+    "kr": "숲의 지킴이",
+    "jp": "自然を愛でる森の番人",
+    "zh": "守林人"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Earth",
+  "level": 70,
+  "icons": "2000029",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 15F",
+      "kr": "대지의 탑 15층",
+      "jp": "大地の塔15階",
+      "zh": "土之塔第15层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40222015",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "All Hail Mother Nature",
+        "kr": "자연을 경배하라",
+        "jp": "文明懲罰",
+        "zh": "敬畏自然吧"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>[buff_v_tower_element_52281_0]</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[buff_v_tower_element_52281_0]</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>[buff_v_tower_element_52281_0]</color>UPさせる。",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>[buff_v_tower_element_52281_0]</color>。"
+      },
+      "icon": "Skill_First_2000029"
+    },
+    {
+      "name": {
+        "en": "Destroy Civilization",
+        "kr": "문명을 파괴하라",
+        "jp": "大自然の刃",
+        "zh": "破坏文明吧"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>[buff_t_tower_element_52282_0] turn(s)</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>[buff_t_tower_element_52282_0]턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>[buff_t_tower_element_52282_0]ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52282_0]\\n回合</color>。"
+      },
+      "icon": "Skill_Second_2000029"
+    },
+    {
+      "name": {
+        "en": "Blooming Poison",
+        "kr": "피어나는 맹독",
+        "jp": "咲き誇る猛毒",
+        "zh": "绽放的剧毒"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Poisoned</color> on a selected target for <color=#28d9ed>[buff_t_tower_element_52283_0] turn(s)</color>.",
+        "kr": "적 전체를 공격하고 선택한 대상 한 명에게 <color=#28d9ed>[buff_t_tower_element_52283_0]턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、選択した対象単体に<color=#28d9ed>中毒</color>を<color=#28d9ed>[buff_t_tower_element_52283_0]ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并对1名所选目标造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>[buff_t_tower_element_52283_0]回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000029"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "5010206",
+  "Name": {
+    "en": "Dungeon Guardian Railgunner",
+    "kr": "던전 가디언 레일건",
+    "jp": "ダンジョンガーディアン〈銃〉",
+    "zh": "磁轨炮手暗堡守护者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Fire",
+  "level": 98,
+  "icons": "4042002",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 33F",
+      "kr": "화염의 탑 33층",
+      "jp": "火の塔33階",
+      "zh": "火之塔第33层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202033",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Double Tap",
+        "kr": "더블 탭",
+        "jp": "ダブルタップ",
+        "zh": "双连击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Electromagnetic Launcher",
+        "kr": "일렉트로마그네틱 런처",
+        "jp": "エレクトロマグネティックランチャー",
+        "zh": "电磁发射"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and reduces the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color> 감소시킵니다.",
+        "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-10%</color>DOWNさせる。",
+        "zh": "攻击全体敌人,并使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-10%</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    }
+  ]
+}
