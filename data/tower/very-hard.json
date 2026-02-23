@@ -22,7 +22,7 @@
           "restrictions": [],
           "recommended": [
             {
-              "names": ["2000018","2000082","2000052"],
+              "names": ["2000018", "2000082", "2000052"],
               "reason": {
                 "en": "{D/BT_DOT_LIGHTNING} source",
                 "jp": "",
@@ -35,12 +35,27 @@
         {
           "boss_id": "40103021",
           "minions": ["40103057"],
+          "reason": {
+            "en": "You need to {D/BT_STUN} both and keep the stun up in order to remove and prevent Iota from regaining her {B/BT_INVINCIBLE}.",
+            "jp": "",
+            "kr": "",
+            "zh": ""
+          },
           "restrictions": [],
           "recommended": [
             {
-              "names": [],
+              "names": ["2000091", "2000109", "2000069"],
               "reason": {
-                "en": "",
+                "en": "{D/BT_STUN} source",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000091", "2000109", "2000069", "2000046"],
+              "reason": {
+                "en": "100% {D/BT_STUN} source",
                 "jp": "",
                 "kr": "",
                 "zh": ""
@@ -55,11 +70,35 @@
       "boss_id": "40103017",
       "minions": ["40103053"],
       "restrictions": [],
+      "reason": {
+        "en": "{D/BT_SILENCE} or {D/BT_SEALED_RESURRECTION} {P/Demiurge Astei} in order to disable her revival.",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
       "recommended": [
         {
-          "names": [],
+          "names": ["2000013", "2000113", "2000060"],
           "reason": {
-            "en": "",
+            "en": "{D/BT_SILENCE} sources",
+            "jp": "",
+            "kr": "",
+            "zh": ""
+          }
+        },
+        {
+          "names": ["2000078", "2000063"],
+          "reason": {
+            "en": "{D/BT_SEALED_RESURRECTION} sources",
+            "jp": "",
+            "kr": "",
+            "zh": ""
+          }
+        },
+        {
+          "names": ["2000053", "2000089", "2000071", "2000119"],
+          "reason": {
+            "en": "Sturdy DPS units",
             "jp": "",
             "kr": "",
             "zh": ""
@@ -72,6 +111,12 @@
       "boss_id": "40103019",
       "minions": ["40103054", "40103059"],
       "restrictions": [],
+      "reason": {
+        "en": "Support Unit to provide chain points, WG damage and healing.",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
       "recommended": [
         {
           "names": [],

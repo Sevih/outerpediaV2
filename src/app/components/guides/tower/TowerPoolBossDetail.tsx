@@ -17,6 +17,8 @@ type Props = {
   entry: TowerPoolEntry;
   bossMap: Record<string, Boss>;
   restrictionMap: TowerRestrictionMap;
+  defaultSet?: number;
+  onSetChange?: (set: number) => void;
 };
 
 /* ── Restrictions list (bullet points) ── */
@@ -64,10 +66,15 @@ function RestrictionsList({ set, restrictionMap, lang }: {
 
 /* ── Main component ── */
 
-export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: Props) {
+export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap, defaultSet, onSetChange }: Props) {
   const { lang: rawLang, t } = useI18n();
   const lang = rawLang as Lang;
-  const [activeSet, setActiveSet] = useState('0');
+  const [activeSet, setActiveSet] = useState(String(defaultSet ?? 0));
+
+  function handleSetChange(value: string) {
+    setActiveSet(value);
+    onSetChange?.(Number(value));
+  }
 
   const boss = bossMap[entry.boss_id] ?? null;
   const minions = (entry.minions ?? []).map(id => bossMap[id]).filter((b): b is Boss => b != null);
@@ -124,7 +131,7 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: 
               <TowerRestrictionTabs
                 restrictionSets={entry.restrictionSets.map(s => s.restrictions)}
                 value={activeSet}
-                onChange={setActiveSet}
+                onChange={handleSetChange}
                 className="mb-4"
               />
               <RestrictionsList

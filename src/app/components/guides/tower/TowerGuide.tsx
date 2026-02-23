@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { FilterSearch } from '@/app/components/ui/FilterPills';
 import TowerFloorList from './TowerFloorList';
 import TowerFloorListGrouped from './TowerFloorListGrouped';
@@ -74,6 +74,7 @@ export default function TowerGuide({ data }: Props) {
   );
   const [selectedSet, setSelectedSet] = useState(0);
   const [selectedPoolIndex, setSelectedPoolIndex] = useState<number | null>(null);
+  const [selectedPoolSet, setSelectedPoolSet] = useState(0);
   const [bossMap, setBossMap] = useState<Record<string, Boss>>({});
 
   // Load all bosses on mount
@@ -128,16 +129,69 @@ export default function TowerGuide({ data }: Props) {
     };
   }, [isGrouped, activeFloor, selectedSet]);
 
+  /* ── URL hash sync ── */
+
+  const didReadHash = useRef(false);
+
   const handleSelectFloor = useCallback((floor: number, set?: number) => {
     setSelectedFloor(floor);
     setSelectedSet(set ?? 0);
     setSelectedPoolIndex(null);
+    const hash = set ? `#floor-${floor}-set-${set}` : `#floor-${floor}`;
+    history.replaceState(null, '', hash);
   }, []);
 
-  const handleSelectPool = useCallback((index: number) => {
+  const handleSelectPool = useCallback((index: number, set?: number) => {
     setSelectedPoolIndex(index);
+    setSelectedPoolSet(set ?? 0);
     setSelectedFloor(null);
+    const hash = set ? `#pool-${index}-set-${set}` : `#pool-${index}`;
+    history.replaceState(null, '', hash);
   }, []);
+
+  const handleFloorSetChange = useCallback((set: number) => {
+    setSelectedSet(set);
+    if (selectedFloor !== null) {
+      const hash = set ? `#floor-${selectedFloor}-set-${set}` : `#floor-${selectedFloor}`;
+      history.replaceState(null, '', hash);
+    }
+  }, [selectedFloor]);
+
+  const handlePoolSetChange = useCallback((set: number) => {
+    setSelectedPoolSet(set);
+    if (selectedPoolIndex !== null) {
+      const hash = set ? `#pool-${selectedPoolIndex}-set-${set}` : `#pool-${selectedPoolIndex}`;
+      history.replaceState(null, '', hash);
+    }
+  }, [selectedPoolIndex]);
+
+  // Read hash on mount
+  useEffect(() => {
+    if (didReadHash.current) return;
+    didReadHash.current = true;
+
+    const hash = decodeURIComponent(window.location.hash.slice(1));
+    if (!hash) return;
+
+    const poolMatch = hash.match(/^pool-(\d+)(?:-set-(\d+))?$/);
+    if (poolMatch && data.randomPool) {
+      const idx = Number(poolMatch[1]);
+      const setNum = poolMatch[2] ? Number(poolMatch[2]) : 0;
+      if (idx < data.randomPool.length) {
+        handleSelectPool(idx, setNum);
+        return;
+      }
+    }
+
+    const floorMatch = hash.match(/^floor-(\d+)(?:-set-(\d+))?$/);
+    if (floorMatch) {
+      const floorNum = Number(floorMatch[1]);
+      const setNum = floorMatch[2] ? Number(floorMatch[2]) : 0;
+      if (data.floors.some(f => f.floor === floorNum)) {
+        handleSelectFloor(floorNum, setNum);
+      }
+    }
+  }, [data, handleSelectFloor, handleSelectPool]);
 
   return (
     <div className="flex flex-col gap-4 md:flex-row md:items-start">
@@ -192,13 +246,16 @@ export default function TowerGuide({ data }: Props) {
             bossMap={bossMap}
             restrictionMap={restrictionMap}
             defaultSet={selectedSet}
+            onSetChange={handleFloorSetChange}
           />
         ) : activePoolEntry ? (
           <TowerPoolBossDetail
-            key={`pool-${selectedPoolIndex}`}
+            key={`pool-${selectedPoolIndex}-${selectedPoolSet}`}
             entry={activePoolEntry}
             bossMap={bossMap}
             restrictionMap={restrictionMap}
+            defaultSet={selectedPoolSet}
+            onSetChange={handlePoolSetChange}
           />
         ) : (
           <div className="rounded-lg border border-zinc-700/50 bg-zinc-900/50 p-8 text-center text-sm text-zinc-500">

@@ -111,12 +111,18 @@ type Props = {
   bossMap: Record<string, Boss>;
   restrictionMap: TowerRestrictionMap;
   defaultSet?: number;
+  onSetChange?: (set: number) => void;
 };
 
-export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defaultSet }: Props) {
+export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defaultSet, onSetChange }: Props) {
   const { lang: rawLang, t } = useI18n();
   const lang = rawLang as Lang;
   const [activeSet, setActiveSet] = useState(String(defaultSet ?? 0));
+
+  function handleSetChange(value: string) {
+    setActiveSet(value);
+    onSetChange?.(Number(value));
+  }
 
   if (!isRandomFloor(floor)) {
     const boss = bossMap[floor.boss_id] ?? null;
@@ -157,7 +163,7 @@ export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defau
       <TowerRestrictionTabs
         restrictionSets={floor.sets.map(s => s.restrictions ?? [])}
         value={activeSet}
-        onChange={setActiveSet}
+        onChange={handleSetChange}
         className="mb-4"
       />
 
