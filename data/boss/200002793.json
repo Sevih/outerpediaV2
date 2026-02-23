@@ -1,0 +1,108 @@
+{
+  "id": "200002793",
+  "Name": {
+    "en": "Faenan",
+    "kr": "파이난",
+    "jp": "ファイナン",
+    "zh": "菲楠"
+  },
+  "Surname": {
+    "en": "Curious Priestess",
+    "kr": "호기심 많은 사제",
+    "jp": "冒険に憧れる見習い神官",
+    "zh": "充满好奇心的祭司"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 54,
+  "icons": "2000027",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_DOT_BURN,BT_DOT_CURSE,BT_DOT_BLEED,BT_DOT_POISON,BT_DOT_LIGHTNING",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 35F",
+      "kr": "비천의 탑 35층",
+      "jp": "飛天の塔35階",
+      "zh": "飞天之塔35层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101035",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Healing Prayer",
+        "kr": "치유 기도",
+        "jp": "癒しの祈とう",
+        "zh": "治愈祈祷"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "<color=#28d9ed>Resurrects (Greater)</color> and fully heals one dead ally.",
+        "kr": "사망한 아군 한 명을 <color=#28d9ed>부활(강화)</color> 시키고 체력을 모두 회복시킵니다.",
+        "jp": "倒れた味方単体を<color=#28d9ed>復活(強化)</color>させ、HPを全回復させる。",
+        "zh": "使1名死亡的友军<color=#28d9ed>复活(强化)</color>,并使其生命值全部恢复。"
+      },
+      "icon": "Skill_Second_2000027"
+    },
+    {
+      "name": {
+        "en": "Lunar Protection",
+        "kr": "달의 가호",
+        "jp": "月女神のご加護",
+        "zh": "月之庇护"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Fully heals the <color=#28d9ed>Health</color> of all allies except the caster.",
+        "kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 모두 회복시킵니다.",
+        "jp": "自分以外の味方全体の<color=#28d9ed>HP</color>を全回復させる。",
+        "zh": "使除自身外全体友军的<color=#28d9ed>生命值</color>全部恢复。"
+      },
+      "icon": "Skill_Ultimate_2000027"
+    },
+    {
+      "name": {
+        "en": "Super Regeneration I",
+        "kr": "초재생 I",
+        "jp": "超再生 I",
+        "zh": "超再生 I"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nRecovers Health of the caster by <color=#28d9ed>5%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>5%</color> 만큼 회복합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、自分のHPを<color=#28d9ed>5%</color>回復する。",
+        "zh": "(被动效果)\\n每到自身回合时,使自身生命值恢复<color=#28d9ed>5%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Let Me Pray!",
+        "kr": "기도할게요!",
+        "jp": "お祈りする!",
+        "zh": "祈祷吧!"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive)\\nEach turn, SPD increases by <color=#28d9ed>2.5%</color> (up to 20 stacks).\\n\\nReduces damage taken from attacks by <color=#28d9ed>100%</color> and takes <color=#28d9ed>60%</color> of damage dealt to Faenan instead.\\n\\nWhen an ally dies, enemies take increased damage by <color=#28d9ed>15%</color> (up to 10 stacks).\\n\\nMarks the front ally with <color=#28d9ed>Mark</color> for <color=#28d9ed>9</color> turns.",
+        "kr": "(패시브 효과)\\n매 턴 속도가 <color=#28d9ed>2.5%</color> 증가합니다. (최대 20회 누적)\\n\\n공격으로 받는 피해를 <color=#28d9ed>100%</color> 감소시키며, 아군이 받는 피해의 <color=#28d9ed>60%</color>를 파이난이 대신 받습니다.\\n\\n아군 사망 시 적 전체의 받는 피해가 <color=#28d9ed>-15%</color> 증가합니다. (최대 10회 누적)\\n\\n가장 앞에 있는 동료에게 <color=#28d9ed>표식</color>을 <color=#28d9ed>9턴</color> 동안 부여합니다.",
+        "jp": "(パッシブ効果)\\n毎ターン<color=#28d9ed>2.5%</color>スピードがUP (最大20スタック)。\\n\\n攻撃で受けるダメージを<color=#28d9ed>100%</color>DOWNし、ファイナンが受けるダメージの<color=#28d9ed>60%</color>を代わりに受ける。\\n\\n味方が死亡すると敵全体が受けるダメージが<color=#28d9ed>-15%</color>増加 (最大10スタック)。\\n\\n最前列の味方に<color=#28d9ed>標識</color>を<color=#28d9ed>9</color>ターンの間付与する。",
+        "zh": "(被动效果)\\n每回合速度增加<color=#28d9ed>2.5%</color>(最多20层)。\\n\\n来自攻击的伤害减少<color=#28d9ed>100%</color>,并代替菲楠承受<color=#28d9ed>60%</color>的伤害。\\n\\n当队友死亡时,敌方全体受到的伤害增加<color=#28d9ed>-15%</color>(最多10层)。\\n\\n对最前排队友施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>9</color>回合。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

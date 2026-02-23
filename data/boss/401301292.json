@@ -1,0 +1,119 @@
+{
+  "id": "401301292",
+  "Name": {
+    "en": "Reptil Thrower",
+    "kr": "렙틸 쓰로잉",
+    "jp": "フランキスカ・レプタイル",
+    "zh": "投掷手蜥蜴人"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Fire",
+  "level": 41,
+  "icons": "4013012",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 22F",
+      "kr": "비천의 탑 22층",
+      "jp": "飛天の塔22階",
+      "zh": "飞天之塔22层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101022",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Throw Axe",
+        "kr": "도끼 투척",
+        "jp": "斧投てき",
+        "zh": "掷斧"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>1 turn(s)</color>. (Applied 2 times)",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. (2회 적용)",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>出血</color>2個を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>1回合</color>。(可叠加2次)"
+      },
+      "icon": "MT_Attack_Hammer_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Jump Throw",
+        "kr": "도약 투척",
+        "jp": "ジャンプ投てき",
+        "zh": "跳跃投掷"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Throw Multiple Axes",
+        "kr": "연속 도끼 투척",
+        "jp": "連続斧投てき",
+        "zh": "连续掷斧"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
+        "kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 피해량이 증가합니다.",
+        "jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPする。",
+        "zh": "攻击敌人。\\n若目标处于<color=#28d9ed>出血</color>状态,则使伤害量提升。"
+      },
+      "icon": "MT_Attack_Hammer_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Hit Back I",
+        "kr": "받아치기 I",
+        "jp": "返り討ち I",
+        "zh": "回击 I"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAfter the caster takes their turn, has a <color=#28d9ed>30%</color> chance to Counterattack, until the caster's next turn.",
+        "kr": "(패시브 효과)\\n자신이 턴을 획득한 이후, 다음 턴 동안 <color=#28d9ed>30%</color>의 확률로 반격합니다.",
+        "jp": "(パッシブ効果)\\n自分がターンを獲得した後、次のターンの間<color=#28d9ed>30%</color>の確率で反撃する。",
+        "zh": "(被动效果)\\n自身获得回合后,下一回合有<color=#28d9ed>30%</color>的几率发动反击。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Intimidating Strength",
+        "kr": "위협적인 완력",
+        "jp": "脅威的な腕力",
+        "zh": "惊人的腕力"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> proportional to <color=#28d9ed>missing Health</color>.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>현재 체력</color>이 낮을수록 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>가 증가합니다.",
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>残りHP</color>が低いほど<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>がUPする。",
+        "zh": "(被动效果)\\n<color=#28d9ed>当前生命值</color>越低,则<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>越高。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

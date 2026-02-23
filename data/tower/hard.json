@@ -2,59 +2,405 @@
   "floors": [
     {
       "floor": 1,
-      "boss_id": "401400253",
-      "restrictions": [],
-      "recommended": [
-        {
-          "names": ["2000003", "2000006"],
-          "reason": {
-            "en": "Flexible picks. {D/BT_STAT_SPD_DOWN} helps control the fight.",
-            "jp": "柔軟な選択肢。{D/BT_STAT_SPD_DOWN}で戦闘をコントロール。",
-            "kr": "유연한 선택. {D/BT_STAT_SPD_DOWN}으로 전투 컨트롤.",
-            "zh": "灵活的选择。{D/BT_STAT_SPD_DOWN}帮助控制战斗。"
-          }
-        }
+      "boss_id": null,
+      "restrictions": [
+        "AtLeast2_2Star"
       ]
     },
     {
       "floor": 2,
-      "boss_id": "401400254",
-      "restrictions": ["Max3"],
-      "recommended": [
-        {
-          "names": ["2000004"],
-          "reason": {
-            "en": "Solo carry potential with high {S/ATK} and {B/BT_STAT_CRIDMG_UP}.",
-            "jp": "高{S/ATK}と{B/BT_STAT_CRIDMG_UP}でソロキャリー可能。",
-            "kr": "높은 {S/ATK}와 {B/BT_STAT_CRIDMG_UP}으로 솔로 캐리 가능.",
-            "zh": "凭借高{S/ATK}和{B/BT_STAT_CRIDMG_UP}可单人通关。"
-          }
-        },
-        {
-          "names": ["2000008", "2000011"],
-          "reason": {
-            "en": "Support core for Max 3 — covers healing and {B/BT_STAT_DEF_UP}.",
-            "jp": "Max3のサポートコア — 回復と{B/BT_STAT_DEF_UP}をカバー。",
-            "kr": "Max 3의 서포트 코어 — 힐링과 {B/BT_STAT_DEF_UP} 담당.",
-            "zh": "Max 3的辅助核心——覆盖治疗和{B/BT_STAT_DEF_UP}。"
-          }
-        }
+      "boss_id": "400201",
+      "minions": [
+        "490001",
+        "490002"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star"
       ]
     },
     {
       "floor": 3,
-      "boss_id": "401400255",
-      "restrictions": ["BanHealer", "Max3"],
-      "recommended": [
-        {
-          "names": ["2000005", "2000009"],
-          "reason": {
-            "en": "Must-have duo: {D/BT_STAT_ATK_DOWN} + burst for quick kill before you die.",
-            "jp": "必須コンビ：{D/BT_STAT_ATK_DOWN}＋バーストで素早く倒す。",
-            "kr": "필수 듀오: {D/BT_STAT_ATK_DOWN} + 버스트로 빠른 킬.",
-            "zh": "必带组合：{D/BT_STAT_ATK_DOWN}+爆发快速击杀。"
-          }
-        }
+      "boss_id": "400301",
+      "minions": [
+        "400302"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanEarth"
+      ]
+    },
+    {
+      "floor": 4,
+      "boss_id": "400401",
+      "minions": [
+        "490003"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star"
+      ]
+    },
+    {
+      "floor": 5,
+      "boss_id": "400501",
+      "minions": [
+        "400503",
+        "400504",
+        "400502"
+      ]
+    },
+    {
+      "floor": 6,
+      "boss_id": "400601",
+      "minions": [
+        "490001",
+        "490004"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanWater"
+      ]
+    },
+    {
+      "floor": 7,
+      "boss_id": "400701",
+      "minions": [
+        "490003",
+        "490004"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanRanger"
+      ]
+    },
+    {
+      "floor": 8,
+      "boss_id": "400801",
+      "minions": [
+        "400802",
+        "400803"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanFire"
+      ]
+    },
+    {
+      "floor": 9,
+      "boss_id": "400901",
+      "minions": [
+        "490004",
+        "490005"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanHealer"
+      ]
+    },
+    {
+      "floor": 10,
+      "boss_id": "401001",
+      "minions": [
+        "401002"
+      ]
+    },
+    {
+      "floor": 11,
+      "boss_id": "401101",
+      "minions": [
+        "401102",
+        "401103"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanFire"
+      ]
+    },
+    {
+      "floor": 12,
+      "boss_id": "401201",
+      "minions": [
+        "490003"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanEarth"
+      ]
+    },
+    {
+      "floor": 13,
+      "boss_id": "401301",
+      "minions": [
+        "401302",
+        "401303"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star"
+      ]
+    },
+    {
+      "floor": 14,
+      "boss_id": "401401",
+      "minions": [
+        "490002",
+        "490004"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanWater"
+      ]
+    },
+    {
+      "floor": 15,
+      "boss_id": "401501",
+      "minions": [
+        "401502",
+        "401503"
+      ]
+    },
+    {
+      "floor": 16,
+      "boss_id": "401601",
+      "minions": [
+        "490001",
+        "490002"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanFire"
+      ]
+    },
+    {
+      "floor": 17,
+      "boss_id": "401701",
+      "minions": [
+        "401702"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanDefender"
+      ]
+    },
+    {
+      "floor": 18,
+      "boss_id": "401801",
+      "minions": [
+        "490001",
+        "490003"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanDark"
+      ]
+    },
+    {
+      "floor": 19,
+      "boss_id": "401901",
+      "minions": [
+        "401902",
+        "401903",
+        "401904"
+      ],
+      "restrictions": [
+        "AtLeast1_2Star"
+      ]
+    },
+    {
+      "floor": 20,
+      "boss_id": "402002",
+      "minions": [
+        "402001"
+      ]
+    },
+    {
+      "floor": 21,
+      "boss_id": "402101",
+      "minions": [
+        "490004"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star"
+      ]
+    },
+    {
+      "floor": 22,
+      "boss_id": "402201",
+      "minions": [
+        "402202"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanMage"
+      ]
+    },
+    {
+      "floor": 23,
+      "boss_id": "402301",
+      "minions": [
+        "490001"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanStriker"
+      ]
+    },
+    {
+      "floor": 24,
+      "boss_id": "402401",
+      "minions": [
+        "402403",
+        "402404",
+        "402402"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanMage"
+      ]
+    },
+    {
+      "floor": 25,
+      "boss_id": "402501"
+    },
+    {
+      "floor": 26,
+      "boss_id": "402602",
+      "minions": [
+        "402601",
+        "490004"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanHealer"
+      ]
+    },
+    {
+      "floor": 27,
+      "boss_id": "402701",
+      "minions": [
+        "402702",
+        "402703"
+      ],
+      "restrictions": [
+        "AtLeast2_2Star",
+        "BanWater"
+      ]
+    },
+    {
+      "floor": 28,
+      "boss_id": "402801",
+      "restrictions": [
+        "AtLeast1_2Star"
+      ]
+    },
+    {
+      "floor": 29,
+      "boss_id": "402901",
+      "restrictions": [
+        "AtLeast1_2Star"
+      ]
+    },
+    {
+      "floor": 30,
+      "boss_id": "403001",
+      "minions": [
+        "403002"
+      ]
+    },
+    {
+      "floor": 31,
+      "boss_id": "5203101",
+      "minions": [
+        "5203102"
+      ],
+      "restrictions": [
+        "AtLeast1_2Star",
+        "BanHealer"
+      ]
+    },
+    {
+      "floor": 32,
+      "boss_id": "5203201",
+      "minions": [
+        "5203202"
+      ],
+      "restrictions": [
+        "AtLeast1_2Star",
+        "BanLight"
+      ]
+    },
+    {
+      "floor": 33,
+      "boss_id": "5203301",
+      "minions": [
+        "5203302",
+        "5203303"
+      ],
+      "restrictions": [
+        "AtLeast1_2Star",
+        "BanMage"
+      ]
+    },
+    {
+      "floor": 34,
+      "boss_id": "5203401",
+      "restrictions": [
+        "BanLight",
+        "BanDark"
+      ]
+    },
+    {
+      "floor": 35,
+      "boss_id": "5203501"
+    },
+    {
+      "floor": 36,
+      "boss_id": "5203601",
+      "minions": [
+        "5203602"
+      ],
+      "restrictions": [
+        "AtLeast1_2Star",
+        "BanLight"
+      ]
+    },
+    {
+      "floor": 37,
+      "boss_id": "5203701",
+      "minions": [
+        "5203702"
+      ],
+      "restrictions": [
+        "AtLeast1_2Star",
+        "BanDefender"
+      ]
+    },
+    {
+      "floor": 38,
+      "boss_id": "5203801",
+      "minions": [
+        "5203802",
+        "5203803",
+        "5203804"
+      ],
+      "restrictions": [
+        "ForceWater",
+        "BanRanger"
+      ]
+    },
+    {
+      "floor": 39,
+      "boss_id": "5203901",
+      "minions": [
+        "5203902"
+      ],
+      "restrictions": [
+        "ForceLight"
+      ]
+    },
+    {
+      "floor": 40,
+      "boss_id": "5204001",
+      "minions": [
+        "5204002"
       ]
     }
   ]

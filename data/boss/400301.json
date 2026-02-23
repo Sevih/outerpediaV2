@@ -1,0 +1,87 @@
+{
+  "id": "400301",
+  "Name": {
+    "en": "Forest King",
+    "kr": "숲의 왕",
+    "jp": "森の王",
+    "zh": "奴隶角斗士蜥蜴人"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 102,
+  "icons": "4014001",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 3F",
+      "kr": "비천의 탑 [하드] 3층",
+      "jp": "飛天の塔【ハード】3階",
+      "zh": "飞天之塔【困难】第3层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Warrior's Spear",
+        "kr": "전사의 창",
+        "jp": "戦士の槍",
+        "zh": "战士之枪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and reduces the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.",
+        "kr": "적을 공격하고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-30%</color>DOWNさせる。",
+        "zh": "攻击敌人,并使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-30%</color>。"
+      },
+      "icon": "Skill_First_4014001"
+    },
+    {
+      "name": {
+        "en": "Prince's Retaliation",
+        "kr": "왕자의 응징",
+        "jp": "王者の戒め",
+        "zh": "王子的惩戒"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) When the caster has a <color=#28d9ed>Barrier</color>, reduces Weakness Gauge damage taken by <color=#28d9ed>30%</color>.\\n(Triggered Effect) When hit by a single-target attack, counterattacks and recovers Weakness Gauge by <color=#28d9ed>1</color>.\\nThe counterattack effect is only activated once every <color=#28d9ed>1 turn</color>.",
+        "kr": "(패시브 효과) <color=#28d9ed>실드</color> 보유 시 받는 WG 피해량이 <color=#28d9ed>30%</color> 감소합니다.\\n(발동 효과) 단일 대상 공격을 받을 시 반격하고 WG를 <color=#28d9ed>1</color> 회복합니다. \\n반격은 <color=#28d9ed>1턴</color>에 한 번만 발동합니다.",
+        "jp": "(パッシブ効果)<color=#28d9ed>シールド</color>がある場合、受けるWGダメージが<color=#28d9ed>30%</color>DOWNする。反撃は<color=#28d9ed>1ターン</color>に1回発動する。\\n(発動効果)敵から単体攻撃を受けた場合、反撃してWGを<color=#28d9ed>1</color>回復する。",
+        "zh": "(被动效果)附带<color=#28d9ed>护盾</color>效果时,使所受WG伤害量降低<color=#28d9ed>30%</color>。\\n(触发效果)受到单体攻击时,发动反击,并使WG恢复<color=#28d9ed>1</color>。\\n反击<color=#28d9ed>1回合</color>仅能发动1次。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Enraged Strike",
+        "kr": "분노의 일격",
+        "jp": "怒りの一撃",
+        "zh": "愤怒一击"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and lowers the <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>20%</color>.\\nDeals greatly increased <color=#28d9ed>damage </color> if the caster is granted Increased Attack.",
+        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-20%</color> 감소시킵니다.\\n공격력 증가 효과를 보유하고 있으면 <color=#28d9ed>피해량</color>이 대폭 증가 합니다.",
+        "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-20%</color>DOWNさせる。\\n自分の攻撃力がUPした状態の場合、与える<color=#28d9ed>ダメージ</color>が大幅にUPする。",
+        "zh": "攻击全体敌人,并使目标的<color=#28d9ed>行动值</color>降低 <color=#28d9ed>-20%</color>。若目标附带攻击力提升效果,则大幅提升<color=#28d9ed>伤害量</color>。"
+      },
+      "icon": "Skill_Ultimate_4014001"
+    }
+  ]
+}

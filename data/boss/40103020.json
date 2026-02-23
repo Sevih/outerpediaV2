@@ -1,0 +1,124 @@
+{
+  "id": "40103020",
+  "Name": {
+    "en": "Sigma",
+    "kr": "시그마",
+    "jp": "シグマ",
+    "zh": "西格玛"
+  },
+  "Surname": {
+    "en": "Automaton who Dreams of Clear Skies",
+    "kr": "창공을 꿈꾸는 인형",
+    "jp": "蒼空を夢見る自動人形",
+    "zh": "憧憬苍空的人偶"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000052",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE,BT_REVERSE_HEAL_BASED_TARGET,BT_REVERSE_HEAL_BASED_CASTER",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 20F",
+      "kr": "비천의 탑 [베리 하드] 20층",
+      "jp": "飛天の塔【ベリーハード】20階",
+      "zh": "飞天之塔【极难】第20层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103020",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Melee Weapon: Beam Sword",
+        "kr": "근접 무장: 빔 소드",
+        "jp": "近接武装:ビームソード",
+        "zh": "近战武装:光剑"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.",
+        "kr": "적을 공격합니다.",
+        "jp": "敵単体にダメージを与える。",
+        "zh": "攻击敌人。"
+      },
+      "icon": "Skill_First_2000052"
+    },
+    {
+      "name": {
+        "en": "Firepower Support: Homing Lazer",
+        "kr": "화력 지원 : 호밍 레이저",
+        "jp": "火力支援:ホーミングレーザー",
+        "zh": "火力支援:导航镭射"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>5 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>감전</color>을 <color=#28d9ed>5턴</color> 동안 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>5ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>5回合</color>。"
+      },
+      "icon": "Skill_Second_2000052"
+    },
+    {
+      "name": {
+        "en": "Add-on: Strike Launcher",
+        "kr": "애드온 : 런처 스트라이크",
+        "jp": "殲滅:エクスタミネーション",
+        "zh": "附加装置:炮战强袭"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nFor each target damaged, increases <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>2.5%</color>.",
+        "kr": "적 전체를 공격합니다.\\n피해를 준 대상마다 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>2.5%</color> 증가합니다.",
+        "jp": "敵全体にダメージを与える。\\nダメージを与えた対象の数に応じて、味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>2.5%</color>UPさせる。",
+        "zh": "攻击全体敌人。\\n每对1个目标造成伤害,都使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>2.5%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000052"
+    },
+    {
+      "name": {
+        "en": "Skyward Manager",
+        "kr": "비천의 관리자",
+        "jp": "飛天の管理者",
+        "zh": "飞天的管理者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nGreatly reduces damage taken by the Boss.\\nWeakness Gauge can be <color=#28d9ed>reduced</color> only <color=#28d9ed>when hit</color> if all surviving allies are inflicted with <color=#28d9ed>Shocked</color>.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)\\nAt the start of the Boss's or Epsilon's turn, removes all debuffs from the caster.\\nWhen the Boss is inflicted with <color=#28d9ed>Break</color>, the <color=#28d9ed>reduced damage taken</color> and <color=#28d9ed>immunity to Weakness Gauge reduction</color> effects are removed.",
+        "kr": "(패시브 효과)\\n전투 입장 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어 시스템 : 시그마 돔</color>을 생성합니다.\\n아군과 적이 행동 후, <color=#28d9ed>감전</color>을 보유하지 않은 아군이 있다면 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어 시스템 : 시그마 돔</color>이 생성 됩니다.\\n아군이 약화효과 피해 시 아군 전체의 행동 게이지가 <color=#28d9ed>50%</color> 감소 합니다.(1턴 당 1회 가능)\\n보스와 엡실론은 턴 시작 시 자신의 약화효과를 모두 해제합니다.\\n보스 <color=#28d9ed>브레이크</color>이후 <color=#28d9ed>방어 시스템 : 시그마 돔</color>은 생성되지 않습니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>防衛システム:シグマドーム</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n味方・敵が行動した後、<color=#28d9ed>感電</color>状態でない味方がいる場合、<color=#28d9ed>防衛システム:シグマドーム</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n味方が弱体効果ダメージを受けた場合、味方全体の行動ゲージを<color=#28d9ed>50%</color>DOWNさせる。(1ターンに1回のみ)\\nボスとイプシロンはターン開始時、自分の弱体効果をすべて解除する。\\nボスが<color=#28d9ed>ブレイク</color>した後、<color=#28d9ed>防衛システム:シグマドーム</color>は付与できない。",
+        "zh": "(被动效果)\\n大幅降低首领受到的伤害。\\n所有幸存的友军只在处于<color=#28d9ed>触电</color>状态的情况下<color=#28d9ed>受到攻击时</color>,WG才会<color=#28d9ed>降低</color>。\\n友军受到弱化效果伤害时,全体友军的行动值降低<color=#28d9ed>50%</color>(1回合仅限1次)。\\n首领和埃普西隆在回合开始时均解除自身的所有弱化效果。\\n首领<color=#28d9ed>力竭</color>时受到的<color=#28d9ed>伤害降低</color>和<color=#28d9ed>WG降低免疫</color>效果会被解除。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns, and increases Attack and Speed by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Attacks all enemies. When the enemy is inflicted with Shocked, deals greater damage. This Enraged has no duration.",
+        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체를 공격합니다. 감전 상태의 적에게는 더 큰 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
+        "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>5%</color>UPする。この効果は最大3回まで累積し、ブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:敵全体にダメージを与える。感電状態の敵にはより大ダメージを与える。【狂暴化】の持続ターンはない。",
+        "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>5%</color>。该效果最多可叠加3次,且将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:攻击全体敌人。对触电状态的敌人造成更多伤害。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

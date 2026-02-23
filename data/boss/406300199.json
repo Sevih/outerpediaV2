@@ -1,0 +1,119 @@
+{
+  "id": "406300199",
+  "Name": {
+    "en": "Avian Demibeast of Razor Talons",
+    "kr": "비행형 수인 칼날다리",
+    "jp": "飛行型獣人・刃の足",
+    "zh": "刀锋腿飞行兽人"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 100,
+  "icons": "4063001",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 93F",
+      "kr": "비천의 탑 93층",
+      "jp": "飛天の塔93階",
+      "zh": "飞天之塔93层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101093",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Blade Leg",
+        "kr": "블레이드 레그",
+        "jp": "ブレイドレッグ",
+        "zh": "刀刃之腿"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Priority Gauge</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color>를 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-10%</color>DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-10%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Flurry of Kicks",
+        "kr": "킥 샤워",
+        "jp": "キックシャワー",
+        "zh": "飞踢"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Priority Gauge</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color>를 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-10%</color>DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-10%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Crescent Kick",
+        "kr": "크레센트 킥",
+        "jp": "クレセントキック",
+        "zh": "新月踢"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Priority Gauge</color> by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color>를 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-10%</color>DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-10%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Super Regeneration III",
+        "kr": "초재생 III",
+        "jp": "超再生 III",
+        "zh": "超再生 III"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nRecovers Health of the caster by <color=#28d9ed>10%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>10%</color> 만큼 회복합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、自分のHPを<color=#28d9ed>10%</color>回復する。",
+        "zh": "(被动效果)\\n每到自身回合时,使自身生命值恢复<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Icarus",
+        "kr": "이카로스",
+        "jp": "イカロス",
+        "zh": "伊卡洛斯"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nHas a <color=#28d9ed>20%</color> chance to grant an <color=#28d9ed>extra turn</color> at the end of the turn.",
+        "kr": "(패시브 효과)\\n턴 종료 시 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "jp": "(パッシブ効果)\\nターン終了時<color=#28d9ed>20%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
+        "zh": "(被动效果)\\n回合结束时,有<color=#28d9ed>20%</color>的几率获得<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

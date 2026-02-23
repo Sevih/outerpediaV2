@@ -1,0 +1,135 @@
+{
+  "id": "400401",
+  "Name": {
+    "en": "Owlbear Mauler",
+    "kr": "아울베어 발톱",
+    "jp": "先鋭のオウルベア",
+    "zh": "利爪枭熊"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 103,
+  "icons": "4033001",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 4F",
+      "kr": "비천의 탑 [하드] 4층",
+      "jp": "飛天の塔【ハード】4階",
+      "zh": "飞天之塔【困难】第4层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102004",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Bear Claw",
+        "kr": "곰의 발톱",
+        "jp": "熊の爪",
+        "zh": "熊爪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the caster by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>20%</color> 회복합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>HP</color>を<color=#28d9ed>20%</color>回復する。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Double-hand Thrust",
+        "kr": "양손 찌르기",
+        "jp": "両手突き",
+        "zh": "双手刺击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the caster by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>20%</color> 회복합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>HP</color>を<color=#28d9ed>20%</color>回復する。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Bear Frenzy",
+        "kr": "곰의 분노",
+        "jp": "熊の怒り",
+        "zh": "熊怒"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the caster by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>20%</color> 회복합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>HP</color>を<color=#28d9ed>20%</color>回復する。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Beast's Hunting Strategy",
+        "kr": "맹수의 사냥법",
+        "jp": "猛獣の狩猟法",
+        "zh": "猛兽狩猎法则"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nGrants <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle.\\nIncreases damage taken when inflicted with <color=#28d9ed>Bleeding</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>지속 회복</color>효과를 얻습니다.\\n<color=#28d9ed>출혈</color> 상태에 걸리면 더 큰 피해를 입습니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>継続回復</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n<color=#28d9ed>出血</color>状態の場合、受けるダメージがUPする。",
+        "zh": "(被动效果)\\n战斗开始时,获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>2回合</color>。\\n若处于<color=#28d9ed>出血</color>状态,则受到更大的伤害。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Fury Stack III",
+        "kr": "분노 중첩 III",
+        "jp": "アンガースタック III",
+        "zh": "愤怒叠加 III"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>10%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>10%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>10%</color>UPする。",
+        "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Epsilon Physical Enhancement II",
+        "kr": "엡실론의 신체 강화 II",
+        "jp": "イプシロンの身体強化II",
+        "zh": "埃普西隆的身体强化II"
+      },
+      "type": "SKT_MONSTER_3",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Penetration</color> and <color=#28d9ed>damage</color> by <color=#28d9ed>5%</color> and <color=#28d9ed>3%</color> respectively, when gaining a turn. (Max 10 stacks)",
+        "kr": "(패시브 효과)\\n턴 획득 시, <color=#28d9ed>관통력, 피해량</color>이 <color=#28d9ed>5%, 3%</color> 증가합니다.(최대 10회 누적)",
+        "jp": "(パッシブ効果)\\nターン開始時、自分の<color=#28d9ed>貫通力</color>が<color=#28d9ed>5%</color>、<color=#28d9ed>与えるダメージ</color>が<color=#28d9ed>3%</color>UPする。\\n(最大10回まで累積)",
+        "zh": "(被动效果)\\n获得回合时,<color=#28d9ed>穿透力、伤害量</color>分别提升<color=#28d9ed>5%,3%</color>。(最多可叠加10次)"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

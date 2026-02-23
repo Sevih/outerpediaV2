@@ -1,0 +1,119 @@
+{
+  "id": "400601",
+  "Name": {
+    "en": "Dungeon Guardian Gyropuncher",
+    "kr": "던전 가디언 자이로펀치",
+    "jp": "ダンジョンガーディアン〈拳〉",
+    "zh": "旋风拳手暗堡守护者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 105,
+  "icons": "4043002",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 6F",
+      "kr": "비천의 탑 [하드] 6층",
+      "jp": "飛天の塔【ハード】6階",
+      "zh": "飞天之塔【困难】第6层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102006",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Energy Ball",
+        "kr": "에너지 볼",
+        "jp": "エネルギーボール",
+        "zh": "能量球"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Ignite",
+        "kr": "이그나이트",
+        "jp": "イグナイト",
+        "zh": "点燃"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Electric Field",
+        "kr": "일렉트릭 필드",
+        "jp": "エレクトリックフィールド",
+        "zh": "雷电领域"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Shocked</color> for <color=#28d9ed>2 turn(s)</color>.\\nHas a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target with the highest Attack for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.\\n가장 높은 공격력을 가진 대상을 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃力が最も高い対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n并有<color=#28d9ed>100%</color>的几率使攻击力最高的目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Restraint Program",
+        "kr": "제압 프로그램",
+        "jp": "制圧プログラム",
+        "zh": "压制程序"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nHas a <color=#28d9ed>20%</color> chance to inflict <color=#28d9ed>Stunned</color> on one target for <color=#28d9ed>1 turn(s)</color> when attacking.\\nIncreases damage dealt proportional to the number of <color=#28d9ed>debuffs</color> on the target.",
+        "kr": "(패시브 효과)\\n공격 시 대상 한 명을 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n또한 대상이 보유한 <color=#28d9ed>약화 효과</color>가 많을수록 피해가 증가합니다.",
+        "jp": "(パッシブ効果)\\n攻撃時、対象単体に<color=#28d9ed>20%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nまた対象の<color=#28d9ed>弱体効果</color>の数が多いほど、与えるダメージがUPする。",
+        "zh": "(被动效果)\\n攻击时,有<color=#28d9ed>20%</color>的几率使1名敌人陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。\\n并且当目标附带的<color=#28d9ed>弱化效果</color>越多,则该技能的伤害越高。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Epsilon Physical Enhancement IV",
+        "kr": "엡실론의 신체 강화 IV",
+        "jp": "イプシロンの身体強化IV",
+        "zh": "埃普西隆的身体强化IV"
+      },
+      "type": "SKT_MONSTER_3",
+      "description": {
+        "en": "(Passive Effect)\\nWhen hit, <color=#28d9ed>Defense</color> increases by <color=#28d9ed>5%</color>. (Up to 10 stacks)",
+        "kr": "(패시브 효과)\\n피격 시, <color=#28d9ed>방어력</color>이 <color=#28d9ed>5%</color> 증가합니다.(최대 10회 누적)",
+        "jp": "(パッシブ効果)\\n被撃時、<color=#28d9ed>防御力</color>が<color=#28d9ed>5%</color>UPする。(最大10回累積)",
+        "zh": "(被动效果)\\n受击时,<color=#28d9ed>防御力</color>提高<color=#28d9ed>5%</color>。(最多叠加10次)"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "5203701",
+  "Name": {
+    "en": "Shichifuja's Shadow",
+    "kr": "시치후샤의 그림자",
+    "jp": "七歩蛇の影",
+    "zh": "七步蛇的影子"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 137,
+  "icons": "4038004",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 37F",
+      "kr": "비천의 탑 [하드] 37층",
+      "jp": "飛天の塔【ハード】37階",
+      "zh": "飞天之塔【困难】第37层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102037",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Creeping Toxin",
+        "kr": "엄습하는 맹독",
+        "jp": "急襲猛毒",
+        "zh": "剧毒来袭"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Poisoned</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>60%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>중독</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>60%</color>の確率で対象に<color=#28d9ed>中毒</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>60%</color>的几率使目标陷入<color=#28d9ed>中毒</color>状态,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Water"
+    },
+    {
+      "name": {
+        "en": "Higashiyama's Master",
+        "kr": "히가시야마의 주인",
+        "jp": "東山ノ主",
+        "zh": "东山的主人"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and grants <color=#28d9ed>Poisoned</color> to the whole enemies for <color=#28d9ed>2 turns</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>중독</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,在<color=#28d9ed>2回合</color>内赋予全体敌人<color=#28d9ed>中毒</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Water"
+    },
+    {
+      "name": {
+        "en": "Miasmic Restriction",
+        "kr": "독안개의 결계",
+        "jp": "毒霧結界",
+        "zh": "毒雾的结界"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to grant <color=#28d9ed>Immunity</color> to the caster for <color=#28d9ed>2 turn(s)</color>.\\n\\nIf the target is inflicted with <color=#28d9ed>Poisoned</color>, has a <color=#28d9ed>100%</color> chance to ignore the target's Resilience and Immunity to inflict an irremovable <color=#28d9ed>Poisoned</color> for <color=#28d9ed>1 turn(s)</color> and reduce the target's Priority by <color=#28d9ed>50%</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>면역</color>을 부여합니다.\\n\\n공격 대상이 <color=#28d9ed>중독</color> 상태라면 <color=#28d9ed>100%</color> 확률로 대상의 효과 저항과 면역을 무시하는 해제 불가능한 <color=#28d9ed>중독</color>을 <color=#28d9ed>1턴</color> 동안 부여하며 행동 게이지를 <color=#28d9ed>-50%</color> 감소시킵니다.",
+        "jp": "敵全体にダメージを与え<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n攻撃対象が<color=#28d9ed>中毒</color>状態の場合、<color=#28d9ed>100%</color>の確率で対象に<color=#28d9ed>中毒</color>を<color=#28d9ed>1ターン</color>の間付与する。この効果は対象の効果抵抗と免疫を無視し、解除されない。対象の行動ゲージを<color=#28d9ed>-50%</color>DOWNさせる。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使自身获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n若攻击目标处于<color=#28d9ed>中毒</color>状态,则有<color=#28d9ed>100%</color>的几率获得无法被解除且无视目标效果抵抗和免疫效果的<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>1回合</color>,且行动值降低<color=#28d9ed>-50%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Water"
+    },
+    {
+      "name": {
+        "en": "Higashiyama's Master",
+        "kr": "히가시야마의 주인",
+        "jp": "東山ノ主",
+        "zh": "东山的主人"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "At the start of battle, greatly reduces all enemies' <color=#28d9ed>Attack</color>. When hit, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "kr": "전투 시작 시, 적 전체의 <color=#28d9ed>공격력</color>을 크게 감소시키며 피격 시 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
+        "jp": "戦闘開始時、敵全体の<color=#28d9ed>攻撃力</color>を大幅DOWNする。被弾時、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>10%</color>UP。",
+        "zh": "战斗开始时,大幅降低全体敌人的<color=#28d9ed>攻击力</color>。受击时,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Grants the caster un-dispellable Attack Up/Damage Reduction for 3 turns, recovers WG 30%, then inflicts <color=#28d9ed>Poisoned</color> on all enemies for <color=#28d9ed>3</color> turns. Berserk lasts 3 turns.\\n<color=#28d9ed>Berserk Ultimate</color>: Used when Berserk ends. Attacks all enemies and <color=#28d9ed>Detonates</color> all <color=#28d9ed>Poison</color> effects on them.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복한 뒤, 적 전체에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>광폭화 필살기</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 대상의 <color=#28d9ed>중독</color>을 모두 <color=#28d9ed>폭발</color>시킵니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可の攻撃力UP/被ダメージDOWNを3ターン付与し、WG 30%を回復。その後、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>3ターン</color>の間付与。【狂暴化】は3ターンの間持続する。\\n<color=#28d9ed>狂暴必殺</color>:狂暴終了時に使用。敵全体に攻撃し、付与された<color=#28d9ed>中毒</color>をすべて<color=#28d9ed>爆発</color>させる。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:为自身赋予不可驱散的攻击力提升/伤害降低,持续3回合;恢复WG 30%,随后对全体敌人施加<color=#28d9ed>中毒</color>,持续<color=#28d9ed>3</color>回合。狂暴持续3回合。\\n<color=#28d9ed>狂暴终技</color>:狂暴结束时施放。攻击全体敌人并<color=#28d9ed>引爆</color>其身上的全部<color=#28d9ed>中毒</color>效果。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

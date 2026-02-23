@@ -1,0 +1,124 @@
+{
+  "id": "402701",
+  "Name": {
+    "en": "Mene",
+    "kr": "메네",
+    "jp": "メネ",
+    "zh": "麦尼"
+  },
+  "Surname": {
+    "en": "Little Insomniac Nun",
+    "kr": "불면증 꼬맹이 수녀",
+    "jp": "不眠症のちびシスター",
+    "zh": "失眠的小修女"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Earth",
+  "level": 126,
+  "icons": "2000054",
+  "BuffImmune": "BT_SILENCE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "StatBuffImmune": "ST_SPEED,ST_ACCURACY",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 27F",
+      "kr": "비천의 탑 [하드] 27층",
+      "jp": "飛天の塔【ハード】27階",
+      "zh": "飞天之塔【困难】第27层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102027",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shark Attack!",
+        "kr": "샤크 어택!",
+        "jp": "アオイアタック",
+        "zh": "飞鲨袭击!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest current Health by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>10%</color> 회복시킵니다.",
+        "jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>10%</color>回復する。",
+        "zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。"
+      },
+      "icon": "Skill_First_2000054"
+    },
+    {
+      "name": {
+        "en": "Sharks Are Friends",
+        "kr": "상어는 친구",
+        "jp": "起こさないで",
+        "zh": "鲨鱼是朋友"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Restores all allies' <color=#28d9ed>HP</color> by <color=#28d9ed>35%</color> and reduces the duration of debuffs by <color=#28d9ed>2 turns</color>.",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>35%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>2턴</color> 감소시킵니다.",
+        "jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>35%</color>回復し、弱体効果の持続時間を<color=#28d9ed>2ターン</color>DOWNさせる。",
+        "zh": "为我方全体恢复<color=#28d9ed>35%</color><color=#28d9ed>生命值</color>,并将减益效果的持续时间缩短<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000054"
+    },
+    {
+      "name": {
+        "en": "Shark Attack! Burst Level 3!",
+        "kr": "샤크 어택! 버스트 3!",
+        "jp": "アオイアタック! バースト3!",
+        "zh": "飞鲨袭击!爆发3!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and heals all allies by <color=#28d9ed>20%</color>.",
+        "kr": "적 전체를 공격하고 아군 전체의 체력을 <color=#28d9ed>20%</color> 회복시킵니다.",
+        "jp": "敵全体にダメージを与え、味方全体のHPを<color=#28d9ed>20%</color>回復させる。",
+        "zh": "攻击全体敌人,并使全体友军的生命值恢复\\n<color=#28d9ed>20%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000054"
+    },
+    {
+      "name": {
+        "en": "Dreaming Girl",
+        "kr": "꿈꾸는 소녀",
+        "jp": "夢見る女の子",
+        "zh": "心怀梦想的少女"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Increases Attack and Speed by <color=#28d9ed>5%</color> every time the caster takes a turn.\\n\\nWhile an ally remains alive, reduces <color=#28d9ed>Weakness Gauge damage</color> taken by <color=#28d9ed>50%</color>.",
+        "kr": "(패시브 효과) 자신의 턴마다 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다.\\n\\n아군 생존 시 받는 <color=#28d9ed>WG 피해</color>가 <color=#28d9ed>50%</color> 감소합니다.",
+        "jp": "(パッシブ効果)自分のターンが来るたびに、攻撃力とスピードが<color=#28d9ed>5%</color>UPする。\\n\\n戦場に味方がいる場合、受ける<color=#28d9ed>WGダメージ</color>が<color=#28d9ed>50%</color>DOWNする。",
+        "zh": "(被动效果)每到自身回合时,使攻击力和速度提升<color=#28d9ed>5%</color>。\\n\\n使友军存活时受到的<color=#28d9ed>WG伤害</color>降低<color=#28d9ed>50%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Grants increased <color=#28d9ed>Attack</color> to surviving allies for <color=#28d9ed>2 turn(s)</color>, then <color=#28d9ed>Resurrects (Greater)</color> all slain allies. Afterward, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>50%</color>.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>50%</color>만큼 회복시킵니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:戦場にいる味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>50%</color>回復させる。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化和必杀技</color>:使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的全体友军<color=#28d9ed>复活(强化)</color>。随后使全体友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>50%</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "5203201",
+  "Name": {
+    "en": "Nella",
+    "kr": "넬라",
+    "jp": "ネラ",
+    "zh": "内拉"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Dark",
+  "level": 132,
+  "icons": "2000083",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 32F",
+      "kr": "비천의 탑 [하드] 32층",
+      "jp": "飛天の塔【ハード】32階",
+      "zh": "飞天之塔【困难】第32层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102032",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Fiend's Courtesy",
+        "kr": "마족의 예절",
+        "jp": "魔族の礼節",
+        "zh": "魔族礼仪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nBefore attacking, if the caster's current Health is <color=#28d9ed>85%</color> or lower, restores <color=#28d9ed>10%</color> of <color=#28d9ed>self</color>'s Max Health.\\nIf the caster's current Health exceeds <color=#28d9ed>85%</color>, heals the ally with the lowest Health by <color=#28d9ed>10%</color> of Nella's Max Health.",
+        "kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>10%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다.",
+        "jp": "敵単体にダメージを与える。\\n攻撃前、自分の現在HPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>の最大HPの<color=#28d9ed>10%</color>を回復する。\\n攻撃前、自分の現在HPが<color=#28d9ed>85%</color>を超える場合、最もHPが低い味方のHPをネラの最大HPの<color=#28d9ed>10%</color>分回復する。",
+        "zh": "攻击敌人。\\n攻击前,若自身当前生命值≤<color=#28d9ed>85%</color>,则回复<color=#28d9ed>自身</color>最大生命值的<color=#28d9ed>10%</color>。\\n攻击前,若自身当前生命值><color=#28d9ed>85%</color>,则为生命值最低的友军回复内拉最大生命值<color=#28d9ed>10%</color>的生命。"
+      },
+      "icon": "Skill_First_2000083"
+    },
+    {
+      "name": {
+        "en": "Oath of Darkness",
+        "kr": "어둠의 맹약",
+        "jp": "闇の盟約",
+        "zh": "黑暗誓约"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) Triggers <color=#28d9ed>Rapid Response</color> upon being hit.\\nIncreases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>70%</color> and heals all allies by <color=#28d9ed>20%</color> of Nella's Max Health.",
+        "kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>70%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시킵니다.",
+        "jp": "(発動効果)被弾時に<color=#28d9ed>迅速対応</color>が発動する。\\n自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>70%</color>UPし、味方全体のHPをネラの最大HPの<color=#28d9ed>20%</color>分回復する。",
+        "zh": "(触发效果)受到攻击时触发<color=#28d9ed>迅速应对</color>。\\n自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>70%</color>,并为全体友军回复内拉最大生命值<color=#28d9ed>20%</color>的生命。"
+      },
+      "icon": "Skill_Second_2000083"
+    },
+    {
+      "name": {
+        "en": "The Coronation",
+        "kr": "대관식",
+        "jp": "即位の儀",
+        "zh": "加冕礼"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Increases the <color=#28d9ed>Priority</color> of surviving allies by <color=#28d9ed>20%</color>, then <color=#28d9ed>Resurrects (Greater)</color> all fallen allies. Afterwards, heals all allies by <color=#28d9ed>20%</color> of Nella's Max Health and grants <color=#28d9ed>Immunity</color> for <color=#28d9ed>2</color> turn(s).\\nAdditionally grants all allies except the caster <color=#28d9ed>Attack Up</color> and <color=#28d9ed>Penetration Up</color> for <color=#28d9ed>3 turns</color>.",
+        "kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 면역을 부여합니다.\\n\\n자신을 제외한 아군에게 추가적으로 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>공격력, 관통력</color> 증가 효과를 부여합니다.",
+        "jp": "生存している味方の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPした後、戦闘不能の味方全員を<color=#28d9ed>復活(強化)</color>させる。さらに味方全体のHPをネラの最大HPの<color=#28d9ed>20%</color>分回復し、<color=#28d9ed>2</color>ターンのあいだ<color=#28d9ed>免疫</color>を付与する。\\n加えて自分以外の味方に<color=#28d9ed>攻撃力UP</color>と<color=#28d9ed>貫通力UP</color>を<color=#28d9ed>3ターン</color>付与する。",
+        "zh": "使存活友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>,随后使全体阵亡友军<color=#28d9ed>复活(强化)</color>。之后为全体友军回复内拉最大生命值<color=#28d9ed>20%</color>的生命,并赋予<color=#28d9ed>免疫</color>,持续<color=#28d9ed>2</color>回合。\\n另外,为除自身外的友军赋予<color=#28d9ed>攻击力提升</color>与<color=#28d9ed>穿透力提升</color>持续<color=#28d9ed>3</color>回合。"
+      },
+      "icon": "Skill_Ultimate_2000083"
+    },
+    {
+      "name": {
+        "en": "Leader of Pandemonium",
+        "kr": "판데모니움의 지도자",
+        "jp": "パンデモニウムの指導者",
+        "zh": "万魔殿的引导者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "At the start of the turn, if all allies except the caster are <color=#28d9ed>dead</color>, resets the skill cooldown of <color=#28d9ed>Coronation</color>.",
+        "kr": "턴 시작 시 자신을 제외한 모든 아군이 <color=#28d9ed>사망</color>했다면 <color=#28d9ed>대관식</color>의 스킬 쿨타임이 초기화됩니다.",
+        "jp": "ターン開始時、自分を除く味方全体が<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【即位の儀】</color>のスキルターンが初期化される。",
+        "zh": "回合开始时,如果除自身以外的所有友军均<color=#28d9ed>已阵亡</color>,则重置<color=#28d9ed>加冕礼</color>的技能冷却时间。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Removes all debuffs from self and deals massive damage to all enemies, then grants <color=#28d9ed>Immunity</color> for <color=#28d9ed>2 turns</color>.",
+        "kr": "5턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 자신의 약화 효과를 모두 해제하고 적 전체에게 치명적인 피해를 입힙니다. 이 후, 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>면역</color>을 부여합니다.",
+        "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分の弱体効果をすべて解除し、敵全体に大ダメージを与え、その後、自分に<color=#28d9ed>2ターン</color>の<color=#28d9ed>免疫</color>を付与する。",
+        "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:解除自身所有弱化效果,对全体敌人造成巨大伤害,并为自身赋予<color=#28d9ed>2回合</color><color=#28d9ed>免疫</color>效果。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "402301190",
+  "Name": {
+    "en": "Centipede Slicer",
+    "kr": "지네 칼날",
+    "jp": "カマキリムカデ",
+    "zh": "利刃蜈蚣"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 26,
+  "icons": "4023011",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 7F",
+      "kr": "비천의 탑 7층",
+      "jp": "飛天の塔7階",
+      "zh": "飞天之塔7层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101007",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Bite and Throw",
+        "kr": "깨물어 던지기",
+        "jp": "噛みつき投げ",
+        "zh": "撕咬抛投"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Bite and Crush",
+        "kr": "깨물어 부수기",
+        "jp": "噛み砕き",
+        "zh": "紧咬粉碎"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Dig",
+        "kr": "땅굴파기",
+        "jp": "穴掘り",
+        "zh": "挖地洞"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Fury Stack I",
+        "kr": "분노 중첩 I",
+        "jp": "アンガースタック I",
+        "zh": "愤怒叠加 I"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>5%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>5%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>5%</color>UPする。",
+        "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>5%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Eye Gobbler",
+        "kr": "눈을 파먹는 자",
+        "jp": "目をえぐり食らう者",
+        "zh": "眼球猎食者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nHas a <color=#28d9ed>20%</color> chance to reduce one target's <color=#28d9ed>Resilience</color> for <color=#28d9ed>1 turn(s)</color> when attacking.",
+        "kr": "(패시브 효과)\\n공격 시 <color=#28d9ed>20%</color> 확률로 대상 한 명의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다.",
+        "jp": "(パッシブ効果)\\n攻撃時、<color=#28d9ed>20%</color>の確率で対象単体の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "zh": "(被动效果)\\n攻击时,有<color=#28d9ed>20%</color>的几率使1名敌人的<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

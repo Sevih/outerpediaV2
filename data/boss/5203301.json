@@ -1,0 +1,103 @@
+{
+  "id": "5203301",
+  "Name": {
+    "en": "Battle Maid Tamara",
+    "kr": "전투 메이드 타마라",
+    "jp": "戦闘メイド・タマラ",
+    "zh": "战斗女仆塔玛拉"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Water",
+  "level": 133,
+  "icons": "2010060",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 33F",
+      "kr": "비천의 탑 [하드] 33층",
+      "jp": "飛天の塔【ハード】33階",
+      "zh": "飞天之塔【困难】第33层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102033",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Fire and Reposition",
+        "kr": "기동 사격",
+        "jp": "機動射撃",
+        "zh": "机动射击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks the enemy.\\nWhen scoring a critical hit, has a <color=#28d9ed>100%</color> chance to activate a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.\\n\\nThis attack always scores a critical hit.",
+        "kr": "적을 공격합니다.\\n치명 공격 시 <color=#28d9ed>100%</color> 확률로 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.\\n\\n이 공격은 항상 치명 공격이 발생합니다.",
+        "jp": "敵単体にダメージを与える。\\n会心が発生した場合、攻撃力が最も高い味方単体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>連携</color>を発生させる。\\n\\nこのスキルは必ず会心が発生する。",
+        "zh": "攻击敌人。\\n发动暴击时,有<color=#28d9ed>100%</color>的几率使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。\\n\\n此攻击总是发生暴击。"
+      },
+      "icon": "Skill_First_2000060"
+    },
+    {
+      "name": {
+        "en": "Smoke Screen",
+        "kr": "연막산탄",
+        "jp": "発煙弾",
+        "zh": "烟幕散弹"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Has a <color=#28d9ed>80%</color> chance to grant all allies increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>, before attacking an enemy.\\nWhen scoring a critical hit, has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Silenced</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "<color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>치명 확률</color>을 증가시킨 후 적을 공격합니다.\\n치명 공격 시 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>1턴</color> 동안 대상에게 <color=#28d9ed>침묵</color>을 부여합니다.",
+        "jp": "<color=#28d9ed>80%</color>の確率で<color=#28d9ed>2ターン</color>の間味方全体の<color=#28d9ed>会心率</color>をUPさせた後、敵単体にダメージを与える。\\n会心が発生した場合、対象に<color=#28d9ed>80%</color>の確率で<color=#28d9ed>沈黙</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "有<color=#28d9ed>80%</color>的几率使全体友军的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>后,攻击敌人。\\n发动暴击时,有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>沉默</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000060"
+    },
+    {
+      "name": {
+        "en": "Maximum Range Fire",
+        "kr": "최장 거리 사격",
+        "jp": "最長距離射撃",
+        "zh": "最长距离射击"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Has a <color=#28d9ed>70%</color> chance to inflict reduced <color=#28d9ed>Defense</color> on all targets for <color=#28d9ed>2 turn(s)</color>.\\nWhen scoring a critical hit on one or more enemies, has a <color=#28d9ed>70%</color> chance to increase the <color=#28d9ed>skill cooldowns</color> of all targets by <color=#28d9ed>1 turn</color>.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상 모두의 <color=#28d9ed>방어력</color>을 감소시킵니다.\\n한 명 이상의 적에게 치명 공격 시 <color=#28d9ed>70%</color> 확률로 대상 모두의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "jp": "敵全体にダメージを与える。<color=#28d9ed>70%</color>の確率で対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\n単体以上の敵に会心が発生した場合、<color=#28d9ed>70%</color>の確率で対象全体の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>増加させる。",
+        "zh": "攻击全体敌人。有<color=#28d9ed>70%</color>的几率使全体目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。\\n对1名以上的敌人发动暴击时,有<color=#28d9ed>70%</color>的几率使全体目标的<color=#28d9ed>技能冷却时间</color>增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000060"
+    },
+    {
+      "name": {
+        "en": "Kindness! Faithful Service!",
+        "kr": "친절! 성실 봉사!",
+        "jp": "親切!誠実サービス!",
+        "zh": "亲切!诚挚服务!"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen hit by a Critical Hit, increases the caster's <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turns</color>.\\nWhen an ally is hit (including the caster), increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "kr": "(패시브 효과)\\n치명 피격 시 자신의 <color=#28d9ed>반격</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n아군 피격 시(자신 포함) 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
+        "jp": "(パッシブ効果)\\n会心攻撃を受けた時、自分の<color=#28d9ed>反撃</color>を<color=#28d9ed>2ターン</color>の間UPする。\\n味方(自分を含む)がダメージを受けた時、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>10%</color>UPする。",
+        "zh": "(被动效果)\\n受到暴击时,使自身<color=#28d9ed>反击</color>提升,持续<color=#28d9ed>2回合</color>。\\n当友军(含自身)受到攻击时,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

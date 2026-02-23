@@ -1,0 +1,124 @@
+{
+  "id": "5203601",
+  "Name": {
+    "en": "Fatal",
+    "kr": "페이탈",
+    "jp": "フェータル",
+    "zh": "法塔尔"
+  },
+  "Surname": {
+    "en": "Exotic Assassin",
+    "kr": "이국의 암살자",
+    "jp": "異国の暗殺者",
+    "zh": "异国暗杀者"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Water",
+  "level": 136,
+  "icons": "2000078",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 36F",
+      "kr": "비천의 탑 [하드] 36층",
+      "jp": "飛天の塔【ハード】36階",
+      "zh": "飞天之塔【困难】第36层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102036",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Deathly Acrobatics",
+        "kr": "죽음의 곡예",
+        "jp": "死の曲芸",
+        "zh": "死亡马戏"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to increase the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>2</color> turn(s).",
+        "kr": "적 대상을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体を攻撃し、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2</color>ターンの間UPする。",
+        "zh": "攻击1名敌人,并有<color=#28d9ed>40%</color>概率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2</color>回合。"
+      },
+      "icon": "Skill_First_2000078"
+    },
+    {
+      "name": {
+        "en": "Curtain of Darkness",
+        "kr": "밤의 장막",
+        "jp": "夜の帳",
+        "zh": "夜之帷幕"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Removes <color=#28d9ed>all</color> debuffs from the caster and grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy.",
+        "kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>모두</color> 제거하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color> 증가 효과를 부여한 뒤 적 대상을 공격합니다.",
+        "jp": "自分の弱体効果を<color=#28d9ed>すべて</color>解除し、<color=#28d9ed>スピード</color>UP効果を<color=#28d9ed>2ターン</color>の間付与した後、敵単体にダメージを与える。",
+        "zh": "解除自身附带的<color=#28d9ed>所有</color>弱化效果,并获得<color=#28d9ed>速度</color>提升效果,持续 <color=#28d9ed>2回合</color>后,攻击敌人目标。"
+      },
+      "icon": "Skill_Second_2000078"
+    },
+    {
+      "name": {
+        "en": "Requiem Serket",
+        "kr": "레퀴엠 세르케트",
+        "jp": "レクイエム・セルケト",
+        "zh": "安魂曲塞尔凯特"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy. Enemies defeated by this skill cannot be revived or resurrected.",
+        "kr": "적을 공격합니다. 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "jp": "敵単体にダメージを与える。本スキルで倒された敵は復活・蘇生できない。",
+        "zh": "攻击敌人。被此技能击倒的敌人无法复活或复苏。"
+      },
+      "icon": "Skill_Ultimate_2000078"
+    },
+    {
+      "name": {
+        "en": "My Admired Senpai",
+        "kr": "사모하는 선배님",
+        "jp": "憧れの先輩",
+        "zh": "仰慕的前辈"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "After the caster attacks, increases <color=#28d9ed>Eternal</color>'s <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>. When an enemy uses a non-attack skill, attacks the target with <color=#28d9ed>Veil of Night</color> (ignores Veil of Night's cooldown).",
+        "kr": "자신 공격 후, <color=#28d9ed>이터널</color>의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>100%</color> 증가시키고 적이 공격이 아닌 스킬 사용 시 <color=#28d9ed>밤의 장막</color>으로 대상을 공격합니다.(밤의 장막 쿨타임 무시)",
+        "jp": "自分が攻撃した後、<color=#28d9ed>【エターナル】</color>の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>100%</color>UPする。敵が攻撃以外のスキルを使用した時、<color=#28d9ed>【夜のヴェール】</color>で対象を攻撃する(スキルのスキルターン無視)。",
+        "zh": "自身攻击后,使<color=#28d9ed>「永恒」</color>的<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。当敌人使用非攻击技能时,以<color=#28d9ed>「夜之帷幕」</color>攻击其(无视该技能冷却)。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Scorpion Tail's One Hit, One Kill",
+        "kr": "일격필살 전갈 꼬리",
+        "jp": "一撃必殺テール",
+        "zh": "一击必杀蝎尾"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, permanently grants the caster an un-dispellable <color=#28d9ed>Stealth</color> effect.\\nAt the start of turn, increases the caster's <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>1</color> turn(s).\\nEach turn, increases the caster's <color=#28d9ed>Penetration</color> by <color=#28d9ed>5%</color> (up to 10 stacks).",
+        "kr": "(패시브 효과)\\n전투 입장 시 자신에게 해제 불가능한 <color=#28d9ed>은신</color> 효과를 영구적으로 부여합니다.\\n턴 시작 시 <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color> 및 <color=#28d9ed>치명 피해</color>가 증가합니다.\\n매 턴 자신의 <color=#28d9ed>관통력</color>이 <color=#28d9ed>5%</color>씩 증가합니다.(최대 10회 누적)",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分に解除不可の<color=#28d9ed>隠密</color>を永続付与する。\\nターン開始時、自分の<color=#28d9ed>会心率</color>と<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>1</color>ターンの間UP。\\n毎ターン、自分の<color=#28d9ed>貫通力</color>が<color=#28d9ed>5%</color>ずつUP(最大10回)。",
+        "zh": "(被动效果)\\n进入战斗时,永久获得不可驱散的<color=#28d9ed>潜行</color>效果。\\n回合开始时,自身<color=#28d9ed>暴击率</color>与<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>1</color>回合。\\n每回合自身<color=#28d9ed>穿透力</color>提高<color=#28d9ed>5%</color>(最多10层)。"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

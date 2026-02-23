@@ -1,0 +1,140 @@
+{
+  "id": "401701",
+  "Name": {
+    "en": "Tanya",
+    "kr": "타니아",
+    "jp": "タニア",
+    "zh": "塔尼娅"
+  },
+  "Surname": {
+    "en": "Trusty Guardian Knight",
+    "kr": "충성스런 호위기사",
+    "jp": "忠義を尽くす護衛騎士",
+    "zh": "忠诚的护卫骑士"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 116,
+  "icons": "2000016",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_REMOVE_BUFF",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 17F",
+      "kr": "비천의 탑 [하드] 17층",
+      "jp": "飛天の塔【ハード】17階",
+      "zh": "飞天之塔【困难】第17层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102017",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Split Boulders",
+        "kr": "바위 가르기",
+        "jp": "一閃突き",
+        "zh": "劈岩斩石"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.\\n\\n<color=#28d9ed>Gains an extra turn if the caster's Defense is currently increased.</color>",
+        "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.\\n\\n<color=#28d9ed>방어력이 증가한 상태라면 추가 턴을 획득합니다.</color>",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。\\n\\n<color=#28d9ed>防御力がUPした状態の場合、追加ターンを獲得する。</color>",
+        "zh": "攻击敌人。\\n自身的<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。\\n\\n<color=#28d9ed>若防御力处于提升状态,则获得额外回合。</color>"
+      },
+      "icon": "Skill_First_2000016"
+    },
+    {
+      "name": {
+        "en": "Break Surface",
+        "kr": "지면 부수기",
+        "jp": "ソードクラッシュ",
+        "zh": "地裂"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\nHas a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.\\n\\n<color=#28d9ed>Grants Immunity for 5 turn(s) if the caster's Defense is currently increased.</color>",
+        "kr": "적 전체를 공격합니다.\\n<color=#28d9ed>70%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.\\n\\n<color=#28d9ed>방어력이 증가한 상태라면 5턴 동안 면역을 획득합니다.</color>",
+        "jp": "敵全体にダメージを与える。\\n対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。\\n\\n<color=#28d9ed>防御力がUPした状態の場合、自分に5ターンの間免疫を付与する。</color>",
+        "zh": "攻击全体敌人。\\n有<color=#28d9ed>70%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。\\n\\n<color=#28d9ed>若防御力处于提升状态,则获得5回合免疫\\n效果。</color>"
+      },
+      "icon": "Skill_Second_2000016"
+    },
+    {
+      "name": {
+        "en": "Terminate Protection",
+        "kr": "경호 종료",
+        "jp": "クロスインパクト",
+        "zh": "护卫结束"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\n Has a <color=#28d9ed>70%</color> chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.\\n\\n<color=#28d9ed>Grants irremovable <color=#28d9ed>Invulnerability</color> for 2 turn(s) if the caster's Defense is currently increased.</color>",
+        "kr": "적 전체를 공격합니다.\\n<color=#28d9ed>70%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.\\n\\n<color=#28d9ed>방어력이 증가한 상태라면 2턴 동안 해제 불가능한 <color=#28d9ed>무적</color>을 획득합니다.</color>",
+        "jp": "敵全体にダメージを与える。\\n<color=#28d9ed>70%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。\\n\\n<color=#28d9ed>防御力がUPした状態の場合、解除不可能な<color=#28d9ed>無敵</color>を2ターンの間獲得する。</color>",
+        "zh": "攻击全体敌人。\\n有<color=#28d9ed>70%</color>的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。\\n\\n若<color=#28d9ed>防御力处于提升状态,则获得无法解除的<color=#28d9ed>无敌</color>效果,持续2回合。</color>"
+      },
+      "icon": "Skill_Ultimate_2000016"
+    },
+    {
+      "name": {
+        "en": "Fury Stack III",
+        "kr": "분노 중첩 III",
+        "jp": "アンガースタック III",
+        "zh": "愤怒叠加 III"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>10%</color> every time the caster gains a turn.\\nDoes not take Weakness Gauge damage while a Barrier is active.\\n\\nAfter any attack, grants a Barrier equal to <color=#28d9ed>3000</color> for 1 turn(s). When hit, increases Priority of the caster by <color=#28d9ed>10%</color>.",
+        "kr": "(패시브 효과)\\n자신이 턴을 획득할 때마다 공격력이 <color=#28d9ed>10%</color> 증가합니다.\\n실드를 보유하고 있다면 WG 피해를 받지 않습니다.\\n\\n모든 공격 후에 1턴 동안 <color=#28d9ed>3000</color>의 실드를 획득하고 피격 시 자신의 행동게이지를 <color=#28d9ed>10%</color> 증가시킵니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>10%</color>UPする。\\nシールド状態の場合、WGダメージを受けない。\\n\\nすべての攻撃後、1ターンの間<color=#28d9ed>3000</color>のシールドを付与し、自分がダメージを受けた場合、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。",
+        "zh": "(被动效果)\\n每当自身获得回合时,使攻击力提升<color=#28d9ed>10%</color>。\\n若附带护盾效果,则不会受到WG伤害。\\n\\n所有攻击结束后,获得<color=#28d9ed>3000</color>护盾,持续1回合。受到攻击时,使自身的行动值提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 10% Weakness Gauge. Increases Defense for 9 turn(s). Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Terminate Protection</color>: Used when Enraged ends. Attacks all enemies and has a 70% chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>. Damage dealt by this skill increases proportional to the caster's <color=#28d9ed>Defense</color>.\\nGains a Barrier for 5 turn(s) if the caster's Defense is currently increased.",
+        "kr": "4턴마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 9턴 동안 방어력이 증가합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>경호 종료</color> : 광폭화 종료 시 사용. 적 전체를 공격하고 70% 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다. 이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.\\n방어력이 증가한 상태라면 5턴 동안 실드를 획득합니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。防御力が9ターンの間UPする。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【クロスインパクト】</color>:【狂暴化】終了時に使用する。敵全体にダメージを与え、70%の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。このスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。\\n防御力がUPした状態の場合、自分にシールドを5ターンの間付与する。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化</color>自身获得无法解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复10%。使防御力提升,持续9回合。\\n狂暴化持续3回合。\\n\\n<color=#28d9ed>护卫结束</color>:狂暴化结束时发动。攻击全体敌人,并有70%的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。\\n若防御力处于提升的状态,则获得护盾效果,持续5回合。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "Terminate Protection",
+        "kr": "경호 종료",
+        "jp": "クロスインパクト",
+        "zh": "护卫结束"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_2000016"
+    }
+  ]
+}

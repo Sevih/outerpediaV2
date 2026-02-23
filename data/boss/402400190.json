@@ -1,0 +1,135 @@
+{
+  "id": "402400190",
+  "Name": {
+    "en": "Gustav",
+    "kr": "구스타프",
+    "jp": "グスタフ",
+    "zh": "古斯塔夫"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 30,
+  "icons": "4024001",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 10F",
+      "kr": "비천의 탑 10층",
+      "jp": "飛天の塔10階",
+      "zh": "飞天之塔10层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101010",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Flame of Desire",
+        "kr": "욕망의 불꽃",
+        "jp": "欲望の炎",
+        "zh": "欲望火花"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.",
+        "kr": "적을 공격합니다.",
+        "jp": "敵単体にダメージを与える。",
+        "zh": "攻击敌人。"
+      },
+      "icon": "Skill_First_4024001"
+    },
+    {
+      "name": {
+        "en": "Suppress",
+        "kr": "제압",
+        "jp": "制圧",
+        "zh": "压制"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 대상에게 <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>30%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>30%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4024001"
+    },
+    {
+      "name": {
+        "en": "Gluttony",
+        "kr": "탐식",
+        "jp": "貪食",
+        "zh": "贪食"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 대상에게 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4024001"
+    },
+    {
+      "name": {
+        "en": "Rage Stack XI",
+        "kr": "분노 중첩 XI",
+        "jp": "アンガースタック XI",
+        "zh": "愤怒叠加 XI"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nEach turn, increases own <color=#28d9ed>ATK</color> by <color=#28d9ed>5%</color>.\\n\\nWhen a bleeding target takes action, restores <color=#28d9ed>Max HP</color> <color=#28d9ed>5%</color> and <color=#28d9ed>WG</color> <color=#28d9ed>2</color>, and reduces damage taken by <color=#28d9ed>50%</color>.\\n\\nWhile not enraged, WG damage taken is reduced by <color=#28d9ed>50%</color>.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>5%</color> 증가합니다.\\n\\n출혈 보유 대상이 행동 시 <color=#28d9ed>최대 체력</color> <color=#28d9ed>5%</color>와 <color=#28d9ed>WG</color>를 <color=#28d9ed>2</color> 회복하고, 받는 피해가 <color=#28d9ed>50%</color> 감소합니다.\\n\\n광폭화 상태가 아닐 때는 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>5%</color>UPする。\\n\\n出血状態の対象が行動時、<color=#28d9ed>最大HP</color>を<color=#28d9ed>5%</color>、<color=#28d9ed>WG</color>を<color=#28d9ed>2</color>回復し、受けるダメージが<color=#28d9ed>50%</color>DOWNする。\\n\\n【狂暴化】状態でない場合は受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。",
+        "zh": "(被动效果)\\n每回合提高自身<color=#28d9ed>5%</color>点<color=#28d9ed>攻击力</color>。\\n\\n流血目标行动时,回复<color=#28d9ed>最大生命值</color><color=#28d9ed>5%</color>与<color=#28d9ed>WG</color><color=#28d9ed>2</color>,并使受到的伤害降低<color=#28d9ed>50%</color>。\\n\\n未进入狂暴状态时,受到的WG伤害降低<color=#28d9ed>50%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 3 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers 10% Weakness Gauge. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Disgusting Breath</color>: Used when Enraged ends.\\nAttacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.",
+        "kr": "3턴마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>더러운 입김</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color> 상태로 만듭니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.",
+        "jp": "3ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【汚れた吐息】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこの攻撃は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "zh": "每3回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>肮脏的吐息</color>:狂暴化结束时发动。\\n攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标陷入<color=#28d9ed>出血</color>状态,持续<color=#28d9ed>2回合</color>。\\n该攻击无视目标的<color=#28d9ed>效果抵抗</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

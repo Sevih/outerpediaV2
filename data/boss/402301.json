@@ -1,0 +1,167 @@
+{
+  "id": "402301",
+  "Name": {
+    "en": "Schattenmeister Schwartz",
+    "kr": "샤텐 마이스터 슈바르츠",
+    "jp": "シャッテンマイスター・シュヴァルツ",
+    "zh": "夜影团长施瓦兹"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 122,
+  "icons": "4004001",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 23F",
+      "kr": "비천의 탑 [하드] 23층",
+      "jp": "飛天の塔【ハード】23階",
+      "zh": "飞天之塔【困难】第23层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102023",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Schatten Spitze",
+        "kr": "샤텐슈피체",
+        "jp": "シャッテンシュピッツェ",
+        "zh": "夜影荆棘"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks 2 enemies and heals Health by <color=#28d9ed>10%</color> of damage dealt.",
+        "kr": "적 2인을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 자신의 체력을 회복합니다.",
+        "jp": "敵2体にダメージを与え、ダメージの<color=#28d9ed>10%</color>、自分のHPを回復する。",
+        "zh": "攻击2名敌人,并使自身生命值恢复相当于伤害量的<color=#28d9ed>10%</color>。"
+      },
+      "icon": "Skill_First_4004001"
+    },
+    {
+      "name": {
+        "en": "Schatten Einbruch",
+        "kr": "아인드링겐 폰 샤텐",
+        "jp": "アインドリンゲン・フォン・シャッテン",
+        "zh": "夜影突袭"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and heals the caster's Health by <color=#28d9ed>10%</color> of damage dealt.",
+        "kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 자신의 체력을 회복합니다.",
+        "jp": "敵単体にダメージを与え、ダメージの<color=#28d9ed>10%</color>、自分のHPを回復する。",
+        "zh": "攻击敌人,并使自身生命值恢复相当于伤害量的<color=#28d9ed>10%</color>。"
+      },
+      "icon": "Skill_Second_4004001"
+    },
+    {
+      "name": {
+        "en": "König des Alptraums",
+        "kr": "쾨니히 다스 알브트라움",
+        "jp": "ケーニヒ・ダス・アルプトラウム",
+        "zh": "噩梦之主"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nHeals <color=#28d9ed>10%</color> damage dealt as the caster's Health. Additionally, has a <color=#28d9ed>100%</color> chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다.\\n피해량의 <color=#28d9ed>10%</color>만큼 자신의 체력을 회복하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵全体にダメージを与える。\\nダメージの<color=#28d9ed>10%</color>、自分のHPを回復し、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击全体敌人。\\n使自身生命值恢复相当于伤害量的<color=#28d9ed>10%</color>,并有\\n<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2\\n回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4004001"
+    },
+    {
+      "name": {
+        "en": "Fury Stack II",
+        "kr": "분노 중첩 II",
+        "jp": "アンガースタック II",
+        "zh": "愤怒叠加 II"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>7.5%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>7.5%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>7.5%</color>UPする。",
+        "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>7.5%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Clown de Taraguedia",
+        "kr": "클라운 데 타라괴디아",
+        "jp": "クラウン・デ・タラグェディア",
+        "zh": "跳梁小丑"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Reduces damage taken by <color=#28d9ed>60%</color> and reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle. This effect cannot be removed.\\nAs long as an <color=#28d9ed>ally</color> exists, <color=#28d9ed>Schwartz</color> does not take damage and his <color=#28d9ed>Weakness Gauge</color> is not reduced.\\n\\n<color=#28d9ed>Shadow Beasts</color> do not take damage from <color=#28d9ed>attacks that target all enemies</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 후 <color=#28d9ed>2턴</color> 동안 받는 피해 <color=#28d9ed>60%</color>와 받는 WG 피해량 <color=#28d9ed>50%</color>가 감소합니다. 이 효과들은 해제되지 않습니다.\\n<color=#28d9ed>아군</color>이 존재하는 동안은 <color=#28d9ed>슈바르츠</color>의 <color=#28d9ed>WG</color>가 감소하지 않고 피해를 받지 않습니다.\\n\\n<color=#28d9ed>그림자 마수</color>는 <color=#28d9ed>전체 공격</color>의 피해를 받지 않습니다.",
+        "jp": "(パッシブ効果)戦闘開始後、受けるダメージの<color=#28d9ed>60%</color>と受けるWGダメージの<color=#28d9ed>50%</color>が<color=#28d9ed>2ターン</color>の間DOWNする。この効果は解除されない。\\n戦場に<color=#28d9ed>味方</color>がいる場合、<color=#28d9ed>【シュヴァルツ】</color>の<color=#28d9ed>WG</color>がDOWNせず、ダメージを受けない。\\n\\n<color=#28d9ed>【影の魔獣】</color>は<color=#28d9ed>全体攻撃</color>のダメージを受けない。",
+        "zh": "(被动效果)\\n战斗开始后,使所受伤害降低<color=#28d9ed>60%</color>、所受WG伤害量降低<color=#28d9ed>50%</color>,持续<color=#28d9ed>2回合</color>。此效果不会被\\n解除。\\n<color=#28d9ed>友军</color>存活期间,<color=#28d9ed>施瓦兹</color>的<color=#28d9ed>WG</color>不会降低,且不会受到伤害。\\n\\n<color=#28d9ed>暗影魔兽</color>不会受到<color=#28d9ed>全体攻击</color>伤害。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Overcoming Dead Point",
+        "kr": "사점 극복",
+        "jp": "死点克服",
+        "zh": "克服死点"
+      },
+      "type": "SKT_MONSTER_3",
+      "description": {
+        "en": "(Passive Effect)\\nWhen hit by an attack that targets all enemies, increases Priority of the caster by <color=#28d9ed>30%</color> and has a <color=#28d9ed>100%</color> chance to counterattack.\\nAfter counterattacking, grants <color=#28d9ed>counterattack</color> effect for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "(패시브 효과)\\n전체 공격 피격 시 자신의 행동 게이지를 <color=#28d9ed>30%</color> 증가시키고 <color=#28d9ed>100%</color> 확률로 반격합니다.\\n반격 후에는 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>반격</color> 효과를 얻습니다.",
+        "jp": "(パッシブ効果)\\n敵から全体攻撃を受けた場合、自分の行動ゲージを<color=#28d9ed>30%</color>UPさせ、<color=#28d9ed>100%</color>の確率で反撃する。\\n反撃後、自分に<color=#28d9ed>反撃</color>効果を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "(被动效果)\\n受到全体攻击时,使自身的行动值提升<color=#28d9ed>30%</color>,并有<color=#28d9ed>100%</color>的几率发动反击。\\n反击后,获得<color=#28d9ed>反击</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 3 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 5 turns and summons 2 Shadow Beasts after recovering 10% Weakness Gauge. Enraged lasts for 5 turns.\\n\\n<color=#28d9ed>Vampiric Creature</color>: Used when Enraged ends.\\nAttacks all enemies and heals <color=#28d9ed>10%</color> of the damage dealt as the caster's Health. Additionally reduces the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color> and heals the caster by <color=#28d9ed>50%</color> of Max Health.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.",
+        "kr": "3턴마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 5턴 동안 부여하고 WG 10%를 회복한 뒤, 그림자 마수 2마리를 소환합니다. 광폭화는 5턴 동안 유지됩니다.\\n\\n<color=#28d9ed>뱀피릭 크리쳐</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 자신의 체력을 회복합니다. 추가로 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>공격력</color>을 감소시키고 자신 최대 체력의 <color=#28d9ed>50%</color>를 회복합니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.",
+        "jp": "3ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を5ターンの間付与し、WGを10%回復した後、【影の魔獣】2体を召喚する。【狂暴化】は5ターンの間持続する。\\n\\n<color=#28d9ed>【ヴァンピリック・クリーチャー】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、ダメージの<color=#28d9ed>10%</color>、自分のHPを回復する。追加で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ、自分の最大HPの<color=#28d9ed>50%</color>を回復する。\\nこの攻撃は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "zh": "每3回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续5回合,并使WG恢复10%,同时召唤2只暗影魔兽。狂暴化持续5回合。\\n\\n<color=#28d9ed>召唤吸血鬼</color>:狂暴化结束时发动。\\n攻击全体敌人,并使自身生命值恢复相当于伤害量的<color=#28d9ed>10%</color>。额外使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>,并恢复自身生命值上限<color=#28d9ed>50%</color>的生命值。\\n该攻击无视目标的<color=#28d9ed>效果抵抗</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

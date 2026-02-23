@@ -1,0 +1,119 @@
+{
+  "id": "5203801",
+  "Name": {
+    "en": "Tamamo-no-Mae",
+    "kr": "타마모노마에",
+    "jp": "タマモノマエ",
+    "zh": "玉藻前"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 138,
+  "icons": "2000080",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Hard 38F",
+      "kr": "비천의 탑 [하드] 38층",
+      "jp": "飛天の塔【ハード】38階",
+      "zh": "飞天之塔【困难】第38层"
+    },
+    "mode": {
+      "en": "Skyward Tower - Hard",
+      "kr": "비천의 탑 하드",
+      "jp": "飛天の塔 ハード",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
+      "en": "40102038",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Reign of Terror",
+        "kr": "포락지형",
+        "jp": "炮烙ノ形",
+        "zh": "炮烙之刑"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to decrease the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>1</color> turn(s).\\nTriggers <color=#28d9ed>Dual Attacks</color> by two allies.",
+        "kr": "적을 공격하고, <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>을 감소시킵니다.\\n아군 2인의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "jp": "敵を攻撃し、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>1</color>ターンDOWNさせる。\\n味方2人の<color=#28d9ed>協攻</color>を発生させる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>概率使目标<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>1</color>回合。\\n触发2名友军的<color=#28d9ed>夹攻</color>。"
+      },
+      "icon": "Skill_First_2000080"
+    },
+    {
+      "name": {
+        "en": "Nirvana's Inferno",
+        "kr": "피안의 겁화",
+        "jp": "彼岸劫火",
+        "zh": "彼岸的火劫"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) When an ally is hit, counterattacks with <color=#28d9ed>Nirvana's Inferno</color>.\\nBefore attacking, removes <color=#28d9ed>2</color> buff(s) from the target, and reduces Evasion for <color=#28d9ed>2 turn(s)</color>. If the target is <color=#28d9ed>Earth element</color>, ignores their Resilience, and does not miss.",
+        "kr": "(발동 효과) 아군이 피격 시 <color=#28d9ed>피안의 겁화</color>로 반격 합니다.\\n 공격 전 대상의 강화 효과를 <color=#28d9ed>2개</color> 해제하고, <color=#28d9ed>2턴</color> 동안 회피를 감소시킵니다. 대상이 <color=#28d9ed>지속성</color>이라면 대상의 효과 저항을 무시하고, 빗나감이 발생하지 않습니다.",
+        "jp": "(発動効果)味方がダメージを受けた時、<color=#28d9ed>【彼岸劫火】</color>で反撃する。\\n(発動効果)攻撃前、対象に強化効果を<color=#28d9ed>2個</color>解除し、回避を<color=#28d9ed>2ターン</color>の間DOWNさせる。対象が<color=#28d9ed>地属性</color>の場合、対象の効果抵抗を無視し、ミスヒットが発生しない。",
+        "zh": "(触发效果)友军受到攻击时,用<color=#28d9ed>血液轮回</color>反击。\\n攻击前解除目标的<color=#28d9ed>2个</color>强化效果,并使回避降低,持续<color=#28d9ed>2回合</color>。若目标为<color=#28d9ed>土属性</color>,则无视目标的效果抵抗,且不会触发闪避。"
+      },
+      "icon": "Skill_Second_2000080"
+    },
+    {
+      "name": {
+        "en": "Eternal Enlightenment",
+        "kr": "구경열반 삼세요호",
+        "jp": "究竟涅槃三世妖狐",
+        "zh": "究竟涅槃三世妖狐"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn(s)</color>.\\nThis skill ignores <color=#28d9ed>30%</color> of the target's Defense.",
+        "kr": "적 전체를 공격합니다. 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.",
+        "jp": "敵全体にダメージを与える。味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。",
+        "zh": "攻击全体敌人。使全体友军获得<color=#28d9ed>持续恢复</color>,持续<color=#28d9ed>1回合</color>。\\n该技能无视目标防御力的<color=#28d9ed>30%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000080"
+    },
+    {
+      "name": {
+        "en": "Nirvana of the Void",
+        "kr": "허무의 열반",
+        "jp": "虚無の涅槃",
+        "zh": "虚无涅槃"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Each turn, increases the caster's <color=#28d9ed>Penetration</color> by <color=#28d9ed>5%</color> (up to 10 stacks).\\nEach turn, increases all allies' <color=#28d9ed>Speed</color> by <color=#28d9ed>10%</color> (up to 5 stacks).\\nReduces damage taken while clones are alive.",
+        "kr": "매 턴 자신의 <color=#28d9ed>관통력</color>이 <color=#28d9ed>5%</color>씩 증가합니다.(최대 10회 누적)\\n매 턴 아군 전체의 <color=#28d9ed>속도</color>가 <color=#28d9ed>10%</color>씩 증가합니다.(최대 5회 누적)\\n분신 생존 시 받는 피해가 감소합니다.",
+        "jp": "毎ターン、自分の<color=#28d9ed>貫通力</color>が<color=#28d9ed>5%</color>ずつUP(最大10回)。\\n毎ターン、味方全体の<color=#28d9ed>スピード</color>が<color=#28d9ed>10%</color>ずつUP(最大5回)。\\n分身が生存している間、受けるダメージがDOWN。",
+        "zh": "每回合使自身<color=#28d9ed>穿透力</color>提高<color=#28d9ed>5%</color>(最多10层)。\\n每回合使全体友军<color=#28d9ed>速度</color>提高<color=#28d9ed>10%</color>(最多5层)。\\n分身存活时,所受伤害降低。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Deals damage to all enemies, then <color=#28d9ed>Resurrects (Greater)</color> all allies. Afterwards, grants <color=#28d9ed>Continuous Healing</color> to all allies for <color=#28d9ed>1</color> turn(s).",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 피해를 입힌 뒤, 모든 아군을 부활(강화)시킵니다. 이후, 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:敵全体にダメージを与え、味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体に<color=#28d9ed>持続回復</color>を<color=#28d9ed>1</color>ターン付与する。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:对全体敌人造成伤害后,使全体友军<color=#28d9ed>复活(强化)</color>;随后为全体友军赋予<color=#28d9ed>持续恢复</color>,持续<color=#28d9ed>1</color>回合。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

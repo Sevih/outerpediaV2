@@ -1,0 +1,119 @@
+{
+  "id": "405300195",
+  "Name": {
+    "en": "Ghost Clawer",
+    "kr": "유령 클로",
+    "jp": "シャープゴースト",
+    "zh": "巨爪幽灵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 70,
+  "icons": "4053001",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 51F",
+      "kr": "비천의 탑 51층",
+      "jp": "飛天の塔51階",
+      "zh": "飞天之塔51层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101051",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ghost Claw",
+        "kr": "고스트 클로",
+        "jp": "ゴーストクロー",
+        "zh": "鬼爪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and, with a <color=#28d9ed>25%</color> chance, decreases the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>1</color> turns.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で<color=#28d9ed>1</color>ターンの間、対象の<color=#28d9ed>攻撃力</color>を減少させる。",
+        "zh": "攻击敌人,并以<color=#28d9ed>25%</color>的概率在<color=#28d9ed>1</color>回合内降低目标的<color=#28d9ed>攻击力</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Nightmare",
+        "kr": "나이트메어",
+        "jp": "ナイトメア",
+        "zh": "梦魇"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and, with a <color=#28d9ed>25%</color> chance, decreases the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>1</color> turns.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で<color=#28d9ed>1</color>ターンの間、対象の<color=#28d9ed>攻撃力</color>を減少させる。",
+        "zh": "攻击敌人,并以<color=#28d9ed>25%</color>的概率在<color=#28d9ed>1</color>回合内降低目标的<color=#28d9ed>攻击力</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Shadow Raid",
+        "kr": "섀도 레이드",
+        "jp": "シャドウレイド",
+        "zh": "暗影突袭"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and, with a <color=#28d9ed>25%</color> chance, decreases their <color=#28d9ed>Attack</color> for <color=#28d9ed>1</color> turns.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>25%</color>の確率で<color=#28d9ed>1</color>ターンの間、対象の<color=#28d9ed>攻撃力</color>を減少させる。",
+        "zh": "攻击所有敌人,并以<color=#28d9ed>25%</color>的概率在<color=#28d9ed>1</color>回合内降低目标的<color=#28d9ed>攻击力</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Super Regeneration III",
+        "kr": "초재생 III",
+        "jp": "超再生 III",
+        "zh": "超再生 III"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nRecovers Health of the caster by <color=#28d9ed>10%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>10%</color> 만큼 회복합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、自分のHPを<color=#28d9ed>10%</color>回復する。",
+        "zh": "(被动效果)\\n每到自身回合时,使自身生命值恢复<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "The Shadow Behind",
+        "kr": "배후의 그림자",
+        "jp": "背後の影",
+        "zh": "身后的暗影"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen hit by an AoE attack, increases own Priorty by <color=#28d9ed>10%</color>.\\nAt the start of battle, increases <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2</color> turns.",
+        "kr": "(패시브 효과)\\n전체 공격 피격 시 자신의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
+        "jp": "(パッシブ効果)\\n全体攻撃を受けた時、自身の行動ゲージが<color=#28d9ed>10%</color>UPする。\\n戦闘開始時、<color=#28d9ed>[Turn]</color>ターンの間<color=#28d9ed>効果命中</color>がUPする。",
+        "zh": "(被动效果)\\n受到全体攻击时,自身行动条增加<color=#28d9ed>10%</color>。\\n战斗开始时,在<color=#28d9ed>2</color>回合内提高<color=#28d9ed>效果命中</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

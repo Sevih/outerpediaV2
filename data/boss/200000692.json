@@ -1,0 +1,124 @@
+{
+  "id": "200000692",
+  "Name": {
+    "en": "Sofia",
+    "kr": "소피아",
+    "jp": "ソフィア",
+    "zh": "索菲雅"
+  },
+  "Surname": {
+    "en": "A Sophisticated Lady",
+    "kr": "우아한 귀부인",
+    "jp": "優美な貴族騎士",
+    "zh": "优雅贵妇"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 44,
+  "icons": "2000006",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 25F",
+      "kr": "비천의 탑 25층",
+      "jp": "飛天の塔25階",
+      "zh": "飞天之塔25层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101025",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Lunge",
+        "kr": "런지",
+        "jp": "ランジ",
+        "zh": "弓步刺"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "Skill_First_2000006"
+    },
+    {
+      "name": {
+        "en": "Quick Assault",
+        "kr": "퀵 어설트",
+        "jp": "クイックアサルト",
+        "zh": "快速突击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and increases all allies' <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 아군 전체의 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、味方全体の<color=#28d9ed>スピード</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并使全体友军的<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000006"
+    },
+    {
+      "name": {
+        "en": "Noble Strike",
+        "kr": "노블 스트라이크",
+        "jp": "ノーブルストライク",
+        "zh": "壮丽打击"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy.\\nIf this attack kills an enemy, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>50%</color> and increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n이 공격으로 적을 처치하면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>50%</color> 증가하고 <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "jp": "敵単体にダメージを与える。\\nこの攻撃で敵を倒した時、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>50%</color>UPし、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "zh": "攻击敌人。\\n若该攻击致使敌人死亡,则使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>50%</color>,并使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000006"
+    },
+    {
+      "name": {
+        "en": "Hit Back I",
+        "kr": "받아치기 I",
+        "jp": "返り討ち I",
+        "zh": "回击 I"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAfter the caster takes their turn, has a <color=#28d9ed>30%</color> chance to Counterattack, until the caster's next turn.",
+        "kr": "(패시브 효과)\\n자신이 턴을 획득한 이후, 다음 턴 동안 <color=#28d9ed>30%</color>의 확률로 반격합니다.",
+        "jp": "(パッシブ効果)\\n自分がターンを獲得した後、次のターンの間<color=#28d9ed>30%</color>の確率で反撃する。",
+        "zh": "(被动效果)\\n自身获得回合后,下一回合有<color=#28d9ed>30%</color>的几率发动反击。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Noblesse Oblige",
+        "kr": "귀족의 의무입니다",
+        "jp": "貴族の義務です",
+        "zh": "贵族的义务"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Hit Chance</color> of all allies by <color=#28d9ed>8%</color> each turn. (Max 5 stacks)\\n\\n<color=#28d9ed>Immune to Weakness Gauge damage when an ally remains alive.</color>",
+        "kr": "(패시브 효과)\\n매 턴 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>8%</color> 증가합니다. (최대 5회 누적)\\n\\n<color=#28d9ed>아군 생존 시 WG 피해를 받지 않습니다.</color>",
+        "jp": "(パッシブ効果)\\n毎ターン味方全体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>会心率</color>が<color=#28d9ed>8%</color>UPする。この効果は最大5回まで累積する。\\n\\n<color=#28d9ed>戦場に味方がいる場合、WGダメージを受けない。</color>",
+        "zh": "(被动效果)\\n每回合使全体友军的<color=#28d9ed>攻击力</color>和<color=#28d9ed>暴击率</color>提升<color=#28d9ed>8%</color>。(最多可叠加5次)\\n\\n<color=#28d9ed>友军存活时,不受到WG伤害。</color>"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

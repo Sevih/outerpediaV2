@@ -1,0 +1,135 @@
+{
+  "id": "413400295",
+  "Name": {
+    "en": "Chimera",
+    "kr": "키메라",
+    "jp": "キメラ",
+    "zh": "奇美拉"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 80,
+  "icons": "4034002",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 60F",
+      "kr": "비천의 탑 60층",
+      "jp": "飛天の塔60階",
+      "zh": "飞天之塔60层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "kr": "비천의 탑",
+      "jp": "飛天の塔",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "40101060",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Help Me",
+        "kr": "도와줘",
+        "jp": "助けて",
+        "zh": "帮帮我"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks 2 enemies.",
+        "kr": "적 2인을 공격합니다.",
+        "jp": "敵2体にダメージを与える。",
+        "zh": "攻击2名敌人。"
+      },
+      "icon": "Skill_First_4034002"
+    },
+    {
+      "name": {
+        "en": "I'm Fading",
+        "kr": "내가 사라져가",
+        "jp": "私が消えていく",
+        "zh": "我要消失了"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>30%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>30%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>30%</color>的几率使目标陷入<color=#28d9ed>烧伤</color>状态,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4034002"
+    },
+    {
+      "name": {
+        "en": "Itchy Tasty",
+        "kr": "가려워맛있어",
+        "jp": "かゆイ、オいしイ",
+        "zh": "好痒,真好吃"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and recovers the caster's <color=#28d9ed>Weakness Gauge</color> by <color=#28d9ed>2</color>.",
+        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>WG</color>를 <color=#28d9ed>2</color> 회복합니다.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>WG</color>を<color=#28d9ed>2</color>回復する。",
+        "zh": "攻击全体敌人,并使自身的<color=#28d9ed>WG</color>恢复<color=#28d9ed>2</color>。"
+      },
+      "icon": "Skill_Ultimate_4034002"
+    },
+    {
+      "name": {
+        "en": "Neural Amplification IV",
+        "kr": "신경계 증폭 IV",
+        "jp": "神経系増幅 IV",
+        "zh": "精神系增幅 IV"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Speed by <color=#28d9ed>12.5%</color> every time the caster takes a turn. (Max 5 stacks)",
+        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>12.5%</color> 증가합니다. (최대 5회 누적)",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、スピードが<color=#28d9ed>12.5%</color>UPする。(最大5回まで累積)",
+        "zh": "(被动效果)\\n每到自身回合时,使速度提升<color=#28d9ed>12.5%</color>。(最多可叠加5次)"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>60%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers 30% Weakness Gauge. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Tried It, Bad Taste</color>: Used when Enraged ends.\\nAttacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>. \\n\\n<color=#ffd732>If Enraged within 3 turns or fewer, grants 40 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>먹었는데 맛없어</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 40의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>60%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを30%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【食った、マズイ】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこの攻撃は対象の<color=#28d9ed>効果抵抗</color>を無視する。\\n\\n<color=#ffd732>戦闘開始時から3ターン以内に【狂暴化】した場合、敵にCPを40獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>60%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复\\n30%。狂暴化持续3回合。\\n\\n<color=#28d9ed>食之无味</color>:狂暴化结束时发动。\\n攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标陷入<color=#28d9ed>烧伤</color>状态,持续<color=#28d9ed>2回合</color>。\\n该攻击无视目标的<color=#28d9ed>效果抵抗</color>。\\n\\n<color=#ffd732>在3回合内陷入狂暴化状态时,使CP恢复40。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}
