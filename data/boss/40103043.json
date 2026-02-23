@@ -1,0 +1,55 @@
+{
+  "id": "40103043",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "kr": "변형된 열화 코어",
+    "jp": "異形の劣化コア",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 100,
+  "icons": "4151012",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 1F",
+      "kr": "비천의 탑 [베리 하드] 1층",
+      "jp": "飛天の塔【ベリーハード】1階",
+      "zh": "飞天之塔【极难】第1层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Proactive Entity Degradation",
+        "kr": "능동적 개체 저하",
+        "jp": "能動的個体低下",
+        "zh": "主动个体削弱"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "(Passive Effect)\\nAttacks all enemies, and increases duration of debuffs of the target by <color=#28d9ed>1 turn</color>.",
+        "kr": "(패시브 효과)\\n적 전체를 공격하고, 대상의 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다.",
+        "jp": "(パッシブ効果)\\n敵全体にダメージを与え、対象の弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加する。",
+        "zh": "(被动效果)\\n攻击全体敌人,使目标的弱化效果持续时间增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Light"
+    }
+  ]
+}

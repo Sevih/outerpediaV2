@@ -1,11 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import CharacterPortrait from '@/app/components/character/CharacterPortrait';
-import ElementInline from '@/app/components/inline/ElementInline';
-import ClassInline from '@/app/components/inline/ClassInline';
 import Tabs from '@/app/components/ui/Tabs';
+import BossCompactDisplay from '@/app/components/guides/BossCompactDisplay';
+import MinionsCompactDisplay from '@/app/components/guides/MinionsCompactDisplay';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import RestrictionIcons from './RestrictionIcons';
 import { useI18n } from '@/lib/contexts/I18nContext';
@@ -23,46 +21,6 @@ function resolveRestrictions(ids: string[] | undefined, restrictionMap: TowerRes
   return ids
     .map(id => restrictionMap[id])
     .filter((r): r is LangMap => r != null);
-}
-
-/* ── Boss card (renders from Boss data) ── */
-
-function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
-  const baseName = lRec(boss.Name, lang);
-  const surname = lRec(boss.Surname as LangMap, lang);
-  const displayName = boss.IncludeSurname && surname ? `${surname} ${baseName}` : baseName;
-
-  return (
-    <div className="flex items-center gap-3">
-      {boss.icons.startsWith('2') ? (
-        <CharacterPortrait id={boss.icons} size="md" name={displayName} className="shrink-0" />
-      ) : (
-        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
-          <Image
-            src={boss.icons.startsWith('Skill_')
-              ? `/images/characters/${boss.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${boss.icons}.webp`
-              : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
-            }
-            alt={displayName}
-            fill
-            sizes="64px"
-            className="object-cover"
-          />
-        </div>
-      )}
-      <div>
-        {!boss.IncludeSurname && surname && (
-          <p className="text-xs text-zinc-400">{surname}</p>
-        )}
-        <p className="text-lg font-bold text-zinc-100">{displayName}</p>
-        <div className="mt-1 flex items-center gap-2">
-          <ElementInline element={boss.element} />
-          <ClassInline name={boss.class} />
-          <span className="text-xs text-zinc-500">Lv.{boss.level}</span>
-        </div>
-      </div>
-    </div>
-  );
 }
 
 /* ── Restrictions list ── */
@@ -88,37 +46,6 @@ function RestrictionsList({ restrictions, lang }: { restrictions: LangMap[]; lan
   );
 }
 
-/* ── Minion row (compact boss display) ── */
-
-function MinionRow({ boss, lang }: { boss: Boss; lang: Lang }) {
-  const name = lRec(boss.Name, lang);
-
-  return (
-    <div className="flex items-center gap-2">
-      {boss.icons.startsWith('2') ? (
-        <CharacterPortrait id={boss.icons} size="xs" name={name} className="shrink-0" />
-      ) : (
-        <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded border border-white/10">
-          <Image
-            src={boss.icons.startsWith('Skill_')
-              ? `/images/characters/${boss.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${boss.icons}.webp`
-              : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
-            }
-            alt={name}
-            fill
-            sizes="32px"
-            className="object-cover"
-          />
-        </div>
-      )}
-      <span className="text-sm text-zinc-300">{name}</span>
-      <ElementInline element={boss.element} />
-      <ClassInline name={boss.class} />
-      <span className="text-xs text-zinc-500">Lv.{boss.level}</span>
-    </div>
-  );
-}
-
 /* ── Floor content with boss + minions + restrictions + recommended ── */
 
 function FloorContent({ boss, minions, restrictions, recommended, lang }: {
@@ -133,7 +60,7 @@ function FloorContent({ boss, minions, restrictions, recommended, lang }: {
   return (
     <div className="space-y-4">
       {boss ? (
-        <BossCard boss={boss} lang={lang} />
+        <BossCompactDisplay boss={boss} />
       ) : (
         <div className="py-4 text-center text-sm text-zinc-500">Loading...</div>
       )}
@@ -143,11 +70,7 @@ function FloorContent({ boss, minions, restrictions, recommended, lang }: {
           <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
             {t('tower.minions')}
           </h5>
-          <div className="space-y-2">
-            {minions.map(m => (
-              <MinionRow key={m.icons} boss={m} lang={lang} />
-            ))}
-          </div>
+          <MinionsCompactDisplay minions={minions} />
         </div>
       )}
 

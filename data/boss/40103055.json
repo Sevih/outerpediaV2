@@ -1,0 +1,71 @@
+{
+  "id": "40103055",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "kr": "변형된 열화 코어",
+    "jp": "異形の劣化コア",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 100,
+  "icons": "4151014",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 5F",
+      "kr": "비천의 탑 [베리 하드] 5층",
+      "jp": "飛天の塔【ベリーハード】5階",
+      "zh": "飞天之塔【极难】第5层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103005",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ally Support System",
+        "kr": "아군 지원 시스템",
+        "jp": "味方支援システム",
+        "zh": "友军支援系统"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Every time the caster takes a turn, grants increased <color=#28d9ed>Attack</color>, <color=#28d9ed>Critical Hit Chance</color>, and <color=#28d9ed>Critical Damage</color> to Demiurge Drakhan for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "자신의 턴 마다 데미우르고스 드레이칸의 <color=#28d9ed>공격력</color>, <color=#28d9ed>치명 확률</color>, <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "jp": "自分のターンが来るたびに、【デミウルゴス・ドレイカーン】の<color=#28d9ed>攻撃力</color>、<color=#28d9ed>会心率</color>、<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "zh": "每到自身回合,都使创世之神德蕾坎的<color=#28d9ed>攻击力</color>、<color=#28d9ed>暴击率</color>、<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Light"
+    },
+    {
+      "name": {
+        "en": "Proactive Entity Discombobulation",
+        "kr": "능동적 개체 교란",
+        "jp": "能動的個体撹乱",
+        "zh": "主动干扰个体"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) When Demiurge Drakhan attacks, if granted a dispellable <color=#28d9ed>buff</color>, reduces Health of all enemies by <color=#28d9ed>30%</color>.",
+        "kr": "(발동 효과) 데미우르고스 드레이칸이 공격 시 해제 가능한 <color=#28d9ed>강화 효과</color>를 보유하고 있었다면 적 전체 체력의 <color=#28d9ed>30%</color>를 감소 시킵니다.",
+        "jp": "(発動効果)【デミウルゴス・ドレイカ―ン】が攻撃時に解除可能な<color=#28d9ed>強化効果</color>がある場合、敵全体のHPを<color=#28d9ed>30%</color>DOWNさせる。",
+        "zh": "(触发效果)创世之神·德雷坎攻击时,若附带可解除的<color=#28d9ed>强化效果</color>,则全体敌人生命值降低<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

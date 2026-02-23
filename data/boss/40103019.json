@@ -1,0 +1,124 @@
+{
+  "id": "40103019",
+  "Name": {
+    "en": "Vlada",
+    "kr": "블라다",
+    "jp": "ヴラダ",
+    "zh": "布拉达"
+  },
+  "Surname": {
+    "en": "Demiurge",
+    "kr": "데미우르고스",
+    "jp": "デミウルゴス",
+    "zh": "创世之神"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000075",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_REVERSE_HEAL_BASED_TARGET,BT_REVERSE_HEAL_BASED_CASTER",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 5F",
+      "kr": "비천의 탑 [베리 하드] 5층",
+      "jp": "飛天の塔【ベリーハード】5階",
+      "zh": "飞天之塔【极难】第5层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103005",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Twin Mega Cannon",
+        "kr": "트윈 메가 캐논",
+        "jp": "ツイン・メガキャノン",
+        "zh": "双兆加农炮"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>40%</color> chance to increase the Ultimate Skill cooldowns of the target by <color=#28d9ed>2 turns</color>.\\nDamage dealt increases proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상의 필살기 쿨타임을 <color=#28d9ed>2턴</color> 증가시킵니다.\\n이 스킬은 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象の必殺スキルのスキルターンを<color=#28d9ed>2ターン</color>増加させる。\\nこのスキルは対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标的必杀技冷却时间增加<color=#28d9ed>2回合</color>。\\n该技能根据目标的<color=#28d9ed>生命值上限</color>等比提升伤害量。"
+      },
+      "icon": "Skill_First_2000075"
+    },
+    {
+      "name": {
+        "en": "Crush Gear",
+        "kr": "크러시 기어",
+        "jp": "クラッシュギア",
+        "zh": "激斗战车"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect)\\nWhen the caster removes a buff from an enemy, grants <color=#28d9ed>Destroyer's Punishment</color> to the caster for <color=#28d9ed>2 turn(s)</color>.\\n\\nWhen the caster uses an attack that targets all enemies, uses <color=#ffd732>Heavy Metal Raptor</color>. (Excluding Skill Chains)\\n\\n<color=#ffd732>Heavy Metal Raptor</color>: Attacks all enemies. Increases damage dealt by this skill proportional to the target's <color=#28d9ed>Max Health</color>.",
+        "kr": "(발동 효과)\\n자신이 적의 강화 효과를 해제시키면 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>파괴자의 응징</color>을 획득합니다.\\n\\n자신이 전체 공격 시 <color=#ffd732>헤비메탈 랩터</color>를 사용합니다. (스킬 체인 제외)\\n\\n<color=#ffd732>헤비메탈 랩터</color> : 적 전체를 공격합니다. 이 스킬은 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
+        "jp": "(発動効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n自分が全体攻撃時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>:敵全体にダメージを与える。このスキルは対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "zh": "(被动效果)\\n若自身解除敌人的强化效果,则获得<color=#28d9ed>破坏者的惩戒</color>,持续<color=#28d9ed>2回合</color>。\\n\\n自身发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>(连携技能除外)。\\n\\n<color=#ffd732>重金属猛禽</color>:攻击全体敌人。该技能根据目标的<color=#28d9ed>生命值上限</color>等比提升伤害量。"
+      },
+      "icon": "Skill_Second_2000075"
+    },
+    {
+      "name": {
+        "en": "Destruction Blade",
+        "kr": "디스트럭션 블레이드",
+        "jp": "デストラクションブレード",
+        "zh": "破坏之剑"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Has a <color=#28d9ed>100%</color> chance to remove <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, and attacks all enemies.",
+        "kr": "<color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제하고 적 전체를 공격합니다.",
+        "jp": "<color=#28d9ed>100%</color>の確率で、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除し、敵全体にダメージを与える。",
+        "zh": "有<color=#28d9ed>100%</color>的几率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。"
+      },
+      "icon": "Skill_Ultimate_2000075"
+    },
+    {
+      "name": {
+        "en": "Project: Destroyer",
+        "kr": "프로젝트 : 파괴자",
+        "jp": "プロジェクト:破壊者",
+        "zh": "计划:破坏者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, grants an irremovable reduced damage taken to the caster for <color=#28d9ed>3 turn(s)</color> and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.\\nUntil inflicted with Break, inflicts an irremovable <color=#28d9ed>Silenced</color> on all enemies.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>100%</color>.\\nWhen an enemy performs an action, if the caster is inflicted with a debuff, increases Priority of the caster by <color=#28d9ed>20%</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여하고 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.\\n브레이크 전까지 적 전체를 해제되지 않는 <color=#28d9ed>침묵</color> 상태로 만듭니다.\\n버스트 스킬, 협공, 스킬 체인을 제외한 스킬로 인한 WG 피해를 <color=#28d9ed>100%</color> 감소시킵니다.\\n적 행동 시 자신이 약화 효과를 보유했을 때 자신의 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分に解除不可能なダメージDOWN効果を<color=#28d9ed>3ターン</color>の間付与し、<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>100%</color>UPする。\\nブレイクするまで、敵全体に解除不可能な<color=#28d9ed>沈黙</color>を付与する。\\nバーストスキル、連携、チェーンスキル以外のスキルによるWGダメージを<color=#28d9ed>100%</color>DOWNさせる。\\n敵が行動時、自分に弱体効果がある場合、自分の行動ゲージが<color=#28d9ed>20%</color>UPする。",
+        "zh": "(被动效果)\\n战斗开始时,自身获得无法被解除的伤害降低效果,持续<color=#28d9ed>3回合</color>,<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。\\n力竭之前,对全体敌人造成无法被解除的<color=#28d9ed>沉默</color>状态。\\n除爆发技能、夹攻、连携技能外的技能造成的WG伤害降低<color=#28d9ed>100%</color>。\\n敌人行动时,自身附带弱化效果时,自身的行动值提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 7 turns, and increases Attack and Speed by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Deals <color=#28d9ed>30%</color> of the target's Max Health as fixed damage to all enemies, then deals lethal damage. This Enraged has no duration.",
+        "kr": "7턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 대상 최대 체력의 <color=#28d9ed>30%</color> 만큼 고정 피해를 입힌 후 치명적인 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
+        "jp": "7ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>5%</color>UPする。この効果は最大3回まで累積し、ブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:敵全体に対象の最大HPの<color=#28d9ed>30%</color>の固定ダメージを与えた後、致命的なダメージを与える。【狂暴化】の持続ターンはない。",
+        "zh": "每7回合转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>5%</color>。该效果最多可叠加3次,且将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:对全体敌人造成相当于目标生命值上限<color=#28d9ed>30%</color>的固定伤害后,造成致命伤害。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

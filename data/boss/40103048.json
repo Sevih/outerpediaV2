@@ -1,0 +1,92 @@
+{
+  "id": "40103048",
+  "Name": {
+    "en": "Charlotte",
+    "kr": "샬롯",
+    "jp": "シャーロット",
+    "zh": "夏洛特"
+  },
+  "Surname": {
+    "en": "Caseless Detective",
+    "kr": "사건이 필요한 맹탐정",
+    "jp": "事件が必要な盲探偵",
+    "zh": "渴望案件的懵侦探"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Earth",
+  "level": 100,
+  "icons": "2000066",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 3F",
+      "kr": "비천의 탑 [베리 하드] 3층",
+      "jp": "飛天の塔【ベリーハード】3階",
+      "zh": "飞天之塔【极难】第3层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Securing the Culprit",
+        "kr": "범인 확보",
+        "jp": "犯人確保",
+        "zh": "确认犯人"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>20%</color> chance to reduce the cooldown of <color=#28d9ed>The Culprit is You!</color> by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>범인은 바로 당신!</color> 스킬의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>20%</color>の確率で<color=#28d9ed>【犯人はあなたです!】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>20%</color>的几率使<color=#28d9ed>犯人就是你!</color>的技能冷却时间减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000066"
+    },
+    {
+      "name": {
+        "en": "Thinking Time",
+        "kr": "씽킹 타임",
+        "jp": "シンキングタイム",
+        "zh": "思考时间"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) When an ally uses an attack that targets all enemies, grants increased Attack to all allies for <color=#28d9ed>2 turn(s)</color>, and increases Priority of ally Mages by <color=#28d9ed>25%</color>.",
+        "kr": "(발동 효과) 아군이 전체 공격을 했을 때, 아군 전체에게 <color=#28d9ed>2턴</color>동안 공격력을 증가시키고, 아군의 마법형 캐릭터는 행동 게이지가 <color=#28d9ed>25%</color> 증가합니다.",
+        "jp": "(発動効果)味方が全体攻撃時、味方全体の攻撃力を<color=#28d9ed>2ターン</color>の間UPさせ、魔法型の味方の行動ゲージを<color=#28d9ed>25%</color>UPさせる。",
+        "zh": "(触发效果)友军发动全体攻击时,使全体友军攻击力提升,持续<color=#28d9ed>2回合</color>,并使友军中魔法型角色的行动值提升<color=#28d9ed>25%</color>。"
+      },
+      "icon": "Skill_Second_2000066"
+    },
+    {
+      "name": {
+        "en": "The Culprit is You!",
+        "kr": "범인은 바로 당신!",
+        "jp": "犯人はあなたです!",
+        "zh": "犯人就是你!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies without <color=#28d9ed>missing</color>, and grants increased Critical Damage and Critical Hit Chance to all allies for <color=#28d9ed>3 turn(s)</color>. After using the skill, reduces the cooldown of the <color=#28d9ed>Thinking Time</color> skill by <color=#28d9ed>1</color> turns.",
+        "kr": "적 전체를 공격하고, 아군 전체는 <color=#28d9ed>3턴</color> 동안 치명 피해 및 치명 확률이 증가합니다.\\n스킬 사용 후 <color=#28d9ed>씽킹 타임</color> 스킬의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "敵全体にダメージを与え、味方全体の命中と会心率を<color=#28d9ed>3ターン</color>の間UPさせる。このスキルは<color=#28d9ed>ミスヒット</color>が発生しない。",
+        "zh": "攻击全体敌人,不会发生<color=#28d9ed>闪避</color>,并使全体友军的命中和暴击率提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000066"
+    }
+  ]
+}

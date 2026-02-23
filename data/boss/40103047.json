@@ -1,0 +1,92 @@
+{
+  "id": "40103047",
+  "Name": {
+    "en": "Akari",
+    "kr": "아카리",
+    "jp": "アカリ",
+    "zh": "阿卡莉"
+  },
+  "Surname": {
+    "en": "The Desperado of Naniwa",
+    "kr": "나니와의 데스페라도",
+    "jp": "なにわのデスペラード",
+    "zh": "难波的亡命之徒"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Light",
+  "level": 100,
+  "icons": "2000064",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 1F",
+      "kr": "비천의 탑 [베리 하드] 1층",
+      "jp": "飛天の塔【ベリーハード】1階",
+      "zh": "飞天之塔【极难】第1层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Saikashuu Gunnery",
+        "kr": "사이카슈 철포술",
+        "jp": "雑賀衆の鉄砲術",
+        "zh": "杂贺众铁炮术"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>70%</color> chance to inflict reduced <color=#28d9ed>Attack</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>70%</color>의 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率降低目标的<color=#28d9ed>攻击力</color>,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000064"
+    },
+    {
+      "name": {
+        "en": "Barrier of Ryouran",
+        "kr": "요란의 결계",
+        "jp": "擾乱結界",
+        "zh": "嘈杂的结界"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. After attacking, has a <color=#28d9ed>100%</color> chance to increase the duration of debuffs on enemies by <color=#28d9ed>1 turn(s)</color>, then inflicts reduced <color=#28d9ed>Resilience</color> on targets without debuffs for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>100%</color>의 확률로 적이 보유한 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킨 후, 약화 효과가 없는 대상의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、<color=#28d9ed>100%</color>の確率で、敵の弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させ、弱体効果がない対象の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>,使未附带弱化效果的目标的<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000064"
+    },
+    {
+      "name": {
+        "en": "Juzumaru Tsunetsugu",
+        "kr": "쥬즈마루 츠네츠구",
+        "jp": "数珠丸恒次",
+        "zh": "数珠丸恒次"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Unbuffable</color> and <color=#28d9ed>Reduced Defense</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, increases the duration of <color=#28d9ed>buffs</color> on all allies by <color=#28d9ed>1 turn(s)</color>.\\nRight after using this skill, has a <color=#28d9ed>100%</color> chance to avoid triggering an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>80%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>강화 불가</color>와 <color=#28d9ed>방어력 감소</color>를 부여합니다.\\n공격 후 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.\\n이 스킬 직후에는 <color=#28d9ed>100%</color>의 확률로 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "敵全体にダメージを与え、敵全体に<color=#28d9ed>80%</color>の確率で<color=#28d9ed>強化不可</color>と<color=#28d9ed>防御力DOWN</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、味方全体の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>増加させる。\\nこのスキルでは<color=#28d9ed>100%</color>の確率で敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果,持续<color=#28d9ed>2回合</color>。\\n攻击后使全体友军的<color=#28d9ed>强化效果</color>持续回合增加<color=#28d9ed>1回合</color>。\\n此技能发动后,有<color=#28d9ed>100%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "Skill_Ultimate_2000064"
+    }
+  ]
+}

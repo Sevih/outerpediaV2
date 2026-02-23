@@ -1,0 +1,108 @@
+{
+  "id": "40103012",
+  "Name": {
+    "en": "Fatal",
+    "kr": "페이탈",
+    "jp": "フェータル",
+    "zh": "法塔尔"
+  },
+  "Surname": {
+    "en": "Exotic Assassin",
+    "kr": "이국의 암살자",
+    "jp": "異国の暗殺者",
+    "zh": "异国暗杀者"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Water",
+  "level": 100,
+  "icons": "2000078",
+  "BuffImmune": "",
+  "StatBuffImmune": "CAST_BUFF",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 1F",
+      "kr": "비천의 탑 [베리 하드] 1층",
+      "jp": "飛天の塔【ベリーハード】1階",
+      "zh": "飞天之塔【极难】第1层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Deathly Acrobatics",
+        "kr": "죽음의 곡예",
+        "jp": "死の曲芸",
+        "zh": "死亡马戏"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>40%</color> chance to grant increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 대상을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "攻击目标敌人,有<color=#28d9ed>40%</color>的几率提升自身的<color=#28d9ed>攻击力</color>,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000078"
+    },
+    {
+      "name": {
+        "en": "Curtain of Darkness",
+        "kr": "밤의 장막",
+        "jp": "夜の帳",
+        "zh": "夜之帷幕"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Removes <color=#28d9ed>all</color> debuffs from the caster and grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy.",
+        "kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>모두</color> 제거하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color> 증가 효과를 부여한 뒤 적 대상을 공격합니다.",
+        "jp": "自分の弱体効果を<color=#28d9ed>すべて</color>解除し、<color=#28d9ed>スピード</color>UP効果を<color=#28d9ed>2ターン</color>の間付与した後、敵単体にダメージを与える。",
+        "zh": "解除自身附带的<color=#28d9ed>所有</color>弱化效果,并获得<color=#28d9ed>速度</color>提升效果,持续<color=#28d9ed>2回合</color>后,攻击敌人目标。"
+      },
+      "icon": "Skill_Second_2000078"
+    },
+    {
+      "name": {
+        "en": "Requiem Serket",
+        "kr": "레퀴엠 세르케트",
+        "jp": "レクイエム・セルケト",
+        "zh": "安魂曲塞尔凯特"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy. Enemies killed by this skill cannot be Resurrected or Revived.",
+        "kr": "적을 공격합니다. 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "jp": "敵単体にダメージを与える。このスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "zh": "攻击敌人。因该技能死亡的敌人无法触发复活与苏醒效果。"
+      },
+      "icon": "Skill_Ultimate_2000078"
+    },
+    {
+      "name": {
+        "en": "Scorpion Tail's One Hit, One Kill",
+        "kr": "일격필살 전갈 꼬리",
+        "jp": "一撃必殺テール",
+        "zh": "一击必杀蝎尾"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, grants a permanent irremovable <color=#28d9ed>Stealth</color> to the caster.\\nAt the start of the turn, grants increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> to the caster for <color=#28d9ed>1 turn(s)</color>, and if the hit was non-critical, recovers Weakness Gauge by <color=#28d9ed>10</color>.\\nIncreases damage dealt by all attacks of the caster proportional to the caster's and target's Speed.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)",
+        "kr": "(패시브 효과)\\n전투 입장 시 자신에게 해제 불가능한 <color=#28d9ed>은신</color> 효과를 영구적으로 부여합니다.\\n턴 시작 시 <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color> 및 <color=#28d9ed>치명 피해</color>가 증가하며, 치명 공격이 발생하지 않았다면 WG를 <color=#28d9ed>10</color> 회복합니다.\\n자신의 모든 공격은 자신과 대상의 속도에 비례하여 피해가 증가합니다.\\n매 턴 자신의 공격력이 <color=#28d9ed>5%</color>증가 합니다. (최대 20회 누적)",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分に<color=#28d9ed>隠れ身</color>を永続的に付与する。この効果は解除されない。\\nターン開始時、<color=#28d9ed>会心率</color>と<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>1ターン</color>の間UPさせ、攻撃時に会心が発生しなかった場合、WGを10回復する。\\n自分のすべての攻撃は、自分と対象のスピードが高いほどダメージがUPする。\\n毎ターン自分の攻撃力が<color=#28d9ed>5%</color>UPする。(最大20回まで累積)",
+        "zh": "(被动效果)\\n进入战斗时,使自身获得无法被解除的永久<color=#28d9ed>隐身</color>效果。\\n回合开始时,自身的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>1回合</color>,暴击未触发时,WG恢复<color=#28d9ed>10</color>。\\n自身的所有攻击根据自身和目标的速度等比提升伤害。\\n每回合自身的攻击力提升<color=#28d9ed>5%</color>。(最多可叠加20次)"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

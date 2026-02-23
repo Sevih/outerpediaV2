@@ -1,0 +1,119 @@
+{
+  "id": "40103016",
+  "Name": {
+    "en": "Maxwell",
+    "kr": "맥스웰",
+    "jp": "マクスウェル",
+    "zh": "麦克斯威尔"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000028",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 3F",
+      "kr": "비천의 탑 [베리 하드] 3층",
+      "jp": "飛天の塔【ベリーハード】3階",
+      "zh": "飞天之塔【极难】第3层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ray of Destruction",
+        "kr": "파열의 섬광",
+        "jp": "Xリッパ-",
+        "zh": "破裂闪光"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_First_2000028"
+    },
+    {
+      "name": {
+        "en": "Mana Converter",
+        "kr": "마력 전환 기구",
+        "jp": "マナ・エクスプロージョン",
+        "zh": "魔力转换器"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and reduces the duration of <color=#28d9ed>buffs</color> on the target by <color=#28d9ed>1 turn</color>.",
+        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "zh": "攻击全体敌人,并使目标的<color=#28d9ed>强化效果</color>持续回合减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000028"
+    },
+    {
+      "name": {
+        "en": "Bless All Mages",
+        "kr": "모든 마법사여, 행복하여라",
+        "jp": "マジシャンズ・ナビゲート",
+        "zh": "所有魔法师,都幸福吧"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. After attacking, ignores Resilience and Immunity to inflict an irremovable <color=#28d9ed>Petrified</color> on all enemies for <color=#28d9ed>9 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 공격 후 적 전체에게 효과 저항 및 면역을 무시하고 <color=#28d9ed>9턴</color> 동안 해제 불가능한 <color=#28d9ed>석화</color> 효과를 부여합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、敵全体の効果抵抗および免疫を無視し、解除不可能な<color=#28d9ed>石化</color>を<color=#28d9ed>9ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。攻击后,对全体敌人造成无视效果抵抗和免疫且无法被解除的<color=#28d9ed>石化</color>效果,持续<color=#28d9ed>9回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000028"
+    },
+    {
+      "name": {
+        "en": "Insatiable Curiosity",
+        "kr": "광기의 탐구욕",
+        "jp": "狂気の探求心",
+        "zh": "疯狂的探索欲"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen an enemy performs an action, if the caster is inflicted with Shocked, reduces Priority of all allies by <color=#28d9ed>10%</color>.\\nEvery time an ally is killed, increases the cooldown of <color=#28d9ed>Bless All Mages</color> by 3 turns, and reduces Attack and Defense of the caster by <color=#28d9ed>30%</color> each. (Max 3 stacks)\\nGreatly reduces damage taken by <color=#28d9ed>all allies</color> from attacks that target all enemies.\\nAt the end of the caster's turn, recovers Weakness Gauge by 5.",
+        "kr": "(패시브 효과)\\n적 행동 시 자신이 감전 상태라면 아군 전체의 행동 게이지가 <color=#28d9ed>10%</color>감소 합니다.\\n아군이 사망 할 때 마다 <color=#28d9ed>모든 마법사여, 행복하여라</color> 쿨타임이 3턴 증가하며, 자신의 공격력과 방어력이 <color=#28d9ed>-30%</color> 씩 감소합니다. (최대 3회 누적)\\n<color=#28d9ed>아군 모두</color> 전체 공격으로 받는 피해가 크게 감소합니다.\\n자신의 턴 종료 시 WG를 5 회복합니다.",
+        "jp": "(パッシブ効果)\\n敵が行動時、自分が感電状態の場合、味方全体の行動ゲージが<color=#28d9ed>10%</color>DOWNする。\\n味方が倒れるたびに<color=#28d9ed>【マジシャンズ・ナビゲート】</color>のスキルターンが3ターン増加し、自分の攻撃力と防御力が<color=#28d9ed>-30%</color>ずつDOWNする。(最大3回まで累積)\\n<color=#28d9ed>味方全体</color>の受けるダメージが大幅にDOWNする。\\n自分のターン終了時、WGを5回復する。",
+        "zh": "(被动效果)\\n敌人行动时,若自身处于触电状态,全体友军的行动值降低<color=#28d9ed>10%</color>。\\n友军每次死亡时,<color=#28d9ed>所有魔法师,都幸福吧</color>冷却时间增加3回合,自身的攻击力和防御力各降低<color=#28d9ed>-30%</color>。(最多可叠加3次)\\n<color=#28d9ed>全体友军</color>的全体攻击所受伤害大幅降低。\\n自身回合结束时,WG恢复5。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Recovers Weakness Gauge by 30%, and deals lethal damage to all enemies. This Enraged has no duration.",
+        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : WG 30%를 회복하고, 적 전체에게 치명적인 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
+        "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:WGを30%回復し、敵全体に致命的なダメージを与える。【狂暴化】の持続ターンはない。",
+        "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>,效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:WG恢复30%,对全体敌人造成致命伤害。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

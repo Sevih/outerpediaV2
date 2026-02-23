@@ -1,0 +1,108 @@
+{
+  "id": "40103002",
+  "Name": {
+    "en": "Mero",
+    "kr": "메로",
+    "jp": "メロ",
+    "zh": "梅罗"
+  },
+  "Surname": {
+    "en": "Re-animator",
+    "kr": "리- 애니메이터",
+    "jp": "リ・アニメーター",
+    "zh": "活跳尸"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 100,
+  "icons": "2000040",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 1F",
+      "kr": "비천의 탑 [베리 하드] 1층",
+      "jp": "飛天の塔【ベリーハード】1階",
+      "zh": "飞天之塔【极难】第1层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "E Vroom Vroom Dead",
+        "kr": "E 부릉부릉 Dead",
+        "jp": "E・ブルルン・デッド",
+        "zh": "死亡轰鸣"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and summons a Doppelgänger. Does not summon a new Doppelgänger if one is already present.",
+        "kr": "적을 공격하고 도플갱어를 소환합니다. 이미 도플갱어가 존재한다면 소환하지 않습니다.",
+        "jp": "敵単体にダメージを与え、【自己像幻視】を召喚する。すでに【自己像幻視】が戦場にいる場合は召喚しない。",
+        "zh": "攻击敌人并召唤二重身。若已存在二重身,则不召唤。"
+      },
+      "icon": "Skill_First_2000040"
+    },
+    {
+      "name": {
+        "en": "Chainsaw Girl",
+        "kr": "전기톱 Girl",
+        "jp": "チェーンソーガール",
+        "zh": "电锯少女"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and grants <color=#28d9ed>Lifesteal</color> to all allies for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>흡혈</color>을 부여합니다.",
+        "jp": "味方全体にダメージを与え、味方全体に<color=#28d9ed>吸収</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>吸血</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000040"
+    },
+    {
+      "name": {
+        "en": "Mirsha Massacre",
+        "kr": "메르샤 대학살",
+        "jp": "サツ・リク・ゲキ",
+        "zh": "弥乐沙大杀器"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Has a <color=#28d9ed>100%</color> chance each to grant increased <color=#28d9ed>Attack</color> to all allies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\nAfter attacking, has a <color=#28d9ed>100%</color> chance to grant <color=#28d9ed>Immortality</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "아군 전체의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 증가시킨 후 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 자신에게 <color=#28d9ed>불사</color>를 부여합니다.",
+        "jp": "それぞれ<color=#28d9ed>100%</color>の確率で味方全体の<color=#28d9ed>命中</color>と<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、敵全体にダメージを与える。\\n攻撃後、自分に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>不死</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "全体友军各有<color=#28d9ed>100%</color>的几率获得<color=#28d9ed>命中</color>和<color=#28d9ed>攻击力</color>提升效果,持续<color=#28d9ed>2回合</color>,随后攻击全体敌人。\\n攻击后,有<color=#28d9ed>100%</color>的几率使自身获得<color=#28d9ed>不死</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000040"
+    },
+    {
+      "name": {
+        "en": "Ready, Action!",
+        "kr": "레디, 액션!",
+        "jp": "レディー、アクション!",
+        "zh": "准备,开始!"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, grants an irremovable reduced damage taken to the caster for <color=#28d9ed>3 turn(s)</color>.\\nAfter using an attack that targets all enemies, all Doppelgängers activate an additional attack against the enemy with the highest Attack.\\nWhen a Doppelgänger is killed, increases Priority and Attack of the caster by <color=#28d9ed>15%</color>. (Max 20 stacks for Attack)\\nAt the start of the turn, when the caster is granted a buff, recovers Weakness Gauge by <color=#28d9ed>15%</color>. Additionally, when all allies except for the caster have been killed, increases all skill cooldowns of the caster by <color=#28d9ed>1 turn</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n전체 공격 이후 모든 도플갱어들은 공격력이 가장 높은 적에게 추가 공격을 합니다.\\n도플갱어가 사망했을 때 자신의 행동 게이지와 공격력이 <color=#28d9ed>15%</color> 증가합니다. (공격력은 최대 20회 누적)\\n턴 시작 시 자신이 강화 효과를 보유하고 있다면 WG를 <color=#28d9ed>15%</color> 회복합니다. 또한 자신을 제외 한 아군이 모두 사망한 상태라면 자신의 모든 스킬 쿨타임이 <color=#28d9ed>1턴</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分に解除不可能なダメージDOWN効果を<color=#28d9ed>3ターン</color>の間付与する。\\n全体攻撃後、すべての【自己像幻視】は攻撃力が最も高い敵単体に追加攻撃を与える。\\n【自己像幻視】が倒れた時、自分の行動ゲージと攻撃力が<color=#28d9ed>15%</color>UPする。(攻撃力は最大20回まで累積)\\nターン開始時、自分に強化効果がある場合、WGを<color=#28d9ed>15%</color>回復する。自分を除く味方全体が倒れた状態の場合、自分のすべてのスキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "zh": "(被动效果)\\n战斗开始时,使自身获得无法被解除的伤害降低效果,持续<color=#28d9ed>3回合</color>。\\n全体攻击后,所有二重身对攻击力最高的敌人发动额外攻击。\\n二重身死亡时,自身的行动值和攻击力提升<color=#28d9ed>15%</color>。(攻击力最多可叠加20次)\\n回合开始时,若自身附带强化效果,则WG恢复<color=#28d9ed>15%</color>。另外,若除自身外的友军全部死亡,自身的所有技能冷却时间增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}

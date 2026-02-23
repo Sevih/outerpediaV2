@@ -1,0 +1,108 @@
+{
+  "id": "40103013",
+  "Name": {
+    "en": "Ame",
+    "kr": "아메",
+    "jp": "あめ",
+    "zh": "亚美"
+  },
+  "Surname": {
+    "en": "The Passing Rain",
+    "kr": "지나가던 비",
+    "jp": "時雨",
+    "zh": "匆匆而过的雨"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 100,
+  "icons": "2000065",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_SEALED,BT_REMOVE_BUFF",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 1F",
+      "kr": "비천의 탑 [베리 하드] 1층",
+      "jp": "飛天の塔【ベリーハード】1階",
+      "zh": "飞天之塔【极难】第1层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Mikazuki 1st Art: Blooming",
+        "kr": "미카즈키 1식 : 개화",
+        "jp": "三日月壱式:開花",
+        "zh": "三日月1式:开花"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nDepending on the unique effect applied to the caster, activates one of the following effects:\\n\\nUme Ichirin: Attacks an enemy. After attacking, has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.\\n\\nSakura, Chiru: Attacks all enemies. Always attacks with <color=#28d9ed>elemental advantage</color>.",
+        "kr": "적을 공격합니다.\\n보유한 고유 효과에 따라 이하의 효과 중 하나가 적용됩니다.\\n\\n【우메이치린】 : 적을 공격합니다. 공격 후 <color=#28d9ed>100%</color>의 확률로 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.\\n\\n【사쿠라치루】 : 적 전체를 공격합니다. 항상 <color=#28d9ed>유리한 상성</color>으로 적용됩니다.",
+        "jp": "敵単体にダメージを与える。\\n自分に【梅一輪】または【桜散る】がある場合、次の効果が発動する。\\n\\n【梅一輪】:敵単体にダメージを与える。攻撃後<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。\\n\\n 【桜散る】:敵全体にダメージを与える。このスキルは敵の属性を無視し、<color=#28d9ed>有利属性</color>の攻撃判定でダメージを与える。",
+        "zh": "攻击敌人。\\n根据附带的固有效果触发以下效果之一。\\n\\n【一朵梅花】:攻击敌人。攻击后,有<color=#28d9ed>100%</color>的几率使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。\\n\\n【樱花凋零】:攻击全体敌人。总是以<color=#28d9ed>优势属性</color>施展。"
+      },
+      "icon": "Skill_First_2000065"
+    },
+    {
+      "name": {
+        "en": "Mikazuki 2nd Art: Pruning",
+        "kr": "미카즈키 2식 : 전정",
+        "jp": "三日月弐式:剪定",
+        "zh": "三日月2式:剪枝"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) Increases <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>15%</color>.",
+        "kr": "(패시브 효과) <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>15%</color> 증가합니다.",
+        "jp": "(パッシブ効果)戦闘開始時、自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>15%</color>UPする。",
+        "zh": "(被动效果) 使<color=#28d9ed>暴击率</color>提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "Skill_Second_2000065"
+    },
+    {
+      "name": {
+        "en": "Mikazuki 3rd Art: Flower Charm",
+        "kr": "미카즈키 3식 : 화람",
+        "jp": "三日月参式:花藍",
+        "zh": "三日月3式:花篮"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy, then grants an extra turn.\\n\\nBefore attacking, if the target's Health is less than or equal to <color=#28d9ed>90%</color>, grants the <color=#28d9ed>Ume Ichirin</color> effect for <color=#28d9ed>3 turn(s)</color>, and increases damage dealt.\\n\\nIf the target's Health is greater than <color=#28d9ed>90%</color>, grants the <color=#28d9ed>Sakura, Chiru</color> effect for <color=#28d9ed>3 turn(s)</color>, and reduces <color=#28d9ed>Chain Points</color> by <color=#28d9ed>15</color>.",
+        "kr": "적을 공격 후 추가 턴을 획득합니다.\\n\\n공격 전 대상의 현재 체력이 <color=#28d9ed>90%</color> 이하라면 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>우메이치린</color> 효과를 획득하고, 피해량이 증가합니다.\\n\\n대상의 현재 체력이 <color=#28d9ed>90%</color>를 초과한다면 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>사쿠라치루</color> 효과를 획득하고, <color=#28d9ed>CP</color>를 <color=#28d9ed>15</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、追加ターンを獲得する。\\n\\n攻撃前に対象の残りHPが<color=#28d9ed>90%</color>以下の場合、自分に<color=#28d9ed>【梅一輪】</color>を<color=#28d9ed>3ターン</color>の間付与し、与えるダメージがUPする。\\n\\n対象の残りHPが<color=#28d9ed>90%</color>を超える場合、自分に<color=#28d9ed>【桜散る】</color>を<color=#28d9ed>3ターン</color>の間付与し、<color=#28d9ed>CP</color>を<color=#28d9ed>15</color>DOWNさせる。",
+        "zh": "攻击敌人后获得额外回合。\\n\\n攻击前,若目标的当前生命值在<color=#28d9ed>90%</color>以下,则获得<color=#28d9ed>一朵梅花</color>效果,持续<color=#28d9ed>3回合</color>,并使伤害量提升。\\n\\n若目标的当前生命值高于<color=#28d9ed>90%</color>,则获得<color=#28d9ed>樱花凋零</color>效果,持续<color=#28d9ed>3回合</color>,且<color=#28d9ed>CP</color>减少<color=#28d9ed>15</color>点。"
+      },
+      "icon": "Skill_Ultimate_2000065"
+    },
+    {
+      "name": {
+        "en": "Until the Rain Subsides",
+        "kr": "비가 그칠 때까지",
+        "jp": "雨上がり",
+        "zh": "直至雨停"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAlways grants <color=#28d9ed>Buff Enhancement</color> and <color=#28d9ed>Debuff Enhancement</color> to the caster. This effect is irremovable.\\nAt the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>, and recovers Weakness Gauge by <color=#28d9ed>15</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)",
+        "kr": "(패시브 효과)\\n자신은 항상 <color=#28d9ed>강화 촉진</color>과 <color=#28d9ed>약화 촉진</color>을 얻습니다. 이 효과는 해제되지 않습니다.\\n턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가 효과</color>를 부여하며, WG를 <color=#28d9ed>15</color> 회복합니다.\\n매 턴 자신의 공격력이 <color=#28d9ed>5%</color>증가 합니다. (최대 20회 누적)",
+        "jp": "(パッシブ効果)\\n自分に<color=#28d9ed>強化促進</color>と<color=#28d9ed>弱体促進</color>を付与する。この効果は解除されない。\\nターン開始時、自分に<color=#28d9ed>ランダムなステータスUP効果</color>を<color=#28d9ed>2ターン</color>の間付与し、WGを<color=#28d9ed>15</color>回復する。\\n毎ターン自分の攻撃力が<color=#28d9ed>5%</color>UPする。(最大20回まで累積)",
+        "zh": "(被动效果)\\n自身始终获得<color=#28d9ed>强化促进</color>和<color=#28d9ed>弱化促进</color>效果。该效果不会被解除。\\n回合开始时,使自身获得<color=#28d9ed>随机能力值提升效果</color>,持续<color=#28d9ed>2回合</color>,WG恢复<color=#28d9ed>15</color>。\\n每回合自身的攻击力提升<color=#28d9ed>5%</color>。(最多可叠加20次)"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

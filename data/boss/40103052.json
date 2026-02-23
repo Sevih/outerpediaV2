@@ -1,0 +1,87 @@
+{
+  "id": "40103052",
+  "Name": {
+    "en": "Maxwell",
+    "kr": "맥스웰",
+    "jp": "マクスウェル",
+    "zh": "麦克斯威尔"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 100,
+  "icons": "2000028",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 3F",
+      "kr": "비천의 탑 [베리 하드] 3층",
+      "jp": "飛天の塔【ベリーハード】3階",
+      "zh": "飞天之塔【极难】第3层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ray of Destruction",
+        "kr": "파열의 섬광",
+        "jp": "Xリッパ-",
+        "zh": "破裂闪光"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_First_2000028"
+    },
+    {
+      "name": {
+        "en": "Ethereal Form",
+        "kr": "진리란 형태 없는 것",
+        "jp": "真理に形状あらず",
+        "zh": "真理无形"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.\\nWhen hit, if the caster is not granted a buff, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>, and if the caster is granted a buff, reduces <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.\\nAt the start of the turn, if the caster is not granted a buff, increases <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>공격력</color> 증가 효과를 부여합니다. \\n피격 시 자신에게 강화 효과가 없다면 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>공격력</color> 증가 효과가 부여되며, 자신에게 강화 효과가 있다면 자신의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n턴 시작 시 강화 효과가 없다면 자신의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、解除不可能な<color=#28d9ed>攻撃力</color>UP効果を<color=#28d9ed>1ターン</color>の間付与する。\\nダメージを受けた時、自分に強化効果がない場合、解除不可能な<color=#28d9ed>攻撃力</color>UP効果を<color=#28d9ed>1ターン</color>の間付与し、自分に強化効果がある場合、自分の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。\\nターン開始時、強化効果がない場合、自分の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>UPさせる。",
+        "zh": "(被动效果)\\n战斗开始时,获得无法被解除的<color=#28d9ed>攻击力</color>提升效果,持续<color=#28d9ed>1回合</color>。\\n受到攻击时,若自身未附带强化效果,则获得无法被解除的<color=#28d9ed>攻击力</color>提升效果,持续<color=#28d9ed>1回合</color>;若自身附带强化效果,则使自身的<color=#28d9ed>技能冷却时间</color>减少<color=#28d9ed>1回合</color>。\\n回合开始时,若未附带强化效果,则使自身的<color=#28d9ed>技能冷却时间</color>增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Mana Converter",
+        "kr": "마력 전환 기구",
+        "jp": "マナ・エクスプロージョン",
+        "zh": "魔力转换器"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and recovers Health of the caster by <color=#28d9ed>100%</color>.",
+        "kr": "적 전체를 공격하고, 자신의 체력을 <color=#28d9ed>100%</color> 회복합니다.",
+        "jp": "敵全体にダメージを与え、自分のHPを<color=#28d9ed>100%</color>回復する。",
+        "zh": "攻击全体敌人,并使自身生命值恢复<color=#28d9ed>100%</color>。"
+      },
+      "icon": "Skill_Second_2000028"
+    }
+  ]
+}

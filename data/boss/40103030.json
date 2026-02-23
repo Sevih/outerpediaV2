@@ -1,0 +1,92 @@
+{
+  "id": "40103030",
+  "Name": {
+    "en": "Guizam",
+    "kr": "기잠",
+    "jp": "ギザム",
+    "zh": "纪斩"
+  },
+  "Surname": {
+    "en": "Blitz Commander of the Annihilation Sect",
+    "kr": "섬격회의 돌격대장",
+    "jp": "仁義を尽くす【閃撃の会】副会長",
+    "zh": "闪击会的突击队长"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 100,
+  "icons": "2000049",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 1F",
+      "kr": "비천의 탑 [베리 하드] 1층",
+      "jp": "飛天の塔【ベリーハード】1階",
+      "zh": "飞天之塔【极难】第1层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Spear Barrage",
+        "kr": "섬격회 일번창",
+        "jp": "閃撃の会壱番槍",
+        "zh": "闪击会第一枪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>40%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000049"
+    },
+    {
+      "name": {
+        "en": "Blitz Commander's Spite",
+        "kr": "돌격대장의 맹위",
+        "jp": "突撃隊長の猛威",
+        "zh": "突击队长的威严"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000049"
+    },
+    {
+      "name": {
+        "en": "Skill: Painful Demise",
+        "kr": "극도기교-야로사고",
+        "jp": "極道技巧-夜露死苦",
+        "zh": "极道技巧-请多指教"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>missing Health</color>.",
+        "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>残りHP</color>が低いほどダメージがUPする。",
+        "zh": "攻击敌人。\\n自身的<color=#28d9ed>当前生命值</color>越低,则该技能的伤害越高。"
+      },
+      "icon": "Skill_Ultimate_2000049"
+    }
+  ]
+}

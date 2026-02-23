@@ -1,11 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import CharacterPortrait from '@/app/components/character/CharacterPortrait';
-import ElementInline from '@/app/components/inline/ElementInline';
-import ClassInline from '@/app/components/inline/ClassInline';
 import Tabs from '@/app/components/ui/Tabs';
+import BossCompactDisplay from '@/app/components/guides/BossCompactDisplay';
+import MinionsCompactDisplay from '@/app/components/guides/MinionsCompactDisplay';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import RestrictionIcons from './RestrictionIcons';
 import { useI18n } from '@/lib/contexts/I18nContext';
@@ -77,44 +75,13 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: 
     );
   }
 
-  const baseName = lRec(boss.Name, lang);
-  const surname = lRec(boss.Surname as LangMap, lang);
-  const displayName = boss.IncludeSurname && surname ? `${surname} ${baseName}` : baseName;
   const hasSingleSet = entry.restrictionSets.length <= 1;
 
   return (
     <div className="card p-4">
       <div className="space-y-4">
         {/* Boss header */}
-        <div className="flex items-center gap-3">
-          {boss.icons.startsWith('2') ? (
-            <CharacterPortrait id={boss.icons} size="md" name={displayName} className="shrink-0" />
-          ) : (
-            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
-              <Image
-                src={boss.icons.startsWith('Skill_')
-                  ? `/images/characters/${boss.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${boss.icons}.webp`
-                  : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
-                }
-                alt={displayName}
-                fill
-                sizes="64px"
-                className="object-cover"
-              />
-            </div>
-          )}
-          <div>
-            {!boss.IncludeSurname && surname && (
-              <p className="text-xs text-zinc-400">{surname}</p>
-            )}
-            <p className="text-lg font-bold text-zinc-100">{displayName}</p>
-            <div className="mt-1 flex items-center gap-2">
-              <ElementInline element={boss.element} />
-              <ClassInline name={boss.class} />
-              <span className="text-xs text-zinc-500">Lv.{boss.level}</span>
-            </div>
-          </div>
-        </div>
+        <BossCompactDisplay boss={boss} />
 
         {/* Minions */}
         {minions.length > 0 && (
@@ -122,35 +89,7 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: 
             <h5 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
               {t('tower.minions')}
             </h5>
-            <div className="space-y-2">
-              {minions.map(m => {
-                const mName = lRec(m.Name, lang);
-                return (
-                  <div key={m.icons} className="flex items-center gap-2">
-                    {m.icons.startsWith('2') ? (
-                      <CharacterPortrait id={m.icons} size="xs" name={mName} className="shrink-0" />
-                    ) : (
-                      <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded border border-white/10">
-                        <Image
-                          src={m.icons.startsWith('Skill_')
-                            ? `/images/characters/${m.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${m.icons}.webp`
-                            : `/images/characters/boss/portrait/MT_${m.icons}.webp`
-                          }
-                          alt={mName}
-                          fill
-                          sizes="32px"
-                          className="object-cover"
-                        />
-                      </div>
-                    )}
-                    <span className="text-sm text-zinc-300">{mName}</span>
-                    <ElementInline element={m.element} />
-                    <ClassInline name={m.class} />
-                    <span className="text-xs text-zinc-500">Lv.{m.level}</span>
-                  </div>
-                );
-              })}
-            </div>
+            <MinionsCompactDisplay minions={minions} />
           </div>
         )}
 
