@@ -6,6 +6,7 @@ import BossCompactDisplay from '@/app/components/guides/BossCompactDisplay';
 import MinionsCompactDisplay from '@/app/components/guides/MinionsCompactDisplay';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import RestrictionIcons from './RestrictionIcons';
+import parseText from '@/lib/parse-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { isRandomFloor } from '@/types/tower';
@@ -48,11 +49,12 @@ function RestrictionsList({ restrictions, lang }: { restrictions: LangMap[]; lan
 
 /* ── Floor content with boss + minions + restrictions + recommended ── */
 
-function FloorContent({ boss, minions, restrictions, recommended, lang }: {
+function FloorContent({ boss, minions, restrictions, recommended, reason, lang }: {
   boss: Boss | null;
   minions: Boss[];
   restrictions: LangMap[];
   recommended?: TowerCharacterRecommendation[];
+  reason?: string;
   lang: Lang;
 }) {
   const { t } = useI18n();
@@ -80,6 +82,10 @@ function FloorContent({ boss, minions, restrictions, recommended, lang }: {
         </h5>
         <RestrictionsList restrictions={restrictions} lang={lang} />
       </div>
+
+      {reason && (
+        <p className="text-sm leading-relaxed text-zinc-300">{parseText(reason)}</p>
+      )}
 
       {recommended && recommended.length > 0 && (
         <div>
@@ -120,7 +126,7 @@ export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defau
         <h4 className="mb-4 after:hidden">
           {t('tower.floor').replace('{n}', String(floor.floor))}
         </h4>
-        <FloorContent boss={boss} minions={minions} restrictions={restrictions} recommended={floor.recommended} lang={lang} />
+        <FloorContent boss={boss} minions={minions} restrictions={restrictions} recommended={floor.recommended} reason={floor.reason ? lRec(floor.reason, lang) : undefined} lang={lang} />
       </div>
     );
   }
@@ -164,6 +170,7 @@ export default function TowerFloorDetail({ floor, bossMap, restrictionMap, defau
         minions={minions}
         restrictions={restrictions}
         recommended={currentSet.recommended}
+        reason={currentSet.reason ? lRec(currentSet.reason, lang) : undefined}
         lang={lang}
       />
     </div>

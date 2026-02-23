@@ -176,6 +176,7 @@ const kr: Record<TranslationKey, string> = {
   'tower.random_floors': '랜덤 층',
   'tower.minions': '부하',
   'tower.recommended': '추천',
+  'tower.show_all': '전체 보기 ({n})',
 
   'page.contributors.title': '프로젝트 기여자',
   'page.legal.title': '법적 고지 & 면책 조항',

@@ -117,12 +117,14 @@ export default function TowerGuide({ data }: Props) {
         boss_id: set.boss_id,
         minions: set.minions,
         restrictionSets: [{ restrictions: set.restrictions ?? [], recommended: set.recommended }],
+        reason: set.reason,
       };
     }
     return {
       boss_id: activeFloor.boss_id,
       minions: activeFloor.minions,
       restrictionSets: [{ restrictions: activeFloor.restrictions ?? [], recommended: activeFloor.recommended }],
+      reason: activeFloor.reason,
     };
   }, [isGrouped, activeFloor, selectedSet]);
 
@@ -147,7 +149,7 @@ export default function TowerGuide({ data }: Props) {
           placeholder={t('tower.search_placeholder')}
           className="mb-3"
         />
-        <div className="max-h-[70vh] overflow-y-auto rounded-lg border border-zinc-700/50 bg-zinc-900/50 p-1.5 md:max-h-[min(1200px,calc(100vh-8rem))]">
+        <div className="max-h-[40vh] overflow-y-auto rounded-lg border border-zinc-700/50 bg-zinc-900/50 p-1.5 md:max-h-[min(1200px,calc(100vh-8rem))]">
           {isGrouped ? (
             <TowerFloorListGrouped
               floors={data.floors}

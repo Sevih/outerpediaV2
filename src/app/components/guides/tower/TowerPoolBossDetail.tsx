@@ -6,6 +6,7 @@ import BossCompactDisplay from '@/app/components/guides/BossCompactDisplay';
 import MinionsCompactDisplay from '@/app/components/guides/MinionsCompactDisplay';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import RestrictionIcons from './RestrictionIcons';
+import parseText from '@/lib/parse-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { TowerPoolEntry, TowerRestrictionMap, TowerRestrictionSet } from '@/types/tower';
@@ -91,6 +92,11 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap }: 
             </h5>
             <MinionsCompactDisplay minions={minions} />
           </div>
+        )}
+
+        {/* Reason */}
+        {entry.reason && lRec(entry.reason, lang) && (
+          <p className="text-sm leading-relaxed text-zinc-300">{parseText(lRec(entry.reason, lang))}</p>
         )}
 
         {/* Restrictions + Recommended */}

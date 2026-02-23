@@ -176,6 +176,7 @@ const en = {
   'tower.random_floors': 'Random Floors',
   'tower.minions': 'Minions',
   'tower.recommended': 'Recommended',
+  'tower.show_all': 'Show all ({n})',
 
   'page.contributors.title': 'Project Contributors',
   'page.legal.title': 'Legal Notice & Disclaimer',

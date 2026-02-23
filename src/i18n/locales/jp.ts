@@ -176,6 +176,7 @@ const jp: Record<TranslationKey, string> = {
   'tower.random_floors': 'ランダムフロア',
   'tower.minions': '取り巻き',
   'tower.recommended': 'おすすめ',
+  'tower.show_all': 'すべて表示 ({n})',
 
   'page.contributors.title': 'プロジェクト コントリビューター',
   'page.legal.title': '法的通知 & 免責事項',

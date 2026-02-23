@@ -176,6 +176,7 @@ const zh: Record<TranslationKey, string> = {
   'tower.random_floors': '随机楼层',
   'tower.minions': '随从',
   'tower.recommended': '推荐',
+  'tower.show_all': '显示全部 ({n})',
 
   'page.contributors.title': '项目贡献者',
   'page.legal.title': '法律声明 & 免责条款',
