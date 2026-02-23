@@ -20,6 +20,37 @@ for (const b of buffsData as Effect[]) buffMap[b.name] = b;
 const debuffMap: Record<string, Effect> = {};
 for (const d of debuffsData as Effect[]) debuffMap[d.name] = d;
 
+/* ── Immunities ── */
+
+function normalizeName(name: string): string {
+  return name.startsWith('ST_') ? `BT_STAT|${name}` : name;
+}
+
+function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
+  const { t } = useI18n();
+  const raw: string[] = [];
+  if (immuneStr) raw.push(...immuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
+  if (statImmuneStr) raw.push(...statImmuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
+  // Deduplicate by label (e.g. BT_REVERSE_HEAL_BASED_TARGET and BT_REVERSE_HEAL_BASED_CASTER both map to "Fixed Damage")
+  const seen = new Set<string>();
+  const items = raw.filter((name) => {
+    const label = debuffMap[name]?.label ?? name;
+    if (seen.has(label)) return false;
+    seen.add(label);
+    return true;
+  });
+  if (items.length === 0) return null;
+
+  return (
+    <div className="space-y-1.5">
+      <h5 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
+        {t('guides.boss_display.immunities')}
+      </h5>
+      <BuffDebuffDisplay buffs={[]} debuffs={items} iconOnly />
+    </div>
+  );
+}
+
 /* ── Helpers ── */
 
 function getBossImageSrc(icons: string): string {
@@ -167,6 +198,9 @@ export default function BossCompactDisplay({ boss }: Props) {
             </div>
           </div>
         </div>
+
+        {/* Immunities */}
+        <ImmuneList immuneStr={boss.BuffImmune} statImmuneStr={boss.StatBuffImmune} />
 
         {/* Skills tabs */}
         {visibleSkills.length > 0 && (

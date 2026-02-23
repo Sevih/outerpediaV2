@@ -121,9 +121,17 @@ function normalizeName(name: string): string {
 
 function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
   const { t } = useI18n();
-  const items: string[] = [];
-  if (immuneStr) items.push(...immuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
-  if (statImmuneStr) items.push(...statImmuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
+  const raw: string[] = [];
+  if (immuneStr) raw.push(...immuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
+  if (statImmuneStr) raw.push(...statImmuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
+  // Deduplicate by label (e.g. BT_REVERSE_HEAL_BASED_TARGET and BT_REVERSE_HEAL_BASED_CASTER both map to "Fixed Damage")
+  const seen = new Set<string>();
+  const items = raw.filter((name) => {
+    const label = debuffMap[name]?.label ?? name;
+    if (seen.has(label)) return false;
+    seen.add(label);
+    return true;
+  });
   if (items.length === 0) return null;
 
   return (
