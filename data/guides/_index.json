@@ -161,5 +161,157 @@
     "icon": "CM_Lobby_Button_Recruitment",
     "last_updated": "2025-10-28",
     "author": "Sevih"
+  },
+  "fire-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Fire Elemental Tower",
+      "jp": "火属性の塔",
+      "kr": "화속성 탑",
+      "zh": "火属性之塔"
+    },
+    "description": {
+      "en": "Floor-by-floor guide for the Fire Elemental Tower — boss encounters and restrictions for all 100 floors",
+      "jp": "火属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
+      "kr": "화속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
+      "zh": "火属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+    },
+    "icon": "T_Tower_Elemental_Fire",
+    "order": 1,
+    "last_updated": "2026-02-23",
+    "author": "Sevih"
+  },
+  "water-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Water Elemental Tower",
+      "jp": "水属性の塔",
+      "kr": "수속성 탑",
+      "zh": "水属性之塔"
+    },
+    "description": {
+      "en": "Floor-by-floor guide for the Water Elemental Tower — boss encounters and restrictions for all 100 floors",
+      "jp": "水属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
+      "kr": "수속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
+      "zh": "水属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+    },
+    "icon": "T_Tower_Elemental_Water",
+    "order": 2,
+    "last_updated": "2026-02-23",
+    "author": "Sevih"
+  },
+  "earth-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Earth Elemental Tower",
+      "jp": "地属性の塔",
+      "kr": "지속성 탑",
+      "zh": "土属性之塔"
+    },
+    "description": {
+      "en": "Floor-by-floor guide for the Earth Elemental Tower — boss encounters and restrictions for all 100 floors",
+      "jp": "地属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
+      "kr": "지속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
+      "zh": "土属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+    },
+    "icon": "T_Tower_Elemental_Earth",
+    "order": 3,
+    "last_updated": "2026-02-23",
+    "author": "Sevih"
+  },
+  "light-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Light Elemental Tower",
+      "jp": "光属性の塔",
+      "kr": "명속성 탑",
+      "zh": "光属性之塔"
+    },
+    "description": {
+      "en": "Floor-by-floor guide for the Light Elemental Tower — boss encounters and restrictions for all 100 floors",
+      "jp": "光属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
+      "kr": "명속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
+      "zh": "光属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+    },
+    "icon": "T_Tower_Elemental_Light",
+    "order": 4,
+    "last_updated": "2026-02-23",
+    "author": "Sevih"
+  },
+  "dark-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Dark Elemental Tower",
+      "jp": "闇属性の塔",
+      "kr": "암속성 탑",
+      "zh": "暗属性之塔"
+    },
+    "description": {
+      "en": "Floor-by-floor guide for the Dark Elemental Tower — boss encounters and restrictions for all 100 floors",
+      "jp": "闇属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
+      "kr": "암속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
+      "zh": "暗属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+    },
+    "icon": "T_Tower_Elemental_Dark",
+    "order": 5,
+    "last_updated": "2026-02-23",
+    "author": "Sevih"
+  },
+  "normal-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Skyward Tower — Normal",
+      "jp": "飛天の塔 — ノーマル",
+      "kr": "비천의 탑 — 노멀",
+      "zh": "飞天之塔 — 普通"
+    },
+    "description": {
+      "en": "Floor-by-floor guide for Skyward Tower Normal mode — 100 floors, monthly reset",
+      "jp": "飛天の塔ノーマルモード フロア攻略ガイド — 全100階、月間リセット",
+      "kr": "비천의 탑 노멀 모드 층별 공략 가이드 — 전 100층, 월간 리셋",
+      "zh": "飞天之塔普通模式逐层攻略指南 — 全100层，每月重置"
+    },
+    "icon": "T_Tower_Bg",
+    "order": 6,
+    "last_updated": "2026-02-23",
+    "author": "Sevih"
+  },
+  "hard-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Skyward Tower — Hard",
+      "jp": "飛天の塔 — ハード",
+      "kr": "비천의 탑 — 하드",
+      "zh": "飞天之塔 — 困难"
+    },
+    "description": {
+      "en": "Floor-by-floor guide for Skyward Tower Hard mode — 40 floors, monthly reset",
+      "jp": "飛天の塔ハードモード フロア攻略ガイド — 全40階、月間リセット",
+      "kr": "비천의 탑 하드 모드 층별 공략 가이드 — 전 40층, 월간 리셋",
+      "zh": "飞天之塔困难模式逐层攻略指南 — 全40层，每月重置"
+    },
+    "icon": "T_Tower_Hard_Bg",
+    "order": 7,
+    "last_updated": "2026-02-23",
+    "author": "Sevih"
+  },
+  "very-hard-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Skyward Tower — Very Hard",
+      "jp": "飛天の塔 — ベリーハード",
+      "kr": "비천의 탑 — 매우 어려움",
+      "zh": "飞天之塔 — 极难"
+    },
+    "description": {
+      "en": "Guide for Skyward Tower Very Hard mode — 20 floors with randomized encounters, monthly reset",
+      "jp": "飛天の塔ベリーハードモード攻略ガイド — ランダムエンカウント20階、月間リセット",
+      "kr": "비천의 탑 매우 어려움 모드 공략 가이드 — 랜덤 조우 20층, 월간 리셋",
+      "zh": "飞天之塔极难模式攻略指南 — 随机遭遇20层，每月重置"
+    },
+    "icon": "T_Tower_VeryHard_Bg",
+    "order": 8,
+    "last_updated": "2026-02-23",
+    "author": "Sevih"
   }
 }

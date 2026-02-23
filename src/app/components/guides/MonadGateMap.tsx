@@ -39,9 +39,11 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
   const [isDragging, setIsDragging] = useState(false);
   const [startDrag, setStartDrag] = useState({ x: 0, y: 0 });
   const [selectedNode, setSelectedNode] = useState<MonadNode | null>(null);
+  const [tooltip, setTooltip] = useState<{ label: string; x: number; y: number } | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showOnlyTruePath, setShowOnlyTruePath] = useState(false);
   const [compactMode, setCompactMode] = useState(true);
+  const [spoilerRevealed, setSpoilerRevealed] = useState(false);
 
   const nodeWidth = compactMode ? COMPACT_NODE_SIZE : NODE_WIDTH;
   const nodeHeight = compactMode ? COMPACT_NODE_SIZE : NODE_HEIGHT;
@@ -306,6 +308,7 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
           </button>
         </div>
       </div>
+      <div className="relative">
       <div
         ref={containerRef}
         className={`relative w-full overflow-x-auto overflow-y-hidden border bg-zinc-900 ${
@@ -415,11 +418,21 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
             return (
               <div
                 key={node.id}
-                onClick={() => setSelectedNode(node)}
-                title={node.label || t(`monad.node.${node.type}`)}
+                onClick={() => { if (node.type === 'path') setSelectedNode(node); }}
+                onMouseEnter={(e) => {
+                  if (node.type !== 'path') {
+                    setTooltip({ label: node.label || t(`monad.node.${node.type}`), x: e.clientX, y: e.clientY });
+                  }
+                }}
+                onMouseMove={(e) => {
+                  if (tooltip && node.type !== 'path') {
+                    setTooltip({ label: node.label || t(`monad.node.${node.type}`), x: e.clientX, y: e.clientY });
+                  }
+                }}
+                onMouseLeave={() => setTooltip(null)}
                 className={`absolute text-white text-xs shadow ${
                   isDimmed ? 'opacity-30 grayscale' : ''
-                } ${compactMode ? 'cursor-pointer' : ''}`}
+                } ${node.type === 'path' ? 'cursor-pointer' : ''}`}
                 style={{
                   left: (node.x - minX) * (nodeWidth + nodeGap) + nodeGap,
                   top: (maxY - node.y) * (nodeHeight + nodeGap) + nodeGap,
@@ -491,7 +504,7 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
           })}
         </div>
       </div>
-      {selectedNode && (
+      {selectedNode && selectedNode.type === 'path' && (
         <NodeContextPopup node={selectedNode} onClose={() => setSelectedNode(null)} position="bottom">
           <PathOptionsContent
             node={selectedNode}
@@ -501,12 +514,24 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
           />
         </NodeContextPopup>
       )}
+      </div>
+      {tooltip && (
+        <div
+          className="fixed z-9999 pointer-events-none bg-zinc-900 text-white text-xs px-2 py-1 rounded border border-zinc-500 shadow-lg"
+          style={{ left: tooltip.x + 12, top: tooltip.y - 28 }}
+        >
+          {tooltip.label}
+        </div>
+      )}
       {labeledTruePathEdges.length > 0 && (
-        <div className="mt-4 p-4 bg-zinc-800 rounded-lg border border-zinc-700">
+        <div
+          className="relative mt-4 p-4 bg-zinc-800 rounded-lg border border-zinc-700 cursor-pointer"
+          onClick={() => setSpoilerRevealed(true)}
+        >
           <h3 className="text-lg font-semibold mb-3 text-yellow-400">
             {t('monad.trueEndingChoices')}
           </h3>
-          <ul className="space-y-2">
+          <ul className={`space-y-2 transition-all duration-300 ${spoilerRevealed ? '' : 'blur-sm select-none'}`}>
             {labeledTruePathEdges.map((edge, idx) => (
               <li key={idx} className="flex items-start gap-2 text-sm">
                 <span className="text-yellow-400 mt-0.5">{'->'}</span>
@@ -514,6 +539,11 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
               </li>
             ))}
           </ul>
+          {!spoilerRevealed && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-sm text-zinc-400">{t('monad.ui.clickToReveal')}</span>
+            </div>
+          )}
         </div>
       )}
     </div>

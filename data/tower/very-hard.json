@@ -1,0 +1,157 @@
+{
+  "disclaimer": {
+    "en": "Very Hard mode features randomized floors and conditions with varying boss encounters. Floor and conditions are random (chosen between 3-4 sets for every player). Floors 5, 10, and 15 have fixed bosses: Demiurge Stella, Demiurge Drakhan, and Demiurge Vlada (positions randomized). Floor 20 can alternate between 3 sets of bosses.",
+    "jp": "ベリーハードモードではフロアと条件がランダム化され、ボスの組み合わせが変わります。各プレイヤーに対して3〜4セットからランダムに選ばれます。5階、10階、15階は固定ボス：デミウルゴス・ステラ、デミウルゴス・ドラカン、デミウルゴス・ヴラダ（位置はランダム）。20階は3セットのボスが交互に登場します。",
+    "kr": "매우 어려움 모드에서는 층과 조건이 랜덤으로 변경되며 보스 조합이 달라집니다. 각 플레이어에게 3~4세트 중 랜덤으로 선택됩니다. 5층, 10층, 15층은 고정 보스: 데미우르고스 스텔라, 데미우르고스 드라칸, 데미우르고스 블라다 (위치는 랜덤). 20층은 3세트의 보스가 교대로 등장합니다.",
+    "zh": "极难模式的楼层和条件会随机变化，Boss组合也会不同。每位玩家从3-4个方案中随机选择。第5、10、15层为固定Boss：造物主斯特拉、造物主德拉坎、造物主弗拉达（位置随机）。第20层可在3组Boss之间交替。"
+  },
+  "floors": [
+    {
+      "floor": 1,
+      "random": true,
+      "sets": [
+        {
+          "boss": {
+            "id": "401400260",
+            "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
+            "element": "Water",
+            "class": "Striker",
+            "icons": "4076005"
+          },
+          "restrictions": [
+            { "en": "Fire characters only", "jp": "火属性キャラのみ", "kr": "화속성 캐릭터만", "zh": "仅限火属性角色" }
+          ]
+        },
+        {
+          "boss": {
+            "id": "401400261",
+            "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
+            "element": "Fire",
+            "class": "Mage",
+            "icons": "4076005"
+          },
+          "restrictions": [
+            { "en": "Water characters only", "jp": "水属性キャラのみ", "kr": "수속성 캐릭터만", "zh": "仅限水属性角色" }
+          ]
+        },
+        {
+          "boss": {
+            "id": "401400262",
+            "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
+            "element": "Earth",
+            "class": "Defender",
+            "icons": "4076005"
+          },
+          "restrictions": [
+            { "en": "No Healers allowed", "jp": "ヒーラー使用不可", "kr": "힐러 사용 불가", "zh": "不能使用治疗师" }
+          ]
+        }
+      ]
+    },
+    {
+      "floor": 2,
+      "random": true,
+      "sets": [
+        {
+          "boss": {
+            "id": "401400260",
+            "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
+            "element": "Water",
+            "class": "Striker",
+            "icons": "4076005"
+          },
+          "restrictions": []
+        },
+        {
+          "boss": {
+            "id": "401400261",
+            "name": { "en": "Tyrant Toddler", "jp": "タイラントの幼生", "kr": "타일런트 유생체", "zh": "幼体泰兰特" },
+            "element": "Dark",
+            "class": "Mage",
+            "icons": "4076005"
+          },
+          "restrictions": [
+            { "en": "Max 3 characters", "jp": "最大3キャラ", "kr": "최대 3캐릭터", "zh": "最多3名角色" }
+          ]
+        }
+      ]
+    },
+    {
+      "floor": 5,
+      "boss": {
+        "id": "401400255",
+        "name": { "en": "Demiurge Stella", "jp": "デミウルゴス ステラ", "kr": "데미우르고스 스텔라", "zh": "造物主斯特拉" },
+        "element": "Light",
+        "class": "Mage",
+        "icons": "4076005"
+      },
+      "restrictions": [
+        { "en": "Dark characters only", "jp": "闇属性キャラのみ", "kr": "암속성 캐릭터만", "zh": "仅限暗属性角色" }
+      ]
+    },
+    {
+      "floor": 10,
+      "boss": {
+        "id": "401400256",
+        "name": { "en": "Demiurge Drakhan", "jp": "デミウルゴス ドラカン", "kr": "데미우르고스 드라칸", "zh": "造物主德拉坎" },
+        "element": "Fire",
+        "class": "Striker",
+        "icons": "4076005"
+      },
+      "restrictions": [
+        { "en": "Water characters only", "jp": "水属性キャラのみ", "kr": "수속성 캐릭터만", "zh": "仅限水属性角色" }
+      ]
+    },
+    {
+      "floor": 15,
+      "boss": {
+        "id": "401400257",
+        "name": { "en": "Demiurge Vlada", "jp": "デミウルゴス ヴラダ", "kr": "데미우르고스 블라다", "zh": "造物主弗拉达" },
+        "element": "Earth",
+        "class": "Defender",
+        "icons": "4076005"
+      },
+      "restrictions": []
+    },
+    {
+      "floor": 20,
+      "random": true,
+      "sets": [
+        {
+          "boss": {
+            "id": "401400255",
+            "name": { "en": "Demiurge Stella", "jp": "デミウルゴス ステラ", "kr": "데미우르고스 스텔라", "zh": "造物主斯特拉" },
+            "element": "Light",
+            "class": "Mage",
+            "icons": "4076005"
+          },
+          "restrictions": [
+            { "en": "Dark characters only", "jp": "闇属性キャラのみ", "kr": "암속성 캐릭터만", "zh": "仅限暗属性角色" }
+          ]
+        },
+        {
+          "boss": {
+            "id": "401400256",
+            "name": { "en": "Demiurge Drakhan", "jp": "デミウルゴス ドラカン", "kr": "데미우르고스 드라칸", "zh": "造物主德拉坎" },
+            "element": "Fire",
+            "class": "Striker",
+            "icons": "4076005"
+          },
+          "restrictions": []
+        },
+        {
+          "boss": {
+            "id": "401400257",
+            "name": { "en": "Demiurge Vlada", "jp": "デミウルゴス ヴラダ", "kr": "데미우르고스 블라다", "zh": "造物主弗拉达" },
+            "element": "Earth",
+            "class": "Defender",
+            "icons": "4076005"
+          },
+          "restrictions": [
+            { "en": "No Strikers allowed", "jp": "ストライカー使用不可", "kr": "스트라이커 사용 불가", "zh": "不能使用突击者" }
+          ]
+        }
+      ]
+    }
+  ]
+}
