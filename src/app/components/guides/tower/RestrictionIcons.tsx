@@ -124,8 +124,8 @@ export function RestrictionIcon({ id }: { id: string }) {
 
 /* ── Row of restriction icons (used as tab label) ── */
 
-export default function RestrictionIcons({ restrictions }: { restrictions: string[] }) {
-  if (restrictions.length === 0) return null;
+export default function RestrictionIcons({ restrictions }: { restrictions?: string[] }) {
+  if (!restrictions || restrictions.length === 0) return null;
 
   return (
     <span className="inline-flex items-center gap-1.5">

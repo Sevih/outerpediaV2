@@ -1,0 +1,156 @@
+{
+  "id": "5040050",
+  "Name": {
+    "en": "Ars Nova",
+    "kr": "아르스 노바",
+    "jp": "アルス・ノーヴァ",
+    "zh": "艺术新星"
+  },
+  "Surname": {
+    "en": "Giant of Light",
+    "kr": "빛의 거인",
+    "jp": "光の巨人",
+    "zh": "光之巨人"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 110,
+  "icons": "4076008",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 40F",
+      "kr": "빛의 탑 40층",
+      "jp": "光の塔 40階",
+      "zh": "光之塔 40层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232040",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "The Fourth Art",
+        "kr": "제 4의 예술",
+        "jp": "第4の芸術",
+        "zh": "第4艺术"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and increases <color=#28d9ed>Counterattack Chance</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>반격 확률</color>이 증가합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>反撃発生率</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "zh": "攻击敌人,并使<color=#28d9ed>反击率</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_4076008"
+    },
+    {
+      "name": {
+        "en": "Gregorian Chant",
+        "kr": "그레고리오 성가",
+        "jp": "グレゴリオ聖歌",
+        "zh": "格里高利圣咏"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체를 공격합니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "攻击全体敌人。"
+      },
+      "icon": "Skill_Second_4076008"
+    },
+    {
+      "name": {
+        "en": "Motet",
+        "kr": "모테트",
+        "jp": "モテット",
+        "zh": "经文歌"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Silenced</color> on all targets for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color> 동안 대상 모두에게 <color=#28d9ed>침묵</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象全体に<color=#28d9ed>沈黙</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并对全体目标造成<color=#28d9ed>沉默</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4076008"
+    },
+    {
+      "name": {
+        "en": "Silence During Worship",
+        "kr": "예배 중에는 정숙히",
+        "jp": "礼拝中は静粛に",
+        "zh": "礼拜时请保持肃静"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive)\\nAt the start of the turn, if HP is 25% or lower, inflicts <color=#28d9ed>Silence</color> on all enemies for <color=#28d9ed>1 turn(s)</color> (Ignores Immunity).\\nDeals extra damage to targets with <color=#28d9ed>Silence</color>.",
+        "kr": "(패시브 효과)\\n턴 시작시 자신의 HP가 25% 이하라면 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>침묵</color>을 부여합니다.(면역 무시)\\n<color=#28d9ed>침묵</color> 효과를 가진 대상에게 추가 피해를 줍니다.",
+        "jp": "(パッシブ効果)\\nターン開始時、自分のHPが25%以下の場合、敵全体に<color=#28d9ed>1ターン</color>の間<color=#28d9ed>沈黙</color>を付与する。(免疫無視)\\n<color=#28d9ed>沈黙</color>効果を持つ対象に追加ダメージを与える。",
+        "zh": "(被动效果)\\n回合开始时,若自身生命值低于25%,对全体敌人造成<color=#28d9ed>沉默</color>效果,持续<color=#28d9ed>1回合</color>(无视免疫)。\\n对持有<color=#28d9ed>沉默</color>效果的目标造成额外伤害。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Cantata</color>: Used when Enraged ends.\\nDeals heavy damage to all enemies.\\n\\n<color=#ffd732>If enraged within 4 turns, grants 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>칸타타</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.\\n\\n<color=#ffd732>4턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP・ダメージDOWNを3ターンの間付与し、WGを30%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【カンタータ】</color>:【狂暴化】終了時に発動する。\\n敵全体に大ダメージを与える。\\n\\n<color=#ffd732>戦闘開始時から4ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复30%。狂暴化持续3回合。\\n\\n<color=#28d9ed>大合唱</color>:狂暴化结束时发动。\\n对全体敌人造成巨额伤害。\\n\\n<color=#ffd732>在4回合内陷入狂暴化状态时,恢复80CP</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

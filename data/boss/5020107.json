@@ -1,0 +1,103 @@
+{
+  "id": "5020107",
+  "Name": {
+    "en": "Shadow Beast Eviscerator",
+    "kr": "섀도우 비스트 블레이드",
+    "jp": "シャドウビースト・ブレード",
+    "zh": "电锯暗影兽"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 42,
+  "icons": "4033011",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 2F",
+      "kr": "물의 탑 2층",
+      "jp": "水の塔2階",
+      "zh": "水之塔第2层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212002",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shadow Blow",
+        "kr": "섀도우 블로",
+        "jp": "シャドウブロー",
+        "zh": "暗影打击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and gains a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 획득합니다.",
+        "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Shadow Sting",
+        "kr": "섀도우 스팅",
+        "jp": "シャドウスティング",
+        "zh": "暗影刺袭"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Shadow Assault",
+        "kr": "섀도우 어썰트",
+        "jp": "シャドウアサルト",
+        "zh": "暗影侵袭"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Encroaching Darkness",
+        "kr": "엄습하는 어둠",
+        "jp": "襲い来る闇",
+        "zh": "黑暗来袭"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nHas a <color=#28d9ed>30%</color> chance to remove <color=#28d9ed>1</color> buff(s) from one target when attacking.\\nIncreases <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle.",
+        "kr": "(패시브 효과)\\n공격 시 <color=#28d9ed>30%</color> 확률로 대상 한 명의 강화 효과를 <color=#28d9ed>1</color>개 해제합니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
+        "jp": "(パッシブ効果)\\n攻撃時、<color=#28d9ed>30%</color>の確率で対象単体の強化効果を<color=#28d9ed>1</color>個解除する。\\n戦闘開始時、<color=#28d9ed>効果命中</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+        "zh": "(被动效果)\\n攻击时,有<color=#28d9ed>30%</color>的几率解除1名目标的<color=#28d9ed>1</color>个强化效果。\\n战斗开始时,使<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

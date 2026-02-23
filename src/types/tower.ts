@@ -11,7 +11,7 @@ export type TowerFloorFixed = {
   floor: number;
   boss_id: string;
   minions?: string[];
-  restrictions: string[];
+  restrictions?: string[];
   recommended?: TowerCharacterRecommendation[];
 };
 
@@ -22,7 +22,7 @@ export type TowerFloorRandom = {
   sets: {
     boss_id: string;
     minions?: string[];
-    restrictions: string[];
+    restrictions?: string[];
     recommended?: TowerCharacterRecommendation[];
   }[];
 };

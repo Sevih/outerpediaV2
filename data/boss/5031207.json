@@ -1,0 +1,103 @@
+{
+  "id": "5031207",
+  "Name": {
+    "en": "Owlbear Mauler",
+    "kr": "아울베어 발톱",
+    "jp": "先鋭のオウルベア",
+    "zh": "利爪枭熊"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 76,
+  "icons": "4033001",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 18F",
+      "kr": "대지의 탑 18층",
+      "jp": "大地の塔18階",
+      "zh": "土之塔第18层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40222018",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Bear Claw",
+        "kr": "곰의 발톱",
+        "jp": "熊の爪",
+        "zh": "熊爪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the caster by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>20%</color> 회복합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>HP</color>を<color=#28d9ed>20%</color>回復する。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Double-hand Thrust",
+        "kr": "양손 찌르기",
+        "jp": "両手突き",
+        "zh": "双手刺击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the caster by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>20%</color> 회복합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>HP</color>を<color=#28d9ed>20%</color>回復する。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Bear Frenzy",
+        "kr": "곰의 분노",
+        "jp": "熊の怒り",
+        "zh": "熊怒"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the caster by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>20%</color> 회복합니다.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>HP</color>を<color=#28d9ed>20%</color>回復する。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Beast's Hunting Strategy",
+        "kr": "맹수의 사냥법",
+        "jp": "猛獣の狩猟法",
+        "zh": "猛兽狩猎法则"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nRecovers <color=#28d9ed>10%</color> of damage dealt as Health when attacking.\\nGrants <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle.",
+        "kr": "(패시브 효과)\\n공격 시 피해량의 <color=#28d9ed>10%</color>를 회복합니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>지속 회복</color>효과를 얻습니다.",
+        "jp": "(パッシブ効果)\\n攻撃時、ダメージの<color=#28d9ed>10%</color>を回復する。\\n戦闘開始時、自分に<color=#28d9ed>継続回復</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "(被动效果)\\n攻击时,恢复伤害量的<color=#28d9ed>10%</color>。\\n战斗开始时,获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

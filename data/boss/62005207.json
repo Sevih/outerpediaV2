@@ -1,0 +1,119 @@
+{
+  "id": "62005207",
+  "Name": {
+    "en": "Tamamo-no-Mae",
+    "kr": "타마모노마에",
+    "jp": "タマモノマエ",
+    "zh": "玉藻前"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 160,
+  "icons": "2000086",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 80F",
+      "kr": "대지의 탑 80층",
+      "jp": "大地の塔80階",
+      "zh": "土之塔第80层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40222080",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Kitsunebi",
+        "kr": "여우불 만개",
+        "jp": "狐火満開",
+        "zh": "狐狸火盛放"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy with a Heavy Strike.\\nWith a <color=#28d9ed>80%</color> chance, inflicts an undispellable <color=#28d9ed>Curse</color> for <color=#28d9ed>2</color> turns.",
+        "kr": "적을 강격으로 공격합니다. \n대상에게 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 저주를 부여합니다. (해제 불가)",
+        "jp": "敵を強撃で攻撃。\\n<color=#28d9ed>80%</color>の確率で、<color=#28d9ed>2</color>ターン持続の解除不可<color=#28d9ed>呪い</color>を付与。",
+        "zh": "用强击攻击敌人。\\n有<color=#28d9ed>80%</color>概率施加持续<color=#28d9ed>2</color>回合的不可驱散<color=#28d9ed>诅咒</color>。"
+      },
+      "icon": "Skill_First_2000086"
+    },
+    {
+      "name": {
+        "en": "Bite ‘Em, Kitsu!",
+        "kr": "나비야, 물어!",
+        "jp": "ポチ、好きにお食べ",
+        "zh": "蝴蝶啊,撕咬吧!"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies with a Heavy Strike.\\nFor each target hit, increases own Priority by <color=#28d9ed>25%</color>, and with a <color=#28d9ed>100%</color> chance, inflicts an undispellable <color=#28d9ed>Curse</color> for <color=#28d9ed>2</color> turns.",
+        "kr": "적 전체를 강격으로 공격합니다. \n피해를 준 대상마다 자신의 행동 게이지가 <color=#28d9ed>25%</color> 증가하고, 대상 전체에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 저주를 부여합니다. (해제 불가)",
+        "jp": "敵全体を強撃で攻撃。\\n命中した対象1体ごとに自分の行動ゲージを<color=#28d9ed>25%</color>増加。さらに<color=#28d9ed>100%</color>の確率で、<color=#28d9ed>2</color>ターン持続の解除不可<color=#28d9ed>呪い</color>を付与。",
+        "zh": "用强击攻击全体敌人。\\n每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>25%</color>。并有<color=#28d9ed>100%</color>概率施加持续<color=#28d9ed>2</color>回合的不可驱散<color=#28d9ed>诅咒</color>。"
+      },
+      "icon": "Skill_Second_2000086"
+    },
+    {
+      "name": {
+        "en": "All Ties Are But Dreams",
+        "kr": "일체유위법 요몽환포영",
+        "jp": "一切有為法 如夢幻泡影",
+        "zh": "一切有为法,如梦幻泡影"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies with Heavy Strike and recovers Chain Points by <color=#28d9ed>15</color>.\nAfter attacking, detonates all Cursed stacks on the target and reduces Action Points by <color=#28d9ed>80</color>.",
+        "kr": "적 전체를 강격으로 공격하고 CP를 <color=#28d9ed>15</color> 회복합니다.\n공격 후 대상의 저주를 모두 폭발시키고, AP를 <color=#28d9ed>80</color> 감소시킵니다.",
+        "jp": "敵全体に強撃でダメージを与え、CPを<color=#28d9ed>15</color>獲得する。\n攻撃後、対象の呪いをすべて破裂させ、APを<color=#28d9ed>80</color>DOWNさせる。",
+        "zh": "强击全体敌人,恢复<color=#28d9ed>15</color>的CP。\n攻击后,使目标受到的所有诅咒效果爆炸,AP减少<color=#28d9ed>80</color>。"
+      },
+      "icon": "Skill_Ultimate_2000086"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Earth Tower",
+        "kr": "대지의 탑의 가호",
+        "jp": "大地の塔の加護",
+        "zh": "大地之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>40%</color> of Max Health or lower. \\n\\n<color=#28d9ed>Enraged</color>: Attacks all enemies.\\nAfter becoming Enraged, permanently increases <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> and reduces <color=#28d9ed>damage taken</color>.",
+        "kr": "최대 체력의 <color=#28d9ed>40%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화</color> : 적 전체를 공격합니다. \\n광폭화 이후 영구적으로 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>가 증가하고 <color=#28d9ed>받는 피해</color>가 감소합니다.",
+        "jp": "最大HPの<color=#28d9ed>40%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:敵全体にダメージを与える。狂暴化後、永続的に\\n攻撃力<color=#28d9ed>と</color>スピード<color=#28d9ed>がUPし、</color>受けるダメージ<color=#28d9ed>がDOWNする</color>。",
+        "zh": "若生命值降至上限的<color=#28d9ed>40%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化</color>:攻击全体敌人。\\n狂暴化后永久获得<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提升,并使<color=#28d9ed>所受伤害</color>降低。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

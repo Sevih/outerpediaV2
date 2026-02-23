@@ -1,0 +1,124 @@
+{
+  "id": "62000012",
+  "Name": {
+    "en": "Valentine",
+    "kr": "발렌타인",
+    "jp": "バレンタイン",
+    "zh": "瓦伦塔茵"
+  },
+  "Surname": {
+    "en": "Underworld Queenpin",
+    "kr": "겜블 갱스터",
+    "jp": "リスクを堪能するギャンブラー",
+    "zh": "赌棍之首"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Fire",
+  "level": 82,
+  "icons": "2000012",
+  "BuffImmune": "CAST_BUFF",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 21F",
+      "kr": "화염의 탑 21층",
+      "jp": "火の塔21階",
+      "zh": "火之塔第21层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202021",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Trigger Happy",
+        "kr": "트리거 해피",
+        "jp": "トリガーハッピー",
+        "zh": "快乐扳机"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the <color=#28d9ed>Priority</color> of the ally with the highest Attack by <color=#28d9ed>10%</color>.",
+        "kr": "적을 공격하고 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "zh": "攻击敌人,并使攻击力最高的友军<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>10%</color>。"
+      },
+      "icon": "Skill_First_2000012"
+    },
+    {
+      "name": {
+        "en": "Lucky or Die",
+        "kr": "Lucky or Die",
+        "jp": "ラッキー・オア・ダイ",
+        "zh": "Lucky or Die"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Increases <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> of all allies for <color=#28d9ed>2 turn(s)</color>. After using this skill, gains an <color=#28d9ed>extra turn</color>.",
+        "kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>치명 피해</color>를 증가시킵니다. 스킬 사용 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "jp": "味方全体の<color=#28d9ed>会心率</color>と<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせる。スキル使用後、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>。使用技能后,获得<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "Skill_Second_2000012"
+    },
+    {
+      "name": {
+        "en": "My Bloody Valentine",
+        "kr": "마이 블러디 발렌타인",
+        "jp": "マイ・ブラッディ・バレンタイン",
+        "zh": "我的血腥情人"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Reduces the target's Priority by <color=#28d9ed>15%</color>.",
+        "kr": "적 전체를 공격합니다. 대상의 행동 게이지를 <color=#28d9ed>-15%</color> 감소시킵니다.",
+        "jp": "敵全体にダメージを与える。対象の行動ゲージを<color=#28d9ed>-15%</color>DOWNさせる。",
+        "zh": "攻击全体敌人,使敌人的行动值降低<color=#28d9ed>-15%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000012"
+    },
+    {
+      "name": {
+        "en": "Shell Casting",
+        "kr": "껍질 벗기",
+        "jp": "甲羅を脱ぐ",
+        "zh": "蜕皮"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Speed</color> proportional to missing Health. <color=#28d9ed>Speed</color> can increase up to <color=#28d9ed>100%</color>.",
+        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>속도</color>가 증가합니다. <color=#28d9ed>속도</color>는 최대 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n残りHPが低いほど<color=#28d9ed>スピード</color>がUPする。<color=#28d9ed>スピード</color>は最大<color=#28d9ed>100%</color>UPする。",
+        "zh": "(被动效果)\\n生命值越低,<color=#28d9ed>速度</color>越高。<color=#28d9ed>速度</color>最多提升<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Flames",
+        "kr": "화염의 탑의 가호",
+        "jp": "火炎の塔の加護",
+        "zh": "火焰之塔的庇佑"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}

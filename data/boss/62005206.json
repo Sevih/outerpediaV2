@@ -1,0 +1,119 @@
+{
+  "id": "62005206",
+  "Name": {
+    "en": "Kappa",
+    "kr": "카파",
+    "jp": "カッパ",
+    "zh": "卡帕"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Earth",
+  "level": 150,
+  "icons": "2000077",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 70F",
+      "kr": "대지의 탑 70층",
+      "jp": "大地の塔70階",
+      "zh": "土之塔第70层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40222070",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ruthless Onslaught",
+        "kr": "무자비한 맹습",
+        "jp": "無慈悲な猛襲",
+        "zh": "无情猛攻"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>2 turn(s)</color> proportional to the caster's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "kr": "적 대상을 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。\\n该技能根据防御力而非攻击力等比提升伤害。"
+      },
+      "icon": "Skill_First_2000077"
+    },
+    {
+      "name": {
+        "en": "Exile",
+        "kr": "추방",
+        "jp": "追放",
+        "zh": "驱逐"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) Grants increased Defense to all allies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. <color=#28d9ed>Water</color> enemies take additional fixed damage equal to Kappa's Defense.\\nDamage dealt increases proportional to Defense instead of Attack.",
+        "kr": "(발동 효과) 아군의 방어력을 <color=#28d9ed>2턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+        "jp": "(発動効果)味方全体の防御力を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。<color=#28d9ed>水属性</color>の敵にカッパの防御力分の固定ダメージを追加で与える。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージがUPする。",
+        "zh": "(触发效果)使友军防御力提升,持续<color=#28d9ed>2回合</color>后攻击全体敌人。对<color=#28d9ed>水属性</color>敌人额外造成相当于卡帕防御力数值的固定伤害。\\n该技能根据防御力而非攻击力等比提升伤害。"
+      },
+      "icon": "Skill_Second_2000077"
+    },
+    {
+      "name": {
+        "en": "Desert's Wrath",
+        "kr": "사막의 진노",
+        "jp": "砂漠の震怒",
+        "zh": "沙漠的震怒"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Removes <color=#28d9ed>all</color> buffs and debuffs from the caster and target, and attacks an enemy.\\nWhen the enemy is <color=#28d9ed>Water</color> element or <color=#28d9ed>killed</color>, activates <color=#28d9ed>Exile</color>.\\nDamage dealt greatly increases proportional to Defense instead of Attack.",
+        "kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 공격력 대신 방어력에 비례하여 피해가 크게 증가합니다.",
+        "jp": "自分と対象のすべての強化効果と弱体効果を<color=#28d9ed>すべて</color>解除し、敵単体にダメージを与える。\\n対象が<color=#28d9ed>水属性</color>、または<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【追放】</color>を使用する。\\nこのスキルは攻撃力の代わりに防御力が高いほどダメージが大幅にUPする。",
+        "zh": "解除自身和目标附带的<color=#28d9ed>所有</color>强化效果和弱化效果,并攻击敌人。\\n敌人为<color=#28d9ed>水属性</color>或被<color=#28d9ed>击杀</color>时使用<color=#28d9ed>驱逐</color>。\\n该技能根据防御力而非攻击力等比大幅提升\\n伤害。"
+      },
+      "icon": "Skill_Ultimate_2000077"
+    },
+    {
+      "name": {
+        "en": "Danger Level Up",
+        "kr": "위험 등급 격상",
+        "jp": "危険等級格上げ",
+        "zh": "危险等级提升"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "When hit, grants all allies <color=#28d9ed>Attack Up</color> for <color=#28d9ed>1 turn</color> (Unremovable).",
+        "kr": "피격 시 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>공격력</color> 증가를 부여합니다.(해제불가)",
+        "jp": "被撃時、味方全体に<color=#28d9ed>攻撃力増加</color>を<color=#28d9ed>1ターン</color>の間付与する(解除不可)。",
+        "zh": "受到攻击时,我方全体获得<color=#28d9ed>攻击力提升</color>,持续<color=#28d9ed>1回合</color>(无法解除)。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Earth Tower",
+        "kr": "대지의 탑의 가호",
+        "jp": "大地の塔の加護",
+        "zh": "大地之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

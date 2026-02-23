@@ -17,7 +17,8 @@ import type { Lang } from '@/lib/i18n/config';
 
 /* ── Resolve restriction IDs to LangMap objects ── */
 
-function resolveRestrictions(ids: string[], restrictionMap: TowerRestrictionMap): LangMap[] {
+function resolveRestrictions(ids: string[] | undefined, restrictionMap: TowerRestrictionMap): LangMap[] {
+  if (!ids || ids.length === 0) return [];
   return ids
     .map(id => restrictionMap[id])
     .filter((r): r is LangMap => r != null);

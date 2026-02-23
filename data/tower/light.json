@@ -2,49 +2,370 @@
   "floors": [
     {
       "floor": 1,
-      "boss_id": "401400250",
-      "restrictions": ["ForceLight"],
-      "recommended": [
-        {
-          "names": ["2000011"],
-          "reason": {
-            "en": "Excellent {E/Light} {C/Healer} with team-wide {B/BT_STAT_DEF_UP}.",
-            "jp": "チーム全体に{B/BT_STAT_DEF_UP}を付与する優秀な{E/Light}{C/Healer}。",
-            "kr": "팀 전체에 {B/BT_STAT_DEF_UP}을 부여하는 우수한 {E/Light} {C/Healer}.",
-            "zh": "为全队提供{B/BT_STAT_DEF_UP}的优秀{E/Light}{C/Healer}。"
-          }
-        },
-        {
-          "names": ["2000012", "2000013"],
-          "reason": {
-            "en": "Core DPS pair. Use S3 to apply {D/BT_STAT_DEF_DOWN} then burst.",
-            "jp": "コアDPSペア。S3で{D/BT_STAT_DEF_DOWN}を付与してからバースト。",
-            "kr": "핵심 DPS 쌍. S3로 {D/BT_STAT_DEF_DOWN} 부여 후 버스트.",
-            "zh": "核心输出搭档。用S3施加{D/BT_STAT_DEF_DOWN}后爆发。"
-          }
-        }
+      "boss_id": "5040015",
+      "minions": [
+        "5040009",
+        "5040002"
       ]
     },
     {
       "floor": 2,
-      "boss_id": "401400251",
-      "restrictions": ["ForceLight"]
+      "boss_id": "5040023",
+      "minions": [
+        "5040019"
+      ]
     },
     {
       "floor": 3,
-      "boss_id": "401400252",
-      "restrictions": ["ForceLight"],
-      "recommended": [
-        {
-          "names": ["2000014"],
-          "reason": {
-            "en": "MVP with {D/BT_STATBUFF_CONVERT_TO_STATDEBUFF} after boss self-buffs.",
-            "jp": "ボスの自己バフ後に{D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}でMVP。",
-            "kr": "보스 자체 버프 후 {D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}로 MVP.",
-            "zh": "在Boss自我增益后凭借{D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}成为MVP。"
-          }
-        }
+      "boss_id": "5040007",
+      "minions": [
+        "5040001"
       ]
+    },
+    {
+      "floor": 4,
+      "boss_id": "5040016",
+      "minions": [
+        "5040004",
+        "5040010"
+      ]
+    },
+    {
+      "floor": 5,
+      "boss_id": "5040025",
+      "minions": [
+        "5045001"
+      ]
+    },
+    {
+      "floor": 6,
+      "boss_id": "5040016",
+      "minions": [
+        "5040010"
+      ]
+    },
+    {
+      "floor": 7,
+      "boss_id": "5040024",
+      "minions": [
+        "5040020"
+      ]
+    },
+    {
+      "floor": 8,
+      "boss_id": "5040008",
+      "minions": [
+        "5040003"
+      ]
+    },
+    {
+      "floor": 9,
+      "boss_id": "5040026",
+      "minions": [
+        "5040010",
+        "5040009"
+      ]
+    },
+    {
+      "floor": 10,
+      "boss_id": "5040027",
+      "minions": [
+        "5045004"
+      ]
+    },
+    {
+      "floor": 11,
+      "boss_id": "5040024",
+      "minions": [
+        "5040019"
+      ]
+    },
+    {
+      "floor": 12,
+      "boss_id": "5040007",
+      "minions": [
+        "5040001"
+      ]
+    },
+    {
+      "floor": 13,
+      "boss_id": "5040023",
+      "minions": [
+        "5040020"
+      ]
+    },
+    {
+      "floor": 14,
+      "boss_id": "5040028",
+      "minions": [
+        "5040009"
+      ]
+    },
+    {
+      "floor": 15,
+      "boss_id": "5040029",
+      "minions": [
+        "5045002",
+        "5045003",
+        "5045004"
+      ]
+    },
+    {
+      "floor": 16,
+      "boss_id": "5040015",
+      "minions": [
+        "5040012"
+      ]
+    },
+    {
+      "floor": 17,
+      "boss_id": "5040008",
+      "minions": [
+        "5040003",
+        "5045001"
+      ]
+    },
+    {
+      "floor": 18,
+      "boss_id": "5040024",
+      "minions": [
+        "5040020"
+      ]
+    },
+    {
+      "floor": 19,
+      "boss_id": "5040030",
+      "minions": [
+        "5045004",
+        "5045002"
+      ]
+    },
+    {
+      "floor": 20,
+      "boss_id": "5040031",
+      "minions": [
+        "5045005",
+        "5045006"
+      ]
+    },
+    {
+      "floor": 21,
+      "boss_id": "5040032",
+      "minions": [
+        "5045002"
+      ]
+    },
+    {
+      "floor": 22,
+      "boss_id": "5040033",
+      "minions": [
+        "5045009"
+      ]
+    },
+    {
+      "floor": 23,
+      "boss_id": "5040034",
+      "minions": [
+        "5045007"
+      ]
+    },
+    {
+      "floor": 24,
+      "boss_id": "5040035",
+      "minions": [
+        "5045009"
+      ]
+    },
+    {
+      "floor": 25,
+      "boss_id": "5040036",
+      "minions": [
+        "5045008",
+        "5045011",
+        "5045009"
+      ]
+    },
+    {
+      "floor": 26,
+      "boss_id": "5040037",
+      "minions": [
+        "5045012"
+      ]
+    },
+    {
+      "floor": 27,
+      "boss_id": "5040038",
+      "minions": [
+        "5045007",
+        "5045001",
+        "5045006"
+      ]
+    },
+    {
+      "floor": 28,
+      "boss_id": "5040039",
+      "minions": [
+        "5045010"
+      ]
+    },
+    {
+      "floor": 29,
+      "boss_id": "5040023",
+      "minions": [
+        "5040020",
+        "5040018"
+      ]
+    },
+    {
+      "floor": 30,
+      "boss_id": "5040040"
+    },
+    {
+      "floor": 31,
+      "boss_id": "5040041",
+      "minions": [
+        "5040012",
+        "5045004"
+      ]
+    },
+    {
+      "floor": 32,
+      "boss_id": "5040042",
+      "minions": [
+        "5040018",
+        "5045004"
+      ]
+    },
+    {
+      "floor": 33,
+      "boss_id": "5040043",
+      "minions": [
+        "5045018"
+      ]
+    },
+    {
+      "floor": 34,
+      "boss_id": "5040044",
+      "minions": [
+        "5045018"
+      ]
+    },
+    {
+      "floor": 35,
+      "boss_id": "5040045",
+      "minions": [
+        "5045019",
+        "5045015",
+        "5045013"
+      ]
+    },
+    {
+      "floor": 36,
+      "boss_id": "5040046",
+      "minions": [
+        "5045020"
+      ]
+    },
+    {
+      "floor": 37,
+      "boss_id": "5040047",
+      "minions": [
+        "5045018"
+      ]
+    },
+    {
+      "floor": 38,
+      "boss_id": "5040048",
+      "minions": [
+        "5045018",
+        "5045017"
+      ]
+    },
+    {
+      "floor": 39,
+      "boss_id": "5040049",
+      "minions": [
+        "5045013",
+        "5045003"
+      ]
+    },
+    {
+      "floor": 40,
+      "boss_id": "5040050"
+    },
+    {
+      "floor": 41,
+      "boss_id": "5040051",
+      "minions": [
+        "5045013"
+      ]
+    },
+    {
+      "floor": 42,
+      "boss_id": "5040052",
+      "minions": [
+        "5045003",
+        "5045004"
+      ]
+    },
+    {
+      "floor": 43,
+      "boss_id": "5040053",
+      "minions": [
+        "5045011"
+      ]
+    },
+    {
+      "floor": 44,
+      "boss_id": "5040054",
+      "minions": [
+        "5040019"
+      ]
+    },
+    {
+      "floor": 45,
+      "boss_id": "5040055",
+      "minions": [
+        "5045020",
+        "5045019",
+        "5045015"
+      ]
+    },
+    {
+      "floor": 46,
+      "boss_id": "5040056",
+      "minions": [
+        "5045012",
+        "5045011"
+      ]
+    },
+    {
+      "floor": 47,
+      "boss_id": "5040057",
+      "minions": [
+        "5045018",
+        "5045014"
+      ]
+    },
+    {
+      "floor": 48,
+      "boss_id": "5040058",
+      "minions": [
+        "5045006",
+        "5045005"
+      ]
+    },
+    {
+      "floor": 49,
+      "boss_id": "5040059",
+      "minions": [
+        "5045007",
+        "5045016"
+      ]
+    },
+    {
+      "floor": 50,
+      "boss_id": "5040060"
     }
   ]
 }

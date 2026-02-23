@@ -1,0 +1,124 @@
+{
+  "id": "62000062",
+  "Name": {
+    "en": "Drakhan",
+    "kr": "드레이칸",
+    "jp": "ドレイカーン",
+    "zh": "德雷坎"
+  },
+  "Surname": {
+    "en": "The Ruler of the Dreadnought",
+    "kr": "드레드노트의 왕",
+    "jp": "ドレッドノートの王",
+    "zh": "无畏族之王"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 108,
+  "icons": "2000062",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 39F",
+      "kr": "화염의 탑 39층",
+      "jp": "火の塔39階",
+      "zh": "火之塔第39层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202039",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Dragon Tusk",
+        "kr": "드래곤 터스크",
+        "jp": "ドラゴンタスク",
+        "zh": "龙之利牙"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. This attack deals increased damage proportional to the number of <color=#28d9ed>debuffs</color> on the target.\\nHas a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>1 turn(s)</color>. This effect ignores the target's Resilience.",
+        "kr": "적을 공격합니다. 이 공격은 대상이 보유한 <color=#28d9ed>약화 효과</color>가 많을수록 피해가 증가합니다.\\n대상에게 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>1턴</color> 동안 지속되는 <color=#28d9ed>저주</color>를 부여합니다. 이 효과는 대상의 효과 저항을 무시합니다.",
+        "jp": "敵単体にダメージを与える。対象の<color=#28d9ed>弱体効果</color>が多いほど、ダメージがUPする。\\n対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>1ターン</color>の間持続する<color=#28d9ed>呪い</color>を付与する。この効果は対象の効果抵抗を無視する。",
+        "zh": "攻击敌人。目标附带的<color=#28d9ed>弱化效果</color>越多,则该技能的伤害越高。\\n有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>1回合</color>。该效果无视目标的效果抵抗。"
+      },
+      "icon": "Skill_First_2000062"
+    },
+    {
+      "name": {
+        "en": "Burning Fist",
+        "kr": "버닝 피스트",
+        "jp": "バーニングフィスト",
+        "zh": "燃烧之拳"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy.\\nInflicts <color=#28d9ed>Cursed</color> twice on the target for <color=#28d9ed>1 turn(s)</color>. This effect ignores the target's Resilience.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "적을 공격합니다.\\n대상에게 <color=#28d9ed>1턴</color> 동안 지속되는 <color=#28d9ed>저주</color>를 2회 부여합니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "敵単体にダメージを与える。\\n対象に<color=#28d9ed>呪い</color>2個を<color=#28d9ed>1ターン</color>の間付与する。この効果は対象の効果抵抗を無視する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "攻击敌人。\\n对目标造成2次<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>1回合</color>。该效果无视目标的效果抵抗。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "Skill_Second_2000062"
+    },
+    {
+      "name": {
+        "en": "Conquering Dragon Meteor Fist",
+        "kr": "초패왕폭룡유성흑염권",
+        "jp": "超覇王暴竜流星黒炎拳",
+        "zh": "楚霸王暴龙流星黑焰拳"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to reduce the target's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>. This effect ignores the target's Resilience.\\nThis attack deals increased damage proportional to the number of <color=#28d9ed>buffs and debuffs</color> on the target.",
+        "kr": "적을 공격하고, <color=#28d9ed>80%</color> 확률로 대상의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n이 공격은 대상이 보유한 <color=#28d9ed>약화 효과와 강화 효과</color>가 많을수록 피해가 증가합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。この効果は対象の効果抵抗を無視する。\\nこのスキルは対象の<color=#28d9ed>弱体効果と強化効果</color>の数が多いほど、与えるダメージがUPする。",
+        "zh": "攻击敌人,并有<color=#28d9ed>80%</color>的几率使目标的<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。\\n目标附带的<color=#28d9ed>弱化效果和强化效果</color>越多,则该技能的伤害越高。"
+      },
+      "icon": "Skill_Ultimate_2000062"
+    },
+    {
+      "name": {
+        "en": "Bestial Power",
+        "kr": "야수의 힘",
+        "jp": "獣の力",
+        "zh": "野兽之力"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nGrants increased <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Hit Chance</color> to the caster for <color=#28d9ed>2 turns</color> at the start of battle. (Irremovable)",
+        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color> 및 <color=#28d9ed>치명 확률</color>을 증가시킵니다. (해제 불가)",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。(解除不可)",
+        "zh": "(被动效果)\\n战斗开始时,使自身的<color=#28d9ed>攻击力</color>和<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。(无法解除)"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Flames",
+        "kr": "화염의 탑의 가호",
+        "jp": "火炎の塔の加護",
+        "zh": "火焰之塔的庇佑"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}

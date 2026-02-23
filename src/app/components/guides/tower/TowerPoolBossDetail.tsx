@@ -28,7 +28,7 @@ function RestrictionsList({ set, restrictionMap, lang }: {
   lang: Lang;
 }) {
   const { t } = useI18n();
-  const resolved = set.restrictions
+  const resolved = (set.restrictions ?? [])
     .map(id => restrictionMap[id])
     .filter((r): r is LangMap => r != null);
 

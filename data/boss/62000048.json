@@ -1,0 +1,124 @@
+{
+  "id": "62000048",
+  "Name": {
+    "en": "Ritri",
+    "kr": "리트리",
+    "jp": "レトリ",
+    "zh": "里特莉"
+  },
+  "Surname": {
+    "en": "Loyal Guardian Knight",
+    "kr": "충직한 호위 기사",
+    "jp": "元気で人懐っこい護衛騎士",
+    "zh": "忠直的护卫骑士"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Water",
+  "level": 58,
+  "icons": "2000048",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 9F",
+      "kr": "물의 탑 9층",
+      "jp": "水の塔9階",
+      "zh": "水之塔第9层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212009",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Thump! Thump! Smash!",
+        "kr": "쿵! 쿵! 땅!",
+        "jp": "とっとっとりゃっ!",
+        "zh": "哐!哐!当!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. Has a <color=#28d9ed>40%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from the caster.",
+        "kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率解除自身的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。"
+      },
+      "icon": "Skill_First_2000048"
+    },
+    {
+      "name": {
+        "en": "Ritri Will Protect You!",
+        "kr": "리트리가 지켜줄게!",
+        "jp": "レトリが守る!",
+        "zh": "由里特莉来守护!"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) Reduces the damage taken by all allies by <color=#28d9ed>2.5%</color>. Ritri heals for <color=#28d9ed>10%</color> of damage taken.",
+        "kr": "(패시브 효과) 아군 전체가 받는 피해를 <color=#28d9ed>2.5%</color> 감소시키고, 리트리는 받는 피해의 <color=#28d9ed>10%</color>를 회복합니다.",
+        "jp": "(パッシブ効果)味方全体の受けるダメージを<color=#28d9ed>2.5%</color>DOWNさせる。【レトリ】は受けるダメージの<color=#28d9ed>10%</color>を回復する。",
+        "zh": "(被动效果)使全体友军所受伤害降低<color=#28d9ed>2.5%</color>,并恢复里特莉所受伤害的<color=#28d9ed>10%</color>。"
+      },
+      "icon": "Skill_Second_2000048"
+    },
+    {
+      "name": {
+        "en": "Thump! Thump! Thump! Smash!",
+        "kr": "쿵! 쿵! 쿵! 땅!",
+        "jp": "レトリインパクト",
+        "zh": "哐!哐!哐!当!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>2 turns</color>. The Barrier strength is proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "kr": "적 전체를 공격하고 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
+        "jp": "敵全体にダメージを与え、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
+        "zh": "攻击全体敌人,并使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身<color=#28d9ed>生命值上限</color>越高,则护盾量越高。"
+      },
+      "icon": "Skill_Ultimate_2000048"
+    },
+    {
+      "name": {
+        "en": "Body Hardening I",
+        "kr": "신체 경화 I",
+        "jp": "身体硬化 I",
+        "zh": "身体硬化 I"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Defense by <color=#28d9ed>10%</color> every time the caster takes a turn.",
+        "kr": "(패시브 효과)\\n자신의 턴마다 방어력이 <color=#28d9ed>10%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、防御力が<color=#28d9ed>10%</color>UPする。",
+        "zh": "(被动效果)\\n每到自身回合时,使防御力提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Water Tower",
+        "kr": "물의 탑의 가호",
+        "jp": "水の塔の加護",
+        "zh": "水之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

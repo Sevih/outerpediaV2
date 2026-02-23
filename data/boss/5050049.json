@@ -1,0 +1,124 @@
+{
+  "id": "5050049",
+  "Name": {
+    "en": "Epsilon",
+    "kr": "엡실론",
+    "jp": "イプシロン",
+    "zh": "埃普西隆"
+  },
+  "Surname": {
+    "en": "Super Cool Killing Machine",
+    "kr": "슈퍼 멋진 살인 기계",
+    "jp": "スーパー殺戮マシーン",
+    "zh": "超酷杀人机器"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 92,
+  "icons": "2000070",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 27F",
+      "kr": "암흑의 탑 27층",
+      "jp": "闇の塔 27階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242027",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Hyper! Super Cool Killing Machine",
+        "kr": "하이퍼! 슈퍼 멋진 살인 기계",
+        "jp": "ハイパー! スーパー殺戮マシーン",
+        "zh": "特炫!超酷杀人机器"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nPrioritizes enemies in the <color=#28d9ed>front row</color>. When attacking a target that is not a <color=#28d9ed>Defender</color>, attacks all enemies and increases <color=#28d9ed>Defense</color> for <color=#28d9ed>5</color> turns.\\n\\nThis skill deals massive damage if the target has <color=#28d9ed>debuffs</color>.",
+        "kr": "적을 공격합니다.\\n<color=#28d9ed>전열</color>의 적을 우선적으로 공격합니다. <color=#28d9ed>방어형</color>이 아닌 적 대상 공격 시, 적 전체를 공격하고 <color=#28d9ed>5턴</color>동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n이 스킬은 대상이 약화 효과를 보유하고 있을 경우 매우 큰 피해를 줍니다.",
+        "jp": "敵単体にダメージを与える。\\n<color=#28d9ed>前列</color>の敵を優先して攻撃する。<color=#28d9ed>防御型</color>でない敵を攻撃した場合、敵全体にダメージを与え、<color=#28d9ed>防御力</color>が<color=#28d9ed>5</color>ターンの間UPする。\\n\\n対象が<color=#28d9ed>弱化効果</color>を保有している場合、このスキルは非常に大きなダメージを与える。",
+        "zh": "攻击敌人。\\n优先攻击<color=#28d9ed>前排</color>敌人。攻击<color=#28d9ed>防御型</color>以外的目标时,将攻击全体敌人,并在<color=#28d9ed>5</color>回合内提高<color=#28d9ed>防御力</color>。\\n\\n若目标持有<color=#28d9ed>减益效果</color>,该技能将造成极高伤害。"
+      },
+      "icon": "Skill_First_2000070"
+    },
+    {
+      "name": {
+        "en": "Hyper! Automaton of Rupture",
+        "kr": "하이퍼! 파열의 인형",
+        "jp": "ハイパー! 破裂の人形",
+        "zh": "特炫!破裂人偶"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and grants the caster increased <color=#28d9ed>Defense</color> for <color=#28d9ed>5 turn(s)</color>.\\n\\nIf the caster has increased <color=#28d9ed>Attack</color>, increases the duration of the caster's <color=#28d9ed>buffs</color> by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#28d9ed>공격력</color>이 증가한 상태라면 자신의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>5ターン</color>の間<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#28d9ed>攻撃力</color>がUPした状態の場合、自分の<color=#28d9ed>強化効果</color>持続ターンを<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "zh": "攻击全体敌人,并使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>5回合</color>。\\n\\n若<color=#28d9ed>攻击力</color>处于提升状态,则使自身<color=#28d9ed>强化效果</color>持续回合数增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000070"
+    },
+    {
+      "name": {
+        "en": "OK! The World Is Ours",
+        "kr": "OK~! 더 월드 이즈 아워즈",
+        "jp": "OK~! ワールド・イズ・アワーズ",
+        "zh": "OK~!世界属于我们"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nGrants the caster increased <color=#28d9ed>Attack</color> for <color=#28d9ed>5 turn(s)</color>, and reduces <color=#28d9ed>Action Points</color> of all enemies by <color=#28d9ed>150</color>.\\n\\nIf the caster has increased <color=#28d9ed>Defense</color>, grants an <color=#28d9ed>Extra Turn</color>.",
+        "kr": "적 전체를 공격합니다.\\n<color=#28d9ed>5턴</color>동안 <color=#28d9ed>공격력</color>이 증가하고 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>150</color> 감소시킵니다.\\n\\n<color=#28d9ed>방어력</color>이 증가한 상태라면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "jp": "敵全体にダメージを与える。\\n<color=#28d9ed>5ターン</color>の間<color=#28d9ed>攻撃力</color>がUPし、敵全体の<color=#28d9ed>AP</color>を<color=#28d9ed>150</color>DOWNさせる。\\n\\n<color=#28d9ed>防御力</color>がUPした状態の場合、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "zh": "攻击全体敌人。\\n<color=#28d9ed>攻击力</color>提升,并使全体敌人的<color=#28d9ed>AP</color>降低<color=#28d9ed>150</color>,持续<color=#28d9ed>5回合</color>。\\n\\n若<color=#28d9ed>防御力</color>处于提升状态,则获得<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000070"
+    },
+    {
+      "name": {
+        "en": "Declaration of War",
+        "kr": "참전선언",
+        "jp": "参戦宣言",
+        "zh": "参战宣言"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nGrants irremovable increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> to the caster for <color=#28d9ed>3 turns</color> at the start of battle.\\n\\nWhen scoring a critical hit, grants a <color=#28d9ed>Barrier</color> for 3 turns and recovers <color=#28d9ed>3 Weakness Gauge</color>. Reduces all damage taken by the caster by 15%.",
+        "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 <color=#28d9ed>치명 확률</color> 및 <color=#28d9ed>치명 피해</color>가 <color=#28d9ed>3턴</color> 동안 증가합니다. \\n\\n또한, 치명 공격 시 3턴 동안 <color=#28d9ed>실드</color> 획득 및 <color=#28d9ed>WG를 3</color>회복하며, 자신이 받는 모든피해는 15% 감소합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分に解除不可能な<color=#28d9ed>会心率UP</color>と<color=#28d9ed>会心ダメージUP</color>を<color=#28d9ed>3ターン</color>の間付与する。\\n\\nまた、会心が発生した場合、3ターンの間<color=#28d9ed>シールド</color>を付与し、<color=#28d9ed>WG</color>を<color=#28d9ed>3</color>回復し、自分が受けるすべてのダメージを15%DOWNさせる。",
+        "zh": "(被动效果)\\n战斗开始时,使自身获得无法被解除的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升效果,持续<color=#28d9ed>3回合</color>。\\n\\n此外,发动暴击时,获得<color=#28d9ed>护盾</color>效果,持续3回合,并使<color=#28d9ed>WG恢复3</color>。使自身所受所有伤害降低15%。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

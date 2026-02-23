@@ -1,0 +1,140 @@
+{
+  "id": "62005214",
+  "Name": {
+    "en": "Hanbyul Lee",
+    "kr": "이한별",
+    "jp": "イ・ハンビョル",
+    "zh": "李寒星"
+  },
+  "Surname": {
+    "en": "Twinkling Little Angel",
+    "kr": "반짝반짝 작은 천사",
+    "jp": "天真爛漫☆天使ちゃん",
+    "zh": "闪耀的小天使"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Earth",
+  "level": 175,
+  "icons": "2000021",
+  "BuffImmune": "CAST_BUFF",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 95F",
+      "kr": "대지의 탑 95층",
+      "jp": "大地の塔95階",
+      "zh": "土之塔第95层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40222095",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Max! Heart Catch!",
+        "kr": "맥스! 하트캐치!",
+        "jp": "マックス☆ハートキャッチ",
+        "zh": "麦克斯!摄心!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>[buff_c_tower_element_52207_1]</color> chance to increase the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>[buff_v_tower_element_52207_1]</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52207_1]</color> 확률로 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[buff_v_tower_element_52207_1]</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52207_1]</color>の確率で味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>[buff_v_tower_element_52207_1]</color>UPする。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "zh": "攻击敌人,并有<color=#28d9ed>[buff_c_tower_element_52207_1]</color>的几率使全体友军的<color=#28d9ed>行动值</color>恢复<color=#28d9ed>[buff_v_tower_element_52207_1]</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
+      },
+      "icon": "Skill_First_2000021"
+    },
+    {
+      "name": {
+        "en": "Splash Star",
+        "kr": "스플래시 스타",
+        "jp": "スプラッシュ☆スター",
+        "zh": "星光四射"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Grants increased <color=#28d9ed>Defense</color> to all allies for <color=#28d9ed>[buff_t_tower_element_52208_0] turn(s)</color> and grants increased <color=#28d9ed>Counterattack</color> to the caster for <color=#28d9ed>[buff_t_tower_element_52208_1] turn(s)</color>.",
+        "kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[buff_t_tower_element_52208_0]턴</color> 동안 증가시키고, 자신의 <color=#28d9ed>반격</color>을 <color=#28d9ed>[buff_t_tower_element_52208_1]턴</color> 동안 증가시킵니다.",
+        "jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>[buff_t_tower_element_52208_0]</color>ターンの間UPさせ、自分の<color=#28d9ed>反撃</color>を<color=#28d9ed>[buff_t_tower_element_52208_1]ターン</color>の間UPさせる。",
+        "zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52208_0]回合</color>,并使自身的<color=#28d9ed>反击</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52208_1]回合</color>。"
+      },
+      "icon": "Skill_Second_2000021"
+    },
+    {
+      "name": {
+        "en": "Twinkle Twinkle ☆",
+        "kr": "반짝반짝 ☆ 트윙클",
+        "jp": "キラキラ☆トゥインクル",
+        "zh": "一闪一闪☆亮晶晶"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\n Has a <color=#28d9ed>[buff_c_tower_element_52209_0]</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>[buff_t_tower_element_52209_0] turn(s)</color>, and grants <color=#28d9ed>Immunity</color> to the caster for <color=#28d9ed>[buff_t_tower_element_52209_1] turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "kr": "적 전체를 공격합니다.\\n<color=#28d9ed>[buff_c_tower_element_52209_0]</color> 확률로 대상을 <color=#28d9ed>[buff_t_tower_element_52209_0]턴</color> 동안 <color=#28d9ed>도발</color>하고, 자신은 <color=#28d9ed>[buff_t_tower_element_52209_1]턴</color> 동안 <color=#28d9ed>면역</color>을 얻습니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与える。\\n<color=#28d9ed>[buff_c_tower_element_52209_0]</color>の確率で対象を<color=#28d9ed>[buff_t_tower_element_52209_0]ターン</color>の間<color=#28d9ed>挑発</color>し、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>[buff_t_tower_element_52209_1]ターン</color>の間付与する。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "zh": "攻击全体敌人。\\n有<color=#28d9ed>[buff_c_tower_element_52209_0]</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>[buff_t_tower_element_52209_0]回合</color>,并使自身获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>[buff_t_tower_element_52209_1]回合</color>。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
+      },
+      "icon": "Skill_Ultimate_2000021"
+    },
+    {
+      "name": {
+        "en": "Neural Amplification III",
+        "kr": "신경계 증폭 III",
+        "jp": "神経系増幅 III",
+        "zh": "精神系增幅 III"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Speed by <color=#28d9ed>10%</color> every time the caster takes a turn. (Max 5 stacks)",
+        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>10%</color> 증가합니다. (최대 5회 누적)",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、スピードが<color=#28d9ed>10%</color>UPする。(最大5回まで累積)",
+        "zh": "(被动效果)\\n每到自身回合时,使速度提升<color=#28d9ed>10%</color>。(最多可叠加5次)"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Iron Army",
+        "kr": "강철의 군대",
+        "jp": "鋼鉄の軍隊",
+        "zh": "钢铁部队"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen hit, if the hit was non-critical, increases <color=#28d9ed>Defense</color> of all allies for <color=#28d9ed>2 turns</color>.",
+        "kr": "(패시브 효과)\\n피격 시 치명 공격을 받지 않았다면 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>을 증가시킵니다.",
+        "jp": "(パッシブ効果)\\n敵からダメージを受けた時に会心が発生しなかった場合、味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "(被动效果)\\n受到攻击时,若未受到暴击攻击,则使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Earth Tower",
+        "kr": "대지의 탑의 가호",
+        "jp": "大地の塔の加護",
+        "zh": "大地之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

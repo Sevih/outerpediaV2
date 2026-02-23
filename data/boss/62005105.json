@@ -1,0 +1,135 @@
+{
+  "id": "62005105",
+  "Name": {
+    "en": "Caren",
+    "kr": "카렌",
+    "jp": "カレン",
+    "zh": "卡伦"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Water",
+  "level": 140,
+  "icons": "2000089",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 60F",
+      "kr": "물의 탑 60층",
+      "jp": "水の塔60階",
+      "zh": "水之塔第60层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212060",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Theory Refutation",
+        "kr": "이론 논파",
+        "jp": "論破",
+        "zh": "推翻理论"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks 2 enemies. When an enemy is defeated, recovers Health of the caster by <color=#28d9ed>30%</color>. This skill's damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
+        "kr": "적 2인을 공격합니다. 적 처치 시 자신의 체력을 <color=#28d9ed>30%</color> 회복합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "jp": "敵2体にダメージを与える。敵を倒した時、自分のHPを<color=#28d9ed>30%</color>回復する。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "zh": "攻击2名敌人。\\n击杀敌人时,自身生命值恢复<color=#28d9ed>30%</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。"
+      },
+      "icon": "Skill_First_2000089"
+    },
+    {
+      "name": {
+        "en": "Disassembly Analysis",
+        "kr": "해체 분석",
+        "jp": "解体分析",
+        "zh": "分解分析"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) After attacking an enemy, increases Priority of the caster by <color=#28d9ed>10%</color>, and after defeating an enemy, increases Priority by an additional <color=#28d9ed>20%</color>.\\n\\n(Triggered Effect) When an ally other than the caster performs an attack that targets all enemies, steals <color=#28d9ed>2</color> buff(s) from the enemy with the highest Max Health and then attacks the target. (Ignores the target's Resilience.)\\nThis skill's damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
+        "kr": "(패시브 효과) 카렌이 적을 공격 후 자신의 행동 게이지를 <color=#28d9ed>10%</color> 증가시키고, 적 처치 후 추가로 <color=#28d9ed>20%</color>를 증가시킵니다.\\n\\n(발동 효과) 자신을 제외한 아군이 전체 공격 시 최대 체력이 가장 높은 적의 강화 효과를 <color=#28d9ed>2개</color> 빼앗은 후, 대상을 공격합니다. (대상의 효과 저항 무시)\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "jp": "(パッシブ効果)カレンが敵に攻撃後、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。敵を倒した場合、行動ゲージが追加で<color=#28d9ed>20%</color>UPする。\\n\\n(発動効果)自分を除く味方が全体攻撃時、最大HPが最も高い敵単体の強化効果を<color=#28d9ed>2個</color>奪った後、対象にダメージを与える。(対象の効果抵抗無視)\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "zh": "(被动效果)卡伦攻击敌人后,使自身行动值提升<color=#28d9ed>10%</color>,并在击杀敌人后额外提升<color=#28d9ed>20%</color>。\\n\\n(触发效果)除自身外的友军发动全体攻击时,夺取生命值上限最高敌人的<color=#28d9ed>2个</color>强化效果后,攻击目标。(无视目标效果抵抗)\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。"
+      },
+      "icon": "Skill_Second_2000089"
+    },
+    {
+      "name": {
+        "en": "Final Cleanup",
+        "kr": "마지막 정리",
+        "jp": "最終定理",
+        "zh": "最后整理"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nThis skill's damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and ignores <color=#28d9ed>30%</color> of the target's Defense.\\n\\n<color=#ffd732>When attacking Irregular Monsters</color>, it ignores <color=#28d9ed>all</color> of the target's Defense and reduces all of Caren's Skill Cooldowns by <color=#28d9ed>2 turns</color>.",
+        "kr": "적 전체를 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 대상의 방어력을 <color=#28d9ed>모두</color> 무시하며, 카렌의 모든 스킬 쿨타임이 <color=#28d9ed>2턴</color> 감소합니다.",
+        "jp": "敵全体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>に比例してダメージがUPし、対象の防御力を<color=#28d9ed>30%</color>無視する。\\n\\n<color=#ffd732>イレギュラーモンスター</color>攻撃時、対象の防御力を<color=#28d9ed>すべて</color>無視し、カレンのすべてのスキルターンが<color=#28d9ed>2ターン</color>減少する。",
+        "zh": "攻击全体敌人。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且无视目标<color=#28d9ed>30%</color>的防御力。\\n\\n攻击<color=#ffd732>异型怪怪物</color>时,<color=#28d9ed>完全</color>无视目标防御力,并使卡伦所有技能的冷却时间降低<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000089"
+    },
+    {
+      "name": {
+        "en": "Adrenaline Injection",
+        "kr": "아드레날린 투여",
+        "jp": "アドレナリン注入",
+        "zh": "肾上腺素注射"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "When afflicted with a <color=#28d9ed>Debuff</color>, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.",
+        "kr": "약화 효과 보유 시 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color>증가합니다.",
+        "jp": "弱化効果を持つと、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>100%</color>増加。",
+        "zh": "当拥有<color=#28d9ed>弱化效果</color>时,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Enhanced Computation",
+        "kr": "연산 능력 강화",
+        "jp": "演算能力強化",
+        "zh": "运算能力强化"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Damage increases in proportion to the number of Buffs possessed.",
+        "kr": "보유한 강화 효과 수에 비례하여 피해량이 증가합니다.",
+        "jp": "所持している強化効果の数に比例してダメージが増加。",
+        "zh": "依据所持强化效果数量,造成的伤害增加。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Water Tower",
+        "kr": "물의 탑의 가호",
+        "jp": "水の塔の加護",
+        "zh": "水之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

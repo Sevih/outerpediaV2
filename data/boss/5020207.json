@@ -1,0 +1,103 @@
+{
+  "id": "5020207",
+  "Name": {
+    "en": "Gargantuan Stone-Fists",
+    "kr": "괴수 바위팔",
+    "jp": "怪獣・ロックスマッシュ",
+    "zh": "岩臂怪兽"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 54,
+  "icons": "4013041",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 7F",
+      "kr": "물의 탑 7층",
+      "jp": "水の塔7階",
+      "zh": "水之塔第7层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212007",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Rock Hammer",
+        "kr": "락 해머",
+        "jp": "ロックハンマー",
+        "zh": "定点锤击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Rock Strike",
+        "kr": "락 마운트",
+        "jp": "ロックマウント",
+        "zh": "岩击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Petrified</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>석화</color> 상태로 만듭니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>石化</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>石化</color>状态,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Mountain Attack",
+        "kr": "마운틴 어택",
+        "jp": "マウンテンアタック",
+        "zh": "山岳攻击"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Ravager",
+        "kr": "파괴수",
+        "jp": "破壊獣",
+        "zh": "破坏兽"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces one target's <color=#28d9ed>Priority</color> by <color=#28d9ed>5%</color> when attacking. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
+        "kr": "(패시브 효과)\\n공격 시 대상 한 명의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-5%</color> 감소시킵니다. 대상의 <color=#28d9ed>효과 저항</color>을 무시하고 효과가 적용됩니다.",
+        "jp": "(パッシブ効果)\\n攻撃時、対象単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-5%</color>DOWNさせる。対象の<color=#28d9ed>効果抵抗</color>を無視して効果が適用される。",
+        "zh": "(被动效果)\\n攻击时,使1个目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-5%</color>。该效果无视目标的<color=#28d9ed>效果抵抗</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

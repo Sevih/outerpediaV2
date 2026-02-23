@@ -1,0 +1,103 @@
+{
+  "id": "5010008",
+  "Name": {
+    "en": "Grandula Stinger",
+    "kr": "큰발거미 가시침",
+    "jp": "いばらの大足グモ",
+    "zh": "尖刺巨足蜘蛛"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Fire",
+  "level": 47,
+  "icons": "4023002",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 4F",
+      "kr": "화염의 탑 4층",
+      "jp": "火の塔4階",
+      "zh": "火之塔第4层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202004",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shoot Spikes",
+        "kr": "가시 발사",
+        "jp": "トゲ発射",
+        "zh": "发射荆棘"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Arrow_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Shoot Multiple Spikes",
+        "kr": "다발 가시 발사",
+        "jp": "多発トゲ発射",
+        "zh": "荆棘连射"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Arrow_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Sharp Spin",
+        "kr": "날카로운 회전",
+        "jp": "鋭い回転",
+        "zh": "锋利回旋"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nThis attack has <color=#28d9ed>15%</color> increased Defense penetration.",
+        "kr": "적 전체를 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "jp": "敵全体にダメージを与える。\\nこのスキルは、対象の防御力を<color=#28d9ed>15%</color>貫通する。",
+        "zh": "攻击全体敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Arrow_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Sharp Tooth",
+        "kr": "날카로운 이빨",
+        "jp": "鋭利な牙",
+        "zh": "利齿"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nHas a <color=#28d9ed>20%</color> chance to inflict <color=#28d9ed>Bleeding</color> on one target for <color=#28d9ed>1 turn(s)</color> when attacking. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
+        "kr": "(패시브 효과)\\n공격 시 대상 한 명에게 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. 대상의 <color=#28d9ed>효과 저항</color>을 무시하고 효과가 적용됩니다.",
+        "jp": "(パッシブ効果)\\n攻撃時、対象単体に<color=#28d9ed>20%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>1ターン</color>の間付与する。対象の<color=#28d9ed>効果抵抗</color>を無視して効果が適用される。",
+        "zh": "(被动效果)\\n攻击时,有<color=#28d9ed>20%</color>的几率对1名敌人造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>1回合</color>。该效果无视目标的<color=#28d9ed>效果抵抗</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

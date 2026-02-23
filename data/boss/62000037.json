@@ -1,0 +1,140 @@
+{
+  "id": "62000037",
+  "Name": {
+    "en": "Veronica",
+    "kr": "베로니카",
+    "jp": "ヴェロニカ",
+    "zh": "维罗妮卡"
+  },
+  "Surname": {
+    "en": "Invincible Knight Commander",
+    "kr": "무적의 기사단장",
+    "jp": "天下無敵の騎士団長",
+    "zh": "无敌的骑士团长"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Water",
+  "level": 80,
+  "icons": "2000037",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 20F",
+      "kr": "물의 탑 20층",
+      "jp": "水の塔20階",
+      "zh": "水之塔第20层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212020",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Battlefield Commander",
+        "kr": "전장지휘",
+        "jp": "断空コンビネーション",
+        "zh": "战场指挥"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000037"
+    },
+    {
+      "name": {
+        "en": "Commander's Resolve",
+        "kr": "기사단장의 결의",
+        "jp": "インペリアルランパート",
+        "zh": "骑士团长的决心"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) Removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from the caster at the start of the turn. Grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "kr": "(패시브 효과) 턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다. 이후 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
+        "jp": "(パッシブ効果)ターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。その後、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
+        "zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。"
+      },
+      "icon": "Skill_Second_2000037"
+    },
+    {
+      "name": {
+        "en": "Endurance Cannon",
+        "kr": "인듀어런스 캐논",
+        "jp": "エンデュアランス・キャノン",
+        "zh": "持久加农炮"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nIncreases the <color=#28d9ed>Defense</color> of all allies for <color=#28d9ed>3 turn(s)</color> and removes <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "kr": "적 전체를 공격합니다\\n아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 증가시키고, 공격 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.",
+        "jp": "敵全体にダメージを与える。\\n味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせ、攻撃対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "zh": "攻击全体敌人。\\n使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>,并解除攻击目标的<color=#28d9ed>1</color>个<color=#28d9ed>强化效果</color>。"
+      },
+      "icon": "Skill_Ultimate_2000037"
+    },
+    {
+      "name": {
+        "en": "Declaration of War",
+        "kr": "참전선언",
+        "jp": "参戦宣言",
+        "zh": "参战宣言"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nGrants irremovable increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> to the caster for <color=#28d9ed>3 turns</color> at the start of battle.\\n\\nWhen scoring a critical hit, grants a <color=#28d9ed>Barrier</color> for 3 turns and recovers <color=#28d9ed>3 Weakness Gauge</color>. Reduces all damage taken by the caster by 15%.",
+        "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 <color=#28d9ed>치명 확률</color> 및 <color=#28d9ed>치명 피해</color>가 <color=#28d9ed>3턴</color> 동안 증가합니다. \\n\\n또한, 치명 공격 시 3턴 동안 <color=#28d9ed>실드</color> 획득 및 <color=#28d9ed>WG를 3</color>회복하며, 자신이 받는 모든피해는 15% 감소합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分に解除不可能な<color=#28d9ed>会心率UP</color>と<color=#28d9ed>会心ダメージUP</color>を<color=#28d9ed>3ターン</color>の間付与する。\\n\\nまた、会心が発生した場合、3ターンの間<color=#28d9ed>シールド</color>を付与し、<color=#28d9ed>WG</color>を<color=#28d9ed>3</color>回復し、自分が受けるすべてのダメージを15%DOWNさせる。",
+        "zh": "(被动效果)\\n战斗开始时,使自身获得无法被解除的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升效果,持续<color=#28d9ed>3回合</color>。\\n\\n此外,发动暴击时,获得<color=#28d9ed>护盾</color>效果,持续3回合,并使<color=#28d9ed>WG恢复3</color>。使自身所受所有伤害降低15%。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Water Tower",
+        "kr": "물의 탑의 가호",
+        "jp": "水の塔の加護",
+        "zh": "水之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower and attacks all enemies. Then grants the caster irremovable Increased Speed for <color=#28d9ed>5 turn(s)</color>.",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 전체 대상을 공격합니다. 이 후, <color=#28d9ed>5턴</color> 동안 자신에게 해제되지 않는 속도 증가 효과를 부여합니다.",
+        "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、敵全体にダメージを与える。その後、自分に解除不可能なスピードUP効果を<color=#28d9ed>5ターン</color>の間付与する。",
+        "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并攻击全体目标。此后,使自身获得无法被解除的速度提升效果,持续<color=#28d9ed>5回合</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

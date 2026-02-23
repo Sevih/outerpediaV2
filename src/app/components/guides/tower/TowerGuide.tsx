@@ -116,13 +116,13 @@ export default function TowerGuide({ data }: Props) {
       return {
         boss_id: set.boss_id,
         minions: set.minions,
-        restrictionSets: [{ restrictions: set.restrictions, recommended: set.recommended }],
+        restrictionSets: [{ restrictions: set.restrictions ?? [], recommended: set.recommended }],
       };
     }
     return {
       boss_id: activeFloor.boss_id,
       minions: activeFloor.minions,
-      restrictionSets: [{ restrictions: activeFloor.restrictions, recommended: activeFloor.recommended }],
+      restrictionSets: [{ restrictions: activeFloor.restrictions ?? [], recommended: activeFloor.recommended }],
     };
   }, [isGrouped, activeFloor, selectedSet]);
 

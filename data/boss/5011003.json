@@ -1,0 +1,188 @@
+{
+  "id": "5011003",
+  "Name": {
+    "en": "Blazing Knight Meteos",
+    "kr": "화염기사 메테우스",
+    "jp": "火炎の騎士メテウス",
+    "zh": "火焰骑士梅修斯"
+  },
+  "Surname": {
+    "en": "Protector of the Royal Family",
+    "kr": "왕가의 수호자",
+    "jp": "王国の守護騎士",
+    "zh": "皇家守护者"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 110,
+  "icons": "4076002",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 40F",
+      "kr": "화염의 탑 40층",
+      "jp": "火の塔40階",
+      "zh": "火之塔第40层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202040",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "For the King",
+        "kr": "왕을 위하여",
+        "jp": "王のために",
+        "zh": "为了王"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict Burned on the target for <color=#28d9ed>2 turns</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color>동안 화상을 입힙니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で火傷を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成烧伤效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_4076002"
+    },
+    {
+      "name": {
+        "en": "For the Country",
+        "kr": "국가를 위하여",
+        "jp": "国のために",
+        "zh": "为了国家"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Stunned</color> for <color=#28d9ed>1 turn</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>1턴</color>동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并使其陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Exterminate the Enemy",
+        "kr": "적을 멸한다",
+        "jp": "敵を滅する",
+        "zh": "灭敌"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and inflicts Burned for <color=#28d9ed>3 turns</color>.\\nIncreases damage dealt inversely proportional to the number of targets.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color>동안 화상 상태로 만듭니다. \\n대상의 수가 적을수록 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与え、火傷を<color=#28d9ed>3ターン</color>の間付与する。\\n対象が少ないほどダメージがUPする。",
+        "zh": "攻击全体敌人,并使其陷入烧伤状态,持续<color=#28d9ed>3回合</color>。\\n目标数量越少,则该技能的伤害越高。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Raging Disaster",
+        "kr": "몰아치는 재앙",
+        "jp": "荒れ狂う災い",
+        "zh": "汹涌而来的灾祸"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt by all attacks increases proportional to the number of <color=#28d9ed>debuffs</color>.\\nWhen attacking an enemy inflicted with <color=#28d9ed>Burned</color>, recovers Health and Weakness Gauge by 10%.\\nFully recovers Health and Weakness Gauge <color=#28d9ed>when an enemy is defeated</color>.",
+        "kr": "(패시브 효과)\\n모든 공격은 <color=#28d9ed>약화 효과</color> 개수에 비례하여 피해량이 증가합니다. \\n<color=#28d9ed>화상</color> 입은 상대를 공격했을 때 체력 및 WG가 10% 회복 됩니다.\\n<color=#28d9ed>적 처치</color> 시 체력 및 WG가 모두 회복됩니다.",
+        "jp": "(パッシブ効果)\\nすべての攻撃は<color=#28d9ed>弱体効果</color>が多いほどダメージがUPする。\\n<color=#28d9ed>火傷</color>状態の敵を攻撃した場合、HPとWGが10%回復する。\\n<color=#28d9ed>敵を倒した</color>時、HPとWGが全回復する。",
+        "zh": "(被动效果)\\n根据<color=#28d9ed>弱化效果</color>数量等比提升所有攻击的伤害量。\\n攻击附带<color=#28d9ed>烧伤</color>效果的目标时,使生命值和WG恢复10%。\\n<color=#28d9ed>击杀敌人</color>时,使生命值和WG恢复。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Flames",
+        "kr": "화염의 탑의 가호",
+        "jp": "火炎の塔の加護",
+        "zh": "火焰之塔的庇佑"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>80%</color> of Max Health or lower. \\n\\n<color=#28d9ed>Enraged</color>: The caster gains an irremovable effect that increases Penetration and reduces damage taken for 3 turns, and recovers Weakness Gauge by 30%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>I Offer My Life...</color>: used when Enraged ends.\\nAttacks all enemies and deals lethal damage to them.\\n\\n<color=#ffd732>If Enraged within 1 turns, grants 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>80%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 관통력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>이 목숨을 바쳐서......</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하여 치명적인 피해를 입힙니다.\\n\\n<color=#ffd732>1턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>80%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な貫通力UPとダメージDOWN効果を3ターンの間付与し、WGを30%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【この命を捧げて...】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、致命的なダメージを与える。\\n\\n<color=#ffd732>戦闘開始時から1ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>80%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的穿透力提升/伤害降低效果,持续3回合,并使WG恢复\\n30%。狂暴化持续3回合。\\n\\n<color=#28d9ed>献身之志......</color>:狂暴化结束时发动。\\n攻击全体敌人,并造成致命伤害。\\n\\n<color=#ffd732>在1回合内陷入狂暴化状态时,恢复80CP。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "I Offer My Life...",
+        "kr": "이 목숨을 바쳐서......",
+        "jp": "この命を捧げて......",
+        "zh": "献身之志......"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "Attacks all enemies.",
+        "kr": "적 전체에게 피해를 입힙니다.",
+        "jp": "敵全体にダメージを与える。",
+        "zh": "对全体敌人造成伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER2",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower. \\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Recovers Weakness Gauge by 30% and deals lethal damage to all enemies. This Enraged has no duration.",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : WG 30%를 회복하고, 적 전체에게 치명적인 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
+        "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:WGを30%回復し、敵全体に致命的なダメージを与える。【狂暴化】の持続ターンはない。",
+        "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:使WG恢复30%,并对全体敌人造成致命伤害。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "I Offer My Life...",
+        "kr": "이 목숨을 바쳐서......",
+        "jp": "この命を捧げて......",
+        "zh": "献身之志......"
+      },
+      "type": "SKT_RAGE_FINISH2",
+      "description": {
+        "en": "Recovers Weakness Gauge by 30% and deals lethal damage to all enemies.",
+        "kr": "WG 30%를 회복하고, 적 전체에게 치명적인 피해를 입힙니다.",
+        "jp": "WGを30%回復し、敵全体に致命的なダメージを与える。",
+        "zh": "使WG恢复30%,对全体敌人造成致命伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

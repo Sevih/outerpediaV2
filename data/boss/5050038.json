@@ -1,0 +1,124 @@
+{
+  "id": "5050038",
+  "Name": {
+    "en": "Vera",
+    "kr": "베라",
+    "jp": "ヴェラ",
+    "zh": "贝拉"
+  },
+  "Surname": {
+    "en": "A Stranger in a Strange World",
+    "kr": "경계선상의 이방인",
+    "jp": "境界線上のエトランゼ",
+    "zh": "边界上的异乡人"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 68,
+  "icons": "2000002",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 14F",
+      "kr": "암흑의 탑 14층",
+      "jp": "闇の塔 14階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242014",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Dark Slash",
+        "kr": "암흑참",
+        "jp": "暗黒斬",
+        "zh": "暗黑斩"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nHas a <color=#28d9ed>40%</color> chance to grant Increased <color=#28d9ed>Critical Hit Chance</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격한 후 <color=#28d9ed>40%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
+        "jp": "敵単体にダメージを与えた後、<color=#28d9ed>40%</color>の確率で自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+        "zh": "攻击敌人后,有<color=#28d9ed>40%</color>的几率使自身<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000002"
+    },
+    {
+      "name": {
+        "en": "Dark Devil Dance",
+        "kr": "암흑마연무",
+        "jp": "暗黒魔演舞",
+        "zh": "暗黑魔焰舞"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy.\\nIf this attack kills the target, performs an <color=#28d9ed>additional attack</color> against all enemies.",
+        "kr": "적을 공격합니다.\\n이 공격으로 대상이 사망할 경우, 적 전체에게 <color=#28d9ed>추가 공격</color>을 사용합니다.",
+        "jp": "敵単体にダメージを与える。\\nこの攻撃で対象を倒した時、敵全体に<color=#28d9ed>追加攻撃</color>を与える。",
+        "zh": "攻击敌人。\\n该攻击致使目标死亡时,对全体敌人施展<color=#28d9ed>额外攻击</color>。"
+      },
+      "icon": "Skill_Second_2000002"
+    },
+    {
+      "name": {
+        "en": "Dark Ruler's Slash",
+        "kr": "암흑패도열공참",
+        "jp": "暗黒覇道烈空斬",
+        "zh": "暗黑霸主烈空斩"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nIf this attack scores a critical hit, increases Critical Damage. After using this skill, reduces the skill cooldown of <color=#28d9ed>Dark Devil Dance</color> by <color=#28d9ed>1 turn</color>.",
+        "kr": "적 전체를 공격합니다.\\n이 공격이 치명 공격으로 적중할 경우 치명 피해가 증가합니다. 스킬 사용 후 <color=#28d9ed>암흑마연무</color>의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
+        "jp": "敵全体にダメージを与える。\\nこのスキルで会心が発生した場合、会心ダメージがUPする。スキル使用後、<color=#28d9ed>【暗黒魔演舞】</color>のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
+        "zh": "攻击全体敌人。\\n当该攻击以暴击命中时,使暴击伤害提升。使用技能后,<color=#28d9ed>暗黑魔焰舞</color>的技能冷却时间减少\\n<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000002"
+    },
+    {
+      "name": {
+        "en": "Thirst for Blood",
+        "kr": "피의 갈증",
+        "jp": "血の渇望",
+        "zh": "血之渴望"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Attack</color> proportional to missing Health. <color=#28d9ed>Attack</color> can increase up to <color=#28d9ed>100%</color>.",
+        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>공격력</color>이 증가합니다. <color=#28d9ed>공격력</color>은 최대 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n残りHPが低いほど<color=#28d9ed>攻撃力</color>がUPする。<color=#28d9ed>攻撃力</color>は最大<color=#28d9ed>100%</color>UPする。",
+        "zh": "(被动效果)\\n生命值越低,<color=#28d9ed>攻击力</color>越高。<color=#28d9ed>攻击力</color>最多提升\\n<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

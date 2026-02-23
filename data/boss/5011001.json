@@ -1,0 +1,119 @@
+{
+  "id": "5011001",
+  "Name": {
+    "en": "Deckard",
+    "kr": "데카르",
+    "jp": "デカール",
+    "zh": "德卡尔"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 60,
+  "icons": "4004002",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 10F",
+      "kr": "화염의 탑 10층",
+      "jp": "火の塔10階",
+      "zh": "火之塔第10层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202010",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Fire Tornado",
+        "kr": "파이어 토네이도",
+        "jp": "ファイアトルネード",
+        "zh": "火焰龙卷风"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s).</color>",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_4004002"
+    },
+    {
+      "name": {
+        "en": "Diamond Crash",
+        "kr": "다이아 크래쉬",
+        "jp": "ダイヤクラッシュ",
+        "zh": "钻石粉碎"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>20%</color> chance to inflict <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>20%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>20%</color>の確率で<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>20%</color>的几率对目标造成<color=#28d9ed>冰冻</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_4004002"
+    },
+    {
+      "name": {
+        "en": "Lightning Storm",
+        "kr": "라이트닝 스톰",
+        "jp": "ライトニングストーム",
+        "zh": "闪电风暴"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4004002"
+    },
+    {
+      "name": {
+        "en": "Professor's Dignity",
+        "kr": "교사의 위엄",
+        "jp": "教師の威厳",
+        "zh": "教师的威严"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage dealt to enemies with <color=#28d9ed>debuffs</color>.\\nAfter attacking, recovers <color=#28d9ed>2</color> <color=#28d9ed>Weakness Gauge</color> if the target has a <color=#28d9ed>debuff</color>.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>약화 효과</color> 보유 대상 공격 시 피해량이 증가합니다.\\n공격 후 대상이 <color=#28d9ed>약화 효과</color> 보유 중이라면, 자신의 <color=#28d9ed>WG</color>를 <color=#28d9ed>2</color> 회복합니다.",
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>弱体効果</color>のある敵を攻撃時、ダメージがUPする。\\n攻撃後、対象に<color=#28d9ed>弱体効果</color>がある場合、自分の<color=#28d9ed>WG</color>を<color=#28d9ed>2</color>回復する。",
+        "zh": "(被动效果)\\n攻击附带<color=#28d9ed>弱化效果</color>的目标时,伤害量提升。\\n攻击后,若目标附带<color=#28d9ed>弱化效果</color>,则使自身的<color=#28d9ed>WG</color>恢复<color=#28d9ed>2</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Flames",
+        "kr": "화염의 탑의 가호",
+        "jp": "火炎の塔の加護",
+        "zh": "火焰之塔的庇佑"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}

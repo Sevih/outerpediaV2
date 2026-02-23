@@ -1,0 +1,156 @@
+{
+  "id": "5050061",
+  "Name": {
+    "en": "Amadeus",
+    "kr": "아마데우스",
+    "jp": "アマデウス",
+    "zh": "阿玛迪斯"
+  },
+  "Surname": {
+    "en": "Archdemon of the Dirge",
+    "kr": "장송의 마왕",
+    "jp": "葬送の魔王",
+    "zh": "送葬魔王"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 110,
+  "icons": "4076009",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 40F",
+      "kr": "암흑의 탑 40층",
+      "jp": "闇の塔 40階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242040",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Rondo of Blood",
+        "kr": "피의 론도",
+        "jp": "ブラッディロンド",
+        "zh": "血之回旋曲"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. After attacking, reduces the duration of <color=#28d9ed>buffs</color> on the target by <color=#28d9ed>1 turn</color>.",
+        "kr": "적을 공격합니다. 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与える。攻撃後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>減少させる。",
+        "zh": "攻击敌人。攻击后,使目标的<color=#28d9ed>强化效果</color>减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_4076009"
+    },
+    {
+      "name": {
+        "en": "Concerto of the Midnight Sun",
+        "kr": "백야의 협주곡",
+        "jp": "白夜のコンチェルト",
+        "zh": "白夜协奏曲"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. If the attack scores a critical hit, grants an <color=#28d9ed>extra turn</color>.",
+        "kr": "적 전체를 공격합니다. 치명 공격으로 적중하면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "jp": "敵全体にダメージを与える。会心が発生した場合、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "zh": "攻击全体敌人,若以暴击命中,则获得\\n<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "Skill_Second_4076009"
+    },
+    {
+      "name": {
+        "en": "Symphony of the Night",
+        "kr": "월하의 야상곡",
+        "jp": "月下のノットゥルノ",
+        "zh": "月下夜曲"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>3 turn(s)</color> after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、<color=#28d9ed>会心発生率</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "zh": "攻击全体敌人。攻击后,<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4076009"
+    },
+    {
+      "name": {
+        "en": "Artistic Literacy",
+        "kr": "예술적 소양",
+        "jp": "芸術的素養",
+        "zh": "艺术素养"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive)\\nDecreases damage taken from <color=#28d9ed>Mages</color> by <color=#28d9ed>80%</color> and increases damage taken from <color=#28d9ed>Strikers</color> by <color=#28d9ed>20%</color>.\\nWhen an enemy uses a non-attack skill, increases <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>5 turn(s)</color>. This effect cannot be removed.",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>마법형</color>으로 부터 받는 피해가 <color=#28d9ed>80%</color> 만큼 감소 하고 <color=#28d9ed>공격형</color>으로 부터 받는 피해가 <color=#28d9ed>-20%</color> 만큼 증가합니다\\n적이 공격이 아닌 스킬 사용 시, <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다. 이 효과는 해제되지 않습니다.",
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>魔法型</color>から受けるダメージが<color=#28d9ed>80%</color>DOWNし、<color=#28d9ed>攻撃型</color>から受けるダメージが<color=#28d9ed>-20%</color>UPする。\\n敵が攻撃以外のスキル使用時、<color=#28d9ed>5ターン</color>の間<color=#28d9ed>会心率</color>がUPする。この効果は解除されない。",
+        "zh": "(被动效果)\\n受到的<color=#28d9ed>魔法型</color>伤害减少<color=#28d9ed>80%</color>,受到的<color=#28d9ed>攻击型</color>伤害增加<color=#28d9ed>-20%</color>。\\n敌人使用非攻击技能时,<color=#28d9ed>暴击率</color>增加,持续<color=#28d9ed>5回合</color>。该效果无法解除。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect that reduces damage taken and Harmony of Despair to the caster for 6 turns and restores 30% Weakness Gauge. Enraged lasts for 6 turns.\\n\\n<color=#28d9ed>Moonlit Nocturne</color>: Used when Enraged ends.\\nKills all enemies.\\n\\n<color=#ffd732>If enraged within 4 turns, grants 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 받는 피해 감소/절망의 하모니 효과를 6턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 6턴 동안 유지됩니다.\\n\\n<color=#28d9ed>월야의 녹턴</color> : 광폭화 종료 시 사용.\\n적 전체를 사망시킵니다.\\n\\n<color=#ffd732>4턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な受けるダメージDOWN・【絶望のハーモニー】を6ターンの間付与し、WGを30%回復する。【狂暴化】は6ターンの間持続する。\\n\\n<color=#28d9ed>【月夜のノクターン】</color>:【狂暴化】終了時に発動し、\\n敵全体を倒す。\\n\\n<color=#ffd732>戦闘開始時から4ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的所受伤害降低/绝望的和声效果,持续6回合,并使WG恢复30%。狂暴化持续6回合。\\n\\n<color=#28d9ed>月夜的夜曲</color>:狂暴化结束时发动。\\n使全体敌人死亡。\\n\\n<color=#ffd732>在4回合内陷入狂暴化状态时,恢复80CP。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

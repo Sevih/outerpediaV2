@@ -1,0 +1,103 @@
+{
+  "id": "5040035",
+  "Name": {
+    "en": "Kuro",
+    "kr": "쿠로",
+    "jp": "クロ",
+    "zh": "小黑"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 88,
+  "icons": "2000079",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 24F",
+      "kr": "빛의 탑 24층",
+      "jp": "光の塔 24階",
+      "zh": "光之塔 24层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232024",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Be My Friend!",
+        "kr": "친구 포착!",
+        "jp": "友だちみっけ!",
+        "zh": "捕获朋友!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
+        "kr": "적을 공격하고, <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で、<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率造成<color=#28d9ed>标记</color>效果,持续<color=#28d9ed>2回合</color>。\\n攻击后,若目标附带弱化效果,则造成目标生命值上限<color=#28d9ed>2%</color>的固定伤害。"
+      },
+      "icon": "Skill_First_2000079"
+    },
+    {
+      "name": {
+        "en": "Soulslayer Role-Play!",
+        "kr": "영참사 놀이!",
+        "jp": "霊斬士ごっこ",
+        "zh": "灵斩师游戏!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase the duration of debuffs by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with <color=#28d9ed>reduced stat</color> effects, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>75%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
+        "jp": "敵全体にダメージを与える。敵に<color=#28d9ed>75%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、<color=#28d9ed>ステータスDOWN</color>効果がない対象には対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
+        "zh": "攻击全体敌人。有<color=#28d9ed>75%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果,并无视免疫效果,且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后,对未附带<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>2%</color>的固定伤害。"
+      },
+      "icon": "Skill_Ultimate_2000079"
+    },
+    {
+      "name": {
+        "en": "Sword and Shield",
+        "kr": "검과 방패",
+        "jp": "剣と盾",
+        "zh": "剑与盾"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nGrants increased <color=#28d9ed>Defense</color> and <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turns</color> at the start of battle. (Irremovable)",
+        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>방어력</color>과 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. (해제 불가)",
+        "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>防御力</color>と<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。(解除不可)",
+        "zh": "(被动效果)\\n战斗开始时,使<color=#28d9ed>防御力</color>和<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。(无法解除)"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

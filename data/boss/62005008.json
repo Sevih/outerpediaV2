@@ -1,0 +1,119 @@
+{
+  "id": "62005008",
+  "Name": {
+    "en": "Bryn",
+    "kr": "브린",
+    "jp": "ブリン",
+    "zh": "布琳"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 140,
+  "icons": "2000076",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 60F",
+      "kr": "화염의 탑 60층",
+      "jp": "火の塔60階",
+      "zh": "火之塔第60层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202060",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Get Your Cameras Ready!",
+        "kr": "팬 서비스 타임!",
+        "jp": "ファンサタイム!",
+        "zh": "粉丝福利时间!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks the enemy. When the caster has a <color=#28d9ed>Barrier</color>, activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack. When it is the caster's turn, gains <color=#28d9ed>2</color> <color=#28d9ed>Showmanship (Unique Resource)</color>.",
+        "kr": "적을 공격합니다. 자신이 <color=#28d9ed>실드</color>를 보유한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다. 자신의 턴이라면 <color=#28d9ed>고유자원 : 아이돌력</color>을 <color=#28d9ed>2개</color> 획득합니다.",
+        "jp": "敵単体にダメージを与える。自分が<color=#28d9ed>シールド</color>状態の場合、最も攻撃力が高い味方に<color=#28d9ed>連携</color>を発生させる。自分のターンの場合、<color=#28d9ed>【固有資源:アイドル力】</color>を<color=#28d9ed>2個</color>獲得する。",
+        "zh": "攻击敌人。若自身处于<color=#28d9ed>护盾</color>状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:偶像力</color>。"
+      },
+      "icon": "Skill_First_2000076"
+    },
+    {
+      "name": {
+        "en": "Lovely Choreography",
+        "kr": "사랑스러운 독무",
+        "jp": "ラブリーパフォーマンス",
+        "zh": "可爱独舞"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) At the start of battle, grants <color=#28d9ed>Charisma</color> to all allies and enemies except for Bryn for <color=#28d9ed>1 turn(s)</color>.\\n\\n(Active Effect) Grants <color=#28d9ed>Charisma</color> to all allies except for Bryn for <color=#28d9ed>1 turn(s)</color>. Then, grants all allies a Barrier proportional to the caster's Attack for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "(패시브 효과) 전투 입장 시 브린을 제외한 아군과 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>카리스마</color>를 부여합니다.\\n\\n(액티브 효과) 브린을 제외한 제외한 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>카리스마</color>를 부여합니다. 그 이후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 자신의 공격력에 비례하여 실드를 부여합니다.",
+        "jp": "(パッシブ効果)戦闘開始時、ブリンを除く味方全体と敵全体に<color=#28d9ed>カリスマ</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(アクティブ効果)ブリンを除く味方全体に<color=#28d9ed>カリスマ</color>を<color=#28d9ed>1ターン</color>の間付与する。その後、味方全体に自分の攻撃力に応じたシールドを<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "(被动效果)战斗开始时,使除布琳外的友军和全体敌人获得<color=#28d9ed>气场</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(主动效果)使除布琳外的全体友军获得<color=#28d9ed>气场</color>效果,持续<color=#28d9ed>1回合</color>。此后根据自身攻击力使全体友军获得等比的护盾,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000076"
+    },
+    {
+      "name": {
+        "en": "Dreams Come True",
+        "kr": "꿈의 무대",
+        "jp": "ドリームステージ",
+        "zh": "梦幻舞台"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "<color=#28d9ed>Requires 5 Showmanship (Unique Resource) to use this skill.</color>\\nIgnores Resilience of all enemies and removes <color=#28d9ed>2</color> buff(s), then attacks all enemies. This skill ignores the target's Defense by <color=#28d9ed>30%</COLOR>, and does not miss.",
+        "kr": "<color=#28d9ed>고유 자원 : 아이돌력 5개 보유 시 사용 가능합니다.</color>\\n적 전체의 효과 저항을 무시하고 강화 효과를 <color=#28d9ed>2개</color> 해제한 뒤 적 전체를 공격합니다. 이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color>무시하며, 빗나감이 발생하지 않습니다.",
+        "jp": "このスキルは<color=#28d9ed>【固有資源:アイドル力】が5個ある場合、使用できる。</color>\\n敵全体の効果抵抗を無視し、強化効果を<color=#28d9ed>2個</color>解除した後、敵全体にダメージを与える。このスキルは対象の防御力を<color=#28d9ed>30%</COLOR>無視し、ミスヒットが発生しない。",
+        "zh": "<color=#28d9ed>持有5个偶像力时可使用。</color>\\n无视全体敌人的效果抵抗,并解除<color=#28d9ed>2个</color>强化效果后,攻击全体敌人。该技能无视目标的<color=#28d9ed>30%</color>防御力,且不会发生闪避。"
+      },
+      "icon": "Skill_Ultimate_2000076"
+    },
+    {
+      "name": {
+        "en": "Burning Stage Heat",
+        "kr": "뜨거운 무대 열기",
+        "jp": "熱きステージの熱気",
+        "zh": "炽热舞台热情"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Allies with a Barrier deal increased damage.",
+        "kr": "실드를 보유한 아군이 입히는 피해가 증가합니다.",
+        "jp": "シールドを持つ味方の与えるダメージが増加。",
+        "zh": "持有护盾的我方造成的伤害增加。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Flames",
+        "kr": "화염의 탑의 가호",
+        "jp": "火炎の塔の加護",
+        "zh": "火焰之塔的庇佑"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}

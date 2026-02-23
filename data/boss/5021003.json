@@ -1,0 +1,151 @@
+{
+  "id": "5021003",
+  "Name": {
+    "en": "Scientific Inheritance Devotee",
+    "kr": "과학 유산의 신봉자",
+    "jp": "科学遺産の信奉者",
+    "zh": "科学遗产的信奉者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 130,
+  "icons": "4076010",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 50F",
+      "kr": "물의 탑 50층",
+      "jp": "水の塔50階",
+      "zh": "水之塔第50层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212050",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Physical Lines of Force",
+        "kr": "전자기 4법칙",
+        "jp": "電磁気:Mの方程式",
+        "zh": "电磁气四法则"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. Grants <color=#28d9ed>Immunity</color> to the caster for 1 turn. (Irremovable)",
+        "kr": "적을 공격합니다. 자신은 1턴 동안 <color=#28d9ed>면역</color>을 획득합니다. (해제 불가)",
+        "jp": "敵単体にダメージを与える。自分に<color=#28d9ed>免疫</color>を1ターンの間獲得する。(解除不可)",
+        "zh": "攻击敌人。使自身获得<color=#28d9ed>免疫</color>效果,持续1回合。(无法解除)"
+      },
+      "icon": "Skill_First_2000028"
+    },
+    {
+      "name": {
+        "en": "Maxwell's Wheel",
+        "kr": "회전혼합",
+        "jp": "回転混合",
+        "zh": "回转混合"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Increases <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Resilience</color> for <color=#28d9ed>2</color> turns.",
+        "kr": "2턴 동안 <color=#28d9ed>치명 확률 및 효과 저항</color>이 증가합니다.",
+        "jp": "<color=#28d9ed>会心率</color>と<color=#28d9ed>効果抵抗</color>が<color=#28d9ed>2</color>ターンの間UPする。",
+        "zh": "在<color=#28d9ed>2</color>回合内提高<color=#28d9ed>暴击率</color>与<color=#28d9ed>效果抵抗</color>。"
+      },
+      "icon": "Skill_Second_2000028"
+    },
+    {
+      "name": {
+        "en": "Irreversible Entropy",
+        "kr": "역전불가의 엔트로피",
+        "jp": "逆転不可のエントロピー",
+        "zh": "不可逆转的熵"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Grants increased <color=#28d9ed>Attack</color>, increased <color=#28d9ed>Defense</color>, and increased <color=#28d9ed>Speed</color> for <color=#28d9ed>3 turn(s)</color> after attacking.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>공격력</color>과 <color=#28d9ed>방어력</color>, <color=#28d9ed>속도</color>가 증가합니다.",
+        "jp": "敵全体にダメージを与えた後、自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "zh": "攻击全体敌人。攻击后,<color=#28d9ed>攻击力</color>、<color=#28d9ed>防御力</color>、<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000028"
+    },
+    {
+      "name": {
+        "en": "Happiness Without Pain",
+        "kr": "고통이 없다는 행복",
+        "jp": "苦しみのない幸せ",
+        "zh": "没有痛苦的幸福"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Triggered Effect) Activates an additional attack on all enemies upon scoring a critical hit. After attacking, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "kr": "(발동 효과) 치명 공격 시, 적 전체에게 추가타를 입힙니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
+        "jp": "(発動効果)会心発生時、敵全体に追加攻撃を与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>UPする。",
+        "zh": "(触发效果)发动暴击时,对全体敌人发动额外技能。攻击后,自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "When Truth is Denied",
+        "kr": "진리가 거부할 때",
+        "jp": "真理の拒絶",
+        "zh": "当真理拒绝时"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases damage dealt by all attacks proportional to the <color=#28d9ed>number of buffs</color> granted to the caster.\\n\\nWhen scoring a Critical Hit, grants increased <color=#28d9ed>Penetration</color> to the caster for 2 turns.",
+        "kr": "(패시브 효과)\\n모든 공격은 자신이 보유한 <color=#28d9ed>강화 효과 수량</color>에 비례하여 피해량이 증가합니다. \\n\\n치명 공격으로 적중했을 때 자신의 <color=#28d9ed>관통력</color>을 2턴 동안 증가시킵니다.",
+        "jp": "(パッシブ効果)\\nすべての攻撃は、自分の<color=#28d9ed>強化効果</color>が多いほどダメージがUPする。\\n\\n会心が発生した場合、自分の<color=#28d9ed>貫通力</color>を2ターンの間UPさせる。\\n\\n<color=#28d9ed>回避</color>時、WGダメージを受けず、HPの20%を回復する。",
+        "zh": "(被动效果)\\n根据自身附带的<color=#28d9ed>强化效果数量</color>等比提升所有攻击的伤害量。\\n\\n暴击命中时,使自身<color=#28d9ed>穿透力</color>提升,持续2回合。\\n\\n<color=#28d9ed>回避</color>时,不会受到WG伤害,并使生命值恢复\\n20%。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> each time Health is reduced by <color=#28d9ed>50,000</color>.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Removes all <color=#28d9ed>buffs</color> from all enemies before attacking. This attack ignores the target's <color=#28d9ed>Defense</color>.\\nIncreases damage dealt every time the caster becomes Enraged.",
+        "kr": "체력이 <color=#28d9ed>50000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제한 후 공격합니다. 이 공격은 대상의 <color=#28d9ed>방어력</color>을 무시합니다.\\n광폭화 할 때마다 피해량이 증가합니다.",
+        "jp": "HPが<color=#28d9ed>50000</color>DOWNするたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:敵全体の<color=#28d9ed>強化効果</color>をすべて解除した後ダメージを与える。この攻撃は対象の<color=#28d9ed>防御力</color>を無視する。\\n【狂暴化】状態になるたびに、ダメージがUPする。",
+        "zh": "每当生命力减少<color=#28d9ed>50000</color>时,转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化及必杀技</color>:解除全体敌人的所有<color=#28d9ed>强化效果</color>后发动攻击。此攻击无视目标的<color=#28d9ed>防御力</color>。\\n每当狂暴化时,伤害量增加。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

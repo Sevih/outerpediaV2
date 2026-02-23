@@ -1,0 +1,151 @@
+{
+  "id": "5040040",
+  "Name": {
+    "en": "Sacreed Guardian",
+    "kr": "세이크리드 가디언",
+    "jp": "セイクリッドガーディアン",
+    "zh": "圣科利德守护者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Light",
+  "level": 95,
+  "icons": "4044003",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 30F",
+      "kr": "빛의 탑 30층",
+      "jp": "光の塔 30階",
+      "zh": "光之塔 30层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232030",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Extinction Ray",
+        "kr": "익스팅션 레이",
+        "jp": "エクスティンクション・レイ",
+        "zh": "灭绝激光"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_4044003"
+    },
+    {
+      "name": {
+        "en": "Extinction Nova",
+        "kr": "익스팅션 노바",
+        "jp": "エクスティンクション・ノヴァ",
+        "zh": "灭绝新星"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the enemy for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标陷入<color=#28d9ed>触电</color>状态,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_4044003"
+    },
+    {
+      "name": {
+        "en": "Extinction Blade",
+        "kr": "익스팅션 블레이드",
+        "jp": "エクスティンクション・ブレイド",
+        "zh": "灭绝之剑"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Removes all <color=#28d9ed>buffs</color> from all enemies then attacks, and if the enemy with the highest attack is inflicted with <color=#28d9ed>Shocked</color>, <color=#28d9ed>kills them instantly</color>.",
+        "kr": "적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제 후 공격하고, 가장 공격력이 높은 적이 <color=#28d9ed>감전</color>상태라면 <color=#28d9ed>즉사</color>시킵니다.",
+        "jp": "敵全体の<color=#28d9ed>強化効果</color>をすべて解除した後、ダメージを与える。攻撃力が最も高い敵が<color=#28d9ed>感電</color>状態の場合、<color=#28d9ed>即死</color>させる。",
+        "zh": "解除全体敌人的所有<color=#28d9ed>强化效果</color>后发动攻击,若攻击力最高的敌人处于<color=#28d9ed>触电</color>状态,则使其<color=#28d9ed>即死</color>。"
+      },
+      "icon": "Skill_Ultimate_4044003"
+    },
+    {
+      "name": {
+        "en": "Deification",
+        "kr": "신격",
+        "jp": "神格",
+        "zh": "神格"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive)\\nInflicts <color=#28d9ed>Shock</color> on a random target for <color=#28d9ed>2 turn(s)</color> at the end of the turn.\\nGrants an <color=#28d9ed>Extra Turn</color> upon defeating an enemy.",
+        "kr": "(패시브 효과)\\n자신 턴 종료시 랜덤한 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.\\n적 처치 시 <color=#28d9ed>추가 턴</color>을 얻습니다.",
+        "jp": "(パッシブ効果)\\n自分のターン終了時、ランダムな対象に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>感電</color>を付与する。\\n敵を倒した時、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "zh": "(被动效果)\\n自身回合结束时,对随机目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n击杀敌人时,获得<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns.\\n\\n<color=#28d9ed>Enraged</color>: Gains an irremovable effect that increases Attack and reduces damage taken for 3 turns. Recovers Weakness Gauge by 10%. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Sacreed Judgment</color>: Used when Enraged ends. Attacks all enemies. Has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>2 turn(s)</color> and resets the caster's <color=#28d9ed>Extinction Blade</color> cooldown.",
+        "kr": "5턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, WG 10%를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>세이크리드 저지먼트</color> : 광폭화 종료 시 사용.\\n적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여하고, 자신의 <color=#28d9ed>익스팅션 블레이드</color>의 쿨타임을 초기화시킵니다.",
+        "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は4ターンの間持続する。\\n\\n<color=#28d9ed>【セイクリッド・ジャッジメント】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与し、<color=#28d9ed>【エクスティンクション・ブレイド】</color>のスキルターンを初期化させる。",
+        "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,且WG恢复10%。狂暴化持续4回合。\\n\\n<color=#28d9ed>圣科利德裁决</color>:狂暴化结束时发动。\\n攻击全体敌人。有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>,并重置自身的<color=#28d9ed>灭绝之剑</color>冷却时间。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns.\\n\\n<color=#28d9ed>Enraged</color>: Gains an irremovable effect that increases Attack and reduces damage taken for 3 turns. Recovers Weakness Gauge by 10%. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Sacreed Judgment</color>: Used when Enraged ends. Attacks all enemies. Has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>2 turn(s)</color> and resets the caster's <color=#28d9ed>Extinction Blade</color> cooldown.",
+        "kr": "5턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, WG 10%를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>세이크리드 저지먼트</color> : 광폭화 종료 시 사용.\\n적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여하고, 자신의 <color=#28d9ed>익스팅션 블레이드</color>의 쿨타임을 초기화시킵니다.",
+        "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は4ターンの間持続する。\\n\\n<color=#28d9ed>【セイクリッド・ジャッジメント】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与し、<color=#28d9ed>【エクスティンクション・ブレイド】</color>のスキルターンを初期化させる。",
+        "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,且WG恢复10%。狂暴化持续4回合。\\n\\n<color=#28d9ed>圣科利德裁决</color>:狂暴化结束时发动。\\n攻击全体敌人。有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>,并重置自身的<color=#28d9ed>灭绝之剑</color>冷却时间。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "5050055",
+  "Name": {
+    "en": "Leo",
+    "kr": "레오",
+    "jp": "レオ",
+    "zh": "雷欧"
+  },
+  "Surname": {
+    "en": "Righteous Hero",
+    "kr": "정의의 용사",
+    "jp": "愛を貫く正義の勇者",
+    "zh": "正义的勇士"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Dark",
+  "level": 98,
+  "icons": "2000042",
+  "BuffImmune": "CAST_BUFF",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 33F",
+      "kr": "암흑의 탑 33층",
+      "jp": "闇の塔 33階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242033",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Justice's Quad Strike",
+        "kr": "정의의 사자사연격",
+        "jp": "正義の獅子四連撃",
+        "zh": "正义使者四连击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and gains a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
+        "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の<color=#28d9ed>防御力</color>が高いほどシールド量がUPする。",
+        "zh": "攻击敌人,并获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身<color=#28d9ed>防御力</color>越高,则护盾量越高。"
+      },
+      "icon": "Skill_First_2000042"
+    },
+    {
+      "name": {
+        "en": "Courageous Protection",
+        "kr": "용기의 수호영역",
+        "jp": "勇気のイージスフィールド",
+        "zh": "勇气的守护领域"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Increases all allies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "아군 전체의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>3턴</color> 동안 증가합니다.",
+        "jp": "味方全体の<color=#28d9ed>防御力</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Second_2000042"
+    },
+    {
+      "name": {
+        "en": "Loving Justice Dive",
+        "kr": "사랑의 저스티스 다이브",
+        "jp": "愛のジャスティス・ダイブ",
+        "zh": "爱的正义潜行"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nThis skill's damage increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "kr": "적 전체를 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
+        "jp": "敵全体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "zh": "攻击全体敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害量越高。"
+      },
+      "icon": "Skill_Ultimate_2000042"
+    },
+    {
+      "name": {
+        "en": "Shell Casting",
+        "kr": "껍질 벗기",
+        "jp": "甲羅を脱ぐ",
+        "zh": "蜕皮"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Speed</color> proportional to missing Health. <color=#28d9ed>Speed</color> can increase up to <color=#28d9ed>100%</color>.",
+        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>속도</color>가 증가합니다. <color=#28d9ed>속도</color>는 최대 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n残りHPが低いほど<color=#28d9ed>スピード</color>がUPする。<color=#28d9ed>スピード</color>は最大<color=#28d9ed>100%</color>UPする。",
+        "zh": "(被动效果)\\n生命值越低,<color=#28d9ed>速度</color>越高。<color=#28d9ed>速度</color>最多提升<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

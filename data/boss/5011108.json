@@ -1,0 +1,103 @@
+{
+  "id": "5011108",
+  "Name": {
+    "en": "Magnolia Elemental Mage",
+    "kr": "매그놀리아 마법사 매직",
+    "jp": "マグノリアの魔法使い〈術〉",
+    "zh": "麦格诺里亚元素魔法师"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 74,
+  "icons": "4003042",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 17F",
+      "kr": "화염의 탑 17층",
+      "jp": "火の塔17階",
+      "zh": "火之塔第17层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202017",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Fire Wind",
+        "kr": "파이어 윈드",
+        "jp": "ファイアウィンド",
+        "zh": "火风术"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Ice Rod",
+        "kr": "아이스 로드",
+        "jp": "アイスロード",
+        "zh": "冰道术"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Fire Field",
+        "kr": "파이어 필드",
+        "jp": "ファイアフィールド",
+        "zh": "火焰领域"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Excellent Student",
+        "kr": "성적 우수자",
+        "jp": "成績優秀者",
+        "zh": "成绩优异者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nDamage dealt increases based on the number of debuffs on the target when attacking.\\nAt the start of battle, increases <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>2</color> turns.",
+        "kr": "(패시브 효과)\\n공격 시 대상이 보유한 약화 효과가 많을수록 피해량이 증가합니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>치명 피해</color>가 증가합니다.",
+        "jp": "(パッシブ効果)\\n攻撃時、対象の弱体効果の数に応じてダメージがUPする。\\n戦闘開始時、<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+        "zh": "(被动效果)\\n攻击时,目标持有的减益效果越多,造成的伤害越高。\\n战斗开始时,在<color=#28d9ed>2</color>回合内提高<color=#28d9ed>暴击伤害</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

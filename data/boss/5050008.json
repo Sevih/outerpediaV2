@@ -1,0 +1,103 @@
+{
+  "id": "5050008",
+  "Name": {
+    "en": "Fiend Knight's Twin Swords",
+    "kr": "마족 기사 쌍검",
+    "jp": "魔族騎士ツインソード",
+    "zh": "魔族双剑骑士"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 47,
+  "icons": "4003402",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 4F",
+      "kr": "암흑의 탑 4층",
+      "jp": "闇の塔 4階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242004",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Demonic Cleave",
+        "kr": "베어 가르는 마성",
+        "jp": "魔性の斬剣",
+        "zh": "魔性斩裂"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. This skill always scores a critical hit.",
+        "kr": "적을 공격합니다. 이 스킬은 반드시 치명 공격이 발생합니다.",
+        "jp": "敵単体にダメージを与える。このスキルは必ず会心が発生する。",
+        "zh": "攻击全体敌人。此技能必定发生暴击。"
+      },
+      "icon": "MT_Attack_Sword_1_Water"
+    },
+    {
+      "name": {
+        "en": "Enraged Smash",
+        "kr": "분노의 파쇄",
+        "jp": "怒りの粉砕",
+        "zh": "愤怒粉碎"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy. This skill always scores a critical hit.",
+        "kr": "적 전체를 공격합니다. 이 스킬은 반드시 치명 공격이 발생합니다.",
+        "jp": "敵全体にダメージを与える。このスキルは必ず会心が発生する。",
+        "zh": "攻击全体敌人。此技能必定发生暴击。"
+      },
+      "icon": "MT_Attack_Hammer_1_Water"
+    },
+    {
+      "name": {
+        "en": "Fury Frost",
+        "kr": "퓨리 프로스트",
+        "jp": "フューリーフロスト",
+        "zh": "愤怒霜冻"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. This skill's Critical Damage increases by <color=#28d9ed>100%</color> and always scores a critical hit.",
+        "kr": "적 전체를 공격합니다. 이 스킬은 치명 피해가 <color=#28d9ed>100%</color> 증가하고, 반드시 치명 공격이 발생합니다.",
+        "jp": "敵全体にダメージを与える。このスキルは会心ダメージが<color=#28d9ed>100%</color>UPし、必ず会心が発生する。",
+        "zh": "攻击全体敌人。此技能的暴击伤害提升<color=#28d9ed>100%</color>,且此技能必定发生暴击。"
+      },
+      "icon": "MT_Attack_Claw_1_Water"
+    },
+    {
+      "name": {
+        "en": "Pure Fiendishness",
+        "kr": "순수한 마성",
+        "jp": "純粋なる魔性",
+        "zh": "纯净魔性"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nReduces efficiency of Priority increase effects of the enemy by <color=#28d9ed>20%</color>.",
+        "kr": "(패시브 효과)\\n적의 행동 게이지 증가 효율이 <color=#28d9ed>20%</color>감소 합니다.",
+        "jp": "(パッシブ効果)\\n敵の行動ゲージUPの効率を<color=#28d9ed>20%</color>DOWNさせる。",
+        "zh": "(被动效果)\\n敌人的行动值提升效率降低<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "5021002",
+  "Name": {
+    "en": "Glicys",
+    "kr": "글리시스",
+    "jp": "グリシス",
+    "zh": "克里希丝"
+  },
+  "Surname": {
+    "en": "Frozen Queen",
+    "kr": "설원의 여왕",
+    "jp": "雪原の女王",
+    "zh": "冰原女王"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Water",
+  "level": 110,
+  "icons": "4076001",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_DOT_POISON",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 40F",
+      "kr": "물의 탑 40층",
+      "jp": "水の塔40階",
+      "zh": "水之塔第40层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212040",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Come Forth, Guards",
+        "kr": "근위병은 나오라",
+        "jp": "いでよ、近衛兵",
+        "zh": "出现吧,禁卫军"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.",
+        "kr": "적을 공격합니다.",
+        "jp": "敵単体にダメージを与える。",
+        "zh": "攻击敌人。"
+      },
+      "icon": "Skill_First_4076001"
+    },
+    {
+      "name": {
+        "en": "Break Apart",
+        "kr": "깨져라",
+        "jp": "壊れよ",
+        "zh": "破碎吧"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) When attacking an enemy inflicted with <color=#28d9ed>Frozen</color> with a <color=#28d9ed>single attack</color>, performs an <color=#28d9ed>additional attack</color> on all enemies.",
+        "kr": "(발동 효과) <color=#28d9ed>빙결</color> 상태의 적을 <color=#28d9ed>단일 공격</color> 했을 때 적 전체에게 <color=#28d9ed>추가 공격</color>을 합니다.",
+        "jp": "(発動効果)<color=#28d9ed>凍結</color>状態の敵に<color=#28d9ed>単体攻撃</color>を与えた場合、敵全体に<color=#28d9ed>追加攻撃</color>を与える。",
+        "zh": "(触发效果)对处于<color=#28d9ed>冰冻</color>状态的敌人发动<color=#28d9ed>单体攻击</color>时,对全体敌人发动<color=#28d9ed>额外攻击</color>。"
+      },
+      "icon": "Skill_Second_4076001"
+    },
+    {
+      "name": {
+        "en": "Receive Your Blessings",
+        "kr": "총애를 받으라",
+        "jp": "寵愛を受けよ",
+        "zh": "接受恩宠吧"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Removes all <color=#28d9ed>debuffs</color> from the caster, then attacks all enemies and inflicts <color=#28d9ed>Frozen</color> for 1 turn. \\n\\nWhen scoring a <color=#28d9ed>critical hit</color> on one or more enemies, grants a Barrier for 2 turns.",
+        "kr": "자신의 <color=#28d9ed>약화 효과</color>를 모두 제거 한 뒤 적 전체를 공격하고 1턴 간 <color=#28d9ed>빙결</color> 상태로 만듭니다. \\n\\n한 명 이상의 적에게 <color=#28d9ed>치명 공격</color>시 2턴 간 실드를 생성합니다.",
+        "jp": "自分の<color=#28d9ed>弱体効果</color>をすべて解除した後、敵全体にダメージを与え、1ターンの間<color=#28d9ed>凍結</color>を付与する。\\n\\n単体以上の敵に<color=#28d9ed>会心</color>が発生した場合、シールドを2ターンの間付与する。",
+        "zh": "解除自身的所有<color=#28d9ed>弱化效果</color>后,攻击全体敌人,并使其陷入<color=#28d9ed>冰冻</color>状态,持续1回合。\\n\\n对一名以上的敌人<color=#28d9ed>发动暴击</color>时,获得护盾,持续2回合。"
+      },
+      "icon": "Skill_Ultimate_4076001"
+    },
+    {
+      "name": {
+        "en": "Kai and Gerda",
+        "kr": "카이와 게르다",
+        "jp": "カイとゲルダ",
+        "zh": "凯伊和格达"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nInflicts <color=#28d9ed>Frozen</color> on a random enemy every turn for 1 turn.\\n\\nAttacks performed while a Barrier is active <color=#28d9ed>ignore 30% of the target's Defense</color>.",
+        "kr": "(패시브 효과)\\n매 턴 무작위 적 1명은 1턴 동안 <color=#28d9ed>빙결</color> 상태가 됩니다. \\n\\n실드 상태에서 공격은 대상의 <color=#28d9ed>방어력을 30% 무시</color> 합니다.",
+        "jp": "(パッシブ効果)\\n毎ターンランダムの敵単体に<color=#28d9ed>凍結</color>を1ターンの間付与する。\\n\\nシールド状態の場合、対象の<color=#28d9ed>防御力を30%無視</color>する。",
+        "zh": "(被动效果)\\n每回合使随机1名敌人陷入<color=#28d9ed>冰冻</color>状态,持续1回合。\\n\\n处于护盾状态下发动攻击时,<color=#28d9ed>无视目标的30%防御力</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Water Tower",
+        "kr": "물의 탑의 가호",
+        "jp": "水の塔の加護",
+        "zh": "水之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>60%</color> of Max Health or lower, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Applies an irremovable effect that increases Effectiveness for 3 turns and Invulnerability for 1 turn, and recovers Weakness Gauge by 30%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Ice Nine</color>: Used when Enraged ends.\\nAttacks all enemies and inflicts Frozen on them. This effect ignores the target's Resilience.\\n\\n<color=#ffd732>If Enraged within 3 turns, grants 80 Chain Points.</color>",
+        "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 효과 적중 증가 3턴 /무적 효과를 1턴이 부여되며 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>아이스 나인</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 대상을 빙결 상태로 만듭니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
+        "jp": "最大HPの<color=#28d9ed>60%</color>以下になると、<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。ブレイクすると効果が解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な効果命中UPを3ターン、無敵を1ターンの間付与し、WG30%を回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【アイスナイン】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に凍結を付与する。この効果は対象の効果抵抗を無視する。\\n\\n<color=#ffd732>戦闘開始時から3ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "zh": "若生命值降至上限的<color=#28d9ed>60%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>进入狂暴化</color>:使自身获得无法解除的效果命中提升3回合/无敌效果1回合,并使WG恢复30%,狂暴化持续3回合。\\n\\n<color=#28d9ed>九尺冰寒</color>:狂暴化结束时发动。\\n攻击全体敌人,并使目标陷入冰冻状态。该效果无视目标的效果抵抗。\\n\\n<color=#ffd732>在3回合内陷入狂暴化状态时,恢复80CP。</color>"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "Ice Nine",
+        "kr": "아이스 나인",
+        "jp": "アイスナイン",
+        "zh": "九尺冰寒"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "62001054",
+  "Name": {
+    "en": "Mene",
+    "kr": "메네",
+    "jp": "メネ",
+    "zh": "麦尼"
+  },
+  "Surname": {
+    "en": "Little Insomniac Nun",
+    "kr": "불면증 꼬맹이 수녀",
+    "jp": "不眠症のちびシスター",
+    "zh": "失眠的小修女"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Water",
+  "level": 108,
+  "icons": "2000054",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 39F",
+      "kr": "물의 탑 39층",
+      "jp": "水の塔39階",
+      "zh": "水之塔第39层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212039",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shark Attack!",
+        "kr": "샤크 어택!",
+        "jp": "アオイアタック",
+        "zh": "飞鲨袭击!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest current Health by <color=#28d9ed>7%</color>.",
+        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>7%</color> 회복시킵니다.",
+        "jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>7%</color>回復する。",
+        "zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>7%</color>的<color=#28d9ed>生命值</color>。"
+      },
+      "icon": "Skill_First_2000054"
+    },
+    {
+      "name": {
+        "en": "Sharks Are Friends",
+        "kr": "상어는 친구",
+        "jp": "起こさないで",
+        "zh": "鲨鱼是朋友"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "<color=#28d9ed>Heals</color> all allies by <color=#28d9ed>15%</color> and reduces the duration of debuffs by <color=#28d9ed>1 turn</color>.",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させ、弱体効果の持続ターンを<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "zh": "使全体友军恢复<color=#28d9ed>15%</color>的<color=#28d9ed>生命值</color>,并使弱化效果持续时间减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000054"
+    },
+    {
+      "name": {
+        "en": "Wakey-Wakey",
+        "kr": "잠들면 안 돼",
+        "jp": "寝るんじゃねぇガキ!",
+        "zh": "不能睡着"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Grants increased <color=#28d9ed>Attack</color> to surviving allies for <color=#28d9ed>2 turn(s)</color>, then <color=#28d9ed>Resurrects (Greater)</color> all slain allies. Afterward, <color=#28d9ed>heals</color> all allies by <color=#28d9ed>15%</color>.",
+        "kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
+        "jp": "戦場にいる味方全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。",
+        "zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的友军全部<color=#28d9ed>复活(强化)</color>。随后使全体友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000054"
+    },
+    {
+      "name": {
+        "en": "Weakness Protection",
+        "kr": "약점 보호",
+        "jp": "弱点保護",
+        "zh": "保护弱点"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen hit by a Critical, decreases the <color=#28d9ed>Defense</color> of a random enemy by 50% for 1 turn. (Cannot be dispelled)",
+        "kr": "(패시브 효과)\\n치명 피격 시 1턴 동안 무작위 적 1명의 <color=#28d9ed>방어력</color>을 50% 감소시킵니다.(해제 불가)",
+        "jp": "(パッシブ効果)\\n会心を受けた時、1ターンの間、ランダムな敵1体の<color=#28d9ed>防御力</color>を50%減少。(解除不可)",
+        "zh": "(被动效果)\\n受到致命打击时,使随机1名敌人的<color=#28d9ed>防御力</color>降低50%,持续1回合。(不可解除)"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Water Tower",
+        "kr": "물의 탑의 가호",
+        "jp": "水の塔の加護",
+        "zh": "水之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

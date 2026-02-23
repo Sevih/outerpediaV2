@@ -1,0 +1,119 @@
+{
+  "id": "5050063",
+  "Name": {
+    "en": "Nella",
+    "kr": "넬라",
+    "jp": "ネラ",
+    "zh": "内拉"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Dark",
+  "level": 114,
+  "icons": "2000083",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 42F",
+      "kr": "암흑의 탑 42층",
+      "jp": "闇の塔 42階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242042",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Fiend's Courtesy",
+        "kr": "마족의 예절",
+        "jp": "魔族の礼節",
+        "zh": "魔族礼仪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\n\\nBefore attacking, if the caster's current Health is <color=#28d9ed>85%</color> or lower, recovers Health of the <color=#28d9ed>caster</color> by <color=#28d9ed>15%</color>.\\n\\nBefore attacking, if the caster's current Health is greater than <color=#28d9ed>85%</color>, recovers Health of the ally with the lowest Health by <color=#28d9ed>15%</color> of Nella's Max Health.",
+        "kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>15%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
+        "jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>15%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>15%</color>回復する。",
+        "zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>15%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>15%</color>的生命值。"
+      },
+      "icon": "Skill_First_2000083"
+    },
+    {
+      "name": {
+        "en": "Oath of Darkness",
+        "kr": "어둠의 맹약",
+        "jp": "闇の盟約",
+        "zh": "黑暗誓约"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) When hit, activates an <color=#28d9ed>Agile Response</color>.\\nIncreases Priority of the caster by <color=#28d9ed>70%</color>, and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>20%</color> of Nella's Max Health.",
+        "kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>70%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시킵니다.",
+        "jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>70%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復する。",
+        "zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>70%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>。"
+      },
+      "icon": "Skill_Second_2000083"
+    },
+    {
+      "name": {
+        "en": "The Coronation",
+        "kr": "대관식",
+        "jp": "即位の儀",
+        "zh": "加冕礼"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Increases Priority of surviving allies by <color=#28d9ed>20%</color>, then <color=#28d9ed>Resurrects (Greater)</color> all dead allies. Afterward, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>20%</color> of Nella's Max Health, and grants Immunity for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 면역을 부여합니다.",
+        "jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>20%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復させ、免疫を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "使存活的友军行动值提升<color=#28d9ed>20%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>2回合</color>的免疫效果。"
+      },
+      "icon": "Skill_Ultimate_2000083"
+    },
+    {
+      "name": {
+        "en": "Thirst for Blood",
+        "kr": "피의 갈증",
+        "jp": "血の渇望",
+        "zh": "血之渴望"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Attack</color> proportional to missing Health. <color=#28d9ed>Attack</color> can increase up to <color=#28d9ed>100%</color>.",
+        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>공격력</color>이 증가합니다. <color=#28d9ed>공격력</color>은 최대 <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "(パッシブ効果)\\n残りHPが低いほど<color=#28d9ed>攻撃力</color>がUPする。<color=#28d9ed>攻撃力</color>は最大<color=#28d9ed>100%</color>UPする。",
+        "zh": "(被动效果)\\n生命值越低,<color=#28d9ed>攻击力</color>越高。<color=#28d9ed>攻击力</color>最多提升\\n<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Leader of Pandemonium",
+        "kr": "판데모니움의 지도자",
+        "jp": "パンデモニウムの指導者",
+        "zh": "万魔殿的引导者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "At the start of the turn, if all allies except the caster are <color=#28d9ed>dead</color>, resets the skill cooldown of <color=#28d9ed>Coronation</color>.",
+        "kr": "턴 시작 시 자신을 제외한 모든 아군이 <color=#28d9ed>사망</color>했다면 <color=#28d9ed>대관식</color>의 스킬 쿨타임이 초기화됩니다.",
+        "jp": "ターン開始時、自分を除く味方全体が<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【即位の儀】</color>のスキルターンが初期化される。",
+        "zh": "回合开始时,如果除自身以外的所有友军均<color=#28d9ed>已阵亡</color>,则重置<color=#28d9ed>加冕礼</color>的技能冷却时间。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

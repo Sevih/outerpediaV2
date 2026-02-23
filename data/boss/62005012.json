@@ -1,0 +1,135 @@
+{
+  "id": "62005012",
+  "Name": {
+    "en": "Abomination Hunter Belial",
+    "kr": "흉물 사냥꾼 벨리알",
+    "jp": "凶悪な狩人べリアル",
+    "zh": "凶兽猎人贝利尔"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 180,
+  "icons": "4014005",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 100F",
+      "kr": "화염의 탑 100층",
+      "jp": "火の塔100階",
+      "zh": "火之塔第100层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40202100",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Flame Shock",
+        "kr": "염포 충격",
+        "jp": "炎砲衝撃",
+        "zh": "火焰冲击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and grants <color=#28d9ed>Burned</color> for <color=#28d9ed>2</color> turns.",
+        "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>2ターン</color>の間、対象に<color=#28d9ed>火傷</color>を付与する。",
+        "zh": "攻击敌人,并赋予目标<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>。"
+      },
+      "icon": "Skill_First_4014005"
+    },
+    {
+      "name": {
+        "en": "Heavy Slash",
+        "kr": "육중한 난격",
+        "jp": "ずっしりとした乱撃",
+        "zh": "沉重猛击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and grants <color=#28d9ed>Burned</color> for <color=#28d9ed>3</color> turns.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>3턴</color> 동안 대상에게 <color=#28d9ed>화상</color>을 부여합니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>3ターン</color>の間、対象に<color=#28d9ed>火傷</color>を付与する。",
+        "zh": "攻击全体敌人,并赋予目标<color=#28d9ed>3回合</color>的<color=#28d9ed>烧伤</color>。"
+      },
+      "icon": "Skill_Second_4014005"
+    },
+    {
+      "name": {
+        "en": "Furnace of Madness",
+        "kr": "광기의 불구덩이",
+        "jp": "狂気の炎",
+        "zh": "疯狂火狱"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and <color=#28d9ed>detonates</color> all Burned stacks on the target.",
+        "kr": "적 전체를 공격하고 대상의 화상을 모두 <color=#28d9ed>폭발</color>시킵니다.",
+        "jp": "敵全体にダメージを与え、対象の火傷をすべて<color=#28d9ed>破裂</color>させる。",
+        "zh": "解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>,攻击全体敌人。并引爆目标身上的烧伤效果。"
+      },
+      "icon": "Skill_Ultimate_4014005"
+    },
+    {
+      "name": {
+        "en": "Crucible of the Abomination Hunter",
+        "kr": "흉물 사냥꾼의 도가니",
+        "jp": "凶悪な狩人のるつぼ",
+        "zh": "凶兽猎人的炼狱"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt battle start, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color> and inflicts 2 Unremovable <color=#28d9ed>Burns</color> on all enemies for <color=#28d9ed>1</color> turns (ignores Resilience and Immunity).\\n\\nIf HP ><color=#28d9ed>80%</color>, does not take WG damage.\\n\\nAt the end of a non-Defense enemy's turn, inflicts <color=#28d9ed>Burn</color> for <color=#28d9ed>2</color> turns.",
+        "kr": "(패시브 효과)\\n전투 개시 시점에 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가하고, 적 전체에게는 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color> 2개를 부여합니다. (대상의 효과저항 및 면역 무시)\\n\\n체력이 <color=#28d9ed>80%</color>를 초과한다면 WG 피해를 받지 않습니다.\\n\\n방어형이 아닌 적 턴 종료 시 대상에게 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>100%</color>増加させ、敵全体に<color=#28d9ed>1</color>ターンの間解除不可の<color=#28d9ed>火傷</color>×2を付与する(効果抵抗・免疫無視)。\\n\\nHPが<color=#28d9ed>80%</color>を超える場合、WGダメージを受けません。\\n\\n防御型以外の敵ターン終了時、対象に<color=#28d9ed>2</color>ターンの間<color=#28d9ed>火傷</color>を付与する。",
+        "zh": "(被动效果)\\n战斗开始时,自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>100%</color>,并对敌方全体施加2个不可解除的<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>1</color>回合(无视效果抵抗与免疫)。\\n\\n当自身HP><color=#28d9ed>80%</color>时,不会受到WG伤害。\\n\\n非防御型敌人回合结束时,对目标附加<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2</color>回合。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Flames",
+        "kr": "화염의 탑의 가호",
+        "jp": "火炎の塔の加護",
+        "zh": "火焰之塔的庇佑"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 10 enemy actions.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable Damage Reduction to the caster for 5 turns and recovers Weakness Gauge by 30%. Enraged lasts for 5 turns.\\n\\n<color=#28d9ed>Harvest Time</color>: Used when Enraged ends.\\nRemoves all enemy Enhancement Effects and inflicts instant death.\\nEnemies killed by this skill cannot Resurrected or Revived.",
+        "kr": "적이 10회 행동할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 피해 감소 효과를 5턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 5턴 동안 유지됩니다.\\n\\n<color=#28d9ed>갈무리의 시간</color> : 광폭화 종료 시 사용.\\n적 전체의 강화 효과를 모두 해제하고 모두 사망합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "jp": "敵が10回行動するごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color> : 自分に解除不可能なダメージDOWN効果を5ターンの間付与し、WG30%を回復する。狂暴化は5ターンの間継続する。\\n\\n<color=#28d9ed>【片づけの時間】</color> : 狂暴化終了時に使用する。\\n敵全体の強化効果をすべて解除し、すべて死亡させる。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "zh": "每当敌人行动10次,转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的承受伤害降低效果,持续5回合,并使WG恢复30%。狂暴化持续5回合。\\n\\n<color=#28d9ed>收割时刻</color>:狂暴化结束时发动。\\n解除全体敌人的所有强化效果并使其立即死亡。\\n被此技能击杀的敌人无法复活与苏醒。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

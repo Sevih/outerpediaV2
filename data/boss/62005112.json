@@ -1,0 +1,124 @@
+{
+  "id": "62005112",
+  "Name": {
+    "en": "Beth",
+    "kr": "베스",
+    "jp": "ベス",
+    "zh": "贝丝"
+  },
+  "Surname": {
+    "en": "Archdemon's Adorable Minion",
+    "kr": "마왕의 귀여운 권속",
+    "jp": "遊び大好き魔王の眷属♪",
+    "zh": "魔王的可爱眷属"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 155,
+  "icons": "2000025",
+  "BuffImmune": "BLEED",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 75F",
+      "kr": "물의 탑 75층",
+      "jp": "水の塔75階",
+      "zh": "水之塔第75层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40212075",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Beware the Scissor Girl",
+        "kr": "가위질 소녀 주의보",
+        "jp": "チョキチョキ注意報",
+        "zh": "裁缝少女的警报"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to grant the caster increased <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color>.\\nDeals <color=#28d9ed>3%</color> of the target's Max Health as fixed damage if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 대상 최대 체력의 <color=#28d9ed>3%</color> 만큼 고정 피해를 입힙니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n対象が<color=#28d9ed>出血</color>状態の場合、対象の最大HPの<color=#28d9ed>3%</color>の固定ダメージを与える。",
+        "zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率使自身<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n若目标处于<color=#28d9ed>出血</color>状态,则造成相当于目标生命值上限<color=#28d9ed>3%</color>的固定伤害。"
+      },
+      "icon": "Skill_First_2000025"
+    },
+    {
+      "name": {
+        "en": "Surprise!",
+        "kr": "깜짝 놀랐지?",
+        "jp": "ビックリした?",
+        "zh": "吓了一大跳吧?"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>1 turn(s)</color>.\\nIncreases damage dealt if the caster has increased <color=#28d9ed>Penetration</color>.",
+        "kr": "적 전체를 공격하고 대상에게 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>출혈</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n자신의 <color=#28d9ed>관통력</color>이 증가한 상태라면 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>60%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n自分の<color=#28d9ed>貫通力</color>がUPした状態の場合、ダメージがUPする。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>60%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>1回合</color>。\\n若自身的<color=#28d9ed>穿透力</color>效果处于提升状态,则使伤害提升。"
+      },
+      "icon": "Skill_Second_2000025"
+    },
+    {
+      "name": {
+        "en": "A Present for You!",
+        "kr": "널 위한 선물이야!",
+        "jp": "ぷれぜんとあげるー!",
+        "zh": "专属于你的礼物!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy. Deals significantly increased damage if the caster's <color=#28d9ed>Penetration</color> is currently increased, and deals <color=#28d9ed>5%</color> of the target's Max Health as fixed damage if the target is <color=#28d9ed>Bleeding</color>. After using this skill, has a <color=#28d9ed>80%</color> chance to increase the caster's <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color> and inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격합니다. 자신의 <color=#28d9ed>관통력</color>이 증가한 상태라면 피해가 크게 증가하고, 대상이 <color=#28d9ed>출혈</color> 상태라면 대상 최대 체력의 <color=#28d9ed>5%</color> 만큼 고정 피해를 입힙니다. 스킬 사용 후 <color=#28d9ed>80%</color> 확률로 자신의 <color=#28d9ed>관통력</color>이 <color=#28d9ed>2턴</color> 동안 증가하고, 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "jp": "敵単体にダメージを与える。自分の<color=#28d9ed>貫通力</color>がUPした状態の場合、ダメージが大幅にUPし、対象が<color=#28d9ed>出血</color>状態の場合、対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。スキル使用後、<color=#28d9ed>80%</color>の確率で自分の<color=#28d9ed>貫通力</color>が<color=#28d9ed>2ターン</color>の間UPし、対象に<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人。若自身的<color=#28d9ed>穿透力</color>处于提升状态,则使伤害大幅提升,且若目标处于<color=#28d9ed>出血</color>状态,则造成相当于目标生命值上限<color=#28d9ed>5%</color>的固定伤害。\\n使用技能后,有<color=#28d9ed>80%</color>的几率使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>,并对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000025"
+    },
+    {
+      "name": {
+        "en": "Sharp Fangs",
+        "kr": "뾰족한 송곳니",
+        "jp": "鋭い牙",
+        "zh": "尖尖的虎牙"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nGrants increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> to the caster for <color=#28d9ed>3 turns</color> at the start of battle. When scoring a critical hit, grants increased <color=#28d9ed>Attack</color> to the caster for 2 turns. (All effects are Irremovable)",
+        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color> 및 <color=#28d9ed>치명 피해</color>를 증가시키며, 치명 공격 성공 시 자신에게 <color=#28d9ed>공격력</color>을 2턴 동안 증가시킵니다. (모든 효과는 해제 불가)",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分の<color=#28d9ed>会心率</color>と<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>3ターン</color>の間UPさせる。会心が発生した場合、自分の<color=#28d9ed>攻撃力</color>を2ターンのUPさせる。すべての効果は解除されない。",
+        "zh": "(被动效果)\\n战斗开始时,使<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>。成功发动暴击时,使自身的<color=#28d9ed>攻击力</color>提升,持续2回合。(所有效果无法解除)"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Water Tower",
+        "kr": "물의 탑의 가호",
+        "jp": "水の塔の加護",
+        "zh": "水之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

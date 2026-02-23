@@ -1,0 +1,103 @@
+{
+  "id": "5040015",
+  "Name": {
+    "en": "Sacred Priest of Waves",
+    "kr": "신성 사제 파도",
+    "jp": "神聖司祭〈波〉",
+    "zh": "神圣祭司巨浪"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 40,
+  "icons": "4003071",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 1F",
+      "kr": "빛의 탑 1층",
+      "jp": "光の塔 1階",
+      "zh": "光之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Geyser",
+        "kr": "물기둥",
+        "jp": "水柱",
+        "zh": "水柱"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff</color> from the target.",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Water"
+    },
+    {
+      "name": {
+        "en": "Roaring Waves",
+        "kr": "휘몰아치는 파도",
+        "jp": "打ち寄せる波",
+        "zh": "巨浪滔天"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>25%</color> chance to inflict reduced <color=#28d9ed>Speed</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 감소시킵니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Water"
+    },
+    {
+      "name": {
+        "en": "Ocean's Fury",
+        "kr": "대양의 분노",
+        "jp": "大洋の激怒",
+        "zh": "大海之怒"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and increases the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>10%</color>. After attacking, has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Frozen</color> on enemies that have a <color=#28d9ed>debuff</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다. 공격 후 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>약화 효과</color>를 보유한 적을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。攻撃後、<color=#28d9ed>弱体効果</color>がある敵単体に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并使全体友军的<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>10%</color>。攻击后,有<color=#28d9ed>50%</color>的几率使附带<color=#28d9ed>弱化效果</color>的敌人陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Water"
+    },
+    {
+      "name": {
+        "en": "Divine Blessing",
+        "kr": "신의 가호",
+        "jp": "神の恩恵",
+        "zh": "神的庇护"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of the turn, removes <color=#28d9ed>1</color> <color=#28d9ed>debuff</color> from the caster.",
+        "kr": "(패시브 효과)\\n턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.",
+        "jp": "(パッシブ効果)\\nターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "zh": "(被动效果)\\n回合开始时,解除自身附带的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    }
+  ]
+}

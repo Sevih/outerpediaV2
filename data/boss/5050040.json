@@ -1,0 +1,124 @@
+{
+  "id": "5050040",
+  "Name": {
+    "en": "Eva",
+    "kr": "에바",
+    "jp": "エヴァ",
+    "zh": "艾娃"
+  },
+  "Surname": {
+    "en": "Faithful Automaton",
+    "kr": "충성스런 자동인형",
+    "jp": "主に忠実なオートマタ",
+    "zh": "忠诚的机械人偶"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Dark",
+  "level": 72,
+  "icons": "2000009",
+  "BuffImmune": "BT_AGGRO",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 16F",
+      "kr": "암흑의 탑 16층",
+      "jp": "闇の塔 16階",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242016",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Firing L.E.N.S.",
+        "kr": "렌즈를 날립니다.",
+        "jp": "レンズを発射する。",
+        "zh": "L.E.N.S.投射。"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>40%</color>의 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000009"
+    },
+    {
+      "name": {
+        "en": "Healing.",
+        "kr": "치유합니다.",
+        "jp": "治療を開始する。",
+        "zh": "治愈。"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Heals the selected ally's Health by <color=#28d9ed>40%</color>.",
+        "kr": "선택한 아군의 체력을 <color=#28d9ed>40%</color> 회복시킵니다.",
+        "jp": "味方単体のHPを<color=#28d9ed>40%</color>回復させる。",
+        "zh": "使所选友军的生命值恢复<color=#28d9ed>40%</color>。"
+      },
+      "icon": "Skill_Second_2000009"
+    },
+    {
+      "name": {
+        "en": "Generating Boundary.",
+        "kr": "결계를 생성합니다.",
+        "jp": "結界を生成する。",
+        "zh": "生成结界。"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Heals all allies's Health by <color=#28d9ed>35%</color> and grants a <color=#28d9ed>Barrier</color> that absorbs <color=#28d9ed>1500</color> damage for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "아군 전체의 체력을 <color=#28d9ed>35%</color> 회복시키고, <color=#28d9ed>1500</color>의 <color=#28d9ed>실드</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "jp": "味方全体のHPを<color=#28d9ed>35%</color>回復させ、<color=#28d9ed>1500</color>の<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "使全体友军的生命值恢复<color=#28d9ed>35%</color>,并获得<color=#28d9ed>1500</color><color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000009"
+    },
+    {
+      "name": {
+        "en": "Ahoy!",
+        "kr": "아호이!",
+        "jp": "あほい!",
+        "zh": "啊嗨!"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nWhen defeating an enemy, grants increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>1 turn</color>, then grants an extra turn.",
+        "kr": "(패시브 효과)\\n적 처치 시 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>1턴</color>동안 증가시킨 후 추가 턴을 획득 합니다.",
+        "jp": "(パッシブ効果)\\n敵を倒した時、<color=#28d9ed>会心率</color>と<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>1ターン</color>の間UPさせた後、追加ターンを獲得する。",
+        "zh": "(被动效果)\\n击杀敌人时,使<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>1回合</color>后,获得额外回合。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}
