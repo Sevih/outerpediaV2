@@ -10966,5 +10966,101 @@
         "DMG_INC": 0.0
       }
     }
+  },
+  "2700003": {
+    "info": {
+      "id": "2700003",
+      "class": "CCT_RANGER",
+      "subclass": "TACTICIAN",
+      "element": "CET_WATER",
+      "star": "3"
+    },
+    "premium": {
+      "skill_23": "372",
+      "buffID": "core_passive_2star_ablity_atk",
+      "stat": "ATK",
+      "applyingType": "OAT_RATE",
+      "rawValue": 102
+    },
+    "steps": {
+      "lv1_ev0": {
+        "ATK": 75,
+        "DEF": 34,
+        "HP": 519,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 11,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 7
+      },
+      "lv20_ev1": {
+        "ATK": 205,
+        "DEF": 92,
+        "HP": 1096,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 30,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 20
+      },
+      "lv40_ev2": {
+        "ATK": 343,
+        "DEF": 154,
+        "HP": 1705,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 50,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 34
+      },
+      "lv60_ev3": {
+        "ATK": 481,
+        "DEF": 216,
+        "HP": 2313,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 70,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 49
+      },
+      "lv80_ev4": {
+        "ATK": 619,
+        "DEF": 278,
+        "HP": 2921,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 90,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 63
+      },
+      "lv100_ev5": {
+        "ATK": 757,
+        "DEF": 341,
+        "HP": 3530,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 110,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 77
+      }
+    }
   }
 }

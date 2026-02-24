@@ -7,7 +7,7 @@ export async function run() {
   const script = join(PATHS.parserV3, 'extract_character_stats.py');
 
   // Skip gracefully if datamine is not available (e.g. on server)
-  if (!existsSync(PATHS.parserV3) || !existsSync(script)) {
+  if (!existsSync(PATHS.parserV3) || !existsSync(script) || !existsSync(PATHS.extractedAssets)) {
     const outputExists = existsSync(join(PATHS.generated, 'character-stats.json'));
     console.log(`  Datamine not available, skipping Python extraction`);
     if (outputExists) {
