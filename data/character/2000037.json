@@ -22,7 +22,9 @@
       "prio": 1
     }
   },
-  "tags": ["free"],
+  "tags": [
+    "free"
+  ],
   "Chain_Type": "Finish",
   "gift": "Craftwork",
   "video": "znqtUpXMza8",
@@ -82,27 +84,72 @@
         "5_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% effect chance"],
-        "3_jp": ["効果発生率+10%"],
-        "3_kr": ["효과 발동 확률 +10%"],
-        "3_zh": ["效果触发几率+10%"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+10% damage","+10% effect chance"],
-        "5_jp": ["ダメージ+10%","効果発生率+10%"],
-        "5_kr": ["피해량 +10%","효과 발동 확률 +10%"],
-        "5_zh": ["伤害量+10%","效果触发几率+10%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+10%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "3_zh": [
+          "效果触发几率+10%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+10% damage",
+          "+10% effect chance"
+        ],
+        "5_jp": [
+          "ダメージ+10%",
+          "効果発生率+10%"
+        ],
+        "5_kr": [
+          "피해량 +10%",
+          "효과 발동 확률 +10%"
+        ],
+        "5_zh": [
+          "伤害量+10%",
+          "效果触发几率+10%"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_CALL_BACKUP","BT_CALL_BACKUP_2"],
-      "debuff": ["BT_AGGRO"],
+      "buff": [
+        "BT_CALL_BACKUP",
+        "BT_CALL_BACKUP_2"
+      ],
+      "debuff": [
+        "BT_AGGRO"
+      ],
       "offensive": true,
       "target": "mono",
       "burnEffect": {
@@ -169,24 +216,63 @@
         "5_zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>2</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。"
       },
       "enhancement": {
-        "2": ["Enhances Barrier strength"],
-        "2_jp": ["シールド強化"],
-        "2_kr": ["실드 강화"],
-        "2_zh": ["护盾强化"],
-        "3": ["Enhances Barrier strength"],
-        "3_jp": ["シールド強化"],
-        "3_kr": ["실드 강화"],
-        "3_zh": ["护盾强化"],
-        "4": ["Enhances Barrier strength"],
-        "4_jp": ["シールド強化"],
-        "4_kr": ["실드 강화"],
-        "4_zh": ["护盾强化"],
-        "5": ["Enhances Barrier strength","+1 debuff removed"],
-        "5_jp": ["シールド強化","弱体効果解除+1"],
-        "5_kr": ["실드 강화","약화 효과 해제 수량 +1"],
-        "5_zh": ["护盾强化","弱化效果解除数量+1"]
+        "2": [
+          "Enhances Barrier strength"
+        ],
+        "2_jp": [
+          "シールド強化"
+        ],
+        "2_kr": [
+          "실드 강화"
+        ],
+        "2_zh": [
+          "护盾强化"
+        ],
+        "3": [
+          "Enhances Barrier strength"
+        ],
+        "3_jp": [
+          "シールド強化"
+        ],
+        "3_kr": [
+          "실드 강화"
+        ],
+        "3_zh": [
+          "护盾强化"
+        ],
+        "4": [
+          "Enhances Barrier strength"
+        ],
+        "4_jp": [
+          "シールド強化"
+        ],
+        "4_kr": [
+          "실드 강화"
+        ],
+        "4_zh": [
+          "护盾强化"
+        ],
+        "5": [
+          "Enhances Barrier strength",
+          "+1 debuff removed"
+        ],
+        "5_jp": [
+          "シールド強化",
+          "弱体効果解除+1"
+        ],
+        "5_kr": [
+          "실드 강화",
+          "약화 효과 해제 수량 +1"
+        ],
+        "5_zh": [
+          "护盾强化",
+          "弱化效果解除数量+1"
+        ]
       },
-      "buff": ["BT_REMOVE_DEBUFF","BT_SHIELD_BASED_CASTER"],
+      "buff": [
+        "BT_REMOVE_DEBUFF",
+        "BT_SHIELD_BASED_CASTER"
+      ],
       "debuff": [],
       "offensive": false,
       "target": "mono"
@@ -222,27 +308,69 @@
         "5_zh": "攻击全体敌人,并在<color=#28d9ed>3</color>回合内提高我方全体<color=#28d9ed>防御力</color>与自身<color=#28d9ed>效果命中</color>。\\n攻击后,驱散敌方全体<color=#28d9ed>1</color>个增益效果。\\n该效果无视目标<color=#28d9ed>效果抵抗</color>。"
       },
       "enhancement": {
-        "2": ["Enhances Buff Removal (Ignores Resilience)","+1 Weakness Gauge damage"],
-        "2_jp": ["強化解除効果UP(効果抵抗無視)","WGダメージ+1"],
-        "2_kr": ["강화 해제 효과 증가 (효과 저항 무시)","WG 감소량 +1"],
-        "2_zh": ["强化解除效果提升(无视效果抵抗)","WG降低量+1"],
-        "3": ["+10% damage"],
-        "3_jp": ["ダメージ+10%"],
-        "3_kr": ["피해량 +10%"],
-        "3_zh": ["伤害量+10%"],
-        "4": ["+1 turn effect duration"],
-        "4_jp": ["効果ターン+1ターン"],
-        "4_kr": ["효과 지속 +1턴"],
-        "4_zh": ["效果持续时间+1回合"],
-        "5": ["+20% damage"],
-        "5_jp": ["ダメージ+20%"],
-        "5_kr": ["피해량 +20%"],
-        "5_zh": ["伤害量+20%"]
+        "2": [
+          "Enhances Buff Removal (Ignores Resilience)",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "強化解除効果UP(効果抵抗無視)",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "강화 해제 효과 증가 (효과 저항 무시)",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "强化解除效果提升(无视效果抵抗)",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4": [
+          "+1 turn effect duration"
+        ],
+        "4_jp": [
+          "効果ターン+1ターン"
+        ],
+        "4_kr": [
+          "효과 지속 +1턴"
+        ],
+        "4_zh": [
+          "效果持续时间+1回合"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
       },
       "cd": "4",
       "wgr": 2,
-      "buff": ["BT_STAT|ST_DEF","BT_STAT|ST_BUFF_CHANCE"],
-      "debuff": ["BT_REMOVE_BUFF","BT_AGGRO"],
+      "buff": [
+        "BT_STAT|ST_DEF",
+        "BT_STAT|ST_BUFF_CHANCE"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_AGGRO"
+      ],
       "offensive": true,
       "target": "multi"
     },
@@ -277,34 +405,78 @@
         "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
       "wgr_dual": 1,
       "cd": null,
-      "buff": ["BT_STAT|ST_DEF"],
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [],
-      "dual_debuff": ["BT_AGGRO"]
+      "dual_debuff": [
+        "BT_AGGRO"
+      ]
     }
   },
   "hasCoreFusion": true,

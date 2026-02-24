@@ -1,0 +1,644 @@
+{
+  "ID": "2700003",
+  "Fullname": "Core Fusion Snow",
+  "Fullname_jp": "コアフュージョン スノー",
+  "Fullname_kr": "코어 융합 스노우",
+  "Fullname_zh": "核心融合 雪诺",
+  "VoiceActor": "VA. Erin Yvette",
+  "VoiceActor_jp": "CV. 阿澄佳奈",
+  "VoiceActor_kr": "CV. 김가령",
+  "VoiceActor_zh": "CV. 阿澄佳奈",
+  "Rarity": 3,
+  "Element": "Water",
+  "Class": "Ranger",
+  "SubClass": "Tactician",
+  "gift": "Luxury",
+  "transcend": {
+    "1": null,
+    "2": null,
+    "3": "ATK DEF HP +10%",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\nDMG Incr +2%\nChain Passive WG reduction +1",
+    "4_1_jp": "ATK DEF HP +16%\nダメージ+2%\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n피해 증가 +2%\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n造成伤害提升2%\n连携被动技能的WG降低量+1",
+    "4_2": "ATK DEF HP +19%",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\nIn the Skyward Tower, Penetration +50%",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n飛天の塔での貫通力50%UP",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n비천의 탑에서 자신 관통력 +50%",
+    "5_1_zh": "ATK DEF HP +22%\n解锁爆发第3阶段\n在飞天之塔中,自身贯穿力+50%。",
+    "5_2": "ATK DEF HP +25%",
+    "5_3": "ATK DEF HP +28%",
+    "6": "ATK DEF HP +30%\nDMG Incr +2%\nOn entry, AP +25",
+    "6_jp": "ATK DEF HP +30%\nダメージ+2%\n戦闘開始時、AP+25",
+    "6_kr": "ATK DEF HP +30%\n피해 증가 +2%\n입장 시 AP +25",
+    "6_zh": "ATK DEF HP +30%\n造成伤害提升2%\n入场时AP+25"
+  },
+  "skills": {
+    "SKT_FIRST": {
+      "NameIDSymbol": "351",
+      "IconName": "Skill_First_2000003",
+      "SkillType": "SKT_FIRST",
+      "name": "Icicle Arrow",
+      "name_jp": "アイシクルアロー",
+      "name_kr": "아이시클 애로우",
+      "name_zh": "冰锥箭",
+      "true_desc": "Attacks an enemy and has a <color=#28d9ed>60%</color> chance to decrease the target's Priority by <color=#28d9ed>5%</color>.\\nIf the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、<color=#28d9ed>60%</color>の確率で対象の行動ゲージを<color=#28d9ed>-5%</color>DOWNさせる。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "적을 공격하고 <color=#28d9ed>60%</color> 확률로 행동 게이지를 <color=#28d9ed>-5%</color> 감소시킵니다.\\n대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+      "true_desc_zh": "攻击敌人,并以<color=#28d9ed>60%</color>的概率使目标的行动值减少<color=#28d9ed>-5%</color>。\\n若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and has a <color=#28d9ed>60%</color> chance to decrease the target's Priority by <color=#28d9ed>5%</color>.\\nIf the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "1_jp": "敵単体にダメージを与え、<color=#28d9ed>60%</color>の確率で対象の行動ゲージを<color=#28d9ed>-5%</color>DOWNさせる。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>60%</color> 확률로 행동 게이지를 <color=#28d9ed>-5%</color> 감소시킵니다.\\n대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "1_zh": "攻击敌人,并以<color=#28d9ed>60%</color>的概率使目标的行动值减少<color=#28d9ed>-5%</color>。\\n若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+        "2": "Attacks an enemy and has a <color=#28d9ed>60%</color> chance to decrease the target's Priority by <color=#28d9ed>5%</color>.\\nIf the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>60%</color>の確率で対象の行動ゲージを<color=#28d9ed>-5%</color>DOWNさせる。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>60%</color> 확률로 행동 게이지를 <color=#28d9ed>-5%</color> 감소시킵니다.\\n대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "2_zh": "攻击敌人,并以<color=#28d9ed>60%</color>的概率使目标的行动值减少<color=#28d9ed>-5%</color>。\\n若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+        "3": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to decrease the target's Priority by <color=#28d9ed>5%</color>.\\nIf the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象の行動ゲージを<color=#28d9ed>-5%</color>DOWNさせる。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 행동 게이지를 <color=#28d9ed>-5%</color> 감소시킵니다.\\n대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "3_zh": "攻击敌人,并以<color=#28d9ed>80%</color>的概率使目标的行动值减少<color=#28d9ed>-5%</color>。\\n若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+        "4": "Attacks an enemy and has a <color=#28d9ed>80%</color> chance to decrease the target's Priority by <color=#28d9ed>5%</color>.\\nIf the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で対象の行動ゲージを<color=#28d9ed>-5%</color>DOWNさせる。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>80%</color> 확률로 행동 게이지를 <color=#28d9ed>-5%</color> 감소시킵니다.\\n대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "4_zh": "攻击敌人,并以<color=#28d9ed>80%</color>的概率使目标的行动值减少<color=#28d9ed>-5%</color>。\\n若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+        "5": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to decrease the target's Priority by <color=#28d9ed>15%</color>.\\nIf the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の行動ゲージを<color=#28d9ed>-15%</color>DOWNさせる。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 행동 게이지를 <color=#28d9ed>-15%</color> 감소시킵니다.\\n대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "5_zh": "攻击敌人,并以<color=#28d9ed>100%</color>的概率使目标的行动值减少<color=#28d9ed>-15%</color>。\\n若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。"
+      },
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+20% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+20%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +20%"
+        ],
+        "3_zh": [
+          "效果触发几率+20%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+20% effect chance",
+          "-10% Priority"
+        ],
+        "5_jp": [
+          "効果発生率+20%",
+          "行動ゲージ10%DOWN"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +20%",
+          "행동 게이지 -10%"
+        ],
+        "5_zh": [
+          "效果触发几率+20%",
+          "行动值-10%"
+        ]
+      },
+      "wgr": 1,
+      "cd": null,
+      "buff": [],
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_SECOND": {
+      "NameIDSymbol": "352",
+      "IconName": "Skill_Second_2000003",
+      "SkillType": "SKT_SECOND",
+      "name": "Snow Break",
+      "name_jp": "スノーブレイク",
+      "name_kr": "스노우 브레이크",
+      "name_zh": "雪之破击",
+      "true_desc": "Attacks an enemy and inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color>.\\nAfter attacking, increases the caster's Priority by <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and increases by <color=#28d9ed>50%</color> if the target is <color=#28d9ed>Frozen</color>.",
+      "true_desc_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n攻撃後、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。\\n対象が<color=#28d9ed>凍結</color>状態なら、ダメージが<color=#28d9ed>50%</color>UPする。",
+      "true_desc_kr": "적을 공격하고 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n공격 후 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가하고 대상이 <color=#28d9ed>빙결</color> 상태라면 피해가 <color=#28d9ed>50%</color> 증가합니다.",
+      "true_desc_zh": "攻击敌人,使其陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>。\\n攻击后,自身行动值增加<color=#28d9ed>10%</color>。\\n自身<color=#28d9ed>速度</color>越高,伤害越高;若目标处于<color=#28d9ed>冻结</color>状态,伤害提高<color=#28d9ed>50%</color>。",
+      "true_desc_levels": {
+        "1": "Attacks an enemy and inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color>.\\nAfter attacking, increases the caster's Priority by <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and increases by <color=#28d9ed>50%</color> if the target is <color=#28d9ed>Frozen</color>.",
+        "1_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n攻撃後、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。\\n対象が<color=#28d9ed>凍結</color>状態なら、ダメージが<color=#28d9ed>50%</color>UPする。",
+        "1_kr": "적을 공격하고 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n공격 후 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가하고 대상이 <color=#28d9ed>빙결</color> 상태라면 피해가 <color=#28d9ed>50%</color> 증가합니다.",
+        "1_zh": "攻击敌人,使其陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>。\\n攻击后,自身行动值增加<color=#28d9ed>10%</color>。\\n自身<color=#28d9ed>速度</color>越高,伤害越高;若目标处于<color=#28d9ed>冻结</color>状态,伤害提高<color=#28d9ed>50%</color>。",
+        "2": "Attacks an enemy and inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color>.\\nAfter attacking, increases the caster's Priority by <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and increases by <color=#28d9ed>50%</color> if the target is <color=#28d9ed>Frozen</color>.",
+        "2_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n攻撃後、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。\\n対象が<color=#28d9ed>凍結</color>状態なら、ダメージが<color=#28d9ed>50%</color>UPする。",
+        "2_kr": "적을 공격하고 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n공격 후 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가하고 대상이 <color=#28d9ed>빙결</color> 상태라면 피해가 <color=#28d9ed>50%</color> 증가합니다.",
+        "2_zh": "攻击敌人,使其陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>。\\n攻击后,自身行动值增加<color=#28d9ed>10%</color>。\\n自身<color=#28d9ed>速度</color>越高,伤害越高;若目标处于<color=#28d9ed>冻结</color>状态,伤害提高<color=#28d9ed>50%</color>。",
+        "3": "Attacks an enemy and inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color>.\\nAfter attacking, increases the caster's Priority by <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and increases by <color=#28d9ed>50%</color> if the target is <color=#28d9ed>Frozen</color>.",
+        "3_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n攻撃後、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。\\n対象が<color=#28d9ed>凍結</color>状態なら、ダメージが<color=#28d9ed>50%</color>UPする。",
+        "3_kr": "적을 공격하고 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n공격 후 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가하고 대상이 <color=#28d9ed>빙결</color> 상태라면 피해가 <color=#28d9ed>50%</color> 증가합니다.",
+        "3_zh": "攻击敌人,使其陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>。\\n攻击后,自身行动值增加<color=#28d9ed>10%</color>。\\n自身<color=#28d9ed>速度</color>越高,伤害越高;若目标处于<color=#28d9ed>冻结</color>状态,伤害提高<color=#28d9ed>50%</color>。",
+        "4": "Attacks an enemy and inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color>.\\nAfter attacking, increases the caster's Priority by <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and increases by <color=#28d9ed>50%</color> if the target is <color=#28d9ed>Frozen</color>.",
+        "4_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n攻撃後、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。\\n対象が<color=#28d9ed>凍結</color>状態なら、ダメージが<color=#28d9ed>50%</color>UPする。",
+        "4_kr": "적을 공격하고 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n공격 후 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가하고 대상이 <color=#28d9ed>빙결</color> 상태라면 피해가 <color=#28d9ed>50%</color> 증가합니다.",
+        "4_zh": "攻击敌人,使其陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>。\\n攻击后,自身行动值增加<color=#28d9ed>10%</color>。\\n自身<color=#28d9ed>速度</color>越高,伤害越高;若目标处于<color=#28d9ed>冻结</color>状态,伤害提高<color=#28d9ed>50%</color>。",
+        "5": "Attacks an enemy and inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color>.\\nAfter attacking, increases the caster's Priority by <color=#28d9ed>20%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and increases by <color=#28d9ed>50%</color> if the target is <color=#28d9ed>Frozen</color>.",
+        "5_jp": "敵単体にダメージを与え、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n攻撃後、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。\\n対象が<color=#28d9ed>凍結</color>状態なら、ダメージが<color=#28d9ed>50%</color>UPする。",
+        "5_kr": "적을 공격하고 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n공격 후 자신의 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가하고 대상이 <color=#28d9ed>빙결</color> 상태라면 피해가 <color=#28d9ed>50%</color> 증가합니다.",
+        "5_zh": "攻击敌人,使其陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>。\\n攻击后,自身行动值增加<color=#28d9ed>20%</color>。\\n自身<color=#28d9ed>速度</color>越高,伤害越高;若目标处于<color=#28d9ed>冻结</color>状态,伤害提高<color=#28d9ed>50%</color>。"
+      },
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+10% Priority",
+          "+10% damage"
+        ],
+        "5_jp": [
+          "行動ゲージ10%UP",
+          "ダメージ+10%"
+        ],
+        "5_kr": [
+          "행동 게이지 +10%",
+          "피해량 +10%"
+        ],
+        "5_zh": [
+          "行动值+10%",
+          "伤害量+10%"
+        ]
+      },
+      "cd": "4",
+      "wgr": 1,
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [
+        "BT_FREEZE"
+      ],
+      "offensive": true,
+      "target": "mono",
+      "burnEffect": {
+        "SKT_BURST_1": {
+          "effect": "Damage Increase\\nWG Reduction +1",
+          "effect_jp": "ダメージUP\\nWGダメージ+1",
+          "effect_kr": "피해 증가\\nWG 감소량+1",
+          "effect_zh": "伤害提升\\nWG降低量+1",
+          "cost": 80,
+          "level": 1,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_2": {
+          "effect": "Frozen Enhancement: Duration +1 turn (Ignores Resilience)",
+          "effect_jp": "凍結強化:+1ターン(効果抵抗無視)",
+          "effect_kr": "빙결 강화: 지속 시간 +1턴 (효과 저항 무시)",
+          "effect_zh": "冰冻强化:持续时间+1回合(无视效果抵抗)",
+          "cost": 120,
+          "level": 2,
+          "offensive": true,
+          "target": "mono"
+        },
+        "SKT_BURST_3": {
+          "effect": "Attacks all enemies\\nResets the Ultimate's cooldown\\nCaster Priority +20%",
+          "effect_jp": "敵全体攻撃\\n必殺技スキルターン初期化\\n自分の行動ゲージ20%UP",
+          "effect_kr": "적 전체 공격\\n필살기 쿨타임 초기화\\n자신 행동 게이지 +20%",
+          "effect_zh": "攻击全体敌人\\n重置必杀技冷却时间\\n自身行动值+20%",
+          "cost": 160,
+          "level": 3,
+          "offensive": true,
+          "target": "multi"
+        }
+      }
+    },
+    "SKT_ULTIMATE": {
+      "NameIDSymbol": "353",
+      "IconName": "Skill_Ultimate_2700003",
+      "SkillType": "SKT_ULTIMATE",
+      "name": "Glacial Rain",
+      "name_jp": "グレイシャルレイン",
+      "name_kr": "글레이셜 레인",
+      "name_zh": "冰川之雨",
+      "true_desc": "Before using the skill, increases the caster's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn</color> and attacks an enemy.\\nAfter attacking, inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color> and, if the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+      "true_desc_jp": "スキル使用前、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。\\n攻撃後、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "스킬 사용 전 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.\\n공격 후 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만들고 대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+      "true_desc_zh": "使用技能前,自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>后攻击敌人。\\n攻击后,使目标陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>;若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+      "true_desc_levels": {
+        "1": "Before using the skill, increases the caster's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn</color> and attacks an enemy.\\nAfter attacking, inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color> and, if the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "1_jp": "スキル使用前、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。\\n攻撃後、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "1_kr": "스킬 사용 전 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.\\n공격 후 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만들고 대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "1_zh": "使用技能前,自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>后攻击敌人。\\n攻击后,使目标陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>;若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+        "2": "Before using the skill, increases the caster's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn</color> and attacks an enemy.\\nAfter attacking, inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color> and, if the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "2_jp": "スキル使用前、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。\\n攻撃後、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "2_kr": "스킬 사용 전 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.\\n공격 후 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만들고 대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "2_zh": "使用技能前,自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>后攻击敌人。\\n攻击后,使目标陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>;若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+        "3": "Before using the skill, increases the caster's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn</color> and attacks an enemy.\\nAfter attacking, inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color> and, if the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "3_jp": "スキル使用前、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。\\n攻撃後、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "3_kr": "스킬 사용 전 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.\\n공격 후 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만들고 대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "3_zh": "使用技能前,自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>后攻击敌人。\\n攻击后,使目标陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>;若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+        "4": "Before using the skill, increases the caster's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn</color> and attacks an enemy.\\nAfter attacking, inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>1 turn(s)</color> and, if the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "4_jp": "スキル使用前、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。\\n攻撃後、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "4_kr": "스킬 사용 전 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.\\n공격 후 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만들고 대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "4_zh": "使用技能前,自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>后攻击敌人。\\n攻击后,使目标陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>1回合</color>;若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。",
+        "5": "Before using the skill, increases the caster's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn</color> and attacks an enemy.\\nAfter attacking, inflicts <color=#28d9ed>Frozen</color> for <color=#28d9ed>2 turn(s)</color> and, if the target is <color=#28d9ed>Fire</color>, decreases Priority by an additional <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>.",
+        "5_jp": "スキル使用前、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。\\n攻撃後、対象に<color=#28d9ed>凍結</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n対象が<color=#28d9ed>火属性</color>の場合、行動ゲージをさらに<color=#28d9ed>10%</color>DOWN させる。\\nこのスキルは、自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "5_kr": "스킬 사용 전 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.\\n공격 후 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만들고 대상이 <color=#28d9ed>화속성</color> 이라면 행동 게이지를 추가로 <color=#28d9ed>10%</color> 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
+        "5_zh": "使用技能前,自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>后攻击敌人。\\n攻击后,使目标陷入<color=#28d9ed>冻结</color>状态,持续<color=#28d9ed>2回合</color>;若目标为<color=#28d9ed>火属性</color>,则额外减少<color=#28d9ed>10%</color>行动值。\\n自身<color=#28d9ed>速度</color>越高,造成的伤害越高。"
+      },
+      "enhancement": {
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+20% damage"
+        ],
+        "4_jp": [
+          "ダメージ+20%"
+        ],
+        "4_kr": [
+          "피해량 +20%"
+        ],
+        "4_zh": [
+          "伤害量+20%"
+        ],
+        "5": [
+          "Increases Frozen duration by 1 turn"
+        ],
+        "5_jp": [
+          "凍結+1ターン"
+        ],
+        "5_kr": [
+          "빙결 지속 +1턴"
+        ],
+        "5_zh": [
+          "冰冻持续时间+1回合"
+        ]
+      },
+      "cd": "5",
+      "wgr": 2,
+      "buff": [
+        "BT_STAT|ST_SPEED"
+      ],
+      "debuff": [
+        "BT_FREEZE",
+        "BT_ACTION_GAUGE"
+      ],
+      "offensive": true,
+      "target": "mono"
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "NameIDSymbol": "354",
+      "IconName": "Skill_ChainPassive_Water_Finish",
+      "SkillType": "SKT_CHAIN_PASSIVE",
+      "name": "Chain Passive",
+      "name_jp": "チェーンパッシブ",
+      "name_kr": "체인 패시브",
+      "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and the caster's Skill Chain attacks always apply as if they have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color> and decreases the target's Priority by <color=#28d9ed>10%</color>.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPし、自分のチェーンスキルは常に有利属性として扱われる。\\n\\n<color=#ffd732>連携効果</color>: 自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPされ、対象の行動ゲージを<color=#28d9ed>-10%</color>DOWNさせる。",
+      "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 대상의 행동 게이지를 <color=#28d9ed>-10%</color> 감소시킵니다.",
+      "true_desc_zh": "<color=#ffd732>连锁同伴效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,且自身的连锁攻击始终视为属性克制。\\n\\n<color=#ffd732>协同攻击效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,并使目标的行动值减少<color=#28d9ed>-10%</color>。",
+      "true_desc_levels": {
+        "1": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and the caster's Skill Chain attacks always apply as if they have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color> and decreases the target's Priority by <color=#28d9ed>10%</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPし、自分のチェーンスキルは常に有利属性として扱われる。\\n\\n<color=#ffd732>連携効果</color>: 自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPされ、対象の行動ゲージを<color=#28d9ed>-10%</color>DOWNさせる。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 대상의 행동 게이지를 <color=#28d9ed>-10%</color> 감소시킵니다.",
+        "1_zh": "<color=#ffd732>连锁同伴效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,且自身的连锁攻击始终视为属性克制。\\n\\n<color=#ffd732>协同攻击效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,并使目标的行动值减少<color=#28d9ed>-10%</color>。",
+        "2": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and the caster's Skill Chain attacks always apply as if they have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color> and decreases the target's Priority by <color=#28d9ed>10%</color>.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPし、自分のチェーンスキルは常に有利属性として扱われる。\\n\\n<color=#ffd732>連携効果</color>: 自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPされ、対象の行動ゲージを<color=#28d9ed>-10%</color>DOWNさせる。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 대상의 행동 게이지를 <color=#28d9ed>-10%</color> 감소시킵니다.",
+        "2_zh": "<color=#ffd732>连锁同伴效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,且自身的连锁攻击始终视为属性克制。\\n\\n<color=#ffd732>协同攻击效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,并使目标的行动值减少<color=#28d9ed>-10%</color>。",
+        "3": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and the caster's Skill Chain attacks always apply as if they have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color> and decreases the target's Priority by <color=#28d9ed>10%</color>.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPし、自分のチェーンスキルは常に有利属性として扱われる。\\n\\n<color=#ffd732>連携効果</color>: 自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPされ、対象の行動ゲージを<color=#28d9ed>-10%</color>DOWNさせる。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 대상의 행동 게이지를 <color=#28d9ed>-10%</color> 감소시킵니다.",
+        "3_zh": "<color=#ffd732>连锁同伴效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,且自身的连锁攻击始终视为属性克制。\\n\\n<color=#ffd732>协同攻击效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,并使目标的行动值减少<color=#28d9ed>-10%</color>。",
+        "4": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and the caster's Skill Chain attacks always apply as if they have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color> and decreases the target's Priority by <color=#28d9ed>10%</color>.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPし、自分のチェーンスキルは常に有利属性として扱われる。\\n\\n<color=#ffd732>連携効果</color>: 自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPされ、対象の行動ゲージを<color=#28d9ed>-10%</color>DOWNさせる。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 대상의 행동 게이지를 <color=#28d9ed>-10%</color> 감소시킵니다.",
+        "4_zh": "<color=#ffd732>连锁同伴效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,且自身的连锁攻击始终视为属性克制。\\n\\n<color=#ffd732>协同攻击效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,并使目标的行动值减少<color=#28d9ed>-10%</color>。",
+        "5": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color>, and the caster's Skill Chain attacks always apply as if they have elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Speed</color> and decreases the target's Priority by <color=#28d9ed>10%</color>.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPし、自分のチェーンスキルは常に有利属性として扱われる。\\n\\n<color=#ffd732>連携効果</color>: 自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPされ、対象の行動ゲージを<color=#28d9ed>-10%</color>DOWNさせる。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 자신의 스킬 체인 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>속도</color>가 높을수록 피해량이 증가하고 대상의 행동 게이지를 <color=#28d9ed>-10%</color> 감소시킵니다.",
+        "5_zh": "<color=#ffd732>连锁同伴效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,且自身的连锁攻击始终视为属性克制。\\n\\n<color=#ffd732>协同攻击效果</color>:自身<color=#28d9ed>速度</color>越高,造成的伤害越高,并使目标的行动值减少<color=#28d9ed>-10%</color>。"
+      },
+      "enhancement": {
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
+      },
+      "wgr": 3,
+      "wgr_dual": 1,
+      "cd": null,
+      "buff": [
+        "BT_DMG_ELEMENT_SUPERIORITY"
+      ],
+      "debuff": [],
+      "offensive": true,
+      "target": "multi",
+      "dual_offensive": true,
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
+    }
+  },
+  "Chain_Type": "Join",
+  "rank": "C",
+  "rank_pvp": null,
+  "role": "support",
+  "skill_priority": {
+    "First": {
+      "prio": 0
+    },
+    "Second": {
+      "prio": 0
+    },
+    "Ultimate": {
+      "prio": 0
+    }
+  },
+  "fusionType": "core-fusion",
+  "originalCharacter": "2000003",
+  "isPermanent": true,
+  "fusionRequirements": {
+    "transcendence": 5,
+    "material": {
+      "id": "Fusion-Type Core",
+      "quantity": 300
+    }
+  },
+  "fusionLevels": [
+    {
+      "level": 11,
+      "requireItemID": "60001",
+      "skillUpgrades": {
+        "skill_1": {
+          "value": "300",
+          "level": null
+        },
+        "skill_2": {
+          "value": "1",
+          "level": null
+        },
+        "skill_3": {
+          "value": "1",
+          "level": null
+        },
+        "skill_4": {
+          "value": "1",
+          "level": null
+        },
+        "skill_23": {
+          "value": "1",
+          "level": "1"
+        }
+      }
+    },
+    {
+      "level": 12,
+      "requireItemID": "60001",
+      "skillUpgrades": {
+        "skill_1": {
+          "value": "150",
+          "level": null
+        },
+        "skill_2": {
+          "value": "2",
+          "level": null
+        },
+        "skill_3": {
+          "value": "2",
+          "level": null
+        },
+        "skill_4": {
+          "value": "2",
+          "level": null
+        },
+        "skill_23": {
+          "value": "2",
+          "level": "2"
+        }
+      }
+    },
+    {
+      "level": 13,
+      "requireItemID": "60001",
+      "skillUpgrades": {
+        "skill_1": {
+          "value": "150",
+          "level": null
+        },
+        "skill_2": {
+          "value": "3",
+          "level": null
+        },
+        "skill_3": {
+          "value": "3",
+          "level": null
+        },
+        "skill_4": {
+          "value": "3",
+          "level": null
+        },
+        "skill_23": {
+          "value": "3",
+          "level": "3"
+        }
+      }
+    },
+    {
+      "level": 14,
+      "requireItemID": "60001",
+      "skillUpgrades": {
+        "skill_1": {
+          "value": "150",
+          "level": null
+        },
+        "skill_2": {
+          "value": "4",
+          "level": null
+        },
+        "skill_3": {
+          "value": "4",
+          "level": null
+        },
+        "skill_4": {
+          "value": "4",
+          "level": null
+        },
+        "skill_23": {
+          "value": "4",
+          "level": "4"
+        }
+      }
+    },
+    {
+      "level": 15,
+      "requireItemID": "60001",
+      "skillUpgrades": {
+        "skill_1": {
+          "value": "150",
+          "level": null
+        },
+        "skill_2": {
+          "value": "5",
+          "level": null
+        },
+        "skill_3": {
+          "value": "5",
+          "level": null
+        },
+        "skill_4": {
+          "value": "5",
+          "level": null
+        },
+        "skill_23": {
+          "value": "5",
+          "level": "5"
+        }
+      }
+    }
+  ],
+  "tags": [
+    "core-fusion"
+  ]
+}
