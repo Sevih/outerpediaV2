@@ -1473,19 +1473,17 @@
     "mainStat_jp": "闇属性の対象の受ける ダメージDOWN",
     "mainStat_kr": "암속성 대상 받는 피해 감소",
     "mainStat_zh": "暗属性所受伤害降低",
-    "effect": "When <color=#28d9ed>Dragon Ruler's Breath</color> defeats an enemy, Health of all allies increases by 15%",
-    "effect_jp": "<color=#28d9ed>【竜王の息吹】</color>で敵を倒した時、味方全体のHPが+15%UPする。",
-    "effect_kr": "<color=#28d9ed>용왕의 숨결</color>로 적 처치 시 아군 전체의 체력 +15%",
+    "effect": "When <color=#28d9ed>Dragon Ruler's Breath</color> critical hits an enemy, Heals Health of all allies by 15%",
+    "effect_jp": "<color=#28d9ed>【竜王の息吹】</color>で会心ダメージを与えた場合、味方全体のHP +15%回復",
+    "effect_kr": "<color=#28d9ed>용왕의 숨결</color>로 치명 공격 시 아군 전체의 체력 +15%",
     "effect_zh": "使用<color=#28d9ed>龙王吐息击杀敌人</color>时,使全体友军的生命值+15%",
-    "effect10": "When using <color=#28d9ed>Doom Heralding Cry</color>, grants increased Defense to the wearer for 2 turn(s)",
-    "effect10_jp": "<color=#28d9ed>【滅亡をもたらす叫び】</color>使用時、自分の防御力が2ターンUPする。",
-    "effect10_kr": "<color=#28d9ed>멸망을 부르는 함성</color> 사용 시 자신의 방어력 2턴",
-    "effect10_zh": "使用<color=#28d9ed>灭亡呐喊</color>时,自身防御力2回合",
+    "effect10": "Self Max Health +35%",
+    "effect10_jp": "自分の最大HP+35%",
+    "effect10_kr": "자신 최대 체력 +35%",
+    "effect10_zh": "使自身恢复生命+35%",
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "B",
-    "buff": [
-      "BT_STAT|ST_DEF"
-    ],
+    "buff": [],
     "debuff": []
   },
   "2000064": {
@@ -2674,7 +2672,31 @@
     "effect10_zh": "受到攻击时,行动值提升+30%(2回合仅能触发1次)",
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "rank": "D",
-    "buff": ["BT_ACTION_GAUGE"],
+    "buff": [
+      "BT_ACTION_GAUGE"
+    ],
+    "debuff": []
+  },
+  "2700003": {
+    "name": "Frost Nova",
+    "name_jp": "フロストノヴァ",
+    "name_kr": "프로스트 노바",
+    "name_zh": "冰霜新星",
+    "mainStat": "Effectiveness (To: Fire)",
+    "mainStat_jp": "火属性の対象の効果命中",
+    "mainStat_kr": "화속성 대상 효과 적중",
+    "mainStat_zh": "火属性效果命中",
+    "effect": "Effectiveness +100%",
+    "effect_jp": "効果命中+100%",
+    "effect_kr": "효과 적중 +100%",
+    "effect_zh": "效果命中+100%",
+    "effect10": "If the target is a Boss, Penetration <color=#28d9ed>30%</color>",
+    "effect10_jp": "対象がボスモンスターの場合、貫通力<color=#28d9ed>30%</color>",
+    "effect10_kr": "대상이 보스인 경우 관통력 <color=#28d9ed>30%</color>",
+    "effect10_zh": "若目标为首领怪物,贯穿力提高<color=#28d9ed>30%</color>。",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "rank": "",
+    "buff": [],
     "debuff": []
   }
 }
