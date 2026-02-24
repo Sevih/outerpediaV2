@@ -11,6 +11,10 @@
   "rank": "S",
   "rank_pvp": "S",
   "role": "sustain",
+  "tags": [
+    "premium",
+    "ignore-defense"
+  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -22,7 +26,6 @@
       "prio": 2
     }
   },
-  "tags": ["premium"],
   "Chain_Type": "Join",
   "gift": "Science",
   "video": "zz0OHkP8y0I",
@@ -34,21 +37,24 @@
     "1": null,
     "2": null,
     "3": "ATK DEF HP +10%",
-    "4_1": "ATK DEF HP +16%\n+10% caster Priority when an ally scores a critical hit (Only once per turn)\nChain Passive Weakness Gauge reduction +1",
-    "4_1_jp": "ATK DEF HP +16%\n味方の攻撃で会心が発生時、\n自分の行動ゲージ+10%\n(1ターンに一度のみ発動)\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n아군 치명 공격 시 자신 행동 게이지 +10% (1턴에 1회)\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n友军发动暴击时,自身行动值+10%(1回合1次)\n连携被动的WG减少量+1",
+    "3_jp": "ATK DEF HP +10%",
+    "3_kr": "ATK DEF HP +10%",
+    "3_zh": "ATK DEF HP +10%",
+    "4_1": "ATK DEF HP +16%\n+25% caster Priority when an ally scores a critical hit (Only once per turn)\nChain Passive Weakness Gauge reduction +1",
+    "4_1_jp": "ATK DEF HP +16%\n味方が会心発生時、自分の行動ゲージ+25% (1ターンに一度のみ発動)\nチェーンパッシブのWGダメージ+1",
+    "4_1_kr": "ATK DEF HP +16%\n아군 치명 공격 시 자신 행동 게이지 +25% (1턴에 1회)\n체인 패시브의 WG 감소량 +1",
+    "4_1_zh": "ATK DEF HP +16%\n友军发动暴击时,自身行动值+25%(1回合1次)\n连携被动的WG减少量+1",
     "4_2": "ATK DEF HP +19%",
-    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\n+50 Action Points at battle start",
-    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n戦闘開始時、AP+50",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 AP +50",
-    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n入场时AP+50",
+    "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\nAt the start of battle, increases <color=#28d9ed>Show Your Loyalty</color> duration by +1 turn for the caster\n+50 Action Points at battle start",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n戦闘開始時、自分に【忠義をみせろ】+1ターン\n戦闘開始時、AP+50",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 자신에게 충의를 보여라 +1턴\n입장 시 AP +50",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n入场时,自身表明你的忠心吧+1回合\n入场时AP+50",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\n+25% caster Priority when an ally scores a critical hit (Only once per turn)",
-    "6_jp": "ATK DEF HP +30%\n味方に会心が発生した場合\n自分の行動ゲージ+25%\n(1ターンに一度のみ発動)",
-    "6_kr": "ATK DEF HP +30%\n아군 치명 공격 시 자신 행동 게이지 +25% (1턴에 1회)",
-    "6_zh": "ATK DEF HP +30%\n友军发动暴击时,自身行动值+25%(1回合1次)"
+    "6": "ATK DEF HP +30%\nWhen an ally scores a critical hit, increases the caster's Priority by 25% (Only once per turn)\nWhen an ally is hit, increases the caster's Penetration by 10% (Max 3 stacks; increases only once even when hit by an attack that targets all enemies)",
+    "6_jp": "ATK DEF HP +30%\n味方が会心発生時、自分の行動ゲージ+25% (1ターンに1回のみ発動)\n味方がダメージを受けた場合、自分の貫通力10%UP (最大3回まで累積、全体攻撃を受けた場合でも1回のみUP)",
+    "6_kr": "ATK DEF HP +30%\n아군 치명 공격 시 자신 행동 게이지 +25% (1턴에 1회)\n아군 피격 시 자신의 관통력 +10%(최대 3회 누적, 전체 공격 피격 시에도 1회만 증가)",
+    "6_zh": "ATK DEF HP +30%\n友军发动暴击时,自身行动值+25%(1回合1次)\n友军受到攻击时,自身的穿透力+10%(最多叠加3次,受到全体攻击时也仅增加1次)"
   },
   "skills": {
     "SKT_FIRST": {
@@ -59,6 +65,10 @@
       "name_jp": "征服者の牙",
       "name_kr": "정복자의 송곳니",
       "name_zh": "征服者的利齿",
+      "true_desc": "Attacks an enemy and deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
+      "true_desc_jp": "敵単体にダメージを与え、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "적을 공격하고, 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+      "true_desc_zh": "攻击敌人,并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。",
       "true_desc_levels": {
         "1": "Attacks an enemy and deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
         "1_jp": "敵単体にダメージを与え、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
@@ -82,27 +92,72 @@
         "5_zh": "攻击敌人,并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% damage"],
-        "3_jp": ["ダメージ+10%"],
-        "3_kr": ["피해량 +10%"],
-        "3_zh": ["伤害量+10%"],
-        "4": ["+15% damage"],
-        "4_jp": ["ダメージ+15%"],
-        "4_kr": ["피해량 +15%"],
-        "4_zh": ["伤害量+15%"],
-        "5": ["+20% damage"],
-        "5_jp": ["ダメージ+20%"],
-        "5_kr": ["피해량 +20%"],
-        "5_zh": ["伤害量+20%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "+20% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "ダメージ+20%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "피해량 +20%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "伤害量+20%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_COOL3_CHARGE"],
-      "debuff": ["BT_REVERSE_HEAL_BASED_TARGET"],
+      "buff": [        
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_TARGET",
+        "BT_SEALED_RESURRECTION"
+      ],
       "offensive": true,
       "target": "mono",
       "burnEffect": {
@@ -117,10 +172,10 @@
           "target": "mono"
         },
         "SKT_BURST_2": {
-          "effect": "Damage dealt increases proportional to missing Health",
-          "effect_jp": "残りHPが低いほど\\nダメージUP",
-          "effect_kr": "잃은 체력에 비례하여 피해 증가",
-          "effect_zh": "伤害随损失生命值提升",
+          "effect": "Damage dealt increases proportional to missing Health\\nAll defeated enemies unable to Resurrect or Revive",
+          "effect_jp": "対象の残りHPが低いほどダメージUP\\n倒れた敵の復活及び蘇生不可",
+          "effect_kr": "잃은 체력에 비례하여 피해 증가\\n사망한 적 부활 및 소생 불가",
+          "effect_zh": "已损失生命值越多,伤害越高\\n被击败的敌人无法复活或复生",
           "cost": 120,
           "level": 2,
           "offensive": true,
@@ -146,51 +201,88 @@
       "name_jp": "滅亡をもたらす叫び",
       "name_kr": "멸망을 부르는 함성",
       "name_zh": "灭亡呐喊",
+      "true_desc": "Grants <color=#28d9ed>Show Your Loyalty</color> to the caster for <color=#28d9ed>2 turn(s)</color> and grants a <color=#28d9ed>Shield</color> to all allies except the caster for <color=#28d9ed>2 turn(s)</color>. Shield strength increases proportional to the caster's Max Health.\\nIncreases all allies' <color=#28d9ed>Penetration</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+      "true_desc_jp": "自分に<color=#28d9ed>【忠義をみせろ】</color>を<color=#28d9ed>2ターン</color>の間付与し、自分を除く味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>と<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+      "true_desc_kr": "자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color>를 부여하고 자신을 제외한 아군 전체에 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>방어력</color>을 증가시킵니다.",
+      "true_desc_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
       "true_desc_levels": {
-        "1": "Grants <color=#28d9ed>Show Your Loyalty!</color> and a <color=#28d9ed>Barrier</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>. Barrier strength increases proportional to the caster's Max Health.\\nIncreases <color=#28d9ed>Penetration</color> of all allies for <color=#28d9ed>2 turn(s)</color>.",
-        "1_jp": "自分を除く味方全体に<color=#28d9ed>【忠義をみせろ】</color>と<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
-        "1_kr": "자신을 제외한 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color> 및 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>을 증가시킵니다.",
-        "1_zh": "使除自身外全体友军获得<color=#28d9ed>表明你的忠心吧</color>和<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。",
-        "2": "Grants <color=#28d9ed>Show Your Loyalty!</color> and a <color=#28d9ed>Barrier</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>. Barrier strength increases proportional to the caster's Max Health.\\nIncreases <color=#28d9ed>Penetration</color> of all allies for <color=#28d9ed>2 turn(s)</color>.",
-        "2_jp": "自分を除く味方全体に<color=#28d9ed>【忠義をみせろ】</color>と<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
-        "2_kr": "자신을 제외한 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color> 및 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>을 증가시킵니다.",
-        "2_zh": "使除自身外全体友军获得<color=#28d9ed>表明你的忠心吧</color>和<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。",
-        "3": "Grants <color=#28d9ed>Show Your Loyalty!</color> and a <color=#28d9ed>Barrier</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>. Barrier strength increases proportional to the caster's Max Health.\\nIncreases <color=#28d9ed>Penetration</color> of all allies for <color=#28d9ed>2 turn(s)</color>.",
-        "3_jp": "自分を除く味方全体に<color=#28d9ed>【忠義をみせろ】</color>と<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
-        "3_kr": "자신을 제외한 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color> 및 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>을 증가시킵니다.",
-        "3_zh": "使除自身外全体友军获得<color=#28d9ed>表明你的忠心吧</color>和<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。",
-        "4": "Grants <color=#28d9ed>Show Your Loyalty!</color> and a <color=#28d9ed>Barrier</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>. Barrier strength increases proportional to the caster's Max Health.\\nIncreases <color=#28d9ed>Penetration</color> of all allies for <color=#28d9ed>2 turn(s)</color>.",
-        "4_jp": "自分を除く味方全体に<color=#28d9ed>【忠義をみせろ】</color>と<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
-        "4_kr": "자신을 제외한 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color> 및 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>을 증가시킵니다.",
-        "4_zh": "使除自身外全体友军获得<color=#28d9ed>表明你的忠心吧</color>和<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。",
-        "5": "Grants <color=#28d9ed>Show Your Loyalty!</color> and a <color=#28d9ed>Barrier</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>. Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.\\nIncreases <color=#28d9ed>Penetration</color> of all allies for <color=#28d9ed>2 turn(s)</color> and gains an <color=#28d9ed>extra turn</color>.",
-        "5_jp": "自分を除く味方全体に<color=#28d9ed>【忠義をみせろ】</color>と<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、<color=#28d9ed>追加ターン</color>を獲得する。",
-        "5_kr": "자신을 제외한 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color> 및 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>을 증가시킨 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
-        "5_zh": "使除自身外全体友军获得<color=#28d9ed>表明你的忠心吧</color>和<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身<color=#28d9ed>生命值上限</color>等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>后,获得<color=#28d9ed>额外回合</color>。"
+        "1": "Grants <color=#28d9ed>Show Your Loyalty</color> to the caster for <color=#28d9ed>2 turn(s)</color> and grants a <color=#28d9ed>Shield</color> to all allies except the caster for <color=#28d9ed>2 turn(s)</color>. Shield strength increases proportional to the caster's Max Health.\\nIncreases all allies' <color=#28d9ed>Penetration</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "自分に<color=#28d9ed>【忠義をみせろ】</color>を<color=#28d9ed>2ターン</color>の間付与し、自分を除く味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>と<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "1_kr": "자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color>를 부여하고 자신을 제외한 아군 전체에 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>방어력</color>을 증가시킵니다.",
+        "1_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "2": "Grants <color=#28d9ed>Show Your Loyalty</color> to the caster for <color=#28d9ed>2 turn(s)</color> and grants a <color=#28d9ed>Shield</color> to all allies except the caster for <color=#28d9ed>2 turn(s)</color>. Shield strength increases proportional to the caster's Max Health.\\nIncreases all allies' <color=#28d9ed>Penetration</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "2_jp": "自分に<color=#28d9ed>【忠義をみせろ】</color>を<color=#28d9ed>2ターン</color>の間付与し、自分を除く味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>と<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "2_kr": "자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color>를 부여하고 자신을 제외한 아군 전체에 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>방어력</color>을 증가시킵니다.",
+        "2_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "3": "Grants <color=#28d9ed>Show Your Loyalty</color> to the caster for <color=#28d9ed>2 turn(s)</color> and grants a <color=#28d9ed>Shield</color> to all allies except the caster for <color=#28d9ed>2 turn(s)</color>. Shield strength increases proportional to the caster's Max Health.\\nIncreases all allies' <color=#28d9ed>Penetration</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "3_jp": "自分に<color=#28d9ed>【忠義をみせろ】</color>を<color=#28d9ed>2ターン</color>の間付与し、自分を除く味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>と<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "3_kr": "자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color>를 부여하고 자신을 제외한 아군 전체에 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>방어력</color>을 증가시킵니다.",
+        "3_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "4": "Grants <color=#28d9ed>Show Your Loyalty</color> to the caster for <color=#28d9ed>2 turn(s)</color> and grants a <color=#28d9ed>Shield</color> to all allies except the caster for <color=#28d9ed>2 turn(s)</color>. Shield strength increases proportional to the caster's Max Health.\\nIncreases all allies' <color=#28d9ed>Penetration</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "4_jp": "自分に<color=#28d9ed>【忠義をみせろ】</color>を<color=#28d9ed>2ターン</color>の間付与し、自分を除く味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>と<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "4_kr": "자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color>를 부여하고 자신을 제외한 아군 전체에 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>방어력</color>을 증가시킵니다.",
+        "4_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "5": "Grants <color=#28d9ed>Show Your Loyalty</color> to the caster for <color=#28d9ed>2 turn(s)</color> and grants a <color=#28d9ed>Shield</color> to all allies except the caster for <color=#28d9ed>2 turn(s)</color>. Shield strength increases proportional to the caster's Max Health.\\nIncreases all allies' <color=#28d9ed>Penetration</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>, then gains an <color=#28d9ed>Extra Turn</color>.",
+        "5_jp": "自分に<color=#28d9ed>【忠義をみせろ】</color>を<color=#28d9ed>2ターン</color>の間付与し、\\n自分を除く味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n自分の最大HPが高いほどシールド量がUPする。\\n味方全体の<color=#28d9ed>貫通力</color>と<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "5_kr": "자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color>를 부여하고 자신을 제외한 아군 전체에 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>방어력</color>을 증가시킨 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "5_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身<color=#28d9ed>生命值上限</color>等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>后,获得<color=#28d9ed>额外回合</color>。"
       },
       "enhancement": {
-        "2": ["Enhances Barrier strength"],
-        "2_jp": ["シールド強化"],
-        "2_kr": ["실드 강화"],
-        "2_zh": ["护盾强化"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["Enhances Barrier strength"],
-        "4_jp": ["シールド強化"],
-        "4_kr": ["실드 강화"],
-        "4_zh": ["护盾强化"],
-        "5": ["Gains an extra turn"],
-        "5_jp": ["追加ターン発生"],
-        "5_kr": ["추가 턴 발생"],
-        "5_zh": ["触发额外回合"]
+        "2": [
+          "Enhances Barrier strength"
+        ],
+        "2_jp": [
+          "シールド強化"
+        ],
+        "2_kr": [
+          "실드 강화"
+        ],
+        "2_zh": [
+          "护盾强化"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "Enhances Barrier strength"
+        ],
+        "4_jp": [
+          "シールド強化"
+        ],
+        "4_kr": [
+          "실드 강화"
+        ],
+        "4_zh": [
+          "护盾强化"
+        ],
+        "5": [
+          "Gains an extra turn"
+        ],
+        "5_jp": [
+          "追加ターン発生"
+        ],
+        "5_kr": [
+          "추가 턴 발생"
+        ],
+        "5_zh": [
+          "触发额外回合"
+        ]
       },
       "cd": "4",
       "buff": [
         "IG_Buff_2000063_Interruption",
         "BT_SHIELD_BASED_CASTER",
         "BT_STAT|ST_PIERCE_POWER_RATE",
+        "BT_STAT|ST_DEF",
         "BT_ADDITIVE_TURN"
       ],
       "debuff": [],
@@ -205,50 +297,97 @@
       "name_jp": "竜王の息吹",
       "name_kr": "용왕의 숨결",
       "name_zh": "龙王吐息",
+      "true_desc": "Attacks an enemy.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.\\nEnemies killed by this skill cannot be Resurrected or Revived.",
+      "true_desc_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+      "true_desc_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+      "true_desc_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。\\n因该技能死亡的敌人无法触发复活与苏醒效果。",
       "true_desc_levels": {
         "1": "Attacks an enemy.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.\\nEnemies killed by this skill cannot be Resurrected or Revived.",
-        "1_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
-        "1_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "1_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "1_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "1_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。\\n因该技能死亡的敌人无法触发复活与苏醒效果。",
         "2": "Attacks an enemy.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.\\nEnemies killed by this skill cannot be Resurrected or Revived.",
-        "2_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
-        "2_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "2_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "2_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "2_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。\\n因该技能死亡的敌人无法触发复活与苏醒效果。",
         "3": "Attacks an enemy.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.\\nEnemies killed by this skill cannot be Resurrected or Revived.",
-        "3_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
-        "3_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "3_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "3_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "3_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。\\n因该技能死亡的敌人无法触发复活与苏醒效果。",
         "4": "Attacks an enemy.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.\\nEnemies killed by this skill cannot be Resurrected or Revived.",
-        "4_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
-        "4_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "4_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "4_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "4_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。\\n因该技能死亡的敌人无法触发复活与苏醒效果。",
-        "5": "Attacks an enemy.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack and additionally increases inversely proportional to Demiurge Drakhan's current Health.\\nEnemies killed by this skill cannot be Resurrected or Revived.",
-        "5_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。ドレイカーン(デミウルゴス)のHPが低いほどダメージがUPする。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
-        "5_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 추가로 드레이칸(데미우르고스)의 체력이 낮을수록 피해가 증가합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
-        "5_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,(创世之神)德雷坎生命值越低,则该技能的伤害越高。\\n因该技能死亡的敌人无法触发复活与苏醒效果。"
+        "5": "Attacks an enemy.\\nThis skill's Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack,\\nand additionally increases inversely proportional to the caster's current Health,\\nand ignores <color=#28d9ed>30%</color> of the target's <color=#28d9ed>Defense</color>.\\nEnemies defeated by this skill cannot be Resurrected or Revived.",
+        "5_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。\\nドレイカーン(デミウルゴス)のHPが低いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "5_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고 \\n자신의 체력이 낮을수록 피해가 증가하며\\n대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "5_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,(创世之神)德雷坎生命值越低,则该技能的伤害越高,\\n并无视目标<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。\\n因该技能死亡的敌人无法触发复活与苏醒效果。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+15% damage"],
-        "4_jp": ["ダメージ+15%"],
-        "4_kr": ["피해량 +15%"],
-        "4_zh": ["伤害量+15%"],
-        "5": ["+20% damage","Damage dealt increases proportional to missing Health"],
-        "5_jp": ["ダメージ+20%","残りHPが低いほど\\nダメージUP"],
-        "5_kr": ["피해량 +20%","잃은 체력에 비례하여 피해 증가"],
-        "5_zh": ["伤害量+20%","伤害随损失生命值提升"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "+20% damage",
+          "Damage dealt increases proportional to missing Health"
+        ],
+        "5_jp": [
+          "ダメージ+20%",
+          "残りHPが低いほど\\nダメージUP"
+        ],
+        "5_kr": [
+          "피해량 +20%",
+          "잃은 체력에 비례하여 피해 증가"
+        ],
+        "5_zh": [
+          "伤害量+20%",
+          "伤害随损失生命值提升"
+        ]
       },
       "cd": "6",
       "wgr": 2,
-      "buff": [],
-      "debuff": ["BT_SEALED_RESURRECTION"],
+      "buff": [
+      ],
+      "debuff": [
+        "BT_SEALED_RESURRECTION"
+      ],
       "offensive": true,
       "target": "mono"
     },
@@ -260,51 +399,97 @@
       "name_jp": "チェーンパッシブ",
       "name_kr": "체인 패시브",
       "name_zh": "连携被动",
+      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack and always has elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
+      "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+      "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+      "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
       "true_desc_levels": {
         "1": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack and always has elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
-        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
-        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
         "2": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack and always has elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
-        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
-        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
         "3": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack and always has elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
-        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
-        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
         "4": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack and always has elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
-        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
-        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
         "5": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Max Health</color> instead of Attack and always has elemental advantage.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
-        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、有利属性の攻撃判定でダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
-        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 항상 유리한 상성으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
       "wgr_dual": 1,
       "cd": null,
-      "buff": ["BT_DMG_ELEMENT_SUPERIORITY"],
-      "debuff": [],
+      "buff": [],
+      "debuff": [
+        "BT_WG_REVERSE_HEAL"
+      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,

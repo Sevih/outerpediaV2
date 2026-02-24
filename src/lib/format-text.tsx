@@ -85,24 +85,25 @@ export function formatScaledEffect(
 
   if (changed.size === 0) return formatEffectText(desc);
 
-  // Rebuild desc, wrapping changed numbers in <color=#28d9ed>
+  // Strip existing color tags so we don't double-wrap
+  const stripped = desc.replace(/<\/?color[^>]*>/gi, '');
+
+  // Rebuild, wrapping changed numbers in <color=#28d9ed>
+  const numRe = /([+-]?\d+(?:\.\d+)?%?)/g;
   let result = '';
   let lastIdx = 0;
   let numIdx = 0;
   let m: RegExpExecArray | null;
-  const re = new RegExp(numTokenRe.source, numTokenRe.flags);
 
-  while ((m = re.exec(desc)) !== null) {
-    if (m[1] !== undefined) {
-      result += desc.slice(lastIdx, m.index);
-      result += changed.has(numIdx)
-        ? `<color=#28d9ed>${m[1]}</color>`
-        : m[1];
-      lastIdx = re.lastIndex;
-      numIdx++;
-    }
+  while ((m = numRe.exec(stripped)) !== null) {
+    result += stripped.slice(lastIdx, m.index);
+    result += changed.has(numIdx)
+      ? `<color=#28d9ed>${m[1]}</color>`
+      : m[1];
+    lastIdx = numRe.lastIndex;
+    numIdx++;
   }
-  result += desc.slice(lastIdx);
+  result += stripped.slice(lastIdx);
 
   return formatEffectText(result);
 }
