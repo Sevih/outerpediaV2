@@ -63,6 +63,7 @@ const RESTRICTION_ICON_MAP: Record<string, IconInfo> = {
   AtLeast2_1Star: { type: 'star', stars: 1, atLeast: 2 },
   AtLeast1_2Star: { type: 'star', stars: 2, atLeast: 1 },
   AtLeast2_2Star: { type: 'star', stars: 2, atLeast: 2 },
+  AtLeast1_3Star: { type: 'star', stars: 3, atLeast: 1 },
 
   // Other
   Max3: { type: 'text', label: 'Max 3' },
