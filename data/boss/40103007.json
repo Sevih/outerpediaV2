@@ -1,0 +1,103 @@
+{
+  "id": "40103007",
+  "Name": {
+    "en": "Mene",
+    "kr": "메네",
+    "jp": "メネ",
+    "zh": "麦尼"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Water",
+  "level": 100,
+  "icons": "2000054",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_SEALED_RECEIVE_HEAL,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 1F",
+      "kr": "비천의 탑 [베리 하드] 1층",
+      "jp": "飛天の塔【ベリーハード】1階",
+      "zh": "飞天之塔【极难】第1层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shark Attack!",
+        "kr": "샤크 어택!",
+        "jp": "アオイアタック",
+        "zh": "飞鲨袭击!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and recovers <color=#28d9ed>Health</color> of the ally with the lowest Health by <color=#28d9ed>13%</color>.",
+        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>13%</color> 회복시킵니다.",
+        "jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>13%</color>回復する。",
+        "zh": "攻击敌人,并使生命值最低的友军<color=#28d9ed>生命值</color>恢复<color=#28d9ed>13%</color>。"
+      },
+      "icon": "Skill_First_2000054"
+    },
+    {
+      "name": {
+        "en": "Sharks Are Friends",
+        "kr": "상어는 친구",
+        "jp": "起こさないで",
+        "zh": "鲨鱼是朋友"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>35%</color> and reduces the duration of debuffs by <color=#28d9ed>1 turn</color>.",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>35%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>35%</color>回復させ、弱体効果の持続ターンを<color=#28d9ed>1ターン</color>DOWNさせる。",
+        "zh": "使全体友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>35%</color>,并使弱化效果持续时间减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000054"
+    },
+    {
+      "name": {
+        "en": "Wakey-Wakey",
+        "kr": "잠들면 안 돼",
+        "jp": "寝るんじゃねぇガキ!",
+        "zh": "不能睡着"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Grants increased <color=#28d9ed>Attack</color> to surviving allies for <color=#28d9ed>2 turn(s)</color>, then <color=#28d9ed>Resurrects (Greater)</color> all slain allies. Afterward, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>35%</color>.",
+        "kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>35%</color>만큼 회복시킵니다.",
+        "jp": "戦場にいる味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>35%</color>回復させる。",
+        "zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的友军全体<color=#28d9ed>复活(强化)</color>。随后使全体友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>35%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000054"
+    },
+    {
+      "name": {
+        "en": "I Can Sleep Soon",
+        "kr": "다가오는 취침 시간",
+        "jp": "おねんねの時間",
+        "zh": "迫近的就寝时间"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> effect to all allies for <color=#28d9ed>3 turn(s)</color>.\\nIncreases <color=#28d9ed>Speed</color> proportional to the caster's missing Health.\\nWhen hit, if inflicted with Bleeding, increases damage taken.\\nAfter attacking, grants increased <color=#28d9ed>Defense</color> to all allies for <color=#28d9ed>1 turn(s)</color>.\\nAt the end of the caster's turn, recovers Weakness Gauge by 5.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)",
+        "kr": "(패시브 효과)\\n전투 시작 시 아군 전체에게 해제되지 않는 <color=#28d9ed>피해 감소</color> 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n자신의 잃은 체력에 비례하여 <color=#28d9ed>속도</color>가 증가합니다.\\n피격 시 출혈 상태라면 받는 피해가 증가합니다.\\n공격 후 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color> 증가 효과를 부여합니다.\\n자신의 턴 종료 시 WG를 5 회복합니다.\\n매 턴 자신의 공격력이 <color=#28d9ed>5%</color>증가 합니다. (최대 20회 누적)",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分に解除不可能な<color=#28d9ed>ダメージDOWN</color>効果を<color=#28d9ed>3ターン</color>の間付与する。\\n自分の残りHPが低いほど、<color=#28d9ed>スピード</color>がUPする。\\nダメージを受けた時、出血状態の場合受けるダメージがUPする。\\n攻撃後、味方全体に<color=#28d9ed>防御力UP</color>効果を<color=#28d9ed>1ターン</color>の間付与する。\\n自分のターン終了時、WGを5回復する。\\n毎ターン自分の攻撃力が<color=#28d9ed>5%</color>UPする。(最大20回まで累積)",
+        "zh": "(被动效果)\\n战斗开始时,使全体友军获得无法被解除的<color=#28d9ed>伤害降低</color>效果,持续<color=#28d9ed>3回合</color>。\\n根据自身损失的生命值等比提升<color=#28d9ed>速度</color>。\\n受到攻击时,若处于出血状态,则所受伤害提升。\\n攻击后,全体友军获得<color=#28d9ed>防御力</color>提升效果,持续<color=#28d9ed>1回合</color>。\\n自身回合结束时,WG恢复5。\\n每回合自身的攻击力提升<color=#28d9ed>5%</color>。(最多可叠加20次)"
+      },
+      "icon": "MT_Passive_1_Water"
+    }
+  ]
+}

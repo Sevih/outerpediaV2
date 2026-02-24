@@ -1,0 +1,124 @@
+{
+  "id": "40103015",
+  "Name": {
+    "en": "Rhona",
+    "kr": "로나",
+    "jp": "ロナ",
+    "zh": "罗娜"
+  },
+  "Surname": {
+    "en": "Amnesic Drifter",
+    "kr": "기억 잃은 표류자",
+    "jp": "記憶を失った漂流者",
+    "zh": "丧失记忆的漂流者"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 100,
+  "icons": "2000008",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 3F",
+      "kr": "비천의 탑 [베리 하드] 3층",
+      "jp": "飛天の塔【ベリーハード】3階",
+      "zh": "飞天之塔【极难】第3层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103003",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Rose Slash",
+        "kr": "로즈 슬래쉬",
+        "jp": "ローズスラッシュ",
+        "zh": "玫瑰斩击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks 2 enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>\\nand deals more damage to bosses.",
+        "kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
+        "jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
+        "zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。"
+      },
+      "icon": "Skill_First_2000008"
+    },
+    {
+      "name": {
+        "en": "Tidal Wave",
+        "kr": "타이달 웨이브",
+        "jp": "タイダルウェーブ",
+        "zh": "海啸"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and recovers Health of the caster by <color=#28d9ed>15%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and additionally increases inversely proportional to the number of targets.",
+        "kr": "적 전체를 공격하고 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가합니다.",
+        "jp": "敵全体にダメージを与え、自分のHPを<color=#28d9ed>15%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象の数が少ないほどダメージがUPする。",
+        "zh": "攻击全体敌人,并使自身生命值恢复<color=#28d9ed>15%</color>。\\n自身<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高;目标数量越少,则该技能的额外伤害越高。"
+      },
+      "icon": "Skill_Second_2000008"
+    },
+    {
+      "name": {
+        "en": "End of the World",
+        "kr": "엔드 오브 월드",
+        "jp": "エンド・オブ・ワールド",
+        "zh": "世界末日"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Reduces <color=#28d9ed>Defense</color> on all targets for <color=#28d9ed>2 turn(s)</color> (Ignores Resilience) before attacking all enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and additionally increases inversely proportional to the number of targets.\\nDeals more damage to bosses and gains an <color=#28d9ed>extra turn</color>.",
+        "kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
+        "jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
+        "zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000008"
+    },
+    {
+      "name": {
+        "en": "Disciplinary Methods for Jihoon",
+        "kr": "지훈이를 위한 훈육법",
+        "jp": "ジフンのしつけ方",
+        "zh": "为志勋准备的训育法"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, grants an irremovable reduced damage taken to the caster for <color=#28d9ed>3 turn(s)</color>.\\nApplies <color=#28d9ed>Heavy Strike</color> to all attacks of the caster.\\nUpon taking a critical hit, inflicts an irremovable reduced <color=#28d9ed>Critical Hit Chance</color> on all enemies for <color=#28d9ed>1 turn(s)</color>, and recovers Weakness Gauge by <color=#28d9ed>10%</color>. Additionally, reduces <color=#28d9ed>Attack</color>, <color=#28d9ed>Critical Hit Chance</color>, and <color=#28d9ed>Defense</color> of all enemies by <color=#28d9ed>10%</color> each. (Max 10 stacks)\\nWhen an ally takes a non-critical hit, increases damage taken.",
+        "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n자신의 모든 공격에는 <color=#28d9ed>강격</color> 효과가 적용 됩니다.\\n치명 피격 시 적 전체에게 해제 불가능한 <color=#28d9ed>치명 확률</color> 감소 효과를 <color=#28d9ed>1턴</color> 동안 부여하고, WG를 <color=#28d9ed>10%</color> 회복합니다. 또한 적 전체의 <color=#28d9ed>공격력</color>, <color=#28d9ed>치명 확률</color>, <color=#28d9ed>방어력</color>이 <color=#28d9ed>10%</color> 씩 감소 됩니다. (최대 10회 누적)\\n아군은 치명 피격이 아닐 때 받는 피해량이 증가합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分に解除不可能なダメージDOWN効果を<color=#28d9ed>3ターン</color>の間付与する。\\n自分のすべての攻撃には<color=#28d9ed>強撃</color>効果が適用される。会心ダメージを受けた場合、敵全体に解除不可能な<color=#28d9ed>会心率</color>DOWN効果を<color=#28d9ed>1ターン</color>の間付与し、WGを<color=#28d9ed>10%</color>回復する。また、敵全体の<color=#28d9ed>攻撃力</color>、<color=#28d9ed>会心率</color>、<color=#28d9ed>防御力</color>を<color=#28d9ed>10%</color>ずつDOWNさせる。(最大10回まで累積)\\n味方が敵から会心ダメージを受けなかった場合、受けるダメージがUPする。",
+        "zh": "(被动效果)\\n战斗开始时,使自身获得无法被解除的伤害降低效果,持续<color=#28d9ed>3回合</color>。\\n自身的所有攻击获得<color=#28d9ed>强击</color>效果。\\n受到暴击时,使全体敌人获得无法被解除的<color=#28d9ed>暴击率</color>降低效果,持续<color=#28d9ed>1回合</color>,WG恢复<color=#28d9ed>10%</color>。另外,全体敌人的<color=#28d9ed>攻击力</color>、<color=#28d9ed>暴击率</color>、<color=#28d9ed>防御力</color>各降低<color=#28d9ed>10%</color>。(最多可叠加10次)\\n友军未受到暴击时,所受伤害量提升。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Recovers Weakness Gauge by 30%, and deals lethal damage to all enemies. This Enraged has no duration.",
+        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : WG 30%를 회복하고, 적 전체에게 치명적인 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
+        "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:WGを30%回復し、敵全体に致命的なダメージを与える。【狂暴化】の持続ターンはない。",
+        "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>,效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:WG恢复30%,对全体敌人造成致命伤害。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

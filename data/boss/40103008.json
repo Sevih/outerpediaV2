@@ -1,0 +1,103 @@
+{
+  "id": "40103008",
+  "Name": {
+    "en": "Valentine",
+    "kr": "발렌타인",
+    "jp": "バレンタイン",
+    "zh": "瓦伦塔茵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Fire",
+  "level": 100,
+  "icons": "2000012",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STEAL_BUFF,BT_EXTEND_BUFF,BT_REMOVE_BUFF",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower: Very Hard 1F",
+      "kr": "비천의 탑 [베리 하드] 1층",
+      "jp": "飛天の塔【ベリーハード】1階",
+      "zh": "飞天之塔【极难】第1层"
+    },
+    "mode": {
+      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    },
+    "area_id": {
+      "en": "40103001",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Trigger Happy",
+        "kr": "트리거 해피",
+        "jp": "トリガーハッピー",
+        "zh": "快乐扳机"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and increases <color=#28d9ed>Priority</color> of the ally with the highest Attack by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、最も攻撃力が高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "zh": "攻击敌人,并使攻击力最高的友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "Skill_First_2000012"
+    },
+    {
+      "name": {
+        "en": "Lucky or Die",
+        "kr": "Lucky or Die",
+        "jp": "ラッキー・オア・ダイ",
+        "zh": "Lucky or Die"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Grants increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> to all allies for <color=#28d9ed>3 turn(s)</color>. After using this skill, grants an <color=#28d9ed>extra turn</color>.",
+        "kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>치명 피해</color>를 증가시킵니다. 스킬 사용 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "jp": "味方全体の<color=#28d9ed>会心率</color>と<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>3ターン</color>の間UPさせる。スキル使用後、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>。使用技能后,获得<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "Skill_Second_2000012"
+    },
+    {
+      "name": {
+        "en": "My Bloody Valentine",
+        "kr": "마이 블러디 발렌타인",
+        "jp": "マイ・ブラッディ・バレンタイン",
+        "zh": "我的血腥情人"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Reduces Priority of the target by <color=#28d9ed>25%</color>.",
+        "kr": "적 전체를 공격합니다. 대상의 행동 게이지를 <color=#28d9ed>-25%</color> 감소시킵니다.",
+        "jp": "敵全体にダメージを与える。対象の行動ゲージを<color=#28d9ed>-25%</color>DOWNさせる。",
+        "zh": "攻击全体敌人,使目标的行动值降低<color=#28d9ed>-25%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000012"
+    },
+    {
+      "name": {
+        "en": "The More the Merrier",
+        "kr": "다다익선",
+        "jp": "多々益々弁ず",
+        "zh": "多多益善"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to the caster for <color=#28d9ed>3 turn(s)</color>.\\nAlways grants <color=#28d9ed>Buff Enhancement</color> to the caster. This effect is irremovable.\\nIncreases damage dealt by all attacks proportional to the number of buffs granted to the caster.\\nAt the start of the turn, recovers Weakness Gauge by <color=#28d9ed>10</color>.",
+        "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 <color=#28d9ed>피해 감소</color> 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n자신은 항상 <color=#28d9ed>강화 촉진</color>을 얻습니다. 이 효과는 해제되지 않습니다.\\n모든 공격은 자신의 강화 효과가 많을수록 입히는 피해가 증가합니다.\\n턴 시작 시 WG를 <color=#28d9ed>10</color> 회복합니다.",
+        "jp": "(パッシブ効果)\\n戦闘開始時、自分に解除不可能な<color=#28d9ed>ダメージDOWN</color>効果を<color=#28d9ed>3ターン</color>の間付与する。\\n自分に<color=#28d9ed>強化促進</color>を付与する。この効果は解除されない。\\nすべての攻撃は、自分の強化効果の数に応じてダメージがUPする。\\nターン開始時、WGを<color=#28d9ed>10</color>回復する。",
+        "zh": "(被动效果)\\n战斗开始时,自身获得无法被解除的<color=#28d9ed>伤害降低</color>效果,持续<color=#28d9ed>3回合</color>。\\n自身始终获得<color=#28d9ed>强化促进</color>效果。该效果不会被解除。\\n所有攻击都是自身强化效果越多,则造成的伤害越高。\\n回合开始时,WG恢复<color=#28d9ed>10</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    }
+  ]
+}
