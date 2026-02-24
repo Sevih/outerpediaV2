@@ -5,6 +5,7 @@ import Image from 'next/image';
 import type { Transcendence } from '@/types/character';
 import type { Lang } from '@/lib/i18n/config';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { formatEffectText } from '@/lib/format-text';
 
 type Props = {
   transcend: Transcendence;
@@ -214,7 +215,7 @@ export default function TranscendenceSlider({ transcend, rarity = 3 }: Props) {
           }
           return (
             <div key={i} className="whitespace-pre-line text-xs leading-tight text-white">
-              {bonus}
+              {formatEffectText(bonus)}
             </div>
           );
         })}

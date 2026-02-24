@@ -171,12 +171,10 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
           <h3 className="mb-4 text-sm font-semibold text-zinc-300">{t('page.character.toc.ranking')}</h3>
           <div className="flex flex-wrap items-center justify-center gap-6">
             {ee && (
-              <TierCard label={t('page.character.ee.rank')} rank={ee.rank} />
+              <TierCard label={t('page.character.ee.rank')} rank={ee.rank} placeholder={t('common.coming_soon')} />
             )}
-            <TierCard label={t('page.character.tier.pve')} rank={pveRank} />
-            {character.rank_pvp && (
-              <TierCard label={t('page.character.tier.pvp')} rank={character.rank_pvp} />
-            )}
+            <TierCard label={t('page.character.tier.pve')} rank={pveRank} placeholder={t('common.coming_soon')} />
+            <TierCard label={t('page.character.tier.pvp')} rank={character.rank_pvp ?? null} placeholder={t('common.coming_soon')} />
           </div>
         </div>
       </div>
@@ -184,19 +182,25 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
   );
 }
 
-function TierCard({ label, rank }: { label: string; rank: string }) {
+function TierCard({ label, rank, placeholder }: { label: string; rank: string | null; placeholder?: string }) {
   return (
     <div className="flex flex-col items-center gap-1 px-3 py-2">
       <span className="text-xs text-zinc-400">{label}</span>
-      <div className="relative h-12 w-12">
-        <Image
-          src={`/images/ui/rank/IG_Event_Rank_${rank}.webp`}
-          alt={rank ?? ''}
-          fill
-          sizes="48px"
-          className="object-contain"
-        />
-      </div>
+      {rank ? (
+        <div className="relative h-12 w-12">
+          <Image
+            src={`/images/ui/rank/IG_Event_Rank_${rank}.webp`}
+            alt={rank}
+            fill
+            sizes="48px"
+            className="object-contain"
+          />
+        </div>
+      ) : (
+        <span className="flex h-12 items-center text-center text-xs italic text-zinc-500">
+          {placeholder ?? '—'}
+        </span>
+      )}
     </div>
   );
 }

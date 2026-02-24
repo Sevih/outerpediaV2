@@ -39,7 +39,8 @@ export default function SkillsSection({ character }: Props) {
   const isCoreFusion = character.fusionType === 'core-fusion';
   const fusionInfo = isCoreFusion && character.fusionLevels?.length
     ? (() => {
-        const material = character.fusionLevels[0].requireItemID;
+        const material = character.fusionRequirements?.material.id
+          ?? character.fusionLevels[0].requireItemID;
         const upgradeCost = character.fusionLevels.length > 1
           ? Number(character.fusionLevels[1].skillUpgrades.skill_1?.value ?? 150)
           : 150;
