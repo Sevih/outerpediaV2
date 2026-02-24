@@ -317,7 +317,7 @@
           "restrictions": ["BanRanger"],
           "recommended": [
             {
-              "names": ["2000089","2000085"],
+              "names": ["2000089", "2000085"],
               "reason": {
                 "en": "{D/BT_STEAL_BUFF} options",
                 "jp": "",
@@ -331,7 +331,7 @@
           "restrictions": ["BanDark"],
           "recommended": [
             {
-              "names": ["2000089","2000085","2000041","2000039"],
+              "names": ["2000089", "2000085", "2000041", "2000039"],
               "reason": {
                 "en": "{D/BT_STEAL_BUFF} options",
                 "jp": "",
@@ -345,7 +345,7 @@
           "restrictions": ["AtLeast1_Light"],
           "recommended": [
             {
-              "names": ["2000089","2000085","2000041"],
+              "names": ["2000089", "2000085", "2000041"],
               "reason": {
                 "en": "{D/BT_STEAL_BUFF} options",
                 "jp": "",
@@ -368,7 +368,7 @@
           "restrictions": ["AtLeast1_Striker"],
           "recommended": [
             {
-              "names": ["2000041","2000039"],
+              "names": ["2000041", "2000039"],
               "reason": {
                 "en": "{D/BT_STEAL_BUFF} options",
                 "jp": "",
@@ -377,7 +377,7 @@
               }
             },
             {
-              "names": ["2000089","2000085"],
+              "names": ["2000089", "2000085"],
               "reason": {
                 "en": "{D/BT_STEAL_BUFF} options and validate the restriction.",
                 "jp": "",
@@ -391,7 +391,7 @@
           "restrictions": ["AtLeast1_2Star"],
           "recommended": [
             {
-              "names": ["2000089","2000085","2000039"],
+              "names": ["2000089", "2000085", "2000039"],
               "reason": {
                 "en": "{D/BT_STEAL_BUFF} options",
                 "jp": "",
@@ -415,14 +415,163 @@
     {
       "boss_id": "40103004",
       "minions": ["40103031", "40103029", "40103030"],
+      "reason": [
+        {
+          "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE}.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        }
+      ],
       "restrictionSets": [
         {
-          "restrictions": [],
+          "restrictions": ["BanDefender"],
           "recommended": [
             {
-              "names": [],
+              "names": ["2000074","2000058","2000113","2000108"],
               "reason": {
-                "en": "",
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100","2000098","2000084","2000036"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Earth"],
+          "recommended": [
+            {
+              "names": ["2000108"],
+              "reason": {
+                "en": "Validate restriction plus she has both {B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000074","2000058","2000113"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100","2000098","2000084","2000036"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["BanLight"],
+          "recommended": [
+            {
+              "names": ["2000108","2000058","2000113"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100","2000098","2000036"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_1Star"],
+          "recommended": [
+            {
+              "names": ["2000017","2000038","2000026"],
+              "reason": {
+                "en": "1★ with {B/BT_REMOVE_DEBUFF}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000074","2000058","2000113","2000108"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000074","2000058","2000113","2000108"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100","2000098","2000084","2000036"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
                 "jp": "",
                 "kr": "",
                 "zh": ""
@@ -435,14 +584,202 @@
     {
       "boss_id": "40103005",
       "minions": ["40103032", "40103033", "40103028"],
+      "reason": [
+        {
+          "en": "{B/BT_REMOVE_DEBUFF}, {B/BT_IMMUNE} and {B/SYS_BUFF_REVENGE} will do the job.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        }
+      ],
       "restrictionSets": [
         {
-          "restrictions": [],
+          "restrictions": ["BanMage"],
+          "recommended": [
+             {
+              "names": ["2000074","2000058","2000113","2000108"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100","2000098","2000084","2000036"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000039"],
+              "reason": {
+                "en": "DPS with {B/BT_REMOVE_DEBUFF} on {B/SYS_BUFF_REVENGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000053","2000099"],
+              "reason": {
+                "en": "DPS with {B/SYS_BUFF_REVENGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+
+          ]
+        },
+        {
+          "restrictions": ["BanFire"],
+          "recommended": [
+             {
+              "names": ["2000074","2000113","2000108"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100","2000084"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000039"],
+              "reason": {
+                "en": "DPS with {B/BT_REMOVE_DEBUFF} on {B/SYS_BUFF_REVENGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000053","2000099"],
+              "reason": {
+                "en": "DPS with {B/SYS_BUFF_REVENGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Light"],
           "recommended": [
             {
-              "names": [],
+              "names": ["2000039","2000074","2000084"],
               "reason": {
-                "en": "",
+                "en": "Validate restriction and have {B/BT_REMOVE_DEBUFF} and/or {B/BT_IMMUNE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+             {
+              "names": ["2000058","2000113","2000108"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100","2000098","2000036"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },            
+            {
+              "names": ["2000053","2000099"],
+              "reason": {
+                "en": "DPS with {B/SYS_BUFF_REVENGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+
+          ]
+        },
+        {
+          "restrictions": ["BanStriker"],
+          "recommended": [
+             {
+              "names": ["2000074","2000058","2000113","2000108"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100","2000098","2000084","2000036"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000039"],
+              "reason": {
+                "en": "DPS with {B/BT_REMOVE_DEBUFF} on {B/SYS_BUFF_REVENGE}.",
                 "jp": "",
                 "kr": "",
                 "zh": ""
@@ -455,14 +792,148 @@
     {
       "boss_id": "40103006",
       "minions": ["40103036", "40103034", "40103035"],
+      "reason": [
+        {
+          "en": "One of the best ways to counter it is to utilize {B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} to accumulate chain points faster.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        },
+        {
+          "en": "Another way to counter it is by using {P/Ember} with enough {S/EFF} to inflict {D/BT_DOT_BURN}.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        },
+        {
+          "en": "{P/Delta} can go in tandem with {P/Cindy}, {P/Dianne} and/or {P/Fran} (EE+10).",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        }
+      ],
       "restrictionSets": [
         {
-          "restrictions": [],
+          "restrictions": ["AtLeast1_Light"],
           "recommended": [
             {
-              "names": [],
+              "names": ["2000053"],
               "reason": {
-                "en": "",
+                "en": "Validate restriction and have {B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} in her kit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000071","2000099","2000105","2000040"],
+              "reason": {
+                "en": "{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} in her kit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000094"],
+              "reason": {
+                "en": "Inflicts {D/BT_DOT_BURN} when taking a hit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["BanHealer"],
+          "recommended": [
+            {
+              "names": ["2000063","2000042","2000088"],
+              "reason": {
+                "en": "Will help your team to survive.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000071","2000099","2000105","2000040","2000053"],
+              "reason": {
+                "en": "{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} in her kit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000094"],
+              "reason": {
+                "en": "Inflicts {D/BT_DOT_BURN} when taking a hit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Earth"],
+          "recommended": [
+            {
+              "names": ["2000105","2000099"],
+              "reason": {
+                "en": "Validate restriction and have {B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} in her kit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000071","2000040","2000053"],
+              "reason": {
+                "en": "{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} in her kit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000094"],
+              "reason": {
+                "en": "Inflicts {D/BT_DOT_BURN} when taking a hit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Striker"],
+          "recommended": [
+            {
+              "names": ["2000071","2000099","2000053"],
+              "reason": {
+                "en": "Validate restriction and have {B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} in her kit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000105","2000040"],
+              "reason": {
+                "en": "{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} in her kit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000094"],
+              "reason": {
+                "en": "Inflicts {D/BT_DOT_BURN} when taking a hit.",
                 "jp": "",
                 "kr": "",
                 "zh": ""
@@ -475,14 +946,201 @@
     {
       "boss_id": "40103009",
       "minions": ["40103039", "40103040", "40103038"],
+      "reason": [
+        {
+          "en": "Control and focus the core to prevent {P/Poolside Trickster Regina} to play. Both priority reductions and stun.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        },
+        {
+          "en": "Best way is by using {B/BT_ACTION_GAUGE}, {D/BT_ACTION_GAUGE} and hard CC like {D/BT_STUN}, {D/BT_FREEZE} and {D/BT_GOLDEN_CURSE}.",
+          "jp": "",
+          "kr": "",
+          "zh": ""
+        }
+      ],
       "restrictionSets": [
         {
-          "restrictions": [],
+          "restrictions": ["AtLeast1_Ranger"],
           "recommended": [
             {
-              "names": [],
+              "names": ["2000039","2000012","2700003","2000111"],
               "reason": {
-                "en": "",
+                "en": "Validate restriction and have either hard CC or good priority manipulation.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000069"],
+              "reason": {
+                "en": "Have both 1 hard CC and {D/BT_ACTION_GAUGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000091","2000109"],
+              "reason": {
+                "en": "Hard CC options.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Healer"],
+          "recommended": [
+            {
+              "names": ["2000084","2000113","2000108"],
+              "reason": {
+                "en": "Validate restriction and have {B/BT_CALL_BACKUP}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2700003","2000069"],
+              "reason": {
+                "en": "Have both 1 hard CC and {D/BT_ACTION_GAUGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000039","2000012"],
+              "reason": {
+                "en": "Priority war machines.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000091","2000109","2000111"],
+              "reason": {
+                "en": "Hard CC options.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Defender"],
+          "recommended": [
+            {
+              "names": ["2000102","2000103","2000106"],
+              "reason": {
+                "en": "Validate restriction and have either {D/BT_ACTION_GAUGE} or {B/BT_ACTION_GAUGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2700003","2000069"],
+              "reason": {
+                "en": "Have both 1 hard CC and {D/BT_ACTION_GAUGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000039","2000012"],
+              "reason": {
+                "en": "Priority war machines.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000091","2000109","2000111"],
+              "reason": {
+                "en": "Hard CC options.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["AtLeast1_Dark"],
+          "recommended": [
+            {
+              "names": ["2000102","2000069","2000111","2000109"],
+              "reason": {
+                "en": "Validate restriction and have either hard CC or good priority manipulation.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2700003"],
+              "reason": {
+                "en": "Have both 1 hard CC and {D/BT_ACTION_GAUGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000039","2000012"],
+              "reason": {
+                "en": "Priority war machines.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000091"],
+              "reason": {
+                "en": "Hard CC options.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["BanWater"],
+          "recommended": [
+            {
+              "names": ["2700003","2000069"],
+              "reason": {
+                "en": "Have both 1 hard CC and {D/BT_ACTION_GAUGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000039","2000012"],
+              "reason": {
+                "en": "Priority war machines.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000091","2000109","2000111"],
+              "reason": {
+                "en": "Hard CC options.",
                 "jp": "",
                 "kr": "",
                 "zh": ""
