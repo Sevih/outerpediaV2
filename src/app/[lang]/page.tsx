@@ -47,14 +47,15 @@ export default async function Home({ params }: Props) {
   return (
     <main>
       {/* Banner — full width, cropped top & bottom */}
-      <div className="relative h-48 w-full md:h-72 lg:h-80">
+      <div className="relative mx-auto w-full max-w-screen-2xl">
         <Image
-          src="/images/banner.webp"
+          src="/images/croped_banner.webp"
           alt="Outerpedia — Outerplane Wiki & Database"
-          fill
+          width={5120}
+          height={1297}
           priority
           sizes="100vw"
-          className="object-cover"
+          className="w-full h-auto"
         />
         <h1 className="sr-only">{t['page.home.title']}</h1>
       </div>
