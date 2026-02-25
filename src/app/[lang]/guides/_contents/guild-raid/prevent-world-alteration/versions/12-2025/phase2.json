@@ -58,77 +58,23 @@
     "note_jp": [
       {
         "type": "p",
-        "string": "{P/Roxie}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "T4リベンジセット推奨",
-          "{I-A/Gorgon's Vanity [Mage]} 貫通%、+10 {I-T/Executioner's Charm}",
-          "6★必須（APが増え、バースト3が使用可能。5★でも動作するが、バーストセットを使わない限り最後のターンでバースト3が使えない）",
-          "EE+10必須",
-          "{I-A/Gorgon's Vanity [Mage]}アクセサリーで160速度。持っていない場合、リベンジセットではなくスピードセットで速い{P/Roxie}を使う必要あり"
-        ]
-      },
-      {
-        "type": "p",
-        "string": "{P/Edelweiss}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "{I-W/Rampaging Caracal}が理想（{I-W/Barrage of Truth}は使わない）",
-          "S3でオーブをワンショットできる必要あり。T4 {I-A/Burning Soul}アクセサリー必須（スピードアクセサリーは不可）",
-          "6★推奨（{D/BT_SEALED}を早期に付与してシールドをブロックできるが必須ではない）",
-          "{I-T/Sage's Charm}または{I-T/Rogue's Charm}を使用",
-          "288速度ちょうど（ボスより速くなる最低値だが、それ以上速くしない - {P/Core Fusion Veronica}と{P/Fortuna}がボスを激怒させる前にターン1で追いつく必要あり）"
-        ]
-      },
-      {
-        "type": "p",
-        "string": "{P/Core Fusion Veronica}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "EE+10は必須ではないが、持っている場合は{I-A/Chalice of Longing}アクセサリーを使わない（優先度ブーストの組み合わせで{P/Core Fusion Veronica}が{P/Roxie}より速くなる可能性あり。{P/Roxie}が先に動いてダメージを受けオーブを倒し、その後{P/Core Fusion Veronica}がチェインして最低HPにシールドを付与する必要あり）。EE+10なしなら{I-A/Chalice of Longing}は使用可",
-          "{I-T/Sage's Charm}または{I-T/Rogue's Charm}を使用",
-          "261速度"
-        ]
-      },
-      {
-        "type": "p",
-        "string": "{P/Fortuna}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "{I-A/Queen of Prism}アクセサリーのシールドで2ターン燃焼を2回耐えられるHP必要、または最大HPを{P/Roxie}より低くして{P/Core Fusion Veronica}から後でシールドを受ける（1ターン燃焼だけ耐える）",
-          "{I-T/Sage's Charm}または{I-T/Rogue's Charm}を使用",
-          "230速度"
-        ]
-      },
-      {
-        "type": "p",
-        "string": ""
-      },
-      {
-        "type": "p",
         "string": "必要条件:"
       },
       {
         "type": "ul",
         "items": [
-          "{P/Fortuna}、{P/Roxie}、{P/Edelweiss}に134効果命中",
           "全員に240命中率",
-          "{I-T/Rogue's Charm}使用で全員100%クリティカル",
-          "最低4★超越、チェインスキル最大レベルで6 WGダメージ",
-          "{P/Edelweiss}は6★が理想（戦闘開始時に追加AP）、{P/Roxie}は最低5★（6★が良い）"
+          "最低4★超越、チェインスキル最大レベルでチェイン時6 WGダメージ"
         ]
       },
       {
-        "type": "p",
-        "string": "速度順: {P/Edelweiss} (288) > {P/Core Fusion Veronica} (261) > {P/Fortuna} (230) > {P/Roxie} (160)"
+        "type": "turn-order",
+        "order": [
+          { "character": "Edelweiss", "speed": 288 },
+          { "character": "Core Fusion Veronica", "speed": 261 },
+          { "character": "Fortuna", "speed": 230 },
+          { "character": "Roxie", "speed": 160 }
+        ]
       },
       {
         "type": "p",
@@ -142,77 +88,23 @@
     "note_kr": [
       {
         "type": "p",
-        "string": "{P/Roxie}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "T4 복수 세트 추천",
-          "{I-A/Gorgon's Vanity [Mage]} 관통%, +10 {I-T/Executioner's Charm}",
-          "6★ 필수 (AP 증가 및 버스트 3 사용 가능. 5★도 작동하지만 버스트 세트 없이는 마지막 턴에 버스트 3 사용 불가)",
-          "EE+10 필수",
-          "{I-A/Gorgon's Vanity [Mage]} 악세서리로 160 속도. 없으면 복수 세트 대신 속도 세트로 빠른 {P/Roxie} 운용 필요"
-        ]
-      },
-      {
-        "type": "p",
-        "string": "{P/Edelweiss}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "{I-W/Rampaging Caracal} 이상적 ({I-W/Barrage of Truth} 사용 금지)",
-          "S3으로 오브 원샷 가능해야 함. T4 {I-A/Burning Soul} 악세서리 필수 (속도 악세서리 불가)",
-          "6★ 추천 ({D/BT_SEALED}를 일찍 적용해 실드 차단 가능하지만 필수 아님)",
-          "{I-T/Sage's Charm} 또는 {I-T/Rogue's Charm} 사용",
-          "정확히 288 속도 (보스보다 빠른 최소값이지만 더 빠르면 안 됨 - {P/Core Fusion Veronica}와 {P/Fortuna}가 보스를 격노시키기 전 턴 1에서 따라잡아야 함)"
-        ]
-      },
-      {
-        "type": "p",
-        "string": "{P/Core Fusion Veronica}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "EE+10 필수 아님. 있으면 {I-A/Chalice of Longing} 악세서리 사용 금지 (우선권 부스트 합산으로 {P/Core Fusion Veronica}가 {P/Roxie}보다 빨라질 수 있음. {P/Roxie}가 먼저 움직여서 데미지 받고 오브 처치 후, {P/Core Fusion Veronica}가 체인하고 최저 HP에 실드 부여해야 함). EE+10 없으면 {I-A/Chalice of Longing} 사용 가능",
-          "{I-T/Sage's Charm} 또는 {I-T/Rogue's Charm} 사용",
-          "261 속도"
-        ]
-      },
-      {
-        "type": "p",
-        "string": "{P/Fortuna}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "{I-A/Queen of Prism} 악세서리의 실드로 2턴 화상 2번을 버틸 HP 필요, 또는 최대 HP를 {P/Roxie}보다 낮게 해서 나중에 {P/Core Fusion Veronica}에게서 실드 받기 (1턴 화상만 버함)",
-          "{I-T/Sage's Charm} 또는 {I-T/Rogue's Charm} 사용",
-          "230 속도"
-        ]
-      },
-      {
-        "type": "p",
-        "string": ""
-      },
-      {
-        "type": "p",
         "string": "필수 조건:"
       },
       {
         "type": "ul",
         "items": [
-          "{P/Fortuna}, {P/Roxie}, {P/Edelweiss}에 134 효과적중",
           "전원 240 명중률",
-          "{I-T/Rogue's Charm} 사용으로 전원 100% 치명타",
-          "최소 4★ 초월, 체인 스킬 최대 레벨로 6 WG 데미지",
-          "{P/Edelweiss}는 6★ 이상적 (전투 시작 시 추가 AP), {P/Roxie}는 최소 5★ (6★가 더 좋음)"
+          "최소 4★ 초월, 체인 스킬 최대 레벨로 체인 시 6 WG 데미지"
         ]
       },
       {
-        "type": "p",
-        "string": "속도 순서: {P/Edelweiss} (288) > {P/Core Fusion Veronica} (261) > {P/Fortuna} (230) > {P/Roxie} (160)"
+        "type": "turn-order",
+        "order": [
+          { "character": "Edelweiss", "speed": 288 },
+          { "character": "Core Fusion Veronica", "speed": 261 },
+          { "character": "Fortuna", "speed": 230 },
+          { "character": "Roxie", "speed": 160 }
+        ]
       },
       {
         "type": "p",
@@ -226,77 +118,23 @@
     "note_zh": [
       {
         "type": "p",
-        "string": "{P/Roxie}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "推荐T4复仇套装",
-          "{I-A/Gorgon's Vanity [Mage]} 穿透%，+10 {I-T/Executioner's Charm}",
-          "必须6★（更多AP并可使用爆发3。5★也能用但除非使用爆发套装否则最后一回合无法使用爆发3）",
-          "需要EE+10",
-          "使用{I-A/Gorgon's Vanity [Mage]}饰品时160速度。如果没有，需要用速度套装而非复仇套装跑快速{P/Roxie}"
-        ]
-      },
-      {
-        "type": "p",
-        "string": "{P/Edelweiss}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "{I-W/Rampaging Caracal}理想（不要用{I-W/Barrage of Truth}）",
-          "必须能用S3秒杀球。需要T4 {I-A/Burning Soul}饰品（不能用速度饰品）",
-          "推荐6★（可提早施加{D/BT_SEALED}阻挡护盾但非必需）",
-          "使用{I-T/Sage's Charm}或{I-T/Rogue's Charm}",
-          "正好288速度（超过Boss的最低值，但不要更快 - {P/Core Fusion Veronica}和{P/Fortuna}需要在你激怒Boss前在回合1追上）"
-        ]
-      },
-      {
-        "type": "p",
-        "string": "{P/Core Fusion Veronica}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "EE+10非必需。如果有EE+10，不要用{I-A/Chalice of Longing}饰品（优先度加成叠加可能导致{P/Core Fusion Veronica}比{P/Roxie}快，这会破坏整个流程 - {P/Roxie}必须先行动受伤并击杀球，然后{P/Core Fusion Veronica}连携并给最低HP的角色上盾）。没有EE+10时可以用{I-A/Chalice of Longing}",
-          "使用{I-T/Sage's Charm}或{I-T/Rogue's Charm}",
-          "261速度"
-        ]
-      },
-      {
-        "type": "p",
-        "string": "{P/Fortuna}:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "需要足够HP用{I-A/Queen of Prism}饰品的护盾扛住两次2回合燃烧，或者让她的最大HP低于{P/Roxie}以便之后从{P/Core Fusion Veronica}那里获得护盾（只需扛1回合燃烧）",
-          "使用{I-T/Sage's Charm}或{I-T/Rogue's Charm}",
-          "230速度"
-        ]
-      },
-      {
-        "type": "p",
-        "string": ""
-      },
-      {
-        "type": "p",
         "string": "基本要求:"
       },
       {
         "type": "ul",
         "items": [
-          "{P/Fortuna}、{P/Roxie}和{P/Edelweiss}需要134效果命中",
           "全员240命中率",
-          "使用{I-T/Rogue's Charm}全员100%暴击",
-          "最低4★超越，连携技能满级获得6 WG伤害",
-          "{P/Edelweiss}理想6★（战斗开始时额外AP），{P/Roxie}最低5★（6★更好）"
+          "最低4★超越，连携技能满级在连携时获得6 WG伤害"
         ]
       },
       {
-        "type": "p",
-        "string": "速度顺序: {P/Edelweiss} (288) > {P/Core Fusion Veronica} (261) > {P/Fortuna} (230) > {P/Roxie} (160)"
+        "type": "turn-order",
+        "order": [
+          { "character": "Edelweiss", "speed": 288 },
+          { "character": "Core Fusion Veronica", "speed": 261 },
+          { "character": "Fortuna", "speed": 230 },
+          { "character": "Roxie", "speed": 160 }
+        ]
       },
       {
         "type": "p",
@@ -321,6 +159,18 @@
           "notes": [
             "5★ still works but you can't use Burst 3 on her last turn unless by using {AS/Bursting}",
             "If you don't have {I-A/Gorgon's Vanity [Mage]}, you'll probably have to run with {AS/Speed} over {AS/Revenge}"
+          ],
+          "notes_jp": [
+            "5★でも動作するが、{AS/Bursting}を使わない限り最後のターンでバースト3が使えない",
+            "{I-A/Gorgon's Vanity [Mage]}がない場合、{AS/Revenge}ではなく{AS/Speed}で運用する必要あり"
+          ],
+          "notes_kr": [
+            "5★도 작동하지만 {AS/Bursting} 없이는 마지막 턴에 버스트 3 사용 불가",
+            "{I-A/Gorgon's Vanity [Mage]}가 없으면 {AS/Revenge} 대신 {AS/Speed}로 운용 필요"
+          ],
+          "notes_zh": [
+            "5★也能用但除非使用{AS/Bursting}否则最后一回合无法使用爆发3",
+            "如果没有{I-A/Gorgon's Vanity [Mage]}，需要用{AS/Speed}而非{AS/Revenge}"
           ]
         },
         {
@@ -334,6 +184,18 @@
           "notes": [
             "288 {S/SPD} exactly otherwise turn order will be messed up.",
             "Ideally 6★ for extra AP on battle start"
+          ],
+          "notes_jp": [
+            "{S/SPD}は正確に288、そうでないとターン順が崩れる",
+            "6★が理想（戦闘開始時に追加AP）"
+          ],
+          "notes_kr": [
+            "{S/SPD} 정확히 288, 그렇지 않으면 턴 순서가 틀어짐",
+            "6★ 이상적 (전투 시작 시 추가 AP)"
+          ],
+          "notes_zh": [
+            "{S/SPD}必须正好288，否则回合顺序会乱",
+            "理想6★（战斗开始时额外AP）"
           ]
         },
         {
@@ -346,6 +208,18 @@
           "notes": [
             "Needs enough HP to survive two 2-turn burns with {I-A/Queen of Prism}",
             "Without {I-A/Queen of Prism} have her max HP be lower than {P/Roxie} so she gets a shield from {P/Core Fusion Veronica} later (meaning you only tank 1-turn burns)"
+          ],
+          "notes_jp": [
+            "{I-A/Queen of Prism}のシールドで2ターン燃焼を2回耐えられるHP必要",
+            "{I-A/Queen of Prism}なしの場合、最大HPを{P/Roxie}より低くして{P/Core Fusion Veronica}から後でシールドを受ける（1ターン燃焼だけ耐える）"
+          ],
+          "notes_kr": [
+            "{I-A/Queen of Prism}의 실드로 2턴 화상 2번을 버틸 HP 필요",
+            "{I-A/Queen of Prism} 없으면 최대 HP를 {P/Roxie}보다 낮게 해서 나중에 {P/Core Fusion Veronica}에게서 실드 받기 (1턴 화상만 버팀)"
+          ],
+          "notes_zh": [
+            "需要足够HP用{I-A/Queen of Prism}的护盾扛住两次2回合燃烧",
+            "没有{I-A/Queen of Prism}时让最大HP低于{P/Roxie}以便之后从{P/Core Fusion Veronica}获得护盾（只需扛1回合燃烧）"
           ]
         },
         {
@@ -357,6 +231,18 @@
           "notes": [
             "EE+10 not required, but if you have it, don't use {I-A/Chalice of Longing} accessory otherwise turn order will be messed up.",
             "{I-A/Chalice of Longing} is fine without EE+10"
+          ],
+          "notes_jp": [
+            "EE+10は必須ではないが、持っている場合は{I-A/Chalice of Longing}アクセサリーを使わない（ターン順が崩れる）",
+            "EE+10なしなら{I-A/Chalice of Longing}は使用可"
+          ],
+          "notes_kr": [
+            "EE+10 필수 아님, 있으면 {I-A/Chalice of Longing} 악세서리 사용 금지 (턴 순서가 틀어짐)",
+            "EE+10 없으면 {I-A/Chalice of Longing} 사용 가능"
+          ],
+          "notes_zh": [
+            "EE+10非必需，但如果有就不要用{I-A/Chalice of Longing}饰品（否则回合顺序会乱）",
+            "没有EE+10时可以用{I-A/Chalice of Longing}"
           ]
         }
       ]
