@@ -117,7 +117,7 @@ const jp: Record<TranslationKey, string> = {
   'guides.category.adventure-license': '冒険者ライセンス',
   'guides.category.guild-raid': 'ギルドレイド',
   'guides.category.world-boss': 'ワールドボス',
-  'guides.category.joint-boss': 'ジョイントボス',
+  'guides.category.joint-challenge': '合同チャレンジ',
   'guides.category.special-request': '特別依頼',
   'guides.category.irregular-extermination': 'イレギュラー掃討',
   'guides.category.monad-gate': 'モナドゲート',
@@ -135,7 +135,7 @@ const jp: Record<TranslationKey, string> = {
     'ギルドレイド完全攻略：ボスメカニクス、最適なチーム編成、最高スコアを狙うためのダメージ最大化戦術。',
   'guides.category.world-boss.desc':
     'エクストリームリーグのワールドボス戦でSSSランクを達成するための完全攻略：最適なチーム編成、スキルローテーション、ダメージ最大化。',
-  'guides.category.joint-boss.desc':
+  'guides.category.joint-challenge.desc':
     '共同作戦で高スコアを狙うための上級攻略：最適なチーム編成、スキルタイミング、シナジー活用のコツ。',
   'guides.category.special-request.desc':
     '特別依頼ミッション徹底攻略：生態調査と正体究明。ボスメカニクス、チームシナジー、勝利のための重要戦術を解説。',

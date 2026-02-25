@@ -117,7 +117,7 @@ const kr: Record<TranslationKey, string> = {
   'guides.category.adventure-license': '모험 라이선스',
   'guides.category.guild-raid': '길드 레이드',
   'guides.category.world-boss': '월드 보스',
-  'guides.category.joint-boss': '합동 보스',
+  'guides.category.joint-challenge': '합동 챌린지',
   'guides.category.special-request': '특별 의뢰',
   'guides.category.irregular-extermination': '이레귤러 소탕',
   'guides.category.monad-gate': '모나드 게이트',
@@ -135,7 +135,7 @@ const kr: Record<TranslationKey, string> = {
     '길드 레이드 완벽 공략: 보스 메커닉, 최적 팀 구성, 최고 점수를 위한 데미지 극대화 전술.',
   'guides.category.world-boss.desc':
     '익스트림 리그 월드 보스전에서 SSS 등급을 달성하기 위한 완벽 공략: 최적 팀 구성, 스킬 로테이션, 데미지 극대화.',
-  'guides.category.joint-boss.desc':
+  'guides.category.joint-challenge.desc':
     '합동 챌린지에서 높은 점수를 얻기 위한 고급 공략: 최적 팀 구성, 스킬 타이밍, 시너지 활용 팁.',
   'guides.category.special-request.desc':
     '특별 의뢰 미션 완벽 공략: 생태 조사 및 정체 규명. 보스 메커닉, 팀 시너지, 성공을 위한 핵심 전술을 소개합니다.',

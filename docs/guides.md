@@ -40,7 +40,7 @@ src/app/[lang]/guides/
 | `adventure-license` | Promotion fight guides |
 | `guild-raid` | Guild raid boss strategies |
 | `world-boss` | World boss fight strategies |
-| `joint-boss` | Joint boss challenge guides |
+| `joint-challenge` | Joint challenge guides |
 | `special-request` | Special request boss guides |
 | `irregular-extermination` | Irregular extermination guides |
 | `monad-gate` | Monad gate route guides |

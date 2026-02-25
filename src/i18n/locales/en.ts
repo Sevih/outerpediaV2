@@ -117,7 +117,7 @@ const en = {
   'guides.category.adventure-license': 'Adventure License',
   'guides.category.guild-raid': 'Guild Raid',
   'guides.category.world-boss': 'World Boss',
-  'guides.category.joint-boss': 'Joint Boss',
+  'guides.category.joint-challenge': 'Joint Challenge',
   'guides.category.special-request': 'Special Request',
   'guides.category.irregular-extermination': 'Irregular Extermination',
   'guides.category.monad-gate': 'Monad Gate',
@@ -135,7 +135,7 @@ const en = {
     'Comprehensive strategies for Guild Raids: boss mechanics, optimal team setups, and damage-maximizing tactics to achieve the highest raid scores.',
   'guides.category.world-boss.desc':
     'Comprehensive strategies to achieve SSS rank in Extreme League World Boss battles: optimal team setups, rotation timing, and damage maximization.',
-  'guides.category.joint-boss.desc':
+  'guides.category.joint-challenge.desc':
     'Score higher in Joint Challenge battles with advanced strategies: best team compositions, skill timing, and synergy tips for top rankings.',
   'guides.category.special-request.desc':
     'In-depth strategies for Special Request missions: Ecology Study and Identification. Learn boss mechanics, team synergies, and key tactics for success.',

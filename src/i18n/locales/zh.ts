@@ -117,7 +117,7 @@ const zh: Record<TranslationKey, string> = {
   'guides.category.adventure-license': '冒险许可证',
   'guides.category.guild-raid': '公会突袭',
   'guides.category.world-boss': '世界Boss',
-  'guides.category.joint-boss': '联合Boss',
+  'guides.category.joint-challenge': '联合挑战',
   'guides.category.special-request': '特别委托',
   'guides.category.irregular-extermination': '异常讨伐',
   'guides.category.monad-gate': '单子之门',
@@ -135,7 +135,7 @@ const zh: Record<TranslationKey, string> = {
     '公会突袭综合策略——学习首领机制、参考最佳队伍以获得最高伤害或是最高分数。',
   'guides.category.world-boss.desc':
     '在世界首领战极限联赛中实现SSS排名的综合策略：优化队伍设置、学习轮换技巧和伤害最大化策略。',
-  'guides.category.joint-boss.desc':
+  'guides.category.joint-challenge.desc':
     '使用高级战略在"联合挑战"中获得更高分：获悉顶尖排名的队伍组合、技能时机安排及协同技巧。',
   'guides.category.special-request.desc':
     '深入解析特别委托：生态调查/查清身份。 学习过关所需的首领机制、队伍配合和关键策略。',
