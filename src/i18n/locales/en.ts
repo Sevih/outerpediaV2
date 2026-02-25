@@ -167,6 +167,8 @@ const en = {
   'guides.adventure_license.weekly': 'Weekly',
   'guides.adventure_license.promotion': 'Promotion',
   'guides.adventure_license.reveal': 'Reveal',
+  'guides.special_request.identification': 'Identification',
+  'guides.special_request.ecology_study': 'Ecology Study',
   'tower.search_placeholder': 'Search by floor or boss name...',
   'tower.floor': 'Floor {n}',
   'tower.floor_short': 'F{n}',

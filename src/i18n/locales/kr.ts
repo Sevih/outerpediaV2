@@ -167,6 +167,8 @@ const kr: Record<TranslationKey, string> = {
   'guides.adventure_license.weekly': '주간',
   'guides.adventure_license.promotion': '프로모션',
   'guides.adventure_license.reveal': '공개하기',
+  'guides.special_request.identification': '정체 규명',
+  'guides.special_request.ecology_study': '생태 조사',
   'tower.search_placeholder': '층수 또는 보스명으로 검색...',
   'tower.floor': '{n}층',
   'tower.floor_short': '{n}F',

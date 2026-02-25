@@ -27,9 +27,9 @@ const STAT_I18N: Record<string, TranslationKey> = {
   'CDMG RED%': 'sys.stat.cdmg_red',
 };
 
-type Props = { name: string };
+type Props = { name: string; iconOnly?: boolean };
 
-export default function StatInline({ name }: Props) {
+export default function StatInline({ name, iconOnly = false }: Props) {
   const { t } = useI18n();
   const stat = statsMap[name];
   if (!stat) {
@@ -38,6 +38,17 @@ export default function StatInline({ name }: Props) {
 
   const i18nKey = STAT_I18N[name];
   const label = i18nKey ? t(i18nKey) : stat.label;
+
+  if (iconOnly) {
+    return (
+      <InlineIcon
+        icon={`/images/ui/effect/${stat.icon}`}
+        label=""
+        color="text-stat"
+        tooltip={label}
+      />
+    );
+  }
 
   return (
     <InlineIcon

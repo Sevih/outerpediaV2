@@ -5,6 +5,7 @@ import AdventureLicenseList from './AdventureLicenseList';
 import JointChallengeList from './JointChallengeList';
 import WorldBossList from './WorldBossList';
 import GuildRaidList from './GuildRaidList';
+import SpecialRequestList from './SpecialRequestList';
 
 const categoryViews: Record<string, ComponentType<CategoryViewProps>> = {
   'adventure': AdventureList,
@@ -12,6 +13,7 @@ const categoryViews: Record<string, ComponentType<CategoryViewProps>> = {
   'joint-challenge': JointChallengeList,
   'world-boss': WorldBossList,
   'guild-raid': GuildRaidList,
+  'special-request': SpecialRequestList,
 };
 
 export function getCategoryView(category: string): ComponentType<CategoryViewProps> | null {
