@@ -291,29 +291,32 @@ export default function GuildRaidGuide({
   versions,
 }: Props) {
   const { lang } = useI18n();
-  const versionKeys = Object.keys(versions);
+  const [resolvedVersion, setResolvedVersion] = useState(defaultVersion);
 
-  // Parse initial version from hash: #dec2025/mini-a → dec2025
-  const [initialVersion] = useState(() => {
-    if (typeof window === 'undefined') return defaultVersion;
+  // Read hash after mount to avoid hydration mismatch (server has no window.location)
+  useEffect(() => {
     const hash = decodeURIComponent(window.location.hash.slice(1));
-    if (!hash) return defaultVersion;
+    if (!hash) return;
     const slashIdx = hash.indexOf('/');
     const vKey = slashIdx === -1 ? hash : hash.slice(0, slashIdx);
-    if (versionKeys.includes(vKey)) return vKey;
-    return defaultVersion;
-  });
+    const keys = Object.keys(versions);
+    if (keys.includes(vKey) && vKey !== defaultVersion) {
+      setResolvedVersion(vKey);
+    }
+  }, [versions, defaultVersion]);
 
   const handleVersionChange = useCallback((key: string) => {
+    setResolvedVersion(key);
     // Reset to mini-a on version change
     history.replaceState(null, '', `#${key}/mini-a`);
   }, []);
 
   return (
     <GuideTemplate
+      key={resolvedVersion}
       title={lRec(title, lang)}
       introduction={lRec(introduction, lang)}
-      defaultVersion={initialVersion}
+      defaultVersion={resolvedVersion}
       hashPrefix={undefined}
       onVersionChange={handleVersionChange}
       versions={Object.fromEntries(
