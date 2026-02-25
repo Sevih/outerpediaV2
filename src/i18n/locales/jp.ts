@@ -169,6 +169,7 @@ const jp: Record<TranslationKey, string> = {
   'guides.adventure_license.reveal': '公開する',
   'guides.special_request.identification': '正体究明',
   'guides.special_request.ecology_study': '生態調査',
+  'guides.monad_gate.depth': '深度{n}',
   'tower.search_placeholder': '階数またはボス名で検索...',
   'tower.floor': '{n}階',
   'tower.floor_short': '{n}F',

@@ -169,6 +169,7 @@ const zh: Record<TranslationKey, string> = {
   'guides.adventure_license.reveal': '揭晓',
   'guides.special_request.identification': '查清身份',
   'guides.special_request.ecology_study': '生态调查',
+  'guides.monad_gate.depth': '深度{n}',
   'tower.search_placeholder': '按楼层或Boss名称搜索...',
   'tower.floor': '第{n}层',
   'tower.floor_short': '{n}F',

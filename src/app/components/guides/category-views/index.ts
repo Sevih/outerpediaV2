@@ -7,6 +7,7 @@ import WorldBossList from './WorldBossList';
 import GuildRaidList from './GuildRaidList';
 import SpecialRequestList from './SpecialRequestList';
 import IrregularExterminationList from './IrregularExterminationList';
+import MonadGateList from './MonadGateList';
 
 const categoryViews: Record<string, ComponentType<CategoryViewProps>> = {
   'adventure': AdventureList,
@@ -16,6 +17,7 @@ const categoryViews: Record<string, ComponentType<CategoryViewProps>> = {
   'guild-raid': GuildRaidList,
   'special-request': SpecialRequestList,
   'irregular-extermination': IrregularExterminationList,
+  'monad-gate': MonadGateList,
 };
 
 export function getCategoryView(category: string): ComponentType<CategoryViewProps> | null {
