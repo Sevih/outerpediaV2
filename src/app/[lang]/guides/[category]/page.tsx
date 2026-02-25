@@ -7,6 +7,7 @@ import { loadMessages } from '@/i18n';
 import type { TranslationKey } from '@/i18n';
 import { getValidCategories, getGuidesByCategory, getGuideCategory } from '@/lib/data/guides';
 import GuideListClient from '@/app/components/guides/GuideListClient';
+import { getCategoryView } from '@/app/components/guides/category-views';
 import Link from 'next/link';
 import { localePath } from '@/lib/navigation';
 
@@ -58,6 +59,8 @@ export default async function GuideCategoryPage({ params }: Props) {
   const title = t[titleKey] ?? category;
   const description = t[descKey] ?? '';
 
+  const CategoryView = getCategoryView(category);
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
       <Link
@@ -74,6 +77,8 @@ export default async function GuideCategoryPage({ params }: Props) {
 
       {guides.length === 0 ? (
         <p className="mt-8 text-zinc-500">{t['common.coming_soon']}</p>
+      ) : CategoryView ? (
+        <CategoryView guides={guides} lang={lang} t={t} />
       ) : (
         <GuideListClient
           guides={guides}
