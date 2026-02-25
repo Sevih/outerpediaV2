@@ -264,6 +264,13 @@ body {
     border: 1px solid oklch(0.75 0.15 70 / 0.3);
     background: oklch(0.28 0.07 70 / 0.2);
   }
+
+  .boss-pin {
+    top: var(--pin-top);
+    @media (min-width: 1024px) {
+      top: var(--pin-top-lg);
+    }
+  }
 }
 
 /* Fix perf: background-attachment fixed causes repaints on mobile Safari */

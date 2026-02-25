@@ -61,10 +61,9 @@ function LootIcons({ loot, type }: { loot: string[]; type: Tab }) {
   );
 }
 
-function CardList({ items, lang, t, type }: {
+function CardList({ items, lang, type }: {
   items: GuideMeta[];
   lang: CategoryViewProps['lang'];
-  t: CategoryViewProps['t'];
   type: Tab;
 }) {
   return (
@@ -142,18 +141,18 @@ export default function SpecialRequestList({ guides, lang, t }: CategoryViewProp
 
       {/* Mobile: tabbed single column */}
       <div className="lg:hidden">
-        <CardList items={items} lang={lang} t={t} type={tab} />
+        <CardList items={items} lang={lang} type={tab} />
       </div>
 
       {/* Desktop: side by side */}
       <div className="hidden lg:grid lg:grid-cols-2 lg:gap-8">
         <section>
           <h3 className="mb-3">{t['guides.special_request.identification']}</h3>
-          <CardList items={identification} lang={lang} t={t} type="identification" />
+          <CardList items={identification} lang={lang} type="identification" />
         </section>
         <section>
           <h3 className="mb-3">{t['guides.special_request.ecology_study']}</h3>
-          <CardList items={ecology_study} lang={lang} t={t} type="ecology_study" />
+          <CardList items={ecology_study} lang={lang} type="ecology_study" />
         </section>
       </div>
     </div>
