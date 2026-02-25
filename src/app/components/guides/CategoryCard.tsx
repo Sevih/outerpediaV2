@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import type { TranslationKey } from '@/i18n';
+import { localePath } from '@/lib/navigation';
 
 type Props = {
   slug: string;
@@ -19,7 +20,7 @@ export default function CategoryCard({ slug, icon, count, lang, t }: Props) {
 
   return (
     <Link
-      href={`/${lang}/guides/${slug}`}
+      href={localePath(lang, `/guides/${slug}`)}
       className="card-interactive group flex items-center gap-4 p-4 transition-colors"
     >
       <div className="relative h-12 w-12 shrink-0">

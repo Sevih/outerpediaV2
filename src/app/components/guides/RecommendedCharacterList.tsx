@@ -39,7 +39,7 @@ export default function RecommendedCharacterList({
   entries,
   idMode = false,
 }: Props) {
-  const { lang, t } = useI18n();
+  const { lang, t, href } = useI18n();
   const isDesktop = useMediaQuery('(min-width: 640px)');
   const portraitSize = isDesktop ? 'md' : 'sm';
 
@@ -83,7 +83,7 @@ export default function RecommendedCharacterList({
               {/* Character portraits — max 3 per row */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
                 {chars.map((c) => (
-                  <Link key={c.name} href={`/${lang}/characters/${c.slug}`}>
+                  <Link key={c.name} href={href(`/characters/${c.slug}`)}>
                     <CharacterPortrait
                       id={c.charId}
                       name={c.localizedName}
@@ -101,7 +101,7 @@ export default function RecommendedCharacterList({
                   {chars.map((c, ci) => (
                     <span key={c.name}>
                       {ci > 0 && ', '}
-                      <Link href={`/${lang}/characters/${c.slug}`} className="hover:underline">
+                      <Link href={href(`/characters/${c.slug}`)} className="hover:underline">
                         {c.localizedName}
                       </Link>
                     </span>

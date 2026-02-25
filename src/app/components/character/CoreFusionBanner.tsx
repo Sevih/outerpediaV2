@@ -18,7 +18,7 @@ type Props = {
 };
 
 export default function CoreFusionBanner({ link }: Props) {
-  const { lang, t } = useI18n();
+  const { lang, t, href } = useI18n();
   const name = l(link, 'name', lang);
   const label = link.type === 'core-fusion'
     ? t('page.character.core_fusion.available')
@@ -26,7 +26,7 @@ export default function CoreFusionBanner({ link }: Props) {
 
   return (
     <Link
-      href={`/${lang}/characters/${link.slug}`}
+      href={href(`/characters/${link.slug}`)}
       className="panel-feature group flex items-center gap-4 px-4 py-3 transition-colors hover:border-purple-400/50 hover:bg-purple-950/30"
     >
       <CharacterPortrait id={link.id} size="sm" showIcons />

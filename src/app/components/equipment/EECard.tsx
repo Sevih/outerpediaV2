@@ -6,6 +6,7 @@ import type { ExclusiveEquipment } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
 import { formatEffectText, formatScaledEffect, getRarityBgPath, slugifyEquipment } from '@/lib/format-text';
+import { localePath } from '@/lib/navigation';
 import BuffDebuffDisplay from '@/app/components/character/BuffDebuffDisplay';
 
 type Props = {
@@ -22,7 +23,7 @@ export default function EECard({ ee, charId, charName, lang }: Props) {
   const effect10 = l(ee, 'effect10', lang);
 
   return (
-    <Link href={`/${lang}/equipments/${slugifyEquipment(ee.name)}`} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
+    <Link href={localePath(lang, `/equipments/${slugifyEquipment(ee.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: character portrait + EE name/charName + rank */}
       <div className="flex items-start gap-3">
         <div className="relative h-17.5 w-17.5 shrink-0 overflow-hidden rounded-lg">

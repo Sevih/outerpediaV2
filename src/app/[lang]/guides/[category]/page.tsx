@@ -8,6 +8,7 @@ import type { TranslationKey } from '@/i18n';
 import { getValidCategories, getGuidesByCategory, getGuideCategory } from '@/lib/data/guides';
 import GuideListClient from '@/app/components/guides/GuideListClient';
 import Link from 'next/link';
+import { localePath } from '@/lib/navigation';
 
 type Props = { params: Promise<{ lang: string; category: string }> };
 
@@ -60,7 +61,7 @@ export default async function GuideCategoryPage({ params }: Props) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
       <Link
-        href={`/${lang}/guides`}
+        href={localePath(lang, '/guides')}
         className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-zinc-200 transition-colors"
       >
         &larr; {t['page.guides.title']}

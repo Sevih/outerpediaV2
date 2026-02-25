@@ -60,13 +60,13 @@ export default function EquipmentDetailClient(props: Props) {
 }
 
 function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwner, eeCfCompanion, bossMap, weaponStatRanges, accessoryStatRanges, armorSetStatRanges, talismanStatRanges, eeStatRange, lang }: Props) {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const equipName = l(equipment.data, 'name', lang);
   useBreadcrumbOverride(equipName);
 
   return (
     <div className="mx-auto max-w-4xl space-y-8 px-4 py-6 md:px-6">
-      <Link href={`/${lang}/equipments`} className="inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-300">
+      <Link href={href('/equipments')} className="inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-300">
         <span aria-hidden="true">&larr;</span> {t('equip.detail.back')}
       </Link>
       {equipment.type === 'weapon' && <WeaponDetail weapon={equipment.data} lang={lang} bossMap={bossMap} statRanges={weaponStatRanges} />}
@@ -81,7 +81,7 @@ function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwn
           <h2>{t('equip.detail.recommended_by')}</h2>
           <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
             {recoCharacters.map((char) => (
-              <CharacterRefCard key={char.id} char={char} lang={lang} />
+              <CharacterRefCard key={char.id} char={char} />
             ))}
           </div>
           {totalRecoCount > recoCharacters.length && (
@@ -399,8 +399,8 @@ function EEDetail({ ee, owner, cfCompanion, lang, statRange }: { ee: ExclusiveEq
       <section>
         <h3>{t('equip.detail.owner')}</h3>
         <div className="mt-2 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-          <CharacterRefCard char={owner} lang={lang} />
-          {cfCompanion && <CharacterRefCard char={cfCompanion} lang={lang} />}
+          <CharacterRefCard char={owner} />
+          {cfCompanion && <CharacterRefCard char={cfCompanion} />}
         </div>
       </section>
 
@@ -540,7 +540,8 @@ function ClassBadge({ classType }: { classType: string }) {
   );
 }
 
-function CharacterRefCard({ char, lang }: { char: CharacterRef; lang: Lang }) {
+function CharacterRefCard({ char }: { char: CharacterRef }) {
+  const { href } = useI18n();
   const content = (
     <div className="card-interactive flex flex-col items-center gap-2 p-3">
       <CharacterPortrait id={char.id} name={char.name} size="md" showIcons />
@@ -551,7 +552,7 @@ function CharacterRefCard({ char, lang }: { char: CharacterRef; lang: Lang }) {
   );
 
   if (char.slug) {
-    return <Link href={`/${lang}/characters/${char.slug}`}>{content}</Link>;
+    return <Link href={href(`/characters/${char.slug}`)}>{content}</Link>;
   }
   return content;
 }

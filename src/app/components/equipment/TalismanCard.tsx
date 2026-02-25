@@ -6,6 +6,7 @@ import type { Talisman } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
 import { formatEffectText, formatScaledEffect, slugifyEquipment } from '@/lib/format-text';
+import { localePath } from '@/lib/navigation';
 import EquipmentIcon from './EquipmentIcon';
 
 type Props = {
@@ -22,7 +23,7 @@ export default function TalismanCard({ talisman, lang }: Props) {
   const effectDesc4 = l(talisman, 'effect_desc4', lang);
 
   return (
-    <Link href={`/${lang}/equipments/${slugifyEquipment(talisman.name)}`} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
+    <Link href={localePath(lang, `/equipments/${slugifyEquipment(talisman.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/effect pill */}
       <div className="flex items-start gap-3">
         <EquipmentIcon

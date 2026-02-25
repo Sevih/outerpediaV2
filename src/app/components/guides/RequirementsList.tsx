@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
+import type { Route } from 'next';
 import Link from 'next/link';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import FitText from '@/app/components/ui/FitText';
@@ -94,7 +95,7 @@ function resolveFooterNote(data: RequirementsData, lang: string): string | undef
 /* -- Component ------------------------------------------------ */
 
 export default function RequirementsList({ data }: Props) {
-  const { lang, t } = useI18n();
+  const { lang, t, href } = useI18n();
 
   const note = resolveFooterNote(data, lang);
 
@@ -122,14 +123,14 @@ export default function RequirementsList({ data }: Props) {
       {/* Desktop — 2 columns */}
       <div className="hidden md:grid md:grid-cols-2">
         {sorted.map((entry, idx) => (
-          <EntryCard key={entry.character} entry={entry} idx={idx} lang={lang} t={t} layout="desktop" />
+          <EntryCard key={entry.character} entry={entry} idx={idx} lang={lang} t={t} href={href} layout="desktop" />
         ))}
       </div>
 
       {/* Mobile — stacked */}
       <div className="divide-y divide-neutral-600/60 md:hidden">
         {sorted.map((entry) => (
-          <EntryCard key={entry.character} entry={entry} idx={0} lang={lang} t={t} layout="mobile" />
+          <EntryCard key={entry.character} entry={entry} idx={0} lang={lang} t={t} href={href} layout="mobile" />
         ))}
       </div>
 
@@ -149,12 +150,14 @@ function EntryCard({
   idx,
   lang,
   t,
+  href,
   layout,
 }: {
   entry: RequirementEntry;
   idx: number;
   lang: string;
   t: TFunction;
+  href: (path: string) => Route;
   layout: 'desktop' | 'mobile';
 }) {
   const charId = nameMap[entry.character];
@@ -170,7 +173,7 @@ function EntryCard({
       <div className="px-3 py-2.5">
         <div className="mb-1.5 flex items-center gap-2">
           {charId && (
-            <Link href={`/${lang}/characters/${char?.slug ?? ''}`} className="shrink-0">
+            <Link href={href(`/characters/${char?.slug ?? ''}`)} className="shrink-0">
               <CharacterPortrait id={charId} name={localizedName} size="xs" />
             </Link>
           )}
@@ -196,7 +199,7 @@ function EntryCard({
       ].join(' ')}
     >
       <Link
-        href={`/${lang}/characters/${char?.slug ?? ''}`}
+        href={href(`/characters/${char?.slug ?? ''}`)}
         title={localizedName}
         className="flex w-20 shrink-0 flex-col items-center gap-1"
       >

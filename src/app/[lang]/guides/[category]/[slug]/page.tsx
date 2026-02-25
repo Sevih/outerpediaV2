@@ -8,6 +8,7 @@ import type { TranslationKey } from '@/i18n';
 import { getGuideMeta, getGuideSlugsWithCategories } from '@/lib/data/guides';
 import { lRec } from '@/lib/i18n/localize';
 import Link from 'next/link';
+import { localePath } from '@/lib/navigation';
 
 export const revalidate = 86400;
 
@@ -65,7 +66,7 @@ export default async function GuideDetailPage({ params }: Props) {
   return (
     <div className="px-4 py-6 md:px-6">
       <Link
-        href={`/${lang}/guides/${category}`}
+        href={localePath(lang, `/guides/${category}`)}
         className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-zinc-200 transition-colors"
       >
         &larr; {categoryTitle}

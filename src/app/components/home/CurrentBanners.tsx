@@ -6,6 +6,7 @@ import { l } from '@/lib/i18n/localize';
 import { getCharacterIndex } from '@/lib/data/characters';
 import { splitCharacterName } from '@/lib/character-name';
 import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
+import { localePath } from '@/lib/navigation';
 import BannerCountdown from './BannerCountdown';
 
 type BannerEntry = {
@@ -58,7 +59,7 @@ export default async function CurrentBanners({ t }: Props) {
               classType={char.Class}
               rarity={char.Rarity}
               tags={char.tags}
-              href={`/${lang}/characters/${char.slug}`}
+              href={localePath(lang, `/characters/${char.slug}`)}
             >
               <BannerCountdown
                 endDate={banner.end}

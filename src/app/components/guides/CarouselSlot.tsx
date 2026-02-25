@@ -114,7 +114,8 @@ const carousel: KeenSliderPlugin = (slider) => {
   });
 };
 
-function CharCard({ c, lang }: { c: ResolvedChar; lang: string }) {
+function CharCard({ c }: { c: ResolvedChar }) {
+  const { href } = useI18n();
   return (
     <ResponsiveCharacterCard
       id={c.charId}
@@ -124,7 +125,7 @@ function CharCard({ c, lang }: { c: ResolvedChar; lang: string }) {
       classType={c.entry.Class}
       rarity={c.entry.Rarity}
       tags={c.entry.tags}
-      href={`/${lang}/characters/${c.slug}`}
+      href={href(`/characters/${c.slug}`)}
       size={{ base: 'sm', md: 'md', lg: 'lg' }}
     />
   );
@@ -158,7 +159,7 @@ export default function CarouselSlot({ characters }: Props) {
   if (resolved.length === 1) {
     return (
       <div className="carousel-slot">
-        <CharCard c={resolved[0]} lang={lang} />
+        <CharCard c={resolved[0]} />
       </div>
     );
   }
@@ -170,7 +171,7 @@ export default function CarouselSlot({ characters }: Props) {
         <div ref={sliderRef} className="keen-slider">
           {resolved.map((c, idx) => (
             <div key={`${c.charId}-${idx}`} className="carousel-cell">
-              <CharCard c={c} lang={lang} />
+              <CharCard c={c} />
             </div>
           ))}
         </div>

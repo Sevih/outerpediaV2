@@ -38,9 +38,29 @@ export function proxy(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
-  // --- Dev: path-based routing ---
   const firstSegment = pathname.split('/')[1];
 
+  // --- Custom domain without subdomain (e.g. outerpedia.local) = default lang ---
+  if (isCustomDomain(host)) {
+    // Path has default lang prefix → redirect to strip it (clean URL)
+    if (firstSegment === DEFAULT_LANG) {
+      const url = request.nextUrl.clone();
+      url.pathname = pathname.slice(`/${DEFAULT_LANG}`.length) || '/';
+      return NextResponse.redirect(url);
+    }
+
+    // Path has another lang prefix → let it through (shouldn't happen normally)
+    if (isValidLang(firstSegment)) {
+      return NextResponse.next();
+    }
+
+    // No lang prefix → rewrite internally with default lang
+    const url = request.nextUrl.clone();
+    url.pathname = `/${DEFAULT_LANG}${pathname}`;
+    return NextResponse.rewrite(url);
+  }
+
+  // --- Dev (localhost): path-based routing ---
   // Path already has a valid lang prefix → continue
   if (isValidLang(firstSegment)) {
     return NextResponse.next();
@@ -50,6 +70,12 @@ export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
   url.pathname = `/${DEFAULT_LANG}${pathname}`;
   return NextResponse.redirect(url);
+}
+
+/** Check if host is a custom domain (not localhost) */
+function isCustomDomain(host: string): boolean {
+  const hostname = host.split(':')[0];
+  return hostname.split('.').length >= 2 && hostname !== 'localhost';
 }
 
 /** Extract subdomain from host (e.g., "jp.outerpedia.com" → "jp") */

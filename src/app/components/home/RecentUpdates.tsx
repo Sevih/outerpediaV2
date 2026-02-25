@@ -4,6 +4,7 @@ import type { Messages } from '@/i18n';
 import type { TranslationKey } from '@/i18n/locales/en';
 import { getChangelog } from '@/lib/changelog';
 import type { ChangelogType } from '@/types/changelog';
+import { localePath } from '@/lib/navigation';
 
 const TYPE_STYLES: Record<ChangelogType, string> = {
   feature: 'bg-emerald-600/20 text-emerald-400',
@@ -47,7 +48,7 @@ export default function RecentUpdates({ lang, t }: Props) {
       </div>
       <div className="mt-4 text-center">
         <Link
-          href={`/${lang}/changelog`}
+          href={localePath(lang, '/changelog')}
           className="text-sm text-cyan-400 hover:underline"
         >
           {t['changelog.view_full']}

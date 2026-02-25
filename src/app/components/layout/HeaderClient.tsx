@@ -25,7 +25,7 @@ function NavIcon({ src, alt }: { src: string; alt: string }) {
 export default function HeaderClient() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const { lang, t } = useI18n();
+  const { t, href } = useI18n();
 
   // Ctrl+K shortcut
   const onGlobalKeyDown = useCallback((e: KeyboardEvent) => {
@@ -44,7 +44,7 @@ export default function HeaderClient() {
     <header className="sticky top-0 z-60 border-b border-zinc-800 bg-black/60 backdrop-blur supports-backdrop-filter:bg-black/40">
       <div className="flex items-center justify-between px-4 py-3 md:px-8">
         {/* Logo */}
-        <Link href={`/${lang}`} className="flex items-center gap-3">
+        <Link href={href('/')} className="flex items-center gap-3">
           <span className="relative inline-block h-7 w-7">
             <Image
               src="/favicon.ico"
@@ -64,7 +64,7 @@ export default function HeaderClient() {
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
-              href={`/${lang}${item.href}`}
+              href={href(item.href)}
               className="flex items-center gap-1.5 rounded-md px-2 py-2 text-sm hover:bg-zinc-800/60 lg:gap-2 lg:px-3"
               aria-label={t(item.key)}
               title={t(item.key)}
@@ -115,7 +115,7 @@ export default function HeaderClient() {
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
-                href={`/${lang}${item.href}`}
+                href={href(item.href)}
                 className="flex items-center gap-2 rounded px-3 py-2 hover:bg-zinc-800"
                 onClick={() => setMenuOpen(false)}
                 aria-label={t(item.key)}

@@ -20,7 +20,7 @@ const SEGMENT_LABELS: Record<string, TranslationKey> = {
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
-  const { lang, t } = useI18n();
+  const { lang, t, href: buildHref } = useI18n();
   const breadcrumbOverride = useBreadcrumbLabel();
 
   // Remove lang prefix, split into segments
@@ -34,12 +34,12 @@ export default function Breadcrumbs() {
     <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl px-4 pt-4 md:px-6">
       <ol className="flex items-center gap-1.5 text-xs text-zinc-500">
         <li>
-          <Link href={`/${lang}`} className="hover:text-zinc-300">
+          <Link href={buildHref('/')} className="hover:text-zinc-300">
             {t('nav.home')}
           </Link>
         </li>
         {segments.map((segment, i) => {
-          const href = `/${lang}/${segments.slice(0, i + 1).join('/')}`;
+          const href = buildHref(`/${segments.slice(0, i + 1).join('/')}`);
           const isLast = i === segments.length - 1;
           const labelKey = SEGMENT_LABELS[segment];
           // Guide category segments: try guides.category.{slug} key

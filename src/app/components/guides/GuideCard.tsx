@@ -4,6 +4,7 @@ import type { Lang } from '@/lib/i18n/config';
 import type { GuideMeta } from '@/types/guide';
 import type { TranslationKey } from '@/i18n';
 import { lRec } from '@/lib/i18n/localize';
+import { localePath } from '@/lib/navigation';
 
 type Props = {
   guide: GuideMeta;
@@ -17,7 +18,7 @@ export default function GuideCard({ guide, lang, t }: Props) {
 
   return (
     <Link
-      href={`/${lang}/guides/${guide.category}/${guide.slug}`}
+      href={localePath(lang, `/guides/${guide.category}/${guide.slug}`)}
       className="card-interactive group flex items-start gap-3 p-4 transition-colors"
     >
       <div className="relative h-10 w-10 shrink-0">

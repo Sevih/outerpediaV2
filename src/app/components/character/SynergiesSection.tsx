@@ -18,7 +18,7 @@ type Props = {
 };
 
 export default function SynergiesSection({ synergies }: Props) {
-  const { lang, t } = useI18n();
+  const { lang, t, href } = useI18n();
 
   return (
     <section id="synergies">
@@ -57,7 +57,7 @@ export default function SynergiesSection({ synergies }: Props) {
                 return (
                   <Link
                     key={j}
-                    href={`/${lang}/characters/${entry}`}
+                    href={href(`/characters/${entry}`)}
                     className="flex items-center gap-2 rounded-lg bg-zinc-800/80 pr-3 transition-colors hover:bg-zinc-700/80"
                   >
                     <CharacterPortrait

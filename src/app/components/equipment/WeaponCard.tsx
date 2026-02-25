@@ -17,7 +17,7 @@ type Props = {
 };
 
 export default function WeaponCard({ weapon, lang, bossMap }: Props) {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const name = l(weapon, 'name', lang);
   const effectName = weapon.effect_name ? l(weapon, 'effect_name', lang) : null;
   const effectDesc4 = weapon.effect_desc4 ? l(weapon, 'effect_desc4', lang) : null;
@@ -25,7 +25,7 @@ export default function WeaponCard({ weapon, lang, bossMap }: Props) {
   const effectDesc = effectDesc4 ?? effectDesc1;
 
   return (
-    <Link href={`/${lang}/equipments/${slugifyEquipment(weapon.name)}`} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
+    <Link href={href(`/equipments/${slugifyEquipment(weapon.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/class/effect pill */}
       <div className="flex items-start gap-3">
         <EquipmentIcon

@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import ItemInline from '@/app/components/inline/ItemInline';
+import { localePath } from '@/lib/navigation';
 
 type PromoCode = {
   code: string;
@@ -177,7 +178,7 @@ export default function PromoCodes({ codes, lang, limit, showAll, t }: Props) {
           {hasMore && lang && t.viewAll && (
             <div className="mt-4 text-center">
               <Link
-                href={`/${lang}/promo-codes`}
+                href={localePath(lang, '/promo-codes')}
                 className="text-sm text-cyan-400 hover:underline"
               >
                 {t.viewAll.replace('{count}', String(activeCodes.length))}

@@ -384,7 +384,7 @@ type IndexedCharacter = CharacterListEntry & {
 };
 
 export default function CharactersPageClient({ characters, lang }: ClientProps) {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const router = useRouter();
   const pathname = usePathname();
 
@@ -936,7 +936,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
             classType={char.Class}
             rarity={char.Rarity}
             tags={char.tags}
-            href={`/${lang}/characters/${char.slug}`}
+            href={href(`/characters/${char.slug}`)}
             priority={index <= 5}
           />
         ))}

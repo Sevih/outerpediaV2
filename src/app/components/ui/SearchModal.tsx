@@ -49,7 +49,7 @@ export default function SearchModal({
   open: boolean;
   onClose: () => void;
 }) {
-  const { lang, t } = useI18n();
+  const { lang, t, href: buildHref } = useI18n();
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState('');
@@ -167,16 +167,16 @@ export default function SearchModal({
     const item = allResults[idx];
     if (!item) return;
     if (item.type === 'page') {
-      router.push(`/${lang}${item.href}` as never);
+      router.push(buildHref(item.href) as never);
     } else if (item.type === 'char') {
-      router.push(`/${lang}/characters/${item.slug}` as never);
+      router.push(buildHref(`/characters/${item.slug}`) as never);
     } else if (item.type === 'equip') {
-      router.push(`/${lang}/equipments/${item.slug}` as never);
+      router.push(buildHref(`/equipments/${item.slug}`) as never);
     } else if (item.type === 'guide') {
-      router.push(`/${lang}/guides/${item.category}/${item.slug}` as never);
+      router.push(buildHref(`/guides/${item.category}/${item.slug}`) as never);
     }
     onClose();
-  }, [allResults, lang, router, onClose]);
+  }, [allResults, buildHref, router, onClose]);
 
   // Keyboard navigation
   const onKeyDown = useCallback((e: React.KeyboardEvent) => {

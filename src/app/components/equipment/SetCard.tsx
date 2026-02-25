@@ -17,13 +17,13 @@ type Props = {
 };
 
 export default function SetCard({ set, lang, bossMap }: Props) {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const name = l(set, 'name', lang);
   const effect2 = l(set, 'effect_2_4', lang) || l(set, 'effect_2_1', lang);
   const effect4 = l(set, 'effect_4_4', lang) || l(set, 'effect_4_1', lang);
 
   return (
-    <Link href={`/${lang}/equipments/${slugifyEquipment(set.name)}`} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
+    <Link href={href(`/equipments/${slugifyEquipment(set.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/class */}
       <div className="flex items-start gap-3">
         <EquipmentIcon

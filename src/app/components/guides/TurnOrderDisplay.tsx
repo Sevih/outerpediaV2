@@ -19,7 +19,7 @@ type Props = {
 };
 
 export default function TurnOrderDisplay({ order, note }: Props) {
-  const { lang } = useI18n();
+  const { lang, href } = useI18n();
 
   return (
     <div className="mb-3">
@@ -44,7 +44,7 @@ export default function TurnOrderDisplay({ order, note }: Props) {
               <div className="flex items-center gap-1.5">
                 {charId && (
                   <Link
-                    href={`/${lang}/characters/${char?.slug ?? ''}`}
+                    href={href(`/characters/${char?.slug ?? ''}`)}
                     className="relative h-8 w-8 shrink-0 overflow-hidden rounded"
                   >
                     <Image
@@ -59,7 +59,7 @@ export default function TurnOrderDisplay({ order, note }: Props) {
                 <div className="flex flex-col items-start leading-tight">
                   {char ? (
                     <Link
-                      href={`/${lang}/characters/${char.slug}`}
+                      href={href(`/characters/${char.slug}`)}
                       className="text-sm text-sky-400 underline-offset-2 transition-colors hover:text-sky-300 hover:underline"
                     >
                       {localizedName}

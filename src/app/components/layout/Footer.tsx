@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FaGithub, FaDiscord, FaReddit, FaYoutube, FaTwitter, FaRss } from 'react-icons/fa';
 import { getRequestLang } from '@/lib/i18n/server';
 import { getT } from '@/i18n';
+import { localePath } from '@/lib/navigation';
 
 export default async function Footer() {
   const lang = getRequestLang();
@@ -50,19 +51,19 @@ export default async function Footer() {
             <FaRss /> {t('footer.social.rss')}
           </Link>
           <Link
-            href={`/${lang}/legal`}
+            href={localePath(lang, '/legal')}
             className="hover:text-zinc-200"
           >
             {t('footer.legal_notice')}
           </Link>
           <Link
-            href={`/${lang}/changelog`}
+            href={localePath(lang, '/changelog')}
             className="hover:text-zinc-200"
           >
             {t('changelog.title')}
           </Link>
           <Link
-            href={`/${lang}/contributors`}
+            href={localePath(lang, '/contributors')}
             className="hover:text-zinc-200"
           >
             {t('contributors.title')}
