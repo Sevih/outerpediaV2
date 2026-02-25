@@ -12756,11 +12756,11 @@
     "name_kr": "거짓된 신의 증명",
     "name_zh": "伪神的证明",
     "rarity": "normal",
-    "description": "",
-    "description_jp": "",
-    "description_kr": "",
-    "description_zh": "",
-    "icon": "",
+    "description": "You can obtain False God's Proof through Demiurge recruitment and they are used to select and recruit specific heroes.",
+    "description_jp": "デミウルゴススカウトで【偽りの神の証】を獲得し、仲間交換ができます。",
+    "description_kr": "데미우르고스 영입을 통해 거짓된 신의 증명을 획득하여 선택 영입을 할 수 있습니다.",
+    "description_zh": "可通过创世之神招募获得伪神的证明,并以此进行指定招募。",
+    "icon": "CM_Icon_Recruit_Mileage_Special_001",
     "type": "currency",
     "subtype": "mileage"
   },
@@ -14488,5 +14488,35 @@
     "icon": "TI_Costume_Clothes_2000113_02",
     "type": "costume",
     "subtype": "costume"
+  },
+  {
+    "id": "9900001",
+    "name": "Hero Piece",
+    "name_jp": "仲間のピース",
+    "name_kr": "동료 조각",
+    "name_zh": "同伴碎片",
+    "rarity": "normal",
+    "description": "A piece that contains the power of a unit. Collect 250 to unlock the unit or 150 to transcend them.",
+    "description_jp": "仲間の力が込められたピース。250個集めると仲間を解放、150個で超越できます。",
+    "description_kr": "동료의 힘이 담긴 조각. 250개를 모으면 동료를 해금하고, 150개로 초월할 수 있습니다.",
+    "description_zh": "蕴含同伴之力的碎片。收集250个可解锁同伴，150个可进行超越。",
+    "icon": "CM_Piece_Frame",
+    "type": "material",
+    "subtype": "piece"
+  },
+  {
+    "id": "9900002",
+    "name": "Wildcard Pieces",
+    "name_jp": "ピース",
+    "name_kr": "공용 조각",
+    "name_zh": "通用碎片",
+    "rarity": "normal",
+    "description": "A piece with the ability to contain someone's power. It can be exchanged for Hero Pieces of your choice at the Pieces Shop.",
+    "description_jp": "誰かの力を込めることができるピース。ショップで仲間のピースと交換できる。",
+    "description_kr": "누군가의 힘을 담아낼 수 있는 조각입니다. 조각 상점에서 원하는 동료의 조각으로 교환할 수 있습니다.",
+    "description_zh": "蕴藏着某个人力量的碎片。可在碎片商店兑换所需同伴的碎片。",
+    "icon": "CM_Goods_Piece",
+    "type": "material",
+    "subtype": "piece"
   }
 ]
