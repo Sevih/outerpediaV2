@@ -182,6 +182,16 @@ const kr: Record<TranslationKey, string> = {
   'tower.select_set': '제한 세트 선택:',
   'tower.per_floor_strategy': '층별 공략',
 
+  // Guild Raid
+  'guildraid.geas': '게아스 수정',
+  'guildraid.geas.desc':
+    '게아스를 켜고 끄며 점수 배율을 계산하세요. 말루스 게아스를 활성화하면 난이도가 올라가지만 점수가 증가합니다.',
+  'guildraid.geas.level': '레벨 {n}',
+  'guildraid.total_multiplier': '총 점수 배율',
+  'guildraid.active_geas': '활성 게아스',
+  'requirements.title': '요구사항',
+  'requirements.prio': '우선순위',
+
   'page.contributors.title': '프로젝트 기여자',
   'page.legal.title': '법적 고지 & 면책 조항',
   'page.legal.description':
@@ -347,6 +357,7 @@ const kr: Record<TranslationKey, string> = {
   'sys.stat.cdmg_red': '받는 치명 피해 감소',
   'sys.stat.dmg_percentred': '받는 피해 감소 %',
   'sys.stat.cdmg_percentred': '받는 치명 피해 감소 %',
+  'sys.stat.trans': '초월',
 
   // Filters
   'filters.rarity': '희귀도',

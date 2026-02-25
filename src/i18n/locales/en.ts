@@ -182,6 +182,16 @@ const en = {
   'tower.select_set': 'Select a restriction set:',
   'tower.per_floor_strategy': 'Per Floor Strategy',
 
+  // Guild Raid
+  'guildraid.geas': 'Geas Modifiers',
+  'guildraid.geas.desc':
+    'Toggle geas on/off to calculate your score multiplier. Activating malus geas increases difficulty but boosts your score.',
+  'guildraid.geas.level': 'Level {n}',
+  'guildraid.total_multiplier': 'Total Score Multiplier',
+  'guildraid.active_geas': 'Active Geas',
+  'requirements.title': 'Requirements',
+  'requirements.prio': 'Priority',
+
   'page.contributors.title': 'Project Contributors',
   'page.legal.title': 'Legal Notice & Disclaimer',
   'page.legal.description':
@@ -347,6 +357,7 @@ const en = {
   'sys.stat.cdmg_red': 'Crit Damage Reduction',
   'sys.stat.dmg_percentred': 'Damage Reduction %',
   'sys.stat.cdmg_percentred': 'Crit Damage Reduction %',
+  'sys.stat.trans': 'Transcendence',
 
   // Filters
   'filters.rarity': 'Rarity',

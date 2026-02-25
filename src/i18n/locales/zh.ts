@@ -182,6 +182,16 @@ const zh: Record<TranslationKey, string> = {
   'tower.select_set': '选择限制组:',
   'tower.per_floor_strategy': '逐层攻略',
 
+  // Guild Raid
+  'guildraid.geas': '誓约修正',
+  'guildraid.geas.desc':
+    '切换誓约来计算你的分数倍率。激活惩罚誓约会增加难度但提高分数。',
+  'guildraid.geas.level': '等级{n}',
+  'guildraid.total_multiplier': '总分数倍率',
+  'guildraid.active_geas': '激活的誓约',
+  'requirements.title': '需求',
+  'requirements.prio': '优先',
+
   'page.contributors.title': '项目贡献者',
   'page.legal.title': '法律声明 & 免责条款',
   'page.legal.description':
@@ -347,6 +357,7 @@ const zh: Record<TranslationKey, string> = {
   'sys.stat.cdmg_red': '受暴击伤害降低',
   'sys.stat.dmg_percentred': '受伤害降低 %',
   'sys.stat.cdmg_percentred': '受暴击伤害降低 %',
+  'sys.stat.trans': '超越',
 
   // Filters
   'filters.rarity': '星级',

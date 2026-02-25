@@ -127,7 +127,7 @@ function SkillTab({ skill, isActive, onClick }: {
 
 /* ── Skill content panel ── */
 
-function SkillPanel({ skill, lang }: { skill: BossSkill; lang: Lang }) {
+function SkillPanel({ skill, lang, iconOnly }: { skill: BossSkill; lang: Lang; iconOnly: boolean }) {
   const name = lRec(skill.name as LangMap, lang);
   const desc = lRec(skill.description as LangMap, lang);
 
@@ -135,7 +135,7 @@ function SkillPanel({ skill, lang }: { skill: BossSkill; lang: Lang }) {
     <div className="space-y-1.5">
       <p className="text-sm font-semibold text-zinc-200">{name}</p>
       {(skill.buff?.length || skill.debuff?.length) ? (
-        <BuffDebuffDisplay buffs={skill.buff ?? []} debuffs={skill.debuff ?? []} iconOnly />
+        <BuffDebuffDisplay buffs={skill.buff ?? []} debuffs={skill.debuff ?? []} iconOnly={iconOnly} />
       ) : null}
       {desc && (
         <p className="text-xs leading-relaxed text-zinc-400">
@@ -150,9 +150,11 @@ function SkillPanel({ skill, lang }: { skill: BossSkill; lang: Lang }) {
 
 type Props = {
   boss: Boss;
+  /** When true, skill buffs/debuffs show icon only (default). Set false to show labels. */
+  iconOnlySkills?: boolean;
 };
 
-export default function BossCompactDisplay({ boss }: Props) {
+export default function BossCompactDisplay({ boss, iconOnlySkills = true }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
 
@@ -215,7 +217,7 @@ export default function BossCompactDisplay({ boss }: Props) {
                 />
               ))}
             </div>
-            {currentSkill && <SkillPanel skill={currentSkill} lang={lang} />}
+            {currentSkill && <SkillPanel skill={currentSkill} lang={lang} iconOnly={iconOnlySkills} />}
           </div>
         )}
       </div>

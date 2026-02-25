@@ -1,48 +1,11 @@
 {
-  "beginner-faq": {
-    "category": "general-guides",
-    "title": {
-      "en": "Beginner FAQ",
-      "jp": "初心者向けFAQ",
-      "kr": "초보자 FAQ",
-      "zh": "新手常见问题"
-    },
-    "description": {
-      "en": "Common questions asked by new players — covers heroes, gear, progression, and resource management",
-      "jp": "新規プレイヤーからよく寄せられる質問 — ヒーロー、装備、進行、リソース管理について",
-      "kr": "신규 플레이어가 자주 묻는 질문 — 영웅, 장비, 진행 및 리소스 관리에 대해",
-      "zh": "新玩家常见问题 — 同伴、装备、进度和资源管理等"
-    },
-    "icon": "T_Chat_Emoticon_08",
-    "order": 2,
-    "last_updated": "2025-11-02",
-    "author": "Shiraen"
-  },
-  "amadeus": {
-    "category": "special-request",
-    "title": {
-      "en": "Amadeus Special Request",
-      "jp": "アマデウス特殊依頼",
-      "kr": "아마데우스 특수의뢰",
-      "zh": "阿玛迪斯特殊委托"
-    },
-    "description": {
-      "en": "Strategy guide for the Amadeus Special Request — debuff management, team compositions and recommended characters",
-      "jp": "アマデウス特殊依頼の攻略ガイド — デバフ管理、チーム構成、おすすめキャラクター",
-      "kr": "아마데우스 특수의뢰 공략 가이드 — 디버프 관리, 팀 구성 및 추천 캐릭터",
-      "zh": "阿玛迪斯特殊委托攻略指南 — 减益管理、队伍组成和推荐角色"
-    },
-    "icon": "IG_Turn_4076009",
-    "last_updated": "2025-09-05",
-    "author": "Sevih"
-  },
-  "ragnakeus": {
+  "dahlia": {
     "category": "world-boss",
     "title": {
-      "en": "Dragon of Death Ragnakeus",
-      "kr": "임종룡 라그나케우스",
-      "jp": "臨終の竜・ラグナケウス",
-      "zh": "死亡龙拉格纳修斯"
+      "en": "Dahlia",
+      "jp": "ダリア",
+      "kr": "달리아",
+      "zh": "达利亚"
     },
     "description": {
       "en": "Advice to reach the SSS rank in Extreme League : Skill breakdown, team composition and general advices",
@@ -50,35 +13,439 @@
       "kr": "익스트림 리그에서 SSS 랭크 달성을 위한 조언: 스킬 분석, 팀 구성 및 일반 조언",
       "zh": "在极限联赛中达到SSS级别的建议：技能分析、队伍组成和通用建议"
     },
-    "icon": "IG_Turn_4086001",
+    "icon": "dahlia",
+    "last_updated": "2025-07-01",
+    "author": "Sevih"
+  },
+  "ragnakeus": {
+    "category": "world-boss",
+    "title": {
+      "en": "Ragnakeus",
+      "jp": "ラグナケウス",
+      "kr": "라그나케우스",
+      "zh": "拉格纳凯乌斯"
+    },
+    "description": {
+      "en": "Advice to reach the SSS rank in Extreme League : Skill breakdown, team composition and general advices",
+      "jp": "エクストリームリーグでSSSランクを達成するためのアドバイス：スキル解説、チーム構成、全般的なアドバイス",
+      "kr": "익스트림 리그에서 SSS 랭크 달성을 위한 조언: 스킬 분석, 팀 구성 및 일반 조언",
+      "zh": "在极限联赛中达到SSS级别的建议：技能分析、队伍组成和通用建议"
+    },
+    "icon": "ragnakeus",
     "last_updated": "2025-12-02",
     "author": "Sevih"
   },
-  "S2-5-10": {
-    "category": "adventure",
+  "harshna": {
+    "category": "world-boss",
     "title": {
-      "en": "S2 Hard : Demiurge Astei",
-      "jp": "シーズン2(ハード) : デミウルゴス アステ",
-      "kr": "시즌 2 Part1 하드 : 데미우르고스 아스테",
-      "zh": "S2 困难：造物主阿斯特"
+      "en": "Harshna",
+      "jp": "ハルシュナ",
+      "kr": "하르슈나",
+      "zh": "哈尔修娜"
     },
     "description": {
-      "en": "Boss strategy guide.",
-      "jp": "ボス攻略ガイド。",
-      "kr": "보스 전략 가이드.",
-      "zh": "首领攻略指南"
+      "en": "Advice to reach the SSS rank in Extreme League : Skill breakdown, team composition and general advices",
+      "jp": "エクストリームリーグでSSSランクを達成するためのアドバイス：スキル解説、チーム構成、全般的なアドバイス",
+      "kr": "익스트림 리그에서 SSS 랭크 달성을 위한 조언: 스킬 분석, 팀 구성 및 일반 조언",
+      "zh": "在极限联赛中达到SSS级别的建议：技能分析、队伍组成和通用建议"
     },
-    "icon": "IG_Turn_2000059_E",
-    "last_updated": "2025-05-26",
+    "icon": "harshna",
+    "last_updated": "2025-07-29",
     "author": "Sevih"
+  },
+  "drakhan": {
+    "category": "world-boss",
+    "title": {
+      "en": "Drakhan",
+      "jp": "ドレイカーン",
+      "kr": "드레이칸",
+      "zh": "德雷坎"
+    },
+    "description": {
+      "en": "Advice to reach the SSS rank in Extreme League : Skill breakdown, team composition and general advices",
+      "jp": "エクストリームリーグでSSSランクを達成するためのアドバイス：スキル解説、チーム構成、全般的なアドバイス",
+      "kr": "익스트림 리그에서 SSS 랭크 달성을 위한 조언: 스킬 분석, 팀 구성 및 일반 조언",
+      "zh": "在极限联赛中达到SSS级别的建议：技能分析、队伍组成和通用建议"
+    },
+    "icon": "drakhan",
+    "last_updated": "2025-12-31",
+    "author": "Sevih"
+  },
+  "primordial_sentinel": {
+    "category": "world-boss",
+    "title": {
+      "en": "Primordial Sentinel",
+      "jp": "太古の番兵",
+      "kr": "태고의 파수병",
+      "zh": "太古守卫"
+    },
+    "description": {
+      "en": "Advice to reach the SSS rank in Extreme League : Skill breakdown, team composition and general advices",
+      "jp": "エクストリームリーグでSSSランクを達成するためのアドバイス：スキル解説、チーム構成、全般的なアドバイス",
+      "kr": "익스트림 리그에서 SSS 랭크 달성을 위한 조언: 스킬 분석, 팀 구성 및 일반 조언",
+      "zh": "在极限联赛中达到SSS级别的建议：技能分析、队伍组成和通用建议"
+    },
+    "icon": "primordial_sentinel",
+    "last_updated": "2025-11-04",
+    "author": "Sevih"
+  },
+  "venion": {
+    "category": "world-boss",
+    "title": {
+      "en": "Venion",
+      "jp": "ベニオン",
+      "kr": "베니온",
+      "zh": "维尼昂"
+    },
+    "description": {
+      "en": "Advice to reach the SSS rank in Extreme League : Skill breakdown, team composition and general advices",
+      "jp": "エクストリームリーグでSSSランクを達成するためのアドバイス：スキル解説、チーム構成、全般的なアドバイス",
+      "kr": "익스트림 리그에서 SSS 랭크 달성을 위한 조언: 스킬 분석, 팀 구성 및 일반 조언",
+      "zh": "在极限联赛中达到SSS级别的建议：技能分析、队伍组成和通用建议"
+    },
+    "icon": "venion",
+    "last_updated": "2026-01-28",
+    "author": "Sevih"
+  },
+  "glicys": {
+    "category": "special-request",
+    "title": {
+      "en": "Glicys",
+      "jp": "グリシス",
+      "kr": "글리시스",
+      "zh": "格利西丝"
+    },
+    "description": {
+      "en": "Strategy guide for Special Request: Identification mission",
+      "jp": "特別依頼：正体究明ミッションの攻略ガイド",
+      "kr": "특별 의뢰: 정체 규명 미션 공략 가이드",
+      "zh": "特殊委托：身份确认任务攻略指南"
+    },
+    "icon": "glicys",
+    "last_updated": "2025-04-08",
+    "author": "Arabyss & Kilvanoshei"
+  },
+  "beatles": {
+    "category": "special-request",
+    "title": {
+      "en": "Dek'Ril & Mek'Ril",
+      "jp": "メグリル&デグリル",
+      "kr": "데그릴 & 메그릴",
+      "zh": "德克利尔 & 梅克利尔"
+    },
+    "description": {
+      "en": "Twin beetle bosses strategy for Special Request: Identification mission",
+      "jp": "特別依頼：正体究明ミッションの双子カブトムシボス攻略",
+      "kr": "특별 의뢰: 정체 규명 미션 쌍둥이 딱정벌레 보스 공략",
+      "zh": "特殊委托：身份确认任务的双子甲虫首领攻略"
+    },
+    "icon": "beatles",
+    "last_updated": "2025-04-08",
+    "author": "Arabyss & Kilvanoshei"
+  },
+  "meteos": {
+    "category": "special-request",
+    "title": {
+      "en": "Blazing Knight Meteos",
+      "jp": "火炎の騎士メテウス",
+      "kr": "화염기사 메테우스",
+      "zh": "烈焰骑士梅特乌斯"
+    },
+    "description": {
+      "en": "Strategy guide for Special Request: Identification mission",
+      "jp": "特別依頼：正体究明ミッションの攻略ガイド",
+      "kr": "특별 의뢰: 정체 규명 미션 공략 가이드",
+      "zh": "特殊委托：身份确认任务攻略指南"
+    },
+    "icon": "meteos",
+    "last_updated": "2025-04-08",
+    "author": "Arabyss & Kilvanoshei"
+  },
+  "chimera": {
+    "category": "special-request",
+    "title": {
+      "en": "Unidentified Chimera",
+      "jp": "未確認キメラ",
+      "kr": "미확인 키메라",
+      "zh": "未确认奇美拉"
+    },
+    "description": {
+      "en": "Strategy guide for Special Request: Ecology Study mission",
+      "jp": "特別依頼：生態調査ミッションの攻略ガイド",
+      "kr": "특별 의뢰: 생태 조사 미션 공략 가이드",
+      "zh": "特殊委托：生态调查任务攻略指南"
+    },
+    "icon": "chimera",
+    "last_updated": "2025-10-31",
+    "author": "Shiraen"
+  },
+  "guardian": {
+    "category": "special-request",
+    "title": {
+      "en": "Masterless Guardian",
+      "jp": "主を失ったガーディアン",
+      "kr": "주인 잃은 가디언",
+      "zh": "失去主人的守护者"
+    },
+    "description": {
+      "en": "Strategy guide for Special Request: Ecology Study mission",
+      "jp": "特別依頼：生態調査ミッションの攻略ガイド",
+      "kr": "특별 의뢰: 생태 조사 미션 공략 가이드",
+      "zh": "特殊委托：生态调查任务攻略指南"
+    },
+    "icon": "guardian",
+    "last_updated": "2024-09-19",
+    "author": "Ducky"
+  },
+  "ars-nova": {
+    "category": "special-request",
+    "title": {
+      "en": "Ars Nova",
+      "jp": "アルス・ノーヴァ",
+      "kr": "아르스 노바",
+      "zh": "新艺术"
+    },
+    "description": {
+      "en": "Strategy guide for Special Request: Identification mission",
+      "jp": "特別依頼：正体究明ミッションの攻略ガイド",
+      "kr": "특별 의뢰: 정체 규명 미션 공략 가이드",
+      "zh": "特殊委托：身份确认任务攻略指南"
+    },
+    "icon": "ars-nova",
+    "last_updated": "2025-05-13",
+    "author": "SADtherobot"
+  },
+  "amadeus": {
+    "category": "special-request",
+    "title": {
+      "en": "Amadeus",
+      "jp": "アマデウス",
+      "kr": "아마데우스",
+      "zh": "阿玛迪乌斯"
+    },
+    "description": {
+      "en": "Strategy guide for Special Request: Identification mission",
+      "jp": "特別依頼：正体究明ミッションの攻略ガイド",
+      "kr": "특별 의뢰: 정체 규명 미션 공략 가이드",
+      "zh": "特殊委托：身份确认任务攻略指南"
+    },
+    "icon": "amadeus",
+    "last_updated": "2025-04-11",
+    "author": "SADtherobot"
+  },
+  "sacreed": {
+    "category": "special-request",
+    "title": {
+      "en": "Sacreed Guardian",
+      "jp": "セイクリッドガーディアン",
+      "kr": "세이크리드 가디언",
+      "zh": "神圣守护者"
+    },
+    "description": {
+      "en": "Strategy guide for Special Request: Ecology Study mission",
+      "jp": "特別依頼：生態調査ミッションの攻略ガイド",
+      "kr": "특별 의뢰: 생태 조사 미션 공략 가이드",
+      "zh": "特殊委托：生态调查任务攻略指南"
+    },
+    "icon": "sacreed",
+    "last_updated": "2025-05-01",
+    "author": "SADtherobot"
+  },
+  "grand-calamari": {
+    "category": "special-request",
+    "title": {
+      "en": "Grand Calamari",
+      "jp": "グラン・カラマリー",
+      "kr": "그랑 칼라마리",
+      "zh": "巨型鱿鱼"
+    },
+    "description": {
+      "en": "Strategy guide for Special Request: Ecology Study mission",
+      "jp": "特別依頼：生態調査ミッションの攻略ガイド",
+      "kr": "특별 의뢰: 생태 조사 미션 공략 가이드",
+      "zh": "特殊委托：生态调查任务攻略指南"
+    },
+    "icon": "calamari",
+    "last_updated": "2025-04-01",
+    "author": "SADtherobot"
+  },
+  "tyrant": {
+    "category": "special-request",
+    "title": {
+      "en": "Tyrant Toddler",
+      "jp": "タイラントの幼生",
+      "kr": "타일런트 유생체",
+      "zh": "暴君幼体"
+    },
+    "description": {
+      "en": "Strategy guide for Special Request: Ecology Study mission",
+      "jp": "特別依頼：生態調査ミッションの攻略ガイド",
+      "kr": "특별 의뢰: 생태 조사 미션 공략 가이드",
+      "zh": "特殊委托：生态调查任务攻略指南"
+    },
+    "icon": "tyrant",
+    "last_updated": "2024-09-19",
+    "author": "Ducky"
+  },
+  "prom-dvlada": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Promotion : Demiurge Vlada",
+      "jp": "昇級チャレンジ : デミウルゴス ヴラダ",
+      "kr": "승급 챌린지 : 데미우르고스 블라다",
+      "zh": "晋升挑战：创世之神 布拉达"
+    },
+    "description": {
+      "en": "Tips and advice to succeed against Demiurge Vlada",
+      "jp": "デミウルゴス ヴラダを成功させるためのヒントとアドバイス",
+      "kr": "데미우르고스 블라다를 성공시키기 위한 팁과 조언",
+      "zh": "成功挑战创世之神 布拉达的提示和建议"
+    },
+    "icon": "prom-dvlada",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "prom-dvlada-hide"
+  },
+  "prom-gdahlia": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Promotion : Gnosis Dahlia",
+      "jp": "昇級チャレンジ : グノーシス ダリア",
+      "kr": "승급 챌린지 : 그노시스 달리아",
+      "zh": "晋升挑战：诺希斯 达利娅"
+    },
+    "description": {
+      "en": "Tips and advice to succeed against Gnosis Dahlia",
+      "jp": "グノーシス ダリアを成功させるためのヒントとアドバイス",
+      "kr": "그노시스 달리아를 성공시키기 위한 팁과 조언",
+      "zh": "成功挑战诺希斯 达利娅的提示和建议"
+    },
+    "icon": "prom-gdahlia",
+    "last_updated": "2025-11-29",
+    "author": "Sevih",
+    "second_image": "prom-gdahlia-hide"
+  },
+  "prom-meva": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Promotion : Monad Eva",
+      "jp": "昇級チャレンジ : モナド エヴァ",
+      "kr": "승급 챌린지 : 모나드 에바",
+      "zh": "晋升挑战：单子 艾娃"
+    },
+    "description": {
+      "en": "Tips and advice to succeed against Monad Eva",
+      "jp": "モナド エヴァを成功させるためのヒントとアドバイス",
+      "kr": "모나드 에바를 성공시키기 위한 팁과 조언",
+      "zh": "成功挑战单子 艾娃的提示和建议"
+    },
+    "icon": "prom-meva",
+    "last_updated": "2025-11-29",
+    "author": "Sevih",
+    "second_image": "prom-meva-hide"
+  },
+  "prom-ddrakhan": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Promotion : Demiurge Drakhan",
+      "jp": "昇級チャレンジ : デミウルゴス ドレイカーン",
+      "kr": "승급 챌린지 : 데미우르고스 드레이칸",
+      "zh": "晋升挑战：创世之神 德雷坎"
+    },
+    "description": {
+      "en": "Tips and advice to succeed against Demiurge Drakhan",
+      "jp": "デミウルゴス ドレイカーンを成功させるためのヒントとアドバイス",
+      "kr": "데미우르고스 드레이칸을 성공시키기 위한 팁과 조언",
+      "zh": "成功挑战创世之神 德雷坎的提示和建议"
+    },
+    "icon": "prom-ddrakhan",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "prom-ddrakhan-hide"
+  },
+  "prom-dastei": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Promotion : Demiurge Astei",
+      "jp": "昇級チャレンジ : デミウルゴス アステ",
+      "kr": "승급 챌린지 : 데미우르고스 아스테",
+      "zh": "晋升挑战：创世之神 奥斯黛"
+    },
+    "description": {
+      "en": "Tips and advice to succeed against Demiurge Astei",
+      "jp": "デミウルゴス アステを成功させるためのヒントとアドバイス",
+      "kr": "데미우르고스 아스테를 성공시키기 위한 팁과 조언",
+      "zh": "成功挑战创世之神 奥斯黛的提示和建议"
+    },
+    "icon": "prom-dastei",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "prom-dastei-hide"
+  },
+  "prom-dstella": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Promotion : Demiurge Stella",
+      "jp": "昇級チャレンジ : デミウルゴス ステラ",
+      "kr": "승급 챌린지 : 데미우르고스 스텔라",
+      "zh": "晋升挑战：创世之神 斯黛拉"
+    },
+    "description": {
+      "en": "Tips and advice to succeed against Demiurge Stella",
+      "jp": "デミウルゴス ステラを成功させるためのヒントとアドバイス",
+      "kr": "데미우르고스 스텔라를 성공시키기 위한 팁과 조언",
+      "zh": "成功挑战创世之神 斯黛拉的提示和建议"
+    },
+    "icon": "prom-dstella",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "prom-dstella-hide"
+  },
+  "anubis-g": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Anubis Guardian",
+      "jp": "アヌビスガーディアン",
+      "kr": "아누비스 가디언",
+      "zh": "阿努比斯守护者"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Anubis Guardian",
+      "jp": "ウィークリー討伐 - アヌビスガーディアン クリアガイドとアドバイス",
+      "kr": "주간토벌 - 아누비스 가디언 클리어 가이드 및 조언",
+      "zh": "周常征服 - 阿努比斯守护者通关指南和建议"
+    },
+    "icon": "anubis-g",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "anubis2-g"
+  },
+  "heavy-fixed-vladi-max": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Heavy Fixed Vladi Max",
+      "jp": "固定砲台ブラッディマックス",
+      "kr": "고정 포대 블라디 맥스",
+      "zh": "重型固定炮台弗拉迪麦克斯"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Heavy Fixed Vladi Max",
+      "jp": "ウィークリー討伐 - 固定砲台ブラッディマックス クリアガイドとアドバイス",
+      "kr": "주간토벌 - 고정 포대 블라디 맥스 클리어 가이드 및 조언",
+      "zh": "周常征服 - 重型固定炮台弗拉迪麦克斯通关指南和建议"
+    },
+    "icon": "heavy-fixed-vladi-max",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "heavy-fixed-vladi-max2"
   },
   "amadeus-AL": {
     "category": "adventure-license",
     "title": {
-          "en": "Weekly Conquest - Amadeus",
-          "kr": "주간토벌 - 아마데우스",
-          "jp": "ウィークリー討伐 - アマデウス",
-          "zh": "每周讨伐 - 阿玛迪斯"
+      "en": "Amadeus",
+      "jp": "アマデウス",
+      "kr": "아마데우스",
+      "zh": "阿玛迪乌斯"
     },
     "description": {
       "en": "Guide and advice to clear the Weekly Conquest - Amadeus",
@@ -86,9 +453,387 @@
       "kr": "주간토벌 - 아마데우스 클리어 가이드 및 조언",
       "zh": "周常征服 - 阿玛迪乌斯通关指南和建议"
     },
-    "icon": "IG_Turn_4076009",
+    "icon": "amadeus",
     "last_updated": "2025-11-29",
-    "author": "Shiraen"
+    "author": "Shiraen",
+    "second_image": "amadeus2"
+  },
+  "meteos-AL": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Blazing Knight Meteos",
+      "jp": "火炎の騎士メテウス",
+      "kr": "화염기사 메테우스",
+      "zh": "烈焰骑士梅特乌斯"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Blazing Knight Meteos",
+      "jp": "ウィークリー討伐 - 火炎の騎士メテウス クリアガイドとアドバイス",
+      "kr": "주간토벌 - 화염기사 메테우스 클리어 가이드 및 조언",
+      "zh": "周常征服 - 烈焰骑士梅特乌斯通关指南和建议"
+    },
+    "icon": "meteos",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "meteos2"
+  },
+  "sacreed-AL": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Sacreed Guardian",
+      "jp": "セイクリッドガーディアン",
+      "kr": "세이크리드 가디언",
+      "zh": "神圣守护者"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Sacreed Guardian",
+      "jp": "ウィークリー討伐 - セイクリッドガーディアン クリアガイドとアドバイス",
+      "kr": "주간토벌 - 세이크리드 가디언 클리어 가이드 및 조언",
+      "zh": "周常征服 - 神圣守护者通关指南和建议"
+    },
+    "icon": "sacreed",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "sacreed2"
+  },
+  "ziggsaron": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Ravenous Wolf King, Ziggsaron",
+      "jp": "餓狼王ジグサロン",
+      "kr": "아랑왕 지그사론",
+      "zh": "饿狼王吉格萨隆"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Ravenous Wolf King, Ziggsaron",
+      "jp": "ウィークリー討伐 - 餓狼王ジグサロン クリアガイドとアドバイス",
+      "kr": "주간토벌 - 아랑왕 지그사론 클리어 가이드 및 조언",
+      "zh": "周常征服 - 饿狼王吉格萨隆通关指南和建议"
+    },
+    "icon": "ziggsaron",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "ziggsaron2"
+  },
+  "fulmination": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Ful.Mi.NATION Assault Suit",
+      "jp": "イエクスプローの重装機兵",
+      "kr": "이엑스플로 중장기병",
+      "zh": "爆破重装突击装甲"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Ful.Mi.NATION Assault Suit",
+      "jp": "ウィークリー討伐 - イエクスプローの重装機兵 クリアガイドとアドバイス",
+      "kr": "주간토벌 - 이엑스플로 중장기병 클리어 가이드 및 조언",
+      "zh": "周常征服 - 爆破重装突击装甲通关指南和建议"
+    },
+    "icon": "fulmination",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "fulmination2"
+  },
+  "ksai": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Ksai",
+      "jp": "ザイ",
+      "kr": "크사이",
+      "zh": "科赛"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Ksai",
+      "jp": "ウィークリー討伐 - ザイ クリアガイドとアドバイス",
+      "kr": "주간토벌 - 크사이 클리어 가이드 및 조언",
+      "zh": "周常征服 - 科赛通关指南和建议"
+    },
+    "icon": "ksai",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "ksai2"
+  },
+  "shadowArch": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Shadow of the Archdemon",
+      "jp": "魔王の影",
+      "kr": "마왕의 그림자",
+      "zh": "大魔王之影"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Shadow of the Archdemon",
+      "jp": "ウィークリー討伐 - 魔王の影 クリアガイドとアドバイス",
+      "kr": "주간토벌 - 마왕의 그림자 클리어 가이드 및 조언",
+      "zh": "周常征服 - 大魔王之影通关指南和建议"
+    },
+    "icon": "shadowArch",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "shadowArch2"
+  },
+  "ars-novaAL": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Ars Nova",
+      "jp": "アルス・ノーヴァ",
+      "kr": "아르스 노바",
+      "zh": "新艺术"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Ars Nova",
+      "jp": "ウィークリー討伐 - アルス・ノーヴァ クリアガイドとアドバイス",
+      "kr": "주간토벌 - 아르스 노바 클리어 가이드 및 조언",
+      "zh": "周常征服 - 新艺术通关指南和建议"
+    },
+    "icon": "ars-novaAL",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "ars-novaAL2"
+  },
+  "schattenmeisterSchwartz": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Schattenmeister Schwartz",
+      "jp": "シュヴァルツ",
+      "kr": "샤텐 마이스터 슈바르츠",
+      "zh": "暗影大师施瓦茨"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Schattenmeister Schwartz",
+      "jp": "ウィークリー討伐 - シュヴァルツ クリアガイドとアドバイス",
+      "kr": "주간토벌 - 샤텐 마이스터 슈바르츠 클리어 가이드 및 조언",
+      "zh": "周常征服 - 暗影大师施瓦茨通关指南和建议"
+    },
+    "icon": "schattermeister-Schwartz",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "schattermeister-Schwartz"
+  },
+  "masterlessAL": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Masterless Guardian",
+      "jp": "主を失ったガーディアン",
+      "kr": "주인 잃은 가디언",
+      "zh": "失去主人的守护者"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Masterless Guardian",
+      "jp": "ウィークリー討伐 - 主を失ったガーディアン クリアガイドとアドバイス",
+      "kr": "주간토벌 - 주인 잃은 가디언 클리어 가이드 및 조언",
+      "zh": "周常征服 - 失去主人的守护者通关指南和建议"
+    },
+    "icon": "masterlessAL",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "masterlessAL2"
+  },
+  "calamariAL": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Grand Calamari",
+      "jp": "グラン・カラマリー",
+      "kr": "그랑 칼라마리",
+      "zh": "巨型鱿鱼"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Grand Calamari",
+      "jp": "ウィークリー討伐 - グラン・カラマリー クリアガイドとアドバイス",
+      "kr": "주간토벌 - 그랑 칼라마리 클리어 가이드 및 조언",
+      "zh": "周常征服 - 巨型鱿鱼通关指南和建议"
+    },
+    "icon": "calamariAL",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "calamariAL2"
+  },
+  "toddlerAL": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Tyrant Toddler",
+      "jp": "タイラントの幼生",
+      "kr": "타일런트 유생체",
+      "zh": "暴君幼体"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Tyrant Toddler",
+      "jp": "ウィークリー討伐 - タイラントの幼生 クリアガイドとアドバイス",
+      "kr": "주간토벌 - 타일런트 유생체 클리어 가이드 및 조언",
+      "zh": "周常征服 - 暴君幼体通关指南和建议"
+    },
+    "icon": "toddlerAL",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "toddlerAL"
+  },
+  "glicysAL": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Glicys",
+      "jp": "氷の女王グリシス",
+      "kr": "얼음여왕 글리시스",
+      "zh": "冰雪女王格利西丝"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Glicys",
+      "jp": "ウィークリー討伐 - 氷の女王グリシス クリアガイドとアドバイス",
+      "kr": "주간토벌 - 얼음여왕 글리시스 클리어 가이드 및 조언",
+      "zh": "周常征服 - 冰雪女王格利西丝通关指南和建议"
+    },
+    "icon": "glicysAL",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "glicysAL2"
+  },
+  "beatlesAL": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Dek'ril & Mek'ril",
+      "jp": "メグリル&デグリル",
+      "kr": "데그릴&메그릴",
+      "zh": "德克利尔 & 梅克利尔"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Dek'ril & Mek'ril",
+      "jp": "ウィークリー討伐 - メグリル&デグリル クリアガイドとアドバイス",
+      "kr": "주간토벌 - 데그릴&메그릴 클리어 가이드 및 조언",
+      "zh": "周常征服 - 德克利尔&梅克利尔通关指南和建议"
+    },
+    "icon": "beatlesAL",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "beatlesAL2"
+  },
+  "chimeraAL": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Unidentified Chimera",
+      "jp": "未確認キメラ",
+      "kr": "미확인 키메라",
+      "zh": "未确认奇美拉"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Unidentified Chimera",
+      "jp": "ウィークリー討伐 - 未確認キメラ クリアガイドとアドバイス",
+      "kr": "주간토벌 - 미확인 키메라 클리어 가이드 및 조언",
+      "zh": "周常征服 - 未确认奇美拉通关指南和建议"
+    },
+    "icon": "chimeraAL",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "chimeraAL2"
+  },
+  "ppu-epsilon": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Planet Purification Unit Epsilon",
+      "jp": "イプシロン",
+      "kr": "엡실론",
+      "zh": "行星净化装置埃普西隆"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Planet Purification Unit Epsilon",
+      "jp": "ウィークリー討伐 - イプシロン クリアガイドとアドバイス",
+      "kr": "주간토벌 - 엡실론 클리어 가이드 및 조언",
+      "zh": "周常征服 - 行星净化装置埃普西隆通关指南和建议"
+    },
+    "icon": "ppu-epsilon",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "ppu-epsilon2"
+  },
+  "gustav": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Gustav",
+      "jp": "グスタフ",
+      "kr": "구스타프",
+      "zh": "古斯塔夫"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Gustav",
+      "jp": "ウィークリー討伐 - グスタフ クリアガイドとアドバイス",
+      "kr": "주간토벌 - 구스타프 클리어 가이드 및 조언",
+      "zh": "周常征服 - 古斯塔夫通关指南和建议"
+    },
+    "icon": "gustav",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "gustav2"
+  },
+  "forest-king": {
+    "category": "adventure-license",
+    "title": {
+      "en": "Forest King",
+      "jp": "森の王",
+      "kr": "숲의 왕",
+      "zh": "森林之王"
+    },
+    "description": {
+      "en": "Guide and advice to clear the Weekly Conquest - Forest King",
+      "jp": "ウィークリー討伐 - 森の王 クリアガイドとアドバイス",
+      "kr": "주간토벌 - 숲의 왕 클리어 가이드 및 조언",
+      "zh": "周常征服 - 森林之王通关指南和建议"
+    },
+    "icon": "forest-king",
+    "last_updated": "2025-11-29",
+    "author": "Shiraen",
+    "second_image": "forest-king2"
+  },
+  "prototype-ex-78": {
+    "category": "joint-boss",
+    "title": {
+      "en": "Prototype EX-78",
+      "jp": "試作機:EX-78",
+      "kr": "EX-78 시범기",
+      "zh": "原型机EX-78"
+    },
+    "description": {
+      "en": "Combat Footage",
+      "jp": "戦闘映像",
+      "kr": "전투 영상",
+      "zh": "战斗录像"
+    },
+    "icon": "prototype-ex-78",
+    "last_updated": "2025-10-28",
+    "author": "Sevih"
+  },
+  "deep-sea-guardian": {
+    "category": "joint-boss",
+    "title": {
+      "en": "Deep Sea Guardian",
+      "jp": "深海ガーディアン",
+      "kr": "심해 가디언",
+      "zh": "深海守护者"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "deep-sea-guardian",
+    "last_updated": "2026-01-20",
+    "author": "Sevih"
+  },
+  "shichifuja": {
+    "category": "joint-boss",
+    "title": {
+      "en": "Shichifuja",
+      "jp": "七歩蛇",
+      "kr": "시치후샤",
+      "zh": "七步蛇"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "shichifuja",
+    "last_updated": "2025-02-24",
+    "author": "Sevih"
   },
   "annihilator": {
     "category": "joint-boss",
@@ -104,214 +849,1111 @@
       "kr": "보스 전략 가이드",
       "zh": "首领攻略指南"
     },
-    "icon": "IG_Turn_4018002",
+    "icon": "annihilator",
     "last_updated": "2025-12-23",
     "author": "Sevih"
+  },
+  "koh-meteos": {
+    "category": "joint-boss",
+    "title": {
+      "en": "Knight of Hope Meteos",
+      "jp": "光明の騎士・メテウス",
+      "kr": "광명의 기사 메테우스",
+      "zh": "希望骑士梅特乌斯"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "koh-meteos",
+    "last_updated": "2025-11-25",
+    "author": "Arabyss / Sevih / Shiraen "
   },
   "pursuit-queen": {
     "category": "irregular-extermination",
     "title": {
-      "en": "Irregular Queen Strategy Guide",
-      "jp": "イレギュラークイーン 攻略ガイド",
-      "kr": "이레귤러 퀸 공략 가이드",
-      "zh": "异型怪女王 攻略指南"
+      "en": "Pursuit : Irregular Queen",
+      "jp": "追撃 : イレギュラークイーン",
+      "kr": "추격 : 이레귤러 퀸",
+      "zh": "追击：异形怪女王"
     },
     "description": {
-      "en": "Strategy guide for the Irregular Queen Pursuit Operation — team compositions, tips and recommended characters",
-      "jp": "イレギュラークイーン追撃殲滅戦の攻略ガイド — チーム構成、攻略のコツ、おすすめキャラクター",
-      "kr": "이레귤러 퀸 추격 섬멸전 공략 가이드 — 팀 구성, 공략 팁 및 추천 캐릭터",
-      "zh": "异型怪女王追击歼灭战攻略指南 — 队伍组成、攻略技巧和推荐角色"
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
     },
-    "icon": "IG_Turn_4089001",
-    "last_updated": "2025-01-10",
+    "icon": "pursuit-queen",
+    "last_updated": "2025-11-30",
+    "author": "Sevih / Shiraen",
+    "second_image": "pursuit-queen2"
+  },
+  "pursuit-blockbuster": {
+    "category": "irregular-extermination",
+    "title": {
+      "en": "Pursuit : Blockbuster",
+      "jp": "追撃 : ブラックバスター",
+      "kr": "추격 : 블록버스터",
+      "zh": "追击：破坏猛兽"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "pursuit-blockbuster",
+    "last_updated": "2025-11-30",
+    "author": "Shiraen",
+    "second_image": "pursuit-blockbuster2"
+  },
+  "pursuit-iron-stretcher": {
+    "category": "irregular-extermination",
+    "title": {
+      "en": "Pursuit : Iron Stretcher",
+      "jp": "追撃 : アイアンストレッチャー",
+      "kr": "추격 : 아이언 스트레쳐",
+      "zh": "追击：铁血伸张者"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "pursuit-iron-stretcher",
+    "last_updated": "2025-11-30",
+    "author": "Shiraen",
+    "second_image": "pursuit-iron-stretcher2"
+  },
+  "pursuit-mutated-wyvre": {
+    "category": "irregular-extermination",
+    "title": {
+      "en": "Pursuit : Mutated Wyvre",
+      "jp": "追撃 : 変異したワイブル",
+      "kr": "추격 : 변이된 와이브르",
+      "zh": "追击：变异双足飞龙"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "pursuit-mutated-wyvre",
+    "last_updated": "2025-11-30",
+    "author": "Shiraen",
+    "second_image": "pursuit-mutated-wyvre2"
+  },
+  "madman-laboratory": {
+    "category": "guild-raid",
+    "title": {
+      "en": "The Madman's Laboratory",
+      "jp": "狂人の研究室",
+      "kr": "The Madman's Laboratory",
+      "zh": "疯人实验室"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "madman-laboratory",
+    "last_updated": "2025-10-23",
     "author": "Sevih"
+  },
+  "frost-legion": {
+    "category": "guild-raid",
+    "title": {
+      "en": "The Frost Legion",
+      "jp": "雪国の軍勢",
+      "kr": "설국의 군세",
+      "zh": "霜冻军团"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "frost-legion",
+    "last_updated": "2025-11-22",
+    "author": "Tango"
+  },
+  "prevent-world-alteration": {
+    "category": "guild-raid",
+    "title": {
+      "en": "Prevent World Alteration",
+      "jp": "世界変容の阻止",
+      "kr": "세계변용 저지",
+      "zh": "阻止世界改变"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "prevent-world-alteration",
+    "last_updated": "2025-12-17",
+    "author": "Tango"
+  },
+  "dignity-of-the-golden-kingdom": {
+    "category": "guild-raid",
+    "title": {
+      "en": "Dignity of the Golden Kingdom",
+      "jp": "黄金なる王国の威容",
+      "kr": "황금 왕국의 위용",
+      "zh": "黄金王国的威严"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "dignity-of-the-golden-kingdom",
+    "last_updated": "2026-01-14",
+    "author": "Shiraen/Tango"
+  },
+  "free-heroes-start-banner": {
+    "category": "general-guides",
+    "title": {
+      "en": "Free Heroes & Starter Banners",
+      "jp": "無料ヒーロー&スターターバナー",
+      "kr": "무료 영웅 & 스타터 배너",
+      "zh": "免费同伴和新手卡池"
+    },
+    "description": {
+      "en": "Learn which heroes you'll get for free in Outerplane and how to make the best choices from the start",
+      "jp": "Outerplaneで無料で入手できるヒーローと、最初から最適な選択をする方法を学びましょう。",
+      "kr": "Outerplane에서 무료로 받을 수 있는 영웅과 시작부터 최선의 선택을 하는 방법을 배우세요.",
+      "zh": "了解可以在异域战记免费获得的同伴，以及如何做出最佳选择"
+    },
+    "icon": "T_Chat_Emoticon_08",
+    "last_updated": "2026-09-01",
+    "author": "Various Author",
+    
+    "order": 1
+  },
+  "beginner-faq": {
+    "category": "general-guides",
+    "title": {
+      "en": "Beginner FAQ",
+      "jp": "初心者向けFAQ",
+      "kr": "초보자 FAQ",
+      "zh": "新手常见问题"
+    },
+    "description": {
+      "en": "Common questions asked by new players — covers heroes, gear, progression, and resource management",
+      "jp": "新規プレイヤーからよく寄せられる質問 — ヒーロー、装備、進行、リソース管理について",
+      "kr": "신규 플레이어가 자주 묻는 질문 — 영웅, 장비, 진행 및 리소스 관리에 대해",
+      "zh": "新玩家常见问题 — 同伴、装备、进度和资源管理等"
+    },
+    "icon": "T_Chat_Emoticon_08",
+    "last_updated": "2025-11-02",
+    "author": "Shiraen",
+    
+    "order": 2
+  },
+  "daily-stamina": {
+    "category": "general-guides",
+    "title": {
+      "en": "Daily Stamina Burn",
+      "jp": "デイリースタミナ消化",
+      "kr": "일일 스태미나 소모",
+      "zh": "每日体力消耗"
+    },
+    "description": {
+      "en": "Learn how to efficiently spend your stamina daily in Outerplane with this step-by-step guide.",
+      "jp": "この手順ガイドで、Outerplane の毎日のスタミナを効率よく使う方法を学びましょう。",
+      "kr": "이 단계별 가이드로 Outerplane에서 매일 스태미나를 효율적으로 사용하는 법을 알아보세요.",
+      "zh": "通过这份分步指南，了解每日如何在异域战记中高效地消耗体力"
+    },
+    "icon": "T_Chat_Emoticon_04",
+    "last_updated": "2025-05-13",
+    "author": "SADtherobot",
+    
+    "order": 250
+  },
+  "banner-mileage": {
+    "category": "general-guides",
+    "title": {
+      "en": "Banners & Mileage System",
+      "jp": "バナー&マイレージシステム",
+      "kr": "배너 & 마일리지 시스템",
+      "zh": "卡池和指定招募"
+    },
+    "description": {
+      "en": "Understand the banner types and the mileage system in Outerplane to optimize your summons.",
+      "jp": "Outerplaneのバナータイプとマイレージシステムを理解して、召喚を最適化しましょう。",
+      "kr": "Outerplane의 배너 유형과 마일리지 시스템을 이해하고 소환을 최적화하세요.",
+      "zh": "了解异域战记中的卡池类型和指定招募系统以优化您的抽取"
+    },
+    "icon": "myth",
+    "last_updated": "2025-05-25",
+    "author": "Sevih",
+    
+    "order": 50
+  },
+  "S1-8-5": {
+    "category": "adventure",
+    "title": {
+      "en": "S1 Normal 8-5 : Maxwell",
+      "jp": "S1 ノーマル 8-5 : マクスウェル",
+      "kr": "S1 노말 8-5 : 맥스웰",
+      "zh": "S1 普通 8-5：麦克斯韦"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S1-8-5",
+    "last_updated": "2025-05-25",
+    "author": "Sevih"
+  },
+  "S1-9-5": {
+    "category": "adventure",
+    "title": {
+      "en": "S1 Hard : Leo & Alpha",
+      "jp": "シーズン1(ハード) : レオ & アルファ",
+      "kr": "시즌 1 하드 : 레오 & 알파",
+      "zh": "S1 困难：雷欧 & 阿尔法"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S1-9-5",
+    "last_updated": "2025-05-25",
+    "author": "Sevih",
+    "second_image": "S1-9-5-2"
+  },
+  "S2-1-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S2 Hard : Grand Calamari",
+      "jp": "シーズン2(ハード) : グラン・カラマリー",
+      "kr": "시즌 2 Part1 하드 : 그랑 칼라마리",
+      "zh": "S2 困难：巨型鱿鱼"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S2-1-10",
+    "last_updated": "2025-05-25",
+    "author": "Sevih"
+  },
+  "S2-3-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S2 Hard : Sacreed Guardian",
+      "jp": "シーズン2(ハード) : セイクリッドガーディアン",
+      "kr": "시즌 2 Part1 하드 : 세이크리드 가디언",
+      "zh": "S2 困难：神圣守护者"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S2-3-10",
+    "last_updated": "2025-05-25",
+    "author": "Sevih"
+  },
+  "S2-4-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S2 Hard : Astei & Sterope",
+      "jp": "シーズン2(ハード) : アステ&ステロペ",
+      "kr": "시즌 2 Part1 하드 : 아스테&스테로페",
+      "zh": "S2 困难：阿斯特&斯特洛佩"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S2-4-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S2-4-10-2"
+  },
+  "S2-5-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S2 Hard : Demiurge Astei",
+      "jp": "シーズン2(ハード) : デミウルゴス アステ",
+      "kr": "시즌 2 Part1 하드 : 데미우르고스 아스테",
+      "zh": "S2 困难：造物主阿斯特"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S2-5-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S2-5-10-2"
+  },
+  "S2-7-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S2 Hard : Vlada",
+      "jp": "シーズン2(ハード) : ヴラダ",
+      "kr": "시즌 2 Part1 하드 : 블라다",
+      "zh": "S2 困难：弗拉达"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S2-7-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S2-7-10-2"
+  },
+  "S2-9-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S2 Hard : Vladi Max",
+      "jp": "シーズン2(ハード) : ブラッディマックス",
+      "kr": "시즌 2 Part1 하드 : 블라디 맥스",
+      "zh": "S2 困难：弗拉迪麦克斯"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S2-9-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih"
+  },
+  "S2-10-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S2 Hard : Demiurge Drakhan & Demiurge Vlada",
+      "jp": "シーズン2(ハード) : デミウルゴス ドレイカーン & デミウルゴス ヴラダ",
+      "kr": "시즌 2 Part1 하드 : 데미우르고스 드레이칸 & 데미우르고스 블라다",
+      "zh": "S2 困难：造物主德雷坎 & 造物主弗拉达"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S2-10-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S2-10-10-2"
+  },
+  "S3-1-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S3 Hard : Sphinx Guardian",
+      "jp": "シーズン3(ハード) : スフィンクスガーディアン",
+      "kr": "시즌 3 하드 : 스핑크스 가디언",
+      "zh": "S3 困难：斯芬克斯守护者"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S3-1-10",
+    "last_updated": "2025-10-10",
+    "author": "Sevih",
+    "second_image": "S3-1-10-2"
+  },
+  "S3-2-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S3 Hard : Betrayed Deshret",
+      "jp": "シーズン3(ハード) : 見捨てられたデシュレト",
+      "kr": "시즌 3 하드 : 배신당한 데슈레트",
+      "zh": "S3 困难：被背叛的德舒雷特"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S3-2-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S3-2-10-2"
+  },
+  "S3-3-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S3 Hard : Fatal",
+      "jp": "シーズン3(ハード) : フェータル",
+      "kr": "시즌 3 하드 : 페이탈",
+      "zh": "S3 困难：致命"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S3-3-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S3-3-10-2"
+  },
+  "S3-4-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S3 Hard : Hilde & sisters",
+      "jp": "シーズン3(ハード) : ヒルデ&姉妹",
+      "kr": "시즌 3 하드 : 힐데&자매",
+      "zh": "S3 困难：希尔德&姐妹"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S3-4-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S3-4-10-2"
+  },
+  "S3-5-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S3 Hard : Regina & Hilde",
+      "jp": "シーズン3(ハード) : レジーナ&ヒルデ",
+      "kr": "시즌 3 하드 : 레지나&자매",
+      "zh": "S3 困难：蕾吉娜&希尔德"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S3-5-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S3-5-10-2"
+  },
+  "S3-6-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S3 Hard : Ancient Foe",
+      "jp": "シーズン3(ハード) : 古代の宿敵",
+      "kr": "시즌 3 하드 : 고대의 숙적",
+      "zh": "S3 困难：远古宿敌"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S3-6-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S3-6-10-2"
+  },
+  "S3-7-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S3 Hard : Abyssal Calamity Apophis",
+      "jp": "シーズン3(ハード) : 地底の災害アポフィス",
+      "kr": "시즌 3 하드 : 지저의 재해 아포피스",
+      "zh": "S3 困难：深渊灾厄阿波菲斯"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S3-7-10",
+    "last_updated": "2025-05-26",
+    "author": "Sevih",
+    "second_image": "S3-7-10-2"
+  },
+  "heroes-growth": {
+    "category": "general-guides",
+    "title": {
+      "en": "Hero Growth",
+      "jp": "ヒーロー育成",
+      "kr": "영웅 육성",
+      "zh": "同伴成长"
+    },
+    "description": {
+      "en": "A complete breakdown of how to power up your heroes efficiently, from leveling and upgrades to transcendence, gear, skills, and affinity.",
+      "jp": "レベリング、アップグレード、超越、装備、スキル、信頼まで、ヒーローを効率的に強化する方法の完全ガイド。",
+      "kr": "레벨링, 업그레이드, 초월, 장비, 스킬, 신뢰도까지 영웅을 효율적으로 강화하는 방법에 대한 완전 가이드.",
+      "zh": "从升级强化到超越、装备、技能和亲密度，如何高效提升同伴实力的完整指南"
+    },
+    "icon": "heroes-growth",
+    
+    "last_updated": "2025-05-28",
+    "author": "Sevih",
+    "order": 400
+  },
+  "gear": {
+    "category": "general-guides",
+    "title": {
+      "en": "Gear",
+      "jp": "装備",
+      "kr": "장비",
+      "zh": "装备"
+    },
+    "description": {
+      "en": "A guide to gear types, upgrades, and how to make your equipment stronger.",
+      "jp": "装備タイプ、アップグレード、装備を強化する方法のガイド。",
+      "kr": "장비 유형, 업그레이드 및 장비를 강화하는 방법에 대한 가이드.",
+      "zh": "讲解装备类型、升级以及如何使其更强大的指南"
+    },
+    "icon": "gear",
+    
+    "last_updated": "2025-05-28",
+    "author": "Sevih",
+    "order": 450
+  },
+  "quirk": {
+    "category": "general-guides",
+    "title": {
+      "en": "Quirk System",
+      "jp": "ギフトシステム",
+      "kr": "기프트 시스템",
+      "zh": "天赋系统"
+    },
+    "description": {
+      "en": "Learn how to efficiently enhance your heroes with the Quirk system: upgrade paths, recommended priorities, and required materials.",
+      "jp": "ギフトシステムでヒーローを効率的に強化する方法：アップグレードパス、推奨優先順位、必要素材。",
+      "kr": "기프트 시스템으로 영웅을 효율적으로 강화하는 방법: 업그레이드 경로, 추천 우선순위, 필요 재료.",
+      "zh": "如何通过天赋系统高效强化同伴：了解加点路径、推荐优先级和所需的材料"
+    },
+    "icon": "quirk",
+    
+    "last_updated": "2025-05-28",
+    "author": "Kilvanoshei",
+    "hide": false,
+    "order": 500
+  },
+  "stats": {
+    "category": "general-guides",
+    "title": {
+      "en": "Statistics & Combat Basics",
+      "jp": "統計と戦闘の基本",
+      "kr": "스탯 및 전투 기초",
+      "zh": "能力值与战斗基础"
+    },
+    "description": {
+      "en": "Learn about character statistics, damage calculation, and combat mechanics in Outerplane.",
+      "jp": "Outerplaneのキャラクターステータス、ダメージ計算、戦闘メカニクスについて学ぶ。",
+      "kr": "아우터플레인의 캐릭터 스탯, 데미지 계산 및 전투 메커니즘을 배우세요.",
+      "zh": "了解异域战记的角色能力值、伤害计算和战斗机制"
+    },
+    "icon": "stats",
+    
+    "last_updated": "2025-06-09",
+    "author": "Sevih / Shiraen",
+    "order": 550
   },
   "depth1-route1": {
     "category": "monad-gate",
     "title": {
-      "en": "Depth 1 — Land of the White Falcon",
-      "jp": "深度1 — 白い鷹の国",
-      "kr": "깊이 1 — 하얀 매의 나라",
-      "zh": "深度1 — 白鹰之国"
+      "en": "Depth 1 : Land of the White Falcon",
+      "jp": "深度1 : 白い鷹の国",
+      "kr": "깊이 1 : 하얀 매의 나라",
+      "zh": "深度1：白鹰之国"
     },
     "description": {
-      "en": "Interactive map for Monad Gate Depth 1 — true ending path, choices and requirements",
-      "jp": "モナドゲート深度1のインタラクティブマップ — トゥルーエンディングルート、選択肢と条件",
-      "kr": "모나드 게이트 깊이 1 인터랙티브 맵 — 트루 엔딩 루트, 선택지 및 조건",
-      "zh": "单子通道深度1互动地图 — 真结局路线、选择和条件"
+      "en": "Map of Depth 1 : Land of the White Falcon and true ending path",
+      "jp": "深度1：白い鷹の国とトゥルーエンディングへの道",
+      "kr": "깊이 1: 하얀 매의 나라 및 트루 엔딩 경로",
+      "zh": "深度1地图：白鹰之国和真结局路径"
     },
     "icon": "CM_Adventure_MonadGate",
-    "last_updated": "2026-02-23",
+    
+    "last_updated": "2025-12-19",
     "author": "Sevih"
   },
-  "how-to-play": {
-    "category": "other",
-    "title": {
-      "en": "How to Download and Play Outerplane",
-      "jp": "Outerplaneのダウンロードとプレイ方法",
-      "kr": "Outerplane 다운로드 및 플레이 방법",
-      "zh": "如何下载游玩异域战记"
-    },
-    "description": {
-      "en": "Official download links and platforms to start your adventure in Outerplane — mobile stores and PC support with Google Play Games.",
-      "jp": "Outerplaneの冒険を始めるための公式ダウンロードリンクとプラットフォーム — モバイルストアとGoogle Play GamesによるPCサポート。",
-      "kr": "Outerplane에서 모험을 시작하기 위한 공식 다운로드 링크 및 플랫폼 — 모바일 스토어 및 Google Play Games를 통한 PC 지원.",
-      "zh": "通过官方下载链接与官方平台开启在异域战记的冒险——移动端应用商店与Google Play游戏电脑版支持。"
-    },
-    "icon": "CM_Lobby_Button_Recruitment",
-    "last_updated": "2025-10-28",
-    "author": "Sevih"
-  },
-  "fire-tower": {
+  "normal": {
     "category": "skyward-tower",
     "title": {
-      "en": "Fire Elemental Tower",
-      "jp": "火属性の塔",
-      "kr": "화속성 탑",
-      "zh": "火属性之塔"
+      "en": "Normal",
+      "jp": "ノーマル",
+      "kr": "보통",
+      "zh": "普通"
     },
     "description": {
-      "en": "Floor-by-floor guide for the Fire Elemental Tower — boss encounters and restrictions for all 100 floors",
-      "jp": "火属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
-      "kr": "화속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
-      "zh": "火属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+      "en": "Ascend the 100 floors of the Skyward Tower — an epic journey that will test your endurance and versatility.",
+      "jp": "飛天の塔の100階を登る ― 持久力と適応力を試す壮大な旅。",
+      "kr": "비천의 탑 100층을 오르세요 - 지구력과 다재다능함을 시험하는 서사적 여정.",
+      "zh": "攀登飞天之塔的100层——一段考验你的耐力和对同伴了解的史诗旅程"
     },
-    "icon": "T_Tower_Elemental_Fire",
-    "order": 1,
-    "last_updated": "2026-02-23",
-    "author": "Sevih"
+    "icon": "normal",
+    "last_updated": "2025-08-23",
+    "author": "Various Author"
   },
-  "water-tower": {
+  "hard": {
     "category": "skyward-tower",
     "title": {
-      "en": "Water Elemental Tower",
-      "jp": "水属性の塔",
-      "kr": "수속성 탑",
-      "zh": "水属性之塔"
+      "en": "Hard",
+      "jp": "ハード",
+      "kr": "어려움",
+      "zh": "困难"
     },
     "description": {
-      "en": "Floor-by-floor guide for the Water Elemental Tower — boss encounters and restrictions for all 100 floors",
-      "jp": "水属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
-      "kr": "수속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
-      "zh": "水属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+      "en": "Face 30 relentless floors packed with tougher enemies and tactical challenges. Precision and strategy are key.",
+      "jp": "より強力な敵と戦術的な挑戦が詰まった30階に挑む。精度と戦略が鍵。",
+      "kr": "더 강력한 적과 전술적 도전이 가득한 30층에 도전하세요. 정확성과 전략이 핵심입니다.",
+      "zh": "面对充满了强敌和挑战的30层，精确和策略是关键。"
     },
-    "icon": "T_Tower_Elemental_Water",
-    "order": 2,
-    "last_updated": "2026-02-23",
-    "author": "Sevih"
+    "icon": "hard",
+    "last_updated": "2025-11-01",
+    "author": "Various Author"
   },
-  "earth-tower": {
+  "very-hard": {
     "category": "skyward-tower",
     "title": {
-      "en": "Earth Elemental Tower",
-      "jp": "地属性の塔",
-      "kr": "지속성 탑",
-      "zh": "土属性之塔"
+      "en": "Very Hard",
+      "jp": "ベリーハード",
+      "kr": "베리 하드",
+      "zh": "极难"
     },
     "description": {
-      "en": "Floor-by-floor guide for the Earth Elemental Tower — boss encounters and restrictions for all 100 floors",
-      "jp": "地属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
-      "kr": "지속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
-      "zh": "土属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+      "en": "Only the most elite teams will survive the top 20 brutal floors.",
+      "jp": "最も精鋭のチームだけが最上層20階の過酷な試練を生き残る。",
+      "kr": "가장 엘리트 팀만이 최상층 20층의 잔인한 시련에서 살아남을 것입니다.",
+      "zh": "只有最精英的队伍能够在最残酷的20层中生存"
     },
-    "icon": "T_Tower_Elemental_Earth",
-    "order": 3,
-    "last_updated": "2026-02-23",
+    "icon": "very-hard",
+    "last_updated": "2026-01-22",
+    "author": "Various Author"
+  },
+  "timegate-resource": {
+    "category": "general-guides",
+    "title": {
+      "en": "Timegated Resources Guide",
+      "jp": "時間制限リソースガイド",
+      "kr": "시간 제한 자원 가이드",
+      "zh": "有限资源指南"
+    },
+    "description": {
+      "en": "Complete guide to Outerplane's timegated resources — skill books, transistones, special gear materials, and glunite sources.",
+      "jp": "Outerplaneの時間制限リソースの完全ガイド — スキルブック、トランジストーン、特殊装備素材、グルナイト源。",
+      "kr": "Outerplane의 시간 제한 자원 완전 가이드 — 스킬북, 트랜지스톤, 특수 장비 재료, 글루나이트 소스.",
+      "zh": "异域战记有限类资源完整指南——技能书、转换石、特殊装备材料和格鲁矿石来源"
+    },
+    "icon": "timegate-resource",
+    
+    "last_updated": "2025-07-31",
+    "author": "Sevih / Shiraen",
+    "order": 350
+  },
+  "planetary-control-unit": {
+    "category": "guild-raid",
+    "title": {
+      "en": "Planetary Control Unit",
+      "jp": "惑星制御ユニット",
+      "kr": "행성 제어 유닛",
+      "zh": "行星控制单元"
+    },
+    "description": {
+      "en": "Boss strategy guide",
+      "jp": "ボス攻略ガイド",
+      "kr": "보스 전략 가이드",
+      "zh": "首领攻略指南"
+    },
+    "icon": "planetary-control-unit",
+    "last_updated": "2026-02-10",
+    "author": "Tango"
+  },
+  "shop-purchase-priorities": {
+    "category": "general-guides",
+    "title": {
+      "en": "Shop Purchase Priorities",
+      "jp": "ショップ購入優先順位",
+      "kr": "상점 구매 우선순위",
+      "zh": "商店购买优先级"
+    },
+    "description": {
+      "en": "Outerplane shop guide with purchase priorities — best items to buy, what to skip, and how to spend currencies wisely.",
+      "jp": "Outerplaneショップガイド：購入優先順位 — 購入すべきアイテム、スキップすべきもの、通貨の賢い使い方。",
+      "kr": "Outerplane 상점 가이드: 구매 우선순위 — 구매해야 할 아이템, 건너뛸 것, 화폐를 현명하게 사용하는 방법.",
+      "zh": "Outerplane商店指南及购买优先级——最佳购买物品、应跳过的物品以及如何明智地购买"
+    },
+    "icon": "shop-purchase-priorities",
+    
+    "last_updated": "2025-08-18",
+    "author": "Sevih / Shiraen",
+    "order": 300
+  },
+  "premium-limited": {
+    "category": "general-guides",
+    "title": {
+      "en": "Premium & Limited Guide",
+      "jp": "プレミアム&期間限定ガイド",
+      "kr": "프리미엄 & 한정 가이드",
+      "zh": "创世之神和限定指南"
+    },
+    "description": {
+      "en": "Pull priorities, PvE/PvP recommendations, and key transcendence sweetspots (3★→6★) for Premium and Limited heroes in Outerplane.",
+      "jp": "Outerplaneのプレミアムと期間限定ヒーローの召喚優先順位、PvE/PvP推奨、重要な超越スイートスポット（3★→6★）。",
+      "kr": "Outerplane의 프리미엄 및 한정 영웅에 대한 뽑기 우선순위, PvE/PvP 추천, 주요 초월 스위트스팟 (3★→6★).",
+      "zh": "异域战记创世之神和限定同伴的抽取优先级、PVE/PVP推荐以及超越等级关键点（3★→6★）"
+    },
+    "icon": "premium-limited",
+    
+    "last_updated": "2025-12-18",
+    "author": "Shiraen",
+    "order": 100
+  },
+  "ether-income": {
+    "category": "general-guides",
+    "title": {
+      "en": "Ether Income",
+      "jp": "エーテル収入",
+      "kr": "에테르 수입",
+      "zh": "以太收入"
+    },
+    "description": {
+      "en": "Overview of all regular and variable sources of Ether in Outerplane, with daily, weekly, and monthly totals.",
+      "jp": "Outerplaneのエーテルの定期的および変動的な供給源の概要（日次、週次、月次の合計付き）。",
+      "kr": "Outerplane의 에테르에 대한 정기적 및 변동 소스 개요（일일, 주간, 월간 합계 포함）。",
+      "zh": "异域战记中所有常规和不定期获得的以太来源概览，包含每日、每周和每月总计。"
+    },
+    "icon": "ether-income",
+    
+    "last_updated": "2024-09-09",
+    "author": "Birdmouth",
+    "order": 150
+  },
+  "S3-8-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S3 Hard : Abomination Hunter Belial",
+      "jp": "シーズン3(ハード) : 凶悪な狩人べリアル",
+      "kr": "시즌 3 하드 : 흉물 사냥꾼 벨리알",
+      "zh": "S3 困难：憎恶猎人贝利亚尔"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S3-8-10",
+    "last_updated": "2025-10-02",
+    "author": "Sevih",
+    "second_image": "S3-8-10-2"
+  },
+  "S3-9-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S3 Hard : Gnosis Nella",
+      "jp": "シーズン3(ハード) : グノーシス ネラ",
+      "kr": "시즌 3 하드 : 그노시스 넬라",
+      "zh": "S3 困难：灵知内拉"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S3-9-10",
+    "last_updated": "2025-10-02",
+    "author": "Sevih",
+    "second_image": "S3-9-10-2"
+  },
+  "unlock-content": {
+    "category": "general-guides",
+    "title": {
+      "en": "Unlocking Content",
+      "jp": "コンテンツのアンロック",
+      "kr": "콘텐츠 잠금 해제",
+      "zh": "解锁内容"
+    },
+    "description": {
+      "en": "List of all game modes and features with their unlock conditions and short explanations.",
+      "jp": "すべてのゲームモードと機能のリスト、そのアンロック条件と簡単な説明。",
+      "kr": "모든 게임 모드 및 기능 목록과 잠금 해제 조건 및 간단한 설명.",
+      "zh": "包含解锁条件和简短说明的所有游戏模式和功能特性的列表，"
+    },
+    "icon": "unlock-content",
+    "last_updated": "2025-10-03",
+    "author": "Sevih",
+    
+    "order": 200
+  },
+  "depth2-route1": {
+    "category": "monad-gate",
+    "title": {
+      "en": "Depth 2 : Sacred Archipelago",
+      "jp": "深度2 : 聖なる群島",
+      "kr": "깊이 2 : 신성한 군도",
+      "zh": "深度2：神圣群岛"
+    },
+    "description": {
+      "en": "Map of Depth 2 : Sacred Archipelago and true ending path",
+      "jp": "深度2：聖なる群島とトゥルーエンディングへの道",
+      "kr": "깊이 2: 신성한 군도 및 트루 엔딩 경로",
+      "zh": "深度2地图：神圣群岛和真结局路径"
+    },
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
     "author": "Sevih"
   },
-  "light-tower": {
-    "category": "skyward-tower",
+  "depth3-route1": {
+    "category": "monad-gate",
     "title": {
-      "en": "Light Elemental Tower",
-      "jp": "光属性の塔",
-      "kr": "명속성 탑",
-      "zh": "光属性之塔"
+      "en": "Depth 3 : Land of Snow and Steel",
+      "jp": "深度3 : 白い雪と鋼の国",
+      "kr": "깊이 3 : 하얀 눈과 강철의 나라",
+      "zh": "深度3：白雪与钢铁之国"
     },
     "description": {
-      "en": "Floor-by-floor guide for the Light Elemental Tower — boss encounters and restrictions for all 100 floors",
-      "jp": "光属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
-      "kr": "명속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
-      "zh": "光属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+      "en": "Map of Depth 3 : Land of Snow and Steel and true ending path",
+      "jp": "深度3：白い雪と鋼の国とトゥルーエンディングへの道",
+      "kr": "깊이 3: 하얀 눈과 강철의 나라 및 트루 엔딩 경로",
+      "zh": "深度3地图：白雪与钢铁之国和真结局路径"
     },
-    "icon": "T_Tower_Elemental_Light",
-    "order": 4,
-    "last_updated": "2026-02-23",
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
     "author": "Sevih"
   },
-  "dark-tower": {
-    "category": "skyward-tower",
+  "depth4-route1": {
+    "category": "monad-gate",
     "title": {
-      "en": "Dark Elemental Tower",
-      "jp": "闇属性の塔",
-      "kr": "암속성 탑",
-      "zh": "暗属性之塔"
+      "en": "Depth 4 : Land of Sandstorms [1st Part]",
+      "jp": "深度4 : 砂風の国 [前編]",
+      "kr": "깊이 4 : 모래바람의 나라 [1부]",
+      "zh": "深度4：风沙之国 [第一部分]"
     },
     "description": {
-      "en": "Floor-by-floor guide for the Dark Elemental Tower — boss encounters and restrictions for all 100 floors",
-      "jp": "闇属性の塔フロア攻略ガイド — 全100階のボスと制限一覧",
-      "kr": "암속성 탑 층별 공략 가이드 — 전 100층 보스 및 제한 정보",
-      "zh": "暗属性之塔逐层攻略指南 — 全100层Boss和限制条件"
+      "en": "Map of Depth 4 : Land of Sandstorms [1st Part] and true ending path",
+      "jp": "深度4：砂風の国 [前編] とトゥルーエンディングへの道",
+      "kr": "깊이 4: 모래바람의 나라 [1부] 및 트루 엔딩 경로",
+      "zh": "深度4地图：风沙之国 [第一部分] 和真结局路径"
     },
-    "icon": "T_Tower_Elemental_Dark",
-    "order": 5,
-    "last_updated": "2026-02-23",
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
     "author": "Sevih"
   },
-  "normal-tower": {
-    "category": "skyward-tower",
+  "depth4-route2": {
+    "category": "monad-gate",
     "title": {
-      "en": "Skyward Tower — Normal",
-      "jp": "飛天の塔 — ノーマル",
-      "kr": "비천의 탑 — 노멀",
-      "zh": "飞天之塔 — 普通"
+      "en": "Depth 4 : Land of Sandstorms [2nd Part]",
+      "jp": "深度4 : 砂風の国 [後編]",
+      "kr": "깊이 4 : 모래바람의 나라 [2부]",
+      "zh": "深度4：风沙之国 [第二部分]"
     },
     "description": {
-      "en": "Floor-by-floor guide for Skyward Tower Normal mode — 100 floors, monthly reset",
-      "jp": "飛天の塔ノーマルモード フロア攻略ガイド — 全100階、月間リセット",
-      "kr": "비천의 탑 노멀 모드 층별 공략 가이드 — 전 100층, 월간 리셋",
-      "zh": "飞天之塔普通模式逐层攻略指南 — 全100层，每月重置"
+      "en": "Map of Depth 4 : Land of Sandstorms [2nd Part] and true ending path",
+      "jp": "深度4：砂風の国 [後編] とトゥルーエンディングへの道",
+      "kr": "깊이 4: 모래바람의 나라 [2부] 및 트루 엔딩 경로",
+      "zh": "深度4地图：风沙之国 [第二部分] 和真结局路径"
     },
-    "icon": "T_Tower_Bg",
-    "order": 6,
-    "last_updated": "2026-02-23",
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
     "author": "Sevih"
   },
-  "hard-tower": {
-    "category": "skyward-tower",
+  "depth5-route1": {
+    "category": "monad-gate",
     "title": {
-      "en": "Skyward Tower — Hard",
-      "jp": "飛天の塔 — ハード",
-      "kr": "비천의 탑 — 하드",
-      "zh": "飞天之塔 — 困难"
+      "en": "Depth 5 : Realm of Bane",
+      "jp": "深度5 : 劇毒の領域",
+      "kr": "깊이 5 : 극독의 영역",
+      "zh": "深度5：剧毒领域"
     },
     "description": {
-      "en": "Floor-by-floor guide for Skyward Tower Hard mode — 40 floors, monthly reset",
-      "jp": "飛天の塔ハードモード フロア攻略ガイド — 全40階、月間リセット",
-      "kr": "비천의 탑 하드 모드 층별 공략 가이드 — 전 40층, 월간 리셋",
-      "zh": "飞天之塔困难模式逐层攻略指南 — 全40层，每月重置"
+      "en": "Map of Depth 5 : Realm of Bane and true ending path",
+      "jp": "深度5：劇毒の領域とトゥルーエンディングへの道",
+      "kr": "깊이 5: 극독의 영역 및 트루 엔딩 경로",
+      "zh": "深度5地图：剧毒领域和真结局路径"
     },
-    "icon": "T_Tower_Hard_Bg",
-    "order": 7,
-    "last_updated": "2026-02-23",
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
     "author": "Sevih"
   },
-  "very-hard-tower": {
-    "category": "skyward-tower",
+  "depth6-route1": {
+    "category": "monad-gate",
     "title": {
-      "en": "Skyward Tower — Very Hard",
-      "jp": "飛天の塔 — ベリーハード",
-      "kr": "비천의 탑 — 매우 어려움",
-      "zh": "飞天之塔 — 极难"
+      "en": "Depth 6 : Land of the White Falcon",
+      "jp": "深度6 : 白い鷹の国",
+      "kr": "깊이 6 : 하얀 매의 나라",
+      "zh": "深度6：白鹰之国"
     },
     "description": {
-      "en": "Guide for Skyward Tower Very Hard mode — 20 floors with randomized encounters, monthly reset",
-      "jp": "飛天の塔ベリーハードモード攻略ガイド — ランダムエンカウント20階、月間リセット",
-      "kr": "비천의 탑 매우 어려움 모드 공략 가이드 — 랜덤 조우 20층, 월간 리셋",
-      "zh": "飞天之塔极难模式攻略指南 — 随机遭遇20层，每月重置"
+      "en": "Map of Depth 6 : Land of the White Falcon and true ending path",
+      "jp": "深度6：白い鷹の国とトゥルーエンディングへの道",
+      "kr": "깊이 6: 하얀 매의 나라 및 트루 엔딩 경로",
+      "zh": "深度6地图：白鹰之国和真结局路径"
     },
-    "icon": "T_Tower_VeryHard_Bg",
-    "order": 8,
-    "last_updated": "2026-02-23",
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
     "author": "Sevih"
+  },
+  "depth6-route2": {
+    "category": "monad-gate",
+    "title": {
+      "en": "Depth 6 : Sacred Archipelago",
+      "jp": "深度6 : 聖なる群島",
+      "kr": "깊이 6 : 신성한 군도",
+      "zh": "深度6：神圣群岛"
+    },
+    "description": {
+      "en": "Map of Depth 6 : Sacred Archipelago and true ending path",
+      "jp": "深度6：聖なる群島とトゥルーエンディングへの道",
+      "kr": "깊이 6: 신성한 군도 및 트루 엔딩 경로",
+      "zh": "深度6地图：神圣群岛和真结局路径"
+    },
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
+    "author": "Sevih"
+  },
+  "depth6-route3": {
+    "category": "monad-gate",
+    "title": {
+      "en": "Depth 6 : Land of Snow and Steel",
+      "jp": "深度6 : 白い雪と鋼の国",
+      "kr": "깊이 6 : 하얀 눈과 강철의 나라",
+      "zh": "深度6：白雪与钢铁之国"
+    },
+    "description": {
+      "en": "Map of Depth 6 : Land of Snow and Steel and true ending path",
+      "jp": "深度6：白い雪と鋼の国とトゥルーエンディングへの道",
+      "kr": "깊이 6: 하얀 눈과 강철의 나라 및 트루 엔딩 경로",
+      "zh": "深度6地图：白雪与钢铁之国和真结局路径"
+    },
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
+    "author": "Sevih"
+  },
+  "depth6-route4": {
+    "category": "monad-gate",
+    "title": {
+      "en": "Depth 6 : Land of Sandstorms",
+      "jp": "深度6 : 砂風の国",
+      "kr": "깊이 6 : 모래바람의 나라",
+      "zh": "深度6：风沙之国"
+    },
+    "description": {
+      "en": "Map of Depth 6 : Land of Sandstorms and true ending path",
+      "jp": "深度6：砂風の国とトゥルーエンディングへの道",
+      "kr": "깊이 6: 모래바람의 나라 및 트루 엔딩 경로",
+      "zh": "深度6地图：风沙之国和真结局路径"
+    },
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
+    "author": "Sevih"
+  },
+  "depth6-route5": {
+    "category": "monad-gate",
+    "title": {
+      "en": "Depth 6 : Realm of Bane",
+      "jp": "深度6 : 劇毒の領域",
+      "kr": "깊이 6 : 극독의 영역",
+      "zh": "深度6：剧毒领域"
+    },
+    "description": {
+      "en": "Map of Depth 6 : Realm of Bane and true ending path",
+      "jp": "深度6：劇毒の領域とトゥルーエンディングへの道",
+      "kr": "깊이 6: 극독의 영역 및 트루 엔딩 경로",
+      "zh": "深度6地图：剧毒领域和真结局路径"
+    },
+    "icon": "CM_Adventure_MonadGate",
+    
+    "last_updated": "2025-12-19",
+    "author": "Sevih"
+  },
+    "S4-1-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S4 Hard : Three Cries",
+      "jp": "シーズン4(ハード) : 三つの鳴き声",
+      "kr": "시즌 4 하드 : 세 울음소리",
+      "zh": "S4 困难：三声啼哭"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S4-1-10",
+    "last_updated": "2026-01-13",
+    "author": "Sevih",
+    "second_image": "S4-1-10-2"
+  },
+  "roadmap-2026": {
+    "category": "general-guides",
+    "title": {
+      "en": "2026 Roadmap",
+      "jp": "2026年ロードマップ",
+      "kr": "2026 로드맵",
+      "zh": "2026路线图"
+    },
+    "description": {
+      "en": "Summary of the January 2026 Offline Meeting: new characters, Core Fusion plans, RTA, Dimension Singularity and more.",
+      "jp": "2026年1月オフラインミーティングのまとめ：新キャラクター、コアフュージョン計画、RTA、次元特異点など。",
+      "kr": "2026년 1월 오프라인 미팅 요약: 신규 캐릭터, 코어 퓨전 계획, RTA, 차원 특이점 등.",
+      "zh": "2026年1月线下会议总结：新角色、核心融合计划、实时竞技、次元奇点等。"
+    },
+    "icon": "roadmap-2026",
+    
+    "last_updated": "2026-01-17",
+    "author": "Sevih / 뉴월드"
+  },
+    "S4-2-10": {
+    "category": "adventure",
+    "title": {
+      "en": "S4 Hard : Sanctuary Defense",
+      "jp": "シーズン4(ハード) : 聖所防衛戦",
+      "kr": "시즌 4 하드 : 성소 방어전",
+      "zh": "S4 困难：圣所防御战"
+    },
+    "description": {
+      "en": "Boss strategy guide.",
+      "jp": "ボス攻略ガイド。",
+      "kr": "보스 전략 가이드.",
+      "zh": "首领攻略指南"
+    },
+    "icon": "S4-2-10",
+    "last_updated": "2026-01-13",
+    "author": "Sevih",
+    "second_image": "S4-2-10-2"
   }
 }

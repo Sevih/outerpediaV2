@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type ReactNode } from 'react';
+import { useCallback, useState, type ReactNode } from 'react';
 import VersionSelector from '@/app/components/ui/VersionSelector';
 import parseText from '@/lib/parse-text';
 
@@ -17,6 +17,9 @@ type Props = {
   versions?: Record<string, GuideVersion>;
   defaultVersion?: string;
   children?: ReactNode;
+  /** Override VersionSelector hash prefix. Pass `undefined` to disable hash sync. */
+  hashPrefix?: string;
+  onVersionChange?: (key: string) => void;
 };
 
 export default function GuideTemplate({
@@ -26,6 +29,8 @@ export default function GuideTemplate({
   versions,
   defaultVersion,
   children,
+  hashPrefix = 'version',
+  onVersionChange,
 }: Props) {
   const versionKeys = versions
     ? Object.entries(versions)
@@ -41,6 +46,11 @@ export default function GuideTemplate({
       ? defaultVersion
       : versionKeys[0] ?? ''
   );
+
+  const handleVersionChange = useCallback((key: string) => {
+    setActiveVersion(key);
+    onVersionChange?.(key);
+  }, [onVersionChange]);
 
   return (
     <article className="space-y-6">
@@ -61,8 +71,8 @@ export default function GuideTemplate({
           items={versionKeys}
           labels={versionLabels}
           value={activeVersion}
-          onChange={setActiveVersion}
-          hashPrefix="version"
+          onChange={handleVersionChange}
+          hashPrefix={hashPrefix}
         />
       )}
 

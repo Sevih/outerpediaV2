@@ -1,0 +1,236 @@
+{
+  "Light": {
+    "icon": "elem/CM_Element_Light",
+    "team": [
+      ["Demiurge Drakhan"],
+      ["Demiurge Luna", "Regina"],
+      ["Drakhan", "Demiurge Stella"],
+      ["Monad Eva"]
+    ],
+    "geasActive": {
+      "bonus": [47, 49, 53],
+      "malus": [16, 38, 103, 57, 71, 15, 70, 56]
+    },
+    "note": [
+      { "type": "p", "string": "Mind the No Extra Turn for {P/Demiurge Luna} S2" }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "{P/Demiurge Luna} S2の追加ターン無効に注意" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "{P/Demiurge Luna} S2의 추가 턴 불가에 주의" }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "注意{P/Demiurge Luna} S2的无额外回合" }
+    ],
+    "video": { "videoId": "dQw4w9WgXcQ", "title": "Light Team - Guild Raid", "author": "Placeholder" }
+  },
+  "Ember": {
+    "icon": "elem/CM_Element_Fire",
+    "team": [
+      ["Ember"]
+    ],
+    "geasActive": {
+      "bonus": [69],
+      "malus": [16, 38, 103, 57, 15, 70, 56, 30, 20]
+    },
+    "video": {
+      "videoId": "Wxw0TNUdMDE",
+      "title": "Solo Ember",
+      "author": "Tango"
+    },
+    "note": [
+      { "type": "p", "string": "Use a {C/Mage} sacrifice to tank the stun. Other sacrifices can hold charms too." },
+      { "type": "p", "string": "Best sacrifice options: {P/Liselotte} (+10 spd, dmg reduction with shields, {I-A/Starlight Road}), {P/Omega Nadja} (dmg reduction with shields, turn 1 irregular infection for dmg debuff, {I-A/Charmer's Golden Chalice}). {P/Ritri} and {P/Demiurge Drakhan} are good alternatives." },
+      { "type": "p", "string": "Remove geas 15 (Ally Max HP -30%) for better survivability." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "{C/Mage}の犠牲キャラでスタンを受けてください。他の犠牲キャラもチャームを装備可能。" },
+      { "type": "p", "string": "おすすめ犠牲キャラ：{P/Liselotte}（+10速度、シールドでダメージ軽減、{I-A/Starlight Road}）、{P/Omega Nadja}（シールドでダメージ軽減、1ターン目にイレギュラーインフェクションでダメージデバフ、{I-A/Charmer's Golden Chalice}）。{P/Ritri}と{P/Demiurge Drakhan}も良い選択肢。" },
+      { "type": "p", "string": "ギアス15（味方の最大HP-30%）を外すと生存率が上がります。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "{C/Mage} 희생 캐릭터로 스턴을 받으세요. 다른 희생 캐릭터도 참을 장착할 수 있습니다." },
+      { "type": "p", "string": "추천 희생 캐릭터: {P/Liselotte}(+10 속도, 실드로 피해 감소, {I-A/Starlight Road}), {P/Omega Nadja}(실드로 피해 감소, 1턴 이레귤러 인펙션으로 피해 디버프, {I-A/Charmer's Golden Chalice}). {P/Ritri}와 {P/Demiurge Drakhan}도 좋은 대안." },
+      { "type": "p", "string": "기어스 15(아군 최대 체력 -30%)를 제거하면 생존율이 높아집니다." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "使用{C/Mage}牺牲角色承受眩晕。其他牺牲角色也可以装备护符。" },
+      { "type": "p", "string": "推荐牺牲角色：{P/Liselotte}（+10速度，护盾减伤，{I-A/Starlight Road}），{P/Omega Nadja}（护盾减伤，第1回合异常感染减伤debuff，{I-A/Charmer's Golden Chalice}）。{P/Ritri}和{P/Demiurge Drakhan}也是不错的选择。" },
+      { "type": "p", "string": "移除契约15（友军最大生命值-30%）可提高生存率。" }
+    ],
+    "requirements": {
+      "entries": [
+        {
+          "character": "Ember",
+          "stats": { "spd": "166+" },
+          "equipment": {
+            "weapon": ["{I-W/Token of the Supreme Witch}"],
+            "amulet": ["{I-A/Unholy Exsultet}"],
+            "talisman": ["{I-T/Vanguard's Charm}"],
+            "set": ["{AS/Revenge}"]
+          },
+          "prio": ["{S/ATK}", "{S/SPD}"],
+          "notes": [
+            "ATK% main stat on accessory for bigger shields",
+            "Get {S/EFF} from +Effectiveness geas instead of accessory"
+          ],
+          "notes_jp": [
+            "アクセサリーの攻撃%メインでシールド強化",
+            "{S/EFF}は効果命中ギアスで補う"
+          ],
+          "notes_kr": [
+            "액세서리 공격% 메인으로 실드 강화",
+            "{S/EFF}는 효과 적중 기어스로 보완"
+          ],
+          "notes_zh": [
+            "饰品攻击%主属性增强护盾",
+            "{S/EFF}用效果命中契约补充"
+          ]
+        }
+      ]
+    }
+  },
+  "GBeth": {
+    "icon": "elem/CM_Element_Light",
+    "team": [
+      ["Kuro"],
+      ["Akari"],
+      ["Gnosis Beth"],
+      ["Monad Eva"]
+    ],
+    "geasActive": {
+      "bonus": [68, 69],
+      "malus": [16, 38, 103, 71, 15, 70, 56, 20]
+    },
+    "video": { "videoId": "dQw4w9WgXcQ", "title": "GBeth Team - Guild Raid", "author": "Placeholder" }
+  },
+  "Burn Team": {
+    "icon": "elem/CM_Element_Fire",
+    "team": [
+      ["Maxie"],
+      ["Roxie"],
+      ["Vlada"],
+      ["Core Fusion Veronica", "Veronica", "Omega Nadja"]
+    ],
+    "geasActive": {
+      "bonus": [69, 50],
+      "malus": [16, 38, 15, 70, 56, 30, 20]
+    },
+    "video": {
+      "videoId": "wX_q5uLchGY",
+      "title": "Burn Team Stage 12 - 16.1m dmg, 155% multiplier",
+      "author": "Tango"
+    },
+    "note": [
+      { "type": "p", "string": "Break the boss on turn 15 before he uses enrage ultimate. Only remove geas 15 (Ally Max HP -30%) or use {P/Omega Nadja} if necessary for survivability." },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Core Fusion Veronica", "speed": 252 },
+          { "character": "Maxie", "speed": 238 },
+          { "character": "Roxie", "speed": 221 },
+          { "character": "Vlada", "speed": 95 }
+        ],
+        "note": "Lot of wiggle room as long as you follow the turn order."
+      },
+      { "type": "p", "string": "Replace {P/Core Fusion Veronica} with {P/Omega Nadja} for better turn 1 survivability (use min speed, hoping for speed debuff proc). If using {P/Omega Nadja}, disable the counter geas. Regular {P/Veronica} also works." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "ターン15で怒りのアルティメットを使う前にボスをブレイクしてください。生存のためにギアス15（味方の最大HP-30%）を外すか、{P/Omega Nadja}を使用してください。" },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Core Fusion Veronica", "speed": 252 },
+          { "character": "Maxie", "speed": 238 },
+          { "character": "Roxie", "speed": 221 },
+          { "character": "Vlada", "speed": 95 }
+        ],
+        "note": "ターン順を守れば調整の余地があります。"
+      },
+      { "type": "p", "string": "{P/Core Fusion Veronica}を{P/Omega Nadja}に置き換えるとターン1の生存率が上がります（最低速度で速度デバフを期待）。{P/Omega Nadja}使用時はカウンターギアスを無効に。通常の{P/Veronica}でも可。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "턴 15에서 분노 궁극기를 사용하기 전에 보스를 브레이크하세요. 생존을 위해 기어스 15(아군 최대 체력 -30%)를 제거하거나 {P/Omega Nadja}를 사용하세요." },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Core Fusion Veronica", "speed": 252 },
+          { "character": "Maxie", "speed": 238 },
+          { "character": "Roxie", "speed": 221 },
+          { "character": "Vlada", "speed": 95 }
+        ],
+        "note": "턴 순서만 지키면 조정 여지가 있습니다."
+      },
+      { "type": "p", "string": "{P/Core Fusion Veronica}를 {P/Omega Nadja}로 교체하면 턴 1 생존율이 높아집니다(최저 속도로 속도 디버프 기대). {P/Omega Nadja} 사용 시 카운터 기어스를 비활성화하세요. 일반 {P/Veronica}도 가능합니다." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "在第15回合狂暴大招前打破Boss。为了生存可以移除契约15（友军最大生命值-30%）或使用{P/Omega Nadja}。" },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Core Fusion Veronica", "speed": 252 },
+          { "character": "Maxie", "speed": 238 },
+          { "character": "Roxie", "speed": 221 },
+          { "character": "Vlada", "speed": 95 }
+        ],
+        "note": "只要保持回合顺序就有调整空间。"
+      },
+      { "type": "p", "string": "将{P/Core Fusion Veronica}替换为{P/Omega Nadja}可提高第1回合生存率（最低速度期待速度减益触发）。使用{P/Omega Nadja}时禁用反击契约。普通{P/Veronica}也可以。" }
+    ],
+    "requirements": {
+      "entries": [
+        {
+          "character": "Maxie",
+          "stats": { "spd": "238", "trans": "5-6" },
+          "equipment": {
+            "weapon": ["{I-W/Heartunder's Blade}"],
+            "talisman": ["{I-T/Executioner's Charm} +10"],
+            "set": ["{AS/Revenge}"],
+            "ee": ["+0"]
+          }
+        },
+        {
+          "character": "Roxie",
+          "stats": { "spd": "221", "trans": "5-6" },
+          "equipment": {
+            "amulet": ["{I-A/Dies Irae}"],
+            "talisman": ["{I-T/Executioner's Charm} +10"],
+            "set": ["2pc {AS/Immunity}"],
+            "ee": ["+10"]
+          }
+        },
+        {
+          "character": "Vlada",
+          "stats": { "spd": "95" },
+          "equipment": {
+            "weapon": ["{I-W/Phantasm Necrosis}"],
+            "talisman": ["{I-T/Rogue's Charm}"],
+            "set": ["{AS/Revenge}"]
+          },
+          "prio": ["{S/ATK}"]
+        },
+        {
+          "character": "Core Fusion Veronica",
+          "stats": { "spd": "252" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"],
+            "set": ["{AS/Speed}"]
+          },
+          "notes": [
+            "Can use slower build with EE+10 to chain skill earlier and boost team AP"
+          ],
+          "notes_jp": [
+            "EE+10で遅いビルドにしてチェインスキルを早め、チームAPをブースト可能"
+          ],
+          "notes_kr": [
+            "EE+10으로 느린 빌드를 사용해 체인 스킬을 빨리 쓰고 팀 AP를 부스트 가능"
+          ],
+          "notes_zh": [
+            "可用EE+10慢速配装提前使用连携技并提升团队AP"
+          ]
+        }
+      ]
+    }
+  }
+}

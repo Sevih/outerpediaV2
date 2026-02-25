@@ -182,6 +182,16 @@ const jp: Record<TranslationKey, string> = {
   'tower.select_set': '制限セットを選択:',
   'tower.per_floor_strategy': '各階の攻略',
 
+  // Guild Raid
+  'guildraid.geas': 'ゲアス修正',
+  'guildraid.geas.desc':
+    'ゲアスのオン/オフを切り替えてスコア倍率を計算しましょう。マルスゲアスを有効化すると難易度が上がりますがスコアが増加します。',
+  'guildraid.geas.level': 'レベル{n}',
+  'guildraid.total_multiplier': 'スコア倍率合計',
+  'guildraid.active_geas': '有効なゲアス',
+  'requirements.title': '必要条件',
+  'requirements.prio': '優先度',
+
   'page.contributors.title': 'プロジェクト コントリビューター',
   'page.legal.title': '法的通知 & 免責事項',
   'page.legal.description':
@@ -347,6 +357,7 @@ const jp: Record<TranslationKey, string> = {
   'sys.stat.cdmg_red': '被会心ダメDOWN',
   'sys.stat.dmg_percentred': '被ダメDOWN %',
   'sys.stat.cdmg_percentred': '被会心ダメDOWN %',
+  'sys.stat.trans': '超越',
 
   // Filters
   'filters.rarity': 'レアリティ',
