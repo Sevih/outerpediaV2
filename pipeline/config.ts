@@ -9,6 +9,7 @@ export const PATHS = {
   equipment: join(ROOT, 'data/equipment'),
   effects: join(ROOT, 'data/effects'),
   reco: join(ROOT, 'data/reco'),
+  guidesContent: join(ROOT, 'src', 'app', '[lang]', 'guides', '_contents'),
 
   // Generated (auto-built, gitignored)
   generated: join(ROOT, 'data/generated'),
