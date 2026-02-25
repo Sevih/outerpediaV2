@@ -1092,7 +1092,7 @@
       "kr": "Outerplane의 배너 유형과 마일리지 시스템을 이해하고 소환을 최적화하세요.",
       "zh": "了解异域战记中的卡池类型和指定招募系统以优化您的抽取"
     },
-    "icon": "myth",
+    "icon": "TI_Item_Ticket_Recruit_05",
     "last_updated": "2025-05-25",
     "author": "Sevih",
 
@@ -1401,8 +1401,7 @@
       "kr": "레벨링, 업그레이드, 초월, 장비, 스킬, 신뢰도까지 영웅을 효율적으로 강화하는 방법에 대한 완전 가이드.",
       "zh": "从升级强化到超越、装备、技能和亲密度，如何高效提升同伴实力的完整指南"
     },
-    "icon": "heroes-growth",
-
+    "icon": "TI_Item_Growth_Potion_Max_01",
     "last_updated": "2025-05-28",
     "author": "Sevih",
     "order": 400
@@ -1421,8 +1420,7 @@
       "kr": "장비 유형, 업그레이드 및 장비를 강화하는 방법에 대한 가이드.",
       "zh": "讲解装备类型、升级以及如何使其更强大的指南"
     },
-    "icon": "gear",
-
+    "icon": "TI_Item_Growth_Enhance_04",
     "last_updated": "2025-05-28",
     "author": "Sevih",
     "order": 450
@@ -1441,11 +1439,9 @@
       "kr": "기프트 시스템으로 영웅을 효율적으로 강화하는 방법: 업그레이드 경로, 추천 우선순위, 필요 재료.",
       "zh": "如何通过天赋系统高效强化同伴：了解加点路径、推荐优先级和所需的材料"
     },
-    "icon": "quirk",
-
+    "icon": "TI_Gift_Cost_01",
     "last_updated": "2025-05-28",
     "author": "Kilvanoshei",
-    "hide": false,
     "order": 500
   },
   "stats": {
@@ -1462,7 +1458,7 @@
       "kr": "아우터플레인의 캐릭터 스탯, 데미지 계산 및 전투 메커니즘을 배우세요.",
       "zh": "了解异域战记的角色能力值、伤害计算和战斗机制"
     },
-    "icon": "stats",
+    "icon": "TI_Equipment_Weapon_04_Product",
 
     "last_updated": "2025-06-09",
     "author": "Sevih / Shiraen",
@@ -1554,7 +1550,7 @@
       "kr": "Outerplane의 시간 제한 자원 완전 가이드 — 스킬북, 트랜지스톤, 특수 장비 재료, 글루나이트 소스.",
       "zh": "异域战记有限类资源完整指南——技能书、转换石、特殊装备材料和格鲁矿石来源"
     },
-    "icon": "timegate-resource",
+    "icon": "TI_Item_Option_Change_02",
 
     "last_updated": "2025-07-31",
     "author": "Sevih / Shiraen",
@@ -1592,8 +1588,7 @@
       "kr": "Outerplane 상점 가이드: 구매 우선순위 — 구매해야 할 아이템, 건너뛸 것, 화폐를 현명하게 사용하는 방법.",
       "zh": "Outerplane商店指南及购买优先级——最佳购买物品、应跳过的物品以及如何明智地购买"
     },
-    "icon": "shop-purchase-priorities",
-
+    "icon": "TI_Web_Event_Coin",
     "last_updated": "2025-08-18",
     "author": "Sevih / Shiraen",
     "order": 300
@@ -1612,8 +1607,7 @@
       "kr": "Outerplane의 프리미엄 및 한정 영웅에 대한 뽑기 우선순위, PvE/PvP 추천, 주요 초월 스위트스팟 (3★→6★).",
       "zh": "异域战记创世之神和限定同伴的抽取优先级、PVE/PVP推荐以及超越等级关键点（3★→6★）"
     },
-    "icon": "premium-limited",
-
+    "icon": "TI_Item_Recruit_Special_001",
     "last_updated": "2025-12-18",
     "author": "Shiraen",
     "order": 100
@@ -1632,8 +1626,7 @@
       "kr": "Outerplane의 에테르에 대한 정기적 및 변동 소스 개요（일일, 주간, 월간 합계 포함）。",
       "zh": "异域战记中所有常规和不定期获得的以太来源概览，包含每日、每周和每月总计。"
     },
-    "icon": "ether-income",
-
+    "icon": "TI_Item_Cristal",
     "last_updated": "2024-09-09",
     "author": "Birdmouth",
     "order": 150
@@ -1688,7 +1681,7 @@
       "kr": "모든 게임 모드 및 기능 목록과 잠금 해제 조건 및 간단한 설명.",
       "zh": "包含解锁条件和简短说明的所有游戏模式和功能特性的列表，"
     },
-    "icon": "unlock-content",
+    "icon": "CT_Detail_Slot_Lock_Open",
     "last_updated": "2025-10-03",
     "author": "Sevih",
 
@@ -1903,7 +1896,7 @@
     "author": "Sevih"
   },
   "roadmap-2026": {
-    "category": "general-guides",
+    "category": "other",
     "title": {
       "en": "2026 Roadmap",
       "jp": "2026年ロードマップ",
@@ -1916,7 +1909,7 @@
       "kr": "2026년 1월 오프라인 미팅 요약: 신규 캐릭터, 코어 퓨전 계획, RTA, 차원 특이점 등.",
       "zh": "2026年1月线下会议总结：新角色、核心融合计划、实时竞技、次元奇点等。"
     },
-    "icon": "roadmap-2026",
+    "icon": "TI_Item_Craft_Material_10",
 
     "last_updated": "2026-01-17",
     "author": "Sevih / 뉴월드"
