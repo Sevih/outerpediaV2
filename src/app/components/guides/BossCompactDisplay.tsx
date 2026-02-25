@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Image from 'next/image';
-import CharacterPortrait from '@/app/components/character/CharacterPortrait';
+import BossPortrait from '@/app/components/guides/BossPortrait';
 import BuffDebuffDisplay, { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
@@ -52,15 +52,6 @@ function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmun
 }
 
 /* ── Helpers ── */
-
-function getBossImageSrc(icons: string): string {
-  if (icons.startsWith('Skill_')) {
-    const suffix = icons.split('_').pop() ?? '';
-    const folder = suffix.startsWith('2') ? '' : 'boss/';
-    return `/images/characters/${folder}skills/${icons}.webp`;
-  }
-  return `/images/characters/boss/portrait/MT_${icons}.webp`;
-}
 
 function getSkillImageSrc(icon: string): string {
   const suffix = icon.split('_').pop() ?? '';
@@ -175,19 +166,7 @@ export default function BossCompactDisplay({ boss, iconOnlySkills = true }: Prop
       <div className="space-y-3">
         {/* Boss header */}
         <div className="flex items-center gap-3">
-          {boss.icons.startsWith('2') ? (
-            <CharacterPortrait id={boss.icons} size="md" name={displayName} className="shrink-0" />
-          ) : (
-            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
-              <Image
-                src={getBossImageSrc(boss.icons)}
-                alt={displayName}
-                fill
-                sizes="64px"
-                className="object-cover"
-              />
-            </div>
-          )}
+          <BossPortrait icons={boss.icons} name={displayName} size="md" />
           <div>
             {!boss.IncludeSurname && surname && (
               <p className="text-xs text-zinc-400">{surname}</p>

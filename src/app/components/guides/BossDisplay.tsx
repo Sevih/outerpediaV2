@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
-import CharacterPortrait from '@/app/components/character/CharacterPortrait';
+import BossPortrait from '@/app/components/guides/BossPortrait';
 import BuffDebuffDisplay, { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
@@ -185,19 +185,7 @@ function BossHeader({ boss, lang }: { boss: Boss; lang: Lang }) {
 
   return (
     <div className="flex items-center gap-3 p-3">
-      {boss.icons.startsWith('2') ? (
-        <CharacterPortrait id={boss.icons} size="md" />
-      ) : (
-        <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
-          <Image
-            src={`/images/characters/boss/portrait/MT_${boss.icons}.webp`}
-            alt={displayName}
-            fill
-            sizes="64px"
-            className="object-cover"
-          />
-        </div>
-      )}
+      <BossPortrait icons={boss.icons} name={displayName} size="md" />
       <div>
         {!boss.IncludeSurname && surname && (
           <p className="text-xs text-zinc-400">{surname}</p>

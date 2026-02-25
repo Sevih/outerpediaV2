@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Image from 'next/image';
-import CharacterPortrait from '@/app/components/character/CharacterPortrait';
+import BossPortrait from '@/app/components/guides/BossPortrait';
 import BuffDebuffDisplay, { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
@@ -51,15 +51,6 @@ function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmun
 }
 
 /* ── Helpers ── */
-
-function getMinionImageSrc(icons: string): string {
-  if (icons.startsWith('Skill_')) {
-    const suffix = icons.split('_').pop() ?? '';
-    const folder = suffix.startsWith('2') ? '' : 'boss/';
-    return `/images/characters/${folder}skills/${icons}.webp`;
-  }
-  return `/images/characters/boss/portrait/MT_${icons}.webp`;
-}
 
 function getSkillImageSrc(icon: string): string {
   const suffix = icon.split('_').pop() ?? '';
@@ -166,19 +157,7 @@ function MinionTab({ minion, isActive, onClick, lang }: {
           : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/50',
       ].join(' ')}
     >
-      {minion.icons.startsWith('2') ? (
-        <CharacterPortrait id={minion.icons} size="xxs" />
-      ) : (
-        <span className="relative h-5 w-5 shrink-0 overflow-hidden rounded">
-          <Image
-            src={getMinionImageSrc(minion.icons)}
-            alt=""
-            fill
-            sizes="20px"
-            className="object-cover"
-          />
-        </span>
-      )}
+      <BossPortrait icons={minion.icons} size="xxs" />
       <span className="truncate">{name}</span>
     </button>
   );
@@ -203,19 +182,7 @@ function MinionDetail({ minion, lang }: { minion: Boss; lang: Lang }) {
     <div className="space-y-3">
       {/* Minion header */}
       <div className="flex items-center gap-2">
-        {minion.icons.startsWith('2') ? (
-          <CharacterPortrait id={minion.icons} size="sm" name={displayName} className="shrink-0" />
-        ) : (
-          <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg border border-white/10">
-            <Image
-              src={getMinionImageSrc(minion.icons)}
-              alt={displayName}
-              fill
-              sizes="40px"
-              className="object-cover"
-            />
-          </div>
-        )}
+        <BossPortrait icons={minion.icons} name={displayName} size="sm" />
         <div>
           {!minion.IncludeSurname && surname && (
             <p className="text-[10px] text-zinc-500">{surname}</p>

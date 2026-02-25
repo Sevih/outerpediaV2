@@ -9,6 +9,8 @@ import type { LangMap } from '@/types/common';
 import { lRec } from '@/lib/i18n/localize';
 import { localePath } from '@/lib/navigation';
 
+import BossPortrait from '@/app/components/guides/BossPortrait';
+import FitText from '@/app/components/ui/FitText';
 import areaNames from '@data/guides/area_name.json';
 import guideBossMap from '@data/generated/guide-boss-map.json';
 
@@ -106,7 +108,7 @@ export default function AdventureList({ guides, lang, t }: CategoryViewProps) {
             {t['guides.adventure.season'].replace('{n}', String(season))}
           </h2>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          <div className="flex flex-wrap gap-3 sm:max-w-[calc(5*7.875rem+4*0.75rem)]">
             {items.map(({ meta, areaKey, episode }) => {
               const bossEntry = bossMap[meta.slug];
               const area = areaMap[areaKey];
@@ -117,7 +119,7 @@ export default function AdventureList({ guides, lang, t }: CategoryViewProps) {
                 <Link
                   key={meta.slug}
                   href={localePath(lang, `/guides/${meta.category}/${meta.slug}`)}
-                  className="group relative overflow-hidden rounded-lg w-31.5 h-64
+                  className="group relative overflow-hidden rounded-lg w-20 h-40 sm:w-31.5 sm:h-64
                              ring-1 ring-white/10 hover:ring-yellow-400/50 transition-all"
                 >
                   {/* Background image */}
@@ -136,24 +138,25 @@ export default function AdventureList({ guides, lang, t }: CategoryViewProps) {
                   {/* Stage name (top) */}
                   <div className="absolute inset-x-0 top-0 p-2">
                     <p className="text-xs font-medium text-zinc-200 drop-shadow-lg">Ep. {episode}</p>
-                    <p className="text-xs font-medium text-zinc-200 drop-shadow-lg">{areaName}</p>
+                    {!areaName.includes(' ') ? (
+                      <FitText max={12} min={8} className="font-medium text-zinc-200 drop-shadow-lg">{areaName}</FitText>
+                    ) : (
+                      <p className="text-xs font-medium text-zinc-200 drop-shadow-lg line-clamp-3">{areaName}</p>
+                    )}
                   </div>
 
                   {/* Content (bottom) */}
                   <div className="absolute inset-x-0 bottom-0 flex flex-col p-2">
-                    {/* Boss info strip (spoiler-free) */}
+                    {/* Boss portrait + name (spoiler-free) */}
                     {showBoss && (
-                      <div className="mb-1.5 flex items-center gap-2 rounded-md bg-black/60 p-1.5 backdrop-blur-sm">
-                        <div className="relative h-7 w-7 shrink-0 overflow-hidden rounded-full ring-1 ring-white/20">
-                          <Image
-                            src={`/images/characters/boss/portrait/MT_${bossEntry.icons}.webp`}
-                            alt=""
-                            fill
-                            sizes="28px"
-                            className="object-cover"
-                          />
+                      <div className="flex flex-col items-center gap-1">
+                        <div className="sm:hidden">
+                          <BossPortrait icons={bossEntry.icons} name={lRec(bossEntry.name, lang)} size="sm" />
                         </div>
-                        <span className="min-w-0 truncate text-xs font-medium text-zinc-200">
+                        <div className="hidden sm:block">
+                          <BossPortrait icons={bossEntry.icons} name={lRec(bossEntry.name, lang)} size="md" />
+                        </div>
+                        <span className="hidden sm:block max-w-full truncate text-xs font-medium text-zinc-200">
                           {bossEntry.surname
                             ? `${lRec(bossEntry.surname, lang)} ${lRec(bossEntry.name, lang)}`
                             : lRec(bossEntry.name, lang)}
