@@ -1496,7 +1496,7 @@
       "kr": "비천의 탑 100층을 오르세요 - 지구력과 다재다능함을 시험하는 서사적 여정.",
       "zh": "攀登飞天之塔的100层——一段考验你的耐力和对同伴了解的史诗旅程"
     },
-    "icon": "normal",
+    "icon": "T_Tower_Bg",
     "last_updated": "2025-08-23",
     "author": "Various Author"
   },
@@ -1514,7 +1514,7 @@
       "kr": "더 강력한 적과 전술적 도전이 가득한 30층에 도전하세요. 정확성과 전략이 핵심입니다.",
       "zh": "面对充满了强敌和挑战的30层，精确和策略是关键。"
     },
-    "icon": "hard",
+    "icon": "T_Tower_Hard_Bg",
     "last_updated": "2025-11-01",
     "author": "Various Author"
   },
@@ -1532,9 +1532,99 @@
       "kr": "가장 엘리트 팀만이 최상층 20층의 잔인한 시련에서 살아남을 것입니다.",
       "zh": "只有最精英的队伍能够在最残酷的20层中生存"
     },
-    "icon": "very-hard",
+    "icon": "T_Tower_VeryHard_Bg",
     "last_updated": "2026-01-22",
     "author": "Various Author"
+  },
+  "fire-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Fire Tower",
+      "jp": "炎の塔",
+      "kr": "화염의 탑",
+      "zh": "火之塔"
+    },
+    "description": {
+      "en": "All enemies are Fire — bring your Water roster to extinguish the flames floor by floor.",
+      "jp": "全ての敵が炎属性 — 水属性の編成で挑み、炎を一層ずつ鎮火せよ。",
+      "kr": "모든 적이 화염 속성 — 물 속성 편성으로 한 층씩 화염을 진압하세요.",
+      "zh": "所有敌人均为火属性——带上水属性阵容，逐层浇灭烈焰。"
+    },
+    "icon": "T_Tower_Elemental_Fire",
+    "last_updated": "2026-02-25",
+    "author": "Sevih"
+  },
+  "water-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Water Tower",
+      "jp": "水の塔",
+      "kr": "물의 탑",
+      "zh": "水之塔"
+    },
+    "description": {
+      "en": "All enemies are Water — bring your Earth roster to crush the waves floor by floor.",
+      "jp": "全ての敵が水属性 — 地属性の編成で挑み、波濤を一層ずつ打ち砕け。",
+      "kr": "모든 적이 물 속성 — 대지 속성 편성으로 한 층씩 파도를 부숴 버리세요.",
+      "zh": "所有敌人均为水属性——带上地属性阵容，逐层击碎洪流。"
+    },
+    "icon": "T_Tower_Elemental_Water",
+    "last_updated": "2026-02-25",
+    "author": "Sevih"
+  },
+  "earth-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Earth Tower",
+      "jp": "大地の塔",
+      "kr": "대지의 탑",
+      "zh": "地之塔"
+    },
+    "description": {
+      "en": "All enemies are Earth — bring your Fire roster to burn through every floor.",
+      "jp": "全ての敵が地属性 — 炎属性の編成で挑み、全階層を焼き尽くせ。",
+      "kr": "모든 적이 대지 속성 — 화염 속성 편성으로 모든 층을 불태워 버리세요.",
+      "zh": "所有敌人均为地属性——带上火属性阵容，逐层焚尽大地。"
+    },
+    "icon": "T_Tower_Elemental_Earth",
+    "last_updated": "2026-02-25",
+    "author": "Sevih"
+  },
+  "light-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Light Tower",
+      "jp": "光の塔",
+      "kr": "빛의 탑",
+      "zh": "光之塔"
+    },
+    "description": {
+      "en": "All enemies are Light — bring your Dark roster to shroud every floor in shadow.",
+      "jp": "全ての敵が光属性 — 闇属性の編成で挑み、全階層を闇で覆い尽くせ。",
+      "kr": "모든 적이 빛 속성 — 암속성 편성으로 모든 층을 어둠에 물들이세요.",
+      "zh": "所有敌人均为光属性——带上暗属性阵容，以暗影笼罩每一层。"
+    },
+    "icon": "T_Tower_Elemental_Light",
+    "last_updated": "2026-02-25",
+    "author": "Sevih"
+  },
+  "dark-tower": {
+    "category": "skyward-tower",
+    "title": {
+      "en": "Dark Tower",
+      "jp": "闇の塔",
+      "kr": "어둠의 탑",
+      "zh": "暗之塔"
+    },
+    "description": {
+      "en": "All enemies are Dark — bring your Light roster to banish the shadows floor by floor.",
+      "jp": "全ての敵が闇属性 — 光属性の編成で挑み、闇を一層ずつ払い除け。",
+      "kr": "모든 적이 암속성 — 빛 속성 편성으로 한 층씩 어둠을 몰아내세요.",
+      "zh": "所有敌人均为暗属性——带上光属性阵容，逐层驱散黑暗。"
+    },
+    "icon": "T_Tower_Elemental_Dark",
+    "last_updated": "2026-02-25",
+    "author": "Sevih"
   },
   "timegate-resource": {
     "category": "general-guides",

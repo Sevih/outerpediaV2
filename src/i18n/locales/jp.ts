@@ -170,6 +170,8 @@ const jp: Record<TranslationKey, string> = {
   'guides.special_request.identification': '正体究明',
   'guides.special_request.ecology_study': '生態調査',
   'guides.monad_gate.depth': '深度{n}',
+  'guides.skyward_tower.difficulty': '難易度の塔',
+  'guides.skyward_tower.elemental': '属性の塔',
   'tower.search_placeholder': '階数またはボス名で検索...',
   'tower.floor': '{n}階',
   'tower.floor_short': '{n}F',

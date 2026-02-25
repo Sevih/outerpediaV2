@@ -170,6 +170,8 @@ const en = {
   'guides.special_request.identification': 'Identification',
   'guides.special_request.ecology_study': 'Ecology Study',
   'guides.monad_gate.depth': 'Depth {n}',
+  'guides.skyward_tower.difficulty': 'Difficulty Towers',
+  'guides.skyward_tower.elemental': 'Elemental Towers',
   'tower.search_placeholder': 'Search by floor or boss name...',
   'tower.floor': 'Floor {n}',
   'tower.floor_short': 'F{n}',
