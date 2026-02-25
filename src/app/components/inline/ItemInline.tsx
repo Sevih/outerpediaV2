@@ -33,7 +33,16 @@ export default function ItemInline({ name }: Props) {
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-equipment">{label}</span>
-        {description && <p className="text-xs text-neutral-200">{description}</p>}
+        {description && (
+          <p className="text-xs text-neutral-200">
+            {description.split(/\\n/).map((line, i, arr) => (
+              <span key={i}>
+                {line}
+                {i < arr.length - 1 && <br />}
+              </span>
+            ))}
+          </p>
+        )}
       </div>
     </div>
   );
