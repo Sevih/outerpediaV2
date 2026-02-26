@@ -6,12 +6,12 @@ import { STAR_ICONS, type StarColor } from '@/lib/stars';
 type Props = {
   stars: StarColor[];
   size?: number;
-  gap?: string;
+  spacing?: number;
 };
 
-export default function StarIcons({ stars, size = 16, gap = 'gap-px' }: Props) {
+export default function StarIcons({ stars, size = 16, spacing = 1 }: Props) {
   return (
-    <span className={`inline-flex items-center align-middle ${gap}`}>
+    <span className="inline-flex items-center align-middle">
       {stars.map((color, i) => (
         <Image
           key={i}
@@ -19,7 +19,7 @@ export default function StarIcons({ stars, size = 16, gap = 'gap-px' }: Props) {
           alt="star"
           width={size}
           height={size}
-          style={{ width: size, height: size }}
+          style={{ width: size, height: size, marginLeft: i > 0 ? spacing : 0 }}
           className="object-contain"
         />
       ))}
