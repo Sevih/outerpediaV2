@@ -18,9 +18,9 @@ import type { ElementType } from '@/types/enums';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
 
-const buffMap: Record<string, Effect> = {};
+export const buffMap: Record<string, Effect> = {};
 for (const b of buffsData as Effect[]) buffMap[b.name] = b;
-const debuffMap: Record<string, Effect> = {};
+export const debuffMap: Record<string, Effect> = {};
 for (const d of debuffsData as Effect[]) debuffMap[d.name] = d;
 
 /* ── Types ──────────────────────────────────────────────── */
@@ -41,6 +41,7 @@ type Props = {
   defaultBossId?: string;
   preloadedBosses?: Record<string, Boss>;
   versionIds?: string[];
+  onVersionChange?: (index: number) => void;
 };
 
 /* ── Locale-aware element / class token maps ──────────── */
@@ -119,7 +120,7 @@ function normalizeName(name: string): string {
 
 /* ── Sub-components ─────────────────────────────────────── */
 
-function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
+export function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
   const { t } = useI18n();
   const raw: string[] = [];
   if (immuneStr) raw.push(...immuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
@@ -144,7 +145,7 @@ function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmun
   );
 }
 
-function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
+export function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
   const name = lRec(skill.name as LangMap, lang);
   const desc = lRec(skill.description as LangMap, lang);
   if (!name && !desc) return null;
@@ -177,7 +178,7 @@ function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
   );
 }
 
-function BossHeader({ boss, lang }: { boss: Boss; lang: Lang }) {
+export function BossHeader({ boss, lang }: { boss: Boss; lang: Lang }) {
   const baseName = lRec(boss.Name, lang);
   const surname = lRec(boss.Surname as LangMap, lang);
   const displayName = boss.IncludeSurname && surname ? `${surname} ${baseName}` : baseName;
@@ -223,7 +224,7 @@ function BossHeader({ boss, lang }: { boss: Boss; lang: Lang }) {
   );
 }
 
-function BossDetails({ boss, lang }: { boss: Boss; lang: Lang }) {
+export function BossDetails({ boss, lang }: { boss: Boss; lang: Lang }) {
   return (
     <div className="space-y-2">
       <ImmuneList immuneStr={boss.BuffImmune} statImmuneStr={boss.StatBuffImmune} />
@@ -238,9 +239,9 @@ function BossDetails({ boss, lang }: { boss: Boss; lang: Lang }) {
 
 /* ── Main component ─────────────────────────────────────── */
 
-const bossCache = new Map<string, Boss>();
+export const bossCache = new Map<string, Boss>();
 
-export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses, versionIds }: Props) {
+export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses, versionIds, onVersionChange }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
 
@@ -317,7 +318,12 @@ export default function BossDisplay({ bossName, modeKey, defaultBossId, preloade
               <div className="space-y-1">
                 <select
                   value={selectedId}
-                  onChange={(e) => setSelectedId(e.target.value)}
+                  onChange={(e) => {
+                    const newId = e.target.value;
+                    setSelectedId(newId);
+                    const idx = versions.findIndex((v) => v.id === newId);
+                    if (idx !== -1) onVersionChange?.(idx);
+                  }}
                   className="rounded-lg border border-white/10 bg-zinc-800 px-3 py-2 text-sm text-zinc-200 outline-none focus:border-sky-500 transition-colors"
                 >
                   {versions.map((v) => (
