@@ -11,10 +11,11 @@ type Props = {
   imageClassName?: string;
   tooltip?: React.ReactNode;
   tooltipBg?: string;
+  size?: number;
 };
 
 /**
- * Base inline component: icon (18px) + colored label.
+ * Base inline component: icon + colored label.
  * Optionally wraps in InlineTooltip when tooltip content is provided.
  */
 export default function InlineIcon({
@@ -25,19 +26,20 @@ export default function InlineIcon({
   imageClassName,
   tooltip,
   tooltipBg,
+  size = 18,
 }: Props) {
   const inner = (
     <span className={`inline-flex items-center gap-0.5 align-middle ${color}`}>
-      <span className="relative inline-block h-4.5 w-4.5 shrink-0">
+      <span className="relative inline-block shrink-0" style={{ width: size, height: size }}>
         <Image
           src={icon}
           alt=""
           fill
-          sizes="18px"
+          sizes={`${size}px`}
           className={`object-contain ${imageClassName ?? ''}`}
         />
       </span>
-      <span className={underline ? 'underline' : ''}>{label}</span>
+      {label && <span className={underline ? 'underline' : ''}>{label}</span>}
     </span>
   );
 
