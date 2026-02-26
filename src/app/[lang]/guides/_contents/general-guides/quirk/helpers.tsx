@@ -77,10 +77,10 @@ export const TERMS = {
 /* ===================== Localized Labels ===================== */
 export const LABELS = {
   title: {
-    en: 'Quirk System',
-    jp: 'ギフトシステム',
-    kr: '기프트 시스템',
-    zh: '天赋系统',
+    en: 'How Quirks Work',
+    jp: 'ギフトの仕組み',
+    kr: '기프트 작동 방식',
+    zh: '天赋机制说明',
   },
   categoryOverview: {
     en: 'Category Overview',

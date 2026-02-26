@@ -21,10 +21,10 @@ import { StarBadge } from '@/app/components/ui/StarIcons';
 /* ── Top-level LangMap constants ────────────────────────── */
 
 const title: LangMap = {
-  en: 'Beginner FAQ',
-  jp: '初心者向けFAQ',
-  kr: '초보자 FAQ',
-  zh: '新手常见问题',
+  en: 'Frequently Asked Questions',
+  jp: 'よくある質問',
+  kr: '자주 묻는 질문',
+  zh: '常见问题解答',
 };
 
 const intro: LangMap = {

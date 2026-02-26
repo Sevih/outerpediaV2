@@ -19,10 +19,10 @@ import {
 import { shopData } from './data'
 
 const title = {
-    en: 'Shop Purchase Priorities',
-    jp: 'ショップ購入優先度',
-    kr: '상점 구매 우선순위',
-    zh: '商店购买优先级',
+    en: 'Recommended Purchases by Shop',
+    jp: 'ショップ別おすすめ購入品',
+    kr: '상점별 추천 구매 목록',
+    zh: '各商店推荐购买',
 }
 
 const TAB_KEYS = SHOP_TABS.map(t => t.key)

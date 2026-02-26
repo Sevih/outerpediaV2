@@ -34,10 +34,10 @@ const star = (
 
 const LABELS = {
   title: {
-    en: 'Banners & Mileage System',
-    jp: 'バナー&マイレージシステム',
-    kr: '배너 & 마일리지 시스템',
-    zh: '卡池和指定招募',
+    en: 'How Banners & Mileage Work',
+    jp: 'バナー&マイレージの仕組み',
+    kr: '배너 & 마일리지 작동 방식',
+    zh: '卡池和指定招募机制说明',
   } satisfies LangMap,
 
   intro: {
