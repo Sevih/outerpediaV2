@@ -604,7 +604,7 @@ export default function BannerMileageGuide() {
           {lRec(LABELS.intro_p4_end, lang)}
         </p>
 
-        <BannerTabCards tabs={bannerTabs} />
+        <BannerTabCards tabs={bannerTabs} hashPrefix="banner" />
       </div>
     </GuideTemplate>
   );

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import Tabs from '@/app/components/ui/Tabs';
 import ItemInline from '@/app/components/inline/ItemInline';
@@ -39,6 +39,7 @@ const TAB_LABELS: Record<TabKey, LangMap> = {
 export default function HeroGrowthGuide() {
     const { lang } = useI18n();
     const [tab, setTab] = useState<TabKey>('leveling');
+    const onChange = useCallback((v: string) => setTab(v as TabKey), []);
 
     return (
         <GuideTemplate
@@ -49,7 +50,8 @@ export default function HeroGrowthGuide() {
                 items={[...TAB_KEYS]}
                 labels={TAB_KEYS.map(k => lRec(TAB_LABELS[k], lang))}
                 value={tab}
-                onChange={(v) => setTab(v as TabKey)}
+                onChange={onChange}
+                hashPrefix="tab"
                 className="justify-center"
             />
 

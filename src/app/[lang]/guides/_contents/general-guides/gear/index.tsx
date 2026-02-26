@@ -1,7 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useCallback, useState } from 'react';
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import Tabs from '@/app/components/ui/Tabs';
 import Accordion from '@/app/components/ui/Accordion';
@@ -424,21 +423,8 @@ const TAB_KEYS: TabKey[] = ['basics', 'upgrading', 'obtaining', 'faq'];
 
 export default function GearGuide() {
   const { lang } = useI18n();
-  const searchParams = useSearchParams();
-  const tabParam = searchParams.get('tab') as TabKey | null;
-  const [selected, setSelected] = useState<TabKey>(
-    tabParam && TAB_KEYS.includes(tabParam) ? tabParam : 'basics'
-  );
-
-  const handleTabChange = (key: string) => {
-    const k = key as TabKey;
-    setSelected(k);
-    const params = new URLSearchParams(window.location.search);
-    if (k === 'basics') params.delete('tab');
-    else params.set('tab', k);
-    const qs = params.toString();
-    window.history.replaceState(null, '', `${window.location.pathname}${qs ? `?${qs}` : ''}`);
-  };
+  const [selected, setSelected] = useState<TabKey>('basics');
+  const onChange = useCallback((v: string) => setSelected(v as TabKey), []);
 
   const tabLabels = [lRec(LABELS.tab_basics, lang), lRec(LABELS.tab_upgrading, lang), lRec(LABELS.tab_obtaining, lang), lRec(LABELS.tab_faq, lang)];
 
@@ -452,7 +438,7 @@ export default function GearGuide() {
   return (
     <GuideTemplate title={lRec(LABELS.heading, lang)} introduction={lRec(LABELS.intro, lang)}>
       <div className="flex justify-center mb-6 mt-4">
-        <Tabs items={TAB_KEYS} labels={tabLabels} value={selected} onChange={handleTabChange} />
+        <Tabs items={TAB_KEYS} labels={tabLabels} value={selected} onChange={onChange} hashPrefix="tab" />
       </div>
       <section className="guide-version-content mt-6">{content[selected]}</section>
     </GuideTemplate>
