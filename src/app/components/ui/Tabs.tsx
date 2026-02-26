@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 
 type TabsProps = {
-  items: string[];
+  items: readonly string[];
   labels?: React.ReactNode[];
   value: string;
   onChange: (value: string) => void;

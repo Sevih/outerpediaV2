@@ -25,14 +25,15 @@ const CROP_OVERRIDES: Record<string, string> = {
 };
 
 const SIZES = {
-  xxs: { px: 20, cls: 'h-5 w-5', iconSize: 0, starSize: 0 },
-  xs: { px: 32, cls: 'h-8 w-8', iconSize: 0, starSize: 0 },
-  sm: { px: 48, cls: 'h-12 w-12', iconSize: 15, starSize: 8 },
-  md: { px: 64, cls: 'h-16 w-16', iconSize: 20, starSize: 10 },
-  lg: { px: 96, cls: 'h-24 w-24', iconSize: 22, starSize: 13 },
+  xxs: { px: 20, cls: 'h-5 w-5', smCls: 'max-md:h-5 max-md:w-5', mdCls: 'md:h-5 md:w-5', iconSize: 0, starSize: 0 },
+  xs: { px: 32, cls: 'h-8 w-8', smCls: 'max-md:h-8 max-md:w-8', mdCls: 'md:h-8 md:w-8', iconSize: 0, starSize: 0 },
+  sm: { px: 48, cls: 'h-12 w-12', smCls: 'max-md:h-12 max-md:w-12', mdCls: 'md:h-12 md:w-12', iconSize: 15, starSize: 11 },
+  md: { px: 64, cls: 'h-16 w-16', smCls: 'max-md:h-16 max-md:w-16', mdCls: 'md:h-16 md:w-16', iconSize: 20, starSize: 14 },
+  lg: { px: 96, cls: 'h-24 w-24', smCls: 'max-md:h-24 max-md:w-24', mdCls: 'md:h-24 md:w-24', iconSize: 22, starSize: 17 },
 } as const;
 
 export type CharacterPortraitSize = keyof typeof SIZES;
+type ResponsiveSize = { base: CharacterPortraitSize; md: CharacterPortraitSize };
 
 type Props = {
   id: string;
@@ -44,11 +45,13 @@ type Props = {
   classType?: ClassType;
   /** Rarity override (resolved from index if omitted) */
   rarity?: RarityType;
-  size?: CharacterPortraitSize;
+  size?: CharacterPortraitSize | ResponsiveSize;
   /** CSS object-position override (auto-resolved from CROP_OVERRIDES if omitted) */
   cropPosition?: string;
   showIcons?: boolean;
   showStars?: boolean;
+  /** Override the star count displayed (ignores character rarity, implies showStars) */
+  forceStar?: number;
   className?: string;
   priority?: boolean;
 };
@@ -63,6 +66,7 @@ export default function CharacterPortrait({
   cropPosition,
   showIcons = false,
   showStars = false,
+  forceStar,
   className = '',
   priority = false,
 }: Props) {
@@ -72,11 +76,18 @@ export default function CharacterPortrait({
   const classType = classOverride ?? char?.Class;
   const rarity = rarityOverride ?? char?.Rarity;
 
-  const s = SIZES[size];
+  const isResponsive = typeof size === 'object';
+  const baseSize = isResponsive ? size.base : size;
+  const mdSize = isResponsive ? size.md : size;
+  const s = SIZES[mdSize]; // use larger size for numeric values (icons, stars, image hints)
+  const sBase = SIZES[baseSize];
+  const cls = isResponsive
+    ? `${sBase.smCls} ${SIZES[mdSize].mdCls}`
+    : sBase.cls;
   const position = cropPosition ?? CROP_OVERRIDES[id] ?? DEFAULT_CROP;
 
   return (
-    <div className={`relative overflow-hidden rounded-lg border border-gray-700 bg-gray-900 ${s.cls} ${className}`}>
+    <div className={`relative overflow-hidden rounded-lg border border-gray-700 bg-gray-900 ${cls} ${className}`}>
       <Image
         fill
         sizes={`${Math.round(s.px * FACE_ZOOM)}px`}
@@ -116,16 +127,16 @@ export default function CharacterPortrait({
       )}
 
       {/* Rarity stars — bottom center */}
-      {showStars && s.starSize > 0 && rarity && (
-        <div className="absolute bottom-0.5 left-1/2 z-10 flex -translate-x-1/2 items-center">
-          {Array.from({ length: rarity }, (_, i) => (
+      {(showStars || forceStar) && s.starSize > 0 && (forceStar ?? rarity) && (
+        <div className="absolute bottom-0.5 left-0 right-0 z-10 flex items-center justify-center">
+          {Array.from({ length: forceStar ?? rarity! }, (_, i) => (
             <Image
               key={i}
               src="/images/ui/star/CM_icon_star_y.webp"
               alt=""
               width={s.starSize}
               height={s.starSize}
-              className="-mx-0.5"
+              className="-mx-0.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
             />
           ))}
         </div>

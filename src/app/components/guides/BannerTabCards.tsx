@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 export type BannerTab = {
@@ -15,6 +15,7 @@ export type BannerTab = {
 type Props = {
   tabs: BannerTab[];
   defaultKey?: string;
+  hashPrefix?: string;
   imagePath?: string;
   badgePath?: string;
 };
@@ -22,10 +23,30 @@ type Props = {
 export default function BannerTabCards({
   tabs,
   defaultKey,
+  hashPrefix,
   imagePath = '/images/guides/general-guides/banner/',
   badgePath = '/images/guides/general-guides/banner/',
 }: Props) {
   const [selected, setSelected] = useState(defaultKey || tabs[0].key);
+  const didReadHash = useRef(false);
+
+  useEffect(() => {
+    if (!hashPrefix || didReadHash.current) return;
+    didReadHash.current = true;
+    const hash = decodeURIComponent(window.location.hash.slice(1));
+    const prefix = `${hashPrefix}-`;
+    if (hash.startsWith(prefix)) {
+      const key = hash.slice(prefix.length);
+      if (tabs.some(t => t.key === key)) setSelected(key);
+    }
+  }, [hashPrefix, tabs]);
+
+  const handleSelect = useCallback((key: string) => {
+    setSelected(key);
+    if (hashPrefix) {
+      history.replaceState(null, '', `#${hashPrefix}-${key}`);
+    }
+  }, [hashPrefix]);
 
   return (
     <div className="flex flex-col gap-6 md:flex-row">
@@ -37,7 +58,7 @@ export default function BannerTabCards({
           return (
             <button
               key={tab.key}
-              onClick={() => setSelected(tab.key)}
+              onClick={() => handleSelect(tab.key)}
               className={`relative group overflow-visible transition-all duration-300 w-full rounded-xl ${
                 isActive
                   ? 'ring-2 ring-yellow-400 ring-offset-black shadow-[0_0_8px_rgba(255,215,0,0.6)]'
