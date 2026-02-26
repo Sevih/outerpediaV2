@@ -884,6 +884,21 @@
     "subtype": "char_level"
   },
   {
+    "id": "20004A",
+    "name": "Food",
+    "name_jp": "食べ物",
+    "name_kr": "음식",
+    "name_zh": "食物",
+    "rarity": "legendary",
+    "description": "Steak Dish / Prosciutto / Cake Slice / Sandwich.",
+    "description_jp": "ステーキ定食 / プロシュート / チョコショートケーキ / サンドイッチ",
+    "description_kr": "스테이크 정식 / 프로슈토 / 조각 케이크 / 샌드위치",
+    "description_zh": "牛排套餐 / 帕尔玛火腿 / 切块蛋糕 / 三明治",
+    "icon": "TI_Item_Growth_Potion_04",
+    "type": "material",
+    "subtype": "char_level"
+  },
+  {
     "id": "20005",
     "name": "Unlimited Restaurant Voucher",
     "name_jp": "食べ放題食券",
@@ -5652,6 +5667,68 @@
     "icon": "TI_Armor_Box02",
     "type": "box",
     "subtype": "box_random"
+  },
+  {
+    "id": "30182AB",
+    "name": "6★ Legendary Helmet [Burst]",
+    "name_jp": "★6炸裂のヘルム\\n【レジェンド】",
+    "name_kr": "6성 전설 투구 [버스트]",
+    "name_zh": "6星传说头盔【爆发】",
+    "rarity": "legendary",
+    "description": "Gains AP at the start of battle +25",
+    "description_jp": "戦闘開始時、AP獲得 +25",
+    "description_kr": "입장 시 AP획득 +25",
+    "description_zh": "入场时获得AP +25",
+    "icon": "TI_Equipment_Helmet_06"
+  },
+  {
+    "id": "30182AC",
+    "name": "6★ Legendary Gloves [Burst]",
+    "name_jp": "★6炸裂のガントレット\\n【レジェンド】",
+    "name_kr": "6성 전설 장갑 [버스트]",
+    "name_zh": "6星传说手套【爆发】",
+    "rarity": "legendary",
+    "description": "Gains AP at the start of battle +25",
+    "description_jp": "戦闘開始時、AP獲得 +25",
+    "description_kr": "입장 시 AP획득 +25",
+    "description_zh": "入场时获得AP +25",
+    "icon": "TI_Equipment_Gloves_06"
+  },
+  {
+    "id": "30182AD",
+    "name": "6★ Legendary Armor [Burst]",
+    "name_jp": "★6炸裂のアーマー\\n【レジェンド】",
+    "name_kr": "6성 전설 갑옷 [버스트]",
+    "name_zh": "6星传说盔甲【爆发】",
+    "rarity": "legendary",
+    "description": "Gains AP at the start of battle +25",
+    "description_jp": "戦闘開始時、AP獲得 +25",
+    "description_kr": "입장 시 AP획득 +25",
+    "description_zh": "入场时获得AP +25",
+    "icon": "TI_Equipment_Armor_06"
+  },
+  {
+    "id": "30182AE",
+    "name": "6★ Legendary Boots [Burst]",
+    "name_jp": "★6炸裂のブーツ\\n【レジェンド】",
+    "name_kr": "6성 전설 신발 [버스트]",
+    "name_zh": "6星传说鞋子【爆发】",
+    "rarity": "legendary",
+    "description": "Gains AP at the start of battle +25",
+    "description_jp": "戦闘開始時、AP獲得 +25",
+    "description_kr": "입장 시 AP획득 +25",
+    "description_zh": "入场时获得AP +25",
+    "icon": "TI_Equipment_Shoes_06"
+  },
+  {
+    "id": "30182AF",
+    "name": "“Tycoon” Title",
+    "name_jp": "称号【大富豪】",
+    "name_kr": "칭호 [대부호]",
+    "name_zh": "称号【大富豪】",
+    "rarity": "normal",
+    "description": "",
+    "icon": "EBT_WORLD_BOSS_TITLE"
   },
   {
     "id": "30182",
@@ -13044,7 +13121,7 @@
     "description_jp": "",
     "description_kr": "",
     "description_zh": "",
-    "icon": "TI_Item_Event_Boss_Reward_000",
+    "icon": "TI_Item_BossEvent_Coin_01",
     "type": "currency",
     "subtype": "event_coin"
   },
