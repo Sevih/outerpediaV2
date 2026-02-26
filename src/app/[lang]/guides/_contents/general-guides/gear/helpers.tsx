@@ -11,11 +11,12 @@ import { l } from '@/lib/i18n/localize';
 
 import weaponsData from '@data/equipment/weapon.json';
 import setsData from '@data/equipment/sets.json';
-import statsData from '@data/stats.json';
-import _statValues from '@data/guides/gear-substats.json';
-import gearData from '@data/guides/gear-data.json';
-
-const statValues = _statValues as Record<string, string[]>;
+const statValues: Record<string, string[]> = {
+  'ATK%': ['4%', '8%', '12%', '16%', '20%', '24%'],
+  CHC: ['3%', '6%', '9%', '12%', '15%', '18%'],
+  CHD: ['4%', '8%', '12%', '16%', '20%', '24%'],
+  SPD: ['3', '6', '9', '12', '15', '18'],
+};
 
 // ============================================================================
 // TYPES
@@ -40,12 +41,19 @@ export type EquipmentClass = 'ranger' | 'striker' | 'healer' | 'defender' | 'mag
 // CONSTANTS
 // ============================================================================
 
-export const HAMMER_ITEMS = gearData.hammerItems;
-export const CATALYST_ITEMS = gearData.catalystItems;
-export const GLUNITE_ITEMS = gearData.gluniteItems;
-export const ENHANCEMENT_EXAMPLES: EnhancementExample[] = gearData.enhancementExamples as EnhancementExample[];
-export const PERFECT_SUBSTATS = gearData.perfectSubstats;
-const CHANGE_STAT_MODES = gearData.changeStatModes;
+export const HAMMER_ITEMS = ["Apprentice's Hammer", "Expert's Hammer", "Master's Hammer", "Artisan's Hammer"] as const;
+export const CATALYST_ITEMS = ['Normal Reforge Catalyst', 'Superior Reforge Catalyst', 'Epic Reforge Catalyst', 'Legendary Reforge Catalyst'] as const;
+export const GLUNITE_ITEMS = ['Glunite', 'Refined Glunite', 'Event Glunite', 'Armor Glunite'] as const;
+export const ENHANCEMENT_EXAMPLES: EnhancementExample[] = [
+  { rarity: 'normal', star: 1, atkBase: 18, atkMax: 90 },
+  { rarity: 'epic', star: 2, atkBase: 54, atkMax: 270 },
+  { rarity: 'legendary', star: 1, atkBase: 30, atkMax: 150 },
+];
+export const PERFECT_SUBSTATS = ['ATK%', 'CHC', 'CHD', 'SPD'] as const;
+const CHANGE_STAT_MODES: { key: string; item: string }[] = [
+  { key: 'changeAll', item: 'Transistone (Total)' },
+  { key: 'selectChange', item: 'Transistone (Individual)' },
+];
 
 export const GEAR_PRIORITY: { rank: number; slotKey: GearPrioritySlotKey; color: string }[] = [
   { rank: 1, slotKey: 'weapons', color: 'red' },
@@ -256,23 +264,11 @@ export function SubstatBar({ yellow, orange = 0 }: { yellow: number; orange?: nu
 export function SubstatBarWithValue({ stat, yellow, orange }: { stat: string; yellow: number; orange: number }) {
   const total = Math.min(yellow + orange, 6);
   const value = statValues[stat]?.[total - 1] ?? '?';
-  const statMeta = (statsData as Record<string, { icon: string; label: string }>)[stat];
 
   return (
     <div className="w-fit">
       <div className="mb-1 flex items-center justify-between">
-        <span className="inline-flex items-center gap-1 text-white">
-          {statMeta && (
-            <Image
-              src={`/images/ui/effect/${statMeta.icon}`}
-              alt={statMeta.label}
-              width={18}
-              height={18}
-              className="object-contain"
-            />
-          )}
-          {statMeta?.label ?? stat}
-        </span>
+        <StatInline name={stat} />
         <span className="ml-4 text-sm text-white">{value}</span>
       </div>
       <SubstatBar yellow={yellow} orange={orange} />
