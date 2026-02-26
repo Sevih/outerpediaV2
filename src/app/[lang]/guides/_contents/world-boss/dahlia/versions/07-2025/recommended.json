@@ -1,0 +1,114 @@
+{
+  "phase1": [
+    {
+      "names": ["Monad Eva", "Dianne"],
+      "reason": {
+        "en": "Strong {C/Healer} options for Phase 1.",
+        "jp": "フェーズ1の強力な{C/Healer}オプション。",
+        "kr": "페이즈 1의 강력한 {C/Healer} 옵션.",
+        "zh": "第一阶段强力{C/Healer}选项。"
+      }
+    },
+    {
+      "names": ["Demiurge Drakhan", "Leo"],
+      "reason": {
+        "en": "{E/Light} {C/Defender} with non-offensive skills allowing CP stacking before Phase 2.",
+        "jp": "非攻撃スキルでフェーズ2前にCPを蓄積できる{E/Light}{C/Defender}。",
+        "kr": "비공격 스킬로 페이즈 2 전에 CP를 축적할 수 있는 {E/Light} {C/Defender}.",
+        "zh": "拥有非攻击技能的{E/Light}{C/Defender}，可在第二阶段前积累CP。"
+      }
+    },
+    {
+      "names": ["Gnosis Nella", "Alice"],
+      "reason": {
+        "en": "{D/BT_SEALED} application options.",
+        "jp": "{D/BT_SEALED}付与オプション。",
+        "kr": "{D/BT_SEALED} 적용 옵션.",
+        "zh": "{D/BT_SEALED}施加选项。"
+      }
+    },
+    {
+      "names": ["Demiurge Stella"],
+      "reason": {
+        "en": "Provides {D/BT_FIXED_DAMAGE} and is immune to {D/BT_FREEZE}.",
+        "jp": "{D/BT_FIXED_DAMAGE}を提供し、{D/BT_FREEZE}に免疫。",
+        "kr": "{D/BT_FIXED_DAMAGE}를 제공하고 {D/BT_FREEZE}에 면역.",
+        "zh": "提供{D/BT_FIXED_DAMAGE}且免疫{D/BT_FREEZE}。"
+      }
+    },
+    {
+      "names": ["Kitsune of Eternity Tamamo-no-Mae"],
+      "reason": {
+        "en": "Offers {B/HEAVY_STRIKE} and debuff stacking with {D/IG_Buff_Dot_Curse_Interruption_D}.",
+        "jp": "{B/HEAVY_STRIKE}と{D/IG_Buff_Dot_Curse_Interruption_D}によるデバフ蓄積。",
+        "kr": "{B/HEAVY_STRIKE}와 {D/IG_Buff_Dot_Curse_Interruption_D}로 디버프 축적.",
+        "zh": "提供{B/HEAVY_STRIKE}和通过{D/IG_Buff_Dot_Curse_Interruption_D}叠加减益。"
+      }
+    }
+  ],
+  "phase2": [
+    {
+      "names": ["Akari"],
+      "reason": {
+        "en": "Offers {D/BT_SEALED} and {D/BT_EXTEND_DEBUFF}.",
+        "jp": "{D/BT_SEALED}と{D/BT_EXTEND_DEBUFF}を提供。",
+        "kr": "{D/BT_SEALED}와 {D/BT_EXTEND_DEBUFF}를 제공.",
+        "zh": "提供{D/BT_SEALED}和{D/BT_EXTEND_DEBUFF}。"
+      }
+    },
+    {
+      "names": ["Notia"],
+      "reason": {
+        "en": "{D/BT_DOT_POISON} limits the boss's turn count.",
+        "jp": "{D/BT_DOT_POISON}でボスのターン数を制限。",
+        "kr": "{D/BT_DOT_POISON}으로 보스의 턴 수를 제한.",
+        "zh": "{D/BT_DOT_POISON}限制首领的行动次数。"
+      }
+    },
+    {
+      "names": ["Tamara"],
+      "reason": {
+        "en": "Provides {B/BT_CALL_BACKUP}, {B/BT_STAT|ST_CRITICAL_RATE}, and {D/BT_MARKING}.",
+        "jp": "{B/BT_CALL_BACKUP}、{B/BT_STAT|ST_CRITICAL_RATE}、{D/BT_MARKING}を提供。",
+        "kr": "{B/BT_CALL_BACKUP}, {B/BT_STAT|ST_CRITICAL_RATE}, {D/BT_MARKING}를 제공.",
+        "zh": "提供{B/BT_CALL_BACKUP}、{B/BT_STAT|ST_CRITICAL_RATE}和{D/BT_MARKING}。"
+      }
+    },
+    {
+      "names": ["Luna"],
+      "reason": {
+        "en": "Offers {B/BT_CALL_BACKUP} and {D/BT_SEALED}.",
+        "jp": "{B/BT_CALL_BACKUP}と{D/BT_SEALED}を提供。",
+        "kr": "{B/BT_CALL_BACKUP}와 {D/BT_SEALED}를 제공.",
+        "zh": "提供{B/BT_CALL_BACKUP}和{D/BT_SEALED}。"
+      }
+    },
+    {
+      "names": ["Ryu Lion"],
+      "reason": {
+        "en": "Provides {D/BT_FIXED_DAMAGE} and {B/BT_STAT|ST_SPEED}.",
+        "jp": "{D/BT_FIXED_DAMAGE}と{B/BT_STAT|ST_SPEED}を提供。",
+        "kr": "{D/BT_FIXED_DAMAGE}와 {B/BT_STAT|ST_SPEED}를 제공.",
+        "zh": "提供{D/BT_FIXED_DAMAGE}和{B/BT_STAT|ST_SPEED}。"
+      }
+    },
+    {
+      "names": ["Omega Nadja"],
+      "reason": {
+        "en": "Provides {B/BT_SHIELD_BASED_CASTER} for survival. Caution: breaking with her prevents K from dealing damage.",
+        "jp": "生存のための{B/BT_SHIELD_BASED_CASTER}を提供。注意：彼女でブレイクするとKがダメージを与えられなくなります。",
+        "kr": "생존을 위한 {B/BT_SHIELD_BASED_CASTER}를 제공. 주의: 그녀로 브레이크하면 K가 피해를 줄 수 없습니다.",
+        "zh": "提供{B/BT_SHIELD_BASED_CASTER}保障生存。注意：用她击破会导致K无法造成伤害。"
+      }
+    },
+    {
+      "names": ["Demiurge Vlada"],
+      "reason": {
+        "en": "Applies {D/BT_REMOVE_BUFF} and reduces boss priority gain at transcend. Caution: breaking with her prevents K from dealing damage.",
+        "jp": "{D/BT_REMOVE_BUFF}を付与し、超越でボスの行動ゲージ上昇を減少。注意：彼女でブレイクするとKがダメージを与えられなくなります。",
+        "kr": "{D/BT_REMOVE_BUFF}를 적용하고 초월로 보스의 행동 게이지 증가를 감소. 주의: 그녀로 브레이크하면 K가 피해를 줄 수 없습니다.",
+        "zh": "施加{D/BT_REMOVE_BUFF}并通过突破减少首领行动值增加。注意：用她击破会导致K无法造成伤害。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "strategy": [
+    {
+      "en": "You want your teams to have penetration as much as possible. Venion's defense is high (3500 phase 1 and 5000 phase 2).",
+      "jp": "チームにはできるだけ貫通力を持たせましょう。ベニオンの防御力は高いです（フェーズ1で3500、フェーズ2で5000）。",
+      "kr": "팀에 가능한 한 많은 관통력을 가지세요. 베니온의 방어력이 높습니다 (1페이즈 3500, 2페이즈 5000).",
+      "zh": "尽可能让队伍拥有穿透力。贝尼翁的防御很高（第1阶段3500，第2阶段5000）。"
+    },
+    {
+      "en": "Having {AS/Counterattack} set on support is really helpful since they'll activate their respective bonus gain from Venion.",
+      "jp": "サポートに{AS/Counterattack}セットを付けると、ベニオンからの各ボーナスが発動するため非常に有効です。",
+      "kr": "서포터에 {AS/Counterattack} 세트를 장착하면 베니온의 각 보너스가 발동되어 매우 유용합니다.",
+      "zh": "给辅助装备{AS/Counterattack}套装非常有用，因为可以激活贝尼翁的相应奖励。"
+    },
+    {
+      "en": "Keep an eye on Venion's buff and swap team if needed to avoid instant death or an 80% push since it'll make you lose one turn.",
+      "jp": "ベニオンのバフに注意し、即死や80%プッシュを避けるためにチームを入れ替えましょう（1ターン失うことになります）。",
+      "kr": "베니온의 버프를 주시하고, 즉사나 80% 푸시를 피하기 위해 필요 시 팀을 교체하세요 (1턴을 잃게 됩니다).",
+      "zh": "注意贝尼翁的增益状态，必要时切换队伍以避免即死或80%推进（会导致失去一回合）。"
+    },
+    {
+      "en": "Having {D/BT_FIXED_DAMAGE} in your skill chain is okay as long as it results in more total damage.",
+      "jp": "スキルチェーンに{D/BT_FIXED_DAMAGE}を入れるのは、総ダメージが増える限りは問題ありません。",
+      "kr": "스킬 체인에 {D/BT_FIXED_DAMAGE}를 넣는 것은 총 데미지가 더 높아지는 한 괜찮습니다.",
+      "zh": "在技能链中加入{D/BT_FIXED_DAMAGE}是可以的，只要总伤害更高即可。"
+    },
+    {
+      "en": "Having multiple {C/Healer} in your second team is also a viable option to deal more weakness gauge damage.",
+      "jp": "第2チームに複数の{C/Healer}を入れるのも、WGダメージを増やす有効な選択肢です。",
+      "kr": "두 번째 팀에 {C/Healer}를 여러 명 넣는 것도 WG 피해를 더 주기 위한 좋은 선택입니다.",
+      "zh": "在第二队中放入多个{C/Healer}也是增加弱点条伤害的可行选择。"
+    }
+  ],
+  "phase1": [
+    {
+      "en": "Phase 1 boss takes increased damage from {E/Fire}, {E/Water}, {E/Earth} enemies and they always have elemental advantage.",
+      "jp": "フェーズ1ボスは{E/Fire}、{E/Water}、{E/Earth}の敵から増加ダメージを受け、常に属性有利です。",
+      "kr": "1페이즈 보스는 {E/Fire}, {E/Water}, {E/Earth} 적에게 증가 피해를 받으며 항상 속성 유리합니다.",
+      "zh": "第1阶段首领受到{E/Fire}、{E/Water}、{E/Earth}敌人的伤害增加，且始终具有属性优势。"
+    },
+    {
+      "en": "If granted {B/UNIQUE_VENION_A}, the boss pushes {E/Fire}/{E/Water}/{E/Earth} enemies' priority by 80%.",
+      "jp": "{B/UNIQUE_VENION_A}が付与された場合、ボスは{E/Fire}/{E/Water}/{E/Earth}の敵の行動ゲージを80%プッシュします。",
+      "kr": "{B/UNIQUE_VENION_A}가 부여되면 보스가 {E/Fire}/{E/Water}/{E/Earth} 적의 행동 게이지를 80% 푸시합니다.",
+      "zh": "如果获得{B/UNIQUE_VENION_A}，首领将{E/Fire}/{E/Water}/{E/Earth}敌人的行动值推进80%。"
+    },
+    {
+      "en": "If granted {B/UNIQUE_VENION_B}, the boss pushes {E/Light}/{E/Dark} enemies' priority by 80%.",
+      "jp": "{B/UNIQUE_VENION_B}が付与された場合、ボスは{E/Light}/{E/Dark}の敵の行動ゲージを80%プッシュします。",
+      "kr": "{B/UNIQUE_VENION_B}가 부여되면 보스가 {E/Light}/{E/Dark} 적의 행동 게이지를 80% 푸시합니다.",
+      "zh": "如果获得{B/UNIQUE_VENION_B}，首领将{E/Light}/{E/Dark}敌人的行动值推进80%。"
+    }
+  ],
+  "phase2": [
+    {
+      "en": "Phase 2 boss takes increased damage from {E/Light}, {E/Dark} enemies and from AoE attacks.",
+      "jp": "フェーズ2ボスは{E/Light}、{E/Dark}の敵とAoE攻撃から増加ダメージを受けます。",
+      "kr": "2페이즈 보스는 {E/Light}, {E/Dark} 적과 광역 공격에 증가 피해를 받습니다.",
+      "zh": "第2阶段首领受到{E/Light}、{E/Dark}敌人和群攻的伤害增加。"
+    },
+    {
+      "en": "If granted {B/UNIQUE_VENION_E}, the boss inflicts instant death on {E/Fire}/{E/Water}/{E/Earth} enemies.",
+      "jp": "{B/UNIQUE_VENION_E}が付与された場合、ボスは{E/Fire}/{E/Water}/{E/Earth}の敵に即死を与えます。",
+      "kr": "{B/UNIQUE_VENION_E}가 부여되면 보스가 {E/Fire}/{E/Water}/{E/Earth} 적에게 즉사를 가합니다.",
+      "zh": "如果获得{B/UNIQUE_VENION_E}，首领对{E/Fire}/{E/Water}/{E/Earth}敌人施加即死。"
+    },
+    {
+      "en": "If granted {B/UNIQUE_VENION_D}, the boss inflicts instant death on {E/Light}/{E/Dark} enemies.",
+      "jp": "{B/UNIQUE_VENION_D}が付与された場合、ボスは{E/Light}/{E/Dark}の敵に即死を与えます。",
+      "kr": "{B/UNIQUE_VENION_D}가 부여되면 보스가 {E/Light}/{E/Dark} 적에게 즉사를 가합니다.",
+      "zh": "如果获得{B/UNIQUE_VENION_D}，首领对{E/Light}/{E/Dark}敌人施加即死。"
+    },
+    {
+      "en": "At the start of the turn, the boss removes buffs and sets HP to 1 for all enemies with 30% or less HP.",
+      "jp": "ターン開始時、ボスはHP30%以下の全敵のバフを除去し、HPを1にします。",
+      "kr": "턴 시작 시, 보스가 HP 30% 이하의 모든 적의 버프를 제거하고 HP를 1로 설정합니다.",
+      "zh": "回合开始时，首领移除所有HP在30%以下敌人的增益并将HP设为1。"
+    }
+  ]
+}

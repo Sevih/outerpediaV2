@@ -1,0 +1,62 @@
+{
+  "strategy": [
+    {
+      "en": "Your first team should push into Phase 2 as quickly as possible. Having a {C/Defender} allows you to break the boss efficiently.",
+      "jp": "最初のチームはできるだけ早くフェーズ2に進めるべきです。{C/Defender}がいるとボスを効率的にブレイクできます。",
+      "kr": "첫 번째 팀은 최대한 빠르게 페이즈 2로 진입해야 합니다. {C/Defender}가 있으면 보스를 효율적으로 브레이크할 수 있습니다.",
+      "zh": "你的第一个队伍应该尽快推进到第二阶段。携带{C/Defender}可以高效击破首领。"
+    },
+    {
+      "en": "Run all characters except {C/Healer}, {C/Defender}, and {C/Striker} with the lowest possible {S/CHC} to avoid triggering her counter mechanics.",
+      "jp": "{C/Healer}、{C/Defender}、{C/Striker}以外のキャラは{S/CHC}を最低限にして、カウンターメカニクスの発動を避けてください。",
+      "kr": "{C/Healer}, {C/Defender}, {C/Striker}를 제외한 모든 캐릭터는 {S/CHC}를 최소한으로 설정하여 카운터 메커니즘 발동을 피하세요.",
+      "zh": "除{C/Healer}、{C/Defender}和{C/Striker}外，所有角色应尽量降低{S/CHC}以避免触发她的反击机制。"
+    },
+    {
+      "en": "Apply {D/BT_SEALED} immediately when she transitions to Phase 2 to prevent her from gaining {B/BT_INVINCIBLE}.",
+      "jp": "フェーズ2移行時にすぐ{D/BT_SEALED}を付与し、{B/BT_INVINCIBLE}の獲得を防いでください。",
+      "kr": "페이즈 2 전환 시 즉시 {D/BT_SEALED}를 적용하여 {B/BT_INVINCIBLE} 획득을 방지하세요.",
+      "zh": "在她转换到第二阶段时立即施加{D/BT_SEALED}，防止她获得{B/BT_INVINCIBLE}。"
+    }
+  ],
+  "phase1": [
+    {
+      "en": "Boss gains {B/BT_IMMUNE} at the start of battle and at each turn. Non-{E/Light}/{E/Earth} heroes have their {S/EFF} completely reduced.",
+      "jp": "ボスは戦闘開始時と毎ターン{B/BT_IMMUNE}を獲得します。{E/Light}/{E/Earth}以外のヒーローは{S/EFF}が完全に減少します。",
+      "kr": "보스는 전투 시작 시와 매 턴마다 {B/BT_IMMUNE}를 획득합니다. {E/Light}/{E/Earth} 이외의 영웅은 {S/EFF}가 완전히 감소합니다.",
+      "zh": "首领在战斗开始和每回合获得{B/BT_IMMUNE}。非{E/Light}/{E/Earth}英雄的{S/EFF}被完全降低。"
+    },
+    {
+      "en": "{D/BT_FIXED_DAMAGE} other than skill chain and damage from {E/Dark} heroes does not exceed 1,000. {D/BT_DOT_CURSE} does not exceed 10,000.",
+      "jp": "スキルチェーンと{E/Dark}ヒーロー以外の{D/BT_FIXED_DAMAGE}は1,000を超えません。{D/BT_DOT_CURSE}は10,000を超えません。",
+      "kr": "스킬 체인과 {E/Dark} 영웅 이외의 {D/BT_FIXED_DAMAGE}는 1,000을 초과하지 않습니다. {D/BT_DOT_CURSE}는 10,000을 초과하지 않습니다.",
+      "zh": "除技能链和{E/Dark}英雄外的{D/BT_FIXED_DAMAGE}不超过1,000。{D/BT_DOT_CURSE}不超过10,000。"
+    },
+    {
+      "en": "Greatly reduces damage taken and nullifies weakness gauge damage from enemies with 100 or more Chain Points.",
+      "jp": "100以上のチェーンポイントを持つ敵からのダメージを大幅に軽減し、WGダメージを無効化します。",
+      "kr": "100 이상의 체인 포인트를 가진 적의 피해를 대폭 감소시키고 WG 피해를 무효화합니다.",
+      "zh": "大幅减少来自100以上连锁点数敌人的伤害，并使弱点槽伤害无效。"
+    }
+  ],
+  "phase2": [
+    {
+      "en": "Boss gains {B/BT_INVINCIBLE} for 3 turns on S2 and for 1 turn when hit critically. After each action, reduces debuff duration by 2 turns.",
+      "jp": "ボスはS2で3ターン{B/BT_INVINCIBLE}を獲得し、クリティカルヒット時に1ターン獲得します。各行動後、デバフ持続を2ターン短縮します。",
+      "kr": "보스는 S2로 3턴 {B/BT_INVINCIBLE}를 획득하고, 치명타 피격 시 1턴 획득합니다. 각 행동 후 디버프 지속 시간을 2턴 감소시킵니다.",
+      "zh": "首领S2获得3回合{B/BT_INVINCIBLE}，被暴击时获得1回合。每次行动后减少减益持续时间2回合。"
+    },
+    {
+      "en": "S3 applies {D/BT_REMOVE_BUFF} and {D/BT_SEALED_RESURRECTION}, and reduces HP of {C/Striker}, {C/Healer}, and {C/Mage} by 99% before attacking. This skill is immune to {D/BT_COOL_CHARGE}.",
+      "jp": "S3は{D/BT_REMOVE_BUFF}と{D/BT_SEALED_RESURRECTION}を付与し、攻撃前に{C/Striker}、{C/Healer}、{C/Mage}のHPを99%減少させます。このスキルは{D/BT_COOL_CHARGE}の影響を受けません。",
+      "kr": "S3은 {D/BT_REMOVE_BUFF}와 {D/BT_SEALED_RESURRECTION}을 적용하고, 공격 전에 {C/Striker}, {C/Healer}, {C/Mage}의 HP를 99% 감소시킵니다. 이 스킬은 {D/BT_COOL_CHARGE}의 영향을 받지 않습니다.",
+      "zh": "S3施加{D/BT_REMOVE_BUFF}和{D/BT_SEALED_RESURRECTION}，攻击前将{C/Striker}、{C/Healer}和{C/Mage}的HP降低99%。此技能免疫{D/BT_COOL_CHARGE}。"
+    },
+    {
+      "en": "Having a {C/Defender} prevents the boss from reducing debuff duration.",
+      "jp": "{C/Defender}がいるとボスのデバフ持続短縮を防止できます。",
+      "kr": "{C/Defender}가 있으면 보스의 디버프 지속 시간 감소를 방지합니다.",
+      "zh": "携带{C/Defender}可以阻止首领减少减益持续时间。"
+    }
+  ]
+}

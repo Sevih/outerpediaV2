@@ -1,0 +1,74 @@
+{
+  "strategy": [
+    {
+      "en": "The boss's main characteristic is its {B/BT_ACTION_GAUGE}. Fast units are recommended.",
+      "jp": "ボスの主な特徴は{B/BT_ACTION_GAUGE}です。速いユニットが推奨されます。",
+      "kr": "보스의 주요 특징은 {B/BT_ACTION_GAUGE}입니다. 빠른 유닛이 권장됩니다.",
+      "zh": "首领的主要特点是{B/BT_ACTION_GAUGE}。推荐使用速度快的单位。"
+    },
+    {
+      "en": "Anything that can limit priority gain is useful: {D/BT_DOT_POISON}, {D/BT_DOT_POISON2}, the {I-W/Sacreed Edge} weapon, or {P/Demiurge Vlada} (20% reduction at 4 stars, 50% at 5 stars).",
+      "jp": "行動ゲージ上昇を制限できるものが有効です：{D/BT_DOT_POISON}、{D/BT_DOT_POISON2}、{I-W/Sacreed Edge}武器、または{P/Demiurge Vlada}（4凸で20%減少、5凸で50%減少）。",
+      "kr": "행동 게이지 증가를 제한할 수 있는 것이 유용합니다: {D/BT_DOT_POISON}, {D/BT_DOT_POISON2}, {I-W/Sacreed Edge} 무기, 또는 {P/Demiurge Vlada} (4성에서 20% 감소, 5성에서 50% 감소).",
+      "zh": "任何能限制行动值增加的效果都很有用：{D/BT_DOT_POISON}、{D/BT_DOT_POISON2}、{I-W/Sacreed Edge}武器，或{P/Demiurge Vlada}（4星时减少20%，5星时减少50%）。"
+    },
+    {
+      "en": "Like most World Bosses, the best strategy is to break the boss as often as possible. Key focus areas are CP generation and Weakness Gauge damage.",
+      "jp": "他のワールドボスと同様、ボスをできるだけ頻繁にブレイクさせることが最良の戦略です。CP生成とWGダメージに集中しましょう。",
+      "kr": "대부분의 월드 보스와 마찬가지로, 가능한 자주 보스를 브레이크하는 것이 최선의 전략입니다. CP 생성과 WG 피해에 집중하세요.",
+      "zh": "与大多数世界首领一样，最佳策略是尽可能频繁地击破首领。重点关注CP生成和WG伤害。"
+    }
+  ],
+  "phase1": [
+    {
+      "en": "Only takes Weakness Gauge damage from {B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}, and {B/SYS_BUFF_REVENGE} attacks. Build your team around these mechanics.",
+      "jp": "{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}と{B/SYS_BUFF_REVENGE}攻撃からのみWGダメージを受けます。これらのメカニクスを中心にチームを構築しましょう。",
+      "kr": "{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}와 {B/SYS_BUFF_REVENGE} 공격에서만 WG 피해를 받습니다. 이러한 메커니즘을 중심으로 팀을 구성하세요.",
+      "zh": "只有{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}和{B/SYS_BUFF_REVENGE}攻击才能造成WG伤害。围绕这些机制构建你的队伍。"
+    },
+    {
+      "en": "Avoid {C/Ranger} units as they are permanently {D/BT_SILENCE_IR}.",
+      "jp": "{C/Ranger}ユニットは永続的に{D/BT_SILENCE_IR}状態になるため避けてください。",
+      "kr": "{C/Ranger} 유닛은 영구적으로 {D/BT_SILENCE_IR} 상태가 되므로 피하세요.",
+      "zh": "避免使用{C/Ranger}单位，因为它们会永久处于{D/BT_SILENCE_IR}状态。"
+    }
+  ],
+  "phase2": [
+    {
+      "en": "Fast units are essential. Bring {D/BT_DOT_POISON} or {D/BT_DOT_POISON2} to limit boss priority gain.",
+      "jp": "速いユニットが必須です。{D/BT_DOT_POISON}または{D/BT_DOT_POISON2}でボスの行動ゲージ上昇を制限しましょう。",
+      "kr": "빠른 유닛이 필수입니다. {D/BT_DOT_POISON} 또는 {D/BT_DOT_POISON2}로 보스의 행동 게이지 증가를 제한하세요.",
+      "zh": "速度快的单位至关重要。使用{D/BT_DOT_POISON}或{D/BT_DOT_POISON2}来限制首领的行动值增加。"
+    },
+    {
+      "en": "When the boss steals buffs, it increases their effect by 100% and converts them to debuffs. For example, a stolen +30% {B/BT_STAT|ST_SPEED} becomes a -60% {D/BT_STAT|ST_SPEED}.",
+      "jp": "ボスがバフを奪うと、効果が100%増加してデバフに変換されます。例えば、奪われた+30%の{B/BT_STAT|ST_SPEED}は-60%の{D/BT_STAT|ST_SPEED}になります。",
+      "kr": "보스가 버프를 훔치면 효과가 100% 증가하고 디버프로 변환됩니다. 예를 들어, 훔친 +30% {B/BT_STAT|ST_SPEED}는 -60% {D/BT_STAT|ST_SPEED}가 됩니다.",
+      "zh": "当首领偷取增益时，效果会增加100%并转化为减益。例如，被偷取的+30% {B/BT_STAT|ST_SPEED}会变成-60% {D/BT_STAT|ST_SPEED}。"
+    },
+    {
+      "en": "Bring at least one {E/Light} hero. {P/Gnosis Beth} is a good option for her priority increase mechanics.",
+      "jp": "{E/Light}ヒーローを少なくとも1人入れましょう。{P/Gnosis Beth}は行動ゲージ上昇メカニクスを持つ良い選択肢です。",
+      "kr": "{E/Light} 영웅을 최소 1명 포함하세요. {P/Gnosis Beth}는 행동 게이지 증가 메커니즘으로 좋은 선택입니다.",
+      "zh": "至少带一名{E/Light}英雄。{P/Gnosis Beth}是个不错的选择，因为她有行动值增加机制。"
+    },
+    {
+      "en": "Keep buffs active on all your units to prevent the boss restoring its weakness gauge.",
+      "jp": "ボスのWG回復を防ぐため、全ユニットにバフを維持してください。",
+      "kr": "보스의 WG 회복을 방지하기 위해 모든 유닛에 버프를 유지하세요.",
+      "zh": "保持所有单位的增益效果，以防止首领恢复其WG。"
+    },
+    {
+      "en": "Place a {C/Defender} in the front slot to reduce the number of {D/BT_DOT_CURSE} applied to your team.",
+      "jp": "チームへの{D/BT_DOT_CURSE}付与数を減らすため、{C/Defender}を前列に配置しましょう。",
+      "kr": "팀에 적용되는 {D/BT_DOT_CURSE} 수를 줄이기 위해 {C/Defender}를 전열에 배치하세요.",
+      "zh": "将{C/Defender}放在前排以减少对队伍施加的{D/BT_DOT_CURSE}数量。"
+    },
+    {
+      "en": "Avoid {C/Striker} and {C/Mage} units as they are permanently {D/BT_SILENCE_IR}.",
+      "jp": "{C/Striker}と{C/Mage}ユニットは永続的に{D/BT_SILENCE_IR}状態になるため避けてください。",
+      "kr": "{C/Striker}와 {C/Mage} 유닛은 영구적으로 {D/BT_SILENCE_IR} 상태가 되므로 피하세요.",
+      "zh": "避免使用{C/Striker}和{C/Mage}单位，因为它们会永久处于{D/BT_SILENCE_IR}状态。"
+    }
+  ]
+}

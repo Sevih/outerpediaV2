@@ -1,0 +1,46 @@
+{
+  "tactical": [
+    {
+      "en": "Immune to {D/BT_SEALED}. Use {D/BT_STEAL_BUFF}, {D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}, or {D/BT_REMOVE_BUFF} instead.",
+      "jp": "{D/BT_SEALED}無効。代わりに{D/BT_STEAL_BUFF}、{D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}、または{D/BT_REMOVE_BUFF}を使用してください。",
+      "kr": "{D/BT_SEALED} 면역. 대신 {D/BT_STEAL_BUFF}, {D/BT_STATBUFF_CONVERT_TO_STATDEBUFF} 또는 {D/BT_REMOVE_BUFF}를 사용하세요.",
+      "zh": "免疫{D/BT_SEALED}。请使用{D/BT_STEAL_BUFF}、{D/BT_STATBUFF_CONVERT_TO_STATDEBUFF}或{D/BT_REMOVE_BUFF}代替。"
+    },
+    {
+      "en": "If the boss has any buffs when taking its turn, it will {D/BT_STUN} your team and gain {B/BT_INVINCIBLE}.",
+      "jp": "ボスがバフを持った状態でターンを迎えると、チームに{D/BT_STUN}を付与し{B/BT_INVINCIBLE}を獲得します。",
+      "kr": "보스가 버프를 가진 상태에서 턴을 맞이하면 팀에 {D/BT_STUN}을 부여하고 {B/BT_INVINCIBLE}을 획득합니다.",
+      "zh": "BOSS带有增益时迎来回合，会对队伍施加{D/BT_STUN}并获得{B/BT_INVINCIBLE}。"
+    },
+    {
+      "en": "Use a fast unit to strip the boss's initial {B/BT_STAT|ST_SPEED} buff at the start of the fight.",
+      "jp": "戦闘開始時にボスの{B/BT_STAT|ST_SPEED}バフを素早いユニットで除去しましょう。",
+      "kr": "전투 시작 시 빠른 유닛으로 보스의 초기 {B/BT_STAT|ST_SPEED} 버프를 제거하세요.",
+      "zh": "战斗开始时用快速角色移除BOSS的初始{B/BT_STAT|ST_SPEED}增益。"
+    },
+    {
+      "en": "{C/Healer} units can't be stunned until Stage 11.",
+      "jp": "ステージ11まで{C/Healer}ユニットはスタンされません。",
+      "kr": "스테이지 11까지 {C/Healer} 유닛은 스턴되지 않습니다.",
+      "zh": "第11阶段之前{C/Healer}角色不会被眩晕。"
+    },
+    {
+      "en": "Healing is optional. Focus on lockdown and bursting the boss quickly before it gains buffs.",
+      "jp": "回復は任意です。ボスがバフを獲得する前にロックダウンとバーストに集中しましょう。",
+      "kr": "힐은 선택 사항입니다. 보스가 버프를 획득하기 전에 락다운과 버스트에 집중하세요.",
+      "zh": "治疗是可选的。在BOSS获得增益之前专注于控制和爆发。"
+    },
+    {
+      "en": "Stage 12: Boss heals when these effects are triggered: {B/SYS_BUFF_REVENGE}, {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}, and {B/BT_STAT|ST_COUNTER_RATE}.",
+      "jp": "ステージ12：{B/SYS_BUFF_REVENGE}、{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}、{B/BT_STAT|ST_COUNTER_RATE}が発動するとボスが回復します。",
+      "kr": "스테이지 12: {B/SYS_BUFF_REVENGE}, {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}, {B/BT_STAT|ST_COUNTER_RATE}가 발동되면 보스가 회복합니다.",
+      "zh": "第12阶段：当{B/SYS_BUFF_REVENGE}、{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}和{B/BT_STAT|ST_COUNTER_RATE}被触发时，BOSS会回复。"
+    },
+    {
+      "en": "Stage 13: Boss negates {B/SYS_BUFF_REVENGE}, {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}, and {B/BT_STAT|ST_COUNTER_RATE}.",
+      "jp": "ステージ13：ボスは{B/SYS_BUFF_REVENGE}、{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}、{B/BT_STAT|ST_COUNTER_RATE}を無効化します。",
+      "kr": "스테이지 13: 보스가 {B/SYS_BUFF_REVENGE}, {B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}, {B/BT_STAT|ST_COUNTER_RATE}를 무효화합니다.",
+      "zh": "第13阶段：BOSS无效化{B/SYS_BUFF_REVENGE}、{B/BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK}和{B/BT_STAT|ST_COUNTER_RATE}。"
+    }
+  ]
+}
