@@ -1,3 +1,4 @@
+import { createElement } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Lang } from '@/lib/i18n/config';
@@ -59,7 +60,7 @@ export default async function GuideCategoryPage({ params }: Props) {
   const title = t[titleKey] ?? category;
   const description = t[descKey] ?? '';
 
-  const CategoryView = getCategoryView(category);
+  const categoryView = getCategoryView(category);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
@@ -77,8 +78,8 @@ export default async function GuideCategoryPage({ params }: Props) {
 
       {guides.length === 0 ? (
         <p className="mt-8 text-zinc-500">{t['common.coming_soon']}</p>
-      ) : CategoryView ? (
-        <CategoryView guides={guides} lang={lang} t={t} />
+      ) : categoryView ? (
+        createElement(categoryView, { guides, lang, t })
       ) : (
         <GuideListClient
           guides={guides}

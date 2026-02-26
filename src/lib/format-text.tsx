@@ -144,3 +144,28 @@ export function getRarityBgPath(rarity: string): string {
   };
   return `/images/ui/bg/TI_Slot_${map[rarity.toLowerCase()] ?? 'Normal'}.webp`;
 }
+
+/**
+ * Render text with \n as <br /> elements.
+ * Returns a ReactNode suitable for inline rendering.
+ */
+export function renderWithLineBreaks(text: string): React.ReactNode {
+  const parts = text.split('\n');
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => (
+    <span key={i}>
+      {part}
+      {i < parts.length - 1 && <br />}
+    </span>
+  ));
+}
+
+/**
+ * Strip <color=#HEX>text</color> tags, keeping only the inner text.
+ */
+export function stripColorTags(input: string): string {
+  if (!input) return input;
+  return input
+    .replace(/<color=#[0-9a-fA-F]{6,8}>(.*?)<\/color>/g, '$1')
+    .replace(/<color=.*?>(.*?)<\/color>/g, '$1');
+}

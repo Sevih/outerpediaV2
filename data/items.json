@@ -690,6 +690,20 @@
     "subtype": "gem"
   },
   {
+    "name": "Gems",
+    "name_jp": "ジェム",
+    "name_kr": "보석",
+    "name_zh": "宝石",
+    "rarity": "legendary",
+    "description": "Various gems.",
+    "description_jp": "各種ジェム",
+    "description_kr": "각종 보석",
+    "description_zh": "各种宝石",
+    "icon": "TI_GEM_dissolve_Random_3",
+    "type": "gem",
+    "subtype": "gem"
+  },
+  {
     "id": "15047",
     "name": "Stage 6 Defense Gem",
     "name_jp": "防御ジェム【ランク6】",
@@ -12411,10 +12425,10 @@
     "name_kr": "행동력",
     "name_zh": "行动力",
     "rarity": "normal",
-    "description": "",
-    "description_jp": "",
-    "description_kr": "",
-    "description_zh": "",
+    "description": "The energy needed for activities. Used in various battle content.",
+    "description_jp": "活動に必要なエネルギー。戦闘が行われるすべてのコンテンツに使用される。",
+    "description_kr": "활동에 필요한 에너지를 표현한 단위. 전투가 필요한 여러 컨텐츠에 활용됩니다.",
+    "description_zh": "活动所需能量的单位。\\n可用于各种需要战斗的地方。",
     "icon": "TI_Item_Stamina",
     "type": "currency",
     "subtype": "stamina"
@@ -12910,7 +12924,7 @@
     "description_jp": "冒険者ライセンスのウィークリー討伐ミッションをクリアすると獲得できるポイント。\\n\\nライセンスショップで様々なアイテムと交換できる。",
     "description_kr": "모험 라이선스 주간 토벌 미션을 통해 입수할 수 있는 포인트입니다.\\n\\n라이선스 상점을 통해 다양한 상품을 구매하실 수 있습니다.",
     "description_zh": "通过冒险许可证每周讨伐任务获得的点数。\\n\\n可在许可证商店购买各种商品。",
-    "icon": "",
+    "icon": "TI_Licence",
     "type": "currency",
     "subtype": "license"
   },
