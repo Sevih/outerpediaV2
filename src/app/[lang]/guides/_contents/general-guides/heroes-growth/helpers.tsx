@@ -287,17 +287,11 @@ export const LABELS = {
         kr: "은 전용 장비나 탈리스만에 장착할 수 있는 특별한 보석입니다. 주요 목적은 영웅의 부족한 스탯을 보완하는 것입니다.",
         zh: "是可以镶嵌到专属装备或护符中的特殊珠宝。其主要目的是弥补英雄缺失的属性。"
     },
-    gemsDesc2a: {
-        en: "For example, if a DPS unit is lacking Crit Chance, equipping a",
-        jp: "例えば、DPSユニットがクリティカル率が不足している場合、",
-        kr: "예를 들어, DPS 유닛에 치명타 확률이 부족하다면",
-        zh: "例如，如果DPS角色缺少暴击率，装备"
-    },
-    gemsDesc2b: {
-        en: "can help reach key thresholds. Gem choices should always align with substat priorities and the character's role.",
-        jp: "を装備することで重要な閾値に到達できます。ジェムの選択は常にサブステータスの優先順位とキャラクターの役割に合わせるべきです。",
-        kr: "을 장착하여 핵심 임계값에 도달할 수 있습니다. 보석 선택은 항상 서브스탯 우선순위와 캐릭터의 역할에 맞아야 합니다.",
-        zh: "可以帮助达到关键阈值。宝石选择应始终与副属性优先级和角色定位保持一致。"
+    gemsDesc2: {
+        en: "For example, if a DPS unit is lacking Crit Chance, equipping a {I-I/Stage 6 Critical Hit Gem} can help reach key thresholds. Gem choices should always align with substat priorities and the character's role.",
+        jp: "例えば、DPSユニットがクリティカル率が不足している場合、{I-I/Stage 6 Critical Hit Gem}を装備することで重要な閾値に到達できます。ジェムの選択は常にサブステータスの優先順位とキャラクターの役割に合わせるべきです。",
+        kr: "예를 들어, DPS 유닛에 치명타 확률이 부족하다면 {I-I/Stage 6 Critical Hit Gem}을 장착하여 핵심 임계값에 도달할 수 있습니다. 보석 선택은 항상 서브스탯 우선순위와 캐릭터의 역할에 맞아야 합니다.",
+        zh: "例如，如果DPS角色缺少暴击率，装备{I-I/Stage 6 Critical Hit Gem}可以帮助达到关键阈值。宝石选择应始终与副属性优先级和角色定位保持一致。"
     },
 
     // Gear section

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import Tabs from '@/app/components/ui/Tabs';
 import ItemInline from '@/app/components/inline/ItemInline';
+import parseText from '@/lib/parse-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { LangMap } from '@/types/common';
@@ -107,7 +108,7 @@ export default function HeroGrowthGuide() {
 
                 {tab === 'gems' && <>
                     <p><ItemInline name="Gems" /> {lRec(LABELS.gemsDesc1, lang)}</p>
-                    <p>{lRec(LABELS.gemsDesc2a, lang)} <ItemInline name="Stage 6 Critical Hit Gem" /> {lRec(LABELS.gemsDesc2b, lang)}</p>
+                    <p>{parseText(lRec(LABELS.gemsDesc2, lang))}</p>
                 </>}
 
                 {tab === 'gear' && <GearSection lang={lang} />}
