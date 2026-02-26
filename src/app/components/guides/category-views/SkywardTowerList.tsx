@@ -7,7 +7,7 @@ import { localePath } from '@/lib/navigation';
 
 /* ── Constants ──────────────────────────────────────────── */
 
-const DIFFICULTY_SLUGS = ['normal', 'hard', 'very-hard'];
+const DIFFICULTY_SLUGS = ['normal-tower', 'hard-tower', 'very-hard-tower'];
 
 const ELEMENT_RING_COLORS: Record<string, string> = {
   fire: 'hover:ring-[var(--color-fire)]',
