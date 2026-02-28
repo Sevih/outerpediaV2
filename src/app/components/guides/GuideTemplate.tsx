@@ -2,6 +2,7 @@
 
 import { useCallback, useState, type ReactNode } from 'react';
 import VersionSelector from '@/app/components/ui/VersionSelector';
+import { useI18n } from '@/lib/contexts/I18nContext';
 import parseText from '@/lib/parse-text';
 
 type GuideVersion = {
@@ -41,6 +42,8 @@ export default function GuideTemplate({
     ? versionKeys.map((k) => versions[k].label)
     : [];
 
+  const { t } = useI18n();
+
   const [activeVersion, setActiveVersion] = useState(
     defaultVersion && versionKeys.includes(defaultVersion)
       ? defaultVersion
@@ -51,6 +54,9 @@ export default function GuideTemplate({
     setActiveVersion(key);
     onVersionChange?.(key);
   }, [onVersionChange]);
+
+  const isOlderVersion =
+    versions && versionKeys.length > 1 && activeVersion !== versionKeys[0];
 
   return (
     <article className="space-y-6">
@@ -74,6 +80,15 @@ export default function GuideTemplate({
           onChange={handleVersionChange}
           hashPrefix={hashPrefix}
         />
+      )}
+
+      {isOlderVersion && versions && (
+        <div className="panel-warning px-4 py-3 text-sm text-yellow-200">
+          {t('page.guide.older_version_warning', {
+            currentVersion: versions[activeVersion].label,
+            newestVersion: versions[versionKeys[0]].label,
+          })}
+        </div>
       )}
 
       {versions && activeVersion && versions[activeVersion] ? (

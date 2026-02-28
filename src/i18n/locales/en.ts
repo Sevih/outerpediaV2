@@ -110,6 +110,8 @@ const en = {
   'page.guide.meta_title': '{title} — Outerplane Guide',
   'page.guide.by': 'By {author}',
   'page.guide.updated': 'Updated {date}',
+  'page.guide.older_version_warning':
+    'Note: This is an older strategy ({currentVersion}). While the core mechanics remain similar, we recommend checking the updated {newestVersion} version for the latest strategies and character recommendations.',
 
   // Guide categories
   'guides.category.general-guides': 'General Guides',

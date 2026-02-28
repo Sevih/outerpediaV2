@@ -75,7 +75,7 @@ function CardList({ items, lang, type }: {
           <Link
             key={meta.slug}
             href={localePath(lang, `/guides/${meta.category}/${meta.slug}`)}
-            className="group relative overflow-hidden rounded-lg w-full aspect-27/5
+            className="group relative overflow-hidden rounded-lg w-full max-w-135 mx-auto aspect-27/5
                        ring-1 ring-white/10 hover:ring-yellow-400/50 transition-all"
           >
             <Image

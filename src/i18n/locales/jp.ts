@@ -110,6 +110,8 @@ const jp: Record<TranslationKey, string> = {
   'page.guide.meta_title': '{title} — アウタープレーン 攻略ガイド',
   'page.guide.by': '著者: {author}',
   'page.guide.updated': '{date} 更新',
+  'page.guide.older_version_warning':
+    '注意: これは古い攻略情報です（{currentVersion}）。基本的な仕組みは同じですが、最新の攻略やキャラクター推奨については、{newestVersion}版をご確認ください。',
 
   // Guide categories
   'guides.category.general-guides': '総合ガイド',

@@ -6,7 +6,7 @@ import { localePath } from '@/lib/navigation';
 
 export default function WorldBossList({ guides, lang, t }: CategoryViewProps) {
   const sorted = [...guides].sort((a, b) =>
-    (a.title.en ?? '').localeCompare(b.title.en ?? '')
+    b.last_updated.localeCompare(a.last_updated)
   );
 
   return (

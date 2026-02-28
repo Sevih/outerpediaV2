@@ -110,6 +110,8 @@ const zh: Record<TranslationKey, string> = {
   'page.guide.meta_title': '{title} — 异域战记攻略指南',
   'page.guide.by': '作者: {author}',
   'page.guide.updated': '{date} 更新',
+  'page.guide.older_version_warning':
+    '注意：这是旧版攻略（{currentVersion}）。虽然核心机制相似，但建议查看最新的{newestVersion}版本以获取最新策略和角色推荐。',
 
   // Guide categories
   'guides.category.general-guides': '综合攻略',
