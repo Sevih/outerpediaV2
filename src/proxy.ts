@@ -72,10 +72,11 @@ export function proxy(request: NextRequest) {
   return NextResponse.redirect(url);
 }
 
-/** Check if host is a custom domain (not localhost) */
+/** Check if host is a custom domain (not localhost, not Vercel preview) */
 function isCustomDomain(host: string): boolean {
   const hostname = host.split(':')[0];
-  return hostname.split('.').length >= 2 && hostname !== 'localhost';
+  if (hostname === 'localhost' || hostname.endsWith('.vercel.app')) return false;
+  return hostname.split('.').length >= 2;
 }
 
 /** Extract subdomain from host (e.g., "jp.outerpedia.com" → "jp") */

@@ -6,6 +6,7 @@ import type { Lang } from '@/lib/i18n/config';
 import { useI18n } from '@/lib/contexts/I18nContext';
 
 const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'outerpedia.com';
+const DEV_DOMAIN = 'outerpedia.local';
 
 /** Convert a 2-letter country code (e.g. "gb") to its flag emoji */
 function toFlag(code: string): string {
@@ -23,12 +24,13 @@ export default function LanguageSwitcher() {
     if (target === lang) return;
 
     const host = window.location.hostname;
-    const isSubdomain =
-      host === BASE_DOMAIN || host.endsWith(`.${BASE_DOMAIN}`);
+    const matches = (d: string) => host === d || host.endsWith(`.${d}`);
+    const isSubdomain = matches(BASE_DOMAIN) || matches(DEV_DOMAIN);
 
     if (isSubdomain) {
-      // Production: switch subdomain
+      // Subdomain mode: switch subdomain, keep current base domain
       const { protocol, port, search, hash } = window.location;
+      const currentBase = matches(DEV_DOMAIN) ? DEV_DOMAIN : BASE_DOMAIN;
       const sub = LANGUAGES[target].subdomain;
       const prefix = sub ? `${sub}.` : '';
       const portSuffix = port ? `:${port}` : '';
@@ -38,7 +40,7 @@ export default function LanguageSwitcher() {
         segments[1] && isValidLang(segments[1])
           ? '/' + segments.slice(2).join('/')
           : pathname;
-      window.location.href = `${protocol}//${prefix}${BASE_DOMAIN}${portSuffix}${cleanPath}${search}${hash}`;
+      window.location.href = `${protocol}//${prefix}${currentBase}${portSuffix}${cleanPath}${search}${hash}`;
       return;
     }
 
