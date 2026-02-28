@@ -1,0 +1,145 @@
+{
+  "id": "4086023",
+  "Name": {
+    "en": "Dahlia",
+    "kr": "달리아",
+    "jp": "ダリア",
+    "zh": "达利娅"
+  },
+  "Surname": {
+    "en": "Archdemon of Hubris",
+    "kr": "오만의 마왕",
+    "jp": "傲慢の魔王",
+    "zh": "傲慢魔王"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 80,
+  "icons": "2000068",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO,BT_ACTION_GAUGE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "StatBuffImmune": "ST_DEF,ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Extreme League",
+      "kr": "익스트림 리그",
+      "jp": "エクストリームリーグ",
+      "zh": "极限联赛"
+    },
+    "mode": {
+      "en": "World Boss",
+      "kr": "월드 보스",
+      "jp": "ワールドボス",
+      "zh": "世界首领"
+    },
+    "area_id": {
+      "en": "55300004",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Icicle Lance",
+        "kr": "아이시클 랜스",
+        "jp": "アイシクルランス",
+        "zh": "冰凌枪"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and increases the duration of buffs granted to the caster by <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적을 공격하고 자신이 보유한 강화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、自分の強化効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "zh": "攻击敌人,并使自身附带的强化效果持续时间增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_2000068",
+      "buff":["BT_EXTEND_BUFF"]
+    },
+    {
+      "name": {
+        "en": "Absolute Zero",
+        "kr": "앱솔루트 제로",
+        "jp": "絶対零度",
+        "zh": "绝对零度"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) Upon taking a critical hit, removes all buffs from all enemies, then attacks all enemies. After attacking, inflicts Frozen on all enemies for <color=#28d9ed>5 turn(s)</color>.",
+        "kr": "(발동 효과) 치명 공격으로 피격 시 적 전체의 강화 효과를 모두 해제시킨 후 대상 전체를 공격합니다. 공격 후 적 전체를 <color=#28d9ed>5턴</color> 동안 빙결시킵니다.",
+        "jp": "(発動効果) 会心ダメージでダメージを受けた場合、敵全体の強化効果をすべて解除した後、敵全体にダメージを与える。攻撃後、敵全体に凍結を<color=#28d9ed>5ターン</color>の間付与する。",
+        "zh": "(触发效果)受到暴击时,解除全体敌人的所有强化效果后,攻击全体目标。攻击后,对全体敌人造成冰冻效果,持续<color=#28d9ed>5回合</color>。"
+      },
+      "icon": "Skill_Second_2100068",
+      "debuff":["BT_FREEZE","BT_REMOVE_BUFF"]
+    },
+    {
+      "name": {
+        "en": "Diamond Dust",
+        "kr": "다이아몬드 더스트",
+        "jp": "ダイヤモンドダスト",
+        "zh": "钻石星尘"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Removes all buffs from all enemies, then attacks all enemies. After attacking, inflicts Frozen on all enemies for <color=#28d9ed>5 turn(s)</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "적 전체의 강화 효과를 모두 해제 후 대상 전체를 공격합니다. 공격 후 적 전체를 <color=#28d9ed>5턴</color> 동안 빙결시킵니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "敵全体の強化効果をすべて解除した後、敵全体にダメージを与える。攻撃後、敵全体に凍結を<color=#28d9ed>5ターン</color>の間付与する。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "解除全体敌人的所有强化效果后,攻击全体目标。攻击后,对全体敌人造成冰冻效果,持续<color=#28d9ed>5回合</color>。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "Skill_Ultimate_2000068",
+      "buff":["BT_SEAL_COUNTER"],
+      "debuff":["BT_FREEZE","BT_REMOVE_BUFF"]
+    },
+    {
+      "name": {
+        "en": "Bitter Cold of Winter",
+        "kr": "겨울의 냉기",
+        "jp": "冬の冷気",
+        "zh": "寒冬凛冽"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) At the start of battle and start of the turn, grants <color=#28d9ed>Immunity</color> to Dahlia for <color=#28d9ed>1 turn(s)</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Deals 3 Weakness Gauge damage to the Boss when performing an action\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)",
+        "kr": "(패시브 효과) 달리아는 전투 시작 및 턴 시작 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color>을 획득합니다.\\n\\n적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격력 +30% \\n마법형 : 보스에게 입히는 피해 증가 \\n방어형 : 행동 시 보스에게 WG 3 피해\\n속도형 : 전투 시작 시 속도 증가 +1턴\\n회복형 : 영구 면역 (해제 불가)",
+        "jp": "(パッシブ効果)【ダリア】の戦闘開始時およびターン開始時、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n敵全体に【絶望に立ち向かう勇気】を付与する。自分の戦闘タイプに応じて<color=#28d9ed>特別な効果</color>が付与される。\\n\\n攻撃型:攻撃力+30%\\n魔法型:ボスに与えるダメージUP\\n防御型:行動時ボスに3のWGダメージ\\nスピード型:戦闘開始時スピードUP+1ターン\\n回復型:免疫を永続的に付与(解除不可)",
+        "zh": "(被动效果) 达利娅在战斗开始和回合开始时,获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n敌军获得面对绝境的勇气。根据自身职业获得<color=#28d9ed>特别效果</color>。\\n\\n攻击型:攻击力+30%\\n魔法型:对首领伤害提升\\n防御型:行动时对首领造成3WG伤害\\n速度型:战斗开始时速度提升+1回合\\n恢复型:永久免疫(无法解除)"
+      },
+      "icon": "MT_Passive_1_Water",
+      "buff":["BT_IMMUNE","UNIQUE_DAHLIA_A"]
+    },
+    {
+      "name": {
+        "en": "Hubris",
+        "kr": "오만한 태도",
+        "jp": "傲慢な態度",
+        "zh": "傲慢姿态"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect) Damage taken increases proportional to the number of debuffs inflicted on Dahlia.\\nFixed damage other than Skill Chains and damage from Dark enemies does not exceed <color=#28d9ed>1000</color>, and Cursed damage does not exceed <color=#28d9ed>10000</color>.\\nDoes not receive Weakness Gauge damage and greatly reduces damage taken from enemies with <color=#28d9ed>100</color> or more Chain Points.\\n\\nCompletely reduces <color=#28d9ed>Effectiveness</color> of non-<color=#28d9ed>Light/Earth</color> enemies and <color=#28d9ed>Critical Hit Chance</color> of Defender, Striker, and Healer enemies.",
+        "kr": "(패시브 효과) 달리아는 보유한 약화 효과 수량에 비례하여 받는 피해가 증가합니다.\\n스킬 체인을 제외한 고정 피해 및 암속성 적에게는 최대 <color=#28d9ed>1000</color>까지만 피해를 받으며, 저주로는 최대 <color=#28d9ed>10000</color>까지 피해를 받습니다.\\nCP를 <color=#28d9ed>100</color>이상 보유한 적에게 WG 피해를 받지 않고, 받는 피해가 크게 감소합니다.\\n\\n<color=#28d9ed>명/지속성</color>이 아닌 적의 <color=#28d9ed>효과 적중</color>이 모두 감소하며, 방어형과 공격형 및 회복형 적의 <color=#28d9ed>치명 확률</color>이 모두 감소합니다.",
+        "jp": "(パッシブ効果)【ダリア】に付与された弱体効果の数が多いほど受けるダメージがUPする。\\nチェーンスキル以外の固定ダメージおよび闇属性の敵からのダメージは<color=#28d9ed>1000</color>まで受ける。呪いからのダメージは<color=#28d9ed>10000</color>まで受ける。\\nCPが<color=#28d9ed>100</color>以上ある敵からWGダメージを受けず、受けるダメージが大幅にDOWNする。\\n\\n<color=#28d9ed>光/地属性</color>以外の敵の<color=#28d9ed>効果命中</color>がすべてDOWNし、防御型/攻撃型/回復型の敵の<color=#28d9ed>会心率</color>がすべてDOWNする。",
+        "zh": "(被动效果)\\n达利娅所受伤害根据持有的弱化效果数量等比提升。\\n除连携技能外的固定伤害及暗属性敌人最多可造成<color=#28d9ed>1000</color>点伤害,诅咒最多可造成<color=#28d9ed>10000</color>点伤害。\\n不会受到来自CP<color=#28d9ed>100</color>以上敌人的WG伤害,并且大幅降低所受伤害。\\n\\n使非<color=#28d9ed>光/土属性</color>敌人的<color=#28d9ed>效果命中</color>全部降低,且使防御型、攻击型和恢复型敌人的<color=#28d9ed>暴击率</color>全部降低。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Quasar Bombardment",
+        "kr": "퀘이사 포격",
+        "jp": "クエーサー砲撃",
+        "zh": "类星体炮击"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086013"
+    }
+  ]
+}

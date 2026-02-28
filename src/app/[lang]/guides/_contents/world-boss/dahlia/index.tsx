@@ -23,12 +23,12 @@ import v07Tips from './versions/07-2025/tips.json';
 import v10Strings from './versions/10-2024/strings.json';
 
 /* ── Boss data (default mode: Extreme) ───────────────── */
-import boss4086011 from '@data/boss/4086011.json';
-import boss4086012 from '@data/boss/4086012.json';
+import boss4086023 from '@data/boss/4086023.json';
+import boss4086024 from '@data/boss/4086024.json';
 
 const preloadedBosses: Record<string, Boss> = {
-  '4086011': boss4086011 as unknown as Boss,
-  '4086012': boss4086012 as unknown as Boss,
+  '4086023': boss4086023 as unknown as Boss,
+  '4086024': boss4086024 as unknown as Boss,
 };
 
 /* ── Typed data ─────────────────────────────────────────── */
@@ -48,17 +48,17 @@ const oct2024 = {
 /* ── Boss config ────────────────────────────────────────── */
 
 const bossConfig = {
-  boss1Key: 'Primordial Sentinel',
-  boss2Key: 'Glorious Sentinel',
+  boss1Key: 'Dahlia',
+  boss2Key: 'Dahlia',
   boss1Ids: {
-    Normal: '4086007',
-    'Very Hard': '4086009',
-    Extreme: '4086011',
+    Normal: '4086019',
+    'Very Hard': '4086021',
+    Extreme: '4086023',
   },
   boss2Ids: {
-    Hard: '4086008',
-    'Very Hard': '4086010',
-    Extreme: '4086012',
+    Hard: '4086020',
+    'Very Hard': '4086022',
+    Extreme: '4086024',
   },
 } as const;
 
@@ -82,8 +82,7 @@ export default function DahliaGuide() {
               <TacticalTips
                 sections={[
                   { title: 'strategy', tips: jul2025.tips.strategy },
-                  { title: 'phase1', tips: jul2025.tips.phase1 },
-                  { title: 'phase2', tips: jul2025.tips.phase2 },
+                  { title: 'phase2', tips: jul2025.tips.phase2 }
                 ]}
               />
               <hr className="my-6 border-neutral-700" />

@@ -67,6 +67,9 @@ function escapeRegex(s: string): string {
 function formatBossDesc(text: string, lang: Lang): React.ReactNode {
   if (!text) return null;
 
+  // Normalize literal \n to real newlines so \b word boundaries work after line breaks
+  const normalized = text.replace(/\\n/g, '\n');
+
   const elemMap = ELEMENT_TOKENS[lang];
   const classMap = CLASS_TOKENS[lang];
 
@@ -78,24 +81,44 @@ function formatBossDesc(text: string, lang: Lang): React.ReactNode {
 
   // EN uses word boundaries; CJK does not
   const wb = lang === 'en' ? '\\b' : '';
+  const tokenOnly = new RegExp(`${wb}(${allTokens})${wb}`, 'g');
   const tokenRegex = new RegExp(
-    `<color=(#[0-9a-fA-F]{6})>(.*?)<\\/color>|\\\\n|\\n|${wb}(${allTokens})${wb}`,
+    `<color=(#[0-9a-fA-F]{6})>(.*?)<\\/color>|\\n|${wb}(${allTokens})${wb}`,
     'g',
   );
 
+  let key = 0;
+
+  // Parse element/class tokens inside a text fragment
+  function parseTokens(fragment: string): React.ReactNode[] {
+    const nodes: React.ReactNode[] = [];
+    let li = 0;
+    let m: RegExpExecArray | null;
+    tokenOnly.lastIndex = 0;
+    while ((m = tokenOnly.exec(fragment)) !== null) {
+      if (m.index > li) nodes.push(fragment.slice(li, m.index));
+      const tok = m[1];
+      if (elemMap[tok]) nodes.push(<ElementInline key={key++} element={elemMap[tok]} />);
+      else if (classMap[tok]) nodes.push(<ClassInline key={key++} name={classMap[tok]} />);
+      li = tokenOnly.lastIndex;
+    }
+    if (li < fragment.length) nodes.push(fragment.slice(li));
+    return nodes;
+  }
+
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
-  let key = 0;
   let match: RegExpExecArray | null;
 
-  while ((match = tokenRegex.exec(text)) !== null) {
+  while ((match = tokenRegex.exec(normalized)) !== null) {
     if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index));
+      parts.push(normalized.slice(lastIndex, match.index));
     }
 
     if (match[1]) {
-      parts.push(<span key={key++} style={{ color: match[1] }}>{match[2]}</span>);
-    } else if (match[0] === '\\n' || match[0] === '\n') {
+      // Color tag — also parse inner content for element/class tokens
+      parts.push(<span key={key++} style={{ color: match[1] }}>{parseTokens(match[2])}</span>);
+    } else if (match[0] === '\n') {
       parts.push(<br key={key++} />);
     } else if (match[3]) {
       const token = match[3];
@@ -109,23 +132,27 @@ function formatBossDesc(text: string, lang: Lang): React.ReactNode {
     lastIndex = tokenRegex.lastIndex;
   }
 
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
+  if (lastIndex < normalized.length) {
+    parts.push(normalized.slice(lastIndex));
   }
 
   return parts;
 }
 
 /** Normalize ST_ short names to full BT_STAT|ST_ format */
-function normalizeName(name: string): string {
-  return name.startsWith('ST_') ? `BT_STAT|${name}` : name;
+function resolveGroup(name: string): string {
+  if (name.startsWith('ST_')) return `BT_STAT|${name}`;
+  const effect = (debuffsData as Effect[]).find((e) => e.name === name)
+    ?? (buffsData as Effect[]).find((e) => e.name === name);
+  return effect?.group ?? name;
 }
 
 function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
   const { t } = useI18n();
-  const items: string[] = [];
-  if (immuneStr) items.push(...immuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
-  if (statImmuneStr) items.push(...statImmuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
+  const raw: string[] = [];
+  if (immuneStr) raw.push(...immuneStr.split(',').map((s) => resolveGroup(s.trim())).filter(Boolean));
+  if (statImmuneStr) raw.push(...statImmuneStr.split(',').map((s) => resolveGroup(s.trim())).filter(Boolean));
+  const items = [...new Set(raw)];
   if (items.length === 0) return null;
 
   return (
@@ -141,7 +168,7 @@ function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmun
 function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
   const name = lRec(skill.name as LangMap, lang);
   const desc = lRec(skill.description as LangMap, lang);
-  if (!name && !desc) return null;
+  if (!name || !desc) return null;
 
   const isPassive = skill.type.startsWith('SKT_MONSTER');
 
@@ -231,7 +258,7 @@ function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
 
       {/* Skills */}
       {boss.skills
-        .filter((s) => lRec(s.name as LangMap, lang) || lRec(s.description as LangMap, lang))
+        .filter((s) => lRec(s.name as LangMap, lang) && lRec(s.description as LangMap, lang))
         .map((skill, i) => (
           <SkillCard key={i} skill={skill} lang={lang} />
         ))}

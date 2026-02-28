@@ -154,7 +154,7 @@ export default function BossCompactDisplay({ boss, iconOnlySkills = true }: Prop
   const displayName = boss.IncludeSurname && surname ? `${surname} ${baseName}` : baseName;
 
   const visibleSkills = useMemo(
-    () => boss.skills.filter(s => lRec(s.name as LangMap, lang) || lRec(s.description as LangMap, lang)),
+    () => boss.skills.filter(s => lRec(s.name as LangMap, lang) && lRec(s.description as LangMap, lang)),
     [boss.skills, lang],
   );
 
