@@ -1,0 +1,186 @@
+{
+  "Full Earth Team": {
+    "icon": "elem/CM_Element_Earth",
+    "team": [
+      ["Ryu Lion", "Rhona", "Ame", "Rey"],
+      ["Notia", "Laine"],
+      ["Charlotte", "Viella", "Fran"],
+      ["Kappa", "Hanbyul Lee"]
+    ],
+    "geasActive": {
+      "bonus": [49, 53, 92, 91, 89],
+      "malus": [5, 38, 18, 20, 90, 86, 60, 58, 10]
+    },
+    "video": {
+      "videoId": "rfWf4ytqWW8",
+      "title": "Outerplane - The Madman's Laboratory - 11.4M Points",
+      "author": "Sevih"
+    },
+    "note": [
+      {
+        "type": "p",
+        "string": "Remove the ranger geas if needed."
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "必要に応じてレンジャーのギアスを外してください。"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "필요시 레인저 기어스를 제거하세요."
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "如有需要，移除游侠誓约。"
+      }
+    ]
+  },
+  "Mage Team": {
+    "icon": "elem/CM_Element_Dark",
+    "team": [
+      ["Maxwell", "Ame", "Demiurge Luna", "Demiurge Astei"],
+      ["Laine", "Notia", "Viella"],
+      ["Alice", "Eternal", "Kuro", "Dahlia", "Omega Nadja"],
+      ["Skadi", "Tamara"]
+    ],
+    "geasActive": {
+      "bonus": [53, 76, 91, 49, 89],
+      "malus": [86, 60, 5, 38, 18, 20, 53, 90]
+    },
+    "video": {
+      "videoId": "Szgkhaza1jI",
+      "title": "Maxwell Guild Raid with Maxwell DPS",
+      "author": "XITangoIX"
+    },
+    "note": [
+      {
+        "type": "p",
+        "string": "Speed Tuning : {P/Maxwell} > {P/Laine} > {P/Skadi} > {P/Alice}"
+      },
+      {
+        "type": "p",
+        "string": "Chain Order : {P/Alice} > {P/Laine} > {P/Maxwell} > {P/Skadi}"
+      },
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2 musn't exceed 50K damage (you don't want the boss to strike you with his enrage move)"
+      },
+      {
+        "type": "p",
+        "string": "If playing her remove {P/Eternal} EE : you don't want her to get an extra turn"
+      },
+      {
+        "type": "p",
+        "string": "Break rotation"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Maxwell} prio : S3 > S2 Burn Lv 2 > S1",
+          "{P/Laine} : Only S1 for getting priority",
+          "{P/Skadi} : Only S1 Burn Lv 1 exept for first break when she will use Chain attack",
+          "{P/Alice} : Use S2 once to speed down the boss then use Chain attack on the other break"
+        ]
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "速度調整 : {P/Maxwell} > {P/Laine} > {P/Skadi} > {P/Alice}"
+      },
+      {
+        "type": "p",
+        "string": "チェイン順序 : {P/Alice} > {P/Laine} > {P/Maxwell} > {P/Skadi}"
+      },
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2のダメージは5万を超えてはいけません（ボスの激怒攻撃を受けたくない）"
+      },
+      {
+        "type": "p",
+        "string": "{P/Eternal}を使う場合はEEを外してください：追加ターンを得させたくない"
+      },
+      {
+        "type": "p",
+        "string": "ブレイクローテーション"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Maxwell}優先 : S3 > S2バーンLv2 > S1",
+          "{P/Laine} : 優先権獲得のためS1のみ",
+          "{P/Skadi} : 最初のブレイク時のチェイン攻撃以外はS1バーンLv1のみ",
+          "{P/Alice} : S2を一度使ってボスの速度を下げ、他のブレイク時にチェイン攻撃"
+        ]
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "속도 튜닝 : {P/Maxwell} > {P/Laine} > {P/Skadi} > {P/Alice}"
+      },
+      {
+        "type": "p",
+        "string": "체인 순서 : {P/Alice} > {P/Laine} > {P/Maxwell} > {P/Skadi}"
+      },
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2의 데미지가 5만을 초과하면 안 됩니다 (보스의 격노 공격을 받고 싶지 않음)"
+      },
+      {
+        "type": "p",
+        "string": "{P/Eternal}을 사용한다면 EE를 해제하세요: 추가 턴을 얻게 하고 싶지 않음"
+      },
+      {
+        "type": "p",
+        "string": "브레이크 로테이션"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Maxwell} 우선순위 : S3 > S2 번 Lv 2 > S1",
+          "{P/Laine} : 우선권 획득을 위해 S1만 사용",
+          "{P/Skadi} : 첫 브레이크 체인 공격 외에는 S1 번 Lv 1만 사용",
+          "{P/Alice} : S2를 한 번 사용해 보스 속도를 낮추고 다른 브레이크 시 체인 공격"
+        ]
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "速度调整 : {P/Maxwell} > {P/Laine} > {P/Skadi} > {P/Alice}"
+      },
+      {
+        "type": "p",
+        "string": "连锁顺序 : {P/Alice} > {P/Laine} > {P/Maxwell} > {P/Skadi}"
+      },
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2的伤害不能超过5万（你不想让Boss使用狂暴技能）"
+      },
+      {
+        "type": "p",
+        "string": "如果使用{P/Eternal}，请移除她的EE：你不想让她获得额外回合"
+      },
+      {
+        "type": "p",
+        "string": "破坏轮换"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Maxwell}优先级 : S3 > S2燃烧Lv2 > S1",
+          "{P/Laine} : 只用S1获取优先权",
+          "{P/Skadi} : 除了第一次破坏时的连锁攻击外，只用S1燃烧Lv1",
+          "{P/Alice} : 使用一次S2降低Boss速度，然后在其他破坏时使用连锁攻击"
+        ]
+      }
+    ]
+  }
+}

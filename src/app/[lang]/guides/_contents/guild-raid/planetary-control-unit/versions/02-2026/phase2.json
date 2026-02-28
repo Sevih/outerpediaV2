@@ -1,0 +1,652 @@
+{
+  "Solo Ember": {
+    "icon": "elem/CM_Element_Fire",
+    "team": [["Ember"]],
+    "geasActive": {
+      "bonus": [44, 85, 107],
+      "malus": [5, 81, 105, 57, 106, 86, 20, 87, 58]
+    },
+    "video": {
+      "videoId": "BNpf_bOsTzg",
+      "title": "Planetary Control Unit Epsilon Raid - Solo Ember, 9.68m dmg, 210% multiplier",
+      "author": "Tango"
+    },
+    "note": [
+      {
+        "type": "p",
+        "string": "Designed for stage 10+. Results and requirements may vary for lower stages since the boss has lower {S/SPD} and {S/RES}."
+      },
+      {
+        "type": "p",
+        "string": "Use S3 whenever possible unless you need the shield to survive. If the boss doesn't drop you below 50% on your first turn, use burst 1 after."
+      },
+      {
+        "type": "p",
+        "string": "Must be solo (no other units in the team) because the boss hits much harder if she gets a kill."
+      },
+      {
+        "type": "p",
+        "string": "If you overkill the boss, you can turn off the {E/Fire} ATK+ geas for more points."
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "ステージ10以上向け。低ステージではボスの{S/SPD}と{S/RES}が低いため、結果や必要条件が異なる場合があります。"
+      },
+      {
+        "type": "p",
+        "string": "シールドが必要でない限りS3を優先使用。ボスが最初のターンで50%以下にしなければ、バースト1を使用。"
+      },
+      {
+        "type": "p",
+        "string": "必ずソロ（他のユニットなし）。ボスはキルを取ると大幅にダメージが上がるため。"
+      },
+      {
+        "type": "p",
+        "string": "ボスをオーバーキルできる場合、{E/Fire}攻撃力+ギアスをオフにしてポイントを増やせます。"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "스테이지 10 이상 기준. 낮은 스테이지에서는 보스의 {S/SPD}와 {S/RES}가 낮아 결과와 요구사항이 다를 수 있습니다."
+      },
+      {
+        "type": "p",
+        "string": "실드가 필요하지 않다면 S3 우선 사용. 보스가 첫 턴에 50% 이하로 떨어뜨리지 않으면 버스트 1 사용."
+      },
+      {
+        "type": "p",
+        "string": "반드시 솔로(다른 유닛 없이). 보스가 킬을 얻으면 피해가 크게 증가하기 때문."
+      },
+      {
+        "type": "p",
+        "string": "보스를 오버킬할 수 있다면 {E/Fire} 공격력+ 기어스를 끄면 더 많은 포인트를 얻을 수 있습니다."
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "针对10阶段以上设计。低阶段Boss的{S/SPD}和{S/RES}较低，结果和要求可能不同。"
+      },
+      {
+        "type": "p",
+        "string": "除非需要护盾生存，否则优先使用S3。如果Boss第一回合没有将你降到50%以下，之后使用爆发1。"
+      },
+      {
+        "type": "p",
+        "string": "必须单人（队伍中无其他单位）。Boss击杀后伤害大幅提升。"
+      },
+      {
+        "type": "p",
+        "string": "如果能秒杀Boss，可以关闭{E/Fire}攻击力+契约以获得更多分数。"
+      }
+    ],
+    "requirements": {
+      "entries": [
+        {
+          "character": "Ember",
+          "stats": { "eff": "218" },
+          "equipment": {
+            "amulet": ["{I-A/Unholy Exsultet}", "{I-A/Charmer's Golden Chalice}"],
+            "talisman": ["{I-T/Vanguard's Charm}"],
+            "set": ["{AS/Revenge}"]
+          },
+          "prio": ["{S/ATK}"],
+          "notes": [
+            "EE doubles the +150 {S/EFF} geas so you only need around 218 {S/EFF}, easily achieved by glove slot alone",
+            "{I-A/Unholy Exsultet} to survive turn 1 at higher stages. {I-A/Charmer's Golden Chalice} if you need to take enough damage to go below 50%"
+          ],
+          "notes_jp": [
+            "EEがギアスの{S/EFF}+150を2倍にするため、{S/EFF}は218程度で十分。グローブ枠だけで達成可能",
+            "高ステージでは{I-A/Unholy Exsultet}でターン1の生存確保。50%以下にならないなら{I-A/Charmer's Golden Chalice}で十分なダメージを受ける"
+          ],
+          "notes_kr": [
+            "기어스의 {S/EFF}+150은 EE로 2배가 되므로 {S/EFF} 218 정도면 충분. 장갑 슬롯만으로 달성 가능",
+            "높은 스테이지에서는 {I-A/Unholy Exsultet}로 턴 1 생존 확보. 50% 이하로 떨어지지 않으면 {I-A/Charmer's Golden Chalice}로 충분한 피해를 받을 수 있음"
+          ],
+          "notes_zh": [
+            "契约的{S/EFF}+150被EE翻倍，所以只需约218 {S/EFF}，仅手套位即可达到",
+            "高阶段使用{I-A/Unholy Exsultet}确保第1回合存活。不需要降到50%以下时可用{I-A/Charmer's Golden Chalice}承受足够伤害"
+          ]
+        }
+      ]
+    }
+  },
+  "Burn Team": {
+    "icon": "effect/SC_Buff_detonate",
+    "team": [["Maxie"], ["Roxie"], ["Akari"], ["Vlada"]],
+    "geasActive": {
+      "bonus": [44, 50, 107],
+      "malus": [86, 106, 87, 81, 105, 5]
+    },
+    "video": {
+      "videoId": "xhTt8Ecj_28",
+      "title": "Planetary Control Unit Epsilon Raid - Burn Team, 23.88m dmg, 110% multiplier (50.15m points)",
+      "author": "Tango"
+    },
+    "note": [
+      {
+        "type": "p",
+        "string": "Designed for stage 10+. Results and requirements may vary for lower stages since the boss has lower {S/SPD} and {S/RES}."
+      },
+      {
+        "type": "p",
+        "string": "Break the boss on turn 15 before she uses her S3 nuke. If you do, it's 0 damage taken, meaning it scales into higher stages with no issues."
+      },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Akari", "speed": 294 },
+          { "character": "Maxie", "speed": 276 },
+          { "character": "Roxie", "speed": 263 },
+          { "character": "Vlada", "speed": 126 }
+        ],
+        "note": "Lots of flexibility as long as {P/Maxie} and {P/Roxie} are fast enough and {P/Akari} outspeeds the boss."
+      },
+      {
+        "type": "p",
+        "string": "If you overkill the boss, you can turn off the {E/Fire} ATK+ geas for more points."
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "ステージ10以上向け。低ステージではボスの{S/SPD}と{S/RES}が低いため、結果や必要条件が異なる場合があります。"
+      },
+      {
+        "type": "p",
+        "string": "ターン15でボスがS3ヌークを使う前にブレイクしてください。成功すればダメージ0で、高ステージにもスケールします。"
+      },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Akari", "speed": 294 },
+          { "character": "Maxie", "speed": 276 },
+          { "character": "Roxie", "speed": 263 },
+          { "character": "Vlada", "speed": 126 }
+        ],
+        "note": "{P/Maxie}と{P/Roxie}が十分速く、{P/Akari}がボスより速ければ調整の余地があります。"
+      },
+      {
+        "type": "p",
+        "string": "ボスをオーバーキルできる場合、{E/Fire}攻撃力+ギアスをオフにしてポイントを増やせます。"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "스테이지 10 이상 기준. 낮은 스테이지에서는 보스의 {S/SPD}와 {S/RES}가 낮아 결과와 요구사항이 다를 수 있습니다."
+      },
+      {
+        "type": "p",
+        "string": "턴 15에서 보스가 S3 누크를 사용하기 전에 브레이크하세요. 성공하면 피해 0으로, 높은 스테이지에도 스케일됩니다."
+      },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Akari", "speed": 294 },
+          { "character": "Maxie", "speed": 276 },
+          { "character": "Roxie", "speed": 263 },
+          { "character": "Vlada", "speed": 126 }
+        ],
+        "note": "{P/Maxie}와 {P/Roxie}가 충분히 빠르고 {P/Akari}가 보스보다 빠르면 조정 여지가 있습니다."
+      },
+      {
+        "type": "p",
+        "string": "보스를 오버킬할 수 있다면 {E/Fire} 공격력+ 기어스를 끄면 더 많은 포인트를 얻을 수 있습니다."
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "针对10阶段以上设计。低阶段Boss的{S/SPD}和{S/RES}较低，结果和要求可能不同。"
+      },
+      {
+        "type": "p",
+        "string": "在第15回合Boss使用S3大招前打破她。成功则受到0伤害，可以无障碍扩展到更高阶段。"
+      },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Akari", "speed": 294 },
+          { "character": "Maxie", "speed": 276 },
+          { "character": "Roxie", "speed": 263 },
+          { "character": "Vlada", "speed": 126 }
+        ],
+        "note": "只要{P/Maxie}和{P/Roxie}足够快且{P/Akari}比Boss快，就有很大的调整空间。"
+      },
+      {
+        "type": "p",
+        "string": "如果能秒杀Boss，可以关闭{E/Fire}攻击力+契约以获得更多分数。"
+      }
+    ],
+    "requirements": {
+      "entries": [
+        {
+          "character": "Akari",
+          "stats": { "spd": "294", "eff": "518/259", "trans": "6" },
+          "equipment": {
+            "weapon": ["{I-W/Briareos's Recklessness [Ranger]}"],
+            "set": ["2p {AS/Bursting}"],
+            "ee": ["+0"]
+          },
+          "prio": ["{S/SPD}", "{S/EFF}"],
+          "notes": [
+            "518+ {S/EFF}, or 259+ with {I-W/Briareos's Recklessness [Ranger]}",
+            "If {P/Roxie} and {P/Maxie} have 259+ {S/EFF}, you can skip the {S/RES} down",
+            "2 {AS/Bursting} optional for turn 1 burst 2 to nullify defence buff"
+          ],
+          "notes_jp": [
+            "{S/EFF}518以上、または{I-W/Briareos's Recklessness [Ranger]}使用時259以上",
+            "{P/Roxie}と{P/Maxie}の{S/EFF}が259以上なら{S/RES}ダウンは不要",
+            "2 {AS/Bursting}はターン1バースト2で防御バフ無効化にオプション"
+          ],
+          "notes_kr": [
+            "{S/EFF} 518 이상 또는 {I-W/Briareos's Recklessness [Ranger]} 사용 시 259 이상",
+            "{P/Roxie}와 {P/Maxie}의 {S/EFF}가 259 이상이면 {S/RES} 감소 불필요",
+            "2 {AS/Bursting}는 턴 1 버스트 2로 방어 버프 무효화에 선택적"
+          ],
+          "notes_zh": [
+            "{S/EFF}518以上或使用{I-W/Briareos's Recklessness [Ranger]}时259以上",
+            "如果{P/Roxie}和{P/Maxie}的{S/EFF}都达到259以上，则不需要{S/RES}降低",
+            "2 {AS/Bursting}可选，用于第1回合爆发2无效化防御buff"
+          ]
+        },
+        {
+          "character": "Maxie",
+          "stats": { "spd": "276", "trans": "6" },
+          "equipment": {
+            "weapon": ["{I-W/Heartunder's Blade}"],
+            "talisman": ["{I-T/Executioner's Charm} +10"],
+            "ee": ["+0"]
+          }
+        },
+        {
+          "character": "Roxie",
+          "stats": { "spd": "263", "trans": "6" },
+          "equipment": {
+            "amulet": ["{I-A/Dies Irae}"],
+            "talisman": ["{I-T/Executioner's Charm} +10"],
+            "ee": ["+10"]
+          }
+        },
+        {
+          "character": "Vlada",
+          "stats": { "spd": "126" },
+          "equipment": {
+            "weapon": ["{I-W/Phantasm Necrosis}"],
+            "talisman": ["{I-T/Mage's Charm}", "{I-T/Executioner's Charm} +10"]
+          },
+          "prio": ["{S/ATK}"],
+          "notes": [
+            "Can be min {S/SPD} (95) but at 126, she moves as early as possible while only getting 2 turns, giving her S3 burns more opportunities to be extended"
+          ],
+          "notes_jp": [
+            "最低{S/SPD}（95）でも可能だが、126なら最速で動きつつ2ターンのみで、S3の火傷延長の機会が増えます"
+          ],
+          "notes_kr": [
+            "최저 {S/SPD}(95)도 가능하지만, 126이면 최대한 빨리 움직이면서 총 2턴만 얻어 S3 화상 연장 기회가 늘어납니다"
+          ],
+          "notes_zh": [
+            "可以最低{S/SPD}(95)但126时她能尽早行动且仅获得2回合，S3灼烧有更多延长机会"
+          ]
+        }
+      ]
+    }
+  },
+  "Mero + Claire": {
+    "icon": "elem/CM_Element_Fire",
+    "team": [["Mero"], ["Claire"]],
+    "geasActive": {
+      "bonus": [44, 107],
+      "malus": [5, 81, 105, 106, 86, 20, 87, 58, 45]
+    },
+    "video": {
+      "videoId": "MQdqPgT6LpU",
+      "title": "Planetary Control Unit Epsilon Raid - Solo Mero - 4.12m Dmg, 195% multiplier",
+      "author": "Tango"
+    },
+    "note": [
+      {
+        "type": "p",
+        "string": "Designed for stage 10+. Results and requirements may vary for lower stages since the boss has lower {S/SPD} and {S/RES}."
+      },
+      {
+        "type": "p",
+        "string": "Alternative easy team similar to Solo Ember, though it scores less points than the other 2 teams."
+      },
+      {
+        "type": "p",
+        "string": "The other 2 teammates should just be talisman holders that die before they can move. {C/Defender}s can hold {I-A/Charmer's Golden Chalice} to die easier if necessary."
+      },
+      {
+        "type": "p",
+        "string": "{P/Mero} should start with S3 then spam S2 whenever possible (don't use burst 2+). If you can't S2, switch to S3 then back to S2."
+      },
+      {
+        "type": "p",
+        "string": "If you overkill the boss, you can turn off the {E/Fire} ATK+ geas for more points."
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "ステージ10以上向け。低ステージではボスの{S/SPD}と{S/RES}が低いため、結果や必要条件が異なる場合があります。"
+      },
+      {
+        "type": "p",
+        "string": "ソロEmberに似た簡単な代替チーム。ただし他の2チームよりポイントは低い。"
+      },
+      {
+        "type": "p",
+        "string": "残り2人はタリスマンホルダーで、動く前に倒れるようにする。{C/Defender}は{I-A/Charmer's Golden Chalice}で倒れやすくできます。"
+      },
+      {
+        "type": "p",
+        "string": "{P/Mero}はS3から始めて、可能な限りS2を連打（バースト2+は使わない）。S2が使えない場合はS3に切り替えてからS2に戻す。"
+      },
+      {
+        "type": "p",
+        "string": "ボスをオーバーキルできる場合、{E/Fire}攻撃力+ギアスをオフにしてポイントを増やせます。"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "스테이지 10 이상 기준. 낮은 스테이지에서는 보스의 {S/SPD}와 {S/RES}가 낮아 결과와 요구사항이 다를 수 있습니다."
+      },
+      {
+        "type": "p",
+        "string": "솔로 Ember와 비슷한 쉬운 대안 팀. 다른 2팀보다 포인트는 낮음."
+      },
+      {
+        "type": "p",
+        "string": "나머지 2명은 행동 전에 죽는 탈리스만 홀더. {C/Defender}는 {I-A/Charmer's Golden Chalice}로 더 쉽게 죽을 수 있음."
+      },
+      {
+        "type": "p",
+        "string": "{P/Mero}는 S3으로 시작 후 가능한 한 S2 연타(버스트 2+ 사용 금지). S2를 쓸 수 없으면 S3으로 전환 후 다시 S2."
+      },
+      {
+        "type": "p",
+        "string": "보스를 오버킬할 수 있다면 {E/Fire} 공격력+ 기어스를 끄면 더 많은 포인트를 얻을 수 있습니다."
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "针对10阶段以上设计。低阶段Boss的{S/SPD}和{S/RES}较低，结果和要求可能不同。"
+      },
+      {
+        "type": "p",
+        "string": "类似Solo Ember的简单替代队伍，但分数低于其他2支队伍。"
+      },
+      {
+        "type": "p",
+        "string": "其他2名队友只需是护符持有者，在行动前死亡即可。{C/Defender}可装备{I-A/Charmer's Golden Chalice}更容易死亡。"
+      },
+      {
+        "type": "p",
+        "string": "{P/Mero}从S3开始，然后尽可能连续使用S2（不要使用爆发2+）。无法使用S2时切换到S3再回到S2。"
+      },
+      {
+        "type": "p",
+        "string": "如果能秒杀Boss，可以关闭{E/Fire}攻击力+契约以获得更多分数。"
+      }
+    ],
+    "requirements": {
+      "entries": [
+        {
+          "character": "Mero",
+          "stats": { "eff": "268" },
+          "equipment": {
+            "weapon": ["{I-W/Heartunder's Blade}"],
+            "set": ["{AS/Revenge}"]
+          },
+          "prio": ["{S/ATK}"],
+          "notes": [
+            "Min {S/SPD}. 268+ {S/EFF} needed, otherwise turn on the +150 {S/EFF} geas",
+            "Turn on the {S/RES} +50/200 geas if you can reach enough {S/EFF} for those too"
+          ],
+          "notes_jp": [
+            "最低{S/SPD}。{S/EFF}268以上必要、不足なら+150 {S/EFF}ギアスをオン",
+            "{S/EFF}が十分なら{S/RES}+50/200ギアスもオンに"
+          ],
+          "notes_kr": [
+            "최저 {S/SPD}. {S/EFF} 268 이상 필요, 부족하면 +150 {S/EFF} 기어스 활성화",
+            "{S/EFF}가 충분하면 {S/RES} +50/200 기어스도 활성화"
+          ],
+          "notes_zh": [
+            "最低{S/SPD}。需要{S/EFF}268以上，否则开启+150 {S/EFF}契约",
+            "{S/EFF}足够的话也开启{S/RES}+50/200契约"
+          ]
+        },
+        {
+          "character": "Claire",
+          "stats": { "trans": "6" },
+          "equipment": {
+            "amulet": ["{I-A/Resurrection Token}"],
+            "talisman": ["{I-T/Vanguard's Charm}"],
+            "set": ["2p {AS/Bursting}"],
+            "ee": ["+5"]
+          },
+          "notes": [
+            "Must be slower than {P/Mero}",
+            "{I-T/Vanguard's Charm} +10 and EE+5 should also be enough AP without a burst set"
+          ],
+          "notes_jp": [
+            "{P/Mero}より遅くすること",
+            "{I-T/Vanguard's Charm}+10とEE+5でもバーストセットなしで十分なAP"
+          ],
+          "notes_kr": [
+            "{P/Mero}보다 느려야 함",
+            "{I-T/Vanguard's Charm} +10과 EE+5로도 버스트 세트 없이 충분한 AP"
+          ],
+          "notes_zh": [
+            "必须比{P/Mero}慢",
+            "{I-T/Vanguard's Charm}+10和EE+5也足够AP，不需要爆发套装"
+          ]
+        }
+      ]
+    }
+  },
+  "Burn Team (Revenge)": {
+    "icon": "effect/SC_Buff_detonate",
+    "team": [["Maxie"], ["Roxie"], ["Akari"], ["Vlada"]],
+    "geasActive": {
+      "bonus": [44, 50, 107],
+      "malus": [86, 106, 87, 81, 105, 5]
+    },
+    "video": {
+      "videoId": "OhG0I9dL5og",
+      "title": "Planetary Control Unit Epsilon Raid - Burn Team (Revenge), 38.25m dmg, 110% multiplier",
+      "author": "Tango"
+    },
+    "note": [
+      {
+        "type": "p",
+        "string": "Designed for stage 10+. Results and requirements may vary for lower stages since the boss has lower {S/SPD} and {S/RES}."
+      },
+      {
+        "type": "p",
+        "string": "{AS/Revenge} variant of the Burn Team, significantly more damage with the same multiplier. Only works on very high stages where the boss can one-shot {P/Roxie} and {P/Akari} and half HP {P/Maxie} and {P/Vlada} with her S3. 0 RNG, 100% success rate."
+      },
+      {
+        "type": "p",
+        "string": "The difference is you let the boss use S3 to get into {AS/Revenge} range. Crit chance debuff makes tanking the S3 safe. {P/Roxie} and {P/Akari} intentionally die so they don't eat up turns."
+      },
+      {
+        "type": "p",
+        "string": "If you're not running {AS/Revenge}, stick to the regular Burn Team."
+      },
+      {
+        "type": "p",
+        "string": "At least 3 out of 4 units need chain skill level 5 to do enough WG damage (23+). All 4 if {P/Vlada} is 3*. If you can't reach 23+, use {I-T/Sage's Charm} +10 on {P/Akari} for more WG damage."
+      },
+      {
+        "type": "p",
+        "string": "If you overkill the boss, you can turn off the {E/Fire} ATK+ geas for more points."
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "ステージ10以上向け。低ステージではボスの{S/SPD}と{S/RES}が低いため、結果や必要条件が異なる場合があります。"
+      },
+      {
+        "type": "p",
+        "string": "バーンチームの{AS/Revenge}バリアント。同じ倍率で大幅にダメージ増加。ボスがS3で{P/Roxie}と{P/Akari}を一撃で倒し、{P/Maxie}と{P/Vlada}のHPを半分にできる超高ステージでのみ機能。RNG 0、成功率100%。"
+      },
+      {
+        "type": "p",
+        "string": "違いはボスにS3を使わせて{AS/Revenge}の範囲に入ること。クリ率デバフでS3を安全に耐えられます。{P/Roxie}と{P/Akari}はターンを消費しないよう意図的に倒れます。"
+      },
+      {
+        "type": "p",
+        "string": "{AS/Revenge}を使わない場合は通常のバーンチームを使ってください。"
+      },
+      {
+        "type": "p",
+        "string": "4人中少なくとも3人にチェインスキルレベル5が必要（WGダメージ23以上）。{P/Vlada}が3*の場合は全員必要。23以上に届かない場合は{P/Akari}に{I-T/Sage's Charm}+10を使用。"
+      },
+      {
+        "type": "p",
+        "string": "ボスをオーバーキルできる場合、{E/Fire}攻撃力+ギアスをオフにしてポイントを増やせます。"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "스테이지 10 이상 기준. 낮은 스테이지에서는 보스의 {S/SPD}와 {S/RES}가 낮아 결과와 요구사항이 다를 수 있습니다."
+      },
+      {
+        "type": "p",
+        "string": "번 팀의 {AS/Revenge} 변형. 같은 배율로 훨씬 더 많은 데미지. 보스가 S3으로 {P/Roxie}와 {P/Akari}를 원킬하고 {P/Maxie}와 {P/Vlada}의 HP를 반으로 만들 수 있는 초고스테이지에서만 작동. RNG 0, 성공률 100%."
+      },
+      {
+        "type": "p",
+        "string": "차이점은 보스가 S3을 사용하게 해서 {AS/Revenge} 범위에 들어가는 것. 치명타 확률 디버프로 S3을 안전하게 버틸 수 있음. {P/Roxie}와 {P/Akari}는 턴을 소모하지 않도록 의도적으로 죽음."
+      },
+      {
+        "type": "p",
+        "string": "{AS/Revenge}를 사용하지 않는다면 일반 번 팀을 사용하세요."
+      },
+      {
+        "type": "p",
+        "string": "4명 중 최소 3명이 체인 스킬 레벨 5 필요 (WG 데미지 23 이상). {P/Vlada}가 3*이면 전원 필요. 23 이상 도달 못하면 {P/Akari}에 {I-T/Sage's Charm} +10 사용."
+      },
+      {
+        "type": "p",
+        "string": "보스를 오버킬할 수 있다면 {E/Fire} 공격력+ 기어스를 끄면 더 많은 포인트를 얻을 수 있습니다."
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "针对10阶段以上设计。低阶段Boss的{S/SPD}和{S/RES}较低，结果和要求可能不同。"
+      },
+      {
+        "type": "p",
+        "string": "灼烧队的{AS/Revenge}变体，相同倍率下伤害大幅提升。仅适用于Boss能用S3秒杀{P/Roxie}和{P/Akari}并使{P/Maxie}和{P/Vlada}血量减半的超高阶段。0随机性，100%成功率。"
+      },
+      {
+        "type": "p",
+        "string": "区别是让Boss使用S3进入{AS/Revenge}范围。暴击率减益使承受S3变得安全。{P/Roxie}和{P/Akari}故意死亡以不消耗回合。"
+      },
+      {
+        "type": "p",
+        "string": "如果不使用{AS/Revenge}，请使用常规灼烧队。"
+      },
+      {
+        "type": "p",
+        "string": "4人中至少3人需要连锁技能等级5以造成足够WG伤害（23+）。{P/Vlada}为3*时全员需要。达不到23+时可在{P/Akari}上使用{I-T/Sage's Charm}+10。"
+      },
+      {
+        "type": "p",
+        "string": "如果能秒杀Boss，可以关闭{E/Fire}攻击力+契约以获得更多分数。"
+      }
+    ],
+    "requirements": {
+      "note": "Stick to these values for optimised damage unless you know what you're doing. {P/Roxie} and {P/Akari} move after {P/Maxie} in certain turns for more optimal debuff extension order.",
+      "note_jp": "最適化されたダメージのために、理解していない限りこれらの値を守ってください。{P/Roxie}と{P/Akari}は特定のターンで{P/Maxie}の後に行動し、より最適なデバフ延長順序になります。",
+      "note_kr": "최적화된 데미지를 위해 이 값을 유지하세요. {P/Roxie}와 {P/Akari}는 특정 턴에서 {P/Maxie} 이후에 행동하여 더 최적의 디버프 연장 순서가 됩니다.",
+      "note_zh": "除非你知道自己在做什么，否则请保持这些数值以获得最优伤害。{P/Roxie}和{P/Akari}在某些回合中在{P/Maxie}之后行动，以获得更优的减益延长顺序。",
+      "entries": [
+        {
+          "character": "Maxie",
+          "stats": { "spd": "229", "eff": "259", "trans": "6" },
+          "equipment": {
+            "weapon": ["{I-W/Heartunder's Blade}"],
+            "talisman": ["{I-T/Executioner's Charm} +10"],
+            "set": ["{AS/Revenge}"]
+          },
+          "prio": ["{S/SPD}", "{S/EFF}", "{S/ATK}"],
+          "notes": [
+            "{B/BT_STAT|ST_BUFF_CHANCE} buff won't be up all the time so some {S/EFF} is needed"
+          ],
+          "notes_jp": [
+            "{B/BT_STAT|ST_BUFF_CHANCE}バフが常時発動するわけではないため、ある程度の{S/EFF}が必要"
+          ],
+          "notes_kr": [
+            "{B/BT_STAT|ST_BUFF_CHANCE} 버프가 항상 활성화되지 않으므로 어느 정도의 {S/EFF}가 필요"
+          ],
+          "notes_zh": [
+            "{B/BT_STAT|ST_BUFF_CHANCE}增益不会一直生效，所以需要一些{S/EFF}"
+          ]
+        },
+        {
+          "character": "Roxie",
+          "stats": { "spd": "257", "trans": "6" },
+          "equipment": {
+            "amulet": ["{I-A/Dies Irae}"],
+            "talisman": ["{I-T/Executioner's Charm} +10"],
+            "ee": ["+10"]
+          },
+          "prio": ["{S/SPD}", "{S/EFF}"]
+        },
+        {
+          "character": "Akari",
+          "stats": { "spd": "294", "eff": "259/518", "trans": "6" },
+          "equipment": {
+            "weapon": ["{I-W/Briareos's Recklessness [Ranger]}"],
+            "set": ["2p {AS/Bursting}"],
+            "ee": ["+0"]
+          },
+          "prio": ["{S/SPD}", "{S/EFF}"],
+          "notes": [
+            "2 {AS/Bursting} mandatory to burst 2 turn 1 to deny the defence buff",
+            "If you don't have {I-W/Briareos's Recklessness [Ranger]}, you need to reach 518 {S/EFF}",
+            "+0 helmet so she dies easier to the S3"
+          ],
+          "notes_jp": [
+            "ターン1でバースト2を発動して防御バフを無効化するために2 {AS/Bursting}が必須",
+            "{I-W/Briareos's Recklessness [Ranger]}がない場合、{S/EFF}518に到達する必要あり",
+            "+0ヘルメットでS3で倒れやすくする"
+          ],
+          "notes_kr": [
+            "턴 1에서 버스트 2를 발동하여 방어 버프를 무효화하기 위해 2 {AS/Bursting} 필수",
+            "{I-W/Briareos's Recklessness [Ranger]}가 없으면 {S/EFF} 518에 도달해야 함",
+            "+0 헬멧으로 S3에 더 쉽게 죽도록"
+          ],
+          "notes_zh": [
+            "2 {AS/Bursting}必须，用于第1回合爆发2无效化防御buff",
+            "如果没有{I-W/Briareos's Recklessness [Ranger]}，需要达到518 {S/EFF}",
+            "+0头盔让她更容易被S3击杀"
+          ]
+        },
+        {
+          "character": "Vlada",
+          "stats": { "spd": "95" },
+          "equipment": {
+            "weapon": ["{I-W/Phantasm Necrosis}"],
+            "talisman": ["{I-T/Mage's Charm}", "{I-T/Executioner's Charm} +10"],
+            "set": ["{AS/Revenge}"]
+          },
+          "prio": ["{S/ATK}"]
+        }
+      ]
+    }
+  }
+}

@@ -128,7 +128,7 @@ export default function GuildRaidPhase2Teams({ teams, pool, defaultTeam, onTeamC
             <h5 className="after:hidden">{t('guildraid.active_geas')}</h5>
             {multiplier !== null && (
               <span className="text-sm font-bold text-amber-300">
-                x{multiplier.toFixed(2)}
+                +{Math.round((multiplier - 1) * 100)}%
               </span>
             )}
           </div>

@@ -1,0 +1,89 @@
+{
+  "bossA": {
+    "notes": [
+      "If you can chain break him, replace the {C/Defender} with another DPS. In the footage, {P/Kuro} was chosen because she is a {E/Light} character, with decent damage, {B/BT_CP_CHARGE}, and {D/BT_MARKING}."
+    ],
+    "notes_jp": [
+      "チェインブレイクができる場合、{C/Defender}を別のDPSに変えてください。映像では{P/Kuro}が選ばれています。{E/Light}キャラクターで、まともなダメージ、{B/BT_CP_CHARGE}、{D/BT_MARKING}を持っています。"
+    ],
+    "notes_kr": [
+      "체인 브레이크가 가능하다면 {C/Defender}를 다른 DPS로 교체하세요. 영상에서는 {P/Kuro}가 선택되었습니다. {E/Light} 캐릭터이며 적절한 데미지, {B/BT_CP_CHARGE}, {D/BT_MARKING}을 가지고 있습니다."
+    ],
+    "notes_zh": [
+      "如果你能进行连锁破坏，把{C/Defender}换成另一个DPS。视频中选择了{P/Kuro}，因为她是{E/Light}角色，伤害不错，还有{B/BT_CP_CHARGE}和{D/BT_MARKING}。"
+    ],
+    "recommended": [
+      {
+        "names": ["Dianne"],
+        "reason": {
+          "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE}",
+          "jp": "{B/BT_REMOVE_DEBUFF}と{B/BT_IMMUNE}",
+          "kr": "{B/BT_REMOVE_DEBUFF} 및 {B/BT_IMMUNE}",
+          "zh": "{B/BT_REMOVE_DEBUFF}和{B/BT_IMMUNE}"
+        }
+      },
+      {
+        "names": ["Monad Eva"],
+        "reason": {
+          "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_CALL_BACKUP}",
+          "jp": "{B/BT_REMOVE_DEBUFF}と{B/BT_CALL_BACKUP}",
+          "kr": "{B/BT_REMOVE_DEBUFF} 및 {B/BT_CALL_BACKUP}",
+          "zh": "{B/BT_REMOVE_DEBUFF}和{B/BT_CALL_BACKUP}"
+        }
+      },
+      {
+        "names": ["Luna"],
+        "reason": {
+          "en": "{B/BT_REMOVE_DEBUFF}, {B/BT_CALL_BACKUP} and she is a {C/Defender}",
+          "jp": "{B/BT_REMOVE_DEBUFF}、{B/BT_CALL_BACKUP}、そして{C/Defender}",
+          "kr": "{B/BT_REMOVE_DEBUFF}, {B/BT_CALL_BACKUP}, {C/Defender}",
+          "zh": "{B/BT_REMOVE_DEBUFF}、{B/BT_CALL_BACKUP}，且是{C/Defender}"
+        }
+      }
+    ],
+    "team": [
+      ["Luna", "Demiurge Drakhan", "Omega Nadja", "Kuro"],
+      ["Dianne", "Monad Eva"],
+      ["Tamara", "Ryu Lion", "Akari"],
+      ["Demiurge Luna", "Ame", "Drakhan"]
+    ],
+    "video": {
+      "videoId": "eQRbxgOoL9k",
+      "title": "Geas Boss Prototype EX-78 (Stage 5)",
+      "author": "Sevih"
+    }
+  },
+  "bossB": {
+    "recommended": [
+      {
+        "names": ["Dianne"],
+        "reason": {
+          "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE}",
+          "jp": "{B/BT_REMOVE_DEBUFF}と{B/BT_IMMUNE}",
+          "kr": "{B/BT_REMOVE_DEBUFF} 및 {B/BT_IMMUNE}",
+          "zh": "{B/BT_REMOVE_DEBUFF}和{B/BT_IMMUNE}"
+        }
+      },
+      {
+        "names": ["Monad Eva"],
+        "reason": {
+          "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_CALL_BACKUP}",
+          "jp": "{B/BT_REMOVE_DEBUFF}と{B/BT_CALL_BACKUP}",
+          "kr": "{B/BT_REMOVE_DEBUFF} 및 {B/BT_CALL_BACKUP}",
+          "zh": "{B/BT_REMOVE_DEBUFF}和{B/BT_CALL_BACKUP}"
+        }
+      }
+    ],
+    "team": [
+      ["Tamara", "Skadi"],
+      ["Dianne", "Monad Eva"],
+      ["Demiurge Luna", "Maxwell", "Ryu Lion"],
+      ["Demiurge Astei", "Gnosis Dahlia"]
+    ],
+    "video": {
+      "videoId": "-z3VlH16dA4",
+      "title": "Geas Boss Vlada Assault Suit (Stage 4)",
+      "author": "Sevih"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "bossA": {
+    "recommended": [
+      {
+        "names": ["Astei"],
+        "reason": {
+          "en": "{E/Fire} {B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}",
+          "jp": "{E/Fire} {B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}",
+          "kr": "{E/Fire} {B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}",
+          "zh": "{E/Fire} {B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}"
+        }
+      },
+      {
+        "names": ["Dianne"],
+        "reason": {
+          "en": "{B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}",
+          "jp": "{B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}",
+          "kr": "{B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}",
+          "zh": "{B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}"
+        }
+      },
+      {
+        "names": ["Maxwell"],
+        "reason": {
+          "en": "Standard {E/Dark} dps",
+          "jp": "標準的な{E/Dark}アタッカー",
+          "kr": "기본 {E/Dark} 딜러",
+          "zh": "标准{E/Dark}输出"
+        }
+      },
+      {
+        "names": ["Demiurge Astei"],
+        "reason": {
+          "en": "Standard {E/Dark} dps",
+          "jp": "標準的な{E/Dark}アタッカー",
+          "kr": "기본 {E/Dark} 딜러",
+          "zh": "标准{E/Dark}输出"
+        }
+      },
+      {
+        "names": ["Aer"],
+        "reason": {
+          "en": "Standard {E/Fire} dps",
+          "jp": "標準的な{E/Fire}アタッカー",
+          "kr": "기본 {E/Fire} 딜러",
+          "zh": "标准{E/Fire}输出"
+        }
+      },
+      {
+        "names": ["Bryn"],
+        "reason": {
+          "en": "Standard {E/Fire} dps",
+          "jp": "標準的な{E/Fire}アタッカー",
+          "kr": "기본 {E/Fire} 딜러",
+          "zh": "标准{E/Fire}输出"
+        }
+      }
+    ],
+    "team": [
+      ["Astei", "Dianne", "Liselotte"],
+      ["Maxwell", "Bryn", "Francesca"],
+      ["Demiurge Astei", "Demiurge Luna", "Aer"],
+      ["Luna", "Ember"]
+    ],
+    "video": {
+      "videoId": "-JAndQY3BUY",
+      "title": "Planetary Control Unit - Geas Boss Self-Styled Automaton (Stage 5)"
+    }
+  },
+  "bossB": {
+    "recommended": [
+      {
+        "names": ["Monad Eva"],
+        "reason": {
+          "en": "{B/BT_CALL_BACKUP} and {B/BT_REMOVE_DEBUFF}",
+          "jp": "{B/BT_CALL_BACKUP}と{B/BT_REMOVE_DEBUFF}",
+          "kr": "{B/BT_CALL_BACKUP} 및 {B/BT_REMOVE_DEBUFF}",
+          "zh": "{B/BT_CALL_BACKUP}和{B/BT_REMOVE_DEBUFF}"
+        }
+      },
+      {
+        "names": ["Dianne"],
+        "reason": {
+          "en": "{B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}",
+          "jp": "{B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}",
+          "kr": "{B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}",
+          "zh": "{B/BT_IMMUNE} {B/BT_REMOVE_DEBUFF}"
+        }
+      },
+      {
+        "names": ["Luna"],
+        "reason": {
+          "en": "{B/BT_CALL_BACKUP} {B/BT_REMOVE_DEBUFF} {C/Defender}",
+          "jp": "{B/BT_CALL_BACKUP} {B/BT_REMOVE_DEBUFF} {C/Defender}",
+          "kr": "{B/BT_CALL_BACKUP} {B/BT_REMOVE_DEBUFF} {C/Defender}",
+          "zh": "{B/BT_CALL_BACKUP} {B/BT_REMOVE_DEBUFF} {C/Defender}"
+        }
+      }
+    ],
+    "team": [
+      ["Luna"],
+      ["Drakhan", "Demiurge Stella"],
+      ["Regina", "Demiurge Luna"],
+      ["Monad Eva", "Dianne"]
+    ],
+    "video": {
+      "videoId": "cfA5D0NQc5Y",
+      "title": "Planetary Control Unit - Geas Boss Astral Guardian (Stage 4)"
+    }
+  }
+}
