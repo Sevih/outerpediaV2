@@ -1,5 +1,0 @@
-# Local dev reverse proxy — mirrors production subdomain routing with HTTPS
-outerpedia.local, *.outerpedia.local {
-	tls internal
-	reverse_proxy localhost:3000
-}
