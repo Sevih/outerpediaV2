@@ -13,7 +13,7 @@ import { localePath } from '@/lib/navigation';
 /* ── Helpers ─────────────────────────────────────────────── */
 
 function isPromotion(slug: string) {
-  return slug.startsWith('prom-');
+  return slug.startsWith('promote-');
 }
 
 /** Replace _Lock with _Open in icon name */

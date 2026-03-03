@@ -21,7 +21,7 @@ type BossIndexEntry = {
   modes: Record<string, { name: LangMap; versions: BossVersion[] }>;
 };
 
-type Props = {
+type EntryDef = {
   bossName: string;
   modeKey?: string;
   versionIndex: number;
@@ -29,19 +29,21 @@ type Props = {
   preloadedBosses?: Record<string, Boss>;
 };
 
-/* ── Main component ─────────────────────────────────────── */
+type Props =
+  | (EntryDef & { entries?: never })
+  | { entries: EntryDef[]; bossName?: never; modeKey?: never; versionIndex?: never; defaultBossId?: never; preloadedBosses?: never };
 
-export default function MinionDisplay({ bossName, modeKey, versionIndex, defaultBossId, preloadedBosses }: Props) {
+/* ── Single minion card ──────────────────────────────────── */
+
+function MinionCard({ bossName, modeKey, versionIndex, defaultBossId, preloadedBosses }: EntryDef) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
 
-  // Resolve versions from boss-index
   const entry = (bossIndex as Record<string, BossIndexEntry>)[bossName];
   const modes = entry?.modes ?? {};
   const modeData = modeKey ? modes[modeKey] : Object.values(modes)[0];
   const versions = modeData?.versions ?? [];
 
-  // Clamp version index to available range
   const clampedIndex = Math.min(versionIndex, versions.length - 1);
   const selectedId = versions[clampedIndex]?.id ?? defaultBossId;
 
@@ -81,18 +83,34 @@ export default function MinionDisplay({ bossName, modeKey, versionIndex, default
   }, [selectedId, loadBoss, preloadedBosses]);
 
   return (
+    <div className="space-y-4">
+      {loading ? (
+        <div className="py-8 text-center text-sm text-zinc-500">Loading...</div>
+      ) : boss ? (
+        <>
+          <BossHeader boss={boss} lang={lang} />
+          <BossDetails boss={boss} lang={lang} />
+        </>
+      ) : (
+        <div className="py-8 text-center text-sm text-zinc-500">No boss data</div>
+      )}
+    </div>
+  );
+}
+
+/* ── Main component ─────────────────────────────────────── */
+
+export default function MinionDisplay(props: Props) {
+  const entries: EntryDef[] = 'entries' in props && props.entries
+    ? props.entries
+    : [props as EntryDef];
+
+  return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
-      <div className="space-y-4">
-        {loading ? (
-          <div className="py-8 text-center text-sm text-zinc-500">Loading...</div>
-        ) : boss ? (
-          <>
-            <BossHeader boss={boss} lang={lang} />
-            <BossDetails boss={boss} lang={lang} />
-          </>
-        ) : (
-          <div className="py-8 text-center text-sm text-zinc-500">No boss data</div>
-        )}
+      <div className={entries.length > 1 ? 'grid grid-cols-1 md:grid-cols-2 gap-4' : undefined}>
+        {entries.map((entry, i) => (
+          <MinionCard key={i} {...entry} />
+        ))}
       </div>
     </EffectsProvider>
   );
