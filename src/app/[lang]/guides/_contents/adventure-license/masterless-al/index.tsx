@@ -2,7 +2,7 @@
 
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
-import MinionsCompactDisplay from '@/app/components/guides/MinionsCompactDisplay';
+import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
@@ -19,8 +19,6 @@ import recommendedData from './recommended.json';
 import tipsData from './tips.json';
 
 import boss51000001 from '@data/boss/51000001.json';
-import boss51000002 from '@data/boss/51000002.json';
-import boss51000003 from '@data/boss/51000003.json';
 
 /* ── Typed data ─────────────────────────────────────────── */
 
@@ -33,10 +31,6 @@ const preloadedBosses: Record<string, Boss> = {
   '51000001': boss51000001 as unknown as Boss,
 };
 
-const minions: Boss[] = [
-  boss51000002 as unknown as Boss,
-  boss51000003 as unknown as Boss,
-];
 
 /* ── Component ──────────────────────────────────────────── */
 
@@ -54,7 +48,10 @@ export default function MasterlessALGuide() {
         defaultBossId="51000001"
         preloadedBosses={preloadedBosses}
       />
-      <MinionsCompactDisplay minions={minions} />
+      <MinionDisplay entries={[
+        { bossName: 'Dungeon Guardian Spear-Wielder', modeKey: 'Adventure License', versionIndex: 0 },
+        { bossName: 'Mini Guardian', modeKey: 'Adventure License', versionIndex: 0 },
+      ]} />
       <hr className="my-6 border-neutral-700" />
       <TacticalTips sections={[{ title: 'tactical', tips: tips.tactical }]} />
       <hr className="my-6 border-neutral-700" />

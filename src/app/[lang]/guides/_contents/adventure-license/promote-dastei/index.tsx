@@ -2,7 +2,7 @@
 
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
-import MinionsCompactDisplay from '@/app/components/guides/MinionsCompactDisplay';
+import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
@@ -19,7 +19,6 @@ import recommendedData from './recommended.json';
 import tipsData from './tips.json';
 
 import boss50000002 from '@data/boss/50000002.json';
-import boss50000003 from '@data/boss/50000003.json';
 
 /* ── Typed data ─────────────────────────────────────────── */
 
@@ -32,9 +31,6 @@ const preloadedBosses: Record<string, Boss> = {
   '50000002': boss50000002 as unknown as Boss,
 };
 
-const minions: Boss[] = [
-  boss50000003 as unknown as Boss,
-];
 
 /* ── Component ──────────────────────────────────────────── */
 
@@ -52,7 +48,7 @@ export default function PromDasteiGuide() {
         defaultBossId="50000002"
         preloadedBosses={preloadedBosses}
       />
-      <MinionsCompactDisplay minions={minions} />
+      <MinionDisplay bossName="Sterope" modeKey="Challenge" versionIndex={0} />
       <hr className="my-6 border-neutral-700" />
       <TacticalTips sections={[{ title: 'tactical', tips: tips.tactical }]} />
       <hr className="my-6 border-neutral-700" />

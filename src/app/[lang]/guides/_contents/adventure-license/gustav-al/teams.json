@@ -2,64 +2,134 @@
   "Standard Team": {
     "icon": "elem/CM_Element_Dark",
     "team": [
-      ["Monad Eva", "Nella", "Astei", "Viella"],
-      ["Francesca", "Aer", "Ryu Lion"],
-      ["Demiurge Astei", "Gnosis Dahlia", "Laplace"],
-      ["Gnosis Viella", "Demiurge Luna", "Regina"]
+      [
+        "Monad Eva",
+        "Nella",
+        "Astei",
+        "Viella"
+      ],
+      [
+        "Francesca",
+        "Aer",
+        "Ryu Lion"
+      ],
+      [
+        "Demiurge Astei",
+        "Gnosis Dahlia",
+        "Laplace"
+      ],
+      [
+        "Gnosis Viella",
+        "Demiurge Luna",
+        "Regina"
+      ]
     ],
     "note": [
-      { "type": "p", "string": "1 to 2 attempts. Verified up to stage 10." }
+      {
+        "type": "p",
+        "string": "1 to 2 attempts. Verified up to stage 10."
+      }
     ],
     "note_jp": [
-      { "type": "p", "string": "1〜2回の試行。ステージ10まで検証済み。" }
+      {
+        "type": "p",
+        "string": "1〜2回の試行。ステージ10まで検証済み。"
+      }
     ],
     "note_kr": [
-      { "type": "p", "string": "1~2회 시도. 스테이지 10까지 검증됨." }
+      {
+        "type": "p",
+        "string": "1~2회 시도. 스테이지 10까지 검증됨."
+      }
     ],
     "note_zh": [
-      { "type": "p", "string": "1至2次尝试。已验证至第10关。" }
+      {
+        "type": "p",
+        "string": "1至2次尝试。已验证至第10关。"
+      }
     ]
   },
   "Curse Team": {
-    "icon": "SC_Buff_Dot_Curse",
+    "icon": "effect/SC_Buff_Dot_Curse",
     "team": [
-      ["Monad Eva", "Viella"],
-      ["Drakhan"],
-      ["Marian"],
-      ["Kitsune of Eternity Tamamo-no-Mae"]
+      [
+        "Monad Eva",
+        "Viella"
+      ],
+      [
+        "Drakhan"
+      ],
+      [
+        "Marian"
+      ],
+      [
+        "Kitsune of Eternity Tamamo-no-Mae"
+      ]
     ],
     "note": [
-      { "type": "p", "string": "1 to 2 attempts. Verified up to stage 10." }
+      {
+        "type": "p",
+        "string": "1 to 2 attempts. Verified up to stage 10."
+      }
     ],
     "note_jp": [
-      { "type": "p", "string": "1〜2回の試行。ステージ10まで検証済み。" }
+      {
+        "type": "p",
+        "string": "1〜2回の試行。ステージ10まで検証済み。"
+      }
     ],
     "note_kr": [
-      { "type": "p", "string": "1~2회 시도. 스테이지 10까지 검증됨." }
+      {
+        "type": "p",
+        "string": "1~2회 시도. 스테이지 10까지 검증됨."
+      }
     ],
     "note_zh": [
-      { "type": "p", "string": "1至2次尝试。已验证至第10关。" }
+      {
+        "type": "p",
+        "string": "1至2次尝试。已验证至第10关。"
+      }
     ]
   },
   "Burn Team": {
-    "icon": "SC_Buff_Dot_Burn",
+    "icon": "effect/SC_Buff_Dot_Burn",
     "team": [
-      ["Astei"],
-      ["Maxie"],
-      ["Vlada"],
-      ["Roxie"]
+      [
+        "Astei"
+      ],
+      [
+        "Maxie"
+      ],
+      [
+        "Vlada"
+      ],
+      [
+        "Roxie"
+      ]
     ],
     "note": [
-      { "type": "p", "string": "1 to 2 attempts. Verified up to stage 10." }
+      {
+        "type": "p",
+        "string": "1 to 2 attempts. Verified up to stage 10."
+      }
     ],
     "note_jp": [
-      { "type": "p", "string": "1〜2回の試行。ステージ10まで検証済み。" }
+      {
+        "type": "p",
+        "string": "1〜2回の試行。ステージ10まで検証済み。"
+      }
     ],
     "note_kr": [
-      { "type": "p", "string": "1~2회 시도. 스테이지 10까지 검증됨." }
+      {
+        "type": "p",
+        "string": "1~2회 시도. 스테이지 10까지 검증됨."
+      }
     ],
     "note_zh": [
-      { "type": "p", "string": "1至2次尝试。已验证至第10关。" }
+      {
+        "type": "p",
+        "string": "1至2次尝试。已验证至第10关。"
+      }
     ]
   }
 }

@@ -2,6 +2,7 @@
 
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
@@ -18,7 +19,6 @@ import recommendedData from './recommended.json';
 import tipsData from './tips.json';
 
 import boss51000004 from '@data/boss/51000004.json';
-import boss51000005 from '@data/boss/51000005.json';
 
 /* ── Typed data ─────────────────────────────────────────── */
 
@@ -29,7 +29,6 @@ const tips = tipsData as Record<string, LangMap[]>;
 
 const preloadedBosses: Record<string, Boss> = {
   '51000004': boss51000004 as unknown as Boss,
-  '51000005': boss51000005 as unknown as Boss,
 };
 
 /* ── Component ──────────────────────────────────────────── */
@@ -49,13 +48,8 @@ export default function TyrantToddlerALGuide() {
           defaultBossId="51000004"
           preloadedBosses={preloadedBosses}
         />
-        <BossDisplay
-          bossName="Deformed Inferior Core"
-          modeKey="Adventure License"
-          defaultBossId="51000005"
-          preloadedBosses={preloadedBosses}
-        />
-      </div>
+        <MinionDisplay bossName="Deformed Inferior Core" modeKey="Adventure License" versionIndex={0} defaultBossId="51000005" />
+</div>
       <hr className="my-6 border-neutral-700" />
       <TacticalTips sections={[{ title: 'tactical', tips: tips.tactical }]} />
       <hr className="my-6 border-neutral-700" />

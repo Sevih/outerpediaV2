@@ -2,6 +2,7 @@
 
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
@@ -18,7 +19,6 @@ import recommendedData from './recommended.json';
 import tipsData from './tips.json';
 
 import boss51000019 from '@data/boss/51000019.json';
-import boss51000020 from '@data/boss/51000020.json';
 
 /* ── Typed data ─────────────────────────────────────────── */
 
@@ -29,7 +29,6 @@ const tips = tipsData as Record<string, LangMap[]>;
 
 const preloadedBosses: Record<string, Boss> = {
   '51000019': boss51000019 as unknown as Boss,
-  '51000020': boss51000020 as unknown as Boss,
 };
 
 /* ── Component ──────────────────────────────────────────── */
@@ -48,13 +47,8 @@ export default function SchattenmeisterSchwartzGuide() {
         defaultBossId="51000019"
         preloadedBosses={preloadedBosses}
       />
-      <BossDisplay
-        bossName="Shadow Beast Fire-Breather"
-        modeKey="Adventure License"
-        defaultBossId="51000020"
-        preloadedBosses={preloadedBosses}
-      />
-      <hr className="my-6 border-neutral-700" />
+      <MinionDisplay bossName="Shadow Beast Fire-Breather" modeKey="Adventure License" versionIndex={0} />
+<hr className="my-6 border-neutral-700" />
       <TacticalTips sections={[{ title: 'tactical', tips: tips.tactical }]} />
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList entries={recommended} />

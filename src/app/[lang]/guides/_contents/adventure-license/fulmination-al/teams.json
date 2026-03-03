@@ -1,44 +1,91 @@
 {
   "Curse Team": {
-    "icon": "SC_Buff_Dot_Curse",
+    "icon": "effect/SC_Buff_Dot_Curse",
     "team": [
-      ["Monad Eva"],
-      ["Viella", "Dianne"],
-      ["Marian"],
-      ["Kitsune of Eternity Tamamo-no-Mae", "Drakhan"]
+      [
+        "Monad Eva"
+      ],
+      [
+        "Viella",
+        "Dianne"
+      ],
+      [
+        "Marian"
+      ],
+      [
+        "Kitsune of Eternity Tamamo-no-Mae",
+        "Drakhan"
+      ]
     ],
     "note": [
-      { "type": "p", "string": "Typically cleared in 1 attempt. Verified up to stage 10." }
+      {
+        "type": "p",
+        "string": "Typically cleared in 1 attempt. Verified up to stage 10."
+      }
     ],
     "note_jp": [
-      { "type": "p", "string": "通常1回でクリア可能。ステージ10まで検証済み。" }
+      {
+        "type": "p",
+        "string": "通常1回でクリア可能。ステージ10まで検証済み。"
+      }
     ],
     "note_kr": [
-      { "type": "p", "string": "일반적으로 1회 시도로 클리어됩니다. 스테이지 10까지 검증되었습니다." }
+      {
+        "type": "p",
+        "string": "일반적으로 1회 시도로 클리어됩니다. 스테이지 10까지 검증되었습니다."
+      }
     ],
     "note_zh": [
-      { "type": "p", "string": "通常一次通关。已验证至第10关。" }
+      {
+        "type": "p",
+        "string": "通常一次通关。已验证至第10关。"
+      }
     ]
   },
   "Counter Team": {
-    "icon": "SC_Buff_Counter",
+    "icon": "effect/SC_Buff_Counter",
     "team": [
-      ["Viella", "Delta", "Idith"],
-      ["Fran"],
-      ["Rey", "Rhona"],
-      ["Ame", "Noa", "Ryu Lion"]
+      [
+        "Viella",
+        "Delta",
+        "Idith"
+      ],
+      [
+        "Fran"
+      ],
+      [
+        "Rey",
+        "Rhona"
+      ],
+      [
+        "Ame",
+        "Noa",
+        "Ryu Lion"
+      ]
     ],
     "note": [
-      { "type": "p", "string": "Alternative approach using Counter and Revenge mechanics." }
+      {
+        "type": "p",
+        "string": "Alternative approach using Counter and Revenge mechanics."
+      }
     ],
     "note_jp": [
-      { "type": "p", "string": "反撃とリベンジメカニックを使用する別のアプローチ。" }
+      {
+        "type": "p",
+        "string": "反撃とリベンジメカニックを使用する別のアプローチ。"
+      }
     ],
     "note_kr": [
-      { "type": "p", "string": "반격과 복수 메커니즘을 사용하는 대안적 접근법입니다." }
+      {
+        "type": "p",
+        "string": "반격과 복수 메커니즘을 사용하는 대안적 접근법입니다."
+      }
     ],
     "note_zh": [
-      { "type": "p", "string": "使用反击和复仇机制的替代方法。" }
+      {
+        "type": "p",
+        "string": "使用反击和复仇机制的替代方法。"
+      }
     ]
   }
 }

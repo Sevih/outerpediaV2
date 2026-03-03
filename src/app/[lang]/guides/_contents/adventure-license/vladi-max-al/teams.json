@@ -1,42 +1,83 @@
 {
   "ETamamo Carry": {
-    "icon": "IG_Buff_Dot_Curse_Interruption_D",
+    "icon": "effect/IG_Buff_Dot_Curse_Interruption_D",
     "team": [
-      ["Kitsune of Eternity Tamamo-no-Mae"],
-      ["Dianne"]
+      [
+        "Kitsune of Eternity Tamamo-no-Mae"
+      ],
+      [
+        "Dianne"
+      ]
     ],
     "note": [
-      { "type": "p", "string": "6★ ETamamo required." }
+      {
+        "type": "p",
+        "string": "6★ ETamamo required."
+      }
     ],
     "note_jp": [
-      { "type": "p", "string": "6★ ETamamo必須。" }
+      {
+        "type": "p",
+        "string": "6★ ETamamo必須。"
+      }
     ],
     "note_kr": [
-      { "type": "p", "string": "6★ ETamamo 필수." }
+      {
+        "type": "p",
+        "string": "6★ ETamamo 필수."
+      }
     ],
     "note_zh": [
-      { "type": "p", "string": "需要6★ ETamamo。" }
+      {
+        "type": "p",
+        "string": "需要6★ ETamamo。"
+      }
     ]
   },
   "Rhona Chain Strategy": {
-    "icon": "SC_Buff_Effect_Heavy_bk",
+    "icon": "effect/SC_Buff_Effect_Heavy_bk",
     "team": [
-      ["Rhona", "Gnosis Nella", "Kitsune of Eternity Tamamo-no-Mae"],
-      ["Kappa", "Fran"],
-      ["Ame", "Noa"],
-      ["Rey", "Ryu Lion"]
+      [
+        "Rhona",
+        "Gnosis Nella",
+        "Kitsune of Eternity Tamamo-no-Mae"
+      ],
+      [
+        "Kappa",
+        "Fran"
+      ],
+      [
+        "Ame",
+        "Noa"
+      ],
+      [
+        "Rey",
+        "Ryu Lion"
+      ]
     ],
     "note": [
-      { "type": "p", "string": "Make the unit with {B/HEAVY_STRIKE} just a bit faster than the boss." }
+      {
+        "type": "p",
+        "string": "Make the unit with {B/HEAVY_STRIKE} just a bit faster than the boss."
+      }
     ],
     "note_jp": [
-      { "type": "p", "string": "{B/HEAVY_STRIKE}持ちのユニットをボスより少し速くする。" }
+      {
+        "type": "p",
+        "string": "{B/HEAVY_STRIKE}持ちのユニットをボスより少し速くする。"
+      }
     ],
     "note_kr": [
-      { "type": "p", "string": "{B/HEAVY_STRIKE}를 가진 유닛을 보스보다 약간 빠르게 만드세요." }
+      {
+        "type": "p",
+        "string": "{B/HEAVY_STRIKE}를 가진 유닛을 보스보다 약간 빠르게 만드세요."
+      }
     ],
     "note_zh": [
-      { "type": "p", "string": "让拥有{B/HEAVY_STRIKE}的单位比首领稍快一点。" }
+      {
+        "type": "p",
+        "string": "让拥有{B/HEAVY_STRIKE}的单位比首领稍快一点。"
+      }
     ]
   }
 }

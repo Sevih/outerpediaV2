@@ -45,7 +45,7 @@ function MinionCard({ bossName, modeKey, versionIndex, defaultBossId, preloadedB
   const versions = modeData?.versions ?? [];
 
   const clampedIndex = Math.min(versionIndex, versions.length - 1);
-  const selectedId = versions[clampedIndex]?.id ?? defaultBossId;
+  const selectedId = defaultBossId ?? versions[clampedIndex]?.id;
 
   const preloadedBoss = preloadedBosses?.[selectedId] ?? null;
   const [boss, setBoss] = useState<Boss | null>(preloadedBoss);

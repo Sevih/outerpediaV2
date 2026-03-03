@@ -2,7 +2,7 @@
 
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
-import MinionsCompactDisplay from '@/app/components/guides/MinionsCompactDisplay';
+import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
@@ -19,8 +19,6 @@ import recommendedData from './recommended.json';
 import tipsData from './tips.json';
 
 import boss51000031 from '@data/boss/51000031.json';
-import boss51000032 from '@data/boss/51000032.json';
-import boss51000033 from '@data/boss/51000033.json';
 
 /* ── Typed data ─────────────────────────────────────────── */
 
@@ -33,10 +31,6 @@ const preloadedBosses: Record<string, Boss> = {
   '51000031': boss51000031 as unknown as Boss,
 };
 
-const minions: Boss[] = [
-  boss51000032 as unknown as Boss,
-  boss51000033 as unknown as Boss,
-];
 
 /* ── Component ──────────────────────────────────────────── */
 
@@ -54,7 +48,10 @@ export default function AnubisGuardianALGuide() {
         defaultBossId="51000031"
         preloadedBosses={preloadedBosses}
       />
-      <MinionsCompactDisplay minions={minions} />
+      <MinionDisplay entries={[
+        { bossName: 'Sand Soldier Khopesh', modeKey: 'Adventure License', versionIndex: 0 },
+        { bossName: 'Sand Soldier Spear', modeKey: 'Adventure License', versionIndex: 0 },
+      ]} />
       <hr className="my-6 border-neutral-700" />
       <TacticalTips sections={[{ title: 'tactical', tips: tips.tactical }]} />
       <hr className="my-6 border-neutral-700" />
