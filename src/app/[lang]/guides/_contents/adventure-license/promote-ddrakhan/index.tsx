@@ -2,6 +2,7 @@
 
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
@@ -19,7 +20,6 @@ import recommendedData from './recommended.json';
 import tipsData from './tips.json';
 
 import boss50000004 from '@data/boss/50000004.json';
-import boss50000005 from '@data/boss/50000005.json';
 
 /* ── Typed data ─────────────────────────────────────────── */
 
@@ -30,7 +30,6 @@ const tips = tipsData as Record<string, LangMap[]>;
 
 const preloadedBosses: Record<string, Boss> = {
   '50000004': boss50000004 as unknown as Boss,
-  '50000005': boss50000005 as unknown as Boss,
 };
 
 /* ── Component ──────────────────────────────────────────── */
@@ -47,14 +46,10 @@ export default function DdrakhanPromotionGuide() {
         bossName="Drakhan"
         modeKey="Challenge"
         defaultBossId="50000004"
+        versionIds={["50000004"]}
         preloadedBosses={preloadedBosses}
       />
-      <BossDisplay
-        bossName="Vlada"
-        modeKey="Challenge"
-        defaultBossId="50000005"
-        preloadedBosses={preloadedBosses}
-      />
+      <MinionDisplay bossName="Vlada" modeKey="Challenge" versionIndex={0} defaultBossId="50000005" />
       <hr className="my-6 border-neutral-700" />
       <TacticalTips sections={[{ title: 'tactical', tips: tips.tactical }]} />
       <hr className="my-6 border-neutral-700" />
