@@ -278,10 +278,14 @@ export default function BossDisplay({ bossName, modeKey, defaultBossId, preloade
     if (versionIds) {
       // Collect matching versions across all modes, enriched with mode name
       const idSet = new Set(versionIds);
+      const seen = new Set<string>();
       const result: VersionWithMode[] = [];
       for (const mode of Object.values(modes)) {
         for (const v of mode.versions) {
-          if (idSet.has(v.id)) result.push({ ...v, modeName: mode.name });
+          if (idSet.has(v.id) && !seen.has(v.id)) {
+            seen.add(v.id);
+            result.push({ ...v, modeName: mode.name });
+          }
         }
       }
       return result;
@@ -355,8 +359,11 @@ export default function BossDisplay({ bossName, modeKey, defaultBossId, preloade
                     </option>
                   ))}
                 </select>
-                {hasModeNames && selectedVersion && (
-                  <p className="text-sm text-zinc-400">{lRec(selectedVersion.label, lang)}</p>
+                
+                {hasModeNames && selectedVersion && boss?.location && (
+                  <p className="text-sm text-zinc-400">
+                    {lRec(boss.location.area_id, lang)} : {lRec(boss.location.dungeon, lang)} ({lRec(boss.location.mode, lang)})
+                  </p>
                 )}
               </div>
             )}
