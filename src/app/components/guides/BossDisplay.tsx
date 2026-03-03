@@ -188,7 +188,10 @@ export function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
         <div className="flex-1 space-y-1">
           <p className="text-sm font-semibold text-zinc-200">{name}</p>
           {(skill.buff?.length || skill.debuff?.length) && (
-            <BuffDebuffDisplay buffs={skill.buff ?? []} debuffs={skill.debuff ?? []} />
+            <BuffDebuffDisplay
+              buffs={Array.isArray(skill.buff) ? skill.buff : skill.buff ? [skill.buff] : []}
+              debuffs={Array.isArray(skill.debuff) ? skill.debuff : skill.debuff ? [skill.debuff] : []}
+            />
           )}
           {desc && (
             <p className="text-xs leading-relaxed text-zinc-400">
