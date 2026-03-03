@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-// TODO: restore when page links are implemented
-// import Link from 'next/link';
+import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
@@ -55,7 +54,13 @@ export default async function ChangelogPage({ params }: Props) {
               </div>
 
               <p className="h2-style mb-2">
-                {entry.title}
+                {entry.url ? (
+                  <Link href={`/${lang}${entry.url}`} className="text-cyan-400 hover:underline">
+                    {entry.title}
+                  </Link>
+                ) : (
+                  entry.title
+                )}
               </p>
 
               <ul className="space-y-1 text-sm text-zinc-300">
