@@ -1,0 +1,40 @@
+{
+  "tactical": [
+    {
+      "en": "If you use AoE skills that aren't chain skills, boss gains an {B/BT_STAT|ST_DEF}.",
+      "jp": "チェインスキル以外のAoEスキルを使用するとボスに{B/BT_STAT|ST_DEF}が付与されます。",
+      "kr": "체인 스킬이 아닌 AoE 스킬을 사용하면 보스에게 {B/BT_STAT|ST_DEF}이 부여됩니다.",
+      "zh": "使用非连锁的AoE技能会给BOSS提供{B/BT_STAT|ST_DEF}。"
+    },
+    {
+      "en": "If a character is afflicted with {D/BT_DOT_POISON}, the boss will counterattack just after he played.",
+      "jp": "キャラクターが{D/BT_DOT_POISON}を受けている場合、ボスは行動直後に反撃します。",
+      "kr": "캐릭터가 {D/BT_DOT_POISON}에 걸린 경우, 보스는 행동 직후 반격합니다.",
+      "zh": "角色被{D/BT_DOT_POISON}影响时，BOSS会在行动后立即反击。"
+    },
+    {
+      "en": "Main boss (right side) is the only one attacking. The left boss constantly buffs {B/BT_STAT|ST_ATK}.",
+      "jp": "メインボス（右側）のみが攻撃します。左側のボスは常に{B/BT_STAT|ST_ATK}をバフします。",
+      "kr": "메인 보스(오른쪽)만 공격합니다. 왼쪽 보스는 지속적으로 {B/BT_STAT|ST_ATK}를 버프합니다.",
+      "zh": "主BOSS（右侧）是唯一攻击的。左侧BOSS持续增益{B/BT_STAT|ST_ATK}。"
+    },
+    {
+      "en": "If the left boss is killed, main boss gains {B/BT_INVINCIBLE} and {B/BT_STAT|ST_ATK}.",
+      "jp": "左側のボスを倒すと、メインボスが{B/BT_INVINCIBLE}と{B/BT_STAT|ST_ATK}を獲得します。",
+      "kr": "왼쪽 보스를 처치하면 메인 보스가 {B/BT_INVINCIBLE}과 {B/BT_STAT|ST_ATK}를 획득합니다.",
+      "zh": "如果左侧BOSS被击杀，主BOSS获得{B/BT_INVINCIBLE}和{B/BT_STAT|ST_ATK}。"
+    },
+    {
+      "en": "Characters that can inflict {D/BT_REMOVE_BUFF} or {D/BT_STEAL_BUFF} are highly recommended.",
+      "jp": "{D/BT_REMOVE_BUFF}や{D/BT_STEAL_BUFF}を付与できるキャラクターが強く推奨されます。",
+      "kr": "{D/BT_REMOVE_BUFF}이나 {D/BT_STEAL_BUFF}를 부여할 수 있는 캐릭터를 강력히 추천합니다.",
+      "zh": "强烈推荐能施加{D/BT_REMOVE_BUFF}或{D/BT_STEAL_BUFF}的角色。"
+    },
+    {
+      "en": "Focus on single-target DPS to avoid triggering {B/BT_STAT|ST_DEF}.",
+      "jp": "{B/BT_STAT|ST_DEF}の発動を避けるため、単体DPSに集中しましょう。",
+      "kr": "{B/BT_STAT|ST_DEF} 발동을 피하기 위해 단일 대상 DPS에 집중하세요.",
+      "zh": "集中单体DPS以避免触发{B/BT_STAT|ST_DEF}。"
+    }
+  ]
+}

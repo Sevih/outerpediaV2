@@ -1,0 +1,65 @@
+{
+  "Curse Team": {
+    "icon": "SC_Buff_Dot_Curse",
+    "team": [
+      ["Monad Eva"],
+      ["Kitsune of Eternity Tamamo-no-Mae", "Drakhan"],
+      ["Marian"],
+      ["Tamara"]
+    ],
+    "note": [
+      { "type": "p", "string": "1 attempt. Verified up to stage 10." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "1回の挑戦。ステージ10まで検証済み。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "1회 도전. 스테이지 10까지 검증됨." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "1次尝试。已验证至第10关。" }
+    ]
+  },
+  "Aggro Control": {
+    "icon": "SC_Buff_Effect_Taunted",
+    "team": [
+      ["Ember"],
+      ["Caren", "Roxie", "Beth", "Fatal"],
+      ["Rin", "Laplace", "Poolside Trickster Regina"],
+      ["Tamara"]
+    ],
+    "note": [
+      { "type": "p", "string": "{P/Ember}'s self-inflicted {D/BT_MARKING} keeps S1 focused on her. {P/Tamara} should prevent S3 usage – S2 is harmless." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "{P/Ember}の自己付与{D/BT_MARKING}でS1を自分に集中させる。{P/Tamara}でS3の使用を防ぐ – S2は無害。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "{P/Ember}의 자가 부여 {D/BT_MARKING}로 S1을 자신에게 집중시킴. {P/Tamara}로 S3 사용을 방지 – S2는 무해함." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "{P/Ember}的自我施加{D/BT_MARKING}将S1集中在自己身上。{P/Tamara}应阻止S3使用 – S2无害。" }
+    ]
+  },
+  "No Ranger": {
+    "icon": "water",
+    "team": [
+      ["Luna", "Summer Knight's Dream Ember", "Veronica"],
+      ["Fortuna"],
+      ["Rin", "Laplace", "Poolside Trickster Regina"],
+      ["Caren", "Roxie", "Beth", "Fatal"]
+    ],
+    "note": [
+      { "type": "p", "string": "1-2 attempts. Verified up to stage 10." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "1-2回の挑戦。ステージ10まで検証済み。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "1-2회 도전. 스테이지 10까지 검증됨." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "1-2次尝试。已验证至第10关。" }
+    ]
+  }
+}

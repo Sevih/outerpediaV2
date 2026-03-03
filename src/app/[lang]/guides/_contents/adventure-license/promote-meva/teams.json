@@ -1,0 +1,68 @@
+{
+  "Fixed Damage Team": {
+    "icon": "SC_Buff_Effect_True_Dmg",
+    "team": [
+      ["Iota"],
+      ["Tamara", "Monad Eva", "Nella", "Demiurge Delta"],
+      ["Maxwell"],
+      ["Tamamo-no-Mae"]
+    ],
+    "note": [
+      {
+        "type": "p",
+        "string": "{P/Iota} can be placed in frontline thanks to {B/BT_UNDEAD}."
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "{P/Iota}は{B/BT_UNDEAD}のおかげで前衛に配置可能。"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "{P/Iota}는 {B/BT_UNDEAD} 덕분에 전열에 배치 가능."
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "{P/Iota}因{B/BT_UNDEAD}可放置于前排。"
+      }
+    ]
+  },
+  "Curse Team": {
+    "icon": "SC_Buff_Dot_Curse",
+    "team": [
+      ["Iota"],
+      ["Monad Eva"],
+      ["Marian", "Drakhan"],
+      ["Kitsune of Eternity Tamamo-no-Mae"]
+    ],
+    "note": [
+      {
+        "type": "p",
+        "string": "{D/BT_DOT_CURSE} team. {P/Monad Eva}'s {B/BT_CALL_BACKUP} helps stack more {D/BT_DOT_CURSE}."
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "{D/BT_DOT_CURSE}チーム。{P/Monad Eva}の{B/BT_CALL_BACKUP}で{D/BT_DOT_CURSE}をより多く蓄積できる。"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "{D/BT_DOT_CURSE} 팀. {P/Monad Eva}의 {B/BT_CALL_BACKUP}로 {D/BT_DOT_CURSE}를 더 많이 쌓을 수 있음."
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "{D/BT_DOT_CURSE}队伍。{P/Monad Eva}的{B/BT_CALL_BACKUP}可叠加更多{D/BT_DOT_CURSE}。"
+      }
+    ]
+  }
+}

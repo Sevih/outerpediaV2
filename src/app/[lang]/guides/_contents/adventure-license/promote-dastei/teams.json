@@ -1,0 +1,44 @@
+{
+  "Curse Team": {
+    "icon": "SC_Buff_Dot_Curse",
+    "team": [
+      ["Akari"],
+      ["Stella", "Monad Eva", "Viella"],
+      ["Drakhan"],
+      ["Kitsune of Eternity Tamamo-no-Mae", "Marian"]
+    ],
+    "note": [
+      { "type": "p", "string": "{D/BT_DOT_CURSE} team. Typically cleared in a single attempt." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "{D/BT_DOT_CURSE}チーム。通常1回でクリア可能。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "{D/BT_DOT_CURSE} 팀. 보통 1회 시도로 클리어 가능." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "{D/BT_DOT_CURSE}队伍。通常一次通关。" }
+    ]
+  },
+  "Fixed Damage Team": {
+    "icon": "SC_Buff_Effect_True_Dmg",
+    "team": [
+      ["Akari"],
+      ["Monad Eva", "Dianne", "Nella", "Viella"],
+      ["Gnosis Nella", "Tamamo-no-Mae", "Fran"],
+      ["Demiurge Stella", "Ryu Lion", "Laplace", "Iota"]
+    ],
+    "note": [
+      { "type": "p", "string": "Fixed damage chain team. Use {I-A/Saint's Ring} or {I-A/Obsidian Oath} on {C/Healer} for extra survivability." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "固定ダメージチェーンチーム。{C/Healer}に{I-A/Saint's Ring}または{I-A/Obsidian Oath}を装備して耐久力UP。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "고정 피해 체인 팀. {C/Healer}에게 {I-A/Saint's Ring} 또는 {I-A/Obsidian Oath}를 장착하여 생존력 강화." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "固定伤害连携队伍。给{C/Healer}装备{I-A/Saint's Ring}或{I-A/Obsidian Oath}提升生存能力。" }
+    ]
+  }
+}

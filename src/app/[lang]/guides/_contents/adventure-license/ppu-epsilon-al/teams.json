@@ -1,0 +1,65 @@
+{
+  "Classic Team": {
+    "icon": "IG_Buff_Seal_Ressurection",
+    "team": [
+      ["Monad Eva"],
+      ["Demiurge Stella"],
+      ["Demiurge Astei", "Maxwell"],
+      ["Gnosis Nella", "Tamara", "Skadi", "Tamamo-no-Mae", "Demiurge Luna"]
+    ],
+    "note": [
+      { "type": "p", "string": "Kill the Epsilon miniboss first to remove the main boss's damage reduction and WG immunity. Cleared in 1-2 attempts. Verified up to stage 10." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "まずイプシロンを倒して、メインボスのダメージ軽減とWG免疫を解除しましょう。1〜2回でクリア可能。10段階まで検証済み。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "먼저 엡실론을 처치하여 메인 보스의 피해 감소와 WG 면역을 해제하세요. 1~2회 시도로 클리어 가능. 10단계까지 검증됨." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "先击杀埃普西隆以解除主Boss的伤害减免和WG免疫。1-2次尝试可通关。已验证至第10阶段。" }
+    ]
+  },
+  "G.Beth team": {
+    "icon": "SC_Buff_2100092",
+    "team": [
+      ["Gnosis Beth"],
+      ["Akari"],
+      ["Kuro"],
+      ["Sterope"]
+    ],
+    "note": [
+      { "type": "p", "string": "Alternative approach using {D/BT_DOT_2000092} to quickly damage both boss and miniboss." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "{D/BT_DOT_2000092}を使用してボスと雑魚に素早くダメージを与える代替アプローチ。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "{D/BT_DOT_2000092}를 사용하여 보스와 쫄에게 빠르게 피해를 주는 대안적 접근법." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "使用{D/BT_DOT_2000092}快速对Boss和小怪造成伤害的替代方案。" }
+    ]
+  },
+  "Curse Team": {
+    "icon": "SC_Buff_Dot_Curse",
+    "team": [
+      ["Stella"],
+      ["Akari"],
+      ["Kuro"],
+      ["Drakhan"]
+    ],
+    "note": [
+      { "type": "p", "string": "Same approach as G.Beth team but with {D/BT_DOT_CURSE} and {D/BT_FIXED_DAMAGE}." }
+    ],
+    "note_jp": [
+      { "type": "p", "string": "G.Bethチームと同じアプローチですが、{D/BT_DOT_CURSE}と{D/BT_FIXED_DAMAGE}を使用。" }
+    ],
+    "note_kr": [
+      { "type": "p", "string": "G.Beth 팀과 같은 접근법이지만 {D/BT_DOT_CURSE}와 {D/BT_FIXED_DAMAGE} 사용." }
+    ],
+    "note_zh": [
+      { "type": "p", "string": "与G.Beth队相同的方案，但使用{D/BT_DOT_CURSE}和{D/BT_FIXED_DAMAGE}。" }
+    ]
+  }
+}
