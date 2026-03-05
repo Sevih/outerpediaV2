@@ -59,6 +59,7 @@ type PageMetadataOptions = {
   title: string;
   description: string;
   ogImage?: string;
+  ogImageSize?: { width: number; height: number };
   keywords?: string[];
   noindex?: boolean;
 };
@@ -73,11 +74,14 @@ export function createPageMetadata({
   title,
   description,
   ogImage = DEFAULT_OG_IMAGE,
+  ogImageSize,
   keywords,
   noindex = false,
 }: PageMetadataOptions): Metadata {
   const url = buildUrl(lang, path);
   const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
+  const isDefault = ogImage === DEFAULT_OG_IMAGE;
+  const { width, height } = ogImageSize ?? (isDefault ? { width: 1200, height: 630 } : { width: 150, height: 150 });
 
   return {
     title,
@@ -94,10 +98,10 @@ export function createPageMetadata({
       siteName: SITE_NAME,
       type: 'website',
       locale: OG_LOCALE[lang],
-      images: [{ url: ogImage, width: 1200, height: 630 }],
+      images: [{ url: ogImage, width, height }],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: isDefault ? 'summary_large_image' : 'summary',
       title: fullTitle,
       description,
       images: [ogImage],
