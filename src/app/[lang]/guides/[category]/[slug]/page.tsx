@@ -34,13 +34,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = lRec(guide.title, lang);
   const description = lRec(guide.description, lang);
 
+  const cat = guide.category;
+  const hasCustomOg = !!(guide.og_image || guide.boss_id);
+
+  const ogImage = guide.og_image
+    ?? (guide.boss_id?.startsWith('2') ? `/images/characters/portrait/og_${guide.boss_id}.png` : undefined)
+    ?? (guide.boss_id ? `/images/characters/boss/portrait/MT_${guide.boss_id}.png` : undefined)
+    ?? (cat === 'adventure' || cat === 'monad-gate' || cat === 'skyward-tower'
+      ? `/images/guides/${guide.icon}.png`
+      : undefined);
+
+  let ogImageSize: { width: number; height: number } | undefined;
+  if (!hasCustomOg) {
+    if (cat === 'adventure' || cat === 'monad-gate') ogImageSize = { width: 75, height: 150 };
+    else if (cat === 'skyward-tower') ogImageSize = { width: 1200, height: 630 };
+  }
+
   return createPageMetadata({
     lang,
     path: `/guides/${guide.category}/${slug}`,
     title: t['page.guide.meta_title'].replace('{title}', title),
     description,
-    // TODO: verify og_image overrides in _index.json render well on Discord/social
-    ogImage: guide.og_image ?? `/images/guides/${guide.icon}.png`,
+    ...(ogImage && { ogImage }),
+    ...(ogImageSize && { ogImageSize }),
   });
 }
 

@@ -7,6 +7,7 @@ export type GuideMeta = {
   description: LangMap;
   icon: string;
   og_image?: string;
+  boss_id?: string;
   order: number;
   author: string;
   last_updated: string;
