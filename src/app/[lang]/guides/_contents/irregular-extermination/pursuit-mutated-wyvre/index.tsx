@@ -2,6 +2,7 @@
 
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import LootTable from '@/app/components/guides/LootTable';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
@@ -40,6 +41,7 @@ export default function PursuitMutatedWyvreGuide() {
     <GuideTemplate
       title={lRec(str.title, lang)}
     >
+      <LootTable bossId="51202003" />
       <BossDisplay
         bossName="Mutated Wyvre"
         modeKey="Pursuit Operation"

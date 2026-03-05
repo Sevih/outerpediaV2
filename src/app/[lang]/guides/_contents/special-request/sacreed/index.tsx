@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import LootTable from '@/app/components/guides/LootTable';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
@@ -55,6 +56,7 @@ export default function SacreedGuardianGuide() {
       title={lRec(str.title, lang)}
       introduction={lRec(str.intro, lang)}
     >
+      <LootTable bossId="404400362" />
       <BossDisplay
         bossName="Sacreed Guardian"
         modeKey="Special Request: Ecology Study"

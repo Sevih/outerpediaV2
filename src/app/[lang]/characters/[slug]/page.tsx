@@ -88,14 +88,16 @@ export default async function CharacterDetailPage({ params }: Props) {
   for (const d of debuffsArr) debuffMap[d.name] = d;
 
   // Build boss display map for equipment source rendering
-  const bossNames = new Set<string>();
-  for (const w of weapons) if (w.boss) bossNames.add(w.boss);
-  for (const a of amulets) if (a.boss) bossNames.add(a.boss);
-  for (const s of sets) if (s.boss) bossNames.add(s.boss);
-  for (const name of ['Mutated Wyvre', 'Irregular Queen', 'Iron Stretcher', 'Blockbuster']) {
-    bossNames.add(name);
-  }
-  const bossMap = await getBossDisplayMap([...bossNames]);
+  const bossIds = new Set<string>();
+  const addBoss = (b?: string | string[]) => {
+    if (!b) return;
+    if (Array.isArray(b)) b.forEach(id => bossIds.add(id));
+    else bossIds.add(b);
+  };
+  for (const w of weapons) addBoss(w.boss);
+  for (const a of amulets) addBoss(a.boss);
+  for (const s of sets) addBoss(s.boss);
+  const bossMap = await getBossDisplayMap([...bossIds]);
 
   if (!character) notFound();
 

@@ -2,6 +2,7 @@
 
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import LootTable from '@/app/components/guides/LootTable';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
@@ -41,6 +42,7 @@ export default function ChimeraGuide() {
       title={lRec(str.title, lang)}
       introduction={lRec(str.intro, lang)}
     >
+      <LootTable bossId="403400262" />
       <BossDisplay
         bossName="Unidentified Chimera"
         modeKey="Special Request: Ecology Study"

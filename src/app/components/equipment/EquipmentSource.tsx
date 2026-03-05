@@ -1,7 +1,11 @@
-import type { BossDisplayMap } from '@/types/equipment';
-import { IE_BOSS_MAP } from '@/types/equipment';
+'use client';
+
+import Link from 'next/link';
+import type { BossDisplayMap, BossDisplayInfo } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { lRec } from '@/lib/i18n/localize';
+import { useI18n } from '@/lib/contexts/I18nContext';
+import BossPortrait from '@/app/components/guides/BossPortrait';
 
 // Static source labels (no boss association)
 const SOURCE_LABELS: Record<string, Partial<Record<string, string>>> = {
@@ -11,44 +15,79 @@ const SOURCE_LABELS: Record<string, Partial<Record<string, string>>> = {
 
 type Props = {
   source?: string;
-  boss?: string;
-  equipName?: string;
+  boss?: string | string[];
   bossMap: BossDisplayMap;
   lang: Lang;
+  /** When true, boss names link to their guide page. False by default (safe inside <a> cards). */
+  linkable?: boolean;
+  /** Smaller text for card contexts */
+  compact?: boolean;
 };
 
-export default function EquipmentSource({ source, boss, equipName, bossMap, lang }: Props) {
-  if (!source && !boss) return null;
+/** Render a single boss entry: portrait + name, optionally wrapped in a link */
+function BossEntry({ info, name, href, large }: { info: BossDisplayInfo; name: string; href?: ReturnType<ReturnType<typeof useI18n>['href']>; large?: boolean }) {
+  const inner = large ? (
+    <span className="inline-flex items-center gap-2">
+      <span className="md:hidden"><BossPortrait icons={info.icons} name={name} size="sm" /></span>
+      <span className="hidden md:block"><BossPortrait icons={info.icons} name={name} size="md" /></span>
+      <span>{name}</span>
+    </span>
+  ) : (
+    <span className="inline-flex items-center gap-1.5">
+      <BossPortrait icons={info.icons} name={name} size="xxs" />
+      <span>{name}</span>
+    </span>
+  );
 
-  // Irregular Extermination: resolve bosses from equipment name
-  if (source === 'Irregular Extermination' && equipName) {
-    const key = Object.keys(IE_BOSS_MAP).find(k => equipName.includes(k));
-    if (key) {
-      const bossNames = IE_BOSS_MAP[key];
-      const firstBoss = bossMap[bossNames[0]];
-      const sourceLabel = firstBoss ? lRec(firstBoss.source, lang) : source;
-      return (
-        <div className="text-sm text-zinc-300">
-          <p>{sourceLabel}</p>
-          <p>
-            {bossNames.map(n => lRec(bossMap[n]?.name, lang) || n).join(' / ')}
-          </p>
-        </div>
-      );
-    }
+  if (href) {
+    return (
+      <Link href={href} className="text-sky-400 hover:text-sky-300 transition-colors">
+        {inner}
+      </Link>
+    );
   }
 
-  // TODO: When boss guides are implemented, display boss portrait/icon using bossInfo.icons and bossInfo.element
-  // Special Request / other: resolve from boss field
-  const bossInfo = boss ? bossMap[boss] : null;
-  const bossName = bossInfo ? lRec(bossInfo.name, lang) : boss;
-  const rawSource = bossInfo ? lRec(bossInfo.source, lang) || source : source;
-  const sourceLabel = (rawSource && SOURCE_LABELS[rawSource]) ? lRec(SOURCE_LABELS[rawSource], lang) : rawSource;
+  return inner;
+}
+
+export default function EquipmentSource({ source, boss, bossMap, lang, linkable = false, compact = false }: Props) {
+  const { href: localHref } = useI18n();
+
+  if (!source && !boss) return null;
+
+  function bossHref(info: BossDisplayInfo) {
+    return linkable && info.guidePath ? localHref(info.guidePath) : undefined;
+  }
+
+  const bossIds = boss ? (Array.isArray(boss) ? boss : [boss]) : [];
+
+  // Boss(es): resolve from bossMap
+  if (bossIds.length > 0) {
+    const firstBoss = bossMap[bossIds[0]];
+    const sourceLabel = firstBoss ? lRec(firstBoss.source, lang) : null;
+
+    return (
+      <div className={compact ? "text-xs text-zinc-400" : "text-sm text-zinc-300"}>
+        {sourceLabel && <p>{sourceLabel}</p>}
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          {bossIds.map(id => {
+            const info = bossMap[id];
+            const bName = info ? lRec(info.name, lang) || id : id;
+            return info
+              ? <BossEntry key={id} info={info} name={bName} href={bossHref(info)} large={linkable} />
+              : <span key={id}>{bName}</span>;
+          })}
+        </div>
+      </div>
+    );
+  }
+
+  // Source-only (shop etc.)
+  const sourceLabel = (source && SOURCE_LABELS[source]) ? lRec(SOURCE_LABELS[source], lang) : source;
 
   return (
-    <div className="text-sm text-zinc-300">
+    <div className={compact ? "text-xs text-zinc-400" : "text-sm text-zinc-300"}>
       {sourceLabel && <p>{sourceLabel}</p>}
-      {bossName && <p>{bossName}</p>}
     </div>
   );
 }

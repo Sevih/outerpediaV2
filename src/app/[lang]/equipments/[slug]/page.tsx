@@ -9,7 +9,6 @@ import { getCharacterIndex, resolveIdToSlug } from '@/lib/data/characters';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getBossDisplayMap } from '@/lib/data/bosses';
 import type { Effect } from '@/types/effect';
-import { IE_BOSS_MAP } from '@/types/equipment';
 import { l } from '@/lib/i18n/localize';
 import EquipmentDetailClient from './EquipmentDetailClient';
 
@@ -71,19 +70,15 @@ export default async function EquipmentDetailPage({ params }: Props) {
   for (const d of debuffsArr) debuffMap[d.name] = d;
 
   // Build boss map for source display
-  const bossNames = new Set<string>();
-  if (equipment.type === 'weapon' || equipment.type === 'amulet') {
-    if (equipment.data.boss) bossNames.add(equipment.data.boss);
-  } else if (equipment.type === 'set') {
-    if (equipment.data.boss) bossNames.add(equipment.data.boss);
-  } else if (equipment.type === 'talisman') {
-    if (equipment.data.boss) bossNames.add(equipment.data.boss);
+  const bossIds = new Set<string>();
+  if (equipment.type !== 'ee') {
+    const boss = equipment.data.boss;
+    if (boss) {
+      if (Array.isArray(boss)) boss.forEach(id => bossIds.add(id));
+      else bossIds.add(boss);
+    }
   }
-  // IE bosses (derived from IE_BOSS_MAP)
-  for (const names of Object.values(IE_BOSS_MAP)) {
-    for (const name of names) bossNames.add(name);
-  }
-  const bossMap = await getBossDisplayMap([...bossNames]);
+  const bossMap = await getBossDisplayMap([...bossIds]);
 
   // Resolve reco references to character info with slugs
   const recoCharacters = await Promise.all(

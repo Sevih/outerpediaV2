@@ -146,7 +146,7 @@ function WeaponDetail({ weapon, lang, bossMap, statRanges }: { weapon: Weapon; l
       )}
 
       <EffectSection effectName={effectName} effectIcon={weapon.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} />
-      <SourceSection source={weapon.source} boss={weapon.boss} equipName={weapon.name} bossMap={bossMap} lang={lang} />
+      <SourceSection source={weapon.source} boss={weapon.boss} bossMap={bossMap} lang={lang} />
     </>
   );
 }
@@ -192,7 +192,7 @@ function AmuletDetail({ amulet, lang, bossMap, statRanges }: { amulet: Amulet; l
           </div>
         </section>
       )}
-      <SourceSection source={amulet.source} boss={amulet.boss} equipName={amulet.name} bossMap={bossMap} lang={lang} />
+      <SourceSection source={amulet.source} boss={amulet.boss} bossMap={bossMap} lang={lang} />
     </>
   );
 }
@@ -243,7 +243,7 @@ function TalismanDetail({ talisman, lang, bossMap, statRanges }: { talisman: Tal
           </div>
         </section>
       )}
-      <SourceSection source={talisman.source ?? undefined} boss={talisman.boss ?? undefined} equipName={talisman.name} bossMap={bossMap} lang={lang} />
+      <SourceSection source={talisman.source ?? undefined} boss={talisman.boss ?? undefined} bossMap={bossMap} lang={lang} />
     </>
   );
 }
@@ -357,7 +357,7 @@ function SetDetail({ set, lang, bossMap, statRanges }: { set: ArmorSet; lang: La
         </section>
       )}
 
-      <SourceSection source={set.source} boss={set.boss} equipName={set.name} bossMap={bossMap} lang={lang} />
+      <SourceSection source={set.source} boss={set.boss} bossMap={bossMap} lang={lang} />
     </>
   );
 }
@@ -495,10 +495,9 @@ function EffectSection({ effectName, effectIcon, effectDesc1, effectDesc4 }: {
   );
 }
 
-function SourceSection({ source, boss, equipName, bossMap, lang }: {
+function SourceSection({ source, boss, bossMap, lang }: {
   source?: string;
-  boss?: string;
-  equipName: string;
+  boss?: string | string[];
   bossMap: BossDisplayMap;
   lang: Lang;
 }) {
@@ -509,11 +508,12 @@ function SourceSection({ source, boss, equipName, bossMap, lang }: {
     <section>
       <h3>{t('equip.filter.source')}</h3>
       <div className="mt-2">
-        <EquipmentSource source={source} boss={boss} equipName={equipName} bossMap={bossMap} lang={lang} />
+        <EquipmentSource source={source} boss={boss} bossMap={bossMap} lang={lang} linkable />
       </div>
     </section>
   );
 }
+
 
 function TypeBadge({ label }: { label: string }) {
   return <span className="rounded-full bg-zinc-700 px-2.5 py-0.5 text-xs text-zinc-300">{label}</span>;

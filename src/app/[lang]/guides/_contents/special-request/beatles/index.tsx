@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import LootTable from '@/app/components/guides/LootTable';
 import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
@@ -44,6 +45,7 @@ export default function BeatlesGuide() {
       title={lRec(str.title, lang)}
       introduction={lRec(str.intro, lang)}
     >
+      <LootTable bossId="407600362" />
       <BossDisplay
         bossName="Dek'Ril"
         modeKey="Special Request: Identification"

@@ -76,7 +76,7 @@ export default function AmuletMiniCard({ amulet, lang, mainStat, bossMap }: Prop
         <p className="text-xs text-zinc-300">{formatScaledEffect(effectDesc, effectDesc1)}</p>
       )}
 
-      <EquipmentSource source={amulet.source} boss={amulet.boss} equipName={amulet.name} bossMap={bossMap} lang={lang} />
+      <EquipmentSource source={amulet.source} boss={amulet.boss} bossMap={bossMap} lang={lang} />
     </div>
   );
 

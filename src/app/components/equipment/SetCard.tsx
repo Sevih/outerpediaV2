@@ -72,7 +72,7 @@ export default function SetCard({ set, lang, bossMap }: Props) {
         </div>
       )}
 
-      <EquipmentSource source={set.source} boss={set.boss} equipName={set.name} bossMap={bossMap} lang={lang} />
+      <EquipmentSource source={set.source} boss={set.boss} bossMap={bossMap} lang={lang} compact />
     </Link>
   );
 }

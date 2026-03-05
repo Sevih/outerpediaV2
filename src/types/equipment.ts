@@ -16,8 +16,7 @@ type BaseEquipGear = {
   class: ClassType | null;
   mainStats: string[] | null;
   source?: string;
-  boss?: string;
-  mode: string | null;
+  boss?: string | string[];
   level: number;
 };
 
@@ -43,9 +42,8 @@ type BaseTalisman = {
   effect_desc4: string;
   effect_icon: string;
   level: number;
-  source: string | null;
-  boss: string | null;
-  mode: string | null;
+  source?: string;
+  boss?: string | string[];
 };
 
 export type Talisman = WithLocalizedFields<
@@ -67,9 +65,8 @@ type BaseArmorSet = {
   effect_2_4: string;
   effect_4_4: string;
   class: ClassType | null;
-  source: string;
-  boss: string;
-  mode: string | null;
+  source?: string;
+  boss?: string | string[];
   image_prefix: string;
 };
 
@@ -102,8 +99,7 @@ export type EquipmentCategory = 'weapon' | 'amulet' | 'set' | 'talisman';
 
 export type SourceDropInfo = {
   source: string | null;
-  boss: string | null;
-  mode: string | null;
+  boss: string | string[] | null;
   sourceLabel: string;
 };
 
@@ -113,6 +109,8 @@ export type BossDisplayInfo = {
   icons: string;
   element: string;
   source: LangMap;
+  /** Path to boss guide (e.g. "/guides/special-request/amadeus"), if a guide exists */
+  guidePath?: string;
 };
 
 export type BossDisplayMap = Record<string, BossDisplayInfo>;
@@ -122,12 +120,6 @@ export type SourceFilterOption = {
   key: string;
   bossKeys: string[];
   i18nKey?: string;
-};
-
-/** Irregular Extermination: equipment name pattern → boss names */
-export const IE_BOSS_MAP: Record<string, string[]> = {
-  Gorgon: ['Mutated Wyvre', 'Irregular Queen'],
-  Briareos: ['Iron Stretcher', 'Blockbuster'],
 };
 
 export type EquipmentDropEntry = {

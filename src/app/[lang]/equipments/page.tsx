@@ -8,7 +8,6 @@ import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getBossDisplayMap } from '@/lib/data/bosses';
 import type { Effect } from '@/types/effect';
 import type { SourceFilterOption } from '@/types/equipment';
-import { IE_BOSS_MAP } from '@/types/equipment';
 import { l as loc } from '@/lib/i18n/localize';
 import EquipmentsPageClient from './EquipmentsPageClient';
 
@@ -16,31 +15,21 @@ export const revalidate = 86400;
 
 /** Build source filter options from actual equipment data */
 function computeSourceFilters(
-  items: Array<{ source?: string; boss?: string; name: string }>,
+  items: Array<{ source?: string; boss?: string | string[] }>,
 ): SourceFilterOption[] {
-  const bosses: SourceFilterOption[] = [];
-  const ieGroups: SourceFilterOption[] = [];
+  const bossFilters: SourceFilterOption[] = [];
   const others: SourceFilterOption[] = [];
   const seen = new Set<string>();
 
   for (const item of items) {
-    // Boss-based (Special Request etc.)
-    if (item.boss && !seen.has(item.boss)) {
-      seen.add(item.boss);
-      bosses.push({ key: item.boss, bossKeys: [item.boss] });
-    }
-    // Irregular Extermination — group by raid name
-    if (item.source === 'Irregular Extermination') {
-      for (const [ieName, ieBosses] of Object.entries(IE_BOSS_MAP)) {
-        const ieKey = `ie:${ieName}`;
-        if (item.name.includes(ieName) && !seen.has(ieKey)) {
-          seen.add(ieKey);
-          ieGroups.push({ key: ieKey, bossKeys: ieBosses });
-        }
+    if (item.boss) {
+      const bossKeys = Array.isArray(item.boss) ? item.boss : [item.boss];
+      const key = bossKeys.join(',');
+      if (!seen.has(key)) {
+        seen.add(key);
+        bossFilters.push({ key, bossKeys });
       }
-    }
-    // Other named sources (Event Shop, Adventure License, …)
-    if (item.source && !item.boss && item.source !== 'Irregular Extermination') {
+    } else if (item.source) {
       const srcKey = `source:${item.source}`;
       if (!seen.has(srcKey)) {
         seen.add(srcKey);
@@ -50,7 +39,7 @@ function computeSourceFilters(
     }
   }
 
-  return [...bosses, ...ieGroups, ...others];
+  return [...bossFilters, ...others];
 }
 
 type Props = { params: Promise<{ lang: string }> };
@@ -104,15 +93,20 @@ export default async function EquipmentsPage({ params }: Props) {
   // Collect distinct mainStats values from amulets (sorted for stable UI)
   const mainStatsOptions = [...new Set(amulets.flatMap(a => a.mainStats ?? []))].sort();
 
-  // Collect all boss names (from items + filter bossKeys) for display map
-  const bossNames = new Set<string>();
-  for (const w of weapons) if (w.boss) bossNames.add(w.boss);
-  for (const a of amulets) if (a.boss) bossNames.add(a.boss);
-  for (const s of sets) if (s.boss) bossNames.add(s.boss);
+  // Collect all boss IDs for display map
+  const bossIds = new Set<string>();
+  const addBoss = (b?: string | string[]) => {
+    if (!b) return;
+    if (Array.isArray(b)) b.forEach(id => bossIds.add(id));
+    else bossIds.add(b);
+  };
+  for (const w of weapons) addBoss(w.boss);
+  for (const a of amulets) addBoss(a.boss);
+  for (const s of sets) addBoss(s.boss);
   for (const f of [...gearSourceFilters, ...setSourceFilters]) {
-    for (const bk of f.bossKeys) bossNames.add(bk);
+    for (const bk of f.bossKeys) bossIds.add(bk);
   }
-  const bossMap = await getBossDisplayMap([...bossNames]);
+  const bossMap = await getBossDisplayMap([...bossIds]);
 
   return (
     <div className="mx-auto px-4 py-6 md:px-6">

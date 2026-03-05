@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import LootTable from '@/app/components/guides/LootTable';
 import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
@@ -43,6 +44,7 @@ export default function PursuitIronStretcherGuide() {
     <GuideTemplate
       title={lRec(str.title, lang)}
     >
+      <LootTable bossId="51202001" />
       <BossDisplay
         bossName="Iron Stretcher"
         modeKey="Pursuit Operation"

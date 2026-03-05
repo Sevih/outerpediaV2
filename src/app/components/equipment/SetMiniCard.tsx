@@ -63,7 +63,7 @@ function SetPieceTooltip({ set, lang, show4Piece, bossMap, t }: { set: ArmorSet;
         )}
       </div>
 
-      <EquipmentSource source={set.source} boss={set.boss} equipName={set.name} bossMap={bossMap} lang={lang} />
+      <EquipmentSource source={set.source} boss={set.boss} bossMap={bossMap} lang={lang} />
     </div>
   );
 }

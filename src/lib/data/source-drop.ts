@@ -10,9 +10,7 @@ import type {
 // ── Source labels (EN hardcoded, i18n-ready) ──
 
 const SOURCE_LABELS: Record<string, string> = {
-  'Special Request': 'Special Request',
   'Event Shop': 'Event Shop',
-  'Irregular Extermination': 'Irregular Extermination',
   'Adventure License': 'Adventure License',
 };
 
@@ -33,8 +31,7 @@ type RawEntry = {
   class: ClassType | null;
   rarity: ItemRarity;
   source: string | null;
-  boss: string | null;
-  mode: string | null;
+  boss: string | string[] | null;
 };
 
 async function loadAllEquipment(): Promise<RawEntry[]> {
@@ -55,7 +52,6 @@ async function loadAllEquipment(): Promise<RawEntry[]> {
       rarity: w.rarity,
       source: w.source ?? null,
       boss: w.boss ?? null,
-      mode: w.mode,
     });
   }
 
@@ -67,7 +63,6 @@ async function loadAllEquipment(): Promise<RawEntry[]> {
       rarity: a.rarity,
       source: a.source ?? null,
       boss: a.boss ?? null,
-      mode: a.mode,
     });
   }
 
@@ -77,9 +72,8 @@ async function loadAllEquipment(): Promise<RawEntry[]> {
       category: 'talisman',
       class: null,
       rarity: t.rarity,
-      source: t.source,
-      boss: t.boss,
-      mode: t.mode,
+      source: t.source ?? null,
+      boss: t.boss ?? null,
     });
   }
 
@@ -91,7 +85,6 @@ async function loadAllEquipment(): Promise<RawEntry[]> {
       rarity: s.rarity,
       source: s.source ?? null,
       boss: s.boss ?? null,
-      mode: s.mode,
     });
   }
 
@@ -111,7 +104,6 @@ export async function getSourceDrop(itemName: string): Promise<SourceDropInfo | 
   return {
     source: entry.source,
     boss: entry.boss,
-    mode: entry.mode,
     sourceLabel: getSourceLabel(entry.source),
   };
 }
@@ -120,7 +112,7 @@ export async function getSourceDrop(itemName: string): Promise<SourceDropInfo | 
  * Get all equipment dropped by a specific boss, grouped by category.
  */
 export async function getEquipmentByBoss(
-  bossName: string
+  bossId: string
 ): Promise<Record<EquipmentCategory, EquipmentDropEntry[]>> {
   const all = await loadAllEquipment();
 
@@ -132,7 +124,8 @@ export async function getEquipmentByBoss(
   };
 
   for (const entry of all) {
-    if (entry.boss === bossName) {
+    const ids = Array.isArray(entry.boss) ? entry.boss : entry.boss ? [entry.boss] : [];
+    if (ids.includes(bossId)) {
       result[entry.category].push({
         name: entry.name,
         category: entry.category,
@@ -162,11 +155,12 @@ export async function getSourceDropMap(): Promise<
       map.set(sourceKey, new Map());
     }
     const bossMap = map.get(sourceKey)!;
+    const bossKey = Array.isArray(entry.boss) ? entry.boss.join(',') : entry.boss;
 
-    if (!bossMap.has(entry.boss)) {
-      bossMap.set(entry.boss, []);
+    if (!bossMap.has(bossKey)) {
+      bossMap.set(bossKey, []);
     }
-    bossMap.get(entry.boss)!.push({
+    bossMap.get(bossKey)!.push({
       name: entry.name,
       category: entry.category,
       class: entry.class,

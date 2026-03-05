@@ -38,15 +38,13 @@ function toggleArray<T>(
 }
 
 function matchesSource(
-  item: { source?: string; boss?: string; name: string },
+  item: { source?: string; boss?: string | string[] },
   keys: string[],
 ): boolean {
   return keys.some(key => {
     if (key.startsWith('source:')) return item.source === key.slice(7);
-    if (key.startsWith('ie:')) {
-      return item.source === 'Irregular Extermination' && item.name.includes(key.slice(3));
-    }
-    return item.boss === key;
+    const itemKey = Array.isArray(item.boss) ? item.boss.join(',') : item.boss;
+    return itemKey === key;
   });
 }
 

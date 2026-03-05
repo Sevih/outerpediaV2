@@ -1,12 +1,15 @@
 import { readFile } from 'fs/promises';
 import { join } from 'path';
-import type { Boss, BossIndex, BossIndexEntry } from '@/types/boss';
-import type { BossDisplayInfo, BossDisplayMap } from '@/types/equipment';
+import type { Boss, BossIndex } from '@/types/boss';
+import type { BossDisplayMap } from '@/types/equipment';
 
 const BOSSES_DIR = join(process.cwd(), 'data/boss');
 const INDEX_PATH = join(process.cwd(), 'data/generated/boss-index.json');
+const GUIDE_MAP_PATH = join(process.cwd(), 'data/boss-guide-map.json');
 
-/** Get a single boss by ID */
+type BossGuideMap = Record<string, string>;
+
+/** Get a single boss by ID (stage ID = filename) */
 export async function getBoss(id: string): Promise<Boss | null> {
   try {
     const raw = await readFile(join(BOSSES_DIR, `${id}.json`), 'utf-8');
@@ -22,49 +25,42 @@ export async function getBossIndex(): Promise<BossIndex> {
   return JSON.parse(raw) as BossIndex;
 }
 
-/** Find the equipment-relevant mode (Special Request or Pursuit Operation) */
-const EQUIP_MODE_PREFIXES = ['Special Request', 'Pursuit Operation'];
-
-function findEquipmentMode(entry: BossIndexEntry) {
-  for (const prefix of EQUIP_MODE_PREFIXES) {
-    for (const [key, mode] of Object.entries(entry.modes)) {
-      if (key.startsWith(prefix)) return mode.name;
-    }
+/** Load boss-guide-map.json (cached) */
+let guideMapCache: BossGuideMap | null = null;
+async function loadGuideMap(): Promise<BossGuideMap> {
+  if (!guideMapCache) {
+    const raw = await readFile(GUIDE_MAP_PATH, 'utf-8');
+    guideMapCache = JSON.parse(raw) as BossGuideMap;
   }
-  return {};
-}
-
-function buildDisplayInfo(entry: BossIndexEntry): BossDisplayInfo {
-  return {
-    name: entry.name,
-    icons: entry.icons,
-    element: entry.element,
-    source: findEquipmentMode(entry),
-  };
+  return guideMapCache;
 }
 
 /**
  * Build a lightweight boss display map for equipment source rendering.
- * Handles combined boss names like "Dek'Ril & Mek'Ril" by looking up the first part.
+ * Takes boss stage IDs, loads each boss JSON directly for display info.
  */
-export async function getBossDisplayMap(bossNames: string[]): Promise<BossDisplayMap> {
-  const index = await getBossIndex();
+export async function getBossDisplayMap(bossIds: string[]): Promise<BossDisplayMap> {
+  const uniqueIds = [...new Set(bossIds)];
+  const [bosses, guideMap] = await Promise.all([
+    Promise.all(uniqueIds.map(id => getBoss(id))),
+    loadGuideMap(),
+  ]);
+
   const map: BossDisplayMap = {};
 
-  for (const name of bossNames) {
-    if (map[name]) continue;
+  for (let i = 0; i < uniqueIds.length; i++) {
+    const id = uniqueIds[i];
+    const boss = bosses[i];
+    if (!boss) continue;
 
-    // Direct match
-    if (index[name]) {
-      map[name] = buildDisplayInfo(index[name]);
-      continue;
-    }
-
-    // Handle combined names like "Dek'Ril & Mek'Ril"
-    const parts = name.split(' & ');
-    if (parts.length > 1 && index[parts[0]]) {
-      map[name] = buildDisplayInfo(index[parts[0]]);
-    }
+    const guideSlug = guideMap[id];
+    map[id] = {
+      name: boss.Name,
+      icons: boss.icons,
+      element: boss.element,
+      source: boss.location.mode,
+      ...(guideSlug && { guidePath: `/guides/${guideSlug}` }),
+    };
   }
 
   return map;

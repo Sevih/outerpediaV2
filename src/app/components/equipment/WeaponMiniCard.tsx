@@ -76,7 +76,7 @@ export default function WeaponMiniCard({ weapon, lang, mainStat, bossMap }: Prop
         <p className="text-xs text-zinc-300">{formatScaledEffect(effectDesc, effectDesc1)}</p>
       )}
 
-      <EquipmentSource source={weapon.source} boss={weapon.boss} equipName={weapon.name} bossMap={bossMap} lang={lang} />
+      <EquipmentSource source={weapon.source} boss={weapon.boss} bossMap={bossMap} lang={lang} />
     </div>
   );
 
