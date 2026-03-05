@@ -1,6 +1,6 @@
 import { getWeapons, getAmulets, getTalismans, getArmorSets, getExclusiveEquipment } from '@/lib/data/equipment';
 import { slugifyEquipment } from '@/lib/format-text';
-import { getAllGuides, getGuideCategories } from '@/lib/data/guides';
+import { getAllGuides } from '@/lib/data/guides';
 
 export type EquipmentSearchItem = {
   slug: string;
@@ -16,7 +16,7 @@ export type GuideSearchItem = {
   slug: string;
   category: string;
   title: Record<string, string>;
-  categoryIcon: string;
+  icon: string;
 };
 
 export type SearchExtras = {
@@ -25,21 +25,16 @@ export type SearchExtras = {
 };
 
 export async function GET() {
-  const [weapons, amulets, talismans, sets, eeMap, guides, categories] = await Promise.all([
+  const [weapons, amulets, talismans, sets, eeMap, guides] = await Promise.all([
     getWeapons(),
     getAmulets(),
     getTalismans(),
     getArmorSets(),
     getExclusiveEquipment(),
     getAllGuides(),
-    getGuideCategories(),
   ]);
 
-  const categoryIconMap = Object.fromEntries(
-    categories.map((c) => [c.slug, c.icon])
-  );
-
-  const equipment: EquipmentSearchItem[] = [
+const equipment: EquipmentSearchItem[] = [
     ...weapons.map((w) => ({
       slug: slugifyEquipment(w.name),
       name: w.name,
@@ -76,23 +71,22 @@ export async function GET() {
       type: 'set' as const,
       image: `TI_Equipment_Armor_${s.image_prefix}`,
     })),
-    ...Object.values(eeMap).map((ee) => ({
+    ...Object.entries(eeMap).map(([charId, ee]) => ({
       slug: slugifyEquipment(ee.name),
       name: ee.name,
       name_jp: ee.name_jp,
       name_kr: ee.name_kr,
       name_zh: ee.name_zh,
       type: 'ee' as const,
-      image: ee.icon_effect,
+      image: charId,
     })),
   ];
 
-  // TODO: When guide-specific icons are added to public/images/guides/, serve g.icon here instead of category icon
   const guideItems: GuideSearchItem[] = guides.map((g) => ({
     slug: g.slug,
     category: g.category,
     title: g.title,
-    categoryIcon: categoryIconMap[g.category] ?? '',
+    icon: `/images/guides/${g.icon}.webp`,
   }));
 
   const data: SearchExtras = { equipment, guides: guideItems };

@@ -41,11 +41,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const typeLabelMap = TYPE_LABELS[equipment.type];
   const typeLabel = typeLabelMap?.[lang] ?? typeLabelMap?.en ?? '';
 
+  let ogImage: string;
+  switch (equipment.type) {
+    case 'set':
+      ogImage = `/images/equipment/TI_Equipment_Armor_${equipment.data.image_prefix}.webp`;
+      break;
+    case 'ee':
+      ogImage = `/images/characters/ee/${equipment.characterId}.webp`;
+      break;
+    default:
+      ogImage = `/images/equipment/${equipment.data.image}.webp`;
+  }
+
   return createPageMetadata({
     lang,
     path: `/equipments/${slug}`,
     title: `${name} — ${typeLabel}`,
     description: `${name} — ${typeLabel} | Outerpedia`,
+    ogImage,
   });
 }
 

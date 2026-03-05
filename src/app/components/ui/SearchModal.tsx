@@ -12,6 +12,7 @@ import { ALL_PAGES } from '@/lib/nav';
 import { FILTER } from '@/lib/theme';
 import type { CharacterIndexMap } from '@/types/character';
 import type { SearchExtras, EquipmentSearchItem } from '@/app/api/search-index/extras/route';
+import type { TranslationKey } from '@/i18n';
 
 
 export function SearchTrigger({ onClick }: { onClick: () => void }) {
@@ -38,7 +39,7 @@ const EQUIP_TYPE_LABELS: Record<EquipmentSearchItem['type'], string> = {
 
 function getEquipImage(item: EquipmentSearchItem): string {
   if (item.type === 'set') return `/images/equipment/${item.image}.webp`;
-  if (item.type === 'ee') return `/images/ui/effect/${item.image}.webp`;
+  if (item.type === 'ee') return `/images/characters/ee/${item.image}.webp`;
   return `/images/equipment/${item.image}.webp`;
 }
 
@@ -349,7 +350,7 @@ export default function SearchModal({
                   >
                     <div className="relative size-6 shrink-0">
                       <Image
-                        src={guide.categoryIcon}
+                        src={guide.icon}
                         alt=""
                         fill
                         sizes="24px"
@@ -357,6 +358,7 @@ export default function SearchModal({
                       />
                     </div>
                     <span className="flex-1">{displayTitle}</span>
+                    <span className="text-xs text-zinc-500">{t(`guides.category.${guide.category}` as TranslationKey)}</span>
                   </button>
                 );
               })}

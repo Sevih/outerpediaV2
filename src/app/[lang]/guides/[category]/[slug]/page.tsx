@@ -39,6 +39,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/guides/${guide.category}/${slug}`,
     title: t['page.guide.meta_title'].replace('{title}', title),
     description,
+    // TODO: verify og_image overrides in _index.json render well on Discord/social
+    ogImage: guide.og_image ?? `/images/guides/${guide.icon}.png`,
   });
 }
 
