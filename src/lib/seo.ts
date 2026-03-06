@@ -101,7 +101,7 @@ export function createPageMetadata({
       images: [{ url: ogImage, width, height }],
     },
     twitter: {
-      card: isDefault ? 'summary_large_image' : 'summary',
+      card: isDefault || width > height ? 'summary_large_image' : 'summary',
       title: fullTitle,
       description,
       images: [ogImage],
