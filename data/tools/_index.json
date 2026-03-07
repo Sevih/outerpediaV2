@@ -9,75 +9,75 @@
   "tierlistpve": {
     "icon": "nav/CM_Crown_On",
     "category": "rankings",
-    "order": 20,
+    "order": 1,
     "status": "coming-soon",
     "keywords": ["tier list", "pve", "ranking", "characters"]
   },
   "tierlistpvp": {
     "icon": "nav/CM_Crown",
     "category": "rankings",
-    "order": 30,
+    "order": 2,
     "status": "coming-soon",
     "keywords": ["tier list", "pvp", "ranking", "arena", "characters"]
   },
   "ee-priority-base": {
-    "icon": "effect/CM_UO_EXCLUSIVE",
+    "icon": "nav/CM_UO_EXCLUSIVE",
     "category": "rankings",
     "order": 40,
     "status": "coming-soon",
     "keywords": ["exclusive", "equipment", "EE", "priority", "ranking", "base", "level 0"]
   },
   "ee-priority-plus10": {
-    "icon": "effect/CM_UO_EXCLUSIVE",
+    "icon": "nav/CM_UO_EXCLUSIVE2",
     "category": "rankings",
     "order": 50,
     "status": "coming-soon",
     "keywords": ["exclusive", "equipment", "EE", "priority", "ranking", "+10", "enhanced"]
   },
   "gear-usage-statistics": {
-    "icon": "nav/CM_EtcMenu_Inventory",
+    "icon": "nav/CM_Gear_Stat",
     "category": "equipment",
     "order": 60,
     "status": "coming-soon",
     "keywords": ["gear", "usage", "statistics", "weapons", "amulets", "sets"]
   },
   "gear-usage-finder": {
-    "icon": "nav/CM_EtcMenu_Inventory",
+    "icon": "nav/CM_Gear_Find",
     "category": "equipment",
     "order": 70,
     "status": "coming-soon",
     "keywords": ["gear", "usage", "finder", "equipment", "match"]
   },
   "pull-simulator": {
-    "icon": "recruit/CM_Recruit_Tag_Premium",
+    "icon": "nav/CM_EtcMenu_Recruitment",
     "category": "simulators",
     "order": 80,
     "status": "coming-soon",
     "keywords": ["gacha", "pull", "simulator", "summon", "banner", "pity"]
   },
   "progress-tracker": {
-    "icon": "nav/CM_Mission_Icon_Weekly",
+    "icon": "nav/CM_Tracker",
     "category": "simulators",
     "order": 90,
     "status": "coming-soon",
     "keywords": ["progress", "tracker", "checklist", "daily", "weekly", "monthly"]
   },
   "team-planner": {
-    "icon": "nav/CM_EtcMenu_Colleague",
+    "icon": "nav/CM_Agit_Icon_Supplier_05",
     "category": "simulators",
     "order": 100,
     "status": "hidden",
     "keywords": ["team", "planner", "builder", "composition"]
   },
   "patch-notes": {
-    "icon": "nav/CM_EtcMenu_Setting",
+    "icon": "nav/CM_Agit_Icon_Supplier_04",
     "category": "info",
     "order": 110,
     "status": "coming-soon",
     "keywords": ["patch", "notes", "developer", "update", "hero compendium"]
   },
   "coupon-codes": {
-    "icon": "nav/CM_EtcMenu_Setting",
+    "icon": "nav/CM_Agit_Icon_Antiparticle_04",
     "category": "info",
     "order": 120,
     "status": "available",
@@ -85,21 +85,21 @@
     "keywords": ["coupon", "codes", "promo", "redeem", "free"]
   },
   "event": {
-    "icon": "nav/CM_EtcMenu_Setting",
+    "icon": "nav/CM_Shop_Shortcuts_EventShop",
     "category": "info",
     "order": 130,
     "status": "hidden",
     "keywords": ["event", "calendar", "schedule"]
   },
   "wallpapers": {
-    "icon": "nav/CM_EtcMenu_Setting",
+    "icon": "nav/CM_Wallpapers",
     "category": "media",
     "order": 140,
     "status": "coming-soon",
     "keywords": ["wallpaper", "artwork", "download", "official"]
   },
   "soundtrack": {
-    "icon": "nav/CM_EtcMenu_Setting",
+    "icon": "nav/CM_OST",
     "category": "media",
     "order": 150,
     "status": "coming-soon",
