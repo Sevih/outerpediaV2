@@ -100,6 +100,7 @@ const kr: Record<TranslationKey, string> = {
   'page.tierlist.meta_title': '아우터플레인 티어 리스트 – {monthYear}',
   'page.tierlist.description':
     '아우터플레인 티어 리스트. 역할 및 콘텐츠별 캐릭터 순위. {monthYear} 업데이트.',
+  'page.tierlist.other_rankings': '기타 랭킹',
   'page.tools.title': '아우터플레인 도구 & 유틸리티',
   'page.tools.description':
     '아우터플레인 도구: 장비 솔버, 팀 플래너, 뽑기 시뮬레이터, 진행 트래커 등.',

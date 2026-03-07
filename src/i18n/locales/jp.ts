@@ -100,6 +100,7 @@ const jp: Record<TranslationKey, string> = {
   'page.tierlist.meta_title': 'アウタープレーン ティアリスト – {monthYear}',
   'page.tierlist.description':
     'アウタープレーンのティアリスト。役割・コンテンツ別にキャラクターをランキング。{monthYear}更新。',
+  'page.tierlist.other_rankings': 'その他のランキング',
   'page.tools.title': 'アウタープレーン ツール & ユーティリティ',
   'page.tools.description':
     'アウタープレーンのツール：装備ソルバー、チームプランナー、ガチャシミュレーター、進捗トラッカーなど。',
