@@ -5,7 +5,7 @@ import { LANGS } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
 import type { TranslationKey } from '@/i18n';
-import { getToolMeta, getToolSlugs } from '@/lib/data/tools';
+import { getToolMeta, getToolSlugs, isDev } from '@/lib/data/tools';
 import Link from 'next/link';
 import { localePath } from '@/lib/navigation';
 
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     getToolMeta(slug),
   ]);
 
-  if (!tool || tool.status === 'coming-soon') return {};
+  if (!tool || (!isDev && tool.status === 'coming-soon')) return {};
 
   const titleKey = `tools.${slug}` as TranslationKey;
   const descKey = `tools.${slug}.desc` as TranslationKey;
@@ -50,7 +50,7 @@ export default async function ToolDetailPage({ params }: Props) {
   const lang = rawLang as Lang;
 
   const tool = await getToolMeta(slug);
-  if (!tool || tool.status === 'coming-soon') notFound();
+  if (!tool || (!isDev && tool.status === 'coming-soon')) notFound();
 
   const t = await loadMessages(lang);
   const titleKey = `tools.${slug}` as TranslationKey;

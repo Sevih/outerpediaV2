@@ -1,9 +1,16 @@
-'use client';
+import { getCharactersForList } from '@/lib/data/characters';
+import { getExclusiveEquipment } from '@/lib/data/equipment';
+import EePriorityPlus10Client from './EePriorityPlus10Client';
 
-export default function EePriorityPlus10Tool() {
-  return (
-    <div className="mx-auto max-w-4xl text-center text-zinc-400">
-      <p>EE Priority (+10) — Under development</p>
-    </div>
-  );
+export default async function EePriorityPlus10Tool() {
+  const [characters, eeMap] = await Promise.all([
+    getCharactersForList(),
+    getExclusiveEquipment(),
+  ]);
+
+  const entries = characters
+    .filter(c => eeMap[c.ID] && eeMap[c.ID].rank10)
+    .map(c => ({ ...c, eeRank: eeMap[c.ID].rank10! }));
+
+  return <EePriorityPlus10Client characters={entries} />;
 }

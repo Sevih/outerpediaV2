@@ -11,9 +11,10 @@ type Props = {
   href?: string;
   lang: Lang;
   t: Record<TranslationKey, string>;
+  devMode?: boolean;
 };
 
-export default function ToolCard({ slug, icon, status, href, lang, t }: Props) {
+export default function ToolCard({ slug, icon, status, href, lang, t, devMode }: Props) {
   const titleKey = `tools.${slug}` as TranslationKey;
   const descKey = `tools.${slug}.desc` as TranslationKey;
   const title = t[titleKey] ?? slug;
@@ -49,7 +50,7 @@ export default function ToolCard({ slug, icon, status, href, lang, t }: Props) {
     </>
   );
 
-  if (status === 'coming-soon' || status === 'hidden') {
+  if ((status === 'coming-soon' || status === 'hidden') && !devMode) {
     return (
       <div className={`card-interactive flex items-center gap-4 p-4 cursor-default ${status === 'hidden' ? 'opacity-60 border border-dashed border-amber-700/50' : 'opacity-50'}`}>
         {inner}

@@ -6,7 +6,7 @@ import type { TranslationKey } from '@/i18n';
 import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
 import { localePath } from '@/lib/navigation';
-import { getAllTools } from '@/lib/data/tools';
+import { getAllTools, isDev } from '@/lib/data/tools';
 
 export const revalidate = 86400;
 
@@ -58,7 +58,7 @@ export default async function TierlistPage({ params }: Props) {
         {featured.map((tool) => {
           const titleKey = `tools.${tool.slug}` as TranslationKey;
           const descKey = `tools.${tool.slug}.desc` as TranslationKey;
-          const isAvailable = tool.status === 'available';
+          const isAvailable = tool.status === 'available' || isDev;
 
           const inner = (
             <div className="flex flex-col items-center gap-3 p-6 text-center">
@@ -120,7 +120,7 @@ export default async function TierlistPage({ params }: Props) {
             {others.map((tool) => {
               const titleKey = `tools.${tool.slug}` as TranslationKey;
               const descKey = `tools.${tool.slug}.desc` as TranslationKey;
-              const isAvailable = tool.status === 'available';
+              const isAvailable = tool.status === 'available' || isDev;
 
               const inner = (
                 <>

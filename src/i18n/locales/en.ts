@@ -106,6 +106,7 @@ const en = {
   'tierlist.disclaimer_pve': 'This tier list assumes to have the Exclusive Equipment Lv0. Results may vary if upgrades are not unlocked. This list is for PvE content only.',
   'tierlist.disclaimer_pvp': 'This tier list assumes 6-star transcends and level 10 Exclusive Equipment effects. Results may vary if upgrades are not unlocked. This list is for PvP content only.',
   'tierlist.disclaimer_ee_base': 'This ranking reflects the priority of unlocking each Exclusive Equipment at base level (Lv0). It does not account for upgraded effects.',
+  'tierlist.disclaimer_ee_plus10': 'This ranking reflects the priority of upgrading each Exclusive Equipment to +10.',
   'page.tools.title': 'Outerplane Tools & Utilities',
   'page.tools.description':
     'Outerplane tools: gear solver, team planner, pull simulator, progress tracker, and more.',

@@ -23,11 +23,12 @@ type Props = {
   groups: GroupData[];
   lang: Lang;
   t: Record<TranslationKey, string>;
+  devMode?: boolean;
 };
 
 const ALL = '__all__';
 
-export default function ToolsPageContent({ groups, lang, t }: Props) {
+export default function ToolsPageContent({ groups, lang, t, devMode }: Props) {
   const [active, setActive] = useState(ALL);
 
   const tabItems = [ALL, ...groups.map((g) => g.category.slug)];
@@ -71,6 +72,7 @@ export default function ToolsPageContent({ groups, lang, t }: Props) {
                   href={tool.href}
                   lang={lang}
                   t={t}
+                  devMode={devMode}
                 />
               ))}
             </div>

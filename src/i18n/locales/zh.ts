@@ -106,6 +106,7 @@ const zh: Record<TranslationKey, string> = {
   'tierlist.disclaimer_pve': '本排行榜假设拥有专属装备Lv0。如果未解锁强化，结果可能有所不同。仅适用于PvE内容。',
   'tierlist.disclaimer_pvp': '本排行榜假设拥有6星超越和10级专属装备效果。如果未解锁强化，结果可能有所不同。仅适用于PvP内容。',
   'tierlist.disclaimer_ee_base': '本排行榜反映了各专属装备在基础等级（Lv0）解锁的优先级。未考虑强化后的效果。',
+  'tierlist.disclaimer_ee_plus10': '本排行榜反映了各专属装备升级至+10的优先级。',
   'page.tools.title': '异域战记 工具 & 实用程序',
   'page.tools.description':
     '异域战记工具：装备求解器、队伍规划器、抽卡模拟器、进度追踪器等。',

@@ -3,7 +3,7 @@ import { join } from 'path';
 import type { ToolMeta, ToolCategory } from '@/types/tool';
 
 const TOOLS_DIR = join(process.cwd(), 'data/tools');
-const isDev = process.env.NODE_ENV === 'development';
+export const isDev = process.env.NODE_ENV === 'development';
 
 // ─── Caches ──────────────────────────────────────────────────────────────────
 
