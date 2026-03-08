@@ -5,10 +5,13 @@ import {
   mkdirSync,
   copyFileSync,
   writeFileSync,
+  readFileSync,
   openSync,
   readSync,
   closeSync,
+  statSync,
 } from 'fs';
+import { createHash } from 'crypto';
 import { join, extname, basename } from 'path';
 import { PATHS } from '../config';
 
@@ -396,6 +399,26 @@ function generateJson(): number {
 // Entry point
 // ---------------------------------------------------------------------------
 
+const STAMP_FILE = join(PATHS.generated, '.wallpapers-stamp');
+
+function computeSourceFingerprint(): string {
+  const files = getAllFiles(PATHS.extractedAssets);
+  // Hash filenames + sizes for a fast fingerprint
+  const hash = createHash('md5');
+  for (const f of files.sort()) {
+    hash.update(f);
+    hash.update(String(statSync(f).size));
+  }
+  return hash.digest('hex');
+}
+
+function isUpToDate(): boolean {
+  const outputJson = join(PATHS.generated, 'wallpapers.json');
+  if (!existsSync(STAMP_FILE) || !existsSync(outputJson)) return false;
+  const savedFingerprint = readFileSync(STAMP_FILE, 'utf-8').trim();
+  return savedFingerprint === computeSourceFingerprint();
+}
+
 export async function run(): Promise<string> {
   if (!existsSync(PATHS.extractedAssets)) {
     // No datamine — just regenerate JSON from existing files
@@ -403,6 +426,12 @@ export async function run(): Promise<string> {
     if (!hasOutput) return 'skipped (no datamine, no existing files)';
     const count = generateJson();
     return `json only — ${count} entries`;
+  }
+
+  // Check if source files haven't changed since last run
+  if (isUpToDate()) {
+    const count = generateJson();
+    return `skipped (up to date, ${count} entries)`;
   }
 
   // 1. Hash existing destination files
@@ -423,6 +452,10 @@ export async function run(): Promise<string> {
 
   // 5. Generate JSON
   const total = generateJson();
+
+  // 6. Save fingerprint for next run
+  const fingerprint = computeSourceFingerprint();
+  writeFileSync(STAMP_FILE, fingerprint);
 
   const parts = [`${total} entries`];
   if (copied > 0) parts.push(`${copied} new`);

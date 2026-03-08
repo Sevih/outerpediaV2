@@ -38,6 +38,10 @@ export const PATHS = {
   // Wallpapers
   wallpaperOutput: join(ROOT, 'public/images/download'),
 
+  // Patch notes
+  patchNotes: join(ROOT, 'data/patch-notes'),
+  patchNotesImages: join(ROOT, 'public/images/patch-notes'),
+
   // Datamine
   parserV3: join(ROOT, 'datamine/ParserV3'),
   datamineFiles: join(ROOT, 'datamine/files'),

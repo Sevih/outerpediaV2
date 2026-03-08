@@ -57,11 +57,8 @@ function Lightbox({
   onNavigate: (i: number) => void;
   downloadLabel: string;
 }) {
-  const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    setPortalRoot(document.getElementById('portal-root'));
-  }, []);
+  const portalRoot =
+    typeof document !== 'undefined' ? document.getElementById('portal-root') : null;
 
   const handlePrev = useCallback(
     () => onNavigate(currentIndex > 0 ? currentIndex - 1 : images.length - 1),

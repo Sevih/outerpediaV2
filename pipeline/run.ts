@@ -18,6 +18,8 @@ const steps: Step[] = [
   { name: 'most-used-units', run: () => import('./steps/most-used-units').then(m => m.run()) },
   { name: 'bgm-extract', run: () => import('./steps/bgm-extract').then(m => m.run()) },
   { name: 'wallpapers', run: () => import('./steps/wallpapers').then(m => m.run()) },
+  { name: 'patch-notes', run: () => import('./steps/patch-notes').then(m => m.run()) },
+  { name: 'patch-notes-legacy', run: () => import('./steps/patch-notes-legacy').then(m => m.run()) },
   { name: 'validate-reco', run: () => import('./steps/validate-reco').then(m => m.run()) },
 ];
 
