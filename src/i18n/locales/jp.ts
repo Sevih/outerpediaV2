@@ -105,6 +105,7 @@ const jp: Record<TranslationKey, string> = {
   'tierlist.characters_count': 'キャラクター',
   'tierlist.disclaimer_pve': 'このティアリストは専用装備Lv0を所持していることを前提としています。強化が解放されていない場合、結果が異なる場合があります。PvEコンテンツ専用です。',
   'tierlist.disclaimer_pvp': 'このティアリストは6つ星超越とレベル10専用装備効果を前提としています。強化が解放されていない場合、結果が異なる場合があります。PvPコンテンツ専用です。',
+  'tierlist.disclaimer_ee_base': 'このランキングは各専用装備の基本レベル（Lv0）での解放優先度を反映しています。強化後の効果は考慮されていません。',
   'page.tools.title': 'アウタープレーン ツール & ユーティリティ',
   'page.tools.description':
     'アウタープレーンのツール：装備ソルバー、チームプランナー、ガチャシミュレーター、進捗トラッカーなど。',
