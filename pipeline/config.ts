@@ -35,6 +35,9 @@ export const PATHS = {
     bg: join(ROOT, 'public/images/bg'),
   },
 
+  // Wallpapers
+  wallpaperOutput: join(ROOT, 'public/images/download'),
+
   // Datamine
   parserV3: join(ROOT, 'datamine/ParserV3'),
   datamineFiles: join(ROOT, 'datamine/files'),

@@ -591,6 +591,21 @@ const jp: Record<TranslationKey, string> = {
     'これらのサウンドトラックは開発者（VAGames）の許可を得て、個人的な非商用利用のみを目的として提供されています。',
   'ost.disclaimer.line2': 'このコンテンツは権利者の要請により削除される場合があります。',
   'ost.keyboardShortcuts': 'キーボードショートカット',
+  // Wallpapers
+  'wallpapers.description': 'アウタープレインの公式アートワークを閲覧・ダウンロードできます。画像をクリックしてプレビューとダウンロードができます。',
+  'wallpapers.download': 'PNGをダウンロード',
+  'wallpapers.cat.Outerpedia': 'Outerpedia',
+  'wallpapers.cat.Art': 'デミウルゴスアート',
+  'wallpapers.cat.Banner': 'バナー',
+  'wallpapers.cat.Full:Events': 'イベント',
+  'wallpapers.cat.Full:Scenario': 'シナリオ',
+  'wallpapers.cat.Full:Others': 'その他',
+  'wallpapers.cat.HeroFullArt': 'ヒーロー',
+  'wallpapers.cat.Cutin': 'カットイン',
+  'wallpapers.disclaimer.line1':
+    'これらの素材は、パブリッシャー（Major9）および開発者（VAGames）の許可を得て、個人使用目的でのみ提供されています。',
+  'wallpapers.disclaimer.line2': 'その他の使用については、こちらからお問い合わせください：',
+  'wallpapers.contactLink': '公式サポート',
 };
 
 export default jp;

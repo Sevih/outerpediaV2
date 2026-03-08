@@ -591,6 +591,21 @@ const zh: Record<TranslationKey, string> = {
     '这些原声音乐经开发者（VAGames）许可，仅供个人非商业用途使用。',
   'ost.disclaimer.line2': '此内容可能应权利人的要求而被删除。',
   'ost.keyboardShortcuts': '键盘快捷键',
+  // Wallpapers
+  'wallpapers.description': '浏览并下载异域战记官方艺术作品。点击任意图片即可预览并下载。',
+  'wallpapers.download': '下载',
+  'wallpapers.cat.Outerpedia': 'Outerpedia',
+  'wallpapers.cat.Art': '创世之神招募',
+  'wallpapers.cat.Banner': '横幅',
+  'wallpapers.cat.Full:Events': '活动CG',
+  'wallpapers.cat.Full:Scenario': '剧情CG',
+  'wallpapers.cat.Full:Others': '其他',
+  'wallpapers.cat.HeroFullArt': '同伴立绘',
+  'wallpapers.cat.Cutin': '连携技能特写',
+  'wallpapers.disclaimer.line1':
+    '这些素材已获得发行商（Major9）和开发商（VAGames）的许可，仅供个人使用。',
+  'wallpapers.disclaimer.line2': '如需其他用途，请通过官方支持申请许可：',
+  'wallpapers.contactLink': '官方支持',
 };
 
 export default zh;

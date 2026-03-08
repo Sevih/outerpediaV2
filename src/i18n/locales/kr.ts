@@ -591,6 +591,21 @@ const kr: Record<TranslationKey, string> = {
     '이 사운드트랙은 개발자(VAGames)의 승인을 받아 개인적, 비상업적 용도로만 제공됩니다.',
   'ost.disclaimer.line2': '이 콘텐츠는 권리자의 요청에 따라 삭제될 수 있습니다.',
   'ost.keyboardShortcuts': '키보드 단축키',
+  // Wallpapers
+  'wallpapers.description': '아우터플레인 공식 아트워크를 탐색하고 다운로드하세요. 이미지를 클릭하면 미리보기 및 다운로드가 가능합니다.',
+  'wallpapers.download': 'PNG 다운로드',
+  'wallpapers.cat.Outerpedia': 'Outerpedia',
+  'wallpapers.cat.Art': '데미우르고스 아트',
+  'wallpapers.cat.Banner': '배너',
+  'wallpapers.cat.Full:Events': '이벤트',
+  'wallpapers.cat.Full:Scenario': '시나리오',
+  'wallpapers.cat.Full:Others': '기타',
+  'wallpapers.cat.HeroFullArt': '영웅',
+  'wallpapers.cat.Cutin': '컷인',
+  'wallpapers.disclaimer.line1':
+    '이 자료는 퍼블리셔(Major9)와 개발사(VAGames)의 승인을 받아 개인 사용 목적으로만 제공됩니다.',
+  'wallpapers.disclaimer.line2': '기타 용도는 공식 지원을 통해 허가를 요청해 주세요:',
+  'wallpapers.contactLink': '공식 지원',
 };
 
 export default kr;

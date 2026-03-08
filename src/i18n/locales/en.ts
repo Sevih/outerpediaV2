@@ -591,6 +591,21 @@ const en = {
     'These soundtracks are provided for personal, non-commercial use only, with approval from the developers (VAGames).',
   'ost.disclaimer.line2': 'This content may be removed upon request from the rights holder.',
   'ost.keyboardShortcuts': 'Keyboard shortcuts',
+  // Wallpapers
+  'wallpapers.description': 'Browse and download official Outerplane artworks. Click on any image to preview and download.',
+  'wallpapers.download': 'Download PNG',
+  'wallpapers.cat.Outerpedia': 'Outerpedia',
+  'wallpapers.cat.Art': 'Demiurge Art',
+  'wallpapers.cat.Banner': 'Banners',
+  'wallpapers.cat.Full:Events': 'Events',
+  'wallpapers.cat.Full:Scenario': 'Scenario',
+  'wallpapers.cat.Full:Others': 'Others',
+  'wallpapers.cat.HeroFullArt': 'Heroes',
+  'wallpapers.cat.Cutin': 'Cutin',
+  'wallpapers.disclaimer.line1':
+    'These assets are provided for personal use only, with approval from the publisher (Major9) and developers (VAGames).',
+  'wallpapers.disclaimer.line2': 'For any other use, please request permission via',
+  'wallpapers.contactLink': 'Official Support',
 } as const;
 
 export default en;

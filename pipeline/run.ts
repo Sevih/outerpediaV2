@@ -17,6 +17,7 @@ const steps: Step[] = [
   { name: 'guide-boss-map', run: () => import('./steps/guide-boss-map').then(m => m.run()) },
   { name: 'most-used-units', run: () => import('./steps/most-used-units').then(m => m.run()) },
   { name: 'bgm-extract', run: () => import('./steps/bgm-extract').then(m => m.run()) },
+  { name: 'wallpapers', run: () => import('./steps/wallpapers').then(m => m.run()) },
   { name: 'validate-reco', run: () => import('./steps/validate-reco').then(m => m.run()) },
 ];
 
