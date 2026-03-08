@@ -15,6 +15,7 @@ const steps: Step[] = [
   { name: 'character-stats', run: () => import('./steps/character-stats').then(m => m.run()) },
   { name: 'area-names', run: () => import('./steps/area-names').then(m => m.run()) },
   { name: 'guide-boss-map', run: () => import('./steps/guide-boss-map').then(m => m.run()) },
+  { name: 'most-used-units', run: () => import('./steps/most-used-units').then(m => m.run()) },
   { name: 'validate-reco', run: () => import('./steps/validate-reco').then(m => m.run()) },
 ];
 

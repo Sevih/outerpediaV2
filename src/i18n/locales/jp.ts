@@ -120,6 +120,8 @@ const jp: Record<TranslationKey, string> = {
   // ─── Tools ──────────────────────────────────────────────────────────────
   'tools.most-used-units': '使用率の高いユニット',
   'tools.most-used-units.desc': '攻略ガイドで最も推奨されているキャラクターを確認。',
+  'tools.most-used-units.guides_count': '{count}ガイド',
+  'tools.most-used-units.category_filter': 'ガイドカテゴリ',
   'tools.tierlistpve': 'ティアリスト - PvE',
   'tools.tierlistpve.desc': 'PvEコンテンツ向けの全キャラクターランキング。',
   'tools.tierlistpvp': 'ティアリスト - PvP',

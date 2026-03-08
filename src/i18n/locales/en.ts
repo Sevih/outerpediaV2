@@ -120,6 +120,8 @@ const en = {
   // ─── Tools ──────────────────────────────────────────────────────────────
   'tools.most-used-units': 'Most Used Units',
   'tools.most-used-units.desc': 'Discover which characters are most frequently recommended across game guides.',
+  'tools.most-used-units.guides_count': '{count} guides',
+  'tools.most-used-units.category_filter': 'Guide Category',
   'tools.tierlistpve': 'Tier List - PvE',
   'tools.tierlistpve.desc': 'Complete ranking of all characters for PvE content.',
   'tools.tierlistpvp': 'Tier List - PvP',

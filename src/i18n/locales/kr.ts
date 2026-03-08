@@ -120,6 +120,8 @@ const kr: Record<TranslationKey, string> = {
   // ─── Tools ──────────────────────────────────────────────────────────────
   'tools.most-used-units': '자주 사용되는 유닛',
   'tools.most-used-units.desc': '공략 가이드에서 가장 많이 추천되는 캐릭터를 확인하세요.',
+  'tools.most-used-units.guides_count': '{count}개 가이드',
+  'tools.most-used-units.category_filter': '가이드 카테고리',
   'tools.tierlistpve': '티어 리스트 - PvE',
   'tools.tierlistpve.desc': 'PvE 콘텐츠 전체 캐릭터 순위.',
   'tools.tierlistpvp': '티어 리스트 - PvP',

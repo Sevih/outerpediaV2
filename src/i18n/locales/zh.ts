@@ -120,6 +120,8 @@ const zh: Record<TranslationKey, string> = {
   // ─── Tools ──────────────────────────────────────────────────────────────
   'tools.most-used-units': '常用角色',
   'tools.most-used-units.desc': '查看攻略指南中最常推荐的角色。',
+  'tools.most-used-units.guides_count': '{count}个攻略',
+  'tools.most-used-units.category_filter': '攻略分类',
   'tools.tierlistpve': '节奏榜 - PvE',
   'tools.tierlistpve.desc': 'PvE内容全角色排名。',
   'tools.tierlistpvp': '节奏榜 - PvP',
