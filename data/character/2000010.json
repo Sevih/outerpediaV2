@@ -8,7 +8,7 @@
   "Element": "Earth",
   "Class": "Striker",
   "SubClass": "Bruiser",
-  "rank": "C",
+  "rank": "D",
   "role": "dps",
   "skill_priority": {
     "First": {
@@ -76,26 +76,64 @@
         "5_zh": "攻击敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
       },
       "enhancement": {
-        "2": ["+5% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["伤害量+5%","WG降低量+1"],
-        "3": ["+5% damage"],
-        "3_jp": ["ダメージ+5%"],
-        "3_kr": ["피해량 +5%"],
-        "3_zh": ["伤害量+5%"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+20% damage"],
-        "5_jp": ["ダメージ+20%"],
-        "5_kr": ["피해량 +20%"],
-        "5_zh": ["伤害量+20%"]
+        "2": [
+          "+5% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% damage"
+        ],
+        "3_jp": [
+          "ダメージ+5%"
+        ],
+        "3_kr": [
+          "피해량 +5%"
+        ],
+        "3_zh": [
+          "伤害量+5%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_CALL_BACKUP"],
+      "buff": [
+        "BT_CALL_BACKUP"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono",
@@ -163,25 +201,63 @@
         "5_zh": "(触发效果)自身受到攻击时,有<color=#28d9ed>60%</color>的几率发动<color=#28d9ed>反击</color>。"
       },
       "enhancement": {
-        "2": ["+15% Counterattack damage","+1 Weakness Gauge damage"],
-        "2_jp": ["反撃ダメージ+15%","WGダメージ+1"],
-        "2_kr": ["반격 피해량 증가 +15%","WG 감소량 +1"],
-        "2_zh": ["反击伤害量+15%","WG降低量+1"],
-        "3": ["+10% Counterattack chance"],
-        "3_jp": ["反撃発生率+10%"],
-        "3_kr": ["반격 확률 증가 +10%"],
-        "3_zh": ["反击率+10%"],
-        "4": ["+15% Counterattack damage"],
-        "4_jp": ["反撃ダメージ+15%"],
-        "4_kr": ["반격 피해량 증가 +15%"],
-        "4_zh": ["反击伤害量+15%"],
-        "5": ["+10% Counterattack chance"],
-        "5_jp": ["反撃発生率+10%"],
-        "5_kr": ["반격 확률 증가 +10%"],
-        "5_zh": ["反击率+10%"]
+        "2": [
+          "+15% Counterattack damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "反撃ダメージ+15%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "반격 피해량 증가 +15%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "反击伤害量+15%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% Counterattack chance"
+        ],
+        "3_jp": [
+          "反撃発生率+10%"
+        ],
+        "3_kr": [
+          "반격 확률 증가 +10%"
+        ],
+        "3_zh": [
+          "反击率+10%"
+        ],
+        "4": [
+          "+15% Counterattack damage"
+        ],
+        "4_jp": [
+          "反撃ダメージ+15%"
+        ],
+        "4_kr": [
+          "반격 피해량 증가 +15%"
+        ],
+        "4_zh": [
+          "反击伤害量+15%"
+        ],
+        "5": [
+          "+10% Counterattack chance"
+        ],
+        "5_jp": [
+          "反撃発生率+10%"
+        ],
+        "5_kr": [
+          "반격 확률 증가 +10%"
+        ],
+        "5_zh": [
+          "反击率+10%"
+        ]
       },
       "wgr": 1,
-      "buff": ["BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER"],
+      "buff": [
+        "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono"
@@ -217,26 +293,68 @@
         "5_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+1 turn Increased Defense duration"],
-        "3_jp": ["防御力UP+1ターン"],
-        "3_kr": ["방어력 증가 지속 +1턴"],
-        "3_zh": ["防御力提升持续时间+1回合"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+10% damage","-1 turn Skill Cooldown"],
-        "5_jp": ["ダメージ+10%","スキルターン-1ターン"],
-        "5_kr": ["피해량 +10%","스킬 쿨타임 -1턴"],
-        "5_zh": ["伤害量+10%","冷却时间-1回合"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+1 turn Increased Defense duration"
+        ],
+        "3_jp": [
+          "防御力UP+1ターン"
+        ],
+        "3_kr": [
+          "방어력 증가 지속 +1턴"
+        ],
+        "3_zh": [
+          "防御力提升持续时间+1回合"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+10% damage",
+          "-1 turn Skill Cooldown"
+        ],
+        "5_jp": [
+          "ダメージ+10%",
+          "スキルターン-1ターン"
+        ],
+        "5_kr": [
+          "피해량 +10%",
+          "스킬 쿨타임 -1턴"
+        ],
+        "5_zh": [
+          "伤害量+10%",
+          "冷却时间-1回合"
+        ]
       },
       "cd": "4",
       "wgr": 2,
-      "buff": ["BT_STAT|ST_DEF"],
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono"
@@ -272,33 +390,77 @@
         "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使防御力提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
       "wgr_dual": 1,
       "cd": null,
-      "buff": ["BT_STAT|ST_DEF"],
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
       "dual_target": "mono",
-      "dual_buff": ["BT_STAT|ST_DEF"],
+      "dual_buff": [
+        "BT_STAT|ST_DEF"
+      ],
       "dual_debuff": []
     }
   }

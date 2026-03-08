@@ -8,7 +8,7 @@
   "Element": "Dark",
   "Class": "Mage",
   "SubClass": "Wizard",
-  "rank": "D",
+  "rank": "E",
   "role": "support",
   "skill_priority": {
     "First": {
@@ -76,27 +76,65 @@
         "5_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% damage"],
-        "3_jp": ["ダメージ+10%"],
-        "3_kr": ["피해량 +10%"],
-        "3_zh": ["伤害量+10%"],
-        "4": ["+10% effect chance"],
-        "4_jp": ["効果発生率+10%"],
-        "4_kr": ["효과 발동 확률 +10%"],
-        "4_zh": ["效果触发几率+10%"],
-        "5": ["+10% damage"],
-        "5_jp": ["ダメージ+10%"],
-        "5_kr": ["피해량 +10%"],
-        "5_zh": ["伤害量+10%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4": [
+          "+10% effect chance"
+        ],
+        "4_jp": [
+          "効果発生率+10%"
+        ],
+        "4_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "4_zh": [
+          "效果触发几率+10%"
+        ],
+        "5": [
+          "+10% damage"
+        ],
+        "5_jp": [
+          "ダメージ+10%"
+        ],
+        "5_kr": [
+          "피해량 +10%"
+        ],
+        "5_zh": [
+          "伤害量+10%"
+        ]
       },
       "wgr": 1,
       "cd": null,
       "buff": [],
-      "debuff": ["BT_DOT_LIGHTNING"],
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ],
       "offensive": true,
       "target": "mono"
     },
@@ -131,27 +169,66 @@
         "5_zh": "攻击敌人,并有<color=#28d9ed>85%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。当目标处于<color=#28d9ed>触电</color>状态时,伤害提升。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+15% damage"],
-        "4_jp": ["ダメージ+15%"],
-        "4_kr": ["피해량 +15%"],
-        "4_zh": ["伤害量+15%"],
-        "5": ["+15% effect chance"],
-        "5_jp": ["効果発生率+15%"],
-        "5_kr": ["효과 발동 확률 +15%"],
-        "5_zh": ["效果触发几率+15%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "+15% effect chance"
+        ],
+        "5_jp": [
+          "効果発生率+15%"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "5_zh": [
+          "效果触发几率+15%"
+        ]
       },
       "cd": "4",
       "wgr": 1,
       "buff": [],
-      "debuff": ["BT_STUN","BT_DOT_LIGHTNING"],
+      "debuff": [
+        "BT_STUN",
+        "BT_DOT_LIGHTNING"
+      ],
       "offensive": true,
       "target": "mono",
       "burnEffect": {
@@ -218,27 +295,67 @@
         "5_zh": "攻击敌人。\\n使目标的<color=#28d9ed>行动值</color>减少<color=#28d9ed>-30%</color>,并有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
-        "2": ["-1 turn Skill Cooldown","+1 Weakness Gauge damage"],
-        "2_jp": ["スキルターン-1ターン","WGダメージ+1"],
-        "2_kr": ["스킬 쿨타임 -1턴","WG 감소량 +1"],
-        "2_zh": ["冷却时间-1回合","WG降低量+1"],
-        "3": ["Increases Effectiveness Chance +20%"],
-        "3_jp": ["効果命中発動確率増加+20%"],
-        "3_kr": ["효과 적중 발동 확률 증가 +20%"],
-        "3_zh": ["效果命中发动概率提升+20%"],
-        "4": ["+15% damage"],
-        "4_jp": ["ダメージ+15%"],
-        "4_kr": ["피해량 +15%"],
-        "4_zh": ["伤害量+15%"],
-        "5": ["+15% damage"],
-        "5_jp": ["ダメージ+15%"],
-        "5_kr": ["피해량 +15%"],
-        "5_zh": ["伤害量+15%"]
+        "2": [
+          "-1 turn Skill Cooldown",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "スキルターン-1ターン",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "스킬 쿨타임 -1턴",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "冷却时间-1回合",
+          "WG降低量+1"
+        ],
+        "3": [
+          "Increases Effectiveness Chance +20%"
+        ],
+        "3_jp": [
+          "効果命中発動確率増加+20%"
+        ],
+        "3_kr": [
+          "효과 적중 발동 확률 증가 +20%"
+        ],
+        "3_zh": [
+          "效果命中发动概率提升+20%"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "+15% damage"
+        ],
+        "5_jp": [
+          "ダメージ+15%"
+        ],
+        "5_kr": [
+          "피해량 +15%"
+        ],
+        "5_zh": [
+          "伤害量+15%"
+        ]
       },
       "cd": "5",
       "wgr": 2,
-      "buff": ["BT_STAT|ST_BUFF_CHANCE"],
-      "debuff": ["BT_ACTION_GAUGE"],
+      "buff": [
+        "BT_STAT|ST_BUFF_CHANCE"
+      ],
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ],
       "offensive": true,
       "target": "mono"
     },
@@ -273,34 +390,78 @@
         "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color> 。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>40%</color>的几率对敌人目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
       "wgr_dual": 1,
       "cd": null,
       "buff": [],
-      "debuff": ["BT_DOT_LIGHTNING"],
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [],
-      "dual_debuff": ["BT_DOT_LIGHTNING"]
+      "dual_debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
     }
   }
 }

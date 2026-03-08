@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useDeferredValue, useMemo, useState } from 'react';
 import Image from 'next/image';
 import type { CharacterListEntry } from '@/types/character';
 import type { RarityType, RoleType } from '@/types/enums';
@@ -9,10 +9,11 @@ import type { TranslationKey } from '@/i18n/locales/en';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { splitCharacterName } from '@/lib/character-name';
+import { LANGS } from '@/lib/i18n/config';
 import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
-import { FilterPill, IconFilterGroup, TextFilterGroup } from '@/app/components/ui/FilterPills';
+import { FilterPill, FilterSearch, IconFilterGroup, TextFilterGroup } from '@/app/components/ui/FilterPills';
 
-const TIERS = ['S', 'A', 'B', 'C', 'D'] as const;
+const TIERS = ['S', 'A', 'B', 'C', 'D', 'E'] as const;
 type Tier = typeof TIERS[number];
 
 const TRANSCEND_LEVELS = [3, 4, 5, 6] as const;
@@ -23,6 +24,7 @@ const TIER_COLORS: Record<Tier, string> = {
   B: 'from-blue-500/30 to-blue-900/10 border-blue-500/50',
   C: 'from-green-500/30 to-green-900/10 border-green-500/50',
   D: 'from-zinc-500/30 to-zinc-900/10 border-zinc-500/50',
+  E: 'from-amber-900/30 to-amber-950/10 border-amber-800/50',
 };
 
 const TIER_LABEL_BG: Record<Tier, string> = {
@@ -31,6 +33,7 @@ const TIER_LABEL_BG: Record<Tier, string> = {
   B: 'bg-blue-500/20',
   C: 'bg-green-500/20',
   D: 'bg-zinc-500/20',
+  E: 'bg-amber-900/20',
 };
 
 type Props = {
@@ -45,6 +48,8 @@ export default function TierListPveClient({ characters }: Props) {
   const [classFilter, setClassFilter] = useState<string[]>([]);
   const [rarityFilter, setRarityFilter] = useState<RarityType[]>([]);
   const [roleFilter, setRoleFilter] = useState<RoleType[]>([]);
+  const [rawQuery, setRawQuery] = useState('');
+  const query = useDeferredValue(rawQuery);
   const [transcendLevel, setTranscendLevel] = useState<number>(6);
 
   const toggleArray = <T,>(
@@ -80,24 +85,27 @@ export default function TierListPveClient({ characters }: Props) {
       const role = char.role_by_transcend?.[lvlKey] as RoleType ?? char.role;
       const displayName = l(char, 'Fullname', lang);
       const nameParts = splitCharacterName(char.ID, displayName, lang);
-      return { ...char, rank, role, displayName, prefix: nameParts.prefix };
+      const searchNames = LANGS.map(lg => l(char, 'Fullname', lg).normalize('NFKC').toLowerCase()).filter(Boolean);
+      return { ...char, rank, role, displayName, prefix: nameParts.prefix, searchNames };
     }), [characters, transcendLevel, lang]);
 
   // Filter
   const filtered = useMemo(() => {
+    const q = query.normalize('NFKC').toLowerCase().trim();
     const elemSet = new Set(elementFilter);
     const classSet = new Set(classFilter);
     const raritySet = new Set(rarityFilter);
     const roleSet = new Set(roleFilter);
 
     return resolvedCharacters.filter(char => {
+      if (q && !char.searchNames.some(name => name.includes(q))) return false;
       if (elemSet.size && !elemSet.has(char.Element)) return false;
       if (classSet.size && !classSet.has(char.Class)) return false;
       if (raritySet.size && !raritySet.has(char.Rarity)) return false;
       if (roleSet.size && !roleSet.has(char.role)) return false;
       return true;
     });
-  }, [resolvedCharacters, elementFilter, classFilter, rarityFilter, roleFilter]);
+  }, [resolvedCharacters, query, elementFilter, classFilter, rarityFilter, roleFilter]);
 
   // Group by tier
   const grouped = useMemo(() => {
@@ -116,26 +124,8 @@ export default function TierListPveClient({ characters }: Props) {
 
   return (
     <div className="mx-auto max-w-350 space-y-3">
-      {/* Transcend level selector */}
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">
-        {t('tierlist.transcend_level')}
-      </p>
-      <div className="flex justify-center gap-2">
-        {TRANSCEND_LEVELS.map(lvl => (
-          <FilterPill
-            key={lvl}
-            active={transcendLevel === lvl}
-            onClick={() => setTranscendLevel(lvl)}
-            className="h-8 px-3"
-          >
-            <div className="flex items-center -space-x-1">
-              {Array.from({ length: lvl }, (_, i) => (
-                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="" width={16} height={16} style={{ width: 16, height: 16 }} />
-              ))}
-            </div>
-          </FilterPill>
-        ))}
-      </div>
+      {/* Search */}
+      <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={t('search.placeholder')} />
 
       {/* Rarity */}
       <p className="text-center text-xs uppercase tracking-wide text-zinc-300">{t('filters.rarity')}</p>
@@ -183,6 +173,27 @@ export default function TierListPveClient({ characters }: Props) {
         />
       </div>
 
+      {/* Transcend level selector */}
+      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">
+        {t('tierlist.transcend_level')}
+      </p>
+      <div className="flex justify-center gap-2">
+        {TRANSCEND_LEVELS.map(lvl => (
+          <FilterPill
+            key={lvl}
+            active={transcendLevel === lvl}
+            onClick={() => setTranscendLevel(lvl)}
+            className="h-8 px-3"
+          >
+            <div className="flex items-center -space-x-1">
+              {Array.from({ length: lvl }, (_, i) => (
+                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="" width={16} height={16} style={{ width: 16, height: 16 }} />
+              ))}
+            </div>
+          </FilterPill>
+        ))}
+      </div>
+
       {/* Roles */}
       <TextFilterGroup
         label={t('characters.filters.roles' as TranslationKey)}
@@ -200,7 +211,7 @@ export default function TierListPveClient({ characters }: Props) {
           return (
             <div
               key={tier}
-              className={`rounded-xl border bg-gradient-to-r ${TIER_COLORS[tier]} overflow-hidden`}
+              className={`rounded-xl border bg-linear-to-r ${TIER_COLORS[tier]} overflow-hidden`}
             >
               <div className="flex items-center gap-3">
                 {/* Rank image */}

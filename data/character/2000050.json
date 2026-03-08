@@ -8,7 +8,7 @@
   "Element": "Earth",
   "Class": "Healer",
   "SubClass": "Reliever",
-  "rank": "C",
+  "rank": "D",
   "role": "sustain",
   "skill_priority": {
     "First": {
@@ -76,26 +76,64 @@
         "5_zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使随机1名友军的<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% effect chance"],
-        "3_jp": ["効果発生率+10%"],
-        "3_kr": ["효과 발동 확률 +10%"],
-        "3_zh": ["效果触发几率+10%"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+10% effect chance"],
-        "5_jp": ["効果発生率+10%"],
-        "5_kr": ["효과 발동 확률 +10%"],
-        "5_zh": ["效果触发几率+10%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+10%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "3_zh": [
+          "效果触发几率+10%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+10% effect chance"
+        ],
+        "5_jp": [
+          "効果発生率+10%"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "5_zh": [
+          "效果触发几率+10%"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_STAT|ST_SPEED"],
+      "buff": [
+        "BT_STAT|ST_SPEED"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono"
@@ -131,24 +169,58 @@
         "5_zh": "(被动效果)受到暴击时,有<color=#28d9ed>100%</color>的几率使<color=#28d9ed>傲若孤山</color>的技能冷却时间减少<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
-        "2": ["+10% effect chance"],
-        "2_jp": ["効果発生率+10%"],
-        "2_kr": ["효과 발동 확률 +10%"],
-        "2_zh": ["效果触发几率+10%"],
-        "3": ["+10% effect chance"],
-        "3_jp": ["効果発生率+10%"],
-        "3_kr": ["효과 발동 확률 +10%"],
-        "3_zh": ["效果触发几率+10%"],
-        "4": ["+15% effect chance"],
-        "4_jp": ["効果発生率+15%"],
-        "4_kr": ["효과 발동 확률 +15%"],
-        "4_zh": ["效果触发几率+15%"],
-        "5": ["+15% effect chance"],
-        "5_jp": ["効果発生率+15%"],
-        "5_kr": ["효과 발동 확률 +15%"],
-        "5_zh": ["效果触发几率+15%"]
+        "2": [
+          "+10% effect chance"
+        ],
+        "2_jp": [
+          "効果発生率+10%"
+        ],
+        "2_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "2_zh": [
+          "效果触发几率+10%"
+        ],
+        "3": [
+          "+10% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+10%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "3_zh": [
+          "效果触发几率+10%"
+        ],
+        "4": [
+          "+15% effect chance"
+        ],
+        "4_jp": [
+          "効果発生率+15%"
+        ],
+        "4_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "4_zh": [
+          "效果触发几率+15%"
+        ],
+        "5": [
+          "+15% effect chance"
+        ],
+        "5_jp": [
+          "効果発生率+15%"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "5_zh": [
+          "效果触发几率+15%"
+        ]
       },
-      "buff": ["BT_COOL3_CHARGE"],
+      "buff": [
+        "BT_COOL3_CHARGE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi"
@@ -184,25 +256,60 @@
         "5_zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于弗朗贝尔修生命值上限的<color=#28d9ed>35%</color>。"
       },
       "enhancement": {
-        "2": ["+3% healing"],
-        "2_jp": ["HP回復量+3%"],
-        "2_kr": ["체력 회복량 +3%"],
-        "2_zh": ["生命值恢复量+3%"],
-        "3": ["+3% healing"],
-        "3_jp": ["HP回復量+3%"],
-        "3_kr": ["체력 회복량 +3%"],
-        "3_zh": ["生命值恢复量+3%"],
-        "4": ["+4% healing"],
-        "4_jp": ["HP回復量+4%"],
-        "4_kr": ["체력 회복량 +4%"],
-        "4_zh": ["生命值恢复量+4%"],
-        "5": ["+5% healing"],
-        "5_jp": ["HP回復量+5%"],
-        "5_kr": ["체력 회복량 +5%"],
-        "5_zh": ["生命值恢复量+5%"]
+        "2": [
+          "+3% healing"
+        ],
+        "2_jp": [
+          "HP回復量+3%"
+        ],
+        "2_kr": [
+          "체력 회복량 +3%"
+        ],
+        "2_zh": [
+          "生命值恢复量+3%"
+        ],
+        "3": [
+          "+3% healing"
+        ],
+        "3_jp": [
+          "HP回復量+3%"
+        ],
+        "3_kr": [
+          "체력 회복량 +3%"
+        ],
+        "3_zh": [
+          "生命值恢复量+3%"
+        ],
+        "4": [
+          "+4% healing"
+        ],
+        "4_jp": [
+          "HP回復量+4%"
+        ],
+        "4_kr": [
+          "체력 회복량 +4%"
+        ],
+        "4_zh": [
+          "生命值恢复量+4%"
+        ],
+        "5": [
+          "+5% healing"
+        ],
+        "5_jp": [
+          "HP回復量+5%"
+        ],
+        "5_kr": [
+          "체력 회복량 +5%"
+        ],
+        "5_zh": [
+          "生命值恢复量+5%"
+        ]
       },
       "cd": "4",
-      "buff": ["BT_STAT|ST_SPEED","BT_AP_CHARGE"],
+      "buff": [
+        "BT_STAT|ST_SPEED",
+        "BT_AP_CHARGE"
+      ],
       "debuff": [],
       "offensive": false,
       "target": "mono",
@@ -270,33 +377,77 @@
         "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使CP恢复\\n<color=#28d9ed>15</color>。\\n\\n<color=#ffd732>夹攻效果</color>:使随机1名友军的<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
       "wgr_dual": 1,
       "cd": null,
-      "buff": ["BT_CP_CHARGE"],
+      "buff": [
+        "BT_CP_CHARGE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
       "dual_target": "mono",
-      "dual_buff": ["BT_STAT|ST_SPEED"],
+      "dual_buff": [
+        "BT_STAT|ST_SPEED"
+      ],
       "dual_debuff": []
     }
   }

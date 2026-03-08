@@ -10,18 +10,10 @@ type Props = {
   ee: ExclusiveEquipment | null;
 };
 
-const RANKS_PVE = ['S', 'A', 'B', 'C', 'D', 'E'] as const;
-
-function demoteOnce(rank: string): string {
-  const i = RANKS_PVE.indexOf(rank as (typeof RANKS_PVE)[number]);
-  return RANKS_PVE[Math.min(i < 0 ? RANKS_PVE.length - 1 : i + 1, RANKS_PVE.length - 1)];
-}
-
 export default function RankingSection({ character, ee }: Props) {
   const { t } = useI18n();
 
-  const pveRank =
-    character.Rarity < 3 ? demoteOnce(character.rank) : character.rank;
+  const pveRank = character.rank;
 
   return (
     <section id="ranking">

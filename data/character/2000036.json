@@ -8,7 +8,7 @@
   "Element": "Fire",
   "Class": "Healer",
   "SubClass": "Reliever",
-  "rank": "S",
+  "rank": "A",
   "role": "sustain",
   "skill_priority": {
     "First": {
@@ -76,26 +76,64 @@
         "5_zh": "攻击敌人,并使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身<color=#28d9ed>生命值上限</color>越高,则护盾量越高。"
       },
       "enhancement": {
-        "2": ["Enhances Barrier strength","+1 Weakness Gauge damage"],
-        "2_jp": ["シールド強化","WGダメージ+1"],
-        "2_kr": ["실드 강화","WG 감소량 +1"],
-        "2_zh": ["护盾强化","WG降低量+1"],
-        "3": ["+10% damage"],
-        "3_jp": ["ダメージ+10%"],
-        "3_kr": ["피해량 +10%"],
-        "3_zh": ["伤害量+10%"],
-        "4": ["+15% damage"],
-        "4_jp": ["ダメージ+15%"],
-        "4_kr": ["피해량 +15%"],
-        "4_zh": ["伤害量+15%"],
-        "5": ["Enhances Barrier strength"],
-        "5_jp": ["シールド強化"],
-        "5_kr": ["실드 강화"],
-        "5_zh": ["护盾强化"]
+        "2": [
+          "Enhances Barrier strength",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "シールド強化",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "실드 강화",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "护盾强化",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5": [
+          "Enhances Barrier strength"
+        ],
+        "5_jp": [
+          "シールド強化"
+        ],
+        "5_kr": [
+          "실드 강화"
+        ],
+        "5_zh": [
+          "护盾强化"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_SHIELD_BASED_CASTER"],
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono"
@@ -131,25 +169,68 @@
         "5_zh": "(触发效果)友军获得<color=#28d9ed>弱化效果</color>时,将发动<color=#28d9ed>迅速应对</color>效果。\\n解除全体友军的<color=#28d9ed>2</color>个<color=#28d9ed>弱化效果</color>,并使<color=#28d9ed>生命值</color>恢复<color=#28d9ed>30%</color>。"
       },
       "enhancement": {
-        "2": ["+5% healing"],
-        "2_jp": ["HP回復量+5%"],
-        "2_kr": ["체력 회복량 +5%"],
-        "2_zh": ["生命值恢复量+5%"],
-        "3": ["+5% healing","-1 turn Skill Cooldown"],
-        "3_jp": ["HP回復量+5%","スキルターン-1ターン"],
-        "3_kr": ["체력 회복량 +5%","스킬 쿨타임 -1턴"],
-        "3_zh": ["生命值恢复量+5%","冷却时间-1回合"],
-        "4": ["+1 debuff removed"],
-        "4_jp": ["弱体効果解除+1"],
-        "4_kr": ["약화 효과 해제 수량 +1"],
-        "4_zh": ["弱化效果解除数量+1"],
-        "5": ["+5% healing","-1 turn Skill Cooldown"],
-        "5_jp": ["HP回復量+5%","スキルターン-1ターン"],
-        "5_kr": ["체력 회복량 +5%","스킬 쿨타임 -1턴"],
-        "5_zh": ["生命值恢复量+5%","冷却时间-1回合"]
+        "2": [
+          "+5% healing"
+        ],
+        "2_jp": [
+          "HP回復量+5%"
+        ],
+        "2_kr": [
+          "체력 회복량 +5%"
+        ],
+        "2_zh": [
+          "生命值恢复量+5%"
+        ],
+        "3": [
+          "+5% healing",
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "HP回復量+5%",
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "체력 회복량 +5%",
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "生命值恢复量+5%",
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+1 debuff removed"
+        ],
+        "4_jp": [
+          "弱体効果解除+1"
+        ],
+        "4_kr": [
+          "약화 효과 해제 수량 +1"
+        ],
+        "4_zh": [
+          "弱化效果解除数量+1"
+        ],
+        "5": [
+          "+5% healing",
+          "-1 turn Skill Cooldown"
+        ],
+        "5_jp": [
+          "HP回復量+5%",
+          "スキルターン-1ターン"
+        ],
+        "5_kr": [
+          "체력 회복량 +5%",
+          "스킬 쿨타임 -1턴"
+        ],
+        "5_zh": [
+          "生命值恢复量+5%",
+          "冷却时间-1回合"
+        ]
       },
       "cd": "4",
-      "buff": ["BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK","BT_REMOVE_DEBUFF"],
+      "buff": [
+        "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK",
+        "BT_REMOVE_DEBUFF"
+      ],
       "debuff": [],
       "offensive": false,
       "target": "multi"
@@ -185,25 +266,66 @@
         "5_zh": "使所选友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>70%</color>,并使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
-        "2": ["+15% healing"],
-        "2_jp": ["HP回復量+15%"],
-        "2_kr": ["체력 회복량 +15%"],
-        "2_zh": ["生命值恢复量+15%"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+1 turn Increased Defense duration"],
-        "4_jp": ["防御力UP+1ターン"],
-        "4_kr": ["방어력 증가 지속 +1턴"],
-        "4_zh": ["防御力提升持续时间+1回合"],
-        "5": ["+15% healing","-1 turn Skill Cooldown"],
-        "5_jp": ["HP回復量+15%","スキルターン-1ターン"],
-        "5_kr": ["체력 회복량 +15%","스킬 쿨타임 -1턴"],
-        "5_zh": ["生命值恢复量+15%","冷却时间-1回合"]
+        "2": [
+          "+15% healing"
+        ],
+        "2_jp": [
+          "HP回復量+15%"
+        ],
+        "2_kr": [
+          "체력 회복량 +15%"
+        ],
+        "2_zh": [
+          "生命值恢复量+15%"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+1 turn Increased Defense duration"
+        ],
+        "4_jp": [
+          "防御力UP+1ターン"
+        ],
+        "4_kr": [
+          "방어력 증가 지속 +1턴"
+        ],
+        "4_zh": [
+          "防御力提升持续时间+1回合"
+        ],
+        "5": [
+          "+15% healing",
+          "-1 turn Skill Cooldown"
+        ],
+        "5_jp": [
+          "HP回復量+15%",
+          "スキルターン-1ターン"
+        ],
+        "5_kr": [
+          "체력 회복량 +15%",
+          "스킬 쿨타임 -1턴"
+        ],
+        "5_zh": [
+          "生命值恢复量+15%",
+          "冷却时间-1回合"
+        ]
       },
       "cd": "5",
-      "buff": ["BT_STAT|ST_DEF","BT_COOL3_CHARGE","BT_AP_CHARGE","BT_IMMUNE"],
+      "buff": [
+        "BT_STAT|ST_DEF",
+        "BT_COOL3_CHARGE",
+        "BT_AP_CHARGE",
+        "BT_IMMUNE"
+      ],
       "debuff": [],
       "offensive": false,
       "target": "mono",
@@ -271,22 +393,62 @@
         "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军<color=#28d9ed>生命值</color>恢复相当于生命值上限的<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军获得<color=#28d9ed>护盾</color>效果。根据蒂欧的生命值上限等比提升护盾效果。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
       "wgr_dual": 1,
@@ -297,7 +459,9 @@
       "target": "multi",
       "dual_offensive": true,
       "dual_target": "mono",
-      "dual_buff": ["BT_SHIELD_BASED_CASTER"],
+      "dual_buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ],
       "dual_debuff": []
     }
   }
