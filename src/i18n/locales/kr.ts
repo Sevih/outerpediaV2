@@ -103,6 +103,8 @@ const kr: Record<TranslationKey, string> = {
   'page.tierlist.other_rankings': '기타 랭킹',
   'tierlist.transcend_level': '초월 레벨',
   'tierlist.characters_count': '캐릭터',
+  'tierlist.disclaimer_pve': '이 티어 리스트는 전용 장비 Lv0을 보유한 것을 전제로 합니다. 강화가 해제되지 않은 경우 결과가 다를 수 있습니다. PvE 콘텐츠 전용입니다.',
+  'tierlist.disclaimer_pvp': '이 티어 리스트는 6성 초월과 레벨 10 전용 장비 효과를 전제로 합니다. 강화가 해제되지 않은 경우 결과가 다를 수 있습니다. PvP 콘텐츠 전용입니다.',
   'page.tools.title': '아우터플레인 도구 & 유틸리티',
   'page.tools.description':
     '아우터플레인 도구: 장비 솔버, 팀 플래너, 뽑기 시뮬레이터, 진행 트래커 등.',

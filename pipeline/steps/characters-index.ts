@@ -19,6 +19,7 @@ type RawCharacter = {
   Rarity: number;
   role: string;
   rank: string;
+  rank_pvp?: string;
   rank_by_transcend?: Record<string, string>;
   role_by_transcend?: Record<string, string>;
   Chain_Type: string;
@@ -144,6 +145,7 @@ export async function run() {
         Rarity: char.Rarity,
         role: char.role,
         rank: char.rank,
+      rank_pvp: char.rank_pvp,
         Chain_Type: char.Chain_Type,
         gift: char.gift,
         tags: char.tags ?? [],

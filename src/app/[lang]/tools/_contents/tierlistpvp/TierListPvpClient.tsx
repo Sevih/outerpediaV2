@@ -16,8 +16,6 @@ import { FilterPill, FilterSearch, IconFilterGroup, TextFilterGroup } from '@/ap
 const TIERS = ['S', 'A', 'B', 'C', 'D', 'E'] as const;
 type Tier = typeof TIERS[number];
 
-const TRANSCEND_LEVELS = [3, 4, 5, 6] as const;
-
 const TIER_COLORS: Record<Tier, string> = {
   S: 'from-amber-500/30 to-amber-900/10 border-amber-500/50',
   A: 'from-orange-600/30 to-orange-900/10 border-orange-500/50',
@@ -31,7 +29,7 @@ type Props = {
   characters: CharacterListEntry[];
 };
 
-export default function TierListPveClient({ characters }: Props) {
+export default function TierListPvpClient({ characters }: Props) {
   const { lang, t, href } = useI18n();
 
   // Filter state
@@ -41,7 +39,6 @@ export default function TierListPveClient({ characters }: Props) {
   const [roleFilter, setRoleFilter] = useState<RoleType[]>([]);
   const [rawQuery, setRawQuery] = useState('');
   const query = useDeferredValue(rawQuery);
-  const [transcendLevel, setTranscendLevel] = useState<number>(6);
 
   const toggleArray = <T,>(
     setter: React.Dispatch<React.SetStateAction<T[]>>, value: T, allValues?: readonly T[],
@@ -68,17 +65,16 @@ export default function TierListPveClient({ characters }: Props) {
     ...ROLES.map(v => ({ name: t(`filters.roles.${v}`), value: v })),
   ], [t]);
 
-  // Resolve rank & role for current transcend level
+  // Only keep characters that have a PvP rank
   const resolvedCharacters = useMemo(() =>
-    characters.map(char => {
-      const lvlKey = String(transcendLevel);
-      const rank = char.rank_by_transcend?.[lvlKey] ?? char.rank;
-      const role = char.role_by_transcend?.[lvlKey] as RoleType ?? char.role;
-      const displayName = l(char, 'Fullname', lang);
-      const nameParts = splitCharacterName(char.ID, displayName, lang);
-      const searchNames = LANGS.map(lg => l(char, 'Fullname', lg).normalize('NFKC').toLowerCase()).filter(Boolean);
-      return { ...char, rank, role, displayName, prefix: nameParts.prefix, searchNames };
-    }), [characters, transcendLevel, lang]);
+    characters
+      .filter(char => char.rank_pvp)
+      .map(char => {
+        const displayName = l(char, 'Fullname', lang);
+        const nameParts = splitCharacterName(char.ID, displayName, lang);
+        const searchNames = LANGS.map(lg => l(char, 'Fullname', lg).normalize('NFKC').toLowerCase()).filter(Boolean);
+        return { ...char, rank: char.rank_pvp!, displayName, prefix: nameParts.prefix, searchNames };
+      }), [characters, lang]);
 
   // Filter
   const filtered = useMemo(() => {
@@ -106,7 +102,6 @@ export default function TierListPveClient({ characters }: Props) {
       const tier = char.rank as Tier;
       if (map.has(tier)) map.get(tier)!.push(char);
     }
-    // Sort within each tier alphabetically
     for (const chars of map.values()) {
       chars.sort((a, b) => a.displayName.localeCompare(b.displayName));
     }
@@ -117,7 +112,7 @@ export default function TierListPveClient({ characters }: Props) {
     <div className="mx-auto max-w-350 space-y-3">
       {/* Disclaimer */}
       <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-center text-sm text-zinc-300">
-        <span className="mr-1.5">⚠️</span>{t('tierlist.disclaimer_pve')}
+        <span className="mr-1.5">⚠️</span>{t('tierlist.disclaimer_pvp')}
       </div>
 
       {/* Search */}
@@ -167,27 +162,6 @@ export default function TierListPveClient({ characters }: Props) {
           onReset={() => setClassFilter([])}
           imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
         />
-      </div>
-
-      {/* Transcend level selector */}
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">
-        {t('tierlist.transcend_level')}
-      </p>
-      <div className="flex justify-center gap-2">
-        {TRANSCEND_LEVELS.map(lvl => (
-          <FilterPill
-            key={lvl}
-            active={transcendLevel === lvl}
-            onClick={() => setTranscendLevel(lvl)}
-            className="h-8 px-3"
-          >
-            <div className="flex items-center -space-x-1">
-              {Array.from({ length: lvl }, (_, i) => (
-                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="" width={16} height={16} style={{ width: 16, height: 16 }} />
-              ))}
-            </div>
-          </FilterPill>
-        ))}
       </div>
 
       {/* Roles */}

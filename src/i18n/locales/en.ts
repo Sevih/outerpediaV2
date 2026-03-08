@@ -103,6 +103,8 @@ const en = {
   'page.tierlist.other_rankings': 'Other Rankings',
   'tierlist.transcend_level': 'Transcendence Level',
   'tierlist.characters_count': 'characters',
+  'tierlist.disclaimer_pve': 'This tier list assumes to have the Exclusive Equipment Lv0. Results may vary if upgrades are not unlocked. This list is for PvE content only.',
+  'tierlist.disclaimer_pvp': 'This tier list assumes 6-star transcends and level 10 Exclusive Equipment effects. Results may vary if upgrades are not unlocked. This list is for PvP content only.',
   'page.tools.title': 'Outerplane Tools & Utilities',
   'page.tools.description':
     'Outerplane tools: gear solver, team planner, pull simulator, progress tracker, and more.',

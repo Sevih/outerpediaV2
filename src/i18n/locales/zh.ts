@@ -103,6 +103,8 @@ const zh: Record<TranslationKey, string> = {
   'page.tierlist.other_rankings': '其他排行',
   'tierlist.transcend_level': '超越等级',
   'tierlist.characters_count': '角色',
+  'tierlist.disclaimer_pve': '本排行榜假设拥有专属装备Lv0。如果未解锁强化，结果可能有所不同。仅适用于PvE内容。',
+  'tierlist.disclaimer_pvp': '本排行榜假设拥有6星超越和10级专属装备效果。如果未解锁强化，结果可能有所不同。仅适用于PvP内容。',
   'page.tools.title': '异域战记 工具 & 实用程序',
   'page.tools.description':
     '异域战记工具：装备求解器、队伍规划器、抽卡模拟器、进度追踪器等。',
