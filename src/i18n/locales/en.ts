@@ -583,6 +583,14 @@ const en = {
   'monad.route.4.1': 'Land of Sandstorms [1st Part]',
   'monad.route.4.2': 'Land of Sandstorms [2nd Part]',
   'monad.route.5': 'Realm of Bane',
+  // Soundtrack
+  'ost.title': 'Soundtrack',
+  'ost.download': 'Download',
+  'ost.selectTrack': 'Select a track',
+  'ost.disclaimer.line1':
+    'These soundtracks are provided for personal, non-commercial use only, with approval from the developers (VAGames).',
+  'ost.disclaimer.line2': 'This content may be removed upon request from the rights holder.',
+  'ost.keyboardShortcuts': 'Keyboard shortcuts',
 } as const;
 
 export default en;

@@ -583,6 +583,14 @@ const jp: Record<TranslationKey, string> = {
   'monad.route.4.1': '砂風の国【前編】',
   'monad.route.4.2': '砂風の国【後編】',
   'monad.route.5': '劇毒の領域',
+  // Soundtrack
+  'ost.title': 'サウンドトラック',
+  'ost.download': 'ダウンロード',
+  'ost.selectTrack': 'トラックを選択',
+  'ost.disclaimer.line1':
+    'これらのサウンドトラックは開発者（VAGames）の許可を得て、個人的な非商用利用のみを目的として提供されています。',
+  'ost.disclaimer.line2': 'このコンテンツは権利者の要請により削除される場合があります。',
+  'ost.keyboardShortcuts': 'キーボードショートカット',
 };
 
 export default jp;

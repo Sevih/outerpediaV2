@@ -583,6 +583,14 @@ const kr: Record<TranslationKey, string> = {
   'monad.route.4.1': '모래바람의 나라 [전편]',
   'monad.route.4.2': '모래바람의 나라 [후편]',
   'monad.route.5': '극독의 영역',
+  // Soundtrack
+  'ost.title': '사운드트랙',
+  'ost.download': '다운로드',
+  'ost.selectTrack': '트랙을 선택하세요',
+  'ost.disclaimer.line1':
+    '이 사운드트랙은 개발자(VAGames)의 승인을 받아 개인적, 비상업적 용도로만 제공됩니다.',
+  'ost.disclaimer.line2': '이 콘텐츠는 권리자의 요청에 따라 삭제될 수 있습니다.',
+  'ost.keyboardShortcuts': '키보드 단축키',
 };
 
 export default kr;

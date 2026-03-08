@@ -583,6 +583,14 @@ const zh: Record<TranslationKey, string> = {
   'monad.route.4.1': '风沙之国【前篇】',
   'monad.route.4.2': '风沙之国【后篇】',
   'monad.route.5': '剧毒领域',
+  // Soundtrack
+  'ost.title': '原声带',
+  'ost.download': '下载',
+  'ost.selectTrack': '选择曲目',
+  'ost.disclaimer.line1':
+    '这些原声音乐经开发者（VAGames）许可，仅供个人非商业用途使用。',
+  'ost.disclaimer.line2': '此内容可能应权利人的要求而被删除。',
+  'ost.keyboardShortcuts': '键盘快捷键',
 };
 
 export default zh;
