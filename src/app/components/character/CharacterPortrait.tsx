@@ -22,6 +22,7 @@ const CROP_OVERRIDES: Record<string, string> = {
   '2000080': 'center 26%', // Tamamo-no-Mae
   '2000081': 'center 26%', // Maxie
   '2000084': 'center 26%', // Monad Eva
+  '2000100': 'center 26%', // Demiurge Delta
 };
 
 const SIZES = {
