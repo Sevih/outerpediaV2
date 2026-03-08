@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return createPageMetadata({
     lang,
-    path: `/tools/${slug}`,
+    path: `/${slug}`,
     title: t['page.tool.meta_title'].replace('{title}', title),
     description,
     ogImage: `/images/ui/${tool.icon}.png`,
@@ -58,7 +58,7 @@ export default async function ToolDetailPage({ params }: Props) {
 
   let ToolContent: React.ComponentType;
   try {
-    const mod = await import(`../_contents/${slug}`);
+    const mod = await import(`../tools/_contents/${slug}`);
     ToolContent = mod.default;
   } catch {
     notFound();

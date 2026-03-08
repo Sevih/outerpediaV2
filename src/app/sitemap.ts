@@ -5,6 +5,7 @@ import { buildUrl } from '@/lib/seo';
 import { getCharacterSlugs } from '@/lib/data/characters';
 import { getValidCategories } from '@/lib/data/guides';
 import { getGuideSlugsWithCategories } from '@/lib/data/guides';
+import { getToolSlugs } from '@/lib/data/tools';
 
 /**
  * Static pages to include in the sitemap.
@@ -36,6 +37,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Static pages
   for (const path of STATIC_PAGES) {
+    entries.push({
+      url: buildUrl('en' as Lang, path),
+      lastModified: new Date(),
+      alternates: { languages: buildAlternates(path) },
+    });
+  }
+
+  // Dynamic: tool pages
+  const toolSlugs = await getToolSlugs();
+  for (const slug of toolSlugs) {
+    const path = `/${slug}`;
     entries.push({
       url: buildUrl('en' as Lang, path),
       lastModified: new Date(),

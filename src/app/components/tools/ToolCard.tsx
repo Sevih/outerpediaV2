@@ -60,7 +60,7 @@ export default function ToolCard({ slug, icon, status, href, lang, t, devMode }:
 
   return (
     <Link
-      href={localePath(lang, href ?? `/tools/${slug}`)}
+      href={localePath(lang, href ?? `/${slug}`)}
       className="card-interactive group flex items-center gap-4 p-4 transition-colors"
     >
       {inner}

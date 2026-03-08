@@ -101,7 +101,7 @@ export default async function TierlistPage({ params }: Props) {
           return (
             <Link
               key={tool.slug}
-              href={localePath(lang, `/tools/${tool.slug}`)}
+              href={localePath(lang, `/${tool.slug}`)}
               className="card-interactive group transition-colors"
             >
               {inner}
@@ -163,7 +163,7 @@ export default async function TierlistPage({ params }: Props) {
               return (
                 <Link
                   key={tool.slug}
-                  href={localePath(lang, `/tools/${tool.slug}`)}
+                  href={localePath(lang, `/${tool.slug}`)}
                   className="card-interactive group flex items-center gap-4 p-4 transition-colors"
                 >
                   {inner}
