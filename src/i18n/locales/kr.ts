@@ -107,6 +107,12 @@ const kr: Record<TranslationKey, string> = {
   'tierlist.disclaimer_pvp': '이 티어 리스트는 6성 초월과 레벨 10 전용 장비 효과를 전제로 합니다. 강화가 해제되지 않은 경우 결과가 다를 수 있습니다. PvP 콘텐츠 전용입니다.',
   'tierlist.disclaimer_ee_base': '이 랭킹은 각 전용 장비의 기본 레벨(Lv0) 해제 우선순위를 반영합니다. 강화 효과는 고려되지 않았습니다.',
   'tierlist.disclaimer_ee_plus10': '이 랭킹은 각 전용 장비의 +10 강화 우선순위를 반영합니다.',
+  'tierlist.legend.S': '히어로에게 필수',
+  'tierlist.legend.A': '히어로를 사용한다면 높은 우선순위',
+  'tierlist.legend.B': '좋음',
+  'tierlist.legend.C': '그저 그럼',
+  'tierlist.legend.D': '별 의미 없음',
+  'tierlist.legend.E': '다운그레이드',
   'page.tools.title': '아우터플레인 도구 & 유틸리티',
   'page.tools.description':
     '아우터플레인 도구: 장비 솔버, 팀 플래너, 뽑기 시뮬레이터, 진행 트래커 등.',

@@ -107,6 +107,12 @@ const en = {
   'tierlist.disclaimer_pvp': 'This tier list assumes 6-star transcends and level 10 Exclusive Equipment effects. Results may vary if upgrades are not unlocked. This list is for PvP content only.',
   'tierlist.disclaimer_ee_base': 'This ranking reflects the priority of unlocking each Exclusive Equipment at base level (Lv0). It does not account for upgraded effects.',
   'tierlist.disclaimer_ee_plus10': 'This ranking reflects the priority of upgrading each Exclusive Equipment to +10.',
+  'tierlist.legend.S': 'Core for the hero',
+  'tierlist.legend.A': 'High priority if you are using the hero',
+  'tierlist.legend.B': 'Good',
+  'tierlist.legend.C': 'Meh',
+  'tierlist.legend.D': 'Does nothing of interest',
+  'tierlist.legend.E': 'Downgrade',
   'page.tools.title': 'Outerplane Tools & Utilities',
   'page.tools.description':
     'Outerplane tools: gear solver, team planner, pull simulator, progress tracker, and more.',

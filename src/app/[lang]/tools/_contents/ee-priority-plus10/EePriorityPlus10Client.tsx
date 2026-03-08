@@ -101,6 +101,16 @@ export default function EePriorityPlus10Client({ characters }: Props) {
         <span className="mr-1.5">⚠️</span>{t('tierlist.disclaimer_ee_plus10')}
       </div>
 
+      {/* Legend */}
+      <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-zinc-400">
+        {TIERS.map(tier => (
+          <div key={tier} className="flex items-center gap-1">
+            <Image src={`/images/ui/rank/IG_Event_Rank_${tier}.webp`} alt={tier} width={20} height={20} style={{ width: 20, height: 20 }} />
+            <span>{t(`tierlist.legend.${tier}`)}</span>
+          </div>
+        ))}
+      </div>
+
       {/* Search */}
       <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={t('search.placeholder')} />
 
