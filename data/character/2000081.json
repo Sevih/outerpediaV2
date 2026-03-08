@@ -8,7 +8,7 @@
   "Element": "Fire",
   "Class": "Ranger",
   "SubClass": "Vanguard",
-  "rank": "B",
+  "rank": "A",
   "rank_pvp": "B",
   "role": "dps",
   "skill_priority": {
@@ -307,5 +307,11 @@
       "dual_buff": ["BT_ACTION_GAUGE"],
       "dual_debuff": []
     }
+  },
+  "rank_by_transcend": {
+    "3": "B",
+    "4": "B",
+    "5": "A",
+    "6": "A"
   }
 }

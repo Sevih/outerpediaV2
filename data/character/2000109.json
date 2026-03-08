@@ -22,7 +22,10 @@
       "prio": 1
     }
   },
-  "tags": ["premium","ignore-defense"],
+  "tags": [
+    "premium",
+    "ignore-defense"
+  ],
   "Chain_Type": "Join",
   "gift": "Natural Object",
   "video": "jb5Myn4eVzc",
@@ -82,27 +85,72 @@
         "5_zh": "攻击敌人,并以<color=#28d9ed>100%</color>的概率对目标施加<color=#28d9ed>酸性毒液</color>,持续<color=#28d9ed>2</color>回合。\\n若目标为<color=#28d9ed>首领怪物</color>,则在攻击前追加施加<color=#28d9ed>酸性毒液</color>,持续<color=#28d9ed>2</color>回合。\\n\\n此技能的伤害会随着施术者的最大生命值提升而增加,而非基于攻击力。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+15% effect chance"],
-        "3_jp": ["効果発生率+15%"],
-        "3_kr": ["효과 발동 확률 +15%"],
-        "3_zh": ["效果触发几率+15%"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+15% effect chance","+10% damage"],
-        "5_jp": ["効果発生率+15%","ダメージ+10%"],
-        "5_kr": ["효과 발동 확률 +15%","피해량 +10%"],
-        "5_zh": ["效果触发几率+15%","伤害量+10%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+15% effect chance"
+        ],
+        "3_jp": [
+          "効果発生率+15%"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +15%"
+        ],
+        "3_zh": [
+          "效果触发几率+15%"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5": [
+          "+15% effect chance",
+          "+10% damage"
+        ],
+        "5_jp": [
+          "効果発生率+15%",
+          "ダメージ+10%"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +15%",
+          "피해량 +10%"
+        ],
+        "5_zh": [
+          "效果触发几率+15%",
+          "伤害量+10%"
+        ]
       },
       "wgr": 1,
       "cd": null,
       "buff": [],
-      "debuff": ["BT_DOT_POISON2","BT_STAT|ST_DEF","BT_IMMEDIATELY_POISON","BT_REMOVE_BUFF"],
+      "debuff": [
+        "BT_DOT_POISON2",
+        "BT_STAT|ST_DEF",
+        "BT_IMMEDIATELY_POISON",
+        "BT_REMOVE_BUFF"
+      ],
       "offensive": true,
       "target": "mono",
       "burnEffect": {
@@ -169,27 +217,80 @@
         "5_zh": "(被动效果)\\n自身施加的<color=#28d9ed>中毒</color>将变为<color=#28d9ed>酸性毒液</color>,处于<color=#28d9ed>酸性毒液</color>状态的敌人受到的所有攻击伤害提升<color=#28d9ed>100%</color>。\\n\\n(主动效果)攻击敌人,并以<color=#28d9ed>100%</color>的概率使其陷入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>1</color>回合,随后使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。\\n若目标为首领,则在攻击前额外施加<color=#28d9ed>酸性毒液</color>,持续<color=#28d9ed>2</color>回合。\\n此技能造成的伤害与自身最大生命值成正比,而非攻击力。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+15% effect chance","+25% Damage Increase to Corrosive Poison"],
-        "3_jp": ["効果発生率+15%","【酸性の毒液】対象ダメージUP+25"],
-        "3_kr": ["효과 발동 확률 +15%","산성독 대상 피해량 증가 +25%"],
-        "3_zh": ["效果触发几率+15%","对酸性毒液目标造成的伤害 +25%"],
-        "4": ["-1 turn Skill Cooldown","+20% damage"],
-        "4_jp": ["スキルターン-1ターン","ダメージ+20%"],
-        "4_kr": ["스킬 쿨타임 -1턴","피해량 +20%"],
-        "4_zh": ["冷却时间-1回合","伤害量+20%"],
-        "5": ["+15% effect chance","+25% Damage Increase to Corrosive Poison"],
-        "5_jp": ["効果発生率+15%","【酸性の毒液】対象ダメージUP+25"],
-        "5_kr": ["효과 발동 확률 +15%","산성독 대상 피해량 증가 +25%"],
-        "5_zh": ["效果触发几率+15%","对酸性毒液目标造成的伤害 +25%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+15% effect chance",
+          "+25% Damage Increase to Corrosive Poison"
+        ],
+        "3_jp": [
+          "効果発生率+15%",
+          "【酸性の毒液】対象ダメージUP+25"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +15%",
+          "산성독 대상 피해량 증가 +25%"
+        ],
+        "3_zh": [
+          "效果触发几率+15%",
+          "对酸性毒液目标造成的伤害 +25%"
+        ],
+        "4": [
+          "-1 turn Skill Cooldown",
+          "+20% damage"
+        ],
+        "4_jp": [
+          "スキルターン-1ターン",
+          "ダメージ+20%"
+        ],
+        "4_kr": [
+          "스킬 쿨타임 -1턴",
+          "피해량 +20%"
+        ],
+        "4_zh": [
+          "冷却时间-1回合",
+          "伤害量+20%"
+        ],
+        "5": [
+          "+15% effect chance",
+          "+25% Damage Increase to Corrosive Poison"
+        ],
+        "5_jp": [
+          "効果発生率+15%",
+          "【酸性の毒液】対象ダメージUP+25"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +15%",
+          "산성독 대상 피해량 증가 +25%"
+        ],
+        "5_zh": [
+          "效果触发几率+15%",
+          "对酸性毒液目标造成的伤害 +25%"
+        ]
       },
       "cd": "4",
       "wgr": 1,
-      "buff": ["BT_ACTION_GAUGE"],
-      "debuff": ["BT_STUN","BT_DOT_POISON2"],
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_STUN",
+        "BT_DOT_POISON2"
+      ],
       "offensive": true,
       "target": "mono"
     },
@@ -224,27 +325,74 @@
         "5_zh": "以<color=#28d9ed>100%</color>的概率解除所有敌人<color=#28d9ed>1个强化效果</color>,然后攻击所有敌人并获得<color=#28d9ed>追加回合</color>。\\n攻击后,对我方全体及魔法型敌人施加<color=#28d9ed>剧毒领域</color>,持续<color=#28d9ed>2</color>回合。(无视效果抵抗与免疫)\\n若目标为首领怪物,则在攻击前施加<color=#28d9ed>酸性毒液</color>,持续<color=#28d9ed>3</color>回合。(无视效果抵抗)\\n此技能伤害与施术者的<color=#28d9ed>最大生命值</color>成正比,而非<color=#28d9ed>攻击力</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+1 Turn Bane's Domain","+10% damage"],
-        "4_jp": ["【劇毒の領域】持続+1ターン","ダメージ+10%"],
-        "4_kr": ["극독의 영역 +1턴","피해량 +10%"],
-        "4_zh": ["剧毒领域持续+1回合","伤害量+10%"],
-        "5": ["+20% damage"],
-        "5_jp": ["ダメージ+20%"],
-        "5_kr": ["피해량 +20%"],
-        "5_zh": ["伤害量+20%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "+1 Turn Bane's Domain",
+          "+10% damage"
+        ],
+        "4_jp": [
+          "【劇毒の領域】持続+1ターン",
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "극독의 영역 +1턴",
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "剧毒领域持续+1回合",
+          "伤害量+10%"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
       },
       "cd": "5",
       "wgr": 2,
-      "buff": ["BT_ADDITIVE_TURN","IG_Buff_Effect_2000109_Interruption"],
-      "debuff": ["IG_Buff_Effect_2000109_Interruption_D","BT_DOT_POISON2","BT_REMOVE_BUFF"],
+      "buff": [
+        "BT_ADDITIVE_TURN",
+        "IG_Buff_Effect_2000109_Interruption"
+      ],
+      "debuff": [
+        "IG_Buff_Effect_2000109_Interruption_D",
+        "BT_DOT_POISON2",
+        "BT_REMOVE_BUFF"
+      ],
       "offensive": true,
       "target": "multi"
     },
@@ -279,34 +427,84 @@
         "5_zh": "<color=#ffd732>连锁同伴效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对所有敌人施加持续<color=#28d9ed>2</color>回合的<color=#28d9ed>酸性毒液</color>。该技能造成的伤害与生命值上限成正比,而非攻击力。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率对目标施加持续<color=#28d9ed>2</color>回合的<color=#28d9ed>酸性毒液</color>。该技能造成的伤害与生命值上限成正比,而非攻击力。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
       "wgr_dual": 1,
       "cd": null,
       "buff": [],
-      "debuff": ["BT_DOT_POISON"],
+      "debuff": [
+        "BT_DOT_POISON"
+      ],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [],
-      "dual_debuff": ["BT_DOT_POISON"]
+      "dual_debuff": [
+        "BT_DOT_POISON"
+      ]
     }
+  },
+  "rank_by_transcend": {
+    "3": "B",
+    "4": "A",
+    "5": "A",
+    "6": "A"
   }
 }

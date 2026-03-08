@@ -22,7 +22,9 @@
       "prio": 2
     }
   },
-  "tags": ["limited"],
+  "tags": [
+    "limited"
+  ],
   "Chain_Type": "Join",
   "gift": "Natural Object",
   "video": "rLmf9_q9ikc",
@@ -83,27 +85,73 @@
         "5_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。有<color=#28d9ed>50%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% Priority"],
-        "3_jp": ["行動ゲージ10%UP"],
-        "3_kr": ["행동 게이지 +10%"],
-        "3_zh": ["行动值+10%"],
-        "4": ["+10% effect chance"],
-        "4_jp": ["効果発生率+10%"],
-        "4_kr": ["효과 발동 확률 +10%"],
-        "4_zh": ["效果触发几率+10%"],
-        "5": ["+10% effect chance","+1 Weakness Gauge damage"],
-        "5_jp": ["効果発生率+10%","WGダメージ+1"],
-        "5_kr": ["효과 발동 확률 +10%","WG 감소량 +1"],
-        "5_zh": ["效果触发几率+10%","WG降低量+1"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+10% Priority"
+        ],
+        "3_jp": [
+          "行動ゲージ10%UP"
+        ],
+        "3_kr": [
+          "행동 게이지 +10%"
+        ],
+        "3_zh": [
+          "行动值+10%"
+        ],
+        "4": [
+          "+10% effect chance"
+        ],
+        "4_jp": [
+          "効果発生率+10%"
+        ],
+        "4_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "4_zh": [
+          "效果触发几率+10%"
+        ],
+        "5": [
+          "+10% effect chance",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "効果発生率+10%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "효과 발동 확률 +10%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "效果触发几率+10%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_ACTION_GAUGE","BT_SHIELD_BASED_CASTER"],
-      "debuff": ["BT_STAT|ST_SPEED","IG_Buff_Effect_2000102_Interruption_D"],
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_SHIELD_BASED_CASTER"
+      ],
+      "debuff": [
+        "BT_STAT|ST_SPEED",
+        "IG_Buff_Effect_2000102_Interruption_D"
+      ],
       "offensive": true,
       "target": "mono",
       "burnEffect": {
@@ -170,27 +218,71 @@
         "5_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n<color=#28d9ed>降低附带异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>100%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["Increases Counterattack Chance by 20%"],
-        "4_jp": ["反撃発生率UP+20%"],
-        "4_kr": ["반격 확률 증가 +20%"],
-        "4_zh": ["反击率提升+20%"],
-        "5": ["+10% damage","+1 Weakness Gauge damage"],
-        "5_jp": ["ダメージ+10%","WGダメージ+1"],
-        "5_kr": ["피해량 +10%","WG 감소량 +1"],
-        "5_zh": ["伤害量+10%","WG降低量+1"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "Increases Counterattack Chance by 20%"
+        ],
+        "4_jp": [
+          "反撃発生率UP+20%"
+        ],
+        "4_kr": [
+          "반격 확률 증가 +20%"
+        ],
+        "4_zh": [
+          "反击率提升+20%"
+        ],
+        "5": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ]
       },
       "cd": "3",
       "wgr": 1,
-      "buff": ["BT_EXTRA_ATTACK_ON_TURN_END"],
-      "debuff": ["BT_ACTION_GAUGE"],
+      "buff": [
+        "BT_EXTRA_ATTACK_ON_TURN_END"
+      ],
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ],
       "offensive": true,
       "target": "multi"
     },
@@ -225,26 +317,73 @@
         "5_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>2回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["Grants Barrier Duration for 1 turn","+10% damage"],
-        "4_jp": ["シールド持続+1ターン","ダメージ+10%"],
-        "4_kr": ["실드 지속 +1턴","피해량 +10%"],
-        "4_zh": ["护盾持续+1回合","伤害量+10%"],
-        "5": ["Irregular Infection duration by 1 turn","+1 Weakness Gauge damage"],
-        "5_jp": ["【イレギュラー感染症】持続+1ターン","WGダメージ+1"],
-        "5_kr": ["이레귤러 감염증 지속 +1턴","WG 감소량 +1"],
-        "5_zh": ["异型怪感染症持续+1回合","WG降低量+1"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4": [
+          "Grants Barrier Duration for 1 turn",
+          "+10% damage"
+        ],
+        "4_jp": [
+          "シールド持続+1ターン",
+          "ダメージ+10%"
+        ],
+        "4_kr": [
+          "실드 지속 +1턴",
+          "피해량 +10%"
+        ],
+        "4_zh": [
+          "护盾持续+1回合",
+          "伤害量+10%"
+        ],
+        "5": [
+          "Irregular Infection duration by 1 turn",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "【イレギュラー感染症】持続+1ターン",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "이레귤러 감염증 지속 +1턴",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "异型怪感染症持续+1回合",
+          "WG降低量+1"
+        ]
       },
       "cd": "5",
       "wgr": 2,
-      "buff": ["BT_SHIELD_BASED_CASTER","BT_EXTEND_DEBUFF"],
+      "buff": [
+        "BT_SHIELD_BASED_CASTER",
+        "BT_EXTEND_DEBUFF"
+      ],
       "debuff": [
         "BT_AGGRO",
         "IG_Buff_Effect_2000102_Interruption_D",
@@ -285,34 +424,84 @@
         "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据生命值上限而非攻击力等比提升,且攻击后使自身和下一连携技能的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据自身生命值上限而非攻击力等比提升伤害,且攻击后有50%几率使目标速度降低<color=#28d9ed>1回合</color>"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
       "wgr_dual": 1,
       "cd": null,
-      "buff": ["BT_AP_CHARGE"],
+      "buff": [
+        "BT_AP_CHARGE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi",
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [],
-      "dual_debuff": ["BT_STAT|ST_SPEED"]
+      "dual_debuff": [
+        "BT_STAT|ST_SPEED"
+      ]
     }
+  },
+  "rank_by_transcend": {
+    "3": "B",
+    "4": "B",
+    "5": "A",
+    "6": "A"
   }
 }
