@@ -1,9 +1,7 @@
-'use client';
+import { getCharactersForList } from '@/lib/data/characters';
+import TierListPveClient from './TierListPveClient';
 
-export default function TierlistPveTool() {
-  return (
-    <div className="mx-auto max-w-4xl text-center text-zinc-400">
-      <p>Tier List - PvE — Under development</p>
-    </div>
-  );
+export default async function TierlistPveTool() {
+  const characters = await getCharactersForList();
+  return <TierListPveClient characters={characters} />;
 }

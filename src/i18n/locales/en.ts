@@ -101,6 +101,8 @@ const en = {
   'page.tierlist.description':
     'Outerplane tier list ranking all characters by role and content type. Updated {monthYear}.',
   'page.tierlist.other_rankings': 'Other Rankings',
+  'tierlist.transcend_level': 'Transcendence Level',
+  'tierlist.characters_count': 'characters',
   'page.tools.title': 'Outerplane Tools & Utilities',
   'page.tools.description':
     'Outerplane tools: gear solver, team planner, pull simulator, progress tracker, and more.',

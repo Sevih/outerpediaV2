@@ -184,6 +184,9 @@ export type CharacterListEntry = WithLocalizedFields<{
   SubClass: string;
   Rarity: RarityType;
   role: RoleType;
+  rank: string;
+  rank_by_transcend?: Record<string, string>;
+  role_by_transcend?: Record<string, string>;
   Chain_Type: ChainType;
   gift: string;
   tags: string[];

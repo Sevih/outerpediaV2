@@ -101,6 +101,8 @@ const zh: Record<TranslationKey, string> = {
   'page.tierlist.description':
     '异域战记节奏榜。按角色定位和内容类型排名。{monthYear}更新。',
   'page.tierlist.other_rankings': '其他排行',
+  'tierlist.transcend_level': '超越等级',
+  'tierlist.characters_count': '角色',
   'page.tools.title': '异域战记 工具 & 实用程序',
   'page.tools.description':
     '异域战记工具：装备求解器、队伍规划器、抽卡模拟器、进度追踪器等。',

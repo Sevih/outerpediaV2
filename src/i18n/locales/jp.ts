@@ -101,6 +101,8 @@ const jp: Record<TranslationKey, string> = {
   'page.tierlist.description':
     'アウタープレーンのティアリスト。役割・コンテンツ別にキャラクターをランキング。{monthYear}更新。',
   'page.tierlist.other_rankings': 'その他のランキング',
+  'tierlist.transcend_level': '超越レベル',
+  'tierlist.characters_count': 'キャラクター',
   'page.tools.title': 'アウタープレーン ツール & ユーティリティ',
   'page.tools.description':
     'アウタープレーンのツール：装備ソルバー、チームプランナー、ガチャシミュレーター、進捗トラッカーなど。',

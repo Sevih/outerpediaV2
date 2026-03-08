@@ -18,6 +18,9 @@ type RawCharacter = {
   SubClass: string;
   Rarity: number;
   role: string;
+  rank: string;
+  rank_by_transcend?: Record<string, string>;
+  role_by_transcend?: Record<string, string>;
   Chain_Type: string;
   gift: string;
   tags?: string[];
@@ -140,6 +143,7 @@ export async function run() {
         SubClass: char.SubClass,
         Rarity: char.Rarity,
         role: char.role,
+        rank: char.rank,
         Chain_Type: char.Chain_Type,
         gift: char.gift,
         tags: char.tags ?? [],
@@ -147,6 +151,8 @@ export async function run() {
         debuff: [...allCanonicalDebuffs],
         effectsBySource,
       };
+      if (char.rank_by_transcend) listEntry.rank_by_transcend = char.rank_by_transcend;
+      if (char.role_by_transcend) listEntry.role_by_transcend = char.role_by_transcend;
 
       // Add localized Fullname suffixes to both entries
       for (const lang of SUFFIX_LANGS) {
