@@ -148,7 +148,7 @@ export async function run(): Promise<string> {
   const outputPath = join(outputDir, 'posts.json');
 
   // Skip network scraping in prod build — data is already committed
-  if (process.env.CI || process.env.NODE_ENV === 'production') {
+  if (process.argv.includes('--prod') || process.env.CI) {
     if (existsSync(outputPath)) return 'skipped (prod)';
   }
 

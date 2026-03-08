@@ -8,6 +8,8 @@ type Props = {
   max: number;
   /** Minimum font size in px — text stays at this size even if it overflows */
   min: number;
+  /** Use center transform origin instead of left (for centered layouts) */
+  center?: boolean;
   className?: string;
 };
 
@@ -16,7 +18,7 @@ type Props = {
  * Renders at `max` px and uses transform scale to shrink visually,
  * avoiding font hinting issues at small sizes.
  */
-export default function FitText({ children, max, min, className }: Props) {
+export default function FitText({ children, max, min, center, className }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -39,7 +41,7 @@ export default function FitText({ children, max, min, className }: Props) {
     <div
       ref={ref}
       className={className}
-      style={{ fontSize: max, whiteSpace: 'nowrap', transformOrigin: 'left' }}
+      style={{ fontSize: max, whiteSpace: 'nowrap', transformOrigin: center ? 'center' : 'left' }}
     >
       {children}
     </div>
