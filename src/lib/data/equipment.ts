@@ -246,3 +246,66 @@ export async function getCharactersRecommendingEquipment(
     return true;
   });
 }
+
+/**
+ * Build a complete mapping of equipment name → characters that recommend it.
+ * Scans all reco files once and returns a Map keyed by equipment EN name.
+ * Each value is an array of { characterId, buildNames } (deduplicated per character,
+ * collecting all build names).
+ */
+export type EquipmentUsageEntry = { characterId: string; buildNames: string[] };
+
+export async function getAllEquipmentUsage(): Promise<Record<string, EquipmentUsageEntry[]>> {
+  const files = await readdir(RECO_DIR);
+  const presetsRaw = await readFile(join(RECO_DIR, '_presets.json'), 'utf-8');
+  const presets = JSON.parse(presetsRaw) as RecoPresets;
+
+  const recoFiles = files.filter(f => f !== '_presets.json' && f.endsWith('.json'));
+  const recoEntries = await Promise.all(
+    recoFiles.map(async (file) => {
+      const charId = file.replace('.json', '');
+      const raw = await readFile(join(RECO_DIR, file), 'utf-8');
+      return { charId, reco: JSON.parse(raw) as CharacterReco };
+    })
+  );
+
+  // Intermediate: equipName → Map<charId, Set<buildName>>
+  const intermediate = new Map<string, Map<string, Set<string>>>();
+
+  const addUsage = (equipName: string, charId: string, buildName: string) => {
+    if (!intermediate.has(equipName)) intermediate.set(equipName, new Map());
+    const charMap = intermediate.get(equipName)!;
+    if (!charMap.has(charId)) charMap.set(charId, new Set());
+    charMap.get(charId)!.add(buildName);
+  };
+
+  for (const { charId, reco } of recoEntries) {
+    const resolved = resolveRecoPresets(reco, presets);
+    for (const [buildName, build] of Object.entries(resolved)) {
+      if (build.Weapon) {
+        for (const w of build.Weapon) addUsage(w.name, charId, buildName);
+      }
+      if (build.Amulet) {
+        for (const a of build.Amulet) addUsage(a.name, charId, buildName);
+      }
+      if (build.Talisman) {
+        for (const t of build.Talisman) addUsage(t, charId, buildName);
+      }
+      if (build.Set) {
+        for (const combo of build.Set) {
+          for (const entry of combo) addUsage(entry.name, charId, buildName);
+        }
+      }
+    }
+  }
+
+  // Convert to final format
+  const result: Record<string, EquipmentUsageEntry[]> = {};
+  for (const [equipName, charMap] of intermediate) {
+    result[equipName] = Array.from(charMap.entries()).map(([characterId, builds]) => ({
+      characterId,
+      buildNames: Array.from(builds),
+    }));
+  }
+  return result;
+}

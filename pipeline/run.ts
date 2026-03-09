@@ -20,6 +20,7 @@ const steps: Step[] = [
   { name: 'wallpapers', run: () => import('./steps/wallpapers').then(m => m.run()) },
   { name: 'patch-notes', run: () => import('./steps/patch-notes').then(m => m.run()) },
   { name: 'patch-notes-legacy', run: () => import('./steps/patch-notes-legacy').then(m => m.run()) },
+  { name: 'gear-usage-stats', run: () => import('./steps/gear-usage-stats').then(m => m.run()) },
   { name: 'validate-reco', run: () => import('./steps/validate-reco').then(m => m.run()) },
 ];
 
