@@ -15,10 +15,11 @@ function isSubdomainRouting(): boolean {
     const host = window.location.hostname;
     return matchesDomain(host, BASE_DOMAIN) || matchesDomain(host, DEV_DOMAIN);
   }
-  // Server on Vercel preview: path-based
-  if (process.env.VERCEL_ENV === 'preview') return false;
-  // Server (dev + production): subdomain-based
-  return true;
+  // Server: subdomain routing only on the real custom domain
+  const host = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? '';
+  if (matchesDomain(host, BASE_DOMAIN) || matchesDomain(host, DEV_DOMAIN)) return true;
+  // Vercel previews, Vercel production URL (*.vercel.app), dev → path-based
+  return false;
 }
 
 /**
