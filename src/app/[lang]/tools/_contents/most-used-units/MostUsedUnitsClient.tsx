@@ -249,11 +249,11 @@ export default function MostUsedUnitsClient({ characters, usage, guideTitles }: 
                   </span>
                   <div className="flex items-center gap-2 mt-0.5">
                     <span className="flex items-center gap-1 text-xs text-zinc-400">
-                      <img src={`/images/ui/elem/CM_Element_${entry.char.Element}.webp`} alt="" className="h-4 w-4" />
+                      <img src={`/images/ui/elem/CM_Element_${entry.char.Element}.webp`} alt={entry.char.Element} className="h-4 w-4" />
                       {entry.char.Element}
                     </span>
                     <span className="flex items-center gap-1 text-xs text-zinc-400">
-                      <img src={`/images/ui/class/CM_Class_${entry.char.Class}.webp`} alt="" className="h-4 w-4" />
+                      <img src={`/images/ui/class/CM_Class_${entry.char.Class}.webp`} alt={entry.char.Class} className="h-4 w-4" />
                       {entry.char.Class}
                     </span>
                   </div>

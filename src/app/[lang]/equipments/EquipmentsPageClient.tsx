@@ -195,7 +195,7 @@ export default function EquipmentsPageClient({
                 <div key={bk} className="relative h-8 w-8 shrink-0">
                   <Image
                     src={`/images/characters/boss/atb/IG_Turn_${boss.icons}.webp`}
-                    alt=""
+                    alt={lRec(bossMap[bk]?.name, lang) || bk}
                     fill
                     sizes="32px"
                     className="object-contain"

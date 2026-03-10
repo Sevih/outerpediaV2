@@ -38,7 +38,7 @@ export default function EeSection({ character, ee, giftItems }: Props) {
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg">
               <Image
                 src={getRarityBgPath('legendary')}
-                alt=""
+                alt="Legendary rarity"
                 fill
                 sizes="64px"
                 className="object-contain"
@@ -66,7 +66,7 @@ export default function EeSection({ character, ee, giftItems }: Props) {
                   <div className="relative h-4 w-4 shrink-0">
                     <Image
                       src={`/images/ui/effect/${ee.icon_effect}.webp`}
-                      alt=""
+                      alt={l(ee, 'name', lang)}
                       fill
                       sizes="16px"
                       className="object-contain"
@@ -109,7 +109,7 @@ export default function EeSection({ character, ee, giftItems }: Props) {
               <div className="relative h-5 w-5 shrink-0">
                 <Image
                   src="/images/items/CM_Goods_FriendPoint.webp"
-                  alt=""
+                  alt={giftLabel}
                   fill
                   sizes="20px"
                   className="object-contain"
@@ -124,7 +124,7 @@ export default function EeSection({ character, ee, giftItems }: Props) {
                   <div className="relative h-12 w-12 shrink-0">
                     <Image
                       src={getRarityBgPath(item.rarity)}
-                      alt=""
+                      alt={`${item.rarity} rarity`}
                       fill
                       sizes="48px"
                       className="object-contain"

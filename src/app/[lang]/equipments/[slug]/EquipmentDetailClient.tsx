@@ -282,7 +282,7 @@ function SetDetail({ set, lang, bossMap, statRanges }: { set: ArmorSet; lang: La
         <div className="flex items-center gap-2">
           {set.set_icon && (
             <div className="relative h-6 w-6 shrink-0">
-              <Image src={`/images/ui/effect/${set.set_icon}.webp`} alt="" fill sizes="24px" className="object-contain" />
+              <Image src={`/images/ui/effect/${set.set_icon}.webp`} alt={name} fill sizes="24px" className="object-contain" />
             </div>
           )}
           <h3 className="after:hidden">{name} — {t('equip.detail.set_effects')}</h3>
@@ -326,9 +326,9 @@ function SetDetail({ set, lang, bossMap, statRanges }: { set: ArmorSet; lang: La
                 <div key={piece} className="card flex items-center gap-3 p-3">
                   {/* Icon */}
                   <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded">
-                    <Image src={getRarityBgPath(set.rarity)} alt="" fill sizes="56px" className="object-cover" />
+                    <Image src={getRarityBgPath(set.rarity)} alt={`${set.rarity} rarity`} fill sizes="56px" className="object-cover" />
                     <div className="absolute inset-0.5">
-                      <Image src={`/images/equipment/TI_Equipment_${piece}_${set.image_prefix}.webp`} alt="" fill sizes="52px" className="object-contain" />
+                      <Image src={`/images/equipment/TI_Equipment_${piece}_${set.image_prefix}.webp`} alt={`${name} ${piece}`} fill sizes="52px" className="object-contain" />
                     </div>
                   </div>
                   {/* Table */}
@@ -373,7 +373,7 @@ function EEDetail({ ee, owner, cfCompanion, lang, statRange }: { ee: ExclusiveEq
 
   const eeIcon = (
     <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-lg">
-      <Image src={getRarityBgPath('legendary')} alt="" fill sizes="96px" className="object-cover" />
+      <Image src={getRarityBgPath('legendary')} alt="Legendary rarity" fill sizes="96px" className="object-cover" />
       <div className="absolute inset-2">
         <Image src={`/images/characters/ee/${owner.id}.webp`} alt={name} fill sizes="80px" className="object-contain" />
       </div>
@@ -478,7 +478,7 @@ function EffectSection({ effectName, effectIcon, effectDesc1, effectDesc4 }: {
         <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-zinc-500/40 px-3 py-1">
           {effectIcon && (
             <div className="relative h-5 w-5 shrink-0">
-              <Image src={`/images/ui/effect/${effectIcon}.webp`} alt="" fill sizes="20px" className="object-contain" />
+              <Image src={`/images/ui/effect/${effectIcon}.webp`} alt={effectName ?? 'Effect'} fill sizes="20px" className="object-contain" />
             </div>
           )}
           <span className="text-sm text-buff">{effectName}</span>

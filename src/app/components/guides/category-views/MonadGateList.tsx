@@ -79,7 +79,7 @@ function SingleCard({ meta, depth, lang, t }: {
     >
       <Image
         src={`/images/guides/${meta.icon}.webp`}
-        alt=""
+        alt={routeName}
         fill
         sizes="(max-width: 640px) 80px, 126px"
         className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -110,7 +110,7 @@ function SplitCard({ items, lang, t }: {
                     ring-1 ring-white/10">
       <Image
         src={`/images/guides/${meta.icon}.webp`}
-        alt=""
+        alt={lRec(meta.title, lang)}
         fill
         sizes="(max-width: 640px) 80px, 126px"
         className="object-cover"

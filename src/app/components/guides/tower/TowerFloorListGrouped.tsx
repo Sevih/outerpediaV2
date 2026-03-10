@@ -78,7 +78,7 @@ function BossRow({ boss, lang }: { boss: Boss; lang: Lang }) {
               ? `/images/characters/${boss.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${boss.icons}.webp`
               : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
             }
-            alt=""
+            alt={lRec(boss.Name, lang)}
             fill
             sizes="20px"
             className="object-cover"
@@ -90,7 +90,7 @@ function BossRow({ boss, lang }: { boss: Boss; lang: Lang }) {
         <span className="relative h-4 w-4 shrink-0">
           <Image
             src={`/images/ui/elem/CM_Element_${element}.webp`}
-            alt=""
+            alt={element}
             fill
             sizes="16px"
             className="object-contain"

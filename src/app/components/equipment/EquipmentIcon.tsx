@@ -38,7 +38,7 @@ export default function EquipmentIcon({
       <div className="relative h-full w-full overflow-hidden rounded">
         <Image
           src={getRarityBgPath(rarity)}
-          alt=""
+          alt={`${rarity} rarity`}
           fill
           sizes={`${size}px`}
           className="object-cover"
@@ -61,7 +61,7 @@ export default function EquipmentIcon({
           <div className="relative h-full w-full">
             <Image
               src={`/images/ui/effect/${effectIcon}.webp`}
-              alt=""
+              alt="Effect"
               fill
               sizes={`${overlaySize}px`}
               className="object-contain"
@@ -109,7 +109,7 @@ export default function EquipmentIcon({
             >
               <Image
                 src="/images/ui/star/CM_icon_star_y.webp"
-                alt=""
+                alt="Star"
                 fill
                 sizes={`${starSize}px`}
                 className="object-contain drop-shadow-sm"

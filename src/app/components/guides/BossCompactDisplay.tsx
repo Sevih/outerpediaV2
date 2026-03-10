@@ -107,7 +107,7 @@ function SkillTab({ skill, isActive, onClick }: {
     >
       <Image
         src={getSkillImageSrc(skill.icon)}
-        alt=""
+        alt={lRec(skill.name as LangMap, 'en')}
         fill
         sizes="36px"
         className="object-contain"

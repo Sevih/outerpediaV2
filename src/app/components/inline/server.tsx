@@ -16,8 +16,8 @@ function Badge({ icon, bg, label }: { icon: string; bg: string; label: string })
   return (
     <span className="inline-flex items-center gap-0.5 align-middle text-equipment">
       <span className="relative inline-block h-4.5 w-4.5 shrink-0">
-        <Image src={bg} alt="" fill sizes="18px" className="object-contain" />
-        <Image src={icon} alt="" fill sizes="18px" className="object-contain" />
+        <Image src={bg} alt="Rarity" fill sizes="18px" className="object-contain" />
+        <Image src={icon} alt={label} fill sizes="18px" className="object-contain" />
       </span>
       <span className="underline">{label}</span>
     </span>

@@ -35,6 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = lRec(guide.description, lang);
 
   const cat = guide.category;
+  const categoryKey = `guides.category.${cat}` as TranslationKey;
+  const categoryTitle = t[categoryKey] ?? cat;
   const hasCustomOg = !!(guide.og_image || guide.boss_id);
 
   const ogImage = guide.og_image
@@ -53,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createPageMetadata({
     lang,
     path: `/guides/${guide.category}/${slug}`,
-    title: t['page.guide.meta_title'].replace('{title}', title),
+    title: t['page.guide.meta_title'].replace('{title}', title).replace('{category}', categoryTitle),
     description: `${title} — ${description}`,
     ...(ogImage && { ogImage }),
     ...(ogImageSize && { ogImageSize }),

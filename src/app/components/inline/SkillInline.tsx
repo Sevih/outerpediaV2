@@ -108,7 +108,7 @@ export default function SkillInline({ character, skill }: Props) {
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-2">
         <span className="relative h-8 w-8 shrink-0">
-          <Image src={iconPath} alt="" fill sizes="32px" className="object-contain" />
+          <Image src={iconPath} alt={skillName} fill sizes="32px" className="object-contain" />
         </span>
         <div>
           <span className="text-sm font-bold text-equipment">{skillName}</span>
@@ -130,7 +130,7 @@ export default function SkillInline({ character, skill }: Props) {
       <button type="button" className="cursor-default">
         <span className="inline-flex items-center gap-0.5 align-middle text-equipment">
           <span className="relative inline-block h-4.5 w-4.5 shrink-0">
-            <Image src={iconPath} alt="" fill sizes="18px" className="object-contain" />
+            <Image src={iconPath} alt={skillName} fill sizes="18px" className="object-contain" />
           </span>
           <span className="underline">{skillName}</span>
         </span>

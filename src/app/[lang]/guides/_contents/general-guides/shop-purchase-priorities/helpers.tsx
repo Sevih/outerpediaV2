@@ -405,7 +405,7 @@ export function TextOnlyShopSection({ shopKey, lang }: { shopKey: ShopKey; lang:
 export function ShopTabLabel({ icon, label }: { icon: string; label: string }) {
     return (
         <span className="inline-flex items-center gap-1.5">
-            <Image src={icon} alt="" width={20} height={20} className="shrink-0" />
+            <Image src={icon} alt={label} width={20} height={20} className="shrink-0" />
             <span>{label}</span>
         </span>
     )

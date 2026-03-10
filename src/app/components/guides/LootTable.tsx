@@ -131,7 +131,7 @@ export default function LootTable({ bossId }: Props) {
                         <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-zinc-500/30 px-2 py-0.5">
                           {w.effect_icon && (
                             <div className="relative h-3.5 w-3.5 shrink-0">
-                              <Image src={`/images/ui/effect/${w.effect_icon}.webp`} alt="" fill sizes="14px" className="object-contain" />
+                              <Image src={`/images/ui/effect/${w.effect_icon}.webp`} alt={l(w as never, 'effect_name', lang) as string} fill sizes="14px" className="object-contain" />
                             </div>
                           )}
                           <span className="text-[11px] text-buff">{l(w as never, 'effect_name', lang)}</span>
@@ -173,7 +173,7 @@ export default function LootTable({ bossId }: Props) {
                         <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-zinc-500/30 px-2 py-0.5">
                           {a.effect_icon && (
                             <div className="relative h-3.5 w-3.5 shrink-0">
-                              <Image src={`/images/ui/effect/${a.effect_icon}.webp`} alt="" fill sizes="14px" className="object-contain" />
+                              <Image src={`/images/ui/effect/${a.effect_icon}.webp`} alt={l(a as never, 'effect_name', lang) as string} fill sizes="14px" className="object-contain" />
                             </div>
                           )}
                           <span className="text-[11px] text-buff">{l(a as never, 'effect_name', lang)}</span>

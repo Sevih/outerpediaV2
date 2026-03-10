@@ -60,8 +60,8 @@ const LOOT: Record<string, LootConfig> = {
 function EquipIcon({ image, rarity }: { image: string; rarity: string }) {
   return (
     <span className="relative inline-block h-4.5 w-4.5 lg:h-6 lg:w-6 shrink-0">
-      <Image src={getRarityBgPath(rarity)} alt="" fill sizes="18px" className="object-contain" />
-      <Image src={`/images/equipment/${image}.webp`} alt="" fill sizes="18px" className="object-contain" />
+      <Image src={getRarityBgPath(rarity)} alt={rarity} fill sizes="18px" className="object-contain" />
+      <Image src={`/images/equipment/${image}.webp`} alt={image} fill sizes="18px" className="object-contain" />
     </span>
   );
 }
@@ -89,7 +89,7 @@ function BossPin({ meta, lang }: { meta: GuideMeta; lang: CategoryViewProps['lan
         <span className="relative h-12 w-12 lg:h-16 lg:w-16 shrink-0 border border-red-600 group-hover:border-red-400 rounded-md transition-all overflow-hidden">
           <Image
             src="/images/ui/bg/TI_Slot_Unique.png"
-            alt=""
+            alt={`${bossName} rarity background`}
             fill
             sizes="64px"
             className="object-contain"
@@ -131,7 +131,7 @@ export default function IrregularExterminationList({ guides, lang }: CategoryVie
       <div className="relative w-full aspect-1439/719 rounded-lg overflow-hidden ring-1 ring-white/10">
         <Image
           src="/images/guides/T_Irregular_Chase_Bg.webp"
-          alt=""
+          alt="Irregular Extermination map"
           fill
           sizes="(max-width: 640px) 100vw, 800px"
           className="object-cover"

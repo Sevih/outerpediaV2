@@ -41,7 +41,7 @@ export default function TalismanMiniCard({ talisman, lang }: Props) {
             <div className="relative h-4 w-4 shrink-0">
               <Image
                 src={`/images/ui/effect/${talisman.effect_icon}.webp`}
-                alt=""
+                alt={effectName ?? ''}
                 fill
                 sizes="16px"
                 className="object-contain"

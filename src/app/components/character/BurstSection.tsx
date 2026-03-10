@@ -76,7 +76,7 @@ export default function BurstSection({ character }: Props) {
                   {/* Card frame background */}
                   <Image
                     src={`/images/ui/skills/IG_Button_Burst_0${burst.level}.webp`}
-                    alt=""
+                    alt={`Burst level ${burst.level}`}
                     fill
                     sizes="176px"
                     className="pointer-events-none object-contain"

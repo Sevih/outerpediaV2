@@ -76,7 +76,7 @@ function BanOverlay() {
     <span className="absolute inset-0 z-10 flex items-center justify-center">
       <Image
         src="/images/ui/common/CT_Ban_Icon.webp"
-        alt=""
+        alt="Banned"
         width={20}
         height={20}
       />

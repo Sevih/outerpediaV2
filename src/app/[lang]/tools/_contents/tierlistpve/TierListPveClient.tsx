@@ -183,7 +183,7 @@ export default function TierListPveClient({ characters }: Props) {
           >
             <div className="flex items-center -space-x-1">
               {Array.from({ length: lvl }, (_, i) => (
-                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="" width={16} height={16} style={{ width: 16, height: 16 }} />
+                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="Star" width={16} height={16} style={{ width: 16, height: 16 }} />
               ))}
             </div>
           </FilterPill>

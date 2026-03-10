@@ -161,7 +161,7 @@ export default function TimegatedResourcesGuide() {
 
     const tabLabels = TAB_KEYS.map((key) => (
         <span key={key} className="inline-flex items-center gap-1.5">
-            <Image src={TAB_ICONS[key]} alt="" width={20} height={20} className="object-contain" />
+            <Image src={TAB_ICONS[key]} alt={lRec(LABELS.tabs[key], lang)} width={20} height={20} className="object-contain" />
             {lRec(LABELS.tabs[key], lang)}
         </span>
     ))

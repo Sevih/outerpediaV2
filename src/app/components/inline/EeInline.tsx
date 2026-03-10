@@ -40,8 +40,8 @@ export default function EeInline({ name }: Props) {
   const tooltip = (
     <div className="flex gap-2">
       <div className="relative h-10 w-10 shrink-0">
-        <Image src={getRarityBgPath('legendary')} alt="" fill sizes="40px" className="object-contain" />
-        <Image src={`/images/characters/ee/${charId}.webp`} alt="" fill sizes="40px" className="object-contain" />
+        <Image src={getRarityBgPath('legendary')} alt="Legendary rarity" fill sizes="40px" className="object-contain" />
+        <Image src={`/images/characters/ee/${charId}.webp`} alt={eeName} fill sizes="40px" className="object-contain" />
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-debuff">{eeName}</span>

@@ -24,7 +24,7 @@ export default function GuideCard({ guide, lang, t }: Props) {
       <div className="relative h-10 w-10 shrink-0">
         <Image
           src={`/images/guides/${guide.icon}.webp`}
-          alt=""
+          alt={title}
           fill
           sizes="40px"
           className="object-contain"

@@ -293,7 +293,7 @@ function CheckboxSelect({
                 <span className="relative h-5 w-5 shrink-0 rounded bg-black">
                   <Image
                     src={`/images/ui/effect/${effect.icon}.webp`}
-                    alt=""
+                    alt={effectLabel}
                     fill
                     sizes="20px"
                     className={`object-contain ${imageFilter}`}
@@ -896,7 +896,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
                               <div className="flex items-center gap-1.5">
                                 {meta.image && (
                                   <div className="relative h-4 w-4 shrink-0">
-                                    <Image src={meta.image} alt="" fill sizes="16px" className="object-contain" />
+                                    <Image src={meta.image} alt={l(meta, 'label', lang)} fill sizes="16px" className="object-contain" />
                                   </div>
                                 )}
                                 <span>{l(meta, 'label', lang)}</span>

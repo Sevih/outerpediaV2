@@ -318,7 +318,7 @@ export default function SearchModal({
                     <div className="relative size-6 shrink-0">
                       <Image
                         src={getEquipImage(equip)}
-                        alt=""
+                        alt={displayName}
                         fill
                         sizes="24px"
                         className="object-contain"
@@ -351,7 +351,7 @@ export default function SearchModal({
                     <div className="relative size-6 shrink-0">
                       <Image
                         src={guide.icon}
-                        alt=""
+                        alt={displayTitle}
                         fill
                         sizes="24px"
                         className="object-contain"

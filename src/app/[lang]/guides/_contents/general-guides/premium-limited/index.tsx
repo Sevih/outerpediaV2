@@ -34,7 +34,7 @@ export default function PremiumLimitedGuide() {
 
   const tabLabels = TAB_CONFIG.map((tab) => (
     <span key={tab.key} className="flex items-center gap-2">
-      <Image src={tab.icon} alt="" width={24} height={24} className="object-contain" />
+      <Image src={tab.icon} alt={tab.key} width={24} height={24} className="object-contain" />
       {tab.key}
     </span>
   ));

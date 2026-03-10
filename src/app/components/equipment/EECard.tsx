@@ -29,7 +29,7 @@ export default function EECard({ ee, charId, charName, lang }: Props) {
         <div className="relative h-17.5 w-17.5 shrink-0 overflow-hidden rounded-lg">
           <Image
             src={getRarityBgPath('legendary')}
-            alt=""
+            alt="Legendary rarity"
             fill
             sizes="70px"
             className="object-contain"

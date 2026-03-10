@@ -234,7 +234,7 @@ const jp: Record<TranslationKey, string> = {
   'page.guides.description':
     'アウタープレーン攻略ガイド。冒険ステージ、ボス戦、ギルドレイド、ワールドボス、初心者向けのヒント。',
   'page.guides.meta_title': 'アウタープレーン 攻略ガイド – {monthYear}',
-  'page.guide.meta_title': '{title} — 攻略ガイド',
+  'page.guide.meta_title': '{title} — {category}攻略ガイド',
   'page.guide.by': '著者: {author}',
   'page.guide.updated': '{date} 更新',
   'page.guide.older_version_warning':

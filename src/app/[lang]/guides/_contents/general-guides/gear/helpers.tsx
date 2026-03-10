@@ -118,7 +118,7 @@ export function EquipmentCardInline({ data }: { data: EquipmentCardData }) {
     <div className="relative size-24 rounded-md">
       <div className="relative size-24 rounded-md">
         <div className="absolute inset-0 z-0">
-          <Image src={getRarityBgPath(data.rarity)} alt="" fill sizes="96px" className="object-cover" />
+          <Image src={getRarityBgPath(data.rarity)} alt={`${data.rarity} rarity`} fill sizes="96px" className="object-cover" />
         </div>
         <Image
           src={`/images/equipment/TI_Equipment_${data.type}_0${data.star}.webp`}
@@ -207,7 +207,7 @@ export function EquipmentIntro({ labels }: { labels: Record<EquipmentPropertyKey
       <div className="relative size-24 rounded-md shadow-lg overflow-hidden">
         <div className="relative h-full w-full transition-all duration-300">
           <div className={`absolute inset-0 z-0 transition-all duration-300 ${hovered && hovered !== 'rarity' ? 'grayscale opacity-50' : ''}`}>
-            <Image src={getRarityBgPath('legendary')} alt="" fill sizes="96px" className="object-cover" />
+            <Image src={getRarityBgPath('legendary')} alt="Legendary rarity" fill sizes="96px" className="object-cover" />
           </div>
           <Image
             src="/images/equipment/TI_Equipment_Weapon_06.webp"

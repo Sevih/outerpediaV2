@@ -33,8 +33,8 @@ export default function AmuletInline({ name }: Props) {
   const tooltip = (
     <div className="flex gap-2">
       <div className="relative h-10 w-10 shrink-0">
-        <Image src={getRarityBgPath(amulet.rarity)} alt="" fill sizes="40px" className="object-contain" />
-        <Image src={`/images/equipment/${amulet.image}.webp`} alt="" fill sizes="40px" className="object-contain" />
+        <Image src={getRarityBgPath(amulet.rarity)} alt={`${amulet.rarity} rarity`} fill sizes="40px" className="object-contain" />
+        <Image src={`/images/equipment/${amulet.image}.webp`} alt={label} fill sizes="40px" className="object-contain" />
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-equipment">{label}</span>
@@ -45,7 +45,7 @@ export default function AmuletInline({ name }: Props) {
               <div className="relative h-4 w-4 shrink-0">
                 <Image
                   src={`/images/ui/effect/${amulet.effect_icon}.webp`}
-                  alt=""
+                  alt={effectName || 'Effect'}
                   fill
                   sizes="16px"
                   className="object-contain"

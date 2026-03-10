@@ -71,7 +71,7 @@ function DifficultyCard({
     >
       <Image
         src={`/images/guides/${meta.icon}.webp`}
-        alt=""
+        alt={name}
         fill
         sizes="(max-width: 640px) 100vw, 300px"
         className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -109,7 +109,7 @@ function ElementalCard({
     >
       <Image
         src={`/images/guides/${meta.icon}.webp`}
-        alt=""
+        alt={name}
         fill
         sizes="(max-width: 640px) 80px, 144px"
         className="object-cover transition-transform duration-300 group-hover:scale-105"

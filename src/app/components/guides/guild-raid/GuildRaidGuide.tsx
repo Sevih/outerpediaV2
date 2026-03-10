@@ -87,7 +87,7 @@ function BossMenuItem({
         <span className="relative h-5 w-5 shrink-0 overflow-hidden rounded">
           <Image
             src={`/images/characters/boss/portrait/MT_${boss.icons}.webp`}
-            alt=""
+            alt={label}
             fill
             sizes="20px"
             className="object-cover"
@@ -99,7 +99,7 @@ function BossMenuItem({
         <span className="relative h-4 w-4 shrink-0">
           <Image
             src={`/images/ui/elem/CM_Element_${element}.webp`}
-            alt=""
+            alt={element}
             fill
             sizes="16px"
             className="object-contain"

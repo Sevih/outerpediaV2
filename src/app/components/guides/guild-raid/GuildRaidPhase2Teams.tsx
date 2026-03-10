@@ -102,7 +102,7 @@ export default function GuildRaidPhase2Teams({ teams, pool, defaultTeam, onTeamC
         <span className="relative h-4 w-4 shrink-0">
           <Image
             src={`/images/ui/${entry.icon}.webp`}
-            alt=""
+            alt={key}
             fill
             sizes="16px"
             className="object-contain"

@@ -134,7 +134,7 @@ export default function CharacterPortrait({
             <Image
               key={i}
               src="/images/ui/star/CM_icon_star_y.webp"
-              alt=""
+              alt="Star"
               width={s.starSize}
               height={s.starSize}
               className="-mx-0.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"

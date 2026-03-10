@@ -38,7 +38,7 @@ function SetPieceTooltip({ set, lang, show4Piece, bossMap, t }: { set: ArmorSet;
           <div className="relative h-8 w-8 shrink-0">
             <Image
               src={`/images/ui/effect/${set.set_icon}.webp`}
-              alt=""
+              alt={name}
               fill
               sizes="32px"
               className="object-contain"

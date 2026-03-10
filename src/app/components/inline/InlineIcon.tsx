@@ -33,7 +33,7 @@ export default function InlineIcon({
       <span className="relative inline-block shrink-0" style={{ width: size, height: size }}>
         <Image
           src={icon}
-          alt=""
+          alt={label}
           fill
           sizes={`${size}px`}
           className={`object-contain ${imageClassName ?? ''}`}

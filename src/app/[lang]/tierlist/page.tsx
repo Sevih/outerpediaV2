@@ -65,7 +65,7 @@ export default async function TierlistPage({ params }: Props) {
               <div className="relative h-16 w-16">
                 <Image
                   src={`/images/ui/${tool.icon}.webp`}
-                  alt=""
+                  alt={t[titleKey] ?? tool.slug}
                   fill
                   sizes="64px"
                   className="object-contain"
@@ -127,7 +127,7 @@ export default async function TierlistPage({ params }: Props) {
                   <div className="relative h-12 w-12 shrink-0">
                     <Image
                       src={`/images/ui/${tool.icon}.webp`}
-                      alt=""
+                      alt={t[titleKey] ?? tool.slug}
                       fill
                       sizes="48px"
                       className="object-contain"

@@ -188,7 +188,7 @@ export default function CarouselSlot({ characters }: Props) {
           <span className="carousel-arrow-icon rotate-180">
             <Image
               src="/images/ui/common/CM_Icon_Arrow_Story.webp"
-              alt=""
+              alt="Previous character"
               fill
               sizes="24px"
               className="object-contain"
@@ -204,7 +204,7 @@ export default function CarouselSlot({ characters }: Props) {
           <span className="carousel-arrow-icon">
             <Image
               src="/images/ui/common/CM_Icon_Arrow_Story.webp"
-              alt=""
+              alt="Next character"
               fill
               sizes="24px"
               className="object-contain"

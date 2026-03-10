@@ -53,7 +53,7 @@ export default function StageBasedTeamSelector({ teamData, defaultStage }: Props
           <span className="relative h-6 w-6">
             <Image
               src={`/images/ui/${stageData.icon}.webp`}
-              alt=""
+              alt={activeStage}
               fill
               sizes="24px"
               className="object-contain"

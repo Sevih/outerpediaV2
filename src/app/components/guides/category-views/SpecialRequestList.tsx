@@ -51,7 +51,7 @@ function LootIcons({ loot, type }: { loot: string[]; type: Tab }) {
             const bg = type === 'identification' ? 'bg-black/70 rounded-full' : '';
             return (
               <span key={item} className={`relative h-5 w-5 lg:h-8 lg:w-8 shrink-0 ${bg}`}>
-                <Image src={src} alt="" fill sizes="32px" className="object-contain drop-shadow-lg" />
+                <Image src={src} alt={item} fill sizes="32px" className="object-contain drop-shadow-lg" />
               </span>
             );
           })}

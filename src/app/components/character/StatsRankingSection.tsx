@@ -133,7 +133,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
                       <div className="absolute -inset-2 z-0">
                         <Image
                           src="/images/ui/evo/CM_Evolution_Glow.webp"
-                          alt=""
+                          alt={`${character.name} glow`}
                           fill
                           sizes="48px"
                           className="object-contain"

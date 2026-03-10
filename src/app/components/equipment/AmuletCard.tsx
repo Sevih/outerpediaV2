@@ -65,7 +65,7 @@ export default function AmuletCard({ amulet, lang, bossMap }: Props) {
             <div className="relative h-4 w-4 shrink-0">
               <Image
                 src={`/images/ui/effect/${amulet.effect_icon}.webp`}
-                alt=""
+                alt={effectName || 'Effect'}
                 fill
                 sizes="16px"
                 className="object-contain"

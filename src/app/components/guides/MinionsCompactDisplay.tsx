@@ -88,10 +88,11 @@ function formatBossDesc(text: string): React.ReactNode {
 
 /* ── Skill tab button ── */
 
-function SkillTab({ skill, isActive, onClick }: {
+function SkillTab({ skill, isActive, onClick, lang }: {
   skill: BossSkill;
   isActive: boolean;
   onClick: () => void;
+  lang: Lang;
 }) {
   return (
     <button
@@ -106,7 +107,7 @@ function SkillTab({ skill, isActive, onClick }: {
     >
       <Image
         src={getSkillImageSrc(skill.icon)}
-        alt=""
+        alt={lRec(skill.name as LangMap, lang)}
         fill
         sizes="32px"
         className="object-contain"
@@ -209,6 +210,7 @@ function MinionDetail({ minion, lang }: { minion: Boss; lang: Lang }) {
                 skill={skill}
                 isActive={i === activeSkill}
                 onClick={() => setActiveSkill(i)}
+                lang={lang}
               />
             ))}
           </div>

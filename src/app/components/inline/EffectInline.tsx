@@ -41,7 +41,7 @@ export default function EffectInline({ name, type }: Props) {
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-1.5">
         <span className="relative h-6 w-6 shrink-0 rounded bg-black">
-          <Image src={iconPath} alt="" fill sizes="24px" className={`object-contain ${imageFilter ?? ''}`} />
+          <Image src={iconPath} alt={label} fill sizes="24px" className={`object-contain ${imageFilter ?? ''}`} />
         </span>
         <span className="text-sm font-bold text-white">{label}</span>
       </div>

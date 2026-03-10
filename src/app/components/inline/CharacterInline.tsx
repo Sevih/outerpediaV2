@@ -45,7 +45,7 @@ export default function CharacterInline({ name }: Props) {
           <span className="relative h-4 w-4">
             <Image
               src={`/images/ui/elem/CM_Element_${char.Element}.webp`}
-              alt=""
+              alt={char.Element}
               fill
               sizes="16px"
               className="object-contain"
@@ -59,7 +59,7 @@ export default function CharacterInline({ name }: Props) {
           <span className="relative h-4 w-4">
             <Image
               src={`/images/ui/class/CM_Class_${char.Class}.webp`}
-              alt=""
+              alt={char.Class}
               fill
               sizes="16px"
               className="object-contain"

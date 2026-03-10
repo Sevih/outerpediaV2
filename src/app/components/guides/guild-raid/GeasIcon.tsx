@@ -15,14 +15,14 @@ export default function GeasIcon({ iconName, level, variant, size = 40, classNam
     <div className={`relative shrink-0 ${className}`} style={{ width: size, height: size }}>
       <Image
         src={`/images/ui/geas/GD_Slot_Bg_0${level}.webp`}
-        alt=""
+        alt={`Geas level ${level} background`}
         fill
         sizes={`${size}px`}
         className="object-contain"
       />
       <Image
         src={`/images/ui/geas/${iconName}.webp`}
-        alt=""
+        alt={iconName}
         fill
         sizes={`${size}px`}
         className={`object-contain p-1 ${variant === 'debuff' ? 'debuff-icon' : 'buff-icon'}`}

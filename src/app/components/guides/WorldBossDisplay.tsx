@@ -178,7 +178,7 @@ function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
         <span className="relative h-8 w-8 shrink-0 rounded">
           <Image
             src={`/images/characters/${(skill.icon.split('_').pop() ?? '').startsWith('2') ? '' : 'boss/'}skills/${skill.icon}.webp`}
-            alt=""
+            alt={name}
             fill
             sizes="32px"
             className="object-contain"
@@ -229,7 +229,7 @@ function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
                 <span className="relative h-4 w-4">
                   <Image
                     src={`/images/ui/elem/CM_Element_${element}.webp`}
-                    alt=""
+                    alt={element}
                     fill
                     sizes="16px"
                     className="object-contain"
@@ -241,7 +241,7 @@ function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
                 <span className="relative h-4 w-4">
                   <Image
                     src={`/images/ui/class/CM_Class_${boss.class}.webp`}
-                    alt=""
+                    alt={boss.class}
                     fill
                     sizes="16px"
                     className="object-contain"

@@ -32,8 +32,8 @@ export default function WeaponInline({ name }: Props) {
   const tooltip = (
     <div className="flex gap-2">
       <div className="relative h-10 w-10 shrink-0">
-        <Image src={getRarityBgPath(weapon.rarity)} alt="" fill sizes="40px" className="object-contain" />
-        <Image src={`/images/equipment/${weapon.image}.webp`} alt="" fill sizes="40px" className="object-contain" />
+        <Image src={getRarityBgPath(weapon.rarity)} alt={`${weapon.rarity} rarity`} fill sizes="40px" className="object-contain" />
+        <Image src={`/images/equipment/${weapon.image}.webp`} alt={label} fill sizes="40px" className="object-contain" />
       </div>
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-bold text-equipment">{label}</span>
@@ -44,7 +44,7 @@ export default function WeaponInline({ name }: Props) {
               <div className="relative h-4 w-4 shrink-0">
                 <Image
                   src={`/images/ui/effect/${weapon.effect_icon}.webp`}
-                  alt=""
+                  alt={effectName || 'Effect'}
                   fill
                   sizes="16px"
                   className="object-contain"
@@ -78,8 +78,8 @@ export function EquipmentBadge({ icon, bg, label, color = 'text-equipment' }: {
   return (
     <span className={`inline-flex items-center gap-0.5 align-middle ${color}`}>
       <span className="relative inline-block h-4.5 w-4.5 shrink-0">
-        <Image src={bg} alt="" fill sizes="18px" className="object-contain" />
-        <Image src={icon} alt="" fill sizes="18px" className="object-contain" />
+        <Image src={bg} alt="Rarity" fill sizes="18px" className="object-contain" />
+        <Image src={icon} alt={label} fill sizes="18px" className="object-contain" />
       </span>
       <span className="underline">{label}</span>
     </span>

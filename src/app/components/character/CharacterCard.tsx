@@ -153,7 +153,7 @@ export default function CharacterCard({
           <div className="relative" style={{ width: s.slotWidth, height: s.slotHeight }}>
             <Image
               src="/images/ui/star/CM_Character_Thumbnail_Star_Slot.webp"
-              alt=""
+              alt="Rarity slot"
               fill
               sizes={`${s.slotWidth}px`}
               className="object-contain"
@@ -165,7 +165,7 @@ export default function CharacterCard({
               <Image
                 key={i}
                 src="/images/ui/star/CM_icon_star_y.webp"
-                alt=""
+                alt="Star"
                 width={s.starSize}
                 height={s.starSize}
                 style={{ width: s.starSize, height: s.starSize }}

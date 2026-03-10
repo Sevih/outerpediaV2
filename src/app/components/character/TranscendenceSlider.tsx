@@ -168,7 +168,7 @@ export default function TranscendenceSlider({ transcend, rarity = 3 }: Props) {
         {/* Stars */}
         <div className="flex gap-px">
           {starRowForLevel(currentKey).map((color, i) => (
-            <Image key={i} src={STAR_ICONS[color]} alt="" width={18} height={18} className="object-contain" />
+            <Image key={i} src={STAR_ICONS[color]} alt="Star" width={18} height={18} className="object-contain" />
           ))}
         </div>
       </div>

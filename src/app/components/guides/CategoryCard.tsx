@@ -26,7 +26,7 @@ export default function CategoryCard({ slug, icon, count, lang, t }: Props) {
       <div className="relative h-12 w-12 shrink-0">
         <Image
           src={`${icon}.webp`}
-          alt=""
+          alt={title}
           fill
           sizes="48px"
           className="object-contain"

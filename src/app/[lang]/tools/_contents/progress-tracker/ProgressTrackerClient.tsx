@@ -751,7 +751,7 @@ function TaskListByCategory({ progress, definitions, type, onIncrement, onToggle
                   return (
                     <div key={groupKey} className="bg-gray-800/50 rounded-lg p-3">
                       <div className="flex items-center gap-1.5 text-sm font-medium text-orange-400 mb-2">
-                        {firstDef?.icon && <Image src={`/images/${firstDef.icon}.webp`} alt="" width={18} height={18} className="object-contain" />}
+                        {firstDef?.icon && <Image src={`/images/${firstDef.icon}.webp`} alt={t(groupKey as TranslationKey)} width={18} height={18} className="object-contain" />}
                         {t(groupKey as TranslationKey)}
                       </div>
                       <div className="space-y-1 pl-3 border-l-2 border-orange-400/30">
@@ -785,7 +785,7 @@ function TaskListByCategory({ progress, definitions, type, onIncrement, onToggle
                         <div key={subcategoryKey}>
                           {subcategoryKey !== '_none' && (
                             <div className="flex items-center gap-1.5 text-xs font-medium text-gray-400 mb-1">
-                              {shopIcons[subcategoryKey] && <Image src={`/images/items/${shopIcons[subcategoryKey]}.webp`} alt="" width={16} height={16} className="object-contain" />}
+                              {shopIcons[subcategoryKey] && <Image src={`/images/items/${shopIcons[subcategoryKey]}.webp`} alt={t(subcategoryKey as TranslationKey)} width={16} height={16} className="object-contain" />}
                               {t(subcategoryKey as TranslationKey)}
                             </div>
                           )}
@@ -794,7 +794,7 @@ function TaskListByCategory({ progress, definitions, type, onIncrement, onToggle
                               <div key={tabKey}>
                                 {tabKey !== '_none' && (
                                   <div className="flex items-center gap-1.5 text-xs text-gray-500 mb-1 pl-2">
-                                    {shopIcons[tabKey] && <Image src={`/images/items/${shopIcons[tabKey]}.webp`} alt="" width={14} height={14} className="object-contain" />}
+                                    {shopIcons[tabKey] && <Image src={`/images/items/${shopIcons[tabKey]}.webp`} alt={t(tabKey as TranslationKey)} width={14} height={14} className="object-contain" />}
                                     {t(tabKey as TranslationKey)}
                                   </div>
                                 )}

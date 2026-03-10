@@ -100,7 +100,7 @@ export default function TowerFloorList({ floors, selectedFloor, onSelect, search
                       ? `/images/characters/${boss.icons.split('_').pop()?.startsWith('2') ? '' : 'boss/'}skills/${boss.icons}.webp`
                       : `/images/characters/boss/portrait/MT_${boss.icons}.webp`
                     }
-                    alt=""
+                    alt={bossName}
                     fill
                     sizes="20px"
                     className="object-cover"
@@ -117,7 +117,7 @@ export default function TowerFloorList({ floors, selectedFloor, onSelect, search
               <span className="relative h-4 w-4 shrink-0">
                 <Image
                   src={`/images/ui/elem/CM_Element_${element}.webp`}
-                  alt=""
+                  alt={element}
                   fill
                   sizes="16px"
                   className="object-contain"

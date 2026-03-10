@@ -62,7 +62,7 @@ export default function GeasUnlockList({ geas, pool }: Props) {
               <div className="relative mt-1.5 h-7 w-7 shrink-0">
                 <Image
                   src="/images/ui/geas/CM_Facility_Frame.webp"
-                  alt=""
+                  alt={`Kill ${kill}`}
                   fill
                   sizes="28px"
                   className="object-contain"

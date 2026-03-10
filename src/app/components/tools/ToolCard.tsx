@@ -25,7 +25,7 @@ export default function ToolCard({ slug, icon, status, href, lang, t, devMode }:
       <div className="relative h-12 w-12 shrink-0">
         <Image
           src={`/images/ui/${icon}.webp`}
-          alt=""
+          alt={title}
           fill
           sizes="48px"
           className="object-contain"
