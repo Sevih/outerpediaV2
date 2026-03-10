@@ -73,7 +73,10 @@ export default async function ToolDetailPage({ params }: Props) {
         &larr; {t['page.tools.title']}
       </Link>
 
-      <h1 className="mx-auto text-center text-3xl font-bold mt-4">{title}</h1>
+      <h1 className="mx-auto text-center text-3xl font-bold mt-4">
+        {title}
+        <span className="sr-only">{` — Outerplane`}</span>
+      </h1>
 
       <div className="mt-8">
         <ToolContent />

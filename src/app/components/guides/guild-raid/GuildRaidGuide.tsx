@@ -211,7 +211,7 @@ function GuildRaidContent({
             </div>
             <hr className="border-neutral-700" />
             <div className="space-y-4">
-              <h3>{t('guides.team_selector')}</h3>
+              <div className="h2-style">{t('guides.team_selector')}</div>
               <div className="flex justify-center overflow-x-hidden">
                 <div className="carousel-grid">
                   {version.phase1.bossA.team.map((group, gi) => (
@@ -242,7 +242,7 @@ function GuildRaidContent({
             </div>
             <hr className="border-neutral-700" />
             <div className="space-y-4">
-              <h3>{t('guides.team_selector')}</h3>
+              <div className="h2-style">{t('guides.team_selector')}</div>
               <div className="flex justify-center overflow-x-hidden">
                 <div className="carousel-grid">
                   {version.phase1.bossB.team.map((group, gi) => (

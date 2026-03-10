@@ -72,7 +72,7 @@ export default function SkillsSection({ character }: Props) {
 
       {priorityOrder && priorityOrder.length > 0 && (
         <div className="mb-6 max-w-2xl mx-auto">
-          <h3 className="font-game text-lg font-bold">{t('page.character.skill.priority_title')}</h3>
+          <div className="font-game text-lg font-bold">{t('page.character.skill.priority_title')}</div>
           <div className="flex flex-wrap items-start justify-center gap-3 text-sm">
             {priorityOrder.map(({ key, name, icon }, i) => (
               <Fragment key={key}>

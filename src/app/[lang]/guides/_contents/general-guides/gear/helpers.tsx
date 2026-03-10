@@ -491,10 +491,10 @@ export function BreakthroughExamplesGrid({ lang }: { lang: Lang }) {
 
 export function SectionHeader({ number, title, color }: { number: number; title: string; color: string }) {
   return (
-    <h3 className={`text-xl font-bold text-${color}-400 flex items-center gap-2`}>
+    <h2 className={`text-xl font-bold text-${color}-400 flex items-center gap-2`}>
       <span className={`flex size-8 items-center justify-center rounded-full bg-${color}-500/20 text-sm`}>{number}</span>
       {title}
-    </h3>
+    </h2>
   );
 }
 
@@ -565,9 +565,9 @@ export function ObtainingMethodsList({ content }: { content: Record<string, { ti
     <div className="space-y-6">
       {OBTAINING_METHODS.map(({ key, color }, idx) => (
         <div key={key} className={`border-l-4 border-${color}-500 pl-4`}>
-          <h3>
+          <h2>
             {idx + 1}. {content[key].title}
-          </h3>
+          </h2>
           <div className="mt-2 text-neutral-300">{content[key].content}</div>
         </div>
       ))}

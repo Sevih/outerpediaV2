@@ -364,7 +364,7 @@ function PremiumPriorityRow({ title, entries }: { title: string; entries: Entry[
 export function PremiumPullingOrder({ lang }: { lang: Lang }) {
   return (
     <section className="space-y-6 rounded-2xl border border-white/10 bg-white/5 p-6">
-      <h3 className="mx-auto text-center">{lRec(LABELS.recommendedChoices, lang)}</h3>
+      <h2 className="mx-auto text-center">{lRec(LABELS.recommendedChoices, lang)}</h2>
 
       <div className="space-y-5">
         <PremiumPriorityRow title={lRec(LABELS.priority1st, lang)} entries={PREMIUM_ORDER_1ST} />
@@ -447,12 +447,12 @@ export function HeroCard({ h, lang }: { h: HeroReview; lang: Lang }) {
       <div className="grid gap-4">
         <div className="grid gap-4 md:grid-cols-2">
           <div className="w-full max-w-4xl rounded border border-neutral-800 p-4">
-            <h3 className="mx-auto text-center">{lRec(LABELS.recommendedTargets, lang)}</h3>
+            <h2 className="mx-auto text-center">{lRec(LABELS.recommendedTargets, lang)}</h2>
             <RecoTargets pve={h.recommended_pve} pvp={h.recommended_pvp} />
           </div>
 
           <div className="rounded-md border border-neutral-800 p-3">
-            <h3 className="mx-auto text-center">{lRec(LABELS.transcendImpact, lang)}</h3>
+            <h2 className="mx-auto text-center">{lRec(LABELS.transcendImpact, lang)}</h2>
             <ImpactTable impact={h.impact} lang={lang} />
           </div>
         </div>

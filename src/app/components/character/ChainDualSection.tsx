@@ -81,7 +81,7 @@ export default function ChainDualSection({ character }: Props) {
             />
           </div>
           <div>
-            <h3 className="font-game text-lg font-bold">{l(cp, 'name', lang)}</h3>
+            <div className="font-game text-lg font-bold">{l(cp, 'name', lang)}</div>
             <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
               {!isNaN(adjustedWgr) && (
                 <span className="rounded bg-zinc-800 px-1.5 py-0.5">
@@ -144,9 +144,9 @@ export default function ChainDualSection({ character }: Props) {
 
         {/* Enhancements */}
         <div className="mt-4">
-          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+          <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
             {t('page.character.skill.enhancement')}
-          </h4>
+          </div>
           <div className="space-y-1">
             {['2', '3', '4', '5'].map((lv) => {
               const items = getEnhancement(cp.enhancement as Record<string, string[]>, lv, lang);

@@ -147,11 +147,11 @@ export default function SpecialRequestList({ guides, lang, t }: CategoryViewProp
       {/* Desktop: side by side */}
       <div className="hidden lg:grid lg:grid-cols-2 lg:gap-8">
         <section>
-          <h3 className="mb-3">{t['guides.special_request.identification']}</h3>
+          <h2 className="mb-3">{t['guides.special_request.identification']}</h2>
           <CardList items={identification} lang={lang} type="identification" />
         </section>
         <section>
-          <h3 className="mb-3">{t['guides.special_request.ecology_study']}</h3>
+          <h2 className="mb-3">{t['guides.special_request.ecology_study']}</h2>
           <CardList items={ecology_study} lang={lang} type="ecology_study" />
         </section>
       </div>

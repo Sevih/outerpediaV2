@@ -77,7 +77,7 @@ export default function ServiceTransferGuide() {
         {/* Main column */}
         <div className="lg:col-span-2 space-y-8">
           <section>
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.overview.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.overview.title, lang)}</h2>
             <div className="prose prose-invert max-w-none">
               <p dangerouslySetInnerHTML={{ __html: lRec(s.overview.text, lang) }} />
               <p className="mt-2 text-amber-100" dangerouslySetInnerHTML={{ __html: lRec(s.overview.missedWindow, lang) }} />
@@ -86,7 +86,7 @@ export default function ServiceTransferGuide() {
 
           {/* How to */}
           <section id="how-to">
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.howto.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.howto.title, lang)}</h2>
             <ol className="space-y-3">
               {steps.map((step, idx) => (
                 <li key={idx} className="group">
@@ -114,7 +114,7 @@ export default function ServiceTransferGuide() {
 
           {/* Server merge */}
           <section>
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.merge.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.merge.title, lang)}</h2>
             <ul className="space-y-1 text-zinc-200">
               <li>{lRec(s.merge.line1, lang)}</li>
               <li>{lRec(s.merge.line2, lang)}</li>
@@ -125,7 +125,7 @@ export default function ServiceTransferGuide() {
 
           {/* Rewards */}
           <section>
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.rewards.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.rewards.title, lang)}</h2>
             <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 p-4 space-y-1 text-amber-100 text-sm">
               <p><strong><ItemInline name='"New Beginning" Title' /></strong> {lRec(s.rewards.titleDesc1, lang)}</p>
               <p><strong><ItemInline name='"New Beginning" Profile Frame' /></strong></p>
@@ -139,7 +139,7 @@ export default function ServiceTransferGuide() {
 
           {/* Important */}
           <section>
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.important.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.important.title, lang)}</h2>
             <ul className="space-y-2">
               <li>{lRec(s.important.note1, lang)}</li>
               <li className="flex flex-col gap-2">
@@ -163,7 +163,7 @@ export default function ServiceTransferGuide() {
 
           {/* Recovery Help */}
           <section id="recovery">
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.recovery.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.recovery.title, lang)}</h2>
             <div className="space-y-3 text-sm text-zinc-200">
               <div className="rounded-lg border border-blue-600/40 bg-blue-600/10 p-4">
                 <p className="font-semibold">{lRec(s.recovery.step1Title, lang)}</p>
@@ -215,19 +215,19 @@ export default function ServiceTransferGuide() {
 
           {/* Refunds */}
           <section>
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.refund.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.refund.title, lang)}</h2>
             <p className="text-sm text-zinc-300">{lRec(s.refund.text, lang)}</p>
           </section>
 
           {/* Shop suspension */}
           <section>
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.shop.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.shop.title, lang)}</h2>
             <p className="text-sm text-zinc-300">{lRec(s.shop.text, lang)}</p>
           </section>
 
           {/* FAQ */}
           <section id="faq" className="mt-8">
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.faq.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.faq.title, lang)}</h2>
             <Accordion items={faqItems} multiple />
           </section>
         </div>

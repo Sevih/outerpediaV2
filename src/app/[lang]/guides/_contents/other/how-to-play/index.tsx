@@ -78,7 +78,7 @@ export default function HowToPlayGuide() {
         <div className="lg:col-span-2 space-y-8">
           {/* About */}
           <section>
-            <h3 className="text-xl font-semibold mb-3">{lRec(s.about.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3">{lRec(s.about.title, lang)}</h2>
             <div className="prose prose-invert max-w-none">
               <p>{lRec(s.about.desc, lang)}</p>
             </div>
@@ -86,7 +86,7 @@ export default function HowToPlayGuide() {
 
           {/* Download for Mobile */}
           <section id="mobile-download">
-            <h3 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.mobile.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.mobile.title, lang)}</h2>
             <div className="space-y-4">
               {/* Android */}
               <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-4">
@@ -138,7 +138,7 @@ export default function HowToPlayGuide() {
 
           {/* PC Platform */}
           <section id="pc-play">
-            <h3 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.pc.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.pc.title, lang)}</h2>
             <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-4">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400">
@@ -175,7 +175,7 @@ export default function HowToPlayGuide() {
 
           {/* Getting Started */}
           <section id="getting-started">
-            <h3 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.start.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.start.title, lang)}</h2>
             <div className="prose prose-invert max-w-none">
               <ol className="list-decimal pl-5 space-y-2">
                 <li>{lRec(s.start.step1, lang)}</li>
@@ -188,7 +188,7 @@ export default function HowToPlayGuide() {
 
           {/* System Requirements */}
           <section>
-            <h3 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.sysreq.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.sysreq.title, lang)}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-4">
                 <h4 className="font-semibold mb-2 after:hidden">{lRec(s.sysreq.android.title, lang)}</h4>
@@ -207,7 +207,7 @@ export default function HowToPlayGuide() {
 
           {/* Support */}
           <section>
-            <h3 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.support.title, lang)}</h3>
+            <h2 className="text-xl font-semibold mb-3 after:hidden">{lRec(s.support.title, lang)}</h2>
             <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-4">
               <p className="text-sm text-zinc-300 mb-3">{lRec(s.support.desc, lang)}</p>
               <div className="space-y-2 text-sm">

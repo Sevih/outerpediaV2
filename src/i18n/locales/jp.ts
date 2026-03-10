@@ -116,7 +116,7 @@ const jp: Record<TranslationKey, string> = {
   'page.tools.title': 'アウタープレーン ツール & ユーティリティ',
   'page.tools.description':
     'アウタープレーンのツール：装備ソルバー、チームプランナー、ガチャシミュレーター、進捗トラッカーなど。',
-  'page.tool.meta_title': '{title} — アウタープレーン ツール',
+  'page.tool.meta_title': '{title}',
   // ─── Tool Categories ────────────────────────────────────────────────────
   'tools.category.rankings': 'ランキング',
   'tools.category.equipment': '装備',
@@ -234,7 +234,7 @@ const jp: Record<TranslationKey, string> = {
   'page.guides.description':
     'アウタープレーン攻略ガイド。冒険ステージ、ボス戦、ギルドレイド、ワールドボス、初心者向けのヒント。',
   'page.guides.meta_title': 'アウタープレーン 攻略ガイド – {monthYear}',
-  'page.guide.meta_title': '{title} — アウタープレーン 攻略ガイド',
+  'page.guide.meta_title': '{title} — 攻略ガイド',
   'page.guide.by': '著者: {author}',
   'page.guide.updated': '{date} 更新',
   'page.guide.older_version_warning':

@@ -459,7 +459,7 @@ function GearBasicsContent() {
 
   return (
     <div className="space-y-8">
-      <h3>{lRec(LABELS.basics_overviewTitle, lang)}</h3>
+      <h2>{lRec(LABELS.basics_overviewTitle, lang)}</h2>
 
       <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6 space-y-4">
         <p>
@@ -473,11 +473,11 @@ function GearBasicsContent() {
         </p>
       </div>
 
-      <h3>{lRec(LABELS.basics_propertiesTitle, lang)}</h3>
+      <h2>{lRec(LABELS.basics_propertiesTitle, lang)}</h2>
       <p className="mb-4">{lRec(LABELS.basics_propertiesText, lang)}</p>
       <EquipmentIntro labels={equipProps} />
 
-      <h3>{lRec(LABELS.basics_substatsTitle, lang)}</h3>
+      <h2>{lRec(LABELS.basics_substatsTitle, lang)}</h2>
 
       <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6 space-y-4">
         <p>{lRec(LABELS.basics_substatsRule, lang)}</p>
@@ -518,7 +518,7 @@ function UpgradingGearContent() {
 
   return (
     <div className="space-y-8">
-      <h3>{lRec(LABELS.upgrading_title, lang)}</h3>
+      <h2>{lRec(LABELS.upgrading_title, lang)}</h2>
       <p className="mb-6 text-neutral-300">{lRec(LABELS.upgrading_intro, lang)}</p>
       <UpgradeMethodsGrid labels={methods} />
 
@@ -643,14 +643,14 @@ function ObtainingGearContent() {
 
   return (
     <div className="space-y-8">
-      <h3>{lRec(LABELS.obtaining_title, lang)}</h3>
+      <h2>{lRec(LABELS.obtaining_title, lang)}</h2>
 
       <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6">
         <p className="mb-6">{lRec(LABELS.obtaining_intro, lang)}</p>
         <ObtainingMethodsList content={methodsContent} />
       </div>
 
-      <h3>{lRec(LABELS.obtaining_dropRateTitle, lang)}</h3>
+      <h2>{lRec(LABELS.obtaining_dropRateTitle, lang)}</h2>
       <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6">
         <p>
           {lRec(LABELS.obtaining_dropRateText_before, lang)}
@@ -659,10 +659,10 @@ function ObtainingGearContent() {
         </p>
       </div>
 
-      <h3>{lRec(LABELS.obtaining_shopsTitle, lang)}</h3>
+      <h2>{lRec(LABELS.obtaining_shopsTitle, lang)}</h2>
       <div className="grid gap-4 md:grid-cols-2">
         <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6">
-          <h3>{lRec(LABELS.obtaining_limitedShopsTitle, lang)}</h3>
+          <h2>{lRec(LABELS.obtaining_limitedShopsTitle, lang)}</h2>
           <p className="text-sm text-neutral-300">
             {lRec(LABELS.obtaining_limitedShopsText_before, lang)}
             <ItemInline name="Ether" />
@@ -670,12 +670,12 @@ function ObtainingGearContent() {
           </p>
         </div>
         <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6">
-          <h3>{lRec(LABELS.obtaining_eventChestsTitle, lang)}</h3>
+          <h2>{lRec(LABELS.obtaining_eventChestsTitle, lang)}</h2>
           <p className="text-sm text-neutral-300">{lRec(LABELS.obtaining_eventChestsText, lang)}</p>
         </div>
       </div>
 
-      <h3>{lRec(LABELS.obtaining_priorityTitle, lang)}</h3>
+      <h2>{lRec(LABELS.obtaining_priorityTitle, lang)}</h2>
       <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6">
         <p className="mb-4">{lRec(LABELS.obtaining_priorityIntro, lang)}</p>
         <GearPriorityList
@@ -698,7 +698,7 @@ function FAQContent() {
     <div className="space-y-8">
       {/* Gear Quality */}
       <div className="space-y-4">
-        <h3>{lRec(LABELS.faq_qualityTitle, lang)}</h3>
+        <h2>{lRec(LABELS.faq_qualityTitle, lang)}</h2>
         <Accordion multiple items={[
           {
             key: 'legendaryOnly',
@@ -727,7 +727,7 @@ function FAQContent() {
 
       {/* Upgrading */}
       <div className="space-y-4">
-        <h3>{lRec(LABELS.faq_upgradingTitle, lang)}</h3>
+        <h2>{lRec(LABELS.faq_upgradingTitle, lang)}</h2>
         <Accordion multiple items={[
           {
             key: 'transistoneUsage',
@@ -772,7 +772,7 @@ function FAQContent() {
 
       {/* Farming */}
       <div className="space-y-4">
-        <h3>{lRec(LABELS.faq_farmingTitle, lang)}</h3>
+        <h2>{lRec(LABELS.faq_farmingTitle, lang)}</h2>
         <Accordion multiple items={[
           {
             key: 'howToGet',

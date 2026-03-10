@@ -59,7 +59,7 @@ export default function SkillCard({ skill }: Props) {
           )}
         </div>
         <div className="min-w-0 flex-1">
-          <h3 className="font-game text-lg font-bold">{name}</h3>
+          <div className="font-game text-lg font-bold">{name}</div>
           <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-zinc-400">
             {adjustedCd && <span className="rounded bg-zinc-800 px-1.5 py-0.5">{t('page.character.skill.cooldown')} {adjustedCd}</span>}
             {!isNaN(adjustedWgr) && <span className="rounded bg-zinc-800 px-1.5 py-0.5">{t('page.character.skill.wgr')} {adjustedWgr}</span>}

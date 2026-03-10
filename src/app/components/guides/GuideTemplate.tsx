@@ -60,7 +60,7 @@ export default function GuideTemplate({
 
   return (
     <article className="space-y-6">
-      <h2>{title}</h2>
+      <div className="h2-style">{title}</div>
 
       {disclaimer && (
         <div className="panel-warning px-4 py-3 text-sm text-yellow-200">

@@ -105,7 +105,7 @@ export default function EeSection({ character, ee, giftItems }: Props) {
         {/* Gifts card */}
         {giftItems.length > 0 && (
           <div className="card rounded-xl p-4 md:w-52">
-            <h3 className="flex items-center gap-1.5 after:hidden">
+            <div className="flex items-center gap-1.5">
               <div className="relative h-5 w-5 shrink-0">
                 <Image
                   src="/images/items/CM_Goods_FriendPoint.webp"
@@ -116,7 +116,7 @@ export default function EeSection({ character, ee, giftItems }: Props) {
                 />
               </div>
               {t('characters.filters.gifts')}
-            </h3>
+            </div>
             <p className="mt-1 mb-3 font-game text-sm font-bold">{giftLabel}</p>
             <div className="grid grid-cols-4 gap-2 md:grid-cols-2">
               {giftItems.map((item) => (

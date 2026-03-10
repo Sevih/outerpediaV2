@@ -33,9 +33,9 @@ export default function CategoryCard({ slug, icon, count, lang, t }: Props) {
         />
       </div>
       <div className="min-w-0 flex-1">
-        <h3 className="text-sm font-semibold text-zinc-100 after:hidden">
+        <h2 className="text-sm font-semibold text-zinc-100 after:hidden">
           {title}
-        </h3>
+        </h2>
         <p className="mt-0.5 text-xs text-zinc-400">{description}</p>
       </div>
       <span className="shrink-0 rounded-full bg-zinc-700 px-2.5 py-0.5 text-xs font-medium text-zinc-300">

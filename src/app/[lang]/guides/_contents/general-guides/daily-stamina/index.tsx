@@ -530,9 +530,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── Doppelgänger ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_doppelganger, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.costs60, lang)}
           <ItemInline name="Stamina" />
@@ -541,9 +541,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── Terminus Isle ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_terminusIsle, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.costs30, lang)}
           <ItemInline name="Stamina" />
@@ -552,9 +552,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── Stage 13 Weapon/Accessory Bosses ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_stage13WeaponAccessory, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.clearAll5Bosses, lang)}
           <ItemInline name="Stamina" />
@@ -571,9 +571,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── Hard Mode Story Final Bosses ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_hardModeStoryBosses, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.startingSeason3, lang)}
           <ItemInline name="Stamina" />
@@ -590,9 +590,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── Irregular Bosses ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_irregularBosses, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.clearInfiltration, lang)}
           <ItemInline name="Stamina" />
@@ -644,9 +644,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── Tower Floors ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_towerFloors, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.towerClearMonthly, lang)}
           <ItemInline name="Stamina" />
@@ -655,9 +655,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── Adventure License ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_adventureLicense, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.clearBossesWeekly, lang)}
           <ItemInline name="Stamina" />
@@ -676,9 +676,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── Total baseline ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_totalBaseline, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.approx560, lang)}
           <ItemInline name="Stamina" />
@@ -687,9 +687,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── (Optional) Monad Gate ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_monadGate, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.monadGateConsider, lang)}
           <I name="EBT_WORLD_BOSS_TITLE" label={lRec(LABELS.tunerLabel, lang)} />
@@ -704,9 +704,9 @@ export default function DailyStaminaGuide() {
 
         {/* ── (Optional) Stage 13 Armor Bosses ── */}
 
-        <h3>
+        <h2>
           {lRec(LABELS.heading_stage13Armor, lang)}
-        </h3>
+        </h2>
         <p>
           {lRec(LABELS.lowOnTranscendFodder, lang)}
           <ItemInline name="Armor Glunite" />

@@ -116,7 +116,7 @@ const kr: Record<TranslationKey, string> = {
   'page.tools.title': '아우터플레인 도구 & 유틸리티',
   'page.tools.description':
     '아우터플레인 도구: 장비 솔버, 팀 플래너, 뽑기 시뮬레이터, 진행 트래커 등.',
-  'page.tool.meta_title': '{title} — 아우터플레인 도구',
+  'page.tool.meta_title': '{title}',
   // ─── Tool Categories ────────────────────────────────────────────────────
   'tools.category.rankings': '랭킹',
   'tools.category.equipment': '장비',
@@ -234,7 +234,7 @@ const kr: Record<TranslationKey, string> = {
   'page.guides.description':
     '아우터플레인 공략 가이드. 모험 스테이지, 보스전, 길드 레이드, 월드 보스, 초보자 팁.',
   'page.guides.meta_title': '아우터플레인 공략 가이드 – {monthYear}',
-  'page.guide.meta_title': '{title} — 아우터플레인 공략 가이드',
+  'page.guide.meta_title': '{title} — 공략 가이드',
   'page.guide.by': '작성자: {author}',
   'page.guide.updated': '{date} 업데이트',
   'page.guide.older_version_warning':

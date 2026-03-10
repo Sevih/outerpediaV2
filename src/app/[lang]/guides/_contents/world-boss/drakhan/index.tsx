@@ -106,9 +106,9 @@ export default function DrakhanGuide() {
           content: (
             <>
               <div>
-                <h3 className="text-xl font-bold text-sky-300 mb-3 after:hidden">
+                <h2 className="text-xl font-bold text-sky-300 mb-3 after:hidden">
                   {lRec(dec2024.strings.title, lang)}
-                </h3>
+                </h2>
                 <p className="mb-4 text-sm text-zinc-300">
                   {lRec(dec2024.strings.intro, lang)}
                   <strong>Ducky</strong>:

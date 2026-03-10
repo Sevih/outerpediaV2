@@ -43,47 +43,47 @@ export default function Roadmap2026Guide() {
       </p>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">{lRec(HEADINGS.developmentDirection, lang)}</h3>
+        <h2 className="text-xl font-semibold mb-3">{lRec(HEADINGS.developmentDirection, lang)}</h2>
         <DevelopmentDirectionSection lang={lang} />
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">{lRec(HEADINGS.roadmapOverview, lang)}</h3>
+        <h2 className="text-xl font-semibold mb-3">{lRec(HEADINGS.roadmapOverview, lang)}</h2>
         <QuarterlyRoadmapSection lang={lang} />
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">{lRec(HEADINGS.monthlyUpdates, lang)}</h3>
+        <h2 className="text-xl font-semibold mb-3">{lRec(HEADINGS.monthlyUpdates, lang)}</h2>
         <MonthlyUpdatesSection lang={lang} />
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">{lRec(HEADINGS.newCharacters, lang)}</h3>
+        <h2 className="text-xl font-semibold mb-3">{lRec(HEADINGS.newCharacters, lang)}</h2>
         <NewCharactersSection lang={lang} />
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">{lRec(HEADINGS.coreFusion, lang)}</h3>
+        <h2 className="text-xl font-semibold mb-3">{lRec(HEADINGS.coreFusion, lang)}</h2>
         <CoreFusionSection lang={lang} />
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">{lRec(HEADINGS.dimensionSingularity, lang)}</h3>
+        <h2 className="text-xl font-semibold mb-3">{lRec(HEADINGS.dimensionSingularity, lang)}</h2>
         <DimensionSingularitySection lang={lang} />
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">{lRec(HEADINGS.rta, lang)}</h3>
+        <h2 className="text-xl font-semibold mb-3">{lRec(HEADINGS.rta, lang)}</h2>
         <RTASection lang={lang} />
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">{lRec(HEADINGS.demiurgePlans, lang)}</h3>
+        <h2 className="text-xl font-semibold mb-3">{lRec(HEADINGS.demiurgePlans, lang)}</h2>
         <DemiurgeLimitedPlansSection lang={lang} />
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-3">{lRec(HEADINGS.coupon, lang)}</h3>
+        <h2 className="text-xl font-semibold mb-3">{lRec(HEADINGS.coupon, lang)}</h2>
         <CouponSection lang={lang} />
       </section>
 

@@ -22,9 +22,9 @@ export default function ProsConsSection({ prosCons }: Props) {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {/* Pros */}
         <div className="panel-success rounded-xl p-4">
-          <h3 className="mb-3 text-lg font-semibold text-emerald-400 after:hidden">
+          <div className="mb-3 text-lg font-semibold text-emerald-400">
             {t('page.character.pros')}
-          </h3>
+          </div>
           {pros.length > 0 ? (
             <ul className="space-y-2">
               {pros.map((entry, i) => (
@@ -41,9 +41,9 @@ export default function ProsConsSection({ prosCons }: Props) {
 
         {/* Cons */}
         <div className="panel-danger rounded-xl p-4">
-          <h3 className="mb-3 text-lg font-semibold text-red-400 after:hidden">
+          <div className="mb-3 text-lg font-semibold text-red-400">
             {t('page.character.cons')}
-          </h3>
+          </div>
           {cons.length > 0 ? (
             <ul className="space-y-2">
               {cons.map((entry, i) => (

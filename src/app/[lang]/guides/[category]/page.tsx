@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createPageMetadata({
     lang,
     path: `/guides/${category}`,
-    title: `${title} — ${t['page.guides.title']}`,
+    title,
     description,
     keywords: categoryData?.keywords,
   });
@@ -71,7 +71,10 @@ export default async function GuideCategoryPage({ params }: Props) {
         &larr; {t['page.guides.title']}
       </Link>
 
-      <h1 className="h1-page mt-4">{title}</h1>
+      <h1 className="h1-page mt-4">
+        {title}
+        <span className="sr-only">{` — Outerplane Guides`}</span>
+      </h1>
       {description && (
         <p className="mt-2 text-sm text-zinc-400">{description}</p>
       )}

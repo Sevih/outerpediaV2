@@ -135,9 +135,9 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
 function GearCategory({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-200">
+      <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-200">
         {label}
-      </h3>
+      </div>
       <div className="space-y-2">{children}</div>
     </div>
   );

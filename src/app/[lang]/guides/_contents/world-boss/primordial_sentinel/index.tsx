@@ -115,9 +115,9 @@ export default function PrimordialSentinelGuide() {
               />
               <hr className="my-6 border-neutral-700" />
               <div>
-                <h3 className="text-xl font-bold text-sky-300 mb-3 after:hidden">
+                <h2 className="text-xl font-bold text-sky-300 mb-3 after:hidden">
                   {lRec(jul2024.strings.title, lang)}
-                </h3>
+                </h2>
                 <p className="text-neutral-300 mb-4">{parseText(lRec(jul2024.strings.note1, lang))}</p>
                 <p className="text-neutral-300 mb-4">{parseText(lRec(jul2024.strings.note2, lang))}</p>
                 <p className="text-neutral-300">{parseText(lRec(jul2024.strings.note3, lang))}</p>

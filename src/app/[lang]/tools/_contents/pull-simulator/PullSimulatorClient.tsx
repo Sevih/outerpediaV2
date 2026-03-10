@@ -247,9 +247,9 @@ export default function PullSimulatorClient({ characters, pool1, pool2 }: Props)
       {/* ── Character selection (hidden for custom banner which has no focus) ── */}
       {maxFocus > 0 && (
         <div>
-          <h3 className="mb-2 text-sm font-semibold text-zinc-300">
+          <h2 className="mb-2 text-sm font-semibold text-zinc-300">
             {tk('tools.pull-simulator.select_focus')}
-          </h3>
+          </h2>
 
           {/* Selected focus character(s) */}
           {focusChars.length > 0 && (
@@ -386,7 +386,7 @@ export default function PullSimulatorClient({ characters, pool1, pool2 }: Props)
       {/* ── Last pull results ── */}
       {lastResults ? (
         <div>
-          <h3 className="mb-3 text-sm font-semibold text-zinc-300">{tk('tools.pull-simulator.results')}</h3>
+          <h2 className="mb-3 text-sm font-semibold text-zinc-300">{tk('tools.pull-simulator.results')}</h2>
           <div className="grid grid-cols-5 gap-2">
             {lastResults.map((pull, i) => {
               const char: HasLocalizedName | undefined = pull.charId
@@ -446,7 +446,7 @@ export default function PullSimulatorClient({ characters, pool1, pool2 }: Props)
       {/* ── Statistics ── */}
       {session.totalPulls > 0 && (
         <div>
-          <h3 className="mb-3 text-sm font-semibold text-zinc-300">{tk('tools.pull-simulator.stats')}</h3>
+          <h2 className="mb-3 text-sm font-semibold text-zinc-300">{tk('tools.pull-simulator.stats')}</h2>
           <div className={`grid gap-2 ${maxFocus > 0 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-2'}`}>
             <StatCard label={tk('tools.pull-simulator.total_pulls')} value={session.totalPulls} />
             {maxFocus > 0 && (
@@ -489,7 +489,7 @@ export default function PullSimulatorClient({ characters, pool1, pool2 }: Props)
       {/* ── Pull history ── */}
       {session.history.length > 0 && (
         <div>
-          <h3 className="mb-3 text-sm font-semibold text-zinc-300">{tk('tools.pull-simulator.history')}</h3>
+          <h2 className="mb-3 text-sm font-semibold text-zinc-300">{tk('tools.pull-simulator.history')}</h2>
           <div className="max-h-64 space-y-1.5 overflow-y-auto rounded-lg border border-zinc-700/40 bg-zinc-800/20 p-3">
             {[...session.history].reverse().map((batch, revIdx) => {
               const batchIdx = session.history.length - 1 - revIdx;

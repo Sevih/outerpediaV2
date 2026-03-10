@@ -116,7 +116,7 @@ const zh: Record<TranslationKey, string> = {
   'page.tools.title': '异域战记 工具 & 实用程序',
   'page.tools.description':
     '异域战记工具：装备求解器、队伍规划器、抽卡模拟器、进度追踪器等。',
-  'page.tool.meta_title': '{title} — 异域战记工具',
+  'page.tool.meta_title': '{title}',
   // ─── Tool Categories ────────────────────────────────────────────────────
   'tools.category.rankings': '排名',
   'tools.category.equipment': '装备',
@@ -234,7 +234,7 @@ const zh: Record<TranslationKey, string> = {
   'page.guides.description':
     '异域战记攻略指南。冒险关卡、Boss战、公会突袭、世界Boss、新手攻略。',
   'page.guides.meta_title': '异域战记 攻略指南 – {monthYear}',
-  'page.guide.meta_title': '{title} — 异域战记攻略指南',
+  'page.guide.meta_title': '{title} — 攻略指南',
   'page.guide.by': '作者: {author}',
   'page.guide.updated': '{date} 更新',
   'page.guide.older_version_warning':

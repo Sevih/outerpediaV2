@@ -83,7 +83,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
         {/* Base stats */}
         <div className="card rounded-xl p-4">
           <div className="mb-3 flex items-baseline justify-between">
-            <h3 className="text-sm font-semibold text-zinc-300">{t('page.character.stats.title')}</h3>
+            <div className="text-sm font-semibold text-zinc-300">{t('page.character.stats.title')}</div>
             {stepKeys[stepIdx] && (
               <span className="text-xs text-zinc-400">Lv.{lvFromKey(stepKeys[stepIdx])}</span>
             )}
@@ -160,7 +160,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
 
         {/* Ranking */}
         <div className="card flex flex-col items-center justify-center rounded-xl p-4">
-          <h3 className="mb-4 text-sm font-semibold text-zinc-300">{t('page.character.toc.ranking')}</h3>
+          <div className="mb-4 text-sm font-semibold text-zinc-300">{t('page.character.toc.ranking')}</div>
           <div className="flex flex-wrap items-center justify-center gap-6">
             {ee && (
               <TierCard label={t('page.character.ee.rank')} rank={ee.rank} placeholder={t('common.coming_soon')} />

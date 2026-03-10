@@ -35,7 +35,7 @@ function SectionTable({ title, head, rows, footerLabel, footerValues }: {
     return (
         <div className="flex justify-center">
             <div className="w-full max-w-3xl">
-                <h3 className="font-semibold text-lg mb-2 text-center">{title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-center">{title}</h2>
                 <div className="overflow-x-auto">
                     <table className="w-auto mx-auto border border-neutral-700 rounded-md text-sm text-center">
                         <thead className="bg-neutral-800">

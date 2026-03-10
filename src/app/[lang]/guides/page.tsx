@@ -30,7 +30,10 @@ export default async function GuidesPage({ params }: Props) {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
-      <h1 className="h1-page text-center">{t['page.guides.title']}</h1>
+      <h1 className="h1-page text-center">
+        {t['page.guides.title']}
+        <span className="sr-only">{` — Strategy Guides, Boss Walkthroughs & Tips`}</span>
+      </h1>
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((cat) => (

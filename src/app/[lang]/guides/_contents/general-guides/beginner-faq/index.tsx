@@ -697,9 +697,9 @@ export default function BeginnerFAQGuide() {
 
         {/* ═══ Related Guides ═══ */}
         <div className="mt-12 p-6 bg-linear-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-xl">
-          <h3 className="text-lg font-semibold text-blue-300 mb-4 after:hidden">
+          <h2 className="text-lg font-semibold text-blue-300 mb-4 after:hidden">
             {lRec(LABELS.sectionRelatedGuides, lang)}
-          </h3>
+          </h2>
           <div className="grid md:grid-cols-2 gap-3">
             <Link href={href('/guides/general-guides/free-heroes-start-banner')} className="p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg transition border border-slate-600">
               <p className="text-blue-400 font-medium">{lRec(LABELS.freeHeroesStartBanner, lang)}</p>

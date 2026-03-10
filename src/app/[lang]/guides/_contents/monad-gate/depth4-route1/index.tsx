@@ -12,7 +12,7 @@ export default function Depth4Route1() {
   return (
     <div className="space-y-4">
       <div className="mt-6">
-        <h3 className="text-lg font-semibold mb-3">{t('monad.rewards')}</h3>
+        <h2 className="text-lg font-semibold mb-3">{t('monad.rewards')}</h2>
         <div className="flex items-center gap-2">
           <ItemInline name="Fusion-Type Core" />
           <span className="text-zinc-400">x90</span>

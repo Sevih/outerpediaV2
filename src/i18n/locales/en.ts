@@ -116,7 +116,7 @@ const en = {
   'page.tools.title': 'Outerplane Tools & Utilities',
   'page.tools.description':
     'Outerplane tools: gear solver, team planner, pull simulator, progress tracker, and more.',
-  'page.tool.meta_title': '{title} — Outerplane Tool',
+  'page.tool.meta_title': '{title}',
   // ─── Tool Categories ────────────────────────────────────────────────────
   'tools.category.rankings': 'Rankings',
   'tools.category.equipment': 'Equipment',
@@ -234,7 +234,7 @@ const en = {
   'page.guides.description':
     'Outerplane guides for adventure stages, boss fights, guild raids, world bosses, and beginner tips.',
   'page.guides.meta_title': 'Outerplane Guides – {monthYear}',
-  'page.guide.meta_title': '{title} — Outerplane Guide',
+  'page.guide.meta_title': '{title} — Guide',
   'page.guide.by': 'By {author}',
   'page.guide.updated': 'Updated {date}',
   'page.guide.older_version_warning':

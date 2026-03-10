@@ -48,17 +48,17 @@ export default function QuirkGuide() {
       <div className="mt-6 space-y-8">
         {tab === 'guide' && <>
           <section>
-            <h3>{lRec(LABELS.categoryOverview, lang)}</h3>
+            <h2>{lRec(LABELS.categoryOverview, lang)}</h2>
             <CategoryOverviewSection lang={lang} />
           </section>
 
           <section>
-            <h3>{lRec(LABELS.howItWorks, lang)}</h3>
+            <h2>{lRec(LABELS.howItWorks, lang)}</h2>
             <HowItWorksSection lang={lang} />
           </section>
 
           <section>
-            <h3>{lRec(LABELS.upgradingPriority, lang)}</h3>
+            <h2>{lRec(LABELS.upgradingPriority, lang)}</h2>
             <PrioritySection lang={lang} />
             <div className="mt-6">
               <h4>{lRec(LABELS.earlyGameExample, lang)}</h4>
