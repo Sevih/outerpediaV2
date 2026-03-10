@@ -32,7 +32,7 @@ const LANG_SUFFIXES = SUFFIX_LANGS.map(l => `_${l}`);
  * Strip unused language suffix fields from an object.
  * Keeps base (en) fields and only the suffix for the target language.
  * e.g. for lang='jp': keeps 'name' and 'name_jp', removes 'name_kr' and 'name_zh'.
- * For lang='en': removes all '_jp', '_kr', '_zh' fields.
+ * For lang='en': removes all language suffixes.
  */
 export function stripOtherLangs<T extends Record<string, unknown>>(obj: T, lang: Lang): T {
   const suffixesToRemove = lang === DEFAULT_LANG

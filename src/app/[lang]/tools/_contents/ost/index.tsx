@@ -1,21 +1,18 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { use, useState, useRef, useEffect, useCallback } from 'react';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
-import bgmMapping from '@data/generated/bgm_mapping.json';
+import type { WithLocalizedFields } from '@/types/common';
 
-type Track = {
+type Track = WithLocalizedFields<{
   file: string;
   name: string;
-  name_jp?: string;
-  name_kr?: string;
-  name_zh?: string;
   size: number;
   duration: number;
-};
+}, 'name'>;
 
-const tracks: Track[] = bgmMapping;
+const tracksPromise = import('@data/generated/bgm_mapping.json').then(m => m.default as Track[]);
 
 function formatTime(seconds: number): string {
   if (!isFinite(seconds) || isNaN(seconds)) return '0:00';
@@ -25,6 +22,7 @@ function formatTime(seconds: number): string {
 }
 
 export default function SoundtrackTool() {
+  const tracks = use(tracksPromise);
   const { lang, t } = useI18n();
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -56,7 +54,7 @@ export default function SoundtrackTool() {
       setIsPlaying(false);
       setIsLoading(false);
     });
-  }, []);
+  }, [tracks]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -119,7 +117,7 @@ export default function SoundtrackTool() {
       audio.removeEventListener('canplay', handleCanPlay);
       audio.removeEventListener('error', handleError);
     };
-  }, [currentTrackIndex, shuffle, repeat, switchTrack]);
+  }, [currentTrackIndex, shuffle, repeat, switchTrack, tracks]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -177,7 +175,7 @@ export default function SoundtrackTool() {
     } else if (repeat === 'all') {
       switchTrack(tracks.length - 1);
     }
-  }, [currentTrackIndex, repeat, shuffle, historyIndex, playHistory, switchTrack]);
+  }, [currentTrackIndex, repeat, shuffle, historyIndex, playHistory, switchTrack, tracks]);
 
   const handleNext = useCallback(() => {
     if (currentTrackIndex === null) return;
@@ -202,7 +200,7 @@ export default function SoundtrackTool() {
     } else if (repeat === 'all') {
       switchTrack(0);
     }
-  }, [currentTrackIndex, shuffle, repeat, historyIndex, playHistory, switchTrack]);
+  }, [currentTrackIndex, shuffle, repeat, historyIndex, playHistory, switchTrack, tracks]);
 
   // Keyboard shortcuts
   useEffect(() => {

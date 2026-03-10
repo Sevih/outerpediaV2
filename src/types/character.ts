@@ -3,10 +3,10 @@ import type { ElementType, ClassType, RarityType, RoleType, ChainType, SkillKey 
 
 // ── Skill types ──
 
-/** Localized description levels (keys: "1"-"5" with _jp/_kr/_zh suffixes) */
+/** Localized description levels (keys: "1"-"5" with  suffixes) */
 type LocalizedLevels = Record<string, string>;
 
-/** Localized enhancement levels (keys: "2"-"5" with _jp/_kr/_zh suffixes, values are string arrays) */
+/** Localized enhancement levels (keys: "2"-"5" with  suffixes, values are string arrays) */
 type LocalizedEnhancements = Record<string, string[]>;
 
 export type BurnEffect = WithLocalizedFields<{
@@ -49,7 +49,7 @@ export type SkillPriority = {
 
 // ── Transcendence ──
 
-/** Transcendence levels 1-6 with localized descriptions (keys: "1"-"6" with _jp/_kr/_zh suffixes) */
+/** Transcendence levels 1-6 with localized descriptions (keys: "1"-"6" with suffixes) */
 export type Transcendence = Record<string, string | null>;
 
 // ── Character profile (bio data from character-profiles.json) ──

@@ -1,6 +1,6 @@
 'use client';
 
-import { type ReactNode, useEffect, useMemo, useState } from 'react';
+import { type ReactNode, use, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { formatEffectText, stripColorTags } from '@/lib/format-text';
@@ -17,7 +17,6 @@ import { l, lRec } from '@/lib/i18n/localize';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import parseText from '@/lib/parse-text';
 import { getCharByName, characterNameToId as nameMap } from '@/lib/character-client';
-import priorityData from '@data/guides/premium-priorities.json';
 
 /* ===================== Types ===================== */
 export type Impact = { pve: string; pvp: string };
@@ -52,10 +51,13 @@ export const TAB_CONFIG: { key: TabKey; icon: string }[] = [
 ];
 
 /* ===================== Priority Data ===================== */
-export const PREMIUM_ORDER_1ST: Entry[] = priorityData.PREMIUM_ORDER_1ST;
-export const PREMIUM_ORDER_2ND: Entry[] = priorityData.PREMIUM_ORDER_2ND;
-export const PREMIUM_ORDER_3RD: Entry[] = priorityData.PREMIUM_ORDER_3RD;
-export const TRANSCEND_PRIORITY: Entry[] = priorityData.TRANSCEND_PRIORITY;
+type PriorityData = {
+  PREMIUM_ORDER_1ST: Entry[];
+  PREMIUM_ORDER_2ND: Entry[];
+  PREMIUM_ORDER_3RD: Entry[];
+  TRANSCEND_PRIORITY: Entry[];
+};
+const priorityPromise = import('@data/guides/premium-priorities.json').then(m => m.default as PriorityData);
 
 /* ===================== Localized Labels ===================== */
 export const LABELS = {
@@ -362,14 +364,16 @@ function PremiumPriorityRow({ title, entries }: { title: string; entries: Entry[
 /* ===================== PremiumPullingOrder ===================== */
 
 export function PremiumPullingOrder({ lang }: { lang: Lang }) {
+  const priorityData = use(priorityPromise);
+
   return (
     <section className="space-y-6 rounded-2xl border border-white/10 bg-white/5 p-6">
       <h2 className="mx-auto text-center">{lRec(LABELS.recommendedChoices, lang)}</h2>
 
       <div className="space-y-5">
-        <PremiumPriorityRow title={lRec(LABELS.priority1st, lang)} entries={PREMIUM_ORDER_1ST} />
-        <PremiumPriorityRow title={lRec(LABELS.priority2nd, lang)} entries={PREMIUM_ORDER_2ND} />
-        <PremiumPriorityRow title={lRec(LABELS.priority3rd, lang)} entries={PREMIUM_ORDER_3RD} />
+        <PremiumPriorityRow title={lRec(LABELS.priority1st, lang)} entries={priorityData.PREMIUM_ORDER_1ST} />
+        <PremiumPriorityRow title={lRec(LABELS.priority2nd, lang)} entries={priorityData.PREMIUM_ORDER_2ND} />
+        <PremiumPriorityRow title={lRec(LABELS.priority3rd, lang)} entries={priorityData.PREMIUM_ORDER_3RD} />
       </div>
 
       <div className="mt-5 border-t border-white/10 pt-5">
@@ -377,7 +381,7 @@ export function PremiumPullingOrder({ lang }: { lang: Lang }) {
           {lRec(LABELS.transcendPriority, lang)}
         </h4>
         <div className="flex flex-wrap items-center justify-center gap-3">
-          {TRANSCEND_PRIORITY.map((e, i) => (
+          {priorityData.TRANSCEND_PRIORITY.map((e, i) => (
             <CharacterCard key={`${e.name}-${i}`} name={e.name} stars={e.stars} isPriority={i === 0} />
           ))}
         </div>

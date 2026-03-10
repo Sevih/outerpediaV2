@@ -23,7 +23,7 @@ export const DEFAULT_LANG = (
   Object.entries(LANGUAGES).find(([, v]) => v.isDefault)?.[0] ?? 'en'
 ) as DefaultLang;
 
-/** Non-default languages (used for suffix fields like name_jp) */
+/** Non-default languages (used for suffix fields) */
 export type SuffixLang = Exclude<Lang, typeof DEFAULT_LANG>;
 
 /** Array of suffix language keys */

@@ -1,23 +1,21 @@
 import { getCharacterIndex } from '@/lib/data/characters';
+import { SUFFIX_LANGS } from '@/lib/i18n/config';
+import type { SuffixLang } from '@/lib/i18n/config';
 import PullSimulatorClient from './PullSimulatorClient';
+
+type LocalizedName = { [P in `name_${SuffixLang}`]: string };
 
 export type GachaCharacterEntry = {
   id: string;
   slug: string;
   name: string;
-  name_jp: string;
-  name_kr: string;
-  name_zh: string;
   category: 'normal' | 'premium' | 'limited';
-};
+} & LocalizedName;
 
 export type GachaMinorEntry = {
   id: string;
   name: string;
-  name_jp: string;
-  name_kr: string;
-  name_zh: string;
-};
+} & LocalizedName;
 
 const LIMITED_TAGS = new Set(['limited', 'seasonal', 'collab']);
 
@@ -32,10 +30,8 @@ export default async function PullSimulatorTool() {
     const minor = {
       id,
       name: entry.Fullname,
-      name_jp: entry.Fullname_jp ?? entry.Fullname,
-      name_kr: entry.Fullname_kr ?? entry.Fullname,
-      name_zh: entry.Fullname_zh ?? entry.Fullname,
-    };
+      ...Object.fromEntries(SUFFIX_LANGS.map((l) => [`name_${l}`, entry[`Fullname_${l}`] ?? entry.Fullname])),
+    } as GachaMinorEntry;
 
     if (entry.Rarity === 1) { pool1.push(minor); continue; }
     if (entry.Rarity === 2) { pool2.push(minor); continue; }

@@ -1,10 +1,15 @@
 'use client';
 
-import { useEffect, useState, useMemo, useRef, useDeferredValue } from 'react';
+import { use, useEffect, useState, useMemo, useRef, useDeferredValue } from 'react';
 import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 import LZString from 'lz-string';
-import effectsIndex from '@data/generated/effectsIndex.json';
+type EffectsIndex = {
+  buffs: Record<string, number>;
+  debuffs: Record<string, number>;
+  tags?: Record<string, number>;
+};
+const effectsIndexPromise = import('@data/generated/effectsIndex.json').then(m => m.default as EffectsIndex);
 import type { CharacterListEntry } from '@/types/character';
 import type { Effect } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
@@ -55,13 +60,29 @@ function fromBitfield<T>(bits: number, inv: Record<number, T>, count: number): T
   return out;
 }
 
-// Index-based maps for buffs/debuffs/tags
-const BUFF_ID: Record<string, number> = effectsIndex.buffs;
-const DEBUFF_ID: Record<string, number> = effectsIndex.debuffs;
-const TAG_ID: Record<string, number> = (effectsIndex as Record<string, Record<string, number>>).tags ?? {};
-const BUFF_INV = Object.fromEntries(Object.entries(BUFF_ID).map(([k, v]) => [v, k]));
-const DEBUFF_INV = Object.fromEntries(Object.entries(DEBUFF_ID).map(([k, v]) => [v, k]));
-const TAG_INV = Object.fromEntries(Object.entries(TAG_ID).map(([k, v]) => [v, k]));
+// Index-based maps for buffs/debuffs/tags — derived lazily from the promise
+type EffectMaps = {
+  BUFF_ID: Record<string, number>;
+  DEBUFF_ID: Record<string, number>;
+  TAG_ID: Record<string, number>;
+  BUFF_INV: Record<number, string>;
+  DEBUFF_INV: Record<number, string>;
+  TAG_INV: Record<number, string>;
+};
+
+function buildEffectMaps(idx: EffectsIndex): EffectMaps {
+  const BUFF_ID = idx.buffs;
+  const DEBUFF_ID = idx.debuffs;
+  const TAG_ID = idx.tags ?? {};
+  return {
+    BUFF_ID,
+    DEBUFF_ID,
+    TAG_ID,
+    BUFF_INV: Object.fromEntries(Object.entries(BUFF_ID).map(([k, v]) => [v, k])),
+    DEBUFF_INV: Object.fromEntries(Object.entries(DEBUFF_ID).map(([k, v]) => [v, k])),
+    TAG_INV: Object.fromEntries(Object.entries(TAG_ID).map(([k, v]) => [v, k])),
+  };
+}
 
 // ── Tag types ──
 
@@ -125,7 +146,7 @@ function charHasEffectFromSources(
 
 // ── URL encoding ──
 
-function encodeStateToZ(p: Payload): string {
+function encodeStateToZ(p: Payload, maps: EffectMaps): string {
   const eBits = isArr(p.el) ? toBitfield(p.el!, ELEM_BIT) : undefined;
   const cBits = isArr(p.cl) ? toBitfield(p.cl!, CLASS_BIT) : undefined;
   const rBits = isArr(p.r) ? toBitfield(p.r!, RARITY_BIT) : undefined;
@@ -140,10 +161,10 @@ function encodeStateToZ(p: Payload): string {
     r: rBits || undefined,
     ch: chBits || undefined,
     g: gBits || undefined,
-    b: isArr(p.buffs) ? p.buffs!.map(x => BUFF_ID[x]).filter(Boolean) : undefined,
-    d: isArr(p.debuffs) ? p.debuffs!.map(x => DEBUFF_ID[x]).filter(Boolean) : undefined,
+    b: isArr(p.buffs) ? p.buffs!.map(x => maps.BUFF_ID[x]).filter(Boolean) : undefined,
+    d: isArr(p.debuffs) ? p.debuffs!.map(x => maps.DEBUFF_ID[x]).filter(Boolean) : undefined,
     r2: r2Bits || undefined,
-    t: isArr(p.tags) ? p.tags!.map(x => TAG_ID[x]).filter(Boolean) : undefined,
+    t: isArr(p.tags) ? p.tags!.map(x => maps.TAG_ID[x]).filter(Boolean) : undefined,
     l: p.logic === 'AND' ? 1 : undefined,
     q: p.q || undefined,
     u: p.uniq ? 1 : undefined,
@@ -153,7 +174,7 @@ function encodeStateToZ(p: Payload): string {
   return LZString.compressToEncodedURIComponent(JSON.stringify(compact));
 }
 
-function decodeZToState(z?: string): Partial<Payload> | null {
+function decodeZToState(z: string | undefined, maps: EffectMaps): Partial<Payload> | null {
   if (!z) return null;
   try {
     const raw = JSON.parse(LZString.decompressFromEncodedURIComponent(z) || '{}') as ZPayload;
@@ -163,10 +184,10 @@ function decodeZToState(z?: string): Partial<Payload> | null {
       r: raw.r ? fromBitfield(raw.r, RARITY_INV, 3) : [],
       chain: raw.ch ? fromBitfield(raw.ch, CHAIN_INV, 3) : [],
       gift: raw.g ? fromBitfield(raw.g, GIFT_INV, 5) : [],
-      buffs: raw.b?.map(id => BUFF_INV[id]).filter(Boolean) ?? [],
-      debuffs: raw.d?.map(id => DEBUFF_INV[id]).filter(Boolean) ?? [],
+      buffs: raw.b?.map(id => maps.BUFF_INV[id]).filter(Boolean) ?? [],
+      debuffs: raw.d?.map(id => maps.DEBUFF_INV[id]).filter(Boolean) ?? [],
       role: raw.r2 ? fromBitfield(raw.r2, ROLE_INV, 3) : [],
-      tags: raw.t?.map(id => TAG_INV[id]).filter(Boolean) ?? [],
+      tags: raw.t?.map(id => maps.TAG_INV[id]).filter(Boolean) ?? [],
       logic: raw.l === 1 ? 'AND' : 'OR',
       q: raw.q,
       uniq: raw.u === 1,
@@ -384,6 +405,8 @@ type IndexedCharacter = CharacterListEntry & {
 };
 
 export default function CharactersPageClient({ characters, lang }: ClientProps) {
+  const effectsIndex = use(effectsIndexPromise);
+  const effectMaps = useMemo(() => buildEffectMaps(effectsIndex), [effectsIndex]);
   const { t, href } = useI18n();
   const router = useRouter();
   const pathname = usePathname();
@@ -609,7 +632,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     if (didHydrateFromURL.current) return;
     didHydrateFromURL.current = true;
     const z = new URLSearchParams(window.location.search).get('z');
-    const decoded = decodeZToState(z || undefined);
+    const decoded = decodeZToState(z || undefined, effectMaps);
     if (decoded) {
       applyPayload(decoded);
       if ((decoded.buffs?.length || 0) + (decoded.debuffs?.length || 0) > 0) setShowFilters(true);
@@ -645,14 +668,14 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
       const isEmpty = !payload.el && !payload.cl && !payload.r && !payload.chain
         && !payload.gift && !payload.buffs && !payload.debuffs && !payload.role
         && !payload.tags && !payload.logic && !payload.q && !payload.uniq;
-      const serialized = isEmpty ? pathname : `${pathname}?z=${encodeStateToZ(payload)}`;
+      const serialized = isEmpty ? pathname : `${pathname}?z=${encodeStateToZ(payload, effectMaps)}`;
       if (lastSerializedRef.current !== serialized) {
         lastSerializedRef.current = serialized;
         router.replace(serialized as never, { scroll: false });
       }
     }, 150);
     return () => clearTimeout(handle);
-  }, [pathname, router, payload]);
+  }, [pathname, router, payload, effectMaps]);
 
   // ── Actions ──
 

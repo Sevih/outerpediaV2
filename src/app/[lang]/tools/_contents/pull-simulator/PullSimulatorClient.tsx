@@ -3,6 +3,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import type { TranslationKey } from '@/i18n';
+import { SUFFIX_LANGS } from '@/lib/i18n/config';
 import type { Lang } from '@/lib/i18n/config';
 import type { BannerType, PullResult } from '@/lib/gacha';
 import {
@@ -67,11 +68,9 @@ const BANNER_CATEGORY_WEIGHT: Record<BannerType, Record<GachaCharacterEntry['cat
   limited: { normal: 1, premium: 1, limited: 1 },
 };
 
-type HasLocalizedName = { name: string; name_jp: string; name_kr: string; name_zh: string };
-
-function getCharName(char: HasLocalizedName, lang: Lang): string {
+function getCharName(char: GachaMinorEntry, lang: Lang): string {
   if (lang === 'en') return char.name;
-  return char[`name_${lang}` as keyof HasLocalizedName] as string;
+  return char[`name_${lang}`];
 }
 
 /** Pick a random character from a pool using category-based weights */
@@ -288,10 +287,8 @@ export default function PullSimulatorClient({ characters, pool1, pool2 }: Props)
                     .filter((c) => {
                       if (!focusSearch) return true;
                       const q = focusSearch.toLowerCase();
-                      return c.name.toLowerCase().includes(q)
-                        || c.name_jp.toLowerCase().includes(q)
-                        || c.name_kr.toLowerCase().includes(q)
-                        || c.name_zh.toLowerCase().includes(q);
+                      return SUFFIX_LANGS.some((l) => c[`name_${l}`].toLowerCase().includes(q))
+                        || c.name.toLowerCase().includes(q);
                     })
                     .filter((c) => !selectedSlugs.includes(c.slug))
                     .map((char) => (
@@ -389,7 +386,7 @@ export default function PullSimulatorClient({ characters, pool1, pool2 }: Props)
           <h2 className="mb-3 text-sm font-semibold text-zinc-300">{tk('tools.pull-simulator.results')}</h2>
           <div className="grid grid-cols-5 gap-2">
             {lastResults.map((pull, i) => {
-              const char: HasLocalizedName | undefined = pull.charId
+              const char: GachaMinorEntry | undefined = pull.charId
                 ? (characters.find((c) => c.id === pull.charId)
                   ?? pool2.find((c) => c.id === pull.charId)
                   ?? pool1.find((c) => c.id === pull.charId))

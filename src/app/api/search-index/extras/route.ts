@@ -1,16 +1,15 @@
 import { getWeapons, getAmulets, getTalismans, getArmorSets, getExclusiveEquipment } from '@/lib/data/equipment';
 import { slugifyEquipment } from '@/lib/format-text';
 import { getAllGuides } from '@/lib/data/guides';
+import type { WithLocalizedFields } from '@/types/common';
+import { SUFFIX_LANGS } from '@/lib/i18n/config';
 
-export type EquipmentSearchItem = {
+export type EquipmentSearchItem = WithLocalizedFields<{
   slug: string;
   name: string;
-  name_jp?: string;
-  name_kr?: string;
-  name_zh?: string;
   type: 'weapon' | 'amulet' | 'talisman' | 'set' | 'ee';
   image: string;
-};
+}, 'name'>;
 
 export type GuideSearchItem = {
   slug: string;
@@ -24,6 +23,19 @@ export type SearchExtras = {
   guides: GuideSearchItem[];
 };
 
+function toSearchItem(
+  item: { name: string } & Record<string, unknown>,
+  type: EquipmentSearchItem['type'],
+  image: string,
+): EquipmentSearchItem {
+  const result: EquipmentSearchItem = { slug: slugifyEquipment(item.name), name: item.name, type, image };
+  for (const lang of SUFFIX_LANGS) {
+    const key = `name_${lang}` as const;
+    if (item[key]) result[key] = item[key] as string;
+  }
+  return result;
+}
+
 export async function GET() {
   const [weapons, amulets, talismans, sets, eeMap, guides] = await Promise.all([
     getWeapons(),
@@ -35,51 +47,11 @@ export async function GET() {
   ]);
 
 const equipment: EquipmentSearchItem[] = [
-    ...weapons.map((w) => ({
-      slug: slugifyEquipment(w.name),
-      name: w.name,
-      name_jp: w.name_jp,
-      name_kr: w.name_kr,
-      name_zh: w.name_zh,
-      type: 'weapon' as const,
-      image: w.image,
-    })),
-    ...amulets.map((a) => ({
-      slug: slugifyEquipment(a.name),
-      name: a.name,
-      name_jp: a.name_jp,
-      name_kr: a.name_kr,
-      name_zh: a.name_zh,
-      type: 'amulet' as const,
-      image: a.image,
-    })),
-    ...talismans.map((t) => ({
-      slug: slugifyEquipment(t.name),
-      name: t.name,
-      name_jp: t.name_jp,
-      name_kr: t.name_kr,
-      name_zh: t.name_zh,
-      type: 'talisman' as const,
-      image: t.image,
-    })),
-    ...sets.map((s) => ({
-      slug: slugifyEquipment(s.name),
-      name: s.name,
-      name_jp: s.name_jp,
-      name_kr: s.name_kr,
-      name_zh: s.name_zh,
-      type: 'set' as const,
-      image: `TI_Equipment_Armor_${s.image_prefix}`,
-    })),
-    ...Object.entries(eeMap).map(([charId, ee]) => ({
-      slug: slugifyEquipment(ee.name),
-      name: ee.name,
-      name_jp: ee.name_jp,
-      name_kr: ee.name_kr,
-      name_zh: ee.name_zh,
-      type: 'ee' as const,
-      image: charId,
-    })),
+    ...weapons.map((w) => toSearchItem(w, 'weapon', w.image)),
+    ...amulets.map((a) => toSearchItem(a, 'amulet', a.image)),
+    ...talismans.map((t) => toSearchItem(t, 'talisman', t.image)),
+    ...sets.map((s) => toSearchItem(s, 'set', `TI_Equipment_Armor_${s.image_prefix}`)),
+    ...Object.entries(eeMap).map(([charId, ee]) => toSearchItem(ee, 'ee', charId)),
   ];
 
   const guideItems: GuideSearchItem[] = guides.map((g) => ({

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useDeferredValue } from 'react';
+import { use, useState, useMemo, useDeferredValue } from 'react';
 import Image from 'next/image';
 import type { Weapon, Amulet, Talisman, ArmorSet, ExclusiveEquipment, BossDisplayMap, SourceFilterOption } from '@/types/equipment';
 import type { Effect } from '@/types/effect';
@@ -14,7 +14,9 @@ import Tabs from '@/app/components/ui/Tabs';
 import { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import { WeaponCard, AmuletCard, TalismanCard, SetCard, EECard } from '@/app/components/equipment';
 import { FilterSearch, FilterPill, IconFilterGroup } from '@/app/components/ui/FilterPills';
-import statsData from '@data/stats.json';
+
+type StatEntry = { label: string; icon: string };
+const statsPromise = import('@data/stats.json').then(m => m.default as Record<string, StatEntry>);
 
 const TAB_KEYS = ['weapons', 'accessories', 'sets', 'talismans', 'ee'] as const;
 type TabKey = (typeof TAB_KEYS)[number];
@@ -73,6 +75,7 @@ export default function EquipmentsPageClient({
   gearSourceFilters, setSourceFilters, mainStatsOptions, bossMap, buffMap, debuffMap, lang, messages,
 }: Props) {
   const { t } = useI18n();
+  const statsData = use(statsPromise);
   const [activeTab, setActiveTab] = useState<TabKey>('weapons');
 
   // ── Filter state ──
@@ -331,7 +334,7 @@ export default function EquipmentsPageClient({
                       {t('common.all')}
                     </FilterPill>
                     {mainStatsOptions.map(stat => {
-                      const info = (statsData as Record<string, { label: string; icon: string }>)[stat];
+                      const info = statsData[stat];
                       return (
                         <FilterPill
                           key={stat}

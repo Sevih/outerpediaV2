@@ -1,5 +1,6 @@
 import type { LangMap } from './common';
-import type { RequirementsData } from './team';
+import type { SuffixLang } from '@/lib/i18n/config';
+import type { NoteEntry, RequirementsData } from './team';
 
 /** A single Geas entry from the global pool */
 export type Geas = {
@@ -66,16 +67,17 @@ export type Phase1Data = {
 };
 
 /** Phase 2 team entry */
-export type GuildRaidTeamEntry = {
+type BaseGuildRaidTeamEntry = {
   icon?: string;
   team: string[][];
   geasActive?: GeasActiveConfig;
-  note?: { type: string; string: string }[];
-  note_jp?: { type: string; string: string }[];
-  note_kr?: { type: string; string: string }[];
-  note_zh?: { type: string; string: string }[];
+  note?: NoteEntry[];
   video?: GuildRaidVideo;
   requirements?: RequirementsData;
+};
+
+export type GuildRaidTeamEntry = BaseGuildRaidTeamEntry & {
+  [P in `note_${SuffixLang}`]?: NoteEntry[];
 };
 
 /** Phase 2 teams keyed by team label */

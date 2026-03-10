@@ -1,10 +1,8 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { use, useState, useMemo } from 'react';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { TextFilterGroup } from '@/app/components/ui/FilterPills';
-import major9Data from '@data/patch-notes/posts.json';
-import legacyData from '@data/patch-notes/legacy-posts.json';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -24,6 +22,10 @@ type Post = {
   title: string;
   content: string;
 };
+
+type PostsFile = { posts: Post[] };
+const major9Promise = import('@data/patch-notes/posts.json').then(m => m.default as PostsFile);
+const legacyPromise = import('@data/patch-notes/legacy-posts.json').then(m => m.default as PostsFile);
 
 const MAJOR9_TYPES: Major9Type[] = ['update', 'notice', 'event', 'devnote', 'known-issue'];
 const LEGACY_TYPES: LegacyType[] = ['patchnotes', 'event', 'developer-notes', 'compendium', 'media-archives', 'official-4-cut-cartoon', 'probabilities', 'world-introduction'];
@@ -67,6 +69,8 @@ const TYPE_I18N_KEYS: Record<string, 'tools.patch-history.type.update' | 'tools.
 const POSTS_PER_PAGE = 10;
 
 export default function PatchNotesTool() {
+  const major9Data = use(major9Promise);
+  const legacyData = use(legacyPromise);
   const { lang, t } = useI18n();
   const [era, setEra] = useState<Era>('major9');
   const [typeFilter, setTypeFilter] = useState<string[]>([]);

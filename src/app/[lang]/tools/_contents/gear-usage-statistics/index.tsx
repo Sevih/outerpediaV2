@@ -4,6 +4,7 @@ import { getCharactersForList } from '@/lib/data/characters';
 import { getWeapons, getAmulets, getArmorSets, getTalismans } from '@/lib/data/equipment';
 import type { Weapon, Amulet, Talisman } from '@/types/equipment';
 import type { WithLocalizedFields } from '@/types/common';
+import { SUFFIX_LANGS } from '@/lib/i18n/config';
 import GearUsageStatisticsClient from './GearUsageStatisticsClient';
 
 export type GearCategory = 'weapon' | 'amulet' | 'set' | 'talisman';
@@ -33,6 +34,11 @@ type RawGearUsageData = Record<GearCategory, RawGearUsageEntry[]>;
 type VisualInfo = WithLocalizedFields<{
   image: string; rarity: string; effectIcon: string | null; classType: string | null; level: number | null;
 }, 'name'>;
+
+/** Extract localized name fields from an item */
+function localizedNames(item: { name: string } & Record<string, unknown>) {
+  return Object.fromEntries(SUFFIX_LANGS.map(l => [`name_${l}`, item[`name_${l}`]]));
+}
 
 /** Enrich raw usage entries with visual info + localized names */
 function enrichEntries(
@@ -74,24 +80,24 @@ export default async function GearUsageStatisticsTool() {
   // Build visual info lookups (with localized names)
   const weaponLookup = buildLookup(weapons, w => w.name, (w: Weapon) => ({
     image: `equipment/${w.image}`, rarity: w.rarity, effectIcon: w.effect_icon, classType: w.class, level: w.level,
-    name_jp: w.name_jp, name_kr: w.name_kr, name_zh: w.name_zh,
+    ...localizedNames(w),
   }));
   const amuletLookup = buildLookup(amulets, a => a.name, (a: Amulet) => ({
     image: `equipment/${a.image}`, rarity: a.rarity, effectIcon: a.effect_icon, classType: a.class, level: a.level,
-    name_jp: a.name_jp, name_kr: a.name_kr, name_zh: a.name_zh,
+    ...localizedNames(a),
   }));
   const setLookup = new Map<string, VisualInfo>();
   for (const s of sets) {
     const info: VisualInfo = {
       image: `equipment/TI_Equipment_Armor_${s.image_prefix}`, rarity: s.rarity, effectIcon: s.set_icon, classType: s.class, level: null,
-      name_jp: s.name_jp, name_kr: s.name_kr, name_zh: s.name_zh,
+      ...localizedNames(s),
     };
     setLookup.set(s.name, info);
     setLookup.set(s.name.replace(/ [Ss]et$/, ''), info);
   }
   const talismanLookup = buildLookup(talismans, t => t.name, (t: Talisman) => ({
     image: `equipment/${t.image}`, rarity: t.rarity, effectIcon: t.effect_icon, classType: null, level: t.level,
-    name_jp: t.name_jp, name_kr: t.name_kr, name_zh: t.name_zh,
+    ...localizedNames(t),
   }));
 
   const data: GearUsageData = {

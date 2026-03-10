@@ -9,8 +9,10 @@ import type { StarColor } from '@/lib/stars';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
 
-import weaponsData from '@data/equipment/weapon.json';
-import setsData from '@data/equipment/sets.json';
+type WeaponEntry = { name: string; class?: string; effect_desc1?: string; effect_desc4?: string; [key: string]: unknown };
+type SetEntry = { name: string; effect_2_1?: string; effect_2_4?: string; effect_4_1?: string; effect_4_4?: string; [key: string]: unknown };
+const weaponsPromise = import('@data/equipment/weapon.json').then(m => m.default as WeaponEntry[]);
+const setsPromise = import('@data/equipment/sets.json').then(m => m.default as SetEntry[]);
 const statValues: Record<string, string[]> = {
   'ATK%': ['4%', '8%', '12%', '16%', '20%', '24%'],
   CHC: ['3%', '6%', '9%', '12%', '15%', '18%'],
@@ -178,7 +180,7 @@ export function EquipmentCardInline({ data }: { data: EquipmentCardData }) {
 // EQUIPMENT INTRO (interactive property highlights)
 // ============================================================================
 
-import { useState } from 'react';
+import { use, useState } from 'react';
 
 export type EquipmentPropertyKey = 'stars' | 'reforge' | 'rarity' | 'upgrade' | 'tier' | 'set' | 'class';
 const PROPERTY_KEYS: EquipmentPropertyKey[] = ['stars', 'reforge', 'rarity', 'upgrade', 'tier', 'set', 'class'];
@@ -403,6 +405,8 @@ function highlightDifferences(t1Text: string | null, t4Text: string | null): Rea
 }
 
 export function BreakthroughExamplesGrid({ lang }: { lang: Lang }) {
+  const weaponsData = use(weaponsPromise);
+  const setsData = use(setsPromise);
   const surefireGreatsword = weaponsData.find((w) => w.name === 'Surefire Greatsword');
   const immunitySet = setsData.find((s) => s.name === 'Immunity Set');
   const penetrationSet = setsData.find((s) => s.name === 'Penetration Set');

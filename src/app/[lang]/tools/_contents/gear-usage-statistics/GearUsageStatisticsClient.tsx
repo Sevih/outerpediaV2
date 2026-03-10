@@ -4,6 +4,7 @@ import { useDeferredValue, useMemo, useState } from 'react';
 import Link from 'next/link';
 import type { CharacterListEntry } from '@/types/character';
 import type { Lang } from '@/types/common';
+import { SUFFIX_LANGS } from '@/lib/i18n/config';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
@@ -47,9 +48,7 @@ export default function GearUsageStatisticsClient({ data, characters }: Props) {
     const q = query.toLowerCase().trim();
     return list.filter(e =>
       e.name.toLowerCase().includes(q) ||
-      e.name_jp?.toLowerCase().includes(q) ||
-      e.name_kr?.toLowerCase().includes(q) ||
-      e.name_zh?.toLowerCase().includes(q)
+      SUFFIX_LANGS.some(sl => e[`name_${sl}`]?.toLowerCase().includes(q))
     );
   }, [data, category, query]);
 

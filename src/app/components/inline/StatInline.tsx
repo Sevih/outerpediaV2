@@ -1,12 +1,12 @@
 'use client';
 
-import stats from '@data/stats.json';
+import { use } from 'react';
 import InlineIcon from './InlineIcon';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import type { TranslationKey } from '@/i18n/locales/en';
 
 type StatEntry = { label: string; icon: string };
-const statsMap = stats as Record<string, StatEntry>;
+const statsPromise = import('@data/stats.json').then(m => m.default as Record<string, StatEntry>);
 
 const STAT_I18N: Record<string, TranslationKey> = {
   'ATK': 'sys.stat.atk',
@@ -31,6 +31,7 @@ type Props = { name: string; iconOnly?: boolean };
 
 export default function StatInline({ name, iconOnly = false }: Props) {
   const { t } = useI18n();
+  const statsMap = use(statsPromise);
   const stat = statsMap[name];
   if (!stat) {
     return <span className="text-red-500">{name}</span>;
