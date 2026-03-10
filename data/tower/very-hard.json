@@ -341,6 +341,20 @@
             }
           ]
         },
+                {
+          "restrictions": ["BanHealer"],
+          "recommended": [
+            {
+              "names": ["2000089", "2000085", "2000041", "2000039"],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
         {
           "restrictions": ["AtLeast1_Light"],
           "recommended": [
@@ -1272,6 +1286,38 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": ["AtLeast1_3Star"],
+          "recommended": [
+            {
+              "names": ["2000074", "2000113", "2000108","2000058"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100", "2000084", "2000036", "2000098"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
         }
       ]
     },
@@ -1289,6 +1335,20 @@
       "restrictionSets": [
         {
           "restrictions": ["BanRanger"],
+          "recommended": [
+            {
+              "names": ["2000089"],
+              "reason": {
+                "en": "{SK/Caren|S2} will automatically target {P/Fatal} and {SK/Caren|S1} will hit both target.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["BanMage"],
           "recommended": [
             {
               "names": ["2000089"],
@@ -1736,7 +1796,7 @@
       "minions": ["40103052"],
       "reason": [
         {
-          "en": "Just focus main Maxwell with single target.",
+          "en": "Just focus main {P/Maxwell} with single target.",
           "jp": "",
           "kr": "",
           "zh": ""
@@ -1773,6 +1833,20 @@
         },
         {
           "restrictions": ["BanLight"],
+          "recommended": [
+            {
+              "names": [],
+              "reason": {
+                "en": "",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+                {
+          "restrictions": ["BanMage"],
           "recommended": [
             {
               "names": [],
