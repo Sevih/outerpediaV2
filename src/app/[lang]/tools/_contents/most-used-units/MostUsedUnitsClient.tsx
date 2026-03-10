@@ -3,7 +3,6 @@
 import { useDeferredValue, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { CharacterListEntry } from '@/types/character';
 import type { RarityType } from '@/types/enums';
 import { ELEMENTS, CLASSES, RARITIES } from '@/types/enums';
 import { useI18n } from '@/lib/contexts/I18nContext';
@@ -12,7 +11,7 @@ import { LANGS } from '@/lib/i18n/config';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import { FilterPill, FilterSearch, IconFilterGroup } from '@/app/components/ui/FilterPills';
 import type { TranslationKey } from '@/i18n/locales/en';
-import type { MostUsedEntry, GuideTitleMap } from './index';
+import type { MostUsedEntry, GuideTitleMap, MostUsedCharacter } from './index';
 
 const GUIDE_CATEGORIES = [
   'world-boss',
@@ -26,7 +25,7 @@ const GUIDE_CATEGORIES = [
 ] as const;
 
 type Props = {
-  characters: CharacterListEntry[];
+  characters: MostUsedCharacter[];
   usage: MostUsedEntry[];
   guideTitles: GuideTitleMap;
 };
@@ -53,7 +52,7 @@ export default function MostUsedUnitsClient({ characters, usage, guideTitles }: 
 
   // Build character map by slug
   const charBySlug = useMemo(() => {
-    const map = new Map<string, CharacterListEntry>();
+    const map = new Map<string, MostUsedCharacter>();
     for (const char of characters) map.set(char.slug, char);
     return map;
   }, [characters]);
@@ -249,11 +248,11 @@ export default function MostUsedUnitsClient({ characters, usage, guideTitles }: 
                   </span>
                   <div className="flex items-center gap-2 mt-0.5">
                     <span className="flex items-center gap-1 text-xs text-zinc-400">
-                      <img src={`/images/ui/elem/CM_Element_${entry.char.Element}.webp`} alt={entry.char.Element} className="h-4 w-4" />
+                      <Image src={`/images/ui/elem/CM_Element_${entry.char.Element}.webp`} alt={entry.char.Element} width={16} height={16} className="h-4 w-4" />
                       {entry.char.Element}
                     </span>
                     <span className="flex items-center gap-1 text-xs text-zinc-400">
-                      <img src={`/images/ui/class/CM_Class_${entry.char.Class}.webp`} alt={entry.char.Class} className="h-4 w-4" />
+                      <Image src={`/images/ui/class/CM_Class_${entry.char.Class}.webp`} alt={entry.char.Class} width={16} height={16} className="h-4 w-4" />
                       {entry.char.Class}
                     </span>
                   </div>

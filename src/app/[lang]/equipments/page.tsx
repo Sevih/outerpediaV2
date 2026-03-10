@@ -8,7 +8,7 @@ import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getBossDisplayMap } from '@/lib/data/bosses';
 import type { Effect } from '@/types/effect';
 import type { SourceFilterOption } from '@/types/equipment';
-import { l as loc } from '@/lib/i18n/localize';
+import { l as loc, stripOtherLangsArray, stripOtherLangsRecord } from '@/lib/i18n/localize';
 import EquipmentsPageClient from './EquipmentsPageClient';
 
 export const revalidate = 86400;
@@ -115,19 +115,19 @@ export default async function EquipmentsPage({ params }: Props) {
         {messages['common.updated']?.replace('{monthYear}', getMonthYear(l))}
       </p>
       <EquipmentsPageClient
-        weapons={weapons}
-        amulets={amulets}
-        talismans={talismans}
-        sets={sets}
-        ee={ee}
+        weapons={stripOtherLangsArray(weapons, l)}
+        amulets={stripOtherLangsArray(amulets, l)}
+        talismans={stripOtherLangsArray(talismans, l)}
+        sets={stripOtherLangsArray(sets, l)}
+        ee={stripOtherLangsRecord(ee, l)}
         eeCharNames={eeCharNames}
         eeCharClasses={eeCharClasses}
         gearSourceFilters={gearSourceFilters}
         setSourceFilters={setSourceFilters}
         mainStatsOptions={mainStatsOptions}
         bossMap={bossMap}
-        buffMap={buffMap}
-        debuffMap={debuffMap}
+        buffMap={stripOtherLangsRecord(buffMap, l)}
+        debuffMap={stripOtherLangsRecord(debuffMap, l)}
         lang={l}
         messages={messages}
       />

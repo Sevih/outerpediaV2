@@ -12,14 +12,33 @@ export type MostUsedEntry = {
 
 export type GuideTitleMap = Record<string, Record<string, string>>;
 
+/** Minimal character data needed by the most-used-units page */
+export type MostUsedCharacter = Pick<
+  Awaited<ReturnType<typeof getCharactersForList>>[number],
+  'ID' | 'Fullname' | 'Fullname_jp' | 'Fullname_kr' | 'Fullname_zh' | 'slug' | 'Element' | 'Class' | 'Rarity'
+>;
+
 export default async function MostUsedUnitsTool() {
-  const [characters, usageRaw, guides] = await Promise.all([
+  const [allCharacters, usageRaw, guides] = await Promise.all([
     getCharactersForList(),
     readFile(join(process.cwd(), 'data/generated/most-used-units.json'), 'utf-8'),
     getAllGuides(),
   ]);
 
   const usage: MostUsedEntry[] = JSON.parse(usageRaw);
+
+  // Trim character data to only fields used by this page
+  const characters: MostUsedCharacter[] = allCharacters.map(c => ({
+    ID: c.ID,
+    Fullname: c.Fullname,
+    Fullname_jp: c.Fullname_jp,
+    Fullname_kr: c.Fullname_kr,
+    Fullname_zh: c.Fullname_zh,
+    slug: c.slug,
+    Element: c.Element,
+    Class: c.Class,
+    Rarity: c.Rarity,
+  }));
 
   // Build guide slug → localized title map
   const guideTitles: GuideTitleMap = {};
