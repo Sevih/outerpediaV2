@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 
 import type { ElementType } from '@/types/enums';
 import { ELEMENT_BG, ELEMENT_TEXT } from '@/lib/theme';
@@ -9,7 +9,6 @@ type Props = {
   endDate: string;
   element: ElementType;
   endsInLabel: string;
-  endedLabel: string;
 };
 
 function formatTimeLeft(ms: number): string {
@@ -22,7 +21,7 @@ function formatTimeLeft(ms: number): string {
   return `${minutes}m`;
 }
 
-export default function BannerCountdown({ endDate, element, endsInLabel, endedLabel }: Props) {
+export default function BannerCountdown({ endDate, element, endsInLabel }: Props) {
   const [mounted, setMounted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(0);
 
@@ -37,17 +36,31 @@ export default function BannerCountdown({ endDate, element, endsInLabel, endedLa
 
   if (!mounted) return <span className="inline-block h-5 w-20 rounded bg-zinc-800/50" />;
 
-  const ended = timeLeft <= 0;
+  if (timeLeft <= 0) return null;
 
   return (
     <span
-      className={`inline-block rounded px-2 py-0.5 text-xs font-medium ${
-        ended
-          ? 'bg-zinc-700 text-zinc-400'
-          : `${ELEMENT_BG[element]}/20 ${ELEMENT_TEXT[element]}`
-      }`}
+      className={`inline-block rounded px-2 py-0.5 text-xs font-medium ${ELEMENT_BG[element]}/20 ${ELEMENT_TEXT[element]}`}
     >
-      {ended ? endedLabel : `${endsInLabel} ${formatTimeLeft(timeLeft)}`}
+      {endsInLabel} {formatTimeLeft(timeLeft)}
     </span>
   );
+}
+
+/** Wrapper that hides its children once the banner has ended */
+export function BannerWrapper({ endDate, children }: { endDate: string; children: ReactNode }) {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const end = new Date(endDate + 'T00:00:00Z').getTime();
+    const check = () => {
+      if (Date.now() >= end) setVisible(false);
+    };
+    check();
+    const id = setInterval(check, 60000);
+    return () => clearInterval(id);
+  }, [endDate]);
+
+  if (!visible) return null;
+  return <>{children}</>;
 }

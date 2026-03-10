@@ -47,6 +47,9 @@ export default function OverviewSection({ character, profile, tags }: Props) {
             <span className="block text-lg font-normal tracking-wide">{prefix}</span>
           )}
           {name}
+          <span className="sr-only">
+            {` — Outerplane ${t(elementKey)} ${t(classKey)} Guide`}
+          </span>
         </h1>
       </div>
 

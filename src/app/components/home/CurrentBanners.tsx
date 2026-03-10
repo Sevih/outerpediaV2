@@ -7,7 +7,7 @@ import { getCharacterIndex } from '@/lib/data/characters';
 import { splitCharacterName } from '@/lib/character-name';
 import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
 import { localePath } from '@/lib/navigation';
-import BannerCountdown from './BannerCountdown';
+import BannerCountdown, { BannerWrapper } from './BannerCountdown';
 
 type BannerEntry = {
   id: string;
@@ -50,24 +50,24 @@ export default async function CurrentBanners({ t }: Props) {
           const { prefix } = splitCharacterName(banner.id, displayName, lang);
 
           return (
-            <ResponsiveCharacterCard
-              key={`${banner.id}-${banner.start}`}
-              id={banner.id}
-              name={displayName}
-              prefix={prefix}
-              element={char.Element}
-              classType={char.Class}
-              rarity={char.Rarity}
-              tags={char.tags}
-              href={localePath(lang, `/characters/${char.slug}`)}
-            >
-              <BannerCountdown
-                endDate={banner.end}
+            <BannerWrapper key={`${banner.id}-${banner.start}`} endDate={banner.end}>
+              <ResponsiveCharacterCard
+                id={banner.id}
+                name={displayName}
+                prefix={prefix}
                 element={char.Element}
-                endsInLabel={t['home.banner.ends_in']}
-                endedLabel={t['home.banner.ended']}
-              />
-            </ResponsiveCharacterCard>
+                classType={char.Class}
+                rarity={char.Rarity}
+                tags={char.tags}
+                href={localePath(lang, `/characters/${char.slug}`)}
+              >
+                <BannerCountdown
+                  endDate={banner.end}
+                  element={char.Element}
+                  endsInLabel={t['home.banner.ends_in']}
+                />
+              </ResponsiveCharacterCard>
+            </BannerWrapper>
           );
         })}
       </div>
