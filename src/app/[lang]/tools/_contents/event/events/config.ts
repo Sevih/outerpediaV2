@@ -4,7 +4,7 @@ import type { EventStatus } from '../types';
 // Events not listed here default to 'hidden'.
 const EVENT_STATUS: Record<string, EventStatus> = {
   '20260201-video': 'hidden',
-  '_no-peaking': 'ongoing',
+  '_no-peaking': 'hidden',
 };
 
 export default EVENT_STATUS;

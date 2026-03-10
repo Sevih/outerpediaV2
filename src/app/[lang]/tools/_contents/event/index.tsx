@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import Image from 'next/image';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { TextFilterGroup } from '@/app/components/ui/FilterPills';
 import { EVENTS } from './events';
@@ -51,6 +52,12 @@ export default function EventTool() {
   const [typeFilter, setTypeFilter] = useState<EventType[]>([]);
   const [statusFilter, setStatusFilter] = useState<EventStatus[]>([]);
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
+
+  // Auto-expand event from URL hash (e.g. /event#20260201-video)
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) setExpandedSlug(decodeURIComponent(hash));
+  }, []);
 
   const events = useMemo(() => {
     // Filter out hidden events in production
@@ -130,7 +137,7 @@ export default function EventTool() {
 
                 {/* Title */}
                 <span className="min-w-0 flex-1 truncate text-sm text-zinc-100">
-                  {meta.title}
+                  {meta.title[lang]}
                 </span>
 
                 {/* Date range */}
@@ -152,18 +159,36 @@ export default function EventTool() {
 
               {/* Expanded content — renders the event's rich Page component */}
               {isExpanded && (
-                <div className="border-t border-zinc-700/50 px-4 py-6">
-                  {/* Date range (mobile) */}
-                  <p className="mb-4 text-xs text-zinc-500 sm:hidden">
-                    {formatDate(meta.start, lang)} — {formatDate(meta.end, lang)}
-                  </p>
+                <div className="border-t border-zinc-700/50 px-4 py-6 space-y-6 text-left">
+                  {/* Auto header from meta */}
+                  <header className="space-y-4 text-center">
+                    <h2 className="mx-auto text-3xl font-extrabold tracking-tight text-zinc-100">
+                      {meta.title[lang]}
+                    </h2>
 
-                  {/* Organizer */}
-                  {meta.organizer && (
-                    <p className="mb-4 text-sm text-zinc-400">
-                      {t('tools.event.organizer')}: <span className="text-zinc-200">{meta.organizer}</span>
-                    </p>
-                  )}
+                    {meta.cover && (
+                      <div className="relative mx-auto h-48 w-full max-w-md">
+                        <Image
+                          src={meta.cover}
+                          alt={meta.title[lang]}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 448px"
+                          className="rounded-lg object-contain"
+                        />
+                      </div>
+                    )}
+
+                    <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-zinc-400">
+                      <span>
+                        {formatDate(meta.start, lang)} — {formatDate(meta.end, lang)}
+                      </span>
+                      {meta.organizer && (
+                        <span>
+                          {t('tools.event.organizer')}: <span className="text-zinc-200">{meta.organizer}</span>
+                        </span>
+                      )}
+                    </div>
+                  </header>
 
                   {/* Rich content */}
                   <Page />

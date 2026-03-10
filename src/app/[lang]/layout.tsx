@@ -10,6 +10,7 @@ import Header from '@/app/components/layout/Header';
 import Footer from '@/app/components/layout/Footer';
 import BackToTop from '@/app/components/ui/BackToTop';
 import Breadcrumbs from '@/app/components/ui/Breadcrumbs';
+import EventBanner from '@/app/components/layout/EventBanner';
 import { BreadcrumbProvider } from '@/lib/contexts/BreadcrumbContext';
 
 /** Pre-generate all language variants at build time */
@@ -70,6 +71,7 @@ export default async function LangLayout({
           }}
         />
         <Header />
+        <EventBanner />
         <Breadcrumbs />
         <main className="flex-1">{children}</main>
         <Footer />
