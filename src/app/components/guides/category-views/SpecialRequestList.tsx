@@ -1,22 +1,20 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { use, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { CategoryViewProps } from './types';
 import type { GuideMeta } from '@/types/guide';
 import { lRec } from '@/lib/i18n/localize';
 import { localePath } from '@/lib/navigation';
-import srData from '@data/guides/special_request.json';
-import statsData from '@data/stats.json';
+
+const srDataPromise = import('@data/guides/special_request.json').then(m => m.default as Record<string, Record<string, { slug: string; loot: string[] }>>);
+const statsDataPromise = import('@data/stats.json').then(m => m.default as Record<string, { label: string; icon: string }>);
 
 type Tab = 'identification' | 'ecology_study';
 
 const IDENTIFICATION_ORDER = ['Earth', 'Water', 'Fire', 'Light', 'Dark'];
 const ECOLOGY_ORDER = ['Fire', 'Water', 'Earth', 'Light', 'Dark'];
-
-const statsMap = statsData as Record<string, { label: string; icon: string }>;
-const srMap = srData as Record<string, Record<string, { slug: string; loot: string[] }>>;
 
 function iconElement(icon: string): string {
   return icon.split('_').pop() ?? '';
@@ -30,12 +28,12 @@ function sortByElement(list: GuideMeta[], order: string[]) {
   return list.sort((a, b) => order.indexOf(iconElement(a.icon)) - order.indexOf(iconElement(b.icon)));
 }
 
-function getLoot(meta: GuideMeta, type: Tab): string[] {
+function getLoot(meta: GuideMeta, type: Tab, srMap: Record<string, Record<string, { slug: string; loot: string[] }>>): string[] {
   const element = iconElement(meta.icon).toLowerCase();
   return srMap[type]?.[element]?.loot ?? [];
 }
 
-function LootIcons({ loot, type }: { loot: string[]; type: Tab }) {
+function LootIcons({ loot, type, statsMap }: { loot: string[]; type: Tab; statsMap: Record<string, { label: string; icon: string }> }) {
   if (loot.length === 0) return null;
   const half = Math.ceil(loot.length / 2);
   const rows = [loot.slice(0, half), loot.slice(half)];
@@ -61,16 +59,18 @@ function LootIcons({ loot, type }: { loot: string[]; type: Tab }) {
   );
 }
 
-function CardList({ items, lang, type }: {
+function CardList({ items, lang, type, srMap, statsMap }: {
   items: GuideMeta[];
   lang: CategoryViewProps['lang'];
   type: Tab;
+  srMap: Record<string, Record<string, { slug: string; loot: string[] }>>;
+  statsMap: Record<string, { label: string; icon: string }>;
 }) {
   return (
     <div className="flex flex-col gap-3">
       {items.map((meta) => {
         const name = lRec(meta.title, lang);
-        const loot = getLoot(meta, type);
+        const loot = getLoot(meta, type, srMap);
         return (
           <Link
             key={meta.slug}
@@ -89,7 +89,7 @@ function CardList({ items, lang, type }: {
               <p className="text-lg font-bold text-zinc-100 drop-shadow-lg bg-black/50 px-3 py-0.5 rounded inline-block">{name}</p>
             </div>
             <div className="absolute right-2 top-1/2 -translate-y-1/2">
-              <LootIcons loot={loot} type={type} />
+              <LootIcons loot={loot} type={type} statsMap={statsMap} />
             </div>
           </Link>
         );
@@ -99,6 +99,8 @@ function CardList({ items, lang, type }: {
 }
 
 export default function SpecialRequestList({ guides, lang, t }: CategoryViewProps) {
+  const statsMap = use(statsDataPromise);
+  const srMap = use(srDataPromise);
   const [tab, setTab] = useState<Tab>('identification');
 
   const { identification, ecology_study } = useMemo(() => {
@@ -141,18 +143,18 @@ export default function SpecialRequestList({ guides, lang, t }: CategoryViewProp
 
       {/* Mobile: tabbed single column */}
       <div className="lg:hidden">
-        <CardList items={items} lang={lang} type={tab} />
+        <CardList items={items} lang={lang} type={tab} srMap={srMap} statsMap={statsMap} />
       </div>
 
       {/* Desktop: side by side */}
       <div className="hidden lg:grid lg:grid-cols-2 lg:gap-8">
         <section>
           <h2 className="mb-3">{t['guides.special_request.identification']}</h2>
-          <CardList items={identification} lang={lang} type="identification" />
+          <CardList items={identification} lang={lang} type="identification" srMap={srMap} statsMap={statsMap} />
         </section>
         <section>
           <h2 className="mb-3">{t['guides.special_request.ecology_study']}</h2>
-          <CardList items={ecology_study} lang={lang} type="ecology_study" />
+          <CardList items={ecology_study} lang={lang} type="ecology_study" srMap={srMap} statsMap={statsMap} />
         </section>
       </div>
     </div>

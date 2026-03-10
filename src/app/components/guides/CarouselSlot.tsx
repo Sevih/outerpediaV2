@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { use, useState } from 'react';
 import { useKeenSlider, type KeenSliderPlugin } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import Image from 'next/image';
@@ -8,13 +8,9 @@ import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharac
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { splitCharacterName } from '@/lib/character-name';
-import nameToId from '@data/generated/characters-name-to-id.json';
-import charIndex from '@data/generated/characters-index.json';
+import { charIndexPromise, nameToIdPromise } from '@/lib/data/characters-client';
 import type { CharacterIndex } from '@/types/character';
 import type { Lang } from '@/lib/i18n/config';
-
-const nameMap = nameToId as Record<string, string>;
-const indexMap = charIndex as Record<string, CharacterIndex>;
 
 type Props = {
   characters: string[];
@@ -28,7 +24,7 @@ type ResolvedChar = {
   entry: CharacterIndex;
 };
 
-function resolveChar(name: string, lang: Lang): ResolvedChar | null {
+function resolveChar(name: string, lang: Lang, nameMap: Record<string, string>, indexMap: Record<string, CharacterIndex>): ResolvedChar | null {
   const charId = nameMap[name];
   if (!charId) return null;
   const entry = indexMap[charId];
@@ -133,6 +129,8 @@ function CharCard({ c }: { c: ResolvedChar }) {
 
 export default function CarouselSlot({ characters }: Props) {
   const { lang } = useI18n();
+  const nameMap = use(nameToIdPromise);
+  const indexMap = use(charIndexPromise);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const [sliderRef, instanceRef] = useKeenSlider(
@@ -150,7 +148,7 @@ export default function CarouselSlot({ characters }: Props) {
   );
 
   const resolved = characters
-    .map((name) => resolveChar(name, lang as Lang))
+    .map((name) => resolveChar(name, lang as Lang, nameMap, indexMap))
     .filter(Boolean) as ResolvedChar[];
 
   if (resolved.length === 0) return null;

@@ -1,16 +1,12 @@
 'use client';
 
+import { use } from 'react';
 import Image from 'next/image';
-import buffsData from '@data/effects/buffs.json';
-import debuffsData from '@data/effects/debuffs.json';
+import { effectMapsPromise } from '@/lib/data/effects-client';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { formatEffectText } from '@/lib/format-text';
-import type { Effect } from '@/types/effect';
 import InlineIcon from './InlineIcon';
-
-const buffs = buffsData as Effect[];
-const debuffs = debuffsData as Effect[];
 
 type Props = {
   name: string;
@@ -19,8 +15,8 @@ type Props = {
 
 export default function EffectInline({ name, type }: Props) {
   const { lang } = useI18n();
-  const pool = type === 'buff' ? buffs : debuffs;
-  const effect = pool.find((e) => e.name === name);
+  const { buffMap, debuffMap } = use(effectMapsPromise);
+  const effect = type === 'buff' ? buffMap[name] : debuffMap[name];
 
   if (!effect) {
     return <span className="text-red-500">{name}</span>;

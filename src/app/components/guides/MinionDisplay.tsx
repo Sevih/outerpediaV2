@@ -1,13 +1,15 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { use, useEffect, useState, useCallback } from 'react';
 import { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
-import { BossHeader, BossDetails, buffMap, debuffMap, bossCache } from '@/app/components/guides/BossDisplay';
+import { BossHeader, BossDetails, bossCache } from '@/app/components/guides/BossDisplay';
+import { effectMapsPromise } from '@/lib/data/effects-client';
 import { useI18n } from '@/lib/contexts/I18nContext';
-import bossIndex from '@data/generated/boss-index.json';
 import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
+
+const bossIndexPromise = import('@data/generated/boss-index.json').then(m => m.default as Record<string, BossIndexEntry>);
 
 /* ── Types ──────────────────────────────────────────────── */
 
@@ -38,8 +40,9 @@ type Props =
 function MinionCard({ bossName, modeKey, versionIndex, defaultBossId, preloadedBosses }: EntryDef) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
+  const bossIdx = use(bossIndexPromise);
 
-  const entry = (bossIndex as Record<string, BossIndexEntry>)[bossName];
+  const entry = bossIdx[bossName];
   const modes = entry?.modes ?? {};
   const modeData = modeKey ? modes[modeKey] : Object.values(modes)[0];
   const versions = modeData?.versions ?? [];
@@ -101,6 +104,7 @@ function MinionCard({ bossName, modeKey, versionIndex, defaultBossId, preloadedB
 /* ── Main component ─────────────────────────────────────── */
 
 export default function MinionDisplay(props: Props) {
+  const { buffMap, debuffMap } = use(effectMapsPromise);
   const entries: EntryDef[] = 'entries' in props && props.entries
     ? props.entries
     : [props as EntryDef];

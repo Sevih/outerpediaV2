@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { use, useMemo } from 'react';
 import type { Route } from 'next';
 import Link from 'next/link';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
@@ -9,8 +9,7 @@ import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { splitCharacterName } from '@/lib/character-name';
 import parseText from '@/lib/parse-text';
-import nameToId from '@data/generated/characters-name-to-id.json';
-import charIndex from '@data/generated/characters-index.json';
+import { charIndexPromise, nameToIdPromise } from '@/lib/data/characters-client';
 import type { CharacterIndex } from '@/types/character';
 import type { Lang } from '@/lib/i18n/config';
 import type { SuffixLang } from '@/lib/i18n/config';
@@ -21,9 +20,6 @@ import type {
   RequirementStats,
   RequirementEquipment,
 } from '@/types/team';
-
-const nameMap = nameToId as Record<string, string>;
-const indexMap = charIndex as Record<string, CharacterIndex>;
 
 type Props = {
   data: RequirementsData;
@@ -96,6 +92,8 @@ function resolveFooterNote(data: RequirementsData, lang: string): string | undef
 
 export default function RequirementsList({ data }: Props) {
   const { lang, t, href } = useI18n();
+  const nameMap = use(nameToIdPromise);
+  const indexMap = use(charIndexPromise);
 
   const note = resolveFooterNote(data, lang);
 
@@ -123,14 +121,14 @@ export default function RequirementsList({ data }: Props) {
       {/* Desktop — 2 columns */}
       <div className="hidden md:grid md:grid-cols-2">
         {sorted.map((entry, idx) => (
-          <EntryCard key={entry.character} entry={entry} idx={idx} lang={lang} t={t} href={href} layout="desktop" />
+          <EntryCard key={entry.character} entry={entry} idx={idx} lang={lang} t={t} href={href} layout="desktop" nameMap={nameMap} indexMap={indexMap} />
         ))}
       </div>
 
       {/* Mobile — stacked */}
       <div className="divide-y divide-neutral-600/60 md:hidden">
         {sorted.map((entry) => (
-          <EntryCard key={entry.character} entry={entry} idx={0} lang={lang} t={t} href={href} layout="mobile" />
+          <EntryCard key={entry.character} entry={entry} idx={0} lang={lang} t={t} href={href} layout="mobile" nameMap={nameMap} indexMap={indexMap} />
         ))}
       </div>
 
@@ -152,6 +150,8 @@ function EntryCard({
   t,
   href,
   layout,
+  nameMap,
+  indexMap,
 }: {
   entry: RequirementEntry;
   idx: number;
@@ -159,6 +159,8 @@ function EntryCard({
   t: TFunction;
   href: (path: string) => Route;
   layout: 'desktop' | 'mobile';
+  nameMap: Record<string, string>;
+  indexMap: Record<string, CharacterIndex>;
 }) {
   const charId = nameMap[entry.character];
   const char = charId ? indexMap[charId] : undefined;

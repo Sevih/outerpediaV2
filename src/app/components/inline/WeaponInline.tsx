@@ -1,19 +1,20 @@
 'use client';
 
+import { use } from 'react';
 import Image from 'next/image';
-import weaponsData from '@data/equipment/weapon.json';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
 import type { Weapon } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 
-const weapons = weaponsData as unknown as Weapon[];
+const weaponsPromise = import('@data/equipment/weapon.json').then(m => m.default as unknown as Weapon[]);
 
 type Props = { name: string };
 
 export default function WeaponInline({ name }: Props) {
   const { lang, t } = useI18n();
+  const weapons = use(weaponsPromise);
   const weapon = weapons.find((w) => w.name === name);
 
   if (!weapon) {

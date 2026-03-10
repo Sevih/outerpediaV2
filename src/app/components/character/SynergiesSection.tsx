@@ -1,17 +1,13 @@
 'use client';
 
+import { use } from 'react';
 import Link from 'next/link';
 import type { CharacterSynergies } from '@/types/character';
-import type { CharacterIndex } from '@/types/character';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l, lRec } from '@/lib/i18n/localize';
 import parseText from '@/lib/parse-text';
 import CharacterPortrait from './CharacterPortrait';
-import slugToIdMap from '@data/generated/characters-slug-to-id.json';
-import charIndex from '@data/generated/characters-index.json';
-
-const slugToId = slugToIdMap as Record<string, string>;
-const characters = charIndex as Record<string, CharacterIndex>;
+import { charIndexPromise, slugToIdPromise } from '@/lib/data/characters-client';
 
 type Props = {
   synergies: CharacterSynergies;
@@ -19,6 +15,8 @@ type Props = {
 
 export default function SynergiesSection({ synergies }: Props) {
   const { lang, t, href } = useI18n();
+  const slugToId = use(slugToIdPromise);
+  const characters = use(charIndexPromise);
 
   return (
     <section id="synergies">

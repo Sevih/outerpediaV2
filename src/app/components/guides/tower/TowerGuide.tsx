@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { use, useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { FilterSearch } from '@/app/components/ui/FilterPills';
 import TowerFloorList from './TowerFloorList';
 import TowerFloorListGrouped from './TowerFloorListGrouped';
@@ -8,12 +8,11 @@ import TowerFloorDetail from './TowerFloorDetail';
 import TowerPoolBossDetail from './TowerPoolBossDetail';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { isRandomFloor } from '@/types/tower';
-import restrictionsIndex from '@data/tower/restrictions.json';
 import type { TowerData, TowerRestrictionMap, TowerPoolEntry } from '@/types/tower';
 import type { Boss } from '@/types/boss';
 import type { Lang } from '@/lib/i18n/config';
 
-const restrictionMap = restrictionsIndex as TowerRestrictionMap;
+const restrictionsPromise = import('@data/tower/restrictions.json').then(m => m.default as TowerRestrictionMap);
 
 /* ── Module-level boss cache (shared across instances) ── */
 
@@ -65,6 +64,7 @@ type Props = {
 export default function TowerGuide({ data }: Props) {
   const { lang: rawLang, t } = useI18n();
   const lang = rawLang as Lang;
+  const restrictionMap = use(restrictionsPromise);
 
   const isGrouped = !!data.disclaimer;
 

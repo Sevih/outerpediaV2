@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { use, useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 import BossPortrait from '@/app/components/guides/BossPortrait';
 import BuffDebuffDisplay, { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
@@ -9,19 +9,13 @@ import ClassInline from '@/app/components/inline/ClassInline';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { ELEMENT_TEXT } from '@/lib/theme';
-import buffsData from '@data/effects/buffs.json';
-import debuffsData from '@data/effects/debuffs.json';
-import bossIndex from '@data/generated/boss-index.json';
+import { effectMapsPromise } from '@/lib/data/effects-client';
 import type { Boss, BossSkill } from '@/types/boss';
-import type { Effect } from '@/types/effect';
 import type { ElementType } from '@/types/enums';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
 
-export const buffMap: Record<string, Effect> = {};
-for (const b of buffsData as Effect[]) buffMap[b.name] = b;
-export const debuffMap: Record<string, Effect> = {};
-for (const d of debuffsData as Effect[]) debuffMap[d.name] = d;
+const bossIndexPromise = import('@data/generated/boss-index.json').then(m => m.default as Record<string, BossIndexEntry>);
 
 /* ── Types ──────────────────────────────────────────────── */
 
@@ -145,6 +139,7 @@ function normalizeName(name: string): string {
 
 export function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
   const { t } = useI18n();
+  const { debuffMap } = use(effectMapsPromise);
   const raw: string[] = [];
   if (immuneStr) raw.push(...immuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
   if (statImmuneStr) raw.push(...statImmuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
@@ -270,9 +265,11 @@ export const bossCache = new Map<string, Boss>();
 export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses, versionIds, onVersionChange }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
+  const { buffMap, debuffMap } = use(effectMapsPromise);
+  const bossIdx = use(bossIndexPromise);
 
   // Resolve versions from boss-index
-  const entry = (bossIndex as Record<string, BossIndexEntry>)[bossName];
+  const entry = bossIdx[bossName];
   const modes = entry?.modes ?? {};
 
   type VersionWithMode = BossVersion & { modeName?: LangMap };
@@ -362,7 +359,7 @@ export default function BossDisplay({ bossName, modeKey, defaultBossId, preloade
                     </option>
                   ))}
                 </select>
-                
+
                 {hasModeNames && selectedVersion && boss?.location && (
                   <p className="text-sm text-zinc-400">
                     {lRec(boss.location.area_id, lang)} : {lRec(boss.location.dungeon, lang)} ({lRec(boss.location.mode, lang)})

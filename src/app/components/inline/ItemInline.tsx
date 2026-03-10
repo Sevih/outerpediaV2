@@ -1,7 +1,7 @@
 'use client';
 
+import { use } from 'react';
 import Image from 'next/image';
-import itemsData from '@data/items.json';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { getRarityBgPath } from '@/lib/format-text';
@@ -9,12 +9,13 @@ import type { Item } from '@/types/item';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
 
-const items = itemsData as Item[];
+const itemsPromise = import('@data/items.json').then(m => m.default as Item[]);
 
 type Props = { name: string };
 
 export default function ItemInline({ name }: Props) {
   const { lang } = useI18n();
+  const items = use(itemsPromise);
   const item = items.find((i) => i.name === name);
 
   if (!item) {

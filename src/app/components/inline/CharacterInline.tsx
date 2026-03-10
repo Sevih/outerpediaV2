@@ -1,24 +1,22 @@
 'use client';
 
+import { use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import charIndex from '@data/generated/characters-index.json';
-import nameToId from '@data/generated/characters-name-to-id.json';
+import { charIndexPromise, nameToIdPromise } from '@/lib/data/characters-client';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { ELEMENT_TEXT } from '@/lib/theme';
-import type { CharacterIndex } from '@/types/character';
 import type { ElementType } from '@/types/enums';
 import CharacterPortrait from '../character/CharacterPortrait';
 import InlineTooltip from './InlineTooltip';
-
-const characters = charIndex as Record<string, CharacterIndex>;
-const nameMap = nameToId as Record<string, string>;
 
 type Props = { name: string };
 
 export default function CharacterInline({ name }: Props) {
   const { lang } = useI18n();
+  const characters = use(charIndexPromise);
+  const nameMap = use(nameToIdPromise);
 
   const charId = nameMap[name];
   if (!charId) {

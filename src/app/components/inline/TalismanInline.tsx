@@ -1,7 +1,7 @@
 'use client';
 
+import { use } from 'react';
 import Image from 'next/image';
-import talismansData from '@data/equipment/talisman.json';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
@@ -9,12 +9,13 @@ import type { Talisman } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
 
-const talismans = talismansData as unknown as Talisman[];
+const talismansPromise = import('@data/equipment/talisman.json').then(m => m.default as unknown as Talisman[]);
 
 type Props = { name: string };
 
 export default function TalismanInline({ name }: Props) {
   const { lang } = useI18n();
+  const talismans = use(talismansPromise);
   const talisman = talismans.find((t) => t.name === name);
 
   if (!talisman) {

@@ -1,17 +1,13 @@
 'use client';
 
+import { use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import parseText from '@/lib/parse-text';
-import nameToId from '@data/generated/characters-name-to-id.json';
-import charIndex from '@data/generated/characters-index.json';
-import type { CharacterIndex } from '@/types/character';
+import { charIndexPromise, nameToIdPromise } from '@/lib/data/characters-client';
 import type { Lang } from '@/lib/i18n/config';
-
-const nameMap = nameToId as Record<string, string>;
-const indexMap = charIndex as Record<string, CharacterIndex>;
 
 type Props = {
   order: { character: string; speed: number }[];
@@ -20,6 +16,8 @@ type Props = {
 
 export default function TurnOrderDisplay({ order, note }: Props) {
   const { lang, href } = useI18n();
+  const nameMap = use(nameToIdPromise);
+  const indexMap = use(charIndexPromise);
 
   return (
     <div className="mb-3">

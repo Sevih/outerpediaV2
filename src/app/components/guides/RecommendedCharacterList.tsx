@@ -1,18 +1,15 @@
 'use client';
 
+import { use } from 'react';
 import Link from 'next/link';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { l, lRec } from '@/lib/i18n/localize';
 import parseText from '@/lib/parse-text';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
-import nameToId from '@data/generated/characters-name-to-id.json';
-import charIndex from '@data/generated/characters-index.json';
+import { charIndexPromise, nameToIdPromise } from '@/lib/data/characters-client';
 import type { LangMap } from '@/types/common';
 import type { TranslationKey } from '@/i18n/locales/en';
-
-const nameMap = nameToId as Record<string, string>;
-const indexMap = charIndex as Record<string, Record<string, unknown>>;
 
 type TitlePreset = 'default' | 'phase1' | 'phase2';
 
@@ -40,6 +37,8 @@ export default function RecommendedCharacterList({
   idMode = false,
 }: Props) {
   const { lang, t, href } = useI18n();
+  const nameMap = use(nameToIdPromise);
+  const indexMap = use(charIndexPromise);
   const isDesktop = useMediaQuery('(min-width: 640px)');
   const portraitSize = isDesktop ? 'md' : 'sm';
 

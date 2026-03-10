@@ -1,14 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { use, useState } from 'react';
 import Image from 'next/image';
-import stats from '@data/stats.json';
 import EffectInline from '@/app/components/inline/EffectInline';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { LangMap } from '@/types/common';
 
-type StatKey = keyof typeof stats;
+type StatEntry = { label: string; icon: string };
+const statsPromise = import('@data/stats.json').then(m => m.default as Record<string, StatEntry>);
+
+type StatKey = string;
 
 const LABELS = {
   buff: { en: 'Buff', jp: 'バフ', kr: '버프', zh: '增益' } satisfies LangMap,
@@ -30,6 +32,7 @@ type StatCardProps = {
 export default function StatCard({ abbr, desc, details, effect }: StatCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { lang } = useI18n();
+  const stats = use(statsPromise);
   const stat = stats[abbr];
 
   if (!stat) return null;

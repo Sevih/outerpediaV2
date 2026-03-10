@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { use, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useI18n } from '@/lib/contexts/I18nContext';
@@ -8,10 +8,6 @@ import { l } from '@/lib/i18n/localize';
 import { slugifyEquipment, formatEffectText, formatScaledEffect } from '@/lib/format-text';
 import EquipmentIcon from '@/app/components/equipment/EquipmentIcon';
 import type { ItemRarity } from '@/lib/theme';
-
-import weaponsData from '@data/equipment/weapon.json';
-import amuletsData from '@data/equipment/accessory.json';
-import setsData from '@data/equipment/sets.json';
 
 type GearItem = {
   name: string;
@@ -39,6 +35,10 @@ type SetItem = {
   boss?: string | string[];
 };
 
+const weaponsPromise = import('@data/equipment/weapon.json').then(m => m.default as GearItem[]);
+const amuletsPromise = import('@data/equipment/accessory.json').then(m => m.default as GearItem[]);
+const setsPromise = import('@data/equipment/sets.json').then(m => m.default as SetItem[]);
+
 function matchesBoss(boss: string | string[] | undefined, id: string): boolean {
   if (!boss) return false;
   return Array.isArray(boss) ? boss.includes(id) : boss === id;
@@ -52,9 +52,9 @@ export default function LootTable({ bossId }: Props) {
   const { lang, t, href } = useI18n();
   const [expanded, setExpanded] = useState(false);
 
-  const weapons = (weaponsData as GearItem[]).filter(w => matchesBoss(w.boss, bossId));
-  const amulets = (amuletsData as GearItem[]).filter(a => matchesBoss(a.boss, bossId));
-  const sets = (setsData as SetItem[]).filter(s => matchesBoss(s.boss, bossId));
+  const weapons = use(weaponsPromise).filter(w => matchesBoss(w.boss, bossId));
+  const amulets = use(amuletsPromise).filter(a => matchesBoss(a.boss, bossId));
+  const sets = use(setsPromise).filter(s => matchesBoss(s.boss, bossId));
 
   if (weapons.length === 0 && amulets.length === 0 && sets.length === 0) return null;
 

@@ -1,7 +1,7 @@
 'use client';
 
+import { use } from 'react';
 import Image from 'next/image';
-import setsData from '@data/equipment/sets.json';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
@@ -9,12 +9,13 @@ import type { ArmorSet } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
 
-const sets = setsData as ArmorSet[];
+const setsPromise = import('@data/equipment/sets.json').then(m => m.default as ArmorSet[]);
 
 type Props = { name: string };
 
 export default function SetInline({ name }: Props) {
   const { lang, t } = useI18n();
+  const sets = use(setsPromise);
 
   // Support both "Attack" and "Attack Set" formats
   const set = sets.find((s) =>

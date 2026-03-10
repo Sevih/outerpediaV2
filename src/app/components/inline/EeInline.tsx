@@ -1,25 +1,24 @@
 'use client';
 
+import { use } from 'react';
 import Image from 'next/image';
-import eeData from '@data/equipment/ee.json';
-import charIndex from '@data/generated/characters-index.json';
-import nameToId from '@data/generated/characters-name-to-id.json';
+import { charIndexPromise, nameToIdPromise } from '@/lib/data/characters-client';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
 import type { ExclusiveEquipment } from '@/types/equipment';
-import type { CharacterIndex } from '@/types/character';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
 
-const ees = eeData as Record<string, ExclusiveEquipment>;
-const characters = charIndex as Record<string, CharacterIndex>;
-const nameMap = nameToId as Record<string, string>;
+const eePromise = import('@data/equipment/ee.json').then(m => m.default as Record<string, ExclusiveEquipment>);
 
 type Props = { name: string };
 
 export default function EeInline({ name }: Props) {
   const { lang } = useI18n();
+  const nameMap = use(nameToIdPromise);
+  const characters = use(charIndexPromise);
+  const ees = use(eePromise);
 
   // name can be a character name - find the EE by character ID
   const charId = nameMap[name];

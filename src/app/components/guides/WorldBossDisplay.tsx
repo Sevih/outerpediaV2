@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { use, useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import Tabs from '@/app/components/ui/Tabs';
@@ -10,18 +10,12 @@ import ClassInline from '@/app/components/inline/ClassInline';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { ELEMENT_TEXT } from '@/lib/theme';
-import buffsData from '@data/effects/buffs.json';
-import debuffsData from '@data/effects/debuffs.json';
+import { effectMapsPromise } from '@/lib/data/effects-client';
 import type { Boss, BossSkill } from '@/types/boss';
 import type { Effect } from '@/types/effect';
 import type { ElementType } from '@/types/enums';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
-
-const buffMap: Record<string, Effect> = {};
-for (const b of buffsData as Effect[]) buffMap[b.name] = b;
-const debuffMap: Record<string, Effect> = {};
-for (const d of debuffsData as Effect[]) debuffMap[d.name] = d;
 
 type WorldBossMode = 'Normal' | 'Hard' | 'Very Hard' | 'Extreme';
 
@@ -140,18 +134,18 @@ function formatBossDesc(text: string, lang: Lang): React.ReactNode {
 }
 
 /** Normalize ST_ short names to full BT_STAT|ST_ format */
-function resolveGroup(name: string): string {
+function resolveGroup(name: string, buffMap: Record<string, Effect>, debuffMap: Record<string, Effect>): string {
   if (name.startsWith('ST_')) return `BT_STAT|${name}`;
-  const effect = (debuffsData as Effect[]).find((e) => e.name === name)
-    ?? (buffsData as Effect[]).find((e) => e.name === name);
+  const effect = debuffMap[name] ?? buffMap[name];
   return effect?.group ?? name;
 }
 
 function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
   const { t } = useI18n();
+  const { buffMap, debuffMap } = use(effectMapsPromise);
   const raw: string[] = [];
-  if (immuneStr) raw.push(...immuneStr.split(',').map((s) => resolveGroup(s.trim())).filter(Boolean));
-  if (statImmuneStr) raw.push(...statImmuneStr.split(',').map((s) => resolveGroup(s.trim())).filter(Boolean));
+  if (immuneStr) raw.push(...immuneStr.split(',').map((s) => resolveGroup(s.trim(), buffMap, debuffMap)).filter(Boolean));
+  if (statImmuneStr) raw.push(...statImmuneStr.split(',').map((s) => resolveGroup(s.trim(), buffMap, debuffMap)).filter(Boolean));
   const items = [...new Set(raw)];
   if (items.length === 0) return null;
 
@@ -269,6 +263,7 @@ function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
 export default function WorldBossDisplay({ config, defaultMode = 'Extreme', preloadedBosses }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
+  const { buffMap, debuffMap } = use(effectMapsPromise);
   const [mode, setMode] = useState<WorldBossMode>(defaultMode);
 
   // Resolve preloaded bosses for default mode (available at SSR time)

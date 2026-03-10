@@ -1,7 +1,7 @@
 'use client';
 
+import { use } from 'react';
 import Image from 'next/image';
-import amuletsData from '@data/equipment/accessory.json';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
@@ -9,12 +9,13 @@ import type { Amulet } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
 
-const amulets = amuletsData as Amulet[];
+const amuletsPromise = import('@data/equipment/accessory.json').then(m => m.default as Amulet[]);
 
 type Props = { name: string };
 
 export default function AmuletInline({ name }: Props) {
   const { lang, t } = useI18n();
+  const amulets = use(amuletsPromise);
   const amulet = amulets.find((a) => a.name === name);
 
   if (!amulet) {

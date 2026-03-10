@@ -1,5 +1,6 @@
 'use client';
 
+import { use } from 'react';
 import Link from 'next/link';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import { useI18n } from '@/lib/contexts/I18nContext';
@@ -9,9 +10,10 @@ import type { Lang } from '@/lib/i18n/config';
 import type { LangMap } from '@/types/common';
 import type { CharacterIndex } from '@/types/character';
 import type { Banner } from '@/types/banner';
-import charIndex from '@data/generated/characters-index.json';
-import bannerData from '@data/banner.json';
-import tagsData from '@data/tags.json';
+import { charIndexPromise } from '@/lib/data/characters-client';
+
+const bannerPromise = import('@data/banner.json').then(m => m.default as Banner[]);
+const tagsPromise = import('@data/tags.json').then(m => m.default as Record<string, { label: string; [k: string]: unknown }>);
 
 const LIMITED_TAGS = ['limited', 'seasonal', 'collab'] as const;
 type LimitedTag = typeof LIMITED_TAGS[number];
@@ -25,7 +27,6 @@ type HeroInfo = {
   collabName?: string;
 };
 
-const characters = charIndex as Record<string, CharacterIndex>;
 
 const COLLAB_NAMES: Record<string, string> = {
   '2000095': 'DanMachi', // Bell Cranel
@@ -50,8 +51,7 @@ function formatDate(dateStr: string, lang: Lang): string {
   return date.toLocaleDateString(LANGUAGES[lang].htmlLang, { year: 'numeric', month: 'long', day: '2-digit' });
 }
 
-function getLimitedHeroesInfo(): HeroInfo[] {
-  const banners = bannerData as Banner[];
+function getLimitedHeroesInfo(characters: Record<string, CharacterIndex>, banners: Banner[]): HeroInfo[] {
 
   // Derive limited characters from characters-index.json tags
   const charInfoMap = new Map<string, { badge: LimitedTag; id: string; slug: string }>();
@@ -97,7 +97,10 @@ function getLimitedHeroesInfo(): HeroInfo[] {
 
 export default function LimitedHeroesList() {
   const { lang, href } = useI18n();
-  const heroes = getLimitedHeroesInfo();
+  const characters = use(charIndexPromise);
+  const banners = use(bannerPromise);
+  const tagsData = use(tagsPromise);
+  const heroes = getLimitedHeroesInfo(characters, banners);
 
   return (
     <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { use, useState, useMemo } from 'react';
 import Image from 'next/image';
 import BossPortrait from '@/app/components/guides/BossPortrait';
 import BuffDebuffDisplay, { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
@@ -8,17 +8,10 @@ import ElementInline from '@/app/components/inline/ElementInline';
 import ClassInline from '@/app/components/inline/ClassInline';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
-import buffsData from '@data/effects/buffs.json';
-import debuffsData from '@data/effects/debuffs.json';
+import { effectMapsPromise } from '@/lib/data/effects-client';
 import type { Boss, BossSkill } from '@/types/boss';
-import type { Effect } from '@/types/effect';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
-
-const buffMap: Record<string, Effect> = {};
-for (const b of buffsData as Effect[]) buffMap[b.name] = b;
-const debuffMap: Record<string, Effect> = {};
-for (const d of debuffsData as Effect[]) debuffMap[d.name] = d;
 
 /* ── Immunities ── */
 
@@ -28,6 +21,7 @@ function normalizeName(name: string): string {
 
 function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
   const { t } = useI18n();
+  const { debuffMap } = use(effectMapsPromise);
   const raw: string[] = [];
   if (immuneStr) raw.push(...immuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
   if (statImmuneStr) raw.push(...statImmuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
@@ -230,6 +224,7 @@ type Props = {
 export default function MinionsCompactDisplay({ minions }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
+  const { buffMap, debuffMap } = use(effectMapsPromise);
   const [activeMinion, setActiveMinion] = useState(0);
 
   if (minions.length === 0) return null;

@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { use, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { CategoryViewProps } from './types';
@@ -11,8 +11,9 @@ import { localePath } from '@/lib/navigation';
 
 import BossPortrait from '@/app/components/guides/BossPortrait';
 import FitText from '@/app/components/ui/FitText';
-import areaNames from '@data/guides/area_name.json';
-import guideBossMap from '@data/generated/guide-boss-map.json';
+
+const areaNamesPromise = import('@data/guides/area_name.json').then(m => m.default);
+const guideBossMapPromise = import('@data/generated/guide-boss-map.json').then(m => m.default);
 
 /* ── Types ──────────────────────────────────────────────── */
 
@@ -83,8 +84,8 @@ export default function AdventureList({ guides, lang, t }: CategoryViewProps) {
 
   const seasons = useMemo(() => groupBySeason(guides), [guides]);
 
-  const areaMap = areaNames as Record<string, AreaEntry>;
-  const bossMap = guideBossMap as Record<string, BossMapEntry>;
+  const areaMap = use(areaNamesPromise) as Record<string, AreaEntry>;
+  const bossMap = use(guideBossMapPromise) as Record<string, BossMapEntry>;
 
   return (
     <div className="mt-6 space-y-8">

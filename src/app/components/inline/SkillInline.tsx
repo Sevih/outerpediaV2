@@ -1,20 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { use, useState, useEffect } from 'react';
 import Image from 'next/image';
-import nameToId from '@data/generated/characters-name-to-id.json';
-import charIndex from '@data/generated/characters-index.json';
+import { charIndexPromise, nameToIdPromise } from '@/lib/data/characters-client';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { formatEffectText } from '@/lib/format-text';
 import type { Character, SkillData } from '@/types/character';
-import type { CharacterIndex } from '@/types/character';
 import type { SkillKey } from '@/types/enums';
 import type { TranslationKey } from '@/i18n/locales/en';
 import InlineTooltip from './InlineTooltip';
-
-const nameMap = nameToId as Record<string, string>;
-const characters = charIndex as Record<string, CharacterIndex>;
 
 type SkillShorthand = 'S1' | 'S2' | 'S3' | 'Passive' | 'Chain';
 
@@ -47,6 +42,8 @@ export default function SkillInline({ character, skill }: Props) {
   const [charData, setCharData] = useState<Character | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const nameMap = use(nameToIdPromise);
+  const characters = use(charIndexPromise);
   const charId = nameMap[character];
 
   useEffect(() => {
