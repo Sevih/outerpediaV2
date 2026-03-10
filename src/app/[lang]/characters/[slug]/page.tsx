@@ -145,12 +145,18 @@ export default async function CharacterDetailPage({ params }: Props) {
   const debuffMap: Record<string, Effect> = {};
   for (const d of debuffsArr) { if (effectNames.has(d.name)) debuffMap[d.name] = d; }
 
-  const [profile, stats] = await Promise.all([
+  const [profile, stats, t] = await Promise.all([
     getCharacterProfile(character.ID),
     getCharacterStats(character.ID),
+    getT(lang),
   ]);
   const ee = eeMap[character.ID] ?? null;
   const giftItems = giftItemsMap[character.gift as keyof typeof giftItemsMap] ?? [];
+
+  const fullname = l(character, 'Fullname', lang);
+  const element = t(`sys.element.${character.Element.toLowerCase()}` as Parameters<typeof t>[0]);
+  const classType = t(`sys.class.${character.Class.toLowerCase()}` as Parameters<typeof t>[0]);
+  const seoDescription = t('page.character.meta_description', { name: fullname, monthYear: getMonthYear(lang), element, classType });
 
   // Resolve core-fusion cross-link
   let coreFusionLink: CoreFusionLink | null = null;
@@ -174,24 +180,27 @@ export default async function CharacterDetailPage({ params }: Props) {
   }
 
   return (
-    <CharacterDetailClient
-      character={stripOtherLangs(character, lang)}
-      profile={profile}
-      stats={stats}
-      ee={ee ? stripOtherLangs(ee, lang) : null}
-      reco={resolvedReco}
-      tags={tagsRaw}
-      weapons={stripOtherLangsArray(weapons, lang)}
-      amulets={stripOtherLangsArray(amulets, lang)}
-      talismans={stripOtherLangsArray(talismans, lang)}
-      sets={stripOtherLangsArray(sets, lang)}
-      giftItems={giftItems}
-      prosCons={prosCons}
-      partners={partners}
-      buffMap={stripOtherLangsRecord(buffMap, lang)}
-      debuffMap={stripOtherLangsRecord(debuffMap, lang)}
-      coreFusionLink={coreFusionLink}
-      bossMap={bossMap}
-    />
+    <>
+      <p className="sr-only">{seoDescription}</p>
+      <CharacterDetailClient
+        character={stripOtherLangs(character, lang)}
+        profile={profile}
+        stats={stats}
+        ee={ee ? stripOtherLangs(ee, lang) : null}
+        reco={resolvedReco}
+        tags={tagsRaw}
+        weapons={stripOtherLangsArray(weapons, lang)}
+        amulets={stripOtherLangsArray(amulets, lang)}
+        talismans={stripOtherLangsArray(talismans, lang)}
+        sets={stripOtherLangsArray(sets, lang)}
+        giftItems={giftItems}
+        prosCons={prosCons}
+        partners={partners}
+        buffMap={stripOtherLangsRecord(buffMap, lang)}
+        debuffMap={stripOtherLangsRecord(debuffMap, lang)}
+        coreFusionLink={coreFusionLink}
+        bossMap={bossMap}
+      />
+    </>
   );
 }

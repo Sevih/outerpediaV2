@@ -44,7 +44,7 @@ export default function OverviewSection({ character, profile, tags }: Props) {
       <div className="mb-4 flex flex-col items-center text-center">
         <h1 className="font-game text-3xl font-bold">
           {prefix && (
-            <span className="block text-lg font-normal tracking-wide">{prefix}</span>
+            <span className="block text-lg font-normal tracking-wide">{prefix}{' '}</span>
           )}
           {name}
           <span className="sr-only">

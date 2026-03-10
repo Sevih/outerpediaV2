@@ -32,7 +32,6 @@ export default async function GuidesPage({ params }: Props) {
     <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
       <h1 className="h1-page text-center">
         {t['page.guides.title']}
-        <span className="sr-only">{` — Strategy Guides, Boss Walkthroughs & Tips`}</span>
       </h1>
       <p className="mt-2 text-center text-sm text-zinc-400">{t['page.guides.description']}</p>
 
