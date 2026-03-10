@@ -46,8 +46,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Dynamic: tool pages (skip tools with custom href, they redirect elsewhere)
   const tools = await getAllTools();
-  for (const { slug, href } of tools) {
-    if (href) continue;
+  for (const { slug, href, status } of tools) {
+    if (href || status === 'coming-soon') continue;
     const path = `/${slug}`;
     entries.push({
       url: buildUrl('en' as Lang, path),

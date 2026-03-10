@@ -53,8 +53,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createPageMetadata({
     lang,
     path: `/guides/${guide.category}/${slug}`,
-    title: t['page.guide.meta_title'].replace('{title}', title),
-    description,
+    title: t['page.guide.meta_title'].replace('{title}', `${title} (${t[`guides.category.${cat}` as TranslationKey]})`),
+    description: `${title} — ${description}`,
     ...(ogImage && { ogImage }),
     ...(ogImageSize && { ogImageSize }),
   });

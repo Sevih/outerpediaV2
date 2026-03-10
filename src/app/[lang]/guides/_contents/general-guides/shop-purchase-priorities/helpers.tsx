@@ -261,7 +261,7 @@ function GearUsageLink({ children }: { children: ReactNode }) {
     const { href } = useI18n()
     return (
         <Link
-            href={href('/gear-solver')}
+            href={href('/gear-usage-finder')}
             className="underline hover:no-underline text-sky-300"
         >
             {children}
