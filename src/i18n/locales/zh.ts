@@ -57,7 +57,7 @@ const zh: Record<TranslationKey, string> = {
   'page.characters.title': '异域战记 角色数据库',
   'page.characters.meta_title': '异域战记 角色数据库 – {monthYear}',
   'page.characters.description':
-    '浏览异域战记全部角色。按属性、职业、稀有度筛选。查看配装、技能和队伍推荐。{monthYear}更新。',
+    '浏览异域战记全部角色。按属性、职业、稀有度筛选。查看技能、属性和装备详情。{monthYear}更新。',
   'page.equipments.title': '异域战记 装备数据库',
   'page.equipments.meta_title': '异域战记 装备数据库 – {monthYear}',
   'page.equipments.description':

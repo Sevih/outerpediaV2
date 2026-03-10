@@ -54,7 +54,9 @@ export default async function ToolDetailPage({ params }: Props) {
 
   const t = await loadMessages(lang);
   const titleKey = `tools.${slug}` as TranslationKey;
+  const descKey = `tools.${slug}.desc` as TranslationKey;
   const title = t[titleKey] ?? slug;
+  const description = t[descKey] ?? '';
 
   let ToolContent: React.ComponentType;
   try {
@@ -77,6 +79,9 @@ export default async function ToolDetailPage({ params }: Props) {
         {title}
         <span className="sr-only">{` — Outerplane`}</span>
       </h1>
+      {description && (
+        <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-zinc-400">{description}</p>
+      )}
 
       <div className="mt-8">
         <ToolContent />

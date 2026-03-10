@@ -57,7 +57,7 @@ const en = {
   'page.characters.title': 'Outerplane Characters Database',
   'page.characters.meta_title': 'Outerplane Characters Database – {monthYear}',
   'page.characters.description':
-    'Browse all Outerplane characters. Filter by element, class, and rarity. Find builds, skills, and team recommendations. Updated {monthYear}.',
+    'Browse all Outerplane characters. Filter by element, class, and rarity. View skills, stats, and equipment details. Updated {monthYear}.',
   'page.equipments.title': 'Outerplane Equipment Database',
   'page.equipments.meta_title': 'Outerplane Equipment Database – {monthYear}',
   'page.equipments.description':

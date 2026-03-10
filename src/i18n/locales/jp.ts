@@ -57,7 +57,7 @@ const jp: Record<TranslationKey, string> = {
   'page.characters.title': 'アウタープレーン キャラクターデータベース',
   'page.characters.meta_title': 'アウタープレーン キャラクターデータベース – {monthYear}',
   'page.characters.description':
-    'アウタープレーンの全キャラクターを閲覧。属性、クラス、レアリティでフィルター。ビルド、スキル、チーム編成を確認。{monthYear}更新。',
+    'アウタープレーンの全キャラクターを閲覧。属性、クラス、レアリティでフィルター。スキル、ステータス、装備の詳細を確認。{monthYear}更新。',
   'page.equipments.title': 'アウタープレーン 装備データベース',
   'page.equipments.meta_title': 'アウタープレーン 装備データベース – {monthYear}',
   'page.equipments.description':

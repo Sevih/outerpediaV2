@@ -57,7 +57,7 @@ const kr: Record<TranslationKey, string> = {
   'page.characters.title': '아우터플레인 캐릭터 데이터베이스',
   'page.characters.meta_title': '아우터플레인 캐릭터 데이터베이스 – {monthYear}',
   'page.characters.description':
-    '아우터플레인의 모든 캐릭터를 탐색하세요. 속성, 클래스, 희귀도로 필터링. 빌드, 스킬, 팀 추천 확인. {monthYear} 업데이트.',
+    '아우터플레인의 모든 캐릭터를 탐색하세요. 속성, 클래스, 희귀도로 필터링. 스킬, 스탯, 장비 정보 확인. {monthYear} 업데이트.',
   'page.equipments.title': '아우터플레인 장비 데이터베이스',
   'page.equipments.meta_title': '아우터플레인 장비 데이터베이스 – {monthYear}',
   'page.equipments.description':

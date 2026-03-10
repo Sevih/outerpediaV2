@@ -34,6 +34,7 @@ export default async function GuidesPage({ params }: Props) {
         {t['page.guides.title']}
         <span className="sr-only">{` — Strategy Guides, Boss Walkthroughs & Tips`}</span>
       </h1>
+      <p className="mt-2 text-center text-sm text-zinc-400">{t['page.guides.description']}</p>
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((cat) => (

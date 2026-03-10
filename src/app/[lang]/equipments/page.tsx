@@ -111,8 +111,8 @@ export default async function EquipmentsPage({ params }: Props) {
   return (
     <div className="mx-auto px-4 py-6 md:px-6">
       <h1 className="mx-auto text-center text-3xl font-bold">{messages['page.equipments.title']}</h1>
-      <p className="mt-1 mb-6 text-center text-sm text-zinc-400">
-        {messages['common.updated']?.replace('{monthYear}', getMonthYear(l))}
+      <p className="mt-2 mb-6 text-center text-sm text-zinc-400">
+        {messages['page.equipments.description']?.replace('{monthYear}', getMonthYear(l))}
       </p>
       <EquipmentsPageClient
         weapons={stripOtherLangsArray(weapons, l)}

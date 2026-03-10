@@ -29,6 +29,7 @@ export default async function ToolsPage({ params }: Props) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
       <h1 className="h1-page text-center">{t['page.tools.title']}</h1>
+      <p className="mt-2 mb-4 text-center text-sm text-zinc-400">{t['page.tools.description']}</p>
       <ToolsPageContent groups={groups} lang={lang} t={t} devMode={isDev} />
     </div>
   );
