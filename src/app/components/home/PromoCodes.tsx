@@ -178,7 +178,7 @@ export default function PromoCodes({ codes, lang, limit, showAll, t }: Props) {
           {hasMore && lang && t.viewAll && (
             <div className="mt-4 text-center">
               <Link
-                href={localePath(lang, '/promo-codes')}
+                href={localePath(lang, '/coupons')}
                 className="text-sm text-cyan-400 hover:underline"
               >
                 {t.viewAll.replace('{count}', String(activeCodes.length))}

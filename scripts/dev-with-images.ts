@@ -31,7 +31,7 @@ console.log('[dev] Cleaned .next cache');
 console.log('[dev] Running pipeline...');
 execSync('npx tsx pipeline/run.ts', { stdio: 'inherit' });
 
-// 2. Run image conversion (one-shot scan + watch)
+// 3. Run image conversion (one-shot scan + watch)
 const imageWatcher = spawn('npx tsx scripts/convert-images.ts --watch', {
   stdio: 'inherit',
   shell: true,

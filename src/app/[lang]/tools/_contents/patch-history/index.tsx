@@ -45,19 +45,19 @@ const TYPE_COLORS: Record<string, string> = {
   'world-introduction': 'bg-teal-500/20 text-teal-300 border-teal-500/30',
 };
 
-const TYPE_I18N_KEYS: Record<string, 'tools.patch-notes.type.update' | 'tools.patch-notes.type.notice' | 'tools.patch-notes.type.event' | 'tools.patch-notes.type.devnote' | 'tools.patch-notes.type.known-issue' | 'tools.patch-notes.type.patchnotes' | 'tools.patch-notes.type.compendium' | 'tools.patch-notes.type.media-archives' | 'tools.patch-notes.type.official-4-cut-cartoon' | 'tools.patch-notes.type.probabilities' | 'tools.patch-notes.type.world-introduction' | 'tools.patch-notes.type.developer-notes'> = {
-  update: 'tools.patch-notes.type.update',
-  notice: 'tools.patch-notes.type.notice',
-  event: 'tools.patch-notes.type.event',
-  devnote: 'tools.patch-notes.type.devnote',
-  'known-issue': 'tools.patch-notes.type.known-issue',
-  patchnotes: 'tools.patch-notes.type.patchnotes',
-  compendium: 'tools.patch-notes.type.compendium',
-  'media-archives': 'tools.patch-notes.type.media-archives',
-  'official-4-cut-cartoon': 'tools.patch-notes.type.official-4-cut-cartoon',
-  probabilities: 'tools.patch-notes.type.probabilities',
-  'world-introduction': 'tools.patch-notes.type.world-introduction',
-  'developer-notes': 'tools.patch-notes.type.developer-notes',
+const TYPE_I18N_KEYS: Record<string, 'tools.patch-history.type.update' | 'tools.patch-history.type.notice' | 'tools.patch-history.type.event' | 'tools.patch-history.type.devnote' | 'tools.patch-history.type.known-issue' | 'tools.patch-history.type.patchnotes' | 'tools.patch-history.type.compendium' | 'tools.patch-history.type.media-archives' | 'tools.patch-history.type.official-4-cut-cartoon' | 'tools.patch-history.type.probabilities' | 'tools.patch-history.type.world-introduction' | 'tools.patch-history.type.developer-notes'> = {
+  update: 'tools.patch-history.type.update',
+  notice: 'tools.patch-history.type.notice',
+  event: 'tools.patch-history.type.event',
+  devnote: 'tools.patch-history.type.devnote',
+  'known-issue': 'tools.patch-history.type.known-issue',
+  patchnotes: 'tools.patch-history.type.patchnotes',
+  compendium: 'tools.patch-history.type.compendium',
+  'media-archives': 'tools.patch-history.type.media-archives',
+  'official-4-cut-cartoon': 'tools.patch-history.type.official-4-cut-cartoon',
+  probabilities: 'tools.patch-history.type.probabilities',
+  'world-introduction': 'tools.patch-history.type.world-introduction',
+  'developer-notes': 'tools.patch-history.type.developer-notes',
 };
 
 // ---------------------------------------------------------------------------
@@ -143,7 +143,7 @@ export default function PatchNotesTool() {
                 : 'border-zinc-700 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-300'
             }`}
           >
-            {t(e === 'major9' ? 'tools.patch-notes.era.major9' : 'tools.patch-notes.era.smilegate')}
+            {t(e === 'major9' ? 'tools.patch-history.era.major9' : 'tools.patch-history.era.smilegate')}
           </button>
         ))}
       </div>
@@ -151,12 +151,12 @@ export default function PatchNotesTool() {
       {/* Banners */}
       {lang === 'zh' && era === 'major9' && (
         <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-center text-sm text-amber-300">
-          {t('tools.patch-notes.zh_fallback')}
+          {t('tools.patch-history.zh_fallback')}
         </div>
       )}
       {era === 'smilegate' && lang !== 'en' && (
         <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-center text-sm text-amber-300">
-          {t('tools.patch-notes.legacy_en_only')}
+          {t('tools.patch-history.legacy_en_only')}
         </div>
       )}
 

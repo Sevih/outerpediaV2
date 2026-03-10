@@ -13,7 +13,7 @@ const SEGMENT_LABELS: Record<string, TranslationKey> = {
   tierlist: 'nav.tierlist',
   tools: 'nav.utilities',
   changelog: 'home.section.updates',
-  'promo-codes': 'page.promo_codes.title',
+  coupons: 'page.coupons.title',
   contributors: 'page.contributors.title',
   legal: 'page.legal.title',
 };

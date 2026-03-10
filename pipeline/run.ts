@@ -22,6 +22,7 @@ const steps: Step[] = [
   { name: 'patch-notes-legacy', run: () => import('./steps/patch-notes-legacy').then(m => m.run()) },
   { name: 'gear-usage-stats', run: () => import('./steps/gear-usage-stats').then(m => m.run()) },
   { name: 'gear-finder-index', run: () => import('./steps/gear-finder-index').then(m => m.run()) },
+  { name: 'event-registry', run: () => import('./steps/event-registry').then(m => m.run()) },
   { name: 'validate-reco', run: () => import('./steps/validate-reco').then(m => m.run()) },
 ];
 

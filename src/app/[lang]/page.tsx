@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 async function loadPromoCodes() {
   const raw = await readFile(
-    join(process.cwd(), 'data/promo-codes.json'),
+    join(process.cwd(), 'data/coupons.json'),
     'utf-8'
   );
   return JSON.parse(raw);

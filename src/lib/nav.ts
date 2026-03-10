@@ -18,7 +18,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 /** Extra pages searchable but not in main nav */
 export const EXTRA_PAGES: { key: TranslationKey; href: string }[] = [
-  { key: 'page.promo_codes.title', href: '/promo-codes' },
+  { key: 'page.coupons.title', href: '/coupons' },
   { key: 'page.contributors.title', href: '/contributors' },
 ];
 

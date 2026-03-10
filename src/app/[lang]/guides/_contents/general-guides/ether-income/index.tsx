@@ -330,7 +330,7 @@ export default function EtherIncomeGuide() {
                             {VARIABLE_SOURCE_IDS.map((id) => (
                                 <li key={id}>
                                     {id === 'variable.coupons' ? (
-                                        <>{lRec(LABELS.variableItems[id], lang)} — <Link href={href('/promo-codes')} className="underline text-red-400">{lRec(COUPON_LINK_LABEL, lang)}</Link></>
+                                        <>{lRec(LABELS.variableItems[id], lang)} — <Link href={href('/coupons')} className="underline text-red-400">{lRec(COUPON_LINK_LABEL, lang)}</Link></>
                                     ) : (
                                         lRec(LABELS.variableItems[id], lang)
                                     )}

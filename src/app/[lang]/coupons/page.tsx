@@ -15,15 +15,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await loadMessages(lang);
   return createPageMetadata({
     lang,
-    path: '/promo-codes',
-    title: t['page.promo_codes.title'],
-    description: t['page.promo_codes.description'],
+    path: '/coupons',
+    title: t['page.coupons.title'],
+    description: t['page.coupons.description'],
   });
 }
 
 async function loadPromoCodes() {
   const raw = await readFile(
-    join(process.cwd(), 'data/promo-codes.json'),
+    join(process.cwd(), 'data/coupons.json'),
     'utf-8'
   );
   return JSON.parse(raw);
@@ -38,9 +38,9 @@ export default async function PromoCodesPage({ params }: Props) {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-6 md:px-6">
-      <h1 className="h1-page mb-8">{t['page.promo_codes.title']}</h1>
+      <h1 className="h1-page mb-8">{t['page.coupons.title']}</h1>
       <p className="mx-auto mb-10 max-w-xl text-center text-zinc-400">
-        {t['page.promo_codes.description']}
+        {t['page.coupons.description']}
       </p>
 
       <PromoCodes
@@ -51,12 +51,12 @@ export default async function PromoCodesPage({ params }: Props) {
           copy: t['home.codes.copy'],
           copied: t['common.copied'],
           empty: t['home.codes.empty'],
-          active: t['promo_codes.active'],
-          expired: t['promo_codes.expired'],
-          upcoming: t['promo_codes.upcoming'],
-          validity: t['promo_codes.validity'],
-          redeemAndroid: t['promo_codes.redeem_android'],
-          redeemIos: t['promo_codes.redeem_ios'],
+          active: t['coupons.active'],
+          expired: t['coupons.expired'],
+          upcoming: t['coupons.upcoming'],
+          validity: t['coupons.validity'],
+          redeemAndroid: t['coupons.redeem_android'],
+          redeemIos: t['coupons.redeem_ios'],
         }}
       />
     </main>
