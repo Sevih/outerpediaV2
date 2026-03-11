@@ -172,7 +172,6 @@ export default function MostUsedUnitsClient({ characters, usage, guideTitles }: 
 
   /** Get the href for a guide */
   const guideHref = (category: string, guideSlug: string): string | null => {
-    if (category === 'skyward-tower') return href(`/guides/skyward-tower/${guideSlug.replace('-tower', '')}`);
     return href(`/guides/${category}/${guideSlug}`);
   };
 
