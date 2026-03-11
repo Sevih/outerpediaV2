@@ -280,7 +280,7 @@ export default function TierListPveClient({ characters }: Props) {
                       prefix={char.prefix}
                       element={char.Element}
                       classType={char.Class}
-                      rarity={char.Rarity}
+                      rarity={transcendLevel as RarityType}
                       tags={char.tags}
                       href={href(`/characters/${char.slug}`)}
                       size={{ base: 'sm', md: 'sm', lg: 'md' }}
