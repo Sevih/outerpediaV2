@@ -11,13 +11,10 @@ export async function run() {
   // Skip gracefully if datamine is not available
   if (!existsSync(PATHS.parserV3) || !existsSync(script) || !existsSync(PATHS.extractedAssets)) {
     const outputExists = existsSync(OUTPUT);
-    console.log(`  Datamine not available, skipping area names extraction`);
     if (outputExists) {
-      console.log(`  Using existing area_name.json from git`);
-    } else {
-      console.warn(`  WARNING: area_name.json is missing and cannot be generated without datamine`);
+      return 'skipped (no datamine, using existing)';
     }
-    return;
+    throw new Error('area_name.json is missing and cannot be generated without datamine');
   }
 
   const output = await new Promise<string>((resolve, reject) => {
@@ -35,8 +32,7 @@ export async function run() {
     return `skipped (up to date${countMatch ? `, ${countMatch[1]} locations` : ''})`;
   }
   if (output.includes('missing_datamine')) {
-    console.log(`  Datamine bytes files not found, skipping`);
-    return;
+    return 'skipped (datamine bytes not found)';
   }
   const countMatch = output.match(/(\d+)\s+locations/);
   if (countMatch) return `${countMatch[1]} locations`;

@@ -9,13 +9,10 @@ export async function run() {
   // Skip gracefully if datamine is not available (e.g. on server)
   if (!existsSync(PATHS.parserV3) || !existsSync(script) || !existsSync(PATHS.extractedAssets)) {
     const outputExists = existsSync(join(PATHS.generated, 'character-stats.json'));
-    console.log(`  Datamine not available, skipping Python extraction`);
     if (outputExists) {
-      console.log(`  Using existing character-stats.json from git`);
-    } else {
-      console.warn(`  WARNING: character-stats.json is missing and cannot be generated without datamine`);
+      return 'skipped (no datamine, using existing)';
     }
-    return;
+    throw new Error('character-stats.json is missing and cannot be generated without datamine');
   }
 
   const output = await new Promise<string>((resolve, reject) => {

@@ -38,7 +38,11 @@ async function main() {
     mkdirSync(PATHS.generated, { recursive: true });
   }
 
-  console.log('\nPipeline\n');
+  if (compact) {
+    console.log('[Running pipeline]');
+  } else {
+    console.log('\nPipeline\n');
+  }
 
   if (steps.length === 0) {
     console.log('  No steps configured. Add steps to pipeline/run.ts');
