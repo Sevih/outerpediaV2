@@ -37,7 +37,7 @@ export default function RecentUpdates({ lang, t }: Props) {
               </div>
               <p className="h2-style mb-2">
                 {entry.url ? (
-                  <Link href={`/${lang}${entry.url}`} className="text-cyan-400 hover:underline">
+                  <Link href={localePath(lang, entry.url)} className="text-cyan-400 hover:underline">
                     {entry.title}
                   </Link>
                 ) : (

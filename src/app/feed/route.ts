@@ -26,8 +26,8 @@ export async function GET() {
 
   const items = entries.slice(0, 20).map((entry) => {
     const link = entry.url
-      ? `${baseUrl}/en${entry.url}`
-      : `${baseUrl}/en/changelog`;
+      ? `${baseUrl}${entry.url}`
+      : `${baseUrl}/changelog`;
     const description = entry.content.en.join(' ');
 
     return `    <item>
@@ -44,7 +44,7 @@ export async function GET() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Outerpedia — Outerplane Wiki Updates</title>
-    <link>${baseUrl}/en/changelog</link>
+    <link>${baseUrl}/changelog</link>
     <description>Latest updates from Outerpedia, the Outerplane wiki and database.</description>
     <language>en</language>
     <atom:link href="${baseUrl}/feed" rel="self" type="application/rss+xml"/>

@@ -8,6 +8,7 @@ import ImageLightbox from '@/app/components/ui/ImageLightbox';
 import type { ElementType, ClassType } from '@/types/enums';
 import type { Lang, LangMap } from '@/types/common';
 import { lRec } from '@/lib/i18n/localize';
+import { localePath } from '@/lib/navigation';
 
 // Shared styles
 export const highlight = "text-yellow-400 font-semibold";
@@ -454,7 +455,7 @@ export function CoreFusionSection({ lang }: { lang: Lang }) {
         {CORE_FUSION_CHARS.map((cf) => (
           <Link
             key={cf.id}
-            href={`/${lang}/characters/${cf.name.toLowerCase()}`}
+            href={localePath(lang, `/characters/${cf.name.toLowerCase()}`)}
             className="flex flex-col items-center gap-1 hover:scale-105 transition-transform"
           >
             <CharacterPortrait

@@ -6,6 +6,7 @@ import { loadMessages } from '@/i18n';
 import { getChangelog } from '@/lib/changelog';
 import type { ChangelogType } from '@/types/changelog';
 import type { TranslationKey } from '@/i18n/locales/en';
+import { localePath } from '@/lib/navigation';
 
 export const revalidate = 86400;
 
@@ -58,7 +59,7 @@ export default async function ChangelogPage({ params }: Props) {
 
               <p className="h2-style mb-2">
                 {entry.url ? (
-                  <Link href={`/${lang}${entry.url}`} className="text-cyan-400 hover:underline">
+                  <Link href={localePath(lang as Lang, entry.url)} className="text-cyan-400 hover:underline">
                     {entry.title}
                   </Link>
                 ) : (

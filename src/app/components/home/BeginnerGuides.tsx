@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import type { Messages } from '@/i18n';
+import { localePath } from '@/lib/navigation';
 
 const GUIDES = [
   { key: 'faq', nameKey: 'home.beginner.faq', descKey: 'home.beginner.faq.desc', slug: 'beginner-faq' },
@@ -27,7 +28,7 @@ export default function BeginnerGuides({ lang, t }: Props) {
           {GUIDES.map((guide) => (
             <li key={guide.key}>
               <Link
-                href={`/${lang}/guides/${CATEGORY}/${guide.slug}`}
+                href={localePath(lang, `/guides/${CATEGORY}/${guide.slug}`)}
                 className="font-semibold text-cyan-400 underline"
               >
                 {t[guide.nameKey]}
