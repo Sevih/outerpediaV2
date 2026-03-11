@@ -7,6 +7,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
+  icons: {
+    apple: '/apple-touch-icon.png',
+  },
   alternates: {
     types: {
       'application/rss+xml': '/feed',
