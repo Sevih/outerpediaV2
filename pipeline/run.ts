@@ -33,6 +33,8 @@ async function main() {
   const stepFilter = args.includes('--step') ? args[args.indexOf('--step') + 1] : null;
   const validateOnly = args.includes('--validate');
 
+  const compact = process.stdout.isTTY && !process.argv.includes('--verbose');
+
   // Ensure generated directory exists
   if (!existsSync(PATHS.generated)) {
     mkdirSync(PATHS.generated, { recursive: true });
@@ -63,7 +65,6 @@ async function main() {
 
   const totalStart = Date.now();
   const total = toRun.length;
-  const compact = process.stdout.isTTY && !process.argv.includes('--verbose');
 
   for (let i = 0; i < total; i++) {
     const step = toRun[i];
