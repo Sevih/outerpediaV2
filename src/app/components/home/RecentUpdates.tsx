@@ -2,16 +2,8 @@ import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import type { Messages } from '@/i18n';
 import type { TranslationKey } from '@/i18n/locales/en';
-import { getChangelog } from '@/lib/changelog';
-import type { ChangelogType } from '@/types/changelog';
+import { getChangelog, CHANGELOG_TYPE_STYLES } from '@/lib/changelog';
 import { localePath } from '@/lib/navigation';
-
-const TYPE_STYLES: Record<ChangelogType, string> = {
-  feature: 'bg-emerald-600/20 text-emerald-400',
-  update: 'bg-blue-600/20 text-blue-400',
-  fix: 'bg-red-600/20 text-red-400',
-  balance: 'bg-amber-600/20 text-amber-400',
-};
 
 type Props = {
   lang: Lang;
@@ -30,7 +22,7 @@ export default function RecentUpdates({ lang, t }: Props) {
               <div className="mb-2 flex items-center gap-3">
                 <time className="text-sm text-zinc-500">{entry.date}</time>
                 <span
-                  className={`rounded px-2 py-0.5 text-xs font-semibold uppercase ${TYPE_STYLES[entry.type]}`}
+                  className={`rounded px-2 py-0.5 text-xs font-semibold uppercase ${CHANGELOG_TYPE_STYLES[entry.type]}`}
                 >
                   {t[`changelog.type.${entry.type}` as TranslationKey]}
                 </span>

@@ -1,11 +1,20 @@
 import type { Lang } from '@/lib/i18n/config';
 import type {
   ChangelogEntry,
+  ChangelogType,
   ResolvedChangelogEntry,
   LangMap,
   LangMapArray,
 } from '@/types/changelog';
 import rawEntries from '@data/changelog.json';
+
+export const CHANGELOG_TYPE_STYLES: Record<ChangelogType, string> = {
+  feature: 'bg-emerald-600/20 text-emerald-400',
+  update: 'bg-blue-600/20 text-blue-400',
+  fix: 'bg-red-600/20 text-red-400',
+  balance: 'bg-amber-600/20 text-amber-400',
+  news: 'bg-violet-600/20 text-violet-400',
+};
 
 const entries = rawEntries as ChangelogEntry[];
 

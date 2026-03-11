@@ -49,6 +49,7 @@ const zh: Record<TranslationKey, string> = {
   'changelog.type.update': '更新',
   'changelog.type.fix': '修复',
   'changelog.type.balance': '平衡',
+  'changelog.type.news': '公告',
 
   // Page metadata
   'page.home.title': 'Outerpedia — 异域战记 Wiki & 数据库',

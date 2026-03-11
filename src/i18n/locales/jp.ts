@@ -49,6 +49,7 @@ const jp: Record<TranslationKey, string> = {
   'changelog.type.update': '更新',
   'changelog.type.fix': '修正',
   'changelog.type.balance': 'バランス',
+  'changelog.type.news': 'お知らせ',
 
   // Page metadata
   'page.home.title': 'Outerpedia — アウタープレーン Wiki & データベース',

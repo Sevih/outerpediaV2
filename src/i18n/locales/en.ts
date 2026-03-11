@@ -49,6 +49,7 @@ const en = {
   'changelog.type.update': 'Update',
   'changelog.type.fix': 'Fix',
   'changelog.type.balance': 'Balance',
+  'changelog.type.news': 'News',
 
   // Page metadata
   'page.home.title': 'Outerpedia — Outerplane Wiki & Database',

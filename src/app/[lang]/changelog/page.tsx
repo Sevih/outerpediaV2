@@ -3,8 +3,7 @@ import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
-import { getChangelog } from '@/lib/changelog';
-import type { ChangelogType } from '@/types/changelog';
+import { getChangelog, CHANGELOG_TYPE_STYLES } from '@/lib/changelog';
 import type { TranslationKey } from '@/i18n/locales/en';
 import { localePath } from '@/lib/navigation';
 
@@ -22,13 +21,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t['changelog.description'],
   });
 }
-
-const TYPE_STYLES: Record<ChangelogType, string> = {
-  feature: 'bg-emerald-600/20 text-emerald-400',
-  update: 'bg-blue-600/20 text-blue-400',
-  fix: 'bg-red-600/20 text-red-400',
-  balance: 'bg-amber-600/20 text-amber-400',
-};
 
 export default async function ChangelogPage({ params }: Props) {
   const { lang } = await params;
@@ -51,7 +43,7 @@ export default async function ChangelogPage({ params }: Props) {
               <div className="mb-2 flex items-center gap-3">
                 <time className="text-sm text-zinc-500">{entry.date}</time>
                 <span
-                  className={`rounded px-2 py-0.5 text-xs font-semibold uppercase ${TYPE_STYLES[entry.type]}`}
+                  className={`rounded px-2 py-0.5 text-xs font-semibold uppercase ${CHANGELOG_TYPE_STYLES[entry.type]}`}
                 >
                   {t[`changelog.type.${entry.type}` as TranslationKey]}
                 </span>

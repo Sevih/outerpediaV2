@@ -6,8 +6,7 @@ import type { Lang } from '@/lib/i18n/config';
 import { useI18n } from '@/lib/contexts/I18nContext';
 
 /** Strip a lang subdomain from hostname to get the base domain.
- *  e.g. "jp.v2.outerpedia.com" → "v2.outerpedia.com"
- *       "v2.outerpedia.com"    → "v2.outerpedia.com"
+ *  e.g. "jp.outerpedia.com" → "outerpedia.com"
  */
 function extractBaseDomain(host: string): string {
   const parts = host.split('.');

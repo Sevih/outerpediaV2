@@ -49,6 +49,7 @@ const kr: Record<TranslationKey, string> = {
   'changelog.type.update': '업데이트',
   'changelog.type.fix': '수정',
   'changelog.type.balance': '밸런스',
+  'changelog.type.news': '소식',
 
   // Page metadata
   'page.home.title': 'Outerpedia — 아우터플레인 위키 & 데이터베이스',

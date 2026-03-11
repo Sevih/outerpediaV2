@@ -1,6 +1,6 @@
 import type { Lang } from '@/lib/i18n/config';
 
-export type ChangelogType = 'feature' | 'fix' | 'update' | 'balance';
+export type ChangelogType = 'feature' | 'fix' | 'update' | 'balance' | 'news';
 
 export type LangMap = Partial<Record<Lang, string>>;
 export type LangMapArray = Partial<Record<Lang, string[]>>;
