@@ -1,6 +1,6 @@
 {
   "name": "outerpedia-v2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "dev": "tsx scripts/dev-with-images.ts",
@@ -14,7 +14,7 @@
     "pipeline:validate": "tsx pipeline/run.ts --validate",
     "images": "tsx scripts/convert-images.ts",
     "images:watch": "tsx scripts/convert-images.ts --watch",
-    "commit": "node scripts/commit.mjs --skip-build",
+    "commit": "node scripts/commit.mjs",
     "commit:fast": "node scripts/commit.mjs --skip-build"
   },
   "dependencies": {
