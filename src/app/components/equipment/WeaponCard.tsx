@@ -25,7 +25,7 @@ export default function WeaponCard({ weapon, lang, bossMap }: Props) {
   const effectDesc = effectDesc4 ?? effectDesc1;
 
   return (
-    <Link href={href(`/equipments/${slugifyEquipment(weapon.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
+    <Link href={href(`/equipment/${slugifyEquipment(weapon.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/class */}
       <div className="flex items-start gap-3">
         <EquipmentIcon

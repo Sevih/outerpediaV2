@@ -172,7 +172,7 @@ export default function SearchModal({
     } else if (item.type === 'char') {
       router.push(buildHref(`/characters/${item.slug}`) as never);
     } else if (item.type === 'equip') {
-      router.push(buildHref(`/equipments/${item.slug}`) as never);
+      router.push(buildHref(`/equipment/${item.slug}`) as never);
     } else if (item.type === 'guide') {
       router.push(buildHref(`/guides/${item.category}/${item.slug}`) as never);
     }

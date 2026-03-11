@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return createPageMetadata({
     lang,
-    path: `/equipments/${slug}`,
+    path: `/equipment/${slug}`,
     title: `${name} — ${typeLabel}`,
     description: `${name} — ${typeLabel} | Outerpedia`,
     ogImage,

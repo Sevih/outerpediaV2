@@ -74,7 +74,7 @@ export default function LootTable({ bossId }: Props) {
       {!expanded && (
         <div className="mt-3 flex flex-wrap gap-1.5">
           {allGear.map(g => (
-            <Link key={g.name} href={href(`/equipments/${slugifyEquipment(g.name)}`)}>
+            <Link key={g.name} href={href(`/equipment/${slugifyEquipment(g.name)}`)}>
               <EquipmentIcon
                 src={`equipment/${g.image}`}
                 rarity={g.rarity as ItemRarity}
@@ -88,7 +88,7 @@ export default function LootTable({ bossId }: Props) {
             </Link>
           ))}
           {sets.map(s => (
-            <Link key={s.name} href={href(`/equipments/${slugifyEquipment(s.name)}`)}>
+            <Link key={s.name} href={href(`/equipment/${slugifyEquipment(s.name)}`)}>
               <EquipmentIcon
                 src={`equipment/TI_Equipment_Armor_${s.image_prefix}`}
                 rarity={s.rarity as ItemRarity}
@@ -112,7 +112,7 @@ export default function LootTable({ bossId }: Props) {
                 return (
                   <Link
                     key={w.name}
-                    href={href(`/equipments/${slugifyEquipment(w.name)}`)}
+                    href={href(`/equipment/${slugifyEquipment(w.name)}`)}
                     className="card flex items-center gap-3 p-3 transition-colors hover:bg-zinc-800/80"
                   >
                     <EquipmentIcon
@@ -154,7 +154,7 @@ export default function LootTable({ bossId }: Props) {
                 return (
                   <Link
                     key={a.name}
-                    href={href(`/equipments/${slugifyEquipment(a.name)}`)}
+                    href={href(`/equipment/${slugifyEquipment(a.name)}`)}
                     className="card flex items-center gap-3 p-3 transition-colors hover:bg-zinc-800/80"
                   >
                     <EquipmentIcon
@@ -197,7 +197,7 @@ export default function LootTable({ bossId }: Props) {
                 return (
                   <Link
                     key={s.name}
-                    href={href(`/equipments/${slugifyEquipment(s.name)}`)}
+                    href={href(`/equipment/${slugifyEquipment(s.name)}`)}
                     className="card flex items-center gap-3 p-3 transition-colors hover:bg-zinc-800/80"
                   >
                     <EquipmentIcon

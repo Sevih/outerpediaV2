@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const monthYear = getMonthYear(l);
   return createPageMetadata({
     lang: l,
-    path: '/equipments',
+    path: '/equipment',
     title: t('page.equipments.meta_title', { monthYear }),
     description: t('page.equipments.description', { monthYear }),
   });

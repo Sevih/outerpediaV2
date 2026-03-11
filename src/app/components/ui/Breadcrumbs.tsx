@@ -8,7 +8,7 @@ import type { TranslationKey } from '@/i18n';
 
 const SEGMENT_LABELS: Record<string, TranslationKey> = {
   characters: 'nav.characters',
-  equipments: 'nav.equipment',
+  equipment: 'nav.equipment',
   guides: 'nav.guides',
   tierlist: 'nav.tierlist',
   tools: 'nav.utilities',

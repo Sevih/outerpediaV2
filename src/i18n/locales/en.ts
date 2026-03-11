@@ -4,7 +4,7 @@ const en = {
   // Navigation
   'nav.home': 'Home',
   'nav.characters': 'Characters',
-  'nav.equipment': 'Equipments',
+  'nav.equipment': 'Equipment',
   'nav.guides': 'Guides',
   'nav.utilities': 'Utilities',
   'nav.tierlist': 'Tier List',

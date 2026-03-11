@@ -23,7 +23,7 @@ export default function TalismanCard({ talisman, lang }: Props) {
   const effectDesc4 = l(talisman, 'effect_desc4', lang);
 
   return (
-    <Link href={localePath(lang, `/equipments/${slugifyEquipment(talisman.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
+    <Link href={localePath(lang, `/equipment/${slugifyEquipment(talisman.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/effect pill */}
       <div className="flex items-start gap-3">
         <EquipmentIcon

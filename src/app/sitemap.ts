@@ -14,7 +14,7 @@ import { getAllTools } from '@/lib/data/tools';
 const STATIC_PAGES = [
   '/',
   '/characters',
-  '/equipments',
+  '/equipment',
   '/tierlist',
   '/tools',
   '/guides',

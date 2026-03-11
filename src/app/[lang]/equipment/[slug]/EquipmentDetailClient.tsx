@@ -66,7 +66,7 @@ function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwn
 
   return (
     <div className="mx-auto max-w-4xl space-y-8 px-4 py-6 md:px-6">
-      <Link href={href('/equipments')} className="inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-300">
+      <Link href={href('/equipment')} className="inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-300">
         <span aria-hidden="true">&larr;</span> {t('equip.detail.back')}
       </Link>
       {equipment.type === 'weapon' && <WeaponDetail weapon={equipment.data} lang={lang} bossMap={bossMap} statRanges={weaponStatRanges} />}
