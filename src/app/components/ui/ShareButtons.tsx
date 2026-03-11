@@ -116,7 +116,7 @@ export default function ShareButtons({ title, lang }: Props) {
             key={p}
             href={links[p]}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className={`flex items-center justify-center h-8 w-8 rounded-md bg-zinc-800 text-zinc-400 ${cfg.color} hover:bg-zinc-700 transition-colors`}
             aria-label={`Share on ${cfg.label}`}
             title={`Share on ${cfg.label}`}
