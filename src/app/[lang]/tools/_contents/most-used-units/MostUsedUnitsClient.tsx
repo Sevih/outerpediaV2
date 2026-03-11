@@ -1,13 +1,15 @@
 'use client';
 
-import { useDeferredValue, useMemo, useState } from 'react';
+import { useEffect, useDeferredValue, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import type { RarityType } from '@/types/enums';
 import { ELEMENTS, CLASSES, RARITIES } from '@/types/enums';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { LANGS } from '@/lib/i18n/config';
+import { encodeFilters, decodeFilters, isEmptyPayload, type FilterPayload } from '@/lib/filter-url';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import { FilterPill, FilterSearch, IconFilterGroup } from '@/app/components/ui/FilterPills';
 import type { TranslationKey } from '@/i18n/locales/en';
@@ -32,6 +34,8 @@ type Props = {
 
 export default function MostUsedUnitsClient({ characters, usage, guideTitles }: Props) {
   const { lang, t, href } = useI18n();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const [elementFilter, setElementFilter] = useState<string[]>([]);
   const [classFilter, setClassFilter] = useState<string[]>([]);
@@ -40,6 +44,47 @@ export default function MostUsedUnitsClient({ characters, usage, guideTitles }: 
   const [rawQuery, setRawQuery] = useState('');
   const query = useDeferredValue(rawQuery);
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
+
+  // URL sync refs
+  const lastSerializedRef = useRef('');
+  const didHydrateFromURL = useRef(false);
+
+  // Build payload
+  const payload = useMemo<FilterPayload>(() => ({
+    el: elementFilter.length ? elementFilter : undefined,
+    cl: classFilter.length ? classFilter : undefined,
+    r: rarityFilter.length ? rarityFilter : undefined,
+    cat: categoryFilter.length ? categoryFilter : undefined,
+    q: rawQuery.trim() || undefined,
+  }), [elementFilter, classFilter, rarityFilter, categoryFilter, rawQuery]);
+
+  // Hydrate from URL on mount
+  useEffect(() => {
+    if (didHydrateFromURL.current) return;
+    didHydrateFromURL.current = true;
+    const z = new URLSearchParams(window.location.search).get('z');
+    const decoded = decodeFilters(z);
+    if (decoded) {
+      if (decoded.el?.length) setElementFilter(decoded.el);
+      if (decoded.cl?.length) setClassFilter(decoded.cl);
+      if (decoded.r?.length) setRarityFilter(decoded.r as RarityType[]);
+      if (decoded.cat?.length) setCategoryFilter(decoded.cat as typeof GUIDE_CATEGORIES[number][]);
+      if (decoded.q) setRawQuery(decoded.q);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Sync filters → URL
+  useEffect(() => {
+    const handle = setTimeout(() => {
+      const serialized = isEmptyPayload(payload) ? pathname : `${pathname}?z=${encodeFilters(payload)}`;
+      if (lastSerializedRef.current !== serialized) {
+        lastSerializedRef.current = serialized;
+        router.replace(serialized as never, { scroll: false });
+      }
+    }, 150);
+    return () => clearTimeout(handle);
+  }, [pathname, router, payload]);
 
   const toggleArray = <T,>(
     setter: React.Dispatch<React.SetStateAction<T[]>>, value: T, allValues?: readonly T[],
