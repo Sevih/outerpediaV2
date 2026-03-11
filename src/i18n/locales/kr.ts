@@ -551,7 +551,8 @@ const kr: Record<TranslationKey, string> = {
   'characters.effectsGroups.debuff.cc': '군중 제어 (CC)',
   'characters.effectsGroups.debuff.dot': '지속 피해 (DoT)',
   'characters.effectsGroups.debuff.utility': '유틸 디버프',
-  'characters.effectsGroups.unique': '고유',
+  'characters.effectsGroups.buff.unique': '고유 버프',
+  'characters.effectsGroups.debuff.unique': '고유 디버프',
   'characters.effectsGroups.hidden': '숨겨진 효과',
 
   // Characters tags

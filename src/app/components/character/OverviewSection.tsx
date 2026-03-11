@@ -8,6 +8,7 @@ import { formatEffectText } from '@/lib/format-text';
 import { ELEMENT_TEXT, ELEMENT_BORDER, ROLE_BG } from '@/lib/theme';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import type { TranslationKey } from '@/i18n/locales/en';
+import ShareButtons from '@/app/components/ui/ShareButtons';
 
 type TagEntry = {
   label: string;
@@ -51,6 +52,9 @@ export default function OverviewSection({ character, profile, tags }: Props) {
             {` — Outerplane ${t(elementKey)} ${t(classKey)} Guide`}
           </span>
         </h1>
+        <div className="mt-2">
+          <ShareButtons title={fullname} lang={lang} />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-[360px_1fr]">

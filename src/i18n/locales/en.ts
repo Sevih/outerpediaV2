@@ -551,7 +551,8 @@ const en = {
   'characters.effectsGroups.debuff.cc': 'Control Effects (CC)',
   'characters.effectsGroups.debuff.dot': 'Damage Over Time (DoT)',
   'characters.effectsGroups.debuff.utility': 'Utility Debuffs',
-  'characters.effectsGroups.unique': 'Unique',
+  'characters.effectsGroups.buff.unique': 'Unique Buffs',
+  'characters.effectsGroups.debuff.unique': 'Unique Debuffs',
   'characters.effectsGroups.hidden': 'Hidden',
 
   // Characters tags

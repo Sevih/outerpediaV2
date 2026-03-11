@@ -551,7 +551,8 @@ const jp: Record<TranslationKey, string> = {
   'characters.effectsGroups.debuff.cc': '行動制御 (CC)',
   'characters.effectsGroups.debuff.dot': '持続ダメージ (DoT)',
   'characters.effectsGroups.debuff.utility': 'ユーティリティデバフ',
-  'characters.effectsGroups.unique': 'ユニーク',
+  'characters.effectsGroups.buff.unique': 'ユニークバフ',
+  'characters.effectsGroups.debuff.unique': 'ユニークデバフ',
   'characters.effectsGroups.hidden': '隠し効果',
 
   // Characters tags

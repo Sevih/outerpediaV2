@@ -551,7 +551,8 @@ const zh: Record<TranslationKey, string> = {
   'characters.effectsGroups.debuff.cc': '控制效果（控）',
   'characters.effectsGroups.debuff.dot': '持续伤害（DOT）',
   'characters.effectsGroups.debuff.utility': '其他效果',
-  'characters.effectsGroups.unique': '独有效果',
+  'characters.effectsGroups.buff.unique': '独有增益',
+  'characters.effectsGroups.debuff.unique': '独有减益',
   'characters.effectsGroups.hidden': '隐藏效果',
 
   // Characters tags

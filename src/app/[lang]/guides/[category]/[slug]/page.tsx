@@ -10,6 +10,7 @@ import { lRec } from '@/lib/i18n/localize';
 import Link from 'next/link';
 import { localePath } from '@/lib/navigation';
 import BreadcrumbSetter from '@/app/components/ui/BreadcrumbSetter';
+import ShareButtons from '@/app/components/ui/ShareButtons';
 
 export const revalidate = 86400;
 
@@ -101,6 +102,7 @@ export default async function GuideDetailPage({ params }: Props) {
       <div className="mt-2 flex items-center gap-3 text-xs text-zinc-500">
         <span>{t['page.guide.by'].replace('{author}', guide.author)}</span>
         <span>{t['page.guide.updated'].replace('{date}', guide.last_updated)}</span>
+        <div className="ml-auto"><ShareButtons title={title} lang={lang} /></div>
       </div>
 
       <div className="mt-8">
