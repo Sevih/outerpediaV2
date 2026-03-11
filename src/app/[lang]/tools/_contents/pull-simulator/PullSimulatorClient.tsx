@@ -230,16 +230,16 @@ export default function PullSimulatorClient({ characters, pool1, pool2 }: Props)
         {/* Probabilities */}
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
           {config.focus3Rate > 0 && (
-            <span>3★ Focus: <strong className="text-yellow-400">{config.focus3Rate}%</strong></span>
+            <span>3★ Focus: <span className="font-semibold text-yellow-400">{config.focus3Rate}%</span></span>
           )}
-          <span>3★: <strong className="text-yellow-400">{config.offFocus3Rate}%</strong></span>
-          <span>2★: <strong className="text-purple-400">{config.rate2}%</strong></span>
-          <span>1★: <strong className="text-zinc-200">{config.rate1}%</strong></span>
+          <span>3★: <span className="font-semibold text-yellow-400">{config.offFocus3Rate}%</span></span>
+          <span>2★: <span className="font-semibold text-purple-400">{config.rate2}%</span></span>
+          <span>1★: <span className="font-semibold text-zinc-200">{config.rate1}%</span></span>
         </div>
         {/* Ether, guarantee */}
         <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-          <span>{tk('tools.pull-simulator.ether_cost')}: <strong className="text-zinc-200">{config.etherCost}</strong></span>
-          <span>{tk('tools.pull-simulator.guarantee')}: <strong className="text-zinc-200">{config.tenPullGuarantee ? tk('tools.pull-simulator.yes') : tk('tools.pull-simulator.no')}</strong></span>
+          <span>{tk('tools.pull-simulator.ether_cost')}: <span className="font-semibold text-zinc-200">{config.etherCost}</span></span>
+          <span>{tk('tools.pull-simulator.guarantee')}: <span className="font-semibold text-zinc-200">{config.tenPullGuarantee ? tk('tools.pull-simulator.yes') : tk('tools.pull-simulator.no')}</span></span>
         </div>
       </div>
 

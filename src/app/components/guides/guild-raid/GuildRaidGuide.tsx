@@ -82,7 +82,7 @@ function BossMenuItem({
       ].join(' ')}
     >
       {boss.icons.startsWith('2') ? (
-        <CharacterPortrait id={boss.icons} size="xxs" name="" />
+        <CharacterPortrait id={boss.icons} size="xxs" name={label} />
       ) : (
         <span className="relative h-5 w-5 shrink-0 overflow-hidden rounded">
           <Image

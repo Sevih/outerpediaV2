@@ -203,7 +203,7 @@ function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
       {/* Header */}
       <div className="card flex items-center gap-3 p-3">
         {boss.icons.startsWith('2') ? (
-          <CharacterPortrait id={boss.icons} size="md" />
+          <CharacterPortrait id={boss.icons} size="md" name={name} />
         ) : (
           <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-white/10">
             <Image

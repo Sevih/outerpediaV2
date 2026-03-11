@@ -77,6 +77,7 @@ export default async function ToolDetailPage({ params }: Props) {
 
       <h1 className="mx-auto text-center text-3xl font-bold mt-4">
         {title}
+        <span className="sr-only">{` — Outerplane Tool & Database`}</span>
       </h1>
       {description && (
         <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-zinc-400">{description}</p>

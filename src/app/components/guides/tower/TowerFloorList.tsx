@@ -92,7 +92,7 @@ export default function TowerFloorList({ floors, selectedFloor, onSelect, search
             {/* Boss mini portrait */}
             {boss && (
               boss.icons.startsWith('2') ? (
-                <CharacterPortrait id={boss.icons} size="xxs" />
+                <CharacterPortrait id={boss.icons} size="xxs" name={bossName} />
               ) : (
                 <span className="relative h-5 w-5 shrink-0 overflow-hidden rounded">
                   <Image

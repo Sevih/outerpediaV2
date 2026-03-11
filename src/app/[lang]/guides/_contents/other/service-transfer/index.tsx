@@ -127,13 +127,13 @@ export default function ServiceTransferGuide() {
           <section>
             <h2 className="text-xl font-semibold mb-3">{lRec(s.rewards.title, lang)}</h2>
             <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 p-4 space-y-1 text-amber-100 text-sm">
-              <p><strong><ItemInline name='"New Beginning" Title' /></strong> {lRec(s.rewards.titleDesc1, lang)}</p>
-              <p><strong><ItemInline name='"New Beginning" Profile Frame' /></strong></p>
-              <p><strong>1 <ItemInline name="Oath of Determination" /></strong> {lRec(s.rewards.oathDesc, lang)}</p>
-              <p><strong>1 <ItemInline name="Book of Evolution" /></strong> {lRec(s.rewards.bookDesc, lang)}</p>
-              <p><strong>1 <ItemInline name="Unlimited Restaurant Voucher" /></strong> {lRec(s.rewards.voucherDesc, lang)}</p>
-              <p><strong>1 <ItemInline name="Demiurge Selection Ticket" /></strong> {lRec(s.rewards.demiDesc, lang)}</p>
-              <p><strong>1,500 <ItemInline name="Ether" /></strong></p>
+              <p><span className="font-semibold"><ItemInline name='"New Beginning" Title' /></span> {lRec(s.rewards.titleDesc1, lang)}</p>
+              <p><span className="font-semibold"><ItemInline name='"New Beginning" Profile Frame' /></span></p>
+              <p><span className="font-semibold">1 <ItemInline name="Oath of Determination" /></span> {lRec(s.rewards.oathDesc, lang)}</p>
+              <p><span className="font-semibold">1 <ItemInline name="Book of Evolution" /></span> {lRec(s.rewards.bookDesc, lang)}</p>
+              <p><span className="font-semibold">1 <ItemInline name="Unlimited Restaurant Voucher" /></span> {lRec(s.rewards.voucherDesc, lang)}</p>
+              <p><span className="font-semibold">1 <ItemInline name="Demiurge Selection Ticket" /></span> {lRec(s.rewards.demiDesc, lang)}</p>
+              <p><span className="font-semibold">1,500 <ItemInline name="Ether" /></span></p>
             </div>
           </section>
 

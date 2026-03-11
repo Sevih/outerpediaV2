@@ -234,7 +234,7 @@ const zh: Record<TranslationKey, string> = {
   'page.guides.description':
     '异域战记攻略指南。冒险关卡、Boss战、公会突袭、世界Boss、新手攻略。',
   'page.guides.meta_title': '异域战记 攻略指南 – {monthYear}',
-  'page.guide.meta_title': '{title} — {category}攻略指南',
+  'page.guide.meta_title': '{title} — {category}',
   'page.guide.by': '作者: {author}',
   'page.guide.updated': '{date} 更新',
   'page.guide.older_version_warning':

@@ -70,7 +70,7 @@ function BossRow({ boss, lang }: { boss: Boss; lang: Lang }) {
   return (
     <>
       {boss.icons.startsWith('2') ? (
-        <CharacterPortrait id={boss.icons} size="xxs" />
+        <CharacterPortrait id={boss.icons} size="xxs" name={lRec(boss.Name, lang)} />
       ) : (
         <span className="relative h-5 w-5 shrink-0 overflow-hidden rounded">
           <Image

@@ -234,7 +234,7 @@ const en = {
   'page.guides.description':
     'Outerplane guides for adventure stages, boss fights, guild raids, world bosses, and beginner tips.',
   'page.guides.meta_title': 'Outerplane Guides – {monthYear}',
-  'page.guide.meta_title': '{title} — {category} Guide',
+  'page.guide.meta_title': '{title} — {category}',
   'page.guide.by': 'By {author}',
   'page.guide.updated': 'Updated {date}',
   'page.guide.older_version_warning':

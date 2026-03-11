@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     lang,
     path: `/guides/${guide.category}/${slug}`,
     title: t['page.guide.meta_title'].replace('{title}', title).replace('{category}', categoryTitle),
-    description: `${title} — ${description}`,
+    description: `${title} — ${description}`.slice(0, 155),
     ...(ogImage && { ogImage }),
     ...(ogImageSize && { ogImageSize }),
   });
@@ -94,7 +94,7 @@ export default async function GuideDetailPage({ params }: Props) {
 
       <h1 className="mx-auto text-center text-3xl font-bold mt-4">
         {title}
-        <span className="sr-only">{` — Outerplane ${categoryTitle} Guide`}</span>
+        <span className="sr-only">{` — Outerplane ${categoryTitle}`}</span>
       </h1>
       <div className="mt-2 flex items-center gap-3 text-xs text-zinc-500">
         <span>{t['page.guide.by'].replace('{author}', guide.author)}</span>

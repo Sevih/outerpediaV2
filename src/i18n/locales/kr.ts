@@ -234,7 +234,7 @@ const kr: Record<TranslationKey, string> = {
   'page.guides.description':
     '아우터플레인 공략 가이드. 모험 스테이지, 보스전, 길드 레이드, 월드 보스, 초보자 팁.',
   'page.guides.meta_title': '아우터플레인 공략 가이드 – {monthYear}',
-  'page.guide.meta_title': '{title} — {category} 공략 가이드',
+  'page.guide.meta_title': '{title} — {category}',
   'page.guide.by': '작성자: {author}',
   'page.guide.updated': '{date} 업데이트',
   'page.guide.older_version_warning':
