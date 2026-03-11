@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { getBaseUrl } from "@/lib/seo";
+import { isValidLang, getLangConfig } from "@/lib/i18n/config";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -35,13 +36,18 @@ const paybooc = localFont({
   display: "swap",
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang?: string }>;
 }>) {
+  const { lang } = await params;
+  const htmlLang = lang && isValidLang(lang) ? getLangConfig(lang).htmlLang : 'en';
+
   return (
-    <html className={`dark ${geistSans.variable} ${geistMono.variable} ${paybooc.variable}`} suppressHydrationWarning>
+    <html lang={htmlLang} className={`dark ${geistSans.variable} ${geistMono.variable} ${paybooc.variable}`} suppressHydrationWarning>
       <body className="antialiased">
         {children}
         <div id="portal-root" />
