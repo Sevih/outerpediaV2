@@ -33,6 +33,7 @@ export default function GuideCard({ guide, lang, t }: Props) {
       <div className="flex min-w-0 flex-1 flex-col">
         <h3 className="text-sm font-semibold text-zinc-100 after:hidden group-hover:text-yellow-300 transition-colors">
           {title}
+          <span className="sr-only">{` — ${t[`guides.category.${guide.category}` as TranslationKey] ?? guide.category}`}</span>
         </h3>
         {description && (
           <p className="mt-1.5 text-xs text-zinc-400">{description}</p>
