@@ -9,13 +9,11 @@ export function getMonthYear(lang: Lang): string {
 }
 
 const SITE_NAME = 'Outerpedia';
-const BASE_DOMAIN = 'outerpedia.com';
+const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'outerpedia.com';
 const DEFAULT_OG_IMAGE = '/images/ui/og_default.jpg';
 
-/** Base URL for the current environment (Vercel, dev, or production) */
+/** Base URL for the current environment */
 export function getBaseUrl(): string {
-  const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
-  if (vercelUrl) return `https://${vercelUrl}`;
   if (process.env.NODE_ENV === 'development') return `http://localhost:${process.env.PORT ?? '3000'}`;
   return `https://${BASE_DOMAIN}`;
 }
@@ -25,8 +23,8 @@ export function buildUrl(lang: Lang, path = ''): string {
   const segment = path === '/' ? '' : path;
   const base = getBaseUrl();
 
-  // Vercel & dev: path-based routing
-  if (!base.includes(BASE_DOMAIN)) {
+  // Dev: path-based routing
+  if (process.env.NODE_ENV === 'development') {
     return `${base}/${lang}${segment}`;
   }
 

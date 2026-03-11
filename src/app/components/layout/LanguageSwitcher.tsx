@@ -5,8 +5,18 @@ import { LANGUAGES, LANGS, isValidLang } from '@/lib/i18n/config';
 import type { Lang } from '@/lib/i18n/config';
 import { useI18n } from '@/lib/contexts/I18nContext';
 
-const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'outerpedia.com';
-const DEV_DOMAIN = 'outerpedia.local';
+/** Strip a lang subdomain from hostname to get the base domain.
+ *  e.g. "jp.v2.outerpedia.com" → "v2.outerpedia.com"
+ *       "v2.outerpedia.com"    → "v2.outerpedia.com"
+ */
+function extractBaseDomain(host: string): string {
+  const parts = host.split('.');
+  // If first part is a known lang subdomain, strip it
+  if (parts.length >= 3 && isValidLang(parts[0])) {
+    return parts.slice(1).join('.');
+  }
+  return host;
+}
 
 /** Convert a 2-letter country code (e.g. "gb") to its flag emoji */
 function toFlag(code: string): string {
@@ -23,33 +33,20 @@ export default function LanguageSwitcher() {
     const target = e.target.value as Lang;
     if (target === lang) return;
 
+    const { protocol, port, search, hash } = window.location;
     const host = window.location.hostname;
-    const matches = (d: string) => host === d || host.endsWith(`.${d}`);
-    const isSubdomain = matches(BASE_DOMAIN) || matches(DEV_DOMAIN);
-
-    if (isSubdomain) {
-      // Subdomain mode: switch subdomain, keep current base domain
-      const { protocol, port, search, hash } = window.location;
-      const currentBase = matches(DEV_DOMAIN) ? DEV_DOMAIN : BASE_DOMAIN;
-      const sub = LANGUAGES[target].subdomain;
-      const prefix = sub ? `${sub}.` : '';
-      const portSuffix = port ? `:${port}` : '';
-      // Strip lang prefix from path (proxy rewrote it, but pathname may include it)
-      const segments = pathname.split('/');
-      const cleanPath =
-        segments[1] && isValidLang(segments[1])
-          ? '/' + segments.slice(2).join('/')
-          : pathname;
-      window.location.href = `${protocol}//${prefix}${currentBase}${portSuffix}${cleanPath}${search}${hash}`;
-      return;
-    }
-
-    // Development: swap the [lang] path segment
+    // Extract the base domain by stripping any lang subdomain
+    const currentBase = extractBaseDomain(host);
+    const sub = LANGUAGES[target].subdomain;
+    const prefix = sub ? `${sub}.` : '';
+    const portSuffix = port ? `:${port}` : '';
+    // Strip lang prefix from path (proxy rewrote it, but pathname may include it)
     const segments = pathname.split('/');
-    if (segments[1] && isValidLang(segments[1])) {
-      segments[1] = target;
-    }
-    window.location.href = segments.join('/') || '/';
+    const cleanPath =
+      segments[1] && isValidLang(segments[1])
+        ? '/' + segments.slice(2).join('/')
+        : pathname;
+    window.location.href = `${protocol}//${prefix}${currentBase}${portSuffix}${cleanPath}${search}${hash}`;
   };
 
   return (

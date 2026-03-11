@@ -2,10 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { DEFAULT_LANG, isValidLang } from '@/lib/i18n/config';
 
 /**
- * Hybrid i18n proxy:
- * - Dev:  /jp/characters stays as-is (path-based)
- * - Prod: jp.outerpedia.com/characters → rewrites to /jp/characters
- * - Root: / → redirects to /en/ (default lang)
+ * Subdomain-based i18n proxy:
+ * - jp.outerpedia.com/characters → rewrites to /jp/characters
+ * - outerpedia.com/characters    → rewrites to /en/characters
+ * - outerpedia.com/en/…          → redirects to outerpedia.com/… (strip default lang)
  */
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -21,12 +21,12 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // --- Production: subdomain → path rewrite ---
+  // --- Subdomain → path rewrite ---
   const host = request.headers.get('host') ?? '';
   const subdomain = extractSubdomain(host);
 
   if (subdomain && isValidLang(subdomain)) {
-    // Already has a [lang] prefix in path? Skip (shouldn't happen in prod, but be safe)
+    // Already has a [lang] prefix in path? Skip
     const firstSegment = pathname.split('/')[1];
     if (isValidLang(firstSegment)) {
       return NextResponse.next();
@@ -38,50 +38,29 @@ export function proxy(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+  // --- Root domain (no subdomain) = default lang ---
   const firstSegment = pathname.split('/')[1];
 
-  // --- Custom domain without subdomain (e.g. outerpedia.local) = default lang ---
-  if (isCustomDomain(host)) {
-    // Path has default lang prefix → redirect to strip it (clean URL)
-    if (firstSegment === DEFAULT_LANG) {
-      const url = request.nextUrl.clone();
-      url.pathname = pathname.slice(`/${DEFAULT_LANG}`.length) || '/';
-      return NextResponse.redirect(url);
-    }
-
-    // Path has another lang prefix → let it through (shouldn't happen normally)
-    if (isValidLang(firstSegment)) {
-      return NextResponse.next();
-    }
-
-    // No lang prefix → rewrite internally with default lang
+  // Path has default lang prefix → redirect to strip it (clean URL)
+  if (firstSegment === DEFAULT_LANG) {
     const url = request.nextUrl.clone();
-    url.pathname = `/${DEFAULT_LANG}${pathname}`;
-    return NextResponse.rewrite(url);
+    url.pathname = pathname.slice(`/${DEFAULT_LANG}`.length) || '/';
+    return NextResponse.redirect(url);
   }
 
-  // --- Dev (localhost): path-based routing ---
-  // Path already has a valid lang prefix → continue
+  // Path has another lang prefix → let it through
   if (isValidLang(firstSegment)) {
     return NextResponse.next();
   }
 
-  // No lang prefix → redirect to default lang
+  // No lang prefix → rewrite internally with default lang
   const url = request.nextUrl.clone();
   url.pathname = `/${DEFAULT_LANG}${pathname}`;
-  return NextResponse.redirect(url);
-}
-
-/** Check if host is a custom domain (not localhost, not Vercel preview) */
-function isCustomDomain(host: string): boolean {
-  const hostname = host.split(':')[0];
-  if (hostname === 'localhost' || hostname.endsWith('.vercel.app')) return false;
-  return hostname.split('.').length >= 2;
+  return NextResponse.rewrite(url);
 }
 
 /** Extract subdomain from host (e.g., "jp.outerpedia.com" → "jp") */
 function extractSubdomain(host: string): string | null {
-  // Remove port
   const hostname = host.split(':')[0];
   const parts = hostname.split('.');
 
@@ -89,8 +68,6 @@ function extractSubdomain(host: string): string | null {
   if (parts.length < 3) return null;
 
   const sub = parts[0];
-
-  // Ignore "www"
   if (sub === 'www') return null;
 
   return sub;
@@ -98,7 +75,6 @@ function extractSubdomain(host: string): string | null {
 
 export const config = {
   matcher: [
-    // Match all paths except static files
     '/((?!_next/static|_next/image|favicon.ico).*)',
   ],
 };

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/images/', '/audio/', '/_next/', '/equipments/'],
     },
-    sitemap: 'https://outerpedia.com/sitemap.xml',
+    sitemap: `https://${process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'outerpedia.com'}/sitemap.xml`,
   };
 }
