@@ -8,6 +8,7 @@ import type { TranslationKey } from '@/i18n';
 import { getToolMeta, getToolSlugs, isDev } from '@/lib/data/tools';
 import Link from 'next/link';
 import { localePath } from '@/lib/navigation';
+import BreadcrumbSetter from '@/app/components/ui/BreadcrumbSetter';
 
 export const revalidate = 86400;
 
@@ -68,6 +69,7 @@ export default async function ToolDetailPage({ params }: Props) {
 
   return (
     <div className="px-4 py-6 md:px-6">
+      <BreadcrumbSetter label={title} />
       <Link
         href={localePath(lang, '/tools')}
         className="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-zinc-200 transition-colors"
