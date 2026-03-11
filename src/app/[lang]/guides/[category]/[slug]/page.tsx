@@ -33,7 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!guide) return {};
 
-  const title = lRec(guide.title, lang);
+  const metaTitleMap = guide.meta_title ? { ...guide.title, ...guide.meta_title } : guide.title;
+  const title = lRec(metaTitleMap, lang);
   const description = lRec(guide.description, lang);
 
   const cat = guide.category;

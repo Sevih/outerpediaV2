@@ -4,6 +4,7 @@ export type GuideMeta = {
   slug: string;
   category: string;
   title: LangMap;
+  meta_title?: LangMap;
   description: LangMap;
   icon: string;
   og_image?: string;

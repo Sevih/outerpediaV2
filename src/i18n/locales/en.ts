@@ -158,7 +158,7 @@ const en = {
   'tools.gear-usage-finder.mode_free.desc': 'Shows all available items and their possible stats. Results are ranked by how well the piece matches each build.',
   'tools.gear-usage-finder.matches': 'matching characters',
   'tools.gear-usage-finder.no_users': 'No character matches these criteria.',
-  'tools.patch-history': 'Patch Notes & Dev Notes',
+  'tools.patch-history': 'Patch & Dev Notes',
   'tools.patch-history.desc': 'Browse all patch notes, developer notes, hero compendium and more.',
   'tools.patch-history.era.major9': 'Major9 (Oct 2025+)',
   'tools.patch-history.era.smilegate': 'Smilegate (2023–2025)',
@@ -234,6 +234,7 @@ const en = {
   'page.guides.description':
     'Outerplane guides for adventure stages, boss fights, guild raids, world bosses, and beginner tips.',
   'page.guides.meta_title': 'Outerplane Guides – {monthYear}',
+  'page.guides.list': 'Guide List',
   'page.guide.meta_title': '{title} — {category}',
   'page.guide.by': 'By {author}',
   'page.guide.updated': 'Updated {date}',
@@ -251,7 +252,7 @@ const en = {
   'guides.category.irregular-extermination': 'Irregular Extermination',
   'guides.category.monad-gate': 'Monad Gate',
   'guides.category.skyward-tower': 'Skyward Tower',
-  'guides.category.other': 'Other',
+  'guides.category.other': 'Other Guides',
 
   // Guide category descriptions
   'guides.category.general-guides.desc':
@@ -288,6 +289,7 @@ const en = {
   'guides.recommended.phase2': 'Phase 2 — Recommended Characters',
   'guides.combat_footage': 'Combat Footage',
   'guides.team_selector': 'Suggested Teams',
+  'guides.strategy_guide': 'Strategy Guide',
   'guides.boss_display.immunities': 'Immunities',
   'guides.boss_display.skills': 'Skills',
   'guides.adventure.season': 'Season {n}',
@@ -560,7 +562,7 @@ const en = {
   'characters.tags.types.unit-type': 'Unit Type',
 
   // Character detail page
-  'page.character.meta_title': '{name} — Skills, Builds & Tier',
+  'page.character.meta_title': '{name} — Builds & Tier',
   'page.character.meta_description': '{name} ({element} {classType}) — skills breakdown, exclusive equipment, recommended gear builds, and tier ranking on Outerpedia.',
   'page.character.toc.overview': 'Overview',
   'page.character.toc.ee': 'Exclusive Equipment',

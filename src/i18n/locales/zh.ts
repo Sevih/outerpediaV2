@@ -234,6 +234,7 @@ const zh: Record<TranslationKey, string> = {
   'page.guides.description':
     '异域战记攻略指南。冒险关卡、Boss战、公会突袭、世界Boss、新手攻略。',
   'page.guides.meta_title': '异域战记 攻略指南 – {monthYear}',
+  'page.guides.list': '攻略列表',
   'page.guide.meta_title': '{title} — {category}',
   'page.guide.by': '作者: {author}',
   'page.guide.updated': '{date} 更新',
@@ -288,6 +289,7 @@ const zh: Record<TranslationKey, string> = {
   'guides.recommended.phase2': '阶段2 — 推荐角色',
   'guides.combat_footage': '实战视频',
   'guides.team_selector': '推荐队伍',
+  'guides.strategy_guide': '攻略指南',
   'guides.boss_display.immunities': '免疫',
   'guides.boss_display.skills': '技能',
   'guides.adventure.season': '第{n}季',
@@ -560,7 +562,7 @@ const zh: Record<TranslationKey, string> = {
   'characters.tags.types.unit-type': '获得方式',
 
   // Character detail page
-  'page.character.meta_title': '{name} — 技能、配装 & 节奏榜',
+  'page.character.meta_title': '{name} — 配装 & 节奏榜',
   'page.character.meta_description': '{name}（{element} {classType}）— 技能详解、专属装备、推荐配装、节奏榜排名。',
   'page.character.toc.overview': '概览',
   'page.character.toc.ee': '专属装备',

@@ -145,6 +145,7 @@ export default function ChainDualSection({ character }: Props) {
         <div className="mt-4">
           <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
             {t('page.character.skill.enhancement')}
+            <span className="sr-only"> — {l(cp, 'name', lang)}</span>
           </h4>
           <div className="space-y-1">
             {['2', '3', '4', '5'].map((lv) => {

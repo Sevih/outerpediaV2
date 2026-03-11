@@ -37,9 +37,9 @@ function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmun
 
   return (
     <div className="space-y-1.5">
-      <h5 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
+      <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
         {t('guides.boss_display.immunities')}
-      </h5>
+      </h4>
       <BuffDebuffDisplay buffs={[]} debuffs={items} iconOnly />
     </div>
   );

@@ -94,7 +94,10 @@ export default function SkillCard({ skill }: Props) {
       <div className="mb-3 text-sm leading-relaxed text-zinc-200">{formatEffectText(desc)}</div>
 
       <div className="mt-4">
-        <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">{t('page.character.skill.enhancement')}</h4>
+        <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+          {t('page.character.skill.enhancement')}
+          <span className="sr-only"> — {name}</span>
+        </h4>
         <div className="space-y-1">
           {['2', '3', '4', '5'].map((lv) => {
             const items = getEnhancement(skill, lv, lang);

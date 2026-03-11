@@ -20,6 +20,7 @@ export default function GuideCard({ guide, lang, t }: Props) {
     <Link
       href={localePath(lang, `/guides/${guide.category}/${guide.slug}`)}
       className="card-interactive group flex items-start gap-3 p-4 transition-colors"
+      aria-label={`${title} — ${t[`guides.category.${guide.category}` as TranslationKey] ?? guide.category}`}
     >
       <div className="relative h-10 w-10 shrink-0">
         <Image

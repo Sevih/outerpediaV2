@@ -158,7 +158,7 @@ const kr: Record<TranslationKey, string> = {
   'tools.gear-usage-finder.mode_free.desc': '모든 장비와 가능한 스탯을 표시합니다. 각 빌드와의 매칭도에 따라 순위를 매깁니다.',
   'tools.gear-usage-finder.matches': '명의 캐릭터 일치',
   'tools.gear-usage-finder.no_users': '조건에 맞는 캐릭터가 없습니다.',
-  'tools.patch-history': '패치 노트 & 개발자 노트',
+  'tools.patch-history': '패치 & 개발자 노트',
   'tools.patch-history.desc': '패치 노트, 개발자 노트, 영웅 대전 등을 확인하세요.',
   'tools.patch-history.era.major9': 'Major9 (2025년 10월~)',
   'tools.patch-history.era.smilegate': 'Smilegate (2023–2025)',
@@ -234,6 +234,7 @@ const kr: Record<TranslationKey, string> = {
   'page.guides.description':
     '아우터플레인 공략 가이드. 모험 스테이지, 보스전, 길드 레이드, 월드 보스, 초보자 팁.',
   'page.guides.meta_title': '아우터플레인 공략 가이드 – {monthYear}',
+  'page.guides.list': '가이드 목록',
   'page.guide.meta_title': '{title} — {category}',
   'page.guide.by': '작성자: {author}',
   'page.guide.updated': '{date} 업데이트',
@@ -288,6 +289,7 @@ const kr: Record<TranslationKey, string> = {
   'guides.recommended.phase2': '페이즈 2 — 추천 캐릭터',
   'guides.combat_footage': '전투 영상',
   'guides.team_selector': '추천 팀',
+  'guides.strategy_guide': '전략 가이드',
   'guides.boss_display.immunities': '면역',
   'guides.boss_display.skills': '스킬',
   'guides.adventure.season': '시즌 {n}',
@@ -560,7 +562,7 @@ const kr: Record<TranslationKey, string> = {
   'characters.tags.types.unit-type': '유닛 타입',
 
   // Character detail page
-  'page.character.meta_title': '{name} — 스킬, 빌드 & 티어',
+  'page.character.meta_title': '{name} — 빌드 & 티어',
   'page.character.meta_description': '{name} ({element} {classType}) — 스킬 분석, 전용 장비, 추천 장비 빌드, 티어 랭킹.',
   'page.character.toc.overview': '개요',
   'page.character.toc.ee': '전용 장비',

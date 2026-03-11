@@ -79,6 +79,8 @@ export default async function GuideCategoryPage({ params }: Props) {
         <p className="mt-2 text-sm text-zinc-400">{description}</p>
       )}
 
+      <h2 className="sr-only">{t['page.guides.list']}</h2>
+
       {guides.length === 0 ? (
         <p className="mt-8 text-zinc-500">{t['common.coming_soon']}</p>
       ) : categoryView ? (

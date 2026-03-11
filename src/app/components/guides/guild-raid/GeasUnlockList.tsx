@@ -51,7 +51,7 @@ export default function GeasUnlockList({ geas, pool }: Props) {
 
   return (
     <div className="space-y-2">
-      <h5 className="after:hidden">{t('guildraid.geas')}</h5>
+      <h4 className="after:hidden">{t('guildraid.geas')}</h4>
 
       <div className="space-y-1.5">
         {kills.map((kill) => {

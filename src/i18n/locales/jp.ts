@@ -158,7 +158,7 @@ const jp: Record<TranslationKey, string> = {
   'tools.gear-usage-finder.mode_free.desc': '全ての装備と使用可能なステータスを表示。各ビルドとの相性度でランキング。',
   'tools.gear-usage-finder.matches': '件のキャラクターが該当',
   'tools.gear-usage-finder.no_users': '条件に一致するキャラクターはいません。',
-  'tools.patch-history': 'パッチノート & 開発者ノート',
+  'tools.patch-history': 'パッチ & 開発者ノート',
   'tools.patch-history.desc': 'パッチノート、開発者ノート、ヒーロー大全などを閲覧。',
   'tools.patch-history.era.major9': 'Major9（2025年10月〜）',
   'tools.patch-history.era.smilegate': 'Smilegate（2023〜2025）',
@@ -234,6 +234,7 @@ const jp: Record<TranslationKey, string> = {
   'page.guides.description':
     'アウタープレーン攻略ガイド。冒険ステージ、ボス戦、ギルドレイド、ワールドボス、初心者向けのヒント。',
   'page.guides.meta_title': 'アウタープレーン 攻略ガイド – {monthYear}',
+  'page.guides.list': 'ガイド一覧',
   'page.guide.meta_title': '{title} — {category}',
   'page.guide.by': '著者: {author}',
   'page.guide.updated': '{date} 更新',
@@ -288,6 +289,7 @@ const jp: Record<TranslationKey, string> = {
   'guides.recommended.phase2': 'フェーズ2 — おすすめキャラクター',
   'guides.combat_footage': '実戦動画',
   'guides.team_selector': 'おすすめチーム',
+  'guides.strategy_guide': '攻略ガイド',
   'guides.boss_display.immunities': '免疫',
   'guides.boss_display.skills': 'スキル',
   'guides.adventure.season': 'シーズン{n}',
@@ -560,7 +562,7 @@ const jp: Record<TranslationKey, string> = {
   'characters.tags.types.unit-type': 'ユニットタイプ',
 
   // Character detail page
-  'page.character.meta_title': '{name} — スキル、ビルド & ティア',
+  'page.character.meta_title': '{name} — ビルド & ティア',
   'page.character.meta_description': '{name}（{element} {classType}）— スキル詳細、専用装備、推奨装備ビルド、ティアランキング。',
   'page.character.toc.overview': '概要',
   'page.character.toc.ee': '専用装備',
