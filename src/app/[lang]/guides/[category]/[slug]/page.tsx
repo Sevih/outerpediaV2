@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ogImage = guide.og_image
     ?? (guide.boss_id?.startsWith('2') ? `/images/characters/portrait/og_${guide.boss_id}.png` : undefined)
     ?? (guide.boss_id ? `/images/characters/boss/portrait/MT_${guide.boss_id}.png` : undefined)
-    ?? (cat === 'adventure' || cat === 'monad-gate' || cat === 'skyward-tower'
+    ?? (cat === 'adventure' || cat === 'monad-gate' || cat === 'skyward-tower' || cat === 'general-guides'
       ? `/images/guides/${guide.icon}.png`
       : undefined);
 
@@ -53,6 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!hasCustomOg) {
     if (cat === 'adventure' || cat === 'monad-gate') ogImageSize = { width: 75, height: 150 };
     else if (cat === 'skyward-tower') ogImageSize = { width: 1200, height: 630 };
+    else if (cat === 'general-guides') ogImageSize = { width: 150, height: 150 };
   }
 
   return createPageMetadata({
