@@ -58,15 +58,35 @@ async function main() {
   }
 
   const totalStart = Date.now();
+  const total = toRun.length;
+  const compact = process.stdout.isTTY && !process.argv.includes('--verbose');
 
-  for (const step of toRun) {
+  for (let i = 0; i < total; i++) {
+    const step = toRun[i];
     const start = Date.now();
+    const idx = `[${i + 1}/${total}]`;
+
+    if (compact) {
+      process.stdout.write(`\r  \x1b[2m${idx}\x1b[0m ${step.name}…`);
+    }
+
     try {
       const summary = await step.run();
-      const name = step.name.padEnd(NAME_PAD);
       const ms = Date.now() - start;
-      console.log(`  \x1b[32m✓\x1b[0m ${name}  ${summary || 'ok'} \x1b[2m(${ms}ms)\x1b[0m`);
+
+      if (compact) {
+        // Clear the progress line — will be overwritten by next step
+        process.stdout.write(`\r\x1b[K`);
+      }
+
+      if (!compact) {
+        const name = step.name.padEnd(NAME_PAD);
+        console.log(`  \x1b[32m✓\x1b[0m ${name}  ${summary || 'ok'} \x1b[2m(${ms}ms)\x1b[0m`);
+      }
     } catch (err) {
+      if (compact) {
+        process.stdout.write(`\r\x1b[K`);
+      }
       const name = step.name.padEnd(NAME_PAD);
       const ms = Date.now() - start;
       console.log(`  \x1b[31m✗\x1b[0m ${name}  FAILED \x1b[2m(${ms}ms)\x1b[0m`);
@@ -75,7 +95,13 @@ async function main() {
     }
   }
 
-  console.log(`\nDone in ${Date.now() - totalStart}ms\n`);
+  const elapsed = Date.now() - totalStart;
+
+  if (compact) {
+    console.log(`  \x1b[32m✓\x1b[0m Pipeline complete \x1b[2m(${total} steps in ${elapsed}ms)\x1b[0m`);
+  } else {
+    console.log(`\nDone in ${elapsed}ms\n`);
+  }
 }
 
 main();
