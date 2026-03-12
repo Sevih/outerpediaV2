@@ -138,6 +138,7 @@ export default function OuterplaneOnLinuxGuide() {
 
           {/* Splash Screen Bypass */}
           <Step n={9} title="2026 Splash-Screen Bypass">
+            <p>Only applies if using <strong>libhoudini</strong> as translation layer (some distros do not support libndk).</p>
             <Warning>
               <p>If stuck on the icon:</p>
               <ol className="list-decimal pl-5 mt-2 space-y-1">
