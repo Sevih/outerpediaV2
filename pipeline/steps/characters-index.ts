@@ -55,11 +55,15 @@ async function loadGroupMap(): Promise<Map<string, string>> {
   return map;
 }
 
+type EeEntry = { buff?: string[]; debuff?: string[] };
+
 export async function run() {
-  const [files, groupMap] = await Promise.all([
+  const [files, groupMap, eeRaw] = await Promise.all([
     readdir(PATHS.characters),
     loadGroupMap(),
+    readFile(join(PATHS.equipment, 'ee.json'), 'utf-8'),
   ]);
+  const eeMap: Record<string, EeEntry> = JSON.parse(eeRaw);
   const jsonFiles = files.filter(f => f.endsWith('.json'));
 
   const canonicalize = (name: string) => groupMap.get(name) || name;
@@ -132,6 +136,18 @@ export async function run() {
           if (canonicalBuffs.length || canonicalDebuffs.length) {
             effectsBySource[key] = { buff: canonicalBuffs, debuff: canonicalDebuffs };
           }
+        }
+      }
+
+      // ── EE effects ──
+      const ee = eeMap[char.ID];
+      if (ee) {
+        const eeCanonBuffs = [...new Set((ee.buff || []).map(canonicalize))];
+        const eeCanonDebuffs = [...new Set((ee.debuff || []).map(canonicalize))];
+        eeCanonBuffs.forEach(b => allCanonicalBuffs.add(b));
+        eeCanonDebuffs.forEach(d => allCanonicalDebuffs.add(d));
+        if (eeCanonBuffs.length || eeCanonDebuffs.length) {
+          effectsBySource['EXCLUSIVE_EQUIP'] = { buff: eeCanonBuffs, debuff: eeCanonDebuffs };
         }
       }
 

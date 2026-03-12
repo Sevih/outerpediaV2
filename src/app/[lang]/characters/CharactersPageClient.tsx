@@ -37,7 +37,7 @@ const CHAIN_BIT: Record<string, number> = { Start: 0, Join: 1, Finish: 2 };
 const GIFT_BIT: Record<string, number> = { Science: 0, Luxury: 1, 'Magic Tool': 2, Craftwork: 3, 'Natural Object': 4 };
 const RARITY_BIT: Record<number, number> = { 1: 0, 2: 1, 3: 2 };
 const ROLE_BIT: Record<string, number> = { dps: 0, support: 1, sustain: 2 };
-const SRC_BIT: Record<string, number> = { SKT_FIRST: 0, SKT_SECOND: 1, SKT_ULTIMATE: 2, SKT_CHAIN_PASSIVE: 3, DUAL_ATTACK: 4 };
+const SRC_BIT: Record<string, number> = { SKT_FIRST: 0, SKT_SECOND: 1, SKT_ULTIMATE: 2, SKT_CHAIN_PASSIVE: 3, DUAL_ATTACK: 4, EXCLUSIVE_EQUIP: 5 };
 
 // Inverse maps: bit position → value
 const ELEM_INV = Object.fromEntries(Object.entries(ELEM_BIT).map(([k, v]) => [v, k]));
@@ -192,7 +192,7 @@ function decodeZToState(z: string | undefined, maps: EffectMaps): Partial<Payloa
       q: raw.q,
       uniq: raw.u === 1,
       tagLogic: raw.tl === 1 ? 'AND' : 'OR',
-      sources: raw.src ? fromBitfield(raw.src, SRC_INV, 5) as SkillKey[] : [],
+      sources: raw.src ? fromBitfield(raw.src, SRC_INV, 6) as SkillKey[] : [],
     };
   } catch {
     return null;

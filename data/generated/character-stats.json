@@ -10595,6 +10595,102 @@
       }
     }
   },
+  "2000117": {
+    "info": {
+      "id": "2000117",
+      "class": "CCT_ATTACKER",
+      "subclass": "ATTACKER",
+      "element": "CET_FIRE",
+      "star": "3"
+    },
+    "premium": {
+      "skill_23": "14",
+      "buffID": "ATTACKER_PASSIVE_2",
+      "stat": "CHC",
+      "applyingType": "OAT_ADD",
+      "rawValue": 50
+    },
+    "steps": {
+      "lv1_ev0": {
+        "ATK": 93,
+        "DEF": 23,
+        "HP": 486,
+        "SPD": 122,
+        "EFF": 10,
+        "RES": 11,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 5.0
+      },
+      "lv20_ev1": {
+        "ATK": 279,
+        "DEF": 65,
+        "HP": 1060,
+        "SPD": 124,
+        "EFF": 30,
+        "RES": 30,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 5.0
+      },
+      "lv40_ev2": {
+        "ATK": 474,
+        "DEF": 111,
+        "HP": 1665,
+        "SPD": 126,
+        "EFF": 60,
+        "RES": 50,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 5.0
+      },
+      "lv60_ev3": {
+        "ATK": 682,
+        "DEF": 156,
+        "HP": 2270,
+        "SPD": 130,
+        "EFF": 90,
+        "RES": 70,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 5.0
+      },
+      "lv80_ev4": {
+        "ATK": 890,
+        "DEF": 201,
+        "HP": 2875,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 90,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 5.0
+      },
+      "lv100_ev5": {
+        "ATK": 1099,
+        "DEF": 320,
+        "HP": 3884,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 110,
+        "CHC": 5.0,
+        "CHD": 150.0,
+        "DMG_RED": 0.0,
+        "DMG_INC": 0.0,
+        "premium_value": 5.0
+      }
+    }
+  },
   "2000119": {
     "info": {
       "id": "2000119",

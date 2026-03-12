@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import type { SkillData } from '@/types/character';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
@@ -106,7 +106,9 @@ export default function SkillCard({ skill }: Props) {
             return (
               <div key={lv} className={`flex gap-2 text-xs transition-opacity ${active ? '' : 'opacity-30'}`}>
                 <span className="shrink-0 font-semibold text-yellow-400">+{lv}</span>
-                <span className="text-zinc-300">{items.join(', ')}</span>
+                <span className="text-zinc-300">{items.map((item, i) => (
+                  <Fragment key={i}>{i > 0 && ', '}{formatEffectText(item)}</Fragment>
+                ))}</span>
               </div>
             );
           })}

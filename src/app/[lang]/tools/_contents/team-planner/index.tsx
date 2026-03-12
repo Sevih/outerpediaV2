@@ -1,9 +1,22 @@
-'use client';
+import { getCharactersForList } from '@/lib/data/characters';
+import { getBuffs, getDebuffs } from '@/lib/data/effects';
+import TeamPlannerClient from './TeamPlannerClient';
 
-export default function TeamPlannerTool() {
+export default async function TeamPlannerTool() {
+  const [characters, buffs, debuffs] = await Promise.all([
+    getCharactersForList(),
+    getBuffs(),
+    getDebuffs(),
+  ]);
+
+  const buffMap = Object.fromEntries(buffs.map((b) => [b.name, b]));
+  const debuffMap = Object.fromEntries(debuffs.map((d) => [d.name, d]));
+
   return (
-    <div className="mx-auto max-w-4xl text-center text-zinc-400">
-      <p>Team Planner — Under development</p>
-    </div>
+    <TeamPlannerClient
+      characters={characters}
+      buffMap={buffMap}
+      debuffMap={debuffMap}
+    />
   );
 }

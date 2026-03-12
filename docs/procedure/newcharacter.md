@@ -1,0 +1,1 @@
+Ouvrir le parser et lancer l'extraction du nouveau perso

@@ -138,8 +138,14 @@ export default async function CharacterDetailPage({ params }: Props) {
   for (const s of sets) addBoss(s.boss);
   const bossMap = await getBossDisplayMap([...bossIds]);
 
-  // Filter effects to only those referenced by this character's skills
+  const ee = eeMap[character.ID] ?? null;
+
+  // Filter effects to only those referenced by this character's skills + EE
   const effectNames = collectEffectNames(character as Parameters<typeof collectEffectNames>[0]);
+  if (ee) {
+    for (const b of ee.buff ?? []) effectNames.add(b);
+    for (const d of ee.debuff ?? []) effectNames.add(d);
+  }
   const buffMap: Record<string, Effect> = {};
   for (const b of buffsArr) { if (effectNames.has(b.name)) buffMap[b.name] = b; }
   const debuffMap: Record<string, Effect> = {};
@@ -150,7 +156,6 @@ export default async function CharacterDetailPage({ params }: Props) {
     getCharacterStats(character.ID),
     getT(lang),
   ]);
-  const ee = eeMap[character.ID] ?? null;
   const giftItems = giftItemsMap[character.gift as keyof typeof giftItemsMap] ?? [];
 
   const fullname = l(character, 'Fullname', lang);

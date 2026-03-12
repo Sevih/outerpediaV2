@@ -34,18 +34,35 @@ type Props = {
   iconOnly?: boolean;
 };
 
+/** Deduplicate effect names by group: if two effects share the same group, keep only the first one */
+function dedup(names: string[], map: Record<string, Effect>): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const name of names) {
+    const effect = map[name];
+    const groupKey = effect?.group || name;
+    if (seen.has(groupKey)) continue;
+    seen.add(groupKey);
+    out.push(name);
+  }
+  return out;
+}
+
 /** Render a row of buff/debuff effect icons */
 export default function BuffDebuffDisplay({ buffs, debuffs, iconOnly }: Props) {
   const { buffMap, debuffMap } = useContext(EffectsContext);
 
   if (!buffs.length && !debuffs.length) return null;
 
+  const uniqueBuffs = dedup(buffs, buffMap);
+  const uniqueDebuffs = dedup(debuffs, debuffMap);
+
   return (
     <div className="flex flex-wrap items-center gap-1.5">
-      {buffs.map((b) => (
+      {uniqueBuffs.map((b) => (
         <EffectBadge key={b} effect={buffMap[b]} type="buff" iconOnly={iconOnly} />
       ))}
-      {debuffs.map((d) => (
+      {uniqueDebuffs.map((d) => (
         <EffectBadge key={d} effect={debuffMap[d]} type="debuff" iconOnly={iconOnly} />
       ))}
     </div>
