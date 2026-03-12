@@ -255,6 +255,8 @@ const kr: Record<TranslationKey, string> = {
   'page.guide.updated': '{date} 업데이트',
   'page.guide.older_version_warning':
     '참고: 이 공략은 이전 버전입니다 ({currentVersion}). 기본 메커니즘은 유사하지만, 최신 전략과 캐릭터 추천은 {newestVersion} 버전을 확인해 주세요.',
+  'page.guide.updating_disclaimer':
+    '이 가이드는 현재 이 버전에 맞게 업데이트 중입니다. 일부 추천이 변경될 수 있습니다.',
 
   // Guide categories
   'guides.category.general-guides': '일반 가이드',

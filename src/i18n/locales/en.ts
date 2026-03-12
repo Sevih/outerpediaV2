@@ -255,6 +255,8 @@ const en = {
   'page.guide.updated': 'Updated {date}',
   'page.guide.older_version_warning':
     'Note: This is an older strategy ({currentVersion}). While the core mechanics remain similar, we recommend checking the updated {newestVersion} version for the latest strategies and character recommendations.',
+  'page.guide.updating_disclaimer':
+    'This guide is currently being updated for this version. Some recommendations may change.',
 
   // Guide categories
   'guides.category.general-guides': 'General Guides',

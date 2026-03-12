@@ -15,6 +15,8 @@ type Props = {
   title: string;
   introduction?: string;
   disclaimer?: string;
+  /** Show a "guide is being updated" banner. */
+  updating?: boolean;
   versions?: Record<string, GuideVersion>;
   defaultVersion?: string;
   children?: ReactNode;
@@ -27,6 +29,7 @@ export default function GuideTemplate({
   title,
   introduction,
   disclaimer,
+  updating,
   versions,
   defaultVersion,
   children,
@@ -66,9 +69,9 @@ export default function GuideTemplate({
           : title}
       </h2>
 
-      {disclaimer && (
+      {(disclaimer || updating) && (
         <div className="panel-warning px-4 py-3 text-sm text-yellow-200">
-          {disclaimer}
+          {disclaimer ?? t('page.guide.updating_disclaimer')}
         </div>
       )}
 

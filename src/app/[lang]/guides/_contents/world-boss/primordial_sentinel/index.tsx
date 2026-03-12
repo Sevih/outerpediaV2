@@ -14,6 +14,12 @@ import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
 
+/* ── Version: 03-2026 ──────────────────────────────────── */
+import v03_26Strings from './versions/03-2026/strings.json';
+import v03_26Teams from './versions/03-2026/teams.json';
+import v03_26Recommended from './versions/03-2026/recommended.json';
+import v03_26Tips from './versions/03-2026/tips.json';
+
 /* ── Version: 11-2025 ──────────────────────────────────── */
 import v11Strings from './versions/11-2025/strings.json';
 import v11Teams from './versions/11-2025/teams.json';
@@ -34,6 +40,14 @@ const preloadedBosses: Record<string, Boss> = {
 };
 
 /* ── Typed data ─────────────────────────────────────────── */
+
+const mar2026 = {
+  strings: v03_26Strings as Record<string, LangMap>,
+  teams: v03_26Teams as TeamData,
+  phase1: v03_26Recommended.phase1 as CharacterRecommendation[],
+  phase2: v03_26Recommended.phase2 as CharacterRecommendation[],
+  tips: v03_26Tips as Record<string, LangMap[]>,
+};
 
 const nov2025 = {
   strings: v11Strings as Record<string, LangMap>,
@@ -72,10 +86,31 @@ export default function PrimordialSentinelGuide() {
 
   return (
     <GuideTemplate
-      title={lRec(nov2025.strings.title, lang)}
-      introduction={lRec(nov2025.strings.intro, lang)}
-      defaultVersion="november2025"
+      title={lRec(mar2026.strings.title, lang)}
+      introduction={lRec(mar2026.strings.intro, lang)}
+      updating
+      defaultVersion="march2026"
       versions={{
+        march2026: {
+          label: lRec(mar2026.strings.label, lang),
+          content: (
+            <>
+              <WorldBossDisplay config={bossConfig} defaultMode="Extreme" preloadedBosses={preloadedBosses} />
+              <hr className="my-6 border-neutral-700" />
+              <TacticalTips
+                sections={[
+                  { title: 'strategy', tips: mar2026.tips.strategy },
+                  { title: 'phase2', tips: mar2026.tips.phase2 },
+                ]}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <RecommendedCharacterList title="phase1" entries={mar2026.phase1} />
+              <RecommendedCharacterList title="phase2" entries={mar2026.phase2} />
+              <hr className="my-6 border-neutral-700" />
+              <StageBasedTeamSelector teamData={mar2026.teams} defaultStage="Phase 1" />
+            </>
+          ),
+        },
         november2025: {
           label: lRec(nov2025.strings.label, lang),
           content: (

@@ -255,6 +255,8 @@ const zh: Record<TranslationKey, string> = {
   'page.guide.updated': '{date} 更新',
   'page.guide.older_version_warning':
     '注意：这是旧版攻略（{currentVersion}）。虽然核心机制相似，但建议查看最新的{newestVersion}版本以获取最新策略和角色推荐。',
+  'page.guide.updating_disclaimer':
+    '本指南正在针对此版本进行更新。部分推荐内容可能会有所变动。',
 
   // Guide categories
   'guides.category.general-guides': '综合攻略',

@@ -1,0 +1,114 @@
+{
+  "phase1": [
+    {
+      "names": ["Iota", "Stella"],
+      "reason": {
+        "en": "Priority reduction with {D/BT_ACTION_GAUGE}.",
+        "jp": "{D/BT_ACTION_GAUGE}による行動順減少。",
+        "kr": "{D/BT_ACTION_GAUGE}로 행동 순서 감소.",
+        "zh": "通过{D/BT_ACTION_GAUGE}减少行动顺序。"
+      }
+    },
+    {
+      "names": ["Notia", "Fran"],
+      "reason": {
+        "en": "Priority push with {B/BT_ACTION_GAUGE}.",
+        "jp": "{B/BT_ACTION_GAUGE}による行動順プッシュ。",
+        "kr": "{B/BT_ACTION_GAUGE}로 행동 순서 푸시.",
+        "zh": "通过{B/BT_ACTION_GAUGE}推进行动顺序。"
+      }
+    },
+    {
+      "names": ["Valentine"],
+      "reason": {
+        "en": "Both priority push {B/BT_ACTION_GAUGE} and priority reduction {D/BT_ACTION_GAUGE}.",
+        "jp": "行動順プッシュ{B/BT_ACTION_GAUGE}と行動順減少{D/BT_ACTION_GAUGE}の両方。",
+        "kr": "행동 순서 푸시 {B/BT_ACTION_GAUGE}와 행동 순서 감소 {D/BT_ACTION_GAUGE} 모두.",
+        "zh": "同时具有行动顺序推进{B/BT_ACTION_GAUGE}和行动顺序减少{D/BT_ACTION_GAUGE}。"
+      }
+    },
+    {
+      "names": ["Dianne", "Demiurge Delta", "Saeran", "Tio", "Nella", "Astei"],
+      "reason": {
+        "en": "{C/Healer} with {B/BT_ACTION_GAUGE}.",
+        "jp": "{B/BT_ACTION_GAUGE}を持つ{C/Healer}。",
+        "kr": "{B/BT_ACTION_GAUGE}를 가진 {C/Healer}.",
+        "zh": "具有{B/BT_ACTION_GAUGE}的{C/Healer}。"
+      }
+    }
+  ],
+  "phase2": [
+    {
+      "names": ["Monad Eva", "Viella"],
+      "reason": {
+        "en": "{C/Healer} with {B/BT_CALL_BACKUP}.",
+        "jp": "{B/BT_CALL_BACKUP}を持つ{C/Healer}。",
+        "kr": "{B/BT_CALL_BACKUP}를 가진 {C/Healer}.",
+        "zh": "具有{B/BT_CALL_BACKUP}的{C/Healer}。"
+      }
+    },
+    {
+      "names": ["Demiurge Luna", "Regina"],
+      "reason": {
+        "en": "{C/Mage} with {B/BT_ACTION_GAUGE} on S1.",
+        "jp": "S1に{B/BT_ACTION_GAUGE}を持つ{C/Mage}。",
+        "kr": "S1에 {B/BT_ACTION_GAUGE}를 가진 {C/Mage}.",
+        "zh": "S1具有{B/BT_ACTION_GAUGE}的{C/Mage}。"
+      }
+    },
+    {
+      "names": ["Drakhan", "Gnosis Dahlia", "Demiurge Stella"],
+      "reason": {
+        "en": "{C/Striker} with {B/BT_ACTION_GAUGE} on S1.",
+        "jp": "S1に{B/BT_ACTION_GAUGE}を持つ{C/Striker}。",
+        "kr": "S1에 {B/BT_ACTION_GAUGE}를 가진 {C/Striker}.",
+        "zh": "S1具有{B/BT_ACTION_GAUGE}的{C/Striker}。"
+      }
+    },
+    {
+      "names": ["Demiurge Drakhan"],
+      "reason": {
+        "en": "{C/Defender} with {B/BT_ACTION_GAUGE} on S1.",
+        "jp": "S1に{B/BT_ACTION_GAUGE}を持つ{C/Defender}。",
+        "kr": "S1에 {B/BT_ACTION_GAUGE}를 가진 {C/Defender}.",
+        "zh": "S1具有{B/BT_ACTION_GAUGE}的{C/Defender}。"
+      }
+    },
+    {
+      "names": ["Gnosis Beth"],
+      "reason": {
+        "en": "Pushes team priority with her DoT {D/BT_DOT_2000092}.",
+        "jp": "DoT {D/BT_DOT_2000092}でチームの行動順をプッシュ。",
+        "kr": "DoT {D/BT_DOT_2000092}로 팀 행동 순서 푸시.",
+        "zh": "通过DoT {D/BT_DOT_2000092}推进队伍行动顺序。"
+      }
+    },
+    {
+      "names": ["Kuro", "Demiurge Vlada", "Gnosis Viella"],
+      "reason": {
+        "en": "Can remove {B/BT_STAT|ST_SPEED} from the boss.",
+        "jp": "ボスから{B/BT_STAT|ST_SPEED}を除去可能。",
+        "kr": "보스에게서 {B/BT_STAT|ST_SPEED} 제거 가능.",
+        "zh": "可以移除Boss的{B/BT_STAT|ST_SPEED}。"
+      }
+    },
+    {
+      "names": ["Akari"],
+      "reason": {
+        "en": "Can prevent the boss from gaining {B/BT_STAT|ST_SPEED}.",
+        "jp": "ボスが{B/BT_STAT|ST_SPEED}を獲得するのを防止可能。",
+        "kr": "보스가 {B/BT_STAT|ST_SPEED}를 얻는 것을 방지 가능.",
+        "zh": "可以阻止Boss获得{B/BT_STAT|ST_SPEED}。"
+      }
+    },
+    {
+      "names": ["Skadi"],
+      "reason": {
+        "en": "Cycles skill cooldowns faster with {B/BT_COOL_CHARGE}.",
+        "jp": "{B/BT_COOL_CHARGE}でスキルクールダウンを高速化。",
+        "kr": "{B/BT_COOL_CHARGE}로 스킬 쿨다운 가속.",
+        "zh": "通过{B/BT_COOL_CHARGE}加速技能冷却。"
+      }
+    }
+  ]
+}

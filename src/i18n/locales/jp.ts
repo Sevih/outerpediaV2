@@ -255,6 +255,8 @@ const jp: Record<TranslationKey, string> = {
   'page.guide.updated': '{date} 更新',
   'page.guide.older_version_warning':
     '注意: これは古い攻略情報です（{currentVersion}）。基本的な仕組みは同じですが、最新の攻略やキャラクター推奨については、{newestVersion}版をご確認ください。',
+  'page.guide.updating_disclaimer':
+    'このガイドは現在このバージョン向けに更新中です。推奨内容が変更される場合があります。',
 
   // Guide categories
   'guides.category.general-guides': '総合ガイド',
