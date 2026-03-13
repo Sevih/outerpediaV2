@@ -88,7 +88,6 @@ export default function PrimordialSentinelGuide() {
     <GuideTemplate
       title={lRec(mar2026.strings.title, lang)}
       introduction={lRec(mar2026.strings.intro, lang)}
-      updating
       defaultVersion="march2026"
       versions={{
         march2026: {
