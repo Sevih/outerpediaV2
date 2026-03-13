@@ -40,7 +40,7 @@ export default function OuterplaneOnLinuxGuide() {
   return (
     <GuideTemplate
       title="Outerplane on Linux (2026)"
-      disclaimer="Important: Waydroid is not officially supported by the Outerplane developers. This is a community guide — use at your own risk. Google Play Games (the only officially supported PC platform) is not available on Linux."
+      disclaimer="Important: This is an unofficial community guide, not endorsed or supported by the Outerplane team. The game does not officially support Linux, and the team is unable to provide any assistance for issues encountered in this environment. Users proceed at their own risk — the team reserves the right to take action if problems arise. For the officially supported PC experience, we recommend Google Play Games."
     >
       {/* Hero */}
       <section className="relative overflow-hidden rounded-xl border border-zinc-800 bg-linear-to-br from-zinc-900/60 via-zinc-900 to-zinc-900/60 p-6 md:p-8 mb-8">
