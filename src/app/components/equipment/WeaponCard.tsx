@@ -79,7 +79,7 @@ export default function WeaponCard({ weapon, lang, bossMap }: Props) {
         <p className="text-xs text-zinc-300">{formatScaledEffect(effectDesc, effectDesc1)}</p>
       )}
 
-      <EquipmentSource source={weapon.source} boss={weapon.boss} bossMap={bossMap} lang={lang} compact />
+      <EquipmentSource source={weapon.source} boss={weapon.boss} bossMap={bossMap} lang={lang} />
     </Link>
   );
 }

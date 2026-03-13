@@ -20,8 +20,6 @@ type Props = {
   lang: Lang;
   /** When true, boss names link to their guide page. False by default (safe inside <a> cards). */
   linkable?: boolean;
-  /** Smaller text for card contexts */
-  compact?: boolean;
 };
 
 /** Render a single boss entry: portrait + name, optionally wrapped in a link */
@@ -50,8 +48,8 @@ function BossEntry({ info, name, href, large }: { info: BossDisplayInfo; name: s
   return inner;
 }
 
-export default function EquipmentSource({ source, boss, bossMap, lang, linkable = false, compact = false }: Props) {
-  const { href: localHref } = useI18n();
+export default function EquipmentSource({ source, boss, bossMap, lang, linkable = false }: Props) {
+  const { t, href: localHref } = useI18n();
 
   if (!source && !boss) return null;
 
@@ -67,16 +65,19 @@ export default function EquipmentSource({ source, boss, bossMap, lang, linkable 
     const sourceLabel = firstBoss ? lRec(firstBoss.source, lang) : null;
 
     return (
-      <div className={compact ? "text-xs text-zinc-400" : "text-sm text-zinc-300"}>
-        {sourceLabel && <p>{sourceLabel}</p>}
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-          {bossIds.map(id => {
-            const info = bossMap[id];
-            const bName = info ? lRec(info.name, lang) || id : id;
-            return info
-              ? <BossEntry key={id} info={info} name={bName} href={bossHref(info)} large={linkable} />
-              : <span key={id}>{bName}</span>;
-          })}
+      <div>
+        <p className="font-semibold text-[#fbbf24] mb-1 text-sm">{t('equip.detail.source')}</p>
+        <div className="text-xs text-zinc-300">
+          {sourceLabel && <p>{sourceLabel}</p>}
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            {bossIds.map(id => {
+              const info = bossMap[id];
+              const bName = info ? lRec(info.name, lang) || id : id;
+              return info
+                ? <BossEntry key={id} info={info} name={bName} href={bossHref(info)} large={linkable} />
+                : <span key={id}>{bName}</span>;
+            })}
+          </div>
         </div>
       </div>
     );
@@ -86,8 +87,11 @@ export default function EquipmentSource({ source, boss, bossMap, lang, linkable 
   const sourceLabel = (source && SOURCE_LABELS[source]) ? lRec(SOURCE_LABELS[source], lang) : source;
 
   return (
-    <div className={compact ? "text-xs text-zinc-400" : "text-sm text-zinc-300"}>
-      {sourceLabel && <p>{sourceLabel}</p>}
+    <div>
+      <p className="font-semibold text-[#fbbf24] mb-1 text-sm">{t('equip.detail.source')}</p>
+      <div className="text-xs text-zinc-300">
+        {sourceLabel && <p>{sourceLabel}</p>}
+      </div>
     </div>
   );
 }

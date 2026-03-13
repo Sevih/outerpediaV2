@@ -97,6 +97,7 @@ const jp: Record<TranslationKey, string> = {
   'equip.detail.piece.shoes': 'シューズ',
   'equip.detail.set_effects': 'セット効果',
   'equip.detail.and_more': '他{n}キャラクター',
+  'equip.detail.source': '入手先',
   'page.tierlist.title': 'アウタープレーン ティアリスト',
   'page.tierlist.meta_title': 'アウタープレーン ティアリスト – {monthYear}',
   'page.tierlist.description':

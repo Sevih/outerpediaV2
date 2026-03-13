@@ -1,6 +1,7 @@
 'use client';
 
 import * as HoverCard from '@radix-ui/react-hover-card';
+import { useState, useCallback, useEffect, useRef } from 'react';
 
 type Props = {
   children: React.ReactNode;
@@ -10,12 +11,37 @@ type Props = {
 
 /**
  * Shared tooltip wrapper using Radix HoverCard.
- * Eliminates per-component boilerplate.
+ * Desktop: hover. Mobile: tap to open, tap outside to close.
  */
 export default function InlineTooltip({ children, content, bg = 'bg-neutral-800' }: Props) {
+  const [open, setOpen] = useState(false);
+  const triggerRef = useRef<HTMLSpanElement>(null);
+
+  const handleTap = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    if ('ontouchstart' in window) {
+      e.preventDefault();
+      setOpen((v) => !v);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const close = (e: TouchEvent) => {
+      if (triggerRef.current && !triggerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener('touchstart', close);
+    return () => document.removeEventListener('touchstart', close);
+  }, [open]);
+
   return (
-    <HoverCard.Root openDelay={0} closeDelay={0}>
-      <HoverCard.Trigger asChild>{children}</HoverCard.Trigger>
+    <HoverCard.Root openDelay={0} closeDelay={0} open={open} onOpenChange={setOpen}>
+      <HoverCard.Trigger asChild>
+        <span ref={triggerRef} onClick={handleTap} onTouchEnd={handleTap}>
+          {children}
+        </span>
+      </HoverCard.Trigger>
       <HoverCard.Portal>
         <HoverCard.Content
           side="top"
