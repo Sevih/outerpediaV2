@@ -302,6 +302,7 @@ const jp: Record<TranslationKey, string> = {
   'guides.tips.mechanics': 'メカニクス',
   'guides.tips.phase1': 'フェーズ1',
   'guides.tips.phase2': 'フェーズ2',
+  'guides.tips.transition': 'フェーズ移行',
   'guides.recommended.title': 'おすすめキャラクター',
   'guides.recommended.phase1': 'フェーズ1 — おすすめキャラクター',
   'guides.recommended.phase2': 'フェーズ2 — おすすめキャラクター',

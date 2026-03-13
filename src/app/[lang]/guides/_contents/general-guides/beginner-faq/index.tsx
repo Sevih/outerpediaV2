@@ -173,7 +173,6 @@ const LABELS = {
   baseUpgradeOrder: { en: 'You can unlock and upgrade them in the order of Eva\'s Menu:', jp: 'エヴァのメニュー順に解放・アップグレードできます：', kr: '에바의 메뉴 순서대로 해금하고 업그레이드할 수 있습니다:', zh: '可以按艾娃菜单顺序解锁和升级：' } satisfies LangMap,
   antiparticleGenerator: { en: 'Antiparticle Generator', jp: '反粒子ジェネレーター', kr: '반입자 발생기', zh: '反粒子发生器' } satisfies LangMap,
   maxThisFirst: { en: 'Max this first!', jp: '最優先で最大に！', kr: '최우선으로 최대로!', zh: '优先升满！' } satisfies LangMap,
-  expedition: { en: 'Expedition', jp: '探検', kr: '탐험', zh: '探险' } satisfies LangMap,
   synchroRoom: { en: 'Synchro Room', jp: 'シンクロルーム', kr: '싱크로 룸', zh: '同步室' } satisfies LangMap,
   katesWorkshop: { en: 'Kate\'s Workshop', jp: 'ケイトの工房', kr: '케이트의 공방', zh: '凯特工坊' } satisfies LangMap,
   supplyModule: { en: 'Supply Module', jp: '補給モジュール', kr: '보급 모듈', zh: '补给模块' } satisfies LangMap,
@@ -617,16 +616,13 @@ export default function BeginnerFAQGuide() {
                 <p className="text-sm font-semibold text-red-300">1. {lRec(LABELS.antiparticleGenerator, lang)} <span className="text-sm text-gray-400">{lRec(LABELS.maxThisFirst, lang)}</span></p>
               </Callout>
               <Callout variant="warning">
-                <p className="text-sm font-semibold text-orange-300">2. {lRec(LABELS.expedition, lang)}</p>
-              </Callout>
-              <Callout variant="warning">
-                <p className="text-sm font-semibold text-yellow-300">3. {lRec(LABELS.synchroRoom, lang)}</p>
+                <p className="text-sm font-semibold text-orange-300">2. {lRec(LABELS.synchroRoom, lang)}</p>
               </Callout>
               <Callout variant="tip">
-                <p className="text-sm font-semibold text-lime-300">4. {lRec(LABELS.katesWorkshop, lang)}</p>
+                <p className="text-sm font-semibold text-yellow-300">3. {lRec(LABELS.katesWorkshop, lang)}</p>
               </Callout>
               <Callout variant="tip">
-                <p className="text-sm font-semibold text-green-300">5. {lRec(LABELS.supplyModule, lang)}</p>
+                <p className="text-sm font-semibold text-lime-300">4. {lRec(LABELS.supplyModule, lang)}</p>
               </Callout>
               <p className="text-sm">{lRec(LABELS.unlockQuirks, lang)}</p>
             </div>

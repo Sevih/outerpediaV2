@@ -7,7 +7,7 @@ import type { LangMap } from '@/types/common';
 import type { TranslationKey } from '@/i18n/locales/en';
 
 const TITLE_PRESETS = [
-  'tactical', 'strategy', 'general', 'important', 'mechanics', 'phase1', 'phase2',
+  'tactical', 'strategy', 'general', 'important', 'mechanics', 'phase1', 'phase2', 'transition',
 ] as const;
 
 type TitlePreset = (typeof TITLE_PRESETS)[number];

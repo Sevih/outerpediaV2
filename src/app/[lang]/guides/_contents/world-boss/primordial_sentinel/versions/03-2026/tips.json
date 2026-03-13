@@ -1,16 +1,10 @@
 {
-  "strategy": [
+  "phase1": [
     {
-      "en": "This entire fight revolves around priority control. In Phase 1, abuse priority reduction as much as possible.",
-      "jp": "この戦闘は行動順制御が全てです。フェーズ1では、行動順減少を最大限活用しましょう。",
-      "kr": "이 전투는 행동 순서 제어가 전부입니다. 페이즈 1에서는 행동 순서 감소를 최대한 활용하세요.",
-      "zh": "整场战斗围绕行动顺序控制展开。在第一阶段，尽可能利用行动顺序减少。"
-    },
-    {
-      "en": "In Phase 2, the boss is immune to priority reduction - make your characters as fast as possible.",
-      "jp": "フェーズ2では、ボスは行動順減少に免疫があるため、キャラクターをできるだけ速くする必要があります。",
-      "kr": "페이즈 2에서는 보스가 행동 순서 감소에 면역이므로 캐릭터를 최대한 빠르게 만들어야 합니다.",
-      "zh": "在第二阶段，Boss免疫行动顺序减少，因此需要让角色尽可能快。"
+      "en": "Abuse priority gain and reduction as much as possible to maximize your turns.",
+      "jp": "行動順の増減を最大限活用してターン数を稼ぎましょう。",
+      "kr": "행동 순서 증가와 감소를 최대한 활용하여 턴 수를 극대화하세요.",
+      "zh": "尽可能利用行动顺序增减来最大化回合数。"
     },
     {
       "en": "Equip Sage and Rogue charms for Skill Chains and CP generation (don't forget critical hit chance for Rogue).",
@@ -23,20 +17,32 @@
       "jp": "両フェーズで、{B/UNIQUE_DAHLIA_A}バフによる{D/BT_STAT|ST_SPEED}のために、少なくとも1人のヒーラーを編成しましょう。",
       "kr": "양 페이즈에서 {B/UNIQUE_DAHLIA_A} 버프로 인한 {D/BT_STAT|ST_SPEED}를 위해 최소 1명의 힐러를 편성하세요.",
       "zh": "在两个阶段中，至少带一名治疗师，通过{B/UNIQUE_DAHLIA_A}buff来获得{D/BT_STAT|ST_SPEED}。"
-    }
-  ],
-  "phase2": [
-    {
-      "en": "If you have {P/Monad Eva} at 6 stars in Team 2, you can stack CP in Phase 1 then swap to Team 2 near the end.",
-      "jp": "チーム2に6凸の{P/Monad Eva}がいる場合、フェーズ1でCPを貯めてから終盤でチーム2に切り替えられます。",
-      "kr": "팀 2에 6성 {P/Monad Eva}가 있다면 페이즈 1에서 CP를 쌓은 후 끝날 무렵 팀 2로 교체할 수 있습니다.",
-      "zh": "如果队伍2中有6星{P/Monad Eva}，可以在第一阶段积累CP，然后在接近结束时切换到队伍2。"
     },
     {
-      "en": "{P/Monad Eva} will instantly {D/BT_SEAL_ADDITIVE_ATTACK} the boss, allowing you to keep the CP you built during Phase 1.",
-      "jp": "{P/Monad Eva}が即座にボスに{D/BT_SEAL_ADDITIVE_ATTACK}を付与し、フェーズ1で貯めたCPを維持できます。",
-      "kr": "{P/Monad Eva}가 즉시 보스에게 {D/BT_SEAL_ADDITIVE_ATTACK}를 부여하여 페이즈 1에서 쌓은 CP를 유지할 수 있습니다.",
-      "zh": "{P/Monad Eva}会立即给Boss上{D/BT_SEAL_ADDITIVE_ATTACK}，让你保留在第一阶段积累的CP。"
+      "en": "You have 2 ways to keep the Chain Points you accumulated during Phase 1 — see the Transition section below.",
+      "jp": "フェーズ1で貯めたチェーンポイントを維持する方法は2つあります — 下の移行セクションを参照してください。",
+      "kr": "페이즈 1에서 쌓은 체인 포인트를 유지하는 방법은 2가지입니다 — 아래 전환 섹션을 참고하세요.",
+      "zh": "有2种方法可以保留第一阶段积累的连锁点数 - 请参阅下方的阶段过渡部分。"
+    }
+  ],
+  "transition": [
+    {
+      "en": "If you have {P/Monad Eva} at 6 stars: her mere presence will apply {D/BT_SEAL_ADDITIVE_ATTACK} to the boss, preventing his extra attack that removes all your CP. You can swap to Team 2 before the transition (safest) or after it — but swapping after requires your team to be fast enough to act before the boss ({AS/Swiftness} or priority boost recommended).",
+      "jp": "6凸の{P/Monad Eva}がいる場合：彼女がいるだけでボスに{D/BT_SEAL_ADDITIVE_ATTACK}が付与され、CPを全て奪う追加攻撃を防げます。チーム2への切り替えは移行前（最も安全）でも移行後でも可能ですが、移行後に切り替える場合はボスより先に行動できる速度が必要です（{AS/Swiftness}や行動順アップ推奨）。",
+      "kr": "6성 {P/Monad Eva}가 있는 경우: 그녀의 존재만으로 보스에게 {D/BT_SEAL_ADDITIVE_ATTACK}가 적용되어 모든 CP를 빼앗는 추가 공격을 방지합니다. 팀 2로의 교체는 전환 전(가장 안전) 또는 전환 후에 할 수 있지만, 전환 후에 교체하려면 보스보다 먼저 행동할 수 있을 만큼 빨라야 합니다 ({AS/Swiftness} 또는 행동 순서 증가 권장).",
+      "zh": "如果有6星{P/Monad Eva}：她的存在就会给Boss施加{D/BT_SEAL_ADDITIVE_ATTACK}，阻止Boss的额外攻击夺走你所有的CP。你可以在阶段转换前切换到队伍2（最安全），也可以在转换后切换——但转换后切换需要你的队伍足够快，能在Boss之前行动（推荐{AS/Swiftness}或行动顺序提升）。"
+    },
+    {
+      "en": "Without {P/Monad Eva} 6 stars: make sure you have at least 1 {E/Fire}, {E/Water} or {E/Earth} character in Team 2.",
+      "jp": "{P/Monad Eva}6凸なしの場合：チーム2に{E/Fire}・{E/Water}・{E/Earth}属性のキャラクターを最低1人入れてください。",
+      "kr": "{P/Monad Eva} 6성이 없는 경우: 팀 2에 {E/Fire}, {E/Water}, {E/Earth} 속성 캐릭터를 최소 1명 편성하세요.",
+      "zh": "没有6星{P/Monad Eva}的情况：确保队伍2中至少有1名{E/Fire}、{E/Water}或{E/Earth}属性角色。"
+    },
+    {
+      "en": "Swap to Team 2 near the Phase 2 threshold (1.2M damage). Let the boss play, then push him into Phase 2. The boss plays again and gains his buff {B/CORE_ENERGY} — break him before his next turn to remove the buff and avoid his extra attack that strips your CP.",
+      "jp": "フェーズ2の閾値（120万ダメージ）付近でチーム2に切り替えます。ボスに行動させ、フェーズ2に移行させます。ボスが再行動して{B/CORE_ENERGY}バフを得たら、次のターン前にブレイクしてバフを解除し、CPを奪う追加攻撃を防ぎましょう。",
+      "kr": "페이즈 2 전환 기준(120만 데미지) 근처에서 팀 2로 교체하세요. 보스가 행동하게 한 후 페이즈 2로 진입시킵니다. 보스가 다시 행동하여 {B/CORE_ENERGY} 버프를 얻으면, 다음 턴 전에 브레이크하여 버프를 제거하고 CP를 빼앗는 추가 공격을 방지하세요.",
+      "zh": "在接近第二阶段阈值（120万伤害）时切换到队伍2。让Boss行动，然后将其推入第二阶段。Boss再次行动并获得{B/CORE_ENERGY}增益——在他下次行动前击破他以移除增益，避免夺走CP的额外攻击。"
     }
   ]
 }

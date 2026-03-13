@@ -98,8 +98,8 @@ export default function PrimordialSentinelGuide() {
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
                 sections={[
-                  { title: 'strategy', tips: mar2026.tips.strategy },
-                  { title: 'phase2', tips: mar2026.tips.phase2 },
+                  { title: 'phase1', tips: mar2026.tips.phase1 },
+                  { title: 'transition', tips: mar2026.tips.transition },
                 ]}
               />
               <hr className="my-6 border-neutral-700" />

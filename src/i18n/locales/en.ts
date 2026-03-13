@@ -302,6 +302,7 @@ const en = {
   'guides.tips.mechanics': 'Mechanics',
   'guides.tips.phase1': 'Phase 1',
   'guides.tips.phase2': 'Phase 2',
+  'guides.tips.transition': 'Phase Transition',
   'guides.recommended.title': 'Recommended Characters',
   'guides.recommended.phase1': 'Phase 1 — Recommended Characters',
   'guides.recommended.phase2': 'Phase 2 — Recommended Characters',

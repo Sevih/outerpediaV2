@@ -302,6 +302,7 @@ const zh: Record<TranslationKey, string> = {
   'guides.tips.mechanics': '机制',
   'guides.tips.phase1': '阶段1',
   'guides.tips.phase2': '阶段2',
+  'guides.tips.transition': '阶段过渡',
   'guides.recommended.title': '推荐角色',
   'guides.recommended.phase1': '阶段1 — 推荐角色',
   'guides.recommended.phase2': '阶段2 — 推荐角色',

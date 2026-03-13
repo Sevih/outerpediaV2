@@ -302,6 +302,7 @@ const kr: Record<TranslationKey, string> = {
   'guides.tips.mechanics': '메카닉스',
   'guides.tips.phase1': '페이즈 1',
   'guides.tips.phase2': '페이즈 2',
+  'guides.tips.transition': '페이즈 전환',
   'guides.recommended.title': '추천 캐릭터',
   'guides.recommended.phase1': '페이즈 1 — 추천 캐릭터',
   'guides.recommended.phase2': '페이즈 2 — 추천 캐릭터',
