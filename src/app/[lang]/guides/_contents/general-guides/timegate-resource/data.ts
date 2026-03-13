@@ -124,7 +124,7 @@ export const data: TimegateData = {
             name: 'Blue Stardust',
             sources: [
                 { sourceKey: SK.IRREGULAR_EXTERMINATION_POINT, monthly: 150 },
-                { sourceKey: SK.KATES_WORKSHOP, weekly: 40 },
+                { sourceKey: SK.KATES_WORKSHOP, weekly: 70 },
             ],
         },
         {
@@ -138,7 +138,7 @@ export const data: TimegateData = {
             name: 'Blue Memory Stone',
             sources: [
                 { sourceKey: SK.IRREGULAR_EXTERMINATION_POINT, monthly: 150 },
-                { sourceKey: SK.KATES_WORKSHOP, weekly: 40 },
+                { sourceKey: SK.KATES_WORKSHOP, weekly: 70 },
             ],
         },
         {
@@ -163,7 +163,7 @@ export const data: TimegateData = {
             sources: [
                 { sourceKey: SK.JOINT_CHALLENGE_SHOP, weekly: 1 },
                 { sourceKey: SK.IRREGULAR_EXTERMINATION_POINT, monthly: 9 },
-                { sourceKey: SK.KATES_WORKSHOP, weekly: 2 },
+                { sourceKey: SK.KATES_WORKSHOP, weekly: 4 },
             ],
         },
         {
