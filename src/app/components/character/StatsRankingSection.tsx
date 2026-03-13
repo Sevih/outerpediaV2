@@ -161,12 +161,15 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
         {/* Ranking */}
         <div className="card flex flex-col items-center justify-center rounded-xl p-4">
           <div className="mb-4 text-sm font-semibold text-zinc-300">{t('page.character.toc.ranking')}</div>
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="grid grid-cols-2 place-items-center gap-x-6 gap-y-2">
+            <TierCard label={t('page.character.tier.pve')} rank={pveRank} placeholder={t('common.coming_soon')} />
+            <TierCard label={t('page.character.tier.pvp')} rank={character.rank_pvp ?? null} placeholder={t('common.coming_soon')} />
             {ee && (
               <TierCard label={t('page.character.ee.rank')} rank={ee.rank} placeholder={t('common.coming_soon')} />
             )}
-            <TierCard label={t('page.character.tier.pve')} rank={pveRank} placeholder={t('common.coming_soon')} />
-            <TierCard label={t('page.character.tier.pvp')} rank={character.rank_pvp ?? null} placeholder={t('common.coming_soon')} />
+            {ee?.rank10 && (
+              <TierCard label={t('page.character.ee.rank10')} rank={ee.rank10} placeholder={t('common.coming_soon')} />
+            )}
           </div>
         </div>
       </div>

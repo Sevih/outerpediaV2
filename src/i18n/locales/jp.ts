@@ -623,6 +623,7 @@ const jp: Record<TranslationKey, string> = {
   'page.character.ee.effect_max': '効果（Lv.10）',
   'page.character.ee.main_stat': 'メインステータス',
   'page.character.ee.rank': '専用装備ランク',
+  'page.character.ee.rank10': '専用装備+10ランク',
   'page.character.ee.badge': '{name}の専用装備',
   'page.character.tier.pve': 'PvE 評価',
   'page.character.tier.pvp': 'PvP 評価',

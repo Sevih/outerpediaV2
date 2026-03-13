@@ -623,6 +623,7 @@ const kr: Record<TranslationKey, string> = {
   'page.character.ee.effect_max': '효과 (Lv.10)',
   'page.character.ee.main_stat': '메인 스탯',
   'page.character.ee.rank': '전용 장비 랭크',
+  'page.character.ee.rank10': '전용 장비+10 랭크',
   'page.character.ee.badge': '{name}의 전용 장비',
   'page.character.tier.pve': 'PvE 티어',
   'page.character.tier.pvp': 'PvP 티어',

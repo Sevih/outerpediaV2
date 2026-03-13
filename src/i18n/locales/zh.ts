@@ -623,6 +623,7 @@ const zh: Record<TranslationKey, string> = {
   'page.character.ee.effect_max': '效果（Lv.10）',
   'page.character.ee.main_stat': '主属性',
   'page.character.ee.rank': '专属装备评级',
+  'page.character.ee.rank10': '专属装备+10评级',
   'page.character.ee.badge': '{name}的专属装备',
   'page.character.tier.pve': 'PvE评级',
   'page.character.tier.pvp': 'PvP评级',

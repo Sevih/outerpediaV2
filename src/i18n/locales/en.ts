@@ -623,6 +623,7 @@ const en = {
   'page.character.ee.effect_max': 'Effect (Lv.10)',
   'page.character.ee.main_stat': 'Main Stat',
   'page.character.ee.rank': 'EE Rank',
+  'page.character.ee.rank10': 'EE+10 Rank',
   'page.character.ee.badge': '{name}\'s Exclusive Equipment',
   'page.character.tier.pve': 'PvE Tier',
   'page.character.tier.pvp': 'PvP Tier',
