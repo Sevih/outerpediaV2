@@ -107,6 +107,13 @@ export default function PrimordialSentinelGuide() {
               <RecommendedCharacterList title="phase2" entries={mar2026.phase2} />
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={mar2026.teams} defaultStage="Phase 1" />
+              <hr className="my-6 border-neutral-700" />
+              <CombatFootage
+                videoId="2eeYmkacaqA"
+                title="Primordial Sentinel - World Boss - SSS - Extreme League"
+                author="Sevih"
+                date="14/01/2025"
+              />
             </>
           ),
         },
@@ -131,7 +138,7 @@ export default function PrimordialSentinelGuide() {
               <CombatFootage
                 videoId="4me_DqMftbs"
                 title="Primordial Sentinel - World Boss - SSS - Extreme League"
-                author="Unknown"
+                author="Sevih"
                 date="01/11/2025"
               />
             </>
