@@ -592,6 +592,47 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": ["AtLeast1_Defender"],
+          "recommended": [
+            {
+              "names": ["2700037", "2000037", "2000103"],
+              "reason": {
+                "en": "Validate restriction and have {B/BT_REMOVE_DEBUFF}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000074", "2000058", "2000113", "2000108"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000100", "2000098", "2000084", "2000036"],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000083"],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
         }
       ]
     },
@@ -1574,6 +1615,38 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": ["BanStriker"],
+          "recommended": [
+            {
+              "names": ["2000113", "2700003", "2000107", "2000068"],
+              "reason": {
+                "en": "{D/BT_FREEZE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [ "2000091", "2000069"],
+              "reason": {
+                "en": "{D/BT_STUN} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000111"],
+              "reason": {
+                "en": "{D/BT_GOLDEN_CURSE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
         }
       ]
     },
@@ -2146,6 +2219,38 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": ["AtLeast1_Striker"],
+          "recommended": [
+            {
+              "names": ["2000008"],
+              "reason": {
+                "en": "{B/HEAVY_STRIKE} unit and validate restriction.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000091", "2000086" ],
+              "reason": {
+                "en": "{B/HEAVY_STRIKE} units.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000072", "2000043","2000107","2000075","2000057"],
+              "reason": {
+                "en": "{D/BT_SEALED_RECEIVE_HEAL} options.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
         }
       ]
     },
@@ -2503,6 +2608,38 @@
             },
             {
               "names": [ "2000068", "2000107", "2000113"],
+              "reason": {
+                "en": "Other hard CC options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": ["BanLight"],
+          "recommended": [
+            {
+              "names": ["2000060"],
+              "reason": {
+                "en": "{C/Ranger} with {D/BT_SEALED} or {D/BT_SILENCE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [ "2000109", "2000069", "2000046"],
+              "reason": {
+                "en": "100% {D/BT_STUN} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": ["2000111", "2700003", "2000068", "2000107", "2000113"],
               "reason": {
                 "en": "Other hard CC options",
                 "jp": "",
