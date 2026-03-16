@@ -84,7 +84,7 @@ type BaseExclusiveEquipment = {
   effect10: string;
   icon_effect: string;
   rank: string;
-  rank10: string | null;
+  rank10: string;
   buff: string[];
   debuff: string[];
 };

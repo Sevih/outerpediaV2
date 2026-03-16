@@ -167,7 +167,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
             {ee && (
               <TierCard label={t('page.character.ee.rank')} rank={ee.rank} placeholder={t('common.coming_soon')} />
             )}
-            {ee?.rank10 && (
+            {ee && (
               <TierCard label={t('page.character.ee.rank10')} rank={ee.rank10} placeholder={t('common.coming_soon')} />
             )}
           </div>
