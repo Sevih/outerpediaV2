@@ -47,7 +47,6 @@ export const PATHS = {
   adminJson: join(ROOT, 'data/admin/json'),
 
   // Datamine
-  parserV3: join(ROOT, 'datamine/ParserV3'),
   datamineFiles: join(ROOT, 'datamine/files'),
   datamineBundles: join(ROOT, 'datamine/files/bundles'),
   datamineCli: join(ROOT, 'datamine/AssetStudioModCLI_net9_win64/AssetStudioModCLI.exe'),

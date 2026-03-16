@@ -18,6 +18,7 @@ async function countFiles(key: string, ext = '.json') {
 
 const sections = [
   { name: 'Characters', href: '/admin/characters', dir: 'character' },
+  { name: 'Extractor', href: '/admin/extractor', dir: '' },
   { name: 'Parser', href: '/admin/parser', dir: '' },
 ];
 

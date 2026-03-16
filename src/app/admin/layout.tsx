@@ -13,6 +13,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <Link href="/admin" className="text-lg font-bold">Outerpedia Admin</Link>
           <nav className="flex gap-4 text-sm text-zinc-400">
             <Link href="/admin/characters" className="hover:text-zinc-100">Characters</Link>
+            <Link href="/admin/extractor" className="hover:text-zinc-100">Extractor</Link>
             <Link href="/admin/parser" className="hover:text-zinc-100">Parser</Link>
           </nav>
         </div>

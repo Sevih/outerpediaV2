@@ -83,10 +83,10 @@
         "5_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>30%</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
+        "2": ["+10% damage", "+1 Weakness Gauge damage"],
+        "2_jp": ["ダメージ+10%", "WGダメージ+1"],
+        "2_kr": ["피해량 +10%", "WG 감소량 +1"],
+        "2_zh": ["伤害量+10%", "WG降低量+1"],
         "3": ["+10% Priority"],
         "3_jp": ["行動ゲージ10%UP"],
         "3_kr": ["행동 게이지 +10%"],
@@ -138,10 +138,10 @@
         "5_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
+        "2": ["+10% damage", "+1 Weakness Gauge damage"],
+        "2_jp": ["ダメージ+10%", "WGダメージ+1"],
+        "2_kr": ["피해량 +10%", "WG 감소량 +1"],
+        "2_zh": ["伤害量+10%", "WG降低量+1"],
         "3": ["-1 turn Skill Cooldown"],
         "3_jp": ["スキルターン-1ターン"],
         "3_kr": ["스킬 쿨타임 -1턴"],
@@ -150,10 +150,10 @@
         "4_jp": ["ダメージ+10%"],
         "4_kr": ["피해량 +10%"],
         "4_zh": ["伤害量+10%"],
-        "5": ["+20% damage","+1 Weakness Gauge damage"],
-        "5_jp": ["ダメージ+20%","WGダメージ+1"],
-        "5_kr": ["피해량 +20%","WG 감소량 +1"],
-        "5_zh": ["伤害量+20%","WG降低量+1"]
+        "5": ["+20% damage", "+1 Weakness Gauge damage"],
+        "5_jp": ["ダメージ+20%", "WGダメージ+1"],
+        "5_kr": ["피해량 +20%", "WG 감소량 +1"],
+        "5_zh": ["伤害量+20%", "WG降低量+1"]
       },
       "cd": "4",
       "wgr": 1,
@@ -230,10 +230,10 @@
         "5_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>2回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
+        "2": ["+10% damage", "+1 Weakness Gauge damage"],
+        "2_jp": ["ダメージ+10%", "WGダメージ+1"],
+        "2_kr": ["피해량 +10%", "WG 감소량 +1"],
+        "2_zh": ["伤害量+10%", "WG降低量+1"],
         "3": ["-1 turn Skill Cooldown"],
         "3_jp": ["スキルターン-1ターン"],
         "3_kr": ["스킬 쿨타임 -1턴"],
@@ -242,13 +242,14 @@
         "4_jp": ["ダメージ+15%"],
         "4_kr": ["피해량 +15%"],
         "4_zh": ["伤害量+15%"],
-        "5": ["+1 turn Gift of Buffs duration","+1 Weakness Gauge damage"],
-        "5_jp": ["強化効果プレゼント+1ターン","WGダメージ+1"],
-        "5_kr": ["강화 효과 선물 지속 +1턴","WG 감소량 +1"],
-        "5_zh": ["强化效果赠礼持续+1回合","WG降低量+1"]
+        "5": ["+1 turn Gift of Buffs duration", "+1 Weakness Gauge damage"],
+        "5_jp": ["強化効果プレゼント+1ターン", "WGダメージ+1"],
+        "5_kr": ["강화 효과 선물 지속 +1턴", "WG 감소량 +1"],
+        "5_zh": ["强化效果赠礼持续+1回合", "WG降低量+1"]
       },
       "cd": "5",
-      "buff": ["BT_DMG_OWNER_TEAM_BUFF","BT_CASTER_COPY_BUFF"],
+      "wgr": 2,
+      "buff": ["BT_DMG_OWNER_TEAM_BUFF", "BT_CASTER_COPY_BUFF"],
       "debuff": [],
       "offensive": true,
       "target": "multi"
@@ -284,10 +285,13 @@
         "5_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": ["チェーンスキルと連携ダメージ+5%", "WGダメージ+1"],
+        "2_kr": ["협공/스킬 체인 피해량 +5%", "WG 감소량 +1"],
+        "2_zh": ["夹攻/连携技能伤害量+5%", "WG降低量+1"],
         "3": ["+5% Dual Attack and Skill Chain damage"],
         "3_jp": ["チェーンスキルと連携ダメージ+5%"],
         "3_kr": ["협공/스킬 체인 피해량 +5%"],
@@ -296,10 +300,13 @@
         "4_jp": ["チェーンスキルと連携ダメージ+5%"],
         "4_kr": ["협공/스킬 체인 피해량 +5%"],
         "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5_jp": ["チェーンスキルと連携ダメージ+5%", "WGダメージ+1"],
+        "5_kr": ["협공/스킬 체인 피해량 +5%", "WG 감소량 +1"],
+        "5_zh": ["夹攻/连携技能伤害量+5%", "WG降低量+1"]
       },
       "wgr": 3,
       "wgr_dual": 1,
