@@ -24,7 +24,7 @@ export type SkillData = WithLocalizedFields<{
   SkillType: string;
   true_desc_levels: LocalizedLevels;
   enhancement: LocalizedEnhancements;
-  cd: string | null;
+  cd: number | null;
   wgr: number;
   wgr_dual?: number;
   buff: string[];

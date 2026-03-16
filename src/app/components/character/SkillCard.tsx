@@ -43,7 +43,7 @@ export default function SkillCard({ skill }: Props) {
     }
   }
   const adjustedWgr = skill.wgr + wgrBonus;
-  const adjustedCd = skill.cd ? Number(skill.cd) - cdReduction : null;
+  const adjustedCd = skill.cd ? skill.cd - cdReduction : null;
 
   return (
     <div className="card rounded-xl p-4">

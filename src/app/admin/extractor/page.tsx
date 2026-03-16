@@ -11,50 +11,37 @@ interface CharacterEntry {
   exists: boolean;
 }
 
-type BlockStatus = 'idle' | 'loading' | 'ok' | 'error';
-
-interface Block {
-  key: string;
-  label: string;
-  action: string;
-  status: BlockStatus;
-  data: unknown;
-  error?: string;
+interface Diff {
+  field: string;
+  existing: string;
+  extracted: string;
 }
 
-const BLOCKS_DEF: { key: string; label: string; action: string }[] = [
-  { key: 'info', label: 'Base Info', action: 'info' },
-  { key: 'skills', label: 'Skills', action: 'skills' },
-  { key: 'transcend', label: 'Transcend', action: 'transcend' },
-];
+interface CompareResult {
+  total: number;
+  withDiffs: number;
+  ok: number;
+  results: { id: string; name: string; diffs: Diff[] }[];
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type AnyData = Record<string, any>;
 
 const ELEMENT_COLORS: Record<string, string> = {
   Fire: 'text-red-400', Water: 'text-blue-400', Earth: 'text-amber-400',
   Light: 'text-yellow-300', Dark: 'text-purple-400',
 };
 
-const STATUS_STYLE: Record<BlockStatus, string> = {
-  idle: 'border-zinc-700 bg-zinc-900/50',
-  loading: 'border-blue-800 bg-blue-950/30',
-  ok: 'border-green-800 bg-green-950/20',
-  error: 'border-red-800 bg-red-950/30',
-};
+const RANKS = ['SS', 'S', 'A', 'B', 'C'];
+const ROLES = ['dps', 'support', 'sustain'];
 
-const STATUS_BADGE: Record<BlockStatus, { text: string; cls: string }> = {
-  idle: { text: '—', cls: 'text-zinc-600' },
-  loading: { text: 'loading...', cls: 'text-blue-400' },
-  ok: { text: 'OK', cls: 'text-green-400' },
-  error: { text: 'ERROR', cls: 'text-red-400' },
-};
+// ── Diff highlighting ────────────────────────────────────────────────
 
-/** Highlight differences between two strings word-by-word */
 function DiffHighlight({ existing, extracted }: { existing: string; extracted: string }) {
-  // Split both by words while keeping delimiters
   const tokenize = (s: string) => s.split(/(\s+|(?=<)|(?<=>))/);
   const aTokens = tokenize(existing);
   const bTokens = tokenize(extracted);
 
-  // Simple LCS-based diff
   const max = Math.max(aTokens.length, bTokens.length);
   const aResult: { text: string; type: 'same' | 'del' }[] = [];
   const bResult: { text: string; type: 'same' | 'add' }[] = [];
@@ -66,22 +53,17 @@ function DiffHighlight({ existing, extracted }: { existing: string; extracted: s
       bResult.push({ text: bTokens[bi], type: 'same' });
       ai++; bi++;
     } else {
-      // Look ahead to find next common token
       let foundA = -1, foundB = -1;
       for (let look = 1; look < Math.min(20, max); look++) {
         if (foundA === -1 && bi + look < bTokens.length && aTokens[ai] === bTokens[bi + look]) foundA = look;
         if (foundB === -1 && ai + look < aTokens.length && aTokens[ai + look] === bTokens[bi]) foundB = look;
         if (foundA !== -1 || foundB !== -1) break;
       }
-
       if (foundA !== -1 && (foundB === -1 || foundA <= foundB)) {
-        // b has extra tokens
         for (let j = 0; j < foundA; j++) bResult.push({ text: bTokens[bi++], type: 'add' });
       } else if (foundB !== -1) {
-        // a has extra tokens
         for (let j = 0; j < foundB; j++) aResult.push({ text: aTokens[ai++], type: 'del' });
       } else {
-        // Both differ
         if (ai < aTokens.length) aResult.push({ text: aTokens[ai++], type: 'del' });
         if (bi < bTokens.length) bResult.push({ text: bTokens[bi++], type: 'add' });
       }
@@ -106,12 +88,276 @@ function DiffHighlight({ existing, extracted }: { existing: string; extracted: s
   );
 }
 
-interface CompareResult {
-  total: number;
-  withDiffs: number;
-  ok: number;
-  results: { id: string; name: string; diffs: { field: string; existing: string; extracted: string }[] }[];
+// ── Diff table (reused in compare-all and per-character) ─────────────
+
+function DiffTable({ diffs }: { diffs: Diff[] }) {
+  if (diffs.length === 0) return <p className="text-sm text-green-400">No diffs</p>;
+  return (
+    <table className="w-full text-xs">
+      <thead>
+        <tr className="text-zinc-500">
+          <th className="py-0.5 pr-3 text-left font-medium">Field</th>
+          <th className="py-0.5 pr-3 text-left font-medium">Existing</th>
+          <th className="py-0.5 text-left font-medium">Extracted</th>
+        </tr>
+      </thead>
+      <tbody>
+        {diffs.map((d, i) => {
+          const isLongText = d.field.includes('desc_lv') || d.field.startsWith('transcend.');
+          if (isLongText) {
+            return (
+              <tr key={i} className="border-t border-zinc-800/50">
+                <td className="py-1 pr-3 font-mono text-zinc-400 whitespace-nowrap align-top">{d.field}</td>
+                <td colSpan={2} className="py-1">
+                  <DiffHighlight existing={d.existing} extracted={d.extracted} />
+                </td>
+              </tr>
+            );
+          }
+          return (
+            <tr key={i} className="border-t border-zinc-800/50">
+              <td className="py-1 pr-3 font-mono text-zinc-400 whitespace-nowrap">{d.field}</td>
+              <td className="py-1 pr-3 text-red-300 max-w-xs truncate" title={d.existing}>{d.existing || <span className="text-zinc-600">null</span>}</td>
+              <td className="py-1 text-green-300 max-w-xs truncate" title={d.extracted}>{d.extracted || <span className="text-zinc-600">null</span>}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
 }
+
+// ── Character detail panel ───────────────────────────────────────────
+
+function CharacterDetail({ id, name, exists, onSaved }: {
+  id: string;
+  name: string;
+  exists: boolean;
+  onSaved: () => void;
+}) {
+  const [status, setStatus] = useState<'loading' | 'ready' | 'saving' | 'error'>('loading');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  const [diffs, setDiffs] = useState<Diff[]>([]);
+  const [existing, setExisting] = useState<AnyData | null>(null);
+
+  // Manual fields
+  const [rank, setRank] = useState<string | null>(null);
+  const [rankPvp, setRankPvp] = useState<string | null>(null);
+  const [role, setRole] = useState<string | null>(null);
+  const [video, setVideo] = useState('');
+  const [skillPriority, setSkillPriority] = useState<Record<string, { prio: number }>>({
+    First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 },
+  });
+
+  // Load data on mount
+  useEffect(() => {
+    setStatus('loading');
+    setError('');
+    setSuccess('');
+    setDiffs([]);
+
+    const fetchAll = async () => {
+      try {
+        // Fetch existing character data if it exists
+        let existingData: AnyData | null = null;
+        if (exists) {
+          const charRes = await fetch(`/api/admin/characters/${id}`);
+          if (charRes.ok) existingData = await charRes.json();
+        }
+        setExisting(existingData);
+
+        // Populate manual fields from existing data
+        if (existingData) {
+          setRank(existingData.rank ?? null);
+          setRankPvp(existingData.rank_pvp ?? null);
+          setRole(existingData.role ?? null);
+          setVideo(existingData.video ?? '');
+          setSkillPriority(existingData.skill_priority ?? { First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } });
+        } else {
+          setRank(null);
+          setRankPvp(null);
+          setRole(null);
+          setVideo('');
+          setSkillPriority({ First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } });
+        }
+
+        // Fetch per-character compare diffs if character exists
+        if (exists) {
+          const compareRes = await fetch('/api/admin/extractor?action=compare');
+          const compareData = await compareRes.json();
+          const charDiffs = compareData.results?.find((r: { id: string }) => r.id === id);
+          setDiffs(charDiffs?.diffs ?? []);
+        }
+
+        setStatus('ready');
+      } catch {
+        setError('Failed to load data');
+        setStatus('error');
+      }
+    };
+
+    fetchAll();
+  }, [id, exists]);
+
+  async function handleSave() {
+    setStatus('saving');
+    setError('');
+    setSuccess('');
+
+    try {
+      const res = await fetch('/api/admin/extractor', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id,
+          manual: {
+            rank,
+            rank_pvp: rankPvp,
+            role,
+            tags: existing?.tags,
+            skill_priority: skillPriority,
+            video: video || undefined,
+          },
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error ?? 'Save failed');
+        setStatus('ready');
+      } else {
+        setSuccess('Saved!');
+        setTimeout(() => setSuccess(''), 2000);
+        setStatus('ready');
+        onSaved();
+      }
+    } catch {
+      setError('Save failed');
+      setStatus('ready');
+    }
+  }
+
+  if (status === 'loading') {
+    return <div className="flex justify-center py-10 text-zinc-500">Loading {name}...</div>;
+  }
+
+  return (
+    <div className="space-y-6">
+      {/* Header + save */}
+      <div className="sticky top-0 z-10 -mx-1 flex items-center gap-3 bg-zinc-950/80 px-1 py-2 backdrop-blur">
+        <h2 className="text-lg font-bold">{name}</h2>
+        <span className="font-mono text-sm text-zinc-600">{id}</span>
+        {!exists && <span className="rounded bg-blue-900/30 px-2 py-0.5 text-xs text-blue-400">New</span>}
+        <div className="flex-1" />
+        {error && <span className="text-sm text-red-400">{error}</span>}
+        {success && <span className="text-sm text-green-400">{success}</span>}
+        <button
+          onClick={handleSave}
+          disabled={status === 'saving'}
+          className="rounded-lg bg-blue-600 px-5 py-1.5 text-sm font-semibold shadow transition hover:bg-blue-500 disabled:opacity-50"
+        >
+          {status === 'saving' ? 'Saving...' : 'Save'}
+        </button>
+      </div>
+
+      {/* Manual fields */}
+      <section className="rounded-lg border border-zinc-800 p-4 space-y-4">
+        <h3 className="font-semibold text-zinc-300">Manual Fields</h3>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          {/* Rank PvE */}
+          <label className="flex flex-col gap-1">
+            <span className="text-xs text-zinc-500">Rank PvE</span>
+            <select
+              value={rank ?? ''}
+              onChange={e => setRank(e.target.value || null)}
+              className="rounded border border-zinc-700 bg-zinc-900 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none"
+            >
+              <option value="">—</option>
+              {RANKS.map(r => <option key={r} value={r}>{r}</option>)}
+            </select>
+          </label>
+
+          {/* Rank PvP */}
+          <label className="flex flex-col gap-1">
+            <span className="text-xs text-zinc-500">Rank PvP</span>
+            <select
+              value={rankPvp ?? ''}
+              onChange={e => setRankPvp(e.target.value || null)}
+              className="rounded border border-zinc-700 bg-zinc-900 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none"
+            >
+              <option value="">—</option>
+              {RANKS.map(r => <option key={r} value={r}>{r}</option>)}
+            </select>
+          </label>
+
+          {/* Role */}
+          <label className="flex flex-col gap-1">
+            <span className="text-xs text-zinc-500">Role</span>
+            <select
+              value={role ?? ''}
+              onChange={e => setRole(e.target.value || null)}
+              className="rounded border border-zinc-700 bg-zinc-900 px-2 py-1.5 text-sm focus:border-blue-500 focus:outline-none"
+            >
+              <option value="">—</option>
+              {ROLES.map(r => <option key={r} value={r}>{r}</option>)}
+            </select>
+          </label>
+
+          {/* Video */}
+          <label className="flex flex-col gap-1">
+            <span className="text-xs text-zinc-500">Video (YouTube ID)</span>
+            <input
+              type="text"
+              value={video}
+              onChange={e => setVideo(e.target.value)}
+              placeholder="e.g. PueXtFsRHI0"
+              className="rounded border border-zinc-700 bg-zinc-900 px-2 py-1.5 text-sm placeholder-zinc-600 focus:border-blue-500 focus:outline-none"
+            />
+          </label>
+        </div>
+
+        {/* Skill Priority */}
+        <div>
+          <span className="text-xs text-zinc-500">Skill Priority</span>
+          <div className="mt-1 flex gap-4">
+            {(['First', 'Second', 'Ultimate'] as const).map(sk => (
+              <label key={sk} className="flex items-center gap-2">
+                <span className="text-xs text-zinc-400">{sk}</span>
+                <select
+                  value={skillPriority[sk]?.prio ?? 1}
+                  onChange={e => setSkillPriority(prev => ({
+                    ...prev,
+                    [sk]: { prio: parseInt(e.target.value) },
+                  }))}
+                  className="rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm focus:border-blue-500 focus:outline-none"
+                >
+                  {[1, 2, 3].map(p => <option key={p} value={p}>{p}</option>)}
+                </select>
+              </label>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Diffs */}
+      {exists && diffs.length > 0 && (
+        <section className="rounded-lg border border-red-900/50 bg-red-950/10 p-4">
+          <h3 className="mb-3 font-semibold text-red-400">{diffs.length} diff(s) with existing data</h3>
+          <DiffTable diffs={diffs} />
+        </section>
+      )}
+
+      {exists && diffs.length === 0 && status === 'ready' && (
+        <section className="rounded-lg border border-green-900/50 bg-green-950/10 p-4">
+          <p className="text-sm text-green-400">Extracted data matches existing — no diffs</p>
+        </section>
+      )}
+    </div>
+  );
+}
+
+// ── Main page ────────────────────────────────────────────────────────
 
 export default function ExtractorPage() {
   const [characters, setCharacters] = useState<CharacterEntry[]>([]);
@@ -119,67 +365,21 @@ export default function ExtractorPage() {
   const [filter, setFilter] = useState<'all' | 'new' | 'existing'>('all');
   const [loading, setLoading] = useState(true);
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [blocks, setBlocks] = useState<Block[]>([]);
-  const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [comparing, setComparing] = useState(false);
   const [compareResult, setCompareResult] = useState<CompareResult | null>(null);
 
-  useEffect(() => {
+  const loadList = useCallback(() => {
     fetch('/api/admin/extractor?action=list')
       .then(r => r.json())
       .then(d => setCharacters(d.characters ?? []))
       .finally(() => setLoading(false));
   }, []);
 
-  const fetchBlock = useCallback(async (action: string, id: string) => {
-    setBlocks(prev => prev.map(b =>
-      b.action === action ? { ...b, status: 'loading', data: null, error: undefined } : b
-    ));
-    try {
-      const r = await fetch(`/api/admin/extractor?action=${action}&id=${id}`);
-      const data = await r.json();
-      if (!r.ok) {
-        setBlocks(prev => prev.map(b =>
-          b.action === action ? { ...b, status: 'error', error: data.error ?? 'Request failed' } : b
-        ));
-      } else {
-        setBlocks(prev => prev.map(b =>
-          b.action === action ? { ...b, status: 'ok', data } : b
-        ));
-        setExpanded(prev => new Set(prev).add(action));
-      }
-    } catch {
-      setBlocks(prev => prev.map(b =>
-        b.action === action ? { ...b, status: 'error', error: 'Network error' } : b
-      ));
-    }
-  }, []);
+  useEffect(() => { loadList(); }, [loadList]);
 
   function handleSelect(id: string) {
     setSelectedId(id);
-    setExpanded(new Set());
-    // Reset all blocks
-    const freshBlocks = BLOCKS_DEF.map(d => ({
-      ...d,
-      status: 'idle' as BlockStatus,
-      data: null,
-    }));
-    setBlocks(freshBlocks);
-  }
-
-  function handleExtractAll(id: string) {
-    for (const def of BLOCKS_DEF) {
-      fetchBlock(def.action, id);
-    }
-  }
-
-  function toggleExpand(key: string) {
-    setExpanded(prev => {
-      const next = new Set(prev);
-      if (next.has(key)) next.delete(key);
-      else next.add(key);
-      return next;
-    });
+    setCompareResult(null);
   }
 
   async function handleCompare() {
@@ -188,8 +388,7 @@ export default function ExtractorPage() {
     setSelectedId(null);
     try {
       const r = await fetch('/api/admin/extractor?action=compare');
-      const data = await r.json();
-      setCompareResult(data);
+      setCompareResult(await r.json());
     } catch {
       setCompareResult({ total: 0, withDiffs: 0, ok: 0, results: [] });
     } finally {
@@ -206,6 +405,8 @@ export default function ExtractorPage() {
     }
     return true;
   });
+
+  const selectedChar = characters.find(c => c.id === selectedId);
 
   if (loading) {
     return <div className="flex justify-center py-20 text-zinc-500">Loading...</div>;
@@ -271,11 +472,11 @@ export default function ExtractorPage() {
         </div>
       </div>
 
-      {/* Right: blocks or compare results */}
+      {/* Right panel */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
         {!selectedId && !compareResult && !comparing && (
           <div className="flex items-center justify-center h-full text-zinc-600">
-            Select a character to extract, or Compare All
+            Select a character, or Compare All
           </div>
         )}
 
@@ -285,6 +486,7 @@ export default function ExtractorPage() {
           </div>
         )}
 
+        {/* Compare All results */}
         {compareResult && !selectedId && (
           <div className="space-y-3">
             <div className="flex items-center gap-4">
@@ -296,10 +498,7 @@ export default function ExtractorPage() {
                 {compareResult.withDiffs} with diffs
               </span>
               <span className="text-xs text-zinc-500">{compareResult.total} total</span>
-              <button
-                onClick={() => setCompareResult(null)}
-                className="ml-auto text-xs text-zinc-500 hover:text-zinc-300"
-              >
+              <button onClick={() => setCompareResult(null)} className="ml-auto text-xs text-zinc-500 hover:text-zinc-300">
                 Clear
               </button>
             </div>
@@ -315,110 +514,21 @@ export default function ExtractorPage() {
                   <span className="font-semibold">{r.name}</span>
                   <span className="text-xs text-red-400">{r.diffs.length} diff(s)</span>
                 </div>
-                <table className="w-full text-xs">
-                  <thead>
-                    <tr className="text-zinc-500">
-                      <th className="py-0.5 pr-3 text-left font-medium">Field</th>
-                      <th className="py-0.5 pr-3 text-left font-medium">Existing</th>
-                      <th className="py-0.5 text-left font-medium">Extracted</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {r.diffs.map((d, i) => {
-                      const isDesc = d.field.includes('desc_lv');
-                      if (isDesc) {
-                        return (
-                          <tr key={i} className="border-t border-zinc-800/50">
-                            <td className="py-1 pr-3 font-mono text-zinc-400 whitespace-nowrap align-top">{d.field}</td>
-                            <td colSpan={2} className="py-1">
-                              <DiffHighlight existing={d.existing} extracted={d.extracted} />
-                            </td>
-                          </tr>
-                        );
-                      }
-                      return (
-                        <tr key={i} className="border-t border-zinc-800/50">
-                          <td className="py-1 pr-3 font-mono text-zinc-400 whitespace-nowrap">{d.field}</td>
-                          <td className="py-1 pr-3 text-red-300 max-w-xs truncate" title={d.existing}>{d.existing || <span className="text-zinc-600">null</span>}</td>
-                          <td className="py-1 text-green-300 max-w-xs truncate" title={d.extracted}>{d.extracted || <span className="text-zinc-600">null</span>}</td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
+                <DiffTable diffs={r.diffs} />
               </div>
             ))}
           </div>
         )}
 
-        {selectedId && (
-          <div className="space-y-3">
-            {/* Header with Extract All button */}
-            <div className="flex items-center gap-3">
-              <h2 className="text-lg font-bold">
-                {characters.find(c => c.id === selectedId)?.name ?? selectedId}
-              </h2>
-              <span className="font-mono text-sm text-zinc-600">{selectedId}</span>
-              <button
-                onClick={() => handleExtractAll(selectedId)}
-                className="ml-auto rounded-lg bg-blue-600 px-4 py-1.5 text-sm font-semibold transition hover:bg-blue-500"
-              >
-                Extract All
-              </button>
-            </div>
-
-            {/* Block cards */}
-            {blocks.map(block => (
-              <div
-                key={block.key}
-                className={`rounded-lg border p-3 transition-colors ${STATUS_STYLE[block.status]}`}
-              >
-                <div className="flex items-center gap-3">
-                  <h3 className="font-semibold">{block.label}</h3>
-                  <span className={`text-xs font-medium ${STATUS_BADGE[block.status].cls}`}>
-                    {STATUS_BADGE[block.status].text}
-                  </span>
-
-                  {block.status === 'error' && (
-                    <span className="text-xs text-red-400">{block.error}</span>
-                  )}
-
-                  <div className="ml-auto flex gap-2">
-                    {block.status === 'idle' && (
-                      <button
-                        onClick={() => fetchBlock(block.action, selectedId)}
-                        className="rounded bg-zinc-800 px-3 py-1 text-xs font-medium hover:bg-zinc-700"
-                      >
-                        Fetch
-                      </button>
-                    )}
-                    {block.status === 'error' && (
-                      <button
-                        onClick={() => fetchBlock(block.action, selectedId)}
-                        className="rounded bg-zinc-800 px-3 py-1 text-xs font-medium text-red-400 hover:bg-zinc-700"
-                      >
-                        Retry
-                      </button>
-                    )}
-                    {block.status === 'ok' && (
-                      <button
-                        onClick={() => toggleExpand(block.key)}
-                        className="rounded bg-zinc-800 px-3 py-1 text-xs font-medium hover:bg-zinc-700"
-                      >
-                        {expanded.has(block.key) ? 'Collapse' : 'Expand'}
-                      </button>
-                    )}
-                  </div>
-                </div>
-
-                {expanded.has(block.key) && block.data != null && (
-                  <pre className="mt-3 max-h-96 overflow-auto rounded bg-black/30 p-3 text-xs text-zinc-300 whitespace-pre-wrap">
-                    {JSON.stringify(block.data as object, null, 2)}
-                  </pre>
-                )}
-              </div>
-            ))}
-          </div>
+        {/* Character detail panel */}
+        {selectedId && selectedChar && (
+          <CharacterDetail
+            key={selectedId}
+            id={selectedId}
+            name={selectedChar.name}
+            exists={selectedChar.exists}
+            onSaved={loadList}
+          />
         )}
       </div>
     </div>

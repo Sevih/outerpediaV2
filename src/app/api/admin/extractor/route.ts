@@ -18,6 +18,83 @@ async function readTemplet(name: string): Promise<{ columns: Record<string, stri
   return JSON.parse(raw);
 }
 
+// ── Key order for output JSON ────────────────────────────────────────
+
+const TOP_LEVEL_KEY_ORDER = [
+  'ID', 'Fullname', 'Fullname_jp', 'Fullname_kr', 'Fullname_zh',
+  'Rarity', 'Element', 'Class', 'SubClass',
+  'rank', 'rank_pvp', 'role', 'tags', 'skill_priority',
+  'Chain_Type', 'gift', 'video',
+  'VoiceActor', 'VoiceActor_jp', 'VoiceActor_kr', 'VoiceActor_zh',
+  'transcend', 'skills',
+];
+
+const SKILL_KEY_ORDER = [
+  'NameIDSymbol', 'IconName', 'SkillType',
+  'name', 'name_jp', 'name_kr', 'name_zh',
+  'true_desc', 'true_desc_jp', 'true_desc_kr', 'true_desc_zh',
+  'true_desc_levels', 'enhancement',
+  'wgr', 'cd', 'buff', 'debuff', 'offensive', 'target',
+];
+
+/**
+ * Reorder keys grouped by language: all EN first, then JP, then KR, then ZH.
+ * Input:  { "1": ..., "1_jp": ..., "2": ..., "2_jp": ..., "1_kr": ... }
+ * Output: { "1": ..., "2": ..., "1_jp": ..., "2_jp": ..., "1_kr": ..., "2_kr": ..., "1_zh": ..., "2_zh": ... }
+ */
+function groupByLang(obj: Record<string, string>): Record<string, string> {
+  const langSuffixes = SUFFIX_LANGS.map(l => `_${l}`);
+
+  // Separate keys by language group
+  const defaultKeys: string[] = [];
+  const langGroups: Record<string, string[]> = {};
+  for (const lang of SUFFIX_LANGS) langGroups[lang] = [];
+
+  for (const key of Object.keys(obj)) {
+    const matchedLang = SUFFIX_LANGS.find(l => key.endsWith(`_${l}`));
+    if (matchedLang) {
+      langGroups[matchedLang].push(key);
+    } else {
+      defaultKeys.push(key);
+    }
+  }
+
+  // Sort each group naturally
+  const naturalSort = (a: string, b: string) => {
+    const strip = (k: string) => langSuffixes.reduce((s, sf) => s.endsWith(sf) ? s.slice(0, -sf.length) : s, k);
+    const pa = strip(a).split('_').map(Number);
+    const pb = strip(b).split('_').map(Number);
+    for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+      const diff = (pa[i] || 0) - (pb[i] || 0);
+      if (diff !== 0) return diff;
+    }
+    return 0;
+  };
+
+  defaultKeys.sort(naturalSort);
+  for (const lang of SUFFIX_LANGS) langGroups[lang].sort(naturalSort);
+
+  const result: Record<string, string> = {};
+  for (const key of defaultKeys) result[key] = obj[key];
+  for (const lang of SUFFIX_LANGS) {
+    for (const key of langGroups[lang]) result[key] = obj[key];
+  }
+  return result;
+}
+
+/** Reorder an object's keys according to a specified order, keeping extra keys at the end */
+function orderKeys<T extends Record<string, unknown>>(obj: T, keyOrder: string[]): T {
+  const ordered = {} as Record<string, unknown>;
+  for (const key of keyOrder) {
+    if (key in obj) ordered[key] = obj[key];
+  }
+  // Append any extra keys not in the order
+  for (const key of Object.keys(obj)) {
+    if (!(key in ordered)) ordered[key] = obj[key];
+  }
+  return ordered as T;
+}
+
 /**
  * GET /api/admin/extractor
  *
@@ -213,7 +290,13 @@ async function handleInfo(id: string) {
   const trustRow = trustTemplet.data.find(r => r.ID === id);
   const gift = GIFT_MAP[trustRow?.PresentTypeLike ?? ''] ?? null;
 
-  return NextResponse.json({
+  // Core fusion: check if this base character has a fusion variant
+  const fusionRow = fusionTemplet.data.find(r => r.RecruitID === id);
+  const hasCoreFusion = !!fusionRow;
+  const coreFusionId = fusionRow?.ChangeCharID ?? undefined;
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const result: Record<string, any> = {
     ID: id,
     ...expandLang('Fullname', fullnameTexts),
     Rarity: BASIC_STAR_OVERRIDE[id] ?? (parseInt(charRow.BasicStar) || 0),
@@ -223,7 +306,14 @@ async function handleInfo(id: string) {
     Chain_Type: chainType,
     gift,
     ...expandLang('VoiceActor', voiceActorTexts),
-  });
+  };
+
+  if (hasCoreFusion) {
+    result.hasCoreFusion = true;
+    result.coreFusionId = coreFusionId;
+  }
+
+  return NextResponse.json(result);
 }
 
 // ── Skills ───────────────────────────────────────────────────────────
@@ -318,44 +408,77 @@ async function handleSkills(id: string) {
     const rawCd = hasCd ? firstLevel?.StartCool ?? '' : '';
     const cd = rawCd && /^\d+$/.test(rawCd) ? parseInt(rawCd) : null;
 
-    const enhancement: Record<string, { desc: string }[]> = {};
+    // Enhancement descriptions per level (multilang, format: { "2": ["..."], "2_jp": ["..."], ... })
+    // SE_DESC keys can be in DescID, GainCP, or DamageFactor (bytes parser column shifts)
+    const enhancement: Record<string, string[]> = {};
     for (const lv of levels) {
       const lvNum = lv.SkillLevel ?? '1';
-      if (lvNum === '1' || !lv.DescID) continue;
-      const descs = lv.DescID.split(',').map(d => d.trim()).filter(Boolean);
-      enhancement[lvNum] = descs.map(d => {
-        const t = textSkillMap[d];
-        return { desc: t?.[DEFAULT_LANG] ?? d };
-      });
+      if (lvNum === '1') continue;
+      // Find SE_DESC keys in any field
+      const seDescRaw = [lv.DescID, lv.GainCP, lv.DamageFactor]
+        .filter(Boolean)
+        .join(',')
+        .split(',')
+        .map(d => d.trim())
+        .filter(d => d.startsWith('SE_DESC_'));
+      if (seDescRaw.length === 0) continue;
+      const descs = seDescRaw;
+      // Default lang
+      enhancement[lvNum] = descs.map(d => textSkillMap[d]?.[DEFAULT_LANG] ?? d);
+      // Suffix langs
+      for (const lang of SUFFIX_LANGS) {
+        const langDescs = descs.map(d => textSkillMap[d]?.[lang] ?? '').filter(Boolean);
+        if (langDescs.length > 0) enhancement[`${lvNum}_${lang}`] = langDescs;
+      }
     }
 
-    // Combine RangeType with change form if exists (e.g. Luna 2000119↔2000120)
-    let rangeType = sRow.RangeType ?? '';
-    if (changeCharRow) {
-      const changeSkillIds: string[] = [];
-      for (let i = 1; i <= 23; i++) {
-        const s = changeCharRow[`Skill_${i}`];
-        if (s) changeSkillIds.push(s);
-      }
-      const changeSRow = skillTemplet.data.find(r =>
-        r.SkillType === skillType && r.NameIDSymbol && changeSkillIds.includes(r.NameIDSymbol)
-      );
-      if (changeSRow?.RangeType && changeSRow.RangeType !== rangeType) {
-        rangeType = `${rangeType},${changeSRow.RangeType}`;
-      }
+    // true_desc = desc at level 1 (base description, all langs)
+    const trueDesc: Record<string, string | null> = {};
+    trueDesc.true_desc = descLevels['1'] ?? null;
+    for (const lang of SUFFIX_LANGS) {
+      trueDesc[`true_desc_${lang}`] = descLevels[`1_${lang}`] ?? null;
     }
-    const target = resolveTarget(rangeType);
-    const slot = sidToSlot.get(sid) ?? '';
-    const offensive = NON_OFFENSIVE_OVERRIDE.has(`${id}:${slot}`)
-      ? false
-      : (sRow.TargetTeamType ?? '').includes('ENEMY');
-    const wgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
+
+    const isChain = skillType === 'SKT_CHAIN_PASSIVE';
+    let target: string | null;
+    let offensive: boolean;
+    let wgr: number | null;
+
+    if (isChain) {
+      // Chain passive always has fixed values
+      wgr = 3;
+      offensive = true;
+      target = 'multi';
+    } else {
+      // Combine RangeType with change form if exists (e.g. Luna 2000119↔2000120)
+      let rangeType = sRow.RangeType ?? '';
+      if (changeCharRow) {
+        const changeSkillIds: string[] = [];
+        for (let i = 1; i <= 23; i++) {
+          const s = changeCharRow[`Skill_${i}`];
+          if (s) changeSkillIds.push(s);
+        }
+        const changeSRow = skillTemplet.data.find(r =>
+          r.SkillType === skillType && r.NameIDSymbol && changeSkillIds.includes(r.NameIDSymbol)
+        );
+        if (changeSRow?.RangeType && changeSRow.RangeType !== rangeType) {
+          rangeType = `${rangeType},${changeSRow.RangeType}`;
+        }
+      }
+      target = resolveTarget(rangeType);
+      const slot = sidToSlot.get(sid) ?? '';
+      offensive = NON_OFFENSIVE_OVERRIDE.has(`${id}:${slot}`)
+        ? false
+        : (sRow.TargetTeamType ?? '').includes('ENEMY');
+      wgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
+    }
 
     skills[skillType] = {
       NameIDSymbol: sid,
       IconName: sRow.IconName ?? '',
       SkillType: skillType,
       ...expandLang('name', resolvedNames),
+      ...trueDesc,
       true_desc_levels: descLevels,
       enhancement,
       wgr,
@@ -367,6 +490,55 @@ async function handleSkills(id: string) {
     };
   }
 
+  // ── burnEffect: burst skills attached to the main skill that has RequireAP=int,int,int ──
+  const burstTypes = ['SKT_BURST_1', 'SKT_BURST_2', 'SKT_BURST_3'] as const;
+  const burstRows: Record<string, Record<string, string>> = {};
+  for (const row of skillTemplet.data) {
+    if (row.NameIDSymbol && skillIds.includes(row.NameIDSymbol) && burstTypes.includes(row.SkillType as typeof burstTypes[number])) {
+      burstRows[row.SkillType] = row;
+    }
+  }
+
+  if (Object.keys(burstRows).length > 0) {
+    // Find which main skill has RequireAP=int,int,int (that's the one with burnEffect)
+    let burnTarget: string | null = null;
+    let burstCosts: number[] = [];
+    for (const [, sRow] of skillRows) {
+      const rap = sRow.RequireAP ?? '';
+      if (/^\d+,\d+,\d+$/.test(rap)) {
+        burnTarget = sRow.SkillType;
+        burstCosts = rap.split(',').map(Number);
+        break;
+      }
+    }
+
+    if (burnTarget && skills[burnTarget]) {
+      const burnEffect: Record<string, unknown> = {};
+      for (let bi = 0; bi < burstTypes.length; bi++) {
+        const bt = burstTypes[bi];
+        const bRow = burstRows[bt];
+        if (!bRow) continue;
+
+        // IconName contains the DESC key with the full description text
+        const bDescKey = bRow.IconName ?? '';
+        const bNames = textSkillMap[bDescKey];
+        const bTarget = resolveTarget(bRow.RangeType ?? '');
+        const bOffensive = (bRow.TargetTeamType ?? '').includes('ENEMY');
+
+        burnEffect[bt] = {
+          ...expandLang('effect', bNames),
+          cost: burstCosts[bi] ?? null,
+          level: bi + 1,
+          offensive: bOffensive,
+          target: bTarget,
+        };
+      }
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (skills[burnTarget] as any).burnEffect = burnEffect;
+    }
+  }
+
   return NextResponse.json({ skills });
 }
 
@@ -375,39 +547,29 @@ async function handleSkills(id: string) {
 // BasicStar range in TranscendentTemplet per initial rarity
 const TRANSCEND_BS_OFFSET: Record<number, number> = { 1: 0, 2: 0, 3: 17 };
 
-async function handleTranscend(id: string) {
-  const [charTemplet, transcendTemplet, skillTemplet, skillLevelTemplet, textSkill] = await Promise.all([
-    readTemplet('CharacterTemplet'),
-    readTemplet('CharacterTranscendentTemplet'),
-    readTemplet('CharacterSkillTemplet'),
-    readTemplet('CharacterSkillLevelTemplet'),
-    readTemplet('TextSkill'),
-  ]);
-
-  const textSkillMap = buildTextMap(textSkill.data);
-
-  const charRow = charTemplet.data.find(r => r.ModelID === id);
-  if (!charRow) {
-    return NextResponse.json({ error: `Character ${id} not found` }, { status: 404 });
-  }
-
+/** Build transcend data from templet data — shared between handleTranscend and handleCompare */
+function buildTranscend(
+  id: string,
+  charRow: Record<string, string>,
+  transcendData: Record<string, string>[],
+  skillTempletData: Record<string, string>[],
+  skillLevelData: Record<string, string>[],
+  textSkillMap: Record<string, LangTexts>,
+): Record<string, string | null> {
   const rarity = BASIC_STAR_OVERRIDE[id] ?? (parseInt(charRow.BasicStar) || 0);
   const bsOffset = TRANSCEND_BS_OFFSET[rarity] ?? 0;
 
-  // Get transcend steps: generic (CharacterID=0) or character-specific
-  const charSpecific = transcendTemplet.data.filter(r => r.CharacterID === id);
+  const charSpecific = transcendData.filter(r => r.CharacterID === id);
   const steps = charSpecific.length > 0
     ? charSpecific
-    : transcendTemplet.data.filter(r => {
+    : transcendData.filter(r => {
         if (r.CharacterID !== '0') return false;
         const bs = parseInt(r.BasicStar) || 0;
         return bs > bsOffset && bs <= bsOffset + 9;
       });
 
-  // Sort by UseTransStar
   steps.sort((a, b) => (parseInt(a.UseTransStar) || 0) - (parseInt(b.UseTransStar) || 0));
 
-  // Find unique passive skill → get transcend descriptions per SkillLevel
   const skillIds: string[] = [];
   for (let i = 1; i <= 23; i++) {
     const sid = charRow[`Skill_${i}`];
@@ -415,17 +577,16 @@ async function handleTranscend(id: string) {
   }
 
   let uniquePassiveId: string | null = null;
-  for (const row of skillTemplet.data) {
+  for (const row of skillTempletData) {
     if (row.SkillType === 'SKT_UNIQUE_PASSIVE' && row.NameIDSymbol && skillIds.includes(row.NameIDSymbol)) {
       uniquePassiveId = row.NameIDSymbol;
       break;
     }
   }
 
-  // Build skill level → SE_DESC key mapping from unique passive
-  const transcendDescs = new Map<number, string>(); // SkillLevel → SE_DESC key (in WGReduce field)
+  const transcendDescs = new Map<number, string>();
   if (uniquePassiveId) {
-    for (const row of skillLevelTemplet.data) {
+    for (const row of skillLevelData) {
       if (row.SkillID === uniquePassiveId) {
         const sl = parseInt(row.SkillLevel) || 0;
         const descKey = row.WGReduce ?? '';
@@ -436,10 +597,8 @@ async function handleTranscend(id: string) {
     }
   }
 
-  // 3-star chars have sub-steps (4_1, 4_2, 5_1, 5_2, 5_3), 1/2-star don't
   const hasSubSteps = rarity >= 3;
 
-  // Build output: group by ShowUIStar
   const grouped = new Map<string, typeof steps>();
   for (const step of steps) {
     const showUI = step.ShowUIStar ?? '';
@@ -449,8 +608,6 @@ async function handleTranscend(id: string) {
   }
 
   const transcend: Record<string, string | null> = {};
-
-  // Track which SkillLevel we've already shown the special desc for
   let lastDescSkillLevel = 0;
 
   for (const [showUI, group] of grouped) {
@@ -458,8 +615,6 @@ async function handleTranscend(id: string) {
 
     for (let i = 0; i < group.length; i++) {
       const step = group[i];
-
-      // For 1/2-star: skip StarPlus sub-steps entirely
       if (!hasSubSteps && i > 0) continue;
 
       const key = useSubIndex ? `${showUI}_${i + 1}` : showUI;
@@ -471,19 +626,16 @@ async function handleTranscend(id: string) {
         continue;
       }
 
-      // Build description lines
       const lines: Record<Lang, string[]> = {} as Record<Lang, string[]>;
       for (const lang of LANGS) lines[lang] = [];
 
-      // Stat line (same across all languages)
       if (hpRate > 0) {
         const pct = `ATK DEF HP +${hpRate / 10}%`;
         for (const lang of LANGS) lines[lang].push(pct);
       }
 
-      // Special effect description from unique passive
-      // Only show at the FIRST step where this SkillLevel appears (not on sub-steps)
-      if (skillLevel > 0 && skillLevel > lastDescSkillLevel) {
+      // SkillLevel 1 = Burst Lv2 unlock (implicit, not shown in transcend desc)
+      if (skillLevel > 1 && skillLevel > lastDescSkillLevel) {
         lastDescSkillLevel = skillLevel;
         const descKey = transcendDescs.get(skillLevel);
         if (descKey) {
@@ -491,17 +643,15 @@ async function handleTranscend(id: string) {
           if (texts) {
             for (const lang of LANGS) {
               const txt = texts[lang];
-              if (txt) lines[lang].push(txt);
+              if (txt) lines[lang].push(txt.replace(/\\n/g, '\n'));
             }
           }
         }
       }
 
-      // Write default lang
       const defaultLines = lines[DEFAULT_LANG];
       transcend[key] = defaultLines.length > 0 ? defaultLines.join('\n') : null;
 
-      // Write suffix langs (only if they have localized special content beyond stats)
       for (const lang of SUFFIX_LANGS) {
         const langLines = lines[lang];
         if (langLines.length > 1 || (langLines.length === 1 && langLines[0] !== defaultLines[0])) {
@@ -511,6 +661,25 @@ async function handleTranscend(id: string) {
     }
   }
 
+  return transcend;
+}
+
+async function handleTranscend(id: string) {
+  const [charTemplet, transcendTemplet, skillTemplet, skillLevelTemplet, textSkill] = await Promise.all([
+    readTemplet('CharacterTemplet'),
+    readTemplet('CharacterTranscendentTemplet'),
+    readTemplet('CharacterSkillTemplet'),
+    readTemplet('CharacterSkillLevelTemplet'),
+    readTemplet('TextSkill'),
+  ]);
+
+  const charRow = charTemplet.data.find(r => r.ModelID === id);
+  if (!charRow) {
+    return NextResponse.json({ error: `Character ${id} not found` }, { status: 404 });
+  }
+
+  const textSkillMap = buildTextMap(textSkill.data);
+  const transcend = buildTranscend(id, charRow, transcendTemplet.data, skillTemplet.data, skillLevelTemplet.data, textSkillMap);
   return NextResponse.json({ transcend });
 }
 
@@ -520,15 +689,21 @@ const INFO_FIELDS = [
   'Fullname', 'Fullname_jp', 'Fullname_kr', 'Fullname_zh',
   'Rarity', 'Element', 'Class', 'SubClass', 'Chain_Type', 'gift',
   'VoiceActor', 'VoiceActor_jp', 'VoiceActor_kr', 'VoiceActor_zh',
+  'hasCoreFusion', 'coreFusionId',
 ];
 
-const SKILL_FIELDS = ['name', 'name_jp', 'name_kr', 'name_zh', 'wgr', 'cd', 'offensive', 'target'];
+const SKILL_FIELDS = [
+  'name', 'name_jp', 'name_kr', 'name_zh',
+  'true_desc', 'true_desc_jp', 'true_desc_kr', 'true_desc_zh',
+  'wgr', 'cd', 'offensive', 'target',
+];
 const SKILL_KEYS = ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE'];
 
 async function handleCompare() {
   // Load all templets once
   const [charTemplet, textChar, textSys, textSkill, extraTemplet,
     skillTemplet, skillLevelTemplet, buffTemplet, trustTemplet, fusionTemplet, changeTemplet,
+    transcendTemplet,
     ] = await Promise.all([
     readTemplet('CharacterTemplet'),
     readTemplet('TextCharacter'),
@@ -541,6 +716,7 @@ async function handleCompare() {
     readTemplet('TrustTemplet'),
     readTemplet('CharacterFusionTemplet'),
     readTemplet('CharacterChangeTemplet'),
+    readTemplet('CharacterTranscendentTemplet'),
   ]);
 
   // Read existing character files
@@ -641,6 +817,8 @@ async function handleCompare() {
     const trustRow = trustTemplet.data.find(r => r.ID === id);
     const gift = GIFT_MAP[trustRow?.PresentTypeLike ?? ''] ?? null;
 
+    const fusionRow = fusionTemplet.data.find((r: Record<string, string>) => r.RecruitID === id);
+
     const extracted: Record<string, unknown> = {
       ...expandLang('Fullname', fullnameTexts),
       Rarity: BASIC_STAR_OVERRIDE[id] ?? (parseInt(charRow.BasicStar) || 0),
@@ -650,9 +828,12 @@ async function handleCompare() {
       Chain_Type: chainType,
       gift,
       ...expandLang('VoiceActor', voiceActorTexts),
+      hasCoreFusion: fusionRow ? true : undefined,
+      coreFusionId: fusionRow?.ChangeCharID ?? undefined,
     };
 
     for (const field of INFO_FIELDS) {
+      if (!(field in existing)) continue;
       const e = String(existing[field] ?? '');
       const a = String(extracted[field] ?? '');
       if (e !== a) diffs.push({ field, existing: e, extracted: a });
@@ -696,32 +877,52 @@ async function handleCompare() {
           }
         }
       }
-      const target = isChain ? null : resolveTarget(rangeType);
+      let target: string | null;
+      let offensive: boolean;
+      let wgr: number | null;
 
-      const slot = sidSlotMap.get(sid) ?? '';
-      const offensive = NON_OFFENSIVE_OVERRIDE.has(`${id}:${slot}`)
-        ? false
-        : (sRow.TargetTeamType ?? '').includes('ENEMY');
-      const wgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
+      if (isChain) {
+        wgr = 3;
+        offensive = true;
+        target = 'multi';
+      } else {
+        target = resolveTarget(rangeType);
+        const slot = sidSlotMap.get(sid) ?? '';
+        offensive = NON_OFFENSIVE_OVERRIDE.has(`${id}:${slot}`)
+          ? false
+          : (sRow.TargetTeamType ?? '').includes('ENEMY');
+        wgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
+      }
+
+      // Build true_desc from desc level 1
+      const skillDescSymbols = (sRow.DescID ?? '').split(',');
+      const descSym1 = skillDescSymbols[0]?.trim();
+      const descTexts1 = descSym1 ? textSkillMap[descSym1] : undefined;
+      const trueDescExtracted: Record<string, string | null> = {
+        true_desc: descTexts1 ? resolveBuffPlaceholders(descTexts1[DEFAULT_LANG], 1, buffIndex) : null,
+      };
+      for (const lang of SUFFIX_LANGS) {
+        trueDescExtracted[`true_desc_${lang}`] = descTexts1 ? resolveBuffPlaceholders(descTexts1[lang], 1, buffIndex) : null;
+      }
 
       const extractedSkill: Record<string, unknown> = {
         ...expandLang('name', resolvedNames),
+        ...trueDescExtracted,
         wgr,
         cd,
         offensive,
         target,
       };
 
-      // Skip wgr/offensive/target for chain passive (manual fields)
-      const skipFields = isChain ? new Set(['wgr', 'offensive', 'target']) : new Set<string>();
       for (const sf of SKILL_FIELDS) {
-        if (skipFields.has(sf)) continue;
+        // Skip if existing doesn't have this field at all (not yet filled)
+        if (!(sf in existingSkill)) continue;
         const e = String(existingSkill[sf] ?? '');
         const a = String(extractedSkill[sf] ?? '');
         if (e !== a) diffs.push({ field: `${sk}.${sf}`, existing: e, extracted: a });
       }
 
-      // Compare desc all levels
+      // Compare desc all levels, all languages
       const descSymbols = (sRow.DescID ?? '').split(',');
       for (let lvl = 0; lvl < descSymbols.length; lvl++) {
         const sym = descSymbols[lvl]?.trim();
@@ -729,11 +930,100 @@ async function handleCompare() {
         const texts = textSkillMap[sym];
         if (!texts) continue;
         const skillLv = lvl + 1;
+
+        // Default lang
         const resolved = resolveBuffPlaceholders(texts[DEFAULT_LANG], skillLv, buffIndex);
         const existingDesc = existingSkill.true_desc_levels?.[String(skillLv)] ?? '';
         if (existingDesc && resolved && existingDesc !== resolved) {
           diffs.push({ field: `${sk}.desc_lv${skillLv}`, existing: existingDesc, extracted: resolved });
         }
+
+        // Suffix langs
+        for (const lang of SUFFIX_LANGS) {
+          const resolvedLang = resolveBuffPlaceholders(texts[lang], skillLv, buffIndex);
+          const existingLang = existingSkill.true_desc_levels?.[`${skillLv}_${lang}`] ?? '';
+          if (existingLang && resolvedLang && existingLang !== resolvedLang) {
+            diffs.push({ field: `${sk}.desc_lv${skillLv}_${lang}`, existing: existingLang, extracted: resolvedLang });
+          }
+        }
+      }
+
+      // Compare enhancement (all langs)
+      const existingEnh = existingSkill.enhancement ?? {};
+      const extractedEnh: Record<string, string[]> = {};
+      for (const lv of levels) {
+        const lvNum = lv.SkillLevel ?? '1';
+        if (lvNum === '1') continue;
+        const descs = [lv.DescID, lv.GainCP, lv.DamageFactor]
+          .filter(Boolean)
+          .join(',')
+          .split(',')
+          .map((d: string) => d.trim())
+          .filter((d: string) => d.startsWith('SE_DESC_'));
+        if (descs.length === 0) continue;
+        extractedEnh[lvNum] = descs.map((d: string) => textSkillMap[d]?.[DEFAULT_LANG] ?? d);
+        for (const lang of SUFFIX_LANGS) {
+          const langDescs = descs.map((d: string) => textSkillMap[d]?.[lang] ?? '').filter(Boolean);
+          if (langDescs.length > 0) extractedEnh[`${lvNum}_${lang}`] = langDescs;
+        }
+      }
+      // Only compare keys that exist in the existing data
+      for (const k of Object.keys(existingEnh)) {
+        const eVal = JSON.stringify(existingEnh[k] ?? null);
+        const aVal = JSON.stringify(extractedEnh[k] ?? null);
+        if (eVal !== aVal) {
+          diffs.push({ field: `${sk}.enh_${k}`, existing: existingEnh[k]?.join(', ') ?? '', extracted: extractedEnh[k]?.join(', ') ?? '' });
+        }
+      }
+
+      // Compare burnEffect
+      const existingBurn = existingSkill.burnEffect ?? {};
+      // Find if this skill has RequireAP=int,int,int (= has burnEffect)
+      const rap = sRow.RequireAP ?? '';
+      if (/^\d+,\d+,\d+$/.test(rap)) {
+        const burstCosts = rap.split(',').map(Number);
+        const burstTypes2 = ['SKT_BURST_1', 'SKT_BURST_2', 'SKT_BURST_3'];
+        for (let bi = 0; bi < burstTypes2.length; bi++) {
+          const bt = burstTypes2[bi];
+          const exBurst = existingBurn[bt] ?? {};
+          // Find burst skill row
+          const bRow = skillTemplet.data.find(r =>
+            r.SkillType === bt && r.NameIDSymbol && sids.includes(r.NameIDSymbol)
+          );
+          if (!bRow) continue;
+
+          const bDescKey = bRow.IconName ?? '';
+          const bNames = textSkillMap[bDescKey];
+          const extractedBurst = {
+            ...expandLang('effect', bNames),
+            cost: burstCosts[bi],
+            level: bi + 1,
+            offensive: (bRow.TargetTeamType ?? '').includes('ENEMY'),
+            target: resolveTarget(bRow.RangeType ?? ''),
+          };
+
+          for (const bf of ['effect', 'effect_jp', 'effect_kr', 'effect_zh', 'cost', 'level', 'offensive', 'target']) {
+            const eVal = String(exBurst[bf] ?? '');
+            const aVal = String((extractedBurst as Record<string, unknown>)[bf] ?? '');
+            if (eVal !== aVal) {
+              diffs.push({ field: `${sk}.burn.${bt}.${bf}`, existing: eVal, extracted: aVal });
+            }
+          }
+        }
+      }
+    }
+
+    // ── Transcend ──
+    const existingTranscend = existing.transcend ?? {};
+    const extractedTranscend = buildTranscend(id, charRow, transcendTemplet.data, skillTemplet.data, skillLevelTemplet.data, textSkillMap);
+
+    const allTranscendKeys = new Set([...Object.keys(existingTranscend), ...Object.keys(extractedTranscend)]);
+    for (const k of allTranscendKeys) {
+      const ev = existingTranscend[k] ?? null;
+      const av = extractedTranscend[k] ?? null;
+      if (ev === null && av === null) continue;
+      if (String(ev ?? '') !== String(av ?? '')) {
+        diffs.push({ field: `transcend.${k}`, existing: String(ev ?? ''), extracted: String(av ?? '') });
       }
     }
 
@@ -748,4 +1038,126 @@ async function handleCompare() {
     ok: existingFiles.length - results.length,
     results,
   });
+}
+
+// ── Save ─────────────────────────────────────────────────────────────
+
+/**
+ * POST /api/admin/extractor
+ *
+ * Body: { id, manual: { rank, rank_pvp, role, tags, skill_priority, video } }
+ *
+ * Merges extracted data + manual fields + existing buff/debuff → saves to data/character/{id}.json
+ */
+export async function POST(req: NextRequest) {
+  if (process.env.NODE_ENV !== 'development') {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+
+  try {
+    const body = await req.json();
+    const { id, manual } = body as {
+      id: string;
+      manual: {
+        rank?: string | null;
+        rank_pvp?: string | null;
+        role?: string | null;
+        tags?: string[];
+        skill_priority?: Record<string, { prio: number }>;
+        video?: string | null;
+      };
+    };
+
+    if (!id) return NextResponse.json({ error: 'Missing id' }, { status: 400 });
+
+    // Fetch extracted data
+    const [infoRes, skillsRes, transcendRes] = await Promise.all([
+      handleInfo(id),
+      handleSkills(id),
+      handleTranscend(id),
+    ]);
+
+    const info = await infoRes.json();
+    const skillsData = await skillsRes.json();
+    const transcendData = await transcendRes.json();
+
+    if (info.error || skillsData.error || transcendData.error) {
+      return NextResponse.json({ error: info.error || skillsData.error || transcendData.error }, { status: 500 });
+    }
+
+    // Load existing data for buff/debuff preservation
+    const existingPath = path.join(process.cwd(), 'data', 'character', `${id}.json`);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let existing: Record<string, any> = {};
+    try {
+      existing = JSON.parse(await fs.readFile(existingPath, 'utf-8'));
+    } catch { /* new character */ }
+
+    // Merge skills: extracted + preserve existing buff/debuff/true_desc/burnEffect
+    const mergedSkills: Record<string, unknown> = {};
+    for (const sk of ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE']) {
+      const extracted = skillsData.skills?.[sk];
+      if (!extracted) continue;
+
+      const existingSkill = existing.skills?.[sk] ?? {};
+
+      const merged: Record<string, unknown> = {
+        ...extracted,
+        // Preserve manually-set fields from existing (buff/debuff not yet extractible)
+        buff: existingSkill.buff ?? [],
+        debuff: existingSkill.debuff ?? [],
+      };
+
+      // burnEffect: extracted has effect text, cost, offensive, target
+      // No merge needed — extraction is authoritative
+
+      // Reorder lang-keyed objects: group by lang (EN first, then JP, KR, ZH)
+      if (merged.true_desc_levels) {
+        merged.true_desc_levels = groupByLang(merged.true_desc_levels as Record<string, string>);
+      }
+      if (merged.enhancement) {
+        merged.enhancement = groupByLang(merged.enhancement as Record<string, string>);
+      }
+
+      mergedSkills[sk] = orderKeys(merged, SKILL_KEY_ORDER);
+
+      // Remove undefined values
+      const skill = mergedSkills[sk] as Record<string, unknown>;
+      for (const key of Object.keys(skill)) {
+        if (skill[key] === undefined) delete skill[key];
+      }
+    }
+
+    // Build final character JSON
+    const character = orderKeys({
+      ...info,
+      rank: manual.rank ?? existing.rank ?? null,
+      rank_pvp: manual.rank_pvp ?? existing.rank_pvp ?? undefined,
+      role: manual.role ?? existing.role ?? null,
+      tags: manual.tags ?? existing.tags ?? undefined,
+      skill_priority: manual.skill_priority ?? existing.skill_priority ?? { First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } },
+      video: manual.video ?? existing.video ?? undefined,
+      transcend: groupByLang(transcendData.transcend),
+      skills: mergedSkills,
+    }, TOP_LEVEL_KEY_ORDER);
+
+    // Remove undefined values
+    for (const key of Object.keys(character)) {
+      if (character[key] === undefined) delete character[key];
+    }
+
+    // Write file
+    const outputDir = path.join(process.cwd(), 'data', 'character');
+    await fs.mkdir(outputDir, { recursive: true });
+    await fs.writeFile(
+      path.join(outputDir, `${id}.json`),
+      JSON.stringify(character, null, 2) + '\n',
+      'utf-8',
+    );
+
+    return NextResponse.json({ ok: true, id });
+  } catch (e) {
+    const message = e instanceof Error ? e.message : 'Unknown error';
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }
