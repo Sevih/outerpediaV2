@@ -169,6 +169,70 @@ export function resolveBuffPlaceholders(
   });
 }
 
+// ── Buff/Debuff extraction ────────────────────────────────────────────
+
+/**
+ * Extract buff and debuff tags from BuffTemplet entries for given buff group IDs.
+ *
+ * Format: "Type|StatType" when StatType != ST_NONE, else just "Type"
+ * Classification: BUFF → buff array, DEBUFF* → debuff array, NEUTRAL* → ignored
+ */
+export function extractBuffDebuff(
+  buffGroupIds: string[],
+  buffData: BuffRow[],
+): { buff: string[]; debuff: string[] } {
+  const buffs = new Set<string>();
+  const debuffs = new Set<string>();
+
+  for (const groupId of buffGroupIds) {
+    for (const row of buffData) {
+      if (row.BuffID !== groupId) continue;
+
+      const type = row.Type ?? '';
+      const statType = row.StatType ?? '';
+      const bdType = row.BuffDebuffType ?? '';
+
+      if (!type) continue;
+
+      const tag = statType && statType !== 'ST_NONE' ? `${type}|${statType}` : type;
+
+      if (bdType === 'BUFF') {
+        buffs.add(tag);
+      } else if (bdType.startsWith('DEBUFF')) {
+        debuffs.add(tag);
+      }
+      // NEUTRAL/NEUTRAL2 are ignored
+
+      break; // Only need one entry per BuffID to get the Type
+    }
+  }
+
+  return { buff: [...buffs], debuff: [...debuffs] };
+}
+
+/**
+ * Collect all buff group IDs referenced by skill level entries.
+ * Accepts a single row or an array of rows (all levels).
+ * Due to bytes parser column shifts, IDs can be in BuffID, GainCP, or GainAP fields.
+ */
+export function collectBuffGroupIds(skillLevelRows: BuffRow | BuffRow[]): string[] {
+  const rows = Array.isArray(skillLevelRows) ? skillLevelRows : [skillLevelRows];
+  const ids = new Set<string>();
+  for (const row of rows) {
+    for (const field of ['BuffID', 'GainCP', 'GainAP']) {
+      const val = row[field] ?? '';
+      for (const part of val.split(',')) {
+        const trimmed = part.trim();
+        // Buff group IDs look like "2000001_1_1" — charId_skillNum_buffNum
+        if (/^\d{7}_/.test(trimmed)) {
+          ids.add(trimmed);
+        }
+      }
+    }
+  }
+  return [...ids];
+}
+
 // ── Skill target mapping ─────────────────────────────────────────────
 
 const TARGET_MAP: Record<string, string | null> = {

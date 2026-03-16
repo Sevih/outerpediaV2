@@ -5,7 +5,7 @@ import {
   LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang, type LangTexts,
   buildTextMap, expandLang,
   resolveElement, resolveClass, resolveSubClass,
-  buildBuffIndex, resolveBuffPlaceholders,
+  buildBuffIndex, resolveBuffPlaceholders, extractBuffDebuff, collectBuffGroupIds,
   resolveTarget, GIFT_MAP, resolveChainType, NON_OFFENSIVE_OVERRIDE,
   BASIC_STAR_OVERRIDE,
 } from '@/app/admin/lib/config';
@@ -449,6 +449,7 @@ async function handleSkills(id: string) {
       wgr = 3;
       offensive = true;
       target = 'multi';
+
     } else {
       // Combine RangeType with change form if exists (e.g. Luna 2000119↔2000120)
       let rangeType = sRow.RangeType ?? '';
@@ -473,7 +474,7 @@ async function handleSkills(id: string) {
       wgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
     }
 
-    skills[skillType] = {
+    const skillEntry: Record<string, unknown> = {
       NameIDSymbol: sid,
       IconName: sRow.IconName ?? '',
       SkillType: skillType,
@@ -485,9 +486,30 @@ async function handleSkills(id: string) {
       cd,
       offensive,
       target,
-      buff: [],
-      debuff: [],
+      ...extractBuffDebuff(collectBuffGroupIds(levels), buffTemplet.data),
     };
+
+    // Chain passive: add dual attack fields from backup skill
+    if (isChain) {
+      const backupRow = skillTemplet.data.find(r =>
+        (r.SkillType === 'SKT_BACKUP_GROUND' || r.SkillType === 'SKT_BACKUP_AERIAL') &&
+        ((r.NameIDSymbol && skillIds.includes(r.NameIDSymbol)) || (r.IconName && skillIds.includes(r.IconName)))
+      );
+      if (backupRow) {
+        const backupSid = backupRow.NameIDSymbol || backupRow.IconName || '';
+        const backupLevels = skillLevelRows.get(backupSid) ?? [];
+        const dualBD = backupLevels.length > 0
+          ? extractBuffDebuff(collectBuffGroupIds(backupLevels), buffTemplet.data)
+          : { buff: [], debuff: [] };
+        skillEntry.wgr_dual = 1;
+        skillEntry.dual_offensive = true;
+        skillEntry.dual_target = 'mono';
+        skillEntry.dual_buff = dualBD.buff;
+        skillEntry.dual_debuff = dualBD.debuff;
+      }
+    }
+
+    skills[skillType] = skillEntry;
   }
 
   // ── burnEffect: burst skills attached to the main skill that has RequireAP=int,int,int ──
@@ -535,7 +557,25 @@ async function handleSkills(id: string) {
       }
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (skills[burnTarget] as any).burnEffect = burnEffect;
+      const targetSkill = skills[burnTarget] as any;
+      targetSkill.burnEffect = burnEffect;
+
+      // Also merge burst skill buffs/debuffs into the main skill
+      const mainBuffs = new Set<string>(targetSkill.buff ?? []);
+      const mainDebuffs = new Set<string>(targetSkill.debuff ?? []);
+      for (const bt of burstTypes) {
+        const bRow = burstRows[bt];
+        if (!bRow) continue;
+        const bLevels = skillLevelRows.get(bRow.NameIDSymbol) ?? [];
+        if (bLevels.length > 0) {
+          const bd = extractBuffDebuff(collectBuffGroupIds(bLevels), buffTemplet.data);
+          for (const b of bd.buff) mainBuffs.add(b);
+          for (const d of bd.debuff) mainDebuffs.add(d);
+        }
+      }
+      // Remove duplicates that are already from the base skill buff group
+      targetSkill.buff = [...mainBuffs];
+      targetSkill.debuff = [...mainDebuffs];
     }
   }
 
@@ -1099,17 +1139,7 @@ export async function POST(req: NextRequest) {
       const extracted = skillsData.skills?.[sk];
       if (!extracted) continue;
 
-      const existingSkill = existing.skills?.[sk] ?? {};
-
-      const merged: Record<string, unknown> = {
-        ...extracted,
-        // Preserve manually-set fields from existing (buff/debuff not yet extractible)
-        buff: existingSkill.buff ?? [],
-        debuff: existingSkill.debuff ?? [],
-      };
-
-      // burnEffect: extracted has effect text, cost, offensive, target
-      // No merge needed — extraction is authoritative
+      const merged: Record<string, unknown> = { ...extracted };
 
       // Reorder lang-keyed objects: group by lang (EN first, then JP, KR, ZH)
       if (merged.true_desc_levels) {
