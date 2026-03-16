@@ -1,11 +1,15 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+const SECTION_DIRS: Record<string, string> = {
+  character: path.join(process.cwd(), 'data', 'character'),
+};
 
-async function countFiles(dir: string, ext = '.json') {
+async function countFiles(key: string, ext = '.json') {
+  const dir = SECTION_DIRS[key];
+  if (!dir) return 0;
   try {
-    const files = await fs.readdir(path.join(DATA_DIR, dir));
+    const files = await fs.readdir(dir);
     return files.filter(f => f.endsWith(ext)).length;
   } catch {
     return 0;
@@ -14,6 +18,7 @@ async function countFiles(dir: string, ext = '.json') {
 
 const sections = [
   { name: 'Characters', href: '/admin/characters', dir: 'character' },
+  { name: 'Parser', href: '/admin/parser', dir: '' },
 ];
 
 export default async function AdminDashboard() {

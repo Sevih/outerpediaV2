@@ -42,8 +42,14 @@ export const PATHS = {
   patchNotes: join(ROOT, 'data/patch-notes'),
   patchNotesImages: join(ROOT, 'public/images/patch-notes'),
 
+  // Admin data
+  adminBytes: join(ROOT, 'data/admin/bytes'),
+  adminJson: join(ROOT, 'data/admin/json'),
+
   // Datamine
   parserV3: join(ROOT, 'datamine/ParserV3'),
   datamineFiles: join(ROOT, 'datamine/files'),
+  datamineBundles: join(ROOT, 'datamine/files/bundles'),
+  datamineCli: join(ROOT, 'datamine/AssetStudioModCLI_net9_win64/AssetStudioModCLI.exe'),
   extractedAssets: join(ROOT, 'datamine/extracted_astudio'),
 } as const;

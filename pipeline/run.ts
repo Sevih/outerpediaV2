@@ -23,6 +23,7 @@ const steps: Step[] = [
   { name: 'gear-finder-index', run: () => import('./steps/gear-finder-index').then(m => m.run()) },
   { name: 'event-registry', run: () => import('./steps/event-registry').then(m => m.run()) },
   { name: 'validate-reco', run: () => import('./steps/validate-reco').then(m => m.run()) },
+  { name: 'bytes-cache', run: () => import('./steps/bytes-cache').then(m => m.run()) },
 ];
 
 const NAME_PAD = Math.max(...steps.map(s => s.name.length));
