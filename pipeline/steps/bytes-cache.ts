@@ -41,7 +41,8 @@ export async function run() {
     '-r',
     '-o', PATHS.adminBytes,
     '--log-level', 'warning',
-    '--filter-by-name', 'Templet',
+    '--filter-by-name', 'Templet|^Text',
+    '--filter-with-regex',
   ], { timeout: 300_000, stdio: 'ignore' });
 
   // Clean up unwanted files
