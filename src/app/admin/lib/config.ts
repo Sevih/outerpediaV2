@@ -171,10 +171,18 @@ export function resolveBuffPlaceholders(
 
 // ── Buff/Debuff extraction ────────────────────────────────────────────
 
+// Buff types to exclude from extraction
+const BUFF_TYPE_BLACKLIST = new Set([
+  'BT_DMG',
+  'BT_RESOURCE_USE_SKILL',
+  'BT_RESOURCE_CHARGE',
+  'BT_HEAL_BASED_TARGET',
+]);
+
 /**
  * Extract buff and debuff tags from BuffTemplet entries for given buff group IDs.
  *
- * Format: "Type|StatType" when StatType != ST_NONE, else just "Type"
+ * Format: "Type|StatType" for BT_STAT types, else just "Type"
  * Classification: BUFF → buff array, DEBUFF* → debuff array, NEUTRAL* → ignored
  */
 export function extractBuffDebuff(
@@ -192,7 +200,10 @@ export function extractBuffDebuff(
       const statType = row.StatType ?? '';
       const bdType = row.BuffDebuffType ?? '';
 
-      if (!type) continue;
+      if (!type || BUFF_TYPE_BLACKLIST.has(type)
+        || type.startsWith('BT_DMG_OWNER_STAT')
+        || type.startsWith('BT_DMG_TARGET_STAT')
+      ) continue;
 
       const tag = statType && statType !== 'ST_NONE' ? `${type}|${statType}` : type;
 
@@ -213,14 +224,14 @@ export function extractBuffDebuff(
 /**
  * Collect all buff group IDs referenced by skill level entries.
  * Accepts a single row or an array of rows (all levels).
- * Due to bytes parser column shifts, IDs can be in BuffID, GainCP, or GainAP fields.
+ * Searches all fields due to bytes parser column shifts.
  */
 export function collectBuffGroupIds(skillLevelRows: BuffRow | BuffRow[]): string[] {
   const rows = Array.isArray(skillLevelRows) ? skillLevelRows : [skillLevelRows];
   const ids = new Set<string>();
   for (const row of rows) {
-    for (const field of ['BuffID', 'GainCP', 'GainAP']) {
-      const val = row[field] ?? '';
+    for (const [, val] of Object.entries(row)) {
+      if (!val || typeof val !== 'string') continue;
       for (const part of val.split(',')) {
         const trimmed = part.trim();
         // Buff group IDs look like "2000001_1_1" — charId_skillNum_buffNum
@@ -228,6 +239,22 @@ export function collectBuffGroupIds(skillLevelRows: BuffRow | BuffRow[]): string
           ids.add(trimmed);
         }
       }
+    }
+  }
+  return [...ids];
+}
+
+/**
+ * Collect buff group IDs from BuffTemplet by naming convention.
+ * Used for chain passive ({charId}_chain_*) and backup ({charId}_backup_*).
+ */
+export function collectBuffGroupIdsByPattern(charId: string, pattern: string, buffData: BuffRow[]): string[] {
+  const prefix = `${charId}_${pattern}_`;
+  const ids = new Set<string>();
+  for (const row of buffData) {
+    const bid = row.BuffID ?? '';
+    if (bid.startsWith(prefix)) {
+      ids.add(bid);
     }
   }
   return [...ids];

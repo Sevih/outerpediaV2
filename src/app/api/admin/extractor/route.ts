@@ -5,7 +5,7 @@ import {
   LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang, type LangTexts,
   buildTextMap, expandLang,
   resolveElement, resolveClass, resolveSubClass,
-  buildBuffIndex, resolveBuffPlaceholders, extractBuffDebuff, collectBuffGroupIds,
+  buildBuffIndex, resolveBuffPlaceholders, extractBuffDebuff, collectBuffGroupIds, collectBuffGroupIdsByPattern,
   resolveTarget, GIFT_MAP, resolveChainType, NON_OFFENSIVE_OVERRIDE,
   BASIC_STAR_OVERRIDE,
 } from '@/app/admin/lib/config';
@@ -486,27 +486,19 @@ async function handleSkills(id: string) {
       cd,
       offensive,
       target,
-      ...extractBuffDebuff(collectBuffGroupIds(levels), buffTemplet.data),
+      ...(isChain
+        ? extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'chain', buffTemplet.data), buffTemplet.data)
+        : extractBuffDebuff(collectBuffGroupIds(levels), buffTemplet.data)),
     };
 
     // Chain passive: add dual attack fields from backup skill
     if (isChain) {
-      const backupRow = skillTemplet.data.find(r =>
-        (r.SkillType === 'SKT_BACKUP_GROUND' || r.SkillType === 'SKT_BACKUP_AERIAL') &&
-        ((r.NameIDSymbol && skillIds.includes(r.NameIDSymbol)) || (r.IconName && skillIds.includes(r.IconName)))
-      );
-      if (backupRow) {
-        const backupSid = backupRow.NameIDSymbol || backupRow.IconName || '';
-        const backupLevels = skillLevelRows.get(backupSid) ?? [];
-        const dualBD = backupLevels.length > 0
-          ? extractBuffDebuff(collectBuffGroupIds(backupLevels), buffTemplet.data)
-          : { buff: [], debuff: [] };
-        skillEntry.wgr_dual = 1;
-        skillEntry.dual_offensive = true;
-        skillEntry.dual_target = 'mono';
-        skillEntry.dual_buff = dualBD.buff;
-        skillEntry.dual_debuff = dualBD.debuff;
-      }
+      const dualBD = extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'backup', buffTemplet.data), buffTemplet.data);
+      skillEntry.wgr_dual = 1;
+      skillEntry.dual_offensive = true;
+      skillEntry.dual_target = 'mono';
+      skillEntry.dual_buff = dualBD.buff;
+      skillEntry.dual_debuff = dualBD.debuff;
     }
 
     skills[skillType] = skillEntry;
@@ -736,7 +728,11 @@ const SKILL_FIELDS = [
   'name', 'name_jp', 'name_kr', 'name_zh',
   'true_desc', 'true_desc_jp', 'true_desc_kr', 'true_desc_zh',
   'wgr', 'cd', 'offensive', 'target',
+  'wgr_dual', 'dual_offensive', 'dual_target',
 ];
+
+// Array fields compared as JSON
+const SKILL_ARRAY_FIELDS = ['buff', 'debuff', 'dual_buff', 'dual_debuff'];
 const SKILL_KEYS = ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE'];
 
 async function handleCompare() {
@@ -945,6 +941,37 @@ async function handleCompare() {
         trueDescExtracted[`true_desc_${lang}`] = descTexts1 ? resolveBuffPlaceholders(descTexts1[lang], 1, buffIndex) : null;
       }
 
+      // Extract buff/debuff
+      const skillBD = isChain
+        ? extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'chain', buffTemplet.data), buffTemplet.data)
+        : extractBuffDebuff(collectBuffGroupIds(levels), buffTemplet.data);
+
+      // Dual fields for chain passive
+      let dualData: Record<string, unknown> = {};
+      if (isChain) {
+        const dualBD = extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'backup', buffTemplet.data), buffTemplet.data);
+        dualData = { wgr_dual: 1, dual_offensive: true, dual_target: 'mono', dual_buff: dualBD.buff, dual_debuff: dualBD.debuff };
+      }
+
+      // Merge burst skill buffs into the main skill if it has burnEffect
+      const rapCheck = sRow.RequireAP ?? '';
+      if (/^\d+,\d+,\d+$/.test(rapCheck)) {
+        const burstTypes2 = ['SKT_BURST_1', 'SKT_BURST_2', 'SKT_BURST_3'];
+        for (const bt of burstTypes2) {
+          const bRow = skillTemplet.data.find(r => r.SkillType === bt && r.NameIDSymbol && sids.includes(r.NameIDSymbol));
+          if (!bRow) continue;
+          const bLevels = skillLevelBySID.get(bRow.NameIDSymbol) ?? [];
+          if (bLevels.length > 0) {
+            const bd = extractBuffDebuff(collectBuffGroupIds(bLevels), buffTemplet.data);
+            for (const b of bd.buff) skillBD.buff.push(b);
+            for (const d of bd.debuff) skillBD.debuff.push(d);
+          }
+        }
+        // Deduplicate
+        skillBD.buff = [...new Set(skillBD.buff)];
+        skillBD.debuff = [...new Set(skillBD.debuff)];
+      }
+
       const extractedSkill: Record<string, unknown> = {
         ...expandLang('name', resolvedNames),
         ...trueDescExtracted,
@@ -952,14 +979,35 @@ async function handleCompare() {
         cd,
         offensive,
         target,
+        ...dualData,
       };
 
+      // Compare scalar fields
       for (const sf of SKILL_FIELDS) {
-        // Skip if existing doesn't have this field at all (not yet filled)
         if (!(sf in existingSkill)) continue;
         const e = String(existingSkill[sf] ?? '');
         const a = String(extractedSkill[sf] ?? '');
         if (e !== a) diffs.push({ field: `${sk}.${sf}`, existing: e, extracted: a });
+      }
+
+      // Compare array fields (buff, debuff, dual_buff, dual_debuff)
+      const extractedArrays: Record<string, string[]> = {
+        buff: skillBD.buff,
+        debuff: skillBD.debuff,
+        dual_buff: (dualData.dual_buff as string[]) ?? [],
+        dual_debuff: (dualData.dual_debuff as string[]) ?? [],
+      };
+      for (const af of SKILL_ARRAY_FIELDS) {
+        if (!(af in existingSkill)) continue;
+        const eArr = JSON.stringify((existingSkill[af] ?? []).slice().sort());
+        const aArr = JSON.stringify((extractedArrays[af] ?? []).slice().sort());
+        if (eArr !== aArr) {
+          diffs.push({
+            field: `${sk}.${af}`,
+            existing: (existingSkill[af] ?? []).join(', '),
+            extracted: (extractedArrays[af] ?? []).join(', '),
+          });
+        }
       }
 
       // Compare desc all levels, all languages
