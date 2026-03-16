@@ -571,6 +571,31 @@ async function handleSkills(id: string) {
     }
   }
 
+  // ── HEAVY_STRIKE detection: passive with ST_CRITICAL_RATE -1000 (OAT_RATE) = can't crit ──
+  const hasHeavyStrike = buffTemplet.data.some(r =>
+    r.BuffID?.startsWith(`${id}_passive`) &&
+    r.StatType === 'ST_CRITICAL_RATE' &&
+    r.Value === '-1000' &&
+    r.ApplyingType === 'OAT_RATE',
+  );
+  if (hasHeavyStrike) {
+    for (const skill of Object.values(skills) as Record<string, unknown>[]) {
+      if (skill.offensive) {
+        const buffs = (skill.buff as string[]) ?? [];
+        if (!buffs.includes('HEAVY_STRIKE')) {
+          skill.buff = ['HEAVY_STRIKE', ...buffs];
+        }
+      }
+      // Also add to dual_buff if it exists (chain passive dual attack)
+      if (skill.dual_offensive) {
+        const dualBuffs = (skill.dual_buff as string[]) ?? [];
+        if (!dualBuffs.includes('HEAVY_STRIKE')) {
+          skill.dual_buff = ['HEAVY_STRIKE', ...dualBuffs];
+        }
+      }
+    }
+  }
+
   return NextResponse.json({ skills });
 }
 
@@ -875,6 +900,14 @@ async function handleCompare() {
       if (e !== a) diffs.push({ field, existing: e, extracted: a });
     }
 
+    // ── HEAVY_STRIKE detection: passive with -100% crit rate ──
+    const hasHeavyStrike = buffTemplet.data.some(r =>
+      r.BuffID?.startsWith(`${id}_passive`) &&
+      r.StatType === 'ST_CRITICAL_RATE' &&
+      r.Value === '-1000' &&
+      r.ApplyingType === 'OAT_RATE',
+    );
+
     // ── Skills ──
     for (const sk of SKILL_KEYS) {
       const existingSkill = existing.skills?.[sk];
@@ -988,6 +1021,15 @@ async function handleCompare() {
         const e = String(existingSkill[sf] ?? '');
         const a = String(extractedSkill[sf] ?? '');
         if (e !== a) diffs.push({ field: `${sk}.${sf}`, existing: e, extracted: a });
+      }
+
+      // HEAVY_STRIKE: add to offensive skills if character has -100% crit rate passive
+      if (hasHeavyStrike && offensive) {
+        if (!skillBD.buff.includes('HEAVY_STRIKE')) skillBD.buff.unshift('HEAVY_STRIKE');
+      }
+      if (hasHeavyStrike && (dualData.dual_offensive as boolean)) {
+        const db = (dualData.dual_buff as string[]) ?? [];
+        if (!db.includes('HEAVY_STRIKE')) { db.unshift('HEAVY_STRIKE'); dualData.dual_buff = db; }
       }
 
       // Compare array fields (buff, debuff, dual_buff, dual_debuff)

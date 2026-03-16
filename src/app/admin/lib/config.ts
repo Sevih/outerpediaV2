@@ -171,12 +171,24 @@ export function resolveBuffPlaceholders(
 
 // ── Buff/Debuff extraction ────────────────────────────────────────────
 
+// Buff types to rename (game name → display name)
+const BUFF_TYPE_RENAME: Record<string, string> = {
+};
+
+// Force classification override: types the game marks wrong (e.g. NEUTRAL that should be DEBUFF)
+const BUFF_TYPE_FORCE: Record<string, 'buff' | 'debuff'> = {
+  'BT_WG_REVERSE_HEAL': 'debuff',
+};
+
 // Buff types to exclude from extraction
 const BUFF_TYPE_BLACKLIST = new Set([
   'BT_DMG',
+  'BT_DMG_TO_BOSS',
+  'BT_DMG_ENEMY_TEAM_DECREASE',
   'BT_RESOURCE_USE_SKILL',
   'BT_RESOURCE_CHARGE',
-  'BT_HEAL_BASED_TARGET',
+  'BT_SKILL_RANGE_ALL',
+  'BT_STAT_PREMIUM',
 ]);
 
 /**
@@ -205,14 +217,33 @@ export function extractBuffDebuff(
         || type.startsWith('BT_DMG_TARGET_STAT')
       ) continue;
 
-      const tag = statType && statType !== 'ST_NONE' ? `${type}|${statType}` : type;
+      // BT_HEAL_BASED_TARGET: TurnDuration > 1 → BT_CONTINU_HEAL, otherwise skip
+      if (type === 'BT_HEAL_BASED_TARGET') {
+        const turn = parseInt(row.TurnDuration);
+        if (!isNaN(turn) && turn > 1) {
+          buffs.add('BT_CONTINU_HEAL');
+        }
+        break;
+      }
 
-      if (bdType === 'BUFF') {
+      // BT_STAT with TurnDuration -1 = permanent stacking mechanic, not a real buff
+      if (type === 'BT_STAT' && row.TurnDuration === '-1') break;
+
+      // Only include StatType for BT_STAT (where it identifies the buffed stat)
+      // For other types, StatType is a scaling parameter
+      const rawTag = type === 'BT_STAT' && statType && statType !== 'ST_NONE'
+        ? `${type}|${statType}`
+        : type;
+      const tag = BUFF_TYPE_RENAME[rawTag] ?? rawTag;
+
+      // Check forced classification first, then game data
+      const forced = BUFF_TYPE_FORCE[type];
+      if (forced === 'buff' || (!forced && bdType === 'BUFF')) {
         buffs.add(tag);
-      } else if (bdType.startsWith('DEBUFF')) {
+      } else if (forced === 'debuff' || (!forced && bdType.startsWith('DEBUFF'))) {
         debuffs.add(tag);
       }
-      // NEUTRAL/NEUTRAL2 are ignored
+      // NEUTRAL/NEUTRAL2 without force override are ignored
 
       break; // Only need one entry per BuffID to get the Type
     }
@@ -253,7 +284,7 @@ export function collectBuffGroupIdsByPattern(charId: string, pattern: string, bu
   const ids = new Set<string>();
   for (const row of buffData) {
     const bid = row.BuffID ?? '';
-    if (bid.startsWith(prefix)) {
+    if (bid.startsWith(prefix) && !bid.endsWith('_old')) {
       ids.add(bid);
     }
   }
