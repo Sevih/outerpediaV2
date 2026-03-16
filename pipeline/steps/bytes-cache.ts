@@ -1,62 +1,61 @@
-import { readdirSync, readFileSync, writeFileSync, statSync, mkdirSync, existsSync, unlinkSync } from 'fs';
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from 'fs';
 import { execFileSync } from 'child_process';
 import { join } from 'path';
 import { PATHS } from '../config';
+import { bundlesChanged, saveStamp } from '../lib/bundle-stamp';
 
 const DELETE_PREFIXES = ['BadWord'];
+const STAMP = join(PATHS.generated, '.bytes-cache-stamp');
 
 /**
  * bytes-cache pipeline step
  *
- * 1. Check if bundles are newer than extracted .bytes → extract with AssetStudioModCLI
- * 2. Check if .bytes are newer than parsed .json → parse all
+ * If bundles changed: extract .bytes with AssetStudioModCLI then parse all to JSON
  */
 export async function run() {
   if (!existsSync(PATHS.datamineBundles)) {
     return 'skipped (no bundles)';
   }
 
+  if (!bundlesChanged(STAMP, [PATHS.adminBytes, PATHS.adminJson])) {
+    const count = existsSync(PATHS.adminJson)
+      ? readdirSync(PATHS.adminJson).filter(f => f.endsWith('.json')).length
+      : 0;
+    return `up to date (${count} files)`;
+  }
+
+  if (!existsSync(PATHS.datamineCli)) {
+    return 'skipped (AssetStudioModCLI not found)';
+  }
+
   mkdirSync(PATHS.adminBytes, { recursive: true });
   mkdirSync(PATHS.adminJson, { recursive: true });
 
-  // ── Step 1: Extract .bytes from bundles if needed ──
+  // ── Extract .bytes from bundles ──
 
-  const needsExtract = needsExtraction();
-  if (needsExtract) {
-    if (!existsSync(PATHS.datamineCli)) {
-      return 'skipped (AssetStudioModCLI not found)';
-    }
+  execFileSync(PATHS.datamineCli, [
+    PATHS.datamineBundles,
+    '-m', 'export',
+    '-t', 'textAsset',
+    '-g', 'none',
+    '-r',
+    '-o', PATHS.adminBytes,
+    '--log-level', 'warning',
+    '--filter-by-name', 'Templet',
+  ], { timeout: 300_000, stdio: 'ignore' });
 
-    execFileSync(PATHS.datamineCli, [
-      PATHS.datamineBundles,
-      '-m', 'export',
-      '-t', 'textAsset',
-      '-g', 'none',
-      '-r',                           // overwrite existing
-      '-o', PATHS.adminBytes,
-      '--log-level', 'warning',
-      '--filter-by-name', 'Templet',
-    ], { timeout: 300_000, stdio: 'ignore' });
-
-    // Clean up unwanted files after extraction
-    for (const f of readdirSync(PATHS.adminBytes)) {
-      if (DELETE_PREFIXES.some(p => f.startsWith(p))) {
-        unlinkSync(join(PATHS.adminBytes, f));
-      }
+  // Clean up unwanted files
+  for (const f of readdirSync(PATHS.adminBytes)) {
+    if (DELETE_PREFIXES.some(p => f.startsWith(p))) {
+      unlinkSync(join(PATHS.adminBytes, f));
     }
   }
 
-  // ── Step 2: Parse .bytes → .json if needed ──
+  // ── Parse .bytes → .json ──
 
-  const bytesFiles = readdirSync(PATHS.adminBytes)
-    .filter(f => f.endsWith('.bytes'));
-
+  const bytesFiles = readdirSync(PATHS.adminBytes).filter(f => f.endsWith('.bytes'));
   if (bytesFiles.length === 0) {
     return 'no bytes files found';
-  }
-
-  if (!needsExtract && !needsParsing(bytesFiles)) {
-    return `up to date (${bytesFiles.length} files)`;
   }
 
   // Lazy import — files excluded by sparse-checkout in prod
@@ -74,58 +73,6 @@ export async function run() {
     }
   }
 
-  return `${needsExtract ? 'extracted + ' : ''}${parsed} parsed`;
-}
-
-/** Check if bundles are newer than the oldest .bytes file */
-function needsExtraction(): boolean {
-  const bytesFiles = existsSync(PATHS.adminBytes)
-    ? readdirSync(PATHS.adminBytes).filter(f => f.endsWith('.bytes'))
-    : [];
-
-  if (bytesFiles.length === 0) return true;
-
-  // Get most recent bundle mtime
-  const bundleFiles = readdirSync(PATHS.datamineBundles).filter(f => !f.endsWith('.crc'));
-  if (bundleFiles.length === 0) return false;
-
-  let latestBundle = 0;
-  for (const f of bundleFiles) {
-    const mtime = statSync(join(PATHS.datamineBundles, f)).mtimeMs;
-    if (mtime > latestBundle) latestBundle = mtime;
-  }
-
-  // Get oldest .bytes mtime
-  let oldestBytes = Infinity;
-  for (const f of bytesFiles) {
-    const mtime = statSync(join(PATHS.adminBytes, f)).mtimeMs;
-    if (mtime < oldestBytes) oldestBytes = mtime;
-  }
-
-  return latestBundle > oldestBytes;
-}
-
-/** Check if .bytes are newer than the oldest .json file */
-function needsParsing(bytesFiles: string[]): boolean {
-  const jsonFiles = existsSync(PATHS.adminJson)
-    ? readdirSync(PATHS.adminJson).filter(f => f.endsWith('.json'))
-    : [];
-
-  if (jsonFiles.length < bytesFiles.length) return true;
-
-  // Get most recent .bytes mtime
-  let latestBytes = 0;
-  for (const f of bytesFiles) {
-    const mtime = statSync(join(PATHS.adminBytes, f)).mtimeMs;
-    if (mtime > latestBytes) latestBytes = mtime;
-  }
-
-  // Get oldest .json mtime
-  let oldestJson = Infinity;
-  for (const f of jsonFiles) {
-    const mtime = statSync(join(PATHS.adminJson, f)).mtimeMs;
-    if (mtime < oldestJson) oldestJson = mtime;
-  }
-
-  return latestBytes > oldestJson;
+  saveStamp(STAMP);
+  return `extracted + ${parsed} parsed`;
 }

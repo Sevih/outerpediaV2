@@ -16,6 +16,8 @@ const steps: Step[] = [
   { name: 'area-names', run: () => import('./steps/area-names').then(m => m.run()) },
   { name: 'guide-boss-map', run: () => import('./steps/guide-boss-map').then(m => m.run()) },
   { name: 'most-used-units', run: () => import('./steps/most-used-units').then(m => m.run()) },
+  { name: 'extract-assets', run: () => import('./steps/extract-assets').then(m => m.run()) },
+  { name: 'bytes-cache', run: () => import('./steps/bytes-cache').then(m => m.run()) },
   { name: 'bgm-extract', run: () => import('./steps/bgm-extract').then(m => m.run()) },
   { name: 'wallpapers', run: () => import('./steps/wallpapers').then(m => m.run()) },
   { name: 'patch-notes', run: () => import('./steps/patch-notes').then(m => m.run()) },
@@ -23,7 +25,6 @@ const steps: Step[] = [
   { name: 'gear-finder-index', run: () => import('./steps/gear-finder-index').then(m => m.run()) },
   { name: 'event-registry', run: () => import('./steps/event-registry').then(m => m.run()) },
   { name: 'validate-reco', run: () => import('./steps/validate-reco').then(m => m.run()) },
-  { name: 'bytes-cache', run: () => import('./steps/bytes-cache').then(m => m.run()) },
 ];
 
 const NAME_PAD = Math.max(...steps.map(s => s.name.length));
