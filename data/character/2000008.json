@@ -11,6 +11,9 @@
   "rank": "B",
   "rank_pvp": "B",
   "role": "dps",
+  "tags": [
+    "free"
+  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -22,7 +25,6 @@
       "prio": 1
     }
   },
-  "tags": ["free"],
   "Chain_Type": "Start",
   "gift": "Natural Object",
   "VoiceActor": "VA. Judy Alice Lee",
@@ -30,23 +32,21 @@
   "VoiceActor_kr": "CV. 이보희",
   "VoiceActor_zh": "CV. 明坂聪美",
   "transcend": {
-    "1": null,
-    "2": null,
     "3": "ATK DEF HP +10%",
+    "6": "ATK DEF HP +30%\n+5% Ally Team Defense\n+25 Action Points at battle start",
     "4_1": "ATK DEF HP +16%\n+5% Ally Team Defense\n+1 Chain Passive Weakness Gauge damage",
-    "4_1_jp": "ATK DEF HP +16%\n味方の防御力+5%\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n아군 방어력 +5%\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n友军防御力+5%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
-    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
-    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\n+5% Ally Team Defense\n+25 Action Points at battle start",
+    "4_1_jp": "ATK DEF HP +16%\n味方の防御力+5%\nチェーンパッシブのWGダメージ+1",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方の防御力+5%\n戦闘開始時、AP+25",
+    "4_1_kr": "ATK DEF HP +16%\n아군 방어력 +5%\n체인 패시브의 WG 감소량 +1",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 방어력 +5%\n입장 시 AP +25",
+    "4_1_zh": "ATK DEF HP +16%\n友军防御力+5%\n连携被动技能的WG降低量+1",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n友军防御力+5%\n入场时AP+25"
   },
   "skills": {
@@ -60,47 +60,85 @@
       "name_zh": "玫瑰斩击",
       "true_desc_levels": {
         "1": "Attacks 2 enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>\\nand deals more damage to bosses.",
-        "1_jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
-        "1_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "1_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
         "2": "Attacks 2 enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>\\nand deals more damage to bosses.",
-        "2_jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
-        "2_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "2_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
         "3": "Attacks 2 enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>\\nand deals more damage to bosses.",
-        "3_jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
-        "3_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "3_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
         "4": "Attacks 2 enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>\\nand deals more damage to bosses.",
-        "4_jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
-        "4_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "4_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
         "5": "Attacks 2 enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>\\nand deals more damage to bosses.",
+        "1_jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
+        "2_jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
+        "3_jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
+        "4_jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
         "5_jp": "敵2体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
+        "1_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
+        "2_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
+        "3_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
+        "4_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
         "5_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
+        "1_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
+        "2_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
+        "3_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
+        "4_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
         "5_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% damage"],
-        "3_jp": ["ダメージ+10%"],
-        "3_kr": ["피해량 +10%"],
-        "3_zh": ["伤害量+10%"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+15% damage"],
-        "5_jp": ["ダメージ+15%"],
-        "5_kr": ["피해량 +15%"],
-        "5_zh": ["伤害量+15%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "5": [
+          "+15% damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "5_jp": [
+          "ダメージ+15%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "5_kr": [
+          "피해량 +15%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5_zh": [
+          "伤害量+15%"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["HEAVY_STRIKE"],
+      "buff": [
+        "HEAVY_STRIKE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "duo"
@@ -115,47 +153,95 @@
       "name_zh": "海啸",
       "true_desc_levels": {
         "1": "Attacks all enemies with Heavy Strike and recovers Health of the caster by <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health </color>. Damage additionally increases inversely proportional to the number of targets\\nand deals more damage to bosses.",
-        "1_jp": "敵全体に強撃でダメージを与え、自分のHPを<color=#28d9ed>10%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。対象の数が少ないほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
-        "1_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>10%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "1_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
         "2": "Attacks all enemies with Heavy Strike and recovers Health of the caster by <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health </color>. Damage additionally increases inversely proportional to the number of targets\\nand deals more damage to bosses.",
-        "2_jp": "敵全体に強撃でダメージを与え、自分のHPを<color=#28d9ed>10%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。対象の数が少ないほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
-        "2_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>10%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "2_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
         "3": "Attacks all enemies with Heavy Strike and recovers Health of the caster by <color=#28d9ed>12%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health </color>. Damage additionally increases inversely proportional to the number of targets\\nand deals more damage to bosses.",
-        "3_jp": "敵全体に強撃でダメージを与え、自分のHPを<color=#28d9ed>12%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。対象の数が少ないほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
-        "3_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>12%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "3_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
         "4": "Attacks all enemies with Heavy Strike and recovers Health of the caster by <color=#28d9ed>12%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health </color>. Damage additionally increases inversely proportional to the number of targets\\nand deals more damage to bosses.",
-        "4_jp": "敵全体に強撃でダメージを与え、自分のHPを<color=#28d9ed>12%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。対象の数が少ないほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
-        "4_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>12%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "4_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
         "5": "Attacks all enemies with Heavy Strike and recovers Health of the caster by <color=#28d9ed>15%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health </color>. Damage additionally increases inversely proportional to the number of targets\\nand deals more damage to bosses.",
+        "1_jp": "敵全体に強撃でダメージを与え、自分のHPを<color=#28d9ed>10%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。対象の数が少ないほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
+        "2_jp": "敵全体に強撃でダメージを与え、自分のHPを<color=#28d9ed>10%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。対象の数が少ないほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
+        "3_jp": "敵全体に強撃でダメージを与え、自分のHPを<color=#28d9ed>12%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。対象の数が少ないほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
+        "4_jp": "敵全体に強撃でダメージを与え、自分のHPを<color=#28d9ed>12%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。対象の数が少ないほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
         "5_jp": "敵全体に強撃でダメージを与え、自分のHPを<color=#28d9ed>15%</color>回復する。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。対象の数が少ないほどダメージがUPし、\\nボスにはより大きなダメージを与える。",
+        "1_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>10%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
+        "2_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>10%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
+        "3_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>12%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
+        "4_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>12%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
         "5_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
+        "1_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
+        "2_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
+        "3_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
+        "4_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
         "5_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+5% damage","+2% healing"],
-        "3_jp": ["ダメージ+5%","HP回復量+2%"],
-        "3_kr": ["피해량 +5%","체력 회복량 +2%"],
-        "3_zh": ["伤害量+5%","生命值恢复量+2%"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+10% damage","+3% healing"],
-        "5_jp": ["ダメージ+10%","HP回復量+3%"],
-        "5_kr": ["피해량 +10%","체력 회복량 +3%"],
-        "5_zh": ["伤害量+10%","生命值恢复量+3%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+5% damage",
+          "+2% healing"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "5": [
+          "+10% damage",
+          "+3% healing"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "ダメージ+5%",
+          "HP回復量+2%"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "5_jp": [
+          "ダメージ+10%",
+          "HP回復量+3%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "피해량 +5%",
+          "체력 회복량 +2%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "5_kr": [
+          "피해량 +10%",
+          "체력 회복량 +3%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "伤害量+5%",
+          "生命值恢复量+2%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5_zh": [
+          "伤害量+10%",
+          "生命值恢复量+3%"
+        ]
       },
-      "cd": "3",
       "wgr": 1,
-      "buff": ["HEAVY_STRIKE","BT_STAT|ST_DEF","BT_COOL3_CHARGE"],
+      "cd": 3,
+      "buff": [
+        "HEAVY_STRIKE",
+        "BT_STAT|ST_DEF",
+        "BT_COOL3_CHARGE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi",
@@ -202,48 +288,89 @@
       "name_zh": "世界末日",
       "true_desc_levels": {
         "1": "Reduces <color=#28d9ed>Defense</color> on all targets for <color=#28d9ed>2 turn(s)</color> (Ignores Resilience) before attacking all enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and additionally increases inversely proportional to the number of targets.\\nDeals more damage to bosses and gains an <color=#28d9ed>extra turn</color>.",
-        "1_jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
-        "1_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
-        "1_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
         "2": "Reduces <color=#28d9ed>Defense</color> on all targets for <color=#28d9ed>2 turn(s)</color> (Ignores Resilience) before attacking all enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and additionally increases inversely proportional to the number of targets.\\nDeals more damage to bosses and gains an <color=#28d9ed>extra turn</color>.",
-        "2_jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
-        "2_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
-        "2_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
         "3": "Reduces <color=#28d9ed>Defense</color> on all targets for <color=#28d9ed>2 turn(s)</color> (Ignores Resilience) before attacking all enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and additionally increases inversely proportional to the number of targets.\\nDeals more damage to bosses and gains an <color=#28d9ed>extra turn</color>.",
-        "3_jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
-        "3_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
-        "3_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
         "4": "Reduces <color=#28d9ed>Defense</color> on all targets for <color=#28d9ed>2 turn(s)</color> (Ignores Resilience) before attacking all enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and additionally increases inversely proportional to the number of targets.\\nDeals more damage to bosses and gains an <color=#28d9ed>extra turn</color>.",
-        "4_jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
-        "4_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
-        "4_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
         "5": "Reduces <color=#28d9ed>Defense</color> on all targets for <color=#28d9ed>2 turn(s)</color> (Ignores Resilience) before attacking all enemies with Heavy Strike.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and additionally increases inversely proportional to the number of targets.\\nDeals more damage to bosses and gains an <color=#28d9ed>extra turn</color>.",
+        "1_jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
+        "2_jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
+        "3_jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
+        "4_jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
         "5_jp": "スキル発動前に対象全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ(効果抵抗無視)、敵全体に強撃でダメージを与える。\\n自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージが追加でUPする。\\nボスにはより大きなダメージを与え、自分には<color=#28d9ed>追加ターン</color>を獲得する。",
+        "1_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
+        "2_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
+        "3_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
+        "4_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
         "5_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
+        "1_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
+        "2_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
+        "3_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
+        "4_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
         "5_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% damage"],
-        "3_jp": ["ダメージ+10%"],
-        "3_kr": ["피해량 +10%"],
-        "3_zh": ["伤害量+10%"],
-        "4": ["-1 turn Skill Cooldown"],
-        "4_jp": ["スキルターン-1ターン"],
-        "4_kr": ["스킬 쿨타임 -1턴"],
-        "4_zh": ["冷却时间-1回合"],
-        "5": ["+10% damage"],
-        "5_jp": ["ダメージ+10%"],
-        "5_kr": ["피해량 +10%"],
-        "5_zh": ["伤害量+10%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "4": [
+          "-1 turn Skill Cooldown"
+        ],
+        "5": [
+          "+10% damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "4_jp": [
+          "スキルターン-1ターン"
+        ],
+        "5_jp": [
+          "ダメージ+10%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "4_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "5_kr": [
+          "피해량 +10%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4_zh": [
+          "冷却时间-1回合"
+        ],
+        "5_zh": [
+          "伤害量+10%"
+        ]
       },
-      "cd": "5",
       "wgr": 2,
-      "buff": ["BT_ADDITIVE_TURN","HEAVY_STRIKE"],
-      "debuff": ["BT_STAT|ST_DEF"],
+      "cd": 5,
+      "buff": [
+        "HEAVY_STRIKE",
+        "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ],
       "offensive": true,
       "target": "multi"
     },
@@ -257,54 +384,98 @@
       "name_zh": "连携被动",
       "true_desc_levels": {
         "1": "<color=#ffd732>Chain Starter Effect</color>: Increases Skill Chain damage of all allies. Applies <color=#28d9ed>Heavy Strike</color> to this attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Health</color>. Applies <color=#28d9ed>Heavy Strike</color> to this attack.",
-        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
-        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
-        "1_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
         "2": "<color=#ffd732>Chain Starter Effect</color>: Increases Skill Chain damage of all allies. Applies <color=#28d9ed>Heavy Strike</color> to this attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Health</color>. Applies <color=#28d9ed>Heavy Strike</color> to this attack.",
-        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
-        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
-        "2_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
         "3": "<color=#ffd732>Chain Starter Effect</color>: Increases Skill Chain damage of all allies. Applies <color=#28d9ed>Heavy Strike</color> to this attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Health</color>. Applies <color=#28d9ed>Heavy Strike</color> to this attack.",
-        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
-        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
-        "3_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
         "4": "<color=#ffd732>Chain Starter Effect</color>: Increases Skill Chain damage of all allies. Applies <color=#28d9ed>Heavy Strike</color> to this attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Health</color>. Applies <color=#28d9ed>Heavy Strike</color> to this attack.",
-        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
-        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
-        "4_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
         "5": "<color=#ffd732>Chain Starter Effect</color>: Increases Skill Chain damage of all allies. Applies <color=#28d9ed>Heavy Strike</color> to this attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Health</color>. Applies <color=#28d9ed>Heavy Strike</color> to this attack.",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
         "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
         "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
+        "1_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
+        "2_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
+        "3_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
+        "4_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
         "5_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
-      "wgr_dual": 1,
       "cd": null,
-      "buff": ["HEAVY_STRIKE"],
+      "buff": [
+        "HEAVY_STRIKE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi",
+      "wgr_dual": 1,
       "dual_offensive": true,
       "dual_target": "mono",
-      "dual_buff": ["HEAVY_STRIKE"],
+      "dual_buff": [
+        "HEAVY_STRIKE"
+      ],
       "dual_debuff": []
     }
   }

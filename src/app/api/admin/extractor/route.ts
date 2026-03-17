@@ -33,7 +33,6 @@ const TOP_LEVEL_KEY_ORDER = [
 const SKILL_KEY_ORDER = [
   'NameIDSymbol', 'IconName', 'SkillType',
   'name', 'name_jp', 'name_kr', 'name_zh',
-  'true_desc', 'true_desc_jp', 'true_desc_kr', 'true_desc_zh',
   'true_desc_levels', 'enhancement',
   'wgr', 'cd', 'buff', 'debuff', 'offensive', 'target',
 ];
@@ -481,12 +480,6 @@ async function handleSkills(id: string) {
       }
     }
 
-    // true_desc = desc at level 1 (base description, all langs)
-    const trueDesc: Record<string, string | null> = {};
-    trueDesc.true_desc = descLevels['1'] ?? null;
-    for (const lang of SUFFIX_LANGS) {
-      trueDesc[`true_desc_${lang}`] = descLevels[`1_${lang}`] ?? null;
-    }
 
     const isChain = skillType === 'SKT_CHAIN_PASSIVE';
     let target: string | null;
@@ -528,7 +521,6 @@ async function handleSkills(id: string) {
       IconName: sRow.IconName ?? '',
       SkillType: skillType,
       ...expandLang('name', resolvedNames),
-      ...trueDesc,
       true_desc_levels: descLevels,
       enhancement,
       wgr,
@@ -870,7 +862,6 @@ const INFO_FIELDS = [
 
 const SKILL_FIELDS = [
   'name', 'name_jp', 'name_kr', 'name_zh',
-  'true_desc', 'true_desc_jp', 'true_desc_kr', 'true_desc_zh',
   'wgr', 'cd', 'offensive', 'target',
   'wgr_dual', 'dual_offensive', 'dual_target',
 ];
@@ -1114,17 +1105,6 @@ async function handleCompare() {
         wgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
       }
 
-      // Build true_desc from desc level 1
-      const skillDescSymbols = (sRow.DescID ?? '').split(',');
-      const descSym1 = skillDescSymbols[0]?.trim();
-      const descTexts1 = descSym1 ? textSkillMap[descSym1] : undefined;
-      const trueDescExtracted: Record<string, string | null> = {
-        true_desc: descTexts1 ? resolveBuffPlaceholders(descTexts1[DEFAULT_LANG], 1, buffIndex) : null,
-      };
-      for (const lang of SUFFIX_LANGS) {
-        trueDescExtracted[`true_desc_${lang}`] = descTexts1 ? resolveBuffPlaceholders(descTexts1[lang], 1, buffIndex) : null;
-      }
-
       // Extract buff/debuff (include class passive buff IDs from Skill_23)
       const cmpSlotNum = (sidSlotMap.get(sid) ?? '').replace('Skill_', '');
       const cmpExtraIds = cmpPassiveBuffIds.get(cmpSlotNum) ?? [];
@@ -1188,7 +1168,6 @@ async function handleCompare() {
 
       const extractedSkill: Record<string, unknown> = {
         ...expandLang('name', resolvedNames),
-        ...trueDescExtracted,
         wgr,
         cd,
         offensive,

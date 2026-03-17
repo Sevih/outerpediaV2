@@ -124,16 +124,17 @@ function DiffTable({ diffs }: { diffs: Diff[] }) {
 
 // ── Character detail panel ───────────────────────────────────────────
 
-function CharacterDetail({ id, name, exists, onSaved }: {
+function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
   id: string;
   name: string;
   exists: boolean;
   onSaved: () => void;
+  initialDiffs?: Diff[];
 }) {
   const [status, setStatus] = useState<'loading' | 'ready' | 'saving' | 'error'>('loading');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [diffs, setDiffs] = useState<Diff[]>([]);
+  const [diffs, setDiffs] = useState<Diff[]>(initialDiffs ?? []);
   const [, setExisting] = useState<AnyData | null>(null);
 
   // Manual fields
@@ -151,7 +152,7 @@ function CharacterDetail({ id, name, exists, onSaved }: {
     setStatus('loading');
     setError('');
     setSuccess('');
-    setDiffs([]);
+    setDiffs(initialDiffs ?? []);
 
     const fetchAll = async () => {
       try {
@@ -180,8 +181,8 @@ function CharacterDetail({ id, name, exists, onSaved }: {
           setSkillPriority({ First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } });
         }
 
-        // Fetch per-character compare diffs if character exists
-        if (exists) {
+        // Use initialDiffs if provided, otherwise fetch compare
+        if (exists && !initialDiffs) {
           const compareRes = await fetch('/api/admin/extractor?action=compare');
           const compareData = await compareRes.json();
           const charDiffs = compareData.results?.find((r: { id: string }) => r.id === id);
@@ -384,11 +385,14 @@ export default function ExtractorPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  useEffect(() => { loadList(); }, [loadList]);
+  useEffect(() => {
+    loadList();
+    handleCompare();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loadList]);
 
   function handleSelect(id: string) {
     setSelectedId(id);
-    setCompareResult(null);
   }
 
   async function handleCompare() {
@@ -552,6 +556,7 @@ export default function ExtractorPage() {
             name={selectedChar.name}
             exists={selectedChar.exists}
             onSaved={loadList}
+            initialDiffs={compareResult?.results?.find(r => r.id === selectedId)?.diffs}
           />
         )}
       </div>
