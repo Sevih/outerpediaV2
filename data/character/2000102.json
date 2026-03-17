@@ -11,6 +11,16 @@
   "rank": "A",
   "rank_pvp": "A",
   "role": "sustain",
+  "limited": true,
+  "rank_by_transcend": {
+    "3": "B",
+    "4": "B",
+    "5": "A",
+    "6": "A"
+  },
+  "tags": [
+    "limited"
+  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -22,9 +32,6 @@
       "prio": 2
     }
   },
-  "tags": [
-    "limited"
-  ],
   "Chain_Type": "Join",
   "gift": "Natural Object",
   "video": "rLmf9_q9ikc",
@@ -33,26 +40,23 @@
   "VoiceActor_kr": "CV. 김유림",
   "VoiceActor_zh": "CV. 干真由璃",
   "transcend": {
-    "1": null,
-    "2": null,
     "3": "ATK DEF HP +10%",
+    "6": "ATK DEF HP +30%\nWhen Irregular Infection effect triggers, buff / debuff durations are reduced by 2 turns\nIncreases allies' damage against the target inflicted with Irregular Infection by 50%",
     "4_1": "ATK DEF HP +16%\nAt the start of battle, grants Irregular Infection for 1 turn to the enemy with the highest Speed. (Ignores Immunity, Irremovable)\nIncreases Effectiveness by 40",
-    "4_1_jp": "ATK DEF HP +16%\n戦闘開始時、スピードが最も速い敵に\nイレギュラー感染症+1ターン(免疫無視、解除不可)\n効果命中+40",
-    "4_1_kr": "ATK DEF HP +16%\n전투 시작 시 속도가 가장 빠른 적에게 이레귤러 감염증 +1턴 (면역 무시, 해제 불가)\n효과 적중 +40",
-    "4_1_zh": "ATK DEF HP +16%\n战斗开始时,对速度最快的敌人施加1回合的异型怪感染症(无视免疫、无法解除)\n效果命中+40",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nUnlock Burst Stage 3\nGrants Action Point by 50 on entry\nIncreases Ally Resilience by 6%",
-    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n戦闘開始時、AP +50\n味方の効果抵抗+6%",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 AP +50\n아군 효과 저항 +6%",
-    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n入场时AP+50\n友军效果抵抗+6%",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\nWhen Irregular Infection effect triggers, buff / debuff durations are reduced by 2 turns\nIncreases allies' damage against the target inflicted with Irregular Infection by 50%",
+    "4_1_jp": "ATK DEF HP +16%\n戦闘開始時、スピードが最も速い敵に\nイレギュラー感染症+1ターン(免疫無視、解除不可)\n効果命中+40",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n戦闘開始時、AP +50\n味方の効果抵抗+6%",
     "6_jp": "ATK DEF HP +30%\nイレギュラー感染症の効果発動時、強化/弱体効果の\n持続ターンが2ターンDOWNに変更\n味方がイレギュラー感染症の対象に与えるダメージ+50%",
+    "4_1_kr": "ATK DEF HP +16%\n전투 시작 시 속도가 가장 빠른 적에게 이레귤러 감염증 +1턴 (면역 무시, 해제 불가)\n효과 적중 +40",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 AP +50\n아군 효과 저항 +6%",
     "6_kr": "ATK DEF HP +30%\n이레귤러 감염증 효과 발동 시 강화/약화 효과의 지속 턴 2턴 감소로 변경\n아군이 이레귤러 감염증 대상에게 입히는 피해 +50%",
+    "4_1_zh": "ATK DEF HP +16%\n战斗开始时,对速度最快的敌人施加1回合的异型怪感染症(无视免疫、无法解除)\n效果命中+40",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n入场时AP+50\n友军效果抵抗+6%",
     "6_zh": "ATK DEF HP +30%\n触发异型怪感染症效果时,强化/弱化效果的持续回合减少2回合。\n友军对异型怪感染症目标的伤害+50%"
   },
-  "limited": true,
   "skills": {
     "SKT_FIRST": {
       "NameIDSymbol": "10201",
@@ -64,24 +68,24 @@
       "name_zh": "捕食者的狂乱",
       "true_desc_levels": {
         "1": "Attacks an enemy and increases own Priority by <color=#28d9ed>10%</color>. With a <color=#28d9ed>30%</color> chance, reduces the target's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "1_jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "1_kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다. <color=#28d9ed>30%</color> 확률로 적 대상의 <color=#28d9ed>속도</color>가 <color=#28d9ed>1턴</color> 동안 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "1_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>10%</color>。有<color=#28d9ed>30%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "2": "Attacks an enemy and increases own Priority by <color=#28d9ed>10%</color>. With a <color=#28d9ed>30%</color> chance, reduces the target's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "2_jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "2_kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다. <color=#28d9ed>30%</color> 확률로 적 대상의 <color=#28d9ed>속도</color>가 <color=#28d9ed>1턴</color> 동안 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "2_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>10%</color>。有<color=#28d9ed>30%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "3": "Attacks an enemy and increases own Priority by <color=#28d9ed>20%</color>. With a <color=#28d9ed>30%</color> chance, reduces the target's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "3_jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "3_kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다. <color=#28d9ed>30%</color> 확률로 적 대상의 <color=#28d9ed>속도</color>가 <color=#28d9ed>1턴</color> 동안 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "3_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。有<color=#28d9ed>30%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "4": "Attacks an enemy and increases own Priority by <color=#28d9ed>20%</color>. With a <color=#28d9ed>40%</color> chance, reduces the target's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "4_jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "4_kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다. <color=#28d9ed>40%</color> 확률로 적 대상의 <color=#28d9ed>속도</color>가 <color=#28d9ed>1턴</color> 동안 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "4_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。有<color=#28d9ed>40%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "5": "Attacks an enemy and increases own Priority by <color=#28d9ed>20%</color>. With a <color=#28d9ed>50%</color> chance, reduces the target's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "1_jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "2_jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "3_jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "4_jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
         "5_jp": "敵単体にダメージを与え、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>スピード</color>が<color=#28d9ed>1ターン</color>の間DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "1_kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다. <color=#28d9ed>30%</color> 확률로 적 대상의 <color=#28d9ed>속도</color>가 <color=#28d9ed>1턴</color> 동안 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "2_kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다. <color=#28d9ed>30%</color> 확률로 적 대상의 <color=#28d9ed>속도</color>가 <color=#28d9ed>1턴</color> 동안 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "3_kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다. <color=#28d9ed>30%</color> 확률로 적 대상의 <color=#28d9ed>속도</color>가 <color=#28d9ed>1턴</color> 동안 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "4_kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다. <color=#28d9ed>40%</color> 확률로 적 대상의 <color=#28d9ed>속도</color>가 <color=#28d9ed>1턴</color> 동안 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "5_kr": "적을 공격하고 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다. <color=#28d9ed>50%</color> 확률로 적 대상의 <color=#28d9ed>속도</color>가 <color=#28d9ed>1턴</color> 동안 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "1_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>10%</color>。有<color=#28d9ed>30%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "2_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>10%</color>。有<color=#28d9ed>30%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "3_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。有<color=#28d9ed>30%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "4_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。有<color=#28d9ed>40%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "5_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。有<color=#28d9ed>50%</color>几率,使敌人目标的<color=#28d9ed>速度</color>降低<color=#28d9ed>1回合</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。"
       },
       "enhancement": {
@@ -89,53 +93,53 @@
           "+10% damage",
           "+1 Weakness Gauge damage"
         ],
+        "3": [
+          "+10% Priority"
+        ],
+        "4": [
+          "+10% effect chance"
+        ],
+        "5": [
+          "+10% effect chance",
+          "+1 Weakness Gauge damage"
+        ],
         "2_jp": [
           "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "行動ゲージ10%UP"
+        ],
+        "4_jp": [
+          "効果発生率+10%"
+        ],
+        "5_jp": [
+          "効果発生率+10%",
           "WGダメージ+1"
         ],
         "2_kr": [
           "피해량 +10%",
           "WG 감소량 +1"
         ],
-        "2_zh": [
-          "伤害量+10%",
-          "WG降低量+1"
-        ],
-        "3": [
-          "+10% Priority"
-        ],
-        "3_jp": [
-          "行動ゲージ10%UP"
-        ],
         "3_kr": [
           "행동 게이지 +10%"
-        ],
-        "3_zh": [
-          "行动值+10%"
-        ],
-        "4": [
-          "+10% effect chance"
-        ],
-        "4_jp": [
-          "効果発生率+10%"
         ],
         "4_kr": [
           "효과 발동 확률 +10%"
         ],
-        "4_zh": [
-          "效果触发几率+10%"
-        ],
-        "5": [
-          "+10% effect chance",
-          "+1 Weakness Gauge damage"
-        ],
-        "5_jp": [
-          "効果発生率+10%",
-          "WGダメージ+1"
-        ],
         "5_kr": [
           "효과 발동 확률 +10%",
           "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "行动值+10%"
+        ],
+        "4_zh": [
+          "效果触发几率+10%"
         ],
         "5_zh": [
           "效果触发几率+10%",
@@ -197,24 +201,24 @@
       "name_zh": "生物灭绝任务",
       "true_desc_levels": {
         "1": "(Passive Effect)\\nReduces Damage Taken by heroes with Barriers.\\n<color=#28d9ed>Reduces Damage Dealt by those inflicted with Irregular Infection</color>, and has an <color=#28d9ed>80%</color> chance to counterattack when hit.\\n\\n(Triggered Effect)\\nOn the caster's turn, attacking a target with <color=#28d9ed>Irregular Infection</color> triggers an additional attack on all enemies. After the additional attack, reduces Priority of the infected target by <color=#28d9ed>50%</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "1_jp": "(パッシブ効果)\\nシールド状態の味方が受けるダメージをDOWNさせる。\\n<color=#28d9ed>イレギュラー感染症</color>状態の対象のダメージをDOWNさせ、ダメージを受けた場合、<color=#28d9ed>80%</color>の確率で反撃する。\\n\\n(発動効果)\\n自分のターンに<color=#28d9ed>イレギュラー感染症</color>状態の対象を攻撃時、敵全体に追加攻撃を与える。追加攻撃後、<color=#28d9ed>イレギュラー感染症</color>状態の対象の行動ゲージが<color=#28d9ed>50%</color>DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "1_kr": "(패시브 효과)\\n실드를 보유한 아군의 받는 피해를 감소시킵니다.\\n<color=#28d9ed>이레귤러 감염증</color> 보유 대상의 피해량을 감소시키며, 피격 시 <color=#28d9ed>80%</color> 확률로 반격합니다.\\n\\n(발동 효과)\\n자신의 턴에 <color=#28d9ed>이레귤러 감염증</color> 보유 대상 공격 시 적 전체에게 추가 공격을 발동합니다. 추가 공격 후 <color=#28d9ed>이레귤러 감염증</color> 보유 대상의 행동 게이지가 <color=#28d9ed>50%</color> 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "1_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n降低附带<color=#28d9ed>异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>80%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "2": "(Passive Effect)\\nReduces Damage Taken by heroes with Barriers.\\n<color=#28d9ed>Reduces Damage Dealt by those inflicted with Irregular Infection</color>, and has an <color=#28d9ed>80%</color> chance to counterattack when hit.\\n\\n(Triggered Effect)\\nOn the caster's turn, attacking a target with <color=#28d9ed>Irregular Infection</color> triggers an additional attack on all enemies. After the additional attack, reduces Priority of the infected target by <color=#28d9ed>50%</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "2_jp": "(パッシブ効果)\\nシールド状態の味方が受けるダメージをDOWNさせる。\\n<color=#28d9ed>イレギュラー感染症</color>状態の対象のダメージをDOWNさせ、ダメージを受けた場合、<color=#28d9ed>80%</color>の確率で反撃する。\\n\\n(発動効果)\\n自分のターンに<color=#28d9ed>イレギュラー感染症</color>状態の対象を攻撃時、敵全体に追加攻撃を与える。追加攻撃後、<color=#28d9ed>イレギュラー感染症</color>状態の対象の行動ゲージが<color=#28d9ed>50%</color>DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "2_kr": "(패시브 효과)\\n실드를 보유한 아군의 받는 피해를 감소시킵니다.\\n<color=#28d9ed>이레귤러 감염증</color> 보유 대상의 피해량을 감소시키며, 피격 시 <color=#28d9ed>80%</color> 확률로 반격합니다.\\n\\n(발동 효과)\\n자신의 턴에 <color=#28d9ed>이레귤러 감염증</color> 보유 대상 공격 시 적 전체에게 추가 공격을 발동합니다. 추가 공격 후 <color=#28d9ed>이레귤러 감염증</color> 보유 대상의 행동 게이지가 <color=#28d9ed>50%</color> 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "2_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n降低附带<color=#28d9ed>异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>80%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "3": "(Passive Effect)\\nReduces Damage Taken by heroes with Barriers.\\n<color=#28d9ed>Reduces Damage Dealt by those inflicted with Irregular Infection</color>, and has an <color=#28d9ed>80%</color> chance to counterattack when hit.\\n\\n(Triggered Effect)\\nOn the caster's turn, attacking a target with <color=#28d9ed>Irregular Infection</color> triggers an additional attack on all enemies. After the additional attack, reduces Priority of the infected target by <color=#28d9ed>50%</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "3_jp": "(パッシブ効果)\\nシールド状態の味方が受けるダメージをDOWNさせる。\\n<color=#28d9ed>イレギュラー感染症</color>状態の対象のダメージをDOWNさせ、ダメージを受けた場合、<color=#28d9ed>80%</color>の確率で反撃する。\\n\\n(発動効果)\\n自分のターンに<color=#28d9ed>イレギュラー感染症</color>状態の対象を攻撃時、敵全体に追加攻撃を与える。追加攻撃後、<color=#28d9ed>イレギュラー感染症</color>状態の対象の行動ゲージが<color=#28d9ed>50%</color>DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "3_kr": "(패시브 효과)\\n실드를 보유한 아군의 받는 피해를 감소시킵니다.\\n<color=#28d9ed>이레귤러 감염증</color> 보유 대상의 피해량을 감소시키며, 피격 시 <color=#28d9ed>80%</color> 확률로 반격합니다.\\n\\n(발동 효과)\\n자신의 턴에 <color=#28d9ed>이레귤러 감염증</color> 보유 대상 공격 시 적 전체에게 추가 공격을 발동합니다. 추가 공격 후 <color=#28d9ed>이레귤러 감염증</color> 보유 대상의 행동 게이지가 <color=#28d9ed>50%</color> 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "3_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n降低附带<color=#28d9ed>异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>80%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "4": "(Passive Effect)\\nReduces Damage Taken by heroes with Barriers.\\n<color=#28d9ed>Reduces Damage Dealt by those inflicted with Irregular Infection</color> and has a <color=#28d9ed>100%</color> chance to counterattack when hit.\\n\\n(Triggered Effect)\\nOn the caster's turn, attacking a target with <color=#28d9ed>Irregular Infection</color> triggers an additional attack on all enemies. After the additional attack, reduces Priority of the infected target by <color=#28d9ed>50%</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "4_jp": "(パッシブ効果)\\nシールド状態の味方が受けるダメージをDOWNさせる。\\n<color=#28d9ed>イレギュラー感染症</color>状態の対象のダメージをDOWNさせ、ダメージを受けた場合、<color=#28d9ed>100%</color>の確率で反撃する。\\n\\n(発動効果)\\n自分のターンに<color=#28d9ed>イレギュラー感染症</color>状態の対象を攻撃時、敵全体に追加攻撃を与える。追加攻撃後、<color=#28d9ed>イレギュラー感染症</color>状態の対象の行動ゲージが<color=#28d9ed>50%</color>DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "4_kr": "(패시브 효과)\\n실드를 보유한 아군의 받는 피해를 감소시킵니다.\\n<color=#28d9ed>이레귤러 감염증</color> 보유 대상의 피해량을 감소시키며, 피격 시 <color=#28d9ed>100%</color> 확률로 반격합니다.\\n\\n(발동 효과)\\n자신의 턴에 <color=#28d9ed>이레귤러 감염증</color> 보유 대상 공격 시 적 전체에게 추가 공격을 발동합니다. 추가 공격 후 <color=#28d9ed>이레귤러 감염증</color> 보유 대상의 행동 게이지가 <color=#28d9ed>50%</color> 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "4_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n<color=#28d9ed>降低附带异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>100%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "5": "(Passive Effect)\\nReduces Damage Taken by heroes with Barriers.\\n<color=#28d9ed>Reduces Damage Dealt by those inflicted with Irregular Infection</color> and has a <color=#28d9ed>100%</color> chance to counterattack when hit.\\n\\n(Triggered Effect)\\nOn the caster's turn, attacking a target with <color=#28d9ed>Irregular Infection</color> triggers an additional attack on all enemies. After the additional attack, reduces Priority of the infected target by <color=#28d9ed>50%</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "1_jp": "(パッシブ効果)\\nシールド状態の味方が受けるダメージをDOWNさせる。\\n<color=#28d9ed>イレギュラー感染症</color>状態の対象のダメージをDOWNさせ、ダメージを受けた場合、<color=#28d9ed>80%</color>の確率で反撃する。\\n\\n(発動効果)\\n自分のターンに<color=#28d9ed>イレギュラー感染症</color>状態の対象を攻撃時、敵全体に追加攻撃を与える。追加攻撃後、<color=#28d9ed>イレギュラー感染症</color>状態の対象の行動ゲージが<color=#28d9ed>50%</color>DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "2_jp": "(パッシブ効果)\\nシールド状態の味方が受けるダメージをDOWNさせる。\\n<color=#28d9ed>イレギュラー感染症</color>状態の対象のダメージをDOWNさせ、ダメージを受けた場合、<color=#28d9ed>80%</color>の確率で反撃する。\\n\\n(発動効果)\\n自分のターンに<color=#28d9ed>イレギュラー感染症</color>状態の対象を攻撃時、敵全体に追加攻撃を与える。追加攻撃後、<color=#28d9ed>イレギュラー感染症</color>状態の対象の行動ゲージが<color=#28d9ed>50%</color>DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "3_jp": "(パッシブ効果)\\nシールド状態の味方が受けるダメージをDOWNさせる。\\n<color=#28d9ed>イレギュラー感染症</color>状態の対象のダメージをDOWNさせ、ダメージを受けた場合、<color=#28d9ed>80%</color>の確率で反撃する。\\n\\n(発動効果)\\n自分のターンに<color=#28d9ed>イレギュラー感染症</color>状態の対象を攻撃時、敵全体に追加攻撃を与える。追加攻撃後、<color=#28d9ed>イレギュラー感染症</color>状態の対象の行動ゲージが<color=#28d9ed>50%</color>DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "4_jp": "(パッシブ効果)\\nシールド状態の味方が受けるダメージをDOWNさせる。\\n<color=#28d9ed>イレギュラー感染症</color>状態の対象のダメージをDOWNさせ、ダメージを受けた場合、<color=#28d9ed>100%</color>の確率で反撃する。\\n\\n(発動効果)\\n自分のターンに<color=#28d9ed>イレギュラー感染症</color>状態の対象を攻撃時、敵全体に追加攻撃を与える。追加攻撃後、<color=#28d9ed>イレギュラー感染症</color>状態の対象の行動ゲージが<color=#28d9ed>50%</color>DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
         "5_jp": "(パッシブ効果)\\nシールド状態の味方が受けるダメージをDOWNさせる。\\n<color=#28d9ed>イレギュラー感染症</color>状態の対象のダメージをDOWNさせ、ダメージを受けた場合、<color=#28d9ed>100%</color>の確率で反撃する。\\n\\n(発動効果)\\n自分のターンに<color=#28d9ed>イレギュラー感染症</color>状態の対象を攻撃時、敵全体に追加攻撃を与える。追加攻撃後、<color=#28d9ed>イレギュラー感染症</color>状態の対象の行動ゲージが<color=#28d9ed>50%</color>DOWNする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "1_kr": "(패시브 효과)\\n실드를 보유한 아군의 받는 피해를 감소시킵니다.\\n<color=#28d9ed>이레귤러 감염증</color> 보유 대상의 피해량을 감소시키며, 피격 시 <color=#28d9ed>80%</color> 확률로 반격합니다.\\n\\n(발동 효과)\\n자신의 턴에 <color=#28d9ed>이레귤러 감염증</color> 보유 대상 공격 시 적 전체에게 추가 공격을 발동합니다. 추가 공격 후 <color=#28d9ed>이레귤러 감염증</color> 보유 대상의 행동 게이지가 <color=#28d9ed>50%</color> 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "2_kr": "(패시브 효과)\\n실드를 보유한 아군의 받는 피해를 감소시킵니다.\\n<color=#28d9ed>이레귤러 감염증</color> 보유 대상의 피해량을 감소시키며, 피격 시 <color=#28d9ed>80%</color> 확률로 반격합니다.\\n\\n(발동 효과)\\n자신의 턴에 <color=#28d9ed>이레귤러 감염증</color> 보유 대상 공격 시 적 전체에게 추가 공격을 발동합니다. 추가 공격 후 <color=#28d9ed>이레귤러 감염증</color> 보유 대상의 행동 게이지가 <color=#28d9ed>50%</color> 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "3_kr": "(패시브 효과)\\n실드를 보유한 아군의 받는 피해를 감소시킵니다.\\n<color=#28d9ed>이레귤러 감염증</color> 보유 대상의 피해량을 감소시키며, 피격 시 <color=#28d9ed>80%</color> 확률로 반격합니다.\\n\\n(발동 효과)\\n자신의 턴에 <color=#28d9ed>이레귤러 감염증</color> 보유 대상 공격 시 적 전체에게 추가 공격을 발동합니다. 추가 공격 후 <color=#28d9ed>이레귤러 감염증</color> 보유 대상의 행동 게이지가 <color=#28d9ed>50%</color> 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "4_kr": "(패시브 효과)\\n실드를 보유한 아군의 받는 피해를 감소시킵니다.\\n<color=#28d9ed>이레귤러 감염증</color> 보유 대상의 피해량을 감소시키며, 피격 시 <color=#28d9ed>100%</color> 확률로 반격합니다.\\n\\n(발동 효과)\\n자신의 턴에 <color=#28d9ed>이레귤러 감염증</color> 보유 대상 공격 시 적 전체에게 추가 공격을 발동합니다. 추가 공격 후 <color=#28d9ed>이레귤러 감염증</color> 보유 대상의 행동 게이지가 <color=#28d9ed>50%</color> 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "5_kr": "(패시브 효과)\\n실드를 보유한 아군의 받는 피해를 감소시킵니다.\\n<color=#28d9ed>이레귤러 감염증</color> 보유 대상의 피해량을 감소시키며, 피격 시 <color=#28d9ed>100%</color> 확률로 반격합니다.\\n\\n(발동 효과)\\n자신의 턴에 <color=#28d9ed>이레귤러 감염증</color> 보유 대상 공격 시 적 전체에게 추가 공격을 발동합니다. 추가 공격 후 <color=#28d9ed>이레귤러 감염증</color> 보유 대상의 행동 게이지가 <color=#28d9ed>50%</color> 감소합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "1_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n降低附带<color=#28d9ed>异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>80%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "2_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n降低附带<color=#28d9ed>异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>80%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "3_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n降低附带<color=#28d9ed>异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>80%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
+        "4_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n<color=#28d9ed>降低附带异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>100%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。",
         "5_zh": "(被动效果)\\n降低附带护盾的友军所受伤害。\\n<color=#28d9ed>降低附带异型怪感染症</color>目标的伤害量,且被攻击时有<color=#28d9ed>100%</color>几率反击。\\n\\n(触发效果)\\n在自身回合攻击附带<color=#28d9ed>异型怪感染症</color>的目标时,对全体敌人发动额外攻击。额外攻击后,使附带<color=#28d9ed>异型怪感染症</color>的目标行动值降低<color=#28d9ed>50%</color>。\\n该技能根据生命值上限而非攻击力等比提升\\n伤害。"
       },
       "enhancement": {
@@ -222,7 +226,27 @@
           "+10% damage",
           "+1 Weakness Gauge damage"
         ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "Increases Counterattack Chance by 20%"
+        ],
+        "5": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
         "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "反撃発生率UP+20%"
+        ],
+        "5_jp": [
           "ダメージ+10%",
           "WGダメージ+1"
         ],
@@ -230,53 +254,33 @@
           "피해량 +10%",
           "WG 감소량 +1"
         ],
-        "2_zh": [
-          "伤害量+10%",
-          "WG降低量+1"
-        ],
-        "3": [
-          "-1 turn Skill Cooldown"
-        ],
-        "3_jp": [
-          "スキルターン-1ターン"
-        ],
         "3_kr": [
           "스킬 쿨타임 -1턴"
-        ],
-        "3_zh": [
-          "冷却时间-1回合"
-        ],
-        "4": [
-          "Increases Counterattack Chance by 20%"
-        ],
-        "4_jp": [
-          "反撃発生率UP+20%"
         ],
         "4_kr": [
           "반격 확률 증가 +20%"
         ],
-        "4_zh": [
-          "反击率提升+20%"
-        ],
-        "5": [
-          "+10% damage",
-          "+1 Weakness Gauge damage"
-        ],
-        "5_jp": [
-          "ダメージ+10%",
-          "WGダメージ+1"
-        ],
         "5_kr": [
           "피해량 +10%",
           "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "反击率提升+20%"
         ],
         "5_zh": [
           "伤害量+10%",
           "WG降低量+1"
         ]
       },
-      "cd": "3",
       "wgr": 1,
+      "cd": 3,
       "buff": [
         "SYS_BUFF_ADDITIVE_SKILL"
       ],
@@ -296,24 +300,24 @@
       "name_zh": "亚成体的终结",
       "true_desc_levels": {
         "1": "Attacks all enemies. With a <color=#28d9ed>100%</color> chance, grants <color=#28d9ed>Taunted</color> to the target for <color=#28d9ed>1 turn(s)</color>, and when attacking a boss, deals Fixed Damage equal to <color=#28d9ed>8%</color> of the boss' Max Health.\\n\\nThen grants a <color=#28d9ed>Barrier</color> to all heroes for <color=#28d9ed>1 turns</color> and grants <color=#28d9ed>Irregular Infection</color> to the fastest enemy for <color=#28d9ed>1 turns</color>. (Ignores Immunity, Irremovable)\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "1_jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>間<color=#28d9ed>挑発</color>し、対象がボスの場合、ボスの最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n攻撃後、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与し、最もスピードが高い敵単体に<color=#28d9ed>イレギュラー感染症</color>を<color=#28d9ed>1ターン</color>の間付与する。(【イレギュラー感染症】は免疫を無視・解除不可)自分の最大HPが高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "1_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 보스 대상으로 공격 시 보스 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.\\n\\n이후 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 가장 빠른 적에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>이레귤러 감염증</color>을 부여합니다. (이레귤러 감염증은 면역 무시, 해제 불가) 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "1_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>1回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>1回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。",
         "2": "Attacks all enemies. With a <color=#28d9ed>100%</color> chance, grants <color=#28d9ed>Taunted</color> to the target for <color=#28d9ed>1 turn(s)</color>, and when attacking a boss, deals Fixed Damage equal to <color=#28d9ed>8%</color> of the boss' Max Health.\\n\\nThen grants a <color=#28d9ed>Barrier</color> to all heroes for <color=#28d9ed>1 turns</color> and grants <color=#28d9ed>Irregular Infection</color> to the fastest enemy for <color=#28d9ed>1 turns</color>. (Ignores Immunity, Irremovable)\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "2_jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>間<color=#28d9ed>挑発</color>し、対象がボスの場合、ボスの最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n攻撃後、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与し、最もスピードが高い敵単体に<color=#28d9ed>イレギュラー感染症</color>を<color=#28d9ed>1ターン</color>の間付与する。(【イレギュラー感染症】は免疫を無視・解除不可)自分の最大HPが高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "2_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 보스 대상으로 공격 시 보스 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.\\n\\n이후 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 가장 빠른 적에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>이레귤러 감염증</color>을 부여합니다. (이레귤러 감염증은 면역 무시, 해제 불가) 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "2_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>1回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>1回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。",
         "3": "Attacks all enemies. With a <color=#28d9ed>100%</color> chance, grants <color=#28d9ed>Taunted</color> to the target for <color=#28d9ed>1 turn(s)</color>, and when attacking a boss, deals Fixed Damage equal to <color=#28d9ed>8%</color> of the boss' Max Health.\\n\\nThen grants a <color=#28d9ed>Barrier</color> to all heroes for <color=#28d9ed>1 turns</color> and grants <color=#28d9ed>Irregular Infection</color> to the fastest enemy for <color=#28d9ed>1 turns</color>. (Ignores Immunity, Irremovable)\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "3_jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>間<color=#28d9ed>挑発</color>し、対象がボスの場合、ボスの最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n攻撃後、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与し、最もスピードが高い敵単体に<color=#28d9ed>イレギュラー感染症</color>を<color=#28d9ed>1ターン</color>の間付与する。(【イレギュラー感染症】は免疫を無視・解除不可)自分の最大HPが高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "3_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 보스 대상으로 공격 시 보스 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.\\n\\n이후 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 가장 빠른 적에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>이레귤러 감염증</color>을 부여합니다. (이레귤러 감염증은 면역 무시, 해제 불가) 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "3_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>1回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>1回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。",
         "4": "Attacks all enemies. With a <color=#28d9ed>100%</color> chance, grants <color=#28d9ed>Taunted</color> to the target for <color=#28d9ed>1 turn(s)</color>, and when attacking a boss, deals Fixed Damage equal to <color=#28d9ed>8%</color> of the boss' Max Health.\\n\\nThen grants a <color=#28d9ed>Barrier</color> to all heroes for <color=#28d9ed>2 turns</color> and grants <color=#28d9ed>Irregular Infection</color> to the fastest enemy for <color=#28d9ed>1 turns</color>. (Ignores Immunity, Irremovable)\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "4_jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>間<color=#28d9ed>挑発</color>し、対象がボスの場合、ボスの最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n攻撃後、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与し、最もスピードが高い敵単体に<color=#28d9ed>イレギュラー感染症</color>を<color=#28d9ed>1ターン</color>の間付与する。(【イレギュラー感染症】は免疫を無視・解除不可)自分の最大HPが高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "4_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 보스 대상으로 공격 시 보스 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.\\n\\n이후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 가장 빠른 적에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>이레귤러 감염증</color>을 부여합니다. (이레귤러 감염증은 면역 무시, 해제 불가) 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "4_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>2回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>1回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。",
         "5": "Attacks all enemies. With a <color=#28d9ed>100%</color> chance, grants <color=#28d9ed>Taunted</color> to the target for <color=#28d9ed>1 turn(s)</color>, and when attacking a boss, deals Fixed Damage equal to <color=#28d9ed>8%</color> of the boss' Max Health.\\n\\nThen grants a <color=#28d9ed>Barrier</color> to all heroes for <color=#28d9ed>2 turns</color> and grants <color=#28d9ed>Irregular Infection</color> to the fastest enemy for <color=#28d9ed>2 turns</color>. (Ignores Immunity, Irremovable)\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
+        "1_jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>間<color=#28d9ed>挑発</color>し、対象がボスの場合、ボスの最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n攻撃後、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与し、最もスピードが高い敵単体に<color=#28d9ed>イレギュラー感染症</color>を<color=#28d9ed>1ターン</color>の間付与する。(【イレギュラー感染症】は免疫を無視・解除不可)自分の最大HPが高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "2_jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>間<color=#28d9ed>挑発</color>し、対象がボスの場合、ボスの最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n攻撃後、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与し、最もスピードが高い敵単体に<color=#28d9ed>イレギュラー感染症</color>を<color=#28d9ed>1ターン</color>の間付与する。(【イレギュラー感染症】は免疫を無視・解除不可)自分の最大HPが高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "3_jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>間<color=#28d9ed>挑発</color>し、対象がボスの場合、ボスの最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n攻撃後、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与し、最もスピードが高い敵単体に<color=#28d9ed>イレギュラー感染症</color>を<color=#28d9ed>1ターン</color>の間付与する。(【イレギュラー感染症】は免疫を無視・解除不可)自分の最大HPが高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "4_jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>間<color=#28d9ed>挑発</color>し、対象がボスの場合、ボスの最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n攻撃後、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与し、最もスピードが高い敵単体に<color=#28d9ed>イレギュラー感染症</color>を<color=#28d9ed>1ターン</color>の間付与する。(【イレギュラー感染症】は免疫を無視・解除不可)自分の最大HPが高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
         "5_jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>1ターン</color>間<color=#28d9ed>挑発</color>し、対象がボスの場合、ボスの最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n攻撃後、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与し、最もスピードが高い敵単体に<color=#28d9ed>イレギュラー感染症</color>を<color=#28d9ed>2ターン</color>の間付与する。(【イレギュラー感染症】は免疫を無視・解除不可)自分の最大HPが高いほどシールド量がUPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "1_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 보스 대상으로 공격 시 보스 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.\\n\\n이후 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 가장 빠른 적에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>이레귤러 감염증</color>을 부여합니다. (이레귤러 감염증은 면역 무시, 해제 불가) 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "2_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 보스 대상으로 공격 시 보스 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.\\n\\n이후 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 가장 빠른 적에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>이레귤러 감염증</color>을 부여합니다. (이레귤러 감염증은 면역 무시, 해제 불가) 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "3_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 보스 대상으로 공격 시 보스 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.\\n\\n이후 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 가장 빠른 적에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>이레귤러 감염증</color>을 부여합니다. (이레귤러 감염증은 면역 무시, 해제 불가) 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "4_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 보스 대상으로 공격 시 보스 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.\\n\\n이후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 가장 빠른 적에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>이레귤러 감염증</color>을 부여합니다. (이레귤러 감염증은 면역 무시, 해제 불가) 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "5_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>하고, 보스 대상으로 공격 시 보스 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.\\n\\n이후 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 가장 빠른 적에게는 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>이레귤러 감염증</color>을 부여합니다. (이레귤러 감염증은 면역 무시, 해제 불가) 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "1_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>1回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>1回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。",
+        "2_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>1回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>1回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。",
+        "3_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>1回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>1回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。",
+        "4_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>2回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>1回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。",
         "5_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>几率<color=#28d9ed>挑衅</color>目标<color=#28d9ed>1回合</color>。攻击首领时,造成首领生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n随后赋予全体友军<color=#28d9ed>2回合</color>的<color=#28d9ed>护盾</color>,并对最快的敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>异型怪感染症</color>。(固有增益无视免疫且无法解除)护盾量根据自身生命值上限等比提升。\\n该技能根据生命值上限而非攻击力等比提升伤害。"
       },
       "enhancement": {
@@ -321,65 +325,65 @@
           "+10% damage",
           "+1 Weakness Gauge damage"
         ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "Grants Barrier Duration for 1 turn",
+          "+10% damage"
+        ],
+        "5": [
+          "Irregular Infection duration by 1 turn",
+          "+1 Weakness Gauge damage"
+        ],
         "2_jp": [
           "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "シールド持続+1ターン",
+          "ダメージ+10%"
+        ],
+        "5_jp": [
+          "【イレギュラー感染症】持続+1ターン",
           "WGダメージ+1"
         ],
         "2_kr": [
           "피해량 +10%",
           "WG 감소량 +1"
         ],
-        "2_zh": [
-          "伤害量+10%",
-          "WG降低量+1"
-        ],
-        "3": [
-          "-1 turn Skill Cooldown"
-        ],
-        "3_jp": [
-          "スキルターン-1ターン"
-        ],
         "3_kr": [
           "스킬 쿨타임 -1턴"
-        ],
-        "3_zh": [
-          "冷却时间-1回合"
-        ],
-        "4": [
-          "Grants Barrier Duration for 1 turn",
-          "+10% damage"
-        ],
-        "4_jp": [
-          "シールド持続+1ターン",
-          "ダメージ+10%"
         ],
         "4_kr": [
           "실드 지속 +1턴",
           "피해량 +10%"
         ],
-        "4_zh": [
-          "护盾持续+1回合",
-          "伤害量+10%"
-        ],
-        "5": [
-          "Irregular Infection duration by 1 turn",
-          "+1 Weakness Gauge damage"
-        ],
-        "5_jp": [
-          "【イレギュラー感染症】持続+1ターン",
-          "WGダメージ+1"
-        ],
         "5_kr": [
           "이레귤러 감염증 지속 +1턴",
           "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "护盾持续+1回合",
+          "伤害量+10%"
         ],
         "5_zh": [
           "异型怪感染症持续+1回合",
           "WG降低量+1"
         ]
       },
-      "cd": "5",
       "wgr": 2,
+      "cd": 5,
       "buff": [
         "BT_SHIELD_BASED_CASTER",
         "BT_EXTEND_DEBUFF"
@@ -403,28 +407,38 @@
       "name_zh": "连携被动",
       "true_desc_levels": {
         "1": "<color=#ffd732>Chain Companion Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and restores Action Point the caster and the next chain skill caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and after the attack, has a 50% chance to reduce the target's Speed for <color=#28d9ed>1 turn(s)</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 自分のチェーンスキル攻撃が攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color> : 自分の攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後50%の確率で対象のスピードが<color=#28d9ed>1ターン</color>間DOWNする。",
-        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 50% 확률로 <color=#28d9ed>1턴</color> 동안 대상의 속도가 감소합니다.",
-        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据生命值上限而非攻击力等比提升,且攻击后使自身和下一连携技能的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据自身生命值上限而非攻击力等比提升伤害,且攻击后有50%几率使目标速度降低<color=#28d9ed>1回合</color>",
         "2": "<color=#ffd732>Chain Companion Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and restores Action Point the caster and the next chain skill caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and after the attack, has a 50% chance to reduce the target's Speed for <color=#28d9ed>1 turn(s)</color>.",
-        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 自分のチェーンスキル攻撃が攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color> : 自分の攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後50%の確率で対象のスピードが<color=#28d9ed>1ターン</color>間DOWNする。",
-        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 50% 확률로 <color=#28d9ed>1턴</color> 동안 대상의 속도가 감소합니다.",
-        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据生命值上限而非攻击力等比提升,且攻击后使自身和下一连携技能的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据自身生命值上限而非攻击力等比提升伤害,且攻击后有50%几率使目标速度降低<color=#28d9ed>1回合</color>",
         "3": "<color=#ffd732>Chain Companion Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and restores Action Point the caster and the next chain skill caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and after the attack, has a 50% chance to reduce the target's Speed for <color=#28d9ed>1 turn(s)</color>.",
-        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 自分のチェーンスキル攻撃が攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color> : 自分の攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後50%の確率で対象のスピードが<color=#28d9ed>1ターン</color>間DOWNする。",
-        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 50% 확률로 <color=#28d9ed>1턴</color> 동안 대상의 속도가 감소합니다.",
-        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据生命值上限而非攻击力等比提升,且攻击后使自身和下一连携技能的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据自身生命值上限而非攻击力等比提升伤害,且攻击后有50%几率使目标速度降低<color=#28d9ed>1回合</color>",
         "4": "<color=#ffd732>Chain Companion Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and restores Action Point the caster and the next chain skill caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and after the attack, has a 50% chance to reduce the target's Speed for <color=#28d9ed>1 turn(s)</color>.",
-        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 自分のチェーンスキル攻撃が攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color> : 自分の攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後50%の確率で対象のスピードが<color=#28d9ed>1ターン</color>間DOWNする。",
-        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 50% 확률로 <color=#28d9ed>1턴</color> 동안 대상의 속도가 감소합니다.",
-        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据生命值上限而非攻击力等比提升,且攻击后使自身和下一连携技能的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据自身生命值上限而非攻击力等比提升伤害,且攻击后有50%几率使目标速度降低<color=#28d9ed>1回合</color>",
         "5": "<color=#ffd732>Chain Companion Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and restores Action Point the caster and the next chain skill caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Increases caster's Skill Chain Attack proportional to caster's Max Health rather Attack and after the attack, has a 50% chance to reduce the target's Speed for <color=#28d9ed>1 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 自分のチェーンスキル攻撃が攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color> : 自分の攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後50%の確率で対象のスピードが<color=#28d9ed>1ターン</color>間DOWNする。",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 自分のチェーンスキル攻撃が攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color> : 自分の攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後50%の確率で対象のスピードが<color=#28d9ed>1ターン</color>間DOWNする。",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 自分のチェーンスキル攻撃が攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color> : 自分の攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後50%の確率で対象のスピードが<color=#28d9ed>1ターン</color>間DOWNする。",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 自分のチェーンスキル攻撃が攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color> : 自分の攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後50%の確率で対象のスピードが<color=#28d9ed>1ターン</color>間DOWNする。",
         "5_jp": "<color=#ffd732>チェーン効果(汎用)</color> : 自分のチェーンスキル攻撃が攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color> : 自分の攻撃力の代わりに最大HPが高いほどダメージがUPし、攻撃後50%の確率で対象のスピードが<color=#28d9ed>1ターン</color>間DOWNする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 50% 확률로 <color=#28d9ed>1턴</color> 동안 대상의 속도가 감소합니다.",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 50% 확률로 <color=#28d9ed>1턴</color> 동안 대상의 속도가 감소합니다.",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 50% 확률로 <color=#28d9ed>1턴</color> 동안 대상의 속도가 감소합니다.",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 50% 확률로 <color=#28d9ed>1턴</color> 동안 대상의 속도가 감소합니다.",
         "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 공격 후 50% 확률로 <color=#28d9ed>1턴</color> 동안 대상의 속도가 감소합니다.",
-        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据生命值上限而非攻击力等比提升,且攻击后使自身和下一连携技能的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:根据自身生命值上限而非攻击力等比提升伤害,且攻击后有50%几率使目标速度降低<color=#28d9ed>1回合</color>"
+        "1_zh": "<color=#ffd732>杩炴惡鎶€鑳借嚜鐢遍『搴忔晥鏋�</color>锛氳嚜韬繛鎼烘妧鑳芥敾鍑讳激瀹虫牴鎹敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囷紝涓旀敾鍑诲悗浣胯嚜韬拰涓嬩竴杩炴惡鎶€鑳界殑鍙嬪啗AP鎭(一)<color=#28d9ed>25</color>銆俓n\\n<color=#ffd732>澶规敾鏁堟灉</color>锛氭牴鎹嚜韬敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囦激瀹筹紝涓旀敾鍑诲悗鏈塠Buff_C_2000102_backup_1_1]鍑犵巼浣跨洰鏍囬€熷害闄嶄綆<color=#28d9ed>1鍥炲悎</color>",
+        "2_zh": "<color=#ffd732>杩炴惡鎶€鑳借嚜鐢遍『搴忔晥鏋�</color>锛氳嚜韬繛鎼烘妧鑳芥敾鍑讳激瀹虫牴鎹敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囷紝涓旀敾鍑诲悗浣胯嚜韬拰涓嬩竴杩炴惡鎶€鑳界殑鍙嬪啗AP鎭(一)<color=#28d9ed>25</color>銆俓n\\n<color=#ffd732>澶规敾鏁堟灉</color>锛氭牴鎹嚜韬敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囦激瀹筹紝涓旀敾鍑诲悗鏈塠Buff_C_2000102_backup_1_1]鍑犵巼浣跨洰鏍囬€熷害闄嶄綆<color=#28d9ed>1鍥炲悎</color>",
+        "3_zh": "<color=#ffd732>杩炴惡鎶€鑳借嚜鐢遍『搴忔晥鏋�</color>锛氳嚜韬繛鎼烘妧鑳芥敾鍑讳激瀹虫牴鎹敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囷紝涓旀敾鍑诲悗浣胯嚜韬拰涓嬩竴杩炴惡鎶€鑳界殑鍙嬪啗AP鎭(一)<color=#28d9ed>25</color>銆俓n\\n<color=#ffd732>澶规敾鏁堟灉</color>锛氭牴鎹嚜韬敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囦激瀹筹紝涓旀敾鍑诲悗鏈塠Buff_C_2000102_backup_1_1]鍑犵巼浣跨洰鏍囬€熷害闄嶄綆<color=#28d9ed>1鍥炲悎</color>",
+        "4_zh": "<color=#ffd732>杩炴惡鎶€鑳借嚜鐢遍『搴忔晥鏋�</color>锛氳嚜韬繛鎼烘妧鑳芥敾鍑讳激瀹虫牴鎹敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囷紝涓旀敾鍑诲悗浣胯嚜韬拰涓嬩竴杩炴惡鎶€鑳界殑鍙嬪啗AP鎭(一)<color=#28d9ed>25</color>銆俓n\\n<color=#ffd732>澶规敾鏁堟灉</color>锛氭牴鎹嚜韬敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囦激瀹筹紝涓旀敾鍑诲悗鏈塠Buff_C_2000102_backup_1_1]鍑犵巼浣跨洰鏍囬€熷害闄嶄綆<color=#28d9ed>1鍥炲悎</color>",
+        "5_zh": "<color=#ffd732>杩炴惡鎶€鑳借嚜鐢遍『搴忔晥鏋�</color>锛氳嚜韬繛鎼烘妧鑳芥敾鍑讳激瀹虫牴鎹敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囷紝涓旀敾鍑诲悗浣胯嚜韬拰涓嬩竴杩炴惡鎶€鑳界殑鍙嬪啗AP鎭(一)<color=#28d9ed>25</color>銆俓n\\n<color=#ffd732>澶规敾鏁堟灉</color>锛氭牴鎹嚜韬敓鍛藉€间笂闄愯€岄潪鏀诲嚮鍔涚瓑姣旀彁鍗囦激瀹筹紝涓旀敾鍑诲悗鏈塠Buff_C_2000102_backup_1_1]鍑犵巼浣跨洰鏍囬€熷害闄嶄綆<color=#28d9ed>1鍥炲悎</color>"
       },
       "enhancement": {
         "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "5": [
           "+5% Dual Attack and Skill Chain damage",
           "+1 Weakness Gauge damage"
         ],
@@ -432,7 +446,27 @@
           "チェーンスキルと連携ダメージ+5%",
           "WGダメージ+1"
         ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
         "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "5_kr": [
           "협공/스킬 체인 피해량 +5%",
           "WG 감소량 +1"
         ],
@@ -440,41 +474,11 @@
           "夹攻/连携技能伤害量+5%",
           "WG降低量+1"
         ],
-        "3": [
-          "+5% Dual Attack and Skill Chain damage"
-        ],
-        "3_jp": [
-          "チェーンスキルと連携ダメージ+5%"
-        ],
-        "3_kr": [
-          "협공/스킬 체인 피해량 +5%"
-        ],
         "3_zh": [
           "夹攻/连携技能伤害量+5%"
         ],
-        "4": [
-          "+5% Dual Attack and Skill Chain damage"
-        ],
-        "4_jp": [
-          "チェーンスキルと連携ダメージ+5%"
-        ],
-        "4_kr": [
-          "협공/스킬 체인 피해량 +5%"
-        ],
         "4_zh": [
           "夹攻/连携技能伤害量+5%"
-        ],
-        "5": [
-          "+5% Dual Attack and Skill Chain damage",
-          "+1 Weakness Gauge damage"
-        ],
-        "5_jp": [
-          "チェーンスキルと連携ダメージ+5%",
-          "WGダメージ+1"
-        ],
-        "5_kr": [
-          "협공/스킬 체인 피해량 +5%",
-          "WG 감소량 +1"
         ],
         "5_zh": [
           "夹攻/连携技能伤害量+5%",
@@ -482,7 +486,6 @@
         ]
       },
       "wgr": 3,
-      "wgr_dual": 1,
       "cd": null,
       "buff": [
         "BT_AP_CHARGE"
@@ -490,6 +493,7 @@
       "debuff": [],
       "offensive": true,
       "target": "multi",
+      "wgr_dual": 1,
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [],
@@ -497,11 +501,5 @@
         "BT_STAT|ST_SPEED"
       ]
     }
-  },
-  "rank_by_transcend": {
-    "3": "B",
-    "4": "B",
-    "5": "A",
-    "6": "A"
   }
 }
