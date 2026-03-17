@@ -24,7 +24,7 @@ async function readTemplet(name: string): Promise<{ columns: Record<string, stri
 const TOP_LEVEL_KEY_ORDER = [
   'ID', 'Fullname', 'Fullname_jp', 'Fullname_kr', 'Fullname_zh',
   'Rarity', 'Element', 'Class', 'SubClass',
-  'rank', 'rank_pvp', 'role', 'rank_by_transcend', 'role_by_transcend', 'tags', 'skill_priority',
+  'rank', 'rank_pvp', 'role', 'limited', 'rank_by_transcend', 'role_by_transcend', 'tags', 'skill_priority',
   'Chain_Type', 'gift', 'video',
   'VoiceActor', 'VoiceActor_jp', 'VoiceActor_kr', 'VoiceActor_zh',
   'transcend', 'skills',
@@ -1433,6 +1433,7 @@ export async function POST(req: NextRequest) {
       })(),
       skill_priority: manual.skill_priority ?? existing.skill_priority ?? { First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } },
       video: manual.video ?? existing.video ?? undefined,
+      limited: existing.limited === true ? true : undefined,
       rank_by_transcend: existing.rank_by_transcend ?? undefined,
       role_by_transcend: existing.role_by_transcend ?? undefined,
       transcend: groupByLang(transcendData.transcend),

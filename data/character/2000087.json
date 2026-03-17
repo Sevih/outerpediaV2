@@ -11,6 +11,10 @@
   "rank": "A",
   "rank_pvp": "A",
   "role": "dps",
+  "tags": [
+    "ignore-defense",
+    "free"
+  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -22,7 +26,6 @@
       "prio": 1
     }
   },
-  "tags": ["ignore-defense","free"],
   "Chain_Type": "Start",
   "gift": "Natural Object",
   "video": "NbkIux5uYro",
@@ -31,23 +34,21 @@
   "VoiceActor_kr": "CV. 이주은",
   "VoiceActor_zh": "CV. 饭田光",
   "transcend": {
-    "1": null,
-    "2": null,
     "3": "ATK DEF HP +10%",
+    "6": "ATK DEF HP +30%\n+4% Ally Team Critical Damage\n+25 Action Points at battle start",
     "4_1": "ATK DEF HP +16%\n+4% Ally Team Critical Damage\n+1 Chain Passive Weakness Gauge damage",
-    "4_1_jp": "ATK DEF HP +16%\n味方の会心ダメージ+4%\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n아군 치명 피해 +4%\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n友军暴击伤害+4%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
-    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
-    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\n+4% Ally Team Critical Damage\n+25 Action Points at battle start",
+    "4_1_jp": "ATK DEF HP +16%\n味方の会心ダメージ+4%\nチェーンパッシブのWGダメージ+1",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方の会心ダメージ+4%\n戦闘開始時、AP+25",
+    "4_1_kr": "ATK DEF HP +16%\n아군 치명 피해 +4%\n체인 패시브의 WG 감소량 +1",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 치명 피해 +4%\n입장 시 AP +25",
+    "4_1_zh": "ATK DEF HP +16%\n友军暴击伤害+4%\n连携被动技能的WG降低量+1",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n友军暴击伤害+4%\n入场时AP+25"
   },
   "skills": {
@@ -61,47 +62,85 @@
       "name_zh": "剑刃之舞",
       "true_desc_levels": {
         "1": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Natural Talent</color>.If the target is <color=#28d9ed>Water</color>, gains <color=#28d9ed>20</color> <color=#28d9ed>AP</color>.",
-        "1_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>1</color>獲得。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得。",
-        "1_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
-        "1_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。",
         "2": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Natural Talent</color>.If the target is <color=#28d9ed>Water</color>, gains <color=#28d9ed>20</color> <color=#28d9ed>AP</color>.",
-        "2_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>1</color>獲得。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得。",
-        "2_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
-        "2_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。",
         "3": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Natural Talent</color>.If the target is <color=#28d9ed>Water</color>, gains <color=#28d9ed>20</color> <color=#28d9ed>AP</color>.",
-        "3_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>1</color>獲得。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得。",
-        "3_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
-        "3_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。",
         "4": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>2</color> <color=#28d9ed>Unique Resource: Natural Talent</color>.If the target is <color=#28d9ed>Water</color>, gains <color=#28d9ed>20</color> <color=#28d9ed>AP</color>.",
-        "4_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>2</color>獲得。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得。",
-        "4_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>2개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
-        "4_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>2</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。",
         "5": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>2</color> <color=#28d9ed>Unique Resource: Natural Talent</color>.If the target is <color=#28d9ed>Water</color>, gains <color=#28d9ed>20</color> <color=#28d9ed>AP</color>.",
-        "5_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>2</color>獲得。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得。",
+        "1_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>1</color>獲得する。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得する。",
+        "2_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>1</color>獲得する。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得する。",
+        "3_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>1</color>獲得する。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得する。",
+        "4_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>2</color>獲得する。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得する。",
+        "5_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>2</color>獲得する。対象が<color=#28d9ed>水属性</color>の場合、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>獲得する。",
+        "1_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
+        "2_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
+        "3_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
+        "4_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>2개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
         "5_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>2개</color> 획득합니다.\\n대상이 <color=#28d9ed>수속성</color> 일 경우 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 획득합니다.",
+        "1_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。",
+        "2_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。",
+        "3_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。",
+        "4_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>2</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。",
         "5_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>2</color><color=#28d9ed>「固有资源:天赋」</color>。若目标为<color=#28d9ed>水属性</color>,额外获得<color=#28d9ed>20</color><color=#28d9ed>AP</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% damage"],
-        "3_jp": ["ダメージ+10%"],
-        "3_kr": ["피해량 +10%"],
-        "3_zh": ["伤害量+10%"],
-        "4": ["+1 Natural Talent obtained"],
-        "4_jp": ["【生まれつきの才能】の獲得量+1"],
-        "4_kr": ["타고난 재능 획득량 +1"],
-        "4_zh": ["天赋获得量+1"],
-        "5": ["+20% damage"],
-        "5_jp": ["ダメージ+20%"],
-        "5_kr": ["피해량 +20%"],
-        "5_zh": ["伤害量+20%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "4": [
+          "+1 Natural Talent obtained"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "4_jp": [
+          "【生まれつきの才能】の獲得量+1"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "4_kr": [
+          "타고난 재능 획득량 +1"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4_zh": [
+          "天赋获得量+1"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_AP_CHARGE"],
+      "buff": [
+        "BT_AP_CHARGE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono"
@@ -116,48 +155,93 @@
       "name_zh": "能量释放",
       "true_desc_levels": {
         "1": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Natural Talent</color>. This skill ignores <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color> of <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> enemies. <color=#ffd732>Irregular Monsters</color>: Deals increased damage.",
-        "1_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>1</color>獲得。 このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。 <color=#ffd732>イレギュラーモンスター</color>へのダメージ増加。",
-        "1_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
-        "1_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
         "2": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Natural Talent</color>. This skill ignores <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color> of <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> enemies. <color=#ffd732>Irregular Monsters</color>: Deals increased damage.",
-        "2_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>1</color>獲得。 このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。 <color=#ffd732>イレギュラーモンスター</color>へのダメージ増加。",
-        "2_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
-        "2_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
         "3": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Natural Talent</color>. This skill ignores <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color> of <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> enemies. <color=#ffd732>Irregular Monsters</color>: Deals increased damage.",
-        "3_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>1</color>獲得。 このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。 <color=#ffd732>イレギュラーモンスター</color>へのダメージ増加。",
-        "3_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
-        "3_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
         "4": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Natural Talent</color>. This skill ignores <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color> of <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> enemies. <color=#ffd732>Irregular Monsters</color>: Deals increased damage.",
-        "4_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>1</color>獲得。 このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。 <color=#ffd732>イレギュラーモンスター</color>へのダメージ増加。",
-        "4_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
-        "4_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
         "5": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>2</color> <color=#28d9ed>Unique Resource: Natural Talent</color>. This skill ignores <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color> of <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> enemies. <color=#ffd732>Irregular Monsters</color>: Deals increased damage.",
-        "5_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>2</color>獲得。 このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。 <color=#ffd732>イレギュラーモンスター</color>へのダメージ増加。",
+        "1_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>1</color>獲得する。\\n このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "2_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>1</color>獲得する。\\n このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "3_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>1</color>獲得する。\\n このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "4_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>1</color>獲得する。\\n このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "5_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>2</color>獲得する。\\n このスキルは<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "1_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "2_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "3_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "4_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
         "5_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>2개</color> 획득합니다. \\n\\n이 스킬은 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "1_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
+        "2_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
+        "3_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
+        "4_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
         "5_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>2</color><color=#28d9ed>「固有资源:天赋」</color>。 此技能无视<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+15% damage"],
-        "4_jp": ["ダメージ+15%"],
-        "4_kr": ["피해량 +15%"],
-        "4_zh": ["伤害量+15%"],
-        "5": ["+1 Natural Talent obtained","+15% damage"],
-        "5_jp": ["【生まれつきの才能】の獲得量+1","ダメージ+15%"],
-        "5_kr": ["타고난 재능 획득량 +1","피해량 +15%"],
-        "5_zh": ["天赋获得量+1","伤害量+15%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "5": [
+          "+1 Natural Talent obtained",
+          "+15% damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "5_jp": [
+          "【生まれつきの才能】の獲得量+1",
+          "ダメージ+15%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "5_kr": [
+          "타고난 재능 획득량 +1",
+          "피해량 +15%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5_zh": [
+          "天赋获得量+1",
+          "伤害量+15%"
+        ]
       },
-      "cd": "4",
       "wgr": 1,
-      "buff": ["BT_COOL2_CHARGE","BT_COOL3_CHARGE"],
-      "debuff": ["BT_WG_REVERSE_HEAL"],
+      "cd": 4,
+      "buff": [
+        "BT_COOL2_CHARGE",
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [
+        "BT_WG_REVERSE_HEAL"
+      ],
       "offensive": true,
       "target": "mono",
       "burnEffect": {
@@ -203,48 +287,93 @@
       "name_zh": "快如子弹!",
       "true_desc_levels": {
         "1": "Attacks an enemy. On the caster's turn, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Natural Talent</color>. Enemies killed by this skill that are <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> cannot be revived, and bosses take increased damage. If holding <color=#28d9ed>5</color> <color=#28d9ed>Natural Talent</color>, consumes all to reset the cooldown of <color=#28d9ed>Faster Than a Bullet!</color> and ignore <color=#28d9ed>30%</color> <color=#28d9ed>Defense</color>. <color=#ffd732>Irregular Monsters</color>: Deals increased damage.",
-        "1_jp": "敵を攻撃し、自分のターンなら<color=#28d9ed>固有資源:天賦の才能</color>を<color=#28d9ed>1</color>獲得。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活・蘇生不可、ボスには追加ダメージ。<color=#28d9ed>天賦の才能</color>を<color=#28d9ed>5</color>所持している場合、全て消費して<color=#28d9ed>「弾丸より速く!」</color>のスキルターンを全回復し、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。<color=#ffd732>イレギュラーモンスター</color>へのダメージ増加。",
-        "1_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다.\\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
-        "1_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活,对首领怪物造成的伤害提高。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
         "2": "Attacks an enemy and gains an <color=#28d9ed>Extra Turn</color>. Enemies killed by this skill that are <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> cannot be revived. If holding <color=#28d9ed>5</color> <color=#28d9ed>Natural Talent</color>, consumes all to reset the cooldown of <color=#28d9ed>Faster Than a Bullet!</color> and ignore <color=#28d9ed>30%</color> <color=#28d9ed>Defense</color>.",
-        "2_jp": "敵を攻撃し、<color=#28d9ed>追加ターン</color>を獲得。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活・蘇生不可。<color=#28d9ed>天賦の才能</color>を<color=#28d9ed>5</color>所持している場合、全て消費して<color=#28d9ed>「弾丸より速く!」</color>のスキルターンを全回復し、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。",
-        "2_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득하고 <color=#28d9ed>추가 턴</color>을 획득합니다. \\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
-        "2_zh": "攻击敌人并获得<color=#28d9ed>额外回合</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。",
         "3": "Attacks an enemy and gains an <color=#28d9ed>Extra Turn</color>. Enemies killed by this skill that are <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> cannot be revived. If holding <color=#28d9ed>5</color> <color=#28d9ed>Natural Talent</color>, consumes all to reset the cooldown of <color=#28d9ed>Faster Than a Bullet!</color> and ignore <color=#28d9ed>30%</color> <color=#28d9ed>Defense</color>.",
-        "3_jp": "敵を攻撃し、<color=#28d9ed>追加ターン</color>を獲得。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活・蘇生不可。<color=#28d9ed>天賦の才能</color>を<color=#28d9ed>5</color>所持している場合、全て消費して<color=#28d9ed>「弾丸より速く!」</color>のスキルターンを全回復し、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。",
-        "3_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득하고 <color=#28d9ed>추가 턴</color>을 획득합니다. \\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
-        "3_zh": "攻击敌人并获得<color=#28d9ed>额外回合</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。",
         "4": "Attacks an enemy and gains an <color=#28d9ed>Extra Turn</color>. Enemies killed by this skill that are <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> cannot be revived. If holding <color=#28d9ed>5</color> <color=#28d9ed>Natural Talent</color>, consumes all to reset the cooldown of <color=#28d9ed>Faster Than a Bullet!</color> and ignore <color=#28d9ed>30%</color> <color=#28d9ed>Defense</color>.",
-        "4_jp": "敵を攻撃し、<color=#28d9ed>追加ターン</color>を獲得。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活・蘇生不可。<color=#28d9ed>天賦の才能</color>を<color=#28d9ed>5</color>所持している場合、全て消費して<color=#28d9ed>「弾丸より速く!」</color>のスキルターンを全回復し、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。",
-        "4_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득하고 <color=#28d9ed>추가 턴</color>을 획득합니다. \\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
-        "4_zh": "攻击敌人并获得<color=#28d9ed>额外回合</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。",
         "5": "Attacks an enemy and gains an <color=#28d9ed>Extra Turn</color>. Enemies killed by this skill that are <color=#28d9ed>Water</color> or <color=#28d9ed>Healer</color> cannot be revived. If holding <color=#28d9ed>5</color> <color=#28d9ed>Natural Talent</color>, consumes all to reset the cooldown of <color=#28d9ed>Faster Than a Bullet!</color> and ignore <color=#28d9ed>30%</color> <color=#28d9ed>Defense</color>.",
-        "5_jp": "敵を攻撃し、<color=#28d9ed>追加ターン</color>を獲得。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活・蘇生不可。<color=#28d9ed>天賦の才能</color>を<color=#28d9ed>5</color>所持している場合、全て消費して<color=#28d9ed>「弾丸より速く!」</color>のスキルターンを全回復し、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視。",
+        "1_jp": "敵単体にダメージを与え、自分のターンなら<color=#28d9ed>【固有資源:天賦の才能】</color>を<color=#28d9ed>1</color>獲得する。\\nこのスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活及び蘇生不可であり、ボスモンスターにはさらにダメージを与える。\\n<color=#28d9ed>【固有資源:天賦の才能】</color>が<color=#28d9ed>5個</color>ある場合、全て消費して<color=#28d9ed>【弾丸よりも早く!】</color>のスキルターンを<color=#28d9ed>全て</color>回復させ、対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "2_jp": "敵単体にダメージを与え、<color=#28d9ed>追加ターン</color>を獲得する。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活及び蘇生不可である。<color=#28d9ed>【固有資源:天賦の才能】</color>が<color=#28d9ed>5個</color>ある場合、全て消費して<color=#28d9ed>【弾丸よりも早く!】</color>のスキルターンを<color=#28d9ed>全て</color>回復させ、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>追加ターン</color>を獲得する。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活及び蘇生不可である。<color=#28d9ed>【固有資源:天賦の才能】</color>が<color=#28d9ed>5個</color>ある場合、全て消費して<color=#28d9ed>【弾丸よりも早く!】</color>のスキルターンを<color=#28d9ed>全て</color>回復させ、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>追加ターン</color>を獲得する。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活及び蘇生不可である。<color=#28d9ed>【固有資源:天賦の才能】</color>が<color=#28d9ed>5個</color>ある場合、全て消費して<color=#28d9ed>【弾丸よりも早く!】</color>のスキルターンを<color=#28d9ed>全て</color>回復させ、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>追加ターン</color>を獲得する。このスキルで倒された<color=#28d9ed>水属性</color>または<color=#28d9ed>回復型</color>の敵は復活及び蘇生不可である。<color=#28d9ed>【固有資源:天賦の才能】</color>が<color=#28d9ed>5個</color>ある場合、全て消費して<color=#28d9ed>【弾丸よりも早く!】</color>のスキルターンを<color=#28d9ed>全て</color>回復させ、<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n <color=#ffd732>イレギュラーモンスター</color>へのダメージがUPする。",
+        "1_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득합니다.\\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "2_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득하고 <color=#28d9ed>추가 턴</color>을 획득합니다. \\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "3_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득하고 <color=#28d9ed>추가 턴</color>을 획득합니다. \\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "4_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>1개</color> 획득하고 <color=#28d9ed>추가 턴</color>을 획득합니다. \\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
         "5_kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>2개</color> 획득하고 <color=#28d9ed>추가 턴</color>을 획득합니다. \\n이 스킬로 사망한 <color=#28d9ed>수속성</color> 또는 <color=#28d9ed>회복형</color> 적은 부활 및 소생이 불가능하며 보스에게는 더 큰 피해를 입힙니다.\\n<color=#28d9ed>고유 자원 : 타고난 재능</color>을 <color=#28d9ed>5개</color> 보유 시, 모두 소모하여 <color=#28d9ed>총알보다 빠르게!</color> 스킬의 쿨타임을 <color=#28d9ed>모두</color> 회복시키고 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 공격 시 피해량이 증가합니다.",
+        "1_zh": "攻击敌人。在自己的回合,获得<color=#28d9ed>1</color><color=#28d9ed>「固有资源:天赋」</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活,对首领怪物造成的伤害提高。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。 对<color=#ffd732>异型怪</color>造成额外伤害。",
+        "2_zh": "攻击敌人并获得<color=#28d9ed>额外回合</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。",
+        "3_zh": "攻击敌人并获得<color=#28d9ed>额外回合</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。",
+        "4_zh": "攻击敌人并获得<color=#28d9ed>额外回合</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。",
         "5_zh": "攻击敌人并获得<color=#28d9ed>额外回合</color>。 被此技能击杀的<color=#28d9ed>水属性</color>或<color=#28d9ed>回复型</color>敌人无法复活。 若持有<color=#28d9ed>5</color><color=#28d9ed>天赋</color>,则全部消耗以重置<color=#28d9ed>「比子弹更快!」</color>的冷却,并无视<color=#28d9ed>30%</color><color=#28d9ed>防御力</color>。"
       },
       "enhancement": {
-        "2": ["Gains an extra turn","+1 Weakness Gauge damage"],
-        "2_jp": ["追加ターン発生","WGダメージ+1"],
-        "2_kr": ["추가 턴 발생","WG 감소량 +1"],
-        "2_zh": ["触发额外回合","WG降低量+1"],
-        "3": ["+10% damage","-1 turn Skill Cooldown"],
-        "3_jp": ["ダメージ+10%","スキルターン-1ターン"],
-        "3_kr": ["피해량 +10%","스킬 쿨타임 -1턴"],
-        "3_zh": ["伤害量+10%","冷却时间-1回合"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+20% damage"],
-        "5_jp": ["ダメージ+20%"],
-        "5_kr": ["피해량 +20%"],
-        "5_zh": ["伤害量+20%"]
+        "2": [
+          "Gains an extra turn",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+10% damage",
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "2_jp": [
+          "追加ターン発生",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "ダメージ+10%",
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "2_kr": [
+          "추가 턴 발생",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "피해량 +10%",
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "2_zh": [
+          "触发额外回合",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "伤害量+10%",
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
       },
-      "cd": "4",
       "wgr": 2,
-      "buff": ["BT_COOL3_CHARGE","BT_ADDITIVE_TURN"],
-      "debuff": ["BT_SEALED_RESURRECTION"],
+      "cd": 4,
+      "buff": [
+        "BT_COOL3_CHARGE",
+        "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [
+        "BT_SEALED_RESURRECTION"
+      ],
       "offensive": true,
       "target": "mono"
     },
@@ -258,54 +387,98 @@
       "name_zh": "连携被动",
       "true_desc_levels": {
         "1": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Recovers Action Points of the caster by <color=#28d9ed>15</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分のAPを<color=#28d9ed>15</color>獲得させる。",
-        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 AP를 <color=#28d9ed>15</color> 회복합니다.",
-        "1_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的AP恢复<color=#28d9ed>15</color>。",
         "2": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Recovers Action Points of the caster by <color=#28d9ed>15</color>.",
-        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分のAPを<color=#28d9ed>15</color>獲得させる。",
-        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 AP를 <color=#28d9ed>15</color> 회복합니다.",
-        "2_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的AP恢复<color=#28d9ed>15</color>。",
         "3": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Recovers Action Points of the caster by <color=#28d9ed>15</color>.",
-        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分のAPを<color=#28d9ed>15</color>獲得させる。",
-        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 AP를 <color=#28d9ed>15</color> 회복합니다.",
-        "3_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的AP恢复<color=#28d9ed>15</color>。",
         "4": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Recovers Action Points of the caster by <color=#28d9ed>15</color>.",
-        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分のAPを<color=#28d9ed>15</color>獲得させる。",
-        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 AP를 <color=#28d9ed>15</color> 회복합니다.",
-        "4_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的AP恢复<color=#28d9ed>15</color>。",
         "5": "<color=#ffd732>Chain Starter Effect</color>: After attacking, reduces skill cooldowns of all allies by <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Recovers Action Points of the caster by <color=#28d9ed>15</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分のAPを<color=#28d9ed>15</color>獲得させる。",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分のAPを<color=#28d9ed>15</color>獲得させる。",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分のAPを<color=#28d9ed>15</color>獲得させる。",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分のAPを<color=#28d9ed>15</color>獲得させる。",
         "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n\\n<color=#ffd732>連携効果</color>:自分のAPを<color=#28d9ed>15</color>獲得させる。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 AP를 <color=#28d9ed>15</color> 회복합니다.",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 AP를 <color=#28d9ed>15</color> 회복합니다.",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 AP를 <color=#28d9ed>15</color> 회복합니다.",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 AP를 <color=#28d9ed>15</color> 회복합니다.",
         "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 AP를 <color=#28d9ed>15</color> 회복합니다.",
+        "1_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的AP恢复<color=#28d9ed>15</color>。",
+        "2_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的AP恢复<color=#28d9ed>15</color>。",
+        "3_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的AP恢复<color=#28d9ed>15</color>。",
+        "4_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的AP恢复<color=#28d9ed>15</color>。",
         "5_zh": "<color=#ffd732>连携起始效果</color>:攻击后,使全体友军的技能冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身的AP恢复<color=#28d9ed>15</color>。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
-      "wgr_dual": 1,
       "cd": null,
-      "buff": ["BT_COOL_CHARGE"],
+      "buff": [
+        "BT_COOL_CHARGE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi",
+      "wgr_dual": 1,
       "dual_offensive": true,
       "dual_target": "mono",
-      "dual_buff": ["BT_AP_CHARGE"],
+      "dual_buff": [
+        "BT_AP_CHARGE"
+      ],
       "dual_debuff": []
     }
   }

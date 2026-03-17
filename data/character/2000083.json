@@ -11,6 +11,9 @@
   "rank": "S",
   "rank_pvp": "S",
   "role": "sustain",
+  "tags": [
+    "free"
+  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -22,7 +25,6 @@
       "prio": 2
     }
   },
-  "tags": ["free"],
   "Chain_Type": "Start",
   "gift": "Magic Tool",
   "video": "jmzEGK9lfS8",
@@ -31,23 +33,21 @@
   "VoiceActor_kr": "CV. 이보용",
   "VoiceActor_zh": "CV. 关根明良",
   "transcend": {
-    "1": null,
-    "2": null,
     "3": "ATK DEF HP +10%",
+    "6": "ATK DEF HP +30%\n+5% Ally Team Health\n+25 Action Points at battle start",
     "4_1": "ATK DEF HP +16%\n+5% Ally Team Health\n+1 Chain Passive Weakness Gauge damage",
-    "4_1_jp": "ATK DEF HP +16%\n味方のHP+5%\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n아군 체력 +5%\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n友军生命值+5%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
-    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
-    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\n+5% Ally Team Health\n+25 Action Points at battle start",
+    "4_1_jp": "ATK DEF HP +16%\n味方のHP+5%\nチェーンパッシブのWGダメージ+1",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方のHP+5%\n戦闘開始時、AP+25",
+    "4_1_kr": "ATK DEF HP +16%\n아군 체력 +5%\n체인 패시브의 WG 감소량 +1",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 체력 +5%\n입장 시 AP +25",
+    "4_1_zh": "ATK DEF HP +16%\n友军生命值+5%\n连携被动技能的WG降低量+1",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n友军生命值+5%\n入场时AP+25"
   },
   "skills": {
@@ -61,47 +61,86 @@
       "name_zh": "魔族礼仪",
       "true_desc_levels": {
         "1": "Attacks an enemy.\\n\\nBefore attacking, if the caster's current Health is <color=#28d9ed>85%</color> or lower, recovers Health of the <color=#28d9ed>caster</color> by <color=#28d9ed>5%</color>.\\n\\nBefore attacking, if the caster's current Health is greater than <color=#28d9ed>85%</color>, recovers Health of the ally with the lowest Health by <color=#28d9ed>5%</color> of Nella's Max Health.",
-        "1_jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>5%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>5%</color>回復する。",
-        "1_kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>5%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>5%</color>만큼 회복시킵니다.",
-        "1_zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>5%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>5%</color>的生命值。",
         "2": "Attacks an enemy.\\n\\nBefore attacking, if the caster's current Health is <color=#28d9ed>85%</color> or lower, recovers Health of the <color=#28d9ed>caster</color> by <color=#28d9ed>5%</color>.\\n\\nBefore attacking, if the caster's current Health is greater than <color=#28d9ed>85%</color>, recovers Health of the ally with the lowest Health by <color=#28d9ed>5%</color> of Nella's Max Health.",
-        "2_jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>5%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>5%</color>回復する。",
-        "2_kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>5%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>5%</color>만큼 회복시킵니다.",
-        "2_zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>5%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>5%</color>的生命值。",
         "3": "Attacks an enemy.\\n\\nBefore attacking, if the caster's current Health is <color=#28d9ed>85%</color> or lower, recovers Health of the <color=#28d9ed>caster</color> by <color=#28d9ed>10%</color>.\\n\\nBefore attacking, if the caster's current Health is greater than <color=#28d9ed>85%</color>, recovers Health of the ally with the lowest Health by <color=#28d9ed>10%</color> of Nella's Max Health.",
-        "3_jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>10%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>10%</color>回復する。",
-        "3_kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>10%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다.",
-        "3_zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>10%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>10%</color>的生命值。",
         "4": "Attacks an enemy.\\n\\nBefore attacking, if the caster's current Health is <color=#28d9ed>85%</color> or lower, recovers Health of the <color=#28d9ed>caster</color> by <color=#28d9ed>10%</color>.\\n\\nBefore attacking, if the caster's current Health is greater than <color=#28d9ed>85%</color>, recovers Health of the ally with the lowest Health by <color=#28d9ed>10%</color> of Nella's Max Health.",
-        "4_jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>10%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>10%</color>回復する。",
-        "4_kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>10%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다.",
-        "4_zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>10%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>10%</color>的生命值。",
         "5": "Attacks an enemy.\\n\\nBefore attacking, if the caster's current Health is <color=#28d9ed>85%</color> or lower, recovers Health of the <color=#28d9ed>caster</color> by <color=#28d9ed>15%</color>.\\n\\nBefore attacking, if the caster's current Health is greater than <color=#28d9ed>85%</color>, recovers Health of the ally with the lowest Health by <color=#28d9ed>15%</color> of Nella's Max Health.",
+        "1_jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>5%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>5%</color>回復する。",
+        "2_jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>5%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>5%</color>回復する。",
+        "3_jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>10%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>10%</color>回復する。",
+        "4_jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>10%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>10%</color>回復する。",
         "5_jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>15%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>15%</color>回復する。",
+        "1_kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>5%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>5%</color>만큼 회복시킵니다.",
+        "2_kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>5%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>5%</color>만큼 회복시킵니다.",
+        "3_kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>10%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다.",
+        "4_kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>10%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다.",
         "5_kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>15%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
+        "1_zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>5%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>5%</color>的生命值。",
+        "2_zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>5%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>5%</color>的生命值。",
+        "3_zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>10%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>10%</color>的生命值。",
+        "4_zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>10%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>10%</color>的生命值。",
         "5_zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>15%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>15%</color>的生命值。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+5% healing"],
-        "3_jp": ["HP回復量+5%"],
-        "3_kr": ["체력 회복량 +5%"],
-        "3_zh": ["生命值恢复量+5%"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+5% healing"],
-        "5_jp": ["HP回復量+5%"],
-        "5_kr": ["체력 회복량 +5%"],
-        "5_zh": ["生命值恢复量+5%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+5% healing"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "5": [
+          "+5% healing"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "HP回復量+5%"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "5_jp": [
+          "HP回復量+5%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "체력 회복량 +5%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "5_kr": [
+          "체력 회복량 +5%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "生命值恢复量+5%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5_zh": [
+          "生命值恢复量+5%"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_AP_CHARGE","BT_IMMUNE"],
+      "buff": [
+        "BT_AP_CHARGE",
+        "BT_IMMUNE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono",
@@ -148,45 +187,78 @@
       "name_zh": "黑暗誓约",
       "true_desc_levels": {
         "1": "(Triggered Effect) When hit, activates <color=#28d9ed>Agile Response</color>.\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>50%</color>, and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>10%</color> of Nella's Max Health. Then, increases Action Points of all allies except the caster by <color=#28d9ed>25</color>.",
-        "1_jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>50%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復する。その後、自分を除く味方全体にAPを<color=#28d9ed>25</color>獲得させる。",
-        "1_kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>50%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다. 이후 자신을 제외한 아군 전체의 AP를 <color=#28d9ed>25</color> 증가시킵니다.",
-        "1_zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>50%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。随后除自身外,全体友军的AP提升<color=#28d9ed>25</color>。",
         "2": "(Triggered Effect) When hit, activates <color=#28d9ed>Agile Response</color>.\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>60%</color>, and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>10%</color> of Nella's Max Health. Then, increases Action Points of all allies except the caster by <color=#28d9ed>25</color>.",
-        "2_jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>60%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復する。その後、自分を除く味方全体にAPを<color=#28d9ed>25</color>獲得させる。",
-        "2_kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>60%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다. 이후 자신을 제외한 아군 전체의 AP를 <color=#28d9ed>25</color> 증가시킵니다.",
-        "2_zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>60%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。随后除自身外,全体友军的AP提升<color=#28d9ed>25</color>。",
         "3": "(Triggered Effect) When hit, activates <color=#28d9ed>Agile Response</color>.\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>60%</color>, and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>10%</color> of Nella's Max Health. Then, increases Action Points of all allies except the caster by <color=#28d9ed>25</color>.",
-        "3_jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>60%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復する。その後、自分を除く味方全体にAPを<color=#28d9ed>25</color>獲得させる。",
-        "3_kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>60%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다. 이후 자신을 제외한 아군 전체의 AP를 <color=#28d9ed>25</color> 증가시킵니다.",
-        "3_zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>60%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。随后除自身外,全体友军的AP提升<color=#28d9ed>25</color>。",
         "4": "(Triggered Effect) When hit, activates <color=#28d9ed>Agile Response</color>.\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>70%</color>, and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>10%</color> of Nella's Max Health. Then, increases Action Points of all allies except the caster by <color=#28d9ed>25</color>.",
-        "4_jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>70%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復する。その後、自分を除く味方全体にAPを<color=#28d9ed>25</color>獲得させる。",
-        "4_kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>70%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다. 이후 자신을 제외한 아군 전체의 AP를 <color=#28d9ed>25</color> 증가시킵니다.",
-        "4_zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>70%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。随后除自身外,全体友军的AP提升<color=#28d9ed>25</color>。",
         "5": "(Triggered Effect) When hit, activates <color=#28d9ed>Agile Response</color>.\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>70%</color>, and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>20%</color> of Nella's Max Health. Then, increases Action Points of all allies except the caster by <color=#28d9ed>25</color>.",
+        "1_jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>50%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復する。その後、自分を除く味方全体にAPを<color=#28d9ed>25</color>獲得させる。",
+        "2_jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>60%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復する。その後、自分を除く味方全体にAPを<color=#28d9ed>25</color>獲得させる。",
+        "3_jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>60%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復する。その後、自分を除く味方全体にAPを<color=#28d9ed>25</color>獲得させる。",
+        "4_jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>70%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復する。その後、自分を除く味方全体にAPを<color=#28d9ed>25</color>獲得させる。",
         "5_jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>70%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復する。その後、自分を除く味方全体にAPを<color=#28d9ed>25</color>獲得させる。",
+        "1_kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>50%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다. 이후 자신을 제외한 아군 전체의 AP를 <color=#28d9ed>25</color> 증가시킵니다.",
+        "2_kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>60%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다. 이후 자신을 제외한 아군 전체의 AP를 <color=#28d9ed>25</color> 증가시킵니다.",
+        "3_kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>60%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다. 이후 자신을 제외한 아군 전체의 AP를 <color=#28d9ed>25</color> 증가시킵니다.",
+        "4_kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>70%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다. 이후 자신을 제외한 아군 전체의 AP를 <color=#28d9ed>25</color> 증가시킵니다.",
         "5_kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>70%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시킵니다. 이후 자신을 제외한 아군 전체의 AP를 <color=#28d9ed>25</color> 증가시킵니다.",
+        "1_zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>50%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。随后除自身外,全体友军的AP提升<color=#28d9ed>25</color>。",
+        "2_zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>60%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。随后除自身外,全体友军的AP提升<color=#28d9ed>25</color>。",
+        "3_zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>60%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。随后除自身外,全体友军的AP提升<color=#28d9ed>25</color>。",
+        "4_zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>70%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>。随后除自身外,全体友军的AP提升<color=#28d9ed>25</color>。",
         "5_zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>70%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>。随后除自身外,全体友军的AP提升<color=#28d9ed>25</color>。"
       },
       "enhancement": {
-        "2": ["+10% Priority"],
-        "2_jp": ["行動ゲージ10%UP"],
-        "2_kr": ["행동 게이지 +10%"],
-        "2_zh": ["行动值+10%"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+10% Priority"],
-        "4_jp": ["行動ゲージ10%UP"],
-        "4_kr": ["행동 게이지 +10%"],
-        "4_zh": ["行动值+10%"],
-        "5": ["+10% healing"],
-        "5_jp": ["HP回復量+10%"],
-        "5_kr": ["체력 회복량 +10%"],
-        "5_zh": ["生命值恢复量+10%"]
+        "2": [
+          "+10% Priority"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "+10% Priority"
+        ],
+        "5": [
+          "+10% healing"
+        ],
+        "2_jp": [
+          "行動ゲージ10%UP"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "行動ゲージ10%UP"
+        ],
+        "5_jp": [
+          "HP回復量+10%"
+        ],
+        "2_kr": [
+          "행동 게이지 +10%"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "행동 게이지 +10%"
+        ],
+        "5_kr": [
+          "체력 회복량 +10%"
+        ],
+        "2_zh": [
+          "行动值+10%"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "行动值+10%"
+        ],
+        "5_zh": [
+          "生命值恢复量+10%"
+        ]
       },
-      "cd": "4",
+      "wgr": null,
+      "cd": 4,
       "buff": [
         "SYS_BUFF_REVENGE_HEAL",
         "BT_ACTION_GAUGE",
@@ -206,46 +278,83 @@
       "name_zh": "加冕礼",
       "true_desc_levels": {
         "1": "Increases Priority of surviving allies by <color=#28d9ed>10%</color>, then <color=#28d9ed>Resurrects (Greater)</color> all dead allies. Afterward, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>10%</color> of Nella's Max Health, and grants Immunity for <color=#28d9ed>1 turn(s)</color>.",
-        "1_jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>10%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復させ、免疫を<color=#28d9ed>1ターン</color>の間付与する。",
-        "1_kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 면역을 부여합니다.",
-        "1_zh": "使存活的友军行动值提升<color=#28d9ed>10%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>1回合</color>的免疫效果。",
         "2": "Increases Priority of surviving allies by <color=#28d9ed>20%</color>, then <color=#28d9ed>Resurrects (Greater)</color> all dead allies. Afterward, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>10%</color> of Nella's Max Health, and grants Immunity for <color=#28d9ed>1 turn(s)</color>.",
-        "2_jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>20%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復させ、免疫を<color=#28d9ed>1ターン</color>の間付与する。",
-        "2_kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 면역을 부여합니다.",
-        "2_zh": "使存活的友军行动值提升<color=#28d9ed>20%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>1回合</color>的免疫效果。",
         "3": "Increases Priority of surviving allies by <color=#28d9ed>20%</color>, then <color=#28d9ed>Resurrects (Greater)</color> all dead allies. Afterward, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>20%</color> of Nella's Max Health, and grants Immunity for <color=#28d9ed>1 turn(s)</color>.",
-        "3_jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>20%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復させ、免疫を<color=#28d9ed>1ターン</color>の間付与する。",
-        "3_kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 면역을 부여합니다.",
-        "3_zh": "使存活的友军行动值提升<color=#28d9ed>20%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>1回合</color>的免疫效果。",
         "4": "Increases Priority of surviving allies by <color=#28d9ed>20%</color>, then <color=#28d9ed>Resurrects (Greater)</color> all dead allies. Afterward, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>20%</color> of Nella's Max Health, and grants Immunity for <color=#28d9ed>1 turn(s)</color>.",
-        "4_jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>20%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復させ、免疫を<color=#28d9ed>1ターン</color>の間付与する。",
-        "4_kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 면역을 부여합니다.",
-        "4_zh": "使存活的友军行动值提升<color=#28d9ed>20%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>1回合</color>的免疫效果。",
         "5": "Increases Priority of surviving allies by <color=#28d9ed>20%</color>, then <color=#28d9ed>Resurrects (Greater)</color> all dead allies. Afterward, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>20%</color> of Nella's Max Health, and grants Immunity for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>10%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復させ、免疫を<color=#28d9ed>1ターン</color>の間付与する。",
+        "2_jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>20%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>10%</color>回復させ、免疫を<color=#28d9ed>1ターン</color>の間付与する。",
+        "3_jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>20%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復させ、免疫を<color=#28d9ed>1ターン</color>の間付与する。",
+        "4_jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>20%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復させ、免疫を<color=#28d9ed>1ターン</color>の間付与する。",
         "5_jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>20%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復させ、免疫を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 면역을 부여합니다.",
+        "2_kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 면역을 부여합니다.",
+        "3_kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 면역을 부여합니다.",
+        "4_kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>1턴</color> 동안 면역을 부여합니다.",
         "5_kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 면역을 부여합니다.",
+        "1_zh": "使存活的友军行动值提升<color=#28d9ed>10%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>1回合</color>的免疫效果。",
+        "2_zh": "使存活的友军行动值提升<color=#28d9ed>20%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>10%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>1回合</color>的免疫效果。",
+        "3_zh": "使存活的友军行动值提升<color=#28d9ed>20%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>1回合</color>的免疫效果。",
+        "4_zh": "使存活的友军行动值提升<color=#28d9ed>20%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>1回合</color>的免疫效果。",
         "5_zh": "使存活的友军行动值提升<color=#28d9ed>20%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>2回合</color>的免疫效果。"
       },
       "enhancement": {
-        "2": ["+10% Priority"],
-        "2_jp": ["行動ゲージ10%UP"],
-        "2_kr": ["행동 게이지 +10%"],
-        "2_zh": ["行动值+10%"],
-        "3": ["+10% healing"],
-        "3_jp": ["HP回復量+10%"],
-        "3_kr": ["체력 회복량 +10%"],
-        "3_zh": ["生命值恢复量+10%"],
-        "4": ["-1 turn Skill Cooldown"],
-        "4_jp": ["スキルターン-1ターン"],
-        "4_kr": ["스킬 쿨타임 -1턴"],
-        "4_zh": ["冷却时间-1回合"],
-        "5": ["+1 turn effect duration"],
-        "5_jp": ["効果ターン+1ターン"],
-        "5_kr": ["효과 지속 +1턴"],
-        "5_zh": ["效果持续时间+1回合"]
+        "2": [
+          "+10% Priority"
+        ],
+        "3": [
+          "+10% healing"
+        ],
+        "4": [
+          "-1 turn Skill Cooldown"
+        ],
+        "5": [
+          "+1 turn effect duration"
+        ],
+        "2_jp": [
+          "行動ゲージ10%UP"
+        ],
+        "3_jp": [
+          "HP回復量+10%"
+        ],
+        "4_jp": [
+          "スキルターン-1ターン"
+        ],
+        "5_jp": [
+          "効果ターン+1ターン"
+        ],
+        "2_kr": [
+          "행동 게이지 +10%"
+        ],
+        "3_kr": [
+          "체력 회복량 +10%"
+        ],
+        "4_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "5_kr": [
+          "효과 지속 +1턴"
+        ],
+        "2_zh": [
+          "行动值+10%"
+        ],
+        "3_zh": [
+          "生命值恢复量+10%"
+        ],
+        "4_zh": [
+          "冷却时间-1回合"
+        ],
+        "5_zh": [
+          "效果持续时间+1回合"
+        ]
       },
-      "cd": "5",
-      "buff": ["BT_ACTION_GAUGE","BT_RESURRECTION","BT_IMMUNE"],
+      "wgr": null,
+      "cd": 5,
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_RESURRECTION",
+        "BT_IMMUNE"
+      ],
       "debuff": [],
       "offensive": false,
       "target": "multi"
@@ -260,51 +369,93 @@
       "name_zh": "连携被动",
       "true_desc_levels": {
         "1": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers Health of the caster by <color=#28d9ed>15%</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分のHPを<color=#28d9ed>15%</color>回復する。",
-        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.",
-        "1_zh": "<color=#ffd732>连携起始效果</color>:攻击后,赋予全体友军<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,自身生命值恢复<color=#28d9ed>15%</color>。",
         "2": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers Health of the caster by <color=#28d9ed>15%</color>.",
-        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分のHPを<color=#28d9ed>15%</color>回復する。",
-        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.",
-        "2_zh": "<color=#ffd732>连携起始效果</color>:攻击后,赋予全体友军<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,自身生命值恢复<color=#28d9ed>15%</color>。",
         "3": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers Health of the caster by <color=#28d9ed>15%</color>.",
-        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分のHPを<color=#28d9ed>15%</color>回復する。",
-        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.",
-        "3_zh": "<color=#ffd732>连携起始效果</color>:攻击后,赋予全体友军<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,自身生命值恢复<color=#28d9ed>15%</color>。",
         "4": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers Health of the caster by <color=#28d9ed>15%</color>.",
-        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分のHPを<color=#28d9ed>15%</color>回復する。",
-        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.",
-        "4_zh": "<color=#ffd732>连携起始效果</color>:攻击后,赋予全体友军<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,自身生命值恢复<color=#28d9ed>15%</color>。",
         "5": "<color=#ffd732>Chain Starter Effect</color>: After attacking, grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers Health of the caster by <color=#28d9ed>15%</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分のHPを<color=#28d9ed>15%</color>回復する。",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分のHPを<color=#28d9ed>15%</color>回復する。",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分のHPを<color=#28d9ed>15%</color>回復する。",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分のHPを<color=#28d9ed>15%</color>回復する。",
         "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分のHPを<color=#28d9ed>15%</color>回復する。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.",
         "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 아군 전체에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.",
+        "1_zh": "<color=#ffd732>连携起始效果</color>:攻击后,赋予全体友军<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,自身生命值恢复<color=#28d9ed>15%</color>。",
+        "2_zh": "<color=#ffd732>连携起始效果</color>:攻击后,赋予全体友军<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,自身生命值恢复<color=#28d9ed>15%</color>。",
+        "3_zh": "<color=#ffd732>连携起始效果</color>:攻击后,赋予全体友军<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,自身生命值恢复<color=#28d9ed>15%</color>。",
+        "4_zh": "<color=#ffd732>连携起始效果</color>:攻击后,赋予全体友军<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,自身生命值恢复<color=#28d9ed>15%</color>。",
         "5_zh": "<color=#ffd732>连携起始效果</color>:攻击后,赋予全体友军<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,自身生命值恢复<color=#28d9ed>15%</color>。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
-      "wgr_dual": 1,
       "cd": null,
-      "buff": ["BT_CONTINU_HEAL"],
+      "buff": [
+        "BT_CONTINU_HEAL"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi",
+      "wgr_dual": 1,
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [],
