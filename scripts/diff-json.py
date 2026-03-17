@@ -101,7 +101,29 @@ def compare(filepath):
         work_data = json.load(f)
 
     missing, added, changed = deep_diff(git_data, work_data)
-    return missing, added, changed
+
+    # Detect known patterns and simplify
+    notes = []
+    # wgr/cd: added but null = formatting
+    null_formatting = [a for a in added if a[0].endswith((".wgr", ".cd")) and a[1] is None]
+    if null_formatting:
+        added = [a for a in added if a not in null_formatting]
+        keys = sorted(set(a[0].rsplit(".", 1)[-1] for a in null_formatting))
+        notes.append(f"{', '.join(keys)}: null keys added (formatting)")
+
+    # CD string→int normalization
+    cd_normalized = [c for c in changed if c[0].endswith(".cd") and isinstance(c[1], str) and isinstance(c[2], int) and c[1] == str(c[2])]
+    if cd_normalized:
+        changed = [c for c in changed if c not in cd_normalized]
+        notes.append("cd: string -> int")
+
+    rarity = work_data.get("Rarity") or work_data.get("rarity")
+    useless_transcend = [m for m in missing if m[0] in ("transcend.1", "transcend.2") and m[1] is None]
+    if useless_transcend and rarity == 3:
+        missing = [m for m in missing if not (m[0] in ("transcend.1", "transcend.2") and m[1] is None)]
+        notes.append("useless transcend removed (rarity 3)")
+
+    return missing, added, changed, notes
 
 
 def fmt_val(val):
@@ -117,15 +139,19 @@ def print_report(filepath, result):
     if result is None:
         return
 
-    missing, added, changed = result
+    missing, added, changed, notes = result
 
-    if not missing and not added and not changed:
+    if not missing and not added and not changed and not notes:
         print(f"  ok {filepath}: identical (key/array order may differ)")
         return
 
     print(f"\n{'='*60}")
     print(f"  {filepath}")
     print(f"{'='*60}")
+
+    if notes:
+        for note in notes:
+            print(f"\n  >> {note}")
 
     if missing:
         print(f"\n  MISSING (in git, not in working copy): {len(missing)}")
@@ -190,8 +216,8 @@ def main():
             rel = str(f).replace("\\", "/")
             result = compare(rel)
             if result:
-                m, a, c = result
-                if m or a or c:
+                m, a, c, n = result
+                if m or a or c or n:
                     print_report(rel, result)
                     total_missing += len(m)
                     total_added += len(a)
