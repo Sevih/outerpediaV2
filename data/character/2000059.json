@@ -11,6 +11,16 @@
   "rank": "S",
   "rank_pvp": "S",
   "role": "dps",
+  "rank_by_transcend": {
+    "3": "A",
+    "4": "A",
+    "5": "A",
+    "6": "S"
+  },
+  "tags": [
+    "premium",
+    "ignore-defense"
+  ],
   "skill_priority": {
     "First": {
       "prio": 2
@@ -22,7 +32,6 @@
       "prio": 1
     }
   },
-  "tags": ["premium","ignore-defense"],
   "Chain_Type": "Start",
   "gift": "Science",
   "video": "orOhHJzO9qA",
@@ -31,23 +40,21 @@
   "VoiceActor_kr": "CV. 김예림",
   "VoiceActor_zh": "CV. 柚木凉香",
   "transcend": {
-    "1": null,
-    "2": null,
     "3": "ATK DEF HP +10%",
+    "6": "ATK DEF HP +30%\nIncreases damage of all attacks (Proportional to target's Max Health)\n+1 Turn Immunity upon entry",
     "4_1": "ATK DEF HP +16%\n+6% Ally Critical Hit Chance \n+50 AP upon entry\n+1 Chain Passive WG Reduction",
-    "4_1_jp": "ATK DEF HP +16%\n味方の会心率+6%\n戦闘開始時、AP+50\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n아군 치명 확률 +6%\n입장 시 AP +50\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n我方暴击率+6%\n入场时AP+50\n连携被动WG减少量+1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\nDoll Garden's Caretaker +1 turn upon entry",
-    "5_1_jp": "ATK DEF HP +22%\nバースト3段階解放\n戦闘開始時、箱庭の管理者+1ターン",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 모형 정원의 관리자 +1턴",
-    "5_1_zh": "ATK DEF HP +22%\n解锁爆裂3阶段\n入场时模型庭院的管理者+1回合",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\nIncreases damage of all attacks (Proportional to target's Max Health)\n+1 Turn Immunity upon entry",
-    "6_jp": "ATK DEF HP +30%\nすべての攻撃ダメージ増加(対象の最大HPに比例)\n戦闘開始時、免疫+1ターン",
+    "4_1_jp": "ATK DEF HP +16%\n味方の会心率+6%\n戦闘開始時、AP+50\nチェーンパッシブのWGダメージ+1",
+    "5_1_jp": "ATK DEF HP +22%\nバースト3段階解放\n戦闘開始時、【箱庭の主】+1ターン",
+    "6_jp": "ATK DEF HP +30%\nすべての攻撃ダメージ増加(対象のHPが高いほどダメージUP)\n戦闘開始時、免疫+1ターン",
+    "4_1_kr": "ATK DEF HP +16%\n아군 치명 확률 +6%\n입장 시 AP +50\n체인 패시브의 WG 감소량 +1",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 모형 정원의 관리자 +1턴",
     "6_kr": "ATK DEF HP +30%\n모든 공격 피해 증가(대상 최대 체력 비례)\n입장 시 면역 +1턴",
+    "4_1_zh": "ATK DEF HP +16%\n我方暴击率+6%\n入场时AP+50\n连携被动WG减少量+1",
+    "5_1_zh": "ATK DEF HP +22%\n解锁爆裂3阶段\n入场时模型庭院的管理者+1回合",
     "6_zh": "ATK DEF HP +30%\n所有攻击伤害提升(根据目标生命值上限)\n入场时免疫+1回合"
   },
   "skills": {
@@ -61,43 +68,83 @@
       "name_zh": "天上有神",
       "true_desc_levels": {
         "1": "Attacks an enemy. \\nIf the caster has <color=#28d9ed>Doll Garden's Caretaker</color>, activates an <color=#28d9ed>enhanced attack</color>.",
-        "1_jp": "敵単体にダメージを与える。\\n自分に<color=#28d9ed>【箱庭の主】</color>がある場合、 このスキルが強化され、<color=#28d9ed>ダメージがUP</color>する。",
-        "1_kr": "적을 공격합니다.\\n<color=#28d9ed>모형 정원의 관리자</color> 보유 시 <color=#28d9ed>강화 공격</color>이 발생합니다.",
-        "1_zh": "攻击敌人。\\n附带<color=#28d9ed>模型庄园的管理者</color>效果时,触发<color=#28d9ed>强化攻击</color>。",
         "2": "Attacks an enemy. \\nIf the caster has <color=#28d9ed>Doll Garden's Caretaker</color>, activates an <color=#28d9ed>enhanced attack</color>.",
-        "2_jp": "敵単体にダメージを与える。\\n自分に<color=#28d9ed>【箱庭の主】</color>がある場合、 このスキルが強化され、<color=#28d9ed>ダメージがUP</color>する。",
-        "2_kr": "적을 공격합니다.\\n<color=#28d9ed>모형 정원의 관리자</color> 보유 시 <color=#28d9ed>강화 공격</color>이 발생합니다.",
-        "2_zh": "攻击敌人。\\n附带<color=#28d9ed>模型庄园的管理者</color>效果时,触发<color=#28d9ed>强化攻击</color>。",
         "3": "Attacks an enemy. \\nIf the caster has <color=#28d9ed>Doll Garden's Caretaker</color>, activates an <color=#28d9ed>enhanced attack</color>.",
-        "3_jp": "敵単体にダメージを与える。\\n自分に<color=#28d9ed>【箱庭の主】</color>がある場合、 このスキルが強化され、<color=#28d9ed>ダメージがUP</color>する。",
-        "3_kr": "적을 공격합니다.\\n<color=#28d9ed>모형 정원의 관리자</color> 보유 시 <color=#28d9ed>강화 공격</color>이 발생합니다.",
-        "3_zh": "攻击敌人。\\n附带<color=#28d9ed>模型庄园的管理者</color>效果时,触发<color=#28d9ed>强化攻击</color>。",
         "4": "Attacks an enemy. \\nIf the caster has <color=#28d9ed>Doll Garden's Caretaker</color>, activates an <color=#28d9ed>enhanced attack</color>.",
-        "4_jp": "敵単体にダメージを与える。\\n自分に<color=#28d9ed>【箱庭の主】</color>がある場合、 このスキルが強化され、<color=#28d9ed>ダメージがUP</color>する。",
-        "4_kr": "적을 공격합니다.\\n<color=#28d9ed>모형 정원의 관리자</color> 보유 시 <color=#28d9ed>강화 공격</color>이 발생합니다.",
-        "4_zh": "攻击敌人。\\n附带<color=#28d9ed>模型庄园的管理者</color>效果时,触发<color=#28d9ed>强化攻击</color>。",
         "5": "Attacks an enemy.\\nIf the caster has <color=#28d9ed>Doll Garden's Caretaker</color>, triggers an <color=#28d9ed>Enhanced Attack</color> and reduces the cooldown of <color=#28d9ed>Sanctuary for All</color> by <color=#28d9ed>1</color> turn.",
-        "5_jp": "敵単体にダメージを与える。\\n<color=#28d9ed>箱庭の管理者</color>を保有している場合、<color=#28d9ed>強化攻撃</color>が発生し、<color=#28d9ed>万物に安息を</color>のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
+        "1_jp": "敵単体にダメージを与える。\\n自分に<color=#28d9ed>【箱庭の主】</color>がある場合、 このスキルが強化され、<color=#28d9ed>ダメージがUP</color>する。",
+        "2_jp": "敵単体にダメージを与える。\\n自分に<color=#28d9ed>【箱庭の主】</color>がある場合、 このスキルが強化され、<color=#28d9ed>ダメージがUP</color>する。",
+        "3_jp": "敵単体にダメージを与える。\\n自分に<color=#28d9ed>【箱庭の主】</color>がある場合、 このスキルが強化され、<color=#28d9ed>ダメージがUP</color>する。",
+        "4_jp": "敵単体にダメージを与える。\\n自分に<color=#28d9ed>【箱庭の主】</color>がある場合、 このスキルが強化され、<color=#28d9ed>ダメージがUP</color>する。",
+        "5_jp": "敵単体にダメージを与える。\\n<color=#28d9ed>【箱庭の主】</color>がある場合、<color=#28d9ed>強化攻撃</color>が発生し、<color=#28d9ed>【万物にありては安息】</color>のスキルターンが<color=#28d9ed>1ターン</color>DOWNされる。",
+        "1_kr": "적을 공격합니다.\\n<color=#28d9ed>모형 정원의 관리자</color> 보유 시 <color=#28d9ed>강화 공격</color>이 발생합니다.",
+        "2_kr": "적을 공격합니다.\\n<color=#28d9ed>모형 정원의 관리자</color> 보유 시 <color=#28d9ed>강화 공격</color>이 발생합니다.",
+        "3_kr": "적을 공격합니다.\\n<color=#28d9ed>모형 정원의 관리자</color> 보유 시 <color=#28d9ed>강화 공격</color>이 발생합니다.",
+        "4_kr": "적을 공격합니다.\\n<color=#28d9ed>모형 정원의 관리자</color> 보유 시 <color=#28d9ed>강화 공격</color>이 발생합니다.",
         "5_kr": "적을 공격합니다.\\n<color=#28d9ed>모형 정원의 관리자</color> 보유 시 <color=#28d9ed>강화 공격</color>이 발생하고 <color=#28d9ed>만물에게 안식을</color>의 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
+        "1_zh": "攻击敌人。\\n附带<color=#28d9ed>模型庄园的管理者</color>效果时,触发<color=#28d9ed>强化攻击</color>。",
+        "2_zh": "攻击敌人。\\n附带<color=#28d9ed>模型庄园的管理者</color>效果时,触发<color=#28d9ed>强化攻击</color>。",
+        "3_zh": "攻击敌人。\\n附带<color=#28d9ed>模型庄园的管理者</color>效果时,触发<color=#28d9ed>强化攻击</color>。",
+        "4_zh": "攻击敌人。\\n附带<color=#28d9ed>模型庄园的管理者</color>效果时,触发<color=#28d9ed>强化攻击</color>。",
         "5_zh": "攻击敌人。\\n若持有<color=#28d9ed>模型庭院的管理者</color>,发动<color=#28d9ed>强化攻击</color>,并使<color=#28d9ed>赐万物安息</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+15% damage"],
-        "3_jp": ["ダメージ+15%"],
-        "3_kr": ["피해량 +15%"],
-        "3_zh": ["伤害量+15%"],
-        "4": ["+15% damage"],
-        "4_jp": ["ダメージ+15%"],
-        "4_kr": ["피해량 +15%"],
-        "4_zh": ["伤害量+15%"],
-        "5": ["+20% damage","Sanctuary for All Cooldown -1 turn"],
-        "5_jp": ["ダメージ+20%","万物に安息をのスキルターン-1ターン"],
-        "5_kr": ["피해량 +20%","만물에게 안식을 쿨타임 -1턴"],
-        "5_zh": ["伤害量+20%","赐万物安息冷却时间-1回合"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+15% damage"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "5": [
+          "+20% damage",
+          "Sanctuary for All Cooldown -1 turn"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "ダメージ+15%"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "5_jp": [
+          "ダメージ+20%",
+          "【万物にありては安息】のスキルターン-1ターン"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "피해량 +15%"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "5_kr": [
+          "피해량 +20%",
+          "만물에게 안식을 쿨타임 -1턴"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "伤害量+15%"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5_zh": [
+          "伤害量+20%",
+          "赐万物安息冷却时间-1回合"
+        ]
       },
       "wgr": 1,
       "cd": null,
@@ -152,47 +199,94 @@
       "name_zh": "地上有人类",
       "true_desc_levels": {
         "1": "(Triggered Effect) <color=#28d9ed>Resurrects</color> and heals for <color=#28d9ed>20%</color> upon death. <color=#28d9ed>Dies</color> if no enemy is slain in <color=#28d9ed>1 turn</color>.\\nGrants the caster <color=#28d9ed>Doll Garden's Caretaker</color> for <color=#28d9ed>1 turn</color> upon resurrection.",
-        "1_jp": "(発動効果)倒れた時、直ちに自分のHPを<color=#28d9ed>20%</color>回復して<color=#28d9ed>復活</color>する。敵を<color=#28d9ed>1ターン</color>の間に倒せなかった場合、自分が<color=#28d9ed>倒れる。</color>\\n復活時、自分に<color=#28d9ed>【箱庭の主】</color>を<color=#28d9ed>1ターン</color>の間付与する。",
-        "1_kr": "(발동 효과) 사망 시 즉시 <color=#28d9ed>20%</color>의 체력을 회복하며 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>1턴</color> 동안 적을 처치하지 못하면 <color=#28d9ed>사망</color>하게 됩니다.\\n부활 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>모형 정원의 관리자</color>를 획득합니다.",
-        "1_zh": "(触发效果)死亡时,立即恢复<color=#28d9ed>20%</color>生命值并<color=#28d9ed>复活</color>。若<color=#28d9ed>1回合</color>内无法击杀敌人则会<color=#28d9ed>死亡</color>。\\n复活时,会获得<color=#28d9ed>模型庄园的管理者</color>效果,持续<color=#28d9ed>1回合</color>。",
         "2": "(Triggered Effect) <color=#28d9ed>Resurrects</color> and heals for <color=#28d9ed>20%</color> upon death. <color=#28d9ed>Dies</color> if no enemy is slain in <color=#28d9ed>1 turn</color>.\\nGrants the caster <color=#28d9ed>Doll Garden's Caretaker</color> for <color=#28d9ed>1 turn</color> upon resurrection.",
-        "2_jp": "(発動効果)倒れた時、直ちに自分のHPを<color=#28d9ed>20%</color>回復して<color=#28d9ed>復活</color>する。敵を<color=#28d9ed>1ターン</color>の間に倒せなかった場合、自分が<color=#28d9ed>倒れる。</color>\\n復活時、自分に<color=#28d9ed>【箱庭の主】</color>を<color=#28d9ed>1ターン</color>の間付与する。",
-        "2_kr": "(발동 효과) 사망 시 즉시 <color=#28d9ed>20%</color>의 체력을 회복하며 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>1턴</color> 동안 적을 처치하지 못하면 <color=#28d9ed>사망</color>하게 됩니다.\\n부활 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>모형 정원의 관리자</color>를 획득합니다.",
-        "2_zh": "(触发效果)死亡时,立即恢复<color=#28d9ed>20%</color>生命值并<color=#28d9ed>复活</color>。若<color=#28d9ed>1回合</color>内无法击杀敌人则会<color=#28d9ed>死亡</color>。\\n复活时,会获得<color=#28d9ed>模型庄园的管理者</color>效果,持续<color=#28d9ed>1回合</color>。",
         "3": "(Triggered Effect) <color=#28d9ed>Resurrects</color> and heals for <color=#28d9ed>20%</color> upon death. <color=#28d9ed>Dies</color> if no enemy is slain in <color=#28d9ed>1 turn</color>.\\nGrants the caster <color=#28d9ed>Doll Garden's Caretaker</color> for <color=#28d9ed>1 turn</color> and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>80%</color> upon resurrection.",
-        "3_jp": "(発動効果)倒れた時、直ちに自分のHPを<color=#28d9ed>20%</color>回復して<color=#28d9ed>復活</color>する。敵を<color=#28d9ed>1ターン</color>の間に倒せなかった場合、自分が<color=#28d9ed>倒れる。</color>\\n復活時、自分に<color=#28d9ed>【箱庭の主】</color>を<color=#28d9ed>1ターン</color>の間付与し、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>80%</color>UPさせる。",
-        "3_kr": "(발동 효과) 사망 시 즉시 <color=#28d9ed>20%</color>의 체력을 회복하며 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>1턴</color> 동안 적을 처치하지 못하면 <color=#28d9ed>사망</color>하게 됩니다.\\n부활 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>모형 정원의 관리자</color>를 획득하고, <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>80%</color> 증가합니다.",
-        "3_zh": "(触发效果)死亡时,立即恢复<color=#28d9ed>20%</color>生命值并<color=#28d9ed>复活</color>。若<color=#28d9ed>1回合</color>内无法击杀敌人则会<color=#28d9ed>死亡</color>。\\n复活时,会获得<color=#28d9ed>模型庄园的管理者</color>效果,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>行动值</color>提升<color=#28d9ed>80%</color>。",
         "4": "(Triggered Effect) <color=#28d9ed>Resurrects</color> and heals for <color=#28d9ed>35%</color> upon death. <color=#28d9ed>Dies</color> if no enemy is slain in <color=#28d9ed>1 turn</color>.\\nGrants the caster <color=#28d9ed>Doll Garden's Caretaker</color> for <color=#28d9ed>1 turn</color> and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>80%</color> upon resurrection.",
-        "4_jp": "(発動効果)倒れた時、直ちに自分のHPを<color=#28d9ed>35%</color>回復して<color=#28d9ed>復活</color>する。敵を<color=#28d9ed>1ターン</color>の間に倒せなかった場合、自分が<color=#28d9ed>倒れる。</color>\\n復活時、自分に<color=#28d9ed>【箱庭の主】</color>を<color=#28d9ed>1ターン</color>の間付与し、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>80%</color>UPさせる。",
-        "4_kr": "(발동 효과) 사망 시 즉시 <color=#28d9ed>35%</color>의 체력을 회복하며 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>1턴</color> 동안 적을 처치하지 못하면 <color=#28d9ed>사망</color>하게 됩니다.\\n부활 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>모형 정원의 관리자</color>를 획득하고, <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>80%</color> 증가합니다.",
-        "4_zh": "(触发效果)死亡时,立即恢复<color=#28d9ed>35%</color>生命值并<color=#28d9ed>复活</color>。若<color=#28d9ed>1回合</color>内无法击杀敌人则会<color=#28d9ed>死亡</color>。\\n复活时,会获得<color=#28d9ed>模型庄园的管理者</color>效果,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>行动值</color>提升<color=#28d9ed>80%</color>。",
         "5": "(Triggered Effect) <color=#28d9ed>Resurrects</color> and heals for <color=#28d9ed>50%</color> upon death. <color=#28d9ed>Dies</color> if no enemy is slain in <color=#28d9ed>1 turn</color>.\\nGrants the caster <color=#28d9ed>Doll Garden's Caretaker</color> for <color=#28d9ed>1 turn</color>, resets the cooldown of <color=#28d9ed>Sanctuary for All</color>, and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>80%</color> upon resurrection.",
+        "1_jp": "(発動効果)倒れた時、直ちに自分のHPを<color=#28d9ed>20%</color>回復して<color=#28d9ed>復活</color>する。敵を<color=#28d9ed>1ターン</color>の間に倒せなかった場合、自分が<color=#28d9ed>倒れる。</color>\\n復活時、自分に<color=#28d9ed>【箱庭の主】</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "2_jp": "(発動効果)倒れた時、直ちに自分のHPを<color=#28d9ed>20%</color>回復して<color=#28d9ed>復活</color>する。敵を<color=#28d9ed>1ターン</color>の間に倒せなかった場合、自分が<color=#28d9ed>倒れる。</color>\\n復活時、自分に<color=#28d9ed>【箱庭の主】</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "3_jp": "(発動効果)倒れた時、直ちに自分のHPを<color=#28d9ed>20%</color>回復して<color=#28d9ed>復活</color>する。敵を<color=#28d9ed>1ターン</color>の間に倒せなかった場合、自分が<color=#28d9ed>倒れる。</color>\\n復活時、自分に<color=#28d9ed>【箱庭の主】</color>を<color=#28d9ed>1ターン</color>の間付与し、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>80%</color>UPさせる。",
+        "4_jp": "(発動効果)倒れた時、直ちに自分のHPを<color=#28d9ed>35%</color>回復して<color=#28d9ed>復活</color>する。敵を<color=#28d9ed>1ターン</color>の間に倒せなかった場合、自分が<color=#28d9ed>倒れる。</color>\\n復活時、自分に<color=#28d9ed>【箱庭の主】</color>を<color=#28d9ed>1ターン</color>の間付与し、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>80%</color>UPさせる。",
         "5_jp": "(発動効果)倒れた時、直ちに自分のHPを<color=#28d9ed>50%</color>回復して<color=#28d9ed>復活</color>する。敵を<color=#28d9ed>1ターン</color>の間に倒せなかった場合、自分が<color=#28d9ed>倒れる。</color>\\n復活時、自分に<color=#28d9ed>【箱庭の主】</color>を<color=#28d9ed>1ターン</color>の間付与し、<color=#28d9ed>【万物にありては安息】</color>のスキルターンを初期化する。また、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>80%</color>UPさせる。",
+        "1_kr": "(발동 효과) 사망 시 즉시 <color=#28d9ed>20%</color>의 체력을 회복하며 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>1턴</color> 동안 적을 처치하지 못하면 <color=#28d9ed>사망</color>하게 됩니다.\\n부활 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>모형 정원의 관리자</color>를 획득합니다.",
+        "2_kr": "(발동 효과) 사망 시 즉시 <color=#28d9ed>20%</color>의 체력을 회복하며 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>1턴</color> 동안 적을 처치하지 못하면 <color=#28d9ed>사망</color>하게 됩니다.\\n부활 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>모형 정원의 관리자</color>를 획득합니다.",
+        "3_kr": "(발동 효과) 사망 시 즉시 <color=#28d9ed>20%</color>의 체력을 회복하며 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>1턴</color> 동안 적을 처치하지 못하면 <color=#28d9ed>사망</color>하게 됩니다.\\n부활 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>모형 정원의 관리자</color>를 획득하고, <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>80%</color> 증가합니다.",
+        "4_kr": "(발동 효과) 사망 시 즉시 <color=#28d9ed>35%</color>의 체력을 회복하며 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>1턴</color> 동안 적을 처치하지 못하면 <color=#28d9ed>사망</color>하게 됩니다.\\n부활 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>모형 정원의 관리자</color>를 획득하고, <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>80%</color> 증가합니다.",
         "5_kr": "(발동 효과) 사망 시 즉시 <color=#28d9ed>50%</color>의 체력을 회복하며 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>1턴</color> 동안 적을 처치하지 못하면 <color=#28d9ed>사망</color>하게 됩니다.\\n부활 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>모형 정원의 관리자</color>를 획득하고, <color=#28d9ed>만물에게 안식을</color>의 쿨타임이 초기화 됩니다. 추가로 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>80%</color> 증가합니다.",
+        "1_zh": "(触发效果)死亡时,立即恢复<color=#28d9ed>20%</color>生命值并<color=#28d9ed>复活</color>。若<color=#28d9ed>1回合</color>内无法击杀敌人则会<color=#28d9ed>死亡</color>。\\n复活时,会获得<color=#28d9ed>模型庄园的管理者</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "2_zh": "(触发效果)死亡时,立即恢复<color=#28d9ed>20%</color>生命值并<color=#28d9ed>复活</color>。若<color=#28d9ed>1回合</color>内无法击杀敌人则会<color=#28d9ed>死亡</color>。\\n复活时,会获得<color=#28d9ed>模型庄园的管理者</color>效果,持续<color=#28d9ed>1回合</color>。",
+        "3_zh": "(触发效果)死亡时,立即恢复<color=#28d9ed>20%</color>生命值并<color=#28d9ed>复活</color>。若<color=#28d9ed>1回合</color>内无法击杀敌人则会<color=#28d9ed>死亡</color>。\\n复活时,会获得<color=#28d9ed>模型庄园的管理者</color>效果,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>行动值</color>提升<color=#28d9ed>80%</color>。",
+        "4_zh": "(触发效果)死亡时,立即恢复<color=#28d9ed>35%</color>生命值并<color=#28d9ed>复活</color>。若<color=#28d9ed>1回合</color>内无法击杀敌人则会<color=#28d9ed>死亡</color>。\\n复活时,会获得<color=#28d9ed>模型庄园的管理者</color>效果,持续<color=#28d9ed>1回合</color>,并使<color=#28d9ed>行动值</color>提升<color=#28d9ed>80%</color>。",
         "5_zh": "(触发效果)死亡时,立即恢复<color=#28d9ed>50%</color>生命值并<color=#28d9ed>复活</color>。若<color=#28d9ed>1回合</color>内无法击杀敌人则会<color=#28d9ed>死亡</color>。\\n复活时,会获得<color=#28d9ed>模型庄园的管理者</color>效果,持续<color=#28d9ed>1回合</color>,重置<color=#28d9ed>赋予万物安息</color>的冷却时间,并使<color=#28d9ed>行动值</color>额外提升<color=#28d9ed>80%</color>。"
       },
       "enhancement": {
-        "2": ["-1 turn Skill Cooldown"],
-        "2_jp": ["スキルターン-1ターン"],
-        "2_kr": ["스킬 쿨타임 -1턴"],
-        "2_zh": ["冷却时间-1回合"],
-        "3": ["+80% Priority"],
-        "3_jp": ["行動ゲージUP+80%"],
-        "3_kr": ["행동 게이지 +80%"],
-        "3_zh": ["行动值+80%"],
-        "4": ["-1 turn Skill Cooldown","+15% healing"],
-        "4_jp": ["スキルターン-1ターン","HP回復量+15%"],
-        "4_kr": ["스킬 쿨타임 -1턴","체력 회복량 +15%"],
-        "4_zh": ["冷却时间-1回合","生命值恢复量+15%"],
-        "5": ["+15% healing","Resets Sanctuary for All's cooldown"],
-        "5_jp": ["HP回復量+15%","【万物にありては安息】のスキルターン初期化"],
-        "5_kr": ["체력 회복량 +15%","만물에게 안식을 쿨타임 초기화"],
-        "5_zh": ["生命值恢复量+15%","赋予万物安息冷却时间重置"]
+        "2": [
+          "-1 turn Skill Cooldown"
+        ],
+        "3": [
+          "+80% Priority"
+        ],
+        "4": [
+          "-1 turn Skill Cooldown",
+          "+15% healing"
+        ],
+        "5": [
+          "+15% healing",
+          "Resets Sanctuary for All's cooldown"
+        ],
+        "2_jp": [
+          "スキルターン-1ターン"
+        ],
+        "3_jp": [
+          "行動ゲージUP+80%"
+        ],
+        "4_jp": [
+          "スキルターン-1ターン",
+          "HP回復量+15%"
+        ],
+        "5_jp": [
+          "HP回復量+15%",
+          "【万物にありては安息】のスキルターン初期化"
+        ],
+        "2_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "3_kr": [
+          "행동 게이지 +80%"
+        ],
+        "4_kr": [
+          "스킬 쿨타임 -1턴",
+          "체력 회복량 +15%"
+        ],
+        "5_kr": [
+          "체력 회복량 +15%",
+          "만물에게 안식을 쿨타임 초기화"
+        ],
+        "2_zh": [
+          "冷却时间-1回合"
+        ],
+        "3_zh": [
+          "行动值+80%"
+        ],
+        "4_zh": [
+          "冷却时间-1回合",
+          "生命值恢复量+15%"
+        ],
+        "5_zh": [
+          "生命值恢复量+15%",
+          "赋予万物安息冷却时间重置"
+        ]
       },
-      "cd": "9",
-      "buff": ["IG_Buff_2000059_Interruption","BT_ACTION_GAUGE","BT_COOL3_CHARGE"],
-      "debuff": ["IG_Buff_Death_Timer_Interruption_D"],
+      "wgr": null,
+      "cd": 9,
+      "buff": [
+        "IG_Buff_2000059_Interruption",
+        "BT_ACTION_GAUGE",
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [
+        "IG_Buff_Death_Timer_Interruption_D"
+      ],
       "offensive": false,
       "target": "mono"
     },
@@ -206,46 +300,82 @@
       "name_zh": "赋予万物安息",
       "true_desc_levels": {
         "1": "Attacks all enemies.\\nThis skill ignores <color=#28d9ed>30%</color> of targets' Defense, deals more damage when fewer enemies remain (up to 60%),\\nand increases damage by <color=#28d9ed>5%</color> each time an enemy is defeated.",
-        "1_jp": "敵全体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、対象数が少ないほどダメージが増加する(最大60%)。\\nまた、敵が倒れるたびにダメージが<color=#28d9ed>5%</color>増加する。",
-        "1_kr": "적 전체를 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며 대상의 수가 적을수록 피해가 증가하고(최대 60%)\\n사망자가 발생할 때마다 피해가 <color=#28d9ed>5%</color> 증가합니다.",
-        "1_zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>30%</color>防御力,敌人数量越少伤害越高(最多60%),\\n且每当有敌人死亡时,伤害提高<color=#28d9ed>5%</color>。",
         "2": "Attacks all enemies.\\nThis skill ignores <color=#28d9ed>30%</color> of targets' Defense, deals more damage when fewer enemies remain (up to 60%),\\nand increases damage by <color=#28d9ed>5%</color> each time an enemy is defeated.",
-        "2_jp": "敵全体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、対象数が少ないほどダメージが増加する(最大60%)。\\nまた、敵が倒れるたびにダメージが<color=#28d9ed>5%</color>増加する。",
-        "2_kr": "적 전체를 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며 대상의 수가 적을수록 피해가 증가하고(최대 60%)\\n사망자가 발생할 때마다 피해가 <color=#28d9ed>5%</color> 증가합니다.",
-        "2_zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>30%</color>防御力,敌人数量越少伤害越高(最多60%),\\n且每当有敌人死亡时,伤害提高<color=#28d9ed>5%</color>。",
         "3": "Attacks all enemies.\\nThis skill ignores <color=#28d9ed>30%</color> of targets' Defense, deals more damage when fewer enemies remain (up to 60%),\\nand increases damage by <color=#28d9ed>5%</color> each time an enemy is defeated.",
-        "3_jp": "敵全体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、対象数が少ないほどダメージが増加する(最大60%)。\\nまた、敵が倒れるたびにダメージが<color=#28d9ed>5%</color>増加する。",
-        "3_kr": "적 전체를 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며 대상의 수가 적을수록 피해가 증가하고(최대 60%)\\n사망자가 발생할 때마다 피해가 <color=#28d9ed>5%</color> 증가합니다.",
-        "3_zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>30%</color>防御力,敌人数量越少伤害越高(最多60%),\\n且每当有敌人死亡时,伤害提高<color=#28d9ed>5%</color>。",
         "4": "Attacks all enemies.\\nThis skill ignores <color=#28d9ed>30%</color> of targets' Defense, deals more damage when fewer enemies remain (up to 60%),\\nand increases damage by <color=#28d9ed>5%</color> each time an enemy is defeated.",
-        "4_jp": "敵全体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、対象数が少ないほどダメージが増加する(最大60%)。\\nまた、敵が倒れるたびにダメージが<color=#28d9ed>5%</color>増加する。",
-        "4_kr": "적 전체를 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며 대상의 수가 적을수록 피해가 증가하고(최대 60%)\\n사망자가 발생할 때마다 피해가 <color=#28d9ed>5%</color> 증가합니다.",
-        "4_zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>30%</color>防御力,敌人数量越少伤害越高(最多60%),\\n且每当有敌人死亡时,伤害提高<color=#28d9ed>5%</color>。",
         "5": "Attacks all enemies.\\nThis skill ignores <color=#28d9ed>30%</color> of targets' Defense, deals more damage when fewer enemies remain (up to 60%),\\nand increases damage by <color=#28d9ed>5%</color> each time an enemy is defeated.",
+        "1_jp": "敵全体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、対象数が少ないほどダメージが増加する(最大60%)。\\nまた、敵が倒れるたびにダメージが<color=#28d9ed>5%</color>増加する。",
+        "2_jp": "敵全体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、対象数が少ないほどダメージが増加する(最大60%)。\\nまた、敵が倒れるたびにダメージが<color=#28d9ed>5%</color>増加する。",
+        "3_jp": "敵全体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、対象数が少ないほどダメージが増加する(最大60%)。\\nまた、敵が倒れるたびにダメージが<color=#28d9ed>5%</color>増加する。",
+        "4_jp": "敵全体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、対象数が少ないほどダメージが増加する(最大60%)。\\nまた、敵が倒れるたびにダメージが<color=#28d9ed>5%</color>増加する。",
         "5_jp": "敵全体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、対象数が少ないほどダメージが増加する(最大60%)。\\nまた、敵が倒れるたびにダメージが<color=#28d9ed>5%</color>増加する。",
+        "1_kr": "적 전체를 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며 대상의 수가 적을수록 피해가 증가하고(최대 60%)\\n사망자가 발생할 때마다 피해가 <color=#28d9ed>5%</color> 증가합니다.",
+        "2_kr": "적 전체를 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며 대상의 수가 적을수록 피해가 증가하고(최대 60%)\\n사망자가 발생할 때마다 피해가 <color=#28d9ed>5%</color> 증가합니다.",
+        "3_kr": "적 전체를 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며 대상의 수가 적을수록 피해가 증가하고(최대 60%)\\n사망자가 발생할 때마다 피해가 <color=#28d9ed>5%</color> 증가합니다.",
+        "4_kr": "적 전체를 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며 대상의 수가 적을수록 피해가 증가하고(최대 60%)\\n사망자가 발생할 때마다 피해가 <color=#28d9ed>5%</color> 증가합니다.",
         "5_kr": "적 전체를 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며 대상의 수가 적을수록 피해가 증가하고(최대 60%)\\n사망자가 발생할 때마다 피해가 <color=#28d9ed>5%</color> 증가합니다.",
+        "1_zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>30%</color>防御力,敌人数量越少伤害越高(最多60%),\\n且每当有敌人死亡时,伤害提高<color=#28d9ed>5%</color>。",
+        "2_zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>30%</color>防御力,敌人数量越少伤害越高(最多60%),\\n且每当有敌人死亡时,伤害提高<color=#28d9ed>5%</color>。",
+        "3_zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>30%</color>防御力,敌人数量越少伤害越高(最多60%),\\n且每当有敌人死亡时,伤害提高<color=#28d9ed>5%</color>。",
+        "4_zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>30%</color>防御力,敌人数量越少伤害越高(最多60%),\\n且每当有敌人死亡时,伤害提高<color=#28d9ed>5%</color>。",
         "5_zh": "攻击全体敌人。\\n该技能无视目标<color=#28d9ed>30%</color>防御力,敌人数量越少伤害越高(最多60%),\\n且每当有敌人死亡时,伤害提高<color=#28d9ed>5%</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+15% damage"],
-        "4_jp": ["ダメージ+15%"],
-        "4_kr": ["피해량 +15%"],
-        "4_zh": ["伤害量+15%"],
-        "5": ["+20% damage"],
-        "5_jp": ["ダメージ+20%"],
-        "5_kr": ["피해량 +20%"],
-        "5_zh": ["伤害量+20%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "+15% damage"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "ダメージ+15%"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "피해량 +15%"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "伤害量+15%"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
       },
-      "cd": "5",
       "wgr": 2,
+      "cd": 5,
       "buff": [],
       "debuff": [],
       "offensive": true,
@@ -261,61 +391,99 @@
       "name_zh": "连携被动",
       "true_desc_levels": {
         "1": "<color=#ffd732>Chain Starter Effect</color>: After attacking, deals <color=#28d9ed>5</color> additional Weakness Gauge damage. \\n\\n<color=#ffd732>Dual Attack Effect</color>: Grants increased <color=#28d9ed>Speed</color> to the caster for <color=#28d9ed>1 turn</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
-        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
-        "1_zh": "<color=#ffd732>连锁起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:提升自身<color=#28d9ed>速度</color>,持续<color=#28d9ed>1回合</color>。",
         "2": "<color=#ffd732>Chain Starter Effect</color>: After attacking, deals <color=#28d9ed>5</color> additional Weakness Gauge damage. \\n\\n<color=#ffd732>Dual Attack Effect</color>: Grants increased <color=#28d9ed>Speed</color> to the caster for <color=#28d9ed>1 turn</color>.",
-        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
-        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
-        "2_zh": "<color=#ffd732>连锁起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:提升自身<color=#28d9ed>速度</color>,持续<color=#28d9ed>1回合</color>。",
         "3": "<color=#ffd732>Chain Starter Effect</color>: After attacking, deals <color=#28d9ed>5</color> additional Weakness Gauge damage. \\n\\n<color=#ffd732>Dual Attack Effect</color>: Grants increased <color=#28d9ed>Speed</color> to the caster for <color=#28d9ed>1 turn</color>.",
-        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
-        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
-        "3_zh": "<color=#ffd732>连锁起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:提升自身<color=#28d9ed>速度</color>,持续<color=#28d9ed>1回合</color>。",
         "4": "<color=#ffd732>Chain Starter Effect</color>: After attacking, deals <color=#28d9ed>5</color> additional Weakness Gauge damage. \\n\\n<color=#ffd732>Dual Attack Effect</color>: Grants increased <color=#28d9ed>Speed</color> to the caster for <color=#28d9ed>1 turn</color>.",
-        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
-        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
-        "4_zh": "<color=#ffd732>连锁起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:提升自身<color=#28d9ed>速度</color>,持续<color=#28d9ed>1回合</color>。",
         "5": "<color=#ffd732>Chain Starter Effect</color>: After attacking, deals <color=#28d9ed>5</color> additional Weakness Gauge damage. \\n\\n<color=#ffd732>Dual Attack Effect</color>: Grants increased <color=#28d9ed>Speed</color> to the caster for <color=#28d9ed>1 turn</color>.",
-        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、WGを追加で<color=#28d9ed>5</color>DOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
         "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
+        "1_zh": "<color=#ffd732>连锁起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:提升自身<color=#28d9ed>速度</color>,持续<color=#28d9ed>1回合</color>。",
+        "2_zh": "<color=#ffd732>连锁起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:提升自身<color=#28d9ed>速度</color>,持续<color=#28d9ed>1回合</color>。",
+        "3_zh": "<color=#ffd732>连锁起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:提升自身<color=#28d9ed>速度</color>,持续<color=#28d9ed>1回合</color>。",
+        "4_zh": "<color=#ffd732>连锁起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:提升自身<color=#28d9ed>速度</color>,持续<color=#28d9ed>1回合</color>。",
         "5_zh": "<color=#ffd732>连锁起始效果</color>:攻击后,使WG额外降低<color=#28d9ed>5</color>。\\n\\n<color=#ffd732>夹攻效果</color>:提升自身<color=#28d9ed>速度</color>,持续<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
-      "wgr_dual": 1,
       "cd": null,
       "buff": [],
-      "debuff": ["BT_WG_REVERSE_HEAL"],
+      "debuff": [
+        "BT_WG_REVERSE_HEAL"
+      ],
       "offensive": true,
       "target": "multi",
+      "wgr_dual": 1,
       "dual_offensive": true,
       "dual_target": "mono",
-      "dual_buff": ["BT_STAT|ST_SPEED"],
+      "dual_buff": [
+        "BT_STAT|ST_SPEED"
+      ],
       "dual_debuff": []
     }
-  },
-  "rank_by_transcend": {
-    "3": "A",
-    "4": "A",
-    "5": "A",
-    "6": "S"
   }
 }
