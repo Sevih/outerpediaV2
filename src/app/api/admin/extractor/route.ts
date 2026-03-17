@@ -1424,7 +1424,7 @@ export async function POST(req: NextRequest) {
     const character = orderKeys({
       ...info,
       rank: manual.rank ?? existing.rank ?? null,
-      rank_pvp: manual.rank_pvp ?? existing.rank_pvp ?? undefined,
+      rank_pvp: manual.rank_pvp ?? existing.rank_pvp ?? null,
       role: manual.role ?? existing.role ?? null,
       // tags: auto-detected from info + 'free' from manual checkbox
       tags: (() => {

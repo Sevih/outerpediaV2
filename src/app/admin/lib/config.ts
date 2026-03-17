@@ -415,14 +415,14 @@ const TARGET_MAP: Record<string, string | null> = {
   NONE: null,
 };
 
-export function resolveTarget(rangeType: string): string | null {
+export function resolveTarget(rangeType: string): string | string[] | null {
   const parts = rangeType.split(',').map(p => p.trim()).filter(Boolean);
   if (parts.length === 0) return null;
   const mapped = parts.map(p => p in TARGET_MAP ? TARGET_MAP[p] : p).filter((v): v is string => v != null);
   if (mapped.length === 0) return null;
   // Deduplicate (e.g. "SINGLE,SINGLE" → "mono")
   const unique = [...new Set(mapped)];
-  return unique.join(',');
+  return unique.length === 1 ? unique[0] : unique;
 }
 
 // ── Gift mapping ─────────────────────────────────────────────────────
