@@ -117,6 +117,12 @@ def compare(filepath):
         keys = sorted(set(a[0].rsplit(".", 1)[-1] for a in null_formatting))
         notes.append(f"{', '.join(keys)}: null keys added (formatting)")
 
+    # SKT_CHAIN_PASSIVE dual_buff/dual_debuff empty arrays = formatting
+    dual_fmt = [a for a in added if a[0] in ("skills.SKT_CHAIN_PASSIVE.dual_buff", "skills.SKT_CHAIN_PASSIVE.dual_debuff") and a[1] == []]
+    if dual_fmt:
+        added = [a for a in added if a not in dual_fmt]
+        notes.append("chain passive dual_buff/debuff added (formatting)")
+
     # CD string→int normalization
     cd_normalized = [c for c in changed if c[0].endswith(".cd") and isinstance(c[1], str) and isinstance(c[2], int) and c[1] == str(c[2])]
     if cd_normalized:

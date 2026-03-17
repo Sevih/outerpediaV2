@@ -30,23 +30,21 @@
   "VoiceActor_kr": "CV. 김예림",
   "VoiceActor_zh": "CV. 井上麻里奈",
   "transcend": {
-    "1": null,
-    "2": null,
     "3": "ATK DEF HP +10%",
+    "6": "ATK DEF HP +30%\n+5% Ally Team Defense\n+25 Action Points at battle start",
     "4_1": "ATK DEF HP +16%\n+5% Ally Team Defense\n+1 Chain Passive Weakness Gauge damage",
-    "4_1_jp": "ATK DEF HP +16%\n味方の防御力+5%\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n아군 방어력 +5%\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n友军防御力+5%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
-    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
-    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\n+5% Ally Team Defense\n+25 Action Points at battle start",
+    "4_1_jp": "ATK DEF HP +16%\n味方の防御力+5%\nチェーンパッシブのWGダメージ+1",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方の防御力+5%\n戦闘開始時、AP+25",
+    "4_1_kr": "ATK DEF HP +16%\n아군 방어력 +5%\n체인 패시브의 WG 감소량 +1",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 방어력 +5%\n입장 시 AP +25",
+    "4_1_zh": "ATK DEF HP +16%\n友军防御力+5%\n连携被动技能的WG降低量+1",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n友军防御力+5%\n入场时AP+25"
   },
   "skills": {
@@ -60,47 +58,87 @@
       "name_zh": "炎风脚",
       "true_desc_levels": {
         "1": "Attacks an enemy. When attacking while granted a <color=#28d9ed>Barrier</color>, increases Priority of the caster by <color=#28d9ed>10%</color>. Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
-        "1_jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
-        "1_kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
-        "1_zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>10%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "2": "Attacks an enemy. When attacking while granted a <color=#28d9ed>Barrier</color>, increases Priority of the caster by <color=#28d9ed>10%</color>. Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
-        "2_jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
-        "2_kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
-        "2_zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>10%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "3": "Attacks an enemy. When attacking while granted a <color=#28d9ed>Barrier</color>, increases Priority of the caster by <color=#28d9ed>10%</color>. Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
-        "3_jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
-        "3_kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
-        "3_zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>10%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "4": "Attacks an enemy. When attacking while granted a <color=#28d9ed>Barrier</color>, increases Priority of the caster by <color=#28d9ed>10%</color>. Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
-        "4_jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
-        "4_kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
-        "4_zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>10%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "5": "Attacks an enemy. When attacking while granted a <color=#28d9ed>Barrier</color>, increases Priority of the caster by <color=#28d9ed>20%</color>. Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
+        "1_jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "2_jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "3_jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "4_jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>10%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
         "5_jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>20%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "1_kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "2_kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "3_kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "4_kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
         "5_kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "1_zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>10%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "2_zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>10%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "3_zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>10%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "4_zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>10%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "5_zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>20%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。"
       },
       "enhancement": {
-        "2": ["+10% damage", "+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%", "WGダメージ+1"],
-        "2_kr": ["피해량 +10%", "WG 감소량 +1"],
-        "2_zh": ["伤害量+10%", "WG降低量+1"],
-        "3": ["+10% damage"],
-        "3_jp": ["ダメージ+10%"],
-        "3_kr": ["피해량 +10%"],
-        "3_zh": ["伤害量+10%"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+10% Priority"],
-        "5_jp": ["行動ゲージ10%UP"],
-        "5_kr": ["행동 게이지 +10%"],
-        "5_zh": ["行动值+10%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "5": [
+          "+10% Priority"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "5_jp": [
+          "行動ゲージ10%UP"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "5_kr": [
+          "행동 게이지 +10%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5_zh": [
+          "行动值+10%"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_ACTION_GAUGE", "BT_STAT|ST_CRITICAL_RATE", "BT_UNDEAD"],
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_UNDEAD"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono",
@@ -147,46 +185,86 @@
       "name_zh": "厉害的家伙!",
       "true_desc_levels": {
         "1": "(Passive Effect) When hit by an attack that targets all enemies, grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\n\\n(Triggered Effect) When an ally scores or takes a critical hit, activates <color=#28d9ed>Are You Strong?!</color> on the <color=#28d9ed>enemy with the highest Attack</color>.\\nDamage dealt increases proportional to Defense instead of Attack. Recovers Health and increases Priority of the caster by <color=#28d9ed>20%</color>.",
-        "1_jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>20%</color>回復する。",
-        "1_kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>20%</color> 회복합니다.",
-        "1_zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>20%</color>。",
         "2": "(Passive Effect) When hit by an attack that targets all enemies, grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\n\\n(Triggered Effect) When an ally scores or takes a critical hit, activates <color=#28d9ed>Are You Strong?!</color> on the <color=#28d9ed>enemy with the highest Attack</color>.\\nDamage dealt increases proportional to Defense instead of Attack. Recovers Health and increases Priority of the caster by <color=#28d9ed>20%</color>.",
-        "2_jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>20%</color>回復する。",
-        "2_kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>20%</color> 회복합니다.",
-        "2_zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>20%</color>。",
         "3": "(Passive Effect) When hit by an attack that targets all enemies, grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\n\\n(Triggered Effect) When an ally scores or takes a critical hit, activates <color=#28d9ed>Are You Strong?!</color> on the <color=#28d9ed>enemy with the highest Attack</color>.\\nDamage dealt increases proportional to Defense instead of Attack. Recovers Health and increases Priority of the caster by <color=#28d9ed>20%</color>.",
-        "3_jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>20%</color>回復する。",
-        "3_kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>20%</color> 회복합니다.",
-        "3_zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>20%</color>。",
         "4": "(Passive Effect) When hit by an attack that targets all enemies, grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\n\\n(Triggered Effect) When an ally scores or takes a critical hit, activates <color=#28d9ed>Are You Strong?!</color> on the <color=#28d9ed>enemy with the highest Attack</color>.\\nDamage dealt increases proportional to Defense instead of Attack. Recovers Health and increases Priority of the caster by <color=#28d9ed>30%</color>.",
-        "4_jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>30%</color>回復する。",
-        "4_kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>30%</color> 회복합니다.",
-        "4_zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>30%</color>。",
         "5": "(Passive Effect) When hit by an attack that targets all enemies, grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\n\\n(Triggered Effect) When an ally scores or takes a critical hit, activates <color=#28d9ed>Are You Strong?!</color> on the <color=#28d9ed>enemy with the highest Attack</color>.\\nDamage dealt increases proportional to Defense instead of Attack. Recovers Health and increases Priority of the caster by <color=#28d9ed>30%</color>.",
+        "1_jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>20%</color>回復する。",
+        "2_jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>20%</color>回復する。",
+        "3_jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>20%</color>回復する。",
+        "4_jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>30%</color>回復する。",
         "5_jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>30%</color>回復する。",
+        "1_kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>20%</color> 회복합니다.",
+        "2_kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>20%</color> 회복합니다.",
+        "3_kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>20%</color> 회복합니다.",
+        "4_kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>30%</color> 회복합니다.",
         "5_kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>30%</color> 회복합니다.",
+        "1_zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>20%</color>。",
+        "2_zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>20%</color>。",
+        "3_zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>20%</color>。",
+        "4_zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>30%</color>。",
         "5_zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>30%</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage", "+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%", "WGダメージ+1"],
-        "2_kr": ["피해량 +10%", "WG 감소량 +1"],
-        "2_zh": ["伤害量+10%", "WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+10% healing", "+10% Priority"],
-        "4_jp": ["HP回復量+10%", "行動ゲージ10%UP"],
-        "4_kr": ["체력 회복량 +10%", "행동 게이지 +10%"],
-        "4_zh": ["生命值恢复量+10%", "行动值+10%"],
-        "5": ["+15% damage"],
-        "5_jp": ["ダメージ+15%"],
-        "5_kr": ["피해량 +15%"],
-        "5_zh": ["伤害量+15%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "+10% healing",
+          "+10% Priority"
+        ],
+        "5": [
+          "+15% damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "HP回復量+10%",
+          "行動ゲージ10%UP"
+        ],
+        "5_jp": [
+          "ダメージ+15%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "체력 회복량 +10%",
+          "행동 게이지 +10%"
+        ],
+        "5_kr": [
+          "피해량 +15%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "生命值恢复量+10%",
+          "行动值+10%"
+        ],
+        "5_zh": [
+          "伤害量+15%"
+        ]
       },
-      "cd": "4",
       "wgr": 1,
+      "cd": 4,
       "buff": [
         "SYS_BUFF_ADDITIVE_ATTACK",
         "BT_ACTION_GAUGE",
@@ -207,47 +285,86 @@
       "name_zh": "金刚升天拳",
       "true_desc_levels": {
         "1": "Attacks an enemy, and grants increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>2 turn(s)</color>. When an enemy is defeated, <color=#28d9ed>resets</color> the skill cooldown of <color=#28d9ed>Are You Strong?!</color>.\\nDamage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack and additionally increases proportional to missing Health.",
-        "1_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
-        "1_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
-        "1_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。",
         "2": "Attacks an enemy, and grants increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>2 turn(s)</color>. When an enemy is defeated, <color=#28d9ed>resets</color> the skill cooldown of <color=#28d9ed>Are You Strong?!</color>.\\nDamage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack and additionally increases proportional to missing Health.",
-        "2_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
-        "2_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
-        "2_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。",
         "3": "Attacks an enemy, and grants increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>2 turn(s)</color>. When an enemy is defeated, <color=#28d9ed>resets</color> the skill cooldown of <color=#28d9ed>Are You Strong?!</color>.\\nDamage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack and additionally increases proportional to missing Health.",
-        "3_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
-        "3_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
-        "3_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。",
         "4": "Attacks an enemy, and grants increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>3 turn(s)</color>. When an enemy is defeated, <color=#28d9ed>resets</color> the skill cooldown of <color=#28d9ed>Are You Strong?!</color>.\\nDamage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack and additionally increases proportional to missing Health.",
-        "4_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
-        "4_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
-        "4_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。",
         "5": "Attacks an enemy, and grants increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>3 turn(s)</color>. When an enemy is defeated, <color=#28d9ed>resets</color> the skill cooldown of <color=#28d9ed>Are You Strong?!</color>.\\nDamage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack and additionally increases proportional to missing Health.",
+        "1_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
+        "2_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
+        "3_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
+        "4_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
         "5_jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
+        "1_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
+        "2_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
+        "3_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
+        "4_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
         "5_kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
+        "1_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。",
+        "2_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。",
+        "3_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。",
+        "4_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。",
         "5_zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。"
       },
       "enhancement": {
-        "2": ["+10% damage", "+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%", "WGダメージ+1"],
-        "2_kr": ["피해량 +10%", "WG 감소량 +1"],
-        "2_zh": ["伤害量+10%", "WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+1 turn effect duration"],
-        "4_jp": ["効果ターン+1ターン"],
-        "4_kr": ["효과 지속 +1턴"],
-        "4_zh": ["效果持续时间+1回合"],
-        "5": ["+20% damage"],
-        "5_jp": ["ダメージ+20%"],
-        "5_kr": ["피해량 +20%"],
-        "5_zh": ["伤害量+20%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "+1 turn effect duration"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "効果ターン+1ターン"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "효과 지속 +1턴"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "效果持续时间+1回合"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
       },
-      "cd": "5",
       "wgr": 2,
-      "buff": ["BT_STAT|ST_DEF", "BT_COOL2_CHARGE"],
+      "cd": 5,
+      "buff": [
+        "BT_STAT|ST_DEF",
+        "BT_COOL2_CHARGE"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "mono"
@@ -262,24 +379,24 @@
       "name_zh": "连携被动",
       "true_desc_levels": {
         "1": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and own <color=#28d9ed>Defense</color> increases during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
-        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、このスキルチェーン攻撃の間、自分の<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
-        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 해당 스킬 체인 공격 동안 자신의 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
-        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据<color=#28d9ed>防御力</color>而非攻击力等比提升,且该连携技能攻击期间,自身的<color=#28d9ed>防御力</color>提升。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "2": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and own <color=#28d9ed>Defense</color> increases during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
-        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、このスキルチェーン攻撃の間、自分の<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
-        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 해당 스킬 체인 공격 동안 자신의 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
-        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据<color=#28d9ed>防御力</color>而非攻击力等比提升,且该连携技能攻击期间,自身的<color=#28d9ed>防御力</color>提升。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "3": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and own <color=#28d9ed>Defense</color> increases during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
-        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、このスキルチェーン攻撃の間、自分の<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
-        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 해당 스킬 체인 공격 동안 자신의 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
-        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据<color=#28d9ed>防御力</color>而非攻击力等比提升,且该连携技能攻击期间,自身的<color=#28d9ed>防御力</color>提升。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "4": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and own <color=#28d9ed>Defense</color> increases during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
-        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、このスキルチェーン攻撃の間、自分の<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
-        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 해당 스킬 체인 공격 동안 자신의 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
-        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据<color=#28d9ed>防御力</color>而非攻击力等比提升,且该连携技能攻击期间,自身的<color=#28d9ed>防御力</color>提升。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "5": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks of the caster increases proportional to <color=#28d9ed>Defense</color> instead of Attack, and own <color=#28d9ed>Defense</color> increases during this Skill Chain attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、このスキルチェーン攻撃の間、自分の<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、このスキルチェーン攻撃の間、自分の<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、このスキルチェーン攻撃の間、自分の<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、このスキルチェーン攻撃の間、自分の<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
         "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、このスキルチェーン攻撃の間、自分の<color=#28d9ed>防御力</color>がUPする。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 해당 스킬 체인 공격 동안 자신의 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 해당 스킬 체인 공격 동안 자신의 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 해당 스킬 체인 공격 동안 자신의 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 해당 스킬 체인 공격 동안 자신의 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
         "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 해당 스킬 체인 공격 동안 자신의 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据<color=#28d9ed>防御力</color>而非攻击力等比提升,且该连携技能攻击期间,自身的<color=#28d9ed>防御力</color>提升。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据<color=#28d9ed>防御力</color>而非攻击力等比提升,且该连携技能攻击期间,自身的<color=#28d9ed>防御力</color>提升。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据<color=#28d9ed>防御力</color>而非攻击力等比提升,且该连携技能攻击期间,自身的<color=#28d9ed>防御力</color>提升。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据<color=#28d9ed>防御力</color>而非攻击力等比提升,且该连携技能攻击期间,自身的<color=#28d9ed>防御力</color>提升。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。",
         "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身连携技能攻击伤害根据<color=#28d9ed>防御力</color>而非攻击力等比提升,且该连携技能攻击期间,自身的<color=#28d9ed>防御力</color>提升。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。"
       },
       "enhancement": {
@@ -287,34 +404,72 @@
           "+5% Dual Attack and Skill Chain damage",
           "+1 Weakness Gauge damage"
         ],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%", "WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%", "WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%", "WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
         "5": [
           "+5% Dual Attack and Skill Chain damage",
           "+1 Weakness Gauge damage"
         ],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%", "WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%", "WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%", "WG降低量+1"]
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
-      "wgr_dual": 1,
       "cd": null,
-      "buff": ["BT_STAT|ST_DEF"],
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ],
       "debuff": [],
       "offensive": true,
       "target": "multi",
+      "wgr_dual": 1,
       "dual_offensive": true,
-      "dual_target": "mono"
+      "dual_target": "mono",
+      "dual_buff": [],
+      "dual_debuff": []
     }
   }
 }

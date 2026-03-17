@@ -11,6 +11,9 @@
   "rank": "A",
   "rank_pvp": "D",
   "role": "dps",
+  "tags": [
+    "free"
+  ],
   "skill_priority": {
     "First": {
       "prio": 2
@@ -22,7 +25,6 @@
       "prio": 1
     }
   },
-  "tags": ["free"],
   "Chain_Type": "Start",
   "gift": "Science",
   "video": "xpFNW3RJKkE",
@@ -31,23 +33,21 @@
   "VoiceActor_kr": "CV. 채림",
   "VoiceActor_zh": "CV. 花守由美里",
   "transcend": {
-    "1": null,
-    "2": null,
     "3": "ATK DEF HP +10%",
+    "6": "ATK DEF HP +30%\n+4% Ally Team Critical Damage\n+25 Action Points at battle start",
     "4_1": "ATK DEF HP +16%\n+4% Ally Team Critical Damage\n+1 Chain Passive Weakness Gauge damage",
-    "4_1_jp": "ATK DEF HP +16%\n味方の会心ダメージ+4%\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n아군 치명 피해 +4%\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n友军暴击伤害+4%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
-    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
-    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\n+4% Ally Team Critical Damage\n+25 Action Points at battle start",
+    "4_1_jp": "ATK DEF HP +16%\n味方の会心ダメージ+4%\nチェーンパッシブのWGダメージ+1",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方の会心ダメージ+4%\n戦闘開始時、AP+25",
+    "4_1_kr": "ATK DEF HP +16%\n아군 치명 피해 +4%\n체인 패시브의 WG 감소량 +1",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 치명 피해 +4%\n입장 시 AP +25",
+    "4_1_zh": "ATK DEF HP +16%\n友军暴击伤害+4%\n连携被动技能的WG降低量+1",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n友军暴击伤害+4%\n入场时AP+25"
   },
   "skills": {
@@ -61,48 +61,90 @@
       "name_zh": "战士之诗",
       "true_desc_levels": {
         "1": "Attacks an enemy. Has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Burned</color> for <color=#28d9ed>2</color> turns. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
-        "1_jp": "敵単体にダメージを与える。<color=#28d9ed>50%</color>の確率で<color=#28d9ed>2</color>ターンの<color=#28d9ed>火傷</color>を付与する。この効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
-        "1_kr": "적을 공격합니다. 대상을 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n대상이 지속성이라면 추가로 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
-        "1_zh": "攻击敌人。\\n有<color=#28d9ed>50%</color>几率施加<color=#28d9ed>灼烧</color><color=#28d9ed>2</color>回合。该效果无视目标<color=#28d9ed>效果抵抗</color>。",
         "2": "Attacks an enemy. Has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Burned</color> for <color=#28d9ed>2</color> turns. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
-        "2_jp": "敵単体にダメージを与える。<color=#28d9ed>50%</color>の確率で<color=#28d9ed>2</color>ターンの<color=#28d9ed>火傷</color>を付与する。この効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
-        "2_kr": "적을 공격합니다. 대상을 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n대상이 지속성이라면 추가로 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
-        "2_zh": "攻击敌人。\\n有<color=#28d9ed>50%</color>几率施加<color=#28d9ed>灼烧</color><color=#28d9ed>2</color>回合。该效果无视目标<color=#28d9ed>效果抵抗</color>。",
         "3": "Attacks an enemy. Has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Burned</color> for <color=#28d9ed>2</color> turns. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
-        "3_jp": "敵単体にダメージを与える。<color=#28d9ed>60%</color>の確率で<color=#28d9ed>2</color>ターンの<color=#28d9ed>火傷</color>を付与する。この効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
-        "3_kr": "적을 공격합니다. 대상을 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n대상이 지속성이라면 추가로 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
-        "3_zh": "攻击敌人。\\n有<color=#28d9ed>60%</color>几率施加<color=#28d9ed>灼烧</color><color=#28d9ed>2</color>回合。该效果无视目标<color=#28d9ed>效果抵抗</color>。",
         "4": "Attacks an enemy. Has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Burned</color> for <color=#28d9ed>2</color> turns. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
-        "4_jp": "敵単体にダメージを与える。<color=#28d9ed>60%</color>の確率で<color=#28d9ed>2</color>ターンの<color=#28d9ed>火傷</color>を付与する。この効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
-        "4_kr": "적을 공격합니다. 대상을 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n대상이 지속성이라면 추가로 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
-        "4_zh": "攻击敌人。\\n有<color=#28d9ed>60%</color>几率施加<color=#28d9ed>灼烧</color><color=#28d9ed>2</color>回合。该效果无视目标<color=#28d9ed>效果抵抗</color>。",
         "5": "Attacks an enemy. Has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Burned</color> for <color=#28d9ed>2</color> turns. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
-        "5_jp": "敵単体にダメージを与える。<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2</color>ターンの<color=#28d9ed>火傷</color>を付与する。この効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "1_jp": "敵単体にダメージを与える。<color=#28d9ed>火傷</color>を<color=#28d9ed>50%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。\\nこの効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "2_jp": "敵単体にダメージを与える。<color=#28d9ed>火傷</color>を<color=#28d9ed>50%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。\\nこの効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "3_jp": "敵単体にダメージを与える。<color=#28d9ed>火傷</color>を<color=#28d9ed>60%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。\\nこの効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "4_jp": "敵単体にダメージを与える。<color=#28d9ed>火傷</color>を<color=#28d9ed>60%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。\\nこの効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "5_jp": "敵単体にダメージを与える。<color=#28d9ed>火傷</color>を<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。\\nこの効果は対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "1_kr": "적을 공격합니다. 대상을 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n대상이 지속성이라면 추가로 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "2_kr": "적을 공격합니다. 대상을 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n대상이 지속성이라면 추가로 <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "3_kr": "적을 공격합니다. 대상을 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n대상이 지속성이라면 추가로 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "4_kr": "적을 공격합니다. 대상을 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n대상이 지속성이라면 추가로 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
         "5_kr": "적을 공격합니다. 대상을 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n대상이 지속성이라면 추가로 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "1_zh": "攻击敌人。\\n有<color=#28d9ed>50%</color>几率施加<color=#28d9ed>灼烧</color><color=#28d9ed>2</color>回合。该效果无视目标<color=#28d9ed>效果抵抗</color>。",
+        "2_zh": "攻击敌人。\\n有<color=#28d9ed>50%</color>几率施加<color=#28d9ed>灼烧</color><color=#28d9ed>2</color>回合。该效果无视目标<color=#28d9ed>效果抵抗</color>。",
+        "3_zh": "攻击敌人。\\n有<color=#28d9ed>60%</color>几率施加<color=#28d9ed>灼烧</color><color=#28d9ed>2</color>回合。该效果无视目标<color=#28d9ed>效果抵抗</color>。",
+        "4_zh": "攻击敌人。\\n有<color=#28d9ed>60%</color>几率施加<color=#28d9ed>灼烧</color><color=#28d9ed>2</color>回合。该效果无视目标<color=#28d9ed>效果抵抗</color>。",
         "5_zh": "攻击敌人。\\n有<color=#28d9ed>70%</color>几率施加<color=#28d9ed>灼烧</color><color=#28d9ed>2</color>回合。该效果无视目标<color=#28d9ed>效果抵抗</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% effect chance"],
-        "3_jp": ["効果発生率+10%"],
-        "3_kr": ["효과 발동 확률 +10%"],
-        "3_zh": ["效果触发几率+10%"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+10% damage","+10% effect chance"],
-        "5_jp": ["ダメージ+10%","効果発生率+10%"],
-        "5_kr": ["피해량 +10%","효과 발동 확률 +10%"],
-        "5_zh": ["伤害量+10%","效果触发几率+10%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+10% effect chance"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "5": [
+          "+10% damage",
+          "+10% effect chance"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "効果発生率+10%"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "5_jp": [
+          "ダメージ+10%",
+          "効果発生率+10%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +10%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "5_kr": [
+          "피해량 +10%",
+          "효과 발동 확률 +10%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "效果触发几率+10%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5_zh": [
+          "伤害量+10%",
+          "效果触发几率+10%"
+        ]
       },
       "wgr": 1,
       "cd": null,
       "buff": [],
-      "debuff": ["BT_DOT_BURN"],
+      "debuff": [
+        "BT_DOT_BURN"
+      ],
       "offensive": true,
       "target": "mono"
     },
@@ -116,48 +158,89 @@
       "name_zh": "荣耀之路",
       "true_desc_levels": {
         "1": "Attacks all enemies. Detonates all Burned stacks on the target, and increases damage dealt by detonation by <color=#28d9ed>50%</color>. Increases damage dealt to Earth targets by an additional <color=#28d9ed>20%</color>.",
-        "1_jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>50%</color>UPする。敵が地属性の場合、破裂のダメージが追加で<color=#28d9ed>20%</color>UPする。",
-        "1_kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다. 지속성 대상의 경우 추가로 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
-        "1_zh": "攻击全体敌人。使目标的所有烧伤爆发,因爆发造成的伤害提升<color=#28d9ed>50%</color>。对土属性目标的伤害量额外提升<color=#28d9ed>20%</color>。",
         "2": "Attacks all enemies. Detonates all Burned stacks on the target, and increases damage dealt by detonation by <color=#28d9ed>50%</color>. Increases damage dealt to Earth targets by an additional <color=#28d9ed>20%</color>.",
-        "2_jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>50%</color>UPする。敵が地属性の場合、破裂のダメージが追加で<color=#28d9ed>20%</color>UPする。",
-        "2_kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다. 지속성 대상의 경우 추가로 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
-        "2_zh": "攻击全体敌人。使目标的所有烧伤爆发,因爆发造成的伤害提升<color=#28d9ed>50%</color>。对土属性目标的伤害量额外提升<color=#28d9ed>20%</color>。",
         "3": "Attacks all enemies. Detonates all Burned stacks on the target, and increases damage dealt by detonation by <color=#28d9ed>50%</color>. Increases damage dealt to Earth targets by an additional <color=#28d9ed>20%</color>.",
-        "3_jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>50%</color>UPする。敵が地属性の場合、破裂のダメージが追加で<color=#28d9ed>20%</color>UPする。",
-        "3_kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다. 지속성 대상의 경우 추가로 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
-        "3_zh": "攻击全体敌人。使目标的所有烧伤爆发,因爆发造成的伤害提升<color=#28d9ed>50%</color>。对土属性目标的伤害量额外提升<color=#28d9ed>20%</color>。",
         "4": "Attacks all enemies. Detonates all Burned stacks on the target, and increases damage dealt by detonation by <color=#28d9ed>50%</color>. Increases damage dealt to Earth targets by an additional <color=#28d9ed>20%</color>.",
-        "4_jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>50%</color>UPする。敵が地属性の場合、破裂のダメージが追加で<color=#28d9ed>20%</color>UPする。",
-        "4_kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다. 지속성 대상의 경우 추가로 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
-        "4_zh": "攻击全体敌人。使目标的所有烧伤爆发,因爆发造成的伤害提升<color=#28d9ed>50%</color>。对土属性目标的伤害量额外提升<color=#28d9ed>20%</color>。",
         "5": "Attacks all enemies. Detonates all Burned stacks on the target, and increases damage dealt by detonation by <color=#28d9ed>50%</color>. Increases damage dealt to Earth targets by an additional <color=#28d9ed>20%</color>.",
+        "1_jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>50%</color>UPする。敵が地属性の場合、破裂のダメージが追加で<color=#28d9ed>20%</color>UPする。",
+        "2_jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>50%</color>UPする。敵が地属性の場合、破裂のダメージが追加で<color=#28d9ed>20%</color>UPする。",
+        "3_jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>50%</color>UPする。敵が地属性の場合、破裂のダメージが追加で<color=#28d9ed>20%</color>UPする。",
+        "4_jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>50%</color>UPする。敵が地属性の場合、破裂のダメージが追加で<color=#28d9ed>20%</color>UPする。",
         "5_jp": "敵全体にダメージを与える。対象に付与された火傷をすべて破裂させ、破裂のダメージが<color=#28d9ed>50%</color>UPする。敵が地属性の場合、破裂のダメージが追加で<color=#28d9ed>20%</color>UPする。",
+        "1_kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다. 지속성 대상의 경우 추가로 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
+        "2_kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다. 지속성 대상의 경우 추가로 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
+        "3_kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다. 지속성 대상의 경우 추가로 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
+        "4_kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다. 지속성 대상의 경우 추가로 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
         "5_kr": "적 전체를 공격합니다. 대상의 화상을 모두 폭발시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다. 지속성 대상의 경우 추가로 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
+        "1_zh": "攻击全体敌人。使目标的所有烧伤爆发,因爆发造成的伤害提升<color=#28d9ed>50%</color>。对土属性目标的伤害量额外提升<color=#28d9ed>20%</color>。",
+        "2_zh": "攻击全体敌人。使目标的所有烧伤爆发,因爆发造成的伤害提升<color=#28d9ed>50%</color>。对土属性目标的伤害量额外提升<color=#28d9ed>20%</color>。",
+        "3_zh": "攻击全体敌人。使目标的所有烧伤爆发,因爆发造成的伤害提升<color=#28d9ed>50%</color>。对土属性目标的伤害量额外提升<color=#28d9ed>20%</color>。",
+        "4_zh": "攻击全体敌人。使目标的所有烧伤爆发,因爆发造成的伤害提升<color=#28d9ed>50%</color>。对土属性目标的伤害量额外提升<color=#28d9ed>20%</color>。",
         "5_zh": "攻击全体敌人。使目标的所有烧伤爆发,因爆发造成的伤害提升<color=#28d9ed>50%</color>。对土属性目标的伤害量额外提升<color=#28d9ed>20%</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["+10% damage"],
-        "3_jp": ["ダメージ+10%"],
-        "3_kr": ["피해량 +10%"],
-        "3_zh": ["伤害量+10%"],
-        "4": ["+20% damage"],
-        "4_jp": ["ダメージ+20%"],
-        "4_kr": ["피해량 +20%"],
-        "4_zh": ["伤害量+20%"],
-        "5": ["-1 turn Skill Cooldown"],
-        "5_jp": ["スキルターン-1ターン"],
-        "5_kr": ["스킬 쿨타임 -1턴"],
-        "5_zh": ["冷却时间-1回合"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+10% damage"
+        ],
+        "4": [
+          "+20% damage"
+        ],
+        "5": [
+          "-1 turn Skill Cooldown"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "ダメージ+10%"
+        ],
+        "4_jp": [
+          "ダメージ+20%"
+        ],
+        "5_jp": [
+          "スキルターン-1ターン"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "피해량 +10%"
+        ],
+        "4_kr": [
+          "피해량 +20%"
+        ],
+        "5_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "伤害量+10%"
+        ],
+        "4_zh": [
+          "伤害量+20%"
+        ],
+        "5_zh": [
+          "冷却时间-1回合"
+        ]
       },
-      "cd": "4",
       "wgr": 1,
-      "buff": ["BT_COOL3_CHARGE"],
-      "debuff": ["BT_IMMEDIATELY_BURN","BT_DOT_BURN"],
+      "cd": 4,
+      "buff": [
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [
+        "BT_IMMEDIATELY_BURN",
+        "BT_DOT_BURN"
+      ],
       "offensive": true,
       "target": "multi",
       "burnEffect": {
@@ -203,48 +286,89 @@
       "name_zh": "地狱启示录",
       "true_desc_levels": {
         "1": "Attacks all enemies. Inflicts <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turns</color> (applied twice). This effect ignores the target's Resilience; on kill, the cooldown is reset. For each target hit, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color>.",
-        "1_jp": "敵全体を攻撃。対象を<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>状態にする(2回適用)。この効果は対象の効果抵抗を無視し、敵を撃破するとスキルターンが初期化される。命中した対象1体ごとに、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>増加。",
-        "1_kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.\\n피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.",
-        "1_zh": "攻击全体敌人。使目标陷入<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>状态(应用2次)。该效果无视目标的效果抵抗,击杀敌人时重置冷却。每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>15%</color>。",
         "2": "Attacks all enemies. Inflicts <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turns</color> (applied twice). This effect ignores the target's Resilience; on kill, the cooldown is reset. For each target hit, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color>.",
-        "2_jp": "敵全体を攻撃。対象を<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>状態にする(2回適用)。この効果は対象の効果抵抗を無視し、敵を撃破するとスキルターンが初期化される。命中した対象1体ごとに、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>増加。",
-        "2_kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.\\n피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.",
-        "2_zh": "攻击全体敌人。使目标陷入<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>状态(应用2次)。该效果无视目标的效果抵抗,击杀敌人时重置冷却。每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>15%</color>。",
         "3": "Attacks all enemies. Inflicts <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turns</color> (applied twice). This effect ignores the target's Resilience; on kill, the cooldown is reset. For each target hit, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color>.",
-        "3_jp": "敵全体を攻撃。対象を<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>状態にする(2回適用)。この効果は対象の効果抵抗を無視し、敵を撃破するとスキルターンが初期化される。命中した対象1体ごとに、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>増加。",
-        "3_kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.\\n피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.",
-        "3_zh": "攻击全体敌人。使目标陷入<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>状态(应用2次)。该效果无视目标的效果抵抗,击杀敌人时重置冷却。每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>15%</color>。",
         "4": "Attacks all enemies. Inflicts <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turns</color> (applied twice). This effect ignores the target's Resilience; on kill, the cooldown is reset. For each target hit, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color>.",
-        "4_jp": "敵全体を攻撃。対象を<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>状態にする(2回適用)。この効果は対象の効果抵抗を無視し、敵を撃破するとスキルターンが初期化される。命中した対象1体ごとに、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>増加。",
-        "4_kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.\\n피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.",
-        "4_zh": "攻击全体敌人。使目标陷入<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>状态(应用2次)。该效果无视目标的效果抵抗,击杀敌人时重置冷却。每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>15%</color>。",
         "5": "Attacks all enemies. Inflicts <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turns</color> (applied twice). This effect ignores the target's Resilience; on kill, the cooldown is reset. For each target hit, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color>.",
-        "5_jp": "敵全体を攻撃。対象を<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>状態にする(2回適用)。この効果は対象の効果抵抗を無視し、敵を撃破するとスキルターンが初期化される。命中した対象1体ごとに、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>増加。",
+        "1_jp": "敵全体にダメージを与える。対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。(2回適用)\\nこの効果は対象の効果抵抗を無視し、敵を倒した場合、スキルターンが初期化する。\\nダメージを与えた対象1体ごとに自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>UPさせる。",
+        "2_jp": "敵全体にダメージを与える。対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。(2回適用)\\nこの効果は対象の効果抵抗を無視し、敵を倒した場合、スキルターンが初期化する。\\nダメージを与えた対象1体ごとに自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>UPさせる。",
+        "3_jp": "敵全体にダメージを与える。対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。(2回適用)\\nこの効果は対象の効果抵抗を無視し、敵を倒した場合、スキルターンが初期化する。\\nダメージを与えた対象1体ごとに自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>UPさせる。",
+        "4_jp": "敵全体にダメージを与える。対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。(2回適用)\\nこの効果は対象の効果抵抗を無視し、敵を倒した場合、スキルターンが初期化する。\\nダメージを与えた対象1体ごとに自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>UPさせる。",
+        "5_jp": "敵全体にダメージを与える。対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。(2回適用)\\nこの効果は対象の効果抵抗を無視し、敵を倒した場合、スキルターンが初期化する。\\nダメージを与えた対象1体ごとに自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>UPさせる。",
+        "1_kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.\\n피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.",
+        "2_kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.\\n피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.",
+        "3_kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.\\n피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.",
+        "4_kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.\\n피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.",
         "5_kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 화상 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.\\n피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가합니다.",
+        "1_zh": "攻击全体敌人。使目标陷入<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>状态(应用2次)。该效果无视目标的效果抵抗,击杀敌人时重置冷却。每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>15%</color>。",
+        "2_zh": "攻击全体敌人。使目标陷入<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>状态(应用2次)。该效果无视目标的效果抵抗,击杀敌人时重置冷却。每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>15%</color>。",
+        "3_zh": "攻击全体敌人。使目标陷入<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>状态(应用2次)。该效果无视目标的效果抵抗,击杀敌人时重置冷却。每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>15%</color>。",
+        "4_zh": "攻击全体敌人。使目标陷入<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>状态(应用2次)。该效果无视目标的效果抵抗,击杀敌人时重置冷却。每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>15%</color>。",
         "5_zh": "攻击全体敌人。使目标陷入<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>状态(应用2次)。该效果无视目标的效果抵抗,击杀敌人时重置冷却。每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>15%</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage","+1 Weakness Gauge damage"],
-        "2_jp": ["ダメージ+10%","WGダメージ+1"],
-        "2_kr": ["피해량 +10%","WG 감소량 +1"],
-        "2_zh": ["伤害量+10%","WG降低量+1"],
-        "3": ["-1 turn Skill Cooldown"],
-        "3_jp": ["スキルターン-1ターン"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "3_zh": ["冷却时间-1回合"],
-        "4": ["+10% damage"],
-        "4_jp": ["ダメージ+10%"],
-        "4_kr": ["피해량 +10%"],
-        "4_zh": ["伤害量+10%"],
-        "5": ["+20% damage"],
-        "5_jp": ["ダメージ+20%"],
-        "5_kr": ["피해량 +20%"],
-        "5_zh": ["伤害量+20%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "+10% damage"
+        ],
+        "5": [
+          "+20% damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
+        "5_jp": [
+          "ダメージ+20%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
+        "5_kr": [
+          "피해량 +20%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "伤害量+10%"
+        ],
+        "5_zh": [
+          "伤害量+20%"
+        ]
       },
-      "cd": "5",
       "wgr": 2,
-      "buff": ["BT_COOL3_CHARGE","BT_ACTION_GAUGE"],
-      "debuff": ["BT_DOT_BURN"],
+      "cd": 5,
+      "buff": [
+        "BT_COOL3_CHARGE",
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_DOT_BURN"
+      ],
       "offensive": true,
       "target": "multi"
     },
@@ -258,55 +382,99 @@
       "name_zh": "连携被动",
       "true_desc_levels": {
         "1": "<color=#ffd732>Chain Starter Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on all enemies for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>100%</color>. This effect ignores Resilience.\\n\\n<color=#ffd732>Assist Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on the target for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>70%</color>. This effect ignores Resilience.",
-        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。",
-        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
-        "1_zh": "<color=#ffd732>连锁起手效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>70%</color>概率对目标施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。",
         "2": "<color=#ffd732>Chain Starter Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on all enemies for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>100%</color>. This effect ignores Resilience.\\n\\n<color=#ffd732>Assist Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on the target for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>70%</color>. This effect ignores Resilience.",
-        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。",
-        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
-        "2_zh": "<color=#ffd732>连锁起手效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>70%</color>概率对目标施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。",
         "3": "<color=#ffd732>Chain Starter Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on all enemies for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>100%</color>. This effect ignores Resilience.\\n\\n<color=#ffd732>Assist Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on the target for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>70%</color>. This effect ignores Resilience.",
-        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。",
-        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
-        "3_zh": "<color=#ffd732>连锁起手效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>70%</color>概率对目标施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。",
         "4": "<color=#ffd732>Chain Starter Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on all enemies for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>100%</color>. This effect ignores Resilience.\\n\\n<color=#ffd732>Assist Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on the target for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>70%</color>. This effect ignores Resilience.",
-        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。",
-        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
-        "4_zh": "<color=#ffd732>连锁起手效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>70%</color>概率对目标施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。",
         "5": "<color=#ffd732>Chain Starter Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on all enemies for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>100%</color>. This effect ignores Resilience.\\n\\n<color=#ffd732>Assist Effect</color> : After attacking, inflicts <color=#28d9ed>Burn</color> on the target for <color=#28d9ed>2 turns</color> with a probability of <color=#28d9ed>70%</color>. This effect ignores Resilience.",
-        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の<color=#28d9ed>火傷</color>を付与。この効果は効果抵抗を無視する。",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>火傷</color>を<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>火傷</color>を<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>火傷</color>を<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>火傷</color>を<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:攻撃後、敵全体に<color=#28d9ed>火傷</color>を<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、敵対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間付与する。この効果は効果抵抗を無視する。",
+        "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
         "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>화상</color>을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 적 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 화상을 부여합니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+        "1_zh": "<color=#ffd732>连锁起手效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>70%</color>概率对目标施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。",
+        "2_zh": "<color=#ffd732>连锁起手效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>70%</color>概率对目标施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。",
+        "3_zh": "<color=#ffd732>连锁起手效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>70%</color>概率对目标施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。",
+        "4_zh": "<color=#ffd732>连锁起手效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>70%</color>概率对目标施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。",
         "5_zh": "<color=#ffd732>连锁起手效果</color>:攻击后,有<color=#28d9ed>100%</color>概率对全体敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。\\n\\n<color=#ffd732>协同攻击效果</color>:攻击后,有<color=#28d9ed>70%</color>概率对目标施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。该效果无视效果抵抗。"
       },
       "enhancement": {
-        "2": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5": ["+5% Dual Attack and Skill Chain damage","+1 Weakness Gauge damage"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%","WGダメージ+1"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%","WG 감소량 +1"],
-        "5_zh": ["夹攻/连携技能伤害量+5%","WG降低量+1"]
+        "2": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
-      "wgr_dual": 1,
       "cd": null,
       "buff": [],
-      "debuff": ["BT_DOT_BURN"],
+      "debuff": [
+        "BT_DOT_BURN"
+      ],
       "offensive": true,
       "target": "multi",
+      "wgr_dual": 1,
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [],
-      "dual_debuff": ["BT_DOT_BURN"]
+      "dual_debuff": [
+        "BT_DOT_BURN"
+      ]
     }
   }
 }
