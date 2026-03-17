@@ -27,6 +27,8 @@ const TOP_LEVEL_KEY_ORDER = [
   'rank', 'rank_pvp', 'role', 'limited', 'rank_by_transcend', 'role_by_transcend', 'tags', 'skill_priority',
   'Chain_Type', 'gift', 'video',
   'VoiceActor', 'VoiceActor_jp', 'VoiceActor_kr', 'VoiceActor_zh',
+  'hasCoreFusion', 'coreFusionId',
+  'fusionType', 'originalCharacter', 'fusionRequirements', 'costPerLevel',
   'transcend', 'skills',
 ];
 
@@ -318,6 +320,36 @@ async function handleInfo(id: string) {
     result.coreFusionId = coreFusionId;
   }
 
+  // Core fusion character: extract fusion-specific fields
+  if (id.startsWith('2700')) {
+    const cfRow = fusionTemplet.data.find(r => r.ChangeCharID === id);
+    if (cfRow) {
+      const fusionLevelTemplet = await readTemplet('CharacterFusionLevelTemplet');
+      const levels = fusionLevelTemplet.data.filter(r => r.FusionGroupID === cfRow.FusionGroupID);
+
+      const materialItemId = levels[0]?.RequireItemID ?? '';
+      const itemTemplet = await readTemplet('ItemTemplet');
+      const textItem = await readTemplet('TextItem');
+      const itemRow = itemTemplet.data.find(r => r.ID === materialItemId);
+      const itemName = itemRow?.NameIDSymbol
+        ? (buildTextMap(textItem.data)[itemRow.NameIDSymbol]?.en ?? materialItemId)
+        : materialItemId;
+
+      result.fusionType = 'core-fusion';
+      result.originalCharacter = cfRow.RecruitID;
+      result.fusionRequirements = {
+        transcendence: (parseInt(cfRow.CharacterID) || 1) - 1,
+        material: { id: itemName, quantity: parseInt(levels[0]?.Skill_1) || 0 },
+      };
+      // Cost per level: level 1 = initial cost (Skill_1), levels 2+ = upgrade cost
+      const costPerLevel: Record<number, { item: string; nb: number }> = {};
+      levels.forEach((lv, i) => {
+        costPerLevel[i + 1] = { item: materialItemId, nb: parseInt(lv.Skill_1) || 0 };
+      });
+      result.costPerLevel = costPerLevel;
+    }
+  }
+
   return NextResponse.json(result);
 }
 
@@ -482,7 +514,7 @@ async function handleSkills(id: string) {
 
 
     const isChain = skillType === 'SKT_CHAIN_PASSIVE';
-    let target: string | null;
+    let target: string | string[] | null;
     let offensive: boolean;
     let wgr: number | null;
 
@@ -858,6 +890,7 @@ const INFO_FIELDS = [
   'Rarity', 'Element', 'Class', 'SubClass', 'tags', 'Chain_Type', 'gift',
   'VoiceActor', 'VoiceActor_jp', 'VoiceActor_kr', 'VoiceActor_zh',
   'hasCoreFusion', 'coreFusionId',
+  'fusionType', 'originalCharacter',
 ];
 
 const SKILL_FIELDS = [
@@ -897,6 +930,14 @@ async function handleCompare() {
   try {
     existingFiles = (await fs.readdir(existingDir)).filter(f => f.endsWith('.json'));
   } catch { /* */ }
+
+  // Lazy-loaded templets for core fusion comparison
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let fusionLevelTemplet: any = null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let itemTempletData: any = null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let textItemData: any = null;
 
   // Build helpers once — call the individual handlers via internal fetch would be wasteful,
   // so we inline a lightweight comparison using the same data
@@ -1032,6 +1073,36 @@ async function handleCompare() {
       coreFusionId: fusionRow?.ChangeCharID ?? undefined,
     };
 
+    // Core fusion: extract fusion-specific fields
+    if (id.startsWith('2700')) {
+      const cfRow = fusionTemplet.data.find((r: Record<string, string>) => r.ChangeCharID === id);
+      if (cfRow) {
+        if (!fusionLevelTemplet) fusionLevelTemplet = await readTemplet('CharacterFusionLevelTemplet');
+        if (!itemTempletData) {
+          const [it, ti] = await Promise.all([readTemplet('ItemTemplet'), readTemplet('TextItem')]);
+          itemTempletData = it; textItemData = ti;
+        }
+        const levels = fusionLevelTemplet.data.filter((r: Record<string, string>) => r.FusionGroupID === cfRow.FusionGroupID);
+        const materialItemId = levels[0]?.RequireItemID ?? '';
+        const itemRow = itemTempletData.data.find((r: Record<string, string>) => r.ID === materialItemId);
+        const itemName = itemRow?.NameIDSymbol
+          ? (buildTextMap(textItemData.data)[itemRow.NameIDSymbol]?.en ?? materialItemId)
+          : materialItemId;
+
+        extracted.fusionType = 'core-fusion';
+        extracted.originalCharacter = cfRow.RecruitID;
+        extracted.fusionRequirements = {
+          transcendence: (parseInt(cfRow.CharacterID) || 1) - 1,
+          material: { id: itemName, quantity: parseInt(levels[0]?.Skill_1) || 0 },
+        };
+        const costPerLevel: Record<number, { item: string; nb: number }> = {};
+        levels.forEach((lv: Record<string, string>, i: number) => {
+          costPerLevel[i + 1] = { item: materialItemId, nb: parseInt(lv.Skill_1) || 0 };
+        });
+        extracted.costPerLevel = costPerLevel;
+      }
+    }
+
     for (const field of INFO_FIELDS) {
       if (!(field in existing) && !(field in extracted)) continue;
       // For array fields like tags, sort before comparing to ignore order
@@ -1039,6 +1110,14 @@ async function handleCompare() {
       const aVal = extracted[field] ?? '';
       const e = Array.isArray(eVal) ? [...eVal].sort().join(', ') : String(eVal);
       const a = Array.isArray(aVal) ? [...aVal].sort().join(', ') : String(aVal);
+      if (e !== a) diffs.push({ field, existing: e, extracted: a });
+    }
+
+    // Compare complex fusion fields as JSON
+    for (const field of ['fusionRequirements', 'costPerLevel']) {
+      if (!(field in existing) && !(field in extracted)) continue;
+      const e = JSON.stringify(existing[field] ?? null);
+      const a = JSON.stringify(extracted[field] ?? null);
       if (e !== a) diffs.push({ field, existing: e, extracted: a });
     }
 
@@ -1088,7 +1167,7 @@ async function handleCompare() {
           }
         }
       }
-      let target: string | null;
+      let target: string | string[] | null;
       let offensive: boolean;
       let wgr: number | null;
 
@@ -1365,6 +1444,9 @@ export async function POST(req: NextRequest) {
         rank_pvp?: string | null;
         role?: string | null;
         isFree?: boolean;
+        isLimited?: boolean;
+        rank_by_transcend?: Record<string, string> | null;
+        role_by_transcend?: Record<string, string> | null;
         skill_priority?: Record<string, { prio: number }>;
         video?: string | null;
       };
@@ -1433,9 +1515,9 @@ export async function POST(req: NextRequest) {
       })(),
       skill_priority: manual.skill_priority ?? existing.skill_priority ?? { First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } },
       video: manual.video ?? existing.video ?? undefined,
-      limited: existing.limited === true ? true : undefined,
-      rank_by_transcend: existing.rank_by_transcend ?? undefined,
-      role_by_transcend: existing.role_by_transcend ?? undefined,
+      limited: manual.isLimited ? true : (existing.limited === true ? true : undefined),
+      rank_by_transcend: manual.rank_by_transcend ?? existing.rank_by_transcend ?? undefined,
+      role_by_transcend: manual.role_by_transcend ?? existing.role_by_transcend ?? undefined,
       transcend: groupByLang(transcendData.transcend),
       skills: mergedSkills,
     }, TOP_LEVEL_KEY_ORDER);

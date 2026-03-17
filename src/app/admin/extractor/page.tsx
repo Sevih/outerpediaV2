@@ -143,6 +143,9 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
   const [role, setRole] = useState<string | null>(null);
   const [video, setVideo] = useState('');
   const [isFree, setIsFree] = useState(false);
+  const [isLimited, setIsLimited] = useState(false);
+  const [rankByTranscend, setRankByTranscend] = useState<Record<string, string> | null>(null);
+  const [roleByTranscend, setRoleByTranscend] = useState<Record<string, string> | null>(null);
   const [skillPriority, setSkillPriority] = useState<Record<string, { prio: number }>>({
     First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 },
   });
@@ -171,6 +174,9 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
           setRole(existingData.role ?? null);
           setVideo(existingData.video ?? '');
           setIsFree(existingData.tags?.includes('free') ?? false);
+          setIsLimited(existingData.limited === true);
+          setRankByTranscend(existingData.rank_by_transcend ?? null);
+          setRoleByTranscend(existingData.role_by_transcend ?? null);
           setSkillPriority(existingData.skill_priority ?? { First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } });
         } else {
           setRank(null);
@@ -178,6 +184,9 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
           setRole(null);
           setVideo('');
           setIsFree(false);
+          setIsLimited(false);
+          setRankByTranscend(null);
+          setRoleByTranscend(null);
           setSkillPriority({ First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } });
         }
 
@@ -215,6 +224,9 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
             rank_pvp: rankPvp,
             role,
             isFree,
+            isLimited,
+            rank_by_transcend: rankByTranscend,
+            role_by_transcend: roleByTranscend,
             skill_priority: skillPriority,
             video: video || undefined,
           },
@@ -325,6 +337,17 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
             />
             <span className="text-xs text-zinc-500">Free</span>
           </label>
+
+          {/* Limited */}
+          <label className="flex items-center gap-2 self-end pb-1">
+            <input
+              type="checkbox"
+              checked={isLimited}
+              onChange={e => setIsLimited(e.target.checked)}
+              className="rounded border-zinc-700"
+            />
+            <span className="text-xs text-zinc-500">Limited</span>
+          </label>
         </div>
 
         {/* Skill Priority */}
@@ -346,6 +369,76 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
                 </select>
               </label>
             ))}
+          </div>
+        </div>
+
+        {/* Rank/Role by Transcend */}
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={rankByTranscend !== null}
+                onChange={e => setRankByTranscend(e.target.checked ? (rankByTranscend ?? {}) : null)}
+                className="rounded border-zinc-700"
+              />
+              <span className="text-xs text-zinc-500">Rank by Transcend</span>
+            </label>
+            {rankByTranscend !== null && (
+              <div className="mt-1 flex gap-2 flex-wrap">
+                {['3','4','5','6'].map(star => (
+                  <label key={star} className="flex items-center gap-1">
+                    <span className="text-xs text-zinc-400">★{star}</span>
+                    <select
+                      value={rankByTranscend[star] ?? ''}
+                      onChange={e => setRankByTranscend(prev => {
+                        const next = { ...(prev ?? {}) };
+                        if (e.target.value) next[star] = e.target.value;
+                        else delete next[star];
+                        return next;
+                      })}
+                      className="rounded border border-zinc-700 bg-zinc-900 px-1 py-0.5 text-xs focus:border-blue-500 focus:outline-none"
+                    >
+                      <option value="">—</option>
+                      {RANKS.map(r => <option key={r} value={r}>{r}</option>)}
+                    </select>
+                  </label>
+                ))}
+              </div>
+            )}
+          </div>
+          <div>
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={roleByTranscend !== null}
+                onChange={e => setRoleByTranscend(e.target.checked ? (roleByTranscend ?? {}) : null)}
+                className="rounded border-zinc-700"
+              />
+              <span className="text-xs text-zinc-500">Role by Transcend</span>
+            </label>
+            {roleByTranscend !== null && (
+              <div className="mt-1 flex gap-2 flex-wrap">
+                {['3','4','5','6'].map(star => (
+                  <label key={star} className="flex items-center gap-1">
+                    <span className="text-xs text-zinc-400">★{star}</span>
+                    <select
+                      value={roleByTranscend[star] ?? ''}
+                      onChange={e => setRoleByTranscend(prev => {
+                        const next = { ...(prev ?? {}) };
+                        if (e.target.value) next[star] = e.target.value;
+                        else delete next[star];
+                        return next;
+                      })}
+                      className="rounded border border-zinc-700 bg-zinc-900 px-1 py-0.5 text-xs focus:border-blue-500 focus:outline-none"
+                    >
+                      <option value="">—</option>
+                      {ROLES.map(r => <option key={r} value={r}>{r}</option>)}
+                    </select>
+                  </label>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>

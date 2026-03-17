@@ -91,11 +91,7 @@ type BaseCharacter = {
     transcendence: number;
     material: { id: string; quantity: number };
   };
-  fusionLevels?: {
-    level: number;
-    requireItemID: string;
-    skillUpgrades: Record<string, { value: string; level: string | null }>;
-  }[];
+  costPerLevel?: Record<string, { item: string; nb: number }>;
 };
 
 export type Character = WithLocalizedFields<

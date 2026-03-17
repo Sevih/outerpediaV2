@@ -37,16 +37,14 @@ export default function SkillsSection({ character }: Props) {
   if (!skills.length) return null;
 
   const isCoreFusion = character.fusionType === 'core-fusion';
-  const fusionInfo = isCoreFusion && character.fusionLevels?.length
+  const fusionInfo = isCoreFusion && character.costPerLevel
     ? (() => {
-        const material = character.fusionRequirements?.material.id
-          ?? character.fusionLevels[0].requireItemID;
-        const upgradeCost = character.fusionLevels.length > 1
-          ? Number(character.fusionLevels[1].skillUpgrades.skill_1?.value ?? 150)
-          : 150;
-        const unlockCost = character.fusionRequirements?.material.quantity ?? 300;
-        const upgradeCount = character.fusionLevels.length - 1;
-        const totalCost = upgradeCost * upgradeCount + unlockCost;
+        const material = character.fusionRequirements?.material.id ?? 'Fusion-Type Core';
+        const entries = Object.values(character.costPerLevel);
+        const unlockCost = entries[0]?.nb ?? 300;
+        const upgradeCost = entries.length > 1 ? entries[1].nb : 150;
+        const upgradeCount = entries.length - 1;
+        const totalCost = unlockCost + upgradeCost * upgradeCount;
         return { material, upgradeCost, unlockCost, totalCost };
       })()
     : null;

@@ -4,38 +4,82 @@
   "Fullname_jp": "コアフュージョン リシャ",
   "Fullname_kr": "코어 융합 리샤",
   "Fullname_zh": "核心融合 丽莎",
-  "VoiceActor": "VA. Jeannie Tirado",
-  "VoiceActor_jp": "CV. 安済知佳",
-  "VoiceActor_kr": "CV. 여윤미",
-  "VoiceActor_zh": "CV. 安济知佳",
   "Rarity": 3,
   "Element": "Fire",
   "Class": "Mage",
   "SubClass": "Wizard",
+  "rank": "B",
+  "rank_pvp": null,
+  "role": "dps",
   "tags": [
     "ignore-defense",
     "free",
     "core-fusion"
   ],
+  "skill_priority": {
+    "First": {
+      "prio": 0
+    },
+    "Second": {
+      "prio": 0
+    },
+    "Ultimate": {
+      "prio": 0
+    }
+  },
+  "Chain_Type": "Join",
   "gift": "Magic Tool",
+  "VoiceActor": "VA. Jeannie Tirado",
+  "VoiceActor_jp": "CV. 安済知佳",
+  "VoiceActor_kr": "CV. 여윤미",
+  "VoiceActor_zh": "CV. 安济知佳",
+  "fusionType": "core-fusion",
+  "originalCharacter": "2000005",
+  "fusionRequirements": {
+    "transcendence": 5,
+    "material": {
+      "id": "Fusion-Type Core",
+      "quantity": 300
+    }
+  },
+  "costPerLevel": {
+    "1": {
+      "item": "60001",
+      "nb": 300
+    },
+    "2": {
+      "item": "60001",
+      "nb": 150
+    },
+    "3": {
+      "item": "60001",
+      "nb": 150
+    },
+    "4": {
+      "item": "60001",
+      "nb": 150
+    },
+    "5": {
+      "item": "60001",
+      "nb": 150
+    }
+  },
   "transcend": {
-    "1": null,
-    "2": null,
     "3": "ATK DEF HP +10%",
+    "6": "ATK DEF HP +30%\n+3% Critical Hit Chance\n+25 Action Points at battle start",
     "4_1": "ATK DEF HP +16%\n+3% Critical Hit Chance\n+1 Chain Passive Weakness Gauge damage",
-    "4_1_jp": "ATK DEF HP +16%\n会心率+3%\nチェーンパッシブのWGダメージ+1",
-    "4_1_kr": "ATK DEF HP +16%\n치명 확률 +3%\n체인 패시브의 WG 감소량 +1",
-    "4_1_zh": "ATK DEF HP +16%\n暴击率+3%\n连携被动技能的WG降低量+1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
-    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
-    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "6": "ATK DEF HP +30%\n+3% Critical Hit Chance\n+25 Action Points at battle start",
+    "4_1_jp": "ATK DEF HP +16%\n会心率+3%\nチェーンパッシブのWGダメージ+1",
+    "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n会心率+3%\n戦闘開始時、AP+25",
+    "4_1_kr": "ATK DEF HP +16%\n치명 확률 +3%\n체인 패시브의 WG 감소량 +1",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n치명 확률 +3%\n입장 시 AP +25",
+    "4_1_zh": "ATK DEF HP +16%\n暴击率+3%\n连携被动技能的WG降低量+1",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n暴击率+3%\n入场时AP+25"
   },
   "skills": {
@@ -47,30 +91,26 @@
       "name_jp": "シャアッ、バチチッ!!",
       "name_kr": "샤아악, 빠지직!!",
       "name_zh": "咻——噼里啪啦!!",
-      "true_desc": "Before using the skill, has a <color=#28d9ed>60%</color> chance to increase <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
-      "true_desc_jp": "スキル使用前、<color=#28d9ed>60%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
-      "true_desc_kr": "스킬 사용 전 <color=#28d9ed>60%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다.",
-      "true_desc_zh": "使用技能前,有<color=#28d9ed>60%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。",
       "true_desc_levels": {
         "1": "Before using the skill, has a <color=#28d9ed>60%</color> chance to increase <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "1_jp": "スキル使用前、<color=#28d9ed>60%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
-        "1_kr": "스킬 사용 전 <color=#28d9ed>60%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다.",
-        "1_zh": "使用技能前,有<color=#28d9ed>60%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。",
         "2": "Before using the skill, has a <color=#28d9ed>60%</color> chance to increase <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "2_jp": "スキル使用前、<color=#28d9ed>60%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
-        "2_kr": "스킬 사용 전 <color=#28d9ed>60%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다.",
-        "2_zh": "使用技能前,有<color=#28d9ed>60%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。",
         "3": "Before using the skill, has a <color=#28d9ed>80%</color> chance to increase <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "3_jp": "スキル使用前、<color=#28d9ed>80%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
-        "3_kr": "스킬 사용 전 <color=#28d9ed>80%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다.",
-        "3_zh": "使用技能前,有<color=#28d9ed>80%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。",
         "4": "Before using the skill, has a <color=#28d9ed>80%</color> chance to increase <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "4_jp": "スキル使用前、<color=#28d9ed>80%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
-        "4_kr": "스킬 사용 전 <color=#28d9ed>80%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다.",
-        "4_zh": "使用技能前,有<color=#28d9ed>80%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。",
         "5": "Before using the skill, has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "スキル使用前、<color=#28d9ed>60%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
+        "2_jp": "スキル使用前、<color=#28d9ed>60%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
+        "3_jp": "スキル使用前、<color=#28d9ed>80%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
+        "4_jp": "スキル使用前、<color=#28d9ed>80%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
         "5_jp": "スキル使用前、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵単体にダメージを与える。",
+        "1_kr": "스킬 사용 전 <color=#28d9ed>60%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다.",
+        "2_kr": "스킬 사용 전 <color=#28d9ed>60%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다.",
+        "3_kr": "스킬 사용 전 <color=#28d9ed>80%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다.",
+        "4_kr": "스킬 사용 전 <color=#28d9ed>80%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 적을 공격합니다.",
         "5_kr": "스킬 사용 전 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고, 적을 공격합니다.",
+        "1_zh": "使用技能前,有<color=#28d9ed>60%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。",
+        "2_zh": "使用技能前,有<color=#28d9ed>60%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。",
+        "3_zh": "使用技能前,有<color=#28d9ed>80%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。",
+        "4_zh": "使用技能前,有<color=#28d9ed>80%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。",
         "5_zh": "使用技能前,有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>,并攻击敌人。"
       },
       "enhancement": {
@@ -78,53 +118,53 @@
           "+10% damage",
           "+1 Weakness Gauge damage"
         ],
-        "2_jp": [
-          "ダメージ+10%",
-          "WGダメージ+1"
-        ],
-        "2_kr": [
-          "피해량 +10%",
-          "WG 감소량 +1"
-        ],
-        "2_zh": [
-          "伤害量+10%",
-          "WG降低量+1"
-        ],
         "3": [
           "+20% effect chance"
         ],
-        "3_jp": [
-          "効果発生率+20%"
-        ],
-        "3_kr": [
-          "효과 발동 확률 +20%"
-        ],
-        "3_zh": [
-          "效果触发几率+20%"
-        ],
         "4": [
           "+10% damage"
-        ],
-        "4_jp": [
-          "ダメージ+10%"
-        ],
-        "4_kr": [
-          "피해량 +10%"
-        ],
-        "4_zh": [
-          "伤害量+10%"
         ],
         "5": [
           "+20% effect chance",
           "+1 turn effect duration"
         ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "効果発生率+20%"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
         "5_jp": [
           "効果発生率+20%",
           "効果ターン+1ターン"
         ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "효과 발동 확률 +20%"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
         "5_kr": [
           "효과 발동 확률 +20%",
           "효과 지속 +1턴"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "效果触发几率+20%"
+        ],
+        "4_zh": [
+          "伤害量+10%"
         ],
         "5_zh": [
           "效果触发几率+20%",
@@ -148,30 +188,26 @@
       "name_jp": "荒ぶる落雷の嵐!",
       "name_kr": "사나운 벼락 폭풍!",
       "name_zh": "猛烈雷暴!",
-      "true_desc": "Attacks 2 enemies and increases the caster's <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIf the caster has the <color=#28d9ed>Crit DMG Incr</color>, the attack changes to a single-target attack, and the cooldown of <color=#28d9ed>Walpurgis' Light!</color> is reduced by <color=#28d9ed>1 turn(s)</color>.\\n\\nIf the target is an Earth Element, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.",
-      "true_desc_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
-      "true_desc_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
-      "true_desc_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。",
       "true_desc_levels": {
         "1": "Attacks 2 enemies and increases the caster's <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIf the caster has the <color=#28d9ed>Crit DMG Incr</color>, the attack changes to a single-target attack, and the cooldown of <color=#28d9ed>Walpurgis' Light!</color> is reduced by <color=#28d9ed>1 turn(s)</color>.\\n\\nIf the target is an Earth Element, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.",
-        "1_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
-        "1_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
-        "1_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。",
         "2": "Attacks 2 enemies and increases the caster's <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIf the caster has the <color=#28d9ed>Crit DMG Incr</color>, the attack changes to a single-target attack, and the cooldown of <color=#28d9ed>Walpurgis' Light!</color> is reduced by <color=#28d9ed>1 turn(s)</color>.\\n\\nIf the target is an Earth Element, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.",
-        "2_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
-        "2_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
-        "2_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。",
         "3": "Attacks 2 enemies and increases the caster's <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIf the caster has the <color=#28d9ed>Crit DMG Incr</color>, the attack changes to a single-target attack, and the cooldown of <color=#28d9ed>Walpurgis' Light!</color> is reduced by <color=#28d9ed>1 turn(s)</color>.\\n\\nIf the target is an Earth Element, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.",
-        "3_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
-        "3_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
-        "3_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。",
         "4": "Attacks 2 enemies and increases the caster's <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\nIf the caster has the <color=#28d9ed>Crit DMG Incr</color>, the attack changes to a single-target attack, and the cooldown of <color=#28d9ed>Walpurgis' Light!</color> is reduced by <color=#28d9ed>1 turn(s)</color>.\\n\\nIf the target is an Earth Element, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.",
-        "4_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
-        "4_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
-        "4_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。",
         "5": "Attacks 2 enemies and increases the caster's <color=#28d9ed>Penetration</color> for <color=#28d9ed>3 turn(s)</color>.\\n\\nIf the caster has the <color=#28d9ed>Crit DMG Incr</color>, the attack changes to a single-target attack, and the cooldown of <color=#28d9ed>Walpurgis' Light!</color> is reduced by <color=#28d9ed>1 turn(s)</color>.\\n\\nIf the target is an Earth Element, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.",
+        "1_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
+        "2_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
+        "3_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
+        "4_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
         "5_jp": "敵2体を攻撃し、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>3ターン</color>の間UPさせる。\\n\\n自分に<color=#28d9ed>会心ダメージUP</color>効果がある場合、敵1体を攻撃し、<color=#28d9ed>ワルプルギスの光!</color>のスキルターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n\\n対象が地属性の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>30%</color>UPする。",
+        "1_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
+        "2_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
+        "3_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
+        "4_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
         "5_kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다.\\n\\n자신에게 <color=#28d9ed>치명 피해 증가</color> 효과가 있다면 적 1인을 공격하고, <color=#28d9ed>발푸르기스의 빛!</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n\\n대상이 지속성이라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>30%</color> 증가합니다.",
+        "1_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。",
+        "2_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。",
+        "3_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。",
+        "4_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。",
         "5_zh": "攻击2名敌人,并使自身的<color=#28d9ed>穿透力</color>提升,持续<color=#28d9ed>3回合</color>。\\n\\n若自身持有<color=#28d9ed>暴击伤害提升</color>效果,则攻击1名敌人,并使<color=#28d9ed>瓦尔普吉斯之光!</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n\\n若目标为地属性,则自身的<color=#28d9ed>行动条</color>增加<color=#28d9ed>30%</color>。"
       },
       "enhancement": {
@@ -179,61 +215,61 @@
           "+10% damage",
           "+1 Weakness Gauge damage"
         ],
-        "2_jp": [
-          "ダメージ+10%",
-          "WGダメージ+1"
-        ],
-        "2_kr": [
-          "피해량 +10%",
-          "WG 감소량 +1"
-        ],
-        "2_zh": [
-          "伤害量+10%",
-          "WG降低量+1"
-        ],
         "3": [
           "-1 turn Skill Cooldown"
         ],
-        "3_jp": [
-          "スキルターン-1ターン"
-        ],
-        "3_kr": [
-          "스킬 쿨타임 -1턴"
-        ],
-        "3_zh": [
-          "冷却时间-1回合"
-        ],
         "4": [
           "+10% damage"
-        ],
-        "4_jp": [
-          "ダメージ+10%"
-        ],
-        "4_kr": [
-          "피해량 +10%"
-        ],
-        "4_zh": [
-          "伤害量+10%"
         ],
         "5": [
           "+1 turn effect duration",
           "+10% damage"
         ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
         "5_jp": [
           "効果ターン+1ターン",
           "ダメージ+10%"
         ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
         "5_kr": [
           "효과 지속 +1턴",
           "피해량 +10%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "伤害量+10%"
         ],
         "5_zh": [
           "效果持续时间+1回合",
           "伤害量+10%"
         ]
       },
-      "cd": "4",
       "wgr": 1,
+      "cd": 4,
       "buff": [
         "BT_STAT|ST_PIERCE_POWER_RATE",
         "BT_SKILL_RANGE_SINGLE",
@@ -285,30 +321,26 @@
       "name_jp": "ワルプルギスの光!",
       "name_kr": "발푸르기스의 빛!",
       "name_zh": "瓦尔普吉斯之光!",
-      "true_desc": "Before using the skill, increases own <color=#28d9ed>Crit Damage</color> for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\n\\nIf possessing <color=#28d9ed>Penetration Up</color>, ignores <color=#28d9ed>20%</color> of the target's <color=#28d9ed>Defense</color>.\\n\\nIf the target is Earth Element, ignores an additional <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color>.",
-      "true_desc_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
-      "true_desc_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
-      "true_desc_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。",
       "true_desc_levels": {
         "1": "Before using the skill, increases own <color=#28d9ed>Crit Damage</color> for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\n\\nIf possessing <color=#28d9ed>Penetration Up</color>, ignores <color=#28d9ed>20%</color> of the target's <color=#28d9ed>Defense</color>.\\n\\nIf the target is Earth Element, ignores an additional <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color>.",
-        "1_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
-        "1_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
-        "1_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。",
         "2": "Before using the skill, increases own <color=#28d9ed>Crit Damage</color> for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\n\\nIf possessing <color=#28d9ed>Penetration Up</color>, ignores <color=#28d9ed>20%</color> of the target's <color=#28d9ed>Defense</color>.\\n\\nIf the target is Earth Element, ignores an additional <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color>.",
-        "2_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
-        "2_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
-        "2_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。",
         "3": "Before using the skill, increases own <color=#28d9ed>Crit Damage</color> for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\n\\nIf possessing <color=#28d9ed>Penetration Up</color>, ignores <color=#28d9ed>20%</color> of the target's <color=#28d9ed>Defense</color>.\\n\\nIf the target is Earth Element, ignores an additional <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color>.",
-        "3_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
-        "3_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
-        "3_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。",
         "4": "Before using the skill, increases own <color=#28d9ed>Crit Damage</color> for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies.\\n\\nIf possessing <color=#28d9ed>Penetration Up</color>, ignores <color=#28d9ed>20%</color> of the target's <color=#28d9ed>Defense</color>.\\n\\nIf the target is Earth Element, ignores an additional <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color>.",
-        "4_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
-        "4_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
-        "4_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。",
         "5": "Before using the skill, increases own <color=#28d9ed>Crit Damage</color> for <color=#28d9ed>3 turn(s)</color>, then attacks all enemies.\\n\\nIf possessing <color=#28d9ed>Penetration Up</color>, ignores <color=#28d9ed>20%</color> of the target's <color=#28d9ed>Defense</color>.\\n\\nIf the target is Earth Element, ignores an additional <color=#28d9ed>30%</color> of <color=#28d9ed>Defense</color>.",
+        "1_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
+        "2_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
+        "3_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
+        "4_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
         "5_jp": "スキル使用前、自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>3ターン</color>の間UPさせ、敵全体にダメージを与える。\\n\\n自分に<color=#28d9ed>貫通力UP</color>効果がある場合、対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>20%</color>を貫通する。\\n\\n対象が地属性の場合、<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を追加で貫通する。",
+        "1_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
+        "2_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
+        "3_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
+        "4_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
         "5_kr": "스킬 사용 전 자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>3턴</color> 동안 증가시키고, 적 전체를 공격합니다.\\n\\n자신에게 <color=#28d9ed>관통력 증가</color> 효과가 있다면 대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>20%</color>를 무시합니다.\\n\\n대상이 지속성이라면 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 추가로 무시합니다.",
+        "1_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。",
+        "2_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。",
+        "3_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。",
+        "4_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。",
         "5_zh": "使用技能前,使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。\\n\\n若持有<color=#28d9ed>穿透力提升</color>效果,则无视目标<color=#28d9ed>20%</color>的<color=#28d9ed>防御力</color>。\\n\\n若目标为地属性,则额外无视<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。"
       },
       "enhancement": {
@@ -316,61 +348,61 @@
           "+10% damage",
           "+1 Weakness Gauge damage"
         ],
-        "2_jp": [
-          "ダメージ+10%",
-          "WGダメージ+1"
-        ],
-        "2_kr": [
-          "피해량 +10%",
-          "WG 감소량 +1"
-        ],
-        "2_zh": [
-          "伤害量+10%",
-          "WG降低量+1"
-        ],
         "3": [
           "-1 turn Skill Cooldown"
         ],
-        "3_jp": [
-          "スキルターン-1ターン"
-        ],
-        "3_kr": [
-          "스킬 쿨타임 -1턴"
-        ],
-        "3_zh": [
-          "冷却时间-1回合"
-        ],
         "4": [
           "+10% damage"
-        ],
-        "4_jp": [
-          "ダメージ+10%"
-        ],
-        "4_kr": [
-          "피해량 +10%"
-        ],
-        "4_zh": [
-          "伤害量+10%"
         ],
         "5": [
           "+10% damage",
           "+1 turn effect duration"
         ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "ダメージ+10%"
+        ],
         "5_jp": [
           "ダメージ+10%",
           "効果ターン+1ターン"
         ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "피해량 +10%"
+        ],
         "5_kr": [
           "피해량 +10%",
           "효과 지속 +1턴"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "伤害量+10%"
         ],
         "5_zh": [
           "伤害量+10%",
           "效果持续时间+1回合"
         ]
       },
-      "cd": "5",
       "wgr": 2,
+      "cd": 5,
       "buff": [
         "BT_STAT|ST_CRITICAL_DMG_RATE"
       ],
@@ -386,30 +418,26 @@
       "name_jp": "チェーンパッシブ",
       "name_kr": "체인 패시브",
       "name_zh": "连携被动",
-      "true_desc": "<color=#ffd732>Chain Companion Effect</color>: After attacking, restores 25 AP to the caster and the unit who performs the next Chain skill.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
-      "true_desc_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
-      "true_desc_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
-      "true_desc_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
       "true_desc_levels": {
         "1": "<color=#ffd732>Chain Companion Effect</color>: After attacking, restores 25 AP to the caster and the unit who performs the next Chain skill.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
-        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
-        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
         "2": "<color=#ffd732>Chain Companion Effect</color>: After attacking, restores 25 AP to the caster and the unit who performs the next Chain skill.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
-        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
-        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
         "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, restores 25 AP to the caster and the unit who performs the next Chain skill.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
-        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
-        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
         "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, restores 25 AP to the caster and the unit who performs the next Chain skill.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
-        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
-        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
         "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, restores 25 AP to the caster and the unit who performs the next Chain skill.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
         "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル使用者のAPを<color=#28d9ed>25</color>回復する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>2ターン</color>の間、自分の<color=#28d9ed>攻撃力</color>がUPする。",
+        "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
         "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。",
         "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹击效果</color>:攻击后,使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
@@ -417,7 +445,27 @@
           "+5% Dual Attack and Skill Chain damage",
           "+1 Weakness Gauge damage"
         ],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "5": [
+          "+5% Dual Attack and Skill Chain damage",
+          "+1 Weakness Gauge damage"
+        ],
         "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "5_jp": [
           "チェーンスキルと連携ダメージ+5%",
           "WGダメージ+1"
         ],
@@ -425,45 +473,25 @@
           "협공/스킬 체인 피해량 +5%",
           "WG 감소량 +1"
         ],
-        "2_zh": [
-          "夹攻/连携技能伤害量+5%",
-          "WG降低量+1"
-        ],
-        "3": [
-          "+5% Dual Attack and Skill Chain damage"
-        ],
-        "3_jp": [
-          "チェーンスキルと連携ダメージ+5%"
-        ],
         "3_kr": [
           "협공/스킬 체인 피해량 +5%"
-        ],
-        "3_zh": [
-          "夹攻/连携技能伤害量+5%"
-        ],
-        "4": [
-          "+5% Dual Attack and Skill Chain damage"
-        ],
-        "4_jp": [
-          "チェーンスキルと連携ダメージ+5%"
         ],
         "4_kr": [
           "협공/스킬 체인 피해량 +5%"
         ],
-        "4_zh": [
-          "夹攻/连携技能伤害量+5%"
-        ],
-        "5": [
-          "+5% Dual Attack and Skill Chain damage",
-          "+1 Weakness Gauge damage"
-        ],
-        "5_jp": [
-          "チェーンスキルと連携ダメージ+5%",
-          "WGダメージ+1"
-        ],
         "5_kr": [
           "협공/스킬 체인 피해량 +5%",
           "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
         ],
         "5_zh": [
           "夹攻/连携技能伤害量+5%",
@@ -471,7 +499,6 @@
         ]
       },
       "wgr": 3,
-      "wgr_dual": 1,
       "cd": null,
       "buff": [
         "BT_AP_CHARGE"
@@ -479,6 +506,7 @@
       "debuff": [],
       "offensive": true,
       "target": "multi",
+      "wgr_dual": 1,
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [
@@ -486,162 +514,5 @@
       ],
       "dual_debuff": []
     }
-  },
-  "Chain_Type": "Join",
-  "rank": "B",
-  "rank_pvp": null,
-  "role": "dps",
-  "skill_priority": {
-    "First": {
-      "prio": 0
-    },
-    "Second": {
-      "prio": 0
-    },
-    "Ultimate": {
-      "prio": 0
-    }
-  },
-  "fusionType": "core-fusion",
-  "originalCharacter": "2000005",
-  "isPermanent": true,
-  "fusionRequirements": {
-    "transcendence": 5,
-    "material": {
-      "id": "Fusion-Type Core",
-      "quantity": 300
-    }
-  },
-  "fusionLevels": [
-    {
-      "level": 6,
-      "requireItemID": "60001",
-      "skillUpgrades": {
-        "skill_1": {
-          "value": "300",
-          "level": null
-        },
-        "skill_2": {
-          "value": "1",
-          "level": null
-        },
-        "skill_3": {
-          "value": "1",
-          "level": null
-        },
-        "skill_4": {
-          "value": "1",
-          "level": null
-        },
-        "skill_23": {
-          "value": "1",
-          "level": "1"
-        }
-      }
-    },
-    {
-      "level": 7,
-      "requireItemID": "60001",
-      "skillUpgrades": {
-        "skill_1": {
-          "value": "150",
-          "level": null
-        },
-        "skill_2": {
-          "value": "2",
-          "level": null
-        },
-        "skill_3": {
-          "value": "2",
-          "level": null
-        },
-        "skill_4": {
-          "value": "2",
-          "level": null
-        },
-        "skill_23": {
-          "value": "2",
-          "level": "2"
-        }
-      }
-    },
-    {
-      "level": 8,
-      "requireItemID": "60001",
-      "skillUpgrades": {
-        "skill_1": {
-          "value": "150",
-          "level": null
-        },
-        "skill_2": {
-          "value": "3",
-          "level": null
-        },
-        "skill_3": {
-          "value": "3",
-          "level": null
-        },
-        "skill_4": {
-          "value": "3",
-          "level": null
-        },
-        "skill_23": {
-          "value": "3",
-          "level": "3"
-        }
-      }
-    },
-    {
-      "level": 9,
-      "requireItemID": "60001",
-      "skillUpgrades": {
-        "skill_1": {
-          "value": "150",
-          "level": null
-        },
-        "skill_2": {
-          "value": "4",
-          "level": null
-        },
-        "skill_3": {
-          "value": "4",
-          "level": null
-        },
-        "skill_4": {
-          "value": "4",
-          "level": null
-        },
-        "skill_23": {
-          "value": "4",
-          "level": "4"
-        }
-      }
-    },
-    {
-      "level": 10,
-      "requireItemID": "60001",
-      "skillUpgrades": {
-        "skill_1": {
-          "value": "150",
-          "level": null
-        },
-        "skill_2": {
-          "value": "5",
-          "level": null
-        },
-        "skill_3": {
-          "value": "5",
-          "level": null
-        },
-        "skill_4": {
-          "value": "5",
-          "level": null
-        },
-        "skill_23": {
-          "value": "5",
-          "level": "5"
-        }
-      }
-    }
-  ]
+  }
 }
