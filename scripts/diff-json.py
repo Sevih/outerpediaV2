@@ -123,6 +123,14 @@ def compare(filepath):
         changed = [c for c in changed if c not in cd_normalized]
         notes.append("cd: string -> int")
 
+    # true_desc added/removed at skill level = formatting
+    import re as _re
+    td_pattern = _re.compile(r'^skills\.\w+\.true_desc(_[a-z]{2})?$')
+    td_missing = [m for m in missing if td_pattern.match(m[0])]
+    if td_missing:
+        missing = [m for m in missing if m not in td_missing]
+        notes.append("true_desc removed (formatting)")
+
     rarity = work_data.get("Rarity") or work_data.get("rarity")
     useless_transcend = [m for m in missing if m[0] in ("transcend.1", "transcend.2") and m[1] is None]
     if useless_transcend and rarity == 3:
