@@ -60,7 +60,11 @@ export async function run() {
   }
 
   // Lazy import — files excluded by sparse-checkout in prod
-  const { parseBytes } = await import('../../src/app/admin/lib/bytes-parser');
+  const parserPath = join(__dirname, '../../src/app/admin/lib/bytes-parser');
+  if (!existsSync(parserPath + '.ts') && !existsSync(parserPath + '.js')) {
+    return 'skipped (bytes-parser not available)';
+  }
+  const { parseBytes } = await import('../../src/app/admin/lib/bytes-parser' as string);
 
   let parsed = 0;
   for (const file of bytesFiles) {
