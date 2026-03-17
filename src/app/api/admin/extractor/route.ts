@@ -1350,10 +1350,8 @@ async function handleCompare() {
       }
     }
 
-    // Temporary: filter out skill desc and transcend diffs
-    const filtered = diffs.filter(d => !/(true_desc|desc_lv|transcend\.)/.test(d.field));
-    if (filtered.length > 0) {
-      results.push({ id, name: existing.Fullname ?? id, diffs: filtered });
+    if (diffs.length > 0) {
+      results.push({ id, name: existing.Fullname ?? id, diffs });
     }
   }
 
