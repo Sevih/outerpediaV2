@@ -14,7 +14,8 @@
   "SubClass": "Sweeper",
   "tags": [
     "free",
-    "core-fusion"
+    "core-fusion",
+    "ignore-defense"
   ],
   "gift": "Craftwork",
   "transcend": {
@@ -274,7 +275,7 @@
       "cd": "4",
       "wgr": 1,
       "buff": [
-        "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER",
+        "SYS_BUFF_COUNTER",
         "BT_REMOVE_DEBUFF",
         "BT_SHIELD_BASED_CASTER"
       ],

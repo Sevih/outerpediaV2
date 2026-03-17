@@ -378,6 +378,45 @@ async function handleSkills(id: string) {
     }
   }
 
+  // Collect extra buff IDs from Skill_23 (class passive) that reference this character's buffs
+  // These are custom passives that contain buff refs like {charId}_{skillNum}_{subId}
+  const passiveBuffIdsBySkillNum = new Map<string, string[]>();
+  const passiveSid = charRow.Skill_23;
+  if (passiveSid) {
+    const passiveLevels = skillLevelTemplet.data.filter(lv => lv.SkillID === passiveSid);
+    for (const lv of passiveLevels) {
+      for (const val of Object.values(lv)) {
+        if (typeof val !== 'string') continue;
+        for (const part of val.split(',')) {
+          const t = part.trim();
+          const m = t.match(new RegExp(`^${id}_(\\d+)_`));
+          if (m) {
+            const skillNum = m[1];
+            const arr = passiveBuffIdsBySkillNum.get(skillNum) ?? [];
+            if (!arr.includes(t)) arr.push(t);
+            passiveBuffIdsBySkillNum.set(skillNum, arr);
+          }
+        }
+      }
+    }
+  }
+
+  // Index change character's skills by type (for transform characters like Luna 119↔120)
+  const changeSkillsByType = new Map<string, { levels: Record<string, string>[]; row: Record<string, string> }>();
+  if (changeCharRow) {
+    const changeSids: string[] = [];
+    for (let i = 1; i <= 23; i++) {
+      const sid = changeCharRow[`Skill_${i}`];
+      if (sid) changeSids.push(sid);
+    }
+    for (const row of skillTemplet.data) {
+      if (row.NameIDSymbol && changeSids.includes(row.NameIDSymbol) && row.SkillType && WANTED_SKILL_TYPES.has(row.SkillType)) {
+        const lvs = skillLevelTemplet.data.filter(lv => lv.SkillID === row.NameIDSymbol);
+        changeSkillsByType.set(row.SkillType, { levels: lvs, row });
+      }
+    }
+  }
+
   const skills: Record<string, unknown> = {};
 
   for (const [sid, sRow] of skillRows) {
@@ -498,12 +537,38 @@ async function handleSkills(id: string) {
       target,
       ...(isChain
         ? extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'chain', buffTemplet.data), buffTemplet.data)
-        : extractBuffDebuff(collectBuffGroupIds(levels), buffTemplet.data)),
+        : (() => {
+            // Merge buff IDs from skill levels + class passive (Skill_23)
+            const baseIds = collectBuffGroupIds(levels);
+            const slotNum = (sidToSlot.get(sid) ?? '').replace('Skill_', '');
+            const extraIds = passiveBuffIdsBySkillNum.get(slotNum) ?? [];
+            return extractBuffDebuff([...baseIds, ...extraIds], buffTemplet.data);
+          })()),
     };
+
+    // Merge transform character's buffs for this skill type
+    const changeSkill = changeSkillsByType.get(skillType);
+    if (changeSkill) {
+      const changeBD = isChain
+        ? extractBuffDebuff(collectBuffGroupIdsByPattern(changeId!, 'chain', buffTemplet.data), buffTemplet.data)
+        : extractBuffDebuff(collectBuffGroupIds(changeSkill.levels), buffTemplet.data);
+      const curBuff = (skillEntry.buff as string[]) ?? [];
+      const curDebuff = (skillEntry.debuff as string[]) ?? [];
+      for (const b of changeBD.buff) { if (!curBuff.includes(b)) curBuff.push(b); }
+      for (const d of changeBD.debuff) { if (!curDebuff.includes(d)) curDebuff.push(d); }
+      skillEntry.buff = curBuff;
+      skillEntry.debuff = curDebuff;
+    }
 
     // Chain passive: add dual attack fields from backup skill
     if (isChain) {
       const dualBD = extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'backup', buffTemplet.data), buffTemplet.data);
+      // Also merge transform character's backup buffs
+      if (changeId) {
+        const changeDualBD = extractBuffDebuff(collectBuffGroupIdsByPattern(changeId, 'backup', buffTemplet.data), buffTemplet.data);
+        for (const b of changeDualBD.buff) { if (!dualBD.buff.includes(b)) dualBD.buff.push(b); }
+        for (const d of changeDualBD.debuff) { if (!dualBD.debuff.includes(d)) dualBD.debuff.push(d); }
+      }
       skillEntry.wgr_dual = 1;
       skillEntry.dual_offensive = true;
       skillEntry.dual_target = 'mono';
@@ -626,6 +691,16 @@ async function handleSkills(id: string) {
       const debuffs = (skill.debuff as string[]) ?? [];
       for (const d of forced.debuff) { if (!debuffs.includes(d)) debuffs.push(d); }
       skill.debuff = debuffs;
+    }
+    if (forced.dual_buff) {
+      const db = (skill.dual_buff as string[]) ?? [];
+      for (const b of forced.dual_buff) { if (!db.includes(b)) db.push(b); }
+      skill.dual_buff = db;
+    }
+    if (forced.dual_debuff) {
+      const dd = (skill.dual_debuff as string[]) ?? [];
+      for (const d of forced.dual_debuff) { if (!dd.includes(d)) dd.push(d); }
+      skill.dual_debuff = dd;
     }
   }
 
@@ -908,6 +983,28 @@ async function handleCompare() {
       if (s) { sids.push(s); sidSlotMap.set(s, `Skill_${i}`); }
     }
 
+    // Collect extra buff IDs from Skill_23 (class passive)
+    const cmpPassiveBuffIds = new Map<string, string[]>();
+    const cmpPassiveSid = charRow.Skill_23;
+    if (cmpPassiveSid) {
+      const cmpPassiveLevels = skillLevelTemplet.data.filter(lv => lv.SkillID === cmpPassiveSid);
+      for (const lv of cmpPassiveLevels) {
+        for (const val of Object.values(lv)) {
+          if (typeof val !== 'string') continue;
+          for (const part of val.split(',')) {
+            const t = part.trim();
+            const m = t.match(new RegExp(`^${id}_(\\d+)_`));
+            if (m) {
+              const sn = m[1];
+              const arr = cmpPassiveBuffIds.get(sn) ?? [];
+              if (!arr.includes(t)) arr.push(t);
+              cmpPassiveBuffIds.set(sn, arr);
+            }
+          }
+        }
+      }
+    }
+
     let chainDesc = '';
     let chainIconName = '';
     for (const row of skillTemplet.data) {
@@ -1028,15 +1125,42 @@ async function handleCompare() {
         trueDescExtracted[`true_desc_${lang}`] = descTexts1 ? resolveBuffPlaceholders(descTexts1[lang], 1, buffIndex) : null;
       }
 
-      // Extract buff/debuff
+      // Extract buff/debuff (include class passive buff IDs from Skill_23)
+      const cmpSlotNum = (sidSlotMap.get(sid) ?? '').replace('Skill_', '');
+      const cmpExtraIds = cmpPassiveBuffIds.get(cmpSlotNum) ?? [];
       const skillBD = isChain
         ? extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'chain', buffTemplet.data), buffTemplet.data)
-        : extractBuffDebuff(collectBuffGroupIds(levels), buffTemplet.data);
+        : extractBuffDebuff([...collectBuffGroupIds(levels), ...cmpExtraIds], buffTemplet.data);
+
+      // Merge transform character's buffs (e.g. Luna 2000119 ↔ 2000120)
+      const changeRow = changeTemplet.data.find(r => r.ID === id);
+      const changeId = changeRow?.ID_fallback1 ?? null;
+      if (changeId) {
+        const changeCharRow2 = charTemplet.data.find(r => r.ModelID === changeId);
+        if (changeCharRow2) {
+          const changeSids2: string[] = [];
+          for (let i = 1; i <= 23; i++) { const s = changeCharRow2[`Skill_${i}`]; if (s) changeSids2.push(s); }
+          const changeSRow = skillTemplet.data.find(r => r.SkillType === sk && r.NameIDSymbol && changeSids2.includes(r.NameIDSymbol));
+          if (changeSRow) {
+            const changeLevels = skillLevelTemplet.data.filter(r => r.SkillID === changeSRow.NameIDSymbol);
+            const changeBD = isChain
+              ? extractBuffDebuff(collectBuffGroupIdsByPattern(changeId, 'chain', buffTemplet.data), buffTemplet.data)
+              : extractBuffDebuff(collectBuffGroupIds(changeLevels), buffTemplet.data);
+            for (const b of changeBD.buff) { if (!skillBD.buff.includes(b)) skillBD.buff.push(b); }
+            for (const d of changeBD.debuff) { if (!skillBD.debuff.includes(d)) skillBD.debuff.push(d); }
+          }
+        }
+      }
 
       // Dual fields for chain passive
       let dualData: Record<string, unknown> = {};
       if (isChain) {
         const dualBD = extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'backup', buffTemplet.data), buffTemplet.data);
+        if (changeId) {
+          const changeDualBD = extractBuffDebuff(collectBuffGroupIdsByPattern(changeId, 'backup', buffTemplet.data), buffTemplet.data);
+          for (const b of changeDualBD.buff) { if (!dualBD.buff.includes(b)) dualBD.buff.push(b); }
+          for (const d of changeDualBD.debuff) { if (!dualBD.debuff.includes(d)) dualBD.debuff.push(d); }
+        }
         dualData = { wgr_dual: 1, dual_offensive: true, dual_target: 'mono', dual_buff: dualBD.buff, dual_debuff: dualBD.debuff };
       }
 

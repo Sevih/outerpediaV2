@@ -174,6 +174,8 @@ export function resolveBuffPlaceholders(
 // Buff types to rename (game name → display name)
 const BUFF_TYPE_RENAME: Record<string, string> = {
   'BT_STAT|ST_AVOID': 'SYS_BUFF_AVOID_UP',
+  'IG_Buff_Stat_Atk_Interruption_D':'BT_STAT|ST_ATK_IR',
+  'IG_Buff_Stat_CriDmgRate_Interruption_D':'BT_STAT|ST_CRITICAL_DMG_RATE_IR'
 };
 
 // Force classification override: types the game marks wrong (e.g. NEUTRAL that should be DEBUFF)
@@ -185,9 +187,13 @@ const BUFF_TYPE_FORCE: Record<string, 'buff' | 'debuff'> = {
 
 // Buff types to exclude from extraction
 // Force add buff/debuff to specific skills (charId:skillType → { buff: [...], debuff: [...] })
-export const SKILL_BUFF_FORCE: Record<string, { buff?: string[]; debuff?: string[] }> = {
+export const SKILL_BUFF_FORCE: Record<string, { buff?: string[]; debuff?: string[]; dual_buff?: string[]; dual_debuff?: string[] }> = {
   '2000065:SKT_FIRST': { buff: ['BT_EXTRA_ATTACK_ON_TURN_END'] },
   '2000084:SKT_FIRST': { buff: ['BT_CALL_BACKUP_2', 'BT_CALL_BACKUP'] },
+  '2000072:SKT_ULTIMATE': { debuff: ['BT_STEAL_BUFF'] },
+  '2000102:SKT_ULTIMATE': { buff: ['BT_EXTEND_DEBUFF'], debuff: ['BT_EXTEND_BUFF'] },
+  '2000093:SKT_SECOND': { buff: ['BT_RANDOM_STAT']},
+  '2000095:SKT_SECOND': { buff: ['GRACE_OF_THE_VIRGIN_GODDESS','BT_COOL3_CHARGE','BT_ACTION_GAUGE']},
 };
 
 // Specific BuffIDs to exclude
@@ -212,6 +218,11 @@ const BUFF_ID_BLACKLIST = new Set([
   '2000109_3_3', // Viella Ult: erroneous BT_STAT|ST_DEF
   '2000096_2_4', // Ais S2: erroneous BT_ACTION_GAUGE
   '2000096_3_2', // Ais Ult: BT_SECOND_TRIGGER internal mechanic
+  '2000087_3_7', // Rey Ult: BT_NONE Curse Interruption, not a real buff
+  '2000087_3_8', // Rey Ult: BT_NONE Curse Interruption, not a real buff
+  '2000102_2_3', // Nadja S2: BT_STAT with ST_NONE
+  '2000102_2_4', // Nadja S2: BT_STAT with ST_NONE
+  '2000095_2_2', // Bell S2: SYS_BUFF_ADDITIVE_SKILL not a visible buff
 ]);
 
 const BUFF_TYPE_BLACKLIST = new Set([
@@ -232,7 +243,11 @@ const BUFF_TYPE_BLACKLIST = new Set([
   'BT_GROUP',
   'BT_LIMIT_DMG_TURN',
   'BT_SHARE_DMG',
-  "BT_DMG_TARGET_LOST_HP_RATE"
+  "BT_DMG_TARGET_LOST_HP_RATE",
+  "BT_SECOND_TRIGGER",
+  'BT_DMG_REDUCE_FINAL',
+  'BT_DMG_MY_TEAM_DECREASE',
+  'BT_RESOURCE_CHARGE_BUFF_CASTER'
 ]);
 
 /**
@@ -275,7 +290,7 @@ export function extractBuffDebuff(
 
       // Interruption IconName = custom mechanic, use IconName as tag regardless of type (before blacklist)
       if (row.IconName?.includes('_Interruption')) {
-        const iconTag = row.IconName;
+        const iconTag = BUFF_TYPE_RENAME[row.IconName] ?? row.IconName;
         if (bdType === 'BUFF') buffs.add(iconTag);
         else if (bdType.startsWith('DEBUFF')) debuffs.add(iconTag);
         else {
@@ -309,8 +324,8 @@ export function extractBuffDebuff(
       // BT_STAT with ON_SKILL_FINISH = temporary bonus on current skill, not a real buff
       if (type === 'BT_STAT' && (row.TurnDuration === '-1' || row.BuffRemoveType === 'ON_SKILL_FINISH')) break;
 
-      // BT_RUN_PASSIVE_*: use RemoveEffect as tag (distinguishes Counter/Revenge/Additive Attack/Agile Response)
-      if (type.startsWith('BT_RUN_PASSIVE_') && row.RemoveEffect) {
+      // BT_RUN_PASSIVE_*/BT_RUN_ACTIVE_*: use RemoveEffect as tag (distinguishes Counter/Revenge/Additive Attack/Agile Response)
+      if ((type.startsWith('BT_RUN_PASSIVE_') || type.startsWith('BT_RUN_ACTIVE_')) && row.RemoveEffect) {
         buffs.add(row.RemoveEffect);
         break;
       }

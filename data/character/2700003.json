@@ -475,7 +475,7 @@
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [],
-      "dual_debuff": []
+      "dual_debuff": ["BT_ACTION_GAUGE"]
     }
   },
   "Chain_Type": "Join",
@@ -636,6 +636,6 @@
     }
   ],
   "tags": [
-    "core-fusion"
+    "core-fusion","ignore-defense"
   ]
 }
