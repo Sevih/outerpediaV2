@@ -214,6 +214,8 @@ const jp: Record<TranslationKey, string> = {
   'tools.progress-tracker.desc': 'デイリー・ウィークリー・マンスリータスク、ショップ購入、製作を管理。',
   'tools.wallpapers': '壁紙',
   'tools.wallpapers.desc': '公式アートワークや壁紙をダウンロード。',
+  'tools.4-comics': '4コマ漫画',
+  'tools.4-comics.desc': '公式4コマ漫画を多言語で閲覧。',
   'tools.ost': 'サウンドトラック',
   'tools.ost.desc': '公式OSTを視聴・ダウンロード。',
   'tools.event': 'コミュニティイベント',
@@ -707,6 +709,12 @@ const jp: Record<TranslationKey, string> = {
     'これらの素材は、パブリッシャー（Major9）および開発者（VAGames）の許可を得て、個人使用目的でのみ提供されています。',
   'wallpapers.disclaimer.line2': 'その他の使用については、こちらからお問い合わせください：',
   'wallpapers.contactLink': '公式サポート',
+  // ─── 4-Cut Comics ────────────────────────────────────────────────────────
+  'comics.description': 'アウタープレイン公式4コマ漫画を閲覧できます。画像をクリックすると拡大表示されます。',
+  'comics.credit': '\u24D2 VAGAMES Inc. & Major9 All Rights Reserved.',
+  'comics.lang.EN': '英語',
+  'comics.lang.JP': '日本語',
+  'comics.lang.KR': '韓国語',
   // ─── Progress Tracker ───────────────────────────────────────────────────
   'progress.daily': 'デイリー進捗',
   'progress.weekly': 'ウィークリー進捗',

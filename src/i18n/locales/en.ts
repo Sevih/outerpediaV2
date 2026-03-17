@@ -214,6 +214,8 @@ const en = {
   'tools.progress-tracker.desc': 'Track your progress: daily/weekly/monthly tasks, shop purchases, and crafts.',
   'tools.wallpapers': 'Wallpapers',
   'tools.wallpapers.desc': 'Browse and download official artworks and wallpapers.',
+  'tools.4-comics': '4-Cut Comics',
+  'tools.4-comics.desc': 'Read the official 4-cut comics in multiple languages.',
   'tools.ost': 'Soundtrack',
   'tools.ost.desc': 'Listen to and download the official OST.',
   'tools.event': 'Community Events',
@@ -707,6 +709,12 @@ const en = {
     'These assets are provided for personal use only, with approval from the publisher (Major9) and developers (VAGames).',
   'wallpapers.disclaimer.line2': 'For any other use, please request permission via',
   'wallpapers.contactLink': 'Official Support',
+  // ─── 4-Cut Comics ────────────────────────────────────────────────────────
+  'comics.description': 'Browse the official Outerplane 4-cut comics. Click on any image to view full size.',
+  'comics.credit': '\u24D2 VAGAMES Inc. & Major9 All Rights Reserved.',
+  'comics.lang.EN': 'English',
+  'comics.lang.JP': 'Japanese',
+  'comics.lang.KR': 'Korean',
   // ─── Progress Tracker ───────────────────────────────────────────────────
   'progress.daily': 'Daily Progress',
   'progress.weekly': 'Weekly Progress',

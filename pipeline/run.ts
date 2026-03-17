@@ -20,6 +20,7 @@ const steps: Step[] = [
   { name: 'bytes-cache', run: () => import('./steps/bytes-cache').then(m => m.run()) },
   { name: 'bgm-extract', run: () => import('./steps/bgm-extract').then(m => m.run()) },
   { name: 'wallpapers', run: () => import('./steps/wallpapers').then(m => m.run()) },
+  { name: 'comics', run: () => import('./steps/comics').then(m => m.run()) },
   { name: 'patch-notes', run: () => import('./steps/patch-notes').then(m => m.run()) },
   { name: 'gear-usage-stats', run: () => import('./steps/gear-usage-stats').then(m => m.run()) },
   { name: 'gear-finder-index', run: () => import('./steps/gear-finder-index').then(m => m.run()) },

@@ -214,6 +214,8 @@ const kr: Record<TranslationKey, string> = {
   'tools.progress-tracker.desc': '일일/주간/월간 과제, 상점 구매, 제작을 추적하세요.',
   'tools.wallpapers': '배경화면',
   'tools.wallpapers.desc': '공식 아트워크와 배경화면을 다운로드하세요.',
+  'tools.4-comics': '4컷 만화',
+  'tools.4-comics.desc': '공식 4컷 만화를 다양한 언어로 감상하세요.',
   'tools.ost': '사운드트랙',
   'tools.ost.desc': '공식 OST를 듣고 다운로드하세요.',
   'tools.event': '커뮤니티 이벤트',
@@ -707,6 +709,12 @@ const kr: Record<TranslationKey, string> = {
     '이 자료는 퍼블리셔(Major9)와 개발사(VAGames)의 승인을 받아 개인 사용 목적으로만 제공됩니다.',
   'wallpapers.disclaimer.line2': '기타 용도는 공식 지원을 통해 허가를 요청해 주세요:',
   'wallpapers.contactLink': '공식 지원',
+  // ─── 4-Cut Comics ────────────────────────────────────────────────────────
+  'comics.description': '아우터플레인 공식 4컷 만화를 감상하세요. 이미지를 클릭하면 확대됩니다.',
+  'comics.credit': '\u24D2 VAGAMES Inc. & Major9 All Rights Reserved.',
+  'comics.lang.EN': '영어',
+  'comics.lang.JP': '일본어',
+  'comics.lang.KR': '한국어',
   // ─── Progress Tracker ───────────────────────────────────────────────────
   'progress.daily': '일일 진행률',
   'progress.weekly': '주간 진행률',

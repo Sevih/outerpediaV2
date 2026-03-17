@@ -214,6 +214,8 @@ const zh: Record<TranslationKey, string> = {
   'tools.progress-tracker.desc': '追踪每日/每周/每月任务、商店购买和制作。',
   'tools.wallpapers': '壁纸',
   'tools.wallpapers.desc': '浏览和下载官方美术作品和壁纸。',
+  'tools.4-comics': '四格漫画',
+  'tools.4-comics.desc': '阅读多语言版本的官方四格漫画。',
   'tools.ost': '原声带',
   'tools.ost.desc': '收听和下载游戏内音乐。',
   'tools.event': '社区活动',
@@ -707,6 +709,12 @@ const zh: Record<TranslationKey, string> = {
     '这些素材已获得发行商（Major9）和开发商（VAGames）的许可，仅供个人使用。',
   'wallpapers.disclaimer.line2': '如需其他用途，请通过官方支持申请许可：',
   'wallpapers.contactLink': '官方支持',
+  // ─── 4-Cut Comics ────────────────────────────────────────────────────────
+  'comics.description': '浏览异域战记官方四格漫画。点击任意图片即可查看大图。',
+  'comics.credit': '\u24D2 VAGAMES Inc. & Major9 All Rights Reserved.',
+  'comics.lang.EN': '英语',
+  'comics.lang.JP': '日语',
+  'comics.lang.KR': '韩语',
   // ─── Progress Tracker ───────────────────────────────────────────────────
   'progress.daily': '每日进度',
   'progress.weekly': '每周进度',
