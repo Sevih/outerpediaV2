@@ -185,6 +185,8 @@ const BUFF_TYPE_FORCE: Record<string, 'buff' | 'debuff'> = {
 // Specific BuffIDs to exclude
 const BUFF_ID_BLACKLIST = new Set([
   '2000052_backup_1_1', // Sigma dual: self-immunity during attack, not a real buff
+  '2000029_2_2', // Laine S2: erroneous BT_REMOVE_BUFF in game data
+  '2000020_3_2', // Alice Ult: erroneous BT_STAT|ST_BUFF_CHANCE in game data
 ]);
 
 const BUFF_TYPE_BLACKLIST = new Set([
@@ -218,7 +220,21 @@ export function extractBuffDebuff(
   const buffs = new Set<string>();
   const debuffs = new Set<string>();
 
-  for (const groupId of buffGroupIds) {
+  // Expand buff group IDs to include siblings (e.g. 2000035_2_1 → also scan 2000035_2_*)
+  const expandedIds = new Set(buffGroupIds);
+  for (const gid of buffGroupIds) {
+    const parts = gid.split('_');
+    if (parts.length >= 3 && /^\d{7}$/.test(parts[0])) {
+      const prefix = `${parts[0]}_${parts[1]}_`;
+      for (const row of buffData) {
+        if (row.BuffID?.startsWith(prefix) && !row.BuffID.endsWith('_old')) {
+          expandedIds.add(row.BuffID);
+        }
+      }
+    }
+  }
+
+  for (const groupId of expandedIds) {
     for (const row of buffData) {
       if (row.BuffID !== groupId) continue;
 
@@ -226,7 +242,22 @@ export function extractBuffDebuff(
       const statType = row.StatType ?? '';
       const bdType = row.BuffDebuffType ?? '';
 
-      if (!type || BUFF_ID_BLACKLIST.has(groupId) || BUFF_TYPE_BLACKLIST.has(type)
+      if (!type) continue;
+
+      // Interruption IconName = custom mechanic, use IconName as tag regardless of type (before blacklist)
+      if (row.IconName?.includes('_Interruption')) {
+        const iconTag = row.IconName;
+        if (bdType === 'BUFF') buffs.add(iconTag);
+        else if (bdType.startsWith('DEBUFF')) debuffs.add(iconTag);
+        else {
+          // NEUTRAL with Interruption: use suffix _D for debuff, otherwise buff
+          if (iconTag.endsWith('_D')) debuffs.add(iconTag);
+          else buffs.add(iconTag);
+        }
+        break;
+      }
+
+      if (BUFF_ID_BLACKLIST.has(groupId) || BUFF_TYPE_BLACKLIST.has(type)
         || type.startsWith('BT_DMG_OWNER_STAT')
         || type.startsWith('BT_DMG_TARGET_STAT')
       ) continue;
@@ -252,19 +283,6 @@ export function extractBuffDebuff(
       // BT_RUN_PASSIVE_*: use RemoveEffect as tag (distinguishes Counter/Revenge/Additive Attack/Agile Response)
       if (type.startsWith('BT_RUN_PASSIVE_') && row.RemoveEffect) {
         buffs.add(row.RemoveEffect);
-        break;
-      }
-
-      // Interruption IconName = custom mechanic, use IconName as tag regardless of type
-      if (row.IconName?.includes('_Interruption')) {
-        const iconTag = row.IconName;
-        if (bdType === 'BUFF') buffs.add(iconTag);
-        else if (bdType.startsWith('DEBUFF')) debuffs.add(iconTag);
-        else {
-          // NEUTRAL with Interruption: use suffix _D for debuff, otherwise buff
-          if (iconTag.endsWith('_D')) debuffs.add(iconTag);
-          else buffs.add(iconTag);
-        }
         break;
       }
 
