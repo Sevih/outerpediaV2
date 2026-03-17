@@ -27,11 +27,6 @@ interface CompareResult {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyData = Record<string, any>;
 
-const ELEMENT_COLORS: Record<string, string> = {
-  Fire: 'text-red-400', Water: 'text-blue-400', Earth: 'text-amber-400',
-  Light: 'text-yellow-300', Dark: 'text-purple-400',
-};
-
 const RANKS = ['SS', 'S', 'A', 'B', 'C'];
 const ROLES = ['dps', 'support', 'sustain'];
 
@@ -117,8 +112,8 @@ function DiffTable({ diffs }: { diffs: Diff[] }) {
           return (
             <tr key={i} className="border-t border-zinc-800/50">
               <td className="py-1 pr-3 font-mono text-zinc-400 whitespace-nowrap">{d.field}</td>
-              <td className="py-1 pr-3 text-red-300 max-w-xs truncate" title={d.existing}>{d.existing || <span className="text-zinc-600">null</span>}</td>
-              <td className="py-1 text-green-300 max-w-xs truncate" title={d.extracted}>{d.extracted || <span className="text-zinc-600">null</span>}</td>
+              <td className="py-1 pr-3 text-red-300 break-all">{d.existing || <span className="text-zinc-600">null</span>}</td>
+              <td className="py-1 text-green-300 break-all">{d.extracted || <span className="text-zinc-600">null</span>}</td>
             </tr>
           );
         })}
@@ -139,13 +134,14 @@ function CharacterDetail({ id, name, exists, onSaved }: {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [diffs, setDiffs] = useState<Diff[]>([]);
-  const [existing, setExisting] = useState<AnyData | null>(null);
+  const [, setExisting] = useState<AnyData | null>(null);
 
   // Manual fields
   const [rank, setRank] = useState<string | null>(null);
   const [rankPvp, setRankPvp] = useState<string | null>(null);
   const [role, setRole] = useState<string | null>(null);
   const [video, setVideo] = useState('');
+  const [isFree, setIsFree] = useState(false);
   const [skillPriority, setSkillPriority] = useState<Record<string, { prio: number }>>({
     First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 },
   });
@@ -173,12 +169,14 @@ function CharacterDetail({ id, name, exists, onSaved }: {
           setRankPvp(existingData.rank_pvp ?? null);
           setRole(existingData.role ?? null);
           setVideo(existingData.video ?? '');
+          setIsFree(existingData.tags?.includes('free') ?? false);
           setSkillPriority(existingData.skill_priority ?? { First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } });
         } else {
           setRank(null);
           setRankPvp(null);
           setRole(null);
           setVideo('');
+          setIsFree(false);
           setSkillPriority({ First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } });
         }
 
@@ -215,7 +213,7 @@ function CharacterDetail({ id, name, exists, onSaved }: {
             rank,
             rank_pvp: rankPvp,
             role,
-            tags: existing?.tags,
+            isFree,
             skill_priority: skillPriority,
             video: video || undefined,
           },
@@ -315,6 +313,17 @@ function CharacterDetail({ id, name, exists, onSaved }: {
               className="rounded border border-zinc-700 bg-zinc-900 px-2 py-1.5 text-sm placeholder-zinc-600 focus:border-blue-500 focus:outline-none"
             />
           </label>
+
+          {/* Free */}
+          <label className="flex items-center gap-2 self-end pb-1">
+            <input
+              type="checkbox"
+              checked={isFree}
+              onChange={e => setIsFree(e.target.checked)}
+              className="rounded border-zinc-700"
+            />
+            <span className="text-xs text-zinc-500">Free</span>
+          </label>
         </div>
 
         {/* Skill Priority */}
@@ -412,10 +421,18 @@ export default function ExtractorPage() {
     return <div className="flex justify-center py-20 text-zinc-500">Loading...</div>;
   }
 
+  // Build diff count map from compare results
+  const diffCountMap = new Map<string, number>();
+  if (compareResult?.results) {
+    for (const r of compareResult.results) {
+      diffCountMap.set(r.id, r.diffs.length);
+    }
+  }
+
   return (
     <div className="flex gap-6 h-[calc(100vh-100px)]">
       {/* Left: character list */}
-      <div className="w-105 shrink-0 flex flex-col border-r border-zinc-800 pr-4">
+      <div className="w-96 shrink-0 flex flex-col border-r border-zinc-800 pr-4">
         <div className="mb-3 flex items-center justify-between gap-2">
           <h1 className="text-xl font-bold">Extractor</h1>
           <button
@@ -461,11 +478,18 @@ export default function ExtractorPage() {
             >
               <span className="w-20 shrink-0 font-mono text-xs text-zinc-600">{c.id}</span>
               <span className="flex-1 truncate font-medium">{c.name}</span>
-              <span className={`text-xs ${ELEMENT_COLORS[c.element] ?? ''}`}>{c.element}</span>
-              <span className="text-xs text-zinc-600">{c.class}</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`/images/ui/elem/CM_Element_${c.element}.webp`} alt={c.element} className="size-5" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`/images/ui/class/CM_Class_${c.class}.webp`} alt={c.class} className="size-5" />
               <span className="text-xs text-yellow-400">{'★'.repeat(c.rarity)}</span>
-              {c.exists && (
-                <span className="rounded bg-green-900/30 px-1.5 py-0.5 text-[10px] text-green-400">exists</span>
+              {diffCountMap.has(c.id) && (
+                <span className="rounded bg-red-900/30 px-1.5 py-0.5 text-[10px] text-red-400">
+                  {diffCountMap.get(c.id)}
+                </span>
+              )}
+              {c.exists && !diffCountMap.has(c.id) && compareResult && (
+                <span className="rounded bg-green-900/30 px-1.5 py-0.5 text-[10px] text-green-400">OK</span>
               )}
             </button>
           ))}

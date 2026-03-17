@@ -100,7 +100,7 @@
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_STAT|ST_CRITICAL_RATE","BT_COOL3_CHARGE"],
+      "buff": ["BT_COOL3_CHARGE"],
       "debuff": [],
       "offensive": true,
       "target": "mono",
@@ -186,7 +186,7 @@
         "5_zh": ["伤害随目标生命值上限等比提升"]
       },
       "wgr": 1,
-      "buff": ["BT_EXTRA_ATTACK_ON_TURN_END"],
+      "buff": ["SYS_BUFF_ADDITIVE_ATTACK"],
       "debuff": [],
       "offensive": true,
       "target": "multi"

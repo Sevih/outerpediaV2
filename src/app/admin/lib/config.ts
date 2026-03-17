@@ -178,9 +178,15 @@ const BUFF_TYPE_RENAME: Record<string, string> = {
 // Force classification override: types the game marks wrong (e.g. NEUTRAL that should be DEBUFF)
 const BUFF_TYPE_FORCE: Record<string, 'buff' | 'debuff'> = {
   'BT_WG_REVERSE_HEAL': 'debuff',
+  'BT_KILL_UNDER_HP_RATE': 'debuff',
 };
 
 // Buff types to exclude from extraction
+// Specific BuffIDs to exclude
+const BUFF_ID_BLACKLIST = new Set([
+  '2000052_backup_1_1', // Sigma dual: self-immunity during attack, not a real buff
+]);
+
 const BUFF_TYPE_BLACKLIST = new Set([
   'BT_DMG',
   'BT_DMG_TO_BOSS',
@@ -189,6 +195,14 @@ const BUFF_TYPE_BLACKLIST = new Set([
   'BT_RESOURCE_CHARGE',
   'BT_SKILL_RANGE_ALL',
   'BT_STAT_PREMIUM',
+  'BT_DMG_OWNER_LOST_HP_RATE',
+  'BT_SKILL_USING_CONDITION',
+  'BT_NONE',
+  'BT_STAT_OWNER_LOST_HP_RATE',
+  'BT_DMG_TARGET_DEBUFF',
+  'BT_SWAP_STAT_ATTACK',
+  'BT_GROUP',
+  'BT_LIMIT_DMG_TURN',
 ]);
 
 /**
@@ -212,28 +226,66 @@ export function extractBuffDebuff(
       const statType = row.StatType ?? '';
       const bdType = row.BuffDebuffType ?? '';
 
-      if (!type || BUFF_TYPE_BLACKLIST.has(type)
+      if (!type || BUFF_ID_BLACKLIST.has(groupId) || BUFF_TYPE_BLACKLIST.has(type)
         || type.startsWith('BT_DMG_OWNER_STAT')
         || type.startsWith('BT_DMG_TARGET_STAT')
       ) continue;
 
-      // BT_HEAL_BASED_TARGET: TurnDuration > 1 → BT_CONTINU_HEAL, otherwise skip
-      if (type === 'BT_HEAL_BASED_TARGET') {
-        const turn = parseInt(row.TurnDuration);
-        if (!isNaN(turn) && turn > 1) {
+      // BT_IMMEDIATELY_*: forced debuff (burn/bleed/poison/curse applied instantly)
+      if (type.startsWith('BT_IMMEDIATELY')) {
+        debuffs.add(type);
+        break;
+      }
+
+      // BT_HEAL_BASED_*: ON_TURN_END = sustained heal (BT_CONTINU_HEAL), otherwise skip
+      if (type === 'BT_HEAL_BASED_TARGET' || type === 'BT_HEAL_BASED_CASTER') {
+        if (row.BuffRemoveType === 'ON_TURN_END') {
           buffs.add('BT_CONTINU_HEAL');
         }
         break;
       }
 
       // BT_STAT with TurnDuration -1 = permanent stacking mechanic, not a real buff
-      if (type === 'BT_STAT' && row.TurnDuration === '-1') break;
+      // BT_STAT with ON_SKILL_FINISH = temporary bonus on current skill, not a real buff
+      if (type === 'BT_STAT' && (row.TurnDuration === '-1' || row.BuffRemoveType === 'ON_SKILL_FINISH')) break;
+
+      // BT_RUN_PASSIVE_*: use RemoveEffect as tag (distinguishes Counter/Revenge/Additive Attack/Agile Response)
+      if (type.startsWith('BT_RUN_PASSIVE_') && row.RemoveEffect) {
+        buffs.add(row.RemoveEffect);
+        break;
+      }
+
+      // Interruption IconName = custom mechanic, use IconName as tag regardless of type
+      if (row.IconName?.includes('_Interruption')) {
+        const iconTag = row.IconName;
+        if (bdType === 'BUFF') buffs.add(iconTag);
+        else if (bdType.startsWith('DEBUFF')) debuffs.add(iconTag);
+        else {
+          // NEUTRAL with Interruption: use suffix _D for debuff, otherwise buff
+          if (iconTag.endsWith('_D')) debuffs.add(iconTag);
+          else buffs.add(iconTag);
+        }
+        break;
+      }
+
+      // BT_DMG_REDUCE without Interruption = not a real buff, skip
+      if (type === 'BT_DMG_REDUCE') break;
+
+      // BT_REVERSE_HEAL_BASED_*: debuff only when targeting enemies, skip on self
+      if (type === 'BT_REVERSE_HEAL_BASED_TARGET' || type === 'BT_REVERSE_HEAL_BASED_CASTER') {
+        if (row.TargetType?.startsWith('ENEMY')) debuffs.add(type);
+        break;
+      }
+
+      // BT_DOT_POISON with SYS_BUFF_POISON_2 = Corrosive Poison (variant)
+      const resolvedType = (type === 'BT_DOT_POISON' && row.RemoveEffect === 'SYS_BUFF_POISON_2')
+        ? 'BT_DOT_POISON2' : type;
 
       // Only include StatType for BT_STAT (where it identifies the buffed stat)
       // For other types, StatType is a scaling parameter
-      const rawTag = type === 'BT_STAT' && statType && statType !== 'ST_NONE'
-        ? `${type}|${statType}`
-        : type;
+      const rawTag = resolvedType === 'BT_STAT' && statType && statType !== 'ST_NONE'
+        ? `${resolvedType}|${statType}`
+        : resolvedType;
       const tag = BUFF_TYPE_RENAME[rawTag] ?? rawTag;
 
       // Check forced classification first, then game data
@@ -360,6 +412,78 @@ export const NON_OFFENSIVE_OVERRIDE = new Set([
   '2000050:Skill_2', // Flamberge S2 — passive effect
   '2000090:Skill_2', // Gnosis Dahlia S2 — passive/triggered
 ]);
+
+// ── Auto-detect tags ─────────────────────────────────────────────────
+
+type RecruitRow = Record<string, string>;
+type ExtraRow = Record<string, string>;
+
+/**
+ * Detect character tags from game data:
+ * - ignore-defense: BT_STAT + ST_PIERCE_POWER_RATE + ON_SKILL_FINISH
+ * - premium/seasonal/limited/collab: from RecruitGroupTemplet + CharacterExtraTemplet
+ */
+export function detectTags(
+  charId: string,
+  buffData: BuffRow[],
+  recruitData: RecruitRow[],
+  extraData: ExtraRow[],
+): string[] {
+  const tags: string[] = [];
+
+  // Recruit type detection from RecruitGroupTemplet
+  // EndDateTime contains the character ID for pickup banners
+  const banner = recruitData.find(r =>
+    r.EndDateTime === charId &&
+    ['PREMIUM', 'SEASONAL', 'OUTER_FES'].includes(r.ShowDate_fallback1 ?? ''),
+  );
+
+  if (banner) {
+    const marker = banner.ShowDate_fallback1;
+    if (marker === 'PREMIUM') {
+      tags.push('premium');
+    } else if (marker === 'OUTER_FES') {
+      tags.push('limited');
+    } else if (marker === 'SEASONAL') {
+      if (banner.ShowDate_fallback2?.includes('Collabo')) {
+        tags.push('collab');
+      } else {
+        tags.push('seasonal');
+      }
+    }
+  } else {
+    // Fallback to CharacterExtraTemplet
+    const extra = extraData.find(r => r.CharacterID === charId);
+    if (extra) {
+      const thumb = extra.ThumbnailEffect ?? '';
+      if (thumb === 'FX_UI_Character_List_Dungeon') {
+        tags.push('collab');
+      }
+    }
+  }
+
+  // ignore-defense: BT_STAT + ST_PIERCE_POWER_RATE from skills (ON_SKILL_FINISH) or EE (BID_CEQUIP)
+  const hasIgnoreDefense = buffData.some(r =>
+    (r.BuffID?.startsWith(`${charId}_`) && r.Type === 'BT_STAT' && r.StatType === 'ST_PIERCE_POWER_RATE' && r.BuffRemoveType === 'ON_SKILL_FINISH')
+    || (r.BuffID?.startsWith(`BID_CEQUIP_${charId}`) && r.StatType === 'ST_PIERCE_POWER_RATE'),
+  );
+  if (hasIgnoreDefense) tags.push('ignore-defense');
+
+  // core-fusion: 2700xxx characters
+  if (charId.startsWith('2700')) tags.push('core-fusion');
+
+  return tags;
+}
+
+/** Canonical tag order for consistent output */
+const TAG_ORDER = ['premium', 'seasonal', 'limited', 'collab', 'ignore-defense', 'free', 'core-fusion'];
+export function sortTags(tags: string[]): string[] {
+  return [...tags].sort((a, b) => {
+    const ia = TAG_ORDER.indexOf(a);
+    const ib = TAG_ORDER.indexOf(b);
+    return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+  });
+}
 
 // Re-export for convenience
 export { LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang };

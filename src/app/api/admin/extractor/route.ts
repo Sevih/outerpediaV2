@@ -7,10 +7,11 @@ import {
   resolveElement, resolveClass, resolveSubClass,
   buildBuffIndex, resolveBuffPlaceholders, extractBuffDebuff, collectBuffGroupIds, collectBuffGroupIdsByPattern,
   resolveTarget, GIFT_MAP, resolveChainType, NON_OFFENSIVE_OVERRIDE,
-  BASIC_STAR_OVERRIDE,
+  BASIC_STAR_OVERRIDE, detectTags, sortTags,
 } from '@/app/admin/lib/config';
 
 const JSON_DIR = path.join(process.cwd(), 'data', 'admin', 'json');
+
 
 /** Read and parse one of the admin JSON templet files */
 async function readTemplet(name: string): Promise<{ columns: Record<string, string>; data: Record<string, string>[] }> {
@@ -207,7 +208,7 @@ async function handleList() {
 // ── Info ─────────────────────────────────────────────────────────────
 
 async function handleInfo(id: string) {
-  const [charTemplet, textChar, textSys, textSkill, extraTemplet, skillTemplet, trustTemplet, fusionTemplet] = await Promise.all([
+  const [charTemplet, textChar, textSys, textSkill, extraTemplet, skillTemplet, trustTemplet, fusionTemplet, buffTemplet, recruitTemplet] = await Promise.all([
     readTemplet('CharacterTemplet'),
     readTemplet('TextCharacter'),
     readTemplet('TextSystem'),
@@ -216,6 +217,8 @@ async function handleInfo(id: string) {
     readTemplet('CharacterSkillTemplet'),
     readTemplet('TrustTemplet'),
     readTemplet('CharacterFusionTemplet'),
+    readTemplet('BuffTemplet'),
+    readTemplet('RecruitGroupTemplet'),
   ]);
 
   const textMap = buildTextMap(textChar.data);
@@ -295,6 +298,8 @@ async function handleInfo(id: string) {
   const hasCoreFusion = !!fusionRow;
   const coreFusionId = fusionRow?.ChangeCharID ?? undefined;
 
+  const tags = sortTags(detectTags(id, buffTemplet.data, recruitTemplet.data, extraTemplet.data));
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const result: Record<string, any> = {
     ID: id,
@@ -303,6 +308,7 @@ async function handleInfo(id: string) {
     Element: resolveElement(textSysMap, charRow.Element ?? ''),
     Class: resolveClass(textSysMap, charRow.Class ?? ''),
     SubClass: resolveSubClass(textSysMap, charRow.SubClass ?? ''),
+    tags,
     Chain_Type: chainType,
     gift,
     ...expandLang('VoiceActor', voiceActorTexts),
@@ -414,13 +420,17 @@ async function handleSkills(id: string) {
     for (const lv of levels) {
       const lvNum = lv.SkillLevel ?? '1';
       if (lvNum === '1') continue;
-      // Find SE_DESC keys in any field
-      const seDescRaw = [lv.DescID, lv.GainCP, lv.DamageFactor]
-        .filter(Boolean)
-        .join(',')
-        .split(',')
-        .map(d => d.trim())
-        .filter(d => d.startsWith('SE_DESC_'));
+      // Find SE_DESC/SKILL_DESC_B/SKILL_NAME_B keys in ALL fields (bytes parser shifts columns)
+      const seDescRaw: string[] = [];
+      for (const val of Object.values(lv)) {
+        if (!val || typeof val !== 'string') continue;
+        for (const part of val.split(',')) {
+          const t = part.trim();
+          if (t.startsWith('SE_DESC_') || t.startsWith('SKILL_DESC_B_') || t.startsWith('SKILL_NAME_B_')) {
+            seDescRaw.push(t);
+          }
+        }
+      }
       if (seDescRaw.length === 0) continue;
       const descs = seDescRaw;
       // Default lang
@@ -534,8 +544,9 @@ async function handleSkills(id: string) {
         if (!bRow) continue;
 
         // IconName contains the DESC key with the full description text
+        // Case may differ (e.g. SKILL_Desc_B vs SKILL_DESC_B), try exact then uppercase
         const bDescKey = bRow.IconName ?? '';
-        const bNames = textSkillMap[bDescKey];
+        const bNames = textSkillMap[bDescKey] ?? textSkillMap[bDescKey.toUpperCase()];
         const bTarget = resolveTarget(bRow.RangeType ?? '');
         const bOffensive = (bRow.TargetTeamType ?? '').includes('ENEMY');
 
@@ -641,15 +652,24 @@ function buildTranscend(
     }
   }
 
-  const transcendDescs = new Map<number, string>();
+  const transcendDescs = new Map<number, string[]>();
   if (uniquePassiveId) {
     for (const row of skillLevelData) {
       if (row.SkillID === uniquePassiveId) {
         const sl = parseInt(row.SkillLevel) || 0;
-        const descKey = row.WGReduce ?? '';
-        if (sl > 0 && descKey.startsWith('SE_DESC_')) {
-          transcendDescs.set(sl, descKey);
+        if (sl <= 0) continue;
+        // Search all fields for SE_DESC keys (bytes parser shifts columns)
+        const keys: string[] = [];
+        for (const val of Object.values(row)) {
+          if (!val || typeof val !== 'string') continue;
+          for (const part of val.split(',')) {
+            const t = part.trim();
+            if (t.startsWith('SE_DESC_') || t.startsWith('SKILL_DESC_B_') || t.startsWith('SKILL_NAME_B_')) {
+              keys.push(t);
+            }
+          }
         }
+        if (keys.length > 0) transcendDescs.set(sl, keys);
       }
     }
   }
@@ -694,13 +714,15 @@ function buildTranscend(
       // SkillLevel 1 = Burst Lv2 unlock (implicit, not shown in transcend desc)
       if (skillLevel > 1 && skillLevel > lastDescSkillLevel) {
         lastDescSkillLevel = skillLevel;
-        const descKey = transcendDescs.get(skillLevel);
-        if (descKey) {
-          const texts = textSkillMap[descKey];
-          if (texts) {
-            for (const lang of LANGS) {
-              const txt = texts[lang];
-              if (txt) lines[lang].push(txt.replace(/\\n/g, '\n'));
+        const descKeys = transcendDescs.get(skillLevel);
+        if (descKeys) {
+          for (const descKey of descKeys) {
+            const texts = textSkillMap[descKey];
+            if (texts) {
+              for (const lang of LANGS) {
+                const txt = texts[lang];
+                if (txt) lines[lang].push(txt.replace(/\\n/g, '\n'));
+              }
             }
           }
         }
@@ -744,7 +766,7 @@ async function handleTranscend(id: string) {
 
 const INFO_FIELDS = [
   'Fullname', 'Fullname_jp', 'Fullname_kr', 'Fullname_zh',
-  'Rarity', 'Element', 'Class', 'SubClass', 'Chain_Type', 'gift',
+  'Rarity', 'Element', 'Class', 'SubClass', 'tags', 'Chain_Type', 'gift',
   'VoiceActor', 'VoiceActor_jp', 'VoiceActor_kr', 'VoiceActor_zh',
   'hasCoreFusion', 'coreFusionId',
 ];
@@ -764,7 +786,7 @@ async function handleCompare() {
   // Load all templets once
   const [charTemplet, textChar, textSys, textSkill, extraTemplet,
     skillTemplet, skillLevelTemplet, buffTemplet, trustTemplet, fusionTemplet, changeTemplet,
-    transcendTemplet,
+    transcendTemplet, recruitTemplet,
     ] = await Promise.all([
     readTemplet('CharacterTemplet'),
     readTemplet('TextCharacter'),
@@ -778,6 +800,7 @@ async function handleCompare() {
     readTemplet('CharacterFusionTemplet'),
     readTemplet('CharacterChangeTemplet'),
     readTemplet('CharacterTranscendentTemplet'),
+    readTemplet('RecruitGroupTemplet'),
   ]);
 
   // Read existing character files
@@ -880,12 +903,18 @@ async function handleCompare() {
 
     const fusionRow = fusionTemplet.data.find((r: Record<string, string>) => r.RecruitID === id);
 
+    const autoTags = sortTags([...new Set([
+      ...detectTags(id, buffTemplet.data, recruitTemplet.data, extraTemplet.data),
+      ...(Array.isArray(existing.tags) && existing.tags.includes('free') ? ['free'] : []),
+    ])]);
+
     const extracted: Record<string, unknown> = {
       ...expandLang('Fullname', fullnameTexts),
       Rarity: BASIC_STAR_OVERRIDE[id] ?? (parseInt(charRow.BasicStar) || 0),
       Element: resolveElement(textSysMap, charRow.Element ?? ''),
       Class: resolveClass(textSysMap, charRow.Class ?? ''),
       SubClass: resolveSubClass(textSysMap, charRow.SubClass ?? ''),
+      tags: autoTags,
       Chain_Type: chainType,
       gift,
       ...expandLang('VoiceActor', voiceActorTexts),
@@ -894,9 +923,12 @@ async function handleCompare() {
     };
 
     for (const field of INFO_FIELDS) {
-      if (!(field in existing)) continue;
-      const e = String(existing[field] ?? '');
-      const a = String(extracted[field] ?? '');
+      if (!(field in existing) && !(field in extracted)) continue;
+      // For array fields like tags, sort before comparing to ignore order
+      const eVal = existing[field] ?? '';
+      const aVal = extracted[field] ?? '';
+      const e = Array.isArray(eVal) ? [...eVal].sort().join(', ') : String(eVal);
+      const a = Array.isArray(aVal) ? [...aVal].sort().join(', ') : String(aVal);
       if (e !== a) diffs.push({ field, existing: e, extracted: a });
     }
 
@@ -1084,12 +1116,16 @@ async function handleCompare() {
       for (const lv of levels) {
         const lvNum = lv.SkillLevel ?? '1';
         if (lvNum === '1') continue;
-        const descs = [lv.DescID, lv.GainCP, lv.DamageFactor]
-          .filter(Boolean)
-          .join(',')
-          .split(',')
-          .map((d: string) => d.trim())
-          .filter((d: string) => d.startsWith('SE_DESC_'));
+        const descs: string[] = [];
+        for (const val of Object.values(lv)) {
+          if (!val || typeof val !== 'string') continue;
+          for (const part of val.split(',')) {
+            const t = part.trim();
+            if (t.startsWith('SE_DESC_') || t.startsWith('SKILL_DESC_B_') || t.startsWith('SKILL_NAME_B_')) {
+              descs.push(t);
+            }
+          }
+        }
         if (descs.length === 0) continue;
         extractedEnh[lvNum] = descs.map((d: string) => textSkillMap[d]?.[DEFAULT_LANG] ?? d);
         for (const lang of SUFFIX_LANGS) {
@@ -1123,7 +1159,7 @@ async function handleCompare() {
           if (!bRow) continue;
 
           const bDescKey = bRow.IconName ?? '';
-          const bNames = textSkillMap[bDescKey];
+          const bNames = textSkillMap[bDescKey] ?? textSkillMap[bDescKey.toUpperCase()];
           const extractedBurst = {
             ...expandLang('effect', bNames),
             cost: burstCosts[bi],
@@ -1157,8 +1193,10 @@ async function handleCompare() {
       }
     }
 
-    if (diffs.length > 0) {
-      results.push({ id, name: existing.Fullname ?? id, diffs });
+    // Temporary: filter out skill desc and transcend diffs
+    const filtered = diffs.filter(d => !/(true_desc|desc_lv|transcend\.)/.test(d.field));
+    if (filtered.length > 0) {
+      results.push({ id, name: existing.Fullname ?? id, diffs: filtered });
     }
   }
 
@@ -1192,7 +1230,7 @@ export async function POST(req: NextRequest) {
         rank?: string | null;
         rank_pvp?: string | null;
         role?: string | null;
-        tags?: string[];
+        isFree?: boolean;
         skill_priority?: Record<string, { prio: number }>;
         video?: string | null;
       };
@@ -1254,7 +1292,11 @@ export async function POST(req: NextRequest) {
       rank: manual.rank ?? existing.rank ?? null,
       rank_pvp: manual.rank_pvp ?? existing.rank_pvp ?? undefined,
       role: manual.role ?? existing.role ?? null,
-      tags: manual.tags ?? existing.tags ?? undefined,
+      // tags: auto-detected from info + 'free' from manual checkbox
+      tags: (() => {
+        const t = sortTags([...new Set([...(info.tags ?? []), ...(manual.isFree ? ['free'] : [])])]);
+        return t.length > 0 ? t : undefined;
+      })(),
       skill_priority: manual.skill_priority ?? existing.skill_priority ?? { First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } },
       video: manual.video ?? existing.video ?? undefined,
       transcend: groupByLang(transcendData.transcend),
