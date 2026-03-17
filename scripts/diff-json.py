@@ -104,6 +104,12 @@ def compare(filepath):
 
     # Detect known patterns and simplify
     notes = []
+    # empty tags removed
+    empty_tags = [m for m in missing if m[0] == "tags" and m[1] == []]
+    if empty_tags:
+        missing = [m for m in missing if m not in empty_tags]
+        notes.append("empty tags removed")
+
     # wgr/cd: added but null = formatting
     null_formatting = [a for a in added if a[0].endswith((".wgr", ".cd")) and a[1] is None]
     if null_formatting:
@@ -142,8 +148,14 @@ def print_report(filepath, result):
     missing, added, changed, notes = result
 
     if not missing and not added and not changed and not notes:
-        print(f"  ok {filepath}: identical (key/array order may differ)")
-        return
+        return False
+
+    fname = Path(filepath).name
+
+    # Only notes, no real diffs = formatting only
+    if not missing and not added and not changed:
+        print(f"  {fname}: formatting only")
+        return "fmt"
 
     print(f"\n{'='*60}")
     print(f"  {filepath}")
@@ -173,6 +185,7 @@ def print_report(filepath, result):
             print(f"      now:  {fmt_val(new)}")
 
     print()
+    return True
 
 
 def filter_by_range(files, range_str):
@@ -212,16 +225,20 @@ def main():
                   (f" for range {id_range}" if id_range else ""))
             sys.exit(1)
         total_missing = total_added = total_changed = 0
+        fmt_only = []
         for f in files:
             rel = str(f).replace("\\", "/")
             result = compare(rel)
             if result:
                 m, a, c, n = result
                 if m or a or c or n:
-                    print_report(rel, result)
-                    total_missing += len(m)
-                    total_added += len(a)
-                    total_changed += len(c)
+                    status = print_report(rel, result)
+                    if status == "fmt":
+                        fmt_only.append(f.name)
+                    else:
+                        total_missing += len(m)
+                        total_added += len(a)
+                        total_changed += len(c)
         print(f"\nTotal across {len(files)} files: "
               f"{total_missing} missing, {total_added} added, {total_changed} changed")
     else:
