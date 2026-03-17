@@ -71,15 +71,18 @@ def deep_diff(old, new, path=""):
         old_sorted = sort_array(old)
         new_sorted = sort_array(new)
         if old_sorted != new_sorted:
-            # Find actual content differences
             old_strs = [json.dumps(x, sort_keys=True, ensure_ascii=False) for x in old]
             new_strs = [json.dumps(x, sort_keys=True, ensure_ascii=False) for x in new]
-            old_set = set(old_strs)
-            new_set = set(new_strs)
-            for s in sorted(old_set - new_set):
-                missing.append((f"{path}[]", json.loads(s)))
-            for s in sorted(new_set - old_set):
-                added.append((f"{path}[]", json.loads(s)))
+            old_only = [s for s in old_strs if s not in set(new_strs)]
+            new_only = [s for s in new_strs if s not in set(old_strs)]
+            # Pair up as CHANGED when both sides have diffs
+            pairs = min(len(old_only), len(new_only))
+            for i in range(pairs):
+                changed.append((f"{path}[]", json.loads(old_only[i]), json.loads(new_only[i])))
+            for i in range(pairs, len(old_only)):
+                missing.append((f"{path}[]", json.loads(old_only[i])))
+            for i in range(pairs, len(new_only)):
+                added.append((f"{path}[]", json.loads(new_only[i])))
     else:
         if old != new:
             changed.append((path, old, new))
