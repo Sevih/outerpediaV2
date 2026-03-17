@@ -7,7 +7,7 @@ import {
   resolveElement, resolveClass, resolveSubClass,
   buildBuffIndex, resolveBuffPlaceholders, extractBuffDebuff, collectBuffGroupIds, collectBuffGroupIdsByPattern,
   resolveTarget, GIFT_MAP, resolveChainType, NON_OFFENSIVE_OVERRIDE,
-  BASIC_STAR_OVERRIDE, detectTags, sortTags,
+  BASIC_STAR_OVERRIDE, detectTags, sortTags, SKILL_BUFF_FORCE,
 } from '@/app/admin/lib/config';
 
 const JSON_DIR = path.join(process.cwd(), 'data', 'admin', 'json');
@@ -575,6 +575,10 @@ async function handleSkills(id: string) {
           for (const b of bd.buff) mainBuffs.add(b);
           for (const d of bd.debuff) mainDebuffs.add(d);
         }
+        // Detect BT_WG_REVERSE_HEAL from burst IconName referencing WG damage desc
+        if (bRow.IconName === 'SE_DESC_DMG_WG_V_1') {
+          mainDebuffs.add('BT_WG_REVERSE_HEAL');
+        }
       }
       // Remove duplicates that are already from the base skill buff group
       targetSkill.buff = [...mainBuffs];
@@ -604,6 +608,24 @@ async function handleSkills(id: string) {
           skill.dual_buff = ['HEAVY_STRIKE', ...dualBuffs];
         }
       }
+    }
+  }
+
+  // Apply forced buff/debuff overrides
+  for (const [key, forced] of Object.entries(SKILL_BUFF_FORCE)) {
+    const [cid, skt] = key.split(':');
+    if (cid !== id) continue;
+    const skill = skills[skt] as Record<string, unknown> | undefined;
+    if (!skill) continue;
+    if (forced.buff) {
+      const buffs = (skill.buff as string[]) ?? [];
+      for (const b of forced.buff) { if (!buffs.includes(b)) buffs.push(b); }
+      skill.buff = buffs;
+    }
+    if (forced.debuff) {
+      const debuffs = (skill.debuff as string[]) ?? [];
+      for (const d of forced.debuff) { if (!debuffs.includes(d)) debuffs.push(d); }
+      skill.debuff = debuffs;
     }
   }
 
@@ -1031,6 +1053,9 @@ async function handleCompare() {
             for (const b of bd.buff) skillBD.buff.push(b);
             for (const d of bd.debuff) skillBD.debuff.push(d);
           }
+          if (bRow.IconName === 'SE_DESC_DMG_WG_V_1') {
+            skillBD.debuff.push('BT_WG_REVERSE_HEAL');
+          }
         }
         // Deduplicate
         skillBD.buff = [...new Set(skillBD.buff)];
@@ -1062,6 +1087,14 @@ async function handleCompare() {
       if (hasHeavyStrike && (dualData.dual_offensive as boolean)) {
         const db = (dualData.dual_buff as string[]) ?? [];
         if (!db.includes('HEAVY_STRIKE')) { db.unshift('HEAVY_STRIKE'); dualData.dual_buff = db; }
+      }
+
+      // Apply forced buff/debuff overrides
+      const forceKey = `${id}:${sk}`;
+      const forcedBD = SKILL_BUFF_FORCE[forceKey];
+      if (forcedBD) {
+        if (forcedBD.buff) for (const b of forcedBD.buff) { if (!skillBD.buff.includes(b)) skillBD.buff.push(b); }
+        if (forcedBD.debuff) for (const d of forcedBD.debuff) { if (!skillBD.debuff.includes(d)) skillBD.debuff.push(d); }
       }
 
       // Compare array fields (buff, debuff, dual_buff, dual_debuff)

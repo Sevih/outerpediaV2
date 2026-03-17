@@ -101,7 +101,7 @@
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_ACTION_GAUGE","BT_ADDITIVE_TURN","BT_COOL3_CHARGE"],
+      "buff": ["BT_ACTION_GAUGE","BT_ADDITIVE_TURN","BT_COOL3_CHARGE","IG_Buff_Effect_2000067_Interruption"],
       "debuff": [],
       "offensive": true,
       "target": "mono",
@@ -190,7 +190,7 @@
       "wgr":1,
       "buff": [
         "BT_COOL3_CHARGE",
-        "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER",
+        "SYS_BUFF_COUNTER",
         "SYS_BUFF_AVOID_UP",
         "IG_Buff_Effect_2000067_Interruption"
       ],

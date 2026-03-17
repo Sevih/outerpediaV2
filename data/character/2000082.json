@@ -100,7 +100,7 @@
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_COOL_CHARGE"],
+      "buff": ["BT_COOL_CHARGE","SYS_BUFF_ADDITIVE_ATTACK"],
       "debuff": ["BT_DOT_LIGHTNING","BT_EXTEND_DEBUFF"],
       "offensive": true,
       "target": "mono",
@@ -187,7 +187,7 @@
       },
       "cd": "4",
       "wgr": 1,
-      "buff": ["BT_ACTION_GAUGE","BT_EXTRA_ATTACK_ON_TURN_END","BT_STAT|ST_BUFF_CHANCE"],
+      "buff": ["BT_ACTION_GAUGE","BT_STAT|ST_BUFF_CHANCE"],
       "debuff": [],
       "offensive": true,
       "target": "mono"

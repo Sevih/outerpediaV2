@@ -103,7 +103,6 @@
       "cd": null,
       "buff": [
         "BT_CALL_BACKUP",
-        "BT_HEAL_BASED_CASTER",
         "BT_AP_CHARGE",
         "BT_REMOVE_DEBUFF",
         "BT_IMMUNE"
@@ -195,7 +194,6 @@
       "cd": "4",
       "buff": [
         "SYS_BUFF_REVENGE_HEAL",
-        "BT_HEAL_BASED_CASTER",
         "BT_ACTION_GAUGE"
       ],
       "debuff": ["BT_FREEZE"],
@@ -252,7 +250,6 @@
       },
       "cd": "5",
       "buff": [
-        "BT_HEAL_BASED_CASTER",
         "BT_REMOVE_DEBUFF",
         "BT_SHIELD_BASED_CASTER",
         "BT_IMMUNE"
@@ -318,7 +315,7 @@
       "target": "multi",
       "dual_offensive": true,
       "dual_target": "mono",
-      "dual_buff": ["BT_HEAL_BASED_CASTER"],
+      "dual_buff": [],
       "dual_debuff": []
     }
   }

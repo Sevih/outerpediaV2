@@ -100,7 +100,7 @@
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_ACTION_GAUGE","BT_COOL2_CHARGE"],
+      "buff": ["BT_ACTION_GAUGE","BT_COOL2_CHARGE","SYS_BUFF_ADDITIVE_ATTACK"],
       "debuff": ["BT_DOT_BURN","BT_EXTEND_DEBUFF"],
       "offensive": true,
       "target": "mono",
@@ -187,7 +187,7 @@
       },
       "cd": "4",
       "wgr": 1,
-      "buff": ["BT_ACTION_GAUGE","BT_AP_CHARGE","BT_EXTRA_ATTACK_ON_TURN_END"],
+      "buff": ["BT_ACTION_GAUGE","BT_AP_CHARGE"],
       "debuff": [],
       "offensive": true,
       "target": "mono"

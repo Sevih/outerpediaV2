@@ -101,7 +101,7 @@
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_STAT","BT_COOL3_CHARGE","BT_ACTION_GAUGE"],
+      "buff": ["BT_COOL3_CHARGE","BT_ACTION_GAUGE"],
       "debuff": ["BT_SEALED"],
       "offensive": true,
       "target": "mono",
@@ -188,7 +188,7 @@
       },
       "cd": "3",
       "wgr": 1,
-      "buff": ["BT_STAT|ST_SPEED","BT_EXTRA_ATTACK_ON_TURN_END"],
+      "buff": ["BT_STAT|ST_SPEED","SYS_BUFF_ADDITIVE_ATTACK"],
       "debuff": [],
       "offensive": true,
       "target": "mono"

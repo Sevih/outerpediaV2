@@ -186,7 +186,7 @@
         "5_zh": ["冷却时间-1回合","行动值+10%"]
       },
       "cd": "5",
-      "buff": ["BT_RUN_PASSIVE_SKILL_ON_TURN_END_TEAM","BT_STAT|ST_ATK","BT_ACTION_GAUGE"],
+      "buff": ["SYS_BUFF_ADDITIVE_SKILL","BT_STAT|ST_ATK","BT_ACTION_GAUGE"],
       "debuff": [],
       "offensive": false,
       "target": "multi"

@@ -173,20 +173,45 @@ export function resolveBuffPlaceholders(
 
 // Buff types to rename (game name → display name)
 const BUFF_TYPE_RENAME: Record<string, string> = {
+  'BT_STAT|ST_AVOID': 'SYS_BUFF_AVOID_UP',
 };
 
 // Force classification override: types the game marks wrong (e.g. NEUTRAL that should be DEBUFF)
 const BUFF_TYPE_FORCE: Record<string, 'buff' | 'debuff'> = {
   'BT_WG_REVERSE_HEAL': 'debuff',
   'BT_KILL_UNDER_HP_RATE': 'debuff',
+  'BT_SEALED_RESURRECTION': 'debuff',
 };
 
 // Buff types to exclude from extraction
+// Force add buff/debuff to specific skills (charId:skillType → { buff: [...], debuff: [...] })
+export const SKILL_BUFF_FORCE: Record<string, { buff?: string[]; debuff?: string[] }> = {
+  '2000065:SKT_FIRST': { buff: ['BT_EXTRA_ATTACK_ON_TURN_END'] },
+  '2000084:SKT_FIRST': { buff: ['BT_CALL_BACKUP_2', 'BT_CALL_BACKUP'] },
+};
+
 // Specific BuffIDs to exclude
 const BUFF_ID_BLACKLIST = new Set([
   '2000052_backup_1_1', // Sigma dual: self-immunity during attack, not a real buff
   '2000029_2_2', // Laine S2: erroneous BT_REMOVE_BUFF in game data
   '2000020_3_2', // Alice Ult: erroneous BT_STAT|ST_BUFF_CHANCE in game data
+  '2000039_3_2', // Stella Ult: EE-only BT_ACTION_GAUGE, not in base skill
+  '2000052_1_1', // Sigma S1: self-immunity during attack, not a real buff
+  '2000042_u_3_2', // Leo Burst 3: hidden BT_INVINCIBLE not in skill description
+  '2000037_3_4', // Veronica Ult: erroneous BT_STAT|ST_ATK
+  '2000060_u_3_1', // Tamara Burst 3: erroneous BT_EXTEND_BUFF
+  '2000057_2_2', // Sterope S2: IG_Buff_2000057_Interruption_D not a real debuff
+  '2000057_2_3', // Sterope S2: IG_Buff_2000057_Interruption_D not a real debuff
+  '2000053_2_5', // Stella S2: erroneous BT_AP_CHARGE
+  '2000059_1_1', // Astei S1: BT_SECOND_TRIGGER internal mechanic
+  '2000059_u_3', // Astei Burst 3: BT_COOL_CHARGE not a visible buff
+  '2000059_2_1', // Astei S2: BT_REVIVAL_N_RUN_PASSIVE_SKILL internal mechanic
+  '2000059_2_3', // Astei S2: BT_REMOVE_DEATH internal mechanic
+  '2000059_2_7', // Astei S2: BT_DMG_KILL_COUNT_STACK damage mod
+  '2000079_2_2', // Kuro S2: BT_REVIVAL_N_RUN_PASSIVE_SKILL internal mechanic
+  '2000109_3_3', // Viella Ult: erroneous BT_STAT|ST_DEF
+  '2000096_2_4', // Ais S2: erroneous BT_ACTION_GAUGE
+  '2000096_3_2', // Ais Ult: BT_SECOND_TRIGGER internal mechanic
 ]);
 
 const BUFF_TYPE_BLACKLIST = new Set([
@@ -202,9 +227,12 @@ const BUFF_TYPE_BLACKLIST = new Set([
   'BT_NONE',
   'BT_STAT_OWNER_LOST_HP_RATE',
   'BT_DMG_TARGET_DEBUFF',
+  'BT_DMG_TARGET_BUFF',
   'BT_SWAP_STAT_ATTACK',
   'BT_GROUP',
   'BT_LIMIT_DMG_TURN',
+  'BT_SHARE_DMG',
+  "BT_DMG_TARGET_LOST_HP_RATE"
 ]);
 
 /**
@@ -220,14 +248,15 @@ export function extractBuffDebuff(
   const buffs = new Set<string>();
   const debuffs = new Set<string>();
 
-  // Expand buff group IDs to include siblings (e.g. 2000035_2_1 → also scan 2000035_2_*)
+  // Expand buff group IDs to include siblings with _Interruption IconName only
+  // (e.g. 2000035_2_1 → also scan 2000035_2_* but only if they have _Interruption)
   const expandedIds = new Set(buffGroupIds);
   for (const gid of buffGroupIds) {
     const parts = gid.split('_');
     if (parts.length >= 3 && /^\d{7}$/.test(parts[0])) {
       const prefix = `${parts[0]}_${parts[1]}_`;
       for (const row of buffData) {
-        if (row.BuffID?.startsWith(prefix) && !row.BuffID.endsWith('_old')) {
+        if (row.BuffID?.startsWith(prefix) && !row.BuffID.endsWith('_old') && row.IconName?.includes('_Interruption')) {
           expandedIds.add(row.BuffID);
         }
       }
@@ -242,7 +271,7 @@ export function extractBuffDebuff(
       const statType = row.StatType ?? '';
       const bdType = row.BuffDebuffType ?? '';
 
-      if (!type) continue;
+      if (!type || BUFF_ID_BLACKLIST.has(groupId)) continue;
 
       // Interruption IconName = custom mechanic, use IconName as tag regardless of type (before blacklist)
       if (row.IconName?.includes('_Interruption')) {
@@ -257,7 +286,7 @@ export function extractBuffDebuff(
         break;
       }
 
-      if (BUFF_ID_BLACKLIST.has(groupId) || BUFF_TYPE_BLACKLIST.has(type)
+      if (BUFF_TYPE_BLACKLIST.has(type)
         || type.startsWith('BT_DMG_OWNER_STAT')
         || type.startsWith('BT_DMG_TARGET_STAT')
       ) continue;
