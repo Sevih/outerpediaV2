@@ -606,9 +606,11 @@ export default function ExtractorPage() {
   }
 
   async function handleExtractAll() {
-    if (!confirm(`Extract all ${characters.length} characters? This will re-extract game data for every character.`)) return;
+    // Skip incomplete characters (name not resolved = placeholder like "2000112_Name")
+    const valid = characters.filter(c => !c.name.includes('_Name'));
+    if (!confirm(`Extract ${valid.length} characters? (${characters.length - valid.length} incomplete skipped)`)) return;
     setExtracting(true);
-    setExtractProgress({ done: 0, total: characters.length, errors: 0 });
+    setExtractProgress({ done: 0, total: valid.length, errors: 0 });
     setSelectedId(null);
     setCompareResult(null);
 
@@ -616,8 +618,8 @@ export default function ExtractorPage() {
     let errors = 0;
     // Process in batches of 5 to avoid overwhelming the server
     const batch = 5;
-    for (let i = 0; i < characters.length; i += batch) {
-      const chunk = characters.slice(i, i + batch);
+    for (let i = 0; i < valid.length; i += batch) {
+      const chunk = valid.slice(i, i + batch);
       const results = await Promise.allSettled(
         chunk.map(c =>
           fetch('/api/admin/extractor', {
@@ -629,7 +631,7 @@ export default function ExtractorPage() {
       );
       done += chunk.length;
       errors += results.filter(r => r.status === 'rejected').length;
-      setExtractProgress({ done, total: characters.length, errors });
+      setExtractProgress({ done, total: valid.length, errors });
     }
 
     setExtracting(false);

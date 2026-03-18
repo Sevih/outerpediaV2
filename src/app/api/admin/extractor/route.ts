@@ -1701,9 +1701,12 @@ export async function POST(req: NextRequest) {
       rank: manual.rank ?? existing.rank ?? null,
       rank_pvp: info.Rarity > 2 ? (manual.rank_pvp ?? existing.rank_pvp ?? null) : undefined,
       role: manual.role ?? existing.role ?? null,
-      // tags: auto-detected from info + 'free' from manual checkbox
+      // tags: auto-detected from info + 'free' preserved from existing or manual checkbox
       tags: (() => {
-        const t = sortTags([...new Set([...(info.tags ?? []), ...(manual.isFree ? ['free'] : [])])]);
+        const hasFree = manual.isFree !== undefined
+          ? manual.isFree
+          : Array.isArray(existing.tags) && existing.tags.includes('free');
+        const t = sortTags([...new Set([...(info.tags ?? []), ...(hasFree ? ['free'] : [])])]);
         return t.length > 0 ? t : undefined;
       })(),
       skill_priority: manual.skill_priority ?? existing.skill_priority ?? { First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } },
