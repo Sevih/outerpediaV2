@@ -253,8 +253,15 @@ function CharacterDetail({ id, name, rarity, exists, onSaved, initialDiffs }: {
         setError(data.error ?? 'Save failed');
         setStatus('ready');
       } else {
-        setSuccess('Saved!');
-        setTimeout(() => setSuccess(''), 2000);
+        const img = data.imagesCopied;
+        const parts = ['Saved!'];
+        if (img) {
+          if (img.copied > 0) parts.push(`${img.copied} img copied`);
+          if (img.exists > 0) parts.push(`${img.exists} img skipped`);
+          if (img.missing > 0) parts.push(`${img.missing} img missing`);
+        }
+        setSuccess(parts.join(' · '));
+        setTimeout(() => setSuccess(''), 4000);
         setStatus('ready');
         onSaved();
       }

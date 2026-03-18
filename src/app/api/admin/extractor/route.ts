@@ -1612,6 +1612,69 @@ async function handleInspect(id: string) {
   return NextResponse.json({ id, sections });
 }
 
+// ── Image copy ───────────────────────────────────────────────────────
+
+const DATAMINE_ROOT = path.join(process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources');
+const PUBLIC_IMAGES = path.join(process.cwd(), 'public', 'images', 'characters');
+
+async function fileExists(p: string): Promise<boolean> {
+  try { await fs.access(p); return true; } catch { return false; }
+}
+
+type CopyResult = 'copied' | 'exists' | 'missing';
+
+async function copyIfMissing(src: string, dest: string): Promise<CopyResult> {
+  if (await fileExists(dest)) return 'exists';
+  if (!(await fileExists(src))) return 'missing';
+  await fs.mkdir(path.dirname(dest), { recursive: true });
+  await fs.copyFile(src, dest);
+  return 'copied';
+}
+
+async function copyCharacterImages(id: string): Promise<{ copied: number; exists: number; missing: number }> {
+  const jobs: [string, string][] = [
+    // ATB portraits
+    [
+      path.join(DATAMINE_ROOT, 'sprite', 'at_dungeonruntime', `IG_Turn_${id}.png`),
+      path.join(PUBLIC_IMAGES, 'atb', `IG_Turn_${id}.png`),
+    ],
+    [
+      path.join(DATAMINE_ROOT, 'sprite', 'at_dungeonruntime', `IG_Turn_${id}_E.png`),
+      path.join(PUBLIC_IMAGES, 'atb', `IG_Turn_${id}_E.png`),
+    ],
+    // Full art
+    [
+      path.join(DATAMINE_ROOT, 'prefabs', 'ui', 'illust', `illust_${id}`, `IMG_${id}.png`),
+      path.join(PUBLIC_IMAGES, 'full', `IMG_${id}.png`),
+    ],
+    // Portrait
+    [
+      path.join(DATAMINE_ROOT, 'sprite', 'at_thumbnailcharacterruntime', `CT_${id}.png`),
+      path.join(PUBLIC_IMAGES, 'portrait', `CT_${id}.png`),
+    ],
+    // Skills
+    [
+      path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `Skill_First_${id}.png`),
+      path.join(PUBLIC_IMAGES, 'skills', `Skill_First_${id}.png`),
+    ],
+    [
+      path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `Skill_Second_${id}.png`),
+      path.join(PUBLIC_IMAGES, 'skills', `Skill_Second_${id}.png`),
+    ],
+    [
+      path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `Skill_Ultimate_${id}.png`),
+      path.join(PUBLIC_IMAGES, 'skills', `Skill_Ultimate_${id}.png`),
+    ],
+  ];
+
+  const results = await Promise.all(jobs.map(([src, dest]) => copyIfMissing(src, dest)));
+  return {
+    copied: results.filter(r => r === 'copied').length,
+    exists: results.filter(r => r === 'exists').length,
+    missing: results.filter(r => r === 'missing').length,
+  };
+}
+
 // ── Save ─────────────────────────────────────────────────────────────
 
 /**
@@ -1732,7 +1795,10 @@ export async function POST(req: NextRequest) {
       'utf-8',
     );
 
-    return NextResponse.json({ ok: true, id });
+    // Copy images if missing
+    const imagesCopied = await copyCharacterImages(id);
+
+    return NextResponse.json({ ok: true, id, imagesCopied });
   } catch (e) {
     const message = e instanceof Error ? e.message : 'Unknown error';
     return NextResponse.json({ error: message }, { status: 500 });
