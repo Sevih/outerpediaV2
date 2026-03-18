@@ -4,21 +4,12 @@ import path from 'path';
 import { stringifyCharacter, orderKeys, TOP_LEVEL_KEY_ORDER, SKILL_KEY_ORDER } from '@/app/api/admin/lib/character-json';
 import {
   LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang, type LangTexts,
-  buildTextMap, expandLang,
+  readTemplet, buildTextMap, expandLang,
   resolveElement, resolveClass, resolveSubClass,
   buildBuffIndex, resolveBuffPlaceholders, extractBuffDebuff, collectBuffGroupIds, collectBuffGroupIdsByPattern,
   resolveTarget, GIFT_MAP, resolveChainType, NON_OFFENSIVE_OVERRIDE,
   BASIC_STAR_OVERRIDE, detectTags, sortTags, SKILL_BUFF_FORCE,
 } from '@/app/admin/lib/config';
-
-const JSON_DIR = path.join(process.cwd(), 'data', 'admin', 'json');
-
-
-/** Read and parse one of the admin JSON templet files */
-async function readTemplet(name: string): Promise<{ columns: Record<string, string>; data: Record<string, string>[] }> {
-  const raw = await fs.readFile(path.join(JSON_DIR, `${name}.json`), 'utf-8');
-  return JSON.parse(raw);
-}
 
 /**
  * Reorder keys grouped by language: all EN first, then JP, then KR, then ZH.

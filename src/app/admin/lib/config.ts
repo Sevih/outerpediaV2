@@ -1,175 +1,23 @@
 /**
- * Admin-specific configuration
+ * Admin-specific configuration — character extractor
  *
- * Centralizes mappings and helpers used by the admin extractor / tools.
+ * Character-specific mappings and helpers.
+ * Generic text/enum/buff helpers are in ./text.ts
  */
 
-import { LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang } from '@/lib/i18n/config';
+// Re-export shared helpers so existing imports from config.ts keep working
+export {
+  LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang,
+  LANG_TO_COLUMN, type LangTexts,
+  readTemplet,
+  buildTextMap, expandLang,
+  resolveEnum, resolveElement, resolveClass, resolveSubClass,
+  buildBuffIndex, resolveBuffPlaceholders,
+} from './text';
 
-// ── Text column mapping ──────────────────────────────────────────────
-
-/** Maps our Lang keys to the column names found in Text*.json templet files */
-export const LANG_TO_COLUMN: Record<Lang, string> = {
-  en: 'English',
-  jp: 'Japanese',
-  kr: 'Korean',
-  zh: 'China_Simplified',
-};
-
-// ── LangTexts helpers ────────────────────────────────────────────────
-
-export type LangTexts = Record<Lang, string>;
-
-/** Build a lookup map from a Text*.json data array: IDSymbol → LangTexts */
-export function buildTextMap(data: Record<string, string>[]): Record<string, LangTexts> {
-  const map: Record<string, LangTexts> = {};
-  for (const row of data) {
-    const key = row.IDSymbol;
-    if (!key) continue;
-    const texts = {} as LangTexts;
-    for (const lang of LANGS) {
-      texts[lang] = row[LANG_TO_COLUMN[lang]] ?? '';
-    }
-    map[key] = texts;
-  }
-  return map;
-}
-
-/**
- * Expand a LangTexts into suffixed output fields.
- *
- * expandLang('Fullname', { en: 'K', jp: 'ケイ', kr: '케이', zh: '凯伊' })
- * → { Fullname: 'K', Fullname_jp: 'ケイ', Fullname_kr: '케이', Fullname_zh: '凯伊' }
- */
-export function expandLang(fieldName: string, texts: LangTexts | undefined, fallback = ''): Record<string, string> {
-  const result: Record<string, string> = {};
-  result[fieldName] = texts?.[DEFAULT_LANG] ?? fallback;
-  for (const lang of SUFFIX_LANGS) {
-    result[`${fieldName}_${lang}`] = texts?.[lang] ?? fallback;
-  }
-  return result;
-}
-
-// ── Enum resolution ──────────────────────────────────────────────────
-
-/**
- * Resolve a game enum to its display name via TextSystem.
- *
- *   resolveEnum(textSys, 'CET_FIRE', 'CET_', 'SYS_ELEMENT_') → 'Fire'
- *   resolveEnum(textSys, 'CCT_PRIEST', 'CCT_', 'SYS_CLASS_')  → 'Healer'
- */
-export function resolveEnum(textSys: Record<string, LangTexts>, raw: string, prefix: string, sysPrefix: string): string {
-  const stripped = raw.startsWith(prefix) ? raw.slice(prefix.length) : raw;
-  if (!stripped || stripped === 'NONE') return '';
-  return textSys[`${sysPrefix}${stripped}`]?.[DEFAULT_LANG] ?? stripped;
-}
-
-export function resolveElement(textSys: Record<string, LangTexts>, raw: string): string {
-  return resolveEnum(textSys, raw, 'CET_', 'SYS_ELEMENT_');
-}
-
-export function resolveClass(textSys: Record<string, LangTexts>, raw: string): string {
-  return resolveEnum(textSys, raw, 'CCT_', 'SYS_CLASS_');
-}
-
-export function resolveSubClass(textSys: Record<string, LangTexts>, raw: string): string {
-  return resolveEnum(textSys, raw, '', 'SYS_CLASS_NAME_');
-}
-
-// ── Buff placeholder resolution ──────────────────────────────────────
+// ── Buff/Debuff extraction (character-specific) ─────────────────────
 
 type BuffRow = Record<string, string>;
-
-/**
- * Index BuffTemplet data by BuffID → level → row.
- * Levels in the game data are sparse (typically 1, 3, 5).
- */
-export function buildBuffIndex(data: BuffRow[]): Map<string, Map<number, BuffRow>> {
-  const index = new Map<string, Map<number, BuffRow>>();
-  for (const row of data) {
-    const buffId = row.BuffID;
-    if (!buffId) continue;
-    const level = parseInt(row.Level) || 1;
-    let levels = index.get(buffId);
-    if (!levels) {
-      levels = new Map();
-      index.set(buffId, levels);
-    }
-    // Keep the first entry per level (some buffs have multiple entries per level)
-    if (!levels.has(level)) {
-      levels.set(level, row);
-    }
-  }
-  return index;
-}
-
-/**
- * Get buff value at a given skill level, falling back to the closest lower level.
- * Game data typically has levels 1, 3, 5 — levels 2/4 inherit from 1/3.
- */
-function getBuffAtLevel(levels: Map<number, BuffRow> | undefined, skillLevel: number): BuffRow | undefined {
-  if (!levels) return undefined;
-  // Try exact match, then walk down
-  for (let lv = skillLevel; lv >= 1; lv--) {
-    const row = levels.get(lv);
-    if (row) return row;
-  }
-  return undefined;
-}
-
-/**
- * Format a buff field value for display.
- * - CreateRate: always /10 with % (300 → "30%")
- * - Value: depends on ApplyingType — OAT_RATE means /10 with %, otherwise abs value
- * - TurnDuration: as-is
- */
-function formatBuffValue(type: string, raw: string | undefined, applyingType?: string): string {
-  if (!raw) return '';
-  const num = parseInt(raw);
-  if (isNaN(num)) return raw;
-  switch (type) {
-    case 'c': // CreateRate: stored as 300 → display "30%"
-      return `${num / 10}%`;
-    case 'v': // Value: OAT_RATE → percentage (/10 + %), otherwise absolute
-      if (applyingType === 'OAT_RATE') return `${Math.abs(num) / 10}%`;
-      return String(Math.abs(num));
-    case 't': // TurnDuration: as-is if numeric
-      return String(num);
-    default:
-      return raw;
-  }
-}
-
-// Matches [Buff_C_someId], [Buff_V_someId], [Buff_T_someId] (case insensitive)
-const BUFF_PLACEHOLDER_RE = /\[(?:buff|Buff)_(c|v|t)_([^\]]+)\]/gi;
-
-/**
- * Resolve all buff placeholders in a skill description for a given skill level.
- *
- * "[Buff_C_2000001_1_1]" at level 3 → "40%" (from BuffTemplet CreateRate)
- * "[Buff_V_2000003_1_2]" with OAT_RATE → "10%" (from BuffTemplet Value / 10)
- */
-export function resolveBuffPlaceholders(
-  text: string,
-  skillLevel: number,
-  buffIndex: Map<string, Map<number, BuffRow>>,
-): string {
-  return text.replace(BUFF_PLACEHOLDER_RE, (_match, type: string, buffId: string) => {
-    const levels = buffIndex.get(buffId);
-    const row = getBuffAtLevel(levels, skillLevel);
-    if (!row) return _match; // keep placeholder if not found
-
-    const t = type.toLowerCase();
-    switch (t) {
-      case 'c': return formatBuffValue('c', row.CreateRate);
-      case 'v': return formatBuffValue('v', row.Value, row.ApplyingType);
-      case 't': return formatBuffValue('t', row.TurnDuration);
-      default: return _match;
-    }
-  });
-}
-
-// ── Buff/Debuff extraction ────────────────────────────────────────────
 
 // Buff types to rename (game name → display name)
 const BUFF_TYPE_RENAME: Record<string, string> = {
@@ -185,7 +33,6 @@ const BUFF_TYPE_FORCE: Record<string, 'buff' | 'debuff'> = {
   'BT_SEALED_RESURRECTION': 'debuff',
 };
 
-// Buff types to exclude from extraction
 // Force add buff/debuff to specific skills (charId:skillType → { buff: [...], debuff: [...] })
 export const SKILL_BUFF_FORCE: Record<string, { buff?: string[]; debuff?: string[]; dual_buff?: string[]; dual_debuff?: string[] }> = {
   '2000065:SKT_FIRST': { buff: ['BT_EXTRA_ATTACK_ON_TURN_END'] },
@@ -264,7 +111,6 @@ export function extractBuffDebuff(
   const debuffs = new Set<string>();
 
   // Expand buff group IDs to include siblings with _Interruption IconName only
-  // (e.g. 2000035_2_1 → also scan 2000035_2_* but only if they have _Interruption)
   const expandedIds = new Set(buffGroupIds);
   for (const gid of buffGroupIds) {
     const parts = gid.split('_');
@@ -288,13 +134,12 @@ export function extractBuffDebuff(
 
       if (!type || BUFF_ID_BLACKLIST.has(groupId)) continue;
 
-      // Interruption IconName = custom mechanic, use IconName as tag regardless of type (before blacklist)
+      // Interruption IconName = custom mechanic, use IconName as tag regardless of type
       if (row.IconName?.includes('_Interruption')) {
         const iconTag = BUFF_TYPE_RENAME[row.IconName] ?? row.IconName;
         if (bdType === 'BUFF') buffs.add(iconTag);
         else if (bdType.startsWith('DEBUFF')) debuffs.add(iconTag);
         else {
-          // NEUTRAL with Interruption: use suffix _D for debuff, otherwise buff
           if (iconTag.endsWith('_D')) debuffs.add(iconTag);
           else buffs.add(iconTag);
         }
@@ -306,13 +151,11 @@ export function extractBuffDebuff(
         || type.startsWith('BT_DMG_TARGET_STAT')
       ) continue;
 
-      // BT_IMMEDIATELY_*: forced debuff (burn/bleed/poison/curse applied instantly)
       if (type.startsWith('BT_IMMEDIATELY')) {
         debuffs.add(type);
         break;
       }
 
-      // BT_HEAL_BASED_*: ON_TURN_END = sustained heal (BT_CONTINU_HEAL), otherwise skip
       if (type === 'BT_HEAL_BASED_TARGET' || type === 'BT_HEAL_BASED_CASTER') {
         if (row.BuffRemoveType === 'ON_TURN_END') {
           buffs.add('BT_CONTINU_HEAL');
@@ -320,46 +163,36 @@ export function extractBuffDebuff(
         break;
       }
 
-      // BT_STAT with TurnDuration -1 = permanent stacking mechanic, not a real buff
-      // BT_STAT with ON_SKILL_FINISH = temporary bonus on current skill, not a real buff
       if (type === 'BT_STAT' && (row.TurnDuration === '-1' || row.BuffRemoveType === 'ON_SKILL_FINISH')) break;
 
-      // BT_RUN_PASSIVE_*/BT_RUN_ACTIVE_*: use RemoveEffect as tag (distinguishes Counter/Revenge/Additive Attack/Agile Response)
       if ((type.startsWith('BT_RUN_PASSIVE_') || type.startsWith('BT_RUN_ACTIVE_')) && row.RemoveEffect) {
         buffs.add(row.RemoveEffect);
         break;
       }
 
-      // BT_DMG_REDUCE without Interruption = not a real buff, skip
       if (type === 'BT_DMG_REDUCE') break;
 
-      // BT_REVERSE_HEAL_BASED_*: debuff only when targeting enemies, skip on self
       if (type === 'BT_REVERSE_HEAL_BASED_TARGET' || type === 'BT_REVERSE_HEAL_BASED_CASTER') {
         if (row.TargetType?.startsWith('ENEMY')) debuffs.add(type);
         break;
       }
 
-      // BT_DOT_POISON with SYS_BUFF_POISON_2 = Corrosive Poison (variant)
       const resolvedType = (type === 'BT_DOT_POISON' && row.RemoveEffect === 'SYS_BUFF_POISON_2')
         ? 'BT_DOT_POISON2' : type;
 
-      // Only include StatType for BT_STAT (where it identifies the buffed stat)
-      // For other types, StatType is a scaling parameter
       const rawTag = resolvedType === 'BT_STAT' && statType && statType !== 'ST_NONE'
         ? `${resolvedType}|${statType}`
         : resolvedType;
       const tag = BUFF_TYPE_RENAME[rawTag] ?? rawTag;
 
-      // Check forced classification first, then game data
       const forced = BUFF_TYPE_FORCE[type];
       if (forced === 'buff' || (!forced && bdType === 'BUFF')) {
         buffs.add(tag);
       } else if (forced === 'debuff' || (!forced && bdType.startsWith('DEBUFF'))) {
         debuffs.add(tag);
       }
-      // NEUTRAL/NEUTRAL2 without force override are ignored
 
-      break; // Only need one entry per BuffID to get the Type
+      break;
     }
   }
 
@@ -368,8 +201,6 @@ export function extractBuffDebuff(
 
 /**
  * Collect all buff group IDs referenced by skill level entries.
- * Accepts a single row or an array of rows (all levels).
- * Searches all fields due to bytes parser column shifts.
  */
 export function collectBuffGroupIds(skillLevelRows: BuffRow | BuffRow[]): string[] {
   const rows = Array.isArray(skillLevelRows) ? skillLevelRows : [skillLevelRows];
@@ -379,7 +210,6 @@ export function collectBuffGroupIds(skillLevelRows: BuffRow | BuffRow[]): string
       if (!val || typeof val !== 'string') continue;
       for (const part of val.split(',')) {
         const trimmed = part.trim();
-        // Buff group IDs look like "2000001_1_1" — charId_skillNum_buffNum
         if (/^\d{7}_/.test(trimmed)) {
           ids.add(trimmed);
         }
@@ -391,7 +221,6 @@ export function collectBuffGroupIds(skillLevelRows: BuffRow | BuffRow[]): string
 
 /**
  * Collect buff group IDs from BuffTemplet by naming convention.
- * Used for chain passive ({charId}_chain_*) and backup ({charId}_backup_*).
  */
 export function collectBuffGroupIdsByPattern(charId: string, pattern: string, buffData: BuffRow[]): string[] {
   const prefix = `${charId}_${pattern}_`;
@@ -420,7 +249,6 @@ export function resolveTarget(rangeType: string): string | string[] | null {
   if (parts.length === 0) return null;
   const mapped = parts.map(p => p in TARGET_MAP ? TARGET_MAP[p] : p).filter((v): v is string => v != null);
   if (mapped.length === 0) return null;
-  // Deduplicate (e.g. "SINGLE,SINGLE" → "mono")
   const unique = [...new Set(mapped)];
   return unique.length === 1 ? unique[0] : unique;
 }
@@ -437,16 +265,6 @@ export const GIFT_MAP: Record<string, string> = {
 
 // ── Chain type extraction ────────────────────────────────────────────
 
-/**
- * Determine chain type from the chain passive skill description and icon.
- *
- * Priority:
- * 1. Description contains "Chain Starter Effect" → Start
- * 2. Description contains "Chain Companion Effect" → Join
- * 3. Description contains "Chain Finish Effect" → Finish
- * 4. IconName ends with _Start/_Join/_Finish → use that
- * 5. Fallback → Join
- */
 export function resolveChainType(chainDesc: string, chainIconName: string): string {
   if (chainDesc.includes('Chain Starter Effect')) return 'Start';
   if (chainDesc.includes('Chain Companion Effect')) return 'Join';
@@ -459,20 +277,15 @@ export function resolveChainType(chainDesc: string, chainIconName: string): stri
 
 // ── Data fixes ───────────────────────────────────────────────────────
 
-/** Workaround: game data has BasicStar stored in wrong column for some characters */
 export const BASIC_STAR_OVERRIDE: Record<string, number> = {
   '2000020': 3,
 };
 
-/**
- * Skills flagged ENEMY in game data but actually non-offensive (debuff/purge/passive).
- * Key: "charId:skillSlot" (e.g. "2000013:Skill_2")
- */
 export const NON_OFFENSIVE_OVERRIDE = new Set([
-  '2000013:Skill_2', // Dolly S2 — AoE debuff, no damage
-  '2000038:Skill_2', // Shu S2 — buff removal, no damage
-  '2000050:Skill_2', // Flamberge S2 — passive effect
-  '2000090:Skill_2', // Gnosis Dahlia S2 — passive/triggered
+  '2000013:Skill_2',
+  '2000038:Skill_2',
+  '2000050:Skill_2',
+  '2000090:Skill_2',
 ]);
 
 // ── Auto-detect tags ─────────────────────────────────────────────────
@@ -480,11 +293,6 @@ export const NON_OFFENSIVE_OVERRIDE = new Set([
 type RecruitRow = Record<string, string>;
 type ExtraRow = Record<string, string>;
 
-/**
- * Detect character tags from game data:
- * - ignore-defense: BT_STAT + ST_PIERCE_POWER_RATE + ON_SKILL_FINISH
- * - premium/seasonal/limited/collab: from RecruitGroupTemplet + CharacterExtraTemplet
- */
 export function detectTags(
   charId: string,
   buffData: BuffRow[],
@@ -493,8 +301,6 @@ export function detectTags(
 ): string[] {
   const tags: string[] = [];
 
-  // Recruit type detection from RecruitGroupTemplet
-  // EndDateTime contains the character ID for pickup banners
   const banner = recruitData.find(r =>
     r.EndDateTime === charId &&
     ['PREMIUM', 'SEASONAL', 'OUTER_FES'].includes(r.ShowDate_fallback1 ?? ''),
@@ -514,7 +320,6 @@ export function detectTags(
       }
     }
   } else {
-    // Fallback to CharacterExtraTemplet
     const extra = extraData.find(r => r.CharacterID === charId);
     if (extra) {
       const thumb = extra.ThumbnailEffect ?? '';
@@ -524,20 +329,17 @@ export function detectTags(
     }
   }
 
-  // ignore-defense: BT_STAT + ST_PIERCE_POWER_RATE from skills (ON_SKILL_FINISH) or EE (BID_CEQUIP)
   const hasIgnoreDefense = buffData.some(r =>
     (r.BuffID?.startsWith(`${charId}_`) && r.Type === 'BT_STAT' && r.StatType === 'ST_PIERCE_POWER_RATE' && r.BuffRemoveType === 'ON_SKILL_FINISH')
     || (r.BuffID?.startsWith(`BID_CEQUIP_${charId}`) && r.StatType === 'ST_PIERCE_POWER_RATE'),
   );
   if (hasIgnoreDefense) tags.push('ignore-defense');
 
-  // core-fusion: 2700xxx characters
   if (charId.startsWith('2700')) tags.push('core-fusion');
 
   return tags;
 }
 
-/** Canonical tag order for consistent output */
 const TAG_ORDER = ['premium', 'seasonal', 'limited', 'collab', 'ignore-defense', 'free', 'core-fusion'];
 export function sortTags(tags: string[]): string[] {
   return [...tags].sort((a, b) => {
@@ -546,6 +348,3 @@ export function sortTags(tags: string[]): string[] {
     return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
   });
 }
-
-// Re-export for convenience
-export { LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang };

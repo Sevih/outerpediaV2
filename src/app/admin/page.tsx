@@ -36,7 +36,7 @@ const CATEGORIES: CategoryGroup[] = [
     label: 'Extractor',
     cards: [
       { name: 'Characters', description: 'Extract character data from game files', href: '/admin/extractor/characters', dataKey: 'character' },
-      { name: 'Equipment', description: 'Extract equipment data', href: '/admin/extractor/equipment', disabled: true },
+      { name: 'Equipment', description: 'Extract equipment data', href: '/admin/extractor/equipment' },
       { name: 'Bosses', description: 'Extract boss data', href: '/admin/extractor/bosses', disabled: true },
       { name: 'Buffs', description: 'Extract buff/debuff data', href: '/admin/extractor/buffs', disabled: true },
     ],
@@ -45,7 +45,7 @@ const CATEGORIES: CategoryGroup[] = [
     label: 'Editor',
     cards: [
       { name: 'Characters', description: 'Edit character JSON files', href: '/admin/editor/characters', dataKey: 'character' },
-      { name: 'Equipment', description: 'Edit equipment JSON files', href: '/admin/editor/equipment', disabled: true },
+      { name: 'Equipment', description: 'Edit equipment JSON files', href: '/admin/editor/equipment' },
       { name: 'Bosses', description: 'Edit boss JSON files', href: '/admin/editor/bosses', disabled: true },
       { name: 'Buffs', description: 'Edit buff/debuff JSON files', href: '/admin/editor/buffs', disabled: true },
     ],
