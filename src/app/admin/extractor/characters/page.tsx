@@ -572,6 +572,8 @@ export default function ExtractorPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [comparing, setComparing] = useState(false);
   const [compareResult, setCompareResult] = useState<CompareResult | null>(null);
+  const [extracting, setExtracting] = useState(false);
+  const [extractProgress, setExtractProgress] = useState({ done: 0, total: 0, errors: 0 });
 
   const loadList = useCallback(() => {
     fetch('/api/admin/extractor?action=list')
@@ -601,6 +603,38 @@ export default function ExtractorPage() {
     } finally {
       setComparing(false);
     }
+  }
+
+  async function handleExtractAll() {
+    if (!confirm(`Extract all ${characters.length} characters? This will re-extract game data for every character.`)) return;
+    setExtracting(true);
+    setExtractProgress({ done: 0, total: characters.length, errors: 0 });
+    setSelectedId(null);
+    setCompareResult(null);
+
+    let done = 0;
+    let errors = 0;
+    // Process in batches of 5 to avoid overwhelming the server
+    const batch = 5;
+    for (let i = 0; i < characters.length; i += batch) {
+      const chunk = characters.slice(i, i + batch);
+      const results = await Promise.allSettled(
+        chunk.map(c =>
+          fetch('/api/admin/extractor', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: c.id, manual: {} }),
+          }).then(r => { if (!r.ok) throw new Error(); })
+        )
+      );
+      done += chunk.length;
+      errors += results.filter(r => r.status === 'rejected').length;
+      setExtractProgress({ done, total: characters.length, errors });
+    }
+
+    setExtracting(false);
+    loadList();
+    handleCompare();
   }
 
   const filtered = characters.filter(c => {
@@ -634,8 +668,15 @@ export default function ExtractorPage() {
         <div className="mb-3 flex items-center justify-between gap-2">
           <h1 className="text-xl font-bold">Extractor</h1>
           <button
+            onClick={handleExtractAll}
+            disabled={extracting || comparing}
+            className="shrink-0 rounded bg-blue-600/80 px-2.5 py-1 text-xs font-semibold transition hover:bg-blue-500 disabled:opacity-50"
+          >
+            {extracting ? `${extractProgress.done}/${extractProgress.total}` : 'Extract All'}
+          </button>
+          <button
             onClick={handleCompare}
-            disabled={comparing}
+            disabled={comparing || extracting}
             className="shrink-0 rounded bg-amber-600/80 px-2.5 py-1 text-xs font-semibold transition hover:bg-amber-500 disabled:opacity-50"
           >
             {comparing ? 'Comparing...' : 'Compare All'}
