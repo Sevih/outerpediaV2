@@ -113,6 +113,8 @@ export default function EventTool() {
       <div className="space-y-3">
         {events.map(({ meta, Page, status }) => {
           const isExpanded = expandedSlug === meta.slug;
+          const isUpcoming = status === 'upcoming';
+          const displayTitle = isUpcoming ? t('tools.event.status.upcoming') + ' — ' + t(`tools.event.type.${meta.type}` as Parameters<typeof t>[0]) : meta.title[lang];
 
           return (
             <article
@@ -137,7 +139,7 @@ export default function EventTool() {
 
                 {/* Title */}
                 <span className="min-w-0 flex-1 truncate text-sm text-zinc-100">
-                  {meta.title[lang]}
+                  {displayTitle}
                 </span>
 
                 {/* Date range */}
@@ -163,10 +165,10 @@ export default function EventTool() {
                   {/* Auto header from meta */}
                   <header className="space-y-4 text-center">
                     <h2 className="mx-auto text-3xl font-extrabold tracking-tight text-zinc-100">
-                      {meta.title[lang]}
+                      {displayTitle}
                     </h2>
 
-                    {meta.cover && (
+                    {meta.cover && !isUpcoming && (
                       <div className="relative mx-auto h-48 w-full max-w-md">
                         <Image
                           src={meta.cover}
@@ -190,8 +192,12 @@ export default function EventTool() {
                     </div>
                   </header>
 
-                  {/* Rich content */}
-                  <Page />
+                  {/* Rich content or upcoming placeholder */}
+                  {status === 'upcoming' ? (
+                    <p className="py-8 text-center text-zinc-400">{t('tools.event.upcoming_placeholder')}</p>
+                  ) : (
+                    <Page />
+                  )}
                 </div>
               )}
             </article>

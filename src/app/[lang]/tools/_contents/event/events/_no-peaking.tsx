@@ -118,8 +118,8 @@ export default {
     cover: '/images/events/gtfo.webp',
     type: 'community',
     organizer: 'Outerpedia',
-    start: '2020-10-09T00:00:00Z',
-    end: '2120-10-15T23:59:59Z',
+    start: '2025-10-09T00:00:00Z',
+    end: '2025-10-15T23:59:59Z',
   },
   Page,
 } satisfies EventDef;

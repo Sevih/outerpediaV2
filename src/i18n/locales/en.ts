@@ -231,6 +231,7 @@ const en = {
   'tools.event.status.hidden': 'Hidden',
   'tools.event.organizer': 'Organizer',
   'tools.event.link': 'Event link',
+  'tools.event.upcoming_placeholder': 'Details will be revealed when the event goes live. Stay tuned!',
   'tools.event.empty': 'No events at the moment.',
   'tools.team-planner': 'Team Planner',
   'tools.team-planner.desc': 'Build and share team compositions for any content.',

@@ -27,19 +27,20 @@ const i18n = {
       "Outerplane's official channel already has skill introduction videos for many 3-star heroes, but there's more to them than that. Show off their lobby poses, expressions, costumes, best voice lines, and more!",
     themeShowcaseTitle: 'Showcase!',
     themeShowcaseDesc:
-      'How do we build our heroes? What can they really accomplish? Special Request, Irregulars, Adventurer License, Arena — anything goes!',
+      'How do we build our heroes? What can they really accomplish? Special Request, Irregulars, Adventurer License, Arena, RTA — anything goes!',
     themeActionTitle: 'Lights, Camera, Action!',
     themeActionDesc:
       "Funny lobby compositions, meme teams, fanfiction — it's a game, have fun with it!",
     timeline: 'Timeline',
+    timelineOpen: 'Submissions open:',
+    timelineOpenDate: 'March 24 (00:00 UTC)',
     timelineDeadline: 'Submission deadline:',
-    timelineDeadlineDate: 'February 01 (00:00 UTC)',
+    timelineDeadlineDate: 'April 28 (00:00 UTC)',
     timelineVote: 'Community vote & final tally:',
-    timelineVoteDate: 'February 14 (00:00 UTC)',
+    timelineVoteDate: 'May 05 (00:00 UTC)',
     timelinePrize: 'Prize distribution (target):',
-    timelinePrizeDate: 'February 28 (UTC)',
-    timelineNote:
-      "Submissions will remain open after the deadline to be featured in Outerpedia's upcoming Gallery.",
+    timelinePrizeDate: 'May 12 (UTC)',
+    timelineAnniversary: "This event coincides with Outerpedia's 1st anniversary on April 29 — celebrate with us!",
     rules: 'Rules',
     ruleFootage: 'Only use in-game footage in the video.',
     ruleFacecam: 'Face cam is allowed for guide content.',
@@ -83,19 +84,20 @@ const i18n = {
       'Outerplaneの公式チャンネルには多くの3つ星ヒーローのスキル紹介動画がありますが、それだけではありません。ロビーポーズ、表情、コスチューム、ベストボイスなどを見せてください！',
     themeShowcaseTitle: 'ショーケース！',
     themeShowcaseDesc:
-      'ヒーローをどう育成する？彼らの本当の実力は？特別依頼、イレギュラーズ、冒険者ライセンス、アリーナ — 何でもOK！',
+      'ヒーローをどう育成する？彼らの本当の実力は？特別依頼、イレギュラーズ、冒険者ライセンス、アリーナ、RTA — 何でもOK！',
     themeActionTitle: 'ライト、カメラ、アクション！',
     themeActionDesc:
       '面白いロビー構成、ミームチーム、ファンフィクション — ゲームだから楽しもう！',
     timeline: 'スケジュール',
+    timelineOpen: '提出開始：',
+    timelineOpenDate: '3月24日 (00:00 UTC)',
     timelineDeadline: '提出期限：',
-    timelineDeadlineDate: '2月1日 (00:00 UTC)',
+    timelineDeadlineDate: '4月28日 (00:00 UTC)',
     timelineVote: 'コミュニティ投票＆最終集計：',
-    timelineVoteDate: '2月14日 (00:00 UTC)',
+    timelineVoteDate: '5月5日 (00:00 UTC)',
     timelinePrize: '賞品配布（予定）：',
-    timelinePrizeDate: '2月28日 (UTC)',
-    timelineNote:
-      '締め切り後もOuterpediaのギャラリーに掲載するための提出を受け付けます。',
+    timelinePrizeDate: '5月12日 (UTC)',
+    timelineAnniversary: 'このイベントはOuterpediaの1周年記念（4月29日）と重なります — 一緒にお祝いしましょう！',
     rules: 'ルール',
     ruleFootage: '動画にはゲーム内の映像のみを使用してください。',
     ruleFacecam: 'ガイドコンテンツではフェイスカメラの使用が許可されています。',
@@ -139,19 +141,20 @@ const i18n = {
       'Outerplane 공식 채널에는 많은 3성 히어로의 스킬 소개 영상이 있지만, 그게 전부가 아닙니다. 로비 포즈, 표정, 코스튬, 최고의 보이스 등을 보여주세요!',
     themeShowcaseTitle: '쇼케이스!',
     themeShowcaseDesc:
-      '히어로를 어떻게 육성하나요? 그들이 정말로 달성할 수 있는 것은? 특별 의뢰, 이레귤러즈, 모험가 라이선스, 아레나 — 무엇이든 OK!',
+      '히어로를 어떻게 육성하나요? 그들이 정말로 달성할 수 있는 것은? 특별 의뢰, 이레귤러즈, 모험가 라이선스, 아레나, RTA — 무엇이든 OK!',
     themeActionTitle: '라이트, 카메라, 액션!',
     themeActionDesc:
       '재미있는 로비 구성, 밈 팀, 팬픽션 — 게임이니까 즐기세요!',
     timeline: '일정',
+    timelineOpen: '제출 시작:',
+    timelineOpenDate: '3월 24일 (00:00 UTC)',
     timelineDeadline: '제출 마감:',
-    timelineDeadlineDate: '2월 1일 (00:00 UTC)',
+    timelineDeadlineDate: '4월 28일 (00:00 UTC)',
     timelineVote: '커뮤니티 투표 & 최종 집계:',
-    timelineVoteDate: '2월 14일 (00:00 UTC)',
+    timelineVoteDate: '5월 5일 (00:00 UTC)',
     timelinePrize: '상품 배포 (예정):',
-    timelinePrizeDate: '2월 28일 (UTC)',
-    timelineNote:
-      '마감 후에도 Outerpedia 갤러리 게재를 위한 제출은 계속 받습니다.',
+    timelinePrizeDate: '5월 12일 (UTC)',
+    timelineAnniversary: '이 이벤트는 Outerpedia 1주년(4월 29일)과 함께합니다 — 함께 축하해요!',
     rules: '규칙',
     ruleFootage: '영상에는 게임 내 화면만 사용하세요.',
     ruleFacecam: '가이드 콘텐츠에는 페이스캠이 허용됩니다.',
@@ -195,19 +198,20 @@ const i18n = {
       'Outerplane官方频道已经有许多3星英雄的技能介绍视频，但他们的魅力远不止于此。展示他们的大厅姿势、表情、服装、最佳台词等！',
     themeShowcaseTitle: '展示！',
     themeShowcaseDesc:
-      '我们如何培养英雄？他们真正能做到什么？特别委托、异常者、冒险家执照、竞技场 — 什么都行！',
+      '我们如何培养英雄？他们真正能做到什么？特别委托、异常者、冒险家执照、竞技场、RTA — 什么都行！',
     themeActionTitle: '灯光、摄影、开拍！',
     themeActionDesc:
       '有趣的大厅组合、梗队、同人小说 — 这是游戏，尽情享受吧！',
     timeline: '时间线',
+    timelineOpen: '提交开放：',
+    timelineOpenDate: '3月24日 (00:00 UTC)',
     timelineDeadline: '提交截止：',
-    timelineDeadlineDate: '2月1日 (00:00 UTC)',
+    timelineDeadlineDate: '4月28日 (00:00 UTC)',
     timelineVote: '社区投票和最终统计：',
-    timelineVoteDate: '2月14日 (00:00 UTC)',
+    timelineVoteDate: '5月5日 (00:00 UTC)',
     timelinePrize: '奖品发放（预计）：',
-    timelinePrizeDate: '2月28日 (UTC)',
-    timelineNote:
-      '截止日期后仍可提交，以便在Outerpedia即将推出的画廊中展示。',
+    timelinePrizeDate: '5月12日 (UTC)',
+    timelineAnniversary: '本活动恰逢Outerpedia一周年纪念日（4月29日）— 与我们一起庆祝吧！',
     rules: '规则',
     ruleFootage: '视频中只能使用游戏内画面。',
     ruleFacecam: '攻略内容允许使用面部摄像头。',
@@ -267,15 +271,15 @@ const Page = () => {
         <h3 className="mb-3 text-2xl font-bold">{l.theme}</h3>
         <div className="space-y-4 text-zinc-300">
           <div>
-            <p className="font-semibold text-white">{l.themeIntroTitle}</p>
+            <h4 className="font-semibold text-white">{l.themeIntroTitle}</h4>
             <p>{l.themeIntroDesc}</p>
           </div>
           <div>
-            <p className="font-semibold text-white">{l.themeShowcaseTitle}</p>
+            <h4 className="font-semibold text-white">{l.themeShowcaseTitle}</h4>
             <p>{l.themeShowcaseDesc}</p>
           </div>
           <div>
-            <p className="font-semibold text-white">{l.themeActionTitle}</p>
+            <h4 className="font-semibold text-white">{l.themeActionTitle}</h4>
             <p>{l.themeActionDesc}</p>
           </div>
         </div>
@@ -284,11 +288,12 @@ const Page = () => {
       <section>
         <h3 className="mb-3 text-2xl font-bold">{l.timeline}</h3>
         <ul className="list-disc space-y-1 pl-6 text-zinc-300">
+          <li>{l.timelineOpen} <strong>{l.timelineOpenDate}</strong></li>
           <li>{l.timelineDeadline} <strong>{l.timelineDeadlineDate}</strong></li>
           <li>{l.timelineVote} <strong>{l.timelineVoteDate}</strong></li>
           <li>{l.timelinePrize} <strong>{l.timelinePrizeDate}</strong></li>
         </ul>
-        <p className="mt-2 text-zinc-400">{l.timelineNote}</p>
+        <p className="mt-2 text-amber-400/90">{l.timelineAnniversary}</p>
       </section>
 
       <section>
@@ -313,7 +318,7 @@ const Page = () => {
         <h3 className="text-2xl font-bold">{l.entries}</h3>
         <p className="text-zinc-300">{l.entriesDesc}</p>
         <a
-          href="https://forms.gle/your-form-link"
+          href="https://forms.gle/MHb8S3DwjRtRZkGSA"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block rounded-lg bg-rose-600 px-6 py-3 font-semibold text-white transition hover:bg-rose-500"
@@ -327,18 +332,18 @@ const Page = () => {
 
 export default {
   meta: {
-    slug: '20260201-video',
+    slug: '20260324-video',
     title: {
-      en: 'Hero Video Event - Feb. 2026',
-      jp: 'ヒーロー動画イベント - 2026年2月',
-      kr: '히어로 영상 이벤트 - 2026년 2월',
-      zh: '英雄视频活动 - 2026年2月',
+      en: 'Hero Video Event - Spring 2026',
+      jp: 'ヒーロー動画イベント - 2026年春',
+      kr: '히어로 영상 이벤트 - 2026년 봄',
+      zh: '英雄视频活动 - 2026年春季',
     },
     cover: '/images/events/default.webp',
     type: 'contest',
     organizer: 'Outerpedia / EvaMains',
-    start: '2026-02-01T00:00:00Z',
-    end: '2026-02-14T00:00:00Z',
+    start: '2026-03-24T00:00:00Z',
+    end: '2026-04-28T00:00:00Z',
   },
   Page,
 } satisfies EventDef;

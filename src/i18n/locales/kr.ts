@@ -231,6 +231,7 @@ const kr: Record<TranslationKey, string> = {
   'tools.event.status.hidden': 'Hidden',
   'tools.event.organizer': '주최자',
   'tools.event.link': '이벤트 링크',
+  'tools.event.upcoming_placeholder': '이벤트가 시작되면 상세 내용이 공개됩니다. 기대해 주세요!',
   'tools.event.empty': '현재 이벤트가 없습니다.',
   'tools.team-planner': '팀 플래너',
   'tools.team-planner.desc': '모든 콘텐츠에 맞는 팀 구성을 만들고 공유하세요.',
