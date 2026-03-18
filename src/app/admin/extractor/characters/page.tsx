@@ -124,9 +124,10 @@ function DiffTable({ diffs }: { diffs: Diff[] }) {
 
 // ── Character detail panel ───────────────────────────────────────────
 
-function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
+function CharacterDetail({ id, name, rarity, exists, onSaved, initialDiffs }: {
   id: string;
   name: string;
+  rarity: number;
   exists: boolean;
   onSaved: () => void;
   initialDiffs?: Diff[];
@@ -235,7 +236,7 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
           id,
           manual: {
             rank,
-            rank_pvp: rankPvp,
+            rank_pvp: rarity > 2 ? rankPvp : undefined,
             role,
             isFree,
             isLimited,
@@ -747,6 +748,7 @@ export default function ExtractorPage() {
             key={selectedId}
             id={selectedId}
             name={selectedChar.name}
+            rarity={selectedChar.rarity}
             exists={selectedChar.exists}
             onSaved={loadList}
             initialDiffs={compareResult?.results?.find(r => r.id === selectedId)?.diffs}

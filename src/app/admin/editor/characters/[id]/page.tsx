@@ -96,10 +96,10 @@ function EffectMultiSelect({ label, selected, options, onChange, type }: {
     <div className="flex flex-col gap-1.5">
       <span className="text-xs font-semibold uppercase tracking-wider text-zinc-500">{label}</span>
       <div className="flex flex-wrap gap-1 min-h-7">
-        {selected.map(id => {
+        {selected.map((id, idx) => {
           const opt = options.find(o => o.id === id);
           return (
-            <span key={id} className={`flex items-center gap-1 rounded-md ${pillBg} py-0.5 pr-1.5 pl-0.5 text-[11px] font-semibold text-white`}>
+            <span key={`${id}-${idx}`} className={`flex items-center gap-1 rounded-md ${pillBg} py-0.5 pr-1.5 pl-0.5 text-[11px] font-semibold text-white`}>
               {opt?.icon && <EffectIcon icon={opt.icon} type={type} size={18} />}
               {opt?.label ?? id}
               <button onClick={() => toggle(id)} className="ml-0.5 text-white/50 hover:text-red-400">×</button>
@@ -119,9 +119,9 @@ function EffectMultiSelect({ label, selected, options, onChange, type }: {
         />
         {open && filtered.length > 0 && (
           <div className="absolute z-10 mt-1 max-h-48 w-full overflow-y-auto rounded-lg border border-white/10 bg-zinc-900 shadow-xl">
-            {filtered.slice(0, 50).map(o => (
+            {filtered.slice(0, 50).map((o, idx) => (
               <button
-                key={o.id}
+                key={`${o.id}-${idx}`}
                 onMouseDown={e => { e.preventDefault(); toggle(o.id); }}
                 className={`flex w-full items-center gap-2 px-2.5 py-1.5 text-left text-sm hover:bg-zinc-800 ${selected.includes(o.id) ? 'text-blue-400' : ''}`}
               >
@@ -185,9 +185,9 @@ function TagMultiSelect({ selected, options, onChange }: {
         />
         {open && filtered.length > 0 && (
           <div className="absolute z-10 mt-1 max-h-48 w-full overflow-y-auto rounded-lg border border-white/10 bg-zinc-900 shadow-xl">
-            {filtered.map(o => (
+            {filtered.map((o, idx) => (
               <button
-                key={o.id}
+                key={`${o.id}-${idx}`}
                 onMouseDown={e => { e.preventDefault(); toggle(o.id); }}
                 className={`flex w-full items-center gap-2 px-2.5 py-1.5 text-left text-sm hover:bg-zinc-800 ${selected.includes(o.id) ? 'text-blue-400' : ''}`}
               >
@@ -534,7 +534,7 @@ export default function CharacterEditPage() {
 
       {/* ── Save bar ── */}
       <div className="sticky top-0 z-30 -mx-4 flex items-center gap-3 bg-black/60 px-4 py-3 backdrop-blur md:-mx-6 md:px-6">
-        <button onClick={() => router.push('/admin/characters')} className="text-sm text-zinc-400 hover:text-zinc-100">
+        <button onClick={() => router.push('/admin/editor/characters')} className="text-sm text-zinc-400 hover:text-zinc-100">
           ← Back
         </button>
         <div className="flex-1" />

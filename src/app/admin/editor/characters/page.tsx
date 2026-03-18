@@ -72,7 +72,7 @@ export default async function CharactersListPage() {
                 <td className="px-3 py-2">{c.Class}</td>
                 <td className="px-3 py-2 font-bold">{c.rank}</td>
                 <td className="px-3 py-2">
-                  <a href={`/admin/characters/${c.ID}`} className="text-blue-400 hover:underline">
+                  <a href={`/admin/editor/characters/${c.ID}`} className="text-blue-400 hover:underline">
                     Edit
                   </a>
                 </td>

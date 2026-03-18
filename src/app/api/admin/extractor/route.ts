@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
+import { stringifyCharacter, orderKeys, TOP_LEVEL_KEY_ORDER, SKILL_KEY_ORDER } from '@/app/api/admin/lib/character-json';
 import {
   LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang, type LangTexts,
   buildTextMap, expandLang,
@@ -18,26 +19,6 @@ async function readTemplet(name: string): Promise<{ columns: Record<string, stri
   const raw = await fs.readFile(path.join(JSON_DIR, `${name}.json`), 'utf-8');
   return JSON.parse(raw);
 }
-
-// ── Key order for output JSON ────────────────────────────────────────
-
-const TOP_LEVEL_KEY_ORDER = [
-  'ID', 'Fullname', 'Fullname_jp', 'Fullname_kr', 'Fullname_zh',
-  'Rarity', 'Element', 'Class', 'SubClass',
-  'rank', 'rank_pvp', 'role', 'limited', 'rank_by_transcend', 'role_by_transcend', 'tags', 'skill_priority',
-  'Chain_Type', 'gift', 'video',
-  'VoiceActor', 'VoiceActor_jp', 'VoiceActor_kr', 'VoiceActor_zh',
-  'hasCoreFusion', 'coreFusionId',
-  'fusionType', 'originalCharacter', 'fusionRequirements', 'costPerLevel',
-  'transcend', 'skills',
-];
-
-const SKILL_KEY_ORDER = [
-  'NameIDSymbol', 'IconName', 'SkillType',
-  'name', 'name_jp', 'name_kr', 'name_zh',
-  'true_desc_levels', 'enhancement',
-  'wgr', 'cd', 'buff', 'debuff', 'offensive', 'target',
-];
 
 /**
  * Reorder keys grouped by language: all EN first, then JP, then KR, then ZH.
@@ -84,18 +65,6 @@ function groupByLang(obj: Record<string, string>): Record<string, string> {
   return result;
 }
 
-/** Reorder an object's keys according to a specified order, keeping extra keys at the end */
-function orderKeys<T extends Record<string, unknown>>(obj: T, keyOrder: string[]): T {
-  const ordered = {} as Record<string, unknown>;
-  for (const key of keyOrder) {
-    if (key in obj) ordered[key] = obj[key];
-  }
-  // Append any extra keys not in the order
-  for (const key of Object.keys(obj)) {
-    if (!(key in ordered)) ordered[key] = obj[key];
-  }
-  return ordered as T;
-}
 
 /**
  * GET /api/admin/extractor
@@ -1695,8 +1664,10 @@ export async function POST(req: NextRequest) {
     const existingPath = path.join(process.cwd(), 'data', 'character', `${id}.json`);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let existing: Record<string, any> = {};
+    let existingRaw: string | undefined;
     try {
-      existing = JSON.parse(await fs.readFile(existingPath, 'utf-8'));
+      existingRaw = await fs.readFile(existingPath, 'utf-8');
+      existing = JSON.parse(existingRaw);
     } catch { /* new character */ }
 
     // Merge skills: extracted + preserve existing buff/debuff/true_desc/burnEffect
@@ -1728,7 +1699,7 @@ export async function POST(req: NextRequest) {
     const character = orderKeys({
       ...info,
       rank: manual.rank ?? existing.rank ?? null,
-      rank_pvp: manual.rank_pvp ?? existing.rank_pvp ?? null,
+      rank_pvp: info.Rarity > 2 ? (manual.rank_pvp ?? existing.rank_pvp ?? null) : undefined,
       role: manual.role ?? existing.role ?? null,
       // tags: auto-detected from info + 'free' from manual checkbox
       tags: (() => {
@@ -1754,7 +1725,7 @@ export async function POST(req: NextRequest) {
     await fs.mkdir(outputDir, { recursive: true });
     await fs.writeFile(
       path.join(outputDir, `${id}.json`),
-      JSON.stringify(character, null, 2) + '\n',
+      stringifyCharacter(character, existingRaw),
       'utf-8',
     );
 
