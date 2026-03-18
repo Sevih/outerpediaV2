@@ -24,7 +24,7 @@ export default async function Footer() {
           className="flex flex-wrap justify-center gap-4"
         >
           <Link
-            href="https://github.com/Sevih/outerpedia"
+            href="https://github.com/Sevih/outerpediaV2"
             aria-label="GitHub repository for Outerpedia"
             target="_blank"
             rel="noopener noreferrer"

@@ -1,4 +1,4 @@
-![Next.js](https://img.shields.io/badge/Next.js-16.1-blue?logo=nextdotjs)
+![Next.js](https://img.shields.io/badge/Next.js-16.1.7-blue?logo=nextdotjs)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
 ![React](https://img.shields.io/badge/React-19.2-61dafb?logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?logo=tailwindcss)
@@ -22,7 +22,7 @@
 
 ## Features
 
-### Character Database (115 Characters)
+### Character Database (116 Characters)
 - Complete character information including stats, skills, and abilities
 - Detailed skill descriptions with cooldowns and wave gain rates
 - Exclusive Equipment (EE) data with effects and ranks
@@ -83,7 +83,7 @@
 ### Core Technologies
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| [Next.js](https://nextjs.org/) | 16.1 | App Router, React Server Components |
+| [Next.js](https://nextjs.org/) | 16.1.7 | App Router, React Server Components |
 | [React](https://react.dev/) | 19.2 | UI Framework |
 | [TypeScript](https://www.typescriptlang.org/) | 5 | Type Safety |
 | [Tailwind CSS](https://tailwindcss.com/) | 4 | Utility-First Styling (CSS-based config) |
@@ -127,15 +127,15 @@ Outerpedia features a **subdomain-based multi-language architecture** with type-
 
 ### Prerequisites
 
-- Node.js 18+ (recommended: 20+)
+- Node.js 20+ (>= 20.9.0)
 - npm
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/Sevih/outerpedia.git
-cd outerpedia
+git clone https://github.com/Sevih/outerpediaV2.git
+cd outerpediaV2
 
 # Install dependencies
 npm install
@@ -209,7 +209,7 @@ This executes:
 ```
 outerpedia-v2/
 ├── data/                         # Game data (JSON) — NOT inside src/
-│   ├── character/                # 115 character files
+│   ├── character/                # 116 character files
 │   ├── boss/                     # Boss data
 │   ├── equipment/                # Equipment data
 │   ├── effects/                  # Buff/debuff effects
