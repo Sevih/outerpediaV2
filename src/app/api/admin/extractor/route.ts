@@ -128,6 +128,9 @@ export async function GET(req: NextRequest) {
         return await handleTranscend(id);
       case 'compare':
         return await handleCompare();
+      case 'inspect':
+        if (!id) return NextResponse.json({ error: 'Missing id' }, { status: 400 });
+        return await handleInspect(id);
       default:
         return NextResponse.json({ error: `Unknown action: ${action}` }, { status: 400 });
     }
@@ -1419,6 +1422,225 @@ async function handleCompare() {
     ok: existingFiles.length - results.length,
     results,
   });
+}
+
+// ── Inspect (new character deep scan) ────────────────────────────────
+
+async function handleInspect(id: string) {
+  const sections: Record<string, unknown> = {};
+
+  // 1. CharacterTemplet — basic stats & skill IDs
+  const charTemplet = await readTemplet('CharacterTemplet');
+  const charRow = charTemplet.data.find((r) => r.ModelID === id);
+  if (!charRow) {
+    return NextResponse.json({ error: `Character ${id} not found in CharacterTemplet` }, { status: 404 });
+  }
+
+  const sids: string[] = [];
+  for (let i = 1; i <= 23; i++) {
+    const s = charRow[`Skill_${i}`];
+    if (s) sids.push(s);
+  }
+
+  const textSys = await readTemplet('TextSystem');
+  const textSysMap = buildTextMap(textSys.data);
+
+  sections.characterTemplet = {
+    Element: resolveElement(textSysMap, charRow.Element ?? ''),
+    Class: resolveClass(textSysMap, charRow.Class ?? ''),
+    SubClass: resolveSubClass(textSysMap, charRow.SubClass ?? ''),
+    BasicStar: charRow.BasicStar,
+    skillIds: sids,
+  };
+
+  // 2. CharacterExtraTemplet
+  const extraTemplet = await readTemplet('CharacterExtraTemplet');
+  const extraRow = extraTemplet.data.find((r) => r.CharacterID === id);
+  if (extraRow) sections.characterExtra = extraRow;
+
+  // 3. Text entries (TextCharacter, TextSystem, TextSkill, TextItem)
+  const textEntries: Record<string, string[]> = {};
+  for (const tName of ['TextCharacter', 'TextSystem', 'TextSkill', 'TextItem']) {
+    const { data } = await readTemplet(tName);
+    const matches = data.filter((r) =>
+      Object.values(r).some((v) => typeof v === 'string' && v.includes(id)),
+    );
+    if (matches.length > 0) {
+      textEntries[tName] = matches.map((r) => {
+        const sym = r.IDSymbol ?? r.ID ?? '';
+        const en = r.English ?? '';
+        return `${sym}: ${en.substring(0, 150)}`;
+      });
+    }
+  }
+  if (Object.keys(textEntries).length > 0) sections.texts = textEntries;
+
+  // 4. CharacterSkillTemplet — check if skills exist
+  const skillTemplet = await readTemplet('CharacterSkillTemplet');
+  const charSkills = skillTemplet.data.filter((r) => sids.includes(r.NameIDSymbol));
+  if (charSkills.length > 0) {
+    sections.skills = charSkills.map((r) => ({
+      id: r.NameIDSymbol,
+      type: r.SkillType,
+      requireAP: r.RequireAP,
+    }));
+  }
+
+  // 5. CharacterSkillLevelTemplet — check for level data
+  const skillLevelTemplet = await readTemplet('CharacterSkillLevelTemplet');
+  const charSkillLevels = skillLevelTemplet.data.filter((r) => sids.includes(r.SkillID));
+  if (charSkillLevels.length > 0) {
+    sections.skillLevels = `${charSkillLevels.length} entries across ${new Set(charSkillLevels.map((r) => r.SkillID)).size} skills`;
+  }
+
+  // 6. BuffTemplet — search for any buff with this character ID
+  const buffTemplet = await readTemplet('BuffTemplet');
+  const charBuffs = buffTemplet.data.filter((r) => r.BuffID && r.BuffID.startsWith(`${id}_`));
+  if (charBuffs.length > 0) {
+    const byPrefix: Record<string, { type: string; bdType: string }[]> = {};
+    for (const b of charBuffs) {
+      const prefix = b.BuffID.split('_').slice(0, 2).join('_');
+      if (!byPrefix[prefix]) byPrefix[prefix] = [];
+      const key = `${b.Type}|${b.BuffDebuffType}`;
+      if (!byPrefix[prefix].some((x) => `${x.type}|${x.bdType}` === key)) {
+        byPrefix[prefix].push({ type: b.Type, bdType: b.BuffDebuffType });
+      }
+    }
+    sections.buffs = byPrefix;
+  }
+
+  // 7. EE (Exclusive Equipment) from BuffTemplet
+  const eeBuffs = buffTemplet.data.filter((r) => r.BuffID && r.BuffID.includes(`CEQUIP_${id}`));
+  if (eeBuffs.length > 0) {
+    sections.exclusiveEquipment = [...new Set(eeBuffs.map((r) => r.BuffID))].map((bid) => {
+      const row = eeBuffs.find((r) => r.BuffID === bid);
+      return { buffId: bid, type: row?.Type, statType: row?.StatType };
+    });
+  }
+
+  // 8. RecruitGroupTemplet — banner info
+  const recruitTemplet = await readTemplet('RecruitGroupTemplet');
+  const banners = recruitTemplet.data.filter((r) => r.EndDateTime === id);
+  if (banners.length > 0) {
+    sections.banners = banners.map((r) => ({
+      bannerType: r.RollingBannerImage,
+      showDateMarker: r.ShowDate_fallback1,
+      showDateFb2: r.ShowDate_fallback2,
+    }));
+  }
+
+  // 9. CharacterFusionTemplet
+  const fusionTemplet = await readTemplet('CharacterFusionTemplet');
+  const fusionRow = fusionTemplet.data.find((r) => r.ChangeCharID === id || r.RecruitID === id);
+  if (fusionRow) sections.fusion = fusionRow;
+
+  // 10. CharacterTranscendentTemplet
+  const transcendTemplet = await readTemplet('CharacterTranscendentTemplet');
+  const transcendRows = transcendTemplet.data.filter((r) =>
+    Object.values(r).includes(id),
+  );
+  if (transcendRows.length > 0) sections.transcend = `${transcendRows.length} entries`;
+
+  // 11. ItemTemplet — EE item
+  const itemTemplet = await readTemplet('ItemTemplet');
+  const eeItem = itemTemplet.data.find((r) => r.ID === id || r.LevelLimit === id);
+  if (eeItem) sections.eeItem = { id: eeItem.ID, name: eeItem.DescIDSymbol, icon: eeItem.IconName };
+
+  // 12. ArchiveCharacterProfileTemplet — birthday, height, weight
+  const archiveTemplet = await readTemplet('ArchiveCharacterProfileTemplet');
+  const archiveRow = archiveTemplet.data.find((r) => r.CharacterID === id);
+  if (archiveRow) {
+    sections.profile = {
+      birthday: archiveRow.Birthday,
+      height: archiveRow.Height,
+      weight: archiveRow.Weight,
+    };
+  }
+
+  // 13. TrustRewardTemplet — gift/trust rewards
+  const trustRewardTemplet = await readTemplet('TrustRewardTemplet');
+  const trustRewards = trustRewardTemplet.data.filter((r) =>
+    Object.values(r).some((v) => typeof v === 'string' && v === id),
+  );
+  if (trustRewards.length > 0) {
+    sections.trustRewards = trustRewards.map((r) => ({
+      id: r.ID,
+      level: r.TrustLevel,
+      rewardId: r.RewardID,
+    }));
+  }
+
+  // 14. CharacterEvolutionStatTemplet — stats per star
+  const evoStatTemplet = await readTemplet('CharacterEvolutionStatTemplet');
+  const evoStats = evoStatTemplet.data.filter((r) =>
+    Object.values(r).some((v) => typeof v === 'string' && v === id),
+  );
+  if (evoStats.length > 0) {
+    sections.evolutionStats = evoStats.map((r) => ({
+      star: r.BasicStar ?? r.NextStar,
+      hp: r.RewardHPRate,
+      atk: r.RewardAtkRate,
+      def: r.RewardDefRate,
+    }));
+  }
+
+  // 15. CharacterDamageTemplet
+  const dmgTemplet = await readTemplet('CharacterDamageTemplet');
+  const dmgRows = dmgTemplet.data.filter((r) =>
+    Object.values(r).some((v) => typeof v === 'string' && v === id),
+  );
+  if (dmgRows.length > 0) sections.damageEntries = `${dmgRows.length} entries`;
+
+  // 16. CostumeTemplet — skins
+  const costumeTemplet = await readTemplet('CostumeTemplet');
+  const costumes = costumeTemplet.data.filter((r) =>
+    Object.values(r).some((v) => typeof v === 'string' && v === id),
+  );
+  if (costumes.length > 0) {
+    sections.costumes = costumes.map((r) => ({
+      id: r.ID,
+      name: r.CostumeNameID ?? r.NameIDSymbol,
+    }));
+  }
+
+  // 17. ChainCombinationTemplet — chain combos
+  const chainTemplet = await readTemplet('ChainCombinationTemplet');
+  const chainRows = chainTemplet.data.filter((r) =>
+    Object.values(r).some((v) => typeof v === 'string' && v === id),
+  );
+  if (chainRows.length > 0) {
+    sections.chainCombinations = chainRows.map((r) => {
+      const members: string[] = [];
+      for (let i = 0; i <= 5; i++) {
+        const m = r[`MemberID${i}`] ?? r[`MemberID_${i}`];
+        if (m) members.push(m);
+      }
+      return { id: r.ID, members };
+    });
+  }
+
+  // 18. ItemSpecialOptionTemplet — special item options
+  const specialOptTemplet = await readTemplet('ItemSpecialOptionTemplet');
+  const specialOpts = specialOptTemplet.data.filter((r) =>
+    Object.values(r).some((v) => typeof v === 'string' && v.includes(id)),
+  );
+  if (specialOpts.length > 0) sections.itemSpecialOptions = specialOpts;
+
+  // 19. RageTemplet — burst/rage data
+  const rageTemplet = await readTemplet('RageTemplet');
+  const rageRows = rageTemplet.data.filter((r) =>
+    Object.values(r).some((v) => typeof v === 'string' && v === id),
+  );
+  if (rageRows.length > 0) sections.rage = rageRows;
+
+  // 20. StateTemplet — state/passive data
+  const stateTemplet = await readTemplet('StateTemplet');
+  const stateRows = stateTemplet.data.filter((r) =>
+    Object.values(r).some((v) => typeof v === 'string' && v.includes(id)),
+  );
+  if (stateRows.length > 0) sections.states = `${stateRows.length} entries`;
+
+  return NextResponse.json({ id, sections });
 }
 
 // ── Save ─────────────────────────────────────────────────────────────

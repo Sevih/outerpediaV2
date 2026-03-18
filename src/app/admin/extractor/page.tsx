@@ -136,6 +136,7 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
   const [success, setSuccess] = useState('');
   const [diffs, setDiffs] = useState<Diff[]>(initialDiffs ?? []);
   const [, setExisting] = useState<AnyData | null>(null);
+  const [preview, setPreview] = useState<AnyData | null>(null);
 
   // Manual fields
   const [rank, setRank] = useState<string | null>(null);
@@ -190,12 +191,25 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
           setSkillPriority({ First: { prio: 1 }, Second: { prio: 2 }, Ultimate: { prio: 3 } });
         }
 
-        // Use initialDiffs if provided, otherwise fetch compare
-        if (exists && !initialDiffs) {
-          const compareRes = await fetch('/api/admin/extractor?action=compare');
-          const compareData = await compareRes.json();
-          const charDiffs = compareData.results?.find((r: { id: string }) => r.id === id);
-          setDiffs(charDiffs?.diffs ?? []);
+        if (exists) {
+          // Use initialDiffs if provided, otherwise fetch compare
+          if (!initialDiffs) {
+            const compareRes = await fetch('/api/admin/extractor?action=compare');
+            const compareData = await compareRes.json();
+            const charDiffs = compareData.results?.find((r: { id: string }) => r.id === id);
+            setDiffs(charDiffs?.diffs ?? []);
+          }
+        } else {
+          // New character: fetch extracted data as preview
+          const [infoRes, skillsRes, transcendRes] = await Promise.all([
+            fetch(`/api/admin/extractor?action=info&id=${id}`),
+            fetch(`/api/admin/extractor?action=skills&id=${id}`),
+            fetch(`/api/admin/extractor?action=transcend&id=${id}`),
+          ]);
+          const info = await infoRes.json();
+          const skills = await skillsRes.json();
+          const transcend = await transcendRes.json();
+          setPreview({ ...info, skills: skills.skills, transcend: transcend.transcend });
         }
 
         setStatus('ready');
@@ -206,7 +220,7 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
     };
 
     fetchAll();
-  }, [id, exists]);
+  }, [id, exists, initialDiffs]);
 
   async function handleSave() {
     setStatus('saving');
@@ -456,6 +470,93 @@ function CharacterDetail({ id, name, exists, onSaved, initialDiffs }: {
           <p className="text-sm text-green-400">Extracted data matches existing — no diffs</p>
         </section>
       )}
+
+      {/* Preview for new characters */}
+      {!exists && preview && status === 'ready' && (
+        <section className="rounded-lg border border-blue-900/50 bg-blue-950/10 p-4 space-y-4">
+          <h3 className="font-semibold text-blue-400">Extracted Data Preview</h3>
+
+          {/* Info */}
+          <div className="space-y-1">
+            <h4 className="text-xs font-semibold text-zinc-400 uppercase">Info</h4>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm sm:grid-cols-3">
+              {['Fullname', 'Rarity', 'Element', 'Class', 'SubClass', 'Chain_Type', 'gift'].map(k => (
+                preview[k] != null && <div key={k}>
+                  <span className="text-zinc-500">{k}: </span>
+                  <span className="text-zinc-200">{String(preview[k])}</span>
+                </div>
+              ))}
+              {preview.tags?.length > 0 && <div>
+                <span className="text-zinc-500">tags: </span>
+                <span className="text-zinc-200">{preview.tags.join(', ')}</span>
+              </div>}
+            </div>
+          </div>
+
+          {/* Voice Actors */}
+          <div className="space-y-1">
+            <h4 className="text-xs font-semibold text-zinc-400 uppercase">Voice Actors</h4>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm sm:grid-cols-4">
+              {['VoiceActor', 'VoiceActor_jp', 'VoiceActor_kr', 'VoiceActor_zh'].map(k => (
+                preview[k] && <div key={k}>
+                  <span className="text-zinc-500">{k.replace('VoiceActor', 'VA')}: </span>
+                  <span className="text-zinc-200">{preview[k]}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Skills */}
+          {preview.skills && (
+            <div className="space-y-3">
+              <h4 className="text-xs font-semibold text-zinc-400 uppercase">Skills</h4>
+              {Object.entries(preview.skills).map(([sk, data]) => {
+                const s = data as AnyData;
+                return (
+                  <div key={sk} className="rounded border border-zinc-800 p-3 space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono text-xs text-zinc-500">{sk}</span>
+                      <span className="font-semibold text-sm text-zinc-200">{s.name}</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-0.5 text-xs sm:grid-cols-4">
+                      {s.wgr != null && <div><span className="text-zinc-500">wgr:</span> {s.wgr}</div>}
+                      {s.cd != null && <div><span className="text-zinc-500">cd:</span> {s.cd}</div>}
+                      {s.offensive != null && <div><span className="text-zinc-500">offensive:</span> {String(s.offensive)}</div>}
+                      {s.target != null && <div><span className="text-zinc-500">target:</span> {String(s.target)}</div>}
+                    </div>
+                    {s.buff?.length > 0 && (
+                      <div className="text-xs"><span className="text-green-500">buff:</span> <span className="text-zinc-300">{s.buff.join(', ')}</span></div>
+                    )}
+                    {s.debuff?.length > 0 && (
+                      <div className="text-xs"><span className="text-red-400">debuff:</span> <span className="text-zinc-300">{s.debuff.join(', ')}</span></div>
+                    )}
+                    {s.burnEffect && Object.keys(s.burnEffect).length > 0 && (
+                      <div className="text-xs"><span className="text-amber-400">burst:</span> <span className="text-zinc-300">{Object.keys(s.burnEffect).join(', ')}</span></div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Transcend */}
+          {preview.transcend && (
+            <div className="space-y-1">
+              <h4 className="text-xs font-semibold text-zinc-400 uppercase">Transcend</h4>
+              <div className="grid grid-cols-1 gap-1 text-xs sm:grid-cols-2">
+                {Object.entries(preview.transcend)
+                  .filter(([k]) => !k.includes('_'))
+                  .map(([k, v]) => (
+                    <div key={k} className="rounded border border-zinc-800 p-2">
+                      <span className="font-mono text-zinc-500">{k}: </span>
+                      <span className="text-zinc-300 whitespace-pre-line">{String(v)}</span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          )}
+        </section>
+      )}
     </div>
   );
 }
@@ -481,7 +582,6 @@ export default function ExtractorPage() {
   useEffect(() => {
     loadList();
     handleCompare();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadList]);
 
   function handleSelect(id: string) {
