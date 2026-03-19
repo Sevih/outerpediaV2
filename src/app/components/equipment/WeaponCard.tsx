@@ -6,7 +6,7 @@ import type { Weapon, BossDisplayMap } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
 import { useI18n } from '@/lib/contexts/I18nContext';
-import { formatScaledEffect, slugifyEquipment } from '@/lib/format-text';
+import { formatEffectText, slugifyEquipment } from '@/lib/format-text';
 import EquipmentIcon from './EquipmentIcon';
 import EquipmentSource from './EquipmentSource';
 
@@ -76,7 +76,7 @@ export default function WeaponCard({ weapon, lang, bossMap }: Props) {
         </div>
       )}
       {effectDesc && (
-        <p className="text-xs text-zinc-300">{formatScaledEffect(effectDesc, effectDesc1)}</p>
+        <p className="text-xs text-zinc-300">{formatEffectText(effectDesc)}</p>
       )}
 
       <EquipmentSource source={weapon.source} boss={weapon.boss} bossMap={bossMap} lang={lang} />

@@ -138,7 +138,7 @@ export default function LootTable({ bossId }: Props) {
                         </div>
                       )}
                       {effectDesc && (
-                        <p className="mt-1 text-xs text-zinc-400">{formatScaledEffect(effectDesc, w.effect_desc1)}</p>
+                        <p className="mt-1 text-xs text-zinc-400">{formatEffectText(effectDesc)}</p>
                       )}
                     </div>
                   </Link>

@@ -488,7 +488,7 @@ function EffectSection({ effectName, effectIcon, effectDesc1, effectDesc4 }: {
       <div className="mt-3 space-y-2 text-sm text-zinc-300">
         {effectDesc1 && <p><span className="text-zinc-500">T0 </span>{formatEffectText(effectDesc1)}</p>}
         {effectDesc4 && effectDesc4 !== effectDesc1 && (
-          <p><span className="text-zinc-500">T4 </span>{formatScaledEffect(effectDesc4, effectDesc1)}</p>
+          <p><span className="text-zinc-500">T4 </span>{formatEffectText(effectDesc4)}</p>
         )}
       </div>
     </section>

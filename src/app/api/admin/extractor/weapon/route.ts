@@ -14,12 +14,13 @@ const WEAPON_IMG_DST_DIR = path.join(process.cwd(), 'public', 'images', 'equipme
 const EFFECT_IMG_DST_DIR = path.join(process.cwd(), 'public', 'images', 'ui', 'effect');
 
 async function copyIfMissing(srcDir: string, srcName: string, dstDir: string, dstName: string): Promise<boolean> {
-  const dst = path.join(dstDir, `${dstName}.png`);
+  const ext = '.png';
+  const dst = path.join(dstDir, dstName + ext);
   try {
     await fs.access(dst);
     return false; // already exists
   } catch {
-    const src = path.join(srcDir, `${srcName}.png`);
+    const src = path.join(srcDir, srcName + ext);
     try {
       await fs.access(src);
       await fs.mkdir(dstDir, { recursive: true });

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import type { Weapon, BossDisplayMap } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
-import { formatScaledEffect } from '@/lib/format-text';
+import { formatEffectText } from '@/lib/format-text';
 import InlineTooltip from '@/app/components/inline/InlineTooltip';
 import { StatInline } from '@/app/components/inline';
 import EquipmentIcon from './EquipmentIcon';
@@ -73,7 +73,7 @@ export default function WeaponMiniCard({ weapon, lang, mainStat, bossMap }: Prop
 
       {/* Effect description (tier 4) */}
       {effectDesc && (
-        <p className="text-xs text-zinc-300">{formatScaledEffect(effectDesc, effectDesc1)}</p>
+        <p className="text-xs text-zinc-300">{formatEffectText(effectDesc)}</p>
       )}
 
       <EquipmentSource source={weapon.source} boss={weapon.boss} bossMap={bossMap} lang={lang} />
