@@ -8,6 +8,27 @@ import {
 
 const EE_PATH = path.join(process.cwd(), 'data', 'equipment', 'ee.json');
 
+const EE_ICON_SRC_DIR = path.join(process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources', 'sprite', 'at_thumbnailitemruntime');
+const EE_ICON_DST_DIR = path.join(process.cwd(), 'public', 'images', 'characters', 'ee');
+
+async function eeIconExists(id: string): Promise<boolean> {
+  try {
+    await fs.access(path.join(EE_ICON_DST_DIR, `${id}.png`));
+    return true;
+  } catch { return false; }
+}
+
+async function copyEEIcon(id: string): Promise<boolean> {
+  const src = path.join(EE_ICON_SRC_DIR, `TI_Equipment_EX_${id}.png`);
+  const dst = path.join(EE_ICON_DST_DIR, `${id}.png`);
+  try {
+    await fs.access(src);
+    await fs.mkdir(EE_ICON_DST_DIR, { recursive: true });
+    await fs.copyFile(src, dst);
+    return true;
+  } catch { return false; }
+}
+
 function devOnly() {
   if (process.env.NODE_ENV !== 'development') {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
@@ -512,6 +533,11 @@ async function handleCompare() {
       diffs.push({ field: 'debuff', existing: prevDebuff.join(', ') || '(empty)', extracted: extDebuff.join(', ') || '(empty)' });
     }
 
+    // Check EE icon
+    if (!(await eeIconExists(id))) {
+      diffs.push({ field: 'image', existing: '(missing)', extracted: `${id}.png` });
+    }
+
     if (diffs.length > 0) {
       results.push({ id, name: String(prev.name ?? id), diffs, rank: String(prev.rank ?? ''), rank10: String(prev.rank10 ?? '') });
     } else {
@@ -635,6 +661,11 @@ export async function POST(req: NextRequest) {
 
       existing[id] = entry;
       saved++;
+
+      // Copy EE icon if missing
+      if (!(await eeIconExists(id))) {
+        await copyEEIcon(id);
+      }
     }
 
     // Sort entries by ID
