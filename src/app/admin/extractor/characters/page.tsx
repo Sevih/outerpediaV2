@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { DiffHighlight } from '@/app/admin/components/diff-highlight';
 
 interface CharacterEntry {
   id: string;
@@ -30,58 +31,6 @@ type AnyData = Record<string, any>;
 const RANKS = ['SS', 'S', 'A', 'B', 'C'];
 const ROLES = ['dps', 'support', 'sustain'];
 
-// ── Diff highlighting ────────────────────────────────────────────────
-
-function DiffHighlight({ existing, extracted }: { existing: string; extracted: string }) {
-  const tokenize = (s: string) => s.split(/(\s+|(?=<)|(?<=>))/);
-  const aTokens = tokenize(existing);
-  const bTokens = tokenize(extracted);
-
-  const max = Math.max(aTokens.length, bTokens.length);
-  const aResult: { text: string; type: 'same' | 'del' }[] = [];
-  const bResult: { text: string; type: 'same' | 'add' }[] = [];
-
-  let ai = 0, bi = 0;
-  while (ai < aTokens.length || bi < bTokens.length) {
-    if (ai < aTokens.length && bi < bTokens.length && aTokens[ai] === bTokens[bi]) {
-      aResult.push({ text: aTokens[ai], type: 'same' });
-      bResult.push({ text: bTokens[bi], type: 'same' });
-      ai++; bi++;
-    } else {
-      let foundA = -1, foundB = -1;
-      for (let look = 1; look < Math.min(20, max); look++) {
-        if (foundA === -1 && bi + look < bTokens.length && aTokens[ai] === bTokens[bi + look]) foundA = look;
-        if (foundB === -1 && ai + look < aTokens.length && aTokens[ai + look] === bTokens[bi]) foundB = look;
-        if (foundA !== -1 || foundB !== -1) break;
-      }
-      if (foundA !== -1 && (foundB === -1 || foundA <= foundB)) {
-        for (let j = 0; j < foundA; j++) bResult.push({ text: bTokens[bi++], type: 'add' });
-      } else if (foundB !== -1) {
-        for (let j = 0; j < foundB; j++) aResult.push({ text: aTokens[ai++], type: 'del' });
-      } else {
-        if (ai < aTokens.length) aResult.push({ text: aTokens[ai++], type: 'del' });
-        if (bi < bTokens.length) bResult.push({ text: bTokens[bi++], type: 'add' });
-      }
-    }
-  }
-
-  return (
-    <div className="space-y-1.5">
-      <div className="rounded bg-red-950/30 px-2 py-1.5 text-xs leading-relaxed whitespace-pre-wrap break-all">
-        <span className="mr-1.5 font-semibold text-red-400/70">existing</span>
-        {aResult.map((t, i) => (
-          <span key={i} className={t.type === 'del' ? 'bg-red-500/30 text-red-200' : 'text-zinc-400'}>{t.text}</span>
-        ))}
-      </div>
-      <div className="rounded bg-green-950/30 px-2 py-1.5 text-xs leading-relaxed whitespace-pre-wrap break-all">
-        <span className="mr-1.5 font-semibold text-green-400/70">extracted</span>
-        {bResult.map((t, i) => (
-          <span key={i} className={t.type === 'add' ? 'bg-green-500/30 text-green-200' : 'text-zinc-400'}>{t.text}</span>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 // ── Diff table (reused in compare-all and per-character) ─────────────
 

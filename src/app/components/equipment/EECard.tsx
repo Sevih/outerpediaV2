@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { ExclusiveEquipment } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText, formatScaledEffect, getRarityBgPath, slugifyEquipment } from '@/lib/format-text';
+import { formatEffectText, getRarityBgPath, slugifyEquipment } from '@/lib/format-text';
 import { localePath } from '@/lib/navigation';
 import BuffDebuffDisplay from '@/app/components/character/BuffDebuffDisplay';
 
@@ -82,7 +82,7 @@ export default function EECard({ ee, charId, charName, lang }: Props) {
       {effect10 && effect10 !== effect && (
         <p className="text-xs text-zinc-300">
           <span className="text-zinc-500">Lv. 10 </span>
-          {formatScaledEffect(effect10, effect)}
+          {formatEffectText(effect10)}
         </p>
       )}
 

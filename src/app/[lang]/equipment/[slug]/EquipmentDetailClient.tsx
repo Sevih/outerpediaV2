@@ -426,7 +426,7 @@ function EEDetail({ ee, owner, cfCompanion, lang, statRange }: { ee: ExclusiveEq
           <div className="mt-2 space-y-2 text-sm text-zinc-300">
             <p><span className="text-zinc-500">Lv. 1 </span>{formatEffectText(effect)}</p>
             {effect10 && effect10 !== effect && (
-              <p><span className="text-zinc-500">Lv. 10 </span>{formatScaledEffect(effect10, effect)}</p>
+              <p><span className="text-zinc-500">Lv. 10 </span>{formatEffectText(effect10)}</p>
             )}
           </div>
         </section>
