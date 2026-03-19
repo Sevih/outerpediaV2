@@ -501,6 +501,224 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
+// ── Weapon Panel ─────────────────────────────────────────────────
+
+interface WeaponListEntry {
+  id: string;
+  name: string;
+  class: string;
+  star: string;
+  effectName: string;
+  effectId: string;
+  image: string;
+  existsInJson: boolean;
+  existingKey?: string;
+}
+
+interface WeaponCompareResult {
+  id: string;
+  name: string;
+  existingKey: string;
+  diffs: { field: string; existing: string; extracted: string }[];
+}
+
+function WeaponPanel() {
+  const [list, setList] = useState<{ total: number; existing: number; new: number; entries: WeaponListEntry[] } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState('');
+  const [filter, setFilter] = useState<'all' | 'new' | 'existing'>('all');
+  const [classFilter, setClassFilter] = useState<string>('all');
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [compareResult, setCompareResult] = useState<{ total: number; withDiffs: number; ok: number; results: WeaponCompareResult[] } | null>(null);
+  const [comparing, setComparing] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [status, setStatus] = useState('');
+
+  const fetchList = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/extractor/weapon?action=list');
+      setList(await res.json());
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => { fetchList(); }, [fetchList]);
+
+  const handleCompare = async () => {
+    setComparing(true);
+    setStatus('');
+    try {
+      const res = await fetch('/api/admin/extractor/weapon?action=compare');
+      const data = await res.json();
+      setCompareResult(data);
+    } finally {
+      setComparing(false);
+    }
+  };
+
+  const handleSaveOne = async (weaponId: string, existingKey: string) => {
+    setSaving(true);
+    setStatus('');
+    try {
+      const res = await fetch('/api/admin/extractor/weapon', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: weaponId, existingKey }),
+      });
+      const data = await res.json();
+      setStatus(data.ok ? `Saved weapon ${weaponId}` : `Error: ${data.error}`);
+      await handleCompare();
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleExtractAll = async () => {
+    if (!list) return;
+    setSaving(true);
+    setStatus('Extracting all weapons...');
+    try {
+      const items = list.entries.map(e => ({ id: e.id, existingKey: e.existingKey }));
+      const res = await fetch('/api/admin/extractor/weapon', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items }),
+      });
+      const data = await res.json();
+      setStatus(data.ok ? `Saved ${data.saved} weapons` : `Error: ${data.error}`);
+      await fetchList();
+      await handleCompare();
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  if (loading) return <div className="text-zinc-500">Loading weapons...</div>;
+  if (!list) return <div className="text-red-400">Failed to load weapon list</div>;
+
+  const filtered = list.entries.filter(e => {
+    if (filter === 'new' && e.existsInJson) return false;
+    if (filter === 'existing' && !e.existsInJson) return false;
+    if (classFilter !== 'all' && e.class !== classFilter) return false;
+    if (search) {
+      const q = search.toLowerCase();
+      return e.name.toLowerCase().includes(q) || e.id.includes(q) || e.effectName.toLowerCase().includes(q);
+    }
+    return true;
+  });
+
+  const selectedDiff = compareResult?.results.find(r => r.id === selectedId);
+
+  return (
+    <div className="flex gap-4">
+      {/* Left: list */}
+      <div className="w-80 shrink-0 space-y-2">
+        <div className="flex items-center gap-2 text-sm text-zinc-400">
+          <span>{list.total} weapons</span>
+          <span className="text-green-400">{list.existing} existing</span>
+          <span className="text-yellow-400">{list.new} new</span>
+        </div>
+
+        <div className="flex gap-1">
+          <button onClick={handleCompare} disabled={comparing}
+            className="rounded bg-blue-600 px-3 py-1 text-xs font-medium text-white hover:bg-blue-500 disabled:opacity-50">
+            {comparing ? 'Comparing...' : 'Compare All'}
+          </button>
+          <button onClick={handleExtractAll} disabled={saving}
+            className="rounded bg-green-600 px-3 py-1 text-xs font-medium text-white hover:bg-green-500 disabled:opacity-50">
+            {saving ? 'Extracting...' : 'Extract All'}
+          </button>
+        </div>
+
+        {compareResult && (
+          <div className="text-xs text-zinc-500">
+            Compare Results<br />
+            <span className="text-green-400">{compareResult.ok} OK</span>
+            <span className="text-yellow-400 ml-2">{compareResult.withDiffs} with diffs</span>
+            <span className="ml-2">{compareResult.total} total</span>
+          </div>
+        )}
+
+        {status && <div className="text-xs text-zinc-400">{status}</div>}
+
+        <input
+          value={search} onChange={e => setSearch(e.target.value)}
+          placeholder="Search name, id, effect..."
+          className="w-full rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm text-zinc-300"
+        />
+
+        <div className="flex gap-1 text-xs">
+          {(['all', 'existing', 'new'] as const).map(f => (
+            <button key={f} onClick={() => setFilter(f)}
+              className={`rounded px-2 py-0.5 ${filter === f ? 'bg-zinc-700 text-white' : 'text-zinc-500 hover:text-zinc-300'}`}>
+              {f}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex gap-1 text-xs flex-wrap">
+          {['all', 'Striker', 'Defender', 'Ranger', 'Mage', 'Healer'].map(c => (
+            <button key={c} onClick={() => setClassFilter(c)}
+              className={`rounded px-2 py-0.5 ${classFilter === c ? 'bg-zinc-700 text-white' : 'text-zinc-500 hover:text-zinc-300'}`}>
+              {c}
+            </button>
+          ))}
+        </div>
+
+        <div className="max-h-[calc(100vh-300px)] space-y-0.5 overflow-y-auto">
+          {filtered.map(e => {
+            const hasDiffs = compareResult?.results.some(r => r.id === e.id);
+            return (
+              <button key={e.id} onClick={() => setSelectedId(e.id)}
+                className={`flex w-full items-center gap-2 rounded px-2 py-1 text-left text-sm transition-colors ${
+                  selectedId === e.id ? 'bg-zinc-700 text-white' : 'text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200'
+                }`}>
+                <span className="w-10 shrink-0 text-xs text-zinc-600">{e.id}</span>
+                <span className="flex-1 truncate">{e.name}</span>
+                <span className="shrink-0 text-xs text-zinc-600">{e.class?.charAt(0)}</span>
+                {!e.existsInJson && <span className="shrink-0 text-xs text-yellow-500">New</span>}
+                {hasDiffs && <span className="shrink-0 text-xs text-orange-400">⚠</span>}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Right: detail */}
+      <div className="min-w-0 flex-1">
+        {selectedDiff ? (
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <h2 className="text-lg font-bold">{selectedDiff.name}</h2>
+                <span className="text-sm text-zinc-500">{selectedDiff.id}</span>
+                <span className="rounded bg-orange-600/30 px-2 py-0.5 text-xs text-orange-300">{selectedDiff.diffs.length} diff(s)</span>
+              </div>
+              <button onClick={() => handleSaveOne(selectedDiff.id, selectedDiff.existingKey)} disabled={saving}
+                className="rounded bg-blue-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-blue-500 disabled:opacity-50">
+                Save
+              </button>
+            </div>
+
+            {selectedDiff.diffs.map(d => (
+              <div key={d.field} className="rounded-lg border border-zinc-800 bg-zinc-900/50 p-3 space-y-1">
+                <div className="text-xs text-zinc-500 font-mono">{d.field}</div>
+                <DiffHighlight existing={d.existing} extracted={d.extracted} />
+              </div>
+            ))}
+          </div>
+        ) : selectedId ? (
+          <div className="text-zinc-500 text-sm">No diffs for this weapon. Run Compare All first.</div>
+        ) : (
+          <div className="text-zinc-500 text-sm">Select a weapon to view details.</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function LangRow({ field, data }: { field: string; data: Record<string, string> }) {
   const langs = [
     { key: field, label: 'EN' },
@@ -547,7 +765,8 @@ export default function EquipmentExtractorPage() {
       </div>
 
       {tab === 'ee' && <EEPanel />}
-      {tab !== 'ee' && (
+      {tab === 'weapons' && <WeaponPanel />}
+      {!['ee', 'weapons'].includes(tab) && (
         <div className="rounded-lg border border-zinc-800 p-8 text-center text-zinc-500">
           {TABS.find(t => t.key === tab)?.label} extractor — coming soon
         </div>
