@@ -66,17 +66,24 @@ function c(v: string): string {
   return `<color=#28d9ed>${v}</color>`;
 }
 
-function findBuffByLevel(buffData: BuffRow[], buffIdStr: string, level: number, suffix = ''): BuffRow | undefined {
+function findBuffByLevel(buffData: BuffRow[], buffIdStr: string, level: number, index = 0): BuffRow | undefined {
   const ids = buffIdStr.split(',').map(s => s.trim());
-  const targetId = suffix ? (ids.find(id => id.endsWith(suffix)) ?? `${ids[0]}${suffix}`) : ids[0];
+  // Index 0 = primary buff, 1 = second buff in comma list OR _2 suffix, etc.
+  let targetId: string | undefined;
+  if (index === 0) {
+    targetId = ids[0];
+  } else {
+    // Try the Nth entry in the comma list first, then try _N suffix on the primary ID
+    targetId = ids[index] ?? `${ids[0]}_${index + 1}`;
+  }
   return buffData.find(r => r.BuffID === targetId && String(r.Level) === String(level));
 }
 
 function resolveWeaponPlaceholders(text: string, buffData: BuffRow[], buffIdStr: string, level: number): string {
-  const buff = findBuffByLevel(buffData, buffIdStr, level);
-  const buff2 = findBuffByLevel(buffData, buffIdStr, level, '_2');
-  const buff4 = findBuffByLevel(buffData, buffIdStr, level, '_4');
-  const buff5 = findBuffByLevel(buffData, buffIdStr, level, '_5');
+  const buff = findBuffByLevel(buffData, buffIdStr, level, 0);
+  const buff2 = findBuffByLevel(buffData, buffIdStr, level, 1);
+  const buff4 = findBuffByLevel(buffData, buffIdStr, level, 3);
+  const buff5 = findBuffByLevel(buffData, buffIdStr, level, 4);
 
   const rate = buff?.CreateRate ? `${parseInt(buff.CreateRate) / 10}%` : '?';
   const value = buff ? formatBuffValue(buff) : '?';
@@ -168,9 +175,12 @@ function buildWeaponBossMap(
   textSystemMap: Record<string, LangTexts>,
 ): Map<string, string | string[]> {
   // SpawnID → boss monster ID via DungeonSpawnTemplet (HPLineCount → ID3)
+  // SpawnID → boss monster ID: prefer ID0 (main boss), fallback to ID3
   const spawnToBoss: Record<string, string> = {};
   for (const s of spawnData) {
-    if (s.HPLineCount && s.ID3) spawnToBoss[s.HPLineCount] = s.ID3;
+    if (s.HPLineCount) {
+      spawnToBoss[s.HPLineCount] = s.ID0 || s.ID3;
+    }
   }
 
   // RewardTemplet ID → RandomGroupIDs
@@ -245,9 +255,10 @@ function extractWeaponsFromGameData(
     }
   }
 
-  // Dedup step 2: keep highest star per effect_name+class
-  const bestByEffectClass = new Map<string, Record<string, string>>();
+  // Dedup step 2: keep highest star per effect_name+class+name
+  const bestByEffectClassName = new Map<string, Record<string, string>>();
   for (const row of bestByNameClass.values()) {
+    const name = textItemMap[row.DescIDSymbol]?.en ?? row.ID;
     const cls = classFromRow(row, textSystemMap);
     // Find effect name via MainOptionGroupID
     const mainOptIds = (row.MainOptionGroupID ?? '').split(',').map(s => s.trim()).filter(Boolean);
@@ -262,16 +273,16 @@ function extractWeaponsFromGameData(
         }
       }
     }
-    const key = `${effectName}|${cls}`;
-    const existing = bestByEffectClass.get(key);
+    const key = `${effectName}|${cls}|${name}`;
+    const existing = bestByEffectClassName.get(key);
     if (!existing || parseInt(row.BasicStar ?? '0') > parseInt(existing.BasicStar ?? '0')) {
-      bestByEffectClass.set(key, row);
+      bestByEffectClassName.set(key, row);
     }
   }
 
   const results: ExtractedWeapon[] = [];
 
-  for (const row of bestByEffectClass.values()) {
+  for (const row of bestByEffectClassName.values()) {
     const id = row.ID;
     const nameTexts = textItemMap[row.DescIDSymbol];
     const cls = classFromRow(row, textSystemMap);
@@ -306,10 +317,22 @@ function extractWeaponsFromGameData(
       ...expandLang('effect_name', effectNameTexts, null as unknown as string),
       effect_icon: effectOpt?.BuffLevel_4P ?? null,
       class: cls,
-      boss: weaponBossMap.get(id) ?? null,
       level: star,
-      source: eventWeaponIds.has(id) ? 'Event Shop' : adventureLicenseWeaponIds.has(id) ? 'Adventure License' : null,
     };
+
+    // IG_RARE (epic) weapons have no boss/source
+    if (row.ItemGrade === 'IG_UNIQUE') {
+      const boss = weaponBossMap.get(id) ?? null;
+      if (boss) {
+        extracted.boss = boss;
+      } else {
+        const source = eventWeaponIds.has(id) ? 'Event Shop' : adventureLicenseWeaponIds.has(id) ? 'Adventure License' : null;
+        if (source) {
+          extracted.source = source;
+          extracted.boss = null;
+        }
+      }
+    }
 
     for (const lang of LANGS) {
       const key1 = lang === 'en' ? 'effect_desc1' : `effect_desc1_${lang}`;
@@ -459,7 +482,7 @@ const COMPARE_FIELDS = [
   'effect_name', 'effect_name_jp', 'effect_name_kr', 'effect_name_zh',
   'effect_desc1', 'effect_desc1_jp', 'effect_desc1_kr', 'effect_desc1_zh',
   'effect_desc4', 'effect_desc4_jp', 'effect_desc4_kr', 'effect_desc4_zh',
-  'effect_icon', 'class', 'image', 'rarity',
+  'effect_icon', 'class', 'image', 'rarity', 'source',
 ];
 
 async function handleCompare() {
@@ -491,6 +514,25 @@ async function handleCompare() {
       if (ext && cur && ext !== cur) {
         diffs.push({ field, existing: cur, extracted: ext });
       }
+    }
+
+    // Compare boss (can be string, array, or null)
+    const extBoss = JSON.stringify(w.extracted.boss ?? null);
+    const curBoss = JSON.stringify(prev.boss ?? null);
+    if (extBoss !== curBoss) {
+      diffs.push({ field: 'boss', existing: curBoss, extracted: extBoss });
+    }
+
+    // Check images
+    const image = String(w.extracted.image ?? '');
+    const effectIcon = String(w.extracted.effect_icon ?? '');
+    if (image) {
+      try { await fs.access(path.join(WEAPON_IMG_DST_DIR, `${image}.png`)); }
+      catch { diffs.push({ field: 'image (file)', existing: '(missing)', extracted: `${image}.png` }); }
+    }
+    if (effectIcon) {
+      try { await fs.access(path.join(EFFECT_IMG_DST_DIR, `${effectIcon}.png`)); }
+      catch { diffs.push({ field: 'effect_icon (file)', existing: '(missing)', extracted: `${effectIcon}.png` }); }
     }
 
     if (diffs.length > 0) {
