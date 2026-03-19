@@ -117,7 +117,6 @@ const EE_BUFF_OVERRIDES: Record<string, { buff?: string[]; debuff?: string[] }> 
   '2000060': { buff: ['BT_AP_CHARGE'] },                        // AP Charge (data has ST_ENTER_AP passive)
   '2000083': { buff: ['BT_AP_CHARGE'] },                        // AP Charge
   '2000093': { buff: ['BT_AP_CHARGE'] },                        // AP Charge
-  '2000109': { debuff: ['BT_DOT_POISON2'] },                    // Corrosive Poison (data says BT_DOT_POISON)
 };
 
 function extractEEBuffDebuff(buffData: BuffRow[], id: string): { buff: string[]; debuff: string[] } {
@@ -141,11 +140,14 @@ function extractEEBuffDebuff(buffData: BuffRow[], id: string): { buff: string[];
     // Permanent passive stats are not visible buff/debuff icons
     if (type === 'BT_STAT' && (b.TurnDuration === '-1' || b.BuffRemoveType === 'ON_SKILL_FINISH' || b.BuffCreateType === 'PASSIVE')) continue;
 
-    // Use IconName if it contains "Interruption" (special irremovable variant)
+    // Use IconName for special variants
     const icon = b.IconName ?? '';
+    let effectiveType = type;
+    if (icon === 'IG_Buff_Dot_Poison02') effectiveType = 'BT_DOT_POISON2';
+
     const tag = icon.includes('Interruption')
       ? icon
-      : (type === 'BT_STAT' && stat && stat !== 'ST_NONE') ? `${type}|${stat}` : type;
+      : (effectiveType === 'BT_STAT' && stat && stat !== 'ST_NONE') ? `${effectiveType}|${stat}` : effectiveType;
 
     // Deduplicate by tag
     if (seen.has(tag)) continue;
