@@ -101,11 +101,11 @@ export function resolveEquipPlaceholders(text: string, buffData: BuffRow[], buff
     .replace(/\[-Value2\]/gi, c(`-${value2}`))
     .replace(/\[Value2\]/gi, c(value2))
     .replace(/\[RATE\]/gi, c(rate))
-    .replace(/\[Rate\]/g, c(rate))
+    .replace(/\[Rate1?\]/g, c(rate))
     .replace(/\[\+Value\]/gi, c(`+${value}`))
     .replace(/\[-Value\]/gi, c(`-${value}`))
     .replace(/\[Value\]/gi, c(value))
-    .replace(/\[\+Turn\]/gi, c(turn))
+    .replace(/\[\+Turn1?\]/gi, c(turn))
     .replace(/\[-Turn\]/gi, c(`-${turn}`))
     .replace(/\[Turn2\]/gi, c(turn2))
     .replace(/\[Turn\]/gi, c(turn));

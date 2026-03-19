@@ -414,6 +414,16 @@ async function loadGameData() {
       adventureLicenseWeaponIds.add(wid);
     }
   }
+  // Via sibling: if any item in the same craft group is event, all siblings are too
+  const craftGroups: Record<string, string[]> = {};
+  for (const craft of itemCraftReward.data) {
+    (craftGroups[craft.GroupID] ??= []).push(craft.ID);
+  }
+  for (const members of Object.values(craftGroups)) {
+    if (members.some(m => eventWeaponIds.has(m))) {
+      for (const m of members) eventWeaponIds.add(m);
+    }
+  }
 
   return { itemTemplet, textItemMap, textSkillMap, textSystemMap, optById, buffData: buffTemplet.data, weaponBossMap, eventWeaponIds, adventureLicenseWeaponIds };
 }

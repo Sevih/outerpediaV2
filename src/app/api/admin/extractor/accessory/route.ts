@@ -106,12 +106,28 @@ function detectSource(id: string, _row: Record<string, string>, gd: EquipGameDat
   const productById: Record<string, Record<string, string>> = {};
   for (const p of gd.productData) productById[p.ID] = p;
 
+  // Build set of event item IDs (direct detection)
+  const eventItemIds = new Set<string>();
+  for (const p of gd.productData) {
+    if (p.ProductGoodsType === 'PGT_ITEM' && p.ProductCategory?.startsWith('PC_EVENT')) {
+      eventItemIds.add(p.ProductGoodsID);
+    }
+  }
+  for (const craft of gd.itemCraftData) {
+    const prod = productById[craft.GroupID];
+    if (prod?.ProductCategory?.startsWith('PC_EVENT')) eventItemIds.add(craft.ID);
+  }
+
   // Via ItemCraftRewardTemplet
   for (const craft of gd.itemCraftData) {
     if (craft.ID !== id) continue;
     const prod = productById[craft.GroupID];
     if (prod?.ProductCategory?.startsWith('PC_EVENT')) return 'Event Shop';
     if (prod?.ProductLevel === 'PC_ADVENTURE_LICENSE') return 'Adventure License';
+
+    // Via sibling: if another item in the same craft group is event, so is this one
+    const siblings = gd.itemCraftData.filter(c => c.GroupID === craft.GroupID);
+    if (siblings.some(s => eventItemIds.has(s.ID))) return 'Event Shop';
   }
 
   // Via ProductTemplet direct
