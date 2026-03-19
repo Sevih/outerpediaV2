@@ -13,14 +13,18 @@ const IMG_SRC_DIR = path.join(process.cwd(), 'datamine', 'extracted_astudio', 'a
 const WEAPON_IMG_DST_DIR = path.join(process.cwd(), 'public', 'images', 'equipment');
 const EFFECT_IMG_DST_DIR = path.join(process.cwd(), 'public', 'images', 'ui', 'effect');
 
+function pngPath(dir: string, name: string): string {
+  // Build path at runtime to avoid Turbopack static analysis matching broad file patterns
+  return [dir, name].join(path.sep) + '.png';
+}
+
 async function copyIfMissing(srcDir: string, srcName: string, dstDir: string, dstName: string): Promise<boolean> {
-  const ext = '.png';
-  const dst = path.join(dstDir, dstName + ext);
+  const dst = pngPath(dstDir, dstName);
   try {
     await fs.access(dst);
-    return false; // already exists
+    return false;
   } catch {
-    const src = path.join(srcDir, srcName + ext);
+    const src = pngPath(srcDir, srcName);
     try {
       await fs.access(src);
       await fs.mkdir(dstDir, { recursive: true });
