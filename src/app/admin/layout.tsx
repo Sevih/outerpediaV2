@@ -98,8 +98,39 @@ function NavSection({ group, pathname }: { group: NavGroup; pathname: string }) 
   );
 }
 
+function CollapsedNavGroup({ group, pathname }: { group: NavGroup; pathname: string }) {
+  const hasActive = group.items.some(item => !item.disabled && pathname.startsWith(item.href));
+
+  return (
+    <div className="flex flex-col items-center gap-0.5 py-1">
+      <span className={`text-[10px] font-semibold uppercase ${hasActive ? 'text-blue-400' : 'text-zinc-600'}`}>
+        {group.label.slice(0, 3)}
+      </span>
+      {group.items.map(item => {
+        if (item.disabled) return null;
+        const active = pathname.startsWith(item.href);
+        return (
+          <Link
+            key={item.href}
+            href={item.href as never}
+            title={item.label}
+            className={`flex h-8 w-8 items-center justify-center rounded text-xs font-medium transition-colors ${
+              active
+                ? 'bg-blue-600/15 text-blue-400'
+                : 'text-zinc-500 hover:bg-zinc-800/50 hover:text-zinc-200'
+            }`}
+          >
+            {item.label.slice(0, 2)}
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const [collapsed, setCollapsed] = useState(false);
 
   if (process.env.NODE_ENV !== 'development') {
     return null;
@@ -108,14 +139,31 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="flex h-screen bg-zinc-950 text-zinc-100">
       {/* Sidebar */}
-      <aside className="flex w-56 shrink-0 flex-col border-r border-zinc-800">
-        <Link href="/admin" className="px-4 py-4 text-lg font-bold hover:text-blue-400 transition-colors">
-          Admin
-        </Link>
+      <aside className={`flex shrink-0 flex-col border-r border-zinc-800 transition-all duration-200 ${collapsed ? 'w-14' : 'w-56'}`}>
+        <div className="flex items-center justify-between px-2 py-3">
+          {!collapsed && (
+            <Link href="/admin" className="px-2 text-lg font-bold hover:text-blue-400 transition-colors">
+              Admin
+            </Link>
+          )}
+          <button
+            onClick={() => setCollapsed(v => !v)}
+            className={`flex h-8 w-8 items-center justify-center rounded text-zinc-500 hover:bg-zinc-800 hover:text-zinc-300 transition-colors ${collapsed ? 'mx-auto' : ''}`}
+            title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+          >
+            {collapsed ? '▶' : '◀'}
+          </button>
+        </div>
+
         <nav className="flex-1 overflow-y-auto">
-          {NAV_GROUPS.map(group => (
-            <NavSection key={group.label} group={group} pathname={pathname} />
-          ))}
+          {collapsed
+            ? NAV_GROUPS.map(group => (
+                <CollapsedNavGroup key={group.label} group={group} pathname={pathname} />
+              ))
+            : NAV_GROUPS.map(group => (
+                <NavSection key={group.label} group={group} pathname={pathname} />
+              ))
+          }
         </nav>
       </aside>
 
