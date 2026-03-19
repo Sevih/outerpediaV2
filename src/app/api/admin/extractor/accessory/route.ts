@@ -87,8 +87,8 @@ function buildAccessoryBossMap(gd: EquipGameData): Map<string, string | string[]
 
   // Irregular accessories
   const IRREGULAR_ACC_BOSS_MAP: Record<string, string[]> = {
-    '7003003': ['51202001', '51202002'], // Ambition accessories
-    '7003004': ['51202003', '51202004'], // Vanity accessories
+    '7003001': ['51202001', '51202002'], // Briareos's Ambition accessories
+    '7003002': ['51202003', '51202004'], // Gorgon's Vanity accessories
   };
   for (const [groupId, bossIds] of Object.entries(IRREGULAR_ACC_BOSS_MAP)) {
     const items = gd.rewardGroupData.filter(r => r.GroupID === groupId && r.Type === 'RIT_ITEM');
