@@ -35,7 +35,9 @@ export async function POST(req: NextRequest) {
     const data = await req.json();
     const raw = await fs.readFile(filePath, 'utf-8').catch(() => '');
     const eol = raw.includes('\r\n') ? '\r\n' : '\n';
-    let output = compactJson(data) + '\n';
+    const trailingNewline = raw.endsWith('\n') || raw.endsWith('\r\n');
+    let output = JSON.stringify(data, null, 2);
+    if (trailingNewline) output += '\n';
     if (eol === '\r\n') output = output.replace(/\n/g, '\r\n');
     await fs.writeFile(filePath, output, 'utf-8');
     return NextResponse.json({ ok: true });

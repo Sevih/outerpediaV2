@@ -98,7 +98,7 @@ export default function AdminDashboard() {
           {checks.map(check => (
             <Link
               key={check.api}
-              href={check.href}
+              href={check.href as never}
               className="rounded-lg border border-zinc-800 p-4 transition-colors hover:border-zinc-600 hover:bg-zinc-900"
             >
               <div className="flex items-center justify-between">

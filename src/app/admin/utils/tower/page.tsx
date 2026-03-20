@@ -2,6 +2,9 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react';
 import parseText from '@/app/admin/lib/parse-text-admin';
+import buffsData from '@data/effects/buffs.json';
+import debuffsData from '@data/effects/debuffs.json';
+import restrictionsData from '@data/tower/restrictions.json';
 
 // ── Types ───────────────────────────────────────────────────────────
 
@@ -56,12 +59,17 @@ interface CharEntry { id: string; name: string }
 const API = '/api/admin/utils/tower';
 const EMPTY_LANG: LangText = { en: '', jp: '', kr: '', zh: '' };
 
-const ALL_RESTRICTIONS = [
-  'BanDefender', 'BanStriker', 'BanRanger', 'BanMage', 'BanHealer',
-  'BanFire', 'BanWater', 'BanEarth', 'BanLight', 'BanDark',
-  'AtLeast1_Defender', 'AtLeast1_Striker', 'AtLeast1_Ranger', 'AtLeast1_Mage', 'AtLeast1_Healer',
-  'AtLeast1_Fire', 'AtLeast1_Water', 'AtLeast1_Earth', 'AtLeast1_Light', 'AtLeast1_Dark',
-  'AtLeast1_1Star', 'AtLeast1_2Star', 'AtLeast1_3Star',
+const restrictionLabels = restrictionsData as Record<string, { en: string }>;
+
+const RESTRICTION_GROUPS: { label: string; style: 'ban' | 'req'; keys: string[] }[] = [
+  { label: 'Element — Force', style: 'ban', keys: ['ForceFire', 'ForceWater', 'ForceEarth', 'ForceLight', 'ForceDark'] },
+  { label: 'Element — Ban', style: 'ban', keys: ['BanFire', 'BanWater', 'BanEarth', 'BanLight', 'BanDark'] },
+  { label: 'Element — At least', style: 'req', keys: ['AtLeast1_Fire', 'AtLeast2_Fire', 'AtLeast1_Water', 'AtLeast2_Water', 'AtLeast1_Earth', 'AtLeast2_Earth', 'AtLeast1_Light', 'AtLeast2_Light', 'AtLeast1_Dark', 'AtLeast2_Dark'] },
+  { label: 'Class — Force', style: 'ban', keys: ['ForceStriker', 'ForceDefender', 'ForceRanger', 'ForceHealer', 'ForceMage'] },
+  { label: 'Class — Ban', style: 'ban', keys: ['BanStriker', 'BanDefender', 'BanRanger', 'BanHealer', 'BanMage'] },
+  { label: 'Class — At least', style: 'req', keys: ['AtLeast1_Striker', 'AtLeast2_Striker', 'AtLeast1_Defender', 'AtLeast2_Defender', 'AtLeast1_Ranger', 'AtLeast2_Ranger', 'AtLeast1_Healer', 'AtLeast2_Healer', 'AtLeast1_Mage', 'AtLeast2_Mage'] },
+  { label: 'Rarity', style: 'req', keys: ['Only3Star', 'AtLeast1_1Star', 'AtLeast2_1Star', 'AtLeast1_2Star', 'AtLeast2_2Star', 'AtLeast1_3Star'] },
+  { label: 'Other', style: 'ban', keys: ['Max3'] },
 ];
 
 // ── Page ─────────────────────────────────────────────────────────────
@@ -73,6 +81,8 @@ export default function TowerEditorPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [selectedBoss, setSelectedBoss] = useState<string | null>(null);
+  const [editingSetIdx, setEditingSetIdx] = useState<number | null>(null); // restriction set being edited
+  const [addingSet, setAddingSet] = useState(false);
 
   useEffect(() => {
     Promise.all([
@@ -269,8 +279,37 @@ export default function TowerEditorPage() {
     }
   }
 
+  function duplicateRestrictionSet(bossKey: string, setIdx: number) {
+    if (!data) return;
+    const updated = JSON.parse(JSON.stringify(data)) as TowerData;
+
+    if (bossKey.startsWith('pool-')) {
+      const bossId = bossKey.replace('pool-', '');
+      const entry = updated.randomPool.find(p => p.boss_id === bossId);
+      if (entry) {
+        const clone = JSON.parse(JSON.stringify(entry.restrictionSets[setIdx])) as RestrictionSet;
+        entry.restrictionSets.splice(setIdx + 1, 0, clone);
+      }
+    }
+
+    save(updated);
+  }
+
+  function updateRestrictionSet(bossKey: string, setIdx: number, newSet: RestrictionSet) {
+    if (!data) return;
+    const updated = JSON.parse(JSON.stringify(data)) as TowerData;
+
+    if (bossKey.startsWith('pool-')) {
+      const bossId = bossKey.replace('pool-', '');
+      const entry = updated.randomPool.find(p => p.boss_id === bossId);
+      if (entry) entry.restrictionSets[setIdx] = newSet;
+    }
+
+    save(updated);
+  }
+
   return (
-    <div className="mx-auto max-w-5xl space-y-4">
+    <div className="mx-auto space-y-4">
       <div className="flex items-center gap-3">
         <h1 className="text-xl font-bold">Tower Very Hard</h1>
         {saving && <span className="text-xs text-zinc-500 animate-pulse">Saving...</span>}
@@ -285,7 +324,7 @@ export default function TowerEditorPage() {
             const pool = allBosses.filter(b => b.section === 'randomPool');
 
             const renderBoss = (b: typeof allBosses[0]) => (
-              <button key={b.key} onClick={() => setSelectedBoss(b.key)}
+              <button key={b.key} onClick={() => { setSelectedBoss(b.key); setEditingSetIdx(null); setAddingSet(false); }}
                 className={`flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm transition-colors ${
                   selectedBoss === b.key ? 'bg-blue-600/20 text-blue-400' : 'text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200'
                 }`}>
@@ -356,35 +395,65 @@ export default function TowerEditorPage() {
                 </div>
               )}
 
-              {/* Existing restriction sets */}
-              {selected.restrictionSets.map((rs, i) => (
-                <div key={i} className="rounded-lg border border-zinc-800 p-3 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="flex flex-wrap gap-1">
-                      {rs.restrictions.map(r => (
-                        <span key={r} className={`rounded px-2 py-0.5 text-[10px] font-semibold ${
-                          r.startsWith('Ban') ? 'bg-red-900/30 text-red-400' : 'bg-blue-900/30 text-blue-400'
-                        }`}>{r}</span>
-                      ))}
-                    </div>
-                    <button onClick={() => deleteRestrictionSet(selected.key, i)}
-                      className="ml-auto text-xs text-red-400 hover:text-red-300">Del</button>
-                  </div>
-                  {rs.recommended.map((rec, ri) => (
-                    <div key={ri} className="text-xs text-zinc-400 pl-2 border-l border-zinc-800">
-                      <span className="text-zinc-300">{rec.names.map(n => charMap[n] || n).join(', ') || '(none)'}</span>
-                      {rec.reason.en && <span className="ml-2 text-zinc-600">— {parseText(rec.reason.en)}</span>}
+              {/* Restriction sets (randomPool) */}
+              {selected.section === 'randomPool' && editingSetIdx === null && !addingSet && (
+                <>
+                  {selected.restrictionSets.map((rs, i) => (
+                    <div key={i} className="rounded-lg border border-zinc-800 hover:border-zinc-600 transition">
+                      <button onClick={() => setEditingSetIdx(i)}
+                        className="w-full p-3 text-left space-y-1">
+                        <div className="flex items-center gap-2">
+                          <div className="flex flex-wrap gap-1">
+                            {rs.restrictions.map(r => (
+                              <span key={r} className={`rounded px-2 py-0.5 text-[10px] font-semibold ${
+                                r.startsWith('Ban') || r.startsWith('Force') ? 'bg-red-900/30 text-red-400' : 'bg-blue-900/30 text-blue-400'
+                              }`} title={r}>{restrictionLabels[r]?.en ?? r}</span>
+                            ))}
+                          </div>
+                          <span className="ml-auto text-[10px] text-zinc-600">{rs.recommended.length} rec.</span>
+                        </div>
+                        {rs.recommended.map((rec, ri) => (
+                          <div key={ri} className="text-xs text-zinc-400 pl-2 border-l border-zinc-800">
+                            <span className="text-zinc-300">{rec.names.map(n => charMap[n] || n).join(', ') || '(none)'}</span>
+                            {rec.reason.en && <span className="ml-2 text-zinc-600">— {parseText(rec.reason.en)}</span>}
+                          </div>
+                        ))}
+                      </button>
+                      <div className="flex gap-2 px-3 pb-2">
+                        <button onClick={() => duplicateRestrictionSet(selected.key, i)}
+                          className="text-[10px] text-zinc-500 hover:text-zinc-300 transition">Duplicate</button>
+                        <button onClick={() => deleteRestrictionSet(selected.key, i)}
+                          className="text-[10px] text-red-400 hover:text-red-300 transition">Delete</button>
+                      </div>
                     </div>
                   ))}
-                </div>
-              ))}
+                  <button onClick={() => setAddingSet(true)}
+                    className="w-full rounded border border-dashed border-zinc-700 px-4 py-2 text-xs text-zinc-500 hover:border-zinc-500 hover:text-zinc-300 transition">
+                    + Add Restriction Set
+                  </button>
+                </>
+              )}
 
-              {/* Add new restriction set (randomPool only) */}
-              {selected.section === 'randomPool' && (
-                <AddRestrictionSet
+              {/* Restriction set editor (randomPool) */}
+              {selected.section === 'randomPool' && (editingSetIdx !== null || addingSet) && (
+                <RestrictionSetEditor
+                  initial={editingSetIdx !== null ? selected.restrictionSets[editingSetIdx] : undefined}
                   characters={characters}
                   charMap={charMap}
-                  onAdd={(rs) => addRestrictionSet(selected.key, rs)}
+                  onSave={(rs) => {
+                    if (editingSetIdx !== null) {
+                      updateRestrictionSet(selected.key, editingSetIdx, rs);
+                    } else {
+                      addRestrictionSet(selected.key, rs);
+                    }
+                    setEditingSetIdx(null);
+                    setAddingSet(false);
+                  }}
+                  onDelete={editingSetIdx !== null ? () => {
+                    deleteRestrictionSet(selected.key, editingSetIdx);
+                    setEditingSetIdx(null);
+                  } : undefined}
+                  onCancel={() => { setEditingSetIdx(null); setAddingSet(false); }}
                 />
               )}
             </div>
@@ -395,114 +464,225 @@ export default function TowerEditorPage() {
   );
 }
 
-// ── Add Restriction Set Form ────────────────────────────────────────
+// ── Restriction Set Editor ──────────────────────────────────────────
 
-function AddRestrictionSet({ characters, charMap, onAdd }: {
+function RestrictionSetEditor({ initial, characters, charMap, onSave, onDelete, onCancel }: {
+  initial?: RestrictionSet;
   characters: CharEntry[];
   charMap: Record<string, string>;
-  onAdd: (rs: RestrictionSet) => void;
+  onSave: (rs: RestrictionSet) => void;
+  onDelete?: () => void;
+  onCancel: () => void;
 }) {
-  const [open, setOpen] = useState(false);
-  const [restrictions, setRestrictions] = useState<string[]>([]);
-  const [recNames, setRecNames] = useState<string[]>([]);
-  const [recReason, setRecReason] = useState('');
-
-  function reset() {
-    setRestrictions([]);
-    setRecNames([]);
-    setRecReason('');
-    setOpen(false);
-  }
-
-  function handleAdd() {
-    if (restrictions.length === 0) return;
-    const rs: RestrictionSet = {
-      restrictions,
-      recommended: [{
-        names: recNames,
-        reason: { en: recReason, jp: '', kr: '', zh: '' },
-      }],
-    };
-    onAdd(rs);
-    reset();
-  }
+  const [restrictions, setRestrictions] = useState<string[]>(initial?.restrictions ?? []);
+  const [recommended, setRecommended] = useState<RecommendedGroup[]>(
+    initial?.recommended ?? [{ names: [], reason: { ...EMPTY_LANG } }]
+  );
 
   function toggleRestriction(r: string) {
     setRestrictions(prev => prev.includes(r) ? prev.filter(x => x !== r) : [...prev, r]);
   }
 
-  function addChar(char: CharEntry) {
-    if (!recNames.includes(char.id)) setRecNames(prev => [...prev, char.id]);
+  function addCharToGroup(groupIdx: number, charId: string) {
+    setRecommended(prev => prev.map((g, i) =>
+      i === groupIdx && !g.names.includes(charId) ? { ...g, names: [...g.names, charId] } : g
+    ));
   }
 
-  function removeChar(id: string) {
-    setRecNames(prev => prev.filter(x => x !== id));
+  function removeCharFromGroup(groupIdx: number, charId: string) {
+    setRecommended(prev => prev.map((g, i) =>
+      i === groupIdx ? { ...g, names: g.names.filter(n => n !== charId) } : g
+    ));
   }
 
-  if (!open) {
-    return (
-      <button onClick={() => setOpen(true)}
-        className="rounded border border-dashed border-zinc-700 px-4 py-2 text-xs text-zinc-500 hover:border-zinc-500 hover:text-zinc-300 transition w-full">
-        + Add Restriction Set
-      </button>
-    );
+  function updateGroupReason(groupIdx: number, reason: Partial<LangText>) {
+    setRecommended(prev => prev.map((g, i) =>
+      i === groupIdx ? { ...g, reason: { ...g.reason, ...reason } } : g
+    ));
+  }
+
+  function addGroup() {
+    setRecommended(prev => [...prev, { names: [], reason: { ...EMPTY_LANG } }]);
+  }
+
+  function removeGroup(groupIdx: number) {
+    setRecommended(prev => prev.filter((_, i) => i !== groupIdx));
+  }
+
+  function handleSave() {
+    if (restrictions.length === 0) return;
+    onSave({ restrictions, recommended });
   }
 
   return (
-    <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-4 space-y-3">
-      <h3 className="text-sm font-semibold">New Restriction Set</h3>
+    <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-4 space-y-4">
+      <div className="flex items-center gap-2">
+        <h3 className="text-sm font-semibold">{initial ? 'Edit' : 'New'} Restriction Set</h3>
+        <div className="flex-1" />
+        {onDelete && (
+          <button onClick={onDelete} className="text-xs text-red-400 hover:text-red-300">Delete Set</button>
+        )}
+      </div>
 
       {/* Restriction picker */}
       <div>
-        <label className="text-xs text-zinc-500">Restrictions</label>
-        <div className="mt-1 flex flex-wrap gap-1">
-          {ALL_RESTRICTIONS.map(r => (
-            <button key={r} onClick={() => toggleRestriction(r)}
-              className={`rounded px-2 py-0.5 text-[10px] font-medium transition ${
-                restrictions.includes(r)
-                  ? r.startsWith('Ban') ? 'bg-red-900/50 text-red-300' : 'bg-blue-900/50 text-blue-300'
-                  : 'bg-zinc-800 text-zinc-500 hover:text-zinc-300'
-              }`}>
-              {r}
-            </button>
+        <label className="text-xs text-zinc-500">Restriction</label>
+        <div className="mt-1 space-y-2">
+          {RESTRICTION_GROUPS.map(group => (
+            <div key={group.label}>
+              <div className="text-[10px] text-zinc-600 mb-1">{group.label}</div>
+              <div className="flex flex-wrap gap-1">
+                {group.keys.filter(r => r in restrictionLabels).map(r => (
+                  <button key={r} onClick={() => toggleRestriction(r)} title={r}
+                    className={`rounded px-2 py-0.5 text-[10px] font-medium transition ${
+                      restrictions.includes(r)
+                        ? group.style === 'ban' ? 'bg-red-900/50 text-red-300' : 'bg-blue-900/50 text-blue-300'
+                        : 'bg-zinc-800 text-zinc-500 hover:text-zinc-300'
+                    }`}>
+                    {restrictionLabels[r]?.en ?? r}
+                  </button>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* Recommended characters */}
-      <div>
-        <label className="text-xs text-zinc-500">Recommended Characters</label>
-        {recNames.length > 0 && (
-          <div className="mt-1 flex flex-wrap gap-1.5">
-            {recNames.map(id => (
-              <span key={id} className="flex items-center gap-1 rounded bg-zinc-800 px-2 py-1 text-xs text-zinc-300">
-                {charMap[id] || id}
-                <button onClick={() => removeChar(id)} className="text-zinc-500 hover:text-red-400">x</button>
-              </span>
-            ))}
+      {/* Recommended groups */}
+      <div className="space-y-3">
+        <label className="text-xs text-zinc-500">Recommended Groups</label>
+        {recommended.map((group, gi) => (
+          <div key={gi} className="rounded border border-zinc-800 p-3 space-y-2">
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] text-zinc-600 uppercase font-semibold">Group {gi + 1}</span>
+              <div className="flex-1" />
+              {recommended.length > 1 && (
+                <button onClick={() => removeGroup(gi)} className="text-[10px] text-red-400 hover:text-red-300">Remove</button>
+              )}
+            </div>
+
+            {/* Characters */}
+            <div className="flex flex-wrap gap-1.5">
+              {group.names.map(n => (
+                <span key={n} className="flex items-center gap-1 rounded bg-zinc-800 px-2 py-0.5 text-xs text-zinc-200">
+                  {charMap[n] || n}
+                  <button onClick={() => removeCharFromGroup(gi, n)} className="text-zinc-500 hover:text-red-400 ml-0.5">x</button>
+                </span>
+              ))}
+              {group.names.length === 0 && <span className="text-xs text-zinc-600">(no characters)</span>}
+            </div>
+            <CharPicker characters={characters} onSelect={(c) => addCharToGroup(gi, c.id)} />
+
+            {/* Reason */}
+            <ReasonInput
+              reason={group.reason}
+              onChange={(v) => updateGroupReason(gi, v)}
+            />
           </div>
-        )}
-        <CharPicker characters={characters} onSelect={addChar} />
-      </div>
+        ))}
 
-      {/* Reason */}
-      <div>
-        <label className="text-xs text-zinc-500">Reason (EN)</label>
-        <input value={recReason} onChange={e => setRecReason(e.target.value)}
-          className="mt-1 w-full rounded border border-zinc-700 bg-zinc-950 px-3 py-1.5 text-sm focus:border-zinc-500 focus:outline-none"
-          placeholder="e.g. {D/BT_STUN} options" />
-      </div>
-
-      <div className="flex gap-2">
-        <button onClick={handleAdd} disabled={restrictions.length === 0}
-          className="rounded bg-blue-600 px-4 py-1.5 text-xs font-semibold hover:bg-blue-500 transition disabled:opacity-40">
-          Add
+        <button onClick={addGroup}
+          className="w-full rounded border border-dashed border-zinc-700 px-3 py-1.5 text-[10px] text-zinc-500 hover:border-zinc-500 hover:text-zinc-300 transition">
+          + Add Recommended Group
         </button>
-        <button onClick={reset}
+      </div>
+
+      {/* Actions */}
+      <div className="flex gap-2 pt-2 border-t border-zinc-800">
+        <button onClick={handleSave} disabled={restrictions.length === 0}
+          className="rounded bg-blue-600 px-4 py-1.5 text-xs font-semibold hover:bg-blue-500 transition disabled:opacity-40">
+          Save
+        </button>
+        <button onClick={onCancel}
           className="rounded border border-zinc-700 px-4 py-1.5 text-xs text-zinc-400 hover:text-zinc-200 transition">
           Cancel
         </button>
       </div>
+    </div>
+  );
+}
+
+// ── Reason Input with Effect Picker ──────────────────────────────────
+
+interface EffectEntry { name: string; label: string }
+const allEffects: { type: 'B' | 'D'; name: string; label: string }[] = [
+  ...(buffsData as EffectEntry[]).map(e => ({ type: 'B' as const, name: e.name, label: e.label })),
+  ...(debuffsData as EffectEntry[]).map(e => ({ type: 'D' as const, name: e.name, label: e.label })),
+];
+
+function ReasonInput({ reason, onChange }: { reason: LangText; onChange: (v: Partial<LangText>) => void }) {
+  const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState('');
+  const inputRef = useRef<HTMLInputElement>(null);
+  const pickerRef = useRef<HTMLDivElement>(null);
+
+  const value = reason.en;
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (pickerRef.current && !pickerRef.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  const filtered = useMemo(() => {
+    if (!search.trim()) return allEffects.slice(0, 30);
+    const s = search.toLowerCase();
+    return allEffects.filter(e => e.label.toLowerCase().includes(s) || e.name.toLowerCase().includes(s)).slice(0, 30);
+  }, [search]);
+
+  function insertEffect(type: 'B' | 'D', name: string) {
+    const tag = `{${type}/${name}}`;
+    const el = inputRef.current;
+    if (el) {
+      const pos = el.selectionStart ?? value.length;
+      const before = value.slice(0, pos);
+      const after = value.slice(pos);
+      const spaceBefore = before.length > 0 && !before.endsWith(' ') ? ' ' : '';
+      const spaceAfter = after.length > 0 && !after.startsWith(' ') ? ' ' : '';
+      onChange({ en: before + spaceBefore + tag + spaceAfter + after });
+    } else {
+      onChange({ en: value + (value && !value.endsWith(' ') ? ' ' : '') + tag });
+    }
+    setOpen(false);
+    setSearch('');
+  }
+
+  return (
+    <div>
+      <div className="flex items-center gap-1">
+        <label className="text-[10px] text-zinc-600">Reason (EN)</label>
+        <div ref={pickerRef} className="relative">
+          <button onClick={() => setOpen(v => !v)}
+            className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-400 hover:text-zinc-200 transition">
+            + Effect
+          </button>
+          {open && (
+            <div className="absolute left-0 top-full mt-1 z-40 w-72 rounded border border-zinc-700 bg-zinc-900 shadow-xl flex flex-col max-h-64 overflow-hidden">
+              <input value={search} onChange={e => setSearch(e.target.value)} autoFocus
+                placeholder="Search effect..."
+                className="m-1.5 rounded border border-zinc-700 bg-zinc-950 px-2 py-1 text-xs placeholder-zinc-500 focus:border-zinc-500 focus:outline-none" />
+              <div className="overflow-y-auto">
+                {filtered.map((e, idx) => (
+                  <button key={idx} onClick={() => insertEffect(e.type, e.name)}
+                    className="flex w-full items-center gap-2 px-3 py-1 text-left text-xs hover:bg-zinc-800 transition">
+                    <span className={`shrink-0 rounded px-1 py-0.5 text-[9px] font-bold ${
+                      e.type === 'B' ? 'bg-green-900/40 text-green-400' : 'bg-red-900/40 text-red-400'
+                    }`}>{e.type}</span>
+                    <span className="text-zinc-300 truncate">{e.label}</span>
+                    <span className="ml-auto text-[10px] text-zinc-600 truncate">{e.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+      <input ref={inputRef} value={value} onChange={e => onChange({ en: e.target.value })}
+        className="mt-0.5 w-full rounded border border-zinc-700 bg-zinc-950 px-2 py-1 text-xs focus:border-zinc-500 focus:outline-none"
+        placeholder="e.g. {D/BT_STUN} options" />
+      {value && <div className="mt-1 text-xs text-zinc-400">{parseText(value)}</div>}
     </div>
   );
 }
