@@ -37,8 +37,9 @@ const NAV_GROUPS: NavGroup[] = [
   {
     label: 'Utils',
     items: [
-      { label: 'Promo Codes', href: '/admin/utils/promo-codes', disabled: true },
-      { label: 'Banners', href: '/admin/utils/banners', disabled: true },
+      { label: 'Promo Codes', href: '/admin/utils/promo-codes' },
+      { label: 'Banners', href: '/admin/utils/banners' },
+      { label: 'Tower', href: '/admin/utils/tower' },
       { label: 'Events', href: '/admin/utils/events', disabled: true },
     ],
   },
