@@ -314,7 +314,17 @@ function resolveEffect(
     // Description from DescID (can be comma-separated: first=2P, second=4P)
     const descIdRaw = row.DescID ?? row.CustomCraftDescIDSymbol ?? '';
     const descIds = descIdRaw.split(',').map(s => s.trim()).filter(Boolean);
-    const index = piece === '2P' ? 0 : 1;
+
+    // Determine index: if both 2P and 4P are buff → 2P=0, 4P=1
+    // If only one piece is buff → always index 0
+    let index: number;
+    if (piece === '2P') {
+      index = 0;
+    } else {
+      const otherIsBuff = (row.OptionType_2P ?? '') === 'IOT_BUFF';
+      index = otherIsBuff ? 1 : 0;
+    }
+
     return resolveBuffEffect(descIds, index, textSkillMap);
   }
 
