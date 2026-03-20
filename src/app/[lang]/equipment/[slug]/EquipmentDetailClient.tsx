@@ -17,7 +17,7 @@ import StatInline from '@/app/components/inline/StatInline';
 import FitText from '@/app/components/ui/FitText';
 import { useBreadcrumbOverride } from '@/lib/contexts/BreadcrumbContext';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText, formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
+import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
 import type { ItemRarity } from '@/lib/theme';
 import { ITEM_RARITY_TEXT, ITEM_RARITY_BG } from '@/lib/theme';
 
@@ -225,7 +225,7 @@ function TalismanDetail({ talisman, lang, bossMap, statRanges }: { talisman: Tal
           <div className="mt-2 space-y-2 text-sm text-zinc-300">
             <p><span className="text-zinc-500">Lv. 0 </span>{formatEffectText(effectDesc1)}</p>
             {effectDesc4 && effectDesc4 !== effectDesc1 && (
-              <p><span className="text-zinc-500">Lv. 10 </span>{formatScaledEffect(effectDesc4, effectDesc1)}</p>
+              <p><span className="text-zinc-500">Lv. 10 </span>{formatEffectText(effectDesc4)}</p>
             )}
           </div>
         </section>
@@ -306,8 +306,8 @@ function SetDetail({ set, lang, bossMap, statRanges }: { set: ArmorSet; lang: La
             {(effect24 || effect44) && (effect24 !== effect21 || effect44 !== effect41) && (
               <tr>
                 <td className="w-10 py-1.5 align-top text-zinc-500">T4</td>
-                {(effect21 || effect24) && <td className="py-1.5 align-top text-zinc-300">{effect24 && effect24 !== effect21 ? formatScaledEffect(effect24, effect21) : effect21 ? formatEffectText(effect21) : '—'}</td>}
-                {(effect41 || effect44) && <td className="py-1.5 align-top text-zinc-300">{effect44 && effect44 !== effect41 ? formatScaledEffect(effect44, effect41) : effect41 ? formatEffectText(effect41) : '—'}</td>}
+                {(effect21 || effect24) && <td className="py-1.5 align-top text-zinc-300">{effect24 && effect24 !== effect21 ? formatEffectText(effect24) : effect21 ? formatEffectText(effect21) : '—'}</td>}
+                {(effect41 || effect44) && <td className="py-1.5 align-top text-zinc-300">{effect44 && effect44 !== effect41 ? formatEffectText(effect44) : effect41 ? formatEffectText(effect41) : '—'}</td>}
               </tr>
             )}
           </tbody>

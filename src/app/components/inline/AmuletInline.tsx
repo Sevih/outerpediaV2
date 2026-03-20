@@ -4,7 +4,7 @@ import { use } from 'react';
 import Image from 'next/image';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
-import { formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
+import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
 import type { Amulet } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
@@ -29,7 +29,7 @@ export default function AmuletInline({ name }: Props) {
     : amulet.effect_desc1
       ? l(amulet, 'effect_desc1', lang)
       : null;
-  const baseDesc = amulet.effect_desc1 ? l(amulet, 'effect_desc1', lang) : null;
+
 
   const tooltip = (
     <div className="flex gap-2">
@@ -56,7 +56,7 @@ export default function AmuletInline({ name }: Props) {
             <span className="text-xs text-buff">Lv. 5 {effectName}</span>
           </div>
         )}
-        {effectDesc && <p className="text-xs text-neutral-200">{formatScaledEffect(effectDesc, baseDesc)}</p>}
+        {effectDesc && <p className="text-xs text-neutral-200">{formatEffectText(effectDesc)}</p>}
       </div>
     </div>
   );

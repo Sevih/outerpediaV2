@@ -4,7 +4,7 @@ import { use } from 'react';
 import Image from 'next/image';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
-import { formatScaledEffect, getRarityBgPath } from '@/lib/format-text';
+import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
 import type { Talisman } from '@/types/equipment';
 import InlineTooltip from './InlineTooltip';
 import { EquipmentBadge } from './WeaponInline';
@@ -55,12 +55,12 @@ export default function TalismanInline({ name }: Props) {
         )}
         {effectDesc1 && (
           <p className="text-xs text-neutral-200">
-            <span className="text-zinc-500">Lv. 0</span> {formatScaledEffect(effectDesc1, effectDesc4)}
+            <span className="text-zinc-500">Lv. 0</span> {formatEffectText(effectDesc1)}
           </p>
         )}
         {effectDesc4 && effectDesc4 !== effectDesc1 && (
           <p className="text-xs text-neutral-200">
-            <span className="text-zinc-500">Lv. 10</span> {formatScaledEffect(effectDesc4, effectDesc1)}
+            <span className="text-zinc-500">Lv. 10</span> {formatEffectText(effectDesc4)}
           </p>
         )}
       </div>

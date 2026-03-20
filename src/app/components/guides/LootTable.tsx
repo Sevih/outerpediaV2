@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
-import { slugifyEquipment, formatEffectText, formatScaledEffect } from '@/lib/format-text';
+import { slugifyEquipment, formatEffectText } from '@/lib/format-text';
 import EquipmentIcon from '@/app/components/equipment/EquipmentIcon';
 import type { ItemRarity } from '@/lib/theme';
 
@@ -180,7 +180,7 @@ export default function LootTable({ bossId }: Props) {
                         </div>
                       )}
                       {effectDesc && (
-                        <p className="mt-1 text-xs text-zinc-400">{formatScaledEffect(effectDesc, a.effect_desc1)}</p>
+                        <p className="mt-1 text-xs text-zinc-400">{formatEffectText(effectDesc)}</p>
                       )}
                     </div>
                   </Link>

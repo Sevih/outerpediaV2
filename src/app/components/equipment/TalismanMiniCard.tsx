@@ -4,7 +4,7 @@ import Image from 'next/image';
 import type { Talisman } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText, formatScaledEffect } from '@/lib/format-text';
+import { formatEffectText } from '@/lib/format-text';
 import InlineTooltip from '@/app/components/inline/InlineTooltip';
 import EquipmentIcon from './EquipmentIcon';
 
@@ -60,7 +60,7 @@ export default function TalismanMiniCard({ talisman, lang }: Props) {
       )}
       {effectDesc4 && effectDesc4 !== effectDesc1 && (
         <p className="text-xs text-zinc-300">
-          <span className="text-zinc-500">Lv. 10</span> {formatScaledEffect(effectDesc4, effectDesc1)}
+          <span className="text-zinc-500">Lv. 10</span> {formatEffectText(effectDesc4)}
         </p>
       )}
     </div>

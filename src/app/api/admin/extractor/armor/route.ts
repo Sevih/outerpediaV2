@@ -12,13 +12,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 import {
-  readTemplet, buildTextMap, expandLang,
+  expandLang,
   LANGS, DEFAULT_LANG, SUFFIX_LANGS, type LangTexts,
 } from '@/app/admin/lib/text';
 import {
   loadEquipGameData,
   type EquipGameData,
-  resolveEquipPlaceholders,
   orderKeys,
   detectEol,
   copyIfMissing,
@@ -64,10 +63,6 @@ function devOnly() {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
   return null;
-}
-
-function pngPath(dir: string, name: string): string {
-  return [dir, name].join(path.sep) + '.png';
 }
 
 /** Check if a stat value should be displayed as permille (÷10 + %) */

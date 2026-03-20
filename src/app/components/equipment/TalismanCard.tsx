@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { Talisman } from '@/types/equipment';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
-import { formatEffectText, formatScaledEffect, slugifyEquipment } from '@/lib/format-text';
+import { formatEffectText, slugifyEquipment } from '@/lib/format-text';
 import { localePath } from '@/lib/navigation';
 import EquipmentIcon from './EquipmentIcon';
 
@@ -67,7 +67,7 @@ export default function TalismanCard({ talisman, lang }: Props) {
       {effectDesc4 && effectDesc4 !== effectDesc1 && (
         <p className="text-xs text-zinc-300">
           <span className="text-zinc-500">Lv. 10 </span>
-          {formatScaledEffect(effectDesc4, effectDesc1)}
+          {formatEffectText(effectDesc4)}
         </p>
       )}
     </Link>
