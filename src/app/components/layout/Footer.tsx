@@ -33,7 +33,7 @@ export default async function Footer() {
             <FaGithub /> {t('footer.social.github')}
           </Link>
           <Link
-            href="https://discord.com/invite/keGhVQWsHv"
+            href="https://discord.com/invite/PNMd5mkAV8"
             aria-label="EvaMains Discord for Outerpedia community"
             target="_blank"
             rel="noopener noreferrer"

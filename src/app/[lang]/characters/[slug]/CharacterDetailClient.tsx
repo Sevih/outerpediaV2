@@ -6,6 +6,7 @@ import type { ExclusiveEquipment, ResolvedCharacterReco, BossDisplayMap } from '
 import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
 import type { Item } from '@/types/item';
 import type { Effect } from '@/types/effect';
+// import type { Review } from '@/types/review'; // TODO: enable when review system is ready
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import QuickToc, { type TocSection } from '@/app/components/character/QuickToc';
@@ -21,6 +22,7 @@ import ProsConsSection from '@/app/components/character/ProsConsSection';
 import SynergiesSection from '@/app/components/character/SynergiesSection';
 import CoreFusionBanner from '@/app/components/character/CoreFusionBanner';
 import type { CoreFusionLink } from '@/app/components/character/CoreFusionBanner';
+// import ReviewsSection from '@/app/components/character/ReviewsSection'; // TODO: enable when review system is ready
 import YouTubeEmbed from '@/app/components/ui/YouTubeEmbed';
 
 type TagEntry = {
@@ -49,6 +51,7 @@ type Props = {
   debuffMap: Record<string, Effect>;
   coreFusionLink: CoreFusionLink | null;
   bossMap: BossDisplayMap;
+  reviews: unknown[]; // TODO: use Review[] when review system is ready
 };
 
 export default function CharacterDetailClient({
@@ -69,6 +72,7 @@ export default function CharacterDetailClient({
   debuffMap,
   coreFusionLink,
   bossMap,
+  reviews: _reviews,
 }: Props) {
   const { t } = useI18n();
 
@@ -77,6 +81,7 @@ export default function CharacterDetailClient({
   const hasTranscend = !!character.transcend;
   const hasChainPassive = !!character.skills.SKT_CHAIN_PASSIVE;
   const hasSynergies = !!partners && partners.partner.length > 0;
+  // const hasReviews = reviews.length > 0; // TODO: enable when review system is ready
   const hasVideo = !!character.video;
   const hasBurst = !!(['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE'] as const).find(
     (k) => character.skills[k]?.burnEffect && Object.keys(character.skills[k]!.burnEffect!).length > 0
@@ -94,6 +99,7 @@ export default function CharacterDetailClient({
       hasChainPassive && { id: 'chain-dual', label: t('page.character.toc.chain_dual') },
       hasSynergies && { id: 'synergies', label: t('page.character.toc.synergies') },
       { id: 'gear', label: t('page.character.toc.gear') },
+      // hasReviews && { id: 'reviews', label: t('page.character.toc.reviews') }, // TODO: enable when review system is ready
       hasVideo && { id: 'video', label: t('page.character.toc.video') },
     ].filter(Boolean) as TocSection[];
   }, [t, hasProsCons, hasEe, hasTranscend, hasChainPassive, hasBurst, hasSynergies, hasVideo]);
@@ -154,6 +160,12 @@ export default function CharacterDetailClient({
           sets={sets}
           bossMap={bossMap}
         />
+
+        {/* TODO: enable when review system is ready
+        {reviews.length > 0 && (
+          <ReviewsSection reviews={reviews} />
+        )}
+        */}
 
         {hasVideo && (
           <section id="video">

@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { FaDiscord } from 'react-icons/fa';
 import type { Messages } from '@/i18n';
 
-const INVITE_URL = 'https://discord.com/invite/keGhVQWsHv';
-const INVITE_CODE = 'keGhVQWsHv';
+const INVITE_URL = 'https://discord.com/invite/PNMd5mkAV8';
+const INVITE_CODE = 'PNMd5mkAV8';
 
 type Props = {
   t: Messages;

@@ -6,6 +6,7 @@ import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT } from '@/i18n';
 import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners, getCharacterById, resolveIdToSlug } from '@/lib/data/characters';
 import { getExclusiveEquipment, getWeapons, getAmulets, getTalismans, getArmorSets } from '@/lib/data/equipment';
+import { getReviewsForCharacter } from '@/lib/data/reviews';
 import { getBossDisplayMap } from '@/lib/data/bosses';
 import { resolveRecoPresets } from '@/lib/data/reco';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
@@ -81,7 +82,7 @@ export default async function CharacterDetailPage({ params }: Props) {
   const { lang: rawLang, slug } = await params;
   const lang = rawLang as Lang;
 
-  const [character, reco, recoPresets, prosCons, partners, eeMap, allWeapons, allAmulets, allTalismans, allSets, tagsRaw, giftItemsMap, buffsArr, debuffsArr] = await Promise.all([
+  const [character, reco, recoPresets, prosCons, partners, eeMap, allWeapons, allAmulets, allTalismans, allSets, tagsRaw, giftItemsMap, buffsArr, debuffsArr, reviews] = await Promise.all([
     getCharacter(slug),
     getCharacterReco(slug),
     getRecoPresets(),
@@ -98,6 +99,7 @@ export default async function CharacterDetailPage({ params }: Props) {
     getGiftItems(),
     getBuffs(),
     getDebuffs(),
+    getReviewsForCharacter(slug),
   ]);
 
   if (!character) notFound();
@@ -205,6 +207,7 @@ export default async function CharacterDetailPage({ params }: Props) {
         debuffMap={stripOtherLangsRecord(debuffMap, lang)}
         coreFusionLink={coreFusionLink}
         bossMap={bossMap}
+        reviews={reviews}
       />
     </>
   );
