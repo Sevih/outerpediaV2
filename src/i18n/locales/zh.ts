@@ -601,6 +601,7 @@ const zh: Record<TranslationKey, string> = {
   'page.character.reviews.no_reviews': '暂无评价。',
   'page.character.reviews.via_discord': '评价通过Discord提交。',
   'page.character.reviews.cta': '想分享你的看法？在以下服务器提交评价：',
+  'page.character.reviews.load_more': '加载更多',
   'page.character.toc.pros_cons': '优缺点',
   'page.character.toc.synergies': '协同',
   'page.character.pros': '优点',

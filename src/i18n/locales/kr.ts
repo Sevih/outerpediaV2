@@ -601,6 +601,7 @@ const kr: Record<TranslationKey, string> = {
   'page.character.reviews.no_reviews': '아직 리뷰가 없습니다.',
   'page.character.reviews.via_discord': 'Discord에서 제출된 리뷰입니다.',
   'page.character.reviews.cta': '리뷰를 남기고 싶으신가요? 아래 서버에서 작성해 주세요:',
+  'page.character.reviews.load_more': '더 보기',
   'page.character.toc.pros_cons': '장점과 단점',
   'page.character.toc.synergies': '시너지',
   'page.character.pros': '장점',

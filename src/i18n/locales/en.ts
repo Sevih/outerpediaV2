@@ -601,6 +601,7 @@ const en = {
   'page.character.reviews.no_reviews': 'No reviews yet.',
   'page.character.reviews.via_discord': 'Reviews submitted via Discord.',
   'page.character.reviews.cta': 'Want to share your opinion? Submit a review on the',
+  'page.character.reviews.load_more': 'Load more reviews',
   'page.character.toc.pros_cons': 'Pros & Cons',
   'page.character.toc.synergies': 'Synergies',
   'page.character.pros': 'Strengths',

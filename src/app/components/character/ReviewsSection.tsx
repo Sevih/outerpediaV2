@@ -1,7 +1,10 @@
 'use client';
 
 import type { Review } from '@/types/review';
+import { useState } from 'react';
 import { useI18n } from '@/lib/contexts/I18nContext';
+
+const PAGE_SIZE = 10;
 
 type Props = {
   reviews: Review[];
@@ -33,18 +36,17 @@ function renderTextWithEmojis(text: string) {
     if (match) {
       const [, animated, name, id] = match;
       const ext = animated ? 'gif' : 'webp';
-      return (
-        <img
-          key={i}
-          src={`https://cdn.discordapp.com/emojis/${id}.${ext}?size=20`}
-          alt={`:${name}:`}
-          title={`:${name}:`}
-          width={20}
-          height={20}
-          className="inline-block align-text-bottom"
-          loading="lazy"
-        />
-      );
+      // eslint-disable-next-line @next/next/no-img-element
+      return <img
+        key={i}
+        src={`https://cdn.discordapp.com/emojis/${id}.${ext}?size=20`}
+        alt={`:${name}:`}
+        title={`:${name}:`}
+        width={20}
+        height={20}
+        className="inline-block align-text-bottom"
+        loading="lazy"
+      />;
     }
     return part;
   });
@@ -75,11 +77,16 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function ReviewsSection({ reviews }: Props) {
   const { t } = useI18n();
+  const [page, setPage] = useState(1);
 
   const average =
     reviews.length > 0
       ? Math.round((reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length) * 10) / 10
       : 0;
+
+  const totalPages = Math.ceil(reviews.length / PAGE_SIZE);
+  const visibleReviews = reviews.slice(0, page * PAGE_SIZE);
+  const hasMore = page < totalPages;
 
   return (
     <section id="reviews">
@@ -115,7 +122,7 @@ export default function ReviewsSection({ reviews }: Props) {
 
           {/* Reviews list */}
           <div className="space-y-4">
-            {reviews.map((review) => (
+            {visibleReviews.map((review) => (
               <div
                 key={review.id}
                 className="rounded-xl border border-zinc-700/50 bg-zinc-800/50 p-4"
@@ -131,6 +138,7 @@ export default function ReviewsSection({ reviews }: Props) {
                   </div>
 
                   {/* Avatar */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={getDiscordAvatarUrl(review.userId, review.avatar)}
                     alt={review.displayName}
@@ -157,6 +165,16 @@ export default function ReviewsSection({ reviews }: Props) {
               </div>
             ))}
           </div>
+
+          {/* Load more */}
+          {hasMore && (
+            <button
+              onClick={() => setPage(p => p + 1)}
+              className="mt-4 w-full rounded-lg border border-zinc-700 bg-zinc-800/50 py-2 text-sm text-zinc-400 transition hover:bg-zinc-700/50 hover:text-zinc-200"
+            >
+              {t('page.character.reviews.load_more')}
+            </button>
+          )}
 
           {/* Discord attribution */}
           <p className="mt-4 text-xs text-zinc-500">

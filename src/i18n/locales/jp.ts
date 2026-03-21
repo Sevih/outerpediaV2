@@ -601,6 +601,7 @@ const jp: Record<TranslationKey, string> = {
   'page.character.reviews.no_reviews': 'レビューはまだありません。',
   'page.character.reviews.via_discord': 'Discordから投稿されたレビューです。',
   'page.character.reviews.cta': 'レビューを投稿しませんか？こちらから投稿できます：',
+  'page.character.reviews.load_more': 'もっと見る',
   'page.character.toc.pros_cons': '長所と短所',
   'page.character.toc.synergies': 'シナジー',
   'page.character.pros': '長所',
