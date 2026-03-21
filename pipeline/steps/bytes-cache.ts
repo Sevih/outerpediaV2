@@ -78,6 +78,13 @@ export async function run() {
     }
   }
 
+  // ── Generate skill-buffs.json ──
+
+  const skillBuffsScript = join(__dirname, '../../scripts/generate-skill-buffs.py');
+  if (existsSync(skillBuffsScript)) {
+    execFileSync('python', [skillBuffsScript], { timeout: 60_000, stdio: 'ignore' });
+  }
+
   saveStamp(STAMP);
   return `extracted + ${parsed} parsed`;
 }

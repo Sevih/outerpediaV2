@@ -1,5 +1,6 @@
 import { cache } from 'react';
 import type { Lang } from '@/lib/i18n/config';
+import { isValidLang } from '@/lib/i18n/config';
 import type { TranslationKey } from './locales/en';
 
 export type { TranslationKey };
@@ -8,7 +9,8 @@ export type TFunction = (key: TranslationKey, vars?: Record<string, string | num
 
 /** Load messages for a language (cached per request) */
 export const loadMessages = cache(async (lang: Lang): Promise<Messages> => {
-  const mod = await import(`./locales/${lang}.ts`);
+  const safeLang = isValidLang(lang) ? lang : 'en';
+  const mod = await import(`./locales/${safeLang}.ts`);
   return mod.default;
 });
 
