@@ -9,11 +9,6 @@
     ],
     "s2": [
       {
-        "type": "BT_AGGRO",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_CALL_BACKUP",
         "debuff": false,
         "target": "ME"
@@ -27,18 +22,23 @@
         "type": "BT_CALL_BACKUP_2",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_AGGRO",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
       {
-        "type": "BT_STAT|ST_ATK",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_COOL_CHARGE",
         "debuff": false,
         "target": "MY_TEAM_WITHOUT_ME"
+      },
+      {
+        "type": "BT_STAT|ST_ATK",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "chain": [
@@ -49,6 +49,13 @@
       }
     ],
     "chain_dual": [
+      {
+        "type": "BT_REMOVE_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
+      }
+    ],
+    "ee": [
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
@@ -82,13 +89,6 @@
         "debuff": false,
         "target": "ME"
       }
-    ],
-    "chain_dual": [
-      {
-        "type": "BT_STAT|ST_CRITICAL_RATE",
-        "debuff": false,
-        "target": "ME"
-      }
     ]
   },
   "2000003": {
@@ -119,6 +119,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000004": {
@@ -131,14 +138,14 @@
     ],
     "s2": [
       {
-        "type": "BT_DOT_BURN",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_DOT_BURN",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -153,6 +160,18 @@
         "type": "BT_DOT_BURN",
         "debuff": true,
         "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_ATK",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_DEF",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -268,10 +287,29 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_BUFF_CHANCE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000008": {
+    "s1": [
+      {
+        "type": "HEAVY_STRIKE",
+        "debuff": false,
+        "target": "ME"
+      }
+    ],
     "s2": [
+      {
+        "type": "HEAVY_STRIKE",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_STAT|ST_DEF",
         "debuff": false,
@@ -299,6 +337,20 @@
         "debuff": true,
         "target": "ENEMY_TEAM"
       }
+    ],
+    "chain": [
+      {
+        "type": "HEAVY_STRIKE",
+        "debuff": false,
+        "target": "ME"
+      }
+    ],
+    "chain_dual": [
+      {
+        "type": "HEAVY_STRIKE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000009": {
@@ -313,7 +365,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_ONE"
+        "target": "ME"
       },
       {
         "type": "BT_COOL_CHARGE",
@@ -340,6 +392,13 @@
         "type": "BT_STAT|ST_ATK",
         "debuff": true,
         "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_COOL2_CHARGE",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -375,6 +434,13 @@
     "chain_dual": [
       {
         "type": "BT_STAT|ST_DEF",
+        "debuff": false,
+        "target": "ME"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
         "target": "ME"
       }
@@ -420,6 +486,13 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_SPEED",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
+      }
     ]
   },
   "2000012": {
@@ -427,7 +500,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_STAT|ST_SPEED",
@@ -442,24 +515,24 @@
     ],
     "s2": [
       {
-        "type": "BT_STAT|ST_CRITICAL_DMG_RATE",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
         "type": "BT_STAT|ST_CRITICAL_RATE",
         "debuff": false,
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_STAT|ST_ATK",
+        "type": "BT_STAT|ST_CRITICAL_DMG_RATE",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_ATK",
+        "debuff": false,
+        "target": "MY_TEAM_WITHOUT_ME"
       }
     ],
     "s3": [
@@ -482,6 +555,13 @@
         "debuff": false,
         "target": "MY_TEAM_HIGHEST_ATK"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_CALL_BACKUP",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000013": {
@@ -494,17 +574,22 @@
     ],
     "s2": [
       {
-        "type": "BT_STAT|ST_SPEED",
+        "type": "BT_STAT|ST_CRITICAL_RATE",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_STAT|ST_CRITICAL_RATE",
+        "type": "BT_STAT|ST_SPEED",
         "debuff": true,
         "target": "ENEMY_TEAM"
       }
     ],
     "s3": [
+      {
+        "type": "BT_COOL_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_SILENCE",
         "debuff": true,
@@ -514,11 +599,6 @@
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
         "target": "ENEMY_TEAM"
-      },
-      {
-        "type": "BT_COOL_CHARGE",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "chain": [
@@ -533,6 +613,13 @@
         "type": "BT_STAT|ST_ATK",
         "debuff": true,
         "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_SPEED",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -576,6 +663,13 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_DOT_CURSE",
+        "debuff": true,
+        "target": "ENEMY"
+      }
     ]
   },
   "2000015": {
@@ -593,11 +687,6 @@
         "target": "ME"
       },
       {
-        "type": "BT_DOT_BLEED",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
@@ -606,6 +695,11 @@
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_DOT_BLEED",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -619,12 +713,24 @@
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain_dual": [
       {
         "type": "BT_DOT_BLEED",
+        "debuff": true,
+        "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_ADDITIVE_TURN",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_IMMEDIATELY_BLEED",
         "debuff": true,
         "target": "ENEMY"
       }
@@ -658,6 +764,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_IMMUNE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000017": {
@@ -677,7 +790,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       },
       {
         "type": "BT_REMOVE_DEBUFF",
@@ -688,6 +801,11 @@
     "s3": [
       {
         "type": "BT_SHIELD_BASED_CASTER",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_CONTINU_HEAL",
         "debuff": false,
         "target": "MY_TEAM"
       }
@@ -702,6 +820,18 @@
     "chain_dual": [
       {
         "type": "BT_STAT|ST_ATK",
+        "debuff": false,
+        "target": "ME"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_COOL_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_CRITICAL_RATE",
         "debuff": false,
         "target": "ME"
       }
@@ -752,6 +882,18 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_DOT_LIGHTNING",
+        "debuff": true,
+        "target": "ENEMY"
+      },
+      {
+        "type": "BT_STUN",
+        "debuff": true,
+        "target": "ENEMY"
+      }
     ]
   },
   "2000019": {
@@ -764,12 +906,12 @@
     ],
     "s2": [
       {
-        "type": "BT_COOL2_CHARGE",
+        "type": "BT_DMG_ELEMENT_SUPERIORITY",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "BT_DMG_ELEMENT_SUPERIORITY",
+        "type": "BT_COOL2_CHARGE",
         "debuff": false,
         "target": "ME"
       },
@@ -811,12 +953,12 @@
     ],
     "s2": [
       {
-        "type": "BT_STAT|ST_SPEED",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
       },
       {
-        "type": "BT_ACTION_GAUGE",
+        "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
       },
@@ -831,9 +973,9 @@
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_COOL3_CHARGE",
-        "debuff": false,
-        "target": "ME"
+        "type": "BT_STAT|ST_SPEED",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "s3": [
@@ -861,6 +1003,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_SPEED",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000021": {
@@ -880,20 +1029,25 @@
       {
         "type": "BT_STAT|ST_COUNTER_RATE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
-      },
-      {
-        "type": "BT_ADDITIVE_TURN",
-        "debuff": false,
         "target": "ME"
       },
       {
         "type": "BT_EXTEND_BUFF",
         "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_ADDITIVE_TURN",
+        "debuff": false,
         "target": "ME"
       }
     ],
     "s3": [
+      {
+        "type": "BT_IMMUNE",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_AGGRO",
         "debuff": true,
@@ -905,6 +1059,13 @@
         "type": "BT_DMG_TARGET_BREAK",
         "debuff": false,
         "target": "MY_TEAM"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -950,7 +1111,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": "ME"
       },
       {
         "type": "BT_CONTINU_HEAL",
@@ -970,7 +1131,17 @@
     ],
     "s3": [
       {
+        "type": "BT_COOL_CHARGE",
+        "debuff": false,
+        "target": "MY_TEAM_ONE"
+      },
+      {
         "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "MY_TEAM_ONE"
+      },
+      {
+        "type": "BT_INVINCIBLE",
         "debuff": false,
         "target": "MY_TEAM_ONE"
       },
@@ -980,17 +1151,7 @@
         "target": "MY_TEAM_ONE"
       },
       {
-        "type": "BT_COOL_CHARGE",
-        "debuff": false,
-        "target": "MY_TEAM_ONE"
-      },
-      {
         "type": "BT_REMOVE_DEBUFF",
-        "debuff": false,
-        "target": "MY_TEAM_ONE"
-      },
-      {
-        "type": "BT_INVINCIBLE",
         "debuff": false,
         "target": "MY_TEAM_ONE"
       }
@@ -1008,6 +1169,13 @@
         "debuff": false,
         "target": "MY_TEAM"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "MY_TEAM"
+      }
     ]
   },
   "2000024": {
@@ -1020,19 +1188,24 @@
     ],
     "s2": [
       {
-        "type": "BT_STAT|ST_DEF",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_DEF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
       {
         "type": "BT_INVINCIBLE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_IMMUNE",
         "debuff": false,
         "target": "ME"
       }
@@ -1050,19 +1223,26 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_COOL2_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000025": {
     "s1": [
       {
-        "type": "BT_REVERSE_HEAL_BASED_TARGET",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_REVERSE_HEAL_BASED_TARGET",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
@@ -1084,12 +1264,12 @@
         "target": "ME"
       },
       {
-        "type": "BT_DOT_BLEED",
+        "type": "BT_REVERSE_HEAL_BASED_TARGET",
         "debuff": true,
         "target": "ENEMY"
       },
       {
-        "type": "BT_REVERSE_HEAL_BASED_TARGET",
+        "type": "BT_DOT_BLEED",
         "debuff": true,
         "target": "ENEMY"
       }
@@ -1100,19 +1280,26 @@
         "debuff": false,
         "target": "MY_TEAM"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000026": {
     "s2": [
       {
-        "type": "BT_AGGRO",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_CALL_BACKUP",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_AGGRO",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -1120,6 +1307,11 @@
         "type": "BT_STAT|ST_DEF",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_REMOVE_DEBUFF",
+        "debuff": false,
+        "target": "ME"
       }
     ],
     "chain": [
@@ -1127,6 +1319,13 @@
         "type": "BT_AP_CHARGE",
         "debuff": false,
         "target": "ME"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_AGGRO",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ]
   },
@@ -1135,12 +1334,12 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_ONE"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       }
     ],
     "s3": [
@@ -1148,6 +1347,13 @@
         "type": "BT_IMMUNE",
         "debuff": false,
         "target": "MY_TEAM"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_COOL2_CHARGE",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -1161,14 +1367,14 @@
     ],
     "s2": [
       {
-        "type": "BT_EXTEND_BUFF",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_INVINCIBLE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_EXTEND_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -1198,7 +1404,7 @@
       {
         "type": "BT_STAT|ST_ATK",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       }
     ],
     "s3": [
@@ -1221,6 +1427,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_EXTEND_BUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      }
     ]
   },
   "2000030": {
@@ -1234,6 +1447,11 @@
     "s2": [
       {
         "type": "BT_SHIELD_BASED_CASTER",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_STAT|ST_BUFF_RESIST",
         "debuff": false,
         "target": "MY_TEAM"
       }
@@ -1291,6 +1509,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000032": {
@@ -1304,6 +1529,11 @@
     "s2": [
       {
         "type": "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_ATK",
         "debuff": false,
         "target": "ME"
       }
@@ -1327,6 +1557,13 @@
         "type": "BT_DOT_BURN",
         "debuff": true,
         "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_ATK",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -1382,24 +1619,24 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "IG_Buff_Dot_Bleed_Interruption_D",
-        "debuff": true,
-        "target": "ENEMY_TEAM_HIGHEST_SPD"
-      },
-      {
         "type": "BT_DOT_BLEED",
         "debuff": true,
         "target": "ENEMY_TEAM"
+      },
+      {
+        "type": "IG_Buff_Dot_Bleed_Interruption_D",
+        "debuff": true,
+        "target": "ENEMY_TEAM_HIGHEST_SPD"
       }
     ],
     "s3": [
       {
-        "type": "BT_REMOVE_BUFF",
+        "type": "BT_STAT|ST_DEF",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_STAT|ST_DEF",
+        "type": "BT_REMOVE_BUFF",
         "debuff": true,
         "target": "ENEMY_TEAM"
       }
@@ -1416,6 +1653,13 @@
         "type": "BT_DOT_BLEED",
         "debuff": true,
         "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "IG_Buff_Dot_Bleed_Interruption_D",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ]
   },
@@ -1453,7 +1697,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_ONE"
+        "target": "ME"
       },
       {
         "type": "BT_IMMUNE",
@@ -1461,11 +1705,11 @@
         "target": "MY_TEAM_ONE"
       }
     ],
-    "chain_dual": [
+    "ee": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
+        "target": "MY_TEAM"
       }
     ]
   },
@@ -1477,34 +1721,29 @@
         "target": "ME"
       },
       {
-        "type": "BT_AGGRO",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_CALL_BACKUP_2",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_AGGRO",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
-        "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
-      },
-      {
         "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_SHIELD_BASED_CASTER",
+        "debuff": false,
+        "target": "MY_TEAM_LOWEST_HP_RATE"
       }
     ],
     "s3": [
-      {
-        "type": "BT_REMOVE_BUFF",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
       {
         "type": "BT_STAT|ST_DEF",
         "debuff": false,
@@ -1514,6 +1753,11 @@
         "type": "BT_STAT|ST_BUFF_CHANCE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_REMOVE_BUFF",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "chain": [
@@ -1536,7 +1780,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       }
     ],
     "s2": [
@@ -1552,6 +1796,18 @@
         "debuff": false,
         "target": "MY_TEAM"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_COOL3_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
+      }
     ]
   },
   "2000039": {
@@ -1559,7 +1815,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       }
     ],
     "s2": [
@@ -1567,6 +1823,11 @@
         "type": "SYS_BUFF_REVENGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_EXTEND_DEBUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
       }
     ],
     "s3": [
@@ -1580,10 +1841,17 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "NEXT_CHAIN_STRIKER"
+        "target": "ME"
       }
     ],
     "chain_dual": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": true,
+        "target": "ENEMY"
+      }
+    ],
+    "ee": [
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": true,
@@ -1601,12 +1869,22 @@
     ],
     "s2": [
       {
+        "type": "BT_STAT|ST_VAMPIRIC",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_EXTEND_BUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
         "type": "BT_COOL2_CHARGE",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "BT_STAT|ST_VAMPIRIC",
+        "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "MY_TEAM"
       },
@@ -1614,11 +1892,6 @@
         "type": "BT_STAT|ST_DEF",
         "debuff": true,
         "target": "ENEMY_TEAM"
-      },
-      {
-        "type": "BT_ACTION_GAUGE",
-        "debuff": false,
-        "target": "MY_TEAM"
       }
     ],
     "s3": [
@@ -1628,14 +1901,14 @@
         "target": "ME"
       },
       {
-        "type": "BT_STAT|ST_ATK",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
         "type": "BT_UNDEAD",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_ATK",
+        "debuff": false,
+        "target": "MY_TEAM"
       }
     ],
     "chain": [
@@ -1673,6 +1946,11 @@
         "type": "BT_STAT|ST_SPEED",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STEAL_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -1688,6 +1966,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_STEAL_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
+      }
     ]
   },
   "2000042": {
@@ -1700,7 +1985,7 @@
       {
         "type": "BT_AGGRO",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       }
     ],
     "s2": [
@@ -1708,16 +1993,21 @@
         "type": "BT_STAT|ST_DEF",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_SHIELD_BASED_CASTER",
+        "debuff": false,
+        "target": "MY_TEAM_WITHOUT_ME"
       }
     ],
     "s3": [
       {
-        "type": "BT_STAT|ST_BUFF_RESIST",
+        "type": "BT_INVINCIBLE",
         "debuff": false,
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_INVINCIBLE",
+        "type": "BT_STAT|ST_BUFF_RESIST",
         "debuff": false,
         "target": "MY_TEAM"
       }
@@ -1740,6 +2030,16 @@
     ],
     "s2": [
       {
+        "type": "BT_STAT|ST_BUFF_CHANCE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_REMOVE_BUFF",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
+      },
+      {
         "type": "BT_STAT|ST_ATK",
         "debuff": true,
         "target": "ENEMY"
@@ -1750,16 +2050,6 @@
         "target": "ENEMY"
       },
       {
-        "type": "BT_REMOVE_BUFF",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
-        "type": "BT_STAT|ST_BUFF_CHANCE",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
         "type": "BT_STEAL_BUFF",
         "debuff": true,
         "target": "ENEMY"
@@ -1767,12 +2057,12 @@
     ],
     "s3": [
       {
-        "type": "BT_STAT|ST_SPEED",
+        "type": "BT_STAT|ST_DEF",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_STAT|ST_DEF",
+        "type": "BT_STAT|ST_SPEED",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
@@ -1795,6 +2085,13 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ADDITIVE_TURN",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000044": {
@@ -1812,14 +2109,14 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_STAT|ST_ATK",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_ATK",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -1847,6 +2144,13 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000045": {
@@ -1868,6 +2172,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ADDITIVE_TURN",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000046": {
@@ -1878,16 +2189,23 @@
         "target": "ENEMY"
       }
     ],
-    "s3": [
-      {
-        "type": "BT_STUN",
-        "debuff": true,
-        "target": "ENEMY"
-      },
+    "s2": [
       {
         "type": "BT_STAT|ST_BUFF_CHANCE",
         "debuff": false,
         "target": "ME"
+      }
+    ],
+    "s3": [
+      {
+        "type": "BT_STAT|ST_BUFF_CHANCE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_STUN",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -1903,29 +2221,36 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000047": {
     "s2": [
       {
-        "type": "BT_CONTINU_HEAL",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
         "type": "SYS_BUFF_REVENGE_HEAL",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_CONTINU_HEAL",
+        "debuff": false,
+        "target": "MY_TEAM"
       }
     ],
     "s3": [
       {
-        "type": "BT_CONTINU_HEAL",
+        "type": "BT_STAT|ST_BUFF_RESIST",
         "debuff": false,
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_STAT|ST_BUFF_RESIST",
+        "type": "BT_CONTINU_HEAL",
         "debuff": false,
         "target": "MY_TEAM"
       },
@@ -1937,7 +2262,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       }
     ],
     "chain": [
@@ -1945,6 +2270,13 @@
         "type": "BT_CONTINU_HEAL",
         "debuff": false,
         "target": "MY_TEAM_LOWEST_HP_RATE"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_SHIELD_BASED_CASTER",
+        "debuff": false,
+        "target": "MY_TEAM"
       }
     ]
   },
@@ -1978,6 +2310,13 @@
     "chain_dual": [
       {
         "type": "BT_REMOVE_DEBUFF",
+        "debuff": false,
+        "target": "ME"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
       }
@@ -2037,7 +2376,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       }
     ],
     "chain": [
@@ -2052,6 +2391,13 @@
         "type": "BT_STAT|ST_SPEED",
         "debuff": false,
         "target": "MY_TEAM_ONE_RANDOM"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -2100,11 +2446,6 @@
     ],
     "s2": [
       {
-        "type": "BT_DOT_LIGHTNING",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_STAT|ST_ATK",
         "debuff": false,
         "target": "ME"
@@ -2113,6 +2454,11 @@
         "type": "BT_STAT|ST_COUNTER_RATE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_DOT_LIGHTNING",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "s3": [
@@ -2140,15 +2486,17 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_STUN",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
+      }
     ]
   },
   "2000053": {
     "s1": [
-      {
-        "type": "BT_KILL_UNDER_HP_RATE",
-        "debuff": true,
-        "target": "ME"
-      },
       {
         "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
@@ -2163,14 +2511,14 @@
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_KILL_UNDER_HP_RATE",
+        "debuff": true,
+        "target": "ME"
       }
     ],
     "s2": [
-      {
-        "type": "IG_Buff_2000053_Interruption",
-        "debuff": false,
-        "target": "ME"
-      },
       {
         "type": "SYS_BUFF_REVENGE",
         "debuff": false,
@@ -2180,18 +2528,23 @@
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "IG_Buff_2000053_Interruption",
+        "debuff": false,
+        "target": "ME"
       }
     ],
     "s3": [
       {
-        "type": "BT_KILL_UNDER_HP_RATE",
-        "debuff": true,
-        "target": "ME"
-      },
-      {
         "type": "BT_STONE",
         "debuff": true,
         "target": "ENEMY_TEAM"
+      },
+      {
+        "type": "BT_KILL_UNDER_HP_RATE",
+        "debuff": true,
+        "target": "ME"
       }
     ],
     "chain": [
@@ -2207,6 +2560,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000054": {
@@ -2214,7 +2574,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       },
       {
         "type": "BT_EXTEND_DEBUFF",
@@ -2240,6 +2600,13 @@
         "debuff": false,
         "target": "MY_TEAM_DEAD_ALL"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
+      }
     ]
   },
   "2000055": {
@@ -2257,14 +2624,14 @@
         "target": "ME"
       },
       {
-        "type": "BT_REMOVE_BUFF",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_REMOVE_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -2294,7 +2661,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       },
       {
         "type": "IG_Buff_2000056_Interruption",
@@ -2304,15 +2671,10 @@
       {
         "type": "BT_DOT_POISON",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       }
     ],
     "s2": [
-      {
-        "type": "BT_DOT_POISON",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
       {
         "type": "SYS_BUFF_ADDITIVE_ATTACK",
         "debuff": false,
@@ -2322,6 +2684,11 @@
         "type": "BT_SILENCE",
         "debuff": true,
         "target": "ENEMY_TEAM_PRIEST"
+      },
+      {
+        "type": "BT_DOT_POISON",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_STAT|ST_ATK",
@@ -2354,6 +2721,18 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "IG_Buff_2000056_Interruption",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000057": {
@@ -2364,14 +2743,14 @@
         "target": "ME"
       },
       {
-        "type": "BT_WG_REVERSE_HEAL",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_STAT|ST_SPEED",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
@@ -2379,6 +2758,11 @@
         "type": "BT_SEALED_RECEIVE_HEAL",
         "debuff": true,
         "target": "ENEMY_TEAM"
+      },
+      {
+        "type": "BT_EXTEND_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -2388,14 +2772,19 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_SEALED_RECEIVE_HEAL",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_STAT|ST_BUFF_CHANCE",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_COOL_CHARGE",
+        "debuff": false,
+        "target": "MY_TEAM_WITHOUT_ME"
+      },
+      {
+        "type": "BT_SEALED_RECEIVE_HEAL",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "chain": [
@@ -2409,12 +2798,12 @@
   "2000058": {
     "s1": [
       {
-        "type": "BT_REMOVE_DEBUFF",
+        "type": "SYS_BUFF_ADDITIVE_SKILL",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "SYS_BUFF_ADDITIVE_SKILL",
+        "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
         "target": "ME"
       }
@@ -2423,36 +2812,41 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
         "target": "MY_TEAM_WITHOUT_ME"
       },
       {
-        "type": "BT_REMOVE_DEBUFF",
+        "type": "BT_IMMUNE",
         "debuff": false,
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_IMMUNE",
+        "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
         "target": "MY_TEAM"
       }
     ],
     "s3": [
       {
-        "type": "BT_STAT|ST_CRITICAL_RATE",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_IMMUNE",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_STAT|ST_CRITICAL_RATE",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
-    "chain_dual": [
+    "ee": [
       {
-        "type": "BT_DOT_CURSE",
-        "debuff": true,
-        "target": "ENEMY"
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -2481,6 +2875,16 @@
         "target": "ME"
       },
       {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_COOL3_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "IG_Buff_Death_Timer_Interruption_D",
         "debuff": true,
         "target": "ME"
@@ -2490,12 +2894,24 @@
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain_dual": [
       {
         "type": "BT_STAT|ST_SPEED",
+        "debuff": false,
+        "target": "ME"
+      }
+    ],
+    "ee": [
+      {
+        "type": "IG_Buff_2000059_Interruption",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_AP_CHARGE",
         "debuff": false,
         "target": "ME"
       }
@@ -2510,11 +2926,6 @@
       }
     ],
     "s2": [
-      {
-        "type": "BT_SILENCE",
-        "debuff": true,
-        "target": "ENEMY"
-      },
       {
         "type": "BT_STAT|ST_CRITICAL_RATE",
         "debuff": false,
@@ -2534,16 +2945,21 @@
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_SILENCE",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
       {
-        "type": "BT_STAT|ST_DEF",
+        "type": "BT_COOL_CHARGE",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_COOL_CHARGE",
+        "type": "BT_STAT|ST_DEF",
         "debuff": true,
         "target": "ENEMY_TEAM"
       }
@@ -2554,6 +2970,13 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000061": {
@@ -2562,11 +2985,6 @@
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
-      },
-      {
-        "type": "BT_REMOVE_BUFF",
-        "debuff": true,
-        "target": "ENEMY"
       },
       {
         "type": "BT_STAT|ST_BUFF_CHANCE",
@@ -2582,14 +3000,14 @@
         "type": "BT_COOL_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_REMOVE_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
-      {
-        "type": "BT_STAT|ST_DEF",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
       {
         "type": "SYS_BUFF_REVENGE_HEAL",
         "debuff": false,
@@ -2601,6 +3019,11 @@
         "target": "MY_TEAM"
       },
       {
+        "type": "BT_STAT|ST_DEF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
@@ -2608,10 +3031,15 @@
       {
         "type": "BT_EXTEND_BUFF",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "s3": [
+      {
+        "type": "BT_SEAL_COUNTER",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_SEALED",
         "debuff": true,
@@ -2621,11 +3049,6 @@
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
         "target": "ENEMY_TEAM"
-      },
-      {
-        "type": "BT_SEAL_COUNTER",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "chain": [
@@ -2666,6 +3089,11 @@
         "type": "BT_STAT|ST_CRITICAL_RATE",
         "debuff": true,
         "target": "ENEMY"
+      },
+      {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -2681,10 +3109,27 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_DOT_CURSE",
+        "debuff": true,
+        "target": "ENEMY"
+      }
     ]
   },
   "2000063": {
     "s1": [
+      {
+        "type": "BT_COOL3_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_REVERSE_HEAL_BASED_TARGET",
         "debuff": true,
@@ -2694,23 +3139,23 @@
         "type": "BT_SEALED_RESURRECTION",
         "debuff": true,
         "target": "ENEMY"
-      },
-      {
-        "type": "BT_COOL3_CHARGE",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "s2": [
+      {
+        "type": "IG_Buff_2000063_Interruption",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
         "target": "MY_TEAM_WITHOUT_ME"
       },
       {
-        "type": "IG_Buff_2000063_Interruption",
+        "type": "BT_STAT|ST_PIERCE_POWER_RATE",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_STAT|ST_DEF",
@@ -2718,9 +3163,9 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_STAT|ST_PIERCE_POWER_RATE",
+        "type": "BT_ADDITIVE_TURN",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       }
     ],
     "s3": [
@@ -2734,7 +3179,7 @@
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ]
   },
@@ -2748,12 +3193,12 @@
     ],
     "s2": [
       {
-        "type": "BT_STAT|ST_BUFF_RESIST",
+        "type": "BT_EXTEND_DEBUFF",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       },
       {
-        "type": "BT_EXTEND_DEBUFF",
+        "type": "BT_STAT|ST_BUFF_RESIST",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
@@ -2775,12 +3220,12 @@
         "target": "ME"
       },
       {
-        "type": "BT_STAT|ST_DEF",
+        "type": "BT_SEALED",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_SEALED",
+        "type": "BT_STAT|ST_DEF",
         "debuff": true,
         "target": "ENEMY_TEAM"
       }
@@ -2798,24 +3243,31 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_EXTEND_DEBUFF",
+        "debuff": true,
+        "target": "ENEMY"
+      }
     ]
   },
   "2000065": {
     "s1": [
-      {
-        "type": "BT_DMG_ELEMENT_SUPERIORITY",
-        "debuff": false,
-        "target": "ME"
-      },
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
       },
       {
+        "type": "BT_DMG_ELEMENT_SUPERIORITY",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_EXTRA_ATTACK_ON_TURN_END",
         "debuff": false,
-        "target": null
+        "target": "ME"
       }
     ],
     "s2": [
@@ -2832,17 +3284,17 @@
         "target": "ME"
       },
       {
+        "type": "IG_Buff_Effect_2000065_B_Interruption",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
       },
       {
         "type": "BT_CP_CHARGE",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
-        "type": "IG_Buff_Effect_2000065_B_Interruption",
         "debuff": false,
         "target": "ME"
       }
@@ -2877,6 +3329,11 @@
     ],
     "s2": [
       {
+        "type": "SYS_BUFF_ADDITIVE_SKILL",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_STAT|ST_ATK",
         "debuff": false,
         "target": "MY_TEAM"
@@ -2885,23 +3342,23 @@
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "MY_TEAM_MAGE"
-      },
-      {
-        "type": "SYS_BUFF_ADDITIVE_SKILL",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "s3": [
+      {
+        "type": "BT_COOL2_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_STAT|ST_CRITICAL_DMG_RATE",
         "debuff": false,
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_COOL2_CHARGE",
+        "type": "BT_STAT|ST_CRITICAL_RATE",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       }
     ],
     "chain": [
@@ -2914,6 +3371,18 @@
     "chain_dual": [
       {
         "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_AP_CHARGE",
         "debuff": false,
         "target": "ME"
       }
@@ -2944,22 +3413,22 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_AVOID_UP",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
-        "type": "IG_Buff_Effect_2000067_Interruption",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
         "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
       },
       {
         "type": "SYS_BUFF_COUNTER",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "SYS_BUFF_AVOID_UP",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "IG_Buff_Effect_2000067_Interruption",
         "debuff": false,
         "target": "ME"
       }
@@ -2989,6 +3458,18 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_REMOVE_DEBUFF",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000068": {
@@ -3001,14 +3482,14 @@
     ],
     "s2": [
       {
-        "type": "BT_REMOVE_BUFF",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_REMOVE_BUFF",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_FREEZE",
@@ -3018,6 +3499,11 @@
     ],
     "s3": [
       {
+        "type": "BT_SEAL_COUNTER",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_FREEZE",
         "debuff": true,
         "target": "ENEMY_TEAM"
@@ -3026,11 +3512,6 @@
         "type": "BT_STAT|ST_SPEED",
         "debuff": true,
         "target": "ENEMY_TEAM"
-      },
-      {
-        "type": "BT_SEAL_COUNTER",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "chain": [
@@ -3046,6 +3527,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_SPEED",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000069": {
@@ -3058,11 +3546,6 @@
     ],
     "s2": [
       {
-        "type": "BT_ACTION_GAUGE",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_STAT|ST_SPEED",
         "debuff": false,
         "target": "ME"
@@ -3071,18 +3554,23 @@
         "type": "BT_UNDEAD",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "s3": [
       {
-        "type": "BT_STUN",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_UNDEAD",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STUN",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "chain": [
@@ -3097,6 +3585,13 @@
         "type": "BT_ACTION_GAUGE",
         "debuff": true,
         "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_UNDEAD",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -3125,6 +3620,11 @@
         "type": "BT_AP_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_INVINCIBLE",
+        "debuff": false,
+        "target": "ME"
       }
     ],
     "chain": [
@@ -3132,6 +3632,18 @@
         "type": "BT_DMG_TARGET_BREAK",
         "debuff": false,
         "target": "MY_TEAM"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ]
   },
@@ -3160,17 +3672,17 @@
         "target": "ME"
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
       },
       {
         "type": "SYS_BUFF_COUNTER",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
         "target": "ME"
       }
@@ -3193,26 +3705,33 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
+      }
     ]
   },
   "2000072": {
     "s1": [
       {
-        "type": "BT_SEALED",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_SEALED",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
       {
-        "type": "BT_SEALED_RECEIVE_HEAL",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
+        "type": "IG_Buff_Effect_2000072_Interruption",
+        "debuff": false,
+        "target": "ME"
       },
       {
         "type": "SYS_BUFF_REVENGE_HEAL",
@@ -3225,16 +3744,16 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "IG_Buff_Effect_2000072_Interruption",
-        "debuff": false,
-        "target": "ME"
+        "type": "BT_SEALED_RECEIVE_HEAL",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "s3": [
       {
         "type": "BT_STEAL_BUFF",
         "debuff": true,
-        "target": null
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -3250,6 +3769,13 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_STEALTHED",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000073": {
@@ -3262,6 +3788,11 @@
     ],
     "s2": [
       {
+        "type": "BT_COOL3_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_IMMEDIATELY_BURN",
         "debuff": true,
         "target": "ENEMY_TEAM"
@@ -3270,21 +3801,16 @@
         "type": "BT_DOT_BURN",
         "debuff": true,
         "target": "ENEMY_TEAM"
-      },
-      {
-        "type": "BT_COOL3_CHARGE",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "s3": [
       {
-        "type": "BT_ACTION_GAUGE",
+        "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "BT_COOL3_CHARGE",
+        "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
       },
@@ -3306,6 +3832,13 @@
         "type": "BT_DOT_BURN",
         "debuff": true,
         "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_DOT_BURN",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ]
   },
@@ -3324,9 +3857,14 @@
         "target": "ME"
       },
       {
+        "type": "BT_EXTEND_BUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_SPD"
+        "target": "ME"
       },
       {
         "type": "BT_CONTINU_HEAL",
@@ -3341,12 +3879,12 @@
     ],
     "s3": [
       {
-        "type": "BT_IMMUNE",
+        "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_REMOVE_DEBUFF",
+        "type": "BT_IMMUNE",
         "debuff": false,
         "target": "MY_TEAM"
       }
@@ -3364,6 +3902,13 @@
         "debuff": false,
         "target": "MY_TEAM_HIGHEST_ATK"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "MY_TEAM"
+      }
     ]
   },
   "2000075": {
@@ -3371,7 +3916,7 @@
       {
         "type": "BT_COOL3_CHARGE",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_SKILL_TARGET"
       },
       {
         "type": "BT_STAT|ST_DEF",
@@ -3381,12 +3926,12 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "IG_Buff_2000075_Interruption",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "IG_Buff_2000075_Interruption",
+        "type": "SYS_BUFF_ADDITIVE_ATTACK",
         "debuff": false,
         "target": "ME"
       },
@@ -3490,11 +4035,6 @@
     ],
     "s2": [
       {
-        "type": "BT_REVERSE_HEAL_BASED_CASTER",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "SYS_BUFF_ADDITIVE_ATTACK",
         "debuff": false,
         "target": "ME"
@@ -3503,18 +4043,23 @@
         "type": "BT_STAT|ST_DEF",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_REVERSE_HEAL_BASED_CASTER",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "s3": [
       {
-        "type": "BT_REMOVE_BUFF",
-        "debuff": true,
-        "target": "ME"
-      },
-      {
         "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_REMOVE_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -3540,26 +4085,26 @@
         "target": "ME"
       },
       {
-        "type": "BT_STEALTHED",
+        "type": "BT_STAT|ST_SPEED",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "BT_STAT|ST_SPEED",
+        "type": "BT_STEALTHED",
         "debuff": false,
         "target": "ME"
       }
     ],
     "s3": [
       {
-        "type": "BT_SEALED_RESURRECTION",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_SEALED_RESURRECTION",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -3580,6 +4125,11 @@
   "2000079": {
     "s1": [
       {
+        "type": "BT_COOL3_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_MARKING",
         "debuff": true,
         "target": "ENEMY"
@@ -3588,11 +4138,6 @@
         "type": "BT_REVERSE_HEAL_BASED_TARGET",
         "debuff": true,
         "target": "ENEMY"
-      },
-      {
-        "type": "BT_COOL3_CHARGE",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "s2": [
@@ -3609,14 +4154,14 @@
     ],
     "s3": [
       {
-        "type": "BT_EXTEND_DEBUFF",
+        "type": "BT_STATBUFF_CONVERT_TO_STATDEBUFF",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_STATBUFF_CONVERT_TO_STATDEBUFF",
+        "type": "BT_EXTEND_DEBUFF",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       },
       {
         "type": "BT_REVERSE_HEAL_BASED_TARGET",
@@ -3642,21 +4187,21 @@
   "2000080": {
     "s1": [
       {
-        "type": "BT_STAT|ST_DEF",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_DEF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
       {
-        "type": "BT_STAT|ST_BUFF_RESIST",
-        "debuff": true,
-        "target": "ENEMY"
+        "type": "SYS_BUFF_COUNTER",
+        "debuff": false,
+        "target": "ME"
       },
       {
         "type": "BT_REMOVE_BUFF",
@@ -3664,12 +4209,17 @@
         "target": "ENEMY"
       },
       {
-        "type": "SYS_BUFF_COUNTER",
-        "debuff": false,
-        "target": "ME"
+        "type": "BT_STAT|ST_BUFF_RESIST",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
+      {
+        "type": "BT_CONTINU_HEAL",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
       {
         "type": "BT_CP_CHARGE",
         "debuff": false,
@@ -3679,11 +4229,6 @@
         "type": "BT_COOL_CHARGE",
         "debuff": true,
         "target": "ENEMY_TEAM"
-      },
-      {
-        "type": "BT_CONTINU_HEAL",
-        "debuff": false,
-        "target": "MY_TEAM"
       }
     ],
     "chain": [
@@ -3691,6 +4236,13 @@
         "type": "BT_REVERSE_HEAL_BASED_TARGET",
         "debuff": true,
         "target": "ENEMY_TEAM"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_DEF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ]
   },
@@ -3700,11 +4252,6 @@
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
-      },
-      {
-        "type": "BT_DOT_BURN",
-        "debuff": true,
-        "target": "ENEMY"
       },
       {
         "type": "BT_COOL2_CHARGE",
@@ -3717,6 +4264,11 @@
         "target": "ME"
       },
       {
+        "type": "BT_DOT_BURN",
+        "debuff": true,
+        "target": "ENEMY"
+      },
+      {
         "type": "BT_EXTEND_DEBUFF",
         "debuff": true,
         "target": "ENEMY"
@@ -3724,21 +4276,21 @@
     ],
     "s2": [
       {
-        "type": "BT_AP_CHARGE",
+        "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       },
       {
-        "type": "BT_ACTION_GAUGE",
+        "type": "BT_AP_CHARGE",
         "debuff": false,
         "target": "ME"
       }
     ],
     "s3": [
       {
-        "type": "BT_DOT_BURN",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
+        "type": "BT_STAT|ST_ATK",
+        "debuff": false,
+        "target": "ME"
       },
       {
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
@@ -3746,9 +4298,9 @@
         "target": "ME"
       },
       {
-        "type": "BT_STAT|ST_ATK",
-        "debuff": false,
-        "target": "ME"
+        "type": "BT_DOT_BURN",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "chain": [
@@ -3764,10 +4316,32 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_ATK",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_DOT_BURN",
+        "debuff": true,
+        "target": "ENEMY"
+      }
     ]
   },
   "2000082": {
     "s1": [
+      {
+        "type": "BT_COOL_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_DOT_LIGHTNING",
         "debuff": true,
@@ -3777,28 +4351,18 @@
         "type": "BT_EXTEND_DEBUFF",
         "debuff": true,
         "target": "ENEMY"
-      },
-      {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
-        "type": "BT_COOL_CHARGE",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "s2": [
       {
-        "type": "BT_STAT|ST_BUFF_CHANCE",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_BUFF_CHANCE",
+        "debuff": false,
+        "target": "MY_TEAM"
       }
     ],
     "s3": [
@@ -3826,6 +4390,18 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_EXTEND_BUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": true,
+        "target": "ENEMY_SKILL_TARGET"
+      }
     ]
   },
   "2000083": {
@@ -3833,7 +4409,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": "ME"
       },
       {
         "type": "BT_IMMUNE",
@@ -3855,10 +4431,15 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": "ME"
       }
     ],
     "s3": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
       {
         "type": "BT_RESURRECTION",
         "debuff": false,
@@ -3866,11 +4447,6 @@
       },
       {
         "type": "BT_IMMUNE",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
-        "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "MY_TEAM"
       }
@@ -3881,6 +4457,13 @@
         "debuff": false,
         "target": "MY_TEAM"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000084": {
@@ -3888,7 +4471,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": "ME"
       },
       {
         "type": "BT_REMOVE_DEBUFF",
@@ -3903,12 +4486,12 @@
       {
         "type": "BT_CALL_BACKUP_2",
         "debuff": false,
-        "target": null
+        "target": "ME"
       },
       {
         "type": "BT_CALL_BACKUP",
         "debuff": false,
-        "target": null
+        "target": "ME"
       }
     ],
     "s2": [
@@ -3916,11 +4499,6 @@
         "type": "SYS_BUFF_REVENGE_HEAL",
         "debuff": false,
         "target": "ME"
-      },
-      {
-        "type": "BT_SEAL_ADDITIVE_ATTACK",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_EXTEND_DEBUFF",
@@ -3931,11 +4509,21 @@
         "type": "BT_SEAL_COUNTER",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_SEAL_ADDITIVE_ATTACK",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "s3": [
       {
         "type": "BT_STAT|ST_SPEED",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_INVINCIBLE",
         "debuff": false,
         "target": "MY_TEAM"
       }
@@ -3944,7 +4532,7 @@
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ]
   },
@@ -3963,11 +4551,6 @@
         "target": "ME"
       },
       {
-        "type": "BT_STEAL_BUFF",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
         "debuff": false,
         "target": "ME"
@@ -3976,25 +4559,30 @@
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STEAL_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
       {
-        "type": "BT_RESOURCE_DOWN",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_COOL2_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_RESOURCE_DOWN",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain_dual": [
@@ -4013,9 +4601,9 @@
         "target": "ME"
       },
       {
-        "type": "IG_Buff_Dot_Curse_Interruption_D",
-        "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "type": "BT_ADDITIVE_TURN",
+        "debuff": false,
+        "target": "ME"
       },
       {
         "type": "BT_COOL_CHARGE",
@@ -4023,9 +4611,9 @@
         "target": "ME"
       },
       {
-        "type": "BT_ADDITIVE_TURN",
-        "debuff": false,
-        "target": "ME"
+        "type": "IG_Buff_Dot_Curse_Interruption_D",
+        "debuff": true,
+        "target": "ENEMY_SKILL_TARGET"
       }
     ],
     "s2": [
@@ -4057,12 +4645,12 @@
         "target": "ME"
       },
       {
-        "type": "BT_AP_CHARGE",
+        "type": "BT_IMMEDIATELY_CURSE",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_IMMEDIATELY_CURSE",
+        "type": "BT_AP_CHARGE",
         "debuff": true,
         "target": "ENEMY_TEAM"
       }
@@ -4090,6 +4678,13 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000087": {
@@ -4110,18 +4705,28 @@
         "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
       {
-        "type": "BT_SEALED_RESURRECTION",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_ADDITIVE_TURN",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_SEALED_RESURRECTION",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -4159,14 +4764,14 @@
     ],
     "s2": [
       {
-        "type": "BT_STONE",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "SYS_BUFF_COUNTER",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STONE",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -4187,14 +4792,14 @@
   "2000089": {
     "s1": [
       {
-        "type": "BT_STAT|ST_CRITICAL_DMG_RATE",
-        "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
-      },
-      {
         "type": "BT_SEAL_COUNTER",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "debuff": true,
+        "target": "ENEMY_SKILL_TARGET"
       }
     ],
     "s2": [
@@ -4204,14 +4809,14 @@
         "target": "ME"
       },
       {
-        "type": "BT_STEAL_BUFF",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "SYS_BUFF_ADDITIVE_SKILL",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STEAL_BUFF",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -4269,10 +4874,22 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_SHIELD_BASED_CASTER",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000091": {
     "s1": [
+      {
+        "type": "HEAVY_STRIKE",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_STAT|ST_BUFF_CHANCE",
         "debuff": false,
@@ -4303,7 +4920,7 @@
       {
         "type": "BT_EXTEND_BUFF",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       },
       {
         "type": "BT_STUN",
@@ -4323,12 +4940,12 @@
         "target": "ME"
       },
       {
-        "type": "BT_STUN",
+        "type": "BT_REMOVE_BUFF",
         "debuff": true,
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_REMOVE_BUFF",
+        "type": "BT_STUN",
         "debuff": true,
         "target": "ENEMY_TEAM"
       }
@@ -4347,7 +4964,19 @@
     ],
     "chain_dual": [
       {
+        "type": "HEAVY_STRIKE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_STAT|ST_BUFF_CHANCE",
+        "debuff": false,
+        "target": "ME"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_COOL_CHARGE",
         "debuff": false,
         "target": "ME"
       }
@@ -4356,36 +4985,36 @@
   "2000092": {
     "s1": [
       {
-        "type": "BT_DOT_2000092",
-        "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
-      },
-      {
         "type": "IG_Buff_2000092_Interruption",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "BT_IMMEDIATELY_2000092",
-        "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
-      },
-      {
         "type": "BT_COOL_CHARGE",
         "debuff": false,
         "target": "MY_TEAM"
-      }
-    ],
-    "s2": [
+      },
       {
         "type": "BT_DOT_2000092",
         "debuff": true,
         "target": "ENEMY_SKILL_TARGET"
       },
       {
+        "type": "BT_IMMEDIATELY_2000092",
+        "debuff": true,
+        "target": "ENEMY_SKILL_TARGET"
+      }
+    ],
+    "s2": [
+      {
         "type": "BT_STEALTHED",
         "debuff": false,
         "target": "MY_TEAM_WITHOUT_ME"
+      },
+      {
+        "type": "BT_DOT_2000092",
+        "debuff": true,
+        "target": "ENEMY_SKILL_TARGET"
       }
     ],
     "s3": [
@@ -4413,6 +5042,13 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_SEAL_COUNTER",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000093": {
@@ -4430,31 +5066,31 @@
         "target": "ME"
       },
       {
+        "type": "BT_CASTER_COPY_BUFF",
+        "debuff": false,
+        "target": "MY_TEAM_WITHOUT_ME"
+      },
+      {
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "BT_CASTER_COPY_BUFF",
-        "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
-      },
-      {
         "type": "BT_RANDOM_STAT",
         "debuff": false,
-        "target": null
+        "target": "MY_TEAM"
       }
     ],
     "s3": [
       {
-        "type": "BT_CASTER_COPY_BUFF",
-        "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
-      },
-      {
         "type": "BT_DMG_OWNER_TEAM_BUFF",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_CASTER_COPY_BUFF",
+        "debuff": false,
+        "target": "MY_TEAM_WITHOUT_ME"
       }
     ],
     "chain": [
@@ -4470,20 +5106,17 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000094": {
     "s1": [
-      {
-        "type": "BT_AGGRO",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
-        "type": "BT_MARKING",
-        "debuff": true,
-        "target": "ME"
-      },
       {
         "type": "IG_Buff_Effect_2000094_Interruption",
         "debuff": false,
@@ -4495,9 +5128,19 @@
         "target": "ME"
       },
       {
+        "type": "BT_MARKING",
+        "debuff": true,
+        "target": "ME"
+      },
+      {
+        "type": "BT_AGGRO",
+        "debuff": true,
+        "target": "ENEMY"
+      },
+      {
         "type": "BT_EXTEND_DEBUFF",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": "ENEMY"
       }
     ],
     "s2": [
@@ -4509,12 +5152,12 @@
     ],
     "s3": [
       {
-        "type": "BT_SEAL_COUNTER",
+        "type": "IG_Buff_Effect_2000094_Interruption",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "IG_Buff_Effect_2000094_Interruption",
+        "type": "BT_SEAL_COUNTER",
         "debuff": false,
         "target": "ME"
       },
@@ -4542,6 +5185,13 @@
         "debuff": true,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_STAT|ST_ATK",
+        "debuff": false,
+        "target": "MY_TEAM"
+      }
     ]
   },
   "2000095": {
@@ -4559,31 +5209,36 @@
     ],
     "s2": [
       {
+        "type": "BT_SEAL_COUNTER",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "GRACE_OF_THE_VIRGIN_GODDESS",
         "debuff": false,
-        "target": null
+        "target": "ME"
       },
       {
         "type": "BT_COOL3_CHARGE",
         "debuff": false,
-        "target": null
+        "target": "ME"
       },
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": null
+        "target": "ME"
       }
     ],
     "s3": [
       {
-        "type": "IG_Buff_Dot_Burn_Interruption_D",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_STAT|ST_ATK",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "IG_Buff_Dot_Burn_Interruption_D",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "chain": [
@@ -4626,9 +5281,9 @@
         "target": "ME"
       }
     ],
-    "chain_dual": [
+    "ee": [
       {
-        "type": "BT_COOL3_CHARGE",
+        "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
       }
@@ -4642,14 +5297,14 @@
         "target": "ME"
       },
       {
-        "type": "BT_SEALED",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_SEALED",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
@@ -4668,7 +5323,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "MY_TEAM_HIGHEST_ATK"
       }
     ],
     "chain": [
@@ -4684,7 +5339,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": "ME"
       },
       {
         "type": "BT_SHIELD_BASED_TARGET",
@@ -4694,14 +5349,14 @@
     ],
     "s2": [
       {
-        "type": "BT_SHIELD_BASED_TARGET",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
         "type": "SYS_BUFF_ADDITIVE_SKILL",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_SHIELD_BASED_TARGET",
+        "debuff": false,
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_STAT|ST_DEF",
@@ -4735,18 +5390,23 @@
         "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
       {
-        "type": "BT_STAT|ST_COUNTER_RATE",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
         "type": "SYS_BUFF_REVENGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_STAT|ST_COUNTER_RATE",
+        "debuff": false,
+        "target": "MY_TEAM"
       }
     ],
     "s3": [
@@ -4774,7 +5434,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
+        "target": "ME"
       },
       {
         "type": "BT_STAT|ST_BUFF_RESIST",
@@ -4809,13 +5469,30 @@
         "type": "IG_Buff_Effect_2000100_Interruption",
         "debuff": false,
         "target": "MY_TEAM_HIGHEST_ATK"
+      },
+      {
+        "type": "BT_ADDITIVE_TURN",
+        "debuff": false,
+        "target": "ME"
       }
     ],
     "chain": [
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_REMOVE_DEBUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_STAT|ST_BUFF_RESIST",
+        "debuff": false,
+        "target": "MY_TEAM"
       }
     ]
   },
@@ -4832,6 +5509,11 @@
         "target": "ME"
       },
       {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
+      },
+      {
         "type": "BT_MARKING",
         "debuff": true,
         "target": "ENEMY"
@@ -4839,12 +5521,12 @@
     ],
     "s2": [
       {
-        "type": "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "type": "BT_STAT|ST_CRITICAL_RATE",
         "debuff": false,
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_STAT|ST_CRITICAL_RATE",
+        "type": "BT_STAT|ST_CRITICAL_DMG_RATE",
         "debuff": false,
         "target": "MY_TEAM"
       },
@@ -4856,6 +5538,11 @@
     ],
     "s3": [
       {
+        "type": "BT_STAT|ST_BUFF_RESIST",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
         "type": "BT_STAT|ST_BUFF_CHANCE",
         "debuff": false,
         "target": "MY_TEAM"
@@ -4864,11 +5551,6 @@
         "type": "BT_COOL_CHARGE",
         "debuff": false,
         "target": "MY_TEAM_WITHOUT_ME"
-      },
-      {
-        "type": "BT_STAT|ST_BUFF_RESIST",
-        "debuff": false,
-        "target": "MY_TEAM"
       }
     ],
     "chain": [
@@ -4884,6 +5566,13 @@
         "debuff": false,
         "target": "ME"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      }
     ]
   },
   "2000102": {
@@ -4894,6 +5583,11 @@
         "target": "ME"
       },
       {
+        "type": "BT_SHIELD_BASED_CASTER",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
         "type": "BT_STAT|ST_SPEED",
         "debuff": true,
         "target": "ENEMY_SKILL_TARGET"
@@ -4902,11 +5596,6 @@
         "type": "IG_Buff_Effect_2000102_Interruption_D",
         "debuff": true,
         "target": "ENEMY_TEAM_HIGHEST_SPD"
-      },
-      {
-        "type": "BT_SHIELD_BASED_CASTER",
-        "debuff": false,
-        "target": "MY_TEAM"
       }
     ],
     "s2": [
@@ -4923,14 +5612,19 @@
     ],
     "s3": [
       {
-        "type": "BT_AGGRO",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_EXTEND_DEBUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_AGGRO",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "IG_Buff_Effect_2000102_Interruption_D",
@@ -4943,21 +5637,16 @@
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_EXTEND_DEBUFF",
-        "debuff": false,
-        "target": null
-      },
-      {
         "type": "BT_EXTEND_BUFF",
         "debuff": true,
-        "target": null
+        "target": "ENEMY"
       }
     ],
     "chain": [
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "NEXT_CHAIN_STRIKER"
+        "target": "ME"
       }
     ],
     "chain_dual": [
@@ -4971,12 +5660,12 @@
   "2000103": {
     "s1": [
       {
-        "type": "BT_CALL_BACKUP",
+        "type": "BT_ADDITIVE_ATTACK_ON_EVENT",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "type": "BT_CALL_BACKUP",
         "debuff": false,
         "target": "ME"
       },
@@ -4984,18 +5673,28 @@
         "type": "BT_CALL_BACKUP_2",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
+      {
+        "type": "BT_REMOVE_DEBUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
       {
         "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_REMOVE_DEBUFF",
+        "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "MY_TEAM_WITHOUT_ME"
       }
     ],
     "s3": [
@@ -5052,11 +5751,6 @@
     ],
     "s3": [
       {
-        "type": "BT_RESOURCE_DOWN",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_STAT|ST_COUNTER_RATE",
         "debuff": false,
         "target": "MY_TEAM"
@@ -5065,6 +5759,11 @@
         "type": "BT_SHIELD_BASED_TARGET",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_RESOURCE_DOWN",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -5080,19 +5779,31 @@
         "debuff": false,
         "target": "MY_TEAM_HIGHEST_MAXHP"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_SEAL_COUNTER",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_EXTEND_BUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      }
     ]
   },
   "2000106": {
     "s1": [
       {
-        "type": "BT_REVERSE_HEAL_BASED_CASTER",
-        "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
-      },
-      {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
         "target": "ENEMY"
+      },
+      {
+        "type": "BT_REVERSE_HEAL_BASED_CASTER",
+        "debuff": true,
+        "target": "ENEMY_SKILL_TARGET"
       }
     ],
     "s2": [
@@ -5102,33 +5813,33 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_ACTION_GAUGE",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
         "type": "BT_STAT|ST_DEF",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
       }
     ],
     "s3": [
       {
-        "type": "BT_REVERSE_HEAL_BASED_CASTER",
-        "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
-      },
-      {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_REVERSE_HEAL_BASED_CASTER",
+        "debuff": true,
+        "target": "ENEMY_SKILL_TARGET"
       }
     ],
     "chain": [
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain_dual": [
@@ -5142,32 +5853,22 @@
   "2000107": {
     "s1": [
       {
+        "type": "BT_ADDITIVE_TURN",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_DOT_BLEED",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_EXTEND_DEBUFF",
         "debuff": true,
         "target": "ENEMY"
-      },
-      {
-        "type": "BT_ADDITIVE_TURN",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "s2": [
-      {
-        "type": "BT_SEALED_RECEIVE_HEAL",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
-        "type": "BT_STAT|ST_SPEED",
-        "debuff": true,
-        "target": "ENEMY"
-      },
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
@@ -5177,24 +5878,19 @@
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_STAT|ST_SPEED",
+        "debuff": true,
+        "target": "ENEMY"
+      },
+      {
+        "type": "BT_SEALED_RECEIVE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
-      {
-        "type": "BT_WG_REVERSE_HEAL",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
-        "type": "BT_DOT_BLEED",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
-        "type": "BT_FREEZE",
-        "debuff": true,
-        "target": "ENEMY"
-      },
       {
         "type": "SYS_BUFF_ADDITIVE_ATTACK",
         "debuff": false,
@@ -5207,6 +5903,21 @@
       },
       {
         "type": "BT_STAT|ST_DEF",
+        "debuff": true,
+        "target": "ENEMY"
+      },
+      {
+        "type": "BT_FREEZE",
+        "debuff": true,
+        "target": "ENEMY"
+      },
+      {
+        "type": "BT_DOT_BLEED",
+        "debuff": true,
+        "target": "ENEMY"
+      },
+      {
+        "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
         "target": "ENEMY"
       }
@@ -5236,19 +5947,19 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": "ME"
       }
     ],
     "s2": [
       {
-        "type": "BT_SHIELD_BASED_TARGET",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
         "type": "SYS_BUFF_COUNTER",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_SHIELD_BASED_TARGET",
+        "debuff": false,
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_DOT_POISON",
@@ -5258,17 +5969,17 @@
     ],
     "s3": [
       {
+        "type": "BT_REMOVE_DEBUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
         "type": "BT_IMMUNE",
         "debuff": false,
         "target": "MY_TEAM"
       },
       {
         "type": "BT_ACTION_GAUGE",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
-        "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
         "target": "MY_TEAM"
       }
@@ -5286,7 +5997,7 @@
       {
         "type": "BT_DOT_POISON2",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": "ENEMY"
       },
       {
         "type": "BT_STAT|ST_DEF",
@@ -5306,11 +6017,6 @@
     ],
     "s2": [
       {
-        "type": "BT_DOT_POISON2",
-        "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
-      },
-      {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
@@ -5319,14 +6025,14 @@
         "type": "BT_STUN",
         "debuff": true,
         "target": "ENEMY"
+      },
+      {
+        "type": "BT_DOT_POISON2",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
-      {
-        "type": "IG_Buff_Effect_2000109_Interruption_D",
-        "debuff": true,
-        "target": "ENEMY_TEAM_MAGE"
-      },
       {
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
@@ -5338,9 +6044,14 @@
         "target": "MY_TEAM"
       },
       {
+        "type": "IG_Buff_Effect_2000109_Interruption_D",
+        "debuff": true,
+        "target": "ENEMY_TEAM_MAGE"
+      },
+      {
         "type": "BT_DOT_POISON2",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": "ENEMY"
       },
       {
         "type": "BT_REMOVE_BUFF",
@@ -5352,10 +6063,17 @@
       {
         "type": "BT_DOT_POISON2",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain_dual": [
+      {
+        "type": "BT_DOT_POISON2",
+        "debuff": true,
+        "target": "ENEMY"
+      }
+    ],
+    "ee": [
       {
         "type": "BT_DOT_POISON2",
         "debuff": true,
@@ -5378,17 +6096,7 @@
     ],
     "s2": [
       {
-        "type": "BT_WG_REVERSE_HEAL",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "IG_Buff_2000110_Interruption",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
-        "type": "BT_UNDEAD",
         "debuff": false,
         "target": "ME"
       },
@@ -5398,9 +6106,19 @@
         "target": "MY_TEAM_WITHOUT_ME"
       },
       {
+        "type": "BT_UNDEAD",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_STAT|ST_ATK",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_COOL3_CHARGE",
+        "debuff": false,
+        "target": "ME"
       },
       {
         "type": "BT_CP_CHARGE",
@@ -5408,16 +6126,21 @@
         "target": "ME"
       },
       {
-        "type": "BT_COOL3_CHARGE",
-        "debuff": false,
-        "target": "ME"
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
       {
-        "type": "BT_AP_CHARGE",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
+        "type": "BT_ADDITIVE_TURN",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_CP_CHARGE",
+        "debuff": false,
+        "target": "ME"
       },
       {
         "type": "BT_STAT|ST_DEF",
@@ -5425,21 +6148,16 @@
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "BT_CP_CHARGE",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
-        "type": "BT_ADDITIVE_TURN",
-        "debuff": false,
-        "target": "ME"
+        "type": "BT_AP_CHARGE",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "chain": [
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain_dual": [
@@ -5448,15 +6166,17 @@
         "debuff": true,
         "target": "ENEMY"
       }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "MY_TEAM_HIGHEST_ATK"
+      }
     ]
   },
   "2000111": {
     "s1": [
-      {
-        "type": "BT_CALL_BACKUP_2",
-        "debuff": false,
-        "target": "ME"
-      },
       {
         "type": "BT_CALL_BACKUP",
         "debuff": false,
@@ -5466,9 +6186,19 @@
         "type": "BT_WG_DMG",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_CALL_BACKUP_2",
+        "debuff": false,
+        "target": "ME"
       }
     ],
     "s2": [
+      {
+        "type": "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
       {
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
         "debuff": false,
@@ -5480,11 +6210,6 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_STAT|ST_CRITICAL_DMG_RATE",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
@@ -5497,14 +6222,14 @@
     ],
     "s3": [
       {
-        "type": "BT_STAT|ST_DEF",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
+        "type": "BT_SEAL_COUNTER",
+        "debuff": false,
+        "target": "ME"
       },
       {
-        "type": "BT_STAT|ST_CRITICAL_DMG_RATE_IR",
+        "type": "BT_GOLDEN_CURSE",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_STAT|ST_ATK_IR",
@@ -5512,7 +6237,12 @@
         "target": "ENEMY"
       },
       {
-        "type": "BT_GOLDEN_CURSE",
+        "type": "BT_STAT|ST_CRITICAL_DMG_RATE_IR",
+        "debuff": true,
+        "target": "ENEMY"
+      },
+      {
+        "type": "BT_STAT|ST_DEF",
         "debuff": true,
         "target": "ENEMY_TEAM"
       }
@@ -5542,7 +6272,7 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": "ME"
       },
       {
         "type": "BT_REMOVE_DEBUFF",
@@ -5557,6 +6287,11 @@
     ],
     "s2": [
       {
+        "type": "SYS_BUFF_REVENGE_HEAL",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "MY_TEAM"
@@ -5565,21 +6300,16 @@
         "type": "BT_FREEZE",
         "debuff": true,
         "target": "ENEMY_TEAM_HIGHEST_ATK"
-      },
-      {
-        "type": "SYS_BUFF_REVENGE_HEAL",
-        "debuff": false,
-        "target": "ME"
       }
     ],
     "s3": [
       {
-        "type": "BT_SILENCE",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
+        "type": "BT_REMOVE_DEBUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
       },
       {
-        "type": "BT_REMOVE_DEBUFF",
+        "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
         "target": "MY_TEAM"
       },
@@ -5589,16 +6319,23 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
-        "debuff": false,
-        "target": "MY_TEAM"
+        "type": "BT_SILENCE",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "chain": [
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -5606,6 +6343,11 @@
     "s1": [
       {
         "type": "BT_COOL2_CHARGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
       },
@@ -5620,19 +6362,14 @@
         "target": "ENEMY_SKILL_TARGET"
       },
       {
-        "type": "BT_IMMEDIATELY_BLEED",
-        "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
-      },
-      {
         "type": "BT_IMMEDIATELY_BURN",
         "debuff": true,
         "target": "ENEMY_SKILL_TARGET"
       },
       {
-        "type": "BT_COOL3_CHARGE",
-        "debuff": false,
-        "target": "ME"
+        "type": "BT_IMMEDIATELY_BLEED",
+        "debuff": true,
+        "target": "ENEMY_SKILL_TARGET"
       }
     ],
     "s2": [
@@ -5649,11 +6386,6 @@
     ],
     "s3": [
       {
-        "type": "BT_DOT_BLEED",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
@@ -5662,13 +6394,18 @@
         "type": "BT_DOT_BURN",
         "debuff": true,
         "target": "ENEMY"
+      },
+      {
+        "type": "BT_DOT_BLEED",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "chain": [
       {
         "type": "BT_WG_REVERSE_HEAL",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain_dual": [
@@ -5676,6 +6413,13 @@
         "type": "BT_DOT_BURN",
         "debuff": true,
         "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_SEAL_COUNTER",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   },
@@ -5709,22 +6453,22 @@
         "target": "ME"
       },
       {
-        "type": "BT_CP_CHARGE",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
         "type": "BT_ADDITIVE_TURN",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "IG_Buff_Effect_2000120_Interruption",
+        "type": "BT_CP_CHARGE",
         "debuff": false,
         "target": "ME"
       },
       {
         "type": "BT_EXTEND_BUFF",
+        "debuff": false,
+        "target": "MY_TEAM"
+      },
+      {
+        "type": "IG_Buff_Effect_2000120_Interruption",
         "debuff": false,
         "target": "ME"
       }
@@ -5750,17 +6494,29 @@
       {
         "type": "BT_AP_CHARGE",
         "debuff": false,
-        "target": "NEXT_CHAIN_STRIKER"
+        "target": "ME"
       }
     ],
     "chain_dual": [
       {
-        "type": "BT_STAT|ST_ATK",
+        "type": "BT_ACTION_GAUGE",
         "debuff": false,
         "target": "ME"
       },
       {
+        "type": "BT_STAT|ST_ATK",
+        "debuff": false,
+        "target": "ME"
+      }
+    ],
+    "ee": [
+      {
         "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
+        "type": "BT_SEAL_COUNTER",
         "debuff": false,
         "target": "ME"
       }
@@ -5781,14 +6537,14 @@
         "target": "ME"
       },
       {
-        "type": "BT_FREEZE",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_COOL3_CHARGE",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_FREEZE",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -5798,14 +6554,14 @@
         "target": "ME"
       },
       {
-        "type": "BT_ACTION_GAUGE",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_FREEZE",
         "debuff": true,
         "target": "ENEMY"
+      },
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": true,
+        "target": "ENEMY_TEAM"
       }
     ],
     "chain": [
@@ -5833,6 +6589,11 @@
     ],
     "s2": [
       {
+        "type": "BT_STAT|ST_PIERCE_POWER_RATE",
+        "debuff": false,
+        "target": "ME"
+      },
+      {
         "type": "BT_SKILL_RANGE_SINGLE",
         "debuff": false,
         "target": "ME"
@@ -5844,11 +6605,6 @@
       },
       {
         "type": "BT_ACTION_GAUGE",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
-        "type": "BT_STAT|ST_PIERCE_POWER_RATE",
         "debuff": false,
         "target": "ME"
       },
@@ -5883,12 +6639,12 @@
   "2700037": {
     "s1": [
       {
-        "type": "BT_AGGRO",
-        "debuff": true,
-        "target": "ENEMY"
+        "type": "BT_CALL_BACKUP",
+        "debuff": false,
+        "target": "ME"
       },
       {
-        "type": "BT_CALL_BACKUP",
+        "type": "BT_CALL_BACKUP_2",
         "debuff": false,
         "target": "ME"
       },
@@ -5898,26 +6654,26 @@
         "target": "ENEMY"
       },
       {
-        "type": "BT_CALL_BACKUP_2",
-        "debuff": false,
-        "target": "ME"
+        "type": "BT_AGGRO",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
       {
-        "type": "BT_REMOVE_DEBUFF",
+        "type": "SYS_BUFF_COUNTER",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_REMOVE_DEBUFF",
+        "debuff": false,
+        "target": "MY_TEAM_LOWEST_HP_RATE"
       },
       {
         "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
         "target": "MY_TEAM_LOWEST_HP_RATE"
-      },
-      {
-        "type": "SYS_BUFF_COUNTER",
-        "debuff": false,
-        "target": "ME"
       },
       {
         "type": "BT_AGGRO",
@@ -5927,14 +6683,14 @@
     ],
     "s3": [
       {
-        "type": "BT_STAT|ST_BUFF_CHANCE",
-        "debuff": false,
-        "target": "ME"
-      },
-      {
         "type": "BT_STAT|ST_DEF",
         "debuff": false,
         "target": "MY_TEAM"
+      },
+      {
+        "type": "BT_STAT|ST_BUFF_CHANCE",
+        "debuff": false,
+        "target": "ME"
       },
       {
         "type": "BT_REMOVE_BUFF",
@@ -5954,6 +6710,13 @@
         "type": "BT_AGGRO",
         "debuff": true,
         "target": "ENEMY"
+      }
+    ],
+    "ee": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
       }
     ]
   }

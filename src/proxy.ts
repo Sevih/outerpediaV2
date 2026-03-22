@@ -16,11 +16,21 @@ export function proxy(request: NextRequest) {
     pathname.startsWith('/api') ||
     pathname.startsWith('/admin') ||
     pathname.startsWith('/images') ||
-    pathname.startsWith('/feed') ||
-    pathname.startsWith('/.well-known') ||
-    pathname.includes('.')
+    pathname.startsWith('/feed')
   ) {
     return NextResponse.next();
+  }
+
+  // Let Next.js handle its own generated files (sitemap.xml, robots.txt, etc.)
+  if (/^\/(sitemap.*\.xml|robots\.txt|manifest\.json)$/.test(pathname)) {
+    return NextResponse.next();
+  }
+
+  // Block bot probes and non-existent file requests (e.g. /about-us.html,
+  // /service-worker.js, /.well-known, /apple-touch-icon-precomposed.png, etc.)
+  // These would otherwise match [lang] and cause MODULE_NOT_FOUND errors.
+  if (pathname.startsWith('/.') || pathname.includes('.')) {
+    return new NextResponse(null, { status: 404 });
   }
 
   // --- Subdomain → path rewrite ---

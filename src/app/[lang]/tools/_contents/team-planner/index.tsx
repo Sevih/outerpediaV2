@@ -1,12 +1,13 @@
 import { getCharactersForList } from '@/lib/data/characters';
-import { getBuffs, getDebuffs } from '@/lib/data/effects';
+import { getBuffs, getDebuffs, getSkillBuffs } from '@/lib/data/effects';
 import TeamPlannerClient from './TeamPlannerClient';
 
 export default async function TeamPlannerTool() {
-  const [characters, buffs, debuffs] = await Promise.all([
+  const [characters, buffs, debuffs, skillBuffs] = await Promise.all([
     getCharactersForList(),
     getBuffs(),
     getDebuffs(),
+    getSkillBuffs(),
   ]);
 
   const buffMap = Object.fromEntries(buffs.map((b) => [b.name, b]));
@@ -17,6 +18,7 @@ export default async function TeamPlannerTool() {
       characters={characters}
       buffMap={buffMap}
       debuffMap={debuffMap}
+      skillBuffs={skillBuffs}
     />
   );
 }

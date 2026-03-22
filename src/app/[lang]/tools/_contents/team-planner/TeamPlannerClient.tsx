@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import type { CharacterListEntry } from '@/types/character';
-import type { Effect } from '@/types/effect';
+import type { Effect, SkillBuffData } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
 import { ELEMENTS, CLASSES, CHAIN_TYPE_LABELS } from '@/types/enums';
@@ -23,6 +23,7 @@ type Props = {
   characters: CharacterListEntry[];
   buffMap: Record<string, Effect>;
   debuffMap: Record<string, Effect>;
+  skillBuffs: Record<string, SkillBuffData>;
 };
 
 // ── Helpers ──
@@ -37,6 +38,34 @@ function getSearchableNames(char: CharacterListEntry, langs: Lang[]): string[] {
     norm(char.ID),
     norm(char.slug),
   ];
+}
+
+const SELF_TARGETS = new Set(['ME']);
+const TEAM_TARGETS = new Set([
+  'MY_TEAM', 'MY_TEAM_WITHOUT_ME', 'MY_TEAM_ONE', 'MY_TEAM_ONE_RANDOM',
+  'MY_TEAM_ATTACKER', 'MY_TEAM_DEAD_ALL', 'MY_TEAM_HIGHEST_ATK',
+  'MY_TEAM_HIGHEST_MAXHP', 'MY_TEAM_HIGHEST_SPD', 'MY_TEAM_LOWEST_HP_RATE',
+  'MY_TEAM_MAGE', 'NEXT_CHAIN_STRIKER',
+]);
+const SKILL_KEYS = ['s1', 's2', 's3', 'ee'] as const;
+
+/** Extract unique buff/debuff names from skill-buffs data for a character, filtered by target set */
+function extractEffects(
+  data: SkillBuffData | undefined,
+  keys: readonly (keyof SkillBuffData)[],
+  targets: Set<string>,
+  isDebuff: boolean,
+): string[] {
+  if (!data) return [];
+  const seen = new Set<string>();
+  for (const key of keys) {
+    const entries = data[key];
+    if (!entries) continue;
+    for (const e of entries) {
+      if (e.debuff === isDebuff && targets.has(e.target)) seen.add(e.type);
+    }
+  }
+  return [...seen];
 }
 
 // ── Character Picker Modal ──
@@ -193,11 +222,13 @@ function EmptySlot({ onClick }: { onClick: () => void }) {
 function FilledSlot({
   char,
   lang,
+  selfBuffs,
   onRemove,
   onClick,
 }: {
   char: CharacterListEntry;
   lang: Lang;
+  selfBuffs: string[];
   onRemove: () => void;
   onClick: () => void;
 }) {
@@ -212,7 +243,7 @@ function FilledSlot({
           element={char.Element}
           classType={char.Class}
           rarity={char.Rarity}
-          size={{ base: 'md', md: 'lg' }}
+          size={'md'}
           showIcons
           showStars
         />
@@ -227,6 +258,11 @@ function FilledSlot({
         </svg>
       </button>
       <p className="mt-1 text-center text-[10px] font-medium text-zinc-300 truncate max-w-16 md:max-w-24">{displayName}</p>
+      {selfBuffs.length > 0 && (
+        <div className="flex flex-wrap justify-center gap-0.5 mt-0.5 max-w-20 md:max-w-28">
+          <BuffDebuffDisplay buffs={selfBuffs} debuffs={[]} iconOnly />
+        </div>
+      )}
     </div>
   );
 }
@@ -236,20 +272,22 @@ function FilledSlot({
 function TeamCross({
   team,
   lang,
+  skillBuffs,
   onSlotClick,
   onRemove,
 }: {
   team: TeamSlot[];
   lang: Lang;
+  skillBuffs: Record<string, SkillBuffData>;
   onSlotClick: (idx: number) => void;
   onRemove: (idx: number) => void;
 }) {
   const renderSlot = (idx: number) => {
     const char = team[idx];
-    return char ? (
-      <FilledSlot char={char} lang={lang} onRemove={() => onRemove(idx)} onClick={() => onSlotClick(idx)} />
-    ) : (
-      <EmptySlot onClick={() => onSlotClick(idx)} />
+    if (!char) return <EmptySlot onClick={() => onSlotClick(idx)} />;
+    const selfBuffs = extractEffects(skillBuffs[char.ID], SKILL_KEYS, SELF_TARGETS, false);
+    return (
+      <FilledSlot char={char} lang={lang} selfBuffs={selfBuffs} onRemove={() => onRemove(idx)} onClick={() => onSlotClick(idx)} />
     );
   };
 
@@ -396,10 +434,12 @@ function ChainOrderSection({
 
 function TeamEffectsSummary({
   team,
+  skillBuffs,
   buffMap,
   debuffMap,
 }: {
   team: TeamSlot[];
+  skillBuffs: Record<string, SkillBuffData>;
   buffMap: Record<string, Effect>;
   debuffMap: Record<string, Effect>;
 }) {
@@ -414,45 +454,59 @@ function TeamEffectsSummary({
     );
   }
 
-  const allBuffs = [...new Set(members.flatMap(m => m.buff || []))];
-  const allDebuffs = [...new Set(members.flatMap(m => m.debuff || []))];
+  // Team buffs: only buffs targeting allies (MY_TEAM*) from skills s1/s2/s3
+  const teamBuffs = [...new Set(members.flatMap(m =>
+    extractEffects(skillBuffs[m.ID], SKILL_KEYS, TEAM_TARGETS, false)
+  ))];
 
+  // Team debuffs: debuffs from skills s1/s2/s3 targeting enemies
+  const ENEMY_TARGETS = new Set([
+    'ENEMY', 'ENEMY_SKILL_TARGET', 'ENEMY_TEAM',
+    'ENEMY_TEAM_HIGHEST_ATK', 'ENEMY_TEAM_HIGHEST_SPD',
+    'ENEMY_TEAM_MAGE', 'ENEMY_TEAM_PRIEST',
+  ]);
+  const teamDebuffs = [...new Set(members.flatMap(m =>
+    extractEffects(skillBuffs[m.ID], SKILL_KEYS, ENEMY_TARGETS, true)
+  ))];
+
+  // Chain passive: only 'chain' key (buffs + debuffs)
   const chainBuffs = [...new Set(members.flatMap(m => {
-    const chain = m.effectsBySource?.SKT_CHAIN_PASSIVE;
-    return chain?.buff || [];
+    const data = skillBuffs[m.ID];
+    return data?.chain?.filter(e => !e.debuff).map(e => e.type) || [];
   }))];
   const chainDebuffs = [...new Set(members.flatMap(m => {
-    const chain = m.effectsBySource?.SKT_CHAIN_PASSIVE;
-    return chain?.debuff || [];
+    const data = skillBuffs[m.ID];
+    return data?.chain?.filter(e => e.debuff).map(e => e.type) || [];
   }))];
 
+  // Dual attack: only 'chain_dual' key
   const dualBuffs = [...new Set(members.flatMap(m => {
-    const dual = m.effectsBySource?.DUAL_ATTACK;
-    return dual?.buff || [];
+    const data = skillBuffs[m.ID];
+    return data?.chain_dual?.filter(e => !e.debuff).map(e => e.type) || [];
   }))];
   const dualDebuffs = [...new Set(members.flatMap(m => {
-    const dual = m.effectsBySource?.DUAL_ATTACK;
-    return dual?.debuff || [];
+    const data = skillBuffs[m.ID];
+    return data?.chain_dual?.filter(e => e.debuff).map(e => e.type) || [];
   }))];
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
       <div className="space-y-4">
-        {allBuffs.length > 0 && (
+        {teamBuffs.length > 0 && (
           <div className="rounded-xl border border-zinc-700 bg-zinc-900/60 p-4">
             <h3 className="text-sm font-bold text-cyan-400 mb-2">
               {t('tools.team-planner.team_buffs' as TranslationKey)}
             </h3>
-            <BuffDebuffDisplay buffs={allBuffs} debuffs={[]} />
+            <BuffDebuffDisplay buffs={teamBuffs} debuffs={[]} />
           </div>
         )}
 
-        {allDebuffs.length > 0 && (
+        {teamDebuffs.length > 0 && (
           <div className="rounded-xl border border-zinc-700 bg-zinc-900/60 p-4">
             <h3 className="text-sm font-bold text-red-400 mb-2">
               {t('tools.team-planner.team_debuffs' as TranslationKey)}
             </h3>
-            <BuffDebuffDisplay buffs={[]} debuffs={allDebuffs} />
+            <BuffDebuffDisplay buffs={[]} debuffs={teamDebuffs} />
           </div>
         )}
 
@@ -480,7 +534,7 @@ function TeamEffectsSummary({
 
 // ── Main Component ──
 
-export default function TeamPlannerClient({ characters, buffMap, debuffMap }: Props) {
+export default function TeamPlannerClient({ characters, buffMap, debuffMap, skillBuffs }: Props) {
   const { t, lang } = useI18n();
   const [team, setTeam] = useState<TeamSlot[]>([null, null, null, null]);
   const [chainOrder, setChainOrder] = useState<number[]>([0, 1, 2, 3]);
@@ -550,58 +604,62 @@ export default function TeamPlannerClient({ characters, buffMap, debuffMap }: Pr
   }, []);
 
   return (
-    <div className="mx-auto max-w-4xl space-y-6">
-      {/* Team Slots — cross layout */}
-      <TeamCross
-        team={team}
-        lang={lang}
-        onSlotClick={setPickerSlot}
-        onRemove={handleRemove}
-      />
-
-      {/* Actions */}
-      <div className="flex justify-center gap-3">
-        <button
-          type="button"
-          onClick={handleReset}
-          className="rounded-lg bg-zinc-800 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-700 transition"
-        >
-          {t('tools.team-planner.reset' as TranslationKey)}
-        </button>
-        <button
-          type="button"
-          onClick={handleShare}
-          className="rounded-lg bg-zinc-800 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-700 transition"
-        >
-          {copied ? t('common.copied') : t('tools.team-planner.share' as TranslationKey)}
-        </button>
-      </div>
-
-      {/* Chain Order */}
-      <ChainOrderSection
-        team={team}
-        chainOrder={chainOrder}
-        onReorder={setChainOrder}
-        lang={lang}
-      />
-
-      {/* Team Effects Summary */}
-      <TeamEffectsSummary
-        team={team}
-        buffMap={buffMap}
-        debuffMap={debuffMap}
-      />
-
-      {/* Character Picker Modal */}
-      {pickerSlot !== null && (
-        <CharacterPicker
-          characters={characters}
-          excludeIds={excludeIds}
+    <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
+      <div className="mx-auto max-w-4xl space-y-6">
+        {/* Team Slots — cross layout */}
+        <TeamCross
+          team={team}
           lang={lang}
-          onPick={handlePick}
-          onClose={() => setPickerSlot(null)}
+          skillBuffs={skillBuffs}
+          onSlotClick={setPickerSlot}
+          onRemove={handleRemove}
         />
-      )}
-    </div>
+
+        {/* Actions */}
+        <div className="flex justify-center gap-3">
+          <button
+            type="button"
+            onClick={handleReset}
+            className="rounded-lg bg-zinc-800 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-700 transition"
+          >
+            {t('tools.team-planner.reset' as TranslationKey)}
+          </button>
+          <button
+            type="button"
+            onClick={handleShare}
+            className="rounded-lg bg-zinc-800 px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-700 transition"
+          >
+            {copied ? t('common.copied') : t('tools.team-planner.share' as TranslationKey)}
+          </button>
+        </div>
+
+        {/* Chain Order */}
+        <ChainOrderSection
+          team={team}
+          chainOrder={chainOrder}
+          onReorder={setChainOrder}
+          lang={lang}
+        />
+
+        {/* Team Effects Summary */}
+        <TeamEffectsSummary
+          team={team}
+          skillBuffs={skillBuffs}
+          buffMap={buffMap}
+          debuffMap={debuffMap}
+        />
+
+        {/* Character Picker Modal */}
+        {pickerSlot !== null && (
+          <CharacterPicker
+            characters={characters}
+            excludeIds={excludeIds}
+            lang={lang}
+            onPick={handlePick}
+            onClose={() => setPickerSlot(null)}
+          />
+        )}
+      </div>
+    </EffectsProvider>
   );
 }

@@ -1,15 +1,34 @@
 """
 Generate data/generated/skill-buffs.json
-Maps character IDs → skills → buff/debuff entries with raw TargetType from BuffTemplet.
+
+Reads character JSONs (data/character/*.json) and ee.json as source of truth for
+buff/debuff lists per skill, then enriches each entry with TargetType from BuffTemplet.
+
+Output format:
+{
+  "2000001": {
+    "s1":         [ { "type": "BT_REMOVE_BUFF", "debuff": true, "target": "ENEMY" } ],
+    "s2":         [ ... ],
+    "s3":         [ ... ],
+    "chain":      [ ... ],
+    "chain_dual": [ ... ],
+    "ee":         [ ... ]
+  }
+}
 
 Usage: python scripts/generate-skill-buffs.py
 """
 
-import json, os, re, glob, sys
+import json
+import os
+import re
+import glob
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_DIR = os.path.join(ROOT, 'data', 'admin', 'json')
 CHAR_DIR = os.path.join(ROOT, 'data', 'character')
+EE_PATH = os.path.join(ROOT, 'data', 'equipment', 'ee.json')
 OUT_DIR = os.path.join(ROOT, 'data', 'generated')
 OUT_FILE = os.path.join(OUT_DIR, 'skill-buffs.json')
 
@@ -19,49 +38,11 @@ def load(name):
         return json.load(f)['data']
 
 
-# ── Blacklists & overrides (mirrored from config.ts) ─────────────────
+if not os.path.isdir(JSON_DIR):
+    sys.exit(0)  # No admin data (prod), skip silently
 
-BUFF_ID_BLACKLIST = {
-    '2000052_backup_1_1', '2000029_2_2', '2000020_3_2', '2000039_3_2',
-    '2000052_1_1', '2000042_u_3_2', '2000037_3_4', '2000060_u_3_1',
-    '2000057_2_2', '2000057_2_3', '2000053_2_5', '2000059_1_1',
-    '2000059_u_3', '2000059_2_1', '2000059_2_3', '2000059_2_7',
-    '2000079_2_2', '2000109_3_3', '2000096_2_4', '2000096_3_2',
-    '2000087_3_7', '2000087_3_8', '2000102_2_3', '2000102_2_4',
-    '2000095_2_2',
-}
 
-BUFF_TYPE_BLACKLIST = {
-    'BT_DMG', 'BT_DMG_TO_BOSS', 'BT_DMG_ENEMY_TEAM_DECREASE',
-    'BT_RESOURCE_USE_SKILL', 'BT_RESOURCE_CHARGE', 'BT_SKILL_RANGE_ALL',
-    'BT_STAT_PREMIUM', 'BT_DMG_OWNER_LOST_HP_RATE', 'BT_SKILL_USING_CONDITION',
-    'BT_NONE', 'BT_STAT_OWNER_LOST_HP_RATE', 'BT_DMG_TARGET_DEBUFF',
-    'BT_DMG_TARGET_BUFF', 'BT_SWAP_STAT_ATTACK', 'BT_GROUP',
-    'BT_LIMIT_DMG_TURN', 'BT_SHARE_DMG', 'BT_DMG_TARGET_LOST_HP_RATE',
-    'BT_SECOND_TRIGGER', 'BT_DMG_REDUCE_FINAL', 'BT_DMG_MY_TEAM_DECREASE',
-    'BT_RESOURCE_CHARGE_BUFF_CASTER',
-}
-
-BUFF_TYPE_RENAME = {
-    'BT_STAT|ST_AVOID': 'SYS_BUFF_AVOID_UP',
-    'IG_Buff_Stat_Atk_Interruption_D': 'BT_STAT|ST_ATK_IR',
-    'IG_Buff_Stat_CriDmgRate_Interruption_D': 'BT_STAT|ST_CRITICAL_DMG_RATE_IR',
-}
-
-BUFF_TYPE_FORCE = {
-    'BT_WG_REVERSE_HEAL': 'debuff',
-    'BT_KILL_UNDER_HP_RATE': 'debuff',
-    'BT_SEALED_RESURRECTION': 'debuff',
-}
-
-SKILL_BUFF_FORCE = {
-    '2000065:SKT_FIRST': {'buff': [('BT_EXTRA_ATTACK_ON_TURN_END', None)]},
-    '2000084:SKT_FIRST': {'buff': [('BT_CALL_BACKUP_2', None), ('BT_CALL_BACKUP', None)]},
-    '2000072:SKT_ULTIMATE': {'debuff': [('BT_STEAL_BUFF', None)]},
-    '2000102:SKT_ULTIMATE': {'buff': [('BT_EXTEND_DEBUFF', None)], 'debuff': [('BT_EXTEND_BUFF', None)]},
-    '2000093:SKT_SECOND': {'buff': [('BT_RANDOM_STAT', None)]},
-    '2000095:SKT_SECOND': {'buff': [('GRACE_OF_THE_VIRGIN_GODDESS', None), ('BT_COOL3_CHARGE', None), ('BT_ACTION_GAUGE', None)]},
-}
+# ── Skill key mapping ────────────────────────────────────────────────
 
 SKILL_KEY = {
     'SKT_FIRST': 's1',
@@ -70,11 +51,79 @@ SKILL_KEY = {
     'SKT_CHAIN_PASSIVE': 'chain',
 }
 
+# EE override renames: the EE extractor renames some types but the BuffTemplet has the original
+EE_TYPE_ALIASES = {
+    'BT_SHIELD_BASED_CASTER': 'BT_SHIELD_BASED_TARGET',  # 2000047 override
+}
 
-# ── Helpers ───────────────────────────────────────────────────────────
+# Manual target overrides for forced/invented buff types that don't exist in BuffTemplet
+# (tag, is_debuff) → target. Same tag can have different targets depending on context.
+FORCED_TARGET = {
+    ('HEAVY_STRIKE', False): 'ME',
+    ('GRACE_OF_THE_VIRGIN_GODDESS', False): 'ME',
+    ('BT_RANDOM_STAT', False): 'MY_TEAM',
+    ('BT_EXTEND_DEBUFF', False): 'MY_TEAM',       # buff: reduces debuff duration on allies
+    ('BT_EXTEND_DEBUFF', True): 'ENEMY',           # debuff: increases debuff duration on enemy
+    ('BT_EXTEND_BUFF', False): 'MY_TEAM',          # buff: increases buff duration on allies
+    ('BT_EXTEND_BUFF', True): 'ENEMY',             # debuff: reduces buff duration on enemy
+    ('BT_STEAL_BUFF', True): 'ENEMY',
+    ('BT_EXTRA_ATTACK_ON_TURN_END', False): 'ME',
+    ('BT_WG_REVERSE_HEAL', True): 'ENEMY',
+    ('BT_CALL_BACKUP', False): 'ME',
+    ('BT_CALL_BACKUP_2', False): 'ME',
+    ('BT_AP_CHARGE', False): 'ME',
+    ('BT_DOT_POISON2', True): 'ENEMY',
+}
 
-def collect_buff_ids(skill_level_rows):
-    """Collect buff group IDs matching {7-digit charId}_ pattern from skill level rows."""
+
+# ── Load game data ───────────────────────────────────────────────────
+
+print('Loading game data...')
+char_templet = load('CharacterTemplet')
+skill_templet = load('CharacterSkillTemplet')
+skill_level_templet = load('CharacterSkillLevelTemplet')
+buff_data = load('BuffTemplet')
+change_templet = load('CharacterChangeTemplet')
+
+# ── Build lookups ────────────────────────────────────────────────────
+
+# Skill templet by NameIDSymbol
+skill_by_ns = {}
+for row in skill_templet:
+    ns = row.get('NameIDSymbol', '')
+    if ns:
+        skill_by_ns[ns] = row
+
+# Skill level rows grouped by SkillID
+skill_levels_by_sid = {}
+for row in skill_level_templet:
+    sid = row.get('SkillID', '')
+    if sid:
+        skill_levels_by_sid.setdefault(sid, []).append(row)
+
+# BuffID → first row (Level=1 preferred)
+buff_by_id = {}
+for row in buff_data:
+    bid = row.get('BuffID', '')
+    if bid and bid not in buff_by_id:
+        buff_by_id[bid] = row
+
+# Change map: charId → changeId
+change_map = {}
+for row in change_templet:
+    cid = row.get('ID', '')
+    chid = row.get('ID_fallback1', '')
+    if cid and chid:
+        change_map[cid] = chid
+
+# CharacterTemplet by ID
+char_row_by_id = {row.get('ID', ''): row for row in char_templet}
+
+
+# ── Helpers ──────────────────────────────────────────────────────────
+
+def collect_buff_ids_from_levels(skill_level_rows):
+    """Collect buff IDs matching {7-digit}_ pattern from skill level rows."""
     ids = set()
     for row in skill_level_rows:
         for val in row.values():
@@ -84,372 +133,270 @@ def collect_buff_ids(skill_level_rows):
                 t = part.strip()
                 if re.match(r'^\d{7}_', t):
                     ids.add(t)
-    return list(ids)
+    return ids
 
 
-def collect_buff_ids_by_pattern(char_id, pattern, buff_data):
-    """Collect buff IDs from BuffTemplet by naming convention (e.g. {charId}_chain_*)."""
+def collect_buff_ids_by_pattern(char_id, pattern):
+    """Collect buff IDs from BuffTemplet by naming convention."""
     prefix = f'{char_id}_{pattern}_'
-    ids = set()
-    for row in buff_data:
-        bid = row.get('BuffID', '')
-        if bid.startswith(prefix) and not bid.endswith('_old'):
-            ids.add(bid)
-    return list(ids)
+    return {row.get('BuffID', '') for row in buff_data
+            if (row.get('BuffID', '') or '').startswith(prefix)
+            and not row.get('BuffID', '').endswith('_old')}
 
 
-def extract_buff_debuff_with_target(buff_group_ids, buff_data, buff_by_id):
-    """
-    Like extractBuffDebuff from config.ts but returns list of {type, debuff, target}.
-    """
-    results = []
-    seen_tags = set()
+def resolve_tag(row):
+    """Resolve a BuffTemplet row to its tag (same logic as extractBuffDebuff)."""
+    btype = row.get('Type', '')
+    stat = row.get('StatType', '')
+    icon = row.get('IconName', '') or ''
 
-    # Expand buff group IDs to include siblings with _Interruption IconName
-    expanded = set(buff_group_ids)
-    for gid in buff_group_ids:
-        parts = gid.split('_')
-        if len(parts) >= 3 and re.match(r'^\d{7}$', parts[0]):
-            prefix = f'{parts[0]}_{parts[1]}_'
-            for row in buff_data:
-                bid = row.get('BuffID', '')
-                if (bid.startswith(prefix) and not bid.endswith('_old')
-                        and '_Interruption' in (row.get('IconName', '') or '')):
-                    expanded.add(bid)
+    # Interruption icon
+    if '_Interruption' in icon:
+        rename = {
+            'IG_Buff_Stat_Atk_Interruption_D': 'BT_STAT|ST_ATK_IR',
+            'IG_Buff_Stat_CriDmgRate_Interruption_D': 'BT_STAT|ST_CRITICAL_DMG_RATE_IR',
+        }
+        return rename.get(icon, icon)
 
-    for group_id in expanded:
-        row = buff_by_id.get(group_id)
+    # BT_DOT_POISON with Poison02 icon
+    if btype == 'BT_DOT_POISON' and row.get('RemoveEffect') == 'SYS_BUFF_POISON_2':
+        return 'BT_DOT_POISON2'
+
+    # BT_HEAL_BASED → BT_CONTINU_HEAL
+    if btype in ('BT_HEAL_BASED_TARGET', 'BT_HEAL_BASED_CASTER'):
+        if row.get('BuffRemoveType') == 'ON_TURN_END':
+            return 'BT_CONTINU_HEAL'
+        return None
+
+    # BT_RUN_PASSIVE/ACTIVE → RemoveEffect
+    if (btype.startswith('BT_RUN_PASSIVE_') or btype.startswith('BT_RUN_ACTIVE_')) and row.get('RemoveEffect'):
+        return row['RemoveEffect']
+
+    # BT_STAT|StatType
+    if btype == 'BT_STAT' and stat and stat != 'ST_NONE':
+        tag = f'{btype}|{stat}'
+        if tag == 'BT_STAT|ST_AVOID':
+            return 'SYS_BUFF_AVOID_UP'
+        return tag
+
+    return btype
+
+
+def find_target_for_tag(tag, char_id, skill_buff_ids, is_debuff=False, ee=False):
+    """Find TargetType from BuffTemplet for a given buff tag within a character's skill buffs."""
+
+    # Manual overrides for forced/invented tags (context-aware)
+    forced = FORCED_TARGET.get((tag, is_debuff))
+    if forced:
+        return forced
+
+    # Tags to search for (include aliases for EE overrides)
+    search_tags = {tag}
+    alias = EE_TYPE_ALIASES.get(tag)
+    if alias:
+        search_tags.add(alias)
+
+    # Search in the specific buff IDs for this skill
+    for bid in skill_buff_ids:
+        row = buff_by_id.get(bid)
         if not row:
             continue
+        resolved = resolve_tag(row)
+        if resolved in search_tags:
+            return row.get('TargetType', '')
 
-        btype = row.get('Type', '')
-        stat_type = row.get('StatType', '')
-        bd_type = row.get('BuffDebuffType', '')
-        target_type = row.get('TargetType', '')
-        icon_name = row.get('IconName', '') or ''
-
-        if not btype or group_id in BUFF_ID_BLACKLIST:
-            continue
-
-        # Interruption IconName = custom mechanic
-        if '_Interruption' in icon_name:
-            icon_tag = BUFF_TYPE_RENAME.get(icon_name, icon_name)
-            if bd_type == 'BUFF':
-                is_debuff = False
-            elif bd_type.startswith('DEBUFF'):
-                is_debuff = True
-            else:
-                is_debuff = icon_tag.endswith('_D')
-            if icon_tag not in seen_tags:
-                seen_tags.add(icon_tag)
-                results.append({'type': icon_tag, 'debuff': is_debuff, 'target': target_type})
-            continue
-
-        if (btype in BUFF_TYPE_BLACKLIST
-                or btype.startswith('BT_DMG_OWNER_STAT')
-                or btype.startswith('BT_DMG_TARGET_STAT')):
-            continue
-
-        if btype.startswith('BT_IMMEDIATELY'):
-            if btype not in seen_tags:
-                seen_tags.add(btype)
-                results.append({'type': btype, 'debuff': True, 'target': target_type})
-            continue
-
-        if btype in ('BT_HEAL_BASED_TARGET', 'BT_HEAL_BASED_CASTER'):
-            if row.get('BuffRemoveType') == 'ON_TURN_END':
-                tag = 'BT_CONTINU_HEAL'
-                if tag not in seen_tags:
-                    seen_tags.add(tag)
-                    results.append({'type': tag, 'debuff': False, 'target': target_type})
-            continue
-
-        if btype == 'BT_STAT' and (row.get('TurnDuration') == '-1' or row.get('BuffRemoveType') == 'ON_SKILL_FINISH'):
-            continue
-
-        if (btype.startswith('BT_RUN_PASSIVE_') or btype.startswith('BT_RUN_ACTIVE_')) and row.get('RemoveEffect'):
-            tag = row['RemoveEffect']
-            if tag not in seen_tags:
-                seen_tags.add(tag)
-                results.append({'type': tag, 'debuff': False, 'target': target_type})
-            continue
-
-        if btype == 'BT_DMG_REDUCE':
-            continue
-
-        if btype in ('BT_REVERSE_HEAL_BASED_TARGET', 'BT_REVERSE_HEAL_BASED_CASTER'):
-            if target_type.startswith('ENEMY'):
-                if btype not in seen_tags:
-                    seen_tags.add(btype)
-                    results.append({'type': btype, 'debuff': True, 'target': target_type})
-            continue
-
-        # Resolve type tag
-        resolved_type = btype
-        if btype == 'BT_DOT_POISON' and row.get('RemoveEffect') == 'SYS_BUFF_POISON_2':
-            resolved_type = 'BT_DOT_POISON2'
-
-        raw_tag = (f'{resolved_type}|{stat_type}'
-                   if resolved_type == 'BT_STAT' and stat_type and stat_type != 'ST_NONE'
-                   else resolved_type)
-        tag = BUFF_TYPE_RENAME.get(raw_tag, raw_tag)
-
-        forced = BUFF_TYPE_FORCE.get(btype)
-        if forced == 'buff' or (not forced and bd_type == 'BUFF'):
-            is_debuff = False
-        elif forced == 'debuff' or (not forced and bd_type.startswith('DEBUFF')):
-            is_debuff = True
-        else:
-            continue  # NEUTRAL — skip
-
-        if tag not in seen_tags:
-            seen_tags.add(tag)
-            results.append({'type': tag, 'debuff': is_debuff, 'target': target_type})
-
-    return results
-
-
-# ── Main ──────────────────────────────────────────────────────────────
-
-def main():
-    print('Loading game data...')
-    char_templet = load('CharacterTemplet')
-    skill_templet = load('CharacterSkillTemplet')
-    skill_level_templet = load('CharacterSkillLevelTemplet')
-    buff_data = load('BuffTemplet')
-    change_templet = load('CharacterChangeTemplet')
-
-    # Build lookups
-    skill_by_ns = {}  # NameIDSymbol → skill row
-    for row in skill_templet:
-        ns = row.get('NameIDSymbol', '')
-        if ns:
-            skill_by_ns[ns] = row
-
-    # Skill level rows grouped by SkillID
-    skill_levels_by_sid = {}
-    for row in skill_level_templet:
-        sid = row.get('SkillID', '')
-        if not sid:
-            continue
-        try:
-            int(row.get('SkillLevel', '1') or '1')
-        except ValueError:
-            continue
-        skill_levels_by_sid.setdefault(sid, []).append(row)
-
-    # Buff lookup: BuffID → first Level=1 row
-    buff_by_id = {}
+    # Fallback: search all character buffs
+    prefixes = [f'{char_id}_', f'BID_CEQUIP_{char_id}'] if not ee else [f'BID_CEQUIP_{char_id}']
     for row in buff_data:
         bid = row.get('BuffID', '')
-        lvl = row.get('Level', '1')
-        if bid and lvl == '1' and bid not in buff_by_id:
-            buff_by_id[bid] = row
+        if not any(bid.startswith(p) for p in prefixes):
+            continue
+        resolved = resolve_tag(row)
+        if resolved in search_tags:
+            return row.get('TargetType', '')
 
-    # Change map: charId → changeId
-    change_map = {}
-    for row in change_templet:
-        cid = row.get('ID', '')
-        chid = row.get('ID_fallback1', '')
-        if cid and chid:
-            change_map[cid] = chid
+    return None
 
-    # Get existing character IDs
-    char_ids = set()
-    for f in glob.glob(os.path.join(CHAR_DIR, '*.json')):
-        cid = os.path.splitext(os.path.basename(f))[0]
-        char_ids.add(cid)
 
-    # Map charId → CharacterTemplet row
-    char_rows = {}
-    for row in char_templet:
-        cid = row.get('ID', '')
-        if cid in char_ids:
-            char_rows[cid] = row
+def get_skill_buff_ids(char_id, skill_type, sid, sid_to_slot, change_id, change_skill_ids):
+    """Get all BuffIDs relevant to a skill (same logic as character extractor)."""
+    is_chain = skill_type == 'SKT_CHAIN_PASSIVE'
+    ids = set()
 
-    print(f'Processing {len(char_rows)} characters...')
+    if is_chain:
+        ids = collect_buff_ids_by_pattern(char_id, 'chain')
+        if change_id:
+            ids |= collect_buff_ids_by_pattern(change_id, 'chain')
+    else:
+        levels = skill_levels_by_sid.get(sid, [])
+        ids = collect_buff_ids_from_levels(levels)
 
-    result = {}
-
-    for cid, char_row in sorted(char_rows.items()):
-        # Collect skill IDs
-        skill_ids = []
-        sid_to_slot = {}
-        for i in range(1, 24):
-            sid = char_row.get(f'Skill_{i}', '')
-            if sid and sid != '0':
-                skill_ids.append(sid)
-                sid_to_slot[sid] = f'Skill_{i}'
+        # Class passive (Skill_23)
+        char_row = char_row_by_id.get(char_id)
+        if char_row:
+            passive_sid = char_row.get('Skill_23', '')
+            if passive_sid:
+                slot_num = sid_to_slot.get(sid, '').replace('Skill_', '')
+                for lv in skill_levels_by_sid.get(passive_sid, []):
+                    for val in lv.values():
+                        if not isinstance(val, str):
+                            continue
+                        for part in val.split(','):
+                            t = part.strip()
+                            m = re.match(rf'^{char_id}_{slot_num}_', t)
+                            if m:
+                                ids.add(t)
 
         # Change character
-        change_id = change_map.get(cid)
-        change_char_row = None
-        if change_id:
-            for row in char_templet:
-                if row.get('ModelID') == change_id:
-                    change_char_row = row
+        if change_id and change_skill_ids:
+            for csid in change_skill_ids:
+                cs = skill_by_ns.get(csid)
+                if cs and cs.get('SkillType') == skill_type:
+                    change_levels = skill_levels_by_sid.get(csid, [])
+                    ids |= collect_buff_ids_from_levels(change_levels)
                     break
 
-        change_skill_ids = []
-        if change_char_row:
+        # Burst skills
+        srow = skill_by_ns.get(sid)
+        if srow:
+            rap = srow.get('RequireAP', '')
+            if re.match(r'^\d+,\d+,\d+$', rap):
+                char_row = char_row_by_id.get(char_id)
+                if char_row:
+                    all_sids = [char_row.get(f'Skill_{i}', '') for i in range(1, 24)]
+                    for bsid in all_sids:
+                        bs = skill_by_ns.get(bsid)
+                        if bs and bs.get('SkillType', '').startswith('SKT_BURST'):
+                            burst_levels = skill_levels_by_sid.get(bsid, [])
+                            ids |= collect_buff_ids_from_levels(burst_levels)
+
+    return ids
+
+
+# ── Main generation ──────────────────────────────────────────────────
+
+# Load existing character JSONs
+char_files = sorted(glob.glob(os.path.join(CHAR_DIR, '*.json')))
+print(f'Processing {len(char_files)} characters...')
+
+# Load ee.json
+ee_data = {}
+if os.path.exists(EE_PATH):
+    with open(EE_PATH, 'r', encoding='utf-8') as f:
+        ee_data = json.load(f)
+
+result = {}
+
+for char_file in char_files:
+    cid = os.path.splitext(os.path.basename(char_file))[0]
+    with open(char_file, 'r', encoding='utf-8') as f:
+        char = json.load(f)
+
+    char_row = char_row_by_id.get(cid)
+    if not char_row:
+        continue
+
+    # Collect skill IDs and slot mapping
+    skill_ids = []
+    sid_to_slot = {}
+    for i in range(1, 24):
+        sid = char_row.get(f'Skill_{i}', '')
+        if sid and sid != '0':
+            skill_ids.append(sid)
+            sid_to_slot[sid] = f'Skill_{i}'
+
+    # Change character
+    change_id = change_map.get(cid)
+    change_skill_ids = []
+    if change_id:
+        change_row = None
+        for row in char_templet:
+            if row.get('ModelID') == change_id:
+                change_row = row
+                break
+        if change_row:
             for i in range(1, 24):
-                sid = change_char_row.get(f'Skill_{i}', '')
-                if sid and sid != '0':
-                    change_skill_ids.append(sid)
+                s = change_row.get(f'Skill_{i}', '')
+                if s and s != '0':
+                    change_skill_ids.append(s)
 
-        # Class passive buff IDs by skill slot number
-        passive_buffs_by_slot = {}
-        passive_sid = char_row.get('Skill_23', '')
-        if passive_sid:
-            for lv in skill_level_templet:
-                if lv.get('SkillID') != passive_sid:
-                    continue
-                for val in lv.values():
-                    if not isinstance(val, str):
-                        continue
-                    for part in val.split(','):
-                        t = part.strip()
-                        m = re.match(rf'^{cid}_(\d+)_', t)
-                        if m:
-                            slot_num = m.group(1)
-                            passive_buffs_by_slot.setdefault(slot_num, []).append(t)
+    char_entry = {}
 
-        char_entry = {}
+    for stype, sdata in char.get('skills', {}).items():
+        skey = SKILL_KEY.get(stype)
+        if not skey:
+            continue
 
-        for sid in skill_ids:
-            skill_row = skill_by_ns.get(sid)
-            if not skill_row:
-                continue
+        buffs = sdata.get('buff', [])
+        debuffs = sdata.get('debuff', [])
+        if not buffs and not debuffs:
+            continue
 
-            skill_type = skill_row.get('SkillType', '')
-            skey = SKILL_KEY.get(skill_type)
-            if not skey:
-                continue
+        # Find the NameIDSymbol for this skill type
+        sid = None
+        for s in skill_ids:
+            srow = skill_by_ns.get(s)
+            if srow and srow.get('SkillType') == stype:
+                sid = s
+                break
 
-            is_chain = skill_type == 'SKT_CHAIN_PASSIVE'
+        # Get all BuffIDs relevant to this skill
+        skill_buff_ids = get_skill_buff_ids(cid, stype, sid, sid_to_slot, change_id, change_skill_ids) if sid else set()
 
-            if is_chain:
-                # Chain passive: buffs from {charId}_chain_* pattern
-                group_ids = collect_buff_ids_by_pattern(cid, 'chain', buff_data)
-            else:
-                # Normal skill: buffs from skill level rows + class passive
-                levels = skill_levels_by_sid.get(sid, [])
-                group_ids = collect_buff_ids(levels)
-                slot_str = sid_to_slot.get(sid, '').replace('Skill_', '')
-                extra_ids = passive_buffs_by_slot.get(slot_str, [])
-                group_ids = list(set(group_ids + extra_ids))
+        entries = []
+        for b in buffs:
+            target = find_target_for_tag(b, cid, skill_buff_ids, is_debuff=False)
+            entries.append({'type': b, 'debuff': False, 'target': target})
+        for d in debuffs:
+            target = find_target_for_tag(d, cid, skill_buff_ids, is_debuff=True)
+            entries.append({'type': d, 'debuff': True, 'target': target})
 
-            effects = extract_buff_debuff_with_target(group_ids, buff_data, buff_by_id)
+        char_entry[skey] = entries
 
-            # Merge change character's buffs
-            if change_char_row:
-                if is_chain:
-                    change_ids = collect_buff_ids_by_pattern(change_id, 'chain', buff_data)
-                else:
-                    # Find matching skill type in change character
-                    change_levels = []
-                    for csid in change_skill_ids:
-                        cs_row = skill_by_ns.get(csid)
-                        if cs_row and cs_row.get('SkillType') == skill_type:
-                            change_levels = skill_levels_by_sid.get(csid, [])
-                            break
-                    change_ids = collect_buff_ids(change_levels)
-
-                change_effects = extract_buff_debuff_with_target(change_ids, buff_data, buff_by_id)
-                existing_types = {e['type'] for e in effects}
-                for ce in change_effects:
-                    if ce['type'] not in existing_types:
-                        effects.append(ce)
-                        existing_types.add(ce['type'])
-
-            # Burst skills: merge only into the parent skill (RequireAP=int,int,int)
-            rap = skill_row.get('RequireAP', '')
-            is_burst_parent = bool(re.match(r'^\d+,\d+,\d+$', rap))
-            if is_burst_parent:
-                burst_types = ['SKT_BURST_1', 'SKT_BURST_2', 'SKT_BURST_3']
-                for bsid in skill_ids:
-                    bs_row = skill_by_ns.get(bsid)
-                    if not bs_row or bs_row.get('SkillType') not in burst_types:
-                        continue
-                    b_levels = skill_levels_by_sid.get(bsid, [])
-                    if b_levels:
-                        b_effects = extract_buff_debuff_with_target(
-                            collect_buff_ids(b_levels), buff_data, buff_by_id)
-                        existing_types = {e['type'] for e in effects}
-                        for be in b_effects:
-                            if be['type'] not in existing_types:
-                                effects.append(be)
-                                existing_types.add(be['type'])
-
-            # Force overrides
-            force_key = f'{cid}:{skill_type}'
-            if force_key in SKILL_BUFF_FORCE:
-                forced = SKILL_BUFF_FORCE[force_key]
-                existing_types = {e['type'] for e in effects}
-                for btype, target in forced.get('buff', []):
-                    if btype not in existing_types:
-                        effects.append({'type': btype, 'debuff': False, 'target': target})
-                        existing_types.add(btype)
-                for btype, target in forced.get('debuff', []):
-                    if btype not in existing_types:
-                        effects.append({'type': btype, 'debuff': True, 'target': target})
-                        existing_types.add(btype)
-
-            if effects:
-                char_entry[skey] = effects
-
-            # Chain passive dual attack (backup)
-            if is_chain:
-                dual_ids = collect_buff_ids_by_pattern(cid, 'backup', buff_data)
+        # Chain dual
+        if stype == 'SKT_CHAIN_PASSIVE':
+            dual_buffs = sdata.get('dual_buff', [])
+            dual_debuffs = sdata.get('dual_debuff', [])
+            if dual_buffs or dual_debuffs:
+                dual_ids = collect_buff_ids_by_pattern(cid, 'backup')
                 if change_id:
-                    dual_ids += collect_buff_ids_by_pattern(change_id, 'backup', buff_data)
-                dual_effects = extract_buff_debuff_with_target(dual_ids, buff_data, buff_by_id)
+                    dual_ids |= collect_buff_ids_by_pattern(change_id, 'backup')
+                dual_entries = []
+                for b in dual_buffs:
+                    target = find_target_for_tag(b, cid, dual_ids, is_debuff=False)
+                    dual_entries.append({'type': b, 'debuff': False, 'target': target})
+                for d in dual_debuffs:
+                    target = find_target_for_tag(d, cid, dual_ids, is_debuff=True)
+                    dual_entries.append({'type': d, 'debuff': True, 'target': target})
+                if dual_entries:
+                    char_entry['chain_dual'] = dual_entries
 
-                # Force overrides for dual
-                if force_key in SKILL_BUFF_FORCE:
-                    forced = SKILL_BUFF_FORCE[force_key]
-                    existing_types = {e['type'] for e in dual_effects}
-                    for btype, target in forced.get('dual_buff', []):
-                        if btype not in existing_types:
-                            dual_effects.append({'type': btype, 'debuff': False, 'target': target})
-                            existing_types.add(btype)
-                    for btype, target in forced.get('dual_debuff', []):
-                        if btype not in existing_types:
-                            dual_effects.append({'type': btype, 'debuff': True, 'target': target})
-                            existing_types.add(btype)
+    # ── EE ──
+    ee_entry = ee_data.get(cid)
+    if ee_entry:
+        ee_buffs = ee_entry.get('buff', [])
+        ee_debuffs = ee_entry.get('debuff', [])
+        if ee_buffs or ee_debuffs:
+            ee_buff_ids = {row.get('BuffID', '') for row in buff_data
+                          if (row.get('BuffID', '') or '').startswith(f'BID_CEQUIP_{cid}')}
+            ee_entries = []
+            for b in ee_buffs:
+                target = find_target_for_tag(b, cid, ee_buff_ids, is_debuff=False, ee=True)
+                ee_entries.append({'type': b, 'debuff': False, 'target': target})
+            for d in ee_debuffs:
+                target = find_target_for_tag(d, cid, ee_buff_ids, is_debuff=True, ee=True)
+                ee_entries.append({'type': d, 'debuff': True, 'target': target})
+            if ee_entries:
+                char_entry['ee'] = ee_entries
 
-                if dual_effects:
-                    char_entry['chain_dual'] = dual_effects
+    if char_entry:
+        result[cid] = char_entry
 
-        # HEAVY_STRIKE detection
-        has_heavy_strike = any(
-            r.get('BuffID', '').startswith(f'{cid}_passive')
-            and r.get('StatType') == 'ST_CRITICAL_RATE'
-            and r.get('Value') == '-1000'
-            and r.get('ApplyingType') == 'OAT_RATE'
-            for r in buff_data
-        )
-        if has_heavy_strike:
-            for skey, effects in char_entry.items():
-                # Add HEAVY_STRIKE to offensive skills
-                existing_types = {e['type'] for e in effects}
-                if 'HEAVY_STRIKE' not in existing_types:
-                    # Check if any effect targets enemies (offensive skill)
-                    has_enemy = any(e['target'] and e['target'].startswith('ENEMY') for e in effects if e.get('target'))
-                    if has_enemy or skey == 'chain':
-                        effects.insert(0, {'type': 'HEAVY_STRIKE', 'debuff': False, 'target': 'ME'})
+# ── Write ────────────────────────────────────────────────────────────
 
-        if char_entry:
-            result[cid] = char_entry
+os.makedirs(OUT_DIR, exist_ok=True)
+with open(OUT_FILE, 'w', encoding='utf-8') as f:
+    json.dump(result, f, indent=2, ensure_ascii=False)
+    f.write('\n')
 
-    # Write output
-    os.makedirs(OUT_DIR, exist_ok=True)
-    with open(OUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
-        f.write('\n')
-
-    print(f'Done! {len(result)} characters -> {OUT_FILE}')
-
-
-if __name__ == '__main__':
-    main()
+print(f'Done! {len(result)} characters -> {OUT_FILE}')

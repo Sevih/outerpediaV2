@@ -1119,6 +1119,52 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": [
+            "BanDark"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000074",
+                "2000058",
+                "2000113",
+                "2000108"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000098",
+                "2000084",
+                "2000036"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000039",
+                "2000053"
+              ],
+              "reason": {
+                "en": "DPS with {B/BT_REMOVE_DEBUFF} on {B/SYS_BUFF_REVENGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
         }
       ]
     },
@@ -1256,6 +1302,37 @@
                 "zh": ""
               }
             },
+            {
+              "names": [
+                "2000071",
+                "2000040",
+                "2000053"
+              ],
+              "reason": {
+                "en": "{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} in her kit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000094"
+              ],
+              "reason": {
+                "en": "Inflicts {D/BT_DOT_BURN} when taking a hit.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "BanEarth"
+          ],
+          "recommended": [
             {
               "names": [
                 "2000071",
@@ -2669,6 +2746,39 @@
                 "2000057",
                 "2000060",
                 "2000030",
+                "2000088",
+                "2000105"
+              ],
+              "reason": {
+                "en": "Team wide {B/BT_STAT|ST_BUFF_CHANCE} buff",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_Fire"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000030"
+              ],
+              "reason": {
+                "en": "Validate restriction and team wide {B/BT_STAT|ST_BUFF_CHANCE} buff",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000101",
+                "2000057",
+                "2000060",
                 "2000088",
                 "2000105"
               ],
