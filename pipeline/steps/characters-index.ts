@@ -42,26 +42,40 @@ async function loadStatLabelToKey(): Promise<Map<string, string>> {
   map.set('critical damage', 'CHD');
   map.set('critical hit chance', 'CHC');
   map.set('dmg incr', 'DMG UP%');
+  map.set('dmg reduc', 'DMG RED%');
   return map;
 }
 
-/** Extract team-wide bonus stat key from transcend data (English keys only) */
-function extractTeamBonus(
+// Patterns for team-wide bonuses in transcend text (English only)
+const TEAM_BONUS_PATTERNS: RegExp[] = [
+  /\+[\d.]+%?\s+Ally(?:\s+Team)?\s+([\w\s]+?)(?:\s+each\b|\s+every\b|\s*[+()\n]|$)/i, // "+5% Ally Team Attack", "+2 Ally Team Speed each turn"
+  /Ally(?:\s+Team)?\s+([\w\s]+?)\s*\+/i,                                                // "Ally Team Attack +10%", "Ally Speed +2 every turn"
+  /Allies(?:'s?)?\s+([\w\s]+?)\s*\+/i,                                                  // "Allies DMG Incr +2%", "Allies' DMG Reduc +4.8%"
+  /Increases\s+Ally\s+([\w\s]+?)\s+by\b/i,                                              // "Increases Ally Resilience by 6%"
+];
+
+/** Extract team-wide bonus stat keys from transcend data (English keys only) */
+function extractTeamBonuses(
   transcend: Record<string, string | null> | undefined,
   labelToKey: Map<string, string>,
-): string | null {
-  if (!transcend) return null;
+): string[] {
+  if (!transcend) return [];
+  const found = new Set<string>();
   const englishKeys = Object.keys(transcend).filter(k => !/_(jp|kr|zh)$/.test(k));
   for (const key of englishKeys) {
     const val = transcend[key];
     if (!val) continue;
-    const match = val.match(/Ally Team ([\w\s]+?)(?:\s*[+\n]|$)/i);
-    if (match) {
-      const statLabel = match[1].trim().toLowerCase();
-      return labelToKey.get(statLabel) || null;
+    for (const line of val.split('\n')) {
+      for (const pattern of TEAM_BONUS_PATTERNS) {
+        const match = line.match(pattern);
+        if (!match) continue;
+        const statLabel = match[1].trim().toLowerCase();
+        const statKey = labelToKey.get(statLabel);
+        if (statKey) found.add(statKey);
+      }
     }
   }
-  return null;
+  return [...found];
 }
 
 /** Convert English Fullname to a URL-friendly slug */
@@ -187,7 +201,7 @@ export async function run() {
         }
       }
 
-      const teamBonus = extractTeamBonus(char.transcend, statLabelToKey);
+      const teamBonuses = extractTeamBonuses(char.transcend, statLabelToKey);
 
       const listEntry: Record<string, unknown> = {
         ID: char.ID,
@@ -207,7 +221,7 @@ export async function run() {
         debuff: [...allCanonicalDebuffs],
         effectsBySource,
       };
-      if (teamBonus) listEntry.teamBonus = teamBonus;
+      if (teamBonuses.length) listEntry.teamBonuses = teamBonuses;
       if (char.rank_by_transcend) listEntry.rank_by_transcend = char.rank_by_transcend;
       if (char.role_by_transcend) listEntry.role_by_transcend = char.role_by_transcend;
 

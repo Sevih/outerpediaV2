@@ -501,7 +501,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   // ── Team bonus UI items (derived from characters + stats.json) ──
 
   const TEAM_BONUSES_UI = useMemo<FilterSelectOption[]>(() => {
-    const bonusKeys = [...new Set(characters.map(c => c.teamBonus).filter(Boolean))] as string[];
+    const bonusKeys = [...new Set(characters.flatMap(c => c.teamBonuses ?? []))];
     bonusKeys.sort((a, b) => {
       const ia = TB_KEYS.indexOf(a as typeof TB_KEYS[number]);
       const ib = TB_KEYS.indexOf(b as typeof TB_KEYS[number]);
@@ -654,7 +654,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
 
       // Team bonus matching
       if (teamBonusFilter.length) {
-        if (!char.teamBonus || !teamBonusFilter.includes(char.teamBonus)) return false;
+        if (!char.teamBonuses?.some(tb => teamBonusFilter.includes(tb))) return false;
       }
 
       return true;

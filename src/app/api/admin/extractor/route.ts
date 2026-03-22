@@ -797,8 +797,15 @@ function buildTranscend(
         for (const lang of LANGS) lines[lang].push(pct);
       }
 
-      // SkillLevel 1 = Burst Lv2 unlock (implicit, not shown in transcend desc)
-      if (skillLevel > 1 && skillLevel > lastDescSkillLevel) {
+      // Add transcend descriptions, stripping "Burst Level X Unlocked" only when
+      // there are other lines alongside it (e.g. 2000063 has extra effects on the same SE_DESC key)
+      const BURST_LINE_RE: Record<Lang, RegExp> = {
+        en: /^Burst Level \d+ Unlocked$/i,
+        jp: /^バーストスキル\d+段階解禁$/,
+        kr: /^버스트 \d+단계 해금$/,
+        zh: /^解锁\d+阶段?爆发$/,
+      };
+      if (skillLevel > 0 && skillLevel > lastDescSkillLevel) {
         lastDescSkillLevel = skillLevel;
         const descKeys = transcendDescs.get(skillLevel);
         if (descKeys) {
@@ -807,7 +814,16 @@ function buildTranscend(
             if (texts) {
               for (const lang of LANGS) {
                 const txt = texts[lang];
-                if (txt) lines[lang].push(txt.replace(/\\n/g, '\n'));
+                if (!txt) continue;
+                // Strip "Burst Level 2 Unlocked" lines only (keep Burst Level 3+)
+                const filtered = txt.replace(/\\n/g, '\n').split('\n')
+                  .filter(line => {
+                    if (!BURST_LINE_RE[lang].test(line.trim())) return true;
+                    // Only strip level 2 burst unlock
+                    return !/2/.test(line);
+                  })
+                  .join('\n').trim();
+                if (filtered) lines[lang].push(filtered);
               }
             }
           }

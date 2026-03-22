@@ -190,5 +190,5 @@ export type CharacterListEntry = WithLocalizedFields<{
   buff: string[];
   debuff: string[];
   effectsBySource: Partial<Record<SkillKey, { buff: string[]; debuff: string[] }>>;
-  teamBonus?: string;
+  teamBonuses?: string[];
 }, 'Fullname'>;
