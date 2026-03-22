@@ -50,7 +50,7 @@ export default function SkillCard({ skill }: Props) {
       <div className="mb-3 flex items-start gap-3">
         <div className="relative h-14 w-14 shrink-0">
           <div className="relative h-full w-full overflow-hidden">
-            <Image src={`/images/characters/skills/${skill.IconName}.webp`} alt={name} fill sizes="56px" className="object-contain" />
+            <Image src={`/images/characters/${skill.IconName.startsWith('Skill_CorePassive') ? 'core-fusion-skill' : 'skills'}/${skill.IconName}.webp`} alt={name} fill sizes="56px" className="object-contain" />
           </div>
           {skill.burnEffect && (
             <div className="absolute -top-1 -right-1 h-5 w-5">

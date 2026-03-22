@@ -553,6 +553,7 @@ const jp: Record<TranslationKey, string> = {
   'characters.filters.sources.filterBySource': 'ソースでフィルタ',
   'characters.filters.sources.skill3': 'スキル3',
   'characters.filters.sources.chainPassive': 'チェインパッシブ',
+  'characters.filters.sources.fusionPassive': 'コアフュージョンパッシブ',
   'characters.filters.sources.dualAttack': 'デュアルアタック',
 
   // Characters common
@@ -628,6 +629,7 @@ const jp: Record<TranslationKey, string> = {
   'page.character.skill.type.ultimate': '必殺技',
   'page.character.skill.type.passive': 'パッシブ',
   'page.character.skill.type.chain': 'チェイン',
+  'page.character.skill.type.core_passive': 'コアフュージョンパッシブ',
   'page.character.skill.priority_title': 'スキル強化優先度',
   'page.character.skill.priority_rule_title': 'スキル強化の基本ルール：',
   'page.character.skill.priority_rule_1': '弱点ゲージダメージのためにレベル2まで上げる',

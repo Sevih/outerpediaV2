@@ -220,6 +220,29 @@ export function collectBuffGroupIds(skillLevelRows: BuffRow | BuffRow[]): string
 }
 
 /**
+ * Collect buff IDs from fusion passive skill level entries.
+ * Unlike normal skills, fusion passive uses global BuffIDs (core_passive_*, trancendent_*)
+ * that don't match the {7-digit charId}_ pattern.
+ */
+export function collectFusionPassiveBuffIds(skillLevelRows: BuffRow[], buffData: BuffRow[]): string[] {
+  const knownBuffIds = new Set(buffData.map(r => r.BuffID).filter(Boolean));
+  const ids = new Set<string>();
+  for (const row of skillLevelRows) {
+    for (const [key, val] of Object.entries(row)) {
+      if (!val || typeof val !== 'string') continue;
+      if (key === 'ID' || key === 'SkillID' || key === 'Key') continue;
+      for (const part of val.split(',')) {
+        const trimmed = part.trim();
+        if (trimmed && knownBuffIds.has(trimmed)) {
+          ids.add(trimmed);
+        }
+      }
+    }
+  }
+  return [...ids];
+}
+
+/**
  * Collect buff group IDs from BuffTemplet by naming convention.
  */
 export function collectBuffGroupIdsByPattern(charId: string, pattern: string, buffData: BuffRow[]): string[] {

@@ -12,12 +12,13 @@ const CHAIN_TYPES = ['Start', 'Join', 'Finish'];
 const RANKS = ['SS', 'S', 'A', 'B', 'C'];
 const ROLES = ['dps', 'support', 'sustain'];
 
-const SKILL_KEYS = ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE'] as const;
+const SKILL_KEYS = ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE', 'SKT_FUSION_PASSIVE'] as const;
 const SKILL_LABELS: Record<string, string> = {
   SKT_FIRST: 'Skill 1',
   SKT_SECOND: 'Skill 2',
   SKT_ULTIMATE: 'Ultimate',
   SKT_CHAIN_PASSIVE: 'Chain Passive',
+  SKT_FUSION_PASSIVE: 'Core-Fused Passive',
 };
 
 const ELEMENT_TEXT: Record<string, string> = {

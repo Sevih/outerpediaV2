@@ -553,6 +553,7 @@ const kr: Record<TranslationKey, string> = {
   'characters.filters.sources.filterBySource': '소스별 필터',
   'characters.filters.sources.skill3': '스킬 3',
   'characters.filters.sources.chainPassive': '체인 패시브',
+  'characters.filters.sources.fusionPassive': '코어 융합 패시브',
   'characters.filters.sources.dualAttack': '듀얼 어택',
 
   // Characters common
@@ -628,6 +629,7 @@ const kr: Record<TranslationKey, string> = {
   'page.character.skill.type.ultimate': '궁극기',
   'page.character.skill.type.passive': '패시브',
   'page.character.skill.type.chain': '체인',
+  'page.character.skill.type.core_passive': '코어 융합 패시브',
   'page.character.skill.priority_title': '스킬 강화 우선순위',
   'page.character.skill.priority_rule_title': '스킬 강화 기본 규칙:',
   'page.character.skill.priority_rule_1': '약점 게이지 데미지를 위해 레벨 2까지 올리기',

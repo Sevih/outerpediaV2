@@ -33,6 +33,7 @@ export type SkillKey =
   | 'SKT_SECOND'
   | 'SKT_ULTIMATE'
   | 'SKT_CHAIN_PASSIVE'
+  | 'SKT_FUSION_PASSIVE'
   | 'DUAL_ATTACK'
   | 'EXCLUSIVE_EQUIP';
 
@@ -41,6 +42,7 @@ export const SKILL_SOURCES: { key: SkillKey; labelKey: string }[] = [
   { key: 'SKT_SECOND', labelKey: 'page.character.skill.type.s2' },
   { key: 'SKT_ULTIMATE', labelKey: 'characters.filters.sources.skill3' },
   { key: 'SKT_CHAIN_PASSIVE', labelKey: 'characters.filters.sources.chainPassive' },
+  { key: 'SKT_FUSION_PASSIVE', labelKey: 'characters.filters.sources.fusionPassive' },
   { key: 'DUAL_ATTACK', labelKey: 'characters.filters.sources.dualAttack' },
   { key: 'EXCLUSIVE_EQUIP', labelKey: 'equip.tab.ee' },
 ];

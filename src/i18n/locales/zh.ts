@@ -553,6 +553,7 @@ const zh: Record<TranslationKey, string> = {
   'characters.filters.sources.filterBySource': '选择技能：',
   'characters.filters.sources.skill3': '必杀技',
   'characters.filters.sources.chainPassive': '连携被动',
+  'characters.filters.sources.fusionPassive': '核心融合被动',
   'characters.filters.sources.dualAttack': '夹攻',
 
   // Characters common
@@ -628,6 +629,7 @@ const zh: Record<TranslationKey, string> = {
   'page.character.skill.type.ultimate': '必杀技',
   'page.character.skill.type.passive': '被动',
   'page.character.skill.type.chain': '连携',
+  'page.character.skill.type.core_passive': '核心融合被动',
   'page.character.skill.priority_title': '技能升级优先级',
   'page.character.skill.priority_rule_title': '技能升级基本规则：',
   'page.character.skill.priority_rule_1': '先升到2级以获得WG伤害',

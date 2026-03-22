@@ -11,7 +11,7 @@ import type { SkillKey } from '@/types/enums';
 import type { TranslationKey } from '@/i18n/locales/en';
 import InlineTooltip from './InlineTooltip';
 
-type SkillShorthand = 'S1' | 'S2' | 'S3' | 'Passive' | 'Chain';
+type SkillShorthand = 'S1' | 'S2' | 'S3' | 'Passive' | 'Chain' | 'CorePassive';
 
 type Props = {
   character: string;
@@ -24,6 +24,7 @@ const SKILL_MAP: Record<SkillShorthand, SkillKey> = {
   S3: 'SKT_ULTIMATE',
   Passive: 'SKT_CHAIN_PASSIVE',
   Chain: 'SKT_CHAIN_PASSIVE',
+  CorePassive: 'SKT_FUSION_PASSIVE',
 };
 
 const SKILL_LABEL_KEYS: Record<SkillShorthand, TranslationKey> = {
@@ -32,6 +33,7 @@ const SKILL_LABEL_KEYS: Record<SkillShorthand, TranslationKey> = {
   S3: 'page.character.skill.type.ultimate',
   Passive: 'page.character.skill.type.passive',
   Chain: 'page.character.skill.type.chain',
+  CorePassive: 'page.character.skill.type.core_passive',
 };
 
 // Module-level cache for loaded character data
@@ -99,6 +101,8 @@ export default function SkillInline({ character, skill }: Props) {
   // Skill icon path
   const iconPath = skillData.IconName.startsWith('Skill_ChainPassive')
     ? `/images/characters/chain/${skillData.IconName}.webp`
+    : skillData.IconName.startsWith('Skill_CorePassive')
+    ? `/images/characters/core-fusion-skill/${skillData.IconName}.webp`
     : `/images/characters/skills/${skillData.IconName}.webp`;
 
   const tooltip = (

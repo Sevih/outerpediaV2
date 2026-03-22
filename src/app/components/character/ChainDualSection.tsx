@@ -32,6 +32,77 @@ function getEnhancement(enhancement: Record<string, string[]>, level: string, la
   return enhancement[`${level}_${lang}`] ?? enhancement[level] ?? [];
 }
 
+function FusionPassiveCard({ character }: Props) {
+  const { lang, t } = useI18n();
+  const [level, setLevel] = useState('1');
+  const fp = character.skills.SKT_FUSION_PASSIVE;
+  if (!fp) return null;
+
+  const name = l(fp, 'name', lang);
+  const maxLevel = Object.keys(fp.true_desc_levels).filter((k) => /^\d+$/.test(k)).length;
+  const descKey = lang === 'en' ? level : `${level}_${lang}`;
+  const desc =
+    (fp.true_desc_levels as Record<string, string>)[descKey] ??
+    (fp.true_desc_levels as Record<string, string>)[level] ??
+    '';
+
+  const iconPath = `/images/characters/core-fusion-skill/${fp.IconName}.webp`;
+
+  return (
+    <div className="card mt-4 rounded-xl p-4">
+      <div className="mb-4 flex items-center gap-3">
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden">
+          <Image src={iconPath} alt={name} fill sizes="56px" className="object-contain" />
+        </div>
+        <h3 className="font-game text-lg font-bold">{name}</h3>
+      </div>
+
+      {maxLevel > 1 && (
+        <div className="mt-3 mb-3 flex items-center gap-1">
+          {Array.from({ length: maxLevel }, (_, i) => String(i + 1)).map((lv) => (
+            <button
+              key={lv}
+              onClick={() => setLevel(lv)}
+              className={[
+                'rounded px-2 py-0.5 text-xs transition',
+                lv === level ? 'bg-yellow-500/20 text-yellow-300 ring-1 ring-yellow-400/40' : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700',
+              ].join(' ')}
+            >
+              {t('page.character.skill.level')}{lv}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <BuffDebuffDisplay buffs={fp.buff} debuffs={fp.debuff} />
+
+      <div className="text-sm leading-relaxed text-zinc-200">{formatEffectText(desc)}</div>
+
+      {fp.enhancement && Object.keys(fp.enhancement).length > 0 && (
+        <div className="mt-4">
+          <h4 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+            {t('page.character.skill.enhancement')}
+            <span className="sr-only"> — {name}</span>
+          </h4>
+          <div className="space-y-1">
+            {['2', '3', '4', '5'].map((lv) => {
+              const items = getEnhancement(fp.enhancement as Record<string, string[]>, lv, lang);
+              if (!items.length) return null;
+              const active = Number(level) >= Number(lv);
+              return (
+                <div key={lv} className={`flex gap-2 text-xs transition-opacity ${active ? '' : 'opacity-30'}`}>
+                  <span className="shrink-0 font-semibold text-yellow-400">+{lv}</span>
+                  <span className="text-zinc-300">{items.join(', ')}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ChainDualSection({ character }: Props) {
   const { lang, t } = useI18n();
   const [level, setLevel] = useState('1');
@@ -162,6 +233,8 @@ export default function ChainDualSection({ character }: Props) {
           </div>
         </div>
       </div>
+
+      <FusionPassiveCard character={character} />
     </section>
   );
 }

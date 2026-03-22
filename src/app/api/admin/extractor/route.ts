@@ -6,7 +6,7 @@ import {
   LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang, type LangTexts,
   readTemplet, buildTextMap, expandLang,
   resolveElement, resolveClass, resolveSubClass,
-  buildBuffIndex, resolveBuffPlaceholders, extractBuffDebuff, collectBuffGroupIds, collectBuffGroupIdsByPattern,
+  buildBuffIndex, resolveBuffPlaceholders, extractBuffDebuff, collectBuffGroupIds, collectFusionPassiveBuffIds, collectBuffGroupIdsByPattern,
   resolveTarget, GIFT_MAP, resolveChainType, NON_OFFENSIVE_OVERRIDE,
   BASIC_STAR_OVERRIDE, detectTags, sortTags, SKILL_BUFF_FORCE,
 } from '@/app/admin/lib/config';
@@ -524,13 +524,15 @@ async function handleSkills(id: string) {
       target,
       ...(isChain
         ? extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'chain', buffTemplet.data), buffTemplet.data)
-        : (() => {
-            // Merge buff IDs from skill levels + class passive (Skill_23)
-            const baseIds = collectBuffGroupIds(levels);
-            const slotNum = (sidToSlot.get(sid) ?? '').replace('Skill_', '');
-            const extraIds = passiveBuffIdsBySkillNum.get(slotNum) ?? [];
-            return extractBuffDebuff([...baseIds, ...extraIds], buffTemplet.data);
-          })()),
+        : skillType === 'SKT_FUSION_PASSIVE'
+          ? extractBuffDebuff(collectFusionPassiveBuffIds(levels, buffTemplet.data), buffTemplet.data)
+          : (() => {
+              // Merge buff IDs from skill levels + class passive (Skill_23)
+              const baseIds = collectBuffGroupIds(levels);
+              const slotNum = (sidToSlot.get(sid) ?? '').replace('Skill_', '');
+              const extraIds = passiveBuffIdsBySkillNum.get(slotNum) ?? [];
+              return extractBuffDebuff([...baseIds, ...extraIds], buffTemplet.data);
+            })()),
     };
 
     // Merge transform character's buffs for this skill type
@@ -1152,7 +1154,9 @@ async function handleCompare() {
       const cmpExtraIds = cmpPassiveBuffIds.get(cmpSlotNum) ?? [];
       const skillBD = isChain
         ? extractBuffDebuff(collectBuffGroupIdsByPattern(id, 'chain', buffTemplet.data), buffTemplet.data)
-        : extractBuffDebuff([...collectBuffGroupIds(levels), ...cmpExtraIds], buffTemplet.data);
+        : sk === 'SKT_FUSION_PASSIVE'
+          ? extractBuffDebuff(collectFusionPassiveBuffIds(levels, buffTemplet.data), buffTemplet.data)
+          : extractBuffDebuff([...collectBuffGroupIds(levels), ...cmpExtraIds], buffTemplet.data);
 
       // Merge transform character's buffs (e.g. Luna 2000119 ↔ 2000120)
       const changeRow = changeTemplet.data.find(r => r.ID === id);

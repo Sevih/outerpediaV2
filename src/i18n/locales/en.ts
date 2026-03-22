@@ -553,6 +553,7 @@ const en = {
   'characters.filters.sources.filterBySource': 'Filter by Source',
   'characters.filters.sources.skill3': 'Skill 3',
   'characters.filters.sources.chainPassive': 'Chain Passive',
+  'characters.filters.sources.fusionPassive': 'Core-Fused Passive',
   'characters.filters.sources.dualAttack': 'Dual Attack',
 
   // Characters common
@@ -628,6 +629,7 @@ const en = {
   'page.character.skill.type.ultimate': 'Ultimate',
   'page.character.skill.type.passive': 'Passive',
   'page.character.skill.type.chain': 'Chain',
+  'page.character.skill.type.core_passive': 'Core-Fused Passive',
   'page.character.skill.priority_title': 'Skill Upgrade Priority',
   'page.character.skill.priority_rule_title': 'Skill up rule of thumb:',
   'page.character.skill.priority_rule_1': 'Level 2 for Weakness Gauge damage',
