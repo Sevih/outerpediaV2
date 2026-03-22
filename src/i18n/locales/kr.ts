@@ -555,6 +555,7 @@ const kr: Record<TranslationKey, string> = {
   'characters.filters.sources.chainPassive': '체인 패시브',
   'characters.filters.sources.fusionPassive': '코어 융합 패시브',
   'characters.filters.sources.dualAttack': '듀얼 어택',
+  'characters.filters.teamBonus': '팀 보너스',
 
   // Characters common
   'characters.loading': '캐릭터 불러오는 중...',

@@ -555,6 +555,7 @@ const jp: Record<TranslationKey, string> = {
   'characters.filters.sources.chainPassive': 'チェインパッシブ',
   'characters.filters.sources.fusionPassive': 'コアフュージョンパッシブ',
   'characters.filters.sources.dualAttack': 'デュアルアタック',
+  'characters.filters.teamBonus': 'チームボーナス',
 
   // Characters common
   'characters.loading': 'キャラクターを読み込み中...',

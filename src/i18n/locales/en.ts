@@ -555,6 +555,7 @@ const en = {
   'characters.filters.sources.chainPassive': 'Chain Passive',
   'characters.filters.sources.fusionPassive': 'Core-Fused Passive',
   'characters.filters.sources.dualAttack': 'Dual Attack',
+  'characters.filters.teamBonus': 'Team Bonus',
 
   // Characters common
   'characters.loading': 'Loading characters...',

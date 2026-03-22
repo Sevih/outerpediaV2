@@ -193,8 +193,33 @@ export default function EventTool() {
                   </header>
 
                   {/* Rich content or upcoming placeholder */}
-                  {status === 'upcoming' ? (
-                    <p className="py-8 text-center text-zinc-400">{t('tools.event.upcoming_placeholder')}</p>
+                  {isUpcoming ? (
+                    <div className="relative h-64 overflow-hidden rounded-lg">
+                      {meta.cover && (
+                        <>
+                          <Image
+                            src={meta.cover}
+                            alt=""
+                            fill
+                            sizes="100vw"
+                            className="object-cover blur-xl scale-110"
+                          />
+                          <div className="absolute inset-0 bg-zinc-900/60" />
+                        </>
+                      )}
+                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                        <p className="text-center text-lg font-medium text-zinc-300">
+                          {t('tools.event.upcoming_placeholder')}
+                        </p>
+                        <Image
+                          src="/images/ui/hide.webp"
+                          alt=""
+                          width={300}
+                          height={300}
+                          className="opacity-60"
+                        />
+                      </div>
+                    </div>
                   ) : (
                     <Page />
                   )}

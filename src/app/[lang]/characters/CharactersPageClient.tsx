@@ -10,6 +10,8 @@ type EffectsIndex = {
   tags?: Record<string, number>;
 };
 const effectsIndexPromise = import('@data/generated/effectsIndex.json').then(m => m.default as EffectsIndex);
+type StatEntry = { label: string; icon: string };
+const statsPromise = import('@data/stats.json').then(m => m.default as Record<string, StatEntry>);
 import type { CharacterListEntry } from '@/types/character';
 import type { Effect } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
@@ -26,7 +28,8 @@ import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharac
 import EffectIcon from '@/app/components/character/EffectIcon';
 import { splitCharacterName } from '@/lib/character-name';
 import { FILTER } from '@/lib/theme';
-import { FilterSearch, FilterPill, IconFilterGroup, TextFilterGroup } from '@/app/components/ui/FilterPills';
+import { FilterSearch, FilterPill, IconFilterGroup, TextFilterGroup, FilterSelect } from '@/app/components/ui/FilterPills';
+import type { FilterSelectOption } from '@/app/components/ui/FilterPills';
 
 // ── URL encoding maps ──
 
@@ -38,6 +41,11 @@ const GIFT_BIT: Record<string, number> = { Science: 0, Luxury: 1, 'Magic Tool': 
 const RARITY_BIT: Record<number, number> = { 1: 0, 2: 1, 3: 2 };
 const ROLE_BIT: Record<string, number> = { dps: 0, support: 1, sustain: 2 };
 const SRC_BIT: Record<string, number> = { SKT_FIRST: 0, SKT_SECOND: 1, SKT_ULTIMATE: 2, SKT_CHAIN_PASSIVE: 3, DUAL_ATTACK: 4, EXCLUSIVE_EQUIP: 5, SKT_FUSION_PASSIVE: 6 };
+// Team bonus stat keys — derived at runtime from character data, but bitfield
+// encoding needs stable indices. We use a fixed ordering of known stat keys.
+const TB_KEYS = ['SPD', 'ATK', 'HP', 'DEF', 'CHD', 'CHC', 'DMG UP%', 'DMG RED%', 'CDMG RED%', 'PEN%', 'EFF', 'RES', 'LS'] as const;
+const TB_BIT: Record<string, number> = Object.fromEntries(TB_KEYS.map((v, i) => [v, i]));
+const TB_INV: Record<number, string> = Object.fromEntries(TB_KEYS.map((v, i) => [i, v]));
 
 // Inverse maps: bit position → value
 const ELEM_INV = Object.fromEntries(Object.entries(ELEM_BIT).map(([k, v]) => [v, k]));
@@ -98,6 +106,7 @@ type Payload = {
   tags?: string[]; tagLogic?: 'AND' | 'OR';
   sources?: SkillKey[];
   uniq?: boolean;
+  tb?: string[];
 };
 
 type ZPayload = {
@@ -106,6 +115,7 @@ type ZPayload = {
   l?: 0 | 1; q?: string;
   r2?: number; t?: number[]; tl?: 0 | 1;
   src?: number; u?: 0 | 1;
+  tb?: number;
 };
 
 // ── Helpers ──
@@ -154,6 +164,7 @@ function encodeStateToZ(p: Payload, maps: EffectMaps): string {
   const gBits = isArr(p.gift) ? toBitfield(p.gift!, GIFT_BIT) : undefined;
   const r2Bits = isArr(p.role) ? toBitfield(p.role!, ROLE_BIT) : undefined;
   const srcBits = isArr(p.sources) ? toBitfield(p.sources!, SRC_BIT) : undefined;
+  const tbBits = isArr(p.tb) ? toBitfield(p.tb!, TB_BIT) : undefined;
 
   const compact: ZPayload = {
     e: eBits || undefined,
@@ -170,6 +181,7 @@ function encodeStateToZ(p: Payload, maps: EffectMaps): string {
     u: p.uniq ? 1 : undefined,
     tl: p.tagLogic === 'AND' ? 1 : undefined,
     src: srcBits || undefined,
+    tb: tbBits || undefined,
   };
   return LZString.compressToEncodedURIComponent(JSON.stringify(compact));
 }
@@ -193,6 +205,7 @@ function decodeZToState(z: string | undefined, maps: EffectMaps): Partial<Payloa
       uniq: raw.u === 1,
       tagLogic: raw.tl === 1 ? 'AND' : 'OR',
       sources: raw.src ? fromBitfield(raw.src, SRC_INV, 7) as SkillKey[] : [],
+      tb: raw.tb ? fromBitfield(raw.tb, TB_INV, TB_KEYS.length) : [],
     };
   } catch {
     return null;
@@ -406,6 +419,7 @@ type IndexedCharacter = CharacterListEntry & {
 
 export default function CharactersPageClient({ characters, lang }: ClientProps) {
   const effectsIndex = use(effectsIndexPromise);
+  const statsData = use(statsPromise);
   const effectMaps = useMemo(() => buildEffectMaps(effectsIndex), [effectsIndex]);
   const { t, href } = useI18n();
   const router = useRouter();
@@ -425,6 +439,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   const [sourceFilter, setSourceFilter] = useState<SkillKey[]>([]);
   const [tagFilter, setTagFilter] = useState<string[]>([]);
   const [tagLogic, setTagLogic] = useState<'AND' | 'OR'>('OR');
+  const [teamBonusFilter, setTeamBonusFilter] = useState<string[]>([]);
   const [rawQuery, setRawQuery] = useState('');
   const query = useDeferredValue(rawQuery);
 
@@ -483,6 +498,22 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     ...ROLES.map(v => ({ name: t(`filters.roles.${v}`), value: v })),
   ], [t]);
 
+  // ── Team bonus UI items (derived from characters + stats.json) ──
+
+  const TEAM_BONUSES_UI = useMemo<FilterSelectOption[]>(() => {
+    const bonusKeys = [...new Set(characters.map(c => c.teamBonus).filter(Boolean))] as string[];
+    bonusKeys.sort((a, b) => {
+      const ia = TB_KEYS.indexOf(a as typeof TB_KEYS[number]);
+      const ib = TB_KEYS.indexOf(b as typeof TB_KEYS[number]);
+      return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+    });
+    return bonusKeys.map(key => ({
+      value: key,
+      label: statsData[key]?.label ?? key,
+      image: statsData[key]?.icon ? `/images/ui/effect/${statsData[key].icon}` : undefined,
+    }));
+  }, [characters, statsData]);
+
   // ── All effects from characters ──
 
   const allBuffs = useMemo(() =>
@@ -536,9 +567,10 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     tags: tagFilter.length ? tagFilter : undefined,
     tagLogic: tagLogic !== 'OR' ? tagLogic : undefined,
     sources: sourceFilter.length ? sourceFilter : undefined,
+    tb: teamBonusFilter.length ? teamBonusFilter : undefined,
   }), [elementFilter, classFilter, rarityFilter, chainFilter, giftFilter,
     selectedBuffs, selectedDebuffs, effectLogic, rawQuery, showUniqueEffects,
-    roleFilter, tagFilter, tagLogic, sourceFilter]);
+    roleFilter, tagFilter, tagLogic, sourceFilter, teamBonusFilter]);
 
   const applyPayload = (p: Partial<Payload>) => {
     setElementFilter(p.el ?? []);
@@ -555,6 +587,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     setTagFilter(p.tags ?? []);
     setTagLogic(p.tagLogic === 'AND' ? 'AND' : 'OR');
     setSourceFilter(p.sources ?? []);
+    setTeamBonusFilter(p.tb ?? []);
   };
 
   // ── Pre-indexed characters (with pre-computed display name & prefix) ──
@@ -619,11 +652,16 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
         if (!tagMatch) return false;
       }
 
+      // Team bonus matching
+      if (teamBonusFilter.length) {
+        if (!char.teamBonus || !teamBonusFilter.includes(char.teamBonus)) return false;
+      }
+
       return true;
     });
   }, [indexedCharacters, query, elementFilter, classFilter, chainFilter,
     giftFilter, rarityFilter, selectedBuffs, selectedDebuffs, effectLogic,
-    roleFilter, tagFilter, tagLogic, sourceFilter]);
+    roleFilter, tagFilter, tagLogic, sourceFilter, teamBonusFilter]);
 
   // ── Effects ──
 
@@ -667,7 +705,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     const handle = setTimeout(() => {
       const isEmpty = !payload.el && !payload.cl && !payload.r && !payload.chain
         && !payload.gift && !payload.buffs && !payload.debuffs && !payload.role
-        && !payload.tags && !payload.logic && !payload.q && !payload.uniq;
+        && !payload.tags && !payload.logic && !payload.q && !payload.uniq && !payload.tb;
       const serialized = isEmpty ? pathname : `${pathname}?z=${encodeStateToZ(payload, effectMaps)}`;
       if (lastSerializedRef.current !== serialized) {
         lastSerializedRef.current = serialized;
@@ -703,6 +741,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     setTagLogic('OR');
     setShowUniqueEffects(false);
     setSourceFilter([]);
+    setTeamBonusFilter([]);
     setShowFilters(false);
     setShowTagsPanel(false);
     lastSerializedRef.current = pathname;
@@ -711,7 +750,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
 
   const hasActiveFilters = Boolean(
     payload.el || payload.cl || payload.r || payload.chain || payload.gift
-    || payload.role || payload.tags || payload.buffs || payload.debuffs
+    || payload.role || payload.tags || payload.buffs || payload.debuffs || payload.tb
   );
 
   // ── Render ──
@@ -794,14 +833,23 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
         />
       </div>
 
-      {/* Gifts */}
-      <TextFilterGroup
-        label={t('characters.filters.gifts')}
-        items={GIFTS_UI}
-        filter={giftFilter}
-        onToggle={v => toggleArray(setGiftFilter, v, GIFTS)}
-        onReset={() => setGiftFilter([])}
-      />
+      {/* Gifts + Team Bonus */}
+      <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center">
+        <TextFilterGroup
+          label={t('characters.filters.gifts')}
+          items={GIFTS_UI}
+          filter={giftFilter}
+          onToggle={v => toggleArray(setGiftFilter, v, GIFTS)}
+          onReset={() => setGiftFilter([])}
+        />
+        <FilterSelect
+          label={t('characters.filters.teamBonus' as TranslationKey)}
+          placeholder={t('common.all')}
+          options={TEAM_BONUSES_UI}
+          value={teamBonusFilter[0] ?? null}
+          onChange={v => setTeamBonusFilter(v ? [v] : [])}
+        />
+      </div>
 
       {/* Toggle Buff/Debuff filters */}
       <div className="text-center mt-4">

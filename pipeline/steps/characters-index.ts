@@ -26,8 +26,43 @@ type RawCharacter = {
   gift: string;
   tags?: string[];
   skills?: Record<string, SkillData>;
+  transcend?: Record<string, string | null>;
   [key: string]: unknown;
 };
+
+/** Build a reverse map from stats.json label → stat key (e.g. "Attack" → "ATK") */
+async function loadStatLabelToKey(): Promise<Map<string, string>> {
+  const raw = await readFile(join(PATHS.characters, '..', 'stats.json'), 'utf-8');
+  const stats: Record<string, { label: string }> = JSON.parse(raw);
+  const map = new Map<string, string>();
+  for (const [key, { label }] of Object.entries(stats)) {
+    map.set(label.toLowerCase(), key);
+  }
+  // Add known aliases used in transcend text that differ from stats.json labels
+  map.set('critical damage', 'CHD');
+  map.set('critical hit chance', 'CHC');
+  map.set('dmg incr', 'DMG UP%');
+  return map;
+}
+
+/** Extract team-wide bonus stat key from transcend data (English keys only) */
+function extractTeamBonus(
+  transcend: Record<string, string | null> | undefined,
+  labelToKey: Map<string, string>,
+): string | null {
+  if (!transcend) return null;
+  const englishKeys = Object.keys(transcend).filter(k => !/_(jp|kr|zh)$/.test(k));
+  for (const key of englishKeys) {
+    const val = transcend[key];
+    if (!val) continue;
+    const match = val.match(/Ally Team ([\w\s]+?)(?:\s*[+\n]|$)/i);
+    if (match) {
+      const statLabel = match[1].trim().toLowerCase();
+      return labelToKey.get(statLabel) || null;
+    }
+  }
+  return null;
+}
 
 /** Convert English Fullname to a URL-friendly slug */
 function toSlug(fullname: string): string {
@@ -58,10 +93,11 @@ async function loadGroupMap(): Promise<Map<string, string>> {
 type EeEntry = { buff?: string[]; debuff?: string[] };
 
 export async function run() {
-  const [files, groupMap, eeRaw] = await Promise.all([
+  const [files, groupMap, eeRaw, statLabelToKey] = await Promise.all([
     readdir(PATHS.characters),
     loadGroupMap(),
     readFile(join(PATHS.equipment, 'ee.json'), 'utf-8'),
+    loadStatLabelToKey(),
   ]);
   const eeMap: Record<string, EeEntry> = JSON.parse(eeRaw);
   const jsonFiles = files.filter(f => f.endsWith('.json'));
@@ -151,6 +187,8 @@ export async function run() {
         }
       }
 
+      const teamBonus = extractTeamBonus(char.transcend, statLabelToKey);
+
       const listEntry: Record<string, unknown> = {
         ID: char.ID,
         Fullname: char.Fullname,
@@ -169,6 +207,7 @@ export async function run() {
         debuff: [...allCanonicalDebuffs],
         effectsBySource,
       };
+      if (teamBonus) listEntry.teamBonus = teamBonus;
       if (char.rank_by_transcend) listEntry.rank_by_transcend = char.rank_by_transcend;
       if (char.role_by_transcend) listEntry.role_by_transcend = char.role_by_transcend;
 

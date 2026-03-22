@@ -555,6 +555,7 @@ const zh: Record<TranslationKey, string> = {
   'characters.filters.sources.chainPassive': '连携被动',
   'characters.filters.sources.fusionPassive': '核心融合被动',
   'characters.filters.sources.dualAttack': '夹攻',
+  'characters.filters.teamBonus': '团队加成',
 
   // Characters common
   'characters.loading': '角色加载中……',
