@@ -49,6 +49,7 @@ SKILL_KEY = {
     'SKT_SECOND': 's2',
     'SKT_ULTIMATE': 's3',
     'SKT_CHAIN_PASSIVE': 'chain',
+    'SKT_FUSION_PASSIVE': 'fusion',
 }
 
 # EE override renames: the EE extractor renames some types but the BuffTemplet has the original
@@ -219,9 +220,11 @@ def find_target_for_tag(tag, char_id, skill_buff_ids, is_debuff=False, ee=False)
 
 
 def get_skill_buff_ids(char_id, skill_type, sid, sid_to_slot, change_id, change_skill_ids):
-    """Get all BuffIDs relevant to a skill (same logic as character extractor)."""
+    """Get all BuffIDs relevant to a skill (same logic as character extractor).
+    Returns (base_ids, burst_ids) so burst-only buffs can be flagged."""
     is_chain = skill_type == 'SKT_CHAIN_PASSIVE'
     ids = set()
+    burst_ids = set()
 
     if is_chain:
         ids = collect_buff_ids_by_pattern(char_id, 'chain')
@@ -256,7 +259,7 @@ def get_skill_buff_ids(char_id, skill_type, sid, sid_to_slot, change_id, change_
                     ids |= collect_buff_ids_from_levels(change_levels)
                     break
 
-        # Burst skills
+        # Burst skills (tracked separately)
         srow = skill_by_ns.get(sid)
         if srow:
             rap = srow.get('RequireAP', '')
@@ -268,9 +271,9 @@ def get_skill_buff_ids(char_id, skill_type, sid, sid_to_slot, change_id, change_
                         bs = skill_by_ns.get(bsid)
                         if bs and bs.get('SkillType', '').startswith('SKT_BURST'):
                             burst_levels = skill_levels_by_sid.get(bsid, [])
-                            ids |= collect_buff_ids_from_levels(burst_levels)
+                            burst_ids |= collect_buff_ids_from_levels(burst_levels)
 
-    return ids
+    return ids, burst_ids
 
 
 # ── Main generation ──────────────────────────────────────────────────
@@ -341,15 +344,41 @@ for char_file in char_files:
                 break
 
         # Get all BuffIDs relevant to this skill
-        skill_buff_ids = get_skill_buff_ids(cid, stype, sid, sid_to_slot, change_id, change_skill_ids) if sid else set()
+        if sid:
+            base_ids, burst_ids = get_skill_buff_ids(cid, stype, sid, sid_to_slot, change_id, change_skill_ids)
+            skill_buff_ids = base_ids | burst_ids
+        else:
+            base_ids, burst_ids, skill_buff_ids = set(), set(), set()
+
+        def is_burst_only(tag, is_debuff):
+            """Check if a tag resolves only from burst IDs, not base skill IDs."""
+            if not burst_ids:
+                return False
+            # Found in base skill → not burst-only
+            for bid in base_ids:
+                row = buff_by_id.get(bid)
+                if row and resolve_tag(row) == tag:
+                    return False
+            # Found in burst IDs → burst-only
+            for bid in burst_ids:
+                row = buff_by_id.get(bid)
+                if row and resolve_tag(row) == tag:
+                    return True
+            return False
 
         entries = []
         for b in buffs:
             target = find_target_for_tag(b, cid, skill_buff_ids, is_debuff=False)
-            entries.append({'type': b, 'debuff': False, 'target': target})
+            entry = {'type': b, 'debuff': False, 'target': target}
+            if is_burst_only(b, False):
+                entry['burst'] = True
+            entries.append(entry)
         for d in debuffs:
             target = find_target_for_tag(d, cid, skill_buff_ids, is_debuff=True)
-            entries.append({'type': d, 'debuff': True, 'target': target})
+            entry = {'type': d, 'debuff': True, 'target': target}
+            if is_burst_only(d, True):
+                entry['burst'] = True
+            entries.append(entry)
 
         char_entry[skey] = entries
 

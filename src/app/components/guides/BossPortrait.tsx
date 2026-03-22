@@ -7,6 +7,7 @@ const SIZES: Record<CharacterPortraitSize, { px: number; cls: string }> = {
   xs: { px: 32, cls: 'h-8 w-8' },
   sm: { px: 48, cls: 'h-12 w-12' },
   md: { px: 64, cls: 'h-16 w-16' },
+  mld: { px: 88, cls: 'h-20 w-20' },
   lg: { px: 96, cls: 'h-24 w-24' },
 };
 

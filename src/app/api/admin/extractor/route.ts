@@ -318,7 +318,7 @@ async function handleInfo(id: string) {
 
 // ── Skills ───────────────────────────────────────────────────────────
 
-const WANTED_SKILL_TYPES = new Set(['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE']);
+const WANTED_SKILL_TYPES = new Set(['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE', 'SKT_FUSION_PASSIVE']);
 
 async function handleSkills(id: string) {
   const [charTemplet, textSkill, skillTemplet, skillLevelTemplet, buffTemplet, changeTemplet] = await Promise.all([
@@ -864,7 +864,7 @@ const SKILL_FIELDS = [
 
 // Array fields compared as JSON
 const SKILL_ARRAY_FIELDS = ['buff', 'debuff', 'dual_buff', 'dual_debuff'];
-const SKILL_KEYS = ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE'];
+const SKILL_KEYS = ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE', 'SKT_FUSION_PASSIVE'];
 
 async function handleCompare() {
   // Load all templets once
@@ -1726,7 +1726,7 @@ export async function POST(req: NextRequest) {
 
     // Merge skills: extracted + preserve existing buff/debuff/true_desc/burnEffect
     const mergedSkills: Record<string, unknown> = {};
-    for (const sk of ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE']) {
+    for (const sk of ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE', 'SKT_CHAIN_PASSIVE', 'SKT_FUSION_PASSIVE']) {
       const extracted = skillsData.skills?.[sk];
       if (!extracted) continue;
 

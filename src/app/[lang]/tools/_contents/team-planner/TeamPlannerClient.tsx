@@ -2,11 +2,12 @@
 
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import LZString from 'lz-string';
 import type { CharacterListEntry } from '@/types/character';
 import type { Effect, SkillBuffData } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
-import { ELEMENTS, CLASSES, CHAIN_TYPE_LABELS } from '@/types/enums';
+import { ELEMENTS, CLASSES } from '@/types/enums';
 import type { TranslationKey } from '@/i18n/locales/en';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
@@ -49,12 +50,17 @@ const TEAM_TARGETS = new Set([
 ]);
 const SKILL_KEYS = ['s1', 's2', 's3', 'ee'] as const;
 
-/** Extract unique buff/debuff names from skill-buffs data for a character, filtered by target set */
+const HIDDEN_CATEGORIES = new Set(['hidden', 'unique']);
+
+/** Extract unique buff/debuff names from skill-buffs data for a character, filtered by target set and optionally by burst.
+ *  Excludes effects with hidden/unique categories. */
 function extractEffects(
   data: SkillBuffData | undefined,
   keys: readonly (keyof SkillBuffData)[],
   targets: Set<string>,
   isDebuff: boolean,
+  effectMap: Record<string, Effect>,
+  burst?: boolean,
 ): string[] {
   if (!data) return [];
   const seen = new Set<string>();
@@ -62,7 +68,12 @@ function extractEffects(
     const entries = data[key];
     if (!entries) continue;
     for (const e of entries) {
-      if (e.debuff === isDebuff && targets.has(e.target)) seen.add(e.type);
+      if (e.debuff === isDebuff && targets.has(e.target)) {
+        if (burst !== undefined && !!e.burst !== burst) continue;
+        const effect = effectMap[e.type];
+        if (effect && HIDDEN_CATEGORIES.has(effect.category)) continue;
+        seen.add(e.type);
+      }
     }
   }
   return [...seen];
@@ -187,10 +198,10 @@ function CharacterPicker({
                 name={char.displayName}
                 element={char.Element}
                 classType={char.Class}
-                size="sm"
+                size={{ base: 'sm', md: 'md' }}
                 showIcons
               />
-              <span className="text-[9px] text-zinc-400 truncate max-w-12 leading-tight">{char.displayName}</span>
+              <span className="text-[9px] md:text-[11px] text-zinc-400 truncate max-w-12 md:max-w-16 leading-tight">{char.displayName}</span>
             </button>
           ))}
         </div>
@@ -203,66 +214,66 @@ function CharacterPicker({
   );
 }
 
-// ── Slot (CharacterPortrait-based) ──
+// ── Slot ──
 
-function EmptySlot({ onClick }: { onClick: () => void }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="flex items-center justify-center rounded-lg border-2 border-dashed border-zinc-700 bg-zinc-800/50 hover:border-zinc-500 hover:bg-zinc-800 transition h-16 w-16 md:h-24 md:w-24"
-    >
-      <svg className="h-8 w-8 text-zinc-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-      </svg>
-    </button>
-  );
-}
+const SLOT_SIZE = 'w-18 h-18 sm:w-22 sm:h-22';
 
-function FilledSlot({
+function TeamSlotContent({
   char,
   lang,
   selfBuffs,
+  isTop,
   onRemove,
   onClick,
 }: {
-  char: CharacterListEntry;
+  char: CharacterListEntry | null;
   lang: Lang;
   selfBuffs: string[];
+  isTop?: boolean;
   onRemove: () => void;
   onClick: () => void;
 }) {
-  const displayName = l(char, 'Fullname', lang);
+  const buffsEl = selfBuffs.length > 0 ? (
+    <div className="absolute left-1/2 -translate-x-1/2 z-30 [&>div]:flex-nowrap" style={isTop ? { bottom: '100%', marginBottom: 2 } : { top: '100%', marginTop: 2 }}>
+      <BuffDebuffDisplay buffs={selfBuffs} debuffs={[]} iconOnly />
+    </div>
+  ) : null;
 
   return (
-    <div className="relative group flex flex-col items-center">
-      <button type="button" onClick={onClick} className="hover:opacity-80 transition">
-        <CharacterPortrait
-          id={char.ID}
-          name={displayName}
-          element={char.Element}
-          classType={char.Class}
-          rarity={char.Rarity}
-          size={'md'}
-          showIcons
-          showStars
-        />
+    <div className="relative group">
+      <button type="button" onClick={onClick} className={`relative ${SLOT_SIZE} hover:opacity-80 transition`}>
+        {char ? (
+          <CharacterPortrait
+            id={char.ID}
+            name={l(char, 'Fullname', lang)}
+            element={char.Element}
+            classType={char.Class}
+            size="mld"
+            showIcons
+            showStars
+          />
+        ) : (
+          <Image
+            src="/images/ui/skillchain/TI_Slot_Empty.webp"
+            alt="Empty slot"
+            fill
+            className="object-contain"
+          />
+        )}
       </button>
-      <button
-        type="button"
-        onClick={(e) => { e.stopPropagation(); onRemove(); }}
-        className="absolute -top-1 -right-1 z-10 rounded-full bg-red-600 p-0.5 text-white opacity-0 group-hover:opacity-100 transition-opacity shadow"
-      >
-        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <p className="mt-1 text-center text-[10px] font-medium text-zinc-300 truncate max-w-16 md:max-w-24">{displayName}</p>
-      {selfBuffs.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-0.5 mt-0.5 max-w-20 md:max-w-28">
-          <BuffDebuffDisplay buffs={selfBuffs} debuffs={[]} iconOnly />
-        </div>
+      {/* Remove button */}
+      {char && (
+        <button
+          type="button"
+          onClick={(e) => { e.stopPropagation(); onRemove(); }}
+          className="absolute -top-1 -right-1 z-20 rounded-full bg-red-600 p-0.5 text-white opacity-0 group-hover:opacity-100 transition-opacity shadow"
+        >
+          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       )}
+      {buffsEl}
     </div>
   );
 }
@@ -273,38 +284,107 @@ function TeamCross({
   team,
   lang,
   skillBuffs,
+  buffMap,
   onSlotClick,
   onRemove,
 }: {
   team: TeamSlot[];
   lang: Lang;
   skillBuffs: Record<string, SkillBuffData>;
+  buffMap: Record<string, Effect>;
   onSlotClick: (idx: number) => void;
   onRemove: (idx: number) => void;
 }) {
   const renderSlot = (idx: number) => {
     const char = team[idx];
-    if (!char) return <EmptySlot onClick={() => onSlotClick(idx)} />;
-    const selfBuffs = extractEffects(skillBuffs[char.ID], SKILL_KEYS, SELF_TARGETS, false);
+    const selfBuffs = char ? extractEffects(skillBuffs[char.ID], SKILL_KEYS, SELF_TARGETS, false, buffMap, false) : [];
     return (
-      <FilledSlot char={char} lang={lang} selfBuffs={selfBuffs} onRemove={() => onRemove(idx)} onClick={() => onSlotClick(idx)} />
+      <TeamSlotContent
+        char={char}
+        lang={lang}
+        selfBuffs={selfBuffs}
+        isTop={idx === 0}
+        onRemove={() => onRemove(idx)}
+        onClick={() => onSlotClick(idx)}
+      />
     );
   };
 
   return (
-    <div className="grid grid-cols-3 grid-rows-3 place-items-center gap-1 w-fit mx-auto">
-      {/* Row 1: top slot (index 0) centered */}
-      <div />
-      <div>{renderSlot(0)}</div>
-      <div />
-      {/* Row 2: left (1) + center empty + right (2) */}
-      <div>{renderSlot(1)}</div>
-      <div />
-      <div>{renderSlot(2)}</div>
-      {/* Row 3: bottom slot (3) centered */}
-      <div />
-      <div>{renderSlot(3)}</div>
-      <div />
+    <div className="relative w-fit mx-auto">
+      {/* Background circle */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative w-52 h-52 sm:w-64 sm:h-64">
+          <Image
+            src="/images/ui/skillchain/T_Tame_Select.webp"
+            alt=""
+            fill
+            className="object-contain opacity-30"
+          />
+        </div>
+      </div>
+      {/* Cross grid */}
+      <div className="relative grid grid-cols-3 grid-rows-3 place-items-center gap-5 sm:gap-6 p-4">
+        <div />
+        <div className="-mt-2">{renderSlot(0)}</div>
+        <div />
+        <div className="-ml-2">{renderSlot(1)}</div>
+        <div />
+        <div className="-mr-2">{renderSlot(2)}</div>
+        <div />
+        <div className="-mb-2">{renderSlot(3)}</div>
+        <div />
+      </div>
+    </div>
+  );
+}
+
+// ── Chain Effect Icons ──
+
+function ChainEffectIcons({
+  buffs,
+  debuffs,
+  isDisabled,
+  buffMap,
+  debuffMap,
+}: {
+  buffs: string[];
+  debuffs: string[];
+  isDisabled: boolean;
+  buffMap: Record<string, Effect>;
+  debuffMap: Record<string, Effect>;
+}) {
+  const effects = [
+    ...buffs.map(name => ({ ...buffMap[name], effectType: 'buff' as const })).filter(e => e.icon),
+    ...debuffs.map(name => ({ ...debuffMap[name], effectType: 'debuff' as const })).filter(e => e.icon),
+  ];
+
+  if (effects.length === 0) return null;
+
+  return (
+    <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 flex gap-0.5">
+      {effects.slice(0, 3).map((effect, idx) => {
+        const bgImage = isDisabled
+          ? '/images/ui/skillchain/SC_Whole_Disable.webp'
+          : effect.effectType === 'buff'
+          ? '/images/ui/skillchain/SC_Whole_Blue_Bg.webp'
+          : '/images/ui/skillchain/SC_Whole_Red_Bg.webp';
+
+        return (
+          <div key={`${effect.effectType}-${effect.name}-${idx}`} className="relative h-7 w-7 sm:h-9 sm:w-9 flex items-center justify-center">
+            <Image src={bgImage} alt="" fill className="object-contain" />
+            <div className={`relative z-10 ${isDisabled ? 'grayscale opacity-50' : ''}`}>
+              <Image
+                src={`/images/ui/effect/${effect.icon}.webp`}
+                alt={effect.name}
+                width={18}
+                height={18}
+                className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5 object-contain"
+              />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -314,123 +394,220 @@ function TeamCross({
 function ChainOrderSection({
   team,
   chainOrder,
-  onReorder,
+  selectedChainIndex,
+  onChainSlotClick,
   lang,
+  skillBuffs,
+  buffMap,
+  debuffMap,
 }: {
   team: TeamSlot[];
   chainOrder: number[];
-  onReorder: (newOrder: number[]) => void;
+  selectedChainIndex: number | null;
+  onChainSlotClick: (chainIndex: number) => void;
   lang: Lang;
+  skillBuffs: Record<string, SkillBuffData>;
+  buffMap: Record<string, Effect>;
+  debuffMap: Record<string, Effect>;
 }) {
   const { t } = useI18n();
-  const activeIndices = chainOrder.filter(idx => team[idx] !== null);
+  // Chain attack requires all 4 slots filled
+  const memberCount = team.filter(c => c !== null).length;
+  if (memberCount < 4) return null;
 
-  if (activeIndices.length < 2) return null;
-
-  const moveUp = (pos: number) => {
-    if (pos === 0) return;
-    const next = [...chainOrder];
-    [next[pos - 1], next[pos]] = [next[pos], next[pos - 1]];
-    onReorder(next);
-  };
-
-  const moveDown = (pos: number) => {
-    if (pos >= chainOrder.length - 1) return;
-    const next = [...chainOrder];
-    [next[pos], next[pos + 1]] = [next[pos + 1], next[pos]];
-    onReorder(next);
-  };
-
-  const activeMembers = activeIndices.map(idx => team[idx]!);
-
-  // Chain effect activation rules:
-  // - Starter: effect activates only if placed first
-  // - Companion (Join): effect always activates
-  // - Finisher: effect activates only if placed last
-  const getEffectActive = (char: CharacterListEntry, pos: number, total: number) => {
-    if (char.Chain_Type === 'Join') return true;
-    if (char.Chain_Type === 'Start') return pos === 0;
-    if (char.Chain_Type === 'Finish') return pos === total - 1;
+  const isValidPosition = (chainType: string | undefined, pos: number) => {
+    if (!chainType) return true;
+    if (chainType === 'Join') return true;
+    if (chainType === 'Start') return pos === 0;
+    if (chainType === 'Finish') return pos === 3;
     return false;
   };
 
+  // Compute active chain effects based on valid positions
+  const activeChainEffects = (() => {
+    const seenBuffs = new Set<string>();
+    const seenDebuffs = new Set<string>();
+    const buffs: string[] = [];
+    const debuffs: string[] = [];
+
+    chainOrder.forEach((slotIdx, pos) => {
+      const char = team[slotIdx];
+      if (!char) return;
+      if (!isValidPosition(char.Chain_Type, pos)) return;
+
+      const data = skillBuffs[char.ID];
+      for (const e of data?.chain || []) {
+        const eff = e.debuff ? debuffMap[e.type] : buffMap[e.type];
+        if (eff && HIDDEN_CATEGORIES.has(eff.category)) continue;
+        if (!e.debuff && !seenBuffs.has(e.type)) { seenBuffs.add(e.type); buffs.push(e.type); }
+        if (e.debuff && !seenDebuffs.has(e.type)) { seenDebuffs.add(e.type); debuffs.push(e.type); }
+      }
+    });
+
+    return { buffs, debuffs };
+  })();
+
   return (
     <div className="rounded-xl border border-zinc-700 bg-zinc-900/60 p-4">
-      <h3 className="text-sm font-bold text-zinc-200 mb-1">
+      <h3 className="text-sm font-bold text-zinc-200 mb-1 text-center">
         {t('tools.team-planner.chain_order' as TranslationKey)}
       </h3>
-      <p className="text-xs text-zinc-500 mb-3">
+      <p className="text-xs text-zinc-500 mb-4 text-center">
         {t('tools.team-planner.chain_order.desc' as TranslationKey)}
       </p>
 
-      <div className="flex flex-col gap-2">
-        {chainOrder.map((slotIdx, pos) => {
+      <div className="flex gap-2 sm:gap-3 justify-center">
+        {chainOrder.map((slotIdx, chainIndex) => {
           const char = team[slotIdx];
           if (!char) return null;
-          const displayName = l(char, 'Fullname', lang);
-          const isActive = getEffectActive(char, pos, activeMembers.length);
+
+          const isSelected = selectedChainIndex === chainIndex;
+          const isValid = isValidPosition(char.Chain_Type, chainIndex);
+
+          // Get chain buffs/debuffs for this character
+          const data = skillBuffs[char.ID];
+          const chainBuffNames = (data?.chain?.filter(e => !e.debuff).map(e => e.type) || []).filter(n => { const eff = buffMap[n]; return !eff || !HIDDEN_CATEGORIES.has(eff.category); });
+          const chainDebuffNames = (data?.chain?.filter(e => e.debuff).map(e => e.type) || []).filter(n => { const eff = debuffMap[n]; return !eff || !HIDDEN_CATEGORIES.has(eff.category); });
 
           return (
-            <div key={char.ID} className={`flex items-center gap-2 rounded-lg px-2 py-1.5 transition ${isActive ? 'bg-zinc-800/60' : 'bg-zinc-800/20 opacity-60'}`}>
-              <div className="flex flex-col gap-0.5">
-                <button
-                  type="button"
-                  onClick={() => moveUp(pos)}
-                  disabled={pos === 0}
-                  className="rounded p-0.5 text-zinc-500 hover:text-white disabled:opacity-20 transition"
-                >
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-                  </svg>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => moveDown(pos)}
-                  disabled={pos >= chainOrder.length - 1}
-                  className="rounded p-0.5 text-zinc-500 hover:text-white disabled:opacity-20 transition"
-                >
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
+            <div key={`chain-${chainIndex}-${slotIdx}`} className="flex flex-col items-center gap-1">
+              <div
+                className={`relative w-12 h-36 sm:w-16 sm:h-44 cursor-pointer hover:scale-105 transition-all ${isSelected ? 'ring-2 ring-cyan-500 rounded-lg' : ''}`}
+                onClick={() => onChainSlotClick(chainIndex)}
+              >
+                {/* Background mask */}
+                <Image
+                  src="/images/ui/skillchain/T_FX_SkillChain_Mask.webp"
+                  alt=""
+                  fill
+                  className="object-contain opacity-20"
+                />
+
+                {/* Character portrait zoomed */}
+                <div className="absolute inset-0 z-10 overflow-hidden rounded-lg">
+                  <div className="relative w-full h-full" style={{ transform: 'scale(1.7)', transformOrigin: 'center center' }}>
+                    <Image
+                      src={`/images/characters/portrait/CT_${char.ID}.webp`}
+                      alt={l(char, 'Fullname', lang)}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Chain effect icons at top */}
+                <ChainEffectIcons
+                  buffs={chainBuffNames}
+                  debuffs={chainDebuffNames}
+                  isDisabled={!isValid}
+                  buffMap={buffMap}
+                  debuffMap={debuffMap}
+                />
+
+                {/* Chain type label at bottom */}
+                {char.Chain_Type && (
+                  <div className={`absolute bottom-0 left-0 right-0 z-20 px-0.5 py-0.5 rounded-b text-[8px] sm:text-[10px] font-semibold text-center leading-tight whitespace-pre-line ${
+                    isValid
+                      ? 'bg-blue-600/80 text-white'
+                      : 'bg-zinc-700/80 text-zinc-300'
+                  }`}>
+                    {char.Chain_Type === 'Start'
+                      ? t('characters.chains.starter' as TranslationKey)
+                      : char.Chain_Type === 'Finish'
+                      ? t('characters.chains.finisher' as TranslationKey)
+                      : t('characters.chains.companion' as TranslationKey)}
+                  </div>
+                )}
               </div>
-
-              <CharacterPortrait
-                id={char.ID}
-                name={displayName}
-                element={char.Element}
-                classType={char.Class}
-                size="sm"
-                showIcons
-              />
-
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-zinc-200 truncate">{displayName}</p>
-                <p className="text-xs text-zinc-500">
-                  {t(`characters.chains.${CHAIN_TYPE_LABELS[char.Chain_Type].toLowerCase()}` as TranslationKey)}
-                </p>
-              </div>
-
-              <Image
-                src={`/images/characters/chain/Skill_ChainPassive_${char.Element}_${char.Chain_Type}.webp`}
-                alt={char.Chain_Type}
-                width={28}
-                height={28}
-              />
-
-              {/* Effect active indicator */}
-              <span className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-bold ${isActive ? 'bg-green-900/40 text-green-400' : 'bg-zinc-700/40 text-zinc-500'}`}>
-                {isActive ? 'ON' : 'OFF'}
-              </span>
             </div>
           );
         })}
       </div>
+
+      {/* Active chain effects summary */}
+      {activeChainEffects.buffs.length > 0 || activeChainEffects.debuffs.length > 0 ? (
+        <div className="mt-4">
+          <BuffDebuffDisplay buffs={activeChainEffects.buffs} debuffs={activeChainEffects.debuffs} />
+        </div>
+      ) : null}
     </div>
   );
 }
 
 // ── Team Effects Summary ──
+
+/** Per-character effect row: portrait + buff/debuff icons */
+function CharacterEffectRow({
+  char,
+  buffs,
+  debuffs,
+  lang,
+}: {
+  char: CharacterListEntry;
+  buffs: string[];
+  debuffs: string[];
+  lang: Lang;
+}) {
+  if (buffs.length === 0 && debuffs.length === 0) return null;
+  const displayName = l(char, 'Fullname', lang);
+
+  return (
+    <div className="flex items-start gap-2">
+      <div className="row-span-2 self-center shrink-0">
+        <CharacterPortrait
+          id={char.ID}
+          name={displayName}
+          element={char.Element}
+          classType={char.Class}
+          size="sm"
+          showIcons
+        />
+      </div>
+      <div className="flex-1 min-w-0 flex flex-col gap-0.5">
+        {buffs.length > 0 && <BuffDebuffDisplay buffs={buffs} debuffs={[]} />}
+        {debuffs.length > 0 && <BuffDebuffDisplay buffs={[]} debuffs={debuffs} />}
+      </div>
+    </div>
+  );
+}
+
+/** Render a section with per-character effect rows. Returns null if no character has effects. */
+function EffectSection({
+  title,
+  titleColor,
+  members,
+  getBuffs,
+  getDebuffs,
+  lang,
+}: {
+  title: string;
+  titleColor: string;
+  members: CharacterListEntry[];
+  getBuffs: (char: CharacterListEntry) => string[];
+  getDebuffs: (char: CharacterListEntry) => string[];
+  lang: Lang;
+}) {
+  const activeMembers = members.filter(m => getBuffs(m).length > 0 || getDebuffs(m).length > 0);
+  if (activeMembers.length === 0) return null;
+
+  return (
+    <div className="rounded-xl border border-zinc-700 bg-zinc-900/60 p-4">
+      <h3 className={`text-sm font-bold ${titleColor} mb-2`}>{title}</h3>
+      <div className={`flex flex-col gap-3 ${activeMembers.length >= 2 ? 'sm:grid sm:grid-cols-2 sm:gap-x-4 sm:gap-y-3' : ''}`}>
+        {activeMembers.map((char, i) => (
+          <div key={char.ID} className={`${i > 0 ? 'border-t border-zinc-700/50 pt-3 sm:border-t-0 sm:pt-0' : ''} ${activeMembers.length >= 2 && i % 2 === 1 ? 'sm:border-l sm:border-zinc-700/50 sm:pl-4' : ''}`}>
+            <CharacterEffectRow
+              char={char}
+              buffs={getBuffs(char)}
+              debuffs={getDebuffs(char)}
+              lang={lang}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function TeamEffectsSummary({
   team,
@@ -443,7 +620,7 @@ function TeamEffectsSummary({
   buffMap: Record<string, Effect>;
   debuffMap: Record<string, Effect>;
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const members = team.filter((c): c is CharacterListEntry => c !== null);
 
   if (members.length === 0) {
@@ -454,78 +631,59 @@ function TeamEffectsSummary({
     );
   }
 
-  // Team buffs: only buffs targeting allies (MY_TEAM*) from skills s1/s2/s3
-  const teamBuffs = [...new Set(members.flatMap(m =>
-    extractEffects(skillBuffs[m.ID], SKILL_KEYS, TEAM_TARGETS, false)
-  ))];
-
-  // Team debuffs: debuffs from skills s1/s2/s3 targeting enemies
   const ENEMY_TARGETS = new Set([
     'ENEMY', 'ENEMY_SKILL_TARGET', 'ENEMY_TEAM',
     'ENEMY_TEAM_HIGHEST_ATK', 'ENEMY_TEAM_HIGHEST_SPD',
     'ENEMY_TEAM_MAGE', 'ENEMY_TEAM_PRIEST',
   ]);
-  const teamDebuffs = [...new Set(members.flatMap(m =>
-    extractEffects(skillBuffs[m.ID], SKILL_KEYS, ENEMY_TARGETS, true)
-  ))];
 
-  // Chain passive: only 'chain' key (buffs + debuffs)
-  const chainBuffs = [...new Set(members.flatMap(m => {
-    const data = skillBuffs[m.ID];
-    return data?.chain?.filter(e => !e.debuff).map(e => e.type) || [];
-  }))];
-  const chainDebuffs = [...new Set(members.flatMap(m => {
-    const data = skillBuffs[m.ID];
-    return data?.chain?.filter(e => e.debuff).map(e => e.type) || [];
-  }))];
-
-  // Dual attack: only 'chain_dual' key
-  const dualBuffs = [...new Set(members.flatMap(m => {
-    const data = skillBuffs[m.ID];
-    return data?.chain_dual?.filter(e => !e.debuff).map(e => e.type) || [];
-  }))];
-  const dualDebuffs = [...new Set(members.flatMap(m => {
-    const data = skillBuffs[m.ID];
-    return data?.chain_dual?.filter(e => e.debuff).map(e => e.type) || [];
-  }))];
+  const fullTeam = members.length === 4;
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
       <div className="space-y-4">
-        {teamBuffs.length > 0 && (
-          <div className="rounded-xl border border-zinc-700 bg-zinc-900/60 p-4">
-            <h3 className="text-sm font-bold text-cyan-400 mb-2">
-              {t('tools.team-planner.team_buffs' as TranslationKey)}
-            </h3>
-            <BuffDebuffDisplay buffs={teamBuffs} debuffs={[]} />
-          </div>
-        )}
+        <EffectSection
+          title={t('tools.team-planner.team_buffs' as TranslationKey)}
+          titleColor="text-cyan-400"
+          members={members}
+          getBuffs={char => extractEffects(skillBuffs[char.ID], SKILL_KEYS, TEAM_TARGETS, false, buffMap, false)}
+          getDebuffs={() => []}
+          lang={lang}
+        />
 
-        {teamDebuffs.length > 0 && (
-          <div className="rounded-xl border border-zinc-700 bg-zinc-900/60 p-4">
-            <h3 className="text-sm font-bold text-red-400 mb-2">
-              {t('tools.team-planner.team_debuffs' as TranslationKey)}
-            </h3>
-            <BuffDebuffDisplay buffs={[]} debuffs={teamDebuffs} />
-          </div>
-        )}
+        <EffectSection
+          title={t('tools.team-planner.team_debuffs' as TranslationKey)}
+          titleColor="text-red-400"
+          members={members}
+          getBuffs={() => []}
+          getDebuffs={char => extractEffects(skillBuffs[char.ID], SKILL_KEYS, ENEMY_TARGETS, true, debuffMap, false)}
+          lang={lang}
+        />
 
-        {(chainBuffs.length > 0 || chainDebuffs.length > 0) && (
-          <div className="rounded-xl border border-zinc-700 bg-zinc-900/60 p-4">
-            <h3 className="text-sm font-bold text-amber-400 mb-2">
-              {t('tools.team-planner.chain_effects' as TranslationKey)}
-            </h3>
-            <BuffDebuffDisplay buffs={chainBuffs} debuffs={chainDebuffs} />
-          </div>
-        )}
+        <EffectSection
+          title={t('tools.team-planner.burst_effects' as TranslationKey)}
+          titleColor="text-orange-400"
+          members={members}
+          getBuffs={char => extractEffects(skillBuffs[char.ID], SKILL_KEYS, new Set([...SELF_TARGETS, ...TEAM_TARGETS]), false, buffMap, true)}
+          getDebuffs={char => extractEffects(skillBuffs[char.ID], SKILL_KEYS, ENEMY_TARGETS, true, debuffMap, true)}
+          lang={lang}
+        />
 
-        {(dualBuffs.length > 0 || dualDebuffs.length > 0) && (
-          <div className="rounded-xl border border-zinc-700 bg-zinc-900/60 p-4">
-            <h3 className="text-sm font-bold text-purple-400 mb-2">
-              {t('tools.team-planner.dual_attack_effects' as TranslationKey)}
-            </h3>
-            <BuffDebuffDisplay buffs={dualBuffs} debuffs={dualDebuffs} />
-          </div>
+        {fullTeam && (
+          <EffectSection
+            title={t('tools.team-planner.dual_attack_effects' as TranslationKey)}
+            titleColor="text-purple-400"
+            members={members}
+            getBuffs={char => {
+              const data = skillBuffs[char.ID];
+              return (data?.chain_dual?.filter(e => !e.debuff).map(e => e.type) || []).filter(n => { const eff = buffMap[n]; return eff && !HIDDEN_CATEGORIES.has(eff.category); });
+            }}
+            getDebuffs={char => {
+              const data = skillBuffs[char.ID];
+              return (data?.chain_dual?.filter(e => e.debuff).map(e => e.type) || []).filter(n => { const eff = debuffMap[n]; return eff && !HIDDEN_CATEGORIES.has(eff.category); });
+            }}
+            lang={lang}
+          />
         )}
       </div>
     </EffectsProvider>
@@ -539,6 +697,8 @@ export default function TeamPlannerClient({ characters, buffMap, debuffMap, skil
   const [team, setTeam] = useState<TeamSlot[]>([null, null, null, null]);
   const [chainOrder, setChainOrder] = useState<number[]>([0, 1, 2, 3]);
   const [pickerSlot, setPickerSlot] = useState<number | null>(null);
+  const [selectedChainIndex, setSelectedChainIndex] = useState<number | null>(null);
+  const [teamName, setTeamName] = useState('');
   const [copied, setCopied] = useState(false);
 
   const excludeIds = useMemo(
@@ -567,50 +727,86 @@ export default function TeamPlannerClient({ characters, buffMap, debuffMap, skil
   const handleReset = useCallback(() => {
     setTeam([null, null, null, null]);
     setChainOrder([0, 1, 2, 3]);
+    setTeamName('');
   }, []);
 
   const handleShare = useCallback(() => {
-    const ids = team.map(c => c?.ID ?? '').join(',');
+    const compact: Record<string, unknown> = {};
+    const ids = team.map(c => c?.ID ?? '');
+    if (ids.some(Boolean)) compact.t = ids;
     const order = chainOrder.join('');
-    const params = new URLSearchParams();
-    if (ids.replace(/,/g, '')) params.set('t', ids);
-    if (order !== '0123') params.set('o', order);
-    const url = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
+    if (order !== '0123') compact.o = order;
+    if (teamName) compact.n = teamName;
+
+    const z = LZString.compressToEncodedURIComponent(JSON.stringify(compact));
+    const url = `${window.location.pathname}?z=${z}`;
     window.history.replaceState(null, '', url);
     navigator.clipboard.writeText(window.location.href).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     });
-  }, [team, chainOrder]);
+  }, [team, chainOrder, teamName]);
 
   // Hydrate from URL
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const tParam = params.get('t');
-    const oParam = params.get('o');
+    const z = params.get('z');
 
-    if (tParam) {
+    // Legacy format support
+    const tParam = params.get('t');
+    if (!z && tParam) {
       const ids = tParam.split(',');
       const charMap = new Map(characters.map(c => [c.ID, c]));
       const loaded: TeamSlot[] = ids.slice(0, 4).map(id => charMap.get(id) ?? null);
       while (loaded.length < 4) loaded.push(null);
       setTeam(loaded);
+      const oParam = params.get('o');
+      if (oParam && /^[0-3]{4}$/.test(oParam)) setChainOrder(oParam.split('').map(Number));
+      const nParam = params.get('n');
+      if (nParam) setTeamName(nParam);
+      return;
     }
 
-    if (oParam && /^[0-3]{4}$/.test(oParam)) {
-      setChainOrder(oParam.split('').map(Number));
-    }
+    if (!z) return;
+    try {
+      const raw = JSON.parse(LZString.decompressFromEncodedURIComponent(z) || '{}') as { t?: string[]; o?: string; n?: string };
+      if (raw.t) {
+        const charMap = new Map(characters.map(c => [c.ID, c]));
+        const loaded: TeamSlot[] = raw.t.slice(0, 4).map(id => charMap.get(id) ?? null);
+        while (loaded.length < 4) loaded.push(null);
+        setTeam(loaded);
+      }
+      if (raw.o && /^[0-3]{4}$/.test(raw.o)) setChainOrder(raw.o.split('').map(Number));
+      if (raw.n) setTeamName(raw.n);
+    } catch { /* invalid data, ignore */ }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
       <div className="mx-auto max-w-4xl space-y-6">
+        {/* WIP disclaimer */}
+        <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-2 text-center text-sm text-amber-300">
+          {t('tools.team-planner.wip' as TranslationKey)}
+        </div>
+
+        {/* Team name */}
+        <input
+          type="text"
+          value={teamName}
+          onChange={(e) => setTeamName(e.target.value)}
+          placeholder={t('tools.team-planner.team_name.placeholder' as TranslationKey)}
+          maxLength={100}
+          suppressHydrationWarning
+          className="w-full rounded-lg border border-zinc-700 bg-zinc-800/50 px-4 py-2 text-sm text-zinc-100 placeholder-zinc-500 focus:border-zinc-500 focus:outline-none"
+        />
+
         {/* Team Slots — cross layout */}
         <TeamCross
           team={team}
           lang={lang}
           skillBuffs={skillBuffs}
+          buffMap={buffMap}
           onSlotClick={setPickerSlot}
           onRemove={handleRemove}
         />
@@ -637,8 +833,21 @@ export default function TeamPlannerClient({ characters, buffMap, debuffMap, skil
         <ChainOrderSection
           team={team}
           chainOrder={chainOrder}
-          onReorder={setChainOrder}
+          selectedChainIndex={selectedChainIndex}
+          onChainSlotClick={(chainIndex) => {
+            if (selectedChainIndex === null) {
+              setSelectedChainIndex(chainIndex);
+            } else {
+              const next = [...chainOrder];
+              [next[selectedChainIndex], next[chainIndex]] = [next[chainIndex], next[selectedChainIndex]];
+              setChainOrder(next);
+              setSelectedChainIndex(null);
+            }
+          }}
           lang={lang}
+          skillBuffs={skillBuffs}
+          buffMap={buffMap}
+          debuffMap={debuffMap}
         />
 
         {/* Team Effects Summary */}

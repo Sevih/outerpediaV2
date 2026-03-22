@@ -30,6 +30,7 @@ const SIZES = {
   xs: { px: 32, cls: 'h-8 w-8', smCls: 'max-md:h-8 max-md:w-8', mdCls: 'md:h-8 md:w-8', iconSize: 0, starSize: 0 },
   sm: { px: 48, cls: 'h-12 w-12', smCls: 'max-md:h-12 max-md:w-12', mdCls: 'md:h-12 md:w-12', iconSize: 15, starSize: 11 },
   md: { px: 64, cls: 'h-16 w-16', smCls: 'max-md:h-16 max-md:w-16', mdCls: 'md:h-16 md:w-16', iconSize: 20, starSize: 14 },
+  mld: { px: 88, cls: 'h-20 w-20', smCls: 'max-md:h-20 max-md:w-20', mdCls: 'md:h-20 md:w-20', iconSize: 20, starSize: 14 },
   lg: { px: 96, cls: 'h-24 w-24', smCls: 'max-md:h-24 max-md:w-24', mdCls: 'md:h-24 md:w-24', iconSize: 22, starSize: 17 },
 } as const;
 

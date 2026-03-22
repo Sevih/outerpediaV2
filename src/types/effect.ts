@@ -18,6 +18,7 @@ export type SkillBuffEntry = {
   type: string;
   debuff: boolean;
   target: string;
+  burst?: boolean;
 };
 
 export type SkillBuffData = Partial<
