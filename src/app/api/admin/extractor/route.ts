@@ -1622,7 +1622,7 @@ async function copyIfMissing(src: string, dest: string): Promise<CopyResult> {
   return 'copied';
 }
 
-async function copyCharacterImages(id: string): Promise<{ copied: number; exists: number; missing: number }> {
+async function copyCharacterImages(id: string, skillIcons?: string[]): Promise<{ copied: number; exists: number; missing: number }> {
   const jobs: [string, string][] = [
     // ATB portraits
     [
@@ -1643,22 +1643,22 @@ async function copyCharacterImages(id: string): Promise<{ copied: number; exists
       path.join(DATAMINE_ROOT, 'sprite', 'at_thumbnailcharacterruntime', `CT_${id}.png`),
       path.join(PUBLIC_IMAGES, 'portrait', `CT_${id}.png`),
     ],
-    // Skills
-    [
-      path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `Skill_First_${id}.png`),
-      path.join(PUBLIC_IMAGES, 'skills', `Skill_First_${id}.png`),
-    ],
-    [
-      path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `Skill_Second_${id}.png`),
-      path.join(PUBLIC_IMAGES, 'skills', `Skill_Second_${id}.png`),
-    ],
-    [
-      path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `Skill_Ultimate_${id}.png`),
-      path.join(PUBLIC_IMAGES, 'skills', `Skill_Ultimate_${id}.png`),
-    ],
   ];
 
+  // Skill icons from actual IconName fields
+  const icons = skillIcons ?? [`Skill_First_${id}`, `Skill_Second_${id}`, `Skill_Ultimate_${id}`];
+  for (const icon of icons) {
+    jobs.push([
+      path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `${icon}.png`),
+      path.join(PUBLIC_IMAGES, 'skills', `${icon}.png`),
+    ]);
+  }
+
   const results = await Promise.all(jobs.map(([src, dest]) => copyIfMissing(src, dest)));
+  const missingFiles = jobs.filter((_, i) => results[i] === 'missing').map(([src]) => src);
+  if (missingFiles.length > 0) {
+    console.log(`[copyCharacterImages] ${id} missing:`, missingFiles);
+  }
   return {
     copied: results.filter(r => r === 'copied').length,
     exists: results.filter(r => r === 'exists').length,
@@ -1786,8 +1786,13 @@ export async function POST(req: NextRequest) {
       'utf-8',
     );
 
-    // Copy images if missing
-    const imagesCopied = await copyCharacterImages(id);
+    // Copy images if missing — use actual IconName from extracted skills
+    const skillIcons: string[] = [];
+    for (const sk of ['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE']) {
+      const icon = (mergedSkills[sk] as Record<string, unknown>)?.IconName;
+      if (icon && typeof icon === 'string') skillIcons.push(icon);
+    }
+    const imagesCopied = await copyCharacterImages(id, skillIcons.length > 0 ? skillIcons : undefined);
 
     return NextResponse.json({ ok: true, id, imagesCopied });
   } catch (e) {

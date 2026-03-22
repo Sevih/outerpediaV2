@@ -513,6 +513,45 @@
         "BT_STAT|ST_ATK"
       ],
       "dual_debuff": []
+    },
+    "SKT_FUSION_PASSIVE": {
+      "NameIDSymbol": "572",
+      "IconName": "Skill_CorePassive_Fire",
+      "SkillType": "SKT_FUSION_PASSIVE",
+      "name": "Core-Fused Passive",
+      "name_jp": "コアフュージョンパッシブ",
+      "name_kr": "코어 융합 패시브",
+      "name_zh": "核心融合被动",
+      "true_desc_levels": {
+        "1": "Increases damage dealt to targets with an advantageous element by <color=#28d9ed>50%</color>.\\n\\nThe caster's <color=#28d9ed>Attack</color>, <color=#28d9ed>Defense</color>, <color=#28d9ed>Max Health</color>, and <color=#28d9ed>Speed</color> increase by a set percentage.",
+        "2": "Increases damage dealt to targets with an advantageous element by <color=#28d9ed>50%</color>.\\nIncreases damage dealt to Boss monsters by <color=#28d9ed>50%</color>. \\n\\nThe caster's <color=#28d9ed>Attack</color>, <color=#28d9ed>Defense</color>, <color=#28d9ed>Max Health</color>, and <color=#28d9ed>Speed</color> increase by a set percentage.",
+        "1_jp": "有利属性の敵に与えるダメージが<color=#28d9ed>50%</color>UPする。\\n\\n自分の<color=#28d9ed>攻撃力</color>、<color=#28d9ed>防御力</color>、<color=#28d9ed>最大HP</color>、<color=#28d9ed>スピード</color>が一定の割合でUPする。",
+        "2_jp": "有利属性の敵に与えるダメージが<color=#28d9ed>50%</color>UPする。\\nボスモンスターに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n\\n自分の<color=#28d9ed>攻撃力</color>、<color=#28d9ed>防御力</color>、<color=#28d9ed>最大HP</color>、<color=#28d9ed>スピード</color>が一定の割合でUPする。",
+        "1_kr": "유리한 상성의 적에게 주는 피해가 <color=#28d9ed>50%</color> 증가합니다.\\n\\n자신의 <color=#28d9ed>공격력</color>, <color=#28d9ed>방어력</color>, <color=#28d9ed>최대 체력</color>, <color=#28d9ed>속도</color>가 일정 비율 증가합니다.",
+        "2_kr": "유리한 상성의 적에게 주는 피해가 <color=#28d9ed>50%</color> 증가합니다.\\n보스 몬스터에게 주는 피해가 <color=#28d9ed>50%</color> 증가합니다.\\n\\n자신의 <color=#28d9ed>공격력</color>, <color=#28d9ed>방어력</color>, <color=#28d9ed>최대 체력</color>, <color=#28d9ed>속도</color>가 일정 비율 증가합니다.",
+        "1_zh": "对克制属性敌人造成的伤害提升<color=#28d9ed>50%</color>。\\n\\n使自身的<color=#28d9ed>攻击力</color>、<color=#28d9ed>防御力</color>、<color=#28d9ed>生命值上限</color>、<color=#28d9ed>速度</color>按一定比例提升。",
+        "2_zh": "对克制属性敌人造成的伤害提升<color=#28d9ed>50%</color>。\\n对首领怪物造成的伤害提升<color=#28d9ed>50%</color>。\\n\\n使自身的<color=#28d9ed>攻击力</color>、<color=#28d9ed>防御力</color>、<color=#28d9ed>生命值上限</color>、<color=#28d9ed>速度</color>按一定比例提升。"
+      },
+      "enhancement": {
+        "2": [
+          "If the target is a Boss, damage dealt +50%."
+        ],
+        "2_jp": [
+          "対象がボスの場合、与えるダメージ+50%"
+        ],
+        "2_kr": [
+          "대상인 보스인 경우 피해량 +50%"
+        ],
+        "2_zh": [
+          "若目标为首领,造成的伤害+50%"
+        ]
+      },
+      "wgr": null,
+      "cd": null,
+      "buff": [],
+      "debuff": [],
+      "offensive": false,
+      "target": null
     }
   }
 }

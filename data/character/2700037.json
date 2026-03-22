@@ -520,6 +520,45 @@
       "dual_debuff": [
         "BT_AGGRO"
       ]
+    },
+    "SKT_FUSION_PASSIVE": {
+      "NameIDSymbol": "3772",
+      "IconName": "Skill_CorePassive_Water",
+      "SkillType": "SKT_FUSION_PASSIVE",
+      "name": "Core-Fused Passive",
+      "name_jp": "コアフュージョンパッシブ",
+      "name_kr": "코어 융합 패시브",
+      "name_zh": "核心融合被动",
+      "true_desc_levels": {
+        "1": "At the start of battle, increases the caster's <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>2 turns</color>.",
+        "2": "At the start of battle, increases the caster's <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>2 turns</color>.\\nIncreases Damage for all allies currently affected by increase Defencse",
+        "1_jp": "戦闘開始時、自分の<color=#28d9ed>会心ダメージ</color>が <color=#28d9ed>2ターン</color>の間UPする。",
+        "2_jp": "戦闘開始時、自分の<color=#28d9ed>会心ダメージ</color>が <color=#28d9ed>2ターン</color>の間UPする。\\n防御力UP効果を受けた味方全体が与えるダメージが増加する。",
+        "1_kr": "전투 시작 시, 자신의 <color=#28d9ed>치명 피해</color>가 <color=#28d9ed>2턴</color> 증가합니다.",
+        "2_kr": "전투 시작 시, 자신의 <color=#28d9ed>치명피해</color>가 <color=#28d9ed>2턴</color> 증가합니다.\\n방어력 증가 효과를 받는 아군 전체의 피해량이 증가합니다.",
+        "1_zh": "战斗开始时,自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>。",
+        "2_zh": "战斗开始时,自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>。\\n使受到<color=#28d9ed>防御力提升</color>效果的我方全体造成的伤害提高。"
+      },
+      "enhancement": {
+        "2": [
+          "Increases the damage dealt by allies who are under a Defense Up effect."
+        ],
+        "2_jp": [
+          "防御力UP効果受ける味方のダメージ増加"
+        ],
+        "2_kr": [
+          "방어력 증가 효과 받는 아군 피해량 증가"
+        ],
+        "2_zh": [
+          "受到防御力提升效果的友军造成的伤害提高。"
+        ]
+      },
+      "wgr": null,
+      "cd": null,
+      "buff": [],
+      "debuff": [],
+      "offensive": false,
+      "target": null
     }
   }
 }
