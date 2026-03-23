@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useState, useMemo } from 'react';
+import { use, useState, useMemo, useEffect, useRef } from 'react';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { TextFilterGroup } from '@/app/components/ui/FilterPills';
 
@@ -78,6 +78,37 @@ export default function PatchNotesTool() {
   const [expandedId, setExpandedId] = useState<number | string | null>(null);
   const [page, setPage] = useState(1);
 
+  // Auto-expand post from URL hash (e.g. /patch-history#some-slug)
+  const hashHandledRef = useRef(false);
+  useEffect(() => {
+    if (hashHandledRef.current) return;
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const slug = decodeURIComponent(hash);
+    // Find matching post in major9 first, then legacy
+    const m9Posts = (major9Data.posts as Post[]).filter(p => p.lang === (lang === 'zh' ? 'en' : lang));
+    const lgPosts = legacyData.posts as Post[];
+    const m9Index = m9Posts.findIndex(p => p.slug === slug);
+    if (m9Index >= 0) {
+      setEra('major9');
+      setTypeFilter([]);
+      setSearch('');
+      setPage(Math.floor(m9Index / POSTS_PER_PAGE) + 1);
+      setExpandedId(m9Posts[m9Index].id);
+      hashHandledRef.current = true;
+      return;
+    }
+    const lgIndex = lgPosts.findIndex(p => p.slug === slug);
+    if (lgIndex >= 0) {
+      setEra('smilegate');
+      setTypeFilter([]);
+      setSearch('');
+      setPage(Math.floor(lgIndex / POSTS_PER_PAGE) + 1);
+      setExpandedId(lgPosts[lgIndex].id);
+      hashHandledRef.current = true;
+    }
+  }, []);
+
   // Resolve language: zh falls back to en
   const effectiveLang = lang === 'zh' ? 'en' : lang;
 
@@ -128,8 +159,15 @@ export default function PatchNotesTool() {
     setPage(1);
   }
 
-  function toggleExpand(id: number | string) {
-    setExpandedId(prev => (prev === id ? null : id));
+  function toggleExpand(post: Post) {
+    const isCollapsing = expandedId === post.id;
+    setExpandedId(isCollapsing ? null : post.id);
+    // Sync URL hash with the post slug
+    if (isCollapsing) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    } else {
+      history.replaceState(null, '', `#${post.slug}`);
+    }
   }
 
   return (
@@ -195,7 +233,7 @@ export default function PatchNotesTool() {
             {/* Header — always visible */}
             <button
               type="button"
-              onClick={() => toggleExpand(post.id)}
+              onClick={() => toggleExpand(post)}
               className="flex w-full items-center gap-3 px-4 py-3 text-left transition hover:bg-zinc-700/30"
             >
               {/* Type badge */}

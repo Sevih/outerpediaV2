@@ -1,5 +1,6 @@
 // Version injected by scripts/set-version.js at build time
-const CACHE_NAME = 'outerpedia-cache-v2.3.4';
+const CACHE_NAME = 'outerpedia-cache-v2.3.5';
+const APP_VERSION = CACHE_NAME.replace('outerpedia-cache-v', '');
 
 // Static assets to pre-cache on install
 const PRECACHE_URLS = [
@@ -25,6 +26,13 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
+// Tell all open tabs to reload when a version mismatch is detected
+function notifyClientsToReload() {
+  self.clients.matchAll({ type: 'window' }).then((clients) => {
+    clients.forEach((client) => client.postMessage({ type: 'VERSION_CHANGED' }));
+  });
+}
+
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -32,17 +40,24 @@ self.addEventListener('fetch', (event) => {
   // Only cache same-origin GET requests
   if (request.method !== 'GET' || url.origin !== self.location.origin) return;
 
-  // _next/static/ files have content hashes in filenames — cache-first is safe
+  // _next/static/ files have content hashes — cache-first, but handle missing chunks
   if (url.pathname.startsWith('/_next/static/')) {
     event.respondWith(
       caches.match(request).then((cached) => {
         if (cached) return cached;
         return fetch(request).then((response) => {
-          if (response.ok) {
-            const clone = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+          // Chunk no longer exists on server → new deployment happened
+          if (!response.ok) {
+            notifyClientsToReload();
+            return response;
           }
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
           return response;
+        }).catch(() => {
+          // Network error fetching chunk → notify clients
+          notifyClientsToReload();
+          return new Response('', { status: 503 });
         });
       })
     );
@@ -50,7 +65,6 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Stale-while-revalidate for images, icons, fonts
-  // Serves cached version immediately, fetches fresh copy in background
   if (
     url.pathname.startsWith('/images/') ||
     url.pathname.startsWith('/icons/') ||
