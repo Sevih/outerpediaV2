@@ -5,10 +5,12 @@ import { LANGS } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
 import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment, getWeaponStatRanges, getAccessoryStatRanges, getArmorSetStatRanges, getTalismanStatRanges, getEEStatRange } from '@/lib/data/equipment';
+import type { EquipmentLookup } from '@/lib/data/equipment';
 import { getCharacterIndex, resolveIdToSlug } from '@/lib/data/characters';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getBossDisplayMap } from '@/lib/data/bosses';
 import type { Effect } from '@/types/effect';
+import type { BossDisplayMap } from '@/types/equipment';
 import { l } from '@/lib/i18n/localize';
 import EquipmentDetailClient from './EquipmentDetailClient';
 
@@ -23,6 +25,87 @@ const TYPE_LABELS: Record<string, Record<Lang, string>> = {
   set:      { en: 'Armor Set', jp: 'セット', kr: '세트', zh: '套装' },
   ee:       { en: 'Exclusive Equipment', jp: '専用装備', kr: '전용 장비', zh: '专属装备' },
 };
+
+function buildSeoText(
+  equipment: EquipmentLookup,
+  lang: Lang,
+  bossMap: BossDisplayMap,
+  recoNames: string[],
+): string {
+  const name = l(equipment.data, 'name', lang);
+  const typeLabel = TYPE_LABELS[equipment.type]?.[lang] ?? TYPE_LABELS[equipment.type]?.en ?? '';
+  const sentences: string[] = [];
+
+  if (equipment.type === 'weapon') {
+    const w = equipment.data;
+    sentences.push(`${name} is a ${w.rarity} ${typeLabel} in Outerplane.`);
+    if (w.class) sentences.push(`It is designed for the ${w.class} class.`);
+    if (w.effect_name) {
+      const eName = l(w, 'effect_name', lang);
+      sentences.push(`Its special effect is called ${eName}.`);
+      const eDesc = l(w, 'effect_desc4', lang) ?? l(w, 'effect_desc1', lang);
+      if (eDesc) sentences.push(`At max upgrade: ${eDesc.replace(/<[^>]*>/g, '')}`);
+    }
+  } else if (equipment.type === 'amulet') {
+    const a = equipment.data;
+    sentences.push(`${name} is a ${a.rarity} ${typeLabel} in Outerplane.`);
+    if (a.class) sentences.push(`It is designed for the ${a.class} class.`);
+    if (a.effect_name) {
+      const eName = l(a, 'effect_name', lang);
+      sentences.push(`Its special effect is called ${eName}.`);
+      const eDesc = l(a, 'effect_desc4', lang) ?? l(a, 'effect_desc1', lang);
+      if (eDesc) sentences.push(`At max upgrade: ${eDesc.replace(/<[^>]*>/g, '')}`);
+    }
+    if (a.mainStats && a.mainStats.length > 0) {
+      sentences.push(`Main stats: ${a.mainStats.join(', ')}.`);
+    }
+  } else if (equipment.type === 'talisman') {
+    const t = equipment.data;
+    sentences.push(`${name} is a ${t.rarity} ${typeLabel} in Outerplane.`);
+    if (t.effect_name) {
+      const eName = l(t, 'effect_name', lang);
+      sentences.push(`Its effect is called ${eName}.`);
+      const eDesc = l(t, 'effect_desc4', lang) ?? l(t, 'effect_desc1', lang);
+      if (eDesc) sentences.push(`At max upgrade: ${eDesc.replace(/<[^>]*>/g, '')}`);
+    }
+  } else if (equipment.type === 'set') {
+    const s = equipment.data;
+    sentences.push(`${name} is a ${s.rarity} ${typeLabel} in Outerplane.`);
+    if (s.class) sentences.push(`It is designed for the ${s.class} class.`);
+    const e2 = l(s, 'effect_2_4', lang) ?? l(s, 'effect_2_1', lang);
+    const e4 = l(s, 'effect_4_4', lang) ?? l(s, 'effect_4_1', lang);
+    if (e2) sentences.push(`2-piece set bonus: ${e2.replace(/<[^>]*>/g, '')}`);
+    if (e4) sentences.push(`4-piece set bonus: ${e4.replace(/<[^>]*>/g, '')}`);
+  } else if (equipment.type === 'ee') {
+    const ee = equipment.data;
+    sentences.push(`${name} is an ${typeLabel} in Outerplane.`);
+    const mainStat = l(ee, 'mainStat', lang);
+    if (mainStat) sentences.push(`Its main stat is ${mainStat}.`);
+    const effect = l(ee, 'effect10', lang) ?? l(ee, 'effect', lang);
+    if (effect) sentences.push(`Effect at max level: ${effect.replace(/<[^>]*>/g, '')}`);
+    if (ee.buff.length > 0) sentences.push(`Applies buffs: ${ee.buff.join(', ')}.`);
+    if (ee.debuff.length > 0) sentences.push(`Applies debuffs: ${ee.debuff.join(', ')}.`);
+  }
+
+  // Source info
+  if (equipment.type !== 'ee') {
+    const source = equipment.data.source;
+    const boss = equipment.data.boss;
+    const bossIds = boss ? (Array.isArray(boss) ? boss : [boss]) : [];
+    const bossNames = bossIds
+      .map(id => bossMap[id] ? (bossMap[id].name[lang] ?? bossMap[id].name.en ?? null) : null)
+      .filter(Boolean);
+    if (source) sentences.push(`It can be obtained from ${source}.`);
+    if (bossNames.length > 0) sentences.push(`Drops from: ${bossNames.join(', ')}.`);
+  }
+
+  // Recommended characters
+  if (recoNames.length > 0) {
+    sentences.push(`This equipment is recommended for ${recoNames.join(', ')}.`);
+  }
+
+  return sentences.join(' ');
+}
 
 export async function generateStaticParams() {
   const slugs = await getAllEquipmentSlugs();
@@ -39,7 +122,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const name = l(equipment.data, 'name', lang);
   const typeLabelMap = TYPE_LABELS[equipment.type];
-  const typeLabel = typeLabelMap?.[lang] ?? typeLabelMap?.en ?? '';
+  let typeLabel = typeLabelMap?.[lang] ?? typeLabelMap?.en ?? '';
+  // Avoid "Life Set — Armor Set" repetition: drop "Set" from type label when name already ends with it
+  if (equipment.type === 'set' && /set$/i.test(name)) {
+    typeLabel = { en: 'Armor', jp: '防具', kr: '방어구', zh: '防具' }[lang] ?? 'Armor';
+  }
 
   let ogImage: string;
   switch (equipment.type) {
@@ -111,6 +198,7 @@ export default async function EquipmentDetailPage({ params }: Props) {
   // Shuffle recommended characters for varied display, limit to 15
   const totalRecoCount = recoCharacters.length;
   for (let i = recoCharacters.length - 1; i > 0; i--) {
+    // eslint-disable-next-line react-hooks/purity -- intentional random sampling
     const j = Math.floor(Math.random() * (i + 1));
     [recoCharacters[i], recoCharacters[j]] = [recoCharacters[j], recoCharacters[i]];
   }
@@ -169,23 +257,29 @@ export default async function EquipmentDetailPage({ params }: Props) {
     }
   }
 
+  const recoNames = recoCharacters.map(r => r.name);
+  const seoText = buildSeoText(equipment, lang, bossMap, recoNames);
+
   return (
-    <EquipmentDetailClient
-      equipment={equipment}
-      recoCharacters={recoCharacters}
-      totalRecoCount={totalRecoCount}
-      eeOwner={eeOwner}
-      eeCfCompanion={eeCfCompanion}
-      bossMap={bossMap}
-      buffMap={buffMap}
-      debuffMap={debuffMap}
-      weaponStatRanges={weaponStatRanges}
-      accessoryStatRanges={accessoryStatRanges}
-      armorSetStatRanges={armorSetStatRanges}
-      talismanStatRanges={talismanStatRanges}
-      eeStatRange={eeStatRange}
-      messages={messages}
-      lang={lang}
-    />
+    <>
+      <EquipmentDetailClient
+        equipment={equipment}
+        recoCharacters={recoCharacters}
+        totalRecoCount={totalRecoCount}
+        eeOwner={eeOwner}
+        eeCfCompanion={eeCfCompanion}
+        bossMap={bossMap}
+        buffMap={buffMap}
+        debuffMap={debuffMap}
+        weaponStatRanges={weaponStatRanges}
+        accessoryStatRanges={accessoryStatRanges}
+        armorSetStatRanges={armorSetStatRanges}
+        talismanStatRanges={talismanStatRanges}
+        eeStatRange={eeStatRange}
+        messages={messages}
+        lang={lang}
+      />
+      <p className="sr-only">{seoText}</p>
+    </>
   );
 }

@@ -114,6 +114,7 @@ function WeaponDetail({ weapon, lang, bossMap, statRanges }: { weapon: Weapon; l
       <HeroSection
         icon={<EquipmentIcon src={`equipment/${weapon.image}`} rarity={weapon.rarity} alt={name} size={96} overlaySize={28} effectIcon={weapon.effect_icon} classType={weapon.class} level={weapon.level} />}
         name={name}
+        typeLabel={t('equip.tab.weapons')}
         badges={<>
           <TypeBadge label={t('equip.tab.weapons')} />
           <RarityBadge rarity={weapon.rarity} />
@@ -167,6 +168,7 @@ function AmuletDetail({ amulet, lang, bossMap, statRanges }: { amulet: Amulet; l
       <HeroSection
         icon={<EquipmentIcon src={`equipment/${amulet.image}`} rarity={amulet.rarity} alt={name} size={96} overlaySize={28} effectIcon={amulet.effect_icon} classType={amulet.class} level={amulet.level} />}
         name={name}
+        typeLabel={t('equip.tab.accessories')}
         badges={<>
           <TypeBadge label={t('equip.tab.accessories')} />
           <RarityBadge rarity={amulet.rarity} />
@@ -213,6 +215,7 @@ function TalismanDetail({ talisman, lang, bossMap, statRanges }: { talisman: Tal
       <HeroSection
         icon={<EquipmentIcon src={`equipment/${talisman.image}`} rarity={talisman.rarity} alt={name} size={96} overlaySize={28} effectIcon={talisman.effect_icon} level={talisman.level} />}
         name={name}
+        typeLabel={t('equip.tab.talismans')}
         badges={<>
           <TypeBadge label={t('equip.tab.talismans')} />
           <RarityBadge rarity={talisman.rarity} />
@@ -271,6 +274,7 @@ function SetDetail({ set, lang, bossMap, statRanges }: { set: ArmorSet; lang: La
       <HeroSection
         icon={<EquipmentIcon src={`equipment/TI_Equipment_Armor_${set.image_prefix}`} rarity={set.rarity} alt={name} size={96} overlaySize={28} effectIcon={set.set_icon} level={6} />}
         name={name}
+        typeLabel={t('equip.tab.sets')}
         badges={<>
           <TypeBadge label={t('equip.tab.sets')} />
           <RarityBadge rarity={set.rarity} />
@@ -385,6 +389,7 @@ function EEDetail({ ee, owner, cfCompanion, lang, statRange }: { ee: ExclusiveEq
       <HeroSection
         icon={eeIcon}
         name={name}
+        typeLabel={t('equip.tab.ee')}
         badges={<>
           <TypeBadge label={t('equip.tab.ee')} />
           {ee.rank && (
@@ -447,12 +452,12 @@ function EEDetail({ ee, owner, cfCompanion, lang, statRange }: { ee: ExclusiveEq
 
 // ── Shared sub-components ──
 
-function HeroSection({ icon, name, badges }: { icon: React.ReactNode; name: string; badges: React.ReactNode }) {
+function HeroSection({ icon, name, typeLabel, badges }: { icon: React.ReactNode; name: string; typeLabel: string; badges: React.ReactNode }) {
   return (
     <div className="flex items-start gap-4">
       {icon}
       <div className="flex flex-col gap-2">
-        <h1 className="h1-page">{name}</h1>
+        <h1 className="h1-page">{name} <span className="sr-only">— {typeLabel}</span></h1>
         <div className="flex flex-wrap items-center gap-2">
           {badges}
         </div>
