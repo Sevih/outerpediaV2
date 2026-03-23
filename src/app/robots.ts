@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/admin/', '/audio/'],
+      disallow: ['/api/', '/audio/', '/_next/', '/node_modules/'],
     },
     sitemap: `https://${process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'outerpedia.com'}/sitemap.xml`,
   };
