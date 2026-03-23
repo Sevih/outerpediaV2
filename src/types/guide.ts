@@ -12,6 +12,7 @@ export type GuideMeta = {
   order: number;
   author: string;
   last_updated: string;
+  hidden?: boolean;
 };
 
 export type GuideCategory = {

@@ -17,6 +17,7 @@ const SIZES = {
     classIconSize: 18,
     elemBottom: 'bottom-2',
     classBottom: 'bottom-8',
+    coreFusionBottom: 'bottom-[50px]',
     starSize: 8,
     starPos: 'top-0.25 right-0.25',
     starPt: 'pt-2.5',
@@ -37,6 +38,7 @@ const SIZES = {
     classIconSize: 24,
     elemBottom: 'bottom-3.5',
     classBottom: 'bottom-12',
+    coreFusionBottom: 'bottom-18',
     starSize: 11,
     starPos: 'top-1 right-0.75',
     starPt: 'pt-3',
@@ -57,6 +59,7 @@ const SIZES = {
     classIconSize: 26,
     elemBottom: 'bottom-3.5',
     classBottom: 'bottom-12',
+    coreFusionBottom: 'bottom-[74px]',
     starSize: 14,
     starPos: 'top-1 right-0.75',
     starPt: 'pt-3.5',
@@ -197,6 +200,19 @@ export default function CharacterCard({
           <Image
             src={`/images/ui/class/CM_Class_${classType}.webp`}
             alt={classType}
+            fill
+            sizes={`${s.classIconSize}px`}
+            className="object-contain"
+          />
+        </div>
+      )}
+
+      {/* Core fusion icon — above class icon */}
+      {tags?.includes('core-fusion') && (
+        <div className={`absolute ${s.coreFusionBottom} right-1 z-10`} style={{ width: s.classIconSize, height: s.classIconSize }}>
+          <Image
+            src="/images/ui/tags/CT_Core_Icon.webp"
+            alt="Core Fusion"
             fill
             sizes={`${s.classIconSize}px`}
             className="object-contain"

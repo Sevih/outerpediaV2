@@ -55,10 +55,10 @@ export async function getAllGuides(): Promise<GuideMeta[]> {
   return Object.entries(raw).map(([slug, data]) => ({ slug, ...data }));
 }
 
-/** Guides filtered by category */
+/** Guides filtered by category (excludes hidden) */
 export async function getGuidesByCategory(category: string): Promise<GuideMeta[]> {
   const all = await getAllGuides();
-  return all.filter((g) => g.category === category);
+  return all.filter((g) => g.category === category && !g.hidden);
 }
 
 /** Single guide metadata by slug */
@@ -75,12 +75,14 @@ export async function getGuideSlugsWithCategories(): Promise<{ category: string;
   return all.map(({ category, slug }) => ({ category, slug }));
 }
 
-/** Count of guides per category */
+/** Count of guides per category (excludes hidden) */
 export async function getGuideCounts(): Promise<Record<string, number>> {
   const all = await getAllGuides();
   const counts: Record<string, number> = {};
   for (const guide of all) {
-    counts[guide.category] = (counts[guide.category] ?? 0) + 1;
+    if (!guide.hidden) {
+      counts[guide.category] = (counts[guide.category] ?? 0) + 1;
+    }
   }
   return counts;
 }

@@ -159,6 +159,15 @@ export async function run(): Promise<string> {
     existing = JSON.parse(raw);
   } catch { /* first run */ }
 
+  // --force-since=YYYY-MM-DD → drop all posts on or after that date to force re-scrape
+  const forceSinceArg = process.argv.find(a => a.startsWith('--force-since='));
+  if (forceSinceArg) {
+    const sinceDate = forceSinceArg.split('=')[1];
+    const before = existing.posts.length;
+    existing.posts = existing.posts.filter(p => p.date < sinceDate);
+    console.log(`[patch-notes] --force-since=${sinceDate}: removed ${before - existing.posts.length} posts, re-scraping…`);
+  }
+
   type WPPost = {
     id: number;
     date: string;
