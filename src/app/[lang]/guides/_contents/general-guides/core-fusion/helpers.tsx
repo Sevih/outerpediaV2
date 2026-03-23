@@ -12,14 +12,33 @@ import type { ElementType, ClassType } from '@/types/enums';
 import type { Lang } from '@/lib/i18n/config';
 import { l, lRec } from '@/lib/i18n/localize';
 import parseText from '@/lib/parse-text';
+import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
 import { getCharByName } from '@/lib/character-client';
+import eeData from '@data/equipment/ee.json';
+import cfSkillNames from '@data/generated/cf-skill-names.json';
 
 /* ===================== Types ===================== */
+
+interface SkillChange {
+  review: string;
+  review_jp?: string;
+  review_kr?: string;
+  review_zh?: string;
+}
+
+interface HeroChanges {
+  s1?: SkillChange;
+  s2?: SkillChange;
+  s3?: SkillChange;
+  chain?: SkillChange;
+  passive?: SkillChange;
+}
 
 interface BaseHeroReview {
   name: string;
   review: string;
   recommended_level: string;
+  changes?: HeroChanges;
 }
 
 export type HeroReview = WithLocalizedFields<BaseHeroReview, 'review'>;
@@ -94,6 +113,36 @@ export const LABELS = {
     jp: 'コアフュージョンのエントリはまだありません。',
     kr: '코어 퓨전 항목이 아직 없습니다.',
     zh: '暂无核心融合条目。',
+  },
+  skillChanges: {
+    en: 'Skill Changes',
+    jp: 'スキル変更',
+    kr: '스킬 변경',
+    zh: '技能变更',
+  },
+  fusionPassive: {
+    en: 'Fusion Passive',
+    jp: 'フュージョンパッシブ',
+    kr: '퓨전 패시브',
+    zh: '融合被动',
+  },
+  exclusiveEquipment: {
+    en: 'Exclusive Equipment',
+    jp: '専用装備',
+    kr: '전용 장비',
+    zh: '专属装备',
+  },
+  oldEE: {
+    en: 'Base',
+    jp: '通常',
+    kr: '기본',
+    zh: '基础',
+  },
+  newEE: {
+    en: 'Core Fusion',
+    jp: 'コアフュージョン',
+    kr: '코어 퓨전',
+    zh: '核心融合',
   },
 } as const;
 
@@ -191,28 +240,194 @@ export function UnlockPrioritySection({ lang }: { lang: Lang }) {
 
 /* ===================== LevelCostDisplay ===================== */
 
-function LevelCostDisplay({ level, lang }: { level: number; lang: Lang }) {
+function LevelCostPill({ level }: { level: number }) {
   const cost = CUMULATIVE_COSTS[level - 1];
+  return (
+    <div className="flex items-center gap-3">
+      <span className="text-xl font-bold text-purple-300">Lv {level}</span>
+      <div className="flex items-center gap-1">
+        <Image
+          src="/images/items/TI_Item_CoreMerged.webp"
+          alt="Fusion-Type Core"
+          width={18}
+          height={18}
+          className="object-contain"
+        />
+        <span className="text-sm font-semibold">{cost}</span>
+      </div>
+    </div>
+  );
+}
+
+function LevelCostDisplay({ levels, lang }: { levels: number[]; lang: Lang }) {
+  return (
+    <div className="flex flex-wrap items-center justify-center gap-4 rounded-md border border-neutral-800 p-4">
+      <span className="text-xs opacity-70">{lRec(LABELS.recommendedLevel, lang)}</span>
+      {levels.map((lv, i) => (
+        <div key={lv} className="flex items-center gap-4">
+          {i > 0 && <span className="text-sm text-neutral-500">or</span>}
+          <LevelCostPill level={lv} />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ===================== Skill Labels ===================== */
+
+const SKILL_LABELS: Record<string, string> = {
+  s1: 'S1',
+  s2: 'S2',
+  s3: 'S3',
+  chain: 'Chain / Dual',
+};
+
+/* ===================== SkillChangeRow ===================== */
+
+type SkillNameEntry = { old: string; new: string; [k: string]: string };
+const cfSkillNamesMap = cfSkillNames as Record<string, Record<string, SkillNameEntry>>;
+
+function SkillChangeRow({ label, skillKey, cfCharId, change, lang }: {
+  label: string;
+  skillKey: string;
+  cfCharId?: string;
+  change: SkillChange;
+  lang: Lang;
+}) {
+  const review = l(change as unknown as Record<string, unknown>, 'review', lang);
+  const names = cfCharId ? cfSkillNamesMap[cfCharId]?.[skillKey] : undefined;
+  const langSuffix = lang === 'en' ? '' : `_${lang}`;
+  const oldName = names?.[`old${langSuffix}`];
+  const newName = names?.[`new${langSuffix}`];
+  const hasRename = oldName && newName && oldName !== newName;
 
   return (
-    <div className="flex items-center justify-center gap-6 rounded-md border border-neutral-800 p-4">
-      <div className="flex flex-col items-center gap-1">
-        <span className="text-xs opacity-70">{lRec(LABELS.recommendedLevel, lang)}</span>
-        <span className="text-2xl font-bold text-purple-300">Lv {level}</span>
+    <div className="flex gap-3 rounded-md border border-neutral-800 bg-black/20 p-3">
+      <span className="shrink-0 pt-0.5 text-xs font-bold text-purple-300">{label}</span>
+      <div className="min-w-0 space-y-1 text-sm">
+        {hasRename && (
+          <p className="text-xs text-neutral-400">
+            {oldName} → <span className="text-neutral-200">{newName}</span>
+          </p>
+        )}
+        <p className="text-neutral-300">{parseText(review)}</p>
       </div>
-      <div className="h-10 w-px bg-neutral-700" />
-      <div className="flex flex-col items-center gap-1">
-        <span className="text-xs opacity-70">{lRec(LABELS.totalCost, lang)}</span>
-        <div className="flex items-center gap-1.5">
+    </div>
+  );
+}
+
+/* ===================== PassiveSection ===================== */
+
+function PassiveSection({ change, lang }: { change: SkillChange; lang: Lang }) {
+  const review = l(change as unknown as Record<string, unknown>, 'review', lang);
+
+  return (
+    <div className="space-y-2">
+      <h4 className="text-sm font-semibold text-purple-300">{lRec(LABELS.fusionPassive, lang)}</h4>
+      <div className="rounded-md border border-purple-500/20 bg-purple-500/5 p-3 text-sm text-neutral-300">
+        {parseText(review)}
+      </div>
+    </div>
+  );
+}
+
+/* ===================== EEComparisonSection ===================== */
+
+function EEMiniCard({
+  label,
+  name,
+  mainStat,
+  effect,
+  effect10,
+  charId,
+  accent,
+}: {
+  label: string;
+  name: string;
+  mainStat?: string;
+  effect: React.ReactNode;
+  effect10: React.ReactNode;
+  charId?: string;
+  accent: 'neutral' | 'purple';
+}) {
+  const border = accent === 'purple' ? 'border-purple-500/20' : 'border-neutral-800';
+  const bg = accent === 'purple' ? 'bg-purple-500/5' : 'bg-black/20';
+
+  return (
+    <div className={`flex gap-3 rounded-md border ${border} ${bg} p-3`}>
+      {charId && (
+        <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg">
           <Image
-            src="/images/items/TI_Item_CoreMerged.webp"
-            alt="Fusion-Type Core"
-            width={20}
-            height={20}
+            src={getRarityBgPath('legendary')}
+            alt=""
+            fill
+            sizes="48px"
             className="object-contain"
           />
-          <span className="text-lg font-semibold">{cost}</span>
+          <div className="absolute inset-1">
+            <Image
+              src={`/images/characters/ee/${charId}.webp`}
+              alt={name}
+              fill
+              sizes="40px"
+              className="object-contain"
+            />
+          </div>
         </div>
+      )}
+      <div className="min-w-0 space-y-1">
+        <p className="text-xs">
+          <span className="text-zinc-500">{label} </span>
+          <span className="font-semibold text-equipment">{name}</span>
+        </p>
+        {mainStat && (
+          <span className="w-fit rounded bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300">{mainStat}</span>
+        )}
+        <p className="text-xs text-zinc-300">
+          <span className="text-zinc-500">Lv. 1 </span>
+          {effect}
+        </p>
+        <p className="text-xs text-zinc-300">
+          <span className="text-zinc-500">Lv. 10 </span>
+          {effect10}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function EEComparisonSection({ baseCharId, cfCharId, lang }: { baseCharId: string; cfCharId: string; lang: Lang }) {
+  const eeMap = eeData as Record<string, Record<string, unknown>>;
+  const baseEE = eeMap[baseCharId];
+  const cfEE = eeMap[cfCharId];
+  if (!baseEE && !cfEE) return null;
+
+  return (
+    <div className="space-y-2">
+      <h4 className="text-sm font-semibold text-purple-300">{lRec(LABELS.exclusiveEquipment, lang)}</h4>
+      <div className="grid gap-2 sm:grid-cols-2">
+        {baseEE && (
+          <EEMiniCard
+            label={lRec(LABELS.oldEE, lang)}
+            name={l(baseEE, 'name', lang)}
+            mainStat={l(baseEE, 'mainStat', lang)}
+            effect={formatEffectText(l(baseEE, 'effect', lang))}
+            effect10={formatEffectText(l(baseEE, 'effect10', lang))}
+            charId={baseCharId}
+            accent="neutral"
+          />
+        )}
+        {cfEE && (
+          <EEMiniCard
+            label={lRec(LABELS.newEE, lang)}
+            name={l(cfEE, 'name', lang)}
+            mainStat={l(cfEE, 'mainStat', lang)}
+            effect={formatEffectText(l(cfEE, 'effect', lang))}
+            effect10={formatEffectText(l(cfEE, 'effect10', lang))}
+            charId={cfCharId}
+            accent="purple"
+          />
+        )}
       </div>
     </div>
   );
@@ -228,7 +443,14 @@ export function HeroCard({ h, lang }: { h: HeroReview; lang: Lang }) {
   const cls = char?.Class as ClassType | undefined;
   const name = char ? l(char, 'Fullname', lang) : h.name;
 
-  const recoLevel = parseInt(h.recommended_level, 10);
+  const recoLevels = h.recommended_level
+    .split(/\s*or\s*/i)
+    .map(s => parseInt(s.trim(), 10))
+    .filter(n => !isNaN(n) && n >= 1 && n <= 5);
+  const changes = (h as unknown as BaseHeroReview).changes;
+  const skillKeys = changes
+    ? (Object.entries(changes) as [string, SkillChange][]).filter(([k]) => k in SKILL_LABELS)
+    : [];
 
   return (
     <section className="rounded-md border border-neutral-800 bg-black/30 p-5">
@@ -268,8 +490,30 @@ export function HeroCard({ h, lang }: { h: HeroReview; lang: Lang }) {
         {parseText(l(h as unknown as Record<string, unknown>, 'review', lang))}
       </p>
 
-      {!isNaN(recoLevel) && recoLevel >= 1 && recoLevel <= 5 && (
-        <LevelCostDisplay level={recoLevel} lang={lang} />
+      {changes && (
+        <div className="space-y-4">
+          {/* Skill changes */}
+          {skillKeys.length > 0 && (
+            <div className="space-y-2">
+              <h4 className="text-sm font-semibold text-purple-300">{lRec(LABELS.skillChanges, lang)}</h4>
+              <div className="space-y-2">
+                {skillKeys.map(([key, change]) => (
+                  <SkillChangeRow key={key} label={SKILL_LABELS[key] ?? key} skillKey={key} cfCharId={charId} change={change} lang={lang} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Fusion Passive */}
+          {changes.passive && <PassiveSection change={changes.passive} lang={lang} />}
+
+          {/* EE Comparison */}
+          {charId && <EEComparisonSection baseCharId={charId.replace('2700', '2000')} cfCharId={charId} lang={lang} />}
+        </div>
+      )}
+
+      {recoLevels.length > 0 && (
+        <LevelCostDisplay levels={recoLevels} lang={lang} />
       )}
     </section>
   );

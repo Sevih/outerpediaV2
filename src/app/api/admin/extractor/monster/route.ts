@@ -7,8 +7,55 @@ import {
   resolveClass, resolveElement,
   buildBuffIndex, resolveBuffPlaceholders,
 } from '@/app/admin/lib/text';
+import {
+  extractBuffDebuff as extractBD,
+} from '@/app/admin/lib/config';
 
 const BOSS_DIR = path.join(process.cwd(), 'data', 'boss');
+
+// DungeonMode → TextSystem key for label resolution
+// Aligned with datamine/ParserV3/boss_finder_v2.py DUNGEON_MODE_MAP
+const MODE_TO_SYS_KEY: Record<string, string> = {
+  DM_NORMAL: 'SYS_ADVENTURE_NORMAL',  // Dynamic: overridden to SYS_ADVENTURE_HARD via AreaTemplet
+  DM_REMAINS: 'SYS_PVE_REMAINS',
+  DM_SIDESTORY: 'SYS_GUIDE_MENU_SIDESTORY',
+  DM_EVENT: 'SYS_EVENT',
+  DM_EVENT_BOSS: 'SYS_EVENT',
+  DM_EVENT_CHALLENGE: 'SYS_EVENT_BOSS_CHALLENGE',
+  DM_RAID_1: 'SYS_RAID_1_TITLE',
+  DM_RAID_2: 'SYS_RAID_2_TITLE',
+  DM_WORLD_BOSS: 'SYS_WORLD_BOSS',
+  DM_GUILD_RAID_MAIN_BOSS: 'SYS_GUILD_RAID_TITLE',
+  DM_GUILD_RAID_SUB_BOSS: 'SYS_GUILD_RAID_TITLE',
+  DM_GUILD_DUNGEON: 'SYS_GUILD_DUNGEON_TITLE',
+  DM_EXPLORATION_MAIN_BOSS: 'SYS_RUIN_ISLAND_EXPLORATION',
+  DM_EXPLORATION_NORMAL: 'SYS_RUIN_ISLAND_EXPLORATION',
+  DM_EXPLORATION_SPOT_BOSS: 'SYS_RUIN_ISLAND_EXPLORATION',
+  DM_TOWER: 'SYS_PVE_TOWER',
+  DM_TOWER_ELEMENT: 'SYS_PVE_TOWER_ELEMENTAL',
+  DM_TOWER_HARD: 'SYS_CONTENS_LOCK_PVE_TOWER_HARD',
+  DM_TOWER_VERY_HARD: 'SYS_INFINITE_DUNGEON_V_HARD_01',
+  DM_IRREGULAR_CHASE: 'SYS_GUIDE_IRREGULAR_CHASE_TITLE',
+  DM_IRREGULAR_INFILTRATE: 'SYS_GUIDE_IRREGULAR_INVADE_TITLE',
+  DM_IVANEZ_DUNGEON: 'SYS_IVANEZ_FESTIVAL',
+  DM_MONAD_BATTLE_1: 'SYS_MONAD_GATE',
+  DM_DAYOFWEEK: 'SYS_DAYOFWEEK_DUNGEON',
+  DM_EXP: 'SYS_EXP_DUNGEON',
+  DM_GOLD: 'SYS_GOLD_DUNGEON',
+  DM_CHAR_PIECE: 'SYS_PIECE_DUNGEON',
+  DM_ADVENTURE_MISSION: 'SYS_ADVENTURE_LICENSE',
+  DM_ADVENTURE_CHALLENGE: 'SYS_ADVENTURE_CHALLENGE',
+  DM_TUTORIAL: 'SYS_CONTENS_LOCK_EVA_BATTLE_TUTORIAL',
+};
+
+function resolveModeLabel(textSystemMap: Record<string, LangTexts>, mode: string): string {
+  const sysKey = MODE_TO_SYS_KEY[mode];
+  if (sysKey) {
+    const texts = textSystemMap[sysKey];
+    if (texts?.en) return texts.en;
+  }
+  return mode.replace('DM_', '');
+}
 
 // ── Types ─────────────────────────────────────────────────────────
 
@@ -21,6 +68,7 @@ interface GameData {
   dungeons: Row[];
   spawns: Row[];
   buffData: Row[];
+  areas: Row[];
   textCharMap: Record<string, LangTexts>;
   textSkillMap: Record<string, LangTexts>;
   textSystemMap: Record<string, LangTexts>;
@@ -45,13 +93,14 @@ async function loadGameData(): Promise<GameData> {
   if (cachedGD) return cachedGD;
 
   const [monsterT, monsterSkillT, monsterSkillLevelT, dungeonT, spawnT,
-    buffT, textChar, textSkill, textSystem] = await Promise.all([
+    buffT, areaT, textChar, textSkill, textSystem] = await Promise.all([
     readTemplet('MonsterTemplet'),
     readTemplet('MonsterSkillTemplet'),
     readTemplet('MonsterSkillLevelTemplet'),
     readTemplet('DungeonTemplet'),
     readTemplet('DungeonSpawnTemplet'),
     readTemplet('BuffTemplet'),
+    readTemplet('AreaTemplet'),
     readTemplet('TextCharacter'),
     readTemplet('TextSkill'),
     readTemplet('TextSystem'),
@@ -64,6 +113,7 @@ async function loadGameData(): Promise<GameData> {
     dungeons: dungeonT.data,
     spawns: spawnT.data,
     buffData: buffT.data,
+    areas: areaT.data,
     textCharMap: buildTextMap(textChar.data),
     textSkillMap: buildTextMap(textSkill.data),
     textSystemMap: buildTextMap(textSystem.data),
@@ -74,49 +124,99 @@ async function loadGameData(): Promise<GameData> {
 
 // ── Helpers ───────────────────────────────────────────────────────
 
+/** Resolve monster name: prefer NameIDSymbol, fallback to FirstMeetIDSymbol */
 function resolveMonsterName(gd: GameData, m: Row): LangTexts | undefined {
+  const nms = m.NameIDSymbol ?? '';
+  if (nms) {
+    const t = gd.textCharMap[nms] ?? gd.textCharMap[nms + '_Name'];
+    if (t) return t;
+  }
   const fms = m.FirstMeetIDSymbol ?? '';
   return gd.textCharMap[fms] ?? gd.textCharMap[fms.replace('_Name', '')] ?? gd.textCharMap[fms + '_Name'];
 }
 
-function buildSpawnToMonsters(gd: GameData): Map<string, Set<string>> {
-  const map = new Map<string, Set<string>>();
+/** Resolve monster surname from FirstMeetIDSymbol (only if different from name) */
+function resolveMonsterSurname(gd: GameData, m: Row): LangTexts | null {
+  const nms = m.NameIDSymbol ?? '';
+  const fms = m.FirstMeetIDSymbol ?? '';
+  if (!nms || !fms || nms === fms) return null;
+  const nameTexts = gd.textCharMap[nms] ?? gd.textCharMap[nms + '_Name'];
+  const surnameTexts = gd.textCharMap[fms] ?? gd.textCharMap[fms.replace('_Name', '')];
+  if (!surnameTexts || !nameTexts) return null;
+  // Only return if different from name
+  if (surnameTexts.en === nameTexts.en) return null;
+  return surnameTexts;
+}
+
+
+interface DungeonLink {
+  mode: string;
+  name: LangTexts;
+  dungeonId: string;
+  areaId: LangTexts | null;    // e.g. "3-14" from SYS_DUNGEON_SHORT_NAME_*
+  modeLabel: LangTexts | null; // resolved from MODE_TO_SYS_KEY
+  level: number;               // from spawn GroupID
+}
+
+function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
+  // Build spawn lookup → { monsterIds, spawn row }
+  // Index by both HPLineCount and ID (some spawns lack HPLineCount)
+  const spawnMap = new Map<string, { mids: Set<string>; row: Row }>();
   for (const s of gd.spawns) {
-    const hpc = s.HPLineCount;
-    if (!hpc) continue;
     const mids = new Set<string>();
     for (const idx of ['ID0', 'ID1', 'ID2', 'ID3']) {
       if (s[idx]) mids.add(s[idx]);
     }
-    map.set(hpc, mids);
+    const entry = { mids, row: s };
+    if (s.HPLineCount) spawnMap.set(s.HPLineCount, entry);
+    if (s.ID) spawnMap.set(s.ID, entry);
   }
-  return map;
-}
 
-function buildMonsterToDungeons(gd: GameData): Map<string, { mode: string; name: LangTexts; dungeonId: string }[]> {
-  const spawnToMonsters = buildSpawnToMonsters(gd);
-  const result = new Map<string, { mode: string; name: LangTexts; dungeonId: string }[]>();
+  const result = new Map<string, DungeonLink[]>();
 
   for (const d of gd.dungeons) {
     const mode = d.DungeonMode;
     if (!mode) continue;
     const nameLangs = gd.textSystemMap[d.SeasonFullName ?? ''];
     if (!nameLangs) continue;
-    const dungeonId = d.ID ?? d.FriendSupportUse ?? '';
+    const dungeonId = d.ID ?? '';
 
-    for (const pos of ['SpawnID_Pos0', 'SpawnID_Pos1', 'SpawnID_Pos2']) {
+    // area_id: from FriendSupportUse → TextSystem (e.g. SYS_DUNGEON_SHORT_NAME_0314 → "3-14")
+    const friendSupport = d.FriendSupportUse ?? '';
+    const areaId = gd.textSystemMap[friendSupport] ?? null;
+
+    // mode label — for DM_NORMAL, detect Story (Hard) vs Story (Normal) via AreaTemplet
+    let modeLabel: LangTexts | null = null;
+    if (mode === 'DM_NORMAL') {
+      const areaId = d.AreaID ?? '';
+      const area = gd.areas.find(a => a.SeasonID === areaId);
+      if (area) {
+        // Check raw ShortNameIDSymbol for _HARD_ pattern (same as boss_finder_v2.py)
+        const shortNameSymbol = area.ShortNameIDSymbol ?? '';
+        const isHard = shortNameSymbol.includes('_HARD_');
+        modeLabel = gd.textSystemMap[isHard ? 'SYS_ADVENTURE_HARD' : 'SYS_ADVENTURE_NORMAL'] ?? null;
+      }
+    }
+    if (!modeLabel) {
+      const sysKey = MODE_TO_SYS_KEY[mode];
+      modeLabel = sysKey ? (gd.textSystemMap[sysKey] ?? null) : null;
+    }
+
+    for (const pos of ['SpawnID_Pos0', 'SpawnID_Pos1', 'SpawnID_Pos2', 'StoryTeamSpawn', 'StoryTeamSpawn_fallback1', 'StoryTeamSpawn_fallback2']) {
       const raw = d[pos];
-      if (!raw || raw === 'TRUE' || raw === 'FALSE' || raw === 'True' || raw === 'False') continue;
+      if (!raw || /^(TRUE|FALSE|True|False)$/i.test(raw)) continue;
+      // Skip short values in StoryTeamSpawn (team size, not spawn ID)
+      if (pos.startsWith('StoryTeamSpawn') && raw.length < 5) continue;
       for (const part of raw.split(',')) {
         const sid = part.trim();
-        const mids = spawnToMonsters.get(sid);
-        if (!mids) continue;
-        for (const mid of mids) {
+        const spawn = spawnMap.get(sid);
+        if (!spawn) continue;
+        const level = parseInt(spawn.row.GroupID ?? spawn.row.Level0 ?? '0') || 0;
+        for (const mid of spawn.mids) {
           let arr = result.get(mid);
           if (!arr) { arr = []; result.set(mid, arr); }
-          // Avoid duplicate dungeon entries
           if (!arr.some(e => e.dungeonId === dungeonId)) {
-            arr.push({ mode, name: nameLangs, dungeonId });
+            arr.push({ mode, name: nameLangs, dungeonId, areaId, modeLabel, level });
           }
         }
       }
@@ -126,51 +226,70 @@ function buildMonsterToDungeons(gd: GameData): Map<string, { mode: string; name:
   return result;
 }
 
-// ── Buff/debuff extraction (same logic as character extractor) ───
+// ── Buff/debuff extraction (reuses character extractor logic) ────
 
-const BUFF_BLACKLIST_TYPES = new Set([
-  'BT_DAMAGE_SHARE', 'BT_DMG', 'BT_DMG_CASTER_STAT', 'BT_DMG_CASTER_LOST_HP_RATE',
-  'BT_DMG_TARGET_LOST_HP_RATE', 'BT_DMG_TO_BOSS', 'BT_DMG_REDUCE',
-  'BT_STAT_PREMIUM', 'BT_WG_DMG', 'BT_EXTRA_DMG',
-]);
-
-function resolveBuffTag(row: Row): string {
-  const type = row.Type ?? '';
-  if (BUFF_BLACKLIST_TYPES.has(type)) return '';
-
-  const stat = row.StatType ?? '';
-  const icon = row.IconName ?? '';
-
-  // Interruption suffix
-  const isIR = icon.includes('Interruption');
-  const irSuffix = isIR ? '_IR' : '';
-
-  if (type === 'BT_STAT' && stat && stat !== 'ST_NONE') {
-    return `BT_STAT|${stat}${irSuffix}`;
-  }
-  if (type === 'BT_DOT_POISON' && icon.includes('Poison02')) {
-    return 'BT_DOT_POISON2';
-  }
-  return type ? `${type}${irSuffix}` : '';
-}
-
-function extractBuffDebuff(gd: GameData, buffIdStr: string): { buff: string[]; debuff: string[] } {
-  const buff = new Set<string>();
-  const debuff = new Set<string>();
-
-  const ids = buffIdStr.split(',').map(s => s.trim()).filter(Boolean);
-  for (const bid of ids) {
-    const rows = gd.buffData.filter(r => r.BuffID === bid);
-    for (const row of rows) {
-      const tag = resolveBuffTag(row);
-      if (!tag) continue;
-      const bd = row.BuffDebuffType ?? '';
-      if (bd.startsWith('DEBUFF')) debuff.add(tag);
-      else buff.add(tag);
+/** Collect buff IDs from MonsterSkillLevelTemplet rows.
+ *  BuffIDs can be in any field (BuffID, DamageFactor, GainAP, GainCP, etc.)
+ *  We check all values against known BuffTemplet IDs.
+ */
+function collectMonsterBuffIds(lvls: Row[], buffData: Row[]): string[] {
+  const knownBuffIds = new Set(buffData.map(r => r.BuffID).filter(Boolean));
+  const ids = new Set<string>();
+  for (const row of lvls) {
+    for (const [key, val] of Object.entries(row)) {
+      if (!val || typeof val !== 'string') continue;
+      if (key === 'ID' || key === 'SkillID' || key === 'Key') continue;
+      for (const part of val.split(',')) {
+        const trimmed = part.trim();
+        if (trimmed && knownBuffIds.has(trimmed)) {
+          ids.add(trimmed);
+        }
+      }
     }
   }
+  return [...ids];
+}
 
-  return { buff: [...buff], debuff: [...debuff] };
+/**
+ * Convert IG_Buff_*_Interruption icon tags to _IR format used in boss JSONs.
+ * Builds the mapping dynamically from BuffTemplet data.
+ */
+function buildIconToIRMap(buffData: Row[]): Map<string, string> {
+  const map = new Map<string, string>();
+  for (const row of buffData) {
+    const icon = row.IconName ?? '';
+    if (!icon.includes('_Interruption')) continue;
+    const type = row.Type ?? '';
+    const stat = row.StatType ?? '';
+    const isDebuff = icon.endsWith('_D');
+
+    let tag: string;
+    if (type === 'BT_STAT' && stat && stat !== 'ST_NONE') {
+      tag = `BT_STAT|${stat}_IR`;
+    } else if (type && type !== 'BT_NONE' && type !== 'BT_DMG_REDUCE' && type !== 'BT_DMG' && type !== 'BT_DMG_TO_BOSS' && type !== 'BT_GROUP') {
+      tag = `${type}_IR`;
+    } else {
+      continue;
+    }
+
+    // Only map if not already set (first match wins)
+    if (!map.has(icon)) {
+      map.set(icon, isDebuff ? tag : tag);
+    }
+  }
+  return map;
+}
+
+// Post-conversion renames to match the site's effect naming
+const IR_RENAME: Record<string, string> = {
+  'BT_STAT|ST_DMG_REDUCE_RATE_IR': 'BT_DAMGE_TAKEN',
+};
+
+function convertToIRFormat(tags: string[], iconToIR: Map<string, string>): string[] {
+  return tags.map(t => {
+    const ir = iconToIR.get(t) ?? t;
+    return IR_RENAME[ir] ?? ir;
+  });
 }
 
 // ── Skill extraction ──────────────────────────────────────────────
@@ -186,6 +305,7 @@ const WANTED_SKILL_TYPES = new Set([
 function extractMonsterSkills(gd: GameData, monster: Row) {
   const skillByNs: Record<string, Row> = {};
   for (const s of gd.monsterSkills) skillByNs[s.NameIDSymbol] = s;
+  const iconToIR = buildIconToIRMap(gd.buffData);
 
   const skills: Record<string, unknown>[] = [];
 
@@ -218,8 +338,10 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
 
     // Get buff IDs from MonsterSkillLevelTemplet
     const lvls = gd.monsterSkillLevels.filter(l => l.SkillID === sid);
-    const buffIdStr = lvls.map(l => l.BuffID ?? '').filter(Boolean).join(',');
-    const { buff, debuff } = extractBuffDebuff(gd, buffIdStr);
+    const buffIds = collectMonsterBuffIds(lvls, gd.buffData);
+    const raw = extractBD(buffIds, gd.buffData, { expandInterruption: false });
+    const buff = convertToIRFormat(raw.buff, iconToIR);
+    const debuff = convertToIRFormat(raw.debuff, iconToIR);
 
     const skill: Record<string, unknown> = {
       name: nameTexts ? Object.fromEntries(LANGS.map(l => [l, nameTexts[l] ?? ''])) : {},
@@ -238,43 +360,39 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
 
 // ── Full monster extraction ───────────────────────────────────────
 
-function extractMonster(gd: GameData, monster: Row, dungeonList: { mode: string; name: LangTexts; dungeonId: string }[]) {
+function extractMonster(gd: GameData, monster: Row, dungeonList: DungeonLink[], selectedDungeonId?: string) {
   const nameTexts = resolveMonsterName(gd, monster);
   const cls = resolveClass(gd.textSystemMap, monster.Class ?? '');
   const element = resolveElement(gd.textSystemMap, monster.Element ?? '');
-  // StatBuffImmune
   const statBuffImmune = monster.StatBuffImmune ?? '';
 
-  // Location (first dungeon entry)
-  const location = dungeonList.length > 0 ? dungeonList[0] : null;
-
-  // Mode label resolution
-  const modeLabels: Record<string, LangTexts> = {};
-  for (const d of dungeonList) {
-    if (!modeLabels[d.mode]) {
-      // Try to resolve mode name from TextSystem
-      const modeKey = `SYS_DUNGEON_MODE_${d.mode.replace('DM_', '')}`;
-      modeLabels[d.mode] = gd.textSystemMap[modeKey] ?? { en: d.mode, jp: d.mode, kr: d.mode, zh: d.mode } as LangTexts;
-    }
-  }
+  // Pick location: use selected dungeon or first entry
+  const location = (selectedDungeonId
+    ? dungeonList.find(d => d.dungeonId === selectedDungeonId)
+    : dungeonList[0]) ?? null;
 
   const skills = extractMonsterSkills(gd, monster);
 
+  const langObj = (texts: LangTexts | null, fallback = '') =>
+    Object.fromEntries(LANGS.map(l => [l, texts?.[l] ?? fallback]));
+
+  const surnameTexts = resolveMonsterSurname(gd, monster);
+
   const result: Record<string, unknown> = {
     id: monster.ID,
-    Name: nameTexts ? Object.fromEntries(LANGS.map(l => [l, nameTexts[l] ?? ''])) : {},
-    Surname: null,
-    IncludeSurname: false,
+    Name: nameTexts ? langObj(nameTexts) : {},
+    Surname: surnameTexts ? langObj(surnameTexts) : null,
+    IncludeSurname: !!surnameTexts,
     class: cls,
     element,
-    level: null,
+    level: location?.level ?? null,
     icons: monster.FaceIconID ?? monster.ID,
     BuffImmune: '',
     StatBuffImmune: statBuffImmune,
     location: location ? {
-      dungeon: Object.fromEntries(LANGS.map(l => [l, location.name[l] ?? ''])),
-      mode: Object.fromEntries(LANGS.map(l => [l, (modeLabels[location.mode] ?? {})[l] ?? location.mode])),
-      area_id: { en: '', kr: '', jp: '', zh: '' },
+      dungeon: langObj(location.name),
+      mode: langObj(location.modeLabel, location.mode),
+      area_id: langObj(location.areaId),
     } : null,
     skills,
   };
@@ -284,26 +402,42 @@ function extractMonster(gd: GameData, monster: Row, dungeonList: { mode: string;
 
 // ── Search ────────────────────────────────────────────────────────
 
-function searchMonsters(gd: GameData, query: string, monsterToDungeons: Map<string, { mode: string; name: LangTexts; dungeonId: string }[]>): SearchResult[] {
+function searchMonsters(gd: GameData, query: string, monsterToDungeons: Map<string, DungeonLink[]>, filterMode = '', filterDungeonId = '', exact = false): SearchResult[] {
   const q = query.toLowerCase().trim();
-  if (!q) return [];
+  if (!q && !filterMode && !filterDungeonId) return [];
 
   const results: SearchResult[] = [];
   const seen = new Set<string>();
 
-  // Search by monster name
-  for (const m of gd.monsters) {
-    if (seen.has(m.ID)) continue;
+  function matchesDungeonFilter(dungeons: { mode: string; dungeonId: string }[]): boolean {
+    if (!filterMode && !filterDungeonId) return true;
+    return dungeons.some(d =>
+      (!filterMode || d.mode === filterMode) &&
+      (!filterDungeonId || d.dungeonId === filterDungeonId)
+    );
+  }
+
+  function pushResult(m: Row) {
+    if (seen.has(m.ID)) return;
     const nameTexts = resolveMonsterName(gd, m);
-    if (!nameTexts) continue;
+    if (!nameTexts) return;
+    const dungeons = monsterToDungeons.get(m.ID) ?? [];
+    if (!matchesDungeonFilter(dungeons)) return;
 
-    const nameMatch = LANGS.some(l => (nameTexts[l] ?? '').toLowerCase().includes(q));
-    const idMatch = m.ID.includes(q);
-
-    if (!nameMatch && !idMatch) continue;
+    // Text match (skip if we have dungeon filters and no query)
+    if (q) {
+      if (exact) {
+        const nameMatch = LANGS.some(l => (nameTexts[l] ?? '').toLowerCase() === q);
+        const idMatch = m.ID === query;
+        if (!nameMatch && !idMatch) return;
+      } else {
+        const nameMatch = LANGS.some(l => (nameTexts[l] ?? '').toLowerCase().includes(q));
+        const idMatch = m.ID.includes(q);
+        if (!nameMatch && !idMatch) return;
+      }
+    }
 
     seen.add(m.ID);
-    const dungeons = monsterToDungeons.get(m.ID) ?? [];
     results.push({
       monsterId: m.ID,
       name: Object.fromEntries(LANGS.map(l => [l, nameTexts[l] ?? ''])),
@@ -317,54 +451,11 @@ function searchMonsters(gd: GameData, query: string, monsterToDungeons: Map<stri
         dungeonId: d.dungeonId,
       })),
     });
-
-    if (results.length >= 100) break;
   }
 
-  // Search by dungeon name
-  if (results.length < 100) {
-    for (const d of gd.dungeons) {
-      const dName = gd.textSystemMap[d.SeasonFullName ?? ''];
-      if (!dName) continue;
-      const dungeonMatch = LANGS.some(l => (dName[l] ?? '').toLowerCase().includes(q));
-      if (!dungeonMatch) continue;
-
-      // Find monsters in this dungeon
-      for (const pos of ['SpawnID_Pos0', 'SpawnID_Pos1', 'SpawnID_Pos2']) {
-        const raw = d[pos];
-        if (!raw || raw === 'TRUE' || raw === 'FALSE' || raw === 'True' || raw === 'False') continue;
-        for (const part of raw.split(',')) {
-          const sid = part.trim();
-          for (const s of gd.spawns) {
-            if (s.HPLineCount !== sid) continue;
-            for (const idx of ['ID0', 'ID1', 'ID2', 'ID3']) {
-              const mid = s[idx];
-              if (!mid || seen.has(mid)) continue;
-              seen.add(mid);
-              const monster = gd.monsters.find(m => m.ID === mid);
-              if (!monster) continue;
-              const nameTexts = resolveMonsterName(gd, monster);
-              if (!nameTexts) continue;
-              const dungeons = monsterToDungeons.get(mid) ?? [];
-              results.push({
-                monsterId: mid,
-                name: Object.fromEntries(LANGS.map(l => [l, nameTexts[l] ?? ''])),
-                type: monster.Type ?? '',
-                element: monster.Element ?? '',
-                class: monster.Class ?? '',
-                race: monster.Race ?? '',
-                dungeons: dungeons.map(dd => ({
-                  mode: dd.mode,
-                  name: Object.fromEntries(LANGS.map(l => [l, dd.name[l] ?? ''])),
-                  dungeonId: dd.dungeonId,
-                })),
-              });
-            }
-          }
-        }
-      }
-      if (results.length >= 100) break;
-    }
+  for (const m of gd.monsters) {
+    if (results.length >= 100) break;
+    pushResult(m);
   }
 
   return results;
@@ -386,21 +477,55 @@ export async function GET(req: NextRequest) {
   try {
     const gd = await loadGameData();
 
+    if (action === 'filters') {
+      const monsterToDungeons = buildMonsterToDungeons(gd);
+
+      // Collect all modes
+      const modes = new Set<string>();
+      // Collect all dungeons grouped by mode: mode → { id, name }[]
+      const dungeonsByMode: Record<string, Map<string, LangTexts>> = {};
+
+      for (const entries of monsterToDungeons.values()) {
+        for (const e of entries) {
+          modes.add(e.mode);
+          if (!dungeonsByMode[e.mode]) dungeonsByMode[e.mode] = new Map();
+          if (!dungeonsByMode[e.mode].has(e.dungeonId)) {
+            dungeonsByMode[e.mode].set(e.dungeonId, e.name);
+          }
+        }
+      }
+
+      const dungeons: Record<string, { id: string; name: Record<string, string> }[]> = {};
+      for (const [mode, map] of Object.entries(dungeonsByMode)) {
+        dungeons[mode] = [...map.entries()].map(([id, name]) => ({
+          id,
+          name: Object.fromEntries(LANGS.map(l => [l, name[l] ?? ''])),
+        })).sort((a, b) => a.name.en.localeCompare(b.name.en));
+      }
+
+      const modeList = [...modes].sort().map(m => ({ id: m, label: resolveModeLabel(gd.textSystemMap, m) }));
+      return NextResponse.json({ modes: modeList, dungeons });
+    }
+
     if (action === 'search') {
       const q = req.nextUrl.searchParams.get('q') ?? '';
+      const mode = req.nextUrl.searchParams.get('mode') ?? '';
+      const dungeonId = req.nextUrl.searchParams.get('dungeonId') ?? '';
+      const exact = req.nextUrl.searchParams.get('exact') === '1';
       const monsterToDungeons = buildMonsterToDungeons(gd);
-      const results = searchMonsters(gd, q, monsterToDungeons);
+      const results = searchMonsters(gd, q, monsterToDungeons, mode, dungeonId, exact);
       return NextResponse.json({ results });
     }
 
     if (action === 'extract') {
       const id = req.nextUrl.searchParams.get('id') ?? '';
+      const selectedDungeonId = req.nextUrl.searchParams.get('dungeonId') ?? '';
       const monster = gd.monsters.find(m => m.ID === id);
       if (!monster) return NextResponse.json({ error: `Monster ${id} not found` }, { status: 404 });
 
       const monsterToDungeons = buildMonsterToDungeons(gd);
       const dungeons = monsterToDungeons.get(id) ?? [];
-      const extracted = extractMonster(gd, monster, dungeons);
+      const extracted = extractMonster(gd, monster, dungeons, selectedDungeonId || undefined);
 
       // Check if already saved
       const filePath = path.join(BOSS_DIR, `${id}.json`);
@@ -412,9 +537,108 @@ export async function GET(req: NextRequest) {
 
       return NextResponse.json({ extracted, existing, allDungeons: dungeons.map(d => ({
         mode: d.mode,
+        modeLabel: resolveModeLabel(gd.textSystemMap, d.mode),
         name: Object.fromEntries(LANGS.map(l => [l, d.name[l] ?? ''])),
+        areaId: d.areaId ? Object.fromEntries(LANGS.map(l => [l, d.areaId![l] ?? ''])) : null,
         dungeonId: d.dungeonId,
+        level: d.level,
       }))});
+    }
+
+    if (action === 'compare') {
+      const monsterToDungeons = buildMonsterToDungeons(gd);
+      const monsterById = new Map(gd.monsters.map(m => [m.ID, m]));
+
+      // Read all existing boss JSONs
+      let files: string[] = [];
+      try { files = (await fs.readdir(BOSS_DIR)).filter(f => f.endsWith('.json') && f !== 'index.json'); } catch { /* empty */ }
+
+      type CompareEntry = { id: string; file: string; name: string; diffs: { field: string; existing: string; extracted: string }[]; notInGame?: boolean };
+
+      function compareOne(file: string, existing: Record<string, unknown>): CompareEntry | 'ok' {
+        const rawId = String(existing.id ?? file.replace(/\.json$/, ''));
+        // Extract base monster ID: "440400079-B-1" → "440400079"
+        const id = rawId.split('-')[0];
+        const monster = monsterById.get(id);
+        if (!monster) {
+          const name = (existing.Name as Record<string, string>)?.en ?? rawId;
+          return { id: rawId, file, name, diffs: [], notInGame: true };
+        }
+
+        const dungeons = monsterToDungeons.get(id) ?? [];
+        const ext = extractMonster(gd, monster, dungeons);
+
+        const diffs: { field: string; existing: string; extracted: string }[] = [];
+
+        for (const field of ['class', 'element', 'StatBuffImmune'] as const) {
+          const e = String((existing as Record<string, unknown>)[field] ?? '');
+          const x = String((ext as Record<string, unknown>)[field] ?? '');
+          if (e !== x) diffs.push({ field, existing: e, extracted: x });
+        }
+
+        const extSkills = ext.skills as Record<string, unknown>[];
+        const exSkills = (existing.skills ?? []) as Record<string, unknown>[];
+        for (const es of extSkills) {
+          const match = exSkills.find(s =>
+            s.type === es.type && (s.name as Record<string, string>)?.en === (es.name as Record<string, string>)?.en
+          );
+          if (!match) {
+            diffs.push({ field: 'skill (new)', existing: '', extracted: `${es.type}: ${(es.name as Record<string, string>)?.en}` });
+            continue;
+          }
+          const extBuff = JSON.stringify(es.buff ?? []);
+          const curBuff = JSON.stringify(match.buff ?? []);
+          if (extBuff !== curBuff) diffs.push({ field: `${(es.name as Record<string, string>)?.en} buff`, existing: curBuff, extracted: extBuff });
+          const extDebuff = JSON.stringify(es.debuff ?? []);
+          const curDebuff = JSON.stringify(match.debuff ?? []);
+          if (extDebuff !== curDebuff) diffs.push({ field: `${(es.name as Record<string, string>)?.en} debuff`, existing: curDebuff, extracted: extDebuff });
+          for (const lang of LANGS) {
+            const extDesc = ((es.description as Record<string, string>) ?? {})[lang] ?? '';
+            const curDesc = ((match.description as Record<string, string>) ?? {})[lang] ?? '';
+            if (extDesc && curDesc && extDesc !== curDesc) {
+              diffs.push({ field: `${(es.name as Record<string, string>)?.en} desc_${lang}`, existing: curDesc, extracted: extDesc });
+            }
+          }
+        }
+        for (const s of exSkills) {
+          const match = extSkills.find(es =>
+            es.type === s.type && (es.name as Record<string, string>)?.en === (s.name as Record<string, string>)?.en
+          );
+          if (!match) {
+            diffs.push({ field: 'skill (missing)', existing: `${s.type}: ${(s.name as Record<string, string>)?.en}`, extracted: '' });
+          }
+        }
+
+        if (diffs.length === 0) return 'ok';
+        const name = (existing.Name as Record<string, string>)?.en ?? id;
+        return { id: rawId, file, name, diffs };
+      }
+
+      // Read and compare in parallel batches
+      const BATCH = 10;
+      const results: CompareEntry[] = [];
+      let ok = 0;
+      let notFound = 0;
+
+      for (let i = 0; i < files.length; i += BATCH) {
+        const batch = files.slice(i, i + BATCH);
+        const batchResults = await Promise.all(batch.map(async (file) => {
+          try {
+            const raw = await fs.readFile(path.join(BOSS_DIR, file), 'utf-8');
+            return { file, data: JSON.parse(raw) as Record<string, unknown> };
+          } catch { return null; }
+        }));
+
+        for (const entry of batchResults) {
+          if (!entry) continue;
+          const res = compareOne(entry.file, entry.data);
+          if (res === 'ok') ok++;
+          else if (res.notInGame) { notFound++; results.unshift(res); }
+          else results.push(res);
+        }
+      }
+
+      return NextResponse.json({ total: files.length, ok, withDiffs: results.length, notFound, results });
     }
 
     return NextResponse.json({ error: `Unknown action: ${action}` }, { status: 400 });

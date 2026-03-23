@@ -1,26 +1,122 @@
 [
   {
     "name": "Core Fusion Lisha",
-    "review": "A self-sufficient {E/Fire} DPS that excels against {E/Earth} enemies and bosses. She self-buffs with {B/BT_STAT|ST_ATK}, {B/BT_STAT|ST_CRITICAL_DMG_RATE} and {B/BT_STAT|ST_PIERCE_POWER_RATE}, and ignores up to 50% of Defense against {E/Earth} targets. Her passive grants +50% damage to bosses and to targets with elemental disadvantage. Her Exclusive Equipment makes her shine in {C/Mage} teams: +50% damage for allied mages and stacking {B/BT_STAT|ST_ATK} when a mage takes action. Worth fully investing to level 5.",
-    "review_jp": "自己完結型の{E/Fire}DPSで、{E/Earth}の敵やボスに対して真価を発揮する。{B/BT_STAT|ST_ATK}、{B/BT_STAT|ST_CRITICAL_DMG_RATE}、{B/BT_STAT|ST_PIERCE_POWER_RATE}で自己バフし、{E/Earth}対象には最大50%の防御無視が可能。パッシブでボスと属性不利の対象に+50%ダメージ。専用装備により{C/Mage}チームで輝く：味方メイジのダメージ+50%、メイジの行動時に{B/BT_STAT|ST_ATK}がスタック。レベル5まで投資する価値がある。",
-    "review_kr": "자급자족형 {E/Fire} 딜러로 {E/Earth} 적과 보스 상대에 뛰어나다. {B/BT_STAT|ST_ATK}, {B/BT_STAT|ST_CRITICAL_DMG_RATE}, {B/BT_STAT|ST_PIERCE_POWER_RATE}로 자기 버프하며 {E/Earth} 대상에게 최대 50% 방어 무시가 가능하다. 패시브로 보스와 속성 불리 대상에 +50% 피해. 전용 장비로 {C/Mage} 팀에서 빛난다: 아군 메이지 피해 +50%, 메이지 행동 시 {B/BT_STAT|ST_ATK} 스택. 레벨 5까지 투자할 가치가 있다.",
-    "review_zh": "自给自足的{E/Fire}输出，擅长对付{E/Earth}敌人和Boss。通过{B/BT_STAT|ST_ATK}、{B/BT_STAT|ST_CRITICAL_DMG_RATE}和{B/BT_STAT|ST_PIERCE_POWER_RATE}自我增益，对{E/Earth}目标可无视最高50%防御。被动对Boss和属性不利目标+50%伤害。专属装备使她在{C/Mage}队伍中大放异彩：友方法师伤害+50%，法师行动时叠加{B/BT_STAT|ST_ATK}。值得投资到5级。",
-    "recommended_level": "3"
+    "review": "Full rework into a self-sufficient anti-{E/Earth} DPS with up to 50% DEF ignore.",
+    "review_jp": "{E/Earth}特化の自己完結型DPSに完全リワーク。最大50%のDEF無視。",
+    "review_kr": "{E/Earth} 특화 자급자족형 딜러로 완전 리워크. 최대 50% DEF 무시.",
+    "review_zh": "完全重做为反{E/Earth}自给自足型输出，最高50%无视防御。",
+    "recommended_level": "3 or 5",
+    "changes": {
+      "s1": {
+        "review": "{B/BT_STAT|ST_CRITICAL_RATE} self-buff replaced by {B/BT_STAT|ST_ATK} self-buff (2 turns at Lv5).",
+        "review_jp": "{B/BT_STAT|ST_CRITICAL_RATE}の自己バフが{B/BT_STAT|ST_ATK}の自己バフに変更（Lv5で2ターン）。",
+        "review_kr": "{B/BT_STAT|ST_CRITICAL_RATE} 자기 버프가 {B/BT_STAT|ST_ATK} 자기 버프로 변경 (Lv5에서 2턴).",
+        "review_zh": "{B/BT_STAT|ST_CRITICAL_RATE}自我增益替换为{B/BT_STAT|ST_ATK}自我增益（Lv5时2回合）。"
+      },
+      "s2": {
+        "review": "Complete rework. Grants {B/BT_STAT|ST_PIERCE_POWER_RATE} (3 turns).\nWith {B/BT_STAT|ST_CRITICAL_DMG_RATE}: becomes single-target + S3 cooldown -1.\nVs {E/Earth}: +30% Priority.",
+        "review_jp": "完全リワーク。{B/BT_STAT|ST_PIERCE_POWER_RATE}を付与（3ターン）。\n{B/BT_STAT|ST_CRITICAL_DMG_RATE}時：単体攻撃に変化＋S3クールダウン-1。\n{E/Earth}対象：優先度+30%。",
+        "review_kr": "완전 리워크. {B/BT_STAT|ST_PIERCE_POWER_RATE} 부여 (3턴).\n{B/BT_STAT|ST_CRITICAL_DMG_RATE} 시: 단일 대상으로 변경 + S3 쿨다운 -1.\n{E/Earth} 상대: 우선도 +30%.",
+        "review_zh": "完全重做。赋予{B/BT_STAT|ST_PIERCE_POWER_RATE}（3回合）。\n{B/BT_STAT|ST_CRITICAL_DMG_RATE}时：变为单体+S3冷却-1。\n对{E/Earth}：优先度+30%。"
+      },
+      "s3": {
+        "review": "Self-buff changed from {B/BT_STAT|ST_ATK} to {B/BT_STAT|ST_CRITICAL_DMG_RATE} (3 turns). +20% DMG vs {E/Earth} replaced by DEF ignore:\nWith {B/BT_STAT|ST_PIERCE_POWER_RATE}: ignores 20% DEF.\nVs {E/Earth}: ignores additional 30% DEF (50% total).",
+        "review_jp": "自己バフが{B/BT_STAT|ST_ATK}から{B/BT_STAT|ST_CRITICAL_DMG_RATE}（3ターン）に変更。{E/Earth}への+20%ダメージがDEF無視に置き換え：\n{B/BT_STAT|ST_PIERCE_POWER_RATE}時：DEF20%無視。\n{E/Earth}対象：追加30%DEF無視（合計50%）。",
+        "review_kr": "자기 버프가 {B/BT_STAT|ST_ATK}에서 {B/BT_STAT|ST_CRITICAL_DMG_RATE} (3턴)로 변경. {E/Earth} 대상 +20% 피해가 DEF 무시로 교체:\n{B/BT_STAT|ST_PIERCE_POWER_RATE} 시: DEF 20% 무시.\n{E/Earth} 상대: 추가 30% DEF 무시 (총 50%).",
+        "review_zh": "自我增益从{B/BT_STAT|ST_ATK}改为{B/BT_STAT|ST_CRITICAL_DMG_RATE}（3回合）。对{E/Earth}+20%伤害替换为无视防御：\n有{B/BT_STAT|ST_PIERCE_POWER_RATE}时：无视20%防御。\n对{E/Earth}：额外无视30%防御（共50%）。"
+      },
+      "chain": {
+        "review": "Chain: Starter → Companion. Team {B/BT_STAT|ST_ATK} replaced by 25 AP restore (caster + next chain unit).\nDual: {B/BT_STAT|ST_ATK} duration 1 → 2 turns.",
+        "review_jp": "チェーン：スターター→コンパニオン。味方全体{B/BT_STAT|ST_ATK}がAP25回復（自身＋次のチェーンユニット）に置き換え。\n連携攻撃：{B/BT_STAT|ST_ATK}が1→2ターンに。",
+        "review_kr": "체인: 스타터 → 컴패니언. 아군 전체 {B/BT_STAT|ST_ATK}가 AP 25 회복 (시전자 + 다음 체인 유닛)으로 교체.\n협공: {B/BT_STAT|ST_ATK} 1 → 2턴.",
+        "review_zh": "连锁：开启者→同伴。全队{B/BT_STAT|ST_ATK}替换为25 AP恢复（施法者+下一个连锁单位）。\n协攻：{B/BT_STAT|ST_ATK} 1→2回合。"
+      },
+      "passive": {
+        "review": "+50% DMG vs elemental advantage. Enhanced (Lv5): +50% DMG vs bosses.",
+        "review_jp": "属性有利に+50%ダメージ。強化（Lv5）：ボスに+50%ダメージ。",
+        "review_kr": "속성 유리 시 +50% 피해. 강화 (Lv5): 보스에 +50% 피해.",
+        "review_zh": "属性克制时+50%伤害。强化（Lv5）：对Boss+50%伤害。"
+      }
+    }
   },
   {
     "name": "Core Fusion Snow",
-    "review": "A {E/Water} speed-scaling controller specialized in {D/BT_ACTION_GAUGE} / {B/BT_ACTION_GAUGE} manipulation and {D/BT_FREEZE} lockdown. All her damage scales with Speed. Her chain attacks always count as elemental advantage regardless of target. Core passive grants +50% damage vs advantageous element and +50% vs bosses. Her EE provides +100% Effectiveness and Penetration 30% vs bosses at level 10. However, her kit reaches full potential only against {E/Fire} enemies (extra priority reduction), limiting her versatility elsewhere.",
-    "review_jp": "{D/BT_ACTION_GAUGE} / {B/BT_ACTION_GAUGE}操作と{D/BT_FREEZE}ロックに特化した、スピード依存の{E/Water}コントローラー。全ダメージがスピードでスケーリング。チェーン攻撃は常に属性有利として扱われる。コアパッシブで有利属性+50%、ボス+50%ダメージ。専用装備で効果命中+100%、Lv10でボスに貫通力30%。ただし{E/Fire}の敵に対してのみフルポテンシャルを発揮し（追加優先度減少）、それ以外では汎用性が制限される。",
-    "review_kr": "{D/BT_ACTION_GAUGE} / {B/BT_ACTION_GAUGE} 조작과 {D/BT_FREEZE} 락다운에 특화된 속도 스케일링 {E/Water} 컨트롤러. 모든 피해가 속도에 비례한다. 체인 공격은 항상 속성 유리로 적용된다. 코어 패시브로 유리 속성 +50%, 보스 +50% 피해. 전용 장비로 효과 적중 +100%, Lv10에서 보스 관통력 30%. 다만 {E/Fire} 적에서만 풀 포텐셜을 발휘하여(추가 우선도 감소) 다른 곳에서의 범용성이 제한된다.",
-    "review_zh": "专注于{D/BT_ACTION_GAUGE} / {B/BT_ACTION_GAUGE}操控和{D/BT_FREEZE}封锁的速度成长型{E/Water}控制者。所有伤害随速度提升。连锁攻击始终视为属性克制。核心被动对克制属性+50%、对Boss+50%伤害。专属装备提供+100%效果命中，10级对Boss贯穿力30%。但仅在面对{E/Fire}敌人时才能发挥全部潜力（额外优先度减少），限制了其他场景的通用性。",
-    "recommended_level": "4"
+    "review": "Full Speed scaling across all skills. Priority reduction extended to all enemies (still some bonus against {E/Fire} enemies). {D/BT_FREEZE} now guaranteed.",
+    "review_jp": "全スキルにスピード依存ダメージ。優先度減少が全対象に拡大（{E/Fire}への追加ボーナスは維持）。{D/BT_FREEZE}が確定に。",
+    "review_kr": "모든 스킬에 속도 비례 피해. 우선도 감소가 모든 대상으로 확대 ({E/Fire} 상대 추가 보너스 유지). {D/BT_FREEZE} 확정으로 변경.",
+    "review_zh": "所有技能获得速度比例伤害。优先度降低扩展至所有敌人（对{E/Fire}仍有额外加成）。{D/BT_FREEZE}改为必定触发。",
+    "recommended_level": "3 or 5",
+    "changes": {
+      "s1": {
+        "review": "Priority reduction now targets all enemies (was {E/Fire} only). +10% additional vs {E/Fire}.",
+        "review_jp": "優先度減少が全対象に（以前は{E/Fire}のみ）。{E/Fire}には追加+10%。",
+        "review_kr": "우선도 감소가 모든 대상으로 (이전에는 {E/Fire}만). {E/Fire} 상대 추가 +10%.",
+        "review_zh": "优先度降低现在对所有敌人生效（原仅{E/Fire}）。对{E/Fire}额外+10%。"
+      },
+      "s2": {
+        "review": "{D/BT_FREEZE} now guaranteed (was 80%). Gains +20% Priority after attacking. +50% DMG vs {D/BT_FREEZE} targets.",
+        "review_jp": "{D/BT_FREEZE}が確定に（以前は80%）。攻撃後に優先度+20%。{D/BT_FREEZE}対象にダメージ+50%。",
+        "review_kr": "{D/BT_FREEZE} 확정으로 변경 (이전 80%). 공격 후 우선도 +20%. {D/BT_FREEZE} 대상에 피해 +50%.",
+        "review_zh": "{D/BT_FREEZE}改为必定触发（原80%）。攻击后优先度+20%。对{D/BT_FREEZE}目标伤害+50%。"
+      },
+      "s3": {
+        "review": "Changed from AoE to single-target. Priority reduction replaced by {B/BT_STAT|ST_SPEED} self-buff and {D/BT_FREEZE} (2 turns). Extra Priority reduction vs {E/Fire} remains.",
+        "review_jp": "全体から単体に変更。優先度減少が{B/BT_STAT|ST_SPEED}自己バフと{D/BT_FREEZE}（2ターン）に置き換え。{E/Fire}への追加優先度減少は変わらず。",
+        "review_kr": "전체에서 단일 대상으로 변경. 우선도 감소가 {B/BT_STAT|ST_SPEED} 자기 버프와 {D/BT_FREEZE} (2턴)으로 교체. {E/Fire} 상대 추가 우선도 감소는 유지.",
+        "review_zh": "从全体改为单体。优先度降低替换为{B/BT_STAT|ST_SPEED}自我增益和{D/BT_FREEZE}（2回合）。对{E/Fire}额外优先度降低不变。"
+      },
+      "chain": {
+        "review": "Chain: Finish → Companion. Gains Speed scaling + always counts as elemental advantage.\nDual: gains Speed scaling + -10% target Priority.",
+        "review_jp": "チェーン：フィニッシュ→コンパニオン。スピード依存ダメージを獲得＋常に属性有利として扱われる。\n連携攻撃：スピード依存ダメージを獲得＋対象の優先度-10%。",
+        "review_kr": "체인: 피니시 → 컴패니언. 속도 비례 피해 획득 + 항상 속성 유리로 적용.\n협공: 속도 비례 피해 획득 + 대상 우선도 -10%.",
+        "review_zh": "连锁：终结者→同伴。获得速度比例伤害+始终视为属性克制。\n协攻：获得速度比例伤害+目标优先度-10%。"
+      },
+      "passive": {
+        "review": "+50% DMG vs elemental advantage. Enhanced (Lv5): +50% DMG vs bosses.",
+        "review_jp": "属性有利に+50%ダメージ。強化（Lv5）：ボスに+50%ダメージ。",
+        "review_kr": "속성 유리 시 +50% 피해. 강화 (Lv5): 보스에 +50% 피해.",
+        "review_zh": "属性克制时+50%伤害。强化（Lv5）：对Boss+50%伤害。"
+      }
+    }
   },
   {
     "name": "Core Fusion Veronica",
-    "review": "A {E/Water} HP-scaling tank with an extremely loaded kit. She {D/BT_AGGRO} enemies, triggers {B/BT_CALL_BACKUP}, auto {B/BT_REMOVE_DEBUFF} and {B/BT_SHIELD_BASED_CASTER} the lowest HP ally every turn, and {B/BT_STAT|ST_COUNTER_RATE} when hit. Her S3 {D/BT_REMOVE_BUFF} from all enemies (ignores Resilience) while granting team-wide {B/BT_STAT|ST_DEF}. Core passive increases damage for allies under {B/BT_STAT|ST_DEF}, synergizing perfectly with her own kit. Her EE grants priority when hit, improving her turn cycling. The most universally useful Core Fusion unit — no elemental restriction.",
-    "review_jp": "非常に充実したキットを持つHP依存の{E/Water}タンク。{D/BT_AGGRO}で敵を挑発し、連携攻撃を誘発、毎ターン自動でデバフ解除と最低HPの味方にシールドを付与、被弾時にカウンター。S3で全敵のバフを剥がし（効果抵抗無視）、味方全体に{B/BT_STAT|ST_DEF}を付与。コアパッシブで{B/BT_STAT|ST_DEF}を受けた味方のダメージが増加し、自身のキットと完璧にシナジー。専用装備で被弾時に優先度UP。属性制限のない最も汎用性の高いコアフュージョンユニット。",
-    "review_kr": "매우 충실한 키트를 가진 HP 스케일링 {E/Water} 탱커. {D/BT_AGGRO}로 적을 도발하고 협공을 유발, 매턴 자동으로 디버프 해제와 최저 HP 아군에게 실드 부여, 피격 시 반격. S3으로 전체 적 버프 해제(효과 저항 무시) 후 아군 전체 {B/BT_STAT|ST_DEF} 부여. 코어 패시브로 {B/BT_STAT|ST_DEF} 받는 아군 피해 증가, 자신의 키트와 완벽한 시너지. 전용 장비로 피격 시 우선도 UP. 속성 제한 없는 가장 범용적인 코어 퓨전 유닛.",
-    "review_zh": "拥有极其丰富技能组的HP成长型{E/Water}坦克。{D/BT_AGGRO}嘲讽敌人并触发夹攻，每回合自动净化减益并为最低HP友军赋予护盾，受击时反击。S3剥离全体敌人增益（无视效果抵抗）并为全队赋予{B/BT_STAT|ST_DEF}。核心被动使受到{B/BT_STAT|ST_DEF}的友军伤害提高，与自身技能组完美协同。专属装备受击时提升优先度。无属性限制，最具通用性的核心融合单位。",
-    "recommended_level": "5"
+    "review": "All skills now deal damage proportional to the caster's Max Health instead of a mixed scaling ratio. This makes her a pure HP-scaling tank.",
+    "review_jp": "全スキルのダメージが混合比率ではなく、施術者の最大HPに比例するようになった。純粋なHPスケーリングタンクに。",
+    "review_kr": "모든 스킬의 피해가 혼합 비율 대신 시전자의 최대 HP에 비례하도록 변경. 순수 HP 스케일링 탱커로 전환.",
+    "review_zh": "所有技能伤害从混合比例改为基于施法者最大生命值。使她成为纯HP成长型坦克。",
+    "recommended_level": "5",
+    "changes": {
+      "s1": {
+        "review": "{B/BT_CALL_BACKUP} no longer requires {B/BT_STAT|ST_DEF}. {D/BT_STAT|ST_ATK} on target if {B/BT_STAT|ST_DEF} is active.\nBurst 1: +1 WGD.\nBurst 2: ignores Resilience.",
+        "review_jp": "{B/BT_CALL_BACKUP}に{B/BT_STAT|ST_DEF}が不要に。{B/BT_STAT|ST_DEF}がある場合に対象の{D/BT_STAT|ST_ATK}を付与。\nバースト1：WGD+1。\nバースト2：効果抵抗無視。",
+        "review_kr": "{B/BT_CALL_BACKUP}에 {B/BT_STAT|ST_DEF}가 불필요. {B/BT_STAT|ST_DEF} 활성 시 대상에 {D/BT_STAT|ST_ATK} 부여.\n버스트 1: WGD +1.\n버스트 2: 효과 저항 무시.",
+        "review_zh": "{B/BT_CALL_BACKUP}不再需要{B/BT_STAT|ST_DEF}。{B/BT_STAT|ST_DEF}激活时对目标施加{D/BT_STAT|ST_ATK}。\n爆发1：WGD+1。\n爆发2：无视效果抵抗。"
+      },
+      "s2": {
+        "review": "{B/BT_REMOVE_DEBUFF} now targets lowest HP ally instead of self only. Gains counterattack when hit, inflicts {D/BT_AGGRO}.",
+        "review_jp": "{B/BT_REMOVE_DEBUFF}が自身のみから最低HPの味方に変更。被弾時にカウンターが追加、{D/BT_AGGRO}を付与。",
+        "review_kr": "{B/BT_REMOVE_DEBUFF}가 자신만에서 최저 HP 아군으로 변경. 피격 시 반격 추가, {D/BT_AGGRO} 부여.",
+        "review_zh": "{B/BT_REMOVE_DEBUFF}从仅自身改为最低HP友军。受击时反击并施加{D/BT_AGGRO}。"
+      },
+      "s3": {
+        "review": "{D/BT_REMOVE_BUFF} 2 buffs (was 1). Ignores 30% DEF vs bosses.",
+        "review_jp": "{D/BT_REMOVE_BUFF}が2つに（以前は1つ）。ボスに対してDEF30%無視。",
+        "review_kr": "{D/BT_REMOVE_BUFF} 2개로 (이전 1개). 보스 상대 DEF 30% 무시.",
+        "review_zh": "{D/BT_REMOVE_BUFF}增至2个（原1个）。对Boss无视30%防御。"
+      },
+      "chain": {
+        "review": "Chain: unchanged. Dual: {D/BT_AGGRO} 100% (was 70%).",
+        "review_jp": "チェーン：変更なし。連携攻撃：{D/BT_AGGRO}が100%に（以前は70%）。",
+        "review_kr": "체인: 변경 없음. 협공: {D/BT_AGGRO} 100% (이전 70%).",
+        "review_zh": "连锁：无变化。协攻：{D/BT_AGGRO} 100%（原70%）。"
+      },
+      "passive": {
+        "review": "Team {B/BT_STAT|ST_CRITICAL_DMG_RATE} for 2 turns at battle start. Increases damage for all allies under {B/BT_STAT|ST_DEF}.",
+        "review_jp": "戦闘開始時にチーム全体{B/BT_STAT|ST_CRITICAL_DMG_RATE}（2ターン）。{B/BT_STAT|ST_DEF}を受けた味方全体のダメージ増加。",
+        "review_kr": "전투 시작 시 팀 전체 {B/BT_STAT|ST_CRITICAL_DMG_RATE} (2턴). {B/BT_STAT|ST_DEF} 받는 모든 아군 피해 증가.",
+        "review_zh": "战斗开始时全队{B/BT_STAT|ST_CRITICAL_DMG_RATE}（2回合）。{B/BT_STAT|ST_DEF}状态下的所有友军伤害提升。"
+      }
+    }
   }
 ]

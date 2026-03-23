@@ -94,7 +94,11 @@ const BUFF_TYPE_BLACKLIST = new Set([
   "BT_SECOND_TRIGGER",
   'BT_DMG_REDUCE_FINAL',
   'BT_DMG_MY_TEAM_DECREASE',
-  'BT_RESOURCE_CHARGE_BUFF_CASTER'
+  'BT_RESOURCE_CHARGE_BUFF_CASTER',
+  'BT_WG_HEAL',
+  'BT_WG_DMG_REDUCE',
+  'BT_DOT_CURSE_CAP',
+  'BT_REVERSE_HEAL_CAP',
 ]);
 
 /**
@@ -106,19 +110,23 @@ const BUFF_TYPE_BLACKLIST = new Set([
 export function extractBuffDebuff(
   buffGroupIds: string[],
   buffData: BuffRow[],
+  { expandInterruption = true }: { expandInterruption?: boolean } = {},
 ): { buff: string[]; debuff: string[] } {
   const buffs = new Set<string>();
   const debuffs = new Set<string>();
 
   // Expand buff group IDs to include siblings with _Interruption IconName only
+  // Disabled for monsters where normal/hard variants share the same prefix
   const expandedIds = new Set(buffGroupIds);
-  for (const gid of buffGroupIds) {
-    const parts = gid.split('_');
-    if (parts.length >= 3 && /^\d{7}$/.test(parts[0])) {
-      const prefix = `${parts[0]}_${parts[1]}_`;
-      for (const row of buffData) {
-        if (row.BuffID?.startsWith(prefix) && !row.BuffID.endsWith('_old') && row.IconName?.includes('_Interruption')) {
-          expandedIds.add(row.BuffID);
+  if (expandInterruption) {
+    for (const gid of buffGroupIds) {
+      const parts = gid.split('_');
+      if (parts.length >= 3 && /^\d{7}$/.test(parts[0])) {
+        const prefix = `${parts[0]}_${parts[1]}_`;
+        for (const row of buffData) {
+          if (row.BuffID?.startsWith(prefix) && !row.BuffID.endsWith('_old') && row.IconName?.includes('_Interruption')) {
+            expandedIds.add(row.BuffID);
+          }
         }
       }
     }

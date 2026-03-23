@@ -13,6 +13,7 @@ const steps: Step[] = [
   { name: 'boss-index', run: () => import('./steps/boss-index').then(m => m.run()) },
   { name: 'characters-index', run: () => import('./steps/characters-index').then(m => m.run()) },
   { name: 'character-stats', run: () => import('./steps/character-stats').then(m => m.run()) },
+  { name: 'cf-skill-names', run: () => import('./steps/cf-skill-names').then(m => m.run()) },
   { name: 'area-names', run: () => import('./steps/area-names').then(m => m.run()) },
   { name: 'guide-boss-map', run: () => import('./steps/guide-boss-map').then(m => m.run()) },
   { name: 'most-used-units', run: () => import('./steps/most-used-units').then(m => m.run()) },
