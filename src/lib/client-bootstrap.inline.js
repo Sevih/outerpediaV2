@@ -41,10 +41,15 @@
 
   // Version check — on visibility change and navigation
   function checkVersion() {
+    // Only reload once per session to avoid loops (ISR pages may serve stale HTML)
+    if (sessionStorage.getItem('version_reload')) return;
     fetch('/api/version', { cache: 'no-store' })
       .then(function (r) { return r.json(); })
       .then(function (d) {
-        if (d.version && CV && d.version !== CV) doReload();
+        if (d.version && CV && d.version !== CV) {
+          sessionStorage.setItem('version_reload', d.version);
+          doReload();
+        }
       })
       .catch(function () {});
   }
