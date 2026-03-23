@@ -61,6 +61,10 @@
           setTimeout(showUpdateBanner, 2000);
         });
         navigator.serviceWorker.register('/sw.js').then(function (reg) {
+          // Check for updates shortly after load, then every 5 minutes
+          setTimeout(function () { reg.update(); checkVersion(); }, 10000);
+          setInterval(function () { reg.update(); checkVersion(); }, 5 * 60 * 1000);
+
           document.addEventListener('visibilitychange', function () {
             if (!document.hidden) { reg.update(); checkVersion(); }
           });

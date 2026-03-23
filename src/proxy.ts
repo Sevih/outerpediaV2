@@ -21,8 +21,8 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Let Next.js handle its own generated files (sitemap.xml, robots.txt, etc.)
-  if (/^\/(sitemap.*\.xml|robots\.txt|manifest\.json)$/.test(pathname)) {
+  // Let Next.js handle its own generated files (sitemap.xml, robots.txt, sw.js, etc.)
+  if (/^\/(sitemap.*\.xml|robots\.txt|manifest\.json|sw\.js)$/.test(pathname)) {
     return NextResponse.next();
   }
 
