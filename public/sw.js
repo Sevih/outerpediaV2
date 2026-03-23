@@ -1,5 +1,5 @@
 // Version injected by scripts/set-version.js at build time
-const CACHE_NAME = 'outerpedia-cache-v2.3.5';
+const CACHE_NAME = 'outerpedia-cache-v2.3.6';
 const APP_VERSION = CACHE_NAME.replace('outerpedia-cache-v', '');
 
 // Static assets to pre-cache on install
