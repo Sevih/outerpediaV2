@@ -19,10 +19,7 @@ export default function CategoryCard({ slug, icon, count, lang, t }: Props) {
   const description = t[descKey] ?? '';
 
   return (
-    <Link
-      href={localePath(lang, `/guides/${slug}`)}
-      className="card-interactive group flex items-center gap-4 p-4 transition-colors"
-    >
+    <div className="card-interactive group relative flex items-center gap-4 p-4 transition-colors">
       <div className="relative h-12 w-12 shrink-0">
         <Image
           src={`${icon}.webp`}
@@ -33,14 +30,19 @@ export default function CategoryCard({ slug, icon, count, lang, t }: Props) {
         />
       </div>
       <div className="min-w-0 flex-1">
-        <h2 className="text-sm font-semibold text-zinc-100 after:hidden">
-          {title}
+        <h2 className="static pb-0 text-sm font-semibold text-zinc-100 after:hidden">
+          <Link
+            href={localePath(lang, `/guides/${slug}`)}
+            className="after:absolute after:inset-0 after:z-10"
+          >
+            {title}
+          </Link>
         </h2>
         <p className="mt-0.5 text-xs text-zinc-400">{description}</p>
       </div>
       <span className="shrink-0 rounded-full bg-zinc-700 px-2.5 py-0.5 text-xs font-medium text-zinc-300">
         {count}
       </span>
-    </Link>
+    </div>
   );
 }

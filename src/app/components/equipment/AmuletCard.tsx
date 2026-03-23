@@ -25,7 +25,7 @@ export default function AmuletCard({ amulet, lang, bossMap }: Props) {
   const effectDesc = effectDesc4 ?? effectDesc1;
 
   return (
-    <Link href={href(`/equipment/${slugifyEquipment(amulet.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
+    <div className="card relative flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/class */}
       <div className="flex items-start gap-3">
         <EquipmentIcon
@@ -39,7 +39,7 @@ export default function AmuletCard({ amulet, lang, bossMap }: Props) {
           level={amulet.level}
         />
         <div className="flex min-w-0 flex-1 flex-col gap-1">
-          <p className="font-bold text-equipment">{name}</p>
+          <Link href={href(`/equipment/${slugifyEquipment(amulet.name)}`)} className="font-bold text-equipment after:absolute after:inset-0">{name}</Link>
 
           {amulet.class && (
             <div className="flex items-center gap-1">
@@ -80,6 +80,6 @@ export default function AmuletCard({ amulet, lang, bossMap }: Props) {
       )}
 
       <EquipmentSource source={amulet.source} boss={amulet.boss} bossMap={bossMap} lang={lang} />
-    </Link>
+    </div>
   );
 }

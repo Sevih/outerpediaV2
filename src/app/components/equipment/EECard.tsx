@@ -23,7 +23,7 @@ export default function EECard({ ee, charId, charName, lang }: Props) {
   const effect10 = l(ee, 'effect10', lang);
 
   return (
-    <Link href={localePath(lang, `/equipment/${slugifyEquipment(ee.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
+    <div className="card relative flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: character portrait + EE name/charName + rank */}
       <div className="flex items-start gap-3">
         <div className="relative h-17.5 w-17.5 shrink-0 overflow-hidden rounded-lg">
@@ -47,7 +47,7 @@ export default function EECard({ ee, charId, charName, lang }: Props) {
         <div className="flex min-w-0 flex-1 flex-col gap-1">
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
-              <p className="font-bold text-equipment">{name}</p>
+              <Link href={localePath(lang, `/equipment/${slugifyEquipment(ee.name)}`)} className="font-bold text-equipment after:absolute after:inset-0">{name}</Link>
               <p className="text-xs text-zinc-400">{charName}</p>
             </div>
             {ee.rank && (
@@ -88,6 +88,6 @@ export default function EECard({ ee, charId, charName, lang }: Props) {
 
       {/* Full-width: buff/debuff icons */}
       <BuffDebuffDisplay buffs={ee.buff} debuffs={ee.debuff} />
-    </Link>
+    </div>
   );
 }

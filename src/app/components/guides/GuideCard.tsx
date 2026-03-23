@@ -17,11 +17,7 @@ export default function GuideCard({ guide, lang, t }: Props) {
   const description = lRec(guide.description, lang);
 
   return (
-    <Link
-      href={localePath(lang, `/guides/${guide.category}/${guide.slug}`)}
-      className="card-interactive group flex items-start gap-3 p-4 transition-colors"
-      aria-label={`${title} — ${t[`guides.category.${guide.category}` as TranslationKey] ?? guide.category}`}
-    >
+    <div className="card-interactive group relative flex items-start gap-3 p-4 transition-colors">
       <div className="relative h-10 w-10 shrink-0">
         <Image
           src={`/images/guides/${guide.icon}.webp`}
@@ -32,9 +28,13 @@ export default function GuideCard({ guide, lang, t }: Props) {
         />
       </div>
       <div className="flex min-w-0 flex-1 flex-col">
-        <h3 className="text-sm font-semibold text-zinc-100 after:hidden group-hover:text-yellow-300 transition-colors">
-          {title}
-          <span className="sr-only">{` — ${t[`guides.category.${guide.category}` as TranslationKey] ?? guide.category}`}</span>
+        <h3 className="static pb-0 text-sm font-semibold text-zinc-100 after:hidden group-hover:text-yellow-300 transition-colors">
+          <Link
+            href={localePath(lang, `/guides/${guide.category}/${guide.slug}`)}
+            className="after:absolute after:inset-0 after:z-10"
+          >
+            {title}
+          </Link>
         </h3>
         {description && (
           <p className="mt-1.5 text-xs text-zinc-400">{description}</p>
@@ -44,6 +44,6 @@ export default function GuideCard({ guide, lang, t }: Props) {
           <span>{guide.last_updated}</span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

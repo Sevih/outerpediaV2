@@ -23,7 +23,7 @@ export default function SetCard({ set, lang, bossMap }: Props) {
   const effect4 = l(set, 'effect_4_4', lang) || l(set, 'effect_4_1', lang);
 
   return (
-    <Link href={href(`/equipment/${slugifyEquipment(set.name)}`)} className="card flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
+    <div className="card relative flex flex-col gap-2 p-4 transition-colors hover:bg-zinc-800/80">
       {/* Top row: icon + name/class */}
       <div className="flex items-start gap-3">
         <EquipmentIcon
@@ -35,7 +35,7 @@ export default function SetCard({ set, lang, bossMap }: Props) {
           effectIcon={set.set_icon}
         />
         <div className="flex min-w-0 flex-1 flex-col gap-1">
-          <p className="font-bold text-equipment">{name}</p>
+          <Link href={href(`/equipment/${slugifyEquipment(set.name)}`)} className="font-bold text-equipment after:absolute after:inset-0">{name}</Link>
 
           {set.class && (
             <div className="flex items-center gap-1">
@@ -73,6 +73,6 @@ export default function SetCard({ set, lang, bossMap }: Props) {
       )}
 
       <EquipmentSource source={set.source} boss={set.boss} bossMap={bossMap} lang={lang} />
-    </Link>
+    </div>
   );
 }
