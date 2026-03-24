@@ -258,6 +258,13 @@ const MONSTER_BUFF_ID_BLACKLIST = new Set([
   '4076007_11_3', // Chimera Starving Devil: internal shield
 ]);
 
+// Force add buff/debuff to specific monster skills (monsterId:skillType → { buff, debuff })
+// Used for effects described in rage text but not encoded as separate skills
+const MONSTER_SKILL_BUFF_FORCE: Record<string, { buff?: string[]; debuff?: string[] }> = {
+  '4034003:SKT_RAGE_ENTER1': { debuff: ['BT_ACTION_GAUGE', 'BT_DOT_BURN'] },
+  '4134003:SKT_RAGE_ENTER1': { debuff: ['BT_ACTION_GAUGE', 'BT_DOT_BURN'] },
+};
+
 /** Collect buff IDs from MonsterSkillLevelTemplet rows.
  *  Reads the BuffID field (now correctly assigned after parser fix).
  */
@@ -386,6 +393,12 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
       description: resolvedDesc,
       icon: iconName,
     };
+    // Apply forced buffs/debuffs for specific monster skills
+    const forceKey = `${monster.ID}:${skillType}`;
+    const forced = MONSTER_SKILL_BUFF_FORCE[forceKey];
+    if (forced?.buff) for (const b of forced.buff) { if (!buff.includes(b)) buff.push(b); }
+    if (forced?.debuff) for (const d of forced.debuff) { if (!debuff.includes(d)) debuff.push(d); }
+
     if (buff.length > 0) skill.buff = buff;
     if (debuff.length > 0) skill.debuff = debuff;
 
