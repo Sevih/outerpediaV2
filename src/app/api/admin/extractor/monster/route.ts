@@ -229,16 +229,24 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
 // ── Buff/debuff extraction (reuses character extractor logic) ────
 
 /** Collect buff IDs from MonsterSkillLevelTemplet rows.
- *  Only reads the BuffID field (like character extractor), not all fields.
+ *  BuffIDs can be in any field due to bytes parser column shifts.
+ *  Excluded fields: DescID_fallback1 (contains internal trigger buff IDs, not visible buffs).
  */
-function collectMonsterBuffIds(lvls: Row[]): string[] {
+const BUFF_FIELD_EXCLUDE = new Set(['ID', 'SkillID', 'Key', 'DescID_fallback1']);
+
+function collectMonsterBuffIds(lvls: Row[], buffData: Row[]): string[] {
+  const knownBuffIds = new Set(buffData.map(r => r.BuffID).filter(Boolean));
   const ids = new Set<string>();
   for (const row of lvls) {
-    const buffField = row.BuffID ?? '';
-    if (!buffField) continue;
-    for (const part of buffField.split(',')) {
-      const trimmed = part.trim();
-      if (trimmed) ids.add(trimmed);
+    for (const [key, val] of Object.entries(row)) {
+      if (!val || typeof val !== 'string') continue;
+      if (BUFF_FIELD_EXCLUDE.has(key)) continue;
+      for (const part of val.split(',')) {
+        const trimmed = part.trim();
+        if (trimmed && knownBuffIds.has(trimmed)) {
+          ids.add(trimmed);
+        }
+      }
     }
   }
   return [...ids];
@@ -342,7 +350,7 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
 
     // Get buff IDs from MonsterSkillLevelTemplet
     const lvls = gd.monsterSkillLevels.filter(l => l.SkillID === sid);
-    const buffIds = collectMonsterBuffIds(lvls);
+    const buffIds = collectMonsterBuffIds(lvls, gd.buffData);
     const raw = extractBD(buffIds, gd.buffData, { expandInterruption: false });
     const buff = convertToIRFormat(raw.buff, iconToIR);
     const debuff = convertToIRFormat(raw.debuff, iconToIR);
@@ -386,7 +394,7 @@ function extractMonster(gd: GameData, monster: Row, dungeonList: DungeonLink[], 
     id: monster.ID,
     Name: nameTexts ? langObj(nameTexts) : {},
     Surname: surnameTexts ? langObj(surnameTexts) : null,
-    IncludeSurname: !!surnameTexts,
+    IncludeSurname: false,
     class: cls,
     element,
     level: location?.level ?? null,
