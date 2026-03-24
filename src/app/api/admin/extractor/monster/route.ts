@@ -312,14 +312,25 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
   const skills: Record<string, unknown>[] = [];
   const processedSids = new Set<string>();
 
-  // Collect skill IDs from Skill_1..23 + UseEntryJIggleBone (often the ultimate slot)
+  // Collect skill IDs from Skill_1..23 + UseEntryJIggleBone
   const skillSlots: string[] = [];
+  let hasUltInSlots = false;
   for (let i = 1; i <= 23; i++) {
     const sid = monster[`Skill_${i}`];
-    if (sid && sid !== '0') skillSlots.push(sid);
+    if (sid && sid !== '0') {
+      skillSlots.push(sid);
+      const row = skillByNs[sid];
+      if (row?.SkillType === 'SKT_ULTIMATE') hasUltInSlots = true;
+    }
   }
+  // Only add UseEntryJIggleBone if it's an ultimate and no ultimate found in normal slots
   const entrySid = monster.UseEntryJIggleBone;
-  if (entrySid && entrySid !== '0' && skillByNs[entrySid]) skillSlots.push(entrySid);
+  if (entrySid && entrySid !== '0' && skillByNs[entrySid]) {
+    const entryType = skillByNs[entrySid].SkillType;
+    if (entryType === 'SKT_ULTIMATE' && !hasUltInSlots) {
+      skillSlots.push(entrySid);
+    }
+  }
 
   for (const sid of skillSlots) {
     if (processedSids.has(sid)) continue;
