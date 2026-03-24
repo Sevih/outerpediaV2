@@ -229,22 +229,16 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
 // ── Buff/debuff extraction (reuses character extractor logic) ────
 
 /** Collect buff IDs from MonsterSkillLevelTemplet rows.
- *  BuffIDs can be in any field (BuffID, DamageFactor, GainAP, GainCP, etc.)
- *  We check all values against known BuffTemplet IDs.
+ *  Only reads the BuffID field (like character extractor), not all fields.
  */
-function collectMonsterBuffIds(lvls: Row[], buffData: Row[]): string[] {
-  const knownBuffIds = new Set(buffData.map(r => r.BuffID).filter(Boolean));
+function collectMonsterBuffIds(lvls: Row[]): string[] {
   const ids = new Set<string>();
   for (const row of lvls) {
-    for (const [key, val] of Object.entries(row)) {
-      if (!val || typeof val !== 'string') continue;
-      if (key === 'ID' || key === 'SkillID' || key === 'Key') continue;
-      for (const part of val.split(',')) {
-        const trimmed = part.trim();
-        if (trimmed && knownBuffIds.has(trimmed)) {
-          ids.add(trimmed);
-        }
-      }
+    const buffField = row.BuffID ?? '';
+    if (!buffField) continue;
+    for (const part of buffField.split(',')) {
+      const trimmed = part.trim();
+      if (trimmed) ids.add(trimmed);
     }
   }
   return [...ids];
@@ -348,7 +342,7 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
 
     // Get buff IDs from MonsterSkillLevelTemplet
     const lvls = gd.monsterSkillLevels.filter(l => l.SkillID === sid);
-    const buffIds = collectMonsterBuffIds(lvls, gd.buffData);
+    const buffIds = collectMonsterBuffIds(lvls);
     const raw = extractBD(buffIds, gd.buffData, { expandInterruption: false });
     const buff = convertToIRFormat(raw.buff, iconToIR);
     const debuff = convertToIRFormat(raw.debuff, iconToIR);

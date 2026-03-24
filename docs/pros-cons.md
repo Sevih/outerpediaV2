@@ -193,7 +193,7 @@ export async function getCharacterProsCons(slug: string): Promise<CharacterProsC
   "vlada": {
     "pros": [
       {
-        "en": "{SK/Vlada|S3} resets everytime a enemy unit dies, perfect for wave clearing",
+        "en": "{SK/Vlada|S3} resets every time an enemy unit dies, perfect for wave clearing",
         "jp": "{SK/Vlada|S3}は敵が倒れるたびにリセットされ、ウェーブ殲滅に最適",
         "kr": "{SK/Vlada|S3}는 적이 죽을 때마다 초기화되어 웨이브 클리어에 최적",
         "zh": "{SK/Vlada|S3}在敌方死亡时重置，非常适合清波"
@@ -207,7 +207,7 @@ export async function getCharacterProsCons(slug: string): Promise<CharacterProsC
     ],
     "cons": [
       {
-        "en": "dependant solely on attack stat",
+        "en": "dependent solely on attack stat",
         "jp": "攻撃力のみに依存",
         "kr": "공격력 스탯에만 의존",
         "zh": "完全依赖攻击属性"
