@@ -29,47 +29,33 @@ const BUFF_TYPE_RENAME: Record<string, string> = {
 // Force classification override: types the game marks wrong (e.g. NEUTRAL that should be DEBUFF)
 const BUFF_TYPE_FORCE: Record<string, 'buff' | 'debuff'> = {
   'BT_WG_REVERSE_HEAL': 'debuff',
-  'BT_KILL_UNDER_HP_RATE': 'debuff',
   'BT_SEALED_RESURRECTION': 'debuff',
+  'BT_STEAL_BUFF': 'debuff',
+  'BT_KILL_UNDER_HP_RATE': 'debuff',
 };
 
 // Force add buff/debuff to specific skills (charId:skillType → { buff: [...], debuff: [...] })
 export const SKILL_BUFF_FORCE: Record<string, { buff?: string[]; debuff?: string[]; dual_buff?: string[]; dual_debuff?: string[] }> = {
   '2000065:SKT_FIRST': { buff: ['BT_EXTRA_ATTACK_ON_TURN_END'] },
-  '2000084:SKT_FIRST': { buff: ['BT_CALL_BACKUP_2', 'BT_CALL_BACKUP'] },
   '2000072:SKT_ULTIMATE': { debuff: ['BT_STEAL_BUFF'] },
+  '2000084:SKT_FIRST': { buff: ['BT_CALL_BACKUP_2', 'BT_CALL_BACKUP'] },
+  '2000093:SKT_SECOND': { buff: ['BT_RANDOM_STAT'] },
+  '2000095:SKT_SECOND': { buff: ['GRACE_OF_THE_VIRGIN_GODDESS', 'BT_COOL3_CHARGE', 'BT_ACTION_GAUGE'] },
   '2000102:SKT_ULTIMATE': { buff: ['BT_EXTEND_DEBUFF'], debuff: ['BT_EXTEND_BUFF'] },
-  '2000093:SKT_SECOND': { buff: ['BT_RANDOM_STAT']},
-  '2000095:SKT_SECOND': { buff: ['GRACE_OF_THE_VIRGIN_GODDESS','BT_COOL3_CHARGE','BT_ACTION_GAUGE']},
 };
 
 // Specific BuffIDs to exclude
 const BUFF_ID_BLACKLIST = new Set([
   '2000052_backup_1_1', // Sigma dual: self-immunity during attack, not a real buff
-  '2000029_2_2', // Laine S2: erroneous BT_REMOVE_BUFF in game data
-  '2000020_3_2', // Alice Ult: erroneous BT_STAT|ST_BUFF_CHANCE in game data
-  '2000039_3_2', // Stella Ult: EE-only BT_ACTION_GAUGE, not in base skill
-  '2000052_1_1', // Sigma S1: self-immunity during attack, not a real buff
-  '2000042_u_3_2', // Leo Burst 3: hidden BT_INVINCIBLE not in skill description
-  '2000037_3_4', // Veronica Ult: erroneous BT_STAT|ST_ATK
-  '2000060_u_3_1', // Tamara Burst 3: erroneous BT_EXTEND_BUFF
-  '2000057_2_2', // Sterope S2: IG_Buff_2000057_Interruption_D not a real debuff
-  '2000057_2_3', // Sterope S2: IG_Buff_2000057_Interruption_D not a real debuff
-  '2000053_2_5', // Stella S2: erroneous BT_AP_CHARGE
-  '2000059_1_1', // Astei S1: BT_SECOND_TRIGGER internal mechanic
-  '2000059_u_3', // Astei Burst 3: BT_COOL_CHARGE not a visible buff
-  '2000059_2_1', // Astei S2: BT_REVIVAL_N_RUN_PASSIVE_SKILL internal mechanic
-  '2000059_2_3', // Astei S2: BT_REMOVE_DEATH internal mechanic
-  '2000059_2_7', // Astei S2: BT_DMG_KILL_COUNT_STACK damage mod
-  '2000079_2_2', // Kuro S2: BT_REVIVAL_N_RUN_PASSIVE_SKILL internal mechanic
-  '2000109_3_3', // Viella Ult: erroneous BT_STAT|ST_DEF
-  '2000096_2_4', // Ais S2: erroneous BT_ACTION_GAUGE
-  '2000096_3_2', // Ais Ult: BT_SECOND_TRIGGER internal mechanic
-  '2000087_3_7', // Rey Ult: BT_NONE Curse Interruption, not a real buff
-  '2000087_3_8', // Rey Ult: BT_NONE Curse Interruption, not a real buff
-  '2000102_2_3', // Nadja S2: BT_STAT with ST_NONE
-  '2000102_2_4', // Nadja S2: BT_STAT with ST_NONE
-  '2000095_2_2', // Bell S2: SYS_BUFF_ADDITIVE_SKILL not a visible buff
+  '2000057_2_2', // Sterope S2: internal heal reduction, not visible
+  '2000057_2_3',
+  '2000087_3_7', // Rey S3: false curse interruption buff
+  '2000087_3_8',
+  '2000095_2_2', // Bell S2: internal passive trigger, not a visible buff
+  '2000096_2_4', // Ais S2: internal action gauge
+  '2000102_2_3', // Nadja S2: internal BT_STAT with no stat type
+  '2000102_2_4',
+  '2000109_3_3', // Viella S3: internal DEF stat
 ]);
 
 const BUFF_TYPE_BLACKLIST = new Set([
@@ -100,6 +86,9 @@ const BUFF_TYPE_BLACKLIST = new Set([
   'BT_WG_INVINCIBLE',
   'BT_DOT_CURSE_CAP',
   'BT_REVERSE_HEAL_CAP',
+  'BT_REVIVAL_N_RUN_PASSIVE_SKILL',
+  'BT_REMOVE_DEATH',
+  'BT_DMG_KILL_COUNT_STACK'
 ]);
 
 /**
@@ -116,8 +105,9 @@ export function extractBuffDebuff(
   const buffs = new Set<string>();
   const debuffs = new Set<string>();
 
-  // Expand buff group IDs to include siblings with _Interruption IconName only
-  // Disabled for monsters where normal/hard variants share the same prefix
+  // Expand buff group IDs to include siblings with _Interruption IconName.
+  // This catches irremovable variants that aren't in the BuffID field directly.
+  // Disabled for monsters where normal/hard variants share the same prefix.
   const expandedIds = new Set(buffGroupIds);
   if (expandInterruption) {
     for (const gid of buffGroupIds) {
@@ -143,16 +133,27 @@ export function extractBuffDebuff(
 
       if (!type || BUFF_ID_BLACKLIST.has(groupId)) continue;
 
-      // Interruption IconName = custom mechanic, use IconName as tag regardless of type
+      // Interruption IconName = irremovable variant, use IconName as tag.
+      // This distinguishes e.g. BT_DOT_BURN (removable) from IG_Buff_Dot_Burn_Interruption_D (irremovable).
+      // Exception: generic buffs like BT_COOL_CHARGE with Interruption icon should keep their type
+      // (the Interruption just means permanent, not a distinct visible effect).
       if (row.IconName?.includes('_Interruption')) {
-        const iconTag = BUFF_TYPE_RENAME[row.IconName] ?? row.IconName;
-        if (bdType === 'BUFF') buffs.add(iconTag);
-        else if (bdType.startsWith('DEBUFF')) debuffs.add(iconTag);
-        else {
-          if (iconTag.endsWith('_D')) debuffs.add(iconTag);
-          else buffs.add(iconTag);
+        const icon = row.IconName;
+        // Skip buffs where _Interruption is just "permanent" and not a distinct visual effect
+        const isJustPermanent = /^IG_Buff_Cool_Charge/.test(icon)
+          || /^IG_Buff_Enhance_/.test(icon)
+          || /^IG_Buff_Effect_Heal_/.test(icon);
+        if (!isJustPermanent) {
+          const iconTag = BUFF_TYPE_RENAME[icon] ?? icon;
+          if (bdType === 'BUFF') buffs.add(iconTag);
+          else if (bdType.startsWith('DEBUFF')) debuffs.add(iconTag);
+          else {
+            if (iconTag.endsWith('_D')) debuffs.add(iconTag);
+            else buffs.add(iconTag);
+          }
+          break;
         }
-        break;
+        // "Just permanent" buffs: fall through to standard type handling
       }
 
       if (BUFF_TYPE_BLACKLIST.has(type)

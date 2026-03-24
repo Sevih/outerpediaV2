@@ -204,18 +204,23 @@ function parseHeader(headerBuf: Buffer): {
 
 function parseBody(entries: Buffer[], columns: Record<number, string>): Record<string, string>[] {
   const rows: Record<string, string>[] = [];
-  let lastValidKey: string | null = null;
+  const maxColIdx = Math.max(...Object.keys(columns).map(Number), 0);
 
   for (const entry of entries) {
     if (entry.length === 0) continue;
 
-    const row: Record<string, string> = {};
+    // Collect all fields first so we can detect the last-field colIdx anomaly
+    const fieldSlices: FieldSlice[] = [];
+    for (const slice of iterFields(entry, SEP_FIELD)) {
+      fieldSlices.push(slice);
+    }
 
-    for (const { start, end } of iterFields(entry, SEP_FIELD)) {
+    const parsed: { rawBytes: Buffer; colIdx: number | null }[] = [];
+
+    for (const { start, end } of fieldSlices) {
       const blob = entry.subarray(start, end);
       if (blob.length === 0) continue;
 
-      // Read payload length (VLQ)
       const [length, nLen] = readVlq(blob, 0);
       if (length === null) continue;
 
@@ -224,11 +229,33 @@ function parseBody(entries: Buffer[], columns: Record<number, string>): Record<s
       if (dataEnd > blob.length) continue;
 
       const rawBytes = blob.subarray(dataStart, dataEnd);
-
-      // Read column index (VLQ) after payload
       const [colIdx] = readVlq(blob, dataEnd);
 
-      // Determine column name
+      parsed.push({ rawBytes, colIdx });
+    }
+
+    // Fix last-field anomaly: the last field's trailing byte is a metadata marker,
+    // not a real colIdx. Detect this when the last colIdx regresses below the previous.
+    if (parsed.length >= 2) {
+      const last = parsed[parsed.length - 1];
+      const prev = parsed[parsed.length - 2];
+      if (last.colIdx !== null && prev.colIdx !== null && last.colIdx <= prev.colIdx) {
+        // Last colIdx is a false marker. Deduce the real column by elimination:
+        // find the smallest column index > prev.colIdx that isn't already used.
+        const usedCols = new Set(parsed.slice(0, -1).map(p => p.colIdx).filter((c): c is number => c !== null));
+        let deduced: number | null = null;
+        for (let ci = prev.colIdx + 1; ci <= maxColIdx; ci++) {
+          if (ci in columns && !usedCols.has(ci)) { deduced = ci; break; }
+        }
+        last.colIdx = deduced;
+      }
+    }
+
+    // Build row
+    const row: Record<string, string> = {};
+    let lastValidKey: string | null = null;
+
+    for (const { rawBytes, colIdx } of parsed) {
       let key: string | null;
       if (colIdx === null || !(colIdx in columns)) {
         key = lastValidKey;
@@ -239,7 +266,6 @@ function parseBody(entries: Buffer[], columns: Record<number, string>): Record<s
 
       if (key === null) continue;
 
-      // Handle duplicate keys
       let finalKey = key;
       let suffix = 1;
       while (finalKey in row) {
