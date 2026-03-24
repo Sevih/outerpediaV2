@@ -118,5 +118,45 @@
         "review_zh": "战斗开始时全队{B/BT_STAT|ST_CRITICAL_DMG_RATE}（2回合）。{B/BT_STAT|ST_DEF}状态下的所有友军伤害提升。"
       }
     }
+  },
+  {
+    "name": "Core Fusion Notia",
+    "review": "Massive {D/BT_DOT_POISON} output on nearly every action. Shifts from a priority/debuff controller to a full-on poison carry. Fierce Offensive +1 turn upon entering battle.",
+    "review_jp": "ほぼ全てのアクションで大量の{D/BT_DOT_POISON}を付与。優先度/デバフコントローラーから本格的な毒キャリーに転換。戦闘開始時に猛攻+1ターン。",
+    "review_kr": "거의 모든 행동에서 대량의 {D/BT_DOT_POISON} 부여. 우선도/디버프 컨트롤러에서 본격적인 독 캐리로 전환. 전투 시작 시 맹공 +1턴.",
+    "review_zh": "几乎每个行动都能施加大量{D/BT_DOT_POISON}。从优先度/减益控制者转变为全面的毒伤输出核心。入场时猛烈攻势+1回合。",
+    "recommended_level": "5",
+    "changes": {
+      "s1": {
+        "review": "With Fierce Offensive: gains {D/BT_DOT_POISON} (2 turns) on target.\nBurst 2: Poison Detonate (was DMG increase).",
+        "review_jp": "猛攻時：対象に{D/BT_DOT_POISON}（2ターン）を追加。\nバースト2：毒爆破に変更（以前はダメージ増加）。",
+        "review_kr": "맹공 시: 대상에 {D/BT_DOT_POISON} (2턴) 추가.\n버스트 2: 독 폭발로 변경 (이전 피해 증가).",
+        "review_zh": "猛烈攻势时：对目标施加{D/BT_DOT_POISON}（2回合）。\n爆发2：毒引爆（原伤害提升）。"
+      },
+      "s2": {
+        "review": "Crystal Storm now inflicts {D/BT_DOT_POISON} unconditionally (was Fierce Offensive only). With Fierce Offensive: additional {D/BT_DOT_POISON} + {D/BT_SILENCE} on healers.",
+        "review_jp": "クリスタルストームが無条件で{D/BT_DOT_POISON}を付与（以前は猛攻時のみ）。猛攻時：追加{D/BT_DOT_POISON}＋ヒーラーに{D/BT_SILENCE}。",
+        "review_kr": "크리스탈 스톰이 무조건 {D/BT_DOT_POISON} 부여 (이전에는 맹공 시만). 맹공 시: 추가 {D/BT_DOT_POISON} + 힐러에 {D/BT_SILENCE}.",
+        "review_zh": "水晶风暴现在无条件施加{D/BT_DOT_POISON}（原仅猛烈攻势时）。猛烈攻势时：额外{D/BT_DOT_POISON}+对奶妈{D/BT_SILENCE}。"
+      },
+      "s3": {
+        "review": "Gains {D/BT_DOT_POISON} on all enemies (2 turns at Lv5). +1 additional {D/BT_DOT_POISON} stack vs bosses.",
+        "review_jp": "全敵に{D/BT_DOT_POISON}を追加（Lv5で2ターン）。ボスには追加で{D/BT_DOT_POISON}+1スタック。",
+        "review_kr": "모든 적에 {D/BT_DOT_POISON} 추가 (Lv5에서 2턴). 보스에 추가 {D/BT_DOT_POISON} +1 스택.",
+        "review_zh": "对所有敌人施加{D/BT_DOT_POISON}（Lv5时2回合）。对Boss额外+1层{D/BT_DOT_POISON}。"
+      },
+      "chain": {
+        "review": "Chain: 25 AP restore replaced by {D/BT_DOT_POISON} (2 turns).\nDual: +20% Priority replaced by {D/BT_DOT_POISON} (2 turns).",
+        "review_jp": "チェーン：AP25回復が{D/BT_DOT_POISON}（2ターン）に置き換え。\n連携攻撃：優先度+20%が{D/BT_DOT_POISON}（2ターン）に置き換え。",
+        "review_kr": "체인: AP 25 회복이 {D/BT_DOT_POISON} (2턴)으로 교체.\n협공: 우선도 +20%가 {D/BT_DOT_POISON} (2턴)으로 교체.",
+        "review_zh": "连锁：25 AP恢复替换为{D/BT_DOT_POISON}（2回合）。\n协攻：优先度+20%替换为{D/BT_DOT_POISON}（2回合）。"
+      },
+      "passive": {
+        "review": "+50% DMG vs elemental advantage. Enhanced (Lv5): +50% Effectiveness.",
+        "review_jp": "属性有利に+50%ダメージ。強化（Lv5）：効果命中+50%。",
+        "review_kr": "속성 유리 시 +50% 피해. 강화 (Lv5): 효과 적중 +50%.",
+        "review_zh": "属性克制时+50%伤害。强化（Lv5）：效果命中+50%。"
+      }
+    }
   }
 ]
