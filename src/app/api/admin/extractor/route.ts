@@ -11,6 +11,17 @@ import {
   BASIC_STAR_OVERRIDE, detectTags, sortTags, SKILL_BUFF_FORCE,
 } from '@/app/admin/lib/config';
 
+// Simple async mutex for serializing writes to shared files (character-profiles.json)
+function createMutex() {
+  let chain = Promise.resolve();
+  return <T>(fn: () => Promise<T>): Promise<T> => {
+    const p = chain.then(fn, fn);
+    chain = p.then(() => {}, () => {});
+    return p;
+  };
+}
+const profileMutex = createMutex();
+
 /**
  * Reorder keys grouped by language: all EN first, then JP, then KR, then ZH.
  * Input:  { "1": ..., "1_jp": ..., "2": ..., "2_jp": ..., "1_kr": ... }
@@ -177,7 +188,7 @@ async function handleList() {
 // ── Info ─────────────────────────────────────────────────────────────
 
 async function handleInfo(id: string) {
-  const [charTemplet, textChar, textSys, textSkill, extraTemplet, skillTemplet, trustTemplet, fusionTemplet, buffTemplet, recruitTemplet] = await Promise.all([
+  const [charTemplet, textChar, textSys, textSkill, extraTemplet, skillTemplet, trustTemplet, fusionTemplet, buffTemplet, recruitTemplet, profileTemplet] = await Promise.all([
     readTemplet('CharacterTemplet'),
     readTemplet('TextCharacter'),
     readTemplet('TextSystem'),
@@ -188,6 +199,7 @@ async function handleInfo(id: string) {
     readTemplet('CharacterFusionTemplet'),
     readTemplet('BuffTemplet'),
     readTemplet('RecruitGroupTemplet'),
+    readTemplet('ArchiveCharacterProfileTemplet'),
   ]);
 
   const textMap = buildTextMap(textChar.data);
@@ -315,6 +327,32 @@ async function handleInfo(id: string) {
         costPerLevel[i + 1] = { item: materialItemId, nb: parseInt(lv.Skill_1) || 0 };
       });
       result.costPerLevel = costPerLevel;
+    }
+  }
+
+  // Profile: birthday, height, weight, story
+  // Core fusion chars have no profile row — fallback to base character for birthday/height/weight
+  const profileRow = profileTemplet.data.find(r => r.CharacterID === id)
+    ?? (isCoreFusion ? profileTemplet.data.find(r => r.CharacterID === baseId) : undefined);
+  if (profileRow) {
+    const bday = profileRow.Birthday ?? '';
+    // Birthday format: YYYYMMDD → MM/DD
+    const month = bday.length >= 8 ? bday.slice(4, 6) : '';
+    const day = bday.length >= 8 ? bday.slice(6, 8) : '';
+    result.birthday = month && day ? `${month}/${day}` : '';
+    result.height = profileRow.Height ? `${profileRow.Height} cm` : '';
+    result.weight = profileRow.Weight ? `${profileRow.Weight} kg` : '';
+
+    // Story: try character-specific key first (core fusion has own story), then fallback to profile row
+    const storySym = textSysMap[`SYS_ACHIEVE_PROFILE_${id}`] ? `SYS_ACHIEVE_PROFILE_${id}` : (profileRow.ScenarioIDSymbol ?? '');
+    if (storySym) {
+      const storyTexts = textSysMap[storySym];
+      if (storyTexts) {
+        result.story = {} as Record<string, string>;
+        for (const lang of LANGS) {
+          result.story[lang] = storyTexts[lang] ?? '';
+        }
+      }
     }
   }
 
@@ -879,6 +917,8 @@ const INFO_FIELDS = [
   'fusionType', 'originalCharacter',
 ];
 
+const PROFILE_FIELDS = ['birthday', 'height', 'weight'];
+
 const SKILL_FIELDS = [
   'name', 'name_jp', 'name_kr', 'name_zh',
   'wgr', 'cd', 'offensive', 'target',
@@ -893,7 +933,7 @@ async function handleCompare() {
   // Load all templets once
   const [charTemplet, textChar, textSys, textSkill, extraTemplet,
     skillTemplet, skillLevelTemplet, buffTemplet, trustTemplet, fusionTemplet, changeTemplet,
-    transcendTemplet, recruitTemplet,
+    transcendTemplet, recruitTemplet, profileTemplet,
     ] = await Promise.all([
     readTemplet('CharacterTemplet'),
     readTemplet('TextCharacter'),
@@ -908,7 +948,22 @@ async function handleCompare() {
     readTemplet('CharacterChangeTemplet'),
     readTemplet('CharacterTranscendentTemplet'),
     readTemplet('RecruitGroupTemplet'),
+    readTemplet('ArchiveCharacterProfileTemplet'),
   ]);
+
+  // Read existing character-profiles.json
+  const profilesPath = path.join(process.cwd(), 'data', 'character-profiles.json');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let existingProfiles: Record<string, any> = {};
+  try {
+    existingProfiles = JSON.parse(await fs.readFile(profilesPath, 'utf-8'));
+  } catch { /* */ }
+
+  // Index profile templet by CharacterID
+  const profileByCharId = new Map<string, Record<string, string>>();
+  for (const row of profileTemplet.data) {
+    if (row.CharacterID) profileByCharId.set(row.CharacterID, row);
+  }
 
   // Read existing character files
   const existingDir = path.join(process.cwd(), 'data', 'character');
@@ -1097,6 +1152,52 @@ async function handleCompare() {
       const e = Array.isArray(eVal) ? [...eVal].sort().join(', ') : String(eVal);
       const a = Array.isArray(aVal) ? [...aVal].sort().join(', ') : String(aVal);
       if (e !== a) diffs.push({ field, existing: e, extracted: a });
+    }
+
+    // Compare profile fields (from character-profiles.json)
+    // Core fusion: fallback to base character for birthday/height/weight
+    const cmpBaseId = isCoreFusion
+      ? fusionTemplet.data.find((r: Record<string, string>) => r.ChangeCharID === id)?.RecruitID ?? id
+      : id;
+    const profileRow = profileByCharId.get(id) ?? (isCoreFusion ? profileByCharId.get(cmpBaseId) : undefined);
+    const existingProfile = existingProfiles[id] ?? {};
+    if (profileRow) {
+      const bday = profileRow.Birthday ?? '';
+      const month = bday.length >= 8 ? bday.slice(4, 6) : '';
+      const day = bday.length >= 8 ? bday.slice(6, 8) : '';
+      const extractedProfile: Record<string, string> = {
+        birthday: month && day ? `${month}/${day}` : '',
+        height: profileRow.Height ? `${profileRow.Height} cm` : '',
+        weight: profileRow.Weight ? `${profileRow.Weight} kg` : '',
+      };
+      for (const field of PROFILE_FIELDS) {
+        const e = String(existingProfile[field] ?? '');
+        const a = String(extractedProfile[field] ?? '');
+        if (e !== a) diffs.push({ field: `profile.${field}`, existing: e, extracted: a });
+      }
+
+      // Compare story: try character-specific key first (core fusion has own story)
+      const storySym = textSysMap[`SYS_ACHIEVE_PROFILE_${id}`] ? `SYS_ACHIEVE_PROFILE_${id}` : (profileRow.ScenarioIDSymbol ?? '');
+      if (storySym) {
+        const storyTexts = textSysMap[storySym];
+        if (storyTexts) {
+          const existingStory = existingProfile.story ?? {};
+          for (const lang of LANGS) {
+            const e = String(existingStory[lang] ?? '');
+            const a = String(storyTexts[lang] ?? '');
+            if (e && a && e !== a) diffs.push({ field: `profile.story_${lang}`, existing: e.slice(0, 80) + '...', extracted: a.slice(0, 80) + '...' });
+          }
+        }
+      }
+
+      // Check fullname in profile
+      const existingFullname = existingProfile.fullname ?? {};
+      for (const lang of LANGS) {
+        const key = lang === DEFAULT_LANG ? 'en' : lang;
+        const e = String(existingFullname[key] ?? '');
+        const a = String(fullnameTexts[lang] ?? '');
+        if (e && a && e !== a) diffs.push({ field: `profile.fullname_${lang}`, existing: e, extracted: a });
+      }
     }
 
     // Compare complex fusion fields as JSON
@@ -1774,9 +1875,10 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Build final character JSON
+    // Build final character JSON (exclude profile fields — they go in character-profiles.json)
+    const { birthday: _b, height: _h, weight: _w, story: _s, ...infoWithoutProfile } = info;
     const character = orderKeys({
-      ...info,
+      ...infoWithoutProfile,
       rank: manual.rank ?? existing.rank ?? null,
       rank_pvp: info.Rarity > 2 ? (manual.rank_pvp ?? existing.rank_pvp ?? null) : undefined,
       role: manual.role ?? existing.role ?? null,
@@ -1802,7 +1904,7 @@ export async function POST(req: NextRequest) {
       if (character[key] === undefined) delete character[key];
     }
 
-    // Write file
+    // Write character file
     const outputDir = path.join(process.cwd(), 'data', 'character');
     await fs.mkdir(outputDir, { recursive: true });
     await fs.writeFile(
@@ -1810,6 +1912,38 @@ export async function POST(req: NextRequest) {
       stringifyCharacter(character, existingRaw),
       'utf-8',
     );
+
+    // Update character-profiles.json (serialized via mutex to avoid race conditions during Extract All)
+    if (info.birthday || info.height || info.weight || info.story) {
+      await profileMutex(async () => {
+        const profilesPath = path.join(process.cwd(), 'data', 'character-profiles.json');
+        let profilesRaw = '';
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        let profiles: Record<string, any> = {};
+        try {
+          profilesRaw = await fs.readFile(profilesPath, 'utf-8');
+          profiles = JSON.parse(profilesRaw);
+        } catch { /* */ }
+
+        profiles[id] = {
+          fullname: {
+            en: info.Fullname ?? '',
+            jp: info.Fullname_jp ?? '',
+            kr: info.Fullname_kr ?? '',
+            zh: info.Fullname_zh ?? '',
+          },
+          birthday: info.birthday ?? '',
+          height: info.height ?? '',
+          weight: info.weight ?? '',
+          story: info.story ?? {},
+        };
+
+        const eol = profilesRaw.includes('\r\n') ? '\r\n' : '\n';
+        let output = JSON.stringify(profiles, null, 2) + '\n';
+        if (eol === '\r\n') output = output.replace(/\n/g, '\r\n');
+        await fs.writeFile(profilesPath, output, 'utf-8');
+      });
+    }
 
     // Copy images if missing — use actual IconName from extracted skills
     const skillIcons: string[] = [];
