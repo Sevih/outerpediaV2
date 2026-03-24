@@ -85,7 +85,7 @@ function buildSkillLevelLookup(data: Record<string, string>[]): Record<string, s
   for (const entry of data) {
     const sid = entry.SkillID ?? '';
     if (sid && !(sid in lookup)) {
-      lookup[sid] = entry.DescID ?? entry.GainAP ?? '';
+      lookup[sid] = entry.BuffID ?? entry.DescID ?? entry.GainAP ?? '';
     }
   }
   return lookup;

@@ -10989,10 +10989,10 @@
     },
     "premium": {
       "skill_23": "572",
-      "buffID": null,
-      "stat": null,
-      "applyingType": null,
-      "rawValue": null
+      "buffID": "core_passive_2star_ablity_atk",
+      "stat": "ATK",
+      "applyingType": "OAT_RATE",
+      "rawValue": 102
     },
     "steps": {
       "lv1_ev0": {
@@ -11005,7 +11005,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 8
       },
       "lv20_ev1": {
         "ATK": 234,
@@ -11017,7 +11018,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 23
       },
       "lv40_ev2": {
         "ATK": 391,
@@ -11029,7 +11031,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 39
       },
       "lv60_ev3": {
         "ATK": 547,
@@ -11041,7 +11044,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 55
       },
       "lv80_ev4": {
         "ATK": 704,
@@ -11053,7 +11057,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 71
       },
       "lv100_ev5": {
         "ATK": 861,
@@ -11065,7 +11070,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 87
       }
     }
   },
