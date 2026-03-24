@@ -10,16 +10,16 @@
   "IncludeSurname": false,
   "class": "Striker",
   "element": "Light",
-  "level": 140,
+  "level": 134,
   "icons": "4002201",
   "BuffImmune": "",
   "StatBuffImmune": "ATTACK",
   "location": {
     "dungeon": {
-      "en": "Loyal Traitor",
-      "jp": "義理ある裏切り",
-      "kr": "의리의 배신자",
-      "zh": "背信忘义者"
+      "en": "No Boring Shows Are Allowed (1)",
+      "jp": "軟派なショーは禁止とする(1)",
+      "kr": "시시한 쇼는 금지한다 (1)",
+      "zh": "禁止无聊表演(1)"
     },
     "mode": {
       "en": "Story (Normal)",
@@ -28,10 +28,10 @@
       "zh": "故事(普通)"
     },
     "area_id": {
-      "en": "3-14",
-      "jp": "3-14",
-      "kr": "3-14",
-      "zh": "3-14"
+      "en": "3-7",
+      "jp": "3-7",
+      "kr": "3-7",
+      "zh": "3-7"
     }
   },
   "skills": [
@@ -86,6 +86,7 @@
       },
       "icon": "MT_Passive_1_Earth",
       "buff": [
+        "BT_STAT_BUFF_ENHANCE",
         "BT_CP_CHARGE",
         "BT_AP_CHARGE"
       ]

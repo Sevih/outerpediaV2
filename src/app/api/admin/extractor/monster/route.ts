@@ -253,6 +253,10 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
 
 // ── Buff/debuff extraction (reuses character extractor logic) ────
 
+const MONSTER_BUFF_ID_BLACKLIST = new Set([
+  '4076005_11_1', // Tyrant Toddler rage: internal debuff duration reduction
+]);
+
 /** Collect buff IDs from MonsterSkillLevelTemplet rows.
  *  Reads the BuffID field (now correctly assigned after parser fix).
  */
@@ -263,7 +267,7 @@ function collectMonsterBuffIds(lvls: Row[]): string[] {
     if (!buffField) continue;
     for (const part of buffField.split(',')) {
       const trimmed = part.trim();
-      if (trimmed) ids.add(trimmed);
+      if (trimmed && !MONSTER_BUFF_ID_BLACKLIST.has(trimmed)) ids.add(trimmed);
     }
   }
   return [...ids];
