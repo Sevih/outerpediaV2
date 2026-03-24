@@ -56,6 +56,11 @@ function groupByLang(obj: Record<string, string>): Record<string, string> {
   return result;
 }
 
+/** Case-insensitive lookup in textSkillMap (game data sometimes has SKILL_Desc_ instead of SKILL_DESC_) */
+function textSkillLookup(map: Record<string, LangTexts>, key: string): LangTexts | undefined {
+  return map[key] ?? Object.entries(map).find(([k]) => k.toLowerCase() === key.toLowerCase())?.[1];
+}
+
 
 /**
  * GET /api/admin/extractor
@@ -428,7 +433,7 @@ async function handleSkills(id: string) {
     for (let lvl = 0; lvl < descSymbols.length; lvl++) {
       const sym = descSymbols[lvl]?.trim();
       if (!sym) continue;
-      const texts = textSkillMap[sym];
+      const texts = textSkillLookup(textSkillMap, sym);
       if (texts) {
         const skillLv = lvl + 1;
         descLevels[String(skillLv)] = resolveBuffPlaceholders(texts[DEFAULT_LANG], skillLv, buffIndex);

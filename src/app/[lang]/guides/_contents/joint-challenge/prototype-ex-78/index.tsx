@@ -13,6 +13,12 @@ import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
 
+/* -- Version: 03-2026 ---------------------------------------- */
+import v0326Strings from './versions/03-2026/strings.json';
+import v0326Tips from './versions/03-2026/tips.json';
+import v0326Recommended from './versions/03-2026/recommended.json';
+import v0326Teams from './versions/03-2026/teams.json';
+
 /* -- Version: 10-2025 ---------------------------------------- */
 import v10Strings from './versions/10-2025/strings.json';
 import v10Tips from './versions/10-2025/tips.json';
@@ -30,6 +36,13 @@ const preloadedBosses: Record<string, Boss> = {
 };
 
 /* -- Typed data ----------------------------------------------- */
+
+const mar2026 = {
+  strings: v0326Strings as Record<string, LangMap>,
+  tips: v0326Tips as Record<string, LangMap[]>,
+  recommended: v0326Recommended as CharacterRecommendation[],
+  teams: v0326Teams as TeamData,
+};
 
 const oct2025 = {
   strings: v10Strings as Record<string, LangMap>,
@@ -49,10 +62,38 @@ export default function PrototypeEx78Guide() {
 
   return (
     <GuideTemplate
-      title={lRec(oct2025.strings.title, lang)}
-      introduction={lRec(oct2025.strings.intro, lang)}
-      defaultVersion="october2025"
+      title={lRec(mar2026.strings.title, lang)}
+      introduction={lRec(mar2026.strings.intro, lang)}
+      defaultVersion="march2026"
       versions={{
+        march2026: {
+          label: lRec(mar2026.strings.label, lang),
+          content: (
+            <>
+              <BossDisplay
+                bossName="Prototype EX-78"
+                modeKey="Joint Challenge"
+                defaultBossId="4548181"
+                preloadedBosses={preloadedBosses}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <TacticalTips
+                sections={[{ title: 'tactical', tips: mar2026.tips.tactical }]}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <RecommendedCharacterList entries={mar2026.recommended} />
+              <hr className="my-6 border-neutral-700" />
+              <StageBasedTeamSelector teamData={mar2026.teams} defaultStage="Recommended Team" />
+              <hr className="my-6 border-neutral-700" />
+              <CombatFootage
+                videoId="JojsTsS9kyU"
+                title="Prototype EX-78 - Joint Challenge - Very Hard Mode"
+                author="Sevih"
+                date="24/03/2026"
+              />
+            </>
+          ),
+        },
         october2025: {
           label: lRec(oct2025.strings.label, lang),
           content: (

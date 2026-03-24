@@ -12,7 +12,7 @@ const i18n = {
     intro:
       'Calling all creators new and seasoned! Outerpedia is hosting a gallery for fan-made content — hero introductions, showcases, guides, and entertainment! Send us your videos to help us add more flair to the space!',
     publisherNote:
-      "The EvaMains team has received gifts to share with the community from OUTERPLANE's new publisher,",
+      "The EvaMains team has received gifts to share with the community from OUTERPLANE's new publisher, Major9 and support from VAGAMES!",
     prizes: 'The Prizes',
     prizeAll: 'All players:',
     prizeCoupon: 'Coupon Code',
@@ -58,7 +58,7 @@ const i18n = {
     ruleMirror:
       "Videos can remain hosted on your own channel. YouTube videos can optionally be mirrored on Outerpedia's YouTube channel — your choice.",
     ruleOfficial:
-      'The OUTERPLANE team is watching! Major9 may contact participants to feature their videos on the official OUTERPLANE YouTube channel, or use them in future promotions.',
+      'The OUTERPLANE team is watching! Major9 or VAGAMES may contact participants to feature their videos on the official OUTERPLANE YouTube channel, or use them in future promotions.',
     ruleDisqualify:
       "Submissions may be disqualified if not submitted by the original creator, or if they include content not suitable for OUTERPLANE's age rating. Contact the EvaMains Discord admins for disputes.",
     entries: 'Event Entries',
@@ -69,7 +69,7 @@ const i18n = {
     intro:
       '新人もベテランもクリエイター大集合！Outerpediaがファン制作コンテンツのギャラリーを開催します — ヒーロー紹介、ショーケース、ガイド、エンタメ！動画を送ってスペースを盛り上げよう！',
     publisherNote:
-      'EvaMainsチームはOUTERPLANEの新パブリッシャーからコミュニティへのプレゼントを受け取りました、',
+      'EvaMainsチームはOUTERPLANEの新パブリッシャーMajor9とVAGAMESの支援により、コミュニティへのプレゼントを受け取りました！',
     prizes: '賞品',
     prizeAll: '全プレイヤー：',
     prizeCoupon: 'クーポンコード',
@@ -115,7 +115,7 @@ const i18n = {
     ruleMirror:
       '動画はご自身のチャンネルでホストしたままで構いません。YouTube動画はOuterpediaのYouTubeチャンネルにミラーリングすることもできます。',
     ruleOfficial:
-      'OUTERPLANEチームも注目しています！Major9が公式OUTERPLANEYouTubeチャンネルでの掲載や今後のプロモーションへの使用について連絡する場合があります。',
+      'OUTERPLANEチームも注目しています！Major9またはVAGAMESが公式OUTERPLANEYouTubeチャンネルでの掲載や今後のプロモーションへの使用について連絡する場合があります。',
     ruleDisqualify:
       'オリジナルのクリエイター以外からの提出、またはOUTERPLANEの年齢制限に適さないコンテンツを含む場合、失格となる場合があります。異議はEvaMains Discordの管理者にお問い合わせください。',
     entries: 'エントリー',
@@ -126,7 +126,7 @@ const i18n = {
     intro:
       '신인부터 베테랑까지 모든 크리에이터 여러분! Outerpedia가 팬 제작 콘텐츠 갤러리를 개최합니다 — 히어로 소개, 쇼케이스, 가이드, 엔터테인먼트! 영상을 보내 공간을 더 멋지게 만들어주세요!',
     publisherNote:
-      'EvaMains 팀은 OUTERPLANE의 새 퍼블리셔로부터 커뮤니티와 나눌 선물을 받았습니다,',
+      'EvaMains 팀은 OUTERPLANE의 새 퍼블리셔 Major9와 VAGAMES의 지원으로 커뮤니티와 나눌 선물을 받았습니다!',
     prizes: '상품',
     prizeAll: '전체 플레이어:',
     prizeCoupon: '쿠폰 코드',
@@ -172,7 +172,7 @@ const i18n = {
     ruleMirror:
       '영상은 본인 채널에서 호스팅한 채로 유지할 수 있습니다. YouTube 영상은 선택적으로 Outerpedia YouTube 채널에 미러링할 수 있습니다.',
     ruleOfficial:
-      'OUTERPLANE 팀이 지켜보고 있습니다! Major9가 공식 OUTERPLANE YouTube 채널 게재 또는 향후 프로모션에 사용하기 위해 연락할 수 있습니다.',
+      'OUTERPLANE 팀이 지켜보고 있습니다! Major9 또는 VAGAMES가 공식 OUTERPLANE YouTube 채널 게재 또는 향후 프로모션에 사용하기 위해 연락할 수 있습니다.',
     ruleDisqualify:
       '원본 크리에이터가 아닌 사람이 제출하거나, OUTERPLANE 연령 등급에 적합하지 않은 콘텐츠가 포함된 경우 실격될 수 있습니다. 이의 제기는 EvaMains Discord 관리자에게 문의하세요.',
     entries: '참가 작품',
@@ -181,9 +181,9 @@ const i18n = {
   },
   zh: {
     intro:
-      '召集所有新老创作者！Outerpedia正在举办粉丝创作内容画廊 — 英雄介绍、展示、攻略和娱乐！发送你的视频，帮助我们让空间更加精彩！',
+      '召集所有新老创作者！Outerpedia正在举办粉丝创作内容画廊 — 同伴介绍、展示、攻略和娱乐！发送你的视频，帮助我们更加精彩！',
     publisherNote:
-      'EvaMains团队从OUTERPLANE的新发行商收到了与社区分享的礼物，',
+      'EvaMains团队收到了与社区分享的礼物：感谢《异域战记》新发行商Major9以及VAGAMES的支持！',
     prizes: '奖品',
     prizeAll: '所有玩家：',
     prizeCoupon: '优惠码',
@@ -195,14 +195,14 @@ const i18n = {
     theme: '主题',
     themeIntroTitle: '完整介绍！',
     themeIntroDesc:
-      'Outerplane官方频道已经有许多3星英雄的技能介绍视频，但他们的魅力远不止于此。展示他们的大厅姿势、表情、服装、最佳台词等！',
+      '异域战记官方频道已经有许多3星同伴的技能介绍视频，但同伴们的魅力远不止于此。展示同伴的大厅姿势、表情、服装、最佳台词等！',
     themeShowcaseTitle: '展示！',
     themeShowcaseDesc:
-      '我们如何培养英雄？他们真正能做到什么？特别委托、异常者、冒险家执照、竞技场、RTA — 什么都行！',
+      '我们如何培养同伴？能够做到什么？特别委托、异形怪、冒险家执照、竞技场、实时对战等——什么都行！',
     themeActionTitle: '灯光、摄影、开拍！',
     themeActionDesc:
-      '有趣的大厅组合、梗队、同人小说 — 这是游戏，尽情享受吧！',
-    timeline: '时间线',
+      '有趣的大厅组合、玩梗队、同人创作——毕竟这是游戏，尽情享受吧！',
+    timeline: '截止时间',
     timelineOpen: '提交开放：',
     timelineOpenDate: '3月24日 (00:00 UTC)',
     timelineDeadline: '提交截止：',
@@ -211,27 +211,27 @@ const i18n = {
     timelineVoteDate: '5月5日 (00:00 UTC)',
     timelinePrize: '奖品发放（预计）：',
     timelinePrizeDate: '5月12日 (UTC)',
-    timelineAnniversary: '本活动恰逢Outerpedia一周年纪念日（4月29日）— 与我们一起庆祝吧！',
+    timelineAnniversary: '本活动恰逢Outerpedia一周年纪念日（4月29日）——与我们一起庆祝吧！',
     rules: '规则',
     ruleFootage: '视频中只能使用游戏内画面。',
-    ruleFacecam: '攻略内容允许使用面部摄像头。',
-    ruleVoice: '英雄配音语言不限。',
+    ruleFacecam: '攻略类内容允许露脸。',
+    ruleVoice: '同伴的配音语言不限。',
     ruleLength: '视频长度在50至600秒之间。',
     ruleHosting:
-      '视频必须托管在YouTube、Twitch或Bilibili上。不接受直接文件上传。',
+      '视频必须上传在YouTube、Twitch或Bilibili上。不接受直接文件上传。',
     ruleVerify:
       '请在描述或置顶评论中添加"Outerpedia video event 2026 – <你的昵称>"以验证你的提交。',
     ruleExisting: '现有视频也可以参加！',
     rulePrizeDist:
       '奖品将以优惠码（由Major9提供）的形式发放，请确保我们能联系到你。',
     ruleGallery:
-      '视频（无论是否获奖）经创作者同意后可在Outerpedia画廊中链接。',
+      'Outerpedia画廊可在经创作者同意后提供视频（无论是否获奖）链接。',
     ruleMirror:
-      '视频可以继续托管在你自己的频道。YouTube视频可以选择性地镜像到Outerpedia的YouTube频道。',
+      '视频保留在你自己的频道。YouTube的视频可以选择镜像到Outerpedia的YouTube频道。',
     ruleOfficial:
-      'OUTERPLANE团队在关注！Major9可能会联系参与者，将其视频展示在OUTERPLANE官方YouTube频道或用于未来推广。',
+      '《异域战记》团队也在关注！Major9或VAGAMES可能会联系参与者，将其视频展示在异域战记官方YouTube频道或用于未来推广。',
     ruleDisqualify:
-      '如果不是原创作者提交，或包含不适合OUTERPLANE年龄分级的内容，提交可能会被取消资格。争议请联系EvaMains Discord管理员。',
+      '非原作者提交，或包含不适合《异域战记》年龄分级内容的提交可能会被取消资格。如有异议请联系EvaMains Discord管理员。',
     entries: '参赛作品',
     entriesDesc: '请通过以下表格告诉我们你的提交在哪里：',
     entriesButton: '提交参赛作品',
@@ -251,7 +251,7 @@ const Page = () => {
       <div className="mx-auto max-w-2xl space-y-3 text-center">
         <p className="leading-relaxed text-zinc-300">{l.intro}</p>
         <p className="text-zinc-400">
-          {l.publisherNote} <strong className="text-white">Major9</strong>!
+          {l.publisherNote}
         </p>
       </div>
 
