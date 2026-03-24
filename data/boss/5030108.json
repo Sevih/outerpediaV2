@@ -2,8 +2,8 @@
   "id": "5030108",
   "Name": {
     "en": "Ratman Electrifier",
-    "kr": "랫맨 일렉트릭",
     "jp": "電撃使いラットマン",
+    "kr": "랫맨 일렉트릭",
     "zh": "电气鼠人"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 6F",
-      "kr": "대지의 탑 6층",
       "jp": "大地の塔6階",
+      "kr": "대지의 탑 6층",
       "zh": "土之塔第6层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222006",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Unleash Electric Current",
-        "kr": "전류 방출",
         "jp": "電流放出",
+        "kr": "전류 방출",
         "zh": "发射电流"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Penetrating Lightning",
-        "kr": "관통 전격",
         "jp": "貫通電撃",
+        "kr": "관통 전격",
         "zh": "贯穿电击"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Shocked</color>.",
-        "kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 피해량이 증가합니다.",
         "jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>感電</color>状態の場合、ダメージがUPする。",
+        "kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>감전</color> 상태라면 피해량이 증가합니다.",
         "zh": "攻击敌人。\\n若目标处于<color=#28d9ed>触电</color>状态,则使伤害量提升。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "High-voltage Current",
-        "kr": "고압 전류",
         "jp": "高圧電流",
+        "kr": "고압 전류",
         "zh": "高压电流"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Source of Disease",
-        "kr": "질병의 근원",
         "jp": "疾病の根源",
+        "kr": "질병의 근원",
         "zh": "病源"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nHas a <color=#28d9ed>20%</color> chance to inflict <color=#28d9ed>Poisoned</color> on one target for <color=#28d9ed>1 turn(s)</color> when attacking. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
-        "kr": "(패시브 효과)\\n공격 시 대상 한 명에게 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상의 <color=#28d9ed>효과 저항</color>을 무시하고 효과가 적용됩니다.",
         "jp": "(パッシブ効果)\\n攻撃時、対象単体に<color=#28d9ed>20%</color>の確率で<color=#28d9ed>中毒</color>を<color=#28d9ed>1ターン</color>の間付与する。対象の<color=#28d9ed>効果抵抗</color>を無視して効果が適用される。",
+        "kr": "(패시브 효과)\\n공격 시 대상 한 명에게 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상의 <color=#28d9ed>효과 저항</color>을 무시하고 효과가 적용됩니다.",
         "zh": "(被动效果)\\n攻击时,有<color=#28d9ed>20%</color>的几率对1名敌人造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>1回合</color>。该效果无视目标的<color=#28d9ed>效果抵抗</color>。"
       },
       "icon": "MT_Passive_1_Earth"

@@ -2,14 +2,14 @@
   "id": "401502",
   "Name": {
     "en": "Valentine",
-    "kr": "발렌타인",
     "jp": "バレンタイン",
+    "kr": "발렌타인",
     "zh": "瓦伦塔茵"
   },
   "Surname": {
     "en": "Office Lady Valentine",
-    "kr": "OL 발렌타인",
     "jp": "OLスーツ・バレンタイン",
+    "kr": "OL 발렌타인",
     "zh": "OL瓦伦塔茵"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Hard 15F",
-      "kr": "비천의 탑 [하드] 15층",
       "jp": "飛天の塔【ハード】15階",
+      "kr": "비천의 탑 [하드] 15층",
       "zh": "飞天之塔【困难】第15层"
     },
     "mode": {
       "en": "Skyward Tower - Hard",
-      "kr": "비천의 탑 하드",
       "jp": "飛天の塔 ハード",
+      "kr": "비천의 탑 하드",
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
       "en": "40102015",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Trigger Happy",
-        "kr": "트리거 해피",
         "jp": "トリガーハッピー",
+        "kr": "트리거 해피",
         "zh": "快乐扳机"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and increases the <color=#28d9ed>Priority</color> of the ally with the highest Attack by <color=#28d9ed>20%</color>, then grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킨 뒤\\n<color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color> 증가를 부여합니다.",
         "jp": "敵単体にダメージを与え、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせた後、\\n<color=#28d9ed>スピード</color>UPを<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킨 뒤\\n<color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color> 증가를 부여합니다.",
         "zh": "攻击敌人,使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>后,\\n使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_First_2000012"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Lucky or Die",
-        "kr": "Lucky or Die",
         "jp": "ラッキー・オア・ダイ",
+        "kr": "Lucky or Die",
         "zh": "Lucky or Die"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Increases <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> of all allies for <color=#28d9ed>3 turn(s)</color>, then increases the <color=#28d9ed>Attack</color> of Fire allies except the caster for <color=#28d9ed>3 turn(s)</color>.\\nGrants an <color=#28d9ed>extra turn</color> after using the skill.",
-        "kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>치명 피해</color>를 증가시킨 뒤\\n자신을 제외한 화속성 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다.\\n스킬 사용 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "jp": "味方全体の<color=#28d9ed>会心率</color>と<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>3ターン</color>の間UPさせた後、\\n自分を除く火属性の味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>3ターン</color>の間UPさせる。\\nスキル使用後、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>치명 피해</color>를 증가시킨 뒤\\n자신을 제외한 화속성 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다.\\n스킬 사용 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>,\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>3回合</color>。\\n使用技能后,获得<color=#28d9ed>额外回合</color>。"
       },
       "icon": "Skill_Second_2000012"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "My Bloody Valentine",
-        "kr": "마이 블러디 발렌타인",
         "jp": "マイ・ブラッディ・バレンタイン",
+        "kr": "마이 블러디 발렌타인",
         "zh": "我的血腥情人"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies.\\nReduces the target's Priority by <color=#28d9ed>25%</color>, and reduces it additionally by <color=#28d9ed>10%</color> if the target is Earth element.",
-        "kr": "적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>-25%</color> 감소시키며 대상이 지속성인 경우  <color=#28d9ed>-10%</color>를 추가 감소시킵니다.",
         "jp": "敵全体にダメージを与える。\\n対象の行動ゲージを<color=#28d9ed>-25%</color>DOWNさせ、対象が地属性の場合、\\nさらに<color=#28d9ed>-10%</color>DOWNさせる。",
+        "kr": "적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>-25%</color> 감소시키며 대상이 지속성인 경우  <color=#28d9ed>-10%</color>를 추가 감소시킵니다.",
         "zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>-25%</color>,若目标为土属性,则额外降低<color=#28d9ed>-10%</color>。"
       },
       "icon": "Skill_Ultimate_2000012"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Gambler's Envy",
-        "kr": "도박사의 질시",
         "jp": "ギャンブラージェラシー",
+        "kr": "도박사의 질시",
         "zh": "赌徒的仇视"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect)\\nIncreases Defense by <color=#28d9ed>20%</color> every time the caster gains a turn.\\n\\n(Triggered Effect) When an enemy uses a non-attack skill, attacks them, inflicting damage. Additionally reduces the <color=#28d9ed>cooldown</color> of <color=#28d9ed>Veronica's</color> <color=#28d9ed>Endurance Cannon</color> by <color=#28d9ed>1 turn</color>.",
-        "kr": "(패시브 효과) 자신이 턴을 획득할 때마다, 방어력이 <color=#28d9ed>20%</color> 증가합니다.\\n\\n(발동 효과) 적이 공격이 아닌 스킬 사용 시 대상을 공격하며 피해를 줍니다. 추가적으로 <color=#28d9ed>베로니카</color>의 <color=#28d9ed>인듀어런스 캐논</color>의 <color=#28d9ed>쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "jp": "(パッシブ効果)自分がターンを獲得するたびに、防御力が<color=#28d9ed>20%</color>UPする。\\n\\n(発動効果)敵が攻撃以外のスキル使用時、対象を攻撃し、ダメージを与える。また、<color=#28d9ed>【ヴェロニカ】</color>の<color=#28d9ed>【エンデュアランス・キャノン】</color>の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。",
+        "kr": "(패시브 효과) 자신이 턴을 획득할 때마다, 방어력이 <color=#28d9ed>20%</color> 증가합니다.\\n\\n(발동 효과) 적이 공격이 아닌 스킬 사용 시 대상을 공격하며 피해를 줍니다. 추가적으로 <color=#28d9ed>베로니카</color>의 <color=#28d9ed>인듀어런스 캐논</color>의 <color=#28d9ed>쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "zh": "(被动效果)每当自身获得回合时,使防御力提升<color=#28d9ed>20%</color>。\\n\\n(触发效果)当敌人使用非攻击类技能时,攻击目标并造成伤害。并额外使<color=#28d9ed>维罗妮卡</color><color=#28d9ed>持久加农炮</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Passive_1_Light"

@@ -2,14 +2,14 @@
   "id": "5040041",
   "Name": {
     "en": "Sterope",
-    "kr": "스테로페",
     "jp": "ステロペ",
+    "kr": "스테로페",
     "zh": "史提洛佩"
   },
   "Surname": {
     "en": "Sacreed Lightning",
-    "kr": "세이크리드의 번개",
     "jp": "雷の使徒",
+    "kr": "세이크리드의 번개",
     "zh": "圣科利德雷之使徒"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Light 31F",
-      "kr": "빛의 탑 31층",
       "jp": "光の塔 31階",
+      "kr": "빛의 탑 31층",
       "zh": "光之塔 31层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40232031",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Shatter!",
-        "kr": "부서져라!",
         "jp": "紫電撃砕",
+        "kr": "부서져라!",
         "zh": "粉身碎骨!"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. If Sterope had a buff before attacking, activates an additional attack on the same target and grants <color=#28d9ed>Divine Retribution</color>.\\n\\n<color=#28d9ed>Divine Retribution</color>: Increases damage dealt by all allies by <color=#28d9ed>4%</color>. (Max 15 stacks)",
-        "kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
         "jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
+        "kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
         "zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)"
       },
       "icon": "Skill_First_2000057"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Begin the Crusade",
-        "kr": "성전 개시",
         "jp": "雷光",
+        "kr": "성전 개시",
         "zh": "圣战开启"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect)\\nAt the start of battle, inflicts <color=#28d9ed>Keraunos</color> on allies and enemies for <color=#28d9ed>3 turn(s)</color>.",
-        "kr": "(패시브 효과)\\n전투 시작 후 <color=#28d9ed>3턴</color> 동안 아군과 적군에게 <color=#28d9ed>케라우노스</color>를 부여합니다.",
         "jp": "(パッシブ効果)\\n戦闘開始時、味方・敵全体に<color=#28d9ed>【ケラウノス】</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "kr": "(패시브 효과)\\n전투 시작 후 <color=#28d9ed>3턴</color> 동안 아군과 적군에게 <color=#28d9ed>케라우노스</color>를 부여합니다.",
         "zh": "(被动效果)\\n战斗开始后,对友军和敌军造成<color=#28d9ed>雷霆</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "Skill_Second_2000057"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Fight Ferociously!",
-        "kr": "용맹하게 싸워라!",
         "jp": "イージス・サンクチュアリ",
+        "kr": "용맹하게 싸워라!",
         "zh": "勇敢战斗吧!"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Grants increased <color=#28d9ed>Accuracy</color> and <color=#28d9ed>Effectiveness</color> to all allies for <color=#28d9ed>3 turn(s)</color>.",
-        "kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>명중</color>과 <color=#28d9ed>효과 적중</color>을 증가시킵니다.",
         "jp": "味方全体の<color=#28d9ed>命中</color>と<color=#28d9ed>効果命中</color>を<color=#28d9ed>3ターン</color>の間UPさせる。",
+        "kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>명중</color>과 <color=#28d9ed>효과 적중</color>을 증가시킵니다.",
         "zh": "使全体友军的<color=#28d9ed>命中</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "Skill_Ultimate_2000057"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Persistent Resistance",
-        "kr": "끈질긴 저항",
         "jp": "しぶとい抵抗",
+        "kr": "끈질긴 저항",
         "zh": "顽强的抵抗"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Defense</color> proportional to missing Health. <color=#28d9ed>Defense</color> can increase up to <color=#28d9ed>160%</color>.",
-        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다. <color=#28d9ed>방어력</color>은 최대 <color=#28d9ed>160%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n残りHPが低いほど<color=#28d9ed>防御力</color>がUPする。<color=#28d9ed>防御力</color>は最大<color=#28d9ed>160%</color>UPする。",
+        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다. <color=#28d9ed>방어력</color>은 최대 <color=#28d9ed>160%</color> 증가합니다.",
         "zh": "(被动效果)\\n生命值越低,<color=#28d9ed>防御力</color>越高。<color=#28d9ed>防御力</color>最多提升\\n<color=#28d9ed>160%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Light",
-        "kr": "빛의 탑의 가호",
         "jp": "光の塔の加護",
+        "kr": "빛의 탑의 가호",
         "zh": "光之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Light"

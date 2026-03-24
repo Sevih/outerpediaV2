@@ -2,8 +2,8 @@
   "id": "400302298",
   "Name": {
     "en": "Nightwatch Hammer-Wielder",
-    "kr": "기사단 해머",
     "jp": "騎士団兵〈ハンマー〉",
+    "kr": "기사단 해머",
     "zh": "骑士团巨锤兵"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 82F",
-      "kr": "비천의 탑 82층",
       "jp": "飛天の塔82階",
+      "kr": "비천의 탑 82층",
       "zh": "飞天之塔82层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101082",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Hammer of Faith",
-        "kr": "신념의 망치",
         "jp": "信念のハンマー",
+        "kr": "신념의 망치",
         "zh": "信念之锤"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Hammer_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Leap of Loyalty",
-        "kr": "충성의 도약",
         "jp": "忠誠の跳躍",
+        "kr": "충성의 도약",
         "zh": "忠诚之跃"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies.\\nReduces the cooldown of <color=#28d9ed>Devastating Throw</color> by <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>파괴의 투척</color>의 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>【破壊の投てき】</color>のスキルターンが<color=#28d9ed>1ターン</color>減少する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>파괴의 투척</color>의 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
         "zh": "攻击全体敌人,并使<color=#28d9ed>破坏投掷</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Hammer_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Devastating Throw",
-        "kr": "파괴의 투척",
         "jp": "破壊の投てき",
+        "kr": "파괴의 투척",
         "zh": "破坏投掷"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Hammer_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Body Hardening V",
-        "kr": "신체 경화 V",
         "jp": "身体硬化 V",
+        "kr": "신체 경화 V",
         "zh": "身体硬化 V"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Defense by <color=#28d9ed>30%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 방어력이 <color=#28d9ed>30%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、防御力が<color=#28d9ed>30%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 방어력이 <color=#28d9ed>30%</color> 증가합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使防御力提升<color=#28d9ed>30%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Pride of the Order",
-        "kr": "기사단의 긍지",
         "jp": "騎士団の誇り",
+        "kr": "기사단의 긍지",
         "zh": "骑士团的骄傲"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nHas a <color=#28d9ed>10%</color> chance to increase cooldowns of one target by <color=#28d9ed>1 turn(s)</color> when attacking.\\nIncreases <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle.",
-        "kr": "(패시브 효과)\\n공격 시 <color=#28d9ed>10%</color> 확률로 대상 한 명의 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
         "jp": "(パッシブ効果)\\n攻撃時、<color=#28d9ed>10%</color>の確率で対象単体のスキルターンを<color=#28d9ed>1ターン</color>増加させる。\\n戦闘開始時、<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+        "kr": "(패시브 효과)\\n공격 시 <color=#28d9ed>10%</color> 확률로 대상 한 명의 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
         "zh": "(被动效果)\\n攻击时,有<color=#28d9ed>10%</color>的几率使1名目标的冷却时间增加<color=#28d9ed>1回合</color>。\\n战斗开始时,使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Passive_1_Earth"

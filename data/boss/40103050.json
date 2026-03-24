@@ -2,14 +2,14 @@
   "id": "40103050",
   "Name": {
     "en": "Kanon",
-    "kr": "카논",
     "jp": "カノン",
+    "kr": "카논",
     "zh": "卡农"
   },
   "Surname": {
     "en": "Blazing Fighter",
-    "kr": "광염의 싸움꾼",
     "jp": "狂炎の喧嘩屋",
+    "kr": "광염의 싸움꾼",
     "zh": "烈焰角斗士"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Very Hard 3F",
-      "kr": "비천의 탑 [베리 하드] 3층",
       "jp": "飛天の塔【ベリーハード】3階",
+      "kr": "비천의 탑 [베리 하드] 3층",
       "zh": "飞天之塔【极难】第3层"
     },
     "mode": {
       "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "area_id": {
       "en": "40103003",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Fiery Tempest Kick",
-        "kr": "염풍각",
         "jp": "炎風脚",
+        "kr": "염풍각",
         "zh": "炎风脚"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. When attacking while granted a <color=#28d9ed>Barrier</color>, increases Priority of the caster by <color=#28d9ed>20%</color>. Damage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack.",
-        "kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。<color=#28d9ed>シールド</color>状態で攻撃時、自分の行動ゲージが<color=#28d9ed>20%</color>UPする。このスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "kr": "적 대상을 공격합니다. <color=#28d9ed>실드</color> 보유 중 공격 시 자신의 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다. 이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가합니다.",
         "zh": "攻击敌人目标。附带<color=#28d9ed>护盾</color>攻击时,使自身行动值提升<color=#28d9ed>20%</color>。该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害。"
       },
       "icon": "Skill_First_2000071"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Are You Strong?!",
-        "kr": "센 녀석이냐!",
         "jp": "強えぇヤツか!",
+        "kr": "센 녀석이냐!",
         "zh": "厉害的家伙!"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect) When hit by an attack that targets all enemies, grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color>.\\n\\n(Triggered Effect) When an ally scores or takes a critical hit, activates <color=#28d9ed>Are You Strong?!</color> on the <color=#28d9ed>enemy with the highest Attack</color>.\\nDamage dealt increases proportional to Defense instead of Attack. Recovers Health and increases Priority of the caster by <color=#28d9ed>30%</color>.",
-        "kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>30%</color> 회복합니다.",
         "jp": "(パッシブ効果)全体攻撃でダメージを受けるたびに、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n(発動効果)味方が敵を攻撃時、会心が発生した場合、もしくは敵から会心ダメージを受けた場合<color=#28d9ed>最も攻撃力が高い敵</color>に<color=#28d9ed>【強えぇヤツか!】</color>を使用する。\\n攻撃力の代わりに防御力が高いほどダメージがUPし、自分のHPと行動ゲージが<color=#28d9ed>30%</color>回復する。",
+        "kr": "(패시브 효과) 전체 공격으로 피격 될 때 마다 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n\\n(발동 효과) 아군이 치명 공격을 하거나 당할 시 <color=#28d9ed>공격력이 가장 높은 적</color>에게 <color=#28d9ed>센 녀석이냐!</color>를 사용합니다.\\n공격력 대신 방어력에 비례하여 피해가 증가하며, 자신의 체력 및 행동게이지가 <color=#28d9ed>30%</color> 회복합니다.",
         "zh": "(被动效果)每当受到全体攻击时,使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n(触发效果)友军发动暴击或受到暴击时,对<color=#28d9ed>攻击力最高的敌人</color>发动<color=#28d9ed>厉害的家伙!</color>。\\n根据防御力而非攻击力等比提升伤害,且使自身生命值和行动值恢复<color=#28d9ed>30%</color>。"
       },
       "icon": "Skill_Second_2000071"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Ascending Diamond Fist",
-        "kr": "금강승천권",
         "jp": "金剛昇天拳",
+        "kr": "금강승천권",
         "zh": "金刚升天拳"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy, and grants increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>3 turn(s)</color>. When an enemy is defeated, <color=#28d9ed>resets</color> the skill cooldown of <color=#28d9ed>Are You Strong?!</color>.\\nDamage dealt increases proportional to <color=#28d9ed>Defense</color> instead of Attack and additionally increases proportional to missing Health.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせる。敵を倒した時、<color=#28d9ed>【強えぇヤツか!】</color>のスキルターンが<color=#28d9ed>初期化</color>される。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>防御力</color>が高いほどダメージがUPし、残りHPが低いほどダメージが追加でUPする。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다. 적 처치 시 <color=#28d9ed>센 녀석이냐!</color>의 스킬 쿨타임이 <color=#28d9ed>초기화</color> 됩니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>방어력</color>에 비례하여 피해가 증가하며, 잃은 체력에 비례하여 피해가 추가로 증가합니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>。击杀敌人时,<color=#28d9ed>厉害的家伙!</color>技能冷却时间<color=#28d9ed>重置</color>。\\n该技能根据<color=#28d9ed>防御力</color>而非攻击力等比提升伤害,且根据损失生命值等比提升额外伤害量。"
       },
       "icon": "Skill_Ultimate_2000071"

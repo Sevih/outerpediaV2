@@ -2,14 +2,14 @@
   "id": "62000058",
   "Name": {
     "en": "Astei",
-    "kr": "아스테",
     "jp": "アステ",
+    "kr": "아스테",
     "zh": "奥斯黛"
   },
   "Surname": {
     "en": "Archbishop of Sacreed",
-    "kr": "자애로운 대주교",
     "jp": "セイクリッド大司教",
+    "kr": "자애로운 대주교",
     "zh": "圣科利德大主教"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 25F",
-      "kr": "화염의 탑 25층",
       "jp": "火の塔25階",
+      "kr": "화염의 탑 25층",
       "zh": "火之塔第25层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202025",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "The Stars in Heaven",
-        "kr": "하늘에는 별이",
         "jp": "天にありては星",
+        "kr": "하늘에는 별이",
         "zh": "天上有星星"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. After attacking, increases own <color=#28d9ed>Resilience</color> chance for <color=#28d9ed>1</color> turn.\\nWhen used on own turn, has a <color=#28d9ed>30%</color> chance to use <color=#28d9ed>Flowers Bloom on the Ground</color>. If a buff is active, the activation chance is increased by 40%.\\nThis skill is not affected by nor affects the cooldown of Flowers Bloom on the Ground.",
-        "kr": "적을 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>효과 저항</color> 확률을 증가시킵니다. \\n자신의 턴에 사용 시, <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>땅에는 꽃이</color>를 사용합니다. 강화 효과 보유 시에는 땅에는 꽃이의 발동 확률이 40% 증가합니다. \\n땅에는 꽃이 스킬 쿨타임의 영향을 주거나 받지 않습니다.",
         "jp": "敵単体にダメージを与える。攻撃後、自身の<color=#28d9ed>効果抵抗</color>確率が<color=#28d9ed>1</color>ターンの間、増加する。\\n自身のターンに使用時、<color=#28d9ed>30%</color>の確率で<color=#28d9ed>地に咲く花</color>を使用する。強化効果を保有している場合、発動確率が40%増加する。\\n地に咲く花はスキルターンの影響を受けず、与えない。",
+        "kr": "적을 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>효과 저항</color> 확률을 증가시킵니다. \\n자신의 턴에 사용 시, <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>땅에는 꽃이</color>를 사용합니다. 강화 효과 보유 시에는 땅에는 꽃이의 발동 확률이 40% 증가합니다. \\n땅에는 꽃이 스킬 쿨타임의 영향을 주거나 받지 않습니다.",
         "zh": "攻击敌人。攻击后,在<color=#28d9ed>1</color>回合内提高自身<color=#28d9ed>效果抵抗</color>概率。\\n在自身回合使用时,有<color=#28d9ed>30%</color>概率使用<color=#28d9ed>大地之花</color>。若持有强化效果,触发概率提高40%。\\n大地之花不受技能冷却影响,也不会影响其冷却。"
       },
       "icon": "Skill_First_2000058"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "The Flowers on Earth",
-        "kr": "땅에는 꽃이",
         "jp": "地にありては花",
+        "kr": "땅에는 꽃이",
         "zh": "地上有花"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>15%</color> of Astei's Max Health.",
-        "kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>15%</color> 만큼 회복시킵니다.",
         "jp": "自分を除く味方全体の<color=#28d9ed>HP</color>を【アステ】の最大HPの<color=#28d9ed>15%</color>回復させる。",
+        "kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>15%</color> 만큼 회복시킵니다.",
         "zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>15%</color>。"
       },
       "icon": "Skill_Second_2000058"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "The Love in Our Hearts",
-        "kr": "사람에게는 사랑이",
         "jp": "人にありては愛",
+        "kr": "사람에게는 사랑이",
         "zh": "人类有爱"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>20%</color> of Astei's Max Health and grants <color=#28d9ed>Immunity</color> for <color=#28d9ed>2 turn(s)</color>.\\nInflicts reduced <color=#28d9ed>Critical Hit Chance</color> on all enemies for <color=#28d9ed>2 turn(s)</color>. This effect ignores the target's Resilience.",
-        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>20%</color> 만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>면역</color>을 부여합니다.\\n적 전체의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
         "jp": "味方全体の<color=#28d9ed>HP</color>を【アステ】の最大HPの<color=#28d9ed>20%</color>回復させ、味方全体に<color=#28d9ed>免疫</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n敵全体の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。この効果は対象の効果抵抗を無視する。",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>20%</color> 만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>면역</color>을 부여합니다.\\n적 전체의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
         "zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>20%</color>,并获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。"
       },
       "icon": "Skill_Ultimate_2000058"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Body Hardening IV",
-        "kr": "신체 경화 IV",
         "jp": "身体硬化 IV",
+        "kr": "신체 경화 IV",
         "zh": "身体硬化 IV"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Defense by <color=#28d9ed>25%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 방어력이 <color=#28d9ed>25%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、防御力が<color=#28d9ed>25%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 방어력이 <color=#28d9ed>25%</color> 증가합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使防御力提升<color=#28d9ed>25%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "God's Flame",
-        "kr": "신의 불꽃",
         "jp": "神の炎",
+        "kr": "신의 불꽃",
         "zh": "神之火花"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWhen hit, if the hit was non-critical, inflicts Burned on the attacker for <color=#28d9ed>2 turns</color>.\\n\\nIf the hit was critical, inflicts reduced Critical Hit Chance and Defense on the attacker for <color=#28d9ed>1 turn</color>.",
-        "kr": "(패시브 효과)\\n치명 피해를 입지 않았을 때 공격 대상에게 <color=#28d9ed>2턴</color>동안 화상을 부여합니다. \\n\\n치명 피해를 보았을 때 공격 대상에게 <color=#28d9ed>1턴</color> 동안 치명 확률 및 방어력을 감소 시킵니다.",
         "jp": "(パッシブ効果)\\n会心ダメージを受けなかった場合、攻撃対象に火傷を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n会心ダメージを受けた場合、攻撃対象の会心率と命中を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "kr": "(패시브 효과)\\n치명 피해를 입지 않았을 때 공격 대상에게 <color=#28d9ed>2턴</color>동안 화상을 부여합니다. \\n\\n치명 피해를 보았을 때 공격 대상에게 <color=#28d9ed>1턴</color> 동안 치명 확률 및 방어력을 감소 시킵니다.",
         "zh": "(被动效果)\\n若未受到暴击伤害,则对攻击目标造成烧伤效果,持续<color=#28d9ed>2回合</color>。\\n\\n受到暴击伤害时,使攻击目标的暴击率和命中降低,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -123,15 +123,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Flames",
-        "kr": "화염의 탑의 가호",
         "jp": "火炎の塔の加護",
+        "kr": "화염의 탑의 가호",
         "zh": "火焰之塔的庇佑"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Fire"

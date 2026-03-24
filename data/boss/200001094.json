@@ -2,14 +2,14 @@
   "id": "200001094",
   "Name": {
     "en": "Idith",
-    "kr": "이디스",
     "jp": "イディス",
+    "kr": "이디스",
     "zh": "伊蒂斯"
   },
   "Surname": {
     "en": "Honorable Knight",
-    "kr": "긍지 높은 기사",
     "jp": "誠実な貴族騎士",
+    "kr": "긍지 높은 기사",
     "zh": "充满荣誉感的骑士"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 45F",
-      "kr": "비천의 탑 45층",
       "jp": "飛天の塔45階",
+      "kr": "비천의 탑 45층",
       "zh": "飞天之塔45层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101045",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Triple Slash",
-        "kr": "삼연검",
         "jp": "三連剣",
+        "kr": "삼연검",
         "zh": "三连剑"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy.\\nThis attack prioritizes the enemies' Front Line.",
-        "kr": "적을 공격합니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは、一番前の敵を優先的に攻撃する。",
+        "kr": "적을 공격합니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
         "zh": "攻击敌人。\\n该技能优先攻击处于前排的敌人。"
       },
       "icon": "Skill_First_2000010"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Antipathy",
-        "kr": "앙심",
         "jp": "返し突き",
+        "kr": "앙심",
         "zh": "嫉恶如仇"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect)\\nWhen the caster is attacked, <color=#28d9ed>counterattacks</color>.\\nInflicts <color=#28d9ed>Marked</color> on the target and increases <color=#28d9ed>Priority</color> of minions by <color=#28d9ed>100%</color>.",
-        "kr": "(발동 효과)\\n자신이 공격받았을 때 <color=#28d9ed>반격</color>합니다.\\n대상에게 <color=#28d9ed>표식</color>을 부여하고 부하들의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
         "jp": "(発動効果)\\n自分が攻撃を受けた場合、<color=#28d9ed>反撃</color>する。\\n対象に<color=#28d9ed>標的</color>を付与し、自分を除く味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>100%</color>UPする。",
+        "kr": "(발동 효과)\\n자신이 공격받았을 때 <color=#28d9ed>반격</color>합니다.\\n대상에게 <color=#28d9ed>표식</color>을 부여하고 부하들의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
         "zh": "(被动效果)\\n自身受到攻击时,发动<color=#28d9ed>反击</color>。\\n对目标造成<color=#28d9ed>标记</color>效果,并使部下们的<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。"
       },
       "icon": "Skill_Second_2000010"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Noble Swordcraft",
-        "kr": "귀족 검술",
         "jp": "アルデラミン奥義",
+        "kr": "귀족 검술",
         "zh": "贵族剑术"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy.\\nThis skill prioritizes the enemies' Front Line.",
-        "kr": "적을 공격하여 큰 피해를 입힙니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
         "jp": "敵単体にダメージを与え、大ダメージを与える。\\nこのスキルは、一番前の敵を優先的に攻撃する。",
+        "kr": "적을 공격하여 큰 피해를 입힙니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
         "zh": "攻击敌人并造成巨额伤害。\\n该技能优先攻击处于前排的敌人。"
       },
       "icon": "Skill_Ultimate_2000010"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Super Regeneration II",
-        "kr": "초재생 II",
         "jp": "超再生 II",
+        "kr": "초재생 II",
         "zh": "超再生 II"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nRecovers Health of the caster by <color=#28d9ed>7.5%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>7.5%</color> 만큼 회복합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、自分のHPを<color=#28d9ed>7.5%</color>回復する。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>7.5%</color> 만큼 회복합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使自身生命值恢复<color=#28d9ed>7.5%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Knight's Dignity",
-        "kr": "기사의 품위",
         "jp": "騎士の品格",
+        "kr": "기사의 품위",
         "zh": "骑士品味"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Attack and Speed</color> of all allies by <color=#28d9ed>12.5%</color> each turn. (Max 8 stacks)\\n\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>12%</color> when an ally attacks.\\nWhen an ally dies, does not take Weakness Gauge damage and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>100%</color>. Increases their <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>100%</color>, but reduces their <color=#28d9ed>Critical Damage</color> by <color=#28d9ed>30%</color>.\\n\\nMinions have special abilities that are stackable and removed upon their deaths.\\n<color=#ffd732>Nightwatch Shieldbearer</color>: Reduces <color=#28d9ed>damage taken</color> by all allies by <color=#28d9ed>10%</color>. \\n<color=#ffd732>Nightwatch Waraxe-Wielder</color>: Reduces <color=#28d9ed>damage taken</color> by Idith and Nightwatch Waraxe-Wielder by <color=#28d9ed>15%</color>.",
-        "kr": "(패시브 효과)\\n매 턴 아군 전체의 <color=#28d9ed>공격력과 속도</color>가 <color=#28d9ed>12.5%</color> 증가합니다. (최대 8회 누적)\\n\\n아군이 공격 시 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>12%</color> 증가합니다.\\n아군 사망 시 WG 피해를 받지 않고, 남은 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>100%</color> 회복시키고 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>100%</color> 증가시키지만, <color=#28d9ed>치명 피해</color>는 <color=#28d9ed>30%</color> 감소합니다.\\n\\n부하들은 서로 누적되는 특수 능력을 보유하며 사망 시 해제됩니다.\\n<color=#ffd732>기사단 실드</color> : 아군 전체의 <color=#28d9ed>받는 피해</color>를 <color=#28d9ed>10%</color> 감소시킵니다. \\n<color=#ffd732>기사단 워액스</color> : 이디스와 기사단 워액스의 <color=#28d9ed>받는 피해</color>를 <color=#28d9ed>15%</color> 감소시킵니다.",
         "jp": "(パッシブ効果)\\n毎ターン味方全体の<color=#28d9ed>攻撃力とスピード</color>が<color=#28d9ed>12.5%</color>UPする。この効果は最大8回まで累積する。\\n\\n味方が攻撃時、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>12%</color>UPする。\\n味方が倒れた時、WGダメージを受けず、残った味方の<color=#28d9ed>HP</color>を<color=#28d9ed>100%</color>回復し、<color=#28d9ed>会心率</color>を<color=#28d9ed>100%</color>UPさせるが、<color=#28d9ed>会心ダメージ</color>は<color=#28d9ed>30%</color>DOWNする。\\n\\n部下には特殊能力があり、倒れた時解除される。\\n<color=#fff95f>【騎士団兵〈盾〉】</color>:味方全体の<color=#28d9ed>受けるダメージ</color>を<color=#28d9ed>10%</color>DOWNさせる。\\n<color=#fff95f>【騎士団兵〈斧〉】</color>:【イディス】と【騎士団兵〈斧〉】の<color=#28d9ed>受けるダメージ</color>を<color=#28d9ed>15%</color>DOWNさせる。",
+        "kr": "(패시브 효과)\\n매 턴 아군 전체의 <color=#28d9ed>공격력과 속도</color>가 <color=#28d9ed>12.5%</color> 증가합니다. (최대 8회 누적)\\n\\n아군이 공격 시 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>12%</color> 증가합니다.\\n아군 사망 시 WG 피해를 받지 않고, 남은 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>100%</color> 회복시키고 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>100%</color> 증가시키지만, <color=#28d9ed>치명 피해</color>는 <color=#28d9ed>30%</color> 감소합니다.\\n\\n부하들은 서로 누적되는 특수 능력을 보유하며 사망 시 해제됩니다.\\n<color=#ffd732>기사단 실드</color> : 아군 전체의 <color=#28d9ed>받는 피해</color>를 <color=#28d9ed>10%</color> 감소시킵니다. \\n<color=#ffd732>기사단 워액스</color> : 이디스와 기사단 워액스의 <color=#28d9ed>받는 피해</color>를 <color=#28d9ed>15%</color> 감소시킵니다.",
         "zh": "(被动效果)\\n每回合使全体友军的<color=#28d9ed>攻击力和速度</color>提升<color=#28d9ed>12.5%</color>。(最多可叠加8次)\\n\\n友军进行攻击时,使<color=#28d9ed>行动值</color>恢复<color=#28d9ed>12%</color>。\\n友军死亡时,不会受到WG伤害,并使剩余友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>100%</color>,使<color=#28d9ed>暴击率</color>提升<color=#28d9ed>100%</color>,<color=#28d9ed>暴击伤害</color>降低<color=#28d9ed>30%</color>。\\n\\n使部下们获得特殊能力,并在死亡时解除。\\n<color=#ffd732>骑士团盾牌兵</color>:使全体友军<color=#28d9ed>所受伤害</color>降低<color=#28d9ed>10%</color>\\n<color=#ffd732>骑士团战斧兵</color>:使伊蒂斯和骑士团战斧兵<color=#28d9ed>所受伤害</color>降低<color=#28d9ed>15%</color>。"
       },
       "icon": "MT_Passive_1_Earth"

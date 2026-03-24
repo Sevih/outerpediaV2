@@ -2,14 +2,14 @@
   "id": "5050067",
   "Name": {
     "en": "Maxwell",
-    "kr": "맥스웰",
     "jp": "マクスウェル",
+    "kr": "맥스웰",
     "zh": "麦克斯威尔"
   },
   "Surname": {
     "en": "Heretic Mage",
-    "kr": "이단의 마법사",
     "jp": "異端の魔法使い",
+    "kr": "이단의 마법사",
     "zh": "异端魔法师"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Darkness 46F",
-      "kr": "암흑의 탑 46층",
       "jp": "闇の塔 46階",
+      "kr": "암흑의 탑 46층",
       "zh": "黑暗之塔 1层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40242046",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Ray of Destruction",
-        "kr": "파열의 섬광",
         "jp": "Xリッパ-",
+        "kr": "파열의 섬광",
         "zh": "破裂闪光"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks all enemies.",
-        "kr": "적 전체를 공격합니다.",
         "jp": "敵全体にダメージを与える。",
+        "kr": "적 전체를 공격합니다.",
         "zh": "攻击全体敌人。"
       },
       "icon": "Skill_First_2000028"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Formless Lasso",
-        "kr": "무형의 올가미",
         "jp": "無形の策略",
+        "kr": "무형의 올가미",
         "zh": "无形圈套"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. After attacking, increases <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>50%</color> for <color=#28d9ed>3 turn(s)</color>. However, reduces <color=#28d9ed>Resilience</color> by <color=#28d9ed>100%</color> for <color=#28d9ed>2 turn(s)</color> as a side effect.",
-        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>50%</color> 증가하지만, 그 반동으로 <color=#28d9ed>2턴</color> 동안<color=#28d9ed> 효과 저항</color>이 <color=#28d9ed>100%</color> 감소합니다.",
         "jp": "敵全体にダメージを与える。攻撃後<color=#28d9ed>会心率</color>が<color=#28d9ed>3ターン</color>の間<color=#28d9ed>50%</color>UPするが、<color=#28d9ed>効果抵抗</color>が<color=#28d9ed>2ターン</color>の間<color=#28d9ed>100%</color>DOWNする。",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>50%</color> 증가하지만, 그 반동으로 <color=#28d9ed>2턴</color> 동안<color=#28d9ed> 효과 저항</color>이 <color=#28d9ed>100%</color> 감소합니다.",
         "zh": "攻击全体敌人。攻击后,使<color=#28d9ed>暴击率</color>提升<color=#28d9ed>50%</color>,持续<color=#28d9ed>3回合</color>,但其副作用会使<color=#28d9ed>效果抵抗</color>降低<color=#28d9ed>\\n100%</color>,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Ultimate_2000028"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Mana Converter",
-        "kr": "마력 전환 기구",
         "jp": "マナ・エクスプロージョン",
+        "kr": "마력 전환 기구",
         "zh": "魔力转换器"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) Activates <color=#28d9ed>Mana Converter</color> and deals additional damage to all enemies if <color=#28d9ed>Ray of Destruction</color> scores a <color=#28d9ed>critical hit</color>.",
-        "kr": "(발동 효과) <color=#28d9ed>파열의 섬광</color>이 <color=#28d9ed>치명 공격</color>으로 적중하면, <color=#28d9ed>마력 전환 기구</color>가 활성화되어 적 전체에게 추가적인 피해를 입힙니다.",
         "jp": "(発動効果)<color=#28d9ed>【Xリッパー】</color>で<color=#28d9ed>会心</color>が発生した場合、<color=#28d9ed>【マナ・エクスプロージョン】</color>を発動し、敵全体に追加でダメージを与える。",
+        "kr": "(발동 효과) <color=#28d9ed>파열의 섬광</color>이 <color=#28d9ed>치명 공격</color>으로 적중하면, <color=#28d9ed>마력 전환 기구</color>가 활성화되어 적 전체에게 추가적인 피해를 입힙니다.",
         "zh": "(触发效果)若<color=#28d9ed>破裂闪光</color>以<color=#28d9ed>暴击</color>命中,则激活<color=#28d9ed>魔力转换器</color>,对全体敌人造成额外伤害。"
       },
       "icon": "Skill_Second_2000028"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Ready to Counterattack",
-        "kr": "반격 준비",
         "jp": "反撃準備",
+        "kr": "반격 준비",
         "zh": "反击准备"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nUpon taking a critical hit, grants increased <color=#28d9ed>counterattack</color> to the caster for <color=#28d9ed>2 turns</color>.",
-        "kr": "(패시브 효과)\\n치명 피격 시 자신의 <color=#28d9ed>반격</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "(パッシブ効果)\\n会心ダメージを受けた場合、自分の<color=#28d9ed>反撃</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "(패시브 효과)\\n치명 피격 시 자신의 <color=#28d9ed>반격</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "(被动效果)\\n受到暴击时,使自身的<color=#28d9ed>反击</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Darkness",
-        "kr": "어둠의 탑의 가호",
         "jp": "闇の塔の加護",
+        "kr": "어둠의 탑의 가호",
         "zh": "暗之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Dark"

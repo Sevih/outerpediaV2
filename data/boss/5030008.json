@@ -2,8 +2,8 @@
   "id": "5030008",
   "Name": {
     "en": "Minima Magician",
-    "kr": "미니마 매지션",
     "jp": "マジシャン・ミニマ",
+    "kr": "미니마 매지션",
     "zh": "迷蜴蟆魔术师"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 4F",
-      "kr": "대지의 탑 4층",
       "jp": "大地の塔4階",
+      "kr": "대지의 탑 4층",
       "zh": "土之塔第4层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222004",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Fireball",
-        "kr": "화염구",
         "jp": "ファイアボール",
+        "kr": "화염구",
         "zh": "火球"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Multiple Fireballs",
-        "kr": "연속 화염구",
         "jp": "連続ファイアボール",
+        "kr": "연속 화염구",
         "zh": "火球连射"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Giant Fireball",
-        "kr": "거대 화염구",
         "jp": "巨大ファイアボール",
+        "kr": "거대 화염구",
         "zh": "巨型火球"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Neural Amplification I",
-        "kr": "신경계 증폭 I",
         "jp": "神経系増幅 I",
+        "kr": "신경계 증폭 I",
         "zh": "精神系增幅 I"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Speed by <color=#28d9ed>5%</color> every time the caster takes a turn. (Max 5 stacks)",
-        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>5%</color> 증가합니다. (최대 5회 누적)",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、スピードが<color=#28d9ed>5%</color>UPする。(最大5回まで累積)",
+        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>5%</color> 증가합니다. (최대 5회 누적)",
         "zh": "(被动效果)\\n每到自身回合时,使速度提升<color=#28d9ed>5%</color>。(最多可叠加5次)"
       },
       "icon": "MT_Passive_1_Dark"

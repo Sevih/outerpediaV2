@@ -2,14 +2,14 @@
   "id": "62001051",
   "Name": {
     "en": "Orox",
-    "kr": "오록스",
     "jp": "オーロックス",
+    "kr": "오록스",
     "zh": "欧路士"
   },
   "Surname": {
     "en": "Relentless Bison",
-    "kr": "거침없는 들소",
     "jp": "【獣人解放戦線】の前向き戦士",
+    "kr": "거침없는 들소",
     "zh": "横行无阻的野牛"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 10F",
-      "kr": "대지의 탑 10층",
       "jp": "大地の塔10階",
+      "kr": "대지의 탑 10층",
       "zh": "土之塔第10层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222010",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Shoulder Tackle",
-        "kr": "숄더 태클",
         "jp": "ショルダータックル",
+        "kr": "숄더 태클",
         "zh": "野蛮冲撞"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks all enemies.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Health</color>.",
-        "kr": "적 전체에게 피해를 입힙니다.\\n이 스킬은 자신의 <color=#28d9ed>체력</color>이 높을수록 피해가 증가합니다.",
         "jp": "敵全体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。",
+        "kr": "적 전체에게 피해를 입힙니다.\\n이 스킬은 자신의 <color=#28d9ed>체력</color>이 높을수록 피해가 증가합니다.",
         "zh": "对全体敌人造成伤害。\\n自身<color=#28d9ed>生命值</color>越高,则该技能的伤害越高。"
       },
       "icon": "Skill_First_2000051"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Sturdy Body",
-        "kr": "튼튼한 육체",
         "jp": "タフなボディ",
+        "kr": "튼튼한 육체",
         "zh": "强健的肉体"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect) When hit, has a <color=#28d9ed>[buff_c_tower_element_52508_0]</color> chance to reduce the cooldown of <color=#28d9ed>Pressure Festival</color> by <color=#28d9ed>[buff_v_tower_element_52508_1] turn(s)</color> and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>[buff_v_tower_element_52508_0]</color>.",
-        "kr": "(패시브 효과) 피격 시 <color=#28d9ed>[buff_c_tower_element_52508_0]</color> 확률로 <color=#28d9ed>압박축제</color>의 스킬 쿨타임이 <color=#28d9ed>[buff_v_tower_element_52508_1]턴</color> 감소하고, <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>[buff_v_tower_element_52508_0]</color> 증가합니다.",
         "jp": "(パッシブ効果)ダメージを受けた場合、<color=#28d9ed>[buff_c_tower_element_52508_0]</color>の確率で<color=#28d9ed>【三散祭り】</color>のスキルターンが<color=#28d9ed>[buff_v_tower_element_52508_1]ターン</color>減少し、<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>[buff_v_tower_element_52508_0]</color>UPする。",
+        "kr": "(패시브 효과) 피격 시 <color=#28d9ed>[buff_c_tower_element_52508_0]</color> 확률로 <color=#28d9ed>압박축제</color>의 스킬 쿨타임이 <color=#28d9ed>[buff_v_tower_element_52508_1]턴</color> 감소하고, <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>[buff_v_tower_element_52508_0]</color> 증가합니다.",
         "zh": "(被动效果)受到攻击时,有<color=#28d9ed>[buff_c_tower_element_52508_0]</color>的几率使<color=#28d9ed>压迫庆典</color>的技能冷却时间减少<color=#28d9ed>[buff_v_tower_element_52508_1]回合</color>,并使<color=#28d9ed>行动值</color>提升<color=#28d9ed>[buff_v_tower_element_52508_0]</color>。"
       },
       "icon": "Skill_Second_2000051"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Pressure Festival",
-        "kr": "압박축제",
         "jp": "三散祭り",
+        "kr": "압박축제",
         "zh": "压迫庆典"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>[buff_c_tower_element_52509_0]</color> chance to increase the caster's <color=#28d9ed>Resilience</color> for <color=#28d9ed>[buff_t_tower_element_52509_0] turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Health</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>[buff_c_tower_element_52509_0]</color> 확률로 자신의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>[buff_t_tower_element_52509_0]턴</color> 동안 증가시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>체력</color>이 높을수록 피해가 증가합니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52509_0]</color>の確率で自分の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>[buff_t_tower_element_52509_0]ターン</color>の間UPさせる。\\nこのスキルは自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>[buff_c_tower_element_52509_0]</color> 확률로 자신의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>[buff_t_tower_element_52509_0]턴</color> 동안 증가시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>체력</color>이 높을수록 피해가 증가합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>[buff_c_tower_element_52509_0]</color>的几率使自身的<color=#28d9ed>效果抵抗</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52509_0]回合</color>。\\n自身<color=#28d9ed>生命值</color>越高,则该技能的伤害越高。"
       },
       "icon": "Skill_Ultimate_2000051"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Rhinoceros Horns",
-        "kr": "무소의 뿔",
         "jp": "犀の角",
+        "kr": "무소의 뿔",
         "zh": "犀牛角"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Triggered Effect) Attacks all enemies with an <color=#28d9ed>additional attack</color> when an ally lands a debuff on an enemy on their turn.",
-        "kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>추가타</color>로 적 전체를 공격 합니다.",
         "jp": "(発動効果)味方が自分のターンで敵に弱体効果を付与した場合、<color=#28d9ed>追加攻撃</color>で敵全体にダメージを与える。",
+        "kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>추가타</color>로 적 전체를 공격 합니다.",
         "zh": "(触发效果)\\n友军在自身回合对敌人造成弱化效果时,以<color=#28d9ed>额外攻击</color>对全体敌人进行攻击。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Earth Tower",
-        "kr": "대지의 탑의 가호",
         "jp": "大地の塔の加護",
+        "kr": "대지의 탑의 가호",
         "zh": "大地之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Earth"

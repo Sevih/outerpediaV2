@@ -2,14 +2,14 @@
   "id": "52000054",
   "Name": {
     "en": "Mene",
-    "kr": "메네",
     "jp": "メネ",
+    "kr": "메네",
     "zh": "麦尼"
   },
   "Surname": {
     "en": "Little Insomniac Nun",
-    "kr": "불면증 꼬맹이 수녀",
     "jp": "不眠症のちびシスター",
+    "kr": "불면증 꼬맹이 수녀",
     "zh": "失眠的小修女"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Water Tower 36F",
-      "kr": "물의 탑 36층",
       "jp": "水の塔36階",
+      "kr": "물의 탑 36층",
       "zh": "水之塔第36层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40212036",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Shark Attack!",
-        "kr": "샤크 어택!",
         "jp": "アオイアタック",
+        "kr": "샤크 어택!",
         "zh": "飞鲨袭击!"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and heals the ally with the lowest <color=#28d9ed>Health</color> by <color=#28d9ed>7%</color>.",
-        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>7%</color> 회복시킵니다.",
         "jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>7%</color>回復する。",
+        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>7%</color> 회복시킵니다.",
         "zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>7%</color>的<color=#28d9ed>生命值</color>。"
       },
       "icon": "Skill_First_2000054"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Sharks Are Friends",
-        "kr": "상어는 친구",
         "jp": "起こさないで",
+        "kr": "상어는 친구",
         "zh": "鲨鱼是朋友"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "<color=#28d9ed>Heals</color> all allies by <color=#28d9ed>15%</color> and reduces the duration of debuffs by <color=#28d9ed>1 turn</color>.",
-        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させ、弱体効果の持続ターンを<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "zh": "使全体友军恢复<color=#28d9ed>15%</color>的<color=#28d9ed>生命值</color>,并使弱化效果持续时间减少<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_Second_2000054"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Wakey-Wakey",
-        "kr": "잠들면 안 돼",
         "jp": "寝るんじゃねぇガキ!",
+        "kr": "잠들면 안 돼",
         "zh": "不能睡着"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Grants increased <color=#28d9ed>Attack</color> to surviving allies for <color=#28d9ed>2 turn(s)</color>, then <color=#28d9ed>Resurrects (Greater)</color> all slain allies. Afterward, <color=#28d9ed>heals</color> all allies by <color=#28d9ed>15%</color>.",
-        "kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
         "jp": "戦場にいる味方の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。",
+        "kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
         "zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的友军全部<color=#28d9ed>复活(强化)</color>。随后使全体友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。"
       },
       "icon": "Skill_Ultimate_2000054"

@@ -2,14 +2,14 @@
   "id": "52000023",
   "Name": {
     "en": "Saeran",
-    "kr": "세이란",
     "jp": "セイラン",
+    "kr": "세이란",
     "zh": "萨伊蓝"
   },
   "Surname": {
     "en": "Lightbringer",
-    "kr": "빛을 인도하는 자",
     "jp": "太陽の光を導く者",
+    "kr": "빛을 인도하는 자",
     "zh": "光的引导者"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 22F",
-      "kr": "대지의 탑 22층",
       "jp": "大地の塔22階",
+      "kr": "대지의 탑 22층",
       "zh": "土之塔第22层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222022",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Power of Light",
-        "kr": "빛이여",
         "jp": "光よ",
+        "kr": "빛이여",
         "zh": "光明啊"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>[buff_c_tower_element_52221_0]</color> chance to remove <color=#28d9ed>[buff_v_tower_element_52221_0]</color> <color=#28d9ed>debuff(s)</color> from all allies.",
-        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52221_0]</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>[buff_v_tower_element_52221_0]개</color> 해제합니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52221_0]</color>の確率で味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>[buff_v_tower_element_52221_0]個</color>解除する。",
+        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52221_0]</color> 확률로 아군 전체의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>[buff_v_tower_element_52221_0]개</color> 해제합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>[buff_c_tower_element_52221_0]</color>的几率解除全体友军的<color=#28d9ed>[buff_v_tower_element_52221_0]个</color><color=#28d9ed>弱化效果</color>。"
       },
       "icon": "Skill_First_2000023"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Gaze Upon Us",
-        "kr": "우리를 굽어 살피소서",
         "jp": "我らをご照覧あれ",
+        "kr": "우리를 굽어 살피소서",
         "zh": "庇佑降临"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>[buff_v_tower_element_52222_0]</color> of Saeran's Max Health.",
-        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 세이란 최대 체력의 <color=#28d9ed>[buff_v_tower_element_52222_0]</color>만큼 회복시킵니다.",
         "jp": "味方全体の<color=#28d9ed>HP</color>を【セイラン】の最大HPの<color=#28d9ed>[buff_v_tower_element_52222_0]</color>回復させる。",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 세이란 최대 체력의 <color=#28d9ed>[buff_v_tower_element_52222_0]</color>만큼 회복시킵니다.",
         "zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于萨伊蓝生命值上限的<color=#28d9ed>[buff_v_tower_element_52222_0]</color>。"
       },
       "icon": "Skill_Second_2000023"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Arise",
-        "kr": "그대여, 일어나세요",
         "jp": "神に祈り願えよ",
+        "kr": "그대여, 일어나세요",
         "zh": "神明复苏"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Heals one ally by <color=#28d9ed>[buff_v_tower_element_52223_0]</color> and reduces the target's <color=#28d9ed>skill cooldown</color> by <color=#28d9ed>[buff_v_tower_element_52223_1] turn(s)</color>. Additionally, increases the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>[buff_v_tower_element_52223_2]</color>.",
-        "kr": "아군 한 명의 체력을 <color=#28d9ed>[buff_v_tower_element_52223_0]</color> 회복시킨 후, 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>[buff_v_tower_element_52223_1]턴</color> 감소시킵니다. 그리고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[buff_v_tower_element_52223_2]</color> 증가시킵니다.",
         "jp": "味方単体のHPを<color=#28d9ed>[buff_v_tower_element_52223_0]</color>回復した後、対象の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>[buff_v_tower_element_52223_1]ターン</color>減少させる。また、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>[buff_v_tower_element_52223_2]</color>UPさせる。",
+        "kr": "아군 한 명의 체력을 <color=#28d9ed>[buff_v_tower_element_52223_0]</color> 회복시킨 후, 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>[buff_v_tower_element_52223_1]턴</color> 감소시킵니다. 그리고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[buff_v_tower_element_52223_2]</color> 증가시킵니다.",
         "zh": "使1名友军的生命值恢复<color=#28d9ed>[buff_v_tower_element_52223_0]</color>后,使目标的<color=#28d9ed>技能冷却时间</color>减少<color=#28d9ed>[buff_v_tower_element_52223_1]回合</color>。并使目标的<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>[buff_v_tower_element_52223_2]</color>。"
       },
       "icon": "Skill_Ultimate_2000023"

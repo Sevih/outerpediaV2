@@ -2,14 +2,14 @@
   "id": "200003799",
   "Name": {
     "en": "Veronica",
-    "kr": "베로니카",
     "jp": "ヴェロニカ",
+    "kr": "베로니카",
     "zh": "维罗妮卡"
   },
   "Surname": {
     "en": "Invincible Knight Commander",
-    "kr": "무적의 기사단장",
     "jp": "天下無敵の騎士団長",
+    "kr": "무적의 기사단장",
     "zh": "无敌的骑士团长"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 99F",
-      "kr": "비천의 탑 99층",
       "jp": "飛天の塔99階",
+      "kr": "비천의 탑 99층",
       "zh": "飞天之塔99层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101099",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Battlefield Commander",
-        "kr": "전장지휘",
         "jp": "断空コンビネーション",
+        "kr": "전장지휘",
         "zh": "战场指挥"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack if the caster's <color=#28d9ed>Defense</color> is currently increased.",
-        "kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。"
       },
       "icon": "Skill_First_2000037"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Immortal Comet",
-        "kr": "불멸의 코메트",
         "jp": "不滅のコメット",
+        "kr": "불멸의 코메트",
         "zh": "不朽彗星"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to reduce the target's <color=#28d9ed>Resilience</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>2턴 </color> 동안 감소시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>2턴 </color> 동안 감소시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Ultimate_2000003"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Endless Ryvius",
-        "kr": "끝 모를 리바이어스",
         "jp": "果てしなきリヴァイアス",
+        "kr": "끝 모를 리바이어스",
         "zh": "无限的未知"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to reduce the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage is reduced if the target has a Barrier.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.\\n대상이 실드를 가지고 있다면 피해가 감소합니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\n対象がシールド状態の場合、ダメージがDOWNする。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.\\n대상이 실드를 가지고 있다면 피해가 감소합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。\\n若目标附带护盾效果,则伤害降低。"
       },
       "icon": "Skill_Ultimate_2000037"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Super Regeneration III",
-        "kr": "초재생 III",
         "jp": "超再生 III",
+        "kr": "초재생 III",
         "zh": "超再生 III"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nRecovers Health of the caster by <color=#28d9ed>10%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>10%</color> 만큼 회복합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、自分のHPを<color=#28d9ed>10%</color>回復する。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>10%</color> 만큼 회복합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使自身生命值恢复<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Fury Stack V",
-        "kr": "분노 중첩 V",
         "jp": "アンガースタック V",
+        "kr": "분노 중첩 V",
         "zh": "愤怒叠加 V"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>15%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>15%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>15%</color> 증가합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>15%</color>。"
       },
       "icon": "MT_Passive_1_Dark"

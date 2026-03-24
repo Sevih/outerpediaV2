@@ -2,8 +2,8 @@
   "id": "400301292",
   "Name": {
     "en": "Sentry Archer",
-    "kr": "경비병 보우",
     "jp": "警備兵〈弓〉",
+    "kr": "경비병 보우",
     "zh": "执弓警卫"
   },
   "Surname": null,
@@ -17,14 +17,14 @@
   "location": {
     "dungeon": {
       "en": "",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "mode": {
       "en": "",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "area_id": null
@@ -33,15 +33,15 @@
     {
       "name": {
         "en": "Guard Archery",
-        "kr": "경비대 궁술",
         "jp": "警備隊の弓術",
+        "kr": "경비대 궁술",
         "zh": "警卫队弓术"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Attack_Arrow_1_Fire"
@@ -49,15 +49,15 @@
     {
       "name": {
         "en": "Detonate Fire Bomb",
-        "kr": "화염병 폭발",
         "jp": "火炎瓶爆発",
+        "kr": "화염병 폭발",
         "zh": "火焰瓶爆炸"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Arrow_1_Fire"
@@ -65,15 +65,15 @@
     {
       "name": {
         "en": "Order to Shoot",
-        "kr": "사격 지시",
         "jp": "射撃指示",
+        "kr": "사격 지시",
         "zh": "射击指示"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and reduces the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
-        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color> 감소시킵니다.",
         "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-10%</color>DOWNさせる。",
+        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color> 감소시킵니다.",
         "zh": "攻击全体敌人,并使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-10%</color>。"
       },
       "icon": "MT_Attack_Arrow_1_Fire"
@@ -81,15 +81,15 @@
     {
       "name": {
         "en": "Fury Stack II",
-        "kr": "분노 중첩 II",
         "jp": "アンガースタック II",
+        "kr": "분노 중첩 II",
         "zh": "愤怒叠加 II"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>7.5%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>7.5%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>7.5%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>7.5%</color> 증가합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>7.5%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -97,15 +97,15 @@
     {
       "name": {
         "en": "Training Results",
-        "kr": "훈련의 성과",
         "jp": "訓練の成果",
+        "kr": "훈련의 성과",
         "zh": "训练成果"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nHas a <color=#28d9ed>25%</color> chance to <color=#28d9ed>Counterattack</color> when the caster is attacked.",
-        "kr": "(패시브 효과)\\n자신이 공격받았을 때 <color=#28d9ed>25%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
         "jp": "(パッシブ効果)\\n自分が攻撃を受けた時、<color=#28d9ed>25%</color>の確率で<color=#28d9ed>反撃</color>する。",
+        "kr": "(패시브 효과)\\n자신이 공격받았을 때 <color=#28d9ed>25%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
         "zh": "(被动效果)\\n自身受到攻击时,有<color=#28d9ed>25%</color>的几率发动<color=#28d9ed>反击</color>。"
       },
       "icon": "MT_Passive_1_Earth"

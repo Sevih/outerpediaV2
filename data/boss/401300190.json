@@ -2,8 +2,8 @@
   "id": "401300190",
   "Name": {
     "en": "Minima Hammer-Wielder",
-    "kr": "미니마 해머",
     "jp": "ミニマハンマー",
+    "kr": "미니마 해머",
     "zh": "执锤迷蜴蟆"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 3F",
-      "kr": "비천의 탑 3층",
       "jp": "飛天の塔3階",
+      "kr": "비천의 탑 3층",
       "zh": "飞天之塔3层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101003",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Strike",
-        "kr": "내려찍기",
         "jp": "打ち下ろし",
+        "kr": "내려찍기",
         "zh": "下劈"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Hammer_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Spinning Crush",
-        "kr": "회전 분쇄",
         "jp": "ロールクラッシュ",
+        "kr": "회전 분쇄",
         "zh": "回旋粉碎"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Hammer_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Hammer Breakthrough",
-        "kr": "망치 돌파",
         "jp": "ハンマー突破",
+        "kr": "망치 돌파",
         "zh": "锤子突破"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Hammer_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Fury Stack I",
-        "kr": "분노 중첩 I",
         "jp": "アンガースタック I",
+        "kr": "분노 중첩 I",
         "zh": "愤怒叠加 I"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>5%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>5%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>5%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>5%</color> 증가합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>5%</color>。"
       },
       "icon": "MT_Passive_1_Dark"

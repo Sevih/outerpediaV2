@@ -2,14 +2,14 @@
   "id": "403400251",
   "Name": {
     "en": "Unidentified Chimera",
-    "kr": "미확인 키메라",
     "jp": "未確認キメラ",
+    "kr": "미확인 키메라",
     "zh": "未知的奇美拉"
   },
   "Surname": {
     "en": "Merged Beast",
-    "kr": "합성 마수",
     "jp": "合成魔獣",
+    "kr": "합성 마수",
     "zh": "合成魔兽"
   },
   "IncludeSurname": false,
@@ -20,15 +20,15 @@
     {
       "name": {
         "en": "Where Am I?",
-        "kr": "여기는 어디?",
         "jp": "ここはどこ?",
+        "kr": "여기는 어디?",
         "zh": "这是哪里?"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks 2 enemies. Then attacks all enemies if the caster's <color=#28d9ed>Defense</color> is currently increased. Damage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
-        "kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>방어력</color>이 증가한 상태라면 적 전체를 공격합니다. 이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
         "jp": "敵2体にダメージを与え、自分の<color=#28d9ed>防御力</color>がUPした状態の場合、敵全体にダメージを与える。このスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "kr": "적 2인을 공격하고, 자신의 <color=#28d9ed>방어력</color>이 증가한 상태라면 적 전체를 공격합니다. 이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
         "zh": "攻击2名敌人,若自身<color=#28d9ed>防御力</color>处于提升状态,则攻击全体敌人。自身<color=#28d9ed>防御力</color>越高,则该技能的伤害量越高。"
       },
       "icon": "Skill_First_4034002"
@@ -36,15 +36,15 @@
     {
       "name": {
         "en": "Who Are You?",
-        "kr": "당신은 누구?",
         "jp": "あなたはだれ?",
+        "kr": "당신은 누구?",
         "zh": "你是谁?"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and increases the caster's <color=#28d9ed>Defense</color> for 1 turn(s).",
-        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>방어력</color>을 1턴 동안 증가시킵니다.",
         "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>防御力</color>を1ターンの間UPさせる。",
+        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>방어력</color>을 1턴 동안 증가시킵니다.",
         "zh": "攻击全体敌人,并使自身的<color=#28d9ed>防御力</color>提升,持续1回合。"
       },
       "icon": "Skill_Second_4034002",
@@ -55,15 +55,15 @@
     {
       "name": {
         "en": "Thank You For This Meal",
-        "kr": "잘 먹겠습니다",
         "jp": "いただきます",
+        "kr": "잘 먹겠습니다",
         "zh": "开动了"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies.\nDamage dealt increases proportional to Chimera's <color=#28d9ed>missing Health</color>.",
-        "kr": "적 전체를 공격합니다.\n이 스킬은 키메라의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
         "jp": "敵全体にダメージを与える。\nこのスキルは【キメラ】の<color=#28d9ed>残りHP</color>が低いほどダメージがUPする。",
+        "kr": "적 전체를 공격합니다.\n이 스킬은 키메라의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
         "zh": "攻击全体敌人。\n奇美拉的<color=#28d9ed>当前生命值</color>越低,则该技能的伤害越高。"
       },
       "icon": "Skill_Ultimate_4034002"
@@ -71,15 +71,15 @@
     {
       "name": {
         "en": "Starving Devil",
-        "kr": "굶주린 마수",
         "jp": "飢えた魔獣",
+        "kr": "굶주린 마수",
         "zh": "饥饿的魔兽"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\nIncreases damage dealt to non-Fire enemies and reduces damage taken from them.\nReduces damage dealt to Fire enemies and increases damage taken from them.",
-        "kr": "(패시브 효과)\n화속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\n화속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
         "jp": "(パッシブ効果)\n火属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\n火属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "kr": "(패시브 효과)\n화속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\n화속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
         "zh": "(被动效果)\n对非火属性敌人造成的伤害提升,且所受伤害降低。\n对火属性敌人造成的伤害降低,且所受伤害提升。"
       },
       "icon": "MT_Passive_1_Earth"
@@ -87,15 +87,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns and increases Attack by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\n\n<color=#28d9ed>Enraged</color>: Recovers Weakness Gauge by 10%, but reduces Speed. Gains a barrier equal to <color=#28d9ed>10%</color> of Max Health every turn. Enraged lasts for 7 turns and reduces damage taken.\n\n<color=#28d9ed>Chomp Chomp Gulp</color>: Used when Enraged ends.\nHeals the caster by <color=#28d9ed>50%</color> of Max Health.",
-        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력이 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\n\n<color=#28d9ed>광폭화 돌입</color> : WG 10%를 회복하지만, 속도가 감소합니다. 매 턴 최대 체력 <color=#28d9ed>10%</color>만큼의 실드를 획득합니다. 7턴 동안 광폭화가 유지되며, 받는 피해가 감소합니다\n\n<color=#28d9ed>와그작와그작꿀꺽</color> : 광폭화 종료 시 사용.\n최대 체력의 <color=#28d9ed>50%</color>를 회복합니다.",
         "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力が<color=#28d9ed>5%</color>UPする。この効果は最大3回まで累積し、ブレイクすると解除される。\n\n<color=#28d9ed>【狂暴化】</color>:WGを10%回復するが、スピードがDOWNする。毎ターン最大HPの<color=#28d9ed>10%</color>のシールドを付与する。【狂暴化】は7ターンの間持続し、受けるダメージがDOWNする。\n\n<color=#28d9ed>【ムシャムシャ、ゴクリ】</color>:【狂暴化】終了時に発動する。\n最大HPの<color=#28d9ed>50%</color>を回復する。",
+        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력이 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\n\n<color=#28d9ed>광폭화 돌입</color> : WG 10%를 회복하지만, 속도가 감소합니다. 매 턴 최대 체력 <color=#28d9ed>10%</color>만큼의 실드를 획득합니다. 7턴 동안 광폭화가 유지되며, 받는 피해가 감소합니다\n\n<color=#28d9ed>와그작와그작꿀꺽</color> : 광폭화 종료 시 사용.\n최대 체력의 <color=#28d9ed>50%</color>를 회복합니다.",
         "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力提升<color=#28d9ed>5%</color>。该效果最多可叠加3次,且将持续至进入力竭状态为止。\n\n<color=#28d9ed>陷入狂暴化</color>:WG恢复10%,速度降低。每回合获得相当于生命值上限<color=#28d9ed>10%</color>的护盾效果。狂暴化持续7回合,所受伤害降低。\n\n<color=#28d9ed>大快朵颐</color>:狂暴化结束时发动。\n恢复生命值上限的<color=#28d9ed>50%</color>。"
       },
       "icon": "MT_Boss_Rage_Common_1",
@@ -111,14 +111,14 @@
   "location": {
     "dungeon": {
       "en": "Unidentified Chimera (Stage 2)",
-      "kr": "미확인 키메라 (2 단계)",
       "jp": "未確認キメラ(2段階)",
+      "kr": "미확인 키메라 (2 단계)",
       "zh": "未知的奇美拉(第2阶段)"
     },
     "mode": {
       "en": "Special Request: Ecology Study",
-      "kr": "특별 의뢰 : 생태 조사",
       "jp": "特別依頼:生態調査",
+      "kr": "특별 의뢰 : 생태 조사",
       "zh": "特别委托:生态调查"
     },
     "area_id": ""

@@ -2,8 +2,8 @@
   "id": "62005106",
   "Name": {
     "en": "Fatal",
-    "kr": "페이탈",
     "jp": "フェータル",
+    "kr": "페이탈",
     "zh": "法塔尔"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Water Tower 70F",
-      "kr": "물의 탑 70층",
       "jp": "水の塔70階",
+      "kr": "물의 탑 70층",
       "zh": "水之塔第70层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40212070",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Deathly Acrobatics",
-        "kr": "죽음의 곡예",
         "jp": "死の曲芸",
+        "kr": "죽음의 곡예",
         "zh": "死亡马戏"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and grants increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 대상을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적 대상을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_First_2000078"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Curtain of Darkness",
-        "kr": "밤의 장막",
         "jp": "夜の帳",
+        "kr": "밤의 장막",
         "zh": "夜之帷幕"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Removes <color=#28d9ed>all</color> debuffs from the caster and attacks the enemy.\\nAfter attacking, grants <color=#28d9ed>Stealth</color> to the caster and <color=#28d9ed>Invincibility</color> to all allies except the caster for <color=#28d9ed>2</color> turn(s).",
-        "kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>모두</color> 제거하고 적을 공격합니다.\\n공격 후 <color=#28d9ed>2턴</color> 동안 자신은 <color=#28d9ed>은신</color>, 자신을 제외한 아군 전체는 <color=#28d9ed>무적</color>을 획득합니다.",
         "jp": "自身に付与された弱体効果を<color=#28d9ed>すべて</color>解除し、敵に攻撃する。\\n攻撃後、<color=#28d9ed>2ターン</color>の間、\\n自身には<color=#28d9ed>隠れ身</color>を、自身を除く味方全体には<color=#28d9ed>無敵</color>を付与する。",
+        "kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>모두</color> 제거하고 적을 공격합니다.\\n공격 후 <color=#28d9ed>2턴</color> 동안 자신은 <color=#28d9ed>은신</color>, 자신을 제외한 아군 전체는 <color=#28d9ed>무적</color>을 획득합니다.",
         "zh": "解除自身附带的<color=#28d9ed>所有</color>弱化效果,并攻击敌人。\\n攻击后,自身获得<color=#28d9ed>隐身</color>效果,除自身之外的全体友军获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>2</color>回合。"
       },
       "icon": "Skill_Second_2000078"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Requiem Serket",
-        "kr": "레퀴엠 세르케트",
         "jp": "レクイエム・セルケト",
+        "kr": "레퀴엠 세르케트",
         "zh": "安魂曲塞尔凯特"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy. When granted <color=#28d9ed>Stealth</color>, slain enemies cannot be Resurrected or Revived, and grants an <color=#28d9ed>extra turn</color> to the caster.",
-        "kr": "적을 공격합니다. <color=#28d9ed>은신</color> 보유 중에는 사망한 적이 부활 및 소생하지 못하며, 자신은 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "jp": "敵単体にダメージを与える。<color=#28d9ed>隠れ身</color>状態の場合、倒れた敵は復活と蘇生ができなくなり、自分は<color=#28d9ed>追加ターン</color>を獲得する。",
+        "kr": "적을 공격합니다. <color=#28d9ed>은신</color> 보유 중에는 사망한 적이 부활 및 소생하지 못하며, 자신은 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击敌人。附带<color=#28d9ed>隐身</color>效果时,被击杀的敌人无法复活与苏醒,且使自身获得<color=#28d9ed>额外回合</color>。"
       },
       "icon": "Skill_Ultimate_2000078"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Blessing of the Water Tower",
-        "kr": "물의 탑의 가호",
         "jp": "水の塔の加護",
+        "kr": "물의 탑의 가호",
         "zh": "水之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Water"

@@ -2,8 +2,8 @@
   "id": "51000017",
   "Name": {
     "en": "Forest King",
-    "kr": "숲의 왕",
     "jp": "森の王",
+    "kr": "숲의 왕",
     "zh": "奴隶角斗士蜥蜴人"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Weekly Conquest - Forest King",
-      "kr": "주간토벌 - 숲의 왕",
       "jp": "ウィークリー討伐 - 森の王",
+      "kr": "주간토벌 - 숲의 왕",
       "zh": "每周讨伐 - 森林之王"
     },
     "mode": {
       "en": "Adventure License",
-      "kr": "모험 라이선스",
       "jp": "冒険者ライセンス",
+      "kr": "모험 라이선스",
       "zh": "冒险许可证"
     },
     "area_id": {
       "en": "70600008",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Warrior's Spear",
-        "kr": "전사의 창",
         "jp": "戦士の槍",
+        "kr": "전사의 창",
         "zh": "战士之枪"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy.\\nThis skill prioritizes the enemy's front line.",
-        "kr": "적을 공격합니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは、一番前の敵を優先的に攻撃する。",
+        "kr": "적을 공격합니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
         "zh": "攻击敌人。\\n该技能优先攻击处于前排的敌人。"
       },
       "icon": "Skill_First_4014001"
@@ -54,32 +54,34 @@
     {
       "name": {
         "en": "Sweep",
-        "kr": "휩쓸기",
         "jp": "なぎ払い",
+        "kr": "휩쓸기",
         "zh": "横扫"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies.\\nIncreases <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>50%</color>.",
-        "kr": "적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.",
         "jp": "敵全体にダメージを与える。\\n味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>50%</color>UPさせる。",
+        "kr": "적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.",
         "zh": "攻击全体敌人。\\n使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>50%</color>。"
       },
       "icon": "Skill_Second_4014001",
-      "buff":["BT_ACTION_GAUGE"]
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
         "en": "Enraged Strike",
-        "kr": "분노의 일격",
         "jp": "怒りの一撃",
+        "kr": "분노의 일격",
         "zh": "愤怒一击"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. Greatly increases damage dealt to targets inflicted with <color=#28d9ed>Stunned</color>.",
-        "kr": "적 전체를 공격합니다. <color=#28d9ed>스턴</color>을 보유한 대상에게 입히는 피해가 크게 증가합니다.",
         "jp": "敵全体にダメージを与える。<color=#28d9ed>スタン</color>状態の対象に与えるダメージが大幅にUPする。",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>스턴</color>을 보유한 대상에게 입히는 피해가 크게 증가합니다.",
         "zh": "攻击全体敌人。对附带<color=#28d9ed>晕眩</color>效果的目标造成的伤害大幅提升。"
       },
       "icon": "Skill_Ultimate_4014001"
@@ -87,32 +89,35 @@
     {
       "name": {
         "en": "Prince's Retaliation",
-        "kr": "왕자의 응징",
         "jp": "王者の戒め",
+        "kr": "왕자의 응징",
         "zh": "王子的惩戒"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces <color=#28d9ed>Critical Hit Chance</color> of Dark enemies. This effect cannot be removed.\\nWhen hit, reduces the duration of <color=#28d9ed>buff(s)</color> granted to all enemies by <color=#28d9ed>1 turn</color>.\\nGreatly reduces damage taken from Striker enemies, but increases damage taken from Mage and Ranger enemies.\\nIncreases damage dealt to non-Light enemies and reduces Weakness Gauge damage taken from them.\\nReduces damage dealt to Light enemies and increases damage taken from them.",
-        "kr": "(패시브 효과)\\n암속성 적의 <color=#28d9ed>치명 확률</color>을 감소시킵니다. 이 효과는 해제되지 않습니다.\\n피격 시 적 전체의 <color=#28d9ed>강화 효과</color> 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n공격형 적에게 받는 피해가 크게 감소하지만, 마법형 및 속도형 적에게 받는 피해가 증가합니다.\\n명속성이 아닌 적에게 입히는 피해가 증가하고, 받는 WG 피해가 감소합니다.\\n명속성에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
         "jp": "(パッシブ効果)\\n闇属性の敵の<color=#28d9ed>会心率</color>をDOWNさせる。この効果は解除されない。\\nダメージを受けた時、敵全体の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>DOWNさせる。\\n攻撃型の敵から受けるダメージが大幅にDOWNし、魔法型・スピード型の敵から受けるダメージがUPする。\\n光属性以外の敵に与えるダメージがUPし、受けるWGダメージがDOWNする。\\n光属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "kr": "(패시브 효과)\\n암속성 적의 <color=#28d9ed>치명 확률</color>을 감소시킵니다. 이 효과는 해제되지 않습니다.\\n피격 시 적 전체의 <color=#28d9ed>강화 효과</color> 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n공격형 적에게 받는 피해가 크게 감소하지만, 마법형 및 속도형 적에게 받는 피해가 증가합니다.\\n명속성이 아닌 적에게 입히는 피해가 증가하고, 받는 WG 피해가 감소합니다.\\n명속성에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
         "zh": "(被动效果)\\n使暗属性敌人的<color=#28d9ed>暴击率</color>降低。该效果不会被解除。\\n受到攻击时,使全体敌人的<color=#28d9ed>强化效果</color>持续时间降低<color=#28d9ed>1回合</color>。\\n受到来自攻击型敌人的伤害大幅降低,但受到来自魔法型及速度型敌人的伤害提升。\\n对非光属性敌人造成的伤害提升,且所受WG伤害降低。\\n对光属性造成的伤害降低,且所受伤害提升。"
       },
       "icon": "MT_Passive_1_Dark",
-      "debuff":["BT_STAT|ST_CRITICAL_RATE_IR", "BT_EXTEND_BUFF"]
+      "debuff": [
+        "BT_STAT|ST_CRITICAL_RATE_IR",
+        "BT_EXTEND_BUFF"
+      ]
     },
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns\\n\\n<color=#28d9ed>Ruthless Explosion</color>: Used when Enraged ends.\\nDeals lethal damage to all enemies.",
-        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>무자비한 폭발</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.",
         "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【無慈悲な爆発】</color>:【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>무자비한 폭발</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.",
         "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>无情的爆炸</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
       },
       "icon": "MT_Boss_Rage_Common_1",
@@ -124,15 +129,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

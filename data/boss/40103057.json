@@ -2,14 +2,14 @@
   "id": "40103057",
   "Name": {
     "en": "Kappa",
-    "kr": "카파",
     "jp": "カッパ",
+    "kr": "카파",
     "zh": "卡帕"
   },
   "Surname": {
     "en": "Ruler of the Desert",
-    "kr": "사막의 지배자",
     "jp": "砂漠の支配者",
+    "kr": "사막의 지배자",
     "zh": "沙漠统治者"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Very Hard 20F",
-      "kr": "비천의 탑 [베리 하드] 20층",
       "jp": "飛天の塔【ベリーハード】20階",
+      "kr": "비천의 탑 [베리 하드] 20층",
       "zh": "飞天之塔【极难】第20层"
     },
     "mode": {
       "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "area_id": {
       "en": "40103020",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Ruthless Onslaught",
-        "kr": "무자비한 맹습",
         "jp": "無慈悲な猛襲",
+        "kr": "무자비한 맹습",
         "zh": "无情猛攻"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>2 turn(s)</color> proportional to the caster's Defense.",
-        "kr": "적 대상을 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.",
         "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。",
+        "kr": "적 대상을 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.",
         "zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_First_2000077"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Exile",
-        "kr": "추방",
         "jp": "追放",
+        "kr": "추방",
         "zh": "驱逐"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect) Grants increased Defense to all allies for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. <color=#28d9ed>Water</color> enemies take additional fixed damage equal to Kappa's Defense.\\nDamage dealt increases proportional to the target's missing Health.",
-        "kr": "(패시브 효과) 아군의 방어력을 <color=#28d9ed>2턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 대상의 잃은 체력 비율에 비례하여 피해가 증가합니다.",
         "jp": "(パッシブ効果)味方全体の防御力を<color=#28d9ed>2ターン</color>の間UPさせ、敵全体にダメージを与える。<color=#28d9ed>水属性</color>の敵に【カッパ】の防御力分の固定ダメージを追加で与える。\\nこのスキルは対象の残りHPが低いほどダメージがUPする。",
+        "kr": "(패시브 효과) 아군의 방어력을 <color=#28d9ed>2턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 대상의 잃은 체력 비율에 비례하여 피해가 증가합니다.",
         "zh": "(被动效果)使友军防御力提升,持续<color=#28d9ed>2回合</color>后攻击全体敌人。对<color=#28d9ed>水属性</color>敌人额外造成相当于卡帕防御力数值的固定伤害。\\n该技能根据目标损失的生命值比例等比提升伤害。"
       },
       "icon": "Skill_Second_2000077"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Desert's Wrath",
-        "kr": "사막의 진노",
         "jp": "砂漠の震怒",
+        "kr": "사막의 진노",
         "zh": "沙漠的震怒"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Removes <color=#28d9ed>all</color> buffs and debuffs from the caster and target, and attacks an enemy. (Ignores the target's Resilience)\\nWhen the enemy is <color=#28d9ed>Water</color> element or <color=#28d9ed>killed</color>, activates <color=#28d9ed>Exile</color>.\\nDamage dealt increases proportional to the target's missing Health.",
-        "kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.(대상의 효과 저항 무시)\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 대상의 잃은 체력 비율에 비례하여 피해가 증가합니다.",
         "jp": "自分と対象のすべての強化効果と弱体効果を<color=#28d9ed>すべて</color>解除し、敵単体にダメージを与える。(対象の効果抵抗を無視する)\\n対象が<color=#28d9ed>水属性</color>、または<color=#28d9ed>倒れた</color>場合、<color=#28d9ed>【追放】</color>を使用する。\\nこのスキルは対象の残りHPが低いほどダメージがUPする。",
+        "kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.(대상의 효과 저항 무시)\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 대상의 잃은 체력 비율에 비례하여 피해가 증가합니다.",
         "zh": "解除自身和目标附带的<color=#28d9ed>所有</color>强化效果和弱化效果,并攻击敌人(无视目标的效果抵抗)。\\n敌人为<color=#28d9ed>水属性</color>或被<color=#28d9ed>击杀</color>时使用<color=#28d9ed>驱逐</color>。\\n该技能根据目标损失的生命值比例等比提升伤害。"
       },
       "icon": "Skill_Ultimate_2000077"

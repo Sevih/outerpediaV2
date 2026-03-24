@@ -2,8 +2,8 @@
   "id": "4500283",
   "Name": {
     "en": "Hilde",
-    "kr": "힐데",
     "jp": "ヒルデ",
+    "kr": "힐데",
     "zh": "希尔德"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Top Fiend Officer",
-      "kr": "마족 최고 간부",
       "jp": "魔族最高幹部",
+      "kr": "마족 최고 간부",
       "zh": "魔族高层"
     },
     "mode": {
       "en": "Story (Hard)",
-      "kr": "스토리(하드)",
       "jp": "ストーリー(ハード)",
+      "kr": "스토리(하드)",
       "zh": "故事(困难)"
     },
     "area_id": {
       "en": "4-10",
-      "kr": "4-10",
       "jp": "4-10",
+      "kr": "4-10",
       "zh": "4-10"
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "L-Leave It To Me",
-        "kr": "마, 맡겨주세요",
         "jp": "お、おまかせください",
+        "kr": "마, 맡겨주세요",
         "zh": "交、交给我吧"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and activates a <color=#28d9ed>Dual Attack</color> from two allies with the highest Attack.",
-        "kr": "적을 공격하고 가장 공격력이 높은 아군 2명의 <color=#28d9ed>협공</color>을 발생시킵니다.",
         "jp": "敵単体にダメージを与え、攻撃力が最も高い味方2体に<color=#28d9ed>連携</color>を発生させる。",
+        "kr": "적을 공격하고 가장 공격력이 높은 아군 2명의 <color=#28d9ed>협공</color>을 발생시킵니다.",
         "zh": "攻击敌人,并使攻击力最高的2名友军发动<color=#28d9ed>夹攻</color>。"
       },
       "icon": "Skill_First_2000088",
@@ -57,15 +57,15 @@
     {
       "name": {
         "en": "Come Here, Hound",
-        "kr": "와줘, 하운드",
         "jp": "来て、ハウンド",
+        "kr": "와줘, 하운드",
         "zh": "来吧,哈恩德"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) After being hit, uses <color=#28d9ed>Come Here, Hound</color> on the enemy with the lowest Max Health. Has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Petrified</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "(발동 효과) 피격 후 최대 체력이 가장 낮은 적에게 <color=#28d9ed>와줘, 하운드</color>를 사용합니다. <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.",
         "jp": "(発動効果)ダメージを受けた後、最大HPが最も低い敵単体に<color=#28d9ed>【来て、ハウンド】</color>を使用する。<color=#28d9ed>100%</color>の確率で対象に<color=#28d9ed>石化</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "(발동 효과) 피격 후 최대 체력이 가장 낮은 적에게 <color=#28d9ed>와줘, 하운드</color>를 사용합니다. <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.",
         "zh": "(触发效果)受到攻击后,使生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>石化</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_Second_2000088",
@@ -76,15 +76,15 @@
     {
       "name": {
         "en": "For Pandemonium!",
-        "kr": "판데모니움을 위해!",
         "jp": "パンデモニウムのために!",
+        "kr": "판데모니움을 위해!",
         "zh": "为了万魔殿!"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Reduces the duration of <color=#28d9ed>buffs</color> granted to the target by <color=#28d9ed>1 turn</color>, then attacks the enemy.\\nThis skill penetrates <color=#28d9ed>30%</color> of the target's Defense.",
-        "kr": "대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.",
         "jp": "対象の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。",
+        "kr": "대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킨 후 적을 공격합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.",
         "zh": "使目标的<color=#28d9ed>强化效果</color>持续回合数减少<color=#28d9ed>1回合</color>后,攻击敌人。\\n无视该技能目标的<color=#28d9ed>30%</color>防御力。"
       },
       "icon": "Skill_Ultimate_2000088",
@@ -95,15 +95,15 @@
     {
       "name": {
         "en": "Pandemonium's Shield",
-        "kr": "판데모니움의 방패",
         "jp": "パンデモニウムの盾",
+        "kr": "판데모니움의 방패",
         "zh": "万魔殿盾牌"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "When the caster is hit, if at least one ally is not affected by a <color=#28d9ed>debuff</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color>.",
-        "kr": "자신 피격 시 아군 중 한명이라도 <color=#28d9ed>약화 효과</color>가 적용되지 않는다면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>40%</color> 증가합니다.",
         "jp": "自分が攻撃を受けた時、味方の中に<color=#28d9ed>弱体効果</color>が付与されていない者が1人でもいる場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>40%</color>UPする。",
+        "kr": "자신 피격 시 아군 중 한명이라도 <color=#28d9ed>약화 효과</color>가 적용되지 않는다면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>40%</color> 증가합니다.",
         "zh": "自身受到攻击时,若我方至少有1名未附带<color=#28d9ed>弱化效果</color>的队友,则使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>40%</color>。"
       },
       "icon": "MT_Passive_1_Dark",
@@ -114,15 +114,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Every 4 turns, the caster enters the <color=#28d9ed>Enraged</color> state and gains irremovable Attack Up, Critical Hit Chance Up, and Damage Taken Down effects for <color=#28d9ed>3</color> turns.\\n<color=#28d9ed>Enraged Activation & Ultimate Skill</color>:\\nRevives all fallen allies with <color=#28d9ed>Resurrect (Enhanced)</color>,\\nthen deals heavy damage to all enemies,\\nand has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Taunt</color> on all enemies for <color=#28d9ed>1</color> turns.\\n(Ignores Effect Resistance)",
-        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 자신에게 해제되지 않는 공격력 증가/치명 확률 증가/피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color> 시킨 후 적 전체에게 큰 피해를 입히고 적 전체를 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.(효과 저항 무시)",
         "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、\\n自分に解除不可の 攻撃力UP/会心率UP/受けるダメージDOWNを\\n<color=#28d9ed>3ターン</color>の間付与する。\\n\\n<color=#28d9ed>【狂暴化】発動と必殺スキル</color>:\\n倒れた味方全体を<color=#28d9ed>復活(強化)</color>させた後、敵全体にダメージを与え、 <color=#28d9ed>100%</color>の確率で<color=#28d9ed>1ターン</color>の間、敵全体を<color=#28d9ed>挑発</color>する。(効果抵抗無視)",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 자신에게 해제되지 않는 공격력 증가/치명 확률 증가/피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color> 시킨 후 적 전체에게 큰 피해를 입히고 적 전체를 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.(효과 저항 무시)",
         "zh": "每经过4回合进入<color=#28d9ed>狂暴化</color>状态,并获得不可解除的 攻击力提升/暴击率提升/受伤减少,持续 <color=#28d9ed>3</color> 回合。\\n\\n<color=#28d9ed>进入狂暴化与必杀技</color>:\\n使所有阵亡友军 <color=#28d9ed>复活(强化)</color>,随后对全体敌人造成巨额伤害,\\n并以 <color=#28d9ed>100%</color> 的概率在 <color=#28d9ed>1</color> 回合内对全体敌人施加 <color=#28d9ed>嘲讽</color>。(无视效果抵抗)"
       },
       "icon": "MT_Boss_Rage_Common_1",

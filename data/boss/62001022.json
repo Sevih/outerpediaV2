@@ -2,14 +2,14 @@
   "id": "62001022",
   "Name": {
     "en": "Noa",
-    "kr": "노아",
     "jp": "ノア",
+    "kr": "노아",
     "zh": "诺雅"
   },
   "Surname": {
     "en": "Descendant of the Scientific Inheritance",
-    "kr": "과학유산의 말예",
     "jp": "科学遺産を研究する天才っ子",
+    "kr": "과학유산의 말예",
     "zh": "科学遗产的末裔"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 28F",
-      "kr": "대지의 탑 28층",
       "jp": "大地の塔28階",
+      "kr": "대지의 탑 28층",
       "zh": "土之塔第28层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222028",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Kaizer Knuckle",
-        "kr": "카이저 너클",
         "jp": "カイザーナックル",
+        "kr": "카이저 너클",
         "zh": "凯撒铁拳"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. Obtains <color=#28d9ed>[buff_v_tower_element_52217_0]</color> <color=#28d9ed>Kaizer Energy (Unique Resource)</color> if used during the caster's turn.",
-        "kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>[buff_v_tower_element_52217_0]개</color> 획득합니다.",
         "jp": "敵単体にダメージを与え、自分のターンの場合<color=#28d9ed>【固有資源:カイザーエナジー】</color>を<color=#28d9ed>[buff_v_tower_element_52217_0]個</color>獲得する。",
+        "kr": "적을 공격하고 자신의 턴이라면 <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>[buff_v_tower_element_52217_0]개</color> 획득합니다.",
         "zh": "攻击敌人,若处于自身回合,则获得<color=#28d9ed>[buff_v_tower_element_52217_0]个</color><color=#28d9ed>固有资源:凯撒能量</color>。"
       },
       "icon": "Skill_First_2000022"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Kaizer Cannon",
-        "kr": "카이저 캐논",
         "jp": "カイザーキャノン",
+        "kr": "카이저 캐논",
         "zh": "凯撒加农炮"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) If <color=#28d9ed>Kaizer Knuckle</color> scores a critical hit during the caster's turn, activates <color=#28d9ed>Kaizer Cannon</color> as an additional attack. Attacks all enemies, dealing damage proportional to the target's <color=#28d9ed>Max Health</color>. Obtains <color=#28d9ed>1</color> additional <color=#28d9ed>Kaizer Energy (Unique Resource)</color>.",
-        "kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
         "jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加攻撃で<color=#28d9ed>【カイザーキャノン】</color>を発動する。敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。<color=#28d9ed>【固有資源:カイザーエナジー】</color>をさらに<color=#28d9ed>1個</color>獲得する。",
+        "kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
         "zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中,则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人,目标的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。"
       },
       "icon": "Skill_Second_2000022"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Noa Kaizer X",
-        "kr": "노아 카이저X",
         "jp": "ノアカイザーX",
+        "kr": "노아 카이저X",
         "zh": "诺雅凯撒X"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and increases the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>[buff_t_tower_element_52219_0] turn(s)</color>. Consumes all <color=#28d9ed>Kaizer Energy (Unique Resource)</color> to deal additional damage proportional to the target's <color=#28d9ed>Max Health</color> if Noa has <color=#28d9ed>[buff_v_tower_element_52219_1]</color> or more <color=#28d9ed>Kaizer Energy (Unique Resource)</color>.",
-        "kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>[buff_t_tower_element_52219_0]턴</color> 동안 증가시킵니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>[buff_v_tower_element_52219_1]개</color> 보유 시, 모두 소모하여 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
         "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>[buff_t_tower_element_52219_0]ターン</color>の間UPさせる。<color=#28d9ed>【固有資源:カイザーエナジー】</color>が<color=#28d9ed>[buff_v_tower_element_52219_1]個</color>ある場合、すべて消費してダメージを与える。このダメージは対象の<color=#28d9ed>最大HP</color>が高いほどUPする。",
+        "kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>[buff_t_tower_element_52219_0]턴</color> 동안 증가시킵니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>[buff_v_tower_element_52219_1]개</color> 보유 시, 모두 소모하여 대상의 <color=#28d9ed>최대 체력</color>에 비례하여 피해량이 증가합니다.",
         "zh": "攻击全体敌人,并使自身<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52219_0]回合</color>。当持有<color=#28d9ed>[buff_v_tower_element_52219_1]个</color><color=#28d9ed>固有资源:凯撒能量</color>时,消耗全部,伤害量会根据目标的<color=#28d9ed>生命值上限</color>等比提升。"
       },
       "icon": "Skill_Ultimate_2000022"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Persistent Resistance",
-        "kr": "끈질긴 저항",
         "jp": "しぶとい抵抗",
+        "kr": "끈질긴 저항",
         "zh": "顽强的抵抗"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Defense</color> proportional to missing Health. <color=#28d9ed>Defense</color> can increase up to <color=#28d9ed>160%</color>.",
-        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다. <color=#28d9ed>방어력</color>은 최대 <color=#28d9ed>160%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n残りHPが低いほど<color=#28d9ed>防御力</color>がUPする。<color=#28d9ed>防御力</color>は最大<color=#28d9ed>160%</color>UPする。",
+        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다. <color=#28d9ed>방어력</color>은 최대 <color=#28d9ed>160%</color> 증가합니다.",
         "zh": "(被动效果)\\n生命值越低,<color=#28d9ed>防御力</color>越高。<color=#28d9ed>防御力</color>最多提升\\n<color=#28d9ed>160%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Earth Tower",
-        "kr": "대지의 탑의 가호",
         "jp": "大地の塔の加護",
+        "kr": "대지의 탑의 가호",
         "zh": "大地之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Earth"

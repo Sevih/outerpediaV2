@@ -2,8 +2,8 @@
   "id": "5050032",
   "Name": {
     "en": "Skull Goblin Berserker",
-    "kr": "스컬 고블린 광전사",
     "jp": "スカルゴブリン狂戦士",
+    "kr": "스컬 고블린 광전사",
     "zh": "狂战士骷髅哥布林"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Darkness 3F",
-      "kr": "암흑의 탑 3층",
       "jp": "闇の塔 3階",
+      "kr": "암흑의 탑 3층",
       "zh": "黑暗之塔 1层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40242003",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Strike",
-        "kr": "내려찍기",
         "jp": "打ち下ろし",
+        "kr": "내려찍기",
         "zh": "下劈"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>1</color> turns, then attacks an enemy.",
-        "kr": "자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.",
         "jp": "<color=#28d9ed>1</color>ターンの間、自身の<color=#28d9ed>攻撃力</color>を増加させ、敵単体にダメージを与える。",
+        "kr": "자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.",
         "zh": "在<color=#28d9ed>1</color>回合内提高自身<color=#28d9ed>攻击力</color>,并攻击敌人。"
       },
       "icon": "MT_Attack_Sword_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Assault",
-        "kr": "습격",
         "jp": "襲撃",
+        "kr": "습격",
         "zh": "突袭"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>暴击率</color>提升,持续\\n<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Sword_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Whirlwind",
-        "kr": "돌개바람",
         "jp": "突風",
+        "kr": "돌개바람",
         "zh": "旋风"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Increases the caster's <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>1 turn(s)</color> and attacks an enemy.",
-        "kr": "자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.",
         "jp": "自分の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
+        "kr": "자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.",
         "zh": "使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。"
       },
       "icon": "MT_Attack_Sword_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Little Villain",
-        "kr": "작은 흉악범",
         "jp": "小さな凶悪犯",
+        "kr": "작은 흉악범",
         "zh": "小小恶徒"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nGrants a Barrier equal to <color=#28d9ed>30%</color> of Max Health at the start of battle. This buff cannot be removed.",
-        "kr": "(패시브 효과)\\n전투 시작 시 최대 체력의 <color=#28d9ed>30%</color>에 해당하는 실드를 생성합니다. 이 효과는 강화 해제되지 않습니다.",
         "jp": "(パッシブ効果)\\n戦闘開始時、自分に最大HPの<color=#28d9ed>30%</color>分のシールドを付与する。この効果は解除されない。",
+        "kr": "(패시브 효과)\\n전투 시작 시 최대 체력의 <color=#28d9ed>30%</color>에 해당하는 실드를 생성합니다. 이 효과는 강화 해제되지 않습니다.",
         "zh": "(被动效果)\\n战斗开始时,获得相当于生命值上限<color=#28d9ed>30%</color>的护盾。该效果不会被强化解除。"
       },
       "icon": "MT_Passive_1_Earth"

@@ -2,8 +2,8 @@
   "id": "62005203",
   "Name": {
     "en": "Delta",
-    "kr": "델타",
     "jp": "デルタ",
+    "kr": "델타",
     "zh": "德尔塔"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 80F",
-      "kr": "대지의 탑 80층",
       "jp": "大地の塔80階",
+      "kr": "대지의 탑 80층",
       "zh": "土之塔第80层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222080",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Delta Burst",
-        "kr": "델타 버스트",
         "jp": "デルタバースト",
+        "kr": "델타 버스트",
         "zh": "德尔塔爆发"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. When the target's Max Health is equal to or lower than Delta's Max Health, this attack penetrates <color=#28d9ed>30%</color> of the target's Defense.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "kr": "적을 공격합니다. 대상의 최대 체력이 델타 이하라면 해당 공격의 관통력이 <color=#28d9ed>30%</color> 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。対象の最大HPが自分の最大HP以下の場合、貫通力が<color=#28d9ed>30%</color>UPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "kr": "적을 공격합니다. 대상의 최대 체력이 델타 이하라면 해당 공격의 관통력이 <color=#28d9ed>30%</color> 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "zh": "攻击敌人。若目标的生命值上限在德尔塔以下,则该攻击的穿透力提升<color=#28d9ed>30%</color>。\\n该技能根据生命值上限而非攻击力等比提升伤害。"
       },
       "icon": "Skill_First_2000099"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Code: Machine Gun Fist",
-        "kr": "코드 : 머신건 피스트",
         "jp": "コード:マシンガンフィスト",
+        "kr": "코드 : 머신건 피스트",
         "zh": "代码:机枪拳"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect)\\nPrepares the <color=#28d9ed>Revenge</color> effect for every <color=#28d9ed>cooldown cycle</color> of this skill.\\nWhen <color=#28d9ed>Revenge</color> is activated, attacks the target and has a <color=#28d9ed>100%</color> chance each to grant <color=#28d9ed>Counterattack</color> to all allies for <color=#28d9ed>1 turn(s)</color>.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "kr": "(발동 효과)\\n스킬의 <color=#28d9ed>쿨타임</color>마다 <color=#28d9ed>복수</color> 효과를 준비합니다.\\n<color=#28d9ed>복수</color> 발동 시 대상을 공격하고 아군 전체에게 각각 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>반격</color>을 부여합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "jp": "(発動効果)<color=#28d9ed>スキルターン</color>ごとに<color=#28d9ed>【復讐】</color>を発動する。\\n<color=#28d9ed>【復讐】</color>:対象にダメージを与え、味方全体にそれぞれ<color=#28d9ed>100%</color>の確率で<color=#28d9ed>反撃</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "kr": "(발동 효과)\\n스킬의 <color=#28d9ed>쿨타임</color>마다 <color=#28d9ed>복수</color> 효과를 준비합니다.\\n<color=#28d9ed>복수</color> 발동 시 대상을 공격하고 아군 전체에게 각각 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>반격</color>을 부여합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "zh": "(触发效果)\\n每个技能<color=#28d9ed>冷却</color>时准备<color=#28d9ed>复仇</color>。\\n<color=#28d9ed>复仇</color>发动时,攻击目标,并分别有<color=#28d9ed>100%</color>的几率使全体友军获得<color=#28d9ed>反击</color>效果,持续<color=#28d9ed>1回合</color> 。\\n该技能根据生命值上限而非攻击力等比提升伤害。"
       },
       "icon": "Skill_Second_2000099"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Delta's Forbidden Technique",
-        "kr": "델타의 금지 기술",
         "jp": "デルタの禁断の技",
+        "kr": "델타의 금지 기술",
         "zh": "德尔塔禁术"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy, and grants <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turn(s)</color>.\\nWhen the target is a Boss or the target's Max Health is equal to or lower than Delta's Max Health, this attack penetrates <color=#28d9ed>30%</color> of the target's Defense.\\nThis skill's damage dealt increases proportional to Max Health instead of Attack.",
-        "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>반격</color>을 획득합니다.\\n대상이 보스거나 최대 체력이 델타 이하라면 해당 공격의 관통력이 <color=#28d9ed>30%</color> 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。自分に<color=#28d9ed>反撃</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n対象がボスまたは対象の最大HPが自分の最大HP以下の場合、貫通力が<color=#28d9ed>30%</color>UPする。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>반격</color>을 획득합니다.\\n대상이 보스거나 최대 체력이 델타 이하라면 해당 공격의 관통력이 <color=#28d9ed>30%</color> 증가합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "zh": "攻击敌人,并获得<color=#28d9ed>反击</color>效果,持续<color=#28d9ed>2回合</color>。\\n若目标为首领,或生命值上限在德尔塔以下,则该攻击的穿透力提升<color=#28d9ed>30%</color>。\\n该技能根据生命值上限而非攻击力等比提升伤害。"
       },
       "icon": "Skill_Ultimate_2000099"

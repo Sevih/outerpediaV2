@@ -2,14 +2,14 @@
   "id": "40103014",
   "Name": {
     "en": "Alice",
-    "kr": "앨리스",
     "jp": "アリス",
+    "kr": "앨리스",
     "zh": "爱丽丝"
   },
   "Surname": {
     "en": "Armed Librarian of the Magic Academy",
-    "kr": "마법학원의 무장사서",
     "jp": "魔法学園の天才少女",
+    "kr": "마법학원의 무장사서",
     "zh": "魔法学院的武装图书管理员"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Very Hard 3F",
-      "kr": "비천의 탑 [베리 하드] 3층",
       "jp": "飛天の塔【ベリーハード】3階",
+      "kr": "비천의 탑 [베리 하드] 3층",
       "zh": "飞天之塔【极难】第3层"
     },
     "mode": {
       "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "area_id": {
       "en": "40103003",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Dormouse Whiskers",
-        "kr": "산쥐의 수염",
         "jp": "ヤマネのヒゲ",
+        "kr": "산쥐의 수염",
         "zh": "山鼠胡须"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to grant increased <color=#28d9ed>Effectiveness</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>回避</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使自身<color=#28d9ed>回避</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_First_2000020"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Hatter's Teacup",
-        "kr": "모자 장수의 찻잔",
         "jp": "帽子屋さんのティーカップ",
+        "kr": "모자 장수의 찻잔",
         "zh": "疯帽子的茶杯"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "When using this skill, has a <color=#28d9ed>100%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, and attacks all enemies.\\nAfter attacking, inflicts reduced <color=#28d9ed>Effectiveness</color> on all enemies for <color=#28d9ed>1 turn(s)</color>, and for each target damaged, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>25%</color>.",
-        "kr": "스킬 사용 시 <color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
         "jp": "スキル使用時、<color=#28d9ed>100%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。\\n攻撃後、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ、ダメージを与えた対象の数に応じて自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>25%</color>UPさせる。",
+        "kr": "스킬 사용 시 <color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
         "zh": "使用技能时,有<color=#28d9ed>100%</color>的几率解除全体敌人的\\n<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,使全体敌人的<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>1回合</color>,且每对1个目标造成伤害,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。"
       },
       "icon": "Skill_Second_2000020"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Alice In Wonderland",
-        "kr": "앨리스 인 원더랜드",
         "jp": "アリス・イン・ワンダーランド",
+        "kr": "앨리스 인 원더랜드",
         "zh": "爱丽丝梦游仙境"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unbuffable</color> on the target for <color=#28d9ed>3 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>3턴</color> 동안 부여합니다.",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>強化不可</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>3턴</color> 동안 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "Skill_Ultimate_2000020"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Recommended Reading for Mages",
-        "kr": "마법사 권장 도서",
         "jp": "魔法使いのおすすめ書",
+        "kr": "마법사 권장 도서",
         "zh": "魔法师推荐书"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for 3 turns. Additionally, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>100%</color> and grants increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Buff Enhancement</color> for 1 turn.\\nTakes Weakness Gauge damage only when hit by a counterattack.",
-        "kr": "(패시브 효과)\\n전투 시작 시 아군 전체에게 3턴 동안 해제되지 않는 <color=#28d9ed>피해 감소</color>를 부여합니다. 추가로 자신은 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가하고, 1턴 동안 <color=#28d9ed>치명 확률</color>증가 ,<color=#28d9ed>강화 촉진</color> 효과를 부여합니다.\\n반격으로 피격 시에만 WG 피해를 받습니다.",
         "jp": "(パッシブ効果)\\n戦闘開始時、味方全体に解除不可能な<color=#28d9ed>ダメージDOWN</color>効果を3ターンの間付与する。また、自分は<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>100%</color>UPし、自分に<color=#28d9ed>会心率UP</color>、<color=#28d9ed>強化促進</color>を1ターンの間付与する。\\n反撃のダメージでのみWGダメージを受ける。",
+        "kr": "(패시브 효과)\\n전투 시작 시 아군 전체에게 3턴 동안 해제되지 않는 <color=#28d9ed>피해 감소</color>를 부여합니다. 추가로 자신은 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가하고, 1턴 동안 <color=#28d9ed>치명 확률</color>증가 ,<color=#28d9ed>강화 촉진</color> 효과를 부여합니다.\\n반격으로 피격 시에만 WG 피해를 받습니다.",
         "zh": "(被动效果)\\n战斗开始时,全体友军获得无法被解除的<color=#28d9ed>伤害降低</color>效果,持续3回合。自身<color=#28d9ed>行动值</color>额外提升<color=#28d9ed>100%</color>,并获得<color=#28d9ed>暴击率</color>提升、<color=#28d9ed>强化促进</color>效果,持续1回合。\\n仅在受到反击时,受到WG伤害。"
       },
       "icon": "MT_Passive_1_Earth"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Recovers Weakness Gauge by 30%, and deals lethal damage to all enemies. This Enraged has no duration.",
-        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : WG 30%를 회복하고, 적 전체에게 치명적인 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
         "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:WGを30%回復し、敵全体に致命的なダメージを与える。【狂暴化】の持続ターンはない。",
+        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : WG 30%를 회복하고, 적 전체에게 치명적인 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
         "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>,效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:WG恢复30%,对全体敌人造成致命伤害。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
       },
       "icon": "MT_Boss_Rage_Common_1"

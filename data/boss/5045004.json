@@ -2,14 +2,14 @@
   "id": "5045004",
   "Name": {
     "en": "Philia",
-    "kr": "필리아",
     "jp": "フィリア",
+    "kr": "필리아",
     "zh": "绯莉亚"
   },
   "Surname": {
     "en": "A Girl in Love",
-    "kr": "사랑에 빠진 소녀",
     "jp": "運命の人を一途に愛する乙女",
+    "kr": "사랑에 빠진 소녀",
     "zh": "陷入爱河的少女"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Light 10F",
-      "kr": "빛의 탑 10층",
       "jp": "光の塔 10階",
+      "kr": "빛의 탑 10층",
       "zh": "光之塔 10层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40232010",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Just the Two of Us",
-        "kr": "단 둘이 되고 싶어요",
         "jp": "二人きりにさせて",
+        "kr": "단 둘이 되고 싶어요",
         "zh": "二人世界"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_First_2000018"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "The Apple of Your Eye",
-        "kr": "저만을 봐주세요",
         "jp": "私だけを見て",
+        "kr": "저만을 봐주세요",
         "zh": "眼里只有我"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>. The damage increases if the target has been inflicted with <color=#28d9ed>Shocked</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>85%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed> 스턴</color> 상태로 만듭니다. 대상이 <color=#28d9ed>감전</color> 상태라면 피해가 증가합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>85%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。対象が<color=#28d9ed>感電</color>状態の場合、ダメージがUPする。",
+        "kr": "적을 공격하고 <color=#28d9ed>85%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed> 스턴</color> 상태로 만듭니다. 대상이 <color=#28d9ed>감전</color> 상태라면 피해가 증가합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>85%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。当目标处于<color=#28d9ed>触电</color>状态时,伤害提升。"
       },
       "icon": "Skill_Second_2000018"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Out of My Way",
-        "kr": "방해물은 사라져",
         "jp": "邪魔者は消えて",
+        "kr": "방해물은 사라져",
         "zh": "消除障碍"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy.\\nDecreases the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>, and has a <color=#28d9ed>100%</color> chance to increase the caster's <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격합니다.\\n대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시키고, <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
         "jp": "敵単体にダメージを与える。\\n対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-30%</color>減少させ、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>効果命中</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+        "kr": "적을 공격합니다.\\n대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시키고, <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
         "zh": "攻击敌人。\\n使目标的<color=#28d9ed>行动值</color>减少<color=#28d9ed>-30%</color>,并有<color=#28d9ed>100%</color>的概率使自身的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Ultimate_2000018"

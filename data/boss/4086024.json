@@ -2,14 +2,14 @@
   "id": "4086024",
   "Name": {
     "en": "Dahlia",
-    "kr": "달리아",
     "jp": "ダリア",
+    "kr": "달리아",
     "zh": "达利娅"
   },
   "Surname": {
     "en": "Gnosis",
-    "kr": "그노시스",
     "jp": "グノーシス",
+    "kr": "그노시스",
     "zh": "诺希斯"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Extreme League",
-      "kr": "익스트림 리그",
       "jp": "エクストリームリーグ",
+      "kr": "익스트림 리그",
       "zh": "极限联赛"
     },
     "mode": {
       "en": "World Boss",
-      "kr": "월드 보스",
       "jp": "ワールドボス",
+      "kr": "월드 보스",
       "zh": "世界首领"
     },
     "area_id": {
       "en": "55300004",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,83 +43,95 @@
     {
       "name": {
         "en": "Cold-Blooded Torture",
-        "kr": "냉혹한 고문",
         "jp": "ルースレストーチャー",
+        "kr": "냉혹한 고문",
         "zh": "严刑拷打"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and increases the duration of buffs granted to the caster by <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 자신이 보유한 강화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の強化効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "kr": "적을 공격하고 자신이 보유한 강화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "zh": "攻击敌人,并使自身附带的强化效果持续时间增加<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_First_2000090",
-      "buff":["BT_EXTEND_BUFF"]
+      "buff": [
+        "BT_EXTEND_BUFF"
+      ]
     },
     {
       "name": {
         "en": "Untouchable One",
-        "kr": "언터쳐블 원",
         "jp": "アンタッチャブル・ワン",
+        "kr": "언터쳐블 원",
         "zh": "触不可及"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies, and grants <color=#28d9ed>Invulnerability</color> for <color=#28d9ed>3 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.",
         "jp": "敵全体にダメージを与え、自分に<color=#28d9ed>無敵</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.",
         "zh": "攻击全体敌人,并获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "Skill_Second_2100090",
-      "buff":["BT_INVINCIBLE"]
+      "buff": [
+        "BT_INVINCIBLE"
+      ]
     },
     {
       "name": {
         "en": "Terminal Winter",
-        "kr": "최후의 겨울",
         "jp": "フィンブルウィンター",
+        "kr": "최후의 겨울",
         "zh": "末日凛冬"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Removes all buffs from all enemies, and reduces the Health of Striker, Mage, and Healer enemies by <color=#28d9ed>99%</color>. Then, attacks all enemies. Enemies killed by this skill cannot be Resurrected or Revived. This skill is unaffected by cooldown increase effects.",
-        "kr": "적 전체의 강화 효과를 모두 해제하고, 공격형과 마법형 및 회복형 적의 체력을 <color=#28d9ed>99%</color> 감소시킵니다. 이후 적 전체를 공격합니다. 이 스킬로 사망한 적은 부활/소생하지 않습니다. 이 스킬은 쿨타임 증가 스킬의 영향을 받지 않습니다.",
         "jp": "敵全体の強化効果をすべて解除し、攻撃型/魔法型/回復型の敵のHPを<color=#28d9ed>99%</color>DOWNする。以後、敵全体にダメージを与える。このスキルで倒れた敵は復活と蘇生ができなくなる。このスキルはスキルターン増加効果の影響を受けない。",
+        "kr": "적 전체의 강화 효과를 모두 해제하고, 공격형과 마법형 및 회복형 적의 체력을 <color=#28d9ed>99%</color> 감소시킵니다. 이후 적 전체를 공격합니다. 이 스킬로 사망한 적은 부활/소생하지 않습니다. 이 스킬은 쿨타임 증가 스킬의 영향을 받지 않습니다.",
         "zh": "解除全体敌人的所有强化效果,并使攻击型、魔法型和恢复型敌人的生命值降低<color=#28d9ed>99%</color>。此后,攻击全体敌人。因此技能死亡的敌人无法复活/苏醒。此技能不受冷却时间增加效果的影响。"
       },
       "icon": "Skill_Ultimate_2000090",
-      "debuff":["BT_REMOVE_BUFF","BT_SEALED_RESURRECTION"]
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED_RESURRECTION"
+      ]
     },
     {
       "name": {
         "en": "Winter's End",
-        "kr": "겨울의 끝",
         "jp": "冬の断末魔",
+        "kr": "겨울의 끝",
         "zh": "凛冬尽头"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect) After Dahlia performs an action, reduces the duration of debuffs inflicted on the caster by <color=#28d9ed>2 turns</color>, and upon taking a critical hit, grants <color=#28d9ed>Invulnerability</color> for <color=#28d9ed>1 turn(s).</color>\\nAfter being hit, increases Priority by <color=#28d9ed>10%</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Prevents the Boss from reducing debuff duration\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)",
-        "kr": "(패시브 효과) 달리아는 행동 후 자신이 보유한 약화 효과의 지속 시간이 <color=#28d9ed>2턴</color> 감소하고, 치명 공격으로 피격 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.\\n피격 후 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.\\n\\n적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격력 +30% \\n마법형 : 보스에게 입히는 피해 증가 \\n방어형 : 보스 약화 효과 지속 시간 감소 사용불가\\n속도형 : 전투 시작 시 속도 증가 +1턴\\n회복형 : 영구 면역 (해제 불가)",
         "jp": "(パッシブ効果)【ダリア】の行動後、自分の弱体効果の持続ターンを<color=#28d9ed>2ターン</color>減少し、会心ダメージを受けた場合、<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nダメージを受けた後、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\n\\n敵全体に【絶望に立ち向かう勇気】を付与する。自分の戦闘タイプに応じて<color=#28d9ed>特別な効果</color>が付与される。攻撃型:攻撃力+30%\\n魔法型:ボスに与えるダメージUP\\n防御型:ボースの弱体効果の持続ターンDOWN使用不可\\nスピード型:戦闘開始時スピードUP+1ターン\\n回復型:免疫を永続的に付与(解除不可)",
+        "kr": "(패시브 효과) 달리아는 행동 후 자신이 보유한 약화 효과의 지속 시간이 <color=#28d9ed>2턴</color> 감소하고, 치명 공격으로 피격 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.\\n피격 후 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.\\n\\n적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격력 +30% \\n마법형 : 보스에게 입히는 피해 증가 \\n방어형 : 보스 약화 효과 지속 시간 감소 사용불가\\n속도형 : 전투 시작 시 속도 증가 +1턴\\n회복형 : 영구 면역 (해제 불가)",
         "zh": "(被动效果) 达利娅行动后,使自身附带的弱化效果持续时间减少<color=#28d9ed>2回合</color>,且受到暴击时,获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。\\n受到攻击后,使行动值提升<color=#28d9ed>10%</color>。\\n\\n敌军获得面对绝境的勇气。根据自身职业获得<color=#28d9ed>特别效果</color>。\\n\\n攻击型:攻击力+30%\\n魔法型:对首领伤害提升\\n防御型:无法对首领使用弱化效果持续时间减少效果\\n速度型:战斗开始时速度提升+1回合\\n恢复型:永久免疫(无法解除)"
       },
       "icon": "MT_Passive_1_Dark",
-      "buff":["BT_EXTEND_DEBUFF","BT_INVINCIBLE","UNIQUE_DAHLIA_A","BT_ACTION_GAUGE"]
+      "buff": [
+        "BT_EXTEND_DEBUFF",
+        "BT_INVINCIBLE",
+        "UNIQUE_DAHLIA_A",
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
         "en": "Throne of Hubris",
-        "kr": "오만의 좌",
         "jp": "傲慢の座",
+        "kr": "오만의 좌",
         "zh": "傲慢之座"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect) Damage taken increases proportional to the number of debuffs inflicted on Dahlia.\\nFixed damage other than Skill Chains and damage from Dark enemies does not exceed <color=#28d9ed>1000</color>, and Cursed damage does not exceed <color=#28d9ed>10000</color>.\\nDoes not receive Weakness Gauge damage and greatly reduces damage taken from enemies with <color=#28d9ed>100</color> or more Chain Points.\\n\\nCompletely reduces <color=#28d9ed>Effectiveness</color> of non-<color=#28d9ed>Light/Earth</color> enemies and <color=#28d9ed>Critical Hit Chance</color> of Defender, Striker, and Healer enemies.",
-        "kr": "(패시브 효과) 달리아는 보유한 약화 효과 수량에 비례하여 받는 피해가 증가합니다.\\n스킬 체인을 제외한 고정 피해 및 암속성 적에게는 최대 <color=#28d9ed>1000</color>까지만 피해를 받으며, 저주로는 최대 <color=#28d9ed>10000</color>까지 피해를 받습니다.\\nCP를 <color=#28d9ed>100</color>이상 보유한 적에게 WG 피해를 받지 않고, 받는 피해가 크게 감소합니다.\\n\\n<color=#28d9ed>명/지속성</color>이 아닌 적의 <color=#28d9ed>효과 적중</color>이 모두 감소하며, 방어형과 공격형 및 회복형 적의 <color=#28d9ed>치명 확률</color>이 모두 감소합니다.",
         "jp": "(パッシブ効果)【ダリア】に付与された弱体効果の数が多いほど受けるダメージがUPする。\\nチェーンスキル以外の固定ダメージおよび闇属性の敵からのダメージは<color=#28d9ed>1000</color>まで受ける。呪いからのダメージは<color=#28d9ed>10000</color>まで受ける。\\nCPが<color=#28d9ed>100</color>以上ある敵からWGダメージを受けず、受けるダメージが大幅にDOWNする。\\n\\n<color=#28d9ed>光/地属性</color>以外の敵の<color=#28d9ed>効果命中</color>がすべてDOWNし、防御型/攻撃型/回復型の敵の<color=#28d9ed>会心率</color>がすべてDOWNする。",
+        "kr": "(패시브 효과) 달리아는 보유한 약화 효과 수량에 비례하여 받는 피해가 증가합니다.\\n스킬 체인을 제외한 고정 피해 및 암속성 적에게는 최대 <color=#28d9ed>1000</color>까지만 피해를 받으며, 저주로는 최대 <color=#28d9ed>10000</color>까지 피해를 받습니다.\\nCP를 <color=#28d9ed>100</color>이상 보유한 적에게 WG 피해를 받지 않고, 받는 피해가 크게 감소합니다.\\n\\n<color=#28d9ed>명/지속성</color>이 아닌 적의 <color=#28d9ed>효과 적중</color>이 모두 감소하며, 방어형과 공격형 및 회복형 적의 <color=#28d9ed>치명 확률</color>이 모두 감소합니다.",
         "zh": "(被动效果)\\n达利娅所受伤害根据持有的弱化效果数量等比提升。\\n除连携技能外的固定伤害及暗属性敌人最多可造成<color=#28d9ed>1000</color>点伤害,诅咒最多可造成<color=#28d9ed>10000</color>点伤害。\\n不会受到来自CP<color=#28d9ed>100</color>以上敌人的WG伤害,并且大幅降低所受伤害。\\n\\n使非<color=#28d9ed>光/土属性</color>敌人的<color=#28d9ed>效果命中</color>全部降低,且使防御型、攻击型和恢复型敌人的<color=#28d9ed>暴击率</color>全部降低。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -127,15 +139,15 @@
     {
       "name": {
         "en": "Quasar Bombardment",
-        "kr": "퀘이사 포격",
         "jp": "クエーサー砲撃",
+        "kr": "퀘이사 포격",
         "zh": "类星体炮击"
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "Skill_Ultimate_4086013"

@@ -2,14 +2,14 @@
   "id": "62000038",
   "Name": {
     "en": "Shu",
-    "kr": "슈",
     "jp": "シュー",
+    "kr": "슈",
     "zh": "小芙"
   },
   "Surname": {
     "en": "Up-And-Coming Virtual DJ",
-    "kr": "떡상예정 버추얼 DJ",
     "jp": "ヴァーチャルDJ配信中",
+    "kr": "떡상예정 버추얼 DJ",
     "zh": "潜力虚拟DJ"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Water Tower 37F",
-      "kr": "물의 탑 37층",
       "jp": "水の塔37階",
+      "kr": "물의 탑 37층",
       "zh": "水之塔第37层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40212037",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Dropping the Beat!",
-        "kr": "비트 갑니다!",
         "jp": "ドロップ・ザ・ビ~ト!",
+        "kr": "비트 갑니다!",
         "zh": "跟随节奏!"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest current Health by <color=#28d9ed>5%</color>.",
-        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>5%</color> 회복시킵니다.",
         "jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>5%</color>回復する。",
+        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>5%</color> 회복시킵니다.",
         "zh": "攻击敌人,并使生命值最低的友军恢复<color=#28d9ed>5%</color>的<color=#28d9ed>生命值</color>。"
       },
       "icon": "Skill_First_2000038"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Let's Get the Party Started!",
-        "kr": "분위기 띄워보자!",
         "jp": "盛り上げていくよ~!",
+        "kr": "분위기 띄워보자!",
         "zh": "炒热气氛吧!"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Removes <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
-        "kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
         "jp": "対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
         "zh": "解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。"
       },
       "icon": "Skill_Second_2000038"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "It's Party Time!",
-        "kr": "파티 시간이야!",
         "jp": "パ~ティ~タイム!",
+        "kr": "파티 시간이야!",
         "zh": "派对时间到了!"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Heals all allies by <color=#28d9ed>5%</color> and removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color>. The healing is increased by <color=#28d9ed>5%</color> on targets inflicted with a debuff.",
-        "kr": "아군 전체의 체력을 <color=#28d9ed>5%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>5%</color> 증가합니다.",
         "jp": "味方全体のHPを<color=#28d9ed>5%</color>回復し、<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。弱体効果がある対象には、HP回復量が追加で<color=#28d9ed>5%</color>UPする。",
+        "kr": "아군 전체의 체력을 <color=#28d9ed>5%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>5%</color> 증가합니다.",
         "zh": "使全体友军的生命值恢复<color=#28d9ed>5%</color>,并解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。使附带弱化效果的目标,恢复量额外提升<color=#28d9ed>5%</color>。"
       },
       "icon": "Skill_Ultimate_2000038"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Sword and Shield",
-        "kr": "검과 방패",
         "jp": "剣と盾",
+        "kr": "검과 방패",
         "zh": "剑与盾"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nGrants increased <color=#28d9ed>Defense</color> and <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turns</color> at the start of battle. (Irremovable)",
-        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>방어력</color>과 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. (해제 불가)",
         "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>防御力</color>と<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。(解除不可)",
+        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>방어력</color>과 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. (해제 불가)",
         "zh": "(被动效果)\\n战斗开始时,使<color=#28d9ed>防御力</color>和<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。(无法解除)"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Water Tower",
-        "kr": "물의 탑의 가호",
         "jp": "水の塔の加護",
+        "kr": "물의 탑의 가호",
         "zh": "水之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Water"

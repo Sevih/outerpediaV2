@@ -2,14 +2,14 @@
   "id": "400401111",
   "Name": {
     "en": "Leo",
-    "kr": "레오",
     "jp": "レオ",
+    "kr": "레오",
     "zh": "雷欧"
   },
   "Surname": {
     "en": "Righteous Hero",
-    "kr": "정의의 용사",
     "jp": "愛を貫く正義の勇者",
+    "kr": "정의의 용사",
     "zh": "正义的勇士"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Justice vs. Villainy",
-      "kr": "정의 VS 악당",
       "jp": "正義VS悪党",
+      "kr": "정의 VS 악당",
       "zh": "正义VS邪恶"
     },
     "mode": {
       "en": "Story (Hard)",
-      "kr": "스토리(하드)",
       "jp": "ストーリー(ハード)",
+      "kr": "스토리(하드)",
       "zh": "故事(困难)"
     },
     "area_id": {
       "en": "9-5",
-      "kr": "9-5",
       "jp": "9-5",
+      "kr": "9-5",
       "zh": "9-5"
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Justice's Quad Strike",
-        "kr": "정의의 사자사연격",
         "jp": "正義の獅子四連撃",
+        "kr": "정의의 사자사연격",
         "zh": "正义使者四连击"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and gains a <color=#28d9ed>barrier</color> for <color=#28d9ed>2 turn(s)</color>. The barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
         "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の<color=#28d9ed>防御力</color>が高いほどシールド量がUPする。",
+        "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
         "zh": "攻击敌人,并获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身<color=#28d9ed>防御力</color>越高,则护盾量越高。"
       },
       "icon": "Skill_First_2000042",
@@ -62,15 +62,15 @@
     {
       "name": {
         "en": "Courageous Protection",
-        "kr": "용기의 수호영역",
         "jp": "勇気のイージスフィールド",
+        "kr": "용기의 수호영역",
         "zh": "勇气的守护领域"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Increases all allies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3 turn(s)</color>.",
-        "kr": "아군 전체의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>3턴</color> 동안 증가합니다.",
         "jp": "味方全体の<color=#28d9ed>防御力</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "kr": "아군 전체의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>3턴</color> 동안 증가합니다.",
         "zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "Skill_Second_2000042",
@@ -81,15 +81,15 @@
     {
       "name": {
         "en": "Loving Justice Dive",
-        "kr": "사랑의 저스티스 다이브",
         "jp": "愛のジャスティス・ダイブ",
+        "kr": "사랑의 저스티스 다이브",
         "zh": "爱的正义潜行"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies.\\nThis skill's damage increases proportional to the caster's <color=#28d9ed>Defense</color>.",
-        "kr": "적 전체를 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
         "jp": "敵全体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "kr": "적 전체를 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
         "zh": "攻击全体敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害量越高。"
       },
       "icon": "Skill_Ultimate_2000042"
@@ -97,15 +97,15 @@
     {
       "name": {
         "en": "Loving Warrior",
-        "kr": "사랑의 전사",
         "jp": "愛の戦士",
+        "kr": "사랑의 전사",
         "zh": "爱情战士"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nGreatly increases damage dealt to enemies when Leo is granted a <color=#28d9ed>barrier</color>, and increases <color=#28d9ed>Defense</color> proportional to Leo's missing Health.\\nWhen Alpha is alive, reduces Weakness Gauge damage taken by Leo by <color=#28d9ed>50%</color>.",
-        "kr": "(패시브 효과)\\n레오는 <color=#28d9ed>실드</color> 보유 시 적에게 주는 피해량이 크게 증가하며, 체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다.\\n알파 생존 시 레오가 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소합니다.",
         "jp": "(パッシブ効果)\\n【レオ】が<color=#28d9ed>シールド</color>状態の場合、敵に与えるダメージが大幅にUPし、残りHPが低いほど<color=#28d9ed>防御力</color>がUPする。\\n戦場に【アルファ】がいる場合、【レオ】が受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。",
+        "kr": "(패시브 효과)\\n레오는 <color=#28d9ed>실드</color> 보유 시 적에게 주는 피해량이 크게 증가하며, 체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다.\\n알파 생존 시 레오가 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소합니다.",
         "zh": "(被动效果)\\n雷欧附带<color=#28d9ed>护盾</color>效果时,对敌人造成的伤害量大幅提升,且生命值越低,则<color=#28d9ed>防御力</color>越高。\\n在阿尔法存活时,雷欧所受WG伤害量降低<color=#28d9ed>50%</color>。"
       },
       "icon": "MT_Passive_1_Light"

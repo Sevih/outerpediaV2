@@ -2,8 +2,8 @@
   "id": "62005004",
   "Name": {
     "en": "Tamamo-no-Mae",
-    "kr": "타마모노마에",
     "jp": "タマモノマエ",
+    "kr": "타마모노마에",
     "zh": "玉藻前"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 70F",
-      "kr": "화염의 탑 70층",
       "jp": "火の塔70階",
+      "kr": "화염의 탑 70층",
       "zh": "火之塔第70层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202070",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Reign of Terror",
-        "kr": "포락지형",
         "jp": "炮烙ノ形",
+        "kr": "포락지형",
         "zh": "炮烙之刑"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to reduce <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고, <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>을 감소시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "kr": "적을 공격하고, <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>을 감소시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率造成<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_First_2000080"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Nirvana's Inferno",
-        "kr": "피안의 겁화",
         "jp": "彼岸劫火",
+        "kr": "피안의 겁화",
         "zh": "彼岸的火劫"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) When an ally is hit, counterattacks with <color=#28d9ed>Nirvana's Inferno</color>.\\nBefore attacking, removes <color=#28d9ed>2</color> buff(s) from the target, and reduces Evasion for <color=#28d9ed>2 turn(s)</color>. If the target is <color=#28d9ed>Earth element</color>, ignores their Resilience, and does not miss.",
-        "kr": "(발동 효과) 아군이 피격 시 <color=#28d9ed>피안의 겁화</color>로 반격 합니다.\\n 공격 전 대상의 강화 효과를 <color=#28d9ed>2개</color> 해제하고, <color=#28d9ed>2턴</color> 동안 회피를 감소시킵니다. 대상이 <color=#28d9ed>지속성</color>이라면 대상의 효과 저항을 무시하고, 빗나감이 발생하지 않습니다.",
         "jp": "(発動効果)味方がダメージを受けた時、<color=#28d9ed>【彼岸劫火】</color>で反撃する。\\n(発動効果)攻撃前、対象に強化効果を<color=#28d9ed>2個</color>解除し、回避を<color=#28d9ed>2ターン</color>の間DOWNさせる。対象が<color=#28d9ed>地属性</color>の場合、対象の効果抵抗を無視し、ミスヒットが発生しない。",
+        "kr": "(발동 효과) 아군이 피격 시 <color=#28d9ed>피안의 겁화</color>로 반격 합니다.\\n 공격 전 대상의 강화 효과를 <color=#28d9ed>2개</color> 해제하고, <color=#28d9ed>2턴</color> 동안 회피를 감소시킵니다. 대상이 <color=#28d9ed>지속성</color>이라면 대상의 효과 저항을 무시하고, 빗나감이 발생하지 않습니다.",
         "zh": "(触发效果)友军受到攻击时,用<color=#28d9ed>血液轮回</color>反击。\\n攻击前解除目标的<color=#28d9ed>2个</color>强化效果,并使回避降低,持续<color=#28d9ed>2回合</color>。若目标为<color=#28d9ed>土属性</color>,则无视目标的效果抵抗,且不会触发闪避。"
       },
       "icon": "Skill_Second_2000080"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Eternal Enlightenment",
-        "kr": "구경열반 삼세요호",
         "jp": "究竟涅槃三世妖狐",
+        "kr": "구경열반 삼세요호",
         "zh": "究竟涅槃三世妖狐"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. Grants <color=#28d9ed>Sustained Recovery</color> to all allies for <color=#28d9ed>1 turn(s)</color>.\\nThis skill ignores <color=#28d9ed>30%</color> of the target's Defense.",
-        "kr": "적 전체를 공격합니다. 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.",
         "jp": "敵全体にダメージを与える。味方全体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。",
+        "kr": "적 전체를 공격합니다. 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.",
         "zh": "攻击全体敌人。使全体友军获得<color=#28d9ed>持续恢复</color>,持续<color=#28d9ed>1回合</color>。\\n该技能无视目标防御力的<color=#28d9ed>30%</color>。"
       },
       "icon": "Skill_Ultimate_2000080"

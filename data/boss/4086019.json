@@ -2,14 +2,14 @@
   "id": "4086019",
   "Name": {
     "en": "Dahlia",
-    "kr": "달리아",
     "jp": "ダリア",
+    "kr": "달리아",
     "zh": "达利娅"
   },
   "Surname": {
     "en": "Archdemon of Hubris",
-    "kr": "오만의 마왕",
     "jp": "傲慢の魔王",
+    "kr": "오만의 마왕",
     "zh": "傲慢魔王"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Normal League",
-      "kr": "노멀 리그",
       "jp": "ノーマルリーグ",
+      "kr": "노멀 리그",
       "zh": "普通联赛"
     },
     "mode": {
       "en": "World Boss",
-      "kr": "월드 보스",
       "jp": "ワールドボス",
+      "kr": "월드 보스",
       "zh": "世界首领"
     },
     "area_id": {
       "en": "55300001",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,32 +43,34 @@
     {
       "name": {
         "en": "Icicle Lance",
-        "kr": "아이시클 랜스",
         "jp": "アイシクルランス",
+        "kr": "아이시클 랜스",
         "zh": "冰凌枪"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and increases the duration of buffs granted to the caster by <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 자신이 보유한 강화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の強化効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "kr": "적을 공격하고 자신이 보유한 강화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "zh": "攻击敌人,并使自身附带的强化效果持续时间增加<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_First_2000068",
-      "buff":["BT_EXTEND_BUFF"]
+      "buff": [
+        "BT_EXTEND_BUFF"
+      ]
     },
     {
       "name": {
         "en": "Diamond Dust",
-        "kr": "다이아몬드 더스트",
         "jp": "ダイヤモンドダスト",
+        "kr": "다이아몬드 더스트",
         "zh": "钻石星尘"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies.",
-        "kr": "적 전체를 공격합니다.",
         "jp": "敵全体にダメージを与える。",
+        "kr": "적 전체를 공격합니다.",
         "zh": "攻击全体敌人。"
       },
       "icon": "Skill_Ultimate_2000068"
@@ -76,32 +78,35 @@
     {
       "name": {
         "en": "Bitter Cold of Winter",
-        "kr": "겨울의 냉기",
         "jp": "冬の冷気",
+        "kr": "겨울의 냉기",
         "zh": "寒冬凛冽"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect) At the start of battle and start of the turn, grants <color=#28d9ed>Immunity</color> to Dahlia for <color=#28d9ed>1 turn(s)</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Deals 3 Weakness Gauge damage to the Boss when performing an action\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)",
-        "kr": "(패시브 효과) 달리아는 전투 시작 및 턴 시작 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color>을 획득합니다.\\n\\n적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격력 +30% \\n마법형 : 보스에게 입히는 피해 증가 \\n방어형 : 행동 시 보스에게 WG 3 피해\\n속도형 : 전투 시작 시 속도 증가 +1턴\\n회복형 : 영구 면역 (해제 불가)",
         "jp": "(パッシブ効果)【ダリア】の戦闘開始時およびターン開始時、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n\\n敵全体に【絶望に立ち向かう勇気】を付与する。自分の戦闘タイプに応じて<color=#28d9ed>特別な効果</color>が付与される。\\n\\n攻撃型:攻撃力+30%\\n魔法型:ボスに与えるダメージUP\\n防御型:行動時ボスに3のWGダメージ\\nスピード型:戦闘開始時スピードUP+1ターン\\n回復型:免疫を永続的に付与(解除不可)",
+        "kr": "(패시브 효과) 달리아는 전투 시작 및 턴 시작 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color>을 획득합니다.\\n\\n적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격력 +30% \\n마법형 : 보스에게 입히는 피해 증가 \\n방어형 : 행동 시 보스에게 WG 3 피해\\n속도형 : 전투 시작 시 속도 증가 +1턴\\n회복형 : 영구 면역 (해제 불가)",
         "zh": "(被动效果) 达利娅在战斗开始和回合开始时,获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>1回合</color>。\\n\\n敌军获得面对绝境的勇气。根据自身职业获得<color=#28d9ed>特别效果</color>。\\n\\n攻击型:攻击力+30%\\n魔法型:对首领伤害提升\\n防御型:行动时对首领造成3WG伤害\\n速度型:战斗开始时速度提升+1回合\\n恢复型:永久免疫(无法解除)"
       },
       "icon": "MT_Passive_1_Water",
-      "buff":["BT_IMMUNE","UNIQUE_DAHLIA_A"]
+      "buff": [
+        "BT_IMMUNE",
+        "UNIQUE_DAHLIA_A"
+      ]
     },
     {
       "name": {
         "en": "Quasar Bombardment",
-        "kr": "퀘이사 포격",
         "jp": "クエーサー砲撃",
+        "kr": "퀘이사 포격",
         "zh": "类星体炮击"
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "Skill_Ultimate_4086013"

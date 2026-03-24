@@ -2,8 +2,8 @@
   "id": "62005101",
   "Name": {
     "en": "Luna",
-    "kr": "루나",
     "jp": "ルナ",
+    "kr": "루나",
     "zh": "露娜"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Water Tower 60F",
-      "kr": "물의 탑 60층",
       "jp": "水の塔60階",
+      "kr": "물의 탑 60층",
       "zh": "水之塔第60层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40212060",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Moonlight Slash",
-        "kr": "달빛 가르기",
         "jp": "月光斬り",
+        "kr": "달빛 가르기",
         "zh": "划破月光"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and if the caster has a Barrier, deals an Additional Attack.\\nAfter attacking, there is a <color=#28d9ed>70%</color> chance to trigger a Dual Attack by the ally with the highest Attack. If an Additional Attack occurs, the Dual Attack chance increases by <color=#28d9ed>30%</color>.",
-        "kr": "적을 공격하고, 실드를 보유한 상태라면 추가 공격을 입힙니다.\\n공격 후 <color=#28d9ed>70%</color> 확률로 가장 공격력이 높은 아군의 협공을 발생시키며, 추가 공격 발생 시 협공 확률이 <color=#28d9ed>30%</color> 증가합니다.",
         "jp": "敵単体にダメージを与え、自分がシールド状態の場合、追加攻撃を与える。\\n攻撃後、攻撃力が最も高い味方単体に<color=#28d9ed>70%</color>の確率で連携を発生させ、追加攻撃発生時、連携発生率が<color=#28d9ed>30%</color>UPする。",
+        "kr": "적을 공격하고, 실드를 보유한 상태라면 추가 공격을 입힙니다.\\n공격 후 <color=#28d9ed>70%</color> 확률로 가장 공격력이 높은 아군의 협공을 발생시키며, 추가 공격 발생 시 협공 확률이 <color=#28d9ed>30%</color> 증가합니다.",
         "zh": "攻击敌人,若目标为附带护盾的状态,则进行额外攻击。\\n攻击后,有<color=#28d9ed>70%</color>的几率使攻击力最高的友军发动夹攻,触发额外攻击时夹攻几率增加<color=#28d9ed>30%</color>。"
       },
       "icon": "Skill_First_2000103"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Hero's Emergence",
-        "kr": "영웅 출현",
         "jp": "英雄出現",
+        "kr": "영웅 출현",
         "zh": "英雄现身"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Removes <color=#28d9ed>2</color> a debuff from all allies and grants a Barrier for <color=#28d9ed>3</color> turns. Barrier Strength increases proportionally to the caster's max Health.",
-        "kr": "아군 전체의 약화 효과를 <color=#28d9ed>2개</color> 해제 후 <color=#28d9ed>3턴</color>동안 실드를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.",
         "jp": "味方全体の弱体効果を<color=#28d9ed>2個</color>解除した後、シールドを<color=#28d9ed>3ターン</color>の間付与する。自分の最大HPが高いほどシールド量がUPする。",
+        "kr": "아군 전체의 약화 효과를 <color=#28d9ed>2개</color> 해제 후 <color=#28d9ed>3턴</color>동안 실드를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.",
         "zh": "解除全体友军<color=#28d9ed>2个</color>弱化效果后赋予护盾,持续<color=#28d9ed>3回合</color>。护盾效果根据自身生命值上限等比提升。"
       },
       "icon": "Skill_Second_2000103"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Someday I Will Reach the Moon",
-        "kr": "언젠가 달에 닿을 것",
         "jp": "いつか月に届くもの",
+        "kr": "언젠가 달에 닿을 것",
         "zh": "总有一天能触及月亮"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. With a <color=#28d9ed>100%</color> chance, grants <color=#28d9ed>Unbuffable</color> on all targets for <color=#28d9ed>3</color> turns.",
-        "kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상 모두에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.",
         "jp": "敵全体にダメージを与える。対象全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>強化不可</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 대상 모두에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.",
         "zh": "攻击全体敌人。有<color=#28d9ed>100%</color>的几率对所有目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "Skill_Ultimate_2000103"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Form the Phalanx!",
-        "kr": "방진을 갖춰라!",
         "jp": "防陣を整えろ!",
+        "kr": "방진을 갖춰라!",
         "zh": "结成方阵!"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "Each turn, grants all allies <color=#28d9ed>Defense Up</color> for <color=#28d9ed>2 turns</color>.",
-        "kr": "매 턴 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color> 증가를 부여합니다.",
         "jp": "毎ターン、味方全体に<color=#28d9ed>防御力UP</color>(<color=#28d9ed>2ターン</color>)を付与。",
+        "kr": "매 턴 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color> 증가를 부여합니다.",
         "zh": "每回合为我方全体赋予<color=#28d9ed>防御力提升</color>,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Passive_1_Water"

@@ -2,8 +2,8 @@
   "id": "414400191",
   "Name": {
     "en": "Core Guardian",
-    "kr": "코어 가디언",
     "jp": "コアガーディアン",
+    "kr": "코어 가디언",
     "zh": "核心守护者"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 20F",
-      "kr": "비천의 탑 20층",
       "jp": "飛天の塔20階",
+      "kr": "비천의 탑 20층",
       "zh": "飞天之塔20层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101020",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Guardian Slash",
-        "kr": "가디언 슬래쉬",
         "jp": "ガーディアンスラッシュ",
+        "kr": "가디언 슬래쉬",
         "zh": "守护者劈斩"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks 2 enemies.",
-        "kr": "적 2인을 공격합니다.",
         "jp": "敵2体にダメージを与える。",
+        "kr": "적 2인을 공격합니다.",
         "zh": "攻击2名敌人。"
       },
       "icon": "Skill_First_4044001"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Guardian Cutter",
-        "kr": "가디언 커터",
         "jp": "ガーディアンカッター",
+        "kr": "가디언 커터",
         "zh": "守护者切割器"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies.",
-        "kr": "적 전체를 공격합니다.",
         "jp": "敵全体にダメージを与える。",
+        "kr": "적 전체를 공격합니다.",
         "zh": "攻击全体敌人。"
       },
       "icon": "Skill_Second_4044001"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Guardian Cannon",
-        "kr": "가디언 캐논",
         "jp": "ガーディアンキャノン",
+        "kr": "가디언 캐논",
         "zh": "守护者加农炮"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>30%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>30%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>30%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>30%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_Ultimate_4044001"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Antimatter Field",
-        "kr": "안티매터 필드",
         "jp": "アンチマターフィールド",
+        "kr": "안티매터 필드",
         "zh": "反物质领域"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces Weakness Gauge damage taken by <color=#28d9ed>50%</color> when not <color=#28d9ed>Enraged</color>.",
-        "kr": "(패시브 효과)\\n<color=#28d9ed>광폭화</color> 상태가 아니라면 받는 WG 피해량을 <color=#28d9ed>50%</color> 감소시킵니다.",
         "jp": "(パッシブ効果)<color=#28d9ed>【狂暴化】</color>状態でない場合、受けるWGダメージを<color=#28d9ed>50%</color>DOWNさせる。",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>광폭화</color> 상태가 아니라면 받는 WG 피해량을 <color=#28d9ed>50%</color> 감소시킵니다.",
         "zh": "(被动效果)\\n若未处于<color=#28d9ed>狂暴化</color>状态,则使所受WG伤害量降低<color=#28d9ed>50%</color>。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Neural Amplification I",
-        "kr": "신경계 증폭 I",
         "jp": "神経系増幅 I",
+        "kr": "신경계 증폭 I",
         "zh": "精神系增幅 I"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Speed by <color=#28d9ed>5%</color> every time the caster takes a turn. (Max 5 stacks)",
-        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>5%</color> 증가합니다. (최대 5회 누적)",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、スピードが<color=#28d9ed>5%</color>UPする。(最大5回まで累積)",
+        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>5%</color> 증가합니다. (최대 5회 누적)",
         "zh": "(被动效果)\\n每到自身回合时,使速度提升<color=#28d9ed>5%</color>。(最多可叠加5次)"
       },
       "icon": "MT_Passive_1_Dark"
@@ -118,15 +118,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>60%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers 10% Weakness Gauge. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Stun Cannon</color>: Used when Enraged ends.\\n<color=#28d9ed>Attacks an enemy and heals</color> the caster by <color=#28d9ed>30%</color>. Has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.\\n\\n<color=#ffd732>If Enraged within 3 turns or fewer, grants 30 Chain Points.</color>",
-        "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>스턴 캐논</color> : 광폭화 종료 시 사용.\\n적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>30%</color> 회복하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 30의 CP를 회복시킵니다.</color>",
         "jp": "最大HPの<color=#28d9ed>60%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【スタンキャノン】</color>:【狂暴化】終了時に発動する。\\n敵を攻撃し、自分の<color=#28d9ed>HP</color>を<color=#28d9ed>30%</color>回復し、<color=#28d9ed>100%</color>の確率で対象を<color=#28d9ed>2ターン</color>の間<color=#28d9ed>スタン</color>させる。\\nこの攻撃は対象の<color=#28d9ed>効果抵抗</color>を無視する。\\n\\n<color=#ffd732>戦闘開始時から3ターン以内に【狂暴化】した場合、敵にCPを30獲得させる。</color>",
+        "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>스턴 캐논</color> : 광폭화 종료 시 사용.\\n적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>30%</color> 회복하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 30의 CP를 회복시킵니다.</color>",
         "zh": "若生命值降至<color=#28d9ed>60%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>进入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>晕眩加农炮</color>:狂暴化结束时发动。\\n攻击敌人,并使自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>30%</color>,并有<color=#28d9ed>100%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>2回合</color>。\\n该攻击无视目标的<color=#28d9ed>效果抵抗</color>。\\n\\n<color=#ffd732>在3回合内进入狂暴化状态时,使CP恢复30。</color>"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -134,15 +134,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

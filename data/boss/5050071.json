@@ -2,8 +2,8 @@
   "id": "5050071",
   "Name": {
     "en": "Annihilator",
-    "kr": "말살자",
     "jp": "エクスタミネーター",
+    "kr": "말살자",
     "zh": "歼灭者"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Darkness 50F",
-      "kr": "암흑의 탑 50층",
       "jp": "闇の塔 50階",
+      "kr": "암흑의 탑 50층",
       "zh": "黑暗之塔 1层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40242050",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Target Acquired",
-        "kr": "타겟 포착",
         "jp": "ターゲット解除",
+        "kr": "타겟 포착",
         "zh": "捕捉目标"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and inflicts <color=#28d9ed>Shocked</color> on all enemies that ignores the target's Resilience for <color=#28d9ed>2 turn(s)</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "kr": "적을 공격하고, 적 전체에게 효과 저항을 무시하는 <color=#28d9ed>감전</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "jp": "敵単体にダメージを与え、敵全体に<color=#28d9ed>感電</color>を<color=#28d9ed>2ターン</color>の間付与する。この効果は対象の効果抵抗を無視する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "kr": "적을 공격하고, 적 전체에게 효과 저항을 무시하는 <color=#28d9ed>감전</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "zh": "攻击敌人,并对全体敌人造成无视效果抵抗的<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_First_4014002"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Neutralize All Fronts",
-        "kr": "전방위 무력화",
         "jp": "前方無力化",
+        "kr": "전방위 무력화",
         "zh": "全方位无力化"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies. Inflicts <color=#28d9ed>Shocked</color> on all enemies that ignores the target's Resilience for <color=#28d9ed>4 turn(s)</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "kr": "적 전체를 공격합니다. 적 전체에게 효과 저항을 무시하는 <color=#28d9ed>감전</color>을 <color=#28d9ed>4턴</color> 동안 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "jp": "敵全体にダメージを与える。敵全体に<color=#28d9ed>感電</color>を<color=#28d9ed>4ターン</color>の間付与する。この効果は対象の効果抵抗を無視する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "kr": "적 전체를 공격합니다. 적 전체에게 효과 저항을 무시하는 <color=#28d9ed>감전</color>을 <color=#28d9ed>4턴</color> 동안 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "zh": "攻击全体敌人。对全体敌人造成无视效果抵抗的<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>4回合</color>。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Second_4014002"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Program Annihilation",
-        "kr": "프로그램 말살",
         "jp": "プログラム壊滅",
+        "kr": "프로그램 말살",
         "zh": "抹杀程序"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. When the target is inflicted with a debuff, ignores the target's Resilience and Immunity and reduces <color=#28d9ed>all</color> <color=#28d9ed>Action Points</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "kr": "적 전체를 공격합니다. 약화 효과를 보유한 대상에게 효과 저항 및 면역을 무시하고  <color=#28d9ed>AP</color>를 <color=#28d9ed>모두</color> 감소시킵니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "jp": "敵全体にダメージを与える。弱体効果がある対象を攻撃時、効果抵抗および免疫を無視し、<color=#28d9ed>AP</color>を<color=#28d9ed>すべて</color>DOWNさせる。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "kr": "적 전체를 공격합니다. 약화 효과를 보유한 대상에게 효과 저항 및 면역을 무시하고  <color=#28d9ed>AP</color>를 <color=#28d9ed>모두</color> 감소시킵니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "zh": "攻击全体敌人。对附带弱化效果的目标无视效果抵抗和免疫,并使<color=#28d9ed>AP</color><color=#28d9ed>全部</color>降低。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Ultimate_4014002"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Cryptid Mimicry",
-        "kr": "크립티드 모방",
         "jp": "クリプティッド模倣",
+        "kr": "크립티드 모방",
         "zh": "模仿神秘生物"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive)\\nDecreases damage taken from <color=#28d9ed>Mages</color> by <color=#28d9ed>80%</color> and increases damage taken from <color=#28d9ed>Strikers</color> by <color=#28d9ed>20%</color>.\\nIncreases own Priority by <color=#28d9ed>20%</color> after an enemy with <color=#28d9ed>Shock</color> takes an action.\\nAlso decreases damage and WG damage taken from enemies with <color=#28d9ed>Shock</color> by <color=#28d9ed>30%</color>.\\n\\nAt the end of the turn, removes <color=#28d9ed>2</color> buff(s) from enemies with <color=#28d9ed>Immunity</color>.",
-        "kr": "(패시브 효과)\\n<color=#28d9ed>마법형</color>으로 부터 받는 피해가 <color=#28d9ed>80%</color> 만큼 감소 하고 <color=#28d9ed>공격형</color>으로 부터 받는 피해가 <color=#28d9ed>-20%</color> 만큼 증가합니다.\\n<color=#28d9ed>감전</color> 효과를 가진 적 행동 후 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.\\n또한 <color=#28d9ed>감전</color> 효과가 있는 적에게서 피해량과 받는 WG 피해량이 <color=#28d9ed>30%</color> 감소합니다.\\n\\n턴 종료 시 <color=#28d9ed>면역</color> 효과를 보유한 적의 강화 효과 <color=#28d9ed>2</color>개를 해제합니다.",
         "jp": "(パッシブ効果)\\n<color=#28d9ed>魔法型</color>から受けるダメージが<color=#28d9ed>80%</color>DOWNし、<color=#28d9ed>攻撃型</color>から受けるダメージが<color=#28d9ed>-20%</color>UPする。\\n<color=#28d9ed>感電</color>効果を持つ敵の行動後、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。\\nまた、<color=#28d9ed>感電</color>効果を持つ敵から受けるダメージと受けるWGダメージが<color=#28d9ed>30%</color>DOWNする。\\n\\nターン終了時、<color=#28d9ed>免疫</color>効果を持つ敵の強化効果を<color=#28d9ed>2</color>個解除する。",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>마법형</color>으로 부터 받는 피해가 <color=#28d9ed>80%</color> 만큼 감소 하고 <color=#28d9ed>공격형</color>으로 부터 받는 피해가 <color=#28d9ed>-20%</color> 만큼 증가합니다.\\n<color=#28d9ed>감전</color> 효과를 가진 적 행동 후 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.\\n또한 <color=#28d9ed>감전</color> 효과가 있는 적에게서 피해량과 받는 WG 피해량이 <color=#28d9ed>30%</color> 감소합니다.\\n\\n턴 종료 시 <color=#28d9ed>면역</color> 효과를 보유한 적의 강화 효과 <color=#28d9ed>2</color>개를 해제합니다.",
         "zh": "(被动效果)\\n受到的<color=#28d9ed>魔法型</color>伤害减少<color=#28d9ed>80%</color>,受到的<color=#28d9ed>攻击型</color>伤害增加<color=#28d9ed>-20%</color>。\\n持有<color=#28d9ed>触电</color>效果的敌人行动后,自身行动值增加<color=#28d9ed>20%</color>。\\n此外,受到持有<color=#28d9ed>触电</color>效果的敌人造成的伤害和WG伤害减少<color=#28d9ed>30%</color>。\\n\\n回合结束时,解除持有<color=#28d9ed>免疫</color>效果敌人的<color=#28d9ed>2</color>个强化效果。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Darkness",
-        "kr": "어둠의 탑의 가호",
         "jp": "闇の塔の加護",
+        "kr": "어둠의 탑의 가호",
         "zh": "暗之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -118,15 +118,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "At the start of battle, becomes <color=#28d9ed>Enraged</color>.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack for <color=#28d9ed>3 turn(s)</color>. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Used when Enraged ends.\\nRemoves all buffs from all enemies and inflicts instant death. Enemies killed by this skill cannot be Resurrected or Revived.",
-        "kr": "전투 입장 시 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가를 <color=#28d9ed>3턴</color> 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>광폭화 필살기</color> : 광폭화 종료 시 사용.\\n적 전체의 강화 효과를 모두 해제하고 즉사 시킵니다. 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "jp": "戦闘開始時、<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UPを<color=#28d9ed>3ターン</color>の間付与する。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【必殺スキル】</color>:狂暴化終了時に使用する。\\n敵全体の強化効果をすべて解除し、即死させる。このスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "kr": "전투 입장 시 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가를 <color=#28d9ed>3턴</color> 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>광폭화 필살기</color> : 광폭화 종료 시 사용.\\n적 전체의 강화 효과를 모두 해제하고 즉사 시킵니다. 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "zh": "战斗开始时转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升,持续<color=#28d9ed>3回合</color>。狂暴化持续3回合。\\n\\n<color=#28d9ed>狂暴化必杀技</color>:狂暴化结束时发动。\\n解除全体敌人的所有强化效果并使其立即死亡。被此技能击杀的敌人无法复活与苏醒。"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -134,15 +134,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "At the start of battle, becomes <color=#28d9ed>Enraged</color>.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack for <color=#28d9ed>3 turn(s)</color>. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Used when Enraged ends.\\nRemoves all buffs from all enemies and inflicts instant death. Enemies killed by this skill cannot be Resurrected or Revived.",
-        "kr": "전투 입장 시 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가를 <color=#28d9ed>3턴</color> 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>광폭화 필살기</color> : 광폭화 종료 시 사용.\\n적 전체의 강화 효과를 모두 해제하고 즉사 시킵니다. 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "jp": "戦闘開始時、<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UPを<color=#28d9ed>3ターン</color>の間付与する。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【必殺スキル】</color>:狂暴化終了時に使用する。\\n敵全体の強化効果をすべて解除し、即死させる。このスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "kr": "전투 입장 시 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가를 <color=#28d9ed>3턴</color> 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>광폭화 필살기</color> : 광폭화 종료 시 사용.\\n적 전체의 강화 효과를 모두 해제하고 즉사 시킵니다. 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "zh": "战斗开始时转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升,持续<color=#28d9ed>3回合</color>。狂暴化持续3回合。\\n\\n<color=#28d9ed>狂暴化必杀技</color>:狂暴化结束时发动。\\n解除全体敌人的所有强化效果并使其立即死亡。被此技能击杀的敌人无法复活与苏醒。"
       },
       "icon": "MT_Boss_Rage_Common_1"

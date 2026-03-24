@@ -2,8 +2,8 @@
   "id": "400302194",
   "Name": {
     "en": "Nightwatch Shieldbearer",
-    "kr": "기사단 실드",
     "jp": "騎士団兵〈盾〉",
+    "kr": "기사단 실드",
     "zh": "骑士团盾牌兵"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 41F",
-      "kr": "비천의 탑 41층",
       "jp": "飛天の塔41階",
+      "kr": "비천의 탑 41층",
       "zh": "飞天之塔41层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101041",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Robust Shield",
-        "kr": "굳건한 방패",
         "jp": "強固なる盾",
+        "kr": "굳건한 방패",
         "zh": "坚固的盾牌"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Smash_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Relentless Attack",
-        "kr": "세찬 공격",
         "jp": "激しい攻撃",
+        "kr": "세찬 공격",
         "zh": "猛烈攻击"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>25%</color> chance to reduce <color=#28d9ed>Priority Gauge</color> of the target by <color=#28d9ed>10%</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color>를 감소시킵니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-10%</color>DOWNさせる。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color>를 감소시킵니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-10%</color>。"
       },
       "icon": "MT_Attack_Smash_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Brave Spirit",
-        "kr": "용맹한 기개",
         "jp": "勇猛な気概",
+        "kr": "용맹한 기개",
         "zh": "勇猛气概"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Increases all allies' <color=#28d9ed>Defense</color> by <color=#28d9ed>50%</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>50%</color> 증가시킵니다.",
         "jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間<color=#28d9ed>50%</color>UPさせる。",
+        "kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>50%</color> 증가시킵니다.",
         "zh": "使全体友军的<color=#28d9ed>防御力</color>提升<color=#28d9ed>50%</color>,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Smash_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Fury Stack III",
-        "kr": "분노 중첩 III",
         "jp": "アンガースタック III",
+        "kr": "분노 중첩 III",
         "zh": "愤怒叠加 III"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>10%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>10%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>10%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>10%</color> 증가합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Pride of the Order",
-        "kr": "기사단의 긍지",
         "jp": "騎士団の誇り",
+        "kr": "기사단의 긍지",
         "zh": "骑士团的骄傲"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nHas a <color=#28d9ed>10%</color> chance to increase cooldowns of one target by <color=#28d9ed>1 turn(s)</color> when attacking.\\nIncreases <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle.",
-        "kr": "(패시브 효과)\\n공격 시 <color=#28d9ed>10%</color> 확률로 대상 한 명의 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
         "jp": "(パッシブ効果)\\n攻撃時、<color=#28d9ed>10%</color>の確率で対象単体のスキルターンを<color=#28d9ed>1ターン</color>増加させる。\\n戦闘開始時、<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+        "kr": "(패시브 효과)\\n공격 시 <color=#28d9ed>10%</color> 확률로 대상 한 명의 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
         "zh": "(被动效果)\\n攻击时,有<color=#28d9ed>10%</color>的几率使1名目标的冷却时间增加<color=#28d9ed>1回合</color>。\\n战斗开始时,使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Passive_1_Earth"

@@ -2,14 +2,14 @@
   "id": "5040058",
   "Name": {
     "en": "Leo",
-    "kr": "레오",
     "jp": "レオ",
+    "kr": "레오",
     "zh": "雷欧"
   },
   "Surname": {
     "en": "Righteous Hero",
-    "kr": "정의의 용사",
     "jp": "愛を貫く正義の勇者",
+    "kr": "정의의 용사",
     "zh": "正义的勇士"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Light 48F",
-      "kr": "빛의 탑 48층",
       "jp": "光の塔 48階",
+      "kr": "빛의 탑 48층",
       "zh": "光之塔 48层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40232048",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Justice's Quad Strike",
-        "kr": "정의의 사자사연격",
         "jp": "正義の獅子四連撃",
+        "kr": "정의의 사자사연격",
         "zh": "正义使者四连击"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and gains a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
         "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の<color=#28d9ed>防御力</color>が高いほどシールド量がUPする。",
+        "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
         "zh": "攻击敌人,并获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身<color=#28d9ed>防御力</color>越高,则护盾量越高。"
       },
       "icon": "Skill_First_2000042"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Courageous Protection",
-        "kr": "용기의 수호영역",
         "jp": "勇気のイージスフィールド",
+        "kr": "용기의 수호영역",
         "zh": "勇气的守护领域"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Increases all allies' <color=#28d9ed>Defense</color> for <color=#28d9ed>3 turn(s)</color>.",
-        "kr": "아군 전체의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>3턴</color> 동안 증가합니다.",
         "jp": "味方全体の<color=#28d9ed>防御力</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "kr": "아군 전체의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>3턴</color> 동안 증가합니다.",
         "zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "Skill_Second_2000042"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Loving Justice Dive",
-        "kr": "사랑의 저스티스 다이브",
         "jp": "愛のジャスティス・ダイブ",
+        "kr": "사랑의 저스티스 다이브",
         "zh": "爱的正义潜行"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies.\\nThis skill's damage increases proportional to the caster's <color=#28d9ed>Defense</color>.",
-        "kr": "적 전체를 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
         "jp": "敵全体にダメージを与える。\\nこのスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "kr": "적 전체를 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해량이 증가합니다.",
         "zh": "攻击全体敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害量越高。"
       },
       "icon": "Skill_Ultimate_2000042"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Survival Instinct",
-        "kr": "생존 본능",
         "jp": "生存本能",
+        "kr": "생존 본능",
         "zh": "生存本能"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWhen hit by an <color=#28d9ed>area of effect attack</color>, reduces damage taken by <color=#28d9ed>30%</color> and recovers Health of the caster by <color=#28d9ed>10%</color>.",
-        "kr": "(패시브 효과)\\n<color=#28d9ed>범위 공격</color>피격 시 피해량이 <color=#28d9ed>30%</color> 감소 하며, 자신의 체력을 <color=#28d9ed>10%</color> 회복합니다.",
         "jp": "(パッシブ効果)\\n<color=#28d9ed>範囲攻撃</color>でダメージを受けた場合、ダメージが<color=#28d9ed>30%</color>DOWNし、自分のHPが<color=#28d9ed>10%</color>回復する。",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>범위 공격</color>피격 시 피해량이 <color=#28d9ed>30%</color> 감소 하며, 자신의 체력을 <color=#28d9ed>10%</color> 회복합니다.",
         "zh": "(被动效果)\\n受到<color=#28d9ed>范围攻击</color>时,使伤害量降低<color=#28d9ed>30%</color>,并使自身生命值恢复<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Light",
-        "kr": "빛의 탑의 가호",
         "jp": "光の塔の加護",
+        "kr": "빛의 탑의 가호",
         "zh": "光之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Light"

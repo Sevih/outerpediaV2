@@ -2,8 +2,8 @@
   "id": "401301190",
   "Name": {
     "en": "Reptil Sword-Wielder",
-    "kr": "렙틸 소드",
     "jp": "ソード・レプタイル",
+    "kr": "렙틸 소드",
     "zh": "剑士蜥蜴人"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 4F",
-      "kr": "비천의 탑 4층",
       "jp": "飛天の塔4階",
+      "kr": "비천의 탑 4층",
       "zh": "飞天之塔4层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101004",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Slice",
-        "kr": "가르기",
         "jp": "切り裂き",
+        "kr": "가르기",
         "zh": "劈裂"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
-        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
         "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
       },
       "icon": "MT_Attack_Sword_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Great Spin",
-        "kr": "대회전",
         "jp": "ローリング",
+        "kr": "대회전",
         "zh": "大回转"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Attack_Sword_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Crush",
-        "kr": "파쇄",
         "jp": "クラッシュ",
+        "kr": "파쇄",
         "zh": "破碎"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
-        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
         "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
       },
       "icon": "MT_Attack_Sword_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Body Hardening I",
-        "kr": "신체 경화 I",
         "jp": "身体硬化 I",
+        "kr": "신체 경화 I",
         "zh": "身体硬化 I"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Defense by <color=#28d9ed>10%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 방어력이 <color=#28d9ed>10%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、防御力が<color=#28d9ed>10%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 방어력이 <color=#28d9ed>10%</color> 증가합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使防御力提升<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Intimidating Strength",
-        "kr": "위협적인 완력",
         "jp": "脅威的な腕力",
+        "kr": "위협적인 완력",
         "zh": "惊人的腕力"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> proportional to <color=#28d9ed>missing Health</color>.",
-        "kr": "(패시브 효과)\\n<color=#28d9ed>현재 체력</color>이 낮을수록 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>가 증가합니다.",
         "jp": "(パッシブ効果)\\n<color=#28d9ed>残りHP</color>が低いほど<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>がUPする。",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>현재 체력</color>이 낮을수록 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>가 증가합니다.",
         "zh": "(被动效果)\\n<color=#28d9ed>当前生命值</color>越低,则<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>越高。"
       },
       "icon": "MT_Passive_1_Earth"

@@ -2,8 +2,8 @@
   "id": "401801",
   "Name": {
     "en": "Astral Guardian Mage",
-    "kr": "아스트랄 가디언 마법",
     "jp": "アストラルガーディアン〈魔〉",
+    "kr": "아스트랄 가디언 마법",
     "zh": "魔法星际守护者"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Hard 18F",
-      "kr": "비천의 탑 [하드] 18층",
       "jp": "飛天の塔【ハード】18階",
+      "kr": "비천의 탑 [하드] 18층",
       "zh": "飞天之塔【困难】第18层"
     },
     "mode": {
       "en": "Skyward Tower - Hard",
-      "kr": "비천의 탑 하드",
       "jp": "飛天の塔 ハード",
+      "kr": "비천의 탑 하드",
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
       "en": "40102018",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Dark Ball",
-        "kr": "다크 볼",
         "jp": "ダークボール",
+        "kr": "다크 볼",
         "zh": "暗影球"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis attack prioritizes the enemies' <color=#28d9ed>Front Line</color> and has a <color=#28d9ed>100%</color> chance to inflict irremovable <color=#28d9ed>Cursed</color> on non-<color=#28d9ed>Ranger</color> targets for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격하여 <color=#28d9ed>75%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.\\n<color=#28d9ed>전열</color>에 있는 적을 우선으로 공격하며 \\n<color=#28d9ed>속도형</color>이 아닌 경우 <color=#28d9ed>100%</color> 확률로 대상에게 해제 불가능한 <color=#28d9ed>저주</color>를 <color=#28d9ed>2턴</color> 동안 추가로 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>75%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n<color=#28d9ed>前衛</color>の敵を優先的に攻撃し、対象が\\n<color=#28d9ed>スピード型</color>以外の場合、<color=#28d9ed>100%</color>の確率で対象に解除不可能な<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間追加で付与する。",
+        "kr": "적을 공격하여 <color=#28d9ed>75%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.\\n<color=#28d9ed>전열</color>에 있는 적을 우선으로 공격하며 \\n<color=#28d9ed>속도형</color>이 아닌 경우 <color=#28d9ed>100%</color> 확률로 대상에게 해제 불가능한 <color=#28d9ed>저주</color>를 <color=#28d9ed>2턴</color> 동안 추가로 부여합니다.",
         "zh": "攻击敌人,有<color=#28d9ed>75%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。\\n优先攻击<color=#28d9ed>前排</color>的敌人,\\n对非<color=#28d9ed>速度型</color>的目标,有<color=#28d9ed>100%</color>的几率额外造成无法解除的<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Dark"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Dark Pressure",
-        "kr": "다크 프레셔",
         "jp": "ダークプレッシャー",
+        "kr": "다크 프레셔",
         "zh": "黑暗挤压"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to reduce the target's <color=#28d9ed>Resilience</color> and <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>효과 저항</color>과 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>効果抵抗</color>と<color=#28d9ed>スピード</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>효과 저항</color>과 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>效果抵抗</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Dark"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Wormhole Crash",
-        "kr": "웜홀 크래쉬",
         "jp": "ワームホールクラッシュ",
+        "kr": "웜홀 크래쉬",
         "zh": "虫洞粉碎"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>Cursed</color> on the targets for <color=#28d9ed>2 turn(s)</color>. (Applied 2 times)",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>75%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.(2회 적용)",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>75%</color>の確率で<color=#28d9ed>呪い</color>2個を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>75%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.(2회 적용)",
         "zh": "攻击全体敌人,并有<color=#28d9ed>75%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。(可叠加2次)"
       },
       "icon": "MT_Attack_Magic_1_Dark"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Dark Enchantment",
-        "kr": "다크 인챈트",
         "jp": "ダークエンチャント",
+        "kr": "다크 인챈트",
         "zh": "黑暗附魔"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect)\\nIncreases Effectiveness by <color=#28d9ed>50%</color>.\\n\\nReduces damage taken from attacks that target all enemies by <color=#28d9ed>50%</color>.\\nWhen hit by an attack that targets all enemies, has a <color=#28d9ed>100%</color> chance to increase Priority of all allies by <color=#28d9ed>30%</color>.",
-        "kr": "(패시브 효과)\\n효과 적중이 <color=#28d9ed>50%</color> 증가합니다.\\n\\n전체 공격으로 입는 피해량이 <color=#28d9ed>50%</color> 감소합니다.\\n전체 공격 피격 시  <color=#28d9ed>100%</color> 확률로 아군 전체의 행동 게이지를  <color=#28d9ed>30%</color> 증가시킵니다.",
         "jp": "(パッシブ効果)\\n効果命中が<color=#28d9ed>50%</color>UPする。\\n\\n全体攻撃で受けるダメージが<color=#28d9ed>50%</color>DOWNする。\\n敵から全体攻撃を受けた場合、<color=#28d9ed>100%</color>の確率で味方全体の行動ゲージを<color=#28d9ed>30%</color>UPさせる。",
+        "kr": "(패시브 효과)\\n효과 적중이 <color=#28d9ed>50%</color> 증가합니다.\\n\\n전체 공격으로 입는 피해량이 <color=#28d9ed>50%</color> 감소합니다.\\n전체 공격 피격 시  <color=#28d9ed>100%</color> 확률로 아군 전체의 행동 게이지를  <color=#28d9ed>30%</color> 증가시킵니다.",
         "zh": "(被动效果)\\n效果命中提升<color=#28d9ed>50%</color>。\\n\\n由全体攻击造成的伤害量降低<color=#28d9ed>50%</color>。\\n受到全体攻击时,有<color=#28d9ed>100%</color>的几率使全体友军的行动值提升<color=#28d9ed>30%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Proof of Darkness VI",
-        "kr": "칠흑의 증명 VI",
         "jp": "漆黒の証明 VI",
+        "kr": "칠흑의 증명 VI",
         "zh": "漆黑的证明 VI"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases damage taken from Light enemies by <color=#28d9ed>20%</color> and reduces damage taken from other elements by <color=#28d9ed>20%</color>.",
-        "kr": "(패시브 효과)\\n명속성 적에게 <color=#28d9ed>20%</color> 더 큰 피해를 입고 나머지 속성에는 <color=#28d9ed>20%</color> 더 적은 피해를 입습니다.",
         "jp": "(パッシブ効果)\\n光属性の敵から受けるダメージが<color=#28d9ed>20%</color>UPし、他の属性から受けるダメージが<color=#28d9ed>20%</color>DOWNする。",
+        "kr": "(패시브 효과)\\n명속성 적에게 <color=#28d9ed>20%</color> 더 큰 피해를 입고 나머지 속성에는 <color=#28d9ed>20%</color> 더 적은 피해를 입습니다.",
         "zh": "(被动效果)\\n使光属性攻击带来的伤害提升<color=#28d9ed>20%</color>,使其余属性攻击带来的伤害降低<color=#28d9ed>20%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -118,15 +118,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Exhaust</color>: Used when Enraged ends.\\nAttacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Attack</color> on the target for <color=#28d9ed>3 turn(s)</color> and <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>3 turn(s)</color>. (Applied 3 times)\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.",
-        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>이그저스트</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킨 뒤  <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.(3회 적용)\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.",
         "jp": "最大HPの<color=#28d9ed>50%</color>以下になると、<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。ブレイクすると効果が解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを30%回復する。【狂暴化】は4ターンの間持続する。\\n\\n<color=#28d9ed>【エグゾースト】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。その後、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>呪い</color>3個を<color=#28d9ed>3</color>ターンの間付与する。\\nこのスキルは対象の<color=#28d9ed>効果抵抗</color>を無視する。",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>이그저스트</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킨 뒤  <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.(3회 적용)\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至陷入力竭状态为止。\\n\\n<color=#28d9ed>进入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复30%。狂暴化持续4回合。\\n\\n<color=#28d9ed>筋疲力尽</color>:狂暴化结束时发动。\\n攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>3回合</color>。并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>3回合</color>。(可叠加3次)\\n该攻击无视目标的<color=#28d9ed>效果抵抗</color>。"
       },
       "icon": "MT_Boss_Rage_Common_1"

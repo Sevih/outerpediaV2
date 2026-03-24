@@ -2,14 +2,14 @@
   "id": "62000041",
   "Name": {
     "en": "Pesketh",
-    "kr": "피스케스",
     "jp": "ピスケス",
+    "kr": "피스케스",
     "zh": "沛斯凯"
   },
   "Surname": {
     "en": "Shifty Informant",
-    "kr": "수상한 정보상",
     "jp": "暗闇も見透かす怪しい情報屋",
+    "kr": "수상한 정보상",
     "zh": "可疑的情报商"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 15F",
-      "kr": "대지의 탑 15층",
       "jp": "大地の塔15階",
+      "kr": "대지의 탑 15층",
       "zh": "土之塔第15层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222015",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Wire Bind",
-        "kr": "와이어 바인드",
         "jp": "カルマート",
+        "kr": "와이어 바인드",
         "zh": "钢丝捆绑"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. Has a <color=#28d9ed>[buff_c_tower_element_52407_0]</color> chance to grant <color=#28d9ed>Increased Speed</color> to the caster for <color=#28d9ed>[buff_t_tower_element_52407_0] turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52407_0]</color> 확률로 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>[buff_t_tower_element_52407_0]턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52407_0]</color>の確率で自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>[buff_t_tower_element_52407_0]ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52407_0]</color> 확률로 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>[buff_t_tower_element_52407_0]턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>[buff_c_tower_element_52407_0]</color>的几率使自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52407_0]回合</color>。"
       },
       "icon": "Skill_First_2000041"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Wire Blitz",
-        "kr": "와이어 블리츠",
         "jp": "飛躍のストリダン",
+        "kr": "와이어 블리츠",
         "zh": "钢铁闪击"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy. After using this skill, reduces the cooldown of <color=#28d9ed>Grieving Orpheus</color> by <color=#28d9ed>[buff_v_tower_element_52408_0] turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>비탄의 오르페우스</color>의 스킬 쿨타임이 <color=#28d9ed>[buff_v_tower_element_52408_0]턴</color> 감소합니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>【悲嘆のオルフェウス】</color>のスキルターンを<color=#28d9ed>[buff_v_tower_element_52408_0]ターン</color>減少させる。",
+        "kr": "적을 공격하고 <color=#28d9ed>비탄의 오르페우스</color>의 스킬 쿨타임이 <color=#28d9ed>[buff_v_tower_element_52408_0]턴</color> 감소합니다.",
         "zh": "攻击敌人,并使<color=#28d9ed>悲叹的俄耳甫斯</color>的技能冷却时间减少<color=#28d9ed>[buff_v_tower_element_52408_0]回合</color>。"
       },
       "icon": "Skill_Second_2000041"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Grieving Orpheus",
-        "kr": "비탄의 오르페우스",
         "jp": "悲嘆のオルフェウス",
+        "kr": "비탄의 오르페우스",
         "zh": "悲叹的俄耳甫斯"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy and steals <color=#28d9ed>[buff_v_tower_element_52409_2]</color> <color=#28d9ed>buff(s)</color> from the target.\\nDamage dealt increases proportional to the caster's and target's Speed.",
-        "kr": "적을 공격하고 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>[buff_v_tower_element_52409_2]개</color> 빼앗습니다.\\n이 스킬은 자신과 대상의 속도가 높을수록 피해가 증가합니다.",
         "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>[buff_v_tower_element_52409_2]</color>個を奪う。\\nこのスキルは、自分と対象のスピードが高いほどダメージがUPする。",
+        "kr": "적을 공격하고 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>[buff_v_tower_element_52409_2]개</color> 빼앗습니다.\\n이 스킬은 자신과 대상의 속도가 높을수록 피해가 증가합니다.",
         "zh": "攻击敌人,并夺取目标的<color=#28d9ed>[buff_v_tower_element_52409_2]个</color><color=#28d9ed>强化效果</color>。\\n自身和目标的速度越高,则该技能的伤害越高。"
       },
       "icon": "Skill_Ultimate_2000041"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Preliminary Operations",
-        "kr": "사전 공작",
         "jp": "事前工作",
+        "kr": "사전 공작",
         "zh": "前期准备"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces <color=#28d9ed>Priority</color> of the enemy with the highest Attack by <color=#28d9ed>50%</color> every turn.",
-        "kr": "(패시브 효과)\\n매 턴 공격력이 가장 높은 적의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 감소시킵니다.",
         "jp": "(パッシブ効果)\\n毎ターン攻撃力が最も高い敵単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>50%</color>DOWNさせる。",
+        "kr": "(패시브 효과)\\n매 턴 공격력이 가장 높은 적의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 감소시킵니다.",
         "zh": "(被动效果)\\n每回合使攻击力最高的敌人的<color=#28d9ed>行动值</color>降低\\n<color=#28d9ed>50%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Earth Tower",
-        "kr": "대지의 탑의 가호",
         "jp": "大地の塔の加護",
+        "kr": "대지의 탑의 가호",
         "zh": "大地之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Earth"

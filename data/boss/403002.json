@@ -2,14 +2,14 @@
   "id": "403002",
   "Name": {
     "en": "Ksai",
-    "kr": "크사이",
     "jp": "ザイ",
+    "kr": "크사이",
     "zh": "科赛"
   },
   "Surname": {
     "en": "World Alterer",
-    "kr": "세계의 개변자",
     "jp": "世界の改変者",
+    "kr": "세계의 개변자",
     "zh": "世界的变革者"
   },
   "IncludeSurname": false,
@@ -22,14 +22,14 @@
   "location": {
     "dungeon": {
       "en": "",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "mode": {
       "en": "",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "area_id": null
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Command: Restrain",
-        "kr": "명령 : 제압",
         "jp": "命令:制圧",
+        "kr": "명령 : 제압",
         "zh": "命令:压制"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Always prioritizes attacking the leftmost target, and attacks all enemies. When attacking, has a <color=#28d9ed>30%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>. If the target is not a <color=#28d9ed>Defender</color>, has a <color=#28d9ed>100%</color> chance to inflict irremovable <color=#28d9ed>Stunned</color> for <color=#28d9ed>2</color> turn(s).",
-        "kr": "항상 좌측의 대상을 우선 선택하며 적 전체를 공격합니다. 공격 시 <color=#28d9ed>30%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만들고 선택 대상이 <color=#28d9ed>방어형</color>이 아닐 경우 <color=#28d9ed>100%</color> 확률로 대상에게 해제 불가능한 <color=#28d9ed>스턴</color>을 <color=#28d9ed>2턴</color> 동안 추가로 부여합니다.",
         "jp": "一番左側の敵を優先的に攻撃し、敵全体にダメージを与える。攻撃時、<color=#28d9ed>30%</color>の確率で対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与し、選択対象が<color=#28d9ed>防御型</color>以外の場合、対象に<color=#28d9ed>100%</color>の確率で解除不可能な<color=#28d9ed>スタン</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "항상 좌측의 대상을 우선 선택하며 적 전체를 공격합니다. 공격 시 <color=#28d9ed>30%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만들고 선택 대상이 <color=#28d9ed>방어형</color>이 아닐 경우 <color=#28d9ed>100%</color> 확률로 대상에게 해제 불가능한 <color=#28d9ed>스턴</color>을 <color=#28d9ed>2턴</color> 동안 추가로 부여합니다.",
         "zh": "始终优先选择左侧目标,并攻击全体敌人。攻击时,有<color=#28d9ed>30%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>,且若选择目标非<color=#28d9ed>防御型</color>,则有<color=#28d9ed>100%</color>的几率额外使目标陷入无法解除的<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_First_4054001"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Command: Incapacitate",
-        "kr": "명령 : 무력화",
         "jp": "命令:無力化",
+        "kr": "명령 : 무력화",
         "zh": "命令:无效化"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and steals all <color=#28d9ed>buffs</color> from one target.",
-        "kr": "적 전체를 공격하고, 대상 한 명의 모든 <color=#28d9ed>강화 효과</color>를 빼앗아 옵니다.",
         "jp": "敵全体にダメージを与え、対象単体のすべての<color=#28d9ed>強化効果</color>を奪う。",
+        "kr": "적 전체를 공격하고, 대상 한 명의 모든 <color=#28d9ed>강화 효과</color>를 빼앗아 옵니다.",
         "zh": "攻击全体敌人,并夺取1名目标的所有<color=#28d9ed>强化\\n效果</color>。"
       },
       "icon": "Skill_Second_4054001"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Command: Destroy",
-        "kr": "명령 : 파괴",
         "jp": "命令:破壊",
+        "kr": "명령 : 파괴",
         "zh": "命令:破坏"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Deals <color=#28d9ed>20%</color> of <color=#28d9ed>Max Health</color> as damage to all enemies plus additional damage. After attacking, Ksai disappears, but has a <color=#28d9ed>100% chance</color> to inflict irremovable reduced <color=#28d9ed>Defense/Attack</color> on all enemies for <color=#28d9ed>2 turn(s)</color>. This effect ignores the target's Resilience and Immunity.",
-        "kr": "적 전체에게 <color=#28d9ed>최대 체력</color>의 <color=#28d9ed>20%</color> 만큼의 피해를 입히고, 추가 피해를 입힙니다. 공격 후 크사이는 사라지나 적 전체에게 <color=#28d9ed>100%</color> 확률로 해제 불가능한 <color=#28d9ed>방어력 / 공격력</color> 감소를 <color=#28d9ed>2턴</color> 동안 부여합니다. 해당 효과는 대상의 효과 저항과 면역을 무시합니다.",
         "jp": "敵全体に<color=#28d9ed>最大HP</color>の<color=#28d9ed>20%</color>のダメージを与え、追加ダメージを与える。攻撃後【ザイ】は消えるが、敵全体に<color=#28d9ed>100%</color>の確率で解除不可能な<color=#28d9ed>防御力DOWN、攻撃力DOWN</color>を<color=#28d9ed>2ターン</color>の間付与する。このスキルは対象の効果抵抗と免疫を無視する。",
+        "kr": "적 전체에게 <color=#28d9ed>최대 체력</color>의 <color=#28d9ed>20%</color> 만큼의 피해를 입히고, 추가 피해를 입힙니다. 공격 후 크사이는 사라지나 적 전체에게 <color=#28d9ed>100%</color> 확률로 해제 불가능한 <color=#28d9ed>방어력 / 공격력</color> 감소를 <color=#28d9ed>2턴</color> 동안 부여합니다. 해당 효과는 대상의 효과 저항과 면역을 무시합니다.",
         "zh": "对全体敌人造成相当于<color=#28d9ed>生命值上限</color><color=#28d9ed>20%</color>的伤害,并造成额外伤害。攻击后,科赛将消失,但有<color=#28d9ed>100%</color>的几率造成无法解除的<color=#28d9ed>防御力/攻击力</color>降低效果,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗和免疫效果。"
       },
       "icon": "Skill_Ultimate_4054001"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Destroyed Automaton",
-        "kr": "파괴된 오토마톤",
         "jp": "壊れたオートマタ",
+        "kr": "파괴된 오토마톤",
         "zh": "损毁的机械人偶"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWeakness Gauge cannot be reduced. When hit, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>10%</color>.",
-        "kr": "(패시브 효과)\\nWG가 감소되지 않으며 피격 시 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "jp": "(パッシブ効果)\\nWGがDOWNしない。ダメージを受けた場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>10%</color>UPする。",
+        "kr": "(패시브 효과)\\nWG가 감소되지 않으며 피격 시 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "zh": "(被动效果)\\n不会使WG降低,且受到攻击时,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Passive_1_Light"

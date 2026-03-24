@@ -159,17 +159,42 @@ interface DungeonLink {
 }
 
 function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
+  // Collect all spawn IDs referenced by dungeons (to distinguish spawn refs from monster IDs)
+  const dungeonSpawnRefs = new Set<string>();
+  for (const d of gd.dungeons) {
+    for (const pos of ['SpawnID_Pos0', 'SpawnID_Pos1', 'SpawnID_Pos2', 'StoryTeamSpawn_fallback1', 'StoryTeamSpawn_fallback2']) {
+      const raw = d[pos];
+      if (!raw || /^(TRUE|FALSE|True|False)$/i.test(raw)) continue;
+      for (const part of raw.split(',')) {
+        const p = part.trim();
+        if (p && p.length >= 5) dungeonSpawnRefs.add(p);
+      }
+    }
+  }
+
   // Build spawn lookup → { monsterIds, spawn row }
-  // Index by both HPLineCount and ID (some spawns lack HPLineCount)
   const spawnMap = new Map<string, { mids: Set<string>; row: Row }>();
   for (const s of gd.spawns) {
     const mids = new Set<string>();
+    const keys: string[] = [];
+    if (s.HPLineCount) keys.push(s.HPLineCount);
+
     for (const idx of ['ID0', 'ID1', 'ID2', 'ID3']) {
-      if (s[idx]) mids.add(s[idx]);
+      const val = s[idx];
+      if (!val) continue;
+      // If the value is a known dungeon spawn ref, it's a spawn key, not a monster ID
+      if (dungeonSpawnRefs.has(val)) {
+        keys.push(val);
+      } else {
+        mids.add(val);
+      }
     }
+
+    // Fallback: also index by spawn.ID
+    if (s.ID && !keys.length) keys.push(s.ID);
+
     const entry = { mids, row: s };
-    if (s.HPLineCount) spawnMap.set(s.HPLineCount, entry);
-    if (s.ID) spawnMap.set(s.ID, entry);
+    for (const k of keys) spawnMap.set(k, entry);
   }
 
   const result = new Map<string, DungeonLink[]>();
@@ -369,6 +394,34 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
 
     skills.push(skill);
   }
+
+  // Merge RAGE_FINISH into RAGE_ENTER when finish has no name and same icon
+  const mergeFinishIntoEnter = (finishType: string, enterType: string) => {
+    const finishIdx = skills.findIndex(s => s.type === finishType);
+    if (finishIdx < 0) return;
+    const finish = skills[finishIdx];
+    const finishName = finish.name as Record<string, string>;
+    const hasName = finishName && Object.values(finishName).some(v => v);
+    if (hasName) return; // finish has its own name, keep it separate
+
+    const enter = skills.find(s => s.type === enterType);
+    if (!enter) return;
+    if (finish.icon !== enter.icon) return; // different icon, keep separate
+
+    // Merge buffs/debuffs from finish into enter
+    const enterBuff = (enter.buff as string[]) ?? [];
+    const enterDebuff = (enter.debuff as string[]) ?? [];
+    for (const b of (finish.buff as string[]) ?? []) { if (!enterBuff.includes(b)) enterBuff.push(b); }
+    for (const d of (finish.debuff as string[]) ?? []) { if (!enterDebuff.includes(d)) enterDebuff.push(d); }
+    if (enterBuff.length > 0) enter.buff = enterBuff;
+    if (enterDebuff.length > 0) enter.debuff = enterDebuff;
+
+    // Remove finish from skills
+    skills.splice(finishIdx, 1);
+  };
+
+  mergeFinishIntoEnter('SKT_RAGE_FINISH1', 'SKT_RAGE_ENTER1');
+  mergeFinishIntoEnter('SKT_RAGE_FINISH2', 'SKT_RAGE_ENTER2');
 
   return skills;
 }
@@ -646,6 +699,13 @@ export async function GET(req: NextRequest) {
 
         for (const entry of batchResults) {
           if (!entry) continue;
+          // Skip tower bosses and empty-location entries (tower trash mobs)
+          const loc = entry.data.location as Record<string, unknown> | null;
+          const modeEn = ((loc?.mode as Record<string, string>)?.en ?? '');
+          const dungeonEn = ((loc?.dungeon as Record<string, string>)?.en ?? '');
+          if (!modeEn && !dungeonEn) { ok++; continue; }
+          if (modeEn.includes('Tower') || modeEn.includes('Skyward') || dungeonEn.includes('Tower') || dungeonEn.includes('Skyward')) { ok++; continue; }
+
           const res = compareOne(entry.file, entry.data);
           if (res === 'ok') ok++;
           else if (res.notInGame) { notFound++; results.unshift(res); }

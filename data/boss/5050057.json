@@ -2,14 +2,14 @@
   "id": "5050057",
   "Name": {
     "en": "Skadi",
-    "kr": "스카디",
     "jp": "スカディ",
+    "kr": "스카디",
     "zh": "斯卡蒂"
   },
   "Surname": {
     "en": "Sneaky Arrowhead",
-    "kr": "능글맞은 화살촉",
     "jp": "策謀の射手",
+    "kr": "능글맞은 화살촉",
     "zh": "巧舌如箭"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Darkness 35F",
-      "kr": "암흑의 탑 35층",
       "jp": "闇の塔 35階",
+      "kr": "암흑의 탑 35층",
       "zh": "黑暗之塔 1层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40242035",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Close-Range Fire",
-        "kr": "근거리 사격술",
         "jp": "クローズレンジ・シュート",
+        "kr": "근거리 사격술",
         "zh": "近距离射击术"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. After attacking, has a <color=#28d9ed>100%</color> chance to grant increased Attack to the ally with the highest Attack for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격합니다. 공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 가장 공격력이 높은 아군의 공격력을 증가시킵니다.",
         "jp": "敵単体にダメージを与える。攻撃後、<color=#28d9ed>100%</color>の確率で攻撃力が最も高い味方単体の攻撃力を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적을 공격합니다. 공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 가장 공격력이 높은 아군의 공격력을 증가시킵니다.",
         "zh": "攻击敌人。攻击后,有<color=#28d9ed>100%</color>的几率使攻击力最高的友军提升攻击力,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_First_2000101"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Mid-Range Acrobatic Shooting",
-        "kr": "중거리 곡예사격",
         "jp": "アクロバット・レンジャー",
+        "kr": "중거리 곡예사격",
         "zh": "中距离杂技射击"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks the enemy after having a <color=#28d9ed>100%</color> chance to increase Critical Hit Chance and Critical Damage of all allies for <color=#28d9ed>3 turn(s)</color>.",
-        "kr": "<color=#28d9ed>100%</color> 확률로 <color=#28d9ed>3턴</color> 동안 아군 전체의 치명 확률과 치명 피해를 증가시킨 후 적을 공격합니다.",
         "jp": "<color=#28d9ed>100%</color>の確率で、<color=#28d9ed>3ターン</color>の間味方全体の会心率と会心ダメージをUPさせた後、敵単体にダメージを与える。",
+        "kr": "<color=#28d9ed>100%</color> 확률로 <color=#28d9ed>3턴</color> 동안 아군 전체의 치명 확률과 치명 피해를 증가시킨 후 적을 공격합니다.",
         "zh": "有<color=#28d9ed>100%</color>的几率使全体友军的暴击率和暴击伤害提升,持续<color=#28d9ed>3回合</color>,随后攻击敌人。"
       },
       "icon": "Skill_Second_2000101"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Voltaic Arrowstorm",
-        "kr": "광전자 화살 포화",
         "jp": "フォトニック・アロー・レイン",
+        "kr": "광전자 화살 포화",
         "zh": "光电箭齐射"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>Resilience and Effectiveness</color> of all allies for <color=#28d9ed>3 turn(s)</color>, then attacks all enemies.\\nHas a <color=#28d9ed>100%</color> chance to decrease <color=#28d9ed>Skill Cooldowns</color> of all allies (excluding self) by <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "<color=#28d9ed>100%</color> 확률로 <color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>효과 저항 및 효과 적중</color>을 증가시킨 후 적 전체를 공격합니다.\\n<color=#28d9ed>100%</color> 확률로 자신을 제외한 아군 전체의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "jp": "<color=#28d9ed>100%</color>の確率で<color=#28d9ed>3ターン</color>の間、味方全体の<color=#28d9ed>効果抵抗および効果命中</color>をUPさせた後、敵全体にダメージを与える。\\n<color=#28d9ed>100%</color>の確率で自分を除く味方全体の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>減少させる。",
+        "kr": "<color=#28d9ed>100%</color> 확률로 <color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>효과 저항 및 효과 적중</color>을 증가시킨 후 적 전체를 공격합니다.\\n<color=#28d9ed>100%</color> 확률로 자신을 제외한 아군 전체의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "zh": "有<color=#28d9ed>100%</color>的概率使我方全体的<color=#28d9ed>效果抵抗及效果命中</color>提升,持续<color=#28d9ed>3回合</color>,随后攻击全体敌人。\\n有<color=#28d9ed>100%</color>的概率使除自身外我方全体的<color=#28d9ed>技能冷却时间</color>减少<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_Ultimate_2000101"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Leisurely, Certainly",
-        "kr": "여유롭게, 확실하게",
         "jp": "余裕を持って、確実に",
+        "kr": "여유롭게, 확실하게",
         "zh": "从容,确切"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive)\\nIncreases <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color> at the start of battle.\\nIncreases damage dealt when possessing a <color=#28d9ed>Buff</color>.",
-        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color>가 증가합니다.\\n<color=#28d9ed>강화 효과</color> 보유시, 주는 피해가 증가합니다.",
         "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>1ターン</color>の間<color=#28d9ed>スピード</color>がUPする。\\n<color=#28d9ed>強化効果</color>保有時、与えるダメージがUPする。",
+        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color>가 증가합니다.\\n<color=#28d9ed>강화 효과</color> 보유시, 주는 피해가 증가합니다.",
         "zh": "(被动效果)\\n战斗开始时,<color=#28d9ed>速度</color>增加,持续<color=#28d9ed>1回合</color>。\\n持有<color=#28d9ed>强化效果</color>时,造成的伤害增加。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Darkness",
-        "kr": "어둠의 탑의 가호",
         "jp": "闇の塔の加護",
+        "kr": "어둠의 탑의 가호",
         "zh": "暗之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Dark"

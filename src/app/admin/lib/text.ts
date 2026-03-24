@@ -168,7 +168,14 @@ export function resolveBuffPlaceholders(
   buffIndex: Map<string, Map<number, BuffRow>>,
 ): string {
   return text.replace(BUFF_PLACEHOLDER_RE, (_match, type: string, buffId: string) => {
-    const levels = buffIndex.get(buffId);
+    let levels = buffIndex.get(buffId);
+    // Case-insensitive fallback (game data has inconsistent casing, e.g. _AP vs _ap)
+    if (!levels) {
+      const lower = buffId.toLowerCase();
+      for (const [key, val] of buffIndex) {
+        if (key.toLowerCase() === lower) { levels = val; break; }
+      }
+    }
     const row = getBuffAtLevel(levels, skillLevel);
     if (!row) return _match;
 

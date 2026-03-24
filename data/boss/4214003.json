@@ -2,14 +2,14 @@
   "id": "4214003",
   "Name": {
     "en": "Mutated Wyvre",
-    "kr": "변이된 와이브르",
     "jp": "変異したワイブル",
+    "kr": "변이된 와이브르",
     "zh": "变异双足飞龙"
   },
   "Surname": {
     "en": "Nest Guardian",
-    "kr": "둥지의 파수꾼",
     "jp": "巣の番人",
+    "kr": "둥지의 파수꾼",
     "zh": "巢穴守卫"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Sanctuary Defense",
-      "kr": "성소 방어전",
       "jp": "聖所防衛戦",
+      "kr": "성소 방어전",
       "zh": "圣所防御战"
     },
     "mode": {
       "en": "Story (Normal)",
-      "kr": "스토리(노멀)",
       "jp": "ストーリー(ノーマル)",
+      "kr": "스토리(노멀)",
       "zh": "故事(普通)"
     },
     "area_id": {
       "en": "2-14",
-      "kr": "2-14",
       "jp": "2-14",
+      "kr": "2-14",
       "zh": "2-14"
     }
   },
@@ -43,67 +43,80 @@
     {
       "name": {
         "en": "Reproduction: Dragon's Brutality",
-        "kr": "재현 : 용의 야만성",
         "jp": "再現:竜の野望",
+        "kr": "재현 : 용의 야만성",
         "zh": "再现:龙之野蛮"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks the enemy and gains <color=#28d9ed>Barrier</color> for <color=#28d9ed>3 turn(s)</color>.\\nBarrier strength increases as own <color=#28d9ed>Attack</color> increases.",
-        "kr": "적을 공격하고 <color=#28d9ed>실드</color>를 <color=#28d9ed>3턴</color> 동안 획득합니다.\\n실드량은 자신의 <color=#28d9ed>공격력</color>이 높을수록 증가합니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>シールド</color>を獲得する。\\n自分の<color=#28d9ed>攻撃力</color>が高いほどシールド量がUPする。",
+        "kr": "적을 공격하고 <color=#28d9ed>실드</color>를 <color=#28d9ed>3턴</color> 동안 획득합니다.\\n실드량은 자신의 <color=#28d9ed>공격력</color>이 높을수록 증가합니다.",
         "zh": "攻击敌人并获得<color=#28d9ed>护盾</color>,持续<color=#28d9ed>3回合</color>。\\n护盾量随自身<color=#28d9ed>攻击力</color>的提升而增加。"
       },
       "icon": "Skill_First_4044001",
-      "buff":["BT_SHIELD_BASED_CASTER"]
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
     },
     {
       "name": {
         "en": "Reproduction: Dragon's Aggression",
-        "kr": "재현 : 용의 공격성",
         "jp": "再現:竜の攻撃性",
+        "kr": "재현 : 용의 공격성",
         "zh": "再现:龙之攻击性"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies.\\nDecreases target's <color=#28d9ed>Penetration</color>, <color=#28d9ed>Attack</color>, <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>3 turn(s)</color>.\\nAfter attacking, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
-        "kr": "적 전체를 공격합니다.\\n대상의 <color=#28d9ed>관통력</color>, <color=#28d9ed>공격력</color>, <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>3턴</color> 동안 감소시킵니다.\\n공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "jp": "敵全体にダメージを与える。\\n対象の<color=#28d9ed>貫通力</color>、<color=#28d9ed>攻撃力</color>、<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。\\n攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "kr": "적 전체를 공격합니다.\\n대상의 <color=#28d9ed>관통력</color>, <color=#28d9ed>공격력</color>, <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>3턴</color> 동안 감소시킵니다.\\n공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "zh": "攻击全体敌人。\\n使目标的<color=#28d9ed>穿透</color>、<color=#28d9ed>攻击力</color>、<color=#28d9ed>暴击伤害</color>降低,持续<color=#28d9ed>3回合</color>。\\n攻击后,自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。"
       },
       "icon": "Skill_Second_4044001",
-    "debuff":["BT_STAT|ST_ATK","BT_STAT|ST_CRITICAL_DMG_RATE","BT_STAT|ST_PIERCE_POWER_RATE"],
-    "buff":["BT_ACTION_GAUGE"]
+      "debuff": [
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "BT_STAT|ST_PIERCE_POWER_RATE"
+      ],
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
         "en": "Reproduction: Dragon's Wave",
-        "kr": "재현 : 용의 파동",
         "jp": "再現:竜の波動",
+        "kr": "재현 : 용의 파동",
         "zh": "再现:龙之波动"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Before using the skill, removes Buff effects from all enemies, then attacks all enemies.\\nIncreases own <color=#28d9ed>Penetration</color>, <color=#28d9ed>Critical Chance</color>, <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>3 turn(s)</color>.\\nAfter attacking, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
-        "kr": "스킬 사용 전 적 전체의 강화 효과를 해제한 뒤, 적 전체를 공격합니다.\\n자신의 <color=#28d9ed>관통력</color>, <color=#28d9ed>치명 확률</color>, <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>3턴</color> 동안 증가시킵니다.\\n공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "jp": "スキル使用前、敵全体の強化効果を解除した後、敵全体にダメージを与える。\\n自分の<color=#28d9ed>貫通力</color>、<color=#28d9ed>会心率</color>、<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>3ターン</color>の間UPさせる。\\n攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "kr": "스킬 사용 전 적 전체의 강화 효과를 해제한 뒤, 적 전체를 공격합니다.\\n자신의 <color=#28d9ed>관통력</color>, <color=#28d9ed>치명 확률</color>, <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>3턴</color> 동안 증가시킵니다.\\n공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "zh": "使用技能前解除全体敌人的强化效果,随后攻击全体敌人。\\n使自身的<color=#28d9ed>穿透</color>、<color=#28d9ed>暴击率</color>、<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>。\\n攻击后,自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。"
       },
       "icon": "Skill_Ultimate_4044001",
-    "buff":["BT_STAT|ST_CRITICAL_RATE","BT_STAT|ST_CRITICAL_DMG_RATE","BT_STAT|ST_PIERCE_POWER_RATE","BT_ACTION_GAUGE"]
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "BT_STAT|ST_PIERCE_POWER_RATE",
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
         "en": "Ultimate Guardian",
-        "kr": "궁극의 파수꾼",
         "jp": "究極の番人",
+        "kr": "궁극의 파수꾼",
         "zh": "究极守望者"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect) damage taken decreases by up to <color=#28d9ed>90%</color> in proportion to the number of <color=#28d9ed>Buff</color> effects obtained from <color=#28d9ed>Reproduction: Dragon's Wave</color>.\\nDamage of <color=#28d9ed>Curse/Fixed Damage</color> taken by the boss does not exceed <color=#28d9ed>30000</color>.\\n\\nIf not in <color=#28d9ed>Berserk</color> state, WG damage taken decreases by <color=#28d9ed>50%</color>.\\nAt the end of enemy action, if the target is <color=#28d9ed>Dark</color> attribute, WG decreases by 2.",
-        "kr": "(패시브 효과)  <color=#28d9ed>재현: 용의 파동</color>으로 획득한 <color=#28d9ed>강화</color> 효과 개수에 비례하여 받는 피해가 최대 <color=#28d9ed>90%</color> 까지 감소합니다.\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>30000</color>을 초과하지 않습니다.\\n\\n<color=#28d9ed>광폭화</color> 상태가 아니라면 받는 WG 피해가 <color=#28d9ed>50%</color> 감소합니다.\\n적 행동 종료 시 대상이 <color=#28d9ed>암속성</color> 이면 WG가 2 감소합니다.",
         "jp": "(パッシブ効果) <color=#28d9ed>再現:竜の波動</color>で獲得した<color=#28d9ed>強化</color>効果の数に比例して、受けるダメージが最大<color=#28d9ed>90%</color>までDOWNする。\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>は<color=#28d9ed>30000</color>を超えない。\\n\\n<color=#28d9ed>【狂暴化】</color>状態でない場合、受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。\\n敵の行動終了時、対象が<color=#28d9ed>闇属性</color>であればWGが2減少する。",
+        "kr": "(패시브 효과)  <color=#28d9ed>재현: 용의 파동</color>으로 획득한 <color=#28d9ed>강화</color> 효과 개수에 비례하여 받는 피해가 최대 <color=#28d9ed>90%</color> 까지 감소합니다.\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>30000</color>을 초과하지 않습니다.\\n\\n<color=#28d9ed>광폭화</color> 상태가 아니라면 받는 WG 피해가 <color=#28d9ed>50%</color> 감소합니다.\\n적 행동 종료 시 대상이 <color=#28d9ed>암속성</color> 이면 WG가 2 감소합니다.",
         "zh": "(被动效果) 根据<color=#28d9ed>再现:龙之波动</color>获得的<color=#28d9ed>强化</color>效果数量,受到的伤害最多降低<color=#28d9ed>90%</color>。\\n首领受到的<color=#28d9ed>诅咒/固定伤害</color>不超过<color=#28d9ed>30000</color>。\\n\\n若不处于<color=#28d9ed>狂暴</color>状态,受到的WG伤害降低<color=#28d9ed>50%</color>。\\n敌方行动结束时,若目标为<color=#28d9ed>暗属性</color>,则WG减少2点。"
       },
       "icon": "MT_Passive_1_Light"
@@ -111,32 +124,35 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> every time the enemy performs 7 actions.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Evolution: Dragon's Wrath</color>: Used when Enraged ends. Deals great damage to all enemies.",
-        "kr": "적이 7회 행동할 때 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>진화 : 용의 분노</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
         "jp": "敵が7回行動するたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間継続する。\\n\\n<color=#28d9ed>【進化:竜の怒り】</color>:【狂暴化】終了時に使用する。\\n敵全体に大ダメージを与える。",
+        "kr": "적이 7회 행동할 때 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>진화 : 용의 분노</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
         "zh": "敌人每行动7次,则进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>进化:龙之怒</color>:狂暴化结束时发动。\\n对全体敌人造成巨额伤害。"
       },
       "icon": "MT_Boss_Rage_Common_1",
-      "buff":["BT_DAMGE_TAKEN","BT_STAT|ST_ATK_IR"]
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
     },
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

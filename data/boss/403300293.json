@@ -2,8 +2,8 @@
   "id": "403300293",
   "Name": {
     "en": "Owlbear Totemist",
-    "kr": "아울베어 토템",
     "jp": "聖なる仮面のオウルベア",
+    "kr": "아울베어 토템",
     "zh": "图腾枭熊"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 38F",
-      "kr": "비천의 탑 38층",
       "jp": "飛天の塔38階",
+      "kr": "비천의 탑 38층",
       "zh": "飞天之塔38层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101038",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Mystic Scratch",
-        "kr": "신비한 할퀴기",
         "jp": "神秘の引っかき",
+        "kr": "신비한 할퀴기",
         "zh": "神秘抓击"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Priority Gauge</color> by <color=#28d9ed>10%</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color>를 감소시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-10%</color>DOWNさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-10%</color>를 감소시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-10%</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Lightning",
-        "kr": "번개",
         "jp": "稲妻",
+        "kr": "번개",
         "zh": "雷电"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>感電</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Nature's Wrath",
-        "kr": "자연의 격노",
         "jp": "自然の激怒",
+        "kr": "자연의 격노",
         "zh": "自然的暴怒"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다",
         "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Neural Amplification II",
-        "kr": "신경계 증폭 II",
         "jp": "神経系増幅 II",
+        "kr": "신경계 증폭 II",
         "zh": "精神系增幅 II"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Speed by <color=#28d9ed>7.5%</color> every time the caster takes a turn. (Max 5 stacks)",
-        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>7.5%</color> 증가합니다. (최대 5회 누적)",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、スピードが<color=#28d9ed>7.5%</color>UPする。(最大5回まで累積)",
+        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>7.5%</color> 증가합니다. (최대 5회 누적)",
         "zh": "(被动效果)\\n每到自身回合时,使速度提升<color=#28d9ed>7.5%</color>。(最多可叠加5次)"
       },
       "icon": "MT_Passive_1_Dark"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Beast's Hunting Strategy",
-        "kr": "맹수의 사냥법",
         "jp": "猛獣の狩猟法",
+        "kr": "맹수의 사냥법",
         "zh": "猛兽狩猎法则"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nRecovers <color=#28d9ed>10%</color> of damage dealt as Health when attacking.\\nGrants <color=#28d9ed>Sustained Recovery</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle.",
-        "kr": "(패시브 효과)\\n공격 시 피해량의 <color=#28d9ed>10%</color>를 회복합니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>지속 회복</color>효과를 얻습니다.",
         "jp": "(パッシブ効果)\\n攻撃時、ダメージの<color=#28d9ed>10%</color>を回復する。\\n戦闘開始時、自分に<color=#28d9ed>継続回復</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "(패시브 효과)\\n공격 시 피해량의 <color=#28d9ed>10%</color>를 회복합니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>지속 회복</color>효과를 얻습니다.",
         "zh": "(被动效果)\\n攻击时,恢复伤害量的<color=#28d9ed>10%</color>。\\n战斗开始时,获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Passive_1_Earth"

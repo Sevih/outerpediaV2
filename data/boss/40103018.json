@@ -2,14 +2,14 @@
   "id": "40103018",
   "Name": {
     "en": "Drakhan",
-    "kr": "드레이칸",
     "jp": "ドレイカーン",
+    "kr": "드레이칸",
     "zh": "德雷坎"
   },
   "Surname": {
     "en": "Demiurge",
-    "kr": "데미우르고스",
     "jp": "デミウルゴス",
+    "kr": "데미우르고스",
     "zh": "创世之神"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Very Hard 5F",
-      "kr": "비천의 탑 [베리 하드] 5층",
       "jp": "飛天の塔【ベリーハード】5階",
+      "kr": "비천의 탑 [베리 하드] 5층",
       "zh": "飞天之塔【极难】第5层"
     },
     "mode": {
       "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "area_id": {
       "en": "40103005",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Conqueror's Fang",
-        "kr": "정복자의 송곳니",
         "jp": "征服者の牙",
+        "kr": "정복자의 송곳니",
         "zh": "征服者的利齿"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy.",
-        "kr": "적을 공격합니다.",
         "jp": "敵単体にダメージを与える。",
+        "kr": "적을 공격합니다.",
         "zh": "攻击敌人。"
       },
       "icon": "Skill_First_2000063"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Doom Heralding Cry",
-        "kr": "멸망을 부르는 함성",
         "jp": "滅亡をもたらす叫び",
+        "kr": "멸망을 부르는 함성",
         "zh": "灭亡呐喊"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to reduce the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.",
-        "kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-100%</color>DOWNさせる。",
+        "kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标<color=#28d9ed>行动值</color>降低<color=#28d9ed>-100%</color>。"
       },
       "icon": "Skill_Second_2000063"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Dragon Ruler's Breath",
-        "kr": "용왕의 숨결",
         "jp": "竜王の息吹",
+        "kr": "용왕의 숨결",
         "zh": "龙王吐息"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy. Inflicts <color=#28d9ed>instant death</color> on the target if the target's <color=#28d9ed>current Health</color> is below <color=#28d9ed>30%</color>.",
-        "kr": "적을 공격합니다. 대상의 <color=#28d9ed>현재 체력</color>이 <color=#28d9ed>30%</color> 이하라면 대상을 <color=#28d9ed>즉사</color>시킵니다.",
         "jp": "敵単体にダメージを与える。対象の<color=#28d9ed>残りHP</color>が<color=#28d9ed>30%</color>以下の場合、対象を<color=#28d9ed>即死</color>させる。",
+        "kr": "적을 공격합니다. 대상의 <color=#28d9ed>현재 체력</color>이 <color=#28d9ed>30%</color> 이하라면 대상을 <color=#28d9ed>즉사</color>시킵니다.",
         "zh": "攻击敌人。若目标的<color=#28d9ed>当前生命值</color>在<color=#28d9ed>30%</color>以下,则使目标<color=#28d9ed>即死</color>。"
       },
       "icon": "Skill_Ultimate_2000063"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Project: Conqueror",
-        "kr": "프로젝트 : 정복자",
         "jp": "プロジェクト:征服者",
+        "kr": "프로젝트 : 정복자",
         "zh": "计划:征服者"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect) At the start of battle, grants an irremovable reduced damage taken to the caster for <color=#28d9ed>3 turn(s)</color>.\\nWhen attacking, if granted a dispellable <color=#28d9ed>buff</color>, Inferior Core attacks all enemies and reduces Health by <color=#28d9ed>30%</color> each.\\nReduces <color=#28d9ed>Effectiveness</color> of non-Defender enemies by <color=#28d9ed>80%</color>.\\n(Triggered Effect) Upon taking a critical hit, has a <color=#28d9ed>100%</color> chance to counterattack, and recovers Weakness Gauge by <color=#28d9ed>30%</color>.",
-        "kr": "(패시브 효과) 전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n공격 시 해제 가능한 <color=#28d9ed>강화 효과</color>를 보유하고 있었다면 열화코어가 적 전체에게 공격하여 체력을 <color=#28d9ed>30%</color> 씩 감소 시킵니다.\\n방어형이 아닌 적의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>80%</color> 감소시킵니다.\\n(발동 효과) 치명 피격 시 <color=#28d9ed>100%</color> 확률로 반격하고, WG를 <color=#28d9ed>30%</color> 회복 합니다.",
         "jp": "(パッシブ効果)戦闘開始時、自分に解除不可能なダメージDOWN効果を<color=#28d9ed>3ターン</color>の間付与する。\\n攻撃時、自分に解除可能な<color=#28d9ed>強化効果</color>がある場合、【劣化コア】が敵全体にダメージを与え、HPを<color=#28d9ed>30%</color>ずつDOWNさせる。\\n防御型以外の敵の<color=#28d9ed>効果命中</color>を<color=#28d9ed>80%</color>DOWNさせる。\\n(発動効果)会心ダメージを受けた場合、<color=#28d9ed>100%</color>の確率で反撃し、WGを<color=#28d9ed>30%</color>回復する。",
+        "kr": "(패시브 효과) 전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n공격 시 해제 가능한 <color=#28d9ed>강화 효과</color>를 보유하고 있었다면 열화코어가 적 전체에게 공격하여 체력을 <color=#28d9ed>30%</color> 씩 감소 시킵니다.\\n방어형이 아닌 적의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>80%</color> 감소시킵니다.\\n(발동 효과) 치명 피격 시 <color=#28d9ed>100%</color> 확률로 반격하고, WG를 <color=#28d9ed>30%</color> 회복 합니다.",
         "zh": "(被动效果)战斗开始时,自身获得无法被解除的伤害降低效果,持续<color=#28d9ed>3回合</color>。\\n受到暴击时,有<color=#28d9ed>100%</color>的几率进行反击,并恢复<color=#28d9ed>30%</color>WG。\\n(触发效果)攻击时,若附带可解除的<color=#28d9ed>强化效果</color>,烈火核心将攻击全体敌人,生命值分别降低<color=#28d9ed>30%</color>。\\n非防御型敌人的<color=#28d9ed>效果命中</color>降低<color=#28d9ed>80%</color>。"
       },
       "icon": "MT_Passive_1_Light"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Recovers Weakness Gauge by 30%, and deals lethal damage to all enemies. This Enraged has no duration.",
-        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : WG 30%를 회복하고, 적 전체에게 치명적인 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
         "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:WGを30%回復し、敵全体に致命的なダメージを与える。【狂暴化】の持続ターンはない。",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : WG 30%를 회복하고, 적 전체에게 치명적인 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至陷入力竭状态为止。\\n\\n<color=#28d9ed>进入狂暴化和必杀技</color>:使WG恢复30%,并对全体敌人造成暴击。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
       },
       "icon": "MT_Boss_Rage_Common_1"

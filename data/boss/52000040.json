@@ -2,14 +2,14 @@
   "id": "52000040",
   "Name": {
     "en": "Mero",
-    "kr": "메로",
     "jp": "メロ",
+    "kr": "메로",
     "zh": "梅罗"
   },
   "Surname": {
     "en": "Re-animator",
-    "kr": "리- 애니메이터",
     "jp": "リ・アニメーター",
+    "kr": "리- 애니메이터",
     "zh": "活跳尸"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 46F",
-      "kr": "화염의 탑 46층",
       "jp": "火の塔46階",
+      "kr": "화염의 탑 46층",
       "zh": "火之塔第46层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202046",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "E Vroom Vroom Dead",
-        "kr": "E 부릉부릉 Dead",
         "jp": "E・ブルルン・デッド",
+        "kr": "E 부릉부릉 Dead",
         "zh": "死亡轰鸣"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to reduce the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>40%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_First_2000040"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Intruder on Set",
-        "kr": "촬영장의 불청객",
         "jp": "撮影現場の招かざる客",
+        "kr": "촬영장의 불청객",
         "zh": "拍摄现场的不速之客"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) When a skill used on the caster's turn scores a critical hit, activates <color=#28d9ed>Intruder on Set</color> as an extra attack.\\n\\n<color=#28d9ed>Intruder on Set</color>: Attacks all enemies. Reduces <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>20%</color> and grants increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "(발동 효과) 자신의 턴에 사용하는 스킬이 치명 공격으로 적중하면, 추가타로 <color=#28d9ed>촬영장의 불청객</color>을 발동합니다. \\n\\n<color=#28d9ed>촬영장의 불청객</color> : 적 전체를 공격합니다. 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-20%</color> 감소시키고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "(発動効果)自分のターンにスキル使用時、会心が発生した場合、追加で<color=#28d9ed>【撮影現場の招かざる客】</color>を発動する。\\n\\n<color=#28d9ed>【撮影現場の招かざる客】</color>:敵全体にダメージを与える。対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-20%</color>DOWNさせ、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "(발동 효과) 자신의 턴에 사용하는 스킬이 치명 공격으로 적중하면, 추가타로 <color=#28d9ed>촬영장의 불청객</color>을 발동합니다. \\n\\n<color=#28d9ed>촬영장의 불청객</color> : 적 전체를 공격합니다. 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-20%</color> 감소시키고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "(触发效果)自身回合使用的技能以暴击命中时,则额外发动技能<color=#28d9ed>拍摄现场的不速之客</color>。\\n\\n<color=#28d9ed>拍摄现场的不速之客</color>:攻击全体敌人。使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-20%</color>,并使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Chainsaw Girl",
-        "kr": "전기톱 Girl",
         "jp": "チェーンソーガール",
+        "kr": "전기톱 Girl",
         "zh": "电锯少女"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. Has a <color=#28d9ed>70%</color> chance to inflict reduced <color=#28d9ed>Speed</color> on all enemies for <color=#28d9ed>2 turn(s)</color>, and grants the caster increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격합니다. <color=#28d9ed>70%</color> 확률로 적 전체의 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 감소시키고, <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 증가시킵니다.",
         "jp": "敵全体にダメージを与える。<color=#28d9ed>70%</color>の確率で敵全体の<color=#28d9ed>スピード</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>70%</color> 확률로 적 전체의 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 감소시키고, <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 증가시킵니다.",
         "zh": "攻击全体敌人。有<color=#28d9ed>70%</color>的几率使全体敌人的<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>,并使自身<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Second_2000040"

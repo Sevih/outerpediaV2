@@ -2,8 +2,8 @@
   "id": "4500265",
   "Name": {
     "en": "Fatal",
-    "kr": "페이탈",
     "jp": "フェータル",
+    "kr": "페이탈",
     "zh": "法塔尔"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Loyal Traitor",
-      "kr": "의리의 배신자",
       "jp": "義理ある裏切り",
+      "kr": "의리의 배신자",
       "zh": "背信忘义者"
     },
     "mode": {
       "en": "Story (Normal)",
-      "kr": "스토리(노멀)",
       "jp": "ストーリー(ノーマル)",
+      "kr": "스토리(노멀)",
       "zh": "故事(普通)"
     },
     "area_id": {
       "en": "3-14",
-      "kr": "3-14",
       "jp": "3-14",
+      "kr": "3-14",
       "zh": "3-14"
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Deathly Acrobatics",
-        "kr": "죽음의 곡예",
         "jp": "死の曲芸",
+        "kr": "죽음의 곡예",
         "zh": "死亡马戏"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and grants increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 대상을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적 대상을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_First_2000078",
@@ -57,15 +57,15 @@
     {
       "name": {
         "en": "Curtain of Darkness",
-        "kr": "밤의 장막",
         "jp": "夜の帳",
+        "kr": "밤의 장막",
         "zh": "夜之帷幕"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Removes <color=#28d9ed>all</color> debuffs from the caster and attacks the enemy.\\nAfter attacking, grants <color=#28d9ed>Stealth</color> to the caster and <color=#28d9ed>Invincibility</color> to all allies except the caster for <color=#28d9ed>2</color> turn(s).",
-        "kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>모두</color> 제거하고 적을 공격합니다.\\n공격 후 <color=#28d9ed>2턴</color> 동안 자신은 <color=#28d9ed>은신</color>, 자신을 제외한 아군 전체는 <color=#28d9ed>무적</color>을 획득합니다.",
         "jp": "自身に付与された弱体効果を<color=#28d9ed>すべて</color>解除し、敵に攻撃する。\\n攻撃後、<color=#28d9ed>2ターン</color>の間、\\n自身には<color=#28d9ed>隠れ身</color>を、自身を除く味方全体には<color=#28d9ed>無敵</color>を付与する。",
+        "kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>모두</color> 제거하고 적을 공격합니다.\\n공격 후 <color=#28d9ed>2턴</color> 동안 자신은 <color=#28d9ed>은신</color>, 자신을 제외한 아군 전체는 <color=#28d9ed>무적</color>을 획득합니다.",
         "zh": "解除自身附带的<color=#28d9ed>所有</color>弱化效果,并攻击敌人。\\n攻击后,自身获得<color=#28d9ed>隐身</color>效果,除自身之外的全体友军获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>2</color>回合。"
       },
       "icon": "Skill_Second_2000078",
@@ -78,15 +78,15 @@
     {
       "name": {
         "en": "Requiem Serket",
-        "kr": "레퀴엠 세르케트",
         "jp": "レクイエム・セルケト",
+        "kr": "레퀴엠 세르케트",
         "zh": "安魂曲塞尔凯特"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy. When granted <color=#28d9ed>Stealth</color>, slain enemies cannot be Resurrected or Revived, and grants an <color=#28d9ed>extra turn</color> to the caster.",
-        "kr": "적을 공격합니다. <color=#28d9ed>은신</color> 보유 중에는 사망한 적이 부활 및 소생하지 못하며, 자신은 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "jp": "敵単体にダメージを与える。<color=#28d9ed>隠れ身</color>状態の場合、倒れた敵は復活と蘇生ができなくなり、自分は<color=#28d9ed>追加ターン</color>を獲得する。",
+        "kr": "적을 공격합니다. <color=#28d9ed>은신</color> 보유 중에는 사망한 적이 부활 및 소생하지 못하며, 자신은 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击敌人。附带<color=#28d9ed>隐身</color>效果时,被击杀的敌人无法复活与苏醒,且使自身获得<color=#28d9ed>额外回合</color>。"
       },
       "icon": "Skill_Ultimate_2000078",
@@ -100,15 +100,15 @@
     {
       "name": {
         "en": "Desert Scorpion's Form",
-        "kr": "사막 전갈의 형상",
         "jp": "サソリの形象",
+        "kr": "사막 전갈의 형상",
         "zh": "沙漠蝎子形态"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "Inflicts <color=#28d9ed>Silence</color> on Fire enemies. This effect cannot be removed.\\nWhen the caster takes an action, resurrects all allies.\\n\\nWhile under Stealth, the caster's damage dealt increases by <color=#28d9ed>100%</color>,damage taken does not exceed <color=#28d9ed>5000</color>,and the caster does not take Weakness Gauge damage.",
-        "kr": "화속성 적에게 <color=#28d9ed>침묵</color>을 부여합니다. 이 효과는 해제되지 않습니다.\\n\\n자신이 행동 시 아군 전체를 부활시킵니다.\\n\\n은신 중에는 자신이 주는 피해가 <color=#28d9ed>100%</color>증가하며, 입는 피해가 <color=#28d9ed>5000</color>을 초과하지 않고, WG 피해를 받지 않습니다.",
         "jp": "火属性の敵に<color=#28d9ed>沈黙</color>を付与する。この効果は解除されない。\\n\\n自身が行動するたびに、味方全体を復活させる。\\n\\n隠れ身状態の間、自身の与えるダメージが<color=#28d9ed>100%</color>UPし、\n受けるダメージは<color=#28d9ed>5000</color>を超えず、\\nWGダメージを受けない。",
+        "kr": "화속성 적에게 <color=#28d9ed>침묵</color>을 부여합니다. 이 효과는 해제되지 않습니다.\\n\\n자신이 행동 시 아군 전체를 부활시킵니다.\\n\\n은신 중에는 자신이 주는 피해가 <color=#28d9ed>100%</color>증가하며, 입는 피해가 <color=#28d9ed>5000</color>을 초과하지 않고, WG 피해를 받지 않습니다.",
         "zh": "对火属性敌人施加<color=#28d9ed>沉默</color>效果,该效果无法解除。\\n\\n自身行动时,使全体友军复活。\\n\\n处于隐身状态时,自身造成的伤害提升<color=#28d9ed>100%</color>,\\n所受到的伤害不会超过<color=#28d9ed>5000</color>,\\n且不会受到WG伤害。"
       },
       "icon": "MT_Passive_1_Water",
@@ -122,15 +122,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "For every 10 enemy actions, becomes <color=#28d9ed>Enraged</color>, and grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Deals heavy damage to all enemies. Increases damage dealt every time this attack is used.",
-        "kr": "적이 10회 행동할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 큰 피해를 입힙니다. 이 공격은 사용할 때마다 피해가 증가합니다.",
         "jp": "敵が10回行動するたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間継続する。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:敵全体に大ダメージを与える。この攻撃は発動するだびにダメージがUPする。",
+        "kr": "적이 10회 행동할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 큰 피해를 입힙니다. 이 공격은 사용할 때마다 피해가 증가합니다.",
         "zh": "敌人每行动10次,便转化为<color=#28d9ed>狂暴化</color>状态,并使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:对全体敌人造成巨额伤害,每次发动时伤害都会提升。"
       },
       "icon": "MT_Boss_Rage_Common_1",

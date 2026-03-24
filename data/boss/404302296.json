@@ -2,8 +2,8 @@
   "id": "404302296",
   "Name": {
     "en": "Stone Golem Tome-Wielder",
-    "kr": "스톤 골렘 책",
     "jp": "ストーンゴーレム〈書〉",
+    "kr": "스톤 골렘 책",
     "zh": "暗书石魔像"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 62F",
-      "kr": "비천의 탑 62층",
       "jp": "飛天の塔62階",
+      "kr": "비천의 탑 62층",
       "zh": "飞天之塔62层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101062",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Razor Wind",
-        "kr": "칼바람",
         "jp": "寒風",
+        "kr": "칼바람",
         "zh": "刺骨寒风"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Hurl Boulder",
-        "kr": "암석 낙하",
         "jp": "岩石落下",
+        "kr": "암석 낙하",
         "zh": "岩石陨落"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Petrified</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>석화</color> 상태로 만듭니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>石化</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>석화</color> 상태로 만듭니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>石化</color>状态,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Frost Storm",
-        "kr": "서리 폭풍",
         "jp": "ブリザード",
+        "kr": "서리 폭풍",
         "zh": "冰霜风暴"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>50%</color>的几率使敌人陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Hit Back III",
-        "kr": "받아치기 III",
         "jp": "返り討ち III",
+        "kr": "받아치기 III",
         "zh": "回击 III"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nAfter the caster takes their turn, has a <color=#28d9ed>60%</color> chance to Counterattack, until the caster's next turn.",
-        "kr": "(패시브 효과)\\n자신이 턴을 획득한 이후, 다음 턴 동안 <color=#28d9ed>60%</color>의 확률로 반격합니다.",
         "jp": "(パッシブ効果)\\n自分がターンを獲得した後、次のターンの間<color=#28d9ed>60%</color>の確率で反撃する。",
+        "kr": "(패시브 효과)\\n자신이 턴을 획득한 이후, 다음 턴 동안 <color=#28d9ed>60%</color>의 확률로 반격합니다.",
         "zh": "(被动效果)\\n自身获得回合后,下一回合有<color=#28d9ed>60%</color>的几率发动反击。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "EMETH",
-        "kr": "EMETH",
         "jp": "EMETH",
+        "kr": "EMETH",
         "zh": "EMETH"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nHas a <color=#28d9ed>20%</color> chance to reduce cooldowns by <color=#28d9ed>1 turn(s)</color> when hit.\\nGrants <color=#28d9ed>Immunity</color> for <color=#28d9ed>1 turn(s)</color> at the start of battle.",
-        "kr": "(패시브 효과)\\n피격 시 쿨타임을 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>1턴</color> 감소시킵니다.\\n전투 시작 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color> 상태가 됩니다.",
         "jp": "(パッシブ効果)\\n攻撃を受けた時、<color=#28d9ed>20%</color>の確率でスキルターンを<color=#28d9ed>1ターン</color>減少させる。\\n戦闘開始時、自分に<color=#28d9ed>免疫</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "(패시브 효과)\\n피격 시 쿨타임을 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>1턴</color> 감소시킵니다.\\n전투 시작 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>면역</color> 상태가 됩니다.",
         "zh": "(被动效果)\\n受到攻击时,有<color=#28d9ed>20%</color>的几率使冷却时间减少<color=#28d9ed>1回合</color>。\\n战斗开始时,获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Passive_1_Earth"

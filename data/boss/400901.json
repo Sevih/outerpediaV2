@@ -2,8 +2,8 @@
   "id": "400901",
   "Name": {
     "en": "Gargantuan Beam-Blaster",
-    "kr": "괴수 빔",
     "jp": "怪獣・バースター",
+    "kr": "괴수 빔",
     "zh": "光波怪兽"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Hard 9F",
-      "kr": "비천의 탑 [하드] 9층",
       "jp": "飛天の塔【ハード】9階",
+      "kr": "비천의 탑 [하드] 9층",
       "zh": "飞天之塔【困难】第9层"
     },
     "mode": {
       "en": "Skyward Tower - Hard",
-      "kr": "비천의 탑 하드",
       "jp": "飛天の塔 ハード",
+      "kr": "비천의 탑 하드",
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
       "en": "40102009",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Heat Ray",
-        "kr": "히트 레이",
         "jp": "ヒートレイ",
+        "kr": "히트 레이",
         "zh": "光束冲击"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and grants increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Atomic Breath",
-        "kr": "아토믹 브레스",
         "jp": "アトミックブレス",
+        "kr": "아토믹 브레스",
         "zh": "原子之息"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and lowers the Priority of the target by <color=#28d9ed>50%</color> while increasing the <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>10%</color>.",
-        "kr": "적을 공격하여 대상의 행동 게이지를 <color=#28d9ed>-50%</color>감소시키고, 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "jp": "敵単体にダメージを与え、対象の行動ゲージを<color=#28d9ed>-50%</color>DOWNさせ、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "적을 공격하여 대상의 행동 게이지를 <color=#28d9ed>-50%</color>감소시키고, 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使目标的行动值降低<color=#28d9ed>-50%</color>,且使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Defuse Ray",
-        "kr": "디퓨즈 레이",
         "jp": "ディフューズレイ",
+        "kr": "디퓨즈 레이",
         "zh": "星散射线"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and lowers the Priority of the target by <color=#28d9ed>10%</color> while increasing the <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>10%</color>.",
-        "kr": "적 전체를 공격하여 대상의 행동 게이지를 <color=#28d9ed>-10%</color>감소시키고, 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "jp": "敵全体にダメージを与え、対象の行動ゲージを<color=#28d9ed>-10%</color>DOWNさせ、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "적 전체를 공격하여 대상의 행동 게이지를 <color=#28d9ed>-10%</color>감소시키고, 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "zh": "攻击全体敌人,并使目标的行动值降低<color=#28d9ed>-10%</color>,且使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Ravager",
-        "kr": "파괴수",
         "jp": "破壊獣",
+        "kr": "파괴수",
         "zh": "破坏兽"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces <color=#28d9ed>Priority</color> of one target by <color=#28d9ed>5%</color> when attacking.\\nIncreases damage taken from attacks that target all enemies.",
-        "kr": "(패시브 효과)\\n공격 시 대상 한 명의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-5%</color> 감소시킵니다.\\n적의 전체 공격으로 받는 피해량이 증가합니다.",
         "jp": "(パッシブ効果)\\n攻撃時、対象単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-5%</color>DOWNさせる。\\n敵の全体攻撃で受けるダメージがUPする。",
+        "kr": "(패시브 효과)\\n공격 시 대상 한 명의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-5%</color> 감소시킵니다.\\n적의 전체 공격으로 받는 피해량이 증가합니다.",
         "zh": "(被动效果)\\n攻击时,使1名敌人的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-5%</color>。\\n由敌人的全体攻击造成的伤害量提升。"
       },
       "icon": "MT_Passive_1_Earth"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Epsilon Physical Enhancement III",
-        "kr": "엡실론의 신체 강화 III",
         "jp": "イプシロンの身体強化III",
+        "kr": "엡실론의 신체 강화 III",
         "zh": "埃普西隆的身体强化III"
       },
       "type": "SKT_MONSTER_3",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Speed</color> by <color=#28d9ed>5</color> when hit. (Max 10 stacks)",
-        "kr": "(패시브 효과)\\n피격 시, <color=#28d9ed>속도</color>가 <color=#28d9ed>5</color> 증가합니다.(최대 10회 누적)",
         "jp": "(パッシブ効果)\\nダメージを受けた場合、<color=#28d9ed>スピード</color>が<color=#28d9ed>5</color>UPする。この効果は最大10回まで累積する。",
+        "kr": "(패시브 효과)\\n피격 시, <color=#28d9ed>속도</color>가 <color=#28d9ed>5</color> 증가합니다.(최대 10회 누적)",
         "zh": "(被动效果)\\n受到攻击时,使<color=#28d9ed>速度</color>提升<color=#28d9ed>5</color>。(最多可叠加10次)"
       },
       "icon": "MT_Passive_1_Light"

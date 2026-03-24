@@ -2,14 +2,14 @@
   "id": "4500154",
   "Name": {
     "en": "Drakhan",
-    "kr": "드레이칸",
     "jp": "ドレイカーン",
+    "kr": "드레이칸",
     "zh": "德雷坎"
   },
   "Surname": {
     "en": "Demiurge",
-    "kr": "데미우르고스",
     "jp": "デミウルゴス",
+    "kr": "데미우르고스",
     "zh": "创世之神"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Conqueror and Destroyer",
-      "kr": "정복자와 파괴자",
       "jp": "征服者と破壊者",
+      "kr": "정복자와 파괴자",
       "zh": "征服者和破坏者"
     },
     "mode": {
       "en": "Story (Normal)",
-      "kr": "스토리(노멀)",
       "jp": "ストーリー(ノーマル)",
+      "kr": "스토리(노멀)",
       "zh": "故事(普通)"
     },
     "area_id": {
       "en": "10-12",
-      "kr": "10-12",
       "jp": "10-12",
+      "kr": "10-12",
       "zh": "10-12"
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Conqueror's Fang",
-        "kr": "정복자의 송곳니",
         "jp": "征服者の牙",
+        "kr": "정복자의 송곳니",
         "zh": "征服者的利齿"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Inflicts fixed damage equal to <color=#28d9ed>20%</color> of the target's max Health, then attacks the enemy.",
-        "kr": "대상 최대 체력의 <color=#28d9ed>20%</color> 만큼 고정 피해를 입힌 후 적을 공격합니다.",
         "jp": "敵に最大HPの<color=#28d9ed>20%</color>の固定ダメージを与え、敵全体にダメージを与える。",
+        "kr": "대상 최대 체력의 <color=#28d9ed>20%</color> 만큼 고정 피해를 입힌 후 적을 공격합니다.",
         "zh": "敌人造成相当于目标生命值上限<color=#28d9ed>20%</color>的固定伤害,并攻击全体敌人。"
       },
       "icon": "Skill_First_2000063",
@@ -62,15 +62,15 @@
     {
       "name": {
         "en": "Doom Heralding Cry",
-        "kr": "멸망을 부르는 함성",
         "jp": "滅亡をもたらす叫び",
+        "kr": "멸망을 부르는 함성",
         "zh": "灭亡呐喊"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to reduce the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.",
-        "kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-100%</color>DOWNさせる。",
+        "kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标<color=#28d9ed>行动值</color>降低<color=#28d9ed>-100%</color>。"
       },
       "icon": "Skill_Second_2000063",
@@ -81,15 +81,15 @@
     {
       "name": {
         "en": "Dragon Ruler's Breath",
-        "kr": "용왕의 숨결",
         "jp": "竜王の息吹",
+        "kr": "용왕의 숨결",
         "zh": "龙王吐息"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks the enemy. If the target's <color=#28d9ed>current Health</color> is at or below <color=#28d9ed>15%</color>, inflicts <color=#28d9ed>Instant Death</color>.",
-        "kr": "적을 공격합니다. 대상의 <color=#28d9ed>현재 체력</color>이 <color=#28d9ed>15%</color> 이하라면 대상을 <color=#28d9ed>즉사</color>시킵니다.",
         "jp": "敵単体にダメージを与える。対象の<color=#28d9ed>残りHP</color>が<color=#28d9ed>15%</color>以下の場合、対象を<color=#28d9ed>即死</color>させる。",
+        "kr": "적을 공격합니다. 대상의 <color=#28d9ed>현재 체력</color>이 <color=#28d9ed>15%</color> 이하라면 대상을 <color=#28d9ed>즉사</color>시킵니다.",
         "zh": "攻击敌人。若目标的<color=#28d9ed>当前生命值</color>在<color=#28d9ed>15%</color>以下,则使目标<color=#28d9ed>即死</color>。"
       },
       "icon": "Skill_Ultimate_2000063",
@@ -100,15 +100,15 @@
     {
       "name": {
         "en": "Dragon's Solitude",
-        "kr": "용의 고독",
         "jp": "竜の孤独",
+        "kr": "용의 고독",
         "zh": "龙的孤独"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWhen hit by a critical attack, reduces all the cooldown of <color=#28d9ed>Dragon King's Breath</color> and increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
-        "kr": "(패시브 효과)\\n치명 공격 당할 시 <color=#28d9ed>용왕의 숨결</color>의 쿨타임이 모두 감소하며, 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "jp": "(パッシブ効果)\\n会心ダメージを受けた時、<color=#28d9ed>【竜王の息吹】</color>のスキルターンが初期化し、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "kr": "(패시브 효과)\\n치명 공격 당할 시 <color=#28d9ed>용왕의 숨결</color>의 쿨타임이 모두 감소하며, 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "zh": "(被动效果)\\n受到暴击攻击时,使<color=#28d9ed>龙王吐息</color>的冷却时间全部减少,且使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
       },
       "icon": "MT_Passive_1_Light",
@@ -120,15 +120,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Does not take Weakness Gauge damage (Permanent). Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Dragon of Conquest</color>: Used when Enraged ends.\\nPermanently increases <color=#28d9ed>Speed</color> and enhances <color=#28d9ed>Dragon Ruler's Breath</color> to target all enemies. These effects cannot be removed.",
-        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : WG 피해를 받지 않습니다. (영구 지속) 3턴 후 광폭화가 종료됩니다.\\n\\n<color=#28d9ed>정복의 용</color> : 광폭화 종료 시 사용.\\n영구적으로 <color=#28d9ed>속도</color>가 증가하고, <color=#28d9ed>용왕의 숨결</color>의 공격 범위가 적 전체로 확대됩니다. 이 효과들은 해제되지 않습니다.",
         "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:永続的にWGダメージを受けない。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【征服の竜】</color>:【狂暴化】終了時に発動する。\\n永続的に<color=#28d9ed>スピード</color>がUPし、<color=#28d9ed>【竜王の息吹】</color>の攻撃範囲が全体攻撃に変わる。これらの効果は解除されない。",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : WG 피해를 받지 않습니다. (영구 지속) 3턴 후 광폭화가 종료됩니다.\\n\\n<color=#28d9ed>정복의 용</color> : 광폭화 종료 시 사용.\\n영구적으로 <color=#28d9ed>속도</color>가 증가하고, <color=#28d9ed>용왕의 숨결</color>의 공격 범위가 적 전체로 확대됩니다. 이 효과들은 해제되지 않습니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:不会受到WG伤害。(永久持续)3回合后狂暴化结束。\\n\\n<color=#28d9ed>征服之龙</color>:狂暴化结束时使用。\\n<color=#28d9ed>速度</color>永久提升,并使<color=#28d9ed>龙王吐息</color>的攻击范围扩大至全体敌人。该效果不会被解除。"
       },
       "icon": "MT_Boss_Rage_Common_1",
@@ -139,15 +139,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

@@ -2,14 +2,14 @@
   "id": "402901",
   "Name": {
     "en": "Rin",
-    "kr": "린",
     "jp": "リン",
+    "kr": "린",
     "zh": "琳"
   },
   "Surname": {
     "en": "Slayer of the Wild Spirits",
-    "kr": "백귀야행의 토벌자",
     "jp": "百鬼夜行を鎮めた霊斬士",
+    "kr": "백귀야행의 토벌자",
     "zh": "百鬼夜行的讨伐者"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Hard 29F",
-      "kr": "비천의 탑 [하드] 29층",
       "jp": "飛天の塔【ハード】29階",
+      "kr": "비천의 탑 [하드] 29층",
       "zh": "飞天之塔【困难】第29层"
     },
     "mode": {
       "en": "Skyward Tower - Hard",
-      "kr": "비천의 탑 하드",
       "jp": "飛天の塔 ハード",
+      "kr": "비천의 탑 하드",
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
       "en": "40102029",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Requiem",
-        "kr": "진혼",
         "jp": "鎮魂",
+        "kr": "진혼",
         "zh": "镇魂"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. Increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color> if the target was a Fire enemy.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>40%</color> 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。対象が火属性の場合<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>40%</color>UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>40%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>40%</color>。"
       },
       "icon": "Skill_First_2000019"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Shura Slash",
-        "kr": "나찰 가르기",
         "jp": "羅刹斬り",
+        "kr": "나찰 가르기",
         "zh": "分裂罗刹"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies.\\nThis skill is always treated as having a <color=#28d9ed>favorable attribute</color> and its cooldown resets if you have a buff.\\nEach time you use <color=#28d9ed>Rending Rakshasa</color>, your <color=#28d9ed>Critical Damage</color> increases by <color=#28d9ed>7%</color> (up to 5 stacks).",
-        "kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과 보유 시 쿨타임이 초기화됩니다.\\n<color=#28d9ed>나찰 가르기</color>를 사용할 때마다 <color=#28d9ed>치명 피해량</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
         "jp": "敵全体にダメージを与える。\\nこのスキルは常に<color=#28d9ed>有利属性</color>として扱われ、強化効果を保有している場合、スキルターンが初期化されます。\\n<color=#28d9ed>羅刹斬り</color>を使用するたびに<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>7%</color>上昇する(最大5回累積)。",
+        "kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과 보유 시 쿨타임이 초기화됩니다.\\n<color=#28d9ed>나찰 가르기</color>를 사용할 때마다 <color=#28d9ed>치명 피해량</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
         "zh": "攻击全体敌人。\\n此技能始终视为<color=#28d9ed>属性克制</color>,且在拥有增益时会重置冷却。\\n每次使用<color=#28d9ed>罗刹斩</color>,自身<color=#28d9ed>暴击伤害</color>提高<color=#28d9ed>7%</color>(最多叠加5次)。"
       },
       "icon": "Skill_Second_2000019"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Doujikiri Yasutsuna",
-        "kr": "도지기리 야스츠나",
         "jp": "童子切安綱",
+        "kr": "도지기리 야스츠나",
         "zh": "童子切安纲"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "When using this skill, grants all allies irremovable <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>3 turn(s)</color>, then attacks all enemies. Inflicts <color=#28d9ed>Stunned</color> on all enemies for <color=#28d9ed>1 turn(s)</color> after attacking.\\nEach time <color=#28d9ed>Doujikiri Yasutsuna</color> is used, increases <color=#28d9ed>Attack</color> by <color=#28d9ed>7%</color>. (Max 10 stacks)",
-        "kr": "스킬 사용 시 <color=#28d9ed>3턴</color> 동안 아군 전체에게 해제 불가능한 <color=#28d9ed>치명 확률</color>을 부여하고 적 전체를 공격합니다. 공격 후 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.\\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 10회 누적)",
         "jp": "スキル使用時、味方全体に解除不可能な<color=#28d9ed>会心率UP</color>を<color=#28d9ed>3ターン</color>の間付与し、敵全体にダメージを与える。攻撃後、敵全体に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n<color=#28d9ed>【童子切安綱】</color>を使用するたびに<color=#28d9ed>攻撃力</color>が<color=#28d9ed>7%</color>UPする。(最大10回累積)",
+        "kr": "스킬 사용 시 <color=#28d9ed>3턴</color> 동안 아군 전체에게 해제 불가능한 <color=#28d9ed>치명 확률</color>을 부여하고 적 전체를 공격합니다. 공격 후 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.\\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 10회 누적)",
         "zh": "使用技能时,使全体友军获得无法解除的<color=#28d9ed>暴击率</color>,持续<color=#28d9ed>3回合</color>,并攻击全体敌人。攻击后,对全体敌人造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。\\n每次使用<color=#28d9ed>童子切安纲</color>时,<color=#28d9ed>攻击力</color>都会提升<color=#28d9ed>7%</color>。(最多可叠加10次)"
       },
       "icon": "Skill_Ultimate_2000019"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Kakugono Susume",
-        "kr": "각오의 스스메",
         "jp": "覚悟のススメ",
+        "kr": "각오의 스스메",
         "zh": "觉悟的进击"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces <color=#28d9ed>Effectiveness</color> of all enemies by <color=#28d9ed>100</color> at the start of battle.\\nReduces damage taken by all allies from attacks that target all enemies by <color=#28d9ed>30%</color>. When the caster is hit by an attack that targets all enemies, reduces the cooldown of <color=#28d9ed>Doujikiri Yasutsuna</color> by <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "(패시브 효과)\\n전투 시작 시 적 전체의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>100</color> 감소시킵니다.\\n아군 전체가 전체 공격에 받는 피해가 <color=#28d9ed>30%</color> 감소하며 자신이 전체 공격 피격 시 <color=#28d9ed>도지기리 야스츠나</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "jp": "(パッシブ効果)\\n戦闘開始時、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>100</color>DOWNさせる。\\n味方全体の全体攻撃で受けるダメージが<color=#28d9ed>30%</color>DOWNし、自分が全体攻撃を受けた場合、<color=#28d9ed>【童子切安綱】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "kr": "(패시브 효과)\\n전투 시작 시 적 전체의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>100</color> 감소시킵니다.\\n아군 전체가 전체 공격에 받는 피해가 <color=#28d9ed>30%</color> 감소하며 자신이 전체 공격 피격 시 <color=#28d9ed>도지기리 야스츠나</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "zh": "(被动效果)\\n战斗开始时,使全体敌人的<color=#28d9ed>效果命中</color>降低<color=#28d9ed>100</color>。\\n使全体友军的全体攻击所受伤害降低<color=#28d9ed>30%</color>。自身受到全体攻击时,使<color=#28d9ed>童子切安纲</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Passive_1_Water"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Let's go! Soulslayer",
-        "kr": "Let's go! 영참사",
         "jp": "レッツゴー霊斬士",
+        "kr": "Let's go! 영참사",
         "zh": "Let's go! 灵斩师"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWhile Akari remains alive, increases Speed of the caster by <color=#28d9ed>20%</color>.\\nWhile Ame remains alive, reduces damage taken by the caster from single-target attacks by <color=#28d9ed>70%</color>.\\n\\nRecovers Health of all allies by <color=#28d9ed>15%</color> when Akari is defeated.\\nGrants permanent, irremovable increased <color=#28d9ed>Attack</color> on all allies when Ame is defeated.",
-        "kr": "(패시브 효과)\\n아카리 생존 시 자신의 속도가 <color=#28d9ed>20%</color> 증가합니다.\\n아메 생존 시 자신이 단일 공격에 받는 피해가 <color=#28d9ed>70%</color> 감소합니다.\\n\\n아카리 사망 시 아군 전체의 체력을 <color=#28d9ed>15%</color>회복합니다.\\n아메 사망 시 아군 전체에게 영구적으로 해제되지 않는 <color=#28d9ed>공격력</color> 증가를 부여합니다.",
         "jp": "(パッシブ効果)\\n戦場に【アカリ】がいる場合、自分のスピードが<color=#28d9ed>20%</color>UPする。\\n戦場に【あめ】がいる場合、自分が単体攻撃で受けるダメージが<color=#28d9ed>70%</color>DOWNする。\\n\\n【アカリ】が倒れた時、味方全体のHPを<color=#28d9ed>15%</color>回復させる。\\n【あめ】が倒れた時、味方全体の<color=#28d9ed>攻撃力</color>を永続的にUPする。この効果は解除されない。",
+        "kr": "(패시브 효과)\\n아카리 생존 시 자신의 속도가 <color=#28d9ed>20%</color> 증가합니다.\\n아메 생존 시 자신이 단일 공격에 받는 피해가 <color=#28d9ed>70%</color> 감소합니다.\\n\\n아카리 사망 시 아군 전체의 체력을 <color=#28d9ed>15%</color>회복합니다.\\n아메 사망 시 아군 전체에게 영구적으로 해제되지 않는 <color=#28d9ed>공격력</color> 증가를 부여합니다.",
         "zh": "(被动效果)\\n阿卡莉存活时,使自身速度提升<color=#28d9ed>20%</color>。\\n亚美存活时,使自身的所受单体伤害降低\\n<color=#28d9ed>70%</color>。\\n\\n阿卡莉死亡时,使全体友军的生命值恢复\\n<color=#28d9ed>15%</color>。\\n亚美死亡时,使全体友军获得永久无法解除的<color=#28d9ed>攻击力</color>提升效果。"
       },
       "icon": "MT_Passive_1_Water"
@@ -123,15 +123,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>70%</color> of Max Health or lower, and attacks all enemies. After attacking, increases all allies' <color=#28d9ed>Resilience</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>3 turn(s)</color> and summons Soulslayer Akari.",
-        "kr": "최대 체력의 <color=#28d9ed>70%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>효과 저항</color>과 <color=#28d9ed>방어력</color>을 증가시키고 영참사 아카리를 소환합니다.",
         "jp": "最大HPの<color=#28d9ed>70%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、敵全体にダメージを与える。攻撃後、味方全体の<color=#28d9ed>効果抵抗</color>と<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせ、【霊斬士アカリ】を召喚する。",
+        "kr": "최대 체력의 <color=#28d9ed>70%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>효과 저항</color>과 <color=#28d9ed>방어력</color>을 증가시키고 영참사 아카리를 소환합니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>70%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并攻击全体敌人。攻击后,使全体友军的<color=#28d9ed>效果抵抗</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>,并召唤灵斩师阿卡莉。"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -139,15 +139,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER2",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower, and attacks all enemies. After attacking, increases all allies' <color=#28d9ed>Resilience</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>3 turn(s)</color> and summons Soulslayer Ame.",
-        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>효과 저항</color>과 <color=#28d9ed>방어력</color>을 증가시키고 영참사 아메를 소환합니다.",
         "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、敵全体にダメージを与える。攻撃後、味方全体の<color=#28d9ed>効果抵抗</color>と<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせ、【霊斬士あめ】を召喚する。",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>효과 저항</color>과 <color=#28d9ed>방어력</color>을 증가시키고 영참사 아메를 소환합니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并攻击全体敌人。攻击后,使全体友军的<color=#28d9ed>效果抵抗</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>,并召唤灵斩师亚美。"
       },
       "icon": "MT_Boss_Rage_Common_1"

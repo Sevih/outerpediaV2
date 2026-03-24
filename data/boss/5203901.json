@@ -2,14 +2,14 @@
   "id": "5203901",
   "Name": {
     "en": "Amadeus",
-    "kr": "아마데우스",
     "jp": "アマデウス",
+    "kr": "아마데우스",
     "zh": "阿玛迪斯"
   },
   "Surname": {
     "en": "Archdemon of the Dirge",
-    "kr": "장송의 마왕",
     "jp": "葬送の魔王",
+    "kr": "장송의 마왕",
     "zh": "送葬魔王"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Hard 39F",
-      "kr": "비천의 탑 [하드] 39층",
       "jp": "飛天の塔【ハード】39階",
+      "kr": "비천의 탑 [하드] 39층",
       "zh": "飞天之塔【困难】第39层"
     },
     "mode": {
       "en": "Skyward Tower - Hard",
-      "kr": "비천의 탑 하드",
       "jp": "飛天の塔 ハード",
+      "kr": "비천의 탑 하드",
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
       "en": "40102039",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Rondo of Blood",
-        "kr": "피의 론도",
         "jp": "ブラッディロンド",
+        "kr": "피의 론도",
         "zh": "血之回旋曲"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Always targets the leftmost enemy first. Before attacking, dispels all <color=#28d9ed>Buffs</color> from the target, then attacks and inflicts <color=#28d9ed>Stunned</color> for <color=#28d9ed>2 turn(s)</color> (ignores Resilience).",
-        "kr": "항상 좌측의 적을 먼저 공격합니다. 공격 전 대상의 강화 효과를 모두 해제한 뒤 공격하고 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.(효과 저항 무시)",
         "jp": "常に左側の敵を最優先で攻撃する。攻撃前に対象の<color=#28d9ed>強化効果</color>をすべて解除してから攻撃し、対象を<color=#28d9ed>2ターン</color>のあいだ<color=#28d9ed>スタン</color>させる(効果抵抗無視)。",
+        "kr": "항상 좌측의 적을 먼저 공격합니다. 공격 전 대상의 강화 효과를 모두 해제한 뒤 공격하고 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.(효과 저항 무시)",
         "zh": "总是先攻击最左侧的敌人。攻击前先解除目标的全部<color=#28d9ed>强化效果</color>,随后进行攻击并使其陷入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>2回合</color>(无视效果抵抗)。"
       },
       "icon": "Skill_First_4076009"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Concerto of the Midnight Sun",
-        "kr": "백야의 협주곡",
         "jp": "白夜のコンチェルト",
+        "kr": "백야의 협주곡",
         "zh": "白夜协奏曲"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies. If the attack scores a critical hit, grants an <color=#28d9ed>extra turn</color>.",
-        "kr": "적 전체를 공격합니다. 치명 공격으로 적중하면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "jp": "敵全体にダメージを与える。会心が発生した場合、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "kr": "적 전체를 공격합니다. 치명 공격으로 적중하면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击全体敌人,若以暴击命中,则获得\\n<color=#28d9ed>额外回合</color>。"
       },
       "icon": "Skill_Second_4076009"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Symphony of the Night",
-        "kr": "월하의 야상곡",
         "jp": "月下のノットゥルノ",
+        "kr": "월하의 야상곡",
         "zh": "月下夜曲"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. Grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>3 turn(s)</color> after attacking.",
-        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
         "jp": "敵全体にダメージを与える。攻撃後、<color=#28d9ed>会心発生率</color>が<color=#28d9ed>3ターン</color>の間UPする。",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
         "zh": "攻击全体敌人。攻击后,<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "Skill_Ultimate_4076009"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Prelude of Darkness",
-        "kr": "칠흑의 전주곡",
         "jp": "漆黒の前奏曲",
+        "kr": "칠흑의 전주곡",
         "zh": "漆黑前奏曲"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces <color=#28d9ed>Effectiveness</color> of Fire, Water, and Earth enemies. When an enemy uses a non-attack skill, grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>5 turn(s)</color>. These effects cannot be removed.\\n\\nInflicts a random debuff on the enemy after attacking. These debuffs ignore Immunity buffs on the target.",
-        "kr": "(패시브 효과)\\n화/수/지 속성 적의 <color=#28d9ed>효과 적중</color>을 감소시킵니다. 적이 공격이 아닌 스킬 사용 시, <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다. 이 효과들은 해제되지 않습니다.\\n\\n공격 후 적에게 무작위 약화 효과를 부여합니다. 이 약화 효과들은 대상의 면역 강화 효과를 무시합니다.",
         "jp": "(パッシブ効果)\\n火・水・地属性の敵の<color=#28d9ed>効果命中</color>をDOWNさせる。敵が攻撃以外のスキルを使用時、<color=#28d9ed>会心率</color>が<color=#28d9ed>5タ―ン</color>の間UPする。この効果は解除されない。\\n\\n攻撃後、敵にランダムの弱体効果を付与する。このすべての弱体効果は対象の免疫効果を無視する。",
+        "kr": "(패시브 효과)\\n화/수/지 속성 적의 <color=#28d9ed>효과 적중</color>을 감소시킵니다. 적이 공격이 아닌 스킬 사용 시, <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다. 이 효과들은 해제되지 않습니다.\\n\\n공격 후 적에게 무작위 약화 효과를 부여합니다. 이 약화 효과들은 대상의 면역 강화 효과를 무시합니다.",
         "zh": "(被动效果)\\n使火/水/土属性敌人的<color=#28d9ed>效果命中</color>降低。敌人使用非攻击类技能时,使<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>5回合</color>。这些效果不会被解除。\\n\\n攻击后,对敌人造成随机弱化效果。这些弱化效果无视目标的免疫强化效果。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Prelude of the Waning Crescent",
-        "kr": "효월의 전주곡",
         "jp": "暁月の前奏曲",
+        "kr": "효월의 전주곡",
         "zh": "晓月前奏曲"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect)\\nIncreases the effectiveness of <color=#28d9ed>increased stat</color> effects on the caster by <color=#28d9ed>100%</color>.\\n\\nWhen attacked, does not take Weakness Gauge damage if the caster does not have a debuff.\\nRecovers <color=#28d9ed>3</color> Weakness Gauge upon scoring a critical hit on an enemy.\\n\\nReduces damage taken from <color=#28d9ed>Fire, Water, and Earth</color> enemies, and increases damage taken from <color=#28d9ed>Light and Dark</color> enemies.",
-        "kr": "(패시브 효과)\\n자신에게 적용되는 <color=#28d9ed>능력치 증가</color> 효과가 <color=#28d9ed>100%</color> 증가합니다.\\n\\n피격 시 약화 효과가 없다면  WG 피해를 받지 않습니다.\\n적에게 치명 공격을 적중시키면 WG를 <color=#28d9ed>3</color> 회복합니다.\\n\\n<color=#28d9ed>화속성, 수속성, 지속성</color> 적에게 받는 피해가 감소하고, <color=#28d9ed>명속성 및 암속성</color> 적에게 받는 피해가 증가합니다.",
         "jp": "(パッシブ効果)\\n自分に適用された<color=#28d9ed>ステータスUP</color>の効果が<color=#28d9ed>100%</color>UPする。\\n\\nダメージを受けた場合、自分に弱体効果がない場合はWGダメージを受けない。\\n敵を攻撃時、会心が発生した場合はWGを<color=#28d9ed>3</color>回復する。\\n\\n<color=#28d9ed>火・水・地属性</color>の敵から受けるダメージがDOWNし、<color=#28d9ed>光・闇属性</color>の敵から受けるダメージがUPする。",
+        "kr": "(패시브 효과)\\n자신에게 적용되는 <color=#28d9ed>능력치 증가</color> 효과가 <color=#28d9ed>100%</color> 증가합니다.\\n\\n피격 시 약화 효과가 없다면  WG 피해를 받지 않습니다.\\n적에게 치명 공격을 적중시키면 WG를 <color=#28d9ed>3</color> 회복합니다.\\n\\n<color=#28d9ed>화속성, 수속성, 지속성</color> 적에게 받는 피해가 감소하고, <color=#28d9ed>명속성 및 암속성</color> 적에게 받는 피해가 증가합니다.",
         "zh": "(被动效果)\\n使自身附带的<color=#28d9ed>能力值提升</color>效果提升<color=#28d9ed>100%</color>。\\n\\n受到攻击时,若未附带弱化效果,则不会受到WG伤害。\\n若用暴击命中敌人,则WG恢复<color=#28d9ed>3</color>。\\n\\n受到来自<color=#28d9ed>火属性、水属性、土属性</color>敌人的伤害降低,并使受到来自<color=#28d9ed>光属性、暗属性</color>敌人的伤害提升。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -123,15 +123,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "When the caster's Max Health is at or below <color=#28d9ed>70%</color>, becomes <color=#28d9ed>Enraged</color>.\\n\\n<color=#28d9ed>Enrage Entry</color>: Grants the caster irremovable Damage Taken Reduction and Despair's Harmony for 4 turns. Enrage lasts for 4 turns.\\n\\n<color=#28d9ed>Moonlit Nocturne</color>: Used when Enrage ends.\\nInstantly kills all enemies.",
-        "kr": "최대 체력의 <color=#28d9ed>70%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 받는 피해 감소/절망의 하모니 효과를 4턴 동안 부여합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>월야의 녹턴</color> : 광폭화 종료 시 사용.\\n적 전체를 사망시킵니다.",
         "jp": "最大HPが<color=#28d9ed>70%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化突入】</color>:自分に解除不可の被ダメージDOWNと〈絶望のハーモニー〉を4ターン付与。狂暴化は4ターン持続。\\n\\n<color=#28d9ed>〈月夜のノクターン〉</color>:狂暴化終了時に使用。\\n敵全体を即死させる。",
+        "kr": "최대 체력의 <color=#28d9ed>70%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 받는 피해 감소/절망의 하모니 효과를 4턴 동안 부여합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>월야의 녹턴</color> : 광폭화 종료 시 사용.\\n적 전체를 사망시킵니다.",
         "zh": "当自身最大生命值≤<color=#28d9ed>70%</color>时,进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化</color>:为自身赋予不可解除的伤害降低与「绝望的和声」,持续4回合。狂暴化持续4回合。\\n\\n<color=#28d9ed>月夜夜想曲</color>:在狂暴化结束时发动。\\n使全体敌人立即死亡。"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -139,15 +139,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

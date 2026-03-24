@@ -2,14 +2,14 @@
   "id": "5021001",
   "Name": {
     "en": "Tyrant Toddler",
-    "kr": "타일런트 유생체",
     "jp": "タイラントの幼生",
+    "kr": "타일런트 유생체",
     "zh": "幼体泰兰特"
   },
   "Surname": {
     "en": "S-Class Threat",
-    "kr": "S급 위험종",
     "jp": "S級危険種",
+    "kr": "S급 위험종",
     "zh": "S级危险种"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Water Tower 30F",
-      "kr": "물의 탑 30층",
       "jp": "水の塔30階",
+      "kr": "물의 탑 30층",
       "zh": "水之塔第30层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40212030",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Primordial Intimidation",
-        "kr": "고대종의 위협",
         "jp": "古代種の脅威",
+        "kr": "고대종의 위협",
         "zh": "古代种族的威胁"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks all enemies and heals the caster by <color=#28d9ed>5%</color> of Max Health after using this skill.",
-        "kr": "적 전체를 공격하고 자신 최대 체력의 <color=#28d9ed>5%</color>를 회복합니다.",
         "jp": "敵全体にダメージを与え、自分の最大HPの<color=#28d9ed>5%</color>を回復する。",
+        "kr": "적 전체를 공격하고 자신 최대 체력의 <color=#28d9ed>5%</color>를 회복합니다.",
         "zh": "攻击全体敌人,并使自身恢复生命值上限的\\n<color=#28d9ed>5%</color>。"
       },
       "icon": "Skill_First_4014002_Water"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Tremor of Despair",
-        "kr": "절망의 땅울림",
         "jp": "絶望の地鳴り",
+        "kr": "절망의 땅울림",
         "zh": "绝望的地鸣"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) Attacks all enemies when the caster is inflicted with a debuff. Reduces the duration of <color=#28d9ed>debuffs</color> by 2 turns.",
-        "kr": "(발동 효과) 자신이 약화 효과에 걸렸을 때 적 전체를 공격하고, <color=#28d9ed>약화 효과</color>의 지속 턴을 2턴 감소시킵니다.",
         "jp": "(発動効果)自分に弱体効果がある場合、敵全体にダメージを与え、<color=#28d9ed>弱体効果</color>の持続ターンを2ターンの間DOWNさせる。",
+        "kr": "(발동 효과) 자신이 약화 효과에 걸렸을 때 적 전체를 공격하고, <color=#28d9ed>약화 효과</color>의 지속 턴을 2턴 감소시킵니다.",
         "zh": "(触发效果)自身受到弱化效果时,对全体敌人发动攻击,并使<color=#28d9ed>弱化效果</color>持续回合减少2回合。"
       },
       "icon": "Skill_Second_4014002_Water"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Breath of Destruction",
-        "kr": "파멸의 숨결",
         "jp": "破滅の息吹",
+        "kr": "파멸의 숨결",
         "zh": "破灭的吐息"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and increases the caster's <color=#28d9ed>Attack</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>攻击力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Ultimate_4014002_Water"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Wilderness Adaptability",
-        "kr": "야생의 적응력",
         "jp": "野生の適応力",
+        "kr": "야생의 적응력",
         "zh": "野生适应力"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWhen hit, if the hit was non-critical, <color=#28d9ed>recovers 3 Weakness Gauge</color>, and inflicts reduced <color=#28d9ed>Speed</color> on all enemies for 2 turns.\\n\\nAdditionally, when attacking while granted increased Attack, inflicts <color=#28d9ed>Frozen</color> on all enemies for 1 turn.",
-        "kr": "(패시브 효과)\\n치명 피해를 입지 않았을 때 <color=#28d9ed>WG가 3 회복</color> 되고, 적 전체는 <color=#28d9ed>속도</color>가 2턴 동안 감소합니다. \\n\\n또한 공격력이 증가한 상태로 공격했을 때 적 전체는 1턴 동안 <color=#28d9ed>빙결</color> 상태가 됩니다.",
         "jp": "(パッシブ効果)\\n会心ダメージを受けなかった場合、<color=#28d9ed>WGが3回復</color>し、敵全体の<color=#28d9ed>スピード</color>が2ターンの間DOWNする。\\n\\nまた、攻撃力がUPした時にダメージを与えた場合、敵全体に<color=#28d9ed>凍結</color>を1ターンの間付与する。",
+        "kr": "(패시브 효과)\\n치명 피해를 입지 않았을 때 <color=#28d9ed>WG가 3 회복</color> 되고, 적 전체는 <color=#28d9ed>속도</color>가 2턴 동안 감소합니다. \\n\\n또한 공격력이 증가한 상태로 공격했을 때 적 전체는 1턴 동안 <color=#28d9ed>빙결</color> 상태가 됩니다.",
         "zh": "(被动效果)\\n若未受到暴击伤害,则使<color=#28d9ed>WG恢复3</color>,并使全体敌人的<color=#28d9ed>速度</color>降低,持续2回合。\\n\\n此外,攻击力处于提升的状态下发动攻击时,使全体敌人陷入<color=#28d9ed>冰冻</color>状态,持续1回合。"
       },
       "icon": "MT_Passive_1_Earth"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Water Tower",
-        "kr": "물의 탑의 가호",
         "jp": "水の塔の加護",
+        "kr": "물의 탑의 가호",
         "zh": "水之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Water"
@@ -123,15 +123,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns and increases Attack and Speed by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Deals a large amount of damage to all enemies upon becoming Enraged, but receives damage equal to <color=#28d9ed>20%</color> of Max Health. After dealing damage, recovers 30% Weakness Gauge. This Enraged has no duration.",
-        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 광폭화 돌입과 함께 적 전체에게 큰 피해를 입히지만, 최대 체력의 <color=#28d9ed>20%</color>의 피해를 입습니다. 피해를 입힌 후 WG 30%를 회복합니다. 광폭화 유지 시간은 없습니다.",
         "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>5%</color>UPする。この効果は最大3回まで累積し、ブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:【狂暴化】状態になる際、敵全体に大ダメージを与えるが、最大HPの<color=#28d9ed>20%</color>のダメージを受ける。ダメージを与えた後WGを30%回復する。【狂暴化】の持続ターンはない。",
+        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 광폭화 돌입과 함께 적 전체에게 큰 피해를 입히지만, 최대 체력의 <color=#28d9ed>20%</color>의 피해를 입습니다. 피해를 입힌 후 WG 30%를 회복합니다. 광폭화 유지 시간은 없습니다.",
         "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>5%</color>。该效果最多可叠加3次,且将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:陷入狂暴化时,对全体敌人造成巨额伤害,使自身受到相当于生命值上限<color=#28d9ed>20%</color>的伤害。造成伤害后,使WG恢复30%。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -139,15 +139,15 @@
     {
       "name": {
         "en": "Descent of the Tyrant",
-        "kr": "폭군, 강림",
         "jp": "暴君、降臨",
+        "kr": "폭군, 강림",
         "zh": "暴君,降临"
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

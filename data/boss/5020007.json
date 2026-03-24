@@ -2,8 +2,8 @@
   "id": "5020007",
   "Name": {
     "en": "Penguineer Icepecker",
-    "kr": "펭귄 해적 부리",
     "jp": "ペンギン海賊・クチバシ",
+    "kr": "펭귄 해적 부리",
     "zh": "镰刀手企鹅海盗"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Water Tower 4F",
-      "kr": "물의 탑 4층",
       "jp": "水の塔4階",
+      "kr": "물의 탑 4층",
       "zh": "水之塔第4层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40212004",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Peck Peck PECK!",
-        "kr": "쪼고쪼고 쫀다!",
         "jp": "ツンツン攻撃!",
+        "kr": "쪼고쪼고 쫀다!",
         "zh": "真有嚼劲!"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Claw_1_Earth"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Everyone, Charge!",
-        "kr": "모두 돌격하자!",
         "jp": "全員突撃!",
+        "kr": "모두 돌격하자!",
         "zh": "全员进攻!"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Grants the caster increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>, and increases the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>10%</color>.",
-        "kr": "자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "jp": "自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせ、味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고, 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "zh": "使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>,并使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Attack_Magic_1_Earth"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Spinny Spin Attack!",
-        "kr": "빙글빙글 공격이다!",
         "jp": "ぐるぐる攻撃だ!",
+        "kr": "빙글빙글 공격이다!",
         "zh": "旋转攻击!"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy. This attack inflicts increased damage if the caster has no remaining allies.",
-        "kr": "적을 공격합니다. 다른 아군이 존재하지 않는다면 피해량이 증가합니다.",
         "jp": "敵単体にダメージを与える。他の味方がいない場合、与えるダメージがUPする。",
+        "kr": "적을 공격합니다. 다른 아군이 존재하지 않는다면 피해량이 증가합니다.",
         "zh": "攻击敌人。若场上无其他友军存在,则伤害量提升。"
       },
       "icon": "MT_Attack_Claw_1_Earth"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "It's Plunderin' Time!",
-        "kr": "약탈 시작!",
         "jp": "略奪はじめ!",
+        "kr": "약탈 시작!",
         "zh": "掠夺开始!"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nGreatly increases <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle.",
-        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color>가 크게 증가합니다.",
         "jp": "(パッシブ効果)\\n戦闘開始時、自分の<color=#28d9ed>スピード</color>が<color=#28d9ed>2ターン</color>の間大幅にUPする。",
+        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도</color>가 크게 증가합니다.",
         "zh": "(被动效果)\\n战斗开始时,<color=#28d9ed>速度</color>大幅提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Passive_1_Earth"

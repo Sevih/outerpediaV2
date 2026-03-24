@@ -2,8 +2,8 @@
   "id": "402300193",
   "Name": {
     "en": "Grandula Shieldbearer",
-    "kr": "큰발거미 방패",
     "jp": "堅甲の大足グモ",
+    "kr": "큰발거미 방패",
     "zh": "硬甲巨足蜘蛛"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 37F",
-      "kr": "비천의 탑 37층",
       "jp": "飛天の塔37階",
+      "kr": "비천의 탑 37층",
       "zh": "飞天之塔37层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101037",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Shield Attack",
-        "kr": "방패다리 공격",
         "jp": "盾足攻撃",
+        "kr": "방패다리 공격",
         "zh": "盾桥攻击"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Hammer_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Shield Swing",
-        "kr": "방패다리 찍기",
         "jp": "盾足突き",
+        "kr": "방패다리 찍기",
         "zh": "盾桥下劈"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy.\\nAttacks all enemies if the caster's <color=#28d9ed>Defense</color> is currently increased.",
-        "kr": "적을 공격합니다.\\n<color=#28d9ed>방어력</color>이 증가한 상태라면 적 전체를 공격합니다.",
         "jp": "敵単体にダメージを与える。\\n自分の<color=#28d9ed>防御力</color>がUPした状態の場合、敵全体にダメージを与える。",
+        "kr": "적을 공격합니다.\\n<color=#28d9ed>방어력</color>이 증가한 상태라면 적 전체를 공격합니다.",
         "zh": "攻击敌人。\\n若<color=#28d9ed>防御力</color>处于提升的状态,则攻击全体敌人。"
       },
       "icon": "MT_Attack_Hammer_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Shield Rapid Strike",
-        "kr": "방패다리 연격",
         "jp": "盾足連撃",
+        "kr": "방패다리 연격",
         "zh": "盾桥连击"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
-        "kr": "적을 공격합니다. 이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。このスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "kr": "적을 공격합니다. 이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
         "zh": "攻击敌人。自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
       },
       "icon": "MT_Attack_Hammer_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Super Regeneration I",
-        "kr": "초재생 I",
         "jp": "超再生 I",
+        "kr": "초재생 I",
         "zh": "超再生 I"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nRecovers Health of the caster by <color=#28d9ed>5%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>5%</color> 만큼 회복합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、自分のHPを<color=#28d9ed>5%</color>回復する。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>5%</color> 만큼 회복합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使自身生命值恢复<color=#28d9ed>5%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Sharp Tooth",
-        "kr": "날카로운 이빨",
         "jp": "鋭利な牙",
+        "kr": "날카로운 이빨",
         "zh": "利齿"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nHas a <color=#28d9ed>20%</color> chance to inflict <color=#28d9ed>Bleeding</color> on one target for <color=#28d9ed>1 turn(s)</color> when attacking. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
-        "kr": "(패시브 효과)\\n공격 시 대상 한 명에게 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. 대상의 <color=#28d9ed>효과 저항</color>을 무시하고 효과가 적용됩니다.",
         "jp": "(パッシブ効果)\\n攻撃時、対象単体に<color=#28d9ed>20%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>1ターン</color>の間付与する。対象の<color=#28d9ed>効果抵抗</color>を無視して効果が適用される。",
+        "kr": "(패시브 효과)\\n공격 시 대상 한 명에게 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. 대상의 <color=#28d9ed>효과 저항</color>을 무시하고 효과가 적용됩니다.",
         "zh": "(被动效果)\\n攻击时,有<color=#28d9ed>20%</color>的几率对1名敌人造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>1回合</color>。该效果无视目标的<color=#28d9ed>效果抵抗</color>。"
       },
       "icon": "MT_Passive_1_Earth"

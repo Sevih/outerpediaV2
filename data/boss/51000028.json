@@ -2,8 +2,8 @@
   "id": "51000028",
   "Name": {
     "en": "Ksai",
-    "kr": "크사이",
     "jp": "ザイ",
+    "kr": "크사이",
     "zh": "科赛"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Weekly Conquest - Ksai",
-      "kr": "주간토벌 - 크사이",
       "jp": "ウィークリー討伐 - ザイ",
+      "kr": "주간토벌 - 크사이",
       "zh": "每周讨伐 - 科赛"
     },
     "mode": {
       "en": "Adventure License",
-      "kr": "모험 라이선스",
       "jp": "冒険者ライセンス",
+      "kr": "모험 라이선스",
       "zh": "冒险许可证"
     },
     "area_id": {
       "en": "70600015",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Command: Restrain",
-        "kr": "명령 : 제압",
         "jp": "命令:制圧",
+        "kr": "명령 : 제압",
         "zh": "命令:压制"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks all enemies, and recovers Health of the caster by <color=#28d9ed>40%</color>.",
-        "kr": "적 전체를 공격하고, 자신의 체력을 <color=#28d9ed>40%</color> 만큼 회복합니다.",
         "jp": "敵全体にダメージを与え、自分のHPを<color=#28d9ed>40%</color>回復する。",
+        "kr": "적 전체를 공격하고, 자신의 체력을 <color=#28d9ed>40%</color> 만큼 회복합니다.",
         "zh": "攻击全体敌人,并使自身生命值恢复<color=#28d9ed>40%</color>。"
       },
       "icon": "Skill_First_4054001"
@@ -54,68 +54,80 @@
     {
       "name": {
         "en": "Command: Incapacitate",
-        "kr": "명령 : 무력화",
         "jp": "命令:無力化",
+        "kr": "명령 : 무력화",
         "zh": "命令:无效化"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect)\\nAfter using Command: Restrain, when the caster's Health is 70% or higher, activates an additional attack on all enemies. After attacking, grants increased <color=#28d9ed>Defense</color> to the caster for <color=#28d9ed>4 turn(s)</color>. This effect cannot be removed.",
-        "kr": "(발동 효과)\\n명령 : 제압 사용 후 자신의 체력이 70% 이상이면 적 전체에게 추가 공격을 입힙니다. 공격 후 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>4턴</color> 동안 증가합니다. 이 효과는 해제되지 않습니다.",
         "jp": "(発動効果)\\n【命令:制圧】使用後、自分の残りHPが70%以上の場合、敵全体に追加攻撃を与える。攻撃後、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>4ターン</color>の間UPさせる。この効果は解除されない。",
+        "kr": "(발동 효과)\\n명령 : 제압 사용 후 자신의 체력이 70% 이상이면 적 전체에게 추가 공격을 입힙니다. 공격 후 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>4턴</color> 동안 증가합니다. 이 효과는 해제되지 않습니다.",
         "zh": "(触发效果)\\n使用命令:压制后,若自身生命值为70%以上,则对全体敌人造成额外攻击。攻击后,自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>4回合</color>。该效果不会被解除。"
       },
       "icon": "Skill_Second_4054001",
-      "buff":["BT_STAT|ST_DEF_IR"]
+      "buff": [
+        "BT_STAT|ST_DEF_IR"
+      ]
     },
     {
       "name": {
         "en": "Command: Destroy",
-        "kr": "명령 : 파괴",
         "jp": "命令:破壊",
+        "kr": "명령 : 파괴",
         "zh": "命令:破坏"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies, and inflicts reduced <color=#28d9ed>Attack</color> on the target for <color=#28d9ed>2 turn(s)</color>. This attack ignores the target's Immunity and Resilience, and cannot be removed.\\nAfter attacking, grants an <color=#28d9ed>extra turn</color>.",
-        "kr": "적 전체를 공격하고, 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 공격은 대상의 면역과 효과 저항을 무시하고, 해제되지 않습니다.\\n공격 후 <color=#28d9ed>추가 턴</color>이 발생합니다.",
         "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。この攻撃は対象の免疫と効果抵抗を無視し、解除されない。\\n攻撃後、<color=#28d9ed>追加ターン</color>が発生する。",
+        "kr": "적 전체를 공격하고, 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 공격은 대상의 면역과 효과 저항을 무시하고, 해제되지 않습니다.\\n공격 후 <color=#28d9ed>추가 턴</color>이 발생합니다.",
         "zh": "攻击全体敌人,使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。该攻击无视目标的免疫和效果抵抗,并无法解除。\\n攻击后,触发<color=#28d9ed>额外回合</color>。"
       },
       "icon": "Skill_Ultimate_4054001",
-      "buff":["BT_ADDITIVE_TURN"],
-      "debuff":["BT_STAT|ST_ATK"]
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
         "en": "Terminal: Protect Weakness",
-        "kr": "단말 : 약점 보호",
         "jp": "端末:弱点保護",
+        "kr": "단말 : 약점 보호",
         "zh": "终端:保护弱点"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect)\\nAlways grants <color=#28d9ed>Buff Enhancement</color>. This effect cannot be removed.\\nAlways inflicts <color=#28d9ed>Debuff Enhancement</color> on all enemies. This effect cannot be removed.\\nIf Health is greater than <color=#28d9ed>70%</color>, does not take Weakness Gauge damage.\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>5000</color>.\\nReduces Attack/Defense of non-Water enemies.",
-        "kr": "(패시브 효과)\\n항상 <color=#28d9ed>강화 촉진</color>을 얻습니다. 이 효과는 해제되지 않습니다.\\n적 전체는 항상 <color=#28d9ed>약화 촉진</color>을 얻습니다. 이 효과는 해제되지 않습니다.\\n체력이 <color=#28d9ed>70%</color>를 초과한다면 WG 피해를 받지 않습니다.\\n<color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>5000</color>을 초과하지 않습니다.\\n수속성이 아닌 적의 공격력/방어력이 모두 감소합니다.",
         "jp": "(パッシブ効果)\\n<color=#28d9ed>強化促進</color>を永続的に付与する。この効果は解除されない。\\n敵全体に<color=#28d9ed>弱体促進</color>を付与する。この効果は解除されない。\\n残りHPが<color=#28d9ed>70%</color>を超える場合、WGダメージを受けない。\\n<color=#28d9ed>呪い/固定ダメージ</color>のダメージはそれぞれ<color=#28d9ed>5000</color>を超えない。\\n水属性以外の敵の攻撃力/防御力がすべてDOWNする。",
+        "kr": "(패시브 효과)\\n항상 <color=#28d9ed>강화 촉진</color>을 얻습니다. 이 효과는 해제되지 않습니다.\\n적 전체는 항상 <color=#28d9ed>약화 촉진</color>을 얻습니다. 이 효과는 해제되지 않습니다.\\n체력이 <color=#28d9ed>70%</color>를 초과한다면 WG 피해를 받지 않습니다.\\n<color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>5000</color>을 초과하지 않습니다.\\n수속성이 아닌 적의 공격력/방어력이 모두 감소합니다.",
         "zh": "(被动效果)\\n始终获得<color=#28d9ed>强化促进</color>效果。该效果不会被解除。\\n全体敌人始终获得<color=#28d9ed>弱化促进</color>效果。该效果不会被解除。\\n生命值超过<color=#28d9ed>70%</color>时,不会受到WG伤害。\\n<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>5000。</color>\\n非水属性敌人的攻击力/防御力全部降低。"
       },
       "icon": "MT_Passive_1_Fire",
-      "buff":["BT_SYS_BUFF_ENHANCE_IR"],
-      "debuff":["BT_SYS_BUFF_ENHANCE_DEBUFF_UP","BT_STAT|ST_ATK_IR","BT_STAT|ST_DEF_IR"]
+      "buff": [
+        "BT_SYS_BUFF_ENHANCE_IR"
+      ],
+      "debuff": [
+        "BT_SYS_BUFF_ENHANCE_DEBUFF_UP",
+        "BT_STAT|ST_ATK_IR",
+        "BT_STAT|ST_DEF_IR"
+      ]
     },
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>60%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Command: Terraform</color>: Used when Enraged ends.\\nDeals lethal damage to all enemies.\\n\\n<color=#ffd732>If enraged within 1 turn, recovers 100 Chain Points.</color>",
-        "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>명령 : 테라포밍</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.\\n\\n<color=#ffd732>1턴 안에 광폭화할 시 100의 CP를 회복시킵니다.</color>",
         "jp": "最大HPの<color=#28d9ed>60%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWNを3ターンの間付与する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【命令:テラフォーミング】</color>:【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。\\n\\n<color=#ffd732>戦闘開始時から1ターン以内に【狂暴化】した場合、敵にCPを100獲得させる。</color>",
+        "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>명령 : 테라포밍</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.\\n\\n<color=#ffd732>1턴 안에 광폭화할 시 100의 CP를 회복시킵니다.</color>",
         "zh": "若生命值降至上限的<color=#28d9ed>60%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>命令:地球化</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。\\n\\n<color=#ffd732>在1回合内陷入狂暴化状态时,恢复100CP</color>。"
       },
       "icon": "MT_Boss_Rage_Common_1",
@@ -128,15 +140,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

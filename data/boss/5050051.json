@@ -2,8 +2,8 @@
   "id": "5050051",
   "Name": {
     "en": "Nella",
-    "kr": "넬라",
     "jp": "ネラ",
+    "kr": "넬라",
     "zh": "内拉"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Darkness 29F",
-      "kr": "암흑의 탑 29층",
       "jp": "闇の塔 29階",
+      "kr": "암흑의 탑 29층",
       "zh": "黑暗之塔 1层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40242029",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Fiend's Courtesy",
-        "kr": "마족의 예절",
         "jp": "魔族の礼節",
+        "kr": "마족의 예절",
         "zh": "魔族礼仪"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy.\\n\\nBefore attacking, if the caster's current Health is <color=#28d9ed>85%</color> or lower, recovers Health of the <color=#28d9ed>caster</color> by <color=#28d9ed>15%</color>.\\n\\nBefore attacking, if the caster's current Health is greater than <color=#28d9ed>85%</color>, recovers Health of the ally with the lowest Health by <color=#28d9ed>15%</color> of Nella's Max Health.",
-        "kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>15%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
         "jp": "敵単体にダメージを与える。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>以下の場合、<color=#28d9ed>自分</color>のHPを<color=#28d9ed>15%</color>回復する。\\n\\n攻撃前、自分の残りHPが<color=#28d9ed>85%</color>を超える場合、残りHPが最も低い味方のHPをネラの最大HPの<color=#28d9ed>15%</color>回復する。",
+        "kr": "적을 공격합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color> 이하라면 <color=#28d9ed>자신</color> 체력의 <color=#28d9ed>15%</color>를 회복합니다.\\n\\n공격 전 자신의 현재 체력이 <color=#28d9ed>85%</color>를 초과한다면 체력 상황이 가장 나쁜 아군의 체력을 넬라 최대 체력의 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
         "zh": "攻击敌人。\\n\\n攻击前,自身的当前生命值为<color=#28d9ed>85%</color>以下时,恢复相当于<color=#28d9ed>自身</color>生命值的<color=#28d9ed>15%</color>。\\n\\n攻击前,自身的当前生命值超过<color=#28d9ed>85%</color>时,使生命值最低的友军恢复相当于内拉生命值上限\\n<color=#28d9ed>15%</color>的生命值。"
       },
       "icon": "Skill_First_2000083"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Oath of Darkness",
-        "kr": "어둠의 맹약",
         "jp": "闇の盟約",
+        "kr": "어둠의 맹약",
         "zh": "黑暗誓约"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) When hit, activates an <color=#28d9ed>Agile Response</color>.\\nIncreases Priority of the caster by <color=#28d9ed>70%</color>, and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>20%</color> of Nella's Max Health.",
-        "kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>70%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시킵니다.",
         "jp": "(発動効果)ダメージを受けた時、<color=#28d9ed>【迅速対応】</color>を発動する。\\n【迅速対応】:自分の行動ゲージが<color=#28d9ed>70%</color>UPし、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復する。",
+        "kr": "(발동 효과) 피격 시 <color=#28d9ed>신속 대응</color> 효과가 발동합니다.\\n자신의 행동 게이지가 <color=#28d9ed>70%</color> 증가하며, 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시킵니다.",
         "zh": "(触发效果)受到攻击时,触发<color=#28d9ed>迅速应对</color>效果。\\n自身的行动值增加<color=#28d9ed>70%</color>,并使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>。"
       },
       "icon": "Skill_Second_2000083"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "The Coronation",
-        "kr": "대관식",
         "jp": "即位の儀",
+        "kr": "대관식",
         "zh": "加冕礼"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Increases Priority of surviving allies by <color=#28d9ed>20%</color>, then <color=#28d9ed>Resurrects (Greater)</color> all dead allies. Afterward, recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>20%</color> of Nella's Max Health, and grants Immunity for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 면역을 부여합니다.",
         "jp": "戦場にいる味方の行動ゲージを<color=#28d9ed>20%</color>UPさせた後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。その後、味方全体の<color=#28d9ed>HP</color>をネラの最大HPの<color=#28d9ed>20%</color>回復させ、免疫を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "생존한 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 넬라 최대 체력의 <color=#28d9ed>20%</color>만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 면역을 부여합니다.",
         "zh": "使存活的友军行动值提升<color=#28d9ed>20%</color>后,<color=#28d9ed>复活(强化)</color>阵亡的全体友军。随后使全体友军恢复相当于内拉生命值上限<color=#28d9ed>20%</color>的<color=#28d9ed>生命值</color>,并赋予<color=#28d9ed>2回合</color>的免疫效果。"
       },
       "icon": "Skill_Ultimate_2000083"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Don't Back Off",
-        "kr": "물러서지 마라",
         "jp": "引き下がるな",
+        "kr": "물러서지 마라",
         "zh": "不要退缩"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect)\\nWhen hit by a Critical, decreases the <color=#28d9ed>Defense</color> of a random enemy by 50% for 1 turn. (Cannot be dispelled)\\n\\nEach turn, Critical Chance increases for 1 turn, and when landing a Critical Hit, restores 10% of all allies' HP and Priority.",
-        "kr": "(패시브 효과)\\n치명 피격 시 1턴 동안 무작위 적 1명의 <color=#28d9ed>방어력</color>을 50% 감소시킵니다.(해제 불가) \\n\\n매 턴 치명 확률이 1턴 동안 증가하며, 치명 공격 시 아군 전체의 체력과 행동 게이지를 10% 회복합니다.",
         "jp": "(パッシブ効果)\\n会心を受けた時、1ターンの間、ランダムな敵1体の<color=#28d9ed>防御力</color>を50%減少。(解除不可)\\n\\n毎ターン、会心率が1ターンの間上昇し、会心攻撃時、味方全体のHPと行動ゲージを10%回復。",
+        "kr": "(패시브 효과)\\n치명 피격 시 1턴 동안 무작위 적 1명의 <color=#28d9ed>방어력</color>을 50% 감소시킵니다.(해제 불가) \\n\\n매 턴 치명 확률이 1턴 동안 증가하며, 치명 공격 시 아군 전체의 체력과 행동 게이지를 10% 회복합니다.",
         "zh": "(被动效果)\\n受到致命打击时,使随机1名敌人的<color=#28d9ed>防御力</color>降低50%,持续1回合。(不可解除)\\n\\n每回合暴击率提升1回合,暴击时恢复我方全体10%生命值和行动值。"
       },
       "icon": "MT_Passive_1_Water"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Darkness",
-        "kr": "어둠의 탑의 가호",
         "jp": "闇の塔の加護",
+        "kr": "어둠의 탑의 가호",
         "zh": "暗之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Dark"

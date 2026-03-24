@@ -2,14 +2,14 @@
   "id": "62001055",
   "Name": {
     "en": "Aer",
-    "kr": "아에르",
     "jp": "アエル",
+    "kr": "아에르",
     "zh": "艾耶尔"
   },
   "Surname": {
     "en": "Slacker Surfer Knight",
-    "kr": "농땡이 전문 서퍼",
     "jp": "ポジティブ★JKサーファー",
+    "kr": "농땡이 전문 서퍼",
     "zh": "懒鬼冲浪骑士"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 35F",
-      "kr": "화염의 탑 35층",
       "jp": "火の塔35階",
+      "kr": "화염의 탑 35층",
       "zh": "火之塔第35层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202035",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Whatever!",
-        "kr": "어떻게든 되겠지!",
         "jp": "くるっとターン♪",
+        "kr": "어떻게든 되겠지!",
         "zh": "顺其自然吧!"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to grant the caster increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率使自身的<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_First_2000055"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "To the Beach?",
-        "kr": "여름으로 가는 물?",
         "jp": "みんなもサーフィンしよっ!",
+        "kr": "여름으로 가는 물?",
         "zh": "冲向夏天"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "When using this skill, <color=#28d9ed>removes all</color> <color=#28d9ed>buffs</color> from the target, then attacks that target. Increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color> if the caster's <color=#28d9ed>Critical Hit Chance</color> is currently increased. This attack ignores the target's Resilience.",
-        "kr": "스킬 사용 시 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 자신의 <color=#28d9ed>치명 확률</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 이 공격은 대상의 효과 저항을 무시합니다.",
         "jp": "スキル使用時、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、敵単体にダメージを与える。自分の<color=#28d9ed>会心率</color>がUPした状態の場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。このスキルは対象の効果抵抗を無視する。",
+        "kr": "스킬 사용 시 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 자신의 <color=#28d9ed>치명 확률</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 이 공격은 대상의 효과 저항을 무시합니다.",
         "zh": "使用技能时,使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>并攻击敌人。若自身的<color=#28d9ed>暴击率</color>处于提升状态,则使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。该攻击无视目标的效果抵抗。"
       },
       "icon": "Skill_Second_2000055"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Gone Surfing!",
-        "kr": "다들 서핑하러 갔대!",
         "jp": "ハデに決めちゃうし!",
+        "kr": "다들 서핑하러 갔대!",
         "zh": "大家都去冲浪了!"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy. Increases damage dealt to enemies with <color=#28d9ed>buffs</color>.\\nWhen the enemy has no <color=#28d9ed>buffs</color> or is defeated after this skill is used, grants an <color=#28d9ed>extra turn</color>.\\nThis skill deals increased damage to Earth bosses.",
-        "kr": "적을 공격합니다. <color=#28d9ed>강화 효과</color>를 보유한 적에게 입히는 피해가 증가합니다.\\n스킬 사용 후 대상에게 적용된 <color=#28d9ed>강화 효과</color>가 없거나, 적이 처치된 경우 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬은 지속성 보스에게 입히는 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。対象に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\nスキル使用後、対象に<color=#28d9ed>強化効果</color>がない、または敵が倒れた場合、<color=#28d9ed>追加ターン</color>を獲得する。\\nこのスキルは地属性のボスに与えるダメージがUPする。",
+        "kr": "적을 공격합니다. <color=#28d9ed>강화 효과</color>를 보유한 적에게 입히는 피해가 증가합니다.\\n스킬 사용 후 대상에게 적용된 <color=#28d9ed>강화 효과</color>가 없거나, 적이 처치된 경우 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬은 지속성 보스에게 입히는 피해가 증가합니다.",
         "zh": "攻击敌人。\\n对附带<color=#28d9ed>强化效果</color>敌人造成的伤害提升。\\n使用技能后,若目标未附带<color=#28d9ed>强化效果</color>,或击杀敌人,则获得<color=#28d9ed>额外回合</color>。\\n该技能对土属性首领造成的伤害提升。"
       },
       "icon": "Skill_Ultimate_2000055"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Neural Amplification III",
-        "kr": "신경계 증폭 III",
         "jp": "神経系増幅 III",
+        "kr": "신경계 증폭 III",
         "zh": "精神系增幅 III"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Speed by <color=#28d9ed>10%</color> every time the caster takes a turn. (Max 5 stacks)",
-        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>10%</color> 증가합니다. (최대 5회 누적)",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、スピードが<color=#28d9ed>10%</color>UPする。(最大5回まで累積)",
+        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>10%</color> 증가합니다. (최대 5회 누적)",
         "zh": "(被动效果)\\n每到自身回合时,使速度提升<color=#28d9ed>10%</color>。(最多可叠加5次)"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Passionate Surfer",
-        "kr": "열정적인 서퍼",
         "jp": "情熱のサーファー",
+        "kr": "열정적인 서퍼",
         "zh": "充满激情的冲浪者"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nGrants increased Attack and Critical Hit Chance for <color=#28d9ed>2 turns</color> at the start of battle. (Irremovable)\\n\\nWhen scoring a critical hit, increases Priority of the caster by <color=#28d9ed>25%</color>, and inflicts Taunted on the target for <color=#28d9ed>1 turn</color>.",
-        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 공격력 및 치명확률이 증가합니다. (해제 불가) \\n\\n치명 공격 적중했을 때 자신의 행동 게이지가 <color=#28d9ed>25%</color> 회복되며, 대상을 <color=#28d9ed>1턴</color>동안 도발합니다.",
         "jp": "(パッシブ効果)\\n戦闘開始時、攻撃力と会心率が<color=#28d9ed>2ターン</color>の間UPする。(解除不可)\\n\\n会心が発生した場合、自分の行動ゲージが<color=#28d9ed>25%</color>UPし、対象を<color=#28d9ed>1ターン</color>の間挑発する。",
+        "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 공격력 및 치명확률이 증가합니다. (해제 불가) \\n\\n치명 공격 적중했을 때 자신의 행동 게이지가 <color=#28d9ed>25%</color> 회복되며, 대상을 <color=#28d9ed>1턴</color>동안 도발합니다.",
         "zh": "(被动效果)\\n战斗开始时,使攻击力和暴击率提升,持续<color=#28d9ed>2回合</color>。(无法解除)\\n\\n暴击攻击命中时,使自身的行动值恢复<color=#28d9ed>25%</color>,且对目标造成挑衅效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -123,15 +123,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Flames",
-        "kr": "화염의 탑의 가호",
         "jp": "火炎の塔の加護",
+        "kr": "화염의 탑의 가호",
         "zh": "火焰之塔的庇佑"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Fire"

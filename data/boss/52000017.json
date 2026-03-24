@@ -2,14 +2,14 @@
   "id": "52000017",
   "Name": {
     "en": "Claire",
-    "kr": "클레어",
     "jp": "クレア",
+    "kr": "클레어",
     "zh": "克莱尔"
   },
   "Surname": {
     "en": "The Owner of the Black Scripture",
-    "kr": "검은 성서의 주인",
     "jp": "苦痛と絶望の主に仕える眷属",
+    "kr": "검은 성서의 주인",
     "zh": "黑色圣书的主人"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 17F",
-      "kr": "화염의 탑 17층",
       "jp": "火の塔17階",
+      "kr": "화염의 탑 17층",
       "zh": "火之塔第17层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202017",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Penetrating Tentacles",
-        "kr": "꿰뚫는 촉수",
         "jp": "触手の槌",
+        "kr": "꿰뚫는 촉수",
         "zh": "触手穿刺"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to increase the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_First_2000017"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Invocation of Evil",
-        "kr": "사악한 영혼의 기도",
         "jp": "邪悪なる魂の祈り",
+        "kr": "사악한 영혼의 기도",
         "zh": "邪灵的祈祷"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Grants <color=#28d9ed>Sustained Recovery</color> to the caster and the ally with the lowest Health for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "자신과 체력이 가장 낮은 아군에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
         "jp": "自分と残りHPが最も低い味方単体に<color=#28d9ed>継続回復</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "자신과 체력이 가장 낮은 아군에게 <color=#28d9ed>지속 회복</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
         "zh": "使自身和生命值最低的友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Second_2000017"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Quo Vadis",
-        "kr": "쿠오 바디스",
         "jp": "クォ・ヴァディス",
+        "kr": "쿠오 바디스",
         "zh": "君往何处"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and grants a <color=#28d9ed>Barrier</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\nThe Barrier strength increases proportional to the caster's <color=#28d9ed>Attack</color>.",
-        "kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.\\n자신의 <color=#28d9ed>공격력</color>이 높을수록 실드의 효과가 증가합니다.",
         "jp": "敵全体にダメージを与え、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n自分の<color=#28d9ed>攻撃力</color>が高いほどシールド量がUPする。",
+        "kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.\\n자신의 <color=#28d9ed>공격력</color>이 높을수록 실드의 효과가 증가합니다.",
         "zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。\\n自身<color=#28d9ed>攻击力</color>越高,则护盾强度越高。"
       },
       "icon": "Skill_Ultimate_2000017"

@@ -2,14 +2,14 @@
   "id": "52000031",
   "Name": {
     "en": "Cindy",
-    "kr": "신디",
     "jp": "シンディ",
+    "kr": "신디",
     "zh": "欣蒂"
   },
   "Surname": {
     "en": "Adventurers' Guild Receptionist",
-    "kr": "모험가 조합 접수원",
     "jp": "冒険者連盟の受付嬢",
+    "kr": "모험가 조합 접수원",
     "zh": "冒险家协会接待员"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Water Tower 15F",
-      "kr": "물의 탑 15층",
       "jp": "水の塔15階",
+      "kr": "물의 탑 15층",
       "zh": "水之塔第15层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40212015",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Shooting Crystal",
-        "kr": "슈팅 크리스탈",
         "jp": "シューティングクリスタル",
+        "kr": "슈팅 크리스탈",
         "zh": "水晶四射"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy.\\nDeals damage proportional to the caster's <color=#28d9ed>Speed</color>.",
-        "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
+        "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
         "zh": "攻击敌人。\\n自身<color=#28d9ed>速度</color>越高,则该技能的伤害越高。"
       },
       "icon": "Skill_First_2000031"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Shine Crystal",
-        "kr": "샤인 크리스탈",
         "jp": "シャイニークリスタル",
+        "kr": "샤인 크리스탈",
         "zh": "闪耀水晶"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Increases all allies' <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> for <color=#28d9ed>1</color> turns.",
-        "kr": "<color=#28d9ed>1턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 증가시킵니다.",
         "jp": "味方全体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>が<color=#28d9ed>1</color>ターンの間UPする。",
+        "kr": "<color=#28d9ed>1턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 증가시킵니다.",
         "zh": "在<color=#28d9ed>1</color>回合内提高全体友军的<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>。"
       },
       "icon": "Skill_Second_2000031"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Storm Crystal",
-        "kr": "스톰 크리스탈",
         "jp": "アストラクリスタル",
+        "kr": "스톰 크리스탈",
         "zh": "风暴水晶"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to increase the duration of <color=#28d9ed>buffs</color> for all allies for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で味方全体の<color=#28d9ed>強化効果</color>の持続ターンを<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的几率使全体友军的<color=#28d9ed>强化效果</color>持续时间增加<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_Ultimate_2000031"

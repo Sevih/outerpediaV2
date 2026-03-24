@@ -2,8 +2,8 @@
   "id": "5050025",
   "Name": {
     "en": "Ghost Haunter",
-    "kr": "유령 폴터가이스트",
     "jp": "ポルターゴースト",
+    "kr": "유령 폴터가이스트",
     "zh": "喧闹幽灵"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Darkness 6F",
-      "kr": "암흑의 탑 6층",
       "jp": "闇の塔 6階",
+      "kr": "암흑의 탑 6층",
       "zh": "黑暗之塔 1层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40242006",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Floating Objects",
-        "kr": "부유 물체",
         "jp": "浮遊物体",
+        "kr": "부유 물체",
         "zh": "浮游物体"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "When using a skill, attacks an enemy and, with a <color=#28d9ed>25%</color> chance, decreases the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>1</color> turns.",
-        "kr": "스킬 사용 시 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 감소시키고 적을 공격합니다.",
         "jp": "スキル使用時、敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で<color=#28d9ed>1</color>ターンの間、対象の<color=#28d9ed>防御力</color>を減少させる。",
+        "kr": "스킬 사용 시 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 감소시키고 적을 공격합니다.",
         "zh": "使用技能时攻击敌人,并以<color=#28d9ed>25%</color>的概率在<color=#28d9ed>1</color>回合内降低目标<color=#28d9ed>防御力</color>。"
       },
       "icon": "MT_Attack_Arrow_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Psychic Phenomenon",
-        "kr": "심령 현상",
         "jp": "心霊現象",
+        "kr": "심령 현상",
         "zh": "灵异现象"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to reduce the target's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 감소시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>25%</color>の確率で対象の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間DOWNさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 감소시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率使目标的<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Arrow_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Tombstone Drop",
-        "kr": "묘비 낙하",
         "jp": "墓石落下",
+        "kr": "묘비 낙하",
         "zh": "墓碑坠落"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Arrow_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "The Shadow Behind",
-        "kr": "배후의 그림자",
         "jp": "背後の影",
+        "kr": "배후의 그림자",
         "zh": "身后的暗影"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWhen hit by an AoE attack, increases own Priorty by <color=#28d9ed>10%</color>.\\nAt the start of battle, increases <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2</color> turns.",
-        "kr": "(패시브 효과)\\n전체 공격 피격 시 자신의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
         "jp": "(パッシブ効果)\\n全体攻撃を受けた時、自身の行動ゲージが<color=#28d9ed>10%</color>UPする。\\n戦闘開始時、<color=#28d9ed>[Turn]</color>ターンの間<color=#28d9ed>効果命中</color>がUPする。",
+        "kr": "(패시브 효과)\\n전체 공격 피격 시 자신의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
         "zh": "(被动效果)\\n受到全体攻击时,自身行动条增加<color=#28d9ed>10%</color>。\\n战斗开始时,在<color=#28d9ed>2</color>回合内提高<color=#28d9ed>效果命中</color>。"
       },
       "icon": "MT_Passive_1_Earth"

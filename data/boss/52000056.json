@@ -2,14 +2,14 @@
   "id": "52000056",
   "Name": {
     "en": "Notia",
-    "kr": "노티아",
     "jp": "ノティア",
+    "kr": "노티아",
     "zh": "诺缇亚"
   },
   "Surname": {
     "en": "Paladin of Earth",
-    "kr": "대지의 성기사",
     "jp": "大地の使徒",
+    "kr": "대지의 성기사",
     "zh": "土之圣骑士"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 33F",
-      "kr": "대지의 탑 33층",
       "jp": "大地の塔33階",
+      "kr": "대지의 탑 33층",
       "zh": "土之塔第33层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222033",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Nimble Dance",
-        "kr": "기민한 검무",
         "jp": "斬閃剣舞",
+        "kr": "기민한 검무",
         "zh": "灵巧剑舞"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>[buff_v_tower_element_52541_0]</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, the effect is applied to <color=#28d9ed>all allies</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[buff_v_tower_element_52541_0]</color> 증가시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 <color=#28d9ed>아군 전체</color>에게 효과가 적용됩니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>[buff_v_tower_element_52541_0]</color>UPさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、<color=#28d9ed>味方全体</color>に効果が発動する。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[buff_v_tower_element_52541_0]</color> 증가시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 <color=#28d9ed>아군 전체</color>에게 효과가 적용됩니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>[buff_v_tower_element_52541_0]</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,将对<color=#28d9ed>全体友军</color>生效。"
       },
       "icon": "Skill_First_2000056"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Swift Support",
-        "kr": "재빠른 조력자",
         "jp": "加勢",
+        "kr": "재빠른 조력자",
         "zh": "敏捷帮手"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) Activates <color=#28d9ed>Crystal Storm</color> when an ally lands a debuff on an enemy on their turn.\\n\\n<color=#28d9ed>Crystal Storm</color>: Attacks all enemies, and inflicts reduced <color=#28d9ed>Attack</color> on all targets for <color=#28d9ed>[buff_t_tower_element_52542_1] turn(s)</color>.\\nIf the caster has <color=#28d9ed>Fierce Offensive</color>, inflicts <color=#28d9ed>Poisoned</color> on all enemies for <color=#28d9ed>[buff_t_tower_element_52542_1] turn(s)</color>. If the target is a <color=#28d9ed>Healer</color>, additionally inflicts <color=#28d9ed>Silenced</color>.",
-        "kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>결정 쇄도</color>를 사용합니다.\\n\\n<color=#28d9ed>결정 쇄도</color> : 적 전체를 공격하고 <color=#28d9ed>[buff_t_tower_element_52542_1]턴</color> 동안 대상 전체의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 적 전체에게 <color=#28d9ed>[buff_t_tower_element_52542_1]턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상이 <color=#28d9ed>회복형</color>이라면 추가적으로 <color=#28d9ed>침묵</color>을 부여합니다.",
         "jp": "(発動効果)味方が自分のターンで敵に弱体効果を付与した場合、<color=#28d9ed>【大地の烈斬】</color>を使用する。\\n\\n<color=#28d9ed>【大地の烈斬】</color>:敵全体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>[buff_t_tower_element_52542_1]ターン</color>の間DOWNさせる。\\n<color=#28d9ed>【アースエッジ】</color>がある場合、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>[buff_t_tower_element_52542_1]ターン</color>の間付与する。対象が<color=#28d9ed>回復型</color>の場合、追加で<color=#28d9ed>沈黙</color>を付与する。",
+        "kr": "(발동 효과) 아군 팀이 자신의 턴에 적에게 약화 효과 적중 시 <color=#28d9ed>결정 쇄도</color>를 사용합니다.\\n\\n<color=#28d9ed>결정 쇄도</color> : 적 전체를 공격하고 <color=#28d9ed>[buff_t_tower_element_52542_1]턴</color> 동안 대상 전체의 <color=#28d9ed>공격력</color>을 감소시킵니다.\\n<color=#28d9ed>매서운 공세</color> 보유 시 적 전체에게 <color=#28d9ed>[buff_t_tower_element_52542_1]턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다. 대상이 <color=#28d9ed>회복형</color>이라면 추가적으로 <color=#28d9ed>침묵</color>을 부여합니다.",
         "zh": "(触发效果)友军在自身回合对敌人造成弱化效果时,使用<color=#28d9ed>晶体风暴</color>。\\n\\n<color=#28d9ed>晶体风暴</color>:攻击全体敌人,并使全体目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>[buff_t_tower_element_52542_1]回合</color>。\\n附带<color=#28d9ed>猛烈攻势</color>效果时,对全体敌人造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>[buff_t_tower_element_52542_1]回合</color>。若目标为<color=#28d9ed>恢复型</color>,则额外造成<color=#28d9ed>沉默</color>效果。"
       },
       "icon": "Skill_Second_2000056"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Crystalline Waltz",
-        "kr": "대지의 원무",
         "jp": "大地の輪舞",
+        "kr": "대지의 원무",
         "zh": "大地圆舞曲"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. After attacking, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>[buff_v_tower_element_52543_1]</color>, and grants <color=#28d9ed>Fierce Offensive</color> for <color=#28d9ed>[buff_t_tower_element_52543_0] turn(s)</color>.",
-        "kr": "적 전체를 공격합니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[buff_v_tower_element_52543_1]</color> 증가시키고, <color=#28d9ed>[buff_t_tower_element_52543_0]턴</color> 동안 <color=#28d9ed>매서운 공세</color>를 획득합니다.",
         "jp": "敵全体にダメージを与える。攻撃後、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>[buff_v_tower_element_52543_1]</color>UPさせる。また、<color=#28d9ed>[buff_t_tower_element_52543_0]ターン</color>の間<color=#28d9ed>【アースエッジ】</color>を獲得する。",
+        "kr": "적 전체를 공격합니다. 공격 후 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[buff_v_tower_element_52543_1]</color> 증가시키고, <color=#28d9ed>[buff_t_tower_element_52543_0]턴</color> 동안 <color=#28d9ed>매서운 공세</color>를 획득합니다.",
         "zh": "攻击全体敌人。攻击后,使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>[buff_v_tower_element_52543_1]</color>,并获得<color=#28d9ed>猛烈攻势</color>效果,持续<color=#28d9ed>[buff_t_tower_element_52543_0]回合</color>。"
       },
       "icon": "Skill_Ultimate_2000056"

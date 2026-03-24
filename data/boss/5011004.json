@@ -2,8 +2,8 @@
   "id": "5011004",
   "Name": {
     "en": "Planet Purification Unit",
-    "kr": "행성 정화 유닛",
     "jp": "惑星浄化ユニット",
+    "kr": "행성 정화 유닛",
     "zh": "净化行星单位"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 50F",
-      "kr": "화염의 탑 50층",
       "jp": "火の塔50階",
+      "kr": "화염의 탑 50층",
       "zh": "火之塔第50层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202050",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Command: Restrain",
-        "kr": "명령 : 제압",
         "jp": "命令:制圧",
+        "kr": "명령 : 제압",
         "zh": "命令:压制"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and inflicts <color=#28d9ed>Stunned</color> and <color=#28d9ed>Burned</color> for 1 turn.",
-        "kr": "적을 공격하고 1턴 동안 <color=#28d9ed>스턴</color>과 <color=#28d9ed>화상</color> 상태를 부여합니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>スタン</color>と<color=#28d9ed>火傷</color>を1ターンの間付与する。",
+        "kr": "적을 공격하고 1턴 동안 <color=#28d9ed>스턴</color>과 <color=#28d9ed>화상</color> 상태를 부여합니다.",
         "zh": "攻击敌人,并使其陷入<color=#28d9ed>晕眩</color>状态和<color=#28d9ed>烧伤</color>状态,持续1回合。"
       },
       "icon": "Skill_First_4054001"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Command: Incapacitate",
-        "kr": "명령 : 무력화",
         "jp": "命令:無力化",
+        "kr": "명령 : 무력화",
         "zh": "命令:无效化"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and inflicts <color=#28d9ed>Burned</color> for <color=#28d9ed>2 turns</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태를 부여합니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태를 부여합니다.",
         "zh": "攻击全体敌人,并使其陷入<color=#28d9ed>烧伤</color>状态,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Second_4054001"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Command: Destroy",
-        "kr": "명령 : 파괴",
         "jp": "命令:破壊",
+        "kr": "명령 : 파괴",
         "zh": "命令:破坏"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "<color=#28d9ed>Removes all</color> <color=#28d9ed>buffs</color> from the enemy, then attacks. Damage dealt increases proportional to the <color=#28d9ed>number of debuffs</color>.",
-        "kr": "적의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color> 후 공격합니다. <color=#28d9ed>약화 효과 개수</color>에 비례하여 대미지가 증가합니다.",
         "jp": "敵の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>した後、攻撃する。<color=#28d9ed>弱体効果</color>が多いほどダメージがUPする。",
+        "kr": "적의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color> 후 공격합니다. <color=#28d9ed>약화 효과 개수</color>에 비례하여 대미지가 증가합니다.",
         "zh": "<color=#28d9ed>解除敌人的所有</color><color=#28d9ed>强化效果</color>后,发动攻击。根据<color=#28d9ed>弱化效果数量</color>等比提升伤害。"
       },
       "icon": "Skill_Ultimate_4054001"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Terminal: Protect Weakness",
-        "kr": "단말 : 약점 보호",
         "jp": "端末:弱点保護",
+        "kr": "단말 : 약점 보호",
         "zh": "终端:保护弱点"
       },
       "type": "SKT_MONSTER_3",
       "description": {
         "en": "(Passive Effect) When an enemy is defeated, inflicts Stunned on <color=#28d9ed>all enemies for 2 turns</color>, and recovers Weakness Gauge of the caster by 100%.\\nRecovers 4 Weakness Gauge every turn, and if the target is Burned, grants a Barrier and increased Speed for 3 turns.\\n(Triggered Effect) When an enemy uses a <color=#28d9ed>non-attack skill</color>, activates Command: Restrain on the target.",
-        "kr": "(패시브 효과) 적 처치 시 <color=#28d9ed>적 전체 2턴</color>동안 스턴 상태가 되며 ,자신의 WG를 100% 회복하게 됩니다.\\n매 턴 WG 4 회복하며, 공격 대상이 화상 상태 일 때 3턴 동안 실드 및 속도가 증가합니다.\\n(발동 효과) 적이 <color=#28d9ed>공격이 아닌 스킬</color>사용 시 대상에게 명령:제압을 사용합니다.",
         "jp": "(パッシブ効果)敵が<color=#28d9ed>攻撃以外のスキル</color>を使用時、対象に【命令:制圧】を使用する。\\n\\n敵を倒した時、<color=#28d9ed>敵全体</color>にスタンを<color=#28d9ed>2ターン</color>の間付与し、自分のWGを100%回復する。\\n\\n(発動効果)毎ターンWGを4回復し、攻撃対象が火傷状態の場合、シールドを3ターンの間付与し、スピードが3ターンの間UPする。",
+        "kr": "(패시브 효과) 적 처치 시 <color=#28d9ed>적 전체 2턴</color>동안 스턴 상태가 되며 ,자신의 WG를 100% 회복하게 됩니다.\\n매 턴 WG 4 회복하며, 공격 대상이 화상 상태 일 때 3턴 동안 실드 및 속도가 증가합니다.\\n(발동 효과) 적이 <color=#28d9ed>공격이 아닌 스킬</color>사용 시 대상에게 명령:제압을 사용합니다.",
         "zh": "(被动效果)击杀敌人时,使全体敌人陷入晕眩状态,持续<color=#28d9ed>2回合</color>,并使自身的WG恢复100%。\\n每回合使WG恢复4,若攻击目标处于烧伤状态,则使护盾和速度提升,持续3回合。\\n(触发效果)敌人使用<color=#28d9ed>非攻击类技能</color>时,对目标发动命令:压制。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>70%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Initiate World Transformation</color>: Used when Enraged ends.\\nRemoves all <color=#28d9ed>buffs</color> from all enemies and deals heavy damage. This attack ignores the target's <color=#28d9ed>Defense</color> and <color=#28d9ed>Resilience</color>.",
-        "kr": "최대 체력의 <color=#28d9ed>70%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>세계 변용 개시</color> : 광폭화 종료 시 사용.\\n적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 큰 피해를 입힙니다. 이 공격은 대상의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 저항</color>을 무시합니다.",
         "jp": "最大HPの<color=#28d9ed>70%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>: 自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【世界変容の始まり】</color>: 【狂暴化】終了時に発動する。\\n敵全体の<color=#28d9ed>強化効果</color>をすべて解除した後、大ダメージを与える。この攻撃は対象の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果抵抗</color>を無視する。",
+        "kr": "최대 체력의 <color=#28d9ed>70%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>세계 변용 개시</color> : 광폭화 종료 시 사용.\\n적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 큰 피해를 입힙니다. 이 공격은 대상의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 저항</color>을 무시합니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>70%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>世界之变开始</color>:狂暴化结束时发动。\\n解除全体敌人的所有<color=#28d9ed>强化效果</color>,并造成巨额伤害。该攻击无视目标的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果抵抗</color>。"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -118,15 +118,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER2",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Initiate World Transformation</color>: Used when Enraged ends.\\nRemoves all <color=#28d9ed>buffs</color> from all enemies and deals heavy damage. This attack ignores the target's <color=#28d9ed>Defense</color> and <color=#28d9ed>Resilience</color>.",
-        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>세계 변용 개시</color> : 광폭화 종료 시 사용.\\n적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 큰 피해를 입힙니다. 이 공격은 대상의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 저항</color>을 무시합니다.",
         "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>: 自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【世界変容の始まり】</color>: 【狂暴化】終了時に発動する。\\n敵全体の<color=#28d9ed>強化効果</color>をすべて解除した後、大ダメージを与える。このスキルは対象の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果抵抗</color>を無視する。",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>세계 변용 개시</color> : 광폭화 종료 시 사용.\\n적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 큰 피해를 입힙니다. 이 공격은 대상의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 저항</color>을 무시합니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>世界之变开始</color>:狂暴化结束时发动。\\n解除全体敌人的所有<color=#28d9ed>强化效果</color>,并造成巨额伤害。该攻击无视目标的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果抵抗</color>。"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -134,15 +134,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH2",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

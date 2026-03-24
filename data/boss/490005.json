@@ -2,8 +2,8 @@
   "id": "490005",
   "Name": {
     "en": "Deformed Inferior Core",
-    "kr": "변형된 열화 코어",
     "jp": "異形の劣化コア",
+    "kr": "변형된 열화 코어",
     "zh": "变形的烈火核心"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Hard 9F",
-      "kr": "비천의 탑 [하드] 9층",
       "jp": "飛天の塔【ハード】9階",
+      "kr": "비천의 탑 [하드] 9층",
       "zh": "飞天之塔【困难】第9层"
     },
     "mode": {
       "en": "Skyward Tower - Hard",
-      "kr": "비천의 탑 하드",
       "jp": "飛天の塔 ハード",
+      "kr": "비천의 탑 하드",
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
       "en": "40102009",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Proactive Scorching",
-        "kr": "능동적 화상 부여",
         "jp": "能動的火傷付与",
+        "kr": "능동적 화상 부여",
         "zh": "主动赋予烧伤"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks all enemies and inflicts <color=#28d9ed>Burned</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격하며 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하며 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击全体敌人,并造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Proactive Burn Detonation",
-        "kr": "능동적 화상 폭발",
         "jp": "能動的火傷破裂",
+        "kr": "능동적 화상 폭발",
         "zh": "主动爆炸烧伤"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and if they have any stacks of <color=#28d9ed>Burned</color>, detonates them, dealing all their damage at once.",
-        "kr": "적 전체를 공격하며 <color=#28d9ed>화상</color>이 있을 경우 한번에 폭발시켜 피해를 입힙니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>火傷</color>状態の場合、一度に破裂させてダメージを与える。",
+        "kr": "적 전체를 공격하며 <color=#28d9ed>화상</color>이 있을 경우 한번에 폭발시켜 피해를 입힙니다.",
         "zh": "攻击全体敌人,若有<color=#28d9ed>烧伤</color>效果,则一次全部爆炸并造成伤害。"
       },
       "icon": "MT_Attack_Magic_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Core Overdrive",
-        "kr": "코어 오버드라이브",
         "jp": "コアオーバードライブ",
+        "kr": "코어 오버드라이브",
         "zh": "核心过载"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color> at the start of battle.",
-        "kr": "(패시브 효과)\\n전투 개시 시점에 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n戦闘開始時、<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>100%</color>UPする。",
+        "kr": "(패시브 효과)\\n전투 개시 시점에 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
         "zh": "(被动效果)\\n在战斗开始时,使<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。"
       },
       "icon": "MT_Passive_1_Light"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Epsilon Pain Control I",
-        "kr": "엡실론의 고통 제어 I",
         "jp": "イプシロンの苦痛制御I",
+        "kr": "엡실론의 고통 제어 I",
         "zh": "埃普西隆痛苦控制I"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces damage taken from attacks that target all enemies by <color=#28d9ed>20%</color>.\\nIncreases damage taken from single-target attacks by <color=#28d9ed>20%</color>.",
-        "kr": "(패시브 효과)\\n전체 공격으로 입는 피해량이 <color=#28d9ed>20%</color> 감소합니다.\\n단일 공격으로 입는 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n全体攻撃で受けるダメージが<color=#28d9ed>20%</color>DOWNする。\\n単体攻撃で受けるダメージが<color=#28d9ed>20%</color>UPする。",
+        "kr": "(패시브 효과)\\n전체 공격으로 입는 피해량이 <color=#28d9ed>20%</color> 감소합니다.\\n단일 공격으로 입는 피해량이 <color=#28d9ed>20%</color> 증가합니다.",
         "zh": "(被动效果)\\n使因全体攻击受到的伤害量降低<color=#28d9ed>20%</color>。\\n使因单体攻击受到的伤害量提升<color=#28d9ed>20%</color>。"
       },
       "icon": "MT_Passive_1_Light"

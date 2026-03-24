@@ -2,14 +2,14 @@
   "id": "62005013",
   "Name": {
     "en": "Fenrir",
-    "kr": "펜리르",
     "jp": "フェンリル",
+    "kr": "펜리르",
     "zh": "芬里尔"
   },
   "Surname": {
     "en": "Lone Wolf",
-    "kr": "고독한 늑대",
     "jp": "仇討ちに狂う山賊王",
+    "kr": "고독한 늑대",
     "zh": "孤狼"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 55F",
-      "kr": "화염의 탑 55층",
       "jp": "火の塔55階",
+      "kr": "화염의 탑 55층",
       "zh": "火之塔第55层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202055",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "The Wolf King's Fangs",
-        "kr": "늑대왕의 엄니",
         "jp": "狼王の牙",
+        "kr": "늑대왕의 엄니",
         "zh": "狼王的獠牙"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and <color=#28d9ed>recovers</color> <color=#28d9ed>10%</color> of damage dealt as Health.",
-        "kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 체력을 <color=#28d9ed>회복</color>합니다.",
         "jp": "敵単体にダメージを与え、ダメージの<color=#28d9ed>10%</color>のHPを<color=#28d9ed>回復</color>する。",
+        "kr": "적을 공격하고 피해량의 <color=#28d9ed>10%</color>만큼 체력을 <color=#28d9ed>회복</color>합니다.",
         "zh": "攻击敌人,并<color=#28d9ed>恢复</color>相当于伤害量<color=#28d9ed>10%</color>的\\n生命值。"
       },
       "icon": "Skill_First_2000034"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Die, Coward!",
-        "kr": "겁쟁이는 죽어라!!",
         "jp": "虚空断",
+        "kr": "겁쟁이는 죽어라!!",
         "zh": "胆小鬼去死吧!"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy.\\nDamage dealt increases if the target has a <color=#28d9ed>Barrier</color>.",
-        "kr": "적을 공격합니다.\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "kr": "적을 공격합니다.\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
         "zh": "攻击敌人。\\n目标附带<color=#28d9ed>护盾</color>效果时,使该技能的伤害提升。"
       },
       "icon": "Skill_Second_2000034"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Slay",
-        "kr": "숨통 끊기",
         "jp": "讐猟閃斧",
+        "kr": "숨통 끊기",
         "zh": "断气"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>missing Health</color>.",
-        "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>残りHP</color>が低いほどダメージがUPする。",
+        "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 피해가 증가합니다.",
         "zh": "攻击敌人。\\n自身的<color=#28d9ed>当前生命值</color>越低,则该技能的伤害越高。"
       },
       "icon": "Skill_Ultimate_2000034"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Survival Instinct",
-        "kr": "생존 본능",
         "jp": "生存本能",
+        "kr": "생존 본능",
         "zh": "生存本能"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWhen hit by an <color=#28d9ed>area of effect attack</color>, reduces damage taken by <color=#28d9ed>30%</color> and recovers Health of the caster by <color=#28d9ed>10%</color>.",
-        "kr": "(패시브 효과)\\n<color=#28d9ed>범위 공격</color>피격 시 피해량이 <color=#28d9ed>30%</color> 감소 하며, 자신의 체력을 <color=#28d9ed>10%</color> 회복합니다.",
         "jp": "(パッシブ効果)\\n<color=#28d9ed>範囲攻撃</color>でダメージを受けた場合、ダメージが<color=#28d9ed>30%</color>DOWNし、自分のHPが<color=#28d9ed>10%</color>回復する。",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>범위 공격</color>피격 시 피해량이 <color=#28d9ed>30%</color> 감소 하며, 자신의 체력을 <color=#28d9ed>10%</color> 회복합니다.",
         "zh": "(被动效果)\\n受到<color=#28d9ed>范围攻击</color>时,使伤害量降低<color=#28d9ed>30%</color>,并使自身生命值恢复<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Flames",
-        "kr": "화염의 탑의 가호",
         "jp": "火炎の塔の加護",
+        "kr": "화염의 탑의 가호",
         "zh": "火焰之塔的庇佑"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Fire"

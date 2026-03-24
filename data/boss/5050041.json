@@ -2,14 +2,14 @@
   "id": "5050041",
   "Name": {
     "en": "Faenan",
-    "kr": "파이난",
     "jp": "ファイナン",
+    "kr": "파이난",
     "zh": "菲楠"
   },
   "Surname": {
     "en": "Curious Priestess",
-    "kr": "호기심 많은 사제",
     "jp": "冒険に憧れる見習い神官",
+    "kr": "호기심 많은 사제",
     "zh": "充满好奇心的祭司"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Darkness 18F",
-      "kr": "암흑의 탑 18층",
       "jp": "闇の塔 18階",
+      "kr": "암흑의 탑 18층",
       "zh": "黑暗之塔 1层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40242018",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Luster Explosion",
-        "kr": "광휘폭발",
         "jp": "ライトバースト",
+        "kr": "광휘폭발",
         "zh": "光辉爆炸"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy.\\nDamage increases greatly if all other allies have died.",
-        "kr": "적을 공격합니다.\\n아군이 모두 사망한 상태라면 피해량이 매우 크게 증가합니다.",
         "jp": "敵単体にダメージを与える。\\n味方全体が倒れている場合、ダメージがさらに大幅UPする。",
+        "kr": "적을 공격합니다.\\n아군이 모두 사망한 상태라면 피해량이 매우 크게 증가합니다.",
         "zh": "攻击敌人。\\n若友军全部死亡,则使伤害量大幅提升。"
       },
       "icon": "Skill_First_2000027"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Lunar Protection",
-        "kr": "달의 가호",
         "jp": "月女神のご加護",
+        "kr": "달의 가호",
         "zh": "月之庇护"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Fully heals the <color=#28d9ed>Health</color> of all allies except the caster.",
-        "kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 모두 회복시킵니다.",
         "jp": "自分以外の味方全体の<color=#28d9ed>HP</color>を全回復させる。",
+        "kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 모두 회복시킵니다.",
         "zh": "使除自身外全体友军的<color=#28d9ed>生命值</color>全部恢复。"
       },
       "icon": "Skill_Ultimate_2000027"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Persistent Resistance",
-        "kr": "끈질긴 저항",
         "jp": "しぶとい抵抗",
+        "kr": "끈질긴 저항",
         "zh": "顽强的抵抗"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Defense</color> proportional to missing Health. <color=#28d9ed>Defense</color> can increase up to <color=#28d9ed>160%</color>.",
-        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다. <color=#28d9ed>방어력</color>은 최대 <color=#28d9ed>160%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n残りHPが低いほど<color=#28d9ed>防御力</color>がUPする。<color=#28d9ed>防御力</color>は最大<color=#28d9ed>160%</color>UPする。",
+        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다. <color=#28d9ed>방어력</color>은 최대 <color=#28d9ed>160%</color> 증가합니다.",
         "zh": "(被动效果)\\n生命值越低,<color=#28d9ed>防御力</color>越高。<color=#28d9ed>防御力</color>最多提升\\n<color=#28d9ed>160%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Darkness",
-        "kr": "어둠의 탑의 가호",
         "jp": "闇の塔の加護",
+        "kr": "어둠의 탑의 가호",
         "zh": "暗之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Dark"

@@ -2,14 +2,14 @@
   "id": "62000017",
   "Name": {
     "en": "Claire",
-    "kr": "클레어",
     "jp": "クレア",
+    "kr": "클레어",
     "zh": "克莱尔"
   },
   "Surname": {
     "en": "The Owner of the Black Scripture",
-    "kr": "검은 성서의 주인",
     "jp": "苦痛と絶望の主に仕える眷属",
+    "kr": "검은 성서의 주인",
     "zh": "黑色圣书的主人"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 8F",
-      "kr": "화염의 탑 8층",
       "jp": "火の塔8階",
+      "kr": "화염의 탑 8층",
       "zh": "火之塔第8层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202008",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Penetrating Tentacles",
-        "kr": "꿰뚫는 촉수",
         "jp": "触手の槌",
+        "kr": "꿰뚫는 촉수",
         "zh": "触手穿刺"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to increase the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_First_2000017"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Invocation of Evil",
-        "kr": "사악한 영혼의 기도",
         "jp": "邪悪なる魂の祈り",
+        "kr": "사악한 영혼의 기도",
         "zh": "邪灵的祈祷"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect) Increases Attack by <color=#28d9ed>5%</color>.\\n\\n(Active Effect) Grants <color=#28d9ed>Sustained Recovery</color> to the caster and the ally with the lowest Health for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "(패시브 효과) 공격력이 <color=#28d9ed>5%</color> 증가합니다.\\n\\n(액티브 효과) 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여하고, 가장 체력이 낮은 아군 한 명에게 동일한 효과를 적용합니다.",
         "jp": "(パッシブ効果)攻撃力が<color=#28d9ed>5%</color>UPする。\\n\\n(アクティブ効果)自分に<color=#28d9ed>継続回復</color>を<color=#28d9ed>2</color>ターンの間付与し、残りHPが最も低い味方単体に同じ効果を適用する。",
+        "kr": "(패시브 효과) 공격력이 <color=#28d9ed>5%</color> 증가합니다.\\n\\n(액티브 효과) 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여하고, 가장 체력이 낮은 아군 한 명에게 동일한 효과를 적용합니다.",
         "zh": "(被动效果)使攻击力提升<color=#28d9ed>5%</color>。\\n\\n(主动效果)使自身获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>2回合</color>,并使生命值最低的1名友军获得相同\\n效果。"
       },
       "icon": "Skill_Second_2000017"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Quo Vadis",
-        "kr": "쿠오 바디스",
         "jp": "クォ・ヴァディス",
+        "kr": "쿠오 바디스",
         "zh": "君往何处"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and grants a <color=#28d9ed>Barrier</color> to all allies for <color=#28d9ed>2 turn(s)</color>.\\nThe Barrier strength increases proportional to the caster's <color=#28d9ed>Attack</color>.",
-        "kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.\\n자신의 <color=#28d9ed>공격력</color>이 높을수록 실드의 효과가 증가합니다.",
         "jp": "敵全体にダメージを与え、味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n自分の<color=#28d9ed>攻撃力</color>が高いほどシールド量がUPする。",
+        "kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.\\n자신의 <color=#28d9ed>공격력</color>이 높을수록 실드의 효과가 증가합니다.",
         "zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。\\n自身<color=#28d9ed>攻击力</color>越高,则护盾强度越高。"
       },
       "icon": "Skill_Ultimate_2000017"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Fury Stack I",
-        "kr": "분노 중첩 I",
         "jp": "アンガースタック I",
+        "kr": "분노 중첩 I",
         "zh": "愤怒叠加 I"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>5%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>5%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>5%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>5%</color> 증가합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>5%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Flames",
-        "kr": "화염의 탑의 가호",
         "jp": "火炎の塔の加護",
+        "kr": "화염의 탑의 가호",
         "zh": "火焰之塔的庇佑"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Fire"

@@ -2,14 +2,14 @@
   "id": "62005107",
   "Name": {
     "en": "Regina",
-    "kr": "레지나",
     "jp": "レジーナ",
+    "kr": "레지나",
     "zh": "蕾吉纳"
   },
   "Surname": {
     "en": "Poolside Trickster",
-    "kr": "풀장의 트릭스터",
     "jp": "プールのトリックスター",
+    "kr": "풀장의 트릭스터",
     "zh": "泳池魔术师"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Water Tower 80F",
-      "kr": "물의 탑 80층",
       "jp": "水の塔80階",
+      "kr": "물의 탑 80층",
       "zh": "水之塔第80层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40212080",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Sparkling Water Bomb",
-        "kr": "스파클링 워터 밤",
         "jp": "スパークリングウォーターボム",
+        "kr": "스파클링 워터 밤",
         "zh": "闪光水花炸弹"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks all enemies. When an enemy is killed on the caster's turn, has a <color=#28d9ed>100%</color> chance to grant an <color=#28d9ed>extra turn</color> to the caster.",
-        "kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "jp": "敵全体にダメージを与える。自分のターンに敵を倒した時、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
+        "kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击全体敌人。自身回合击杀敌人时,有<color=#28d9ed>100%</color>几率获得<color=#28d9ed>额外回合</color>。"
       },
       "icon": "Skill_First_2000085"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Surprise Sand Castle",
-        "kr": "서프라이즈 샌드 캐슬",
         "jp": "サプライズサンドキャッスル",
+        "kr": "서프라이즈 샌드 캐슬",
         "zh": "惊喜沙堡"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy, then steals <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> of the target.\\nWhen the target is a <color=#28d9ed>Boss</color> or is not granted a <color=#28d9ed>buff</color>, activates an additional attack.",
-        "kr": "적을 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
         "jp": "敵単体にダメージを与えた後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\n対象が<color=#28d9ed>ボス</color>か、<color=#28d9ed>強化効果</color>がない場合、追加攻撃を与える。",
+        "kr": "적을 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
         "zh": "攻击敌人后,夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n若目标为<color=#28d9ed>首领</color>或未附带<color=#28d9ed>强化效果</color>,则造成额外攻击。"
       },
       "icon": "Skill_Second_2000085"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Grand Summer Escape",
-        "kr": "그랜드 서머 이스케이프",
         "jp": "グランドサマーエスケープ",
+        "kr": "그랜드 서머 이스케이프",
         "zh": "避暑大逃脱"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "When the target is not granted a dispellable <color=#28d9ed>buff</color>, reduces cooldown of <color=#28d9ed>Surprise Sand Castle</color> by <color=#28d9ed>99 turn(s)</color>, then attacks the enemy. This skill ignores <color=#28d9ed>30%</color> of the target's Defense.\\nAfter attacking, reduces all of the target's <color=#28d9ed>Unique Resource</color> count. (Ignores the target's Resilience and Immunity)",
-        "kr": "대상이 해제 가능한 <color=#28d9ed>강화 효과</color>를 가지고 있지 않다면 <color=#28d9ed>서프라이즈 샌드 캐슬</color>의 쿨타임을 <color=#28d9ed>99턴</color> 감소시킨 후 적을 공격합니다. 이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다. \\n공격 후 대상이 보유한 <color=#28d9ed>고유 자원</color>의 수량을 모두 감소시킵니다. (대상의 효과저항 및 면역 무시)",
         "jp": "対象に解除可能な<color=#28d9ed>強化効果</color>がない場合、<color=#28d9ed>【サプライズサンドキャッスル】</color>のスキルターンを<color=#28d9ed>99ターン</color>減少させた後、敵単体にダメージを与える。このスキルは対象の防御力を<color=#28d9ed>30%</color>無視する。\\n攻撃後、対象の<color=#28d9ed>固有資源</color>の数をすべて減少させる。(効果抵抗および免疫無視)",
+        "kr": "대상이 해제 가능한 <color=#28d9ed>강화 효과</color>를 가지고 있지 않다면 <color=#28d9ed>서프라이즈 샌드 캐슬</color>의 쿨타임을 <color=#28d9ed>99턴</color> 감소시킨 후 적을 공격합니다. 이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다. \\n공격 후 대상이 보유한 <color=#28d9ed>고유 자원</color>의 수량을 모두 감소시킵니다. (대상의 효과저항 및 면역 무시)",
         "zh": "若目标未附带可解除的<color=#28d9ed>强化效果</color>,则使<color=#28d9ed>惊喜沙堡</color>的冷却时间减少<color=#28d9ed>99回合</color>后,攻击敌人。该技能无视目标的<color=#28d9ed>30%</color>防御力。\\n攻击后,使目标持有的<color=#28d9ed>固有资源</color>数量全部降低。(无视目标的效果抵抗和免疫效果)"
       },
       "icon": "Skill_Ultimate_2000085"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Basic Trick",
-        "kr": "기초적인 트릭",
         "jp": "基本的なトリック",
+        "kr": "기초적인 트릭",
         "zh": "基础戏法"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nDoes not take WG damage from targets with Debuffs.",
-        "kr": "(패시브 효과)\\n약화 효과를 보유한 대상에게 WG 피해를 받지 않습니다.",
         "jp": "(パッシブ効果)\\n弱化効果を持つ対象からWGダメージを受けない。",
+        "kr": "(패시브 효과)\\n약화 효과를 보유한 대상에게 WG 피해를 받지 않습니다.",
         "zh": "(被动效果)\\n对拥有弱化效果的目标不会受到WG伤害。"
       },
       "icon": "MT_Passive_1_Water"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Water Tower",
-        "kr": "물의 탑의 가호",
         "jp": "水の塔の加護",
+        "kr": "물의 탑의 가호",
         "zh": "水之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Water"
@@ -123,15 +123,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>40%</color> of Max Health or lower. \\n\\n<color=#28d9ed>Enraged</color>: Attacks all enemies.\\nAfter becoming Enraged, permanently increases <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> and reduces <color=#28d9ed>damage taken</color>.",
-        "kr": "최대 체력의 <color=#28d9ed>40%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화</color> : 적 전체를 공격합니다. \\n광폭화 이후 영구적으로 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>가 증가하고 <color=#28d9ed>받는 피해</color>가 감소합니다.",
         "jp": "最大HPの<color=#28d9ed>40%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:敵全体にダメージを与える。狂暴化後、永続的に\\n攻撃力<color=#28d9ed>と</color>スピード<color=#28d9ed>がUPし、</color>受けるダメージ<color=#28d9ed>がDOWNする</color>。",
+        "kr": "최대 체력의 <color=#28d9ed>40%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화</color> : 적 전체를 공격합니다. \\n광폭화 이후 영구적으로 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>가 증가하고 <color=#28d9ed>받는 피해</color>가 감소합니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>40%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化</color>:攻击全体敌人。\\n狂暴化后永久获得<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提升,并使<color=#28d9ed>所受伤害</color>降低。"
       },
       "icon": "MT_Boss_Rage_Common_1"

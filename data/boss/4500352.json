@@ -2,8 +2,8 @@
   "id": "4500352",
   "Name": {
     "en": "Nella",
-    "kr": "넬라",
     "jp": "ネラ",
+    "kr": "넬라",
     "zh": "内拉"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "The Savior's End",
-      "kr": "구세의 결말",
       "jp": "救世の結末",
+      "kr": "구세의 결말",
       "zh": "救世的结局"
     },
     "mode": {
       "en": "Story (Hard)",
-      "kr": "스토리(하드)",
       "jp": "ストーリー(ハード)",
+      "kr": "스토리(하드)",
       "zh": "故事(困难)"
     },
     "area_id": {
       "en": "9-10",
-      "kr": "9-10",
       "jp": "9-10",
+      "kr": "9-10",
       "zh": "9-10"
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "False Grace",
-        "kr": "거짓된 은총",
         "jp": "偽りの恩寵",
+        "kr": "거짓된 은총",
         "zh": "虚假的恩宠"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks the enemy. On hit, triggers a <color=#28d9ed>Critical Hit</color>. This attack ignores <color=#28d9ed>100%</color> of the target's Defense, but also reduces all of the target's <color=#28d9ed>Skill Cooldowns</color>.",
-        "kr": "적을 공격합니다. 명중 시 <color=#28d9ed>치명 공격</color>이 발생합니다. 이 공격은 대상의 방어력을 <color=#28d9ed>100%</color> 무시하지만, 공격 받은 대상의 <color=#28d9ed>스킬 쿨타임</color>을 모두 감소시킵니다.",
         "jp": "敵単体にダメージを与える。命中時、<color=#28d9ed>会心ダメージ</color>が発生する。この攻撃は対象の防御力を<color=#28d9ed>100%</color>無視するが、攻撃された対象の<color=#28d9ed>スキルターン</color>を初期化させる。",
+        "kr": "적을 공격합니다. 명중 시 <color=#28d9ed>치명 공격</color>이 발생합니다. 이 공격은 대상의 방어력을 <color=#28d9ed>100%</color> 무시하지만, 공격 받은 대상의 <color=#28d9ed>스킬 쿨타임</color>을 모두 감소시킵니다.",
         "zh": "攻击敌人。命中时,触发<color=#28d9ed>暴击</color>。该攻击无视目标<color=#28d9ed>100%</color>的防御力,但会减少受到攻击目标的所有<color=#28d9ed>技能冷却时间</color>。"
       },
       "icon": "Skill_First_2000091"
@@ -54,70 +54,79 @@
     {
       "name": {
         "en": "Rules of Salvation",
-        "kr": "구세의 계율",
         "jp": "救世の戒葎",
+        "kr": "구세의 계율",
         "zh": "救世戒律"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies. After the attack, increases own <color=#28d9ed>Defense</color> for <color=#28d9ed>5 turns</color>. (Irremovable)\\nDeals more damage when fewer enemies remain.",
-        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다. (해제 불가)\\n이 공격은 대상이 적을수록 피해가 증가합니다.",
         "jp": "敵全体にダメージを与える。攻撃後<color=#28d9ed>防御力</color>が<color=#28d9ed>5ターン</color>の間UPする。(解除不可)\\nこの攻撃は対象が少ないほど与えるダメージがUPする。",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다. (해제 불가)\\n이 공격은 대상이 적을수록 피해가 증가합니다.",
         "zh": "攻击全体敌人。攻击后,在<color=#28d9ed>5回合</color>内<color=#28d9ed>防御力</color>提升。(无法解除)\\n此攻击目标越少,伤害越高。"
       },
       "icon": "Skill_Second_2000091",
-      "buff":["BT_STAT|ST_DEF_IR"]
+      "buff": [
+        "BT_STAT|ST_DEF_IR"
+      ]
     },
     {
       "name": {
         "en": "I Am the Sole Perfection",
-        "kr": "나 홀로 존귀하리라",
         "jp": "尊貴なる存在",
+        "kr": "나 홀로 존귀하리라",
         "zh": "唯我独尊"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. After the attack, decreases <color=#28d9ed>Penetration</color> of all enemies for <color=#28d9ed>9 turns</color>.",
-        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>9턴</color> 동안 적 전체의 <color=#28d9ed>관통력</color>을 감소시킵니다.",
         "jp": "敵全体にダメージを与える。攻撃後、敵全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>9ターン</color>の間DOWNさせる。",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>9턴</color> 동안 적 전체의 <color=#28d9ed>관통력</color>을 감소시킵니다.",
         "zh": "攻击全体敌人。攻击后,在<color=#28d9ed>9回合</color>内使全体敌人的<color=#28d9ed>穿透力</color>降低。"
       },
       "icon": "Skill_Ultimate_2000091",
-      "debuff":["BT_STAT|ST_PIERCE_POWER_RATE"]
+      "debuff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE"
+      ]
     },
     {
       "name": {
         "en": "Archdemon of the New Age",
-        "kr": "신시대의 마왕",
         "jp": "新時代の魔王",
+        "kr": "신시대의 마왕",
         "zh": "新时代的魔王"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "Increases damage dealt to enemies, and deals additional damage to enemies whose <color=#28d9ed>Pierce</color> has not been reduced.\\nAlways inflicts <color=#28d9ed>Weaken Boost</color> and <color=#28d9ed>Buff Block</color> on all enemies. (Irremovable)\\nDamage taken from curses and fixed damage will not exceed <color=#28d9ed>1000</color>, respectively.",
-        "kr": "적에게 주는 피해가 증가하며, <color=#28d9ed>관통력</color>이 감소하지 않은 적에게 입히는 피해가 추가로 증가합니다.\\n적 전체에게 항상 <color=#28d9ed>약화 촉진</color>과 <color=#28d9ed>강화 불가</color>를 부여합니다. (해제 불가)\\n저주 및 고정 피해로 받는 피해는 각각 <color=#28d9ed>1000</color>을 초과하지 않습니다.",
         "jp": "敵に与えるダメージがUPし、<color=#28d9ed>貫通力</color>がDOWNしない敵に与えるダメージが追加でUPする。\\n敵全体に<color=#28d9ed>弱体促進</color>と<color=#28d9ed>強化不可</color>を付与する。(解除不可)\\n呪い・固定ダメージで受けるダメージはそれぞれ<color=#28d9ed>1000</color>を超えない。",
+        "kr": "적에게 주는 피해가 증가하며, <color=#28d9ed>관통력</color>이 감소하지 않은 적에게 입히는 피해가 추가로 증가합니다.\\n적 전체에게 항상 <color=#28d9ed>약화 촉진</color>과 <color=#28d9ed>강화 불가</color>를 부여합니다. (해제 불가)\\n저주 및 고정 피해로 받는 피해는 각각 <color=#28d9ed>1000</color>을 초과하지 않습니다.",
         "zh": "对敌人造成的伤害提高, 且对未降低<color=#28d9ed>穿透力</color>的敌人造成的伤害将额外提升。\\n赋予全体敌人<color=#28d9ed>弱化促进</color>与<color=#28d9ed>无法强化</color>。(无法解除)\\n受到的诅咒与固定伤害均无法超过<color=#28d9ed>1000</color>。"
       },
       "icon": "MT_Passive_1_Light",
-      "debuff":["BT_SYS_BUFF_ENHANCE_DEBUFF_UP","IG_Buff_Effect_Sealed_Interruption_D"]
+      "debuff": [
+        "BT_SYS_BUFF_ENHANCE_DEBUFF_UP",
+        "IG_Buff_Effect_Sealed_Interruption_D"
+      ]
     },
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Enters <color=#28d9ed>Enraged</color> state every 30 enemy actions.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Instantly <color=#28d9ed>kills</color> all enemies. Enemies defeated by this skill cannot be revived or resurrected.",
-        "kr": "적이 30회 행동할 때 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체를 <color=#28d9ed>즉사</color> 시킵니다. 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "jp": "敵が30回行動するたびに<color=#28d9ed>【狂暴化】</color>状態に切り替える。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:敵全体を<color=#28d9ed>即死</color>させる。このスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "kr": "적이 30회 행동할 때 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체를 <color=#28d9ed>즉사</color> 시킵니다. 이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "zh": "每当敌人行动30次,将转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:使全体敌人<color=#28d9ed>立即死亡</color>。被此技能击杀的敌人无法复活或苏醒。"
       },
       "icon": "MT_Boss_Rage_Common_1",
-      "debuff":["BT_SEALED_RESURRECTION"]
+      "debuff": [
+        "BT_SEALED_RESURRECTION"
+      ]
     }
   ]
 }

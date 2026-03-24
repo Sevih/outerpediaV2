@@ -2,8 +2,8 @@
   "id": "40103031",
   "Name": {
     "en": "Deformed Inferior Core",
-    "kr": "변형된 열화 코어",
     "jp": "異形の劣化コア",
+    "kr": "변형된 열화 코어",
     "zh": "变形的烈火核心"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Very Hard 1F",
-      "kr": "비천의 탑 [베리 하드] 1층",
       "jp": "飛天の塔【ベリーハード】1階",
+      "kr": "비천의 탑 [베리 하드] 1층",
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
       "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "area_id": {
       "en": "40103001",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Initiate Supportive Sequence [Bleeding]",
-        "kr": "지원 시퀀스 가동 [출혈]",
         "jp": "支援シーケンス稼働【出血】",
+        "kr": "지원 시퀀스 가동 [출혈]",
         "zh": "支援代码启动【出血】"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks all enemies, inflicting <color=#28d9ed>Bleeding</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격하여 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color>동안 부여합니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하여 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color>동안 부여합니다.",
         "zh": "攻击全体敌人,造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Dark"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Incapacitation Protocol",
-        "kr": "무력화 프로토콜",
         "jp": "無力化プロトコル",
+        "kr": "무력화 프로토콜",
         "zh": "无效化协议"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>Invulnerability</color> and <color=#28d9ed>Immunity</color> to the caster.\\nAt the start of the turn, when an ally is inflicted with <color=#28d9ed>Stunned</color>, increases skill cooldowns of the caster by <color=#28d9ed>2 turns</color>.",
-        "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제 불가능한 <color=#28d9ed>무적</color> 및 <color=#28d9ed>면역</color>을 부여합니다.\\n턴 시작 시 아군 중 한 명이라도 <color=#28d9ed>스턴</color> 상태라면 자신의 스킬 쿨타임을 <color=#28d9ed>2턴</color> 증가시킵니다.",
         "jp": "(パッシブ効果)\\nターン開始時、自分に解除不可能な<color=#28d9ed>無敵</color>と<color=#28d9ed>免疫</color>を付与する。\\nターン開始時、<color=#28d9ed>スタン</color>状態の味方がいる場合、自分のスキルターンを<color=#28d9ed>2ターン</color>増加させる。",
+        "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제 불가능한 <color=#28d9ed>무적</color> 및 <color=#28d9ed>면역</color>을 부여합니다.\\n턴 시작 시 아군 중 한 명이라도 <color=#28d9ed>스턴</color> 상태라면 자신의 스킬 쿨타임을 <color=#28d9ed>2턴</color> 증가시킵니다.",
         "zh": "(被动效果)\\n战斗开始时,使自身获得无法被解除的<color=#28d9ed>无敌</color>和<color=#28d9ed>免疫</color>效果。\\n回合开始时,只要存在一名处于<color=#28d9ed>晕眩</color>状态的友军,则自身的技能冷却时间增加<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Proactive Bleeding Detonation",
-        "kr": "능동적 출혈 폭발",
         "jp": "能動的出血破裂",
+        "kr": "능동적 출혈 폭발",
         "zh": "主动爆炸出血"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies, and detonates all Bleeding effects on the target. Increases damage dealt by detonation by <color=#28d9ed>900%</color>.",
-        "kr": "적 전체를 공격하고, 대상의 출혈을 모두 폭발 시킵니다. 폭발에 의한 피해는 <color=#28d9ed>900%</color> 증가합니다.",
         "jp": "敵全体にダメージを与え、対象の出血をすべて破裂させる。破裂のダメージが<color=#28d9ed>900%</color>UPする。",
+        "kr": "적 전체를 공격하고, 대상의 출혈을 모두 폭발 시킵니다. 폭발에 의한 피해는 <color=#28d9ed>900%</color> 증가합니다.",
         "zh": "攻击全体敌人,并引爆目标身上的所有出血效果。爆发造成的伤害提升<color=#28d9ed>900%</color>。"
       },
       "icon": "MT_Attack_Magic_1_Dark"

@@ -2,14 +2,14 @@
   "id": "5040042",
   "Name": {
     "en": "Francesca",
-    "kr": "프란시스카",
     "jp": "フランシスカ",
+    "kr": "프란시스카",
     "zh": "弗朗西丝卡"
   },
   "Surname": {
     "en": "Bloodthirsty Brawler",
-    "kr": "피에 중독된 싸움꾼",
     "jp": "血に飢えたケンカ好き魔族",
+    "kr": "피에 중독된 싸움꾼",
     "zh": "嗜血战斗狂"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Light 32F",
-      "kr": "빛의 탑 32층",
       "jp": "光の塔 32階",
+      "kr": "빛의 탑 32층",
       "zh": "光之塔 32层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40232032",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Pretzel",
-        "kr": "프레즐",
         "jp": "プレッツェル",
+        "kr": "프레즐",
         "zh": "椒盐卷饼"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_First_2000015"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Pilgrimage",
-        "kr": "필그림에이지",
         "jp": "ピルグリムエイジ",
+        "kr": "필그림에이지",
         "zh": "朝圣"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>. Performs an <color=#28d9ed>additional attack</color> if the target is successfully inflicted with <color=#28d9ed>Bleeding</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 동일한 대상에게 <color=#28d9ed>추가 공격</color>을 사용합니다.",
         "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。対象が<color=#28d9ed>出血</color>状態の場合、同じ対象に<color=#28d9ed>追加攻撃</color>を与える。",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 동일한 대상에게 <color=#28d9ed>추가 공격</color>을 사용합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。若目标处于<color=#28d9ed>出血</color>状态,则对该目标发动<color=#28d9ed>额外攻击</color>。"
       },
       "icon": "Skill_Second_2000015"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Nine Inch Nails",
-        "kr": "나인 인치 네일스",
         "jp": "ナイン・インチ・ネイルズ",
+        "kr": "나인 인치 네일스",
         "zh": "九寸钉"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy.\\nIncreases damage dealt if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
-        "kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPする。",
+        "kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가합니다.",
         "zh": "攻击敌人。\\n若目标处于<color=#28d9ed>出血</color>状态,则使伤害提升。"
       },
       "icon": "Skill_Ultimate_2000015"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Shell Casting",
-        "kr": "껍질 벗기",
         "jp": "甲羅を脱ぐ",
+        "kr": "껍질 벗기",
         "zh": "蜕皮"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Speed</color> proportional to missing Health. <color=#28d9ed>Speed</color> can increase up to <color=#28d9ed>100%</color>.",
-        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>속도</color>가 증가합니다. <color=#28d9ed>속도</color>는 최대 <color=#28d9ed>100%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n残りHPが低いほど<color=#28d9ed>スピード</color>がUPする。<color=#28d9ed>スピード</color>は最大<color=#28d9ed>100%</color>UPする。",
+        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>속도</color>가 증가합니다. <color=#28d9ed>속도</color>는 최대 <color=#28d9ed>100%</color> 증가합니다.",
         "zh": "(被动效果)\\n生命值越低,<color=#28d9ed>速度</color>越高。<color=#28d9ed>速度</color>最多提升<color=#28d9ed>100%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Light",
-        "kr": "빛의 탑의 가호",
         "jp": "光の塔の加護",
+        "kr": "빛의 탑의 가호",
         "zh": "光之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Light"

@@ -2,14 +2,14 @@
   "id": "4086031",
   "Name": {
     "en": "Drakhan",
-    "kr": "드레이칸",
     "jp": "ドレイカーン",
+    "kr": "드레이칸",
     "zh": "德雷坎"
   },
   "Surname": {
     "en": "The Ruler of the Dreadnought",
-    "kr": "드레드노트의 왕",
     "jp": "ドレッドノートの王",
+    "kr": "드레드노트의 왕",
     "zh": "无畏族之王"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Normal League",
-      "kr": "노멀 리그",
       "jp": "ノーマルリーグ",
+      "kr": "노멀 리그",
       "zh": "普通联赛"
     },
     "mode": {
       "en": "World Boss",
-      "kr": "월드 보스",
       "jp": "ワールドボス",
+      "kr": "월드 보스",
       "zh": "世界首领"
     },
     "area_id": {
       "en": "55500001",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Dragon Tusk",
-        "kr": "드래곤 터스크",
         "jp": "ドラゴンタスク",
+        "kr": "드래곤 터스크",
         "zh": "龙之利牙"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
-        "kr": "적을 공격하고, 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>UPする。",
+        "kr": "적을 공격하고, 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.",
         "zh": "攻击全体敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
       },
       "icon": "Skill_First_2000062",
@@ -62,15 +62,15 @@
     {
       "name": {
         "en": "Burning Fist",
-        "kr": "버닝 피스트",
         "jp": "バーニングフィスト",
+        "kr": "버닝 피스트",
         "zh": "燃烧之拳"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy.",
-        "kr": "적을 공격합니다.",
         "jp": "敵単体にダメージを与える。",
+        "kr": "적을 공격합니다.",
         "zh": "攻击敌人。"
       },
       "icon": "Skill_Second_2000062"
@@ -78,15 +78,15 @@
     {
       "name": {
         "en": "Conquering Dragon Meteor Fist",
-        "kr": "초패왕폭룡유성흑염권",
         "jp": "超覇王暴竜流星黒炎拳",
+        "kr": "초패왕폭룡유성흑염권",
         "zh": "楚霸王暴龙流星黑焰拳"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies.",
-        "kr": "적 전체를 공격합니다.",
         "jp": "敵全体にダメージを与える。",
+        "kr": "적 전체를 공격합니다.",
         "zh": "攻击全体敌人。"
       },
       "icon": "Skill_Ultimate_2000062"
@@ -94,15 +94,15 @@
     {
       "name": {
         "en": "This Is A Dragon's Strength!",
-        "kr": "이것이 용의 힘이다!",
         "jp": "これが竜の力だ!",
+        "kr": "이것이 용의 힘이다!",
         "zh": "这就是龙之力!"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nDoes not take Weakness Gauge damage from attacks that are not Revenge/Counterattack.\\nWhen an enemy activates a Counterattack, Revenge, or Agile Response, increases Weakness Gauge damage taken by the caster by <color=#28d9ed>300%</color>, and reduces Priority of the caster by <color=#28d9ed>20%</color>.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their element.\\n\\nFire: Increases efficiency of increased stat effects by 70%\\nWater: Increases Speed by 10%\\nEarth: Increases Critical Damage by 50%\\nLight: When performing an action, deals 1 Weakness Gauge damage to the Boss\\nDark: Increases Attack by 30%",
-        "kr": "(패시브 효과)\\n복수/반격이 아닌 공격으로는 WG 피해를 받지 않습니다.\\n적의 복수/반격/신속 대응 시 자신이 받는 WG 피해는 <color=#28d9ed>300%</color> 증가하고, 자신의 행동 게이지가 <color=#28d9ed>20%</color>감소합니다.\\n자신의 속성에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n화속성 : 능력치 증가 효율 +70% \\n수속성 : 속도 +10% \\n지속성 : 치명 피해 +50% \\n명속성 : 행동 시 보스에게 WG 1 피해\\n암속성 : 공격력 +30%",
         "jp": "(パッシブ効果)\\n復讐/反撃でない攻撃ではWGダメージを受けない。\\n敵が復讐/反撃/迅速対応を発動時、自分の受けるWGダメ―ジが<color=#28d9ed>300%</color>UPし、自分の行動ゲージが<color=#28d9ed>20%</color>DOWNする。\\n自分の属性に応じて<color=#28d9ed>特別な効果</color>が付与される。\\n\\n火属性:ステータスUPの効率+70%\\n水属性:スピード+10%\\n地属性:会心ダメージ+50%\\n光属性:行動時、ボスに1のWGダメージ\\n闇属性:攻撃力+30%",
+        "kr": "(패시브 효과)\\n복수/반격이 아닌 공격으로는 WG 피해를 받지 않습니다.\\n적의 복수/반격/신속 대응 시 자신이 받는 WG 피해는 <color=#28d9ed>300%</color> 증가하고, 자신의 행동 게이지가 <color=#28d9ed>20%</color>감소합니다.\\n자신의 속성에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n화속성 : 능력치 증가 효율 +70% \\n수속성 : 속도 +10% \\n지속성 : 치명 피해 +50% \\n명속성 : 행동 시 보스에게 WG 1 피해\\n암속성 : 공격력 +30%",
         "zh": "(被动效果)\\n不会因复仇/反击外的攻击受到WG伤害。\\n受到敌人的复仇/反击/迅速应对攻击时,使自身所受WG伤害提升<color=#28d9ed>300%</color>,并使自身行动值降低<color=#28d9ed>20%</color>。\\n根据自身属性获得<color=#28d9ed>特殊效果</color>。\\n\\n火属性:能力值提升率+70%\\n水属性:速度+10%\\n土属性:暴击伤害+50%\\n光属性:行动时,对首领造成1点WG伤害\\n暗属性:攻击力+30%"
       },
       "icon": "MT_Passive_1_Light"
@@ -110,15 +110,15 @@
     {
       "name": {
         "en": "Quasar Bombardment",
-        "kr": "퀘이사 포격",
         "jp": "クエーサー砲撃",
+        "kr": "퀘이사 포격",
         "zh": "类星体炮击"
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "Skill_Ultimate_4086013"

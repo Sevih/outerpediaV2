@@ -2,14 +2,14 @@
   "id": "62000050",
   "Name": {
     "en": "Flamberge",
-    "kr": "플랑베르쥬",
     "jp": "フランベルジュ",
+    "kr": "플랑베르쥬",
     "zh": "弗朗贝尔修"
   },
   "Surname": {
     "en": "Captain of the Annihilation Sect",
-    "kr": "섬격회 조장",
     "jp": "喧嘩嫌いな【閃撃の会】会長",
+    "kr": "섬격회 조장",
     "zh": "闪击会组长"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 44F",
-      "kr": "대지의 탑 44층",
       "jp": "大地の塔44階",
+      "kr": "대지의 탑 44층",
       "zh": "土之塔第44层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222044",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Like A Fierce Whirlwind",
-        "kr": "맹렬한 질풍처럼",
         "jp": "疾きこと風の如く",
+        "kr": "맹렬한 질풍처럼",
         "zh": "烈似疾风"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>[buff_c_tower_element_52497_0]</color> chance to increase a random ally's <color=#28d9ed>Speed</color> for <color=#28d9ed>[buff_t_tower_element_52497_0] turn(s)</color>.",
-        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52497_0]</color> 확률로 무작위 아군 한 명의 <color=#28d9ed>속도</color>를 <color=#28d9ed>[buff_t_tower_element_52497_0]턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52497_0]</color>の確率でランダムの味方単体の<color=#28d9ed>スピード</color>を<color=#28d9ed>[buff_t_tower_element_52497_0]ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52497_0]</color> 확률로 무작위 아군 한 명의 <color=#28d9ed>속도</color>를 <color=#28d9ed>[buff_t_tower_element_52497_0]턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>[buff_c_tower_element_52497_0]</color>的几率使随机1名友军的<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52497_0]回合</color>。"
       },
       "icon": "Skill_First_2000050"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Like A Peaceful Forest",
-        "kr": "조용한 숲처럼",
         "jp": "徐かなること林の如く",
+        "kr": "조용한 숲처럼",
         "zh": "寂如密林"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect) Has a <color=#28d9ed>[buff_c_tower_element_52498_0]</color> chance to reduce the skill cooldown of <color=#28d9ed>Like a Noble Mountain</color> by <color=#28d9ed>[buff_v_tower_element_52498_0] turn(s)</color> upon taking a critical hit.",
-        "kr": "(패시브 효과) 치명 피격 시 <color=#28d9ed>[buff_c_tower_element_52498_0]</color> 확률로 <color=#28d9ed>고고한 산처럼</color>의 스킬 쿨타임이 <color=#28d9ed>[buff_v_tower_element_52498_0]턴</color> 감소합니다.",
         "jp": "(パッシブ効果)会心ダメージを受けた場合、<color=#28d9ed>[buff_c_tower_element_52498_0]</color>の確率で<color=#28d9ed>【動かざること山の如く】</color>のスキルターンを<color=#28d9ed>[buff_v_tower_element_52498_0]ターン</color>減少させる。",
+        "kr": "(패시브 효과) 치명 피격 시 <color=#28d9ed>[buff_c_tower_element_52498_0]</color> 확률로 <color=#28d9ed>고고한 산처럼</color>의 스킬 쿨타임이 <color=#28d9ed>[buff_v_tower_element_52498_0]턴</color> 감소합니다.",
         "zh": "(被动效果)受到暴击时,有<color=#28d9ed>[buff_c_tower_element_52498_0]</color>的几率使<color=#28d9ed>傲若孤山</color>的技能冷却时间减少<color=#28d9ed>[buff_v_tower_element_52498_0]回合</color>。"
       },
       "icon": "Skill_Second_2000050"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Like A Noble Mountain",
-        "kr": "고고한 산처럼",
         "jp": "動かざること山の如く",
+        "kr": "고고한 산처럼",
         "zh": "傲若孤山"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "<color=#28d9ed>Heals</color> all allies for <color=#28d9ed>[buff_v_tower_element_52499_0]</color> of Flamberge's Max Health.",
-        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 플랑베르쥬 최대 체력의 <color=#28d9ed>[buff_v_tower_element_52499_0]</color>만큼 회복시킵니다.",
         "jp": "味方全体の<color=#28d9ed>HP</color>を【フランベルジュ】の最大HPの<color=#28d9ed>[buff_v_tower_element_52499_0]</color>回復させる。",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 플랑베르쥬 최대 체력의 <color=#28d9ed>[buff_v_tower_element_52499_0]</color>만큼 회복시킵니다.",
         "zh": "使全体友军的<color=#28d9ed>生命值</color>恢复相当于弗朗贝尔修生命值上限的<color=#28d9ed>[buff_v_tower_element_52499_0]</color>。"
       },
       "icon": "Skill_Ultimate_2000050"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Weakness Protection",
-        "kr": "약점 보호",
         "jp": "弱点保護",
+        "kr": "약점 보호",
         "zh": "保护弱点"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWhen hit by a Critical, decreases the <color=#28d9ed>Defense</color> of a random enemy by 50% for 1 turn. (Cannot be dispelled)",
-        "kr": "(패시브 효과)\\n치명 피격 시 1턴 동안 무작위 적 1명의 <color=#28d9ed>방어력</color>을 50% 감소시킵니다.(해제 불가)",
         "jp": "(パッシブ効果)\\n会心を受けた時、1ターンの間、ランダムな敵1体の<color=#28d9ed>防御力</color>を50%減少。(解除不可)",
+        "kr": "(패시브 효과)\\n치명 피격 시 1턴 동안 무작위 적 1명의 <color=#28d9ed>방어력</color>을 50% 감소시킵니다.(해제 불가)",
         "zh": "(被动效果)\\n受到致命打击时,使随机1名敌人的<color=#28d9ed>防御力</color>降低50%,持续1回合。(不可解除)"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Earth Tower",
-        "kr": "대지의 탑의 가호",
         "jp": "大地の塔の加護",
+        "kr": "대지의 탑의 가호",
         "zh": "大地之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Earth"

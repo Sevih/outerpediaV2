@@ -2,8 +2,8 @@
   "id": "5040016",
   "Name": {
     "en": "Sacred Priest of Healing",
-    "kr": "신성 사제 치유",
     "jp": "神聖司祭〈治癒〉",
+    "kr": "신성 사제 치유",
     "zh": "神圣祭司治疗"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Light 4F",
-      "kr": "빛의 탑 4층",
       "jp": "光の塔 4階",
+      "kr": "빛의 탑 4층",
       "zh": "光之塔 4层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40232004",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Divine Strike",
-        "kr": "신성 타격",
         "jp": "神聖打撃",
+        "kr": "신성 타격",
         "zh": "神圣射击"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and <color=#28d9ed>heals</color> the caster by <color=#28d9ed>20%</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>20%</color> 회복합니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>HP</color>を<color=#28d9ed>20%</color>回復する。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>20%</color> 회복합니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>20%</color>。"
       },
       "icon": "MT_Common_Heal_1_Water"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Ocean Swell",
-        "kr": "대양의 격려",
         "jp": "大洋の激励",
+        "kr": "대양의 격려",
         "zh": "大海的鼓舞"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Grants an ally increased <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1 turn</color>.",
-        "kr": "아군 한 명의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "jp": "味方単体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>会心率</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "아군 한 명의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "zh": "使1名友军的<color=#28d9ed>攻击力</color>和<color=#28d9ed>暴击率</color>提升,持续\\n<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Water"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Ocean's Blessing",
-        "kr": "대양의 가호",
         "jp": "大洋の加護",
+        "kr": "대양의 가호",
         "zh": "大海的庇护"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Increases the <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>30%</color>.",
-        "kr": "아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.",
         "jp": "味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。",
+        "kr": "아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.",
         "zh": "使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。"
       },
       "icon": "MT_Common_Heal_1_Water"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Divine Blessing",
-        "kr": "신의 가호",
         "jp": "神の恩恵",
+        "kr": "신의 가호",
         "zh": "神的庇护"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nAt the start of the turn, removes <color=#28d9ed>1</color> <color=#28d9ed>debuff</color> from the caster.",
-        "kr": "(패시브 효과)\\n턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.",
         "jp": "(パッシブ効果)\\nターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "kr": "(패시브 효과)\\n턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.",
         "zh": "(被动效果)\\n回合开始时,解除自身附带的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。"
       },
       "icon": "MT_Passive_1_Earth"

@@ -2,14 +2,14 @@
   "id": "4500293",
   "Name": {
     "en": "Regina",
-    "kr": "레지나",
     "jp": "レジーナ",
+    "kr": "레지나",
     "zh": "蕾吉纳"
   },
   "Surname": {
     "en": "Your Personal Trickster",
-    "kr": "당신만의 트릭스터",
     "jp": "貴方だけのトリックスター",
+    "kr": "당신만의 트릭스터",
     "zh": "你的专属魔术师"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "The Grand Escape Magic",
-      "kr": "희대의 탈출 마술",
       "jp": "並はずれの脱出魔法",
+      "kr": "희대의 탈출 마술",
       "zh": "伟大的逃脱魔术"
     },
     "mode": {
       "en": "Story (Hard)",
-      "kr": "스토리(하드)",
       "jp": "ストーリー(ハード)",
+      "kr": "스토리(하드)",
       "zh": "故事(困难)"
     },
     "area_id": {
       "en": "5-10",
-      "kr": "5-10",
       "jp": "5-10",
+      "kr": "5-10",
       "zh": "5-10"
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Magician's Choice",
-        "kr": "매지션즈 셀렉트",
         "jp": "マジシャンズセレクト",
+        "kr": "매지션즈 셀렉트",
         "zh": "魔术师的选择"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Crit Rate</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%)",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%)",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>30%</color>。\\n该技能伤害随自身的<color=#28d9ed>暴击率</color>提升(最大50%)。"
       },
       "icon": "Skill_First_2000067",
@@ -62,15 +62,15 @@
     {
       "name": {
         "en": "It's Checkmate!",
-        "kr": "체크메이트예요",
         "jp": "チェックメイトです。",
+        "kr": "체크메이트예요",
         "zh": "致胜一步"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect) Regina always gains <color=#28d9ed>10%</color> increased Miss Chance, and deals greatly increased damage while she has <color=#28d9ed>Regina's World</color>.\\n(Trigger Effect) When an enemy attack results in a miss, counterattacks the target and triggers <color=#28d9ed>Regina's World</color> <color=#28d9ed>2 time(s)</color>. Damage dealt increases in proportion to the caster's <color=#28d9ed>Critical Hit Chance</color>. (Up to 50%)",
-        "kr": "(패시브 효과) 레지나는 항상 빗나감 확률이 <color=#28d9ed>10%</color> 증가하며, <color=#28d9ed>레지나의 세계</color> 보유 시 피해가 크게 증가합니다.\\n(발동 효과) 적 공격이 빗나감 발생 시 대상에게 반격하고, <color=#28d9ed>레지나의 세계</color>를 <color=#28d9ed>2회</color> 발생시킵니다. 이 스킬은 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%)",
         "jp": "(パッシブ効果)レジーナは常にミスヒット確率が<color=#28d9ed>10%</color>UPし、<color=#28d9ed>【レジーナワールド】</color>がある場合、ダメージが大幅にUPする。\\n(発動効果)敵の攻撃がミスした時、対象に反撃し、<color=#28d9ed>【レジーナワールド】</color>を<color=#28d9ed>2回</color>付与する。このスキルは自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。",
+        "kr": "(패시브 효과) 레지나는 항상 빗나감 확률이 <color=#28d9ed>10%</color> 증가하며, <color=#28d9ed>레지나의 세계</color> 보유 시 피해가 크게 증가합니다.\\n(발동 효과) 적 공격이 빗나감 발생 시 대상에게 반격하고, <color=#28d9ed>레지나의 세계</color>를 <color=#28d9ed>2회</color> 발생시킵니다. 이 스킬은 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%)",
         "zh": "(被动效果)蕾吉纳的未命中几率常驻提升<color=#28d9ed>10%</color>,持有<color=#28d9ed>蕾吉纳的世界</color>时,伤害大幅增加。\\n(触发效果)敌人攻击未命中时,对目标进行反击,并触发<color=#28d9ed>2次</color><color=#28d9ed>蕾吉纳的世界</color>。自身<color=#28d9ed>暴击率</color>越高,则该技能伤害越高(最大50%)。"
       },
       "icon": "Skill_Second_2000067",
@@ -81,15 +81,15 @@
     {
       "name": {
         "en": "The Show Must Go On",
-        "kr": "쇼 머스트 고 온",
         "jp": "ショー・マスト・ゴーオン",
+        "kr": "쇼 머스트 고 온",
         "zh": "演出不能停"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Removes all buffs from the target and attacks the enemy.\\nThis skill ignores <color=#28d9ed>30%</color> of the target's Defense, and damage dealt increases in proportion to the caster's <color=#28d9ed>Critical Hit Chance</color>. (Up to 50%) The buff removal effect ignores the target's Resilience.",
-        "kr": "대상의 강화 효과를 모두 해제하고 적을 공격합니다. \\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며, 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%) 강화 해제 효과는 대상의 효과 저항을 무시합니다.",
         "jp": "対象の<color=#28d9ed>強化効果</color>をすべて解除し、敵単体にダメージを与える。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。強化効果の解除は対象の効果抵抗を無視する。",
+        "kr": "대상의 강화 효과를 모두 해제하고 적을 공격합니다. \\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color> 무시하며, 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%) 강화 해제 효과는 대상의 효과 저항을 무시합니다.",
         "zh": "解除目标的全部<color=#28d9ed>强化效果</color>并攻击敌人。\\n该技能无视目标<color=#28d9ed>30%</color>的防御力,自身<color=#28d9ed>暴击率</color>越高,造成的伤害越高(最大50%)。强化解除效果无视目标的效果抵抗。"
       },
       "icon": "Skill_Ultimate_2000067",
@@ -100,15 +100,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Whenever the enemy acts 10 times, the caster enters the <color=#28d9ed>Enraged</color> state and gains irremovable Attack Up and Damage Taken Down effects for 3 turns.\\n\\n<color=#28d9ed>Enraged Activation & Ultimate Skill</color>: Deals heavy damage to all enemies. This attack increases in damage each time it is used.",
-        "kr": "적이 10회 행동할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 큰 피해를 입힙니다. 이 공격은 사용할 때마다 피해가 증가합니다.",
         "jp": "敵が10回行動するたびに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、自分に解除不可の攻撃力UP/被ダメージDOWN効果を3ターンの間付与する。\\n\\n<color=#28d9ed>【狂暴化】発動と必殺スキル</color>:敵全体に大ダメージを与える。この攻撃は使用するたびにダメージが増加する。",
+        "kr": "적이 10회 행동할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 큰 피해를 입힙니다. 이 공격은 사용할 때마다 피해가 증가합니다.",
         "zh": "每当敌人行动10次时,进入<color=#28d9ed>狂暴化</color>状态,并获得无法解除的攻击力提升/受到伤害降低效果,持续3回合。\\n\\n<color=#28d9ed>进入狂暴化与必杀技</color>:对全体敌人造成巨额伤害。此攻击每次施放时伤害都会提高。"
       },
       "icon": "MT_Boss_Rage_Common_1",

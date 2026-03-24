@@ -2,14 +2,14 @@
   "id": "62000008",
   "Name": {
     "en": "Rhona",
-    "kr": "로나",
     "jp": "ロナ",
+    "kr": "로나",
     "zh": "罗娜"
   },
   "Surname": {
     "en": "Amnesic Drifter",
-    "kr": "기억 잃은 표류자",
     "jp": "記憶を失った漂流者",
+    "kr": "기억 잃은 표류자",
     "zh": "丧失记忆的漂流者"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 21F",
-      "kr": "대지의 탑 21층",
       "jp": "大地の塔21階",
+      "kr": "대지의 탑 21층",
       "zh": "土之塔第21层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222021",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Rose Slash",
-        "kr": "로즈 슬래쉬",
         "jp": "ローズスラッシュ",
+        "kr": "로즈 슬래쉬",
         "zh": "玫瑰斩击"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks 2 enemies.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
-        "kr": "적 2인을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다.",
         "jp": "敵2体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "kr": "적 2인을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다.",
         "zh": "攻击2名敌人。\\n自身<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。"
       },
       "icon": "Skill_First_2000008"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Tidal Wave",
-        "kr": "타이달 웨이브",
         "jp": "タイダルウェーブ",
+        "kr": "타이달 웨이브",
         "zh": "海啸"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and heals the caster by <color=#28d9ed>[buff_v_tower_element_52078_1]</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and increases inversely proportional to the number of targets.",
-        "kr": "적 전체를 공격하고 자신의 체력을 <color=#28d9ed>[buff_v_tower_element_52078_1]</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상의 수가 적을수록 피해가 증가합니다.",
         "jp": "敵全体にダメージを与え、自分のHPを<color=#28d9ed>[buff_v_tower_element_52078_1]</color>回復する。\\nこのスキルは自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージがUPする。",
+        "kr": "적 전체를 공격하고 자신의 체력을 <color=#28d9ed>[buff_v_tower_element_52078_1]</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상의 수가 적을수록 피해가 증가합니다.",
         "zh": "攻击全体敌人,并使自身生命值恢复<color=#28d9ed>[buff_v_tower_element_52078_1]</color>。\\n自身<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高;目标数量越少,则该技能的伤害越高。"
       },
       "icon": "Skill_Second_2000008"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "End of the World",
-        "kr": "엔드 오브 월드",
         "jp": "エンド・オブ・ワールド",
+        "kr": "엔드 오브 월드",
         "zh": "世界末日"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>[buff_c_tower_element_52079_1]</color> chance to reduce the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>[buff_t_tower_element_52079_1] turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and inversely proportional to the number of targets.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>[buff_c_tower_element_52079_1]</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[buff_t_tower_element_52079_1]턴</color> 동안 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 증가합니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52079_1]</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>[buff_t_tower_element_52079_1]ターン</color>の間DOWNさせる。\\nこのスキルは、自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージがUPする。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>[buff_c_tower_element_52079_1]</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[buff_t_tower_element_52079_1]턴</color> 동안 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 증가합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>[buff_c_tower_element_52079_1]</color>的几率使目标<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>[buff_t_tower_element_52079_1]回合</color>。\\n自身<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高;目标数量越少,则该技能的伤害越高。"
       },
       "icon": "Skill_Ultimate_2000008"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Persistent Resistance",
-        "kr": "끈질긴 저항",
         "jp": "しぶとい抵抗",
+        "kr": "끈질긴 저항",
         "zh": "顽强的抵抗"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Defense</color> proportional to missing Health. <color=#28d9ed>Defense</color> can increase up to <color=#28d9ed>160%</color>.",
-        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다. <color=#28d9ed>방어력</color>은 최대 <color=#28d9ed>160%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n残りHPが低いほど<color=#28d9ed>防御力</color>がUPする。<color=#28d9ed>防御力</color>は最大<color=#28d9ed>160%</color>UPする。",
+        "kr": "(패시브 효과)\\n체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다. <color=#28d9ed>방어력</color>은 최대 <color=#28d9ed>160%</color> 증가합니다.",
         "zh": "(被动效果)\\n生命值越低,<color=#28d9ed>防御力</color>越高。<color=#28d9ed>防御力</color>最多提升\\n<color=#28d9ed>160%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Blessing of the Earth Tower",
-        "kr": "대지의 탑의 가호",
         "jp": "大地の塔の加護",
+        "kr": "대지의 탑의 가호",
         "zh": "大地之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Earth"

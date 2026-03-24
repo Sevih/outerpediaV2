@@ -2,14 +2,14 @@
   "id": "40103021",
   "Name": {
     "en": "Iota",
-    "kr": "요타",
     "jp": "イオータ",
+    "kr": "요타",
     "zh": "佑妲"
   },
   "Surname": {
     "en": "The Heartless King",
-    "kr": "마음 없는 왕",
     "jp": "心なき王",
+    "kr": "마음 없는 왕",
     "zh": "无心之王"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Very Hard 20F",
-      "kr": "비천의 탑 [베리 하드] 20층",
       "jp": "飛天の塔【ベリーハード】20階",
+      "kr": "비천의 탑 [베리 하드] 20층",
       "zh": "飞天之塔【极难】第20层"
     },
     "mode": {
       "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     },
     "area_id": {
       "en": "40103020",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Code Khepri",
-        "kr": "코드 케프리",
         "jp": "コードケプリ",
+        "kr": "코드 케프리",
         "zh": "代码圣甲虫"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy.\\nHas a <color=#28d9ed>100%</color> chance to reduce Priority of the target by <color=#28d9ed>20%</color>.",
-        "kr": "적 대상을 공격합니다.\\n<color=#28d9ed>100%</color> 확률로 대상의 행동 게이지를 <color=#28d9ed>-20%</color> 감소 시킵니다.",
         "jp": "敵単体にダメージを与える。\\n<color=#28d9ed>100%</color>の確率で対象の行動ゲージを<color=#28d9ed>-20%</color>DOWNさせる。",
+        "kr": "적 대상을 공격합니다.\\n<color=#28d9ed>100%</color> 확률로 대상의 행동 게이지를 <color=#28d9ed>-20%</color> 감소 시킵니다.",
         "zh": "攻击敌人目标。\\n<color=#28d9ed>有100%</color>的几率使目标的行动值降低<color=#28d9ed>-20%</color>。"
       },
       "icon": "Skill_First_2000069"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Code Medjed",
-        "kr": "코드 메제드",
         "jp": "コードメジェド",
+        "kr": "코드 메제드",
         "zh": "代码梅杰德"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies.\\nReduces Priority of the target by <color=#28d9ed>20%</color>.",
-        "kr": "적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>-20%</color> 감소 시킵니다.",
         "jp": "敵全体にダメージを与える。\\n対象の行動ゲージを<color=#28d9ed>-20%</color>DOWNさせる。",
+        "kr": "적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>-20%</color> 감소 시킵니다.",
         "zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>-20%</color>。"
       },
       "icon": "Skill_Second_2000069"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Code Anubis",
-        "kr": "코드 아누비스",
         "jp": "コードアヌビス",
+        "kr": "코드 아누비스",
         "zh": "代码阿努比斯"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies, and grants <color=#28d9ed>Invulnerability</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>.\\nAdditionally, inflicts <color=#28d9ed>Stunned</color> on the enemy for <color=#28d9ed>1 turn(s)</color>, or when the enemy is granted Invulnerability, <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격하고, 자신을 제외한 아군에게 <color=#28d9ed>무적</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n또한, 무적 상태의 적은 <color=#28d9ed>2턴</color> 그 외의 적은 <color=#28d9ed>1턴</color> 동안 스턴 상태로 만듭니다.",
         "jp": "敵全体にダメージを与え、自分を除く味方全体に<color=#28d9ed>無敵</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nまた無敵状態の敵にスタンを<color=#28d9ed>2ターン</color>、無敵状態でない敵にはスタンを<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적 전체를 공격하고, 자신을 제외한 아군에게 <color=#28d9ed>무적</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n또한, 무적 상태의 적은 <color=#28d9ed>2턴</color> 그 외의 적은 <color=#28d9ed>1턴</color> 동안 스턴 상태로 만듭니다.",
         "zh": "攻击全体敌人,并使除自身以外的友军获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>2回合</color>。\\n使处于无敌状态的敌人和其他敌人陷入晕眩状态,分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_Ultimate_2000069"
@@ -91,15 +91,15 @@
     {
       "name": {
         "en": "Master of All Gold",
-        "kr": "모든 황금의 주인",
         "jp": "すべての黄金の主",
+        "kr": "모든 황금의 주인",
         "zh": "所有黄金的主人"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nAt the start of the turn, when all surviving allies are not inflicted with <color=#28d9ed>Stunned</color>, grants an irremovable <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>1 turn</color>.\\nWhen the caster is inflicted with <color=#28d9ed>Stunned</color>, increases damage taken.\\nAfter the Boss is inflicted with <color=#28d9ed>Break</color>, irremovable <color=#28d9ed>Invulnerability</color> is no longer granted.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)",
-        "kr": "(패시브 효과)\\n턴 시작 시 생존한 아군 모두 <color=#28d9ed>스턴</color> 상태가 아니라면, 자신에게 해제 불가능한 <color=#28d9ed>무적</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n자신은 <color=#28d9ed>스턴</color> 상태에서 받는 피해량이 증가합니다.\\n보스 <color=#28d9ed>브레이크</color> 이후부터 해제 불가능한 <color=#28d9ed>무적</color>은 부여되지 않습니다.\\n아군이 약화효과 피해 시 아군 전체의 행동 게이지가 <color=#28d9ed>50%</color> 감소 합니다.(1턴 당 1회 가능)",
         "jp": "(パッシブ効果)\\nターン開始時、戦場にいる味方全体が<color=#28d9ed>スタン</color>状態でない場合、自分に解除不可能な<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n自分が<color=#28d9ed>スタン</color>状態の場合、受けるダメージがUPする。\\nボスの<color=#28d9ed>ブレイク</color>後からは解除不可能な<color=#28d9ed>無敵</color>が付与されない。\\n味方がダメージを受け、弱体効果を付与された場合、味方全体の行動ゲージを<color=#28d9ed>50%</color>DOWNさせる。(1ターンに1回のみ適用)",
+        "kr": "(패시브 효과)\\n턴 시작 시 생존한 아군 모두 <color=#28d9ed>스턴</color> 상태가 아니라면, 자신에게 해제 불가능한 <color=#28d9ed>무적</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.\\n자신은 <color=#28d9ed>스턴</color> 상태에서 받는 피해량이 증가합니다.\\n보스 <color=#28d9ed>브레이크</color> 이후부터 해제 불가능한 <color=#28d9ed>무적</color>은 부여되지 않습니다.\\n아군이 약화효과 피해 시 아군 전체의 행동 게이지가 <color=#28d9ed>50%</color> 감소 합니다.(1턴 당 1회 가능)",
         "zh": "(被动效果)\\n回合开始时,若存活的所有友军未处于<color=#28d9ed>晕眩</color>状态时,自身获得无法被解除的<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。\\n自身在<color=#28d9ed>晕眩</color>状态下受到的伤害量提升。\\n首领<color=#28d9ed>力竭</color>后,将不会获得无法被解除的<color=#28d9ed>无敌</color>效果。\\n友军受到弱化效果时,全体友军的行动值降低<color=#28d9ed>50%</color>。(1回合仅限1次)"
       },
       "icon": "MT_Passive_1_Dark"
@@ -107,15 +107,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> every 5 turns, and increases Attack and Speed by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Attacks all enemies. When the enemy has greater than 70% Health, deals greater damage. This Enraged has no duration.",
-        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체를 공격합니다. 체력이 70% 초과하는 적에게 더 큰 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
         "jp": "5ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>5%</color>UPする。この効果は最大3回まで累積し、ブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:敵全体にダメージを与える。残りHPが70%を超える敵にはより大ダメージを与える。【狂暴化】の持続ターンはない。",
+        "kr": "5턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체를 공격합니다. 체력이 70% 초과하는 적에게 더 큰 피해를 입힙니다. 광폭화 유지 시간은 없습니다.",
         "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>5%</color>。该效果最多可叠加3次,且将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:攻击全体敌人。对生命值超过70%的敌人造成更多伤害。因陷入狂暴化而触发该技能后,狂暴化状态立即解除。"
       },
       "icon": "MT_Boss_Rage_Common_1"

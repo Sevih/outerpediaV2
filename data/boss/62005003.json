@@ -2,8 +2,8 @@
   "id": "62005003",
   "Name": {
     "en": "Ember",
-    "kr": "엠버",
     "jp": "エンバー",
+    "kr": "엠버",
     "zh": "炎珀"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 70F",
-      "kr": "화염의 탑 70층",
       "jp": "火の塔70階",
+      "kr": "화염의 탑 70층",
       "zh": "火之塔第70层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202070",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Ember, Charge!",
-        "kr": "엠버, 돌격!",
         "jp": "エンバー、突撃!",
+        "kr": "엠버, 돌격!",
         "zh": "炎珀,突击!"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and inflicts <color=#28d9ed>Marked</color> on the caster for <color=#28d9ed>1 turn(s)</color>.\\nWhen the caster is granted <color=#28d9ed>Radiant Will</color>, changes to <color=#ffd732>Help Me, Master!</color>.\\n\\n<color=#ffd732>Help Me, Master!</color>\\nAttacks an enemy and inflicts <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Increases damage dealt.",
-        "kr": "적을 공격하고, 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n<color=#28d9ed>찬란한 의지</color> 보유 시에는 <color=#ffd732>도와줘요, 스승님!</color>으로 변경됩니다.\\n\\n<color=#ffd732>도와줘요, 스승님!</color>\\n적을 공격하고, 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 피해가 증가합니다.",
         "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n自分に<color=#28d9ed>【燦然たる意志】</color>が付与されている場合、このスキルが<color=#ffd732>【助けて、師匠!】</color>に変更される。\\n\\n<color=#ffd732>【助けて、師匠!】</color>\\n敵単体にダメージを与え、対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。ダメージがUPする。",
+        "kr": "적을 공격하고, 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n<color=#28d9ed>찬란한 의지</color> 보유 시에는 <color=#ffd732>도와줘요, 스승님!</color>으로 변경됩니다.\\n\\n<color=#ffd732>도와줘요, 스승님!</color>\\n적을 공격하고, 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 피해가 증가합니다.",
         "zh": "攻击敌人,并使自身获得<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时,变更为<color=#ffd732>师父帮我!</color>。\\n\\n<color=#ffd732>师父帮我!</color>\\n攻击敌人,对目标造成<color=#28d9ed>挑衅</color>,持续<color=#28d9ed>1回合</color>。伤害提升。"
       },
       "icon": "Skill_First_2000094"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Burning Injustice",
-        "kr": "불의를 불태우리",
         "jp": "不義を焼き尽くさん",
+        "kr": "불의를 불태우리",
         "zh": "燃尽不义"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect)\\nAll enemies take increased damage proportional to the number of debuffs they are affected by.\\nAfter being attacked, inflicts <color=#28d9ed>100%</color> chance of <color=#28d9ed>Burn</color> for <color=#28d9ed>2</color> turns on each enemy.",
-        "kr": "(패시브 효과)\\n적 전체는 보유한 약화 효과에 비례하여 받는 피해가 증가합니다.\\n피격 후 적 전체에게 각각 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "jp": "(パッシブ効果)\\n敵全体は保有する弱体効果数に比例して被ダメが増加する。\\n被弾後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>2</color>ターンの間付与する。",
+        "kr": "(패시브 효과)\\n적 전체는 보유한 약화 효과에 비례하여 받는 피해가 증가합니다.\\n피격 후 적 전체에게 각각 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "(被动效果)\\n敌方全体所受伤害随减益效果数量提高。\\n被攻击后,对敌方全体分别以<color=#28d9ed>100%</color>的概率附加<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2</color>回合。"
       },
       "icon": "Skill_Second_2000094"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Blaze Like a Flame!",
-        "kr": "타오르라, 불꽃처럼!",
         "jp": "燃え盛れ、焔のように!",
+        "kr": "타오르라, 불꽃처럼!",
         "zh": "燃烧吧,如同烈焰!"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Gains <color=#28d9ed>Radiant Will</color> for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burn</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "kr": "<color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득한 후 적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "jp": "<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得した後、敵全体にダメージを与える。攻撃後、対象に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "kr": "<color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득한 후 적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "zh": "获得<color=#28d9ed>璀璨之志</color>,持续<color=#28d9ed>2回合</color>,随后攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n该技能结束后,不会触发敌人的反击、复仇、迅速应对。"
       },
       "icon": "Skill_Ultimate_2000094"

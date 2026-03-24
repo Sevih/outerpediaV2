@@ -2,14 +2,14 @@
   "id": "52000010",
   "Name": {
     "en": "Idith",
-    "kr": "이디스",
     "jp": "イディス",
+    "kr": "이디스",
     "zh": "伊蒂斯"
   },
   "Surname": {
     "en": "Honorable Knight",
-    "kr": "긍지 높은 기사",
     "jp": "誠実な貴族騎士",
+    "kr": "긍지 높은 기사",
     "zh": "充满荣誉感的骑士"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Earth Tower 5F",
-      "kr": "대지의 탑 5층",
       "jp": "大地の塔5階",
+      "kr": "대지의 탑 5층",
       "zh": "土之塔第5层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40222005",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,15 +43,15 @@
     {
       "name": {
         "en": "Triple Slash",
-        "kr": "삼연검",
         "jp": "三連剣",
+        "kr": "삼연검",
         "zh": "三连剑"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
-        "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
         "zh": "攻击敌人。\\n自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
       },
       "icon": "Skill_First_2000010"
@@ -59,15 +59,15 @@
     {
       "name": {
         "en": "Antipathy",
-        "kr": "앙심",
         "jp": "返し突き",
+        "kr": "앙심",
         "zh": "嫉恶如仇"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) When the caster is attacked, has a <color=#28d9ed>40%</color> chance to <color=#28d9ed>counterattack</color>.",
-        "kr": "(발동 효과) 자신이 공격받았을 때 <color=#28d9ed>40%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
         "jp": "(発動効果)自分がダメージを受けた場合、<color=#28d9ed>40%</color>の確率で<color=#28d9ed>反撃</color>する。",
+        "kr": "(발동 효과) 자신이 공격받았을 때 <color=#28d9ed>40%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
         "zh": "(触发效果)自身受到攻击时,有<color=#28d9ed>40%</color>的几率发动<color=#28d9ed>反击</color>。"
       },
       "icon": "Skill_Second_2000010"
@@ -75,15 +75,15 @@
     {
       "name": {
         "en": "Noble Swordcraft",
-        "kr": "귀족 검술",
         "jp": "アルデラミン奥義",
+        "kr": "귀족 검술",
         "zh": "贵族剑术"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Defense</color> for <color=#28d9ed>[buff_t_tower_element_52093_0] turn(s)</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[buff_t_tower_element_52093_0]턴</color> 동안 증가시킵니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>[buff_t_tower_element_52093_0]ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[buff_t_tower_element_52093_0]턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52093_0]回合</color>。"
       },
       "icon": "Skill_Ultimate_2000010"

@@ -2,8 +2,8 @@
   "id": "51000020",
   "Name": {
     "en": "Shadow Beast Fire-Breather",
-    "kr": "섀도우 비스트 파이어",
     "jp": "シャドウビースト・ファイア",
+    "kr": "섀도우 비스트 파이어",
     "zh": "喷火暗影兽"
   },
   "Surname": null,
@@ -14,23 +14,23 @@
   "icons": "4031014",
   "BuffImmune": "",
   "StatBuffImmune": "ATTACK",
- "location": {
+  "location": {
     "dungeon": {
       "en": "Weekly Conquest - Schattenmeister Schwartz",
-      "kr": "주간토벌 - 샤텐 마이스터 슈바르츠",
       "jp": "ウィークリー討伐 - シュヴァルツ",
+      "kr": "주간토벌 - 샤텐 마이스터 슈바르츠",
       "zh": "每周讨伐 - 夜影团长施瓦兹"
     },
     "mode": {
       "en": "Adventure License",
-      "kr": "모험 라이선스",
       "jp": "冒険者ライセンス",
+      "kr": "모험 라이선스",
       "zh": "冒险许可证"
     },
     "area_id": {
       "en": "70600009",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,32 +38,34 @@
     {
       "name": {
         "en": "Crimson Flame",
-        "kr": "크림슨 플레임",
         "jp": "クリムゾンフレイム",
+        "kr": "크림슨 플레임",
         "zh": "绯红火焰"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. When the caster is granted <color=#28d9ed>Invulnerability</color>, attacks all enemies.\\nReduces <color=#28d9ed>Priority</color> of all targets by <color=#28d9ed>30%</color>.",
-        "kr": "적을 공격합니다. 자신이 <color=#28d9ed>무적</color>을 보유한 상태라면 적 전체를 공격합니다.\\n대상 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시킵니다.",
         "jp": "敵単体にダメージを与える。\\n自分が<color=#28d9ed>無敵</color>状態の場合、敵全体にダメージを与える。対象全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-30%</color>DOWNさせる。",
+        "kr": "적을 공격합니다. 자신이 <color=#28d9ed>무적</color>을 보유한 상태라면 적 전체를 공격합니다.\\n대상 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시킵니다.",
         "zh": "攻击全体敌人。若自身处于<color=#28d9ed>无敌</color>状态,则攻击全体敌人。\\n使全体目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-30%</color>。"
       },
       "icon": "MT_Attack_Claw_1_Fire",
-      "debuff":["BT_ACTION_GAUGE"]
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
         "en": "Encroaching Darkness",
-        "kr": "엄습하는 어둠",
         "jp": "襲い来る闇",
+        "kr": "엄습하는 어둠",
         "zh": "黑暗来袭"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\nWhen the caster is granted <color=#28d9ed>Invulnerability</color>, attacks all enemies.",
-        "kr": "(패시브 효과)\n자신이 <color=#28d9ed>무적</color>을 보유한 상태라면 적 전체를 공격합니다.",
         "jp": "(パッシブ効果)\n自分が<color=#28d9ed>無敵</color>状態の場合、敵全体にダメージを与える。",
+        "kr": "(패시브 효과)\n자신이 <color=#28d9ed>무적</color>을 보유한 상태라면 적 전체를 공격합니다.",
         "zh": "(被动效果)\n若自身处于<color=#28d9ed>无敌</color>状态,则攻击全体敌人。"
       },
       "icon": "MT_Passive_1_Light"

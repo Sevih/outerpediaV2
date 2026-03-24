@@ -2,8 +2,8 @@
   "id": "401400192",
   "Name": {
     "en": "Forest King",
-    "kr": "숲의 왕",
     "jp": "森の王",
+    "kr": "숲의 왕",
     "zh": "奴隶角斗士蜥蜴人"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 30F",
-      "kr": "비천의 탑 30층",
       "jp": "飛天の塔30階",
+      "kr": "비천의 탑 30층",
       "zh": "飞天之塔30层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101030",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Warrior's Spear",
-        "kr": "전사의 창",
         "jp": "戦士の槍",
+        "kr": "전사의 창",
         "zh": "战士之枪"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks all enemies.\\nHas a <color=#28d9ed>50%</color> chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color> and gains a <color=#28d9ed>Barrier</color>.",
-        "kr": "적 전체를 공격합니다.\\n<color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고 자신은 <color=#28d9ed>실드</color>를 획득합니다.",
         "jp": "敵全体にダメージを与える。\\n<color=#28d9ed>50%</color>確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ、自分に<color=#28d9ed>シールド</color>を付与する。",
+        "kr": "적 전체를 공격합니다.\\n<color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고 자신은 <color=#28d9ed>실드</color>를 획득합니다.",
         "zh": "攻击全体敌人。\\n有<color=#28d9ed>50%</color>的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>,并使自身获得<color=#28d9ed>护盾</color>效果。"
       },
       "icon": "Skill_First_4014001"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Sweep",
-        "kr": "휩쓸기",
         "jp": "なぎ払い",
+        "kr": "휩쓸기",
         "zh": "横扫"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and has a <color=#28d9ed>50%</color> chance to reduce the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "jp": "敵全体にダメージを与え、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>50%</color>的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Second_4014001"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Enraged Strike",
-        "kr": "분노의 일격",
         "jp": "怒りの一撃",
+        "kr": "분노의 일격",
         "zh": "愤怒一击"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and reduces the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
-        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-20%</color> 감소시킵니다.",
         "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-20%</color>DOWNさせる。",
+        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-20%</color> 감소시킵니다.",
         "zh": "攻击全体敌人,并使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-20%</color>。"
       },
       "icon": "Skill_Ultimate_4014001"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Prince's Retaliation",
-        "kr": "왕자의 응징",
         "jp": "王者の戒め",
+        "kr": "왕자의 응징",
         "zh": "王子的惩戒"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect)While holding a <color=#28d9ed>Barrier</color>, reduces WG damage taken by <color=#28d9ed>50%</color> and increases damage dealt.\\n(Trigger) When hit by a single-target attack, counterattacks with a <color=#28d9ed>50%</color> chance. After attacking, restores <color=#28d9ed>3</color> WG and gains a <color=#28d9ed>Barrier</color>.",
-        "kr": "(패시브 효과) <color=#28d9ed>실드</color> 보유 시 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소하고 적에게 주는 피해가 증가합니다.\\n(발동 효과) 단일 대상 공격 피격 시 <color=#28d9ed>50%</color> 확률로 반격합니다. 공격 후 WG를 <color=#28d9ed>3</color> 회복하고 <color=#28d9ed>실드</color>를 획득합니다.",
         "jp": "(パッシブ効果) <color=#28d9ed>シールド</color>を保持中、受けるWGダメージが<color=#28d9ed>50%</color>DOWNし、与えるダメージがUPする。\\n(発動効果) 単体攻撃を受けた時、<color=#28d9ed>50%</color>の確率で反撃。攻撃後、WGを<color=#28d9ed>3</color>回復し、<color=#28d9ed>シールド</color>を獲得する。",
+        "kr": "(패시브 효과) <color=#28d9ed>실드</color> 보유 시 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소하고 적에게 주는 피해가 증가합니다.\\n(발동 효과) 단일 대상 공격 피격 시 <color=#28d9ed>50%</color> 확률로 반격합니다. 공격 후 WG를 <color=#28d9ed>3</color> 회복하고 <color=#28d9ed>실드</color>를 획득합니다.",
         "zh": "(被动效果)持有<color=#28d9ed>护盾</color>时,受到的WG伤害减少<color=#28d9ed>50%</color>,并增加造成的伤害。\\n(触发效果)受到单体攻击时,有<color=#28d9ed>50%</color>几率反击。攻击后恢复<color=#28d9ed>3</color> WG并获得<color=#28d9ed>护盾</color>。"
       },
       "icon": "MT_Passive_1_Earth"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>80%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers 30% Weakness Gauge. Gains <color=#28d9ed>20%</color> of Max Health as a Barrier, but increases the Skill Chain damage of the enemy team for <color=#28d9ed>4 turn(s)</color>. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Ruthless Explosion</color>: Used when Enraged ends. Attacks all enemies and reduces their <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>. Additionally increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>50%</color>. This attack ignores <color=#28d9ed>Resilience</color>. \\n\\n<color=#ffd732>If Enraged within 1 turn, grants 40 Chain Points.</color>",
-        "kr": "최대 체력의 <color=#28d9ed>80%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복 후, 최대 체력 <color=#28d9ed>20%</color>의 실드를 획득하지만, <color=#28d9ed>4턴</color> 동안 적 전체의 스킬 체인 피해량이 증가합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>무자비한 폭발</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>100%</color> 감소시킵니다. 추가로 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.\\n\\n<color=#ffd732>1턴 안에 광폭화할 시 40의 CP를 회복시킵니다.</color>",
         "jp": "最大HPの<color=#28d9ed>80%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを30%回復した後、自分に最大HPの<color=#28d9ed>20%</color>のシールドを付与するが、<color=#28d9ed>4ターン</color>の間敵全体のチェーンスキルのダメージがUPする。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【無慈悲な爆発】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>100%</color>DOWNさせる。追加で自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>50%</color>UPさせる。\\nこの攻撃は対象の<color=#28d9ed>効果抵抗</color>を無視する。\\n\\n<color=#ffd732>戦闘開始時から1ターン以内に【狂暴化】した場合、敵にCPを40獲得させる。</color>",
+        "kr": "최대 체력의 <color=#28d9ed>80%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복 후, 최대 체력 <color=#28d9ed>20%</color>의 실드를 획득하지만, <color=#28d9ed>4턴</color> 동안 적 전체의 스킬 체인 피해량이 증가합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>무자비한 폭발</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>100%</color> 감소시킵니다. 추가로 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.\\n\\n<color=#ffd732>1턴 안에 광폭화할 시 40의 CP를 회복시킵니다.</color>",
         "zh": "若生命值降至上限的<color=#28d9ed>80%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复30%后,获得相当于生命值上限<color=#28d9ed>20%</color>的护盾效果,但会提升全体敌人连携技能的伤害量,持续<color=#28d9ed>4回合</color>。狂暴化持续3回合。\\n\\n<color=#28d9ed>无情的爆炸</color>:在狂暴化结束时发动。\\n攻击全体敌人,使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>100%</color>。使自身的<color=#28d9ed>行动值</color>额外提升<color=#28d9ed>50%</color>。\\n该攻击无视目标的<color=#28d9ed>效果抵抗</color>。\\n\\n<color=#ffd732>1回合内陷入狂暴化时,获得40CP。</color>"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -118,15 +118,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

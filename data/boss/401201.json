@@ -2,8 +2,8 @@
   "id": "401201",
   "Name": {
     "en": "Astral Guardian Shieldbearer",
-    "kr": "아스트랄 가디언 방패",
     "jp": "アストラルガーディアン〈盾〉",
+    "kr": "아스트랄 가디언 방패",
     "zh": "盾牌手星际守护者"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Hard 12F",
-      "kr": "비천의 탑 [하드] 12층",
       "jp": "飛天の塔【ハード】12階",
+      "kr": "비천의 탑 [하드] 12층",
       "zh": "飞天之塔【困难】第12层"
     },
     "mode": {
       "en": "Skyward Tower - Hard",
-      "kr": "비천의 탑 하드",
       "jp": "飛天の塔 ハード",
+      "kr": "비천의 탑 하드",
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
       "en": "40102012",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Shield Strike",
-        "kr": "방패 가격",
         "jp": "シールドストライク",
+        "kr": "방패 가격",
         "zh": "盾牌击打"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. This attack prioritizes the enemies' <color=#28d9ed>Front Line</color> and against <color=#28d9ed>non-Defender</color> targets inflicts irremovable <color=#28d9ed>Poisoned</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적을 공격합니다. <color=#28d9ed>전열</color>에 있는 적을 우선으로 공격하며 <color=#28d9ed>방어형</color>이 아닌 경우, 대상에게 해제 불가능한 <color=#28d9ed>중독</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
         "jp": "敵単体にダメージを与える。一番<color=#28d9ed>前</color>の敵を優先的に攻撃し、対象が<color=#28d9ed>防御型</color>以外の場合、<color=#28d9ed>中毒</color>を<color=#28d9ed>2ターン</color>の間付与する。この効果は解除されない。",
+        "kr": "적을 공격합니다. <color=#28d9ed>전열</color>에 있는 적을 우선으로 공격하며 <color=#28d9ed>방어형</color>이 아닌 경우, 대상에게 해제 불가능한 <color=#28d9ed>중독</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
         "zh": "攻击敌人。优先攻击<color=#28d9ed>前排</color>的敌人,对非<color=#28d9ed>防御型</color>的目标造成无法被解除的<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Hammer_1_Earth"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Boundary Resonance",
-        "kr": "결계 진동",
         "jp": "結界振動",
+        "kr": "결계 진동",
         "zh": "结界震动"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies and increases the caster's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击全体敌人,并使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Hammer_1_Earth"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Release Boundary",
-        "kr": "결계 해방",
         "jp": "結界解放",
+        "kr": "결계 해방",
         "zh": "结界解放"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and heals for <color=#28d9ed>15%</color> of Max Health.\\nGreatly increases damage dealt if the caster has increased <color=#28d9ed>Defense</color>.",
-        "kr": "적 전체를 공격하고 자신 최대 체력의 <color=#28d9ed>15%</color>를 회복합니다.\\n자신이 <color=#28d9ed>방어력</color> 증가 상태라면 피해량이 크게 증가합니다.",
         "jp": "敵全体にダメージを与え、自分の最大HPの<color=#28d9ed>15%</color>を回復する。\\n自分の<color=#28d9ed>防御力</color>がUPした状態の場合、ダメージが大幅にUPする。",
+        "kr": "적 전체를 공격하고 자신 최대 체력의 <color=#28d9ed>15%</color>를 회복합니다.\\n자신이 <color=#28d9ed>방어력</color> 증가 상태라면 피해량이 크게 증가합니다.",
         "zh": "攻击全体敌人,并使自身恢复生命值上限的\\n<color=#28d9ed>15%</color>。\\n若自身的<color=#28d9ed>防御力</color>处于提升状态,则伤害量大幅提升。"
       },
       "icon": "MT_Attack_Hammer_1_Earth"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Ground Zero",
-        "kr": "그라운드 제로",
         "jp": "グラウンド・ゼロ",
+        "kr": "그라운드 제로",
         "zh": "归零地"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Defense by <color=#28d9ed>50%</color> and Counterattack Chance by <color=#28d9ed>30%</color>.",
-        "kr": "(패시브 효과)\\n방어력이 <color=#28d9ed>50%</color> 증가하고, 반격 확률이 <color=#28d9ed>30%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n防御力が<color=#28d9ed>50%</color>UPし、反撃発生率が<color=#28d9ed>30%</color>UPする。",
+        "kr": "(패시브 효과)\\n방어력이 <color=#28d9ed>50%</color> 증가하고, 반격 확률이 <color=#28d9ed>30%</color> 증가합니다.",
         "zh": "(被动效果)\\n防御力提升<color=#28d9ed>50%</color>,反击率提升<color=#28d9ed>30%</color>。"
       },
       "icon": "MT_Passive_1_Earth"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns, and recovers 10% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Boundary of Fury</color>: Used when Enraged ends.\\nAttacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Taunted</color> for <color=#28d9ed>2 turn(s)</color>.\\nThis attack bypasses the target's <color=#28d9ed>Resilience and Immunity</color> and cannot be removed.\\n\\n<color=#ffd732>If Enraged within 3 turns, grants 20 Chain Points.</color>",
-        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>진노의 결계</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>도발</color>합니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항/면역</color>을 무시하며 해제할 수 없습니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 20의 CP를 회복시킵니다.</color>",
         "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与しWGを10%回復する。【狂暴化】は4ターンの間持続する。\\n\\n<color=#28d9ed>【震怒の結界】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象を<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間<color=#28d9ed>挑発</color>する。\\nこの効果は対象の<color=#28d9ed>効果抵抗と免疫</color>を無視し、解除できない。\\n\\n<color=#ffd732>3ターン以内に【狂暴化】した場合、敵にCPを20獲得させる。</color>",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>진노의 결계</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>도발</color>합니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항/면역</color>을 무시하며 해제할 수 없습니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 20의 CP를 회복시킵니다.</color>",
         "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复\\n10%。狂暴化持续4回合。\\n\\n<color=#28d9ed>震怒结界</color>:狂暴化结束时发动。\\n攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>2回合</color>。该攻击无视目标的<color=#28d9ed>效果抵抗/免疫</color>,且无法解除。\\n\\n<color=#ffd732>在3回合内陷入狂暴化状态时,恢复20CP。</color>"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -118,15 +118,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

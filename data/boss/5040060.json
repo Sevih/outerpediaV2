@@ -2,8 +2,8 @@
   "id": "5040060",
   "Name": {
     "en": "Knight of Hope Meteos",
-    "kr": "광명의 기사 메테우스",
     "jp": "光明の騎士・メテウス",
+    "kr": "광명의 기사 메테우스",
     "zh": "光明骑士梅修斯"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Tower of Light 50F",
-      "kr": "빛의 탑 50층",
       "jp": "光の塔 50階",
+      "kr": "빛의 탑 50층",
       "zh": "光之塔 50层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40232050",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Lead Me to the Enemy...",
-        "kr": "적은 어디냐...",
         "jp": "敵はどこだ...",
+        "kr": "적은 어디냐...",
         "zh": "敌人在哪里......"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Prioritizes attacking the enemy on the far <color=#28d9ed>left</color>.",
-        "kr": "가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다.",
         "jp": "最も<color=#28d9ed>左端</color>の敵を優先的に攻撃。",
+        "kr": "가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다.",
         "zh": "优先攻击最<color=#28d9ed>左侧</color>的敌人。"
       },
       "icon": "Skill_First_4176002"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "You Must be the Enemy...",
-        "kr": "네가 적인가...",
         "jp": "オマエが敵か...",
+        "kr": "네가 적인가...",
         "zh": "敌人就是你吗......"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies.\\nDeals more damage when fewer enemies remain.",
-        "kr": "적 전체를 공격합니다.\\n이 공격은 대상이 적을 수록 피해가 증가합니다.",
         "jp": "敵全体を攻撃。\\n敵が少ないほど与えるダメージが増加。",
+        "kr": "적 전체를 공격합니다.\\n이 공격은 대상이 적을 수록 피해가 증가합니다.",
         "zh": "攻击全体敌人。\\n敌人越少,造成的伤害越高。"
       },
       "icon": "Skill_Second_4176002"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Protect the Royal Family...",
-        "kr": "왕가를 지킨다...",
         "jp": "王家を守る...",
+        "kr": "왕가를 지킨다...",
         "zh": "必须守护王室......"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Triggered Effect) When an enemy is killed by <color=#28d9ed>Lead Me to the Enemy.../You Must be the Enemy...</color>, or when attacking a non-Striker target with <color=#28d9ed>Lead Me to the Enemy...</color>, removes all <color=#28d9ed>buffs</color> from all enemies and deals lethal damage to all enemies. Targets killed by this attack cannot be Resurrected or Revived.",
-        "kr": "(발동 효과) <color=#28d9ed>적은 어디냐... / 네가 적인가...</color>로 적을 처치하거나, <color=#28d9ed>적은 어디냐...</color>의 공격 대상이 <color=#28d9ed>공격형</color>이 아닐 경우 적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 적 전체에게 치명적인 피해를 입힙니다. 해당 공격에 피해를 받아 사망 시 부활 및 소생 효과가 발생하지 않습니다.",
         "jp": "(発動効果)<color=#28d9ed>【敵はどこだ...】/【オマエが敵か...】</color>で敵を倒した場合、または<color=#28d9ed>【敵はどこだ...】</color>で攻撃した対象が<color=#28d9ed>攻撃型</color>以外の場合、敵全体の<color=#28d9ed>強化効果</color>をすべて解除し、敵全体に致命的なダメージを与える。この攻撃で倒れた敵は復活および蘇生ができなくなる。",
+        "kr": "(발동 효과) <color=#28d9ed>적은 어디냐... / 네가 적인가...</color>로 적을 처치하거나, <color=#28d9ed>적은 어디냐...</color>의 공격 대상이 <color=#28d9ed>공격형</color>이 아닐 경우 적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 적 전체에게 치명적인 피해를 입힙니다. 해당 공격에 피해를 받아 사망 시 부활 및 소생 효과가 발생하지 않습니다.",
         "zh": "(触发效果)使用<color=#28d9ed>敌人在哪里....../敌人就是你吗......</color>击杀敌人,或者<color=#28d9ed>敌人在哪里......</color>的攻击目标为非<color=#28d9ed>攻击型</color>时,解除全体敌人的所有<color=#28d9ed>强化效果</color>,并对全体敌人造成致命伤害。因该攻击死亡时,将无法触发复活与苏醒效果。"
       },
       "icon": "Skill_Ultimate_4176002"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Oath Engraved in the Soul",
-        "kr": "혼에 세긴 맹세",
         "jp": "魂に刻んだ誓い",
+        "kr": "혼에 세긴 맹세",
         "zh": "刻在灵魂上的誓言"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive)\\nAfter attacking, grants self <color=#28d9ed>Barrier</color> for <color=#28d9ed>1 turn(s)</color> (Irremovable).\\nIf the target of <color=#28d9ed>Where is the Enemy...</color> is not a <color=#28d9ed>Striker</color>, increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color> (Irremovable).",
-        "kr": "(패시브 효과)\\n공격 후 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.(해제 불가)\\n<color=#28d9ed>적은 어디냐...</color>의 공격 대상이 <color=#28d9ed>공격형</color>이 아닐 경우\\n자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.(해제 불가)",
         "jp": "(パッシブ効果)\\n攻撃後、自分に<color=#28d9ed>1ターン</color>の間<color=#28d9ed>シールド</color>を付与する。(解除不可)\\n<color=#28d9ed>敵は何処だ...</color>の攻撃対象が<color=#28d9ed>攻撃型</color>ではない場合、\\n自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。(解除不可)",
+        "kr": "(패시브 효과)\\n공격 후 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.(해제 불가)\\n<color=#28d9ed>적은 어디냐...</color>의 공격 대상이 <color=#28d9ed>공격형</color>이 아닐 경우\\n자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.(해제 불가)",
         "zh": "(被动效果)\\n攻击后,赋予自身<color=#28d9ed>护盾</color>,持续<color=#28d9ed>1回合</color>(无法解除)。\\n若<color=#28d9ed>敌人在哪......</color>的攻击目标不是<color=#28d9ed>攻击型</color>,\\n自身<color=#28d9ed>攻击力</color>增加,持续<color=#28d9ed>2回合</color>(无法解除)。"
       },
       "icon": "MT_Passive_1_Light"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Light",
-        "kr": "빛의 탑의 가호",
         "jp": "光の塔の加護",
+        "kr": "빛의 탑의 가호",
         "zh": "光之塔的加护"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Light"
@@ -118,15 +118,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Every 4 turns, becomes <color=#28d9ed>Enraged</color>.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable Attack Up / Damage Reduction effect to the caster for 3 turns, and recovers WG by 30%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>I Offer My Life...</color>: Used when Enraged ends.\\nRemoves all <color=#28d9ed>buffs</color> from all enemies, then deals lethal damage. Enemies killed by this attack cannot be Resurrected or Revived.",
-        "kr": "4턴마다<color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>이 목숨을 바쳐서......</color> : 광폭화 종료 시 사용.\\n적 전체의 강화 효과를 해제 후, 치명적인 피해를 입힙니다. 해당 공격에 피해를 받아 사망 시 부활 및 소생 효과가 발생하지 않습니다.",
         "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを30%回復する。狂暴化は3ターン持続する。\\n\\n<color=#28d9ed>この命にかけて......</color>:狂暴化終了時に使用する。\\n敵全体の<color=#28d9ed>強化効果</color>を解除した後、致命的なダメージを与える。この攻撃で倒れた敵は復活・蘇生できない。",
+        "kr": "4턴마다<color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>이 목숨을 바쳐서......</color> : 광폭화 종료 시 사용.\\n적 전체의 강화 효과를 해제 후, 치명적인 피해를 입힙니다. 해당 공격에 피해를 받아 사망 시 부활 및 소생 효과가 발생하지 않습니다.",
         "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合,并恢复WG 30%。狂暴化持续3回合。\\n\\n<color=#28d9ed>献身之志......</color>:狂暴化结束时发动。\\n解除全体敌人的<color=#28d9ed>强化效果</color>后造成致命伤害。因该攻击死亡的敌人无法触发复活或再生效果。"
       },
       "icon": "MT_Boss_Rage_Common_1"
@@ -134,15 +134,15 @@
     {
       "name": {
         "en": "I Offer My Life...",
-        "kr": "이 목숨을 바쳐서......",
         "jp": "この命を捧げて......",
+        "kr": "이 목숨을 바쳐서......",
         "zh": "献身之志......"
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

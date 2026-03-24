@@ -2,8 +2,8 @@
   "id": "62005010",
   "Name": {
     "en": "Dianne",
-    "kr": "다이안",
     "jp": "ダイアン",
+    "kr": "다이안",
     "zh": "黛安"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Fire Tower 80F",
-      "kr": "화염의 탑 80층",
       "jp": "火の塔80階",
+      "kr": "화염의 탑 80층",
       "zh": "火之塔第80层"
     },
     "mode": {
       "en": "Elemental Tower",
-      "kr": "엘레멘탈 타워",
       "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
       "zh": "元素之塔"
     },
     "area_id": {
       "en": "40202080",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Santa's Here!",
-        "kr": "산타, 등장♡",
         "jp": "サンタ、おでまし♡",
+        "kr": "산타, 등장♡",
         "zh": "圣诞老人,闪亮登场♡"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and increases Priority of the caster by <color=#28d9ed>30%</color>.",
-        "kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
         "jp": "敵単体にダメージを与え、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
         "zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>30%</color>。"
       },
       "icon": "Skill_First_2000093"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Gift Shower",
-        "kr": "선물 공세",
         "jp": "プレゼント攻勢",
+        "kr": "선물 공세",
         "zh": "礼物攻势"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect) At the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>. (Buffs already granted to the caster will not be applied.)\\n\\n(Active Effect) Attacks an enemy. This skill's damage dealt increases proportional to the caster's Speed.",
-        "kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
         "jp": "(パッシブ効果)ターン開始時、自分に<color=#28d9ed>ランダムのステータスUP効果</color>を<color=#28d9ed>2ターン</color>の間付与する。(すでに付与されている効果以外の強化効果が付与される。)\\n\\n(アクティブ効果)敵単体にダメージを与える。このスキルは自分のスピードが高いほどダメージがUPする。",
+        "kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
         "zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。"
       },
       "icon": "Skill_Second_2000093"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Winter Night's Blessing",
-        "kr": "겨울밤의 축복",
         "jp": "真冬の夜の祝福",
+        "kr": "겨울밤의 축복",
         "zh": "冬夜祝福"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and grants all allies a <color=#28d9ed>Gifted Buff</color> lasting <color=#28d9ed>2 turns</color>.\\nDamage increases with the caster's Speed and further increases based on the number of <color=#28d9ed>Buffs</color> allies have.\\nAfterwards, increases the <color=#28d9ed>Priority</color> of surviving allies by 20%.",
-        "kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>2턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다. 이후 생존한 아군의 행동 게이지를 20% 증가시킵니다.",
         "jp": "敵全体にダメージを与え、味方全体に<color=#28d9ed>強化効果ギフト</color>を付与(<color=#28d9ed>2ターン</color>)。\\n自分のスピードが高いほどダメージが増加し、味方全体が持つ<color=#28d9ed>強化効果</color>が多いほど追加ダメージ増加。\\nその後、生存している味方の<color=#28d9ed>行動ゲージ</color>を20%増加。",
+        "kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>2턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다. 이후 생존한 아군의 행동 게이지를 20% 증가시킵니다.",
         "zh": "攻击全体敌人,并为我方全体赋予<color=#28d9ed>强化效果礼物</color>,持续<color=#28d9ed>2回合</color>。\\n自身速度越高,造成的伤害越高;我方全体拥有的<color=#28d9ed>强化效果</color>越多,额外伤害越高。\\n之后,使存活的我方<color=#28d9ed>行动值</color>+20%。"
       },
       "icon": "Skill_Ultimate_2000093"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Naughty, Aren't You?",
-        "kr": "나쁜 아이시군요?",
         "jp": "悪い子ですね?",
+        "kr": "나쁜 아이시군요?",
         "zh": "你是坏孩子吗?"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "All enemies take increased damage proportional to their Debuffs.",
-        "kr": "적 전체는 보유한 약화 효과에 비례하여 받는 피해가 증가합니다.",
         "jp": "敵全体は保有する弱化効果に比例して受けるダメージが増加。",
+        "kr": "적 전체는 보유한 약화 효과에 비례하여 받는 피해가 증가합니다.",
         "zh": "敌人持有的弱化效果越多,受到的伤害越高。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Blessing of the Tower of Flames",
-        "kr": "화염의 탑의 가호",
         "jp": "火炎の塔の加護",
+        "kr": "화염의 탑의 가호",
         "zh": "火焰之塔的庇佑"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -118,15 +118,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "When HP is less than or equal to <color=#28d9ed>40%</color>, enters <color=#28d9ed>Berserk</color>.\\n\\n<color=#28d9ed>Berserk</color>: Attacks all enemies.\\nAfter Berserk, permanently reduces <color=#28d9ed>damage taken</color> and grants <color=#28d9ed>Counter</color> to all allies.",
-        "kr": "최대 체력의 <color=#28d9ed>40%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화</color> : 적 전체를 공격합니다. \\n광폭화 이후 영구적으로 <color=#28d9ed>받는 피해</color>가 감소하고 아군 전체에게 반격을 부여합니다.",
         "jp": "HPが<color=#28d9ed>40%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態になる。\\n\\n<color=#28d9ed>【狂暴化】</color>:敵全体にダメージを与える。\\n狂暴化後、永続的に<color=#28d9ed>被ダメージ</color>を減少し、味方全体に<color=#28d9ed>反撃</color>を付与する。",
+        "kr": "최대 체력의 <color=#28d9ed>40%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화</color> : 적 전체를 공격합니다. \\n광폭화 이후 영구적으로 <color=#28d9ed>받는 피해</color>가 감소하고 아군 전체에게 반격을 부여합니다.",
         "zh": "当HP小于等于<color=#28d9ed>40%</color>时,进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化</color>:攻击敌方全体。\\n进入狂暴化后,永久降低<color=#28d9ed>所受伤害</color>,并赋予我方全体<color=#28d9ed>反击</color>。"
       },
       "icon": "MT_Boss_Rage_Common_1"

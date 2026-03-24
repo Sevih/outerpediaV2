@@ -2,8 +2,8 @@
   "id": "4084001",
   "Name": {
     "en": "Abyssal Calamity Apophis",
-    "kr": "지저의 재해 아포피스",
     "jp": "地底の災害アポフィス",
+    "kr": "지저의 재해 아포피스",
     "zh": "地底的灾厄·阿波菲斯"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "A Flower Blooming in Fear",
-      "kr": "공포 속에 피는 꽃",
       "jp": "恐怖の中に咲く花",
+      "kr": "공포 속에 피는 꽃",
       "zh": "恐惧中绽放的花朵"
     },
     "mode": {
       "en": "Story (Normal)",
-      "kr": "스토리(노멀)",
       "jp": "ストーリー(ノーマル)",
+      "kr": "스토리(노멀)",
       "zh": "故事(普通)"
     },
     "area_id": {
       "en": "7-15",
-      "kr": "7-15",
       "jp": "7-15",
+      "kr": "7-15",
       "zh": "7-15"
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Predator Thorns",
-        "kr": "사냥용 가시",
         "jp": "狩猟用のトゲ",
+        "kr": "사냥용 가시",
         "zh": "猎杀之刺"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. If the target is inflicted with a <color=#28d9ed>debuff</color>, deals Fixed Damage equal to <color=#28d9ed>30%</color> of target's Max Health.",
-        "kr": "적을 공격합니다. 대상이 <color=#28d9ed>약화 효과</color>를 보유했다면 대상 최대 체력의 <color=#28d9ed>30%</color> 만큼 고정 피해를 입힙니다.",
         "jp": "敵単体にダメージを与える。対象に<color=#28d9ed>弱体効果</color>がある場合、対象の最大HPの<color=#28d9ed>30%</color>の固定ダメージを与える。",
+        "kr": "적을 공격합니다. 대상이 <color=#28d9ed>약화 효과</color>를 보유했다면 대상 최대 체력의 <color=#28d9ed>30%</color> 만큼 고정 피해를 입힙니다.",
         "zh": "攻击敌人,若目标附带<color=#28d9ed>弱化效果</color>,则造成目标生命值上限<color=#28d9ed>30%</color>的固定伤害。"
       },
       "icon": "Skill_First_4084001",
@@ -57,15 +57,15 @@
     {
       "name": {
         "en": "Root Burst",
-        "kr": "뿌리 돌출",
         "jp": "根のはみ出し",
+        "kr": "뿌리 돌출",
         "zh": "根须突袭"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies. Ignores Defense of targets inflicted with a <color=#28d9ed>debuff</color>.",
-        "kr": "적 전체를 공격합니다. <color=#28d9ed>약화 효과</color> 보유 대상의 방어력을 모두 무시합니다.",
         "jp": "敵全体にダメージを与える。<color=#28d9ed>弱体効果</color>がある対象の防御力をすべて無視する。",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>약화 효과</color> 보유 대상의 방어력을 모두 무시합니다.",
         "zh": "攻击全体敌人。完全无视附带<color=#28d9ed>弱化效果</color>目标的防御力。"
       },
       "icon": "Skill_Second_4084001"
@@ -73,15 +73,15 @@
     {
       "name": {
         "en": "Death Ray",
-        "kr": "죽음의 광선",
         "jp": "死の光線",
+        "kr": "죽음의 광선",
         "zh": "死亡光线"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. Grants an irremovable <color=#28d9ed>Poisoned</color> for <color=#28d9ed>4 turns</color>. Ignores Immunity on enemies without Increased Resilience.\n\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "kr": "적 전체를 공격합니다. 공격 후 대상 전체에게 <color=#28d9ed>4턴</color>동안 해제되지 않는 <color=#28d9ed>중독</color>을 부여합니다. 효과 저항이 증가하지 않은 적에게는 면역을 무시하고 해당 효과를 부여합니다. \\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "jp": "敵全体にダメージを与える。攻撃後、<color=#28d9ed>4ターン</color>の間、解除できない<color=#28d9ed>中毒</color>を付与する。効果抵抗がUPしていない敵の免疫を無視し、中毒効果を付与する。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "kr": "적 전체를 공격합니다. 공격 후 대상 전체에게 <color=#28d9ed>4턴</color>동안 해제되지 않는 <color=#28d9ed>중독</color>을 부여합니다. 효과 저항이 증가하지 않은 적에게는 면역을 무시하고 해당 효과를 부여합니다. \\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "zh": "攻击全体敌人。攻击后施加无法被解除的<color=#28d9ed>中毒</color>状态,持续<color=#28d9ed>4回合</color>。对效果抵抗未提升的敌人将无视免疫直接施加此效果。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Ultimate_4084001",
@@ -95,15 +95,15 @@
     {
       "name": {
         "en": "Terror of Calamity",
-        "kr": "재해의 공포",
         "jp": "災害の恐怖",
+        "kr": "재해의 공포",
         "zh": "灾厄恐怖"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect) Grants <color=#28d9ed>Silenced</color> for <color=#28d9ed>1 turn(s)</color> to all enemies inflicted with <color=#28d9ed>Poisoned</color> when the target performs an action. ((Ignores the target's Resilience and Immunity))\\n\\n<color=#28d9ed>At the end of the turn of all enemies inflicted with Silenced</color>, deals Fixed Damage equal to <color=#28d9ed>20%</color> of Max Health and heals the caster by <color=#28d9ed>50%</color>.\\n\\n<color=#28d9ed>Significantly reduces Damage Taken from the target inflicted with \\nPoisoned</color>.",
-        "kr": "(패시브 효과) <color=#28d9ed>중독</color> 상태의 적 행동 시 <color=#28d9ed>중독</color>을 보유한 적 전체에게 <color=#28d9ed>1턴</color>동안 해제 불가능한 <color=#28d9ed>침묵</color>을 부여합니다.(대상의 효과 저항과 면역 무시)\\n\\n<color=#28d9ed>침묵</color> 상태의 적 턴 종료 시 <color=#28d9ed>침묵</color>을 보유한 적 전체에게 최대 체력의 <color=#28d9ed>20%</color>만큼 고정 피해를 입히고, 자신의 체력은 <color=#28d9ed>50%</color> 회복 합니다. \\n\\n<color=#28d9ed>중독</color> 상태의 적에게 받는 피해량은 크게 감소합니다.",
         "jp": "(パッシブ効果)<color=#28d9ed>中毒</color>状態の敵が行動時、対象全体に<color=#28d9ed>1ターン</color>の間、解除不可能な<color=#28d9ed>沈黙</color>を付与する。(対象の効果抵抗と免疫を無視)\\n\\n<color=#28d9ed>沈黙</color>状態の敵のターン終了時、対象の最大HPの<color=#28d9ed>20%</color>の固定ダメージを与え、自分HPは<color=#28d9ed>50%</color>回復する。\\n\\n<color=#28d9ed>中毒</color>状態の敵に受けるダメージが大幅にDOWNする。",
+        "kr": "(패시브 효과) <color=#28d9ed>중독</color> 상태의 적 행동 시 <color=#28d9ed>중독</color>을 보유한 적 전체에게 <color=#28d9ed>1턴</color>동안 해제 불가능한 <color=#28d9ed>침묵</color>을 부여합니다.(대상의 효과 저항과 면역 무시)\\n\\n<color=#28d9ed>침묵</color> 상태의 적 턴 종료 시 <color=#28d9ed>침묵</color>을 보유한 적 전체에게 최대 체력의 <color=#28d9ed>20%</color>만큼 고정 피해를 입히고, 자신의 체력은 <color=#28d9ed>50%</color> 회복 합니다. \\n\\n<color=#28d9ed>중독</color> 상태의 적에게 받는 피해량은 크게 감소합니다.",
         "zh": "(被动效果)处于<color=#28d9ed>中毒</color>状态的敌人行动时,在<color=#28d9ed>1回合</color>内赋予具有<color=#28d9ed>中毒</color>的全体敌人无法解除的<color=#28d9ed>沉默</color>。(无视目标的效果抵抗与免疫)\\n\\n处于<color=#28d9ed>沉默</color>状态的敌人回合结束时,对具有<color=#28d9ed>沉默</color>的全体敌人造成相当于最大生命力<color=#28d9ed>20%</color>的固定伤害,自身的生命力恢复<color=#28d9ed>50%</color>。\\n\\n<color=#28d9ed>中毒</color>状态的敌人造成的伤害量大幅减少。"
       },
       "icon": "MT_Passive_1_Earth",
@@ -115,15 +115,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "When HP drops below <color=#28d9ed>30%</color>, enters <color=#28d9ed>Enraged</color> state.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Grants irremovable Increased Attack/Reduced Damage for 3 turns and grants <color=#28d9ed>Poisoned</color> to the whole enemies for <color=#28d9ed>3 turns</color>. Enraged lasts for 3 turns",
-        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입 및 필살기</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, 적 전체에게 <color=#28d9ed>중독</color>을 <color=#28d9ed>3턴</color> 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.",
         "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>狂暴化</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:自分に解除不可の攻撃力UP/ダメージDOWN効果を3ターンの間付与し、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>3ターン</color>の間付与する。狂暴化は3ターンの間持続する。",
+        "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입 및 필살기</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, 적 전체에게 <color=#28d9ed>중독</color>을 <color=#28d9ed>3턴</color> 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.",
         "zh": "若生命力降到最大生命力<color=#28d9ed>30%</color>以下,转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化与必杀技</color>:在3回合内赋予自身不会被解除的攻击力增加/伤害减少效果,在<color=#28d9ed>3回合</color>内赋予全体敌人<color=#28d9ed>中毒</color>。狂暴化持续3回合。"
       },
       "icon": "MT_Boss_Rage_Common_1",

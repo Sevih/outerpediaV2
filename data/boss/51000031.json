@@ -2,8 +2,8 @@
   "id": "51000031",
   "Name": {
     "en": "Iota World's Giant God Soldier",
-    "kr": "요타월드의 거신병",
     "jp": "イオータワールドの巨神兵",
+    "kr": "요타월드의 거신병",
     "zh": "佑妲世界巨神兵"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Weekly Conquest - Anubis Guardian",
-      "kr": "주간토벌 - 아누비스 가디언",
       "jp": "ウィークリー討伐 - アヌビスガーディアン",
+      "kr": "주간토벌 - 아누비스 가디언",
       "zh": "每周讨伐 - 阿努比斯守护者"
     },
     "mode": {
       "en": "Adventure License",
-      "kr": "모험 라이선스",
       "jp": "冒険者ライセンス",
+      "kr": "모험 라이선스",
       "zh": "冒险许可证"
     },
     "area_id": {
       "en": "70600018",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,84 +38,97 @@
     {
       "name": {
         "en": "Flames of Judgment",
-        "kr": "심판의 불길",
         "jp": "裁きの炎",
+        "kr": "심판의 불길",
         "zh": "审判之火"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. After attacking, increases <color=#28d9ed>Priority</color> of a random ally by <color=#28d9ed>50%</color>.",
-        "kr": "적을 공격합니다. 공격 후 무작위 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.",
         "jp": "敵単体にダメージを与える。攻撃後、ランダムの味方単体に<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>50%</color>UPさせる。",
+        "kr": "적을 공격합니다. 공격 후 무작위 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>50%</color> 증가시킵니다.",
         "zh": "攻击敌人。攻击后,使随机友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>50%</color>。"
       },
       "icon": "MT_Attack_Arrow_1_Water",
-      "buff":["BT_ACTION_GAUGE"]
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
         "en": "Mad Sun's Mirage",
-        "kr": "광양의 신기루",
         "jp": "日輪の蜃気楼",
+        "kr": "광양의 신기루",
         "zh": "狂阳之海市蜃楼"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies. After attacking, grants increased <color=#28d9ed>Attack</color> to all allies for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>을 증가시킵니다.",
         "jp": "敵全体にダメージを与える。攻撃後、味方全体の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>을 증가시킵니다.",
         "zh": "攻击全体敌人。攻击后,使全体友军的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "MT_Attack_Magic_1_Water",
-      "buff":["BT_STAT|ST_ATK"]
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
         "en": "Flood of Life and Death",
-        "kr": "생과 사의 범람",
         "jp": "生と死の氾濫",
+        "kr": "생과 사의 범람",
         "zh": "生与死的洪流"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. After attacking, inflicts <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>5 turn(s)</color>.",
-        "kr": "적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "jp": "敵全体にダメージを与える。攻撃後、対象に<color=#28d9ed>感電</color>を<color=#28d9ed>5ターン</color>の間付与する。",
+        "kr": "적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "zh": "攻击全体敌人。攻击后,对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>5回合</color>。"
       },
       "icon": "MT_Attack_Claw_1_Water",
-      "debuff":["BT_DOT_LIGHTNING"]
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
     },
     {
       "name": {
         "en": "Sand Cannot Be Broken",
-        "kr": "모래는 부술 수 없다",
         "jp": "砂は砕けない",
+        "kr": "모래는 부술 수 없다",
         "zh": "不损磐沙"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Attack</color> of enemies, but reduces <color=#28d9ed>Critical Hit Chance</color> to 0. This effect cannot be removed.\\nAfter attacking, <color=#28d9ed>Resurrects (Greater)</color> all slain allies.\\nAt the start of the turn, increases duration of <color=#28d9ed>buff(s)/debuff(s)</color> on the caster by <color=#28d9ed>1 turn(s)</color>.\\nWhen a non-Fire enemy performs an action, removes all debuffs from the caster, and reduces Weakness Gauge damage taken by 50%.\\nDoes not take Weakness Gauge damage when all allies except for the caster have been killed.\\nReduces damage taken from non-Fire enemies, and increases damage dealt to them.\\nIncreases damage taken from Fire enemies, and reduces damage dealt to them.",
-        "kr": "(패시브 효과)\\n적의 <color=#28d9ed>공격력</color>을 증가시키는 대신 <color=#28d9ed>치명 확률</color>을 0으로 만듭니다. 이 효과는 해제되지 않습니다.\\n공격 후 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다.\\n턴 시작 시 자신이 보유한 <color=#28d9ed>강화 효과/약화 효과</color>의 지속 턴이 <color=#28d9ed>1턴</color> 증가합니다.\\n화속성이 아닌 적 행동 시 자신이 보유한 모든 약화 효과가 해제되며, 받는 WG 피해가 50% 감소합니다.\\n자신을 제외한 아군이 모두 사망했다면 WG 피해를 받지 않습니다,\\n화속성이 아닌 적에게 받는 피해가 감소하고, 입히는 피해가 증가합니다.\\n화속성 적에게 받는 피해가 증가하고, 입히는 피해가 감소합니다.",
         "jp": "(パッシブ効果)\\n敵の<color=#28d9ed>攻撃力</color>をUPさせる代わりに、<color=#28d9ed>会心率</color>を0にする。この効果は解除されない。\\n攻撃後、倒れた味方全体を<color=#28d9ed>復活(強化)</color>させる。\\nターン開始時、自分の<color=#28d9ed>強化効果/弱体効果</color>の持続ターンを<color=#28d9ed>1ターン</color>増加させる。\\n火属性以外の敵の行動時、自分の弱体効果をすべて解除し、受けるWGダメージが50%DOWNする。\\n戦場に自分を除く味方全体が倒れている場合、WGダメージを受けない。\\n火属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n火属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "kr": "(패시브 효과)\\n적의 <color=#28d9ed>공격력</color>을 증가시키는 대신 <color=#28d9ed>치명 확률</color>을 0으로 만듭니다. 이 효과는 해제되지 않습니다.\\n공격 후 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다.\\n턴 시작 시 자신이 보유한 <color=#28d9ed>강화 효과/약화 효과</color>의 지속 턴이 <color=#28d9ed>1턴</color> 증가합니다.\\n화속성이 아닌 적 행동 시 자신이 보유한 모든 약화 효과가 해제되며, 받는 WG 피해가 50% 감소합니다.\\n자신을 제외한 아군이 모두 사망했다면 WG 피해를 받지 않습니다,\\n화속성이 아닌 적에게 받는 피해가 감소하고, 입히는 피해가 증가합니다.\\n화속성 적에게 받는 피해가 증가하고, 입히는 피해가 감소합니다.",
         "zh": "(被动效果)\\n使敌人的<color=#28d9ed>攻击力</color>增加,但<color=#28d9ed>暴击率</color>降为0。该效果不会被解除。\\n攻击后,死亡的友军全体<color=#28d9ed>复活(强化)</color>。\\n回合开始时,自身附带的<color=#28d9ed>强化效果/弱化效果</color>的持续回合提升<color=#28d9ed>1回合</color>。\\n非火属性敌人行动时,解除自身附带的所有弱化效果,所受WG伤害降低50%。\\n若除自身外所有友军全部死亡,则不会受到WG伤害。\\n受到的来自非火属性敌人的伤害降低,对其造成的伤害提升。\\n受到的来自火属性敌人的伤害增加,对其造成的伤害降低。"
       },
       "icon": "MT_Passive_1_Water",
-      "buff":["BT_STAT|ST_ATK_IR","BT_RESURRECTION","BT_EXTEND_BUFF","BT_REMOVE_DEBUFF"],
-      "debuff":["BT_EXTEND_DEBUFF"]
+      "buff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_RESURRECTION",
+        "BT_EXTEND_BUFF",
+        "BT_REMOVE_DEBUFF"
+      ],
+      "debuff": [
+        "BT_EXTEND_DEBUFF"
+      ]
     },
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Golden, For Eternity</color>: Used when Enraged ends.\\nDeals lethal damage to all enemies.\\n\\n<color=#ffd732>If enraged within 2 turns, recovers 80 Chain Points.</color>",
-        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>황금이여, 영원하라</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.\\n\\n<color=#ffd732>2턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
         "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWNを3ターンの間付与する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【黄金よ、永遠に】</color>:【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。\\n\\n<color=#ffd732>戦闘開始時から2ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>황금이여, 영원하라</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.\\n\\n<color=#ffd732>2턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
         "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>唯黄金恒久</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。\\n\\n<color=#ffd732>在2回合内陷入狂暴化状态时,恢复80CP</color>。"
       },
       "icon": "MT_Boss_Rage_Common_1",
@@ -127,15 +140,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"

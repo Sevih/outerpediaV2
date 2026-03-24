@@ -2,8 +2,8 @@
   "id": "400301192",
   "Name": {
     "en": "Sentry Spear-Wielder",
-    "kr": "경비병 스피어",
     "jp": "警備兵〈槍〉",
+    "kr": "경비병 스피어",
     "zh": "执矛警卫"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 24F",
-      "kr": "비천의 탑 24층",
       "jp": "飛天の塔24階",
+      "kr": "비천의 탑 24층",
       "zh": "飞天之塔24层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
       "en": "40101024",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Guard Spearcraft",
-        "kr": "경비대 창술",
         "jp": "警備隊の槍術",
+        "kr": "경비대 창술",
         "zh": "警卫队枪术"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Attack_Spear_1_Fire"
@@ -54,15 +54,15 @@
     {
       "name": {
         "en": "Spear Strike",
-        "kr": "일격의 창",
         "jp": "一撃の槍",
+        "kr": "일격의 창",
         "zh": "一击之枪"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
-        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
         "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
       },
       "icon": "MT_Attack_Spear_1_Fire"
@@ -70,15 +70,15 @@
     {
       "name": {
         "en": "Break Formation",
-        "kr": "진영 돌파",
         "jp": "陣営突破",
+        "kr": "진영 돌파",
         "zh": "突破阵营"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
-        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
         "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
         "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
       },
       "icon": "MT_Attack_Spear_1_Fire"
@@ -86,15 +86,15 @@
     {
       "name": {
         "en": "Neural Amplification II",
-        "kr": "신경계 증폭 II",
         "jp": "神経系増幅 II",
+        "kr": "신경계 증폭 II",
         "zh": "精神系增幅 II"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Speed by <color=#28d9ed>7.5%</color> every time the caster takes a turn. (Max 5 stacks)",
-        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>7.5%</color> 증가합니다. (최대 5회 누적)",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、スピードが<color=#28d9ed>7.5%</color>UPする。(最大5回まで累積)",
+        "kr": "(패시브 효과)\\n자신의 턴마다 속도가 <color=#28d9ed>7.5%</color> 증가합니다. (최대 5회 누적)",
         "zh": "(被动效果)\\n每到自身回合时,使速度提升<color=#28d9ed>7.5%</color>。(最多可叠加5次)"
       },
       "icon": "MT_Passive_1_Dark"
@@ -102,15 +102,15 @@
     {
       "name": {
         "en": "Training Results",
-        "kr": "훈련의 성과",
         "jp": "訓練の成果",
+        "kr": "훈련의 성과",
         "zh": "训练成果"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nHas a <color=#28d9ed>25%</color> chance to <color=#28d9ed>Counterattack</color> when the caster is attacked.",
-        "kr": "(패시브 효과)\\n자신이 공격받았을 때 <color=#28d9ed>25%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
         "jp": "(パッシブ効果)\\n自分が攻撃を受けた時、<color=#28d9ed>25%</color>の確率で<color=#28d9ed>反撃</color>する。",
+        "kr": "(패시브 효과)\\n자신이 공격받았을 때 <color=#28d9ed>25%</color> 확률로 <color=#28d9ed>반격</color>합니다.",
         "zh": "(被动效果)\\n自身受到攻击时,有<color=#28d9ed>25%</color>的几率发动<color=#28d9ed>反击</color>。"
       },
       "icon": "MT_Passive_1_Earth"

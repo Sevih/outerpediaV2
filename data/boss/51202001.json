@@ -2,8 +2,8 @@
   "id": "51202001",
   "Name": {
     "en": "Iron Stretcher",
-    "kr": "아이언 스트레쳐",
     "jp": "アイアンストレッチャー",
+    "kr": "아이언 스트레쳐",
     "zh": "铁血伸张者"
   },
   "Surname": null,
@@ -17,20 +17,20 @@
   "location": {
     "dungeon": {
       "en": "Iron Stretcher (Very Hard)",
-      "kr": "아이언 스트래쳐 (베리 하드)",
       "jp": "アイアンストレッチャー(ベリーハード)",
+      "kr": "아이언 스트래쳐 (베리 하드)",
       "zh": "钢铁伸展者 (极难)"
     },
     "mode": {
       "en": "Pursuit Operation",
-      "kr": "추격 섬멸전",
       "jp": "追撃殲滅戦",
+      "kr": "추격 섬멸전",
       "zh": "追击歼灭战"
     },
     "area_id": {
       "en": "72000003",
-      "kr": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -38,15 +38,15 @@
     {
       "name": {
         "en": "Sweep",
-        "kr": "쓸어담기",
         "jp": "一括掃討",
+        "kr": "쓸어담기",
         "zh": "胡乱扫除"
       },
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and removes <color=#28d9ed>2</color> <color=#28d9ed>buff(s)</color> from the target.",
-        "kr": "적을 공격하고 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 빼앗습니다.",
         "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2個</color>奪う。",
+        "kr": "적을 공격하고 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 빼앗습니다.",
         "zh": "攻击敌人,并夺取目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>。"
       },
       "icon": "MT_Attack_Claw_1_Dark",
@@ -57,15 +57,15 @@
     {
       "name": {
         "en": "Rising Fist",
-        "kr": "솟아나는 주먹",
         "jp": "燃え上がる拳",
+        "kr": "솟아나는 주먹",
         "zh": "力如拳涌"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy, and reduces Priority of the target by <color=#28d9ed>20%</color>, and increases Priority of all allies by <color=#28d9ed>20%</color>.",
-        "kr": "적을 공격하고 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고, 아군 전체의 행동 게이지를 <color=#28d9ed>-20%</color> 증가시킵니다.",
         "jp": "敵単体にダメージを与え、対象の行動ゲージを<color=#28d9ed>20%</color>DOWNさせ、味方全体の行動ゲージを<color=#28d9ed>-20%</color>UPさせる。",
+        "kr": "적을 공격하고 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고, 아군 전체의 행동 게이지를 <color=#28d9ed>-20%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使目标的行动值降低<color=#28d9ed>20%</color>,且使全体友军的行动值提升<color=#28d9ed>-20%</color>。"
       },
       "icon": "MT_Attack_Smash_1_Dark",
@@ -79,15 +79,15 @@
     {
       "name": {
         "en": "Plunderer's Cry",
-        "kr": "약탈자의 포효",
         "jp": "略奪者の咆哮",
+        "kr": "약탈자의 포효",
         "zh": "掠夺者的咆哮"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. Grants a <color=#28d9ed>barrier</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>, and <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>5 turn(s)</color>.",
-        "kr": "적 전체를 공격합니다. 자신을 제외한 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 자신은 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.",
         "jp": "敵全体にダメージを与える。自分を除く味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与し、自分に<color=#28d9ed>無敵</color>を<color=#28d9ed>5ターン</color>の間付与する。",
+        "kr": "적 전체를 공격합니다. 자신을 제외한 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 자신은 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.",
         "zh": "攻击全体敌人。使除自身外的全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>,并使自身获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>5回合</color>。"
       },
       "icon": "MT_Attack_Smash_1_Dark",
@@ -99,15 +99,15 @@
     {
       "name": {
         "en": "Evolution: Wrought Iron",
-        "kr": "진화 : 연철",
         "jp": "進化:錬鉄",
+        "kr": "진화 : 연철",
         "zh": "进化:锻铁"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>5000</color>.\\nAfter attacking, summons an Irregular Machine Gun.\\nIrregular Machine Gun inflicts <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>1 turn(s)</color> upon death.\\nWhen an ally is still alive, takes no Weakness Gauge damage.",
-        "kr": "저주, 고정 피해로 받는 피해는 최대 <color=#28d9ed>5000</color>을 초과하지 않습니다.\\n공격 후 이레귤러 기관총을 소환합니다.\\n이레귤러 기관총은 사망 시 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.\\n아군 생존 시 WG 피해를 받지 않습니다.",
         "jp": "受ける呪い/固定ダメージは<color=#28d9ed>[Buff_V_irregular_dmgcap_1</color>を超えない。\\n攻撃後、【イレギュラー・機関銃】を召喚する。\\n【イレギュラー・機関銃】が倒れた時、敵全体に<color=#28d9ed>強化不可</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n味方が戦場にいる場合、WGダメージを受けない。",
+        "kr": "저주, 고정 피해로 받는 피해는 최대 <color=#28d9ed>5000</color>을 초과하지 않습니다.\\n공격 후 이레귤러 기관총을 소환합니다.\\n이레귤러 기관총은 사망 시 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.\\n아군 생존 시 WG 피해를 받지 않습니다.",
         "zh": "诅咒、固定伤害造成的伤害最多不会超过\\n<color=#28d9ed>5000</color>。\\n攻击后,召唤机关枪异型怪。\\n机关枪异型怪死亡时,对全体敌人造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>1回合</color>。\\n友军存活时,不受到WG伤害。"
       },
       "icon": "MT_Passive_1_Earth",
@@ -118,15 +118,15 @@
     {
       "name": {
         "en": "Enraged",
-        "kr": "광폭화",
         "jp": "狂暴化",
+        "kr": "광폭화",
         "zh": "狂暴化"
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Command: Extermination</color>: Used when Enraged ends. Deals great damage to all enemies.",
-        "kr": "4턴마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>명령 : 박멸</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
         "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。【狂暴化】は3ターンの間継続する。\\n\\n<color=#28d9ed>【命令:殲滅】</color>:【狂暴化】終了時に発動する。\\n敵全体に大ダメージを与える。",
+        "kr": "4턴마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>명령 : 박멸</color> : 광폭화 종료 시 사용.\\n적 전체에게 큰 피해를 입힙니다.",
         "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>命令:破灭</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
       },
       "icon": "MT_Boss_Rage_Common_1",
@@ -138,15 +138,15 @@
     {
       "name": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "type": "SKT_RAGE_FINISH1",
       "description": {
         "en": "",
-        "kr": "",
         "jp": "",
+        "kr": "",
         "zh": ""
       },
       "icon": "MT_Boss_Rage_Common_1"
