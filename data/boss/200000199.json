@@ -2,14 +2,14 @@
   "id": "200000199",
   "Name": {
     "en": "K",
-    "kr": "케이",
     "jp": "ケイ",
+    "kr": "케이",
     "zh": "凯伊"
   },
   "Surname": {
     "en": "The Lone Avenger",
-    "kr": "고독한 복수자",
     "jp": "孤独な復讐者",
+    "kr": "고독한 복수자",
     "zh": "孤独的复仇者"
   },
   "IncludeSurname": false,
@@ -22,20 +22,20 @@
   "location": {
     "dungeon": {
       "en": "Skyward Tower 96F",
-      "kr": "비천의 탑 96층",
       "jp": "飛天の塔96階",
+      "kr": "비천의 탑 96층",
       "zh": "飞天之塔96层"
     },
     "mode": {
       "en": "Skyward Tower",
-      "kr": "비천의 탑",
       "jp": "飛天の塔",
+      "kr": "비천의 탑",
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101096",
-      "kr": "",
+      "en": "",
       "jp": "",
+      "kr": "",
       "zh": ""
     }
   },
@@ -43,63 +43,72 @@
     {
       "name": {
         "en": "Shield Rush",
-        "kr": "실드 러시",
         "jp": "シールドラッシュ",
+        "kr": "실드 러시",
         "zh": "护盾突击"
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
-        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
-        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
-        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。"
+        "en": "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。"
       },
-      "icon": "Skill_First_2000001"
+      "icon": "Skill_First_2000001",
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     },
     {
       "name": {
         "en": "Sliding Uppercut",
-        "kr": "슬라이딩 어퍼",
         "jp": "スライディングアッパー",
+        "kr": "슬라이딩 어퍼",
         "zh": "滑动上勾拳"
       },
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.",
-        "kr": "적을 공격하고 가장 공격력이 높은 아군을 호출하여 <color=#28d9ed>협공</color>을 사용하게 합니다.",
         "jp": "敵単体にダメージを与え、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "kr": "적을 공격하고 가장 공격력이 높은 아군을 호출하여 <color=#28d9ed>협공</color>을 사용하게 합니다.",
         "zh": "攻击敌人,并呼叫攻击力最高的友军发动<color=#28d9ed>夹攻</color>。"
       },
-      "icon": "Skill_Second_2000001"
+      "icon": "Skill_Second_2000001",
+      "buff": [
+        "BT_CALL_BACKUP"
+      ]
     },
     {
       "name": {
         "en": "Raging Storm",
-        "kr": "레이징 스톰",
         "jp": "レイジングストーム",
+        "kr": "레이징 스톰",
         "zh": "肆虐风暴"
       },
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and increases the <color=#28d9ed>Defense</color> of all allies for <color=#28d9ed>2 turn(s)</color>.",
-        "kr": "적 전체를 공격하고 아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "jp": "敵全体にダメージを与え、味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적 전체를 공격하고 아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击全体敌人,并使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000001"
+      "icon": "Skill_Ultimate_2000001",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
     },
     {
       "name": {
         "en": "Vengeance Is Mine",
-        "kr": "복수는 나의 것",
         "jp": "復讐は我が物",
+        "kr": "복수는 나의 것",
         "zh": "我要复仇"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect)\\nReduces <color=#28d9ed>K</color>'s damage taken by <color=#28d9ed>30%</color> while <color=#28d9ed>Eva</color> is alive.\\nRecovers <color=#28d9ed>K</color>'s <color=#28d9ed>Weakness Gauge</color> by <color=#28d9ed>8</color> at the start of <color=#28d9ed>Eva</color>'s turn.\\n\\nIncreases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color> and grants additional effects when Lisha or Snow is defeated.\\n<color=#28d9ed>Lisha</color>: Increases <color=#28d9ed>Critical Hit Chance</color> until inflicted with Break\\n<color=#28d9ed>Snow</color>: Increases <color=#28d9ed>Speed</color> until inflicted with Break",
-        "kr": "(패시브 효과)\\n<color=#28d9ed>에바</color>가 살아있는 동안 <color=#28d9ed>케이</color>가 받는 피해를 <color=#28d9ed>30%</color> 감소시킵니다. \\n<color=#28d9ed>에바</color>가 턴 시작 시 <color=#28d9ed>케이</color>의 <color=#28d9ed>WG</color>를 <color=#28d9ed>8</color> 회복시킵니다.\\n\\n리샤나 스노우 사망 시 <color=#28d9ed>행동 게이지</color> <color=#28d9ed>100%</color> 증가 및 추가 효과 획득\\n<color=#28d9ed>리샤</color> : 브레이크 되기 전까지 <color=#28d9ed>치명 확률</color> 증가\\n<color=#28d9ed>스노우</color> : 브레이크 전까지 <color=#28d9ed>속도</color> 증가",
         "jp": "(パッシブ効果)\\n戦場に<color=#28d9ed>【エヴァ】</color>がいる場合、<color=#28d9ed>【ケイ】</color>の受けるダメージが<color=#28d9ed>30%</color>DOWNする。\\n<color=#28d9ed>【エヴァ】</color>のターン開始時に<color=#28d9ed>【ケイ】</color>の<color=#28d9ed>WG</color>を<color=#28d9ed>8</color>回復させる。\\n\\n<color=#28d9ed>【リーシャ】】</color>や<color=#28d9ed>【スノー】</color>が倒れた時、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>100%</color>UPさせ、次の追加効果を獲得する。\\n<color=#28d9ed>【リーシャ】</color>が倒れた時:ブレイクするまで<color=#28d9ed>会心率</color>がUPする。\\n<color=#28d9ed>【スノー】が倒れた時</color>:ブレイクするまで<color=#28d9ed>スピード</color>がUPする。",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>에바</color>가 살아있는 동안 <color=#28d9ed>케이</color>가 받는 피해를 <color=#28d9ed>30%</color> 감소시킵니다. \\n<color=#28d9ed>에바</color>가 턴 시작 시 <color=#28d9ed>케이</color>의 <color=#28d9ed>WG</color>를 <color=#28d9ed>8</color> 회복시킵니다.\\n\\n리샤나 스노우 사망 시 <color=#28d9ed>행동 게이지</color> <color=#28d9ed>100%</color> 증가 및 추가 효과 획득\\n<color=#28d9ed>리샤</color> : 브레이크 되기 전까지 <color=#28d9ed>치명 확률</color> 증가\\n<color=#28d9ed>스노우</color> : 브레이크 전까지 <color=#28d9ed>속도</color> 증가",
         "zh": "(被动效果)\\n在<color=#28d9ed>艾娃</color>存活期间,使<color=#28d9ed>凯伊</color>所受伤害降低<color=#28d9ed>30%</color>。\\n<color=#28d9ed>艾娃</color>在回合开始时,使<color=#28d9ed>凯伊</color>的<color=#28d9ed>WG</color>恢复<color=#28d9ed>8</color>。\\n\\n莉莎或雪诺死亡时,<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>,并获得额外效果。\\n<color=#28d9ed>莉莎</color>:使<color=#28d9ed>暴击率</color>提升,持续至进入力竭状态为止。\\n<color=#28d9ed>雪诺</color>:使<color=#28d9ed>速度</color>提升,持续至进入力竭状态为止。"
       },
       "icon": "MT_Passive_1_Fire"
@@ -107,15 +116,15 @@
     {
       "name": {
         "en": "Super Regeneration III",
-        "kr": "초재생 III",
         "jp": "超再生 III",
+        "kr": "초재생 III",
         "zh": "超再生 III"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nRecovers Health of the caster by <color=#28d9ed>10%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>10%</color> 만큼 회복합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、自分のHPを<color=#28d9ed>10%</color>回復する。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 자신의 체력을 <color=#28d9ed>10%</color> 만큼 회복합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使自身生命值恢复<color=#28d9ed>10%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
@@ -123,15 +132,15 @@
     {
       "name": {
         "en": "Fury Stack V",
-        "kr": "분노 중첩 V",
         "jp": "アンガースタック V",
+        "kr": "분노 중첩 V",
         "zh": "愤怒叠加 V"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>15%</color> every time the caster takes a turn.",
-        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>15%</color> 증가합니다.",
         "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>15%</color> 증가합니다.",
         "zh": "(被动效果)\\n每到自身回合时,使攻击力提升<color=#28d9ed>15%</color>。"
       },
       "icon": "MT_Passive_1_Dark"
