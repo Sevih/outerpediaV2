@@ -257,7 +257,7 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
  *  BuffIDs can be in any field due to bytes parser column shifts.
  *  Excluded fields: DescID_fallback1 (contains internal trigger buff IDs, not visible buffs).
  */
-const BUFF_FIELD_EXCLUDE = new Set(['ID', 'SkillID', 'Key', 'DescID_fallback1']);
+const BUFF_FIELD_EXCLUDE = new Set(['ID', 'SkillID', 'SkillLevel', 'Key', 'DescID_fallback1']);
 
 function collectMonsterBuffIds(lvls: Row[], buffData: Row[]): string[] {
   const knownBuffIds = new Set(buffData.map(r => r.BuffID).filter(Boolean));
