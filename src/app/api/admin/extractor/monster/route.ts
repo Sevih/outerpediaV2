@@ -255,6 +255,7 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
 
 const MONSTER_BUFF_ID_BLACKLIST = new Set([
   '4076005_11_1', // Tyrant Toddler rage: internal debuff duration reduction
+  '4076007_11_3', // Chimera Starving Devil: internal shield
 ]);
 
 /** Collect buff IDs from MonsterSkillLevelTemplet rows.
