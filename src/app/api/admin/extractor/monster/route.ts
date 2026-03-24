@@ -308,10 +308,20 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
   const iconToIR = buildIconToIRMap(gd.buffData);
 
   const skills: Record<string, unknown>[] = [];
+  const processedSids = new Set<string>();
 
+  // Collect skill IDs from Skill_1..23 + UseEntryJIggleBone (often the ultimate slot)
+  const skillSlots: string[] = [];
   for (let i = 1; i <= 23; i++) {
     const sid = monster[`Skill_${i}`];
-    if (!sid || sid === '0') continue;
+    if (sid && sid !== '0') skillSlots.push(sid);
+  }
+  const entrySid = monster.UseEntryJIggleBone;
+  if (entrySid && entrySid !== '0' && skillByNs[entrySid]) skillSlots.push(entrySid);
+
+  for (const sid of skillSlots) {
+    if (processedSids.has(sid)) continue;
+    processedSids.add(sid);
 
     const skillRow = skillByNs[sid];
     if (!skillRow) continue;
@@ -387,7 +397,7 @@ function extractMonster(gd: GameData, monster: Row, dungeonList: DungeonLink[], 
     element,
     level: location?.level ?? null,
     icons: monster.FaceIconID ?? monster.ID,
-    BuffImmune: '',
+    BuffImmune: monster.BuffImmune ?? '',
     StatBuffImmune: statBuffImmune,
     location: location ? {
       dungeon: langObj(location.name),
@@ -549,9 +559,9 @@ export async function GET(req: NextRequest) {
       const monsterToDungeons = buildMonsterToDungeons(gd);
       const monsterById = new Map(gd.monsters.map(m => [m.ID, m]));
 
-      // Read all existing boss JSONs
+      // Read all existing boss JSONs (skip versioned files like {id}-{YYMM}.json and index.json)
       let files: string[] = [];
-      try { files = (await fs.readdir(BOSS_DIR)).filter(f => f.endsWith('.json') && f !== 'index.json'); } catch { /* empty */ }
+      try { files = (await fs.readdir(BOSS_DIR)).filter(f => f.endsWith('.json') && f !== 'index.json' && !f.replace('.json', '').includes('-')); } catch { /* empty */ }
 
       type CompareEntry = { id: string; file: string; name: string; diffs: { field: string; existing: string; extracted: string }[]; notInGame?: boolean };
 
@@ -570,7 +580,7 @@ export async function GET(req: NextRequest) {
 
         const diffs: { field: string; existing: string; extracted: string }[] = [];
 
-        for (const field of ['class', 'element', 'StatBuffImmune'] as const) {
+        for (const field of ['class', 'element', 'BuffImmune', 'StatBuffImmune'] as const) {
           const e = String((existing as Record<string, unknown>)[field] ?? '');
           const x = String((ext as Record<string, unknown>)[field] ?? '');
           if (e !== x) diffs.push({ field, existing: e, extracted: x });
@@ -654,11 +664,23 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const data = body.data;
+    const version = body.version === true;
     const id = data?.id;
     if (!id) return NextResponse.json({ error: 'Missing id' }, { status: 400 });
 
     await fs.mkdir(BOSS_DIR, { recursive: true });
     const filePath = path.join(BOSS_DIR, `${id}.json`);
+
+    // Version: copy existing file to {id}-{YYMM}.json before overwriting
+    if (version) {
+      try {
+        await fs.access(filePath);
+        const now = new Date();
+        const yymm = String(now.getFullYear()).slice(2) + String(now.getMonth() + 1).padStart(2, '0');
+        const versionPath = path.join(BOSS_DIR, `${id}-${yymm}.json`);
+        await fs.copyFile(filePath, versionPath);
+      } catch { /* no existing file to version */ }
+    }
 
     // Detect EOL from existing file or default to \r\n on Windows
     let eol = '\r\n';
@@ -671,7 +693,7 @@ export async function POST(req: NextRequest) {
     if (eol === '\r\n') output = output.replace(/\n/g, '\r\n');
     await fs.writeFile(filePath, output, 'utf-8');
 
-    return NextResponse.json({ ok: true, id });
+    return NextResponse.json({ ok: true, id, versioned: version });
   } catch (e) {
     return NextResponse.json({ error: e instanceof Error ? e.message : 'Unknown error' }, { status: 500 });
   }

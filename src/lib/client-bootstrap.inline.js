@@ -61,7 +61,9 @@
       if (h === 'localhost' || h === '127.0.0.1' || h.endsWith('.localhost') || h.endsWith('.local')) {
         navigator.serviceWorker.getRegistrations().then(function (r) { r.forEach(function (w) { w.unregister(); }); });
       } else {
+        var hadController = !!navigator.serviceWorker.controller;
         navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (!hadController) { hadController = true; return; }
           doReload();
           setTimeout(showUpdateBanner, 2000);
         });

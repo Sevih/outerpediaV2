@@ -25,9 +25,12 @@ export default function BossComparePage() {
     total: number; ok: number; withDiffs: number; notFound: number;
     results: CompareResult[];
   } | null>(null);
+  const [savingIds, setSavingIds] = useState<Set<string>>(new Set());
+  const [savedIds, setSavedIds] = useState<Set<string>>(new Set());
 
   const handleCompare = useCallback(async () => {
     setComparing(true);
+    setSavedIds(new Set());
     try {
       const res = await fetch(`${API}?action=compare`);
       setResult(await res.json());
@@ -37,6 +40,27 @@ export default function BossComparePage() {
       setComparing(false);
     }
   }, []);
+
+  async function handleSaveOne(monsterId: string) {
+    setSavingIds(prev => new Set(prev).add(monsterId));
+    try {
+      // Extract then save
+      const extRes = await fetch(`${API}?action=extract&id=${monsterId}`);
+      const extData = await extRes.json();
+      if (!extData.extracted) return;
+      const saveRes = await fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: extData.extracted }),
+      });
+      const saveData = await saveRes.json();
+      if (saveData.ok) {
+        setSavedIds(prev => new Set(prev).add(monsterId));
+      }
+    } finally {
+      setSavingIds(prev => { const n = new Set(prev); n.delete(monsterId); return n; });
+    }
+  }
 
   return (
     <div className="space-y-4">
@@ -76,6 +100,15 @@ export default function BossComparePage() {
                   ? <span className="rounded bg-zinc-700/50 px-1.5 py-0.5 text-[10px] text-zinc-400">not in game data</span>
                   : <span className="text-xs text-red-400">{r.diffs.length} diff(s)</span>
                 }
+                {!r.notInGame && r.diffs.length > 0 && (
+                  <button
+                    onClick={() => handleSaveOne(r.id.split('-')[0])}
+                    disabled={savingIds.has(r.id.split('-')[0]) || savedIds.has(r.id.split('-')[0])}
+                    className="ml-auto rounded bg-blue-600/80 px-2.5 py-0.5 text-xs font-semibold transition hover:bg-blue-500 disabled:opacity-50"
+                  >
+                    {savedIds.has(r.id.split('-')[0]) ? 'Saved' : savingIds.has(r.id.split('-')[0]) ? 'Saving...' : 'Save'}
+                  </button>
+                )}
               </div>
               <div className="space-y-2">
                 {r.diffs.map((d, i) => (

@@ -100,6 +100,7 @@ export default function BossExtractorPage() {
   const [allDungeons, setAllDungeons] = useState<DungeonEntry[]>([]);
   const [saving, setSaving] = useState(false);
   const [saveMsg, setSaveMsg] = useState('');
+  const [versionOnSave, setVersionOnSave] = useState(false);
 
   // Load filters on mount
   useEffect(() => {
@@ -156,11 +157,11 @@ export default function BossExtractorPage() {
       const res = await fetch(API, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data: extracted }),
+        body: JSON.stringify({ data: extracted, version: versionOnSave }),
       });
       const data = await res.json();
       if (data.ok) {
-        setSaveMsg(`Saved ${data.id}.json`);
+        setSaveMsg(`Saved ${data.id}.json${data.versioned ? ' (versioned)' : ''}`);
         setExisting(extracted);
       } else {
         setSaveMsg(`Error: ${data.error}`);
@@ -275,6 +276,13 @@ export default function BossExtractorPage() {
                 {existing && <span className="rounded bg-green-900/30 px-2 py-0.5 text-xs text-green-400">Exists</span>}
                 {!existing && <span className="rounded bg-blue-900/30 px-2 py-0.5 text-xs text-blue-400">New</span>}
                 <div className="flex-1" />
+                {existing && (
+                  <label className="flex items-center gap-1.5 text-xs text-zinc-400 cursor-pointer">
+                    <input type="checkbox" checked={versionOnSave} onChange={e => setVersionOnSave(e.target.checked)}
+                      className="rounded border-zinc-600" />
+                    Version
+                  </label>
+                )}
                 <button
                   onClick={handleSave}
                   disabled={saving}
@@ -354,7 +362,7 @@ export default function BossExtractorPage() {
               {extracted.skills.map((skill, i) => (
                 <Section key={i} title={`${skill.type} — ${skill.name?.en ?? '(unnamed)'}`}>
                   <div className="space-y-2">
-                    <LangRow field="name" data={skill.name as Record<string, string>} />
+                    <LangRow field="name" data={{ name: skill.name?.en ?? '', name_jp: skill.name?.jp ?? '', name_kr: skill.name?.kr ?? '', name_zh: skill.name?.zh ?? '' }} />
                     <div className="space-y-1">
                       {(['en', 'jp', 'kr', 'zh'] as const).map(lang => {
                         const desc = skill.description?.[lang] ?? '';
@@ -362,7 +370,12 @@ export default function BossExtractorPage() {
                         return (
                           <div key={lang} className="text-xs">
                             <span className="mr-1.5 font-semibold text-zinc-600 uppercase">{lang}</span>
-                            <span className="text-zinc-400 whitespace-pre-wrap">{desc}</span>
+                            <span className="text-zinc-400 whitespace-pre-wrap" dangerouslySetInnerHTML={{
+                              __html: desc
+                                .replace(/\\n/g, '\n')
+                                .replace(/<[Cc]olor=(#[0-9a-fA-F]+)>/g, '<span style="color:$1">')
+                                .replace(/<\/[Cc]olor>/g, '</span>')
+                            }} />
                           </div>
                         );
                       })}

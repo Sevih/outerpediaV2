@@ -27,6 +27,7 @@ export default async function GuidesPage({ params }: Props) {
     getGuideCategories(),
     getGuideCounts(),
   ]);
+  const monthYear = getMonthYear(lang);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
@@ -35,6 +36,7 @@ export default async function GuidesPage({ params }: Props) {
         <span className="sr-only">{` — Boss Strategies, Tips & Walkthroughs`}</span>
       </h1>
       <p className="mt-2 text-center text-sm text-zinc-400">{t['page.guides.description']}</p>
+      <p className="sr-only">{monthYear}</p>
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((cat) => (
