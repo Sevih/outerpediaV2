@@ -18,11 +18,17 @@ interface CompareResult {
   notInGame?: boolean;
 }
 
+interface ModeDiff {
+  file: string;
+  name: string;
+  notInGame?: boolean;
+}
+
 interface ModeEntry {
   total: number;
   ok: number;
   withDiffs: number;
-  diffs: string[];
+  diffs: ModeDiff[];
 }
 
 const API = '/api/admin/extractor/monster';
@@ -52,13 +58,6 @@ export default function BossCompareByModePage() {
       .catch(() => setLoading(false));
   }, []);
 
-  // Auto-select mode from URL param once loaded
-  useEffect(() => {
-    if (initialMode && modes[initialMode]) {
-      setSelectedMode(initialMode);
-    }
-  }, [initialMode, modes]);
-
   // Load detail when mode selected
   const loadDetail = useCallback(async (mode: string) => {
     setSelectedMode(mode);
@@ -76,8 +75,8 @@ export default function BossCompareByModePage() {
       const modeEntry = modes[mode];
       if (!modeEntry) { setDetailResults([]); setDetailOk(0); return; }
 
-      const diffNames = new Set(modeEntry.diffs);
-      const filtered = results.filter(r => diffNames.has(r.name) || diffNames.has(`${r.id} (not in game)`));
+      const diffFiles = new Set(modeEntry.diffs.map(d => d.file));
+      const filtered = results.filter(r => diffFiles.has(r.file));
       setDetailResults(filtered);
       setDetailOk(modeEntry.ok);
     } catch {
@@ -86,6 +85,13 @@ export default function BossCompareByModePage() {
       setDetailLoading(false);
     }
   }, [modes]);
+
+  // Auto-select mode from URL param once loaded and trigger compare
+  useEffect(() => {
+    if (initialMode && modes[initialMode]) {
+      loadDetail(initialMode);
+    }
+  }, [initialMode, modes, loadDetail]);
 
   async function handleSaveOne(monsterId: string) {
     setSavingIds(prev => new Set(prev).add(monsterId));
@@ -105,12 +111,40 @@ export default function BossCompareByModePage() {
     }
   }
 
+  const [applying, setApplying] = useState(false);
+  const [applyResult, setApplyResult] = useState<{ modified: number; total: number } | null>(null);
+
+  async function handleApplyOverrides() {
+    setApplying(true);
+    setApplyResult(null);
+    try {
+      const res = await fetch(`${API}?action=apply-overrides`);
+      const data = await res.json();
+      if (data.ok) setApplyResult({ modified: data.modified, total: data.total });
+    } finally {
+      setApplying(false);
+    }
+  }
+
   if (loading) return <div className="flex justify-center py-10 text-zinc-500">Loading mode overview...</div>;
 
   const sortedModes = Object.entries(modes).sort(([a], [b]) => a.localeCompare(b));
 
   return (
-    <div className="flex gap-6 h-[calc(100vh-200px)]">
+    <div className="space-y-3">
+      <div className="flex items-center gap-3">
+        <button
+          onClick={handleApplyOverrides}
+          disabled={applying}
+          className="rounded bg-purple-600/80 px-4 py-2 text-sm font-semibold transition hover:bg-purple-500 disabled:opacity-50"
+        >
+          {applying ? 'Applying...' : 'Apply Overrides'}
+        </button>
+        {applyResult && (
+          <span className="text-xs text-purple-400">{applyResult.modified} file(s) modified / {applyResult.total}</span>
+        )}
+      </div>
+      <div className="flex gap-6 h-[calc(100vh-250px)]">
       {/* Left: mode list */}
       <div className="w-72 shrink-0 flex flex-col border-r border-zinc-800 pr-4 overflow-y-auto">
         {sortedModes.map(([mode, entry]) => (
@@ -183,6 +217,7 @@ export default function BossCompareByModePage() {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 }

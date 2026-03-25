@@ -134,7 +134,10 @@
         "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 받는 피해 감소/절망의 하모니 효과를 6턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 6턴 동안 유지됩니다.\\n\\n<color=#28d9ed>월야의 녹턴</color> : 광폭화 종료 시 사용.\\n적 전체를 사망시킵니다.\\n\\n<color=#ffd732>4턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
         "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的所受伤害降低/绝望的和声效果,持续6回合,并使WG恢复30%。狂暴化持续6回合。\\n\\n<color=#28d9ed>月夜的夜曲</color>:狂暴化结束时发动。\\n使全体敌人死亡。\\n\\n<color=#ffd732>在4回合内陷入狂暴化状态时,恢复80CP。</color>"
       },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_CP_CHARGE"
+      ]
     },
     {
       "name": {

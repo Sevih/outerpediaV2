@@ -28,7 +28,7 @@
       "zh": "冒险许可证"
     },
     "area_id": {
-      "en": "70600000",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -102,8 +102,8 @@
       },
       "icon": "MT_Passive_1_Fire",
       "buff": [
-        "BT_ACTION_GAUGE",
-        "BT_COOL_CHARGE"
+        "BT_COOL3_CHARGE",
+        "BT_ACTION_GAUGE"
       ],
       "debuff": [
         "BT_STAT|ST_CRITICAL_RATE_IR"
@@ -125,26 +125,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_STAT|ST_ATK_IR",
         "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR",
         "BT_IMMUNE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

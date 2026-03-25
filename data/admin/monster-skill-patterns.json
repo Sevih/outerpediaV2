@@ -1,0 +1,10 @@
+[
+  {
+    "pattern": "[Gg]rants?\\s+\\d+\\s+Chain Points",
+    "add_buff": ["BT_CP_CHARGE"]
+  },
+  {
+    "pattern": "[Gg]rants?\\s+\\d+\\s+Action Points",
+    "add_buff": ["BT_AP_CHARGE"]
+  }
+]

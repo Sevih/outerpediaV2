@@ -118,7 +118,10 @@
         "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화</color> : 적 전체를 공격 후, 대상 모두에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 2개 부여합니다. 이후 영구적으로 WG 피해를 받지 않고, <color=#28d9ed>공격력</color>/<color=#28d9ed>속도</color>가 증가하고 <color=#28d9ed>받는 피해</color>가 감소합니다. 화상을 제외한 효과들은 해제되지 않습니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
         "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化</color>:攻击全体敌人后,对所有目标造成2个<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。此后永久不受WG伤害,且<color=#28d9ed>攻击力</color>/<color=#28d9ed>速度</color>提升,<color=#28d9ed>所受伤害</color>降低。除烧伤外的效果不会被解除。\\n\\n<color=#ffd732>在3回合内陷入狂暴化时,使CP恢复80。</color>"
       },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_CP_CHARGE"
+      ]
     }
   ]
 }

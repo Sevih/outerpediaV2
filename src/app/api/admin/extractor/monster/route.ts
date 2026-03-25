@@ -172,6 +172,8 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
     }
   }
 
+  const monsterIds = new Set(gd.monsters.map(m => m.ID));
+
   // Build spawn lookup → { monsterIds, spawn row }
   const spawnMap = new Map<string, { mids: Set<string>; row: Row }>();
   for (const s of gd.spawns) {
@@ -183,7 +185,9 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
       const val = s[idx];
       if (!val) continue;
       // If the value is a known dungeon spawn ref, it's a spawn key, not a monster ID
-      if (dungeonSpawnRefs.has(val)) {
+      // Also: if HPLineCount is missing and the value is NOT a known monster ID, treat it as a spawn key
+      // (bytes parser column shift puts HPLineCount into ID0)
+      if (dungeonSpawnRefs.has(val) || (!s.HPLineCount && !monsterIds.has(val))) {
         keys.push(val);
       } else {
         mids.add(val);
@@ -248,6 +252,48 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
     }
   }
 
+  // Second pass: for monsters in spawns without HPLineCount, try to inherit dungeon
+  // from a nearby spawn with a sequential key (e.g. 706000002 inherits from 706000001)
+  for (const s of gd.spawns) {
+    if (s.HPLineCount) continue;
+    const mids = new Set<string>();
+    const spawnKeys: string[] = [];
+    for (const idx of ['ID0', 'ID1', 'ID2', 'ID3']) {
+      const val = s[idx];
+      if (!val) continue;
+      if (!monsterIds.has(val)) spawnKeys.push(val);
+      else mids.add(val);
+    }
+    // Check if any monster in this spawn is already linked
+    let anyLinked = false;
+    for (const mid of mids) { if (result.has(mid)) { anyLinked = true; break; } }
+    if (anyLinked) continue;
+
+    // Try decrementing spawn keys to find a linked sibling
+    for (const key of spawnKeys) {
+      const num = parseInt(key);
+      if (isNaN(num)) continue;
+      for (let delta = 1; delta <= 5; delta++) {
+        const siblingKey = String(num - delta);
+        const sibling = spawnMap.get(siblingKey);
+        if (!sibling) continue;
+        // Find any monster in sibling that has a dungeon link
+        for (const sibMid of sibling.mids) {
+          const links = result.get(sibMid);
+          if (!links?.length) continue;
+          // Inherit dungeon links for our orphan monsters
+          const level = parseInt(s.GroupID ?? s.Level0 ?? '0') || 0;
+          for (const mid of mids) {
+            if (result.has(mid)) continue;
+            result.set(mid, links.map(l => ({ ...l, level })));
+          }
+          break;
+        }
+        break;
+      }
+    }
+  }
+
   return result;
 }
 
@@ -258,16 +304,25 @@ const MONSTER_BUFF_ID_BLACKLIST = new Set<string>([]);
 // ── Skill overrides (from data/admin/monster-skill-overrides.json) ──
 // Key = "name_en|desc_en", value = { add_buff, add_debuff, remove_buff, remove_debuff }
 type SkillOverride = { add_buff?: string[]; add_debuff?: string[]; remove_buff?: string[]; remove_debuff?: string[] };
-let skillOverridesCache: Record<string, SkillOverride> | null = null;
 
 async function loadSkillOverrides(): Promise<Record<string, SkillOverride>> {
-  if (skillOverridesCache) return skillOverridesCache;
   try {
     const raw = await fs.readFile(path.join(process.cwd(), 'data', 'admin', 'monster-skill-overrides.json'), 'utf-8');
-    skillOverridesCache = JSON.parse(raw);
-    return skillOverridesCache!;
+    return JSON.parse(raw);
   } catch {
     return {};
+  }
+}
+
+type SkillPattern = { regex: RegExp; add_buff?: string[]; add_debuff?: string[]; remove_buff?: string[]; remove_debuff?: string[] };
+
+async function loadSkillPatterns(): Promise<SkillPattern[]> {
+  try {
+    const raw = await fs.readFile(path.join(process.cwd(), 'data', 'admin', 'monster-skill-patterns.json'), 'utf-8');
+    const data = JSON.parse(raw) as { pattern: string; add_buff?: string[]; add_debuff?: string[]; remove_buff?: string[]; remove_debuff?: string[] }[];
+    return data.map(d => ({ ...d, regex: new RegExp(d.pattern, 'i') }));
+  } catch {
+    return [];
   }
 }
 
@@ -304,6 +359,21 @@ function applySkillOverrides(
   if (override.add_debuff) for (const d of override.add_debuff) { if (!debuff.includes(d)) debuff.push(d); }
   if (override.remove_buff) for (const b of override.remove_buff) { const idx = buff.indexOf(b); if (idx >= 0) buff.splice(idx, 1); }
   if (override.remove_debuff) for (const d of override.remove_debuff) { const idx = debuff.indexOf(d); if (idx >= 0) debuff.splice(idx, 1); }
+}
+
+function applySkillPatterns(
+  descEn: string,
+  buff: string[],
+  debuff: string[],
+  patterns: SkillPattern[],
+): void {
+  for (const p of patterns) {
+    if (!p.regex.test(descEn)) continue;
+    if (p.add_buff) for (const b of p.add_buff) { if (!buff.includes(b)) buff.push(b); }
+    if (p.add_debuff) for (const d of p.add_debuff) { if (!debuff.includes(d)) debuff.push(d); }
+    if (p.remove_buff) for (const b of p.remove_buff) { const idx = buff.indexOf(b); if (idx >= 0) buff.splice(idx, 1); }
+    if (p.remove_debuff) for (const d of p.remove_debuff) { const idx = debuff.indexOf(d); if (idx >= 0) debuff.splice(idx, 1); }
+  }
 }
 
 /** Collect buff IDs from MonsterSkillLevelTemplet rows.
@@ -376,6 +446,7 @@ const WANTED_SKILL_TYPES = new Set([
 
 async function extractMonsterSkills(gd: GameData, monster: Row) {
   const overrides = await loadSkillOverrides();
+  const patterns = await loadSkillPatterns();
   const skillByNs: Record<string, Row> = {};
   for (const s of gd.monsterSkills) skillByNs[s.NameIDSymbol] = s;
   const iconToIR = buildIconToIRMap(gd.buffData);
@@ -389,10 +460,13 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
     const sid = monster[`Skill_${i}`];
     if (sid && sid !== '0') skillSlots.push(sid);
   }
-  // Add UseEntryJIggleBone if it's a wanted skill type not already in slots
-  const entrySid = monster.UseEntryJIggleBone;
-  if (entrySid && entrySid !== '0' && skillByNs[entrySid] && !skillSlots.includes(entrySid)) {
-    skillSlots.push(entrySid);
+  // Add skills from shifted fields (UseEntryJIggleBone, PushUp, PushBack)
+  // The bytes parser puts skill IDs in these fields due to column shifts
+  for (const field of ['UseEntryJIggleBone', 'PushUp', 'PushBack']) {
+    const sid = monster[field];
+    if (sid && sid !== '0' && sid !== 'true' && sid !== 'True' && skillByNs[sid] && !skillSlots.includes(sid)) {
+      skillSlots.push(sid);
+    }
   }
 
   for (const sid of skillSlots) {
@@ -435,9 +509,10 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
       description: resolvedDesc,
       icon: iconName,
     };
-    // Apply overrides from monster-skill-overrides.json (matched by desc_en)
+    // Apply overrides and patterns from admin JSON files
     const descEn = resolvedDesc.en ?? '';
     applySkillOverrides(descEn, buff, debuff, overrides);
+    applySkillPatterns(descEn, buff, debuff, patterns);
 
     if (buff.length > 0) skill.buff = buff;
     if (debuff.length > 0) skill.debuff = debuff;
@@ -445,14 +520,14 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
     skills.push(skill);
   }
 
-  // Merge RAGE_FINISH into RAGE_ENTER when finish has no name and same icon
+  // Merge RAGE_FINISH into RAGE_ENTER when finish has no description and same icon
   const mergeFinishIntoEnter = (finishType: string, enterType: string) => {
     const finishIdx = skills.findIndex(s => s.type === finishType);
     if (finishIdx < 0) return;
     const finish = skills[finishIdx];
-    const finishName = finish.name as Record<string, string>;
-    const hasName = finishName && Object.values(finishName).some(v => v);
-    if (hasName) return; // finish has its own name, keep it separate
+    const finishDesc = finish.description as Record<string, string>;
+    const hasDesc = finishDesc && Object.values(finishDesc).some(v => v);
+    if (hasDesc) return; // finish has its own description, keep it separate
 
     const enter = skills.find(s => s.type === enterType);
     if (!enter) return;
@@ -665,8 +740,9 @@ export async function GET(req: NextRequest) {
 
     if (action === 'apply-overrides') {
       const overrides = await loadSkillOverrides();
-      if (Object.keys(overrides).length === 0) {
-        return NextResponse.json({ ok: true, modified: 0, message: 'No overrides found' });
+      const patterns = await loadSkillPatterns();
+      if (Object.keys(overrides).length === 0 && patterns.length === 0) {
+        return NextResponse.json({ ok: true, modified: 0, message: 'No overrides or patterns found' });
       }
 
       let files: string[] = [];
@@ -691,6 +767,7 @@ export async function GET(req: NextRequest) {
           const origDebuff = JSON.stringify(debuff);
 
           applySkillOverrides(descEn, buff, debuff, overrides);
+          applySkillPatterns(descEn, buff, debuff, patterns);
 
           if (JSON.stringify(buff) !== origBuff) {
             if (buff.length > 0) skill.buff = buff; else delete skill.buff;
@@ -824,7 +901,7 @@ export async function GET(req: NextRequest) {
       let files: string[] = [];
       try { files = (await fs.readdir(BOSS_DIR)).filter(f => f.endsWith('.json') && f !== 'index.json' && !f.replace('.json', '').includes('-')); } catch { /* empty */ }
 
-      const byMode: Record<string, { total: number; ok: number; withDiffs: number; diffs: string[] }> = {};
+      const byMode: Record<string, { total: number; ok: number; withDiffs: number; diffs: { file: string; name: string; notInGame?: boolean }[] }> = {};
 
       const BATCH = 10;
       for (let i = 0; i < files.length; i += BATCH) {
@@ -869,7 +946,7 @@ export async function GET(req: NextRequest) {
           const rawId = String(entry.data.id ?? entry.file.replace(/\.json$/, ''));
           const id = rawId.split('-')[0];
           const monster = monsterById.get(id);
-          if (!monster) { byMode[mode].withDiffs++; byMode[mode].diffs.push(`${rawId} (not in game)`); continue; }
+          if (!monster) { byMode[mode].withDiffs++; byMode[mode].diffs.push({ file: entry.file, name: rawId, notInGame: true }); continue; }
 
           const dungeons = monsterToDungeons.get(id) ?? [];
           const ext = await extractMonster(gd, monster, dungeons);
@@ -904,7 +981,7 @@ export async function GET(req: NextRequest) {
           if (hasDiff) {
             byMode[mode].withDiffs++;
             const name = (entry.data.Name as Record<string, string>)?.en ?? rawId;
-            byMode[mode].diffs.push(name);
+            byMode[mode].diffs.push({ file: entry.file, name });
           } else {
             byMode[mode].ok++;
           }

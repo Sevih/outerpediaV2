@@ -65,7 +65,10 @@
         "kr": "(패시브 효과)\\n전투 개시 시점에 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
         "zh": "(被动效果)\\n在战斗开始时,使<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     }
   ]
 }

@@ -25,7 +25,7 @@ interface BossModeEntry {
   total: number;
   ok: number;
   withDiffs: number;
-  diffs: string[];
+  diffs: { file: string; name: string; notInGame?: boolean }[];
 }
 
 const DIFF_CHECKS: Omit<DiffCheck, 'status'>[] = [
@@ -180,8 +180,8 @@ export default function AdminDashboard() {
                   </div>
                   {entry.withDiffs > 0 && entry.diffs.length > 0 && (
                     <div className="mt-2 space-y-0.5">
-                      {entry.diffs.slice(0, 3).map((name, i) => (
-                        <div key={i} className="text-xs text-zinc-400 truncate">{name}</div>
+                      {entry.diffs.slice(0, 3).map((d, i) => (
+                        <div key={i} className="text-xs text-zinc-400 truncate">{d.name}</div>
                       ))}
                       {entry.diffs.length > 3 && (
                         <span className="text-[10px] text-zinc-600">+{entry.diffs.length - 3} more</span>
