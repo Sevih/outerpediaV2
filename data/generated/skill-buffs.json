@@ -512,12 +512,12 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "MY_TEAM_HIGHEST_ATK"
       },
       {
         "type": "BT_STAT|ST_SPEED",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_CALL_BACKUP_2",
@@ -684,7 +684,7 @@
       {
         "type": "BT_DOT_CURSE",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ]
   },
@@ -803,7 +803,7 @@
       {
         "type": "BT_CONTINU_HEAL",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       },
       {
         "type": "BT_AP_CHARGE",
@@ -1052,7 +1052,7 @@
       {
         "type": "BT_STAT|ST_COUNTER_RATE",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM_HIGHEST_ATK"
       },
       {
         "type": "BT_EXTEND_BUFF",
@@ -1436,7 +1436,7 @@
       {
         "type": "BT_STAT|ST_ATK",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       }
     ],
     "s3": [
@@ -1853,7 +1853,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "s2": [
@@ -2026,7 +2026,7 @@
       {
         "type": "BT_AGGRO",
         "debuff": true,
-        "target": "ENEMY",
+        "target": "ENEMY_TEAM",
         "burst": true
       }
     ],
@@ -2080,7 +2080,7 @@
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_STAT|ST_ATK",
@@ -2590,6 +2590,11 @@
         "type": "IG_Buff_2000053_Interruption",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_AP_CHARGE",
+        "debuff": false,
+        "target": "ME"
       }
     ],
     "s3": [
@@ -2721,7 +2726,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       },
       {
         "type": "IG_Buff_2000056_Interruption",
@@ -2732,7 +2737,7 @@
       {
         "type": "BT_DOT_POISON",
         "debuff": true,
-        "target": "ENEMY",
+        "target": "ENEMY_TEAM",
         "burst": true
       }
     ],
@@ -2925,6 +2930,12 @@
       },
       {
         "type": "IG_Buff_2000059_Interruption",
+        "debuff": false,
+        "target": "ME",
+        "burst": true
+      },
+      {
+        "type": "BT_COOL_CHARGE",
         "debuff": false,
         "target": "ME",
         "burst": true
@@ -4128,7 +4139,7 @@
       {
         "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       }
     ],
     "s2": [
@@ -4152,12 +4163,12 @@
       {
         "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
-        "target": "ME"
+        "target": "ENEMY"
       },
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ME"
       }
     ],
     "chain": [
@@ -5463,7 +5474,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "MY_TEAM"
       }
     ],
     "chain": [
@@ -5950,7 +5961,7 @@
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_SKILL_TARGET"
       },
       {
         "type": "BT_REVERSE_HEAL_BASED_CASTER",
@@ -6013,7 +6024,7 @@
       {
         "type": "BT_DOT_BLEED",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_EXTEND_DEBUFF",
@@ -6718,7 +6729,7 @@
       {
         "type": "BT_FREEZE",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "s3": [
@@ -6908,7 +6919,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       },
       {
         "type": "IG_Buff_2000056_Interruption",

@@ -486,9 +486,11 @@ async function handleSkills(id: string) {
     const firstLevel = levels[0];
 
     // CD from StartCool at level 1 (only S2 and Ultimate have visible cooldowns)
+    // Values > 30 are parser artifacts (column shifts)
     const hasCd = skillType === 'SKT_SECOND' || skillType === 'SKT_ULTIMATE';
     const rawCd = hasCd ? firstLevel?.StartCool ?? '' : '';
-    const cd = rawCd && /^\d+$/.test(rawCd) ? parseInt(rawCd) : null;
+    const cdNum = rawCd && /^\d+$/.test(rawCd) ? parseInt(rawCd) : null;
+    const cd = cdNum !== null && cdNum <= 30 ? cdNum : null;
 
     // Enhancement descriptions per level (multilang, format: { "2": ["..."], "2_jp": ["..."], ... })
     // SE_DESC keys can be in DescID, GainCP, or DamageFactor (bytes parser column shifts)
@@ -551,7 +553,8 @@ async function handleSkills(id: string) {
       offensive = NON_OFFENSIVE_OVERRIDE.has(`${id}:${slot}`)
         ? false
         : (sRow.TargetTeamType ?? '').includes('ENEMY');
-      wgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
+      const rawWgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
+      wgr = rawWgr !== null && rawWgr <= 11 ? rawWgr : null;
     }
 
     const skillEntry: Record<string, unknown> = {
@@ -1236,7 +1239,8 @@ async function handleCompare() {
 
       const hasCd = sk === 'SKT_SECOND' || sk === 'SKT_ULTIMATE';
       const rawCd = hasCd ? firstLevel?.StartCool ?? '' : '';
-    const cd = rawCd && /^\d+$/.test(rawCd) ? parseInt(rawCd) : null;
+      const cdNum = rawCd && /^\d+$/.test(rawCd) ? parseInt(rawCd) : null;
+      const cd = cdNum !== null && cdNum <= 30 ? cdNum : null;
       // Combine RangeType with change form if exists
       let rangeType = sRow.RangeType ?? '';
       if (!isChain) {
@@ -1268,7 +1272,8 @@ async function handleCompare() {
         offensive = NON_OFFENSIVE_OVERRIDE.has(`${id}:${slot}`)
           ? false
           : (sRow.TargetTeamType ?? '').includes('ENEMY');
-        wgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
+        const rawWgr = offensive ? (parseInt(firstLevel?.WGReduce ?? '0') || 0) : null;
+        wgr = rawWgr !== null && rawWgr <= 11 ? rawWgr : null;
       }
 
       // Extract buff/debuff (include class passive buff IDs from Skill_23)

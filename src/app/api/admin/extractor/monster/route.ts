@@ -253,17 +253,37 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
 
 // ── Buff/debuff extraction (reuses character extractor logic) ────
 
-const MONSTER_BUFF_ID_BLACKLIST = new Set([
-  '4076005_11_1', // Tyrant Toddler rage: internal debuff duration reduction
-  '4076007_11_3', // Chimera Starving Devil: internal shield
-]);
+const MONSTER_BUFF_ID_BLACKLIST = new Set<string>([]);
 
-// Force add buff/debuff to specific monster skills (monsterId:skillType → { buff, debuff })
-// Used for effects described in rage text but not encoded as separate skills
-const MONSTER_SKILL_BUFF_FORCE: Record<string, { buff?: string[]; debuff?: string[] }> = {
-  '4034003:SKT_RAGE_ENTER1': { debuff: ['BT_ACTION_GAUGE', 'BT_DOT_BURN'] },
-  '4134003:SKT_RAGE_ENTER1': { debuff: ['BT_ACTION_GAUGE', 'BT_DOT_BURN'] },
-};
+// ── Skill overrides (from data/admin/monster-skill-overrides.json) ──
+// Key = "name_en|desc_en", value = { add_buff, add_debuff, remove_buff, remove_debuff }
+type SkillOverride = { add_buff?: string[]; add_debuff?: string[]; remove_buff?: string[]; remove_debuff?: string[] };
+let skillOverridesCache: Record<string, SkillOverride> | null = null;
+
+async function loadSkillOverrides(): Promise<Record<string, SkillOverride>> {
+  if (skillOverridesCache) return skillOverridesCache;
+  try {
+    const raw = await fs.readFile(path.join(process.cwd(), 'data', 'admin', 'monster-skill-overrides.json'), 'utf-8');
+    skillOverridesCache = JSON.parse(raw);
+    return skillOverridesCache!;
+  } catch {
+    return {};
+  }
+}
+
+function applySkillOverrides(
+  descEn: string,
+  buff: string[],
+  debuff: string[],
+  overrides: Record<string, SkillOverride>,
+): void {
+  const override = overrides[descEn];
+  if (!override) return;
+  if (override.add_buff) for (const b of override.add_buff) { if (!buff.includes(b)) buff.push(b); }
+  if (override.add_debuff) for (const d of override.add_debuff) { if (!debuff.includes(d)) debuff.push(d); }
+  if (override.remove_buff) for (const b of override.remove_buff) { const idx = buff.indexOf(b); if (idx >= 0) buff.splice(idx, 1); }
+  if (override.remove_debuff) for (const d of override.remove_debuff) { const idx = debuff.indexOf(d); if (idx >= 0) debuff.splice(idx, 1); }
+}
 
 /** Collect buff IDs from MonsterSkillLevelTemplet rows.
  *  Reads the BuffID field (now correctly assigned after parser fix).
@@ -333,7 +353,8 @@ const WANTED_SKILL_TYPES = new Set([
   'SKT_CLASS_PASSIVE', 'SKT_CHAIN_PASSIVE',
 ]);
 
-function extractMonsterSkills(gd: GameData, monster: Row) {
+async function extractMonsterSkills(gd: GameData, monster: Row) {
+  const overrides = await loadSkillOverrides();
   const skillByNs: Record<string, Row> = {};
   for (const s of gd.monsterSkills) skillByNs[s.NameIDSymbol] = s;
   const iconToIR = buildIconToIRMap(gd.buffData);
@@ -393,11 +414,9 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
       description: resolvedDesc,
       icon: iconName,
     };
-    // Apply forced buffs/debuffs for specific monster skills
-    const forceKey = `${monster.ID}:${skillType}`;
-    const forced = MONSTER_SKILL_BUFF_FORCE[forceKey];
-    if (forced?.buff) for (const b of forced.buff) { if (!buff.includes(b)) buff.push(b); }
-    if (forced?.debuff) for (const d of forced.debuff) { if (!debuff.includes(d)) debuff.push(d); }
+    // Apply overrides from monster-skill-overrides.json (matched by desc_en)
+    const descEn = resolvedDesc.en ?? '';
+    applySkillOverrides(descEn, buff, debuff, overrides);
 
     if (buff.length > 0) skill.buff = buff;
     if (debuff.length > 0) skill.debuff = debuff;
@@ -438,7 +457,7 @@ function extractMonsterSkills(gd: GameData, monster: Row) {
 
 // ── Full monster extraction ───────────────────────────────────────
 
-function extractMonster(gd: GameData, monster: Row, dungeonList: DungeonLink[], selectedDungeonId?: string) {
+async function extractMonster(gd: GameData, monster: Row, dungeonList: DungeonLink[], selectedDungeonId?: string) {
   const nameTexts = resolveMonsterName(gd, monster);
   const cls = resolveClass(gd.textSystemMap, monster.Class ?? '');
   const element = resolveElement(gd.textSystemMap, monster.Element ?? '');
@@ -449,7 +468,7 @@ function extractMonster(gd: GameData, monster: Row, dungeonList: DungeonLink[], 
     ? dungeonList.find(d => d.dungeonId === selectedDungeonId)
     : dungeonList[0]) ?? null;
 
-  const skills = extractMonsterSkills(gd, monster);
+  const skills = await extractMonsterSkills(gd, monster);
 
   const langObj = (texts: LangTexts | null, fallback = '') =>
     Object.fromEntries(LANGS.map(l => [l, texts?.[l] ?? fallback]));
@@ -603,7 +622,7 @@ export async function GET(req: NextRequest) {
 
       const monsterToDungeons = buildMonsterToDungeons(gd);
       const dungeons = monsterToDungeons.get(id) ?? [];
-      const extracted = extractMonster(gd, monster, dungeons, selectedDungeonId || undefined);
+      const extracted = await extractMonster(gd, monster, dungeons, selectedDungeonId || undefined);
 
       // Check if already saved
       const filePath = path.join(BOSS_DIR, `${id}.json`);
@@ -633,7 +652,7 @@ export async function GET(req: NextRequest) {
 
       type CompareEntry = { id: string; file: string; name: string; diffs: { field: string; existing: string; extracted: string }[]; notInGame?: boolean };
 
-      function compareOne(file: string, existing: Record<string, unknown>): CompareEntry | 'ok' {
+      async function compareOne(file: string, existing: Record<string, unknown>): Promise<CompareEntry | 'ok'> {
         const rawId = String(existing.id ?? file.replace(/\.json$/, ''));
         // Extract base monster ID: "440400079-B-1" → "440400079"
         const id = rawId.split('-')[0];
@@ -644,7 +663,7 @@ export async function GET(req: NextRequest) {
         }
 
         const dungeons = monsterToDungeons.get(id) ?? [];
-        const ext = extractMonster(gd, monster, dungeons);
+        const ext = await extractMonster(gd, monster, dungeons);
 
         const diffs: { field: string; existing: string; extracted: string }[] = [];
 
@@ -716,7 +735,7 @@ export async function GET(req: NextRequest) {
           if (!modeEn && !dungeonEn) { ok++; continue; }
           if (modeEn.includes('Tower') || modeEn.includes('Skyward') || dungeonEn.includes('Tower') || dungeonEn.includes('Skyward')) { ok++; continue; }
 
-          const res = compareOne(entry.file, entry.data);
+          const res = await compareOne(entry.file, entry.data);
           if (res === 'ok') ok++;
           else if (res.notInGame) { notFound++; results.unshift(res); }
           else results.push(res);

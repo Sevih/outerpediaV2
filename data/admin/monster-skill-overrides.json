@@ -1,0 +1,11 @@
+{
+  "Attacks all enemies. Reduces the target's Priority by <color=#28d9ed>50%</color> and inflicts Burned for <color=#28d9ed>2 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.\\n\\n<color=#ffd732>If Enraged within 3 turns, grants 60 Chain Points.</color>": {
+    "add_debuff": ["BT_ACTION_GAUGE", "BT_DOT_BURN"]
+  },
+  "(Passive Effect)\\nWhile the caster has a <color=#28d9ed>Barrier</color>, reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>.\\nWhen hit by a <color=#28d9ed>Water</color> type, recovers Weakness Gauge by <color=#28d9ed>3</color>.\\nDamage from <color=#28d9ed>Curse/Fixed Damage</color> dealt to the boss cannot exceed <color=#28d9ed>10000</color>.": {
+    "remove_buff": ["BT_SHIELD_BASED_CASTER"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> every 5 turns and increases Attack and Speed by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Deals a large amount of damage to all enemies upon becoming Enraged, but receives damage equal to <color=#28d9ed>20%</color> of Max Health. After dealing damage, recovers 30% Weakness Gauge. This Enraged has no duration.": {
+    "remove_buff": ["BT_EXTEND_DEBUFF"]
+  }
+}
