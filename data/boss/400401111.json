@@ -18,7 +18,7 @@
   "level": 96,
   "icons": "2000042",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_AGGRO,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_ACTION_GAUGE",
+  "StatBuffImmune": "BT_AGGRO,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_ACTION_GAUGE",
   "location": {
     "dungeon": {
       "en": "Justice vs. Villainy",
@@ -49,7 +49,7 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy and gains a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "en": "Attacks an enemy and gains a <color=#28d9ed>barrier</color> for <color=#28d9ed>2 turn(s)</color>. The barrier strength increases proportional to the caster's <color=#28d9ed>Defense</color>.",
         "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の<color=#28d9ed>防御力</color>が高いほどシールド量がUPする。",
         "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 획득합니다. 실드량은 자신의 <color=#28d9ed>방어력</color>이 높을수록 증가합니다.",
         "zh": "攻击敌人,并获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身<color=#28d9ed>防御力</color>越高,则护盾量越高。"
@@ -103,7 +103,7 @@
       },
       "type": "SKT_MONSTER_1",
       "description": {
-        "en": "(Passive Effect)\\nGreatly increases damage dealt to enemies when Leo is granted a <color=#28d9ed>Barrier</color>, and increases <color=#28d9ed>Defense</color> proportional to Leo's missing Health.\\nWhen Alpha is alive, reduces Weakness Gauge damage taken by Leo by <color=#28d9ed>50%</color>.",
+        "en": "(Passive Effect)\\nGreatly increases damage dealt to enemies when Leo is granted a <color=#28d9ed>barrier</color>, and increases <color=#28d9ed>Defense</color> proportional to Leo's missing Health.\\nWhen Alpha is alive, reduces Weakness Gauge damage taken by Leo by <color=#28d9ed>50%</color>.",
         "jp": "(パッシブ効果)\\n【レオ】が<color=#28d9ed>シールド</color>状態の場合、敵に与えるダメージが大幅にUPし、残りHPが低いほど<color=#28d9ed>防御力</color>がUPする。\\n戦場に【アルファ】がいる場合、【レオ】が受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。",
         "kr": "(패시브 효과)\\n레오는 <color=#28d9ed>실드</color> 보유 시 적에게 주는 피해량이 크게 증가하며, 체력이 감소할수록 <color=#28d9ed>방어력</color>이 증가합니다.\\n알파 생존 시 레오가 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소합니다.",
         "zh": "(被动效果)\\n雷欧附带<color=#28d9ed>护盾</color>效果时,对敌人造成的伤害量大幅提升,且生命值越低,则<color=#28d9ed>防御力</color>越高。\\n在阿尔法存活时,雷欧所受WG伤害量降低<color=#28d9ed>50%</color>。"

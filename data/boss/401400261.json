@@ -18,7 +18,7 @@
   "level": 110,
   "icons": "4076005",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_SEALED_RECEIVE_HEAL",
+  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_SEALED_RECEIVE_HEAL",
   "location": {
     "dungeon": {
       "en": "Tyrant Toddler (Stage 12)",
@@ -33,7 +33,7 @@
       "zh": "特别委托:生态调查"
     },
     "area_id": {
-      "en": "",
+      "en": "50102012",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -72,7 +72,6 @@
       },
       "icon": "Skill_Second_4014002_Water",
       "buff": [
-        "SYS_BUFF_COUNTER",
         "BT_EXTEND_DEBUFF"
       ]
     },
@@ -105,18 +104,18 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases damage dealt to enemies by <color=#28d9ed>5%</color> at the start of each turn.\\nReduces Weakness Gauge damage taken from attacks other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>100%</color>.\\nIncreases Speed of Healer and Defender enemies by <color=#28d9ed>50%</color> and increases their damage dealt proportional to their Defense. Reduces damage dealt by other enemies by <color=#28d9ed>95%</color>.\\nInflicts <color=#28d9ed>Shocked</color>, <color=#28d9ed>Bleeding</color>, and <color=#28d9ed>Poisoned</color> on the caster and all enemies for 9 turns at the start of battle. These effects ignore the target's Immunity.\\nRemoves all debuffs and fully recovers Health when an enemy is defeated.\\nReduces Weakness Gauge damage taken from non-Earth enemies by <color=#28d9ed>50%</color>, increases damage dealt to them and reduces damage taken from them.\\nReduces damage dealt to Earth enemies and increases damage taken from them.",
-        "jp": "(パッシブ効果)\\nターン開始時、敵に与えるダメージが<color=#28d9ed>5%</color>UPする。\\nバーストスキルと連携、チェーンスキル以外の攻撃で受けるWGダメージが<color=#28d9ed>100%</color>DOWNする。\\n回復・防御型の敵はスピードが<color=#28d9ed>50%</color>UPし、防御力が高いほど与えるダメージがUPする。それ以外の敵から受けるダメージは<color=#28d9ed>95%</color>DOWNする。\\n戦闘開始時、自分と敵全体に<color=#28d9ed>感電</color>、<color=#28d9ed>出血</color>、<color=#28d9ed>中毒</color>を9ターンの間付与する。この効果は対象の免疫を無視する。\\n敵を倒した時、自分のすべての弱体効果を解除し、HPを100%回復する。\\n地属性以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。\\n地属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
-        "kr": "(패시브 효과)\\n매 턴 시작 시 적에게 주는 피해가 <color=#28d9ed>5%</color> 증가합니다.\\n버스트 스킬과 협공, 스킬 체인을 제외한 공격으로 받는 WG 피해가 <color=#28d9ed>100%</color> 감소합니다.\\n회복형 및 방어형 적은 속도가 <color=#28d9ed>50%</color>증가하고 방어력에 비례하여 피해가 증가합니다. 그 외의 적이 입히는 피해는 <color=#28d9ed>95%</color> 감소합니다.\\n9턴 동안 자신과 적 전체는 <color=#28d9ed>감전</color>, <color=#28d9ed>출혈</color>, <color=#28d9ed>중독</color>을 가진 채로 전투를 시작합니다. 이 효과들은 대상의 면역을 무시합니다.\\n적 처치 시 모든 약화 효과를 해제하고, 모든 체력을 회복시킵니다.\\n지속성이 아닌 적에게 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소하며 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n지속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
-        "zh": "(被动效果)\\n每回合开始时,对敌人造成的伤害提升<color=#28d9ed>5%</color>。\\n受到除爆发技能、夹攻和连携技能以外的攻击时,使所受WG伤害降低<color=#28d9ed>100%</color>。\\n使恢复型与防御型敌人的速度提升<color=#28d9ed>50%</color>,并根据防御力等比提升伤害。使受到来自其他敌人的伤害降低<color=#28d9ed>95%</color>。\\n使自身和全体敌人以<color=#28d9ed>触电</color>、<color=#28d9ed>出血</color>、<color=#28d9ed>中毒</color>状态开始战斗,持续9回合。该效果无视目标的免疫效果。\\n击杀敌人时,使所有的弱化效果解除,并恢复全部生命值。\\n受到来自非土属性敌人的WG伤害量降低<color=#28d9ed>50%</color>,并使对其造成的伤害提升,且所受伤害降低。\\n使对土属性敌人造成的伤害降低,且所受伤害提升。"
+        "jp": "(パッシブ効果)\\nターン開始時、敵に与えるダメージが<color=#28d9ed>5%</color>UPする。\\nバーストスキルと連携、チェーンスキル以外の攻撃で受けるWGダメージが<color=#28d9ed>100%</color>DOWNする。\\n回復・防御型の敵はスピードが<color=#28d9ed>50%</color>UPし、防御力が高いほど与えるダメージがUPする。それ以外の敵から受けるダメージは<color=#28d9ed>-95%</color>DOWNする。\\n戦闘開始時、自分と敵全体に<color=#28d9ed>感電</color>、<color=#28d9ed>出血</color>、<color=#28d9ed>中毒</color>を9ターンの間付与する。この効果は対象の免疫を無視する。\\n敵を倒した時、自分のすべての弱体効果を解除し、HPを100%回復する。\\n地属性以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。\\n地属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "kr": "(패시브 효과)\\n매 턴 시작 시 적에게 주는 피해가 <color=#28d9ed>5%</color> 증가합니다.\\n버스트 스킬과 협공, 스킬 체인을 제외한 공격으로 받는 WG 피해가 <color=#28d9ed>100%</color> 감소합니다.\\n회복형 및 방어형 적은 속도가 <color=#28d9ed>50%</color>증가하고 방어력에 비례하여 피해가 증가합니다. 그 외의 적이 입히는 피해는 <color=#28d9ed>-95%</color> 감소합니다.\\n9턴 동안 자신과 적 전체는 <color=#28d9ed>감전</color>, <color=#28d9ed>출혈</color>, <color=#28d9ed>중독</color>을 가진 채로 전투를 시작합니다. 이 효과들은 대상의 면역을 무시합니다.\\n적 처치 시 모든 약화 효과를 해제하고, 모든 체력을 회복시킵니다.\\n지속성이 아닌 적에게 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소하며 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n지속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
+        "zh": "(被动效果)\\n每回合开始时,对敌人造成的伤害提升<color=#28d9ed>5%</color>。\\n受到除爆发技能、夹攻和连携技能以外的攻击时,使所受WG伤害降低<color=#28d9ed>100%</color>。\\n使恢复型与防御型敌人的速度提升<color=#28d9ed>50%</color>,并根据防御力等比提升伤害。使受到来自其他敌人的伤害降低<color=#28d9ed>-95%</color>。\\n使自身和全体敌人以<color=#28d9ed>触电</color>、<color=#28d9ed>出血</color>、<color=#28d9ed>中毒</color>状态开始战斗,持续9回合。该效果无视目标的免疫效果。\\n击杀敌人时,使所有的弱化效果解除,并恢复全部生命值。\\n受到来自非土属性敌人的WG伤害量降低<color=#28d9ed>50%</color>,并使对其造成的伤害提升,且所受伤害降低。\\n使对土属性敌人造成的伤害降低,且所受伤害提升。"
       },
       "icon": "MT_Passive_1_Water",
-      "buff": [
-        "BT_REMOVE_DEBUFF"
-      ],
       "debuff": [
         "BT_DOT_LIGHTNING",
         "BT_DOT_BLEED",
         "BT_DOT_POISON"
+      ],
+      "buff": [
+        "BT_REMOVE_DEBUFF"
       ]
     },
     {
