@@ -28,7 +28,7 @@
       "zh": "追击歼灭战"
     },
     "area_id": {
-      "en": "72000001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -64,15 +64,15 @@
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy, and reduces Priority of the target by <color=#28d9ed>20%</color>, and increases Priority of all allies by <color=#28d9ed>20%</color>.",
-        "jp": "敵単体にダメージを与え、対象の行動ゲージを<color=#28d9ed>20%</color>DOWNさせ、味方全体の行動ゲージを<color=#28d9ed>-20%</color>UPさせる。",
-        "kr": "적을 공격하고 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고, 아군 전체의 행동 게이지를 <color=#28d9ed>-20%</color> 증가시킵니다.",
-        "zh": "攻击敌人,并使目标的行动值降低<color=#28d9ed>20%</color>,且使全体友军的行动值提升<color=#28d9ed>-20%</color>。"
+        "jp": "敵単体にダメージを与え、対象の行動ゲージを<color=#28d9ed>20%</color>DOWNさせ、味方全体の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
+        "kr": "적을 공격하고 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고, 아군 전체의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "zh": "攻击敌人,并使目标的行动值降低<color=#28d9ed>20%</color>,且使全体友军的行动值提升<color=#28d9ed>20%</color>。"
       },
       "icon": "MT_Attack_Smash_1_Dark",
-      "debuff": [
+      "buff": [
         "BT_ACTION_GAUGE"
       ],
-      "buff": [
+      "debuff": [
         "BT_ACTION_GAUGE"
       ]
     },
@@ -85,7 +85,7 @@
       },
       "type": "SKT_ULTIMATE",
       "description": {
-        "en": "Attacks all enemies. Grants a <color=#28d9ed>barrier</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>, and <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>5 turn(s)</color>.",
+        "en": "Attacks all enemies. Grants a <color=#28d9ed>Barrier</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>, and <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>5 turn(s)</color>.",
         "jp": "敵全体にダメージを与える。自分を除く味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与し、自分に<color=#28d9ed>無敵</color>を<color=#28d9ed>5ターン</color>の間付与する。",
         "kr": "적 전체를 공격합니다. 자신을 제외한 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 자신은 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.",
         "zh": "攻击全体敌人。使除自身外的全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>,并使自身获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>5回合</color>。"
@@ -106,7 +106,7 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>5000</color>.\\nAfter attacking, summons an Irregular Machine Gun.\\nIrregular Machine Gun inflicts <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>1 turn(s)</color> upon death.\\nWhen an ally is still alive, takes no Weakness Gauge damage.",
-        "jp": "受ける呪い/固定ダメージは<color=#28d9ed>[Buff_V_irregular_dmgcap_1</color>を超えない。\\n攻撃後、【イレギュラー・機関銃】を召喚する。\\n【イレギュラー・機関銃】が倒れた時、敵全体に<color=#28d9ed>強化不可</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n味方が戦場にいる場合、WGダメージを受けない。",
+        "jp": "受ける呪い/固定ダメージは<color=#28d9ed>[Buff_V_irregular_dmgcap_1</color>を超えない。\\n攻撃後、【イレギュラー・機関銃】を召喚する。\\n【イレギュラー・機関銃】が倒れた時、敵全体に<color=#28d9ed>強化不可</color>を<color=#28d9ed>[Buff_T_irregular_6]ターン</color>の間付与する。\\n味方が戦場にいる場合、WGダメージを受けない。",
         "kr": "저주, 고정 피해로 받는 피해는 최대 <color=#28d9ed>5000</color>을 초과하지 않습니다.\\n공격 후 이레귤러 기관총을 소환합니다.\\n이레귤러 기관총은 사망 시 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.\\n아군 생존 시 WG 피해를 받지 않습니다.",
         "zh": "诅咒、固定伤害造成的伤害最多不会超过\\n<color=#28d9ed>5000</color>。\\n攻击后,召唤机关枪异型怪。\\n机关枪异型怪死亡时,对全体敌人造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>1回合</color>。\\n友军存活时,不受到WG伤害。"
       },
@@ -131,25 +131,9 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

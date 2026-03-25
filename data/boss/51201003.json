@@ -17,7 +17,7 @@
   "element": "Light",
   "level": 115,
   "icons": "4014003",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "追击歼灭战"
     },
     "area_id": {
-      "en": "72000022",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -115,15 +115,15 @@
         "en": "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>5000</color>.\\nAt the start of battle, permanently grants Immunity to the caster and inflicts Debuff Enhancement on all enemies (Irremovable).\\nWhen the enemy uses Counterattack, Revenge, Agile Response, or non-attack skills, inflicts <color=#28d9ed>Stunned</color> on all enemies for <color=#28d9ed>1 turn(s)</color>.\\nUpon taking a non-critical hit, recovers Weakness Gauge by <color=#28d9ed>50%</color>.",
         "jp": "受ける呪い/固定ダメージは<color=#28d9ed>5000</color>を超えない。\\n戦闘開始時、自分に免疫を永続的に付与し、敵全体に弱体促進を付与する。(解除不可)\\n敵が反撃/復讐/迅速対応および攻撃以外のスキルを使用時、敵全体に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nダメージを受け、そのダメージに会心が発生しなかった場合、WGを<color=#28d9ed>50%</color>回復する。",
         "kr": "저주, 고정 피해로 받는 피해는 최대 <color=#28d9ed>5000</color>을 초과하지 않습니다.\\n전투 시작 시 영구적으로 자신은 면역을 획득하고, 적 전체에게는 약화 촉진을 부여합니다. (해제 불가)\\n적이 반격/복수/신속대응 및 공격이 아닌 스킬 사용 시 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.\\n치명 공격이 아닌 공격 피격 시 WG를 <color=#28d9ed>50%</color> 회복합니다.",
-        "zh": "诅咒、固定伤害造成的伤害最多不会超过\\n<color=#28d9ed>5000</color>。\\n战斗开始时,使自身永久获得免疫效果,对全体敌人造成弱化促进效果。(无法解除)\\n敌人使用反击/复仇/迅速应对和非攻击类技能时,对全体敌人造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。\\n受到非暴击攻击时,WG恢复<color=#28d9ed>50%</color>。"
+        "zh": "璇呭拻銆佸浐瀹氫激瀹抽€犳垚鐨勪激瀹虫渶澶氫笉浼氳秴杩嘰n<color=#28d9ed>5000</color>銆俓n鎴樻枟寮€濮嬫椂锛屼娇鑷韩姘镐箙鑾峰緱鍏嶇柅鏁堟灉锛屽鍏ㄤ綋鏁屼汉閫犳垚寮卞寲淇冭繘鏁堟灉銆�(鏃犳硶瑙i櫎)\\n鏁屼汉浣跨敤鍙嶅嚮/澶嶄粐/杩呴€熷簲瀵瑰拰闈炴敾鍑荤被鎶€鑳芥椂锛屽鍏ㄤ綋鏁屼汉閫犳垚<color=#28d9ed>鏅曠湬</color>鏁堟灉锛屾寔缁�<color=#28d9ed>1鍥炲悎</color>銆俓n鍙楀埌闈炴毚鍑绘敾鍑绘椂锛學G鎭(一)<color=#28d9ed>50%</color>銆�"
       },
       "icon": "MT_Passive_1_Earth",
-      "debuff": [
-        "BT_STUN",
-        "BT_SYS_BUFF_ENHANCE_DEBUFF_UP"
-      ],
       "buff": [
         "BT_IMMUNE_IR"
+      ],
+      "debuff": [
+        "BT_STUN",
+        "BT_STAT_DEBUFF_ENHANCE"
       ]
     },
     {
@@ -142,25 +142,9 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

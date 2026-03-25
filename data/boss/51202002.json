@@ -28,7 +28,7 @@
       "zh": "追击歼灭战"
     },
     "area_id": {
-      "en": "72000013",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -105,7 +105,7 @@
         "en": "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>5000</color>.\\nGrants a random buff at the start of a turn.\\nUpon taking a critical hit, greatly reduces damage taken and recovers Weakness Gauge by <color=#28d9ed>50%</color>.",
         "jp": "受ける呪い/固定ダメージは<color=#28d9ed>10000</color>を超えない。\\nターン開始時、自分にランダムな強化効果を付与する。\\n会心ダメージを受けた場合、受けるダメージが大幅にDOWNし、WGを<color=#28d9ed>50%</color>回復する。",
         "kr": "저주, 고정 피해로 받는 피해는 최대 <color=#28d9ed>10000</color>을 초과하지 않습니다.\\n턴 시작 시 무작위 강화 효과를 획득합니다.\\n치명 피격 시 받는 피해량이 크게 감소하고, WG를 <color=#28d9ed>50%</color> 회복합니다.",
-        "zh": "诅咒、固定伤害造成的伤害最多不会超过\\n<color=#28d9ed>10000</color>。\\n回合开始时,获得随机强化效果。\\n受到暴击时,所受伤害量大幅降低,并恢复<color=#28d9ed>50%</color>的WG。"
+        "zh": "璇呭拻銆佸浐瀹氫激瀹抽€犳垚鐨勪激瀹虫渶澶氫笉浼氳秴杩嘰n<color=#28d9ed>10000</color>銆俓n鍥炲悎寮€濮嬫椂锛岃幏寰楅殢鏈哄己鍖栨晥鏋溿€俓n鍙楀埌鏆村嚮鏃讹紝鎵€鍙椾激瀹抽噺澶у箙闄嶄綆锛屽苟鎭(一)<color=#28d9ed>50%</color>鐨刉G銆�"
       },
       "icon": "MT_Passive_1_Earth",
       "buff": [
@@ -128,25 +128,9 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

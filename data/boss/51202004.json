@@ -33,7 +33,7 @@
       "zh": "追击歼灭战"
     },
     "area_id": {
-      "en": "72000033",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -71,12 +71,12 @@
         "zh": "攻击全体敌人。\\n解除全体敌人的所有<color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>3回合</color>。\\n当该攻击以暴击命中时,解除自身所有<color=#28d9ed>弱化效果</color>。"
       },
       "icon": "Skill_Second_4089001",
+      "buff": [
+        "BT_REMOVE_DEBUFF"
+      ],
       "debuff": [
         "BT_REMOVE_BUFF",
         "BT_AGGRO"
-      ],
-      "buff": [
-        "BT_REMOVE_DEBUFF"
       ]
     },
     {
@@ -114,7 +114,12 @@
       },
       "icon": "MT_Passive_1_Light",
       "buff": [
-        "BT_STAT|ST_COUNTER_RATE"
+        "SYS_BUFF_REVENGE",
+        "BT_REMOVE_DEBUFF"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_AGGRO"
       ]
     },
     {
@@ -133,25 +138,9 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

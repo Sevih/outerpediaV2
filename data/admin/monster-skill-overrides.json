@@ -54,5 +54,19 @@
   },
   "(Passive Effect)\\nIncreases Counterattack Chance by <color=#28d9ed>50%</color>.\\nInflict <color=#28d9ed>Cursed</color> on all enemies at the start of each turn for <color=#28d9ed>2 turn(s)</color>.\\n\\nReduces damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>90%</color>, and reduces Weakness Gauge damage taken by <color=#28d9ed>90%</color> when not <color=#28d9ed>Enraged</color>.": {
     "add_buff": ["BT_STAT|ST_COUNTER_RATE"]
+  },
+  "Attacks an enemy, and removes <color=#28d9ed>2</color> <color=#28d9ed>buff(s)</color> from the target.": {
+    "remove_debuff": ["BT_STEAL_BUFF"],
+    "add_debuff": ["BT_REMOVE_BUFF"]
+  },
+  "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>5000</color>.\\nAfter attacking, summons an Irregular Machine Gun.\\nIrregular Machine Gun inflicts <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>1 turn(s)</color> upon death.\\nWhen an ally is still alive, takes no Weakness Gauge damage.": {
+    "add_debuff": ["BT_SEALED"]
+  },
+  "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>5000</color>.\\nGrants a random buff at the start of a turn.\\nUpon taking a critical hit, greatly reduces damage taken and recovers Weakness Gauge by <color=#28d9ed>50%</color>.": {
+    "add_buff": ["BT_RANDOM_STAT"]
+  },
+  "Attacks all enemies.\\nRemoves all <color=#28d9ed>buffs</color> from all enemies, and inflicts <color=#28d9ed>Taunted</color> for <color=#28d9ed>3 turn(s)</color>.\\nIf this attack scores a critical hit, removes all <color=#28d9ed>debuffs</color> from the caster.": {
+    "add_buff": ["BT_REMOVE_DEBUFF"],
+    "add_debuff": ["BT_REMOVE_BUFF", "BT_AGGRO"]
   }
 }
