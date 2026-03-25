@@ -36,6 +36,7 @@ type Props = {
   preloadedBosses?: Record<string, Boss>;
   versionIds?: string[];
   onVersionChange?: (index: number) => void;
+  onBossIdChange?: (id: string) => void;
 };
 
 /* ── Locale-aware element / class token maps ──────────── */
@@ -262,7 +263,7 @@ export function BossDetails({ boss, lang }: { boss: Boss; lang: Lang }) {
 
 export const bossCache = new Map<string, Boss>();
 
-export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses, versionIds, onVersionChange }: Props) {
+export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses, versionIds, onVersionChange, onBossIdChange }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
   const { buffMap, debuffMap } = use(effectMapsPromise);
@@ -348,6 +349,7 @@ export default function BossDisplay({ bossName, modeKey, defaultBossId, preloade
                   onChange={(e) => {
                     const newId = e.target.value;
                     setSelectedId(newId);
+                    onBossIdChange?.(newId);
                     const idx = versions.findIndex((v) => v.id === newId);
                     if (idx !== -1) onVersionChange?.(idx);
                   }}

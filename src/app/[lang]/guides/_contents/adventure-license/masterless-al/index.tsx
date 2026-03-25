@@ -49,7 +49,7 @@ export default function MasterlessALGuide() {
         preloadedBosses={preloadedBosses}
       />
       <MinionDisplay entries={[
-        { bossName: 'Dungeon Guardian Spear-Wielder', modeKey: 'Adventure License', versionIndex: 0 },
+        { bossName: 'Mini Guardian', modeKey: 'Adventure License', versionIndex: 0 },
         { bossName: 'Mini Guardian', modeKey: 'Adventure License', versionIndex: 0 },
       ]} />
       <hr className="my-6 border-neutral-700" />

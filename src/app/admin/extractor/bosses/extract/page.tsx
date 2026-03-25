@@ -101,6 +101,8 @@ export default function BossExtractorPage() {
   const [saving, setSaving] = useState(false);
   const [saveMsg, setSaveMsg] = useState('');
   const [versionOnSave, setVersionOnSave] = useState(false);
+  const [minionMode, setMinionMode] = useState(false);
+  const [parentBossId, setParentBossId] = useState('');
 
   // Load filters on mount
   useEffect(() => {
@@ -139,6 +141,7 @@ export default function BossExtractorPage() {
     try {
       const params = new URLSearchParams({ action: 'extract', id });
       if (dungeonId) params.set('dungeonId', dungeonId);
+      if (minionMode && parentBossId.trim()) params.set('parentBossId', parentBossId.trim());
       const res = await fetch(`${API}?${params}`);
       const data = await res.json();
       setExtracted(data.extracted ?? null);
@@ -221,7 +224,37 @@ export default function BossExtractorPage() {
         </button>
       </div>
 
-      <div className="flex gap-6 h-[calc(100vh-260px)]">
+      {/* Minion mode */}
+      <div className="flex items-center gap-3">
+        <label className="flex items-center gap-1.5 text-xs text-zinc-400 cursor-pointer select-none">
+          <input type="checkbox" checked={minionMode} onChange={e => setMinionMode(e.target.checked)}
+            className="rounded border-zinc-600" />
+          Extract as minion of
+        </label>
+        {minionMode && (
+          <input
+            type="text"
+            value={parentBossId}
+            onChange={e => setParentBossId(e.target.value)}
+            placeholder="Parent boss ID (e.g. 404400150)"
+            className="w-64 rounded border border-zinc-700 bg-zinc-900 px-3 py-1 text-sm placeholder-zinc-500 focus:border-zinc-500 focus:outline-none"
+          />
+        )}
+        {minionMode && parentBossId && selectedId && (
+          <>
+            <button
+              onClick={() => handleExtract(selectedId)}
+              disabled={extracting}
+              className="rounded bg-amber-600/80 px-2.5 py-1 text-xs font-semibold transition hover:bg-amber-500 disabled:opacity-50"
+            >
+              Re-extract
+            </button>
+            <span className="text-[10px] text-zinc-600">File: {selectedId}S{parentBossId}.json</span>
+          </>
+        )}
+      </div>
+
+      <div className="flex gap-6 h-[calc(100vh-300px)]">
         {/* Left panel — search results */}
         <div className="w-96 shrink-0 flex flex-col border-r border-zinc-800 pr-4">
           <div className="mb-2 text-xs text-zinc-500">{results.length} result(s)</div>

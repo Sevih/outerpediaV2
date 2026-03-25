@@ -65,26 +65,16 @@ export default function BossCompareByModePage() {
     setDetailResults(null);
     setSavedIds(new Set());
     try {
-      const res = await fetch(`${API}?action=compare`);
+      const res = await fetch(`${API}?action=compare&mode=${encodeURIComponent(mode)}`);
       const data = await res.json();
-      const results = (data.results ?? []) as CompareResult[];
-
-      // Filter results by mode — we need to read each boss file's mode
-      // For now, get all results and let the user see them filtered by name matches
-      // A better approach: filter by the diffs list from compare-by-mode
-      const modeEntry = modes[mode];
-      if (!modeEntry) { setDetailResults([]); setDetailOk(0); return; }
-
-      const diffFiles = new Set(modeEntry.diffs.map(d => d.file));
-      const filtered = results.filter(r => diffFiles.has(r.file));
-      setDetailResults(filtered);
-      setDetailOk(modeEntry.ok);
+      setDetailResults((data.results ?? []) as CompareResult[]);
+      setDetailOk(data.ok ?? 0);
     } catch {
       setDetailResults([]);
     } finally {
       setDetailLoading(false);
     }
-  }, [modes]);
+  }, []);
 
   // Auto-select mode from URL param once loaded and trigger compare
   useEffect(() => {
@@ -96,7 +86,13 @@ export default function BossCompareByModePage() {
   async function handleSaveOne(monsterId: string) {
     setSavingIds(prev => new Set(prev).add(monsterId));
     try {
-      const extRes = await fetch(`${API}?action=extract&id=${monsterId}`);
+      // Handle minion IDs: "414103191S404400150" → id=414103191, parentBossId=404400150
+      const sIdx = monsterId.indexOf('S');
+      const baseId = sIdx > 0 ? monsterId.slice(0, sIdx) : monsterId;
+      const parentBossId = sIdx > 0 ? monsterId.slice(sIdx + 1) : '';
+      const params = new URLSearchParams({ action: 'extract', id: baseId });
+      if (parentBossId) params.set('parentBossId', parentBossId);
+      const extRes = await fetch(`${API}?${params}`);
       const extData = await extRes.json();
       if (!extData.extracted) return;
       const saveRes = await fetch(API, {

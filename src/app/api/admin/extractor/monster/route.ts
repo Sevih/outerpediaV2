@@ -57,6 +57,25 @@ function resolveModeLabel(textSystemMap: Record<string, LangTexts>, mode: string
   return mode.replace('DM_', '');
 }
 
+/** Refine mode label for display grouping (splits Elemental Tower by element, resolves SYS_ keys) */
+function refineMode(modeEn: string, dungeonEn: string, textSystemMap: Record<string, LangTexts>): string {
+  let mode = modeEn || 'Unknown';
+  if (mode === 'Elemental Tower' && dungeonEn) {
+    const elem = dungeonEn.match(/^(Fire|Water|Earth|Light|Dark)\s+Tower/)?.[1]
+      ?? dungeonEn.match(/Tower\s+of\s+(Light|Dark)/)?.[1];
+    if (elem) mode = `Elemental Tower (${elem})`;
+  }
+  if (mode.startsWith('SYS_')) {
+    const normalized = mode.replace(/\s+/g, '');
+    let resolved = '';
+    for (const [key, texts] of Object.entries(textSystemMap)) {
+      if (key.replace(/\s+/g, '') === normalized && texts.en) { resolved = texts.en; break; }
+    }
+    mode = resolved || mode.replace(/^SYS_/, '').replace(/_/g, ' ');
+  }
+  return mode;
+}
+
 // ── Types ─────────────────────────────────────────────────────────
 
 type Row = Record<string, string>;
@@ -569,16 +588,22 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
 
 // ── Full monster extraction ───────────────────────────────────────
 
-async function extractMonster(gd: GameData, monster: Row, dungeonList: DungeonLink[], selectedDungeonId?: string) {
+async function extractMonster(
+  gd: GameData, monster: Row, dungeonList: DungeonLink[],
+  selectedDungeonId?: string,
+  parentBoss?: { id: string; location: DungeonLink },
+) {
   const nameTexts = resolveMonsterName(gd, monster);
   const cls = resolveClass(gd.textSystemMap, monster.Class ?? '');
   const element = resolveElement(gd.textSystemMap, monster.Element ?? '');
   const statBuffImmune = monster.StatBuffImmune ?? '';
 
-  // Pick location: use selected dungeon or first entry
-  const location = (selectedDungeonId
-    ? dungeonList.find(d => d.dungeonId === selectedDungeonId)
-    : dungeonList[0]) ?? null;
+  // Pick location: parent boss location for minions, otherwise own dungeon
+  const location = parentBoss
+    ? parentBoss.location
+    : (selectedDungeonId
+      ? dungeonList.find(d => d.dungeonId === selectedDungeonId)
+      : dungeonList[0]) ?? null;
 
   const skills = await extractMonsterSkills(gd, monster);
 
@@ -587,8 +612,10 @@ async function extractMonster(gd: GameData, monster: Row, dungeonList: DungeonLi
 
   const surnameTexts = resolveMonsterSurname(gd, monster);
 
+  const compositeId = parentBoss ? `${monster.ID}S${parentBoss.id}` : monster.ID;
+
   const result: Record<string, unknown> = {
-    id: monster.ID,
+    id: compositeId,
     Name: nameTexts ? langObj(nameTexts) : {},
     Surname: surnameTexts ? langObj(surnameTexts) : null,
     IncludeSurname: false,
@@ -603,6 +630,7 @@ async function extractMonster(gd: GameData, monster: Row, dungeonList: DungeonLi
       mode: langObj(location.modeLabel, location.mode),
       area_id: langObj(location.areaId),
     } : null,
+    ...(parentBoss ? { summoned_by: parentBoss.id } : {}),
     skills,
   };
 
@@ -729,15 +757,26 @@ export async function GET(req: NextRequest) {
     if (action === 'extract') {
       const id = req.nextUrl.searchParams.get('id') ?? '';
       const selectedDungeonId = req.nextUrl.searchParams.get('dungeonId') ?? '';
+      const parentBossId = req.nextUrl.searchParams.get('parentBossId') ?? '';
       const monster = gd.monsters.find(m => m.ID === id);
       if (!monster) return NextResponse.json({ error: `Monster ${id} not found` }, { status: 404 });
 
       const monsterToDungeons = buildMonsterToDungeons(gd);
       const dungeons = monsterToDungeons.get(id) ?? [];
-      const extracted = await extractMonster(gd, monster, dungeons, selectedDungeonId || undefined);
+
+      // Minion mode: inherit location/level from parent boss
+      let parentBoss: { id: string; location: DungeonLink } | undefined;
+      if (parentBossId) {
+        const parentDungeons = monsterToDungeons.get(parentBossId) ?? [];
+        const parentLoc = parentDungeons[0];
+        if (parentLoc) parentBoss = { id: parentBossId, location: parentLoc };
+      }
+
+      const extracted = await extractMonster(gd, monster, dungeons, selectedDungeonId || undefined, parentBoss);
 
       // Check if already saved
-      const filePath = path.join(BOSS_DIR, `${id}.json`);
+      const compositeId = parentBossId ? `${id}S${parentBossId}` : id;
+      const filePath = path.join(BOSS_DIR, `${compositeId}.json`);
       let existing = null;
       try {
         const raw = await fs.readFile(filePath, 'utf-8');
@@ -808,6 +847,7 @@ export async function GET(req: NextRequest) {
     }
 
     if (action === 'compare') {
+      const filterMode = req.nextUrl.searchParams.get('mode') ?? '';
       const monsterToDungeons = buildMonsterToDungeons(gd);
       const monsterById = new Map(gd.monsters.map(m => [m.ID, m]));
 
@@ -819,23 +859,51 @@ export async function GET(req: NextRequest) {
 
       async function compareOne(file: string, existing: Record<string, unknown>): Promise<CompareEntry | 'ok'> {
         const rawId = String(existing.id ?? file.replace(/\.json$/, ''));
-        // Extract base monster ID: "440400079-B-1" → "440400079"
-        const id = rawId.split('-')[0];
+        // Extract base monster ID: "440400079-B-1" → "440400079", "414103191S404400150" → "414103191"
+        const id = rawId.split('-')[0].split('S')[0];
         const monster = monsterById.get(id);
         if (!monster) {
           const name = (existing.Name as Record<string, string>)?.en ?? rawId;
           return { id: rawId, file, name, diffs: [], notInGame: true };
         }
 
+        // Minion: resolve parent boss for location/level
+        let parentBoss: { id: string; location: DungeonLink } | undefined;
+        const sIdx = rawId.indexOf('S');
+        if (sIdx > 0) {
+          const parentBossId = rawId.slice(sIdx + 1);
+          const parentDungeons = monsterToDungeons.get(parentBossId) ?? [];
+          if (parentDungeons[0]) parentBoss = { id: parentBossId, location: parentDungeons[0] };
+        }
+
         const dungeons = monsterToDungeons.get(id) ?? [];
-        const ext = await extractMonster(gd, monster, dungeons);
+        const ext = await extractMonster(gd, monster, dungeons, undefined, parentBoss);
 
         const diffs: { field: string; existing: string; extracted: string }[] = [];
 
-        for (const field of ['class', 'element', 'BuffImmune', 'StatBuffImmune'] as const) {
+        // Simple fields
+        for (const field of ['class', 'element', 'level', 'icons', 'BuffImmune', 'StatBuffImmune'] as const) {
           const e = String((existing as Record<string, unknown>)[field] ?? '');
           const x = String((ext as Record<string, unknown>)[field] ?? '');
           if (e !== x) diffs.push({ field, existing: e, extracted: x });
+        }
+
+        // Localized fields (Name, Surname)
+        for (const field of ['Name', 'Surname'] as const) {
+          const eLang = (existing as Record<string, unknown>)[field] as Record<string, string> | null;
+          const xLang = (ext as Record<string, unknown>)[field] as Record<string, string> | null;
+          if (JSON.stringify(eLang) !== JSON.stringify(xLang)) {
+            diffs.push({ field, existing: eLang?.en ?? String(eLang ?? ''), extracted: xLang?.en ?? String(xLang ?? '') });
+          }
+        }
+
+        // Location
+        const eLoc = JSON.stringify((existing as Record<string, unknown>).location ?? null);
+        const xLoc = JSON.stringify((ext as Record<string, unknown>).location ?? null);
+        if (eLoc !== xLoc) {
+          const eLocObj = (existing as Record<string, unknown>).location as Record<string, Record<string, string>> | null;
+          const xLocObj = (ext as Record<string, unknown>).location as Record<string, Record<string, string>> | null;
+          diffs.push({ field: 'location', existing: eLocObj?.dungeon?.en ?? '(null)', extracted: xLocObj?.dungeon?.en ?? '(null)' });
         }
 
         const extSkills = ext.skills as Record<string, unknown>[];
@@ -893,12 +961,20 @@ export async function GET(req: NextRequest) {
 
         for (const entry of batchResults) {
           if (!entry) continue;
-          // Skip tower bosses and empty-location entries (tower trash mobs)
           const loc = entry.data.location as Record<string, unknown> | null;
           const modeEn = ((loc?.mode as Record<string, string>)?.en ?? '');
           const dungeonEn = ((loc?.dungeon as Record<string, string>)?.en ?? '');
-          if (!modeEn && !dungeonEn) { ok++; continue; }
-          if (modeEn.includes('Tower') || modeEn.includes('Skyward') || dungeonEn.includes('Tower') || dungeonEn.includes('Skyward')) { ok++; continue; }
+
+          if (filterMode) {
+            // Mode filter: compute refined mode and skip non-matching files
+            if (!modeEn && !dungeonEn) continue;
+            const refined = refineMode(modeEn, dungeonEn, gd.textSystemMap);
+            if (refined !== filterMode) continue;
+          } else {
+            // Default: skip empty-location and tower/skyward bosses
+            if (!modeEn && !dungeonEn) { ok++; continue; }
+            if (modeEn.includes('Tower') || modeEn.includes('Skyward') || dungeonEn.includes('Tower') || dungeonEn.includes('Skyward')) { ok++; continue; }
+          }
 
           const res = await compareOne(entry.file, entry.data);
           if (res === 'ok') ok++;
@@ -907,7 +983,7 @@ export async function GET(req: NextRequest) {
         }
       }
 
-      return NextResponse.json({ total: files.length, ok, withDiffs: results.length, notFound, results });
+      return NextResponse.json({ total: ok + results.length + notFound, ok, withDiffs: results.length, notFound, results });
     }
 
     if (action === 'compare-by-mode') {
@@ -935,42 +1011,44 @@ export async function GET(req: NextRequest) {
           const modeEn = ((loc?.mode as Record<string, string>)?.en ?? '');
           const dungeonEn = ((loc?.dungeon as Record<string, string>)?.en ?? '');
 
-          // Skip empty location (tower mobs)
+          // Skip empty location
           if (!modeEn && !dungeonEn) continue;
 
-          // Refine mode for display grouping
-          let mode = modeEn || 'Unknown';
-          // Elemental Tower → split by element from dungeon name
-          // Patterns: "Fire Tower 1F", "Earth Tower 3F", "Tower of Light 3F", "Tower of Dark 5F"
-          if (mode === 'Elemental Tower' && dungeonEn) {
-            const elem = dungeonEn.match(/^(Fire|Water|Earth|Light|Dark)\s+Tower/)?.[1]
-              ?? dungeonEn.match(/Tower\s+of\s+(Light|Dark)/)?.[1];
-            if (elem) mode = `Elemental Tower (${elem})`;
-          }
-          // Unresolved SYS_ keys → try fuzzy match in TextSystem (game data has spaces in keys)
-          if (mode.startsWith('SYS_')) {
-            const normalized = mode.replace(/\s+/g, '');
-            let resolved = '';
-            for (const [key, texts] of Object.entries(gd.textSystemMap)) {
-              if (key.replace(/\s+/g, '') === normalized && texts.en) { resolved = texts.en; break; }
-            }
-            mode = resolved || mode.replace(/^SYS_/, '').replace(/_/g, ' ');
-          }
+          const mode = refineMode(modeEn, dungeonEn, gd.textSystemMap);
           if (!byMode[mode]) byMode[mode] = { total: 0, ok: 0, withDiffs: 0, diffs: [] };
           byMode[mode].total++;
 
           const rawId = String(entry.data.id ?? entry.file.replace(/\.json$/, ''));
-          const id = rawId.split('-')[0];
+          const id = rawId.split('-')[0].split('S')[0];
           const monster = monsterById.get(id);
           if (!monster) { byMode[mode].withDiffs++; byMode[mode].diffs.push({ file: entry.file, name: rawId, notInGame: true }); continue; }
 
+          // Minion: resolve parent boss for location/level
+          let parentBoss: { id: string; location: DungeonLink } | undefined;
+          const sIdx = rawId.indexOf('S');
+          if (sIdx > 0) {
+            const parentBossId = rawId.slice(sIdx + 1);
+            const parentDungeons = monsterToDungeons.get(parentBossId) ?? [];
+            if (parentDungeons[0]) parentBoss = { id: parentBossId, location: parentDungeons[0] };
+          }
+
           const dungeons = monsterToDungeons.get(id) ?? [];
-          const ext = await extractMonster(gd, monster, dungeons);
+          const ext = await extractMonster(gd, monster, dungeons, undefined, parentBoss);
 
           // Quick diff check (same logic as compare)
           let hasDiff = false;
-          for (const field of ['class', 'element', 'BuffImmune', 'StatBuffImmune'] as const) {
+          for (const field of ['class', 'element', 'level', 'icons', 'BuffImmune', 'StatBuffImmune'] as const) {
             if (String((entry.data as Record<string, unknown>)[field] ?? '') !== String((ext as Record<string, unknown>)[field] ?? '')) { hasDiff = true; break; }
+          }
+          if (!hasDiff) {
+            // Localized fields
+            for (const field of ['Name', 'Surname'] as const) {
+              if (JSON.stringify((entry.data as Record<string, unknown>)[field]) !== JSON.stringify((ext as Record<string, unknown>)[field])) { hasDiff = true; break; }
+            }
+          }
+          if (!hasDiff) {
+            // Location
+            if (JSON.stringify((entry.data as Record<string, unknown>).location) !== JSON.stringify((ext as Record<string, unknown>).location)) hasDiff = true;
           }
           if (!hasDiff) {
             const extSkills = ext.skills as Record<string, unknown>[];

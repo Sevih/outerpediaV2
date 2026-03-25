@@ -1,7 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import LootTable from '@/app/components/guides/LootTable';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
@@ -36,6 +38,7 @@ const preloadedBosses: Record<string, Boss> = {
 
 export default function GuardianGuide() {
   const { lang } = useI18n();
+  const [bossId, setBossId] = useState('404400162');
 
   return (
     <GuideTemplate
@@ -48,7 +51,12 @@ export default function GuardianGuide() {
         modeKey="Special Request: Ecology Study"
         defaultBossId="404400162"
         preloadedBosses={preloadedBosses}
+        onBossIdChange={setBossId}
       />
+      <MinionDisplay entries={[
+        { bossName: 'Mini Guardian', modeKey: 'Special Request: Ecology Study', versionIndex: 0, defaultBossId: `414103191S${bossId}` },
+        { bossName: 'Mini Guardian', modeKey: 'Special Request: Ecology Study', versionIndex: 0, defaultBossId: `414103191S${bossId}` }
+      ]} />
       <hr className="my-6 border-neutral-700" />
       <TacticalTips sections={[{ title: 'tactical', tips: tips.tactical }]} />
       <hr className="my-6 border-neutral-700" />

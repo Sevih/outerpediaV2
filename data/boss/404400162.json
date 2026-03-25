@@ -16,6 +16,29 @@
   "class": "Ranger",
   "element": "Fire",
   "level": 120,
+  "icons": "4076006",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_ACCURACY",
+  "location": {
+    "dungeon": {
+      "en": "Masterless Guardian (Stage 13)",
+      "jp": "主を失ったガーディアン(13段階)",
+      "kr": "주인 잃은 가디언 (13 단계)",
+      "zh": "失去主人的守护者(第13阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Ecology Study",
+      "jp": "特別依頼:生態調査",
+      "kr": "특별 의뢰 : 생태 조사",
+      "zh": "特别委托:生态调查"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
   "skills": [
     {
       "name": {
@@ -26,17 +49,12 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy.\nIncreases damage dealt if there is a Mini Guardian, and summons <color=#28d9ed>2</color> <color=#28d9ed>Mini Guardians</color>.\nMini Guardians increase the boss's Priority by <color=#28d9ed>20%</color> and remove <color=#28d9ed>2</color> debuff(s) from the boss when attacking. Reduces the cooldown of <color=#28d9ed>Guardian Cannon</color> by <color=#28d9ed>1 turns</color>.",
-        "jp": "敵単体にダメージを与える。\n戦場に【ミニガーディアン】がいる場合、ダメージがUPする。<color=#28d9ed>【ミニガーディアン】</color>を<color=#28d9ed>2体</color>召喚する。\n【ミニガーディアン】が攻撃時、【主を失ったガーディアン】の行動ゲージが<color=#28d9ed>20%</color>UPし、弱体効果を<color=#28d9ed>2個</color>解除する。<color=#28d9ed>【ガーディアンキャノン】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
-        "kr": "적을 공격합니다.\n미니 가디언 존재 시 피해량이 증가하고, <color=#28d9ed>미니 가디언</color>을 <color=#28d9ed>2체</color> 소환합니다.\n미니 가디언은 공격 시 보스의 행동 게이지가 <color=#28d9ed>20%</color> 증가하고, 보유한 약화 효과를 <color=#28d9ed>2개</color> 해제시킵니다. 추가로 <color=#28d9ed>가디언 캐논</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
-        "zh": "攻击敌人。\n有小型守护者存在时,伤害量提升,并召唤<color=#28d9ed>2个</color><color=#28d9ed>小型守护者</color>。\n攻击小型守护者时,首领的行动值提升<color=#28d9ed>20%</color>,解除附带的<color=#28d9ed>2个</color>弱化效果。使<color=#28d9ed>守护者加农炮</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
+        "en": "Attacks an enemy.\\nIncreases damage dealt if there is a Mini Guardian, and summons <color=#28d9ed>2</color> <color=#28d9ed>Mini Guardians</color>.\\nMini Guardians increase the boss's Priority by <color=#28d9ed>20%</color> and remove <color=#28d9ed>2</color> debuff(s) from the boss when attacking. Reduces the cooldown of <color=#28d9ed>Guardian Cannon</color> by <color=#28d9ed>1 turns</color>.",
+        "jp": "敵単体にダメージを与える。\\n戦場に【ミニガーディアン】がいる場合、ダメージがUPする。<color=#28d9ed>【ミニガーディアン】</color>を<color=#28d9ed>2体</color>召喚する。\\n【ミニガーディアン】が攻撃時、【主を失ったガーディアン】の行動ゲージが<color=#28d9ed>20%</color>UPし、弱体効果を<color=#28d9ed>2個</color>解除する。<color=#28d9ed>【ガーディアンキャノン】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "kr": "적을 공격합니다.\\n미니 가디언 존재 시 피해량이 증가하고, <color=#28d9ed>미니 가디언</color>을 <color=#28d9ed>2체</color> 소환합니다.\\n미니 가디언은 공격 시 보스의 행동 게이지가 <color=#28d9ed>20%</color> 증가하고, 보유한 약화 효과를 <color=#28d9ed>2개</color> 해제시킵니다. 추가로 <color=#28d9ed>가디언 캐논</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "zh": "攻击敌人。\\n有小型守护者存在时,伤害量提升,并召唤<color=#28d9ed>2个</color><color=#28d9ed>小型守护者</color>。\\n攻击小型守护者时,首领的行动值提升<color=#28d9ed>20%</color>,解除附带的<color=#28d9ed>2个</color>弱化效果。使<color=#28d9ed>守护者加农炮</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_First_4044001",
-      "buff": [
-        "BT_COOL_CHARGE",
-        "BT_ACTION_GAUGE",
-        "BT_REMOVE_DEBUFF"
-      ]
+      "icon": "Skill_First_4044001"
     },
     {
       "name": {
@@ -47,17 +65,12 @@
       },
       "type": "SKT_SECOND",
       "description": {
-        "en": "Attacks all enemies.\nIncreases damage dealt if there is a Mini Guardian, and summons <color=#28d9ed>2</color> <color=#28d9ed>Mini Guardians</color>.\nMini Guardians increase the boss's Priority by <color=#28d9ed>20%</color> and remove <color=#28d9ed>2</color> debuff(s) from the boss when attacking. Reduces the cooldown of <color=#28d9ed>Guardian Cannon</color> by <color=#28d9ed>1 turns</color>.",
-        "jp": "敵全体にダメージを与える。\n戦場に【ミニガーディアン】がいる場合、ダメージがUPする。<color=#28d9ed>【ミニガーディアン】</color>を<color=#28d9ed>2体</color>召喚する。\n【ミニガーディアン】が攻撃時、【主を失ったガーディアン】の行動ゲージが<color=#28d9ed>20%</color>UPし、弱体効果を<color=#28d9ed>2個</color>解除する。また、<color=#28d9ed>【ガーディアンキャノン】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
-        "kr": "적 전체를 공격합니다.\n미니 가디언 존재 시 피해량이 증가하고, <color=#28d9ed>미니 가디언</color>을 <color=#28d9ed>2체</color> 소환합니다.\n미니 가디언은 공격 시 보스의 행동 게이지가 <color=#28d9ed>20%</color> 증가하고, 보유한 약화 효과를 <color=#28d9ed>2개</color> 해제시킵니다. 추가로 <color=#28d9ed>가디언 캐논</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
-        "zh": "攻击全体敌人。\n有小型守护者存在时,伤害量提升,并召唤<color=#28d9ed>2个</color><color=#28d9ed>小型守护者</color>。\n攻击小型守护者时,首领的行动值提升<color=#28d9ed>20%</color>,解除附带的<color=#28d9ed>2个</color>弱化效果。使<color=#28d9ed>守护者加农炮</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
+        "en": "Attacks all enemies.\\nIncreases damage dealt if there is a Mini Guardian, and summons <color=#28d9ed>2</color> <color=#28d9ed>Mini Guardians</color>.\\nMini Guardians increase the boss's Priority by <color=#28d9ed>20%</color> and remove <color=#28d9ed>2</color> debuff(s) from the boss when attacking. Reduces the cooldown of <color=#28d9ed>Guardian Cannon</color> by <color=#28d9ed>1 turns</color>.",
+        "jp": "敵全体にダメージを与える。\\n戦場に【ミニガーディアン】がいる場合、ダメージがUPする。<color=#28d9ed>【ミニガーディアン】</color>を<color=#28d9ed>2体</color>召喚する。\\n【ミニガーディアン】が攻撃時、【主を失ったガーディアン】の行動ゲージが<color=#28d9ed>20%</color>UPし、弱体効果を<color=#28d9ed>2個</color>解除する。また、<color=#28d9ed>【ガーディアンキャノン】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "kr": "적 전체를 공격합니다.\\n미니 가디언 존재 시 피해량이 증가하고, <color=#28d9ed>미니 가디언</color>을 <color=#28d9ed>2체</color> 소환합니다.\\n미니 가디언은 공격 시 보스의 행동 게이지가 <color=#28d9ed>20%</color> 증가하고, 보유한 약화 효과를 <color=#28d9ed>2개</color> 해제시킵니다. 추가로 <color=#28d9ed>가디언 캐논</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "zh": "攻击全体敌人。\\n有小型守护者存在时,伤害量提升,并召唤<color=#28d9ed>2个</color><color=#28d9ed>小型守护者</color>。\\n攻击小型守护者时,首领的行动值提升<color=#28d9ed>20%</color>,解除附带的<color=#28d9ed>2个</color>弱化效果。使<color=#28d9ed>守护者加农炮</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Second_4076006",
-      "buff": [
-        "BT_COOL_CHARGE",
-        "BT_ACTION_GAUGE",
-        "BT_REMOVE_DEBUFF"
-      ]
+      "icon": "Skill_Second_4076006"
     },
     {
       "name": {
@@ -87,15 +100,15 @@
       },
       "type": "SKT_MONSTER_1",
       "description": {
-        "en": "(Passive Effect)\nIncreases <color=#28d9ed>Attack</color> every turn. This effect stacks up to <color=#28d9ed>20 times</color>.\n\nWhen hit, if the caster is not inflicted with a debuff, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>. Additionally, when an enemy makes a non-critical hit, increases <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>15%</color> and reduces the cooldown of <color=#28d9ed>Guardian Cannon</color> by <color=#28d9ed>1 turn(s)</color>.\nReduces Critical Hit Chance of enemies.\n\nReduces Weakness Gauge damage taken from non-Water enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\nReduces damage dealt to Water enemies and increases damage taken from them.\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.",
-        "jp": "(パッシブ効果)\n毎ターン<color=#28d9ed>攻撃力</color>がUPし、最大<color=#28d9ed>20回</color>まで累積する。\n\n攻撃を受けた時、自分に弱体効果がない場合、受けるWGダメージが<color=#28d9ed>100%</color>DOWNする。敵の攻撃を受けた時、会心が発生しなかった場合、味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>15%</color>UPし、<color=#28d9ed>【ガーディアンキャノン】</color>のスキルターンが<color=#28d9ed>1ターン</color>減少する。\n敵の会心率がDOWNする。\n\n水属性以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。水属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\n水属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>10000</color>を超えない。",
-        "kr": "(패시브 효과)\n매 턴 <color=#28d9ed>공격력</color> 이 증가합니다. 이 효과는 최대 <color=#28d9ed>20회</color> 누적됩니다.\n\n피격 시 약화 효과가 없다면 받는 WG 피해가 <color=#28d9ed>100%</color> 감소합니다. 추가로 적의 치명 공격이 발생하지 않았다면 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가하고, <color=#28d9ed>가디언 캐논</color>의 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\n적의 치명 확률이 감소합니다.\n\n수속성이 아닌 적에게 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소하며 입히는 피해가 증가하고, 받는 피해가 감소합니다.\n수속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>10000</color>을 초과하지 않습니다.",
-        "zh": "(被动效果)\n每回合使<color=#28d9ed>攻击力</color>提升。该效果最多可叠加<color=#28d9ed>20次</color>。\n\n受到攻击时,若未附带弱化效果,则使WG伤害降低<color=#28d9ed>100%</color>。若未额外触发暴击,则使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>15%</color>,并使<color=#28d9ed>守护者加农炮</color>的冷却时间减少<color=#28d9ed>1回合</color>。\n使敌人的暴击率降低。\n\n受到的非水属性敌人的WG伤害量降低<color=#28d9ed>50%</color>,并使对其造成的伤害提升,且所受伤害降低。\n使对水属性敌人造成的伤害降低,且所受伤害提升。\n首领受到的<color=#28d9ed>诅咒/固定伤害</color>不超过<color=#28d9ed>10000</color>。"
+        "en": "(Passive Effect)\\nIncreases <color=#28d9ed>Attack</color> every turn. This effect stacks up to <color=#28d9ed>20 times</color>.\\n\\nWhen hit, if the caster is not inflicted with a debuff, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>. Additionally, when an enemy makes a non-critical hit, increases <color=#28d9ed>Priority</color> of all allies by <color=#28d9ed>15%</color> and reduces the cooldown of <color=#28d9ed>Guardian Cannon</color> by <color=#28d9ed>1 turn(s)</color>.\\nReduces Critical Hit Chance of enemies.\\n\\nReduces Weakness Gauge damage taken from non-Water enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\nReduces damage dealt to Water enemies and increases damage taken from them.\\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.",
+        "jp": "(パッシブ効果)\\n毎ターン<color=#28d9ed>攻撃力</color>がUPし、最大<color=#28d9ed>20回</color>まで累積する。\\n\\n攻撃を受けた時、自分に弱体効果がない場合、受けるWGダメージが<color=#28d9ed>100%</color>DOWNする。敵の攻撃を受けた時、会心が発生しなかった場合、味方全体の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>15%</color>UPし、<color=#28d9ed>【ガーディアンキャノン】</color>のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\n敵の会心率がDOWNする。\\n\\n水属性以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。水属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n水属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>10000</color>を超えない。",
+        "kr": "(패시브 효과)\\n매 턴 <color=#28d9ed>공격력</color> 이 증가합니다. 이 효과는 최대 <color=#28d9ed>20회</color> 누적됩니다.\\n\\n피격 시 약화 효과가 없다면 받는 WG 피해가 <color=#28d9ed>100%</color> 감소합니다. 추가로 적의 치명 공격이 발생하지 않았다면 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>15%</color> 증가하고, <color=#28d9ed>가디언 캐논</color>의 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n적의 치명 확률이 감소합니다.\\n\\n수속성이 아닌 적에게 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소하며 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n수속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>10000</color>을 초과하지 않습니다.",
+        "zh": "(被动效果)\\n每回合使<color=#28d9ed>攻击力</color>提升。该效果最多可叠加<color=#28d9ed>20次</color>。\\n\\n受到攻击时,若未附带弱化效果,则使WG伤害降低<color=#28d9ed>100%</color>。若未额外触发暴击,则使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>15%</color>,并使<color=#28d9ed>守护者加农炮</color>的冷却时间减少<color=#28d9ed>1回合</color>。\\n使敌人的暴击率降低。\\n\\n受到的非水属性敌人的WG伤害量降低<color=#28d9ed>50%</color>,并使对其造成的伤害提升,且所受伤害降低。\\n使对水属性敌人造成的伤害降低,且所受伤害提升。\\n首领受到的<color=#28d9ed>诅咒/固定伤害</color>不超过<color=#28d9ed>10000</color>。"
       },
       "icon": "MT_Passive_1_Fire",
       "buff": [
-        "BT_ACTION_GAUGE",
-        "BT_COOL_CHARGE"
+        "BT_COOL3_CHARGE",
+        "BT_ACTION_GAUGE"
       ],
       "debuff": [
         "BT_STAT|ST_CRITICAL_RATE_IR"
@@ -110,35 +123,17 @@
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
-        "en": "Becomes <color=#28d9ed>Enraged</color> every 3 turns. \n\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 10% Weakness Gauge. Enraged lasts for 4 turns.\n\n<color=#28d9ed>Guardian Cannon - Full Burst</color>: Used when Enraged ends.\nRegardless of the caster's <color=#28d9ed>debuffs</color>, deals max <color=#28d9ed>Guardian Cannon</color> damage. Grants <color=#28d9ed>Immunity</color> until inflicted with Break.",
-        "jp": "3ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\n\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は4ターンの間持続する。\n\n<color=#28d9ed>【ガーディアンキャノン-フルバースト】</color>:【狂暴化】終了時に発動する。\n自分の<color=#28d9ed>弱体効果</color>と関係なく<color=#28d9ed>【ガーディアンキャノン】</color>の最大ダメージを与える。ブレイクするまで自分に<color=#28d9ed>免疫</color>効果を付与する。",
-        "kr": "3턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\n\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, WG 10%를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\n\n<color=#28d9ed>가디언 캐논 - 풀 버스트</color> : 광폭화 종료 시 사용.\n자신의 <color=#28d9ed>약화 효과</color>와 상관 없이 <color=#28d9ed>가디언 캐논</color>의 최대 피해를 입힙니다. 브레이크 되기 전까지 <color=#28d9ed>면역</color> 효과를 얻습니다.",
-        "zh": "每3回合转换为<color=#28d9ed>狂暴化</color>状态。\n\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复\n\n<color=#28d9ed>10%。狂暴化持续4回合。\n守护者加农炮-全弹发射</color>:狂暴化结束时发动。\n无视自身的<color=#28d9ed>弱化效果</color>,<color=#28d9ed>守护者加农炮</color>造成最大伤害。获得<color=#28d9ed>免疫</color>效果,持续至进入力竭状态为止。"
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 3 turns. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 10% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Guardian Cannon - Full Burst</color>: Used when Enraged ends.\\nRegardless of the caster's <color=#28d9ed>debuffs</color>, deals max <color=#28d9ed>Guardian Cannon</color> damage. Grants <color=#28d9ed>Immunity</color> until inflicted with Break.",
+        "jp": "3ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与し、WGを10%回復する。【狂暴化】は4ターンの間持続する。\\n\\n<color=#28d9ed>【ガーディアンキャノン-フルバースト】</color>:【狂暴化】終了時に発動する。\\n自分の<color=#28d9ed>弱体効果</color>と関係なく<color=#28d9ed>【ガーディアンキャノン】</color>の最大ダメージを与える。ブレイクするまで自分に<color=#28d9ed>免疫</color>効果を付与する。",
+        "kr": "3턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, WG 10%를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>가디언 캐논 - 풀 버스트</color> : 광폭화 종료 시 사용.\\n자신의 <color=#28d9ed>약화 효과</color>와 상관 없이 <color=#28d9ed>가디언 캐논</color>의 최대 피해를 입힙니다. 브레이크 되기 전까지 <color=#28d9ed>면역</color> 효과를 얻습니다.",
+        "zh": "每3回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复\\n\\n<color=#28d9ed>10%。狂暴化持续4回合。\\n守护者加农炮-全弹发射</color>:狂暴化结束时发动。\\n无视自身的<color=#28d9ed>弱化效果</color>,<color=#28d9ed>守护者加农炮</color>造成最大伤害。获得<color=#28d9ed>免疫</color>效果,持续至进入力竭状态为止。"
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_STAT|ST_ATK_IR",
         "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR",
         "BT_IMMUNE"
       ]
     }
-  ],
-  "location": {
-    "dungeon": {
-      "en": "Masterless Guardian (Stage 13)",
-      "jp": "主を失ったガーディアン(13段階)",
-      "kr": "주인 잃은 가디언 (13 단계)",
-      "zh": "失去主人的守护者(第13阶段)"
-    },
-    "mode": {
-      "en": "Special Request: Ecology Study",
-      "jp": "特別依頼:生態調査",
-      "kr": "특별 의뢰 : 생태 조사",
-      "zh": "特别委托:生态调查"
-    },
-    "area_id": ""
-  },
-  "icons": "4076006",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED,BT_ACTION_GAUGE",
-  "StatBuffImmune": "ST_ACCURACY"
+  ]
 }

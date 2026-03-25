@@ -1,0 +1,61 @@
+{
+  "id": "414103191S404400162",
+  "Name": {
+    "en": "Mini Guardian",
+    "jp": "小型ガーディアン",
+    "kr": "미니 가디언",
+    "zh": "迷你守护者"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Fire",
+  "level": 120,
+  "icons": "4041001",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Masterless Guardian (Stage 13)",
+      "jp": "主を失ったガーディアン(13段階)",
+      "kr": "주인 잃은 가디언 (13 단계)",
+      "zh": "失去主人的守护者(第13阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Ecology Study",
+      "jp": "特別依頼:生態調査",
+      "kr": "특별 의뢰 : 생태 조사",
+      "zh": "特别委托:生态调查"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "summoned_by": "404400162",
+  "skills": [
+    {
+      "name": {
+        "en": "Pile Bunker",
+        "jp": "パイルバンカー",
+        "kr": "파일 벙커",
+        "zh": "打桩槌"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and removes <color=#28d9ed>2</color> debuff(s) from the boss.\\nIncreases Priority by <color=#28d9ed>20%</color> and reduces the cooldown of <color=#28d9ed>Guardian Cannon</color> by <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、ボスの弱体効果を<color=#28d9ed>2個</color>解除する。\\n行動ゲージを<color=#28d9ed>20%</color>UPさせ、<color=#28d9ed>【ガーディアンキャノン】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "kr": "지정한 적을 공격하고, 보스의 약화 효과를 <color=#28d9ed>2개</color> 해제합니다.\\n추가로 행 동게이지를 <color=#28d9ed>20%</color> 회복시키고, <color=#28d9ed>가디언 캐논</color>의 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
+        "zh": "攻击指定敌人,并解除首领的<color=#28d9ed>2个</color>弱化效果。\\n使行动值恢复<color=#28d9ed>20%</color>,并使<color=#28d9ed>守护者加农炮</color>的冷却时间减少<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire",
+      "buff": [
+        "BT_REMOVE_DEBUFF",
+        "BT_ACTION_GAUGE",
+        "BT_COOL3_CHARGE"
+      ]
+    }
+  ]
+}

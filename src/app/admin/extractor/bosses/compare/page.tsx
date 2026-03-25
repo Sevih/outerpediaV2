@@ -44,8 +44,13 @@ export default function BossComparePage() {
   async function handleSaveOne(monsterId: string) {
     setSavingIds(prev => new Set(prev).add(monsterId));
     try {
-      // Extract then save
-      const extRes = await fetch(`${API}?action=extract&id=${monsterId}`);
+      // Handle minion IDs: "414103191S404400150" → id=414103191, parentBossId=404400150
+      const sIdx = monsterId.indexOf('S');
+      const baseId = sIdx > 0 ? monsterId.slice(0, sIdx) : monsterId;
+      const parentBossId = sIdx > 0 ? monsterId.slice(sIdx + 1) : '';
+      const params = new URLSearchParams({ action: 'extract', id: baseId });
+      if (parentBossId) params.set('parentBossId', parentBossId);
+      const extRes = await fetch(`${API}?${params}`);
       const extData = await extRes.json();
       if (!extData.extracted) return;
       const saveRes = await fetch(API, {
