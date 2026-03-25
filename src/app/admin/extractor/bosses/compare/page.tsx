@@ -62,16 +62,41 @@ export default function BossComparePage() {
     }
   }
 
+  const [applying, setApplying] = useState(false);
+  const [applyResult, setApplyResult] = useState<{ modified: number; total: number } | null>(null);
+
+  async function handleApplyOverrides() {
+    setApplying(true);
+    setApplyResult(null);
+    try {
+      const res = await fetch(`${API}?action=apply-overrides`);
+      const data = await res.json();
+      if (data.ok) setApplyResult({ modified: data.modified, total: data.total });
+    } finally {
+      setApplying(false);
+    }
+  }
+
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-4">
         <button
           onClick={handleCompare}
-          disabled={comparing}
+          disabled={comparing || applying}
           className="rounded bg-amber-600/80 px-4 py-2 text-sm font-semibold transition hover:bg-amber-500 disabled:opacity-50"
         >
           {comparing ? 'Comparing...' : 'Compare All Bosses'}
         </button>
+        <button
+          onClick={handleApplyOverrides}
+          disabled={comparing || applying}
+          className="rounded bg-purple-600/80 px-4 py-2 text-sm font-semibold transition hover:bg-purple-500 disabled:opacity-50"
+        >
+          {applying ? 'Applying...' : 'Apply Overrides'}
+        </button>
+        {applyResult && (
+          <span className="text-xs text-purple-400">{applyResult.modified} file(s) modified / {applyResult.total}</span>
+        )}
         {result && (
           <>
             <span className="rounded bg-green-900/30 px-2 py-0.5 text-xs font-semibold text-green-400">{result.ok} OK</span>

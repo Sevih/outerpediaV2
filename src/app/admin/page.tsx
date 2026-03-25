@@ -21,6 +21,13 @@ interface DiffCheck {
   newCount?: number;
 }
 
+interface BossModeEntry {
+  total: number;
+  ok: number;
+  withDiffs: number;
+  diffs: string[];
+}
+
 const DIFF_CHECKS: Omit<DiffCheck, 'status'>[] = [
   { label: 'Characters', api: '/api/admin/extractor?action=compare', href: '/admin/extractor/characters' },
   { label: 'Weapons', api: '/api/admin/extractor/weapon?action=compare', href: '/admin/extractor/equipment/weapons' },
@@ -37,8 +44,17 @@ export default function AdminDashboard() {
   const [checks, setChecks] = useState<DiffCheck[]>(
     DIFF_CHECKS.map(c => ({ ...c, status: 'idle' }))
   );
+  const [bossStatus, setBossStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
+  const [bossModes, setBossModes] = useState<Record<string, BossModeEntry>>({});
 
   useEffect(() => {
+    // Launch boss compare-by-mode
+    setBossStatus('loading');
+    fetch('/api/admin/extractor/monster?action=compare-by-mode')
+      .then(r => r.json())
+      .then(data => { setBossModes(data.byMode ?? {}); setBossStatus('done'); })
+      .catch(() => setBossStatus('error'));
+
     // Launch all compare checks in parallel
     DIFF_CHECKS.forEach((check, i) => {
       setChecks(prev => prev.map((c, j) => j === i ? { ...c, status: 'loading' } : c));
@@ -73,19 +89,20 @@ export default function AdminDashboard() {
 
   const totalDiffs = checks.reduce((sum, c) => sum + (c.result?.withDiffs ?? 0), 0);
   const totalNew = checks.reduce((sum, c) => sum + (c.newCount ?? 0), 0);
-  const allDone = checks.every(c => c.status === 'done' || c.status === 'error');
+  const bossDiffs = Object.values(bossModes).reduce((sum, m) => sum + m.withDiffs, 0);
+  const allDone = checks.every(c => c.status === 'done' || c.status === 'error') && bossStatus !== 'loading';
 
   return (
     <div className="mx-auto max-w-5xl space-y-8">
       <div className="flex items-center gap-4">
         <h1 className="text-2xl font-bold">Dashboard</h1>
         {!allDone && <span className="text-sm text-zinc-500 animate-pulse">Checking for updates...</span>}
-        {allDone && totalDiffs === 0 && totalNew === 0 && (
+        {allDone && totalDiffs === 0 && totalNew === 0 && bossDiffs === 0 && (
           <span className="rounded bg-green-900/30 px-2.5 py-1 text-xs font-semibold text-green-400">All up to date</span>
         )}
-        {allDone && (totalDiffs > 0 || totalNew > 0) && (
+        {allDone && (totalDiffs > 0 || totalNew > 0 || bossDiffs > 0) && (
           <div className="flex gap-2">
-            {totalDiffs > 0 && <span className="rounded bg-amber-900/30 px-2.5 py-1 text-xs font-semibold text-amber-400">{totalDiffs} diff(s)</span>}
+            {(totalDiffs + bossDiffs) > 0 && <span className="rounded bg-amber-900/30 px-2.5 py-1 text-xs font-semibold text-amber-400">{totalDiffs + bossDiffs} diff(s)</span>}
             {totalNew > 0 && <span className="rounded bg-blue-900/30 px-2.5 py-1 text-xs font-semibold text-blue-400">{totalNew} new</span>}
           </div>
         )}
@@ -131,6 +148,51 @@ export default function AdminDashboard() {
             </Link>
           ))}
         </div>
+      </section>
+
+      {/* Boss status by mode */}
+      <section>
+        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-zinc-500">
+          Boss / Monster Status
+          {bossStatus === 'loading' && <span className="ml-2 text-zinc-600 animate-pulse">Loading...</span>}
+        </h2>
+        {bossStatus === 'done' && Object.keys(bossModes).length > 0 && (
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {Object.entries(bossModes)
+              .sort(([a], [b]) => a.localeCompare(b))
+              .map(([mode, entry]) => (
+                <Link
+                  key={mode}
+                  href={`/admin/extractor/bosses/by-mode?mode=${encodeURIComponent(mode)}` as never}
+                  className="rounded-lg border border-zinc-800 p-4 transition-colors hover:border-zinc-600 hover:bg-zinc-900"
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-semibold text-sm">{mode}</h3>
+                    {entry.withDiffs === 0
+                      ? <span className="rounded bg-green-900/30 px-1.5 py-0.5 text-[10px] text-green-400">OK</span>
+                      : <span className="rounded bg-amber-900/30 px-1.5 py-0.5 text-[10px] text-amber-400">updates</span>
+                    }
+                  </div>
+                  <div className="mt-2 flex items-center gap-3 text-xs">
+                    <span className="text-zinc-500">{entry.total} total</span>
+                    {entry.ok > 0 && <span className="text-green-500">{entry.ok} OK</span>}
+                    {entry.withDiffs > 0 && <span className="text-amber-400">{entry.withDiffs} diff(s)</span>}
+                  </div>
+                  {entry.withDiffs > 0 && entry.diffs.length > 0 && (
+                    <div className="mt-2 space-y-0.5">
+                      {entry.diffs.slice(0, 3).map((name, i) => (
+                        <div key={i} className="text-xs text-zinc-400 truncate">{name}</div>
+                      ))}
+                      {entry.diffs.length > 3 && (
+                        <span className="text-[10px] text-zinc-600">+{entry.diffs.length - 3} more</span>
+                      )}
+                    </div>
+                  )}
+                </Link>
+              ))}
+          </div>
+        )}
+        {bossStatus === 'error' && <span className="text-xs text-red-400">Failed to load boss status</span>}
       </section>
 
     </div>

@@ -7,6 +7,7 @@ import type { ReactNode } from 'react';
 const TABS = [
   { key: 'extract', label: 'Extract', href: '/admin/extractor/bosses/extract' },
   { key: 'compare', label: 'Compare All', href: '/admin/extractor/bosses/compare' },
+  { key: 'by-mode', label: 'By Mode', href: '/admin/extractor/bosses/by-mode' },
 ];
 
 export default function BossExtractorLayout({ children }: { children: ReactNode }) {

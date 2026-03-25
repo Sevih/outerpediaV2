@@ -271,13 +271,34 @@ async function loadSkillOverrides(): Promise<Record<string, SkillOverride>> {
   }
 }
 
+/** Normalize desc by replacing numbers outside HTML tags with '#' for fuzzy matching */
+function normalizeDesc(desc: string): string {
+  // Replace numbers that are NOT inside <color=...> tag attributes
+  // Keep tag attributes intact, replace numeric values in text
+  return desc.replace(/<color=[^>]*>|<\/color>|[\d.]+%?/g, (match) => {
+    if (match.startsWith('<')) return match; // preserve HTML tags
+    return '#';
+  });
+}
+
 function applySkillOverrides(
   descEn: string,
   buff: string[],
   debuff: string[],
   overrides: Record<string, SkillOverride>,
 ): void {
-  const override = overrides[descEn];
+  // Exact match first
+  let override = overrides[descEn];
+  // Fuzzy match: normalize both sides and compare
+  if (!override) {
+    const normalizedDesc = normalizeDesc(descEn);
+    for (const [key, val] of Object.entries(overrides)) {
+      if (normalizeDesc(key) === normalizedDesc) {
+        override = val;
+        break;
+      }
+    }
+  }
   if (!override) return;
   if (override.add_buff) for (const b of override.add_buff) { if (!buff.includes(b)) buff.push(b); }
   if (override.add_debuff) for (const d of override.add_debuff) { if (!debuff.includes(d)) debuff.push(d); }
@@ -642,6 +663,57 @@ export async function GET(req: NextRequest) {
       }))});
     }
 
+    if (action === 'apply-overrides') {
+      const overrides = await loadSkillOverrides();
+      if (Object.keys(overrides).length === 0) {
+        return NextResponse.json({ ok: true, modified: 0, message: 'No overrides found' });
+      }
+
+      let files: string[] = [];
+      try { files = (await fs.readdir(BOSS_DIR)).filter(f => f.endsWith('.json') && f !== 'index.json'); } catch { /* empty */ }
+
+      let modified = 0;
+      for (const file of files) {
+        const fpath = path.join(BOSS_DIR, file);
+        const raw = await fs.readFile(fpath, 'utf-8');
+        const data = JSON.parse(raw);
+        const skills = data.skills as Record<string, unknown>[] | undefined;
+        if (!skills) continue;
+
+        let changed = false;
+        for (const skill of skills) {
+          const descEn = (skill.description as Record<string, string>)?.en ?? '';
+          if (!descEn) continue;
+
+          const buff: string[] = [...((skill.buff as string[]) ?? [])];
+          const debuff: string[] = [...((skill.debuff as string[]) ?? [])];
+          const origBuff = JSON.stringify(buff);
+          const origDebuff = JSON.stringify(debuff);
+
+          applySkillOverrides(descEn, buff, debuff, overrides);
+
+          if (JSON.stringify(buff) !== origBuff) {
+            if (buff.length > 0) skill.buff = buff; else delete skill.buff;
+            changed = true;
+          }
+          if (JSON.stringify(debuff) !== origDebuff) {
+            if (debuff.length > 0) skill.debuff = debuff; else delete skill.debuff;
+            changed = true;
+          }
+        }
+
+        if (changed) {
+          const eol = raw.includes('\r\n') ? '\r\n' : '\n';
+          let output = JSON.stringify(data, null, 2) + '\n';
+          if (eol === '\r\n') output = output.replace(/\n/g, '\r\n');
+          await fs.writeFile(fpath, output, 'utf-8');
+          modified++;
+        }
+      }
+
+      return NextResponse.json({ ok: true, modified, total: files.length });
+    }
+
     if (action === 'compare') {
       const monsterToDungeons = buildMonsterToDungeons(gd);
       const monsterById = new Map(gd.monsters.map(m => [m.ID, m]));
@@ -743,6 +815,103 @@ export async function GET(req: NextRequest) {
       }
 
       return NextResponse.json({ total: files.length, ok, withDiffs: results.length, notFound, results });
+    }
+
+    if (action === 'compare-by-mode') {
+      const monsterToDungeons = buildMonsterToDungeons(gd);
+      const monsterById = new Map(gd.monsters.map(m => [m.ID, m]));
+
+      let files: string[] = [];
+      try { files = (await fs.readdir(BOSS_DIR)).filter(f => f.endsWith('.json') && f !== 'index.json' && !f.replace('.json', '').includes('-')); } catch { /* empty */ }
+
+      const byMode: Record<string, { total: number; ok: number; withDiffs: number; diffs: string[] }> = {};
+
+      const BATCH = 10;
+      for (let i = 0; i < files.length; i += BATCH) {
+        const batch = files.slice(i, i + BATCH);
+        const batchResults = await Promise.all(batch.map(async (file) => {
+          try {
+            const raw = await fs.readFile(path.join(BOSS_DIR, file), 'utf-8');
+            return { file, data: JSON.parse(raw) as Record<string, unknown> };
+          } catch { return null; }
+        }));
+
+        for (const entry of batchResults) {
+          if (!entry) continue;
+          const loc = entry.data.location as Record<string, unknown> | null;
+          const modeEn = ((loc?.mode as Record<string, string>)?.en ?? '');
+          const dungeonEn = ((loc?.dungeon as Record<string, string>)?.en ?? '');
+
+          // Skip empty location (tower mobs)
+          if (!modeEn && !dungeonEn) continue;
+
+          // Refine mode for display grouping
+          let mode = modeEn || 'Unknown';
+          // Elemental Tower → split by element from dungeon name
+          // Patterns: "Fire Tower 1F", "Earth Tower 3F", "Tower of Light 3F", "Tower of Dark 5F"
+          if (mode === 'Elemental Tower' && dungeonEn) {
+            const elem = dungeonEn.match(/^(Fire|Water|Earth|Light|Dark)\s+Tower/)?.[1]
+              ?? dungeonEn.match(/Tower\s+of\s+(Light|Dark)/)?.[1];
+            if (elem) mode = `Elemental Tower (${elem})`;
+          }
+          // Unresolved SYS_ keys → try fuzzy match in TextSystem (game data has spaces in keys)
+          if (mode.startsWith('SYS_')) {
+            const normalized = mode.replace(/\s+/g, '');
+            let resolved = '';
+            for (const [key, texts] of Object.entries(gd.textSystemMap)) {
+              if (key.replace(/\s+/g, '') === normalized && texts.en) { resolved = texts.en; break; }
+            }
+            mode = resolved || mode.replace(/^SYS_/, '').replace(/_/g, ' ');
+          }
+          if (!byMode[mode]) byMode[mode] = { total: 0, ok: 0, withDiffs: 0, diffs: [] };
+          byMode[mode].total++;
+
+          const rawId = String(entry.data.id ?? entry.file.replace(/\.json$/, ''));
+          const id = rawId.split('-')[0];
+          const monster = monsterById.get(id);
+          if (!monster) { byMode[mode].withDiffs++; byMode[mode].diffs.push(`${rawId} (not in game)`); continue; }
+
+          const dungeons = monsterToDungeons.get(id) ?? [];
+          const ext = await extractMonster(gd, monster, dungeons);
+
+          // Quick diff check (same logic as compare)
+          let hasDiff = false;
+          for (const field of ['class', 'element', 'BuffImmune', 'StatBuffImmune'] as const) {
+            if (String((entry.data as Record<string, unknown>)[field] ?? '') !== String((ext as Record<string, unknown>)[field] ?? '')) { hasDiff = true; break; }
+          }
+          if (!hasDiff) {
+            const extSkills = ext.skills as Record<string, unknown>[];
+            const exSkills = (entry.data.skills ?? []) as Record<string, unknown>[];
+            for (const es of extSkills) {
+              const match = exSkills.find(s => s.type === es.type && (s.name as Record<string, string>)?.en === (es.name as Record<string, string>)?.en);
+              if (!match) { hasDiff = true; break; }
+              if (JSON.stringify(es.buff ?? []) !== JSON.stringify(match.buff ?? [])) { hasDiff = true; break; }
+              if (JSON.stringify(es.debuff ?? []) !== JSON.stringify(match.debuff ?? [])) { hasDiff = true; break; }
+              for (const lang of LANGS) {
+                const ed = ((es.description as Record<string, string>) ?? {})[lang] ?? '';
+                const cd = ((match.description as Record<string, string>) ?? {})[lang] ?? '';
+                if (ed && cd && ed !== cd) { hasDiff = true; break; }
+              }
+              if (hasDiff) break;
+            }
+            if (!hasDiff) {
+              for (const s of exSkills) {
+                if (!extSkills.find(es => es.type === s.type && (es.name as Record<string, string>)?.en === (s.name as Record<string, string>)?.en)) { hasDiff = true; break; }
+              }
+            }
+          }
+
+          if (hasDiff) {
+            byMode[mode].withDiffs++;
+            const name = (entry.data.Name as Record<string, string>)?.en ?? rawId;
+            byMode[mode].diffs.push(name);
+          } else {
+            byMode[mode].ok++;
+          }
+        }
+      }
+
+      return NextResponse.json({ byMode });
     }
 
     return NextResponse.json({ error: `Unknown action: ${action}` }, { status: 400 });
