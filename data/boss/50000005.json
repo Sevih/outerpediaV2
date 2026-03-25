@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "2000073",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "First-Rate Adventurer Promotion Challenge",
@@ -28,7 +28,7 @@
       "zh": "挑战"
     },
     "area_id": {
-      "en": "70600102",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -51,7 +51,7 @@
       },
       "icon": "Skill_First_2000073",
       "debuff": [
-        "IG_Buff_Dot_Burn_Interruption_D"
+        "BT_DOT_BURN_IR"
       ]
     },
     {
@@ -70,7 +70,7 @@
       },
       "icon": "Skill_Second_2000073",
       "debuff": [
-        "BT_IMMEDIATELY_2000092"
+        "BT_IMMEDIATELY_BURN"
       ]
     },
     {
@@ -90,7 +90,7 @@
       "icon": "Skill_Ultimate_2000073",
       "debuff": [
         "BT_REMOVE_BUFF",
-        "IG_Buff_Dot_Burn_Interruption_D"
+        "BT_DOT_BURN_IR"
       ]
     }
   ]

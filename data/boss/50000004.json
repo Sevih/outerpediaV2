@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "2000063",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "First-Rate Adventurer Promotion Challenge",
@@ -28,7 +28,7 @@
       "zh": "挑战"
     },
     "area_id": {
-      "en": "70600102",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -51,7 +51,7 @@
       },
       "icon": "Skill_First_2000063",
       "debuff": [
-        "BT_FIXED_DAMAGE"
+        "BT_REVERSE_HEAL_BASED_TARGET"
       ]
     },
     {
@@ -64,12 +64,12 @@
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and reduces <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>100%</color>.",
-        "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-100%</color>DOWNさせる。",
-        "kr": "적을 공격하고, 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
-        "zh": "攻击敌人,并使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-100%</color>。"
+        "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>100%</color>DOWNさせる。",
+        "kr": "적을 공격하고, 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>100%</color> 감소시킵니다.",
+        "zh": "攻击敌人,并使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>100%</color>。"
       },
       "icon": "Skill_Second_2000063",
-      "buff": [
+      "debuff": [
         "BT_ACTION_GAUGE"
       ]
     },
@@ -89,7 +89,7 @@
       },
       "icon": "Skill_Ultimate_2000063",
       "debuff": [
-        "BT_KILL"
+        "BT_KILL_UNDER_HP_RATE"
       ]
     },
     {
@@ -108,8 +108,9 @@
       },
       "icon": "MT_Passive_1_Light",
       "buff": [
-        "BT_INVINCIBLE_IR",
-        "BT_COOL_CHARGE"
+        "BT_COOL3_CHARGE",
+        "BT_ACTION_GAUGE",
+        "BT_INVINCIBLE_IR"
       ]
     },
     {
@@ -130,22 +131,6 @@
       "buff": [
         "BT_STAT|ST_SPEED_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

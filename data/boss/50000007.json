@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "2000062",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "Supreme Adventurer Promotion Challenge 1",
@@ -28,7 +28,7 @@
       "zh": "挑战"
     },
     "area_id": {
-      "en": "70600103",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -69,6 +69,9 @@
         "zh": "攻击敌人,并对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>3回合</color>。该效果无视目标的效果抵抗。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Second_2000062",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ],
       "debuff": [
         "BT_DOT_CURSE"
       ]

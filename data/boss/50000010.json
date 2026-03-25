@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "2000090",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_REVERSE_HEAL_BASED_TARGET,BT_REVERSE_HEAL_BASED_CASTER,BT_DOT_CURSE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_REVERSE_HEAL_BASED_TARGET,BT_REVERSE_HEAL_BASED_CASTER,BT_DOT_CURSE",
   "location": {
     "dungeon": {
       "en": "Supreme Adventurer Promotion Challenge 3",
@@ -28,7 +28,7 @@
       "zh": "挑战"
     },
     "area_id": {
-      "en": "70600105",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -51,7 +51,7 @@
       },
       "icon": "Skill_First_2000090",
       "buff": [
-        "BT_COOL_CHARGE"
+        "BT_COOL3_CHARGE"
       ]
     },
     {
@@ -105,8 +105,8 @@
       },
       "icon": "MT_Passive_1_Dark",
       "buff": [
-        "BT_SEAL_COUNTER",
-        "BT_STAT|ST_COUNTER_RATE"
+        "BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER",
+        "BT_SEAL_COUNTER"
       ]
     },
     {
@@ -125,7 +125,7 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_STAT|ST_CRITICAL_RATE"
+        "BT_STAT|ST_CRITICAL_RATE_IR"
       ]
     }
   ]

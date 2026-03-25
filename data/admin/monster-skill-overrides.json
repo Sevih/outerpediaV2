@@ -51,5 +51,8 @@
   },
   "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>In the Name of the General</color>: Used when Enraged ends.\\nInflicts <color=#28d9ed>instant death</color> on all enemies.": {
     "add_debuff": ["BT_KILL_UNDER_HP_RATE"]
+  },
+  "(Passive Effect)\\nIncreases Counterattack Chance by <color=#28d9ed>50%</color>.\\nInflict <color=#28d9ed>Cursed</color> on all enemies at the start of each turn for <color=#28d9ed>2 turn(s)</color>.\\n\\nReduces damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>90%</color>, and reduces Weakness Gauge damage taken by <color=#28d9ed>90%</color> when not <color=#28d9ed>Enraged</color>.": {
+    "add_buff": ["BT_STAT|ST_COUNTER_RATE"]
   }
 }

@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "2000084",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "Supreme Adventurer Promotion Challenge 2",
@@ -28,7 +28,7 @@
       "zh": "挑战"
     },
     "area_id": {
-      "en": "70600104",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -124,26 +124,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_STAT|ST_ATK_IR",
         "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR",
         "BT_RESURRECTION"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

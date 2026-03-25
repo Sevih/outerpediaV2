@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "4500043",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "Senior Adventurer Promotion Challenge",
@@ -28,7 +28,7 @@
       "zh": "挑战"
     },
     "area_id": {
-      "en": "70600101",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -51,8 +51,8 @@
       },
       "icon": "Skill_First_2000059",
       "buff": [
-        "BT_ADDITIVE_ATTACK_ON_EVENT",
-        "BT_STAT|ST_CRITICAL_RATE"
+        "BT_STAT|ST_CRITICAL_RATE",
+        "SYS_BUFF_ADDITIVE_ATTACK"
       ]
     },
     {
@@ -106,7 +106,7 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nAt the end of the turn, inflicts <color=#28d9ed>Petrified</color> on a random enemy for <color=#28d9ed>2 turn(s)</color>.\\n\\nReduces Weakness Gauge damage taken by <color=#28d9ed>90%</color> when not <color=#28d9ed>Enraged</color>.",
-        "jp": "(パッシブ効果)\\nターン終了時、ランダムの敵単体に<color=#28d9ed>石化</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#28d9ed>狂暴化</color>状態でない場合、受けるWGダメージが<color=#28d9ed>90%</color>DOWNする。",
+        "jp": "(パッシブ効果)\\nターン終了時、ランダムの敵単体に<color=#28d9ed>石化</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\n<color=#28d9ed>【狂暴化】</color>状態でない場合、受けるWGダメージが<color=#28d9ed>90%</color>DOWNする。",
         "kr": "(패시브 효과)\\n턴 종료 시, 무작위 적 한 명에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.\\n\\n<color=#28d9ed>광폭화</color> 상태가 아니라면 받는 WG 피해량을 <color=#28d9ed>90%</color> 감소시킵니다.",
         "zh": "(被动效果)\\n回合结束时,使随机1名敌人陷入<color=#28d9ed>石化</color>状态,持续<color=#28d9ed>2回合</color>。\\n\\n若未处于<color=#28d9ed>狂暴化</color>状态,则使受到的WG伤害量降低<color=#28d9ed>90%</color>。"
       },
@@ -131,25 +131,9 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_STAT|ST_ATK_IR",
-        "BT_DAMGE_TAKEN"
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "Enraged",
-        "jp": "狂暴化",
-        "kr": "광폭화",
-        "zh": "狂暴化"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

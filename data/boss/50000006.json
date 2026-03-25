@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "2000075",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "Supreme Adventurer Promotion Challenge 1",
@@ -28,7 +28,7 @@
       "zh": "挑战"
     },
     "area_id": {
-      "en": "70600103",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -51,7 +51,7 @@
       },
       "icon": "Skill_First_2000075",
       "debuff": [
-        "BT_COOL_CHARGE"
+        "BT_COOL3_CHARGE"
       ]
     },
     {
@@ -68,7 +68,13 @@
         "kr": "(패시브 효과)\\n자신이 적의 강화 효과를 해제시키면 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>파괴자의 응징</color>을 획득합니다.\\n(발동 효과) 자신이 전체 공격 시 <color=#ffd732>헤비메탈 랩터</color>를 사용합니다. (스킬 체인 제외)\\n\\n<color=#ffd732>헤비메탈 랩터</color> : 적 전체를 공격합니다.",
         "zh": "(被动效果)\\n若自身解除敌人的强化效果,则获得<color=#28d9ed>破坏者的惩戒</color>,持续<color=#28d9ed>2回合</color>。\\n(触发效果)自身发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>:攻击全体敌人。"
       },
-      "icon": "Skill_Second_2000075"
+      "icon": "Skill_Second_2000075",
+      "buff": [
+        "IG_Buff_2000075_Interruption",
+        "SYS_BUFF_ADDITIVE_ATTACK",
+        "BT_SEAL_COUNTER",
+        "BT_COOL3_CHARGE"
+      ]
     },
     {
       "name": {
@@ -122,7 +128,7 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "debuff": [
-        "BT_DAMAGE_TAKEN_UP"
+        "IG_Buff_Dmg_Reduce_Interruption_D"
       ]
     }
   ]

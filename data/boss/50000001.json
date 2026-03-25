@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "4004003",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "Professional Adventurer Promotion Challenge",
@@ -28,7 +28,7 @@
       "zh": "挑战"
     },
     "area_id": {
-      "en": "70600100",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,8 +70,8 @@
       },
       "icon": "Skill_Second_2000053",
       "debuff": [
-        "BT_SEALED",
-        "BT_REMOVE_BUFF"
+        "BT_REMOVE_BUFF",
+        "BT_SEALED"
       ]
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "name": {
-        "en": "Unforgiving God",
+        "en": "Merciless God",
         "jp": "寛大ならざる神",
         "kr": "관대하지 않은 신",
         "zh": "无悯之神"
@@ -103,16 +103,16 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIncreases Counterattack Chance by <color=#28d9ed>50%</color>.\\nInflict <color=#28d9ed>Cursed</color> on all enemies at the start of each turn for <color=#28d9ed>2 turn(s)</color>.\\n\\nReduces damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>90%</color>, and reduces Weakness Gauge damage taken by <color=#28d9ed>90%</color> when not <color=#28d9ed>Enraged</color>.",
-        "jp": "(パッシブ効果)\\n反撃発生率が<color=#28d9ed>50%</color>UPする。\\n毎ターン開始時、敵全体に<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\nバーストスキル、連携、チェーンスキル以外のスキルで受けるダメージを<color=#28d9ed>90%</color>DOWNさせ、<color=#28d9ed>狂暴化</color>状態でない場合、受けるWGダメージが<color=#28d9ed>90%</color>DOWNする。",
+        "jp": "(パッシブ効果)\\n反撃発生率が<color=#28d9ed>50%</color>UPする。\\n毎ターン開始時、敵全体に<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n\\nバーストスキル、連携、チェーンスキル以外のスキルで受けるダメージを<color=#28d9ed>90%</color>DOWNさせ、<color=#28d9ed>【狂暴化】</color>状態でない場合、受けるWGダメージが<color=#28d9ed>90%</color>DOWNする。",
         "kr": "(패시브 효과)\\n반격 확률이 <color=#28d9ed>50%</color> 증가합니다.\\n매 턴 시작 시 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.\\n\\n버스트 스킬, 협공, 스킬 체인을 제외한 스킬로 받는 피해를 <color=#28d9ed>90%</color> 감소시키고, <color=#28d9ed>광폭화</color> 상태가 아니라면 받는 WG 피해량을 <color=#28d9ed>90%</color> 감소시킵니다.",
         "zh": "(被动效果)\\n反击率提升<color=#28d9ed>50%</color>。\\n每回合开始时,对全体敌人造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。\\n\\n使受到除爆发技能、夹攻、连携技能外的技能伤害降低<color=#28d9ed>90%</color>,若未处于<color=#28d9ed>狂暴化</color>状态,则使受到的WG伤害量降低<color=#28d9ed>90%</color>。"
       },
       "icon": "MT_Passive_1_Light",
-      "debuff": [
-        "BT_DOT_CURSE"
-      ],
       "buff": [
         "BT_STAT|ST_COUNTER_RATE"
+      ],
+      "debuff": [
+        "BT_DOT_CURSE"
       ]
     },
     {
@@ -131,26 +131,11 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_STAT|ST_ATK_IR",
         "BT_DAMGE_TAKEN",
-        "BT_REMOVE_DEBUFF"
+        "BT_STAT|ST_ATK_IR",
+        "BT_REMOVE_DEBUFF",
+        "BT_COOL_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }
