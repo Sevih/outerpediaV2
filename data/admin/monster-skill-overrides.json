@@ -36,5 +36,20 @@
   "(Passive Effect)\\nAt the start of battle, increases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.": {
     "remove_buff": ["BT_STAT|ST_SPEED"],
     "add_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nReduces the enemy's Chain Points by <color=#28d9ed>15</color> upon death.": {
+    "add_debuff": ["BT_CP_CHARGE"]
+  },
+  "(Passive Effect)\\nReduces the <color=#28d9ed>Effectiveness</color> of Fire, Water, and Earth enemies. When the enemy uses a non-attack skill, grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>5 turn(s)</color>. These effects cannot be removed.\\n\\nAfter attacking, inflicts a <color=#28d9ed>random debuff</color> on the enemy that ignores Immunity buffs on the target.\\nAfter attacking, reduces the duration of <color=#28d9ed>buffs</color> on all enemies by <color=#28d9ed>1 turn</color> and increases the duration of <color=#28d9ed>debuffs</color> by <color=#28d9ed>1 turn(s)</color>.": {
+    "add_debuff": ["BT_RANDOM_DEBUFF"]
+  },
+  "(Passive Effect)\\nIncreases Critical Damage of the caster, and reduces <color=#28d9ed>Critical Hit Chance</color> of Fire, Water, and Earth enemies. These effects cannot be removed.\\nIncreases the effectiveness of <color=#28d9ed>increased stat</color> effects on the caster by <color=#28d9ed>100%</color>.\\n\\nWhen attacked, does not take Weakness Gauge damage if the caster does not have a debuff.\\nRecovers <color=#28d9ed>3</color> Weakness Gauge upon scoring a critical hit on an enemy.\\n\\nIncreases damage taken from <color=#28d9ed>Light</color> enemies and reduces damage dealt to them. Against non-<color=#28d9ed>Light</color> enemies, reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>, increases damage dealt, and reduces damage taken.": {
+    "remove_buff": ["BT_STAT|ST_CRITICAL_RATE_IR"]
+  },
+  "<color=#28d9ed>Unique Resource: Requires 5 Judgment of Steel and Oil to be used.</color>\\nAttacks all enemies and inflicts <color=#28d9ed>instant death</color> on all targets.": {
+    "add_debuff": ["BT_KILL_UNDER_HP_RATE"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>In the Name of the General</color>: Used when Enraged ends.\\nInflicts <color=#28d9ed>instant death</color> on all enemies.": {
+    "add_debuff": ["BT_KILL_UNDER_HP_RATE"]
   }
 }

@@ -374,6 +374,19 @@
         "icon": "IG_Buff_Effect_Random_Buff"
     },
     {
+        "name": "BT_RANDOM_DEBUFF",
+        "category": "cc",
+        "label": "Random Debuff",
+        "label_jp": "ランダムの弱体効果",
+        "label_kr": "무작위 약화 효과",
+        "label_zh": "随机弱化效果",
+        "description": "Inflicts one of the following debuffs on all enemies for 2 turns: Stunned, Frozen, Petrified, Reduced Attack, Reduced Critical Hit Chance, Reduced Speed",
+        "description_jp": "敵全体にいずれかの弱体効果を 2ターンの間付与する。 弱体効果:スタン・凍結・石化・ 攻撃力DOWN・会心率DOWN・ スピードDOWN",
+        "description_kr": "적 전체에게 2턴 동안 다음 중 하나의 약화 효과를 부여합니다. 스턴, 빙결, 석화, 공격력 감소, 치명 확률 감소, 속도 감소",
+        "description_zh": "对全体敌人造成以下一种\\n弱化效果,持续2回合。晕眩、冰冻、石化、\\n攻击力降低、暴击率降低、速度降低",
+        "icon": "IG_Buff_Effect_Random_Buff"
+    },
+    {
         "name": "BT_REMOVE_BUFF",
         "category": "utility",
         "label": "Buff Removal",
@@ -896,6 +909,19 @@
     },
     {
         "name": "BT_SYS_BUFF_ENHANCE_DEBUFF_UP",
+        "category": "statReduction",
+        "label": "Debuff Enhancement",
+        "label_jp": "弱体促進",
+        "label_kr": "강화 감쇄",
+        "label_zh": "弱化促进",
+        "description": "Increases the efficiency of debuff effects that decrease stats by 100%. (Irremovable)",
+        "description_jp": "ステータスをDOWNさせる\n弱体効果の効率が100%\nUPする。(解除不可)",
+        "description_kr": "능력치를 감소시키는 약화 효과의 효율이 100% 증가됩니다. (해제 불가)",
+        "description_zh": "降低能力值的弱化效果效率提升100%。(无法解除)",
+        "icon": "IG_Buff_Enhance_Interruption_D"
+    },
+        {
+        "name": "BT_STAT_DEBUFF_ENHANCE",
         "category": "statReduction",
         "label": "Debuff Enhancement",
         "label_jp": "弱体促進",

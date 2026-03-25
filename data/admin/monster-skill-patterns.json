@@ -1,10 +1,10 @@
 [
   {
-    "pattern": "(grants?|restores?)\\s+\\d+\\s+(Chain Points|CP)",
+    "pattern": "(grants?|restores?|recovers?)\\s+\\d+\\s+(Chain Points|CP)",
     "add_buff": ["BT_CP_CHARGE"]
   },
   {
-    "pattern": "(grants?|restores?)\\s+\\d+\\s+(Action Points|AP)",
+    "pattern": "(grants?|restores?|recovers?)\\s+\\d+\\s+(Action Points|AP)",
     "add_buff": ["BT_AP_CHARGE"]
   }
 ]

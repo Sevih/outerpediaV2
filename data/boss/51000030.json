@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "4044004",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "Weekly Conquest - Heavy Fixed Vladi Max",
@@ -28,7 +28,7 @@
       "zh": "冒险许可证"
     },
     "area_id": {
-      "en": "70600017",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -89,7 +89,7 @@
       },
       "icon": "MT_Attack_Magic_1_Light",
       "debuff": [
-        "BT_KILL"
+        "BT_KILL_UNDER_HP_RATE"
       ]
     },
     {
@@ -109,6 +109,9 @@
       "icon": "MT_Passive_1_Light",
       "buff": [
         "BT_STAT|ST_CRITICAL_RATE_IR"
+      ],
+      "debuff": [
+        "BT_KILL_UNDER_HP_RATE"
       ]
     },
     {
@@ -131,24 +134,8 @@
         "BT_STAT|ST_ATK_IR"
       ],
       "debuff": [
-        "BT_KILL"
+        "BT_KILL_UNDER_HP_RATE"
       ]
-    },
-    {
-      "name": {
-        "en": "Enraged",
-        "jp": "狂暴化",
-        "kr": "광폭화",
-        "zh": "狂暴化"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

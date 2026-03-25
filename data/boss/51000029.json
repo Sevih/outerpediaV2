@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "4044006",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "Weekly Conquest - Ful.Mi.NATION Assault Suit",
@@ -28,7 +28,7 @@
       "zh": "冒险许可证"
     },
     "area_id": {
-      "en": "70600016",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -103,10 +103,7 @@
         "kr": "(패시브 효과)\\n복수/반격이 아닌 공격으로는 WG 피해를 받지 않습니다.\\n전체 공격으로 받는 피해가 크게 감소합니다.\\n지속성이 아닌 적의 치명 확률이 모두 감소합니다.",
         "zh": "(被动效果)\\n不会受到非复仇/反击攻击的WG伤害。\\n大幅降低全体攻击所受伤害。\\n非土属性敌人的暴击率全部降低。"
       },
-      "icon": "MT_Passive_1_Fire",
-      "debuff": [
-        "BT_STAT|ST_CRITICAL_RATE_IR"
-      ]
+      "icon": "MT_Passive_1_Fire"
     },
     {
       "name": {
@@ -130,22 +127,6 @@
       "debuff": [
         "BT_SILENCE_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }
