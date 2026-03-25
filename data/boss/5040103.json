@@ -1,0 +1,103 @@
+{
+  "id": "5040103",
+  "Name": {
+    "en": "Regina",
+    "kr": "레지나",
+    "jp": "レジーナ",
+    "zh": "蕾吉纳"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 149,
+  "icons": "2000067",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 69F",
+      "kr": "빛의 탑 69층",
+      "jp": "光の塔 69階",
+      "zh": "光之塔 69层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232069",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Magician's Choice",
+        "kr": "매지션즈 셀렉트",
+        "jp": "マジシャンズセレクト",
+        "zh": "魔术师的选择"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Crit Rate</color>.",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%)",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>30%</color>。\\n该技能伤害随自身的<color=#28d9ed>暴击率</color>提升(最大50%)。"
+      },
+      "icon": "Skill_First_2000067"
+    },
+    {
+      "name": {
+        "en": "It's Checkmate!",
+        "kr": "체크메이트예요",
+        "jp": "チェックメイトです。",
+        "zh": "致胜一步"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) Regina always gains +10% Miss Chance, and upon entering battle, triggers <color=#28d9ed>Regina's World</color> <color=#28d9ed>2</color> time(s). This effect's count decreases when caster is hit.\\n(Trigger Effect) When an enemy attack results in a miss, <color=#28d9ed>Show Must Go On</color>'s Cooldown is reduced by <color=#28d9ed>1</color> turn. Counterattacks the attacker when hit. Damage dealt increases in proportion to the caster's <color=#28d9ed>Critical Hit Chance</color> (up to 50%).",
+        "kr": "(패시브 효과) 레지나는 항상 빗나감 확률이 10% 증가하며, 전투 입장 시 <color=#28d9ed>레지나의 세계</color>를 <color=#28d9ed>2회</color> 발생시킵니다. 이 효과는 피격 시 횟수가 차감됩니다.\\n(발동 효과) 적 공격이 빗나감 발생 시 <color=#28d9ed>쇼 머스트 고 온</color>의 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다. 피격 시 대상에게 반격합니다.\\n이 스킬은 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%)",
+        "jp": "(パッシブ効果) 自身の<color=#28d9ed>ミスヒット発生率</color>が10%UPし、戦闘開始時、<color=#28d9ed>【レジーナワールド】</color>を<color=#28d9ed>2回</color>発生させる。この効果は被弾時に回数が減少する。\\n(パッシブ効果) <color=#28d9ed>ミスヒット発生時</color>、<color=#28d9ed>【ショウ・マスト・ゴー・オン】</color>のスキルターンが<color=#28d9ed>1ターン</color>減少する。被弾時、対象に反撃する。\\nこのスキルは自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。",
+        "zh": "(被动效果)蕾吉纳的闪避概率始终提高10%,进入战斗时触发<color=#28d9ed>蕾吉纳的世界</color><color=#28d9ed>2</color>次。受到攻击时,该效果的次数会减少。\\n(触发效果)当敌方攻击发生闪避时,<color=#28d9ed>演出不能停</color>的冷却时间减少<color=#28d9ed>1</color>回合。被攻击时对目标进行反击。\\n该技能的伤害会随着自身<color=#28d9ed>暴击率</color>提高而增加。(最多50%)"
+      },
+      "icon": "Skill_Second_2000067"
+    },
+    {
+      "name": {
+        "en": "The Show Must Go On",
+        "kr": "쇼 머스트 고 온",
+        "jp": "ショー・マスト・ゴーオン",
+        "zh": "演出不能停"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Dispels all buff effects from the target and attacks an enemy. After attacking, grants <color=#28d9ed>Regina's World</color> <color=#28d9ed>2 time(s)</color>. This effect decreases by 1 count when hit.\\nIgnores <color=#28d9ed>30%</color> of the target's Defense, and damage dealt increases proportional to the caster's <color=#28d9ed>Critical Hit Chance</color>. The dispelling effect ignores the target's Resilience.",
+        "kr": "대상의 강화 효과를 모두 해제하고 적을 공격합니다. 공격 후 <color=#28d9ed>레지나의 세계</color>를 <color=#28d9ed>2회</color> 발생시킵니다. 이 효과는 피격 시 횟수가 차감됩니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color>무시하며, 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%) 강화 해제 효과는 대상의 효과 저항을 무시합니다.",
+        "jp": "対象の強化効果をすべて解除し、敵単体にダメージを与える。攻撃後、<color=#28d9ed>【レジーナワールド】</color>を<color=#28d9ed>2回</color>発生させる。\\nこの効果は被弾時に回数が減少する。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。\\n強化解除効果は対象の効果抵抗を無視する。",
+        "zh": "解除目标所有强化效果并攻击敌人。攻击后,生成<color=#28d9ed>2次</color><color=#28d9ed>蕾吉娜的世界</color>。该效果受到攻击时次数减少。\\n该技能无视目标<color=#28d9ed>30%</color>的防御力,且伤害随自身的<color=#28d9ed>暴击率</color>提升。解除强化效果无视目标的效果抵抗。"
+      },
+      "icon": "Skill_Ultimate_2000067"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

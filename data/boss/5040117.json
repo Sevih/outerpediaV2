@@ -1,0 +1,156 @@
+{
+  "id": "5040117",
+  "Name": {
+    "en": "Ravenous Wolf King, Ziggsaron",
+    "kr": "아랑왕 지그사론",
+    "jp": "餓狼王ジグサロン",
+    "zh": "饿狼王齐格萨龙"
+  },
+  "Surname": {
+    "en": "Moonlit Fang",
+    "kr": "달의 송곳니",
+    "jp": "月の牙",
+    "zh": "月之利齿"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 170,
+  "icons": "4079001",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 90F",
+      "kr": "빛의 탑 90층",
+      "jp": "光の塔 90階",
+      "zh": "光之塔 90层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232090",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Lunar Stigma",
+        "kr": "달의 낙인",
+        "jp": "月の烙印",
+        "zh": "月之烙印"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "kr": "적 대상을 공격하고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 생성합니다.",
+        "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "zh": "攻击目标敌人,获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_First_4079001"
+    },
+    {
+      "name": {
+        "en": "Full Moon's Roar",
+        "kr": "만월의 포효",
+        "jp": "満月の雄叫び",
+        "zh": "满月的咆哮"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Grants <color=#28d9ed>Increased Defense, Counterattack, and Sustained Recovery</color> to the caster for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "자신에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>방어력 증가, 반격, 지속회복</color> 효과를 부여합니다.",
+        "jp": "自分に<color=#28d9ed>防御力UP、反撃、継続回復</color>効果を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "使自身获得<color=#28d9ed>防御力提升、反击、持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Second_4079001"
+    },
+    {
+      "name": {
+        "en": "Crescent Moon Blooms",
+        "kr": "초승달 그리기",
+        "jp": "三日月の舞",
+        "zh": "幻画新月"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and grants Increased <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Hit Chance</color> to the caster for <color=#28d9ed>3 turn(s)</color>. Damage dealt increases proportional to the enemy's Attack.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>치명확률</color>이 증가합니다. 적의 공격력에 비례하여 입히는 피해량이 증가합니다.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>会心率</color>を<color=#28d9ed>3ターン</color>の間UPさせる。敵の攻撃力が高いほど、与えるダメージがUPする。",
+        "zh": "攻击全体敌人,使自身获得<color=#28d9ed>攻击力</color>和<color=#28d9ed>暴击率</color>提升效果,持续<color=#28d9ed>3回合</color>。根据敌人的攻击力等比提升造成的伤害量。"
+      },
+      "icon": "Skill_Ultimate_4079001"
+    },
+    {
+      "name": {
+        "en": "One Blessed By The Moon's Grace",
+        "kr": "달의 은총을 받은 자",
+        "jp": "月の恩寵を受けし者",
+        "zh": "承受月亮恩宠之人"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) At the start of the turn, inflicts <color=#28d9ed>Stunned</color> on the fastest enemy for <color=#28d9ed>1 turn</color>.\\nIf the caster is in <color=#28d9ed>Counterattack</color> status, all attacks ignore <color=#28d9ed>30%</color> of the target's <color=#28d9ed>Defense</color>.",
+        "kr": "(패시브 효과) 턴 시작 시 가장 빠른 적 한 명을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n자신이 <color=#28d9ed>반격</color> 상태라면 모든 공격이 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.",
+        "jp": "(パッシブ効果)ターン開始時、最もスピードが高い敵単体に<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。\\n自分が<color=#28d9ed>反撃</color>状態なら、全ての攻撃が<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。",
+        "zh": "(被动效果)回合开始时,使速度最快的1名敌人<color=#28d9ed>眩晕</color><color=#28d9ed>1回合</color>。\\n若自身处于<color=#28d9ed>反击</color>状态,则所有攻击无视目标<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Moonfall, Death</color>: Used when Enraged ends.\\nDeals lethal damage to all enemies.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제 불가능한 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>낙월, 절명</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【落月、絶命】</color>:【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>落月与绝命</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    },
+    {
+      "name": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

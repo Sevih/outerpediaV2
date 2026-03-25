@@ -1,0 +1,119 @@
+{
+  "id": "5050120",
+  "Name": {
+    "en": "Iota Replica",
+    "kr": "요타 레플리카",
+    "jp": "イオータのレプリカ",
+    "zh": "佑妲仿制品"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 166,
+  "icons": "2000069",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 86F",
+      "kr": "암흑의 탑 86층",
+      "jp": "闇の塔 86階",
+      "zh": "黑暗之塔 86层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242086",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Code Khepri",
+        "kr": "코드 케프리",
+        "jp": "コードケプリ",
+        "zh": "代码圣甲虫"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_First_2000069"
+    },
+    {
+      "name": {
+        "en": "Code Medjed",
+        "kr": "코드 메제드",
+        "jp": "コードメジェド",
+        "zh": "代码梅杰德"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Reduces Health of the caster by <color=#28d9ed>10%</color>, then attacks all enemies.\\nReduces Priority of the target by <color=#28d9ed>20%</color>.\\nIncreases damage dealt by this attack proportional to the caster's missing Health.\\nThe caster cannot be defeated by Health reduced from using this skill.",
+        "kr": "자신 체력을 <color=#28d9ed>10%</color> 감소시킨 후 적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>-20%</color> 감소 시킵니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.\\n이 스킬로 인한 체력 감소로는 시전자가 사망하지 않습니다.",
+        "jp": "自分のHPを<color=#28d9ed>10%</color>DOWNさせた後、敵全体にダメージを与える。\\n対象の行動ゲージを<color=#28d9ed>-20%</color>DOWNさせる。\\nこのスキルは自分の残りHPが低いほど、ダメージがUPする。\\nこのスキルでスキル使用者が倒れることはない。",
+        "zh": "使自身生命值降低<color=#28d9ed>10%</color>后,攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>-20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。"
+      },
+      "icon": "Skill_Second_2000069"
+    },
+    {
+      "name": {
+        "en": "Code Anubis",
+        "kr": "코드 아누비스",
+        "jp": "コードアヌビス",
+        "zh": "代码阿努比斯"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "",
+        "kr": "",
+        "jp": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_2000069"
+    },
+    {
+      "name": {
+        "en": "Innate Malice",
+        "kr": "천부의 악의",
+        "jp": "天賦の悪意",
+        "zh": "天赋的恶意"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect) As Health decreases, increases <color=#28d9ed>Attack</color>.",
+        "kr": "(패시브 효과) 체력이 감소할 수록 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "jp": "(パッシブ効果)残りHPが低いほど<color=#28d9ed>攻撃力</color>がUPする。",
+        "zh": "(被动效果)生命值越低,<color=#28d9ed>攻击力</color>越高。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

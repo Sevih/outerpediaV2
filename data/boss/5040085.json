@@ -1,0 +1,124 @@
+{
+  "id": "5040085",
+  "Name": {
+    "en": "Beth",
+    "kr": "베스",
+    "jp": "ベス",
+    "zh": "贝丝"
+  },
+  "Surname": {
+    "en": "Gnosis",
+    "kr": "그노시스",
+    "jp": "グノーシス",
+    "zh": "诺希斯"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 165,
+  "icons": "2000092",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 85F",
+      "kr": "빛의 탑 85층",
+      "jp": "光の塔 85階",
+      "zh": "光之塔 85层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232085",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Suffocating Hatred",
+        "kr": "옥죄는 증오",
+        "jp": "押し寄せる憎悪",
+        "zh": "紧缚之恨"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Eternal Bleeding</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf only one target survives after attacking, uses the same effect once more on the enemy.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 대상에게 <color=#28d9ed>영원한 출혈</color>을 부여합니다.\\n공격 후 생존한 대상이 한 명이라면 적에게 동일 효과를 한번 더 사용합니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>【絶えざる出血】</color>を<color=#28d9ed>100%</color>確率で<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、戦場に敵が単体の場合、敵に追加で<color=#28d9ed>【絶えざる出血】</color>1個を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并以<color=#28d9ed>100%</color>的概率赋予<color=#28d9ed>永恒出血</color><color=#28d9ed>2回合</color>。\\n若攻击后仅剩1名敌人存活,则再次施加相同效果。"
+      },
+      "icon": "Skill_First_2000092"
+    },
+    {
+      "name": {
+        "en": "Painful Rack",
+        "kr": "고통스러운 형틀",
+        "jp": "息絶える磔柱",
+        "zh": "痛苦牢笼"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. After attacking, inflicts <color=#28d9ed>Eternal Bleeding</color> on all enemies and grants <color=#28d9ed>Stealth</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, if only one target survives, inflicts the same effect on the enemy again.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>영원한 출혈</color>을 부여하고, 자신을 제외한 아군 전체에게는 <color=#28d9ed>은신</color>을 부여합니다.\\n공격 후 생존한 대상이 한 명이라면 적에게 동일 효과를 한번 더 사용합니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、敵全体に<color=#28d9ed>【絶えざる出血】</color>を<color=#28d9ed>2ターン</color>の間付与し、自分を除く味方全体に<color=#28d9ed>隠れ身</color>を付与する。\\n攻撃後、戦場に敵が単体の場合、敵に追加で<color=#28d9ed>【絶えざる出血】</color>1個を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。攻击后,对全体敌人造成<color=#28d9ed>永恒出血</color>效果,持续<color=#28d9ed>2回合</color>,并使除自身以外的全体友军获得<color=#28d9ed>隐身</color>效果。\\n攻击后,若只有1名目标存活,则再次对敌人造成一次相同效果。"
+      },
+      "icon": "Skill_Second_2000092"
+    },
+    {
+      "name": {
+        "en": "Pure Blood's Punishment",
+        "kr": "선혈의 징벌",
+        "jp": "鮮血の懲罰",
+        "zh": "血刃惩戒"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and gains <color=#28d9ed>Retribution's Dominion</color> for <color=#28d9ed>2 turn(s)</color>. (Irremovable)\\nIf already granted <color=#28d9ed>Retribution's Dominion</color>, <color=#28d9ed>detonates</color> all <color=#28d9ed>Eternal Bleeding</color> effects on the target, and increases damage dealt by detonation by <color=#28d9ed>100%</color>.",
+        "kr": "적 전체를 공격하고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>징벌의 영역</color>을 획득합니다. (해제 불가)\\n이미 <color=#28d9ed>징벌의 영역</color>을 보유 중이었다면 대상이 보유한 <color=#28d9ed>영원한 출혈</color>을 모두 <color=#28d9ed>폭발</color>시키며, 폭발에 의한 피해는  <color=#28d9ed>100%</color> 증가합니다.",
+        "jp": "敵全体にダメージを与え、自分に<color=#28d9ed>【懲罰の領域】</color>を<color=#28d9ed>2ターン</color>の間付与する。(解除不可)\\nすでに<color=#28d9ed>【懲罰の領域】</color>がある場合、対象に付与されている<color=#28d9ed>【絶えざる出血】</color>をすべて<color=#28d9ed>破裂</color>させ、破裂のダメージが<color=#28d9ed>100%</color>UPする。",
+        "zh": "攻击全体敌人,并获得<color=#28d9ed>惩戒领域</color>,持续<color=#28d9ed>2回合</color>。(无法解除)\\n若已附带<color=#28d9ed>惩戒领域</color>效果,则<color=#28d9ed>引爆</color>目标附带的全部<color=#28d9ed>永恒出血</color>效果,引爆造成的伤害提升<color=#28d9ed>100%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000092"
+    },
+    {
+      "name": {
+        "en": "Everlasting Grudge",
+        "kr": "마르지 않는 앙심",
+        "jp": "尽きぬ怨み",
+        "zh": "积怨未消"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Immediately after <color=#28d9ed>Pure Blood's Punishment</color> is activated, the enemy cannot trigger Counterattack, Revenge, or Agile Response.",
+        "kr": "(패시브 효과) <color=#28d9ed>선혈의 징벌</color> 발동 직후에는 적의 반격/복수/신속 대응이 발생하지 않습니다.",
+        "jp": "(パッシブ効果) <color=#28d9ed>【鮮血の懲罰】</color> では敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "(被动效果)<color=#28d9ed>鲜血的惩罚</color>发动后,敌人的反击/复仇/迅速反应不会触发。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

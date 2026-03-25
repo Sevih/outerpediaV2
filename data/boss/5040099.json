@@ -1,0 +1,119 @@
+{
+  "id": "5040099",
+  "Name": {
+    "en": "Akari",
+    "kr": "아카리",
+    "jp": "アカリ",
+    "zh": "阿卡莉"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Light",
+  "level": 158,
+  "icons": "2000064",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 78F",
+      "kr": "빛의 탑 78층",
+      "jp": "光の塔 78階",
+      "zh": "光之塔 78层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232078",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Saikashuu Gunnery",
+        "kr": "사이카슈 철포술",
+        "jp": "雑賀衆の鉄砲術",
+        "zh": "杂贺众铁炮术"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>70%</color> chance to inflict reduced <color=#28d9ed>Attack</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>70%</color>의 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率降低目标的<color=#28d9ed>攻击力</color>,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000064"
+    },
+    {
+      "name": {
+        "en": "Barrier of Ryouran",
+        "kr": "요란의 결계",
+        "jp": "擾乱結界",
+        "zh": "嘈杂的结界"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. After attacking, has a <color=#28d9ed>100%</color> chance to increase the duration of debuffs on the enemy by <color=#28d9ed>1 turn(s)</color>, then inflicts reduced <color=#28d9ed>Resilience</color> on targets without debuffs for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>100%</color>의 확률로 적이 보유한 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킨 후, 약화 효과가 없는 대상의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "jp": "敵全体にダメージを与える。攻撃後、<color=#28d9ed>100%</color>の確率で敵の弱体効果を<color=#28d9ed>1ターン</color>の間増加させ、弱体効果がない対象の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "zh": "攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>,使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000064"
+    },
+    {
+      "name": {
+        "en": "Juzumaru Tsunetsugu",
+        "kr": "쥬즈마루 츠네츠구",
+        "jp": "数珠丸恒次",
+        "zh": "数珠丸恒次"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unbuffable</color> and <color=#28d9ed>Reduced Defense</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nRight after using this skill, has a <color=#28d9ed>100%</color> chance to avoid triggering an enemy's Counterattack, Revenge, or Agile Response.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>강화 불가</color>와 <color=#28d9ed>방어력 감소</color>를 부여합니다.\\n이 스킬 직후에는 <color=#28d9ed>100%</color>의 확률로 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "jp": "敵全体にダメージを与え、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与し、敵全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\nこのスキルでは<color=#28d9ed>100%</color>の確率で敵の反撃、復讐、迅速対応が発動しない。",
+        "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果,持续 <color=#28d9ed>2回合</color>。\\n此技能发动后,有<color=#28d9ed>100%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。"
+      },
+      "icon": "Skill_Ultimate_2000064"
+    },
+    {
+      "name": {
+        "en": "Juzumaru Tsunetsugu",
+        "kr": "쥬즈마루 츠네츠구",
+        "jp": "数珠丸恒次",
+        "zh": "数珠丸恒次"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect) When using <color=#28d9ed>Juzumaru Tsunetsugu</color>, increases the duration of the target's debuffs by <color=#28d9ed>1 turn</color>.",
+        "kr": "(패시브 효과) <color=#28d9ed>쥬즈마루 츠네즈구</color> 사용 시 대상의 약화 효과 지속 시간이 <color=#28d9ed>1턴</color> 증가합니다.",
+        "jp": "(パッシブ効果) <color=#28d9ed>【数珠丸恒次】</color>使用時、対象の弱体効果のターンが<color=#28d9ed>1ターン</color>UPする。",
+        "zh": "(被动效果)使用<color=#28d9ed>数珠丸恒次</color>时,目标的减益效果持续时间增加<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

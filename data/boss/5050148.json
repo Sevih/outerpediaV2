@@ -1,0 +1,119 @@
+{
+  "id": "5050148",
+  "Name": {
+    "en": "Nadja",
+    "kr": "나쟈",
+    "jp": "ナージャ",
+    "zh": "纳吉娅"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Dark",
+  "level": 160,
+  "icons": "2000102",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_FREEZE,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 80F",
+      "kr": "암흑의 탑 80층",
+      "jp": "闇の塔 80階",
+      "zh": "黑暗之塔 80层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242080",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Feeding Frenzy",
+        "kr": "포식자의 광란",
+        "jp": "捕食者の狂乱",
+        "zh": "捕食者的狂乱"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's Priority by 20%. Has a 50% chance to decrease the target's Speed for 1 turn(s).",
+        "kr": "적을 공격하고 자신의 행동 게이지를 20% 증가시킵니다. 50% 확률로 적 대상의 속도가 1턴 동안 감소합니다.",
+        "jp": "敵単体にダメージを与え、自分の行動ゲージを20% UPさせる。敵対象のスピードが 50%確率で1ターンの間DOWNする。",
+        "zh": "攻击敌人,并使自身行动值增加20%。有50%的概率使目标速度降低,持续1回合。"
+      },
+      "icon": "Skill_First_2000102"
+    },
+    {
+      "name": {
+        "en": "Species Extinction Protocol",
+        "kr": "생물 멸종 작업",
+        "jp": "生物滅種作業",
+        "zh": "生物灭绝任务"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "When hit, deals Counterattack to the whole enemies.\\nRemoves all Enhancement Effect from the targets after attacking.",
+        "kr": "피격 시 적 전체에게 반격합니다.\\n공격 후 대상의 모든 강화 효과를 해제시킵니다.",
+        "jp": "ダメージを受けた場合、敵全体に反撃する。\\n攻撃後、対象のすべての強化効果を解除させる。",
+        "zh": "受到攻击时,对全体敌人反击。\\n攻击后解除目标所有强化效果。"
+      },
+      "icon": "Skill_Second_2000102"
+    },
+    {
+      "name": {
+        "en": "End of Protoform",
+        "kr": "아성체의 끝",
+        "jp": "亜成体の果て",
+        "zh": "亚成体的终结"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and grants <color=#28d9ed>Priority Increase Banned </color> for <color=#28d9ed>2 turns</color>.",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>행동 게이지 증가 불가</color>를 부여합니다.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>行動ゲージUP不可</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,施加<color=#28d9ed>行动值无法提升</color>状态,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000102"
+    },
+    {
+      "name": {
+        "en": "Calamity of All Life",
+        "kr": "모든 생명의 재앙",
+        "jp": "すべての生命の災厄",
+        "zh": "所有生命的灾厄"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) If the caster is not inflicted with decreased <color=#28d9ed>Attack</color>, all attacks ignore <color=#28d9ed>30%</color> of the target's <color=#28d9ed>Defense</color>.\\n\\nDamage taken from <color=#28d9ed>Mage</color> units decreases by <color=#28d9ed>80%</color>, and damage taken from <color=#28d9ed>Stirker</color> units increases by <color=#28d9ed>20%</color>.",
+        "kr": "(패시브 효과) 자신이 <color=#28d9ed>공격력</color> 감소 상태가 아니라면 모든 공격이 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n\\n<color=#28d9ed>마법형</color>으로 부터 받는 피해가 <color=#28d9ed>80%</color> 만큼 감소하고 <color=#28d9ed>공격형</color>으로 부터 받는 피해가 <color=#28d9ed>-20%</color> 만큼 증가합니다.",
+        "jp": "(パッシブ効果)自分に<color=#28d9ed>攻撃力</color>DOWN効果がない場合、全ての攻撃が対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\n\\n<color=#28d9ed>魔法型</color>から受けるダメージが<color=#28d9ed>80%</color>DOWNされ、<color=#28d9ed>攻撃型</color>から受けるダメージが<color=#28d9ed>-20%</color>UPする。",
+        "zh": "(被动效果)若自身未处于<color=#28d9ed>攻击力降低</color>状态,则所有攻击无视目标<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。\\n\\n来自<color=#28d9ed>魔法型</color>的伤害减少<color=#28d9ed>80%</color>,来自<color=#28d9ed>攻击型</color>的伤害增加<color=#28d9ed>-20%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

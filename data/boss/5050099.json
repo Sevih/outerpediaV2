@@ -1,0 +1,124 @@
+{
+  "id": "5050099",
+  "Name": {
+    "en": "Maxwell",
+    "kr": "맥스웰",
+    "jp": "マクスウェル",
+    "zh": "麦克斯威尔"
+  },
+  "Surname": {
+    "en": "Heretic Mage",
+    "kr": "이단의 마법사",
+    "jp": "異端の魔法使い",
+    "zh": "异端魔法师"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 152,
+  "icons": "2000028",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 72F",
+      "kr": "암흑의 탑 72층",
+      "jp": "闇の塔 72階",
+      "zh": "黑暗之塔 72层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242072",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Ray of Destruction",
+        "kr": "파열의 섬광",
+        "jp": "Xリッパ-",
+        "zh": "破裂闪光"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies and increases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>. The damage dealt is inversely proportional to the number of targets. If it is the caster's turn, obtains <color=#28d9ed>2</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color>.",
+        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>2개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>2個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "zh": "攻击全体敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。若处于自身回合,则获得<color=#28d9ed>2个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。"
+      },
+      "icon": "Skill_First_2000028"
+    },
+    {
+      "name": {
+        "en": "Mana Converter",
+        "kr": "마력 전환 기구",
+        "jp": "マナ・エクスプロージョン",
+        "zh": "魔力转换器"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and reduces the duration of <color=#28d9ed>buffs</color> on each target that took damage by <color=#28d9ed>1 turn</color>. Obtains <color=#28d9ed>3</color> <color=#28d9ed>Revelation of Truth (Unique Resource)</color> if used during the caster's turn. The damage dealt is inversely proportional to the number of targets.",
+        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 감소시킵니다. 자신의 턴이라면 <color=#28d9ed>고유 자원 : 진리의 계시</color>를 <color=#28d9ed>3개</color> 획득합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1ターン</color>減少させる。自分のターンの場合、<color=#28d9ed>【固有資源:真理の啓示】</color>を<color=#28d9ed>3個</color>獲得する。対象が少ないほどダメージがUPする。",
+        "zh": "攻击全体敌人,并使目标<color=#28d9ed>强化效果</color>的持续回合数减少<color=#28d9ed>1回合</color>。若处于自身回合,则获得<color=#28d9ed>3个</color><color=#28d9ed>固有资源:真理的启示</color>。目标数量越少,则该技能的伤害越高。"
+      },
+      "icon": "Skill_Second_2000028"
+    },
+    {
+      "name": {
+        "en": "Bless All Mages",
+        "kr": "모든 마법사여, 행복하여라",
+        "jp": "マジシャンズ・ナビゲート",
+        "zh": "所有魔法师,都幸福吧"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "<color=#28d9ed>Requires 5 Revelations of Truth (Unique Resource) to be used.</color>\\nAttacks all enemies. Damage dealt is inversely proportional to the number of targets. This attack penetrates <color=#28d9ed>30%</color> of the target's Defense.",
+        "kr": "<color=#28d9ed>고유 자원 : 진리의 계시 5개 보유 시 사용 가능합니다.</color>\\n적 전체를 공격하고 대상의 수가 적을수록 피해가 증가합니다. 해당 공격 시 관통력이 <color=#28d9ed>30%</color>증가합니다.",
+        "jp": "このスキルは<color=#28d9ed>【固有資源:真理の啓示】が5個ある場合、使用できる。</color>\\n敵全体にダメージを与え、対象が少ないほどダメージがUPする。このスキルは、貫通力が<color=#28d9ed>30%</color>UPする。",
+        "zh": "<color=#28d9ed>持有5个固有资源:真理的启示时可以使用。</color>\\n攻击全体敌人,目标数量越少,则该技能的伤害越高。发动该攻击时,穿透力提升<color=#28d9ed>30%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000028"
+    },
+    {
+      "name": {
+        "en": "Agateram",
+        "kr": "아가트람",
+        "jp": "アガートラム",
+        "zh": "银色手臂"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect) Increases all <color=#28d9ed>Mage</color> allies' <color=#28d9ed>Attack</color> and <color=#28d9ed>Defense</color>.",
+        "kr": "(패시브 효과) <color=#28d9ed>마법형</color> 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>방어력</color>이 증가합니다.",
+        "jp": "(パッシブ効果) <color=#28d9ed>魔法型</color>味方全体の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>防御力</color>がUPする。",
+        "zh": "(被动效果)全体<color=#28d9ed>魔法型</color>友军的<color=#28d9ed>攻击力</color>与<color=#28d9ed>防御力</color>提高。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

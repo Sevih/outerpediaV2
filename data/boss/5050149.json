@@ -1,0 +1,135 @@
+{
+  "id": "5050149",
+  "Name": {
+    "en": "Three Cries",
+    "kr": "세 울음소리",
+    "jp": "三つの鳴き声",
+    "zh": "三声啼哭"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 170,
+  "icons": "4014006",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 90F",
+      "kr": "암흑의 탑 90층",
+      "jp": "闇の塔 90階",
+      "zh": "黑暗之塔 90层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242090",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "My body is out of control...",
+        "kr": "몸이 제멋대로...",
+        "jp": "体が勝手に...",
+        "zh": "身体不由自主......"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and inflicts <color=#28d9ed>Burned</color> for <color=#28d9ed>2 turns</color>.\\nPrioritizes attacking the <color=#28d9ed>leftmost</color> enemy.\\nIf the target is not a <color=#28d9ed>Defender</color>, increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turns</color>. (Irrmovable)\\nIgnores <color=#28d9ed>30%</color> of the target's <color=#28d9ed>Defense</color>.",
+        "kr": "적을 공격하고 대상에게 <color=#28d9ed>화상</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n가장 <color=#28d9ed>좌측</color>에 있는 적을 우선적으로 공격합니다. \\n공격 시 대상이 <color=#28d9ed>방어형</color>이 아니라면 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다. (해제 불가)\n\\n대상 <color=#28d9ed>방어력</color>의 <color=#28d9ed>30%</color>를 무시합니다.",
+        "jp": "敵を攻撃し、対象に<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>付与する。\\n最も<color=#28d9ed>左側</color>にいる敵を優先して攻撃する。\\n攻撃時、対象が<color=#28d9ed>防御型</color>でない場合、自身の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>2ターン</color>増加する。(解除不可)\\n対象の<color=#28d9ed>防御力</color>の<color=#28d9ed>30%</color>を無視する。",
+        "zh": "攻击敌人,并对目标施加<color=#28d9ed>灼烧</color>,持续<color=#28d9ed>2回合</color>。\\n优先攻击<color=#28d9ed>最左侧</color>的敌人。\\n攻击时,若目标不是<color=#28d9ed>防御型</color>,自身<color=#28d9ed>攻击力</color>提升<color=#28d9ed>2回合</color>。(不可解除)\\n无视目标<color=#28d9ed>防御力</color>的<color=#28d9ed>30%</color>。"
+      },
+      "icon": "Skill_First_4014006"
+    },
+    {
+      "name": {
+        "en": "It's too hot...",
+        "kr": "너무 뜨거워...",
+        "jp": "熱すぎる...",
+        "zh": "好烫......"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\n\\nInflicts <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>2 turns</color>.\\n\\nDamage dealt to targets with <color=#28d9ed>Burneded</color> is increased.",
+        "kr": "적 전체를 공격합니다.\\n\\n적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n\\n<color=#28d9ed>화상</color>을 보유한 대상에 대한 피해량이 증가합니다.",
+        "jp": "敵全体にダメージを与える。\\n\\n敵全体に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n\\n<color=#28d9ed>火傷</color>状態の対象へのダメージがUPする。",
+        "zh": "攻击全体敌人。\\n\\n对所有敌人施加<color=#28d9ed>2回合</color>的<color=#28d9ed>灼烧</color>。\\n\\n对持有<color=#28d9ed>灼烧</color>的目标造成的伤害提升。"
+      },
+      "icon": "Skill_Second_4014006"
+    },
+    {
+      "name": {
+        "en": "Please kill me...",
+        "kr": "제발 날 죽여줘...",
+        "jp": "お願い、殺して...",
+        "zh": "求求你杀了我......"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\n\\nTargets without <color=#28d9ed>buff effects</color> are inflicted with <color=#28d9ed>Burned</color> for <color=#28d9ed>3 turns</color>.\\n\\nDamage dealt to targets afflicted with <color=#28d9ed>Burned</color> is increased.",
+        "kr": "적 전체를 공격합니다.\\n\\n<color=#28d9ed>강화 효과</color>가 없는 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n\\n<color=#28d9ed>화상</color>을 보유한 대상에 대한 피해량이 증가합니다.",
+        "jp": "敵全体にダメージを与える。\\n\\n<color=#28d9ed>強化効果</color>がない対象に<color=#28d9ed>3ターン</color>の間、<color=#28d9ed>火傷</color>を付与します。\\n\\n<color=#28d9ed>火傷</color>状態の対象へのダメージがUPします。",
+        "zh": "攻击全体敌人。\\n\\n向没有<color=#28d9ed>强化效果</color>的目标施加<color=#28d9ed>3回合</color>的<color=#28d9ed>灼烧</color>。\\n\\n对处于<color=#28d9ed>灼烧</color>状态的目标造成的伤害提升。"
+      },
+      "icon": "Skill_Ultimate_4014006"
+    },
+    {
+      "name": {
+        "en": "Fused Test Subjects",
+        "kr": "융합된 실험체들",
+        "jp": "融合された実験体たち",
+        "zh": "融合的实验体们"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) When hit by a target inflicted with <color=#28d9ed>Burned</color>, damage taken and Weakness Gauge damage taken decreases by <color=#28d9ed>50%</color>.\\n\\nDamage taken from <color=#28d9ed>Mage</color> units decreases by <color=#28d9ed>80%</color>, and damage taken from <color=#28d9ed>Striker</color> units increases by <color=#28d9ed>20%</color>.",
+        "kr": "(패시브 효과) <color=#28d9ed>화상</color>을 보유한 대상에게 피격 시 받는 피해와 WG 피해가 <color=#28d9ed>50%</color> 감소합니다.\\n\\n<color=#28d9ed>마법형</color>으로 부터 받는 피해가 <color=#28d9ed>80%</color> 만큼 감소하고 <color=#28d9ed>공격형</color>으로 부터 받는 피해가 <color=#28d9ed>-20%</color> 만큼 증가합니다.",
+        "jp": "(パッシブ効果) <color=#28d9ed>火傷</color>がある対象から受けるダメージとWGダメージが<color=#28d9ed>50%</color>DOWNする。\\n\\n<color=#28d9ed>魔法型</color>から受けるダメージが<color=#28d9ed>80%</color> DOWNされ、<color=#28d9ed>攻撃型</color>から受けるダメージが<color=#28d9ed>-20%</color>UPする。",
+        "zh": "(被动效果)受到处于<color=#28d9ed>灼伤</color>状态目标的攻击时,所受伤害与WG伤害减少<color=#28d9ed>50%</color>。\\n\\n来自<color=#28d9ed>魔法型</color>的伤害减少<color=#28d9ed>80%</color>,来自<color=#28d9ed>攻击型</color>的伤害增加<color=#28d9ed>-20%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "kr": "광폭화",
+        "jp": "狂暴化",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state every 4 turns.\\n\\n<color=#28d9ed>Berserk Start</color>: Grants undispellable Attack Up/DMG Reduc effects to self for 3 turns and recovers 30% WG. Berserk lasts for 3 turns.\\n\\n<color=#28d9ed>Berserk End</color>: Deals massive damage to all enemies.",
+        "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>광폭화 종료</color> : 적 전체에게 큰 피해를 줍니다.",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に移行する。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可の攻撃力UP/ダメージ減少効果を3ターンの間付与し、WGを30%回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>狂暴化終了</color>:敵全体に大きなダメージを与える。",
+        "zh": "每4回合转换为<color=#28d9ed>狂暴</color>状态。\\n\\n<color=#28d9ed>进入狂暴</color>:赋予自身无法解除的攻击力提升/伤害减少效果,持续3回合,并恢复WG30%。狂暴持续3回合。\\n\\n<color=#28d9ed>狂暴结束</color>:对全体敌人造成大量伤害。"
+      },
+      "icon": "MT_Boss_Rage_Common_1"
+    }
+  ]
+}

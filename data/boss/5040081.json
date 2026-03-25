@@ -1,0 +1,92 @@
+{
+  "id": "5040081",
+  "Name": {
+    "en": "Drakhan",
+    "kr": "드레이칸",
+    "jp": "ドレイカーン",
+    "zh": "德雷坎"
+  },
+  "Surname": {
+    "en": "Demiurge",
+    "kr": "데미우르고스",
+    "jp": "デミウルゴス",
+    "zh": "创世之神"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Light",
+  "level": 135,
+  "icons": "2000063",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 55F",
+      "kr": "빛의 탑 55층",
+      "jp": "光の塔 55階",
+      "zh": "光之塔 55层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232055",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Conqueror's Fang",
+        "kr": "정복자의 송곳니",
+        "jp": "征服者の牙",
+        "zh": "征服者的利齿"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Deals <color=#28d9ed>30%</color> of the target's Max Health as fixed damage before attacking an enemy.",
+        "kr": "대상 최대 체력의 <color=#28d9ed>30%</color> 만큼 고정 피해를 입힌 후 적을 공격합니다.",
+        "jp": "対象の最大HP<color=#28d9ed>30%</color>の固定ダメージを与え、敵単体にダメージを与える。",
+        "zh": "对目标造成相当于其生命值上限<color=#28d9ed>30%</color>的固定伤害后,攻击敌人。"
+      },
+      "icon": "Skill_First_2000063"
+    },
+    {
+      "name": {
+        "en": "Doom Heralding Cry",
+        "kr": "멸망을 부르는 함성",
+        "jp": "滅亡をもたらす叫び",
+        "zh": "灭亡呐喊"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to reduce the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.",
+        "kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-100%</color>DOWNさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标<color=#28d9ed>行动值</color>降低<color=#28d9ed>-100%</color>。"
+      },
+      "icon": "Skill_Second_2000063"
+    },
+    {
+      "name": {
+        "en": "Dragon Ruler's Breath",
+        "kr": "용왕의 숨결",
+        "jp": "竜王の息吹",
+        "zh": "龙王吐息"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks an enemy. Inflicts <color=#28d9ed>instant death</color> on the target if the target's <color=#28d9ed>current Health</color> is below <color=#28d9ed>30%</color>.",
+        "kr": "적을 공격합니다. 대상의 <color=#28d9ed>현재 체력</color>이 <color=#28d9ed>30%</color> 이하라면 대상을 <color=#28d9ed>즉사</color>시킵니다.",
+        "jp": "敵単体にダメージを与える。対象の<color=#28d9ed>残りHP</color>が<color=#28d9ed>30%</color>以下の場合、対象を<color=#28d9ed>即死</color>させる。",
+        "zh": "攻击敌人。若目标的<color=#28d9ed>当前生命值</color>在<color=#28d9ed>30%</color>以下,则使目标<color=#28d9ed>即死</color>。"
+      },
+      "icon": "Skill_Ultimate_2000063"
+    }
+  ]
+}

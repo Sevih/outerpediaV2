@@ -1,0 +1,92 @@
+{
+  "id": "5050146",
+  "Name": {
+    "en": "Iota",
+    "kr": "요타",
+    "jp": "イオータ",
+    "zh": "佑妲"
+  },
+  "Surname": {
+    "en": "Monad",
+    "kr": "모나드",
+    "jp": "モナド",
+    "zh": "单子"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 160,
+  "icons": "2000111",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 80F",
+      "kr": "암흑의 탑 80층",
+      "jp": "闇の塔 80階",
+      "zh": "黑暗之塔 80层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242080",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Eradicate Creation",
+        "kr": "피조물 제거",
+        "jp": "被造物排除",
+        "zh": "清除造物"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nInflicts <color=#28d9ed>Curse</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격합니다.\\n대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color> 상태로 만듭니다.",
+        "jp": "敵単体にダメージを与える。\\n対象に<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人。\\n对目标造成<color=#28d9ed>诅咒</color>,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000111"
+    },
+    {
+      "name": {
+        "en": "Descent of the Solar Deity",
+        "kr": "태양신 강림",
+        "jp": "太陽神降臨",
+        "zh": "太阳神降临"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\nDecreases <color=#28d9ed>Attack</color> of the target for <color=#28d9ed>2 turn(s)</color> and inflicts <color=#28d9ed>Curse</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격합니다.\\n대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与える。\\n対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせ、<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人。\\n使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>,并造成<color=#28d9ed>诅咒</color>,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000111"
+    },
+    {
+      "name": {
+        "en": "Code Ra",
+        "kr": "코드 라",
+        "jp": "コード・ラー",
+        "zh": "拉的法则"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Golden Curse</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 전체를 공격하고 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>황금의 저주</color> 상태로 만듭니다.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>黄金の呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击全体敌人,并对目标造成<color=#28d9ed>黄金诅咒</color>,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000111"
+    }
+  ]
+}

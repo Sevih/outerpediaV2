@@ -1,0 +1,119 @@
+{
+  "id": "5040112",
+  "Name": {
+    "en": "Nella",
+    "kr": "넬라",
+    "jp": "ネラ",
+    "zh": "内拉"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 150,
+  "icons": "2000091",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 70F",
+      "kr": "빛의 탑 70층",
+      "jp": "光の塔 70階",
+      "zh": "光之塔 70层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232070",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "False Grace",
+        "kr": "거짓된 은총",
+        "jp": "偽りの恩寵",
+        "zh": "虚假的恩宠"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks 2 enemies, and has a <color=#28d9ed>50%</color> chance to grant increased <color=#28d9ed>Effectiveness</color> to the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적 2인을 공격하고 <color=#28d9ed>50%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "jp": "敵2体にダメージを与え、<color=#28d9ed>50%</color>の確率で自分の<color=#28d9ed>効果命中</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "zh": "攻击2名敌人,并有<color=#28d9ed>50%</color>的几率使自身的<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000091"
+    },
+    {
+      "name": {
+        "en": "Rules of Salvation",
+        "kr": "구세의 계율",
+        "jp": "救世の戒葎",
+        "zh": "救世戒律"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies. Has a <color=#28d9ed>100%</color> chance to inflict irremovable <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>, and a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>skill cooldowns</color> of all targets by <color=#28d9ed>2 turns</color>.",
+        "kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 해제 불가능한 <color=#28d9ed>강화 불가</color>를 부여하고, <color=#28d9ed>100%</color> 확률로 대상 모두의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>2턴</color> 증가시킵니다.",
+        "jp": "敵全体にダメージを与える。<color=#28d9ed>100%</color>の確率で敵全体に解除不可能な<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与し、<color=#28d9ed>100%<color=#28d9ed>の確率で対象のすべての</color>スキルターン</color>を<color=#28d9ed>2ターン</color>増加させる。",
+        "zh": "攻击全体敌人。有<color=#28d9ed>100%</color>的几率使全体敌人陷入无法被解除的<color=#28d9ed>无法强化</color>状态,持续<color=#28d9ed>2回合</color>,并有<color=#28d9ed>100%</color>的几率使全体目标的<color=#28d9ed>技能冷却时间</color>增加<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000091"
+    },
+    {
+      "name": {
+        "en": "I Am the Sole Perfection",
+        "kr": "나 홀로 존귀하리라",
+        "jp": "尊貴なる存在",
+        "zh": "唯我独尊"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Has a <color=#28d9ed>100%</color> chance to remove all <color=#28d9ed>buffs</color> from all enemies, and attacks all enemies. After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Reduced Defense</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "<color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 적 전체를  공격합니다. 공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>방어력 감소</color>를 부여합니다.",
+        "jp": "<color=#28d9ed>100%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>をすべて解除し、 敵全体にダメージを与える。攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>防御力DOWN</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "有<color=#28d9ed>100%</color>的几率使全体敌人的<color=#28d9ed>强化效果</color>全部解除,并攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的几率赋予全体敌人<color=#28d9ed>防御力降低</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000091"
+    },
+    {
+      "name": {
+        "en": "Brave New World",
+        "kr": "멋진 신세계",
+        "jp": "素晴らしい新世界",
+        "zh": "美丽新世界"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Damage dealt to targets inflicted with decreased <color=#28d9ed>Defense</color> increases by <color=#28d9ed>80%</color>.",
+        "kr": "(패시브 효과) <color=#28d9ed>방어력</color> 감소 상태인 대상에 대한 피해량이 <color=#28d9ed>80%</color> 증가합니다.",
+        "jp": "(パッシブ効果)<color=#28d9ed>防御力</color>DOWN状態の対象へのダメージが <color=#28d9ed>80%</color>UPする。",
+        "zh": "(被动效果)对处于<color=#28d9ed>防御力</color>降低状态的目标造成的伤害提高<color=#28d9ed>80%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

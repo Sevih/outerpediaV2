@@ -1,0 +1,92 @@
+{
+  "id": "5050141",
+  "Name": {
+    "en": "Eliza",
+    "kr": "엘리제",
+    "jp": "エリーゼ",
+    "zh": "伊莉莎"
+  },
+  "Surname": {
+    "en": "Archdemon of Pure Blood",
+    "kr": "선혈의 마왕",
+    "jp": "血を司る【鮮血の魔王】",
+    "zh": "鲜血魔王"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 150,
+  "icons": "2000035",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 70F",
+      "kr": "암흑의 탑 70층",
+      "jp": "闇の塔 70階",
+      "zh": "黑暗之塔 70层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242070",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Heart Seeker",
+        "kr": "하트 시커",
+        "jp": "ハートシーカー",
+        "zh": "探心者"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_First_2000035"
+    },
+    {
+      "name": {
+        "en": "Bloody Roar",
+        "kr": "블러디 로어",
+        "jp": "ブラッディロア",
+        "zh": "血腥咆哮"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
+        "jp": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、対象に<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "(被动效果) 战斗开始时,使速度最高的1名敌人无视目标的效果抵抗,并造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会被\\n解除。\\n\\n(主动效果) 攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000035"
+    },
+    {
+      "name": {
+        "en": "Pure Blood Archdemon",
+        "kr": "선혈의 마왕",
+        "jp": "鮮血の刺杯",
+        "zh": "鲜血魔王"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "When using this skill, removes <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them. Deals increased damage and inflicts <color=#28d9ed>Reduced Defense</color> for <color=#28d9ed>3 turn(s)</color> if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
+        "kr": "스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가하고 스킬 사용 후 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 감소시킵니다.",
+        "jp": "スキル使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。対象が<color=#28d9ed>出血</color>状態の場合ダメージがUPし、スキル使用後<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間DOWNさせる。",
+        "zh": "使用技能时,解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。若目标处于<color=#28d9ed>出血</color>状态,则使伤害提升,并在使用技能后,使<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000035"
+    }
+  ]
+}

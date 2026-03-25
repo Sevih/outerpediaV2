@@ -1,0 +1,76 @@
+{
+  "id": "5050147",
+  "Name": {
+    "en": "Vlada",
+    "kr": "블라다",
+    "jp": "ヴラダ",
+    "zh": "布拉达"
+  },
+  "Surname": {
+    "en": "Demiurge",
+    "kr": "데미우르고스",
+    "jp": "デミウルゴス",
+    "zh": "创世之神"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 160,
+  "icons": "2000075",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 80F",
+      "kr": "암흑의 탑 80층",
+      "jp": "闇の塔 80階",
+      "zh": "黑暗之塔 80层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242080",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Twin Mega Cannon",
+        "kr": "트윈 메가 캐논",
+        "jp": "ツイン・メガキャノン",
+        "zh": "双兆加农炮"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>skill cooldowns</color> of the target by <color=#28d9ed>1 turn</color>. This effect ignores the target's Resilience.",
+        "kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 증가시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>スキルターン</color>を<color=#28d9ed>1ターン</color>増加させる。この効果は対象の効果抵抗を無視する。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>技能冷却时间</color>增加<color=#28d9ed>1回合</color>。该效果无视目标的效果抵抗。"
+      },
+      "icon": "Skill_First_2000075"
+    },
+    {
+      "name": {
+        "en": "Destruction Blade",
+        "kr": "디스트럭션 블레이드",
+        "jp": "デストラクションブレード",
+        "zh": "破坏之剑"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Has a <color=#28d9ed>100%</color> chance to remove <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, and attacks all enemies.\\nAfter attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nThese effects ignore the target's Resilience.",
+        "kr": "<color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>강화 불가</color>를 부여합니다.\\n이 효과들은 대상의 효과 저항을 무시합니다.",
+        "jp": "<color=#28d9ed>100%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>解除し、 敵全体にダメージを与える。\\n攻撃後、敵全体に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこの効果は対象の効果抵抗を無視する。",
+        "zh": "有<color=#28d9ed>100%</color>的几率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>2回合</color>。\\n该效果无视目标的效果抵抗。"
+      },
+      "icon": "Skill_Ultimate_2000075"
+    }
+  ]
+}

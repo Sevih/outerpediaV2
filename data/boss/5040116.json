@@ -1,0 +1,124 @@
+{
+  "id": "5040116",
+  "Name": {
+    "en": "Ame",
+    "kr": "아메",
+    "jp": "あめ",
+    "zh": "亚美"
+  },
+  "Surname": {
+    "en": "Mystic Sage",
+    "kr": "삼장법사",
+    "jp": "三蔵法師",
+    "zh": "三藏法师"
+  },
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Light",
+  "level": 160,
+  "icons": "2000110",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 80F",
+      "kr": "빛의 탑 80층",
+      "jp": "光の塔 80階",
+      "zh": "光之塔 80层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232080",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Repent!",
+        "kr": "참회하세요!",
+        "jp": "懺悔なさい!",
+        "zh": "忏悔吧!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and deals fixed damage equal to <color=#28d9ed>20%</color> of the target's Max Health.",
+        "kr": "적을 공격하고 대상에게 대상 최대 체력의 <color=#28d9ed>20%</color> 만큼 고정 피해를 입힙니다.",
+        "jp": "敵単体にダメージを与え、対象の最大HPの<color=#28d9ed>20%</color>の固定ダメージを与える。",
+        "zh": "攻击敌人,并造成相当于目标最大生命值<color=#28d9ed>20%</color>的固定伤害。"
+      },
+      "icon": "Skill_First_2000110"
+    },
+    {
+      "name": {
+        "en": "Time of Enlightenment",
+        "kr": "설법의 시간",
+        "jp": "説法の時間",
+        "zh": "说法时间"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Increases the caster's <color=#28d9ed>Attack</color> and <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color> and inflicts <color=#28d9ed>Immortal</color> on the caster for <color=#28d9ed>2 turn(s)</color>.",
+        "kr": "자신의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴 동안</color> 증가시키고\\n자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>불사</color>를 부여합니다.",
+        "jp": "自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>スピード</color>を<color=#28d9ed>2ターン</color>の間UPさせ、\\n自分に<color=#28d9ed>不死</color>を <color=#28d9ed>2ターン</color>の間付与する。",
+        "zh": "自身<color=#28d9ed>攻击力</color>与<color=#28d9ed>速度</color>提升<color=#28d9ed>2回合</color>,\\n并赋予自身<color=#28d9ed>不死</color><color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Second_2000110"
+    },
+    {
+      "name": {
+        "en": "Sacred Paw",
+        "kr": "묘래신장",
+        "jp": "猫來神掌",
+        "zh": "猫来神掌"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\Decreases the target's <color=#28d9ed>Critical Chance</color> and <color=#28d9ed>Speed</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, increases the caster's Priority by <color=#28d9ed>30%</color>.",
+        "kr": "적 전체를 공격합니다.\\대상의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 감소시킵니다.\\n공격 후 자신의 행동게이지를 <color=#28d9ed>30%</color> 증가시킵니다.",
+        "jp": "敵全体にダメージを与える。\\n対象の<color=#28d9ed>会心率</color>と<color=#28d9ed>スピード</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\n攻撃後、自分の行動ゲージを <color=#28d9ed>30%</color>UPさせる。",
+        "zh": "攻击全体敌人。\\n使目标的<color=#28d9ed>暴击率</color>与<color=#28d9ed>速度</color>降低<color=#28d9ed>2回合</color>。\\n攻击后,自身行动值增加<color=#28d9ed>30%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000110"
+    },
+    {
+      "name": {
+        "en": "Endless Meditation",
+        "kr": "끝없는 참선",
+        "jp": "終わりなき参禅",
+        "zh": "无尽参禅"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) If the caster ends the turn with <color=#28d9ed>1%</color> Health or less, restores the caster's Health by <color=#28d9ed>30%</color>.",
+        "kr": "(패시브 효과) 자신의 체력이 <color=#28d9ed>1%</color> 이하 인 상태로 턴을 종료하면 자신의 체력을 <color=#28d9ed>30%</color> 만큼 회복합니다.",
+        "jp": "(パッシブ効果)自分の残りHPが<color=#28d9ed>1%</color>以下の場合、ターン終了時自分のHPを<color=#28d9ed>30%</color>回復する。",
+        "zh": "(被动效果)若自身生命值在回合结束时低于或等于<color=#28d9ed>1%</color>,则恢复<color=#28d9ed>30%</color>生命值。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}

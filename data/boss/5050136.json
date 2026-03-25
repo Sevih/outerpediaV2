@@ -1,0 +1,140 @@
+{
+  "id": "5050136",
+  "Name": {
+    "en": "Sterope",
+    "kr": "스테로페",
+    "jp": "ステロペ",
+    "zh": "史提洛佩"
+  },
+  "Surname": {
+    "en": "Sacreed Lightning",
+    "kr": "세이크리드의 번개",
+    "jp": "雷の使徒",
+    "zh": "圣科利德雷之使徒"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Dark",
+  "level": 179,
+  "icons": "2000057",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 99F",
+      "kr": "암흑의 탑 99층",
+      "jp": "闇の塔 99階",
+      "zh": "黑暗之塔 99层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40242099",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Shatter!",
+        "kr": "부서져라!",
+        "jp": "紫電撃砕",
+        "zh": "粉身碎骨!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. If Sterope had a buff before attacking, activates an additional attack on the same target and grants <color=#28d9ed>Divine Retribution</color>.\\n\\n<color=#28d9ed>Divine Retribution</color>: Increases damage dealt by all allies by <color=#28d9ed>4%</color>. (Max 15 stacks)",
+        "kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
+        "jp": "敵単体にダメージを与える。攻撃前から【ステロペ】に強化効果がある場合、対象に追加攻撃が発生し、<color=#28d9ed>【神鳴り】</color>を獲得する。\\n\\n<color=#28d9ed>【神鳴り】</color>:この効果を獲得するたびに、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大15回まで累積する。",
+        "zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)"
+      },
+      "icon": "Skill_First_2000057"
+    },
+    {
+      "name": {
+        "en": "Begin the Crusade",
+        "kr": "성전 개시",
+        "jp": "雷光",
+        "zh": "圣战开启"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Passive Effect) At the start of battle, inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "(패시브 효과) 전투 시작 후 <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
+        "jp": "(パッシブ効果)戦闘開始時、敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>3ターン</color>の間付与する。",
+        "zh": "(被动效果)战斗开始后,对全体敌人造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Second_2000057"
+    },
+    {
+      "name": {
+        "en": "Fight Ferociously!",
+        "kr": "용맹하게 싸워라!",
+        "jp": "イージス・サンクチュアリ",
+        "zh": "勇敢战斗吧!"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Increases <color=#28d9ed>Defense</color> and <color=#28d9ed>Effectiveness</color> of all allies for <color=#28d9ed>3 turn(s)</color>, and inflicts <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.",
+        "kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>효과 적중</color>을 증가시키고, <color=#28d9ed>3턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
+        "jp": "<color=#28d9ed>3ターン</color>の間、味方全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>効果命中</color>をUPさせ、<color=#28d9ed>3ターン</color>の間、敵全体に<color=#28d9ed>回復不可</color>を付与する。",
+        "zh": "使我方全体的<color=#28d9ed>防御力</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>3回合</color>,并对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000057"
+    },
+    {
+      "name": {
+        "en": "Thunderer",
+        "kr": "썬더러",
+        "jp": "サンダラー",
+        "zh": "雷霆者"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect) As Health decreases, increases <color=#28d9ed>Attack</color>.",
+        "kr": "(패시브 효과) 체력이 감소할 수록 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "jp": "(パッシブ効果)残りHPが低いほど<color=#28d9ed>攻撃力</color>がUPする。",
+        "zh": "(被动效果)生命值越低,<color=#28d9ed>攻击力</color>越高。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Will of Lightning",
+        "kr": "번개의 의지",
+        "jp": "雷の意志",
+        "zh": "雷霆意志"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect)\\nWhen hit, deals fixed damage equal to <color=#28d9ed>500</color> to all enemies.",
+        "kr": "(패시브 효과)\\n피격 시 적 전체에게 <color=#28d9ed>500</color>의 고정피해를 입힙니다",
+        "jp": "(パッシブ効果)\\nダメージを受けた場合、<color=#28d9ed>500</color>固定ダメージを与える。",
+        "zh": "(被动效果)\\n受到攻击时,对全体敌人造成<color=#28d9ed>500</color>固定伤害。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Darkness",
+        "kr": "어둠의 탑의 가호",
+        "jp": "闇の塔の加護",
+        "zh": "暗之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nIncreases Damage Dealt by <color=#28d9ed>10%</color>.\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n피해량이 <color=#28d9ed>10%</color> 증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n与えるダメージが<color=#28d9ed>10%</color>UPする。\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n伤害量提升<color=#28d9ed>10%</color>。\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    }
+  ]
+}

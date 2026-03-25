@@ -1,0 +1,140 @@
+{
+  "id": "5040091",
+  "Name": {
+    "en": "Dianne",
+    "kr": "다이안",
+    "jp": "ダイアン",
+    "zh": "黛安"
+  },
+  "Surname": {
+    "en": "Fully Ready Bride-To-Be",
+    "kr": "준비만전 새색시",
+    "jp": "結婚準備万端な乙女",
+    "zh": "准备万全的新娘"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Light",
+  "level": 176,
+  "icons": "2000074",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 96F",
+      "kr": "빛의 탑 96층",
+      "jp": "光の塔 96階",
+      "zh": "光之塔 96层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "kr": "엘레멘탈 타워",
+      "jp": "エレメンタルタワー",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "40232096",
+      "kr": "",
+      "jp": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Hubby, Captured!",
+        "kr": "서방님 포착!",
+        "jp": "旦那様み~っけ!",
+        "zh": "捉到夫君啦!"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to increase Priority of the ally with the highest Attack by <color=#28d9ed>20%</color>.",
+        "kr": "적을 공격하고, <color=#28d9ed>100%</color>확률로 공격력이 가장 높은 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で最も攻撃力の高い味方の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使攻击力最高的友军行动值提升<color=#28d9ed>20%</color>。"
+      },
+      "icon": "Skill_First_2000074"
+    },
+    {
+      "name": {
+        "en": "I'm Not Letting You Go ♡",
+        "kr": "놓치지 않아요♡",
+        "jp": "逃がしませんよ♡",
+        "zh": "不会错过的♡"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies, and recovers Health of all allies by <color=#28d9ed>20%</color>. For each target damaged, increases Priority of the caster by <color=#28d9ed>10%</color>.",
+        "kr": "적 전체를 공격하고, 아군 전체의 체력을 <color=#28d9ed>20%</color>만큼 회복시킵니다. 피해를 준 대상마다 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.",
+        "jp": "敵全体にダメージを与え、味方全体のHPを<color=#28d9ed>20%</color>回復する。ダメージを与えた対象1体につき自分の行動ゲージが<color=#28d9ed>10%</color>UPする。",
+        "zh": "攻击全体敌人,并使全体友军的生命值恢复\\n<color=#28d9ed>20%</color>。每对1个目标造成伤害,自身的行动值提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "Skill_Second_2000074"
+    },
+    {
+      "name": {
+        "en": "Blessed Wedding Road",
+        "kr": "축복의 웨딩 로드",
+        "jp": "祝いのバージンロード",
+        "zh": "充满祝福的红毯"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. Removes all debuffs from all allies and grants Immunity for <color=#28d9ed>3 turn(s)</color>. Recovers Health of all allies by <color=#28d9ed>35%</color>.",
+        "kr": "적 전체를 공격합니다. 아군 전체의 모든 약화 효과를 해제하고 <color=#28d9ed>3턴</color> 동안 면역을 부여합니다. 아군 전체의 체력을 <color=#28d9ed>35%</color> 회복시킵니다.",
+        "jp": "敵全体にダメージを与える。味方全体のすべての弱体効果を解除し、免疫を<color=#28d9ed>3ターン</color>の間付与する。味方全体のHPを<color=#28d9ed>35%</color>回復する。",
+        "zh": "攻击全体敌人。解除全体友军的所有弱化效果,并获得免疫效果,持续<color=#28d9ed>3回合</color>。使全体友军的生命值恢复<color=#28d9ed>35%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000074"
+    },
+    {
+      "name": {
+        "en": "Earnest Love",
+        "kr": "열렬한 사랑",
+        "jp": "熱烈な愛",
+        "zh": "炽热的爱"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect) On a successful hit, increases all allies' Priority by <color=#28d9ed>5%</color>.",
+        "kr": "(패시브 효과) 공격 명중 시 아군 전체의 행동 게이지가 <color=#28d9ed>5%</color> 증가합니다.",
+        "jp": "(パッシブ効果)攻撃が命中した場合、味方全体の行動ゲージが<color=#28d9ed>5%</color>UPする。",
+        "zh": "(被动效果)攻击命中时,全体友军行动值增加<color=#28d9ed>5%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Pack Lunch Quickly",
+        "kr": "도시락 빨리 싸기",
+        "jp": "お弁当を急いで作る",
+        "zh": "快速准备便当"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Passive Effect) At the start of the turn, increases all allies' <color=#28d9ed>Speed</color> by <color=#28d9ed>2</color>. (Max 5 stacks)",
+        "kr": "(패시브 효과) 턴 시작 시 아군 전체의 <color=#28d9ed>속도</color>를 <color=#28d9ed>2</color> 증가시킵니다.(최대 5회 누적)",
+        "jp": "(パッシブ効果)ターン開始時、味方全体の<color=#28d9ed>スピード</color>を<color=#28d9ed>2</color>UPさせる。(最大5回累積)",
+        "zh": "(被动效果)回合开始时,全体友军<color=#28d9ed>速度</color>提高<color=#28d9ed>2</color>。(最多叠加5次)"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Blessing of the Tower of Light",
+        "kr": "빛의 탑의 가호",
+        "jp": "光の塔の加護",
+        "zh": "光之塔的加护"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "Always increases Penetration by <color=#28d9ed>20%</color> and Critical Hit Chance by <color=#28d9ed>10%</color>.\\n\\nGrants <color=#28d9ed>Continuous Recovery</color> for <color=#28d9ed>3 turns</color> at the start of battle (Irremovable).\\nReduces enemy team's CP by <color=#28d9ed>25</color> at the end of the turn.",
+        "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
+        "jp": "常時貫通力が<color=#28d9ed>20%</color>、会心率が<color=#28d9ed>10%</color>UPする。\\n\\n戦闘開始時、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>持続回復</color>を付与する。(解除不可)\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>DOWNさせる。",
+        "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    }
+  ]
+}
