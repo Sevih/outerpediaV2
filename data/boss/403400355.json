@@ -17,7 +17,7 @@
   "element": "Dark",
   "level": 50,
   "icons": "4034003",
-  "BuffImmune": "BT_AGGRO,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_REMOVE_BUFF,BT_EXTEND_BUFF",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_AGGRO,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_REMOVE_BUFF,BT_EXTEND_BUFF",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "特别委托:生态调查"
     },
     "area_id": {
-      "en": "50105006",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -76,8 +76,8 @@
       "icon": "Skill_Second_4034003",
       "buff": [
         "BT_STAT|ST_ATK",
-        "BT_STAT|ST_CRITICAL_RATE",
-        "BT_STAT|ST_SPEED"
+        "BT_STAT|ST_SPEED",
+        "BT_STAT|ST_CRITICAL_RATE"
       ]
     },
     {
@@ -113,7 +113,10 @@
         "kr": "(패시브 효과)\\n자신에게 적용되는 <color=#28d9ed>능력치 감소</color> 효과가 <color=#28d9ed>50%</color> 증가합니다.",
         "zh": "(被动效果)\\n使自身附带的<color=#28d9ed>能力值降低</color>效果提升<color=#28d9ed>50%</color>。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_STAT_DEBUFF_ENHANCE"
+      ]
     },
     {
       "name": {
@@ -143,13 +146,13 @@
         "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns. \\n\\n<color=#28d9ed>Enraged</color>: Inflicts an irremovable effect on all enemies that decreases Speed and Attack for 4 turn(s), and recovers 10% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Divinity Manifest</color>: Used when Enraged ends.\\nHeals for <color=#28d9ed>50%</color> of Max Health, and inflicts irremovable <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.",
         "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:敵全体に解除不可能なスピードDOWNと攻撃力DOWN効果を4ターンの間付与し、WGを10%回復する。【狂暴化】は4ターンの間持続する。\\n\\n<color=#28d9ed>【神聖降臨】</color>:【狂暴化】終了時に発動する。\\n自分の最大HPの<color=#28d9ed>50%</color>を回復し、敵全体に<color=#28d9ed>強化不可</color>を<color=#28d9ed>3ターン</color>の間付与する。(解除不可)",
         "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 적 전체에게 해제되지 않는 속도/공격력 감소 효과를 4턴 동안 부여하고, 10%의 WG를 회복합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>신성 강림</color> : 광폭화 종료 시 사용.\\n최대 체력의 <color=#28d9ed>50%</color>를 회복하고, 적 전체에게 <color=#28d9ed>3턴</color> 동안 해제되지 않는 <color=#28d9ed>강화 불가</color>를 부여합니다.",
-        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:对全体敌人造成无法被解除的速度/攻击力降低效果,持续-30%回合,并使WG恢复10%。狂暴化持续4回合。\\n\\n<color=#28d9ed>神圣降临</color>:狂暴化结束时发动。\\n恢复生命值上限的<color=#28d9ed>50%</color>,并对全体敌人造成无法被解除的<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>3回合</color>。"
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:对全体敌人造成无法被解除的速度/攻击力降低效果,持续30%回合,并使WG恢复10%。狂暴化持续4回合。\\n\\n<color=#28d9ed>神圣降临</color>:狂暴化结束时发动。\\n恢复生命值上限的<color=#28d9ed>50%</color>,并对全体敌人造成无法被解除的<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "MT_Boss_Rage_Common_1",
       "debuff": [
-        "BT_STAT|ST_ATK_IR",
         "BT_STAT|ST_SPEED_IR",
-        "IG_Buff_Effect_Sealed_Interruption_D"
+        "BT_STAT|ST_ATK_IR",
+        "BT_SEALED_IR"
       ]
     }
   ]
