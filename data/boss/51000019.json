@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "4004001",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_DOT_BLEED",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_DOT_BLEED",
   "location": {
     "dungeon": {
       "en": "Weekly Conquest - Schattenmeister Schwartz",
@@ -28,7 +28,7 @@
       "zh": "冒险许可证"
     },
     "area_id": {
-      "en": "70600009",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -99,7 +99,7 @@
       },
       "icon": "MT_Passive_1_Light",
       "debuff": [
-        "IG_Buff_Effect_Sealed_Interruption_D"
+        "BT_SEALED_IR"
       ]
     },
     {
@@ -118,26 +118,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_STAT|ST_ATK_IR",
+        "BT_INVINCIBLE_IR",
         "BT_DAMGE_TAKEN",
-        "BT_INVINCIBLE_IR"
+        "BT_STAT|ST_ATK_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

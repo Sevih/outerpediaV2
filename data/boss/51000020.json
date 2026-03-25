@@ -28,7 +28,7 @@
       "zh": "冒险许可证"
     },
     "area_id": {
-      "en": "70600009",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -45,9 +45,9 @@
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. When the caster is granted <color=#28d9ed>Invulnerability</color>, attacks all enemies.\\nReduces <color=#28d9ed>Priority</color> of all targets by <color=#28d9ed>30%</color>.",
-        "jp": "敵単体にダメージを与える。\\n自分が<color=#28d9ed>無敵</color>状態の場合、敵全体にダメージを与える。対象全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-30%</color>DOWNさせる。",
-        "kr": "적을 공격합니다. 자신이 <color=#28d9ed>무적</color>을 보유한 상태라면 적 전체를 공격합니다.\\n대상 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시킵니다.",
-        "zh": "攻击全体敌人。若自身处于<color=#28d9ed>无敌</color>状态,则攻击全体敌人。\\n使全体目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-30%</color>。"
+        "jp": "敵単体にダメージを与える。\\n自分が<color=#28d9ed>無敵</color>状態の場合、敵全体にダメージを与える。対象全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>DOWNさせる。",
+        "kr": "적을 공격합니다. 자신이 <color=#28d9ed>무적</color>을 보유한 상태라면 적 전체를 공격합니다.\\n대상 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "攻击全体敌人。若自身处于<color=#28d9ed>无敌</color>状态,则攻击全体敌人。\\n使全体目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>30%</color>。"
       },
       "icon": "MT_Attack_Claw_1_Fire",
       "debuff": [
@@ -63,10 +63,10 @@
       },
       "type": "SKT_MONSTER_1",
       "description": {
-        "en": "(Passive Effect)\nWhen the caster is granted <color=#28d9ed>Invulnerability</color>, attacks all enemies.",
-        "jp": "(パッシブ効果)\n自分が<color=#28d9ed>無敵</color>状態の場合、敵全体にダメージを与える。",
-        "kr": "(패시브 효과)\n자신이 <color=#28d9ed>무적</color>을 보유한 상태라면 적 전체를 공격합니다.",
-        "zh": "(被动效果)\n若自身处于<color=#28d9ed>无敌</color>状态,则攻击全体敌人。"
+        "en": "(Passive Effect)\\nWhen the caster is granted <color=#28d9ed>Invulnerability</color>, attacks all enemies.",
+        "jp": "(パッシブ効果)\\n自分が<color=#28d9ed>無敵</color>状態の場合、敵全体にダメージを与える。",
+        "kr": "(패시브 효과)\\n자신이 <color=#28d9ed>무적</color>을 보유한 상태라면 적 전체를 공격합니다.",
+        "zh": "(被动效果)\\n若自身处于<color=#28d9ed>无敌</color>状态,则攻击全体敌人。"
       },
       "icon": "MT_Passive_1_Light"
     }

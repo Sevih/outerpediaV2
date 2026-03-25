@@ -28,7 +28,7 @@
       "zh": "冒险许可证"
     },
     "area_id": {
-      "en": "70600010",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -105,8 +105,8 @@
       },
       "icon": "MT_Passive_1_Light",
       "buff": [
-        "BT_EXTEND_DEBUFF",
-        "BT_INVINCIBLE"
+        "BT_INVINCIBLE",
+        "BT_EXTEND_DEBUFF"
       ],
       "debuff": [
         "BT_STUN"
@@ -166,24 +166,7 @@
         "BT_DAMGE_TAKEN",
         "BT_STAT|ST_ATK_IR",
         "BT_STAT|ST_CRITICAL_RATE_IR"
-      ],
-      "debuff": []
-    },
-    {
-      "name": {
-        "en": "Enraged",
-        "jp": "狂暴化",
-        "kr": "광폭화",
-        "zh": "狂暴化"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
+      ]
     }
   ]
 }

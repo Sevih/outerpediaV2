@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "4014001",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "Weekly Conquest - Forest King",
@@ -28,7 +28,7 @@
       "zh": "冒险许可证"
     },
     "area_id": {
-      "en": "70600008",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -125,22 +125,6 @@
         "BT_DAMGE_TAKEN",
         "BT_STAT|ST_ATK_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

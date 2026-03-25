@@ -300,6 +300,9 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
 // ── Buff/debuff extraction (reuses character extractor logic) ────
 
 const MONSTER_BUFF_ID_BLACKLIST = new Set<string>([]);
+const MONSTER_BUFF_TYPE_BLACKLIST = new Set([
+  'BT_DMG_CASTER_STAT',
+]);
 
 // ── Skill overrides (from data/admin/monster-skill-overrides.json) ──
 // Key = "name_en|desc_en", value = { add_buff, add_debuff, remove_buff, remove_debuff }
@@ -484,7 +487,11 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
     const iconName = skillRow.IconName ?? '';
 
     const nameTexts = gd.textSkillMap[nameSymbol];
-    const descTexts = gd.textSkillMap[descSymbol];
+    // DescID can be empty; fallback to SKILL_DESC_{last digits of ns}
+    let descTexts = gd.textSkillMap[descSymbol];
+    if (!descTexts && sid.length >= 5) {
+      descTexts = gd.textSkillMap[`SKILL_DESC_${sid.slice(-5)}`];
+    }
 
     // Resolve placeholders in description
     const resolvedDesc: Record<string, string> = {};
@@ -500,8 +507,8 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
     const lvls = gd.monsterSkillLevels.filter(l => l.SkillID === sid);
     const buffIds = collectMonsterBuffIds(lvls);
     const raw = extractBD(buffIds, gd.buffData, { expandInterruption: false });
-    const buff = convertToIRFormat(raw.buff, iconToIR);
-    const debuff = convertToIRFormat(raw.debuff, iconToIR);
+    const buff = convertToIRFormat(raw.buff, iconToIR).filter(t => !MONSTER_BUFF_TYPE_BLACKLIST.has(t));
+    const debuff = convertToIRFormat(raw.debuff, iconToIR).filter(t => !MONSTER_BUFF_TYPE_BLACKLIST.has(t));
 
     const skill: Record<string, unknown> = {
       name: nameTexts ? Object.fromEntries(LANGS.map(l => [l, nameTexts[l] ?? ''])) : {},
@@ -526,12 +533,21 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
     if (finishIdx < 0) return;
     const finish = skills[finishIdx];
     const finishDesc = finish.description as Record<string, string>;
-    const hasDesc = finishDesc && Object.values(finishDesc).some(v => v);
-    if (hasDesc) return; // finish has its own description, keep it separate
+    const finishDescEn = finishDesc?.en ?? '';
 
     const enter = skills.find(s => s.type === enterType);
     if (!enter) return;
     if (finish.icon !== enter.icon) return; // different icon, keep separate
+
+    // Keep separate only if finish has unique content not already in enter
+    // Check: finish name or description core is mentioned in enter's description
+    const enterDescEn = ((enter.description as Record<string, string>) ?? {}).en ?? '';
+    const finishNameObj = finish.name as Record<string, string>;
+    const finishNameEn = (finishNameObj?.en ?? '').replace(/[.\s]+$/, '');
+    const finishCore = finishDescEn.replace(/[.\s]+$/, '');
+    const nameInEnter = finishNameEn && enterDescEn.includes(finishNameEn);
+    const descInEnter = finishCore && enterDescEn.includes(finishCore);
+    if (finishDescEn && !nameInEnter && !descInEnter) return;
 
     // Merge buffs/debuffs from finish into enter
     const enterBuff = (enter.buff as string[]) ?? [];
@@ -832,11 +848,11 @@ export async function GET(req: NextRequest) {
             diffs.push({ field: 'skill (new)', existing: '', extracted: `${es.type}: ${(es.name as Record<string, string>)?.en}` });
             continue;
           }
-          const extBuff = JSON.stringify(es.buff ?? []);
-          const curBuff = JSON.stringify(match.buff ?? []);
+          const extBuff = JSON.stringify([...((es.buff as string[]) ?? [])].sort());
+          const curBuff = JSON.stringify([...((match.buff as string[]) ?? [])].sort());
           if (extBuff !== curBuff) diffs.push({ field: `${(es.name as Record<string, string>)?.en} buff`, existing: curBuff, extracted: extBuff });
-          const extDebuff = JSON.stringify(es.debuff ?? []);
-          const curDebuff = JSON.stringify(match.debuff ?? []);
+          const extDebuff = JSON.stringify([...((es.debuff as string[]) ?? [])].sort());
+          const curDebuff = JSON.stringify([...((match.debuff as string[]) ?? [])].sort());
           if (extDebuff !== curDebuff) diffs.push({ field: `${(es.name as Record<string, string>)?.en} debuff`, existing: curDebuff, extracted: extDebuff });
           for (const lang of LANGS) {
             const extDesc = ((es.description as Record<string, string>) ?? {})[lang] ?? '';
@@ -962,8 +978,8 @@ export async function GET(req: NextRequest) {
             for (const es of extSkills) {
               const match = exSkills.find(s => s.type === es.type && (s.name as Record<string, string>)?.en === (es.name as Record<string, string>)?.en);
               if (!match) { hasDiff = true; break; }
-              if (JSON.stringify(es.buff ?? []) !== JSON.stringify(match.buff ?? [])) { hasDiff = true; break; }
-              if (JSON.stringify(es.debuff ?? []) !== JSON.stringify(match.debuff ?? [])) { hasDiff = true; break; }
+              if (JSON.stringify([...((es.buff as string[]) ?? [])].sort()) !== JSON.stringify([...((match.buff as string[]) ?? [])].sort())) { hasDiff = true; break; }
+              if (JSON.stringify([...((es.debuff as string[]) ?? [])].sort()) !== JSON.stringify([...((match.debuff as string[]) ?? [])].sort())) { hasDiff = true; break; }
               for (const lang of LANGS) {
                 const ed = ((es.description as Record<string, string>) ?? {})[lang] ?? '';
                 const cd = ((match.description as Record<string, string>) ?? {})[lang] ?? '';

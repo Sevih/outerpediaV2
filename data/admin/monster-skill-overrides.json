@@ -22,5 +22,19 @@
   "(Passive Effect)\\nGlicys's underlings possess the following abilities:\\n\\nIce Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking.\\nGiant Ice Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking, and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Frozen</color> on all enemies for <color=#28d9ed>1 turn(s)</color> when hit.": {
     "remove_buff": ["BT_STAT|ST_SPEED"],
     "add_debuff": ["BT_FREEZE"]
+  },
+  "(Triggered Effect) If Blazing Knight Meteos <color=#28d9ed>kills an enemy</color> (except by a Counterattack or an additional attack), he removes all <color=#28d9ed>buffs</color> from all enemies and deals lethal damage to all enemies. Targets killed by this attack cannot be Resurrected or Revived.": {
+    "add_debuff": ["BT_SEALED_RESURRECTION"],
+    "remove_buff": ["SYS_BUFF_ADDITIVE_ATTACK"]
+  },
+  "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> all enemies. Damage dealt increases inversely proportional to the number of targets.": {
+    "remove_debuff": ["BT_SEALED_RESURRECTION"]
+  },
+  "Attacks 2 enemies.\\nReduces <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>30%</color>.": {
+    "remove_buff": ["BT_SEAL_COUNTER"]
+  },
+  "(Passive Effect)\\nAt the start of battle, increases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.": {
+    "remove_buff": ["BT_STAT|ST_SPEED"],
+    "add_buff": ["BT_ACTION_GAUGE"]
   }
 }

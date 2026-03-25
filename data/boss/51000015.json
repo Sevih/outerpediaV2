@@ -12,7 +12,7 @@
   "element": "Dark",
   "level": 100,
   "icons": "4076015",
-  "BuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "StatBuffImmune": "ST_DEF,ST_SPEED",
   "location": {
     "dungeon": {
@@ -28,7 +28,7 @@
       "zh": "冒险许可证"
     },
     "area_id": {
-      "en": "70600007",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -45,9 +45,9 @@
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks 2 enemies.\\nReduces <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>30%</color>.",
-        "jp": "敵2体にダメージを与える。\\n対象の行動ゲージを<color=#28d9ed>-30%</color>DOWNさせる。",
-        "kr": "적 2인을 공격합니다.\\n대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시킵니다.",
-        "zh": "攻击2名敌人。\\n使目标的<color=#28d9ed>行动值降低</color><color=#28d9ed>-30%</color>。"
+        "jp": "敵2体にダメージを与える。\\n対象の行動ゲージを<color=#28d9ed>30%</color>DOWNさせる。",
+        "kr": "적 2인을 공격합니다.\\n대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "攻击2名敌人。\\n使目标的<color=#28d9ed>行动值降低</color><color=#28d9ed>30%</color>。"
       },
       "icon": "MT_Attack_Claw_1_Dark",
       "debuff": [
@@ -124,9 +124,9 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_STAT|ST_ATK_IR",
+        "BT_INVINCIBLE",
         "BT_DAMGE_TAKEN",
-        "BT_INVINCIBLE_IR"
+        "BT_STAT|ST_ATK_IR"
       ]
     }
   ]
