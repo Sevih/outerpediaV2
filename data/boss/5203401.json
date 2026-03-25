@@ -118,7 +118,10 @@
         "kr": "(패시브 효과)\\n글리시스의 하수인들은 다음과 같은 능력을 가집니다.\\n\\n얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시킵니다.\\n거대 얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키고, 피격 시 <color=#28d9ed>80%</color> 확률로 적 전체를 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>시킵니다.",
         "zh": "(被动效果)\\n克里希丝的手下拥有以下能力。\\n\\n冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态。\\n巨型冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态,受到攻击时,有<color=#28d9ed>80%</color>的几率使全体敌人陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Passive_1_Water"
+      "icon": "MT_Passive_1_Water",
+      "debuff": [
+        "BT_FREEZE"
+      ]
     },
     {
       "name": {
@@ -134,7 +137,10 @@
         "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 효과 적중 증가/무적 효과를 각각 3턴/1턴 동안 부여하고 WG 30%를 회복한 뒤 그녀의 하수인인 거대 얼음 망령을 소환합니다. 광폭화는 3턴 동안 유지되며, 적이 빙결 상태라면 광폭화 돌입 후 <color=#28d9ed>깨져라</color>를 사용합니다.\\n\\n<color=#28d9ed>아이스 나인</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 대상을 빙결 상태로 만듭니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
         "zh": "当自身最大生命值≤<color=#28d9ed>60%</color>时,进入<color=#28d9ed>狂暴化</color>状态,使<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提高<color=#28d9ed>15%</color>。效果持续至被打破为止。\\n\\n<color=#28d9ed>进入狂暴化</color>:为自身赋予不可解除的<color=#28d9ed>效果命中提升</color>(持续3回合)和<color=#28d9ed>无敌</color>(持续1回合),并恢复WG 30%,随后召唤她的仆从——巨型冰灵。狂暴化持续3回合,若敌人处于<color=#28d9ed>冰冻</color>状态,则在进入狂暴化后立即施放<color=#28d9ed>粉碎吧</color>。\\n\\n<color=#28d9ed>冰之终焉</color>:在狂暴化结束时施放。\\n攻击全体敌人并使其陷入<color=#28d9ed>冰冻</color>状态。该效果无视效果抵抗。\\n\\n<color=#ffd732>在3回合内进入狂暴化时,恢复80点CP。</color>"
       },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_CP_CHARGE"
+      ]
     },
     {
       "name": {
