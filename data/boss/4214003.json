@@ -74,13 +74,13 @@
         "zh": "攻击全体敌人。\\n使目标的<color=#28d9ed>穿透</color>、<color=#28d9ed>攻击力</color>、<color=#28d9ed>暴击伤害</color>降低,持续<color=#28d9ed>3回合</color>。\\n攻击后,自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。"
       },
       "icon": "Skill_Second_4044001",
-      "debuff": [
-        "BT_STAT|ST_ATK",
-        "BT_STAT|ST_CRITICAL_DMG_RATE",
-        "BT_STAT|ST_PIERCE_POWER_RATE"
-      ],
       "buff": [
         "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE",
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
       ]
     },
     {
@@ -99,10 +99,13 @@
       },
       "icon": "Skill_Ultimate_4044001",
       "buff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE",
         "BT_STAT|ST_CRITICAL_RATE",
         "BT_STAT|ST_CRITICAL_DMG_RATE",
-        "BT_STAT|ST_PIERCE_POWER_RATE",
         "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
       ]
     },
     {
@@ -137,25 +140,9 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

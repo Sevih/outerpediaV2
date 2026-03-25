@@ -12,8 +12,8 @@
   "element": "Dark",
   "level": 145,
   "icons": "2000088",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_ACTION_GAUGE",
-  "StatBuffImmune": "ST_SPEED",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_ACTION_GAUGE",
   "location": {
     "dungeon": {
       "en": "Top Fiend Officer",
@@ -69,6 +69,9 @@
         "zh": "(触发效果)受到攻击后,使生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>石化</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_Second_2000088",
+      "buff": [
+        "SYS_BUFF_COUNTER"
+      ],
       "debuff": [
         "BT_STONE"
       ]
@@ -120,7 +123,7 @@
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
-        "en": "Every 4 turns, the caster enters the <color=#28d9ed>Enraged</color> state and gains irremovable Attack Up, Critical Hit Chance Up, and Damage Taken Down effects for <color=#28d9ed>3</color> turns.\\n<color=#28d9ed>Enraged Activation & Ultimate Skill</color>:\\nRevives all fallen allies with <color=#28d9ed>Resurrect (Enhanced)</color>,\\nthen deals heavy damage to all enemies,\\nand has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Taunt</color> on all enemies for <color=#28d9ed>1</color> turns.\\n(Ignores Effect Resistance)",
+        "en": "Every 4 turns, the caster enters the <color=#28d9ed>Enraged</color> state and gains irremovable Attack Up, Critical Hit Chance Up, and Damage Taken Down effects for <color=#28d9ed>3</color> turns.\\n<color=#28d9ed>Enraged Activation & Ultimate Skill</color>:\\nRevives all fallen allies with <color=#28d9ed>Resurrect (Enhanced)</color>,\\nthen deals heavy damage to all enemies,\\nand has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Taunt</color> on all enemies for <color=#28d9ed>1</color> turns.\\n(Ignores Resilience)",
         "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わり、\\n自分に解除不可の 攻撃力UP/会心率UP/受けるダメージDOWNを\\n<color=#28d9ed>3ターン</color>の間付与する。\\n\\n<color=#28d9ed>【狂暴化】発動と必殺スキル</color>:\\n倒れた味方全体を<color=#28d9ed>復活(強化)</color>させた後、敵全体にダメージを与え、 <color=#28d9ed>100%</color>の確率で<color=#28d9ed>1ターン</color>の間、敵全体を<color=#28d9ed>挑発</color>する。(効果抵抗無視)",
         "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 자신에게 해제되지 않는 공격력 증가/치명 확률 증가/피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color> 시킨 후 적 전체에게 큰 피해를 입히고 적 전체를 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.(효과 저항 무시)",
         "zh": "每经过4回合进入<color=#28d9ed>狂暴化</color>状态,并获得不可解除的 攻击力提升/暴击率提升/受伤减少,持续 <color=#28d9ed>3</color> 回合。\\n\\n<color=#28d9ed>进入狂暴化与必杀技</color>:\\n使所有阵亡友军 <color=#28d9ed>复活(强化)</color>,随后对全体敌人造成巨额伤害,\\n并以 <color=#28d9ed>100%</color> 的概率在 <color=#28d9ed>1</color> 回合内对全体敌人施加 <color=#28d9ed>嘲讽</color>。(无视效果抵抗)"

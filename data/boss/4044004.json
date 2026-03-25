@@ -13,7 +13,7 @@
   "level": 95,
   "icons": "4044004",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_DOT_BLEED,BT_DOT_POISON",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_DOT_BLEED,BT_DOT_POISON",
   "location": {
     "dungeon": {
       "en": "Daddy, It Hurts",
@@ -121,9 +121,9 @@
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>40%</color> of Max Health or lower, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns, and recovers Weakness Gauge by 10%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>In the Name of the General</color>: Used when Enraged ends.\\nReduces all enemies' <color=#28d9ed>Chain Points</color> and <color=#28d9ed>Action Points</color> by <color=#28d9ed>100%</color>.",
-        "jp": "最大HPの<color=#28d9ed>40%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UPとダメージDOWN効果を3ターンの間付与し、WG10%を回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【大元帥の名において】</color>:【狂暴化】終了時に発動する。\\n敵全体の<color=#28d9ed>CP</color>と<color=#28d9ed>AP</color>を<color=#28d9ed>-100%</color>DOWNさせる。",
-        "kr": "최대 체력의 <color=#28d9ed>40%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>대원수의 이름으로</color> : 광폭화 종료 시 사용.\\n적 전체의 <color=#28d9ed>CP</color>와 <color=#28d9ed>AP</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
-        "zh": "若生命值降至上限的<color=#28d9ed>40%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,且WG恢复10%。狂暴化持续3个回合。\\n\\n<color=#28d9ed>以大元帅之名</color>:狂暴化结束时使用。\\n使全体敌人的<color=#28d9ed>CP</color>和<color=#28d9ed>AP</color>降低<color=#28d9ed>-100%</color>。"
+        "jp": "最大HPの<color=#28d9ed>40%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UPとダメージDOWN効果を3ターンの間付与し、WG10%を回復する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【大元帥の名において】</color>:【狂暴化】終了時に発動する。\\n敵全体の<color=#28d9ed>CP</color>と<color=#28d9ed>AP</color>を<color=#28d9ed>100%</color>DOWNさせる。",
+        "kr": "최대 체력의 <color=#28d9ed>40%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>대원수의 이름으로</color> : 광폭화 종료 시 사용.\\n적 전체의 <color=#28d9ed>CP</color>와 <color=#28d9ed>AP</color>를 <color=#28d9ed>100%</color> 감소시킵니다.",
+        "zh": "若生命值降至上限的<color=#28d9ed>40%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,且WG恢复10%。狂暴化持续3个回合。\\n\\n<color=#28d9ed>以大元帅之名</color>:狂暴化结束时使用。\\n使全体敌人的<color=#28d9ed>CP</color>和<color=#28d9ed>AP</color>降低<color=#28d9ed>100%</color>。"
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
@@ -134,22 +134,6 @@
         "BT_CP_CHARGE",
         "BT_AP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "Enraged",
-        "jp": "狂暴化",
-        "kr": "광폭화",
-        "zh": "狂暴化"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

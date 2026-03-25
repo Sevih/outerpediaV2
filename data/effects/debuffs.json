@@ -1055,6 +1055,20 @@
         "icon": "IG_Buff_Dot_Curse_Interruption_D"
     },
     {
+        "name": "BT_DOT_CURSE_IR",
+        "category": "dot",
+        "group": "BT_DOT_CURSE",
+        "label": "Cursed",
+        "label_jp": "呪い",
+        "label_kr": "저주",
+        "label_zh": "诅咒",
+        "description": "Takes damage proportional to Health at the start of the turn.\\nRemoved when the caster dies. (Irremovable)",
+        "description_jp": "ターン開始時、ダメージを受ける。\\n自分のHPが高いほど、\\n受けるダメージがUPする。\\nスキル使用者が倒れると\\n解除される。\\n(解除不可)",
+        "description_kr": "턴 시작 시 자신의 체력에 비례한 피해를 받습니다.\\n시전자가 사망 시 해제됩니다. (해제 불가)",
+        "description_zh": "回合开始时,根据自身的生命值\\n受到等比伤害。\\n施展者死亡时解除。(无法解除)",
+        "icon": "IG_Buff_Dot_Curse_Interruption_D"
+    },
+    {
         "name": "IG_Buff_Effect_2000102_Interruption_D",
         "category": "unique",
         "label": "Irregular Infection",

@@ -26,21 +26,8 @@
     "description_zh": "造成额外攻击。",
     "icon": "SC_Buff_Extra_Skill"
   },
-    {
-    "name": "SYS_BUFF_ADDITIVE_ATTACK",
-    "category": "utility",
-    "group": "BT_EXTRA_ATTACK_ON_TURN_END",
-    "label": "Additional Attack",
-    "label_jp": "追加攻撃",
-    "label_kr": "추가타",
-    "label_zh": "额外攻击",
-    "description": "Performs an additional attack.",
-    "description_jp": "敵を通常スキルで\\n追加攻撃する。",
-    "description_kr": "추가 공격을 입힙니다.",
-    "description_zh": "造成额外攻击。",
-    "icon": "SC_Buff_Extra_Skill"
-  },
-      {
+
+  {
     "name": "SYS_BUFF_ADDITIVE_SKILL",
     "category": "utility",
     "group": "BT_EXTRA_ATTACK_ON_TURN_END",
@@ -440,7 +427,7 @@
     "description_zh": "满足条件时,对友军使用该技能。",
     "icon": "IG_Buff_Effect_Revenge_Heal"
   },
-    {
+  {
     "name": "SYS_BUFF_REVENGE_HEAL",
     "category": "utility",
     "label": "Agile Response",
@@ -787,7 +774,7 @@
     "description_zh": "演奏结束之后,全体敌人立即死亡。(无法解除)",
     "icon": "IG_Buff_Effect_4076009_Interruption"
   },
-    {
+  {
     "name": "HARMONY_DESPAIR",
     "category": "unique",
     "label": "Harmony of Despair",

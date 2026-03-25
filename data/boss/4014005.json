@@ -111,8 +111,8 @@
         "BT_ACTION_GAUGE"
       ],
       "debuff": [
-        "BT_DOT_BURN",
-        "IG_Buff_Dot_Burn_Interruption_D"
+        "BT_DOT_BURN_IR",
+        "BT_DOT_BURN"
       ]
     },
     {
@@ -124,7 +124,7 @@
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
-        "en": "Becomes <color=#28d9ed>Enraged</color> every 10 enemy actions.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable Damage Reduction to the caster for 5 turns and recovers Weakness Gauge by 30%. Enraged lasts for 5 turns.\\n\\n<color=#28d9ed>Harvest Time</color>: Used when Enraged ends.\\nRemoves all enemy Enhancement Effects and inflicts instant death.\\nEnemies killed by this skill cannot Resurrected or Revived.",
+        "en": "Becomes <color=#28d9ed>Enraged</color> every 10 enemy actions.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable DMG Reduction to the caster for 5 turns and recovers Weakness Gauge by 30%. Enraged lasts for 5 turns.\\n\\n<color=#28d9ed>Harvest Time</color>: Used when Enraged ends.\\nRemoves all enemy Enhancement Effects and inflicts instant death.\\nEnemies killed by this skill cannot Resurrected or Revived.",
         "jp": "敵が10回行動するごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color> : 自分に解除不可能なダメージDOWN効果を5ターンの間付与し、WG30%を回復する。狂暴化は5ターンの間継続する。\\n\\n<color=#28d9ed>【片づけの時間】</color> : 狂暴化終了時に使用する。\\n敵全体の強化効果をすべて解除し、すべて死亡させる。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
         "kr": "적이 10회 행동할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 피해 감소 효과를 5턴 동안 부여하고 WG 30%를 회복합니다. 광폭화는 5턴 동안 유지됩니다.\\n\\n<color=#28d9ed>갈무리의 시간</color> : 광폭화 종료 시 사용.\\n적 전체의 강화 효과를 모두 해제하고 모두 사망합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "zh": "每当敌人行动10次,转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的承受伤害降低效果,持续5回合,并使WG恢复30%。狂暴化持续5回合。\\n\\n<color=#28d9ed>收割时刻</color>:狂暴化结束时发动。\\n解除全体敌人的所有强化效果并使其立即死亡。\\n被此技能击杀的敌人无法复活与苏醒。"

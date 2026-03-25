@@ -75,7 +75,7 @@
       },
       "icon": "Skill_Second_2000058",
       "buff": [
-        "BT_COOL_CHARGE"
+        "BT_COOL3_CHARGE"
       ]
     },
     {
@@ -111,10 +111,7 @@
         "kr": "(패시브 효과)\\n매 턴 자신을 제외한 아군 전체의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>15%</color> 증가시킵니다.\\n\\n스테로페는 다음과 같은 능력을 가집니다.\\n피격 시 적 전체에게 <color=#28d9ed>500</color>의 고정피해를 입힙니다.\\n적이 공격이 아닌 스킬 사용 시, 아군 전체의 WG를 <color=#28d9ed>4</color>, 체력을 <color=#28d9ed>3%</color> 회복합니다.",
         "zh": "(被动效果)\\n每回合使除自身外的全体友军的<color=#28d9ed>攻击力</color>提升<color=#28d9ed>15%</color>。\\n\\n史提洛佩拥有以下能力。\\n受到攻击时,对全体敌人造成<color=#28d9ed>500</color>的固定伤害。\\n敌人使用非攻击类技能时,使全体友军的WG恢复<color=#28d9ed>4</color>,生命值恢复<color=#28d9ed>3%</color>。"
       },
-      "icon": "MT_Passive_1_Fire",
-      "debuff": [
-        "BT_FIXED_DAMAGE"
-      ]
+      "icon": "MT_Passive_1_Fire"
     },
     {
       "name": {
@@ -135,6 +132,9 @@
         "BT_DAMGE_TAKEN",
         "BT_STAT|ST_ATK_IR",
         "BT_RESURRECTION"
+      ],
+      "debuff": [
+        "BT_SILENCE"
       ]
     }
   ]

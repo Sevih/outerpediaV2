@@ -74,11 +74,11 @@
         "zh": "攻击全体敌人。对目标造成<color=#28d9ed>诅咒</color>,持续<color=#28d9ed>3回合</color>,并使自身<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
       "icon": "Skill_Second_4086026",
-      "debuff": [
-        "BT_DOT_CURSE"
-      ],
       "buff": [
         "BT_STAT|ST_BUFF_CHANCE"
+      ],
+      "debuff": [
+        "BT_DOT_CURSE"
       ]
     },
     {
@@ -97,8 +97,8 @@
       },
       "icon": "Skill_Ultimate_4086026",
       "debuff": [
-        "BT_FREEZE",
-        "BT_IMMEDIATELY_CURSE"
+        "BT_IMMEDIATELY_CURSE",
+        "BT_FREEZE"
       ]
     },
     {
@@ -120,8 +120,8 @@
         "BT_SEAL_COUNTER"
       ],
       "debuff": [
-        "BT_SEALED_RESURRECTION",
-        "IG_Buff_Dot_Curse_Interruption_D"
+        "BT_DOT_CURSE_IR",
+        "BT_SEALED_RESURRECTION"
       ]
     },
     {

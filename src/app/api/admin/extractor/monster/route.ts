@@ -20,7 +20,7 @@ const MODE_TO_SYS_KEY: Record<string, string> = {
   DM_REMAINS: 'SYS_PVE_REMAINS',
   DM_SIDESTORY: 'SYS_GUIDE_MENU_SIDESTORY',
   DM_EVENT: 'SYS_EVENT',
-  DM_EVENT_BOSS: 'SYS_EVENT',
+  DM_EVENT_BOSS: 'SYS_EVENT_BOSS_TITLE',
   DM_EVENT_CHALLENGE: 'SYS_EVENT_BOSS_CHALLENGE',
   DM_RAID_1: 'SYS_RAID_1_TITLE',
   DM_RAID_2: 'SYS_RAID_2_TITLE',
@@ -88,6 +88,7 @@ interface GameData {
   spawns: Row[];
   buffData: Row[];
   areas: Row[];
+  worldBossLeagues: Row[];
   textCharMap: Record<string, LangTexts>;
   textSkillMap: Record<string, LangTexts>;
   textSystemMap: Record<string, LangTexts>;
@@ -112,7 +113,7 @@ async function loadGameData(): Promise<GameData> {
   if (cachedGD) return cachedGD;
 
   const [monsterT, monsterSkillT, monsterSkillLevelT, dungeonT, spawnT,
-    buffT, areaT, textChar, textSkill, textSystem] = await Promise.all([
+    buffT, areaT, worldBossLeagueT, textChar, textSkill, textSystem] = await Promise.all([
     readTemplet('MonsterTemplet'),
     readTemplet('MonsterSkillTemplet'),
     readTemplet('MonsterSkillLevelTemplet'),
@@ -120,6 +121,7 @@ async function loadGameData(): Promise<GameData> {
     readTemplet('DungeonSpawnTemplet'),
     readTemplet('BuffTemplet'),
     readTemplet('AreaTemplet'),
+    readTemplet('WorldBossLeagueTemplet'),
     readTemplet('TextCharacter'),
     readTemplet('TextSkill'),
     readTemplet('TextSystem'),
@@ -133,6 +135,7 @@ async function loadGameData(): Promise<GameData> {
     spawns: spawnT.data,
     buffData: buffT.data,
     areas: areaT.data,
+    worldBossLeagues: worldBossLeagueT.data,
     textCharMap: buildTextMap(textChar.data),
     textSkillMap: buildTextMap(textSkill.data),
     textSystemMap: buildTextMap(textSystem.data),
@@ -220,18 +223,36 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
     for (const k of keys) spawnMap.set(k, entry);
   }
 
+  // World boss league lookup: DungeonID → LeagueName (TextSystem key)
+  // Multiple entries per DungeonID exist (old/new names), take the last one (most recent)
+  const worldBossLeagueByDungeon = new Map<string, string>();
+  for (const wbl of gd.worldBossLeagues) {
+    const did = wbl.DungeonID;
+    const ln = wbl.LeagueName;
+    if (did && ln) worldBossLeagueByDungeon.set(did, ln);
+  }
+
   const result = new Map<string, DungeonLink[]>();
 
   for (const d of gd.dungeons) {
     const mode = d.DungeonMode;
     if (!mode) continue;
-    const nameLangs = gd.textSystemMap[d.SeasonFullName ?? ''];
-    if (!nameLangs) continue;
     const dungeonId = d.ID ?? '';
 
+    // For world boss: use league name instead of season name
+    let nameLangs: LangTexts | undefined;
+    if (mode === 'DM_WORLD_BOSS') {
+      const friendSupport = d.FriendSupportUse ?? '';
+      const leagueKey = worldBossLeagueByDungeon.get(friendSupport);
+      if (leagueKey) nameLangs = gd.textSystemMap[leagueKey];
+    }
+    if (!nameLangs) nameLangs = gd.textSystemMap[d.SeasonFullName ?? ''];
+    if (!nameLangs) continue;
+
     // area_id: from FriendSupportUse → TextSystem (e.g. SYS_DUNGEON_SHORT_NAME_0314 → "3-14")
+    // Skip for world boss (FriendSupportUse is a DungeonID, not a TextSystem key)
     const friendSupport = d.FriendSupportUse ?? '';
-    const areaId = gd.textSystemMap[friendSupport] ?? null;
+    const areaId = mode === 'DM_WORLD_BOSS' ? null : (gd.textSystemMap[friendSupport] ?? null);
 
     // mode label — for DM_NORMAL, detect Story (Hard) vs Story (Normal) via AreaTemplet
     let modeLabel: LangTexts | null = null;
@@ -592,18 +613,24 @@ async function extractMonster(
   gd: GameData, monster: Row, dungeonList: DungeonLink[],
   selectedDungeonId?: string,
   parentBoss?: { id: string; location: DungeonLink },
+  existingLevel?: number | null,
 ) {
   const nameTexts = resolveMonsterName(gd, monster);
   const cls = resolveClass(gd.textSystemMap, monster.Class ?? '');
   const element = resolveElement(gd.textSystemMap, monster.Element ?? '');
   const statBuffImmune = monster.StatBuffImmune ?? '';
 
-  // Pick location: parent boss location for minions, otherwise own dungeon
-  const location = parentBoss
-    ? parentBoss.location
-    : (selectedDungeonId
-      ? dungeonList.find(d => d.dungeonId === selectedDungeonId)
-      : dungeonList[0]) ?? null;
+  // Pick location: parent boss for minions, selected dungeon, or match existing level
+  let location: DungeonLink | null = null;
+  if (parentBoss) {
+    location = parentBoss.location;
+  } else if (selectedDungeonId) {
+    location = dungeonList.find(d => d.dungeonId === selectedDungeonId) ?? null;
+  } else if (existingLevel != null && dungeonList.length > 1) {
+    location = dungeonList.find(d => d.level === existingLevel) ?? dungeonList[0] ?? null;
+  } else {
+    location = dungeonList[0] ?? null;
+  }
 
   const skills = await extractMonsterSkills(gd, monster);
 
@@ -772,9 +799,7 @@ export async function GET(req: NextRequest) {
         if (parentLoc) parentBoss = { id: parentBossId, location: parentLoc };
       }
 
-      const extracted = await extractMonster(gd, monster, dungeons, selectedDungeonId || undefined, parentBoss);
-
-      // Check if already saved
+      // Load existing to match level for multi-dungeon monsters
       const compositeId = parentBossId ? `${id}S${parentBossId}` : id;
       const filePath = path.join(BOSS_DIR, `${compositeId}.json`);
       let existing = null;
@@ -782,6 +807,9 @@ export async function GET(req: NextRequest) {
         const raw = await fs.readFile(filePath, 'utf-8');
         existing = JSON.parse(raw);
       } catch { /* not found */ }
+
+      const existingLevel = existing?.level ?? null;
+      const extracted = await extractMonster(gd, monster, dungeons, selectedDungeonId || undefined, parentBoss, existingLevel);
 
       return NextResponse.json({ extracted, existing, allDungeons: dungeons.map(d => ({
         mode: d.mode,
@@ -877,7 +905,8 @@ export async function GET(req: NextRequest) {
         }
 
         const dungeons = monsterToDungeons.get(id) ?? [];
-        const ext = await extractMonster(gd, monster, dungeons, undefined, parentBoss);
+        const existingLevel = typeof existing.level === 'number' ? existing.level : null;
+        const ext = await extractMonster(gd, monster, dungeons, undefined, parentBoss, existingLevel);
 
         const diffs: { field: string; existing: string; extracted: string }[] = [];
 
@@ -1033,7 +1062,8 @@ export async function GET(req: NextRequest) {
           }
 
           const dungeons = monsterToDungeons.get(id) ?? [];
-          const ext = await extractMonster(gd, monster, dungeons, undefined, parentBoss);
+          const existingLevel = typeof entry.data.level === 'number' ? entry.data.level : null;
+          const ext = await extractMonster(gd, monster, dungeons, undefined, parentBoss, existingLevel);
 
           // Quick diff check (same logic as compare)
           let hasDiff = false;

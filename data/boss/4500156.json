@@ -18,7 +18,7 @@
   "level": 100,
   "icons": "2000075",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
   "location": {
     "dungeon": {
       "en": "Conqueror and Destroyer",
@@ -74,6 +74,9 @@
         "zh": "(触发效果)友军发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>。\\n\\n<color=#ffd732>重金属猛禽</color>:对目标造成其生命值上限<color=#28d9ed>30%</color>的固定伤害后,攻击敌人。"
       },
       "icon": "Skill_Second_2000075",
+      "buff": [
+        "SYS_BUFF_ADDITIVE_ATTACK"
+      ],
       "debuff": [
         "BT_REVERSE_HEAL_BASED_TARGET"
       ]
@@ -108,9 +111,9 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces the enemy's Speed by <color=#28d9ed>5%</color> each turn. This effect ignores the target's Resilience. (Max 20 stacks)",
-        "jp": "(パッシブ効果)\\n毎ターン敵のスピードが<color=#28d9ed>-5%</color>DOWNする。この効果は対象の効果抵抗を無視する。(最大20回まで累積)",
-        "kr": "(패시브 효과)\\n매 턴 적의 속도가 <color=#28d9ed>-5%</color> 감소합니다. 이 효과는 대상의 효과 저항을 무시합니다. (최대 20회 누적)",
-        "zh": "(被动效果)\\n每回合使敌人的速度降低<color=#28d9ed>-5%</color>。该效果无视目标的效果抵抗。(最多可叠加20次)"
+        "jp": "(パッシブ効果)\\n毎ターン敵のスピードが<color=#28d9ed>5%</color>DOWNする。この効果は対象の効果抵抗を無視する。(最大20回まで累積)",
+        "kr": "(패시브 효과)\\n매 턴 적의 속도가 <color=#28d9ed>5%</color> 감소합니다. 이 효과는 대상의 효과 저항을 무시합니다. (최대 20회 누적)",
+        "zh": "(被动效果)\\n每回合使敌人的速度降低<color=#28d9ed>5%</color>。该效果无视目标的效果抵抗。(最多可叠加20次)"
       },
       "icon": "MT_Passive_1_Dark"
     }
