@@ -18,7 +18,7 @@
   "level": 35,
   "icons": "4076005",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_SEALED_RECEIVE_HEAL",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_SEALED_RECEIVE_HEAL",
   "location": {
     "dungeon": {
       "en": "Tyrant Toddler (Stage 4)",
@@ -33,7 +33,7 @@
       "zh": "特别委托:生态调查"
     },
     "area_id": {
-      "en": "50102004",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -66,7 +66,7 @@
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies.",
-        "jp": "敵全体を攻撃する。",
+        "jp": "敵全体にダメージを与える。",
         "kr": "적 전체를 공격합니다.",
         "zh": "攻击全体敌人。"
       },
@@ -82,9 +82,9 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces Weakness Gauge damage taken from attacks other than Burst, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>, but increases the damage dealt by all enemies proportional to their Defense.\\nIncreases the Speed of Healer and Defender enemies by <color=#28d9ed>50%</color> and reduces damage dealt by Ranger enemies by <color=#28d9ed>70%</color>.\\nAt the start of battle, inflicts <color=#28d9ed>Bleeding</color> and <color=#28d9ed>Poisoned</color> on all enemies and allies for 9 turns.\\nIncreases damage dealt to non-Earth enemies and reduces damage taken from them.\\nReduces damage dealt to Earth enemies and increases damage taken from them.",
-        "jp": "(パッシブ効果)\\nバーストスキル、連携、チェーンスキル以外の攻撃で受けるWGダメージが<color=#28d9ed>50%</color>DOWNするが、敵全体は防御力が高いほど与えるダメージがUPする。\\n\\n回復・防御型の敵のスピードが<color=#28d9ed>50%</color>UPし、スピード型の敵の与えるダメージが<color=#28d9ed>-70%</color>DOWNする。\\n\\n戦闘開始時、味方全体と敵全体に<color=#28d9ed>出血</color>と<color=#28d9ed>中毒</color>を9ターンの間付与する。\\n\\n地属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
-        "kr": "(패시브 효과)\\n버스트 스킬과 협공, 스킬 체인을 제외한 공격으로 받는 WG 피해가 <color=#28d9ed>50%</color> 감소하지만, 적 전체는 방어력에 비례하여 입히는 피해가 증가합니다.\\n\\n회복형 및 방어형 적의 속도가 <color=#28d9ed>50%</color>증가하고, 속도형 적의 입히는 피해는 <color=#28d9ed>-70%</color> 감소합니다.\\n\\n9턴 동안 아군과 적 전체는 <color=#28d9ed>출혈</color>, <color=#28d9ed>중독</color>을 가진 채로 전투를 시작합니다.\\n\\n지속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n지속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
-        "zh": "(被动效果)\\n受到除爆发技能、夹攻和连携技能以外的攻击时,使所受WG伤害降低<color=#28d9ed>50%</color>,但会根据防御力提升使受到来自全体敌人的伤害等比提升。\\n\\n使恢复型和防御型敌人的速度提升<color=#28d9ed>50%</color>,并使速度型敌人带来的伤害降低<color=#28d9ed>-70%</color>。\\n\\n使友军和敌军全部以<color=#28d9ed>出血</color>、<color=#28d9ed>中毒</color>状态开始战斗,持续9回合。\\n\\n对非土属性敌人造成的伤害提升,且所受伤害降低。\\n对土属性敌人造成的伤害降低,且所受伤害提升。"
+        "jp": "(パッシブ効果)\\nバーストスキル、連携、チェーンスキル以外の攻撃で受けるWGダメージが<color=#28d9ed>50%</color>DOWNするが、敵全体は防御力が高いほど与えるダメージがUPする。\\n\\n回復・防御型の敵のスピードが<color=#28d9ed>50%</color>UPし、スピード型の敵の与えるダメージが<color=#28d9ed>70%</color>DOWNする。\\n\\n戦闘開始時、味方全体と敵全体に<color=#28d9ed>出血</color>と<color=#28d9ed>中毒</color>を9ターンの間付与する。\\n\\n地属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "kr": "(패시브 효과)\\n버스트 스킬과 협공, 스킬 체인을 제외한 공격으로 받는 WG 피해가 <color=#28d9ed>50%</color> 감소하지만, 적 전체는 방어력에 비례하여 입히는 피해가 증가합니다.\\n\\n회복형 및 방어형 적의 속도가 <color=#28d9ed>50%</color>증가하고, 속도형 적의 입히는 피해는 <color=#28d9ed>70%</color> 감소합니다.\\n\\n9턴 동안 아군과 적 전체는 <color=#28d9ed>출혈</color>, <color=#28d9ed>중독</color>을 가진 채로 전투를 시작합니다.\\n\\n지속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n지속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
+        "zh": "(被动效果)\\n受到除爆发技能、夹攻和连携技能以外的攻击时,使所受WG伤害降低<color=#28d9ed>50%</color>,但会根据防御力提升使受到来自全体敌人的伤害等比提升。\\n\\n使恢复型和防御型敌人的速度提升<color=#28d9ed>50%</color>,并使速度型敌人带来的伤害降低<color=#28d9ed>70%</color>。\\n\\n使友军和敌军全部以<color=#28d9ed>出血</color>、<color=#28d9ed>中毒</color>状态开始战斗,持续9回合。\\n\\n对非土属性敌人造成的伤害提升,且所受伤害降低。\\n对土属性敌人造成的伤害降低,且所受伤害提升。"
       },
       "icon": "MT_Passive_1_Water",
       "debuff": [

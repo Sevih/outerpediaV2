@@ -18,7 +18,7 @@
   "level": 20,
   "icons": "4076005",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_SEALED_RECEIVE_HEAL",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO,BT_SEALED_RECEIVE_HEAL",
   "location": {
     "dungeon": {
       "en": "Tyrant Toddler (Stage 1)",
@@ -33,7 +33,7 @@
       "zh": "特别委托:生态调查"
     },
     "area_id": {
-      "en": "50102001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -66,7 +66,7 @@
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies.",
-        "jp": "敵全体を攻撃する。",
+        "jp": "敵全体にダメージを与える。",
         "kr": "적 전체를 공격합니다.",
         "zh": "攻击全体敌人。"
       },
@@ -84,7 +84,7 @@
         "en": "(Passive Effect)\\nAt the start of battle, inflicts <color=#28d9ed>Bleeding</color> and <color=#28d9ed>Poisoned</color> on the caster and all enemies for 9 turns.\\n\\nIncreases the Speed of Healer and Defender enemies by <color=#28d9ed>50%</color>.\\n\\nIncreases damage dealt to non-Earth enemies and reduces damage taken from them.\\nReduces damage dealt to Earth enemies and increases damage taken from them.",
         "jp": "(パッシブ効果)\\n戦闘開始時、自分と敵全体に<color=#28d9ed>出血</color>と<color=#28d9ed>中毒</color>を9ターンの間付与する。\\n\\n回復・防御型の敵のスピードを<color=#28d9ed>50%</color>UPさせる。\\n\\n地属性以外の敵に与えるダメージがUPし、受けるダメージがDOWNする。\\n地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
         "kr": "(패시브 효과)\\n9턴 동안 자신과 적 전체는 <color=#28d9ed>출혈</color>, <color=#28d9ed>중독</color>을 가진 채로 전투를 시작합니다.\\n\\n적의 회복형 및 방어형 캐릭터의 속도를 <color=#28d9ed>50%</color> 증가시킵니다.\\n\\n지속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n지속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
-        "zh": "(被动效果)\\n使自身和全体敌人以<color=#28d9ed>出血</color>、<color=#28d9ed>中毒</color>状态开始战斗,持续9回合。\\n\\n使恢复型和防御型敌人的速度提升<color=#28d9ed>50%</color>。\\n\\n对非土属性敌人造成的伤害提升,且所受伤害降低。\\n对土属性敌人造成的伤害降低,且所受伤害提升。"
+        "zh": "(琚姩鏁堟灉)\\n浣胯嚜韬拰鍏ㄤ綋鏁屼汉浠�<color=#28d9ed>鍑鸿</color>銆�<color=#28d9ed>涓瘨</color>鐘舵€佸紑濮嬫垬鏂楋紝鎸佺画9鍥炲悎銆俓n\\n浣挎仮澶嶅瀷鍜岄槻寰′′瀷鏁屼汉鐨勯€熷害鎻愬崌<color=#28d9ed>50%</color>銆俓n\\n瀵归潪鍦熷睘鎬ф晫浜洪€犳垚鐨勪激瀹虫彁鍗囷紝涓旀墍鍙椾激瀹抽檷浣庛€俓n瀵瑰湡灞炴€ф晫浜洪€犳垚鐨勪激瀹抽檷浣庯紝涓旀墍鍙椾激瀹虫彁鍗囥€�"
       },
       "icon": "MT_Passive_1_Water",
       "debuff": [
