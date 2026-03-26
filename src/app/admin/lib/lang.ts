@@ -140,26 +140,24 @@ interface Candidate {
 }
 
 function candidatesWithOrigin(raw: Buffer): Candidate[] {
+  // UTF-8 first: if valid, it's authoritative — game data is UTF-8
+  try {
+    const txt = new TextDecoder('utf-8', { fatal: true }).decode(raw);
+    return [{ text: txt, origin: 'bytes:utf-8' }];
+  } catch {
+    // Not valid UTF-8 — try legacy encodings
+  }
+
   const cands: Candidate[] = [];
 
   for (const enc of ENCODINGS) {
-    if (enc === 'utf-8') {
-      // Try native UTF-8 first
+    if (enc === 'utf-8') continue; // already tried
+    if (iconv.encodingExists(enc)) {
       try {
-        const txt = new TextDecoder('utf-8', { fatal: true }).decode(raw);
-        cands.push({ text: txt, origin: 'bytes:utf-8' });
+        const txt = iconv.decode(raw, enc);
+        cands.push({ text: txt, origin: `bytes:${enc}` });
       } catch {
-        // Not valid UTF-8
-      }
-    } else {
-      // Use iconv-lite for legacy encodings
-      if (iconv.encodingExists(enc)) {
-        try {
-          const txt = iconv.decode(raw, enc);
-          cands.push({ text: txt, origin: `bytes:${enc}` });
-        } catch {
-          // Encoding failed
-        }
+        // Encoding failed
       }
     }
   }

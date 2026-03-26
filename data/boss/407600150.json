@@ -18,7 +18,7 @@
   "level": 25,
   "icons": "4076001",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_DOT_POISON",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_DOT_POISON",
   "location": {
     "dungeon": {
       "en": "Glicys (Stage 1)",
@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50202001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -101,14 +101,11 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect)\\nGlicys's underlings have the following abilities.\\n\\nIce Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Reduces the <color=#28d9ed>Defense</color> of all allies by <color=#28d9ed>1%</color> when hit. This effect stacks up to 20 times.\\nGiant Ice Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Frozen</color> on all enemies for <color=#28d9ed>1 turn(s)</color> when hit.",
-        "jp": "(パッシブ効果)\\n【グリシス】の手下は以下のような能力を持つ。\\n\\n【氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与するが、攻撃を受けた時、味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>-1%</color>DOWNさせる。この効果は最大20回まで累積する。\\n【零氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与し、攻撃を受けた時、<color=#28d9ed>80%</color>の確率で敵全体に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
-        "kr": "(패시브 효과)\\n글리시스의 하수인들은 다음과 같은 능력을 가집니다.\\n\\n얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키지만, 피격 시 아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>-1%</color> 감소시킵니다. 해당 효과는 최대 20회 누적됩니다.\\n거대 얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키고, 피격 시 <color=#28d9ed>80%</color> 확률로 적 전체를 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>시킵니다.",
-        "zh": "(被动效果)\\n克里希丝的手下拥有以下能力。\\n\\n冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态;受到攻击时,使全体友军的<color=#28d9ed>防御力</color>降低<color=#28d9ed>-1%</color>。该效果最多可叠加20次。\\n巨型冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态;受到攻击时,有<color=#28d9ed>80%</color>的几率使全体敌人陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>1回合</color>。"
+        "jp": "(パッシブ効果)\\n【グリシス】の手下は以下のような能力を持つ。\\n\\n【氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与するが、攻撃を受けた時、味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>1%</color>DOWNさせる。この効果は最大20回まで累積する。\\n【零氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与し、攻撃を受けた時、<color=#28d9ed>80%</color>の確率で敵全体に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "(패시브 효과)\\n글리시스의 하수인들은 다음과 같은 능력을 가집니다.\\n\\n얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키지만, 피격 시 아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1%</color> 감소시킵니다. 해당 효과는 최대 20회 누적됩니다.\\n거대 얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키고, 피격 시 <color=#28d9ed>80%</color> 확률로 적 전체를 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>시킵니다.",
+        "zh": "(琚姩鏁堟灉)\\n鍏嬮噷甯屼笣鐨勬墜涓嬫嫢鏈変互涓嬭兘鍔涖€俓n\\n鍐伴湝浜$伒锛氭敾鍑绘椂锛屼娇鐩爣闄峰叆<color=#28d9ed>鍐板喕</color>鐘舵€侊紱鍙楀埌鏀诲嚮鏃讹紝浣垮叏浣撳弸鍐涚殑<color=#28d9ed>闃插尽鍔�</color>闄嶄綆<color=#28d9ed>1%</color>銆傝鏁堟灉鏈€澶氬彲鍙犲姞20娆°€俓n宸ㄥ瀷鍐伴湝浜$伒锛氭敾鍑绘椂锛屼娇鐩爣闄峰叆<color=#28d9ed>鍐板喕</color>鐘舵€侊紱鍙楀埌鏀诲嚮鏃讹紝鏈�<color=#28d9ed>80%</color>鐨勫嚑鐜囦娇鍏ㄤ綋鏁屼汉闄峰叆<color=#28d9ed>鍐板喕</color>鐘舵€侊紝鎸佺画<color=#28d9ed>1鍥炲悎</color>銆�"
       },
-      "icon": "MT_Passive_1_Water",
-      "debuff": [
-        "BT_FREEZE"
-      ]
+      "icon": "MT_Passive_1_Water"
     },
     {
       "name": {
@@ -120,35 +117,19 @@
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>60%</color> of Max Health or lower, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Applies an irremovable effect that increases Effectiveness/Invulnerability for 3/1 turns, respectively, and recovers Weakness Gauge by 30%, then summons a Giant Ice Revenant underling. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Ice Nine</color>: Used when Enraged ends.\\nAttacks all enemies and inflicts Frozen on them. This effect ignores the target's Resilience.\\n\\n<color=#ffd732>If Enraged within 3 turns, grants 80 Chain Points.</color>",
-        "jp": "最大HPの<color=#28d9ed>60%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な効果命中UPを3ターン、無敵を1ターンの間付与し、WGを30%回復した後、手下【零氷の亡霊】を召喚する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【アイスナイン】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に<color=#28d9ed>凍結</color>を付与する。この効果は対象の効果抵抗を無視する。\\n\\n<color=#ffd732>戦闘開始時から3ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
+        "jp": "鏈€澶P銇�<color=#28d9ed>60%</color>浠ヤ笅銇仾銈嬨仺<color=#28d9ed>銆愮媯鏆村寲銆�</color>鐘舵厠銇垏銈婃浛銈忋倞銆佹敾鎾冨姏銇ㄣ偣銉斻兗銉夈亴<color=#28d9ed>15%</color>UP銇欍倠銆傘亾銇姽鏋溿伅銉栥儸銈ゃ偗銇欍倠銇ㄨВ闄ゃ仌銈屻倠銆俓n\\n<color=#28d9ed>銆愮媯鏆村寲銆�</color>锛氳嚜鍒嗐伀瑙i櫎涓嶅彲鑳姐仾鍔规灉鍛戒腑UP銈�3銈裤兗銉炽€佺劇鏁点倰1銈裤兗銉炽伄闁撲粯涓庛仐銆乄G銈抂Buff_V_common_monster_passive_wg2]鍥炲京銇椼仧寰屻€佹墜涓嬨€愰浂姘枫伄浜¢湂銆戙倰鍙枤銇欍倠銆傘€愮媯鏆村寲銆戙伅3銈裤兗銉炽伄闁撴寔缍氥仚銈嬨€俓n\\n<color=#28d9ed>銆愩偄銈ゃ偣銉娿偆銉炽€�</color>锛氥€愮媯鏆村寲銆戠祩浜嗘檪銇櫤鍕曘仚銈嬨€俓n鏁靛叏浣撱伀銉€銉°兗銈搞倰涓庛亪銆佸璞°伀<color=#28d9ed>鍑嶇祼</color>銈掍粯涓庛仚銈嬨€傘亾銇姽鏋溿伅瀵捐薄銇姽鏋滄姷鎶椼倰鐒¤銇欍倠銆俓n\\n<color=#ffd732>鎴」棙闁嬪鏅傘亱銈�3銈裤兗銉充互鍐呫伀銆愮媯鏆村寲銆戙仐銇熷牬鍚堛€佹暤銇獵P銈�80鐛插緱銇曘仜銈嬨€�</color>",
         "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 효과 적중 증가를 3턴/해제 가능한 무적 효과를 1턴 동안 부여하고 WG 30%를 회복한 뒤 그녀의 하수인인 거대 얼음 망령을 소환합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>아이스 나인</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 대상을 빙결 상태로 만듭니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
         "zh": "若生命值降至上限的<color=#28d9ed>60%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的效果命中提升/无敌效果,分别持续3回合/1回合,并使WG恢复30%,同时召唤她的手下巨型冰霜亡灵。狂暴化持续3回合。\\n\\n<color=#28d9ed>九尺冰寒</color>:狂暴化结束时发动。\\n攻击全体敌人,并使目标陷入冰冻状态。该效果无视目标的效果抵抗。\\n\\n<color=#ffd732>在3回合内陷入狂暴化状态时,恢复80CP。</color>"
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
+        "BT_STAT|ST_BUFF_CHANCE_IR",
         "BT_INVINCIBLE",
-        "BT_STAT|ST_BUFF_CHANCE_IR"
+        "BT_CP_CHARGE"
       ],
       "debuff": [
         "BT_FREEZE"
       ]
-    },
-    {
-      "name": {
-        "en": "Ice Nine",
-        "jp": "アイスナイン",
-        "kr": "아이스 나인",
-        "zh": "九尺冰寒"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }
