@@ -18,7 +18,7 @@
   "level": 30,
   "icons": "4076001",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_DOT_POISON",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_DOT_POISON",
   "location": {
     "dungeon": {
       "en": "Glicys (Stage 2)",
@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50202002",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -101,9 +101,9 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive Effect)\\nGlicys's underlings have the following abilities.\\n\\nIce Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Reduces the <color=#28d9ed>Defense</color> of all allies by <color=#28d9ed>1%</color> when hit. This effect stacks up to 20 times.\\nGiant Ice Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Frozen</color> on all enemies for <color=#28d9ed>1 turn(s)</color> when hit.",
-        "jp": "(パッシブ効果)\\n【グリシス】の手下は以下のような能力を持つ。\\n\\n【氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与するが、攻撃を受けた時、味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>-1%</color>DOWNさせる。この効果は最大20回まで累積する。\\n【零氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与し、攻撃を受けた時、<color=#28d9ed>80%</color>の確率で敵全体に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
-        "kr": "(패시브 효과)\\n글리시스의 하수인들은 다음과 같은 능력을 가집니다.\\n\\n얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키지만, 피격 시 아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>-1%</color> 감소시킵니다. 해당 효과는 최대 20회 누적됩니다.\\n거대 얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키고, 피격 시 <color=#28d9ed>80%</color> 확률로 적 전체를 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>시킵니다.",
-        "zh": "(被动效果)\\n克里希丝的手下拥有以下能力。\\n\\n冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态;受到攻击时,使全体友军的<color=#28d9ed>防御力</color>降低<color=#28d9ed>-1%</color>。该效果最多可叠加20次。\\n巨型冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态;受到攻击时,有<color=#28d9ed>80%</color>的几率使全体敌人陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>1回合</color>。"
+        "jp": "(パッシブ効果)\\n【グリシス】の手下は以下のような能力を持つ。\\n\\n【氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与するが、攻撃を受けた時、味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>1%</color>DOWNさせる。この効果は最大20回まで累積する。\\n【零氷の亡霊】:攻撃時、対象に<color=#28d9ed>凍結</color>を付与し、攻撃を受けた時、<color=#28d9ed>80%</color>の確率で敵全体に<color=#28d9ed>凍結</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "(패시브 효과)\\n글리시스의 하수인들은 다음과 같은 능력을 가집니다.\\n\\n얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키지만, 피격 시 아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1%</color> 감소시킵니다. 해당 효과는 최대 20회 누적됩니다.\\n거대 얼음 망령 : 공격 시 대상을 <color=#28d9ed>빙결</color>시키고, 피격 시 <color=#28d9ed>80%</color> 확률로 적 전체를 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>시킵니다.",
+        "zh": "(被动效果)\\n克里希丝的手下拥有以下能力。\\n\\n冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态;受到攻击时,使全体友军的<color=#28d9ed>防御力</color>降低<color=#28d9ed>1%</color>。该效果最多可叠加20次。\\n巨型冰霜亡灵:攻击时,使目标陷入<color=#28d9ed>冰冻</color>状态;受到攻击时,有<color=#28d9ed>80%</color>的几率使全体敌人陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Passive_1_Water",
       "debuff": [
@@ -126,29 +126,13 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
+        "BT_STAT|ST_BUFF_CHANCE_IR",
         "BT_INVINCIBLE",
-        "BT_STAT|ST_BUFF_CHANCE_IR"
+        "BT_CP_CHARGE"
       ],
       "debuff": [
         "BT_FREEZE"
       ]
-    },
-    {
-      "name": {
-        "en": "Ice Nine",
-        "jp": "アイスナイン",
-        "kr": "아이스 나인",
-        "zh": "九尺冰寒"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

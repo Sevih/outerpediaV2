@@ -512,7 +512,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "MY_TEAM_HIGHEST_ATK"
       },
       {
         "type": "BT_STAT|ST_SPEED",
@@ -684,7 +684,7 @@
       {
         "type": "BT_DOT_CURSE",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       }
     ]
   },
@@ -1052,7 +1052,7 @@
       {
         "type": "BT_STAT|ST_COUNTER_RATE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "ME"
       },
       {
         "type": "BT_EXTEND_BUFF",
@@ -1364,7 +1364,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_ONE"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_AP_CHARGE",
@@ -1436,14 +1436,14 @@
       {
         "type": "BT_STAT|ST_ATK",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       }
     ],
     "s3": [
       {
         "type": "BT_DOT_POISON",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -1547,7 +1547,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       }
     ]
   },
@@ -2026,7 +2026,7 @@
       {
         "type": "BT_AGGRO",
         "debuff": true,
-        "target": "ENEMY_TEAM",
+        "target": "ENEMY",
         "burst": true
       }
     ],
@@ -2080,7 +2080,7 @@
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_STAT|ST_ATK",
@@ -4104,7 +4104,7 @@
       {
         "type": "IG_Buff_Effect_2000076_Interruption",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_SHIELD_BASED_CASTER",
@@ -4139,7 +4139,7 @@
       {
         "type": "BT_SHIELD_BASED_CASTER",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       }
     ],
     "s2": [
@@ -4168,7 +4168,7 @@
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ME"
       }
     ],
     "chain": [
@@ -5474,7 +5474,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "MY_TEAM"
       }
     ],
     "chain": [
@@ -5961,7 +5961,7 @@
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_SKILL_TARGET"
       },
       {
         "type": "BT_REVERSE_HEAL_BASED_CASTER",
@@ -6729,7 +6729,7 @@
       {
         "type": "BT_FREEZE",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "s3": [

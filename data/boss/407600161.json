@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50202012",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -66,11 +66,14 @@
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect) Deals increased damage if the target is inflicted with <color=#28d9ed>Frozen</color>.\\n(Triggered Effect) When attacking a target inflicted with Frozen, performs an additional attack on all enemies and reduces Priority by <color=#28d9ed>20%</color>.",
-        "jp": "(パッシブ効果)凍結状態の対象を攻撃時、敵全体に追加攻撃を与え、行動ゲージを<color=#28d9ed>-20%</color>DOWNさせる。\\n(発動効果)対象が<color=#28d9ed>凍結</color>状態の場合、ダメージがUPする。",
-        "kr": "(패시브 효과) 대상이 <color=#28d9ed>빙결</color> 상태라면 피해량이 증가합니다.\\n(발동 효과) 빙결 대상 공격 시 적 전체에게 추가 공격을 사용하고, 행동 게이지를 <color=#28d9ed>-20%</color> 감소시킵니다.",
-        "zh": "(被动效果)目标若处于<color=#28d9ed>冰冻</color>状态,则伤害量提升。\\n(触发效果)攻击冰冻状态目标时,对全体敌人发动额外攻击,并使行动值提升<color=#28d9ed>-20%</color>。"
+        "jp": "(パッシブ効果)凍結状態の対象を攻撃時、敵全体に追加攻撃を与え、行動ゲージを<color=#28d9ed>20%</color>DOWNさせる。\\n(発動効果)対象が<color=#28d9ed>凍結</color>状態の場合、ダメージがUPする。",
+        "kr": "(패시브 효과) 대상이 <color=#28d9ed>빙결</color> 상태라면 피해량이 증가합니다.\\n(발동 효과) 빙결 대상 공격 시 적 전체에게 추가 공격을 사용하고, 행동 게이지를 <color=#28d9ed>20%</color> 감소시킵니다.",
+        "zh": "(被动效果)目标若处于<color=#28d9ed>冰冻</color>状态,则伤害量提升。\\n(触发效果)攻击冰冻状态目标时,对全体敌人发动额外攻击,并使行动值提升<color=#28d9ed>20%</color>。"
       },
       "icon": "Skill_Second_4076001",
+      "buff": [
+        "SYS_BUFF_ADDITIVE_ATTACK"
+      ],
       "debuff": [
         "BT_ACTION_GAUGE"
       ]
@@ -110,8 +113,8 @@
       },
       "icon": "MT_Passive_1_Water",
       "debuff": [
-        "BT_FREEZE",
-        "BT_STAT|ST_SPEED"
+        "BT_STAT|ST_SPEED",
+        "BT_FREEZE"
       ]
     },
     {
@@ -142,36 +145,20 @@
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
-        "en": "Switches to <color=#28d9ed>Enrage</color> state when Health drops below <color=#28d9ed>60%</color> of max Health, increasing Attack and Speed by <color=#28d9ed>15%</color>. The effect lasts until Break occurs.\\n\\n<color=#28d9ed>Enrage Entry</color>: Grants self Irremovable Effectiveness Increase and Invincibility for 3 turns and 1 turn respectively, recovers WG by 30%, and summons her servant, the Giant Ice Revenant. Enrage lasts for 3 turns.\\n\\n<color=#28d9ed>Ice Nine</color>: Activates when Enrage ends.\\nAttacks all enemies and inflicts Frozen on the targets. This effect ignores Resilience.\\n\\n<color=#ffd732>Restores 80 CP if Enrage is triggered within 3 turns.</color>",
+        "en": "Switches to <color=#28d9ed>Enrage</color> state when Health drops below <color=#28d9ed>60%</color> of max Health, increasing Attack and Speed by <color=#28d9ed>15%</color>. The effect lasts until Break occurs.\\n\\n<color=#28d9ed>Enrage Entry</color>: Grants self Irremovable Accuracy Increase and Invincibility for 3 turns and 1 turn respectively, recovers WG by 30%, and summons her servant, the Giant Ice Revenant. Enrage lasts for 3 turns.\\n\\n<color=#28d9ed>Ice Nine</color>: Activates when Enrage ends.\\nAttacks all enemies and inflicts Frozen on the targets. This effect ignores Resilience.\\n\\n<color=#ffd732>Restores 80 CP if Enrage is triggered within 3 turns.</color>",
         "jp": "最大HPの<color=#28d9ed>60%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な効果命中UPを3ターン、無敵を1ターンの間付与し、WGを30%回復した後、手下【零氷の亡霊】を召喚する。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>【アイスナイン】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、対象に<color=#28d9ed>凍結</color>を付与する。この効果は対象の効果抵抗を無視する。\\n\\n<color=#ffd732>戦闘開始時から3ターン以内に【狂暴化】した場合、敵にCPを80獲得させる。</color>",
         "kr": "최대 체력의 <color=#28d9ed>60%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 효과 적중 증가/무적 효과를 각각 3턴/1턴 동안 부여하고 WG 30%를 회복한 뒤 그녀의 하수인인 거대 얼음 망령을 소환합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>아이스 나인</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 대상을 빙결 상태로 만듭니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n\\n<color=#ffd732>3턴 안에 광폭화할 시 80의 CP를 회복시킵니다.</color>",
         "zh": "若生命值降至上限的<color=#28d9ed>60%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至进入力竭状态为止。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的效果命中提升/无敌效果,分别持续3回合/1回合,并使WG恢复30%,同时召唤她的手下巨型冰霜亡灵。狂暴化持续3回合。\\n\\n<color=#28d9ed>九尺冰寒</color>:狂暴化结束时发动。\\n攻击全体敌人,并使目标陷入冰冻状态。该效果无视目标的效果抵抗。\\n\\n<color=#ffd732>在3回合内陷入狂暴化状态时,恢复80CP。</color>"
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
+        "BT_STAT|ST_BUFF_CHANCE_IR",
         "BT_INVINCIBLE_IR",
-        "BT_STAT|ST_BUFF_CHANCE_IR"
+        "BT_CP_CHARGE"
       ],
       "debuff": [
         "BT_FREEZE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }
