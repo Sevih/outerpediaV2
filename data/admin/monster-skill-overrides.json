@@ -164,5 +164,8 @@
   },
   "(Passive Effect)\\nReduces <color=#28d9ed>Effectiveness</color> of Fire, Water, and Earth enemies. When an enemy uses a non-attack skill, grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>5 turn(s)</color>. These effects cannot be removed.\\n\\nInflicts a random debuff on the enemy after attacking. These debuffs ignore Immunity buffs on the target.":{
     "add_debuff":["BT_RANDOM"]
+  },
+  "(Passive Effect)\\nIncreases Critical Damage of the caster, and reduces <color=#28d9ed>Critical Hit Chance</color> of Fire, Water, and Earth enemies. These effects cannot be removed.\\nIncreases the effectiveness of <color=#28d9ed>increased stat</color> effects on the caster by <color=#28d9ed>100%</color>.\\n\\nWhen hit, does not take Weakness Gauge damage if the caster is not inflicted with a debuff.\\nRecovers <color=#28d9ed>3</color> Weakness Gauge upon scoring a critical hit on an enemy.\\n\\nIncreases damage taken from <color=#28d9ed>Light</color> enemies and reduces damage dealt to them. Reduces Weakness Gauge damage taken from non-<color=#28d9ed>Light</color> enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\nAfter scoring a critical hit, grants <color=#28d9ed>Harmony of Despair</color> for <color=#28d9ed>3 turn(s)</color>.\\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.":{
+    "remove_buff":["BT_STAT|ST_CRITICAL_RATE_IR"]
   }
 }
