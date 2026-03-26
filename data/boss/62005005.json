@@ -70,7 +70,10 @@
         "kr": "(발동 효과) 아군의 <color=#28d9ed>마법형</color> 캐릭터가 공격했을 때 공격력이 가장 높은 적에게 추가 공격을 합니다. 공격 후 자신의 행동 게이지가 <color=#28d9ed>40%</color> 증가합니다.",
         "zh": "(触发效果)友军中<color=#28d9ed>魔法型</color>角色攻击时,对攻击力最高的敌人发动额外攻击。攻击后,自身行动值提升<color=#28d9ed>40%</color>。"
       },
-      "icon": "Skill_Second_2000081"
+      "icon": "Skill_Second_2000081",
+      "buff": [
+        "SYS_BUFF_ADDITIVE_ATTACK"
+      ]
     },
     {
       "name": {

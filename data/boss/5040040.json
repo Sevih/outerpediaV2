@@ -81,7 +81,10 @@
         "kr": "적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제 후 공격하고, 가장 공격력이 높은 적이 <color=#28d9ed>감전</color>상태라면 <color=#28d9ed>즉사</color>시킵니다.",
         "zh": "解除全体敌人的所有<color=#28d9ed>强化效果</color>后发动攻击,若攻击力最高的敌人处于<color=#28d9ed>触电</color>状态,则使其<color=#28d9ed>即死</color>。"
       },
-      "icon": "Skill_Ultimate_4044003"
+      "icon": "Skill_Ultimate_4044003",
+      "debuff": [
+        "BT_KILL"
+      ]
     },
     {
       "name": {
