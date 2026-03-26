@@ -13,7 +13,7 @@
   "level": 25,
   "icons": "4048001",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_DOT_CURSE,BT_STEAL_BUFF,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_DOT_CURSE,BT_STEAL_BUFF,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
   "location": {
     "dungeon": {
       "en": "Defeat Prototype EX-78 Normal",
@@ -28,7 +28,7 @@
       "zh": "联合挑战"
     },
     "area_id": {
-      "en": "90400000",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -51,7 +51,8 @@
       },
       "icon": "MT_Attack_Sword_1_Dark",
       "buff": [
-        "BT_DAMGE_TAKEN"
+        "BT_DAMGE_TAKEN",
+        "BT_STAT"
       ]
     },
     {
@@ -70,8 +71,8 @@
       },
       "icon": "MT_Attack_Spear_1_Dark",
       "buff": [
-        "BT_STAT|ST_CRITICAL_DMG_RATE",
-        "BT_STAT|ST_CRITICAL_RATE"
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
       ]
     },
     {
@@ -149,28 +150,12 @@
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
         "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_CRITICAL_RATE_IR",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_STAT|ST_CRITICAL_RATE_IR"
       ],
       "debuff": [
         "BT_STUN"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

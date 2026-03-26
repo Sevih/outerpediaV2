@@ -13,7 +13,7 @@
   "level": 25,
   "icons": "4034004",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
   "location": {
     "dungeon": {
       "en": "Defeat Shichifuja Normal",
@@ -28,7 +28,7 @@
       "zh": "联合挑战"
     },
     "area_id": {
-      "en": "90300000",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -100,9 +100,9 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces Attack of all enemies by <color=#28d9ed>90%</color>, but increases damage taken from enemies.\\nWhen an enemy uses skills other than Burst Skills, Dual Attacks, and Skill Chains, increases Priority of the caster by <color=#28d9ed>20%</color>, and reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>.\\nAt the start of the turn, recovers Weakness Gauge of the caster by <color=#28d9ed>10%</color>.\\nIncreases damage dealt by all skills inversely proportional to the number of targets.",
-        "jp": "(パッシブ効果)\\n敵全体の攻撃力を<color=#28d9ed>-90%</color>DOWNさせるが、魔法型の敵から受けるダメージが大幅にUPする。\\n敵がバーストスキル、連携、チェーンスキル以外のスキルを使用時、自分の行動ゲージが<color=#28d9ed>20%</color>UPし、受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。\\nターン開始時、自分のWGを<color=#28d9ed>10%</color>回復する。\\nチェーンスキル以外の固定ダメージ・呪いダメージは<color=#28d9ed>1000</color>を超えない。\\nすべてのスキルは対象が少ないほどダメージがUPする。",
-        "kr": "(패시브 효과)\\n적 전체의 공격력을 <color=#28d9ed>-90%</color> 감소시키지만, 마법형 적에게 받는 피해가 크게 증가합니다.\\n적이 버스트, 협공, 스킬 체인이 아닌 스킬 사용 시 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시키며, 받는 WG 피해를 <color=#28d9ed>50%</color> 감소시킵니다.\\n턴 시작 시 자신의 WG를 <color=#28d9ed>10%</color> 회복합니다.\\n스킬 체인이 아닌 고정 피해 및 저주로 받는 피해는 <color=#28d9ed>1000</color>을 초과하지 않습니다.\\n모든 스킬은 대상이 적을 수록 피해가 증가합니다.",
-        "zh": "(被动效果)\\n使全体敌人的攻击力减少<color=#28d9ed>-90%</color>,但受到魔法型敌人的伤害大幅提升。\\n敌人使用除爆发、夹攻、连携技能以外的技能时,使自身行动值提升<color=#28d9ed>20%</color>,并使受到的WG伤害降低<color=#28d9ed>50%</color>。\\n回合开始时,自身WG恢复<color=#28d9ed>10%</color>。\\n受到的非连携技能固定伤害或诅咒伤害不会超过<color=#28d9ed>1000</color>。\\n目标数量越少,所有技能的伤害越高。"
+        "jp": "(パッシブ効果)\\n敵全体の攻撃力を<color=#28d9ed>90%</color>DOWNさせるが、魔法型の敵から受けるダメージが大幅にUPする。\\n敵がバーストスキル、連携、チェーンスキル以外のスキルを使用時、自分の行動ゲージが<color=#28d9ed>20%</color>UPし、受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。\\nターン開始時、自分のWGを<color=#28d9ed>10%</color>回復する。\\nチェーンスキル以外の固定ダメージ・呪いダメージは<color=#28d9ed>1000</color>を超えない。\\nすべてのスキルは対象が少ないほどダメージがUPする。",
+        "kr": "(패시브 효과)\\n적 전체의 공격력을 <color=#28d9ed>90%</color> 감소시키지만, 마법형 적에게 받는 피해가 크게 증가합니다.\\n적이 버스트, 협공, 스킬 체인이 아닌 스킬 사용 시 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시키며, 받는 WG 피해를 <color=#28d9ed>50%</color> 감소시킵니다.\\n턴 시작 시 자신의 WG를 <color=#28d9ed>10%</color> 회복합니다.\\n스킬 체인이 아닌 고정 피해 및 저주로 받는 피해는 <color=#28d9ed>1000</color>을 초과하지 않습니다.\\n모든 스킬은 대상이 적을 수록 피해가 증가합니다.",
+        "zh": "(被动效果)\\n使全体敌人的攻击力减少<color=#28d9ed>90%</color>,但受到魔法型敌人的伤害大幅提升。\\n敌人使用除爆发、夹攻、连携技能以外的技能时,使自身行动值提升<color=#28d9ed>20%</color>,并使受到的WG伤害降低<color=#28d9ed>50%</color>。\\n回合开始时,自身WG恢复<color=#28d9ed>10%</color>。\\n受到的非连携技能固定伤害或诅咒伤害不会超过<color=#28d9ed>1000</color>。\\n目标数量越少,所有技能的伤害越高。"
       },
       "icon": "MT_Passive_1_Earth",
       "buff": [

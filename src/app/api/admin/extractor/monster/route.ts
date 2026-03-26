@@ -587,7 +587,11 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
     const finishCore = finishDescEn.replace(/[.\s]+$/, '');
     const nameInEnter = finishNameEn && enterDescEn.includes(finishNameEn);
     const descInEnter = finishCore && enterDescEn.includes(finishCore);
-    if (finishDescEn && !nameInEnter && !descInEnter) return;
+    if (finishDescEn && !nameInEnter && !descInEnter) {
+      // No match but no name → just discard the finish entry
+      if (!finishNameEn) { skills.splice(finishIdx, 1); }
+      return;
+    }
 
     // Merge buffs/debuffs from finish into enter
     const enterBuff = (enter.buff as string[]) ?? [];

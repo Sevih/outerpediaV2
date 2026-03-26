@@ -13,7 +13,7 @@
   "level": 25,
   "icons": "4034005",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
   "location": {
     "dungeon": {
       "en": "Defeat Deep Sea Guardian Normal",
@@ -28,7 +28,7 @@
       "zh": "联合挑战"
     },
     "area_id": {
-      "en": "90200000",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -71,7 +71,7 @@
       },
       "icon": "MT_Attack_Magic_1_Water",
       "debuff": [
-        "IG_Buff_Dot_Bleed_Interruption_D"
+        "BT_DOT_BLEED_IR"
       ]
     },
     {
@@ -112,7 +112,11 @@
       },
       "icon": "MT_Passive_1_Water",
       "buff": [
-        "BT_COOL_CHARGE"
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_TARGET",
+        "BT_BLEED_ENHANCE"
       ]
     },
     {
@@ -134,22 +138,6 @@
         "BT_DAMGE_TAKEN",
         "BT_STAT|ST_ATK_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "(Passive Effect)\\nIncreases damage taken from Fire enemies by <color=#28d9ed>30%</color>, and increases damage taken from single-target attacks by <color=#28d9ed>20%</color>.\\n\\nReduces damage taken from area attacks by <color=#28d9ed>30%</color>, and increases Priority by <color=#28d9ed>20%</color> when hit.",
-        "jp": "(パッシブ効果)\\n火属性の敵から受けるダメージが<color=#28d9ed>-30%</color>UPし、単体攻撃で受けるダメージが<color=#28d9ed>-20%</color>UPする。\\n\\nダメージを受けた場合、行動ゲージが<color=#28d9ed>20%</color>UPし、範囲攻撃で受けるダメージが<color=#28d9ed>30%</color>DOWNする。",
-        "kr": "(패시브 효과)\\n화속성 대상에게 받는 피해가 <color=#28d9ed>-30%</color> 증가하며, 단일 공격으로 받는 피해가 <color=#28d9ed>-20%</color> 증가합니다.\\n\\n범위 공격으로 받는 피해가 <color=#28d9ed>30%</color> 감소하며, 피격 시 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.",
-        "zh": "(被动效果)\\n使受到来自火属性目标的伤害提升<color=#28d9ed>-30%</color>,并使因单体攻击受到的伤害提升<color=#28d9ed>-20%</color>。\\n\\n使因范围攻击受到的伤害降低<color=#28d9ed>30%</color>,且在受到攻击时,使行动值提升<color=#28d9ed>20%</color>。"
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

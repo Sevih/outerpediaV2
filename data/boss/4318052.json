@@ -13,7 +13,7 @@
   "level": 80,
   "icons": "4018002",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_AGGRO,BT_SILENCE,BT_FREEZE,BT_STONE,BT_SEALED,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_AGGRO,BT_SILENCE,BT_FREEZE,BT_STONE,BT_SEALED,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
   "location": {
     "dungeon": {
       "en": "Defeat the Annihilator Hard",
@@ -28,7 +28,7 @@
       "zh": "联合挑战"
     },
     "area_id": {
-      "en": "90100100",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,10 +70,10 @@
       },
       "icon": "Skill_Second_4014002",
       "debuff": [
-        "BT_STAT|ST_ATK",
-        "BT_STAT|ST_CRITICAL_DMG_RATE",
         "BT_STAT|ST_CRITICAL_RATE",
-        "BT_ACTION_GAUGE"
+        "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "BT_ACTION_GAUGE",
+        "BT_STAT|ST_ATK"
       ]
     },
     {
@@ -116,7 +116,10 @@
       "icon": "MT_Passive_1_Light",
       "buff": [
         "BT_SEAL_COUNTER",
-        ""
+        "BT_AP_DECREASE"
+      ],
+      "debuff": [
+        "BT_AP_INCREASE"
       ]
     },
     {
@@ -135,26 +138,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_COOL_CHARGE",
         "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_COOL_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }
