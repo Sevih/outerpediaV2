@@ -81,7 +81,10 @@
         "kr": "적을 공격 후 추가 턴을 획득합니다.\\n\\n공격 전 대상의 현재 체력이 <color=#28d9ed>90%</color> 이하라면 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>우메이치린</color> 효과를 획득하고, 피해량이 증가합니다.\\n\\n대상의 현재 체력이 <color=#28d9ed>90%</color>를 초과한다면 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>사쿠라치루</color> 효과를 획득하고, <color=#28d9ed>CP</color>를 <color=#28d9ed>15</color> 감소시킵니다.",
         "zh": "攻击敌人后,获得追加回合。\\n\\n若目标HP≤<color=#28d9ed>90%</color>,则获得<color=#28d9ed>梅一知林</color>效果,持续<color=#28d9ed>3</color>回合,并提升造成的伤害。\\n\\n若目标HP><color=#28d9ed>90%</color>,则获得<color=#28d9ed>樱散</color>效果,持续<color=#28d9ed>3</color>回合,并减少<color=#28d9ed>CP</color><color=#28d9ed>15</color>点。"
       },
-      "icon": "Skill_Ultimate_2000065"
+      "icon": "Skill_Ultimate_2000065",
+      "debuff": [
+        "BT_CP_CHARGE"
+      ]
     },
     {
       "name": {
@@ -97,7 +100,10 @@
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_CP_CHARGE"
+      ]
     }
   ]
 }

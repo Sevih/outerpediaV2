@@ -92,7 +92,10 @@
         "kr": "(패시브 효과)\\n전투 개시 시점에 행동 게이지가 <color=#28d9ed>100%</color> 증가합니다.\\n<color=#28d9ed>약화 효과</color> 보유 대상 공격 시 피해량이 증가합니다.\\n스킬 사용 후 적 팀의 <color=#28d9ed>CP</color>를 <color=#28d9ed>50</color> 감소시킵니다.",
         "zh": "(被动效果)\\n战斗开始时,行动值提升<color=#28d9ed>100%</color>。\\n攻击附带<color=#28d9ed>弱化效果</color>的目标时,使伤害量提升。\\n使用技能后,使敌方的<color=#28d9ed>CP</color>降低<color=#28d9ed>50</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "debuff": [
+        "BT_CP_CHARGE"
+      ]
     }
   ]
 }
