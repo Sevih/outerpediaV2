@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
+import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import LootTable from '@/app/components/guides/LootTable';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
@@ -35,21 +36,22 @@ const preloadedBosses: Record<string, Boss> = {
 
 /* ── Core boss ID mapping ───────────────────────────────── */
 
-const CORE_IDS = ['404400462', '404400461', '404400460', '404400459', '404400450'];
+const DEDICATED_CORE_IDS: Record<string, string> = {
+  '404400362': '404400462', //stage 13
+  '404400361': '404400461', //stage 12
+  '404400360': '404400460', //stage 11
+  '404400359': '404400459', //stage 10
+};
 
-function getCoreId(versionIndex: number): string {
-  return CORE_IDS[Math.min(versionIndex, CORE_IDS.length - 1)];
+function getCoreId(bossId: string): string {
+  return DEDICATED_CORE_IDS[bossId] ?? `404400450S${bossId}`;
 }
 
 /* ── Component ──────────────────────────────────────────── */
 
 export default function SacreedGuardianGuide() {
   const { lang } = useI18n();
-  const [coreId, setCoreId] = useState(CORE_IDS[0]);
-
-  const handleVersionChange = useCallback((index: number) => {
-    setCoreId(getCoreId(index));
-  }, []);
+  const [bossId, setBossId] = useState('404400362');
 
   return (
     <GuideTemplate
@@ -62,13 +64,13 @@ export default function SacreedGuardianGuide() {
         modeKey="Special Request: Ecology Study"
         defaultBossId="404400362"
         preloadedBosses={preloadedBosses}
-        onVersionChange={handleVersionChange}
+        onBossIdChange={setBossId}
       />
-      <BossDisplay
-        key={coreId}
+      <MinionDisplay
         bossName="Deformed Inferior Core"
         modeKey="Special Request: Ecology Study"
-        defaultBossId={coreId}
+        versionIndex={0}
+        defaultBossId={getCoreId(bossId)}
       />
       <hr className="my-6 border-neutral-700" />
       <TacticalTips sections={[{ title: 'tactical', tips: tips.tactical }]} />
