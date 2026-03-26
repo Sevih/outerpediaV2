@@ -17,7 +17,7 @@
   "element": "Light",
   "level": 80,
   "icons": "2000062",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_ACTION_GAUGE",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_ACTION_GAUGE",
   "StatBuffImmune": "ST_DEF,ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55500004",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -111,7 +111,14 @@
         "kr": "(패시브 효과)\\n복수/반격이 아닌 공격으로는 WG 피해를 받지 않습니다.\\n적의 복수/반격/신속 대응 시 자신이 받는 WG 피해는 <color=#28d9ed>300%</color> 증가하고, 자신의 행동 게이지가 <color=#28d9ed>20%</color>감소합니다.\\n자신의 속성에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n화속성 : 능력치 증가 효율 +70% \\n수속성 : 속도 +10% \\n지속성 : 치명 피해 +50% \\n명속성 : 행동 시 보스에게 WG 1 피해\\n암속성 : 공격력 +30%",
         "zh": "(被动效果)\\n不会因复仇/反击外的攻击受到WG伤害。\\n受到敌人的复仇/反击/迅速应对攻击时,使自身所受WG伤害提升<color=#28d9ed>300%</color>,并使自身行动值降低<color=#28d9ed>20%</color>。\\n根据自身属性获得<color=#28d9ed>特殊效果</color>。\\n\\n火属性:能力值提升率+70%\\n水属性:速度+10%\\n土属性:暴击伤害+50%\\n光属性:行动时,对首领造成1点WG伤害\\n暗属性:攻击力+30%"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_ACTION_GAUGE_ENHANCE_IR",
+        "COURAGE_DESPAIR_ELEM"
+      ],
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -131,22 +138,6 @@
       "debuff": [
         "BT_SILENCE_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "Quasar Bombardment",
-        "jp": "クエーサー砲撃",
-        "kr": "퀘이사 포격",
-        "zh": "类星体炮击"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086013"
     }
   ]
 }

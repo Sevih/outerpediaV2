@@ -17,7 +17,7 @@
   "element": "Light",
   "level": 110,
   "icons": "2000063",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_REMOVE_BUFF,BT_ACTION_GAUGE",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_REMOVE_BUFF,BT_ACTION_GAUGE",
   "StatBuffImmune": "ST_DEF,ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55500004",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -119,7 +119,13 @@
       },
       "icon": "MT_Passive_1_Light",
       "buff": [
-        "BT_ACTION_GAUGE"
+        "BT_ACTION_GAUGE",
+        "BT_ACTION_GAUGE_ENHANCE_IR",
+        "COURAGE_DESPAIR_ELEM"
+      ],
+      "debuff": [
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
       ]
     },
     {
@@ -137,26 +143,13 @@
         "zh": "(被动效果)\\n战斗开始时或队伍切换后,对全体敌人施加3次持续<color=#28d9ed>3回合</color>的<color=#28d9ed>诅咒</color>。(无视目标的效果抵抗和免疫效果)\\n使敌方所有攻击型与魔法型同伴陷入无法解除的<color=#28d9ed>沉默</color>状态。\\n自身生效的<color=#28d9ed>能力值提升</color>效果提升<color=#28d9ed>100%</color>,但作为<color=#28d9ed>能力值降低</color>效果生效。\\n\\n首领受到的<color=#28d9ed>诅咒/固定伤害</color>的伤害不会超过<color=#28d9ed>5000</color>。\\n被速度型与防御型敌人攻击时所受伤害增加。此外,被暗属性敌人攻击时所受伤害伤害增加。"
       },
       "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_STAT_BUFF_ENHANCE"
+      ],
       "debuff": [
-        "BT_DOT_CURSE",
-        "BT_SILENCE_IR"
+        "BT_SILENCE_IR",
+        "BT_DOT_CURSE"
       ]
-    },
-    {
-      "name": {
-        "en": "Quasar Bombardment",
-        "jp": "クエーサー砲撃",
-        "kr": "퀘이사 포격",
-        "zh": "类星体炮击"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086013"
     }
   ]
 }

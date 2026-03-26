@@ -228,5 +228,13 @@
   "If the caster is not inflicted with a debuff, Weakness Gauge cannot be reduced.\\nIncreases Weakness Gauge damage taken from enemies granted Stealth by 100%.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increases Attack by 30%\\nMage: Increases Critical Damage by 50%\\nDefender: When hit by a single attack, grants Stealth for 2 turn(s)\\nRanger: Increases Effectiveness by 100%\\nHealer: Increases Priority recovery efficiency by 50%":{
     "add_buff": ["UNIQUE_DAHLIA_A"],
     "remove_buff":["BT_WG_DMG","BT_STEALTHED_IR"]
+  },
+  "(Passive Effect)\\nDoes not take Weakness Gauge damage from attacks that are not Revenge/Counterattack.\\nWhen an enemy activates a Counterattack, Revenge, or Agile Response, increases Weakness Gauge damage taken by the caster by <color=#28d9ed>300%</color>, and reduces Priority of the caster by <color=#28d9ed>20%</color>.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their element.\\n\\nFire: Increases efficiency of increased stat effects by 70%\\nWater: Increases Speed by 10%\\nEarth: Increases Critical Damage by 50%\\nLight: When performing an action, deals 1 Weakness Gauge damage to the Boss\\nDark: Increases Attack by 30%":{
+    "add_buff": ["COURAGE_DESPAIR_ELEM"],
+    "remove_buff":["BT_STAT_BUFF_ENHANCE"]
+  },
+  "(Passive Effect)\\nAfter being hit, increases Priority by <color=#28d9ed>20%</color>.\\nWhen an enemy without an Enhancement Effect performs an action, restores Weakness Gauge by <color=#28d9ed>10</color>.\\nUpon Break, reduces caster's <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Damage</color> for 3 turns.\\nGains <color=#28d9ed>Special Effects</color> based on caster's Element. (Cannot stack the same element effect.)\\n\\nFire: All Ally Stats boost efficiency +70%\\nWater: All Ally Speed +10%\\nEarth: All Ally Critical Damage +50%\\nLight: All Ally Weakness Gauge Reduction +50%\\nDark: All Ally Attack +30%":{
+    "add_buff": ["COURAGE_DESPAIR_ELEM"],
+    "add_debuff":["BT_STAT|ST_ATK","BT_STAT|ST_CRITICAL_DMG_RATE"]
   }
 }
