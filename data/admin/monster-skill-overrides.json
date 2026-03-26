@@ -144,5 +144,11 @@
   },
   "(Passive Effect)\\nGlicys's underlings have the following abilities.\\n\\nIce Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Reduces the <color=#28d9ed>Defense</color> of all allies by <color=#28d9ed>1%</color> when hit. This effect stacks up to 20 times.\\nGiant Ice Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Frozen</color> on all enemies for <color=#28d9ed>1 turn(s)</color> when hit.":{
     "add_debuff": ["BT_FREEZE"]
+  },
+  "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> a single enemy.":{
+    "remove_debuff":["BT_SEALED_RESURRECTION"]
+  },
+  "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> all enemies.":{
+      "remove_debuff":["BT_SEALED_RESURRECTION"]
   }
 }
