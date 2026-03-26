@@ -17,7 +17,7 @@
   "element": "Light",
   "level": 50,
   "icons": "4076008",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50204005",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -145,26 +145,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
         "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_CP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

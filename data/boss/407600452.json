@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50201003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -55,11 +55,11 @@
         "zh": "使<color=#28d9ed>泰格里尔</color>的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>,并对自身造成<color=#28d9ed>标记</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Attack_Claw_1_Earth",
-      "debuff": [
-        "BT_MARKING"
-      ],
       "buff": [
         "BT_STAT|ST_ATK"
+      ],
+      "debuff": [
+        "BT_MARKING"
       ]
     },
     {
@@ -78,9 +78,9 @@
       },
       "icon": "MT_Passive_1_Earth",
       "buff": [
+        "BT_STAT|ST_DEF",
         "BT_INVINCIBLE",
-        "BT_STAT|ST_ATK",
-        "BT_STAT|ST_DEF"
+        "BT_STAT|ST_ATK"
       ]
     },
     {

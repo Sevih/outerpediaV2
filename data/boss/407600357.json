@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50201008",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -126,26 +126,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
+        "BT_STAT|ST_ATK_IR",
         "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_CP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }
