@@ -18,7 +18,7 @@
   "level": 90,
   "icons": "4076009",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
   "location": {
     "dungeon": {
       "en": "Amadeus (Stage 9)",
@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50205009",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -112,12 +112,12 @@
         "zh": "(被动效果)\\n使火/水/土属性敌人的<color=#28d9ed>效果命中</color>降低。敌人使用非攻击类技能时,使<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>5回合</color>。这些效果不会被解除。\\n\\n攻击后,对敌人造成随机弱化效果。这些弱化效果无视目标的免疫强化效果。"
       },
       "icon": "MT_Passive_1_Dark",
-      "debuff": [
-        "BT_RANDOM",
-        "BT_STAT|ST_BUFF_CHANCE_IR"
-      ],
       "buff": [
         "BT_STAT|ST_CRITICAL_RATE_IR"
+      ],
+      "debuff": [
+        "BT_STAT|ST_BUFF_CHANCE_IR",
+        "BT_RANDOM"
       ]
     },
     {
@@ -152,26 +152,13 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
+        "IG_Buff_Effect_4076009_Interruption",
         "BT_DAMGE_TAKEN",
-        "HARMONY_DESPAIR"
+        "BT_CP_CHARGE"
+      ],
+      "debuff": [
+        "BT_KILL_UNDER_HP_RATE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

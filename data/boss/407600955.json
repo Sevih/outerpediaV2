@@ -18,7 +18,7 @@
   "level": 60,
   "icons": "4076009",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_AGGRO,BT_SILENCE,BT_ACTION_GAUGE,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
   "location": {
     "dungeon": {
       "en": "Amadeus (Stage 6)",
@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50205006",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -148,26 +148,13 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
+        "IG_Buff_Effect_4076009_Interruption",
         "BT_DAMGE_TAKEN",
-        "HARMONY_DESPAIR"
+        "BT_CP_CHARGE"
+      ],
+      "debuff": [
+        "BT_KILL_UNDER_HP_RATE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }
