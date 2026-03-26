@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55600003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -74,11 +74,11 @@
         "zh": "攻击全体敌人,并解除目标的所有<color=#28d9ed>强化效果</color>。\\n攻击时,此攻击的穿透力提升<color=#28d9ed>30%</color>。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Second_4086026",
-      "debuff": [
-        "BT_REMOVE_BUFF"
-      ],
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
       ]
     },
     {
@@ -113,24 +113,9 @@
       },
       "icon": "MT_Passive_1_Water",
       "buff": [
+        "BT_ACTION_GAUGE_ENHANCE_IR",
         "UNIQUE_DAHLIA_A"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086026"
     }
   ]
 }

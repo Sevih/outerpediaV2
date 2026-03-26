@@ -12,7 +12,7 @@
     "add_buff": ["UNIQUE_DAHLIA_A"]
   },
   {
-    "pattern": "reduces?\\s+(<[^>]+>)?(Chain Points|CP)(<[^>]+>)?\\s+of\\s+enem",
+    "pattern": "reduces?\\s+(the\\s+enemy\\s+team's\\s+)?(<[^>]+>)?(Chain Points|CP)(<[^>]+>)?(\\s+of\\s+enem|\\s+by\\s+)",
     "add_debuff": ["BT_CP_CHARGE"]
   },
   {

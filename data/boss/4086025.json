@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55600001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -104,24 +104,12 @@
       },
       "icon": "MT_Passive_1_Dark",
       "buff": [
+        "BT_ACTION_GAUGE_ENHANCE_IR",
         "UNIQUE_DAHLIA_A"
+      ],
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_CASTER_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086025"
     }
   ]
 }

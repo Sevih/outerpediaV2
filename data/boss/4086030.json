@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55600004",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -74,11 +74,11 @@
         "zh": "攻击全体敌人,并解除目标的所有<color=#28d9ed>强化效果</color>。\\n攻击时,此攻击的穿透力提升<color=#28d9ed>30%</color>。\\n此技能发动后,敌人不会触发反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Second_4086026",
-      "debuff": [
-        "BT_REMOVE_BUFF"
-      ],
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
       ]
     },
     {
@@ -113,6 +113,7 @@
       },
       "icon": "MT_Passive_1_Water",
       "buff": [
+        "BT_ACTION_GAUGE_ENHANCE_IR",
         "UNIQUE_DAHLIA_A"
       ]
     },
@@ -131,25 +132,12 @@
         "zh": "通过连携技能受到的WG伤害量降低<color=#28d9ed>50%</color>。\\n回合结束时,若自身未附带弱化效果,则WG恢复<color=#28d9ed>20</color>,并降低敌方队伍CP<color=#28d9ed>50</color>。\\n固定伤害不会超过<color=#28d9ed>10000</color>。"
       },
       "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_WG_DMG"
+      ],
       "debuff": [
         "BT_CP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086026"
     }
   ]
 }
