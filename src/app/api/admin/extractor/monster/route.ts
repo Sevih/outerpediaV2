@@ -334,6 +334,40 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
     }
   }
 
+  // Third pass: for monsters with HPLineCount not referenced by any dungeon,
+  // try sequential HPLineCount inheritance (e.g. 551000032 inherits from 551000031)
+  for (const s of gd.spawns) {
+    if (!s.HPLineCount) continue;
+    const mids = new Set<string>();
+    for (const idx of ['ID0', 'ID1', 'ID2', 'ID3']) {
+      const val = s[idx];
+      if (val && monsterIds.has(val)) mids.add(val);
+    }
+    if (mids.size === 0) continue;
+    let anyLinked = false;
+    for (const mid of mids) { if (result.has(mid)) { anyLinked = true; break; } }
+    if (anyLinked) continue;
+
+    const hpc = parseInt(s.HPLineCount);
+    if (isNaN(hpc)) continue;
+    for (let delta = 1; delta <= 5; delta++) {
+      const siblingKey = String(hpc - delta);
+      const sibling = spawnMap.get(siblingKey);
+      if (!sibling) continue;
+      for (const sibMid of sibling.mids) {
+        const links = result.get(sibMid);
+        if (!links?.length) continue;
+        const level = parseInt(s.GroupID ?? s.Level0 ?? '0') || 0;
+        for (const mid of mids) {
+          if (result.has(mid)) continue;
+          result.set(mid, links.map(l => ({ ...l, level })));
+        }
+        break;
+      }
+      break;
+    }
+  }
+
   return result;
 }
 
@@ -575,15 +609,19 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
     const finishDesc = finish.description as Record<string, string>;
     const finishDescEn = finishDesc?.en ?? '';
 
+    const finishNameEn = ((finish.name as Record<string, string>)?.en ?? '').trim();
+
     const enter = skills.find(s => s.type === enterType);
-    if (!enter) return;
+    if (!enter) {
+      // No enter: discard finish if empty (no name + no desc)
+      if (!finishNameEn && !finishDescEn) skills.splice(finishIdx, 1);
+      return;
+    }
     if (finish.icon !== enter.icon) return; // different icon, keep separate
 
     // Keep separate only if finish has unique content not already in enter
     // Check: finish name or description core is mentioned in enter's description
     const enterDescEn = ((enter.description as Record<string, string>) ?? {}).en ?? '';
-    const finishNameObj = finish.name as Record<string, string>;
-    const finishNameEn = (finishNameObj?.en ?? '').replace(/[.\s]+$/, '');
     const finishCore = finishDescEn.replace(/[.\s]+$/, '');
     const nameInEnter = finishNameEn && enterDescEn.includes(finishNameEn);
     const descInEnter = finishCore && enterDescEn.includes(finishCore);

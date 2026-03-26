@@ -6,5 +6,13 @@
   {
     "pattern": "(grants?|restores?|recovers?)\\s+\\d+\\s+(Action Points|AP)",
     "add_buff": ["BT_AP_CHARGE"]
+  },
+  {
+    "pattern": "Grants Courage Against Despair",
+    "add_buff": ["UNIQUE_DAHLIA_A"]
+  },
+  {
+    "pattern": "reduces?\\s+(<[^>]+>)?(Chain Points|CP)(<[^>]+>)?\\s+of\\s+enem",
+    "add_debuff": ["BT_CP_CHARGE"]
   }
 ]

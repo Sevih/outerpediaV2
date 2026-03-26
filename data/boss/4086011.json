@@ -17,7 +17,7 @@
   "element": "Dark",
   "level": 80,
   "icons": "4086007",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_DOT_BURN,BT_DOT_CURSE,BT_DOT_BLEED,BT_DOT_POISON,BT_DOT_LIGHTNING,BT_DOT_2000092",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_DOT_BURN,BT_DOT_CURSE,BT_DOT_BLEED,BT_DOT_POISON,BT_DOT_LIGHTNING,BT_DOT_2000092",
   "StatBuffImmune": "ST_DEF,ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55100004",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -94,7 +94,7 @@
       },
       "icon": "Skill_Ultimate_4086007",
       "buff": [
-        "CORE_ENERGY"
+        "IG_Buff_4086008_Interruption"
       ],
       "debuff": [
         "BT_DOT_LIGHTNING"
@@ -116,8 +116,8 @@
       },
       "icon": "MT_Passive_1_Dark",
       "debuff": [
-        "BT_SEAL_BT_CALL_BACKUP_IR",
-        "BT_STAT|ST_SPEED_IR"
+        "BT_STAT|ST_SPEED_IR",
+        "BT_SEAL_BT_CALL_BACKUP_IR"
       ]
     },
     {
@@ -136,25 +136,10 @@
       },
       "icon": "MT_Passive_1_Dark",
       "buff": [
-        "UNIQUE_DAHLIA_A",
-        "BT_STAT|ST_SPEED"
+        "SYS_BUFF_ADDITIVE_ATTACK",
+        "BT_STAT|ST_SPEED",
+        "UNIQUE_DAHLIA_A"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086007"
     }
   ]
 }

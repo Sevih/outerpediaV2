@@ -86,12 +86,12 @@
     "remove_buff": ["BT_SHIELD_BASED_CASTER"],
     "add_debuff": ["BT_CP_CHARGE"]
   },
-  "Becomes <color=#28d9ed>Enraged</color> every 10 enemy actions.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable DMG Reduction to the caster for 5 turns and recovers Weakness Gauge by 30%. Enraged lasts for 5 turns.\\n\\n<color=#28d9ed>Harvest Time</color>: Used when Enraged ends.\\nRemoves all enemy Enhancement Effects and inflicts instant death.\\nEnemies killed by this skill cannot Resurrected or Revived." : {
+  "Becomes <color=#28d9ed>Enraged</color> every 10 enemy actions.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable DMG Reduction to the caster for 5 turns and recovers Weakness Gauge by 30%. Enraged lasts for 5 turns.\\n\\n<color=#28d9ed>Harvest Time</color>: Used when Enraged ends.\\nRemoves all enemy Enhancement Effects and inflicts instant death.\\nEnemies killed by this skill cannot Resurrected or Revived.": {
     "add_debuff": ["BT_SEALED_RESURRECTION"]
   },
   "(Passive Effect)\\nAt the start of battle, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>, and inflicts 2 irremovable <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>1turns</color>. (Ignores the target's Resilience and Immunity)\\n\\nIf Health is greater than <color=#28d9ed>80%</color>, does not take Weakness Gauge damage.\\n\\nAt the end of a Non-Defender enemy's turn, inflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2</color> turns.\\n\\nIncreases Burned damage dealt by the caster by <color=#28d9ed>100%</color>.": {
     "add_buff": ["BT_ACTION_GAUGE"],
-    "remove_buff": ["BT_BURN_ENHANCE","BT_STAT|ST_SPEED"],
+    "remove_buff": ["BT_BURN_ENHANCE", "BT_STAT|ST_SPEED"],
     "remove_debuff": ["BT_BURN_ENHANCE"]
   },
   "Removes all <color=#28d9ed>buffs</color> from all enemies then attacks, and if the enemy with the highest attack is inflicted with <color=#28d9ed>Shocked</color>, <color=#28d9ed>kills them instantly</color>.": {
@@ -119,61 +119,69 @@
   "Grants increased <color=#28d9ed>Accuracy</color> and <color=#28d9ed>Effectiveness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.": {
     "remove_buff": ["BT_STAT|ST_DEF"]
   },
-  "(Triggered Effect) When an ally <color=#28d9ed>Mage</color> attacks, activates an additional attack on the enemy with the highest Attack. After attacking, increases Priority of the caster by <color=#28d9ed>40%</color>."  : {
+  "(Triggered Effect) When an ally <color=#28d9ed>Mage</color> attacks, activates an additional attack on the enemy with the highest Attack. After attacking, increases Priority of the caster by <color=#28d9ed>40%</color>.": {
     "add_buff": ["SYS_BUFF_ADDITIVE_ATTACK"],
     "remove_buff": ["BT_AP_CHARGE"]
   },
   "When the caster is hit, if at least one ally is not affected by a <color=#28d9ed>debuff</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color>.": {
     "add_buff": ["BT_ACTION_GAUGE"]
   },
-  "Attacks all enemies. Upon attack, decreases all Enemies' <color=#28d9ed>Attack/Critical Hit Chance/Critical Damage</color> for <color=#28d9ed>9 turns,</color> and reduces the <color=#28d9ed>Priority Gauge</color> of all non-<color=#28d9ed>Healer</color> Enemies to zero." :{
+  "Attacks all enemies. Upon attack, decreases all Enemies' <color=#28d9ed>Attack/Critical Hit Chance/Critical Damage</color> for <color=#28d9ed>9 turns,</color> and reduces the <color=#28d9ed>Priority Gauge</color> of all non-<color=#28d9ed>Healer</color> Enemies to zero.": {
     "add_debuff": ["BT_STAT|ST_ATK"]
   },
-  "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases attack and reduces damage taken for 3 turns, and recovers Weakness Gauge by 10%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Used when Enraged ends.\\nAttacks all enemies, and resets skill cooldowns of <color=#28d9ed>all skills</color> of the caster.":{
+  "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases attack and reduces damage taken for 3 turns, and recovers Weakness Gauge by 10%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Used when Enraged ends.\\nAttacks all enemies, and resets skill cooldowns of <color=#28d9ed>all skills</color> of the caster.": {
     "add_buff": ["BT_COOL_CHARGE"]
   },
-  "(Passive Effect)\\nIncreases damage received from <color=#28d9ed>Water</color> and <color=#28d9ed>Earth</color> enemies, and decreases damage received from <color=#28d9ed>Fire</color>, <color=#28d9ed>Light</color>, and <color=#28d9ed>Dark</color> enemies. When the caster is afflicted with <color=#28d9ed>Poisoned</color>, damage received increases.\\nWhen attacked by an enemy with a debuff, the enemy's <color=#28d9ed>CP</color> is reduced by <color=#28d9ed>30</color>.":{
+  "(Passive Effect)\\nIncreases damage received from <color=#28d9ed>Water</color> and <color=#28d9ed>Earth</color> enemies, and decreases damage received from <color=#28d9ed>Fire</color>, <color=#28d9ed>Light</color>, and <color=#28d9ed>Dark</color> enemies. When the caster is afflicted with <color=#28d9ed>Poisoned</color>, damage received increases.\\nWhen attacked by an enemy with a debuff, the enemy's <color=#28d9ed>CP</color> is reduced by <color=#28d9ed>30</color>.": {
     "add_debuff": ["BT_CP_CHARGE"],
     "remove_buff": ["BT_WG_DMG"]
   },
-  "Becomes <color=#28d9ed>Enraged</color> every 4 turns. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers Weakness Gauge by 30%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate</color>: Used when Enraged ends.\\nAttacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict an irremovable <color=#28d9ed>Poisoned</color> on the target for <color=#28d9ed>5 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color> and <color=#28d9ed>Immunity</color>.":{
+  "Becomes <color=#28d9ed>Enraged</color> every 4 turns. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers Weakness Gauge by 30%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate</color>: Used when Enraged ends.\\nAttacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict an irremovable <color=#28d9ed>Poisoned</color> on the target for <color=#28d9ed>5 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color> and <color=#28d9ed>Immunity</color>.": {
     "add_debuff": ["BT_DOT_POISON_IR"]
   },
-  "(Passive Effect)\\nIncreases damage taken from <color=#28d9ed>Dark</color> enemies and reduces damage dealt to them. Reduces Weakness Gauge damage taken from non-<color=#28d9ed>Dark</color> enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.\\nRight after using any skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.":{
+  "(Passive Effect)\\nIncreases damage taken from <color=#28d9ed>Dark</color> enemies and reduces damage dealt to them. Reduces Weakness Gauge damage taken from non-<color=#28d9ed>Dark</color> enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.\\nRight after using any skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.": {
     "remove_buff": ["BT_STAT|ST_SPEED"]
   },
-  "(Passive Effect)\\nGlicys's underlings have the following abilities.\\n\\nIce Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Reduces the <color=#28d9ed>Defense</color> of all allies by <color=#28d9ed>1%</color> when hit. This effect stacks up to 20 times.\\nGiant Ice Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Frozen</color> on all enemies for <color=#28d9ed>1 turn(s)</color> when hit.":{
+  "(Passive Effect)\\nGlicys's underlings have the following abilities.\\n\\nIce Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Reduces the <color=#28d9ed>Defense</color> of all allies by <color=#28d9ed>1%</color> when hit. This effect stacks up to 20 times.\\nGiant Ice Revenant: Inflicts <color=#28d9ed>Frozen</color> on the target when attacking. Has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Frozen</color> on all enemies for <color=#28d9ed>1 turn(s)</color> when hit.": {
     "add_debuff": ["BT_FREEZE"]
   },
-  "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> a single enemy.":{
-    "remove_debuff":["BT_SEALED_RESURRECTION"]
+  "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> a single enemy.": {
+    "remove_debuff": ["BT_SEALED_RESURRECTION"]
   },
-  "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> all enemies.":{
-      "remove_debuff":["BT_SEALED_RESURRECTION"]
+  "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> all enemies.": {
+    "remove_debuff": ["BT_SEALED_RESURRECTION"]
   },
-  "(Passive Effect) Damage dealt to <color=#28d9ed>Poisoned</color> enemies increases.\\nAt the start of the turn, if <color=#28d9ed>Burned</color>, becomes <color=#28d9ed>Unhealable</color> for <color=#28d9ed>2 turns</color>.\\n\\nDamage dealt to non-Fire enemies increases, and damage taken decreases.\\nDamage dealt to Fire enemies decreases, and damage taken increases.\\n(Trigger Effect) After an enemy acts, if the target is <color=#28d9ed>Poisoned</color>, restores <color=#28d9ed>1</color> WG and immediately counterattacks with <color=#28d9ed>Atlas</color>.":{
-    "remove_debuff":["BT_DOT_POISON"]
+  "(Passive Effect) Damage dealt to <color=#28d9ed>Poisoned</color> enemies increases.\\nAt the start of the turn, if <color=#28d9ed>Burned</color>, becomes <color=#28d9ed>Unhealable</color> for <color=#28d9ed>2 turns</color>.\\n\\nDamage dealt to non-Fire enemies increases, and damage taken decreases.\\nDamage dealt to Fire enemies decreases, and damage taken increases.\\n(Trigger Effect) After an enemy acts, if the target is <color=#28d9ed>Poisoned</color>, restores <color=#28d9ed>1</color> WG and immediately counterattacks with <color=#28d9ed>Atlas</color>.": {
+    "remove_debuff": ["BT_DOT_POISON"]
   },
-  "(Passive Effect) Damage dealt to <color=#28d9ed>Poisoned</color> enemies increases.\\nWhen an enemy uses an <color=#28d9ed>AoE skill</color> excluding Skill Chains, all allies' <color=#28d9ed>Defense</color> increases for <color=#28d9ed>2 turns</color>.\\nAt the start of the turn, if <color=#28d9ed>Burned</color>, becomes <color=#28d9ed>Unhealable</color> for <color=#28d9ed>2 turns</color>.\\n\\nDamage dealt to non-Fire enemies increases, and damage taken decreases.\\nDamage dealt to Fire enemies decreases, and damage taken increases.\\n(Trigger Effect) After an enemy acts, if the target is <color=#28d9ed>Poisoned</color>, restores <color=#28d9ed>1</color> WG and immediately counterattacks with <color=#28d9ed>Atlas</color>.":{
-    "remove_debuff":["BT_DOT_POISON"],
-    "remove_buff":["BT_SHIELD_BASED_CASTER"]
+  "(Passive Effect) Damage dealt to <color=#28d9ed>Poisoned</color> enemies increases.\\nWhen an enemy uses an <color=#28d9ed>AoE skill</color> excluding Skill Chains, all allies' <color=#28d9ed>Defense</color> increases for <color=#28d9ed>2 turns</color>.\\nAt the start of the turn, if <color=#28d9ed>Burned</color>, becomes <color=#28d9ed>Unhealable</color> for <color=#28d9ed>2 turns</color>.\\n\\nDamage dealt to non-Fire enemies increases, and damage taken decreases.\\nDamage dealt to Fire enemies decreases, and damage taken increases.\\n(Trigger Effect) After an enemy acts, if the target is <color=#28d9ed>Poisoned</color>, restores <color=#28d9ed>1</color> WG and immediately counterattacks with <color=#28d9ed>Atlas</color>.": {
+    "remove_debuff": ["BT_DOT_POISON"],
+    "remove_buff": ["BT_SHIELD_BASED_CASTER"]
   },
-  "(Passive Effect) Damage dealt increases if the attack target has <color=#28d9ed>Poison</color>, or if Dek'Ril has a <color=#28d9ed>Buff</color>.\\nWhen an enemy uses an <color=#28d9ed>AoE skill</color> excluding Skill Chains, all allies' <color=#28d9ed>Defense</color> increases for <color=#28d9ed>2 turns</color>.\\n\\nWG damage taken from non-Fire enemies is reduced by <color=#28d9ed>50%</color>, and damage dealt increases while damage taken decreases.\\nDamage dealt to Fire enemies decreases, and damage taken increases.\\n(Trigger Effect) After an enemy acts, if the target is affected by <color=#28d9ed>Poisoned</color>, restores <color=#28d9ed>1</color> WG and immediately counterattacks with <color=#28d9ed>Atlas</color>.\\nDamage from <color=#28d9ed>Curse/Fixed Damage</color> dealt to bosses cannot exceed <color=#28d9ed>10000</color>.":{
-    "remove_debuff":["BT_DOT_POISON"],
-    "remove_buff":["BT_SHIELD_BASED_CASTER"]
+  "(Passive Effect) Damage dealt increases if the attack target has <color=#28d9ed>Poison</color>, or if Dek'Ril has a <color=#28d9ed>Buff</color>.\\nWhen an enemy uses an <color=#28d9ed>AoE skill</color> excluding Skill Chains, all allies' <color=#28d9ed>Defense</color> increases for <color=#28d9ed>2 turns</color>.\\n\\nWG damage taken from non-Fire enemies is reduced by <color=#28d9ed>50%</color>, and damage dealt increases while damage taken decreases.\\nDamage dealt to Fire enemies decreases, and damage taken increases.\\n(Trigger Effect) After an enemy acts, if the target is affected by <color=#28d9ed>Poisoned</color>, restores <color=#28d9ed>1</color> WG and immediately counterattacks with <color=#28d9ed>Atlas</color>.\\nDamage from <color=#28d9ed>Curse/Fixed Damage</color> dealt to bosses cannot exceed <color=#28d9ed>10000</color>.": {
+    "remove_debuff": ["BT_DOT_POISON"],
+    "remove_buff": ["BT_SHIELD_BASED_CASTER"]
   },
-  "(Passive Effect)\\nReduces <color=#28d9ed>Effectiveness</color> of Fire, Water, and Earth enemies. When an enemy uses a non-attack skill, grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>5 turn(s)</color>. These effects cannot be removed.\\n\\nInflicts a random debuff on the enemy after attacking. These debuffs ignore Immunity buffs on the target.":{
-    "add_debuff":["BT_RANDOM"]
+  "(Passive Effect)\\nReduces <color=#28d9ed>Effectiveness</color> of Fire, Water, and Earth enemies. When an enemy uses a non-attack skill, grants increased <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>5 turn(s)</color>. These effects cannot be removed.\\n\\nInflicts a random debuff on the enemy after attacking. These debuffs ignore Immunity buffs on the target.": {
+    "add_debuff": ["BT_RANDOM"]
   },
-  "(Passive Effect)\\nIncreases Critical Damage of the caster, and reduces <color=#28d9ed>Critical Hit Chance</color> of Fire, Water, and Earth enemies. These effects cannot be removed.\\nIncreases the effectiveness of <color=#28d9ed>increased stat</color> effects on the caster by <color=#28d9ed>100%</color>.\\n\\nWhen hit, does not take Weakness Gauge damage if the caster is not inflicted with a debuff.\\nRecovers <color=#28d9ed>3</color> Weakness Gauge upon scoring a critical hit on an enemy.\\n\\nIncreases damage taken from <color=#28d9ed>Light</color> enemies and reduces damage dealt to them. Reduces Weakness Gauge damage taken from non-<color=#28d9ed>Light</color> enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\nAfter scoring a critical hit, grants <color=#28d9ed>Harmony of Despair</color> for <color=#28d9ed>3 turn(s)</color>.\\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.":{
-    "remove_buff":["BT_STAT|ST_CRITICAL_RATE_IR"]
+  "(Passive Effect)\\nIncreases Critical Damage of the caster, and reduces <color=#28d9ed>Critical Hit Chance</color> of Fire, Water, and Earth enemies. These effects cannot be removed.\\nIncreases the effectiveness of <color=#28d9ed>increased stat</color> effects on the caster by <color=#28d9ed>100%</color>.\\n\\nWhen hit, does not take Weakness Gauge damage if the caster is not inflicted with a debuff.\\nRecovers <color=#28d9ed>3</color> Weakness Gauge upon scoring a critical hit on an enemy.\\n\\nIncreases damage taken from <color=#28d9ed>Light</color> enemies and reduces damage dealt to them. Reduces Weakness Gauge damage taken from non-<color=#28d9ed>Light</color> enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\nAfter scoring a critical hit, grants <color=#28d9ed>Harmony of Despair</color> for <color=#28d9ed>3 turn(s)</color>.\\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.": {
+    "remove_buff": ["BT_STAT|ST_CRITICAL_RATE_IR"]
   },
-  "Attacks after removing all <color=#28d9ed>buffs</color> from all enemies, and <color=#28d9ed>instantly kills</color> the enemy with the highest Attack.":{
-    "add_debuff":["BT_KILL"],
-    "remove_debuff":["BT_REVERSE_HEAL_BASED_TARGET"]
+  "Attacks after removing all <color=#28d9ed>buffs</color> from all enemies, and <color=#28d9ed>instantly kills</color> the enemy with the highest Attack.": {
+    "add_debuff": ["BT_KILL"],
+    "remove_debuff": ["BT_REVERSE_HEAL_BASED_TARGET"]
   },
-  "(Passive Effect)\\nIncreases the <color=#28d9ed>Attack</color> of all allies except the caster by <color=#28d9ed>15%</color> every turn.\\n\\nSterope has the following abilities:\\nWhen hit, deals <color=#28d9ed>1200</color> fixed damage to all enemies, and increases the Priority of all allies by <color=#28d9ed>10%</color>.\\nWhen an enemy uses a non-attack skill, recovers all allies' Weakness Gauge by <color=#28d9ed>4</color> and Health by <color=#28d9ed>3%</color>.":{
-    "add_debuff":["BT_FIXED_DAMAGE"],
-    "add_buff":["BT_ACTION_GAUGE"]
+  "(Passive Effect)\\nIncreases the <color=#28d9ed>Attack</color> of all allies except the caster by <color=#28d9ed>15%</color> every turn.\\n\\nSterope has the following abilities:\\nWhen hit, deals <color=#28d9ed>1200</color> fixed damage to all enemies, and increases the Priority of all allies by <color=#28d9ed>10%</color>.\\nWhen an enemy uses a non-attack skill, recovers all allies' Weakness Gauge by <color=#28d9ed>4</color> and Health by <color=#28d9ed>3%</color>.": {
+    "add_debuff": ["BT_FIXED_DAMAGE"],
+    "add_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nIncreases damage taken from Fire, Water, and Earth enemies.\\nInflicts <color=#28d9ed>Dual Attack Disabled</color> on all enemies, and reduces Speed of Light and Dark enemies. This effect cannot be removed until the Boss is killed.\\n\\nReduces damage taken from skills other than Burst Skills and Skill Chains, and reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>.\\n\\nGreatly reduces damage taken from Light and Dark enemies, and does not take Weakness Gauge damage.": {
+    "remove_debuff": ["BT_STAT|ST_DEF_IR", "BT_STAT|ST_BUFF_RESIST_IR"],
+    "remove_buff": ["BT_STAT|ST_SPEED", "BT_ACTION_GAUGE_ENHANCE_IR"]
+  },
+  "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Reduces Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\n\\nReduces damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains, and does not take Weakness Gauge damage.\\n\\nGreatly reduces damage taken by Fire, Water, and Earth enemies, and does not take Weakness Gauge damage.\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>30000</color>.": {
+    "remove_debuff": ["BT_STAT|ST_DEF_IR", "BT_STAT|ST_BUFF_RESIST_IR"],
+    "remove_buff": ["BT_STAT|ST_SPEED", "BT_ACTION_GAUGE_ENHANCE_IR"]
   }
 }

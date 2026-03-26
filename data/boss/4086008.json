@@ -17,7 +17,7 @@
   "element": "Light",
   "level": 50,
   "icons": "4086008",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_ACTION_GAUGE",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_ACTION_GAUGE",
   "StatBuffImmune": "ST_DEF,ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55100002",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -126,28 +126,13 @@
       },
       "icon": "MT_Passive_1_Light",
       "buff": [
-        "UNIQUE_DAHLIA_A",
-        "BT_STAT|ST_SPEED"
+        "SYS_BUFF_ADDITIVE_ATTACK",
+        "BT_STAT|ST_SPEED",
+        "UNIQUE_DAHLIA_A"
       ],
       "debuff": [
         "BT_CP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086008"
     }
   ]
 }
