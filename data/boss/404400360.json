@@ -33,7 +33,7 @@
       "zh": "特别委托:生态调查"
     },
     "area_id": {
-      "en": "50104011",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -110,8 +110,8 @@
       },
       "icon": "MT_Passive_1_Light",
       "buff": [
-        "BT_EXTEND_DEBUFF",
-        "BT_INVINCIBLE"
+        "BT_INVINCIBLE",
+        "BT_EXTEND_DEBUFF"
       ],
       "debuff": [
         "BT_STUN"
@@ -172,22 +172,6 @@
         "BT_STAT|ST_ATK_IR",
         "BT_STAT|ST_CRITICAL_RATE_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "Enraged",
-        "jp": "狂暴化",
-        "kr": "광폭화",
-        "zh": "狂暴化"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

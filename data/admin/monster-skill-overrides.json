@@ -138,5 +138,8 @@
   },
   "Becomes <color=#28d9ed>Enraged</color> every 4 turns. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Recovers Weakness Gauge by 30%. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate</color>: Used when Enraged ends.\\nAttacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict an irremovable <color=#28d9ed>Poisoned</color> on the target for <color=#28d9ed>5 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color> and <color=#28d9ed>Immunity</color>.":{
     "add_debuff": ["BT_DOT_POISON_IR"]
+  },
+  "(Passive Effect)\\nIncreases damage taken from <color=#28d9ed>Dark</color> enemies and reduces damage dealt to them. Reduces Weakness Gauge damage taken from non-<color=#28d9ed>Dark</color> enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.\\nRight after using any skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.":{
+    "remove_buff": ["BT_STAT|ST_SPEED"]
   }
 }
