@@ -51,7 +51,7 @@
       },
       "icon": "Skill_First_2000088",
       "buff": [
-        "BT_CALL_BACKUP"
+        "BT_CALL_BACKUP_2"
       ]
     },
     {
@@ -69,6 +69,9 @@
         "zh": "(触发效果)受到攻击后,使生命值上限最低的敌人使用<color=#28d9ed>来吧,哈恩德</color>。有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>石化</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "Skill_Second_2000088",
+      "buff": [
+        "SYS_BUFF_COUNTER"
+      ],
       "debuff": [
         "BT_STONE"
       ]

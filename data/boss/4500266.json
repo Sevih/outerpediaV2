@@ -13,7 +13,7 @@
   "level": 160,
   "icons": "2000078",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO,BT_COOL_CHARGE,BT_COOL2_CHARGE,BT_COOL3_CHARGE",
   "location": {
     "dungeon": {
       "en": "Loyal Traitor",
@@ -70,9 +70,9 @@
       },
       "icon": "Skill_Second_2000078",
       "buff": [
-        "BT_INVINCIBLE",
+        "BT_REMOVE_DEBUFF",
         "BT_STEALTHED",
-        "BT_REMOVE_DEBUFF"
+        "BT_INVINCIBLE"
       ]
     },
     {

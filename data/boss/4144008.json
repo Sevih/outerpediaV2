@@ -13,7 +13,7 @@
   "level": 140,
   "icons": "4044008",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE",
   "location": {
     "dungeon": {
       "en": "A Test of Wisdom (3)",
@@ -44,7 +44,7 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Removes <color=#28d9ed>all buffs</color> from the target and attacks the enemy.\\nThis attack prioritizes <color=#28d9ed>Ranger</color> enemies, and if the target is a <color=#28d9ed>Ranger</color>, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stun</color> for <color=#28d9ed>2</color> turn(s). (Ignores Effect Resistance)",
+        "en": "Removes <color=#28d9ed>all buffs</color> from the target and attacks the enemy.\\nThis attack prioritizes <color=#28d9ed>Speed-type</color> enemies, and if the target is a <color=#28d9ed>Speed-type</color>, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stun</color> for <color=#28d9ed>2</color> turn(s). (Ignores Resilience)",
         "jp": "対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、敵にダメージを与える。\\nこの攻撃は<color=#28d9ed>スピード型</color>の敵を優先して攻撃し、攻撃対象が<color=#28d9ed>スピード型</color>の場合、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>のあいだ<color=#28d9ed>スタン</color>を付与する。(効果抵抗無視)",
         "kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다. 이 공격은 <color=#28d9ed>속도형</color> 적을 우선적으로 공격하며, 공격 대상이 <color=#28d9ed>속도형</color> 이라면 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.(효과 저항 무시)",
         "zh": "解除目标的<color=#28d9ed>所有强化效果</color>并进行攻击。\\n此攻击会优先攻击<color=#28d9ed>速度型</color>敌人,若攻击目标为<color=#28d9ed>速度型</color>,则有<color=#28d9ed>100%</color>概率使其陷入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>2</color>回合。(无视效果抵抗)"
@@ -70,11 +70,11 @@
         "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>2回合</color>。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Second_4044008",
-      "debuff": [
-        "BT_SEALED"
-      ],
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_SEALED"
       ]
     },
     {
@@ -108,18 +108,18 @@
       },
       "type": "SKT_MONSTER_1",
       "description": {
-        "en": "At the end of the turn, if there are no <color=#28d9ed>Ranger</color> enemies, reduces all enemies' <color=#28d9ed>Action Gauge</color> by <color=#28d9ed>40%</color>. \\nWhen hit by an attack that applies a debuff, increases the caster's <color=#28d9ed>Effect Resistance</color> for <color=#28d9ed>2</color> turn(s). Grants an <color=#28d9ed>Extra Turn</color> upon defeating an enemy.",
-        "jp": "ターン終了時、<color=#28d9ed>スピード型</color>の敵がいない場合、\\n敵全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>40%</color>DOWNさせる。\n弱体効果を付与する攻撃を受けた時、\\n自身の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>2</color>ターンの間UPする。\\n敵を倒した時、<color=#28d9ed>追加ターン</color>を獲得する。",
+        "en": "At the end of the turn, if there are no <color=#28d9ed>Speed-type</color> enemies, reduces all enemies' <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color>. \\nWhen hit by an attack that applies a debuff, increases the caster's <color=#28d9ed>Resilience</color> for <color=#28d9ed>2</color> turn(s). Grants an <color=#28d9ed>Extra Turn</color> upon defeating an enemy.",
+        "jp": "ターン終了時、<color=#28d9ed>スピード型</color>の敵がいない場合、\\n敵全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>40%</color>DOWNさせる。\n弱体効果を付与する攻撃を受けた時、\\n自分の<color=#28d9ed>効果抵抗</color>を<color=#28d9ed>2</color>ターンの間UPする。\\n敵を倒した時、<color=#28d9ed>追加ターン</color>を獲得する。",
         "kr": "턴 종료 시 <color=#28d9ed>속도형</color> 적이 없다면 적 전체의 행동 게이지를 <color=#28d9ed>40%</color> 감소시킵니다.\\n약화 효과 피격 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>효과 저항</color>이 증가합니다.\\n적 처치 시 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "回合结束时,若没有<color=#28d9ed>速度型</color>敌人,\\n则使全体敌人的<color=#28d9ed>行动值</color>减少<color=#28d9ed>40%</color>。\\n受到附带弱化效果的攻击时,自身的<color=#28d9ed>效果抵抗</color>提升,持续<color=#28d9ed>2</color>回合。\\n击杀敌人时,获得<color=#28d9ed>追加回合</color>。"
       },
       "icon": "MT_Passive_1_Light",
-      "debuff": [
-        "BT_ACTION_GAUGE"
-      ],
       "buff": [
         "BT_STAT|ST_BUFF_RESIST",
         "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [
+        "BT_ACTION_GAUGE"
       ]
     },
     {

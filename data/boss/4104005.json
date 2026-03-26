@@ -66,11 +66,11 @@
         "zh": "攻击敌人,无视目标的效果抵抗,并解除所有<color=#28d9ed>强化效果</color>。此后,使自身获得<color=#28d9ed>吸血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Second_3000043",
-      "debuff": [
-        "BT_REMOVE_BUFF"
-      ],
       "buff": [
         "BT_STAT|ST_VAMPIRIC"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
       ]
     },
     {
@@ -101,18 +101,14 @@
       },
       "type": "SKT_MONSTER_1",
       "description": {
-        "en": "When hit by an AoE attack, grants self a <color=#28d9ed>Shield</color> for <color=#28d9ed>2</color> turns.\\nIf current HP exceeds 85%, damage dealt to enemies increases by <color=#28d9ed>100%</color>.\\n\\nNon-Fire enemies' <color=#28d9ed>ATK</color> and <color=#28d9ed>Effectiveness</color> are reduced by <color=#28d9ed>50%</color>, and damage taken from non-Fire enemies is reduced by <color=#28d9ed>80%</color>.",
+        "en": "When hit by an AoE attack, grants self a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2</color> turns.\\nIf current HP exceeds 85%, damage dealt to enemies increases by <color=#28d9ed>100%</color>.\\n\\nNon-Fire enemies' <color=#28d9ed>Attack</color> and <color=#28d9ed>Effectiveness</color> are reduced by <color=#28d9ed>50%</color>, and damage taken from non-Fire enemies is reduced by <color=#28d9ed>80%</color>.",
         "jp": "全体攻撃を受けた時、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2</color>ターンの間付与する。\\n現在のHPが85%を超える場合、敵に与えるダメージが<color=#28d9ed>100%</color>UPする。\\n\\n火属性でない敵の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>効果命中</color>が<color=#28d9ed>50%</color>DOWNし、火属性でない敵から受けるダメージが<color=#28d9ed>80%</color>DOWNする。",
         "kr": "전체 공격에 피격 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.\\n자신의 현재 체력이 85% 초과 시 적에게 입히는 피해가 <color=#28d9ed>100%</color> 증가합니다.\\n\\n화속성이 아닌 적의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>효과 적중</color>이 <color=#28d9ed>50%</color> 감소하고 화속성이 아닌 적에게 받는 피해가 <color=#28d9ed>80%</color> 감소합니다.",
         "zh": "被全体攻击命中时,在<color=#28d9ed>2</color>回合内为自身施加<color=#28d9ed>护盾</color>。\\n当前生命值超过85%时,对敌人造成的伤害提高<color=#28d9ed>100%</color>。\\n\\n非火属性敌人的<color=#28d9ed>攻击力</color>与<color=#28d9ed>效果命中</color>降低<color=#28d9ed>50%</color>,并且受到非火属性敌人的伤害降低<color=#28d9ed>80%</color>。"
       },
       "icon": "MT_Passive_1_Earth",
       "buff": [
-        "BT_SHIELD_BASED_TARGET"
-      ],
-      "debuff": [
-        "BT_STAT|ST_ATK",
-        "BT_STAT|ST_BUFF_CHANCE"
+        "BT_SHIELD_BASED_CASTER"
       ]
     },
     {

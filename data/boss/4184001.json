@@ -13,7 +13,7 @@
   "level": 180,
   "icons": "4084001",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_FREEZE,BT_STONE,BT_STUN,BT_SILENCE,BT_AGGRO",
   "location": {
     "dungeon": {
       "en": "A Flower Blooming in Fear",
@@ -85,11 +85,11 @@
         "zh": "攻击全体敌人。攻击后施加无法被解除的<color=#28d9ed>中毒</color>状态,持续<color=#28d9ed>4回合</color>。对效果抵抗未提升的敌人将无视免疫直接施加此效果。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Ultimate_4084001",
-      "debuff": [
-        "BT_DOT_POISON_IR"
-      ],
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_DOT_POISON_IR"
       ]
     },
     {
@@ -108,7 +108,7 @@
       },
       "icon": "MT_Passive_1_Earth",
       "debuff": [
-        "BT_SILENCE",
+        "BT_SILENCE_IR",
         "BT_REVERSE_HEAL_BASED_TARGET"
       ]
     },
@@ -122,14 +122,14 @@
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "When HP drops below <color=#28d9ed>30%</color>, enters <color=#28d9ed>Enraged</color> state.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Grants irremovable Increased Attack/Reduced Damage for 3 turns and grants <color=#28d9ed>Poisoned</color> to the whole enemies for <color=#28d9ed>3 turns</color>. Enraged lasts for 3 turns",
-        "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>狂暴化</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:自分に解除不可の攻撃力UP/ダメージDOWN効果を3ターンの間付与し、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>3ターン</color>の間付与する。狂暴化は3ターンの間持続する。",
+        "jp": "最大HPの<color=#28d9ed>30%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】と【必殺スキル】</color>:自分に解除不可の攻撃力UP/ダメージDOWN効果を3ターンの間付与し、敵全体に<color=#28d9ed>中毒</color>を<color=#28d9ed>3ターン</color>の間付与する。狂暴化は3ターンの間持続する。",
         "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입 및 필살기</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, 적 전체에게 <color=#28d9ed>중독</color>을 <color=#28d9ed>3턴</color> 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.",
         "zh": "若生命力降到最大生命力<color=#28d9ed>30%</color>以下,转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化与必杀技</color>:在3回合内赋予自身不会被解除的攻击力增加/伤害减少效果,在<color=#28d9ed>3回合</color>内赋予全体敌人<color=#28d9ed>中毒</color>。狂暴化持续3回合。"
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_STAT|ST_ATK_IR",
-        "BT_DAMGE_TAKEN"
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
       ],
       "debuff": [
         "BT_DOT_POISON"

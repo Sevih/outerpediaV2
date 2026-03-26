@@ -56,7 +56,8 @@
       },
       "icon": "Skill_First_2000059",
       "buff": [
-        "BT_STAT|ST_CRITICAL_RATE"
+        "BT_STAT|ST_CRITICAL_RATE",
+        "SYS_BUFF_ADDITIVE_ATTACK"
       ]
     },
     {
@@ -139,22 +140,6 @@
         "BT_STAT|ST_ATK_IR",
         "BT_CP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "Enraged",
-        "jp": "狂暴化",
-        "kr": "광폭화",
-        "zh": "狂暴化"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

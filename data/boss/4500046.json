@@ -54,7 +54,10 @@
         "kr": "적을 공격합니다. 공격 전 스테로페가 강화 효과를 보유하고 있었다면 동일한 대상에게 추가 공격을 발생시키고, <color=#28d9ed>신의 천벌</color>을 획득합니다.\\n\\n<color=#28d9ed>신의 천벌</color> : 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가시킵니다. (최대 15회 누적)",
         "zh": "攻击敌人。攻击前,若史提洛佩附带强化效果,则对相同目标发动额外攻击,并获得<color=#28d9ed>降下神罚!</color>效果。\\n\\n<color=#28d9ed>降下神罚!</color>:使全体友军伤害提升<color=#28d9ed>4%</color>。(最多可叠加15次)"
       },
-      "icon": "Skill_First_2000057"
+      "icon": "Skill_First_2000057",
+      "buff": [
+        "BT_ADDITIVE_ATTACK_ON_EVENT"
+      ]
     },
     {
       "name": {
@@ -84,14 +87,13 @@
       },
       "type": "SKT_ULTIMATE",
       "description": {
-        "en": "Grants increased <color=#28d9ed>Accuracy</color> and <color=#28d9ed>Effectiveness</color> to all allies for <color=#28d9ed>3 turn(s)</color>.",
-        "jp": "味方全体の<color=#28d9ed>命中</color>と<color=#28d9ed>効果命中</color>を<color=#28d9ed>3ターン</color>の間UPさせる。",
-        "kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>명중</color>과 <color=#28d9ed>효과 적중</color>을 증가시킵니다.",
-        "zh": "使全体友军的<color=#28d9ed>命中</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>3回合</color>。"
+        "en": "Grants increased <color=#28d9ed>Accuracy</color> and <color=#28d9ed>Effectiveness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.",
+        "jp": "味方全体の<color=#28d9ed>命中</color>と<color=#28d9ed>効果命中</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>명중</color>과 <color=#28d9ed>효과 적중</color>을 증가시킵니다.",
+        "zh": "使全体友军的<color=#28d9ed>命中</color>和<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Ultimate_2000057",
       "buff": [
-        "BT_STAT|ST_ACCURACY",
         "BT_STAT|ST_BUFF_CHANCE"
       ]
     },
@@ -111,7 +113,7 @@
       },
       "icon": "MT_Passive_1_Dark",
       "debuff": [
-        "BT_FIXED_DAMAGE"
+        "BT_REVERSE_HEAL_BASED_TARGET"
       ]
     }
   ]

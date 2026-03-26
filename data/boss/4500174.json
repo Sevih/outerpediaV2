@@ -18,7 +18,7 @@
   "level": 100,
   "icons": "2000073",
   "BuffImmune": "",
-  "StatBuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
+  "StatBuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE",
   "location": {
     "dungeon": {
       "en": "As You Wish, Your Excellency",
@@ -75,7 +75,7 @@
       },
       "icon": "Skill_Second_2000073",
       "debuff": [
-        "IG_Buff_Dot_Burn_Interruption_D"
+        "BT_DOT_BURN_IR"
       ]
     },
     {
@@ -113,7 +113,7 @@
       },
       "icon": "MT_Passive_1_Fire",
       "buff": [
-        "BT_SYS_BUFF_ENHANCE_IR"
+        "BT_STAT_BUFF_ENHANCE"
       ]
     },
     {
