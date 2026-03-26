@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55200103",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -72,8 +72,9 @@
       },
       "icon": "Skill_Second_4086013",
       "buff": [
-        "UNIQUE_VENION_B",
-        "UNIQUE_VENION_A"
+        "BT_GROUP_CASTER_TOOLTIP_CHECK",
+        "UNIQUE_VENION_A",
+        "UNIQUE_VENION_B"
       ]
     },
     {
@@ -110,12 +111,12 @@
         "zh": "(被动效果)来自<color=#28d9ed>火/水/土</color>属性敌人的伤害提高,且敌人攻击时始终具有<color=#28d9ed>属性优势</color>。\\n\\n敌方全体速度变为<color=#28d9ed>0</color>,并获得<color=#28d9ed>额外技能封印</color>与<color=#28d9ed>额外回合封印</color>(永久)。\\n自身攻击后,使敌方全体行动值增加<color=#28d9ed>100%</color>(在特定条件下仅增加至<color=#28d9ed>80%</color>)。\\n\\n来自<color=#28d9ed>诅咒/固定伤害</color>的伤害上限分别为<color=#28d9ed>10000</color>/<color=#28d9ed>20000</color>。但由<color=#28d9ed>连携技能</color>造成的<color=#28d9ed>固定伤害</color>上限为<color=#28d9ed>50000</color>。"
       },
       "icon": "MT_Passive_1_Light",
-      "debuff": [
-        "BT_SEAL_ADDITIVE_ATTACK_IR",
-        "BT_SEAL_ADDITIVE_TURN_IR"
-      ],
       "buff": [
         "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_SEAL_ADDITIVE_TURN_IR",
+        "BT_SEAL_ADDITIVE_ATTACK_IR"
       ]
     },
     {
@@ -127,31 +128,16 @@
       },
       "type": "SKT_MONSTER_2",
       "description": {
-        "en": "(Passive Effect)The enemy team gains courage against despair, receiving <color=#28d9ed>special effects</color> based on their roles.\\n\\nStriker: +60% Critical Damage to all allies per Striker ally\\nMage: +15% ATK to all allies per Mage ally\\nDefender: On action, heals all allies by +3% HP\\nRanger: On action, grants all allies a Shield for 2 turns\\nHealer: On action, reduces the boss's WG by 2\\n\\nEnemy team's Skill Chain damage increases per ally of the same attribute.\\nWG damage taken from <color=#28d9ed>Assist</color> and <color=#28d9ed>Skill Chains</color> is reduced by <color=#28d9ed>100%</color>.",
+        "en": "(Passive Effect)The enemy team gains courage against despair, receiving <color=#28d9ed>special effects</color> based on their roles.\\n\\nStriker: +60% Critical Damage to all allies per Striker ally\\nMage: +15% ATK to all allies per Mage ally\\nDefender: On action, heals all allies by +3% HP\\nRanger: On action, grants all allies a Barrier for 2 turns\\nHealer: On action, reduces the boss's WG by 2\\n\\nEnemy team's Skill Chain damage increases per ally of the same attribute.\\nWG damage taken from <color=#28d9ed>Assist</color> and <color=#28d9ed>Skill Chains</color> is reduced by <color=#28d9ed>100%</color>.",
         "jp": "(パッシブ効果)敵チームは絶望に立ち向かう勇気を得て、職業に応じた<color=#28d9ed>特別な効果</color>を獲得する。\\n\\n攻撃型:攻撃型の味方1人につき味方全体の会心ダメージ+60%\\n魔法型:魔法型の味方1人につき味方全体の攻撃力+15%\\n防御型:行動時、味方全体を+3%回復\\nスピード型:行動時、味方全体に2ターンのシールド付与\\n回復型:行動時、ボスのWGを2減少\\n\\n敵チームは同一属性の味方1人ごとにチェーンスキルのダメージが増加する。\\n<color=#28d9ed>連携</color>および<color=#28d9ed>チェーンスキル</color>から受けるWGダメージは<color=#28d9ed>100%</color>減少する。",
         "kr": "(패시브 효과) 적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격형 동료 한 명당 아군 전체의 치명 피해 +60% \\n마법형 : 마법형 동료 한 명당 아군 전체의 공격력 +15% \\n방어형 : 행동 시 아군 전체의 +3% 체력 회복\\n속도형 : 행동 시 아군 전체에게 2턴 동안 실드 부여\\n회복형 : 행동 시 보스의 WG 2 감소 \\n\\n적 팀은 동일 속성 동료 한 명당 스킬 체인 피해량이 증가합니다.\\n<color=#28d9ed>협공</color> 및 <color=#28d9ed>스킬 체인</color>으로 받는 WG 피해량이 <color=#28d9ed>100%</color> 감소합니다.",
         "zh": "(被动效果)敌方队伍获得对抗绝望的勇气,并根据其职业获得<color=#28d9ed>特殊效果</color>。\\n\\n攻击型:每名攻击型友方使我方全体暴击伤害+60%\\n魔法型:每名魔法型友方使我方全体攻击力+15%\\n防御型:行动时,为我方全体回复+3%生命\\n速度型:行动时,为我方全体赋予2回合护盾\\n治疗型:行动时,使首领怪物的WG降低2\\n\\n敌方队伍每名相同属性的队员都会提高其连携技能伤害。\\n来自<color=#28d9ed>协同</color>与<color=#28d9ed>连携技能</color>的WG伤害<color=#28d9ed>100%</color>减少。"
       },
       "icon": "MT_Passive_1_Light",
       "buff": [
-        "UNIQUE_VENION_C"
+        "BT_ACTION_GAUGE_ENHANCE_IR",
+        "UNIQUE_DAHLIA_A"
       ]
-    },
-    {
-      "name": {
-        "en": "Quasar Bombardment",
-        "jp": "クエーサー砲撃",
-        "kr": "퀘이사 포격",
-        "zh": "类星体炮击"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086013"
     }
   ]
 }

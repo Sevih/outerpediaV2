@@ -8,11 +8,19 @@
     "add_buff": ["BT_AP_CHARGE"]
   },
   {
-    "pattern": "Grants Courage Against Despair",
+    "pattern": "(Grants?|gains?) Courage Against Despair",
     "add_buff": ["UNIQUE_DAHLIA_A"]
   },
   {
     "pattern": "reduces?\\s+(<[^>]+>)?(Chain Points|CP)(<[^>]+>)?\\s+of\\s+enem",
     "add_debuff": ["BT_CP_CHARGE"]
+  },
+  {
+    "pattern": "grants 【Environmental Change Response】 or 【Weather Variable Response】 ",
+    "add_buff": ["UNIQUE_VENION_A","UNIQUE_VENION_B"]
+  },
+  {
+    "pattern": "grants 【Remove Detection Interference】 or 【Exclude Unknown Variables】",
+    "add_buff": ["UNIQUE_VENION_D","UNIQUE_VENION_E"]
   }
 ]

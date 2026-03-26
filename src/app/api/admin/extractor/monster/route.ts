@@ -107,7 +107,7 @@ interface SearchResult {
 
 // ── Load game data ────────────────────────────────────────────────
 
-let cachedGD: GameData | null = null;
+let cachedGD: GameData | null = null; // reset on reload
 
 async function loadGameData(): Promise<GameData> {
   if (cachedGD) return cachedGD;
@@ -284,10 +284,31 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
         for (const mid of spawn.mids) {
           let arr = result.get(mid);
           if (!arr) { arr = []; result.set(mid, arr); }
-          if (!arr.some(e => e.dungeonId === dungeonId)) {
+          if (!arr.some(e => e.dungeonId === dungeonId && e.name.en === nameLangs.en)) {
             arr.push({ mode, name: nameLangs, dungeonId, areaId, modeLabel, level });
           }
         }
+      }
+    }
+  }
+
+  // World boss dedup: keep only the most recent dungeon per mode (highest dungeonId)
+  for (const [, links] of result) {
+    const wbLinks = links.filter(l => l.mode === 'DM_WORLD_BOSS');
+    if (wbLinks.length <= 1) continue;
+    // Group by level (same boss at same level = same league, old vs new)
+    const byLevel = new Map<number, DungeonLink[]>();
+    for (const l of wbLinks) {
+      let arr = byLevel.get(l.level);
+      if (!arr) { arr = []; byLevel.set(l.level, arr); }
+      arr.push(l);
+    }
+    for (const [, group] of byLevel) {
+      if (group.length <= 1) continue;
+      // Keep the last one (most recent in file order), remove earlier ones
+      for (let i = 0; i < group.length - 1; i++) {
+        const idx = links.indexOf(group[i]);
+        if (idx >= 0) links.splice(idx, 1);
       }
     }
   }
@@ -613,8 +634,8 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
 
     const enter = skills.find(s => s.type === enterType);
     if (!enter) {
-      // No enter: discard finish if empty (no name + no desc)
-      if (!finishNameEn && !finishDescEn) skills.splice(finishIdx, 1);
+      // No enter: discard orphan finish (no desc or no name)
+      if (!finishDescEn) skills.splice(finishIdx, 1);
       return;
     }
     if (finish.icon !== enter.icon) return; // different icon, keep separate
