@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55300002",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -100,34 +100,19 @@
       },
       "type": "SKT_MONSTER_1",
       "description": {
-        "en": "(Passive Effect) After Dahlia performs an action, reduces the duration of debuffs inflicted on the caster by <color=#28d9ed>2 turns</color>, and upon taking a critical hit, grants <color=#28d9ed>Invulnerability</color> for <color=#28d9ed>1 turn(s).</color>\\nAfter being hit, increases Priority by <color=#28d9ed>10%</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Prevents the Boss from reducing debuff duration\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)",
+        "en": "(Passive Effect) After Dahlia performs an action, reduces the duration of debuffs inflicted on the caster by <color=#28d9ed>2 turns</color>, and upon taking a critical hit, grants <color=#28d9ed>Invulnerability</color> for <color=#28d9ed>1 turn.</color>\\nAfter being hit, increases Priority by <color=#28d9ed>10%</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Prevents the Boss from reducing debuff duration\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)",
         "jp": "(パッシブ効果)【ダリア】の行動後、自分の弱体効果の持続ターンを<color=#28d9ed>2ターン</color>減少し、会心ダメージを受けた場合、<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nダメージを受けた後、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。\\n\\n敵全体に【絶望に立ち向かう勇気】を付与する。自分の戦闘タイプに応じて<color=#28d9ed>特別な効果</color>が付与される。攻撃型:攻撃力+30%\\n魔法型:ボスに与えるダメージUP\\n防御型:ボースの弱体効果の持続ターンDOWN使用不可\\nスピード型:戦闘開始時スピードUP+1ターン\\n回復型:免疫を永続的に付与(解除不可)",
         "kr": "(패시브 효과) 달리아는 행동 후 자신이 보유한 약화 효과의 지속 시간이 <color=#28d9ed>2턴</color> 감소하고, 치명 공격으로 피격 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.\\n피격 후 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.\\n\\n적 팀은 절망에 맞서는 용기를 얻습니다. 자신의 직업에 따라 <color=#28d9ed>특별한 효과</color>를 얻습니다.\\n\\n공격형 : 공격력 +30% \\n마법형 : 보스에게 입히는 피해 증가 \\n방어형 : 보스 약화 효과 지속 시간 감소 사용불가\\n속도형 : 전투 시작 시 속도 증가 +1턴\\n회복형 : 영구 면역 (해제 불가)",
         "zh": "(被动效果) 达利娅行动后,使自身附带的弱化效果持续时间减少<color=#28d9ed>2回合</color>,且受到暴击时,获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>1回合</color>。\\n受到攻击后,使行动值提升<color=#28d9ed>10%</color>。\\n\\n敌军获得面对绝境的勇气。根据自身职业获得<color=#28d9ed>特别效果</color>。\\n\\n攻击型:攻击力+30%\\n魔法型:对首领伤害提升\\n防御型:无法对首领使用弱化效果持续时间减少效果\\n速度型:战斗开始时速度提升+1回合\\n恢复型:永久免疫(无法解除)"
       },
       "icon": "MT_Passive_1_Dark",
       "buff": [
+        "BT_ACTION_GAUGE_ENHANCE_IR",
         "BT_EXTEND_DEBUFF",
+        "BT_ACTION_GAUGE",
         "BT_INVINCIBLE",
-        "UNIQUE_DAHLIA_A",
-        "BT_ACTION_GAUGE"
+        "UNIQUE_DAHLIA_A"
       ]
-    },
-    {
-      "name": {
-        "en": "Quasar Bombardment",
-        "jp": "クエーサー砲撃",
-        "kr": "퀘이사 포격",
-        "zh": "类星体炮击"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086013"
     }
   ]
 }

@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55300001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -91,25 +91,10 @@
       },
       "icon": "MT_Passive_1_Water",
       "buff": [
+        "BT_ACTION_GAUGE_ENHANCE_IR",
         "BT_IMMUNE",
         "UNIQUE_DAHLIA_A"
       ]
-    },
-    {
-      "name": {
-        "en": "Quasar Bombardment",
-        "jp": "クエーサー砲撃",
-        "kr": "퀘이사 포격",
-        "zh": "类星体炮击"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086013"
     }
   ]
 }

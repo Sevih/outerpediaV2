@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55300004",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -74,9 +74,12 @@
         "zh": "(触发效果)受到暴击时,解除全体敌人的所有强化效果后,攻击全体目标。攻击后,对全体敌人造成冰冻效果,持续<color=#28d9ed>5回合</color>。"
       },
       "icon": "Skill_Second_2100068",
+      "buff": [
+        "SYS_BUFF_COUNTER"
+      ],
       "debuff": [
-        "BT_FREEZE",
-        "BT_REMOVE_BUFF"
+        "BT_REMOVE_BUFF",
+        "BT_FREEZE"
       ]
     },
     {
@@ -98,8 +101,8 @@
         "BT_SEAL_COUNTER"
       ],
       "debuff": [
-        "BT_FREEZE",
-        "BT_REMOVE_BUFF"
+        "BT_REMOVE_BUFF",
+        "BT_FREEZE"
       ]
     },
     {
@@ -118,6 +121,7 @@
       },
       "icon": "MT_Passive_1_Water",
       "buff": [
+        "BT_ACTION_GAUGE_ENHANCE_IR",
         "BT_IMMUNE",
         "UNIQUE_DAHLIA_A"
       ]
@@ -137,22 +141,6 @@
         "zh": "(被动效果)\\n达利娅所受伤害根据持有的弱化效果数量等比提升。\\n除连携技能外的固定伤害及暗属性敌人最多可造成<color=#28d9ed>1000</color>点伤害,诅咒最多可造成<color=#28d9ed>10000</color>点伤害。\\n不会受到来自CP<color=#28d9ed>100</color>以上敌人的WG伤害,并且大幅降低所受伤害。\\n\\n使非<color=#28d9ed>光/土属性</color>敌人的<color=#28d9ed>效果命中</color>全部降低,且使防御型、攻击型和恢复型敌人的<color=#28d9ed>暴击率</color>全部降低。"
       },
       "icon": "MT_Passive_1_Water"
-    },
-    {
-      "name": {
-        "en": "Quasar Bombardment",
-        "jp": "クエーサー砲撃",
-        "kr": "퀘이사 포격",
-        "zh": "类星体炮击"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086013"
     }
   ]
 }

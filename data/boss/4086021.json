@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55300003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -73,7 +73,10 @@
         "kr": "(발동 효과) 치명 공격으로 피격 시 적 전체를 공격합니다.",
         "zh": "(触发效果)受到暴击时,攻击全体敌人。"
       },
-      "icon": "Skill_Second_2100068"
+      "icon": "Skill_Second_2100068",
+      "buff": [
+        "SYS_BUFF_COUNTER"
+      ]
     },
     {
       "name": {
@@ -94,8 +97,8 @@
         "BT_SEAL_COUNTER"
       ],
       "debuff": [
-        "BT_FREEZE",
-        "BT_REMOVE_BUFF"
+        "BT_REMOVE_BUFF",
+        "BT_FREEZE"
       ]
     },
     {
@@ -114,25 +117,10 @@
       },
       "icon": "MT_Passive_1_Water",
       "buff": [
+        "BT_ACTION_GAUGE_ENHANCE_IR",
         "BT_IMMUNE",
         "UNIQUE_DAHLIA_A"
       ]
-    },
-    {
-      "name": {
-        "en": "Quasar Bombardment",
-        "jp": "クエーサー砲撃",
-        "kr": "퀘이사 포격",
-        "zh": "类星体炮击"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086013"
     }
   ]
 }
