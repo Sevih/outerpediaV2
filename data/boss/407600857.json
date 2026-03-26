@@ -17,7 +17,7 @@
   "element": "Light",
   "level": 80,
   "icons": "4076008",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50204008",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -143,7 +143,10 @@
         "kr": "(패시브 효과)\\n턴 시작 시 적 전체에게 고정 피해를 입힙니다. 이 피해는 매 턴 <color=#28d9ed>400</color> 증가합니다.",
         "zh": "(被动效果)\\n回合开始时,对全体敌人造成固定伤害。该伤害每回合提升<color=#28d9ed>400</color>。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_CASTER"
+      ]
     },
     {
       "name": {
@@ -161,26 +164,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
         "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_CP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

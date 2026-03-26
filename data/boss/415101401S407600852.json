@@ -1,0 +1,56 @@
+{
+  "id": "415101401S407600852",
+  "Name": {
+    "en": "Deformed Inferior Core",
+    "jp": "異形の劣化コア",
+    "kr": "변형된 열화 코어",
+    "zh": "变形的烈火核心"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 35,
+  "icons": "4151014",
+  "BuffImmune": "",
+  "StatBuffImmune": "BT_AGGRO",
+  "location": {
+    "dungeon": {
+      "en": "Ars Nova (Stage 3)",
+      "jp": "アルス・ノーヴァ(3段階)",
+      "kr": "아르스 노바 (3 단계)",
+      "zh": "艺术新星(第3阶段)"
+    },
+    "mode": {
+      "en": "Special Request: Identification",
+      "jp": "特別依頼:正体究明",
+      "kr": "특별 의뢰 : 정체 규명",
+      "zh": "特别委托:查清身份"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "summoned_by": "407600852",
+  "skills": [
+    {
+      "name": {
+        "en": "Hymn",
+        "jp": "賛歌",
+        "kr": "찬가",
+        "zh": "赞歌"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Recovers Ars Nova's Weakness Gauge by <color=#28d9ed>10%</color>.",
+        "jp": "【アルス・ノーヴァ】のWGを<color=#28d9ed>10%</color>回復する。",
+        "kr": "아르스 노바의 WG를 <color=#28d9ed>10%</color> 회복합니다.",
+        "zh": "使艺术新星的WG恢复<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Light"
+    }
+  ]
+}

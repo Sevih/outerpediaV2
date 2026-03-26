@@ -17,7 +17,7 @@
   "element": "Light",
   "level": 110,
   "icons": "4076008",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_AGGRO,BT_SILENCE,BT_SEALED",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50204011",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -107,14 +107,11 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nAfter attacking, summons an Inferior Core.\\nInferior Core has the following abilities:\\n\\n<color=#28d9ed>Hymn</color>: +10% Weakness Gauge for Ars Nova\\n<color=#28d9ed>Core Overdrive</color>: 15 Chain Points for enemy upon death",
-        "jp": "(パッシブ効果)\\n攻撃後、劣化コアを召喚する。\\n劣化コアは以下の能力を持つ。\\n\\n<color=#28d9ed>【賛歌】</color>:【アルス・ノーヴァ】のWGを10%UPさせる。\\n<color=#28d9ed>【コアオーバードライブ】</color>:倒れた時、敵のCPが-15",
-        "kr": "(패시브 효과)\\n공격 후 열화 코어를 소환합니다.\\n열화 코어는 다음과 같은 능력을 가집니다.\\n\\n<color=#28d9ed>찬가</color> : 아르스 노바의 WG +10%\\n<color=#28d9ed>코어 오버드라이브</color> : 사망 시 적의 CP -15",
-        "zh": "(被动效果)\\n攻击后,召唤烈火核心。\\n烈火核心拥有以下能力。\\n\\n<color=#28d9ed>赞歌</color>:艺术新星的WG+10%\\n<color=#28d9ed>核心过载</color>:死亡时,使敌人的CP降低-15"
+        "jp": "(パッシブ効果)\\n攻撃後、劣化コアを召喚する。\\n劣化コアは以下の能力を持つ。\\n\\n<color=#28d9ed>【賛歌】</color>:【アルス・ノーヴァ】のWGを10%UPさせる。\\n<color=#28d9ed>【コアオーバードライブ】</color>:倒れた時、敵のCPが15",
+        "kr": "(패시브 효과)\\n공격 후 열화 코어를 소환합니다.\\n열화 코어는 다음과 같은 능력을 가집니다.\\n\\n<color=#28d9ed>찬가</color> : 아르스 노바의 WG +10%\\n<color=#28d9ed>코어 오버드라이브</color> : 사망 시 적의 CP 15",
+        "zh": "(被动效果)\\n攻击后,召唤烈火核心。\\n烈火核心拥有以下能力。\\n\\n<color=#28d9ed>赞歌</color>:艺术新星的WG+10%\\n<color=#28d9ed>核心过载</color>:死亡时,使敌人的CP降低15"
       },
-      "icon": "MT_Passive_1_Light",
-      "buff": [
-        "BT_CP_CHARGE"
-      ]
+      "icon": "MT_Passive_1_Light"
     },
     {
       "name": {
@@ -146,7 +143,10 @@
         "kr": "(패시브 효과)\\n턴 시작 시 적 전체에게 고정 피해를 입힙니다. 이 피해는 매 턴 <color=#28d9ed>600</color> 증가합니다.\\n추가로, 생존한 열화 코어마다 고정 피해가 <color=#28d9ed>1500</color> 증가합니다.",
         "zh": "(被动效果)\\n回合开始时,对全体敌人造成固定伤害。该伤害每回合提升<color=#28d9ed>600</color>。\\n此外,每存活1个烈火核心,固定伤害提升<color=#28d9ed>1500</color>。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_CASTER"
+      ]
     },
     {
       "name": {
@@ -164,26 +164,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
         "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_STAT|ST_ATK_IR",
+        "BT_CP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

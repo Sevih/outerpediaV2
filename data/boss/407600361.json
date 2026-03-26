@@ -33,7 +33,7 @@
       "zh": "特别委托:查清身份"
     },
     "area_id": {
-      "en": "50201012",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -104,14 +104,14 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect) Damage dealt increases if the attack target is <color=#28d9ed>Poisoned</color>, or if Dek'Ril has a <color=#28d9ed>Buff</color>.\\nWhen an enemy uses an <color=#28d9ed>AoE skill</color> excluding Skill Chains, all allies' <color=#28d9ed>Defense</color> increases for <color=#28d9ed>2 turns</color>.\\n\\nWG damage taken from non-Fire enemies is reduced by <color=#28d9ed>50%</color>, and damage dealt increases while damage taken decreases.\\nDamage dealt to Fire enemies decreases, and damage taken increases.\\n(Trigger Effect) After an enemy acts, if the target is <color=#28d9ed>Poisoned</color>, restores <color=#28d9ed>1</color> WG and immediately counterattacks with <color=#28d9ed>Atlas</color>.",
-        "jp": "(パッシブ効果)攻撃対象が<color=#28d9ed>中毒</color>状態か、【デグリル】に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\n敵がチェーンスキル以外の<color=#28d9ed>全体攻撃</color>を使用時、味方全体の<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n火属性以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNし、与えるダメージがUP、受けるダメージがDOWNする。\\n火属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。\\n(発動効果)敵の行動後、対象が<color=#28d9ed>中毒</color>状態なら<color=#28d9ed>1</color>のWGを回復し、直ちに<color=#28d9ed>【アトラス】</color>で反撃する。",
+        "jp": "(パッシブ効果)攻撃対象が<color=#28d9ed>中毒</color>状態か、【デグリル】に<color=#28d9ed>強化効果</color>がある場合、与えるダメージがUPする。\\n敵がチェーンスキル以外の<color=#28d9ed>全体攻撃</color>を使用時、味方全体の<color=#28d9ed>防御力</color>が<color=#28d9ed>2ターン</color>の間UPする。\\n\\n火属性以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNし、与えるダメージがUP、受けるダメージがDOWNする。\\n火属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。\\n(パッシブ効果)敵の行動後、対象が<color=#28d9ed>中毒</color>状態なら<color=#28d9ed>1</color>のWGを回復し、直ちに<color=#28d9ed>【アトラス】</color>で反撃する。",
         "kr": "(패시브 효과) 공격 대상이 <color=#28d9ed>중독</color>을 보유하고 있거나, 데그릴이 <color=#28d9ed>강화 효과</color> 보유 시 입히는 피해가 증가합니다.\\n적이 스킬 체인을 제외한 <color=#28d9ed>전체 범위 스킬</color> 사용 시 아군 전체의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.\\n\\n화속성이 아닌 적에게 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소하며 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n화속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.\\n(발동 효과) 적 행동 후 대상이 <color=#28d9ed>중독</color> 상태라면 <color=#28d9ed>1</color>의 WG를 회복하고, 즉시 <color=#28d9ed>아틀라스</color>로 반격합니다.",
         "zh": "(被动效果)若攻击目标处于<color=#28d9ed>中毒</color>状态,或泰格里尔持有<color=#28d9ed>强化效果</color>,造成的伤害提升。\\n敌人使用除连携技能以外的<color=#28d9ed>全体范围技能</color>时,全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n受到的非火属性敌人的WG伤害量降低<color=#28d9ed>50%</color>,并使对其造成的伤害提升,且受到的伤害降低。\\n对火属性敌人造成的伤害降低,且受到的伤害提升。\\n(触发效果)敌方行动后,若目标处于<color=#28d9ed>中毒</color>状态,WG恢复<color=#28d9ed>1</color>,并立即用<color=#28d9ed>阿特拉斯</color>进行反击。"
       },
       "icon": "MT_Passive_1_Earth",
       "buff": [
-        "BT_STAT|ST_DEF",
-        "BT_STAT|ST_COUNTER_RATE"
+        "SYS_BUFF_COUNTER",
+        "BT_STAT|ST_DEF"
       ]
     },
     {
@@ -130,29 +130,13 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_CP_CHARGE",
+        "BT_STAT|ST_ATK_IR",
         "BT_DAMGE_TAKEN",
-        "BT_STAT|ST_ATK_IR"
+        "BT_CP_CHARGE"
       ],
       "debuff": [
-        "BT_SEALED_RECEIVE_HEAL"
+        "BT_SEALED_RECEIVE_HEAL_IR"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }
