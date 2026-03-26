@@ -17,7 +17,7 @@
   "element": "Dark",
   "level": 80,
   "icons": "4086001",
-  "BuffImmune": "BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_REMOVE_BUFF,BT_ACTION_GAUGE",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_REMOVE_BUFF,BT_ACTION_GAUGE",
   "StatBuffImmune": "ST_DEF,ST_SPEED",
   "location": {
     "dungeon": {
@@ -33,7 +33,7 @@
       "zh": "世界首领"
     },
     "area_id": {
-      "en": "55000004",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -75,8 +75,8 @@
       },
       "icon": "Skill_Second_4086001",
       "buff": [
-        "BT_STAT|ST_DEF",
-        "BT_ADDITIVE_TURN"
+        "BT_ADDITIVE_TURN",
+        "BT_STAT|ST_DEF"
       ]
     },
     {
@@ -96,7 +96,7 @@
       "icon": "Skill_Ultimate_4086001",
       "debuff": [
         "BT_REMOVE_BUFF",
-        "BT_FIXED_DAMAGE"
+        "BT_REVERSE_HEAL_BASED_TARGET"
       ]
     },
     {
@@ -138,24 +138,9 @@
       },
       "icon": "MT_Passive_1_Dark",
       "buff": [
+        "BT_ACTION_GAUGE_ENHANCE_IR",
         "UNIQUE_DAHLIA_A"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_4086001"
     }
   ]
 }

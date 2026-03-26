@@ -198,43 +198,70 @@
     "remove_debuff": ["BT_WG_REVERSE_HEAL"]
   },
   "(Passive Effect)The enemy team gains courage against despair, receiving <color=#28d9ed>special effects</color> based on their roles.\\n\\nStriker: +500% Critical Damage to all allies per Striker ally\\nMage: +125% ATK to all allies per Caster ally\\nDefender: On action, heals all allies by +5% HP\\nRanger: On action, grants all allies a Shield for 2 turns\\nHealer: On action, reduces the boss's WG by 3\\n\\nEnemy team's Skill Chain damage increases per ally of the same attribute.\\nWG damage taken from <color=#28d9ed>Assist</color> and <color=#28d9ed>Skill Chains</color> is reduced by <color=#28d9ed>100%</color>.": {
-    "remove_buff": ["BT_STAT|ST_ATK", "BT_DMG_ELEMENT_SUPERIORITY","BT_STAT|ST_CRITICAL_DMG_RATE","BT_ACTION_GAUGE_ENHANCE_IR"],
+    "remove_buff": [
+      "BT_STAT|ST_ATK",
+      "BT_DMG_ELEMENT_SUPERIORITY",
+      "BT_STAT|ST_CRITICAL_DMG_RATE",
+      "BT_ACTION_GAUGE_ENHANCE_IR"
+    ],
     "remove_debuff": ["BT_WG_REVERSE_HEAL", "BT_REMOVE_BUFF"]
   },
-  "Attacks all enemies, and grants 【Environmental Change Response】 or 【Weather Variable Response】 effect for <color=#28d9ed>3 turn(s)</color>.\\n\\nThe effect already granted when attacking will not be applied, and effects will not be removed when inflicted with Break.":{
+  "Attacks all enemies, and grants 【Environmental Change Response】 or 【Weather Variable Response】 effect for <color=#28d9ed>3 turn(s)</color>.\\n\\nThe effect already granted when attacking will not be applied, and effects will not be removed when inflicted with Break.": {
     "remove_buff": ["BT_ACTION_GAUGE"]
   },
-  "Ignores Resilience and removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, then attacks all enemies.\\nAccording to the unique effect granted, the following effects will be applied:\\n\\n【Remove Detection Interference】: Inflicts <color=#28d9ed>instant death</color> on Fire/Water/Earth enemies.\\n\\n【Exclude Unknown Variables】: Inflicts <color=#28d9ed>instant death</color> on Light/Dark enemies.":{
+  "Ignores Resilience and removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, then attacks all enemies.\\nAccording to the unique effect granted, the following effects will be applied:\\n\\n【Remove Detection Interference】: Inflicts <color=#28d9ed>instant death</color> on Fire/Water/Earth enemies.\\n\\n【Exclude Unknown Variables】: Inflicts <color=#28d9ed>instant death</color> on Light/Dark enemies.": {
     "add_debuff": ["BT_KILL"]
   },
-  "Attacks an enemy.\\nPrioritizes the enemy on the far <color=#28d9ed>left</color>. During this attack, <color=#28d9ed>Penetration</color> increases by <color=#28d9ed>30%</color>.":{
+  "Attacks an enemy.\\nPrioritizes the enemy on the far <color=#28d9ed>left</color>. During this attack, <color=#28d9ed>Penetration</color> increases by <color=#28d9ed>30%</color>.": {
     "remove_buff": ["BT_ACTION_GAUGE"]
   },
-  "Ignores Resilience and removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, then attacks all enemies. This attack penetrates <color=#28d9ed>30%</color> of the target's Defense, and enemies killed by this skill cannot be Resurrected or Revived.\\nAccording to the unique effect granted, the following effects will be applied:\\n\\n【Remove Detection Interference】: Inflicts <color=#28d9ed>instant death</color> on Fire/Water/Earth enemies.\\n\\n【Exclude Unknown Variables】: Inflicts <color=#28d9ed>instant death</color> on Light/Dark enemies.":{
+  "Ignores Resilience and removes <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from all enemies, then attacks all enemies. This attack penetrates <color=#28d9ed>30%</color> of the target's Defense, and enemies killed by this skill cannot be Resurrected or Revived.\\nAccording to the unique effect granted, the following effects will be applied:\\n\\n【Remove Detection Interference】: Inflicts <color=#28d9ed>instant death</color> on Fire/Water/Earth enemies.\\n\\n【Exclude Unknown Variables】: Inflicts <color=#28d9ed>instant death</color> on Light/Dark enemies.": {
     "add_debuff": ["BT_KILL"]
   },
-  "(Passive Effect) At the start of battle and start of the turn, grants <color=#28d9ed>Immunity</color> to Dahlia for <color=#28d9ed>1 turn(s)</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Deals 3 Weakness Gauge damage to the Boss when performing an action\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)":{
+  "(Passive Effect) At the start of battle and start of the turn, grants <color=#28d9ed>Immunity</color> to Dahlia for <color=#28d9ed>1 turn(s)</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Deals 3 Weakness Gauge damage to the Boss when performing an action\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)": {
     "remove_buff": ["BT_STAT|ST_SPEED"],
     "remove_debuff": ["BT_WG_REVERSE_HEAL"]
   },
-  "(Passive Effect) After Dahlia performs an action, reduces the duration of debuffs inflicted on the caster by <color=#28d9ed>2 turns</color>, and upon taking a critical hit, grants <color=#28d9ed>Invulnerability</color> for <color=#28d9ed>1 turn.</color>\\nAfter being hit, increases Priority by <color=#28d9ed>10%</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Prevents the Boss from reducing debuff duration\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)":{
+  "(Passive Effect) After Dahlia performs an action, reduces the duration of debuffs inflicted on the caster by <color=#28d9ed>2 turns</color>, and upon taking a critical hit, grants <color=#28d9ed>Invulnerability</color> for <color=#28d9ed>1 turn.</color>\\nAfter being hit, increases Priority by <color=#28d9ed>10%</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Prevents the Boss from reducing debuff duration\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)": {
     "remove_buff": ["BT_STAT|ST_SPEED"],
-    "add_buff":["BT_INVINCIBLE"]
+    "add_buff": ["BT_INVINCIBLE"]
   },
-  "When the caster is granted a dispellable debuff, Weakness Gauge cannot be reduced.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increases Attack by 30%\\nMage: Increases Critical Damage by 50%\\nDefender: When performing an action, inflicts reduced Defense on the Boss for 4 turns\\nRanger: When performing an action, deals 3% damage of the Boss's Health\\nHealer: Increases Priority recovery efficiency by 50%":{
+  "When the caster is granted a dispellable debuff, Weakness Gauge cannot be reduced.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increases Attack by 30%\\nMage: Increases Critical Damage by 50%\\nDefender: When performing an action, inflicts reduced Defense on the Boss for 4 turns\\nRanger: When performing an action, deals 3% damage of the Boss's Health\\nHealer: Increases Priority recovery efficiency by 50%": {
     "add_buff": ["UNIQUE_DAHLIA_A"],
-    "remove_debuff":["BT_STAT|ST_DEF_IR"]
+    "remove_debuff": ["BT_STAT|ST_DEF_IR"]
   },
-  "If the caster is not inflicted with a debuff, Weakness Gauge cannot be reduced.\\nIncreases Weakness Gauge damage taken from enemies granted Stealth by 100%.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increases Attack by 30%\\nMage: Increases Critical Damage by 50%\\nDefender: When hit by a single attack, grants Stealth for 2 turn(s)\\nRanger: Increases Effectiveness by 100%\\nHealer: Increases Priority recovery efficiency by 50%":{
+  "If the caster is not inflicted with a debuff, Weakness Gauge cannot be reduced.\\nIncreases Weakness Gauge damage taken from enemies granted Stealth by 100%.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increases Attack by 30%\\nMage: Increases Critical Damage by 50%\\nDefender: When hit by a single attack, grants Stealth for 2 turn(s)\\nRanger: Increases Effectiveness by 100%\\nHealer: Increases Priority recovery efficiency by 50%": {
     "add_buff": ["UNIQUE_DAHLIA_A"],
-    "remove_buff":["BT_WG_DMG","BT_STEALTHED_IR"]
+    "remove_buff": ["BT_WG_DMG", "BT_STEALTHED_IR"]
   },
-  "(Passive Effect)\\nDoes not take Weakness Gauge damage from attacks that are not Revenge/Counterattack.\\nWhen an enemy activates a Counterattack, Revenge, or Agile Response, increases Weakness Gauge damage taken by the caster by <color=#28d9ed>300%</color>, and reduces Priority of the caster by <color=#28d9ed>20%</color>.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their element.\\n\\nFire: Increases efficiency of increased stat effects by 70%\\nWater: Increases Speed by 10%\\nEarth: Increases Critical Damage by 50%\\nLight: When performing an action, deals 1 Weakness Gauge damage to the Boss\\nDark: Increases Attack by 30%":{
+  "(Passive Effect)\\nDoes not take Weakness Gauge damage from attacks that are not Revenge/Counterattack.\\nWhen an enemy activates a Counterattack, Revenge, or Agile Response, increases Weakness Gauge damage taken by the caster by <color=#28d9ed>300%</color>, and reduces Priority of the caster by <color=#28d9ed>20%</color>.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their element.\\n\\nFire: Increases efficiency of increased stat effects by 70%\\nWater: Increases Speed by 10%\\nEarth: Increases Critical Damage by 50%\\nLight: When performing an action, deals 1 Weakness Gauge damage to the Boss\\nDark: Increases Attack by 30%": {
     "add_buff": ["COURAGE_DESPAIR_ELEM"],
-    "remove_buff":["BT_STAT_BUFF_ENHANCE"]
+    "remove_buff": ["BT_STAT_BUFF_ENHANCE"]
   },
-  "(Passive Effect)\\nAfter being hit, increases Priority by <color=#28d9ed>20%</color>.\\nWhen an enemy without an Enhancement Effect performs an action, restores Weakness Gauge by <color=#28d9ed>10</color>.\\nUpon Break, reduces caster's <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Damage</color> for 3 turns.\\nGains <color=#28d9ed>Special Effects</color> based on caster's Element. (Cannot stack the same element effect.)\\n\\nFire: All Ally Stats boost efficiency +70%\\nWater: All Ally Speed +10%\\nEarth: All Ally Critical Damage +50%\\nLight: All Ally Weakness Gauge Reduction +50%\\nDark: All Ally Attack +30%":{
+  "(Passive Effect)\\nAfter being hit, increases Priority by <color=#28d9ed>20%</color>.\\nWhen an enemy without an Enhancement Effect performs an action, restores Weakness Gauge by <color=#28d9ed>10</color>.\\nUpon Break, reduces caster's <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Damage</color> for 3 turns.\\nGains <color=#28d9ed>Special Effects</color> based on caster's Element. (Cannot stack the same element effect.)\\n\\nFire: All Ally Stats boost efficiency +70%\\nWater: All Ally Speed +10%\\nEarth: All Ally Critical Damage +50%\\nLight: All Ally Weakness Gauge Reduction +50%\\nDark: All Ally Attack +30%": {
     "add_buff": ["COURAGE_DESPAIR_ELEM"],
-    "add_debuff":["BT_STAT|ST_ATK","BT_STAT|ST_CRITICAL_DMG_RATE"]
+    "add_debuff": ["BT_STAT|ST_ATK", "BT_STAT|ST_CRITICAL_DMG_RATE"]
+  },
+  "(Passive Effect)\\nIncreases damage taken from Fire, Water, and Earth enemies. Decreases Speed of Light and Dark enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>20%</color>.\\nReduces Weakness Gauge damage of skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted increased Defense, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.": {
+    "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "(Passive Effect)\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +50% Priority recovery efficiency\\nMage: Increased damage\\nDefender: Inflicts reduced Defense on the Boss for 4 turns when performing an action\\nRanger: Inflicts reduced Resilience on the Boss for 4 turns when performing an action\\nHealer: Fixes Priority recovery efficiency of the Boss to 60%": {
+    "remove_debuff": ["BT_STAT|ST_DEF_IR", "BT_STAT|ST_BUFF_RESIST_IR"]
+  },
+  "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Decreases Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>30%</color>.\\nReduces Weakness Gauge damage of skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted a Barrier, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.": {
+    "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "(Passive Effect)\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increased damage\\nMage: +50% Priority recovery efficiency\\nDefender: Inflicts reduced Defense on the Boss for 4 turns when performing an action\\nRanger: Inflicts reduced Resilience on the Boss for 4 turns when performing an action\\nHealer: Inflicts reduced Speed on the Boss for 4 turns when performing an action": {
+    "remove_debuff": [
+      "BT_STAT|ST_DEF_IR",
+      "BT_STAT|ST_BUFF_RESIST_IR",
+      "BT_STAT|ST_SPEED_IR"
+    ]
+  },
+  "(Passive Effect)\\nIncreases damage taken from Fire, Water, and Earth enemies. Reduces Speed of Light and Dark enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>20%</color>.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted increased Defense, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.\\nEnemies killed by Dragon of Death Ragnakeus cannot be Resurrected or Revived.":{
+    "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Reduces Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>30%</color>.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted a Barrier, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.\\nEnemies killed by Mecha Dragon of Death Ragnakeus cannot be Resurrected or Revived.":{
+    "remove_buff": ["BT_STAT|ST_SPEED"]
   }
 }
