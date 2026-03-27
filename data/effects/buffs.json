@@ -855,6 +855,19 @@
     "icon": "SC_Buff_Effect_Stealthed"
   },
   {
+    "name": "BT_STEALTHED_IR",
+    "category": "supporting",
+    "label": "Stealth",
+    "label_jp": "隠れ身",
+    "label_kr": "은신",
+    "label_zh": "隐身",
+    "description": "When there are allies not granted Stealth, cannot be selected as a target for attack. Decreases damage taken from Area of Effect Attacks. (Irremovable)",
+    "description_jp": "隠れ身効果がない\\n他の味方がいる場合、\\n攻撃対象にならない。\\n範囲攻撃を受ける場合、\\nダメージがDOWNする。(解除不可)",
+    "description_kr": "은신 효과가 없는 다른 아군이 있다면 공격 대상이 되지 않습니다. 범위 공격을 받을 경우 피해가 감소합니다. (해제 불가)",
+    "description_zh": "若有未附带隐身效果的友军存在,\\n则不会成为攻击目标。\\n受到范围攻击时,伤害降低。(无法解除)",
+    "icon": "IG_Buff_Stealthed_Interruption"
+  },
+  {
     "name": "BT_SYS_BUFF_ENHANCE_IR",
     "category": "hidden",
     "label": "Buff Enhancement",

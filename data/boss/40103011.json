@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第3层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고, <color=#28d9ed>50%</color>의 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 감소시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_First_2000080"
+      "icon": "Skill_First_2000080",
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,14 @@
         "kr": "아군이 피격 시 <color=#28d9ed>피안의 겁화</color>로 반격합니다.\\n(발동 효과) 공격 전 대상의 강화 효과를 <color=#28d9ed>2개</color> 해제하고, <color=#28d9ed>1턴</color> 동안 효과 저항을 감소시킵니다. 대상이 <color=#28d9ed>지속성</color>이라면 대상의 효과 저항을 무시하고, 빗나감이 발생하지 않습니다.",
         "zh": "友军受到攻击时,用<color=#28d9ed>血液轮回</color>反击。\\n(触发效果)攻击前解除目标的<color=#28d9ed>2个</color>强化效果,并使回避降低,持续<color=#28d9ed>1回合</color>。若目标为<color=#28d9ed>土属性</color>,则无视目标的效果抵抗,且不会触发闪避。"
       },
-      "icon": "Skill_Second_2000080"
+      "icon": "Skill_Second_2000080",
+      "buff": [
+        "SYS_BUFF_COUNTER"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_STAT|ST_BUFF_RESIST"
+      ]
     },
     {
       "name": {
@@ -81,7 +91,13 @@
         "kr": "적 전체를 공격합니다. 적 전체에게 효과 저항 및 면역을 무시하고 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>2턴</color> 증가시키고, 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다.",
         "zh": "攻击全体敌人。无视全体敌人的效果抵抗和免疫,使其<color=#28d9ed>技能冷却时间</color>增加<color=#28d9ed>2回合</color>,并使全体友军获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000080"
+      "icon": "Skill_Ultimate_2000080",
+      "buff": [
+        "BT_CONTINU_HEAL"
+      ],
+      "debuff": [
+        "BT_COOL_CHARGE"
+      ]
     },
     {
       "name": {
@@ -97,7 +113,11 @@
         "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n턴 시작 시 자신의 공격력이 <color=#28d9ed>5%</color>증가하며, <color=#28d9ed>쿠로</color>가 생존해 있다면 자신에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color>동안 부여합니다.\\n쿠로가 소생했을 때 WG를 <color=#28d9ed>30%</color> 회복합니다.",
         "zh": "(被动效果)\\n战斗开始时,自身获得无法被解除的伤害降低效果,持续<color=#28d9ed>3回合</color>。\\n回合开始时,自身的攻击力提升<color=#28d9ed>5%</color>,若<color=#28d9ed>小黑</color>存活,自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n小黑苏醒时,WG恢复<color=#28d9ed>30%</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER",
+        "BT_DAMGE_TAKEN"
+      ]
     },
     {
       "name": {

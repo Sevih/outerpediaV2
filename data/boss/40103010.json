@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상의 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使目标的<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_First_2000044"
+      "icon": "Skill_First_2000044",
+      "debuff": [
+        "BT_STAT|ST_SPEED"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,13 @@
         "kr": "적을 공격합니다.\\n<color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고, <color=#28d9ed>100%</color> 확률로 아군 전체에게 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 <color=#28d9ed>공격력</color>이 높을수록 증가합니다.",
         "zh": "攻击敌人。\\n有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>,并有<color=#28d9ed>100%</color>的几率使全体友军获得<color=#28d9ed>护盾</color>效果。自身<color=#28d9ed>攻击力</color>越高,则护盾量越高。"
       },
-      "icon": "Skill_Second_2000044"
+      "icon": "Skill_Second_2000044",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ],
+      "debuff": [
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
@@ -86,7 +95,11 @@
         "kr": "적을 공격하고, 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n이 공격은 대상이 보유한 <color=#28d9ed>약화 효과</color>가 많을수록 피해가 증가하고, 적을 처치하면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击敌人,使自身<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。\\n此攻击的目标附带的<color=#28d9ed>弱化效果</color>越多,则该技能的伤害越高,且若击杀敌人,则获得<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000044"
+      "icon": "Skill_Ultimate_2000044",
+      "buff": [
+        "BT_ADDITIVE_TURN",
+        "BT_STAT|ST_BUFF_CHANCE"
+      ]
     },
     {
       "name": {
@@ -102,7 +115,13 @@
         "kr": "(패시브 효과)\\n전투 시작 시 아군 전체에게 해제되지 않는 <color=#28d9ed>피해 감소</color> 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n아군 전체의 모든 공격은 대상이 보유한 <color=#28d9ed>약화 효과</color>가 많을수록 피해가 증가합니다.\\n공격 시 대상이 <color=#28d9ed>약화 효과</color>를 보유하고 있다면 WG를 <color=#28d9ed>10</color> 회복합니다.\\n공격 후 대상이 <color=#28d9ed>약화 효과</color>를 보유하지 않았다면 <color=#28d9ed>효과 저항</color>및 <color=#28d9ed>면역</color>을 무시하고 <color=#28d9ed>2턴</color> 동안 해제 불가능한 <color=#28d9ed>감전</color> 효과를 부여합니다.",
         "zh": "(被动效果)\\n战斗开始时,全体友军获得无法被解除的<color=#28d9ed>伤害降低</color>效果,持续<color=#28d9ed>3回合</color>。\\n全体友军的所有攻击都是目标附带的<color=#28d9ed>弱化效果</color>越多,则造成的伤害越高。\\n攻击时若目标附带<color=#28d9ed>弱化效果</color>,则WG恢复<color=#28d9ed>10</color>。\\n攻击后,若目标未附带<color=#28d9ed>弱化效果</color>,则无视目标的<color=#28d9ed>效果抵抗</color>和<color=#28d9ed>免疫</color>,并对目标造成无法被解除的<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Passive_1_Water"
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_DAMGE_TAKEN"
+      ],
+      "debuff": [
+        "BT_DOT_LIGHTNING_IR"
+      ]
     }
   ]
 }

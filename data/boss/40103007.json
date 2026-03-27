@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -65,7 +65,10 @@
         "kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>35%</color>만큼 회복시키고, 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "zh": "使全体友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>35%</color>,并使弱化效果持续时间减少<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Second_2000054"
+      "icon": "Skill_Second_2000054",
+      "buff": [
+        "BT_EXTEND_DEBUFF"
+      ]
     },
     {
       "name": {
@@ -81,7 +84,11 @@
         "kr": "생존한 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 후, 사망한 아군 전체를 <color=#28d9ed>부활(강화)</color>시킵니다. 이후 아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>35%</color>만큼 회복시킵니다.",
         "zh": "使存活的友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>后,使死亡的友军全体<color=#28d9ed>复活(强化)</color>。随后使全体友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>35%</color>。"
       },
-      "icon": "Skill_Ultimate_2000054"
+      "icon": "Skill_Ultimate_2000054",
+      "buff": [
+        "BT_RESURRECTION",
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
@@ -97,7 +104,11 @@
         "kr": "(패시브 효과)\\n전투 시작 시 아군 전체에게 해제되지 않는 <color=#28d9ed>피해 감소</color> 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n자신의 잃은 체력에 비례하여 <color=#28d9ed>속도</color>가 증가합니다.\\n피격 시 출혈 상태라면 받는 피해가 증가합니다.\\n공격 후 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color> 증가 효과를 부여합니다.\\n자신의 턴 종료 시 WG를 5 회복합니다.\\n매 턴 자신의 공격력이 <color=#28d9ed>5%</color>증가 합니다. (최대 20회 누적)",
         "zh": "(被动效果)\\n战斗开始时,使全体友军获得无法被解除的<color=#28d9ed>伤害降低</color>效果,持续<color=#28d9ed>3回合</color>。\\n根据自身损失的生命值等比提升<color=#28d9ed>速度</color>。\\n受到攻击时,若处于出血状态,则所受伤害提升。\\n攻击后,全体友军获得<color=#28d9ed>防御力</color>提升效果,持续<color=#28d9ed>1回合</color>。\\n自身回合结束时,WG恢复5。\\n每回合自身的攻击力提升<color=#28d9ed>5%</color>。(最多可叠加20次)"
       },
-      "icon": "MT_Passive_1_Water"
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_STAT|ST_DEF",
+        "BT_DAMGE_TAKEN"
+      ]
     }
   ]
 }

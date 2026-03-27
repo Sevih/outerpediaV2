@@ -293,5 +293,12 @@
   "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for <color=#28d9ed>3 turn(s)</color>.\\nWhen an ally uses a single-target skill, increases Priority of all allies except for that ally by <color=#28d9ed>20%</color>, and has a <color=#28d9ed>15%</color> chance to grant an <color=#28d9ed>extra turn</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)":{
     "remove_buff": ["BT_STAT|ST_SPEED"],
     "add_buff": ["BT_ACTION_GAUGE","BT_ADDITIVE_TURN"]
+  },
+  "(Passive Effect) At the start of battle, ignores Resilience to inflict <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color>, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.":{
+    "add_buff": ["IG_Buff_2000035_Interruption"]
+  },
+  "(Passive Effect)\\nWhen an Inferior Core is alive, grants an irremovable <color=#28d9ed>reduced damage taken</color> and reduces Weakness Gauge taken by <color=#28d9ed>50%</color>.":{
+    "remove_buff" :["IG_Buff_2000035_Interruption"],
+    "remove_debuff" :["BT_DOT_BLEED_IR"]
   }
 }

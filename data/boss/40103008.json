@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使攻击力最高的友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
       },
-      "icon": "Skill_First_2000012"
+      "icon": "Skill_First_2000012",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,12 @@
         "kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>치명 피해</color>를 증가시킵니다. 스킬 사용 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>。使用技能后,获得<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "Skill_Second_2000012"
+      "icon": "Skill_Second_2000012",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "BT_ADDITIVE_TURN"
+      ]
     },
     {
       "name": {
@@ -77,11 +85,14 @@
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. Reduces Priority of the target by <color=#28d9ed>25%</color>.",
-        "jp": "敵全体にダメージを与える。対象の行動ゲージを<color=#28d9ed>-25%</color>DOWNさせる。",
-        "kr": "적 전체를 공격합니다. 대상의 행동 게이지를 <color=#28d9ed>-25%</color> 감소시킵니다.",
-        "zh": "攻击全体敌人,使目标的行动值降低<color=#28d9ed>-25%</color>。"
+        "jp": "敵全体にダメージを与える。対象の行動ゲージを<color=#28d9ed>25%</color>DOWNさせる。",
+        "kr": "적 전체를 공격합니다. 대상의 행동 게이지를 <color=#28d9ed>25%</color> 감소시킵니다.",
+        "zh": "攻击全体敌人,使目标的行动值降低<color=#28d9ed>25%</color>。"
       },
-      "icon": "Skill_Ultimate_2000012"
+      "icon": "Skill_Ultimate_2000012",
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -97,7 +108,12 @@
         "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 <color=#28d9ed>피해 감소</color> 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n자신은 항상 <color=#28d9ed>강화 촉진</color>을 얻습니다. 이 효과는 해제되지 않습니다.\\n모든 공격은 자신의 강화 효과가 많을수록 입히는 피해가 증가합니다.\\n턴 시작 시 WG를 <color=#28d9ed>10</color> 회복합니다.",
         "zh": "(被动效果)\\n战斗开始时,自身获得无法被解除的<color=#28d9ed>伤害降低</color>效果,持续<color=#28d9ed>3回合</color>。\\n自身始终获得<color=#28d9ed>强化促进</color>效果。该效果不会被解除。\\n所有攻击都是自身强化效果越多,则造成的伤害越高。\\n回合开始时,WG恢复<color=#28d9ed>10</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_STAT_BUFF_ENHANCE",
+        "BT_DMG_OWNER_BUFF",
+        "BT_DAMGE_TAKEN"
+      ]
     }
   ]
 }
