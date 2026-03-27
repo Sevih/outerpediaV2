@@ -65,7 +65,10 @@
         "kr": "적을 공격하고, 대상이 약화 효과가 있다면 방어력을 <color=#28d9ed>100%</color> 무시합니다.\\n적 처치 시 <color=#28d9ed>압도적인 성능</color> 쿨타임이 초기화 되며, <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击敌人,若目标附带弱化效果,则无视<color=#28d9ed>100%</color>的防御力。\\n击杀敌人时,<color=#28d9ed>压倒性性能</color>的冷却时间重置,且获得<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "Skill_Second_4044001"
+      "icon": "Skill_Second_4044001",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     },
     {
       "name": {

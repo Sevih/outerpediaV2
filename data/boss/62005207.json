@@ -49,7 +49,13 @@
         "kr": "적을 강격으로 공격합니다. \n대상에게 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 저주를 부여합니다. (해제 불가)",
         "zh": "用强击攻击敌人。\\n有<color=#28d9ed>80%</color>概率施加持续<color=#28d9ed>2</color>回合的不可驱散<color=#28d9ed>诅咒</color>。"
       },
-      "icon": "Skill_First_2000086"
+      "icon": "Skill_First_2000086",
+      "debuff": [
+        "HEAVY_STRIKE"
+      ],
+      "buff": [
+        "HEAVY_STRIKE"
+      ]
     },
     {
       "name": {
@@ -65,7 +71,13 @@
         "kr": "적 전체를 강격으로 공격합니다. \n피해를 준 대상마다 자신의 행동 게이지가 <color=#28d9ed>25%</color> 증가하고, 대상 전체에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 저주를 부여합니다. (해제 불가)",
         "zh": "用强击攻击全体敌人。\\n每命中一个目标,自身<color=#28d9ed>行动值</color>+<color=#28d9ed>25%</color>。并有<color=#28d9ed>100%</color>概率施加持续<color=#28d9ed>2</color>回合的不可驱散<color=#28d9ed>诅咒</color>。"
       },
-      "icon": "Skill_Second_2000086"
+      "icon": "Skill_Second_2000086",
+      "debuff": [
+        "HEAVY_STRIKE"
+      ],
+      "buff": [
+        "HEAVY_STRIKE"
+      ]
     },
     {
       "name": {
@@ -81,7 +93,13 @@
         "kr": "적 전체를 강격으로 공격하고 CP를 <color=#28d9ed>15</color> 회복합니다.\n공격 후 대상의 저주를 모두 폭발시키고, AP를 <color=#28d9ed>80</color> 감소시킵니다.",
         "zh": "强击全体敌人,恢复<color=#28d9ed>15</color>的CP。\n攻击后,使目标受到的所有诅咒效果爆炸,AP减少<color=#28d9ed>80</color>。"
       },
-      "icon": "Skill_Ultimate_2000086"
+      "icon": "Skill_Ultimate_2000086",
+      "debuff": [
+        "HEAVY_STRIKE"
+      ],
+      "buff": [
+        "HEAVY_STRIKE"
+      ]
     },
     {
       "name": {

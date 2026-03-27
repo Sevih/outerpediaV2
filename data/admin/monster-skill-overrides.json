@@ -287,18 +287,35 @@
     "remove_buff": ["BT_STAT|ST_SPEED"],
     "add_buff": ["BT_ACTION_GAUGE"]
   },
-  "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to grant the caster increased <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color>.\\nDeals <color=#28d9ed>3%</color> of the target's Max Health as fixed damage if the target is inflicted with <color=#28d9ed>Bleeding</color>.":{
-    "add_buff":["BT_STAT|ST_PIERCE_POWER_RATE"]
+  "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to grant the caster increased <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color>.\\nDeals <color=#28d9ed>3%</color> of the target's Max Health as fixed damage if the target is inflicted with <color=#28d9ed>Bleeding</color>.": {
+    "add_buff": ["BT_STAT|ST_PIERCE_POWER_RATE"]
   },
-  "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for <color=#28d9ed>3 turn(s)</color>.\\nWhen an ally uses a single-target skill, increases Priority of all allies except for that ally by <color=#28d9ed>20%</color>, and has a <color=#28d9ed>15%</color> chance to grant an <color=#28d9ed>extra turn</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)":{
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for <color=#28d9ed>3 turn(s)</color>.\\nWhen an ally uses a single-target skill, increases Priority of all allies except for that ally by <color=#28d9ed>20%</color>, and has a <color=#28d9ed>15%</color> chance to grant an <color=#28d9ed>extra turn</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)": {
     "remove_buff": ["BT_STAT|ST_SPEED"],
-    "add_buff": ["BT_ACTION_GAUGE","BT_ADDITIVE_TURN"]
+    "add_buff": ["BT_ACTION_GAUGE", "BT_ADDITIVE_TURN"]
   },
-  "(Passive Effect) At the start of battle, ignores Resilience to inflict <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color>, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.":{
+  "(Passive Effect) At the start of battle, ignores Resilience to inflict <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color>, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.": {
     "add_buff": ["IG_Buff_2000035_Interruption"]
   },
-  "(Passive Effect)\\nWhen an Inferior Core is alive, grants an irremovable <color=#28d9ed>reduced damage taken</color> and reduces Weakness Gauge taken by <color=#28d9ed>50%</color>.":{
-    "remove_buff" :["IG_Buff_2000035_Interruption"],
-    "remove_debuff" :["BT_DOT_BLEED_IR"]
+  "(Passive Effect)\\nWhen an Inferior Core is alive, grants an irremovable <color=#28d9ed>reduced damage taken</color> and reduces Weakness Gauge taken by <color=#28d9ed>50%</color>.": {
+    "remove_buff": ["IG_Buff_2000035_Interruption"],
+    "remove_debuff": ["BT_DOT_BLEED_IR"]
+  },
+  "Attacks an enemy, then grants an extra turn.\\n\\nBefore attacking, if the target's Health is less than or equal to <color=#28d9ed>90%</color>, grants the <color=#28d9ed>Ume Ichirin</color> effect for <color=#28d9ed>3 turn(s)</color>, and increases damage dealt.\\n\\nIf the target's Health is greater than <color=#28d9ed>90%</color>, grants the <color=#28d9ed>Sakura, Chiru</color> effect for <color=#28d9ed>3 turn(s)</color>, and reduces <color=#28d9ed>Chain Points</color> by <color=#28d9ed>15</color>.": {
+    "remove_buff": ["BT_2000065_A_IR", "BT_2000065_B_IR"],
+    "add_buff": [
+      "IG_Buff_Effect_2000065_A_Interruption",
+      "IG_Buff_Effect_2000065_B_Interruption"
+    ]
+  },
+  "(Passive Effect)\\nAlways grants <color=#28d9ed>Buff Enhancement</color> and <color=#28d9ed>Debuff Enhancement</color> to the caster. This effect is irremovable.\\nAt the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>, and recovers Weakness Gauge by <color=#28d9ed>15</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)":{
+    "add_buff": [
+      "BT_RANDOM_STAT"
+    ]
+  },
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for 3 turns. Additionally, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>100%</color> and grants increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Buff Enhancement</color> for 1 turn.\\nTakes Weakness Gauge damage only when hit by a counterattack.":{
+    "remove_buff": ["BT_STAT|ST_SPEED"],
+    "add_buff": ["BT_ACTION_GAUGE"]
   }
 }
+

@@ -81,7 +81,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>공격력</color>이 증가합니다.\\n\\n<color=#28d9ed>방어력</color>이 증가한 상태라면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击全体敌人,并使<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若处于<color=#28d9ed>防御力</color>提升状态,则获得<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Earth"
+      "icon": "MT_Attack_Magic_1_Earth",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     },
     {
       "name": {

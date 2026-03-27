@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第3层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
         "zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。"
       },
-      "icon": "Skill_First_2000008"
+      "icon": "Skill_First_2000008",
+      "buff": [
+        "HEAVY_STRIKE"
+      ]
     },
     {
       "name": {
@@ -86,7 +89,14 @@
         "kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
         "zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000008"
+      "icon": "Skill_Ultimate_2000008",
+      "buff": [
+        "HEAVY_STRIKE",
+        "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ]
     },
     {
       "name": {
@@ -102,7 +112,12 @@
         "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n자신의 모든 공격에는 <color=#28d9ed>강격</color> 효과가 적용 됩니다.\\n치명 피격 시 적 전체에게 해제 불가능한 <color=#28d9ed>치명 확률</color> 감소 효과를 <color=#28d9ed>1턴</color> 동안 부여하고, WG를 <color=#28d9ed>10%</color> 회복합니다. 또한 적 전체의 <color=#28d9ed>공격력</color>, <color=#28d9ed>치명 확률</color>, <color=#28d9ed>방어력</color>이 <color=#28d9ed>10%</color> 씩 감소 됩니다. (최대 10회 누적)\\n아군은 치명 피격이 아닐 때 받는 피해량이 증가합니다.",
         "zh": "(被动效果)\\n战斗开始时,使自身获得无法被解除的伤害降低效果,持续<color=#28d9ed>3回合</color>。\\n自身的所有攻击获得<color=#28d9ed>强击</color>效果。\\n受到暴击时,使全体敌人获得无法被解除的<color=#28d9ed>暴击率</color>降低效果,持续<color=#28d9ed>1回合</color>,WG恢复<color=#28d9ed>10%</color>。另外,全体敌人的<color=#28d9ed>攻击力</color>、<color=#28d9ed>暴击率</color>、<color=#28d9ed>防御力</color>各降低<color=#28d9ed>10%</color>。(最多可叠加10次)\\n友军未受到暴击时,所受伤害量提升。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_DMG_NOT_CRITICAL",
+        "BT_DAMGE_TAKEN",
+        "HEAVY_STRIKE"
+      ]
     },
     {
       "name": {

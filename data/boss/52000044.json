@@ -86,7 +86,10 @@
         "kr": "적을 공격하고, 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n이 공격은 대상이 보유한 <color=#28d9ed>약화 효과</color>가 많을수록 피해가 증가하고, 적을 처치하면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击敌人,使自身<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>2回合</color>。\\n目标附带的<color=#28d9ed>弱化效果</color>越多,则该技能的伤害越高,且若击杀敌人,则获得<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000044"
+      "icon": "Skill_Ultimate_2000044",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     }
   ]
 }

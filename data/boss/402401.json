@@ -113,7 +113,10 @@
         "kr": "최대 체력의 <color=#28d9ed>70%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 적 전체를 공격합니다.\\n해당 공격은 적 전체의 AP와 적 팀의 CP를 각각 100 감소시킵니다.\\n이 후, <color=#28d9ed>100%</color> 확률로 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 <color=#28d9ed>공격력</color>이 높을수록 증가하며 해제되지 않습니다.\\n적을 처치하면 추가 턴을 획득합니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>70%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并攻击全体敌人。\\n该攻击使全体敌人的AP和敌方的CP各降低\\n100。\\n此后,有<color=#28d9ed>100%</color>的几率使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身<color=#28d9ed>攻击力</color>越高,则护盾量越高,且不会被解除。\\n击杀敌人时获得额外回合。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     },
     {
       "name": {
@@ -129,7 +132,10 @@
         "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 적 전체를 공격합니다.\\n해당 공격은 적 전체의 AP와 적 팀의 CP를 각각 100 감소시킵니다.\\n이 후, <color=#28d9ed>100%</color> 확률로 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 <color=#28d9ed>공격력</color>이 높을수록 증가하며 해제되지 않습니다.\\n적을 처치하면 추가 턴을 획득합니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>30%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并攻击全体敌人。\\n该攻击使全体敌人的AP和敌方的CP各降低100。\\n此后,有<color=#28d9ed>100%</color>的几率使自身获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。自身<color=#28d9ed>攻击力</color>越高,则护盾量越高,且不会被解除。\\n击杀敌人时获得额外回合。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     }
   ]
 }

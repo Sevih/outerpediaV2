@@ -30,5 +30,15 @@
   {
     "pattern": "grants 【Remove Detection Interference】 or 【Exclude Unknown Variables】",
     "add_buff": ["UNIQUE_VENION_D","UNIQUE_VENION_E"]
+  },
+  {
+    "pattern": "Heavy Strike",
+    "add_buff": ["HEAVY_STRIKE"]
+  },
+  {
+    "pattern": "gains an (<[^>]+>)?(extra turn)",
+    "add_buff": ["BT_ADDITIVE_TURN"]
   }
+  
 ]
+

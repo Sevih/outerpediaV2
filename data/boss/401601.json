@@ -97,7 +97,10 @@
         "kr": "(발동 효과) 적을 처치 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가하고 <color=#28d9ed>추가 턴</color>을 획득합니다.(화상으로 인한 처치 제외)",
         "zh": "(触发效果)击杀敌人时,使自身的<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>2回合</color>,并获得<color=#28d9ed>额外回合</color>。(由烧伤造成的击杀除外)"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     },
     {
       "name": {

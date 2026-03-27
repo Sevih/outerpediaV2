@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第3层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使自身<color=#28d9ed>回避</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_First_2000020"
+      "icon": "Skill_First_2000020",
+      "buff": [
+        "BT_STAT|ST_BUFF_CHANCE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,14 @@
         "kr": "스킬 사용 시 <color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
         "zh": "使用技能时,有<color=#28d9ed>100%</color>的几率解除全体敌人的\\n<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,使全体敌人的<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>1回合</color>,且每对1个目标造成伤害,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。"
       },
-      "icon": "Skill_Second_2000020"
+      "icon": "Skill_Second_2000020",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_STAT|ST_BUFF_CHANCE"
+      ]
     },
     {
       "name": {
@@ -86,7 +96,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>3턴</color> 동안 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000020"
+      "icon": "Skill_Ultimate_2000020",
+      "debuff": [
+        "BT_SEALED"
+      ]
     },
     {
       "name": {
@@ -102,7 +115,13 @@
         "kr": "(패시브 효과)\\n전투 시작 시 아군 전체에게 3턴 동안 해제되지 않는 <color=#28d9ed>피해 감소</color>를 부여합니다. 추가로 자신은 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가하고, 1턴 동안 <color=#28d9ed>치명 확률</color>증가 ,<color=#28d9ed>강화 촉진</color> 효과를 부여합니다.\\n반격으로 피격 시에만 WG 피해를 받습니다.",
         "zh": "(被动效果)\\n战斗开始时,全体友军获得无法被解除的<color=#28d9ed>伤害降低</color>效果,持续3回合。自身<color=#28d9ed>行动值</color>额外提升<color=#28d9ed>100%</color>,并获得<color=#28d9ed>暴击率</color>提升、<color=#28d9ed>强化促进</color>效果,持续1回合。\\n仅在受到反击时,受到WG伤害。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_STAT_BUFF_ENHANCE",
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_DAMGE_TAKEN",
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {

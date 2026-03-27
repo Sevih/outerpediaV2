@@ -54,7 +54,10 @@
         "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.\\n\\n<color=#28d9ed>방어력이 증가한 상태라면 추가 턴을 획득합니다.</color>",
         "zh": "攻击敌人。\\n自身的<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。\\n\\n<color=#28d9ed>若防御力处于提升状态,则获得额外回合。</color>"
       },
-      "icon": "Skill_First_2000016"
+      "icon": "Skill_First_2000016",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     },
     {
       "name": {

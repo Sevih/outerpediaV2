@@ -86,7 +86,10 @@
         "kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가하고, 적 처치 시 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击敌人。\\n若目标处于<color=#28d9ed>出血</color>状态,则伤害提升,并在击杀敌人时,获得<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000015"
+      "icon": "Skill_Ultimate_2000015",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     },
     {
       "name": {
