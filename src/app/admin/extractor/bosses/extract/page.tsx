@@ -103,6 +103,8 @@ export default function BossExtractorPage() {
   const [versionOnSave, setVersionOnSave] = useState(false);
   const [minionMode, setMinionMode] = useState(false);
   const [parentBossId, setParentBossId] = useState('');
+  const [refs, setRefs] = useState<{ file: string; line: number; text: string }[] | null>(null);
+  const [refsLoading, setRefsLoading] = useState(false);
 
   // Load filters on mount
   useEffect(() => {
@@ -149,6 +151,19 @@ export default function BossExtractorPage() {
       setAllDungeons(data.allDungeons ?? []);
     } finally {
       setExtracting(false);
+    }
+  }
+
+  async function handleFindRefs() {
+    if (!selectedId) return;
+    setRefsLoading(true);
+    setRefs(null);
+    try {
+      const res = await fetch(`${API}?action=find-references&id=${selectedId}`);
+      const data = await res.json();
+      setRefs(data.refs ?? []);
+    } finally {
+      setRefsLoading(false);
     }
   }
 
@@ -317,6 +332,13 @@ export default function BossExtractorPage() {
                   </label>
                 )}
                 <button
+                  onClick={handleFindRefs}
+                  disabled={refsLoading}
+                  className="rounded-lg bg-zinc-700 px-4 py-1.5 text-sm font-semibold shadow transition hover:bg-zinc-600 disabled:opacity-50"
+                >
+                  {refsLoading ? 'Searching...' : 'Refs'}
+                </button>
+                <button
                   onClick={handleSave}
                   disabled={saving}
                   className="rounded-lg bg-blue-600 px-5 py-1.5 text-sm font-semibold shadow transition hover:bg-blue-500 disabled:opacity-50"
@@ -325,6 +347,23 @@ export default function BossExtractorPage() {
                 </button>
               </div>
               {saveMsg && <div className="text-sm text-green-400">{saveMsg}</div>}
+
+              {/* References modal */}
+              {refs !== null && (
+                <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-3 space-y-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-semibold text-zinc-300">{refs.length} reference(s) in guides</span>
+                    <button onClick={() => setRefs(null)} className="ml-auto text-xs text-zinc-500 hover:text-zinc-300">Close</button>
+                  </div>
+                  {refs.length === 0 && <p className="text-xs text-zinc-500">No references found.</p>}
+                  {refs.map((r, i) => (
+                    <div key={i} className="text-xs border-t border-zinc-800 pt-1">
+                      <span className="font-mono text-blue-400">{r.file}:{r.line}</span>
+                      <div className="text-zinc-500 truncate">{r.text}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Global diff with existing */}
               {existing && (() => {

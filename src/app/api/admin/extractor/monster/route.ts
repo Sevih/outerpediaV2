@@ -187,7 +187,7 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
   // Collect all spawn IDs referenced by dungeons (to distinguish spawn refs from monster IDs)
   const dungeonSpawnRefs = new Set<string>();
   for (const d of gd.dungeons) {
-    for (const pos of ['SpawnID_Pos0', 'SpawnID_Pos1', 'SpawnID_Pos2', 'StoryTeamSpawn_fallback1', 'StoryTeamSpawn_fallback2']) {
+    for (const pos of ['SpawnID_Pos0', 'SpawnID_Pos1', 'SpawnID_Pos2', 'StoryTeamSpawn_fallback1', 'StoryTeamSpawn_fallback2', 'SpawnAdvantageRate_Spd', 'SpawnAdvantageRate_Spd_fallback1']) {
       const raw = d[pos];
       if (!raw || /^(TRUE|FALSE|True|False)$/i.test(raw)) continue;
       for (const part of raw.split(',')) {
@@ -291,7 +291,7 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
       modeLabel = sysKey ? (gd.textSystemMap[sysKey] ?? null) : null;
     }
 
-    for (const pos of ['SpawnID_Pos0', 'SpawnID_Pos1', 'SpawnID_Pos2', 'StoryTeamSpawn', 'StoryTeamSpawn_fallback1', 'StoryTeamSpawn_fallback2']) {
+    for (const pos of ['SpawnID_Pos0', 'SpawnID_Pos1', 'SpawnID_Pos2', 'StoryTeamSpawn', 'StoryTeamSpawn_fallback1', 'StoryTeamSpawn_fallback2', 'SpawnAdvantageRate_Spd', 'SpawnAdvantageRate_Spd_fallback1']) {
       const raw = d[pos];
       if (!raw || /^(TRUE|FALSE|True|False)$/i.test(raw)) continue;
       // Skip short values in StoryTeamSpawn (team size, not spawn ID)
@@ -1196,6 +1196,42 @@ export async function GET(req: NextRequest) {
       }
 
       return NextResponse.json({ byMode });
+    }
+
+    if (action === 'find-references') {
+      const id = req.nextUrl.searchParams.get('id') ?? '';
+      if (!id) return NextResponse.json({ error: 'Missing id' }, { status: 400 });
+
+      const guidesDir = path.join(process.cwd(), 'src', 'app', '[lang]', 'guides', '_contents');
+      const refs: { file: string; line: number; text: string }[] = [];
+
+      async function scanDir(dir: string) {
+        let entries: string[];
+        try { entries = await fs.readdir(dir); } catch { return; }
+        for (const entry of entries) {
+          const full = path.join(dir, entry);
+          const stat = await fs.stat(full);
+          if (stat.isDirectory()) {
+            await scanDir(full);
+          } else if (entry.endsWith('.json') || entry.endsWith('.tsx') || entry.endsWith('.ts')) {
+            try {
+              const content = await fs.readFile(full, 'utf-8');
+              const lines = content.split('\n');
+              // Match exact ID: followed by quote, dot, or end — not by dash/digit
+              const re = new RegExp(`${id}(?=["\\.\\s,}\\]]|$)(?![-\\dA-Za-z])`);
+              for (let i = 0; i < lines.length; i++) {
+                if (re.test(lines[i])) {
+                  const relPath = path.relative(guidesDir, full).replace(/\\/g, '/');
+                  refs.push({ file: relPath, line: i + 1, text: lines[i].trim().substring(0, 120) });
+                }
+              }
+            } catch { /* skip */ }
+          }
+        }
+      }
+
+      await scanDir(guidesDir);
+      return NextResponse.json({ id, refs });
     }
 
     return NextResponse.json({ error: `Unknown action: ${action}` }, { status: 400 });
