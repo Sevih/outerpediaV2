@@ -677,18 +677,18 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
       if (!finishDescEn) skills.splice(finishIdx, 1);
       return;
     }
-    if (finish.icon !== enter.icon) return; // different icon, keep separate
-
-    // Keep separate only if finish has unique content not already in enter
-    // Check: finish name or description core is mentioned in enter's description
+    // Check if finish content is already described in enter
     const enterDescEn = ((enter.description as Record<string, string>) ?? {}).en ?? '';
     const finishCore = finishDescEn.replace(/[.\s]+$/, '');
     const nameInEnter = finishNameEn && enterDescEn.includes(finishNameEn);
     const descInEnter = finishCore && enterDescEn.includes(finishCore);
-    if (finishDescEn && !nameInEnter && !descInEnter) {
-      // No match but no name → just discard the finish entry
-      if (!finishNameEn) { skills.splice(finishIdx, 1); }
-      return;
+
+    if (!nameInEnter && !descInEnter) {
+      // Has both name and desc not referenced in enter + different icon → keep separate
+      if (finishDescEn && finishNameEn && finish.icon !== enter.icon) return;
+      // Has desc not in enter → keep separate
+      if (finishDescEn) return;
+      // No desc → merge buffs then discard (regardless of name/icon)
     }
 
     // Merge buffs/debuffs from finish into enter

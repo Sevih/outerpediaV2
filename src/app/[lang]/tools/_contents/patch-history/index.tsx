@@ -68,12 +68,22 @@ const TYPE_I18N_KEYS: Record<string, 'tools.patch-history.type.update' | 'tools.
 
 const POSTS_PER_PAGE = 10;
 
+function getInitialParams(): { era: Era; type: string | null } {
+  if (typeof window === 'undefined') return { era: 'major9', type: null };
+  const params = new URLSearchParams(window.location.search);
+  const era = params.get('era') === 'smilegate' ? 'smilegate' : 'major9';
+  const type = params.get('type');
+  const validTypes = era === 'major9' ? MAJOR9_TYPES as readonly string[] : LEGACY_TYPES as readonly string[];
+  return { era, type: type && validTypes.includes(type) ? type : null };
+}
+
 export default function PatchNotesTool() {
   const major9Data = use(major9Promise);
   const legacyData = use(legacyPromise);
   const { lang, t } = useI18n();
-  const [era, setEra] = useState<Era>('major9');
-  const [typeFilter, setTypeFilter] = useState<string[]>([]);
+  const initial = getInitialParams();
+  const [era, setEra] = useState<Era>(initial.era);
+  const [typeFilter, setTypeFilter] = useState<string | null>(initial.type);
   const [search, setSearch] = useState('');
   const [expandedId, setExpandedId] = useState<number | string | null>(null);
   const [page, setPage] = useState(1);
@@ -91,7 +101,7 @@ export default function PatchNotesTool() {
     const m9Index = m9Posts.findIndex(p => p.slug === slug);
     if (m9Index >= 0) {
       setEra('major9');
-      setTypeFilter([]);
+      setTypeFilter(null);
       setSearch('');
       setPage(Math.floor(m9Index / POSTS_PER_PAGE) + 1);
       setExpandedId(m9Posts[m9Index].id);
@@ -101,13 +111,13 @@ export default function PatchNotesTool() {
     const lgIndex = lgPosts.findIndex(p => p.slug === slug);
     if (lgIndex >= 0) {
       setEra('smilegate');
-      setTypeFilter([]);
+      setTypeFilter(null);
       setSearch('');
       setPage(Math.floor(lgIndex / POSTS_PER_PAGE) + 1);
       setExpandedId(lgPosts[lgIndex].id);
       hashHandledRef.current = true;
     }
-  }, []);
+  }, [lang, major9Data.posts, legacyData.posts]);
 
   // Resolve language: zh falls back to en
   const effectiveLang = lang === 'zh' ? 'en' : lang;
@@ -118,8 +128,8 @@ export default function PatchNotesTool() {
     let source = era === 'major9'
       ? (major9Data.posts as Post[]).filter(p => p.lang === effectiveLang)
       : (legacyData.posts as Post[]); // Legacy is EN only
-    if (typeFilter.length > 0) {
-      source = source.filter(p => typeFilter.includes(p.type));
+    if (typeFilter) {
+      source = source.filter(p => p.type === typeFilter);
     }
     if (search.trim()) {
       const q = search.trim().toLowerCase();
@@ -129,21 +139,31 @@ export default function PatchNotesTool() {
       );
     }
     return source;
-  }, [era, effectiveLang, typeFilter, search]);
+  }, [era, effectiveLang, typeFilter, search, major9Data.posts, legacyData.posts]);
 
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
   const paginatedPosts = posts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE);
 
+  function updateUrl(newEra: Era, newType: string | null, hash?: string) {
+    const params = new URLSearchParams();
+    if (newEra !== 'major9') params.set('era', newEra);
+    if (newType) params.set('type', newType);
+    const qs = params.toString();
+    const path = window.location.pathname + (qs ? `?${qs}` : '') + (hash ?? window.location.hash);
+    history.replaceState(null, '', path);
+  }
+
   function handleToggleType(type: string) {
-    setTypeFilter(prev =>
-      prev.includes(type) ? prev.filter(t => t !== type) : [...prev, type],
-    );
+    const next = typeFilter === type ? null : type;
+    setTypeFilter(next);
     setPage(1);
+    updateUrl(era, next);
   }
 
   function handleResetType() {
-    setTypeFilter([]);
+    setTypeFilter(null);
     setPage(1);
+    updateUrl(era, null);
   }
 
   function handleSearch(value: string) {
@@ -153,21 +173,17 @@ export default function PatchNotesTool() {
 
   function switchEra(newEra: Era) {
     setEra(newEra);
-    setTypeFilter([]);
+    setTypeFilter(null);
     setSearch('');
     setExpandedId(null);
     setPage(1);
+    updateUrl(newEra, null, '');
   }
 
   function toggleExpand(post: Post) {
     const isCollapsing = expandedId === post.id;
     setExpandedId(isCollapsing ? null : post.id);
-    // Sync URL hash with the post slug
-    if (isCollapsing) {
-      history.replaceState(null, '', window.location.pathname + window.location.search);
-    } else {
-      history.replaceState(null, '', `#${post.slug}`);
-    }
+    updateUrl(era, typeFilter, isCollapsing ? '' : `#${post.slug}`);
   }
 
   return (
@@ -221,7 +237,7 @@ export default function PatchNotesTool() {
             value: type,
           })),
         ]}
-        filter={typeFilter}
+        filter={typeFilter ? [typeFilter] : []}
         onToggle={handleToggleType}
         onReset={handleResetType}
       />
