@@ -316,6 +316,15 @@
   "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for 3 turns. Additionally, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>100%</color> and grants increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Buff Enhancement</color> for 1 turn.\\nTakes Weakness Gauge damage only when hit by a counterattack.":{
     "remove_buff": ["BT_STAT|ST_SPEED"],
     "add_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable reduced damage taken to the caster for <color=#28d9ed>3 turn(s)</color> and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.\\nUntil inflicted with Break, inflicts an irremovable <color=#28d9ed>Silenced</color> on all enemies.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>100%</color>.\\nWhen an enemy performs an action, if the caster is inflicted with a debuff, increases Priority of the caster by <color=#28d9ed>20%</color>.":{
+    "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "(Passive Effect)\\nGreatly reduces damage taken by the Boss.\\nWeakness Gauge can be <color=#28d9ed>reduced</color> only <color=#28d9ed>when hit</color> if all surviving allies are inflicted with <color=#28d9ed>Shocked</color>.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)\\nAt the start of the Boss's or Epsilon's turn, removes all debuffs from the caster.\\nWhen the Boss is inflicted with <color=#28d9ed>Break</color>, the <color=#28d9ed>reduced damage taken</color> and <color=#28d9ed>immunity to Weakness Gauge reduction</color> effects are removed.":{
+    "add_debuff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nAt the start of the turn, when all surviving allies are not inflicted with <color=#28d9ed>Stunned</color>, grants an irremovable <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>1 turn</color>.\\nWhen the caster is inflicted with <color=#28d9ed>Stunned</color>, increases damage taken.\\nAfter the Boss is inflicted with <color=#28d9ed>Break</color>, irremovable <color=#28d9ed>Invulnerability</color> is no longer granted.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)":{
+    "add_debuff": ["BT_ACTION_GAUGE"]
   }
 }
 

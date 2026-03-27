@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第5层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103005",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -66,11 +66,14 @@
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to reduce the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.",
-        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-100%</color>DOWNさせる。",
-        "kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-100%</color> 감소시킵니다.",
-        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标<color=#28d9ed>行动值</color>降低<color=#28d9ed>-100%</color>。"
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>100%</color>DOWNさせる。",
+        "kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>100%</color> 감소시킵니다.",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标<color=#28d9ed>行动值</color>降低<color=#28d9ed>100%</color>。"
       },
-      "icon": "Skill_Second_2000063"
+      "icon": "Skill_Second_2000063",
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -86,7 +89,10 @@
         "kr": "적을 공격합니다. 대상의 <color=#28d9ed>현재 체력</color>이 <color=#28d9ed>30%</color> 이하라면 대상을 <color=#28d9ed>즉사</color>시킵니다.",
         "zh": "攻击敌人。若目标的<color=#28d9ed>当前生命值</color>在<color=#28d9ed>30%</color>以下,则使目标<color=#28d9ed>即死</color>。"
       },
-      "icon": "Skill_Ultimate_2000063"
+      "icon": "Skill_Ultimate_2000063",
+      "debuff": [
+        "BT_KILL_UNDER_HP_RATE"
+      ]
     },
     {
       "name": {
@@ -102,7 +108,11 @@
         "kr": "(패시브 효과) 전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n공격 시 해제 가능한 <color=#28d9ed>강화 효과</color>를 보유하고 있었다면 열화코어가 적 전체에게 공격하여 체력을 <color=#28d9ed>30%</color> 씩 감소 시킵니다.\\n방어형이 아닌 적의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>80%</color> 감소시킵니다.\\n(발동 효과) 치명 피격 시 <color=#28d9ed>100%</color> 확률로 반격하고, WG를 <color=#28d9ed>30%</color> 회복 합니다.",
         "zh": "(被动效果)战斗开始时,自身获得无法被解除的伤害降低效果,持续<color=#28d9ed>3回合</color>。\\n受到暴击时,有<color=#28d9ed>100%</color>的几率进行反击,并恢复<color=#28d9ed>30%</color>WG。\\n(触发效果)攻击时,若附带可解除的<color=#28d9ed>强化效果</color>,烈火核心将攻击全体敌人,生命值分别降低<color=#28d9ed>30%</color>。\\n非防御型敌人的<color=#28d9ed>效果命中</color>降低<color=#28d9ed>80%</color>。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "SYS_BUFF_COUNTER",
+        "BT_DAMGE_TAKEN"
+      ]
     },
     {
       "name": {

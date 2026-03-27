@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第5层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103005",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,11 @@
         "kr": "(발동 효과) 스킬의 <color=#28d9ed>쿨타임</color>마다 <color=#28d9ed>복수</color> 효과를 준비합니다.\\n<color=#28d9ed>복수</color> 발동 시 적 전체를 공격하고 아군 전체의 모든 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
         "zh": "(被动效果)每个技能的<color=#28d9ed>冷却时间</color>准备<color=#28d9ed>复仇</color>效果。\\n<color=#28d9ed>复仇</color>发动时,攻击全体敌人,使全体友军的所有技能冷却时间减少<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Second_2000053"
+      "icon": "Skill_Second_2000053",
+      "buff": [
+        "SYS_BUFF_REVENGE",
+        "BT_COOL_CHARGE"
+      ]
     },
     {
       "name": {
@@ -86,7 +90,10 @@
         "kr": "<color=#28d9ed>고유 자원 : 지배욕 5개 보유 시 사용 가능합니다.</color>\\n적 전체를 공격하고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다. 석화 효과는 대상의 효과 저항을 무시합니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다.",
         "zh": "<color=#28d9ed>持有5个固有资源:统治欲时可以使用。</color>\\n攻击全体敌人,并造成<color=#28d9ed>石化</color>效果,持续<color=#28d9ed>2回合</color>。石化效果无视目标的效果抵抗。\\n自身的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。"
       },
-      "icon": "Skill_Ultimate_2000053"
+      "icon": "Skill_Ultimate_2000053",
+      "debuff": [
+        "BT_STONE"
+      ]
     },
     {
       "name": {
@@ -102,7 +109,11 @@
         "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n적 행동 시 자신의 체력이 <color=#28d9ed>30%</color> 이하라면 데미우르고스 아스테가 <color=#28d9ed>반격</color>하며, 자신의 체력이 <color=#28d9ed>30%</color> 초과한다면 데미우르고스 아스테에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.\\n<color=#28d9ed>광폭화</color> 상태가 아니라면 받는 WG 피해량을 <color=#28d9ed>100%</color> 감소시킵니다.",
         "zh": "(被动效果)\\n战斗开始时,自身获得无法被解除的伤害降低效果,持续<color=#28d9ed>3回合</color>。\\n敌人行动时,若自身生命值在<color=#28d9ed>30%</color>以下,创世之神·奥斯黛将进行<color=#28d9ed>反击</color>,当自身生命值超过<color=#28d9ed>30%</color>时,创世之神·奥斯黛获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。\\n若未处于<color=#28d9ed>狂暴化</color>状态,则受到的WG伤害量降低<color=#28d9ed>100%</color>。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER",
+        "BT_DAMGE_TAKEN"
+      ]
     },
     {
       "name": {
@@ -118,23 +129,12 @@
         "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, WG 30%를 회복합니다. 광폭화는 5턴 동안 유지됩니다.\\n\\n<color=#28d9ed>미래를 예지했어요.</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고, <color=#28d9ed>3턴</color>동안 자신에게 실드를 부여합니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至陷入力竭状态为止。\\n\\n<color=#28d9ed>进入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复30%。狂暴化持续5回合。\\n\\n<color=#28d9ed>预见未来</color>:狂暴化结束时发动。\\n攻击全体敌人,使自身获得护盾效果,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower, and increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns, and recovers Weakness Gauge by 30%. Enraged lasts for 5 turns.\\n\\n<color=#28d9ed>I Foresaw the Future</color>: Used when Enraged ends.\\nAttacks all enemies, and grants a Barrier to the caster for <color=#28d9ed>3 turn(s)</color>.",
-        "jp": "最大HPの<color=#28d9ed>50%</color>以下になると<color=#28d9ed>【狂暴化】</color>状態に切り替わり、攻撃力とスピードが<color=#28d9ed>15%</color>UPする。この効果はブレイクすると解除される。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UPとダメージDOWN効果を3ターンの間付与し、WGを30%回復する。【狂暴化】は5ターンの間持続する。\\n\\n<color=#28d9ed>【未来を予知しました】</color>:【狂暴化】終了時に発動する。\\n敵全体にダメージを与え、自分にシールドを<color=#28d9ed>3ターン</color>の間付与する。",
-        "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>15%</color> 증가합니다. 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, WG 30%를 회복합니다. 광폭화는 5턴 동안 유지됩니다.\\n\\n<color=#28d9ed>미래를 예지했어요.</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고, <color=#28d9ed>3턴</color>동안 자신에게 실드를 부여합니다.",
-        "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并使攻击力和速度提升<color=#28d9ed>15%</color>。该效果将持续至陷入力竭状态为止。\\n\\n<color=#28d9ed>进入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复30%。狂暴化持续5回合。\\n\\n<color=#28d9ed>预见未来</color>:狂暴化结束时发动。\\n攻击全体敌人,使自身获得护盾效果,持续<color=#28d9ed>3回合</color>。"
-      },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR",
+        "BT_SHIELD_BASED_CASTER"
+      ]
     }
   ]
 }

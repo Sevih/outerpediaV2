@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第20层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103020",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>감전</color>을 <color=#28d9ed>5턴</color> 동안 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>5回合</color>。"
       },
-      "icon": "Skill_Second_2000052"
+      "icon": "Skill_Second_2000052",
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
     },
     {
       "name": {
@@ -86,7 +89,10 @@
         "kr": "적 전체를 공격합니다.\\n피해를 준 대상마다 아군 전체의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>2.5%</color> 증가합니다.",
         "zh": "攻击全体敌人。\\n每对1个目标造成伤害,都使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>2.5%</color>。"
       },
-      "icon": "Skill_Ultimate_2000052"
+      "icon": "Skill_Ultimate_2000052",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -102,7 +108,16 @@
         "kr": "(패시브 효과)\\n전투 입장 시 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어 시스템 : 시그마 돔</color>을 생성합니다.\\n아군과 적이 행동 후, <color=#28d9ed>감전</color>을 보유하지 않은 아군이 있다면 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어 시스템 : 시그마 돔</color>이 생성 됩니다.\\n아군이 약화효과 피해 시 아군 전체의 행동 게이지가 <color=#28d9ed>50%</color> 감소 합니다.(1턴 당 1회 가능)\\n보스와 엡실론은 턴 시작 시 자신의 약화효과를 모두 해제합니다.\\n보스 <color=#28d9ed>브레이크</color>이후 <color=#28d9ed>방어 시스템 : 시그마 돔</color>은 생성되지 않습니다.",
         "zh": "(被动效果)\\n大幅降低首领受到的伤害。\\n所有幸存的友军只在处于<color=#28d9ed>触电</color>状态的情况下<color=#28d9ed>受到攻击时</color>,WG才会<color=#28d9ed>降低</color>。\\n友军受到弱化效果伤害时,全体友军的行动值降低<color=#28d9ed>50%</color>(1回合仅限1次)。\\n首领和埃普西隆在回合开始时均解除自身的所有弱化效果。\\n首领<color=#28d9ed>力竭</color>时受到的<color=#28d9ed>伤害降低</color>和<color=#28d9ed>WG降低免疫</color>效果会被解除。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_REMOVE_DEBUFF",
+        "BT_STAT|ST_AVOID_SUBTRACT_CAP",
+        "BT_STAT|ST_GET_GOLD_RATE_IR",
+        "BT_STAT|ST_GET_GOLD_RATE"
+      ],
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
