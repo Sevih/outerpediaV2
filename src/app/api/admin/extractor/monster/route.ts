@@ -60,6 +60,16 @@ function resolveModeLabel(textSystemMap: Record<string, LangTexts>, mode: string
 /** Refine mode label for display grouping (splits Elemental Tower by element, resolves SYS_ keys) */
 function refineMode(modeEn: string, dungeonEn: string, textSystemMap: Record<string, LangTexts>): string {
   let mode = modeEn || 'Unknown';
+  // Resolve raw DM_ mode keys from old boss files
+  if (mode.startsWith('DM_')) {
+    const sysKey = MODE_TO_SYS_KEY[mode];
+    if (sysKey) {
+      for (const [key, texts] of Object.entries(textSystemMap)) {
+        if (key.replace(/\s+/g, '') === sysKey.replace(/\s+/g, '') && texts.en) { mode = texts.en; break; }
+      }
+    }
+    if (mode.startsWith('DM_')) mode = mode.replace(/^DM_/, '').replace(/_/g, ' ');
+  }
   if (mode === 'Elemental Tower' && dungeonEn) {
     const elem = dungeonEn.match(/^(Fire|Water|Earth|Light|Dark)\s+Tower/)?.[1]
       ?? dungeonEn.match(/Tower\s+of\s+(Light|Dark)/)?.[1];
@@ -222,8 +232,15 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
     // Fallback: also index by spawn.ID
     if (s.ID && !keys.length) keys.push(s.ID);
 
-    const entry = { mids, row: s };
-    for (const k of keys) spawnMap.set(k, entry);
+    for (const k of keys) {
+      const existing = spawnMap.get(k);
+      if (existing) {
+        // Merge mids into existing entry
+        for (const m of mids) existing.mids.add(m);
+      } else {
+        spawnMap.set(k, { mids, row: s });
+      }
+    }
   }
 
   // World boss league lookup: DungeonID → LeagueName (TextSystem key)

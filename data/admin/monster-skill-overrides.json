@@ -282,5 +282,9 @@
   "(Passive Effect)\\nAt the start of a turn, resurrects (Greater) all <color=#28d9ed>Spare Cores</color>.\\nIncreases <color=#28d9ed>Priority</color> of surviving Spare Cores by <color=#28d9ed>15%</color>.\\n\\n(Triggered Effect) When an enemy uses a non-attack skill,\\nactivates <color=#28d9ed>Command: Restrain</color> on the target.": {
     "remove_debuff": ["BT_STUN", "BT_DOT_BURN"],
     "add_buff": ["BT_RUN_ACTIVE_SKILL_ON_TURN_END"]
+  },
+  "(Passive Effect)\\nAt the start of battle, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>100%</color>.\\nWhen Regina is alive, grants a permanent irremovable <color=#28d9ed>Regina's World</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)": {
+    "remove_buff": ["BT_STAT|ST_SPEED"],
+    "add_buff": ["BT_ACTION_GAUGE"]
   }
 }

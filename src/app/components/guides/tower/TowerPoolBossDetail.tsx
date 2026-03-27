@@ -95,7 +95,7 @@ export default function TowerPoolBossDetail({ entry, bossMap, restrictionMap, de
         {/* Main Boss */}
         <div>
           <h3 className="mb-3">{t('tower.main_boss')}</h3>
-          <BossCompactDisplay boss={boss} />
+          <BossCompactDisplay boss={boss} iconOnlySkills={false} />
         </div>
 
         {/* Minions */}

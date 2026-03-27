@@ -63,7 +63,7 @@ function FloorContent({ boss, minions, restrictions, recommended, reason, lang }
       <div>
         <h3 className="mb-3">{t('tower.main_boss')}</h3>
         {boss ? (
-          <BossCompactDisplay boss={boss} />
+          <BossCompactDisplay boss={boss} iconOnlySkills={false} />
         ) : (
           <div className="py-4 text-center text-sm text-zinc-500">Loading...</div>
         )}

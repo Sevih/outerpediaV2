@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,12 +49,15 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy and increases the <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>30%</color>.",
-        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.",
-        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。"
+        "en": "Attacks an enemy and increases the <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>20%</color>.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
       },
-      "icon": "Skill_First_2000068"
+      "icon": "Skill_First_2000068",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,11 @@
         "kr": "강화 효과를 <color=#28d9ed>2개</color> 해제 후 적 전체를 공격하고, 1턴 동안 빙결 상태로 만듭니다.",
         "zh": "解除<color=#28d9ed>2个</color>强化效果后,攻击全体敌人,并对其造成冰冻效果,持续1回合。"
       },
-      "icon": "Skill_Second_2000068"
+      "icon": "Skill_Second_2000068",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_FREEZE"
+      ]
     },
     {
       "name": {
@@ -89,6 +96,10 @@
       "icon": "Skill_Ultimate_2000068",
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_FREEZE",
+        "BT_STAT|ST_SPEED"
       ]
     },
     {
@@ -105,7 +116,11 @@
         "kr": "(패시브 효과)\\n전투 시작 시 자신의, <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.\\n\\n레지나가 생존 시 영구적으로 해제 불가능한 <color=#28d9ed>레지나의 세계</color>를 적용 받습니다.\\n매 턴 자신의 공격력이 <color=#28d9ed>5%</color>증가 합니다. (최대 20회 누적)",
         "zh": "(被动效果)\\n战斗开始时,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。\\n受到攻击后,目标未处于命中提升状态时,WG恢复<color=#28d9ed>20%</color>,自身闪避受到的攻击时,生命值恢复<color=#28d9ed>20%</color>。\\n蕾吉纳生存时,获得永久无法被解除的<color=#28d9ed>蕾吉纳的世界</color>效果。\\n每回合自身的攻击力提升<color=#28d9ed>5%</color>。(最多可叠加20次)"
       },
-      "icon": "MT_Passive_1_Water"
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "IG_Buff_Effect_2000067_Interruption",
+        "BT_ACTION_GAUGE"
+      ]
     }
   ]
 }
