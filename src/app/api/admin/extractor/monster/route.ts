@@ -438,7 +438,7 @@ const MONSTER_BUFF_TYPE_BLACKLIST = new Set([
 
 // ── Skill overrides (from data/admin/monster-skill-overrides.json) ──
 // Key = "name_en|desc_en", value = { add_buff, add_debuff, remove_buff, remove_debuff }
-type SkillOverride = { add_buff?: string[]; add_debuff?: string[]; remove_buff?: string[]; remove_debuff?: string[] };
+type SkillOverride = { add_buff?: string[]; add_debuff?: string[]; remove_buff?: string[]; remove_debuff?: string[]; clear_buff?: boolean; clear_debuff?: boolean };
 
 async function loadSkillOverrides(): Promise<Record<string, SkillOverride>> {
   try {
@@ -490,6 +490,8 @@ function applySkillOverrides(
     }
   }
   if (!override) return;
+  if (override.clear_buff) buff.length = 0;
+  if (override.clear_debuff) debuff.length = 0;
   if (override.add_buff) for (const b of override.add_buff) { if (!buff.includes(b)) buff.push(b); }
   if (override.add_debuff) for (const d of override.add_debuff) { if (!debuff.includes(d)) debuff.push(d); }
   if (override.remove_buff) for (const b of override.remove_buff) { const idx = buff.indexOf(b); if (idx >= 0) buff.splice(idx, 1); }

@@ -33,7 +33,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101096",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率使目标陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>2回合</color>。\\n该技能优先攻击处于前排的敌人。"
       },
-      "icon": "Skill_First_2000003"
+      "icon": "Skill_First_2000003",
+      "debuff": [
+        "BT_FREEZE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.\\n이 스킬은 전열의 적을 우선적으로 공격합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>2回合</color>。\\n该技能优先攻击处于前排的敌人。"
       },
-      "icon": "Skill_Second_2000003"
+      "icon": "Skill_Second_2000003",
+      "debuff": [
+        "BT_FREEZE"
+      ]
     },
     {
       "name": {
@@ -82,11 +88,14 @@
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies and reduces the target's Priority by <color=#28d9ed>30%</color>.",
-        "jp": "敵全体にダメージを与え、対象の行動ゲージを<color=#28d9ed>-30%</color>DOWNさせる。",
-        "kr": "적 전체를 공격하고 대상의 행동 게이지를 <color=#28d9ed>-30%</color> 감소시킵니다.",
-        "zh": "攻击全体敌人,并使目标的行动值降低<color=#28d9ed>-30%</color>。"
+        "jp": "敵全体にダメージを与え、対象の行動ゲージを<color=#28d9ed>30%</color>DOWNさせる。",
+        "kr": "적 전체를 공격하고 대상의 행동 게이지를 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "攻击全体敌人,并使目标的行动值降低<color=#28d9ed>30%</color>。"
       },
-      "icon": "Skill_Ultimate_2000003"
+      "icon": "Skill_Ultimate_2000003",
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {

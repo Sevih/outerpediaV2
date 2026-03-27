@@ -33,7 +33,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101025",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,12 +49,15 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.",
-        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
-        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
-        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
+        "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
-      "icon": "Skill_First_2000006"
+      "icon": "Skill_First_2000006",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,10 @@
         "kr": "적을 공격하고 아군 전체의 <color=#28d9ed>속도</color>를 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使全体友军的<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Second_2000006"
+      "icon": "Skill_Second_2000006",
+      "buff": [
+        "BT_STAT|ST_SPEED"
+      ]
     },
     {
       "name": {
@@ -86,7 +92,11 @@
         "kr": "적을 공격합니다.\\n이 공격으로 적을 처치하면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>50%</color> 증가하고 <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
         "zh": "攻击敌人。\\n若该攻击致使敌人死亡,则使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>50%</color>,并使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000006"
+      "icon": "Skill_Ultimate_2000006",
+      "buff": [
+        "BT_STAT|ST_ATK",
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -102,7 +112,10 @@
         "kr": "(패시브 효과)\\n자신이 턴을 획득한 이후, 다음 턴 동안 <color=#28d9ed>30%</color>의 확률로 반격합니다.",
         "zh": "(被动效果)\\n自身获得回合后,下一回合有<color=#28d9ed>30%</color>的几率发动反击。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_STAT|ST_COUNTER_RATE"
+      ]
     },
     {
       "name": {

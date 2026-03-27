@@ -97,7 +97,10 @@
         "kr": "(패시브 효과)\\n자신이 턴을 획득한 이후, 다음 턴 동안 <color=#28d9ed>60%</color>의 확률로 반격합니다.",
         "zh": "(被动效果)\\n自身获得回合后,下一回合有<color=#28d9ed>60%</color>的几率发动反击。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_STAT|ST_COUNTER_RATE"
+      ]
     },
     {
       "name": {
