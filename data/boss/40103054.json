@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第5层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103005",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적 전체를 공격하여 <color=#28d9ed>공격력 감소</color>를 <color=#28d9ed>2턴</color>동안 부여합니다.",
         "zh": "攻击全体敌人,造成<color=#28d9ed>攻击力降低</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Dark"
+      "icon": "MT_Attack_Magic_1_Dark",
+      "debuff": [
+        "BT_STAT|ST_ATK"
+      ]
     }
   ]
 }

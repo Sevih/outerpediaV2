@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第3层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -65,7 +65,15 @@
         "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>공격력</color> 증가 효과를 부여합니다. \\n피격 시 자신에게 강화 효과가 없다면 <color=#28d9ed>1턴</color> 동안 해제 불가능한 <color=#28d9ed>공격력</color> 증가 효과가 부여되며, 자신에게 강화 효과가 있다면 자신의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 감소시킵니다.\\n턴 시작 시 강화 효과가 없다면 자신의 <color=#28d9ed>스킬 쿨타임</color>을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "zh": "(被动效果)\\n战斗开始时,获得无法被解除的<color=#28d9ed>攻击力</color>提升效果,持续<color=#28d9ed>1回合</color>。\\n受到攻击时,若自身未附带强化效果,则获得无法被解除的<color=#28d9ed>攻击力</color>提升效果,持续<color=#28d9ed>1回合</color>;若自身附带强化效果,则使自身的<color=#28d9ed>技能冷却时间</color>减少<color=#28d9ed>1回合</color>。\\n回合开始时,若未附带强化效果,则使自身的<color=#28d9ed>技能冷却时间</color>增加<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_COOL_CHARGE"
+      ],
+      "debuff": [
+        "BT_COOL3_CHARGE",
+        "BT_COOL_CHARGE"
+      ]
     },
     {
       "name": {

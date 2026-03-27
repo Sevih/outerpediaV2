@@ -325,6 +325,22 @@
   },
   "(Passive Effect)\\nAt the start of the turn, when all surviving allies are not inflicted with <color=#28d9ed>Stunned</color>, grants an irremovable <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>1 turn</color>.\\nWhen the caster is inflicted with <color=#28d9ed>Stunned</color>, increases damage taken.\\nAfter the Boss is inflicted with <color=#28d9ed>Break</color>, irremovable <color=#28d9ed>Invulnerability</color> is no longer granted.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)":{
     "add_debuff": ["BT_ACTION_GAUGE"]
+  },
+  "Attacks all enemies, and recovers Health of all allies by <color=#28d9ed>10%</color>. Increases the duration of buffs on all allies by <color=#28d9ed>1 turn(s)</color>, and for each target damaged, increases Priority of the caster by <color=#28d9ed>10%</color>.":{
+    "remove_debuff": ["BT_STAT|ST_DEF"]
+  },
+  "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.":{
+    "add_buff": ["IG_Buff_2000035_Interruption"]
+  },
+  "Attacks all enemies. After attacking, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>, and grants <color=#28d9ed>Fierce Offensive</color> for <color=#28d9ed>2 turn(s)</color>.":{
+    "add_buff":["IG_Buff_2000056_Interruption"]
+  },
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.\\nWhen hit, if the caster is not granted a buff, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>, and if the caster is granted a buff, reduces <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.\\nAt the start of the turn, if the caster is not granted a buff, increases <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.":{
+    "add_buff":["BT_COOL_CHARGE"]
+  },
+  "(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> and recovers Health by <color=#28d9ed>50%</color>.\\nUpon resurrection, grants <color=#28d9ed>Doll Garden's Caretaker</color> to the caster for <color=#28d9ed>1 turn(s)</color>, and if Demiurge Stella's Health is greater than 30%, resets skill cooldowns of the caster. Additionally, increases <color=#28d9ed>Priority</color> by <color=#28d9ed>80%</color>.":{
+    "add_buff":["IG_Buff_2000059_Interruption","BT_COOL_CHARGE"]
   }
+
 }
 

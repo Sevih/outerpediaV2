@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
       },
-      "icon": "Skill_First_2000068"
+      "icon": "Skill_First_2000068",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,10 @@
         "kr": "빙결이 없는 대상들의 강화 효과를 <color=#28d9ed>1개</color> 해제 후 적 전체를 공격합니다. 이 스킬로 빙결 대상에게 입히는 피해가 증가합니다.",
         "zh": "解除未处于冰冻状态目标的<color=#28d9ed>1个</color>强化效果后,攻击全体敌人。该技能对处于冰冻状态的目标造成的伤害提升。"
       },
-      "icon": "Skill_Second_2000068"
+      "icon": "Skill_Second_2000068",
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     },
     {
       "name": {
@@ -89,6 +95,10 @@
       "icon": "Skill_Ultimate_2000068",
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_FREEZE",
+        "BT_STAT|ST_SPEED"
       ]
     }
   ]

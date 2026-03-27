@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第5层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103005",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,12 @@
         "kr": "자신의 턴 마다 데미우르고스 드레이칸의 <color=#28d9ed>공격력</color>, <color=#28d9ed>치명 확률</color>, <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "zh": "每到自身回合,都使创世之神德蕾坎的<color=#28d9ed>攻击力</color>、<color=#28d9ed>暴击率</color>、<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Light"
+      "icon": "MT_Attack_Magic_1_Light",
+      "buff": [
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
+      ]
     },
     {
       "name": {
@@ -65,7 +70,14 @@
         "kr": "(발동 효과) 데미우르고스 드레이칸이 공격 시 해제 가능한 <color=#28d9ed>강화 효과</color>를 보유하고 있었다면 적 전체 체력의 <color=#28d9ed>30%</color>를 감소 시킵니다.",
         "zh": "(触发效果)创世之神·德雷坎攻击时,若附带可解除的<color=#28d9ed>强化效果</color>,则全体敌人生命值降低<color=#28d9ed>30%</color>。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "SYS_BUFF_ADDITIVE_ATTACK",
+        "BT_REMOVE_BUFF"
+      ],
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_TARGET"
+      ]
     }
   ]
 }

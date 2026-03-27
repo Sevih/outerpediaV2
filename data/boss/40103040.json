@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적 전체를 즉시 <color=#28d9ed>사망</color> 시킵니다.",
         "zh": "使全体敌人立即<color=#28d9ed>死亡</color>。"
       },
-      "icon": "Skill_First_2000085"
+      "icon": "Skill_First_2000085",
+      "debuff": [
+        "BT_KILL_UNDER_HP_RATE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,10 @@
         "kr": "(패시브 효과) <color=#28d9ed>스턴</color>, <color=#28d9ed>빙결</color>, <color=#28d9ed>석화</color>, <color=#28d9ed>도발</color>, <color=#28d9ed>침묵</color>의 영향을 받지 않고, 자신에게 해제 불가능한 <color=#28d9ed>무적</color>을 부여합니다.",
         "zh": "(被动效果)不受到<color=#28d9ed>晕眩</color>、<color=#28d9ed>冰冻</color>、<color=#28d9ed>石化</color>、<color=#28d9ed>挑衅</color>、<color=#28d9ed>沉默</color>的影响,自身获得无法被解除的<color=#28d9ed>无敌</color>效果。"
       },
-      "icon": "MT_Passive_1_Water"
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_INVINCIBLE_IR"
+      ]
     }
   ]
 }

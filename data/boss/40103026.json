@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,11 @@
         "kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>를 증가시킵니다.",
         "zh": "使全体友军的<color=#28d9ed>攻击力</color>和<color=#28d9ed>命中</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Second_2000031"
+      "icon": "Skill_Second_2000031",
+      "buff": [
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_SPEED"
+      ]
     },
     {
       "name": {
@@ -86,7 +90,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 아군 전체의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使全体友军的<color=#28d9ed>强化效果</color>持续回合增加<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000031"
+      "icon": "Skill_Ultimate_2000031",
+      "buff": [
+        "BT_EXTEND_BUFF"
+      ]
     }
   ]
 }

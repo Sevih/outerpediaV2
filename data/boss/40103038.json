@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "<color=#28d9ed>레지나</color>의 행동 게이지를 <color=#28d9ed>35%</color> 증가 시킵니다.",
         "zh": "使<color=#28d9ed>蕾吉纳</color>的行动值提升<color=#28d9ed>35%</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Light"
+      "icon": "MT_Attack_Magic_1_Light",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     }
   ]
 }

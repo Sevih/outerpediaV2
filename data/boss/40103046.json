@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>40%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>40%</color>。"
       },
-      "icon": "Skill_First_2000019"
+      "icon": "Skill_First_2000019",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -61,11 +64,15 @@
       "type": "SKT_SECOND",
       "description": {
         "en": "Attacks all enemies.\\nThis skill is always treated as having a <color=#28d9ed>favorable attribute</color> and its cooldown resets if you have a buff.\\nEach time you use <color=#28d9ed>Rending Rakshasa</color>, your <color=#28d9ed>Critical Damage</color> increases by <color=#28d9ed>7%</color> (up to 5 stacks).",
-        "jp": "敵全体にダメージを与える。\\nこのスキルは常に<color=#28d9ed>有利属性</color>として扱われ、強化効果を保有している場合、スキルターンが初期化されます。\\n<color=#28d9ed>羅刹斬り</color>を使用するたびに<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>7%</color>上昇する(最大5回累積)。",
+        "jp": "敵全体にダメージを与える。\\nこのスキルは敵の属性を無視し、<color=#28d9ed>有利属性</color>の攻撃判定でダメージを与える。自分に強化効果がある場合、スキルターンが初期化する。\\n<color=#28d9ed>【羅刹斬り】</color>を使用するたびに<color=#28d9ed>会心ダメージ</color>が<color=#28d9ed>7%</color>UPする。(最大5回累積)",
         "kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과 보유 시 쿨타임이 초기화됩니다.\\n<color=#28d9ed>나찰 가르기</color>를 사용할 때마다 <color=#28d9ed>치명 피해량</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
         "zh": "攻击全体敌人。\\n此技能始终视为<color=#28d9ed>属性克制</color>,且在拥有增益时会重置冷却。\\n每次使用<color=#28d9ed>罗刹斩</color>,自身<color=#28d9ed>暴击伤害</color>提高<color=#28d9ed>7%</color>(最多叠加5次)。"
       },
-      "icon": "Skill_Second_2000019"
+      "icon": "Skill_Second_2000019",
+      "buff": [
+        "BT_DMG_ELEMENT_SUPERIORITY",
+        "BT_COOL2_CHARGE"
+      ]
     },
     {
       "name": {
@@ -81,7 +88,10 @@
         "kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 증가시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 5회 누적)",
         "zh": "使用技能时,使自身<color=#28d9ed>暴击率</color><color=#28d9ed>提升</color>,持续2回合,并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,<color=#28d9ed>攻击力</color>都会提升<color=#28d9ed>7%</color>)(最多可叠加5次)。"
       },
-      "icon": "Skill_Ultimate_2000019"
+      "icon": "Skill_Ultimate_2000019",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     }
   ]
 }

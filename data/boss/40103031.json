@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적 전체를 공격하여 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color>동안 부여합니다.",
         "zh": "攻击全体敌人,造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Dark"
+      "icon": "MT_Attack_Magic_1_Dark",
+      "debuff": [
+        "BT_DOT_BLEED"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,14 @@
         "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제 불가능한 <color=#28d9ed>무적</color> 및 <color=#28d9ed>면역</color>을 부여합니다.\\n턴 시작 시 아군 중 한 명이라도 <color=#28d9ed>스턴</color> 상태라면 자신의 스킬 쿨타임을 <color=#28d9ed>2턴</color> 증가시킵니다.",
         "zh": "(被动效果)\\n战斗开始时,使自身获得无法被解除的<color=#28d9ed>无敌</color>和<color=#28d9ed>免疫</color>效果。\\n回合开始时,只要存在一名处于<color=#28d9ed>晕眩</color>状态的友军,则自身的技能冷却时间增加<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_INVINCIBLE_IR",
+        "BT_IMMUNE_IR"
+      ],
+      "debuff": [
+        "BT_COOL_CHARGE"
+      ]
     },
     {
       "name": {
@@ -81,7 +91,10 @@
         "kr": "적 전체를 공격하고, 대상의 출혈을 모두 폭발 시킵니다. 폭발에 의한 피해는 <color=#28d9ed>900%</color> 증가합니다.",
         "zh": "攻击全体敌人,并引爆目标身上的所有出血效果。爆发造成的伤害提升<color=#28d9ed>900%</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Dark"
+      "icon": "MT_Attack_Magic_1_Dark",
+      "debuff": [
+        "BT_IMMEDIATELY_BLEED"
+      ]
     }
   ]
 }

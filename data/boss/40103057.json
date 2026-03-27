@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第20层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103020",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,12 +49,15 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>2 turn(s)</color> proportional to the caster's Defense.",
-        "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。",
-        "kr": "적 대상을 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.",
-        "zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。"
+        "en": "Attacks an enemy, and grants a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>1 turn(s)</color> proportional to the caster's Defense.",
+        "jp": "敵単体にダメージを与え、自分に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の防御力が高いほどシールド量がUPする。",
+        "kr": "적 대상을 공격하고 <color=#28d9ed>1턴</color> 동안 자신의 방어력에 비례한 <color=#28d9ed>실드</color>를 획득합니다.",
+        "zh": "攻击敌人目标,并获得与自身防御力成正比的<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_First_2000077"
+      "icon": "Skill_First_2000077",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,14 @@
         "kr": "(패시브 효과) 아군의 방어력을 <color=#28d9ed>2턴</color> 동안 증가시킨 후 적 전체를 공격합니다. <color=#28d9ed>수속성</color> 적은 카파의 방어력만큼 고정 피해를 추가로 받습니다.\\n이 스킬은 대상의 잃은 체력 비율에 비례하여 피해가 증가합니다.",
         "zh": "(被动效果)使友军防御力提升,持续<color=#28d9ed>2回合</color>后攻击全体敌人。对<color=#28d9ed>水属性</color>敌人额外造成相当于卡帕防御力数值的固定伤害。\\n该技能根据目标损失的生命值比例等比提升伤害。"
       },
-      "icon": "Skill_Second_2000077"
+      "icon": "Skill_Second_2000077",
+      "buff": [
+        "SYS_BUFF_ADDITIVE_ATTACK",
+        "BT_STAT|ST_DEF"
+      ],
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_CASTER"
+      ]
     },
     {
       "name": {
@@ -86,7 +96,13 @@
         "kr": "자신과 대상의 모든 강화 효과 및 약화 효과를 <color=#28d9ed>모두</color> 해제하고, 적을 공격합니다.(대상의 효과 저항 무시)\\n적이 <color=#28d9ed>수속성</color> 이거나 <color=#28d9ed>처치</color>된 경우 <color=#28d9ed>추방</color>을 사용합니다.\\n이 스킬은 대상의 잃은 체력 비율에 비례하여 피해가 증가합니다.",
         "zh": "解除自身和目标附带的<color=#28d9ed>所有</color>强化效果和弱化效果,并攻击敌人(无视目标的效果抵抗)。\\n敌人为<color=#28d9ed>水属性</color>或被<color=#28d9ed>击杀</color>时使用<color=#28d9ed>驱逐</color>。\\n该技能根据目标损失的生命值比例等比提升伤害。"
       },
-      "icon": "Skill_Ultimate_2000077"
+      "icon": "Skill_Ultimate_2000077",
+      "buff": [
+        "BT_REMOVE_DEBUFF"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     }
   ]
 }

@@ -22,13 +22,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,13 @@
         "kr": "아군 한 명의 <color=#28d9ed>공격력</color>을 증가시키고, <color=#28d9ed>75%</color> 확률로 적 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "使1名友军的<color=#28d9ed>攻击力</color>提升,并有<color=#28d9ed>75%</color>的几率对敌人目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ],
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
     }
   ]
 }

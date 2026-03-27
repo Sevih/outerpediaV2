@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,12 +49,15 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to increase Priority of the ally with the highest Attack by <color=#28d9ed>20%</color>.",
-        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で最も攻撃力の高い味方の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
-        "kr": "적을 공격하고, <color=#28d9ed>100%</color>확률로 공격력이 가장 높은 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
-        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使攻击力最高的友军行动值提升<color=#28d9ed>20%</color>。"
+        "en": "Attacks an enemy, and has a <color=#28d9ed>85%</color> chance to increase Priority of the ally with the highest Attack by <color=#28d9ed>10%</color>.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>85%</color>の確率で最も攻撃力の高い味方の行動ゲージを<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "적을 공격하고, <color=#28d9ed>85%</color>확률로 공격력이 가장 높은 아군의 행동 게이지를 <color=#28d9ed>10%</color> 증가시킵니다.",
+        "zh": "攻击敌人,并有<color=#28d9ed>85%</color>的几率使攻击力最高的友军行动值提升<color=#28d9ed>10%</color>。"
       },
-      "icon": "Skill_First_2000074"
+      "icon": "Skill_First_2000074",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -65,12 +68,16 @@
       },
       "type": "SKT_SECOND",
       "description": {
-        "en": "Attacks all enemies, and recovers Health of all allies by <color=#28d9ed>20%</color>. Increases the duration of buffs on all allies by <color=#28d9ed>1 turn(s)</color>, and for each target damaged, increases Priority of the caster by <color=#28d9ed>10%</color>.",
-        "jp": "敵全体にダメージを与え、味方全体のHPを<color=#28d9ed>20%</color>回復させる。味方全体の強化効果の持続ターンを<color=#28d9ed>1ターン</color>増加させ、ダメージを与えた対象の数に応じて、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。",
-        "kr": "적 전체를 공격하고, 아군 전체의 체력을 <color=#28d9ed>20%</color>만큼 회복시킵니다. 아군 전체의 강화 효과 지속 시간을 <color=#28d9ed>1턴</color> 증가시키고, 피해를 준 대상마다 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.",
-        "zh": "攻击全体敌人,并使全体友军的生命值恢复<color=#28d9ed>20%</color>。使全体友军的强化效果持续时间增加<color=#28d9ed>1回合</color>,每对1个目标造成伤害,自身的行动值提升<color=#28d9ed>10%</color>。"
+        "en": "Attacks all enemies, and recovers Health of all allies by <color=#28d9ed>10%</color>. Increases the duration of buffs on all allies by <color=#28d9ed>1 turn(s)</color>, and for each target damaged, increases Priority of the caster by <color=#28d9ed>10%</color>.",
+        "jp": "敵全体にダメージを与え、味方全体のHPを<color=#28d9ed>10%</color>回復させる。味方全体の強化効果の持続ターンを<color=#28d9ed>1ターン</color>増加させ、ダメージを与えた対象の数に応じて、自分の行動ゲージを<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "적 전체를 공격하고, 아군 전체의 체력을 <color=#28d9ed>10%</color>만큼 회복시킵니다. 아군 전체의 강화 효과 지속 시간을 <color=#28d9ed>1턴</color> 증가시키고, 피해를 준 대상마다 자신의 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다.",
+        "zh": "攻击全体敌人,并使全体友军的生命值恢复<color=#28d9ed>10%</color>。使全体友军的强化效果持续时间增加<color=#28d9ed>1回合</color>,每对1个目标造成伤害,自身的行动值提升<color=#28d9ed>10%</color>。"
       },
-      "icon": "Skill_Second_2000074"
+      "icon": "Skill_Second_2000074",
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_EXTEND_BUFF"
+      ]
     },
     {
       "name": {
