@@ -15,11 +15,6 @@ import type {
 /* -- Shared data ---------------------------------------------- */
 import strings from './strings.json';
 import defaultConfig from './config.json';
-
-/* -- Boss imports --------------------------------------------- */
-import miniBossA from '@data/boss/440400174-7-1.json';
-import miniBossB from '@data/boss/440400274-8-1.json';
-import mainBoss from '@data/boss/440400079-B-1.json';
 import geasPool from '@data/geas.json';
 
 /* -- Version: 11-2025 ----------------------------------------- */
@@ -33,11 +28,10 @@ import v05_2025Phase1 from './versions/05-2025/phase1.json';
 import v05_2025Phase2 from './versions/05-2025/phase2.json';
 
 /* -- Typed JSON casts (JSON imports have literal types) -------- */
-const bosses: Record<string, Boss> = {
-  '440400174-7-1': miniBossA as unknown as Boss,
-  '440400274-8-1': miniBossB as unknown as Boss,
-  '440400079-B-1': mainBoss as unknown as Boss,
-};
+function loadBoss(id: string): Boss {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  return require(`@data/boss/${id}.json`) as Boss;
+}
 const defaults = defaultConfig as GuildRaidDefaultConfig;
 const pool = geasPool as unknown as GeasPool;
 const str = strings as Record<string, LangMap>;
@@ -62,9 +56,9 @@ function resolve(
   const config = mergeConfig(override);
   return {
     label: config.label,
-    bossA: bosses[config.bossA.id],
-    bossB: bosses[config.bossB.id],
-    bossMain: bosses[config.main.id],
+    bossA: loadBoss(config.bossA.id),
+    bossB: loadBoss(config.bossB.id),
+    bossMain: loadBoss(config.main.id),
     geasA: config.geas.bossA,
     geasB: config.geas.bossB,
     phase1,

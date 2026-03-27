@@ -263,5 +263,8 @@
   },
   "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Reduces Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>30%</color>.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted a Barrier, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.\\nEnemies killed by Mecha Dragon of Death Ragnakeus cannot be Resurrected or Revived.":{
     "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "(Passive Effect)\\nUpon an enemy performing an action, when there is any enemy inflicted with a <color=#28d9ed>debuff</color>, inflicts a random debuff on that enemy for <color=#28d9ed>2 turn(s)</color>.":{
+    "add_debuff":["BT_RANDOM"]
   }
 }

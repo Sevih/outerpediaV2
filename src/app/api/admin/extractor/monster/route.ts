@@ -89,6 +89,7 @@ interface GameData {
   buffData: Row[];
   areas: Row[];
   worldBossLeagues: Row[];
+  guildRaidGrades: Row[];
   textCharMap: Record<string, LangTexts>;
   textSkillMap: Record<string, LangTexts>;
   textSystemMap: Record<string, LangTexts>;
@@ -113,7 +114,7 @@ async function loadGameData(): Promise<GameData> {
   if (cachedGD) return cachedGD;
 
   const [monsterT, monsterSkillT, monsterSkillLevelT, dungeonT, spawnT,
-    buffT, areaT, worldBossLeagueT, textChar, textSkill, textSystem] = await Promise.all([
+    buffT, areaT, worldBossLeagueT, guildRaidGradeT, textChar, textSkill, textSystem] = await Promise.all([
     readTemplet('MonsterTemplet'),
     readTemplet('MonsterSkillTemplet'),
     readTemplet('MonsterSkillLevelTemplet'),
@@ -122,6 +123,7 @@ async function loadGameData(): Promise<GameData> {
     readTemplet('BuffTemplet'),
     readTemplet('AreaTemplet'),
     readTemplet('WorldBossLeagueTemplet'),
+    readTemplet('GuildRaidGradeTemplet'),
     readTemplet('TextCharacter'),
     readTemplet('TextSkill'),
     readTemplet('TextSystem'),
@@ -136,6 +138,7 @@ async function loadGameData(): Promise<GameData> {
     buffData: buffT.data,
     areas: areaT.data,
     worldBossLeagues: worldBossLeagueT.data,
+    guildRaidGrades: guildRaidGradeT.data,
     textCharMap: buildTextMap(textChar.data),
     textSkillMap: buildTextMap(textSkill.data),
     textSystemMap: buildTextMap(textSystem.data),
@@ -232,6 +235,14 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
     if (did && ln) worldBossLeagueByDungeon.set(did, ln);
   }
 
+  // Guild raid grade lookup: BossDungeonID → Grade (stage number)
+  const guildRaidGradeByDungeon = new Map<string, string>();
+  for (const grg of gd.guildRaidGrades) {
+    const did = grg.BossDungeonID;
+    const grade = grg.Grade;
+    if (did && grade) guildRaidGradeByDungeon.set(did, grade);
+  }
+
   const result = new Map<string, DungeonLink[]>();
 
   for (const d of gd.dungeons) {
@@ -248,6 +259,15 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
     }
     if (!nameLangs) nameLangs = gd.textSystemMap[d.SeasonFullName ?? ''];
     if (!nameLangs) continue;
+
+    // Resolve {0} placeholder in guild raid dungeon names (Stage {0} → Stage 5)
+    const friendForGrade = d.FriendSupportUse ?? '';
+    const grade = guildRaidGradeByDungeon.get(friendForGrade);
+    if (grade && nameLangs.en?.includes('{0}')) {
+      nameLangs = Object.fromEntries(
+        Object.entries(nameLangs).map(([lang, text]) => [lang, text.replace('{0}', grade)])
+      ) as LangTexts;
+    }
 
     // area_id: from FriendSupportUse → TextSystem (e.g. SYS_DUNGEON_SHORT_NAME_0314 → "3-14")
     // Skip for world boss (FriendSupportUse is a DungeonID, not a TextSystem key)
