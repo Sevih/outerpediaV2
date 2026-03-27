@@ -102,7 +102,10 @@
         "kr": "(패시브 효과)\\n<color=#28d9ed>효과 적중</color>이 증가한 상태에서 공격 시 적 전체에게 면역을 무시하고 <color=#28d9ed>9턴</color> 동안 해제 불가능한 <color=#28d9ed>저주</color>를 추가로 부여합니다. \\n공격 시 대상이 <color=#28d9ed>빙결</color> 상태라면 대상의 방어력을 <color=#28d9ed>100%</color> 무시하고, 부활 및 소생이 불가능합니다.\\n하르슈나의 모든 공격 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "zh": "(被动效果)\\n处于<color=#28d9ed>效果命中</color>提升状态下攻击时,无视全体敌人的免疫效果,并额外造成无法解除的<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>9回合</color>。\\n攻击时,若目标处于<color=#28d9ed>冰冻</color>状态,则无视目标防御力的<color=#28d9ed>100%</color>,且无法触发复活与苏醒效果。\\n赫索纳的所有攻击后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
-      "icon": "MT_Passive_1_Water"
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     },
     {
       "name": {

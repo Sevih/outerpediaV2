@@ -20,6 +20,10 @@
     "add_debuff": ["BT_CP_CHARGE"]
   },
   {
+    "pattern": "does not trigger.*(?=.*Counterattack)(?=.*Revenge)(?=.*Agile Response)",
+    "add_buff": ["BT_SEAL_COUNTER"]
+  },
+  {
     "pattern": "grants 【Environmental Change Response】 or 【Weather Variable Response】 ",
     "add_buff": ["UNIQUE_VENION_A","UNIQUE_VENION_B"]
   },

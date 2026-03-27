@@ -86,7 +86,10 @@
         "kr": "적 전체를 공격합니다.\\n공격 후 적 전체에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>을 부여하고, <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>속도 감소</color>를 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "zh": "攻击全体敌人。\\n攻击后,有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>冰冻</color>效果,持续<color=#28d9ed>1回合</color>,并有<color=#28d9ed>100%</color>的几率造成<color=#28d9ed>速度降低</color>,持续<color=#28d9ed>2回合</color>。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
-      "icon": "Skill_Ultimate_2000068"
+      "icon": "Skill_Ultimate_2000068",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     }
   ]
 }

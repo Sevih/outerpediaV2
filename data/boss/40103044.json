@@ -70,7 +70,10 @@
         "kr": "(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>100%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>-100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "zh": "(触发效果)死亡后,立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>100%</color>的几率使全体敌人的行动值降低<color=#28d9ed>-100%</color>。此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
-      "icon": "Skill_Second_2000079"
+      "icon": "Skill_Second_2000079",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     },
     {
       "name": {

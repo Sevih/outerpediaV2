@@ -258,13 +258,29 @@
       "BT_STAT|ST_SPEED_IR"
     ]
   },
-  "(Passive Effect)\\nIncreases damage taken from Fire, Water, and Earth enemies. Reduces Speed of Light and Dark enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>20%</color>.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted increased Defense, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.\\nEnemies killed by Dragon of Death Ragnakeus cannot be Resurrected or Revived.":{
+  "(Passive Effect)\\nIncreases damage taken from Fire, Water, and Earth enemies. Reduces Speed of Light and Dark enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>20%</color>.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted increased Defense, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.\\nEnemies killed by Dragon of Death Ragnakeus cannot be Resurrected or Revived.": {
     "remove_buff": ["BT_STAT|ST_SPEED"]
   },
-  "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Reduces Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>30%</color>.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted a Barrier, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.\\nEnemies killed by Mecha Dragon of Death Ragnakeus cannot be Resurrected or Revived.":{
+  "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Reduces Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\nWhen hit, increases Priority of the caster by <color=#28d9ed>30%</color>.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>50%</color>. When granted a Barrier, reduces Weakness Gauge damage taken by <color=#28d9ed>100%</color>.\\nRecovers <color=#28d9ed>10%</color> Weakness Gauge every turn.\\n\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>10000/20000</color> respectively. (Excludes fixed damage from <color=#28d9ed>Skill Chains</color>)\\n\\nGreatly increases damage dealt inversely proportional to the number of targets.\\nEnemies killed by Mecha Dragon of Death Ragnakeus cannot be Resurrected or Revived.": {
     "remove_buff": ["BT_STAT|ST_SPEED"]
   },
-  "(Passive Effect)\\nUpon an enemy performing an action, when there is any enemy inflicted with a <color=#28d9ed>debuff</color>, inflicts a random debuff on that enemy for <color=#28d9ed>2 turn(s)</color>.":{
-    "add_debuff":["BT_RANDOM"]
+  "(Passive Effect)\\nUpon an enemy performing an action, when there is any enemy inflicted with a <color=#28d9ed>debuff</color>, inflicts a random debuff on that enemy for <color=#28d9ed>2 turn(s)</color>.": {
+    "add_debuff": ["BT_RANDOM"]
+  },
+  "Attacks an enemy, and reduces the enemy's <color=#28d9ed>Chain Points</color> by <color=#28d9ed>30</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.": {
+    "add_buff": ["BT_SEAL_COUNTER"]
+  },
+  "Reduces damage taken from enemies, but takes greater damage upon being inflicted with Break.\\nIncreases Weakness Gauge damage taken by Dual Attacks and Skill Chains by <color=#28d9ed>100%</color>.": {
+    "remove_buff": ["BT_SEAL_COUNTER"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> every time the enemy performs 8 actions, and grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns, then activates Guardian Cannon.": {
+    "remove_buff": ["BT_SHIELD_BASED_CASTER"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> every time the enemy performs 8 actions, and grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns, then activates Distortion Ray.": {
+    "remove_buff": ["BT_STAT|ST_CRITICAL_DMG_RATE"]
+  },
+  "(Passive Effect)\\nAt the start of a turn, resurrects (Greater) all <color=#28d9ed>Spare Cores</color>.\\nIncreases <color=#28d9ed>Priority</color> of surviving Spare Cores by <color=#28d9ed>15%</color>.\\n\\n(Triggered Effect) When an enemy uses a non-attack skill,\\nactivates <color=#28d9ed>Command: Restrain</color> on the target.": {
+    "remove_debuff": ["BT_STUN", "BT_DOT_BURN"],
+    "add_buff": ["BT_RUN_ACTIVE_SKILL_ON_TURN_END"]
   }
 }

@@ -50,6 +50,9 @@
         "zh": "攻击敌人,使敌人<color=#28d9ed>CP</color>降低<color=#28d9ed>30</color>。\\n该此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_First_4044008",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ],
       "debuff": [
         "BT_CP_CHARGE"
       ]
@@ -88,6 +91,9 @@
         "zh": "攻击全体敌人。攻击后,解除目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>3回合</color>。\\n此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Ultimate_4044008",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ],
       "debuff": [
         "BT_REMOVE_BUFF",
         "BT_SEALED"
@@ -109,7 +115,6 @@
       },
       "icon": "MT_Passive_1_Light",
       "buff": [
-        "BT_SEAL_COUNTER",
         "BT_WG_DMG"
       ]
     },

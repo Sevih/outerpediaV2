@@ -65,7 +65,10 @@
         "jp": "(発動効果)倒れた時、直ちにHPを<color=#28d9ed>10%</color>回復して<color=#28d9ed>復活</color>する。<color=#28d9ed>100%</color>の確率で、敵全体の行動ゲージを<color=#28d9ed>-100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
         "zh": "(触发效果)死亡后,立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>100%</color>的几率使全体敌人的行动值降低<color=#28d9ed>-100%</color>。此技能发动后,不会触发敌人的反击、复仇、迅速应对效果。"
       },
-      "icon": "Skill_Second_2000079"
+      "icon": "Skill_Second_2000079",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     },
     {
       "name": {

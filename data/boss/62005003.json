@@ -81,7 +81,10 @@
         "kr": "<color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득한 후 적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "zh": "获得<color=#28d9ed>璀璨之志</color>,持续<color=#28d9ed>2回合</color>,随后攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n该技能结束后,不会触发敌人的反击、复仇、迅速应对。"
       },
-      "icon": "Skill_Ultimate_2000094"
+      "icon": "Skill_Ultimate_2000094",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     }
   ]
 }

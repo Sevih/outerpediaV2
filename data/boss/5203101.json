@@ -97,7 +97,10 @@
         "kr": "(패시브 효과)\\n적 행동 시 <color=#28d9ed>약화 효과</color>가 있는 적이 한명이라도 있으면 무작위 적 한명에게 약화 효과를 <color=#28d9ed>2턴</color> 동안 부여합니다.",
         "zh": "(被动效果)\\n敌人行动时,若至少有1名敌人处于<color=#28d9ed>弱化效果</color>状态,则对随机1名造成弱化效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "debuff": [
+        "BT_RANDOM"
+      ]
     },
     {
       "name": {
