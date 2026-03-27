@@ -70,7 +70,10 @@
         "kr": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>80%</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>2턴</color> 동안 부여합니다.",
         "zh": "(被动效果) 战斗开始时,使速度最高的1名敌人无视目标的效果抵抗,并造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会被\\n解除。\\n\\n(主动效果) 攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Second_2000035"
+      "icon": "Skill_Second_2000035",
+      "buff": [
+        "IG_Buff_2000035_Interruption"
+      ]
     },
     {
       "name": {

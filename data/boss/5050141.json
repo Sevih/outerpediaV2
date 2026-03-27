@@ -70,7 +70,10 @@
         "jp": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、対象に<color=#28d9ed>80%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
         "zh": "(被动效果) 战斗开始时,使速度最高的1名敌人无视目标的效果抵抗,并造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会被\\n解除。\\n\\n(主动效果) 攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Second_2000035"
+      "icon": "Skill_Second_2000035",
+      "buff": [
+        "IG_Buff_2000035_Interruption"
+      ]
     },
     {
       "name": {
