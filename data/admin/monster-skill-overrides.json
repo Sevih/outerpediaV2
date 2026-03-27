@@ -286,5 +286,12 @@
   "(Passive Effect)\\nAt the start of battle, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>100%</color>.\\nWhen Regina is alive, grants a permanent irremovable <color=#28d9ed>Regina's World</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)": {
     "remove_buff": ["BT_STAT|ST_SPEED"],
     "add_buff": ["BT_ACTION_GAUGE"]
+  },
+  "Attacks an enemy and has a <color=#28d9ed>30%</color> chance to grant the caster increased <color=#28d9ed>Penetration</color> for <color=#28d9ed>2 turn(s)</color>.\\nDeals <color=#28d9ed>3%</color> of the target's Max Health as fixed damage if the target is inflicted with <color=#28d9ed>Bleeding</color>.":{
+    "add_buff":["BT_STAT|ST_PIERCE_POWER_RATE"]
+  },
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for <color=#28d9ed>3 turn(s)</color>.\\nWhen an ally uses a single-target skill, increases Priority of all allies except for that ally by <color=#28d9ed>20%</color>, and has a <color=#28d9ed>15%</color> chance to grant an <color=#28d9ed>extra turn</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)":{
+    "remove_buff": ["BT_STAT|ST_SPEED"],
+    "add_buff": ["BT_ACTION_GAUGE","BT_ADDITIVE_TURN"]
   }
 }

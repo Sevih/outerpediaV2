@@ -120,7 +120,7 @@ function SkillPanel({ skill, lang }: { skill: BossSkill; lang: Lang }) {
     <div className="space-y-1.5">
       <p className="text-sm font-semibold text-zinc-200">{name}</p>
       {(skill.buff?.length || skill.debuff?.length) ? (
-        <BuffDebuffDisplay buffs={skill.buff ?? []} debuffs={skill.debuff ?? []} iconOnly />
+        <BuffDebuffDisplay buffs={skill.buff ?? []} debuffs={skill.debuff ?? []} />
       ) : null}
       {desc && (
         <p className="text-xs leading-relaxed text-zinc-400">

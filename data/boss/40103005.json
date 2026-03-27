@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격합니다. 대상을 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 해제 불가능한 화상 상태로 만듭니다. 이 효과는 대상의 효과 저항을 무시합니다.",
         "zh": "攻击敌人。有<color=#28d9ed>70%</color>的几率对目标造成无法被解除的烧伤状态,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。"
       },
-      "icon": "Skill_First_2000073"
+      "icon": "Skill_First_2000073",
+      "debuff": [
+        "BT_DOT_BURN_IR"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,12 @@
         "kr": "적 전체의 강화 효과를 모두 해제하고 공격합니다. 대상의 화상을 모두 폭발시킵니다.\\n한 명이라도 폭발 했다면 적 전체를 <color=#28d9ed>즉사</color> 시킵니다.",
         "zh": "解除全体敌人的所有强化效果,并进行攻击。引爆目标身上的所有烧伤效果。\\n只要有一名敌人爆发,全体敌人都将<color=#28d9ed>即死</color>。"
       },
-      "icon": "Skill_Second_2000073"
+      "icon": "Skill_Second_2000073",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_IMMEDIATELY_BURN",
+        "BT_KILL_UNDER_HP_RATE"
+      ]
     },
     {
       "name": {
@@ -86,7 +94,13 @@
         "kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>2턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color> 상태로 만듭니다. (2회 적용) 이 효과는 대상의 효과 저항을 무시하며, 적 처치 시 쿨타임이 초기화됩니다.",
         "zh": "攻击全体敌人。对目标造成无法被解除的<color=#28d9ed>烧伤</color>状态,持续<color=#28d9ed>2回合</color>(可叠加2次)。该效果无视目标的效果抵抗,且击杀敌人时冷却时间重置。"
       },
-      "icon": "Skill_Ultimate_2000073"
+      "icon": "Skill_Ultimate_2000073",
+      "buff": [
+        "BT_COOL3_CHARGE"
+      ],
+      "debuff": [
+        "BT_DOT_BURN_IR"
+      ]
     },
     {
       "name": {
@@ -102,7 +116,13 @@
         "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 <color=#28d9ed>피해 감소</color> 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n<color=#28d9ed>병사의 시</color> / <color=#28d9ed>지옥의 묵시록</color> 사용 후 피격 대상 중 화상 상태가 아닌 적이 한 명이라도 있다면 WG를 <color=#28d9ed>20%</color> 회복하고, 무작위 아군 한 명을 <color=#28d9ed>2턴</color> 동안 해제 불가능한 <color=#28d9ed>화상</color> 상태로 만듭니다.",
         "zh": "(被动效果)\\n战斗开始时,自身获得无法被解除的<color=#28d9ed>伤害降低</color>效果,持续<color=#28d9ed>3回合</color>。\\n使用<color=#28d9ed>战士之诗</color> / <color=#28d9ed>地狱启示录</color>后,受击目标中只要存在1名未处于烧伤状态的敌人,则WG恢复<color=#28d9ed>20%</color>,并对随机1名友军造成无法被解除的<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_DAMGE_TAKEN"
+      ],
+      "debuff": [
+        "BT_DOT_BURN_IR"
+      ]
     }
   ]
 }

@@ -929,7 +929,7 @@ export async function GET(req: NextRequest) {
       }
 
       let files: string[] = [];
-      try { files = (await fs.readdir(BOSS_DIR)).filter(f => f.endsWith('.json') && f !== 'index.json'); } catch { /* empty */ }
+      try { files = (await fs.readdir(BOSS_DIR)).filter(f => f.endsWith('.json') && f !== 'index.json' && !f.replace('.json', '').includes('-')); } catch { /* empty */ }
 
       let modified = 0;
       for (const file of files) {

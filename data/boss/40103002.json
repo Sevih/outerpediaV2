@@ -27,13 +27,13 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "SYS_INFINITE_DUNGEON_V_HARD_01",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "DM_TOWER_VERY_HARD",
+      "jp": "DM_TOWER_VERY_HARD",
+      "kr": "DM_TOWER_VERY_HARD",
+      "zh": "DM_TOWER_VERY_HARD"
     },
     "area_id": {
-      "en": "40103001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,10 @@
         "kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>흡혈</color>을 부여합니다.",
         "zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>吸血</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Second_2000040"
+      "icon": "Skill_Second_2000040",
+      "buff": [
+        "BT_STAT|ST_VAMPIRIC"
+      ]
     },
     {
       "name": {
@@ -86,7 +89,11 @@
         "kr": "아군 전체의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 증가시킨 후 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>1턴</color> 동안 자신에게 <color=#28d9ed>불사</color>를 부여합니다.",
         "zh": "全体友军各有<color=#28d9ed>100%</color>的几率获得<color=#28d9ed>命中</color>和<color=#28d9ed>攻击力</color>提升效果,持续<color=#28d9ed>2回合</color>,随后攻击全体敌人。\\n攻击后,有<color=#28d9ed>100%</color>的几率使自身获得<color=#28d9ed>不死</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000040"
+      "icon": "Skill_Ultimate_2000040",
+      "buff": [
+        "BT_UNDEAD",
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
@@ -102,7 +109,11 @@
         "kr": "(패시브 효과)\\n전투 시작 시 자신에게 해제되지 않는 피해 감소 효과를 <color=#28d9ed>3턴</color> 동안 부여합니다.\\n전체 공격 이후 모든 도플갱어들은 공격력이 가장 높은 적에게 추가 공격을 합니다.\\n도플갱어가 사망했을 때 자신의 행동 게이지와 공격력이 <color=#28d9ed>15%</color> 증가합니다. (공격력은 최대 20회 누적)\\n턴 시작 시 자신이 강화 효과를 보유하고 있다면 WG를 <color=#28d9ed>15%</color> 회복합니다. 또한 자신을 제외 한 아군이 모두 사망한 상태라면 자신의 모든 스킬 쿨타임이 <color=#28d9ed>1턴</color> 증가합니다.",
         "zh": "(被动效果)\\n战斗开始时,使自身获得无法被解除的伤害降低效果,持续<color=#28d9ed>3回合</color>。\\n全体攻击后,所有二重身对攻击力最高的敌人发动额外攻击。\\n二重身死亡时,自身的行动值和攻击力提升<color=#28d9ed>15%</color>。(攻击力最多可叠加20次)\\n回合开始时,若自身附带强化效果,则WG恢复<color=#28d9ed>15%</color>。另外,若除自身外的友军全部死亡,自身的所有技能冷却时间增加<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_COOL2_CHARGE",
+        "BT_DAMGE_TAKEN"
+      ]
     }
   ]
 }
