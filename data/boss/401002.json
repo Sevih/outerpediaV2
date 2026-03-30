@@ -28,7 +28,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102010",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,11 @@
         "kr": "공격력이 가장 높은 아군의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제한 뒤, 가장 공격력이 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>7%</color> 증가시킵니다.",
         "zh": "解除攻击力最高的友军的<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>,此后使攻击力最高的友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>7%</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Water"
+      "icon": "MT_Attack_Magic_1_Water",
+      "buff": [
+        "BT_REMOVE_DEBUFF",
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -65,7 +69,10 @@
         "kr": "(패시브 효과)\\n전투 입장 시, 자신에게 해제되지 않는 <color=#28d9ed>무적</color> 효과를 영구적으로 부여합니다.",
         "zh": "(被动效果)\\n战斗开始时,使自身永久获得无法被解除的<color=#28d9ed>无敌</color>效果。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_INVINCIBLE_IR"
+      ]
     }
   ]
 }

@@ -28,7 +28,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102006",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
     },
     {
       "name": {
@@ -81,7 +87,11 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.\\n가장 높은 공격력을 가진 대상을 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。\\n并有<color=#28d9ed>100%</color>的几率使攻击力最高的目标陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_LIGHTNING",
+        "BT_STUN"
+      ]
     },
     {
       "name": {
@@ -97,7 +107,10 @@
         "kr": "(패시브 효과)\\n공격 시 대상 한 명을 <color=#28d9ed>20%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n또한 대상이 보유한 <color=#28d9ed>약화 효과</color>가 많을수록 피해가 증가합니다.",
         "zh": "(被动效果)\\n攻击时,有<color=#28d9ed>20%</color>的几率使1名敌人陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。\\n并且当目标附带的<color=#28d9ed>弱化效果</color>越多,则该技能的伤害越高。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "debuff": [
+        "BT_STUN"
+      ]
     },
     {
       "name": {

@@ -33,7 +33,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102015",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,12 +49,18 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy and has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack if the caster's <color=#28d9ed>Defense</color> is currently increased.",
-        "jp": "敵単体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
-        "kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
-        "zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。"
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Activates a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack if the caster's <color=#28d9ed>Defense</color> is currently increased.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。自分の<color=#28d9ed>防御力</color>がUPした状態の場合、攻撃力が最も高い味方単体に<color=#28d9ed>連携</color>を発生させる。",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 자신이 <color=#28d9ed>방어력</color>이 증가한 상태라면 가장 공격력이 높은 아군의 <color=#28d9ed>협공</color>을 발생시킵니다.",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果,持续<color=#28d9ed>1回合</color>。若自身<color=#28d9ed>防御力</color>处于提升状态,则使攻击力最高的友军发动<color=#28d9ed>夹攻</color>。"
       },
-      "icon": "Skill_First_2000037"
+      "icon": "Skill_First_2000037",
+      "buff": [
+        "BT_CALL_BACKUP"
+      ],
+      "debuff": [
+        "BT_AGGRO"
+      ]
     },
     {
       "name": {
@@ -65,12 +71,16 @@
       },
       "type": "SKT_SECOND",
       "description": {
-        "en": "(Passive Effect) Removes <color=#28d9ed>2</color> <color=#28d9ed>debuff(s)</color> from the caster at the start of the turn. Grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
-        "jp": "(パッシブ効果)ターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>2個</color>解除する。その後、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
-        "kr": "(패시브 효과) 턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>2</color>개 제거합니다. 이후 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
-        "zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>2</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。"
+        "en": "(Passive Effect) Removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> from the caster at the start of the turn. Grants a <color=#28d9ed>Barrier</color> to the ally with the lowest Health for <color=#28d9ed>1 turn(s)</color>. The Barrier strength increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "jp": "(パッシブ効果)ターン開始時、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。その後、残りHPが最も低い味方単体に<color=#28d9ed>シールド</color>を<color=#28d9ed>1ターン</color>の間付与する。自分の<color=#28d9ed>最大HP</color>が高いほどシールド量がUPする。",
+        "kr": "(패시브 효과) 턴 시작 시 자신에게 걸려 있는 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다. 이후 체력 상황이 가장 나쁜 아군에게 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 부여합니다. 실드량은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 증가합니다.",
+        "zh": "(被动效果)在回合开始时,解除自身附带的<color=#28d9ed>1</color>个<color=#28d9ed>弱化效果</color>。此后使生命值最低的友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身的<color=#28d9ed>生命值上限</color>越高,则护盾量越高。"
       },
-      "icon": "Skill_Second_2000037"
+      "icon": "Skill_Second_2000037",
+      "buff": [
+        "BT_REMOVE_DEBUFF",
+        "BT_SHIELD_BASED_CASTER"
+      ]
     },
     {
       "name": {
@@ -81,12 +91,18 @@
       },
       "type": "SKT_ULTIMATE",
       "description": {
-        "en": "Attacks all enemies.\\nGrants increased <color=#28d9ed>Defense</color> to all allies for <color=#28d9ed>3 turn(s)</color> and removes <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.\\n\\nGreatly increased <color=#28d9ed>damage dealt</color> if granted increased Attack.",
-        "jp": "敵全体にダメージを与える。\\n味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>3ターン</color>の間UPさせ、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1</color>個解除する。\\n\\n自分の攻撃力がUPした状態の場合、与える<color=#28d9ed>ダメージ</color>が大幅にUPする。",
-        "kr": "적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>3턴</color> 동안 증가시키고, 공격 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.\\n\\n공격력 증가 효과를 보유하고 있으면 <color=#28d9ed>피해량</color>이 대폭 증가 합니다.",
-        "zh": "攻击全体敌人。\\n使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>3回合</color>,并解除攻击目标的<color=#28d9ed>1</color>个<color=#28d9ed>强化效果</color>。\\n\\n若附带攻击力提升效果,则使<color=#28d9ed>伤害量</color>大幅提升。"
+        "en": "Attacks all enemies.\\nGrants increased <color=#28d9ed>Defense</color> to all allies for <color=#28d9ed>2 turn(s)</color> and removes <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.\\n\\nGreatly increased <color=#28d9ed>damage dealt</color> if granted increased Attack.",
+        "jp": "敵全体にダメージを与える。\\n味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせ、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1</color>個解除する。\\n\\n自分の攻撃力がUPした状態の場合、与える<color=#28d9ed>ダメージ</color>が大幅にUPする。",
+        "kr": "적 전체를 공격합니다.\\n아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시키고, 공격 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1</color>개 제거합니다.\\n\\n공격력 증가 효과를 보유하고 있으면 <color=#28d9ed>피해량</color>이 대폭 증가 합니다.",
+        "zh": "攻击全体敌人。\\n使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>,并解除攻击目标的<color=#28d9ed>1</color>个<color=#28d9ed>强化效果</color>。\\n\\n若附带攻击力提升效果,则使<color=#28d9ed>伤害量</color>大幅提升。"
       },
-      "icon": "Skill_Ultimate_2000037"
+      "icon": "Skill_Ultimate_2000037",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     },
     {
       "name": {
@@ -118,7 +134,15 @@
         "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환하고, 전체 대상을 공격합니다. 이 후, <color=#28d9ed>인듀어런스 캐논</color>의 <color=#28d9ed>쿨타임</color>을 <color=#28d9ed>최대로 증가</color> 시킵니다.\\n추가로 아군 전체에게 영구적이고 해제 불가능한 <color=#28d9ed>반격, 공격력 증가</color> 효과를 부여하고 자신은 <color=#28d9ed>속도 감소</color> 효과를 추가로 얻게 됩니다.",
         "zh": "若生命值降至上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态,并攻击全体目标。此后,增加<color=#28d9ed>持久加农炮</color>的<color=#28d9ed>冷却时间</color><color=#28d9ed>上限</color>。\\n额外使友军获得无法解除的<color=#28d9ed>反击、攻击力提升</color>效果,并使自身额外获得<color=#28d9ed>速度降低</color>效果。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_COOL3_CHARGE",
+        "BT_STAT|ST_ATK_IR",
+        "BT_STAT|ST_COUNTER_RATE_IR"
+      ],
+      "debuff": [
+        "BT_STAT|ST_SPEED_IR"
+      ]
     }
   ]
 }

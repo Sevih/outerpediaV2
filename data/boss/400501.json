@@ -33,7 +33,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102005",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,14 @@
         "kr": "(발동 효과)\\n자신이 공격받았을 때 <color=#28d9ed>반격</color>합니다.\\n대상에게 <color=#28d9ed>표식</color>을 부여하고 부하들의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>100%</color> 증가합니다.",
         "zh": "(被动效果)\\n自身受到攻击时,发动<color=#28d9ed>反击</color>。\\n对目标造成<color=#28d9ed>标记</color>效果,并使部下们的<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>。"
       },
-      "icon": "Skill_Second_2000010"
+      "icon": "Skill_Second_2000010",
+      "buff": [
+        "SYS_BUFF_COUNTER",
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_MARKING"
+      ]
     },
     {
       "name": {
@@ -118,7 +125,10 @@
         "kr": "(패시브 효과)\\n매 턴 아군 전체의 <color=#28d9ed>공격력과 속도</color>가 <color=#28d9ed>12.5%</color> 증가합니다. (최대 8회 누적)\\n\\n아군이 공격 시 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>12%</color> 증가합니다.\\n소피아를 제외한 아군 사망 시 WG 피해를 받지 않고, 남은 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>100%</color> 회복시키고 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>100%</color> 증가시키지만, <color=#28d9ed>치명 피해</color>는 <color=#28d9ed>30%</color> 감소합니다.\\n\\n부하들은 서로 누적되는 특수 능력을 보유하며 사망 시 해제됩니다.\\n<color=#ffd732>기사단 실드</color> : 아군 전체의 <color=#28d9ed>받는 피해</color>를 <color=#28d9ed>10%</color> 감소시킵니다. \\n<color=#ffd732>기사단 워액스</color> : 이디스와 기사단 워액스의 <color=#28d9ed>받는 피해</color>를 <color=#28d9ed>15%</color> 감소시킵니다.",
         "zh": "(被动效果)\\n每回合使全体友军的<color=#28d9ed>攻击力和速度</color>提升<color=#28d9ed>12.5%</color>。(最多可叠加8次)\\n\\n友军进行攻击时,使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>12%</color>。\\n除索菲雅外的友军死亡时,不会受到WG伤害,并使剩余友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>100%</color>,且使<color=#28d9ed>暴击率</color>提升<color=#28d9ed>100%</color>,但使<color=#28d9ed>暴击伤害</color>降低<color=#28d9ed>30%</color>。\\n\\n使部下们附带互相叠加的特殊能力,并在死亡时解除。\\n<color=#ffd732>骑士团盾牌兵</color>:使全体友军<color=#28d9ed>所受伤害</color>降低\\n<color=#28d9ed>10%</color>。\\n<color=#ffd732>骑士团战斧兵</color>:使伊蒂斯和骑士团战斧兵<color=#28d9ed>所受伤害</color>降低<color=#28d9ed>15%</color>。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     }
   ]
 }
