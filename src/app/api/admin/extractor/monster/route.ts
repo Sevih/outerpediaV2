@@ -650,11 +650,6 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
       description: resolvedDesc,
       icon: iconName,
     };
-    // Apply overrides and patterns from admin JSON files
-    const descEn = resolvedDesc.en ?? '';
-    applySkillOverrides(descEn, buff, debuff, overrides);
-    applySkillPatterns(descEn, buff, debuff, patterns);
-
     if (buff.length > 0) skill.buff = buff;
     if (debuff.length > 0) skill.debuff = debuff;
 
@@ -705,6 +700,20 @@ async function extractMonsterSkills(gd: GameData, monster: Row) {
 
   mergeFinishIntoEnter('SKT_RAGE_FINISH1', 'SKT_RAGE_ENTER1');
   mergeFinishIntoEnter('SKT_RAGE_FINISH2', 'SKT_RAGE_ENTER2');
+
+  // Apply overrides and patterns after merges (so FINISH buffs merged into ENTER can be overridden)
+  for (const skill of skills) {
+    const descEn = ((skill.description as Record<string, string>)?.en) ?? '';
+    if (!descEn) continue;
+    const buff: string[] = [...((skill.buff as string[]) ?? [])];
+    const debuff: string[] = [...((skill.debuff as string[]) ?? [])];
+    const origBuff = JSON.stringify(buff);
+    const origDebuff = JSON.stringify(debuff);
+    applySkillOverrides(descEn, buff, debuff, overrides);
+    applySkillPatterns(descEn, buff, debuff, patterns);
+    if (JSON.stringify(buff) !== origBuff) { if (buff.length > 0) skill.buff = buff; else delete skill.buff; }
+    if (JSON.stringify(debuff) !== origDebuff) { if (debuff.length > 0) skill.debuff = debuff; else delete skill.debuff; }
+  }
 
   return skills;
 }
