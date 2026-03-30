@@ -1048,10 +1048,13 @@ export async function GET(req: NextRequest) {
 
         const extSkills = ext.skills as Record<string, unknown>[];
         const exSkills = (existing.skills ?? []) as Record<string, unknown>[];
+        const matchedIndices = new Set<number>();
         for (const es of extSkills) {
-          const match = exSkills.find(s =>
-            s.type === es.type && (s.name as Record<string, string>)?.en === (es.name as Record<string, string>)?.en
+          const matchIdx = exSkills.findIndex((s, i) =>
+            !matchedIndices.has(i) && s.type === es.type && (s.name as Record<string, string>)?.en === (es.name as Record<string, string>)?.en
           );
+          const match = matchIdx >= 0 ? exSkills[matchIdx] : undefined;
+          if (matchIdx >= 0) matchedIndices.add(matchIdx);
           if (!match) {
             diffs.push({ field: 'skill (new)', existing: '', extracted: `${es.type}: ${(es.name as Record<string, string>)?.en}` });
             continue;
@@ -1194,9 +1197,12 @@ export async function GET(req: NextRequest) {
           if (!hasDiff) {
             const extSkills = ext.skills as Record<string, unknown>[];
             const exSkills = (entry.data.skills ?? []) as Record<string, unknown>[];
+            const matched = new Set<number>();
             for (const es of extSkills) {
-              const match = exSkills.find(s => s.type === es.type && (s.name as Record<string, string>)?.en === (es.name as Record<string, string>)?.en);
-              if (!match) { hasDiff = true; break; }
+              const mi = exSkills.findIndex((s, i) => !matched.has(i) && s.type === es.type && (s.name as Record<string, string>)?.en === (es.name as Record<string, string>)?.en);
+              if (mi < 0) { hasDiff = true; break; }
+              matched.add(mi);
+              const match = exSkills[mi];
               if (JSON.stringify([...((es.buff as string[]) ?? [])].sort()) !== JSON.stringify([...((match.buff as string[]) ?? [])].sort())) { hasDiff = true; break; }
               if (JSON.stringify([...((es.debuff as string[]) ?? [])].sort()) !== JSON.stringify([...((match.debuff as string[]) ?? [])].sort())) { hasDiff = true; break; }
               for (const lang of LANGS) {
@@ -1207,8 +1213,9 @@ export async function GET(req: NextRequest) {
               if (hasDiff) break;
             }
             if (!hasDiff) {
+              const matched2 = new Set<number>();
               for (const s of exSkills) {
-                if (!extSkills.find(es => es.type === s.type && (es.name as Record<string, string>)?.en === (s.name as Record<string, string>)?.en)) { hasDiff = true; break; }
+                if (extSkills.findIndex((es, i) => !matched2.has(i) && es.type === s.type && (es.name as Record<string, string>)?.en === (s.name as Record<string, string>)?.en && (matched2.add(i), true)) < 0) { hasDiff = true; break; }
               }
             }
           }
