@@ -9,76 +9,11 @@ import ClassInline from '@/app/components/inline/ClassInline';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { effectMapsPromise } from '@/lib/data/effects-client';
+import { getSkillImageSrc } from '@/lib/boss-utils';
+import { formatBossDesc, ImmuneList } from '@/app/components/guides/boss-shared';
 import type { Boss, BossSkill } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
-
-/* ── Immunities ── */
-
-function normalizeName(name: string): string {
-  return name.startsWith('ST_') ? `BT_STAT|${name}` : name;
-}
-
-function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
-  const { t } = useI18n();
-  const { debuffMap } = use(effectMapsPromise);
-  const raw: string[] = [];
-  if (immuneStr) raw.push(...immuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
-  if (statImmuneStr) raw.push(...statImmuneStr.split(',').map((s) => normalizeName(s.trim())).filter(Boolean));
-  const seen = new Set<string>();
-  const items = raw.filter((name) => {
-    const label = debuffMap[name]?.label ?? name;
-    if (seen.has(label)) return false;
-    seen.add(label);
-    return true;
-  });
-  if (items.length === 0) return null;
-
-  return (
-    <div className="space-y-1.5">
-      <h5 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
-        {t('guides.boss_display.immunities')}
-      </h5>
-      <BuffDebuffDisplay buffs={[]} debuffs={items} iconOnly />
-    </div>
-  );
-}
-
-/* ── Helpers ── */
-
-function getSkillImageSrc(icon: string): string {
-  const suffix = icon.split('_').pop() ?? '';
-  const folder = suffix.startsWith('2') ? '' : 'boss/';
-  return `/images/characters/${folder}skills/${icon}.webp`;
-}
-
-function formatBossDesc(text: string): React.ReactNode {
-  if (!text) return null;
-
-  const regex = /<color=(#[0-9a-fA-F]{6})>(.*?)<\/color>|\\n|\n/g;
-  const parts: React.ReactNode[] = [];
-  let lastIndex = 0;
-  let key = 0;
-  let match: RegExpExecArray | null;
-
-  while ((match = regex.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index));
-    }
-    if (match[1]) {
-      parts.push(<span key={key++} style={{ color: match[1] }}>{match[2]}</span>);
-    } else {
-      parts.push(<br key={key++} />);
-    }
-    lastIndex = regex.lastIndex;
-  }
-
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
-  }
-
-  return parts;
-}
 
 /* ── Skill tab button ── */
 
@@ -124,7 +59,7 @@ function SkillPanel({ skill, lang }: { skill: BossSkill; lang: Lang }) {
       ) : null}
       {desc && (
         <p className="text-xs leading-relaxed text-zinc-400">
-          {formatBossDesc(desc)}
+          {formatBossDesc(desc, lang)}
         </p>
       )}
     </div>

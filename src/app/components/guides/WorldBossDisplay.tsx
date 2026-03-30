@@ -5,14 +5,12 @@ import Image from 'next/image';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
 import Tabs from '@/app/components/ui/Tabs';
 import BuffDebuffDisplay, { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
-import ElementInline from '@/app/components/inline/ElementInline';
-import ClassInline from '@/app/components/inline/ClassInline';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { ELEMENT_TEXT } from '@/lib/theme';
 import { effectMapsPromise } from '@/lib/data/effects-client';
+import { formatBossDesc, ImmuneList } from '@/app/components/guides/boss-shared';
 import type { Boss, BossSkill } from '@/types/boss';
-import type { Effect } from '@/types/effect';
 import type { ElementType } from '@/types/enums';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
@@ -36,128 +34,6 @@ type Props = {
 const ALL_MODES: WorldBossMode[] = ['Normal', 'Hard', 'Very Hard', 'Extreme'];
 
 const bossCache = new Map<string, Boss>();
-
-/* ── Locale-aware element / class token maps ──────────── */
-
-const ELEMENT_TOKENS: Record<Lang, Record<string, string>> = {
-  en: { Fire: 'Fire', Water: 'Water', Earth: 'Earth', Light: 'Light', Dark: 'Dark' },
-  jp: { '火': 'Fire', '水': 'Water', '地': 'Earth', '光': 'Light', '闇': 'Dark' },
-  kr: { '화속성': 'Fire', '수속성': 'Water', '지속성': 'Earth', '명속성': 'Light', '암속성': 'Dark' },
-  zh: { '火属性': 'Fire', '水属性': 'Water', '土属性': 'Earth', '光属性': 'Light', '暗属性': 'Dark' },
-};
-
-const CLASS_TOKENS: Record<Lang, Record<string, string>> = {
-  en: { Striker: 'Striker', Defender: 'Defender', Ranger: 'Ranger', Mage: 'Mage', Healer: 'Healer' },
-  jp: { '攻撃型': 'Striker', '魔法型': 'Mage', '防御型': 'Defender', 'スピード型': 'Ranger', '回復型': 'Healer' },
-  kr: { '공격형': 'Striker', '마법형': 'Mage', '방어형': 'Defender', '속도형': 'Ranger', '회복형': 'Healer' },
-  zh: { '攻击型': 'Striker', '魔法型': 'Mage', '防御型': 'Defender', '速度型': 'Ranger', '恢复型': 'Healer' },
-};
-
-function escapeRegex(s: string): string {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-/** Parse boss skill description: <color> tags, element/class names → inline components */
-function formatBossDesc(text: string, lang: Lang): React.ReactNode {
-  if (!text) return null;
-
-  // Normalize literal \n to real newlines so \b word boundaries work after line breaks
-  const normalized = text.replace(/\\n/g, '\n');
-
-  const elemMap = ELEMENT_TOKENS[lang];
-  const classMap = CLASS_TOKENS[lang];
-
-  // Sort tokens longest-first to avoid partial matches
-  const allTokens = [...Object.keys(elemMap), ...Object.keys(classMap)]
-    .sort((a, b) => b.length - a.length)
-    .map(escapeRegex)
-    .join('|');
-
-  // EN uses word boundaries; CJK does not
-  const wb = lang === 'en' ? '\\b' : '';
-  const tokenOnly = new RegExp(`${wb}(${allTokens})${wb}`, 'g');
-  const tokenRegex = new RegExp(
-    `<color=(#[0-9a-fA-F]{6})>(.*?)<\\/color>|\\n|${wb}(${allTokens})${wb}`,
-    'g',
-  );
-
-  let key = 0;
-
-  // Parse element/class tokens inside a text fragment
-  function parseTokens(fragment: string): React.ReactNode[] {
-    const nodes: React.ReactNode[] = [];
-    let li = 0;
-    let m: RegExpExecArray | null;
-    tokenOnly.lastIndex = 0;
-    while ((m = tokenOnly.exec(fragment)) !== null) {
-      if (m.index > li) nodes.push(fragment.slice(li, m.index));
-      const tok = m[1];
-      if (elemMap[tok]) nodes.push(<ElementInline key={key++} element={elemMap[tok]} />);
-      else if (classMap[tok]) nodes.push(<ClassInline key={key++} name={classMap[tok]} />);
-      li = tokenOnly.lastIndex;
-    }
-    if (li < fragment.length) nodes.push(fragment.slice(li));
-    return nodes;
-  }
-
-  const parts: React.ReactNode[] = [];
-  let lastIndex = 0;
-  let match: RegExpExecArray | null;
-
-  while ((match = tokenRegex.exec(normalized)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(normalized.slice(lastIndex, match.index));
-    }
-
-    if (match[1]) {
-      // Color tag — also parse inner content for element/class tokens
-      parts.push(<span key={key++} style={{ color: match[1] }}>{parseTokens(match[2])}</span>);
-    } else if (match[0] === '\n') {
-      parts.push(<br key={key++} />);
-    } else if (match[3]) {
-      const token = match[3];
-      if (elemMap[token]) {
-        parts.push(<ElementInline key={key++} element={elemMap[token]} />);
-      } else if (classMap[token]) {
-        parts.push(<ClassInline key={key++} name={classMap[token]} />);
-      }
-    }
-
-    lastIndex = tokenRegex.lastIndex;
-  }
-
-  if (lastIndex < normalized.length) {
-    parts.push(normalized.slice(lastIndex));
-  }
-
-  return parts;
-}
-
-/** Normalize ST_ short names to full BT_STAT|ST_ format */
-function resolveGroup(name: string, buffMap: Record<string, Effect>, debuffMap: Record<string, Effect>): string {
-  if (name.startsWith('ST_')) return `BT_STAT|${name}`;
-  const effect = debuffMap[name] ?? buffMap[name];
-  return effect?.group ?? name;
-}
-
-function ImmuneList({ immuneStr, statImmuneStr }: { immuneStr: string; statImmuneStr: string }) {
-  const { t } = useI18n();
-  const { buffMap, debuffMap } = use(effectMapsPromise);
-  const raw: string[] = [];
-  if (immuneStr) raw.push(...immuneStr.split(',').map((s) => resolveGroup(s.trim(), buffMap, debuffMap)).filter(Boolean));
-  if (statImmuneStr) raw.push(...statImmuneStr.split(',').map((s) => resolveGroup(s.trim(), buffMap, debuffMap)).filter(Boolean));
-  const items = [...new Set(raw)];
-  if (items.length === 0) return null;
-
-  return (
-    <div className="space-y-1.5">
-      <h5 className="text-xs font-semibold uppercase tracking-wider text-zinc-500 after:hidden">
-        {t('guides.boss_display.immunities')}
-      </h5>
-      <BuffDebuffDisplay buffs={[]} debuffs={items} iconOnly />
-    </div>
-  );
-}
 
 function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
   const name = lRec(skill.name as LangMap, lang);
