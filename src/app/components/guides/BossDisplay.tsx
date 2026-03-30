@@ -187,6 +187,7 @@ export function SkillCard({ skill, lang }: { skill: BossSkill; lang: Lang }) {
             <BuffDebuffDisplay
               buffs={Array.isArray(skill.buff) ? skill.buff : skill.buff ? [skill.buff] : []}
               debuffs={Array.isArray(skill.debuff) ? skill.debuff : skill.debuff ? [skill.debuff] : []}
+              keepInterruptions
             />
           )}
           {desc && (

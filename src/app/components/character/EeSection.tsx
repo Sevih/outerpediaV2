@@ -98,7 +98,7 @@ export default function EeSection({ character, ee, giftItems }: Props) {
 
           {/* Buffs/debuffs */}
           <div className="mt-3">
-            <BuffDebuffDisplay buffs={ee.buff} debuffs={ee.debuff} />
+            <BuffDebuffDisplay buffs={ee.buff} debuffs={ee.debuff} keepInterruptions />
           </div>
         </div>
 

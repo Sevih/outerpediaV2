@@ -33,7 +33,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102015",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,12 +49,15 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks 2 enemies and has a <color=#28d9ed>100%</color> chance to reduce the targets' <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "jp": "敵2体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
-        "kr": "적 2인을 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
-        "zh": "攻击2名敌人,并有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
+        "en": "Attacks 2 enemies and has a <color=#28d9ed>70%</color> chance to reduce the targets' <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "jp": "敵2体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "kr": "적 2인을 공격하고 <color=#28d9ed>70%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "zh": "攻击2名敌人,并有<color=#28d9ed>70%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_First_2000043"
+      "icon": "Skill_First_2000043",
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ]
     },
     {
       "name": {
@@ -65,12 +68,17 @@
       },
       "type": "SKT_SECOND",
       "description": {
-        "en": "Attacks 2 enemies.\\nHas a <color=#28d9ed>100%</color> chance to remove <color=#28d9ed>2</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "jp": "敵2体にダメージを与える。\\n<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2つ</color>解除し、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n対象が地属性の場合、ミスが発生せず<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
-        "kr": "적 2인을 공격합니다.\\n<color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
-        "zh": "攻击2名敌人。\\n有<color=#28d9ed>100%</color>的概率解除目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避,并使<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
+        "en": "Attacks 2 enemies.\\nHas a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "jp": "敵2体にダメージを与える。\\n<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1つ</color>解除し、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n対象が地属性の場合、ミスが発生せず<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "kr": "적 2인을 공격합니다.\\n<color=#28d9ed>85%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "zh": "攻击2名敌人。\\n有<color=#28d9ed>85%</color>的概率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避,并使<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Second_2000043"
+      "icon": "Skill_Second_2000043",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_STAT|ST_ATK",
+        "BT_DOT_BURN"
+      ]
     },
     {
       "name": {
@@ -81,12 +89,17 @@
       },
       "type": "SKT_ULTIMATE",
       "description": {
-        "en": "Attacks 2 enemies and has a <color=#28d9ed>100%</color> chance to decrease <color=#28d9ed>Defense</color> and <color=#28d9ed>Speed</color> of all enemies for <color=#28d9ed>3 turn(s)</color>.\\nAdditionally, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>3 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss.",
-        "jp": "敵2体にダメージを与え、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>3ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>100%</color>の確率で敵全体に<color=#28d9ed>3ターン</color>の間<color=#28d9ed>回復不可</color>を付与する。\\n対象が地属性の場合、ミスが発生しない。",
-        "kr": "적 2인을 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>3턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n추가로 <color=#28d9ed>100%</color> 확률로 적 전체에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않습니다.",
-        "zh": "攻击2名敌人,并有<color=#28d9ed>100%</color>的概率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>3回合</color>。\\n此外,有<color=#28d9ed>100%</color>的概率对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>3回合</color>。\\n若目标为地属性,则不会发生闪避。"
+        "en": "Attacks 2 enemies and has a <color=#28d9ed>85%</color> chance to decrease <color=#28d9ed>Defense</color> and <color=#28d9ed>Speed</color> of all enemies for <color=#28d9ed>2 turn(s)</color>.\\nAdditionally, has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss.",
+        "jp": "敵2体にダメージを与え、<color=#28d9ed>85%</color>の確率で<color=#28d9ed>2ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>85%</color>の確率で敵全体に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>回復不可</color>を付与する。\\n対象が地属性の場合、ミスが発生しない。",
+        "kr": "적 2인을 공격하고 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n추가로 <color=#28d9ed>85%</color> 확률로 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않습니다.",
+        "zh": "攻击2名敌人,并有<color=#28d9ed>85%</color>的概率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>。\\n此外,有<color=#28d9ed>85%</color>的概率对全体敌人施加<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。\\n若目标为地属性,则不会发生闪避。"
       },
-      "icon": "Skill_Ultimate_2000043"
+      "icon": "Skill_Ultimate_2000043",
+      "debuff": [
+        "BT_STAT|ST_DEF",
+        "BT_STAT|ST_SPEED",
+        "BT_SEALED_RECEIVE_HEAL"
+      ]
     },
     {
       "name": {
@@ -102,7 +115,11 @@
         "kr": "(패시브 효과)\\n<color=#28d9ed>영원히 살 수는 없어</color> 사용 시 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n\\n<color=#28d9ed>이터널</color>은 전투 입장 시 해제 불가능한 <color=#28d9ed>효과 적중 증가</color>를 영구적으로 보유합니다.",
         "zh": "(被动效果)\\n使用<color=#28d9ed>世上无永生</color>时,获得<color=#28d9ed>额外回合</color>。\\n\\n<color=#28d9ed>伊特诺</color>在战斗开始时,永久获得无法解除的<color=#28d9ed>效果命中提升</color>效果。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_ADDITIVE_TURN",
+        "BT_STAT|ST_BUFF_CHANCE_IR"
+      ]
     }
   ]
 }

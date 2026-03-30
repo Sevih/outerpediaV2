@@ -74,7 +74,7 @@ function FusionPassiveCard({ character }: Props) {
         </div>
       )}
 
-      <BuffDebuffDisplay buffs={fp.buff} debuffs={fp.debuff} />
+      <BuffDebuffDisplay buffs={fp.buff} debuffs={fp.debuff} keepInterruptions />
 
       <div className="text-sm leading-relaxed text-zinc-200">{formatEffectText(desc)}</div>
 
@@ -189,7 +189,7 @@ export default function ChainDualSection({ character }: Props) {
         {chain && (
           <div className="mb-4">
             <div className="mt-2">
-              <BuffDebuffDisplay buffs={cp.buff} debuffs={cp.debuff} />
+              <BuffDebuffDisplay buffs={cp.buff} debuffs={cp.debuff} keepInterruptions />
             </div>
             <div className="text-sm leading-relaxed text-zinc-200">
               {formatEffectText(chain)}
@@ -204,6 +204,7 @@ export default function ChainDualSection({ character }: Props) {
               <BuffDebuffDisplay
                 buffs={cp.dual_buff ?? []}
                 debuffs={cp.dual_debuff ?? []}
+                keepInterruptions
               />
               <div className="text-sm leading-relaxed text-zinc-200">
                 {formatEffectText(dual)}

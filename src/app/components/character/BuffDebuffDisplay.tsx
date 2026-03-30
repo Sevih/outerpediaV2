@@ -32,16 +32,19 @@ type Props = {
   debuffs: string[];
   /** Show only icons (no label text) */
   iconOnly?: boolean;
+  /** Keep Interruption variants even when the base effect is already present */
+  keepInterruptions?: boolean;
 };
 
 /** Deduplicate effect names by group: if two effects share the same group, keep only the first one */
-function dedup(names: string[], map: Record<string, Effect>): string[] {
+function dedup(names: string[], map: Record<string, Effect>, keepInterruptions = false): string[] {
   const seen = new Set<string>();
   const out: string[] = [];
   for (const name of names) {
     const effect = map[name];
     const groupKey = effect?.group || name;
-    if (seen.has(groupKey)) continue;
+    const isInterruption = keepInterruptions && effect?.icon?.includes('Interruption');
+    if (!isInterruption && seen.has(groupKey)) continue;
     seen.add(groupKey);
     out.push(name);
   }
@@ -49,13 +52,13 @@ function dedup(names: string[], map: Record<string, Effect>): string[] {
 }
 
 /** Render a row of buff/debuff effect icons */
-export default function BuffDebuffDisplay({ buffs, debuffs, iconOnly }: Props) {
+export default function BuffDebuffDisplay({ buffs, debuffs, iconOnly, keepInterruptions }: Props) {
   const { buffMap, debuffMap } = useContext(EffectsContext);
 
   if (!buffs.length && !debuffs.length) return null;
 
-  const uniqueBuffs = dedup(buffs, buffMap);
-  const uniqueDebuffs = dedup(debuffs, debuffMap);
+  const uniqueBuffs = dedup(buffs, buffMap, keepInterruptions);
+  const uniqueDebuffs = dedup(debuffs, debuffMap, keepInterruptions);
 
   return (
     <div className="flex flex-wrap items-center gap-1.5">

@@ -72,7 +72,7 @@ export default function SkillCard({ skill }: Props) {
         </div>
       </div>
 
-      <BuffDebuffDisplay buffs={skill.buff} debuffs={skill.debuff} />
+      <BuffDebuffDisplay buffs={skill.buff} debuffs={skill.debuff} keepInterruptions />
 
       {maxLevel > 1 && (
         <div className="mt-3 mb-3 flex items-center gap-1">
