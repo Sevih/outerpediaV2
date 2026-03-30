@@ -28,7 +28,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102040",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "자신의 턴 마다 아군 1체에게 <color=#28d9ed>2턴</color> 동안 실드를 부여합니다.",
         "zh": "每到自身回合时,使1名友军获得护盾效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Light"
+      "icon": "MT_Attack_Magic_1_Light",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,14 @@
         "kr": "전투 입장 시, 자신에게 해제되지 않는 <color=#28d9ed>무적</color> 효과를 부여합니다.\\n\\n자신 행동 시, 적 전체에게 최대 체력 <color=#28d9ed>10%</color> 만큼의 <color=#28d9ed>고정 피해</color>를 입힙니다.",
         "zh": "进入战斗时,为自身赋予不可解除的<color=#28d9ed>无敌</color>效果。\\n\\n自身行动时,对全体敌人造成等于自身最大生命值<color=#28d9ed>10%</color>的<color=#28d9ed>固定伤害</color>。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_INVINCIBLE_IR",
+        "BT_REVERSE_HEAL_BASED_TARGET"
+      ],
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_TARGET"
+      ]
     }
   ]
 }

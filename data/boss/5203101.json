@@ -28,7 +28,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102031",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적 전체를 공격합니다. <color=#28d9ed>50%</color>확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 저항</color>을 감소 시킵니다.",
         "zh": "攻击全体敌人。有<color=#28d9ed>50%</color>的几率使<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_First_4044001"
+      "icon": "Skill_First_4044001",
+      "debuff": [
+        "BT_STAT|ST_BUFF_RESIST"
+      ]
     },
     {
       "name": {
@@ -67,6 +70,7 @@
       },
       "icon": "Skill_Second_4044001",
       "buff": [
+        "BT_COOL2_CHARGE",
         "BT_ADDITIVE_TURN"
       ]
     },
@@ -84,7 +88,10 @@
         "kr": "적 전체를 공격합니다. 약화 효과가 있는 대상은 효과 저항과 면역을 무시하고 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
         "zh": "攻击全体敌人。无视附带弱化效果目标的效果抵抗和免疫效果,并使其进入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Ultimate_4044001"
+      "icon": "Skill_Ultimate_4044001",
+      "debuff": [
+        "BT_STUN"
+      ]
     },
     {
       "name": {
@@ -119,23 +126,11 @@
         "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>슈퍼 천재가 넣은 보너스</color> : 광폭화 종료 시 사용.\\n적 전체를 공격합니다.",
         "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复\\n10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>超级天才专属增益</color> :狂暴化结束时发动。\\n攻击全体敌人。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ]
     }
   ]
 }

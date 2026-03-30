@@ -83,7 +83,12 @@ export function formatBossDesc(text: string, lang?: Lang): React.ReactNode {
             {parse(str.slice(contentStart, contentEnd))}
           </span>,
         );
-        lastIndex = match ? tagRegex.lastIndex : str.length;
+        if (!match) {
+          // Unclosed tag — rest of string consumed, stop parsing
+          lastIndex = str.length;
+          break;
+        }
+        lastIndex = tagRegex.lastIndex;
       } else if (match[0] === '</color>') {
         // Stray closing tag — skip
         lastIndex = tagRegex.lastIndex;

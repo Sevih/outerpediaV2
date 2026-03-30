@@ -308,121 +308,160 @@
       "IG_Buff_Effect_2000065_B_Interruption"
     ]
   },
-  "(Passive Effect)\\nAlways grants <color=#28d9ed>Buff Enhancement</color> and <color=#28d9ed>Debuff Enhancement</color> to the caster. This effect is irremovable.\\nAt the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>, and recovers Weakness Gauge by <color=#28d9ed>15</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)":{
-    "add_buff": [
-      "BT_RANDOM_STAT"
-    ]
+  "(Passive Effect)\\nAlways grants <color=#28d9ed>Buff Enhancement</color> and <color=#28d9ed>Debuff Enhancement</color> to the caster. This effect is irremovable.\\nAt the start of the turn, grants a <color=#28d9ed>random increased stat effect</color> to the caster for <color=#28d9ed>2 turn(s)</color>, and recovers Weakness Gauge by <color=#28d9ed>15</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)": {
+    "add_buff": ["BT_RANDOM_STAT"]
   },
-  "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for 3 turns. Additionally, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>100%</color> and grants increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Buff Enhancement</color> for 1 turn.\\nTakes Weakness Gauge damage only when hit by a counterattack.":{
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for 3 turns. Additionally, increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>100%</color> and grants increased <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Buff Enhancement</color> for 1 turn.\\nTakes Weakness Gauge damage only when hit by a counterattack.": {
     "remove_buff": ["BT_STAT|ST_SPEED"],
     "add_buff": ["BT_ACTION_GAUGE"]
   },
-  "(Passive Effect)\\nAt the start of battle, grants an irremovable reduced damage taken to the caster for <color=#28d9ed>3 turn(s)</color> and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.\\nUntil inflicted with Break, inflicts an irremovable <color=#28d9ed>Silenced</color> on all enemies.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>100%</color>.\\nWhen an enemy performs an action, if the caster is inflicted with a debuff, increases Priority of the caster by <color=#28d9ed>20%</color>.":{
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable reduced damage taken to the caster for <color=#28d9ed>3 turn(s)</color> and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>100%</color>.\\nUntil inflicted with Break, inflicts an irremovable <color=#28d9ed>Silenced</color> on all enemies.\\nReduces Weakness Gauge damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains by <color=#28d9ed>100%</color>.\\nWhen an enemy performs an action, if the caster is inflicted with a debuff, increases Priority of the caster by <color=#28d9ed>20%</color>.": {
     "remove_buff": ["BT_STAT|ST_SPEED"]
   },
-  "(Passive Effect)\\nGreatly reduces damage taken by the Boss.\\nWeakness Gauge can be <color=#28d9ed>reduced</color> only <color=#28d9ed>when hit</color> if all surviving allies are inflicted with <color=#28d9ed>Shocked</color>.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)\\nAt the start of the Boss's or Epsilon's turn, removes all debuffs from the caster.\\nWhen the Boss is inflicted with <color=#28d9ed>Break</color>, the <color=#28d9ed>reduced damage taken</color> and <color=#28d9ed>immunity to Weakness Gauge reduction</color> effects are removed.":{
+  "(Passive Effect)\\nGreatly reduces damage taken by the Boss.\\nWeakness Gauge can be <color=#28d9ed>reduced</color> only <color=#28d9ed>when hit</color> if all surviving allies are inflicted with <color=#28d9ed>Shocked</color>.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)\\nAt the start of the Boss's or Epsilon's turn, removes all debuffs from the caster.\\nWhen the Boss is inflicted with <color=#28d9ed>Break</color>, the <color=#28d9ed>reduced damage taken</color> and <color=#28d9ed>immunity to Weakness Gauge reduction</color> effects are removed.": {
     "add_debuff": ["BT_ACTION_GAUGE"]
   },
-  "(Passive Effect)\\nAt the start of the turn, when all surviving allies are not inflicted with <color=#28d9ed>Stunned</color>, grants an irremovable <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>1 turn</color>.\\nWhen the caster is inflicted with <color=#28d9ed>Stunned</color>, increases damage taken.\\nAfter the Boss is inflicted with <color=#28d9ed>Break</color>, irremovable <color=#28d9ed>Invulnerability</color> is no longer granted.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)":{
+  "(Passive Effect)\\nAt the start of the turn, when all surviving allies are not inflicted with <color=#28d9ed>Stunned</color>, grants an irremovable <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>1 turn</color>.\\nWhen the caster is inflicted with <color=#28d9ed>Stunned</color>, increases damage taken.\\nAfter the Boss is inflicted with <color=#28d9ed>Break</color>, irremovable <color=#28d9ed>Invulnerability</color> is no longer granted.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)": {
     "add_debuff": ["BT_ACTION_GAUGE"]
   },
-  "Attacks all enemies, and recovers Health of all allies by <color=#28d9ed>10%</color>. Increases the duration of buffs on all allies by <color=#28d9ed>1 turn(s)</color>, and for each target damaged, increases Priority of the caster by <color=#28d9ed>10%</color>.":{
+  "Attacks all enemies, and recovers Health of all allies by <color=#28d9ed>10%</color>. Increases the duration of buffs on all allies by <color=#28d9ed>1 turn(s)</color>, and for each target damaged, increases Priority of the caster by <color=#28d9ed>10%</color>.": {
     "remove_debuff": ["BT_STAT|ST_DEF"]
   },
-  "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.":{
+  "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>2 turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.": {
     "add_buff": ["IG_Buff_2000035_Interruption"]
   },
-  "Attacks all enemies. After attacking, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>, and grants <color=#28d9ed>Fierce Offensive</color> for <color=#28d9ed>2 turn(s)</color>.":{
-    "add_buff":["IG_Buff_2000056_Interruption"]
+  "Attacks all enemies. After attacking, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>, and grants <color=#28d9ed>Fierce Offensive</color> for <color=#28d9ed>2 turn(s)</color>.": {
+    "add_buff": ["IG_Buff_2000056_Interruption"]
   },
-  "(Passive Effect)\\nAt the start of battle, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.\\nWhen hit, if the caster is not granted a buff, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>, and if the caster is granted a buff, reduces <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.\\nAt the start of the turn, if the caster is not granted a buff, increases <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.":{
-    "add_buff":["BT_COOL_CHARGE"]
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.\\nWhen hit, if the caster is not granted a buff, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>, and if the caster is granted a buff, reduces <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.\\nAt the start of the turn, if the caster is not granted a buff, increases <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.": {
+    "add_buff": ["BT_COOL_CHARGE"]
   },
-  "(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> and recovers Health by <color=#28d9ed>50%</color>.\\nUpon resurrection, grants <color=#28d9ed>Doll Garden's Caretaker</color> to the caster for <color=#28d9ed>1 turn(s)</color>, and if Demiurge Stella's Health is greater than 30%, resets skill cooldowns of the caster. Additionally, increases <color=#28d9ed>Priority</color> by <color=#28d9ed>80%</color>.":{
-    "add_buff":["IG_Buff_2000059_Interruption","BT_COOL_CHARGE"]
+  "(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> and recovers Health by <color=#28d9ed>50%</color>.\\nUpon resurrection, grants <color=#28d9ed>Doll Garden's Caretaker</color> to the caster for <color=#28d9ed>1 turn(s)</color>, and if Demiurge Stella's Health is greater than 30%, resets skill cooldowns of the caster. Additionally, increases <color=#28d9ed>Priority</color> by <color=#28d9ed>80%</color>.": {
+    "add_buff": ["IG_Buff_2000059_Interruption", "BT_COOL_CHARGE"]
   },
-  "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>12.5%</color> every time the caster takes a turn.":{
-     "clear_buff": true
-  },
-  "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis skill prioritizes enemies on the front.":{
-    "remove_debuff": ["BT_ACTION_GAUGE"]
-  },
-  "(Passive Effect) Increases Attack by <color=#28d9ed>12.5%</color> each time the caster gains a turn.\\n\\n(Triggered Effect) Performs an <color=#28d9ed>additional attack</color> against all enemies when an enemy uses a non-attack skill.\\n\\nIncreases damage dealt by this attack and additional attacks caused by <color=#28d9ed>Dark Devil Dance</color> each time they are performed.":{
-    "add_buff": ["BT_RUN_ACTIVE_SKILL_ON_TURN_END"]
-  },
-  "(Passive Effect)\\nAfter the caster takes their turn, has a <color=#28d9ed>30%</color> chance to Counterattack, until the caster's next turn.":{
-    "add_buff": ["BT_STAT|ST_COUNTER_RATE"]
-  },
-  "(Passive Effect) Increases Attack by <color=#28d9ed>12.5%</color> every time the caster gains a turn.\\n\\n(Triggered Effect) When an enemy uses a non-attack skill, grants <color=#28d9ed>increased Critical Hit Chance</color> to the caster for <color=#28d9ed>2 turn(s)</color> and performs an <color=#28d9ed>additional attack</color> on all enemies.\\n\\nIncreases damage dealt by this attack and additional attack activated by <color=#28d9ed>Dark Devil Dance</color> on every use.":{
-    "add_buff": ["BT_RUN_ACTIVE_SKILL_ON_TURN_END"]
-  },
-  "(Passive Effect) When the caster has a <color=#28d9ed>Barrier</color>, reduces Weakness Gauge damage taken by <color=#28d9ed>30%</color>.\\n(Triggered Effect) When hit by a single-target attack, counterattacks and recovers Weakness Gauge by <color=#28d9ed>1</color>.\\nThe counterattack effect is only activated once every <color=#28d9ed>1 turn</color>.":{
-    "remove_debuff":["BT_ACTION_GAUGE"]
-  },
-  "(Passive Effect)\\nIncreases <color=#28d9ed>Attack and Speed</color> of all allies by <color=#28d9ed>12.5%</color> every turn. (Max 8 stacks)\\n\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>12%</color> when an ally attacks.\\nWhen an ally other than Sofia dies, does not take Weakness Gauge damage, recovers <color=#28d9ed>Health</color> of the remaining allies by <color=#28d9ed>100%</color> and increases <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>100%</color>, but reduces their <color=#28d9ed>Critical Damage</color> by <color=#28d9ed>30%</color>.\\n\\nMinions have special abilities that are stackable and removed upon their deaths.\\n<color=#ffd732>Nightwatch Shieldbearer</color>: Reduces <color=#28d9ed>damage taken</color> by all allies by <color=#28d9ed>10%</color>.\\n<color=#ffd732>Nightwatch Waraxe-Wielder</color>: Reduces <color=#28d9ed>damage taken</color> by Idith and Nightwatch Waraxe-Wielder by <color=#28d9ed>15%</color>.":{
-    "add_buff": ["BT_ACTION_GAUGE"]
-  },
-  "(Passive Effect)\\nReduces <color=#28d9ed>damage taken</color> by all allies by <color=#28d9ed>10%</color>. This effect stacks with skills of the same name and is removed upon the caster's death.":{
-    "remove_buff":["BT_ACTION_GAUGE"]
-  },
-  "(Passive Effect)\\nReduces <color=#28d9ed>damage taken</color> by <color=#ffd732>Idith</color> and <color=#ffd732>Nightwatch Waraxe-Wielder</color> by <color=#28d9ed>15%</color>. This effect stacks with skills of the same name and is removed upon the caster's death.":{
-    "remove_buff":["BT_ACTION_GAUGE"]
-  },
-  "Attacks an enemy and gains a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>.":{
-    "remove_debuff":["BT_STEAL_BUFF"]
-  },
-  "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.":{
-    "remove_debuff":["BT_STEAL_BUFF"]
-  },
-  "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>2 turn(s)</color>. Ignores the target's Resilience.":{
-    "remove_debuff":["BT_STEAL_BUFF"]
-  },
-  "(Passive Effect)\\nGrants increased <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle. Also, <color=#28d9ed>steals</color> the target's <color=#28d9ed>buffs</color> when attacking.":{
-    "add_debuff":["BT_STEAL_BUFF"]
-  },
-  "(Passive Effect)\\nWhen attacking, recovers <color=#ffd732>Snow</color>'s <color=#28d9ed>Health</color> and <color=#28d9ed>Weakness Gauge</color> by <color=#28d9ed>10%</color>.":{
+  "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>12.5%</color> every time the caster takes a turn.": {
     "clear_buff": true
   },
-  "(Triggered Effect)\\nThe <color=#28d9ed>Agile Response</color> effect is activated every <color=#28d9ed>2 turns</color>.\\nRemoves <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>15%</color>.":{
-    "remove_buff":["BT_STEAL_BUFF"]
+  "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis skill prioritizes enemies on the front.": {
+    "remove_debuff": ["BT_ACTION_GAUGE"]
   },
-  "(Passive Effect)\\nIncreases Defense by <color=#28d9ed>50%</color> and Counterattack Chance by <color=#28d9ed>30%</color>.":{
+  "(Passive Effect) Increases Attack by <color=#28d9ed>12.5%</color> each time the caster gains a turn.\\n\\n(Triggered Effect) Performs an <color=#28d9ed>additional attack</color> against all enemies when an enemy uses a non-attack skill.\\n\\nIncreases damage dealt by this attack and additional attacks caused by <color=#28d9ed>Dark Devil Dance</color> each time they are performed.": {
+    "add_buff": ["BT_RUN_ACTIVE_SKILL_ON_TURN_END"]
+  },
+  "(Passive Effect)\\nAfter the caster takes their turn, has a <color=#28d9ed>30%</color> chance to Counterattack, until the caster's next turn.": {
     "add_buff": ["BT_STAT|ST_COUNTER_RATE"]
   },
-  "Attacks an enemy and increases the <color=#28d9ed>Priority</color> of the ally with the highest Attack by <color=#28d9ed>10%</color>, then grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.":{
-    "add_buff":["BT_STAT|ST_SPEED"]
+  "(Passive Effect) Increases Attack by <color=#28d9ed>12.5%</color> every time the caster gains a turn.\\n\\n(Triggered Effect) When an enemy uses a non-attack skill, grants <color=#28d9ed>increased Critical Hit Chance</color> to the caster for <color=#28d9ed>2 turn(s)</color> and performs an <color=#28d9ed>additional attack</color> on all enemies.\\n\\nIncreases damage dealt by this attack and additional attack activated by <color=#28d9ed>Dark Devil Dance</color> on every use.": {
+    "add_buff": ["BT_RUN_ACTIVE_SKILL_ON_TURN_END"]
   },
-  "Increases <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> of all allies for <color=#28d9ed>2 turn(s)</color>, then increases the <color=#28d9ed>Attack</color> of Fire allies except the caster for <color=#28d9ed>2 turn(s)</color>.\\nGrants an <color=#28d9ed>extra turn</color> after using the skill.":{
-    "add_buff":["BT_STAT|ST_ATK"]
+  "(Passive Effect) When the caster has a <color=#28d9ed>Barrier</color>, reduces Weakness Gauge damage taken by <color=#28d9ed>30%</color>.\\n(Triggered Effect) When hit by a single-target attack, counterattacks and recovers Weakness Gauge by <color=#28d9ed>1</color>.\\nThe counterattack effect is only activated once every <color=#28d9ed>1 turn</color>.": {
+    "remove_debuff": ["BT_ACTION_GAUGE"]
   },
-  "Attacks 2 enemies.\\nHas a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.":{
-    "add_debuff":["BT_DOT_BURN"]
+  "(Passive Effect)\\nIncreases <color=#28d9ed>Attack and Speed</color> of all allies by <color=#28d9ed>12.5%</color> every turn. (Max 8 stacks)\\n\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>12%</color> when an ally attacks.\\nWhen an ally other than Sofia dies, does not take Weakness Gauge damage, recovers <color=#28d9ed>Health</color> of the remaining allies by <color=#28d9ed>100%</color> and increases <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>100%</color>, but reduces their <color=#28d9ed>Critical Damage</color> by <color=#28d9ed>30%</color>.\\n\\nMinions have special abilities that are stackable and removed upon their deaths.\\n<color=#ffd732>Nightwatch Shieldbearer</color>: Reduces <color=#28d9ed>damage taken</color> by all allies by <color=#28d9ed>10%</color>.\\n<color=#ffd732>Nightwatch Waraxe-Wielder</color>: Reduces <color=#28d9ed>damage taken</color> by Idith and Nightwatch Waraxe-Wielder by <color=#28d9ed>15%</color>.": {
+    "add_buff": ["BT_ACTION_GAUGE"]
   },
-  "(Triggered Effect) Increases <color=#28d9ed>Speed</color> of the caster for <color=#28d9ed>2 turn(s)</color> and gains an <color=#28d9ed>extra turn</color> after killing an enemy. (Excluding enemies killed due to Burned)":{
-    "remove_buff":["SYS_BUFF_ADDITIVE_ATTACK"]
+  "(Passive Effect)\\nReduces <color=#28d9ed>damage taken</color> by all allies by <color=#28d9ed>10%</color>. This effect stacks with skills of the same name and is removed upon the caster's death.": {
+    "remove_buff": ["BT_ACTION_GAUGE"]
   },
-  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Blazing Slash</color>: Used when Enraged ends.\\nAttacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color>on the target for <color=#28d9ed>3 turn(s)</color>. (Applied 3 times)\\nThis attack ignores the target's <color=#28d9ed>Resilience</color> and <color=#28d9ed>Immunity</color>.":{
-    "add_debuff":["BT_DOT_BURN"]
+  "(Passive Effect)\\nReduces <color=#28d9ed>damage taken</color> by <color=#ffd732>Idith</color> and <color=#ffd732>Nightwatch Waraxe-Wielder</color> by <color=#28d9ed>15%</color>. This effect stacks with skills of the same name and is removed upon the caster's death.": {
+    "remove_buff": ["BT_ACTION_GAUGE"]
   },
-  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Exhaust</color>: Used when Enraged ends.\\nAttacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Attack</color> on the target for <color=#28d9ed>3 turn(s)</color> and <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>3 turn(s)</color>. (Applied 3 times)\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.":{
-    "add_debuff":["BT_STAT|ST_ATK","BT_DOT_CURSE"]
+  "Attacks an enemy and gains a <color=#28d9ed>Barrier</color> for <color=#28d9ed>2 turn(s)</color>.": {
+    "remove_debuff": ["BT_STEAL_BUFF"]
   },
-  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Hammer of Eradication</color>: Used when Enraged ends.\\nAttacks all enemies, dealing heavy damage, and grants the caster irremovable <color=#28d9ed>Immunity</color> for <color=#28d9ed>3 turn(s)</color>.":{
-    "add_buff":["BT_IMMUNE_IR"]
+  "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>1 turn(s)</color>.": {
+    "remove_debuff": ["BT_STEAL_BUFF"]
   },
-  "Attacks the enemy.\\nWhen scoring a critical hit, has a <color=#28d9ed>100%</color> chance to activate a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.\\n\\nThis attack always scores a critical hit.":{
-    "remove_buff":["BT_STAT|ST_CRITICAL_RATE"]
+  "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>2 turn(s)</color>. Ignores the target's Resilience.": {
+    "remove_debuff": ["BT_STEAL_BUFF"]
   },
-  "(Passive Effect) At the start of battle, increases Priority by <color=#28d9ed>100%</color>.":{
-    "remove_buff":["BT_STAT|ST_SPEED"],
-    "add_buff":["BT_ACTION_GAUGE"]
+  "(Passive Effect)\\nGrants increased <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle. Also, <color=#28d9ed>steals</color> the target's <color=#28d9ed>buffs</color> when attacking.": {
+    "add_debuff": ["BT_STEAL_BUFF"]
   },
-  "(Passive Effect) Increases <color=#28d9ed>5</color> Weakness Gauge every turn and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color> upon taking <color=#28d9ed>Critical</color> damage.\\n\\nWhen an ally remains alive, reduces <color=#28d9ed>damage taken</color> by <color=#28d9ed>50%</color>. When Dual Attack is activated, inflicts Burned on the target for 2 turns.":{
-    "remove_buff":["BT_CALL_BACKUP"],
-    "add_debuff":["BT_DOT_BURN"]
+  "(Passive Effect)\\nWhen attacking, recovers <color=#ffd732>Snow</color>'s <color=#28d9ed>Health</color> and <color=#28d9ed>Weakness Gauge</color> by <color=#28d9ed>10%</color>.": {
+    "clear_buff": true
   },
-  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>60%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Summons Lisha and Iris. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Darkest Domination</color>: Used when Enraged ends.\\nAttacks all enemies and reduces their <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>. Has a <color=#28d9ed>70%</color> chance to inflict reduced <color=#28d9ed>Defense</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.":{
-    "remove_buff":["BT_STAT|ST_SPEED_IR"]
+  "(Triggered Effect)\\nThe <color=#28d9ed>Agile Response</color> effect is activated every <color=#28d9ed>2 turns</color>.\\nRemoves <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color> and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>15%</color>.": {
+    "remove_buff": ["BT_STEAL_BUFF"]
+  },
+  "(Passive Effect)\\nIncreases Defense by <color=#28d9ed>50%</color> and Counterattack Chance by <color=#28d9ed>30%</color>.": {
+    "add_buff": ["BT_STAT|ST_COUNTER_RATE"]
+  },
+  "Attacks an enemy and increases the <color=#28d9ed>Priority</color> of the ally with the highest Attack by <color=#28d9ed>10%</color>, then grants increased <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.": {
+    "add_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "Increases <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Critical Damage</color> of all allies for <color=#28d9ed>2 turn(s)</color>, then increases the <color=#28d9ed>Attack</color> of Fire allies except the caster for <color=#28d9ed>2 turn(s)</color>.\\nGrants an <color=#28d9ed>extra turn</color> after using the skill.": {
+    "add_buff": ["BT_STAT|ST_ATK"]
+  },
+  "Attacks 2 enemies.\\nHas a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.": {
+    "add_debuff": ["BT_DOT_BURN"]
+  },
+  "(Triggered Effect) Increases <color=#28d9ed>Speed</color> of the caster for <color=#28d9ed>2 turn(s)</color> and gains an <color=#28d9ed>extra turn</color> after killing an enemy. (Excluding enemies killed due to Burned)": {
+    "remove_buff": ["SYS_BUFF_ADDITIVE_ATTACK"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Blazing Slash</color>: Used when Enraged ends.\\nAttacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color>on the target for <color=#28d9ed>3 turn(s)</color>. (Applied 3 times)\\nThis attack ignores the target's <color=#28d9ed>Resilience</color> and <color=#28d9ed>Immunity</color>.": {
+    "add_debuff": ["BT_DOT_BURN"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Exhaust</color>: Used when Enraged ends.\\nAttacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict reduced <color=#28d9ed>Attack</color> on the target for <color=#28d9ed>3 turn(s)</color> and <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>3 turn(s)</color>. (Applied 3 times)\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.": {
+    "add_debuff": ["BT_STAT|ST_ATK", "BT_DOT_CURSE"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>50%</color> of Max Health or lower. Increases Attack and Speed by <color=#28d9ed>15%</color>. This effect lasts until the caster is inflicted with Break. \\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Enraged lasts for 4 turns.\\n\\n<color=#28d9ed>Hammer of Eradication</color>: Used when Enraged ends.\\nAttacks all enemies, dealing heavy damage, and grants the caster irremovable <color=#28d9ed>Immunity</color> for <color=#28d9ed>3 turn(s)</color>.": {
+    "add_buff": ["BT_IMMUNE_IR"]
+  },
+  "Attacks the enemy.\\nWhen scoring a critical hit, has a <color=#28d9ed>100%</color> chance to activate a <color=#28d9ed>Dual Attack</color> from the ally with the highest Attack.\\n\\nThis attack always scores a critical hit.": {
+    "remove_buff": ["BT_STAT|ST_CRITICAL_RATE"]
+  },
+  "(Passive Effect) At the start of battle, increases Priority by <color=#28d9ed>100%</color>.": {
+    "remove_buff": ["BT_STAT|ST_SPEED"],
+    "add_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect) Increases <color=#28d9ed>5</color> Weakness Gauge every turn and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>15%</color> upon taking <color=#28d9ed>Critical</color> damage.\\n\\nWhen an ally remains alive, reduces <color=#28d9ed>damage taken</color> by <color=#28d9ed>50%</color>. When Dual Attack is activated, inflicts Burned on the target for 2 turns.": {
+    "remove_buff": ["BT_CALL_BACKUP"],
+    "add_debuff": ["BT_DOT_BURN"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>60%</color> of Max Health or lower.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns and recovers 30% Weakness Gauge. Summons Lisha and Iris. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Darkest Domination</color>: Used when Enraged ends.\\nAttacks all enemies and reduces their <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>. Has a <color=#28d9ed>70%</color> chance to inflict reduced <color=#28d9ed>Defense</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis attack ignores the target's <color=#28d9ed>Resilience</color>.": {
+    "remove_buff": ["BT_STAT|ST_SPEED_IR"]
+  },
+  "(Passive Effect)\\nWhile Akari remains alive, increases Speed of the caster by <color=#28d9ed>20%</color>.\\nWhile Ame remains alive, reduces damage taken by the caster from single-target attacks by <color=#28d9ed>70%</color>.\\n\\nRecovers Health of all allies by <color=#28d9ed>15%</color> when Akari is defeated.\\nGrants permanent, irremovable increased <color=#28d9ed>Attack</color> on all allies when Ame is defeated.": {
+    "add_buff": ["BT_STAT|ST_ATK_IR"]
+  },
+  "Always attacks the enemy on the left first. Attacks an enemy and summons an Ice Revenant, her underling. Does not summon a new Ice Revenant if one is already present.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Frozen</color>.": {
+    "clear_debuff": true
+  },
+  "Has a <color=#28d9ed>100%</color> chance to dispel <color=#28d9ed>all Buffs</color> from all enemies, then attacks all enemies.\\nDeals greatly increased damage if the target is afflicted with a <color=#28d9ed>debuff</color>.": {
+    "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "(Passive Effect)\nEach turn, reduces enemies' <color=#28d9ed>Speed</color> by <color=#28d9ed>5%</color>. This effect ignores Resilience (stacks up to 20).\n\nAt the start of battle, takes the first turn and greatly reduces damage taken from elements disadvantaged against the caster.": {
+    "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "Attacks an enemy. Enemies defeated by this skill cannot be revived or resurrected.": {
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Grants the caster un-dispellable Attack Up/DMG Reduction for 3 turns, recovers WG 30%, then inflicts <color=#28d9ed>Poisoned</color> on all enemies for <color=#28d9ed>3</color> turns. Berserk lasts 3 turns.\\n<color=#28d9ed>Berserk Ultimate</color>: Used when Berserk ends. Attacks all enemies and <color=#28d9ed>Detonates</color> all <color=#28d9ed>Poison</color> effects on them.": {
+    "add_debuff": ["BT_IMMEDIATELY_POISON"]
+  },
+  "(Triggered Effect) When an ally is hit, counterattacks with <color=#28d9ed>Nirvana's Inferno</color>.\\nBefore attacking, removes <color=#28d9ed>2</color> buff(s) from the target, and reduces Evasion for <color=#28d9ed>1 turn(s)</color>. If the target is <color=#28d9ed>Earth element</color>, ignores their Resilience, and does not miss.": {
+    "add_debuff": ["SYS_BUFF_AVOID_UP"],
+    "remove_debuff": ["BT_STAT|ST_BUFF_RESIST"]
+  },
+  "Increases all allies' <color=#28d9ed>Attack</color>, <color=#28d9ed>Defense</color>, and <color=#28d9ed>Speed</color> at the start of the caster's turn.": {
+    "add_buff": ["BT_STAT|ST_SPEED"],
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "At the start of battle, takes the first turn.": {
+    "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "(Passive Effect)\\nWhen taking a critical hit, fully reduces the cooldown of <color=#28d9ed>Dragon Ruler's Breath</color>, and increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>35%</color>.": {
+    "remove_buff": ["BT_STAT|ST_SPEED_IR", "BT_DAMGE_TAKEN"]
+  },
+  "At the start of battle, grants the caster irremovable <color=#28d9ed>Penetration</color> and <color=#28d9ed>DMG Reduction</color>, and reduces the <color=#28d9ed>Attack</color> of the enemy with the highest Attack by <color=#28d9ed>50%</color>.\\n\\nEach turn, increases the caster's <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>5%</color> (up to 10 stacks).\\nDamage the caster takes from <color=#28d9ed>Cursed</color> and <color=#28d9ed>Fixed Damage</color> cannot exceed <color=#28d9ed>10000</color>.": {
+    "remove_buff": ["BT_STAT|ST_SPEED_IR"],
+    "add_buff": ["BT_DAMGE_TAKEN"]
+  },
+  "At the start of the caster's turn, grants a Barrier to 1 ally for <color=#28d9ed>2 turn(s)</color>.": {
+    "remove_debuff": ["BT_REVERSE_HEAL_BASED_TARGET"]
+  },
+  "Upon entering battle, grants the caster an irremovable <color=#28d9ed>Invulnerability</color> effect.\\n\\nOn the caster's turn, deals <color=#28d9ed>Fixed Damage</color> equal to <color=#28d9ed>10%</color> of the caster's Max Health to all enemies.": {
+    "add_debuff": ["BT_REVERSE_HEAL_BASED_TARGET"]
   }
 }
-

@@ -28,7 +28,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102009",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적 전체를 공격하며 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击全体敌人,并造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,10 @@
         "kr": "적 전체를 공격하며 <color=#28d9ed>화상</color>이 있을 경우 한번에 폭발시켜 피해를 입힙니다.",
         "zh": "攻击全体敌人,若有<color=#28d9ed>烧伤</color>效果,则一次全部爆炸并造成伤害。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_IMMEDIATELY_BURN"
+      ]
     },
     {
       "name": {

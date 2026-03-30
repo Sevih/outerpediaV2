@@ -33,7 +33,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102039",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,11 @@
         "kr": "항상 좌측의 적을 먼저 공격합니다. 공격 전 대상의 강화 효과를 모두 해제한 뒤 공격하고 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.(효과 저항 무시)",
         "zh": "总是先攻击最左侧的敌人。攻击前先解除目标的全部<color=#28d9ed>强化效果</color>,随后进行攻击并使其陷入<color=#28d9ed>眩晕</color>状态,持续<color=#28d9ed>2回合</color>(无视效果抵抗)。"
       },
-      "icon": "Skill_First_4076009"
+      "icon": "Skill_First_4076009",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_STUN"
+      ]
     },
     {
       "name": {
@@ -70,7 +74,10 @@
         "kr": "적 전체를 공격합니다. 치명 공격으로 적중하면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击全体敌人,若以暴击命中,则获得\\n<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "Skill_Second_4076009"
+      "icon": "Skill_Second_4076009",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     },
     {
       "name": {
@@ -86,7 +93,10 @@
         "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
         "zh": "攻击全体敌人。攻击后,<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_Ultimate_4076009"
+      "icon": "Skill_Ultimate_4076009",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     },
     {
       "name": {
@@ -103,7 +113,11 @@
         "zh": "(被动效果)\\n使火/水/土属性敌人的<color=#28d9ed>效果命中</color>降低。敌人使用非攻击类技能时,使<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>5回合</color>。这些效果不会被解除。\\n\\n攻击后,对敌人造成随机弱化效果。这些弱化效果无视目标的免疫强化效果。"
       },
       "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE_IR"
+      ],
       "debuff": [
+        "BT_STAT|ST_BUFF_CHANCE_IR",
         "BT_RANDOM"
       ]
     },
@@ -121,7 +135,10 @@
         "kr": "(패시브 효과)\\n자신에게 적용되는 <color=#28d9ed>능력치 증가</color> 효과가 <color=#28d9ed>100%</color> 증가합니다.\\n\\n피격 시 약화 효과가 없다면  WG 피해를 받지 않습니다.\\n적에게 치명 공격을 적중시키면 WG를 <color=#28d9ed>3</color> 회복합니다.\\n\\n<color=#28d9ed>화속성, 수속성, 지속성</color> 적에게 받는 피해가 감소하고, <color=#28d9ed>명속성 및 암속성</color> 적에게 받는 피해가 증가합니다.",
         "zh": "(被动效果)\\n使自身附带的<color=#28d9ed>能力值提升</color>效果提升<color=#28d9ed>100%</color>。\\n\\n受到攻击时,若未附带弱化效果,则不会受到WG伤害。\\n若用暴击命中敌人,则WG恢复<color=#28d9ed>3</color>。\\n\\n受到来自<color=#28d9ed>火属性、水属性、土属性</color>敌人的伤害降低,并使受到来自<color=#28d9ed>光属性、暗属性</color>敌人的伤害提升。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_STAT_BUFF_ENHANCE"
+      ]
     },
     {
       "name": {
@@ -137,23 +154,14 @@
         "kr": "최대 체력의 <color=#28d9ed>70%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 받는 피해 감소/절망의 하모니 효과를 4턴 동안 부여합니다. 광폭화는 4턴 동안 유지됩니다.\\n\\n<color=#28d9ed>월야의 녹턴</color> : 광폭화 종료 시 사용.\\n적 전체를 사망시킵니다.",
         "zh": "当自身最大生命值≤<color=#28d9ed>70%</color>时,进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化</color>:为自身赋予不可解除的伤害降低与「绝望的和声」,持续4回合。狂暴化持续4回合。\\n\\n<color=#28d9ed>月夜夜想曲</color>:在狂暴化结束时发动。\\n使全体敌人立即死亡。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "IG_Buff_Effect_4076009_Interruption",
+        "BT_DAMGE_TAKEN"
+      ],
+      "debuff": [
+        "BT_KILL_UNDER_HP_RATE"
+      ]
     }
   ]
 }

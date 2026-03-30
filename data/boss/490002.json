@@ -28,7 +28,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102002",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,11 @@
         "kr": "적 전체를 공격하여 <color=#28d9ed>공격력 감소</color> 및 <color=#28d9ed>저주</color>를 <color=#28d9ed>2턴</color>동안 부여합니다.",
         "zh": "攻击全体敌人,造成<color=#28d9ed>攻击力降低</color>和<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Dark"
+      "icon": "MT_Attack_Magic_1_Dark",
+      "debuff": [
+        "BT_DOT_CURSE",
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {

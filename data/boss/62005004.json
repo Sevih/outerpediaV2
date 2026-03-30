@@ -65,7 +65,10 @@
         "kr": "(발동 효과) 아군이 피격 시 <color=#28d9ed>피안의 겁화</color>로 반격 합니다.\\n 공격 전 대상의 강화 효과를 <color=#28d9ed>2개</color> 해제하고, <color=#28d9ed>2턴</color> 동안 회피를 감소시킵니다. 대상이 <color=#28d9ed>지속성</color>이라면 대상의 효과 저항을 무시하고, 빗나감이 발생하지 않습니다.",
         "zh": "(触发效果)友军受到攻击时,用<color=#28d9ed>血液轮回</color>反击。\\n攻击前解除目标的<color=#28d9ed>2个</color>强化效果,并使回避降低,持续<color=#28d9ed>2回合</color>。若目标为<color=#28d9ed>土属性</color>,则无视目标的效果抵抗,且不会触发闪避。"
       },
-      "icon": "Skill_Second_2000080"
+      "icon": "Skill_Second_2000080",
+      "debuff": [
+        "SYS_BUFF_AVOID_UP"
+      ]
     },
     {
       "name": {
