@@ -28,7 +28,7 @@
       "zh": "飞天之塔 - 困难"
     },
     "area_id": {
-      "en": "40102022",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "아군 전체의 필살기 쿨타임을 초기화 시킵니다.",
         "zh": "重置全体友军的必杀技冷却时间。"
       },
-      "icon": "MT_Attack_Smash_1_Fire"
+      "icon": "MT_Attack_Smash_1_Fire",
+      "buff": [
+        "BT_COOL3_CHARGE"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,11 @@
         "kr": "(패시브 효과)\\n전투 입장 시, 아군 전체에게 해제되지 않는 <color=#28d9ed>무적</color>과 <color=#28d9ed>면역</color>을 <color=#28d9ed>3턴</color> 동안 부여합니다.",
         "zh": "(被动效果)\\n战斗开始时,使全体友军获得无法解除的<color=#28d9ed>无敌</color>效果和<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_INVINCIBLE_IR",
+        "BT_IMMUNE_IR"
+      ]
     },
     {
       "name": {
@@ -81,7 +88,12 @@
         "kr": "(패시브 효과)\\n사망 시 생존한 아군에게 <color=#28d9ed>공격력/방어력 감소</color>를 <color=#28d9ed>9턴</color> 동안 부여하며, 피격 시 받는 피해량을 큰 폭으로 증가시키고 해제 불가능한 <color=#28d9ed>회복 불가</color>를 영구적으로 부여합니다.",
         "zh": "(被动效果)\\n死亡时,使存活友军的<color=#28d9ed>攻击力/防御力降低</color>,持续<color=#28d9ed>9回合</color>,且受到攻击时,使受到的伤害量大幅提升,使其永久获得无法解除的<color=#28d9ed>无法恢复</color>效果。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "debuff": [
+        "BT_STAT|ST_ATK",
+        "BT_STAT|ST_DEF",
+        "BT_SEALED_RECEIVE_HEAL_IR"
+      ]
     }
   ]
 }
