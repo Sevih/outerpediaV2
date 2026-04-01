@@ -426,6 +426,24 @@ function buildMonsterToDungeons(gd: GameData): Map<string, DungeonLink[]> {
     }
   }
 
+  // Fourth pass: orphan monsters not in any spawn — inherit from a sibling with same FaceIconID
+  const iconToLinked = new Map<string, string>();
+  for (const m of gd.monsters) {
+    const fid = m.FaceIconID;
+    if (fid && result.has(m.ID) && !iconToLinked.has(fid)) {
+      iconToLinked.set(fid, m.ID);
+    }
+  }
+  for (const m of gd.monsters) {
+    if (result.has(m.ID)) continue;
+    const fid = m.FaceIconID;
+    if (!fid) continue;
+    const sibling = iconToLinked.get(fid);
+    if (!sibling) continue;
+    const links = result.get(sibling);
+    if (links?.length) result.set(m.ID, [...links]);
+  }
+
   return result;
 }
 
@@ -1105,16 +1123,24 @@ export async function GET(req: NextRequest) {
         for (const entry of batchResults) {
           if (!entry) continue;
           const loc = entry.data.location as Record<string, unknown> | null;
-          const modeEn = ((loc?.mode as Record<string, string>)?.en ?? '');
-          const dungeonEn = ((loc?.dungeon as Record<string, string>)?.en ?? '');
+          let modeEn = ((loc?.mode as Record<string, string>)?.en ?? '');
+          let dungeonEn = ((loc?.dungeon as Record<string, string>)?.en ?? '');
+
+          // If no location in existing, check extraction
+          if (!modeEn && !dungeonEn) {
+            const eid = String(entry.data.id ?? entry.file.replace(/\.json$/, '')).split('-')[0].split('S')[0];
+            const dungeons = monsterToDungeons.get(eid) ?? [];
+            if (dungeons.length > 0) {
+              modeEn = dungeons[0].modeLabel?.en ?? dungeons[0].mode;
+              dungeonEn = dungeons[0].name?.en ?? '';
+            }
+          }
 
           if (filterMode) {
-            // Mode filter: compute refined mode and skip non-matching files
             if (!modeEn && !dungeonEn) continue;
             const refined = refineMode(modeEn, dungeonEn, gd.textSystemMap);
             if (refined !== filterMode) continue;
           } else {
-            // Default: skip empty-location and tower/skyward bosses
             if (!modeEn && !dungeonEn) { ok++; continue; }
             if (modeEn.includes('Tower') || modeEn.includes('Skyward') || dungeonEn.includes('Tower') || dungeonEn.includes('Skyward')) { ok++; continue; }
           }
@@ -1150,19 +1176,32 @@ export async function GET(req: NextRequest) {
 
         for (const entry of batchResults) {
           if (!entry) continue;
-          const loc = entry.data.location as Record<string, unknown> | null;
-          const modeEn = ((loc?.mode as Record<string, string>)?.en ?? '');
-          const dungeonEn = ((loc?.dungeon as Record<string, string>)?.en ?? '');
+          const rawId = String(entry.data.id ?? entry.file.replace(/\.json$/, ''));
+          const id = rawId.split('-')[0].split('S')[0];
 
-          // Skip empty location
-          if (!modeEn && !dungeonEn) continue;
+          // Determine mode: use existing location, fallback to extracted location
+          const loc = entry.data.location as Record<string, unknown> | null;
+          let modeEn = ((loc?.mode as Record<string, string>)?.en ?? '');
+          let dungeonEn = ((loc?.dungeon as Record<string, string>)?.en ?? '');
+
+          // If no location in existing, check if extraction would find one
+          if (!modeEn && !dungeonEn) {
+            const monster = monsterById.get(id);
+            if (monster) {
+              const dungeons = monsterToDungeons.get(id) ?? [];
+              if (dungeons.length > 0) {
+                const d = dungeons[0];
+                modeEn = d.modeLabel?.en ?? d.mode;
+                dungeonEn = d.name?.en ?? '';
+              }
+            }
+            if (!modeEn && !dungeonEn) continue;
+          }
 
           const mode = refineMode(modeEn, dungeonEn, gd.textSystemMap);
           if (!byMode[mode]) byMode[mode] = { total: 0, ok: 0, withDiffs: 0, diffs: [] };
           byMode[mode].total++;
 
-          const rawId = String(entry.data.id ?? entry.file.replace(/\.json$/, ''));
-          const id = rawId.split('-')[0].split('S')[0];
           const monster = monsterById.get(id);
           if (!monster) { byMode[mode].withDiffs++; byMode[mode].diffs.push({ file: entry.file, name: rawId, notInGame: true }); continue; }
 
