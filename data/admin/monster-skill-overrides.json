@@ -463,5 +463,21 @@
   },
   "Upon entering battle, grants the caster an irremovable <color=#28d9ed>Invulnerability</color> effect.\\n\\nOn the caster's turn, deals <color=#28d9ed>Fixed Damage</color> equal to <color=#28d9ed>10%</color> of the caster's Max Health to all enemies.": {
     "add_debuff": ["BT_REVERSE_HEAL_BASED_TARGET"]
+  },
+  "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 8, <color=#28d9ed>counterattacks</color> all enemies.\\nAfter counterattacking, has a <color=#28d9ed>100%</color> chance to inflict irremovable <color=#28d9ed>reduced Attack/Defense</color> and <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>9 turn(s)</color>.\\nThis attack ignores the target's Resilience and Immunity and damage dealt increases inversely proportional to the number of targets.":{
+    "remove_debuff": ["BT_SEALED_RESURRECTION"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>70%</color> of Max Health or lower and attacks all enemies.\\nThis attack reduces all enemies' Action Points and the enemy team's Chain Points by 100 each.\\nThen has a <color=#28d9ed>100%</color> chance to grant a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>2 turn(s)</color>. Barrier cannot be removed and the amount increases proportional to the caster's <color=#28d9ed>Attack</color>.\\nIf this attack kills the enemy, the caster gains an extra turn.":{
+    "add_debuff": ["BT_CP_CHARGE"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> when Health drops to <color=#28d9ed>30%</color> of Max Health or lower and attacks all enemies\\nThis attack reduces all enemies' Action Points and the enemy team's Chain Points by 100 each.\\nThen has a <color=#28d9ed>100%</color> chance to grant a <color=#28d9ed>Barrier</color> to the caster for <color=#28d9ed>2 turn(s)</color>. Barrier cannot be removed and the amount increases proportional to the caster's <color=#28d9ed>Attack</color>.\\nIf this attack kills the enemy, the caster gains an extra turn.":{
+    "add_debuff": ["BT_CP_CHARGE"]
+  },
+  "Attacks all enemies and disappears after reducing the enemy team's <color=#28d9ed>Chain Points/Action Points</color> by <color=#28d9ed>1000/100</color> respectively.":{
+    "add_debuff": ["BT_CP_CHARGE"]
+  },
+  "(Passive Effect) Increases Priority by <color=#28d9ed>100%</color> at the start of battle.\\nIncreases damage dealt to targets inflicted with <color=#28d9ed>debuffs</color>.\\nReduces the enemy team's <color=#28d9ed>Chain Points</color> by <color=#28d9ed>50</color> after using a skill.":{
+        "remove_buff": ["BT_STAT|ST_SPEED"],
+    "add_buff": ["BT_ACTION_GAUGE"]
   }
 }

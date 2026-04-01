@@ -16,18 +16,23 @@
   "StatBuffImmune": "BT_AGGRO",
   "location": {
     "dungeon": {
-      "en": "",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "Skyward Tower 12F",
+      "jp": "飛天の塔12階",
+      "kr": "비천의 탑 12층",
+      "zh": "飞天之塔12层"
     },
     "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
       "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
-    },
-    "area_id": null
+    }
   },
   "skills": [
     {
@@ -44,7 +49,10 @@
         "kr": "<color=#28d9ed>50%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color> 상태로 만듭니다.",
         "zh": "有<color=#28d9ed>50%</color>的几率使目标陷入<color=#28d9ed>冰冻</color>状态,持续\\n<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Water"
+      "icon": "MT_Attack_Magic_1_Water",
+      "debuff": [
+        "BT_FREEZE"
+      ]
     },
     {
       "name": {

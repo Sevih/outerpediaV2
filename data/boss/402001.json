@@ -21,18 +21,23 @@
   "StatBuffImmune": "ST_DEF",
   "location": {
     "dungeon": {
-      "en": "",
-      "jp": "",
-      "kr": "",
-      "zh": ""
+      "en": "Skyward Tower: Hard 20F",
+      "jp": "飛天の塔【ハード】20階",
+      "kr": "비천의 탑 [하드] 20층",
+      "zh": "飞天之塔【困难】第20层"
     },
     "mode": {
+      "en": "Skyward Tower - Hard",
+      "jp": "飛天の塔 ハード",
+      "kr": "비천의 탑 하드",
+      "zh": "飞天之塔 - 困难"
+    },
+    "area_id": {
       "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
-    },
-    "area_id": null
+    }
   },
   "skills": [
     {
@@ -67,6 +72,7 @@
       },
       "icon": "Skill_Ultimate_4076002",
       "debuff": [
+        "BT_REMOVE_BUFF",
         "BT_SEALED_RESURRECTION"
       ]
     },
@@ -84,7 +90,10 @@
         "kr": "(패시브 효과)\\n자신이 보유한 약화 효과가 많을수록 공격 시 피해량이 증가하지만, 공격 대상이 실드를 보유하고 있을 때 공격 시 피해량이 감소합니다.\\n\\n수속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n수속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
         "zh": "(被动效果)\\n自身附带的弱化效果越多,则攻击时伤害量越高;若攻击目标持有护盾效果,则攻击时伤害量降低。\\n\\n对非水属性敌人造成的伤害提升,且所受伤害降低。对水属性敌人造成的伤害降低,且所受伤害提升。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_DMG_OWNER_DEBUFF"
+      ]
     },
     {
       "name": {
@@ -100,7 +109,15 @@
         "kr": "(발동 효과) 화염기사 메테우스는 피격 시 <color=#28d9ed>고유 자원 : 맹렬한 불씨</color>를 1개 획득합니다.\\n피격 후 <color=#28d9ed>고유 자원 : 맹렬한 불씨</color> 보유 수량이 8개라면, 적 전체에게 <color=#28d9ed>반격</color>을 사용합니다.\\n반격 사용 후 적 전체에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>9턴</color> 동안 해제 불가능한 <color=#28d9ed>공격력/방어력 감소</color>와 <color=#28d9ed>강화 불가</color>를 겁니다.\\n해당 공격은 대상의 효과 저항과 면역을 무시하며 대상의 수가 적을수록 피해가 증가합니다.",
         "zh": "(触发效果)火焰骑士梅修斯受到攻击时,获得1个<color=#28d9ed>固有资源:烈火</color>。\\n受到攻击后,若<color=#28d9ed>固有资源:烈火</color>持有数量为8个,则对全体敌人使用<color=#28d9ed>反击</color>。\\n使用反击后,有<color=#28d9ed>100%</color>概率对全体敌人造成<color=#28d9ed>9回合</color>内无法解除的<color=#28d9ed>攻击力/防御力降低</color>和<color=#28d9ed>无法强化</color>效果。\\n该攻击无视目标的效果抵抗和免疫,目标数量越少,则该技能的伤害越高。"
       },
-      "icon": "Skill_Second_4076002"
+      "icon": "Skill_Second_4076002",
+      "buff": [
+        "SYS_BUFF_COUNTER"
+      ],
+      "debuff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_STAT|ST_DEF_IR",
+        "BT_SEALED_IR"
+      ]
     }
   ]
 }

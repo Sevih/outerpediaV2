@@ -495,6 +495,19 @@
     "icon": "CM_Stat_Icon_SHIELD"
   },
   {
+    "name": "BT_SHIELD_BASED_CASTER_IR",
+    "category": "supporting",
+    "label": "Barrier",
+    "label_jp": "シールド",
+    "label_kr": "실드",
+    "label_zh": "护盾",
+    "description": "Creates a barrier that absorbs damage when hit. (Irremovable)",
+    "description_jp": "ダメージを受ける前に、\\nシールドが付与される。\\n(解除不可)",
+    "description_kr": "피격 시 체력 대신 차감되는 실드를 생성합니다. (해제 불가)",
+    "description_zh": "受击时,生成护盾代替生命值减少。\\n(无法解除)",
+    "icon": "IG_Buff_Effect_Shield_Interruption"
+  },
+  {
     "name": "BT_SHIELD_BASED_TARGET",
     "category": "supporting",
     "group": "BT_SHIELD_BASED_CASTER",
