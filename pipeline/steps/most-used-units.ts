@@ -184,7 +184,7 @@ async function extractTowerIds(): Promise<Map<string, string[]>> {
   const result = new Map<string, string[]>();
   if (!await exists(TOWER_DIR)) return result;
 
-  const files = (await readdir(TOWER_DIR)).filter(f => f.endsWith('.json') && f !== 'restrictions.json');
+  const files = (await readdir(TOWER_DIR)).filter(f => f.endsWith('.json') && f !== 'restrictions.json' && f !== 'missing-monsters.json');
 
   for (const file of files) {
     const towerName = file.replace('.json', '') + '-tower';

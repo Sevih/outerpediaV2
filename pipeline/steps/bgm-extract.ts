@@ -292,7 +292,7 @@ export async function run() {
     }
 
     const result: MappingEntry[] = [];
-    for (const filename of [...allFiles].sort()) {
+    for (const filename of [...allFiles].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))) {
       const old = oldMapping.get(filename.toLowerCase());
       const name = jukeboxMapping[filename] ?? old?.name ?? formatFilenameAsName(filename);
       const entry: MappingEntry = { file: filename, name };
