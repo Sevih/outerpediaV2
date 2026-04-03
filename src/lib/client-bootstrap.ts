@@ -8,7 +8,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-const template = readFileSync(join(process.cwd(), 'src/lib/client-bootstrap.inline.js'), 'utf-8');
+const template = readFileSync(join(process.cwd(), 'src/lib/client-bootstrap.inline.js'), 'utf-8').replace(/\r\n/g, '\n');
 
 export function getClientBootstrapScript(appVersion: string): string {
   return template.replace('__APP_VERSION__', appVersion);
