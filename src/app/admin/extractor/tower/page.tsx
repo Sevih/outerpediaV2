@@ -65,6 +65,9 @@ export default function TowerExtractorPage() {
         return { ...result, status: 'error', error: saveData.error ?? 'Save failed' };
       }
 
+      // Remove from missing-monsters.json
+      await fetch(`/api/admin/extractor/tower/missing?id=${monster.id}`, { method: 'DELETE' });
+
       return { ...result, status: 'done' };
     } catch (e) {
       return { id: monster.id, status: 'error', error: e instanceof Error ? e.message : 'Unknown error' };
@@ -84,6 +87,9 @@ export default function TowerExtractorPage() {
       const result = await extractAndSave(monster);
 
       setResults(prev => new Map(prev).set(monster.id, result));
+      if (result.status === 'done') {
+        setMissing(prev => prev.filter(m => m.id !== monster.id));
+      }
     }
     setRunning(false);
   }, [filtered, results, extractAndSave]);
@@ -92,6 +98,9 @@ export default function TowerExtractorPage() {
     setResults(prev => new Map(prev).set(monster.id, { id: monster.id, status: 'extracting' }));
     const result = await extractAndSave(monster);
     setResults(prev => new Map(prev).set(monster.id, result));
+    if (result.status === 'done') {
+      setMissing(prev => prev.filter(m => m.id !== monster.id));
+    }
   }, [extractAndSave]);
 
   const doneCount = Array.from(results.values()).filter(r => r.status === 'done').length;
