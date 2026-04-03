@@ -1,0 +1,98 @@
+{
+  "id": "406200299",
+  "Name": {
+    "en": "Avian Demibeast of Iron Wings",
+    "jp": "飛行型獣人・鋼の翼",
+    "kr": "비행형 수인 강철날개",
+    "zh": "钢铁羽翼飞行兽人"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Dark",
+  "level": 100,
+  "icons": "4062002",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 92F",
+      "jp": "飛天の塔92階",
+      "kr": "비천의 탑 92층",
+      "zh": "飞天之塔92层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Steel Wing",
+        "jp": "スチールウィング",
+        "kr": "스틸 윙",
+        "zh": "钢铁之翼"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "zh": "攻击敌人,并使自身的<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire",
+      "buff": [
+        "BT_STAT|ST_SPEED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Swift Wing",
+        "jp": "スイフトウィング",
+        "kr": "스위피트 윙",
+        "zh": "敏捷之翼"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy.\\nIncreases the caster's <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与える。<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。",
+        "kr": "적을 공격합니다. <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.",
+        "zh": "攻击敌人。使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Icarus",
+        "jp": "イカロス",
+        "kr": "이카로스",
+        "zh": "伊卡洛斯"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\n<color=#ffd732>Upon death, grants 50 Action Points and 4 Chain Points for each enemy.</color>\\n\\nHas a <color=#28d9ed>10%</color> chance to gain an <color=#28d9ed>extra turn</color> at the end of a turn.",
+        "jp": "(パッシブ効果)\\n<color=#ffd732>倒れた時、敵全体にAPを50、CPを4獲得させる。</color>\\n\\nターン終了時、<color=#28d9ed>10%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
+        "kr": "(패시브 효과)\\n<color=#ffd732>사망 시 적 한 명당 AP 50, CP 4 씩 회복시킵니다.</color>\\n\\n턴 종료 시 <color=#28d9ed>10%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "zh": "(被动效果)\\n<color=#ffd732>死亡时,使每个敌人的AP恢复50、CP恢复4。</color>\\n\\n回合结束时,有<color=#28d9ed>10%</color>的几率获得<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_ADDITIVE_TURN",
+        "BT_CP_CHARGE",
+        "BT_AP_CHARGE"
+      ]
+    }
+  ]
+}

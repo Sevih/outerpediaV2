@@ -1,0 +1,92 @@
+{
+  "id": "400203199",
+  "Name": {
+    "en": "Demibeast Brigand Katar-Wielder",
+    "jp": "獣人山賊ジャマダハル",
+    "kr": "수인산적 카타르",
+    "zh": "双刃手兽人山贼"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Dark",
+  "level": 100,
+  "icons": "4002031",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 94F",
+      "jp": "飛天の塔94階",
+      "kr": "비천의 탑 94층",
+      "zh": "飞天之塔94层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Katar Attack",
+        "jp": "カタールアタック",
+        "kr": "카타르 어택",
+        "zh": "黏液攻击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Swift Katar",
+        "jp": "スイフトカタール",
+        "kr": "스위프트 카타르",
+        "zh": "迅捷黏液"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Neither Human Nor Beast",
+        "jp": "人でも獣でもない",
+        "kr": "사람도 짐승도 아닌",
+        "zh": "非人非兽"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\n<color=#ffd732>Upon death, grants 50 Action Points and 4 Chain Points for each enemy.</color>\\n\\nIncreases <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>2 turn(s)</color> at the start of battle.",
+        "jp": "(パッシブ効果)\\n<color=#ffd732>倒れた時、敵全体にAPを50、CPを4獲得させる。</color>\\n\\n戦闘開始時<color=#28d9ed>会心率</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+        "kr": "(패시브 효과)\\n<color=#ffd732>사망 시 적 한 명당 AP 50, CP 4 씩 회복시킵니다.</color>\\n\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
+        "zh": "(被动效果)\\n<color=#ffd732>死亡时,使每个敌人的AP恢复50、CP恢复4。</color>\\n\\n战斗开始时,使<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_CP_CHARGE",
+        "BT_AP_CHARGE"
+      ]
+    }
+  ]
+}

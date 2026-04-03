@@ -1,0 +1,95 @@
+{
+  "id": "400204196",
+  "Name": {
+    "en": "Magnolia Guard Mage",
+    "jp": "マグノリアの魔法使い〈防〉",
+    "kr": "매그놀리아 마법사 가드",
+    "zh": "麦格诺里亚防御魔法师"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Water",
+  "level": 86,
+  "icons": "4002041",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 67F",
+      "jp": "飛天の塔67階",
+      "kr": "비천의 탑 67층",
+      "zh": "飞天之塔67层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Barrier Push",
+        "jp": "バリアプッシュ",
+        "kr": "배리어 푸시",
+        "zh": "势不可挡"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Defense</color>.",
+        "jp": "敵単体にダメージを与える。このスキルは、自分の<color=#28d9ed>防御力</color>が高いほどダメージがUPする。",
+        "kr": "적을 공격합니다. 이 스킬은 자신의 <color=#28d9ed>방어력</color>이 높을수록 피해가 증가합니다.",
+        "zh": "攻击敌人。自身<color=#28d9ed>防御力</color>越高,则该技能的伤害越高。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire"
+    },
+    {
+      "name": {
+        "en": "All-range Barrier",
+        "jp": "オールレンジバリア",
+        "kr": "올레인지 배리어",
+        "zh": "无懈可击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Increases all allies' <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "zh": "使全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Excellent Student",
+        "jp": "成績優秀者",
+        "kr": "성적 우수자",
+        "zh": "成绩优异者"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\n<color=#ffd732>Upon death, restores AP 50 and CP 4 per enemy.</color>\\n\\nAt the start of battle, increases <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>2</color> turns.",
+        "jp": "(パッシブ効果)\\n<color=#ffd732>倒れた時、敵1体につきAP 50、CP 4を回復する。</color>\\n\\n戦闘開始時、<color=#28d9ed>2</color>ターンの間<color=#28d9ed>会心ダメージ</color>がUPする。",
+        "kr": "(패시브 효과)\\n<color=#ffd732>사망 시 적 한 명당 AP 50, CP 4 씩 회복시킵니다.</color>\\n\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>치명 피해</color>가 증가합니다.",
+        "zh": "(被动效果)\\n<color=#ffd732>死亡时,每名敌人恢复AP 50、CP 4。</color>\\n\\n战斗开始时,在<color=#28d9ed>2</color>回合内提高<color=#28d9ed>暴击伤害</color>。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "BT_CP_CHARGE",
+        "BT_AP_CHARGE"
+      ]
+    }
+  ]
+}

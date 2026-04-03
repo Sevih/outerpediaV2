@@ -1,0 +1,55 @@
+{
+  "id": "401103292",
+  "Name": {
+    "en": "Ratman Hunter",
+    "jp": "獲物を狙うラットマン",
+    "kr": "랫맨 헌터",
+    "zh": "猎手鼠人"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 46,
+  "icons": "4011032",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 27F",
+      "jp": "飛天の塔27階",
+      "kr": "비천의 탑 27층",
+      "zh": "飞天之塔27层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Plague Slice",
+        "jp": "疫病斬り",
+        "kr": "역병 가르기",
+        "zh": "瘟疫劈斩"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nDeals increased damage if the target is inflicted with <color=#28d9ed>Poisoned</color>.",
+        "jp": "敵単体にダメージを与える。\\n対象が<color=#28d9ed>中毒</color>状態の場合、ダメージがUPする。",
+        "kr": "적을 공격합니다.\\n대상이 <color=#28d9ed>중독</color> 상태라면 피해량이 증가합니다.",
+        "zh": "攻击敌人。\\n若目标处于<color=#28d9ed>中毒</color>状态,则使伤害量提升。"
+      },
+      "icon": "MT_Attack_Claw_1_Fire"
+    }
+  ]
+}

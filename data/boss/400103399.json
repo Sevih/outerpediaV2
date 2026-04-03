@@ -1,0 +1,55 @@
+{
+  "id": "400103399",
+  "Name": {
+    "en": "Demibeast Brigand Chain-Sickle Wielder",
+    "jp": "獣人山賊シックル",
+    "kr": "수인산적 사슬낫",
+    "zh": "镰刀手兽人山贼"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 100,
+  "icons": "4001033",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 93F",
+      "jp": "飛天の塔93階",
+      "kr": "비천의 탑 93층",
+      "zh": "飞天之塔93层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Sinister Slash",
+        "jp": "バッドスラッシュ",
+        "kr": "배드 슬래쉬",
+        "zh": "绝境劈斩"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis skill deals increased <color=#28d9ed>Critical Damage</color>.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルで<color=#28d9ed>会心</color>が発生した場合、ダメージが大幅にUPする。",
+        "kr": "적을 공격합니다.\\n이 스킬은 더 높은 <color=#28d9ed>치명 피해</color>를 가집니다.",
+        "zh": "攻击敌人。\\n该技能<color=#28d9ed>暴击伤害</color>较高。"
+      },
+      "icon": "MT_Attack_Spear_1_Fire"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "406100499",
+  "Name": {
+    "en": "Avian Demibeast of Gusting Winds",
+    "jp": "飛行型獣人・竜巻き",
+    "kr": "비행형 수인 회오리",
+    "zh": "旋风飞行兽人"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 100,
+  "icons": "4061004",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 94F",
+      "jp": "飛天の塔94階",
+      "kr": "비천의 탑 94층",
+      "zh": "飞天之塔94层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Wind Ring",
+        "jp": "ウィンドリング",
+        "kr": "윈드 링",
+        "zh": "飓风领域"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases own <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1</color> turns.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>1</color>ターンの間、自分の<color=#28d9ed>会心率</color>をUPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "zh": "攻击敌人,并在<color=#28d9ed>1</color>回合内提高自身<color=#28d9ed>暴击率</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "401101190",
+  "Name": {
+    "en": "Reptil Sword-Wielder",
+    "jp": "ソード・レプタイル",
+    "kr": "렙틸 소드",
+    "zh": "剑士蜥蜴人"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Earth",
+  "level": 23,
+  "icons": "4011011",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 4F",
+      "jp": "飛天の塔4階",
+      "kr": "비천의 탑 4층",
+      "zh": "飞天之塔4层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Slice",
+        "jp": "切り裂き",
+        "kr": "가르기",
+        "zh": "劈裂"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "zh": "攻击敌人。\\n发动该技能时,穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    }
+  ]
+}

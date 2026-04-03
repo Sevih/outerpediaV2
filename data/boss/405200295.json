@@ -1,0 +1,98 @@
+{
+  "id": "405200295",
+  "Name": {
+    "en": "Ghost Hexxer",
+    "jp": "カースゴースト",
+    "kr": "유령 커스",
+    "zh": "诅咒幽灵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 72,
+  "icons": "4052002",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 53F",
+      "jp": "飛天の塔53階",
+      "kr": "비천의 탑 53층",
+      "zh": "飞天之塔53层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Vengeance",
+        "jp": "怨恨",
+        "kr": "원한",
+        "zh": "怨恨"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_CURSE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Contagious Death",
+        "jp": "死の転移",
+        "kr": "죽음의 전이",
+        "zh": "死亡转移"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Cursed</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
+        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_CURSE"
+      ]
+    },
+    {
+      "name": {
+        "en": "The Shadow Behind",
+        "jp": "背後の影",
+        "kr": "배후의 그림자",
+        "zh": "身后的暗影"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\n<color=#ffd732>Upon death, restores AP 50 and CP 4 per enemy.</color>\\n\\nAt the start of battle, increases <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>2</color> turns.",
+        "jp": "(パッシブ効果)\\n<color=#ffd732>倒れた時、敵1体につきAP 50、CP 4を回復する。</color>\\n\\n戦闘開始時、<color=#28d9ed>2</color>ターンの間<color=#28d9ed>効果命中</color>がUPする。",
+        "kr": "(패시브 효과)\\n<color=#ffd732>사망 시 적 한 명당 AP 50, CP 4 씩 회복시킵니다.</color>\\n\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>효과 적중</color>이 증가합니다.",
+        "zh": "(被动效果)\\n<color=#ffd732>死亡时,每名敌人恢复AP 50、CP 4。</color>\\n\\n战斗开始时,在<color=#28d9ed>2</color>回合内提高<color=#28d9ed>效果命中</color>。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_STAT|ST_BUFF_CHANCE",
+        "BT_CP_CHARGE",
+        "BT_AP_CHARGE"
+      ]
+    }
+  ]
+}
