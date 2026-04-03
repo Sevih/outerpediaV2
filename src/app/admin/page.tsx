@@ -108,92 +108,70 @@ export default function AdminDashboard() {
         )}
       </div>
 
-      {/* Diff checks grid */}
-      <section>
-        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-zinc-500">Extractor Status</h2>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <table className="w-full text-sm">
+        <thead className="text-left text-zinc-500 border-b border-zinc-800">
+          <tr>
+            <th className="py-2 pr-3 font-medium">Category</th>
+            <th className="py-2 pr-3 font-medium w-16 text-right">Total</th>
+            <th className="py-2 pr-3 font-medium w-14 text-right">OK</th>
+            <th className="py-2 pr-3 font-medium w-14 text-right">Diffs</th>
+            <th className="py-2 pr-3 font-medium w-14 text-right">New</th>
+            <th className="py-2 font-medium w-16 text-right">Status</th>
+          </tr>
+        </thead>
+        <tbody>
           {checks.map(check => (
-            <Link
-              key={check.api}
-              href={check.href as never}
-              className="rounded-lg border border-zinc-800 p-4 transition-colors hover:border-zinc-600 hover:bg-zinc-900"
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="font-semibold">{check.label}</h3>
-                <StatusBadge check={check} />
-              </div>
-
-              {check.status === 'done' && check.result && (
-                <div className="mt-2 flex items-center gap-3 text-xs">
-                  <span className="text-zinc-500">{check.result.total} total</span>
-                  {check.result.ok > 0 && <span className="text-green-500">{check.result.ok} OK</span>}
-                  {check.result.withDiffs > 0 && <span className="text-amber-400">{check.result.withDiffs} diff(s)</span>}
-                  {(check.newCount ?? 0) > 0 && <span className="text-blue-400">{check.newCount} new</span>}
-                </div>
-              )}
-
-              {check.status === 'done' && check.result && check.result.withDiffs > 0 && check.result.results && (
-                <div className="mt-2 space-y-0.5">
-                  {check.result.results.slice(0, 3).map(r => (
-                    <div key={r.id} className="flex items-center gap-2 text-xs">
-                      <span className="truncate text-zinc-400">{r.name}</span>
-                      <span className="shrink-0 text-amber-500">{r.diffs.length}</span>
-                    </div>
-                  ))}
-                  {check.result.results.length > 3 && (
-                    <span className="text-[10px] text-zinc-600">+{check.result.results.length - 3} more</span>
-                  )}
-                </div>
-              )}
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Boss status by mode */}
-      <section>
-        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-zinc-500">
-          Boss / Monster Status
-          {bossStatus === 'loading' && <span className="ml-2 text-zinc-600 animate-pulse">Loading...</span>}
-        </h2>
-        {bossStatus === 'done' && Object.keys(bossModes).length > 0 && (
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {Object.entries(bossModes)
-              .sort(([a], [b]) => a.localeCompare(b))
-              .map(([mode, entry]) => (
-                <Link
-                  key={mode}
-                  href={`/admin/extractor/bosses/by-mode?mode=${encodeURIComponent(mode)}` as never}
-                  className="rounded-lg border border-zinc-800 p-4 transition-colors hover:border-zinc-600 hover:bg-zinc-900"
-                >
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-semibold text-sm">{mode}</h3>
-                    {entry.withDiffs === 0
-                      ? <span className="rounded bg-green-900/30 px-1.5 py-0.5 text-[10px] text-green-400">OK</span>
-                      : <span className="rounded bg-amber-900/30 px-1.5 py-0.5 text-[10px] text-amber-400">updates</span>
-                    }
-                  </div>
-                  <div className="mt-2 flex items-center gap-3 text-xs">
-                    <span className="text-zinc-500">{entry.total} total</span>
-                    {entry.ok > 0 && <span className="text-green-500">{entry.ok} OK</span>}
-                    {entry.withDiffs > 0 && <span className="text-amber-400">{entry.withDiffs} diff(s)</span>}
-                  </div>
-                  {entry.withDiffs > 0 && entry.diffs.length > 0 && (
-                    <div className="mt-2 space-y-0.5">
-                      {entry.diffs.slice(0, 3).map((d, i) => (
-                        <div key={i} className="text-xs text-zinc-400 truncate">{d.name}</div>
-                      ))}
-                      {entry.diffs.length > 3 && (
-                        <span className="text-[10px] text-zinc-600">+{entry.diffs.length - 3} more</span>
-                      )}
-                    </div>
-                  )}
+            <tr key={check.api} className="border-b border-zinc-800/50 hover:bg-zinc-800/30">
+              <td className="py-1.5 pr-3">
+                <Link href={check.href as never} className="text-zinc-300 hover:text-blue-400 transition-colors">
+                  {check.label}
                 </Link>
-              ))}
-          </div>
-        )}
-        {bossStatus === 'error' && <span className="text-xs text-red-400">Failed to load boss status</span>}
-      </section>
+              </td>
+              <td className="py-1.5 pr-3 text-right text-zinc-500">{check.result?.total ?? '—'}</td>
+              <td className="py-1.5 pr-3 text-right text-green-500">{check.result?.ok ?? '—'}</td>
+              <td className="py-1.5 pr-3 text-right">
+                {check.result?.withDiffs ? <span className="text-amber-400">{check.result.withDiffs}</span> : <span className="text-zinc-600">0</span>}
+              </td>
+              <td className="py-1.5 pr-3 text-right">
+                {(check.newCount ?? 0) > 0 ? <span className="text-blue-400">{check.newCount}</span> : <span className="text-zinc-600">0</span>}
+              </td>
+              <td className="py-1.5 text-right"><StatusBadge check={check} /></td>
+            </tr>
+          ))}
+          {Object.entries(bossModes)
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([mode, entry]) => (
+              <tr key={mode} className="border-b border-zinc-800/50 hover:bg-zinc-800/30">
+                <td className="py-1.5 pr-3">
+                  <Link
+                    href={`/admin/extractor/bosses/by-mode?mode=${encodeURIComponent(mode)}` as never}
+                    className="text-zinc-300 hover:text-blue-400 transition-colors"
+                  >
+                    {mode}
+                  </Link>
+                </td>
+                <td className="py-1.5 pr-3 text-right text-zinc-500">{entry.total}</td>
+                <td className="py-1.5 pr-3 text-right text-green-500">{entry.ok}</td>
+                <td className="py-1.5 pr-3 text-right">
+                  {entry.withDiffs > 0 ? <span className="text-amber-400">{entry.withDiffs}</span> : <span className="text-zinc-600">0</span>}
+                </td>
+                <td className="py-1.5 pr-3 text-right text-zinc-600">—</td>
+                <td className="py-1.5 text-right">
+                  {entry.withDiffs === 0
+                    ? <span className="rounded bg-green-900/30 px-1.5 py-0.5 text-[10px] text-green-400">OK</span>
+                    : <span className="rounded bg-amber-900/30 px-1.5 py-0.5 text-[10px] text-amber-400">updates</span>
+                  }
+                </td>
+              </tr>
+            ))}
+          {bossStatus === 'loading' && (
+            <tr><td colSpan={6} className="py-1.5 text-zinc-600 animate-pulse">Loading boss status...</td></tr>
+          )}
+          {bossStatus === 'error' && (
+            <tr><td colSpan={6} className="py-1.5 text-red-400 text-xs">Failed to load boss status</td></tr>
+          )}
+        </tbody>
+      </table>
 
     </div>
   );
