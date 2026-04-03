@@ -33,7 +33,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101055",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,12 +49,15 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
-        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>50%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
-        "kr": "적을 공격하고 <color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
-        "zh": "攻击敌人,并有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
+        "en": "Attacks an enemy and has a <color=#28d9ed>35%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>35%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>35%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
+        "zh": "攻击敌人,并有<color=#28d9ed>35%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_First_2000015"
+      "icon": "Skill_First_2000015",
+      "debuff": [
+        "BT_DOT_BLEED"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,13 @@
         "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 동일한 대상에게 <color=#28d9ed>추가 공격</color>을 사용합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。若目标处于<color=#28d9ed>出血</color>状态,则对该目标发动<color=#28d9ed>额外攻击</color>。"
       },
-      "icon": "Skill_Second_2000015"
+      "icon": "Skill_Second_2000015",
+      "buff": [
+        "BT_ADDITIVE_ATTACK_ON_EVENT"
+      ],
+      "debuff": [
+        "BT_DOT_BLEED"
+      ]
     },
     {
       "name": {
@@ -105,7 +114,14 @@
         "kr": "(패시브 효과)\\n<color=#28d9ed>3턴</color> 동안 <color=#28d9ed>공격력</color>과 <color=#28d9ed>속도</color>가 증가하지만 매 턴 체력이 <color=#28d9ed>10%</color> 감소합니다.\\n\\n적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
         "zh": "(被动效果)\\n使<color=#28d9ed>攻击力</color>和<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>3回合</color>,每回合会使生命值降低<color=#28d9ed>10%</color>。\\n\\n对全体敌人造成<color=#28d9ed>无法恢复</color>效果。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_STAT|ST_SPEED_IR"
+      ],
+      "debuff": [
+        "BT_SEALED_RECEIVE_HEAL_IR"
+      ]
     }
   ]
 }

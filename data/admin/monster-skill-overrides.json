@@ -479,5 +479,8 @@
   "(Passive Effect) Increases Priority by <color=#28d9ed>100%</color> at the start of battle.\\nIncreases damage dealt to targets inflicted with <color=#28d9ed>debuffs</color>.\\nReduces the enemy team's <color=#28d9ed>Chain Points</color> by <color=#28d9ed>50</color> after using a skill.":{
         "remove_buff": ["BT_STAT|ST_SPEED"],
     "add_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nIncreases <color=#28d9ed>Attack and Speed</color> of all allies by <color=#28d9ed>12.5%</color> each turn. (Max 8 stacks)\\n\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>12%</color> when an ally attacks.\\nWhen an ally dies, does not take Weakness Gauge damage and recovers <color=#28d9ed>Health</color> of all allies by <color=#28d9ed>100%</color>. Increases their <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>100%</color>, but reduces their <color=#28d9ed>Critical Damage</color> by <color=#28d9ed>30%</color>.\\n\\nMinions have special abilities that are stackable and removed upon their deaths.\\n<color=#ffd732>Nightwatch Shieldbearer</color>: Reduces <color=#28d9ed>damage taken</color> by all allies by <color=#28d9ed>10%</color>. \\n<color=#ffd732>Nightwatch Waraxe-Wielder</color>: Reduces <color=#28d9ed>damage taken</color> by Idith and Nightwatch Waraxe-Wielder by <color=#28d9ed>15%</color>.":{
+    "add_buff":["BT_ACTION_GAUGE"]
   }
 }

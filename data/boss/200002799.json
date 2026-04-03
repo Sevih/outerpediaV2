@@ -33,7 +33,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101097",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,10 @@
         "kr": "사망한 아군 한 명을 <color=#28d9ed>부활(강화)</color> 시키고 체력을 모두 회복시킵니다.",
         "zh": "使1名死亡的友军<color=#28d9ed>复活(强化)</color>,并使其生命值全部恢复。"
       },
-      "icon": "Skill_Second_2000027"
+      "icon": "Skill_Second_2000027",
+      "buff": [
+        "BT_RESURRECTION"
+      ]
     },
     {
       "name": {
@@ -98,11 +101,14 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive)\\nEach turn, SPD increases by <color=#28d9ed>2.5%</color> (up to 20 stacks).\\n\\nReduces damage taken from attacks by <color=#28d9ed>100%</color> and takes <color=#28d9ed>60%</color> of damage dealt to Faenan instead.\\n\\nWhen an ally dies, enemies take increased damage by <color=#28d9ed>15%</color> (up to 10 stacks).\\n\\nMarks the front ally with <color=#28d9ed>Mark</color> for <color=#28d9ed>9</color> turns.",
-        "jp": "(パッシブ効果)\\n毎ターン<color=#28d9ed>2.5%</color>スピードがUP (最大20スタック)。\\n\\n攻撃で受けるダメージを<color=#28d9ed>100%</color>DOWNし、ファイナンが受けるダメージの<color=#28d9ed>60%</color>を代わりに受ける。\\n\\n味方が死亡すると敵全体が受けるダメージが<color=#28d9ed>-15%</color>増加 (最大10スタック)。\\n\\n最前列の味方に<color=#28d9ed>標識</color>を<color=#28d9ed>9</color>ターンの間付与する。",
-        "kr": "(패시브 효과)\\n매 턴 속도가 <color=#28d9ed>2.5%</color> 증가합니다. (최대 20회 누적)\\n\\n공격으로 받는 피해를 <color=#28d9ed>100%</color> 감소시키며, 아군이 받는 피해의 <color=#28d9ed>60%</color>를 파이난이 대신 받습니다.\\n\\n아군 사망 시 적 전체의 받는 피해가 <color=#28d9ed>-15%</color> 증가합니다. (최대 10회 누적)\\n\\n가장 앞에 있는 동료에게 <color=#28d9ed>표식</color>을 <color=#28d9ed>9턴</color> 동안 부여합니다.",
-        "zh": "(被动效果)\\n每回合速度增加<color=#28d9ed>2.5%</color>(最多20层)。\\n\\n来自攻击的伤害减少<color=#28d9ed>100%</color>,并代替菲楠承受<color=#28d9ed>60%</color>的伤害。\\n\\n当队友死亡时,敌方全体受到的伤害增加<color=#28d9ed>-15%</color>(最多10层)。\\n\\n对最前排队友施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>9</color>回合。"
+        "jp": "(パッシブ効果)\\n毎ターン<color=#28d9ed>2.5%</color>スピードがUP (最大20スタック)。\\n\\n攻撃で受けるダメージを<color=#28d9ed>100%</color>DOWNし、ファイナンが受けるダメージの<color=#28d9ed>60%</color>を代わりに受ける。\\n\\n味方が死亡すると敵全体が受けるダメージが<color=#28d9ed>15%</color>増加 (最大10スタック)。\\n\\n最前列の味方に<color=#28d9ed>標識</color>を<color=#28d9ed>9</color>ターンの間付与する。",
+        "kr": "(패시브 효과)\\n매 턴 속도가 <color=#28d9ed>2.5%</color> 증가합니다. (최대 20회 누적)\\n\\n공격으로 받는 피해를 <color=#28d9ed>100%</color> 감소시키며, 아군이 받는 피해의 <color=#28d9ed>60%</color>를 파이난이 대신 받습니다.\\n\\n아군 사망 시 적 전체의 받는 피해가 <color=#28d9ed>15%</color> 증가합니다. (최대 10회 누적)\\n\\n가장 앞에 있는 동료에게 <color=#28d9ed>표식</color>을 <color=#28d9ed>9턴</color> 동안 부여합니다.",
+        "zh": "(被动效果)\\n每回合速度增加<color=#28d9ed>2.5%</color>(最多20层)。\\n\\n来自攻击的伤害减少<color=#28d9ed>100%</color>,并代替菲楠承受<color=#28d9ed>60%</color>的伤害。\\n\\n当队友死亡时,敌方全体受到的伤害增加<color=#28d9ed>15%</color>(最多10层)。\\n\\n对最前排队友施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>9</color>回合。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "debuff": [
+        "BT_MARKING"
+      ]
     },
     {
       "name": {
