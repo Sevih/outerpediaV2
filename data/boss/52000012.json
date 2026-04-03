@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40202014",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使攻击力最高的友军<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>10%</color>。"
       },
-      "icon": "Skill_First_2000012"
+      "icon": "Skill_First_2000012",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -72,6 +75,8 @@
       },
       "icon": "Skill_Second_2000012",
       "buff": [
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_CRITICAL_DMG_RATE",
         "BT_ADDITIVE_TURN"
       ]
     },
@@ -85,11 +90,14 @@
       "type": "SKT_ULTIMATE",
       "description": {
         "en": "Attacks all enemies. Reduces the target's Priority by <color=#28d9ed>15%</color>.",
-        "jp": "敵全体にダメージを与える。対象の行動ゲージを<color=#28d9ed>-15%</color>DOWNさせる。",
-        "kr": "적 전체를 공격합니다. 대상의 행동 게이지를 <color=#28d9ed>-15%</color> 감소시킵니다.",
-        "zh": "攻击全体敌人,使敌人的行动值降低<color=#28d9ed>-15%</color>。"
+        "jp": "敵全体にダメージを与える。対象の行動ゲージを<color=#28d9ed>15%</color>DOWNさせる。",
+        "kr": "적 전체를 공격합니다. 대상의 행동 게이지를 <color=#28d9ed>15%</color> 감소시킵니다.",
+        "zh": "攻击全体敌人,使敌人的行动值降低<color=#28d9ed>15%</color>。"
       },
-      "icon": "Skill_Ultimate_2000012"
+      "icon": "Skill_Ultimate_2000012",
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
     }
   ]
 }

@@ -15,15 +15,15 @@
   "IncludeSurname": false,
   "class": "Striker",
   "element": "Dark",
-  "level": 84,
+  "level": 91,
   "icons": "2000070",
   "BuffImmune": "ATTACK",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
-      "en": "Tower of Darkness 22F",
-      "jp": "闇の塔 22階",
-      "kr": "암흑의 탑 22층",
+      "en": "Tower of Darkness 26F",
+      "jp": "闇の塔 26階",
+      "kr": "암흑의 탑 26층",
       "zh": "黑暗之塔 1层"
     },
     "mode": {
@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40242022",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격합니다.\\n<color=#28d9ed>전열</color>의 적을 우선적으로 공격합니다. <color=#28d9ed>방어형</color>이 아닌 적 대상 공격 시, 적 전체를 공격하고 <color=#28d9ed>5턴</color>동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n이 스킬은 대상이 약화 효과를 보유하고 있을 경우 매우 큰 피해를 줍니다.",
         "zh": "攻击敌人。\\n优先攻击<color=#28d9ed>前排</color>敌人。攻击<color=#28d9ed>防御型</color>以外的目标时,将攻击全体敌人,并在<color=#28d9ed>5</color>回合内提高<color=#28d9ed>防御力</color>。\\n\\n若目标持有<color=#28d9ed>减益效果</color>,该技能将造成极高伤害。"
       },
-      "icon": "Skill_First_2000070"
+      "icon": "Skill_First_2000070",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,11 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#28d9ed>공격력</color>이 증가한 상태라면 자신의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "zh": "攻击全体敌人,并使<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>5回合</color>。\\n\\n若<color=#28d9ed>攻击力</color>处于提升状态,则使自身<color=#28d9ed>强化效果</color>持续回合数增加<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Second_2000070"
+      "icon": "Skill_Second_2000070",
+      "buff": [
+        "BT_STAT|ST_DEF",
+        "BT_EXTEND_BUFF"
+      ]
     },
     {
       "name": {
@@ -86,7 +93,14 @@
         "kr": "적 전체를 공격합니다.\\n<color=#28d9ed>5턴</color>동안 <color=#28d9ed>공격력</color>이 증가하고 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>150</color> 감소시킵니다.\\n\\n<color=#28d9ed>방어력</color>이 증가한 상태라면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击全体敌人。\\n<color=#28d9ed>攻击力</color>提升,并使全体敌人的<color=#28d9ed>AP</color>降低<color=#28d9ed>150</color>,持续<color=#28d9ed>5回合</color>。\\n\\n若<color=#28d9ed>防御力</color>处于提升状态,则获得<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000070"
+      "icon": "Skill_Ultimate_2000070",
+      "buff": [
+        "BT_STAT|ST_ATK",
+        "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [
+        "BT_AP_CHARGE"
+      ]
     }
   ]
 }

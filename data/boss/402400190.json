@@ -28,7 +28,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101010",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -65,7 +65,10 @@
         "kr": "적 전체를 공격하고 대상에게 <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>30%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Second_4024001"
+      "icon": "Skill_Second_4024001",
+      "debuff": [
+        "BT_DOT_BLEED"
+      ]
     },
     {
       "name": {
@@ -81,7 +84,10 @@
         "kr": "적 전체를 공격하고 대상에게 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对目标造成<color=#28d9ed>出血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Ultimate_4024001"
+      "icon": "Skill_Ultimate_4024001",
+      "debuff": [
+        "BT_DOT_BLEED"
+      ]
     },
     {
       "name": {
@@ -113,23 +119,14 @@
         "kr": "3턴마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>더러운 입김</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color> 상태로 만듭니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.",
         "zh": "每3回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法被解除的攻击力提升/伤害降低效果,持续3回合,并使WG恢复10%。狂暴化持续3回合。\\n\\n<color=#28d9ed>肮脏的吐息</color>:狂暴化结束时发动。\\n攻击全体敌人,并有<color=#28d9ed>100%</color>的几率使目标陷入<color=#28d9ed>出血</color>状态,持续<color=#28d9ed>2回合</color>。\\n该攻击无视目标的<color=#28d9ed>效果抵抗</color>。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff": [
+        "BT_DOT_BLEED"
+      ]
     }
   ]
 }

@@ -107,6 +107,23 @@ export default function BossCompareByModePage() {
     }
   }
 
+  const [savingAll, setSavingAll] = useState(false);
+  const [saveAllProgress, setSaveAllProgress] = useState({ done: 0, total: 0 });
+
+  async function handleSaveAll() {
+    if (!detailResults) return;
+    const toSave = detailResults.filter(r => !r.notInGame && !savedIds.has(r.id));
+    if (toSave.length === 0) return;
+    setSavingAll(true);
+    setSaveAllProgress({ done: 0, total: toSave.length });
+
+    for (let i = 0; i < toSave.length; i++) {
+      await handleSaveOne(toSave[i].id);
+      setSaveAllProgress({ done: i + 1, total: toSave.length });
+    }
+    setSavingAll(false);
+  }
+
   const [applying, setApplying] = useState(false);
   const [applyResult, setApplyResult] = useState<{ modified: number; total: number } | null>(null);
 
@@ -177,6 +194,16 @@ export default function BossCompareByModePage() {
               <h2 className="text-lg font-bold">{selectedMode}</h2>
               <span className="rounded bg-green-900/30 px-2 py-0.5 text-xs font-semibold text-green-400">{detailOk} OK</span>
               <span className="rounded bg-red-900/30 px-2 py-0.5 text-xs font-semibold text-red-400">{detailResults.length} with diffs</span>
+              <div className="flex-1" />
+              {detailResults.some(r => !r.notInGame && !savedIds.has(r.id)) && (
+                <button
+                  onClick={handleSaveAll}
+                  disabled={savingAll}
+                  className="rounded bg-blue-600/80 px-4 py-1.5 text-xs font-semibold transition hover:bg-blue-500 disabled:opacity-50"
+                >
+                  {savingAll ? `Saving ${saveAllProgress.done}/${saveAllProgress.total}...` : 'Save All'}
+                </button>
+              )}
             </div>
 
             {detailResults.length === 0 && <p className="text-sm text-green-400">All bosses in this mode match!</p>}

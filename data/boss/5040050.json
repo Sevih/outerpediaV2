@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40232040",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>반격 확률</color>이 증가합니다.",
         "zh": "攻击敌人,并使<color=#28d9ed>反击率</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_First_4076008"
+      "icon": "Skill_First_4076008",
+      "buff": [
+        "BT_STAT|ST_COUNTER_RATE"
+      ]
     },
     {
       "name": {
@@ -86,7 +89,10 @@
         "kr": "적 전체를 공격하고, <color=#28d9ed>3턴</color> 동안 대상 모두에게 <color=#28d9ed>침묵</color>을 부여합니다.",
         "zh": "攻击全体敌人,并对全体目标造成<color=#28d9ed>沉默</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_Ultimate_4076008"
+      "icon": "Skill_Ultimate_4076008",
+      "debuff": [
+        "BT_SILENCE"
+      ]
     },
     {
       "name": {
@@ -102,7 +108,10 @@
         "kr": "(패시브 효과)\\n턴 시작시 자신의 HP가 25% 이하라면 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>침묵</color>을 부여합니다.(면역 무시)\\n<color=#28d9ed>침묵</color> 효과를 가진 대상에게 추가 피해를 줍니다.",
         "zh": "(被动效果)\\n回合开始时,若自身生命值低于25%,对全体敌人造成<color=#28d9ed>沉默</color>效果,持续<color=#28d9ed>1回合</color>(无视免疫)。\\n对持有<color=#28d9ed>沉默</color>效果的目标造成额外伤害。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "debuff": [
+        "BT_SILENCE"
+      ]
     },
     {
       "name": {
@@ -118,7 +127,10 @@
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>지속 회복</color>을 부여합니다. (해제 불가)\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "穿透力始终提升<color=#28d9ed>20%</color>,暴击率始终提升<color=#28d9ed>10%</color>\\n\\n战斗开始时,赋予<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>3回合</color>。(无法解除)\\n回合结束时,敌队CP减少<color=#28d9ed>25</color>。"
       },
-      "icon": "MT_Passive_1_Light"
+      "icon": "MT_Passive_1_Light",
+      "buff": [
+        "BT_CONTINU_HEAL"
+      ]
     },
     {
       "name": {
@@ -136,24 +148,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR",
         "BT_CP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

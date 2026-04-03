@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40202070",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,11 @@
         "kr": "적을 공격하고, 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n<color=#28d9ed>찬란한 의지</color> 보유 시에는 <color=#ffd732>도와줘요, 스승님!</color>으로 변경됩니다.\\n\\n<color=#ffd732>도와줘요, 스승님!</color>\\n적을 공격하고, 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 피해가 증가합니다.",
         "zh": "攻击敌人,并使自身获得<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时,变更为<color=#ffd732>师父帮我!</color>。\\n\\n<color=#ffd732>师父帮我!</color>\\n攻击敌人,对目标造成<color=#28d9ed>挑衅</color>,持续<color=#28d9ed>1回合</color>。伤害提升。"
       },
-      "icon": "Skill_First_2000094"
+      "icon": "Skill_First_2000094",
+      "debuff": [
+        "BT_MARKING",
+        "BT_AGGRO"
+      ]
     },
     {
       "name": {
@@ -65,7 +69,10 @@
         "kr": "(패시브 효과)\\n적 전체는 보유한 약화 효과에 비례하여 받는 피해가 증가합니다.\\n피격 후 적 전체에게 각각 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "(被动效果)\\n敌方全体所受伤害随减益效果数量提高。\\n被攻击后,对敌方全体分别以<color=#28d9ed>100%</color>的概率附加<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2</color>回合。"
       },
-      "icon": "Skill_Second_2000094"
+      "icon": "Skill_Second_2000094",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
     },
     {
       "name": {
@@ -83,7 +90,12 @@
       },
       "icon": "Skill_Ultimate_2000094",
       "buff": [
+        "BT_2000094_IR",
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_BURN_ENHANCE",
+        "BT_DOT_BURN"
       ]
     }
   ]

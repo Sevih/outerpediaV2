@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40222040",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,13 @@
         "kr": "<color=#28d9ed>2턴</color> 동안 <color=#28d9ed>데그릴</color>의 <color=#28d9ed>공격력</color>을 증가시키고, 자신에게는 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.",
         "zh": "使<color=#28d9ed>泰格里尔</color>的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>,并对自身造成<color=#28d9ed>标记</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Claw_1_Earth"
+      "icon": "MT_Attack_Claw_1_Earth",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ],
+      "debuff": [
+        "BT_MARKING"
+      ]
     },
     {
       "name": {
@@ -70,7 +76,10 @@
         "kr": "(패시브 효과)\\n턴 시작 시 <color=#28d9ed>화상</color> 상태라면, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color> 상태가 됩니다.\\n\\n화속성이 아닌 적에게 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n화속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
         "zh": "(被动效果)\\n回合开始时,若处于<color=#28d9ed>烧伤</color>状态,则会陷入<color=#28d9ed>无法恢复</color>状态,持续<color=#28d9ed>2回合</color>。\\n\\n对非火属性敌人造成的伤害提升,且所受伤害降低。\\n对火属性角色造成的伤害降低,且所受伤害提升。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_SEALED_RECEIVE_HEAL"
+      ]
     }
   ]
 }

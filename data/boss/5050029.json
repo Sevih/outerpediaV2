@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40242003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "아군 전체의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "使全体友军的<color=#28d9ed>攻击力</color>提升<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
     }
   ]
 }

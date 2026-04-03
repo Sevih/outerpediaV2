@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40202002",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
-      "icon": "MT_Attack_Sword_1_Fire"
+      "icon": "MT_Attack_Sword_1_Fire",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Sword_1_Fire"
+      "icon": "MT_Attack_Sword_1_Fire",
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
     },
     {
       "name": {
@@ -81,7 +87,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>침묵</color> 상태로 만듭니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>沉默</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Sword_1_Fire"
+      "icon": "MT_Attack_Sword_1_Fire",
+      "debuff": [
+        "BT_SILENCE"
+      ]
     },
     {
       "name": {
@@ -97,7 +106,10 @@
         "kr": "(패시브 효과)\\n공격 시 대상이 보유한 약화 효과가 많을수록 피해량이 증가합니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>치명 피해</color>가 증가합니다.",
         "zh": "(被动效果)\\n攻击时,目标持有的减益效果越多,造成的伤害越高。\\n战斗开始时,在<color=#28d9ed>2</color>回合内提高<color=#28d9ed>暴击伤害</color>。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
+      ]
     }
   ]
 }

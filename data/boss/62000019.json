@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212026",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。"
       },
-      "icon": "Skill_First_2000019"
+      "icon": "Skill_First_2000019",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,11 @@
         "kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과보유 시 쿨타임이 초기화됩니다.",
         "zh": "攻击全体敌人。\\n该技能总是以<color=#28d9ed>优势属性</color>施展,且附带强化效果时,冷却时间重置。"
       },
-      "icon": "Skill_Second_2000019"
+      "icon": "Skill_Second_2000019",
+      "buff": [
+        "BT_DMG_ELEMENT_SUPERIORITY",
+        "BT_COOL2_CHARGE"
+      ]
     },
     {
       "name": {
@@ -86,7 +93,10 @@
         "kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>증가</color>시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 3회 누적)",
         "zh": "使用技能时,使自身<color=#28d9ed>暴击率</color><color=#28d9ed>提升</color>,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,<color=#28d9ed>攻击力</color>都会提升<color=#28d9ed>7%</color>。(最多可叠加3次)"
       },
-      "icon": "Skill_Ultimate_2000019"
+      "icon": "Skill_Ultimate_2000019",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     },
     {
       "name": {
@@ -114,11 +124,14 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>UPされる。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
       "debuff": [
         "BT_CP_CHARGE"
       ]

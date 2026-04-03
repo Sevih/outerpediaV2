@@ -10,16 +10,16 @@
   "IncludeSurname": false,
   "class": "Defender",
   "element": "Earth",
-  "level": 45,
+  "level": 66,
   "icons": "4031001",
   "BuffImmune": "ATTACK",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
-      "en": "Earth Tower 3F",
-      "jp": "大地の塔3階",
-      "kr": "대지의 탑 3층",
-      "zh": "土之塔第3层"
+      "en": "Earth Tower 13F",
+      "jp": "大地の塔13階",
+      "kr": "대지의 탑 13층",
+      "zh": "土之塔第13层"
     },
     "mode": {
       "en": "Elemental Tower",
@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40222003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>10%</color>的几率对目标造成<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Smash_1_Fire"
+      "icon": "MT_Attack_Smash_1_Fire",
+      "debuff": [
+        "BT_STUN"
+      ]
     }
   ]
 }

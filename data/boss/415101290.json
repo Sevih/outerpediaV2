@@ -28,7 +28,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "<color=#28d9ed>50%</color> 확률로 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다.",
         "zh": "有<color=#28d9ed>50%</color>的几率对目标造成<color=#28d9ed>中毒</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Earth"
+      "icon": "MT_Attack_Magic_1_Earth",
+      "debuff": [
+        "BT_DOT_POISON"
+      ]
     },
     {
       "name": {

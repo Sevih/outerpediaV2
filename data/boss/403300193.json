@@ -28,7 +28,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101032",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -113,7 +113,10 @@
         "kr": "(패시브 효과)\\n공격 시 피해량의 <color=#28d9ed>10%</color>를 회복합니다.\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>지속 회복</color>효과를 얻습니다.",
         "zh": "(被动效果)\\n攻击时,恢复伤害量的<color=#28d9ed>10%</color>。\\n战斗开始时,获得<color=#28d9ed>持续恢复</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_CONTINU_HEAL"
+      ]
     }
   ]
 }

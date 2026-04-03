@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40222100",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격합니다. 대상이 <color=#28d9ed>약화 효과</color>를 보유했다면 대상 최대 체력의 <color=#28d9ed>30%</color> 만큼 고정 피해를 입힙니다.",
         "zh": "攻击敌人,若目标附带<color=#28d9ed>弱化效果</color>,则造成目标生命值上限<color=#28d9ed>30%</color>的固定伤害。"
       },
-      "icon": "Skill_First_4084001"
+      "icon": "Skill_First_4084001",
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_TARGET"
+      ]
     },
     {
       "name": {
@@ -84,6 +87,9 @@
       "icon": "Skill_Ultimate_4084001",
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_DOT_POISON_IR"
       ]
     },
     {
@@ -100,7 +106,11 @@
         "kr": "(패시브 효과) <color=#28d9ed>중독</color> 상태의 적 행동 시 <color=#28d9ed>중독</color>을 보유한 적 전체에게 <color=#28d9ed>1턴</color>동안 해제 불가능한 <color=#28d9ed>침묵</color>을 부여합니다.(대상의 효과 저항과 면역 무시)\\n\\n<color=#28d9ed>침묵</color> 상태의 적 턴 종료 시 <color=#28d9ed>침묵</color>을 보유한 적 전체에게 최대 체력의 <color=#28d9ed>20%</color>만큼 고정 피해를 입히고, 자신의 체력은 <color=#28d9ed>50%</color> 회복 합니다. \\n\\n<color=#28d9ed>중독</color> 상태의 적에게 받는 피해량은 크게 감소합니다.",
         "zh": "(被动效果)处于<color=#28d9ed>中毒</color>状态的敌人行动时,在<color=#28d9ed>1回合</color>内赋予具有<color=#28d9ed>中毒</color>的全体敌人无法解除的<color=#28d9ed>沉默</color>。(无视目标的效果抵抗与免疫)\\n\\n处于<color=#28d9ed>沉默</color>状态的敌人回合结束时,对具有<color=#28d9ed>沉默</color>的全体敌人造成相当于最大生命力<color=#28d9ed>20%</color>的固定伤害,自身的生命力恢复<color=#28d9ed>50%</color>。\\n\\n<color=#28d9ed>中毒</color>状态的敌人造成的伤害量大幅减少。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_SILENCE_IR",
+        "BT_REVERSE_HEAL_BASED_TARGET"
+      ]
     },
     {
       "name": {
@@ -112,7 +122,7 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン開始時、自分のHPを<color=#28d9ed>5%</color>回復する。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
@@ -135,7 +145,14 @@
         "kr": "최대 체력의 <color=#28d9ed>30%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입 및 필살기</color> : 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여하고, 적 전체에게 <color=#28d9ed>중독</color>을 <color=#28d9ed>3턴</color> 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.",
         "zh": "若生命力降到最大生命力<color=#28d9ed>30%</color>以下,转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化与必杀技</color>:在3回合内赋予自身不会被解除的攻击力增加/伤害减少效果,在<color=#28d9ed>3回合</color>内赋予全体敌人<color=#28d9ed>中毒</color>。狂暴化持续3回合。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff": [
+        "BT_DOT_POISON"
+      ]
     }
   ]
 }

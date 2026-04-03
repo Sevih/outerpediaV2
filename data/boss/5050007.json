@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40242001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -65,7 +65,10 @@
         "kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "全体友军的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Light"
+      "icon": "MT_Attack_Magic_1_Light",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
     },
     {
       "name": {
@@ -81,7 +84,10 @@
         "kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.",
         "zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>护盾</color>,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Arrow_1_Light"
+      "icon": "MT_Attack_Arrow_1_Light",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
     },
     {
       "name": {

@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40222060",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -43,13 +43,12 @@
         "zh": "三日月1式:开花"
       },
       "type": "SKT_FIRST",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_First_2000065"
+      "description": {},
+      "icon": "Skill_First_2000065",
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_DMG_ELEMENT_SUPERIORITY"
+      ]
     },
     {
       "name": {
@@ -59,13 +58,11 @@
         "zh": "三日月2式:剪枝"
       },
       "type": "SKT_SECOND",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Second_2000065"
+      "description": {},
+      "icon": "Skill_Second_2000065",
+      "debuff": [
+        "BT_WG_REVERSE_HEAL"
+      ]
     },
     {
       "name": {
@@ -82,11 +79,14 @@
         "zh": "攻击敌人后,获得追加回合。\\n\\n若目标HP≤<color=#28d9ed>90%</color>,则获得<color=#28d9ed>梅一知林</color>效果,持续<color=#28d9ed>3</color>回合,并提升造成的伤害。\\n\\n若目标HP><color=#28d9ed>90%</color>,则获得<color=#28d9ed>樱散</color>效果,持续<color=#28d9ed>3</color>回合,并减少<color=#28d9ed>CP</color><color=#28d9ed>15</color>点。"
       },
       "icon": "Skill_Ultimate_2000065",
-      "debuff": [
+      "buff": [
+        "BT_2000065_A_IR",
+        "BT_2000065_B_IR",
+        "BT_ADDITIVE_TURN",
         "BT_CP_CHARGE"
       ],
-      "buff": [
-        "BT_ADDITIVE_TURN"
+      "debuff": [
+        "BT_CP_CHARGE"
       ]
     },
     {
@@ -99,7 +99,7 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン開始時、自分のHPを<color=#28d9ed>5%</color>回復する。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },

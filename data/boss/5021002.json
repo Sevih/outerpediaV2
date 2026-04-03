@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212040",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,10 @@
         "kr": "(발동 효과) <color=#28d9ed>빙결</color> 상태의 적을 <color=#28d9ed>단일 공격</color> 했을 때 적 전체에게 <color=#28d9ed>추가 공격</color>을 합니다.",
         "zh": "(触发效果)对处于<color=#28d9ed>冰冻</color>状态的敌人发动<color=#28d9ed>单体攻击</color>时,对全体敌人发动<color=#28d9ed>额外攻击</color>。"
       },
-      "icon": "Skill_Second_4076001"
+      "icon": "Skill_Second_4076001",
+      "buff": [
+        "SYS_BUFF_ADDITIVE_ATTACK"
+      ]
     },
     {
       "name": {
@@ -86,7 +89,14 @@
         "kr": "자신의 <color=#28d9ed>약화 효과</color>를 모두 제거 한 뒤 적 전체를 공격하고 1턴 간 <color=#28d9ed>빙결</color> 상태로 만듭니다. \\n\\n한 명 이상의 적에게 <color=#28d9ed>치명 공격</color>시 2턴 간 실드를 생성합니다.",
         "zh": "解除自身的所有<color=#28d9ed>弱化效果</color>后,攻击全体敌人,并使其陷入<color=#28d9ed>冰冻</color>状态,持续1回合。\\n\\n对一名以上的敌人<color=#28d9ed>发动暴击</color>时,获得护盾,持续2回合。"
       },
-      "icon": "Skill_Ultimate_4076001"
+      "icon": "Skill_Ultimate_4076001",
+      "buff": [
+        "BT_REMOVE_DEBUFF",
+        "BT_SHIELD_BASED_CASTER"
+      ],
+      "debuff": [
+        "BT_FREEZE"
+      ]
     },
     {
       "name": {
@@ -102,7 +112,10 @@
         "kr": "(패시브 효과)\\n매 턴 무작위 적 1명은 1턴 동안 <color=#28d9ed>빙결</color> 상태가 됩니다. \\n\\n실드 상태에서 공격은 대상의 <color=#28d9ed>방어력을 30% 무시</color> 합니다.",
         "zh": "(被动效果)\\n每回合使随机1名敌人陷入<color=#28d9ed>冰冻</color>状态,持续1回合。\\n\\n处于护盾状态下发动攻击时,<color=#28d9ed>无视目标的30%防御力</color>。"
       },
-      "icon": "MT_Passive_1_Water"
+      "icon": "MT_Passive_1_Water",
+      "debuff": [
+        "BT_FREEZE"
+      ]
     },
     {
       "name": {
@@ -114,11 +127,14 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>UPされる。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
       "debuff": [
         "BT_CP_CHARGE"
       ]
@@ -139,24 +155,13 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
+        "BT_STAT|ST_BUFF_CHANCE_IR",
+        "BT_INVINCIBLE",
         "BT_CP_CHARGE"
+      ],
+      "debuff": [
+        "BT_FREEZE"
       ]
-    },
-    {
-      "name": {
-        "en": "Ice Nine",
-        "jp": "アイスナイン",
-        "kr": "아이스 나인",
-        "zh": "九尺冰寒"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

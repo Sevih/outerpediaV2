@@ -28,7 +28,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101091",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -113,7 +113,10 @@
         "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
         "zh": "(被动效果)\\n战斗开始时,使<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     }
   ]
 }

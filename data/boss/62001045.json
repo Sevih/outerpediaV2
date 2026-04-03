@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212032",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -86,7 +86,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 획득합니다. 실드량은 자신의 <color=#28d9ed>공격력</color>이 높을수록 증가합니다.",
         "zh": "攻击敌人,并获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身<color=#28d9ed>攻击力</color>越高,则护盾量越高。"
       },
-      "icon": "Skill_Ultimate_2000045"
+      "icon": "Skill_Ultimate_2000045",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
     },
     {
       "name": {
@@ -102,7 +105,10 @@
         "kr": "(패시브 효과)\\n피격 시 아군 전체 행동 게이지가 <color=#28d9ed>10%</color>  증가합니다.",
         "zh": "(被动效果)\\n受到攻击时,使全体友军的行动值提升<color=#28d9ed>10%</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -114,11 +120,14 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>UPされる。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
       "debuff": [
         "BT_CP_CHARGE"
       ]

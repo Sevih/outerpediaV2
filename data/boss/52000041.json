@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40222014",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,12 +49,15 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy. Has a <color=#28d9ed>[buff_c_tower_element_52401_0]</color> chance to grant <color=#28d9ed>Increased Speed</color> to the caster for <color=#28d9ed>[buff_t_tower_element_52401_0] turn(s)</color>.",
-        "jp": "敵単体にダメージを与え、<color=#28d9ed>[buff_c_tower_element_52401_0]</color>の確率で自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>[buff_t_tower_element_52401_0]ターン</color>の間UPさせる。",
-        "kr": "적을 공격하고 <color=#28d9ed>[buff_c_tower_element_52401_0]</color> 확률로 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>[buff_t_tower_element_52401_0]턴</color> 동안 증가시킵니다.",
-        "zh": "攻击敌人,并有<color=#28d9ed>[buff_c_tower_element_52401_0]</color>的几率使自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>[buff_t_tower_element_52401_0]回合</color>。"
+        "en": "Attacks an enemy. Has a <color=#28d9ed>30%</color> chance to grant <color=#28d9ed>Increased Speed</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>30%</color>の確率で自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率使自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_First_2000041"
+      "icon": "Skill_First_2000041",
+      "buff": [
+        "BT_STAT|ST_SPEED"
+      ]
     },
     {
       "name": {
@@ -65,12 +68,15 @@
       },
       "type": "SKT_SECOND",
       "description": {
-        "en": "Attacks an enemy. After using this skill, reduces the cooldown of <color=#28d9ed>Grieving Orpheus</color> by <color=#28d9ed>[buff_v_tower_element_52402_0] turn(s)</color>.",
-        "jp": "敵単体にダメージを与え、<color=#28d9ed>【悲嘆のオルフェウス】</color>のスキルターンを<color=#28d9ed>[buff_v_tower_element_52402_0]ターン</color>減少させる。",
-        "kr": "적을 공격하고 <color=#28d9ed>비탄의 오르페우스</color>의 스킬 쿨타임이 <color=#28d9ed>[buff_v_tower_element_52402_0]턴</color> 감소합니다.",
-        "zh": "攻击敌人,并使<color=#28d9ed>悲叹的俄耳甫斯</color>的技能冷却时间减少<color=#28d9ed>[buff_v_tower_element_52402_0]回合</color>。"
+        "en": "Attacks an enemy. After using this skill, reduces the cooldown of <color=#28d9ed>Grieving Orpheus</color> by <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>【悲嘆のオルフェウス】</color>のスキルターンを<color=#28d9ed>1ターン</color>減少させる。",
+        "kr": "적을 공격하고 <color=#28d9ed>비탄의 오르페우스</color>의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.",
+        "zh": "攻击敌人,并使<color=#28d9ed>悲叹的俄耳甫斯</color>的技能冷却时间减少<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Second_2000041"
+      "icon": "Skill_Second_2000041",
+      "buff": [
+        "BT_COOL3_CHARGE"
+      ]
     },
     {
       "name": {

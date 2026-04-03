@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40202090",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고 자신의 모든 스킬 쿨타임을 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "zh": "攻击敌人,使自身的所有技能冷却时间降低<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_First_4004104"
+      "icon": "Skill_First_4004104",
+      "buff": [
+        "BT_COOL_CHARGE"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,10 @@
         "kr": "적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>강화 역전</color>을 발생시킵니다.",
         "zh": "攻击全体敌人。攻击后,使目标触发<color=#28d9ed>强化逆转</color>"
       },
-      "icon": "Skill_Second_4004104"
+      "icon": "Skill_Second_4004104",
+      "debuff": [
+        "BT_STATBUFF_CONVERT_TO_STATDEBUFF"
+      ]
     },
     {
       "name": {
@@ -81,7 +87,12 @@
         "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 자신과 적 전체의 <color=#28d9ed>속도/치명 확률/치명 피해</color>를 증가시킵니다.",
         "zh": "攻击全体敌人。攻击后,使自身和全体敌人的<color=#28d9ed>速度/暴击率/暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_Ultimate_4004104"
+      "icon": "Skill_Ultimate_4004104",
+      "buff": [
+        "BT_STAT|ST_SPEED",
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
+      ]
     },
     {
       "name": {
@@ -97,7 +108,13 @@
         "kr": "(패시브 효과)\\n턴 시작 시 자신의 모든 강화 효과의 지속 시간이 <color=#28d9ed>1턴</color> 증가하고, 해제 가능한 능력치 감소 효과를 보유한 적에게 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다. 이 효과는 대상의 효과 저항을 무시합니다.\\n자신이 강화 효과 보유 중에는 WG 피해를 받지 않고, 약화 효과 피격 시 WG를 모두 회복합니다.",
         "zh": "(被动效果)\\n回合开始时,自身所有强化效果持续时间+<color=#28d9ed>1回合</color>,并对拥有可驱散的属性降低效果的敌人附加<color=#28d9ed>眩晕</color>,持续<color=#28d9ed>5</color>回合(无视效果抵抗)。\\n自身处于强化状态时,不会受到WG伤害,并在受到减益效果攻击时完全恢复WG。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_EXTEND_BUFF"
+      ],
+      "debuff": [
+        "BT_STUN"
+      ]
     },
     {
       "name": {
@@ -109,7 +126,7 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\n受けるダメージが<color=#28d9ed>20%</color>DOWNされる。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
@@ -134,24 +151,10 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR",
         "BT_CP_CHARGE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

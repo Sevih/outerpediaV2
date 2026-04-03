@@ -15,16 +15,16 @@
   "IncludeSurname": false,
   "class": "Striker",
   "element": "Water",
-  "level": 84,
+  "level": 96,
   "icons": "2000019",
   "BuffImmune": "ATTACK",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
-      "en": "Water Tower 22F",
-      "jp": "水の塔22階",
-      "kr": "물의 탑 22층",
-      "zh": "水之塔第22层"
+      "en": "Water Tower 31F",
+      "jp": "水の塔31階",
+      "kr": "물의 탑 31층",
+      "zh": "水之塔第31层"
     },
     "mode": {
       "en": "Elemental Tower",
@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212022",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다. 대상이 화속성이라면 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。若目标为火属性,则使<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。"
       },
-      "icon": "Skill_First_2000019"
+      "icon": "Skill_First_2000019",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,11 @@
         "kr": "적 전체를 공격합니다.\\n이 스킬은 항상 <color=#28d9ed>유리한 상성</color>으로 적용되며 강화 효과보유 시 쿨타임이 초기화됩니다.",
         "zh": "攻击全体敌人。\\n该技能总是以<color=#28d9ed>优势属性</color>施展,且附带强化效果时,冷却时间重置。"
       },
-      "icon": "Skill_Second_2000019"
+      "icon": "Skill_Second_2000019",
+      "buff": [
+        "BT_DMG_ELEMENT_SUPERIORITY",
+        "BT_COOL2_CHARGE"
+      ]
     },
     {
       "name": {
@@ -86,7 +93,10 @@
         "kr": "스킬 사용 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>증가</color>시키고 적 전체를 공격합니다. \\n<color=#28d9ed>도지기리 야스츠나</color>를 사용할 때마다 <color=#28d9ed>공격력</color>이 <color=#28d9ed>7%</color> 증가합니다. (최대 3회 누적)",
         "zh": "使用技能时,使自身<color=#28d9ed>暴击率</color><color=#28d9ed>提升</color>,持续<color=#28d9ed>2回合</color>,并攻击全体敌人。\\n每次使用<color=#28d9ed>童子切安纲</color>时,<color=#28d9ed>攻击力</color>都会提升<color=#28d9ed>7%</color>。(最多可叠加3次)"
       },
-      "icon": "Skill_Ultimate_2000019"
+      "icon": "Skill_Ultimate_2000019",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     }
   ]
 }

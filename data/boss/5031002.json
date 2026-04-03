@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40222030",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>방어력</color>을 증가시킵니다.",
         "zh": "攻击全体敌人,并使自身的<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Second_4034002"
+      "icon": "Skill_Second_4034002",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
     },
     {
       "name": {
@@ -86,7 +89,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>3턴</color> 감소 시킵니다.",
         "zh": "攻击全体敌人,并使<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_Ultimate_4034002"
+      "icon": "Skill_Ultimate_4034002",
+      "debuff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     },
     {
       "name": {
@@ -102,7 +108,10 @@
         "kr": "(패시브 효과)\\n피격 시 치명 공격을 받지 않았다면 공격한 적은 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태가 됩니다.",
         "zh": "(被动效果)\\n受到攻击时,若未受到暴击,则使攻击的敌人陷入<color=#28d9ed>晕眩</color>状态,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_STUN"
+      ]
     },
     {
       "name": {
@@ -114,7 +123,7 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン開始時、自分のHPを<color=#28d9ed>5%</color>回復する。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
@@ -139,24 +148,13 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN",
         "BT_CP_CHARGE"
+      ],
+      "debuff": [
+        "BT_DOT_BURN"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

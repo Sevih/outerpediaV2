@@ -28,7 +28,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101070",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_First_4004002"
+      "icon": "Skill_First_4004002",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>20%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>빙결</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>20%</color>的几率对目标造成<color=#28d9ed>冰冻</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Second_4004002"
+      "icon": "Skill_Second_4004002",
+      "debuff": [
+        "BT_FREEZE"
+      ]
     },
     {
       "name": {
@@ -81,7 +87,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>100%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对目标造成<color=#28d9ed>触电</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Ultimate_4004002"
+      "icon": "Skill_Ultimate_4004002",
+      "debuff": [
+        "BT_DOT_LIGHTNING"
+      ]
     },
     {
       "name": {
@@ -124,28 +133,19 @@
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
-        "en": "Every 3 turns, enters <color=#28d9ed>Berserk</color> state.\\n\\n<color=#28d9ed>Berserk Entry</color>: Grants self ATK UP/Damage Reduction for 3 turns and recovers HP 10%. Berserk lasts 3 turns.\\n\\n<color=#28d9ed>Thunder Storm</color>: Used when Berserk ends.\\nAttacks all enemies, and if they are <color=#28d9ed>Shocked</color>, has a <color=#28d9ed>100%</color> chance to <color=#28d9ed>Stun</color> them for <color=#28d9ed>2</color> turns.\\nThis attack ignores Resilience.",
+        "en": "Every 3 turns, enters <color=#28d9ed>Berserk</color> state.\\n\\n<color=#28d9ed>Berserk Entry</color>: Grants self ATK UP/DMG Reduction for 3 turns and recovers HP 10%. Berserk lasts 3 turns.\\n\\n<color=#28d9ed>Thunder Storm</color>: Used when Berserk ends.\\nAttacks all enemies, and if they are <color=#28d9ed>Shocked</color>, has a <color=#28d9ed>100%</color> chance to <color=#28d9ed>Stun</color> them for <color=#28d9ed>2</color> turns.\\nThis attack ignores Resilience.",
         "jp": "3ターンごとに<color=#28d9ed>【狂暴化】</color>状態に移行。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に攻撃力増加/被ダメージ減少を3ターン付与し、HP 10%を回復。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>サンダーストーム</color>:狂暴化終了時に使用。\\n敵全体にダメージを与え、対象が<color=#28d9ed>感電</color>状態なら<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2</color>ターン<color=#28d9ed>スタン</color>付与。\\nこの攻撃は効果抵抗を無視。",
         "kr": "3턴마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 공격력 증가/피해 감소 효과를 3턴 동안 부여하고 체력 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>선더 스톰</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 대상이 <color=#28d9ed>감전</color>상태라면 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.\\n이 공격은 대상의 <color=#28d9ed>효과 저항</color>을 무시합니다.",
         "zh": "每<color=#28d9ed>3回合</color>进入<color=#28d9ed>狂暴</color>状态。\\n\\n<color=#28d9ed>狂暴进入</color>:为自己赋予攻击力提升/伤害减少效果3回合,并恢复HP 10%。狂暴持续3回合。\\n\\n<color=#28d9ed>雷霆风暴</color>:狂暴结束时发动。\\n攻击全体敌人,若处于<color=#28d9ed>感电</color>状态,则有<color=#28d9ed>100%</color>几率施加<color=#28d9ed>2</color>回合的<color=#28d9ed>眩晕</color>。\\n此攻击无视效果抵抗。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff": [
+        "BT_STUN"
+      ]
     }
   ]
 }

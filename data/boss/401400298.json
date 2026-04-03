@@ -28,7 +28,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101090",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -81,7 +81,11 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>회복형</color>을 제외한 모든 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>석화</color> 상태로 만듭니다.\\n그 반동으로, <color=#28d9ed>1턴</color> 동안 타일런트의 <color=#28d9ed>속도</color>가 감소합니다.",
         "zh": "攻击全体敌人,并使除<color=#28d9ed>恢复型</color>外全体目标陷入<color=#28d9ed>石化</color>状态,持续<color=#28d9ed>2回合</color>。\\n该技能的副作用会使泰兰特的<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Ultimate_4014002"
+      "icon": "Skill_Ultimate_4014002",
+      "debuff": [
+        "BT_STAT|ST_SPEED_IR",
+        "BT_STONE"
+      ]
     },
     {
       "name": {
@@ -97,7 +101,10 @@
         "kr": "(패시브 효과) 전투 시작 시 <color=#28d9ed>3턴</color> 동안 지속되는 <color=#28d9ed>실드</color>를 획득합니다.",
         "zh": "(被动效果)战斗开始时,获得持续<color=#28d9ed>3回合</color>的<color=#28d9ed>护盾</color>。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
     },
     {
       "name": {
@@ -124,28 +131,17 @@
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
-        "en": "Every 3 turns, enters <color=#28d9ed>Berserk</color> state, increasing ATK and SPD by <color=#28d9ed>5%</color>. Stacks up to 3 times and lasts until broken.\\n\\n<color=#28d9ed>Berserk Entry</color> : Grants irremovable ATK UP/Damage Reduction and Barrier for 3 turns, and restores WG 10%. Berserk lasts 3 turns.\\n\\n<color=#28d9ed>Tyrant's Descent</color> : Used when Berserk ends.\\nAttacks all enemies.",
+        "en": "Every 3 turns, enters <color=#28d9ed>Berserk</color> state, increasing ATK and SPD by <color=#28d9ed>5%</color>. Stacks up to 3 times and lasts until broken.\\n\\n<color=#28d9ed>Berserk Entry</color> : Grants irremovable ATK UP/DMG Reduction and Barrier for 3 turns, and restores WG 10%. Berserk lasts 3 turns.\\n\\n<color=#28d9ed>Tyrant's Descent</color> : Used when Berserk ends.\\nAttacks all enemies.",
         "jp": "3ターンごとに<color=#28d9ed>【狂暴化】</color>状態に移行し、攻撃力とスピードが<color=#28d9ed>5%</color>増加。最大3回まで累積し、ブレイクされるまで持続。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可の攻撃力増加/ダメージ減少とシールドを3ターン付与し、WG 10%を回復。【狂暴化】は3ターンの間持続する。\\n\\n<color=#28d9ed>暴君、降臨</color>:狂暴化終了時に使用。\\n敵全体を攻撃。",
         "kr": "3턴마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 공격력과 속도가 <color=#28d9ed>5%</color> 증가합니다. 해당 효과는 최대 3회 누적되며, 브레이크 되기 전까지 효과가 유지됩니다.\\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제되지 않는 공격력 증가/대미지 감소와 실드 효과를 3턴 동안 부여하고 WG 10%를 회복합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>폭군, 강림</color> : 광폭화 종료 시 사용.\\n적 전체를 공격합니다.",
         "zh": "每3回合进入<color=#28d9ed>狂暴</color>状态,攻击力与速度提升<color=#28d9ed>5%</color>。最多叠加3层,直到被打破前持续。\\n\\n<color=#28d9ed>狂暴进入</color>:赋予自己不可驱散的攻击力提升/伤害减少与护盾,持续3回合,并恢复WG 10%。狂暴持续3回合。\\n\\n<color=#28d9ed>暴君降临</color>:狂暴结束时发动。\\n攻击全体敌人。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
-    },
-    {
-      "name": {
-        "en": "Descent of the Tyrant",
-        "jp": "暴君、降臨",
-        "kr": "폭군, 강림",
-        "zh": "暴君,降临"
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "Attacks all enemies.",
-        "jp": "敵全体にダメージを与える。",
-        "kr": "적 전체를 공격합니다.",
-        "zh": "攻击全体敌人。"
-      },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN",
+        "BT_SHIELD_BASED_CASTER_IR"
+      ]
     }
   ]
 }

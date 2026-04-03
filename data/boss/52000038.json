@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212017",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,10 @@
         "kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
         "zh": "解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。"
       },
-      "icon": "Skill_Second_2000038"
+      "icon": "Skill_Second_2000038",
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     },
     {
       "name": {
@@ -86,7 +89,10 @@
         "kr": "아군 전체의 체력을 <color=#28d9ed>5%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>5%</color> 증가합니다.",
         "zh": "使全体友军的生命值恢复<color=#28d9ed>5%</color>,并解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。使附带弱化效果的目标,恢复量额外提升<color=#28d9ed>5%</color>。"
       },
-      "icon": "Skill_Ultimate_2000038"
+      "icon": "Skill_Ultimate_2000038",
+      "buff": [
+        "BT_REMOVE_DEBUFF"
+      ]
     }
   ]
 }

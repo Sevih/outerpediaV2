@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40242003",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -45,11 +45,14 @@
       "type": "SKT_FIRST",
       "description": {
         "en": "Increases own <color=#28d9ed>Attack</color> for <color=#28d9ed>1</color> turns, then attacks an enemy.",
-        "jp": "<color=#28d9ed>1</color>ターンの間、自身の<color=#28d9ed>攻撃力</color>を増加させ、敵単体にダメージを与える。",
+        "jp": "<color=#28d9ed>1</color>ターンの間、自分の<color=#28d9ed>攻撃力</color>を増加させ、敵単体にダメージを与える。",
         "kr": "자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.",
         "zh": "在<color=#28d9ed>1</color>回合内提高自身<color=#28d9ed>攻击力</color>,并攻击敌人。"
       },
-      "icon": "MT_Attack_Sword_1_Fire"
+      "icon": "MT_Attack_Sword_1_Fire",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,10 @@
         "kr": "적을 공격하고 자신의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>暴击率</color>提升,持续\\n<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Sword_1_Fire"
+      "icon": "MT_Attack_Sword_1_Fire",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     },
     {
       "name": {
@@ -81,7 +87,10 @@
         "kr": "자신의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>1턴</color> 동안 증가시키고 적을 공격합니다.",
         "zh": "使自身的<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>1回合</color>,并攻击敌人。"
       },
-      "icon": "MT_Attack_Sword_1_Fire"
+      "icon": "MT_Attack_Sword_1_Fire",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
+      ]
     },
     {
       "name": {
@@ -97,7 +106,10 @@
         "kr": "(패시브 효과)\\n전투 시작 시 최대 체력의 <color=#28d9ed>30%</color>에 해당하는 실드를 생성합니다. 이 효과는 강화 해제되지 않습니다.",
         "zh": "(被动效果)\\n战斗开始时,获得相当于生命值上限<color=#28d9ed>30%</color>的护盾。该效果不会被强化解除。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER_IR"
+      ]
     }
   ]
 }

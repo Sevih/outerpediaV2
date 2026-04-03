@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40202075",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -50,11 +50,15 @@
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy. After attacking, increases own <color=#28d9ed>Resilience</color> chance for <color=#28d9ed>1</color> turn.\\nWhen used on own turn, has a <color=#28d9ed>30%</color> chance to use <color=#28d9ed>Flowers Bloom on the Ground</color>. If a buff is active, the activation chance is increased by 40%.\\nThis skill is not affected by nor affects the cooldown of Flowers Bloom on the Ground.",
-        "jp": "敵単体にダメージを与える。攻撃後、自身の<color=#28d9ed>効果抵抗</color>確率が<color=#28d9ed>1</color>ターンの間、増加する。\\n自身のターンに使用時、<color=#28d9ed>30%</color>の確率で<color=#28d9ed>地に咲く花</color>を使用する。強化効果を保有している場合、発動確率が40%増加する。\\n地に咲く花はスキルターンの影響を受けず、与えない。",
+        "jp": "敵単体にダメージを与える。攻撃後、自分の<color=#28d9ed>効果抵抗</color>確率が<color=#28d9ed>1</color>ターンの間、増加する。\\n自分のターンに使用時、<color=#28d9ed>30%</color>の確率で<color=#28d9ed>地に咲く花</color>を使用する。強化効果を保有している場合、発動率が40%増加する。\\n地に咲く花はスキルターンの影響を受けず、与えない。",
         "kr": "적을 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>효과 저항</color> 확률을 증가시킵니다. \\n자신의 턴에 사용 시, <color=#28d9ed>30%</color> 확률로 <color=#28d9ed>땅에는 꽃이</color>를 사용합니다. 강화 효과 보유 시에는 땅에는 꽃이의 발동 확률이 40% 증가합니다. \\n땅에는 꽃이 스킬 쿨타임의 영향을 주거나 받지 않습니다.",
         "zh": "攻击敌人。攻击后,在<color=#28d9ed>1</color>回合内提高自身<color=#28d9ed>效果抵抗</color>概率。\\n在自身回合使用时,有<color=#28d9ed>30%</color>概率使用<color=#28d9ed>大地之花</color>。若持有强化效果,触发概率提高40%。\\n大地之花不受技能冷却影响,也不会影响其冷却。"
       },
-      "icon": "Skill_First_2000058"
+      "icon": "Skill_First_2000058",
+      "buff": [
+        "SYS_BUFF_ADDITIVE_SKILL",
+        "BT_STAT|ST_BUFF_RESIST"
+      ]
     },
     {
       "name": {
@@ -70,7 +74,10 @@
         "kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>15%</color> 만큼 회복시킵니다.",
         "zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>15%</color>。"
       },
-      "icon": "Skill_Second_2000058"
+      "icon": "Skill_Second_2000058",
+      "buff": [
+        "BT_AP_CHARGE"
+      ]
     },
     {
       "name": {
@@ -86,7 +93,13 @@
         "kr": "아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>20%</color> 만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>면역</color>을 부여합니다.\\n적 전체의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
         "zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>20%</color>,并获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。"
       },
-      "icon": "Skill_Ultimate_2000058"
+      "icon": "Skill_Ultimate_2000058",
+      "buff": [
+        "BT_IMMUNE"
+      ],
+      "debuff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     },
     {
       "name": {
@@ -102,7 +115,12 @@
         "kr": "(패시브 효과)\\n치명 피해를 입지 않았을 때 공격 대상에게 <color=#28d9ed>2턴</color>동안 화상을 부여합니다. \\n\\n치명 피해를 보았을 때 공격 대상에게 <color=#28d9ed>1턴</color> 동안 치명 확률 및 방어력을 감소 시킵니다.",
         "zh": "(被动效果)\\n若未受到暴击伤害,则对攻击目标造成烧伤效果,持续<color=#28d9ed>2回合</color>。\\n\\n受到暴击伤害时,使攻击目标的暴击率和命中降低,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "debuff": [
+        "BT_DOT_BURN",
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_DEF"
+      ]
     },
     {
       "name": {
@@ -114,7 +132,7 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nDamage taken is reduced by <color=#28d9ed>20%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\n受けるダメージが<color=#28d9ed>20%</color>減少する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\n受けるダメージが<color=#28d9ed>20%</color>DOWNされる。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n받는 피해가 <color=#28d9ed>20%</color>감소합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n受到的伤害降低<color=#28d9ed>20%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },

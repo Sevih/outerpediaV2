@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40242040",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격합니다. 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1턴</color> 감소시킵니다.",
         "zh": "攻击敌人。攻击后,使目标的<color=#28d9ed>强化效果</color>减少<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_First_4076009"
+      "icon": "Skill_First_4076009",
+      "debuff": [
+        "BT_EXTEND_BUFF"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,10 @@
         "kr": "적 전체를 공격합니다. 치명 공격으로 적중하면 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击全体敌人,若以暴击命中,则获得\\n<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "Skill_Second_4076009"
+      "icon": "Skill_Second_4076009",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ]
     },
     {
       "name": {
@@ -86,7 +92,10 @@
         "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
         "zh": "攻击全体敌人。攻击后,<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_Ultimate_4076009"
+      "icon": "Skill_Ultimate_4076009",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     },
     {
       "name": {
@@ -98,11 +107,14 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "(Passive)\\nDecreases damage taken from <color=#28d9ed>Mages</color> by <color=#28d9ed>80%</color> and increases damage taken from <color=#28d9ed>Strikers</color> by <color=#28d9ed>20%</color>.\\nWhen an enemy uses a non-attack skill, increases <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>5 turn(s)</color>. This effect cannot be removed.",
-        "jp": "(パッシブ効果)\\n<color=#28d9ed>魔法型</color>から受けるダメージが<color=#28d9ed>80%</color>DOWNし、<color=#28d9ed>攻撃型</color>から受けるダメージが<color=#28d9ed>-20%</color>UPする。\\n敵が攻撃以外のスキル使用時、<color=#28d9ed>5ターン</color>の間<color=#28d9ed>会心率</color>がUPする。この効果は解除されない。",
-        "kr": "(패시브 효과)\\n<color=#28d9ed>마법형</color>으로 부터 받는 피해가 <color=#28d9ed>80%</color> 만큼 감소 하고 <color=#28d9ed>공격형</color>으로 부터 받는 피해가 <color=#28d9ed>-20%</color> 만큼 증가합니다\\n적이 공격이 아닌 스킬 사용 시, <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다. 이 효과는 해제되지 않습니다.",
-        "zh": "(被动效果)\\n受到的<color=#28d9ed>魔法型</color>伤害减少<color=#28d9ed>80%</color>,受到的<color=#28d9ed>攻击型</color>伤害增加<color=#28d9ed>-20%</color>。\\n敌人使用非攻击技能时,<color=#28d9ed>暴击率</color>增加,持续<color=#28d9ed>5回合</color>。该效果无法解除。"
+        "jp": "(パッシブ効果)\\n<color=#28d9ed>魔法型</color>から受けるダメージが<color=#28d9ed>80%</color>DOWNし、<color=#28d9ed>攻撃型</color>から受けるダメージが<color=#28d9ed>20%</color>UPする。\\n敵が攻撃以外のスキル使用時、<color=#28d9ed>5ターン</color>の間<color=#28d9ed>会心率</color>がUPする。この効果は解除されない。",
+        "kr": "(패시브 효과)\\n<color=#28d9ed>마법형</color>으로 부터 받는 피해가 <color=#28d9ed>80%</color> 만큼 감소 하고 <color=#28d9ed>공격형</color>으로 부터 받는 피해가 <color=#28d9ed>20%</color> 만큼 증가합니다\\n적이 공격이 아닌 스킬 사용 시, <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>치명 확률</color>이 증가합니다. 이 효과는 해제되지 않습니다.",
+        "zh": "(被动效果)\\n受到的<color=#28d9ed>魔法型</color>伤害减少<color=#28d9ed>80%</color>,受到的<color=#28d9ed>攻击型</color>伤害增加<color=#28d9ed>20%</color>。\\n敌人使用非攻击技能时,<color=#28d9ed>暴击率</color>增加,持续<color=#28d9ed>5回合</color>。该效果无法解除。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE_IR"
+      ]
     },
     {
       "name": {
@@ -136,24 +148,13 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
+        "IG_Buff_Effect_4076009_Interruption",
+        "BT_DAMGE_TAKEN",
         "BT_CP_CHARGE"
+      ],
+      "debuff": [
+        "BT_KILL_UNDER_HP_RATE"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

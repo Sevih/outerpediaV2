@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212015",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -86,7 +86,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>실드</color>를 <color=#28d9ed>1턴</color> 동안 획득합니다. 실드량은 자신의 <color=#28d9ed>공격력</color>이 높을수록 증가합니다.",
         "zh": "攻击敌人,并获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>1回合</color>。自身<color=#28d9ed>攻击力</color>越高,则护盾量越高。"
       },
-      "icon": "Skill_Ultimate_2000045"
+      "icon": "Skill_Ultimate_2000045",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
     }
   ]
 }

@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212070",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적 대상을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续\\n<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_First_2000078"
+      "icon": "Skill_First_2000078",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,12 @@
         "kr": "자신에게 걸려 있는 약화 효과를 <color=#28d9ed>모두</color> 제거하고 적을 공격합니다.\\n공격 후 <color=#28d9ed>2턴</color> 동안 자신은 <color=#28d9ed>은신</color>, 자신을 제외한 아군 전체는 <color=#28d9ed>무적</color>을 획득합니다.",
         "zh": "解除自身附带的<color=#28d9ed>所有</color>弱化效果,并攻击敌人。\\n攻击后,自身获得<color=#28d9ed>隐身</color>效果,除自身之外的全体友军获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>2</color>回合。"
       },
-      "icon": "Skill_Second_2000078"
+      "icon": "Skill_Second_2000078",
+      "buff": [
+        "BT_REMOVE_DEBUFF",
+        "BT_STEALTHED",
+        "BT_INVINCIBLE"
+      ]
     },
     {
       "name": {
@@ -81,7 +89,13 @@
         "kr": "적을 공격합니다. <color=#28d9ed>은신</color> 보유 중에는 사망한 적이 부활 및 소생하지 못하며, 자신은 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "zh": "攻击敌人。附带<color=#28d9ed>隐身</color>效果时,被击杀的敌人无法复活与苏醒,且使自身获得<color=#28d9ed>额外回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000078"
+      "icon": "Skill_Ultimate_2000078",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [
+        "BT_SEALED_RESURRECTION"
+      ]
     },
     {
       "name": {
@@ -93,11 +107,14 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>UPされる。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
       "debuff": [
         "BT_CP_CHARGE"
       ]

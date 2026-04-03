@@ -28,7 +28,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101086",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并使自身的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1\\n回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
     },
     {
       "name": {
@@ -81,7 +87,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Magic_1_Fire"
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
     },
     {
       "name": {
@@ -109,11 +118,14 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nReduces one target's <color=#28d9ed>Priority</color> by <color=#28d9ed>5%</color> when attacking. This effect ignores the target's <color=#28d9ed>Resilience</color>.",
-        "jp": "(パッシブ効果)\\n攻撃時、対象単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-5%</color>DOWNさせる。対象の<color=#28d9ed>効果抵抗</color>を無視して効果が適用される。",
-        "kr": "(패시브 효과)\\n공격 시 대상 한 명의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-5%</color> 감소시킵니다. 대상의 <color=#28d9ed>효과 저항</color>을 무시하고 효과가 적용됩니다.",
-        "zh": "(被动效果)\\n攻击时,使1个目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>-5%</color>。该效果无视目标的<color=#28d9ed>效果抵抗</color>。"
+        "jp": "(パッシブ効果)\\n攻撃時、対象単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>5%</color>DOWNさせる。対象の<color=#28d9ed>効果抵抗</color>を無視して効果が適用される。",
+        "kr": "(패시브 효과)\\n공격 시 대상 한 명의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>5%</color> 감소시킵니다. 대상의 <color=#28d9ed>효과 저항</color>을 무시하고 효과가 적용됩니다.",
+        "zh": "(被动效果)\\n攻击时,使1个目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>5%</color>。该效果无视目标的<color=#28d9ed>效果抵抗</color>。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
     }
   ]
 }

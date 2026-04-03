@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40222090",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -65,7 +65,13 @@
         "kr": "적을 공격하고 대상의 효과 저항을 무시하고 <color=#28d9ed>강화 효과</color>를 모두 해제 합니다. 이후 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>흡혈</color>을 부여합니다.",
         "zh": "攻击敌人,无视目标的效果抵抗,并解除所有<color=#28d9ed>强化效果</color>。此后,使自身获得<color=#28d9ed>吸血</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Second_3000043"
+      "icon": "Skill_Second_3000043",
+      "buff": [
+        "BT_STAT|ST_VAMPIRIC"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     },
     {
       "name": {
@@ -81,7 +87,10 @@
         "kr": "적 전체를 공격하고, 대상에게 <color=#28d9ed>2턴</color> 동안 해제 불가능한 <color=#28d9ed>스턴</color>을 부여합니다.",
         "zh": "攻击全体敌人,并对目标造成无法解除的<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Ultimate_3000043"
+      "icon": "Skill_Ultimate_3000043",
+      "debuff": [
+        "BT_STUN_IR"
+      ]
     },
     {
       "name": {
@@ -97,7 +106,10 @@
         "kr": "전체 공격에 피격 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다.\\n자신의 현재 체력이 85% 초과 시 적에게 입히는 피해가 <color=#28d9ed>100%</color> 증가합니다.\\n\\n화속성이 아닌 적의 <color=#28d9ed>공격력</color>과 <color=#28d9ed>효과 적중</color>이 <color=#28d9ed>50%</color> 감소하고 화속성이 아닌 적에게 받는 피해가 <color=#28d9ed>80%</color> 감소합니다.",
         "zh": "被全体攻击命中时,在<color=#28d9ed>2</color>回合内为自身施加<color=#28d9ed>护盾</color>。\\n当前生命值超过85%时,对敌人造成的伤害提高<color=#28d9ed>100%</color>。\\n\\n非火属性敌人的<color=#28d9ed>攻击力</color>与<color=#28d9ed>效果命中</color>降低<color=#28d9ed>50%</color>,并且受到非火属性敌人的伤害降低<color=#28d9ed>80%</color>。"
       },
-      "icon": "MT_Passive_1_Earth"
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
     },
     {
       "name": {
@@ -109,7 +121,7 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分のHPを<color=#28d9ed>5%</color>回復する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン開始時、自分のHPを<color=#28d9ed>5%</color>回復する。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
@@ -132,23 +144,10 @@
         "kr": "최대 체력의 <color=#28d9ed>50%</color> 이하가 되면 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : WG 피해를 받지 않습니다. (영구 지속) 3턴 후 광폭화가 종료됩니다.\\n\\n<color=#28d9ed>격앙하는 대지</color> : 광폭화 종료 시 사용.\\n적 전체를 공격하고 자신에게 영구적으로 해제되지 않는 <color=#28d9ed>피해 감소</color>를 부여합니다.",
         "zh": "若生命值降至生命值上限的<color=#28d9ed>50%</color>以下,则转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:不会受到WG伤害。(永久持续)3回合后狂暴化结束。\\n\\n<color=#28d9ed>愤怒的大地</color>:狂暴化结束时发动。\\n攻击全体敌人,并为自身赋予一个永久不可被解除的<color=#28d9ed>伤害降低</color>效果。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN"
+      ]
     }
   ]
 }

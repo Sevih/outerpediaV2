@@ -28,7 +28,7 @@
       "zh": "飞天之塔"
     },
     "area_id": {
-      "en": "40101060",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -65,7 +65,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>30%</color> 확률로 대상을 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>30%</color>的几率使目标陷入<color=#28d9ed>烧伤</color>状态,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Second_4034002"
+      "icon": "Skill_Second_4034002",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
     },
     {
       "name": {
@@ -115,24 +118,13 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
+        "BT_STAT|ST_ATK_IR",
+        "BT_DAMGE_TAKEN",
         "BT_CP_CHARGE"
+      ],
+      "debuff": [
+        "BT_DOT_BURN"
       ]
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }

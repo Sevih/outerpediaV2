@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40202080",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적 2인을 공격하고 <color=#28d9ed>65%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "zh": "攻击2名敌人,并有<color=#28d9ed>65%</color>的几率使目标的<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_First_2000043"
+      "icon": "Skill_First_2000043",
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,11 @@
         "kr": "적 2인을 공격하고 <color=#28d9ed>85%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "zh": "攻击<color=#28d9ed>2</color>名敌人,并以<color=#28d9ed>85%</color>的概率移除目标<color=#28d9ed>1</color>个<color=#28d9ed>强化效果</color>。\\n若目标为<color=#28d9ed>持续性</color>效果,则攻击不会未命中,并在<color=#28d9ed>2</color>回合内降低<color=#28d9ed>攻击力</color>。"
       },
-      "icon": "Skill_Second_2000043"
+      "icon": "Skill_Second_2000043",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
@@ -86,7 +93,12 @@
         "kr": "적 2인을 공격하고 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n추가로 지속성 대상에게는 <color=#28d9ed>85%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여합니다.",
         "zh": "攻击2名敌人,并有<color=#28d9ed>85%</color>的几率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低,持续<color=#28d9ed>2回合</color>。\\n并有<color=#28d9ed>85%</color>的几率对土属性目标造成<color=#28d9ed>无法恢复</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000043"
+      "icon": "Skill_Ultimate_2000043",
+      "debuff": [
+        "BT_STAT|ST_DEF",
+        "BT_STAT|ST_SPEED",
+        "BT_SEALED_RECEIVE_HEAL"
+      ]
     }
   ]
 }

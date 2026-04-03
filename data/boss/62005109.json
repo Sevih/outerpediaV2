@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212100",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
         "zh": "攻击敌人,并对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_First_4086026"
+      "icon": "Skill_First_4086026",
+      "debuff": [
+        "BT_DOT_CURSE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,13 @@
         "kr": "적 전체를 공격합니다. 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>저주</color>를 부여하고, 자신의 <color=#28d9ed>효과 적중</color>이 <color=#28d9ed>3턴</color> 동안 증가합니다.",
         "zh": "攻击全体敌人。对目标造成<color=#28d9ed>诅咒</color>,持续<color=#28d9ed>3回合</color>,并使自身<color=#28d9ed>效果命中</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_Second_4086026"
+      "icon": "Skill_Second_4086026",
+      "buff": [
+        "BT_STAT|ST_BUFF_CHANCE"
+      ],
+      "debuff": [
+        "BT_DOT_CURSE"
+      ]
     },
     {
       "name": {
@@ -86,7 +95,11 @@
         "kr": "적 전체를 공격하고 대상의 저주를 모두 <color=#28d9ed>폭발</color> 시킵니다. 이후 체력이 70% 이하인 적은 면역을 무시하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>빙결</color>상태가 됩니다.",
         "zh": "攻击全体敌人,并使目标受到的所有诅咒效果<color=#28d9ed>爆炸</color>。此后无视生命值在70%以下敌人的免疫效果,并使其陷入<color=#28d9ed>冰冻</color>状态,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Ultimate_4086026"
+      "icon": "Skill_Ultimate_4086026",
+      "debuff": [
+        "BT_IMMEDIATELY_CURSE",
+        "BT_FREEZE"
+      ]
     },
     {
       "name": {
@@ -105,6 +118,10 @@
       "icon": "MT_Passive_1_Water",
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_DOT_CURSE_IR",
+        "BT_SEALED_RESURRECTION"
       ]
     },
     {
@@ -117,11 +134,14 @@
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, your Priority increases by <color=#28d9ed>15%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
-        "jp": "常時、<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>上昇する。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>増加する。\\n\\nターン終了時、敵チームのCPを<color=#28d9ed>25</color>減少させる。",
+        "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン終了時、自分の行動ゲージが<color=#28d9ed>15%</color>UPされる。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 종료 시 자신의 행동 게이지가 <color=#28d9ed>15%</color>증가합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,自身行动值+<color=#28d9ed>15%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
       "debuff": [
         "BT_CP_CHARGE"
       ]
@@ -140,7 +160,14 @@
         "kr": "적이 10회 행동할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환하고, 자신에게 해제되지 않는 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 큰 피해를 입힙니다. 이후 대상에게 <color=#28d9ed>9턴</color> 동안 저주를 부여합니다.",
         "zh": "敌人每行动10次,便转化为<color=#28d9ed>狂暴化</color>状态,并使自身获得无法解除的攻击力提升/回避降低效果,持续3回合。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:对全体敌人造成巨额伤害。此后,对目标造成诅咒效果,持续<color=#28d9ed>9回合</color>。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMGE_TAKEN",
+        "BT_STAT|ST_ATK_IR"
+      ],
+      "debuff": [
+        "BT_DOT_CURSE"
+      ]
     }
   ]
 }

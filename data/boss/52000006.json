@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212019",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
-      "icon": "Skill_First_2000006"
+      "icon": "Skill_First_2000006",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>속도</color>가 증가합니다.",
         "zh": "攻击敌人,并使自身<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Second_2000006"
+      "icon": "Skill_Second_2000006",
+      "buff": [
+        "BT_STAT|ST_SPEED"
+      ]
     },
     {
       "name": {
@@ -86,7 +92,11 @@
         "kr": "적을 공격합니다.\\n이 공격으로 적을 처치하면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>50%</color> 증가하고 <color=#28d9ed>3턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
         "zh": "攻击敌人。\\n若该攻击致使敌人死亡,则使自身<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>50%</color>,并使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>3回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000006"
+      "icon": "Skill_Ultimate_2000006",
+      "buff": [
+        "BT_STAT|ST_ATK",
+        "BT_ACTION_GAUGE"
+      ]
     }
   ]
 }

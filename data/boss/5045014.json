@@ -15,16 +15,16 @@
   "IncludeSurname": false,
   "class": "Mage",
   "element": "Light",
-  "level": 112,
+  "level": 124,
   "icons": "2000028",
   "BuffImmune": "ATTACK",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
-      "en": "Tower of Light 41F",
-      "jp": "光の塔 41階",
-      "kr": "빛의 탑 41층",
-      "zh": "光之塔 41层"
+      "en": "Tower of Light 47F",
+      "jp": "光の塔 47階",
+      "kr": "빛의 탑 47층",
+      "zh": "光之塔 47层"
     },
     "mode": {
       "en": "Elemental Tower",
@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40232041",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -70,7 +70,13 @@
         "kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>50%</color> 증가하지만, 그 반동으로 <color=#28d9ed>2턴</color> 동안<color=#28d9ed> 효과 저항</color>이 <color=#28d9ed>100%</color> 감소합니다.",
         "zh": "攻击全体敌人。攻击后,使<color=#28d9ed>暴击率</color>提升<color=#28d9ed>50%</color>,持续<color=#28d9ed>3回合</color>,但其副作用会使<color=#28d9ed>效果抵抗</color>降低<color=#28d9ed>\\n100%</color>,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000028"
+      "icon": "Skill_Ultimate_2000028",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ],
+      "debuff": [
+        "BT_STAT|ST_BUFF_RESIST"
+      ]
     },
     {
       "name": {
@@ -86,7 +92,10 @@
         "kr": "(발동 효과) <color=#28d9ed>파열의 섬광</color>이 <color=#28d9ed>치명 공격</color>으로 적중하면, <color=#28d9ed>마력 전환 기구</color>가 활성화되어 적 전체에게 추가적인 피해를 입힙니다.",
         "zh": "(触发效果)若<color=#28d9ed>破裂闪光</color>以<color=#28d9ed>暴击</color>命中,则激活<color=#28d9ed>魔力转换器</color>,对全体敌人造成额外伤害。"
       },
-      "icon": "Skill_Second_2000028"
+      "icon": "Skill_Second_2000028",
+      "buff": [
+        "SYS_BUFF_ADDITIVE_ATTACK"
+      ]
     }
   ]
 }

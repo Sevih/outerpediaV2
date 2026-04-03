@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40242001",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -45,11 +45,14 @@
       "type": "SKT_FIRST",
       "description": {
         "en": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to reduce <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>30%</color>.",
-        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>-30%</color>DOWNさせる。",
-        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>-30%</color> 감소시킵니다.",
-        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标<color=#28d9ed>行动值</color>降低<color=#28d9ed>-30%</color>。"
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>DOWNさせる。",
+        "kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "攻击敌人,并有<color=#28d9ed>100%</color>的几率使目标<color=#28d9ed>行动值</color>降低<color=#28d9ed>30%</color>。"
       },
-      "icon": "MT_Attack_Hammer_1_Dark"
+      "icon": "MT_Attack_Hammer_1_Dark",
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
     }
   ]
 }

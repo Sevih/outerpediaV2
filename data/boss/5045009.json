@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40232022",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -43,13 +43,11 @@
         "zh": "杂贺众铁炮术"
       },
       "type": "SKT_FIRST",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_First_2000064"
+      "description": {},
+      "icon": "Skill_First_2000064",
+      "debuff": [
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
@@ -59,13 +57,12 @@
         "zh": "嘈杂的结界"
       },
       "type": "SKT_SECOND",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Second_2000064"
+      "description": {},
+      "icon": "Skill_Second_2000064",
+      "debuff": [
+        "BT_EXTEND_DEBUFF",
+        "BT_STAT|ST_BUFF_RESIST"
+      ]
     },
     {
       "name": {
@@ -75,13 +72,15 @@
         "zh": "数珠丸恒次"
       },
       "type": "SKT_ULTIMATE",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "Skill_Ultimate_2000064"
+      "description": {},
+      "icon": "Skill_Ultimate_2000064",
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_SEALED",
+        "BT_STAT|ST_DEF"
+      ]
     }
   ]
 }

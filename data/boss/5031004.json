@@ -28,7 +28,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40222050",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -49,7 +49,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>2턴</color>동안 <color=#28d9ed>치명 확률</color>이 증가합니다.",
         "zh": "攻击敌人,并在<color=#28d9ed>2</color>回合内提高自身<color=#28d9ed>暴击率</color>。"
       },
-      "icon": "MT_Attack_Claw_1_Earth"
+      "icon": "MT_Attack_Claw_1_Earth",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
     },
     {
       "name": {
@@ -65,7 +68,11 @@
         "kr": "<color=#28d9ed>2턴</color>동안 <color=#28d9ed>방어력</color>이 증가합니다.\\n\\n<color=#28d9ed>공격력</color>이 증가한 상태라면 자신의 <color=#28d9ed>강화 효과</color> 지속 턴을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "zh": "<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。\\n\\n若处于<color=#28d9ed>攻击力</color>提升状态,则使自身<color=#28d9ed>强化效果</color>的持续回合数增加<color=#28d9ed>1回合</color>。"
       },
-      "icon": "MT_Attack_Smash_1_Earth"
+      "icon": "MT_Attack_Smash_1_Earth",
+      "buff": [
+        "BT_STAT|ST_DEF",
+        "BT_EXTEND_BUFF"
+      ]
     },
     {
       "name": {
@@ -83,6 +90,7 @@
       },
       "icon": "MT_Attack_Magic_1_Earth",
       "buff": [
+        "BT_STAT|ST_ATK",
         "BT_ADDITIVE_TURN"
       ]
     },
@@ -100,7 +108,13 @@
         "kr": "(패시브 효과)\\n치명 피격 시 자신의 <color=#28d9ed>강화 효과 1개</color>를 제거 한 뒤 행동 게이지와 WG가 10% 회복 됩니다.",
         "zh": "(被动效果)\\n回避时,获得<color=#28d9ed>无敌</color>效果,持续2回合,并解除自身的所有<color=#28d9ed>弱化效果</color>。\\n\\n受到暴击时,解除自身的<color=#28d9ed>1个强化效果</color>后,使行动值和WG恢复10%。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     },
     {
       "name": {
@@ -116,23 +130,10 @@
         "kr": "5턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제한 후 공격합니다. 이 공격은 대상의 <color=#28d9ed>방어력</color>을 무시합니다.\\n광폭화 할 때마다 피해량이 증가합니다.",
         "zh": "每5回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化和必杀技</color>:解除全体敌人的<color=#28d9ed>强化效果</color>后发动攻击。该攻击无视目标的<color=#28d9ed>防御力</color>。\\n每次陷入狂暴化时,伤害量提升。"
       },
-      "icon": "MT_Boss_Rage_Common_1"
-    },
-    {
-      "name": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "",
-        "jp": "",
-        "kr": "",
-        "zh": ""
-      },
-      "icon": "MT_Boss_Rage_Common_1"
+      "icon": "MT_Boss_Rage_Common_1",
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     }
   ]
 }

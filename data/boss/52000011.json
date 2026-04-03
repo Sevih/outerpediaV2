@@ -33,7 +33,7 @@
       "zh": "元素之塔"
     },
     "area_id": {
-      "en": "40212005",
+      "en": "",
       "jp": "",
       "kr": "",
       "zh": ""
@@ -54,7 +54,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率对目标造成<color=#28d9ed>标记</color>效果,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_First_2000011"
+      "icon": "Skill_First_2000011",
+      "debuff": [
+        "BT_MARKING"
+      ]
     },
     {
       "name": {
@@ -70,7 +73,10 @@
         "kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
         "zh": "攻击敌人,并有<color=#28d9ed>30%</color>的几率使自身<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>1回合</color>。"
       },
-      "icon": "Skill_Second_2000011"
+      "icon": "Skill_Second_2000011",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
     },
     {
       "name": {
@@ -86,7 +92,10 @@
         "kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 적의 <color=#28d9ed>공격력</color>을 감소시킵니다.",
         "zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的几率使敌人<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
       },
-      "icon": "Skill_Ultimate_2000011"
+      "icon": "Skill_Ultimate_2000011",
+      "debuff": [
+        "BT_STAT|ST_ATK"
+      ]
     }
   ]
 }
