@@ -272,7 +272,10 @@ const BUFF_BLACKLIST = new Set([
   'BT_RESOURCE_CHARGE', 'BT_RESOURCE_USE_SKILL', 'BT_SKILL_USING_CONDITION',
   'BT_SWAP_STAT_ATTACK', 'BT_DMG_TARGET_DEBUFF', 'BT_DMG_TARGET_STAT', 'BT_DMG_TARGET_BUFF',
   'BT_STAT_OWNER_LOST_HP_RATE', 'BT_STAT_PREMIUM', 'BT_GROUP', 'BT_DMG_REDUCE', 'BT_STAT|ST_HIT_HP_RECOVERY', 'BT_DMG_TARGET_LOST_HP_RATE',
-  'BT_SECOND_TRIGGER','BT_REMOVE_BY_GROUP_ID'
+  'BT_SECOND_TRIGGER','BT_REMOVE_BY_GROUP_ID','BT_SHARE_DMG','BT_RESOURCE_CHARGE_BUFF_CASTER',
+    "BT_NONE",
+  "BT_DMG_REDUCE_FINAL", "BT_REMOVE_DEATH","BT_REVIVAL_N_RUN_PASSIVE_SKILL",
+  "BT_DMG_MY_TEAM_DECREASE", "BT_DMG_KILL_COUNT_STACK",'BT_LIMIT_DMG_TURN'
 ])
 
 // Classify buffs into buff/debuff arrays
@@ -346,6 +349,10 @@ function extractSkills(
   TOOLTIP_BLACKLIST.add('89') // Reduces Lifesteal
   TOOLTIP_BLACKLIST.add('90') // Immortality (= BT_UNDEAD)
   TOOLTIP_BLACKLIST.add('96') // Seal Extra Skill (= BT_SEAL_ADDITIVE_ATTACK)
+  TOOLTIP_BLACKLIST.add('98') // Stealth (= BT_STEALTHED)
+  TOOLTIP_BLACKLIST.add('2100092') // Eternal Bleeding (= BT_DOT_2000092)
+  TOOLTIP_BLACKLIST.add('2200092') // Eternal Bleeding (= BT_DOT_2000092)
+  TOOLTIP_BLACKLIST.add('104') // Golden Curse (= BT_GOLDEN_CURSE)
   for (const tt of tooltipTemplet) {
     const nameEntry = textSystem.get(tt.NameID)
     const name = nameEntry?.[LANG_COLUMNS[DEFAULT_LANG]] ?? tt.NameID
@@ -483,6 +490,12 @@ function extractSkills(
         const burstL1 = burstLevels.find((l) => l.SkillLevel === '1') ?? burstLevels[0]
         if (burstL1?.BuffID) {
           burstL1.BuffID.split(',').map((s) => s.trim()).filter(Boolean).forEach((b) => buffIDSet.add(b))
+        }
+        // Scan implicit burst buffs: {charID}_u_{burstLevel}_*
+        const burstLevel = burstType === 'SKT_BURST_1' ? 1 : burstType === 'SKT_BURST_2' ? 2 : 3
+        const burstPrefix = `${charRow.ID}_u_${burstLevel}_`
+        for (const [bid] of buffsByID) {
+          if (bid.startsWith(burstPrefix)) buffIDSet.add(bid)
         }
         // WG damage on burst desc → BT_WG_REVERSE_HEAL
         const burstDescIDs = (burstEntry.skill.DescID ?? '').split(',').map((s) => s.trim())

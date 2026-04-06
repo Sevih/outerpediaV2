@@ -984,6 +984,19 @@
     "description_zh": "对敌人造成的伤害提升,并强化部分技能。\\n在创世之神奥斯黛死亡之前无法被解除。",
     "icon": "IG_Buff_2000059_Interruption"
   },
+    {
+    "name": "DOLL_GARDEN'S_CARETAKER",
+    "category": "unique",
+    "label": "Doll Garden's Caretaker",
+    "label_jp": "箱庭の主",
+    "label_kr": "모형 정원의 관리자",
+    "label_zh": "模型庄园的管理者",
+    "description": "Increases damage dealt to enemies and enhances certain skill effects.\\nCannot be removed before Demiurge Astei is slain.",
+    "description_jp": "敵に与えるダメージがUPし、\\n【デミウルゴス・アステ】の\\n一部スキルが強化される。\\nこの効果は解除されない。",
+    "description_kr": "적에게 입히는 피해가 증가하고, 일부 스킬이 강화됩니다.\\n데미우르고스 아스테가 사망하기 전까지 해제되지 않습니다.",
+    "description_zh": "对敌人造成的伤害提升,并强化部分技能。\\n在创世之神奥斯黛死亡之前无法被解除。",
+    "icon": "IG_Buff_2000059_Interruption"
+  },
   {
     "name": "IG_Buff_2000063_Interruption",
     "category": "unique",
@@ -1075,8 +1088,34 @@
     "description_zh": "受到单体攻击时,对全体敌人造成永恒出血效果,\\n持续1回合。\\n惩戒领域无法解除。",
     "icon": "IG_Buff_2000092_Interruption"
   },
+    {
+    "name": "RETRIBUTION'S_DOMINION",
+    "category": "unique",
+    "label": "Retribution's Dominion",
+    "label_jp": "懲罰の領域",
+    "label_kr": "징벌의 영역",
+    "label_zh": "惩戒领域",
+    "description": "When hit by a single attack, inflicts Eternal Bleeding on all enemies for 1 turn.\\nRetribution's Dominion cannot be removed.",
+    "description_jp": "単体攻撃を受けた時、敵全体に\\n<color=#28d9ed>【絶えざる出血】</color>を1ターンの間\\n付与する。\\n【懲罰の領域】は解除されない。",
+    "description_kr": "단일 공격 피격 시 적 전체에게 1턴 동안 영원한 출혈을 부여합니다.\\n징벌의 영역은 해제되지 않습니다.",
+    "description_zh": "受到单体攻击时,对全体敌人造成永恒出血效果,\\n持续1回合。\\n惩戒领域无法解除。",
+    "icon": "IG_Buff_2000092_Interruption"
+  },
   {
     "name": "IG_Buff_2000096_Interruption",
+    "category": "unique",
+    "label": "Ariel",
+    "label_jp": "エアリエル",
+    "label_kr": "에어리얼",
+    "label_zh": "风灵疾走",
+    "description": "After attacking an enemy, increases Priority of the caster by 15%.\\nChanges certain skills. (Irremovable)",
+    "description_jp": "敵単体にダメージを与えた後、\\n自分の行動ゲージを15%UPさせる。\\n一部スキルが変更します。\\n(解除不可)",
+    "description_kr": "적 공격 후 자신의 행동 게이지를 15% 증가시킵니다.\\n일부 스킬이 변경됩니다. (해제 불가)",
+    "description_zh": "攻击敌人后,使自身行动值提升15%。\\n部分技能效果改变。(无法解除)",
+    "icon": "IG_Buff_2000096_Interruption"
+  },
+    {
+    "name": "ARIEL",
     "category": "unique",
     "label": "Ariel",
     "label_jp": "エアリエル",
@@ -1168,6 +1207,19 @@
   },
   {
     "name": "IG_Buff_Effect_2000072_Interruption",
+    "category": "unique",
+    "label": "A Ninja's Afterimage",
+    "label_jp": "ニンジャの残像",
+    "label_kr": "닌자의 잔상",
+    "label_zh": "忍者的残像",
+    "description": "25% of damage intended for allies is redirected to Edelweiss. Only the highest value effect will be applied. Cannot be removed until Edelweiss is defeated.",
+    "description_jp": "味方の受けるダメージ25%を 【エーデルバイス】が代わりに受ける。 この効果は数値が最も高い効果のみ 適用される。 【エーデルバイス】が倒れるまで 解除されない。",
+    "description_kr": "아군이 받는 피해의 25%를 에델바이스가 대신 입습니다. 가장 수치가 높은 효과만 적용됩니다. 에델바이스가 사망하기 전까지 해제되지 않습니다.",
+    "description_zh": "艾妲尔薇斯代替友军承受所受伤害的25%。\\n仅对数值最高的效果生效。\\n在艾妲尔薇斯死亡前无法被解除。",
+    "icon": "IG_Buff_Effect_2000072_Interruption"
+  },
+    {
+    "name": "A_NINJA'S_AFTERIMAGE",
     "category": "unique",
     "label": "A Ninja's Afterimage",
     "label_jp": "ニンジャの残像",
