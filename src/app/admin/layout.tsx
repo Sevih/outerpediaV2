@@ -27,9 +27,9 @@ const NAV_GROUPS: NavGroup[] = [
     ],
   },
   {
-    label: 'Extractor v2',
+    label: 'Extractor v3',
     items: [
-      { label: 'Characters', href: '/admin/extractor-v2/characters' },
+      { label: 'Characters', href: '/admin/extractor-v3/characters' },
     ],
   },
   {

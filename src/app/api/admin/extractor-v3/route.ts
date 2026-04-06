@@ -556,6 +556,10 @@ function extractSkills(
         SKT_ULTIMATE: { removeBuff: ['BT_KILL_UNDER_HP_RATE'], debuff: ['BT_KILL_UNDER_HP_RATE'] },
         SKT_CHAIN_PASSIVE: { removeDebuff: ['BT_WG_REVERSE_HEAL'] },
       },
+      '2000021': { SKT_SECOND: { removeBuff: ['BT_STAT|ST_AVOID'] } },
+      '2000042': { SKT_FIRST: { removeBuff: ['BT_INVINCIBLE'] } },
+      '2000043': { SKT_SECOND: { removeDebuff: ['BT_STAT|ST_AVOID'] } },
+      '2000060': { SKT_SECOND: { removeBuff: ['BT_EXTEND_BUFF'] } },
       '2000072': { SKT_ULTIMATE: { debuff: ['BT_STEAL_BUFF'] } },
       '2000109': {
         SKT_FIRST: { removeDebuff: ['BT_DOT_POISON'] },
@@ -713,7 +717,9 @@ function extractSkills(
 
         // Add tooltips from backup skill + chain passive (both shown in same UI window)
         const backupTooltips = (backupLevels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
-        addTooltipBuffs([...chainTooltips, ...backupTooltips], skillOut.dual_buff as string[], skillOut.dual_debuff as string[])
+        // Only propagate generic chain tooltips to dual (not character-specific ones like RADIANT_WILL)
+        const genericChainTooltips = chainTooltips.filter((id) => parseInt(id) < 100000)
+        addTooltipBuffs([...genericChainTooltips, ...backupTooltips], skillOut.dual_buff as string[], skillOut.dual_debuff as string[])
         // Apply forced overrides to dual as well
         const dualForced = FORCED_BUFFS[charRow.ID]?.['SKT_CHAIN_PASSIVE']
         if (dualForced) {
@@ -896,6 +902,13 @@ function extractCharacter(id: string, tables?: Tables) {
   } else if (ribbonTypes.has('SEASONAL')) {
     tags.push('seasonal')
   }
+
+  // ignore-defense: has pierce power rate on skill finish OR on EE
+  const hasIgnoreDefense = t.buffTemplet.some((r) =>
+    (r.BuffID?.startsWith(`${id}_`) && r.Type === 'BT_STAT' && r.StatType === 'ST_PIERCE_POWER_RATE' && r.BuffRemoveType === 'ON_SKILL_FINISH')
+    || (r.BuffID?.startsWith(`BID_CEQUIP_${id}`) && r.StatType === 'ST_PIERCE_POWER_RATE'),
+  )
+  if (hasIgnoreDefense) tags.push('ignore-defense')
 
   // limited flag: true for limited, seasonal, collab
   if (tags.some((t) => ['limited', 'seasonal', 'collab'].includes(t))) {
