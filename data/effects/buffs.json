@@ -333,6 +333,19 @@
     "description_zh": "自身获得随机能力值提升效果,持续2回合。\n攻击力、暴击伤害、暴击率、速度",
     "icon": "IG_Buff_Effect_Random_Buff"
   },
+    {
+    "name": "RANDOM_INCREASED_STAT_EFFECT",
+    "category": "statBoosts",
+    "label": "Random Increased Stat Effect",
+    "label_jp": "ランダムのステータスUP効果",
+    "label_kr": "무작위 능력치 증가 효과",
+    "label_zh": "随机能力值提升效果",
+    "description": "Grants random increased stat effect(s) to the bearer for 2 turns. \nAttack, Critical Damage, Crit Hit Chance, Speed",
+    "description_jp": "自分にランダム強化効果を 2ターンの間付与する。\n攻撃力、会心ダメージ、会心率、スピード",
+    "description_kr": "자신에게 2턴 동안 무작위 능력치 증가 효과를 부여합니다.\n공격력, 치명 피해, 치명 확률, 속도",
+    "description_zh": "自身获得随机能力值提升效果,持续2回合。\n攻击力、暴击伤害、暴击率、速度",
+    "icon": "IG_Buff_Effect_Random_Buff"
+  },
   {
     "name": "BT_REMOVE_DEBUFF",
     "category": "supporting",
@@ -984,8 +997,34 @@
     "description_zh": "对敌人造成的伤害提升,\\n并强化重金属猛禽技能的效果。(无法解除)\\n\\n发动重金属猛禽时,\\n额外效果破坏之剑冷却时间-1回合。\\n重金属猛禽发动后,\\n不会触发敌人的反击、复仇、迅速应对效果。",
     "icon": "IG_Buff_2000075_Interruption"
   },
+    {
+    "name": "DESTROYER'S_PUNISHMENT",
+    "category": "unique",
+    "label": "Destroyer's Punishment",
+    "label_jp": "破壊者の戒め",
+    "label_kr": "파괴자의 응징",
+    "label_zh": "破坏者的惩戒",
+    "description": "Increases damage dealt to the enemy and enhances the effect of Heavy Metal Raptor. (Irremovable)\\n\\nAdditional effects granted when using Heavy Metal Raptor:\\nReduces Destruction Blade cooldown by 1 turn\\nRight after using Heavy Metal Raptor, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+    "description_jp": "敵に与えるダメージがUPし、\\n【ヘヴィメタルラプター】の\\nスキル効果が強化される。\\n(解除不可)\\n\\n【ヘヴィメタルラプター】強化効果:\\n【デストラクションブレード】の\\nスキルターン-1\\n【ヘヴィメタルラプター】\\n発動では敵の反撃、復讐、迅速対応が\\n発動しない。",
+    "description_kr": "적에게 입히는 피해가 증가하고, 헤비메탈 랩터 스킬의 효과가 강화됩니다. (해제 불가)\\n\\n헤비메탈 랩터 발동 시 추가 효과\\n디스트럭션 블레이드 쿨타임 -1턴\\n헤비메탈 랩터 직후 적의 반격, 복수, 신속 대응 발동 불가",
+    "description_zh": "对敌人造成的伤害提升,\\n并强化重金属猛禽技能的效果。(无法解除)\\n\\n发动重金属猛禽时,\\n额外效果破坏之剑冷却时间-1回合。\\n重金属猛禽发动后,\\n不会触发敌人的反击、复仇、迅速应对效果。",
+    "icon": "IG_Buff_2000075_Interruption"
+  },
   {
     "name": "IG_Buff_2000090_Interruption",
+    "category": "unique",
+    "label": "Hubris's Dominion",
+    "label_jp": "傲慢の領域",
+    "label_kr": "오만의 영역",
+    "label_zh": "傲慢领域",
+    "description": "Increases damage dealt to enemies and enhances certain skill effects. (Irremovable)",
+    "description_jp": "敵に与えるダメージがUPし、\\n一部スキルが強化される。\\nこの効果は解除されない。",
+    "description_kr": "적에게 입히는 피해가 증가하고, 일부 스킬이 강화됩니다. (해제 불가)",
+    "description_zh": "对敌人造成的伤害提升,\\n并强化部分技能。(无法解除)",
+    "icon": "IG_Buff_2000090_Interruption"
+  },
+    {
+    "name": "HUBRIS'S_DOMINION",
     "category": "unique",
     "label": "Hubris's Dominion",
     "label_jp": "傲慢の領域",
@@ -1102,7 +1141,7 @@
     "icon": "IG_Buff_Effect_2000094_Interruption"
   },
   {
-    "name": "IG_Buff_Effect_2000100_Interruption",
+    "name": "ETHER_BOOST",
     "category": "unique",
     "label": "Ether Boost",
     "label_jp": "エーテルブースト",
@@ -1142,6 +1181,19 @@
   },
   {
     "name": "IG_Buff_2000035_Interruption",
+    "category": "unique",
+    "label": "Pureblood's Dominion",
+    "label_jp": "鮮血の領域",
+    "label_kr": "선혈의 영역",
+    "label_zh": "鲜血领域",
+    "description": "When an enemy inflicted with Bleeding performs an action, increases Priority of an ally by 10%. Cannot be removed until Eliza is defeated.",
+    "description_jp": "出血状態の敵が行動終了時、 味方の行動ゲージが10%UPする。 この効果は【エリーゼ】が倒れるまで 解除されない。",
+    "description_kr": "행동 종료한 적이 출혈 보유 시 아군의 행동 게이지가 10% 증가합니다. 엘리제가 사망하기 전까지 해제되지 않습니다.",
+    "description_zh": "行动结束的敌人处于出血状态时,\\n使友军行动值提升10%。\\n在伊莉莎死亡之前无法被解除。",
+    "icon": "IG_Buff_2000035_Interruption"
+  },
+  {
+    "name": "PUREBLOOD'S_DOMINION",
     "category": "unique",
     "label": "Pureblood's Dominion",
     "label_jp": "鮮血の領域",

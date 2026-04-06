@@ -271,7 +271,7 @@ const BUFF_BLACKLIST = new Set([
   'BT_HEAL_BASED_TARGET', 'BT_HEAL_BASED_CASTER',
   'BT_RESOURCE_CHARGE', 'BT_RESOURCE_USE_SKILL', 'BT_SKILL_USING_CONDITION',
   'BT_SWAP_STAT_ATTACK', 'BT_DMG_TARGET_DEBUFF', 'BT_DMG_TARGET_STAT', 'BT_DMG_TARGET_BUFF',
-  'BT_STAT_OWNER_LOST_HP_RATE', 'BT_STAT_PREMIUM', 'BT_GROUP', 'BT_DMG_REDUCE', 'BT_STAT|ST_HIT_HP_RECOVERY'
+  'BT_STAT_OWNER_LOST_HP_RATE', 'BT_STAT_PREMIUM', 'BT_GROUP', 'BT_DMG_REDUCE', 'BT_STAT|ST_HIT_HP_RECOVERY', 'BT_DMG_TARGET_LOST_HP_RATE'
 ])
 
 // Classify buffs into buff/debuff arrays
@@ -597,7 +597,7 @@ function extractSkills(
 
         // Add tooltips from backup skill + chain passive
         const backupTooltips = (backupLevels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
-        addTooltipBuffs([...chainTooltips, ...backupTooltips], skillOut.dual_buff as string[], skillOut.dual_debuff as string[])
+        addTooltipBuffs(backupTooltips, skillOut.dual_buff as string[], skillOut.dual_debuff as string[])
       }
     }
 
@@ -944,6 +944,7 @@ function deepDiffs(
       .replace(/[？?]/g, '?')
       .replace(/[％%]/g, '%')
       .replace(/[；;]/g, ';')
+      .replace(/[＋+]/g, '+')
     const type = normalize(extracted) === normalize(existing) ? 'typo' as const : 'changed' as const
     out.push({ key: prefix, type, extracted, existing })
   }

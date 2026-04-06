@@ -39,19 +39,22 @@
   "VoiceActor_kr": "CV. 채림",
   "VoiceActor_zh": "CV. 花守由美里",
   "transcend": {
-    "3": "ATK DEF HP +10%",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\nAlly Team Attack +10%\nIncreases Speed of the caster for 1 turn at battle start",
     "4_1": "ATK DEF HP +16%\nAlly Team Attack +10%\nChain Passive Weakness Gauge reduction +1\n+50 Action Points at battle start",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\nReduces efficiency of Priority increase effects of the enemy by 50%\nPenetration +30% vs. Boss",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n味方の攻撃力+10%\nチェーンパッシブのWGダメージ+1\n戦闘開始時、AP+50",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n敵の行動ゲージUPの効率50%DOWN\nボス対象の貫通力+30%",
     "6_jp": "ATK DEF HP +30%\n味方の攻撃力+10%\n戦闘開始時、自分のスピード1ターンUP",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n아군 공격력 +10%\n체인 패시브의 WG 감소량 +1\n입장 시 AP +50",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n적의 행동 게이지 증가 효율 50% 감소\n보스 대상 관통력 +30%",
     "6_kr": "ATK DEF HP +30%\n아군 공격력 +10%\n전투 입장 시 속도 증가 +1턴",
+    "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n友军攻击力+10%\n连携被动技能的WG降低量+1\n入场时AP+50",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n敌人的行动值提升效率降低50%\n对首领穿透力+30%",
     "6_zh": "ATK DEF HP +30%\n友军攻击力+10%\n战斗开始时速度提升+1回合"
@@ -81,11 +84,11 @@
         "3_kr": "적을 공격하고 <color=#28d9ed>75%</color> 확률로 대상의 필살기 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "4_kr": "적을 공격하고 <color=#28d9ed>75%</color> 확률로 대상의 필살기 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "5_kr": "적을 공격하고 <color=#28d9ed>100%</color> 확률로 대상의 필살기 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.",
-        "1_zh": "攻击敌人,并以<color=#28d9ed>50%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。",
-        "2_zh": "攻击敌人,并以<color=#28d9ed>50%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。",
-        "3_zh": "攻击敌人,并以<color=#28d9ed>75%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。",
-        "4_zh": "攻击敌人,并以<color=#28d9ed>75%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。",
-        "5_zh": "攻击敌人,并以<color=#28d9ed>100%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。"
+        "1_zh": "攻击敌人，并以<color=#28d9ed>50%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。",
+        "2_zh": "攻击敌人，并以<color=#28d9ed>50%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。",
+        "3_zh": "攻击敌人，并以<color=#28d9ed>75%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。",
+        "4_zh": "攻击敌人，并以<color=#28d9ed>75%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。",
+        "5_zh": "攻击敌人，并以<color=#28d9ed>100%</color>的概率使目标的必杀技冷却时间增加<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -183,7 +186,7 @@
           "effect": "Changes to Enhanced Skill\\nTargets all enemies and increases damage dealt",
           "effect_jp": "強化スキルに変更\\n攻撃範囲拡大およびダメージUP",
           "effect_kr": "강화 스킬로 교체\\n공격 범위 확대 및 피해 증가",
-          "effect_zh": "转化为强化技能\\n扩大攻击范围,且伤害提升",
+          "effect_zh": "转化为强化技能\\n扩大攻击范围，且伤害提升",
           "cost": 100,
           "level": 3,
           "offensive": true,
@@ -205,21 +208,21 @@
         "3": "(Passive Effect)\\nWhen the caster removes buffs from an enemy, grants the caster <color=#28d9ed>Destroyer's Punishment</color> for <color=#28d9ed>2 turn(s)</color>.\\nIncreases damage dealt to bosses by <color=#28d9ed>50%</color>.\\n(Triggered Effect) When the caster uses an attack that targets all enemies, uses <color=#ffd732>Heavy Metal Raptor</color>. (Excluding Skill Chains)\\n\\n<color=#ffd732>Heavy Metal Raptor</color>: Attacks all enemies.",
         "4": "(Passive Effect)\\nWhen the caster removes buffs from an enemy, grants the caster <color=#28d9ed>Destroyer's Punishment</color> for <color=#28d9ed>2 turn(s)</color>.\\nIncreases damage dealt to bosses by <color=#28d9ed>50%</color>.\\n(Triggered Effect) When the caster uses an attack that targets all enemies, uses <color=#ffd732>Heavy Metal Raptor</color>. (Excluding Skill Chains)\\n\\n<color=#ffd732>Heavy Metal Raptor</color>: Attacks all enemies.",
         "5": "(Passive Effect)\\nWhen the caster removes buffs from an enemy, grants the caster <color=#28d9ed>Destroyer's Punishment</color> for <color=#28d9ed>2 turn(s)</color>.\\nIncreases damage dealt to bosses by <color=#28d9ed>50%</color>.\\n(Triggered Effect) When the caster uses an attack that targets all enemies, uses <color=#ffd732>Heavy Metal Raptor</color>. (Excluding Skill Chains)\\n\\n<color=#ffd732>Heavy Metal Raptor</color>: Attacks all enemies.",
-        "1_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>:敵全体にダメージを与える。",
-        "2_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>:敵全体にダメージを与える。",
-        "3_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>:敵全体にダメージを与える。",
-        "4_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>:敵全体にダメージを与える。",
-        "5_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>:敵全体にダメージを与える。",
+        "1_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>：敵全体にダメージを与える。",
+        "2_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>：敵全体にダメージを与える。",
+        "3_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>：敵全体にダメージを与える。",
+        "4_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>：敵全体にダメージを与える。",
+        "5_jp": "(パッシブ効果)\\n自分が敵の強化効果を解除した場合、自分に<color=#28d9ed>【破壊者の戒め】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nボスに与えるダメージが<color=#28d9ed>50%</color>UPする。\\n(発動効果)自分が全体攻撃を使用時、<color=#ffd732>【ヘヴィメタルラプター】</color>を発動する。(チェーンスキルでは発動しない)\\n\\n<color=#ffd732>【ヘヴィメタルラプター】</color>：敵全体にダメージを与える。",
         "1_kr": "(패시브 효과)\\n자신이 적의 강화 효과를 해제시키면 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>파괴자의 응징</color>을 획득합니다.\\n보스에게 주는 피해가 <color=#28d9ed>50%</color> 증가합니다.  \\n\\n(발동 효과) 자신이 전체 공격 시 <color=#ffd732>헤비메탈 랩터</color>를 사용합니다. (스킬 체인 제외)\\n\\n<color=#ffd732>헤비메탈 랩터</color> : 적 전체를 공격합니다.",
         "2_kr": "(패시브 효과)\\n자신이 적의 강화 효과를 해제시키면 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>파괴자의 응징</color>을 획득합니다.\\n보스에게 주는 피해가 <color=#28d9ed>50%</color> 증가합니다.  \\n\\n(발동 효과) 자신이 전체 공격 시 <color=#ffd732>헤비메탈 랩터</color>를 사용합니다. (스킬 체인 제외)\\n\\n<color=#ffd732>헤비메탈 랩터</color> : 적 전체를 공격합니다.",
         "3_kr": "(패시브 효과)\\n자신이 적의 강화 효과를 해제시키면 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>파괴자의 응징</color>을 획득합니다.\\n보스에게 주는 피해가 <color=#28d9ed>50%</color> 증가합니다.  \\n\\n(발동 효과) 자신이 전체 공격 시 <color=#ffd732>헤비메탈 랩터</color>를 사용합니다. (스킬 체인 제외)\\n\\n<color=#ffd732>헤비메탈 랩터</color> : 적 전체를 공격합니다.",
         "4_kr": "(패시브 효과)\\n자신이 적의 강화 효과를 해제시키면 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>파괴자의 응징</color>을 획득합니다.\\n보스에게 주는 피해가 <color=#28d9ed>50%</color> 증가합니다.  \\n\\n(발동 효과) 자신이 전체 공격 시 <color=#ffd732>헤비메탈 랩터</color>를 사용합니다. (스킬 체인 제외)\\n\\n<color=#ffd732>헤비메탈 랩터</color> : 적 전체를 공격합니다.",
         "5_kr": "(패시브 효과)\\n자신이 적의 강화 효과를 해제시키면 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>파괴자의 응징</color>을 획득합니다.\\n보스에게 주는 피해가 <color=#28d9ed>50%</color> 증가합니다.  \\n\\n(발동 효과) 자신이 전체 공격 시 <color=#ffd732>헤비메탈 랩터</color>를 사용합니다. (스킬 체인 제외)\\n\\n<color=#ffd732>헤비메탈 랩터</color> : 적 전체를 공격합니다.",
-        "1_zh": "(被动效果)\\n若自身解除敌人的强化效果,则获得<color=#28d9ed>破坏者的惩戒</color>,持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>:攻击全体敌人。",
-        "2_zh": "(被动效果)\\n若自身解除敌人的强化效果,则获得<color=#28d9ed>破坏者的惩戒</color>,持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>:攻击全体敌人。",
-        "3_zh": "(被动效果)\\n若自身解除敌人的强化效果,则获得<color=#28d9ed>破坏者的惩戒</color>,持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>:攻击全体敌人。",
-        "4_zh": "(被动效果)\\n若自身解除敌人的强化效果,则获得<color=#28d9ed>破坏者的惩戒</color>,持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>:攻击全体敌人。",
-        "5_zh": "(被动效果)\\n若自身解除敌人的强化效果,则获得<color=#28d9ed>破坏者的惩戒</color>,持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时,使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>:攻击全体敌人。"
+        "1_zh": "(被动效果)\\n若自身解除敌人的强化效果，则获得<color=#28d9ed>破坏者的惩戒</color>，持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时，使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>：攻击全体敌人。",
+        "2_zh": "(被动效果)\\n若自身解除敌人的强化效果，则获得<color=#28d9ed>破坏者的惩戒</color>，持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时，使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>：攻击全体敌人。",
+        "3_zh": "(被动效果)\\n若自身解除敌人的强化效果，则获得<color=#28d9ed>破坏者的惩戒</color>，持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时，使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>：攻击全体敌人。",
+        "4_zh": "(被动效果)\\n若自身解除敌人的强化效果，则获得<color=#28d9ed>破坏者的惩戒</color>，持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时，使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>：攻击全体敌人。",
+        "5_zh": "(被动效果)\\n若自身解除敌人的强化效果，则获得<color=#28d9ed>破坏者的惩戒</color>，持续<color=#28d9ed>2回合</color>。\\n对首领造成的伤害50%提升。\\n(触发效果)自身发动全体攻击时，使用<color=#ffd732>重金属猛禽</color>。(连携技能除外)\\n\\n<color=#ffd732>重金属猛禽</color>：攻击全体敌人。"
       },
       "enhancement": {
         "2": [
@@ -279,10 +282,10 @@
           "冷却时间-1回合"
         ]
       },
-      "wgr": 3,
+      "wgr": null,
       "cd": 3,
       "buff": [
-        "IG_Buff_2000075_Interruption",
+        "DESTROYER'S_PUNISHMENT",
         "SYS_BUFF_ADDITIVE_ATTACK",
         "BT_COOL3_CHARGE",
         "BT_SEAL_COUNTER"
@@ -315,11 +318,11 @@
         "3_kr": "<color=#28d9ed>80%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제하고 적 전체를 공격합니다.\\n대상의 수가 적을수록 피해가 증가합니다.(최대 60%)\\n공격 후 <color=#28d9ed>80%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
         "4_kr": "<color=#28d9ed>80%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제하고 적 전체를 공격합니다.\\n대상의 수가 적을수록 피해가 증가합니다.(최대 60%)\\n공격 후 <color=#28d9ed>80%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
         "5_kr": "<color=#28d9ed>100%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 해제하고 적 전체를 공격합니다.\\n대상의 수가 적을수록 피해가 증가합니다.(최대 60%)\\n공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>회복 불가</color>를 부여합니다.",
-        "1_zh": "以<color=#28d9ed>70%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少,伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>70%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。",
-        "2_zh": "以<color=#28d9ed>70%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少,伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>70%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。",
-        "3_zh": "以<color=#28d9ed>80%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少,伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>80%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。",
-        "4_zh": "以<color=#28d9ed>80%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少,伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>80%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。",
-        "5_zh": "以<color=#28d9ed>100%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少,伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>100%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。"
+        "1_zh": "以<color=#28d9ed>70%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少，伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>70%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。",
+        "2_zh": "以<color=#28d9ed>70%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少，伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>70%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。",
+        "3_zh": "以<color=#28d9ed>80%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少，伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>80%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。",
+        "4_zh": "以<color=#28d9ed>80%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少，伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>80%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。",
+        "5_zh": "以<color=#28d9ed>100%</color>的概率解除全体敌人的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>并攻击全体敌人。\\n目标数量越少，伤害越高。(最高60%)\\n攻击后以<color=#28d9ed>100%</color>的概率对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>无法恢复</color>。"
       },
       "enhancement": {
         "2": [
@@ -411,11 +414,11 @@
         "3": "<color=#ffd732>Chain Companion Effect</color> : After attacking, deals fixed damage equal to <color=#28d9ed>5%</color> of the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, increases the target's Ultimate Skill cooldown by <color=#28d9ed>1 turn</color>.",
         "4": "<color=#ffd732>Chain Companion Effect</color> : After attacking, deals fixed damage equal to <color=#28d9ed>5%</color> of the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, increases the target's Ultimate Skill cooldown by <color=#28d9ed>1 turn</color>.",
         "5": "<color=#ffd732>Chain Companion Effect</color> : After attacking, deals fixed damage equal to <color=#28d9ed>5%</color> of the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, increases the target's Ultimate Skill cooldown by <color=#28d9ed>1 turn</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(汎用) </color>:攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
-        "2_jp": "<color=#ffd732>チェーン効果(汎用) </color>:攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
-        "3_jp": "<color=#ffd732>チェーン効果(汎用) </color>:攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
-        "4_jp": "<color=#ffd732>チェーン効果(汎用) </color>:攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
-        "5_jp": "<color=#ffd732>チェーン効果(汎用) </color>:攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用) </color>：攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用) </color>：攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用) </color>：攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用) </color>：攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用) </color>：攻撃後、対象に対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象の必殺スキルのスキルターンを<color=#28d9ed>1ターン</color>増加させる。",
         "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 대상에게 대상 최대 체력의 <color=#28d9ed>5%</color> 만큼의 고정 피해를 입힙니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상의 필살기 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 대상에게 대상 최대 체력의 <color=#28d9ed>5%</color> 만큼의 고정 피해를 입힙니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상의 필살기 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.",
         "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 대상에게 대상 최대 체력의 <color=#28d9ed>5%</color> 만큼의 고정 피해를 입힙니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상의 필살기 쿨타임을 <color=#28d9ed>1턴</color> 증가시킵니다.",

@@ -39,22 +39,25 @@
   "VoiceActor_kr": "CV. 김채린",
   "VoiceActor_zh": "CV. 井上穗乃香",
   "transcend": {
-    "3": "ATK DEF HP +10%",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\nWhen using Code: Reverse, grants Ether Boost to Dark heroes except Healers for 1 turn\nAt the start of battle, grants increased Resilience to all allies for 1 turn (Irremovable)",
     "4_1": "ATK DEF HP +16%\n+40% caster's Priority when an ally resists an effect\n(Effects applied at the start of battle excluded, only once per turn)\n+1 Chain Passive Weakness Gauge damage",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\n+25 Action Points at battle start\n+10 Ally Speed",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n味方が効果抵抗時、自分の行動ゲージ+40%\n(戦闘開始時に付与される効果除外、1ターンに一度のみ発動)\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n戦闘開始時、AP+25\n味方のスピード+10",
-    "6_jp": "ATK DEF HP +30%\n【コード:リバース】使用時、回復型以外の\n闇属性に【エーテルブースト】+1ターン追加\n戦闘開始時、味方全体の効果抵抗+1ターン(解除不可)",
+    "6_jp": "ATK DEF HP +30%\n【コード：リバース】使用時、回復型以外の\n闇属性に【エーテルブースト】+1ターン追加\n戦闘開始時、味方全体の効果抵抗+1ターン(解除不可)",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n아군 효과 저항 시 자신 행동 게이지 +40%\n(전투 입장 시 생성 효과 제외, 1턴당 1회)\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 AP +25\n아군 속도 +10",
     "6_kr": "ATK DEF HP +30%\n코드 : 리버스 사용 시 회복형 제외 암속성에게 에테르 부스트 +1턴 추가\n전투 입장 시 아군 전체 효과 저항 +1턴 (해제 불가)",
-    "4_1_zh": "ATK DEF HP +16%\n友军抵抗效果时,自身行动值+40%\n(不包含战斗开始时生成的效果,每回合限1次)\n连锁被动效果的WG降低量+1",
+    "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
+    "4_1_zh": "ATK DEF HP +16%\n友军抵抗效果时，自身行动值+40%\n(不包含战斗开始时生成的效果，每回合限1次)\n连锁被动效果的WG降低量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n入场时AP+25\n友军速度+10",
-    "6_zh": "ATK DEF HP +30%\n使用代码:逆转时,使除恢复型外暗属性同伴附带的以太爆发额外+1回合\n战斗开始时,全体友军效果抵抗+1回合(无法解除)"
+    "6_zh": "ATK DEF HP +30%\n使用代码：逆转时，使除恢复型外暗属性同伴附带的以太爆发额外+1回合\n战斗开始时，全体友军效果抵抗+1回合(无法解除)"
   },
   "skills": {
     "SKT_FIRST": {
@@ -62,9 +65,9 @@
       "IconName": "Skill_First_2000100",
       "SkillType": "SKT_FIRST",
       "name": "Code: Purifier",
-      "name_jp": "コード:ピューリファイヤー",
+      "name_jp": "コード：ピューリファイヤー",
       "name_kr": "코드 : 퓨리파이어",
-      "name_zh": "代码:净化者",
+      "name_zh": "代码：净化者",
       "true_desc_levels": {
         "1": "Attacks an enemy. Increases Priority of the ally with the lowest Health by <color=#28d9ed>10%</color>, and recovers Health by <color=#28d9ed>5%</color> of Delta's Max Health.",
         "2": "Attacks an enemy. Increases Priority of the ally with the lowest Health by <color=#28d9ed>10%</color>, and recovers Health by <color=#28d9ed>5%</color> of Delta's Max Health.",
@@ -81,11 +84,11 @@
         "3_kr": "적을 공격합니다. 체력 상황이 가장 나쁜 아군의 행동 게이지를 <color=#28d9ed>10%</color> 증가시키고, 체력을 델타의 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다.",
         "4_kr": "적을 공격합니다. 체력 상황이 가장 나쁜 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시키고, 체력을 델타의 최대 체력의 <color=#28d9ed>10%</color>만큼 회복시킵니다.",
         "5_kr": "적을 공격합니다. 체력 상황이 가장 나쁜 아군의 행동 게이지를 <color=#28d9ed>20%</color> 증가시키고, 체력을 델타의 최대 체력의 <color=#28d9ed>15%</color>만큼 회복시킵니다.",
-        "1_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>10%</color>,并恢复相当于德尔塔生命值上限<color=#28d9ed>5%</color>的生命值。",
-        "2_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>10%</color>,并恢复相当于德尔塔生命值上限<color=#28d9ed>5%</color>的生命值。",
-        "3_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>10%</color>,并恢复相当于德尔塔生命值上限<color=#28d9ed>10%</color>的生命值。",
-        "4_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>20%</color>,并恢复相当于德尔塔生命值上限<color=#28d9ed>10%</color>的生命值。",
-        "5_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>20%</color>,并恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。"
+        "1_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>10%</color>，并恢复相当于德尔塔生命值上限<color=#28d9ed>5%</color>的生命值。",
+        "2_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>10%</color>，并恢复相当于德尔塔生命值上限<color=#28d9ed>5%</color>的生命值。",
+        "3_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>10%</color>，并恢复相当于德尔塔生命值上限<color=#28d9ed>10%</color>的生命值。",
+        "4_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>20%</color>，并恢复相当于德尔塔生命值上限<color=#28d9ed>10%</color>的生命值。",
+        "5_zh": "攻击敌人。使生命值最低的友军行动值提升<color=#28d9ed>20%</color>，并恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。"
       },
       "enhancement": {
         "2": [
@@ -194,9 +197,9 @@
       "IconName": "Skill_Second_2000100",
       "SkillType": "SKT_SECOND",
       "name": "Code: Icarus",
-      "name_jp": "コード:イカルス",
+      "name_jp": "コード：イカルス",
       "name_kr": "코드 : 이카로스",
-      "name_zh": "代码:伊卡洛斯",
+      "name_zh": "代码：伊卡洛斯",
       "true_desc_levels": {
         "1": "Removes 2 debuffs from the ally target, and recovers the target's Health by <color=#28d9ed>40%</color> of Delta's Max Health. Then, increases Priority of the ally target by <color=#28d9ed>40%</color>.",
         "2": "Removes 2 debuffs from the ally target, and recovers the target's Health by <color=#28d9ed>40%</color> of Delta's Max Health. Then, increases Priority of the ally target by <color=#28d9ed>55%</color>.",
@@ -213,11 +216,11 @@
         "3_kr": "아군 대상의 약화 효과를 2개 해제시키고, 대상의 체력을 델타의 최대 체력의 <color=#28d9ed>40%</color> 만큼 회복시킵니다. 이후 아군 대상의 행동 게이지를 <color=#28d9ed>55%</color> 증가시킵니다.",
         "4_kr": "아군 대상의 약화 효과를 2개 해제시키고, 대상의 체력을 델타의 최대 체력의 <color=#28d9ed>40%</color> 만큼 회복시킵니다. 이후 아군 대상의 행동 게이지를 <color=#28d9ed>70%</color> 증가시킵니다.",
         "5_kr": "아군 대상의 약화 효과를 모두 해제시키고, 대상의 체력을 델타의 최대 체력의 <color=#28d9ed>40%</color> 만큼 회복시킵니다. 이후 아군 대상의 행동 게이지를 <color=#28d9ed>70%</color> 증가시킵니다.",
-        "1_zh": "解除友军目标的2个弱化效果,并恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>40%</color>。",
-        "2_zh": "解除友军目标的2个弱化效果,并恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>55%</color>。",
-        "3_zh": "解除友军目标的2个弱化效果,并恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>55%</color>。",
-        "4_zh": "解除友军目标的2个弱化效果,并恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>70%</color>。",
-        "5_zh": "解除友军目标的所有弱化效果,并使目标恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>70%</color>。"
+        "1_zh": "解除友军目标的2个弱化效果，并恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>40%</color>。",
+        "2_zh": "解除友军目标的2个弱化效果，并恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>55%</color>。",
+        "3_zh": "解除友军目标的2个弱化效果，并恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>55%</color>。",
+        "4_zh": "解除友军目标的2个弱化效果，并恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>70%</color>。",
+        "5_zh": "解除友军目标的所有弱化效果，并使目标恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值。此后使友军目标的行动值提升<color=#28d9ed>70%</color>。"
       },
       "enhancement": {
         "2": [
@@ -284,9 +287,9 @@
       "IconName": "Skill_Ultimate_2000100",
       "SkillType": "SKT_ULTIMATE",
       "name": "Code: Reverse",
-      "name_jp": "コード:リバース",
+      "name_jp": "コード：リバース",
       "name_kr": "코드 : 리버스",
-      "name_zh": "代码:逆转",
+      "name_zh": "代码：逆转",
       "true_desc_levels": {
         "1": "Recovers Health of all allies by <color=#28d9ed>20%</color> of Delta's Max Health, and grants <color=#28d9ed>Revival</color> for <color=#28d9ed>1 turn(s)</color>. Then, grants <color=#28d9ed>Ether Boost</color> to the ally with the highest Attack for <color=#28d9ed>1 turn(s)</color>. <color=#28d9ed>Ether Boost</COLOR> cannot be granted to Healers.",
         "2": "Recovers Health of all allies by <color=#28d9ed>30%</color> of Delta's Max Health, and grants <color=#28d9ed>Revival</color> for <color=#28d9ed>1 turn(s)</color>. Then, grants <color=#28d9ed>Ether Boost</color> to the ally with the highest Attack for <color=#28d9ed>1 turn(s)</color>. <color=#28d9ed>Ether Boost</COLOR> cannot be granted to Healers.",
@@ -303,11 +306,11 @@
         "3_kr": "아군 전체의 체력을 델타 최대 체력의 <color=#28d9ed>30%</color> 만큼 회복하고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>소생</color>을 부여합니다. 이후 공격력이 가장 높은 아군에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>에테르 부스트</color>를 부여합니다. <color=#28d9ed>에테르 부스트</color>는 회복형에게는 부여되지 않습니다.",
         "4_kr": "아군 전체의 체력을 델타 최대 체력의 <color=#28d9ed>40%</color> 만큼 회복하고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>소생</color>을 부여합니다. 이후 공격력이 가장 높은 아군에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>에테르 부스트</color>를 부여합니다. <color=#28d9ed>에테르 부스트</color>는 회복형에게는 부여되지 않습니다.",
         "5_kr": "아군 전체의 체력을 델타 최대 체력의 <color=#28d9ed>40%</color> 만큼 회복하고, <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>소생</color>을 부여합니다. 이후 공격력이 가장 높은 아군에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>에테르 부스트</color>를 부여하고, <color=#28d9ed>추가 턴</color>을 획득합니다. <color=#28d9ed>에테르 부스트</color>는 회복형에게는 부여되지 않습니다.",
-        "1_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>20%</color>的生命值,并获得<color=#28d9ed>苏醒</color>效果,持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果,持续<color=#28d9ed>1回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。",
-        "2_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>30%</color>的生命值,并获得<color=#28d9ed>苏醒</color>效果,持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果,持续<color=#28d9ed>1回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。",
-        "3_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>30%</color>的生命值,并获得<color=#28d9ed>苏醒</color>效果,持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果,持续<color=#28d9ed>1回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。",
-        "4_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值,并获得<color=#28d9ed>苏醒</color>效果,持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果,持续<color=#28d9ed>1回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。",
-        "5_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值,并获得<color=#28d9ed>苏醒</color>效果,持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果,持续<color=#28d9ed>1回合</color>,获得<color=#28d9ed>额外回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。"
+        "1_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>20%</color>的生命值，并获得<color=#28d9ed>苏醒</color>效果，持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果，持续<color=#28d9ed>1回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。",
+        "2_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>30%</color>的生命值，并获得<color=#28d9ed>苏醒</color>效果，持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果，持续<color=#28d9ed>1回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。",
+        "3_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>30%</color>的生命值，并获得<color=#28d9ed>苏醒</color>效果，持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果，持续<color=#28d9ed>1回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。",
+        "4_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值，并获得<color=#28d9ed>苏醒</color>效果，持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果，持续<color=#28d9ed>1回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。",
+        "5_zh": "使全体友军恢复相当于德尔塔生命值上限<color=#28d9ed>40%</color>的生命值，并获得<color=#28d9ed>苏醒</color>效果，持续<color=#28d9ed>1回合</color>。此后使攻击力最高的友军获得<color=#28d9ed>以太爆发</color>效果，持续<color=#28d9ed>1回合</color>，获得<color=#28d9ed>额外回合</color>。无法对恢复型同伴施加<color=#28d9ed>以太爆发</COLOR>效果。"
       },
       "enhancement": {
         "2": [
@@ -363,7 +366,7 @@
       "cd": 5,
       "buff": [
         "BT_REVIVAL",
-        "IG_Buff_Effect_2000100_Interruption",
+        "ETHER_BOOST",
         "BT_ADDITIVE_TURN"
       ],
       "debuff": [],
@@ -384,21 +387,21 @@
         "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers Health of the ally with the lowest Health by <color=#28d9ed>15%</color> of Delta's Max Health.",
         "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers Health of the ally with the lowest Health by <color=#28d9ed>15%</color> of Delta's Max Health.",
         "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, additionally reduces Weakness Gauge by <color=#28d9ed>5</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, recovers Health of the ally with the lowest Health by <color=#28d9ed>15%</color> of Delta's Max Health.",
-        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
-        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
-        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
-        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
-        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>5</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、残りHPが最も低い味方単体のHPを自分の最大HPの<color=#28d9ed>13%</color>回復させる。",
         "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 델타 최대 체력의 <color=#28d9ed>15%</color> 회복시킵니다.",
         "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 델타 최대 체력의 <color=#28d9ed>15%</color> 회복시킵니다.",
         "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 델타 최대 체력의 <color=#28d9ed>15%</color> 회복시킵니다.",
         "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 델타 최대 체력의 <color=#28d9ed>15%</color> 회복시킵니다.",
         "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>5</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군의 체력을 델타 최대 체력의 <color=#28d9ed>15%</color> 회복시킵니다.",
-        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。",
-        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。",
-        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。",
-        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。",
-        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。"
+        "1_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，使<color=#28d9ed>5</color>的WG额外减少。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使生命值最低的友军恢复相当于德尔塔生命值上限<color=#28d9ed>15%</color>的生命值。"
       },
       "enhancement": {
         "2": [
