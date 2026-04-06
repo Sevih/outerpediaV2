@@ -137,16 +137,32 @@ export default function ExtractorV3EEPage() {
     await loadListAndCompare()
   }
 
+  const [saveMessage, setSaveMessage] = useState<{ text: string; type: 'success' | 'error' | 'info' } | null>(null)
+
   async function handleSave() {
     if (!selected) return
     setSaving(true)
+    setSaveMessage(null)
     try {
-      await fetch(API, {
+      const res = await fetch(API, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id: selected, manual: { rank: manualRank, rank10: manualRank10 } }),
       })
+      if (!res.ok) {
+        const err = await res.json()
+        setSaveMessage({ text: `Error: ${err.error ?? 'Unknown'}`, type: 'error' })
+        return
+      }
+      const data = await res.json()
+      if (data.images?.copied) {
+        setSaveMessage({ text: 'Saved + icon copied', type: 'success' })
+      } else {
+        setSaveMessage({ text: 'Saved (icon already exists)', type: 'info' })
+      }
       await handleCompare()
+    } catch (e) {
+      setSaveMessage({ text: `Error: ${e instanceof Error ? e.message : 'Unknown'}`, type: 'error' })
     } finally {
       setSaving(false)
     }
@@ -292,6 +308,11 @@ export default function ExtractorV3EEPage() {
               >
                 {saving ? 'Saving...' : 'Save'}
               </button>
+              {saveMessage && (
+                <span className={`text-xs ${saveMessage.type === 'error' ? 'text-red-400' : saveMessage.type === 'success' ? 'text-green-400' : 'text-zinc-400'}`}>
+                  {saveMessage.text}
+                </span>
+              )}
             </div>
 
             {/* Diffs */}

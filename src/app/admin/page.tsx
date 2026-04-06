@@ -29,12 +29,12 @@ interface BossModeEntry {
 }
 
 const DIFF_CHECKS: Omit<DiffCheck, 'status'>[] = [
-  { label: 'Characters', api: '/api/admin/extractor?action=compare', href: '/admin/extractor/characters' },
+  { label: 'Characters', api: '/api/admin/extractor-v3?action=compare', href: '/admin/extractor-v3/characters' },
+  { label: 'EE', api: '/api/admin/extractor-v3/ee?action=compare', href: '/admin/extractor-v3/ee' },
   { label: 'Weapons', api: '/api/admin/extractor/weapon?action=compare', href: '/admin/extractor/equipment/weapons' },
   { label: 'Accessories', api: '/api/admin/extractor/accessory?action=compare', href: '/admin/extractor/equipment/accessories' },
   { label: 'Armor Sets', api: '/api/admin/extractor/armor?action=compare', href: '/admin/extractor/equipment/armors' },
   { label: 'Talismans', api: '/api/admin/extractor/talisman?action=compare', href: '/admin/extractor/equipment/talismans' },
-  { label: 'EE', api: '/api/admin/extractor/ee?action=compare', href: '/admin/extractor/equipment/ee' },
 ];
 
 

@@ -1106,8 +1106,12 @@ export async function GET(request: NextRequest) {
   const action = searchParams.get('action')
 
   switch (action) {
-    case 'list':
-      return NextResponse.json(listCharacters())
+    case 'list': {
+      const chars = listCharacters()
+      const charDir = path.join(process.cwd(), 'data', 'character')
+      const newCount = chars.filter((c: { id: string }) => !fs.existsSync(path.join(charDir, `${c.id}.json`))).length
+      return NextResponse.json({ characters: chars, new: newCount })
+    }
 
     case 'compare': {
       const tables = loadAllTables()
@@ -1147,7 +1151,7 @@ export async function GET(request: NextRequest) {
       const typo = results.filter((r: Result) => r.typoCount > 0).length
       const newCount = results.filter((r: Result) => r.status === 'new').length
 
-      return NextResponse.json({ total, ok, diff, typo, new: newCount, characters: results })
+      return NextResponse.json({ total, ok, diff, typo, new: newCount, withDiffs: diff, characters: results })
     }
 
     case 'extract': {
@@ -1254,6 +1258,64 @@ function orderKeys(obj: Record<string, unknown>): Record<string, unknown> {
   return ordered
 }
 
+// ── Image copy ──────────────────────────────────────────────────────
+
+const DATAMINE_ROOT = path.join(process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources')
+const PUBLIC_IMAGES = path.join(process.cwd(), 'public', 'images', 'characters')
+
+function copyIfMissing(src: string, dest: string): 'copied' | 'exists' | 'missing' {
+  if (fs.existsSync(dest)) return 'exists'
+  if (!fs.existsSync(src)) return 'missing'
+  fs.mkdirSync(path.dirname(dest), { recursive: true })
+  fs.copyFileSync(src, dest)
+  return 'copied'
+}
+
+function copyCharacterImages(id: string, extracted: Record<string, unknown>): { copied: number; exists: number; missing: number } {
+  const jobs: [string, string][] = [
+    // ATB portraits
+    [
+      path.join(DATAMINE_ROOT, 'sprite', 'at_dungeonruntime', `IG_Turn_${id}.png`),
+      path.join(PUBLIC_IMAGES, 'atb', `IG_Turn_${id}.png`),
+    ],
+    [
+      path.join(DATAMINE_ROOT, 'sprite', 'at_dungeonruntime', `IG_Turn_${id}_E.png`),
+      path.join(PUBLIC_IMAGES, 'atb', `IG_Turn_${id}_E.png`),
+    ],
+    // Full art
+    [
+      path.join(DATAMINE_ROOT, 'prefabs', 'ui', 'illust', `illust_${id}`, `IMG_${id}.png`),
+      path.join(PUBLIC_IMAGES, 'full', `IMG_${id}.png`),
+    ],
+    // Portrait
+    [
+      path.join(DATAMINE_ROOT, 'sprite', 'at_thumbnailcharacterruntime', `CT_${id}.png`),
+      path.join(PUBLIC_IMAGES, 'portrait', `CT_${id}.png`),
+    ],
+  ]
+
+  // Skill icons from extracted data
+  const skills = extracted.skills as Record<string, Record<string, unknown>> | undefined
+  if (skills) {
+    for (const sk of Object.values(skills)) {
+      const iconName = sk.IconName as string | undefined
+      if (iconName) {
+        jobs.push([
+          path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `${iconName}.png`),
+          path.join(PUBLIC_IMAGES, 'skills', `${iconName}.png`),
+        ])
+      }
+    }
+  }
+
+  const results = jobs.map(([src, dest]) => copyIfMissing(src, dest))
+  return {
+    copied: results.filter((r) => r === 'copied').length,
+    exists: results.filter((r) => r === 'exists').length,
+    missing: results.filter((r) => r === 'missing').length,
+  }
+}
+
 export async function POST(request: NextRequest) {
   const { id, manual } = await request.json() as {
     id: string
@@ -1288,5 +1350,8 @@ export async function POST(request: NextRequest) {
   const filePath = path.join(charDir, `${id}.json`)
   fs.writeFileSync(filePath, JSON.stringify(ordered, null, 2) + '\n', 'utf-8')
 
-  return NextResponse.json({ ok: true, id })
+  // Copy images if missing
+  const imagesCopied = copyCharacterImages(id, extracted)
+
+  return NextResponse.json({ ok: true, id, images: imagesCopied })
 }

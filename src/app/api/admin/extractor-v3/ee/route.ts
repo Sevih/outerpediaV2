@@ -387,7 +387,7 @@ function extractEE(id: string, t: Tables): Record<string, unknown> {
   if (descTexts) {
     for (const lang of LANGS) {
       const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
-      const raw = descTexts[lang] ?? ''
+      const raw = (descTexts[lang] ?? '').trim()
       result[`effect${suffix}`] = baseBuff ? resolveEEPlaceholders(raw, baseBuff, baseBuff2) : raw
     }
   }
@@ -395,7 +395,7 @@ function extractEE(id: string, t: Tables): Record<string, unknown> {
   if (upgradeDescTexts) {
     for (const lang of LANGS) {
       const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
-      const raw = upgradeDescTexts[lang] ?? ''
+      const raw = (upgradeDescTexts[lang] ?? '').trim()
       result[`effect10${suffix}`] = changeBuff
         ? resolveEEPlaceholders(raw, changeBuff, changeBuff2)
         : (baseBuff ? resolveEEPlaceholders(raw, baseBuff, baseBuff2) : raw)
@@ -513,19 +513,19 @@ export async function POST(req: NextRequest) {
     id: string
     manual: Record<string, unknown>
   }
-  const { id, manual } = body
+  const { id, manual = {} } = body
   if (!id) return NextResponse.json({ error: 'Missing id' }, { status: 400 })
 
   const t = loadAllTables()
   const existing = loadExisting()
+  const prev = existing[id] ?? {}
 
   const extracted = extractEE(id, t)
 
-  // Merge manual fields into extracted
+  // Merge manual fields: from body, fallback to existing
   for (const key of MANUAL_FIELDS) {
-    if (manual[key] !== undefined) {
-      extracted[key] = manual[key]
-    }
+    const val = manual[key] ?? prev[key]
+    if (val !== undefined) extracted[key] = val
   }
 
   const entry = orderKeys(extracted)
@@ -545,5 +545,23 @@ export async function POST(req: NextRequest) {
 
   fs.writeFileSync(EE_PATH, JSON.stringify(sorted, null, 2) + '\n', 'utf-8')
 
-  return NextResponse.json({ success: true, id })
+  // Copy EE icon if missing
+  const eeImages = copyEEIcon(id)
+
+  return NextResponse.json({ success: true, id, images: eeImages })
+}
+
+// ── Image copy ──────────────────────────────────────────────────────
+
+const DATAMINE_ROOT = path.join(process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources')
+const EE_ICON_DST_DIR = path.join(process.cwd(), 'public', 'images', 'characters', 'ee')
+
+function copyEEIcon(id: string): { copied: boolean } {
+  const src = path.join(DATAMINE_ROOT, 'sprite', 'at_thumbnailitemruntime', `TI_Equipment_EX_${id}.png`)
+  const dst = path.join(EE_ICON_DST_DIR, `${id}.png`)
+  if (fs.existsSync(dst)) return { copied: false }
+  if (!fs.existsSync(src)) return { copied: false }
+  fs.mkdirSync(EE_ICON_DST_DIR, { recursive: true })
+  fs.copyFileSync(src, dst)
+  return { copied: true }
 }

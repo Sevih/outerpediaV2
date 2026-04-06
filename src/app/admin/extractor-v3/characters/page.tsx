@@ -125,6 +125,7 @@ export default function ExtractorV3Page() {
   const [detailLoading, setDetailLoading] = useState(false)
   const [manual, setManual] = useState<ManualFields>({})
   const [saving, setSaving] = useState(false)
+  const [saveMessage, setSaveMessage] = useState<{ text: string; type: 'success' | 'error' | 'info' } | null>(null)
 
   const loadCompare = useCallback(async () => {
     setLoading(true)
@@ -263,24 +264,45 @@ export default function ExtractorV3Page() {
             <button
               onClick={async () => {
                 setSaving(true)
+                setSaveMessage(null)
                 try {
-                  await fetch(API, {
+                  const res = await fetch(API, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ id: selectedId, manual }),
                   })
+                  if (!res.ok) {
+                    const err = await res.json()
+                    setSaveMessage({ text: `Error: ${err.error ?? 'Unknown'}`, type: 'error' })
+                    return
+                  }
+                  const data = await res.json()
+                  const img = data.images
+                  if (img?.copied > 0) {
+                    setSaveMessage({ text: `Saved + ${img.copied} image(s) copied${img.missing > 0 ? `, ${img.missing} missing` : ''}`, type: 'success' })
+                  } else if (img?.missing > 0) {
+                    setSaveMessage({ text: `Saved (${img.missing} image(s) missing in datamine)`, type: 'error' })
+                  } else {
+                    setSaveMessage({ text: 'Saved (all images exist)', type: 'info' })
+                  }
                   await loadCompare()
                   if (selectedId) await loadDetail(selectedId)
                 } catch (e) {
-                  console.error('Save failed:', e)
+                  setSaveMessage({ text: `Error: ${e instanceof Error ? e.message : 'Unknown'}`, type: 'error' })
+                } finally {
+                  setSaving(false)
                 }
-                setSaving(false)
               }}
               disabled={saving}
               className="rounded bg-blue-600 px-4 py-1.5 text-sm font-medium hover:bg-blue-500 disabled:opacity-50"
             >
               {saving ? 'Saving...' : 'Save'}
             </button>
+            {saveMessage && (
+              <span className={`text-xs ${saveMessage.type === 'error' ? 'text-red-400' : saveMessage.type === 'success' ? 'text-green-400' : 'text-zinc-400'}`}>
+                {saveMessage.text}
+              </span>
+            )}
 
             {charEntry?.status === 'ok' && (
               <p className="text-sm text-green-400">No diffs with existing data</p>

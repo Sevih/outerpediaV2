@@ -17,7 +17,7 @@ export async function run() {
     return 'skipped (no bundles)';
   }
 
-  if (!bundlesChanged(STAMP, [PATHS.adminBytes, PATHS.adminJson])) {
+  if (!bundlesChanged(STAMP, [PATHS.adminBytes, PATHS.adminJson, PATHS.adminJson2])) {
     const count = existsSync(PATHS.adminJson)
       ? readdirSync(PATHS.adminJson).filter(f => f.endsWith('.json')).length
       : 0;
@@ -30,6 +30,7 @@ export async function run() {
 
   mkdirSync(PATHS.adminBytes, { recursive: true });
   mkdirSync(PATHS.adminJson, { recursive: true });
+  mkdirSync(PATHS.adminJson2, { recursive: true });
 
   // ── Extract .bytes from bundles ──
 
@@ -76,6 +77,13 @@ export async function run() {
     } catch {
       // Skip files that fail to parse
     }
+  }
+
+  // ── Parse .bytes → .json via Python (json2) ──
+
+  const convertScript = join(__dirname, '../../scripts/convert_bytes.py');
+  if (existsSync(convertScript)) {
+    execFileSync('python', [convertScript, PATHS.adminBytes, PATHS.adminJson2], { timeout: 120_000, stdio: 'ignore' });
   }
 
   // ── Generate skill-buffs.json ──

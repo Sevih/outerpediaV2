@@ -45,6 +45,7 @@ export const PATHS = {
   // Admin data
   adminBytes: join(ROOT, 'data/admin/bytes'),
   adminJson: join(ROOT, 'data/admin/json'),
+  adminJson2: join(ROOT, 'data/admin/json2'),
 
   // Datamine
   datamineFiles: join(ROOT, 'datamine/files'),

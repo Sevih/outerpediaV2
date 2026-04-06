@@ -86,9 +86,12 @@ def parse_bytes_file(filepath):
 
 
 def main():
-    bytes_dir = Path(__file__).parent
-    out_dir = bytes_dir / "json"
-    out_dir.mkdir(exist_ok=True)
+    if len(sys.argv) < 3:
+        print("Usage: convert_bytes.py <bytes_dir> <out_dir>")
+        sys.exit(1)
+    bytes_dir = Path(sys.argv[1])
+    out_dir = Path(sys.argv[2])
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     files = sorted(bytes_dir.glob("*.bytes"))
     success = 0
