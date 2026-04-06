@@ -673,7 +673,7 @@ function extractCharacter(id: string, tables?: Tables) {
       fullname = `${nickname[lang]} ${fullname}`
     }
 
-    result[`Fullname${suffix}`] = fullname
+    result[`Fullname${suffix}`] = fullname.trim()
   }
 
   result.Rarity = parseInt(charRow.BasicStar) || 0
