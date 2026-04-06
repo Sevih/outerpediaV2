@@ -33,19 +33,22 @@
   "VoiceActor_kr": "CV. 김성희",
   "VoiceActor_zh": "CV. 森永千才",
   "transcend": {
-    "3": "ATK DEF HP +10%",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\n+3% Ally Team Effectiveness\n+25 Action Points at battle start",
     "4_1": "ATK DEF HP +16%\n+3% Ally Team Effectiveness\n+1 Chain Passive Weakness Gauge damage",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n味方の効果命中+3%\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方の効果命中+3%\n戦闘開始時、AP+25",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n아군 효과 적중 +3%\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 효과 적중 +3%\n입장 시 AP +25",
+    "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n友军效果命中+3%\n连携被动技能的WG降低量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n友军效果命中+3%\n入场时AP+25"
@@ -75,11 +78,11 @@
         "3_kr": "자신 체력을 <color=#28d9ed>10%</color> 감소시킨 후 적 대상을 공격합니다.\\n<color=#28d9ed>85%</color> 확률로 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소 시킵니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.\\n이 스킬로 인한 체력 감소로는 시전자가 사망하지 않습니다.",
         "4_kr": "자신 체력을 <color=#28d9ed>10%</color> 감소시킨 후 적 대상을 공격합니다.\\n<color=#28d9ed>85%</color> 확률로 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소 시킵니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.\\n이 스킬로 인한 체력 감소로는 시전자가 사망하지 않습니다.",
         "5_kr": "자신 체력을 <color=#28d9ed>10%</color> 감소시킨 후 적 대상을 공격합니다.\\n<color=#28d9ed>100%</color> 확률로 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소 시킵니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.\\n이 스킬로 인한 체력 감소로는 시전자가 사망하지 않습니다.",
-        "1_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后,攻击敌人目标。\\n有<color=#28d9ed>70%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
-        "2_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后,攻击敌人目标。\\n有<color=#28d9ed>70%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
-        "3_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后,攻击敌人目标。\\n有<color=#28d9ed>85%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
-        "4_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后,攻击敌人目标。\\n有<color=#28d9ed>85%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
-        "5_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后,攻击敌人目标。\\n有<color=#28d9ed>100%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。"
+        "1_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后，攻击敌人目标。\\n有<color=#28d9ed>70%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
+        "2_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后，攻击敌人目标。\\n有<color=#28d9ed>70%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
+        "3_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后，攻击敌人目标。\\n有<color=#28d9ed>85%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
+        "4_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后，攻击敌人目标。\\n有<color=#28d9ed>85%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
+        "5_zh": "使自身生命值降低<color=#28d9ed>10%</color> 后，攻击敌人目标。\\n有<color=#28d9ed>100%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。"
       },
       "enhancement": {
         "2": [
@@ -168,11 +171,11 @@
         "3_kr": "자신 체력을 <color=#28d9ed>10%</color> 감소시킨 후 적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>10%</color> 감소 시킵니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.\\n이 스킬로 인한 체력 감소로는 시전자가 사망하지 않습니다.",
         "4_kr": "자신 체력을 <color=#28d9ed>10%</color> 감소시킨 후 적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소 시킵니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.\\n이 스킬로 인한 체력 감소로는 시전자가 사망하지 않습니다.",
         "5_kr": "자신 체력을 <color=#28d9ed>10%</color> 감소시킨 후 적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소 시킵니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.\\n이 스킬로 인한 체력 감소로는 시전자가 사망하지 않습니다.",
-        "1_zh": "使自身生命值降低<color=#28d9ed>10%</color>后,攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>10%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
-        "2_zh": "使自身生命值降低<color=#28d9ed>10%</color>后,攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>10%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
-        "3_zh": "使自身生命值降低<color=#28d9ed>10%</color>后,攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>10%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
-        "4_zh": "使自身生命值降低<color=#28d9ed>10%</color>后,攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
-        "5_zh": "使自身生命值降低<color=#28d9ed>10%</color>后,攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。"
+        "1_zh": "使自身生命值降低<color=#28d9ed>10%</color>后，攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>10%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
+        "2_zh": "使自身生命值降低<color=#28d9ed>10%</color>后，攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>10%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
+        "3_zh": "使自身生命值降低<color=#28d9ed>10%</color>后，攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>10%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
+        "4_zh": "使自身生命值降低<color=#28d9ed>10%</color>后，攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。",
+        "5_zh": "使自身生命值降低<color=#28d9ed>10%</color>后，攻击全体敌人。\\n使目标行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。"
       },
       "enhancement": {
         "2": [
@@ -258,7 +261,7 @@
           "effect": "Increases Speed for 1 turn",
           "effect_jp": "1ターンの間スピードUP",
           "effect_kr": "1턴 동안 속도 증가",
-          "effect_zh": "速度提升,持续1回合",
+          "effect_zh": "速度提升，持续1回合",
           "cost": 150,
           "level": 2,
           "offensive": true,
@@ -300,11 +303,11 @@
         "3_kr": "적 전체를 공격하고, 자신은 <color=#28d9ed>1턴</color> 동안 불사 상태가됩니다.\\n또한, <color=#28d9ed>70%</color> 확률로 무적 상태의 적은 <color=#28d9ed>2턴</color> 그 외의 적은 <color=#28d9ed>1턴</color> 동안 스턴 상태로 만듭니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.",
         "4_kr": "적 전체를 공격하고, 자신은 <color=#28d9ed>1턴</color> 동안 불사 상태가됩니다.\\n또한, <color=#28d9ed>80%</color> 확률로 무적 상태의 적은 <color=#28d9ed>2턴</color> 그 외의 적은 <color=#28d9ed>1턴</color> 동안 스턴 상태로 만듭니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.",
         "5_kr": "적 전체를 공격하고, 자신은 <color=#28d9ed>1턴</color> 동안 불사 상태가됩니다.\\n또한, <color=#28d9ed>100%</color> 확률로 무적 상태의 적은 <color=#28d9ed>2턴</color> 그 외의 적은 <color=#28d9ed>1턴</color> 동안 스턴 상태로 만듭니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.",
-        "1_zh": "攻击全体敌人,并使自身进入不死状态,持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>70%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态,分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。",
-        "2_zh": "攻击全体敌人,并使自身进入不死状态,持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>70%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态,分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。",
-        "3_zh": "攻击全体敌人,并使自身进入不死状态,持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>70%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态,分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。",
-        "4_zh": "攻击全体敌人,并使自身进入不死状态,持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>80%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态,分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。",
-        "5_zh": "攻击全体敌人,并使自身进入不死状态,持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>100%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态,分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。"
+        "1_zh": "攻击全体敌人，并使自身进入不死状态，持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>70%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态，分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。",
+        "2_zh": "攻击全体敌人，并使自身进入不死状态，持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>70%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态，分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。",
+        "3_zh": "攻击全体敌人，并使自身进入不死状态，持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>70%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态，分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。",
+        "4_zh": "攻击全体敌人，并使自身进入不死状态，持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>80%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态，分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。",
+        "5_zh": "攻击全体敌人，并使自身进入不死状态，持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>100%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态，分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。"
       },
       "enhancement": {
         "2": [
@@ -389,21 +392,21 @@
         "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, deals fixed damage equal to <color=#28d9ed>8%</color> of the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to reduce <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>20%</color>.",
         "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, deals fixed damage equal to <color=#28d9ed>8%</color> of the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to reduce <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>20%</color>.",
         "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, deals fixed damage equal to <color=#28d9ed>8%</color> of the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to reduce <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>20%</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
-        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
-        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
-        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
-        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。",
         "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 대상에게 대상 최대 체력의 <color=#28d9ed>8%</color> 만큼의 고정 피해를 입힙니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 감소시킵니다.",
         "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 대상에게 대상 최대 체력의 <color=#28d9ed>8%</color> 만큼의 고정 피해를 입힙니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 감소시킵니다.",
         "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 대상에게 대상 최대 체력의 <color=#28d9ed>8%</color> 만큼의 고정 피해를 입힙니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 감소시킵니다.",
         "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 대상에게 대상 최대 체력의 <color=#28d9ed>8%</color> 만큼의 고정 피해를 입힙니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 감소시킵니다.",
         "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 대상에게 대상 최대 체력의 <color=#28d9ed>8%</color> 만큼의 고정 피해를 입힙니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 감소시킵니다.",
-        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。",
-        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。",
-        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。",
-        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。",
-        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。"
+        "1_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，对目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。"
       },
       "enhancement": {
         "2": [

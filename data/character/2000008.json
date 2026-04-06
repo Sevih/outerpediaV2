@@ -32,19 +32,22 @@
   "VoiceActor_kr": "CV. 이보희",
   "VoiceActor_zh": "CV. 明坂聪美",
   "transcend": {
-    "3": "ATK DEF HP +10%",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\n+5% Ally Team Defense\n+25 Action Points at battle start",
     "4_1": "ATK DEF HP +16%\n+5% Ally Team Defense\n+1 Chain Passive Weakness Gauge damage",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n味方の防御力+5%\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方の防御力+5%\n戦闘開始時、AP+25",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n아군 방어력 +5%\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 방어력 +5%\n입장 시 AP +25",
+    "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n友军防御力+5%\n连携被动技能的WG降低量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n友军防御力+5%\n入场时AP+25"
@@ -74,11 +77,11 @@
         "3_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
         "4_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
         "5_kr": "적 2인을 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "1_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
-        "2_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
-        "3_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
-        "4_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。",
-        "5_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,\\n对首领造成更高伤害。"
+        "1_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，\\n对首领造成更高伤害。",
+        "2_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，\\n对首领造成更高伤害。",
+        "3_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，\\n对首领造成更高伤害。",
+        "4_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，\\n对首领造成更高伤害。",
+        "5_zh": "攻击2名敌人造成强击伤害。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，\\n对首领造成更高伤害。"
       },
       "enhancement": {
         "2": [
@@ -167,11 +170,11 @@
         "3_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>12%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
         "4_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>12%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
         "5_kr": "적 전체를 강격으로 공격하고 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가하고\\n보스에게는 더 큰 피해를 입힙니다.",
-        "1_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
-        "2_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
-        "3_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
-        "4_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
-        "5_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大,且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。"
+        "1_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大，且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
+        "2_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大，且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
+        "3_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大，且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
+        "4_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大，且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。",
+        "5_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大，且对<color=#28d9ed>首领</color>造成更高伤害。\\n自身获得<color=#28d9ed>追加回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -238,9 +241,9 @@
       "wgr": 1,
       "cd": 3,
       "buff": [
-        "HEAVY_STRIKE",
         "BT_STAT|ST_DEF",
-        "BT_COOL3_CHARGE"
+        "BT_COOL3_CHARGE",
+        "HEAVY_STRIKE"
       ],
       "debuff": [],
       "offensive": true,
@@ -302,11 +305,11 @@
         "3_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
         "4_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
         "5_kr": "스킬 사용 전 대상 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시키고(효과 저항 무시) 적 전체를 강격으로 공격합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 추가로 증가합니다.\\n보스에게는 더 큰 피해를 입히고 자신은 <color=#28d9ed>추가 턴</color>을 얻습니다.",
-        "1_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
-        "2_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
-        "3_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
-        "4_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。",
-        "5_zh": "在技能发动前,使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合(无视效果抵抗),然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高,目标越少伤害越大。\\n对Boss造成更高伤害,自身获得<color=#28d9ed>追加回合</color>。"
+        "1_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大。\\n对Boss造成更高伤害，自身获得<color=#28d9ed>追加回合</color>。",
+        "2_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大。\\n对Boss造成更高伤害，自身获得<color=#28d9ed>追加回合</color>。",
+        "3_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大。\\n对Boss造成更高伤害，自身获得<color=#28d9ed>追加回合</color>。",
+        "4_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大。\\n对Boss造成更高伤害，自身获得<color=#28d9ed>追加回合</color>。",
+        "5_zh": "在技能发动前，使全体敌人的<color=#28d9ed>防御力</color>降低<color=#28d9ed>2</color>回合（无视效果抵抗），然后以强击攻击全体敌人。\\n自身<color=#28d9ed>最大生命值</color>越高伤害越高，目标越少伤害越大。\\n对Boss造成更高伤害，自身获得<color=#28d9ed>追加回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -365,8 +368,8 @@
       "wgr": 2,
       "cd": 5,
       "buff": [
-        "HEAVY_STRIKE",
-        "BT_ADDITIVE_TURN"
+        "BT_ADDITIVE_TURN",
+        "HEAVY_STRIKE"
       ],
       "debuff": [
         "BT_STAT|ST_DEF"
@@ -388,21 +391,21 @@
         "3": "<color=#ffd732>Chain Starter Effect</color>: Increases Skill Chain damage of all allies. Applies <color=#28d9ed>Heavy Strike</color> to this attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Health</color>. Applies <color=#28d9ed>Heavy Strike</color> to this attack.",
         "4": "<color=#ffd732>Chain Starter Effect</color>: Increases Skill Chain damage of all allies. Applies <color=#28d9ed>Heavy Strike</color> to this attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Health</color>. Applies <color=#28d9ed>Heavy Strike</color> to this attack.",
         "5": "<color=#ffd732>Chain Starter Effect</color>: Increases Skill Chain damage of all allies. Applies <color=#28d9ed>Heavy Strike</color> to this attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to the caster's <color=#28d9ed>Health</color>. Applies <color=#28d9ed>Heavy Strike</color> to this attack.",
-        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
-        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
-        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
-        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
-        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>:自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>：味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>：自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>：味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>：自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>：味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>：自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>：味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>：自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>：味方全体のチェーンスキルのダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。\\n\\n<color=#ffd732>連携効果</color>：自分の<color=#28d9ed>HP</color>が高いほどダメージがUPする。このスキルは<color=#28d9ed>強撃</color>の攻撃判定になる。",
         "1_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
         "2_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
         "3_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
         "4_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
         "5_kr": "<color=#ffd732>체인 스타터 효과</color> : 아군 전체의 스킬 체인 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.\\n\\n<color=#ffd732>협공 효과</color> : 자신의 <color=#28d9ed>체력</color>이 높을수록 피해량이 증가합니다. 해당 공격은 <color=#28d9ed>강격</color>으로 적용됩니다.",
-        "1_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
-        "2_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
-        "3_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
-        "4_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
-        "5_zh": "<color=#ffd732>连携起始效果</color>:使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>:自身<color=#28d9ed>生命值</color>越高,则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。"
+        "1_zh": "<color=#ffd732>连携起始效果</color>：使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>：自身<color=#28d9ed>生命值</color>越高，则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
+        "2_zh": "<color=#ffd732>连携起始效果</color>：使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>：自身<color=#28d9ed>生命值</color>越高，则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
+        "3_zh": "<color=#ffd732>连携起始效果</color>：使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>：自身<color=#28d9ed>生命值</color>越高，则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
+        "4_zh": "<color=#ffd732>连携起始效果</color>：使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>：自身<color=#28d9ed>生命值</color>越高，则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。",
+        "5_zh": "<color=#ffd732>连携起始效果</color>：使全体友军的连携技能伤害量提升。该攻击造成<color=#28d9ed>强击</color>。\\n\\n<color=#ffd732>夹攻效果</color>：自身<color=#28d9ed>生命值</color>越高，则伤害量越高。该攻击造成<color=#28d9ed>强击</color>。"
       },
       "enhancement": {
         "2": [

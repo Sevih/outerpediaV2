@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { parseBytes } from '@/app/admin/lib/bytes-parser';
 
-const JSON_DIR = path.join(process.cwd(), 'data', 'admin', 'json');
+const JSON_DIR = path.join(process.cwd(), 'data', 'admin', 'json2');
 const BYTES_DIR = path.join(process.cwd(), 'data', 'admin', 'bytes');
 
 /**
@@ -23,15 +23,15 @@ export async function GET(req: NextRequest) {
 
   if (action === 'list') {
     try {
-      const entries = await fs.readdir(JSON_DIR);
+      const entries = await fs.readdir(BYTES_DIR);
       const files = entries
-        .filter(f => f.endsWith('.json'))
+        .filter(f => f.endsWith('.bytes'))
         .sort((a, b) => a.localeCompare(b))
-        .map(f => ({ name: f.replace('.json', '.bytes') }));
+        .map(f => ({ name: f }));
 
       return NextResponse.json({ files });
     } catch {
-      return NextResponse.json({ error: 'Cannot read cache directory' }, { status: 500 });
+      return NextResponse.json({ error: 'Cannot read bytes directory' }, { status: 500 });
     }
   }
 
@@ -51,7 +51,9 @@ export async function GET(req: NextRequest) {
       try {
         const buffer = await fs.readFile(bytesPath);
         const result = parseBytes(Buffer.from(buffer));
-        await fs.writeFile(jsonPath, JSON.stringify(result), 'utf-8');
+        // Save as flat row array (same format as Python convert_bytes.py)
+        await fs.mkdir(path.dirname(jsonPath), { recursive: true });
+        await fs.writeFile(jsonPath, JSON.stringify(result.data, null, 2), 'utf-8');
         return NextResponse.json(result);
       } catch (e) {
         const message = e instanceof Error ? e.message : 'Parse error';
@@ -59,10 +61,22 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // Read from cache
+    // Read from cache (json2 format: flat array of row objects)
     try {
       const cached = await fs.readFile(jsonPath, 'utf-8');
-      return NextResponse.json(JSON.parse(cached));
+      const parsed = JSON.parse(cached);
+      // Wrap flat array into ParseResult format expected by the page
+      const rows: Record<string, string>[] = Array.isArray(parsed) ? parsed : parsed.data ?? [];
+      const columns: Record<number, string> = {};
+      if (rows.length > 0) {
+        Object.keys(rows[0]).forEach((key, i) => { columns[i] = key; });
+      }
+      return NextResponse.json({
+        className: safeName.replace('.bytes', ''),
+        columns,
+        columnCount: Object.keys(columns).length,
+        data: rows,
+      });
     } catch {
       return NextResponse.json({ error: 'File not found in cache' }, { status: 404 });
     }

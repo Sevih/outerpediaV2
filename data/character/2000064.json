@@ -33,19 +33,22 @@
   "VoiceActor_kr": "CV. 방시우",
   "VoiceActor_zh": "CV. 三宅麻理惠",
   "transcend": {
-    "3": "ATK DEF HP +10%",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\nAllies DMG Incr +2%\nOn entry, AP +25",
     "4_1": "ATK DEF HP +16%\nAllies DMG Incr +2%\nChain Passive WG reduction +1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n味方のダメージ+2%\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方のダメージ+2%\n戦闘開始時、AP+25",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n아군 피해 증가 +2%\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 피해 증가 +2%\n입장 시 AP +25",
+    "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n我方造成伤害提升2%\n连携被动技能的WG降低量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n我方造成伤害提升2%\n入场时AP+25"
@@ -75,11 +78,11 @@
         "3_kr": "적을 공격하고 <color=#28d9ed>55%</color>의 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "4_kr": "적을 공격하고 <color=#28d9ed>55%</color>의 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "5_kr": "적을 공격하고 <color=#28d9ed>70%</color>의 확률로 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
-        "1_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率降低目标的<color=#28d9ed>攻击力</color>,持续<color=#28d9ed>2回合</color>。",
-        "2_zh": "攻击敌人,并有<color=#28d9ed>40%</color>的几率降低目标的<color=#28d9ed>攻击力</color>,持续<color=#28d9ed>2回合</color>。",
-        "3_zh": "攻击敌人,并有<color=#28d9ed>55%</color>的几率降低目标的<color=#28d9ed>攻击力</color>,持续<color=#28d9ed>2回合</color>。",
-        "4_zh": "攻击敌人,并有<color=#28d9ed>55%</color>的几率降低目标的<color=#28d9ed>攻击力</color>,持续<color=#28d9ed>2回合</color>。",
-        "5_zh": "攻击敌人,并有<color=#28d9ed>70%</color>的几率降低目标的<color=#28d9ed>攻击力</color>,持续<color=#28d9ed>2回合</color>。"
+        "1_zh": "攻击敌人，并有<color=#28d9ed>40%</color>的几率降低目标的<color=#28d9ed>攻击力</color>，持续<color=#28d9ed>2回合</color>。",
+        "2_zh": "攻击敌人，并有<color=#28d9ed>40%</color>的几率降低目标的<color=#28d9ed>攻击力</color>，持续<color=#28d9ed>2回合</color>。",
+        "3_zh": "攻击敌人，并有<color=#28d9ed>55%</color>的几率降低目标的<color=#28d9ed>攻击力</color>，持续<color=#28d9ed>2回合</color>。",
+        "4_zh": "攻击敌人，并有<color=#28d9ed>55%</color>的几率降低目标的<color=#28d9ed>攻击力</color>，持续<color=#28d9ed>2回合</color>。",
+        "5_zh": "攻击敌人，并有<color=#28d9ed>70%</color>的几率降低目标的<color=#28d9ed>攻击力</color>，持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -172,11 +175,11 @@
         "3_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>85%</color>의 확률로 적이 보유한 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킨 후, 약화 효과가 없는 대상의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "4_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>85%</color>의 확률로 적이 보유한 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킨 후, 약화 효과가 없는 대상의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
         "5_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>100%</color>의 확률로 적이 보유한 약화 효과의 지속 시간을 <color=#28d9ed>1턴</color> 증가시킨 후, 약화 효과가 없는 대상의 <color=#28d9ed>효과 저항</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
-        "1_zh": "攻击全体敌人。攻击后,有<color=#28d9ed>70%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>,使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。",
-        "2_zh": "攻击全体敌人。攻击后,有<color=#28d9ed>70%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>,使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。",
-        "3_zh": "攻击全体敌人。攻击后,有<color=#28d9ed>85%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>,使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。",
-        "4_zh": "攻击全体敌人。攻击后,有<color=#28d9ed>85%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>,使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。",
-        "5_zh": "攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>,使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低,持续<color=#28d9ed>2回合</color>。"
+        "1_zh": "攻击全体敌人。攻击后，有<color=#28d9ed>70%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>，使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低，持续<color=#28d9ed>2回合</color>。",
+        "2_zh": "攻击全体敌人。攻击后，有<color=#28d9ed>70%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>，使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低，持续<color=#28d9ed>2回合</color>。",
+        "3_zh": "攻击全体敌人。攻击后，有<color=#28d9ed>85%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>，使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低，持续<color=#28d9ed>2回合</color>。",
+        "4_zh": "攻击全体敌人。攻击后，有<color=#28d9ed>85%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>，使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低，持续<color=#28d9ed>2回合</color>。",
+        "5_zh": "攻击全体敌人。攻击后，有<color=#28d9ed>100%</color>的几率使敌人附带的弱化效果持续时间增加<color=#28d9ed>1回合</color>，使未附带弱化效果目标的<color=#28d9ed>效果抵抗</color>降低，持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -304,11 +307,11 @@
         "3_kr": "적 전체를 공격하고 <color=#28d9ed>80%</color>의 확률로 <color=#28d9ed>1턴</color> 동안 적 전체에게 <color=#28d9ed>강화 불가</color>와 <color=#28d9ed>방어력 감소</color>를 부여합니다.\\n이 스킬 직후에는 <color=#28d9ed>80%</color>의 확률로 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "4_kr": "적 전체를 공격하고 <color=#28d9ed>80%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>강화 불가</color>와 <color=#28d9ed>방어력 감소</color>를 부여합니다.\\n이 스킬 직후에는 <color=#28d9ed>80%</color>의 확률로 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "5_kr": "적 전체를 공격하고 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>강화 불가</color>와 <color=#28d9ed>방어력 감소</color>를 부여합니다.\\n이 스킬 직후에는 <color=#28d9ed>100%</color>의 확률로 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
-        "1_zh": "攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果,持续 <color=#28d9ed>1回合</color>。\\n此技能发动后,有<color=#28d9ed>80%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。",
-        "2_zh": "攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果,持续 <color=#28d9ed>1回合</color>。\\n此技能发动后,有<color=#28d9ed>80%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。",
-        "3_zh": "攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果,持续 <color=#28d9ed>1回合</color>。\\n此技能发动后,有<color=#28d9ed>80%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。",
-        "4_zh": "攻击全体敌人,并有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果,持续 <color=#28d9ed>2回合</color>。\\n此技能发动后,有<color=#28d9ed>80%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。",
-        "5_zh": "攻击全体敌人,并有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果,持续 <color=#28d9ed>2回合</color>。\\n此技能发动后,有<color=#28d9ed>100%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。"
+        "1_zh": "攻击全体敌人，并有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果，持续 <color=#28d9ed>1回合</color>。\\n此技能发动后，有<color=#28d9ed>80%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。",
+        "2_zh": "攻击全体敌人，并有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果，持续 <color=#28d9ed>1回合</color>。\\n此技能发动后，有<color=#28d9ed>80%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。",
+        "3_zh": "攻击全体敌人，并有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果，持续 <color=#28d9ed>1回合</color>。\\n此技能发动后，有<color=#28d9ed>80%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。",
+        "4_zh": "攻击全体敌人，并有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果，持续 <color=#28d9ed>2回合</color>。\\n此技能发动后，有<color=#28d9ed>80%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。",
+        "5_zh": "攻击全体敌人，并有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>无法强化</color>与<color=#28d9ed>防御力降低</color>效果，持续 <color=#28d9ed>2回合</color>。\\n此技能发动后，有<color=#28d9ed>100%</color>的几率不会触发敌人的反击、复仇、迅速应对效果。"
       },
       "enhancement": {
         "2": [
@@ -394,21 +397,21 @@
         "3": "<color=#ffd732>Chain Starter Effect</color>: Increases <color=#28d9ed>Attack</color> of all allies for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to decrease the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
         "4": "<color=#ffd732>Chain Starter Effect</color>: Increases <color=#28d9ed>Attack</color> of all allies for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to decrease the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
         "5": "<color=#ffd732>Chain Starter Effect</color>: Increases <color=#28d9ed>Attack</color> of all allies for <color=#28d9ed>2 turn(s)</color>, then attacks an enemy.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to decrease the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>:<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
-        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>:<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
-        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>:<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
-        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>:<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
-        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>:<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
+        "1_jp": "<color=#ffd732>チェーン効果(初手)</color>：<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
+        "2_jp": "<color=#ffd732>チェーン効果(初手)</color>：<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
+        "3_jp": "<color=#ffd732>チェーン効果(初手)</color>：<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
+        "4_jp": "<color=#ffd732>チェーン効果(初手)</color>：<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
+        "5_jp": "<color=#ffd732>チェーン効果(初手)</color>：<color=#28d9ed>2ターン</color>の間、味方全体の<color=#28d9ed>攻撃力</color>をUPさせた後、敵単体にダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>70%</color>の確率で<color=#28d9ed>2ターン</color>の間、対象の<color=#28d9ed>攻撃力</color>をDOWNさせる。",
         "1_kr": "<color=#ffd732>체인 스타터 효과</color> : <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>을 증가시킨 후 적을 공격합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.",
         "2_kr": "<color=#ffd732>체인 스타터 효과</color> : <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>을 증가시킨 후 적을 공격합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.",
         "3_kr": "<color=#ffd732>체인 스타터 효과</color> : <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>을 증가시킨 후 적을 공격합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.",
         "4_kr": "<color=#ffd732>체인 스타터 효과</color> : <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>을 증가시킨 후 적을 공격합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.",
         "5_kr": "<color=#ffd732>체인 스타터 효과</color> : <color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>공격력</color>을 증가시킨 후 적을 공격합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>70%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 적 대상의 <color=#28d9ed>공격력</color>을 감소시킵니다.",
-        "1_zh": "<color=#ffd732>连携起始效果</color>:使我方全体的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>,随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
-        "2_zh": "<color=#ffd732>连携起始效果</color>:使我方全体的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>,随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
-        "3_zh": "<color=#ffd732>连携起始效果</color>:使我方全体的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>,随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
-        "4_zh": "<color=#ffd732>连携起始效果</color>:使我方全体的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>,随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。",
-        "5_zh": "<color=#ffd732>连携起始效果</color>:使我方全体的<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>,随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低,持续<color=#28d9ed>2回合</color>。"
+        "1_zh": "<color=#ffd732>连携起始效果</color>：使我方全体的<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>2回合</color>，随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低，持续<color=#28d9ed>2回合</color>。",
+        "2_zh": "<color=#ffd732>连携起始效果</color>：使我方全体的<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>2回合</color>，随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低，持续<color=#28d9ed>2回合</color>。",
+        "3_zh": "<color=#ffd732>连携起始效果</color>：使我方全体的<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>2回合</color>，随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低，持续<color=#28d9ed>2回合</color>。",
+        "4_zh": "<color=#ffd732>连携起始效果</color>：使我方全体的<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>2回合</color>，随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低，持续<color=#28d9ed>2回合</color>。",
+        "5_zh": "<color=#ffd732>连携起始效果</color>：使我方全体的<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>2回合</color>，随后攻击敌人。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的概率使目标的<color=#28d9ed>攻击力</color>降低，持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
         "2": [

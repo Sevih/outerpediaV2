@@ -33,19 +33,22 @@
   "VoiceActor_kr": "CV. 안영미",
   "VoiceActor_zh": "CV. 甲斐田裕子",
   "transcend": {
-    "3": "ATK DEF HP +10%",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\nAllies DMG Incr +2%\nOn entry, AP +25",
     "4_1": "ATK DEF HP +16%\nAllies DMG Incr +2%\nChain Passive WG reduction +1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n味方のダメージ+2%\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方のダメージ+2%\n戦闘開始時、AP+25",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n아군 피해 증가 +2%\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 피해 증가 +2%\n입장 시 AP +25",
+    "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n我方造成伤害提升2%\n连携被动技能的WG降低量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n我方造成伤害提升2%\n入场时AP+25"
@@ -75,11 +78,11 @@
         "3_kr": "적을 공격하고 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킨 뒤\\n<color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color> 증가를 부여합니다.",
         "4_kr": "적을 공격하고 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킨 뒤\\n<color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color> 증가를 부여합니다.",
         "5_kr": "적을 공격하고 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킨 뒤\\n<color=#28d9ed>1턴</color> 동안 <color=#28d9ed>속도</color> 증가를 부여합니다.",
-        "1_zh": "攻击敌人,使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>后,\\n使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
-        "2_zh": "攻击敌人,使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>后,\\n使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
-        "3_zh": "攻击敌人,使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>后,\\n使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
-        "4_zh": "攻击敌人,使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>后,\\n使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。",
-        "5_zh": "攻击敌人,使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>后,\\n使<color=#28d9ed>速度</color>提升,持续<color=#28d9ed>1回合</color>。"
+        "1_zh": "攻击敌人，使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>后，\\n使<color=#28d9ed>速度</color>提升，持续<color=#28d9ed>1回合</color>。",
+        "2_zh": "攻击敌人，使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>后，\\n使<color=#28d9ed>速度</color>提升，持续<color=#28d9ed>1回合</color>。",
+        "3_zh": "攻击敌人，使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>后，\\n使<color=#28d9ed>速度</color>提升，持续<color=#28d9ed>1回合</color>。",
+        "4_zh": "攻击敌人，使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>后，\\n使<color=#28d9ed>速度</color>提升，持续<color=#28d9ed>1回合</color>。",
+        "5_zh": "攻击敌人，使攻击力最高的友军<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>后，\\n使<color=#28d9ed>速度</color>提升，持续<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -202,11 +205,11 @@
         "3_kr": "<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>치명 피해</color>를 증가시킨 뒤\\n자신을 제외한 화속성 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n스킬 사용 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "4_kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>치명 피해</color>를 증가시킨 뒤\\n자신을 제외한 화속성 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다.\\n스킬 사용 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
         "5_kr": "<color=#28d9ed>3턴</color> 동안 아군 전체의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>치명 피해</color>를 증가시킨 뒤\\n자신을 제외한 화속성 아군의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>3턴</color> 동안 증가시킵니다.\\n스킬 사용 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
-        "1_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n使用技能后,获得<color=#28d9ed>额外回合</color>。",
-        "2_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n使用技能后,获得<color=#28d9ed>额外回合</color>。",
-        "3_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>2回合</color>,\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>2回合</color>。\\n使用技能后,获得<color=#28d9ed>额外回合</color>。",
-        "4_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>,\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>3回合</color>。\\n使用技能后,获得<color=#28d9ed>额外回合</color>。",
-        "5_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升,持续<color=#28d9ed>3回合</color>,\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升,持续<color=#28d9ed>3回合</color>。\\n使用技能后,获得<color=#28d9ed>额外回合</color>。"
+        "1_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升，持续<color=#28d9ed>2回合</color>，\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>2回合</color>。\\n使用技能后，获得<color=#28d9ed>额外回合</color>。",
+        "2_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升，持续<color=#28d9ed>2回合</color>，\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>2回合</color>。\\n使用技能后，获得<color=#28d9ed>额外回合</color>。",
+        "3_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升，持续<color=#28d9ed>2回合</color>，\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>2回合</color>。\\n使用技能后，获得<color=#28d9ed>额外回合</color>。",
+        "4_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升，持续<color=#28d9ed>3回合</color>，\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>3回合</color>。\\n使用技能后，获得<color=#28d9ed>额外回合</color>。",
+        "5_zh": "使全体友军的<color=#28d9ed>暴击率</color>和<color=#28d9ed>暴击伤害</color>提升，持续<color=#28d9ed>3回合</color>，\\n随后使除自身外的火属性友军<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>3回合</color>。\\n使用技能后，获得<color=#28d9ed>额外回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -302,11 +305,11 @@
         "3_kr": "적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>15%</color> 감소시키며 대상이 지속성인 경우  <color=#28d9ed>5%</color>를 추가 감소시킵니다.",
         "4_kr": "적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>15%</color> 감소시키며 대상이 지속성인 경우  <color=#28d9ed>5%</color>를 추가 감소시킵니다.",
         "5_kr": "적 전체를 공격합니다.\\n대상의 행동 게이지를 <color=#28d9ed>25%</color> 감소시키며 대상이 지속성인 경우  <color=#28d9ed>10%</color>를 추가 감소시킵니다.\\n(효과 저항 무시)",
-        "1_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>15%</color>,若目标为土属性,则额外降低<color=#28d9ed>5%</color>。",
-        "2_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>15%</color>,若目标为土属性,则额外降低<color=#28d9ed>5%</color>。",
-        "3_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>15%</color>,若目标为土属性,则额外降低<color=#28d9ed>5%</color>。",
-        "4_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>15%</color>,若目标为土属性,则额外降低<color=#28d9ed>5%</color>。",
-        "5_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>25%</color>,若目标为土属性,则额外降低<color=#28d9ed>10%</color>。\\n(无视效果抵抗)"
+        "1_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>15%</color>，若目标为土属性，则额外降低<color=#28d9ed>5%</color>。",
+        "2_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>15%</color>，若目标为土属性，则额外降低<color=#28d9ed>5%</color>。",
+        "3_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>15%</color>，若目标为土属性，则额外降低<color=#28d9ed>5%</color>。",
+        "4_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>15%</color>，若目标为土属性，则额外降低<color=#28d9ed>5%</color>。",
+        "5_zh": "攻击全体敌人。\\n使目标的行动值降低<color=#28d9ed>25%</color>，若目标为土属性，则额外降低<color=#28d9ed>10%</color>。\\n(无视效果抵抗)"
       },
       "enhancement": {
         "2": [
@@ -335,7 +338,7 @@
         ],
         "5_jp": [
           "行動ゲージ5%DOWN",
-          "行動ゲージ減少強化(効果抵抗無視)"
+          "行動ゲージ減少強化（効果抵抗無視）"
         ],
         "2_kr": [
           "피해량 +10%",
@@ -363,7 +366,7 @@
         ],
         "5_zh": [
           "行动值-5%",
-          "行动条减少强化(无视效果抵抗)"
+          "行动条减少强化（无视效果抵抗）"
         ]
       },
       "wgr": 2,
@@ -389,21 +392,21 @@
         "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase Critical Damage of all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases the <color=#28d9ed>Priority</color> of the ally with the highest Attack by <color=#28d9ed>20%</color>.",
         "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase Critical Damage of all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases the <color=#28d9ed>Priority</color> of the ally with the highest Attack by <color=#28d9ed>20%</color>.",
         "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to increase Critical Damage of all allies for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases the <color=#28d9ed>Priority</color> of the ally with the highest Attack by <color=#28d9ed>20%</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>:攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
-        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>:攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
-        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>:攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
-        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>:攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
-        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>:攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>：攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>：攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>：攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>：攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後<color=#28d9ed>100%</color>の確率で味方全体の会心ダメージが<color=#28d9ed>2ターン</color>の間UPする。\\n\\n<color=#fff95f>連携効果</color>：攻撃後、攻撃力が最も高い味方単体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。",
         "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 치명 피해량이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 치명 피해량이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 치명 피해량이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 치명 피해량이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
         "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 아군 전체의 치명 피해량이 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 공격력이 가장 높은 아군의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.",
-        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
-        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
-        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
-        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
-        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
+        "1_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的几率使全体友军的暴击伤害量提升，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使攻击力最高友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。"
       },
       "enhancement": {
         "2": [
