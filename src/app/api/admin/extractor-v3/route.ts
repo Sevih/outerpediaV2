@@ -251,7 +251,7 @@ const BUFF_BLACKLIST = new Set([
   'BT_SKILL_RANGE_ALL', 'BT_DMG_ENEMY_TEAM_DECREASE', 'BT_DMG_TO_BOSS',
   'BT_HEAL_BASED_TARGET', 'BT_HEAL_BASED_CASTER',
   'BT_RESOURCE_CHARGE', 'BT_RESOURCE_USE_SKILL', 'BT_SKILL_USING_CONDITION',
-  'BT_SWAP_STAT_ATTACK',
+  'BT_SWAP_STAT_ATTACK', 'BT_DMG_TARGET_DEBUFF', 'BT_DMG_TARGET_STAT',
 ])
 
 // Classify buffs into buff/debuff arrays
@@ -418,6 +418,7 @@ function extractSkills(
     for (const lvl of levels) {
       (lvl.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean).forEach((b) => buffIDSet.add(b))
     }
+    const extraDebuffs: string[] = []
     if (skill.RequireAP) {
       for (const burstType of ['SKT_BURST_1', 'SKT_BURST_2', 'SKT_BURST_3']) {
         const burstEntry = skillsByType.get(burstType)
@@ -427,9 +428,17 @@ function extractSkills(
         if (burstL1?.BuffID) {
           burstL1.BuffID.split(',').map((s) => s.trim()).filter(Boolean).forEach((b) => buffIDSet.add(b))
         }
+        // WG damage on burst desc → BT_WG_REVERSE_HEAL
+        const burstDescIDs = (burstEntry.skill.DescID ?? '').split(',').map((s) => s.trim())
+        if (burstDescIDs.some((d) => d.includes('SE_DESC_DMG_WG_V'))) {
+          extraDebuffs.push('BT_WG_REVERSE_HEAL')
+        }
       }
     }
     const { buffs, debuffs } = classifyBuffs([...buffIDSet], buffsByID)
+    for (const d of extraDebuffs) {
+      if (!debuffs.includes(d)) debuffs.push(d)
+    }
 
     // Add tooltip-based properties (e.g. HEAVY_STRIKE)
     const tooltipIDs = (levels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
