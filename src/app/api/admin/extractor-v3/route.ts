@@ -330,7 +330,8 @@ function extractSkills(
   textSkill: Record<string, string>[],
   buffTemplet: Record<string, string>[],
   tooltipTemplet: Record<string, string>[],
-  textSystem: Map<string, Record<string, string>>
+  textSystem: Map<string, Record<string, string>>,
+  changeCharRow?: Record<string, string>
 ) {
   const skillMap = indexBy(skillTemplet)
   const levelsBySkill = groupBy(skillLevelTemplet, 'SkillID')
@@ -394,6 +395,38 @@ function extractSkills(
   for (const skillID of Object.values(charSkills)) {
     const skill = skillMap.get(skillID)
     if (skill) skillsByType.set(skill.SkillType, { skillID, skill })
+  }
+
+  // For change-form characters (e.g. Luna), collect BuffIDs from the other form by skillType
+  const changeBuffsBySkillType = new Map<string, Set<string>>()
+  if (changeCharRow) {
+    for (const [key, val] of Object.entries(changeCharRow)) {
+      if (!key.startsWith('Skill_') || !val) continue
+      const sk = skillMap.get(val)
+      if (!sk) continue
+      const lvls = levelsBySkill.get(val) ?? []
+      const ids = new Set<string>()
+      for (const lvl of lvls) {
+        (lvl.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean).forEach((b) => ids.add(b))
+      }
+      // Also scan implicit buffs {changeCharID}_{skillNum}_*
+      const changeSkillNum = key.replace('Skill_', '')
+      const changePrefix = `${changeCharRow.ID}_${changeSkillNum}_`
+      for (const [bid] of buffsByID) {
+        if (bid.startsWith(changePrefix)) ids.add(bid)
+      }
+      // Also scan burst implicit buffs
+      if (sk.SkillType?.startsWith('SKT_BURST_')) {
+        const burstLevel = sk.SkillType === 'SKT_BURST_1' ? 1 : sk.SkillType === 'SKT_BURST_2' ? 2 : 3
+        const burstPrefix = `${changeCharRow.ID}_u_${burstLevel}_`
+        for (const [bid] of buffsByID) {
+          if (bid.startsWith(burstPrefix)) ids.add(bid)
+        }
+      }
+      const existing = changeBuffsBySkillType.get(sk.SkillType) ?? new Set()
+      for (const id of ids) existing.add(id)
+      changeBuffsBySkillType.set(sk.SkillType, existing)
+    }
   }
 
   const skills: Record<string, unknown> = {}
@@ -484,6 +517,10 @@ function extractSkills(
         if (allCharBuffIDs.has(bid)) buffIDSet.add(bid)
       }
     }
+    // Add BuffIDs from change-form character (e.g. Luna Polar Night)
+    const changeBuffs = changeBuffsBySkillType.get(skillType)
+    if (changeBuffs) changeBuffs.forEach((b) => buffIDSet.add(b))
+
     const extraDebuffs: string[] = []
     if (skill.RequireAP) {
       for (const burstType of ['SKT_BURST_1', 'SKT_BURST_2', 'SKT_BURST_3']) {
@@ -551,7 +588,23 @@ function extractSkills(
       skillOut.target = 'multi'
     } else {
       skillOut.offensive = !!levels[0]?.DamageFactor && skill.TargetTeamType?.includes('ENEMY')
-      skillOut.target = targetType(skill.RangeType)
+      const mainTarget = targetType(skill.RangeType)
+      // For change-form characters, combine targets if they differ
+      if (changeCharRow) {
+        const changeSkillID = Object.entries(changeCharRow).find(([k, v]) => {
+          if (!k.startsWith('Skill_') || !v) return false
+          return skillMap.get(v)?.SkillType === skillType
+        })?.[1]
+        const changeSkill = changeSkillID ? skillMap.get(changeSkillID) : undefined
+        const changeTarget = changeSkill ? targetType(changeSkill.RangeType) : null
+        if (changeTarget && changeTarget !== mainTarget) {
+          skillOut.target = [mainTarget, changeTarget]
+        } else {
+          skillOut.target = mainTarget
+        }
+      } else {
+        skillOut.target = mainTarget
+      }
     }
 
     // Burst effects — attached to whichever skill has RequireAP
@@ -643,6 +696,17 @@ function extractSkills(
         const backupLevels = (levelsBySkill.get(backup.skillID) ?? [])
           .sort((a, b) => (parseInt(a.SkillLevel) || 0) - (parseInt(b.SkillLevel) || 0))
         const backupBuffIDs = (backupLevels[0]?.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean)
+        // Add backup buffs from change-form character
+        if (changeCharRow) {
+          const changeBackupIDs = Object.entries(changeCharRow)
+            .filter(([k, v]) => k.startsWith('Skill_') && v && ['SKT_BACKUP_AERIAL', 'SKT_BACKUP_GROUND'].includes(skillMap.get(v)?.SkillType ?? ''))
+            .map(([, v]) => v)
+          for (const cbid of changeBackupIDs) {
+            const cbLevels = levelsBySkill.get(cbid) ?? []
+            const cbL1 = cbLevels.find((l) => l.SkillLevel === '1') ?? cbLevels[0]
+            ;(cbL1?.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean).forEach((b) => backupBuffIDs.push(b))
+          }
+        }
         const backupClassified = classifyBuffs(backupBuffIDs, buffsByID, tooltipCtx)
         skillOut.dual_buff = backupClassified.buffs.filter(Boolean)
         skillOut.dual_debuff = backupClassified.debuffs.filter(Boolean)
@@ -901,7 +965,10 @@ function extractCharacter(id: string, tables?: Tables) {
   result.transcend = extractTranscend(charRow, t.transcendTemplet, uniquePassiveID, t.skillLevelTemplet, t.textSkill)
 
   // Skills
-  result.skills = extractSkills(charRow, t.skillTemplet, t.skillLevelTemplet, t.textSkill, t.buffTemplet, loadTable('BuffToolTipTemplet'), t.textSystemMap)
+  // For change-form characters, find the other form's CharacterTemplet row
+  const changeEntry = t.changeTemplet.find((r) => r.ID === id)
+  const changeCharRow = changeEntry ? t.characters.find((r) => r.ID === changeEntry.ChangeCharacterID) : undefined
+  result.skills = extractSkills(charRow, t.skillTemplet, t.skillLevelTemplet, t.textSkill, t.buffTemplet, loadTable('BuffToolTipTemplet'), t.textSystemMap, changeCharRow)
 
   return result
 }

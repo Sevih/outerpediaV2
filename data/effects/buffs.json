@@ -984,7 +984,7 @@
     "description_zh": "对敌人造成的伤害提升,并强化部分技能。\\n在创世之神奥斯黛死亡之前无法被解除。",
     "icon": "IG_Buff_2000059_Interruption"
   },
-    {
+  {
     "name": "DOLL_GARDEN'S_CARETAKER",
     "category": "unique",
     "label": "Doll Garden's Caretaker",
@@ -1311,6 +1311,32 @@
   },
   {
     "name": "IG_Buff_Effect_2000120_Interruption",
+    "category": "unique",
+    "label": "Polar Night",
+    "label_jp": "極夜",
+    "label_kr": "극야",
+    "label_zh": "极夜",
+    "description": "The fewer allies present (excluding the bearer), the greater the damage the bearer deals. (Up to 150%. Irremovable.)",
+    "description_jp": "自分を除く味方が少ないほど、\\n自分が与えるダメージがUPする。\\n(最大150%、解除不可)",
+    "description_kr": "자신을 제외한 아군이 적을수록 자신이 주는 피해가 증가합니다. (최대 150%, 해제 불가)",
+    "description_zh": "除自身以外的友军越少,自身造成的伤害越多。\\n(最多150%,无法解除)",
+    "icon": "IG_Buff_Effect_2000120_Interruption"
+  },
+    {
+    "name": "WHITE_NIGHT",
+    "category": "unique",
+    "label": "White Night",
+    "label_jp": "白夜",
+    "label_kr": "백야",
+    "label_zh": "极昼",
+    "description": "Reduces final damage taken by 75%. (Only the highest value of final damage reduction is applied, Irremovable)",
+    "description_jp": "受ける最終ダメージが75%DOWN\\nする。(最終ダメージDOWNは最も\\n高い値のみ適用、解除不可)",
+    "description_kr": "받는 최종 피해가 75% 감소합니다.(최종 피해 감소는 가장 높은 값만 적용, 해제 불가)",
+    "description_zh": "所受的最终伤害降低75%。\\n(最终伤害降低仅生效最高值,无法解除)",
+    "icon": "IG_Buff_Effect_2000119_Interruption"
+  },
+  {
+    "name": "POLAR_NIGHT",
     "category": "unique",
     "label": "Polar Night",
     "label_jp": "極夜",
