@@ -1491,8 +1491,34 @@
     "description_zh": "剧毒领域状态下的各目标将受到以下效果。\\n友方目标:受到的最终伤害‐30%\\n诺希斯·比埃拉:防御力+30%/受到的最终伤害‐30%\\n敌方目标:攻击力‐50%, 获得回合时:诺斯替斯·维艾拉的行动条 +20%\\n\\n(无法解除/诺希斯·比埃拉死亡时解除/最终伤害减少仅取最高值生效)",
     "icon": "IG_Buff_Effect_2000109_Interruption"
   },
+    {
+    "name": "BANE’S_DOMAIN",
+    "category": "unique",
+    "label": "Bane's Domain",
+    "label_jp": "劇毒の領域",
+    "label_kr": "극독의 영역",
+    "label_zh": "剧毒领域",
+    "description": "Each target affected by Bane's Domain receives the following effects:\\n\\nAllies: -30% Received Final Damage\\nGnosis Viella:+30% DEF, -30% Received Final Damage,\\nEnemies: -50% Attack, When turn is gained: Gnosis Viella's Priority +20%\\n\\n (Irremovable, removed when Gnosis Viella dies, only the highest final damage reduction value is applied.)",
+    "description_jp": "劇毒の領域状態の対象は\\n以下の効果が適用されます。\\n味方対象:受けるダメージ-30%\\nグノーシス・ビエラ:防御力+30%/\\n受けるダメージ-30%\\n敵対象:攻撃力‐50%/ターン獲得時、\\nグノーシス・ビエラの行動ゲージ20%UP\\n\\n(解除不可/\\nグノーシス・ビエラが戦闘不能時に解除/\\n最終ダメージ減少は最も高い値のみ適用)",
+    "description_kr": "극독의 영역 상태의 각 대상은 아래의 효과를 받습니다.\\n아군 대상 : 받는 최종 피해 -30%\\n그노시스 비엘라 : 방어력 +30%, 받는 최종 피해 -30%\\n적 대상 : 공격력 -50%, 턴 획득 시 그노시스 비엘라 행동 게이지 +20%\\n\\n(해제 불가, 그노시스 비엘라 사망 시 해제, 최종 피해 감소는 가장 높은 값만 적용)",
+    "description_zh": "剧毒领域状态下的各目标将受到以下效果。\\n友方目标:受到的最终伤害‐30%\\n诺希斯·比埃拉:防御力+30%/受到的最终伤害‐30%\\n敌方目标:攻击力‐50%, 获得回合时:诺斯替斯·维艾拉的行动条 +20%\\n\\n(无法解除/诺希斯·比埃拉死亡时解除/最终伤害减少仅取最高值生效)",
+    "icon": "IG_Buff_Effect_2000109_Interruption"
+  },
   {
     "name": "IG_Buff_2000053_Interruption",
+    "category": "unique",
+    "label": "Selfish God",
+    "label_jp": "身勝手な神",
+    "label_kr": "이기적인 신",
+    "label_zh": "自私之神",
+    "description": "When enemy uses a non-Attack skill: Self AP +50\\nWhen enemy with lower HP than self acts: Self Priority +10%\\n\\n(cannot be dispelled)",
+    "description_jp": "敵が攻撃以外のスキル使用時:自分のAP+50\\n自分よりHPが低い敵行動時:自分の行動ゲージ+10%\\n\\n解除不可)",
+    "description_kr": "적이 공격이 아닌 스킬 사용 시: 자신의 AP +50\\n\n자신보다 체력이 낮은 적 행동시 : 자신의 행동 게이지 +10%\\n\\n(해제 불가)",
+    "description_zh": "敌人使用非攻击技能时:自身AP+50\\n生命值低于自身的敌人行动时:自身行动条 +10%\\n\\n(无法被解除)",
+    "icon": "IG_Buff_2000053_Interruption"
+  },
+    {
+    "name": "SELFISH_GOD",
     "category": "unique",
     "label": "Selfish God",
     "label_jp": "身勝手な神",

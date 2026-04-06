@@ -275,7 +275,8 @@ const BUFF_BLACKLIST = new Set([
   'BT_SECOND_TRIGGER','BT_REMOVE_BY_GROUP_ID','BT_SHARE_DMG','BT_RESOURCE_CHARGE_BUFF_CASTER',
     "BT_NONE",
   "BT_DMG_REDUCE_FINAL", "BT_REMOVE_DEATH","BT_REVIVAL_N_RUN_PASSIVE_SKILL",
-  "BT_DMG_MY_TEAM_DECREASE", "BT_DMG_KILL_COUNT_STACK",'BT_LIMIT_DMG_TURN'
+  "BT_DMG_MY_TEAM_DECREASE", "BT_DMG_KILL_COUNT_STACK",'BT_LIMIT_DMG_TURN',
+  'BT_STAT', // BT_STAT without StatType (ST_NONE) — internal modifier, not a visible buff
 ])
 
 // Classify buffs into buff/debuff arrays
@@ -352,7 +353,9 @@ function extractSkills(
   TOOLTIP_BLACKLIST.add('98') // Stealth (= BT_STEALTHED)
   TOOLTIP_BLACKLIST.add('2100092') // Eternal Bleeding (= BT_DOT_2000092)
   TOOLTIP_BLACKLIST.add('2200092') // Eternal Bleeding (= BT_DOT_2000092)
+  TOOLTIP_BLACKLIST.add('97') // Buff Reversal (= BT_STATBUFF_CONVERT_TO_STATDEBUFF)
   TOOLTIP_BLACKLIST.add('104') // Golden Curse (= BT_GOLDEN_CURSE)
+  TOOLTIP_BLACKLIST.add('2100093') // Gift of Buffs (= BT_CASTER_COPY_BUFF)
   for (const tt of tooltipTemplet) {
     const nameEntry = textSystem.get(tt.NameID)
     const name = nameEntry?.[LANG_COLUMNS[DEFAULT_LANG]] ?? tt.NameID
@@ -508,20 +511,46 @@ function extractSkills(
     for (const d of extraDebuffs) {
       if (!debuffs.includes(d)) debuffs.push(d)
     }
+    // Manual buff overrides for skills not represented in BuffTemplet
+    const FORCED_BUFFS: Record<string, Record<string, { buff?: string[]; debuff?: string[]; removeBuff?: string[]; removeDebuff?: string[] }>> = {
+      '2000065': { SKT_FIRST: { buff: ['BT_EXTRA_ATTACK_ON_TURN_END'], removeBuff: ['BT_STAT|ST_ATK'] } },
+      '2000053': {
+        SKT_FIRST: { removeBuff: ['BT_KILL_UNDER_HP_RATE'], debuff: ['BT_KILL_UNDER_HP_RATE'] },
+        SKT_ULTIMATE: { removeBuff: ['BT_KILL_UNDER_HP_RATE'], debuff: ['BT_KILL_UNDER_HP_RATE'] },
+        SKT_CHAIN_PASSIVE: { removeDebuff: ['BT_WG_REVERSE_HEAL'] },
+      },
+      '2000072': { SKT_ULTIMATE: { debuff: ['BT_STEAL_BUFF'] } },
+      '2000109': {
+        SKT_FIRST: { removeDebuff: ['BT_DOT_POISON'] },
+        SKT_SECOND: { removeDebuff: ['BT_DOT_POISON'] },
+        SKT_ULTIMATE: { removeBuff: ['BT_STAT|ST_DEF'], removeDebuff: ['BT_DOT_POISON'] },
+        SKT_CHAIN_PASSIVE: { removeDebuff: ['BT_DOT_POISON'] },
+      },
+      '2000085': { SKT_SECOND: { removeDebuff: ['BT_RESOURCE_DOWN'] } },
+      '2000084': { SKT_FIRST: { buff: ['BT_CALL_BACKUP_2', 'BT_CALL_BACKUP'] } },
+      '2000102': { SKT_ULTIMATE: { buff: ['BT_EXTEND_DEBUFF'], debuff: ['BT_EXTEND_BUFF'] } },
+    }
+    const forced = FORCED_BUFFS[charRow.ID]?.[skillType]
+    if (forced) {
+      for (const f of forced.buff ?? []) { if (!buffs.includes(f)) buffs.push(f) }
+      for (const f of forced.debuff ?? []) { if (!debuffs.includes(f)) debuffs.push(f) }
+      for (const r of forced.removeBuff ?? []) { const i = buffs.indexOf(r); if (i >= 0) buffs.splice(i, 1) }
+      for (const r of forced.removeDebuff ?? []) { const i = debuffs.indexOf(r); if (i >= 0) debuffs.splice(i, 1) }
+    }
 
     // Add tooltip-based properties (e.g. HEAVY_STRIKE)
     const tooltipIDs = (levels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
     addTooltipBuffs(tooltipIDs, buffs, debuffs)
 
-    skillOut.buff = buffs
-    skillOut.debuff = debuffs
+    skillOut.buff = buffs.filter(Boolean)
+    skillOut.debuff = debuffs.filter(Boolean)
 
     // Offensive / target — needs DamageFactor AND enemy targeting
     if (skillType === 'SKT_CHAIN_PASSIVE') {
       skillOut.offensive = true
       skillOut.target = 'multi'
     } else {
-      skillOut.offensive = !!levels[0]?.DamageFactor && skill.TargetTeamType === 'ENEMY'
+      skillOut.offensive = !!levels[0]?.DamageFactor && skill.TargetTeamType?.includes('ENEMY')
       skillOut.target = targetType(skill.RangeType)
     }
 
@@ -548,7 +577,7 @@ function extractSkills(
         const burstL1 = burstLevels.find((l) => l.SkillLevel === '1') ?? burstLevels[0]
         burst.cost = apCosts[apIdx] ?? 0
         burst.level = burstLevel
-        burst.offensive = !!burstL1?.DamageFactor && burstSkill.TargetTeamType === 'ENEMY'
+        burst.offensive = !!burstL1?.DamageFactor && burstSkill.TargetTeamType?.includes('ENEMY')
         burst.target = targetType(burstSkill.RangeType)
 
         burnEffect[burstType] = burst
@@ -591,9 +620,17 @@ function extractSkills(
 
       {
         const chainClassified = classifyBuffs([...chainBuffIDs], buffsByID, tooltipCtx)
-        skillOut.buff = chainClassified.buffs
-        skillOut.debuff = chainClassified.debuffs
+        skillOut.buff = chainClassified.buffs.filter(Boolean)
+        skillOut.debuff = chainClassified.debuffs.filter(Boolean)
         addTooltipBuffs(chainTooltips, skillOut.buff as string[], skillOut.debuff as string[])
+        // Re-apply forced overrides after chain passive recalculation
+        const chainForced = FORCED_BUFFS[charRow.ID]?.['SKT_CHAIN_PASSIVE']
+        if (chainForced) {
+          for (const f of chainForced.buff ?? []) { if (!(skillOut.buff as string[]).includes(f)) (skillOut.buff as string[]).push(f) }
+          for (const f of chainForced.debuff ?? []) { if (!(skillOut.debuff as string[]).includes(f)) (skillOut.debuff as string[]).push(f) }
+          for (const r of chainForced.removeBuff ?? []) { const arr = skillOut.buff as string[]; const i = arr.indexOf(r); if (i >= 0) arr.splice(i, 1) }
+          for (const r of chainForced.removeDebuff ?? []) { const arr = skillOut.debuff as string[]; const i = arr.indexOf(r); if (i >= 0) arr.splice(i, 1) }
+        }
       }
 
       // Dual attack info from BACKUP skills — always wgr 1, offensive, mono
@@ -607,12 +644,18 @@ function extractSkills(
           .sort((a, b) => (parseInt(a.SkillLevel) || 0) - (parseInt(b.SkillLevel) || 0))
         const backupBuffIDs = (backupLevels[0]?.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean)
         const backupClassified = classifyBuffs(backupBuffIDs, buffsByID, tooltipCtx)
-        skillOut.dual_buff = backupClassified.buffs
-        skillOut.dual_debuff = backupClassified.debuffs
+        skillOut.dual_buff = backupClassified.buffs.filter(Boolean)
+        skillOut.dual_debuff = backupClassified.debuffs.filter(Boolean)
 
         // Add tooltips from backup skill + chain passive (both shown in same UI window)
         const backupTooltips = (backupLevels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
         addTooltipBuffs([...chainTooltips, ...backupTooltips], skillOut.dual_buff as string[], skillOut.dual_debuff as string[])
+        // Apply forced overrides to dual as well
+        const dualForced = FORCED_BUFFS[charRow.ID]?.['SKT_CHAIN_PASSIVE']
+        if (dualForced) {
+          for (const r of dualForced.removeBuff ?? []) { const arr = skillOut.dual_buff as string[]; const i = arr.indexOf(r); if (i >= 0) arr.splice(i, 1) }
+          for (const r of dualForced.removeDebuff ?? []) { const arr = skillOut.dual_debuff as string[]; const i = arr.indexOf(r); if (i >= 0) arr.splice(i, 1) }
+        }
       }
     }
 
@@ -718,7 +761,7 @@ function extractCharacter(id: string, tables?: Tables) {
       fullname = `${nickname[lang]} ${fullname}`
     }
 
-    result[`Fullname${suffix}`] = fullname.trim()
+    result[`Fullname${suffix}`] = fullname.trim().replace(/[\u2018\u2019]/g, "'")
   }
 
   result.Rarity = parseInt(charRow.BasicStar) || 0

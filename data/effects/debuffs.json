@@ -1214,6 +1214,19 @@
     "description_zh": "所有<color=#28d9ed>行动条</color>提升效果减少20%,每回合开始时受到与施术者生命值成比例的伤害。\n施术者死亡时解除。",
     "icon": "IG_Buff_Dot_Poison02"
   },
+    {
+    "name": "CORROSIVE_POISON",
+    "category": "dot",
+    "label": "Corrosive Poison",
+    "label_jp": "酸性の毒液",
+    "label_kr": "산성독",
+    "label_zh": "酸性毒液",
+    "description": "Reduces all Priority increases by 20% and deals damage proportional to the caster's Max HP at the start of the turn.\nRemoved when the caster dies.",
+    "description_jp": "すべての行動ゲージUPの効率を\n20%DOWNさせ、ターン開始時、\n使用者の最大HPが高いほど\nダメージUPされる。\nこの効果はスキル使用者が\n倒れた時解除される。",
+    "description_kr": "적용되는 모든 행동 게이지 증가량이 20% 감소하고, 턴 시작 시 시전자의 체력에 비례한 피해를 입습니다.\n시전자가 사망 시 해제됩니다.",
+    "description_zh": "所有<color=#28d9ed>行动条</color>提升效果减少20%,每回合开始时受到与施术者生命值成比例的伤害。\n施术者死亡时解除。",
+    "icon": "IG_Buff_Dot_Poison02"
+  },
   {
     "name": "BT_KILL_UNDER_HP_RATE",
     "category": "utility",

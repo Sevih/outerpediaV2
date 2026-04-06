@@ -46,19 +46,22 @@
   "VoiceActor_kr": "CV. 이새아",
   "VoiceActor_zh": "CV. 末柄里惠",
   "transcend": {
-    "3": "ATK DEF HP +10%",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\nGrants 1 additional random buff each turn\nIncreases Penetration by 30%",
     "4_1": "ATK DEF HP +16%\nDMG Incr +5%\nChain Passive WG reduction +1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\n+25 Action Points at battle start",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\nダメージ+5%\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n戦闘開始時、AP+25",
-    "6_jp": "ATK DEF HP +30%\n毎ターンランダムバフ+1回\n貫通力+30%",
+    "6_jp": "ATK DEF HP +30%\n毎ターンランダムバフ+1回\n貫通力+30％",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n피해 증가 +5%\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 AP +25",
     "6_kr": "ATK DEF HP +30%\n매 턴 무작위 버프 +1회\n관통력 +30%",
+    "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n造成伤害提升5%\n连携被动技能的WG降低量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n入场时AP+25",
     "6_zh": "ATK DEF HP +30%\n每回合获得随机增益+1次\n穿透力+30%"
@@ -71,7 +74,7 @@
       "name": "Santa's Here!",
       "name_jp": "サンタ、おでまし♡",
       "name_kr": "산타, 등장♡",
-      "name_zh": "圣诞老人,闪亮登场♡",
+      "name_zh": "圣诞老人，闪亮登场♡",
       "true_desc_levels": {
         "1": "Attacks an enemy, and increases Priority of the caster by <color=#28d9ed>10%</color>.",
         "2": "Attacks an enemy, and increases Priority of the caster by <color=#28d9ed>10%</color>.",
@@ -88,11 +91,11 @@
         "3_kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.",
         "4_kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.",
         "5_kr": "적을 공격하고 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
-        "1_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>10%</color>。",
-        "2_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>10%</color>。",
-        "3_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。",
-        "4_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>20%</color>。",
-        "5_zh": "攻击敌人,并使自身行动值提升<color=#28d9ed>30%</color>。"
+        "1_zh": "攻击敌人，并使自身行动值提升<color=#28d9ed>10%</color>。",
+        "2_zh": "攻击敌人，并使自身行动值提升<color=#28d9ed>10%</color>。",
+        "3_zh": "攻击敌人，并使自身行动值提升<color=#28d9ed>20%</color>。",
+        "4_zh": "攻击敌人，并使自身行动值提升<color=#28d9ed>20%</color>。",
+        "5_zh": "攻击敌人，并使自身行动值提升<color=#28d9ed>30%</color>。"
       },
       "enhancement": {
         "2": [
@@ -181,11 +184,11 @@
         "3_kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
         "4_kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
         "5_kr": "(패시브 효과) 턴 시작 시 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>무작위 능력치 증가</color> 효과를 부여합니다. (이미 보유중인 효과는 발생하지 않습니다.)\\n\\n(액티브 효과) 적을 공격합니다. 이 스킬은 자신의 속도가 높을수록 피해가 증가합니다.",
-        "1_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。",
-        "2_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。",
-        "3_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。",
-        "4_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。",
-        "5_zh": "(被动效果)回合开始时,自身获得<color=#28d9ed>随机能力值提升</color>效果,持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高,则该技能的伤害越高。"
+        "1_zh": "(被动效果)回合开始时，自身获得<color=#28d9ed>随机能力值提升</color>效果，持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高，则该技能的伤害越高。",
+        "2_zh": "(被动效果)回合开始时，自身获得<color=#28d9ed>随机能力值提升</color>效果，持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高，则该技能的伤害越高。",
+        "3_zh": "(被动效果)回合开始时，自身获得<color=#28d9ed>随机能力值提升</color>效果，持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高，则该技能的伤害越高。",
+        "4_zh": "(被动效果)回合开始时，自身获得<color=#28d9ed>随机能力值提升</color>效果，持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高，则该技能的伤害越高。",
+        "5_zh": "(被动效果)回合开始时，自身获得<color=#28d9ed>随机能力值提升</color>效果，持续<color=#28d9ed>2回合</color>。(已获得的效果不会触发)\\n\\n(主动效果)攻击敌人。自身速度越高，则该技能的伤害越高。"
       },
       "enhancement": {
         "2": [
@@ -251,7 +254,7 @@
         "BT_ADDITIVE_TURN",
         "BT_CASTER_COPY_BUFF",
         "BT_STAT|ST_PIERCE_POWER_RATE",
-        "BT_RANDOM_STAT"
+        "RANDOM_INCREASED_STAT_EFFECT"
       ],
       "debuff": [],
       "offensive": true,
@@ -313,11 +316,11 @@
         "3_kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>1턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다.",
         "4_kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>1턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다.",
         "5_kr": "적 전체를 공격하고 아군 전체에게 <color=#28d9ed>강화 효과 선물</color>을 사용합니다. <color=#28d9ed>선물</color> 된 강화 효과는 <color=#28d9ed>2턴</color> 동안 유지됩니다.\\n이 스킬은 자신의 속도가 높을수록 피해가 증가하며, 아군 전체가 보유한 <color=#28d9ed>강화 효과</color>가 많을수록 피해가 추가로 증가합니다.",
-        "1_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。",
-        "2_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。",
-        "3_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。",
-        "4_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。",
-        "5_zh": "攻击全体敌人,并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>2回合</color>。\\n自身速度越高,则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多,额外提升的伤害就越高。"
+        "1_zh": "攻击全体敌人，并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高，则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多，额外提升的伤害就越高。",
+        "2_zh": "攻击全体敌人，并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高，则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多，额外提升的伤害就越高。",
+        "3_zh": "攻击全体敌人，并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高，则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多，额外提升的伤害就越高。",
+        "4_zh": "攻击全体敌人，并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>1回合</color>。\\n自身速度越高，则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多，额外提升的伤害就越高。",
+        "5_zh": "攻击全体敌人，并使全体友军获得<color=#28d9ed>强化效果赠礼</color>。获得的强化效果<color=#28d9ed>赠礼</color>持续<color=#28d9ed>2回合</color>。\\n自身速度越高，则该技能的伤害越高。全体友军附带的<color=#28d9ed>强化效果</color>越多，额外提升的伤害就越高。"
       },
       "enhancement": {
         "2": [
@@ -401,21 +404,21 @@
         "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases Priority of the caster by <color=#28d9ed>30%</color>.",
         "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases Priority of the caster by <color=#28d9ed>30%</color>.",
         "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>25</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases Priority of the caster by <color=#28d9ed>30%</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
-        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
-        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
-        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
-        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、自分と次のチェーンスキル参加者がAPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、自分の行動ゲージが<color=#28d9ed>30%</color>UPする。",
         "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
         "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
         "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
         "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
         "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>25</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지가 <color=#28d9ed>30%</color> 증가합니다.",
-        "1_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。",
-        "2_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。",
-        "3_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。",
-        "4_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。",
-        "5_zh": "<color=#ffd732>连携技能自由效果</color>:攻击后,使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,使自身行动值提升<color=#28d9ed>30%</color>。"
+        "1_zh": "<color=#ffd732>连携技能自由效果</color>：攻击后，使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使自身行动值提升<color=#28d9ed>30%</color>。",
+        "2_zh": "<color=#ffd732>连携技能自由效果</color>：攻击后，使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使自身行动值提升<color=#28d9ed>30%</color>。",
+        "3_zh": "<color=#ffd732>连携技能自由效果</color>：攻击后，使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使自身行动值提升<color=#28d9ed>30%</color>。",
+        "4_zh": "<color=#ffd732>连携技能自由效果</color>：攻击后，使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使自身行动值提升<color=#28d9ed>30%</color>。",
+        "5_zh": "<color=#ffd732>连携技能自由效果</color>：攻击后，使自身和下一顺序的友军AP恢复<color=#28d9ed>25</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，使自身行动值提升<color=#28d9ed>30%</color>。"
       },
       "enhancement": {
         "2": [
