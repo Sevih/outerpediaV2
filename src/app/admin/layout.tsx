@@ -30,6 +30,7 @@ const NAV_GROUPS: NavGroup[] = [
     label: 'Extractor v3',
     items: [
       { label: 'Characters', href: '/admin/extractor-v3/characters' },
+      { label: 'EE', href: '/admin/extractor-v3/ee' },
     ],
   },
   {
