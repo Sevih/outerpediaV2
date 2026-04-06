@@ -271,7 +271,8 @@ const BUFF_BLACKLIST = new Set([
   'BT_HEAL_BASED_TARGET', 'BT_HEAL_BASED_CASTER',
   'BT_RESOURCE_CHARGE', 'BT_RESOURCE_USE_SKILL', 'BT_SKILL_USING_CONDITION',
   'BT_SWAP_STAT_ATTACK', 'BT_DMG_TARGET_DEBUFF', 'BT_DMG_TARGET_STAT', 'BT_DMG_TARGET_BUFF',
-  'BT_STAT_OWNER_LOST_HP_RATE', 'BT_STAT_PREMIUM', 'BT_GROUP', 'BT_DMG_REDUCE', 'BT_STAT|ST_HIT_HP_RECOVERY', 'BT_DMG_TARGET_LOST_HP_RATE'
+  'BT_STAT_OWNER_LOST_HP_RATE', 'BT_STAT_PREMIUM', 'BT_GROUP', 'BT_DMG_REDUCE', 'BT_STAT|ST_HIT_HP_RECOVERY', 'BT_DMG_TARGET_LOST_HP_RATE',
+  'BT_SECOND_TRIGGER','BT_REMOVE_BY_GROUP_ID'
 ])
 
 // Classify buffs into buff/debuff arrays
@@ -344,6 +345,7 @@ function extractSkills(
   TOOLTIP_BLACKLIST.add('88') // Increases Lifesteal (= BT_STAT|ST_VAMPIRIC)
   TOOLTIP_BLACKLIST.add('89') // Reduces Lifesteal
   TOOLTIP_BLACKLIST.add('90') // Immortality (= BT_UNDEAD)
+  TOOLTIP_BLACKLIST.add('96') // Seal Extra Skill (= BT_SEAL_ADDITIVE_ATTACK)
   for (const tt of tooltipTemplet) {
     const nameEntry = textSystem.get(tt.NameID)
     const name = nameEntry?.[LANG_COLUMNS[DEFAULT_LANG]] ?? tt.NameID
@@ -595,9 +597,9 @@ function extractSkills(
         skillOut.dual_buff = backupClassified.buffs
         skillOut.dual_debuff = backupClassified.debuffs
 
-        // Add tooltips from backup skill + chain passive
+        // Add tooltips from backup skill + chain passive (both shown in same UI window)
         const backupTooltips = (backupLevels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
-        addTooltipBuffs(backupTooltips, skillOut.dual_buff as string[], skillOut.dual_debuff as string[])
+        addTooltipBuffs([...chainTooltips, ...backupTooltips], skillOut.dual_buff as string[], skillOut.dual_debuff as string[])
       }
     }
 

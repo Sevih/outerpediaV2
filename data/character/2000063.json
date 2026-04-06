@@ -34,32 +34,32 @@
   "VoiceActor_kr": "CV. 김보나",
   "VoiceActor_zh": "CV. 小清水亚美",
   "transcend": {
-    "3": "ATK DEF HP +10%\n-30% ally damage taken from attacks that target all enemies",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked\n-30% ally damage taken from attacks that target all enemies",
     "6": "ATK DEF HP +30%\nWhen an ally scores a critical hit, increases the caster's Priority by 25% (Only once per turn)\nWhen an ally is hit, increases the caster's Penetration by 10% (Max 3 stacks; increases only once even when hit by an attack that targets all enemies)",
     "4_1": "ATK DEF HP +16%\n+25% caster Priority when an ally scores a critical hit (Only once per turn)\nChain Passive Weakness Gauge reduction +1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked\nAt the start of battle, increases <color=#28d9ed>Show Your Loyalty</color> duration by +1 turn for the caster\n+50 Action Points at battle start",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
-    "3_jp": "ATK DEF HP +10%\n味方の全体攻撃で受けるダメージ-30%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁\n味方の全体攻撃で受けるダメージ-30%",
     "4_1_jp": "ATK DEF HP +16%\n味方が会心発生時、自分の行動ゲージ+25% (1ターンに一度のみ発動)\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n戦闘開始時、自分に【忠義をみせろ】+1ターン\n戦闘開始時、AP+50",
-    "6_jp": "ATK DEF HP +30%\n味方が会心発生時、自分の行動ゲージ+25% (1ターンに1回のみ発動)\n味方がダメージを受けた場合、自分の貫通力10%UP (最大3回まで累積、全体攻撃を受けた場合でも1回のみUP)",
-    "3_kr": "ATK DEF HP +10%\n아군 전체 공격으로 받는 피해 -30%",
+    "6_jp": "ATK DEF HP +30%\n味方が会心発生時、自分の行動ゲージ+25％ (1ターンに1回のみ発動)\n味方がダメージを受けた場合、自分の貫通力10%UP (最大3回まで累積、全体攻撃を受けた場合でも1回のみUP)",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금\n아군 전체 공격으로 받는 피해 -30%",
     "4_1_kr": "ATK DEF HP +16%\n아군 치명 공격 시 자신 행동 게이지 +25% (1턴에 1회)\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 자신에게 충의를 보여라 +1턴\n입장 시 AP +50",
     "6_kr": "ATK DEF HP +30%\n아군 치명 공격 시 자신 행동 게이지 +25% (1턴에 1회)\n아군 피격 시 자신의 관통력 +10%(최대 3회 누적, 전체 공격 피격 시에도 1회만 증가)",
-    "3_zh": "ATK DEF HP +10%\n友军所受全体攻击伤害-30%",
-    "4_1_zh": "ATK DEF HP +16%\n友军发动暴击时,自身行动值+25%(1回合1次)\n连携被动的WG减少量+1",
-    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n入场时,自身表明你的忠心吧+1回合\n入场时AP+50",
-    "6_zh": "ATK DEF HP +30%\n友军发动暴击时,自身行动值+25%(1回合1次)\n友军受到攻击时,自身的穿透力+10%(最多叠加3次,受到全体攻击时也仅增加1次)"
+    "3_zh": "ATK DEF HP +10%\n解锁2阶段爆发\n友军所受全体攻击伤害-30%",
+    "4_1_zh": "ATK DEF HP +16%\n友军发动暴击时，自身行动值+25%(1回合1次)\n连携被动的WG减少量+1",
+    "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n入场时，自身表明你的忠心吧+1回合\n入场时AP+50",
+    "6_zh": "ATK DEF HP +30%\n友军发动暴击时，自身行动值+25%(1回合1次)\n友军受到攻击时，自身的穿透力+10%(最多叠加3次，受到全体攻击时也仅增加1次)"
   },
   "skills": {
     "SKT_FIRST": {
       "NameIDSymbol": "6301",
       "IconName": "Skill_First_2000063",
       "SkillType": "SKT_FIRST",
-      "name": "Conqueror's Fang",
+      "name": "Conqueror’s Fang",
       "name_jp": "征服者の牙",
       "name_kr": "정복자의 송곳니",
       "name_zh": "征服者的利齿",
@@ -79,11 +79,11 @@
         "3_kr": "적을 공격하고, 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "4_kr": "적을 공격하고, 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "5_kr": "적을 공격하고, 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
-        "1_zh": "攻击敌人,并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。",
-        "2_zh": "攻击敌人,并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。",
-        "3_zh": "攻击敌人,并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。",
-        "4_zh": "攻击敌人,并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。",
-        "5_zh": "攻击敌人,并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。"
+        "1_zh": "攻击敌人，并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。",
+        "2_zh": "攻击敌人，并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。",
+        "3_zh": "攻击敌人，并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。",
+        "4_zh": "攻击敌人，并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。",
+        "5_zh": "攻击敌人，并使其受到相当于目标生命值上限\\n<color=#28d9ed>2%</color>的固定伤害。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升\\n伤害。"
       },
       "enhancement": {
         "2": [
@@ -169,7 +169,7 @@
           "effect": "Damage dealt increases proportional to missing Health\\nAll defeated enemies unable to Resurrect or Revive",
           "effect_jp": "対象の残りHPが低いほどダメージUP\\n倒れた敵の復活及び蘇生不可",
           "effect_kr": "잃은 체력에 비례하여 피해 증가\\n사망한 적 부활 및 소생 불가",
-          "effect_zh": "已损失生命值越多,伤害越高\\n被击败的敌人无法复活或复生",
+          "effect_zh": "已损失生命值越多，伤害越高\\n被击败的敌人无法复活或复生",
           "cost": 120,
           "level": 2,
           "offensive": true,
@@ -211,11 +211,11 @@
         "3_kr": "자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color>를 부여하고 자신을 제외한 아군 전체에 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>방어력</color>을 증가시킵니다.",
         "4_kr": "자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color>를 부여하고 자신을 제외한 아군 전체에 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>방어력</color>을 증가시킵니다.",
         "5_kr": "자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>충의를 보여라</color>를 부여하고 자신을 제외한 아군 전체에 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여합니다. 실드량은 자신의 최대 체력에 비례하여 증가합니다.\\n<color=#28d9ed>2턴</color> 동안 아군 전체의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>방어력</color>을 증가시킨 후 <color=#28d9ed>추가 턴</color>을 획득합니다.",
-        "1_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
-        "2_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
-        "3_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
-        "4_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>。",
-        "5_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>,并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>。护盾量根据自身<color=#28d9ed>生命值上限</color>等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升,持续<color=#28d9ed>2回合</color>后,获得<color=#28d9ed>额外回合</color>。"
+        "1_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>，并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果，持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升，持续<color=#28d9ed>2回合</color>。",
+        "2_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>，并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果，持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升，持续<color=#28d9ed>2回合</color>。",
+        "3_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>，并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果，持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升，持续<color=#28d9ed>2回合</color>。",
+        "4_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>，并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果，持续<color=#28d9ed>2回合</color>。护盾量根据自身生命值上限等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升，持续<color=#28d9ed>2回合</color>。",
+        "5_zh": "使自身获得<color=#28d9ed>表明你的忠心吧</color>，并使除自身外全体友军获得<color=#28d9ed>护盾</color>效果，持续<color=#28d9ed>2回合</color>。护盾量根据自身<color=#28d9ed>生命值上限</color>等比提升。\\n使全体友军的<color=#28d9ed>穿透力</color>和<color=#28d9ed>防御力</color>提升，持续<color=#28d9ed>2回合</color>后，获得<color=#28d9ed>额外回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -270,7 +270,7 @@
       "wgr": null,
       "cd": 4,
       "buff": [
-        "IG_Buff_2000063_Interruption",
+        "SHOW_YOUR_LOYALTY!",
         "BT_SHIELD_BASED_CASTER",
         "BT_STAT|ST_PIERCE_POWER_RATE",
         "BT_STAT|ST_DEF",
@@ -294,11 +294,11 @@
         "3": "Attacks an enemy.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.\\nEnemies killed by this skill cannot be Resurrected or Revived.",
         "4": "Attacks an enemy.\\nDamage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.\\nEnemies killed by this skill cannot be Resurrected or Revived.",
         "5": "Attacks an enemy.\\nThis skill's Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack,\\nand additionally increases inversely proportional to the caster's current Health,\\nand ignores <color=#28d9ed>30%</color> of the target's <color=#28d9ed>Defense</color>.\\nEnemies defeated by this skill cannot be Resurrected or Revived.",
-        "1_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
-        "2_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
-        "3_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
-        "4_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
-        "5_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。\\nドレイカーン(デミウルゴス)のHPが低いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "1_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30％</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "2_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30％</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "3_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30％</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "4_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30％</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "5_jp": "敵単体にダメージを与える。\\nこのスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。\\nドレイカーン(デミウルゴス)のHPが低いほどダメージがUPし、\\n対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30％</color>無視する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
         "1_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "2_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
         "3_kr": "적을 공격합니다.\\n이 스킬은 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하고 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
@@ -308,7 +308,7 @@
         "2_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。\\n因该技能死亡的敌人无法触发复活与苏醒效果。",
         "3_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。\\n因该技能死亡的敌人无法触发复活与苏醒效果。",
         "4_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。\\n因该技能死亡的敌人无法触发复活与苏醒效果。",
-        "5_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,(创世之神)德雷坎生命值越低,则该技能的伤害越高,\\n并无视目标<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。\\n因该技能死亡的敌人无法触发复活与苏醒效果。"
+        "5_zh": "攻击敌人。\\n该技能根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害，(创世之神)德雷坎生命值越低，则该技能的伤害越高，\\n并无视目标<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>。\\n因该技能死亡的敌人无法触发复活与苏醒效果。"
       },
       "enhancement": {
         "2": [
@@ -391,21 +391,21 @@
         "3": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks increases proportional to <color=#28d9ed>Max Health</color> instead of Attack, and additionally decreases Weakness Gauge by <color=#28d9ed>3</color> after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
         "4": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks increases proportional to <color=#28d9ed>Max Health</color> instead of Attack, and additionally decreases Weakness Gauge by <color=#28d9ed>3</color> after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
         "5": "<color=#ffd732>Chain Companion Effect</color>: Damage dealt by Skill Chain attacks increases proportional to <color=#28d9ed>Max Health</color> instead of Attack, and additionally decreases Weakness Gauge by <color=#28d9ed>3</color> after attacking.\\n\\n<color=#ffd732>Dual Attack Effect</color>: Damage dealt increases proportional to <color=#28d9ed>Max Health</color> instead of Attack.",
-        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
-        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
-        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
-        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
-        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>:このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。攻撃後、<color=#28d9ed>3</color>のWGを追加でDOWNさせる。\\n\\n<color=#ffd732>連携効果</color>：このスキルは攻撃力の代わりに<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
         "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
         "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 체인 공격이 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가하며, 공격 후 <color=#28d9ed>3</color>의 WG를 추가로 감소시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격력 대신 <color=#28d9ed>최대 체력</color>에 비례하여 피해가 증가합니다.",
-        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
-        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
-        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
-        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
-        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害,且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>:根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。"
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>：自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害，且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>：根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>：自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害，且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>：根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>：自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害，且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>：根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>：自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害，且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>：根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>：自身的连携攻击根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害，且总是以优势属性施展。\\n\\n<color=#ffd732>夹攻效果</color>：根据<color=#28d9ed>生命值上限</color>而非攻击力等比提升伤害。"
       },
       "enhancement": {
         "2": [

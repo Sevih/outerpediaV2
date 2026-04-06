@@ -26,23 +26,26 @@
   "gift": "Natural Object",
   "video": "3_azE5ZfgBo",
   "VoiceActor": "VA. Kimberley Wong & Mara Junot",
-  "VoiceActor_jp": "CV. 引坂理絵&大地葉",
+  "VoiceActor_jp": "CV. 引坂理絵＆大地葉",
   "VoiceActor_kr": "CV. 손선영&김성희",
   "VoiceActor_zh": "CV. 引坂理绘&大地叶",
   "transcend": {
-    "3": "ATK DEF HP +10%",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\nAllies' DMG Reduc +2.4%\nOn entry, AP +25",
     "4_1": "ATK DEF HP +16%\nAllies' DMG Reduc +2.4%\nChain Passive WG reduction +1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n味方の被ダメDOWN+2.4%\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方の被ダメDOWN+2.4%\n戦闘開始時、AP+25",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n아군 받는 피해 감소 +2.4%\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 받는 피해 감소 +2.4%\n입장 시 AP +25",
+    "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n我方受伤害降低减少+2.4%\n连携被动技能的WG降低量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n我方受伤害降低减少+2.4%\n入场时AP+25"
@@ -55,7 +58,7 @@
       "name": "Ember, Charge!",
       "name_jp": "エンバー、突撃!",
       "name_kr": "엠버, 돌격!",
-      "name_zh": "炎珀,突击!",
+      "name_zh": "炎珀，突击！",
       "true_desc_levels": {
         "1": "Attacks an enemy, and inflicts <color=#28d9ed>Marked</color> on the caster for <color=#28d9ed>1 turn(s)</color>.\\nWhen the caster is granted <color=#28d9ed>Radiant Will</color>, changes to <color=#ffd732>Help Me, Master!</color>.\\n\\n<color=#ffd732>Help Me, Master!</color>\\nAttacks an enemy and inflicts <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Increases damage dealt.",
         "2": "Attacks an enemy, and inflicts <color=#28d9ed>Marked</color> on the caster for <color=#28d9ed>1 turn(s)</color>.\\nWhen the caster is granted <color=#28d9ed>Radiant Will</color>, changes to <color=#ffd732>Help Me, Master!</color>.\\n\\n<color=#ffd732>Help Me, Master!</color>\\nAttacks an enemy and inflicts <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>. Increases damage dealt.",
@@ -72,11 +75,11 @@
         "3_kr": "적을 공격하고, 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n<color=#28d9ed>찬란한 의지</color> 보유 시에는 <color=#ffd732>도와줘요, 스승님!</color>으로 변경됩니다.\\n\\n<color=#ffd732>도와줘요, 스승님!</color>\\n적을 공격하고, 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 피해가 증가합니다.",
         "4_kr": "적을 공격하고, 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n<color=#28d9ed>찬란한 의지</color> 보유 시에는 <color=#ffd732>도와줘요, 스승님!</color>으로 변경됩니다.\\n\\n<color=#ffd732>도와줘요, 스승님!</color>\\n적을 공격하고, 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 피해가 증가합니다.",
         "5_kr": "적을 공격하고, 자신에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n<color=#28d9ed>찬란한 의지</color> 보유 시에는 <color=#ffd732>도와줘요, 스승님!</color>으로 변경됩니다.\\n\\n<color=#ffd732>도와줘요, 스승님!</color>\\n적을 공격하고, 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다. 피해가 증가합니다.",
-        "1_zh": "攻击敌人,并使自身获得<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时,变更为<color=#ffd732>师父帮我!</color>。\\n\\n<color=#ffd732>师父帮我!</color>\\n攻击敌人,对目标造成<color=#28d9ed>挑衅</color>,持续<color=#28d9ed>1回合</color>。伤害提升。",
-        "2_zh": "攻击敌人,并使自身获得<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时,变更为<color=#ffd732>师父帮我!</color>。\\n\\n<color=#ffd732>师父帮我!</color>\\n攻击敌人,对目标造成<color=#28d9ed>挑衅</color>,持续<color=#28d9ed>1回合</color>。伤害提升。",
-        "3_zh": "攻击敌人,并使自身获得<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时,变更为<color=#ffd732>师父帮我!</color>。\\n\\n<color=#ffd732>师父帮我!</color>\\n攻击敌人,对目标造成<color=#28d9ed>挑衅</color>,持续<color=#28d9ed>1回合</color>。伤害提升。",
-        "4_zh": "攻击敌人,并使自身获得<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时,变更为<color=#ffd732>师父帮我!</color>。\\n\\n<color=#ffd732>师父帮我!</color>\\n攻击敌人,对目标造成<color=#28d9ed>挑衅</color>,持续<color=#28d9ed>1回合</color>。伤害提升。",
-        "5_zh": "攻击敌人,并使自身获得<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时,变更为<color=#ffd732>师父帮我!</color>。\\n\\n<color=#ffd732>师父帮我!</color>\\n攻击敌人,对目标造成<color=#28d9ed>挑衅</color>,持续<color=#28d9ed>1回合</color>。伤害提升。"
+        "1_zh": "攻击敌人，并使自身获得<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时，变更为<color=#ffd732>师父帮我！</color>。\\n\\n<color=#ffd732>师父帮我！</color>\\n攻击敌人，对目标造成<color=#28d9ed>挑衅</color>，持续<color=#28d9ed>1回合</color>。伤害提升。",
+        "2_zh": "攻击敌人，并使自身获得<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时，变更为<color=#ffd732>师父帮我！</color>。\\n\\n<color=#ffd732>师父帮我！</color>\\n攻击敌人，对目标造成<color=#28d9ed>挑衅</color>，持续<color=#28d9ed>1回合</color>。伤害提升。",
+        "3_zh": "攻击敌人，并使自身获得<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时，变更为<color=#ffd732>师父帮我！</color>。\\n\\n<color=#ffd732>师父帮我！</color>\\n攻击敌人，对目标造成<color=#28d9ed>挑衅</color>，持续<color=#28d9ed>1回合</color>。伤害提升。",
+        "4_zh": "攻击敌人，并使自身获得<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时，变更为<color=#ffd732>师父帮我！</color>。\\n\\n<color=#ffd732>师父帮我！</color>\\n攻击敌人，对目标造成<color=#28d9ed>挑衅</color>，持续<color=#28d9ed>1回合</color>。伤害提升。",
+        "5_zh": "攻击敌人，并使自身获得<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。\\n附带<color=#28d9ed>璀璨之志</color>时，变更为<color=#ffd732>师父帮我！</color>。\\n\\n<color=#ffd732>师父帮我！</color>\\n攻击敌人，对目标造成<color=#28d9ed>挑衅</color>，持续<color=#28d9ed>1回合</color>。伤害提升。"
       },
       "enhancement": {
         "2": [
@@ -139,7 +142,7 @@
       "wgr": 1,
       "cd": null,
       "buff": [
-        "IG_Buff_Effect_2000094_Interruption",
+        "RADIANT_WILL",
         "BT_SHIELD_BASED_CASTER"
       ],
       "debuff": [
@@ -206,11 +209,11 @@
         "3_kr": "(패시브 효과)\\n적 전체는 보유한 약화 효과에 비례하여 받는 피해가 증가합니다.\\n피격 후 적 전체에게 각각 <color=#28d9ed>65%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "4_kr": "(패시브 효과)\\n적 전체는 보유한 약화 효과에 비례하여 받는 피해가 증가합니다.\\n피격 후 적 전체에게 각각 <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
         "5_kr": "(패시브 효과)\\n적 전체는 보유한 약화 효과에 비례하여 받는 피해가 증가합니다.\\n피격 후 적 전체에게 각각 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
-        "1_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后,分别有<color=#28d9ed>50%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。",
-        "2_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后,分别有<color=#28d9ed>65%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>1回合</color>。",
-        "3_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后,分别有<color=#28d9ed>65%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
-        "4_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后,分别有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。",
-        "5_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后,分别有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果,持续<color=#28d9ed>2回合</color>。"
+        "1_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后，分别有<color=#28d9ed>50%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果，持续<color=#28d9ed>1回合</color>。",
+        "2_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后，分别有<color=#28d9ed>65%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果，持续<color=#28d9ed>1回合</color>。",
+        "3_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后，分别有<color=#28d9ed>65%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果，持续<color=#28d9ed>2回合</color>。",
+        "4_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后，分别有<color=#28d9ed>80%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果，持续<color=#28d9ed>2回合</color>。",
+        "5_zh": "(被动效果)\\n根据全体敌人附带的弱化效果等比提升所受伤害。\\n受到攻击后，分别有<color=#28d9ed>100%</color>的几率对全体敌人造成<color=#28d9ed>烧伤</color>效果，持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -278,7 +281,7 @@
       "name": "Blaze Like a Flame!",
       "name_jp": "燃え盛れ、焔のように!",
       "name_kr": "타오르라, 불꽃처럼!",
-      "name_zh": "燃烧吧,如同烈焰!",
+      "name_zh": "燃烧吧，如同烈焰！",
       "true_desc_levels": {
         "1": "Gains <color=#28d9ed>Radiant Will</color> for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burn</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
         "2": "Gains <color=#28d9ed>Radiant Will</color> for <color=#28d9ed>2 turn(s)</color>, then attacks all enemies. After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burn</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
@@ -295,11 +298,11 @@
         "3_kr": "<color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득한 후 적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "4_kr": "<color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득한 후 적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
         "5_kr": "<color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득한 후 적 전체를 공격합니다. 공격 후 대상에게 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
-        "1_zh": "获得<color=#28d9ed>璀璨之志</color>,持续<color=#28d9ed>2回合</color>,随后攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n该技能结束后,不会触发敌人的反击、复仇、迅速应对。",
-        "2_zh": "获得<color=#28d9ed>璀璨之志</color>,持续<color=#28d9ed>2回合</color>,随后攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n该技能结束后,不会触发敌人的反击、复仇、迅速应对。",
-        "3_zh": "获得<color=#28d9ed>璀璨之志</color>,持续<color=#28d9ed>2回合</color>,随后攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n该技能结束后,不会触发敌人的反击、复仇、迅速应对。",
-        "4_zh": "获得<color=#28d9ed>璀璨之志</color>,持续<color=#28d9ed>2回合</color>,随后攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n该技能结束后,不会触发敌人的反击、复仇、迅速应对。",
-        "5_zh": "获得<color=#28d9ed>璀璨之志</color>,持续<color=#28d9ed>2回合</color>,随后攻击全体敌人。攻击后,有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>,持续<color=#28d9ed>2回合</color>。\\n该技能结束后,不会触发敌人的反击、复仇、迅速应对。"
+        "1_zh": "获得<color=#28d9ed>璀璨之志</color>，持续<color=#28d9ed>2回合</color>，随后攻击全体敌人。攻击后，有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>，持续<color=#28d9ed>2回合</color>。\\n该技能结束后，不会触发敌人的反击、复仇、迅速应对。",
+        "2_zh": "获得<color=#28d9ed>璀璨之志</color>，持续<color=#28d9ed>2回合</color>，随后攻击全体敌人。攻击后，有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>，持续<color=#28d9ed>2回合</color>。\\n该技能结束后，不会触发敌人的反击、复仇、迅速应对。",
+        "3_zh": "获得<color=#28d9ed>璀璨之志</color>，持续<color=#28d9ed>2回合</color>，随后攻击全体敌人。攻击后，有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>，持续<color=#28d9ed>2回合</color>。\\n该技能结束后，不会触发敌人的反击、复仇、迅速应对。",
+        "4_zh": "获得<color=#28d9ed>璀璨之志</color>，持续<color=#28d9ed>2回合</color>，随后攻击全体敌人。攻击后，有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>，持续<color=#28d9ed>2回合</color>。\\n该技能结束后，不会触发敌人的反击、复仇、迅速应对。",
+        "5_zh": "获得<color=#28d9ed>璀璨之志</color>，持续<color=#28d9ed>2回合</color>，随后攻击全体敌人。攻击后，有<color=#28d9ed>100%</color>的概率对目标造成<color=#28d9ed>烧伤</color>，持续<color=#28d9ed>2回合</color>。\\n该技能结束后，不会触发敌人的反击、复仇、迅速应对。"
       },
       "enhancement": {
         "2": [
@@ -362,7 +365,7 @@
       "wgr": 2,
       "cd": 5,
       "buff": [
-        "IG_Buff_Effect_2000094_Interruption",
+        "RADIANT_WILL",
         "BT_SEAL_COUNTER"
       ],
       "debuff": [
@@ -386,21 +389,21 @@
         "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to gain <color=#28d9ed>Radiant Will</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Marked</color> on self for <color=#28d9ed>1 turn(s)</color>.",
         "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to gain <color=#28d9ed>Radiant Will</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Marked</color> on self for <color=#28d9ed>1 turn(s)</color>.",
         "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to gain <color=#28d9ed>Radiant Will</color> for <color=#28d9ed>2 turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Marked</color> on self for <color=#28d9ed>1 turn(s)</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
-        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
-        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
-        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
-        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>:攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>2ターン</color>の間、<color=#28d9ed>【燦然たる意志】</color>を獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>100%</color>の確率で自分に<color=#28d9ed>標的</color>を<color=#28d9ed>1ターン</color>の間付与する。",
         "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신에게 <color=#28d9ed>표식</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
         "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신에게 <color=#28d9ed>표식</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
         "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신에게 <color=#28d9ed>표식</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
         "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신에게 <color=#28d9ed>표식</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
         "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>100%</color>의 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>찬란한 의지</color>를 획득합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>100%</color> 확률로 자신에게 <color=#28d9ed>표식</color>을 <color=#28d9ed>1턴</color> 동안 부여합니다.",
-        "1_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。",
-        "2_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。",
-        "3_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。",
-        "4_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。",
-        "5_zh": "<color=#ffd732>连携收尾效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>,持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>,持续<color=#28d9ed>1回合</color>。"
+        "1_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。",
+        "2_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。",
+        "3_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。",
+        "4_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。",
+        "5_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率获得<color=#28d9ed>灿烂意志</color>，持续<color=#28d9ed>2回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>100%</color>的概率对自己施加<color=#28d9ed>标记</color>，持续<color=#28d9ed>1回合</color>。"
       },
       "enhancement": {
         "2": [
@@ -463,7 +466,7 @@
       "wgr": 3,
       "cd": null,
       "buff": [
-        "IG_Buff_Effect_2000094_Interruption"
+        "RADIANT_WILL"
       ],
       "debuff": [],
       "offensive": true,
