@@ -30,19 +30,22 @@
   "VoiceActor_kr": "CV. 김예림",
   "VoiceActor_zh": "CV. 柚木凉香",
   "transcend": {
-    "3": "ATK DEF HP +10%",
+    "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\n+5% Ally Team Health\n+25 Action Points at battle start",
     "4_1": "ATK DEF HP +16%\n+5% Ally Team Health\n+1 Chain Passive Weakness Gauge damage",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nBurst Level 3 Unlocked",
     "5_2": "ATK DEF HP +25%",
     "5_3": "ATK DEF HP +28%",
+    "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n味方のHP+5%\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁",
     "6_jp": "ATK DEF HP +30%\n味方のHP+5%\n戦闘開始時、AP+25",
+    "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n아군 체력 +5%\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금",
     "6_kr": "ATK DEF HP +30%\n아군 체력 +5%\n입장 시 AP +25",
+    "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n友军生命值+5%\n连携被动技能的WG降低量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发",
     "6_zh": "ATK DEF HP +30%\n友军生命值+5%\n入场时AP+25"
@@ -72,11 +75,11 @@
         "3_kr": "적을 공격합니다. 공격 후 <color=#28d9ed>85%</color> 확률로 자신의 약화 효과를 <color=#28d9ed>1</color>개 해제합니다.\\n자신의 턴에 사용 시, <color=#28d9ed>45%</color> 확률로 <color=#28d9ed>땅에는 꽃이</color>를 사용합니다. 강화 효과 보유 시에는 <color=#28d9ed>땅에는 꽃이</color>의 발동 확률이 <color=#28d9ed>40%</color> 증가합니다.\\n\\n<color=#28d9ed>땅에는 꽃이</color> 스킬 쿨타임의 영향을 주거나 받지 않습니다.",
         "4_kr": "적을 공격합니다. 공격 후 <color=#28d9ed>85%</color> 확률로 자신의 약화 효과를 <color=#28d9ed>1</color>개 해제합니다.\\n자신의 턴에 사용 시, <color=#28d9ed>45%</color> 확률로 <color=#28d9ed>땅에는 꽃이</color>를 사용합니다. 강화 효과 보유 시에는 <color=#28d9ed>땅에는 꽃이</color>의 발동 확률이 <color=#28d9ed>40%</color> 증가합니다.\\n\\n<color=#28d9ed>땅에는 꽃이</color> 스킬 쿨타임의 영향을 주거나 받지 않습니다.",
         "5_kr": "적을 공격합니다. 공격 후 <color=#28d9ed>100%</color> 확률로 자신의 약화 효과를 <color=#28d9ed>1</color>개 해제합니다.\\n자신의 턴에 사용 시, <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>땅에는 꽃이</color>를 사용합니다. 강화 효과 보유 시에는 <color=#28d9ed>땅에는 꽃이</color>의 발동 확률이 <color=#28d9ed>40%</color> 증가합니다.\\n\\n<color=#28d9ed>땅에는 꽃이</color> 스킬 쿨타임의 영향을 주거나 받지 않습니다.",
-        "1_zh": "攻击敌人。攻击后,有<color=#28d9ed>70%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时,有<color=#28d9ed>30%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时,<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。",
-        "2_zh": "攻击敌人。攻击后,有<color=#28d9ed>70%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时,有<color=#28d9ed>30%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时,<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。",
-        "3_zh": "攻击敌人。攻击后,有<color=#28d9ed>85%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时,有<color=#28d9ed>45%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时,<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。",
-        "4_zh": "攻击敌人。攻击后,有<color=#28d9ed>85%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时,有<color=#28d9ed>45%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时,<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。",
-        "5_zh": "攻击敌人。攻击后,有<color=#28d9ed>100%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时,有<color=#28d9ed>60%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时,<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。"
+        "1_zh": "攻击敌人。攻击后，有<color=#28d9ed>70%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时，有<color=#28d9ed>30%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时，<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。",
+        "2_zh": "攻击敌人。攻击后，有<color=#28d9ed>70%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时，有<color=#28d9ed>30%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时，<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。",
+        "3_zh": "攻击敌人。攻击后，有<color=#28d9ed>85%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时，有<color=#28d9ed>45%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时，<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。",
+        "4_zh": "攻击敌人。攻击后，有<color=#28d9ed>85%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时，有<color=#28d9ed>45%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时，<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。",
+        "5_zh": "攻击敌人。攻击后，有<color=#28d9ed>100%</color>的几率解除自身的<color=#28d9ed>1</color>个弱化效果。\\n用于自身回合时，有<color=#28d9ed>60%</color>的几率使用<color=#28d9ed>地上有花</color>。附带强化效果时，<color=#28d9ed>地上有花</color>的触发几率提升<color=#28d9ed>40%</color>。\\n\\n<color=#28d9ed>地上有花</color>的冷却时间不会造成或受到影响。"
       },
       "enhancement": {
         "2": [
@@ -166,11 +169,11 @@
         "3_kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>25%</color> 만큼 회복시키고, <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color> 증가시킵니다.",
         "4_kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>35%</color> 만큼 회복시키고, <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color> 증가시킵니다.",
         "5_kr": "자신을 제외한 아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>35%</color> 만큼 회복시키고, <color=#28d9ed>AP</color>를 <color=#28d9ed>25</color>, <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.",
-        "1_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>15%</color>,使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>。",
-        "2_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>20%</color>,使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>。",
-        "3_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>25%</color>,使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>。",
-        "4_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>35%</color>,使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>。",
-        "5_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>35%</color>,使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>,并使<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
+        "1_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>15%</color>，使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>。",
+        "2_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>20%</color>，使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>。",
+        "3_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>25%</color>，使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>。",
+        "4_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>35%</color>，使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>。",
+        "5_zh": "使除自身以外全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>35%</color>，使<color=#28d9ed>AP</color>提升<color=#28d9ed>25</color>，并使<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
       },
       "enhancement": {
         "2": [
@@ -290,11 +293,11 @@
         "3_kr": "아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>30%</color> 만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>면역</color>을 부여합니다.\\n적 전체의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
         "4_kr": "아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>40%</color> 만큼 회복시키고, <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>면역</color>을 부여합니다.\\n적 전체의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
         "5_kr": "아군 전체의 <color=#28d9ed>체력</color>을 아스테 최대 체력의 <color=#28d9ed>40%</color> 만큼 회복시키고, <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>면역</color>을 부여합니다.\\n적 전체의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>3턴</color> 동안 감소시킵니다. 이 효과는 대상의 효과 저항을 무시합니다.",
-        "1_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>20%</color>,并获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。",
-        "2_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>30%</color>,并获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。",
-        "3_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>30%</color>,并获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。",
-        "4_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>40%</color>,并获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。",
-        "5_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>40%</color>,并获得<color=#28d9ed>免疫</color>效果,持续<color=#28d9ed>3回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低,持续<color=#28d9ed>3回合</color>。该效果无视目标的效果抵抗。"
+        "1_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>20%</color>，并获得<color=#28d9ed>免疫</color>效果，持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低，持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。",
+        "2_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>30%</color>，并获得<color=#28d9ed>免疫</color>效果，持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低，持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。",
+        "3_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>30%</color>，并获得<color=#28d9ed>免疫</color>效果，持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低，持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。",
+        "4_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>40%</color>，并获得<color=#28d9ed>免疫</color>效果，持续<color=#28d9ed>2回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低，持续<color=#28d9ed>2回合</color>。该效果无视目标的效果抵抗。",
+        "5_zh": "全体友军的<color=#28d9ed>生命值</color>恢复相当于奥斯黛生命值上限的<color=#28d9ed>40%</color>，并获得<color=#28d9ed>免疫</color>效果，持续<color=#28d9ed>3回合</color>。\\n使全体敌人的<color=#28d9ed>暴击率</color>降低，持续<color=#28d9ed>3回合</color>。该效果无视目标的效果抵抗。"
       },
       "enhancement": {
         "2": [
@@ -371,21 +374,21 @@
         "3": "<color=#ffd732>Chain Companion Effect</color>: After attacking, <color=#28d9ed>heals</color> the caster and the ally with the lowest Health by <color=#28d9ed>15%</color>. \\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Cursed</color> for <color=#28d9ed>2 turns</color>.",
         "4": "<color=#ffd732>Chain Companion Effect</color>: After attacking, <color=#28d9ed>heals</color> the caster and the ally with the lowest Health by <color=#28d9ed>15%</color>. \\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Cursed</color> for <color=#28d9ed>2 turns</color>.",
         "5": "<color=#ffd732>Chain Companion Effect</color>: After attacking, <color=#28d9ed>heals</color> the caster and the ally with the lowest Health by <color=#28d9ed>15%</color>. \\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Cursed</color> for <color=#28d9ed>2 turns</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
-        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
-        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
-        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
-        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>:攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>:攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "1_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "2_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "3_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "4_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
+        "5_jp": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、残りHPが最も低い味方と自分の<color=#28d9ed>HP</color>を<color=#28d9ed>15%</color>回復させる。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。",
         "1_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
         "2_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
         "3_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
         "4_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
         "5_kr": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 체력 상황이 가장 나쁜 아군과 자신의 <color=#28d9ed>체력</color>을 <color=#28d9ed>15%</color> 회복시킵니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상에게 <color=#28d9ed>70%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
-        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。",
-        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。",
-        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。",
-        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。",
-        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>:攻击后,使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>:攻击后,有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果,持续<color=#28d9ed>2回合</color>。"
+        "1_zh": "<color=#ffd732>连携技能自由顺序效果</color>：攻击后，使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果，持续<color=#28d9ed>2回合</color>。",
+        "2_zh": "<color=#ffd732>连携技能自由顺序效果</color>：攻击后，使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果，持续<color=#28d9ed>2回合</color>。",
+        "3_zh": "<color=#ffd732>连携技能自由顺序效果</color>：攻击后，使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果，持续<color=#28d9ed>2回合</color>。",
+        "4_zh": "<color=#ffd732>连携技能自由顺序效果</color>：攻击后，使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果，持续<color=#28d9ed>2回合</color>。",
+        "5_zh": "<color=#ffd732>连携技能自由顺序效果</color>：攻击后，使生命值最低的友军和自身<color=#28d9ed>生命值</color>恢复<color=#28d9ed>15%</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>诅咒</color>效果，持续<color=#28d9ed>2回合</color>。"
       },
       "enhancement": {
         "2": [

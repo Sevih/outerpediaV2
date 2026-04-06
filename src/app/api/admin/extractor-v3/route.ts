@@ -234,6 +234,12 @@ function buffTypeLabel(buff: Record<string, string>) {
   // Irremovable variant: append _IR suffix when IconName contains "Interruption" and has a tooltip
   const suffix = (buff.IconName?.includes('Interruption') && buff.ToolTipID) ? '_IR' : ''
 
+  // Triggered passive mechanics (counter, revenge, agile response, additional attack)
+  // Use ActivateText as label instead of the verbose BT_RUN_* type
+  if (type.startsWith('BT_RUN_') && buff.ActivateText?.startsWith('SYS_BUFF_')) {
+    return `${buff.ActivateText}${suffix}`
+  }
+
   if (type === 'BT_STAT' && buff.StatType && buff.StatType !== 'ST_NONE') {
     return `${type}|${buff.StatType}${suffix}`
   }
@@ -251,7 +257,8 @@ const BUFF_BLACKLIST = new Set([
   'BT_SKILL_RANGE_ALL', 'BT_DMG_ENEMY_TEAM_DECREASE', 'BT_DMG_TO_BOSS',
   'BT_HEAL_BASED_TARGET', 'BT_HEAL_BASED_CASTER',
   'BT_RESOURCE_CHARGE', 'BT_RESOURCE_USE_SKILL', 'BT_SKILL_USING_CONDITION',
-  'BT_SWAP_STAT_ATTACK', 'BT_DMG_TARGET_DEBUFF', 'BT_DMG_TARGET_STAT', 'BT_DMG_TARGET_BUFF'
+  'BT_SWAP_STAT_ATTACK', 'BT_DMG_TARGET_DEBUFF', 'BT_DMG_TARGET_STAT', 'BT_DMG_TARGET_BUFF',
+  'BT_STAT_OWNER_LOST_HP_RATE', 'BT_STAT_PREMIUM', 'BT_GROUP'
 ])
 
 // Classify buffs into buff/debuff arrays
@@ -269,7 +276,7 @@ function classifyBuffs(buffIDs: string[], buffsByID: Map<string, Record<string, 
     // Skip internal stat buffs that only exist during skill execution
     if (entry.BuffRemoveType === 'ON_SKILL_FINISH' && entry.Type === 'BT_STAT') continue
     // Skip permanent stacking stat increases (not a visible buff)
-    if (entry.Type === 'BT_STAT' && entry.TurnDuration === '-1' && entry.BuffRemoveType === 'NONE') continue
+    if (entry.Type === 'BT_STAT' && entry.TurnDuration === '-1' && parseInt(entry.StackCount) > 1) continue
     if (seen.has(label)) continue
     seen.add(label)
 
@@ -417,6 +424,23 @@ function extractSkills(
     const buffIDSet = new Set<string>()
     for (const lvl of levels) {
       (lvl.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean).forEach((b) => buffIDSet.add(b))
+    }
+    // Also scan BuffTemplet for implicit buffs matching charID_skillNum_* pattern
+    // Only include if the buff is referenced in at least one skill level of this character
+    const allCharBuffIDs = new Set<string>()
+    for (const sid of Object.values(charSkills)) {
+      for (const lvl of (levelsBySkill.get(sid) ?? [])) {
+        (lvl.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean).forEach((b) => allCharBuffIDs.add(b))
+      }
+    }
+    const skillNum = Object.entries(charSkills).find(([, v]) => v === skillID)?.[0]?.replace('Skill_', '')
+    if (skillNum) {
+      const prefix = `${charRow.ID}_${skillNum}_`
+      for (const [bid] of buffsByID) {
+        if (!bid.startsWith(prefix)) continue
+        // Only include if referenced somewhere in skill levels OR in class passive
+        if (allCharBuffIDs.has(bid)) buffIDSet.add(bid)
+      }
     }
     const extraDebuffs: string[] = []
     if (skill.RequireAP) {
@@ -692,6 +716,12 @@ function extractCharacter(id: string, tables?: Tables) {
         for (const ttId of ttIds) {
           if (CHAIN_TOOLTIP[ttId]) { result.Chain_Type = CHAIN_TOOLTIP[ttId]; break }
         }
+        // Fallback to ChainCombinationTemplet.Sequence
+        if (!result.Chain_Type) {
+          const CHAIN_SEQ: Record<string, string> = { '0': 'Start', '3': 'Finish' }
+          const chainRow = t.chainTemplet.find((r) => r.ID === id)
+          if (chainRow) result.Chain_Type = CHAIN_SEQ[chainRow.Sequence] ?? 'Join'
+        }
         break
       }
     }
@@ -890,7 +920,7 @@ function deepDiffs(
 }
 
 // Fields that are manually edited, not extracted from game data
-const MANUAL_FIELDS = new Set(['rank', 'rank_pvp', 'role', 'skill_priority', 'video', 'rank_by_transcend'])
+const MANUAL_FIELDS = new Set(['rank', 'rank_pvp', 'role', 'skill_priority', 'video', 'rank_by_transcend', 'role_by_transcend'])
 
 function buildDiffs(
   extracted: Record<string, unknown>,
@@ -995,7 +1025,7 @@ const KEY_ORDER = [
   'Fullname', 'Fullname_jp', 'Fullname_kr', 'Fullname_zh',
   'Rarity', 'Element', 'Class', 'SubClass',
   'rank', 'rank_pvp', 'role',
-  'limited', 'rank_by_transcend', 'tags',
+  'limited', 'rank_by_transcend', 'role_by_transcend', 'tags',
   'skill_priority',
   'Chain_Type', 'gift', 'video',
   'VoiceActor', 'VoiceActor_jp', 'VoiceActor_kr', 'VoiceActor_zh',
