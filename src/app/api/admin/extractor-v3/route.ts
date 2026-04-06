@@ -228,27 +228,40 @@ function resolvePlaceholders(
 }
 
 // Get buff/debuff type label from a buff entry
-function buffTypeLabel(buff: Record<string, string>) {
+function buffTypeLabel(
+  buff: Record<string, string>,
+  tooltipCtx?: { map: Map<string, { name: string; isDebuff: boolean }>; blacklist: Set<string> }
+) {
   const type = buff.Type
 
-  // Irremovable variant: append _IR suffix when IconName contains "Interruption" and has a tooltip
-  const suffix = (buff.IconName?.includes('Interruption') && buff.ToolTipID) ? '_IR' : ''
+  // Irremovable handling: IconName contains "Interruption" and has a ToolTipID
+  if (buff.IconName?.includes('Interruption') && buff.ToolTipID && tooltipCtx) {
+    // Character-specific tooltip (not blacklisted) → use tooltip name as label
+    if (!tooltipCtx.blacklist.has(buff.ToolTipID)) {
+      const tt = tooltipCtx.map.get(buff.ToolTipID)
+      if (tt) return tt.name.toUpperCase().replace(/\s+/g, '_')
+    }
+    // Generic irremovable → append _IR suffix
+    const base = (type === 'BT_STAT' && buff.StatType && buff.StatType !== 'ST_NONE')
+      ? `${type}|${buff.StatType}` : type
+    return `${base}_IR`
+  }
 
   // Triggered passive mechanics (counter, revenge, agile response, additional attack)
   // Use ActivateText as label instead of the verbose BT_RUN_* type
   if (type.startsWith('BT_RUN_') && buff.ActivateText?.startsWith('SYS_BUFF_')) {
-    return `${buff.ActivateText}${suffix}`
+    return buff.ActivateText
   }
 
   if (type === 'BT_STAT' && buff.StatType && buff.StatType !== 'ST_NONE') {
-    return `${type}|${buff.StatType}${suffix}`
+    return `${type}|${buff.StatType}`
   }
   // Sustained recovery = heal with duration (not instant)
   if ((type === 'BT_HEAL_BASED_TARGET' || type === 'BT_HEAL_BASED_CASTER') &&
       parseInt(buff.TurnDuration) > 0 && buff.BuffRemoveType === 'ON_TURN_END') {
-    return `BT_CONTINU_HEAL${suffix}`
+    return 'BT_CONTINU_HEAL'
   }
-  return `${type}${suffix}`
+  return type
 }
 
 // Buff types to exclude from display
@@ -258,11 +271,15 @@ const BUFF_BLACKLIST = new Set([
   'BT_HEAL_BASED_TARGET', 'BT_HEAL_BASED_CASTER',
   'BT_RESOURCE_CHARGE', 'BT_RESOURCE_USE_SKILL', 'BT_SKILL_USING_CONDITION',
   'BT_SWAP_STAT_ATTACK', 'BT_DMG_TARGET_DEBUFF', 'BT_DMG_TARGET_STAT', 'BT_DMG_TARGET_BUFF',
-  'BT_STAT_OWNER_LOST_HP_RATE', 'BT_STAT_PREMIUM', 'BT_GROUP'
+  'BT_STAT_OWNER_LOST_HP_RATE', 'BT_STAT_PREMIUM', 'BT_GROUP', 'BT_DMG_REDUCE', 'BT_STAT|ST_HIT_HP_RECOVERY'
 ])
 
 // Classify buffs into buff/debuff arrays
-function classifyBuffs(buffIDs: string[], buffsByID: Map<string, Record<string, string>[]>) {
+function classifyBuffs(
+  buffIDs: string[],
+  buffsByID: Map<string, Record<string, string>[]>,
+  tooltipCtx?: { map: Map<string, { name: string; isDebuff: boolean }>; blacklist: Set<string> }
+) {
   const buffs: string[] = []
   const debuffs: string[] = []
   const seen = new Set<string>()
@@ -271,7 +288,7 @@ function classifyBuffs(buffIDs: string[], buffsByID: Map<string, Record<string, 
     const entries = buffsByID.get(bid)
     if (!entries?.length) continue
     const entry = entries[0]
-    const label = buffTypeLabel(entry)
+    const label = buffTypeLabel(entry, tooltipCtx)
     if (BUFF_BLACKLIST.has(label)) continue
     // Skip internal stat buffs that only exist during skill execution
     if (entry.BuffRemoveType === 'ON_SKILL_FINISH' && entry.Type === 'BT_STAT') continue
@@ -315,20 +332,33 @@ function extractSkills(
 
   // Build tooltip ID → name mapping (e.g. 87 → "HEAVY_STRIKE")
   const tooltipMap = new Map<string, { name: string; isDebuff: boolean }>()
-  const TOOLTIP_WHITELIST = new Set(['87']) // 87 = Heavy Strike
+  // Blacklist generic tooltips that duplicate already-extracted buff types
+  // 1-75: generic stat/CC/mechanic tooltips, 1001-1102: duplicates of 1-102
+  const TOOLTIP_BLACKLIST = new Set<string>()
+  for (let i = 1; i <= 75; i++) TOOLTIP_BLACKLIST.add(String(i))
+  for (let i = 1001; i <= 1102; i++) TOOLTIP_BLACKLIST.add(String(i))
+  TOOLTIP_BLACKLIST.add('78') // Burst Skill
+  TOOLTIP_BLACKLIST.add('80') // Find Weakness (= BT_DMG_TARGET_BREAK)
+  TOOLTIP_BLACKLIST.add('84') // Burst Skill
+  TOOLTIP_BLACKLIST.add('86') // Resurrection Greater (= BT_RESURRECTION)
+  TOOLTIP_BLACKLIST.add('88') // Increases Lifesteal (= BT_STAT|ST_VAMPIRIC)
+  TOOLTIP_BLACKLIST.add('89') // Reduces Lifesteal
+  TOOLTIP_BLACKLIST.add('90') // Immortality (= BT_UNDEAD)
   for (const tt of tooltipTemplet) {
     const nameEntry = textSystem.get(tt.NameID)
     const name = nameEntry?.[LANG_COLUMNS[DEFAULT_LANG]] ?? tt.NameID
     tooltipMap.set(tt.ID, { name, isDebuff: tt.IsDebuff === 'True' })
   }
+  const tooltipCtx = { map: tooltipMap, blacklist: TOOLTIP_BLACKLIST }
 
   const addTooltipBuffs = (ttIDs: string[], buffs: string[], debuffs: string[]) => {
     const seen = new Set(buffs.concat(debuffs))
     for (const ttID of ttIDs) {
-      if (!TOOLTIP_WHITELIST.has(ttID)) continue
+      if (TOOLTIP_BLACKLIST.has(ttID)) continue
       const tt = tooltipMap.get(ttID)
       if (!tt) continue
       const label = tt.name.toUpperCase().replace(/\s+/g, '_')
+      if (!label) continue
       if (seen.has(label)) continue
       seen.add(label)
       if (tt.isDebuff) debuffs.push(label)
@@ -459,7 +489,7 @@ function extractSkills(
         }
       }
     }
-    const { buffs, debuffs } = classifyBuffs([...buffIDSet], buffsByID)
+    const { buffs, debuffs } = classifyBuffs([...buffIDSet], buffsByID, tooltipCtx)
     for (const d of extraDebuffs) {
       if (!debuffs.includes(d)) debuffs.push(d)
     }
@@ -545,7 +575,7 @@ function extractSkills(
       }
 
       {
-        const chainClassified = classifyBuffs([...chainBuffIDs], buffsByID)
+        const chainClassified = classifyBuffs([...chainBuffIDs], buffsByID, tooltipCtx)
         skillOut.buff = chainClassified.buffs
         skillOut.debuff = chainClassified.debuffs
         addTooltipBuffs(chainTooltips, skillOut.buff as string[], skillOut.debuff as string[])
@@ -561,7 +591,7 @@ function extractSkills(
         const backupLevels = (levelsBySkill.get(backup.skillID) ?? [])
           .sort((a, b) => (parseInt(a.SkillLevel) || 0) - (parseInt(b.SkillLevel) || 0))
         const backupBuffIDs = (backupLevels[0]?.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean)
-        const backupClassified = classifyBuffs(backupBuffIDs, buffsByID)
+        const backupClassified = classifyBuffs(backupBuffIDs, buffsByID, tooltipCtx)
         skillOut.dual_buff = backupClassified.buffs
         skillOut.dual_debuff = backupClassified.debuffs
 
