@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import {
   loadEquipTables, extractItems, buildBossMap, buildDiffs, orderKeys,
-  devGuard, copyEquipImage, copyEffectImage, detectSource,
+  devGuard, copyEquipImage, copyEffectImage,
   type ExtractedItem, type EquipTables,
 } from '../lib'
 
@@ -25,17 +25,14 @@ const KEY_ORDER = [
   'effect_icon', 'class', 'mainStats', 'source', 'boss', 'level',
 ]
 
-function loadExisting(): Record<string, Record<string, unknown>> {
-  try { return JSON.parse(fs.readFileSync(JSON_PATH, 'utf-8')) } catch { return {} }
+function loadExisting(): Record<string, unknown>[] {
+  try { return JSON.parse(fs.readFileSync(JSON_PATH, 'utf-8')) } catch { return [] }
 }
 
-function findExistingKey(existing: Record<string, Record<string, unknown>>, item: ExtractedItem): string | undefined {
+function findExisting(existing: Record<string, unknown>[], item: ExtractedItem): number {
   const name = String(item.extracted.name ?? '')
-  const cls = String(item.extracted.class ?? '')
-  for (const [key, entry] of Object.entries(existing)) {
-    if (entry.name === name && (entry.class ?? '') === (cls || null)) return key
-  }
-  return undefined
+  const cls = item.extracted.class ?? null
+  return existing.findIndex((e) => e.name === name && (e.class ?? null) === cls)
 }
 
 // Accessories use DM_RAID_1 + fallback DM_RAID_2
@@ -56,7 +53,7 @@ export async function GET(req: NextRequest) {
 
   if (action === 'list') {
     const entries = items.map((w) => ({
-      ...w.extracted, id: w.id, existsInJson: !!findExistingKey(existing, w),
+      ...w.extracted, id: w.id, existsInJson: findExisting(existing, w) >= 0,
     }))
     return NextResponse.json({ total: entries.length, existing: entries.filter((e) => e.existsInJson).length, new: entries.filter((e) => !e.existsInJson).length, entries })
   }
@@ -65,13 +62,13 @@ export async function GET(req: NextRequest) {
     const results: { id: string; name: string; diffs: ReturnType<typeof buildDiffs> }[] = []
     let ok = 0
     for (const w of items) {
-      const key = findExistingKey(existing, w)
-      if (!key) continue
-      const diffs = buildDiffs(w.extracted as Record<string, unknown>, existing[key])
+      const idx = findExisting(existing, w)
+      if (idx < 0) continue
+      const diffs = buildDiffs(w.extracted as Record<string, unknown>, existing[idx])
       if (diffs.length > 0) results.push({ id: w.id, name: String(w.extracted.name ?? ''), diffs })
       else ok++
     }
-    return NextResponse.json({ total: Object.keys(existing).length, withDiffs: results.length, ok, results })
+    return NextResponse.json({ total: existing.length, withDiffs: results.length, ok, results })
   }
 
   return NextResponse.json({ error: `Unknown action: ${action}` }, { status: 400 })
@@ -89,13 +86,14 @@ export async function POST(req: NextRequest) {
   const itemById = new Map(items.map((w) => [w.id, w]))
   const existing = loadExisting()
 
-  let maxKey = Math.max(-1, ...Object.keys(existing).map(Number).filter((n) => !isNaN(n)))
   let saved = 0; let copied = 0
 
   for (const id of ids) {
     const w = itemById.get(id); if (!w) continue
-    const key = findExistingKey(existing, w) ?? String(++maxKey)
-    existing[key] = orderKeys(w.extracted as Record<string, unknown>, KEY_ORDER)
+    const ordered = orderKeys(w.extracted as Record<string, unknown>, KEY_ORDER)
+    const idx = findExisting(existing, w)
+    if (idx >= 0) existing[idx] = ordered
+    else existing.push(ordered)
     if (copyEquipImage(String(w.extracted.image ?? '')) === 'copied') copied++
     if (copyEffectImage(String(w.extracted.effect_icon ?? '')) === 'copied') copied++
     saved++

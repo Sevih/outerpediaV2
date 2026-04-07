@@ -42,7 +42,7 @@ export function expandLang(prefix: string, texts: Record<Lang, string> | null): 
   const r: Record<string, string | null> = {}
   for (const lang of LANGS) {
     const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
-    r[`${prefix}${suffix}`] = texts?.[lang]?.trim() ?? null
+    r[`${prefix}${suffix}`] = texts?.[lang]?.trim().replace(/[\u2018\u2019]/g, "'") ?? null
   }
   return r
 }
@@ -327,25 +327,20 @@ export function buildBossMap(t: EquipTables, dungeonMode: string): Map<string, s
 // ── Source detection ────────────────────────────────────────────────
 
 export function detectSource(id: string, t: EquipTables): string | null {
-  const eventIds = new Set<string>()
-  for (const p of t.productData) {
-    if (p.ProductGoodsType === 'PGT_ITEM' && p.ProductCategory?.startsWith('PC_EVENT')) {
-      eventIds.add(p.ProductGoodsID)
-    }
-  }
-  for (const craft of t.itemCraftData) {
-    if (craft.ID === id) {
-      const prod = t.productData.find((p) => p.ID === craft.GroupID)
-      if (prod?.ProductCategory?.startsWith('PC_EVENT')) return 'Event Shop'
-      if (prod?.ProductLevel === 'PC_ADVENTURE_LICENSE') return 'Adventure License'
-      const siblings = t.itemCraftData.filter((c) => c.GroupID === craft.GroupID)
-      if (siblings.some((s) => eventIds.has(s.ID))) return 'Event Shop'
-    }
-  }
+  // Direct match in ProductTemplet
   for (const p of t.productData) {
     if (p.ProductGoodsType !== 'PGT_ITEM' || p.ProductGoodsID !== id) continue
+    if (p.ProductCategory === 'PC_ADVENTURE_LICENSE') return 'Adventure License'
     if (p.ProductCategory?.startsWith('PC_EVENT')) return 'Event Shop'
-    if (p.ProductLevel === 'PC_ADVENTURE_LICENSE') return 'Adventure License'
+  }
+  // Via ItemCraftRewardTemplet
+  for (const craft of t.itemCraftData) {
+    if (craft.ID !== id) continue
+    for (const p of t.productData) {
+      if (p.ID !== craft.GroupID) continue
+      if (p.ProductCategory === 'PC_ADVENTURE_LICENSE') return 'Adventure License'
+      if (p.ProductCategory?.startsWith('PC_EVENT')) return 'Event Shop'
+    }
   }
   return null
 }
