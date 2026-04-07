@@ -84,6 +84,12 @@
     "BuffID": "COMMON_CLASS_PASSIVE,ATTACKER_PASSIVE_1,ATTACKER_PASSIVE_2,2000117_2_1,2000117_2_2,2000117_2_3"
   },
   {
+    "ID": "151001",
+    "SkillID": "15",
+    "SkillLevel": "1",
+    "BuffID": "COMMON_CLASS_PASSIVE,MAGE_PASSIVE_1,MAGE_PASSIVE_2,2000112_2_4,2000112_2_5,2000112_2_1"
+  },
+  {
     "ID": "1011001",
     "SkillID": "101",
     "SkillLevel": "1",
@@ -60753,6 +60759,542 @@
     "WGReduce": "3",
     "BuffID": "2000111_u_2_1,2000111_u_2_2,2000111_2_2,2000111_2_3,2000111_2_4,2000111_u_3_1,2000111_u_3_2",
     "BuffToolTip": "7"
+  },
+  {
+    "ID": "112011001",
+    "SkillID": "11201",
+    "SkillLevel": "1",
+    "DamageFactor": "1400",
+    "GainAP": "10",
+    "WGReduce": "1",
+    "BuffID": "2000112_1_1,2000112_1_2,2000112_1_3",
+    "BuffToolTip": "84,105"
+  },
+  {
+    "ID": "112012001",
+    "SkillID": "11201",
+    "SkillLevel": "2",
+    "DescID": "SE_DESC_DMG_10%,SE_DESC_DMG_WG_V_1",
+    "DamageFactor": "1500",
+    "GainAP": "10",
+    "WGReduce": "2",
+    "BuffID": "2000112_1_1,2000112_1_2,2000112_1_3",
+    "BuffToolTip": "84,105"
+  },
+  {
+    "ID": "112013001",
+    "SkillID": "11201",
+    "SkillLevel": "3",
+    "DescID": "SE_DESC_BUFF_C_20%,SE_DESC_DMG_10%",
+    "DamageFactor": "1600",
+    "GainAP": "10",
+    "WGReduce": "2",
+    "BuffID": "2000112_1_1,2000112_1_2,2000112_1_3",
+    "BuffToolTip": "84,105"
+  },
+  {
+    "ID": "112014001",
+    "SkillID": "11201",
+    "SkillLevel": "4",
+    "DescID": "SE_DESC_BUFF_C_20%,SE_DESC_ACTION_GAUGE_HEAL_V_10%",
+    "DamageFactor": "1600",
+    "GainAP": "10",
+    "WGReduce": "2",
+    "BuffID": "2000112_1_1,2000112_1_2,2000112_1_3",
+    "BuffToolTip": "84,105"
+  },
+  {
+    "ID": "112015001",
+    "SkillID": "11201",
+    "SkillLevel": "5",
+    "DescID": "SE_DESC_DMG_10%,SE_DESC_TRUE_DMG_HP_1%",
+    "DamageFactor": "1700",
+    "GainAP": "10",
+    "WGReduce": "2",
+    "BuffID": "2000112_1_1,2000112_1_2,2000112_1_3",
+    "BuffToolTip": "84,105"
+  },
+  {
+    "ID": "112021001",
+    "SkillID": "11202",
+    "SkillLevel": "1",
+    "DamageFactor": "1100",
+    "GainAP": "25",
+    "StartCool": "4",
+    "Cool": "4",
+    "WGReduce": "1",
+    "BuffID": "2000112_2_2,2000112_2_3",
+    "BuffToolTip": "61,62"
+  },
+  {
+    "ID": "112022001",
+    "SkillID": "11202",
+    "SkillLevel": "2",
+    "DescID": "SE_DESC_DMG_10%,SE_DESC_DMG_WG_V_1",
+    "DamageFactor": "1200",
+    "GainAP": "25",
+    "StartCool": "4",
+    "Cool": "4",
+    "WGReduce": "2",
+    "BuffID": "2000112_2_2,2000112_2_3",
+    "BuffToolTip": "61,62"
+  },
+  {
+    "ID": "112023001",
+    "SkillID": "11202",
+    "SkillLevel": "3",
+    "DescID": "SE_DESC_COOL_V_1",
+    "DamageFactor": "1200",
+    "GainAP": "25",
+    "StartCool": "3",
+    "Cool": "3",
+    "WGReduce": "2",
+    "BuffID": "2000112_2_2,2000112_2_3",
+    "BuffToolTip": "61,62"
+  },
+  {
+    "ID": "112024001",
+    "SkillID": "11202",
+    "SkillLevel": "4",
+    "DescID": "SE_DESC_DMG_10%,SE_DESC_TEAM_ACTION_GAUGE_HEAL_V_5%",
+    "DamageFactor": "1300",
+    "GainAP": "25",
+    "StartCool": "3",
+    "Cool": "3",
+    "WGReduce": "2",
+    "BuffID": "2000112_2_2,2000112_2_3",
+    "BuffToolTip": "61,62"
+  },
+  {
+    "ID": "112025001",
+    "SkillID": "11202",
+    "SkillLevel": "5",
+    "DescID": "SE_DESC_DMG_10%,SE_DESC_ACTION_GAUGE_DMG_V_5%_TARGET",
+    "DamageFactor": "1400",
+    "GainAP": "25",
+    "StartCool": "3",
+    "Cool": "3",
+    "WGReduce": "2",
+    "BuffID": "2000112_2_2,2000112_2_3",
+    "BuffToolTip": "61,62"
+  },
+  {
+    "ID": "112031001",
+    "SkillID": "11203",
+    "SkillLevel": "1",
+    "DamageFactor": "1930",
+    "GainAP": "35",
+    "StartCool": "5",
+    "Cool": "5",
+    "WGReduce": "2",
+    "BuffID": "2000112_3_1,2000112_3_2,2000112_3_3,2000112_3_4,2000112_3_5,2000112_3_6,2000112_3_7,2000112_3_5_1",
+    "BuffToolTip": "2010112,2000112,105"
+  },
+  {
+    "ID": "112032001",
+    "SkillID": "11203",
+    "SkillLevel": "2",
+    "DescID": "SE_DESC_DMG_10%,SE_DESC_DMG_WG_V_1",
+    "DamageFactor": "2030",
+    "GainAP": "35",
+    "StartCool": "5",
+    "Cool": "5",
+    "WGReduce": "3",
+    "BuffID": "2000112_3_1,2000112_3_2,2000112_3_3,2000112_3_4,2000112_3_5,2000112_3_6,2000112_3_7,2000112_3_5_1",
+    "BuffToolTip": "2010112,2000112,105"
+  },
+  {
+    "ID": "112033001",
+    "SkillID": "11203",
+    "SkillLevel": "3",
+    "DescID": "SE_DESC_COOL_V_1",
+    "DamageFactor": "2030",
+    "GainAP": "35",
+    "StartCool": "4",
+    "Cool": "4",
+    "WGReduce": "3",
+    "BuffID": "2000112_3_1,2000112_3_2,2000112_3_3,2000112_3_4,2000112_3_5,2000112_3_6,2000112_3_7,2000112_3_5_1",
+    "BuffToolTip": "2010112,2000112,105"
+  },
+  {
+    "ID": "112034001",
+    "SkillID": "11203",
+    "SkillLevel": "4",
+    "DescID": "SE_DESC_DMG_10%,SE_DESC_TRUE_DMG_HP_1%",
+    "DamageFactor": "2130",
+    "GainAP": "35",
+    "StartCool": "4",
+    "Cool": "4",
+    "WGReduce": "3",
+    "BuffID": "2000112_3_1,2000112_3_2,2000112_3_3,2000112_3_4,2000112_3_5,2000112_3_6,2000112_3_7,2000112_3_5_1",
+    "BuffToolTip": "2010112,2000112,105"
+  },
+  {
+    "ID": "112035001",
+    "SkillID": "11203",
+    "SkillLevel": "5",
+    "DescID": "SE_DESC_BUFF_T_1,SE_DESC_TRUE_DMG_HP_2%",
+    "DamageFactor": "2130",
+    "GainAP": "35",
+    "StartCool": "4",
+    "Cool": "4",
+    "WGReduce": "3",
+    "BuffID": "2000112_3_1,2000112_3_2,2000112_3_3,2000112_3_4,2000112_3_5,2000112_3_6,2000112_3_7,2000112_3_5_1",
+    "BuffToolTip": "2010112,2000112,105"
+  },
+  {
+    "ID": "112041001",
+    "SkillID": "11204",
+    "SkillLevel": "1",
+    "DamageFactor": "770",
+    "BuffToolTip": "73"
+  },
+  {
+    "ID": "112042001",
+    "SkillID": "11204",
+    "SkillLevel": "2",
+    "DescID": "SE_DESC_SKILL04_DMG_5%,SE_DESC_DMG_WG_V_1",
+    "DamageFactor": "770",
+    "BuffToolTip": "73"
+  },
+  {
+    "ID": "112043001",
+    "SkillID": "11204",
+    "SkillLevel": "3",
+    "DescID": "SE_DESC_SKILL04_DMG_5%",
+    "DamageFactor": "770",
+    "BuffToolTip": "73"
+  },
+  {
+    "ID": "112044001",
+    "SkillID": "11204",
+    "SkillLevel": "4",
+    "DescID": "SE_DESC_SKILL04_DMG_5%",
+    "DamageFactor": "770",
+    "BuffToolTip": "73"
+  },
+  {
+    "ID": "112045001",
+    "SkillID": "11204",
+    "SkillLevel": "5",
+    "DescID": "SE_DESC_SKILL04_DMG_5%,SE_DESC_DMG_WG_V_1",
+    "DamageFactor": "770",
+    "BuffToolTip": "73"
+  },
+  {
+    "ID": "112051001",
+    "SkillID": "11205",
+    "SkillLevel": "1",
+    "DamageFactor": "1000",
+    "WGReduce": "3",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112052001",
+    "SkillID": "11205",
+    "SkillLevel": "2",
+    "DamageFactor": "1050",
+    "WGReduce": "4",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112053001",
+    "SkillID": "11205",
+    "SkillLevel": "3",
+    "DamageFactor": "1100",
+    "WGReduce": "4",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112054001",
+    "SkillID": "11205",
+    "SkillLevel": "4",
+    "DamageFactor": "1150",
+    "WGReduce": "4",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112055001",
+    "SkillID": "11205",
+    "SkillLevel": "5",
+    "DamageFactor": "1200",
+    "WGReduce": "5",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112061001",
+    "SkillID": "11206",
+    "SkillLevel": "1",
+    "DamageFactor": "1000",
+    "WGReduce": "3",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112062001",
+    "SkillID": "11206",
+    "SkillLevel": "2",
+    "DamageFactor": "1050",
+    "WGReduce": "4",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112063001",
+    "SkillID": "11206",
+    "SkillLevel": "3",
+    "DamageFactor": "1100",
+    "WGReduce": "4",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112064001",
+    "SkillID": "11206",
+    "SkillLevel": "4",
+    "DamageFactor": "1150",
+    "WGReduce": "4",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112065001",
+    "SkillID": "11206",
+    "SkillLevel": "5",
+    "DamageFactor": "1200",
+    "WGReduce": "5",
+    "BuffID": "2000112_chain_1_1"
+  },
+  {
+    "ID": "112081001",
+    "SkillID": "11208",
+    "SkillLevel": "1",
+    "DescID": "SE_DESC_SKILL08_BURST_LV1"
+  },
+  {
+    "ID": "112082001",
+    "SkillID": "11208",
+    "SkillLevel": "2",
+    "DescID": "SE_DESC_SKILL08_2000112_4",
+    "BuffID": "trancendent_8_2000112_1,trancendent_8_ap_upgrade"
+  },
+  {
+    "ID": "112083001",
+    "SkillID": "11208",
+    "SkillLevel": "3",
+    "DescID": "SE_DESC_SKILL08_2000112_5",
+    "BuffID": "trancendent_8_2000112_1,trancendent_8_ap_upgrade,trancendent_8_2000112_2,trancendent_8_2000112_3,trancendent_8_2000112_2_1"
+  },
+  {
+    "ID": "112084001",
+    "SkillID": "11208",
+    "SkillLevel": "4",
+    "DescID": "SE_DESC_SKILL08_2000112_6",
+    "BuffID": "trancendent_8_2000112_1,trancendent_8_ap_upgrade,trancendent_8_2000112_2,trancendent_8_2000112_3,trancendent_8_2000112_4,trancendent_8_2000112_5,trancendent_8_2000112_2_1"
+  },
+  {
+    "ID": "112091001",
+    "SkillID": "11209",
+    "SkillLevel": "1",
+    "DamageFactor": "1000",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112092001",
+    "SkillID": "11209",
+    "SkillLevel": "2",
+    "DamageFactor": "1050",
+    "WGReduce": "1",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112093001",
+    "SkillID": "11209",
+    "SkillLevel": "3",
+    "DamageFactor": "1100",
+    "WGReduce": "1",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112094001",
+    "SkillID": "11209",
+    "SkillLevel": "4",
+    "DamageFactor": "1150",
+    "WGReduce": "1",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112095001",
+    "SkillID": "11209",
+    "SkillLevel": "5",
+    "DamageFactor": "1200",
+    "WGReduce": "2",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112101001",
+    "SkillID": "11210",
+    "SkillLevel": "1",
+    "DamageFactor": "1000",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112102001",
+    "SkillID": "11210",
+    "SkillLevel": "2",
+    "DamageFactor": "1050",
+    "WGReduce": "1",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112103001",
+    "SkillID": "11210",
+    "SkillLevel": "3",
+    "DamageFactor": "1100",
+    "WGReduce": "1",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112104001",
+    "SkillID": "11210",
+    "SkillLevel": "4",
+    "DamageFactor": "1150",
+    "WGReduce": "1",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112105001",
+    "SkillID": "11210",
+    "SkillLevel": "5",
+    "DamageFactor": "1200",
+    "WGReduce": "2",
+    "BuffID": "2000112_backup_1_1"
+  },
+  {
+    "ID": "112191001",
+    "SkillID": "11219",
+    "SkillLevel": "1",
+    "DamageFactor": "1500",
+    "WGReduce": "1",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112192001",
+    "SkillID": "11219",
+    "SkillLevel": "2",
+    "DamageFactor": "1600",
+    "WGReduce": "2",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112193001",
+    "SkillID": "11219",
+    "SkillLevel": "3",
+    "DamageFactor": "1700",
+    "WGReduce": "2",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112194001",
+    "SkillID": "11219",
+    "SkillLevel": "4",
+    "DamageFactor": "1700",
+    "WGReduce": "2",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112195001",
+    "SkillID": "11219",
+    "SkillLevel": "5",
+    "DamageFactor": "1900",
+    "WGReduce": "2",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112201001",
+    "SkillID": "11220",
+    "SkillLevel": "1",
+    "DamageFactor": "1500",
+    "GainCP": "2",
+    "WGReduce": "2",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112202001",
+    "SkillID": "11220",
+    "SkillLevel": "2",
+    "DamageFactor": "1600",
+    "GainCP": "2",
+    "WGReduce": "3",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112203001",
+    "SkillID": "11220",
+    "SkillLevel": "3",
+    "DamageFactor": "1700",
+    "GainCP": "2",
+    "WGReduce": "3",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112204001",
+    "SkillID": "11220",
+    "SkillLevel": "4",
+    "DamageFactor": "1700",
+    "GainCP": "2",
+    "WGReduce": "3",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112205001",
+    "SkillID": "11220",
+    "SkillLevel": "5",
+    "DamageFactor": "1900",
+    "GainCP": "2",
+    "WGReduce": "3",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112211001",
+    "SkillID": "11221",
+    "SkillLevel": "1",
+    "DamageFactor": "1890",
+    "GainCP": "8",
+    "WGReduce": "2",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_3_1,2000112_U_3_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112212001",
+    "SkillID": "11221",
+    "SkillLevel": "2",
+    "DamageFactor": "1990",
+    "GainCP": "8",
+    "WGReduce": "3",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_3_1,2000112_U_3_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112213001",
+    "SkillID": "11221",
+    "SkillLevel": "3",
+    "DamageFactor": "2090",
+    "GainCP": "8",
+    "WGReduce": "3",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_3_1,2000112_U_3_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112214001",
+    "SkillID": "11221",
+    "SkillLevel": "4",
+    "DamageFactor": "2090",
+    "GainCP": "8",
+    "WGReduce": "3",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_3_1,2000112_U_3_2,2000112_U_1_1"
+  },
+  {
+    "ID": "112215001",
+    "SkillID": "11221",
+    "SkillLevel": "5",
+    "DamageFactor": "2190",
+    "GainCP": "8",
+    "WGReduce": "3",
+    "BuffID": "2000112_U_1,2000112_1_2,2000112_U_2,2000112_U_3_1,2000112_U_3_2,2000112_U_1_1"
   },
   {
     "ID": "113011001",

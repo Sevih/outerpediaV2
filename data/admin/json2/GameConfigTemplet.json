@@ -333,7 +333,7 @@
   },
   {
     "ID": "RESURRECTION_ACTION_POINT_RATE_PVP",
-    "ValueString": "500"
+    "ValueString": "700"
   },
   {
     "ID": "RECRUIT_ELEMENTAL_PERIOD",
@@ -381,19 +381,19 @@
   },
   {
     "ID": "REALTIME_ARENA_FREE_BAN_COOL",
-    "ValueString": "20"
+    "ValueString": "35"
   },
   {
     "ID": "REALTIME_ARENA_SELECT_COOL",
-    "ValueString": "20"
+    "ValueString": "25"
   },
   {
     "ID": "REALTIME_ARENA_CHARACTER_BAN_COOL",
-    "ValueString": "20"
+    "ValueString": "25"
   },
   {
     "ID": "REALTIME_ARENA_TEAM_SET_COOL",
-    "ValueString": "20"
+    "ValueString": "45"
   },
   {
     "ID": "REALTIME_ARENA_BATTLE_TURN_COOL",
@@ -405,7 +405,7 @@
   },
   {
     "ID": "REALTIME_ARENA_MATCH_TIME_UP_SEC",
-    "ValueString": "90"
+    "ValueString": "120"
   },
   {
     "ID": "RECRUIT_DEMIURGE_SELECT_PERIODE",
@@ -553,7 +553,7 @@
   },
   {
     "ID": "IRREGULAR_HUNTER_ID",
-    "ValueString": "2000001, 2000060, 2000087, 2000089, 2000101"
+    "ValueString": "2000001, 2000060, 2000087, 2000089, 2000101, 2000117"
   },
   {
     "ID": "SELECT_OPTION_CRAFT_BUY_COUNT",
@@ -752,6 +752,14 @@
     "ValueString": "100"
   },
   {
+    "ID": "PVP_REALTIME_PLACEMENT_COUNT_1",
+    "ValueString": "5"
+  },
+  {
+    "ID": "PVP_REALTIME_PLACEMENT_COUNT_2",
+    "ValueString": "5"
+  },
+  {
     "ID": "MEMORY_PIECE_SEASONAL_PICKUP",
     "ValueString": "150"
   },
@@ -762,5 +770,9 @@
   {
     "ID": "SPECIAL_REWARD_TIME",
     "ValueString": "9"
+  },
+  {
+    "ID": "PVP_REALTIME_BAN_GUARD_SLOT",
+    "ValueString": "0"
   }
 ]

@@ -936,6 +936,15 @@
     "ConvertToID": "0"
   },
   {
+    "ID": "105",
+    "IconName": "",
+    "NameID": "SYS_BUFF_REDISTRIBUTE",
+    "DescID": "SYS_DESC_REDISTRIBUTE",
+    "IsDebuff": "True",
+    "IsIgnoreInterruption": "False",
+    "ConvertToID": "0"
+  },
+  {
     "ID": "998",
     "IconName": "IG_Buff_Start_Bulwark_Interruption",
     "NameID": "SYS_BUFF_Start_Bulwark",
@@ -2093,6 +2102,24 @@
     "NameID": "SYS_BUFF_NAME_2000120",
     "DescID": "SYS_BUFF_DESC_2000120",
     "IsDebuff": "False",
+    "IsIgnoreInterruption": "True",
+    "ConvertToID": "0"
+  },
+  {
+    "ID": "2000112",
+    "IconName": "IG_Buff_Effect_Disrupt_Interruption",
+    "NameID": "SYS_BUFF_NAME_2000112",
+    "DescID": "SYS_BUFF_DESC_2000112",
+    "IsDebuff": "False",
+    "IsIgnoreInterruption": "True",
+    "ConvertToID": "0"
+  },
+  {
+    "ID": "2010112",
+    "IconName": "IG_Buff_Effect_Disrupt_Interruption_D",
+    "NameID": "SYS_BUFF_NAME_2000112_Debuff",
+    "DescID": "SYS_BUFF_DESC_2000112_Debuff",
+    "IsDebuff": "True",
     "IsIgnoreInterruption": "True",
     "ConvertToID": "0"
   },

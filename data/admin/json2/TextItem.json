@@ -10363,7 +10363,7 @@
     "ID": "ITEM_BOX_SELECT_014_NAME",
     "Korean": "전설 등급 선물 선택 상자",
     "English": "Legendary Quality Present Selection Chest",
-    "Japanese": "レジェンドプレゼント選択ボックス",
+    "Japanese": "プレゼント選択ボックス\\n【レジェンド】",
     "China_Simplified": "传说级别礼物选择箱",
     "China_Traditional": "傳說級別禮物選擇箱"
   },
@@ -35296,6 +35296,86 @@
     "China_Traditional": "我們結婚了布林"
   },
   {
+    "ID": "ITEM_BOX_RANDOM_30392_NAME",
+    "Korean": "150 조각 선택권 (화속성)",
+    "English": "150 Piece Selection Ticket (Fire)",
+    "Japanese": "150ピース選択チケット（火属性）",
+    "China_Simplified": "150碎片选择券（火属性）",
+    "China_Traditional": "150碎片選擇券（火屬性）"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30393_NAME",
+    "Korean": "150 조각 선택권 (수속성)",
+    "English": "150 Piece Selection Ticket (Water)",
+    "Japanese": "150ピース選択チケット（水属性）",
+    "China_Simplified": "150碎片选择券（水属性）",
+    "China_Traditional": "150碎片選擇券（水屬性）"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30394_NAME",
+    "Korean": "150 조각 선택권 (지속성)",
+    "English": "150 Piece Selection Ticket (Earth)",
+    "Japanese": "150ピース選択チケット（地属性）",
+    "China_Simplified": "150碎片选择券（土属性）",
+    "China_Traditional": "150碎片選擇券（大地屬性）"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30395_NAME",
+    "Korean": "150 조각 선택권 (명속성)",
+    "English": "150 Piece Selection Ticket (Light)",
+    "Japanese": "150ピース選択チケット（光属性）",
+    "China_Simplified": "150碎片选择券（光属性）",
+    "China_Traditional": "150碎片選擇券（光屬性）"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30396_NAME",
+    "Korean": "150 조각 선택권 (암속성)",
+    "English": "150 Piece Selection Ticket (Dark)",
+    "Japanese": "150ピース選択チケット（闇属性）",
+    "China_Simplified": "150碎片选择券（暗属性）",
+    "China_Traditional": "150碎片選擇券（暗屬性）"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30392_DESC",
+    "Korean": "화속성 동료 중 한 명의 조각을 선택하여 150개 얻습니다.",
+    "English": "Select a Piece from one Fire hero and obtain 150.",
+    "Japanese": "火属性の仲間の中から一人のピースを選択して150個入手します。",
+    "China_Simplified": "选择一位火属性同伴的碎片获得150个。",
+    "China_Traditional": "選擇一位火屬性同伴的碎片獲得150個。"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30393_DESC",
+    "Korean": "수속성 동료 중 한 명의 조각을 선택하여 150개 얻습니다.",
+    "English": "Select a Piece from one Water hero and obtain 150.",
+    "Japanese": "水属性の仲間の中から一人のピースを選択して150個入手します。",
+    "China_Simplified": "选择一位水属性同伴的碎片获得150个。",
+    "China_Traditional": "選擇一位水屬性同伴的碎片獲得150個。"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30394_DESC",
+    "Korean": "지속성 동료 중 한 명의 조각을 선택하여 150개 얻습니다.",
+    "English": "Select a Piece from one Earth hero and obtain 150.",
+    "Japanese": "地属性の仲間の中から一人のピースを選択して150個入手します。",
+    "China_Simplified": "选择一位土属性同伴的碎片获得150个。",
+    "China_Traditional": "選擇一位大地屬性同伴的碎片獲得150個。"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30395_DESC",
+    "Korean": "명속성 동료 중 한 명의 조각을 선택하여 150개 얻습니다.",
+    "English": "Select a Piece from one Light hero and obtain 150.",
+    "Japanese": "光属性の仲間の中から一人のピースを選択して150個入手します。",
+    "China_Simplified": "选择一位光属性同伴的碎片获得150个。",
+    "China_Traditional": "選擇一位光屬性同伴的碎片獲得150個。"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30396_DESC",
+    "Korean": "암속성 동료 중 한 명의 조각을 선택하여 150개 얻습니다.",
+    "English": "Select a Piece from one Dark hero and obtain 150.",
+    "Japanese": "闇属性の仲間の中から一人のピースを選択して150個入手します。",
+    "China_Simplified": "选择一位暗属性同伴的碎片获得150个。",
+    "China_Traditional": "選擇一位暗屬性同伴的碎片獲得150個。"
+  },
+  {
     "ID": "PRODUCT_LIMITCRYSTAL_1200408_NAME",
     "Korean": "트랜스톤 (전체)x20",
     "English": "Transistone (Total) x20",
@@ -35836,8 +35916,8 @@
     "Korean": "맹세의 서약",
     "English": "Oath of Determination",
     "Japanese": "誓いの誓約",
-    "China_Simplified": "誓言之书",
-    "China_Traditional": "誓約書"
+    "China_Simplified": "誓言之约",
+    "China_Traditional": "誓言之約"
   },
   {
     "ID": "ITEM_CAHR_LEV_MAX_01_DESC",
@@ -36274,48 +36354,48 @@
   {
     "ID": "ITEM_PRESENT_MAX_2000025_NAME",
     "Korean": "베스와의 서약",
-    "English": "Oath of Beth",
-    "Japanese": "ベスの誓いの書",
-    "China_Simplified": "与贝丝的誓言",
-    "China_Traditional": "與貝絲的誓約書"
+    "English": "Oath with Beth",
+    "Japanese": "ベスとの誓約",
+    "China_Simplified": "与贝丝之约",
+    "China_Traditional": "與貝絲之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000077_NAME",
     "Korean": "카파와의 서약",
-    "English": "Oath of Kappa",
-    "Japanese": "カッパの誓いの書",
-    "China_Simplified": "与卡帕的誓言",
-    "China_Traditional": "與卡帕的誓約書"
+    "English": "Oath with Kappa",
+    "Japanese": "カッパとの誓約",
+    "China_Simplified": "与卡帕之约",
+    "China_Traditional": "與卡帕之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000055_NAME",
     "Korean": "아에르와의 서약",
-    "English": "Oath of Aer",
-    "Japanese": "アエルの誓いの書",
-    "China_Simplified": "与艾耶尔的誓言",
-    "China_Traditional": "與艾耶爾的誓約書"
+    "English": "Oath with Aer",
+    "Japanese": "アエルとの誓約",
+    "China_Simplified": "与艾耶尔之约",
+    "China_Traditional": "與艾耶爾之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000078_NAME",
     "Korean": "라플라스와의 서약",
-    "English": "Oath of Laplace",
-    "Japanese": "ラプラスの誓いの書",
-    "China_Simplified": "与拉普拉丝的誓言",
-    "China_Traditional": "與拉普拉絲的誓約書"
+    "English": "Oath with Laplace",
+    "Japanese": "ラプラスとの誓約",
+    "China_Simplified": "与拉普拉丝之约",
+    "China_Traditional": "與拉普拉絲之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000022_NAME",
     "Korean": "노아와의 서약",
-    "English": "Oath of Noa",
-    "Japanese": "ノアの誓いの書",
-    "China_Simplified": "与诺雅的誓言",
-    "China_Traditional": "與諾雅的誓約書"
+    "English": "Oath with Noa",
+    "Japanese": "ノアとの誓約",
+    "China_Simplified": "与诺雅之约",
+    "China_Traditional": "與諾雅之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000043_NAME",
     "Korean": "이터널과의 서약",
-    "English": "Oath of Eternal",
-    "Japanese": "エターナルの誓いの書",
+    "English": "Oath with Eternal",
+    "Japanese": "エターナルとの誓約",
     "China_Simplified": "与伊特诺的誓言",
     "China_Traditional": "與伊特諾的誓約書"
   },
@@ -38120,12 +38200,20 @@
     "China_Traditional": "聖誕夜的祝福"
   },
   {
+    "ID": "PRODUCT_PACKAGE_620113_NAME",
+    "Korean": "(한정) 성야의 영입 축하 선물",
+    "English": "(Limited) Holy Night Recruitment Celebration Gift",
+    "Japanese": "(限定) 聖夜の加入祝いギフト",
+    "China_Simplified": "(限定) 圣诞夜招募庆祝礼物",
+    "China_Traditional": "(限定) 聖誕夜招募慶祝禮物"
+  },
+  {
     "ID": "PRODUCT_EVENT_20_0001_NAME",
     "Korean": "맹세의 서약",
     "English": "Oath of Determination",
     "Japanese": "誓いの誓約",
-    "China_Simplified": "誓言之书",
-    "China_Traditional": "誓約書"
+    "China_Simplified": "誓言之约",
+    "China_Traditional": "誓言之約"
   },
   {
     "ID": "PRODUCT_EVENT_20_0002_NAME",
@@ -39872,6 +39960,86 @@
     "China_Traditional": "精靈正義女神"
   },
   {
+    "ID": "ITEM_SALE_TICKET_NAME_01",
+    "Korean": "초월팩 할인권 [데미우르고스 스텔라]",
+    "English": "Transcend Pack Discount Ticket [Demiurge Stella]",
+    "Japanese": "超越パック割引券【デミウルゴス・ステラ】",
+    "China_Simplified": "超越礼包折扣券【创世之神·斯黛拉】",
+    "China_Traditional": "超越禮包折扣券【迪米烏哥斯·斯黛拉】"
+  },
+  {
+    "ID": "ITEM_SALE_TICKET_NAME_02",
+    "Korean": "초월팩 할인권 [데미우르고스 아스테]",
+    "English": "Transcend Pack Discount Ticket [Demiurge Astei]",
+    "Japanese": "超越パック割引券【デミウルゴス・アステ】",
+    "China_Simplified": "超越礼包折扣券【创世之神·奥斯黛】",
+    "China_Traditional": "超越禮包折扣券【迪米烏哥斯·奧斯黛】"
+  },
+  {
+    "ID": "ITEM_SALE_TICKET_NAME_03",
+    "Korean": "초월팩 할인권 [데미우르고스 드레이칸]",
+    "English": "Transcend Pack Discount Ticket [Demiurge Drakhan]",
+    "Japanese": "超越パック割引券【デミウルゴス・ドレイカーン】",
+    "China_Simplified": "超越礼包折扣券【创世之神·德雷坎】",
+    "China_Traditional": "超越禮包折扣券【迪米烏哥斯·德蕾翰】"
+  },
+  {
+    "ID": "ITEM_SALE_TICKET_NAME_04",
+    "Korean": "초월팩 할인권 [데미우르고스 블라다]",
+    "English": "Transcend Pack Discount Ticket [Demiurge Vlada]",
+    "Japanese": "超越パック割引券【デミウルゴス・ヴラダ】",
+    "China_Simplified": "超越礼包折扣券【创世之神·布拉达】",
+    "China_Traditional": "超越禮包折扣券【迪米烏哥斯·佛拉達】"
+  },
+  {
+    "ID": "ITEM_SALE_TICKET_NAME_05",
+    "Korean": "초월팩 할인권 [데미우르고스 델타]",
+    "English": "Transcend Pack Discount Ticket [Demiurge Delta]",
+    "Japanese": "超越パック割引券【デミウルゴス・デルタ】",
+    "China_Simplified": "超越礼包折扣券【创世之神·德尔塔】",
+    "China_Traditional": "超越禮包折扣券【迪米烏哥斯·戴爾塔】"
+  },
+  {
+    "ID": "ITEM_SALE_TICKET_DESC_01",
+    "Korean": "데미우르고스 스텔라 초월팩 상품을 50% 할인된 가격에 구매하실 수 있는 티켓입니다. 상품 구매 화면에서 사용하실 수 있습니다.",
+    "English": "A ticket that allows you to purchase the Demiurge Stella Transcend Pack at a 50% discount. Can be used on the product purchase screen.",
+    "Japanese": "デミウルゴス・ステラの超越パック商品を50%割引で購入できるチケットです。商品購入画面でご使用いただけます。",
+    "China_Simplified": "可以50%折扣价格购买创世之神·斯黛拉超越礼包的票券。可在商品购买界面使用。",
+    "China_Traditional": "可以50%折扣價格購買迪米烏哥斯·斯黛拉超越禮包的票券。可在商品購買介面使用。"
+  },
+  {
+    "ID": "ITEM_SALE_TICKET_DESC_02",
+    "Korean": "데미우르고스 아스테 초월팩 상품을 50% 할인된 가격에 구매하실 수 있는 티켓입니다. 상품 구매 화면에서 사용하실 수 있습니다.",
+    "English": "A ticket that allows you to purchase the Demiurge Astei Transcend Pack at a 50% discount. Can be used on the product purchase screen.",
+    "Japanese": "デミウルゴス・アステの超越パック商品を50%割引で購入できるチケットです。商品購入画面でご使用いただけます。",
+    "China_Simplified": "可以50%折扣价格购买创世之神·奥斯黛超越礼包的票券。可在商品购买界面使用。",
+    "China_Traditional": "可以50%折扣價格購買迪米烏哥斯·奧斯黛超越禮包的票券。可在商品購買介面使用。"
+  },
+  {
+    "ID": "ITEM_SALE_TICKET_DESC_03",
+    "Korean": "데미우르고스 드레이칸 초월팩 상품을 50% 할인된 가격에 구매하실 수 있는 티켓입니다. 상품 구매 화면에서 사용하실 수 있습니다.",
+    "English": "A ticket that allows you to purchase the Demiurge Drakhan Transcend Pack at a 50% discount. Can be used on the product purchase screen.",
+    "Japanese": "デミウルゴス・ドレイカーンの超越パック商品を50%割引で購入できるチケットです。商品購入画面でご使用いただけます。",
+    "China_Simplified": "可以50%折扣价格购买创世之神·德雷坎超越礼包的票券。可在商品购买界面使用。",
+    "China_Traditional": "可以50%折扣價格購買迪米烏哥斯·德蕾翰超越禮包的票券。可在商品購買介面使用。"
+  },
+  {
+    "ID": "ITEM_SALE_TICKET_DESC_04",
+    "Korean": "데미우르고스 블라다 초월팩 상품을 50% 할인된 가격에 구매하실 수 있는 티켓입니다. 상품 구매 화면에서 사용하실 수 있습니다.",
+    "English": "A ticket that allows you to purchase the Demiurge Vlada Transcend Pack at a 50% discount. Can be used on the product purchase screen.",
+    "Japanese": "デミウルゴス・ヴラダの超越パック商品を50%割引で購入できるチケットです。商品購入画面でご使用いただけます。",
+    "China_Simplified": "可以50%折扣价格购买创世之神·布拉达超越礼包的票券。可在商品购买界面使用。",
+    "China_Traditional": "可以50%折扣價格購買迪米烏哥斯·佛拉達超越禮包的票券。可在商品購買介面使用。"
+  },
+  {
+    "ID": "ITEM_SALE_TICKET_DESC_05",
+    "Korean": "데미우르고스 델타 초월팩 상품을 50% 할인된 가격에 구매하실 수 있는 티켓입니다. 상품 구매 화면에서 사용하실 수 있습니다.",
+    "English": "A ticket that allows you to purchase the Demiurge Delta Transcend Pack at a 50% discount. Can be used on the product purchase screen.",
+    "Japanese": "デミウルゴス・デルタの超越パック商品を50%割引で購入できるチケットです。商品購入画面でご使用いただけます。",
+    "China_Simplified": "可以50%折扣价格购买创世之神·德尔塔超越礼包的票券。可在商品购买界面使用。",
+    "China_Traditional": "可以50%折扣價格購買迪米烏哥斯·戴爾塔超越禮包的票券。可在商품購買介面使用。"
+  },
+  {
     "ID": "PRODUCT_EVENT_25_0001_NAME",
     "Korean": "블루 메모리 스톤 X60",
     "English": "Blue Memory Stone x60",
@@ -40396,8 +40564,8 @@
     "Korean": "맹세의 서약",
     "English": "Oath of Determination",
     "Japanese": "誓いの誓約",
-    "China_Simplified": "誓约书",
-    "China_Traditional": "誓約書"
+    "China_Simplified": "誓言之约",
+    "China_Traditional": "誓言之約"
   },
   {
     "ID": "PRODUCT_EVENT_27_0004_NAME",
@@ -40995,7 +41163,7 @@
     "ID": "PRODUCT_EVENT_28_0008_NAME",
     "Korean": "글루나이트",
     "English": "Glunite",
-    "Japanese": "グルーナイト",
+    "Japanese": "アーマーグルーナイト",
     "China_Simplified": "格鲁矿石",
     "China_Traditional": "格魯礦石"
   },
@@ -41585,11 +41753,11 @@
   },
   {
     "ID": "SYS_MATERIAL_CHAR_CORE_FUSION_1",
-    "Korean": "융합 코어",
-    "English": "Fusion Core",
-    "Japanese": "フュージョン・コア",
-    "China_Simplified": "融合核心",
-    "China_Traditional": "融合核心"
+    "Korean": "융합형 코어",
+    "English": "Fusion-Type Core",
+    "Japanese": "フュージョン型コア",
+    "China_Simplified": "融合型核心",
+    "China_Traditional": "融合型核心"
   },
   {
     "ID": "SYS_MATERIAL_CHAR_CORE_FUSION_1_DESC",
@@ -42396,8 +42564,8 @@
     "Korean": "데미우르고스 블라다와의 서약",
     "English": "Oath with Demiurge Vlada",
     "Japanese": "デミウルゴス・ヴラダとの誓約",
-    "China_Simplified": "与创世之神·布拉达的誓约",
-    "China_Traditional": "與迪米烏哥斯·佛拉達的誓約"
+    "China_Simplified": "与创世之神·布拉达之约",
+    "China_Traditional": "與迪米烏哥斯·佛拉達之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000075_DESC",
@@ -43931,9 +44099,9 @@
     "ID": "ITEM_PRESENT_MAX_2000108_NAME",
     "Korean": "비엘라와의 서약",
     "English": "Oath of Viella",
-    "Japanese": "ビエラの誓いの書",
-    "China_Simplified": "比埃拉的誓言",
-    "China_Traditional": "碧耶拉的誓約書"
+    "Japanese": "ビエラとの誓約",
+    "China_Simplified": "与比埃拉之约",
+    "China_Traditional": "與碧耶拉之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000108_DESC",
@@ -44123,7 +44291,7 @@
     "ID": "PRODUCT_EVENT_37_0107_NAME",
     "Korean": "전설 등급 선물 선택 상자",
     "English": "Legendary Quality Present Selection Chest",
-    "Japanese": "レジェンドプレゼント選択ボックス",
+    "Japanese": "プレゼント選択ボックス\\n【レジェンド】",
     "China_Simplified": "传说级别礼物选择箱",
     "China_Traditional": "傳說級別禮物選擇箱"
   },
@@ -44556,8 +44724,8 @@
     "Korean": "포르투나와의 서약",
     "English": "Oath with Fortuna",
     "Japanese": "フォルトゥナとの誓約",
-    "China_Simplified": "福尔图娜的誓约",
-    "China_Traditional": "波魯圖娜的誓約"
+    "China_Simplified": "与福尔图娜之约",
+    "China_Traditional": "與波魯圖娜之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000107_DESC",
@@ -45052,8 +45220,8 @@
     "Korean": "그노시스 달리아와의 서약",
     "English": "Oath with Gnosis Dahlia",
     "Japanese": "グノーシス・ダリアとの誓約",
-    "China_Simplified": "与诺希斯·达利娅的誓约",
-    "China_Traditional": "與格諾西斯‧達利亞的誓約"
+    "China_Simplified": "与诺希斯·达利娅之约",
+    "China_Traditional": "與格諾西斯·達利亞之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000090_DESC",
@@ -45548,8 +45716,8 @@
     "Korean": "그노시스 비엘라와의 서약",
     "English": "Oath with Gnosis Viella",
     "Japanese": "グノーシス・ビエラとの誓約",
-    "China_Simplified": "诺希斯·比埃拉的誓约",
-    "China_Traditional": "格諾西斯‧碧耶拉的誓約"
+    "China_Simplified": "与诺希斯·比埃拉之约",
+    "China_Traditional": "與格諾西斯·碧耶拉之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000109_DESC",
@@ -45788,8 +45956,8 @@
     "Korean": "아머 글루나이트",
     "English": "Armor Glunite",
     "Japanese": "アーマーグルーナイト",
-    "China_Simplified": "装甲格鲁矿石",
-    "China_Traditional": "鎧甲格魯礦石"
+    "China_Simplified": "防具固胶",
+    "China_Traditional": "防具膠水"
   },
   {
     "ID": "PRODUCT_EVENT_43_0007_NAME",
@@ -45851,7 +46019,7 @@
     "ID": "PRODUCT_EVENT_43_0014_NAME",
     "Korean": "전설 등급 선물 선택 상자",
     "English": "Legendary Quality Present Selection Chest",
-    "Japanese": "レジェンドプレゼント選択ボックス",
+    "Japanese": "プレゼント選択ボックス\\n【レジェンド】",
     "China_Simplified": "传说级别礼物自选箱",
     "China_Traditional": "傳說等級禮物選擇箱"
   },
@@ -45977,7 +46145,7 @@
   },
   {
     "ID": "PRODUCT_LIMITCRYSTAL_1200440_NAME",
-    "Korean": "일일특가! 재련 초기화 스트롤[전설]",
+    "Korean": "일일특가! 재련 초기화 스크롤 [전설]",
     "English": "Daily Deal! Reforge Reset Scroll [Legendary]",
     "Japanese": "デイリー特価! 再錬リセットスクロール[レジェンド]",
     "China_Simplified": "每日特惠！重铸初始化卷轴[传说]",
@@ -46004,16 +46172,16 @@
     "Korean": "일일특가! 아머 글루나이트",
     "English": "Daily Deal! Armor Glunite",
     "Japanese": "デイリー特価! アーマーグルーナイト",
-    "China_Simplified": "每日特惠！装甲格鲁矿石",
-    "China_Traditional": "每日特惠！鎧甲格魯礦石"
+    "China_Simplified": "每日特惠！防具固胶",
+    "China_Traditional": "每日特惠！防具膠水"
   },
   {
     "ID": "PRODUCT_LIMITCRYSTAL_1200444_NAME",
     "Korean": "일일특가! 정제된 글루나이트",
     "English": "Daily Deal! Refined Glunite",
     "Japanese": "デイリー特価! 精製されたグルーナイト",
-    "China_Simplified": "每日特惠！精炼固胶",
-    "China_Traditional": "每日特惠！精製膠水"
+    "China_Simplified": "每日特惠！精炼格鲁矿石",
+    "China_Traditional": "每日特惠！精煉的格魯礦石"
   },
   {
     "ID": "PRODUCT_LIMITCRYSTAL_1200445_NAME",
@@ -46156,8 +46324,8 @@
     "Korean": "프리미네와의 서약",
     "English": "Oath with Primine",
     "Japanese": "プリミネとの誓約",
-    "China_Simplified": "与普莉米妮的誓约",
-    "China_Traditional": "與普莉米妮的誓約"
+    "China_Simplified": "与普莉米妮之约",
+    "China_Traditional": "與普莉米妮之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000113_DESC",
@@ -46660,8 +46828,8 @@
     "Korean": "맹세의 서약",
     "English": "Oath of Determination",
     "Japanese": "誓いの誓約",
-    "China_Simplified": "誓约书",
-    "China_Traditional": "誓約書"
+    "China_Simplified": "誓言之约",
+    "China_Traditional": "誓言之約"
   },
   {
     "ID": "PRODUCT_EVENT_46_0002_NAME",
@@ -46764,8 +46932,8 @@
     "Korean": "에리스와의 서약",
     "English": "Oath with Eris",
     "Japanese": "エリスとの誓約",
-    "China_Simplified": "艾理斯的誓约",
-    "China_Traditional": "艾理斯的誓約"
+    "China_Simplified": "与艾理斯之约",
+    "China_Traditional": "與艾理斯之約"
   },
   {
     "ID": "ITEM_PRESENT_MAX_2000117_DESC",
@@ -47016,11 +47184,339 @@
     "China_Traditional": "(接力) 破曉日月"
   },
   {
+    "ID": "ITEM_C_EQUIP_2000112_NAME",
+    "Korean": "태초의 가르강틔아",
+    "English": "Primordial Gargantua",
+    "Japanese": "原初のガルガンテュア",
+    "China_Simplified": "太初的卡冈图亚",
+    "China_Traditional": "太初的卡岡圖亞"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0001_NAME",
+    "Korean": "무제한 식당 이용권",
+    "English": "Unlimited Restaurant Voucher",
+    "Japanese": "食べ放題食券",
+    "China_Simplified": "餐厅无限使用券",
+    "China_Traditional": "吃到飽餐券"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0002_NAME",
+    "Korean": "프로필 테두리 – 약속의 땅",
+    "English": "Profile Frame – Land of Blooming Promise",
+    "Japanese": "プロフィールフレーム – 約束の地",
+    "China_Simplified": "头像边框 – 应许之地",
+    "China_Traditional": "頭像外框 – 應許之地"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0003_NAME",
+    "Korean": "프리미네의 조각 x5",
+    "English": "Pieces of Primine x5",
+    "Japanese": "プリミネのピース x5",
+    "China_Simplified": "普莉米妮的碎片 x5",
+    "China_Traditional": "普莉米妮的碎片 x5"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0004_NAME",
+    "Korean": "트랜스톤(개별)",
+    "English": "Transistone (Individual)",
+    "Japanese": "トランストーン(選択)",
+    "China_Simplified": "转换石(个别)",
+    "China_Traditional": "轉換石(個別)"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0005_NAME",
+    "Korean": "골드 10,000",
+    "English": "Gold 10,000",
+    "Japanese": "ゴールド 10,000",
+    "China_Simplified": "金币 10,000",
+    "China_Traditional": "金幣 10,000"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0006_NAME",
+    "Korean": "글루나이트",
+    "English": "Glunite",
+    "Japanese": "グルーナイト",
+    "China_Simplified": "格鲁矿石",
+    "China_Traditional": "格魯礦石"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0007_NAME",
+    "Korean": "아머 글루나이트",
+    "English": "Armor Glunite",
+    "Japanese": "アーマーグルーナイト",
+    "China_Simplified": "装甲格鲁矿石",
+    "China_Traditional": "鎧甲格魯礦石"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0008_NAME",
+    "Korean": "정제된 글루나이트",
+    "English": "Refined Glunite",
+    "Japanese": "精製されたグルーナイト",
+    "China_Simplified": "精炼格鲁矿石",
+    "China_Traditional": "精煉的格魯礦石"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0009_NAME",
+    "Korean": "옵셔니움(무기/악세서리)",
+    "English": "Potentium (Weapon/Accessory)",
+    "Japanese": "オプショニウム(武器・アクセサリー)",
+    "China_Simplified": "属性剂（武器/饰品）",
+    "China_Traditional": "屬性劑(武器/飾品)"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0010_NAME",
+    "Korean": "옵셔니움(방어구)",
+    "English": "Potentium (Armor)",
+    "Japanese": "オプショニウム(防具)",
+    "China_Simplified": "属性剂 (防具)",
+    "China_Traditional": "屬性劑(防具)"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0011_NAME",
+    "Korean": "스테이크 정식",
+    "English": "Steak Dish",
+    "Japanese": "ステーキ定食",
+    "China_Simplified": "牛排套餐",
+    "China_Traditional": "牛排定食"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0012_NAME",
+    "Korean": "초정밀 제어칩",
+    "English": "Ultra-Precision Control Chip",
+    "Japanese": "超精密制御チップ",
+    "China_Simplified": "超精密控制芯片",
+    "China_Traditional": "超精密控制晶片"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0013_NAME",
+    "Korean": "전설 등급 선물 선택 상자",
+    "English": "Legendary Quality Present Selection Chest",
+    "Japanese": "プレゼント選択ボックス\\n【レジェンド】",
+    "China_Simplified": "传说级别礼物自选箱",
+    "China_Traditional": "傳說等級禮物選擇箱"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0014_NAME",
+    "Korean": "엡실론의 조각 x5",
+    "English": "Pieces of Epsilon x5",
+    "Japanese": "イプシロンのピース x5",
+    "China_Simplified": "埃普西隆的碎片 x5",
+    "China_Traditional": "艾普西隆的碎片 x5"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0015_NAME",
+    "Korean": "골드 10,000",
+    "English": "Gold 10,000",
+    "Japanese": "ゴールド 10,000",
+    "China_Simplified": "金币 10,000",
+    "China_Traditional": "金幣 10,000"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0016_NAME",
+    "Korean": "트랜스톤(전체)",
+    "English": "Transistone (Total)",
+    "Japanese": "トランストーン(全体)",
+    "China_Simplified": "转换石(全部)",
+    "China_Traditional": "轉換石(全體)"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0017_NAME",
+    "Korean": "초급 스킬 교본",
+    "English": "Basic Skill Manual",
+    "Japanese": "スキル教本：はじまり編",
+    "China_Simplified": "初级技能教材",
+    "China_Traditional": "初級技能教材"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0018_NAME",
+    "Korean": "중급 스킬 교본",
+    "English": "Intermediate Skill Manual",
+    "Japanese": "スキル教本：応用編",
+    "China_Simplified": "中级技能教材",
+    "China_Traditional": "中級技能教材"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0019_NAME",
+    "Korean": "전문 스킬 교본",
+    "English": "Professional Skill Manual",
+    "Japanese": "スキル教本：専門家編",
+    "China_Simplified": "专业技能教材",
+    "China_Traditional": "專家技能教材"
+  },
+  {
+    "ID": "PRODUCT_EVENT_48_0021_NAME",
+    "Korean": "명인 강화 도구",
+    "English": "Artisan's Hammer",
+    "Japanese": "達人の強化ハンマー",
+    "China_Simplified": "名匠强化道具",
+    "China_Traditional": "名匠強化道具"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30511_NAME",
+    "Korean": "그노시스 도미네 장비 풀 세트",
+    "English": "Gnosis Domine Full Gear Set",
+    "Japanese": "グノーシス・ドミネ装備フルセット",
+    "China_Simplified": "诺希斯·多米内装备全套",
+    "China_Traditional": "格諾西斯·多米內裝備全套"
+  },
+  {
+    "ID": "ITEM_BOX_RANDOM_30511_DESC",
+    "Korean": "그노시스 도미네가 사용하기 알맞은 무기 / 악세서리 / 방어구 세트를 모두 얻습니다.",
+    "English": "Obtain all weapon / accessory / armor sets suited for Gnosis Domine.",
+    "Japanese": "グノーシス・ドミネが使用するのに適した武器 / アクセサリー / 防具セットをすべて入手します。",
+    "China_Simplified": "获得适合诺希斯·多米内使用的武器 / 饰品 / 防具全套。",
+    "China_Traditional": "獲得適合格諾西斯·多米內使用的武器 / 飾品 / 防具全套。"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_91161_NAME",
+    "Korean": "찬탈자의 스텝업 I",
+    "English": "Usurper's Step-Up I",
+    "Japanese": "簒奪者のステップアップ I",
+    "China_Simplified": "篡位者的步步高升 I",
+    "China_Traditional": "篡位者的晉階 I"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_91162_NAME",
+    "Korean": "찬탈자의 스텝업 II",
+    "English": "Usurper's Step-Up II",
+    "Japanese": "簒奪者のステップアップ II",
+    "China_Simplified": "篡位者的步步高升 II",
+    "China_Traditional": "篡位者的晉階 II"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_91163_NAME",
+    "Korean": "찬탈자의 스텝업 III",
+    "English": "Usurper's Step-Up III",
+    "Japanese": "簒奪者のステップアップ III",
+    "China_Simplified": "篡位者的步步高升 III",
+    "China_Traditional": "篡位者的晉階 III"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_91164_NAME",
+    "Korean": "찬탈자의 스텝업 IV",
+    "English": "Usurper's Step-Up IV",
+    "Japanese": "簒奪者のステップアップ IV",
+    "China_Simplified": "篡位者的步步高升 IV",
+    "China_Traditional": "篡位者的晉階 IV"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_91165_NAME",
+    "Korean": "찬탈자의 스텝업 V",
+    "English": "Usurper's Step-Up V",
+    "Japanese": "簒奪者のステップアップ V",
+    "China_Simplified": "篡位者的步步高升 V",
+    "China_Traditional": "篡位者的晉階 V"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_100508_NAME",
+    "Korean": "찬탈자 도래 I",
+    "English": "Usurper's Arrival I",
+    "Japanese": "簒奪者の到来 I",
+    "China_Simplified": "篡位者降临 I",
+    "China_Traditional": "篡位者降臨 I"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_100509_NAME",
+    "Korean": "찬탈자 도래 II",
+    "English": "Usurper's Arrival II",
+    "Japanese": "簒奪者の到来 II",
+    "China_Simplified": "篡位者降临 II",
+    "China_Traditional": "篡位者降臨 II"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_100510_NAME",
+    "Korean": "찬탈자 도래 III",
+    "English": "Usurper's Arrival III",
+    "Japanese": "簒奪者の到来 III",
+    "China_Simplified": "篡位者降临 III",
+    "China_Traditional": "篡位者降臨 III"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_100511_NAME",
+    "Korean": "찬탈자 도래 IV",
+    "English": "Usurper's Arrival IV",
+    "Japanese": "簒奪者の到来 IV",
+    "China_Simplified": "篡位者降临 IV",
+    "China_Traditional": "篡位者降臨 IV"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_500071_NAME",
+    "Korean": "그레이트 티쳐 에리스",
+    "English": "Great Instructor Eris",
+    "Japanese": "グレートティーチャー・エリス",
+    "China_Simplified": "伟大的教师艾里斯",
+    "China_Traditional": "偉大的教師艾莉絲"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_CHAR_GET_2000112",
+    "Korean": "그노시스 도미네 초월팩",
+    "English": "Gnosis Domine Transcend Pack",
+    "Japanese": "グノーシス・ドミネ超越パック",
+    "China_Simplified": "诺希斯·多米内超越礼包",
+    "China_Traditional": "格諾西斯·多米內超越禮包"
+  },
+  {
+    "ID": "PRODUCT_POPUP_PACKAGE_630058",
+    "Korean": "그노시스 도미네 풀패키지",
+    "English": "Gnosis Domine Full Package",
+    "Japanese": "グノーシス・ドミネ総装備パック",
+    "China_Simplified": "诺希斯·多米内完整礼包",
+    "China_Traditional": "格諾西斯·多米內完整禮包"
+  },
+  {
+    "ID": "PRODUCT_POPUP_PACKAGE_630059",
+    "Korean": "(한정) 아름다운 약속의 땅 I",
+    "English": "(Limited) The Land of Blooming Promise I",
+    "Japanese": "(限定) 美しき約束の地 I",
+    "China_Simplified": "(限定) 美丽的应许之地 I",
+    "China_Traditional": "(限定) 美麗的應許之地 I"
+  },
+  {
+    "ID": "PRODUCT_POPUP_PACKAGE_630060",
+    "Korean": "(한정) 아름다운 약속의 땅 II",
+    "English": "(Limited) The Land of Blooming Promise II",
+    "Japanese": "(限定) 美しき約束の地 II",
+    "China_Simplified": "(限定) 美丽的应许之地 II",
+    "China_Traditional": "(限定) 美麗的應許之地 II"
+  },
+  {
+    "ID": "PRODUCT_POPUP_PACKAGE_630061",
+    "Korean": "(한정) 찬탈자 영입 부스터",
+    "English": "(Limited) Usurper Recruitment Booster",
+    "Japanese": "(限定) 簒奪者スカウトブースター",
+    "China_Simplified": "(限定) 篡位者招募加速包",
+    "China_Traditional": "(限定) 篡位者招募加速包"
+  },
+  {
+    "ID": "ITEM_PRESENT_MAX_2000112_NAME",
+    "Korean": "그노시스 도미네와의 서약",
+    "English": "Oath with Gnosis Domine",
+    "Japanese": "グノーシス・ドミネとの誓約",
+    "China_Simplified": "与诺希斯·多米内之约",
+    "China_Traditional": "與格諾西斯·多米內之約"
+  },
+  {
+    "ID": "ITEM_PRESENT_MAX_2000112_DESC",
+    "Korean": "[그노시스 도미네]와 영원한 애정 관계를 구축할 수 있는 증표.\\n사용 시 [그노시스 도미네]의 애정도를 10LV까지 성장 시킬 수 있습니다.\\n이미 완벽한 애정 관계가 구축되신 경우, 해당 아이템을 300 무료 에테르로 판매하실 수 있습니다.",
+    "English": "A token that allows you to build an eternal bond of affection with [Gnosis Domine].\\nWhen used, [Gnosis Domine]'s Affinity can be raised to LV10.\\nIf a perfect bond has already been established, this item can be sold for 300 Free Ether.",
+    "Japanese": "[グノーシス・ドミネ]と永遠の愛情関係を築くことができる証。\\n使用時、[グノーシス・ドミネ]の親密度を10LVまで成長させることができます。\\nすでに完璧な愛情関係が築かれている場合、このアイテムを300無償エーテルで売却できます。",
+    "China_Simplified": "可与[诺希斯·多米内]建立永恒爱情关系的证物。\\n使用后可将[诺希斯·多米内]的亲密度提升至10LV。\\n若已建立完美的爱情关系，可将该道具以300无偿以太出售。",
+    "China_Traditional": "可與[格諾西斯·多米內]建立永恆愛情關係的證物。\\n使用後可將[格諾西斯·多米內]的親密度提升至10LV。\\n若已建立完美的愛情關係，可將該道具以300無償乙太出售。"
+  },
+  {
     "ID": "PRODUCT_PACKAGE_91000060_NAME",
     "Korean": "행동력 200 + 특별 영입 티켓 x10",
     "English": "Stamina x200 + Special Recruitment Ticket x10",
     "Japanese": "活力×200+プレミアスカウトチケット×10",
     "China_Simplified": "行动力x200+特别招募券x10",
     "China_Traditional": "行動力x200+特別招募票券x10"
+  },
+  {
+    "ID": "PRODUCT_PACKAGE_91000061_NAME",
+    "Korean": "행동력 500",
+    "English": "Stamina 500",
+    "Japanese": "活力x500",
+    "China_Simplified": "行动力x500",
+    "China_Traditional": "行動力x500"
   }
 ]
