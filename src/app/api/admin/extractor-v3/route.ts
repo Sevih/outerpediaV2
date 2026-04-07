@@ -1066,26 +1066,31 @@ function deepDiffs(
 
   // Leaf comparison
   if (JSON.stringify(extracted) !== JSON.stringify(existing)) {
-    // Detect typo differences (whitespace, Chinese comma variants)
-    const normalize = (v: unknown) => JSON.stringify(v)
-      .replace(/\s+/g, '')
-      .replace(/[，,]/g, ',')
-      .replace(/[：:]/g, ':')
-      .replace(/[（(]/g, '(')
-      .replace(/[）)]/g, ')')
-      .replace(/[！!]/g, '!')
-      .replace(/[\u2018\u2019']/g, "'")
-      .replace(/[\u3001\uFF64]/g, '\u3001')
-      .replace(/[\u3002\uFF61]/g, '\u3002')
-      .replace(/[~\uFF5E]/g, '~')
-      .replace(/\.\.\./g, '\u2026').replace(/\u2026/g, '...')
-      .replace(/[？?]/g, '?')
-      .replace(/[％%]/g, '%')
-      .replace(/[；;]/g, ';')
-      .replace(/[＋+]/g, '+')
-    const type = normalize(extracted) === normalize(existing) ? 'typo' as const : 'changed' as const
-    out.push({ key: prefix, type, extracted, existing })
+    out.push({ key: prefix, type: classifyDiffType(extracted, existing), extracted, existing })
   }
+}
+
+function normalizeDiff(v: unknown): string {
+  return JSON.stringify(v)
+    .replace(/\s+/g, '')
+    .replace(/[，,]/g, ',')
+    .replace(/[：:]/g, ':')
+    .replace(/[（(]/g, '(')
+    .replace(/[）)]/g, ')')
+    .replace(/[！!]/g, '!')
+    .replace(/[\u2018\u2019']/g, "'")
+    .replace(/[\u3001\uFF64]/g, '\u3001')
+    .replace(/[\u3002\uFF61]/g, '\u3002')
+    .replace(/[~\uFF5E]/g, '~')
+    .replace(/\.\.\./g, '\u2026').replace(/\u2026/g, '...')
+    .replace(/[？?]/g, '?')
+    .replace(/[％%]/g, '%')
+    .replace(/[；;]/g, ';')
+    .replace(/[＋+]/g, '+')
+}
+
+function classifyDiffType(extracted: unknown, existing: unknown): 'changed' | 'typo' {
+  return normalizeDiff(extracted) === normalizeDiff(existing) ? 'typo' : 'changed'
 }
 
 // Fields that are manually edited, not extracted from game data
@@ -1117,6 +1122,15 @@ export async function GET(request: NextRequest) {
       const tables = loadAllTables()
       const list = listCharacters(tables)
       const charDir = path.join(process.cwd(), 'data', 'character')
+
+      // Load profile data for comparison
+      const profileTemplet = loadTable('ArchiveCharacterProfileTemplet')
+      const profileByChar = new Map<string, Record<string, string>>()
+      for (const r of profileTemplet) { if (r.CharacterID) profileByChar.set(r.CharacterID, r) }
+      const profilesPath = path.join(process.cwd(), 'data', 'character-profiles.json')
+      let existingProfiles: Record<string, Record<string, unknown>> = {}
+      try { existingProfiles = JSON.parse(fs.readFileSync(profilesPath, 'utf-8')) } catch { /* */ }
+
       const results = list.map((c: { id: string; name: string; name_kr: string; element: string; class: string; rarity: number }) => {
         const existingPath = path.join(charDir, `${c.id}.json`)
         const exists = fs.existsSync(existingPath)
@@ -1136,6 +1150,43 @@ export async function GET(request: NextRequest) {
           }
 
           const deepResult = buildDiffs(extracted, existing)
+
+          // Compare profile fields
+          const fusionRow = tables.fusionByChange.get(c.id)
+          const baseId = fusionRow ? (fusionRow as Record<string, string>).CharacterID : c.id
+          const profileRow = profileByChar.get(c.id) ?? profileByChar.get(baseId)
+          const existingProfile = existingProfiles[c.id]
+          if (profileRow && existingProfile) {
+            const bday = profileRow.Birth ?? ''
+            const month = bday.length >= 8 ? bday.slice(4, 6) : ''
+            const day = bday.length >= 8 ? bday.slice(6, 8) : ''
+            const extractedBday = month && day ? `${month}/${day}` : ''
+            const extractedHeight = profileRow.Height ? `${profileRow.Height} cm` : ''
+            const extractedWeight = profileRow.Weight ? `${profileRow.Weight} kg` : ''
+
+            for (const [field, val] of [['birthday', extractedBday], ['height', extractedHeight], ['weight', extractedWeight]] as const) {
+              const ext = val
+              const cur = String(existingProfile[field] ?? '')
+              if (ext !== cur) deepResult.push({ key: `profile.${field}`, type: classifyDiffType(ext, cur), extracted: ext, existing: cur })
+            }
+
+            // Story comparison
+            const storySym = tables.textSystemMap.has(`SYS_ACHIEVE_PROFILE_${c.id}`)
+              ? `SYS_ACHIEVE_PROFILE_${c.id}`
+              : (profileRow.ProfileScenario ?? '')
+            const storyEntry = storySym ? tables.textSystemMap.get(storySym) : undefined
+            if (storyEntry) {
+              const existingStory = (existingProfile.story ?? {}) as Record<string, string>
+              for (const lang of LANGS) {
+                const ext = (storyEntry[LANG_COLUMNS[lang]] ?? '').trim()
+                const cur = (existingStory[lang] ?? '').trim()
+                if (ext && cur && ext !== cur) deepResult.push({ key: `profile.story_${lang}`, type: classifyDiffType(ext, cur), extracted: ext.slice(0, 80) + '...', existing: cur.slice(0, 80) + '...' })
+              }
+            }
+          } else if (profileRow && !existingProfile) {
+            deepResult.push({ key: 'profile', type: 'changed', extracted: 'exists', existing: 'missing' })
+          }
+
           typoCount = deepResult.filter((d) => d.type === 'typo').length
           diffCount = deepResult.length - typoCount
           status = diffCount > 0 ? 'diff' : typoCount > 0 ? 'typo' : 'ok'
@@ -1173,6 +1224,50 @@ export async function GET(request: NextRequest) {
       }
 
       const diffs = buildDiffs(extracted, existing)
+
+      // Profile diffs
+      const profileTemplet = loadTable('ArchiveCharacterProfileTemplet')
+      const profileByChar = new Map<string, Record<string, string>>()
+      for (const r of profileTemplet) { if (r.CharacterID) profileByChar.set(r.CharacterID, r) }
+      const profilesPath = path.join(process.cwd(), 'data', 'character-profiles.json')
+      let existingProfiles: Record<string, Record<string, unknown>> = {}
+      try { existingProfiles = JSON.parse(fs.readFileSync(profilesPath, 'utf-8')) } catch { /* */ }
+
+      const tables = loadAllTables()
+      const fusionRow = tables.fusionByChange.get(id)
+      const baseId = fusionRow ? (fusionRow as Record<string, string>).CharacterID : id
+      const profileRow = profileByChar.get(id) ?? profileByChar.get(baseId)
+      const existingProfile = existingProfiles[id]
+
+      if (profileRow) {
+        const bday = profileRow.Birth ?? ''
+        const month = bday.length >= 8 ? bday.slice(4, 6) : ''
+        const day = bday.length >= 8 ? bday.slice(6, 8) : ''
+        const extractedBday = month && day ? `${month}/${day}` : ''
+        const extractedHeight = profileRow.Height ? `${profileRow.Height} cm` : ''
+        const extractedWeight = profileRow.Weight ? `${profileRow.Weight} kg` : ''
+
+        if (existingProfile) {
+          for (const [field, val] of [['birthday', extractedBday], ['height', extractedHeight], ['weight', extractedWeight]] as const) {
+            const cur = String(existingProfile[field] ?? '')
+            if (val !== cur) diffs.push({ key: `profile.${field}`, type: classifyDiffType(val, cur), extracted: val, existing: cur })
+          }
+          const storySym = tables.textSystemMap.has(`SYS_ACHIEVE_PROFILE_${id}`)
+            ? `SYS_ACHIEVE_PROFILE_${id}`
+            : (profileRow.ProfileScenario ?? '')
+          const storyEntry = storySym ? tables.textSystemMap.get(storySym) : undefined
+          if (storyEntry) {
+            const existingStory = (existingProfile.story ?? {}) as Record<string, string>
+            for (const lang of LANGS) {
+              const ext = (storyEntry[LANG_COLUMNS[lang]] ?? '').trim()
+              const cur = (existingStory[lang] ?? '').trim()
+              if (ext && cur && ext !== cur) diffs.push({ key: `profile.story_${lang}`, type: classifyDiffType(ext, cur), extracted: ext.slice(0, 80) + '...', existing: cur.slice(0, 80) + '...' })
+            }
+          }
+        } else {
+          diffs.push({ key: 'profile', type: 'changed', extracted: '(exists in game data)', existing: '(missing)' })
+        }
+      }
 
       // Manual fields from existing file (if any)
       const manual: Record<string, unknown> = {}
@@ -1299,12 +1394,15 @@ function copyCharacterImages(id: string, extracted: Record<string, unknown>): { 
   if (skills) {
     for (const sk of Object.values(skills)) {
       const iconName = sk.IconName as string | undefined
-      if (iconName) {
-        jobs.push([
-          path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `${iconName}.png`),
-          path.join(PUBLIC_IMAGES, 'skills', `${iconName}.png`),
-        ])
-      }
+      if (!iconName) continue
+      // Route to correct subdirectory based on icon name pattern
+      let subDir = 'skills'
+      if (iconName.startsWith('Skill_ChainPassive_')) subDir = 'chain'
+      else if (iconName.startsWith('Skill_CorePassive_')) subDir = 'core-fusion-skill'
+      jobs.push([
+        path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `${iconName}.png`),
+        path.join(PUBLIC_IMAGES, subDir, `${iconName}.png`),
+      ])
     }
   }
 
@@ -1353,5 +1451,70 @@ export async function POST(request: NextRequest) {
   // Copy images if missing
   const imagesCopied = copyCharacterImages(id, extracted)
 
+  // Update character-profiles.json
+  updateCharacterProfile(id, extracted)
+
   return NextResponse.json({ ok: true, id, images: imagesCopied })
+}
+
+// ── Profile extraction ──────────────────────────────────────────────
+
+function updateCharacterProfile(id: string, extracted: Record<string, unknown>) {
+  const profileTemplet = loadTable('ArchiveCharacterProfileTemplet')
+  const textSystem = indexBy(loadTable('TextSystem'))
+
+  // Core fusion chars fallback to base character
+  const fusionTemplet = loadTable('CharacterFusionTemplet')
+  const fusionRow = fusionTemplet.find((r) => r.ChangeCharID === id)
+  const baseId = fusionRow?.CharacterID ?? id
+
+  const profileRow = profileTemplet.find((r) => r.CharacterID === id)
+    ?? (fusionRow ? profileTemplet.find((r) => r.CharacterID === baseId) : undefined)
+
+  if (!profileRow) return
+
+  // Birthday: YYYYMMDD → MM/DD
+  const bday = profileRow.Birth ?? ''
+  const month = bday.length >= 8 ? bday.slice(4, 6) : ''
+  const day = bday.length >= 8 ? bday.slice(6, 8) : ''
+  const birthday = month && day ? `${month}/${day}` : ''
+
+  const height = profileRow.Height ? `${profileRow.Height} cm` : ''
+  const weight = profileRow.Weight ? `${profileRow.Weight} kg` : ''
+
+  // Story: character-specific key first, then ProfileScenario
+  const storySym = textSystem.has(`SYS_ACHIEVE_PROFILE_${id}`)
+    ? `SYS_ACHIEVE_PROFILE_${id}`
+    : (profileRow.ProfileScenario ?? '')
+  const storyEntry = storySym ? textSystem.get(storySym) : undefined
+  const story: Record<string, string> = {}
+  if (storyEntry) {
+    for (const lang of LANGS) {
+      story[lang] = storyEntry[LANG_COLUMNS[lang]] ?? ''
+    }
+  }
+
+  // Read existing profiles
+  const profilesPath = path.join(process.cwd(), 'data', 'character-profiles.json')
+  let profiles: Record<string, unknown> = {}
+  try { profiles = JSON.parse(fs.readFileSync(profilesPath, 'utf-8')) } catch { /* */ }
+
+  profiles[id] = {
+    fullname: {
+      en: extracted.Fullname ?? '',
+      jp: extracted.Fullname_jp ?? '',
+      kr: extracted.Fullname_kr ?? '',
+      zh: extracted.Fullname_zh ?? '',
+    },
+    birthday,
+    height,
+    weight,
+    story,
+  }
+
+  // Sort by ID
+  const sorted: Record<string, unknown> = {}
+  for (const k of Object.keys(profiles).sort()) sorted[k] = profiles[k]
+
+  fs.writeFileSync(profilesPath, JSON.stringify(sorted, null, 2) + '\n', 'utf-8')
 }
