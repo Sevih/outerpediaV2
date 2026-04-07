@@ -307,9 +307,8 @@ export function buildBossMap(t: EquipTables, dungeonMode: string): Map<string, s
     const name = t.textSystemMap.get(d.NameID)?.[LANG_COLUMNS[DEFAULT_LANG]] ?? ''
     if (!name.includes('Stage 13')) continue
 
-    // Find boss from spawn data
-    const spawnId = d.SpawnID_Pos0 || d.SpawnID_Pos1 || d.SpawnID_Pos2
-    const bossId = spawnId ? spawnToBoss.get(spawnId) : undefined
+    // Find boss from spawn data — try all positions, pick first with a valid boss ID
+    const bossId = spawnToBoss.get(d.SpawnID_Pos0) ?? spawnToBoss.get(d.SpawnID_Pos1) ?? spawnToBoss.get(d.SpawnID_Pos2)
     if (!bossId) continue
 
     // Find item rewards
