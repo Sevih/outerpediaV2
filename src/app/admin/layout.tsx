@@ -21,7 +21,10 @@ const NAV_GROUPS: NavGroup[] = [
     items: [
       { label: 'Characters', href: '/admin/extractor-v3/characters' },
       { label: 'EE', href: '/admin/extractor-v3/ee' },
-      { label: 'Equipment', href: '/admin/extractor/equipment' },
+      { label: 'Weapons', href: '/admin/extractor-v3/equip/weapons' },
+      { label: 'Accessories', href: '/admin/extractor-v3/equip/accessories' },
+      { label: 'Armor Sets', href: '/admin/extractor-v3/equip/armors' },
+      { label: 'Talismans', href: '/admin/extractor-v3/equip/talismans' },
       { label: 'Bosses', href: '/admin/extractor/bosses' },
       { label: 'Tower', href: '/admin/extractor/tower' },
     ],
