@@ -1,0 +1,106 @@
+{
+  "Pen Def": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Queen of Prism",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Dies Irae",
+        "mainStat": "DEF%/SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Mage]",
+        "mainStat": "EFF/PEN%"
+      }
+    ],
+    "Set": ["p2def2"],
+    "SubstatPrio": "DEF%>EFF>CHC>HP%=SPD=CHD=DMG UP%",
+    "Note": "",
+    "Talisman": ["$mrsv"]
+  },
+  "Pen Immu": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Queen of Prism",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Dies Irae",
+        "mainStat": "DEF%/SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Mage]",
+        "mainStat": "EFF/PEN%"
+      }
+    ],
+    "Set": ["i2def2"],
+    "SubstatPrio": "DEF%>EFF>CHC>HP%=SPD=CHD=DMG UP%",
+    "Note": "",
+    "Talisman": ["$mrsv"]
+  },
+  "Pen": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Queen of Prism",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Dies Irae",
+        "mainStat": "DEF%/SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Mage]",
+        "mainStat": "EFF/PEN%"
+      }
+    ],
+    "Set": ["p4"],
+    "SubstatPrio": "DEF%>EFF>CHC>HP%=SPD=CHD=DMG UP%",
+    "Note": "",
+    "Talisman": ["$mrsv"]
+  },
+  "Patience": {
+    "Weapon": [
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "DEF%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Queen of Prism",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Dies Irae",
+        "mainStat": "DEF%/SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Mage]",
+        "mainStat": "EFF/PEN%"
+      }
+    ],
+    "Set": ["pat4"],
+    "SubstatPrio": "DEF%>EFF>CHC>HP%=SPD=CHD=DMG UP%",
+    "Note": "",
+    "Talisman": ["$mrsv"]
+  }
+}
