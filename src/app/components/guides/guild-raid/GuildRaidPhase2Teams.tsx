@@ -98,7 +98,7 @@ export default function GuildRaidPhase2Teams({ teams, pool, defaultTeam, onTeamC
     const entry = teams[key];
     if (!entry.icon) return key;
     return (
-      <span className="inline-flex items-center gap-1.5">
+      <span key={key} className="inline-flex items-center gap-1.5">
         <span className="relative h-4 w-4 shrink-0">
           <Image
             src={`/images/ui/${entry.icon}.webp`}

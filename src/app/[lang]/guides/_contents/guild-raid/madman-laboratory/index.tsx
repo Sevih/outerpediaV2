@@ -17,6 +17,11 @@ import strings from './strings.json';
 import defaultConfig from './config.json';
 import geasPool from '@data/geas.json';
 
+/* -- Version: 04-2026 ----------------------------------------- */
+import v04_2026Override from './versions/04-2026/config.json';
+import v04_2026Phase1 from './versions/04-2026/phase1.json';
+import v04_2026Phase2 from './versions/04-2026/phase2.json';
+
 /* -- Version: 10-2025 ----------------------------------------- */
 import v10_2025Override from './versions/10-2025/config.json';
 import v10_2025Phase1 from './versions/10-2025/phase1.json';
@@ -69,8 +74,14 @@ export default function MadmanLaboratoryGuide() {
       title={str.title}
       introduction={str.intro}
       pool={pool}
-      defaultVersion="oct2025"
+      defaultVersion="apr2026"
+      updating
       versions={{
+        apr2026: resolve(
+          v04_2026Override as GuildRaidVersionOverride,
+          v04_2026Phase1 as unknown as Phase1Data,
+          v04_2026Phase2 as unknown as GuildRaidPhase2Data,
+        ),
         oct2025: resolve(
           v10_2025Override as GuildRaidVersionOverride,
           v10_2025Phase1 as unknown as Phase1Data,

@@ -1,0 +1,221 @@
+{
+  "Full Earth Team": {
+    "icon": "elem/CM_Element_Earth",
+    "team": [
+      ["Ryu Lion", "Rhona", "Ame", "Rey"],
+      ["Notia", "Laine"],
+      ["Charlotte", "Viella", "Fran"],
+      ["Kappa", "Hanbyul Lee"]
+    ],
+    "geasActive": {
+      "bonus": [49, 53, 92, 91, 89],
+      "malus": [5, 38, 18, 20, 90, 86, 60, 58, 10]
+    },
+    "video": {
+      "videoId": "rfWf4ytqWW8",
+      "title": "Outerplane - The Madman's Laboratory - 11.4M Points",
+      "author": "Sevih"
+    },
+    "note": [
+      {
+        "type": "p",
+        "string": "Remove the ranger geas if needed."
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "必要に応じてレンジャーのギアスを外してください。"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "필요시 레인저 기어스를 제거하세요."
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "如有需要，移除游侠誓约。"
+      }
+    ],
+    "requirements": {
+      "entries": [
+                {
+          "character": "Ryu Lion",
+          "stats": { "spd": "267" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}", "{S/PEN%}", "{S/ATK}", "{S/CHD}"],
+          "notes": ["Only S1"],
+          "notes_jp": ["S1のみ"],
+          "notes_kr": ["S1만 사용"],
+          "notes_zh": ["只用S1"]
+        },
+        {
+          "character": "Notia",
+          "stats": { "spd": "243" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}", "{S/PEN%}", "{S/ATK}", "{S/CHD}"],
+          "notes": ["Just keep {B/FIERCE_OFFENSIVE} up for {B/BT_ACTION_GAUGE}."],
+          "notes_jp": ["{B/FIERCE_OFFENSIVE}を維持して{B/BT_ACTION_GAUGE}を確保。"],
+          "notes_kr": ["{B/BT_ACTION_GAUGE}를 위해 {B/FIERCE_OFFENSIVE}를 유지하세요."],
+          "notes_zh": ["保持{B/FIERCE_OFFENSIVE}以获得{B/BT_ACTION_GAUGE}。"]
+        },
+        {
+          "character": "Charlotte",
+          "stats": { "spd": "258" },
+          "equipment": {
+            "weapon": ["{I-W/Rampaging Caracal}"],
+            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}", "{S/PEN%}", "{S/ATK}", "{S/CHD}"],
+          "notes": ["Must S1 first turn to proc {I-W/Rampaging Caracal} and {P/Notia} {SK/Notia|S2}"],
+          "notes_jp": ["初ターンはS1で{I-W/Rampaging Caracal}と{P/Notia}の{SK/Notia|S2}を発動させる"],
+          "notes_kr": ["첫 턴에 S1을 사용하여 {I-W/Rampaging Caracal}과 {P/Notia} {SK/Notia|S2}를 발동"],
+          "notes_zh": ["第一回合必须使用S1触发{I-W/Rampaging Caracal}和{P/Notia}的{SK/Notia|S2}"]
+        },
+        {
+          "character": "Kappa",
+          "stats": { "spd": "193" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}", "{S/PEN%}", "{S/DEF}", "{S/CHD}"],
+          "notes": [],
+          "notes_jp": [],
+          "notes_kr": [],
+          "notes_zh": []
+        }
+      ]
+    }
+  },
+  "Mage Team": {
+    "icon": "elem/CM_Element_Dark",
+    "team": [
+      ["Maxwell", "Ame", "Demiurge Luna", "Demiurge Astei"],
+      ["Laine", "Notia", "Viella"],
+      ["Alice", "Eternal", "Kuro", "Dahlia", "Omega Nadja"],
+      ["Skadi", "Tamara"]
+    ],
+    "geasActive": {
+      "bonus": [53, 76, 91, 49, 89],
+      "malus": [86, 60, 5, 38, 18, 20, 53, 90]
+    },
+    "video": {
+      "videoId": "Szgkhaza1jI",
+      "title": "Maxwell Guild Raid with Maxwell DPS",
+      "author": "XITangoIX"
+    },
+    "note": [
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2 musn't exceed 50K damage (you don't want the boss to strike you with his enrage move)"
+      },
+      {
+        "type": "p",
+        "string": "You can replace {P/Alice} with {P/Eternal}"
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2のダメージは5万を超えてはいけません（ボスの激怒攻撃を受けたくない）"
+      },
+      {
+        "type": "p",
+        "string": "{P/Alice}を{P/Eternal}に替えることも可能"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2의 데미지가 5만을 초과하면 안 됩니다 (보스의 격노 공격을 받고 싶지 않음)"
+      },
+      {
+        "type": "p",
+        "string": "{P/Alice}를 {P/Eternal}로 교체 가능"
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2的伤害不能超过5万（你不想让Boss使用狂暴技能）"
+      },
+      {
+        "type": "p",
+        "string": "可以用{P/Eternal}替换{P/Alice}"
+      }
+    ],
+    "requirements": {
+      "entries": [
+        {
+          "character": "Maxwell",
+          "stats": { "spd": "239" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"],
+            "set": ["{AS/Speed}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}", "{S/ATK}"],
+          "notes": ["S3 > S2 Burn Lv 2 > S1"],
+          "notes_jp": ["S3 > S2バーンLv2 > S1"],
+          "notes_kr": ["S3 > S2 번 Lv 2 > S1"],
+          "notes_zh": ["S3 > S2燃烧Lv2 > S1"]
+        },
+        {
+          "character": "Laine",
+          "stats": { "spd": "229" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"],
+            "set": ["{AS/Speed}","{AS/Penetration}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}"],
+          "notes": ["Only S1 for getting priority"],
+          "notes_jp": ["優先権獲得のためS1のみ"],
+          "notes_kr": ["우선권 획득을 위해 S1만 사용"],
+          "notes_zh": ["只用S1获取优先权"]
+        },
+        {
+          "character": "Skadi",
+          "stats": { "spd": "214" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}"],
+          "notes": ["Only S1 Burn Lv 1 exept for first break when she will use Chain attack"],
+          "notes_jp": ["最初のブレイク時のチェイン攻撃以外はS1バーンLv1のみ"],
+          "notes_kr": ["첫 브레이크 체인 공격 외에는 S1 번 Lv 1만 사용"],
+          "notes_zh": ["除了第一次破坏时的连锁攻击外，只用S1燃烧Lv1"]
+        },
+        {
+          "character": "Eternal",
+          "stats": { "spd": "204" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}"],
+          "notes": ["remove her EE you don't want her to get an extra turn"],
+          "notes_jp": ["EEを外してください：追加ターンを得させたくない"],
+          "notes_kr": ["EE를 해제하세요: 추가 턴을 얻게 하고 싶지 않음"],
+          "notes_zh": ["移除她的EE：你不想让她获得额外回合"]
+        },
+        {
+          "character": "Alice",
+          "stats": { "spd": "204" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}"],
+          "notes": ["Use S2 once to speed down the boss then use Chain attack on the other break"],
+          "notes_jp": ["S2を一度使ってボスの速度を下げ、他のブレイク時にチェイン攻撃"],
+          "notes_kr": ["S2를 한 번 사용해 보스 속도를 낮추고 다른 브레이크 시 체인 공격"],
+          "notes_zh": ["使用一次S2降低Boss速度，然后在其他破坏时使用连锁攻击"]
+        }
+      ]
+    }
+  }
+}

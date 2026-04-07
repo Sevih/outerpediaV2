@@ -41,6 +41,7 @@ type Props = {
   pool: GeasPool;
   defaultVersion: string;
   versions: Record<string, GuildRaidVersionData>;
+  updating?: boolean;
 };
 
 /* -- Side menu helpers ---------------------------------------- */
@@ -289,6 +290,7 @@ export default function GuildRaidGuide({
   pool,
   defaultVersion,
   versions,
+  updating,
 }: Props) {
   const { lang } = useI18n();
   const [resolvedVersion, setResolvedVersion] = useState(defaultVersion);
@@ -316,6 +318,7 @@ export default function GuildRaidGuide({
       key={resolvedVersion}
       title={lRec(title, lang)}
       introduction={lRec(introduction, lang)}
+      updating={updating}
       defaultVersion={resolvedVersion}
       hashPrefix={undefined}
       onVersionChange={handleVersionChange}

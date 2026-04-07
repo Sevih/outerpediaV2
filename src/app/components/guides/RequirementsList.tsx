@@ -4,6 +4,7 @@ import { use, useMemo } from 'react';
 import type { Route } from 'next';
 import Link from 'next/link';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
+import StatInline from '@/app/components/inline/StatInline';
 import FitText from '@/app/components/ui/FitText';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
@@ -258,6 +259,8 @@ function StatsRow({ stats, t }: { stats?: RequirementStats; t: TFunction }) {
   );
 }
 
+const STAT_TAG_RE = /^\{S\/([^}]+)\}$/;
+
 function PrioRow({ prio, t }: { prio?: string[]; t: TFunction }) {
   if (!prio || prio.length === 0) return null;
   return (
@@ -265,12 +268,15 @@ function PrioRow({ prio, t }: { prio?: string[]; t: TFunction }) {
       <span className="text-xs font-semibold uppercase tracking-wide text-sky-400/80">
         {t('requirements.prio')}
       </span>
-      {prio.map((s, i) => (
-        <span key={i} className="inline-flex items-center gap-1">
-          {i > 0 && <span className="text-neutral-600">&gt;</span>}
-          {parseText(s)}
-        </span>
-      ))}
+      {prio.map((s, i) => {
+        const m = STAT_TAG_RE.exec(s);
+        return (
+          <span key={i} className="inline-flex items-center gap-1">
+            {i > 0 && <span className="text-neutral-600">&gt;</span>}
+            {m ? <StatInline name={m[1]} iconOnly /> : parseText(s)}
+          </span>
+        );
+      })}
     </div>
   );
 }
