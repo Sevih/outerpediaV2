@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import {
-  loadEquipTables, extractTalismans, buildDiffs, orderKeys,
+  loadEquipTables, extractTalismans, buildDiffs, orderKeys, mergeWithExisting,
   devGuard, copyEquipImage, copyEffectImage,
 } from '../lib'
 
@@ -73,7 +73,8 @@ export async function POST(req: NextRequest) {
     const item = talismanById.get(id); if (!item) continue
     const name = String(item.extracted.name ?? '')
     const idx = existing.findIndex((e) => String(e.name ?? '') === name)
-    const ordered = orderKeys(item.extracted as Record<string, unknown>, KEY_ORDER)
+    const merged = idx >= 0 ? mergeWithExisting(item.extracted as Record<string, unknown>, existing[idx]) : item.extracted
+    const ordered = orderKeys(merged as Record<string, unknown>, KEY_ORDER)
     if (idx >= 0) existing[idx] = ordered
     else existing.push(ordered)
     if (copyEquipImage(String(item.extracted.image ?? '')) === 'copied') copied++

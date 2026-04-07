@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import {
-  loadEquipTables, extractItems, buildBossMap, buildDiffs, orderKeys,
+  loadEquipTables, extractItems, buildBossMap, buildDiffs, orderKeys, mergeWithExisting,
   devGuard, copyEquipImage, copyEffectImage,
   type ExtractedItem, type EquipTables,
 } from '../lib'
@@ -90,8 +90,9 @@ export async function POST(req: NextRequest) {
 
   for (const id of ids) {
     const w = itemById.get(id); if (!w) continue
-    const ordered = orderKeys(w.extracted as Record<string, unknown>, KEY_ORDER)
     const idx = findExisting(existing, w)
+    const merged = idx >= 0 ? mergeWithExisting(w.extracted as Record<string, unknown>, existing[idx]) : w.extracted
+    const ordered = orderKeys(merged as Record<string, unknown>, KEY_ORDER)
     if (idx >= 0) existing[idx] = ordered
     else existing.push(ordered)
     if (copyEquipImage(String(w.extracted.image ?? '')) === 'copied') copied++

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import {
-  loadEquipTables, extractSets, buildDiffs, orderKeys,
+  loadEquipTables, extractSets, buildDiffs, orderKeys, mergeWithExisting,
   devGuard, copyEffectImage,
 } from '../lib'
 
@@ -74,7 +74,8 @@ export async function POST(req: NextRequest) {
     const s = setById.get(id); if (!s) continue
     const name = String(s.extracted.name ?? '')
     const idx = existing.findIndex((e) => String(e.name ?? '') === name)
-    const ordered = orderKeys(s.extracted as Record<string, unknown>, KEY_ORDER)
+    const merged = idx >= 0 ? mergeWithExisting(s.extracted as Record<string, unknown>, existing[idx]) : s.extracted
+    const ordered = orderKeys(merged as Record<string, unknown>, KEY_ORDER)
     if (idx >= 0) existing[idx] = ordered
     else existing.push(ordered)
     if (copyEffectImage(String(s.extracted.set_icon ?? '')) === 'copied') copied++

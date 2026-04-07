@@ -192,6 +192,19 @@ export function orderKeys(obj: Record<string, unknown>, keyOrder: string[]): Rec
   return ordered
 }
 
+// Preserve manual/legacy fields from existing when extracted has null
+const PRESERVE_FIELDS = ['source', 'boss']
+
+export function mergeWithExisting(extracted: Record<string, unknown>, existing: Record<string, unknown>): Record<string, unknown> {
+  const merged = { ...extracted }
+  for (const key of PRESERVE_FIELDS) {
+    if (merged[key] === null && existing[key] != null) {
+      merged[key] = existing[key]
+    }
+  }
+  return merged
+}
+
 // ── Deep diff ───────────────────────────────────────────────────────
 
 export interface DiffEntry {
@@ -218,15 +231,17 @@ export function buildDiffs(extracted: Record<string, unknown>, existing: Record<
     .replace(/[；;]/g, ';')
     .replace(/[＋+]/g, '+')
 
-  for (const key of Object.keys(extracted)) {
+  // Compare all keys from both sides
+  const allKeys = new Set([...Object.keys(extracted), ...Object.keys(existing)])
+  for (const key of allKeys) {
     const ext = extracted[key]
     const cur = existing[key]
-    if (cur === undefined) continue
-    const extStr = JSON.stringify(ext)
-    const curStr = JSON.stringify(cur)
+    if (ext === undefined && cur === undefined) continue
+    const extStr = JSON.stringify(ext ?? null)
+    const curStr = JSON.stringify(cur ?? null)
     if (extStr === curStr) continue
-    const type = normalize(ext) === normalize(cur) ? 'typo' as const : 'changed' as const
-    diffs.push({ key, type, extracted: ext, existing: cur })
+    const type = normalize(ext ?? null) === normalize(cur ?? null) ? 'typo' as const : 'changed' as const
+    diffs.push({ key, type, extracted: ext ?? null, existing: cur ?? null })
   }
   return diffs
 }
@@ -327,19 +342,29 @@ export function buildBossMap(t: EquipTables, dungeonMode: string): Map<string, s
 // ── Source detection ────────────────────────────────────────────────
 
 export function detectSource(id: string, t: EquipTables): string | null {
-  // Direct match in ProductTemplet
+  // Direct match in ProductTemplet (item sold directly)
   for (const p of t.productData) {
     if (p.ProductGoodsType !== 'PGT_ITEM' || p.ProductGoodsID !== id) continue
     if (p.ProductCategory === 'PC_ADVENTURE_LICENSE') return 'Adventure License'
-    if (p.ProductCategory?.startsWith('PC_EVENT')) return 'Event Shop'
+    if (p.ProductCategory?.startsWith('PC_EVENT') || p.ProductCategory?.startsWith('PC_ALWAYS_EVENT')) return 'Event Shop'
   }
-  // Via ItemCraftRewardTemplet
-  for (const craft of t.itemCraftData) {
-    if (craft.ID !== id) continue
+  // Via ItemCraftRewardTemplet: find craft group, then check siblings
+  const craft = t.itemCraftData.find((c) => c.ID === id)
+  if (craft) {
+    // Check if the craft recipe itself is sold as event
     for (const p of t.productData) {
-      if (p.ID !== craft.GroupID) continue
-      if (p.ProductCategory === 'PC_ADVENTURE_LICENSE') return 'Adventure License'
-      if (p.ProductCategory?.startsWith('PC_EVENT')) return 'Event Shop'
+      if (p.ProductGoodsID === craft.GroupID) {
+        if (p.ProductCategory === 'PC_ADVENTURE_LICENSE') return 'Adventure License'
+        if (p.ProductCategory?.startsWith('PC_EVENT') || p.ProductCategory?.startsWith('PC_ALWAYS_EVENT')) return 'Event Shop'
+      }
+    }
+    // Check siblings: if any item in the same craft group is sold as event
+    const siblings = t.itemCraftData.filter((c) => c.GroupID === craft.GroupID)
+    for (const sib of siblings) {
+      for (const p of t.productData) {
+        if (p.ProductGoodsType !== 'PGT_ITEM' || p.ProductGoodsID !== sib.ID) continue
+        if (p.ProductCategory?.startsWith('PC_EVENT') || p.ProductCategory?.startsWith('PC_ALWAYS_EVENT')) return 'Event Shop'
+      }
     }
   }
   return null
@@ -414,11 +439,11 @@ export function extractItems(cfg: ItemConfig, t: EquipTables, bossMap: Map<strin
       }
     }
 
-    // MainStats (accessories)
-    if (cfg.withMainStats) {
-      const subOptId = row.SubOptionGroupID?.split(',')[0]?.trim()
-      if (subOptId) {
-        const stats = extractMainStats(t.itemOptionByGroup, subOptId)
+    // MainStats (accessories, legendary only — epic have all stats)
+    if (cfg.withMainStats && row.ItemGrade === 'IG_UNIQUE') {
+      const mainOptId = row.MainOptionGroupID?.split(',')[0]?.trim()
+      if (mainOptId) {
+        const stats = extractMainStats(t.itemOptionByGroup, mainOptId)
         if (stats) extracted.mainStats = stats
       }
     }
