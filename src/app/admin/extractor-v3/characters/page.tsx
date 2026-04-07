@@ -198,7 +198,7 @@ export default function ExtractorV3Page() {
             onChange={(e) => setSearch(e.target.value)}
             className="w-full rounded bg-zinc-800 px-2 py-1 text-sm outline-none"
           />
-          <div className="flex gap-1">
+          <div className="flex gap-1 items-center">
             {(['all', 'diff', 'typo', 'new', 'ok'] as const).map((f) => (
               <button
                 key={f}
@@ -210,6 +210,34 @@ export default function ExtractorV3Page() {
                 {f}
               </button>
             ))}
+            {stats.typo > 0 && (
+              <button
+                onClick={async () => {
+                  const typoOnly = characters.filter((c) => c.status === 'typo')
+                  if (!typoOnly.length) return
+                  setSaveMessage({ text: `Fixing ${typoOnly.length} typo(s)...`, type: 'info' })
+                  let fixed = 0
+                  for (const c of typoOnly) {
+                    try {
+                      // Load existing manual fields first
+                      const detailRes = await fetch(`${API}?action=extract&id=${c.id}`)
+                      const detailData = await detailRes.json()
+                      await fetch(API, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ id: c.id, manual: detailData.manual ?? {} }),
+                      })
+                      fixed++
+                    } catch { /* skip */ }
+                  }
+                  setSaveMessage({ text: `Fixed ${fixed} typo(s)`, type: 'success' })
+                  await loadCompare()
+                }}
+                className="ml-auto rounded bg-zinc-700 px-2 py-0.5 text-xs text-zinc-300 hover:bg-zinc-600"
+              >
+                Fix all typos
+              </button>
+            )}
           </div>
         </div>
 
