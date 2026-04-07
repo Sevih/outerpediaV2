@@ -231,12 +231,14 @@ export function buildDiffs(extracted: Record<string, unknown>, existing: Record<
     .replace(/[；;]/g, ';')
     .replace(/[＋+]/g, '+')
 
-  // Compare all keys from both sides
+  // Skip diffs on preserved fields when extracted is null (legacy/manual values)
   const allKeys = new Set([...Object.keys(extracted), ...Object.keys(existing)])
   for (const key of allKeys) {
     const ext = extracted[key]
     const cur = existing[key]
     if (ext === undefined && cur === undefined) continue
+    // Don't flag source/boss when extracted has null but existing has a value (manually set)
+    if (PRESERVE_FIELDS.includes(key) && (ext === null || ext === undefined) && cur != null) continue
     const extStr = JSON.stringify(ext ?? null)
     const curStr = JSON.stringify(cur ?? null)
     if (extStr === curStr) continue
@@ -599,9 +601,10 @@ export function extractTalismans(t: EquipTables): ExtractedItem[] {
     const id = row.ID
     const nameTexts = getLangTexts(t.textItemMap.get(row.NameID))
 
-    const enchantIds = (row.ItemEnchantCostRate ?? '').split(',').map((s) => s.trim()).filter(Boolean)
-    const baseOpt = enchantIds[0] ? t.optById.get(enchantIds[0]) : undefined
-    const upgradedOpt = enchantIds[1] ? t.optById.get(enchantIds[1]) : undefined
+    // Effect via UniqueOptionID (comma-separated: first=base, second=upgraded)
+    const uniqueOptIds = (row.UniqueOptionID ?? '').split(',').map((s) => s.trim()).filter(Boolean)
+    const baseOpt = uniqueOptIds[0] ? t.optById.get(uniqueOptIds[0]) : undefined
+    const upgradedOpt = uniqueOptIds[1] ? t.optById.get(uniqueOptIds[1]) : undefined
 
     const effectNameTexts = baseOpt ? getLangTexts(t.textSkillMap.get(baseOpt.NameID)) : null
     const baseBuffId = baseOpt?.BuffID ?? ''
