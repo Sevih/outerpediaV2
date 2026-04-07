@@ -274,11 +274,13 @@ export function loadEquipTables(): EquipTables {
 // ── Shared boss mapping logic ───────────────────────────────────────
 
 export function buildBossMap(t: EquipTables, dungeonMode: string): Map<string, string | string[]> {
-  const spawnToBoss: Record<string, string> = {}
+  // DungeonSpawnTemplet: GroupID (= dungeon's SpawnID_Pos*) → ID0 (boss monster)
+  const spawnToBoss = new Map<string, string>()
   for (const s of t.spawnData) {
-    if (s.HPLineCount) spawnToBoss[s.HPLineCount] = s.ID0 || s.ID3
+    if (s.GroupID && s.ID0) spawnToBoss.set(s.GroupID, s.ID0)
   }
 
+  // RewardTemplet: ID → RandomGroupIDs
   const rewardToGroups: Record<string, string[]> = {}
   for (const r of t.rewardData) {
     if (r.RandomGroupID) rewardToGroups[r.ID] = r.RandomGroupID.split(',').map((s) => s.trim()).filter(Boolean)
@@ -287,13 +289,15 @@ export function buildBossMap(t: EquipTables, dungeonMode: string): Map<string, s
   const itemToBoss = new Map<string, string | string[]>()
   for (const d of t.dungeonData) {
     if (d.DungeonMode !== dungeonMode) continue
-    const name = t.textSystemMap.get(d.SeasonFullName)?.[LANG_COLUMNS[DEFAULT_LANG]] ?? ''
+    const name = t.textSystemMap.get(d.NameID)?.[LANG_COLUMNS[DEFAULT_LANG]] ?? ''
     if (!name.includes('Stage 13')) continue
 
+    // Find boss from spawn data
     const spawnId = d.SpawnID_Pos0 || d.SpawnID_Pos1 || d.SpawnID_Pos2
-    const bossId = spawnId ? spawnToBoss[spawnId] : undefined
+    const bossId = spawnId ? spawnToBoss.get(spawnId) : undefined
     if (!bossId) continue
 
+    // Find item rewards
     const groups = rewardToGroups[d.RewardID] ?? []
     for (const gid of groups) {
       for (const r of t.rewardGroupData) {
@@ -516,31 +520,16 @@ export function extractSets(t: EquipTables): ExtractedItem[] {
     byGroup.set(row.GroupID, g)
   }
 
-  // Boss map: armor GroupID → boss
-  const spawnToBoss: Record<string, string> = {}
-  for (const s of t.spawnData) { if (s.HPLineCount) spawnToBoss[s.HPLineCount] = s.ID0 || s.ID3 }
-  const rewardById: Record<string, Row> = {}
-  for (const r of t.rewardData) { if (r.ID) rewardById[r.ID] = r }
+  // Boss map: armor GroupID → boss (reuse shared buildBossMap for DM_RAID_1)
+  const armorBossMap = buildBossMap(t, 'DM_RAID_1')
   const itemById = indexBy(t.itemTemplet)
 
+  // Map: set GroupID → boss via armor item NameID pattern (_XS_NAME)
   const groupToBoss = new Map<string, string>()
-  for (const d of t.dungeonData) {
-    if (d.DungeonMode !== 'DM_RAID_1') continue
-    const name = t.textSystemMap.get(d.SeasonFullName)?.[LANG_COLUMNS[DEFAULT_LANG]] ?? ''
-    if (!name.includes('Stage 13')) continue
-    const bossId = spawnToBoss[d.SpawnID_Pos2] ?? spawnToBoss[d.SpawnID_Pos0] ?? spawnToBoss[d.SpawnID_Pos1]
-    if (!bossId) continue
-    const reward = rewardById[d.RewardID]
-    if (!reward?.RandomGroupID) continue
-    for (const gid of reward.RandomGroupID.split(',').map((s) => s.trim())) {
-      for (const r of t.rewardGroupData) {
-        if (r.GroupID !== gid || r.Type !== 'RIT_ITEM') continue
-        const item = itemById.get(r.TypeID)
-        // Extract set GroupID from NameID: ITEM_HELMET_M_7S_NAME → 7
-        const match = item?.NameID?.match(/_(\d+)S_NAME$/)
-        if (match) groupToBoss.set(match[1], bossId)
-      }
-    }
+  for (const [itemId, bossId] of armorBossMap) {
+    const item = itemById.get(itemId)
+    const match = item?.NameID?.match(/_(\d+)S_NAME$/)
+    if (match) groupToBoss.set(match[1], typeof bossId === 'string' ? bossId : bossId[0])
   }
 
   const rarity = (t.textSystemMap.get('SYS_ITEM_GRADE_UNIQUE')?.[LANG_COLUMNS[DEFAULT_LANG]] ?? 'Legendary').toLowerCase()
