@@ -1811,7 +1811,7 @@
       "class": "CCT_MAGE",
       "subclass": "ENCHANTER",
       "element": "CET_EARTH",
-      "star": "0,40,0"
+      "star": "3"
     },
     "premium": {
       "skill_23": "4",
@@ -10406,96 +10406,96 @@
   "2000112": {
     "info": {
       "id": "2000112",
-      "class": "CCT_ATTACKER",
-      "subclass": "ATTACKER",
+      "class": "CCT_MAGE",
+      "subclass": "ENCHANTER",
       "element": "CET_DARK",
       "star": "3"
     },
     "premium": {
-      "skill_23": "2",
-      "buffID": "ATTACKER_PASSIVE_2",
-      "stat": "CHC",
-      "applyingType": "OAT_ADD",
-      "rawValue": 50
+      "skill_23": "15",
+      "buffID": "MAGE_PASSIVE_2",
+      "stat": "ATK",
+      "applyingType": "OAT_RATE",
+      "rawValue": 100
     },
     "steps": {
       "lv1_ev0": {
-        "ATK": 93,
+        "ATK": 75,
         "DEF": 23,
-        "HP": 486,
-        "SPD": 122,
+        "HP": 481,
+        "SPD": 124,
         "EFF": 10,
-        "RES": 11,
+        "RES": 10,
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0,
-        "premium_value": 5
+        "premium_value": 7
       },
       "lv20_ev1": {
-        "ATK": 253,
-        "DEF": 65,
-        "HP": 1060,
-        "SPD": 122,
-        "EFF": 10,
-        "RES": 30,
+        "ATK": 231,
+        "DEF": 64,
+        "HP": 1014,
+        "SPD": 126,
+        "EFF": 30,
+        "RES": 27,
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0,
-        "premium_value": 5
+        "premium_value": 23
       },
       "lv40_ev2": {
-        "ATK": 422,
-        "DEF": 111,
-        "HP": 1665,
-        "SPD": 122,
-        "EFF": 10,
-        "RES": 50,
+        "ATK": 394,
+        "DEF": 107,
+        "HP": 1576,
+        "SPD": 128,
+        "EFF": 60,
+        "RES": 45,
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0,
-        "premium_value": 5
+        "premium_value": 39
       },
       "lv60_ev3": {
-        "ATK": 591,
-        "DEF": 156,
-        "HP": 2270,
-        "SPD": 122,
-        "EFF": 10,
-        "RES": 70,
+        "ATK": 570,
+        "DEF": 151,
+        "HP": 2138,
+        "SPD": 132,
+        "EFF": 90,
+        "RES": 63,
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0,
-        "premium_value": 5
+        "premium_value": 57
       },
       "lv80_ev4": {
-        "ATK": 760,
-        "DEF": 201,
-        "HP": 2875,
-        "SPD": 122,
-        "EFF": 10,
-        "RES": 90,
+        "ATK": 746,
+        "DEF": 194,
+        "HP": 2700,
+        "SPD": 136,
+        "EFF": 120,
+        "RES": 81,
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0,
-        "premium_value": 5
+        "premium_value": 74
       },
       "lv100_ev5": {
-        "ATK": 930,
-        "DEF": 247,
-        "HP": 3481,
-        "SPD": 122,
-        "EFF": 10,
-        "RES": 110,
+        "ATK": 922,
+        "DEF": 311,
+        "HP": 3665,
+        "SPD": 136,
+        "EFF": 120,
+        "RES": 100,
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0,
-        "premium_value": 5
+        "premium_value": 92
       }
     }
   },
@@ -11175,10 +11175,10 @@
     },
     "premium": {
       "skill_23": "5672",
-      "buffID": null,
-      "stat": null,
-      "applyingType": null,
-      "rawValue": null
+      "buffID": "core_passive_buff_chance",
+      "stat": "EFF",
+      "applyingType": "OAT_RATE",
+      "rawValue": 500
     },
     "steps": {
       "lv1_ev0": {
@@ -11191,7 +11191,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 5
       },
       "lv20_ev1": {
         "ATK": 202,
@@ -11203,7 +11204,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 5
       },
       "lv40_ev2": {
         "ATK": 337,
@@ -11215,7 +11217,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 5
       },
       "lv60_ev3": {
         "ATK": 473,
@@ -11227,7 +11230,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 5
       },
       "lv80_ev4": {
         "ATK": 608,
@@ -11239,7 +11243,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 5
       },
       "lv100_ev5": {
         "ATK": 744,
@@ -11251,7 +11256,8 @@
         "CHC": 5,
         "CHD": 150,
         "DMG_RED": 0,
-        "DMG_INC": 0
+        "DMG_INC": 0,
+        "premium_value": 5
       }
     }
   }
