@@ -95,7 +95,7 @@ interface FloorEntry {
 async function generateTower(
   tower: TowerConfig,
   dungeons: Row[],
-  spawnIdx: Map<string, Row>,
+  spawnIdx: Map<string, Row[]>,
   monsterIdx: Map<string, Row>,
 ): Promise<{ floors: FloorEntry[]; missing: string[] }> {
   // Load existing data to preserve curated fields

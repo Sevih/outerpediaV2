@@ -1355,8 +1355,9 @@ function orderKeys(obj: Record<string, unknown>): Record<string, unknown> {
 
 // ── Image copy ──────────────────────────────────────────────────────
 
-const DATAMINE_ROOT = path.join(process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources')
-const PUBLIC_IMAGES = path.join(process.cwd(), 'public', 'images', 'characters')
+// Build paths at runtime to avoid Turbopack static analysis matching broad file patterns
+function datamineRoot() { return [process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources'].join(path.sep) }
+function publicImages() { return [process.cwd(), 'public', 'images', 'characters'].join(path.sep) }
 
 function copyIfMissing(src: string, dest: string): 'copied' | 'exists' | 'missing' {
   if (fs.existsSync(dest)) return 'exists'
@@ -1370,22 +1371,22 @@ function copyCharacterImages(id: string, extracted: Record<string, unknown>): { 
   const jobs: [string, string][] = [
     // ATB portraits
     [
-      path.join(DATAMINE_ROOT, 'sprite', 'at_dungeonruntime', `IG_Turn_${id}.png`),
-      path.join(PUBLIC_IMAGES, 'atb', `IG_Turn_${id}.png`),
+      path.join(datamineRoot(), 'sprite', 'at_dungeonruntime', `IG_Turn_${id}.png`),
+      path.join(publicImages(), 'atb', `IG_Turn_${id}.png`),
     ],
     [
-      path.join(DATAMINE_ROOT, 'sprite', 'at_dungeonruntime', `IG_Turn_${id}_E.png`),
-      path.join(PUBLIC_IMAGES, 'atb', `IG_Turn_${id}_E.png`),
+      path.join(datamineRoot(), 'sprite', 'at_dungeonruntime', `IG_Turn_${id}_E.png`),
+      path.join(publicImages(), 'atb', `IG_Turn_${id}_E.png`),
     ],
     // Full art
     [
-      path.join(DATAMINE_ROOT, 'prefabs', 'ui', 'illust', `illust_${id}`, `IMG_${id}.png`),
-      path.join(PUBLIC_IMAGES, 'full', `IMG_${id}.png`),
+      path.join(datamineRoot(), 'prefabs', 'ui', 'illust', `illust_${id}`, `IMG_${id}.png`),
+      path.join(publicImages(), 'full', `IMG_${id}.png`),
     ],
     // Portrait
     [
-      path.join(DATAMINE_ROOT, 'sprite', 'at_thumbnailcharacterruntime', `CT_${id}.png`),
-      path.join(PUBLIC_IMAGES, 'portrait', `CT_${id}.png`),
+      path.join(datamineRoot(), 'sprite', 'at_thumbnailcharacterruntime', `CT_${id}.png`),
+      path.join(publicImages(), 'portrait', `CT_${id}.png`),
     ],
   ]
 
@@ -1400,8 +1401,8 @@ function copyCharacterImages(id: string, extracted: Record<string, unknown>): { 
       if (iconName.startsWith('Skill_ChainPassive_')) subDir = 'chain'
       else if (iconName.startsWith('Skill_CorePassive_')) subDir = 'core-fusion-skill'
       jobs.push([
-        path.join(DATAMINE_ROOT, 'sprite', 'at_skillruntime', `${iconName}.png`),
-        path.join(PUBLIC_IMAGES, subDir, `${iconName}.png`),
+        path.join(datamineRoot(), 'sprite', 'at_skillruntime', `${iconName}.png`),
+        path.join(publicImages(), subDir, `${iconName}.png`),
       ])
     }
   }

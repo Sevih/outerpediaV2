@@ -553,15 +553,12 @@ export async function POST(req: NextRequest) {
 
 // ── Image copy ──────────────────────────────────────────────────────
 
-const DATAMINE_ROOT = path.join(process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources')
-const EE_ICON_DST_DIR = path.join(process.cwd(), 'public', 'images', 'characters', 'ee')
-
 function copyEEIcon(id: string): { copied: boolean } {
-  const src = path.join(DATAMINE_ROOT, 'sprite', 'at_thumbnailitemruntime', `TI_Equipment_EX_${id}.png`)
-  const dst = path.join(EE_ICON_DST_DIR, `${id}.png`)
+  const src = [process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources', 'sprite', 'at_thumbnailitemruntime', `TI_Equipment_EX_${id}.png`].join(path.sep)
+  const dst = path.join(process.cwd(), 'public', 'images', 'characters', 'ee', `${id}.png`)
   if (fs.existsSync(dst)) return { copied: false }
   if (!fs.existsSync(src)) return { copied: false }
-  fs.mkdirSync(EE_ICON_DST_DIR, { recursive: true })
+  fs.mkdirSync(path.dirname(dst), { recursive: true })
   fs.copyFileSync(src, dst)
   return { copied: true }
 }

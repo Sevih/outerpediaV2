@@ -1736,8 +1736,8 @@ async function handleInspect(id: string) {
 
 // ── Image copy ───────────────────────────────────────────────────────
 
-const DATAMINE_ROOT = path.join(process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources');
-const PUBLIC_IMAGES = path.join(process.cwd(), 'public', 'images', 'characters');
+const DATAMINE_ROOT = [process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources'].join(path.sep);
+const PUBLIC_IMAGES = [process.cwd(), 'public', 'images', 'characters'].join(path.sep);
 
 async function fileExists(p: string): Promise<boolean> {
   try { await fs.access(p); return true; } catch { return false; }
