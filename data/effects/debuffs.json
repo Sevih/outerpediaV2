@@ -119,7 +119,7 @@
     "description_zh": "回合开始时,根据施展者效果命中受到等比例伤害,\\n且全体敌人行动值提升5%。\\n该效果在施展者死亡时解除。",
     "icon": "SC_Buff_2100092"
   },
-    {
+  {
     "name": "ETERNAL_BLEEDING",
     "category": "dot",
     "label": "Eternal Bleeding",
@@ -1011,7 +1011,7 @@
     "description_zh": "持续回合结束之前若无法击杀敌人则立即死亡。",
     "icon": "IG_Buff_Death_Timer_Interruption_D"
   },
-    {
+  {
     "name": "BT_DEATH_IR",
     "category": "unique",
     "label": "Martyrdom",
@@ -1107,7 +1107,7 @@
     "description_zh": "回合开始时,自身的强化效果持续回合减少1回合,\\n使全体敌人的弱化效果持续回合减少1回合。\\n每队仅一名套用此效果,当对其他目标造成此效果时,\\n原本目标的效果将会解除。\\n施展者死亡时解除。(无法解除)",
     "icon": "IG_Buff_Effect_2000102_Interruption_D"
   },
-    {
+  {
     "name": "IRREGULAR_INFECTION",
     "category": "unique",
     "label": "Irregular Infection",
@@ -1214,7 +1214,7 @@
     "description_zh": "所有<color=#28d9ed>行动条</color>提升效果减少20%,每回合开始时受到与施术者生命值成比例的伤害。\n施术者死亡时解除。",
     "icon": "IG_Buff_Dot_Poison02"
   },
-    {
+  {
     "name": "CORROSIVE_POISON",
     "category": "dot",
     "label": "Corrosive Poison",
@@ -1266,5 +1266,31 @@
     "description_kr": "대상의 행동을 제한하고 받는 피해를 30% 증가시킵니다.\\n시전자가 사망 시 해제됩니다.\\n빙결, 석화, 스턴, 황금의 저주 중 가장 지속 시간이 긴 효과 1종만 적용됩니다.\\n지속 시간 종료 혹은 해제 시 대상의 공격력을 1턴 동안 감소시킵니다.\\n대상이 명속성인 경우 추가로 치명 피해를 2턴 동안 감소시킵니다.\\n(공격력 감소 및 치명 피해 감소 효과는 해제 불가)",
     "description_zh": "限制目标行动,并使受到的伤害提升30%。\\n施法者死亡时解除。\\n冰冻、石化、眩晕、黄金诅咒中,仅生效持续时间最长的1种效果。\\n持续时间结束或解除时,使目标的攻击力降低1回合。\\n若目标为光属性,额外使暴击伤害降低2回合。\\n(攻击力降低及暴击伤害降低效果无法解除)",
     "icon": "IG_Buff_Effect_Golden_Curse"
+  },
+  {
+    "name": "SPATIAL_DISTORTION_(ENEMY)",
+    "category": "unique",
+    "label": "Spatial Distortion (Enemy)",
+    "label_jp": "空間歪曲（敵）",
+    "label_kr": "공간 왜곡 (적)",
+    "label_zh": "空间扭曲（敌方）",
+    "description": "Target's Penetration -30%\\nPriority increase efficiency -10%  \\n\\n(Cannot be removed, removed upon caster's death)",
+    "description_jp": "対象の貫通力-30%\\n行動ゲージ効率-10%\\n\\n（解除不可、スキル使用者が倒れると解除）",
+    "description_kr": "대상 관통력 -30%\\n행동 게이지 효율 -10%\\n\\n(해제 불가, 시전자 사망 시 해제)",
+    "description_zh": "目标穿透力-30%\\n行动值效率-10%\\n\\n(无法解除，施放者死亡时解除)",
+    "icon": "IG_Buff_Effect_Disrupt_Interruption_D"
+  },
+  {
+    "name": "BUFF_TRANSFER",
+    "category": "utility",
+    "label": "Buff Transfer",
+    "label_jp": "強化効果転移",
+    "label_kr": "강화 효과 전이",
+    "label_zh": "强化效果转移",
+    "description": "Removes buffs and transfers them to a random ally. (Ignores Immunity)\\nIf the same buff is already active, the one with the longer duration is applied.\\nBuffs are removed even if allies cannot hold buffs, and effects that cannot be dispelled are not transferred.",
+    "description_jp": "強化効果を除去し、ランダムな味方に移します。(免疫無視)\\n同一の強化効果を保有している場合、持続時間が長い強化効果が適用されます。\\n味方が強化効果を保有できない場合も除去され、解除不可効果は転移されません。",
+    "description_kr": "강화 효과를 제거하고 랜덤한 아군에게 옮깁니다.(면역 무시)\\n동일 강화 효과를 보유 중이라면 지속 시간이 긴 강화 효과가 적용됩니다.\\n아군이 강화 효과를 보유할 수 없는 경우에도 제거되며 해제 불가 효과는 전이되지 않습니다.",
+    "description_zh": "移除强化效果并转移给随机我方单位。(无视免疫)\\n若已拥有相同强化效果，则适用持续时间较长的强化效果。\\n即使我方无法持有强化效果也会被移除，无法解除的效果不会被转移。",
+    "icon": "IG_Buff_transfert"
   }
 ]
