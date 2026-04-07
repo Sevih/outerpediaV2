@@ -127,25 +127,25 @@ function extractAudioFromBundles(): number {
 // ─── Step 2: Extract mapping from parsed JSON ──────────────────────
 
 function extractMappingFromJson(): Record<string, string> {
-  const lobbyPath = join(PATHS.adminJson, 'LobbyCustomResourceTemplet.json');
-  const textPath = join(PATHS.adminJson, 'TextSystem.json');
+  const lobbyPath = join(PATHS.adminJson2, 'LobbyCustomResourceTemplet.json');
+  const textPath = join(PATHS.adminJson2, 'TextSystem.json');
 
   if (!existsSync(lobbyPath) || !existsSync(textPath)) return {};
 
-  const lobbyData = JSON.parse(readFileSync(lobbyPath, 'utf-8'));
-  const textData = JSON.parse(readFileSync(textPath, 'utf-8'));
+  const lobbyData: Record<string, string>[] = JSON.parse(readFileSync(lobbyPath, 'utf-8'));
+  const textData: Record<string, string>[] = JSON.parse(readFileSync(textPath, 'utf-8'));
 
   // Build translations lookup
   const translations: Record<string, string> = {};
-  for (const row of textData.data ?? []) {
-    if (row.IDSymbol) {
-      translations[row.IDSymbol] = row.English ?? '';
+  for (const row of textData) {
+    if (row.ID) {
+      translations[row.ID] = row.English ?? '';
     }
   }
 
   // Extract BGM entries
   const mapping: Record<string, string> = {};
-  for (const row of lobbyData.data ?? []) {
+  for (const row of lobbyData) {
     if (row.Type !== 'LRT_BGM') continue;
     const resource = row.ResourceFile ?? '';
     const nameKey = row.NAME ?? '';

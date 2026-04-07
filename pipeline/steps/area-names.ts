@@ -16,8 +16,8 @@ interface AreaEntry {
 }
 
 export async function run() {
-  const textPath = join(PATHS.adminJson, 'TextSystem.json');
-  const areaPath = join(PATHS.adminJson, 'AreaTemplet.json');
+  const textPath = join(PATHS.adminJson2, 'TextSystem.json');
+  const areaPath = join(PATHS.adminJson2, 'AreaTemplet.json');
 
   if (!existsSync(textPath) || !existsSync(areaPath)) {
     if (existsSync(OUTPUT)) {
@@ -26,15 +26,15 @@ export async function run() {
     throw new Error('area_name.json is missing and cannot be generated without datamine');
   }
 
-  const textData = JSON.parse(readFileSync(textPath, 'utf-8'));
-  const areaData = JSON.parse(readFileSync(areaPath, 'utf-8'));
+  const textData: any[] = JSON.parse(readFileSync(textPath, 'utf-8'));
+  const areaData: any[] = JSON.parse(readFileSync(areaPath, 'utf-8'));
 
   // Extract SYS_AREA_NAME_* translations
   const names: Record<string, { en: string; kr: string; jp: string; zh: string }> = {};
-  for (const row of textData.data ?? []) {
-    const symbol = row.IDSymbol ?? '';
-    if (symbol.startsWith('SYS_AREA_NAME_')) {
-      names[symbol] = {
+  for (const row of textData) {
+    const id = row.ID ?? '';
+    if (id.startsWith('SYS_AREA_NAME_')) {
+      names[id] = {
         en: row.English ?? '',
         kr: row.Korean ?? '',
         jp: row.Japanese ?? '',
@@ -45,17 +45,17 @@ export async function run() {
 
   // Map area entries to locations
   const result: Record<string, Record<string, AreaEntry>> = {};
-  for (const row of areaData.data ?? []) {
-    const nameKey = row.RewardIDList ?? '';
+  for (const row of areaData) {
+    const nameKey = row.NameID ?? '';
     if (!nameKey.startsWith('SYS_AREA_NAME_')) continue;
 
-    const modeRaw = row.ID ?? '';
+    const modeRaw = row.AreaGroupType ?? '';
     let mode: string;
     if (modeRaw === 'AGT_NORMAL') mode = 'normal';
     else if (modeRaw === 'AGT_HARD') mode = 'hard';
     else continue;
 
-    const gameSeason = row.ID_fallback1 ?? '';
+    const gameSeason = row.SeasonID ?? '';
     const episode = row.EpisodeNum ?? '';
     const bgImage = row.BGImage ?? '';
 

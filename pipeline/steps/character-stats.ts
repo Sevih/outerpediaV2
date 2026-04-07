@@ -17,11 +17,11 @@ const SOURCE_FILES = [
 // Stat column mappings in CharacterTemplet
 const STAT_COLUMNS: Record<string, [string, string]> = {
   ATK: ['Atk_Min', 'Atk_Max'],
-  DEF: ['Def_Min', 'DMGReduceRate_Max'],
-  HP:  ['HP_Min', 'WG_Max'],
+  DEF: ['Def_Min', 'Def_Max'],
+  HP:  ['HP_Min', 'HP_Max'],
   SPD: ['Speed_Min', 'Speed_Max'],
   EFF: ['BuffChance_Min', 'BuffChance_Max'],
-  RES: ['BuffResist_Min', 'EnemyCriticalDamageReduce_Max'],
+  RES: ['BuffResist_Min', 'BuffResist_Max'],
   CHC: ['CriticalRate_Min', 'CriticalRate_Max'],
   CHD: ['CriticalDMGRate_Min', 'CriticalDMGRate_Max'],
 };
@@ -34,8 +34,9 @@ const EVO_STAT_MAP: Record<string, string> = {
 
 const PREMIUM_STAT_DISPLAY: Record<string, string> = {
   ST_DEF: 'DEF', ST_ATK: 'ATK', ST_HP: 'HP',
-  ST_CRITICAL_RATE: 'CHC', ST_SPEED: 'SPD',
+  ST_CRITICAL_RATE: 'CHC', ST_CRITICAL_DMG_RATE: 'CHD', ST_SPEED: 'SPD',
   ST_BUFF_CHANCE: 'EFF', ST_BUFF_RESIST: 'RES',
+  ST_DMG_REDUCE_RATE: 'DMG_RED', ST_DMG_BOOST: 'DMG_INC',
 };
 
 const EVO_STEPS: [number, number, number[]][] = [
@@ -54,7 +55,7 @@ const ALL_STATS = ['ATK', 'DEF', 'HP', 'SPD', 'EFF', 'RES', 'CHC', 'CHD', 'DMG_R
 function computeChecksum(): string | null {
   const combined = createHash('md5');
   for (const file of SOURCE_FILES) {
-    const p = join(PATHS.adminJson, file);
+    const p = join(PATHS.adminJson2, file);
     if (!existsSync(p)) return null;
     const md5 = createHash('md5').update(readFileSync(p)).digest('hex');
     combined.update(md5);
@@ -80,12 +81,15 @@ function buildBuffLookup(data: Record<string, string>[]): Record<string, Record<
   return lookup;
 }
 
-function buildSkillLevelLookup(data: Record<string, string>[]): Record<string, string> {
-  const lookup: Record<string, string> = {};
+function buildSkillLevelLookup(data: Record<string, string>[]): Record<string, Set<string>> {
+  const lookup: Record<string, Set<string>> = {};
   for (const entry of data) {
     const sid = entry.SkillID ?? '';
-    if (sid && !(sid in lookup)) {
-      lookup[sid] = entry.BuffID ?? entry.DescID ?? entry.GainAP ?? '';
+    const buffId = entry.BuffID ?? '';
+    if (!sid || !buffId) continue;
+    if (!lookup[sid]) lookup[sid] = new Set();
+    for (const bid of buffId.split(',').map(s => s.trim())) {
+      if (bid) lookup[sid].add(bid);
     }
   }
   return lookup;
@@ -102,9 +106,7 @@ function buildEvoLookup(data: Record<string, string>[]): Record<string, Record<n
     const bonuses: Record<string, number> = {};
     for (let i = 1; i <= 3; i++) {
       const statType = entry[`RewardStatType_${i}`] ?? '';
-      let value = entry[`RewardValue_${i}`] ?? '';
-      if (!value) value = entry[`RewardStatType_${i}_fallback1`] ?? '';
-      if (!value) value = entry[`RewardValue_${i}_fallback1`] ?? '';
+      const value = entry[`RewardValue_${i}`] ?? '';
       if (statType && value) {
         const statName = EVO_STAT_MAP[statType] ?? statType;
         const v = parseInt(value, 10);
@@ -127,14 +129,14 @@ interface PremiumBuff {
 }
 
 function getPremiumBuff(
-  skill23: string,
-  skillLevelLookup: Record<string, string>,
+  skill8: string,
+  skillLevelLookup: Record<string, Set<string>>,
   buffLookup: Record<string, Record<string, string>>,
 ): PremiumBuff | null {
-  const descStr = skillLevelLookup[skill23] ?? '';
-  if (!descStr) return null;
+  const buffIds = skillLevelLookup[skill8];
+  if (!buffIds) return null;
 
-  for (const bid of descStr.split(',').map(s => s.trim())) {
+  for (const bid of buffIds) {
     const buff = buffLookup[bid];
     if (buff && buff.Type === 'BT_STAT_PREMIUM') {
       return {
@@ -158,7 +160,7 @@ function computePremiumValue(premium: PremiumBuff, baseStatValue: number): numbe
 
 export async function run() {
   // Check sources exist
-  const allExist = SOURCE_FILES.every(f => existsSync(join(PATHS.adminJson, f)));
+  const allExist = SOURCE_FILES.every(f => existsSync(join(PATHS.adminJson2, f)));
   if (!allExist) {
     if (existsSync(OUTPUT_FILE)) return 'skipped (no datamine, using existing)';
     throw new Error('character-stats.json is missing and cannot be generated without datamine');
@@ -166,11 +168,11 @@ export async function run() {
 
   if (isUpToDate()) return 'skipped (up to date)';
 
-  // Load pre-parsed JSON
-  const charData = JSON.parse(readFileSync(join(PATHS.adminJson, 'CharacterTemplet.json'), 'utf-8')).data;
-  const evoData = JSON.parse(readFileSync(join(PATHS.adminJson, 'CharacterEvolutionStatTemplet.json'), 'utf-8')).data;
-  const skillLevelData = JSON.parse(readFileSync(join(PATHS.adminJson, 'CharacterSkillLevelTemplet.json'), 'utf-8')).data;
-  const buffData = JSON.parse(readFileSync(join(PATHS.adminJson, 'BuffTemplet.json'), 'utf-8')).data;
+  // Load pre-parsed JSON (json2 = flat arrays)
+  const charData: Record<string, string>[] = JSON.parse(readFileSync(join(PATHS.adminJson2, 'CharacterTemplet.json'), 'utf-8'));
+  const evoData: Record<string, string>[] = JSON.parse(readFileSync(join(PATHS.adminJson2, 'CharacterEvolutionStatTemplet.json'), 'utf-8'));
+  const skillLevelData: Record<string, string>[] = JSON.parse(readFileSync(join(PATHS.adminJson2, 'CharacterSkillLevelTemplet.json'), 'utf-8'));
+  const buffData: Record<string, string>[] = JSON.parse(readFileSync(join(PATHS.adminJson2, 'BuffTemplet.json'), 'utf-8'));
 
   // Build lookups
   const buffLookup = buildBuffLookup(buffData);
@@ -178,7 +180,7 @@ export async function run() {
   const evoLookup = buildEvoLookup(evoData);
 
   // Find all 2000XXX / 2700XXX characters
-  const characters = charData.filter((row: Record<string, string>) => {
+  const characters = charData.filter((row) => {
     const id = row.ID ?? '';
     return id.startsWith('2000') || id.startsWith('2700');
   });
@@ -206,8 +208,8 @@ export async function run() {
     }
 
     const charEvo = evoLookup[cid] ?? {};
-    const skill23 = char.Skill_23 ?? '';
-    const premium = skill23 ? getPremiumBuff(skill23, skillLevelLookup, buffLookup) : null;
+    const skillId = char.Skill_23 ?? char.Skill_22 ?? '';
+    const premium = skillId ? getPremiumBuff(skillId, skillLevelLookup, buffLookup) : null;
 
     // Compute stats at each evo step
     const steps: Record<string, Record<string, number | null>> = {};
@@ -246,7 +248,7 @@ export async function run() {
     results[cid] = {
       info,
       premium: {
-        skill_23: skill23,
+        skill_23: skillId,
         buffID: premium?.buffID ?? null,
         stat: premium?.stat ?? null,
         applyingType: premium?.applyingType ?? null,
