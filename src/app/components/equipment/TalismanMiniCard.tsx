@@ -11,10 +11,11 @@ import EquipmentIcon from './EquipmentIcon';
 type Props = {
   talisman: Talisman;
   lang: Lang;
+  nameSuffix?: string;
 };
 
-export default function TalismanMiniCard({ talisman, lang }: Props) {
-  const name = l(talisman, 'name', lang);
+export default function TalismanMiniCard({ talisman, lang, nameSuffix = '' }: Props) {
+  const name = l(talisman, 'name', lang) + nameSuffix;
   const effectName = l(talisman, 'effect_name', lang)
     ?.replace('Action Point', 'AP')
     .replace('Chain Point', 'CP');

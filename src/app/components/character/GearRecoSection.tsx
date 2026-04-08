@@ -69,10 +69,11 @@ export default function GearRecoSection({ reco, weapons, amulets, talismans, set
                 <GearCategory label={t('page.character.gear.talisman')}>
                   {build.Talisman.map((name, i) => {
                     const data = talismans.find((t) => t.name === name);
+                    const suffix = name === "Executioner's Charm" ? ' +10' : '';
                     return data ? (
-                      <TalismanMiniCard key={`${name}-${i}`} talisman={data} lang={lang} />
+                      <TalismanMiniCard key={`${name}-${i}`} talisman={data} lang={lang} nameSuffix={suffix} />
                     ) : (
-                      <p key={`${name}-${i}`} className="text-sm text-zinc-400">{name}</p>
+                      <p key={`${name}-${i}`} className="text-sm text-zinc-400">{name}{suffix}</p>
                     );
                   })}
                 </GearCategory>

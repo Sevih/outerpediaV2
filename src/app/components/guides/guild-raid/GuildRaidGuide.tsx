@@ -10,6 +10,7 @@ import CarouselSlot from '@/app/components/guides/CarouselSlot';
 import CombatFootage from '@/app/components/guides/CombatFootage';
 import GeasUnlockList from './GeasUnlockList';
 import GuildRaidPhase2Teams from './GuildRaidPhase2Teams';
+import DevGeasPanel from './DevGeasPanel';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -278,6 +279,8 @@ function GuildRaidContent({
           </>
         )}
       </div>
+
+      <DevGeasPanel geasA={version.geasA} geasB={version.geasB} pool={pool} />
     </div>
   );
 }

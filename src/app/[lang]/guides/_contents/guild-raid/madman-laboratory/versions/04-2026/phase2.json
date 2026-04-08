@@ -42,7 +42,7 @@
     ],
     "requirements": {
       "entries": [
-                {
+        {
           "character": "Ryu Lion",
           "stats": { "spd": "267" },
           "equipment": {
@@ -58,12 +58,18 @@
           "character": "Notia",
           "stats": { "spd": "243" },
           "equipment": {
-            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"]
+            "talisman": ["{I-T/Rogue's Charm}", "{I-T/Sage's Charm}"]
           },
           "prio": ["{S/SPD}", "{S/CHC}", "{S/PEN%}", "{S/ATK}", "{S/CHD}"],
-          "notes": ["Just keep {B/FIERCE_OFFENSIVE} up for {B/BT_ACTION_GAUGE}."],
-          "notes_jp": ["{B/FIERCE_OFFENSIVE}を維持して{B/BT_ACTION_GAUGE}を確保。"],
-          "notes_kr": ["{B/BT_ACTION_GAUGE}를 위해 {B/FIERCE_OFFENSIVE}를 유지하세요."],
+          "notes": [
+            "Just keep {B/FIERCE_OFFENSIVE} up for {B/BT_ACTION_GAUGE}."
+          ],
+          "notes_jp": [
+            "{B/FIERCE_OFFENSIVE}を維持して{B/BT_ACTION_GAUGE}を確保。"
+          ],
+          "notes_kr": [
+            "{B/BT_ACTION_GAUGE}를 위해 {B/FIERCE_OFFENSIVE}를 유지하세요."
+          ],
           "notes_zh": ["保持{B/FIERCE_OFFENSIVE}以获得{B/BT_ACTION_GAUGE}。"]
         },
         {
@@ -71,19 +77,27 @@
           "stats": { "spd": "258" },
           "equipment": {
             "weapon": ["{I-W/Rampaging Caracal}"],
-            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"]
+            "talisman": ["{I-T/Rogue's Charm}", "{I-T/Sage's Charm}"]
           },
           "prio": ["{S/SPD}", "{S/CHC}", "{S/PEN%}", "{S/ATK}", "{S/CHD}"],
-          "notes": ["Must S1 first turn to proc {I-W/Rampaging Caracal} and {P/Notia} {SK/Notia|S2}"],
-          "notes_jp": ["初ターンはS1で{I-W/Rampaging Caracal}と{P/Notia}の{SK/Notia|S2}を発動させる"],
-          "notes_kr": ["첫 턴에 S1을 사용하여 {I-W/Rampaging Caracal}과 {P/Notia} {SK/Notia|S2}를 발동"],
-          "notes_zh": ["第一回合必须使用S1触发{I-W/Rampaging Caracal}和{P/Notia}的{SK/Notia|S2}"]
+          "notes": [
+            "Must S1 first turn to proc {I-W/Rampaging Caracal} and {P/Notia} {SK/Notia|S2}"
+          ],
+          "notes_jp": [
+            "初ターンはS1で{I-W/Rampaging Caracal}と{P/Notia}の{SK/Notia|S2}を発動させる"
+          ],
+          "notes_kr": [
+            "첫 턴에 S1을 사용하여 {I-W/Rampaging Caracal}과 {P/Notia} {SK/Notia|S2}를 발동"
+          ],
+          "notes_zh": [
+            "第一回合必须使用S1触发{I-W/Rampaging Caracal}和{P/Notia}的{SK/Notia|S2}"
+          ]
         },
         {
           "character": "Kappa",
           "stats": { "spd": "193" },
           "equipment": {
-            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"]
+            "talisman": ["{I-T/Rogue's Charm}", "{I-T/Sage's Charm}"]
           },
           "prio": ["{S/SPD}", "{S/CHC}", "{S/PEN%}", "{S/DEF}", "{S/CHD}"],
           "notes": [],
@@ -170,8 +184,8 @@
           "character": "Laine",
           "stats": { "spd": "229" },
           "equipment": {
-            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"],
-            "set": ["{AS/Speed}","{AS/Penetration}"]
+            "talisman": ["{I-T/Rogue's Charm}", "{I-T/Sage's Charm}"],
+            "set": ["{AS/Speed}", "{AS/Penetration}"]
           },
           "prio": ["{S/SPD}", "{S/CHC}"],
           "notes": ["Only S1 for getting priority"],
@@ -186,7 +200,9 @@
             "talisman": ["{I-T/Rogue's Charm}"]
           },
           "prio": ["{S/SPD}", "{S/CHC}"],
-          "notes": ["Only S1 Burn Lv 1 exept for first break when she will use Chain attack"],
+          "notes": [
+            "Only S1 Burn Lv 1 exept for first break when she will use Chain attack"
+          ],
           "notes_jp": ["最初のブレイク時のチェイン攻撃以外はS1バーンLv1のみ"],
           "notes_kr": ["첫 브레이크 체인 공격 외에는 S1 번 Lv 1만 사용"],
           "notes_zh": ["除了第一次破坏时的连锁攻击外，只用S1燃烧Lv1"]
@@ -207,13 +223,180 @@
           "character": "Alice",
           "stats": { "spd": "204" },
           "equipment": {
-            "talisman": ["{I-T/Rogue's Charm}","{I-T/Sage's Charm}"]
+            "talisman": ["{I-T/Rogue's Charm}", "{I-T/Sage's Charm}"]
           },
           "prio": ["{S/SPD}", "{S/CHC}"],
-          "notes": ["Use S2 once to speed down the boss then use Chain attack on the other break"],
-          "notes_jp": ["S2を一度使ってボスの速度を下げ、他のブレイク時にチェイン攻撃"],
-          "notes_kr": ["S2를 한 번 사용해 보스 속도를 낮추고 다른 브레이크 시 체인 공격"],
+          "notes": [
+            "Use S2 once to speed down the boss then use Chain attack on the other break"
+          ],
+          "notes_jp": [
+            "S2を一度使ってボスの速度を下げ、他のブレイク時にチェイン攻撃"
+          ],
+          "notes_kr": [
+            "S2를 한 번 사용해 보스 속도를 낮추고 다른 브레이크 시 체인 공격"
+          ],
           "notes_zh": ["使用一次S2降低Boss速度，然后在其他破坏时使用连锁攻击"]
+        }
+      ]
+    }
+  },
+  "Revenge Mage Team": {
+    "icon": "class/CM_Class_Mage",
+    "team": [["Viella"], ["Kuro"], ["Maxwell"], ["Demiurge Luna"]],
+    "geasActive": {
+      "bonus": [89,49,53,76],
+      "malus": [5,38,18,20,90,86,57,60]
+    },
+    "video": {
+      "videoId": "YEP-V6NxB6E",
+      "title": "Madman's Laboratory - Revenge Mage Team",
+      "author": "Tango"
+    },
+    "note": [
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Viella", "speed": 275 },
+          { "character": "Kuro", "speed": 177 },
+          { "character": "Demiurge Luna", "speed": 172 },
+          { "character": "Maxwell", "speed": 160 }
+        ],
+        "note": "Boss acts between {P/Viella} and {P/Kuro}."
+      },
+      {
+        "type": "p",
+        "string": "Pray the boss actually crits your {P/Maxwell} so you get into revenge range"
+      },
+      {
+        "type": "p",
+        "string": "If your {P/Maxwell} can't survive a double crit from the boss, use {I-W/Iron Messiah} on {P/Viella} and put {P/Maxwell} in the 1st slot"
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Viella", "speed": 275 },
+          { "character": "Kuro", "speed": 177 },
+          { "character": "Demiurge Luna", "speed": 172 },
+          { "character": "Maxwell", "speed": 160 }
+        ],
+        "note": "ボスは{P/Viella}と{P/Kuro}の間に行動します。"
+      },
+      {
+        "type": "p",
+        "string": "ボスが{P/Maxwell}にクリティカルを出してリベンジ範囲に入ることを祈ってください"
+      },
+      {
+        "type": "p",
+        "string": "{P/Maxwell}がボスの2連クリティカルを耐えられない場合は、{P/Viella}に{I-W/Iron Messiah}を装備し、{P/Maxwell}を1番目のスロットに配置してください"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Viella", "speed": 275 },
+          { "character": "Kuro", "speed": 177 },
+          { "character": "Demiurge Luna", "speed": 172 },
+          { "character": "Maxwell", "speed": 160 }
+        ],
+        "note": "보스는 {P/Viella}와 {P/Kuro} 사이에 행동합니다."
+      },
+      {
+        "type": "p",
+        "string": "보스가 {P/Maxwell}에게 치명타를 적중시켜 리벤지 범위에 들어가기를 기도하세요"
+      },
+      {
+        "type": "p",
+        "string": "{P/Maxwell}이 보스의 더블 치명타를 버틸 수 없다면, {P/Viella}에게 {I-W/Iron Messiah}를 장착하고 {P/Maxwell}을 1번 슬롯에 배치하세요"
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Viella", "speed": 275 },
+          { "character": "Kuro", "speed": 177 },
+          { "character": "Demiurge Luna", "speed": 172 },
+          { "character": "Maxwell", "speed": 160 }
+        ],
+        "note": "Boss在{P/Viella}和{P/Kuro}之间行动。"
+      },
+      {
+        "type": "p",
+        "string": "祈祷Boss对你的{P/Maxwell}造成暴击，以便进入复仇范围"
+      },
+      {
+        "type": "p",
+        "string": "如果你的{P/Maxwell}无法承受Boss的双暴击，请给{P/Viella}装备{I-W/Iron Messiah}并将{P/Maxwell}放在第1个位置"
+      }
+    ],
+    "requirements": {
+      "entries": [
+        {
+          "character": "Viella",
+          "stats": { "spd": "275" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"]
+          },
+          "prio": ["{S/SPD}"],
+          "notes": [],
+          "notes_jp": [],
+          "notes_kr": [],
+          "notes_zh": []
+        },
+        {
+          "character": "Kuro",
+          "stats": { "spd": "177" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"],
+            "set": ["{AS/Penetration}"]
+          },
+          "prio": ["{S/PEN%}", "{S/CHC}", "{S/ATK}", "{S/CHD}"],
+          "notes": [],
+          "notes_jp": [],
+          "notes_kr": [],
+          "notes_zh": []
+        },
+        {
+          "character": "Maxwell",
+          "stats": { "spd": "160" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"],
+            "set": ["{AS/Revenge}"],
+            "ee": ["+10"]
+          },
+          "prio": ["{S/PEN%}", "{S/CHC}", "{S/ATK}", "{S/CHD}"],
+          "notes": [
+            "Must be in the third slot in the skill chain (bugged otherwise)"
+          ],
+          "notes_jp": [
+            "スキルチェインの3番目のスロットに配置する必要があります（他のスロットだとバグ）"
+          ],
+          "notes_kr": [
+            "스킬 체인의 3번째 슬롯에 배치해야 합니다 (다른 슬롯은 버그)"
+          ],
+          "notes_zh": ["必须放在技能连锁的第三个位置（其他位置有Bug）"]
+        },
+        {
+          "character": "Demiurge Luna",
+          "stats": { "spd": "172", "trans": "6" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"],
+            "set": ["{AS/Revenge}"]
+          },
+          "prio": ["{S/PEN%}", "{S/CHC}", "{S/ATK}", "{S/CHD}"],
+          "notes": [
+            "Remove EE so she doesn't cut in between the boss and {P/Kuro}"
+          ],
+          "notes_jp": [
+            "EEを外して、ボスと{P/Kuro}の間に割り込まないようにする"
+          ],
+          "notes_kr": [
+            "EE를 해제하여 보스와 {P/Kuro} 사이에 끼어들지 않도록 함"
+          ],
+          "notes_zh": ["移除EE，避免她在Boss和{P/Kuro}之间插入"]
         }
       ]
     }
