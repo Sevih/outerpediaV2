@@ -17,9 +17,9 @@
   "location": {
     "dungeon": {
       "en": "Search Coordinates: F02_A03_S22",
-      "jp": "探索座標:F02_A03_S22",
+      "jp": "探索座標：F02_A03_S22",
       "kr": "탐색 좌표 : F02_A03_S22",
-      "zh": "探索坐标:F02_A03_S22"
+      "zh": "探索坐标：F02_A03_S22"
     },
     "mode": {
       "en": "Infiltration Operation",
@@ -47,7 +47,7 @@
         "en": "Attacks an enemy, and removes <color=#28d9ed>2</color> <color=#28d9ed>buff(s)</color> from the target.",
         "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2個</color>奪う。",
         "kr": "적을 공격하고 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 빼앗습니다.",
-        "zh": "攻击敌人,并夺取目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>。"
+        "zh": "攻击敌人，并夺取目标的<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>。"
       },
       "icon": "MT_Attack_Claw_1_Dark",
       "debuff": [
@@ -66,7 +66,7 @@
         "en": "Attacks an enemy, and reduces Priority of the target by <color=#28d9ed>20%</color>, and increases Priority of all allies by <color=#28d9ed>20%</color>.",
         "jp": "敵単体にダメージを与え、対象の行動ゲージを<color=#28d9ed>20%</color>DOWNさせ、味方全体の行動ゲージを<color=#28d9ed>20%</color>UPさせる。",
         "kr": "적을 공격하고 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고, 아군 전체의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
-        "zh": "攻击敌人,并使目标的行动值降低<color=#28d9ed>20%</color>,且使全体友军的行动值提升<color=#28d9ed>20%</color>。"
+        "zh": "攻击敌人，并使目标的行动值降低<color=#28d9ed>20%</color>，且使全体友军的行动值提升<color=#28d9ed>20%</color>。"
       },
       "icon": "MT_Attack_Smash_1_Dark",
       "buff": [
@@ -88,7 +88,7 @@
         "en": "Attacks all enemies. Grants a <color=#28d9ed>Barrier</color> to all allies except for the caster for <color=#28d9ed>2 turn(s)</color>, and <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>5 turn(s)</color>.",
         "jp": "敵全体にダメージを与える。自分を除く味方全体に<color=#28d9ed>シールド</color>を<color=#28d9ed>2ターン</color>の間付与し、自分に<color=#28d9ed>無敵</color>を<color=#28d9ed>5ターン</color>の間付与する。",
         "kr": "적 전체를 공격합니다. 자신을 제외한 아군 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>를 부여하고, 자신은 <color=#28d9ed>5턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.",
-        "zh": "攻击全体敌人。使除自身外的全体友军获得<color=#28d9ed>护盾</color>效果,持续<color=#28d9ed>2回合</color>,并使自身获得<color=#28d9ed>无敌</color>效果,持续<color=#28d9ed>5回合</color>。"
+        "zh": "攻击全体敌人。使除自身外的全体友军获得<color=#28d9ed>护盾</color>效果，持续<color=#28d9ed>2回合</color>，并使自身获得<color=#28d9ed>无敌</color>效果，持续<color=#28d9ed>5回合</color>。"
       },
       "icon": "MT_Attack_Smash_1_Dark",
       "buff": [
@@ -99,16 +99,16 @@
     {
       "name": {
         "en": "Evolution: Wrought Iron",
-        "jp": "進化:錬鉄",
+        "jp": "進化：錬鉄",
         "kr": "진화 : 연철",
-        "zh": "进化:锻铁"
+        "zh": "进化：锻铁"
       },
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>5000</color>.\\nAfter attacking, summons an Irregular Machine Gun.\\nIrregular Machine Gun inflicts <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>1 turn(s)</color> upon death.\\nWhen an ally is still alive, takes no Weakness Gauge damage.",
         "jp": "受ける呪い/固定ダメージは<color=#28d9ed>[Buff_V_irregular_dmgcap_1</color>を超えない。\\n攻撃後、【イレギュラー・機関銃】を召喚する。\\n【イレギュラー・機関銃】が倒れた時、敵全体に<color=#28d9ed>強化不可</color>を<color=#28d9ed>[Buff_T_irregular_6]ターン</color>の間付与する。\\n味方が戦場にいる場合、WGダメージを受けない。",
         "kr": "저주, 고정 피해로 받는 피해는 최대 <color=#28d9ed>5000</color>을 초과하지 않습니다.\\n공격 후 이레귤러 기관총을 소환합니다.\\n이레귤러 기관총은 사망 시 적 전체에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>강화 불가</color>를 부여합니다.\\n아군 생존 시 WG 피해를 받지 않습니다.",
-        "zh": "诅咒、固定伤害造成的伤害最多不会超过\\n<color=#28d9ed>5000</color>。\\n攻击后,召唤机关枪异型怪。\\n机关枪异型怪死亡时,对全体敌人造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>1回合</color>。\\n友军存活时,不受到WG伤害。"
+        "zh": "诅咒、固定伤害造成的伤害最多不会超过\\n<color=#28d9ed>5000</color>。\\n攻击后，召唤机关枪异型怪。\\n机关枪异型怪死亡时，对全体敌人造成<color=#28d9ed>无法强化</color>效果，持续<color=#28d9ed>1回合</color>。\\n友军存活时，不受到WG伤害。"
       },
       "icon": "MT_Passive_1_Earth",
       "debuff": [
@@ -118,16 +118,16 @@
     {
       "name": {
         "en": "Command: Target Elimination",
-        "jp": "命令:ターゲット除去",
+        "jp": "命令：ターゲット除去",
         "kr": "명령 : 표적 제거",
-        "zh": "命令:目标清除"
+        "zh": "命令：目标清除"
       },
       "type": "SKT_MONSTER_2",
       "description": {
         "en": "At the start of the turn, reduces Chain Points of the enemy by <color=#28d9ed>20</color>. Does not activate while Adam's Apple is in effect.",
         "jp": "ターン開始時、敵のCPを<color=#28d9ed>20</color>DOWNさせる。【アダムのリンゴ】の適用中には発動しない。",
         "kr": "턴 시작 시 적의 CP가 <color=#28d9ed>20</color> 감소합니다. 아담의 사과 적용 중에는 발동하지 않습니다.",
-        "zh": "回合开始时,敌方CP降低<color=#28d9ed>20</color>。亚当苹果生效中不会触发。"
+        "zh": "回合开始时，敌方CP降低<color=#28d9ed>20</color>。亚当苹果生效中不会触发。"
       },
       "icon": "MT_Passive_1_Earth",
       "debuff": [

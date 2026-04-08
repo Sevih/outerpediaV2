@@ -66,9 +66,9 @@
       "type": "SKT_SECOND",
       "description": {
         "en": "(Triggered Effect) If <color=#28d9ed>Kaizer Knuckle</color> scores a critical hit during the caster's turn, activates <color=#28d9ed>Kaizer Cannon</color> as an additional attack. Attacks all enemies, dealing damage proportional to the target's <color=#28d9ed>Max Health</color>. Obtains <color=#28d9ed>1</color> additional <color=#28d9ed>Kaizer Energy (Unique Resource)</color>.",
-        "jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加攻撃で<color=#28d9ed>【カイザーキャノン】</color>を発動する。敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。<color=#28d9ed>【固有資源:カイザーエナジー】</color>をさらに<color=#28d9ed>1個</color>獲得する。",
+        "jp": "(発動効果)自分のターンに<color=#28d9ed>【カイザーナックル】</color>で会心が発生した場合、追加攻撃で<color=#28d9ed>【カイザーキャノン】</color>を発動する。敵全体にダメージを与え、対象の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。<color=#28d9ed>【固有資源：カイザーエナジー】</color>をさらに<color=#28d9ed>1個</color>獲得する。",
         "kr": "(발동 효과) 자신의 턴에 <color=#28d9ed>카이저 너클</color> 스킬이 치명 공격으로 적중하면 추가타로 <color=#28d9ed>카이저 캐논</color> 스킬을 발동합니다. 적 전체를 공격하고 대상의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. <color=#28d9ed>고유 자원 : 카이저 에너지</color>를 <color=#28d9ed>1개</color> 더 획득합니다.",
-        "zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中,则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人,目标的<color=#28d9ed>生命值上限</color>越高,则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源:凯撒能量</color>。"
+        "zh": "(触发效果)若技能<color=#28d9ed>凯撒铁拳</color>在自身回合以暴击命中，则额外发动技能<color=#28d9ed>凯撒加农炮</color>。攻击全体敌人，目标的<color=#28d9ed>生命值上限</color>越高，则该技能的伤害越高。额外获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源：凯撒能量</color>。"
       },
       "icon": "Skill_Second_2000022",
       "buff": [
@@ -106,7 +106,7 @@
         "en": "(Passive Effect)\\nGrants increased <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Hit Chance</color> to the caster for <color=#28d9ed>2 turns</color> at the start of battle. (Irremovable)",
         "jp": "(パッシブ効果)\\n戦闘開始時、自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>会心率</color>を<color=#28d9ed>2ターン</color>の間UPさせる。(解除不可)",
         "kr": "(패시브 효과)\\n전투 시작 시 <color=#28d9ed>2턴</color> 동안 자신의 <color=#28d9ed>공격력</color> 및 <color=#28d9ed>치명 확률</color>을 증가시킵니다. (해제 불가)",
-        "zh": "(被动效果)\\n战斗开始时,使自身的<color=#28d9ed>攻击力</color>和<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>2回合</color>。(无法解除)"
+        "zh": "(被动效果)\\n战斗开始时，使自身的<color=#28d9ed>攻击力</color>和<color=#28d9ed>暴击率</color>提升，持续<color=#28d9ed>2回合</color>。（无法解除）"
       },
       "icon": "MT_Passive_1_Fire",
       "buff": [
@@ -126,7 +126,7 @@
         "en": "(Passive Effect)\\nUpon taking a critical hit, grants increased <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Hit Chance</color> to the caster for <color=#28d9ed>1 turn</color>.",
         "jp": "(パッシブ効果)\\n会心ダメージを受けた場合、自分の<color=#28d9ed>攻撃力</color>と<color=#28d9ed>会心率</color>が<color=#28d9ed>1ターン</color>の間UPする。",
         "kr": "(패시브 효과)\\n치명 피격 시 <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>공격력</color> 및 <color=#28d9ed>치명 확률</color>이 증가 합니다.",
-        "zh": "(被动效果)\\n受到暴击时,使自身的<color=#28d9ed>攻击力</color>和<color=#28d9ed>暴击率</color>提升,持续<color=#28d9ed>1回合</color>。"
+        "zh": "(被动效果)\\n受到暴击时，使自身的<color=#28d9ed>攻击力</color>和<color=#28d9ed>暴击率</color>提升，持续<color=#28d9ed>1回合</color>。"
       },
       "icon": "MT_Passive_1_Dark",
       "buff": [
@@ -146,7 +146,7 @@
         "en": "<color=#28d9ed>Penetration</color> is always increased by <color=#28d9ed>20%</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>10%</color>.\\nAt end of turn, restores your HP by <color=#28d9ed>5%</color>.\\n\\nAt end of turn, reduces the enemy team's CP by <color=#28d9ed>25</color>.",
         "jp": "<color=#28d9ed>貫通力</color>が<color=#28d9ed>20%</color>、<color=#28d9ed>会心率</color>が<color=#28d9ed>10%</color>UPされる。\\nターン開始時、自分のHPを<color=#28d9ed>5%</color>回復する。\\nターン終了時、敵のチームCPを<color=#28d9ed>25</color>DOWNさせる。",
         "kr": "항상 관통력이 <color=#28d9ed>20%</color>, 치명 확률이 <color=#28d9ed>10%</color> 증가합니다\\n\\n턴 시작 시 자신의 체력을 <color=#28d9ed>5%</color>회복합니다.\\n턴 종료 시 적 팀의 CP를 <color=#28d9ed>25</color> 감소시킵니다.",
-        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>,<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时,回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时,降低敌方队伍CP<color=#28d9ed>25</color>。"
+        "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>，<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时，回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时，降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Earth",
       "debuff": [

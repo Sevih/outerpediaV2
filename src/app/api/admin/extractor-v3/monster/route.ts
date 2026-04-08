@@ -24,8 +24,11 @@ const BOSS_TYPES = [
 //   <monsterId>                    standard boss
 //   <monsterId>S<parentId>         summon (minion) of a parent boss
 //   <monsterId>@<dungeonId>        variant scoped to a specific dungeon
-//   <monsterId>-<n>                historical snapshot (e.g. pre-nerf), skip compare
-//   <monsterId>-<x>-<n>            multi-suffix snapshot
+//   <monsterId>-<n>                FROZEN ARCHIVE (e.g. pre-nerf snapshot)
+//   <monsterId>-<x>-<n>            FROZEN ARCHIVE with multi-suffix
+//
+// Archived files MUST NEVER be touched by the extractor — not by compare,
+// not by save, not by typo fix. They are user-curated historical records.
 //
 // Files like 'index' / 'temp' are misc legacy files, also skipped.
 
@@ -35,25 +38,40 @@ type ParsedBossId = {
   parentId: string | null // for summons (S pattern)
   variantDungeonId: string | null // for location variants (@ pattern)
   isMisc: boolean // 'index' / 'temp' legacy files
+  isArchived: boolean // versioned snapshot, never touch
 }
 
 function parseBossId(raw: string): ParsedBossId {
   if (raw === 'index' || raw === 'temp') {
-    return { raw, monsterId: '', parentId: null, variantDungeonId: null, isMisc: true }
+    return { raw, monsterId: '', parentId: null, variantDungeonId: null, isMisc: true, isArchived: false }
+  }
+  // Versioned snapshot suffix `<id>-N` / `<id>-X-N`: frozen archive.
+  if (raw.includes('-')) {
+    return {
+      raw,
+      monsterId: raw.split('-')[0],
+      parentId: null,
+      variantDungeonId: null,
+      isMisc: false,
+      isArchived: true,
+    }
   }
   // Variant scoped to a specific dungeon: `<monsterId>@<dungeonId>`
   if (raw.includes('@')) {
     const [monsterId, variantDungeonId = null] = raw.split('@')
-    return { raw, monsterId, parentId: null, variantDungeonId, isMisc: false }
+    return { raw, monsterId, parentId: null, variantDungeonId, isMisc: false, isArchived: false }
   }
   // Summon spawned by a parent boss: `<monsterId>S<parentId>`
   if (raw.includes('S')) {
     const [monsterId, parentId = null] = raw.split('S')
-    return { raw, monsterId, parentId, variantDungeonId: null, isMisc: false }
+    return { raw, monsterId, parentId, variantDungeonId: null, isMisc: false, isArchived: false }
   }
-  // Snapshot suffix `<id>-N` (historical, e.g. pre-nerf): treat as standalone,
-  // never compared since it's deliberately frozen.
-  return { raw, monsterId: raw.split('-')[0], parentId: null, variantDungeonId: null, isMisc: false }
+  return { raw, monsterId: raw, parentId: null, variantDungeonId: null, isMisc: false, isArchived: false }
+}
+
+/** True if the file should be completely ignored by all extractor actions. */
+function isUntouchable(parsed: ParsedBossId): boolean {
+  return parsed.isMisc || parsed.isArchived
 }
 
 // ── Wiki-format helpers ──────────────────────────────────────────────
@@ -221,7 +239,7 @@ export async function GET(req: NextRequest) {
   try {
     // ─── action=list — existing files + count of NEW boss candidates ─
     if (action === 'list') {
-      const existingIds = new Set(listBossFiles().filter((id) => !parseBossId(id).isMisc))
+      const existingIds = new Set(listBossFiles().filter((id) => !isUntouchable(parseBossId(id))))
       const items = Array.from(existingIds).map((rawId) => {
         const parsed = parseBossId(rawId)
         const existing = readBossFile(rawId)
@@ -270,7 +288,9 @@ export async function GET(req: NextRequest) {
       const rawId = searchParams.get('id')
       if (!rawId) return NextResponse.json({ error: 'missing id' }, { status: 400 })
       const parsed = parseBossId(rawId)
-      if (parsed.isMisc) return NextResponse.json({ error: 'misc file' }, { status: 400 })
+      if (isUntouchable(parsed)) {
+        return NextResponse.json({ error: 'archived or misc file' }, { status: 400 })
+      }
       // Explicit ?dungeonId= overrides the variant suffix from the id.
       const dungeonId = searchParams.get('dungeonId') ?? parsed.variantDungeonId ?? undefined
       const raw = extractMonster(parsed.monsterId, dungeonId ? { dungeonId } : undefined)
@@ -287,8 +307,8 @@ export async function GET(req: NextRequest) {
       const rawId = searchParams.get('id')
       if (!rawId) return NextResponse.json({ error: 'missing id' }, { status: 400 })
       const parsed = parseBossId(rawId)
-      if (parsed.isMisc) {
-        return NextResponse.json({ error: 'misc file' }, { status: 400 })
+      if (isUntouchable(parsed)) {
+        return NextResponse.json({ error: 'archived or misc file' }, { status: 400 })
       }
       const raw = extractMonster(
         parsed.monsterId,
@@ -305,7 +325,7 @@ export async function GET(req: NextRequest) {
 
     // ─── action=compare — diff every existing data/boss/*.json ──────
     if (action === 'compare') {
-      const ids = listBossFiles().filter((id) => !parseBossId(id).isMisc)
+      const ids = listBossFiles().filter((id) => !isUntouchable(parseBossId(id)))
       const results = ids.map((rawId) => {
         const parsed = parseBossId(rawId)
         const existing = readBossFile(rawId)
@@ -352,7 +372,7 @@ export async function GET(req: NextRequest) {
       > = {}
       for (const rawId of ids) {
         const parsed = parseBossId(rawId)
-        if (parsed.isMisc) continue
+        if (isUntouchable(parsed)) continue
         const raw = extractMonster(
           parsed.monsterId,
           parsed.variantDungeonId ? { dungeonId: parsed.variantDungeonId } : undefined
@@ -401,6 +421,9 @@ export async function POST(req: NextRequest) {
     const body = (await req.json()) as { id?: string; data?: Record<string, unknown> }
     if (!body.id || !body.data) {
       return NextResponse.json({ error: 'missing id or data' }, { status: 400 })
+    }
+    if (isUntouchable(parseBossId(body.id))) {
+      return NextResponse.json({ error: 'archived files are read-only' }, { status: 403 })
     }
     if (!fs.existsSync(BOSS_DIR)) fs.mkdirSync(BOSS_DIR, { recursive: true })
     const filePath = path.join(BOSS_DIR, `${body.id}.json`)

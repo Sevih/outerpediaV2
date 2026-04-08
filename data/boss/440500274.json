@@ -47,7 +47,7 @@
         "en": "Attacks an enemy, and inflicts reduced <color=#28d9ed>Defense</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
         "jp": "敵単体にダメージを与え、対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
         "kr": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 대상의 <color=#28d9ed>방어력</color>을 감소시킵니다.",
-        "zh": "攻击敌人,并使目标<color=#28d9ed>防御力</color>降低,持续<color=#28d9ed>2回合</color>。"
+        "zh": "攻击敌人，并使目标<color=#28d9ed>防御力</color>降低，持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_First_3000043",
       "debuff": [
@@ -82,7 +82,7 @@
         "en": "Attacks all enemies, and inflicts irremovable <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>スタン</color>を<color=#28d9ed>2ターン</color>の間付与する。(解除不可)",
         "kr": "적 전체를 공격하고, 대상에게 <color=#28d9ed>2턴</color> 동안 해제 불가능한 <color=#28d9ed>스턴</color>을 부여합니다.",
-        "zh": "攻击全体敌人,并对目标造成无法解除的<color=#28d9ed>晕眩</color>效果,持续<color=#28d9ed>2回合</color>。"
+        "zh": "攻击全体敌人，并对目标造成无法解除的<color=#28d9ed>晕眩</color>效果，持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Ultimate_3000043",
       "debuff": [
@@ -101,7 +101,7 @@
         "en": "When an enemy uses a non-attack skill, reduces the duration of <color=#28d9ed>buffs</color> on all enemies by <color=#28d9ed>2 turns</color>.\\nWhen hit by a non-critical hit, recovers Weakness Gauge by <color=#28d9ed>50%</color>.",
         "jp": "敵が攻撃以外のスキルを使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2ターン</color>DOWNさせる。\\nダメージを受け、そのダメージに会心が発生しなかった場合、WGを<color=#28d9ed>50%</color>回復する。",
         "kr": "적이 공격이 아닌 스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2턴</color> 감소시킵니다.\\n치명타가 아닌 공격 피격 시 WG를 <color=#28d9ed>50%</color> 회복합니다.",
-        "zh": "敌人使用非攻击技能时,使全体敌人的<color=#28d9ed>强化效果</color>减少<color=#28d9ed>2回合</color>。\\n受到非暴击攻击时,WG恢复<color=#28d9ed>50%</color>。"
+        "zh": "敌人使用非攻击技能时，使全体敌人的<color=#28d9ed>强化效果</color>减少<color=#28d9ed>2回合</color>。\\n受到非暴击攻击时，WG恢复<color=#28d9ed>50%</color>。"
       },
       "icon": "MT_Passive_1_Earth",
       "debuff": [
@@ -134,9 +134,9 @@
       "type": "SKT_RAGE_ENTER1",
       "description": {
         "en": "Becomes <color=#28d9ed>Enraged</color> every 4 turns.\\n\\n<color=#28d9ed>Enraged</color>: Grants an irremovable effect to the caster that increases Attack and reduces damage taken for 3 turns. Enraged lasts for 3 turns.\\n\\n<color=#28d9ed>Furious Lands</color>: Used when Enraged ends.\\nDeals lethal damage to all enemies.",
-        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>:自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【大地の怒り】</color>:【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。",
+        "jp": "4ターンごとに<color=#28d9ed>【狂暴化】</color>状態に切り替わる。\\n\\n<color=#28d9ed>【狂暴化】</color>：自分に解除不可能な攻撃力UP/ダメージDOWN効果を3ターンの間付与する。狂暴化は3ターンの間継続する。\\n\\n<color=#28d9ed>【大地の怒り】</color>：【狂暴化】終了時に発動する。\\n敵全体に致命的なダメージを与える。",
         "kr": "4턴 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다. \\n\\n<color=#28d9ed>광폭화 돌입</color> : 자신에게 해제 불가능한 공격력 증가/피해 감소 효과를 3턴 동안 부여합니다. 광폭화는 3턴 동안 유지됩니다.\\n\\n<color=#28d9ed>격앙하는 대지</color> : 광폭화 종료 시 사용.\\n적 전체에게 치명적인 피해를 입힙니다.",
-        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>:使自身获得无法解除的攻击力提升/伤害降低效果,持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>激昂大地</color>:狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
+        "zh": "每4回合转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>陷入狂暴化</color>：使自身获得无法解除的攻击力提升/伤害降低效果，持续3回合。狂暴化持续3回合。\\n\\n<color=#28d9ed>激昂大地</color>：狂暴化结束时发动。\\n对全体敌人造成致命伤害。"
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
