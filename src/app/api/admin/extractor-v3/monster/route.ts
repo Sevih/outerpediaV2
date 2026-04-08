@@ -1,0 +1,412 @@
+import { NextRequest, NextResponse } from 'next/server'
+import fs from 'fs'
+import path from 'path'
+import { listMonsters } from './lib/base'
+import { searchMonstersByName } from './lib/localization'
+import { extractMonster, stripInternalFields } from './lib/extract'
+
+const BOSS_DIR = path.join(process.cwd(), 'data', 'boss')
+
+// "Boss-candidate" monster types. Includes CT_MONSTER because some
+// wiki-tracked bosses (e.g. Skyward Tower entries) are typed as plain
+// CT_MONSTER in MonsterTemplet.
+const BOSS_TYPES = [
+  'CT_BOSS_MONSTER',
+  'CT_AREA_BOSS_MONSTER',
+  'CT_NAMED_MONSTER',
+  'CT_SEASON_BOSS_MONSTER',
+  'CT_MONSTER',
+]
+
+// ── Boss ID conventions ──────────────────────────────────────────────
+//
+// Files in data/boss/ use these naming patterns (all reversible):
+//   <monsterId>                    standard boss
+//   <monsterId>S<parentId>         summon (minion) of a parent boss
+//   <monsterId>@<dungeonId>        variant scoped to a specific dungeon
+//   <monsterId>-<n>                historical snapshot (e.g. pre-nerf), skip compare
+//   <monsterId>-<x>-<n>            multi-suffix snapshot
+//
+// Files like 'index' / 'temp' are misc legacy files, also skipped.
+
+type ParsedBossId = {
+  raw: string
+  monsterId: string
+  parentId: string | null // for summons (S pattern)
+  variantDungeonId: string | null // for location variants (@ pattern)
+  isMisc: boolean // 'index' / 'temp' legacy files
+}
+
+function parseBossId(raw: string): ParsedBossId {
+  if (raw === 'index' || raw === 'temp') {
+    return { raw, monsterId: '', parentId: null, variantDungeonId: null, isMisc: true }
+  }
+  // Variant scoped to a specific dungeon: `<monsterId>@<dungeonId>`
+  if (raw.includes('@')) {
+    const [monsterId, variantDungeonId = null] = raw.split('@')
+    return { raw, monsterId, parentId: null, variantDungeonId, isMisc: false }
+  }
+  // Summon spawned by a parent boss: `<monsterId>S<parentId>`
+  if (raw.includes('S')) {
+    const [monsterId, parentId = null] = raw.split('S')
+    return { raw, monsterId, parentId, variantDungeonId: null, isMisc: false }
+  }
+  // Snapshot suffix `<id>-N` (historical, e.g. pre-nerf): treat as standalone,
+  // never compared since it's deliberately frozen.
+  return { raw, monsterId: raw.split('-')[0], parentId: null, variantDungeonId: null, isMisc: false }
+}
+
+// ── Wiki-format helpers ──────────────────────────────────────────────
+
+const PRESERVE_FIELDS = ['IncludeSurname'] as const
+
+function mergeWithExisting(
+  wiki: Record<string, unknown>,
+  existing: Record<string, unknown> | null
+): Record<string, unknown> {
+  if (!existing) return wiki
+  const out = { ...wiki }
+  for (const key of PRESERVE_FIELDS) {
+    if (key in existing) out[key] = existing[key]
+  }
+  return out
+}
+
+// ── Helpers ─────────────────────────────────────────────────────────
+
+function readBossFile(id: string): Record<string, unknown> | null {
+  const p = path.join(BOSS_DIR, `${id}.json`)
+  if (!fs.existsSync(p)) return null
+  try {
+    return JSON.parse(fs.readFileSync(p, 'utf-8'))
+  } catch {
+    return null
+  }
+}
+
+function dictEn(value: unknown): string | null {
+  if (typeof value === 'string') return value
+  if (value && typeof value === 'object') {
+    const dict = value as Record<string, unknown>
+    const en = dict.en ?? dict.English ?? dict.EN
+    if (typeof en === 'string') return en
+  }
+  return null
+}
+
+function pickName(
+  extracted: Record<string, unknown> | null,
+  existing: Record<string, unknown> | null,
+  id: string
+): string {
+  return dictEn(extracted?.Name) ?? dictEn(existing?.Name) ?? id
+}
+
+function listBossFiles(): string[] {
+  if (!fs.existsSync(BOSS_DIR)) return []
+  return fs
+    .readdirSync(BOSS_DIR)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => f.replace(/\.json$/, ''))
+}
+
+// ── Diff helpers ────────────────────────────────────────────────────
+
+type DiffEntry = {
+  path: string
+  extracted: unknown
+  existing: unknown
+  kind: 'value' | 'typo' | 'missing-existing' | 'missing-extracted'
+}
+
+// CJK fullwidth → halfwidth punctuation. Most diffs across JP/KR/ZH that
+// look like "real" changes are actually just the translator using fullwidth
+// punctuation in one revision and halfwidth in the next.
+const FULLWIDTH_PUNCT: Record<string, string> = {
+  '\uFF0C': ',', // ，
+  '\uFF0E': '.', // .
+  '\uFF1A': ':', // ：
+  '\uFF1B': ';', // ；
+  '\uFF1F': '?', // ？
+  '\uFF01': '!', // ！
+  '\uFF08': '(', // （
+  '\uFF09': ')', // ）
+  '\uFF3B': '[', // ［
+  '\uFF3D': ']', // ］
+  '\uFF5B': '{', // ｛
+  '\uFF5D': '}', // ｝
+  '\uFF5E': '~', // ～
+  '\u3001': ',', // 、 (ideographic comma)
+  '\u3002': '.', // 。 (ideographic full stop)
+  '\u300C': '"', // 「
+  '\u300D': '"', // 」
+  '\u300E': '"', // 『
+  '\u300F': '"', // 』
+  '\u3010': '[', // 【
+  '\u3011': ']', // 】
+}
+
+function normalize(s: string): string {
+  return s
+    .replace(/[\uFF01-\uFF5E\u3001\u3002\u300C-\u3011]/g, (c) => FULLWIDTH_PUNCT[c] ?? c)
+    .replace(/[\u2018\u2019]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/\u3000/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function classifyDiff(extracted: unknown, existing: unknown): DiffEntry['kind'] {
+  if (extracted == null && existing != null) return 'missing-extracted'
+  if (extracted != null && existing == null) return 'missing-existing'
+  if (typeof extracted === 'string' && typeof existing === 'string') {
+    if (normalize(extracted) === normalize(existing)) return 'typo'
+  }
+  return 'value'
+}
+
+function buildDiffs(
+  extracted: Record<string, unknown>,
+  existing: Record<string, unknown> | null,
+  basePath = ''
+): DiffEntry[] {
+  if (!existing) return []
+  const diffs: DiffEntry[] = []
+  const keys = new Set([...Object.keys(extracted), ...Object.keys(existing)])
+  for (const k of keys) {
+    const p = basePath ? `${basePath}.${k}` : k
+    const e = extracted[k]
+    const x = existing[k]
+    if (e === x) continue
+    if (e != null && x != null && typeof e === 'object' && typeof x === 'object' && !Array.isArray(e) && !Array.isArray(x)) {
+      diffs.push(...buildDiffs(e as Record<string, unknown>, x as Record<string, unknown>, p))
+      continue
+    }
+    if (Array.isArray(e) && Array.isArray(x)) {
+      const max = Math.max(e.length, x.length)
+      for (let i = 0; i < max; i++) {
+        const ei = e[i]
+        const xi = x[i]
+        if (ei === xi) continue
+        if (
+          ei != null &&
+          xi != null &&
+          typeof ei === 'object' &&
+          typeof xi === 'object' &&
+          !Array.isArray(ei) &&
+          !Array.isArray(xi)
+        ) {
+          diffs.push(
+            ...buildDiffs(ei as Record<string, unknown>, xi as Record<string, unknown>, `${p}[${i}]`)
+          )
+        } else if (JSON.stringify(ei) !== JSON.stringify(xi)) {
+          diffs.push({ path: `${p}[${i}]`, extracted: ei, existing: xi, kind: classifyDiff(ei, xi) })
+        }
+      }
+      continue
+    }
+    if (JSON.stringify(e) !== JSON.stringify(x)) {
+      diffs.push({ path: p, extracted: e, existing: x, kind: classifyDiff(e, x) })
+    }
+  }
+  return diffs
+}
+
+// ── GET ─────────────────────────────────────────────────────────────
+
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url)
+  const action = searchParams.get('action')
+
+  try {
+    // ─── action=list — existing files + count of NEW boss candidates ─
+    if (action === 'list') {
+      const existingIds = new Set(listBossFiles().filter((id) => !parseBossId(id).isMisc))
+      const items = Array.from(existingIds).map((rawId) => {
+        const parsed = parseBossId(rawId)
+        const existing = readBossFile(rawId)
+        const extracted = extractMonster(parsed.monsterId)
+        const name = pickName(extracted as Record<string, unknown> | null, existing, rawId)
+        return { id: rawId, name, existsInJson: true }
+      })
+      items.sort((a, b) => a.name.localeCompare(b.name))
+
+      // "new" count: boss-candidates from game data that have at least one
+      // supported location and aren't tracked locally yet.
+      const trackedMonsterIds = new Set(
+        Array.from(existingIds).map((r) => parseBossId(r).monsterId).filter(Boolean)
+      )
+      let newCount = 0
+      for (const m of listMonsters({ types: BOSS_TYPES })) {
+        if (trackedMonsterIds.has(m.ID)) continue
+        const ex = extractMonster(m.ID)
+        if (ex && (ex._allLocations?.length ?? 0) > 0) newCount++
+      }
+
+      return NextResponse.json({ items, entries: items, new: newCount })
+    }
+
+    // ─── action=search — for the CREATE flow ────────────────────────
+    if (action === 'search') {
+      const q = (searchParams.get('q') ?? '').trim()
+      if (!q) return NextResponse.json({ items: [] })
+
+      const monsters = listMonsters({ types: BOSS_TYPES })
+      const hits = searchMonstersByName(monsters, q)
+
+      // Enrich with type so the UI can group/badge results
+      const byId = new Map(monsters.map((m) => [m.ID, m]))
+      const items = hits.map((h) => ({
+        id: h.id,
+        name: h.name,
+        type: byId.get(h.id)?.Type ?? null,
+        existsLocally: fs.existsSync(path.join(BOSS_DIR, `${h.id}.json`)),
+      }))
+      return NextResponse.json({ items })
+    }
+
+    // ─── action=extract — full extraction for one monster ───────────
+    if (action === 'extract') {
+      const rawId = searchParams.get('id')
+      if (!rawId) return NextResponse.json({ error: 'missing id' }, { status: 400 })
+      const parsed = parseBossId(rawId)
+      if (parsed.isMisc) return NextResponse.json({ error: 'misc file' }, { status: 400 })
+      // Explicit ?dungeonId= overrides the variant suffix from the id.
+      const dungeonId = searchParams.get('dungeonId') ?? parsed.variantDungeonId ?? undefined
+      const raw = extractMonster(parsed.monsterId, dungeonId ? { dungeonId } : undefined)
+      if (!raw) return NextResponse.json({ error: 'not found' }, { status: 404 })
+      const existing = readBossFile(rawId)
+      const merged = mergeWithExisting(stripInternalFields(raw), existing) as Record<string, unknown>
+      merged.id = rawId // preserve composite id in saved file
+      if (parsed.parentId) merged.summoned_by = parsed.parentId
+      return NextResponse.json({ extracted: merged, locations: raw._allLocations ?? [] })
+    }
+
+    // ─── action=compare-one — extracted + existing + diffs (single id) ─
+    if (action === 'compare-one') {
+      const rawId = searchParams.get('id')
+      if (!rawId) return NextResponse.json({ error: 'missing id' }, { status: 400 })
+      const parsed = parseBossId(rawId)
+      if (parsed.isMisc) {
+        return NextResponse.json({ error: 'misc file' }, { status: 400 })
+      }
+      const raw = extractMonster(
+        parsed.monsterId,
+        parsed.variantDungeonId ? { dungeonId: parsed.variantDungeonId } : undefined
+      )
+      if (!raw) return NextResponse.json({ error: 'not found' }, { status: 404 })
+      const existing = readBossFile(rawId)
+      const extracted = mergeWithExisting(stripInternalFields(raw), existing) as Record<string, unknown>
+      extracted.id = rawId
+      if (parsed.parentId) extracted.summoned_by = parsed.parentId
+      const diffs = buildDiffs(extracted, existing)
+      return NextResponse.json({ extracted, existing, diffs })
+    }
+
+    // ─── action=compare — diff every existing data/boss/*.json ──────
+    if (action === 'compare') {
+      const ids = listBossFiles().filter((id) => !parseBossId(id).isMisc)
+      const results = ids.map((rawId) => {
+        const parsed = parseBossId(rawId)
+        const existing = readBossFile(rawId)
+
+        const raw = extractMonster(
+          parsed.monsterId,
+          parsed.variantDungeonId ? { dungeonId: parsed.variantDungeonId } : undefined
+        )
+        const extracted = raw
+          ? (mergeWithExisting(stripInternalFields(raw), existing) as Record<string, unknown>)
+          : null
+        if (extracted) {
+          extracted.id = rawId
+          if (parsed.parentId) extracted.summoned_by = parsed.parentId
+        }
+        const name = pickName(extracted, existing, rawId)
+
+        if (!extracted || !raw) {
+          return { id: rawId, name, status: 'missing' as const, diffs: [] as DiffEntry[], modes: [] as string[] }
+        }
+        // For summon entries, inherit modes from the parent boss as well.
+        const allLocs = raw._allLocations ?? []
+        const modeSet = new Set(allLocs.map((l) => l.modeLabel).filter(Boolean))
+        if (parsed.parentId) {
+          const parent = extractMonster(parsed.parentId)
+          for (const l of parent?._allLocations ?? []) {
+            if (l.modeLabel) modeSet.add(l.modeLabel)
+          }
+        }
+        const diffs = buildDiffs(extracted, existing)
+        return { id: rawId, name, status: 'ok' as const, diffs, modes: Array.from(modeSet) }
+      })
+      const withDiffs = results.filter((r) => r.diffs.length > 0).length
+      const ok = results.length - withDiffs
+      return NextResponse.json({ total: results.length, ok, withDiffs, results })
+    }
+
+    // ─── action=compare-by-mode — dashboard breakdown ───────────────
+    if (action === 'compare-by-mode') {
+      const ids = listBossFiles()
+      const byMode: Record<
+        string,
+        { total: number; ok: number; withDiffs: number; diffs: { file: string; name: string }[] }
+      > = {}
+      for (const rawId of ids) {
+        const parsed = parseBossId(rawId)
+        if (parsed.isMisc) continue
+        const raw = extractMonster(
+          parsed.monsterId,
+          parsed.variantDungeonId ? { dungeonId: parsed.variantDungeonId } : undefined
+        )
+        if (!raw) continue
+        const existing = readBossFile(rawId)
+        const extracted = mergeWithExisting(stripInternalFields(raw), existing) as Record<string, unknown>
+        extracted.id = rawId
+        if (parsed.parentId) extracted.summoned_by = parsed.parentId
+        const diffs = buildDiffs(extracted, existing)
+        const name = pickName(extracted, existing, rawId)
+        const labels = new Set<string>(
+          (raw._allLocations ?? []).map((l) => l.modeLabel).filter(Boolean)
+        )
+        if (parsed.parentId) {
+          const parent = extractMonster(parsed.parentId)
+          for (const l of parent?._allLocations ?? []) {
+            if (l.modeLabel) labels.add(l.modeLabel)
+          }
+        }
+        if (labels.size === 0) labels.add('Unmapped')
+        for (const label of labels) {
+          if (!byMode[label]) byMode[label] = { total: 0, ok: 0, withDiffs: 0, diffs: [] }
+          byMode[label].total++
+          if (diffs.length > 0) {
+            byMode[label].withDiffs++
+            byMode[label].diffs.push({ file: `${rawId}.json`, name })
+          } else {
+            byMode[label].ok++
+          }
+        }
+      }
+      return NextResponse.json({ byMode })
+    }
+
+    return NextResponse.json({ error: 'unknown action' }, { status: 400 })
+  } catch (e) {
+    return NextResponse.json({ error: String(e) }, { status: 500 })
+  }
+}
+
+// ── POST — save a monster JSON ──────────────────────────────────────
+
+export async function POST(req: NextRequest) {
+  try {
+    const body = (await req.json()) as { id?: string; data?: Record<string, unknown> }
+    if (!body.id || !body.data) {
+      return NextResponse.json({ error: 'missing id or data' }, { status: 400 })
+    }
+    if (!fs.existsSync(BOSS_DIR)) fs.mkdirSync(BOSS_DIR, { recursive: true })
+    const filePath = path.join(BOSS_DIR, `${body.id}.json`)
+    fs.writeFileSync(filePath, JSON.stringify(body.data, null, 2) + '\n', 'utf-8')
+    return NextResponse.json({ ok: true, path: `data/boss/${body.id}.json` })
+  } catch (e) {
+    return NextResponse.json({ error: String(e) }, { status: 500 })
+  }
+}

@@ -50,7 +50,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     // Launch boss compare-by-mode
     setBossStatus('loading');
-    fetch('/api/admin/extractor/monster?action=compare-by-mode')
+    fetch('/api/admin/extractor-v3/monster?action=compare-by-mode')
       .then(r => r.json())
       .then(data => { setBossModes(data.byMode ?? {}); setBossStatus('done'); })
       .catch(() => setBossStatus('error'));
@@ -144,7 +144,7 @@ export default function AdminDashboard() {
               <tr key={mode} className="border-b border-zinc-800/50 hover:bg-zinc-800/30">
                 <td className="py-1.5 pr-3">
                   <Link
-                    href={`/admin/extractor/bosses/by-mode?mode=${encodeURIComponent(mode)}` as never}
+                    href={`/admin/extractor-v3/monster?tab=compare&mode=${encodeURIComponent(mode)}` as never}
                     className="text-zinc-300 hover:text-blue-400 transition-colors"
                   >
                     {mode}
