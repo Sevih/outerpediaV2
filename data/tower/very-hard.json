@@ -667,6 +667,62 @@
         },
         {
           "restrictions": [
+            "AtLeast1_Water"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000113"
+              ],
+              "reason": {
+                "en": "Validate restriction plus she has both {B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000074",
+                "2000058",
+                "2000108"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000100",
+                "2000098",
+                "2000084",
+                "2000036"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000083"
+              ],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
             "BanLight"
           ],
           "recommended": [
@@ -1547,6 +1603,50 @@
                 "zh": ""
               }
             },
+            {
+              "names": [
+                "2700003",
+                "2000069"
+              ],
+              "reason": {
+                "en": "Have both 1 hard CC and {D/BT_ACTION_GAUGE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000039",
+                "2000012"
+              ],
+              "reason": {
+                "en": "Priority war machines.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000091",
+                "2000109",
+                "2000111"
+              ],
+              "reason": {
+                "en": "Hard CC options.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "BanHealer"
+          ],
+          "recommended": [
             {
               "names": [
                 "2700003",
@@ -2927,6 +3027,28 @@
                 "zh": ""
               }
             },
+            {
+              "names": [
+                "2000101",
+                "2000057",
+                "2000060",
+                "2000088",
+                "2000105"
+              ],
+              "reason": {
+                "en": "Team wide {B/BT_STAT|ST_BUFF_CHANCE} buff",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "BanFire"
+          ],
+          "recommended": [
             {
               "names": [
                 "2000101",
