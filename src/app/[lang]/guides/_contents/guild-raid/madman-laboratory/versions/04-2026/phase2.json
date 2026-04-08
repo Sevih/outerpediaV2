@@ -244,8 +244,8 @@
     "icon": "class/CM_Class_Mage",
     "team": [["Viella"], ["Kuro"], ["Maxwell"], ["Demiurge Luna"]],
     "geasActive": {
-      "bonus": [89,49,53,76],
-      "malus": [5,38,18,20,90,86,57,60]
+      "bonus": [89, 49, 53, 76],
+      "malus": [5, 38, 18, 20, 90, 86, 57, 60]
     },
     "video": {
       "videoId": "YEP-V6NxB6E",
@@ -397,6 +397,204 @@
             "EE를 해제하여 보스와 {P/Kuro} 사이에 끼어들지 않도록 함"
           ],
           "notes_zh": ["移除EE，避免她在Boss和{P/Kuro}之间插入"]
+        }
+      ]
+    }
+  },
+  "Ryu Revenge Team": {
+    "icon": "class/CM_Class_Ranger",
+    "team": [["Charlotte"], ["Ryu Lion"], ["Notia"], ["Fran"]],
+    "geasActive": {
+      "bonus": [53, 92, 49, 89, 91],
+      "malus": [5, 38, 18, 20, 90, 86, 60, 10, 58]
+    },
+    "video": {
+      "videoId": "r6ccZlOqHJ0",
+      "title": "Madman's Laboratory - Ryu Revenge Team",
+      "author": "Tango"
+    },
+    "note": [
+      {
+        "type": "p",
+        "string": "Positioning (left to right) : {P/Ryu Lion}, {P/Charlotte}, {P/Notia}, {P/Fran}."
+      },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Charlotte", "speed": 279 },
+          { "character": "Ryu Lion", "speed": 199 },
+          { "character": "Fran", "speed": 199 },
+          { "character": "Notia", "speed": 196 }
+        ],
+        "note": "Boss acts before {P/Charlotte} on turn 1."
+      },
+      {
+        "type": "p",
+        "string": "Use {AS/Revenge} set on {P/Ryu Lion} and hope he crits you to go below 50% HP."
+      },
+      {
+        "type": "p",
+        "string": "For higher stages, turn on the geas that reduces damage from poisoned enemies to survive. This will normally make the boss do little to no damage, resulting in {P/Ryu Lion} not going below 50% HP for the {AS/Revenge} set effect."
+      },
+      {
+        "type": "p",
+        "string": "To counter this, use {I-W/Heartunder's Blade} on {P/Ryu Lion} and {I-W/Rampaging Caracal} on {P/Charlotte} to stack debuffs on the boss and make him do more damage (his damage scales with debuffs), then pray he actually crits your {P/Ryu Lion}."
+      },
+      {
+        "type": "p",
+        "string": "The 50% {E/Earth} ATK/HP/DEF geas is not recommended here as it results in slightly less points overall — turn it on only if needed to survive."
+      }
+    ],
+    "note_jp": [
+      {
+        "type": "p",
+        "string": "配置（左から右）: {P/Ryu Lion}、{P/Charlotte}、{P/Notia}、{P/Fran}。"
+      },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Charlotte", "speed": 279 },
+          { "character": "Ryu Lion", "speed": 199 },
+          { "character": "Fran", "speed": 199 },
+          { "character": "Notia", "speed": 196 }
+        ],
+        "note": "ターン1ではボスが{P/Charlotte}の前に行動します。"
+      },
+      {
+        "type": "p",
+        "string": "{P/Ryu Lion}に{AS/Revenge}セットを装備し、クリティカルを受けてHPが50%以下になることを祈ってください。"
+      },
+      {
+        "type": "p",
+        "string": "高ステージでは生き残るために毒中の敵からのダメージを軽減するギアスを有効にする必要があります。ただしボスのダメージがほぼゼロになり、{P/Ryu Lion}が{AS/Revenge}セット発動に必要な50%以下にならなくなります。"
+      },
+      {
+        "type": "p",
+        "string": "対策として、{P/Ryu Lion}に{I-W/Heartunder's Blade}、{P/Charlotte}に{I-W/Rampaging Caracal}を装備してボスにデバフを積み重ねてダメージを増やし（ボスのダメージはデバフ数でスケール）、ボスが{P/Ryu Lion}にクリティカルを出すことを祈ってください。"
+      },
+      {
+        "type": "p",
+        "string": "{E/Earth}攻撃/HP/防御+50%のギアスは総合スコアがわずかに下がるため推奨されません。生存に必要な場合のみオンにしてください。"
+      }
+    ],
+    "note_kr": [
+      {
+        "type": "p",
+        "string": "배치 (왼쪽에서 오른쪽) : {P/Ryu Lion}, {P/Charlotte}, {P/Notia}, {P/Fran}."
+      },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Charlotte", "speed": 279 },
+          { "character": "Ryu Lion", "speed": 199 },
+          { "character": "Fran", "speed": 199 },
+          { "character": "Notia", "speed": 196 }
+        ],
+        "note": "턴 1에서 보스는 {P/Charlotte}보다 먼저 행동합니다."
+      },
+      {
+        "type": "p",
+        "string": "{P/Ryu Lion}에게 {AS/Revenge} 세트를 장착하고 치명타를 맞아 HP가 50% 이하로 떨어지기를 기도하세요."
+      },
+      {
+        "type": "p",
+        "string": "높은 스테이지에서는 중독된 적에게 받는 피해를 감소시키는 기어스를 켜야 생존할 수 있습니다. 하지만 보스의 피해가 거의 없어져 {P/Ryu Lion}이 {AS/Revenge} 세트 효과 발동에 필요한 50% 이하로 떨어지지 않게 됩니다."
+      },
+      {
+        "type": "p",
+        "string": "이에 대응하기 위해 {P/Ryu Lion}에게 {I-W/Heartunder's Blade}, {P/Charlotte}에게 {I-W/Rampaging Caracal}을 장착하여 보스에게 디버프를 중첩시키고 피해량을 증가시키세요 (보스의 피해는 디버프 수에 비례). 그런 다음 보스가 {P/Ryu Lion}에게 치명타를 적중시키기를 기도하세요."
+      },
+      {
+        "type": "p",
+        "string": "{E/Earth} 공격/HP/방어 +50% 기어스는 전체 점수가 약간 낮아지기 때문에 권장되지 않습니다. 생존에 필요한 경우에만 켜세요."
+      }
+    ],
+    "note_zh": [
+      {
+        "type": "p",
+        "string": "站位（从左到右）: {P/Ryu Lion}、{P/Charlotte}、{P/Notia}、{P/Fran}。"
+      },
+      {
+        "type": "turn-order",
+        "order": [
+          { "character": "Charlotte", "speed": 279 },
+          { "character": "Ryu Lion", "speed": 199 },
+          { "character": "Fran", "speed": 199 },
+          { "character": "Notia", "speed": 196 }
+        ],
+        "note": "第1回合Boss会在{P/Charlotte}之前行动。"
+      },
+      {
+        "type": "p",
+        "string": "给{P/Ryu Lion}装备{AS/Revenge}套装，祈祷Boss对他造成暴击使其HP降到50%以下。"
+      },
+      {
+        "type": "p",
+        "string": "在高阶段，你需要开启减少中毒敌人伤害的契约才能生存。但这会让Boss伤害几乎为零，导致{P/Ryu Lion}的HP无法降到50%以下触发{AS/Revenge}套装效果。"
+      },
+      {
+        "type": "p",
+        "string": "为了应对这个问题，给{P/Ryu Lion}装备{I-W/Heartunder's Blade}，给{P/Charlotte}装备{I-W/Rampaging Caracal}，在Boss身上叠加减益以增加其伤害（Boss的伤害随减益数量提升），然后祈祷Boss对{P/Ryu Lion}造成暴击。"
+      },
+      {
+        "type": "p",
+        "string": "不建议使用50% {E/Earth}攻击/HP/防御的契约，因为总分会略低。仅在需要生存时才开启。"
+      }
+    ],
+    "requirements": {
+      "entries": [
+        {
+          "character": "Charlotte",
+          "stats": { "spd": "279" },
+          "equipment": {
+            "weapon": ["{I-W/Rampaging Caracal}"],
+            "talisman": ["{I-T/Rogue's Charm}"]
+          },
+          "prio": ["{S/SPD}", "{S/CHC}"],
+          "notes": [],
+          "notes_jp": [],
+          "notes_kr": [],
+          "notes_zh": []
+        },
+        {
+          "character": "Ryu Lion",
+          "stats": { "spd": "199" },
+          "equipment": {
+            "weapon": ["{I-W/Heartunder's Blade}"],
+            "talisman": ["{I-T/Rogue's Charm}"],
+            "set": ["{AS/Revenge}"],
+            "ee": ["+10"]
+          },
+          "prio": ["{S/CHC}", "{S/PEN%}", "{S/ATK}", "{S/CHD}"],
+          "notes": [],
+          "notes_jp": [],
+          "notes_kr": [],
+          "notes_zh": []
+        },
+        {
+          "character": "Notia",
+          "stats": { "spd": "196" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"],
+            "set": ["{AS/Penetration}"]
+          },
+          "prio": ["{S/CHC}", "{S/PEN%}", "{S/ATK}", "{S/CHD}"],
+          "notes": [],
+          "notes_jp": [],
+          "notes_kr": [],
+          "notes_zh": []
+        },
+        {
+          "character": "Fran",
+          "stats": { "spd": "199" },
+          "equipment": {
+            "talisman": ["{I-T/Rogue's Charm}"]
+          },
+          "prio": ["{S/CHC}", "{S/PEN%}", "{S/ATK}", "{S/CHD}"],
+          "notes": [],
+          "notes_jp": [],
+          "notes_kr": [],
+          "notes_zh": []
         }
       ]
     }
