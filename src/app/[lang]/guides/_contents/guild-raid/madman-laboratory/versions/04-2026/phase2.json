@@ -248,18 +248,18 @@
       "malus": [5, 38, 18, 20, 90, 86, 57, 60]
     },
     "video": {
-      "videoId": "YEP-V6NxB6E",
-      "title": "Madman's Laboratory - Revenge Mage Team",
+      "videoId": "PyhnLhItNmk",
+      "title": "The Madman's Labratory Guild Raid - Stage 17 - Mage Team - 10.24m dmg, 145% Multiplier",
       "author": "Tango"
     },
     "note": [
       {
         "type": "turn-order",
         "order": [
-          { "character": "Viella", "speed": 275 },
-          { "character": "Kuro", "speed": 177 },
-          { "character": "Demiurge Luna", "speed": 172 },
-          { "character": "Maxwell", "speed": 160 }
+          { "character": "Viella", "speed": "267+" },
+          { "character": "Kuro", "speed": "≤180" },
+          { "character": "Demiurge Luna", "speed": "<=175" },
+          { "character": "Maxwell", "speed": "=<170" }
         ],
         "note": {
           "en": "Boss acts between {P/Viella} and {P/Kuro}.",
@@ -270,108 +270,142 @@
       },
       {
         "type": "p",
-        "string": "Pray the boss actually crits your {P/Maxwell} so you get into revenge range"
+        "string": "Try to keep a 10+ {S/SPD} gap between {P/Kuro}, {P/Demiurge Luna} and {P/Maxwell} to reduce the risk of turn 1 order RNG."
       },
       {
         "type": "p",
-        "string": "If your {P/Maxwell} can't survive a double crit from the boss, use {I-W/Iron Messiah} on {P/Viella} and put {P/Maxwell} in the 1st slot"
+        "string": "If your {P/Maxwell} can't survive a double crit from the boss, use {I-W/Iron Messiah} on {P/Viella} and put {P/Maxwell} in the 1st slot."
       }
     ],
     "note_jp": [
       {
         "type": "p",
-        "string": "ボスが{P/Maxwell}にクリティカルを出してリベンジ範囲に入ることを祈ってください"
+        "string": "{P/Kuro}、{P/Demiurge Luna}、{P/Maxwell}の間には10以上の{S/SPD}差を保ち、ターン1の行動順RNGのリスクを減らしてください。"
       },
       {
         "type": "p",
-        "string": "{P/Maxwell}がボスの2連クリティカルを耐えられない場合は、{P/Viella}に{I-W/Iron Messiah}を装備し、{P/Maxwell}を1番目のスロットに配置してください"
+        "string": "{P/Maxwell}がボスの2連クリティカルを耐えられない場合は、{P/Viella}に{I-W/Iron Messiah}を装備し、{P/Maxwell}を1番目のスロットに配置してください。"
       }
     ],
     "note_kr": [
       {
         "type": "p",
-        "string": "보스가 {P/Maxwell}에게 치명타를 적중시켜 리벤지 범위에 들어가기를 기도하세요"
+        "string": "{P/Kuro}, {P/Demiurge Luna}, {P/Maxwell} 사이에 10 이상의 {S/SPD} 차이를 유지하여 1턴 행동 순서 RNG 위험을 줄이세요."
       },
       {
         "type": "p",
-        "string": "{P/Maxwell}이 보스의 더블 치명타를 버틸 수 없다면, {P/Viella}에게 {I-W/Iron Messiah}를 장착하고 {P/Maxwell}을 1번 슬롯에 배치하세요"
+        "string": "{P/Maxwell}이 보스의 더블 치명타를 버틸 수 없다면, {P/Viella}에게 {I-W/Iron Messiah}를 장착하고 {P/Maxwell}을 1번 슬롯에 배치하세요."
       }
     ],
     "note_zh": [
       {
         "type": "p",
-        "string": "祈祷Boss对你的{P/Maxwell}造成暴击，以便进入复仇范围"
+        "string": "请保持{P/Kuro}、{P/Demiurge Luna}和{P/Maxwell}之间至少10点{S/SPD}差距，以降低第1回合行动顺序RNG的风险。"
       },
       {
         "type": "p",
-        "string": "如果你的{P/Maxwell}无法承受Boss的双暴击，请给{P/Viella}装备{I-W/Iron Messiah}并将{P/Maxwell}放在第1个位置"
+        "string": "如果你的{P/Maxwell}无法承受Boss的双暴击，请给{P/Viella}装备{I-W/Iron Messiah}并将{P/Maxwell}放在第1个位置。"
       }
     ],
     "requirements": {
       "entries": [
         {
           "character": "Viella",
-          "stats": { "spd": "275" },
+          "stats": { "spd": "267+" },
           "equipment": {
-            "talisman": ["{I-T/Rogue's Charm}"]
+            "talisman": ["{I-T/Rogue's Charm} / {I-T/Sage's Charm}"]
           },
           "prio": ["{S/SPD}"],
-          "notes": [],
-          "notes_jp": [],
-          "notes_kr": [],
-          "notes_zh": []
+          "notes": [
+            "Needs 267+ {S/SPD} to outspeed the boss after break ends"
+          ],
+          "notes_jp": [
+            "ブレイク終了後にボスより速く動くために267以上の{S/SPD}が必要"
+          ],
+          "notes_kr": [
+            "브레이크 종료 후 보스보다 빠르게 행동하려면 267 이상의 {S/SPD}가 필요합니다"
+          ],
+          "notes_zh": [
+            "破坏结束后需要267以上的{S/SPD}才能比Boss先行动"
+          ]
         },
         {
           "character": "Kuro",
-          "stats": { "spd": "177" },
+          "stats": { "spd": "≤180" },
           "equipment": {
+            "weapon": ["{I-W/Thumping Odyssey}"],
+            "amulet": ["{S/PEN%}"],
             "talisman": ["{I-T/Rogue's Charm}"],
             "set": ["{AS/Penetration}"]
           },
           "prio": ["{S/PEN%}", "{S/CHC}", "{S/ATK}", "{S/CHD}"],
-          "notes": [],
-          "notes_jp": [],
-          "notes_kr": [],
-          "notes_zh": []
+          "notes": [
+            "Be careful her S3 doesn't exceed 50K damage — that would proc the boss revenge move"
+          ],
+          "notes_jp": [
+            "S3のダメージが5万を超えないように注意（ボスの激怒攻撃が発動します）"
+          ],
+          "notes_kr": [
+            "S3 데미지가 5만을 초과하지 않도록 주의 (보스의 격노 공격이 발동됩니다)"
+          ],
+          "notes_zh": [
+            "注意S3伤害不能超过5万（否则会触发Boss的狂暴技能）"
+          ]
+        },
+        {
+          "character": "Demiurge Luna",
+          "stats": { "spd": "<=175", "trans": "6" },
+          "equipment": {
+            "weapon": ["{I-W/Thumping Odyssey}"],
+            "amulet": ["{S/PEN%}"],
+            "talisman": ["{I-T/Rogue's Charm}"],
+            "set": ["{AS/Revenge} / {AS/Attack} "]
+          },
+          "prio": ["{S/PEN%}", "{S/CHC}", "{S/ATK}", "{S/CHD}"],
+          "notes": [
+            "{AS/Revenge} set ideal at higher stages even if she only loses a little HP. {AS/Attack} set works at lower stages if she stays full HP after the boss hit",
+            "Use +0 armor if possible to take more damage and trigger {AS/Revenge} more reliably",
+            "Remove EE so she doesn't cut in between the boss and {P/Kuro}"
+          ],
+          "notes_jp": [
+            "高ステージではHPがわずかしか減らなくても{AS/Revenge}セットが理想。低ステージでボスの攻撃後もHPが満タンなら{AS/Attack}セットでも可",
+            "可能であれば+0防具を使用してより多くのダメージを受け、{AS/Revenge}を確実に発動させてください",
+            "EEを外して、ボスと{P/Kuro}の間に割り込まないようにする"
+          ],
+          "notes_kr": [
+            "높은 스테이지에서는 HP가 조금만 줄어도 {AS/Revenge} 세트가 이상적. 낮은 스테이지에서 보스 공격 후에도 풀HP라면 {AS/Attack} 세트도 가능",
+            "가능하면 +0 방어구를 사용하여 더 많은 피해를 받고 {AS/Revenge}를 안정적으로 발동시키세요",
+            "EE를 해제하여 보스와 {P/Kuro} 사이에 끼어들지 않도록 함"
+          ],
+          "notes_zh": [
+            "在高阶段即使只损失少量HP，{AS/Revenge}套装也是理想选择。低阶段如果Boss攻击后仍满血，可以使用{AS/Attack}套装",
+            "如有可能使用+0防具以承受更多伤害，更可靠地触发{AS/Revenge}",
+            "移除EE，避免她在Boss和{P/Kuro}之间插入"
+          ]
         },
         {
           "character": "Maxwell",
-          "stats": { "spd": "160" },
+          "stats": { "spd": "=<170" },
           "equipment": {
+            "weapon": ["{I-W/Thumping Odyssey}"],
+            "amulet": ["{S/PEN%}"],
             "talisman": ["{I-T/Rogue's Charm}"],
             "set": ["{AS/Revenge}"],
             "ee": ["+10"]
           },
           "prio": ["{S/PEN%}", "{S/CHC}", "{S/ATK}", "{S/CHD}"],
           "notes": [
-            "Must be in the third slot in the skill chain (bugged otherwise)"
+            "{AS/Revenge} set recommended for best results"
           ],
           "notes_jp": [
-            "スキルチェインの3番目のスロットに配置する必要があります（他のスロットだとバグ）"
+            "最高の結果を得るには{AS/Revenge}セットを推奨"
           ],
           "notes_kr": [
-            "스킬 체인의 3번째 슬롯에 배치해야 합니다 (다른 슬롯은 버그)"
+            "최상의 결과를 위해 {AS/Revenge} 세트 권장"
           ],
-          "notes_zh": ["必须放在技能连锁的第三个位置（其他位置有Bug）"]
-        },
-        {
-          "character": "Demiurge Luna",
-          "stats": { "spd": "172", "trans": "6" },
-          "equipment": {
-            "talisman": ["{I-T/Rogue's Charm}"],
-            "set": ["{AS/Revenge}"]
-          },
-          "prio": ["{S/PEN%}", "{S/CHC}", "{S/ATK}", "{S/CHD}"],
-          "notes": [
-            "Remove EE so she doesn't cut in between the boss and {P/Kuro}"
-          ],
-          "notes_jp": [
-            "EEを外して、ボスと{P/Kuro}の間に割り込まないようにする"
-          ],
-          "notes_kr": [
-            "EE를 해제하여 보스와 {P/Kuro} 사이에 끼어들지 않도록 함"
-          ],
-          "notes_zh": ["移除EE，避免她在Boss和{P/Kuro}之间插入"]
+          "notes_zh": [
+            "推荐使用{AS/Revenge}套装以获得最佳效果"
+          ]
         }
       ]
     }
