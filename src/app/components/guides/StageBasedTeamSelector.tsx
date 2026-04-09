@@ -24,13 +24,9 @@ export default function StageBasedTeamSelector({ teamData, defaultStage }: Props
 
   const stageData = teamData[activeStage];
 
-  const notes = useMemo((): NoteEntry[] | undefined => {
-    if (!stageData) return undefined;
-    if (lang !== 'en') {
-      const localized = stageData[`note_${lang}` as keyof typeof stageData] as NoteEntry[] | undefined;
-      if (localized) return localized;
-    }
-    return stageData.note;
+  const localizedNotes = useMemo((): NoteEntry[] | undefined => {
+    if (!stageData || lang === 'en') return undefined;
+    return stageData[`note_${lang}` as keyof typeof stageData] as NoteEntry[] | undefined;
   }, [stageData, lang]);
 
   if (!stageData) return null;
@@ -73,7 +69,9 @@ export default function StageBasedTeamSelector({ teamData, defaultStage }: Props
       </div>
 
       {/* Stage notes */}
-      {notes && notes.length > 0 && <TeamNotes notes={notes} />}
+      {stageData.note && stageData.note.length > 0 && (
+        <TeamNotes notes={stageData.note} localized={localizedNotes} />
+      )}
     </div>
   );
 }

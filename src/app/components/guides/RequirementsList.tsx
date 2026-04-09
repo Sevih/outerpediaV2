@@ -67,7 +67,9 @@ function hasEquipment(eq?: RequirementEquipment): eq is RequirementEquipment {
 
 function getSpd(entry: RequirementEntry): number | null {
   if (!entry.stats?.spd) return null;
-  const parsed = parseFloat(entry.stats.spd);
+  const match = entry.stats.spd.match(/-?\d+(?:\.\d+)?/);
+  if (!match) return null;
+  const parsed = parseFloat(match[0]);
   return isNaN(parsed) ? null : parsed;
 }
 

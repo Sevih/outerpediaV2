@@ -4,18 +4,20 @@ import { use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useI18n } from '@/lib/contexts/I18nContext';
-import { l } from '@/lib/i18n/localize';
+import { l, lRec } from '@/lib/i18n/localize';
 import parseText from '@/lib/parse-text';
 import { charIndexPromise, nameToIdPromise } from '@/lib/data/characters-client';
 import type { Lang } from '@/lib/i18n/config';
+import type { LangMap } from '@/types/common';
 
 type Props = {
-  order: { character: string; speed: number }[];
-  note?: string;
+  order: { character: string; speed: number | string }[];
+  note?: LangMap;
 };
 
 export default function TurnOrderDisplay({ order, note }: Props) {
   const { lang, href } = useI18n();
+  const resolvedNote = note ? lRec(note, lang as Lang) : undefined;
   const nameMap = use(nameToIdPromise);
   const indexMap = use(charIndexPromise);
 
@@ -76,9 +78,9 @@ export default function TurnOrderDisplay({ order, note }: Props) {
           );
         })}
       </div>
-      {note && (
+      {resolvedNote && (
         <p className="mt-1.5 text-center text-sm text-neutral-400">
-          {parseText(note)}
+          {parseText(resolvedNote)}
         </p>
       )}
     </div>

@@ -5,9 +5,8 @@ import Image from 'next/image';
 import Tabs from '@/app/components/ui/Tabs';
 import CarouselSlot from '@/app/components/guides/CarouselSlot';
 import CombatFootage from '@/app/components/guides/CombatFootage';
-import TurnOrderDisplay from '@/app/components/guides/TurnOrderDisplay';
+import TeamNotes from '@/app/components/guides/TeamNotes';
 import RequirementsList from '@/app/components/guides/RequirementsList';
-import parseText from '@/lib/parse-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import GeasIcon from './GeasIcon';
@@ -67,13 +66,9 @@ export default function GuildRaidPhase2Teams({ teams, pool, defaultTeam, onTeamC
 
   const data = teams[activeTeam];
 
-  const notes = useMemo((): NoteEntry[] | undefined => {
-    if (!data) return undefined;
-    if (lang !== 'en') {
-      const localized = data[`note_${lang}` as keyof typeof data] as NoteEntry[] | undefined;
-      if (localized && localized.length > 0) return localized;
-    }
-    return data.note as NoteEntry[] | undefined;
+  const localizedNotes = useMemo((): NoteEntry[] | undefined => {
+    if (!data || lang === 'en') return undefined;
+    return data[`note_${lang}` as keyof typeof data] as NoteEntry[] | undefined;
   }, [data, lang]);
 
   const multiplier = useMemo(() => {
@@ -153,27 +148,8 @@ export default function GuildRaidPhase2Teams({ teams, pool, defaultTeam, onTeamC
       </div>
 
       {/* Notes — inline (no box) */}
-      {notes && notes.length > 0 && (
-        <div className="space-y-2 text-sm text-zinc-300">
-          {notes.map((entry, i) => {
-            if (entry.type === 'p') {
-              return <p key={i}>{parseText(entry.string)}</p>;
-            }
-            if (entry.type === 'ul') {
-              return (
-                <ul key={i} className="list-disc space-y-1 pl-5">
-                  {entry.items.map((item, j) => (
-                    <li key={j}>{parseText(item)}</li>
-                  ))}
-                </ul>
-              );
-            }
-            if (entry.type === 'turn-order') {
-              return <TurnOrderDisplay key={i} order={entry.order} note={entry.note} />;
-            }
-            return null;
-          })}
-        </div>
+      {data.note && data.note.length > 0 && (
+        <TeamNotes notes={data.note} localized={localizedNotes} variant="inline" />
       )}
 
       {/* Requirements */}

@@ -1,10 +1,10 @@
-import type { WithLocalizedFields } from './common';
+import type { LangMap, WithLocalizedFields } from './common';
 import type { SuffixLang } from '@/lib/i18n/config';
 
 export type NoteEntry =
   | { type: 'p'; string: string }
   | { type: 'ul'; items: string[] }
-  | { type: 'turn-order'; order: { character: string; speed: number }[]; note?: string };
+  | { type: 'turn-order'; order: { character: string; speed: number | string }[]; note?: LangMap };
 
 export type RequirementEquipment = {
   weapon?: string[];

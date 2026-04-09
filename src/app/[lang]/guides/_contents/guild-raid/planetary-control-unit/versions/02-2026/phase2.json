@@ -143,7 +143,12 @@
           { "character": "Roxie", "speed": 263 },
           { "character": "Vlada", "speed": 126 }
         ],
-        "note": "Lots of flexibility as long as {P/Maxie} and {P/Roxie} are fast enough and {P/Akari} outspeeds the boss."
+        "note": {
+          "en": "Lots of flexibility as long as {P/Maxie} and {P/Roxie} are fast enough and {P/Akari} outspeeds the boss.",
+          "jp": "{P/Maxie}と{P/Roxie}が十分速く、{P/Akari}がボスより速ければ調整の余地があります。",
+          "kr": "{P/Maxie}와 {P/Roxie}가 충분히 빠르고 {P/Akari}가 보스보다 빠르면 조정 여지가 있습니다.",
+          "zh": "只要{P/Maxie}和{P/Roxie}足够快且{P/Akari}比Boss快，就有很大的调整空间。"
+        }
       },
       {
         "type": "p",
@@ -160,16 +165,6 @@
         "string": "ターン15でボスがS3ヌークを使う前にブレイクしてください。成功すればダメージ0で、高ステージにもスケールします。"
       },
       {
-        "type": "turn-order",
-        "order": [
-          { "character": "Akari", "speed": 294 },
-          { "character": "Maxie", "speed": 276 },
-          { "character": "Roxie", "speed": 263 },
-          { "character": "Vlada", "speed": 126 }
-        ],
-        "note": "{P/Maxie}と{P/Roxie}が十分速く、{P/Akari}がボスより速ければ調整の余地があります。"
-      },
-      {
         "type": "p",
         "string": "ボスをオーバーキルできる場合、{E/Fire}攻撃力+ギアスをオフにしてポイントを増やせます。"
       }
@@ -184,16 +179,6 @@
         "string": "턴 15에서 보스가 S3 누크를 사용하기 전에 브레이크하세요. 성공하면 피해 0으로, 높은 스테이지에도 스케일됩니다."
       },
       {
-        "type": "turn-order",
-        "order": [
-          { "character": "Akari", "speed": 294 },
-          { "character": "Maxie", "speed": 276 },
-          { "character": "Roxie", "speed": 263 },
-          { "character": "Vlada", "speed": 126 }
-        ],
-        "note": "{P/Maxie}와 {P/Roxie}가 충분히 빠르고 {P/Akari}가 보스보다 빠르면 조정 여지가 있습니다."
-      },
-      {
         "type": "p",
         "string": "보스를 오버킬할 수 있다면 {E/Fire} 공격력+ 기어스를 끄면 더 많은 포인트를 얻을 수 있습니다."
       }
@@ -206,16 +191,6 @@
       {
         "type": "p",
         "string": "在第15回合Boss使用S3大招前打破她。成功则受到0伤害，可以无障碍扩展到更高阶段。"
-      },
-      {
-        "type": "turn-order",
-        "order": [
-          { "character": "Akari", "speed": 294 },
-          { "character": "Maxie", "speed": 276 },
-          { "character": "Roxie", "speed": 263 },
-          { "character": "Vlada", "speed": 126 }
-        ],
-        "note": "只要{P/Maxie}和{P/Roxie}足够快且{P/Akari}比Boss快，就有很大的调整空间。"
       },
       {
         "type": "p",
