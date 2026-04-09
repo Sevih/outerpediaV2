@@ -1321,5 +1321,65 @@
         "zh": "需要大量投入（10级专属装备）才能安全地绕过敌方反击机制"
       }
     ]
+  },
+  "demiurge-luna": {
+    "pros": [
+      {
+        "en": "exceptional {E/light} {C/Mage} DPS capable of transforming between two states ({B/WHITE_NIGHT} and {B/POLAR_NIGHT}) to adapt to the battle",
+        "jp": "{B/WHITE_NIGHT}と{B/POLAR_NIGHT}の2つの状態を切り替え、戦況に適応できる卓越した{E/light}属性{C/Mage}DPS",
+        "kr": "{B/WHITE_NIGHT}와 {B/POLAR_NIGHT}의 두 가지 상태를 전환하며 전투에 적응할 수 있는 뛰어난 {E/light} 속성 {C/Mage} 딜러",
+        "zh": "出色的{E/light}属性{C/Mage}输出，可在{B/WHITE_NIGHT}与{B/POLAR_NIGHT}两种状态之间切换以适应战斗"
+      },
+      {
+        "en": "in her {B/WHITE_NIGHT} state, she gains massive survivability with high final damage reduction and access to a single-target burst that ignores 30% of the target's Defense and deals increased damage which can also grant {B/BT_INVINCIBLE} if a {E/dark} unit is hit ",
+        "jp": "{B/WHITE_NIGHT}状態では、高い最終ダメージ軽減により大幅な生存力を得るとともに、対象の防御力を30%無視して増加したダメージを与える単体バーストを使用でき、{E/dark}属性ユニットに命中した場合は{B/BT_INVINCIBLE}を付与することもできる",
+        "kr": "{B/WHITE_NIGHT} 상태에서는 높은 최종 피해 감소를 통해 막대한 생존력을 얻으며, 대상의 방어력을 30% 무시하고 증가된 피해를 가하는 단일 대상 폭딜을 사용할 수 있고, {E/dark} 속성 유닛을 타격할 경우 {B/BT_INVINCIBLE}을 부여할 수도 있음",
+        "zh": "在{B/WHITE_NIGHT}状态下，凭借高额最终伤害减免获得极强的生存能力，并可使用一项无视目标30%防御并造成增伤的单体爆发技能，若命中{E/dark}属性单位还可获得{B/BT_INVINCIBLE}"
+      },
+      {
+        "en": "in her {B/POLAR_NIGHT} state, her ultimate becomes a devastating AoE attack that increases her {B/BT_ACTION_GAUGE} and reduces cooldowns upon killing enemies, enabling back-to-back turns",
+        "jp": "{B/POLAR_NIGHT}状態では、奥義が壊滅的な全体攻撃となり、敵を撃破するたびに自身の{B/BT_ACTION_GAUGE}を増加させクールダウンを減少させ、連続行動を可能にする",
+        "kr": "{B/POLAR_NIGHT} 상태에서는 궁극기가 강력한 광역 공격으로 변하며, 적을 처치할 때마다 자신의 {B/BT_ACTION_GAUGE}를 증가시키고 쿨다운을 감소시켜 연속 행동이 가능해짐",
+        "zh": "在{B/POLAR_NIGHT}状态下，其大招化为毁灭性的范围攻击，每击杀敌人便提升自身{B/BT_ACTION_GAUGE}并减少冷却时间，实现连续行动"
+      },
+      {
+        "en": "damage in {B/POLAR_NIGHT} form increases drastically based on the number of defeated allies, making her a terrifying 1v4 comeback unit",
+        "jp": "{B/POLAR_NIGHT}形態でのダメージは戦闘不能になった味方の数に応じて大幅に増加するため、1対4の逆転を可能にする恐るべきユニットとなる",
+        "kr": "{B/POLAR_NIGHT} 형태에서의 피해량은 전투 불능이 된 아군의 수에 따라 크게 증가하여, 1대 4 역전이 가능한 무서운 유닛이 됨",
+        "zh": "在{B/POLAR_NIGHT}形态下，伤害会随着阵亡队友数量大幅提升，使其成为令人胆寒的1v4翻盘角色"
+      },
+      {
+        "en": "{EE/Demiurge Luna} grants a massive 50% {B/BT_ACTION_GAUGE} when hit and it's level 10 effect prevents {B/BT_STAT|ST_COUNTER_RATE} from triggering",
+        "jp": "{EE/Demiurge Luna}は被弾時に50%もの{B/BT_ACTION_GAUGE}を付与し、レベル10効果では{B/BT_STAT|ST_COUNTER_RATE}の発動を阻止する",
+        "kr": "{EE/Demiurge Luna}는 피격 시 50%의 {B/BT_ACTION_GAUGE}를 부여하며, 10레벨 효과로 {B/BT_STAT|ST_COUNTER_RATE} 발동을 차단함",
+        "zh": "{EE/Demiurge Luna}在受击时提供高达50%的{B/BT_ACTION_GAUGE}，其10级效果可阻止{B/BT_STAT|ST_COUNTER_RATE}触发"
+      },
+      {
+        "en": "transcendance further increases her potential at every stage, giving a 100% damage increase to {SK/Demiurge Luna|S3} and 30% {S/PEN} at max transcendance",
+        "jp": "覚醒は各段階で潜在能力をさらに引き上げ、最大覚醒時には{SK/Demiurge Luna|S3}に100%のダメージ増加と30%の{S/PEN}を付与する",
+        "kr": "초월은 각 단계마다 잠재력을 더욱 끌어올리며, 최대 초월 시 {SK/Demiurge Luna|S3}에 100% 피해 증가와 30%의 {S/PEN}을 부여함",
+        "zh": "超越在每个阶段都会进一步提升其潜力，在最大超越时为{SK/Demiurge Luna|S3}提供100%的伤害增幅和30%的{S/PEN}"
+      },
+      {
+        "en": "incredibly potent in both PvE and PvP as one of the strongest overall nukers in the game",
+        "jp": "ゲーム内で最も強力な総合ヌーカーの一人として、PvEとPvPの両方で非常に強力",
+        "kr": "게임 내 가장 강력한 종합 누커 중 하나로서 PvE와 PvP 모두에서 매우 강력함",
+        "zh": "作为游戏中最强的综合爆发型角色之一，在PvE和PvP中均极为强大"
+      }
+    ],
+    "cons": [
+      {
+        "en": "taking extra turns via her kill reset mechanic can cause her to take fatal damage if she is afflicted by strong damage-over-time effects",
+        "jp": "撃破リセット機構による追加ターンは、強力な継続ダメージ効果を受けている場合に致命的なダメージを招く可能性がある",
+        "kr": "처치 리셋 메커니즘을 통한 추가 행동은 강력한 지속 피해 효과를 받고 있을 경우 치명적인 피해로 이어질 수 있음",
+        "zh": "通过击杀重置机制获得的额外回合，在她受到强力持续伤害效果时可能导致致命的伤害"
+      },
+      {
+        "en": "requires significant investment to reach the high {S/CHC} and {S/CHD} thresholds needed to consistently trigger her resets",
+        "jp": "リセットを安定して発動させるために必要な高い{S/CHC}と{S/CHD}の閾値に到達するには、大きな投資が必要となる",
+        "kr": "리셋을 안정적으로 발동시키기 위한 높은 {S/CHC}와 {S/CHD} 수치에 도달하려면 상당한 투자가 필요함",
+        "zh": "需要大量投入才能达到稳定触发其重置机制所需的高{S/CHC}和{S/CHD}阈值"
+      }
+    ]
   }
 }
