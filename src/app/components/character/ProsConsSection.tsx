@@ -30,7 +30,7 @@ export default function ProsConsSection({ prosCons }: Props) {
               {pros.map((entry, i) => (
                 <li key={i} className="flex gap-2 text-sm leading-relaxed text-zinc-300">
                   <span className="mt-0.5 shrink-0 text-emerald-400">+</span>
-                  <span>{parseText(lRec(entry, lang) ?? '')}</span>
+                  <span className="inline-block first-letter:uppercase">{parseText(lRec(entry, lang) ?? '')}</span>
                 </li>
               ))}
             </ul>
@@ -49,7 +49,7 @@ export default function ProsConsSection({ prosCons }: Props) {
               {cons.map((entry, i) => (
                 <li key={i} className="flex gap-2 text-sm leading-relaxed text-zinc-300">
                   <span className="mt-0.5 shrink-0 text-red-400">−</span>
-                  <span>{parseText(lRec(entry, lang) ?? '')}</span>
+                  <span className="inline-block first-letter:uppercase">{parseText(lRec(entry, lang) ?? '')}</span>
                 </li>
               ))}
             </ul>

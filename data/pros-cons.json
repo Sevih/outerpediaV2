@@ -1169,16 +1169,16 @@
         "zh": "随着回合推进，被动持续提升自身防御力和造成的伤害，在持久战中成为巨大的威胁"
       },
       {
-        "en": "highly effective in PvE due to her {SK/Gnosis Domine|S3} dealing Fixed Damage based on Max HP and an additional 50% damage and ignores 30% defense against Bosses",
-        "jp": "{SK/Gnosis Domine|S3}が最大HPに基づく固定ダメージを与え、ボスに対しては追加で50%のダメージと30%の防御無視を持つため、PvEで非常に有効",
-        "kr": "{SK/Gnosis Domine|S3}이 최대 HP 기반의 고정 피해를 가하며, 보스에게는 추가로 50% 피해와 방어력 30% 무시 효과를 적용해 PvE에서 매우 효과적",
-        "zh": "{SK/Gnosis Domine|S3}基于最大生命值造成固定伤害，对Boss额外造成50%伤害并无视30%防御，在PvE中极为有效"
+        "en": "highly effective in PvE due to her {SK/Gnosis Domine|S3} dealing {D/BT_FIXED_DAMAGE} based on Max HP and an additional 50% damage and ignores 30% defense against Bosses",
+        "jp": "{SK/Gnosis Domine|S3}が最大HPに基づく{D/BT_FIXED_DAMAGE}を与え、ボスに対しては追加で50%のダメージと30%の防御無視を持つため、PvEで非常に有効",
+        "kr": "{SK/Gnosis Domine|S3}이 최대 HP 기반의 {D/BT_FIXED_DAMAGE}를 가하며, 보스에게는 추가로 50% 피해와 방어력 30% 무시 효과를 적용해 PvE에서 매우 효과적",
+        "zh": "{SK/Gnosis Domine|S3}基于最大生命值造成{D/BT_FIXED_DAMAGE}，对Boss额外造成50%伤害并无视30%防御，在PvE中极为有效"
       },
       {
-        "en": "basic attack can steal enemy buffs via Buff Transfer, stripping key buffs from enemies and applying them to herself",
-        "jp": "通常攻撃でバフ移転により敵のバフを奪い取り、重要なバフを敵から剥奪して自身に付与できる",
-        "kr": "기본 공격으로 버프 이전을 통해 적의 버프를 빼앗아, 핵심 버프를 적에게서 제거하고 자신에게 부여할 수 있음",
-        "zh": "普通攻击可通过增益转移窃取敌方增益，剥离敌人的关键增益并赋予自身"
+        "en": "basic attack can steal enemy buffs via {D/BUFF_TRANSFER}, stripping key buffs from enemies and applying them to herself",
+        "jp": "通常攻撃で{D/BUFF_TRANSFER}により敵のバフを奪い取り、重要なバフを敵から剥奪して自身に付与できる",
+        "kr": "기본 공격으로 {D/BUFF_TRANSFER}를 통해 적의 버프를 빼앗아, 핵심 버프를 적에게서 제거하고 자신에게 부여할 수 있음",
+        "zh": "普通攻击可通过{D/BUFF_TRANSFER}窃取敌方增益，剥离敌人的关键增益并赋予自身"
       }
     ],
     "cons": [
@@ -1201,10 +1201,64 @@
         "zh": "需要大量装备投入"
       },
       {
-        "en": "vulnerable to units that deal Fixed Damage or possess high defense penetration, bypassing her primary defensive stat",
-        "jp": "固定ダメージを与えるユニットや高い防御貫通を持つユニットに弱く、主要な防御ステータスを無視されてしまう",
-        "kr": "고정 피해를 가하거나 높은 방어 관통을 가진 유닛에게 취약하며, 주요 방어 스탯이 무시당함",
-        "zh": "容易被造成固定伤害或拥有高防御穿透的单位克制，绕过她的主要防御属性"
+        "en": "vulnerable to units that deal {D/BT_FIXED_DAMAGE} or possess high {S/PEN%}, bypassing her primary defensive stat",
+        "jp": "{D/BT_FIXED_DAMAGE}を与えるユニットや高い{S/PEN%}を持つユニットに弱く、主要な防御ステータスを無視されてしまう",
+        "kr": "{D/BT_FIXED_DAMAGE}를 가하거나 높은 {S/PEN%}를 가진 유닛에게 취약하며, 주요 방어 스탯이 무시당함",
+        "zh": "容易被造成{D/BT_FIXED_DAMAGE}或拥有高{S/PEN%}的单位克制，绕过她的主要防御属性"
+      }
+    ]
+  },
+  "primine": {
+    "pros": [
+      {
+        "en": "exceptional Water healer who provides high team sustain through constant healing, {B/BT_SHIELD_BASED_CASTER}, {B/BT_IMMUNE} and a {B/BT_CALL_BACKUP} on her {SK/Primine|S1}",
+        "jp": "継続的な回復、{B/BT_SHIELD_BASED_CASTER}、{B/BT_IMMUNE}、そして{SK/Primine|S1}での{B/BT_CALL_BACKUP}により、高いチーム持続力を提供する優秀な水属性ヒーラー",
+        "kr": "지속적인 회복, {B/BT_SHIELD_BASED_CASTER}, {B/BT_IMMUNE}, 그리고 {SK/Primine|S1}의 {B/BT_CALL_BACKUP}을 통해 높은 팀 지속력을 제공하는 뛰어난 물 속성 힐러",
+        "zh": "出色的水属性治疗，通过持续治疗、{B/BT_SHIELD_BASED_CASTER}、{B/BT_IMMUNE}以及{SK/Primine|S1}的{B/BT_CALL_BACKUP}为队伍提供高度的续航能力"
+      },
+      {
+        "en": "shuts down the enemies main damage dealer by triggering {SK/Primine|S2} when hit, inflicting {D/BT_FREEZE} on the enemy with the highest Attack while ignoring {S/RES}",
+        "jp": "被弾時に{SK/Primine|S2}を発動し、{S/RES}を無視して攻撃力が最も高い敵に{D/BT_FREEZE}を付与することで、敵の主力アタッカーを無力化する",
+        "kr": "피격 시 {SK/Primine|S2}를 발동하여 {S/RES}를 무시하고 공격력이 가장 높은 적에게 {D/BT_FREEZE}를 부여해 적의 주력 딜러를 봉쇄함",
+        "zh": "受击时触发{SK/Primine|S2}，无视{S/RES}对攻击力最高的敌人施加{D/BT_FREEZE}，封锁敌方主要输出"
+      },
+      {
+        "en": "increases overall team damage by consistently triggering {B/BT_CALL_BACKUP} with the ally possessing the highest Attack using her {SK/Primine|S1}",
+        "jp": "{SK/Primine|S1}を使用して攻撃力が最も高い味方との{B/BT_CALL_BACKUP}を安定して発動させ、チーム全体の火力を向上させる",
+        "kr": "{SK/Primine|S1}을 사용해 공격력이 가장 높은 아군과 {B/BT_CALL_BACKUP}을 꾸준히 발동시켜 팀 전체의 피해량을 증가시킴",
+        "zh": "通过{SK/Primine|S1}持续与攻击力最高的队友触发{B/BT_CALL_BACKUP}，提升整支队伍的输出"
+      },
+      {
+        "en": "offers powerful team utility by removing debuffs, boosting {B/BT_ACTION_GAUGE}, and inflicting an unresistable {D/BT_SILENCE} on all enemies",
+        "jp": "デバフ解除、{B/BT_ACTION_GAUGE}の上昇、そして全ての敵に抵抗不可の{D/BT_SILENCE}を付与することで、強力なチームユーティリティを提供する",
+        "kr": "디버프 제거, {B/BT_ACTION_GAUGE} 상승, 그리고 모든 적에게 저항 불가능한 {D/BT_SILENCE}를 부여하여 강력한 팀 유틸리티를 제공함",
+        "zh": "提供强大的队伍辅助能力，可解除减益、提升{B/BT_ACTION_GAUGE}，并对所有敌人施加无法抵抗的{D/BT_SILENCE}"
+      }
+    ],
+    "cons": [
+      {
+        "en": "heavily reliant on being hit to trigger her powerful {SK/Primine|S2}, making her less effective if the enemy avoids attacking her",
+        "jp": "強力な{SK/Primine|S2}を発動するために被弾する必要があり、敵が彼女を狙わない場合は効果が薄れる",
+        "kr": "강력한 {SK/Primine|S2}를 발동하기 위해 피격에 크게 의존하므로, 적이 그녀를 공격하지 않으면 효과가 떨어짐",
+        "zh": "高度依赖被攻击以触发其强大的{SK/Primine|S2}，若敌人回避攻击她则效果大减"
+      },
+      {
+        "en": "vulnerable to units that prevent reaction skills or disable passives, which neutralizes her core defensive utility",
+        "jp": "リアクションスキルを封じたりパッシブを無効化するユニットに弱く、核心となる防御ユーティリティが無力化される",
+        "kr": "반응 스킬을 막거나 패시브를 무효화하는 유닛에게 취약하며, 핵심 방어 유틸리티가 무력화됨",
+        "zh": "容易被阻止反击技能或禁用被动的单位克制，核心防御辅助能力会被完全废除"
+      },
+      {
+        "en": "susceptible to {D/BT_SEALED} debuffs which can completely negate her ability to apply {B/BT_SHIELD_BASED_CASTER} and {B/BT_IMMUNE}",
+        "jp": "{D/BT_SEALED}デバフに弱く、{B/BT_SHIELD_BASED_CASTER}や{B/BT_IMMUNE}を付与する能力が完全に無効化される",
+        "kr": "{D/BT_SEALED} 디버프에 취약하여 {B/BT_SHIELD_BASED_CASTER}나 {B/BT_IMMUNE}을 부여하는 능력이 완전히 무효화될 수 있음",
+        "zh": "易受{D/BT_SEALED}减益影响，会完全废除其施加{B/BT_SHIELD_BASED_CASTER}和{B/BT_IMMUNE}的能力"
+      },
+      {
+        "en": "requires all skills at max level for Its effects to be guaranteed and for it to ignore resilence",
+        "jp": "効果を確実に発動させ、抵抗を無視するためには、全スキルを最大レベルにする必要がある",
+        "kr": "효과가 확정적으로 발동되고 저항을 무시하기 위해서는 모든 스킬을 최대 레벨로 올려야 함",
+        "zh": "需要所有技能升至满级，效果才能得到保证并无视抗性"
       }
     ]
   }
