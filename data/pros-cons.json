@@ -1261,5 +1261,65 @@
         "zh": "需要所有技能升至满级，效果才能得到保证并无视抗性"
       }
     ]
+  },
+  "eris": {
+    "pros": [
+      {
+        "en": "Fire striker that scales aggressively with debuffs, increasing her damage by 20% for every debuff on the target",
+        "jp": "デバフに応じて火力が大きく伸びる炎属性ストライカーで、対象のデバフ1つにつき与ダメージが20%増加する",
+        "kr": "디버프에 따라 피해량이 크게 증가하는 화염 속성 스트라이커로, 대상에게 부여된 디버프 1개당 피해량이 20% 증가함",
+        "zh": "火属性打击型角色，伤害随减益数量大幅提升，目标每承受一个减益便提升20%伤害"
+      },
+      {
+        "en": "{SK/Eris|S3} ignores 30% of the target's {B/BT_STAT|ST_DEF} when attacking Bosses and increases the damage by 20% for every debuff on the target while inflicts both {D/BT_DOT_BURN} and {D/BT_DOT_BLEED}",
+        "jp": "{SK/Eris|S3}はボスへの攻撃時に対象の{B/BT_STAT|ST_DEF}を30%無視し、対象のデバフ1つにつきダメージを20%増加させ、さらに{D/BT_DOT_BURN}と{D/BT_DOT_BLEED}の両方を付与する",
+        "kr": "{SK/Eris|S3}는 보스 공격 시 대상의 {B/BT_STAT|ST_DEF}를 30% 무시하고, 대상에게 부여된 디버프 1개당 피해량을 20% 증가시키며, {D/BT_DOT_BURN}과 {D/BT_DOT_BLEED}을 동시에 부여함",
+        "zh": "{SK/Eris|S3}攻击Boss时无视目标30%的{B/BT_STAT|ST_DEF}，目标每承受一个减益便提升20%伤害，并同时施加{D/BT_DOT_BURN}和{D/BT_DOT_BLEED}"
+      },
+      {
+        "en": "{SK/Eris|S2} passive ability immediately inflicts unresistable {D/BT_DOT_BURN} on the fastest enemy at the start of battle while",
+        "jp": "{SK/Eris|S2}のパッシブ能力により、戦闘開始時に最も素早い敵へ抵抗不可の{D/BT_DOT_BURN}を即座に付与する",
+        "kr": "{SK/Eris|S2}의 패시브 능력으로 전투 시작 시 가장 빠른 적에게 저항 불가능한 {D/BT_DOT_BURN}을 즉시 부여함",
+        "zh": "{SK/Eris|S2}的被动能力在战斗开始时立即对速度最快的敌人施加无法抵抗的{D/BT_DOT_BURN}"
+      },
+      {
+        "en": "provides massive team utility to other Strikers, boosting their {S/DMG UP%} by 20% per {SK/Eris|S2} usage, {S/CHD} by 50% via her Exclusive Equipment and giving 40% {B/BT_ACTION_GAUGE} if she dies",
+        "jp": "他のストライカーに大きなチームユーティリティを提供し、{SK/Eris|S2}使用ごとに{S/DMG UP%}を20%、専用装備により{S/CHD}を50%上昇させ、戦闘不能時には40%の{B/BT_ACTION_GAUGE}を付与する",
+        "kr": "다른 스트라이커에게 강력한 팀 유틸리티를 제공하며, {SK/Eris|S2} 사용마다 {S/DMG UP%}를 20%, 전용 장비를 통해 {S/CHD}를 50% 증가시키고, 전투 불능 시 40%의 {B/BT_ACTION_GAUGE}를 부여함",
+        "zh": "为其他打击型角色提供强大的队伍辅助，每次使用{SK/Eris|S2}提升其{S/DMG UP%} 20%，通过专属装备提升{S/CHD} 50%，并在阵亡时给予40%的{B/BT_ACTION_GAUGE}"
+      },
+      {
+        "en": "Level 10 {EE/Eris} prevents enemies from triggering {B/BT_STAT|ST_COUNTER_RATE} or other reaction skills after her S3",
+        "jp": "{EE/Eris}のレベル10により、S3使用後に敵が{B/BT_STAT|ST_COUNTER_RATE}やその他の反応スキルを発動できなくなる",
+        "kr": "{EE/Eris} 10레벨은 S3 사용 후 적이 {B/BT_STAT|ST_COUNTER_RATE}나 다른 반응 스킬을 발동하지 못하도록 차단함",
+        "zh": "10级{EE/Eris}使敌人在她使用S3后无法触发{B/BT_STAT|ST_COUNTER_RATE}或其他反击技能"
+      }
+    ],
+    "cons": [
+      {
+        "en": "damage potential drops significantly if the enemy team can cleanse debuffs or possesses high {S/RES}",
+        "jp": "敵チームがデバフを解除できる、または高い{S/RES}を持つ場合、火力が大きく低下する",
+        "kr": "적 팀이 디버프를 해제할 수 있거나 높은 {S/RES}를 보유한 경우 피해량이 크게 감소함",
+        "zh": "若敌方队伍能够解除减益或拥有较高的{S/RES}，其伤害潜力将大幅下降"
+      },
+      {
+        "en": "damage over time effects like {D/BT_DOT_BURN} and {D/BT_DOT_BLEED} scale with {S/ATK} rather than {S/CHD}, making her stat priority different from traditional Strikers",
+        "jp": "{D/BT_DOT_BURN}や{D/BT_DOT_BLEED}などの継続ダメージは{S/CHD}ではなく{S/ATK}に依存するため、従来のストライカーとはステータス優先度が異なる",
+        "kr": "{D/BT_DOT_BURN}와 {D/BT_DOT_BLEED} 같은 지속 피해 효과는 {S/CHD}가 아닌 {S/ATK}에 비례하여, 전통적인 스트라이커와는 스탯 우선도가 다름",
+        "zh": "{D/BT_DOT_BURN}和{D/BT_DOT_BLEED}等持续伤害效果依赖{S/ATK}而非{S/CHD}，使其属性优先级与传统打击型角色不同"
+      },
+      {
+        "en": "her powerful 40% {B/BT_ACTION_GAUGE} for allies requires her to die, which limits its usefulness in content where keeping units alive is mandatory",
+        "jp": "味方への強力な40%{B/BT_ACTION_GAUGE}付与には自身が戦闘不能になる必要があり、ユニットを生存させることが必須のコンテンツでは有用性が制限される",
+        "kr": "아군에게 부여하는 강력한 40% {B/BT_ACTION_GAUGE}는 본인이 전투 불능이 되어야 발동되므로, 유닛 생존이 필수인 콘텐츠에서는 활용도가 제한됨",
+        "zh": "其为队友提供40%的{B/BT_ACTION_GAUGE}效果需要她阵亡才能触发，因此在必须保持单位存活的内容中作用受限"
+      },
+      {
+        "en": "requires heavy investment (Level 10 Exclusive Equipment) to safely bypass enemy reaction mechanics",
+        "jp": "敵の反応メカニクスを安全に突破するには、専用装備レベル10という大きな投資が必要となる",
+        "kr": "적의 반응 메커니즘을 안전하게 우회하기 위해서는 전용 장비 10레벨이라는 많은 투자가 필요함",
+        "zh": "需要大量投入（10级专属装备）才能安全地绕过敌方反击机制"
+      }
+    ]
   }
 }
