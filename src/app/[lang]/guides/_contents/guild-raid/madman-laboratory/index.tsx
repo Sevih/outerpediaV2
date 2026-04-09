@@ -75,7 +75,6 @@ export default function MadmanLaboratoryGuide() {
       introduction={str.intro}
       pool={pool}
       defaultVersion="apr2026"
-      updating
       versions={{
         apr2026: resolve(
           v04_2026Override as GuildRaidVersionOverride,
