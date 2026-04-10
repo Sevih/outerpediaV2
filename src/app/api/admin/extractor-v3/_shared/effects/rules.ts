@@ -35,6 +35,13 @@ export type DescriptionPattern = {
   addDebuff: string[]
 }
 
+export type DescriptionOverride = {
+  addBuff: string[]
+  addDebuff: string[]
+  removeBuff: string[]
+  removeDebuff: string[]
+}
+
 type TooltipBlacklistFile = {
   ranges?: [number, number][]
   ids?: string[]
@@ -53,6 +60,8 @@ type CachedRules = {
   forceSide: Map<string, 'buff' | 'debuff'>
   /** Description regexes that add buffs/debuffs when matched. */
   descriptionPatterns: DescriptionPattern[]
+  /** Exact-match description → buff/debuff overrides. */
+  descriptionOverrides: Map<string, DescriptionOverride>
 }
 
 let cache: CachedRules | null = null
@@ -78,6 +87,13 @@ type RawDescriptionPattern = {
   _comment?: string
 }
 
+type RawDescriptionOverride = {
+  add_buff?: string[]
+  add_debuff?: string[]
+  remove_buff?: string[]
+  remove_debuff?: string[]
+}
+
 export function loadEffectRules(): CachedRules {
   if (cache) return cache
   const blacklist = readJson<string[]>('blacklist.json')
@@ -86,6 +102,7 @@ export function loadEffectRules(): CachedRules {
   const aliases = readJson<Record<string, string>>('aliases.json')
   const forceSideRaw = readJson<{ buff?: string[]; debuff?: string[] }>('force-side.json')
   const descPatternsRaw = readJson<RawDescriptionPattern[]>('description-patterns.json')
+  const descOverridesRaw = readJson<Record<string, RawDescriptionOverride>>('description-overrides.json')
   // Strip comment keys (JSON files use `_comment` for documentation)
   delete (forced as Record<string, unknown>)._comment
   delete (aliases as Record<string, unknown>)._comment
@@ -106,6 +123,16 @@ export function loadEffectRules(): CachedRules {
       // Bad regex: skip rather than crashing the whole extractor.
     }
   }
+  delete (descOverridesRaw as Record<string, unknown>)._comment
+  const descriptionOverrides = new Map<string, DescriptionOverride>()
+  for (const [desc, ov] of Object.entries(descOverridesRaw)) {
+    descriptionOverrides.set(desc, {
+      addBuff: ov.add_buff ?? [],
+      addDebuff: ov.add_debuff ?? [],
+      removeBuff: ov.remove_buff ?? [],
+      removeDebuff: ov.remove_debuff ?? [],
+    })
+  }
   cache = {
     labelBlacklist: new Set(blacklist),
     tooltipBlacklist: expandTooltipBlacklist(tooltipBl),
@@ -113,6 +140,7 @@ export function loadEffectRules(): CachedRules {
     aliases: new Map(Object.entries(aliases)),
     forceSide,
     descriptionPatterns,
+    descriptionOverrides,
   }
   return cache
 }
@@ -123,5 +151,5 @@ export function clearEffectRulesCache(): void {
 }
 
 // Bundle reload marker: touch this comment to invalidate the in-memory
-// rules cache via a Next.js fast-refresh. (bump 8)
+// rules cache via a Next.js fast-refresh. (bump 10)
 

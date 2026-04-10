@@ -1,0 +1,12 @@
+{
+  "_comment": "Exact-match description → buff/debuff additions. Keyed by the FULL resolved English description (including <color=...> tags and \\n). Each entry is { add_buff?: string[], add_debuff?: string[], remove_buff?: string[], remove_debuff?: string[] }. Applied before description-patterns.json and consulted by the same shared classifier used for characters + monsters.",
+  "Attacks all enemies.\\nRemoves all <color=#28d9ed>buffs</color> from all enemies, and inflicts <color=#28d9ed>Taunted</color> for <color=#28d9ed>3 turn(s)</color>.\\nIf this attack scores a critical hit, removes all <color=#28d9ed>debuffs</color> from the caster.": {
+    "add_buff": [
+      "BT_REMOVE_DEBUFF"
+    ],
+    "add_debuff": [
+      "BT_REMOVE_BUFF",
+      "BT_AGGRO"
+    ]
+  }
+}
