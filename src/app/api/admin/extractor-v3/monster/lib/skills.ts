@@ -263,15 +263,18 @@ function mergeRageFinish(skills: MonsterSkill[]): MonsterSkill[] {
     if (!enterType) continue
     // Merge when the finish has no standalone description OR no visible
     // in-game name (the data table may define it but the game never
-    // shows it — treat it as an orphan companion of ENTER). Only the
-    // buff/debuff lists are carried over; the description is dropped
-    // because the FINISH is not a real, player-visible skill.
+    // shows it — treat it as an orphan companion of ENTER). Also merge
+    // when the ENTER's description already literally contains the
+    // FINISH's description — in that case the FINISH is just a
+    // triggered sub-effect of ENTER and the player only sees one entry.
     const finishDesc = getEn(finish, 'descTexts')
     const finishName = getEn(finish, 'nameTexts')
-    if (finishDesc !== '' && finishName !== '') continue
     const enterIdx = skills.findIndex((s) => s.type === enterType)
     if (enterIdx < 0) continue
     const enter = skills[enterIdx]
+    const enterDesc = getEn(enter, 'descTexts')
+    const finishEmbedded = finishDesc !== '' && enterDesc.includes(finishDesc)
+    if (finishDesc !== '' && finishName !== '' && !finishEmbedded) continue
     const mergeList = (key: 'buff' | 'debuff' | 'removeBuff' | 'removeDebuff') => {
       const e = (enter[key] as string[] | undefined) ?? []
       const f = (finish[key] as string[] | undefined) ?? []

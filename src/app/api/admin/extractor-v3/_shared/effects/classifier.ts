@@ -163,13 +163,18 @@ function passesGenericFilters(row: BuffRow): boolean {
   // tooltip. Drop regardless of BuffDebuffType — boss passives like
   // "reduces Attack by 90%" or "gains 40% Piercing vs Dark" are not the
   // same thing as the UI statuses "Attack Reduced" / "Piercing".
-  // Exception: ST_COUNTER_RATE is legitimately displayed as a passive
-  // buff ("Counterattack Chance +50%") with its own tooltip.
+  // Exceptions: stats legitimately displayed as passive buffs/debuffs
+  // with their own tooltips (Counterattack Chance, Effectiveness, Resist).
+  const PASSIVE_STAT_WHITELIST = new Set([
+    'ST_COUNTER_RATE',
+    'ST_BUFF_CHANCE',
+    'ST_BUFF_RESIST',
+  ])
   if (
     row.Type === 'BT_STAT' &&
     (row.BuffCreateType ?? '').startsWith('PASSIVE') &&
     row.TurnDuration === '-1' &&
-    row.StatType !== 'ST_COUNTER_RATE'
+    !PASSIVE_STAT_WHITELIST.has(row.StatType ?? '')
   ) return false
   return true
 }
