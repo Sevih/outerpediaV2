@@ -156,7 +156,11 @@ export function extractSkill(
   // Skip placeholder character slots (e.g. SKT_BACKUP_AERIAL/GROUND on
   // character-flavored boss fights) — their MonsterSkillTemplet row has
   // no NameID and would produce an empty skill entry.
-  if (!row.NameID) return null
+  // SKT_RAGE_FINISH rows are an exception: they also have no NameID but
+  // carry real buffs that must flow into their sibling SKT_RAGE_ENTER
+  // via mergeRageFinish().
+  const isRageFinish = (row.SkillType ?? '').startsWith('SKT_RAGE_FINISH')
+  if (!row.NameID && !isRageFinish) return null
 
   const level = tables.skillLevelByID.get(skillId)
 

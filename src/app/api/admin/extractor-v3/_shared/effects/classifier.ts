@@ -157,6 +157,16 @@ function passesGenericFilters(row: BuffRow): boolean {
     row.TurnDuration === '-1' &&
     (parseInt(row.StackCount ?? '', 10) || 0) > 1
   ) return false
+  // Passive math modifiers: a BT_STAT row marked NEUTRAL and applied as a
+  // permanent passive effect (BuffCreateType=PASSIVE) is a raw damage/stat
+  // calc modifier, not a user-visible buff/debuff with a tooltip. Drop it
+  // even when it targets enemies — the boss passive "reduces Attack by
+  // 90%" is not the same thing as the UI debuff "Attack Reduced".
+  if (
+    row.Type === 'BT_STAT' &&
+    (row.BuffDebuffType ?? '').startsWith('NEUTRAL') &&
+    row.BuffCreateType === 'PASSIVE'
+  ) return false
   return true
 }
 
@@ -282,12 +292,16 @@ export function classifyEffects(
   }
 
   // Description-based overrides: exact-match first, regex patterns after.
-  // Both consult the resolved English description. We normalize the raw
-  // `\n` (2-char backslash-n) sequences found in TextSkill.json to real
-  // newlines, so override keys can be written naturally as JSON strings
-  // with `\n` escapes.
+  // Both consult the resolved English description. We normalize:
+  //   - raw `\n` (2-char backslash-n) sequences → real newlines
+  //   - smart quotes `’` / `‘` → straight `'`
+  //   - smart double quotes `“` / `”` → straight `"`
+  // so override keys can be written naturally with plain ASCII punctuation.
+  const normalizePunct = (s: string) =>
+    s.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"')
+
   if (ctx.description) {
-    const normalizedDesc = ctx.description.replace(/\\n/g, '\n')
+    const normalizedDesc = normalizePunct(ctx.description.replace(/\\n/g, '\n'))
     const addB = (raw: string) => {
       const label = applyAlias(raw)
       if (rules.labelBlacklist.has(label)) return
@@ -312,9 +326,10 @@ export function classifyEffects(
     // 1. Exact-match override (highest priority — curated manually).
     // We try both the normalized description (with real newlines) and the
     // raw one (with `\n` literal) so authors can write keys either way.
+    // Both variants go through punct normalization so smart quotes match.
     const override =
       rules.descriptionOverrides.get(normalizedDesc) ??
-      rules.descriptionOverrides.get(ctx.description)
+      rules.descriptionOverrides.get(normalizePunct(ctx.description))
     if (override) {
       for (const l of override.addBuff) addB(l)
       for (const l of override.addDebuff) addD(l)

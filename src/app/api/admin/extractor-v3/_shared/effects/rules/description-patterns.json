@@ -5,29 +5,53 @@
     "flags": ""
   },
   {
-    "pattern": "(grants?|restores?|recovers?)\\s+\\d+\\s+(Chain Points|CP)",
+    "_comment": "=== CP (Chain Points) — buff variants ===",
+    "pattern": "(grants?|restores?|recovers?|increases?)\\s+(all\\s+)?(<[^>]+>)?\\s*(Chain Points|CP)",
     "flags": "i",
     "add_buff": ["BT_CP_CHARGE"]
   },
   {
-    "pattern": "(grants?|restores?|recovers?)\\s+\\d+\\s+(Action Points|AP)",
+    "pattern": "(<[^>]+>)?\\s*(Chain Points|CP)(<[^>]+>)?\\s+(is|are)\\s+(restored|recovered|increased|granted)",
+    "flags": "i",
+    "add_buff": ["BT_CP_CHARGE"]
+  },
+  {
+    "_comment": "=== CP (Chain Points) — debuff variants ===",
+    "pattern": "reduces?\\s+(all\\s+|the\\s+enemy\\s+team's\\s+)?(<[^>]+>)?\\s*(Chain Points|CP)(<[^>]+>)?(\\s+of\\s+enem|\\s+by\\s+)",
+    "flags": "i",
+    "add_debuff": ["BT_CP_CHARGE"]
+  },
+  {
+    "pattern": "(enemy|enemies|target)('s|s')?\\s*(<[^>]+>)?\\s*(Chain Points|CP)(<[^>]+>)?\\s+(is|are)\\s+reduced",
+    "flags": "i",
+    "add_debuff": ["BT_CP_CHARGE"]
+  },
+  {
+    "_comment": "=== AP (Action Points) — buff variants ===",
+    "pattern": "(grants?|restores?|recovers?|increases?)\\s+(all\\s+)?(<[^>]+>)?\\s*(Action Points|AP)",
     "flags": "i",
     "add_buff": ["BT_AP_CHARGE"]
+  },
+  {
+    "pattern": "(<[^>]+>)?\\s*(Action Points|AP)(<[^>]+>)?\\s+(is|are)\\s+(restored|recovered|increased|granted)",
+    "flags": "i",
+    "add_buff": ["BT_AP_CHARGE"]
+  },
+  {
+    "_comment": "=== AP (Action Points) — debuff variants ===",
+    "pattern": "reduces?\\s+(all\\s+|the\\s+enemy\\s+team's\\s+)?(<[^>]+>)?\\s*(Action Points|AP)(<[^>]+>)?(\\s+of\\s+enem|\\s+by\\s+)",
+    "flags": "i",
+    "add_debuff": ["BT_AP_CHARGE"]
+  },
+  {
+    "pattern": "(enemy|enemies|target)('s|s')?\\s*(<[^>]+>)?\\s*(Action Points|AP)(<[^>]+>)?\\s+(is|are)\\s+reduced",
+    "flags": "i",
+    "add_debuff": ["BT_AP_CHARGE"]
   },
   {
     "pattern": "(Grants?|gains?) Courage Against Despair",
     "flags": "i",
     "add_buff": ["UNIQUE_DAHLIA_A"]
-  },
-  {
-    "pattern": "reduces?\\s+(the\\s+enemy\\s+team's\\s+)?(<[^>]+>)?(Chain Points|CP)(<[^>]+>)?(\\s+of\\s+enem|\\s+by\\s+)",
-    "flags": "i",
-    "add_debuff": ["BT_CP_CHARGE"]
-  },
-  {
-    "pattern": "reduces all (Chain Points|CP)",
-    "flags": "i",
-    "add_debuff": ["BT_CP_CHARGE"]
   },
   {
     "pattern": "does not trigger.*(?=.*Counterattack)(?=.*Revenge)(?=.*Agile Response)",

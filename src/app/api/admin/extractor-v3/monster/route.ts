@@ -192,20 +192,23 @@ type DiffEntry = {
 // CJK fullwidth → halfwidth punctuation. Most diffs across JP/KR/ZH that
 // look like "real" changes are actually just the translator using fullwidth
 // punctuation in one revision and halfwidth in the next.
-const FULLWIDTH_PUNCT: Record<string, string> = {
-  '\uFF0C': ',', // ，
-  '\uFF0E': '.', // .
-  '\uFF1A': ':', // ：
-  '\uFF1B': ';', // ；
-  '\uFF1F': '?', // ？
-  '\uFF01': '!', // ！
-  '\uFF08': '(', // （
-  '\uFF09': ')', // ）
-  '\uFF3B': '[', // ［
-  '\uFF3D': ']', // ］
-  '\uFF5B': '{', // ｛
-  '\uFF5D': '}', // ｝
-  '\uFF5E': '~', // ～
+// CJK punctuation not covered by Unicode NFKC normalize. NFKC handles
+// full-width ASCII (FF01-FF5E) → half-width, half-width katakana → full,
+// and most compatibility variants automatically. The table below covers
+// the long-tail: smart quotes, ideographic punctuation, Japanese brackets,
+// dashes, ellipsis, etc.
+const EXTRA_PUNCT: Record<string, string> = {
+  '\u2018': "'", // ‘
+  '\u2019': "'", // ’
+  '\u201C': '"', // “
+  '\u201D': '"', // ”
+  '\u201A': ',', // ‚
+  '\u201E': '"', // „
+  '\u2026': '...', // …
+  '\u2013': '-', // – (en dash)
+  '\u2014': '-', // — (em dash)
+  '\u2212': '-', // − (minus)
+  '\u3000': ' ', // full-width space
   '\u3001': ',', // 、 (ideographic comma)
   '\u3002': '.', // 。 (ideographic full stop)
   '\u300C': '"', // 「
@@ -214,15 +217,24 @@ const FULLWIDTH_PUNCT: Record<string, string> = {
   '\u300F': '"', // 』
   '\u3010': '[', // 【
   '\u3011': ']', // 】
+  '\u3014': '[', // 〔
+  '\u3015': ']', // 〕
+  '\u3008': '<', // 〈
+  '\u3009': '>', // 〉
+  '\u300A': '<', // 《
+  '\u300B': '>', // 》
+  '\u301C': '~', // 〜 (wave dash)
+  '\u30FB': '.', // ・ (katakana middle dot)
+  '\uFF64': ',', // ､ (halfwidth ideographic comma, outside FF5E range)
+  '\uFF65': '.', // ･ (halfwidth katakana middle dot, outside FF5E range)
 }
+
+const EXTRA_PUNCT_RE = new RegExp(`[${Object.keys(EXTRA_PUNCT).join('')}]`, 'g')
 
 function normalize(s: string): string {
   return s
-    .replace(/[\uFF01-\uFF5E\u3001\u3002\u300C-\u3011]/g, (c) => FULLWIDTH_PUNCT[c] ?? c)
-    .replace(/[\u2018\u2019]/g, "'")
-    .replace(/[\u201C\u201D]/g, '"')
-    .replace(/\u2026/g, '...')
-    .replace(/\u3000/g, ' ')
+    .normalize('NFKC')
+    .replace(EXTRA_PUNCT_RE, (c) => EXTRA_PUNCT[c] ?? c)
     .replace(/\s+/g, ' ')
     .trim()
 }

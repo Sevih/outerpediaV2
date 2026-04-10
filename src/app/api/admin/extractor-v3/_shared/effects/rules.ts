@@ -124,9 +124,13 @@ export function loadEffectRules(): CachedRules {
     }
   }
   delete (descOverridesRaw as Record<string, unknown>)._comment
+  // Normalize smart quotes in keys so authors can write straight ASCII
+  // punctuation even though TextSkill.json uses `’` / `“` / `”`.
+  const normalizeKey = (s: string) =>
+    s.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"')
   const descriptionOverrides = new Map<string, DescriptionOverride>()
   for (const [desc, ov] of Object.entries(descOverridesRaw)) {
-    descriptionOverrides.set(desc, {
+    descriptionOverrides.set(normalizeKey(desc), {
       addBuff: ov.add_buff ?? [],
       addDebuff: ov.add_debuff ?? [],
       removeBuff: ov.remove_buff ?? [],
@@ -151,5 +155,5 @@ export function clearEffectRulesCache(): void {
 }
 
 // Bundle reload marker: touch this comment to invalidate the in-memory
-// rules cache via a Next.js fast-refresh. (bump 18)
+// rules cache via a Next.js fast-refresh. (bump 20)
 

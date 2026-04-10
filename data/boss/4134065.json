@@ -106,7 +106,7 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nWhen any character with <color=#28d9ed>Invulnerability</color> gains a turn, their Ultimate Skill cooldown is reduced by <color=#28d9ed>1 turn</color>, regardless of whether they are an ally or enemy.\\nReduces all enemies' Effectiveness by <color=#28d9ed>90%</color> and increases the caster's Bleeding Damage Dealt by 100%.\\n\\nAt the end of the caster's turn, deals Fixed Damage equal to <color=#28d9ed>10%</color> of the target's Max Health to enemies without any buffs.\\nIncreases damage taken from Striker enemies, and greatly reduces damage taken from attacks that target all enemies.\\n<color=#28d9ed>Cursed/Fixed Damage</color> to the Boss cannot exceed <color=#28d9ed>10000</color>.\\n\\nDeals significantly more damage when attacking fewer targets.",
-        "jp": "(パッシブ効果)\\n敵味方構わず<color=#28d9ed>無敵</color>状態のキャラクターがターンを獲得した時、当該キャラクターの必殺スキルターンが<color=#28d9ed>1ターン</color>DOWNする。\\n全ての敵の効果命中が<color=#28d9ed>90%</color>DOWNし、自分が与える出血ダメージが100%UPする。\\n\\n自分のターン終了時、強化効果を保有していない敵に対象の最大HPの<color=#28d9ed>10%</color>の固定ダメージを与える。\\n攻撃型の敵から受けるダメージがUPし、全体攻撃から受けるダメージはDOWNする。\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>10000</color>を超えない。\\n\\n対象が少ないほど、与えるダメージが大きくUPする。",
+        "jp": "(パッシブ効果)\\n敵味方構わず<color=#28d9ed>無敵</color>状態のキャラクターがターンを獲得した時、当該キャラクターの必殺スキルターンが<color=#28d9ed>1ターン</color>DOWNする。\\n全ての敵の効果命中が<color=#28d9ed>90%</color>DOWNし、自分が与える出血ダメージが100%UPする。\\n\\n自分のターン終了時、強化効果がない敵に対象の最大HPの<color=#28d9ed>10%</color>の固定ダメージを与える。\\n攻撃型の敵から受けるダメージがUPし、全体攻撃から受けるダメージはDOWNする。\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>10000</color>を超えない。\\n\\n対象が少ないほど、与えるダメージが大きくUPする。",
         "kr": "(패시브 효과)\\n아군과 적군 구분없이 <color=#28d9ed>무적</color> 상태의 캐릭터가 턴을 획득했을 때 해당 캐릭터의 필살기 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n모든 적의 효과 적중이 <color=#28d9ed>90%</color> 감소하며, 자신이 입히는 출혈의 피해가 100% 증가합니다.\\n\\n자신의 턴 종료 시 강화 효과를 보유하지 않은 적에게 대상의 최대 체력의 <color=#28d9ed>10%</color> 만큼 고정 피해를 입힙니다.\\n공격형 적에게 받는 피해량이 증가하며, 전체 공격으로 받는 피해량은 감소합니다.\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>10000</color>을 초과하지 않습니다.\\n\\n대상이 적을수록 입히는 피해가 크게 증가합니다.",
         "zh": "(被动效果)\\n无论友军或敌军，轮到有<color=#28d9ed>无敌</color>状态的角色攻击的回合时，该角色的必杀技冷却时间降低<color=#28d9ed>1回合</color>。\\n全部敌人的效果命中降低<color=#28d9ed>90%</color>。自身造成的出血伤害提升100%。\\n\\n自身回合结束时，对未附带强化效果的敌方目标造成生命值上限<color=#28d9ed>10%</color>的固定伤害。\\n被攻击型敌人攻击时，所受伤害提升，但受到全体攻击时所受伤害降低。\\n首领受到的<color=#28d9ed>诅咒/固定伤害</color>的伤害量不会超过<color=#28d9ed>10000</color>。\\n\\n目标数量越少，则造成的伤害越高。"
       },
@@ -138,17 +138,6 @@
         "BT_DAMAGE_TAKEN",
         "BT_STAT|ST_ATK_IR"
       ]
-    },
-    {
-      "name": {},
-      "type": "SKT_RAGE_FINISH1",
-      "description": {
-        "en": "(Passive Effect)\\nIncreases damage taken from Fire enemies by <color=#28d9ed>30%</color>, and increases damage taken from single-target attacks by <color=#28d9ed>20%</color>.\\n\\nReduces damage taken from area attacks by <color=#28d9ed>30%</color>, and increases Priority by <color=#28d9ed>20%</color> when hit.",
-        "jp": "(パッシブ効果)\\n火属性の敵から受けるダメージが<color=#28d9ed>30%</color>UPし、単体攻撃で受けるダメージが<color=#28d9ed>20%</color>UPする。\\n\\nダメージを受けた場合、行動ゲージが<color=#28d9ed>20%</color>UPし、範囲攻撃で受けるダメージが<color=#28d9ed>30%</color>DOWNする。",
-        "kr": "(패시브 효과)\\n화속성 대상에게 받는 피해가 <color=#28d9ed>30%</color> 증가하며, 단일 공격으로 받는 피해가 <color=#28d9ed>20%</color> 증가합니다.\\n\\n범위 공격으로 받는 피해가 <color=#28d9ed>30%</color> 감소하며, 피격 시 행동 게이지가 <color=#28d9ed>20%</color> 증가합니다.",
-        "zh": "(被动效果)\\n使受到来自火属性目标的伤害提升<color=#28d9ed>30%</color>，并使因单体攻击受到的伤害提升<color=#28d9ed>20%</color>。\\n\\n使因范围攻击受到的伤害降低<color=#28d9ed>30%</color>，且在受到攻击时，使行动值提升<color=#28d9ed>20%</color>。"
-      },
-      "icon": "MT_Boss_Rage_Common_1"
     }
   ]
 }
