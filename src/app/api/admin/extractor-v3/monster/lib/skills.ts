@@ -2,7 +2,6 @@ import { loadTable, indexBy, getLangTexts, expandLang, num, type Row } from './c
 import type { Lang } from '@/lib/i18n/config'
 import {
   classifyEffects,
-  expandImplicitBuffIds,
   buildTooltipMap,
   type EffectTables,
 } from '../../_shared/effects'
@@ -177,13 +176,11 @@ export function extractSkill(
       ) as Record<Lang, string>)
     : null
 
-  // Declared BuffIDs + implicit scan via `${ownerId}_${slot}_` prefix.
-  const declared = (level?.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean)
-  const buffIdSet = expandImplicitBuffIds(
-    declared,
-    [`${ctx.ownerId}_${ctx.slot}_`],
-    tables.buffRowsByBuffID
-  )
+  // Monster skills use the declared BuffIDs only — unlike characters we
+  // do NOT expand by `${ownerId}_${slot}_` prefix. Implicit rows often
+  // represent debug/internal buffs that are never mentioned in the skill
+  // description and would pollute the wiki.
+  const buffIdSet = (level?.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean)
 
   // `MonsterSkillLevelTemplet` has no per-skill BuffToolTip CSV like
   // `CharacterSkillLevelTemplet` does, so we synthesize one by collecting

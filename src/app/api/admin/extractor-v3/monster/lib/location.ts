@@ -355,43 +355,6 @@ export function loadLocationTables(): LocationTables {
     dungeonsByGroup.set(groupId, [...wave1Dungeons])
   }
 
-  // 5. NameID-sibling heuristic — some monster IDs have no spawn at all (e.g.
-  //    intermediate difficulty variants of the same boss). When that happens,
-  //    look up all monsters that share the same NameID and inherit their
-  //    locations. Conservative: only applied to monsters with zero spawn.
-  const monstersByNameId = new Map<string, string[]>()
-  for (const r of loadTable('MonsterTemplet')) {
-    if (!r.NameID || !r.ID) continue
-    let arr = monstersByNameId.get(r.NameID)
-    if (!arr) {
-      arr = []
-      monstersByNameId.set(r.NameID, arr)
-    }
-    arr.push(r.ID)
-  }
-  for (const r of loadTable('MonsterTemplet')) {
-    if (!r.NameID || !r.ID) continue
-    if (groupsByMonster.has(r.ID)) continue
-    const siblings = monstersByNameId.get(r.NameID) ?? []
-    for (const sib of siblings) {
-      if (sib === r.ID) continue
-      const sibGroups = groupsByMonster.get(sib)
-      if (!sibGroups) continue
-      // Inherit only the groups whose dungeons we can resolve, to avoid
-      // attaching the orphan to a sibling that's also orphan.
-      for (const g of sibGroups) {
-        if (dungeonsByGroup.has(g.groupId)) {
-          let arr = groupsByMonster.get(r.ID)
-          if (!arr) {
-            arr = []
-            groupsByMonster.set(r.ID, arr)
-          }
-          arr.push(g)
-        }
-      }
-    }
-  }
-
   // Guild Raid stage map — dungeon names like "Guardian of the Golden Land
   // (Stage {0})" are shared across grades; we substitute `{0}` with the grade
   // from GuildRaidGradeTemplet.
