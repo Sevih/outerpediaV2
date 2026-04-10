@@ -997,7 +997,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
 
       {/* Character grid */}
       <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
-        {filtered.map((char, index) => (
+        {filtered.map((char: IndexedCharacter, index: number) => (
           <ResponsiveCharacterCard
             key={char.ID}
             id={char.ID}
