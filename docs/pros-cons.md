@@ -106,7 +106,7 @@ Text can contain inline tags for rich rendering. Tags stay **identical across al
 | `BT_ADDITIVE_TURN` | Extra Turn |
 | `BT_COOL_CHARGE` | Cooldown Reduction |
 | `BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK` | End-of-turn passive |
-| `SYS_BUFF_REVENGE` | Revenge |
+| `BT_REVENGE` | Revenge |
 | `BT_DOT_BURN` | Burn DoT |
 | `BT_DOT_BLEED` | Bleed DoT |
 | `BT_DOT_LIGHTNING` | Lightning DoT |
