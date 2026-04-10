@@ -81,5 +81,5 @@ export function clearEffectRulesCache(): void {
 }
 
 // Bundle reload marker: touch this comment to invalidate the in-memory
-// rules cache via a Next.js fast-refresh.
+// rules cache via a Next.js fast-refresh. (bump 4)
 

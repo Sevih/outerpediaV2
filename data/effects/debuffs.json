@@ -960,7 +960,7 @@
     "icon": "SC_Buff_Effect_WG_Dmg"
   },
   {
-    "name": "EXECUTION_TIME!",
+    "name": "EXECUTION_TIME",
     "category": "unique",
     "label": "Execution time!",
     "label_jp": "処刑!処刑!",
@@ -986,7 +986,7 @@
     "icon": "IG_Buff_Dmg_Reduce_Interruption_D"
   },
   {
-    "name": "IG_Buff_Dmg_Reduce_Interruption_D",
+    "name": "BT_DMG_REDUCE_IR",
     "category": "utility",
     "label": "Increased damage taken",
     "label_jp": "受けるダメージUP",
@@ -1268,7 +1268,7 @@
     "icon": "IG_Buff_Effect_Golden_Curse"
   },
   {
-    "name": "SPATIAL_DISTORTION_(ENEMY)",
+    "name": "SPATIAL_DISTORTION_ENEMY",
     "category": "unique",
     "label": "Spatial Distortion (Enemy)",
     "label_jp": "空間歪曲（敵）",
@@ -1281,7 +1281,20 @@
     "icon": "IG_Buff_Effect_Disrupt_Interruption_D"
   },
   {
-    "name": "BUFF_TRANSFER",
+    "name": "BANES_DOMAIN",
+    "category": "unique",
+    "label": "Bane's Domain",
+    "label_jp": "劇毒の領域",
+    "label_kr": "극독의 영역",
+    "label_zh": "剧毒领域",
+    "description": "Each target affected by Bane’s Domain receives the following effects:\\nEnemies: -30% Received Final Damage\\nGnosis Viella: +30% DEF, -30% Received Final Damage\\nSelf: -50% ATK, When turn is gained: Gnosis Viella’s Priority +20%\\n\\n(Irremovable. Removed when Gnosis Viella dies. Only the highest Final Damage Reduction effect is applied.)",
+    "description_jp": "劇毒の領域状態の対象は以下の効果が適用されます。\\n敵対象：受ける最終ダメージ‐30％\\nグノーシス・ビエラ：防御力＋30％/受ける最終ダメージ‐30％\\n自身：攻撃力‐50％/ターン獲得時、\\nグノーシス・ビエラの行動ゲージ20%UP\\n\\n（解除不可／グノーシス・ビエラが戦闘不能時に解除／最終ダメージ減少は最も高い値のみ適用）",
+    "description_kr": "극독의 영역 상태의 각 대상은 아래의 효과를 받습니다.\\n적 대상 : 받는 최종 피해 -30%\\n그노시스 비엘라 : 방어력 +30%, 받는 최종 피해 -30%\\n자신 : 공격력 -50%, 턴 획득 시 그노시스 비엘라 행동 게이지 +20%\\n\\n(해제 불가, 그노시스 비엘라 사망 시 해제, 최종 피해 감소는 가장 높은 값만 적용)",
+    "description_zh": "剧毒领域状态下的各目标将受到以下效果。\\n敌方目标：受到的最终伤害‐30％\\n诺希斯·比埃拉：防御力＋30％／受到的最终伤害‐30％\\n自身：攻击力‐50％, 获得回合时：诺斯替斯·维艾拉的行动条 +20%\\n\\n（无法解除／诺希斯·比埃拉死亡时解除／最终伤害减少仅取最高值生效）",
+    "icon": "IG_Buff_Effect_2000109_Interruption_D"
+  },
+  {
+    "name": "BT_REDISTRIBUTE_BUFF",
     "category": "utility",
     "label": "Buff Transfer",
     "label_jp": "強化効果転移",

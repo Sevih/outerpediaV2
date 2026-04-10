@@ -26,7 +26,19 @@
     "description_zh": "造成额外攻击。",
     "icon": "SC_Buff_Extra_Skill"
   },
-
+{
+    "name": "BT_ADDITIVE_ATTACK",
+    "category": "utility",
+    "label": "Additional Attack",
+    "label_jp": "追加攻撃",
+    "label_kr": "추가타",
+    "label_zh": "额外攻击",
+    "description": "Performs an additional attack.",
+    "description_jp": "敵を通常スキルで\\n追加攻撃する。",
+    "description_kr": "추가 공격을 입힙니다.",
+    "description_zh": "造成额外攻击。",
+    "icon": "SC_Buff_Extra_Skill"
+  },
   {
     "name": "SYS_BUFF_ADDITIVE_SKILL",
     "category": "utility",
@@ -189,7 +201,7 @@
     "icon": "generatechainpoints"
   },
   {
-    "name": "BT_DAMGE_TAKEN",
+    "name": "BT_DAMAGE_TAKEN",
     "category": "hidden",
     "label": "Reduced Damage Taken",
     "label_jp": "受けるダメージDOWN",
@@ -453,6 +465,19 @@
     "description_zh": "满足条件时,对友军使用该技能。",
     "icon": "IG_Buff_Effect_Revenge_Heal"
   },
+   {
+    "name": "BT_AGILE_RESPONSE",
+    "category": "utility",
+    "label": "Agile Response",
+    "label_jp": "迅速対応",
+    "label_kr": "신속 대응",
+    "label_zh": "迅速应对",
+    "description": "Activates the skill on allies once conditions have been met.",
+    "description_jp": "特定の条件を満した場合、\\n該当するスキルを\\n味方に発動する。",
+    "description_kr": "조건 만족 시 아군에게 해당 스킬을 사용합니다.",
+    "description_zh": "满足条件时,对友军使用该技能。",
+    "icon": "IG_Buff_Effect_Revenge_Heal"
+  },
   {
     "name": "BT_RUN_PASSIVE_SKILL_ON_TURN_END_TEAM",
     "category": "utility",
@@ -669,6 +694,19 @@
   },
   {
     "name": "BT_STAT|ST_COUNTER_RATE",
+    "category": "utility",
+    "label": "Counterattack",
+    "label_jp": "反撃",
+    "label_kr": "반격",
+    "label_zh": "反击",
+    "description": "Counterattacks when attacked.",
+    "description_jp": "敵からダメージを受けた時、\\\\nその敵に反撃する。",
+    "description_kr": "피격 시 대상에게 반격합니다.",
+    "description_zh": "受到攻击时,对目标进行反击。",
+    "icon": "SC_Buff_Counter"
+  },
+  {
+    "name": "BT_COUNTERATTACK",
     "category": "utility",
     "label": "Counterattack",
     "label_jp": "反撃",
@@ -985,7 +1023,7 @@
     "icon": "IG_Buff_2000059_Interruption"
   },
   {
-    "name": "DOLL_GARDEN'S_CARETAKER",
+    "name": "DOLL_GARDENS_CARETAKER",
     "category": "unique",
     "label": "Doll Garden's Caretaker",
     "label_jp": "箱庭の主",
@@ -1011,7 +1049,7 @@
     "icon": "IG_Buff_2000063_Interruption"
   },
   {
-    "name": "SHOW_YOUR_LOYALTY!",
+    "name": "SHOW_YOUR_LOYALTY",
     "category": "unique",
     "label": "Show Your Loyalty!",
     "label_jp": "忠義をみせろ",
@@ -1037,7 +1075,7 @@
     "icon": "IG_Buff_2000075_Interruption"
   },
   {
-    "name": "DESTROYER'S_PUNISHMENT",
+    "name": "DESTROYERS_PUNISHMENT",
     "category": "unique",
     "label": "Destroyer's Punishment",
     "label_jp": "破壊者の戒め",
@@ -1063,7 +1101,7 @@
     "icon": "IG_Buff_2000090_Interruption"
   },
   {
-    "name": "HUBRIS'S_DOMINION",
+    "name": "HUBRISS_DOMINION",
     "category": "unique",
     "label": "Hubris's Dominion",
     "label_jp": "傲慢の領域",
@@ -1089,7 +1127,7 @@
     "icon": "IG_Buff_2000092_Interruption"
   },
   {
-    "name": "RETRIBUTION'S_DOMINION",
+    "name": "RETRIBUTIONS_DOMINION",
     "category": "unique",
     "label": "Retribution's Dominion",
     "label_jp": "懲罰の領域",
@@ -1154,7 +1192,7 @@
     "icon": "IG_Buff_Effect_2000065_B_Interruption"
   },
   {
-    "name": "SAKURA,_CHIRU",
+    "name": "SAKURA_CHIRU",
     "category": "unique",
     "label": "Sakura, Chiru",
     "label_jp": "桜散る",
@@ -1193,7 +1231,7 @@
     "icon": "IG_Buff_Effect_2000067_Interruption"
   },
   {
-    "name": "REGINA’S_WORLD",
+    "name": "REGINAS_WORLD",
     "category": "unique",
     "label": "Regina's World",
     "label_jp": "レジーナワールド",
@@ -1219,7 +1257,7 @@
     "icon": "IG_Buff_Effect_2000072_Interruption"
   },
   {
-    "name": "A_NINJA'S_AFTERIMAGE",
+    "name": "A_NINJAS_AFTERIMAGE",
     "category": "unique",
     "label": "A Ninja's Afterimage",
     "label_jp": "ニンジャの残像",
@@ -1362,7 +1400,7 @@
     "icon": "IG_Buff_2000035_Interruption"
   },
   {
-    "name": "PUREBLOOD'S_DOMINION",
+    "name": "PUREBLOODS_DOMINION",
     "category": "unique",
     "label": "Pureblood's Dominion",
     "label_jp": "鮮血の領域",
@@ -1376,6 +1414,19 @@
   },
   {
     "name": "SYS_BUFF_REVENGE",
+    "category": "utility",
+    "label": "Revenge",
+    "label_jp": "復讐",
+    "label_kr": "복수",
+    "label_zh": "复仇",
+    "description": "Counterattacks when a debuff is inflicted on an ally during an enemy's turn.",
+    "description_jp": "敵が味方に弱体効果を 与えた場合、対象に反撃する。",
+    "description_kr": "적 행동 중 아군에게 약화 효과가 적용된 경우, 대상에게 반격합니다.",
+    "description_zh": "敌人对友军造成弱化效果时,对目标\\n进行反击。",
+    "icon": "SC_Buff_Revenge"
+  },
+    {
+    "name": "BT_REVENGE",
     "category": "utility",
     "label": "Revenge",
     "label_jp": "復讐",
@@ -1518,7 +1569,7 @@
     "icon": "IG_Buff_Effect_2000109_Interruption"
   },
   {
-    "name": "BANE’S_DOMAIN",
+    "name": "BANES_DOMAIN",
     "category": "unique",
     "label": "Bane's Domain",
     "label_jp": "劇毒の領域",
@@ -1623,7 +1674,7 @@
     "icon": "IG_Buff_2000110_Interruption"
   },
   {
-    "name": "SPATIAL_DISTORTION_(SELF)",
+    "name": "SPATIAL_DISTORTION_SELF",
     "category": "unique",
     "label": "Spatial Distortion (Self)",
     "label_jp": "空間歪曲（自分）",

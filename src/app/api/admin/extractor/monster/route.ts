@@ -579,7 +579,7 @@ function buildIconToIRMap(buffData: Row[]): Map<string, string> {
 
 // Post-conversion renames to match the site's effect naming
 const IR_RENAME: Record<string, string> = {
-  'BT_STAT|ST_DMG_REDUCE_RATE_IR': 'BT_DAMGE_TAKEN',
+  'BT_STAT|ST_DMG_REDUCE_RATE_IR': 'BT_DAMAGE_TAKEN',
 };
 
 function convertToIRFormat(tags: string[], iconToIR: Map<string, string>): string[] {

@@ -149,6 +149,10 @@ export function extractSkill(
   const tables = t ?? loadSkillTables()
   const row = tables.skillIndex.get(skillId)
   if (!row) return null
+  // Skip placeholder character slots (e.g. SKT_BACKUP_AERIAL/GROUND on
+  // character-flavored boss fights) — their MonsterSkillTemplet row has
+  // no NameID and would produce an empty skill entry.
+  if (!row.NameID) return null
 
   const level = tables.skillLevelByID.get(skillId)
 
@@ -220,6 +224,56 @@ export function extractSkill(
   return out
 }
 
+// ── Rage enter/finish merge ─────────────────────────────────────────
+//
+// Boss rage mechanics are split across two skill slots:
+//   SKT_RAGE_ENTER<N>  — the entry animation, carries the description
+//   SKT_RAGE_FINISH<N> — the finish state, usually has an empty description
+//                        but contains passive buffs (e.g. BT_RESURRECTION)
+//
+// The wiki shows both as a single entry, so we merge FINISH → ENTER
+// (buff/debuff union, then drop the FINISH row). If the FINISH has its
+// own non-empty description, it's a standalone skill and we keep it.
+
+function rageFinishToEnterType(finishType: string): string | null {
+  const m = /^SKT_RAGE_FINISH(\d+)$/.exec(finishType)
+  return m ? `SKT_RAGE_ENTER${m[1]}` : null
+}
+
+function getEn(skill: MonsterSkill, field: 'nameTexts' | 'descTexts'): string {
+  const texts = skill[field] as Record<string, string> | null | undefined
+  return (texts?.en ?? '').trim()
+}
+
+function mergeRageFinish(skills: MonsterSkill[]): MonsterSkill[] {
+  const toDrop = new Set<number>()
+  for (let i = 0; i < skills.length; i++) {
+    const finish = skills[i]
+    const finishType = String(finish.type ?? '')
+    const enterType = rageFinishToEnterType(finishType)
+    if (!enterType) continue
+    // Only merge when the finish has no standalone description
+    if (getEn(finish, 'descTexts') !== '') continue
+    const enterIdx = skills.findIndex((s) => s.type === enterType)
+    if (enterIdx < 0) continue
+    const enter = skills[enterIdx]
+    const mergeList = (key: 'buff' | 'debuff' | 'removeBuff' | 'removeDebuff') => {
+      const e = (enter[key] as string[] | undefined) ?? []
+      const f = (finish[key] as string[] | undefined) ?? []
+      const merged: string[] = [...e]
+      for (const x of f) if (!merged.includes(x)) merged.push(x)
+      enter[key] = merged
+    }
+    mergeList('buff')
+    mergeList('debuff')
+    mergeList('removeBuff')
+    mergeList('removeDebuff')
+    toDrop.add(i)
+  }
+  if (toDrop.size === 0) return skills
+  return skills.filter((_, i) => !toDrop.has(i))
+}
+
 /** Resolve a list of skill slot/id pairs (typically from MonsterBase.skillIds). */
 export function extractMonsterSkills(
   skillIds: { slot: number; id: string }[],
@@ -232,5 +286,5 @@ export function extractMonsterSkills(
     const s = extractSkill(id, { ownerId, slot }, tables)
     if (s) out.push(s)
   }
-  return out
+  return mergeRageFinish(out)
 }

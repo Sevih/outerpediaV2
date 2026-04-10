@@ -452,11 +452,11 @@
     "remove_buff": ["BT_STAT|ST_SPEED"]
   },
   "(Passive Effect)\\nWhen taking a critical hit, fully reduces the cooldown of <color=#28d9ed>Dragon Ruler's Breath</color>, and increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>35%</color>.": {
-    "remove_buff": ["BT_STAT|ST_SPEED_IR", "BT_DAMGE_TAKEN"]
+    "remove_buff": ["BT_STAT|ST_SPEED_IR", "BT_DAMAGE_TAKEN"]
   },
   "At the start of battle, grants the caster irremovable <color=#28d9ed>Penetration</color> and <color=#28d9ed>DMG Reduction</color>, and reduces the <color=#28d9ed>Attack</color> of the enemy with the highest Attack by <color=#28d9ed>50%</color>.\\n\\nEach turn, increases the caster's <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>5%</color> (up to 10 stacks).\\nDamage the caster takes from <color=#28d9ed>Cursed</color> and <color=#28d9ed>Fixed Damage</color> cannot exceed <color=#28d9ed>10000</color>.": {
     "remove_buff": ["BT_STAT|ST_SPEED_IR"],
-    "add_buff": ["BT_DAMGE_TAKEN"]
+    "add_buff": ["BT_DAMAGE_TAKEN"]
   },
   "At the start of the caster's turn, grants a Barrier to 1 ally for <color=#28d9ed>2 turn(s)</color>.": {
     "remove_debuff": ["BT_REVERSE_HEAL_BASED_TARGET"]
