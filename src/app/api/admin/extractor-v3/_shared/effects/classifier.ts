@@ -157,15 +157,19 @@ function passesGenericFilters(row: BuffRow): boolean {
     row.TurnDuration === '-1' &&
     (parseInt(row.StackCount ?? '', 10) || 0) > 1
   ) return false
-  // Passive math modifiers: a BT_STAT row marked NEUTRAL and applied as a
-  // permanent passive effect (BuffCreateType=PASSIVE) is a raw damage/stat
-  // calc modifier, not a user-visible buff/debuff with a tooltip. Drop it
-  // even when it targets enemies — the boss passive "reduces Attack by
-  // 90%" is not the same thing as the UI debuff "Attack Reduced".
+  // Passive math modifiers: a BT_STAT row applied as a permanent passive
+  // effect (BuffCreateType starts with PASSIVE, TurnDuration=-1) is a raw
+  // damage/stat calc modifier, not a user-visible buff/debuff with a
+  // tooltip. Drop regardless of BuffDebuffType — boss passives like
+  // "reduces Attack by 90%" or "gains 40% Piercing vs Dark" are not the
+  // same thing as the UI statuses "Attack Reduced" / "Piercing".
+  // Exception: ST_COUNTER_RATE is legitimately displayed as a passive
+  // buff ("Counterattack Chance +50%") with its own tooltip.
   if (
     row.Type === 'BT_STAT' &&
-    (row.BuffDebuffType ?? '').startsWith('NEUTRAL') &&
-    row.BuffCreateType === 'PASSIVE'
+    (row.BuffCreateType ?? '').startsWith('PASSIVE') &&
+    row.TurnDuration === '-1' &&
+    row.StatType !== 'ST_COUNTER_RATE'
   ) return false
   return true
 }
