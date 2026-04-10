@@ -257,8 +257,14 @@ function mergeRageFinish(skills: MonsterSkill[]): MonsterSkill[] {
     const finishType = String(finish.type ?? '')
     const enterType = rageFinishToEnterType(finishType)
     if (!enterType) continue
-    // Only merge when the finish has no standalone description
-    if (getEn(finish, 'descTexts') !== '') continue
+    // Merge when the finish has no standalone description OR no visible
+    // in-game name (the data table may define it but the game never
+    // shows it — treat it as an orphan companion of ENTER). Only the
+    // buff/debuff lists are carried over; the description is dropped
+    // because the FINISH is not a real, player-visible skill.
+    const finishDesc = getEn(finish, 'descTexts')
+    const finishName = getEn(finish, 'nameTexts')
+    if (finishDesc !== '' && finishName !== '') continue
     const enterIdx = skills.findIndex((s) => s.type === enterType)
     if (enterIdx < 0) continue
     const enter = skills[enterIdx]
