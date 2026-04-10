@@ -81,14 +81,13 @@ export function searchMonstersByName(
   const results: Array<{ id: string; nameId: string; name: string }> = []
 
   for (const row of monsterRows) {
-    const nameId = row.NameID
-    if (!nameId) continue
-    const text = txt.get(nameId)
-    if (!text) continue
-    const en = (text.English ?? '').trim()
-    if (!en) continue
-    if (en.toLowerCase().includes(q)) {
-      results.push({ id: row.ID, nameId, name: en })
+    const nameId = row.NameID ?? ''
+    const text = nameId ? txt.get(nameId) : undefined
+    const en = (text?.English ?? '').trim()
+    const idMatch = row.ID.toLowerCase().includes(q)
+    const nameMatch = !!en && en.toLowerCase().includes(q)
+    if (idMatch || nameMatch) {
+      results.push({ id: row.ID, nameId, name: en || row.ID })
     }
   }
   return results

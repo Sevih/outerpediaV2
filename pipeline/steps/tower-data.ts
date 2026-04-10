@@ -92,6 +92,17 @@ interface FloorEntry {
   [key: string]: unknown;
 }
 
+/**
+ * Every tower floor stores its monsters under the per-dungeon variant
+ * slug `${monsterId}@${dungeonId}` — tower is the only mode where the
+ * same monster ID recurs across many floors with different balance, so
+ * we always want the variant form (even if the boss file doesn't exist
+ * yet — it will surface in missing-monsters.json under the same slug).
+ */
+function resolveBossSlug(monsterId: string, dungeonId: string): string {
+  return `${monsterId}@${dungeonId}`
+}
+
 async function generateTower(
   tower: TowerConfig,
   dungeons: Row[],
@@ -119,10 +130,14 @@ async function generateTower(
 
   for (let i = 0; i < towerFloors.length; i++) {
     const floorNum = i + 1;
+    const dungeonId = towerFloors[i].ID ?? '';
     const { bossId, minions } = extractFloorMonsters(towerFloors[i], spawnIdx, monsterIdx);
 
-    const entry: FloorEntry = { floor: floorNum, boss_id: bossId ?? '' };
-    if (minions.length > 0) entry.minions = minions;
+    const resolvedBoss = bossId ? resolveBossSlug(bossId, dungeonId) : '';
+    const resolvedMinions = minions.map((m) => resolveBossSlug(m, dungeonId));
+
+    const entry: FloorEntry = { floor: floorNum, boss_id: resolvedBoss };
+    if (resolvedMinions.length > 0) entry.minions = resolvedMinions;
 
     // Preserve manually-curated fields
     const existing = existingFloors.get(floorNum);
@@ -132,8 +147,8 @@ async function generateTower(
       }
     }
 
-    if (bossId) allIds.add(bossId);
-    for (const m of minions) allIds.add(m);
+    if (resolvedBoss) allIds.add(resolvedBoss);
+    for (const m of resolvedMinions) allIds.add(m);
 
     floors.push(entry);
   }
