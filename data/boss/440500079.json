@@ -72,7 +72,7 @@
       "buff": [
         "BT_REMOVE_DEBUFF",
         "BT_ACTION_GAUGE",
-        "FX_Buff_Turn_Extra"
+        "BT_ADDITIVE_ATTACK"
       ]
     },
     {
@@ -109,10 +109,7 @@
         "kr": "적의 배틀 타입이 모두 다르다면 스킬 체인으로 받는 WG 피해가 <color=#28d9ed>100%</color> 증가합니다.\\n적에게 받는 피해가 감소하는 대신, 브레이크 시 더 큰 피해를 받습니다.\\n명속성이 아닌 적에게 받는 피해가 감소하고, 주는 피해가 증가합니다.",
         "zh": "若敌人的战斗类型无重复，则因连携技能受到的WG伤害提升<color=#28d9ed>100%</color>。\\n来自敌人的伤害降低，但力竭时将承受更高伤害。\\n来自非光属性敌人的伤害降低，且造成伤害提升。"
       },
-      "icon": "MT_Passive_1_Dark",
-      "buff": [
-        "BT_WG_DMG"
-      ]
+      "icon": "MT_Passive_1_Dark"
     },
     {
       "name": {

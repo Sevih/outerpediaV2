@@ -38,6 +38,15 @@ function applyAlias(label: string): string {
   return aliases.get(label) ?? label
 }
 
+// Stats we intentionally surface as UI passives. When the BuffTemplet row
+// is flagged `_IGNORE_ALL` (irremovable), the label gets the `_IR` suffix.
+const PASSIVE_STAT_IR_WHITELIST = new Set<string>([
+  'ST_COUNTER_RATE',
+  'ST_BUFF_CHANCE',
+  'ST_BUFF_RESIST',
+  'ST_CRITICAL_RATE',
+])
+
 export function buffTypeLabel(buff: BuffRow, tables: EffectTables): string {
   const type = buff.Type ?? ''
   const { tooltipMap } = tables
@@ -64,9 +73,20 @@ export function buffTypeLabel(buff: BuffRow, tables: EffectTables): string {
   else if (type.startsWith('BT_RUN_') && buff.ActivateText?.startsWith('SYS_BUFF_')) {
     label = buff.ActivateText
   }
-  // 3. Stat buff → explicit stat
+  // 3. Stat buff → explicit stat. If the row is an irremovable
+  // passive (DEBUFF_IGNORE_ALL / BUFF_IGNORE_ALL) AND the stat is one
+  // of those we intentionally surface as a passive UI status
+  // (ST_COUNTER_RATE, ST_BUFF_CHANCE, ST_BUFF_RESIST, ST_CRITICAL_RATE),
+  // append the `_IR` suffix so the wiki shows the irremovable variant.
   else if (type === 'BT_STAT' && buff.StatType && buff.StatType !== 'ST_NONE') {
     label = `${type}|${buff.StatType}`
+    const bdt = buff.BuffDebuffType ?? ''
+    if (
+      bdt.endsWith('_IGNORE_ALL') &&
+      PASSIVE_STAT_IR_WHITELIST.has(buff.StatType)
+    ) {
+      label = `${label}_IR`
+    }
   }
   // 4. Sustained recovery (heal with duration, not instant)
   else if (
@@ -169,6 +189,7 @@ function passesGenericFilters(row: BuffRow): boolean {
     'ST_COUNTER_RATE',
     'ST_BUFF_CHANCE',
     'ST_BUFF_RESIST',
+    'ST_CRITICAL_RATE'
   ])
   if (
     row.Type === 'BT_STAT' &&

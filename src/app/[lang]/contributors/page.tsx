@@ -3,6 +3,7 @@ import Image from 'next/image';
 import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
+import parseText from '@/lib/parse-text';
 import contributors from '@data/contributors.json';
 
 type Props = { params: Promise<{ lang: string }> };
@@ -51,7 +52,7 @@ export default async function ContributorsPage({ params }: Props) {
                   {c.favoriteCharacter && (
                     <p className="mb-2 text-sm text-zinc-400">
                       <span className="text-zinc-500">{t['contributors.favorite_character']}</span>{' '}
-                      {c.favoriteCharacter}
+                      {parseText(c.favoriteCharacter)}
                     </p>
                   )}
                 </div>

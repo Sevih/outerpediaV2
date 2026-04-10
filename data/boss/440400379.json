@@ -145,8 +145,9 @@
         "zh": "(被动效果)\\n魔法型敌人造成的伤害增加，大土属性魔法型敌人会造成更大的伤害。\\n攻击型敌人的暴击率与效果命中减少。具有中毒时，受到的WG伤害增加<color=#28d9ed>300%</color>。\\n虽然对大土属性敌人造成的伤害减少，受到的伤害增加；但对火属性敌人造成的伤害增加，受到的伤害减少。"
       },
       "icon": "MT_Passive_1_Water",
-      "buff": [
-        "BT_WG_DMG"
+      "debuff": [
+        "BT_STAT|ST_CRITICAL_RATE_IR",
+        "BT_STAT|ST_BUFF_CHANCE_IR"
       ]
     },
     {
