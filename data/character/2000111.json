@@ -149,10 +149,11 @@
       "cd": null,
       "buff": [
         "BT_CALL_BACKUP",
-        "BT_WG_DMG",
         "BT_CALL_BACKUP_2"
       ],
-      "debuff": [],
+      "debuff": [
+        "BT_WG_REVERSE_HEAL"
+      ],
       "offensive": true,
       "target": "mono"
     },

@@ -53,5 +53,10 @@
     "pattern": "gains an (<[^>]+>)?(extra turn)",
     "flags": "i",
     "add_buff": ["BT_ADDITIVE_TURN"]
+  },
+  {
+    "pattern": "reduces? (the )?(<[^>]+>)?WG(<[^>]+>)? by",
+    "flags": "i",
+    "add_debuff": ["BT_WG_REVERSE_HEAL"]
   }
 ]
