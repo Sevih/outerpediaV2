@@ -3283,7 +3283,7 @@
     "ID": "SYS_DESC_CRITICAL_DMG_RATE",
     "Korean": "치명 공격 시 주는 피해가 증가합니다.\\n이 효과는 자신의 피해 증가 수치와 합산되어, 적의 치명 피해 감소 및 받는 피해 감소 수치와 함께 계산됩니다. (합연산)",
     "English": "Increases damage dealt on critical hits.\\nThis effect is added to the user's Damage Increase stat and calculated together with the enemy's Critical Damage Reduction and Damage Reduction stats. (Additive)",
-    "Japanese": "会心攻撃時に与えるダメージが増加します。\\nこの効果は自身のダメージ増加値と合算され、敵の会心ダメージ減少および被ダメージ減少と共に計算されます。（加算）",
+    "Japanese": "会心で与えるダメージがUPする。\\nこの効果は自分のダメージ増加値と合算され、敵の会心ダメージ減少および被ダメージ減少と共に計算されます。（加算）",
     "China_Simplified": "暴击攻击时造成的伤害增加。\\n该效果会与自身的伤害增加数值相加，并与敌方的暴击伤害减少及所受伤害减少一并计算。（加算）",
     "China_Traditional": "暴擊攻擊時造成的傷害增加。\\n此效果会与自身的伤害增加数值相加，并与敌方的暴击伤害减少及所受伤害减少一并计算。（加算）"
   },
@@ -3779,7 +3779,7 @@
     "ID": "SYS_STAT_DESC_DMG_BOOST",
     "Korean": "공격 시 주는 피해량이 증가합니다.\\n이 효과는 자신의 치명 피해 수치와 합산되어(치명 발생 시), 적의 치명 피해 감소 및 받는 피해 감소 수치와 함께 계산됩니다. (합연산)",
     "English": "Increases damage dealt when attacking.\\nThis effect is added to the user's Critical Damage (when a critical hit occurs) and calculated together with the enemy’s Critical Damage Reduction and Damage Taken Reduction. (Additive)",
-    "Japanese": "攻撃時に与えるダメージが増加します。\\nこの効果は自身の会心ダメージ（会心発生時）と加算され、敵の会心ダメージ減少および被ダメージ減少と共に計算されます。（加算）",
+    "Japanese": "攻撃時に与えるダメージが増加します。\\nこの効果は自分の会心ダメージ（会心発生時）と加算され、敵の会心ダメージ減少および被ダメージ減少と共に計算されます。（加算）",
     "China_Simplified": "攻击时造成的伤害增加。\\n该效果会与自身的暴击伤害（发生暴击时）相加，并与敌方的暴击伤害减免及受到伤害减少一起计算。（加算）",
     "China_Traditional": "攻擊時造成的傷害增加。\\n此效果會與自身的暴擊傷害（發生暴擊時）相加，並與敵方的暴擊傷害減免及受到傷害減少一同計算。（加算）"
   },
@@ -3787,7 +3787,7 @@
     "ID": "SYS_STAT_DESC_DMG_REDUCE_RATE",
     "Korean": "피격 시 받는 피해량이 감소합니다.\\n이 효과는 자신의 치명 피해 감소 수치와 합산되어(치명 피격 시), 적의 치명 피해 및 피해 증가 수치와 함께 계산됩니다. (합연산)\\n받는 피해 감소 및 받는 치명 피해 감소 효과로 감소시킬 수 있는 피해량은 최대 70%입니다.",
     "English": "Reduces damage taken when hit.\\nThis effect is added to the user's Critical Damage Reduction (when critically hit) and calculated together with the enemy’s Critical Damage and Damage Increase. (Additive)",
-    "Japanese": "被弾時に受けるダメージが減少します。\\nこの効果は自身の会心ダメージ減少（会心被弾時）と加算され、敵の会心ダメージおよびダメージ増加と共に計算されます。（加算）\\n「被ダメDOWN」および「被会心ダメDOWN」効果で減少できるダメージは、最大70%までです。",
+    "Japanese": "被弾時に受けるダメージが減少します。\\nこの効果は自分の会心ダメージ減少（会心被弾時）と加算され、敵の会心ダメージおよびダメージ増加と共に計算されます。（加算）\\n「被ダメDOWN」および「被会心ダメDOWN」効果で減少できるダメージは、最大70%までです。",
     "China_Simplified": "受到攻击时承受的伤害减少。\\n该效果会与自身的暴击伤害减免（被暴击时）相加，并与敌方的暴击伤害及伤害增加一起计算。（加算）\\n通过[受伤害降低]及[受暴击伤害降低]效果，最多可减少70%的伤害。",
     "China_Traditional": "受到攻擊時承受的傷害減少。\\n此效果會與自身的暴擊傷害減免（被暴擊時）相加，並與敵方的暴擊傷害及傷害增加一同計算。（加算）\\n透過[受傷害減少]及[受暴擊傷害減少]效果，最多可減少70%的傷害。"
   },
@@ -3795,7 +3795,7 @@
     "ID": "SYS_STAT_DESC_E_CRI_DMG_REDUCE",
     "Korean": "치명 피격 시 받는 피해가 감소합니다.\\n이 효과는 자신의 받는 피해 감소 수치와 합산되어, 적의 치명 피해 및 피해 증가 수치와 함께 계산됩니다. (합연산)\\n받는 피해 감소 및 받는 치명 피해 감소 효과로 감소시킬 수 있는 피해량은 최대 70%입니다.",
     "English": "Reduces damage taken when hit.\\nWhen critically hit, this effect is added to the user’s Critical Damage Reduction and is calculated together with the enemy’s Critical Damage and Damage Increase. (Additive)\\nThe maximum total reduction from Damage Reduction and Enemy Critical Damage Reduction effects is 70%.",
-    "Japanese": "会心発生時、受けるダメージが減少します。\\nこの効果は自身の被ダメージ減少と加算され、敵の会心ダメージおよびダメージ増加と共に計算されます。（加算）\\n「被ダメDOWN」および「被会心ダメDOWN」効果で減少できるダメージは、最大70%までです。",
+    "Japanese": "会心発生時、受けるダメージが減少します。\\nこの効果は自分の被ダメージ減少と加算され、敵の会心ダメージおよびダメージ増加と共に計算されます。（加算）\\n「被ダメDOWN」および「被会心ダメDOWN」効果で減少できるダメージは、最大70%までです。",
     "China_Simplified": "被暴击时受到的伤害减少。\\n该效果会与自身的受到伤害减少相加，并与敌方的暴击伤害及伤害增加一起计算。（加算）\\n通过[受伤害降低]及[受暴击伤害降低]效果，最多可减少70%的伤害。",
     "China_Traditional": "被暴擊時受到的傷害減少。\\n此效果會與自身的受到傷害減少相加，並與敵方的暴擊傷害及傷害增加一同計算。（加算）\\n透過[受傷害減少]及[受暴擊傷害減少]效果，最多可減少70%的傷害。"
   },
@@ -23627,7 +23627,7 @@
     "ID": "SYS_ACHIEVE_PROFILE_2000059",
     "Korean": "에바를 대신해 소개하자면…… 아스테는 모종의 사건으로 인해 신이 존재하지 않음을 깨달았어. \\n\\n자동인형인 나로서는 사고의 흐름을 이해하기 어렵지만…… 그 결과 자신이 신이 되어야겠다고 결론을 내린 것 같아. \\n모든 사람들을 꿈속에 밀어 넣어 행복한 환각만을 보여주는 <Color=#FFBF00>모형정원</Color>을 관리하려 했지. 과연 그것을 행복이라 부를 수 있을지는 모르겠지만, 그렇게 안티매터를 모아 자신만의 이상세계를 만들려는 것 같아. \\n인간이란 참으로 묘한 존재로구나.",
     "English": "Let me fill in for Eva and introduce her... Some events led Astei to the realization that there is no god.\\n\\nIt is difficult for an automaton like myself to comprehend the rationale...but it seems she came to the conclusion that it was up to her to become a god.\\nShe put everyone to sleep and filled their heads with happy dreams so she could rule them all as dolls to be kept in the garden of her <Color=#FFBF00>dollhouse</Color>. I do not know whether her subjects were truly happy, however, it seems she was using them to accumulate antimatter to create a utopia for herself.\\nHumans truly are a peculiar sort.",
-    "Japanese": "エヴァに代わって私、識別コード：アルファが紹介する。\\nある出来事によって神が存在しないと気付いたアステは、自分自身が神の存在になると決意して、今の姿となった。\\nすべての人類を夢の中に閉じ込め、幸せになれる幻覚をかけ、自分が神になる世界<Color=#FFBF00>【箱庭】</Color>を作ろうとしていた。アステが作り出した幸せは、人間が望む真の幸福かどうか判断不能。アンチマターを集めていたのも自分の理想郷を作るための一環。\\nやはり人間の思考は理解不能。",
+    "Japanese": "エヴァに代わって私、識別コード：アルファが紹介する。\\nある出来事によって神が存在しないと気付いたアステは、自分自分が神の存在になると決意して、今の姿となった。\\nすべての人類を夢の中に閉じ込め、幸せになれる幻覚をかけ、自分が神になる世界<Color=#FFBF00>【箱庭】</Color>を作ろうとしていた。アステが作り出した幸せは、人間が望む真の幸福かどうか判断不能。アンチマターを集めていたのも自分の理想郷を作るための一環。\\nやはり人間の思考は理解不能。",
     "China_Simplified": "我替艾娃介绍一下吧……奥斯黛在经历了某件事件之后，明白了神是不存在的。\\n\\n身为机械人偶的我有些无法理解这种思维的转变……总之她最后得出了自己要成为神的结论。\\n她想让所有人进入由自己管理的<Color=#FFBF00>模型庄园</Color>里，让人们沉浸在充满幸福幻想的梦境之中。虽然不知道那是不是真正的幸福，但她试图通过收集反物质来创造属于自己的理想世界。\\n人类真是一个很微妙复杂的存在。",
     "China_Traditional": "若要代替艾娃介紹她的話……奧斯黛因為某個事件而領悟到神並不存在。\\n\\n身為自動人偶的我，雖然難以理解她的思考方式……但她得出的結論似乎是自己必須成為神。\\n她管理著將所有人推入夢中，只能看見幸福幻覺的<Color=#FFBF00>模型庭園</Color>。雖然不曉得那是否可被稱之為幸福，但她似乎收集著反物質，打算創造自己的理想世界。\\n人類真是個奇妙的存在。"
   },
@@ -26835,7 +26835,7 @@
     "ID": "SYS_STAT_AVOID_OWNER_EARTH",
     "Korean": "지속성 대상 명중",
     "English": "Accuracy \\nvs Earth",
-    "Japanese": "地属性の対象の命中",
+    "Japanese": "地属性対象の命中",
     "China_Simplified": "土属性命中",
     "China_Traditional": "大地目標命中"
   },
@@ -26843,7 +26843,7 @@
     "ID": "SYS_STAT_BUFF_RESIST_OWNER_EARTH",
     "Korean": "지속성 대상 효과 적중",
     "English": "Effectiveness vs Earth",
-    "Japanese": "地属性の対象の効果命中",
+    "Japanese": "地属性対象の\\n効果命中",
     "China_Simplified": "土属性效果命中",
     "China_Traditional": "大地目標效果命中"
   },
@@ -26851,7 +26851,7 @@
     "ID": "SYS_BT_DMG_REDUCE_TARGET_EARTH",
     "Korean": "지속성 대상 받는 피해 감소",
     "English": "Reduced DMG Taken \\nvs Earth",
-    "Japanese": "地属性の対象の受ける\\nダメージDOWN",
+    "Japanese": "地属性対象の受ける\\nダメージDOWN",
     "China_Simplified": "土属性所受伤害降低",
     "China_Traditional": "大地目標所受傷害減少"
   },
@@ -26859,7 +26859,7 @@
     "ID": "SYS_STAT_AVOID_OWNER_FIRE",
     "Korean": "화속성 대상 명중",
     "English": "Accuracy \\nvs Fire",
-    "Japanese": "火属性の対象の命中",
+    "Japanese": "火属性対象の命中",
     "China_Simplified": "火属性命中",
     "China_Traditional": "火目標命中"
   },
@@ -26867,7 +26867,7 @@
     "ID": "SYS_STAT_BUFF_RESIST_OWNER_FIRE",
     "Korean": "화속성 대상 효과 적중",
     "English": "Effectiveness \\nvs Fire",
-    "Japanese": "火属性の対象の効果命中",
+    "Japanese": "火属性対象の\\n効果命中",
     "China_Simplified": "火属性效果命中",
     "China_Traditional": "火目標效果命中"
   },
@@ -26875,7 +26875,7 @@
     "ID": "SYS_BT_DMG_REDUCE_TARGET_FIRE",
     "Korean": "화속성 대상 받는 피해 감소",
     "English": "Reduced DMG Taken \\nvs Fire",
-    "Japanese": "火属性の対象の受ける\\nダメージDOWN",
+    "Japanese": "火属性対象の受ける\\nダメージDOWN",
     "China_Simplified": "火属性所受伤害降低",
     "China_Traditional": "火目標所受傷害減少"
   },
@@ -26883,7 +26883,7 @@
     "ID": "SYS_STAT_AVOID_OWNER_WATER",
     "Korean": "수속성 대상 명중",
     "English": "Accuracy \\nvs Water",
-    "Japanese": "水属性の対象の命中",
+    "Japanese": "水属性対象の命中",
     "China_Simplified": "水属性命中",
     "China_Traditional": "水目標命中"
   },
@@ -26891,7 +26891,7 @@
     "ID": "SYS_STAT_BUFF_RESIST_OWNER_WATER",
     "Korean": "수속성 대상 효과 적중",
     "English": "Effectiveness \\nvs Water",
-    "Japanese": "水属性の対象の効果命中",
+    "Japanese": "水属性対象の\\n効果命中",
     "China_Simplified": "水属性效果命中",
     "China_Traditional": "水目標效果命中"
   },
@@ -26899,7 +26899,7 @@
     "ID": "SYS_BT_DMG_REDUCE_TARGET_WATER",
     "Korean": "수속성 대상 받는 피해 감소",
     "English": "Reduced DMG Taken \\nvs Water",
-    "Japanese": "水属性の対象の受ける\\nダメージDOWN",
+    "Japanese": "水属性対象の受ける\\nダメージDOWN",
     "China_Simplified": "水属性所受伤害降低",
     "China_Traditional": "水目標所受傷害減少"
   },
@@ -26907,7 +26907,7 @@
     "ID": "SYS_STAT_AVOID_OWNER_LIGHT",
     "Korean": "명속성 대상 명중",
     "English": "Accuracy \\nvs Light",
-    "Japanese": "光属性の対象の命中",
+    "Japanese": "光属性対象の命中",
     "China_Simplified": "光属性命中",
     "China_Traditional": "光目標命中"
   },
@@ -26915,7 +26915,7 @@
     "ID": "SYS_STAT_BUFF_RESIST_OWNER_LIGHT",
     "Korean": "명속성 대상 효과 적중",
     "English": "Effectiveness \\nvs Light",
-    "Japanese": "光属性の対象の効果命中",
+    "Japanese": "光属性対象の\\n効果命中",
     "China_Simplified": "光属性效果命中",
     "China_Traditional": "光目標效果命中"
   },
@@ -26923,7 +26923,7 @@
     "ID": "SYS_BT_DMG_REDUCE_TARGET_LIGHT",
     "Korean": "명속성 대상 받는 피해 감소",
     "English": "Reduced DMG Taken \\nvs Light",
-    "Japanese": "光属性の対象の受ける\\nダメージDOWN",
+    "Japanese": "光属性対象の受ける\\nダメージDOWN",
     "China_Simplified": "光属性所受伤害降低",
     "China_Traditional": "光目標所受傷害減少"
   },
@@ -26931,7 +26931,7 @@
     "ID": "SYS_STAT_AVOID_OWNER_DARK",
     "Korean": "암속성 대상 명중",
     "English": "Accuracy \\nvs Dark",
-    "Japanese": "闇属性の対象の命中",
+    "Japanese": "闇属性対象の命中",
     "China_Simplified": "暗属性命中",
     "China_Traditional": "暗目標命中"
   },
@@ -26939,7 +26939,7 @@
     "ID": "SYS_STAT_BUFF_RESIST_OWNER_DARK",
     "Korean": "암속성 대상 효과 적중",
     "English": "Effectiveness \\nvs Dark",
-    "Japanese": "闇属性の対象の効果命中",
+    "Japanese": "闇属性対象の\\n効果命中",
     "China_Simplified": "暗属性效果命中",
     "China_Traditional": "暗目標效果命中"
   },
@@ -26947,7 +26947,7 @@
     "ID": "SYS_BT_DMG_REDUCE_TARGET_DARK",
     "Korean": "암속성 대상 받는 피해 감소",
     "English": "Reduced DMG Taken \\nvs Dark",
-    "Japanese": "闇属性の対象の受ける\\nダメージDOWN",
+    "Japanese": "闇属性対象の受ける\\nダメージDOWN",
     "China_Simplified": "暗属性所受伤害降低",
     "China_Traditional": "暗目標所受傷害減少"
   },
@@ -27035,7 +27035,7 @@
     "ID": "SYS_STAT_CRITICAL_RATE_TARGET_EARTH",
     "Korean": "지속성 대상 치명 확률",
     "English": "Critical Hit Chance \\nvs Earth",
-    "Japanese": "地属性に対する会心率",
+    "Japanese": "地属性対象の会心率",
     "China_Simplified": "对土属性暴击率",
     "China_Traditional": "大地屬性目標暴擊率"
   },
@@ -27043,7 +27043,7 @@
     "ID": "SYS_STAT_CRITICAL_RATE_TARGET_WATER",
     "Korean": "수속성 대상 치명 확률",
     "English": "Critical Hit Chance \\nvs Water",
-    "Japanese": "水属性に対する会心率",
+    "Japanese": "水属性対象の会心率",
     "China_Simplified": "对水属性暴击率",
     "China_Traditional": "水屬性目標暴擊率"
   },
@@ -27051,7 +27051,7 @@
     "ID": "SYS_STAT_CRITICAL_RATE_TARGET_FIRE",
     "Korean": "화속성 대상 치명 확률",
     "English": "Critical Hit Chance \\nvs Fire",
-    "Japanese": "火属性に対する会心率",
+    "Japanese": "火属性対象の会心率",
     "China_Simplified": "对火属性暴击率",
     "China_Traditional": "火屬性目標暴擊率"
   },
@@ -27059,7 +27059,7 @@
     "ID": "SYS_STAT_CRITICAL_RATE_TARGET_LIGHT",
     "Korean": "명속성 대상 치명 확률",
     "English": "Critical Hit Chance \\nvs Light",
-    "Japanese": "光属性に対する会心率",
+    "Japanese": "光属性対象の会心率",
     "China_Simplified": "对光属性暴击率",
     "China_Traditional": "光屬性目標暴擊率"
   },
@@ -27067,7 +27067,7 @@
     "ID": "SYS_STAT_CRITICAL_RATE_TARGET_DARK",
     "Korean": "암속성 대상 치명 확률",
     "English": "Critical Hit Chance \\nvs Dark",
-    "Japanese": "闇属性に対する会心率",
+    "Japanese": "闇属性対象の会心率",
     "China_Simplified": "对暗属性暴击率",
     "China_Traditional": "暗屬性目標暴擊率"
   },
@@ -27075,7 +27075,7 @@
     "ID": "SYS_STAT_CRITICAL_DMG_RATE_TARGET_EARTH",
     "Korean": "지속성 대상 치명 피해",
     "English": "Critical DMG \\nvs Earth",
-    "Japanese": "地属性対象会心ダメージ",
+    "Japanese": "地属性対象の\\n会心ダメージ",
     "China_Simplified": "对土属性目标造成\\n暴击伤害",
     "China_Traditional": "大地目標暴擊傷害"
   },
@@ -27083,7 +27083,7 @@
     "ID": "SYS_STAT_CRITICAL_DMG_RATE_TARGET_WATER",
     "Korean": "수속성 대상 치명 피해",
     "English": "Critical DMG \\nvs Water",
-    "Japanese": "水属性対象会心ダメージ",
+    "Japanese": "水属性対象の\\n会心ダメージ",
     "China_Simplified": "对水属性目标造成\\n暴击伤害",
     "China_Traditional": "水目標暴擊傷害"
   },
@@ -27091,7 +27091,7 @@
     "ID": "SYS_STAT_CRITICAL_DMG_RATE_TARGET_FIRE",
     "Korean": "화속성 대상 치명 피해",
     "English": "Critical DMG \\nvs Fire",
-    "Japanese": "火属性対象会心ダメージ",
+    "Japanese": "火属性対象の\\n会心ダメージ",
     "China_Simplified": "对火属性目标造成\\n暴击伤害",
     "China_Traditional": "火目標暴擊傷害"
   },
@@ -27099,7 +27099,7 @@
     "ID": "SYS_STAT_CRITICAL_DMG_RATE_TARGET_LIGHT",
     "Korean": "명속성 대상 치명 피해",
     "English": "Critical DMG \\nvs Light",
-    "Japanese": "光属性対象会心ダメージ",
+    "Japanese": "光属性対象の\\n会心ダメージ",
     "China_Simplified": "对光属性目标造成\\n暴击伤害",
     "China_Traditional": "光目標暴擊傷害"
   },
@@ -27107,7 +27107,7 @@
     "ID": "SYS_STAT_CRITICAL_DMG_RATE_TARGET_DARK",
     "Korean": "암속성 대상 치명 피해",
     "English": "Critical DMG \\nvs Dark",
-    "Japanese": "闇属性対象会心ダメージ",
+    "Japanese": "闇属性対象の\\n会心ダメージ",
     "China_Simplified": "对暗属性目标造成\\n暴击伤害",
     "China_Traditional": "暗目標暴擊傷害"
   },
@@ -52363,7 +52363,7 @@
     "ID": "SYS_TOWER_ELEMENT_DEBUFF_INFO_DESCRIPTION",
     "Korean": "<color=#0e7ecc>속도 -30%</color>\\n<color=#0e7ecc>관통력 -20%</color>",
     "English": "<color=#0e7ecc>Speed -30%</color>\\n<color=#0e7ecc>Penetration -20%</color>",
-    "Japanese": "<color=#0e7ecc>速度 -30%</color>\\n<color=#0e7ecc>貫通力 -20%</color>",
+    "Japanese": "<color=#0e7ecc>スピード -30%</color>\\n<color=#0e7ecc>貫通力 -20%</color>",
     "China_Simplified": "<color=#0e7ecc>速度 -30%</color>\\n<color=#0e7ecc>穿透力 -20%</color>",
     "China_Traditional": "<color=#0e7ecc>速度 -30%</color>\\n<color=#0e7ecc>貫穿力 -20%</color>"
   },
@@ -52907,7 +52907,7 @@
     "ID": "SYS_GUIDE_FRIENDSHIP_PVP_04_DESC",
     "Korean": "[친선 대전]에서는 [마스터즈 리그]와 동일한 [결투장 스킬]이 발생합니다.\\n결투장 스킬 효과는 8턴마다 발생하며, 전투 중인 모든 동료의 행동 턴을 기반으로 누적되어 쿨타임이 감소합니다.",
     "English": "In [Friendly Match], the same [Arena Skills] as the [Masters League] are activated.\\nArena Skill effects trigger every 8 turns, and the cooldown decreases as it accumulates based on the action turns of all heroes in battle.",
-    "Japanese": "[フレンド対戦]では[マスターズリーグ]と同じ[アリーナスキル]が発生します。\\nアリーナスキル効果は8ターンごとに発生し、戦闘中のすべての仲間の行動ターンを基に累積されてスキルターンが減少します。",
+    "Japanese": "[フレンド対戦]では[マスターズリーグ]と同じ[アリーナスキル]が発生します。\\nアリーナスキル効果は8ターンごとに発生し、戦闘中のすべての仲間の行動ターンを基に累積されてスキルターンがDOWNします。",
     "China_Simplified": "[友谊赛]中会触发与[大师联赛]相同的[竞技场技能]。\\n竞技场技能效果每8回合触发一次，基于战斗中所有同伴的行动回合累积，冷却时间随之减少。",
     "China_Traditional": "[友誼賽]中會觸發與[大師聯賽]相同的[決鬥場技能]。\\n決鬥場技能效果每8回合觸發一次，基於戰鬥中所有同伴的行動回合累積，冷卻時間隨之減少。"
   },
@@ -63316,8 +63316,8 @@
     "Korean": "[아군 적용]\\n전투 입장 시 아군 전체에게 5턴간 침묵(해제 불가)",
     "English": "Applied to Allies\\nAt the start of battle, inflicts Silenced (Irremovable) on all allies for 5 turns",
     "Japanese": "【味方に発動】\\n戦闘開始時、味方全体が5ターンの間沈黙(解除不可)",
-    "China_Simplified": "【适用于友军】\\n进入战斗时，全体友军沉默5回合(无法解除)",
-    "China_Traditional": "【套用於我軍】\\n進入戰鬥時，在5回合內使全體我軍沉默(無法解除)"
+    "China_Simplified": "【适用于友军】\\n战斗开始时，全体友军沉默5回合(无法解除)",
+    "China_Traditional": "【套用於我軍】\\n戰鬥開始時，在5回合內使全體我軍沉默(無法解除)"
   },
   {
     "ID": "SYS_EXPLORATION_BUFF_ALLY_DESC_2",
@@ -63332,8 +63332,8 @@
     "Korean": "[아군 적용]\\n전투 입장 시 아군 전체에게 3턴간 스턴(해제 불가)",
     "English": "Applied to Allies\\nAt the start of battle, inflicts Stunned (Irremovable) on all allies for 3 turns",
     "Japanese": "【味方に発動】\\n戦闘開始時、味方全体が3ターンの間スタン(解除不可)",
-    "China_Simplified": "【适用于友军】\\n进入战斗时，全体友军晕眩3回合(无法解除)",
-    "China_Traditional": "【套用於我軍】\\n進入戰鬥時，在3回合內使全體我軍暈眩(無法解除)"
+    "China_Simplified": "【适用于友军】\\n战斗开始时，全体友军晕眩3回合(无法解除)",
+    "China_Traditional": "【套用於我軍】\\n戰鬥開始時，在3回合內使全體我軍暈眩(無法解除)"
   },
   {
     "ID": "SYS_EXPLORATION_BUFF_ALLY_DESC_4",
@@ -63412,8 +63412,8 @@
     "Korean": "<color=#7FEE66>[지속성]</color> 동료 편성\\n전투 입장 시 지속성 동료 스턴 면역",
     "English": "<color=#7FEE66>Earth</color> Hero Deployment\\nAt the start of battle, grants Earth heroes immunity to Stunned",
     "Japanese": "<color=#7FEE66>【地属性】</color>の仲間編成\\n戦闘開始時、地属性仲間にスタン免疫",
-    "China_Simplified": "配置<color=#7FEE66>【土属性】</color>同伴\\n进入战斗时，土属性同伴免疫晕眩",
-    "China_Traditional": "編制<color=#7FEE66>【大地屬性】</color>同伴\\n進入戰鬥時，大地屬性同伴暈眩免疫"
+    "China_Simplified": "配置<color=#7FEE66>【土属性】</color>同伴\\n战斗开始时，土属性同伴免疫晕眩",
+    "China_Traditional": "編制<color=#7FEE66>【大地屬性】</color>同伴\\n戰鬥開始時，大地屬性同伴暈眩免疫"
   },
   {
     "ID": "SYS_EXPLORATION_TEAM_BUFF_LIGHT",
@@ -63428,8 +63428,8 @@
     "Korean": "<color=#B000FF>[암속성]</color> 동료 편성\\n전투 입장 시 암속성 동료 침묵 면역",
     "English": "<color=#B000FF>Dark</color> Hero Deployment\\nAt the start of battle, grants Dark heroes immunity to Silenced",
     "Japanese": "<color=#B000FF>【闇属性】</color>の仲間編成\\n戦闘開始時、闇属性仲間に沈黙免疫",
-    "China_Simplified": "配置<color=#B000FF>【暗属性】</color>同伴\\n进入战斗时，暗属性同伴免疫沉默",
-    "China_Traditional": "編制<color=#B000FF>【暗屬性】</color>同伴\\n進入戰鬥時，暗屬性同伴沉默免疫"
+    "China_Simplified": "配置<color=#B000FF>【暗属性】</color>同伴\\n战斗开始时，暗属性同伴免疫沉默",
+    "China_Traditional": "編制<color=#B000FF>【暗屬性】</color>同伴\\n戰鬥開始時，暗屬性同伴沉默免疫"
   },
   {
     "ID": "SYS_EXPLORATION_TEAM_BUFF_WARNNING",
@@ -104973,7 +104973,7 @@
     "English": "* When hit by a single attack, counterattacks and recovers <color=#2c6bb7>Weakness Gauge</color>.\\nWhen having increased <color=#2c6bb7>Attack</color>, Damage dealt by <color=#2c6bb7>Enraged Strike</color> greatly increases.\\nUpon entering battle, the Golden Goblin gains Irremovable <color=#2c6bb7>Invulnerability</color>, and each turn grants <color=#2c6bb7>Invulnerability</color> and increased <color=#2c6bb7>Attack</color> to all allies.",
     "Japanese": "* 単体攻撃のダメージを受けた時、反撃後、<color=#2c6bb7>WG</color>を回復する。\\n<color=#2c6bb7>攻撃力</color>UP効果がある場合、<color=#2c6bb7>【怒りの一撃】</color>のダメージが大幅にUPする。\\n黄金ゴブリンは戦闘開始時、解除不可能な<color=#2c6bb7>無敵</color>を獲得し、毎ターンごとに味方全体に<color=#2c6bb7>無敵</color>と<color=#2c6bb7>攻撃力</color>UP効果を付与する。",
     "China_Simplified": "* 受到单体攻击时，进行反击并恢复<color=#2c6bb7>WG</color>。\\n持有<color=#2c6bb7>攻击力</color>提升效果时，<color=#2c6bb7>愤怒一击</color>的伤害量大幅提升。\\n黄金哥布林在战斗开始时获得无法解除的<color=#2c6bb7>无敌</color>，每回合赋予全体友军<color=#2c6bb7>无敌</color>和<color=#2c6bb7>攻击力</color>提升效果。",
-    "China_Traditional": "* 受到單一攻擊時，反擊後恢復<color=#2c6bb7>WG</color>。\\n擁有<color=#2c6bb7>攻擊力</color>增加效果時，<color=#2c6bb7>憤怒一擊</color>的傷害量大幅上升。\\n黃金哥布林進入戰鬥時獲得無法解除的<color=#2c6bb7>無敵</color>狀態，每回合對全體友軍賦予<color=#2c6bb7>無敵</color>和<color=#2c6bb7>攻擊力</color>增加效果。"
+    "China_Traditional": "* 受到單一攻擊時，反擊後恢復<color=#2c6bb7>WG</color>。\\n擁有<color=#2c6bb7>攻擊力</color>增加效果時，<color=#2c6bb7>憤怒一擊</color>的傷害量大幅上升。\\n黃金哥布林戰鬥開始時獲得無法解除的<color=#2c6bb7>無敵</color>狀態，每回合對全體友軍賦予<color=#2c6bb7>無敵</color>和<color=#2c6bb7>攻擊力</color>增加效果。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_04",
@@ -105227,7 +105227,7 @@
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_35",
     "Korean": "* 1웨이브의 엡실론은 <color=#2c6bb7>저주</color>공격을 받을 경우 최대 체력의 30%만큼 고정 피해를 입습니다. \\n* 필살기 사용 전 사망 시 아군 전체에게 <color=#2c6bb7>면역</color>을 부여합니다. 필살기를 사용할 경우에는 아군 전체에게 해제 불가능한 <color=#2c6bb7>속도 감소</color>와 <color=#2c6bb7>강화 불가</color>를 부여합니다.\\n* 2웨이브의 블라다는 필살기 사용 시 <color=#2c6bb7>약화 효과</color>를 보유한 대상에게 큰 피해를 줍니다.",
     "English": "* In Wave 1, Epsilon takes fixed Damage equal to 30% of Max Health when hit by a <color=#2c6bb7>Cursed</color> Attack.\\nIf defeated before using the Ultimate Skill, grants <color=#2c6bb7>Immunity</color> to all allies. When using the Ultimate Skill, inflicts irremovable <color=#2c6bb7>Reduced Speed</color> and <color=#2c6bb7>Unbuffable</color> on all allies.\\nIn Wave 2, Vlada deals heavy Damage to targets that have <color=#2c6bb7>debuffs</color> when using the Ultimate Skill.",
-    "Japanese": "* 1ウェーブのイプシロンは、<color=#2c6bb7>呪い</color>\\nのダメージを受けた場合、最大HPの30%分の固定ダメージを受ける。必殺スキルの使用前に倒れた場合、味方全体に<color=#2c6bb7>免疫</color>を付与する。必殺スキルを使用した場合、味方全体に解除不可能な<color=#2c6bb7>速度DOWN</color>と<color=#2c6bb7>強化不可</color>を付与する。\\n2ウェーブのヴラダは、必殺スキル使用時、<color=#2c6bb7>弱体効果</color>のある対象に大ダメージを与える。",
+    "Japanese": "* 1ウェーブのイプシロンは、<color=#2c6bb7>呪い</color>\\nのダメージを受けた場合、最大HPの30%分の固定ダメージを受ける。必殺スキルの使用前に倒れた場合、味方全体に<color=#2c6bb7>免疫</color>を付与する。必殺スキルを使用した場合、味方全体に解除不可能な<color=#2c6bb7>スピードDOWN</color>と<color=#2c6bb7>強化不可</color>を付与する。\\n2ウェーブのヴラダは、必殺スキル使用時、<color=#2c6bb7>弱体効果</color>のある対象に大ダメージを与える。",
     "China_Simplified": "* 第1波的埃普西隆在受到<color=#2c6bb7>诅咒</color>攻击时，会受到相当于生命值上限30%的固定伤害。\\n若在使用必杀技之前死亡，会对全体友军赋予<color=#2c6bb7>免疫</color>。若使用必杀技，则对全体友军赋予无法解除的<color=#2c6bb7>速度降低</color>和<color=#2c6bb7>无法强化</color>。\\n第2波布拉达在使用必杀技时，会对持有<color=#2c6bb7>弱化效果</color>的目标造成巨额伤害。",
     "China_Traditional": "* 第1波的艾普西隆受到<color=#2c6bb7>詛咒</color>攻擊時，會受到相當於最大生命力30%的固定傷害。\\n若在使用必殺技前死亡，將賦予全體友軍<color=#2c6bb7>免疫</color>。使用必殺技時，賦予全體友軍無法解除的<color=#2c6bb7>速度減少</color>與<color=#2c6bb7>無法強化</color>。\\n第2波的佛拉達使用必殺技時，對帶有<color=#2c6bb7>弱化效果</color>的目標造成巨大傷害。"
   },
@@ -105245,7 +105245,7 @@
     "English": "* Upon entering battle, greatly reduces all enemies' <color=#2c6bb7>Attack</color>.\\nHas skills that inflict multiple debuffs, including <color=#2c6bb7>Poisoned</color>.\\nWhen using the Enraged Ultimate Skill, detonates accumulated <color=#2c6bb7>Poisoned</color>.",
     "Japanese": "* 戦闘開始と同時に敵全体の<color=#2c6bb7>攻撃力</color>を大幅にDOWNさせる。\\n<color=#2c6bb7>中毒</color>を含む多数の弱体効果を付与するスキルを持つ。\\n【狂暴化】必殺スキル使用時、蓄積された<color=#2c6bb7>中毒</color>を破裂させる。",
     "China_Simplified": "* 战斗开始的同时全体敌人的<color=#2c6bb7>攻击力</color>大幅降低。\\n持有可赋予包括<color=#2c6bb7>中毒</color>在内多种弱化效果的技能。\\n使用狂暴化必杀技时，引爆累积的<color=#2c6bb7>中毒</color>。",
-    "China_Traditional": "* 進入戰鬥時，立即大幅減少全體敵人的<color=#2c6bb7>攻擊力</color>。\\n具備可賦予包含<color=#2c6bb7>中毒</color>在內的多個弱化效果的技能。\\n使用狂暴化必殺技時，會引爆累積的<color=#2c6bb7>中毒</color>效果。"
+    "China_Traditional": "* 戰鬥開始時，立即大幅減少全體敵人的<color=#2c6bb7>攻擊力</color>。\\n具備可賦予包含<color=#2c6bb7>中毒</color>在內的多個弱化效果的技能。\\n使用狂暴化必殺技時，會引爆累積的<color=#2c6bb7>中毒</color>效果。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_38",
@@ -105587,7 +105587,7 @@
     "ID": "SYS_DUNGEON_CLEAR_TIP_Dark_02",
     "Korean": "* 보스보다 속도가 빠른 동료를 통해 <color=#2c6bb7>강화 불가</color>를 부여해야 함.\\n* 속성 우위를 가지는 동료 편성.",
     "English": "* Use allies that have higher Speed than the boss to inflict <color=#2c6bb7>Unbuffable</color>.\\nInclude allies with Element Advantage",
-    "Japanese": "* ボスより速度が速い仲間を通じて<color=#2c6bb7>強化不可</color>を付与する。\\n有利属性を持つ仲間を編成する。",
+    "Japanese": "* ボスよりスピードが速い仲間を通じて<color=#2c6bb7>強化不可</color>を付与する。\\n有利属性を持つ仲間を編成する。",
     "China_Simplified": "* 通过比首领速度快的同伴，需赋予<color=#2c6bb7>无法强化</color>。\\n配置具有属性优势的同伴",
     "China_Traditional": "* 必須透過速度比首領快的同伴來賦予<color=#2c6bb7>無法強化</color>。\\n編入具備優勢屬性的同伴"
   },
@@ -107907,7 +107907,7 @@
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_SPD_01_LV1_DESC",
     "Korean": "속도가 <color=#f17609>10%</color> 증가합니다.",
     "English": "Increases SPD by <color=#f17609>10%</color>.",
-    "Japanese": "速度が<color=#f17609>10%</color>UP",
+    "Japanese": "スピードが<color=#f17609>10%</color>UP",
     "China_Simplified": "速度提高<color=#f17609>10%</color>。",
     "China_Traditional": "速度提高<color=#f17609>10%</color>。"
   },
@@ -107915,7 +107915,7 @@
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_SPD_01_LV2_DESC",
     "Korean": "속도가 <color=#f17609>20%</color> 증가합니다.",
     "English": "Increases SPD by <color=#f17609>20%</color>.",
-    "Japanese": "速度が<color=#f17609>20%</color>UP",
+    "Japanese": "スピードが<color=#f17609>20%</color>UP",
     "China_Simplified": "速度提高<color=#f17609>20%</color>。",
     "China_Traditional": "速度提高<color=#f17609>20%</color>。"
   },
@@ -108195,7 +108195,7 @@
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_04_LV1_DESC",
     "Korean": "피격 시 행동 게이지가 <color=#f17609>5%</color> 증가합니다.",
     "English": "Increases Priority by <color=#f17609>5%</color> when hit.",
-    "Japanese": "被弾時、自身の行動ゲージ<color=#f17609>5%</color>UP",
+    "Japanese": "被弾時、自分の行動ゲージ<color=#f17609>5%</color>UP",
     "China_Simplified": "受到攻击时，自身行动条增加<color=#f17609>5%</color>。",
     "China_Traditional": "受到攻擊時，自身行動條增加<color=#f17609>5%</color>。"
   },
@@ -108203,7 +108203,7 @@
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_04_LV2_DESC",
     "Korean": "피격 시 행동 게이지가 <color=#f17609>15%</color> 증가합니다.",
     "English": "Increases Priority by <color=#f17609>15%</color> when hit.",
-    "Japanese": "被弾時、自身の行動ゲージ<color=#f17609>15%</color>UP",
+    "Japanese": "被弾時、自分の行動ゲージ<color=#f17609>15%</color>UP",
     "China_Simplified": "受到攻击时，自身行动条增加<color=#f17609>15%</color>。",
     "China_Traditional": "受到攻擊時，自身行動條增加<color=#f17609>15%</color>。"
   },
@@ -108788,48 +108788,48 @@
     "Korean": "전투 입장 시 <color=#f17609>10%</color> 확률로 적 전체에게 스턴을 1턴간 부여합니다.",
     "English": "Upon entering battle, <color=#f17609>10%</color> chance to inflict Stunned to all enemies for 1 turn",
     "Japanese": "戦闘突入時、<color=#f17609>10%</color>の確率で敵全体にスタンを1ターン付与",
-    "China_Simplified": "进入战斗时，有<color=#f17609>10%</color>概率对全体敌人造成眩晕（1回合）",
-    "China_Traditional": "進入戰鬥時，有<color=#f17609>10%</color>機率對全體敵人造成眩暈（1回合）"
+    "China_Simplified": "战斗开始时，有<color=#f17609>10%</color>概率对全体敌人造成眩晕（1回合）",
+    "China_Traditional": "戰鬥開始時，有<color=#f17609>10%</color>機率對全體敵人造成眩暈（1回合）"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_ESP_04_LV2_DESC",
     "Korean": "전투 입장 시 <color=#f17609>20%</color> 확률로 적 전체에게 스턴을 1턴간 부여합니다.",
     "English": "Upon entering battle, <color=#f17609>20%</color> chance to inflict Stunned to all enemies for 1 turn",
     "Japanese": "戦闘突入時、<color=#f17609>20%</color>の確率で敵全体にスタンを1ターン付与",
-    "China_Simplified": "进入战斗时，有<color=#f17609>20%</color>概率对全体敌人造成眩晕（1回合）",
-    "China_Traditional": "進入戰鬥時，有<color=#f17609>20%</color>機率對全體敵人造成眩暈（1回合）"
+    "China_Simplified": "战斗开始时，有<color=#f17609>20%</color>概率对全体敌人造成眩晕（1回合）",
+    "China_Traditional": "戰鬥開始時，有<color=#f17609>20%</color>機率對全體敵人造成眩暈（1回合）"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_ESP_05_LV1_DESC",
     "Korean": "전투 입장 시 <color=#f17609>10%</color> 확률로 적 전체에게 빙결을 1턴간 부여합니다.",
     "English": "Upon entering battle, <color=#f17609>10%</color> chance to inflict Frozen to all enemies for 1 turn",
     "Japanese": "戦闘突入時、<color=#f17609>10%</color>の確率で敵全体に凍結を1ターン付与",
-    "China_Simplified": "进入战斗时，有<color=#f17609>10%</color>概率对全体敌人造成冰冻（1回合）",
-    "China_Traditional": "進入戰鬥時，有<color=#f17609>10%</color>機率對全體敵人造成冰凍（1回合）"
+    "China_Simplified": "战斗开始时，有<color=#f17609>10%</color>概率对全体敌人造成冰冻（1回合）",
+    "China_Traditional": "戰鬥開始時，有<color=#f17609>10%</color>機率對全體敵人造成冰凍（1回合）"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_ESP_05_LV2_DESC",
     "Korean": "전투 입장 시 <color=#f17609>20%</color> 확률로 적 전체에게 빙결을 1턴간 부여합니다.",
     "English": "Upon entering battle, <color=#f17609>20%</color> chance to inflict Frozen to all enemies for 1 turn",
     "Japanese": "戦闘突入時、<color=#f17609>20%</color>の確率で敵全体に凍結を1ターン付与",
-    "China_Simplified": "进入战斗时，有<color=#f17609>20%</color>概率对全体敌人造成冰冻（1回合）",
-    "China_Traditional": "進入戰鬥時，有<color=#f17609>20%</color>機率對全體敵人造成冰凍（1回合）"
+    "China_Simplified": "战斗开始时，有<color=#f17609>20%</color>概率对全体敌人造成冰冻（1回合）",
+    "China_Traditional": "戰鬥開始時，有<color=#f17609>20%</color>機率對全體敵人造成冰凍（1回合）"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_ESP_06_LV1_DESC",
     "Korean": "전투 입장 시 <color=#f17609>10%</color> 확률로 적 전체에게 석화를 1턴간 부여합니다.",
     "English": "Upon entering battle, <color=#f17609>10%</color> chance to inflict Petrified to all enemies for 1 turn",
     "Japanese": "戦闘突入時、<color=#f17609>10%</color>の確率で敵全体に石化を1ターン付与",
-    "China_Simplified": "进入战斗时，有<color=#f17609>10%</color>概率对全体敌人造成石化（1回合）",
-    "China_Traditional": "進入戰鬥時，有<color=#f17609>10%</color>機率對全體敵人造成石化（1回合）"
+    "China_Simplified": "战斗开始时，有<color=#f17609>10%</color>概率对全体敌人造成石化（1回合）",
+    "China_Traditional": "戰鬥開始時，有<color=#f17609>10%</color>機率對全體敵人造成石化（1回合）"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_ESP_06_LV2_DESC",
     "Korean": "전투 입장 시 <color=#f17609>20%</color> 확률로 적 전체에게 석화를 1턴간 부여합니다.",
     "English": "Upon entering battle, <color=#f17609>20%</color> chance to inflict Petrified to all enemies for 1 turn",
     "Japanese": "戦闘突入時、<color=#f17609>20%</color>の確率で敵全体に石化を1ターン付与",
-    "China_Simplified": "进入战斗时，有<color=#f17609>20%</color>概率对全体敌人造成石化（1回合）",
-    "China_Traditional": "進入戰鬥時，有<color=#f17609>20%</color>機率對全體敵人造成石化（1回合）"
+    "China_Simplified": "战斗开始时，有<color=#f17609>20%</color>概率对全体敌人造成石化（1回合）",
+    "China_Traditional": "戰鬥開始時，有<color=#f17609>20%</color>機率對全體敵人造成石化（1回合）"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_ESP_07_LV1_DESC",
@@ -109155,7 +109155,7 @@
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_08_LV1_DESC",
     "Korean": "편성 시 자신의 WG 피해량이 <color=#f17609>50%</color> 증가합니다.",
     "English": "When deployed, own WG damage increases by <color=#f17609>50%</color>.",
-    "Japanese": "編成時、自身のWGダメージが<color=#f17609>50%</color>UP",
+    "Japanese": "編成時、自分のWGダメージが<color=#f17609>50%</color>UP",
     "China_Simplified": "编入队伍时，自身WG伤害提高<color=#f17609>50%</color>。",
     "China_Traditional": "編入隊伍時，自身WG傷害提高<color=#f17609>50%</color>。"
   },
@@ -109163,7 +109163,7 @@
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_08_LV2_DESC",
     "Korean": "편성 시 자신의 WG 피해량이 <color=#f17609>100%</color> 증가하고, 협공의 피해량이 <color=#f17609>150%</color> 증가합니다.",
     "English": "When deployed, own WG damage increases by <color=#f17609>100%</color>, and Dual Attack damage increases by <color=#f17609>150%</color>.",
-    "Japanese": "編成時、自身のWGダメージが<color=#f17609>100%</color>UPし、連携のダメージが<color=#f17609>150%</color>UP",
+    "Japanese": "編成時、自分のWGダメージが<color=#f17609>100%</color>UPし、連携のダメージが<color=#f17609>150%</color>UP",
     "China_Simplified": "编入队伍时，自身WG伤害提高<color=#f17609>100%</color>，协攻伤害提高<color=#f17609>150%</color>。",
     "China_Traditional": "編入隊伍時，自身WG傷害提高<color=#f17609>100%</color>，協攻傷害提高<color=#f17609>150%</color>。"
   },
@@ -109435,7 +109435,7 @@
     "ID": "SYS_DUNGEON_CLEAR_TIP_140113_1",
     "Korean": "* 보스는 <color=#2c6bb7>좌측</color>의 적을 우선적으로 공격하며, 대상이 <color=#2c6bb7>방어형</color>이 아닐 경우 보스의 <color=#2c6bb7>공격력</color>이 상승합니다.\\n* 보스가 <color=#2c6bb7>빙결</color> 상태이상일 경우 받는 피해량이 크게 증가하며, 자신에게 <color=#2c6bb7>약화 효과</color>가 없다면 받는 피해가 크게 감소합니다.\\n* 보스가 공격 시, <color=#2c6bb7>강화 효과</color>가 없는 대상에게 해제 불가능한 <color=#2c6bb7>화상</color>을 부여합니다.\\n* 보스가 행동 시 <color=#2c6bb7>명/암속성</color> 동료에게 화상을 부여하며, <color=#2c6bb7>명/암속성</color> 동료 행동 시 자신의 약화효과를 해제합니다.\\n* 보스는 <color=#2c6bb7>이레귤러 헌터</color>에게 취약합니다.",
     "English": "* The boss prioritizes attacking enemies on the <color=#2c6bb7>left</color>. If the target is not a <color=#2c6bb7>Defender</color>, the boss’s <color=#2c6bb7>Attack</color> increases.\\n* When the boss is afflicted with <color=#2c6bb7>Freeze</color>, the damage it takes greatly increases. If the boss has no <color=#2c6bb7>Debuff</color> effects, the damage it takes is greatly reduced.\\n* When the boss attacks, it inflicts an undispellable <color=#2c6bb7>Burn</color> on targets without <color=#2c6bb7>Buff</color> effects.\\n* When the boss takes action, it inflicts Burn on <color=#2c6bb7>Light/Dark</color> allies, and when <color=#2c6bb7>Light/Dark</color> allies act, the boss removes its own debuffs.\\n* The boss is vulnerable to <color=#2c6bb7>Irregular Hunters</color>.",
-    "Japanese": "* ボスは<color=#2c6bb7>左側</color>の敵を優先的に攻撃し、対象が<color=#2c6bb7>防御型</color>でない場合、ボスの<color=#2c6bb7>攻撃力</color>が上昇します。\\n* ボスが<color=#2c6bb7>凍結</color>状態の場合、被ダメージが大幅に増加し、ボス自身に<color=#2c6bb7>弱化効果</color>がない場合は被ダメージが大幅に減少します。\\n* ボスが攻撃する際、<color=#2c6bb7>強化効果</color>のない対象に解除不可の<color=#2c6bb7>火傷</color>を付与します。\\n* ボスが行動すると<color=#2c6bb7>光/闇属性</color>の仲間に火傷を付与し、<color=#2c6bb7>光/闇属性</color>の仲間が行動すると自身の弱化効果を解除します。\\n* ボスは<color=#2c6bb7>イレギュラーハンター</color>に弱点があります。",
+    "Japanese": "* ボスは<color=#2c6bb7>左側</color>の敵を優先的に攻撃し、対象が<color=#2c6bb7>防御型</color>でない場合、ボスの<color=#2c6bb7>攻撃力</color>が上昇します。\\n* ボスが<color=#2c6bb7>凍結</color>状態の場合、被ダメージが大幅に増加し、ボス自身に<color=#2c6bb7>弱化効果</color>がない場合は被ダメージが大幅に減少します。\\n* ボスが攻撃する際、<color=#2c6bb7>強化効果</color>のない対象に解除不可の<color=#2c6bb7>火傷</color>を付与します。\\n* ボスが行動すると<color=#2c6bb7>光/闇属性</color>の仲間に火傷を付与し、<color=#2c6bb7>光/闇属性</color>の仲間が行動すると自分の弱化効果を解除します。\\n* ボスは<color=#2c6bb7>イレギュラーハンター</color>に弱点があります。",
     "China_Simplified": "* 首领会优先攻击<color=#2c6bb7>左侧</color>的敌人，若目标不是<color=#2c6bb7>防御型</color>，首领的<color=#2c6bb7>攻击力</color>将提升。\\n* 当首领处于<color=#2c6bb7>冰冻</color>状态时，所受伤害大幅增加；若首领自身没有<color=#2c6bb7>弱化效果</color>，所受伤害将大幅降低。\\n* 首领攻击时，会对没有<color=#2c6bb7>强化效果</color>的目标施加不可解除的<color=#2c6bb7>灼烧</color>。\\n* 首领行动时，会对<color=#2c6bb7>光/暗属性</color>同伴施加灼烧；当<color=#2c6bb7>光/暗属性</color>同伴行动时，首领会解除自身的弱化效果。\\n* 首领对<color=#2c6bb7>不规则猎人</color>较为脆弱。",
     "China_Traditional": "* 首領會優先攻擊<color=#2c6bb7>左側</color>的敵人，若目標不是<color=#2c6bb7>防禦型</color>，首領的<color=#2c6bb7>攻擊力</color>將提升。\\n* 當首領處於<color=#2c6bb7>冰凍</color>狀態時，所受傷害大幅增加；若首領自身沒有<color=#2c6bb7>弱化效果</color>，所受傷害將大幅降低。\\n* 首領攻擊時，會對沒有<color=#2c6bb7>強化效果</color>的目標施加不可解除的<color=#2c6bb7>灼燒</color>。\\n* 首領行動時，會對<color=#2c6bb7>光/暗屬性</color>同伴施加灼燒；當<color=#2c6bb7>光/暗屬性</color>同伴行動時，首領會解除自身的弱化效果。\\n* 首領對<color=#2c6bb7>不規則獵人</color>較為脆弱。"
   },
@@ -111379,7 +111379,7 @@
     "ID": "SYS_DUNGEON_CLEAR_TIP_140214_1",
     "Korean": "* 보스가 공격 시 자신에게 <color=#2c6bb7>강화 효과</color>를 부여하고, 적에게 <color=#2c6bb7>약화 효과</color>를 부여합니다.\\n* 보스는 자신이 보유한 <color=#2c6bb7>강화 효과</color>에 따라 <color=#2c6bb7>받는 피해가 감소</color>합니다.\\n* 보스가 광폭화하기 전까지 받는 <color=#2c6bb7>WG 피해가 50% 감소</color>합니다.\\n* <color=#f22fd8>암속성 아군</color>이 행동 종료 시, 보스의 <color=#2c6bb7>WG가 2 감소</color>합니다.\\n* 보스는 <color=#2c6bb7>이레귤러 헌터</color>에게 취약합니다.\\n* <color=#f24b6e>[하드 난이도]</color> 보스의 모든 공격은 적의 <color=#2c6bb7>방어력을 일정 비율 무시</color>합니다. \\n* <color=#f24b6e>[하드 난이도]</color> 방어력 무시 효과는 보스가 지닌 <color=#2c6bb7>강화 효과</color>에 비례하여 효과가 상승합니다.",
     "English": "* When the boss attacks, it grants itself <color=#2c6bb7>Buffs</color> and inflicts <color=#2c6bb7>Debuffs</color> on enemies.\\n* The boss takes reduced damage based on the number of <color=#2c6bb7>Buffs</color> it has.\\n* Until the boss enters Frenzy, <color=#2c6bb7>WG damage taken is reduced by 50%</color>.\\n* When a <color=#f22fd8>Dark-element ally</color> ends their action, the boss’s <color=#2c6bb7>WG is reduced by 2</color>.\\n* The boss is vulnerable to <color=#2c6bb7>Irregular Hunters</color>.\\n* <color=#f24b6e>[Hard Mode]</color> All boss attacks ignore a portion of enemy <color=#2c6bb7>Defense</color>.\\n* <color=#f24b6e>[Hard Mode]</color> The Defense Ignore effect increases in proportion to the boss’s <color=#2c6bb7>Buffs</color>.",
-    "Japanese": "ボスは攻撃時、自身に<color=#2c6bb7>強化効果</color>を付与し、敵に<color=#2c6bb7>弱体効果</color>を付与します。\\nボスは自身の<color=#2c6bb7>強化効果</color>の数に応じて<color=#2c6bb7>受けるダメージがDOWN</color>します。\\nボスが【狂暴化】するまで、受ける<color=#2c6bb7>WGダメージが50%DOWN</color>します。\\n<color=#f22fd8>闇属性の味方</color>が行動終了時、ボスの<color=#2c6bb7>WGが2DOWN</color>します。\\nボスは<color=#2c6bb7>イレギュラーハンター</color>に弱いです。\\n<color=#f24b6e>[Hard難易度]</color> ボスのすべての攻撃は、敵の<color=#2c6bb7>防御力を一定割合無視</color>します。\\n<color=#f24b6e>[Hard難易度]</color> 防御力無視効果は、ボスの<color=#2c6bb7>強化効果</color>の数に応じてUPします。",
+    "Japanese": "ボスは攻撃時、自身に<color=#2c6bb7>強化効果</color>を付与し、敵に<color=#2c6bb7>弱体効果</color>を付与します。\\nボスは自分の<color=#2c6bb7>強化効果</color>の数に応じて<color=#2c6bb7>受けるダメージがDOWN</color>します。\\nボスが【狂暴化】するまで、受ける<color=#2c6bb7>WGダメージが50%DOWN</color>します。\\n<color=#f22fd8>闇属性の味方</color>が行動終了時、ボスの<color=#2c6bb7>WGが2DOWN</color>します。\\nボスは<color=#2c6bb7>イレギュラーハンター</color>に弱いです。\\n<color=#f24b6e>[Hard難易度]</color> ボスのすべての攻撃は、敵の<color=#2c6bb7>防御力を一定割合無視</color>します。\\n<color=#f24b6e>[Hard難易度]</color> 防御力無視効果は、ボスの<color=#2c6bb7>強化効果</color>の数に応じてUPします。",
     "China_Simplified": "* 首领攻击时，赋予自身<color=#2c6bb7>强化效果</color>，并赋予敌方<color=#2c6bb7>弱化效果</color>。\\n* 首领<color=#2c6bb7>受到的伤害</color>会随其持有的<color=#2c6bb7>强化效果</color>数量降低。\\n* 在首领【狂暴化】之前，受到的<color=#2c6bb7>WG伤害降低50%</color>。\\n* <color=#f22fd8>暗属性友军</color>行动结束时，首领的<color=#2c6bb7>WG减少2点</color>。\\n* 首领对<color=#2c6bb7>异变者猎人</color>较为脆弱。\\n* <color=#f24b6e>[困难难度]</color> 首领的所有攻击<color=#2c6bb7>无视敌方一定比例的防御力</color>。\\n* <color=#f24b6e>[困难难度]</color> 无视防御力效果会随首领持有的<color=#2c6bb7>强化效果</color>数量提升。",
     "China_Traditional": "* 首領攻擊時，賦予自身<color=#2c6bb7>強化效果</color>，並賦予敵方<color=#2c6bb7>弱化效果</color>。\\n* 首領<color=#2c6bb7>受到的傷害</color>會隨其持有的<color=#2c6bb7>強化效果</color>數量減少。\\n* 在首領【狂暴化】之前，受到的<color=#2c6bb7>WG傷害減少50%</color>。\\n* <color=#f22fd8>暗屬性我軍</color>行動結束時，首領的<color=#2c6bb7>WG減少2點</color>。\\n* 首領對<color=#2c6bb7>異變者獵人</color>較為脆弱。\\n* <color=#f24b6e>[困難難度]</color> 首領的所有攻擊<color=#2c6bb7>無視敵方一定比例的防禦力</color>。\\n* <color=#f24b6e>[困難難度]</color> 無視防禦力效果會隨首領持有的<color=#2c6bb7>強化效果</color>數量提升。"
   },
@@ -112715,7 +112715,7 @@
     "ID": "SYS_MONAD_ENCHANT_NODE_2000069_1_DESC",
     "Korean": "<color=#3399FF>[요타 전용]</color>\\n전투 입장 시 자신에게 <color=#7FEE66>불사</color> 부여 및 자신 체력 <color=#7FEE66>50%</color> 감소",
     "English": "<color=#3399FF>[Iota Only]</color>\\nAt battle start, grants self <color=#7FEE66>Immortality</color> and reduces own HP by <color=#7FEE66>50%</color>.",
-    "Japanese": "<color=#3399FF>[イオータ専用]</color>\\n戦闘開始時、自身に<color=#7FEE66>不死</color>を付与し、自身のHPを<color=#7FEE66>50%</color>DOWN",
+    "Japanese": "<color=#3399FF>[イオータ専用]</color>\\n戦闘開始時、自身に<color=#7FEE66>不死</color>を付与し、自分のHPを<color=#7FEE66>50%</color>DOWN",
     "China_Simplified": "<color=#3399FF>[佑妲专用]</color>\\n战斗开始时赋予自身<color=#7FEE66>不死</color>并使自身生命值减少<color=#7FEE66>50%</color>。",
     "China_Traditional": "<color=#3399FF>[佑妲專用]</color>\\n戰鬥開始時賦予自身<color=#7FEE66>不死</color>並使自身生命值減少<color=#7FEE66>50%</color>。"
   },
@@ -112723,7 +112723,7 @@
     "ID": "SYS_MONAD_ENCHANT_NODE_2000079_1_DESC",
     "Korean": "<color=#3399FF>[쿠로 전용]</color>\\n전투 입장 시 자신 체력 <color=#7FEE66>99%</color> 감소",
     "English": "<color=#3399FF>[Kuro Only]</color>\\nAt battle start, reduces own HP by <color=#7FEE66>99%</color>.",
-    "Japanese": "<color=#3399FF>[クロ専用]</color>\\n戦闘開始時、自身のHPを<color=#7FEE66>99%</color>DOWN",
+    "Japanese": "<color=#3399FF>[クロ専用]</color>\\n戦闘開始時、自分のHPを<color=#7FEE66>99%</color>DOWN",
     "China_Simplified": "<color=#3399FF>[小黑专用]</color>\\n战斗开始时自身生命值减少<color=#7FEE66>99%</color>。",
     "China_Traditional": "<color=#3399FF>[黑澤專用]</color>\\n戰鬥開始時自身生命值減少<color=#7FEE66>99%</color>。"
   },
@@ -112747,7 +112747,7 @@
     "ID": "SYS_MONAD_ENCHANT_NODE_2000055_2_DESC",
     "Korean": "<color=#3399FF>[아에르 전용]</color>\\n<color=#7FEE66>여름으로 가는 물?</color> 사용 후 자신 행동 게이지 <color=#7FEE66>50%</color> 증가(버스트 포함)\\n<color=#ffd732>루트 2에서만 효과 발동</color>",
     "English": "<color=#3399FF>[Aer Only]</color>\\nAfter using <color=#7FEE66>To the Beach?</color>, increases own Priority by <color=#7FEE66>50%</color> (including Burst).\\n<color=#ffd732>Effect only activates in Route 2</color>",
-    "Japanese": "<color=#3399FF>[アエル専用]</color>\\n<color=#7FEE66>【みんなもサーフィンしよっ!】</color>使用後、自身の行動ゲージ<color=#7FEE66>50%</color>UP（バースト含む）\\n<color=#ffd732>ルート2でのみ効果発動</color>",
+    "Japanese": "<color=#3399FF>[アエル専用]</color>\\n<color=#7FEE66>【みんなもサーフィンしよっ!】</color>使用後、自分の行動ゲージ<color=#7FEE66>50%</color>UP（バースト含む）\\n<color=#ffd732>ルート2でのみ効果発動</color>",
     "China_Simplified": "<color=#3399FF>[艾耶尔专用]</color>\\n使用<color=#7FEE66>冲向夏天</color>后，自身行动值提高<color=#7FEE66>50%</color>（包含Burst）。\\n<color=#ffd732>仅在路线2生效</color>",
     "China_Traditional": "<color=#3399FF>[艾耶爾專用]</color>\\n使用<color=#7FEE66>衝向夏天？</color>後，自身行動值提高<color=#7FEE66>50%</color>（包含Burst）。\\n<color=#ffd732>僅在路線2生效</color>"
   },
@@ -112795,7 +112795,7 @@
     "ID": "SYS_MONAD_ENCHANT_NODE_2000069_2_DESC",
     "Korean": "<color=#3399FF>[요타 전용]</color>\\n턴 획득 시 자신의 치명 확률 <color=#7FEE66>1턴</color> 증가\\n<color=#ffd732>루트 5에서만 효과 발동</color>",
     "English": "<color=#3399FF>[Iota Only]</color>\\nWhen gaining a turn, increases own Critical Chance for <color=#7FEE66>1 turn</color>.\\n<color=#ffd732>Effect only activates in Route 5</color>",
-    "Japanese": "<color=#3399FF>[イオータ専用]</color>\\nターン獲得時、自身の会心率<color=#7FEE66>1ターン</color>UP\\n<color=#ffd732>ルート5でのみ効果発動</color>",
+    "Japanese": "<color=#3399FF>[イオータ専用]</color>\\nターン獲得時、自分の会心率<color=#7FEE66>1ターン</color>UP\\n<color=#ffd732>ルート5でのみ効果発動</color>",
     "China_Simplified": "<color=#3399FF>[佑妲专用]</color>\\n获得回合时，自身暴击率提高<color=#7FEE66>1回合</color>。\\n<color=#ffd732>仅在路线5生效</color>",
     "China_Traditional": "<color=#3399FF>[佑妲專用]</color>\\n獲得回合時，自身暴擊率提高<color=#7FEE66>1回合</color>。\\n<color=#ffd732>僅在路線5生效</color>"
   },
@@ -112803,7 +112803,7 @@
     "ID": "SYS_MONAD_ENCHANT_NODE_2000079_2_DESC",
     "Korean": "<color=#3399FF>[쿠로 전용]</color>\\n<color=#7FEE66>아직 자기 싫어!</color> 사용 시 자신의 치명 확률 증가 및 무적 획득(각 <color=#7FEE66>2턴</color>)\\n<color=#ffd732>루트 5에서만 효과 발동</color>",
     "English": "<color=#3399FF>[Kuro Only]</color>\\nWhen using <color=#7FEE66>It's Not Bedtime Yet!</color>, increases own Critical Chance and grants Invincibility (each for <color=#7FEE66>2 turns</color>).\\n<color=#ffd732>Effect only activates in Route 5</color>",
-    "Japanese": "<color=#3399FF>[クロ専用]</color>\\n<color=#7FEE66>【まだ眠たくない!】</color>使用時、自身の会心率UP、さらに<color=#7FEE66>無敵</color>を獲得（<color=#7FEE66>2ターン</color>）\\n<color=#ffd732>ルート5でのみ効果発動</color>",
+    "Japanese": "<color=#3399FF>[クロ専用]</color>\\n<color=#7FEE66>【まだ眠たくない!】</color>使用時、自分の会心率UP、さらに<color=#7FEE66>無敵</color>を獲得（<color=#7FEE66>2ターン</color>）\\n<color=#ffd732>ルート5でのみ効果発動</color>",
     "China_Simplified": "<color=#3399FF>[小黑专用]</color>\\n使用<color=#7FEE66>还不想睡！</color>时，提高自身暴击率并获得<color=#7FEE66>无敌</color>（各持续<color=#7FEE66>2回合</color>）。\\n<color=#ffd732>仅在路线5生效</color>",
     "China_Traditional": "<color=#3399FF>[黑澤專用]</color>\\n使用<color=#7FEE66>我還不想睡！</color>時，提高自身暴擊率並獲得<color=#7FEE66>無敵</color>（各持續<color=#7FEE66>2回合</color>）。\\n<color=#ffd732>僅在路線5生效</color>"
   },
@@ -112827,7 +112827,7 @@
     "ID": "SYS_MONAD_ENCHANT_NODE_2000055_3_DESC",
     "Korean": "<color=#3399FF>[아에르 전용]</color>\\n턴 획득 시 자신의 치명 확률 / 치명 피해량이 각 <color=#7FEE66>15% / 20%</color> 증가(최대 3회 중첩)\\n<color=#ffd732>루트 2에서만 효과 발동</color>",
     "English": "<color=#3399FF>[Aer Only]</color>\\nWhen gaining a turn, increases own Critical Chance / Critical Damage by <color=#7FEE66>15% / 20%</color> respectively (Max 3 stacks).\\n<color=#ffd732>Effect only activates in Route 2</color>",
-    "Japanese": "<color=#3399FF>[アエル専用]</color>\\nターン獲得時、自身の会心率/会心ダメージ<color=#7FEE66>15% / 20%</color>UP（最大3回重複）\\n<color=#ffd732>ルート2でのみ効果発動</color>",
+    "Japanese": "<color=#3399FF>[アエル専用]</color>\\nターン獲得時、自分の会心率/会心ダメージ<color=#7FEE66>15% / 20%</color>UP（最大3回重複）\\n<color=#ffd732>ルート2でのみ効果発動</color>",
     "China_Simplified": "<color=#3399FF>[艾耶尔专用]</color>\\n获得回合时，自身暴击率 / 暴击伤害分别提高<color=#7FEE66>15% / 20%</color>（最多叠加3次）。\\n<color=#ffd732>仅在路线2生效</color>",
     "China_Traditional": "<color=#3399FF>[艾耶爾專用]</color>\\n獲得回合時，自身暴擊率 / 暴擊傷害分別提高<color=#7FEE66>15% / 20%</color>（最多疊加3次）。\\n<color=#ffd732>僅在路線2生效</color>"
   },
@@ -113195,7 +113195,7 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_01",
     "Korean": "<color=#28d9ed>3인</color> 이상의 <color=#28d9ed>데미우르고스, 혹은 한정</color> 동료 편성 시, 편성 동료 모두에게 일정한 패널티가 발생합니다.\\n\\n<color=#ffd732>불협화음 1단계</color>\\n편성 동료 모두 공격력/체력/속도 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>불협화음 2단계</color>\\n편성 동료 모두 공격력/체력/속도 <color=#28d9ed>60%</color> 감소",
     "English": "When <color=#28d9ed>3 or more</color> <color=#28d9ed>Demiurge or Limited</color> heroes are in the lineup, a penalty is applied to all lineup members.\\n\\n<color=#ffd732>Discord Stage 1</color>\\nAll lineup members' Attack/Health/Speed reduced by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Discord Stage 2</color>\\nAll lineup members' Attack/Health/Speed reduced by <color=#28d9ed>60%</color>",
-    "Japanese": "<color=#28d9ed>3人</color>以上の<color=#28d9ed>デミウルゴス、または限定</color>の仲間を編成した場合、編成した仲間全員に一定のペナルティが発生します。\\n\\n<color=#ffd732>不協和音 第1段階</color>\\n編成仲間全員の攻撃力/HP/スピード<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>不協和音 第2段階</color>\\n編成仲間全員の攻撃力/HP/スピード<color=#28d9ed>60%</color>減少",
+    "Japanese": "<color=#28d9ed>3人</color>以上の<color=#28d9ed>デミウルゴス、または限定</color>の仲間を編成した場合、編成した仲間全員に一定のペナルティが発生する。\\n\\n<color=#ffd732>不協和音 第1段階</color>\\n編成仲間全員の攻撃力/HP/スピード<color=#28d9ed>30%</color>DOWN\\n\\n<color=#ffd732>不協和音 第2段階</color>\\n編成仲間全員の攻撃力/HP/スピード<color=#28d9ed>60%</color>DOWN",
     "China_Simplified": "编成<color=#28d9ed>3名</color>以上<color=#28d9ed>创世之神或限定</color>同伴时，所有编成同伴均会产生一定的惩罚。\\n\\n<color=#ffd732>不和 第1阶段</color>\\n所有编成同伴攻击力/生命值/速度降低<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>不和 第2阶段</color>\\n所有编成同伴攻击力/生命值/速度降低<color=#28d9ed>60%</color>",
     "China_Traditional": "編成<color=#28d9ed>3名</color>以上<color=#28d9ed>迪米烏哥斯或限定</color>同伴時，所有編成同伴均會產生一定的懲罰。\\n\\n<color=#ffd732>不和 第1階段</color>\\n所有編成同伴攻擊力/生命值/速度降低<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>不和 第2階段</color>\\n所有編成同伴攻擊力/生命值/速度降低<color=#28d9ed>60%</color>"
   },
@@ -113211,7 +113211,7 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_02",
     "Korean": "리더로 설정한 동료의 직업에 따라 이로운 효과를 얻습니다.\\n\\n<color=#ffd732>공격형</color>\\n아군 전체 체력, 공격력 <color=#28d9ed>20%</color> 증가\\n피격 시 행동게이지 <color=#28d9ed>15%</color> 증가 (리더 본인)\\n\\n<color=#ffd732>마법형</color>\\n아군 전체 주는 피해, 공격력 <color=#28d9ed>20%</color> 증가\\n턴 획득 시 피해량 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>10%</color> 증가 (리더 본인)\\n\\n<color=#ffd732>속도형</color>\\n아군 전체 효과 적중, 효과 저항 <color=#28d9ed>30%</color> 증가\\n자신의 속도 <color=#28d9ed>10%</color> 증가 (리더 본인)\\n\\n<color=#ffd732>방어형</color>\\n아군 전체 체력, 방어력 <color=#28d9ed>30%</color> 증가\\n자신이 받는 최종 피해 <color=#28d9ed>10%</color> 감소 (리더 본인)\\n\\n<color=#ffd732>회복형</color>\\n아군 전체 받는 피해, 받는 치명 피해 <color=#28d9ed>30%</color> 감소\\n피격 시 아군 전체 행동 게이지 <color=#28d9ed>5%</color> 증가 (리더 본인)",
     "English": "Gain beneficial effects based on the class of the hero set as Leader.\\n\\n<color=#ffd732>Striker</color>\\nAll heroes' Health, Attack increase by <color=#28d9ed>20%</color>\\nPriority increases by <color=#28d9ed>15%</color> when hit (Leader only)\\n\\n<color=#ffd732>Mage</color>\\nAll heroes' DMG dealt, Attack increase by <color=#28d9ed>20%</color>\\nDMG increases by <color=#28d9ed>10%</color> for <color=#28d9ed>1 turn</color> when a turn is gained (Leader only)\\n\\n<color=#ffd732>Ranger</color>\\nAll heroes' Effectiveness, Resilience increase by <color=#28d9ed>30%</color>\\nOwn Speed increases by <color=#28d9ed>10%</color> (Leader only)\\n\\n<color=#ffd732>Defender</color>\\nAll heroes' Health, Defense increase by <color=#28d9ed>30%</color>\\nFinal DMG taken decreases by <color=#28d9ed>10%</color> (Leader only)\\n\\n<color=#ffd732>Healer</color>\\nAll heroes' DMG taken, Crit DMG taken decrease by <color=#28d9ed>30%</color>\\nAll heroes' Priority increases by <color=#28d9ed>5%</color> when hit (Leader only)",
-    "Japanese": "リーダーに設定した仲間のクラスに応じて有益な効果を得ます。\\n\\n<color=#ffd732>攻撃型</color>\\n味方全体のHP、攻撃力<color=#28d9ed>20%</color>増加\\n被撃時、行動ゲージ<color=#28d9ed>15%</color>増加（リーダー本人）\\n\\n<color=#ffd732>魔法型</color>\\n味方全体の与ダメージ、攻撃力<color=#28d9ed>20%</color>増加\\nターン獲得時、ダメージ<color=#28d9ed>1ターン</color>間<color=#28d9ed>10%</color>増加（リーダー本人）\\n\\n<color=#ffd732>スピード型</color>\\n味方全体の効果命中、効果抵抗<color=#28d9ed>30%</color>増加\\n自分のスピード<color=#28d9ed>10%</color>増加（リーダー本人）\\n\\n<color=#ffd732>防御型</color>\\n味方全体のHP、防御力<color=#28d9ed>30%</color>増加\\n自身が受ける最終ダメージ<color=#28d9ed>10%</color>減少（リーダー本人）\\n\\n<color=#ffd732>回復型</color>\\n味方全体の被ダメージ、被会心ダメージ<color=#28d9ed>30%</color>減少\\n被撃時、味方全体の行動ゲージ<color=#28d9ed>5%</color>増加（リーダー本人）",
+    "Japanese": "リーダーに設定した仲間のクラスに応じて有益な効果を得る。\\n\\n<color=#ffd732>攻撃型</color>\\n味方全体のHP、攻撃力<color=#28d9ed>20%</color>UP\\n被撃時、行動ゲージ<color=#28d9ed>15%</color>UP（リーダー本人）\\n\\n<color=#ffd732>魔法型</color>\\n味方全体の与ダメージ、攻撃力<color=#28d9ed>20%</color>UP\\nターン獲得時、ダメージ<color=#28d9ed>1ターン</color>間<color=#28d9ed>10%</color>UP（リーダー本人）\\n\\n<color=#ffd732>スピード型</color>\\n味方全体の効果命中、効果抵抗<color=#28d9ed>30%</color>UP\\n自分のスピード<color=#28d9ed>10%</color>UP（リーダー本人）\\n\\n<color=#ffd732>防御型</color>\\n味方全体のHP、防御力<color=#28d9ed>30%</color>UP\\n自分が受ける最終ダメージ<color=#28d9ed>10%</color>DOWN（リーダー本人）\\n\\n<color=#ffd732>回復型</color>\\n味方全体の被ダメージ、被会心ダメージ<color=#28d9ed>30%</color>DOWN\\n被撃時、味方全体の行動ゲージ<color=#28d9ed>5%</color>UP（リーダー本人）",
     "China_Simplified": "根据设置为队长的同伴职业，获得有益效果。\\n\\n<color=#ffd732>攻击型</color>\\n我方全体生命值、攻击力提升<color=#28d9ed>20%</color>\\n被攻击时，行动值提升<color=#28d9ed>15%</color>（队长本人）\\n\\n<color=#ffd732>魔法型</color>\\n我方全体造成伤害、攻击力提升<color=#28d9ed>20%</color>\\n获得回合时，伤害量在<color=#28d9ed>1回合</color>内提升<color=#28d9ed>10%</color>（队长本人）\\n\\n<color=#ffd732>速度型</color>\\n我方全体效果命中、效果抵抗提升<color=#28d9ed>30%</color>\\n自身速度提升<color=#28d9ed>10%</color>（队长本人）\\n\\n<color=#ffd732>防御型</color>\\n我方全体生命值、防御力提升<color=#28d9ed>30%</color>\\n自身受到的最终伤害降低<color=#28d9ed>10%</color>（队长本人）\\n\\n<color=#ffd732>恢复型</color>\\n我方全体受到伤害、受到暴击伤害降低<color=#28d9ed>30%</color>\\n被攻击时，我方全体行动值提升<color=#28d9ed>5%</color>（队长本人）",
     "China_Traditional": "根據設置為隊長的同伴職業，獲得有益效果。\\n\\n<color=#ffd732>攻擊型</color>\\n我方全體生命值、攻擊力提升<color=#28d9ed>20%</color>\\n被攻擊時，速攻值提升<color=#28d9ed>15%</color>（隊長本人）\\n\\n<color=#ffd732>魔法型</color>\\n我方全體造成傷害、攻擊力提升<color=#28d9ed>20%</color>\\n獲得回合時，傷害量在<color=#28d9ed>1回合</color>內提升<color=#28d9ed>10%</color>（隊長本人）\\n\\n<color=#ffd732>速度型</color>\\n我方全體效果命中、效果抵抗提升<color=#28d9ed>30%</color>\\n自身速度提升<color=#28d9ed>10%</color>（隊長本人）\\n\\n<color=#ffd732>防禦型</color>\\n我方全體生命值、防禦力提升<color=#28d9ed>30%</color>\\n自身受到的最終傷害降低<color=#28d9ed>10%</color>（隊長本人）\\n\\n<color=#ffd732>恢復型</color>\\n我方全體受到傷害、受到暴擊傷害降低<color=#28d9ed>30%</color>\\n被攻擊時，我方全體速攻值提升<color=#28d9ed>5%</color>（隊長本人）"
   },
@@ -113235,7 +113235,7 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_RANGER",
     "Korean": "<color=#28d9ed>속도형</color> 동료를 리더로 지정하였습니다.\\n\\n<color=#ffd732>발생 효과 : 은밀한 암살자</color>\\n아군 전체 효과 적중, 효과 저항 <color=#28d9ed>30%</color> 증가\\n자신의 속도 <color=#28d9ed>10%</color> 증가 (리더 본인)",
     "English": "A <color=#28d9ed>Ranger</color> hero has been set as Leader.\\n\\n<color=#ffd732>Effect : Silent Assassin</color>\\nAll heroes' Effectiveness, Resilience increase by <color=#28d9ed>30%</color>\\nOwn Speed increases by <color=#28d9ed>10%</color> (Leader only)",
-    "Japanese": "<color=#28d9ed>スピード型</color>の仲間をリーダーに指定しました。\\n\\n<color=#ffd732>発生効果：隠密の暗殺者</color>\\n味方全体の効果命中、効果抵抗<color=#28d9ed>30%</color>増加\\n自分のスピード<color=#28d9ed>10%</color>増加（リーダー本人）",
+    "Japanese": "<color=#28d9ed>スピード型</color>の仲間をリーダーに指定\\n\\n<color=#ffd732>発生効果：隠密の暗殺者</color>\\n味方全体の効果命中、効果抵抗<color=#28d9ed>30%</color>UP\\n自分のスピード<color=#28d9ed>10%</color>UP（リーダー本人）",
     "China_Simplified": "已将<color=#28d9ed>速度型</color>同伴设置为队长。\\n\\n<color=#ffd732>发动效果：隐秘的刺客</color>\\n我方全体效果命中、效果抵抗提升<color=#28d9ed>30%</color>\\n自身速度提升<color=#28d9ed>10%</color>（队长本人）",
     "China_Traditional": "已將<color=#28d9ed>速度型</color>同伴設置為隊長。\\n\\n<color=#ffd732>發動效果：隱密的刺客</color>\\n我方全體效果命中、效果抵抗提升<color=#28d9ed>30%</color>\\n自身速度提升<color=#28d9ed>10%</color>（隊長本人）"
   },
@@ -113243,7 +113243,7 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_DEFENDER",
     "Korean": "<color=#28d9ed>방어형</color> 동료를 리더로 지정하였습니다.\\n\\n<color=#ffd732>발생 효과 : 굳건한 수호자</color>\\n아군 전체 체력, 방어력 <color=#28d9ed>30%</color> 증가\\n자신이 받는 최종 피해 <color=#28d9ed>10%</color> 감소 (리더 본인)",
     "English": "A <color=#28d9ed>Defender</color> hero has been set as Leader.\\n\\n<color=#ffd732>Effect : Steadfast Guardian</color>\\nAll heroes' Health, Defense increase by <color=#28d9ed>30%</color>\\nFinal DMG taken decreases by <color=#28d9ed>10%</color> (Leader only)",
-    "Japanese": "<color=#28d9ed>防御型</color>の仲間をリーダーに指定しました。\\n\\n<color=#ffd732>発生効果：堅固な守護者</color>\\n味方全体のHP、防御力<color=#28d9ed>30%</color>増加\\n自身が受ける最終ダメージ<color=#28d9ed>10%</color>減少（リーダー本人）",
+    "Japanese": "<color=#28d9ed>防御型</color>の仲間をリーダーに指定しました。\\n\\n<color=#ffd732>発生効果：堅固な守護者</color>\\n味方全体のHP、防御力<color=#28d9ed>30%</color>増加\\n自分が受ける最終ダメージ<color=#28d9ed>10%</color>減少（リーダー本人）",
     "China_Simplified": "已将<color=#28d9ed>防御型</color>同伴设置为队长。\\n\\n<color=#ffd732>发动效果：坚定的守护者</color>\\n我方全体生命值、防御力提升<color=#28d9ed>30%</color>\\n自身受到的最终伤害降低<color=#28d9ed>10%</color>（队长本人）",
     "China_Traditional": "已將<color=#28d9ed>防禦型</color>同伴設置為隊長。\\n\\n<color=#ffd732>發動效果：堅定的守護者</color>\\n我方全體生命值、防禦力提升<color=#28d9ed>30%</color>\\n自身受到的最終傷害降低<color=#28d9ed>10%</color>（隊長本人）"
   },
@@ -113251,7 +113251,7 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_PRIEST",
     "Korean": "<color=#28d9ed>회복형</color> 동료를 리더로 지정하였습니다.\\n\\n<color=#ffd732>발생 효과 : 신성한 치유자</color>\\n아군 전체 받는 피해, 받는 치명 피해 <color=#28d9ed>30%</color> 감소\\n피격 시 아군 전체 행동 게이지 <color=#28d9ed>5%</color> 증가 (리더 본인)",
     "English": "A <color=#28d9ed>Healer</color> hero has been set as Leader.\\n\\n<color=#ffd732>Effect : Sacred Healer</color>\\nAll heroes' DMG taken, Crit DMG taken decrease by <color=#28d9ed>30%</color>\\nAll heroes' Priority increases by <color=#28d9ed>5%</color> when hit (Leader only)",
-    "Japanese": "<color=#28d9ed>回復型</color>の仲間をリーダーに指定しました。\\n\\n<color=#ffd732>発生効果：神聖な治癒者</color>\\n味方全体の被ダメージ、被会心ダメージ<color=#28d9ed>30%</color>減少\\n被撃時、味方全体の行動ゲージ<color=#28d9ed>5%</color>増加（リーダー本人）",
+    "Japanese": "<color=#28d9ed>回復型</color>の仲間をリーダーに指定しました。\\n\\n<color=#ffd732>発生効果：神聖な治癒者</color>\\n味方全体の被ダメージ、被会心ダメージ<color=#28d9ed>30%</color>DOWN\\n被撃時、味方全体の行動ゲージ<color=#28d9ed>5%</color>UP（リーダー本人）",
     "China_Simplified": "已将<color=#28d9ed>恢复型</color>同伴设置为队长。\\n\\n<color=#ffd732>发动效果：神圣的治愈者</color>\\n我方全体受到伤害、受到暴击伤害降低<color=#28d9ed>30%</color>\\n被攻击时，我方全体行动值提升<color=#28d9ed>5%</color>（队长本人）",
     "China_Traditional": "已將<color=#28d9ed>恢復型</color>同伴設置為隊長。\\n\\n<color=#ffd732>發動效果：神聖的治癒者</color>\\n我方全體受到傷害、受到暴擊傷害降低<color=#28d9ed>30%</color>\\n被攻擊時，我方全體速攻值提升<color=#28d9ed>5%</color>（隊長本人）"
   },
@@ -113267,7 +113267,7 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_03",
     "Korean": "전투 시작 시, 모든 생존자는 체력이 <color=#28d9ed>50%</color> 증가하고 받는 피해와 필살기 피해량이 <color=#28d9ed>50%</color> 감소합니다.(영구 지속) 또한, 부활 시 행동 게이지 회복이 <color=#28d9ed>30%</color> 감소하며 받는 고정 피해가 <color=#28d9ed>6000</color>을 넘지 않습니다.\\n\\n<color=#ffd732>전투가 진행됨에 따라 다음의 효과가 적용됩니다.</color>\\n8턴 이후 : 8턴마다 주는 피해 증가 / 회복량 감소 / 효과 적중 증가\\n16턴 : 모든 강화 효과 해제\\n24턴 : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>일부 전투 스탯이 아래의 상한이 설정됩니다.</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420)",
     "English": "At the start of battle, all survivors' Health increases by <color=#28d9ed>50%</color> and DMG taken and Ultimate Skill DMG decrease by <color=#28d9ed>50%</color>. (permanent) Additionally, Priority recovery upon Revive decreases by <color=#28d9ed>30%</color> and fixed DMG taken cannot exceed <color=#28d9ed>6000</color>.\\n\\n<color=#ffd732>The following effects are applied as battle progresses.</color>\\nAfter turn 8 : Every 8 turns, DMG dealt increases / Healing decreases / Effectiveness increases\\nTurn 16 : All buffs dispelled\\nTurn 24 : All buffs dispelled, Unbuffable applied (Ignores immunity / Cannot be dispelled)\\n\\n<color=#ffd732>The following stat caps apply in battle.</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420)",
-    "Japanese": "戦闘開始時、すべての生存者はHPが<color=#28d9ed>50%</color>増加し、受けるダメージと必殺スキルのダメージが<color=#28d9ed>50%</color>減少します。（永続）また、復活時の行動ゲージ回復が<color=#28d9ed>30%</color>減少します。\\n\\n<color=#ffd732>戦闘が進むにつれて以下の効果が適用されます。</color>\\n8ターン以降：8ターンごとに与ダメージ増加 / 回復量減少 / 効果命中増加\\n16ターン：すべての強化効果解除\\n24ターン：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>一部の戦闘ステータスに以下の上限が設定されます。</color>\\nHP(4,000) / 攻撃力(6,000) / 防御力(4,000) / 速度(300) / 会心率(80%) / 会心ダメージ(280%) / 貫通力(50%) / 効果命中(450)",
+    "Japanese": "戦闘開始時、すべての生存者はHPが<color=#28d9ed>50%</color>UPし、受けるダメージと必殺スキルのダメージが<color=#28d9ed>50%</color>DOWNする。（永続）また、復活時の行動ゲージ回復が<color=#28d9ed>30%</color>DOWNする。\\n\\n<color=#ffd732>戦闘が進むにつれて以下の効果が適用される。</color>\\n8ターン以降：8ターンごとに与ダメージUP / 回復量DOWN / 効果命中UP\\n16ターン：すべての強化効果解除\\n24ターン：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>一部の戦闘ステータスに以下の上限が設定される。</color>\\nHP(4,000) / 攻撃力(6,000) / 防御力(4,000) / スピード(300) / 会心率(80%) / 会心ダメージ(280%) / 貫通力(50%) / 効果命中(450)",
     "China_Simplified": "战斗开始时，所有存活者生命值提升<color=#28d9ed>50%</color>，受到伤害和必杀技伤害量降低<color=#28d9ed>50%</color>。（永久持续）此外，复活时行动值恢复降低<color=#28d9ed>30%</color>，受到的固定伤害不超过<color=#28d9ed>6000</color>。\\n\\n<color=#ffd732>随着战斗进行，将适用以下效果。</color>\\n第8回合后：每8回合，造成伤害增加 / 恢复量减少 / 效果命中增加\\n第16回合：解除所有强化效果\\n第24回合：解除所有强化效果，适用强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>部分战斗属性将设置以下上限。</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 暴击率(80%) / 暴击伤害(280%) / 穿透力(50%) / 效果命中(420)",
     "China_Traditional": "戰鬥開始時，所有存活者生命值提升<color=#28d9ed>50%</color>，受到傷害和必殺技傷害量降低<color=#28d9ed>50%</color>。（永久持續）此外，復活時速攻值恢復降低<color=#28d9ed>30%</color>，受到的固定傷害不超過<color=#28d9ed>6000</color>。\\n\\n<color=#ffd732>隨著戰鬥進行，將適用以下效果。</color>\\n第8回合後：每8回合，造成傷害增加 / 恢復量減少 / 效果命中增加\\n第16回合：解除所有強化效果\\n第24回合：解除所有強化效果，適用強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>部分戰鬥屬性將設置以下上限。</color>\\n生命值(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 暴擊率(80%) / 暴擊傷害(280%) / 貫穿力(50%) / 效果命中(420)"
   },
@@ -113283,25 +113283,25 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_04",
     "Korean": "전투 시작 시, 모든 생존자는 체력이 <color=#28d9ed>30%</color> 증가하고 받는 피해와 필살기 피해량이 <color=#28d9ed>30%</color> 감소합니다.(영구 지속) 또한, 부활 시 행동 게이지 회복이 <color=#28d9ed>30%</color> 감소합니다.\\n\\n<color=#ffd732>전투가 진행됨에 따라 다음의 효과가 적용됩니다.</color>\\n8턴 이후 : 8턴마다 주는 피해 증가 / 회복량 감소 / 효과 적중 증가\\n16턴 : 모든 강화 효과 해제\\n24턴 : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)",
     "English": "At the start of battle, all survivors' Health increases by <color=#28d9ed>30%</color> and DMG taken and Ultimate Skill DMG decrease by <color=#28d9ed>30%</color>. (permanent) Additionally, Priority recovery upon Revive decreases by <color=#28d9ed>30%</color>.\\n\\n<color=#ffd732>The following effects are applied as battle progresses.</color>\\nAfter turn 8 : Every 8 turns, DMG dealt increases / Healing decreases / Effectiveness increases\\nTurn 16 : All buffs dispelled\\nTurn 24 : All buffs dispelled, Unbuffable applied (Ignores immunity / Cannot be dispelled)",
-    "Japanese": "戦闘開始時、すべての生存者はHPが<color=#28d9ed>30%</color>増加し、受けるダメージと必殺スキルのダメージが<color=#28d9ed>30%</color>減少します。（永続）また、復活時の行動ゲージ回復が<color=#28d9ed>30%</color>減少します。\\n\\n<color=#ffd732>戦闘が進むにつれて以下の効果が適用されます。</color>\\n8ターン以降：8ターンごとに与ダメージ増加 / 回復量減少 / 効果命中増加\\n16ターン：すべての強化効果解除\\n24ターン：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）",
+    "Japanese": "戦闘開始時、すべての生存者はHPが<color=#28d9ed>30%</color>UPし、受けるダメージと必殺スキルのダメージが<color=#28d9ed>30%</color>DOWNする。（永続）また、復活時の行動ゲージ回復が<color=#28d9ed>30%</color>DOWNする。\\n\\n<color=#ffd732>戦闘が進むにつれて以下の効果が適用される。</color>\\n8ターン以降：8ターンごとに与ダメージUP / 回復量DOWN / 効果命中UP\\n16ターン：すべての強化効果解除\\n24ターン：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）",
     "China_Simplified": "战斗开始时，所有存活者生命值提升<color=#28d9ed>30%</color>，受到伤害和必杀技伤害量降低<color=#28d9ed>30%</color>。（永久持续）此外，复活时行动值恢复降低<color=#28d9ed>30%</color>。\\n\\n<color=#ffd732>随着战斗进行，将适用以下效果。</color>\\n第8回合后：每8回合，造成伤害增加 / 恢复量减少 / 效果命中增加\\n第16回合：解除所有强化效果\\n第24回合：解除所有强化效果，适用强化不可（无视免疫 / 无法解除）",
     "China_Traditional": "戰鬥開始時，所有存活者生命值提升<color=#28d9ed>30%</color>，受到傷害和必殺技傷害量降低<color=#28d9ed>30%</color>。（永久持續）此外，復活時速攻值恢復降低<color=#28d9ed>30%</color>。\\n\\n<color=#ffd732>隨著戰鬥進行，將適用以下效果。</color>\\n第8回合後：每8回合，造成傷害增加 / 恢復量減少 / 效果命中增加\\n第16回合：解除所有強化效果\\n第24回合：解除所有強化效果，適用強化不可（無視免疫 / 無法解除）"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_05",
     "Korean": "전투 시작 시, 체력 <color=#28d9ed>50%</color> 증가\\n받는 최종 피해, 필살기 피해량 <color=#28d9ed>50%</color> 감소",
-    "English": "Upon entering battle, Health increases by <color=#28d9ed>50%</color>\\nFinal DMG taken, Ultimate Skill DMG decrease by <color=#28d9ed>50%</color>",
-    "Japanese": "戦闘開始時、HP<color=#28d9ed>50%</color>増加\\n受ける最終ダメージ、必殺スキルのダメージ<color=#28d9ed>50%</color>減少",
-    "China_Simplified": "进入战斗时，生命值提升<color=#28d9ed>50%</color>\\n受到的最终伤害、必杀技伤害量降低<color=#28d9ed>50%</color>",
-    "China_Traditional": "進入戰鬥時，生命值提升<color=#28d9ed>50%</color>\\n受到的最終傷害、必殺技傷害量降低<color=#28d9ed>50%</color>"
+    "English": "At the start of battle, Health increases by <color=#28d9ed>50%</color>\\nFinal DMG taken, Ultimate Skill DMG decrease by <color=#28d9ed>50%</color>",
+    "Japanese": "戦闘開始時、HP<color=#28d9ed>50%</color>UP\\n受ける最終ダメージ、必殺スキルのダメージ<color=#28d9ed>50%</color>DOWN",
+    "China_Simplified": "战斗开始时，生命值提升<color=#28d9ed>50%</color>\\n受到的最终伤害、必杀技伤害量降低<color=#28d9ed>50%</color>",
+    "China_Traditional": "戰鬥開始時，生命值提升<color=#28d9ed>50%</color>\\n受到的最終傷害、必殺技傷害量降低<color=#28d9ed>50%</color>"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_06",
     "Korean": "전투 시작 시, 체력 <color=#28d9ed>30%</color> 증가\\n받는 최종 피해, 필살기 피해량 <color=#28d9ed>30%</color> 감소",
-    "English": "Upon entering battle, Health increases by <color=#28d9ed>30%</color>\\nFinal DMG taken, Ultimate Skill DMG decrease by <color=#28d9ed>30%</color>",
-    "Japanese": "戦闘開始時、HP<color=#28d9ed>30%</color>増加\\n受ける最終ダメージ、必殺スキルのダメージ<color=#28d9ed>30%</color>減少",
-    "China_Simplified": "进入战斗时，生命值提升<color=#28d9ed>30%</color>\\n受到的最终伤害、必杀技伤害量降低<color=#28d9ed>30%</color>",
-    "China_Traditional": "進入戰鬥時，生命值提升<color=#28d9ed>30%</color>\\n受到的最終傷害、必殺技傷害量降低<color=#28d9ed>30%</color>"
+    "English": "At the start of battle, Health increases by <color=#28d9ed>30%</color>\\nFinal DMG taken, Ultimate Skill DMG decrease by <color=#28d9ed>30%</color>",
+    "Japanese": "戦闘開始時、HP<color=#28d9ed>30%</color>UP\\n受ける最終ダメージ、必殺スキルのダメージ<color=#28d9ed>30%</color>DOWN",
+    "China_Simplified": "战斗开始时，生命值提升<color=#28d9ed>30%</color>\\n受到的最终伤害、必杀技伤害量降低<color=#28d9ed>30%</color>",
+    "China_Traditional": "戰鬥開始時，生命值提升<color=#28d9ed>30%</color>\\n受到的最終傷害、必殺技傷害量降低<color=#28d9ed>30%</color>"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_07",
@@ -113323,7 +113323,7 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_09",
     "Korean": "<color=#28d9ed>3인</color> 이상의 <color=#28d9ed>데미우르고스, 혹은 한정</color> 동료 편성 시, 편성 동료 모두에게 일정한 패널티가 발생합니다.\\n\\n<color=#ffd732>불협화음 1단계 적용 중</color>\\n편성 동료 모두 공격력/체력/속도 <color=#28d9ed>30%</color> 감소",
     "English": "When <color=#28d9ed>3 or more</color> <color=#28d9ed>Demiurge or Limited</color> heroes are in the lineup, a penalty is applied to all lineup members.\\n\\n<color=#ffd732>Discord Stage 1 Active</color>\\nAll lineup members' Attack/Health/Speed reduced by <color=#28d9ed>30%</color>",
-    "Japanese": "<color=#28d9ed>3人</color>以上の<color=#28d9ed>デミウルゴス、または限定</color>の仲間を編成した場合、編成した仲間全員に一定のペナルティが発生します。\\n\\n<color=#ffd732>不協和音 第1段階 適用中</color>\\n編成仲間全員の攻撃力/HP/スピード<color=#28d9ed>30%</color>減少",
+    "Japanese": "<color=#28d9ed>3人</color>以上の<color=#28d9ed>デミウルゴス、または限定</color>の仲間を編成した場合、編成した仲間全員に一定のペナルティが発生する。\\n\\n<color=#ffd732>不協和音 第1段階 適用中</color>\\n編成仲間全員の攻撃力/HP/スピード<color=#28d9ed>30%</color>DOWN",
     "China_Simplified": "编成<color=#28d9ed>3名</color>以上<color=#28d9ed>创世之神或限定</color>同伴时，所有编成同伴均会产生一定的惩罚。\\n\\n<color=#ffd732>不和 第1阶段 适用中</color>\\n所有编成同伴攻击力/生命值/速度降低<color=#28d9ed>30%</color>",
     "China_Traditional": "編成<color=#28d9ed>3名</color>以上<color=#28d9ed>迪米烏哥斯或限定</color>同伴時，所有編成同伴均會產生一定的懲罰。\\n\\n<color=#ffd732>不和 第1階段 適用中</color>\\n所有編成同伴攻擊力/生命值/速度降低<color=#28d9ed>30%</color>"
   },
@@ -113331,7 +113331,7 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_10",
     "Korean": "<color=#28d9ed>3인</color> 이상의 <color=#28d9ed>데미우르고스, 혹은 한정</color> 동료 편성 시, 편성 동료 모두에게 일정한 패널티가 발생합니다.\\n\\n<color=#ffd732>불협화음 2단계 적용 중</color>\\n편성 동료 모두 공격력/체력/속도 <color=#28d9ed>60%</color> 감소",
     "English": "When <color=#28d9ed>3 or more</color> <color=#28d9ed>Demiurge or Limited</color> heroes are in the lineup, a penalty is applied to all lineup members.\\n\\n<color=#ffd732>Discord Stage 2 Active</color>\\nAll lineup members' Attack/Health/Speed reduced by <color=#28d9ed>60%</color>",
-    "Japanese": "<color=#28d9ed>3人</color>以上の<color=#28d9ed>デミウルゴス、または限定</color>の仲間を編成した場合、編成した仲間全員に一定のペナルティが発生します。\\n\\n<color=#ffd732>不協和音 第2段階 適用中</color>\\n編成仲間全員の攻撃力/HP/スピード<color=#28d9ed>60%</color>減少",
+    "Japanese": "<color=#28d9ed>3人</color>以上の<color=#28d9ed>デミウルゴス、または限定</color>の仲間を編成した場合、編成した仲間全員に一定のペナルティが発生する。\\n\\n<color=#ffd732>不協和音 第2段階 適用中</color>\\n編成仲間全員の攻撃力/HP/スピード<color=#28d9ed>60%</color>DOWN",
     "China_Simplified": "编成<color=#28d9ed>3名</color>以上<color=#28d9ed>创世之神或限定</color>同伴时，所有编成同伴均会产生一定的惩罚。\\n\\n<color=#ffd732>不和 第2阶段 适用中</color>\\n所有编成同伴攻击力/生命值/速度降低<color=#28d9ed>60%</color>",
     "China_Traditional": "編成<color=#28d9ed>3名</color>以上<color=#28d9ed>迪米烏哥斯或限定</color>同伴時，所有編成同伴均會產生一定的懲罰。\\n\\n<color=#ffd732>不和 第2階段 適用中</color>\\n所有編成同伴攻擊力/生命值/速度降低<color=#28d9ed>60%</color>"
   },
@@ -113523,7 +113523,7 @@
     "ID": "SYS_REALTIME_ARENA_LEADER_SELECT_POPUP_RANGER",
     "Korean": "아군 전체 효과 적중, 효과 저항 <color=#28d9ed>30%</color> 증가\\n자신의 속도 <color=#28d9ed>10%</color> 증가 (리더 본인)",
     "English": "All allies' Effectiveness, Resilience increase by <color=#28d9ed>30%</color>\\nOwn Speed increases by <color=#28d9ed>10%</color> (Leader only)",
-    "Japanese": "味方全体の効果命中、効果抵抗<color=#28d9ed>30%</color>増加\\n自分のスピード<color=#28d9ed>10%</color>増加（リーダー本人）",
+    "Japanese": "味方全体の効果命中、効果抵抗<color=#28d9ed>30%</color>UP\\n自分のスピード<color=#28d9ed>10%</color>UP（リーダー本人）",
     "China_Simplified": "我方全体效果命中、效果抵抗提升<color=#28d9ed>30%</color>\\n自身速度提升<color=#28d9ed>10%</color>（队长本人）",
     "China_Traditional": "我方全體效果命中、效果抵抗提升<color=#28d9ed>30%</color>\\n自身速度提升<color=#28d9ed>10%</color>（隊長本人）"
   },
@@ -113531,7 +113531,7 @@
     "ID": "SYS_REALTIME_ARENA_LEADER_SELECT_POPUP_DEFENDER",
     "Korean": "아군 전체 체력, 방어력 <color=#28d9ed>30%</color> 증가\\n자신이 받는 최종 피해 <color=#28d9ed>10%</color> 감소 (리더 본인)",
     "English": "All allies' Health, Defense increase by <color=#28d9ed>30%</color>\\nFinal DMG taken decreases by <color=#28d9ed>10%</color> (Leader only)",
-    "Japanese": "味方全体のHP、防御力<color=#28d9ed>30%</color>増加\\n自身が受ける最終ダメージ<color=#28d9ed>10%</color>減少（リーダー本人）",
+    "Japanese": "味方全体のHP、防御力<color=#28d9ed>30%</color>増加\\n自分が受ける最終ダメージ<color=#28d9ed>10%</color>減少（リーダー本人）",
     "China_Simplified": "我方全体生命值、防御力提升<color=#28d9ed>30%</color>\\n自身受到的最终伤害降低<color=#28d9ed>10%</color>（队长本人）",
     "China_Traditional": "我方全體生命值、防禦力提升<color=#28d9ed>30%</color>\\n自身受到的最終傷害降低<color=#28d9ed>10%</color>（隊長本人）"
   },
@@ -113539,7 +113539,7 @@
     "ID": "SYS_REALTIME_ARENA_LEADER_SELECT_POPUP_PRIEST",
     "Korean": "아군 전체 받는 피해, 받는 치명 피해 <color=#28d9ed>30%</color> 감소\\n피격 시 아군 전체 행동 게이지 <color=#28d9ed>5%</color> 증가 (리더 본인)",
     "English": "All allies' DMG taken, Crit DMG taken decrease by <color=#28d9ed>30%</color>\\nAll allies' Priority increases by <color=#28d9ed>5%</color> when hit (Leader only)",
-    "Japanese": "味方全体の被ダメージ、被会心ダメージ<color=#28d9ed>30%</color>減少\\n被撃時、味方全体の行動ゲージ<color=#28d9ed>5%</color>増加（リーダー本人）",
+    "Japanese": "味方全体の被ダメージ、被会心ダメージ<color=#28d9ed>30%</color>DOWN\\n被撃時、味方全体の行動ゲージ<color=#28d9ed>5%</color>UP（リーダー本人）",
     "China_Simplified": "我方全体受到伤害、受到暴击伤害降低<color=#28d9ed>30%</color>\\n被攻击时，我方全体行动值提升<color=#28d9ed>5%</color>（队长本人）",
     "China_Traditional": "我方全體受到傷害、受到暴擊傷害降低<color=# 28d9ed>30%</color>\\n被攻擊時，我方全體速攻值提升<color=#28d9ed>5%</color>（隊長本人）"
   },
@@ -113947,7 +113947,7 @@
     "ID": "SYS_DESC_REDISTRIBUTE",
     "Korean": "강화 효과를 제거하고 랜덤한 아군에게 옮깁니다.(면역 무시)\\n동일 강화 효과를 보유 중이라면 지속 시간이 긴 강화 효과가 적용됩니다.\\n아군이 강화 효과를 보유할 수 없는 경우에도 제거되며 해제 불가 효과는 전이되지 않습니다.",
     "English": "Removes buffs and transfers them to a random ally. (Ignores Immunity)\\nIf the same buff is already active, the one with the longer duration is applied.\\nBuffs are removed even if allies cannot hold buffs, and effects that cannot be dispelled are not transferred.",
-    "Japanese": "強化効果を除去し、ランダムな味方に移します。(免疫無視)\\n同一の強化効果を保有している場合、持続時間が長い強化効果が適用されます。\\n味方が強化効果を保有できない場合も除去され、解除不可効果は転移されません。",
+    "Japanese": "強化効果を解除し、\\nランダムな味方へ移す(免疫無視)。\\n重複時は持続ターンの\\n長い効果を適用。\\n味方が保有不可でも解除され、\\n解除不可効果は転移しない。",
     "China_Simplified": "移除强化效果并转移给随机我方单位。(无视免疫)\\n若已拥有相同强化效果，则适用持续时间较长的强化效果。\\n即使我方无法持有强化效果也会被移除，无法解除的效果不会被转移。",
     "China_Traditional": "移除強化效果並轉移給隨機我方單位。(無視免疫)\\n若已擁有相同強化效果，則適用持續時間較長的強化效果。\\n即使我方無法持有強化效果也會被移除，無法解除的效果不會被轉移。"
   },
@@ -113971,7 +113971,7 @@
     "ID": "SYS_BUFF_DESC_2000112",
     "Korean": "기본 공격을 제외한 스킬로 공격 받을 때, 받는 최종 피해 -90%\\n기본 공격을 받는 경우에도 횟수 감소\\n\\n(해제 불가, 시전자 사망 시 해제, 최종 피해 감소는 가장 높은 값만 적용, 버스트 포함)",
     "English": "When attacked by skills other than basic attacks, Final DMG taken -90%\\nStack count decreases even when hit by basic attacks\\n\\n(Cannot be dispelled, dispelled upon caster's death, only the highest value of Final DMG reduction applies, including Burst)",
-    "Japanese": "通常スキルを除くスキルで攻撃を受けた時、受ける最終ダメージ90%DOWN\\n通常スキルで攻撃を受けた場合も回数減少\\n\\n(解除不可。スキル使用者が倒れると解除。最終ダメージDOWNは最も高い値のみ適用。バースト含む)",
+    "Japanese": "通常スキル以外で被弾時、\\n最終ダメージ-90%。\\n通常スキル被弾時も回数減少。\\n(バースト含む。解除不可。\\nスキル使用者が倒れると解除。\\n最終ダメージDOWNは\\n最大値のみ適用)",
     "China_Simplified": "受到除基本攻击以外的技能攻击时，受到的最终伤害-90%\\n受到基本攻击时也会减少层数\\n\\n(无法解除，施放者死亡时解除，最终伤害减少仅适用最高值，包含爆发)",
     "China_Traditional": "受到除基本攻擊以外的技能攻擊時，受到的最終傷害-90%\\n受到基本攻擊時也會減少層數\\n\\n(無法解除，施放者死亡時解除，最終傷害減少僅適用最高值，包含爆發)"
   },
@@ -113979,7 +113979,7 @@
     "ID": "SYS_BUFF_DESC_2000112_Debuff",
     "Korean": "대상 관통력 -30%\\n행동 게이지 효율 -10%\\n\\n(해제 불가, 시전자 사망 시 해제)",
     "English": "Target's Penetration -30%\\nPriority increase efficiency -10%  \\n\\n(Cannot be removed, removed upon caster's death)",
-    "Japanese": "対象の貫通力-30%\\n行動ゲージ効率-10%\\n\\n（解除不可、スキル使用者が倒れると解除）",
+    "Japanese": "対象の貫通力-30%\\n行動ゲージ効率-10%\\n(解除不可。スキル使用者が倒れると解除)",
     "China_Simplified": "目标穿透力-30%\\n行动值效率-10%\\n\\n(无法解除，施放者死亡时解除)",
     "China_Traditional": "目標貫穿力-30%\\n速攻值效率-10%\\n\\n(無法解除，施放者死亡時解除)"
   },
