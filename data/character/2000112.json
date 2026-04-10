@@ -158,8 +158,7 @@
       ],
       "debuff": [
         "BT_REDISTRIBUTE_BUFF",
-        "BT_REVERSE_HEAL_BASED_TARGET",
-        "BUFF_TRANSFER"
+        "BT_REVERSE_HEAL_BASED_TARGET"
       ],
       "offensive": true,
       "target": "mono",
@@ -290,7 +289,9 @@
       },
       "wgr": 1,
       "cd": 4,
-      "buff": [],
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
       "debuff": [
         "BT_ACTION_GAUGE"
       ],
@@ -396,9 +397,9 @@
         "BT_SEAL_COUNTER"
       ],
       "debuff": [
+        "BT_REDISTRIBUTE_BUFF",
         "SPATIAL_DISTORTION_ENEMY",
-        "BT_REVERSE_HEAL_BASED_TARGET",
-        "BUFF_TRANSFER"
+        "BT_REVERSE_HEAL_BASED_TARGET"
       ],
       "offensive": true,
       "target": "multi"
