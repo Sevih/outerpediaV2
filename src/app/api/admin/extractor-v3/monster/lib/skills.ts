@@ -118,13 +118,34 @@ export function resolveSkillDescription(text: string, buffsByBuffID: Map<string,
 //
 // Each buff/debuff is encoded as either `Type` (e.g. "BT_FREEZE") or
 // `Type|StatType` (e.g. "BT_STAT|ST_SPEED") for stat-affecting buffs.
+// When `IsIgnoreInterruption === 'True'` (and the row isn't NEUTRAL*),
+// an `_IR` suffix is appended to mark the "ignore resist/immune" variant,
+// matching the wiki convention used in existing boss files.
 
 function buffSignature(buff: Row): string {
   const t = buff.Type ?? ''
+  if (!t || t === 'BT_NONE') return ''
+  let sig: string
   if (t === 'BT_STAT' && buff.StatType && buff.StatType !== 'ST_NONE') {
-    return `${t}|${buff.StatType}`
+    sig = `${t}|${buff.StatType}`
+  } else {
+    sig = t
   }
-  return t
+  const bdt = buff.BuffDebuffType ?? ''
+  const isNeutral = bdt === 'NEUTRAL' || bdt === 'NEUTRAL2'
+  if (!isNeutral && buff.IsIgnoreInterruption === 'True') sig += '_IR'
+  return sig
+}
+
+// DEBUFF* covers DEBUFF, DEBUFF_IGNORE_RESIST, DEBUFF_IGNORE_IMMUNE,
+// DEBUFF_IGNORE_ALL. NEUTRAL/NEUTRAL2 fall back on TargetType — anything
+// targeting enemies is a debuff, anything targeting self/ally is a buff.
+function isDebuffRow(buff: Row): boolean {
+  const bdt = buff.BuffDebuffType ?? ''
+  if (bdt.startsWith('DEBUFF')) return true
+  if (bdt === 'BUFF') return false
+  const target = buff.TargetType ?? ''
+  return target.startsWith('ENEMY_')
 }
 
 function classifyBuffsForSkill(
@@ -143,7 +164,7 @@ function classifyBuffsForSkill(
     for (const row of rows) {
       const sig = buffSignature(row)
       if (!sig) continue
-      if (row.BuffDebuffType === 'DEBUFF') {
+      if (isDebuffRow(row)) {
         if (!seenDebuff.has(sig)) {
           seenDebuff.add(sig)
           debuff.push(sig)
