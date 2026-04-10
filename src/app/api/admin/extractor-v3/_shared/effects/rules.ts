@@ -29,6 +29,12 @@ export type ForcedOverride = {
 
 export type ForcedOverrides = Record<string, Record<string, ForcedOverride>>
 
+export type DescriptionPattern = {
+  regex: RegExp
+  addBuff: string[]
+  addDebuff: string[]
+}
+
 type TooltipBlacklistFile = {
   ranges?: [number, number][]
   ids?: string[]
@@ -45,6 +51,8 @@ type CachedRules = {
    * own BuffDebuffType/TargetType classification.
    */
   forceSide: Map<string, 'buff' | 'debuff'>
+  /** Description regexes that add buffs/debuffs when matched. */
+  descriptionPatterns: DescriptionPattern[]
 }
 
 let cache: CachedRules | null = null
@@ -62,6 +70,14 @@ function expandTooltipBlacklist(raw: TooltipBlacklistFile): Set<string> {
   return set
 }
 
+type RawDescriptionPattern = {
+  pattern: string
+  flags?: string
+  add_buff?: string[]
+  add_debuff?: string[]
+  _comment?: string
+}
+
 export function loadEffectRules(): CachedRules {
   if (cache) return cache
   const blacklist = readJson<string[]>('blacklist.json')
@@ -69,6 +85,7 @@ export function loadEffectRules(): CachedRules {
   const forced = readJson<ForcedOverrides>('forced-overrides.json')
   const aliases = readJson<Record<string, string>>('aliases.json')
   const forceSideRaw = readJson<{ buff?: string[]; debuff?: string[] }>('force-side.json')
+  const descPatternsRaw = readJson<RawDescriptionPattern[]>('description-patterns.json')
   // Strip comment keys (JSON files use `_comment` for documentation)
   delete (forced as Record<string, unknown>)._comment
   delete (aliases as Record<string, unknown>)._comment
@@ -76,12 +93,26 @@ export function loadEffectRules(): CachedRules {
   const forceSide = new Map<string, 'buff' | 'debuff'>()
   for (const l of forceSideRaw.buff ?? []) forceSide.set(l, 'buff')
   for (const l of forceSideRaw.debuff ?? []) forceSide.set(l, 'debuff')
+  const descriptionPatterns: DescriptionPattern[] = []
+  for (const p of descPatternsRaw) {
+    if (!p.pattern) continue
+    try {
+      descriptionPatterns.push({
+        regex: new RegExp(p.pattern, p.flags ?? ''),
+        addBuff: p.add_buff ?? [],
+        addDebuff: p.add_debuff ?? [],
+      })
+    } catch {
+      // Bad regex: skip rather than crashing the whole extractor.
+    }
+  }
   cache = {
     labelBlacklist: new Set(blacklist),
     tooltipBlacklist: expandTooltipBlacklist(tooltipBl),
     forcedOverrides: forced,
     aliases: new Map(Object.entries(aliases)),
     forceSide,
+    descriptionPatterns,
   }
   return cache
 }
@@ -92,5 +123,5 @@ export function clearEffectRulesCache(): void {
 }
 
 // Bundle reload marker: touch this comment to invalidate the in-memory
-// rules cache via a Next.js fast-refresh. (bump 7)
+// rules cache via a Next.js fast-refresh. (bump 8)
 

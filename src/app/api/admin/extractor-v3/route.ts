@@ -429,12 +429,16 @@ function extractSkills(
       }
     }
     const tooltipIDs = (levels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
+    // `trueDescLevels['1']` is the resolved EN description for level 1
+    // (DEFAULT_LANG has no suffix in the key).
+    const descEn = (trueDescLevels['1'] ?? '') as string
     const { buffs, debuffs } = classifyEffects([...buffIDSet], {
       ownerId: charRow.ID,
       skillType,
       tables: effectTables,
       tooltipIds: tooltipIDs,
       extraDebuffs,
+      description: descEn,
     })
 
     skillOut.buff = buffs

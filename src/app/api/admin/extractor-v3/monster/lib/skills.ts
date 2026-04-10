@@ -117,7 +117,11 @@ const PLACEHOLDER_RE = /\[Buff_([CVT])_([^\]]+)\]/g
 
 export function resolveSkillDescription(text: string, buffsByBuffID: Map<string, Row>): string {
   return text.replace(PLACEHOLDER_RE, (match, kind: string, bid: string) => {
-    const buff = buffsByBuffID.get(bid)
+    // BuffID lookups are case-insensitive: some placeholders use
+    // mixed case (e.g. `Irregular_Check_Queen_1`) while BuffTemplet
+    // stores the same key fully lowercased.
+    let buff = buffsByBuffID.get(bid)
+    if (!buff) buff = buffsByBuffID.get(bid.toLowerCase())
     if (!buff) return match
     switch (kind) {
       case 'C':
@@ -198,6 +202,7 @@ export function extractSkill(
     skillType: row.SkillType ?? '',
     tables: tables.effectTables,
     tooltipIds,
+    description: descTexts?.en ?? '',
   })
 
   const out: MonsterSkill = {

@@ -281,6 +281,24 @@ export function classifyEffects(
     addTooltipIds(ctx.tooltipIds, ctx, buffs, debuffs, seenBuff, seenDebuff)
   }
 
+  // Description-pattern discovery: matches regexes from
+  // `description-patterns.json` against the resolved English description.
+  if (ctx.description) {
+    for (const p of rules.descriptionPatterns) {
+      if (!p.regex.test(ctx.description)) continue
+      for (const raw of p.addBuff) {
+        const label = applyAlias(raw)
+        if (rules.labelBlacklist.has(label)) continue
+        if (!seenBuff.has(label)) { seenBuff.add(label); buffs.push(label) }
+      }
+      for (const raw of p.addDebuff) {
+        const label = applyAlias(raw)
+        if (rules.labelBlacklist.has(label)) continue
+        if (!seenDebuff.has(label)) { seenDebuff.add(label); debuffs.push(label) }
+      }
+    }
+  }
+
   return {
     buffs: buffs.filter(Boolean),
     debuffs: debuffs.filter(Boolean),

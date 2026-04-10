@@ -1,0 +1,57 @@
+[
+  {
+    "_comment": "Description-based pattern discovery. Each entry is a regex applied against the English skill description; on match, the listed labels are added as buffs/debuffs. Runs last, after the BuffTemplet-driven classification.",
+    "pattern": "",
+    "flags": ""
+  },
+  {
+    "pattern": "(grants?|restores?|recovers?)\\s+\\d+\\s+(Chain Points|CP)",
+    "flags": "i",
+    "add_buff": ["BT_CP_CHARGE"]
+  },
+  {
+    "pattern": "(grants?|restores?|recovers?)\\s+\\d+\\s+(Action Points|AP)",
+    "flags": "i",
+    "add_buff": ["BT_AP_CHARGE"]
+  },
+  {
+    "pattern": "(Grants?|gains?) Courage Against Despair",
+    "flags": "i",
+    "add_buff": ["UNIQUE_DAHLIA_A"]
+  },
+  {
+    "pattern": "reduces?\\s+(the\\s+enemy\\s+team's\\s+)?(<[^>]+>)?(Chain Points|CP)(<[^>]+>)?(\\s+of\\s+enem|\\s+by\\s+)",
+    "flags": "i",
+    "add_debuff": ["BT_CP_CHARGE"]
+  },
+  {
+    "pattern": "reduces all (Chain Points|CP)",
+    "flags": "i",
+    "add_debuff": ["BT_CP_CHARGE"]
+  },
+  {
+    "pattern": "does not trigger.*(?=.*Counterattack)(?=.*Revenge)(?=.*Agile Response)",
+    "flags": "i",
+    "add_buff": ["BT_SEAL_COUNTER"]
+  },
+  {
+    "pattern": "grants 【Environmental Change Response】 or 【Weather Variable Response】 ",
+    "flags": "i",
+    "add_buff": ["UNIQUE_VENION_A", "UNIQUE_VENION_B"]
+  },
+  {
+    "pattern": "grants 【Remove Detection Interference】 or 【Exclude Unknown Variables】",
+    "flags": "i",
+    "add_buff": ["UNIQUE_VENION_D", "UNIQUE_VENION_E"]
+  },
+  {
+    "pattern": "Heavy Strike",
+    "flags": "",
+    "add_buff": ["HEAVY_STRIKE"]
+  },
+  {
+    "pattern": "gains an (<[^>]+>)?(extra turn)",
+    "flags": "i",
+    "add_buff": ["BT_ADDITIVE_TURN"]
+  }
+]

@@ -27,6 +27,12 @@ export type EffectContext = {
    */
   tooltipIds?: string[]
   /**
+   * Resolved English skill description. When set, the classifier runs
+   * `description-patterns.json` regexes against it to add buffs/debuffs
+   * that can't be modeled from BuffTemplet alone.
+   */
+  description?: string
+  /**
    * Labels unconditionally added to the result (before forced overrides).
    * Typically used by the character extractor for description-derived
    * effects (e.g. BT_WG_REVERSE_HEAL from `SE_DESC_DMG_WG_V`).
