@@ -392,14 +392,12 @@
       "wgr": 2,
       "cd": 5,
       "buff": [
-        "SPATIAL_DISTORTION_(SELF)",
+        "SPATIAL_DISTORTION_SELF",
         "BT_SEAL_COUNTER"
       ],
       "debuff": [
-        "BT_REDISTRIBUTE_BUFF",
-        "SPATIAL_DISTORTION_(ENEMY)",
+        "SPATIAL_DISTORTION_ENEMY",
         "BT_REVERSE_HEAL_BASED_TARGET",
-        "BT_ACTION_GAUGE_ENHANCE_REVERSE",
         "BUFF_TRANSFER"
       ],
       "offensive": true,
