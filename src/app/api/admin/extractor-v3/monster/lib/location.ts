@@ -162,6 +162,8 @@ export type LocationTables = {
   dungeonsByGroup: Map<string, DungeonRef[]>
   textSystemIndex: Map<string, Row>
   areaIndex: Map<string, Row>
+  /** dungeonId → Grade (used to substitute `{0}` in Guild Raid dungeon names). */
+  dungeonGradeMap: Map<string, string>
 }
 
 let cached: LocationTables | null = null
@@ -390,11 +392,20 @@ export function loadLocationTables(): LocationTables {
     }
   }
 
+  // Guild Raid stage map — dungeon names like "Guardian of the Golden Land
+  // (Stage {0})" are shared across grades; we substitute `{0}` with the grade
+  // from GuildRaidGradeTemplet.
+  const dungeonGradeMap = new Map<string, string>()
+  for (const r of loadTable('GuildRaidGradeTemplet')) {
+    if (r.BossDungeonID && r.Grade) dungeonGradeMap.set(r.BossDungeonID, r.Grade)
+  }
+
   cached = {
     groupsByMonster,
     dungeonsByGroup,
     textSystemIndex: indexBy(loadTable('TextSystem')),
     areaIndex: indexBy(loadTable('AreaTemplet')),
+    dungeonGradeMap,
   }
   return cached
 }

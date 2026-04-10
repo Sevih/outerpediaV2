@@ -121,9 +121,25 @@ export function extractMonster(
 
   if (primary) {
     dungeonDict = resolveTextDict(primary.dungeonNameId, txt)
+    // Substitute `{0}` stage placeholder (guild raid dungeon names).
+    const grade = tables.dungeonGradeMap.get(primary.dungeonId)
+    if (grade) {
+      const subbed: LangDict = { en: '', jp: '', kr: '', zh: '' }
+      for (const lang of ['en', 'jp', 'kr', 'zh'] as const) {
+        subbed[lang] = dungeonDict[lang].replace(/\{0\}/g, grade)
+      }
+      dungeonDict = subbed
+    }
+    // area_id: for story dungeons, use the per-stage ShortNameID (e.g. "3-11").
+    // For everything else the wiki leaves this empty.
     const areaRow = primary.areaId ? tables.areaIndex.get(primary.areaId) : undefined
-    const areaNameId = (areaRow?.NameID as string | undefined) ?? null
-    areaDict = resolveTextDict(areaNameId, txt)
+    const primaryDungeon = tables.dungeonsByGroup.get(primary.groupId)?.find(
+      (d) => d.dungeon.ID === primary.dungeonId
+    )?.dungeon
+    const shortNameId = (primaryDungeon?.ShortNameID as string | undefined) ?? null
+    if (primary.mode === 'DM_NORMAL' && shortNameId) {
+      areaDict = resolveTextDict(shortNameId, txt)
+    }
     const md = resolveModeLabelDict(primary.mode, areaRow?.AreaGroupType ?? null, primary.dungeonNameId, txt)
     if (md) modeDict = md
   }
