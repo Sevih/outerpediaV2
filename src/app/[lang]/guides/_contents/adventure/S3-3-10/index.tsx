@@ -31,7 +31,7 @@ const preloadedBosses: Record<string, Boss> = {
 };
 
 // Normal mode (4500265) → Sand Soldier Khopesh normal (4002201), Hard mode (4500266) → hard (4102201)
-const MINION_IDS = ['4002201', '4102201'];
+const MINION_IDS = ['4002201@130314', '4102201@131310'];
 
 /* ── Component ──────────────────────────────────────────── */
 
