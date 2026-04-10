@@ -78,6 +78,20 @@ function isUntouchable(parsed: ParsedBossId): boolean {
 
 const PRESERVE_FIELDS = ['IncludeSurname'] as const
 
+// BuffImmune and StatBuffImmune are compared as a single combined set —
+// we don't care which field holds which value, only that every entry in
+// the game data is present somewhere in the saved file.
+function csvToSet(v: unknown): Set<string> {
+  if (typeof v !== 'string' || !v) return new Set()
+  return new Set(v.split(',').map((s) => s.trim()).filter(Boolean))
+}
+
+function setsEqual(a: Set<string>, b: Set<string>): boolean {
+  if (a.size !== b.size) return false
+  for (const v of a) if (!b.has(v)) return false
+  return true
+}
+
 function mergeWithExisting(
   wiki: Record<string, unknown>,
   existing: Record<string, unknown> | null
@@ -86,6 +100,44 @@ function mergeWithExisting(
   const out = { ...wiki }
   for (const key of PRESERVE_FIELDS) {
     if (key in existing) out[key] = existing[key]
+  }
+  // Preserve existing BuffImmune/StatBuffImmune split when the combined
+  // set matches, so shuffling values between the two fields doesn't
+  // surface as a diff and doesn't get reverted on save.
+  const wikiUnion = new Set<string>([
+    ...csvToSet(wiki.BuffImmune),
+    ...csvToSet(wiki.StatBuffImmune),
+  ])
+  const existingUnion = new Set<string>([
+    ...csvToSet(existing.BuffImmune),
+    ...csvToSet(existing.StatBuffImmune),
+  ])
+  if (setsEqual(wikiUnion, existingUnion)) {
+    if ('BuffImmune' in existing) out.BuffImmune = existing.BuffImmune
+    if ('StatBuffImmune' in existing) out.StatBuffImmune = existing.StatBuffImmune
+  }
+  // Same idea for per-skill buff/debuff arrays: order doesn't matter,
+  // only set membership. Preserve the existing order when the sets match.
+  if (Array.isArray(out.skills) && Array.isArray(existing.skills)) {
+    const wikiSkills = out.skills as Record<string, unknown>[]
+    const existingSkills = existing.skills as Record<string, unknown>[]
+    for (let i = 0; i < wikiSkills.length && i < existingSkills.length; i++) {
+      const ws = wikiSkills[i]
+      const es = existingSkills[i]
+      if (!ws || !es) continue
+      for (const key of ['buff', 'debuff'] as const) {
+        const wArr = Array.isArray(ws[key]) ? (ws[key] as string[]) : []
+        const eArr = Array.isArray(es[key]) ? (es[key] as string[]) : []
+        if (setsEqual(new Set(wArr), new Set(eArr))) {
+          if (key in es) wikiSkills[i] = { ...ws, [key]: eArr }
+          else {
+            const { [key]: _drop, ...rest } = ws
+            void _drop
+            wikiSkills[i] = rest
+          }
+        }
+      }
+    }
   }
   return out
 }
@@ -169,6 +221,7 @@ function normalize(s: string): string {
     .replace(/[\uFF01-\uFF5E\u3001\u3002\u300C-\u3011]/g, (c) => FULLWIDTH_PUNCT[c] ?? c)
     .replace(/[\u2018\u2019]/g, "'")
     .replace(/[\u201C\u201D]/g, '"')
+    .replace(/\u2026/g, '...')
     .replace(/\u3000/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
