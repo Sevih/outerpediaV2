@@ -1,0 +1,78 @@
+{
+  "_comment": "Manual buff/debuff/removeBuff/removeDebuff overrides for skills the extractor can't fully model from BuffTemplet alone. Keyed by ownerId (charID or monsterID) → skillType.",
+  "2000065": {
+    "SKT_FIRST": {
+      "buff": ["BT_EXTRA_ATTACK_ON_TURN_END"],
+      "removeBuff": ["BT_STAT|ST_ATK"]
+    }
+  },
+  "2000053": {
+    "SKT_FIRST": {
+      "removeBuff": ["BT_KILL_UNDER_HP_RATE"],
+      "debuff": ["BT_KILL_UNDER_HP_RATE"]
+    },
+    "SKT_ULTIMATE": {
+      "removeBuff": ["BT_KILL_UNDER_HP_RATE"],
+      "debuff": ["BT_KILL_UNDER_HP_RATE"]
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "removeDebuff": ["BT_WG_REVERSE_HEAL"]
+    }
+  },
+  "2000021": {
+    "SKT_SECOND": {
+      "removeBuff": ["BT_STAT|ST_AVOID"]
+    }
+  },
+  "2000042": {
+    "SKT_FIRST": {
+      "removeBuff": ["BT_INVINCIBLE"]
+    }
+  },
+  "2000043": {
+    "SKT_SECOND": {
+      "removeDebuff": ["BT_STAT|ST_AVOID"]
+    }
+  },
+  "2000060": {
+    "SKT_SECOND": {
+      "removeBuff": ["BT_EXTEND_BUFF"]
+    }
+  },
+  "2000072": {
+    "SKT_ULTIMATE": {
+      "debuff": ["BT_STEAL_BUFF"]
+    }
+  },
+  "2000109": {
+    "SKT_FIRST": {
+      "removeDebuff": ["BT_DOT_POISON"]
+    },
+    "SKT_SECOND": {
+      "removeDebuff": ["BT_DOT_POISON"]
+    },
+    "SKT_ULTIMATE": {
+      "removeBuff": ["BT_STAT|ST_DEF"],
+      "removeDebuff": ["BT_DOT_POISON"]
+    },
+    "SKT_CHAIN_PASSIVE": {
+      "removeDebuff": ["BT_DOT_POISON"]
+    }
+  },
+  "2000085": {
+    "SKT_SECOND": {
+      "removeDebuff": ["BT_RESOURCE_DOWN"]
+    }
+  },
+  "2000084": {
+    "SKT_FIRST": {
+      "buff": ["BT_CALL_BACKUP_2", "BT_CALL_BACKUP"]
+    }
+  },
+  "2000102": {
+    "SKT_ULTIMATE": {
+      "buff": ["BT_EXTEND_DEBUFF"],
+      "debuff": ["BT_EXTEND_BUFF"]
+    }
+  }
+}

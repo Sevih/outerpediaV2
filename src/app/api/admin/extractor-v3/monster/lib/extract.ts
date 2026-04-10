@@ -19,6 +19,8 @@ export type WikiSkill = {
   icon: string
   buff?: string[]
   debuff?: string[]
+  removeBuff?: string[]
+  removeDebuff?: string[]
 }
 
 export type WikiLocation = {
@@ -74,8 +76,12 @@ function toWikiSkill(s: MonsterSkill): WikiSkill {
   }
   const buff = (s.buff ?? []) as string[]
   const debuff = (s.debuff ?? []) as string[]
+  const removeBuff = (s.removeBuff ?? []) as string[]
+  const removeDebuff = (s.removeDebuff ?? []) as string[]
   if (buff.length > 0) out.buff = buff
   if (debuff.length > 0) out.debuff = debuff
+  if (removeBuff.length > 0) out.removeBuff = removeBuff
+  if (removeDebuff.length > 0) out.removeDebuff = removeDebuff
   return out
 }
 
@@ -122,7 +128,7 @@ export function extractMonster(
     if (md) modeDict = md
   }
 
-  const skills = extractMonsterSkills(base.skillIds).map(toWikiSkill)
+  const skills = extractMonsterSkills(base.skillIds, base.id).map(toWikiSkill)
 
   return {
     id: base.id,

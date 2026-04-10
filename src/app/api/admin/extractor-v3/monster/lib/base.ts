@@ -29,7 +29,8 @@ export type MonsterBase = {
   faceIconId: string | null
   nameId: string | null
   nickNameId: string | null
-  skillIds: string[] // ordered, only present skills (Skill_1..Skill_18)
+  /** Ordered list of the character's declared skills with their slot number. */
+  skillIds: { slot: number; id: string }[]
   stats: MonsterStats
   aiType: string | null
   buffImmuneToolTip: string | null
@@ -61,11 +62,11 @@ export function listMonsters(opts?: { types?: string[] }): Row[] {
 
 // ── Extraction ──────────────────────────────────────────────────────
 
-function collectSkillIds(row: Row): string[] {
-  const ids: string[] = []
+function collectSkillIds(row: Row): { slot: number; id: string }[] {
+  const ids: { slot: number; id: string }[] = []
   for (let i = 1; i <= 18; i++) {
     const s = row[`Skill_${i}`]
-    if (s) ids.push(s)
+    if (s) ids.push({ slot: i, id: s })
   }
   return ids
 }

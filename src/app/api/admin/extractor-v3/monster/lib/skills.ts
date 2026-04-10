@@ -1,5 +1,11 @@
 import { loadTable, indexBy, getLangTexts, expandLang, num, type Row } from './common'
 import type { Lang } from '@/lib/i18n/config'
+import {
+  classifyEffects,
+  expandImplicitBuffIds,
+  buildTooltipMap,
+  type EffectTables,
+} from '../../_shared/effects'
 
 // ── Output type ─────────────────────────────────────────────────────
 //
@@ -11,11 +17,18 @@ export type MonsterSkill = Record<string, unknown>
 // ── Loaders / indexes ───────────────────────────────────────────────
 
 export type SkillTables = {
-  skillIndex: Map<string, Row> // MonsterSkillTemplet by ID
-  skillLevelByID: Map<string, Row> // MonsterSkillLevelTemplet, level 1, keyed by SkillID
+  skillIndex: Map<string, Row>
+  skillLevelByID: Map<string, Row>
   textSkillIndex: Map<string, Row>
-  buffsByBuffID: Map<string, Row> // BuffTemplet level 1, keyed by BuffID
-  buffRowsByBuffID: Map<string, Row[]> // BuffTemplet level 1, all rows per BuffID
+  /** First BuffTemplet row per BuffID (level 1), for placeholder resolution. */
+  buffsByBuffID: Map<string, Row>
+  /**
+   * All BuffTemplet level 1 rows per BuffID. Reused as-is by the shared
+   * classifier via `effectTables.buffsByID`.
+   */
+  buffRowsByBuffID: Map<string, Row[]>
+  /** Shared-classifier-compatible bundle. */
+  effectTables: EffectTables
 }
 
 let cached: SkillTables | null = null
@@ -50,12 +63,17 @@ export function loadSkillTables(): SkillTables {
     arr.push(r)
   }
 
+  // Build tooltip map for the shared classifier's discovery pass.
+  const textSystemIndex = indexBy(loadTable('TextSystem'))
+  const tooltipMap = buildTooltipMap(loadTable('BuffToolTipTemplet'), textSystemIndex)
+
   cached = {
     skillIndex,
     skillLevelByID,
     textSkillIndex: indexBy(loadTable('TextSkill')),
     buffsByBuffID,
     buffRowsByBuffID,
+    effectTables: { buffsByID: buffRowsByBuffID, tooltipMap },
   }
   return cached
 }
@@ -114,75 +132,20 @@ export function resolveSkillDescription(text: string, buffsByBuffID: Map<string,
   })
 }
 
-// ── Buff classification ─────────────────────────────────────────────
-//
-// Each buff/debuff is encoded as either `Type` (e.g. "BT_FREEZE") or
-// `Type|StatType` (e.g. "BT_STAT|ST_SPEED") for stat-affecting buffs.
-// When `IsIgnoreInterruption === 'True'` (and the row isn't NEUTRAL*),
-// an `_IR` suffix is appended to mark the "ignore resist/immune" variant,
-// matching the wiki convention used in existing boss files.
-
-function buffSignature(buff: Row): string {
-  const t = buff.Type ?? ''
-  if (!t || t === 'BT_NONE') return ''
-  let sig: string
-  if (t === 'BT_STAT' && buff.StatType && buff.StatType !== 'ST_NONE') {
-    sig = `${t}|${buff.StatType}`
-  } else {
-    sig = t
-  }
-  const bdt = buff.BuffDebuffType ?? ''
-  const isNeutral = bdt === 'NEUTRAL' || bdt === 'NEUTRAL2'
-  if (!isNeutral && buff.IsIgnoreInterruption === 'True') sig += '_IR'
-  return sig
-}
-
-// DEBUFF* covers DEBUFF, DEBUFF_IGNORE_RESIST, DEBUFF_IGNORE_IMMUNE,
-// DEBUFF_IGNORE_ALL. NEUTRAL/NEUTRAL2 fall back on TargetType — anything
-// targeting enemies is a debuff, anything targeting self/ally is a buff.
-function isDebuffRow(buff: Row): boolean {
-  const bdt = buff.BuffDebuffType ?? ''
-  if (bdt.startsWith('DEBUFF')) return true
-  if (bdt === 'BUFF') return false
-  const target = buff.TargetType ?? ''
-  return target.startsWith('ENEMY_')
-}
-
-function classifyBuffsForSkill(
-  buffIdCsv: string | undefined,
-  tables: SkillTables
-): { buff: string[]; debuff: string[] } {
-  const buff: string[] = []
-  const debuff: string[] = []
-  if (!buffIdCsv) return { buff, debuff }
-  const ids = buffIdCsv.split(',').map((s) => s.trim()).filter(Boolean)
-  const seenBuff = new Set<string>()
-  const seenDebuff = new Set<string>()
-  for (const id of ids) {
-    const rows = tables.buffRowsByBuffID.get(id)
-    if (!rows) continue
-    for (const row of rows) {
-      const sig = buffSignature(row)
-      if (!sig) continue
-      if (isDebuffRow(row)) {
-        if (!seenDebuff.has(sig)) {
-          seenDebuff.add(sig)
-          debuff.push(sig)
-        }
-      } else {
-        if (!seenBuff.has(sig)) {
-          seenBuff.add(sig)
-          buff.push(sig)
-        }
-      }
-    }
-  }
-  return { buff, debuff }
-}
-
 // ── Extraction ──────────────────────────────────────────────────────
 
-export function extractSkill(skillId: string, t?: SkillTables): MonsterSkill | null {
+export type MonsterSkillContext = {
+  /** Monster ID — used as ownerId for forced overrides and implicit scans. */
+  ownerId: string
+  /** Skill slot (1..18) from Skill_N — used to build `${ownerId}_${slot}_` prefix. */
+  slot: number
+}
+
+export function extractSkill(
+  skillId: string,
+  ctx: MonsterSkillContext,
+  t?: SkillTables
+): MonsterSkill | null {
   const tables = t ?? loadSkillTables()
   const row = tables.skillIndex.get(skillId)
   if (!row) return null
@@ -202,7 +165,36 @@ export function extractSkill(skillId: string, t?: SkillTables): MonsterSkill | n
       ) as Record<Lang, string>)
     : null
 
-  const { buff, debuff } = classifyBuffsForSkill(level?.BuffID, tables)
+  // Declared BuffIDs + implicit scan via `${ownerId}_${slot}_` prefix.
+  const declared = (level?.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean)
+  const buffIdSet = expandImplicitBuffIds(
+    declared,
+    [`${ctx.ownerId}_${ctx.slot}_`],
+    tables.buffRowsByBuffID
+  )
+
+  // `MonsterSkillLevelTemplet` has no per-skill BuffToolTip CSV like
+  // `CharacterSkillLevelTemplet` does, so we synthesize one by collecting
+  // row-level ToolTipIDs from every BuffTemplet row that matches the
+  // resolved buff-ID set. This lets the shared classifier's tooltip
+  // discovery surface variant labels like "Corrosive Poison" even when
+  // the row's IconName doesn't contain "Interruption".
+  const explicitTooltipIds = (level?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
+  const rowTooltipIds = new Set<string>(explicitTooltipIds)
+  for (const bid of buffIdSet) {
+    for (const row of tables.buffRowsByBuffID.get(bid) ?? []) {
+      if (row.ToolTipID && (row.IconName ?? '').includes('Interruption') === false) {
+        rowTooltipIds.add(row.ToolTipID)
+      }
+    }
+  }
+  const tooltipIds = [...rowTooltipIds]
+  const { buffs: buff, debuffs: debuff, removeBuff, removeDebuff } = classifyEffects(buffIdSet, {
+    ownerId: ctx.ownerId,
+    skillType: row.SkillType ?? '',
+    tables: tables.effectTables,
+    tooltipIds,
+  })
 
   const out: MonsterSkill = {
     id: row.ID,
@@ -220,18 +212,24 @@ export function extractSkill(skillId: string, t?: SkillTables): MonsterSkill | n
     descTexts,
     buff,
     debuff,
+    removeBuff,
+    removeDebuff,
   } as MonsterSkill
   Object.assign(out, expandLang('Name', nameTexts))
   Object.assign(out, expandLang('Description', descTexts))
   return out
 }
 
-/** Resolve a list of skill IDs (typically from MonsterBase.skillIds). */
-export function extractMonsterSkills(skillIds: string[], t?: SkillTables): MonsterSkill[] {
+/** Resolve a list of skill slot/id pairs (typically from MonsterBase.skillIds). */
+export function extractMonsterSkills(
+  skillIds: { slot: number; id: string }[],
+  ownerId: string,
+  t?: SkillTables
+): MonsterSkill[] {
   const tables = t ?? loadSkillTables()
   const out: MonsterSkill[] = []
-  for (const id of skillIds) {
-    const s = extractSkill(id, tables)
+  for (const { slot, id } of skillIds) {
+    const s = extractSkill(id, { ownerId, slot }, tables)
     if (s) out.push(s)
   }
   return out

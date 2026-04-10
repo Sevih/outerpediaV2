@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import { LANGS, DEFAULT_LANG, type Lang } from '@/lib/i18n/config'
+import {
+  classifyEffects,
+  buildTooltipMap,
+  type EffectTables,
+} from './_shared/effects'
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 
@@ -227,93 +232,9 @@ function resolvePlaceholders(
   })
 }
 
-// Get buff/debuff type label from a buff entry
-function buffTypeLabel(
-  buff: Record<string, string>,
-  tooltipCtx?: { map: Map<string, { name: string; isDebuff: boolean }>; blacklist: Set<string> }
-) {
-  const type = buff.Type
-
-  // Irremovable handling: IconName contains "Interruption" and has a ToolTipID
-  if (buff.IconName?.includes('Interruption') && buff.ToolTipID && tooltipCtx) {
-    // Character-specific tooltip (not blacklisted) → use tooltip name as label
-    if (!tooltipCtx.blacklist.has(buff.ToolTipID)) {
-      const tt = tooltipCtx.map.get(buff.ToolTipID)
-      if (tt) return tt.name.toUpperCase().replace(/\s+/g, '_')
-    }
-    // Generic irremovable → append _IR suffix
-    const base = (type === 'BT_STAT' && buff.StatType && buff.StatType !== 'ST_NONE')
-      ? `${type}|${buff.StatType}` : type
-    return `${base}_IR`
-  }
-
-  // Triggered passive mechanics (counter, revenge, agile response, additional attack)
-  // Use ActivateText as label instead of the verbose BT_RUN_* type
-  if (type.startsWith('BT_RUN_') && buff.ActivateText?.startsWith('SYS_BUFF_')) {
-    return buff.ActivateText
-  }
-
-  if (type === 'BT_STAT' && buff.StatType && buff.StatType !== 'ST_NONE') {
-    return `${type}|${buff.StatType}`
-  }
-  // Sustained recovery = heal with duration (not instant)
-  if ((type === 'BT_HEAL_BASED_TARGET' || type === 'BT_HEAL_BASED_CASTER') &&
-      parseInt(buff.TurnDuration) > 0 && buff.BuffRemoveType === 'ON_TURN_END') {
-    return 'BT_CONTINU_HEAL'
-  }
-  return type
-}
-
-// Buff types to exclude from display
-const BUFF_BLACKLIST = new Set([
-  'BT_DMG', 'BT_DMG_OWNER_STAT', 'BT_DMG_OWNER_LOST_HP_RATE',
-  'BT_SKILL_RANGE_ALL', 'BT_DMG_ENEMY_TEAM_DECREASE', 'BT_DMG_TO_BOSS',
-  'BT_HEAL_BASED_TARGET', 'BT_HEAL_BASED_CASTER',
-  'BT_RESOURCE_CHARGE', 'BT_RESOURCE_USE_SKILL', 'BT_SKILL_USING_CONDITION',
-  'BT_SWAP_STAT_ATTACK', 'BT_DMG_TARGET_DEBUFF', 'BT_DMG_TARGET_STAT', 'BT_DMG_TARGET_BUFF',
-  'BT_STAT_OWNER_LOST_HP_RATE', 'BT_STAT_PREMIUM', 'BT_GROUP', 'BT_DMG_REDUCE', 'BT_STAT|ST_HIT_HP_RECOVERY', 'BT_DMG_TARGET_LOST_HP_RATE',
-  'BT_SECOND_TRIGGER','BT_REMOVE_BY_GROUP_ID','BT_SHARE_DMG','BT_RESOURCE_CHARGE_BUFF_CASTER',
-    "BT_NONE",
-  "BT_DMG_REDUCE_FINAL", "BT_REMOVE_DEATH","BT_REVIVAL_N_RUN_PASSIVE_SKILL",
-  "BT_DMG_MY_TEAM_DECREASE", "BT_DMG_KILL_COUNT_STACK",'BT_LIMIT_DMG_TURN',
-  'BT_STAT', // BT_STAT without StatType (ST_NONE) — internal modifier, not a visible buff
-])
-
-// Classify buffs into buff/debuff arrays
-function classifyBuffs(
-  buffIDs: string[],
-  buffsByID: Map<string, Record<string, string>[]>,
-  tooltipCtx?: { map: Map<string, { name: string; isDebuff: boolean }>; blacklist: Set<string> }
-) {
-  const buffs: string[] = []
-  const debuffs: string[] = []
-  const seen = new Set<string>()
-
-  for (const bid of buffIDs) {
-    const entries = buffsByID.get(bid)
-    if (!entries?.length) continue
-    const entry = entries[0]
-    const label = buffTypeLabel(entry, tooltipCtx)
-    if (BUFF_BLACKLIST.has(label)) continue
-    // Skip internal stat buffs that only exist during skill execution
-    if (entry.BuffRemoveType === 'ON_SKILL_FINISH' && entry.Type === 'BT_STAT') continue
-    // Skip permanent stacking stat increases (not a visible buff)
-    if (entry.Type === 'BT_STAT' && entry.TurnDuration === '-1' && parseInt(entry.StackCount) > 1) continue
-    if (seen.has(label)) continue
-    seen.add(label)
-
-    const debuffType = entry.BuffDebuffType ?? ''
-    const target = entry.TargetType ?? ''
-    if (debuffType.startsWith('DEBUFF')) {
-      debuffs.push(label)
-    } else if (debuffType.startsWith('NEUTRAL') && target.startsWith('ENEMY')) {
-      debuffs.push(label)
-    } else if (debuffType === 'BUFF') {
-      buffs.push(label)
-    }
-  }
-  return { buffs, debuffs }
-}
+// Buff label derivation and classification live in `_shared/effects/`.
+// This module keeps only character-specific glue code (implicit-buff scan
+// safety filter, change-form merge, burst inheritance, desc-derived effects).
 
 function targetType(rangeType: string) {
   if (rangeType === 'SINGLE') return 'mono'
@@ -336,51 +257,14 @@ function extractSkills(
   const skillMap = indexBy(skillTemplet)
   const levelsBySkill = groupBy(skillLevelTemplet, 'SkillID')
 
-  // Build tooltip ID → name mapping (e.g. 87 → "HEAVY_STRIKE")
-  const tooltipMap = new Map<string, { name: string; isDebuff: boolean }>()
-  // Blacklist generic tooltips that duplicate already-extracted buff types
-  // 1-75: generic stat/CC/mechanic tooltips, 1001-1102: duplicates of 1-102
-  const TOOLTIP_BLACKLIST = new Set<string>()
-  for (let i = 1; i <= 75; i++) TOOLTIP_BLACKLIST.add(String(i))
-  for (let i = 1001; i <= 1102; i++) TOOLTIP_BLACKLIST.add(String(i))
-  TOOLTIP_BLACKLIST.add('78') // Burst Skill
-  TOOLTIP_BLACKLIST.add('80') // Find Weakness (= BT_DMG_TARGET_BREAK)
-  TOOLTIP_BLACKLIST.add('84') // Burst Skill
-  TOOLTIP_BLACKLIST.add('86') // Resurrection Greater (= BT_RESURRECTION)
-  TOOLTIP_BLACKLIST.add('88') // Increases Lifesteal (= BT_STAT|ST_VAMPIRIC)
-  TOOLTIP_BLACKLIST.add('89') // Reduces Lifesteal
-  TOOLTIP_BLACKLIST.add('90') // Immortality (= BT_UNDEAD)
-  TOOLTIP_BLACKLIST.add('96') // Seal Extra Skill (= BT_SEAL_ADDITIVE_ATTACK)
-  TOOLTIP_BLACKLIST.add('98') // Stealth (= BT_STEALTHED)
-  TOOLTIP_BLACKLIST.add('2100092') // Eternal Bleeding (= BT_DOT_2000092)
-  TOOLTIP_BLACKLIST.add('2200092') // Eternal Bleeding (= BT_DOT_2000092)
-  TOOLTIP_BLACKLIST.add('97') // Buff Reversal (= BT_STATBUFF_CONVERT_TO_STATDEBUFF)
-  TOOLTIP_BLACKLIST.add('104') // Golden Curse (= BT_GOLDEN_CURSE)
-  TOOLTIP_BLACKLIST.add('2100093') // Gift of Buffs (= BT_CASTER_COPY_BUFF)
-  for (const tt of tooltipTemplet) {
-    const nameEntry = textSystem.get(tt.NameID)
-    const name = nameEntry?.[LANG_COLUMNS[DEFAULT_LANG]] ?? tt.NameID
-    tooltipMap.set(tt.ID, { name, isDebuff: tt.IsDebuff === 'True' })
-  }
-  const tooltipCtx = { map: tooltipMap, blacklist: TOOLTIP_BLACKLIST }
-
-  const addTooltipBuffs = (ttIDs: string[], buffs: string[], debuffs: string[]) => {
-    const seen = new Set(buffs.concat(debuffs))
-    for (const ttID of ttIDs) {
-      if (TOOLTIP_BLACKLIST.has(ttID)) continue
-      const tt = tooltipMap.get(ttID)
-      if (!tt) continue
-      const label = tt.name.toUpperCase().replace(/\s+/g, '_')
-      if (!label) continue
-      if (seen.has(label)) continue
-      seen.add(label)
-      if (tt.isDebuff) debuffs.push(label)
-      else buffs.push(label)
-    }
-  }
+  // Tooltip map (TooltipID → { name, isDebuff }) shared with the
+  // effect classifier. Names come from TextSystem.English, normalized
+  // to UPPERCASE_UNDERSCORES.
+  const tooltipMap = buildTooltipMap(tooltipTemplet, textSystem, LANG_COLUMNS[DEFAULT_LANG])
 
   const textMap = indexBy(textSkill, 'ID', true)
   const buffsByID = groupBy(buffTemplet, 'BuffID')
+  const effectTables: EffectTables = { buffsByID, tooltipMap }
 
   // Collect all skill IDs assigned to this character
   const charSkills: Record<string, string> = {}
@@ -544,47 +428,17 @@ function extractSkills(
         }
       }
     }
-    const { buffs, debuffs } = classifyBuffs([...buffIDSet], buffsByID, tooltipCtx)
-    for (const d of extraDebuffs) {
-      if (!debuffs.includes(d)) debuffs.push(d)
-    }
-    // Manual buff overrides for skills not represented in BuffTemplet
-    const FORCED_BUFFS: Record<string, Record<string, { buff?: string[]; debuff?: string[]; removeBuff?: string[]; removeDebuff?: string[] }>> = {
-      '2000065': { SKT_FIRST: { buff: ['BT_EXTRA_ATTACK_ON_TURN_END'], removeBuff: ['BT_STAT|ST_ATK'] } },
-      '2000053': {
-        SKT_FIRST: { removeBuff: ['BT_KILL_UNDER_HP_RATE'], debuff: ['BT_KILL_UNDER_HP_RATE'] },
-        SKT_ULTIMATE: { removeBuff: ['BT_KILL_UNDER_HP_RATE'], debuff: ['BT_KILL_UNDER_HP_RATE'] },
-        SKT_CHAIN_PASSIVE: { removeDebuff: ['BT_WG_REVERSE_HEAL'] },
-      },
-      '2000021': { SKT_SECOND: { removeBuff: ['BT_STAT|ST_AVOID'] } },
-      '2000042': { SKT_FIRST: { removeBuff: ['BT_INVINCIBLE'] } },
-      '2000043': { SKT_SECOND: { removeDebuff: ['BT_STAT|ST_AVOID'] } },
-      '2000060': { SKT_SECOND: { removeBuff: ['BT_EXTEND_BUFF'] } },
-      '2000072': { SKT_ULTIMATE: { debuff: ['BT_STEAL_BUFF'] } },
-      '2000109': {
-        SKT_FIRST: { removeDebuff: ['BT_DOT_POISON'] },
-        SKT_SECOND: { removeDebuff: ['BT_DOT_POISON'] },
-        SKT_ULTIMATE: { removeBuff: ['BT_STAT|ST_DEF'], removeDebuff: ['BT_DOT_POISON'] },
-        SKT_CHAIN_PASSIVE: { removeDebuff: ['BT_DOT_POISON'] },
-      },
-      '2000085': { SKT_SECOND: { removeDebuff: ['BT_RESOURCE_DOWN'] } },
-      '2000084': { SKT_FIRST: { buff: ['BT_CALL_BACKUP_2', 'BT_CALL_BACKUP'] } },
-      '2000102': { SKT_ULTIMATE: { buff: ['BT_EXTEND_DEBUFF'], debuff: ['BT_EXTEND_BUFF'] } },
-    }
-    const forced = FORCED_BUFFS[charRow.ID]?.[skillType]
-    if (forced) {
-      for (const f of forced.buff ?? []) { if (!buffs.includes(f)) buffs.push(f) }
-      for (const f of forced.debuff ?? []) { if (!debuffs.includes(f)) debuffs.push(f) }
-      for (const r of forced.removeBuff ?? []) { const i = buffs.indexOf(r); if (i >= 0) buffs.splice(i, 1) }
-      for (const r of forced.removeDebuff ?? []) { const i = debuffs.indexOf(r); if (i >= 0) debuffs.splice(i, 1) }
-    }
-
-    // Add tooltip-based properties (e.g. HEAVY_STRIKE)
     const tooltipIDs = (levels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
-    addTooltipBuffs(tooltipIDs, buffs, debuffs)
+    const { buffs, debuffs } = classifyEffects([...buffIDSet], {
+      ownerId: charRow.ID,
+      skillType,
+      tables: effectTables,
+      tooltipIds: tooltipIDs,
+      extraDebuffs,
+    })
 
-    skillOut.buff = buffs.filter(Boolean)
-    skillOut.debuff = debuffs.filter(Boolean)
+    skillOut.buff = buffs
+    skillOut.debuff = debuffs
 
     // Offensive / target — needs DamageFactor AND enemy targeting
     if (skillType === 'SKT_CHAIN_PASSIVE') {
@@ -663,9 +517,8 @@ function extractSkills(
         const strikeL1 = strikeLevels[0]
         ;(strikeL1?.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean).forEach((b) => chainBuffIDs.add(b))
 
-        // Add tooltips from strike skill + chain passive
+        // Strike skill tooltips are shown in the same chain-passive UI window
         const strikeTooltips = (strikeL1?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
-        // Will be added after classifyBuffs below
         chainTooltips.push(...strikeTooltips)
       }
 
@@ -676,18 +529,14 @@ function extractSkills(
       }
 
       {
-        const chainClassified = classifyBuffs([...chainBuffIDs], buffsByID, tooltipCtx)
-        skillOut.buff = chainClassified.buffs.filter(Boolean)
-        skillOut.debuff = chainClassified.debuffs.filter(Boolean)
-        addTooltipBuffs(chainTooltips, skillOut.buff as string[], skillOut.debuff as string[])
-        // Re-apply forced overrides after chain passive recalculation
-        const chainForced = FORCED_BUFFS[charRow.ID]?.['SKT_CHAIN_PASSIVE']
-        if (chainForced) {
-          for (const f of chainForced.buff ?? []) { if (!(skillOut.buff as string[]).includes(f)) (skillOut.buff as string[]).push(f) }
-          for (const f of chainForced.debuff ?? []) { if (!(skillOut.debuff as string[]).includes(f)) (skillOut.debuff as string[]).push(f) }
-          for (const r of chainForced.removeBuff ?? []) { const arr = skillOut.buff as string[]; const i = arr.indexOf(r); if (i >= 0) arr.splice(i, 1) }
-          for (const r of chainForced.removeDebuff ?? []) { const arr = skillOut.debuff as string[]; const i = arr.indexOf(r); if (i >= 0) arr.splice(i, 1) }
-        }
+        const chainClassified = classifyEffects([...chainBuffIDs], {
+          ownerId: charRow.ID,
+          skillType: 'SKT_CHAIN_PASSIVE',
+          tables: effectTables,
+          tooltipIds: chainTooltips,
+        })
+        skillOut.buff = chainClassified.buffs
+        skillOut.debuff = chainClassified.debuffs
       }
 
       // Dual attack info from BACKUP skills — always wgr 1, offensive, mono
@@ -711,21 +560,20 @@ function extractSkills(
             ;(cbL1?.BuffID ?? '').split(',').map((s) => s.trim()).filter(Boolean).forEach((b) => backupBuffIDs.push(b))
           }
         }
-        const backupClassified = classifyBuffs(backupBuffIDs, buffsByID, tooltipCtx)
-        skillOut.dual_buff = backupClassified.buffs.filter(Boolean)
-        skillOut.dual_debuff = backupClassified.debuffs.filter(Boolean)
-
-        // Add tooltips from backup skill + chain passive (both shown in same UI window)
-        const backupTooltips = (backupLevels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
         // Only propagate generic chain tooltips to dual (not character-specific ones like RADIANT_WILL)
+        const backupTooltips = (backupLevels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
         const genericChainTooltips = chainTooltips.filter((id) => parseInt(id) < 100000)
-        addTooltipBuffs([...genericChainTooltips, ...backupTooltips], skillOut.dual_buff as string[], skillOut.dual_debuff as string[])
-        // Apply forced overrides to dual as well
-        const dualForced = FORCED_BUFFS[charRow.ID]?.['SKT_CHAIN_PASSIVE']
-        if (dualForced) {
-          for (const r of dualForced.removeBuff ?? []) { const arr = skillOut.dual_buff as string[]; const i = arr.indexOf(r); if (i >= 0) arr.splice(i, 1) }
-          for (const r of dualForced.removeDebuff ?? []) { const arr = skillOut.dual_debuff as string[]; const i = arr.indexOf(r); if (i >= 0) arr.splice(i, 1) }
-        }
+        const backupClassified = classifyEffects(backupBuffIDs, {
+          ownerId: charRow.ID,
+          skillType: 'SKT_CHAIN_PASSIVE',
+          tables: effectTables,
+          tooltipIds: [...genericChainTooltips, ...backupTooltips],
+          // Dual attack inherits forced removals from SKT_CHAIN_PASSIVE but
+          // NOT the additions — the main chain handles those on its side.
+          forcedOverridesMode: 'remove-only',
+        })
+        skillOut.dual_buff = backupClassified.buffs
+        skillOut.dual_debuff = backupClassified.debuffs
       }
     }
 

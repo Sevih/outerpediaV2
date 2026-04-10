@@ -1,0 +1,9 @@
+{
+  "_comment": "Synonym → canonical name mapping. Applied as the last step of label derivation so all downstream code (blacklist, classification, dedup) only sees canonical names. Add new synonyms here as you find them.",
+  "SYS_BUFF_ADDITIVE_ATTACK": "BT_ADDITIVE_ATTACK",
+  "SYS_BUFF_ADDITIVE_SKILL": "BT_ADDITIVE_ATTACK",
+  "BT_ADDITIVE_ATTACK_ON_EVENT": "BT_ADDITIVE_ATTACK",
+  "SYS_BUFF_REVENGE_HEAL": "BT_AGILE_RESPONSE",
+  "SYS_BUFF_COUNTER": "BT_COUNTERATTACK",
+  "SYS_BUFF_REVENGE": "BT_REVENGE"
+}
