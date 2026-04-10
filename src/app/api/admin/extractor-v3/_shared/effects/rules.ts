@@ -40,6 +40,11 @@ type CachedRules = {
   forcedOverrides: ForcedOverrides
   /** Synonym → canonical label mapping (applied after label derivation). */
   aliases: Map<string, string>
+  /**
+   * Labels whose buff/debuff side is forced regardless of BuffTemplet's
+   * own BuffDebuffType/TargetType classification.
+   */
+  forceSide: Map<string, 'buff' | 'debuff'>
 }
 
 let cache: CachedRules | null = null
@@ -63,14 +68,20 @@ export function loadEffectRules(): CachedRules {
   const tooltipBl = readJson<TooltipBlacklistFile>('tooltip-blacklist.json')
   const forced = readJson<ForcedOverrides>('forced-overrides.json')
   const aliases = readJson<Record<string, string>>('aliases.json')
+  const forceSideRaw = readJson<{ buff?: string[]; debuff?: string[] }>('force-side.json')
   // Strip comment keys (JSON files use `_comment` for documentation)
   delete (forced as Record<string, unknown>)._comment
   delete (aliases as Record<string, unknown>)._comment
+  delete (forceSideRaw as Record<string, unknown>)._comment
+  const forceSide = new Map<string, 'buff' | 'debuff'>()
+  for (const l of forceSideRaw.buff ?? []) forceSide.set(l, 'buff')
+  for (const l of forceSideRaw.debuff ?? []) forceSide.set(l, 'debuff')
   cache = {
     labelBlacklist: new Set(blacklist),
     tooltipBlacklist: expandTooltipBlacklist(tooltipBl),
     forcedOverrides: forced,
     aliases: new Map(Object.entries(aliases)),
+    forceSide,
   }
   return cache
 }
@@ -81,5 +92,5 @@ export function clearEffectRulesCache(): void {
 }
 
 // Bundle reload marker: touch this comment to invalidate the in-memory
-// rules cache via a Next.js fast-refresh. (bump 4)
+// rules cache via a Next.js fast-refresh. (bump 7)
 

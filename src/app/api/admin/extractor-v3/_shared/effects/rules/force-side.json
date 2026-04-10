@@ -1,0 +1,5 @@
+{
+  "_comment": "Force a label's buff/debuff classification regardless of what BuffDebuffType / TargetType say in BuffTemplet. Use when the game's own tagging is misleading for wiki users (e.g. BT_KILL_UNDER_HP_RATE is tagged BUFF but describes a killing effect that feels like a debuff).",
+  "buff": [],
+  "debuff": ["BT_KILL_UNDER_HP_RATE"]
+}
