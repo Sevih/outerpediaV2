@@ -1,0 +1,71 @@
+{
+  "id": "5010106@40202038",
+  "Name": {
+    "en": "Magnolia Healer Mage",
+    "jp": "マグノリアの魔法使い〈護〉",
+    "kr": "매그놀리아 마법사 힐러",
+    "zh": "麦格诺里亚治疗魔法师"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Fire",
+  "level": 106,
+  "icons": "4002042",
+  "BuffImmune": "BT_AGGRO",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 38F",
+      "jp": "火の塔38階",
+      "kr": "화염의 탑 38층",
+      "zh": "火之塔第38层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Cure",
+        "jp": "キュア",
+        "kr": "큐어",
+        "zh": "治疗"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Heals an ally's <color=#28d9ed>Health</color> by <color=#28d9ed>25%</color>.",
+        "jp": "味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>25%</color>回復させる。",
+        "kr": "아군 한 명의 <color=#28d9ed>체력</color>을 <color=#28d9ed>25%</color> 회복시킵니다.",
+        "zh": "使1名友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>25%</color>。"
+      },
+      "icon": "MT_Common_Heal_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Healing Zone",
+        "jp": "ヒーリングゾーン",
+        "kr": "힐링 존",
+        "zh": "复苏领域"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Heals all allies' <color=#28d9ed>Health</color> by <color=#28d9ed>30%</color>.",
+        "jp": "味方全体の<color=#28d9ed>HP</color>を<color=#28d9ed>30%</color>回復させる。",
+        "kr": "아군 전체의 <color=#28d9ed>체력</color>을 <color=#28d9ed>30%</color> 회복시킵니다.",
+        "zh": "使全体友军的<color=#28d9ed>生命值</color>恢复<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Common_Heal_1_Fire"
+    }
+  ]
+}

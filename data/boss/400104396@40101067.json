@@ -1,0 +1,58 @@
+{
+  "id": "400104396@40101067",
+  "Name": {
+    "en": "Magnolia Battle Mage",
+    "jp": "マグノリアの魔法使い〈攻〉",
+    "kr": "매그놀리아 마법사 컴뱃",
+    "zh": "麦格诺里亚战斗魔法师"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 86,
+  "icons": "4001043",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 67F",
+      "jp": "飛天の塔67階",
+      "kr": "비천의 탑 67층",
+      "zh": "飞天之塔67层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Force Sword",
+        "jp": "フォースソード",
+        "kr": "포스 소드",
+        "zh": "力量之剑"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.",
+        "zh": "攻击敌人，并使自身的<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    }
+  ]
+}

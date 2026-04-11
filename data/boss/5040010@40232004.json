@@ -1,0 +1,58 @@
+{
+  "id": "5040010@40232004",
+  "Name": {
+    "en": "Sacred Priest of Protection",
+    "jp": "神聖司祭〈守護〉",
+    "kr": "신성 사제 수호",
+    "zh": "神圣祭司守护"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 47,
+  "icons": "4001072",
+  "BuffImmune": "ATTACK",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 4F",
+      "jp": "光の塔 4階",
+      "kr": "빛의 탑 4층",
+      "zh": "光之塔 4层"
+    },
+    "mode": {
+      "en": "Elemental Tower",
+      "jp": "エレメンタルタワー",
+      "kr": "엘레멘탈 타워",
+      "zh": "元素之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Call of the Ocean",
+        "jp": "大洋の手招き",
+        "kr": "대양의 부름",
+        "zh": "大海的呼唤"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "zh": "攻击敌人，并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Water",
+      "debuff": [
+        "BT_STUN"
+      ]
+    }
+  ]
+}

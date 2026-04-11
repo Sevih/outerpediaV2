@@ -1,0 +1,97 @@
+{
+  "id": "401201192@40101022",
+  "Name": {
+    "en": "Reptil Hammer-Wielder",
+    "jp": "ハンマー・レプタイル",
+    "kr": "렙틸 해머",
+    "zh": "巨锤手蜥蜴人"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Fire",
+  "level": 41,
+  "icons": "4012011",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 22F",
+      "jp": "飛天の塔22階",
+      "kr": "비천의 탑 22층",
+      "zh": "飞天之塔22层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Strike Down",
+        "jp": "叩きつけ",
+        "kr": "내려치기",
+        "zh": "下砍"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "zh": "攻击敌人，并有<color=#28d9ed>10%</color>的几率对目标造成<color=#28d9ed>晕眩</color>效果，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Fire",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Hammer Smite",
+        "jp": "ハンマー強打",
+        "kr": "망치 강타",
+        "zh": "强力锤击"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color>을 부여합니다.",
+        "zh": "攻击敌人，并有<color=#28d9ed>10%</color>的几率对目标造成<color=#28d9ed>晕眩</color>效果，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Fire",
+      "debuff": [
+        "BT_STUN"
+      ]
+    },
+    {
+      "name": {
+        "en": "Intimidating Strength",
+        "jp": "脅威的な腕力",
+        "kr": "위협적인 완력",
+        "zh": "惊人的腕力"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\n<color=#ffd732>Upon death, grants 50 Action Points and 4 Chain Points for each remaining enemy.</color>\\n\\nIncreases <color=#28d9ed>Attack</color> proportional to <color=#28d9ed>missing Health</color>.",
+        "jp": "(パッシブ効果)\\n<color=#ffd732>倒れた時、敵全体にAPを50、CPを4獲得させる。</color>\\n\\n自分の<color=#28d9ed>残りHP</color>が低いほど<color=#28d9ed>攻撃力</color>がUPする。",
+        "kr": "(패시브 효과)\\n<color=#ffd732>사망 시 적 한 명당 AP 50, CP 4 씩 회복시킵니다.</color>\\n\\n자신의 <color=#28d9ed>현재 체력</color>이 낮을수록 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "zh": "(被动效果)\\n<color=#ffd732>死亡时，使每个敌人的AP恢复50、CP恢复4。</color>\\n\\n自身<color=#28d9ed>当前生命值</color>越低，则<color=#28d9ed>攻击力</color>越高。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_CP_CHARGE",
+        "BT_AP_CHARGE"
+      ]
+    }
+  ]
+}

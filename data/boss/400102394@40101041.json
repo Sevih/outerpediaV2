@@ -1,0 +1,58 @@
+{
+  "id": "400102394@40101041",
+  "Name": {
+    "en": "Nightwatch Hammer-Wielder",
+    "jp": "騎士団兵〈ハンマー〉",
+    "kr": "기사단 해머",
+    "zh": "骑士团巨锤兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 60,
+  "icons": "4001023",
+  "BuffImmune": "",
+  "StatBuffImmune": "ATTACK",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 41F",
+      "jp": "飛天の塔41階",
+      "kr": "비천의 탑 41층",
+      "zh": "飞天之塔41层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Hammer of Faith",
+        "jp": "信念のハンマー",
+        "kr": "신념의 망치",
+        "zh": "信念之锤"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and increases the caster's <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "zh": "攻击敌人，并使自身<color=#28d9ed>防御力</color>提升，持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Fire",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
+    }
+  ]
+}
