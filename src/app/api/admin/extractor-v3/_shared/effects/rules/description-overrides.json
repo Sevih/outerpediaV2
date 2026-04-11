@@ -4,6 +4,12 @@
     "add_buff": ["BT_REMOVE_DEBUFF"],
     "add_debuff": ["BT_REMOVE_BUFF", "BT_AGGRO"]
   },
+  "(Passive Effect)\\nReduces <color=#28d9ed>damage taken</color> by <color=#ffd732>Idith</color> and <color=#ffd732>Nightwatch Waraxe-Wielder</color> by <color=#28d9ed>15%</color>. This effect stacks with skills of the same name and is removed upon the caster's death.": {
+    "clear_buff": true
+  },
+  "(Passive Effect)\\nReduces <color=#28d9ed>damage taken</color> by all allies by <color=#28d9ed>10%</color>. This effect stacks with skills of the same name and is removed upon the caster's death.": {
+    "clear_buff": true
+  },
   "Damage taken from Cursed and Fixed Damage does not exceed <color=#28d9ed>5000</color>.\nGrants a random buff at the start of a turn.\nUpon taking a critical hit, greatly reduces damage taken and recovers Weakness Gauge by <color=#28d9ed>50%</color>.": {
     "add_buff": ["BT_RANDOM_STAT"],
     "remove_debuff": ["BT_STAT|ST_CRITICAL_DMG_RATE"]
