@@ -76,8 +76,8 @@
       "icon": "Skill_Second_4086014",
       "buff": [
         "BT_GROUP_CASTER_TOOLTIP_CHECK",
-        "UNIQUE_VENION_D",
-        "UNIQUE_VENION_E"
+        "REMOVE_DETECTION_INTERFERENCE",
+        "EXCLUDE_UNKNOWN_VARIABLES"
       ],
       "debuff": [
         "BT_COOL_CHARGE"
@@ -101,7 +101,7 @@
       "debuff": [
         "BT_SEALED_RESURRECTION",
         "BT_REMOVE_BUFF",
-        "BT_KILL"
+        "BT_KILL_UNDER_HP_RATE"
       ]
     },
     {
@@ -146,6 +146,27 @@
       "icon": "MT_Passive_1_Dark",
       "buff": [
         "COURAGE_AGAINST_DESPAIR"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086014",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED_RESURRECTION",
+        "BT_KILL_UNDER_HP_RATE"
       ]
     }
   ]

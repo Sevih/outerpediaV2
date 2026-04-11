@@ -1582,7 +1582,33 @@
     "icon": "IG_Buff_Effect_4086014_B_Interruption"
   },
   {
+    "name": "EXCLUDE_UNKNOWN_VARIABLES",
+    "category": "hidden",
+    "label": "Exclude Unknown Variables",
+    "label_jp": "不特定変数の排除",
+    "label_kr": "불특정 변수 배제",
+    "label_zh": "排除非特定变数",
+    "description": "At the start of the turn, increases skill cooldowns of Fire/Water/Earth enemies by 1 turn. When using Emergency Protocol: Extermination, inflicts instant death on Dark/Light enemies. (Irremovable)",
+    "description_jp": "ターン開始時、火・水・地属性の敵の スキルターンが1ターン増加する。 緊急プロトコル:撲滅が発動した後、 光・闇属性の敵を即死させる。 (解除不可)",
+    "description_kr": "턴 시작 시 화/수/지속성 적의 스킬 쿨타임이 1턴 증가합니다. 긴급 프로토콜 : 박멸 사용 시 명/암속성 적을 즉사시킵니다. (해제 불가)",
+    "description_zh": "回合开始时,火属性/水属性/土属性敌人\\n的技能冷却时间增加1回合。\\n使用紧急协议:消灭时,\\n光属性/暗属性敌人即死。(无法解除)",
+    "icon": "IG_Buff_Effect_4086014_B_Interruption"
+  },
+  {
     "name": "UNIQUE_VENION_E",
+    "category": "hidden",
+    "label": "Remove Detection Interference",
+    "label_jp": "探測障害除去",
+    "label_kr": "탐측 장해 제거",
+    "label_zh": "扫除探测障碍",
+    "description": "At the start of the turn, increases skill cooldowns of Light/Dark enemies by 1 turn. When using Emergency Protocol: Extermination, inflicts instant death on Fire/Water/Earth enemies. (Irremovable)",
+    "description_jp": "ターン開始時、光・闇属性の敵の スキルターンが1ターン増加する。 緊急プロトコル:撲滅が発動した後、 火・水・地属性の敵を即死させる。 (解除不可)",
+    "description_kr": "턴 시작 시 명/암속성 적의 스킬 쿨타임이 1턴 증가합니다. 긴급 프로토콜 : 박멸 사용 시 화/수/지속성 적을 즉사시킵니다. (해제 불가)",
+    "description_zh": "回合开始时,光属性/暗属性敌人的\\n技能冷却时间增加1回合。\\n使用紧急协议:消灭时,火属性/水属性/\\n土属性敌人即死。(无法解除)",
+    "icon": "IG_Buff_Effect_4086014_A_Interruption"
+  },
+  {
+    "name": "REMOVE_DETECTION_INTERFERENCE",
     "category": "hidden",
     "label": "Remove Detection Interference",
     "label_jp": "探測障害除去",

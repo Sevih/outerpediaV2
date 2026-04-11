@@ -97,5 +97,21 @@
   "(Passive Effect) After Dahlia performs an action, reduces the duration of debuffs inflicted on the caster by <color=#28d9ed>2 turns</color>, and upon taking a critical hit, grants <color=#28d9ed>Invulnerability</color> for <color=#28d9ed>1 turn.</color>\\nAfter being hit, increases Priority by <color=#28d9ed>10%</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Prevents the Boss from reducing debuff duration\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)": {
     "remove_buff": ["BT_STAT|ST_SPEED"],
     "add_buff": ["BT_INVINCIBLE"]
+  },
+   "(Passive Effect)The enemy team gains courage against despair, receiving <color=#28d9ed>special effects</color> based on their roles.\\n\\nStriker: +60% Critical Damage to all allies per Striker ally\\nMage: +15% ATK to all allies per Mage ally\\nDefender: On action, heals all allies by +3% HP\\nRanger: On action, grants all allies a Barrier for 2 turns\\nHealer: On action, reduces the boss's WG by 2\\n\\nEnemy team's Skill Chain damage increases per ally of the same attribute.\\nWG damage taken from <color=#28d9ed>Assist</color> and <color=#28d9ed>Skill Chains</color> is reduced by <color=#28d9ed>100%</color>.": {
+    "remove_buff": ["BT_DMG_ELEMENT_SUPERIORITY"],
+    "remove_debuff": ["BT_WG_REVERSE_HEAL"]
+  },
+  "(Passive Effect)The enemy team gains courage against despair, receiving <color=#28d9ed>special effects</color> based on their roles.\\n\\nStriker: +500% Critical Damage to all allies per Striker ally\\nMage: +125% ATK to all allies per Caster ally\\nDefender: On action, heals all allies by +5% HP\\nRanger: On action, grants all allies a Shield for 2 turns\\nHealer: On action, reduces the boss's WG by 3\\n\\nEnemy team's Skill Chain damage increases per ally of the same attribute.\\nWG damage taken from <color=#28d9ed>Assist</color> and <color=#28d9ed>Skill Chains</color> is reduced by <color=#28d9ed>100%</color>.": {
+    "remove_buff": [
+      "BT_STAT|ST_ATK",
+      "BT_DMG_ELEMENT_SUPERIORITY",
+      "BT_STAT|ST_CRITICAL_DMG_RATE",
+      "BT_ACTION_GAUGE_ENHANCE_IR"
+    ],
+    "remove_debuff": ["BT_WG_REVERSE_HEAL", "BT_REMOVE_BUFF"]
+  },
+  "Attacks all enemies, and grants 【Environmental Change Response】 or 【Weather Variable Response】 effect for <color=#28d9ed>3 turn(s)</color>.\\n\\nThe effect already granted when attacking will not be applied, and effects will not be removed when inflicted with Break.": {
+    "remove_buff": ["BT_ACTION_GAUGE"]
   }
 }
