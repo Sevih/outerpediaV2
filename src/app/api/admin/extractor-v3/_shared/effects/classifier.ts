@@ -101,6 +101,17 @@ export function buffTypeLabel(buff: BuffRow, tables: EffectTables): string {
       }
     }
   }
+  // 3b. Instakill reverse-heal: BT_REVERSE_HEAL_BASED_TARGET with a
+  // fixed value ≥ 9999 (OAT_NONE/OAT_ADD) or a rate ≥ 999% (OAT_RATE)
+  // is guaranteed overkill damage. Wiki surfaces these as `BT_KILL`.
+  else if (type === 'BT_REVERSE_HEAL_BASED_TARGET') {
+    const at = buff.ApplyingType ?? ''
+    const val = Math.abs(parseInt(buff.Value ?? '0', 10) || 0)
+    const isKill =
+      ((at === 'OAT_NONE' || at === 'OAT_ADD') && val >= 9999) ||
+      (at === 'OAT_RATE' && val >= 9990)
+    label = isKill ? 'BT_KILL' : type
+  }
   // 4. Sustained recovery (heal with duration, not instant)
   else if (
     (type === 'BT_HEAL_BASED_TARGET' || type === 'BT_HEAL_BASED_CASTER') &&
