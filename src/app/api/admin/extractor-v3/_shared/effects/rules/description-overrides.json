@@ -113,5 +113,14 @@
   },
   "Attacks all enemies, and grants 【Environmental Change Response】 or 【Weather Variable Response】 effect for <color=#28d9ed>3 turn(s)</color>.\\n\\nThe effect already granted when attacking will not be applied, and effects will not be removed when inflicted with Break.": {
     "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "Attacks an enemy.\\nAttacks the <color=#28d9ed>leftmost</color> enemy as a primary target.": {
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "Attacks all enemies.": {
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)Takes increased damage from Fire-, Water-, and Earth-attribute enemies, and enemies always attack with a <color=#28d9ed>favorable attribute</color>.\\n\\nAll enemies' Speed becomes <color=#28d9ed>0</color>, and they are afflicted with <color=#28d9ed>Extra Skill Disabled</color> and <color=#28d9ed>Extra Turn Disabled</color> (permanent).\\nAfter your attack, increases all enemies' Priority by <color=#28d9ed>100%</color> (may be limited to <color=#28d9ed>80%</color> under certain conditions).\\n\\nDamage from <color=#28d9ed>Cursed/Fixed Damage</color> cannot exceed <color=#28d9ed>10000</color>/<color=#28d9ed>20000</color> respectively. However, <color=#28d9ed>Fixed Damage</color> received from <color=#28d9ed>Skill Chains</color> can be up to <color=#28d9ed>50000</color>.": {
+    "add_buff": ["BT_ACTION_GAUGE"]
   }
 }
