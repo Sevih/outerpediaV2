@@ -144,6 +144,23 @@ function mergeWithExisting(
 
 // ── Helpers ─────────────────────────────────────────────────────────
 
+// Summons (`<id>S<parent>`) inherit their location from the parent boss.
+// The whole point of the `S` suffix is that the same child monster
+// (e.g. Deformed Inferior Core 404400450) is shared across many parent
+// stages — its own spawn rows would otherwise pick the wrong stage.
+function inheritParentLocation(
+  raw: ReturnType<typeof extractMonster>,
+  parentId: string | null,
+  dungeonId?: string
+): void {
+  if (!raw || !parentId) return
+  const parent = extractMonster(parentId, dungeonId ? { dungeonId } : undefined)
+  if (!parent) return
+  raw.location = parent.location
+  raw.level = parent.level
+  raw._allLocations = parent._allLocations
+}
+
 function readBossFile(id: string): Record<string, unknown> | null {
   const p = path.join(BOSS_DIR, `${id}.json`)
   if (!fs.existsSync(p)) return null
@@ -402,6 +419,7 @@ export async function GET(req: NextRequest) {
       const dungeonId = searchParams.get('dungeonId') ?? parsed.variantDungeonId ?? undefined
       const raw = extractMonster(parsed.monsterId, dungeonId ? { dungeonId } : undefined)
       if (!raw) return NextResponse.json({ error: 'not found' }, { status: 404 })
+      inheritParentLocation(raw, parsed.parentId, dungeonId)
       const existing = readBossFile(rawId)
       const merged = mergeWithExisting(stripInternalFields(raw), existing) as Record<string, unknown>
       merged.id = rawId // preserve composite id in saved file
@@ -422,6 +440,7 @@ export async function GET(req: NextRequest) {
         parsed.variantDungeonId ? { dungeonId: parsed.variantDungeonId } : undefined
       )
       if (!raw) return NextResponse.json({ error: 'not found' }, { status: 404 })
+      inheritParentLocation(raw, parsed.parentId, parsed.variantDungeonId ?? undefined)
       const existing = readBossFile(rawId)
       const extracted = mergeWithExisting(stripInternalFields(raw), existing) as Record<string, unknown>
       extracted.id = rawId
@@ -441,6 +460,7 @@ export async function GET(req: NextRequest) {
           parsed.monsterId,
           parsed.variantDungeonId ? { dungeonId: parsed.variantDungeonId } : undefined
         )
+        inheritParentLocation(raw, parsed.parentId, parsed.variantDungeonId ?? undefined)
         const extracted = raw
           ? (mergeWithExisting(stripInternalFields(raw), existing) as Record<string, unknown>)
           : null
@@ -485,6 +505,7 @@ export async function GET(req: NextRequest) {
           parsed.variantDungeonId ? { dungeonId: parsed.variantDungeonId } : undefined
         )
         if (!raw) continue
+        inheritParentLocation(raw, parsed.parentId, parsed.variantDungeonId ?? undefined)
         const existing = readBossFile(rawId)
         const extracted = mergeWithExisting(stripInternalFields(raw), existing) as Record<string, unknown>
         extracted.id = rawId

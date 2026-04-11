@@ -333,8 +333,6 @@ export function classifyEffects(
       : lookupForced(dungeonKey) ??
         lookupForced(modeKey) ??
         rules.forcedOverrides[ctx.ownerId]?.[ctx.skillType]
-  const removeBuff: string[] = [...(forced?.removeBuff ?? [])]
-  const removeDebuff: string[] = [...(forced?.removeDebuff ?? [])]
   if (forced) {
     if (mode === 'full') {
       for (const f of forced.buff ?? []) {
@@ -344,11 +342,11 @@ export function classifyEffects(
         if (!seenDebuff.has(f)) { seenDebuff.add(f); debuffs.push(f) }
       }
     }
-    for (const r of removeBuff) {
+    for (const r of forced.removeBuff ?? []) {
       const i = buffs.indexOf(r)
       if (i >= 0) { buffs.splice(i, 1); seenBuff.delete(r) }
     }
-    for (const r of removeDebuff) {
+    for (const r of forced.removeDebuff ?? []) {
       const i = debuffs.indexOf(r)
       if (i >= 0) { debuffs.splice(i, 1); seenDebuff.delete(r) }
     }
@@ -421,7 +419,7 @@ export function classifyEffects(
   return {
     buffs: buffs.filter(Boolean),
     debuffs: debuffs.filter(Boolean),
-    removeBuff,
-    removeDebuff,
+    removeBuff: [],
+    removeDebuff: [],
   }
 }
