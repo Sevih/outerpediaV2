@@ -177,7 +177,7 @@ def resolve_tag(row):
     if btype == 'BT_STAT' and stat and stat != 'ST_NONE':
         tag = f'{btype}|{stat}'
         if tag == 'BT_STAT|ST_AVOID':
-            return 'SYS_BUFF_AVOID_UP'
+            return 'BT_STAT|ST_AVOID'
         return tag
 
     return btype

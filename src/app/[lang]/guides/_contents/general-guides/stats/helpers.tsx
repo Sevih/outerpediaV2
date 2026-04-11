@@ -324,7 +324,7 @@ export function FAQContent() {
             content: (
                 <>
                     <p>{lRec({ en: 'When a miss occurs, the attack deals', jp: 'ミス発生時、攻撃のダメージが', kr: '미스 발생 시 공격 데미지가 ', zh: '未命中时，攻击伤害' } satisfies LangMap, lang)} <strong>{lRec({ en: '50% reduced damage', jp: '50%減少', kr: '50% 감소', zh: '减少50%' } satisfies LangMap, lang)}</strong>{lRec({ en: ', and neither debuffs nor critical hits can occur.', jp: 'し、デバフもクリティカルも発生しません。', kr: '하며, 디버프와 치명타 모두 발생하지 않습니다.', zh: '，且不会触发减益和暴击。' } satisfies LangMap, lang)}</p>
-                    <p className="mt-2">{lRec({ en: 'A miss can occur when the attacker is affected by effects like', jp: '', kr: '', zh: '通过' } satisfies LangMap, lang)} {parseText('{B/SYS_BUFF_AVOID_UP}')}{lRec({ en: ', which increases the miss rate by 15%.', jp: 'などの効果により、ミス率が15%上昇することでミスが発生します。', kr: ' 등의 효과로 빗나감 확률이 15% 증가하여 미스가 발생할 수 있습니다.', zh: '等效果使未命中率提升15%，可导致未命中发生。' } satisfies LangMap, lang)}</p>
+                    <p className="mt-2">{lRec({ en: 'A miss can occur when the attacker is affected by effects like', jp: '', kr: '', zh: '通过' } satisfies LangMap, lang)} {parseText('{B/BT_STAT|ST_AVOID}')}{lRec({ en: ', which increases the miss rate by 15%.', jp: 'などの効果により、ミス率が15%上昇することでミスが発生します。', kr: ' 등의 효과로 빗나감 확률이 15% 증가하여 미스가 발생할 수 있습니다.', zh: '等效果使未命中率提升15%，可导致未命中发生。' } satisfies LangMap, lang)}</p>
                 </>
             ),
         },

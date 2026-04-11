@@ -359,7 +359,7 @@ function buildDiffs(
         const sym = new Set<string>()
         for (const v of eSet) if (!xSet.has(v)) sym.add(v)
         for (const v of xSet) if (!eSet.has(v)) sym.add(v)
-        if (sym.size === 1 && sym.has('ATTACK')) kind = 'typo'
+        if (sym.size === 1 && (sym.has('ATTACK') || sym.has('HEAL'))) kind = 'typo'
       }
       diffs.push({ path: p, extracted: e, existing: x, kind })
     }

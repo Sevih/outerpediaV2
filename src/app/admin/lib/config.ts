@@ -21,7 +21,7 @@ type BuffRow = Record<string, string>;
 
 // Buff types to rename (game name → display name)
 const BUFF_TYPE_RENAME: Record<string, string> = {
-  'BT_STAT|ST_AVOID': 'SYS_BUFF_AVOID_UP',
+  'BT_STAT|ST_AVOID': 'BT_STAT|ST_AVOID',
   'IG_Buff_Stat_Atk_Interruption_D':'BT_STAT|ST_ATK_IR',
   'IG_Buff_Stat_CriDmgRate_Interruption_D':'BT_STAT|ST_CRITICAL_DMG_RATE_IR'
 };
