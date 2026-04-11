@@ -6,45 +6,45 @@
   },
   {
     "_comment": "=== CP (Chain Points) — buff variants ===",
-    "pattern": "(grants?|restores?|recovers?|increases?)\\s+(all\\s+)?(<[^>]+>)?\\s*(Chain Points|CP)",
+    "pattern": "(grants?|restores?|recovers?|increases?)\\s+(all\\s+)?(<[^>]+>)?\\s*(Chain Points|\\bCP\\b)",
     "flags": "i",
     "add_buff": ["BT_CP_CHARGE"]
   },
   {
-    "pattern": "(<[^>]+>)?\\s*(Chain Points|CP)(<[^>]+>)?\\s+(is|are)\\s+(restored|recovered|increased|granted)",
+    "pattern": "(<[^>]+>)?\\s*(Chain Points|\\bCP\\b)(<[^>]+>)?\\s+(is|are)\\s+(restored|recovered|increased|granted)",
     "flags": "i",
     "add_buff": ["BT_CP_CHARGE"]
   },
   {
     "_comment": "=== CP (Chain Points) — debuff variants ===",
-    "pattern": "reduces?\\s+(all\\s+|the\\s+enemy\\s+team's\\s+)?(<[^>]+>)?\\s*(Chain Points|CP)(<[^>]+>)?(\\s+of\\s+enem|\\s+by\\s+)",
+    "pattern": "reduces?\\s+(all\\s+|the\\s+enemy\\s+team's\\s+)?(<[^>]+>)?\\s*(Chain Points|\\bCP\\b)(<[^>]+>)?(\\s+of\\s+enem|\\s+by\\s+)",
     "flags": "i",
     "add_debuff": ["BT_CP_CHARGE"]
   },
   {
-    "pattern": "(enemy|enemies|target)('s|s')?\\s*(<[^>]+>)?\\s*(Chain Points|CP)(<[^>]+>)?\\s+(is|are)\\s+reduced",
+    "pattern": "(enemy|enemies|target)('s|s')?\\s*(<[^>]+>)?\\s*(Chain Points|\\bCP\\b)(<[^>]+>)?\\s+(is|are)\\s+reduced",
     "flags": "i",
     "add_debuff": ["BT_CP_CHARGE"]
   },
   {
     "_comment": "=== AP (Action Points) — buff variants ===",
-    "pattern": "(grants?|restores?|recovers?|increases?)\\s+(all\\s+)?(<[^>]+>)?\\s*(Action Points|AP)",
+    "pattern": "(grants?|restores?|recovers?|increases?)\\s+(all\\s+)?(<[^>]+>)?\\s*(Action Points|\\bAP\\b)",
     "flags": "i",
     "add_buff": ["BT_AP_CHARGE"]
   },
   {
-    "pattern": "(<[^>]+>)?\\s*(Action Points|AP)(<[^>]+>)?\\s+(is|are)\\s+(restored|recovered|increased|granted)",
+    "pattern": "(<[^>]+>)?\\s*(Action Points|\\bAP\\b)(<[^>]+>)?\\s+(is|are)\\s+(restored|recovered|increased|granted)",
     "flags": "i",
     "add_buff": ["BT_AP_CHARGE"]
   },
   {
     "_comment": "=== AP (Action Points) — debuff variants ===",
-    "pattern": "reduces?\\s+(all\\s+|the\\s+enemy\\s+team's\\s+)?(<[^>]+>)?\\s*(Action Points|AP)(<[^>]+>)?(\\s+of\\s+enem|\\s+by\\s+)",
+    "pattern": "reduces?\\s+(all\\s+|the\\s+enemy\\s+team's\\s+)?(<[^>]+>)?\\s*(Action Points|\\bAP\\b)(<[^>]+>)?(\\s+of\\s+enem|\\s+by\\s+)",
     "flags": "i",
     "add_debuff": ["BT_AP_CHARGE"]
   },
   {
-    "pattern": "(enemy|enemies|target)('s|s')?\\s*(<[^>]+>)?\\s*(Action Points|AP)(<[^>]+>)?\\s+(is|are)\\s+reduced",
+    "pattern": "(enemy|enemies|target)('s|s')?\\s*(<[^>]+>)?\\s*(Action Points|\\bAP\\b)(<[^>]+>)?\\s+(is|are)\\s+reduced",
     "flags": "i",
     "add_debuff": ["BT_AP_CHARGE"]
   },
@@ -54,8 +54,9 @@
     "add_buff": ["UNIQUE_DAHLIA_A"]
   },
   {
-    "pattern": "does not trigger.*(?=.*Counterattack)(?=.*Revenge)(?=.*Agile Response)",
-    "flags": "i",
+    "_comment": "Matches both 'does not trigger ... Counterattack/Revenge/Agile Response' and 'Counterattack, Revenge, and Agile Response cannot activate' phrasings.",
+    "pattern": "(does not trigger|avoid triggering|cannot activate|will not activate|Unable to|\\bcannot\\b).*?Counterattack|Counterattack.*?(does not trigger|cannot activate|will not activate)",
+    "flags": "is",
     "add_buff": ["BT_SEAL_COUNTER"]
   },
   {

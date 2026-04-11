@@ -429,9 +429,39 @@ function extractSkills(
       }
     }
     const tooltipIDs = (levels[0]?.BuffToolTip ?? '').split(',').map((s) => s.trim()).filter(Boolean)
-    // `trueDescLevels['1']` is the resolved EN description for level 1
-    // (DEFAULT_LANG has no suffix in the key).
-    const descEn = (trueDescLevels['1'] ?? '') as string
+    // Description patterns need the FULL (max level) desc — some skills
+    // only describe their final effect (e.g. seal counter) at the last
+    // level, and level 1 is a trimmed version. Pick the highest level
+    // available among the EN-keyed entries of `trueDescLevels`.
+    let maxLevel = 0
+    for (const key of Object.keys(trueDescLevels)) {
+      if (/^\d+$/.test(key)) {
+        const n = parseInt(key, 10)
+        if (n > maxLevel) maxLevel = n
+      }
+    }
+    let descEn = (trueDescLevels[String(maxLevel || 1)] ?? trueDescLevels['1'] ?? '') as string
+    // RequireAP skills (Caren-style activators) inherit effects from all
+    // bursts — include the burst descriptions in the pattern input so
+    // text-driven rules like `BT_SEAL_COUNTER` can match against the
+    // burst phrasing instead of only the trigger skill's own desc.
+    if (skill.RequireAP) {
+      const extraDescParts: string[] = []
+      for (const burstType of ['SKT_BURST_1', 'SKT_BURST_2', 'SKT_BURST_3']) {
+        const burstEntry = skillsByType.get(burstType)
+        if (!burstEntry) continue
+        const burstDescIDs = (burstEntry.skill.DescID ?? '').split(',').map((s) => s.trim())
+        const highest = burstDescIDs[burstDescIDs.length - 1] ?? burstDescIDs[0]
+        const row = textMap.get(highest)
+        if (row) {
+          const txt = row[LANG_COLUMNS[DEFAULT_LANG]]
+          if (txt) extraDescParts.push(txt)
+        }
+      }
+      if (extraDescParts.length > 0) {
+        descEn = [descEn, ...extraDescParts].join('\n')
+      }
+    }
     const { buffs, debuffs } = classifyEffects([...buffIDSet], {
       ownerId: charRow.ID,
       skillType,

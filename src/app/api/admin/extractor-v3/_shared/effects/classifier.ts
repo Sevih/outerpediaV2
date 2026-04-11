@@ -355,14 +355,18 @@ export function classifyEffects(
 
   if (ctx.description) {
     const normalizedDesc = normalizePunct(ctx.description.replace(/\\n/g, '\n'))
+    // Description-derived labels intentionally bypass the label
+    // blacklist: a blacklist entry is meant to suppress noisy rows
+    // from BuffTemplet, but when the skill description explicitly
+    // names the effect we want to surface it (e.g. `BT_SEAL_COUNTER`
+    // is blacklisted as a row type but re-added here when the desc
+    // says "does not trigger Counterattack/Revenge/Agile Response").
     const addB = (raw: string) => {
       const label = applyAlias(raw)
-      if (rules.labelBlacklist.has(label)) return
       if (!seenBuff.has(label)) { seenBuff.add(label); buffs.push(label) }
     }
     const addD = (raw: string) => {
       const label = applyAlias(raw)
-      if (rules.labelBlacklist.has(label)) return
       if (!seenDebuff.has(label)) { seenDebuff.add(label); debuffs.push(label) }
     }
     const removeB = (raw: string) => {
