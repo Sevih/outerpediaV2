@@ -18,7 +18,7 @@
   "level": 94,
   "icons": "2000002",
   "BuffImmune": "",
-  "StatBuffImmune": "ATTACK",
+  "StatBuffImmune": "",
   "location": {
     "dungeon": {
       "en": "Skyward Tower 75F",
@@ -114,7 +114,7 @@
       "icon": "MT_Passive_1_Dark",
       "buff": [
         "FX_Buff_Turn_Extra",
-        "BT_RUN_ACTIVE_SKILL_ON_TURN_END"
+        "BT_ADDITIVE_ATTACK"
       ]
     }
   ]

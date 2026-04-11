@@ -18,7 +18,7 @@
   "level": 100,
   "icons": "2000056",
   "BuffImmune": "",
-  "StatBuffImmune": "ATTACK",
+  "StatBuffImmune": "",
   "location": {
     "dungeon": {
       "en": "Skyward Tower: Very Hard 3F",
@@ -27,10 +27,10 @@
       "zh": "飞天之塔【极难】第3层"
     },
     "mode": {
-      "en": "DM_TOWER_VERY_HARD",
-      "jp": "DM_TOWER_VERY_HARD",
-      "kr": "DM_TOWER_VERY_HARD",
-      "zh": "DM_TOWER_VERY_HARD"
+      "en": "Skyward Tower: Very Hard",
+      "jp": "飛天の塔【ベリーハード】",
+      "kr": "비천의 탑 [베리 하드]",
+      "zh": "飞天之塔【极难】"
     },
     "area_id": {
       "en": "",
@@ -99,9 +99,8 @@
       },
       "icon": "Skill_Ultimate_2000056",
       "buff": [
-        "BT_STAT|ST_GET_GOLD_RATE_IR",
-        "BT_ACTION_GAUGE",
-        "IG_Buff_2000056_Interruption"
+        "FIERCE_OFFENSIVE",
+        "BT_ACTION_GAUGE"
       ]
     }
   ]

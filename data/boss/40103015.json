@@ -27,10 +27,10 @@
       "zh": "飞天之塔【极难】第3层"
     },
     "mode": {
-      "en": "DM_TOWER_VERY_HARD",
-      "jp": "DM_TOWER_VERY_HARD",
-      "kr": "DM_TOWER_VERY_HARD",
-      "zh": "DM_TOWER_VERY_HARD"
+      "en": "Skyward Tower: Very Hard",
+      "jp": "飛天の塔【ベリーハード】",
+      "kr": "비천의 탑 [베리 하드]",
+      "zh": "飞天之塔【极难】"
     },
     "area_id": {
       "en": "",
@@ -73,7 +73,10 @@
         "kr": "적 전체를 공격하고 자신의 체력을 <color=#28d9ed>15%</color> 회복합니다.\\n자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다. 대상의 수가 적을수록 피해가 추가로 증가합니다.",
         "zh": "攻击全体敌人，并使自身生命值恢复<color=#28d9ed>15%</color>。\\n自身<color=#28d9ed>生命值上限</color>越高，则该技能的伤害越高；目标数量越少，则该技能的额外伤害越高。"
       },
-      "icon": "Skill_Second_2000008"
+      "icon": "Skill_Second_2000008",
+      "buff": [
+        "HEAVY_STRIKE"
+      ]
     },
     {
       "name": {

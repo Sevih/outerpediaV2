@@ -17,7 +17,7 @@
   "element": "Light",
   "level": 100,
   "icons": "2000015",
-  "BuffImmune": "ATTACK",
+  "BuffImmune": "",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
@@ -75,7 +75,7 @@
       },
       "icon": "Skill_Second_2000015",
       "buff": [
-        "BT_ADDITIVE_ATTACK_ON_EVENT"
+        "BT_ADDITIVE_ATTACK"
       ],
       "debuff": [
         "BT_DOT_BLEED"

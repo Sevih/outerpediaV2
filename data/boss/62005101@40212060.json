@@ -13,7 +13,7 @@
   "level": 140,
   "icons": "2000103",
   "BuffImmune": "",
-  "StatBuffImmune": "ATTACK",
+  "StatBuffImmune": "",
   "location": {
     "dungeon": {
       "en": "Water Tower 60F",
@@ -51,7 +51,7 @@
       },
       "icon": "Skill_First_2000103",
       "buff": [
-        "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "BT_ADDITIVE_ATTACK",
         "BT_CALL_BACKUP"
       ]
     },

@@ -18,7 +18,7 @@
   "level": 148,
   "icons": "2000015",
   "BuffImmune": "",
-  "StatBuffImmune": "ATTACK",
+  "StatBuffImmune": "",
   "location": {
     "dungeon": {
       "en": "Tower of Darkness 68F",
@@ -70,7 +70,7 @@
       "description": {},
       "icon": "Skill_First_2000015",
       "buff": [
-        "BT_ADDITIVE_ATTACK_ON_EVENT"
+        "BT_ADDITIVE_ATTACK"
       ],
       "debuff": [
         "BT_DOT_BLEED"

@@ -348,7 +348,20 @@ function buildDiffs(
       continue
     }
     if (JSON.stringify(e) !== JSON.stringify(x)) {
-      diffs.push({ path: p, extracted: e, existing: x, kind: classifyDiff(e, x) })
+      let kind = classifyDiff(e, x)
+      // BuffImmune / StatBuffImmune: treat the common case where the only
+      // difference is the "ATTACK" token being added or removed as a typo
+      // (cosmetic curation noise — many existing files carry a stray ATTACK
+      // entry that the extractor never produces).
+      if (k === 'BuffImmune' || k === 'StatBuffImmune') {
+        const eSet = csvToSet(e)
+        const xSet = csvToSet(x)
+        const sym = new Set<string>()
+        for (const v of eSet) if (!xSet.has(v)) sym.add(v)
+        for (const v of xSet) if (!eSet.has(v)) sym.add(v)
+        if (sym.size === 1 && sym.has('ATTACK')) kind = 'typo'
+      }
+      diffs.push({ path: p, extracted: e, existing: x, kind })
     }
   }
   return diffs

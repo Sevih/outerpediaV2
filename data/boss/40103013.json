@@ -27,10 +27,10 @@
       "zh": "飞天之塔【极难】第1层"
     },
     "mode": {
-      "en": "DM_TOWER_VERY_HARD",
-      "jp": "DM_TOWER_VERY_HARD",
-      "kr": "DM_TOWER_VERY_HARD",
-      "zh": "DM_TOWER_VERY_HARD"
+      "en": "Skyward Tower: Very Hard",
+      "jp": "飛天の塔【ベリーハード】",
+      "kr": "비천의 탑 [베리 하드]",
+      "zh": "飞天之塔【极难】"
     },
     "area_id": {
       "en": "",
@@ -92,9 +92,9 @@
       },
       "icon": "Skill_Ultimate_2000065",
       "buff": [
-        "BT_ADDITIVE_TURN",
-        "IG_Buff_Effect_2000065_A_Interruption",
-        "IG_Buff_Effect_2000065_B_Interruption"
+        "SAKURA_CHIRU",
+        "UME_ICHIRIN",
+        "BT_ADDITIVE_TURN"
       ],
       "debuff": [
         "BT_CP_CHARGE"
@@ -116,7 +116,7 @@
       },
       "icon": "MT_Passive_1_Earth",
       "buff": [
-        "BT_STAT_BUFF_ENHANCE",
+        "BT_STAT_BUFF_ENHANCE_IR",
         "BT_RANDOM_STAT"
       ],
       "debuff": [
