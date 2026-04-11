@@ -87,5 +87,9 @@
     "pattern": "Inflicts <color=#28d9ed>Frozen</color>",
     "flags": "i",
     "add_debuff": ["BT_FREEZE"]  
+  },{
+    "pattern": "cannot be Resurrected or Revived.",
+    "flags": "i",
+    "add_debuff": ["BT_SEALED_RESURRECTION"]  
   }
 ]

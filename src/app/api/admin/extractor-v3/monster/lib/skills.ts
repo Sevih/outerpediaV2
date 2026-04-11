@@ -246,11 +246,6 @@ function rageFinishToEnterType(finishType: string): string | null {
   return m ? `SKT_RAGE_ENTER${m[1]}` : null
 }
 
-function getEn(skill: MonsterSkill, field: 'nameTexts' | 'descTexts'): string {
-  const texts = skill[field] as Record<string, string> | null | undefined
-  return (texts?.en ?? '').trim()
-}
-
 function mergeRageFinish(skills: MonsterSkill[]): MonsterSkill[] {
   const toDrop = new Set<number>()
   for (let i = 0; i < skills.length; i++) {
@@ -258,20 +253,12 @@ function mergeRageFinish(skills: MonsterSkill[]): MonsterSkill[] {
     const finishType = String(finish.type ?? '')
     const enterType = rageFinishToEnterType(finishType)
     if (!enterType) continue
-    // Merge when the finish has no standalone description OR no visible
-    // in-game name (the data table may define it but the game never
-    // shows it — treat it as an orphan companion of ENTER). Also merge
-    // when the ENTER's description already literally contains the
-    // FINISH's description — in that case the FINISH is just a
-    // triggered sub-effect of ENTER and the player only sees one entry.
-    const finishDesc = getEn(finish, 'descTexts')
-    const finishName = getEn(finish, 'nameTexts')
+    // If a matching SKT_RAGE_ENTER<N> exists, always merge the FINISH
+    // into it — the wiki never shows FINISH as a standalone skill even
+    // when the game data gives it its own name/description.
     const enterIdx = skills.findIndex((s) => s.type === enterType)
     if (enterIdx < 0) continue
     const enter = skills[enterIdx]
-    const enterDesc = getEn(enter, 'descTexts')
-    const finishEmbedded = finishDesc !== '' && enterDesc.includes(finishDesc)
-    if (finishDesc !== '' && finishName !== '' && !finishEmbedded) continue
     const mergeList = (key: 'buff' | 'debuff' | 'removeBuff' | 'removeDebuff') => {
       const e = (enter[key] as string[] | undefined) ?? []
       const f = (finish[key] as string[] | undefined) ?? []
