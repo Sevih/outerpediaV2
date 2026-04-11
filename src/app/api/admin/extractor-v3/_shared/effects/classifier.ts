@@ -333,22 +333,12 @@ export function classifyEffects(
       : lookupForced(dungeonKey) ??
         lookupForced(modeKey) ??
         rules.forcedOverrides[ctx.ownerId]?.[ctx.skillType]
-  if (forced) {
-    if (mode === 'full') {
-      for (const f of forced.buff ?? []) {
-        if (!seenBuff.has(f)) { seenBuff.add(f); buffs.push(f) }
-      }
-      for (const f of forced.debuff ?? []) {
-        if (!seenDebuff.has(f)) { seenDebuff.add(f); debuffs.push(f) }
-      }
+  if (forced && mode === 'full') {
+    for (const f of forced.buff ?? []) {
+      if (!seenBuff.has(f)) { seenBuff.add(f); buffs.push(f) }
     }
-    for (const r of forced.removeBuff ?? []) {
-      const i = buffs.indexOf(r)
-      if (i >= 0) { buffs.splice(i, 1); seenBuff.delete(r) }
-    }
-    for (const r of forced.removeDebuff ?? []) {
-      const i = debuffs.indexOf(r)
-      if (i >= 0) { debuffs.splice(i, 1); seenDebuff.delete(r) }
+    for (const f of forced.debuff ?? []) {
+      if (!seenDebuff.has(f)) { seenDebuff.add(f); debuffs.push(f) }
     }
   }
 
@@ -413,6 +403,21 @@ export function classifyEffects(
       if (!p.regex.test(normalizedDesc)) continue
       for (const l of p.addBuff) addB(l)
       for (const l of p.addDebuff) addD(l)
+      for (const l of p.removeBuff ?? []) removeB(l)
+      for (const l of p.removeDebuff ?? []) removeD(l)
+    }
+  }
+
+  // Forced override removals — applied LAST so they win against tooltip
+  // discovery and description patterns that may re-add the same labels.
+  if (forced) {
+    for (const r of forced.removeBuff ?? []) {
+      const i = buffs.indexOf(r)
+      if (i >= 0) { buffs.splice(i, 1); seenBuff.delete(r) }
+    }
+    for (const r of forced.removeDebuff ?? []) {
+      const i = debuffs.indexOf(r)
+      if (i >= 0) { debuffs.splice(i, 1); seenDebuff.delete(r) }
     }
   }
 

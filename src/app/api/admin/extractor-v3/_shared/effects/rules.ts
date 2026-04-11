@@ -33,6 +33,8 @@ export type DescriptionPattern = {
   regex: RegExp
   addBuff: string[]
   addDebuff: string[]
+  removeBuff: string[]
+  removeDebuff: string[]
 }
 
 export type DescriptionOverride = {
@@ -84,6 +86,8 @@ type RawDescriptionPattern = {
   flags?: string
   add_buff?: string[]
   add_debuff?: string[]
+  remove_buff?: string[]
+  remove_debuff?: string[]
   _comment?: string
 }
 
@@ -118,6 +122,8 @@ export function loadEffectRules(): CachedRules {
         regex: new RegExp(p.pattern, p.flags ?? ''),
         addBuff: p.add_buff ?? [],
         addDebuff: p.add_debuff ?? [],
+        removeBuff: p.remove_buff ?? [],
+        removeDebuff: p.remove_debuff ?? [],
       })
     } catch {
       // Bad regex: skip rather than crashing the whole extractor.
@@ -155,5 +161,5 @@ export function clearEffectRulesCache(): void {
 }
 
 // Bundle reload marker: touch this comment to invalidate the in-memory
-// rules cache via a Next.js fast-refresh. (bump 16)
+// rules cache via a Next.js fast-refresh. (bump 17)
 

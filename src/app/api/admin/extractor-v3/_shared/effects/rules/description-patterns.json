@@ -95,5 +95,10 @@
     "pattern": "inflicts?\\s+(<[^>]+>)?instant death",
     "flags": "i",
     "add_debuff": ["BT_KILL_UNDER_HP_RATE"]  
+  },{
+    "pattern": "Grants a <color=#28d9ed>special effect</color> to the enemy team based on their element",
+    "flags": "i",
+    "add_buff": ["COURAGE_DESPAIR_ELEM"]  ,
+    "remove_buff": ["COURAGE_AGAINST_DESPAIR"] 
   }
 ]
