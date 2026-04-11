@@ -144,7 +144,11 @@ export function extractMonster(
     if (md) modeDict = md
   }
 
-  const skills = extractMonsterSkills(base.skillIds, base.id).map(toWikiSkill)
+  const skills = extractMonsterSkills(base.skillIds, base.id, undefined, {
+    ownerName: names.Name.en,
+    dungeonName: dungeonDict.en,
+    modeName: modeDict.en,
+  }).map(toWikiSkill)
 
   return {
     id: base.id,

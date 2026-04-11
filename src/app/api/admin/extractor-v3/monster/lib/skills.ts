@@ -142,6 +142,14 @@ export type MonsterSkillContext = {
   ownerId: string
   /** Skill slot (1..18) from Skill_N — used to build `${ownerId}_${slot}_` prefix. */
   slot: number
+  /**
+   * Optional human-readable scope. Forwarded to the classifier so a
+   * forced-override can be keyed by `<monsterName>|<dungeonName>`
+   * (single floor) or `<monsterName>|<modeName>` (whole game mode).
+   */
+  ownerName?: string
+  dungeonName?: string
+  modeName?: string
 }
 
 export function extractSkill(
@@ -207,6 +215,9 @@ export function extractSkill(
   const tooltipIds = [...rowTooltipIds]
   const { buffs: buff, debuffs: debuff, removeBuff, removeDebuff } = classifyEffects(buffIdSet, {
     ownerId: ctx.ownerId,
+    ownerName: ctx.ownerName,
+    dungeonName: ctx.dungeonName,
+    modeName: ctx.modeName,
     skillType: row.SkillType ?? '',
     tables: tables.effectTables,
     tooltipIds,
@@ -287,12 +298,23 @@ function mergeRageFinish(skills: MonsterSkill[]): MonsterSkill[] {
 export function extractMonsterSkills(
   skillIds: { slot: number; id: string }[],
   ownerId: string,
-  t?: SkillTables
+  t?: SkillTables,
+  scope?: { ownerName?: string; dungeonName?: string; modeName?: string }
 ): MonsterSkill[] {
   const tables = t ?? loadSkillTables()
   const out: MonsterSkill[] = []
   for (const { slot, id } of skillIds) {
-    const s = extractSkill(id, { ownerId, slot }, tables)
+    const s = extractSkill(
+      id,
+      {
+        ownerId,
+        slot,
+        ownerName: scope?.ownerName,
+        dungeonName: scope?.dungeonName,
+        modeName: scope?.modeName,
+      },
+      tables,
+    )
     if (s) out.push(s)
   }
   return mergeRageFinish(out)

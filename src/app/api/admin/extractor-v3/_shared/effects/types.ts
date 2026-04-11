@@ -18,6 +18,18 @@ export type EffectTables = {
 export type EffectContext = {
   /** charID or monsterID — used for forced overrides lookup. */
   ownerId: string
+  /**
+   * Optional human-readable scope. When set, the classifier looks up
+   * forced-overrides under these keys (most-specific first) before
+   * falling back to `ownerId`:
+   *   1. `${ownerName}|${dungeonName}` — exact dungeon variant
+   *   2. `${ownerName}|${modeName}`    — entire mode (e.g. all floors
+   *      of "Special Request: Ecology Study" share the rule)
+   * This lets wiki authors curate overrides with real game names.
+   */
+  ownerName?: string
+  dungeonName?: string
+  modeName?: string
   /** SKT_FIRST / SKT_SECOND / SKT_ULTIMATE / SKT_CHAIN_PASSIVE / SKT_MONSTER_1 / ... */
   skillType: string
   tables: EffectTables

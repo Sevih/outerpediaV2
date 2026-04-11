@@ -316,7 +316,23 @@ export function classifyEffects(
   // rather than the cross-list `seen` so a label classified as buff can be
   // re-added to debuff and then stripped from buff via `removeBuff`.
   const mode = ctx.forcedOverridesMode ?? 'full'
-  const forced = mode === 'none' ? undefined : rules.forcedOverrides[ctx.ownerId]?.[ctx.skillType]
+  // Forced-override lookup order (most specific first):
+  //   1. `${ownerName}|${dungeonName}`  — single floor / single dungeon
+  //   2. `${ownerName}|${modeName}`     — whole game mode
+  //   3. `${ownerId}`                   — opaque ID fallback (legacy)
+  // The first key that contains an entry for `skillType` wins.
+  const dungeonKey =
+    ctx.ownerName && ctx.dungeonName ? `${ctx.ownerName}|${ctx.dungeonName}` : null
+  const modeKey =
+    ctx.ownerName && ctx.modeName ? `${ctx.ownerName}|${ctx.modeName}` : null
+  const lookupForced = (key: string | null) =>
+    key ? rules.forcedOverrides[key]?.[ctx.skillType] : undefined
+  const forced =
+    mode === 'none'
+      ? undefined
+      : lookupForced(dungeonKey) ??
+        lookupForced(modeKey) ??
+        rules.forcedOverrides[ctx.ownerId]?.[ctx.skillType]
   const removeBuff: string[] = [...(forced?.removeBuff ?? [])]
   const removeDebuff: string[] = [...(forced?.removeDebuff ?? [])]
   if (forced) {
