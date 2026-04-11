@@ -86,7 +86,19 @@ export default function parseText(text: string): React.ReactNode {
     parts.push(...splitLineBreaks(text.slice(lastIndex), key));
   }
 
-  return parts.length === 0 ? null : parts.length === 1 ? parts[0] : parts;
+  if (parts.length === 0) return null;
+  if (parts.length === 1) {
+    const single = parts[0];
+    // Recreate without a key when returning a standalone element — the key is
+    // only meaningful inside our internal array, and would collide if the same
+    // parent renders multiple parseText() calls as siblings.
+    if (React.isValidElement(single)) {
+      const el = single as React.ReactElement<Record<string, unknown>>;
+      return React.createElement(el.type, { ...el.props });
+    }
+    return single;
+  }
+  return parts;
 }
 
 /** Split text on line breaks and insert <br /> elements */

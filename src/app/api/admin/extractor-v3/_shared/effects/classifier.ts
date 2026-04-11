@@ -79,13 +79,26 @@ export function buffTypeLabel(buff: BuffRow, tables: EffectTables): string {
   // (ST_COUNTER_RATE, ST_BUFF_CHANCE, ST_BUFF_RESIST, ST_CRITICAL_RATE),
   // append the `_IR` suffix so the wiki shows the irremovable variant.
   else if (type === 'BT_STAT' && buff.StatType && buff.StatType !== 'ST_NONE') {
-    label = `${type}|${buff.StatType}`
-    const bdt = buff.BuffDebuffType ?? ''
+    // Pseudo action-gauge push: the game encodes "+100% Priority" as a
+    // huge one-turn ST_SPEED OAT_ADD (≥ 2500). Re-label as BT_ACTION_GAUGE
+    // so the wiki shows the real status instead of a raw speed buff.
+    const speedValue = parseInt(buff.Value ?? '0', 10)
     if (
-      bdt.endsWith('_IGNORE_ALL') &&
-      PASSIVE_STAT_IR_WHITELIST.has(buff.StatType)
+      buff.StatType === 'ST_SPEED' &&
+      buff.ApplyingType === 'OAT_ADD' &&
+      buff.TurnDuration === '1' &&
+      Math.abs(speedValue) >= 2500
     ) {
-      label = `${label}_IR`
+      label = 'BT_ACTION_GAUGE'
+    } else {
+      label = `${type}|${buff.StatType}`
+      const bdt = buff.BuffDebuffType ?? ''
+      if (
+        bdt.endsWith('_IGNORE_ALL') &&
+        PASSIVE_STAT_IR_WHITELIST.has(buff.StatType)
+      ) {
+        label = `${label}_IR`
+      }
     }
   }
   // 4. Sustained recovery (heal with duration, not instant)
