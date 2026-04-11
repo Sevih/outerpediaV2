@@ -1,6 +1,18 @@
 {
   "Premium": [
     {
+    "name": "Gnosis Domine",
+    "review": "A defense based Enchanter with high damage mitigation and a severe case of kleptomania. She can consistently transfer buffs from the enemy team to random allies. She wants to be the slowest on the field, and gets most of her turns from priority boosts instead. Her large defense & damage increases and frequent fixed damage give her good damage potential, but as mages are lacking in defense without the class quirks she is not recommended for beginners.",
+    "recommended_pve": "Any",
+    "recommended_pvp": "5 to 6",
+    "impact": {
+      "3": { "pve": "3", "pvp": "2" },
+      "4": { "pve": "2", "pvp": "2" },
+      "5": { "pve": "3", "pvp": "5" },
+      "6": { "pve": "2", "pvp": "4" }
+    }
+  },
+    {
       "name": "Monad Iota",
       "review": "A support in line with {E/Dark}'s selfish nature. She boosts {E/Dark} allies' damage more than other elements, and wants as many in the team as possible to ready her skill 3 faster. 5-star completes her support arsenal, giving {E/Dark} access to {B/BT_CALL_BACKUP_2} and the full array of damage increasing buffs and debuffs. Her skill 3 has a unique control effect ({D/BT_GOLDEN_CURSE}). Her 4-star and 6-star transcends allow her to set a new speed limit alongside Demiurge Vlada. This makes her a highly valuable pick for Arena. The accessibility of alternatives and her element restriction reduces her urgency in PvE.",
       "review_jp": "{E/Dark}の利己的な性質に沿ったサポーター。他の属性よりも{E/Dark}味方のダメージをより大きく強化し、スキル3を早く準備するためにチームにできるだけ多くの{E/Dark}味方を求める。5つ星でサポートの武器庫が完成し、{E/Dark}に{B/BT_CALL_BACKUP_2}とダメージ増加バフ・デバフの全ラインナップを提供する。スキル3にはユニークなコントロール効果（{D/BT_GOLDEN_CURSE}）がある。4つ星と6つ星の超越により、デミウルゴスヴラダと共に新たな速度限界を設定できる。これによりアリーナで非常に価値の高いピックとなる。代替手段の入手しやすさと属性制限により、PvEでの緊急度は低い。",
@@ -127,7 +139,7 @@
         },
         "5": {
           "pve": "3",
-          "pvp": "1"
+          "pvp": "3"
         },
         "6": {
           "pve": "1",
