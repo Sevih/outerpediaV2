@@ -113,7 +113,6 @@
       },
       "icon": "MT_Passive_1_Water",
       "buff": [
-        "BT_ACTION_GAUGE_ENHANCE_IR",
         "COURAGE_AGAINST_DESPAIR"
       ]
     },
@@ -132,11 +131,29 @@
         "zh": "通过连携技能受到的WG伤害量降低<color=#28d9ed>50%</color>。\\n回合结束时，若自身未附带弱化效果，则WG恢复<color=#28d9ed>20</color>，并降低敌方队伍CP<color=#28d9ed>50</color>。\\n固定伤害不会超过<color=#28d9ed>10000</color>。"
       },
       "icon": "MT_Passive_1_Water",
-      "buff": [
-        "BT_WG_DMG"
-      ],
       "debuff": [
         "BT_CP_CHARGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086026",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED_RESURRECTION",
+        "BT_KILL_UNDER_HP_RATE"
       ]
     }
   ]

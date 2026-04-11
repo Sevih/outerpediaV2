@@ -113,11 +113,7 @@
       },
       "icon": "MT_Passive_1_Dark",
       "buff": [
-        "BT_ACTION_GAUGE_ENHANCE_IR",
         "COURAGE_AGAINST_DESPAIR"
-      ],
-      "debuff": [
-        "BT_REVERSE_HEAL_BASED_CASTER_IR"
       ]
     },
     {
@@ -137,6 +133,27 @@
       "icon": "MT_Passive_1_Dark",
       "buff": [
         "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086025",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED_RESURRECTION",
+        "BT_KILL_UNDER_HP_RATE"
       ]
     }
   ]

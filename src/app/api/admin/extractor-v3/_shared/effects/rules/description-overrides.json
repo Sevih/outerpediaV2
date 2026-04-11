@@ -83,5 +83,8 @@
   },
   "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Reduces Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\n\\nReduces damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains, and does not take Weakness Gauge damage.\\n\\nGreatly reduces damage taken by Fire, Water, and Earth enemies, and does not take Weakness Gauge damage.\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>30000</color>.": {
     "remove_buff": ["COURAGE_AGAINST_DESPAIR", "BT_ACTION_GAUGE"]
+  },
+   "If the caster is not inflicted with a debuff, Weakness Gauge cannot be reduced.\\nIncreases Weakness Gauge damage taken from enemies granted Stealth by 100%.\\nGrants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: Increases Attack by 30%\\nMage: Increases Critical Damage by 50%\\nDefender: When hit by a single attack, grants Stealth for 2 turn(s)\\nRanger: Increases Effectiveness by 100%\\nHealer: Increases Priority recovery efficiency by 50%": {
+    "remove_buff": ["BT_STEALTHED_IR"]
   }
 }
