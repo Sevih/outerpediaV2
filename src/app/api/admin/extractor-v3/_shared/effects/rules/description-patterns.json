@@ -91,5 +91,9 @@
     "pattern": "cannot be Resurrected or Revived.",
     "flags": "i",
     "add_debuff": ["BT_SEALED_RESURRECTION"]  
+  },{
+    "pattern": "inflicts instant death",
+    "flags": "i",
+    "add_debuff": ["BT_KILL_UNDER_HP_RATE"]  
   }
 ]

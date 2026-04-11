@@ -57,5 +57,8 @@
   },
     "When the caster is hit, if at least one ally is not affected by a <color=#28d9ed>debuff</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color>.": {
     "add_buff": ["BT_ACTION_GAUGE"]
+  },
+    "(Passive Effect)\\nIncreases Critical Damage of the caster, and reduces <color=#28d9ed>Critical Hit Chance</color> of Fire, Water, and Earth enemies. These effects cannot be removed.\\nIncreases the effectiveness of <color=#28d9ed>increased stat</color> effects on the caster by <color=#28d9ed>100%</color>.\\n\\nWhen attacked, does not take Weakness Gauge damage if the caster does not have a debuff.\\nRecovers <color=#28d9ed>3</color> Weakness Gauge upon scoring a critical hit on an enemy.\\n\\nIncreases damage taken from <color=#28d9ed>Light</color> enemies and reduces damage dealt to them. Against non-<color=#28d9ed>Light</color> enemies, reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>, increases damage dealt, and reduces damage taken.": {
+    "remove_buff": ["BT_STAT|ST_CRITICAL_RATE_IR"]
   }
 }
