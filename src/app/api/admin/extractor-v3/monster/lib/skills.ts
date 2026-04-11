@@ -161,10 +161,17 @@ export function extractSkill(
   const isRageFinish = (row.SkillType ?? '').startsWith('SKT_RAGE_FINISH')
   if (!row.NameID && !isRageFinish) return null
 
+  // Skip skills whose DescID is missing or a placeholder whitespace
+  // string — the game never wired a real description for them and the
+  // wiki doesn't want to carry an empty skill entry. RAGE_FINISH is
+  // exempt because it is always merged into RAGE_ENTER.
+  const descIdTrim = (row.DescID ?? '').trim()
+  if (!descIdTrim && !isRageFinish) return null
+
   const level = tables.skillLevelByID.get(skillId)
 
   const nameTexts = getLangTexts(tables.textSkillIndex.get(row.NameID ?? ''))
-  const descTextsRaw = getLangTexts(tables.textSkillIndex.get(row.DescID ?? ''))
+  const descTextsRaw = getLangTexts(tables.textSkillIndex.get(descIdTrim))
 
   // Resolve [Buff_*] placeholders for each language.
   const descTexts = descTextsRaw

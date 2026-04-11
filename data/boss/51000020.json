@@ -13,7 +13,7 @@
   "level": 100,
   "icons": "4031014",
   "BuffImmune": "",
-  "StatBuffImmune": "ATTACK",
+  "StatBuffImmune": "",
   "location": {
     "dungeon": {
       "en": "Weekly Conquest - Schattenmeister Schwartz",
@@ -53,22 +53,6 @@
       "debuff": [
         "BT_ACTION_GAUGE"
       ]
-    },
-    {
-      "name": {
-        "en": "Encroaching Darkness",
-        "jp": "襲い来る闇",
-        "kr": "엄습하는 어둠",
-        "zh": "黑暗来袭"
-      },
-      "type": "SKT_MONSTER_1",
-      "description": {
-        "en": "(Passive Effect)\\nWhen the caster is granted <color=#28d9ed>Invulnerability</color>, attacks all enemies.",
-        "jp": "(パッシブ効果)\\n自分が<color=#28d9ed>無敵</color>状態の場合、敵全体にダメージを与える。",
-        "kr": "(패시브 효과)\\n자신이 <color=#28d9ed>무적</color>을 보유한 상태라면 적 전체를 공격합니다.",
-        "zh": "(被动效果)\\n若自身处于<color=#28d9ed>无敌</color>状态,则攻击全体敌人。"
-      },
-      "icon": "MT_Passive_1_Light"
     }
   ]
 }
