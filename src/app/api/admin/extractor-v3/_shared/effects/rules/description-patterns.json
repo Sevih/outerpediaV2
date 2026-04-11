@@ -83,5 +83,9 @@
     "pattern": "reduces? (the )?(<[^>]+>)?WG(<[^>]+>)? by",
     "flags": "i",
     "add_debuff": ["BT_WG_REVERSE_HEAL"]
+  },{
+    "pattern": "Inflicts <color=#28d9ed>Frozen</color>",
+    "flags": "i",
+    "add_debuff": ["BT_FREEZE"]  
   }
 ]
