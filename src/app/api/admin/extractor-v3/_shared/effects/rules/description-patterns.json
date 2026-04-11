@@ -6,7 +6,7 @@
   },
   {
     "_comment": "=== CP (Chain Points) — buff variants ===",
-    "pattern": "(grants?|restores?|recovers?|increases?)\\s+(all\\s+)?(<[^>]+>)?\\s*(Chain Points|\\bCP\\b)",
+    "pattern": "(grants?|restores?|recovers?|increases?)\\s+[^.\\n]{0,40}?(Chain Points|\\bCP\\b)",
     "flags": "i",
     "add_buff": ["BT_CP_CHARGE"]
   },
@@ -28,7 +28,7 @@
   },
   {
     "_comment": "=== AP (Action Points) — buff variants ===",
-    "pattern": "(grants?|restores?|recovers?|increases?)\\s+(all\\s+)?(<[^>]+>)?\\s*(Action Points|\\bAP\\b)",
+    "pattern": "(grants?|restores?|recovers?|increases?)\\s+[^.\\n]{0,40}?(Action Points|\\bAP\\b)",
     "flags": "i",
     "add_buff": ["BT_AP_CHARGE"]
   },

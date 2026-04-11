@@ -235,6 +235,12 @@ function normalize(s: string): string {
   return s
     .normalize('NFKC')
     .replace(EXTRA_PUNCT_RE, (c) => EXTRA_PUNCT[c] ?? c)
+    // Strip markup-only differences so typo detection ignores them:
+    //   - <color=...>...</color> and any other XML-ish tag
+    //   - literal `\n` escape sequences and real newlines
+    // Values inside the tags are kept (only the tag itself is removed).
+    .replace(/<[^>]+>/g, '')
+    .replace(/\\n/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
 }

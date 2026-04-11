@@ -18,7 +18,7 @@
   "level": 75,
   "icons": "2000057",
   "BuffImmune": "",
-  "StatBuffImmune": "ATTACK",
+  "StatBuffImmune": "",
   "location": {
     "dungeon": {
       "en": "An Unpleasant Reunion",
@@ -56,7 +56,7 @@
       },
       "icon": "Skill_First_2000057",
       "buff": [
-        "BT_ADDITIVE_ATTACK_ON_EVENT"
+        "BT_ADDITIVE_ATTACK"
       ]
     },
     {
@@ -75,7 +75,7 @@
       },
       "icon": "Skill_Second_2000057",
       "debuff": [
-        "UNIQUE_KERAUNOS"
+        "KERAUNOS"
       ]
     },
     {

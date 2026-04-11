@@ -50,6 +50,12 @@
   },
     "Grants increased <color=#28d9ed>Accuracy</color> and <color=#28d9ed>Effectiveness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.": {
     "remove_buff": ["BT_STAT|ST_DEF"]
+  },
+    "(Triggered Effect) When an ally <color=#28d9ed>Mage</color> attacks, activates an additional attack on the enemy with the highest Attack. After attacking, increases Priority of the caster by <color=#28d9ed>25%</color>.": {
+    "add_buff": ["BT_ADDITIVE_ATTACK"],
+    "remove_buff": ["BT_AP_CHARGE"]
+  },
+    "When the caster is hit, if at least one ally is not affected by a <color=#28d9ed>debuff</color>, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>40%</color>.": {
+    "add_buff": ["BT_ACTION_GAUGE"]
   }
-
 }
