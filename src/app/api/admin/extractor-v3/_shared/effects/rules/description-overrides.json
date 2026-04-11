@@ -125,5 +125,37 @@
   },
   "Attacks an enemy.\\nPrioritizes the enemy on the far <color=#28d9ed>left</color>. During this attack, <color=#28d9ed>Penetration</color> increases by <color=#28d9ed>30%</color>.":{
     "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable <color=#28d9ed>reduced damage taken</color> to all allies for <color=#28d9ed>3 turn(s)</color>.\\nWhen an ally uses a single-target skill, increases Priority of all allies except for that ally by <color=#28d9ed>20%</color>, and has a <color=#28d9ed>15%</color> chance to grant an <color=#28d9ed>extra turn</color>.\\nEvery turn, increases Attack of the caster by <color=#28d9ed>5%</color>. (Max 20 stacks)": {
+    "add_buff": ["BT_ADDITIVE_TURN"]
+  },
+  "(Passive Effect)\\nAt the start of battle, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.\\nWhen hit, if the caster is not granted a buff, grants an irremovable increased <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>, and if the caster is granted a buff, reduces <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.\\nAt the start of the turn, if the caster is not granted a buff, increases <color=#28d9ed>skill cooldowns</color> of the caster by <color=#28d9ed>1 turn(s)</color>.": {
+    "add_buff": ["BT_COOL_CHARGE"]
+  },
+  "(Passive Effect)\\nAt the start of the turn, when all surviving allies are not inflicted with <color=#28d9ed>Stunned</color>, grants an irremovable <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>1 turn</color>.\\nWhen the caster is inflicted with <color=#28d9ed>Stunned</color>, increases damage taken.\\nAfter the Boss is inflicted with <color=#28d9ed>Break</color>, irremovable <color=#28d9ed>Invulnerability</color> is no longer granted.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)": {
+    "add_debuff": ["BT_ACTION_GAUGE"]
+  },
+  "Attacks all enemies, and recovers Health of all allies by <color=#28d9ed>10%</color>. Increases the duration of buffs on all allies by <color=#28d9ed>1 turn(s)</color>, and for each target damaged, increases Priority of the caster by <color=#28d9ed>10%</color>.": {
+    "remove_debuff": ["BT_STAT|ST_DEF"]
+  },
+    "(Passive Effect)\\nGreatly reduces damage taken by the Boss.\\nWeakness Gauge can be <color=#28d9ed>reduced</color> only <color=#28d9ed>when hit</color> if all surviving allies are inflicted with <color=#28d9ed>Shocked</color>.\\nIf an ally is inflicted with a debuff when hit, reduces Priority of all allies by <color=#28d9ed>50%</color>. (Only once per turn)\\nAt the start of the Boss's or Epsilon's turn, removes all debuffs from the caster.\\nWhen the Boss is inflicted with <color=#28d9ed>Break</color>, the <color=#28d9ed>reduced damage taken</color> and <color=#28d9ed>immunity to Weakness Gauge reduction</color> effects are removed.": {
+    "add_debuff": ["BT_ACTION_GAUGE"],
+    "remove_buff": ["DEFENSE_SYSTEM_SIGMA_DOME","BT_STAT|ST_GET_GOLD_RATE"]
+  },
+  "(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> and recovers Health by <color=#28d9ed>50%</color>.\\nUpon resurrection, grants <color=#28d9ed>Doll Garden's Caretaker</color> to the caster for <color=#28d9ed>1 turn(s)</color>, and if Demiurge Stella's Health is greater than 30%, resets skill cooldowns of the caster. Additionally, increases <color=#28d9ed>Priority</color> by <color=#28d9ed>80%</color>.": {
+    "add_buff": ["BT_COOL_CHARGE"]
+  },
+  "(Passive Effect)\\nWhen an Inferior Core is alive, grants an irremovable <color=#28d9ed>reduced damage taken</color> and reduces Weakness Gauge taken by <color=#28d9ed>50%</color>.": {
+    "remove_buff": ["PUREBLOODS_DOMINION"],
+    "remove_debuff": ["BT_DOT_BLEED_IR"]
+  },
+  "Attacks an enemy and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>2 turn(s)</color>.\\nThis skill prioritizes enemies on the front.": {
+    "remove_debuff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>12.5%</color> every time the caster takes a turn.": {
+    "clear_buff": true
+  },
+  "(Passive Effect)\\nWhen attacking, recovers <color=#ffd732>Snow</color>'s <color=#28d9ed>Health</color> and <color=#28d9ed>Weakness Gauge</color> by <color=#28d9ed>10%</color>.": {
+    "clear_buff": true
   }
 }

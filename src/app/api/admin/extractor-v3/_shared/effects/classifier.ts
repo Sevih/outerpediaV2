@@ -93,9 +93,14 @@ export function buffTypeLabel(buff: BuffRow, tables: EffectTables): string {
     } else {
       label = `${type}|${buff.StatType}`
       const bdt = buff.BuffDebuffType ?? ''
+      // Only treat the row as an irremovable passive (_IR) when it is
+      // permanent (TurnDuration=-1). Rows with a finite duration are
+      // regular timed debuffs that happen to use `_IGNORE_ALL` as a
+      // landing guarantee — they must not carry the _IR suffix.
       if (
         bdt.endsWith('_IGNORE_ALL') &&
-        PASSIVE_STAT_IR_WHITELIST.has(buff.StatType)
+        PASSIVE_STAT_IR_WHITELIST.has(buff.StatType) &&
+        buff.TurnDuration === '-1'
       ) {
         label = `${label}_IR`
       }
@@ -304,6 +309,21 @@ export function classifyEffects(
     }
   }
 
+  // Dedupe `X` vs `X_IR`: when the irremovable variant is present, the
+  // plain label is redundant (IR implies the stat is also applied). Keep
+  // only the `_IR` version. Runs before tooltip/desc/forced passes so
+  // downstream logic sees the cleaned list.
+  const collapseIR = (list: string[], seen: Set<string>) => {
+    for (const label of [...list]) {
+      if (!label.endsWith('_IR')) continue
+      const plain = label.slice(0, -3)
+      const i = list.indexOf(plain)
+      if (i >= 0) { list.splice(i, 1); seen.delete(plain) }
+    }
+  }
+  collapseIR(buffs, seenBuff)
+  collapseIR(debuffs, seenDebuff)
+
   // Caller-supplied extras (e.g. desc-derived effects).
   for (const b of ctx.extraBuffs ?? []) {
     if (!seenBuff.has(b)) { seenBuff.add(b); buffs.push(b) }
@@ -392,6 +412,14 @@ export function classifyEffects(
       rules.descriptionOverrides.get(normalizedDesc) ??
       rules.descriptionOverrides.get(normalizePunct(ctx.description))
     if (override) {
+      if (override.clearBuff) {
+        buffs.length = 0
+        seenBuff.clear()
+      }
+      if (override.clearDebuff) {
+        debuffs.length = 0
+        seenDebuff.clear()
+      }
       for (const l of override.addBuff) addB(l)
       for (const l of override.addDebuff) addD(l)
       for (const l of override.removeBuff) removeB(l)

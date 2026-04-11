@@ -42,6 +42,8 @@ export type DescriptionOverride = {
   addDebuff: string[]
   removeBuff: string[]
   removeDebuff: string[]
+  clearBuff: boolean
+  clearDebuff: boolean
 }
 
 type TooltipBlacklistFile = {
@@ -96,6 +98,8 @@ type RawDescriptionOverride = {
   add_debuff?: string[]
   remove_buff?: string[]
   remove_debuff?: string[]
+  clear_buff?: boolean
+  clear_debuff?: boolean
 }
 
 export function loadEffectRules(): CachedRules {
@@ -141,6 +145,8 @@ export function loadEffectRules(): CachedRules {
       addDebuff: ov.add_debuff ?? [],
       removeBuff: ov.remove_buff ?? [],
       removeDebuff: ov.remove_debuff ?? [],
+      clearBuff: ov.clear_buff === true,
+      clearDebuff: ov.clear_debuff === true,
     })
   }
   cache = {
@@ -161,5 +167,5 @@ export function clearEffectRulesCache(): void {
 }
 
 // Bundle reload marker: touch this comment to invalidate the in-memory
-// rules cache via a Next.js fast-refresh. (bump 24)
+// rules cache via a Next.js fast-refresh. (bump 34)
 

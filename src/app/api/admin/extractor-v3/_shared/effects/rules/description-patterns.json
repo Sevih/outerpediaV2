@@ -99,6 +99,10 @@
     "pattern": "Grants a <color=#28d9ed>special effect</color> to the enemy team based on their element",
     "flags": "i",
     "add_buff": ["COURAGE_DESPAIR_ELEM"]  ,
-    "remove_buff": ["COURAGE_AGAINST_DESPAIR"] 
+    "remove_buff": ["COURAGE_AGAINST_DESPAIR"]
+  },{
+    "pattern": "grants?[^.\\n]{0,40}caster[^.\\n]{0,40}increased <[^>]+>Penetration<[^>]+>",
+    "flags": "i",
+    "add_buff": ["BT_STAT|ST_PIERCE_POWER_RATE"]
   }
 ]
