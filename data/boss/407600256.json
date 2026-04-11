@@ -71,6 +71,9 @@
         "zh": "(触发效果)火焰骑士梅修斯使用除反击、额外攻击以外的攻击<color=#28d9ed>击杀敌人时</color>，解除全体敌人的所有<color=#28d9ed>强化效果</color>，并对全体敌人造成致命伤害。因该攻击死亡时，将无法触发复活与苏醒效果。"
       },
       "icon": "Skill_Ultimate_4076002",
+      "buff": [
+        "BT_ADDITIVE_ATTACK"
+      ],
       "debuff": [
         "BT_REMOVE_BUFF",
         "BT_SEALED_RESURRECTION"
