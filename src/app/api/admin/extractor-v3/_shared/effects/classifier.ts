@@ -192,16 +192,22 @@ function passesGenericFilters(row: BuffRow): boolean {
   ) return false
   // Permanent stat-growth modifiers: a BT_STAT row with TurnDuration=-1
   // is a raw calc modifier (boss passive, rage growth, progression
-  // stacking) UNLESS the game attached a ToolTipID to it — in that case
-  // the row is a real UI status and the tooltip is what the player sees.
-  // Exceptions are also listed in PASSIVE_STAT_IR_WHITELIST (stats we
-  // always surface as UI even without tooltip: Counter/BuffChance/
-  // BuffResist/CritRate).
+  // stacking) UNLESS one of:
+  //   - the game attached a ToolTipID → it's a real UI status
+  //   - BuffDebuffType is BUFF/DEBUFF*/...IGNORE_ALL (NOT pure NEUTRAL)
+  //     AND StatType is in PASSIVE_STAT_IR_WHITELIST → always surfaced
+  //     as UI (Counter Rate / Effectiveness / Resist / Crit Rate).
+  //     NEUTRAL rows are math by design, whitelist doesn't save them.
+  // Everything else is dropped.
+  const bdtPerma = row.BuffDebuffType ?? ''
+  const whitelistAllowed =
+    !bdtPerma.startsWith('NEUTRAL') &&
+    PASSIVE_STAT_IR_WHITELIST.has(row.StatType ?? '')
   if (
     row.Type === 'BT_STAT' &&
     row.TurnDuration === '-1' &&
     !row.ToolTipID &&
-    !PASSIVE_STAT_IR_WHITELIST.has(row.StatType ?? '')
+    !whitelistAllowed
   ) return false
   return true
 }
