@@ -266,6 +266,30 @@ function buildDiffs(
       continue
     }
     if (Array.isArray(e) && Array.isArray(x)) {
+      // Effect lists (buff/debuff/removeBuff/removeDebuff) are unordered
+      // sets — ignore element order, only treat membership as a real diff.
+      // When the set is identical but ordering differs, emit a single
+      // typo-kind diff at the list path so curators can normalize order.
+      const keyName = k as string
+      const isEffectList =
+        (keyName === 'buff' || keyName === 'debuff' || keyName === 'removeBuff' || keyName === 'removeDebuff') &&
+        e.every((v) => typeof v === 'string') &&
+        x.every((v) => typeof v === 'string')
+      if (isEffectList) {
+        const es = e as string[]
+        const xs = x as string[]
+        const eSet = new Set(es)
+        const xSet = new Set(xs)
+        const setsEqual = eSet.size === xSet.size && [...eSet].every((v) => xSet.has(v))
+        if (setsEqual) {
+          if (JSON.stringify(es) !== JSON.stringify(xs)) {
+            diffs.push({ path: p, extracted: es, existing: xs, kind: 'typo' })
+          }
+          continue
+        }
+        // Otherwise fall through to per-index diffing so missing/added
+        // elements are reported individually.
+      }
       const max = Math.max(e.length, x.length)
       for (let i = 0; i < max; i++) {
         const ei = e[i]
