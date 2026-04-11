@@ -1,0 +1,125 @@
+{
+  "id": "400305297@40101071",
+  "Name": {
+    "en": "Fiend Squad Leader",
+    "jp": "魔族の行動隊長",
+    "kr": "마족 행동대장",
+    "zh": "魔族执行队长"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 90,
+  "icons": "4003052",
+  "BuffImmune": "",
+  "StatBuffImmune": "",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 71F",
+      "jp": "飛天の塔71階",
+      "kr": "비천의 탑 71층",
+      "zh": "飞天之塔71层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Throw Knife",
+        "jp": "投剣",
+        "kr": "투검",
+        "zh": "斗剑"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nThis attack penetrates <color=#28d9ed>15%</color> of the target's Defense.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは、貫通力が<color=#28d9ed>15%</color>UPする。",
+        "kr": "적을 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "zh": "攻击敌人。\\n发动该技能时，穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Heavenly Thunder of Justice",
+        "jp": "天雷無妄",
+        "kr": "천뢰무망",
+        "zh": "天雷无妄"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies.\\nThis attack has <color=#28d9ed>15%</color> increased Defense penetration.",
+        "jp": "敵全体にダメージを与える。\\nこのスキルは、対象の防御力を<color=#28d9ed>15%</color>貫通する。",
+        "kr": "적 전체를 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "zh": "攻击全体敌人。\\n发动该技能时，穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Extreme Annihilating Strike",
+        "jp": "究極滅雷玉",
+        "kr": "구극멸뢰옥",
+        "zh": "究极灭雷狱"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nThis attack has <color=#28d9ed>15%</color> increased Defense penetration.",
+        "jp": "敵全体にダメージを与える。\\nこのスキルは、対象の防御力を<color=#28d9ed>15%</color>貫通する。",
+        "kr": "적 전체를 공격합니다.\\n해당 공격 시 관통력이 <color=#28d9ed>15%</color>증가합니다.",
+        "zh": "攻击全体敌人。\\n发动该技能时，穿透力提升<color=#28d9ed>15%</color>。"
+      },
+      "icon": "MT_Attack_Sword_1_Fire"
+    },
+    {
+      "name": {
+        "en": "Fury Stack IV",
+        "jp": "アンガースタック IV",
+        "kr": "분노 중첩 IV",
+        "zh": "愤怒叠加 IV"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>12.5%</color> every time the caster takes a turn.",
+        "jp": "(パッシブ効果)\\n自分のターンが来るたびに、攻撃力が<color=#28d9ed>12.5%</color>UPする。",
+        "kr": "(패시브 효과)\\n자신의 턴마다 공격력이 <color=#28d9ed>12.5%</color> 증가합니다.",
+        "zh": "(被动效果)\\n每到自身回合时，使攻击力提升<color=#28d9ed>12.5%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "High Member of Annihilation Sect",
+        "jp": "閃撃の会上級組員",
+        "kr": "섬격회 상급 조직원",
+        "zh": "闪击会高层成员"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect)\\nHas a <color=#28d9ed>100%</color> chance to increase <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color> when hit.\\nDeals <color=#28d9ed>5%</color> of <color=#28d9ed>Max Health</color> as fixed damage to one target when attacking.",
+        "jp": "(パッシブ効果)\\nダメージを受けた時、<color=#28d9ed>100%</color>の確率で自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>10%</color>UPする。\\n攻撃時、対象単体に<color=#28d9ed>最大HP</color>の<color=#28d9ed>5%</color>の固定ダメージを与える。",
+        "kr": "(패시브 효과)\\n피격 시 <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가합니다.\\n공격 시 대상 한명에게 <color=#28d9ed>최대 체력</color>의 <color=#28d9ed>5%</color> 만큼 고정 피해를 입힙니다.",
+        "zh": "(被动效果)\\n受到攻击时，有<color=#28d9ed>100%</color>的几率使<color=#28d9ed>行动值</color>提升\\n<color=#28d9ed>10%</color>。\\n攻击时，对1名目标造成相当于<color=#28d9ed>生命值上限</color><color=#28d9ed>5%</color>的固定伤害。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_REVERSE_HEAL_BASED_TARGET"
+      ]
+    }
+  ]
+}

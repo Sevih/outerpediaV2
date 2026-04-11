@@ -1,0 +1,58 @@
+{
+  "id": "400100195@40101059",
+  "Name": {
+    "en": "SC0UT3R Ranger",
+    "jp": "スカウター〈弓〉",
+    "kr": "스카우터 레인저",
+    "zh": "傀儡骑兵"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Ranger",
+  "element": "Earth",
+  "level": 78,
+  "icons": "4001001",
+  "BuffImmune": "",
+  "StatBuffImmune": "",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 59F",
+      "jp": "飛天の塔59階",
+      "kr": "비천의 탑 59층",
+      "zh": "飞天之塔59层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Swift Firing",
+        "jp": "迅速な射撃",
+        "kr": "신속한 사격",
+        "zh": "迅速射击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Increases the caster's <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1 turn(s)</color> and attacks an enemy.",
+        "jp": "スキル使用時、自分の<color=#28d9ed>会心率</color>を<color=#28d9ed>1ターン</color>の間UPさせ、敵単体にダメージを与える。",
+        "kr": "스킬 사용 시 자신의 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>치명 확률</color>을 증가시키고 적을 공격합니다.",
+        "zh": "使用技能时，使自身的<color=#28d9ed>暴击率</color>提升，持续<color=#28d9ed>1回合</color>，并攻击敌人。"
+      },
+      "icon": "MT_Attack_Arrow_1_Fire",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
+    }
+  ]
+}

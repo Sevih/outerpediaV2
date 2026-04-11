@@ -16,7 +16,7 @@ interface ExtractResult {
   error?: string;
 }
 
-const API = '/api/admin/extractor/monster';
+const API = '/api/admin/extractor-v3/monster';
 
 export default function TowerExtractorPage() {
   const [missing, setMissing] = useState<MissingMonster[]>([]);
@@ -57,7 +57,7 @@ export default function TowerExtractorPage() {
       const saveRes = await fetch(API, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data: extractData.extracted, version: false }),
+        body: JSON.stringify({ id: monster.id, data: extractData.extracted }),
       });
       const saveData = await saveRes.json();
 

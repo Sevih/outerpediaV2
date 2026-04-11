@@ -1,0 +1,58 @@
+{
+  "id": "404102196@40101069",
+  "Name": {
+    "en": "Stone Golem Flail-Wielder",
+    "jp": "ストーンゴーレム〈焔〉",
+    "kr": "스톤 골렘 플레일",
+    "zh": "连枷石魔像"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 88,
+  "icons": "4041021",
+  "BuffImmune": "",
+  "StatBuffImmune": "",
+  "location": {
+    "dungeon": {
+      "en": "Skyward Tower 69F",
+      "jp": "飛天の塔69階",
+      "kr": "비천의 탑 69층",
+      "zh": "飞天之塔69层"
+    },
+    "mode": {
+      "en": "Skyward Tower",
+      "jp": "飛天の塔",
+      "kr": "비천의 탑",
+      "zh": "飞天之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Smite",
+        "jp": "強打",
+        "kr": "강타",
+        "zh": "猛袭"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>10%</color> chance to inflict <color=#28d9ed>Stunned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>10%</color>の確率で<color=#28d9ed>スタン</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>10%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다.",
+        "zh": "攻击敌人，并有<color=#28d9ed>10%</color>的几率使目标陷入<color=#28d9ed>晕眩</color>状态，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Fire",
+      "debuff": [
+        "BT_STUN"
+      ]
+    }
+  ]
+}
