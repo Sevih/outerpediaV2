@@ -60,5 +60,11 @@
   },
     "(Passive Effect)\\nIncreases Critical Damage of the caster, and reduces <color=#28d9ed>Critical Hit Chance</color> of Fire, Water, and Earth enemies. These effects cannot be removed.\\nIncreases the effectiveness of <color=#28d9ed>increased stat</color> effects on the caster by <color=#28d9ed>100%</color>.\\n\\nWhen attacked, does not take Weakness Gauge damage if the caster does not have a debuff.\\nRecovers <color=#28d9ed>3</color> Weakness Gauge upon scoring a critical hit on an enemy.\\n\\nIncreases damage taken from <color=#28d9ed>Light</color> enemies and reduces damage dealt to them. Against non-<color=#28d9ed>Light</color> enemies, reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>, increases damage dealt, and reduces damage taken.": {
     "remove_buff": ["BT_STAT|ST_CRITICAL_RATE_IR"]
+  },
+    "Becomes <color=#28d9ed>Enraged</color> every 5 turns and increases Attack and Speed by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Deals a large amount of damage to all enemies upon becoming Enraged, but receives damage equal to <color=#28d9ed>20%</color> of Max Health. After dealing damage, recovers 30% Weakness Gauge. This Enraged has no duration.": {
+    "remove_buff": ["BT_EXTEND_DEBUFF"]
+  },
+  "Becomes <color=#28d9ed>Enraged</color> every 5 turns and increases Attack and Speed by <color=#28d9ed>5%</color>. This effect stacks up to 3 times and lasts until the caster is inflicted with Break.\\n\\n<color=#28d9ed>Enraged Ultimate Skill</color>: Deals a large amount of damage to all enemies upon becoming Enraged, but receives damage equal to <color=#28d9ed>20%</color> of Max Health.\\nInflicts irremovable <color=#28d9ed>Shocked</color>, <color=#28d9ed>Bleeding</color>, and <color=#28d9ed>Poisoned</color> for <color=#28d9ed>3 turns</color> on non-Earth enemies and recovers 30% Weakness Gauge. Penetrates the enemy's Defense. This Enraged has no duration.": {
+    "remove_buff": ["BT_EXTEND_DEBUFF"]
   }
 }
