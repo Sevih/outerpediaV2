@@ -77,5 +77,11 @@
   },
     "(Passive Effect)\\nIncreases damage taken from <color=#28d9ed>Dark</color> enemies and reduces damage dealt to them. Reduces Weakness Gauge damage taken from non-<color=#28d9ed>Dark</color> enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\n<color=#28d9ed>Cursed/fixed damage</color> taken by the Boss does not exceed <color=#28d9ed>10000</color>.\\nRight after using any skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.": {
     "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+    "(Passive Effect)\\nIncreases damage taken from Fire, Water, and Earth enemies.\\nInflicts <color=#28d9ed>Dual Attack Disabled</color> on all enemies, and reduces Speed of Light and Dark enemies. This effect cannot be removed until the Boss is killed.\\n\\nReduces damage taken from skills other than Burst Skills and Skill Chains, and reduces Weakness Gauge damage taken by <color=#28d9ed>50%</color>.\\n\\nGreatly reduces damage taken from Light and Dark enemies, and does not take Weakness Gauge damage.": {
+    "remove_buff": ["COURAGE_AGAINST_DESPAIR", "BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nIncreases damage taken from Light and Dark enemies. Reduces Speed of Fire, Water, and Earth enemies. This effect cannot be removed.\\n\\nReduces damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains, and does not take Weakness Gauge damage.\\n\\nGreatly reduces damage taken by Fire, Water, and Earth enemies, and does not take Weakness Gauge damage.\\nDamage from <color=#28d9ed>Cursed/fixed damage</color> does not exceed <color=#28d9ed>30000</color>.": {
+    "remove_buff": ["COURAGE_AGAINST_DESPAIR", "BT_ACTION_GAUGE"]
   }
 }
