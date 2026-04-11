@@ -121,9 +121,8 @@
       },
       "icon": "MT_Passive_1_Water",
       "buff": [
-        "BT_ACTION_GAUGE_ENHANCE_IR",
-        "BT_IMMUNE",
-        "COURAGE_AGAINST_DESPAIR"
+        "COURAGE_AGAINST_DESPAIR",
+        "BT_IMMUNE"
       ]
     },
     {
@@ -140,7 +139,32 @@
         "kr": "(패시브 효과) 달리아는 보유한 약화 효과 수량에 비례하여 받는 피해가 증가합니다.\\n스킬 체인을 제외한 고정 피해 및 암속성 적에게는 최대 <color=#28d9ed>1000</color>까지만 피해를 받으며, 저주로는 최대 <color=#28d9ed>10000</color>까지 피해를 받습니다.\\nCP를 <color=#28d9ed>100</color>이상 보유한 적에게 WG 피해를 받지 않고, 받는 피해가 크게 감소합니다.\\n\\n<color=#28d9ed>명/지속성</color>이 아닌 적의 <color=#28d9ed>효과 적중</color>이 모두 감소하며, 방어형과 공격형 및 회복형 적의 <color=#28d9ed>치명 확률</color>이 모두 감소합니다.",
         "zh": "(被动效果)\\n达利娅所受伤害根据持有的弱化效果数量等比提升。\\n除连携技能外的固定伤害及暗属性敌人最多可造成<color=#28d9ed>1000</color>点伤害，诅咒最多可造成<color=#28d9ed>10000</color>点伤害。\\n不会受到来自CP<color=#28d9ed>100</color>以上敌人的WG伤害，并且大幅降低所受伤害。\\n\\n使非<color=#28d9ed>光/土属性</color>敌人的<color=#28d9ed>效果命中</color>全部降低，且使防御型、攻击型和恢复型敌人的<color=#28d9ed>暴击率</color>全部降低。"
       },
-      "icon": "MT_Passive_1_Water"
+      "icon": "MT_Passive_1_Water",
+      "debuff": [
+        "BT_STAT|ST_BUFF_CHANCE_IR",
+        "BT_STAT|ST_CRITICAL_RATE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Quasar Bombardment",
+        "jp": "クエーサー砲撃",
+        "kr": "퀘이사 포격",
+        "zh": "类星体炮击"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086013",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED_RESURRECTION",
+        "BT_KILL_UNDER_HP_RATE"
+      ]
     }
   ]
 }

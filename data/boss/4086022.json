@@ -110,11 +110,31 @@
       },
       "icon": "MT_Passive_1_Dark",
       "buff": [
-        "BT_ACTION_GAUGE_ENHANCE_IR",
+        "COURAGE_AGAINST_DESPAIR",
         "BT_EXTEND_DEBUFF",
         "BT_ACTION_GAUGE",
-        "BT_INVINCIBLE",
-        "COURAGE_AGAINST_DESPAIR"
+        "BT_INVINCIBLE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Quasar Bombardment",
+        "jp": "クエーサー砲撃",
+        "kr": "퀘이사 포격",
+        "zh": "类星体炮击"
+      },
+      "type": "SKT_RAGE_FINISH1",
+      "description": {
+        "en": "",
+        "jp": "",
+        "kr": "",
+        "zh": ""
+      },
+      "icon": "Skill_Ultimate_4086013",
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED_RESURRECTION",
+        "BT_KILL_UNDER_HP_RATE"
       ]
     }
   ]

@@ -90,5 +90,12 @@
   "(Passive Effect)\\nAfter being hit, increases Priority by <color=#28d9ed>20%</color>.\\nWhen an enemy without an Enhancement Effect performs an action, restores Weakness Gauge by <color=#28d9ed>10</color>.\\nUpon Break, reduces caster's <color=#28d9ed>Attack</color> and <color=#28d9ed>Critical Damage</color> for 3 turns.\\nGains <color=#28d9ed>Special Effects</color> based on caster's Element. (Cannot stack the same element effect.)\\n\\nFire: All Ally Stats boost efficiency +70%\\nWater: All Ally Speed +10%\\nEarth: All Ally Critical Damage +50%\\nLight: All Ally Weakness Gauge Reduction +50%\\nDark: All Ally Attack +30%": {
     "add_buff": ["COURAGE_DESPAIR_ELEM"],
     "add_debuff": ["BT_STAT|ST_ATK", "BT_STAT|ST_CRITICAL_DMG_RATE"]
+  },
+  "(Passive Effect) At the start of battle and start of the turn, grants <color=#28d9ed>Immunity</color> to Dahlia for <color=#28d9ed>1 turn(s)</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Deals 3 Weakness Gauge damage to the Boss when performing an action\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)": {
+    "remove_buff": ["BT_STAT|ST_SPEED"]
+  },
+  "(Passive Effect) After Dahlia performs an action, reduces the duration of debuffs inflicted on the caster by <color=#28d9ed>2 turns</color>, and upon taking a critical hit, grants <color=#28d9ed>Invulnerability</color> for <color=#28d9ed>1 turn.</color>\\nAfter being hit, increases Priority by <color=#28d9ed>10%</color>.\\n\\nGrants Courage Against Despair to the enemy team. Grants a <color=#28d9ed>special effect</color> to the enemy team based on their class.\\n\\nStriker: +30% Attack\\nMage: Increases damage dealt to the Boss\\nDefender: Prevents the Boss from reducing debuff duration\\nRanger: At the start of battle, grants increased Speed for 1 turn\\nHealer: Permanent Immunity (Irremovable)": {
+    "remove_buff": ["BT_STAT|ST_SPEED"],
+    "add_buff": ["BT_INVINCIBLE"]
   }
 }
