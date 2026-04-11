@@ -231,18 +231,30 @@ const EXTRA_PUNCT: Record<string, string> = {
 
 const EXTRA_PUNCT_RE = new RegExp(`[${Object.keys(EXTRA_PUNCT).join('')}]`, 'g')
 
+// Unicode ranges for CJK / Kana / Hangul — whitespace between two such
+// characters is typography, not semantics, so we collapse it away when
+// normalizing for typo detection.
+const CJK_CLASS =
+  '[\\u3040-\\u309F\\u30A0-\\u30FF\\u3400-\\u4DBF\\u4E00-\\u9FFF\\uAC00-\\uD7AF\\uF900-\\uFAFF]'
+const CJK_SPACE_RE = new RegExp(`(${CJK_CLASS})\\s+(${CJK_CLASS})`, 'g')
+
 function normalize(s: string): string {
-  return s
+  let out = s
     .normalize('NFKC')
     .replace(EXTRA_PUNCT_RE, (c) => EXTRA_PUNCT[c] ?? c)
     // Strip markup-only differences so typo detection ignores them:
     //   - <color=...>...</color> and any other XML-ish tag
     //   - literal `\n` escape sequences and real newlines
-    // Values inside the tags are kept (only the tag itself is removed).
     .replace(/<[^>]+>/g, '')
     .replace(/\\n/g, ' ')
+    // Drop whitespace around common punctuation (spaces before/after
+    // colons, commas, etc. are stylistic noise).
+    .replace(/\s*([:,.;!?])\s*/g, '$1')
     .replace(/\s+/g, ' ')
-    .trim()
+  // Collapse whitespace between adjacent CJK characters. Run twice so
+  // overlapping matches get handled (e.g. `가 나 다` → `가나다`).
+  out = out.replace(CJK_SPACE_RE, '$1$2').replace(CJK_SPACE_RE, '$1$2')
+  return out.trim()
 }
 
 function classifyDiff(extracted: unknown, existing: unknown): DiffEntry['kind'] {
