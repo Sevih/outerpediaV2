@@ -190,25 +190,18 @@ function passesGenericFilters(row: BuffRow): boolean {
     row.TurnDuration === '-1' &&
     (parseInt(row.StackCount ?? '', 10) || 0) > 1
   ) return false
-  // Passive math modifiers: a BT_STAT row applied as a permanent passive
-  // effect (BuffCreateType starts with PASSIVE, TurnDuration=-1) is a raw
-  // damage/stat calc modifier, not a user-visible buff/debuff with a
-  // tooltip. Drop regardless of BuffDebuffType — boss passives like
-  // "reduces Attack by 90%" or "gains 40% Piercing vs Dark" are not the
-  // same thing as the UI statuses "Attack Reduced" / "Piercing".
-  // Exceptions: stats legitimately displayed as passive buffs/debuffs
-  // with their own tooltips (Counterattack Chance, Effectiveness, Resist).
-  const PASSIVE_STAT_WHITELIST = new Set([
-    'ST_COUNTER_RATE',
-    'ST_BUFF_CHANCE',
-    'ST_BUFF_RESIST',
-    'ST_CRITICAL_RATE'
-  ])
+  // Permanent stat-growth modifiers: a BT_STAT row with TurnDuration=-1
+  // is a raw calc modifier (boss passive, rage growth, progression
+  // stacking) UNLESS the game attached a ToolTipID to it — in that case
+  // the row is a real UI status and the tooltip is what the player sees.
+  // Exceptions are also listed in PASSIVE_STAT_IR_WHITELIST (stats we
+  // always surface as UI even without tooltip: Counter/BuffChance/
+  // BuffResist/CritRate).
   if (
     row.Type === 'BT_STAT' &&
-    (row.BuffCreateType ?? '').startsWith('PASSIVE') &&
     row.TurnDuration === '-1' &&
-    !PASSIVE_STAT_WHITELIST.has(row.StatType ?? '')
+    !row.ToolTipID &&
+    !PASSIVE_STAT_IR_WHITELIST.has(row.StatType ?? '')
   ) return false
   return true
 }

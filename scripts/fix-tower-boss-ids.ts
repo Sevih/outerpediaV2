@@ -173,7 +173,7 @@ function main() {
     })
 
     if (bosses.length === 0) {
-      noBossInDungeon.push(`${base} (spawns: ${spawnIds.join(', ')})`)
+      noBossInDungeon.push(`${base} (spawns: ${info.ids.join(', ')})`)
       continue
     }
     if (bosses.length > 1) {

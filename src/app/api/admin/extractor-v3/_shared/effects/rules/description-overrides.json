@@ -47,5 +47,9 @@
 
   "(Passive Effect)\\nAt the start of a turn, resurrects (Greater) all <color=#28d9ed>Spare Cores</color>.\\nIncreases <color=#28d9ed>Priority</color> of surviving Spare Cores by <color=#28d9ed>15%</color>.\\n\\n(Triggered Effect) When an enemy uses a non-attack skill,\\nactivates <color=#28d9ed>Command: Restrain</color> on the target.": {
     "remove_debuff": ["BT_STUN", "BT_DOT_BURN"]
+  },
+    "Grants increased <color=#28d9ed>Accuracy</color> and <color=#28d9ed>Effectiveness</color> to all allies for <color=#28d9ed>2 turn(s)</color>.": {
+    "remove_buff": ["BT_STAT|ST_DEF"]
   }
+
 }
