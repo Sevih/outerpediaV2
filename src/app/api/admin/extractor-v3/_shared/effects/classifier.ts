@@ -252,6 +252,7 @@ function addTooltipIds(
     const tt = ctx.tables.tooltipMap.get(id)
     if (!tt || !tt.name) continue
     const name = applyAlias(tt.name)
+    if (rules.labelBlacklist.has(name)) continue
     if (tt.isDebuff) {
       if (seenDebuff.has(name)) continue
       seenDebuff.add(name)
