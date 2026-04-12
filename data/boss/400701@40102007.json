@@ -22,10 +22,10 @@
       "zh": "飞天之塔【困难】第7层"
     },
     "mode": {
-      "en": "Skyward Tower - Hard",
-      "jp": "飛天の塔 ハード",
-      "kr": "비천의 탑 하드",
-      "zh": "飞天之塔 - 困难"
+      "en": "Skyward Tower: Hard",
+      "jp": "飛天の塔【ハード】",
+      "kr": "비천의 탑 [하드]",
+      "zh": "飞天之塔【困难】"
     },
     "area_id": {
       "en": "",
@@ -52,6 +52,9 @@
       "icon": "MT_Attack_Sword_1_Fire",
       "buff": [
         "BT_SHIELD_BASED_CASTER"
+      ],
+      "debuff": [
+        "BT_STEAL_BUFF"
       ]
     },
     {
@@ -70,7 +73,8 @@
       },
       "icon": "MT_Attack_Sword_1_Fire",
       "debuff": [
-        "BT_DOT_LIGHTNING"
+        "BT_DOT_LIGHTNING",
+        "BT_STEAL_BUFF"
       ]
     },
     {
@@ -89,7 +93,8 @@
       },
       "icon": "MT_Attack_Sword_1_Fire",
       "debuff": [
-        "BT_STUN"
+        "BT_STUN",
+        "BT_STEAL_BUFF"
       ]
     },
     {
@@ -109,9 +114,6 @@
       "icon": "MT_Passive_1_Earth",
       "buff": [
         "BT_STAT|ST_BUFF_CHANCE"
-      ],
-      "debuff": [
-        "BT_STEAL_BUFF"
       ]
     },
     {

@@ -178,5 +178,14 @@
   },
   "(Passive Effect) When the caster has a <color=#28d9ed>Barrier</color>, reduces Weakness Gauge damage taken by <color=#28d9ed>30%</color>.\\n(Triggered Effect) When hit by a single-target attack, counterattacks and recovers Weakness Gauge by <color=#28d9ed>1</color>.\\nThe counterattack effect is only activated once every <color=#28d9ed>1 turn</color>.":{
     "remove_debuff": ["BT_ACTION_GAUGE"]
+  },
+  "Attacks an enemy and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>2 turn(s).</color>":{
+    "remove_debuff": ["BT_CP_CHARGE"]
+  },
+  "Attacks all enemies and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Shocked</color> on the target for <color=#28d9ed>2 turn(s)</color>.":{
+    "remove_debuff": ["BT_CP_CHARGE"]
+  },
+  "Attacks 2 enemies.\\nHas a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.":{
+    "add_debuff":["BT_DOT_BURN"]
   }
 }
