@@ -27,10 +27,10 @@
       "zh": "飞天之塔【困难】第19层"
     },
     "mode": {
-      "en": "Skyward Tower - Hard",
-      "jp": "飛天の塔 ハード",
-      "kr": "비천의 탑 하드",
-      "zh": "飞天之塔 - 困难"
+      "en": "Skyward Tower: Hard",
+      "jp": "飛天の塔【ハード】",
+      "kr": "비천의 탑 [하드]",
+      "zh": "飞天之塔【困难】"
     },
     "area_id": {
       "en": "",
@@ -114,7 +114,10 @@
         "kr": "(패시브 효과)\\n아군 전체의 효과 저항을 50 증가시킵니다.\\n\\n<color=#28d9ed>에바</color>가 살아있는 동안 <color=#28d9ed>케이</color>가 받는 피해를 <color=#28d9ed>30%</color> 감소시킵니다. \\n<color=#28d9ed>에바</color>가 턴 시작 시 <color=#28d9ed>케이</color>의 <color=#28d9ed>WG</color>를 <color=#28d9ed>8</color> 회복시킵니다.\\n\\n리샤나 스노우 사망 시 <color=#28d9ed>행동 게이지</color> <color=#28d9ed>100%</color> 증가 및 추가 효과 획득\\n<color=#28d9ed>리샤</color> : 브레이크 되기 전까지 <color=#28d9ed>치명 확률</color> 증가\\n<color=#28d9ed>스노우</color> : 브레이크 전까지 <color=#28d9ed>속도</color> 증가",
         "zh": "(被动效果)\\n使全体友军的效果抵抗提升50。\\n\\n在<color=#28d9ed>艾娃</color>存活期间，使<color=#28d9ed>凯伊</color>所受伤害降低<color=#28d9ed>30%</color>。\\n<color=#28d9ed>艾娃</color>在回合开始时，使<color=#28d9ed>凯伊</color>的<color=#28d9ed>WG</color>恢复<color=#28d9ed>8</color>。\\n\\n莉莎或雪诺死亡时，<color=#28d9ed>行动值</color>提升<color=#28d9ed>100%</color>，并获得额外效果。\\n<color=#28d9ed>莉莎</color>：使<color=#28d9ed>暴击率</color>提升，持续至进入力竭状态\\n为止。\\n<color=#28d9ed>雪诺</color>：使<color=#28d9ed>速度</color>提升，持续至进入力竭状态为止。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_STAT|ST_BUFF_RESIST"
+      ]
     },
     {
       "name": {

@@ -22,10 +22,10 @@
       "zh": "飞天之塔【困难】第16层"
     },
     "mode": {
-      "en": "Skyward Tower - Hard",
-      "jp": "飛天の塔 ハード",
-      "kr": "비천의 탑 하드",
-      "zh": "飞天之塔 - 困难"
+      "en": "Skyward Tower: Hard",
+      "jp": "飛天の塔【ハード】",
+      "kr": "비천의 탑 [하드]",
+      "zh": "飞天之塔【困难】"
     },
     "area_id": {
       "en": "",
@@ -51,7 +51,6 @@
       },
       "icon": "MT_Attack_Sword_1_Fire",
       "debuff": [
-        "BT_DOT_BURN",
         "BT_DOT_BURN_IR"
       ]
     },
@@ -112,6 +111,7 @@
       "icon": "MT_Passive_1_Fire",
       "buff": [
         "BT_STAT|ST_SPEED",
+        "BT_ADDITIVE_ATTACK",
         "BT_ADDITIVE_TURN"
       ]
     },
@@ -129,7 +129,10 @@
         "kr": "(패시브 효과)\\n수속성 적에게 <color=#28d9ed>20%</color> 더 큰 피해를 입고 나머지 속성에는 <color=#28d9ed>70%</color> 더 적은 피해를 입습니다.\\n효과 저항이 <color=#28d9ed>100%</color> 증가합니다.",
         "zh": "(被动效果)\\n使水属性攻击带来的伤害提升<color=#28d9ed>20%</color>，使其余属性攻击带来的伤害降低<color=#28d9ed>70%</color>。\\n效果抵抗提升<color=#28d9ed>100%</color>。"
       },
-      "icon": "MT_Passive_1_Fire"
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_STAT|ST_BUFF_RESIST"
+      ]
     },
     {
       "name": {

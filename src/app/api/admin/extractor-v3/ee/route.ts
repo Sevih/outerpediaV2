@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import { LANGS, DEFAULT_LANG, type Lang } from '@/lib/i18n/config'
-import { buildTooltipMap, sanitizeTooltipLabel } from '../_shared/effects/tooltip'
+import { buildTooltipMap } from '../_shared/effects/tooltip'
 import type { TooltipEntry } from '../_shared/effects/types'
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')

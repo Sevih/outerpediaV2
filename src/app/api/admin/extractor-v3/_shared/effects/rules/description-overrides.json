@@ -163,5 +163,20 @@
   },
   "(Passive Effect)\\nWhen attacking, recovers <color=#ffd732>Snow</color>'s <color=#28d9ed>Health</color> and <color=#28d9ed>Weakness Gauge</color> by <color=#28d9ed>10%</color>.": {
     "clear_buff": true
+  },
+  "Has a <color=#28d9ed>100%</color> chance to dispel <color=#28d9ed>all Buffs</color> from all enemies, then attacks all enemies.\\nDeals greatly increased damage if the target is afflicted with a <color=#28d9ed>debuff</color>.":{
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\nEach turn, reduces enemies' <color=#28d9ed>Speed</color> by <color=#28d9ed>5%</color>. This effect ignores Resilience (stacks up to 20).\n\nAt the start of battle, takes the first turn and greatly reduces damage taken from elements disadvantaged against the caster.":{
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nIncreases Attack by <color=#28d9ed>10%</color> every time the caster takes a turn.":{
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect)\\nIncreases <color=#28d9ed>Attack and Speed</color> of all allies by <color=#28d9ed>12.5%</color> every turn. (Max 8 stacks)\\n\\nIncreases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>12%</color> when an ally attacks.\\nWhen an ally other than Sofia dies, does not take Weakness Gauge damage, recovers <color=#28d9ed>Health</color> of the remaining allies by <color=#28d9ed>100%</color> and increases <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>100%</color>, but reduces their <color=#28d9ed>Critical Damage</color> by <color=#28d9ed>30%</color>.\\n\\nMinions have special abilities that are stackable and removed upon their deaths.\\n<color=#ffd732>Nightwatch Shieldbearer</color>: Reduces <color=#28d9ed>damage taken</color> by all allies by <color=#28d9ed>10%</color>.\\n<color=#ffd732>Nightwatch Waraxe-Wielder</color>: Reduces <color=#28d9ed>damage taken</color> by Idith and Nightwatch Waraxe-Wielder by <color=#28d9ed>15%</color>.":{
+    "add_buff": ["BT_ACTION_GAUGE"]
+  },
+  "(Passive Effect) When the caster has a <color=#28d9ed>Barrier</color>, reduces Weakness Gauge damage taken by <color=#28d9ed>30%</color>.\\n(Triggered Effect) When hit by a single-target attack, counterattacks and recovers Weakness Gauge by <color=#28d9ed>1</color>.\\nThe counterattack effect is only activated once every <color=#28d9ed>1 turn</color>.":{
+    "remove_debuff": ["BT_ACTION_GAUGE"]
   }
 }
