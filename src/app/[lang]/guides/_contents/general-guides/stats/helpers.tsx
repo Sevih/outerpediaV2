@@ -162,8 +162,8 @@ export function StatsContent() {
                                     </p>
                                     <p className="mt-3 font-semibold">How it works:</p>
                                     <ul className="list-disc list-inside ml-4 mt-2">
-                                        <li>On a non-crit hit: {parseText('{S/DMG UP}')} (+ any skill/equip bonuses) is opposed by the enemy&apos;s {parseText('{S/DMG RED}')} (+ their skill/equip reductions).</li>
-                                        <li>On a crit hit: {parseText('{S/DMG UP}')} is added to your {parseText('{S/CHD}')}, and the enemy adds their {parseText('{S/CDMG RED}')} to their {parseText('{S/DMG RED}')}. Both totals are then compared.</li>
+                                        <li>On a non-crit hit: {parseText('{S/DMG UP%}')} (+ any skill/equip bonuses) is opposed by the enemy&apos;s {parseText('{S/DMG RED%}')} (+ their skill/equip reductions).</li>
+                                        <li>On a crit hit: {parseText('{S/DMG UP%}')} is added to your {parseText('{S/CHD}')}, and the enemy adds their {parseText('{S/CDMG RED%}')} to their {parseText('{S/DMG RED%}')}. Both totals are then compared.</li>
                                     </ul>
                                     <p className="mt-3 text-sm text-yellow-400"><strong>Note:</strong> Damage Increase from quirks, skills, and equipment effects are all part of this same additive pool.</p>
                                 </>
@@ -173,7 +173,7 @@ export function StatsContent() {
                                     <p className="mt-3 font-semibold">{lRec({ en: '', jp: '仕組み：', kr: '작동 방식:', zh: '运作方式：' } satisfies LangMap, lang)}</p>
                                     <ul className="list-disc list-inside ml-4 mt-2">
                                         <li>{lRec({ en: '', jp: '非クリティカル時：DMG UPがこの層の唯一のボーナス。', kr: '비치명 시: DMG UP이 이 층의 유일한 보너스.', zh: '非暴击时：DMG UP是该层唯一的加成。' } satisfies LangMap, lang)}</li>
-                                        <li>{lRec({ en: '', jp: 'クリティカル時：DMG UPが', kr: '치명 시: DMG UP이 ', zh: '暴击时：DMG UP与' } satisfies LangMap, lang)}{parseText('{S/CHD}')}{lRec({ en: '', jp: 'に加算され、敵の', kr: '에 합산되어 적의 ', zh: '相加后，与敌方的' } satisfies LangMap, lang)}{parseText('{S/DMG RED}')}{lRec({ en: '', jp: 'と', kr: '와 ', zh: '和' } satisfies LangMap, lang)}{parseText('{S/CDMG RED}')}{lRec({ en: '', jp: 'と比較されます。', kr: '와 비교됩니다.', zh: '比较。' } satisfies LangMap, lang)}</li>
+                                        <li>{lRec({ en: '', jp: 'クリティカル時：DMG UPが', kr: '치명 시: DMG UP이 ', zh: '暴击时：DMG UP与' } satisfies LangMap, lang)}{parseText('{S/CHD}')}{lRec({ en: '', jp: 'に加算され、敵の', kr: '에 합산되어 적의 ', zh: '相加后，与敌方的' } satisfies LangMap, lang)}{parseText('{S/DMG RED%}')}{lRec({ en: '', jp: 'と', kr: '와 ', zh: '和' } satisfies LangMap, lang)}{parseText('{S/CDMG RED%}')}{lRec({ en: '', jp: 'と比較されます。', kr: '와 비교됩니다.', zh: '比较。' } satisfies LangMap, lang)}</li>
                                     </ul>
                                 </>
                             )}
@@ -188,11 +188,11 @@ export function StatsContent() {
                         <>
                             {lang === 'en' ? (
                                 <>
-                                    <p>Damage Reduction is <strong>not</strong> a standalone flat percentage reduction. It is part of the same additive system as {parseText('{S/DMG UP}')} — it is subtracted from the attacker&apos;s total Damage Increase group. This layer is calculated <strong>before</strong> Defense.</p>
+                                    <p>Damage Reduction is <strong>not</strong> a standalone flat percentage reduction. It is part of the same additive system as {parseText('{S/DMG UP%}')} — it is subtracted from the attacker&apos;s total Damage Increase group. This layer is calculated <strong>before</strong> Defense.</p>
                                     <p className="mt-3 font-semibold">Example (non-crit):</p>
                                     <p className="mt-1">If the attacker has <strong>50% DMG UP</strong> and you have <strong>30% DMG RED</strong>, the net modifier is <strong>+20%</strong> damage increase (not a flat 30% reduction).</p>
                                     <p className="mt-3 font-semibold">On a crit hit:</p>
-                                    <p className="mt-1">{parseText('{S/DMG RED}')} is added to your {parseText('{S/CDMG RED}')} to oppose the enemy&apos;s {parseText('{S/CHD}')} + {parseText('{S/DMG UP}')}.</p>
+                                    <p className="mt-1">{parseText('{S/DMG RED%}')} is added to your {parseText('{S/CDMG RED%}')} to oppose the enemy&apos;s {parseText('{S/CHD}')} + {parseText('{S/DMG UP%}')}.</p>
                                     <p className="mt-3 text-sm text-yellow-400"><strong>Note:</strong> This is not the same as Final Damage Reduction, which is applied separately after Defense.</p>
                                 </>
                             ) : (
@@ -201,7 +201,7 @@ export function StatsContent() {
                                     <p className="mt-3 font-semibold">{lRec({ en: '', jp: '例：', kr: '예시:', zh: '示例：' } satisfies LangMap, lang)}</p>
                                     <p className="mt-1"><strong>{lRec({ en: '', jp: 'DMG RED 30%', kr: 'DMG RED 30%', zh: 'DMG RED 30%' } satisfies LangMap, lang)}</strong>{lRec({ en: '', jp: 'で1000ダメージを受けた場合、DEF計算前に', kr: '일 때 1000 데미지를 받으면, DEF 계산 전에 ', zh: '时受到1000伤害，在DEF计算前减少至' } satisfies LangMap, lang)}<strong>{lRec({ en: '', jp: '700', kr: '700', zh: '700' } satisfies LangMap, lang)}</strong>{lRec({ en: '', jp: 'に軽減されます。', kr: '으로 감소됩니다.', zh: '。' } satisfies LangMap, lang)}</p>
                                     <p className="mt-3 font-semibold">{lRec({ en: '', jp: 'クリティカル被弾時：', kr: '치명 피격 시:', zh: '被暴击时：' } satisfies LangMap, lang)}</p>
-                                    <p className="mt-1">{lRec({ en: '', jp: 'DMG REDは', kr: 'DMG RED가 ', zh: 'DMG RED与' } satisfies LangMap, lang)}{parseText('{S/CDMG RED}')}{lRec({ en: '', jp: 'に加算され、敵の', kr: '에 합산되어 적의 ', zh: '相加，形成对敌方' } satisfies LangMap, lang)}{parseText('{S/CHD}')} + {parseText('{S/DMG UP}')}{lRec({ en: '', jp: 'に対する総防御修正値を形成します。', kr: '에 대한 총 방어 보정치를 형성합니다.', zh: '的总防御修正。' } satisfies LangMap, lang)}</p>
+                                    <p className="mt-1">{lRec({ en: '', jp: 'DMG REDは', kr: 'DMG RED가 ', zh: 'DMG RED与' } satisfies LangMap, lang)}{parseText('{S/CDMG RED%}')}{lRec({ en: '', jp: 'に加算され、敵の', kr: '에 합산되어 적의 ', zh: '相加，形成对敌方' } satisfies LangMap, lang)}{parseText('{S/CHD}')} + {parseText('{S/DMG UP%}')}{lRec({ en: '', jp: 'に対する総防御修正値を形成します。', kr: '에 대한 총 방어 보정치를 형성합니다.', zh: '的总防御修正。' } satisfies LangMap, lang)}</p>
                                     <p className="mt-3 text-sm text-yellow-400"><strong>{lRec({ en: '', jp: '注意：', kr: '참고:', zh: '注意：' } satisfies LangMap, lang)}</strong> {lRec({ en: '', jp: 'これは最終ダメージ軽減とは異なります。計算方法が違います。', kr: '이것은 최종 데미지 감소와는 다릅니다. 계산 방식이 다릅니다.', zh: '这与最终伤害减免不同，两者的计算方式有区别。' } satisfies LangMap, lang)}</p>
                                 </>
                             )}
@@ -216,7 +216,7 @@ export function StatsContent() {
                         <>
                             {lang === 'en' ? (
                                 <>
-                                    <p>Critical Damage Reduction only activates when you are critically hit. It is added to your {parseText('{S/DMG RED}')} to form the total defensive pool, which is subtracted from the attacker&apos;s offensive pool ({parseText('{S/CHD}')} + {parseText('{S/DMG UP}')}).</p>
+                                    <p>Critical Damage Reduction only activates when you are critically hit. It is added to your {parseText('{S/DMG RED%}')} to form the total defensive pool, which is subtracted from the attacker&apos;s offensive pool ({parseText('{S/CHD}')} + {parseText('{S/DMG UP%}')}).</p>
                                     <p className="mt-3 font-semibold">Example:</p>
                                     <p className="mt-1">If the enemy has <strong>300% CHD</strong> + <strong>30% DMG UP</strong> and you have <strong>150% CDMG RED</strong> + <strong>20% DMG RED</strong>:</p>
                                     <p className="mt-1">(300 + 30) − (150 + 20) = <strong>+160%</strong> effective damage modifier.</p>
@@ -228,7 +228,7 @@ export function StatsContent() {
                                     <p className="mt-3 font-semibold">{lRec({ en: '', jp: '例：', kr: '예시:', zh: '示例：' } satisfies LangMap, lang)}</p>
                                     <p className="mt-1">{lRec({ en: '', jp: '敵の', kr: '적의 ', zh: '敌方' } satisfies LangMap, lang)}<strong>{lRec({ en: '', jp: 'CHD 300%', kr: 'CHD 300%', zh: 'CHD 300%' } satisfies LangMap, lang)}</strong>{lRec({ en: '', jp: 'に対して', kr: '에 대해 ', zh: '，你拥有' } satisfies LangMap, lang)}<strong>{lRec({ en: '', jp: 'CDMG RED 150%', kr: 'CDMG RED 150%', zh: 'CDMG RED 150%' } satisfies LangMap, lang)}</strong>{lRec({ en: '', jp: 'を持つ場合、受ける会心ダメージは300%ではなく', kr: '를 가지고 있으면, 받는 치명 데미지가 300%가 아닌 ', zh: '时，受到的暴击伤害从300%降至' } satisfies LangMap, lang)}<strong>{lRec({ en: '', jp: '150%', kr: '150%', zh: '150%' } satisfies LangMap, lang)}</strong>{lRec({ en: '', jp: 'に減少します。', kr: '로 감소합니다.', zh: '。' } satisfies LangMap, lang)}</p>
                                     <p className="mt-3 font-semibold">{lRec({ en: '', jp: 'クリティカル被弾時：', kr: '치명 피격 시:', zh: '被暴击时：' } satisfies LangMap, lang)}</p>
-                                    <p className="mt-1">{lRec({ en: '', jp: 'CDMG REDは', kr: 'CDMG RED가 ', zh: 'CDMG RED与' } satisfies LangMap, lang)}{parseText('{S/DMG RED}')}{lRec({ en: '', jp: 'に加算され、敵の', kr: '에 합산되어 적의 ', zh: '相加，形成对敌方' } satisfies LangMap, lang)}{parseText('{S/CHD}')} + {parseText('{S/DMG UP}')}{lRec({ en: '', jp: 'に対する総防御修正値を形成します。', kr: '에 대한 총 방어 보정치를 형성합니다.', zh: '的总防御修正。' } satisfies LangMap, lang)}</p>
+                                    <p className="mt-1">{lRec({ en: '', jp: 'CDMG REDは', kr: 'CDMG RED가 ', zh: 'CDMG RED与' } satisfies LangMap, lang)}{parseText('{S/DMG RED%}')}{lRec({ en: '', jp: 'に加算され、敵の', kr: '에 합산되어 적의 ', zh: '相加，形成对敌方' } satisfies LangMap, lang)}{parseText('{S/CHD}')} + {parseText('{S/DMG UP%}')}{lRec({ en: '', jp: 'に対する総防御修正値を形成します。', kr: '에 대한 총 방어 보정치를 형성합니다.', zh: '的总防御修正。' } satisfies LangMap, lang)}</p>
                                 </>
                             )}
                         </>

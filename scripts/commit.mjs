@@ -91,6 +91,15 @@ function readVersion() {
   try {
     if (DRY_RUN) console.log("\x1b[33m[DRY RUN MODE]\x1b[0m\n");
 
+    // 0. Verify inline tags
+    console.log("Verifying inline tags...");
+    try {
+      execSync("node scripts/verify-inline-tags.mjs", { stdio: "inherit", encoding: "utf-8" });
+    } catch {
+      console.error("\x1b[31mAborted: fix invalid inline tags before committing.\x1b[0m");
+      process.exit(1);
+    }
+
     // 1. Version bump
     const { major, minor, patch, raw } = readVersion();
     console.log(`Current version: \x1b[36m${raw}\x1b[0m`);

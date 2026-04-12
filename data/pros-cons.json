@@ -677,10 +677,10 @@
         "zh": "可通过{SK/Alice|S2}提升自身优先度，顺利衔接{SK/Alice|S3}"
       },
       {
-        "en": "can boost earth allies outgoing damage with {D/EXECUTION_TIME!}",
-        "jp": "{D/EXECUTION_TIME!}で{E/Earth}属性味方の与ダメージを増加",
-        "kr": "{D/EXECUTION_TIME!}로 {E/Earth} 속성 아군의 피해량 증가",
-        "zh": "通过{D/EXECUTION_TIME!}提升{E/Earth}属性队友的输出伤害"
+        "en": "can boost earth allies outgoing damage with {D/EXECUTION_TIME}",
+        "jp": "{D/EXECUTION_TIME}で{E/Earth}属性味方の与ダメージを増加",
+        "kr": "{D/EXECUTION_TIME}로 {E/Earth} 속성 아군의 피해량 증가",
+        "zh": "通过{D/EXECUTION_TIME}提升{E/Earth}属性队友的输出伤害"
       },
       {
         "en": "If the enemy unit is {E/Water}, {SK/Alice|S2} does an additional effect of {D/BT_STAT|ST_SPEED}",
@@ -1325,16 +1325,16 @@
   "demiurge-luna": {
     "pros": [
       {
-        "en": "exceptional {E/light} {C/Mage} DPS capable of transforming between two states ({B/WHITE_NIGHT} and {B/POLAR_NIGHT}) to adapt to the battle",
-        "jp": "{B/WHITE_NIGHT}と{B/POLAR_NIGHT}の2つの状態を切り替え、戦況に適応できる卓越した{E/light}属性{C/Mage}DPS",
-        "kr": "{B/WHITE_NIGHT}와 {B/POLAR_NIGHT}의 두 가지 상태를 전환하며 전투에 적응할 수 있는 뛰어난 {E/light} 속성 {C/Mage} 딜러",
-        "zh": "出色的{E/light}属性{C/Mage}输出，可在{B/WHITE_NIGHT}与{B/POLAR_NIGHT}两种状态之间切换以适应战斗"
+        "en": "exceptional {E/Light} {C/Mage} DPS capable of transforming between two states ({B/WHITE_NIGHT} and {B/POLAR_NIGHT}) to adapt to the battle",
+        "jp": "{B/WHITE_NIGHT}と{B/POLAR_NIGHT}の2つの状態を切り替え、戦況に適応できる卓越した{E/Light}属性{C/Mage}DPS",
+        "kr": "{B/WHITE_NIGHT}와 {B/POLAR_NIGHT}의 두 가지 상태를 전환하며 전투에 적응할 수 있는 뛰어난 {E/Light} 속성 {C/Mage} 딜러",
+        "zh": "出色的{E/Light}属性{C/Mage}输出，可在{B/WHITE_NIGHT}与{B/POLAR_NIGHT}两种状态之间切换以适应战斗"
       },
       {
-        "en": "in her {B/WHITE_NIGHT} state, she gains massive survivability with high final damage reduction and access to a single-target burst that ignores 30% of the target's Defense and deals increased damage which can also grant {B/BT_INVINCIBLE} if a {E/dark} unit is hit ",
-        "jp": "{B/WHITE_NIGHT}状態では、高い最終ダメージ軽減により大幅な生存力を得るとともに、対象の防御力を30%無視して増加したダメージを与える単体バーストを使用でき、{E/dark}属性ユニットに命中した場合は{B/BT_INVINCIBLE}を付与することもできる",
-        "kr": "{B/WHITE_NIGHT} 상태에서는 높은 최종 피해 감소를 통해 막대한 생존력을 얻으며, 대상의 방어력을 30% 무시하고 증가된 피해를 가하는 단일 대상 폭딜을 사용할 수 있고, {E/dark} 속성 유닛을 타격할 경우 {B/BT_INVINCIBLE}을 부여할 수도 있음",
-        "zh": "在{B/WHITE_NIGHT}状态下，凭借高额最终伤害减免获得极强的生存能力，并可使用一项无视目标30%防御并造成增伤的单体爆发技能，若命中{E/dark}属性单位还可获得{B/BT_INVINCIBLE}"
+        "en": "in her {B/WHITE_NIGHT} state, she gains massive survivability with high final damage reduction and access to a single-target burst that ignores 30% of the target's Defense and deals increased damage which can also grant {B/BT_INVINCIBLE} if a {E/Dark} unit is hit ",
+        "jp": "{B/WHITE_NIGHT}状態では、高い最終ダメージ軽減により大幅な生存力を得るとともに、対象の防御力を30%無視して増加したダメージを与える単体バーストを使用でき、{E/Dark}属性ユニットに命中した場合は{B/BT_INVINCIBLE}を付与することもできる",
+        "kr": "{B/WHITE_NIGHT} 상태에서는 높은 최종 피해 감소를 통해 막대한 생존력을 얻으며, 대상의 방어력을 30% 무시하고 증가된 피해를 가하는 단일 대상 폭딜을 사용할 수 있고, {E/Dark} 속성 유닛을 타격할 경우 {B/BT_INVINCIBLE}을 부여할 수도 있음",
+        "zh": "在{B/WHITE_NIGHT}状态下，凭借高额最终伤害减免获得极强的生存能力，并可使用一项无视目标30%防御并造成增伤的单体爆发技能，若命中{E/Dark}属性单位还可获得{B/BT_INVINCIBLE}"
       },
       {
         "en": "in her {B/POLAR_NIGHT} state, her ultimate becomes a devastating AoE attack that increases her {B/BT_ACTION_GAUGE} and reduces cooldowns upon killing enemies, enabling back-to-back turns",
@@ -1355,10 +1355,10 @@
         "zh": "{EE/Demiurge Luna}在受击时提供高达50%的{B/BT_ACTION_GAUGE}，其10级效果可阻止{B/BT_STAT|ST_COUNTER_RATE}触发"
       },
       {
-        "en": "transcendance further increases her potential at every stage, giving a 100% damage increase to {SK/Demiurge Luna|S3} and 30% {S/PEN} at max transcendance",
-        "jp": "覚醒は各段階で潜在能力をさらに引き上げ、最大覚醒時には{SK/Demiurge Luna|S3}に100%のダメージ増加と30%の{S/PEN}を付与する",
-        "kr": "초월은 각 단계마다 잠재력을 더욱 끌어올리며, 최대 초월 시 {SK/Demiurge Luna|S3}에 100% 피해 증가와 30%의 {S/PEN}을 부여함",
-        "zh": "超越在每个阶段都会进一步提升其潜力，在最大超越时为{SK/Demiurge Luna|S3}提供100%的伤害增幅和30%的{S/PEN}"
+        "en": "transcendance further increases her potential at every stage, giving a 100% damage increase to {SK/Demiurge Luna|S3} and 30% {S/PEN%} at max transcendance",
+        "jp": "覚醒は各段階で潜在能力をさらに引き上げ、最大覚醒時には{SK/Demiurge Luna|S3}に100%のダメージ増加と30%の{S/PEN%}を付与する",
+        "kr": "초월은 각 단계마다 잠재력을 더욱 끌어올리며, 최대 초월 시 {SK/Demiurge Luna|S3}에 100% 피해 증가와 30%의 {S/PEN%}을 부여함",
+        "zh": "超越在每个阶段都会进一步提升其潜力，在最大超越时为{SK/Demiurge Luna|S3}提供100%的伤害增幅和30%的{S/PEN%}"
       },
       {
         "en": "incredibly potent in both PvE and PvP as one of the strongest overall nukers in the game",
