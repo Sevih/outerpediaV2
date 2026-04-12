@@ -160,26 +160,47 @@ export function extractSkill(
   const tables = t ?? loadSkillTables()
   const row = tables.skillIndex.get(skillId)
   if (!row) return null
-  // Skip placeholder character slots (e.g. SKT_BACKUP_AERIAL/GROUND on
-  // character-flavored boss fights) — their MonsterSkillTemplet row has
-  // no NameID and would produce an empty skill entry.
+  // Always skip SKT_BACKUP_AERIAL/GROUND — these are character sub-skills
+  // inherited by character-flavored boss fights and should never appear
+  // in the wiki (even when they carry a valid NameID/DescID).
+  const skillType = row.SkillType ?? ''
+  if (skillType.startsWith('SKT_BACKUP_')) return null
+  // Skip placeholder slots with no NameID (empty skill entry).
   // SKT_RAGE_FINISH rows are an exception: they also have no NameID but
   // carry real buffs that must flow into their sibling SKT_RAGE_ENTER
   // via mergeRageFinish().
-  const isRageFinish = (row.SkillType ?? '').startsWith('SKT_RAGE_FINISH')
+  const isRageFinish = skillType.startsWith('SKT_RAGE_FINISH')
   if (!row.NameID && !isRageFinish) return null
 
   // Skip skills whose DescID is missing or a placeholder whitespace
   // string — the game never wired a real description for them and the
   // wiki doesn't want to carry an empty skill entry. RAGE_FINISH is
   // exempt because it is always merged into RAGE_ENTER.
-  const descIdTrim = (row.DescID ?? '').trim()
-  if (!descIdTrim && !isRageFinish) return null
+  // DescID may be a CSV of per-level ids (`..._LV1,..._LV2,..._LV3,...`).
+  // Walk it from highest to lowest level and pick the first id that
+  // actually resolves to a TextSkill row — the CSV often references
+  // non-existent `_LVn` entries as padding.
+  const descIdRaw = (row.DescID ?? '').trim()
+  const descIdList = descIdRaw ? descIdRaw.split(',').map((s) => s.trim()).filter(Boolean) : []
+  let descIdPicked = ''
+  let descRow: Row | undefined
+  for (const id of descIdList) {
+    const found = tables.textSkillIndex.get(id)
+    if (!found) continue
+    // Require the English text to be non-empty — some `_LVn` entries
+    // exist in TextSkill but carry blank strings.
+    const en = (found.English ?? '').trim()
+    if (!en) continue
+    descIdPicked = id
+    descRow = found
+    break
+  }
+  if (!descIdPicked && !isRageFinish) return null
 
   const level = tables.skillLevelByID.get(skillId)
 
   const nameTexts = getLangTexts(tables.textSkillIndex.get(row.NameID ?? ''))
-  const descTextsRaw = getLangTexts(tables.textSkillIndex.get(descIdTrim))
+  const descTextsRaw = getLangTexts(descRow)
 
   // Resolve [Buff_*] placeholders for each language.
   const descTexts = descTextsRaw

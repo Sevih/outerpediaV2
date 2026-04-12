@@ -155,8 +155,8 @@
         "BT_COOL_CHARGE"
       ],
       "debuff": [
-        "BT_DOT_2000092",
-        "BT_IMMEDIATELY_2000092"
+        "ETERNAL_BLEEDING",
+        "DETONATE"
       ],
       "offensive": true,
       "target": "mono",
@@ -287,7 +287,7 @@
         "BT_STEALTHED"
       ],
       "debuff": [
-        "BT_DOT_2000092"
+        "ETERNAL_BLEEDING"
       ],
       "offensive": true,
       "target": "multi"
@@ -390,7 +390,6 @@
         "RETRIBUTIONS_DOMINION"
       ],
       "debuff": [
-        "BT_IMMEDIATELY_2000092",
         "DETONATE"
       ],
       "offensive": true,
@@ -488,7 +487,7 @@
       "cd": null,
       "buff": [],
       "debuff": [
-        "BT_DOT_2000092"
+        "ETERNAL_BLEEDING"
       ],
       "offensive": true,
       "target": "multi",
@@ -497,7 +496,7 @@
       "dual_target": "mono",
       "dual_buff": [],
       "dual_debuff": [
-        "BT_DOT_2000092"
+        "ETERNAL_BLEEDING"
       ]
     }
   }

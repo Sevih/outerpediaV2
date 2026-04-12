@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import { LANGS, DEFAULT_LANG, type Lang } from '@/lib/i18n/config'
+import { buildTooltipMap, sanitizeTooltipLabel } from '../_shared/effects/tooltip'
+import type { TooltipEntry } from '../_shared/effects/types'
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 const EE_PATH = path.join(process.cwd(), 'data', 'equipment', 'ee.json')
@@ -132,7 +134,7 @@ const EE_OVERRIDES: Record<string, { buff?: string[]; debuff?: string[] }> = {
   '2000093': { buff: ['BT_AP_CHARGE'] },
 }
 
-function extractEEBuffDebuff(buffTemplet: Row[], id: string): { buff: string[]; debuff: string[] } {
+function extractEEBuffDebuff(buffTemplet: Row[], id: string, tooltipMap?: Map<string, TooltipEntry>): { buff: string[]; debuff: string[] } {
   const buffs = new Set<string>()
   const debuffs = new Set<string>()
 
@@ -156,9 +158,28 @@ function extractEEBuffDebuff(buffTemplet: Row[], id: string): { buff: string[]; 
     let effectiveType = type
     if (icon === 'IG_Buff_Dot_Poison02') effectiveType = 'BT_DOT_POISON2'
 
-    const tag = icon.includes('Interruption')
-      ? icon
-      : (effectiveType === 'BT_STAT' && stat && stat !== 'ST_NONE') ? `${effectiveType}|${stat}` : effectiveType
+    let tag: string
+    if (icon.includes('Interruption')) {
+      const base = (effectiveType === 'BT_STAT' && stat && stat !== 'ST_NONE')
+        ? `${effectiveType}|${stat}`
+        : effectiveType
+      // For well-known types (DOT, stun, freeze, etc.) always use base + _IR
+      // — the tooltip is too generic ("Bleeding", "Burned") while the wiki
+      // uses the precise BT_DOT_*_IR label. Use tooltip name only for
+      // custom/unique effects whose Type doesn't carry enough meaning.
+      const useBaseIR = effectiveType.startsWith('BT_DOT_')
+        || effectiveType === 'BT_STUN'
+        || effectiveType === 'BT_FREEZE'
+      if (useBaseIR) {
+        tag = `${base}_IR`
+      } else {
+        const ttId = b.ToolTipID ?? ''
+        const tt = ttId && tooltipMap ? tooltipMap.get(ttId) : undefined
+        tag = tt?.name ? tt.name : `${base}_IR`
+      }
+    } else {
+      tag = (effectiveType === 'BT_STAT' && stat && stat !== 'ST_NONE') ? `${effectiveType}|${stat}` : effectiveType
+    }
 
     if (seen.has(tag)) continue
     seen.add(tag)
@@ -341,6 +362,7 @@ interface Tables {
   textSystemMap: Map<string, Row>
   buffTemplet: Row[]
   buffsByID: Map<string, Row[]>
+  tooltipMap: Map<string, TooltipEntry>
   itemOptionByGroup: Map<string, Row[]>
   characters: Map<string, Row>
 }
@@ -353,10 +375,11 @@ function loadAllTables(): Tables {
   const textSystemMap = indexBy(loadTable('TextSystem'))
   const buffTemplet = loadTable('BuffTemplet')
   const buffsByID = groupBy(buffTemplet, 'BuffID')
+  const tooltipMap = buildTooltipMap(loadTable('BuffToolTipTemplet'), textSystemMap)
   const itemOptionByGroup = groupBy(loadTable('ItemOptionTemplet'), 'GroupID')
   const characters = indexBy(loadTable('CharacterTemplet'))
 
-  return { itemTemplet, itemTempletMap, textItem, textSkill, textSystemMap, buffTemplet, buffsByID, itemOptionByGroup, characters }
+  return { itemTemplet, itemTempletMap, textItem, textSkill, textSystemMap, buffTemplet, buffsByID, tooltipMap, itemOptionByGroup, characters }
 }
 
 // ── Extract single EE ───────────────────────────────────────────────
@@ -405,7 +428,7 @@ function extractEE(id: string, t: Tables): Record<string, unknown> {
   result.icon_effect = 'TI_Icon_UO_Accessary_07'
 
   // Buff/debuff
-  const { buff, debuff } = extractEEBuffDebuff(t.buffTemplet, id)
+  const { buff, debuff } = extractEEBuffDebuff(t.buffTemplet, id, t.tooltipMap)
   result.buff = buff
   result.debuff = debuff
 

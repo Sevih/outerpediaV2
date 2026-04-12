@@ -22,10 +22,10 @@
       "zh": "土之塔第60层"
     },
     "mode": {
-      "en": "Elemental Tower",
-      "jp": "エレメンタルタワー",
-      "kr": "엘레멘탈 타워",
-      "zh": "元素之塔"
+      "en": "Earth Tower",
+      "jp": "大地の塔",
+      "kr": "대지의 탑",
+      "zh": "土之塔"
     },
     "area_id": {
       "en": "",
@@ -43,7 +43,12 @@
         "zh": "三日月1式：开花"
       },
       "type": "SKT_FIRST",
-      "description": {},
+      "description": {
+        "en": "Attacks an enemy.\\nDepending on the unique effect applied to the caster, activates one of the following effects:\\n\\nUme Ichirin: Attacks an enemy. Has a <color=#28d9ed>70%</color> chance to increase the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color> after attacking.\\n\\nSakura, Chiru: Attacks all enemies. Always attacks with <color=#28d9ed>elemental advantage</color>.",
+        "jp": "敵単体にダメージを与える。\\n自分に【梅一輪】または【桜散る】がある場合、次の効果が発動する。\\n\\n【梅一輪】：敵単体にダメージを与える。<color=#28d9ed>70%</color>の確率で自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。\\n\\n 【桜散る】：敵全体 にダメージを与える。このスキルは敵の属性を無視し、<color=#28d9ed>有利属性</color>の攻撃判定でダメージを与える。",
+        "kr": "적을 공격합니다.\\n보유한 고유 효과에 따라 이하의 효과 중 하나가 적용됩니다.\\n\\n【우메이치린】 : 적을 공격합니다. 공격 후 <color=#28d9ed>70%</color>의 확률로 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.\\n\\n【사쿠라치루】 : 적 전체를 공격합니다. 항상 <color=#28d9ed>유리한 상성</color>으로 적용됩니다.",
+        "zh": "攻击敌人。\\n根据附带的固有效果触发以下效果之一。\\n\\n【一朵梅花】：攻击敌人。攻击后，有<color=#28d9ed>70%</color>的几率使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>20%</color>。\\n\\n【樱花凋零】：攻击全体敌人。总是以<color=#28d9ed>优势属性</color>施展。"
+      },
       "icon": "Skill_First_2000065",
       "buff": [
         "BT_ACTION_GAUGE",
@@ -58,7 +63,12 @@
         "zh": "三日月2式：剪枝"
       },
       "type": "SKT_SECOND",
-      "description": {},
+      "description": {
+        "en": "(Passive Effect)Increases <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>15%</color> and increases damage dealt to bosses.\\nWhen using <color=#28d9ed>Mikazuki Form 1: Bloom</color>, increases WG damage dealt to enemies by <color=#28d9ed>1</color>.",
+        "jp": "（パッシブ効果）<color=#28d9ed>会心率</color>が<color=#28d9ed>15%</color>上昇し、ボスへの与ダメージが増加する。\\n<color=#28d9ed>ミカヅキ壱式：開花</color>使用時、敵へのWGダメージが<color=#28d9ed>1</color>増加する。",
+        "kr": "(패시브 효과) <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>15%</color> 증가하고, 보스에게 입히는 피해가 증가합니다.\\n<color=#28d9ed>미카즈키 1식 : 개화</color> 사용 시 적에게 입히는 WG 피해가 <color=#28d9ed>1</color> 증가합니다.",
+        "zh": "（被动效果）<color=#28d9ed>暴击率</color>提高<color=#28d9ed>15%</color>，对首领怪物造成的伤害提高。\\n使用<color=#28d9ed>三日月一式：开花</color>时，对敌方造成的WG伤害提高<color=#28d9ed>1</color>。"
+      },
       "icon": "Skill_Second_2000065",
       "debuff": [
         "BT_WG_REVERSE_HEAL"
@@ -80,8 +90,8 @@
       },
       "icon": "Skill_Ultimate_2000065",
       "buff": [
-        "BT_2000065_A_IR",
-        "BT_2000065_B_IR",
+        "SAKURA_CHIRU",
+        "UME_ICHIRIN",
         "BT_ADDITIVE_TURN",
         "BT_CP_CHARGE"
       ],
@@ -104,6 +114,9 @@
         "zh": "<color=#28d9ed>穿透</color>始终+<color=#28d9ed>20%</color>，<color=#28d9ed>暴击率</color>+<color=#28d9ed>10%</color>。\\n回合结束时，回复自身生命值<color=#28d9ed>5%</color>。\\n\\n回合结束时，降低敌方队伍CP<color=#28d9ed>25</color>。"
       },
       "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ],
       "debuff": [
         "BT_CP_CHARGE"
       ]

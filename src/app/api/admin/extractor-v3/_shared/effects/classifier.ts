@@ -130,6 +130,24 @@ export function buffTypeLabel(buff: BuffRow, tables: EffectTables): string {
     label = type
   }
 
+  // `BT_IMMEDIATELY_*` is the game's universal "instant DOT detonation"
+  // mechanic — every variant renders as "Detonate" in the wiki,
+  // regardless of the trailing character ID suffix.
+  if (type.startsWith('BT_IMMEDIATELY_')) return 'DETONATE'
+
+  // If the derived label still contains a 7-digit character-ID pattern
+  // (e.g. `BT_DOT_2000092`), the game encoded a character-specific
+  // effect. Prefer the row's ToolTipID name when available — that's
+  // the wiki-friendly label like `ETERNAL_BLEEDING`. Falls back to the
+  // raw label if no tooltip exists.
+  if (/_2\d{6}$/.test(label)) {
+    const ttId = buff.ToolTipID ?? ''
+    if (ttId) {
+      const tt = tooltipMap.get(ttId)
+      if (tt?.name) return applyAlias(tt.name)
+    }
+  }
+
   return applyAlias(label)
 }
 
