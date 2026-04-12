@@ -1175,10 +1175,10 @@
         "zh": "{SK/Gnosis Domine|S3}基于最大生命值造成{D/BT_FIXED_DAMAGE}，对Boss额外造成50%伤害并无视30%防御，在PvE中极为有效"
       },
       {
-        "en": "basic attack can steal enemy buffs via {D/BUFF_TRANSFER}, stripping key buffs from enemies and applying them to herself",
-        "jp": "通常攻撃で{D/BUFF_TRANSFER}により敵のバフを奪い取り、重要なバフを敵から剥奪して自身に付与できる",
-        "kr": "기본 공격으로 {D/BUFF_TRANSFER}를 통해 적의 버프를 빼앗아, 핵심 버프를 적에게서 제거하고 자신에게 부여할 수 있음",
-        "zh": "普通攻击可通过{D/BUFF_TRANSFER}窃取敌方增益，剥离敌人的关键增益并赋予自身"
+        "en": "basic attack can steal enemy buffs via {D/BT_REDISTRIBUTE_BUFF}, stripping key buffs from enemies and applying them to herself",
+        "jp": "通常攻撃で{D/BT_REDISTRIBUTE_BUFF}により敵のバフを奪い取り、重要なバフを敵から剥奪して自身に付与できる",
+        "kr": "기본 공격으로 {D/BT_REDISTRIBUTE_BUFF}를 통해 적의 버프를 빼앗아, 핵심 버프를 적에게서 제거하고 자신에게 부여할 수 있음",
+        "zh": "普通攻击可通过{D/BT_REDISTRIBUTE_BUFF}窃取敌方增益，剥离敌人的关键增益并赋予自身"
       }
     ],
     "cons": [

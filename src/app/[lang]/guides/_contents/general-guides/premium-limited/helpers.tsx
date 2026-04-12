@@ -56,6 +56,10 @@ type PriorityData = {
   PREMIUM_ORDER_2ND: Entry[];
   PREMIUM_ORDER_3RD: Entry[];
   TRANSCEND_PRIORITY: Entry[];
+  LIMITED_ORDER_1ST: Entry[];
+  LIMITED_ORDER_2ND: Entry[];
+  LIMITED_ORDER_3RD: Entry[];
+  LIMITED_TRANSCEND_PRIORITY: Entry[];
 };
 const priorityPromise = import('@data/guides/premium-priorities.json').then(m => m.default as PriorityData);
 
@@ -382,6 +386,38 @@ export function PremiumPullingOrder({ lang }: { lang: Lang }) {
         </h4>
         <div className="flex flex-wrap items-center justify-center gap-3">
           {priorityData.TRANSCEND_PRIORITY.map((e, i) => (
+            <CharacterCard key={`${e.name}-${i}`} name={e.name} stars={e.stars} isPriority={i === 0} />
+          ))}
+        </div>
+        <p className="mt-3 text-center text-xs opacity-70">
+          {lRec(LABELS.transcendFocusNote, lang)}
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ===================== LimitedPullingOrder ===================== */
+
+export function LimitedPullingOrder({ lang }: { lang: Lang }) {
+  const priorityData = use(priorityPromise);
+
+  return (
+    <section className="space-y-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+      <h2 className="mx-auto text-center">{lRec(LABELS.recommendedChoices, lang)}</h2>
+
+      <div className="space-y-5">
+        <PremiumPriorityRow title={lRec(LABELS.priority1st, lang)} entries={priorityData.LIMITED_ORDER_1ST} />
+        <PremiumPriorityRow title={lRec(LABELS.priority2nd, lang)} entries={priorityData.LIMITED_ORDER_2ND} />
+        <PremiumPriorityRow title={lRec(LABELS.priority3rd, lang)} entries={priorityData.LIMITED_ORDER_3RD} />
+      </div>
+
+      <div className="mt-5 border-t border-white/10 pt-5">
+        <h4 className="mx-auto mb-3 text-center">
+          {lRec(LABELS.transcendPriority, lang)}
+        </h4>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          {priorityData.LIMITED_TRANSCEND_PRIORITY.map((e, i) => (
             <CharacterCard key={`${e.name}-${i}`} name={e.name} stars={e.stars} isPriority={i === 0} />
           ))}
         </div>

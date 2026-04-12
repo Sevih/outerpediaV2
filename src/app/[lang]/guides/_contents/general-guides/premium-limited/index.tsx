@@ -15,6 +15,7 @@ import {
   TAB_CONFIG,
   LABELS,
   PremiumPullingOrder,
+  LimitedPullingOrder,
   HeroCard,
 } from './helpers';
 
@@ -54,6 +55,7 @@ export default function PremiumLimitedGuide() {
       />
 
       {selected === 'Premium' && <PremiumPullingOrder lang={lang} />}
+      {selected === 'Limited' && <LimitedPullingOrder lang={lang} />}
 
       {entries.length === 0 ? (
         <div className="rounded-md border border-neutral-700 p-6 text-sm text-neutral-300">
