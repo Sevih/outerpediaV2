@@ -5,6 +5,7 @@ import {
   buildTooltipMap,
   type EffectTables,
 } from '../../_shared/effects'
+import { loadEffectRules } from '../../_shared/effects/rules'
 
 // ── Output type ─────────────────────────────────────────────────────
 //
@@ -309,6 +310,28 @@ function mergeRageFinish(skills: MonsterSkill[]): MonsterSkill[] {
     mergeList('debuff')
     mergeList('removeBuff')
     mergeList('removeDebuff')
+    // Re-apply description-overrides to the merged ENTER: the FINISH may
+    // contribute labels that match the override's `remove_buff` /
+    // `remove_debuff` rules but were classified outside of the ENTER
+    // description's lookup pass.
+    const enterDesc = (enter.descTexts as Record<string, string> | null)?.en
+    if (enterDesc) {
+      const rules = loadEffectRules()
+      const normalizePunct = (s: string) =>
+        s.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"')
+      const normalizedDesc = normalizePunct(enterDesc.replace(/\\n/g, '\n'))
+      const override =
+        rules.descriptionOverrides.get(normalizedDesc) ??
+        rules.descriptionOverrides.get(normalizePunct(enterDesc))
+      if (override) {
+        const removeFrom = (key: 'buff' | 'debuff', labels: string[]) => {
+          const list = (enter[key] as string[] | undefined) ?? []
+          enter[key] = list.filter((x) => !labels.includes(x))
+        }
+        if (override.removeBuff?.length) removeFrom('buff', override.removeBuff)
+        if (override.removeDebuff?.length) removeFrom('debuff', override.removeDebuff)
+      }
+    }
     toDrop.add(i)
   }
   if (toDrop.size === 0) return skills

@@ -27,10 +27,10 @@
       "zh": "飞天之塔【困难】第35层"
     },
     "mode": {
-      "en": "Skyward Tower - Hard",
-      "jp": "飛天の塔 ハード",
-      "kr": "비천의 탑 하드",
-      "zh": "飞天之塔 - 困难"
+      "en": "Skyward Tower: Hard",
+      "jp": "飛天の塔【ハード】",
+      "kr": "비천의 탑 [하드]",
+      "zh": "飞天之塔【困难】"
     },
     "area_id": {
       "en": "",
@@ -94,14 +94,10 @@
         "zh": "攻击全体敌人，并赋予<color=#28d9ed>99回合</color>的不可解除<color=#28d9ed>速度降低</color>与<color=#28d9ed>无法强化</color>后消失。"
       },
       "icon": "Skill_Ultimate_2000070",
-      "buff": [
-        "BT_SHIELD_BASED_CASTER_IR"
-      ],
       "debuff": [
         "BT_REMOVE_BUFF",
         "BT_STAT|ST_SPEED_IR",
-        "BT_SEALED_IR",
-        "BT_DEATH"
+        "BT_SEALED_IR"
       ]
     },
     {

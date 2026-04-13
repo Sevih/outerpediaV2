@@ -22,10 +22,10 @@
       "zh": "飞天之塔【困难】第37层"
     },
     "mode": {
-      "en": "Skyward Tower - Hard",
-      "jp": "飛天の塔 ハード",
-      "kr": "비천의 탑 하드",
-      "zh": "飞天之塔 - 困难"
+      "en": "Skyward Tower: Hard",
+      "jp": "飛天の塔【ハード】",
+      "kr": "비천의 탑 [하드]",
+      "zh": "飞天之塔【困难】"
     },
     "area_id": {
       "en": "",
@@ -115,7 +115,7 @@
         "BT_ACTION_GAUGE"
       ],
       "debuff": [
-        "BT_STAT|ST_ATK_IR"
+        "SHICHIFUJAS_CURSE"
       ]
     },
     {
@@ -139,7 +139,7 @@
       ],
       "debuff": [
         "BT_DOT_POISON",
-        "BT_IMMEDIATELY_POISON"
+        "DETONATE"
       ]
     }
   ]

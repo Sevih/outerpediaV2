@@ -22,10 +22,10 @@
       "zh": "飞天之塔【困难】第39层"
     },
     "mode": {
-      "en": "Skyward Tower - Hard",
-      "jp": "飛天の塔 ハード",
-      "kr": "비천의 탑 하드",
-      "zh": "飞天之塔 - 困难"
+      "en": "Skyward Tower: Hard",
+      "jp": "飛天の塔【ハード】",
+      "kr": "비천의 탑 [하드]",
+      "zh": "飞天之塔【困难】"
     },
     "area_id": {
       "en": "",
@@ -70,7 +70,10 @@
         "kr": "전투 입장 시 가장 빠르게 턴을 획득합니다.",
         "zh": "进入战斗时，最先获得回合。"
       },
-      "icon": "MT_Passive_1_Dark"
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     }
   ]
 }

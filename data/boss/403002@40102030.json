@@ -27,10 +27,10 @@
       "zh": "飞天之塔【困难】第30层"
     },
     "mode": {
-      "en": "Skyward Tower - Hard",
-      "jp": "飛天の塔 ハード",
-      "kr": "비천의 탑 하드",
-      "zh": "飞天之塔 - 困难"
+      "en": "Skyward Tower: Hard",
+      "jp": "飛天の塔【ハード】",
+      "kr": "비천의 탑 [하드]",
+      "zh": "飞天之塔【困难】"
     },
     "area_id": {
       "en": "",
@@ -56,7 +56,6 @@
       },
       "icon": "Skill_First_4054001",
       "debuff": [
-        "BT_STUN",
         "BT_STUN_IR"
       ]
     },
@@ -97,8 +96,7 @@
       "debuff": [
         "BT_STAT|ST_ATK_IR",
         "BT_STAT|ST_DEF_IR",
-        "BT_REVERSE_HEAL_BASED_TARGET",
-        "BT_DEATH_IR"
+        "BT_REVERSE_HEAL_BASED_TARGET"
       ]
     },
     {
