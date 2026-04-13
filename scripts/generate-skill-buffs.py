@@ -26,7 +26,7 @@ import glob
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-JSON_DIR = os.path.join(ROOT, 'data', 'admin', 'json')
+JSON_DIR = os.path.join(ROOT, 'data', 'admin', 'json2')
 CHAR_DIR = os.path.join(ROOT, 'data', 'character')
 EE_PATH = os.path.join(ROOT, 'data', 'equipment', 'ee.json')
 OUT_DIR = os.path.join(ROOT, 'data', 'generated')
@@ -34,8 +34,9 @@ OUT_FILE = os.path.join(OUT_DIR, 'skill-buffs.json')
 
 
 def load(name):
+    # json2 format: bare list at root (no {"data": [...]} wrapper)
     with open(os.path.join(JSON_DIR, f'{name}.json'), 'r', encoding='utf-8') as f:
-        return json.load(f)['data']
+        return json.load(f)
 
 
 if not os.path.isdir(JSON_DIR):
@@ -88,10 +89,10 @@ change_templet = load('CharacterChangeTemplet')
 
 # ── Build lookups ────────────────────────────────────────────────────
 
-# Skill templet by NameIDSymbol
+# Skill templet by ID (json2: skills referenced by numeric ID, not NameIDSymbol)
 skill_by_ns = {}
 for row in skill_templet:
-    ns = row.get('NameIDSymbol', '')
+    ns = row.get('ID', '')
     if ns:
         skill_by_ns[ns] = row
 
@@ -109,11 +110,11 @@ for row in buff_data:
     if bid and bid not in buff_by_id:
         buff_by_id[bid] = row
 
-# Change map: charId → changeId
+# Change map: charId → changeId (json2: ChangeCharacterID replaces ID_fallback1)
 change_map = {}
 for row in change_templet:
     cid = row.get('ID', '')
-    chid = row.get('ID_fallback1', '')
+    chid = row.get('ChangeCharacterID', '')
     if cid and chid:
         change_map[cid] = chid
 
@@ -312,11 +313,8 @@ for char_file in char_files:
     change_id = change_map.get(cid)
     change_skill_ids = []
     if change_id:
-        change_row = None
-        for row in char_templet:
-            if row.get('ModelID') == change_id:
-                change_row = row
-                break
+        # json2: ChangeCharacterID points directly to a CharacterTemplet.ID
+        change_row = char_row_by_id.get(change_id)
         if change_row:
             for i in range(1, 24):
                 s = change_row.get(f'Skill_{i}', '')
