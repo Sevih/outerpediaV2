@@ -1048,19 +1048,6 @@
     "icon": "SC_Buff_Revenge"
   },
   {
-    "name": "BT_REVENGE",
-    "category": "utility",
-    "label": "Revenge",
-    "label_jp": "復讐",
-    "label_kr": "복수",
-    "label_zh": "复仇",
-    "description": "Counterattacks when a debuff is inflicted on an ally during an enemy's turn.",
-    "description_jp": "敵が味方に弱体効果を 与えた場合、対象に反撃する。",
-    "description_kr": "적 행동 중 아군에게 약화 효과가 적용된 경우, 대상에게 반격합니다.",
-    "description_zh": "敌人对友军造成弱化效果时,对目标\\n进行反击。",
-    "icon": "SC_Buff_Revenge"
-  },
-  {
     "name": "BT_SEAL_COUNTER",
     "category": "utility",
     "label": "Uncounterable",
@@ -1153,34 +1140,6 @@
     "description_kr": "스킬 쿨타임을 일정 턴 감소시킵니다.",
     "description_zh": "使技能冷却时间减少一定回合。",
     "icon": "SC_Buff_Cool_Charge"
-  },
-  {
-    "name": "BT_ADDITIVE_ATTACK",
-    "category": "utility",
-    "group": "BT_EXTRA_ATTACK_ON_TURN_END",
-    "label": "Additional Attack",
-    "label_jp": "追加攻撃",
-    "label_kr": "추가타",
-    "label_zh": "额外攻击",
-    "description": "Performs an additional attack.",
-    "description_jp": "敵を通常スキルで\\n追加攻撃する。",
-    "description_kr": "추가 공격을 입힙니다.",
-    "description_zh": "造成额外攻击。",
-    "icon": "SC_Buff_Extra_Skill"
-  },
-  {
-    "name": "BT_COUNTERATTACK",
-    "category": "utility",
-    "group": "BT_STAT|ST_COUNTER_RATE",
-    "label": "Counterattack",
-    "label_jp": "反撃",
-    "label_kr": "반격",
-    "label_zh": "反击",
-    "description": "Counterattacks when attacked.",
-    "description_jp": "敵からダメージを受けた時、\\nその敵に反撃する。",
-    "description_kr": "피격 시 대상에게 반격합니다.",
-    "description_zh": "受到攻击时,对目标进行反击。",
-    "icon": "SC_Buff_Counter"
   },
   {
     "name": "BT_STAT|ST_COUNTER_RATE_IR",
