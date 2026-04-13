@@ -1,0 +1,95 @@
+{
+  "id": "52000008@40222089",
+  "Name": {
+    "en": "Rhona",
+    "jp": "ロナ",
+    "kr": "로나",
+    "zh": "罗娜"
+  },
+  "Surname": {
+    "en": "Amnesic Drifter",
+    "jp": "記憶を失った漂流者",
+    "kr": "기억 잃은 표류자",
+    "zh": "丧失记忆的漂流者"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 169,
+  "icons": "2000008",
+  "BuffImmune": "",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 89F",
+      "jp": "大地の塔89階",
+      "kr": "대지의 탑 89층",
+      "zh": "土之塔第89层"
+    },
+    "mode": {
+      "en": "Earth Tower",
+      "jp": "大地の塔",
+      "kr": "대지의 탑",
+      "zh": "土之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Rose Slash",
+        "jp": "ローズスラッシュ",
+        "kr": "로즈 슬래쉬",
+        "zh": "玫瑰斩击"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks 2 enemies.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "jp": "敵2体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "kr": "적 2인을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다.",
+        "zh": "攻击2名敌人。\\n自身<color=#28d9ed>生命值上限</color>越高，则该技能的伤害越高。"
+      },
+      "icon": "Skill_First_2000008"
+    },
+    {
+      "name": {
+        "en": "Tidal Wave",
+        "jp": "タイダルウェーブ",
+        "kr": "타이달 웨이브",
+        "zh": "海啸"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and heals the caster by <color=#28d9ed>10%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and increases inversely proportional to the number of targets.",
+        "jp": "敵全体にダメージを与え、自分のHPを<color=#28d9ed>10%</color>回復する。\\nこのスキルは自分の<color=#28d9ed>最大HP</color>が高いほど、対象が少ないほどダメージがUPする。",
+        "kr": "적 전체를 공격하고 자신의 체력을 <color=#28d9ed>10%</color> 회복합니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상의 수가 적을수록 피해가 증가합니다.",
+        "zh": "攻击全体敌人，并使自身生命值恢复<color=#28d9ed>10%</color>。\\n自身<color=#28d9ed>生命值上限</color>越高，则该技能的伤害越高；目标数量越少，则该技能的伤害越高。"
+      },
+      "icon": "Skill_Second_2000008"
+    },
+    {
+      "name": {
+        "en": "End of the World",
+        "jp": "エンド・オブ・ワールド",
+        "kr": "엔드 오브 월드",
+        "zh": "世界末日"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to inflict reduced <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color> and increases inversely proportional to the number of targets.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>70%</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。\\nこのスキルは、自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPし、対象が少ないほどダメージがUPする。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가하며 대상이 적을수록 피해가 증가합니다.",
+        "zh": "攻击全体敌人，并有<color=#28d9ed>70%</color>的几率使目标的<color=#28d9ed>防御力</color>降低，持续<color=#28d9ed>2回合</color>。\\n自身<color=#28d9ed>生命值上限</color>越高，则该技能的伤害越高；目标数量越少，则该技能的伤害越高。"
+      },
+      "icon": "Skill_Ultimate_2000008",
+      "debuff": [
+        "BT_STAT|ST_DEF"
+      ]
+    }
+  ]
+}

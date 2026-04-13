@@ -1,0 +1,98 @@
+{
+  "id": "52000038@40212048",
+  "Name": {
+    "en": "Shu",
+    "jp": "シュー",
+    "kr": "슈",
+    "zh": "小芙"
+  },
+  "Surname": {
+    "en": "Up-And-Coming Virtual DJ",
+    "jp": "ヴァーチャルDJ配信中",
+    "kr": "떡상예정 버추얼 DJ",
+    "zh": "潜力虚拟DJ"
+  },
+  "IncludeSurname": false,
+  "class": "Healer",
+  "element": "Water",
+  "level": 126,
+  "icons": "2000038",
+  "BuffImmune": "",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Water Tower 48F",
+      "jp": "水の塔48階",
+      "kr": "물의 탑 48층",
+      "zh": "水之塔第48层"
+    },
+    "mode": {
+      "en": "Water Tower",
+      "jp": "水の塔",
+      "kr": "물의 탑",
+      "zh": "水之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Dropping the Beat!",
+        "jp": "ドロップ・ザ・ビ～ト!",
+        "kr": "비트 갑니다!",
+        "zh": "跟随节奏！"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and <color=#28d9ed>heals</color> the ally with the lowest Health by <color=#28d9ed>5%</color>.",
+        "jp": "敵単体にダメージを与え、残りHPが最も低い味方単体の<color=#28d9ed>HP</color>を<color=#28d9ed>5%</color>回復する。",
+        "kr": "적을 공격하고 체력 상황이 가장 나쁜 아군의 <color=#28d9ed>체력</color>을 <color=#28d9ed>5%</color> 회복시킵니다.",
+        "zh": "攻击敌人，并使生命值最低的友军恢复<color=#28d9ed>5%</color>的<color=#28d9ed>生命值</color>。"
+      },
+      "icon": "Skill_First_2000038"
+    },
+    {
+      "name": {
+        "en": "Let's Get the Party Started!",
+        "jp": "盛り上げていくよ～!",
+        "kr": "분위기 띄워보자!",
+        "zh": "炒热气氛吧！"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Removes <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "jp": "対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除する。",
+        "kr": "대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제합니다.",
+        "zh": "解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>。"
+      },
+      "icon": "Skill_Second_2000038",
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "It's Party Time!",
+        "jp": "パ～ティ～タイム!",
+        "kr": "파티 시간이야!",
+        "zh": "派对时间到了！"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Heals all allies by <color=#28d9ed>5%</color> and removes <color=#28d9ed>1</color> <color=#28d9ed>debuff(s)</color>. The healing is increased by <color=#28d9ed>5%</color> on targets inflicted with a debuff.",
+        "jp": "味方全体のHPを<color=#28d9ed>5%</color>回復し、<color=#28d9ed>弱体効果</color>を<color=#28d9ed>1個</color>解除する。弱体効果のある対象は、HP回復量が追加で<color=#28d9ed>5%</color>UPする。",
+        "kr": "아군 전체의 체력을 <color=#28d9ed>5%</color> 회복시키고 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>1개</color> 해제시킵니다. 약화 효과를 보유한 대상은 회복량이 추가로 <color=#28d9ed>5%</color> 증가합니다.",
+        "zh": "使全体友军的生命值恢复<color=#28d9ed>5%</color>，并解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。使附带弱化效果的目标，恢复量额外提升<color=#28d9ed>5%</color>。"
+      },
+      "icon": "Skill_Ultimate_2000038",
+      "buff": [
+        "BT_REMOVE_DEBUFF"
+      ]
+    }
+  ]
+}

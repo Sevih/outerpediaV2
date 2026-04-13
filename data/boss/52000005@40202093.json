@@ -1,0 +1,98 @@
+{
+  "id": "52000005@40202093",
+  "Name": {
+    "en": "Lisha",
+    "jp": "リーシャ",
+    "kr": "리샤",
+    "zh": "莉莎"
+  },
+  "Surname": {
+    "en": "Master of the Mana-Seeing Eyes",
+    "jp": "魔力が見える頑張り屋少女",
+    "kr": "마력을 보는 눈",
+    "zh": "洞察魔力之眼"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 173,
+  "icons": "2000005",
+  "BuffImmune": "",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Fire Tower 93F",
+      "jp": "火の塔93階",
+      "kr": "화염의 탑 93층",
+      "zh": "火之塔第93层"
+    },
+    "mode": {
+      "en": "Fire Tower",
+      "jp": "火の塔",
+      "kr": "화염의 탑",
+      "zh": "火之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Meow Meow Zap!",
+        "jp": "ニャニャン、パンチッ！",
+        "kr": "야옹야옹 빠직!",
+        "zh": "喵喵之怒！"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and, with a <color=#28d9ed>30%</color> chance, increases own <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>1</color> turns.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>会心率</color>が<color=#28d9ed>30%</color>の確率で<color=#28d9ed>1</color>ターンの間UPする。",
+        "kr": "적을 공격하고 <color=#28d9ed>30%</color> 확률로 자신의 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
+        "zh": "攻击敌人，并以<color=#28d9ed>30%</color>的概率在<color=#28d9ed>1</color>回合内提高自身<color=#28d9ed>暴击率</color>。"
+      },
+      "icon": "Skill_First_2000005",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Lightning Bolt!",
+        "jp": "おっきな雷です！",
+        "kr": "커다란 번개입니다~!",
+        "zh": "巨型闪电～！"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks 2 enemies.\\nAttacks all enemies if the caster's <color=#28d9ed>Attack</color> is currently increased.",
+        "jp": "敵2体にダメージを与える。\\n自分の<color=#28d9ed>攻撃力</color>がUPした状態の場合、敵全体にダメージを与える。",
+        "kr": "적 2인을 공격합니다.\\n자신이 <color=#28d9ed>공격력</color>이 증가한 상태라면 적 전체를 공격합니다.",
+        "zh": "攻击2名敌人。\\n若自身<color=#28d9ed>攻击力</color>处于提升状态，则攻击全体敌人。"
+      },
+      "icon": "Skill_Second_2000005"
+    },
+    {
+      "name": {
+        "en": "Meowteor Shower",
+        "jp": "ねこ座流星群",
+        "kr": "야옹자리 유성군",
+        "zh": "喵喵座流星群"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>1턴</color> 동안 자신의 <color=#28d9ed>공격력</color>이 증가합니다.",
+        "zh": "攻击全体敌人，并使自身<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000005",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
+    }
+  ]
+}

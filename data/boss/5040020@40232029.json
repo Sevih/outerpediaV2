@@ -1,0 +1,58 @@
+{
+  "id": "5040020@40232029",
+  "Name": {
+    "en": "Inquisitor Hellfire Specialist",
+    "jp": "インクイジター・火炙りの刑",
+    "kr": "이단심문관 화형전문가",
+    "zh": "火刑专家异端审讯官"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 94,
+  "icons": "4001084",
+  "BuffImmune": "",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 29F",
+      "jp": "光の塔 29階",
+      "kr": "빛의 탑 29층",
+      "zh": "光之塔 29层"
+    },
+    "mode": {
+      "en": "Tower of Light",
+      "jp": "光の塔",
+      "kr": "빛의 탑",
+      "zh": "光之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Searing Flames",
+        "jp": "火あぶり",
+        "kr": "화염 지지기",
+        "zh": "炮烙之刑"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and grants increased <color=#28d9ed>Attack</color> to the caster for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적을 공격하고 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "zh": "攻击敌人，并使自身<color=#28d9ed>攻击力</color>提升，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Fire",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
+    }
+  ]
+}

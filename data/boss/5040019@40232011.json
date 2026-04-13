@@ -1,0 +1,58 @@
+{
+  "id": "5040019@40232011",
+  "Name": {
+    "en": "Inquisitor Wheel-Thrower",
+    "jp": "インクイジター・拷問車輪",
+    "kr": "이단심문관 고문바퀴",
+    "zh": "拷问车轮异端审讯官"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Light",
+  "level": 62,
+  "icons": "4001083",
+  "BuffImmune": "",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Light 11F",
+      "jp": "光の塔 11階",
+      "kr": "빛의 탑 11층",
+      "zh": "光之塔 11层"
+    },
+    "mode": {
+      "en": "Tower of Light",
+      "jp": "光の塔",
+      "kr": "빛의 탑",
+      "zh": "光之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Spin the Wheel",
+        "jp": "車輪の刑",
+        "kr": "바퀴 굴리기",
+        "zh": "滚轮"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상을 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.",
+        "zh": "攻击敌人，并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Fire",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "52000026@40222032",
+  "Name": {
+    "en": "Yuri",
+    "jp": "ユーリ",
+    "kr": "유리",
+    "zh": "尤莉"
+  },
+  "Surname": {
+    "en": "Ironclad Defeatist",
+    "jp": "前線を守る後ろ向きな女の子",
+    "kr": "철벽의 네거티브",
+    "zh": "绝对的悲观主义"
+  },
+  "IncludeSurname": false,
+  "class": "Defender",
+  "element": "Earth",
+  "level": 97,
+  "icons": "2000026",
+  "BuffImmune": "",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 32F",
+      "jp": "大地の塔32階",
+      "kr": "대지의 탑 32층",
+      "zh": "土之塔第32层"
+    },
+    "mode": {
+      "en": "Earth Tower",
+      "jp": "大地の塔",
+      "kr": "대지의 탑",
+      "zh": "土之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "I Can't Do It...",
+        "jp": "できっこないですぅ…",
+        "kr": "못하겠는데요…",
+        "zh": "我做不到……"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Max Health</color>.",
+        "jp": "敵単体にダメージを与える。\\nこのスキルは自分の<color=#28d9ed>最大HP</color>が高いほどダメージがUPする。",
+        "kr": "적을 공격합니다.\\n이 스킬은 자신의 <color=#28d9ed>최대 체력</color>이 높을수록 피해가 증가합니다.",
+        "zh": "攻击敌人。\\n自身<color=#28d9ed>生命值上限</color>越高，则该技能的伤害越高。"
+      },
+      "icon": "Skill_First_2000026"
+    },
+    {
+      "name": {
+        "en": "No, I Really Can't...!",
+        "jp": "ム、ムリムリムリイィ…!",
+        "kr": "아니, 이건 진짜 무리…!",
+        "zh": "不，这也太勉强了……！"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>40%</color> chance to inflict <color=#28d9ed>Taunted</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、<color=#28d9ed>40%</color>の確率で対象を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>挑発</color>する。",
+        "kr": "적을 공격하고 대상을 <color=#28d9ed>40%</color> 확률로 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>도발</color>합니다.",
+        "zh": "攻击敌人，并有<color=#28d9ed>40%</color>的几率对目标造成<color=#28d9ed>挑衅</color>效果，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "Skill_Second_2000026",
+      "debuff": [
+        "BT_AGGRO"
+      ]
+    },
+    {
+      "name": {
+        "en": "Yiiiiiiiiikes!",
+        "jp": "ひいいいいいぃっ!!",
+        "kr": "히이이이이이이이!!",
+        "zh": "吚——！！"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Increases all allies' <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turn(s)</color>.",
+        "jp": "味方全体の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間UPさせる。",
+        "kr": "아군 전체의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "zh": "使全体友军的<color=#28d9ed>防御力</color>提升，持续<color=#28d9ed>2回合</color>。"
+      },
+      "icon": "Skill_Ultimate_2000026",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
+    }
+  ]
+}

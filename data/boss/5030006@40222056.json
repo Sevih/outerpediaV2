@@ -1,0 +1,77 @@
+{
+  "id": "5030006@40222056",
+  "Name": {
+    "en": "Minima Alchemist",
+    "jp": "アルケ・ミニマ",
+    "kr": "미니마 알케미스트",
+    "zh": "迷蜴蟆炼金术士"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 136,
+  "icons": "4012002",
+  "BuffImmune": "",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Earth Tower 56F",
+      "jp": "大地の塔56階",
+      "kr": "대지의 탑 56층",
+      "zh": "土之塔第56层"
+    },
+    "mode": {
+      "en": "Earth Tower",
+      "jp": "大地の塔",
+      "kr": "대지의 탑",
+      "zh": "土之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Unstable Mixture",
+        "jp": "不安定な混合溶液",
+        "kr": "불안정 혼합 용액",
+        "zh": "不稳定混合溶液"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Poisoned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>中毒</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다.",
+        "zh": "攻击敌人，并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>中毒</color>效果，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_POISON"
+      ]
+    },
+    {
+      "name": {
+        "en": "Explosive Potion",
+        "jp": "爆発性ポーション",
+        "kr": "폭발성 포션",
+        "zh": "易爆药水"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and has a <color=#28d9ed>25%</color> chance to inflict <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>1 turn(s)</color>.",
+        "jp": "敵単体にダメージを与え、対象に<color=#28d9ed>25%</color>の確率で<color=#28d9ed>火傷</color>を<color=#28d9ed>1ターン</color>の間付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>25%</color> 확률로 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+        "zh": "攻击敌人，并有<color=#28d9ed>25%</color>的几率对目标造成<color=#28d9ed>烧伤</color>效果，持续<color=#28d9ed>1回合</color>。"
+      },
+      "icon": "MT_Attack_Magic_1_Fire",
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
+    }
+  ]
+}

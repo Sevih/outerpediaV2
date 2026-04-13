@@ -1,0 +1,55 @@
+{
+  "id": "5050004@40242019",
+  "Name": {
+    "en": "Fiend Knight's Twin Swords",
+    "jp": "魔族騎士ツインソード",
+    "kr": "마족 기사 쌍검",
+    "zh": "魔族双剑骑士"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Dark",
+  "level": 78,
+  "icons": "4001404",
+  "BuffImmune": "",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "Tower of Darkness 19F",
+      "jp": "闇の塔 19階",
+      "kr": "암흑의 탑 19층",
+      "zh": "黑暗之塔 1层"
+    },
+    "mode": {
+      "en": "Tower of Darkness",
+      "jp": "闇の塔",
+      "kr": "암흑의 탑",
+      "zh": "黑暗之塔"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Demonic Cleave",
+        "jp": "魔性の斬剣",
+        "kr": "베어 가르는 마성",
+        "zh": "魔性斩裂"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy. This skill always scores a critical hit.",
+        "jp": "敵単体にダメージを与える。このスキルは必ず会心が発生する。",
+        "kr": "적을 공격합니다. 이 스킬은 반드시 치명 공격이 발생합니다.",
+        "zh": "攻击全体敌人。此技能必定发生暴击。"
+      },
+      "icon": "MT_Attack_Sword_1_Water"
+    }
+  ]
+}
