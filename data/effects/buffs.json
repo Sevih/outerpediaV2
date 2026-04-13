@@ -26,19 +26,6 @@
     "icon": "IG_Buff_Enhance_Interruption"
   },
   {
-    "name": "BT_SYS_BUFF_ENHANCE_IR",
-    "category": "hidden",
-    "label": "Buff Enhancement",
-    "label_jp": "強化促進",
-    "label_kr": "강화 촉진",
-    "label_zh": "强化促进",
-    "description": "Increases the efficiency of buff effects that increase stats by 100%. (Irremovable)",
-    "description_jp": "ステータスを上げる強化効果の 効率が100%UPする。(解除不可)",
-    "description_kr": "능력치를 증가시키는 강화 효과의 효율이 100% 증가됩니다. (해제 불가)",
-    "description_zh": "提升能力值的强化效果效率提升100%。(无法解除)",
-    "icon": "IG_Buff_Enhance_Interruption"
-  },
-  {
     "name": "BUFF_ENHANCEMENT",
     "category": "hidden",
     "label": "Buff Enhancement",
@@ -474,32 +461,6 @@
     "icon": "SC_Buff_Revival"
   },
   {
-    "name": "BT_SHIELD_BASED_CASTER",
-    "category": "supporting",
-    "label": "Barrier",
-    "label_jp": "シールド",
-    "label_kr": "실드",
-    "label_zh": "护盾",
-    "description": "Barriers absorb damage, taking damage in place of Health.",
-    "description_jp": "シールドは対象がダメージを\\n受けるとHPより優先して\\n減少する。",
-    "description_kr": "실드는 대상이 피격 시 체력보다 먼저 차감됩니다.",
-    "description_zh": "目标受到攻击时,优先消耗护盾。",
-    "icon": "CM_Stat_Icon_SHIELD"
-  },
-  {
-    "name": "BT_SHIELD_BASED_CASTER_IR",
-    "category": "supporting",
-    "label": "Barrier",
-    "label_jp": "シールド",
-    "label_kr": "실드",
-    "label_zh": "护盾",
-    "description": "Creates a barrier that absorbs damage when hit. (Irremovable)",
-    "description_jp": "ダメージを受ける前に、\\nシールドが付与される。\\n(解除不可)",
-    "description_kr": "피격 시 체력 대신 차감되는 실드를 생성합니다. (해제 불가)",
-    "description_zh": "受击时,生成护盾代替生命值减少。\\n(无法解除)",
-    "icon": "IG_Buff_Effect_Shield_Interruption"
-  },
-    {
     "name": "BT_BARRIER",
     "category": "supporting",
     "label": "Barrier",
@@ -604,20 +565,6 @@
     "description_kr": "모든 피해를 받지 않습니다. (해제 불가)",
     "description_zh": "不受所有伤害。\\n(无法解除)",
     "icon": "IG_Buff_Effect_Invincible_Interruption"
-  },
-  {
-    "name": "BT_SHIELD_BASED_TARGET",
-    "category": "supporting",
-    "group": "BT_SHIELD_BASED_CASTER",
-    "label": "Barrier",
-    "label_jp": "シールド",
-    "label_kr": "실드",
-    "label_zh": "护盾",
-    "description": "Barriers absorb damage, taking damage in place of Health.",
-    "description_jp": "シールドは対象がダメージを\\n受けるとHPより優先して\\n減少する。",
-    "description_kr": "실드는 대상이 피격 시 체력보다 먼저 차감됩니다.",
-    "description_zh": "目标受到攻击时,优先消耗护盾。",
-    "icon": "SC_Buff_Effect_Shield"
   },
   {
     "name": "ARIEL",

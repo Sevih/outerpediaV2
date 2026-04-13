@@ -140,5 +140,11 @@
     "*": {
       "buff": ["BT_SEAL_COUNTER"]
     }
+  },
+  "ee:2000047": {
+    "*": {
+      "buff": ["BT_BARRIER"],
+      "removeBuff": ["BT_SHIELD_BASED_CASTER"]
+    }
   }
 }

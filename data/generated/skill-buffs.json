@@ -15,10 +15,9 @@
         "burst": true
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "ME",
-        "burst": true
+        "target": null
       },
       {
         "type": "BT_CALL_BACKUP_2",
@@ -385,16 +384,16 @@
     ],
     "s3": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       }
     ],
     "chain": [
       {
-        "type": "BT_SHIELD_BASED_TARGET",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       }
     ],
     "chain_dual": [
@@ -512,7 +511,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_STAT|ST_SPEED",
@@ -820,9 +819,9 @@
     ],
     "s3": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       },
       {
         "type": "BT_CONTINU_HEAL",
@@ -1090,7 +1089,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       }
     ]
   },
@@ -1363,7 +1362,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "MY_TEAM_ONE"
       },
       {
         "type": "BT_AP_CHARGE",
@@ -1442,7 +1441,7 @@
       {
         "type": "BT_DOT_POISON",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -1477,9 +1476,9 @@
     ],
     "s2": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       },
       {
         "type": "BT_STAT|ST_BUFF_RESIST",
@@ -1546,7 +1545,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       }
     ]
   },
@@ -1693,9 +1692,9 @@
   "2000036": {
     "s1": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
+        "target": null
       }
     ],
     "s2": [
@@ -1769,9 +1768,9 @@
         "target": "ME"
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
+        "target": null
       }
     ],
     "s3": [
@@ -2013,14 +2012,14 @@
   "2000042": {
     "s1": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "ME"
+        "target": null
       },
       {
         "type": "BT_AGGRO",
         "debuff": true,
-        "target": "ENEMY_TEAM",
+        "target": "ENEMY",
         "burst": true
       }
     ],
@@ -2031,9 +2030,9 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": null
       }
     ],
     "s3": [
@@ -2142,9 +2141,9 @@
     ],
     "s2": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       },
       {
         "type": "BT_REMOVE_DEBUFF",
@@ -2195,9 +2194,9 @@
   "2000045": {
     "s3": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "ME"
+        "target": null
       },
       {
         "type": "BT_COOL_CHARGE",
@@ -2296,10 +2295,9 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_SHIELD_BASED_TARGET",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM",
-        "burst": true
+        "target": null
       },
       {
         "type": "BT_AP_CHARGE",
@@ -2317,9 +2315,9 @@
     ],
     "ee": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       }
     ]
   },
@@ -2333,9 +2331,9 @@
     ],
     "s3": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
+        "target": null
       },
       {
         "type": "BT_ACTION_GAUGE",
@@ -2546,10 +2544,9 @@
   "2000053": {
     "s1": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "ME",
-        "burst": true
+        "target": null
       },
       {
         "type": "BT_STAT|ST_DEF",
@@ -3228,9 +3225,9 @@
         "target": null
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM_WITHOUT_ME"
+        "target": null
       },
       {
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
@@ -3567,10 +3564,9 @@
     ],
     "s2": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM",
-        "burst": true
+        "target": null
       },
       {
         "type": "BT_REMOVE_BUFF",
@@ -3774,9 +3770,9 @@
         "target": null
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "ME"
+        "target": null
       }
     ],
     "s3": [
@@ -4098,9 +4094,9 @@
         "target": null
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       }
     ],
     "s3": [
@@ -4119,18 +4115,18 @@
     ],
     "chain_dual": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "ME"
+        "target": null
       }
     ]
   },
   "2000077": {
     "s1": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       }
     ],
     "s2": [
@@ -4154,12 +4150,12 @@
       {
         "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
-        "target": "ME"
+        "target": "ENEMY"
       },
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ME"
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -5000,9 +4996,9 @@
     ],
     "ee": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "ME"
+        "target": null
       }
     ]
   },
@@ -5248,10 +5244,9 @@
         "target": null
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "ME",
-        "burst": true
+        "target": null
       },
       {
         "type": "BT_MARKING",
@@ -5445,7 +5440,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "MY_TEAM_HIGHEST_ATK"
       }
     ],
     "chain": [
@@ -5465,10 +5460,9 @@
         "burst": true
       },
       {
-        "type": "BT_SHIELD_BASED_TARGET",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM",
-        "burst": true
+        "target": null
       }
     ],
     "s2": [
@@ -5478,9 +5472,9 @@
         "target": null
       },
       {
-        "type": "BT_SHIELD_BASED_TARGET",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       },
       {
         "type": "BT_STAT|ST_DEF",
@@ -5502,9 +5496,9 @@
     ],
     "chain": [
       {
-        "type": "BT_SHIELD_BASED_TARGET",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       }
     ]
   },
@@ -5713,10 +5707,9 @@
         "target": "ME"
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM",
-        "burst": true
+        "target": null
       },
       {
         "type": "BT_STAT|ST_SPEED",
@@ -5743,9 +5736,9 @@
     ],
     "s3": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       },
       {
         "type": "BT_EXTEND_DEBUFF",
@@ -5819,9 +5812,9 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       },
       {
         "type": "BT_ACTION_GAUGE",
@@ -5845,9 +5838,9 @@
     ],
     "chain_dual": [
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "ME"
+        "target": null
       }
     ]
   },
@@ -5889,9 +5882,9 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_SHIELD_BASED_TARGET",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       },
       {
         "type": "BT_RESOURCE_DOWN",
@@ -6093,9 +6086,9 @@
         "target": null
       },
       {
-        "type": "BT_SHIELD_BASED_TARGET",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       },
       {
         "type": "BT_DOT_POISON",
@@ -6439,12 +6432,12 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": "MY_TEAM"
       }
     ],
     "s3": [
@@ -6546,9 +6539,9 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": null
       },
       {
         "type": "BT_IMMUNE",
@@ -6782,7 +6775,7 @@
       {
         "type": "BT_FREEZE",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       }
     ],
     "s3": [
@@ -6903,12 +6896,12 @@
       {
         "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
+        "target": "ME"
       },
       {
-        "type": "BT_SHIELD_BASED_CASTER",
+        "type": "BT_BARRIER",
         "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
+        "target": null
       },
       {
         "type": "BT_AGGRO",

@@ -55,7 +55,7 @@ SKILL_KEY = {
 
 # EE override renames: the EE extractor renames some types but the BuffTemplet has the original
 EE_TYPE_ALIASES = {
-    'BT_SHIELD_BASED_CASTER': 'BT_SHIELD_BASED_TARGET',  # 2000047 override
+    'BT_BARRIER': 'BT_BARRIER',  # 2000047 override
 }
 
 # Manual target overrides for forced/invented buff types that don't exist in BuffTemplet
