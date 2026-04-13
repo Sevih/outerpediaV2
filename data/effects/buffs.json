@@ -13,36 +13,8 @@
     "icon": "SC_Buff_Effect_Increase_Priority"
   },
   {
-    "name": "BT_ADDITIVE_ATTACK_ON_EVENT",
-    "category": "utility",
-    "group": "BT_EXTRA_ATTACK_ON_TURN_END",
-    "label": "Additional Attack",
-    "label_jp": "追加攻撃",
-    "label_kr": "추가타",
-    "label_zh": "额外攻击",
-    "description": "Performs an additional attack.",
-    "description_jp": "敵を通常スキルで\\n追加攻撃する。",
-    "description_kr": "추가 공격을 입힙니다.",
-    "description_zh": "造成额外攻击。",
-    "icon": "SC_Buff_Extra_Skill"
-  },
-{
     "name": "BT_ADDITIVE_ATTACK",
     "category": "utility",
-    "label": "Additional Attack",
-    "label_jp": "追加攻撃",
-    "label_kr": "추가타",
-    "label_zh": "额外攻击",
-    "description": "Performs an additional attack.",
-    "description_jp": "敵を通常スキルで\\n追加攻撃する。",
-    "description_kr": "추가 공격을 입힙니다.",
-    "description_zh": "造成额外攻击。",
-    "icon": "SC_Buff_Extra_Skill"
-  },
-  {
-    "name": "SYS_BUFF_ADDITIVE_SKILL",
-    "category": "utility",
-    "group": "BT_EXTRA_ATTACK_ON_TURN_END",
     "label": "Additional Attack",
     "label_jp": "追加攻撃",
     "label_kr": "추가타",
@@ -426,20 +398,6 @@
     "icon": "SC_Buff_Counter"
   },
   {
-    "name": "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER",
-    "category": "utility",
-    "group": "BT_STAT|ST_COUNTER_RATE",
-    "label": "Counterattack",
-    "label_jp": "反撃",
-    "label_kr": "반격",
-    "label_zh": "反击",
-    "description": "Counterattacks when attacked.",
-    "description_jp": "敵からダメージを受けた時、\\nその敵に反撃する。",
-    "description_kr": "피격 시 대상에게 반격합니다.",
-    "description_zh": "受到攻击时,对目标进行反击。",
-    "icon": "SC_Buff_Counter"
-  },
-  {
     "name": "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK",
     "category": "utility",
     "label": "Agile Response",
@@ -453,49 +411,8 @@
     "icon": "IG_Buff_Effect_Revenge_Heal"
   },
   {
-    "name": "SYS_BUFF_REVENGE_HEAL",
-    "category": "utility",
-    "label": "Agile Response",
-    "label_jp": "迅速対応",
-    "label_kr": "신속 대응",
-    "label_zh": "迅速应对",
-    "description": "Activates the skill on allies once conditions have been met.",
-    "description_jp": "特定の条件を満した場合、\\n該当するスキルを\\n味方に発動する。",
-    "description_kr": "조건 만족 시 아군에게 해당 스킬을 사용합니다.",
-    "description_zh": "满足条件时,对友军使用该技能。",
-    "icon": "IG_Buff_Effect_Revenge_Heal"
-  },
-   {
     "name": "BT_AGILE_RESPONSE",
     "category": "utility",
-    "label": "Agile Response",
-    "label_jp": "迅速対応",
-    "label_kr": "신속 대응",
-    "label_zh": "迅速应对",
-    "description": "Activates the skill on allies once conditions have been met.",
-    "description_jp": "特定の条件を満した場合、\\n該当するスキルを\\n味方に発動する。",
-    "description_kr": "조건 만족 시 아군에게 해당 스킬을 사용합니다.",
-    "description_zh": "满足条件时,对友军使用该技能。",
-    "icon": "IG_Buff_Effect_Revenge_Heal"
-  },
-  {
-    "name": "BT_RUN_PASSIVE_SKILL_ON_TURN_END_TEAM",
-    "category": "utility",
-    "group": "BT_EXTRA_ATTACK_ON_TURN_END",
-    "label": "Additional Attack",
-    "label_jp": "追加攻撃",
-    "label_kr": "추가타",
-    "label_zh": "额外攻击",
-    "description": "Performs an additional attack.",
-    "description_jp": "敵を通常スキルで\\n追加攻撃する。",
-    "description_kr": "추가 공격을 입힙니다.",
-    "description_zh": "造成额外攻击。",
-    "icon": "SC_Buff_Extra_Skill"
-  },
-  {
-    "name": "BT_RUN_PASSIVE_SKILL_ON_TURN_END_TEAM_IGNORE_SEAL_ADDITIVE",
-    "category": "utility",
-    "group": "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK",
     "label": "Agile Response",
     "label_jp": "迅速対応",
     "label_kr": "신속 대응",
@@ -560,19 +477,6 @@
     "icon": "SC_Buff_Effect_Shield"
   },
   {
-    "name": "BT_STAT_BUFF_ENHANCE",
-    "category": "utility",
-    "label": "Buff Enhancement",
-    "label_jp": "強化促進",
-    "label_kr": "강화 촉진",
-    "label_zh": "强化促进",
-    "description": "Increases the efficiency of buff effects that increase stats by 100%.",
-    "description_jp": "ステータスを上げる強化効果の\n効率が100%UPする。",
-    "description_kr": "능력치를 증가시키는 강화 효과의 효율이 100% 증가됩니다.",
-    "description_zh": "提升能力值的强化效果效率提升100%。",
-    "icon": "IG_Buff_Enhance_Interruption"
-  },
-  {
     "name": "BT_STAT|ST_ACCURACY",
     "category": "statBoosts",
     "label": "Increased Accuracy",
@@ -624,33 +528,6 @@
     "description_kr": "대상의 빗나감 확률이 15% 증가합니다. 빗나감 발생 시 피해량이 50% 감소하며, 약화 효과와 치명타가 발생하지 않습니다.",
     "description_zh": "目标的未命中率提升15%。发生未命中时,伤害降低50%,且不会触发弱化效果与暴击。",
     "icon": "SC_Buff_Stat_Avoid"
-  },
-  {
-    "name": "SYS_BUFF_AVOID_UP",
-    "category": "utility",
-    "label": "Miss Rate Up",
-    "label_jp": "ミスヒット発生率UP",
-    "label_kr": "빗나감 확률 증가",
-    "label_zh": "未命中率提升",
-    "description": "Increases the target's Miss rate by 15%. When a Miss occurs, damage is reduced by 50%, and debuffs and critical hits do not occur.",
-    "description_jp": "対象のミスヒット発生率が15%増加します。ミスヒット発生時、ダメージが50%減少し、弱体効果および会心は発生しません。",
-    "description_kr": "대상의 빗나감 확률이 15% 증가합니다. 빗나감 발생 시 피해량이 50% 감소하며, 약화 효과와 치명타가 발생하지 않습니다.",
-    "description_zh": "目标的未命中率提升15%。发生未命中时,伤害降低50%,且不会触发弱化效果与暴击。",
-    "icon": "SC_Buff_Stat_Avoid"
-  },
-  {
-    "name": "BT_STAT|ST_AVOID_IR",
-    "category": "statBoosts",
-    "group": "BT_STAT|ST_AVOID",
-    "label": "Increased Evasion",
-    "label_jp": "回避UP",
-    "label_kr": "회피 증가",
-    "label_zh": "回避提升",
-    "description": "Increases Evasion by 50% (Irremovable).",
-    "description_jp": "対象の回避が50%UPする。(解除不可)",
-    "description_kr": "대상의 회피가 50% 증가합니다. (해제 불가)",
-    "description_zh": "使目标的回避提升50%。(无法解除)",
-    "icon": "IG_Buff_Stat_Avoid_Interruption"
   },
   {
     "name": "BT_STAT|ST_BUFF_CHANCE",
@@ -826,32 +703,6 @@
     "icon": "CM_Stat_Icon_PIERCE_POWER"
   },
   {
-    "name": "IG_Buff_Effect_4076009_Interruption",
-    "category": "unique",
-    "label": "Harmony of Despair",
-    "label_jp": "絶望のハーモニー",
-    "label_kr": "절망의 하모니",
-    "label_zh": "绝望的和声",
-    "description": "Instantly kills all enemies when the performance ends. (Irremovable)",
-    "description_jp": "演奏が終了時、敵全体が\n直ちに倒れる。\n(解除不可)",
-    "description_kr": "연주가 끝나면 적 전체를 즉시 사망시킵니다. (해제 불가)",
-    "description_zh": "演奏结束之后,全体敌人立即死亡。(无法解除)",
-    "icon": "IG_Buff_Effect_4076009_Interruption"
-  },
-  {
-    "name": "HARMONY_DESPAIR",
-    "category": "unique",
-    "label": "Harmony of Despair",
-    "label_jp": "絶望のハーモニー",
-    "label_kr": "절망의 하모니",
-    "label_zh": "绝望的和声",
-    "description": "Instantly kills all enemies when the performance ends. (Irremovable)",
-    "description_jp": "演奏が終了時、敵全体が\n直ちに倒れる。\n(解除不可)",
-    "description_kr": "연주가 끝나면 적 전체를 즉시 사망시킵니다. (해제 불가)",
-    "description_zh": "演奏结束之后,全体敌人立即死亡。(无法解除)",
-    "icon": "IG_Buff_Effect_4076009_Interruption"
-  },
-    {
     "name": "HARMONY_OF_DESPAIR",
     "category": "unique",
     "label": "Harmony of Despair",
@@ -957,7 +808,7 @@
     "description_zh": "提升能力值的强化效果效率提升100%。(无法解除)",
     "icon": "IG_Buff_Enhance_Interruption"
   },
-    {
+  {
     "name": "BT_STAT_BUFF_ENHANCE_IR",
     "category": "hidden",
     "label": "Buff Enhancement",
@@ -970,7 +821,7 @@
     "description_zh": "提升能力值的强化效果效率提升100%。(无法解除)",
     "icon": "IG_Buff_Enhance_Interruption"
   },
-      {
+  {
     "name": "BUFF_ENHANCEMENT",
     "category": "hidden",
     "label": "Buff Enhancement",
@@ -1023,19 +874,6 @@
     "icon": "SC_Buff_Effect_Heavy_bk"
   },
   {
-    "name": "IG_Buff_2000056_Interruption",
-    "category": "unique",
-    "label": "Fierce Offensive",
-    "label_jp": "アースエッジ",
-    "label_kr": "매서운 공세",
-    "label_zh": "猛烈攻势",
-    "description": "Increases damage dealt to enemies and enhances certain skill effects.\\nCannot be removed before Notia is slain.",
-    "description_jp": "敵に与えるダメージがUPし\\nノティアの一部スキルが強化される。\\nこの効果は解除されない。",
-    "description_kr": "적에게 입히는 피해가 증가하고, 일부 스킬 효과가 강화됩니다.\\n노티아가 사망하기 전까지 해제되지 않습니다.",
-    "description_zh": "对敌人造成的伤害提升,\\n且强化部分技能效果。\\n在诺缇亚死亡之前无法被解除。",
-    "icon": "IG_Buff_2000056_Interruption"
-  },
-  {
     "name": "FIERCE_OFFENSIVE",
     "category": "unique",
     "label": "Fierce Offensive",
@@ -1047,19 +885,6 @@
     "description_kr": "적에게 입히는 피해가 증가하고, 일부 스킬 효과가 강화됩니다.\\n노티아가 사망하기 전까지 해제되지 않습니다.",
     "description_zh": "对敌人造成的伤害提升,\\n且强化部分技能效果。\\n在诺缇亚死亡之前无法被解除。",
     "icon": "IG_Buff_2000056_Interruption"
-  },
-  {
-    "name": "IG_Buff_2000059_Interruption",
-    "category": "unique",
-    "label": "Doll Garden's Caretaker",
-    "label_jp": "箱庭の主",
-    "label_kr": "모형 정원의 관리자",
-    "label_zh": "模型庄园的管理者",
-    "description": "Increases damage dealt to enemies and enhances certain skill effects.\\nCannot be removed before Demiurge Astei is slain.",
-    "description_jp": "敵に与えるダメージがUPし、\\n【デミウルゴス・アステ】の\\n一部スキルが強化される。\\nこの効果は解除されない。",
-    "description_kr": "적에게 입히는 피해가 증가하고, 일부 스킬이 강화됩니다.\\n데미우르고스 아스테가 사망하기 전까지 해제되지 않습니다.",
-    "description_zh": "对敌人造成的伤害提升,并强化部分技能。\\n在创世之神奥斯黛死亡之前无法被解除。",
-    "icon": "IG_Buff_2000059_Interruption"
   },
   {
     "name": "DOLL_GARDENS_CARETAKER",
@@ -1101,19 +926,6 @@
     "icon": "IG_Buff_2000063_Interruption"
   },
   {
-    "name": "IG_Buff_2000075_Interruption",
-    "category": "unique",
-    "label": "Destroyer's Punishment",
-    "label_jp": "破壊者の戒め",
-    "label_kr": "파괴자의 응징",
-    "label_zh": "破坏者的惩戒",
-    "description": "Increases damage dealt to the enemy and enhances the effect of Heavy Metal Raptor. (Irremovable)\\n\\nAdditional effects granted when using Heavy Metal Raptor:\\nReduces Destruction Blade cooldown by 1 turn\\nRight after using Heavy Metal Raptor, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-    "description_jp": "敵に与えるダメージがUPし、\\n【ヘヴィメタルラプター】の\\nスキル効果が強化される。\\n(解除不可)\\n\\n【ヘヴィメタルラプター】強化効果:\\n【デストラクションブレード】の\\nスキルターン-1\\n【ヘヴィメタルラプター】\\n発動では敵の反撃、復讐、迅速対応が\\n発動しない。",
-    "description_kr": "적에게 입히는 피해가 증가하고, 헤비메탈 랩터 스킬의 효과가 강화됩니다. (해제 불가)\\n\\n헤비메탈 랩터 발동 시 추가 효과\\n디스트럭션 블레이드 쿨타임 -1턴\\n헤비메탈 랩터 직후 적의 반격, 복수, 신속 대응 발동 불가",
-    "description_zh": "对敌人造成的伤害提升,\\n并强化重金属猛禽技能的效果。(无法解除)\\n\\n发动重金属猛禽时,\\n额外效果破坏之剑冷却时间-1回合。\\n重金属猛禽发动后,\\n不会触发敌人的反击、复仇、迅速应对效果。",
-    "icon": "IG_Buff_2000075_Interruption"
-  },
-  {
     "name": "DESTROYERS_PUNISHMENT",
     "category": "unique",
     "label": "Destroyer's Punishment",
@@ -1125,19 +937,6 @@
     "description_kr": "적에게 입히는 피해가 증가하고, 헤비메탈 랩터 스킬의 효과가 강화됩니다. (해제 불가)\\n\\n헤비메탈 랩터 발동 시 추가 효과\\n디스트럭션 블레이드 쿨타임 -1턴\\n헤비메탈 랩터 직후 적의 반격, 복수, 신속 대응 발동 불가",
     "description_zh": "对敌人造成的伤害提升,\\n并强化重金属猛禽技能的效果。(无法解除)\\n\\n发动重金属猛禽时,\\n额外效果破坏之剑冷却时间-1回合。\\n重金属猛禽发动后,\\n不会触发敌人的反击、复仇、迅速应对效果。",
     "icon": "IG_Buff_2000075_Interruption"
-  },
-  {
-    "name": "IG_Buff_2000090_Interruption",
-    "category": "unique",
-    "label": "Hubris's Dominion",
-    "label_jp": "傲慢の領域",
-    "label_kr": "오만의 영역",
-    "label_zh": "傲慢领域",
-    "description": "Increases damage dealt to enemies and enhances certain skill effects. (Irremovable)",
-    "description_jp": "敵に与えるダメージがUPし、\\n一部スキルが強化される。\\nこの効果は解除されない。",
-    "description_kr": "적에게 입히는 피해가 증가하고, 일부 스킬이 강화됩니다. (해제 불가)",
-    "description_zh": "对敌人造成的伤害提升,\\n并强化部分技能。(无法解除)",
-    "icon": "IG_Buff_2000090_Interruption"
   },
   {
     "name": "HUBRISS_DOMINION",
@@ -1153,19 +952,6 @@
     "icon": "IG_Buff_2000090_Interruption"
   },
   {
-    "name": "IG_Buff_2000092_Interruption",
-    "category": "unique",
-    "label": "Retribution's Dominion",
-    "label_jp": "懲罰の領域",
-    "label_kr": "징벌의 영역",
-    "label_zh": "惩戒领域",
-    "description": "When hit by a single attack, inflicts Eternal Bleeding on all enemies for 1 turn.\\nRetribution's Dominion cannot be removed.",
-    "description_jp": "単体攻撃を受けた時、敵全体に\\n<color=#28d9ed>【絶えざる出血】</color>を1ターンの間\\n付与する。\\n【懲罰の領域】は解除されない。",
-    "description_kr": "단일 공격 피격 시 적 전체에게 1턴 동안 영원한 출혈을 부여합니다.\\n징벌의 영역은 해제되지 않습니다.",
-    "description_zh": "受到单体攻击时,对全体敌人造成永恒出血效果,\\n持续1回合。\\n惩戒领域无法解除。",
-    "icon": "IG_Buff_2000092_Interruption"
-  },
-  {
     "name": "RETRIBUTIONS_DOMINION",
     "category": "unique",
     "label": "Retribution's Dominion",
@@ -1179,19 +965,6 @@
     "icon": "IG_Buff_2000092_Interruption"
   },
   {
-    "name": "IG_Buff_2000096_Interruption",
-    "category": "unique",
-    "label": "Ariel",
-    "label_jp": "エアリエル",
-    "label_kr": "에어리얼",
-    "label_zh": "风灵疾走",
-    "description": "After attacking an enemy, increases Priority of the caster by 15%.\\nChanges certain skills. (Irremovable)",
-    "description_jp": "敵単体にダメージを与えた後、\\n自分の行動ゲージを15%UPさせる。\\n一部スキルが変更します。\\n(解除不可)",
-    "description_kr": "적 공격 후 자신의 행동 게이지를 15% 증가시킵니다.\\n일부 스킬이 변경됩니다. (해제 불가)",
-    "description_zh": "攻击敌人后,使自身行动值提升15%。\\n部分技能效果改变。(无法解除)",
-    "icon": "IG_Buff_2000096_Interruption"
-  },
-  {
     "name": "ARIEL",
     "category": "unique",
     "label": "Ariel",
@@ -1203,32 +976,6 @@
     "description_kr": "적 공격 후 자신의 행동 게이지를 15% 증가시킵니다.\\n일부 스킬이 변경됩니다. (해제 불가)",
     "description_zh": "攻击敌人后,使自身行动值提升15%。\\n部分技能效果改变。(无法解除)",
     "icon": "IG_Buff_2000096_Interruption"
-  },
-  {
-    "name": "IG_Buff_Effect_2000065_A_Interruption",
-    "category": "unique",
-    "label": "Sakura, Chiru",
-    "label_jp": "桜散る",
-    "label_kr": "사쿠라치루",
-    "label_zh": "樱花凋零",
-    "description": "Activates an additional attack after Mikazuki 1st Art: Blooming (irremovable)",
-    "description_jp": "この効果が付与された場合\\n【三日月壱式:開花】の追加\\n効果が発動する。この効果は\\n解除されない。",
-    "description_kr": "미카즈키 1식 : 개화 이후 추가 공격이 발생합니다 (해제 불가)",
-    "description_zh": "三日月1式:\\n开花后发动额外攻击(无法解除)",
-    "icon": "IG_Buff_Effect_2000065_A_Interruption"
-  },
-  {
-    "name": "IG_Buff_Effect_2000065_B_Interruption",
-    "category": "unique",
-    "label": "Ume Ichirin",
-    "label_jp": "梅一輪",
-    "label_kr": "우메이치린",
-    "label_zh": "一朵梅花",
-    "description": "Activates an additional attack after Mikazuki 1st Art: Blooming (irremovable)",
-    "description_jp": "この効果が付与された場合\\n【三日月壱式:開花】の追加\\n効果が発動する。この効果は\\n解除されない。",
-    "description_kr": "미카즈키 1식 : 개화 이후 추가 공격이 발생합니다 (해제 불가)",
-    "description_zh": "三日月1式:\\n开花后发动额外攻击(无法解除)",
-    "icon": "IG_Buff_Effect_2000065_B_Interruption"
   },
   {
     "name": "SAKURA_CHIRU",
@@ -1283,19 +1030,6 @@
     "icon": "IG_Buff_Effect_2000067_Interruption"
   },
   {
-    "name": "IG_Buff_Effect_2000072_Interruption",
-    "category": "unique",
-    "label": "A Ninja's Afterimage",
-    "label_jp": "ニンジャの残像",
-    "label_kr": "닌자의 잔상",
-    "label_zh": "忍者的残像",
-    "description": "25% of damage intended for allies is redirected to Edelweiss. Only the highest value effect will be applied. Cannot be removed until Edelweiss is defeated.",
-    "description_jp": "味方の受けるダメージ25%を 【エーデルバイス】が代わりに受ける。 この効果は数値が最も高い効果のみ 適用される。 【エーデルバイス】が倒れるまで 解除されない。",
-    "description_kr": "아군이 받는 피해의 25%를 에델바이스가 대신 입습니다. 가장 수치가 높은 효과만 적용됩니다. 에델바이스가 사망하기 전까지 해제되지 않습니다.",
-    "description_zh": "艾妲尔薇斯代替友军承受所受伤害的25%。\\n仅对数值最高的效果生效。\\n在艾妲尔薇斯死亡前无法被解除。",
-    "icon": "IG_Buff_Effect_2000072_Interruption"
-  },
-  {
     "name": "A_NINJAS_AFTERIMAGE",
     "category": "unique",
     "label": "A Ninja's Afterimage",
@@ -1309,19 +1043,6 @@
     "icon": "IG_Buff_Effect_2000072_Interruption"
   },
   {
-    "name": "IG_Buff_Effect_2000076_Interruption",
-    "category": "unique",
-    "label": "Charisma",
-    "label_jp": "カリスマ",
-    "label_kr": "카리스마",
-    "label_zh": "气场",
-    "description": "When the bearer gains a turn, increases Bryn's Showmanship (Unique Resource) by 1. Then, grants Bryn a barrier proportional to Attack for 1 turn, and increases Priority by 15%. (Irremovable)",
-    "description_jp": "自分のターンを獲得時、【ブリン】\\nの【固有資源:アイドル力】が1個\\nUPする。その後、【ブリン】に\\n攻撃力に応じたシールドを1ターン\\nの間付与し、【ブリン】の行動ゲー\\nジを15%UPさせる。\\n(解除不可)",
-    "description_kr": "자신이 턴 획득 시 브린의 고유자원 : 아이돌력이 1개 증가합니다. 그 이후 브린에게 공격력에 비례한 실드를 1턴 동안 부여하고, 행동 게이지를 15% 증가 시킵니다. (해제 불가)",
-    "description_zh": "自身获得回合时,\\n布琳的固有资源:偶像力增加1。\\n此后,使布琳根据攻击力\\n等比获得护盾,持续1回合,\\n并使行动值提升15%。(无法解除)",
-    "icon": "IG_Buff_Effect_2000076_Interruption"
-  },
-  {
     "name": "CHARISMA",
     "category": "unique",
     "label": "Charisma",
@@ -1333,19 +1054,6 @@
     "description_kr": "자신이 턴 획득 시 브린의 고유자원 : 아이돌력이 1개 증가합니다. 그 이후 브린에게 공격력에 비례한 실드를 1턴 동안 부여하고, 행동 게이지를 15% 증가 시킵니다. (해제 불가)",
     "description_zh": "自身获得回合时,\\n布琳的固有资源:偶像力增加1。\\n此后,使布琳根据攻击力\\n等比获得护盾,持续1回合,\\n并使行动值提升15%。(无法解除)",
     "icon": "IG_Buff_Effect_2000076_Interruption"
-  },
-  {
-    "name": "IG_Buff_Effect_2000094_Interruption",
-    "category": "unique",
-    "label": "Radiant Will",
-    "label_jp": "燦然たる意志",
-    "label_kr": "찬란한 의지",
-    "label_zh": "璀璨之志",
-    "description": "Increases Burned damage dealt by allies by 50% and changes certain skills. (Irremovable)",
-    "description_jp": "味方の敵に与える火傷ダメージが\\n50%UPし、一部スキルが変更\\nします。(解除不可)",
-    "description_kr": "아군이 입히는 화상의 피해가 50% 증가하고 일부 스킬이 변경됩니다. (해제 불가)",
-    "description_zh": "友军造成的烧伤伤害提升50%,且部分\\n技能效果改变。(无法解除)",
-    "icon": "IG_Buff_Effect_2000094_Interruption"
   },
   {
     "name": "RADIANT_WILL",
@@ -1374,32 +1082,6 @@
     "icon": "IG_Buff_Effect_2000100_Interruption"
   },
   {
-    "name": "IG_Buff_Effect_2000119_Interruption",
-    "category": "unique",
-    "label": "White Night",
-    "label_jp": "白夜",
-    "label_kr": "백야",
-    "label_zh": "极昼",
-    "description": "Reduces final damage taken by 75%. (Only the highest value of final damage reduction is applied, Irremovable)",
-    "description_jp": "受ける最終ダメージが75%DOWN\\nする。(最終ダメージDOWNは最も\\n高い値のみ適用、解除不可)",
-    "description_kr": "받는 최종 피해가 75% 감소합니다.(최종 피해 감소는 가장 높은 값만 적용, 해제 불가)",
-    "description_zh": "所受的最终伤害降低75%。\\n(最终伤害降低仅生效最高值,无法解除)",
-    "icon": "IG_Buff_Effect_2000119_Interruption"
-  },
-  {
-    "name": "IG_Buff_Effect_2000120_Interruption",
-    "category": "unique",
-    "label": "Polar Night",
-    "label_jp": "極夜",
-    "label_kr": "극야",
-    "label_zh": "极夜",
-    "description": "The fewer allies present (excluding the bearer), the greater the damage the bearer deals. (Up to 150%. Irremovable.)",
-    "description_jp": "自分を除く味方が少ないほど、\\n自分が与えるダメージがUPする。\\n(最大150%、解除不可)",
-    "description_kr": "자신을 제외한 아군이 적을수록 자신이 주는 피해가 증가합니다. (최대 150%, 해제 불가)",
-    "description_zh": "除自身以外的友军越少,自身造成的伤害越多。\\n(最多150%,无法解除)",
-    "icon": "IG_Buff_Effect_2000120_Interruption"
-  },
-  {
     "name": "WHITE_NIGHT",
     "category": "unique",
     "label": "White Night",
@@ -1424,19 +1106,6 @@
     "description_kr": "자신을 제외한 아군이 적을수록 자신이 주는 피해가 증가합니다. (최대 150%, 해제 불가)",
     "description_zh": "除自身以外的友军越少,自身造成的伤害越多。\\n(最多150%,无法解除)",
     "icon": "IG_Buff_Effect_2000120_Interruption"
-  },
-  {
-    "name": "IG_Buff_2000035_Interruption",
-    "category": "unique",
-    "label": "Pureblood's Dominion",
-    "label_jp": "鮮血の領域",
-    "label_kr": "선혈의 영역",
-    "label_zh": "鲜血领域",
-    "description": "When an enemy inflicted with Bleeding performs an action, increases Priority of an ally by 10%. Cannot be removed until Eliza is defeated.",
-    "description_jp": "出血状態の敵が行動終了時、 味方の行動ゲージが10%UPする。 この効果は【エリーゼ】が倒れるまで 解除されない。",
-    "description_kr": "행동 종료한 적이 출혈 보유 시 아군의 행동 게이지가 10% 증가합니다. 엘리제가 사망하기 전까지 해제되지 않습니다.",
-    "description_zh": "行动结束的敌人处于出血状态时,\\n使友军行动值提升10%。\\n在伊莉莎死亡之前无法被解除。",
-    "icon": "IG_Buff_2000035_Interruption"
   },
   {
     "name": "PUREBLOODS_DOMINION",
@@ -1464,7 +1133,7 @@
     "description_zh": "敌人对友军造成弱化效果时,对目标\\n进行反击。",
     "icon": "SC_Buff_Revenge"
   },
-    {
+  {
     "name": "BT_REVENGE",
     "category": "utility",
     "label": "Revenge",
@@ -1478,19 +1147,6 @@
     "icon": "SC_Buff_Revenge"
   },
   {
-    "name": "UNIQUE_DAHLIA_A",
-    "category": "hidden",
-    "label": "Courage Against Despair",
-    "label_jp": "絶望に立ち向かう勇気",
-    "label_kr": "절망에 맞서는 용기",
-    "label_zh": "面对绝境的勇气",
-    "description": "Grants a special effect to the bearer based on their class in order to fight against a powerful enemy.",
-    "description_jp": "強敵に立ち向かうために 付与される特別な効果。 仲間のタイプによって 効果が異なる。",
-    "description_kr": "강적에 대항하기 위하여, 자신의 직업에 따라 특별한 효과를 획득합니다.",
-    "description_zh": "为应对强敌,\\n根据自身职业获得特别效果。",
-    "icon": "IG_Buff_4086001_Interruption"
-  },
-    {
     "name": "COURAGE_AGAINST_DESPAIR",
     "category": "hidden",
     "label": "Courage Against Despair",
@@ -1515,45 +1171,6 @@
     "description_kr": "강적에 대항하기 위하여, 자신의 속성에 따라 특별한 효과를 획득합니다.",
     "description_zh": "为应对强敌,根据自身属性获得特别效果。",
     "icon": "IG_Buff_4086001_Interruption"
-  },
-  {
-    "name": "UNIQUE_DAHLIA_B",
-    "category": "hidden",
-    "label": "Courage Against Despair",
-    "label_jp": "絶望に立ち向かう勇気",
-    "label_kr": "절망에 맞서는 용기",
-    "label_zh": "面对绝境的勇气",
-    "description": "Grants a special effect to the bearer based on their class in order to fight against a powerful enemy.",
-    "description_jp": "強敵に立ち向かうために 付与される特別な効果。 仲間のタイプによって 効果が異なる。",
-    "description_kr": "강적에 대항하기 위하여, 자신의 직업에 따라 특별한 효과를 획득합니다.",
-    "description_zh": "为应对强敌,\\n根据自身职业获得特别效果。",
-    "icon": "IG_Buff_4086001_Interruption"
-  },
-  {
-    "name": "UNIQUE_VENION_A",
-    "category": "hidden",
-    "label": "Environmental Change Response",
-    "label_jp": "環境変更対応",
-    "label_kr": "환경 변화 대응",
-    "label_zh": "应对环境变化",
-    "description": "After using MG-102 Pioneer Cannon, increases Priority of Fire/Water/Earth enemies by only 80%. (Irremovable)",
-    "description_jp": "MG-102開拓砲が発動した後、 火・水・地属性の敵の行動ゲージが 80%のみ回復する。(解除不可)",
-    "description_kr": "MG-102 개척포 사용 후 화/수/지속성 적의 행동 게이지는 80%만 회복 됩니다. (해제 불가)",
-    "description_zh": "使用MG-102开拓炮后,\\n火属性/水属性/土属性敌人的行动值\\n仅恢复80%。(无法解除)",
-    "icon": "IG_Buff_Effect_4086013_A_Interruption"
-  },
-  {
-    "name": "UNIQUE_VENION_B",
-    "category": "hidden",
-    "label": "Weather Variable Response",
-    "label_jp": "気象変数対応",
-    "label_kr": "기상 변수 대응",
-    "label_zh": "应对气象变数",
-    "description": "After using MG-102 Pioneer Cannon, increases Priority of Light/Dark enemies by only 80%. (Irremovable)",
-    "description_jp": "MG-102開拓砲が発動した後、 光・闇属性の敵の行動ゲージが 80%のみ回復する。(解除不可)",
-    "description_kr": "MG-102 개척포 사용 후 명/암속성 적의 행동 게이지는 80%만 회복 됩니다. (해제 불가)",
-    "description_zh": "使用MG-102开拓炮后,\\n光属性/暗属性敌人的行动值\\n仅恢复80%。(无法解除)",
-    "icon": "IG_Buff_Effect_4086013_B_Interruption"
   },
   {
     "name": "ENVIRONMENTAL_CHANGE_RESPONSE",
@@ -1582,32 +1199,6 @@
     "icon": "IG_Buff_Effect_4086013_B_Interruption"
   },
   {
-    "name": "UNIQUE_VENION_C",
-    "category": "hidden",
-    "label": "Courage Against Despair",
-    "label_jp": "絶望に立ち向かう勇気",
-    "label_kr": "절망에 맞서는 용기",
-    "label_zh": "面对绝境的勇气",
-    "description": "Grants a special effect to the bearer based on their class in order to fight against a powerful enemy.",
-    "description_jp": "強敵に立ち向かうために 付与される特別な効果。 仲間のタイプによって 効果が異なる。",
-    "description_kr": "강적에 대항하기 위하여, 자신의 직업에 따라 특별한 효과를 획득합니다.",
-    "description_zh": "为应对强敌,\\n根据自身职业获得特别效果。",
-    "icon": "IG_Buff_4086001_Interruption"
-  },
-  {
-    "name": "UNIQUE_VENION_D",
-    "category": "hidden",
-    "label": "Exclude Unknown Variables",
-    "label_jp": "不特定変数の排除",
-    "label_kr": "불특정 변수 배제",
-    "label_zh": "排除非特定变数",
-    "description": "At the start of the turn, increases skill cooldowns of Fire/Water/Earth enemies by 1 turn. When using Emergency Protocol: Extermination, inflicts instant death on Dark/Light enemies. (Irremovable)",
-    "description_jp": "ターン開始時、火・水・地属性の敵の スキルターンが1ターン増加する。 緊急プロトコル:撲滅が発動した後、 光・闇属性の敵を即死させる。 (解除不可)",
-    "description_kr": "턴 시작 시 화/수/지속성 적의 스킬 쿨타임이 1턴 증가합니다. 긴급 프로토콜 : 박멸 사용 시 명/암속성 적을 즉사시킵니다. (해제 불가)",
-    "description_zh": "回合开始时,火属性/水属性/土属性敌人\\n的技能冷却时间增加1回合。\\n使用紧急协议:消灭时,\\n光属性/暗属性敌人即死。(无法解除)",
-    "icon": "IG_Buff_Effect_4086014_B_Interruption"
-  },
-  {
     "name": "EXCLUDE_UNKNOWN_VARIABLES",
     "category": "hidden",
     "label": "Exclude Unknown Variables",
@@ -1619,19 +1210,6 @@
     "description_kr": "턴 시작 시 화/수/지속성 적의 스킬 쿨타임이 1턴 증가합니다. 긴급 프로토콜 : 박멸 사용 시 명/암속성 적을 즉사시킵니다. (해제 불가)",
     "description_zh": "回合开始时,火属性/水属性/土属性敌人\\n的技能冷却时间增加1回合。\\n使用紧急协议:消灭时,\\n光属性/暗属性敌人即死。(无法解除)",
     "icon": "IG_Buff_Effect_4086014_B_Interruption"
-  },
-  {
-    "name": "UNIQUE_VENION_E",
-    "category": "hidden",
-    "label": "Remove Detection Interference",
-    "label_jp": "探測障害除去",
-    "label_kr": "탐측 장해 제거",
-    "label_zh": "扫除探测障碍",
-    "description": "At the start of the turn, increases skill cooldowns of Light/Dark enemies by 1 turn. When using Emergency Protocol: Extermination, inflicts instant death on Fire/Water/Earth enemies. (Irremovable)",
-    "description_jp": "ターン開始時、光・闇属性の敵の スキルターンが1ターン増加する。 緊急プロトコル:撲滅が発動した後、 火・水・地属性の敵を即死させる。 (解除不可)",
-    "description_kr": "턴 시작 시 명/암속성 적의 스킬 쿨타임이 1턴 증가합니다. 긴급 프로토콜 : 박멸 사용 시 화/수/지속성 적을 즉사시킵니다. (해제 불가)",
-    "description_zh": "回合开始时,光属性/暗属性敌人的\\n技能冷却时间增加1回合。\\n使用紧急协议:消灭时,火属性/水属性/\\n土属性敌人即死。(无法解除)",
-    "icon": "IG_Buff_Effect_4086014_A_Interruption"
   },
   {
     "name": "REMOVE_DETECTION_INTERFERENCE",
@@ -1647,32 +1225,6 @@
     "icon": "IG_Buff_Effect_4086014_A_Interruption"
   },
   {
-    "name": "UNIQUE_VENION_F",
-    "category": "hidden",
-    "label": "Courage against Despair",
-    "label_jp": "絶望に抗う勇気",
-    "label_kr": "절망에 맞서는 용기",
-    "label_zh": "面对绝境的勇气",
-    "description": "For each mage ally, increases attack of all allies by 15% each. (Irremovable)",
-    "description_jp": "味方の魔法タイプ1人につき、味方全体の攻撃力が15%ずつ上昇する。(解除不可)",
-    "description_kr": "아군 마법형 영웅 1명당 아군 전체의 공격력이 각각 15% 증가합니다. (해제 불가)",
-    "description_zh": "每有一名魔法型同伴,\\n全体友军的攻击力提升15%。(无法解除)",
-    "icon": "IG_Buff_4086001_Interruption"
-  },
-  {
-    "name": "IG_Buff_Effect_2000109_Interruption",
-    "category": "unique",
-    "label": "Bane's Domain",
-    "label_jp": "劇毒の領域",
-    "label_kr": "극독의 영역",
-    "label_zh": "剧毒领域",
-    "description": "Each target affected by Bane's Domain receives the following effects:\\n\\nAllies: -30% Received Final Damage\\nGnosis Viella:+30% DEF, -30% Received Final Damage,\\nEnemies: -50% Attack, When turn is gained: Gnosis Viella's Priority +20%\\n\\n (Irremovable, removed when Gnosis Viella dies, only the highest final damage reduction value is applied.)",
-    "description_jp": "劇毒の領域状態の対象は\\n以下の効果が適用されます。\\n味方対象:受けるダメージ-30%\\nグノーシス・ビエラ:防御力+30%/\\n受けるダメージ-30%\\n敵対象:攻撃力‐50%/ターン獲得時、\\nグノーシス・ビエラの行動ゲージ20%UP\\n\\n(解除不可/\\nグノーシス・ビエラが戦闘不能時に解除/\\n最終ダメージ減少は最も高い値のみ適用)",
-    "description_kr": "극독의 영역 상태의 각 대상은 아래의 효과를 받습니다.\\n아군 대상 : 받는 최종 피해 -30%\\n그노시스 비엘라 : 방어력 +30%, 받는 최종 피해 -30%\\n적 대상 : 공격력 -50%, 턴 획득 시 그노시스 비엘라 행동 게이지 +20%\\n\\n(해제 불가, 그노시스 비엘라 사망 시 해제, 최종 피해 감소는 가장 높은 값만 적용)",
-    "description_zh": "剧毒领域状态下的各目标将受到以下效果。\\n友方目标:受到的最终伤害‐30%\\n诺希斯·比埃拉:防御力+30%/受到的最终伤害‐30%\\n敌方目标:攻击力‐50%, 获得回合时:诺斯替斯·维艾拉的行动条 +20%\\n\\n(无法解除/诺希斯·比埃拉死亡时解除/最终伤害减少仅取最高值生效)",
-    "icon": "IG_Buff_Effect_2000109_Interruption"
-  },
-  {
     "name": "BANES_DOMAIN",
     "category": "unique",
     "label": "Bane's Domain",
@@ -1684,19 +1236,6 @@
     "description_kr": "극독의 영역 상태의 각 대상은 아래의 효과를 받습니다.\\n아군 대상 : 받는 최종 피해 -30%\\n그노시스 비엘라 : 방어력 +30%, 받는 최종 피해 -30%\\n적 대상 : 공격력 -50%, 턴 획득 시 그노시스 비엘라 행동 게이지 +20%\\n\\n(해제 불가, 그노시스 비엘라 사망 시 해제, 최종 피해 감소는 가장 높은 값만 적용)",
     "description_zh": "剧毒领域状态下的各目标将受到以下效果。\\n友方目标:受到的最终伤害‐30%\\n诺希斯·比埃拉:防御力+30%/受到的最终伤害‐30%\\n敌方目标:攻击力‐50%, 获得回合时:诺斯替斯·维艾拉的行动条 +20%\\n\\n(无法解除/诺希斯·比埃拉死亡时解除/最终伤害减少仅取最高值生效)",
     "icon": "IG_Buff_Effect_2000109_Interruption"
-  },
-  {
-    "name": "IG_Buff_2000053_Interruption",
-    "category": "unique",
-    "label": "Selfish God",
-    "label_jp": "身勝手な神",
-    "label_kr": "이기적인 신",
-    "label_zh": "自私之神",
-    "description": "When enemy uses a non-Attack skill: Self AP +50\\nWhen enemy with lower HP than self acts: Self Priority +10%\\n\\n(cannot be dispelled)",
-    "description_jp": "敵が攻撃以外のスキル使用時:自分のAP+50\\n自分よりHPが低い敵行動時:自分の行動ゲージ+10%\\n\\n解除不可)",
-    "description_kr": "적이 공격이 아닌 스킬 사용 시: 자신의 AP +50\\n\n자신보다 체력이 낮은 적 행동시 : 자신의 행동 게이지 +10%\\n\\n(해제 불가)",
-    "description_zh": "敌人使用非攻击技能时:自身AP+50\\n生命值低于自身的敌人行动时:自身行动条 +10%\\n\\n(无法被解除)",
-    "icon": "IG_Buff_2000053_Interruption"
   },
   {
     "name": "SELFISH_GOD",
@@ -1723,46 +1262,6 @@
     "description_kr": "코어에 응집된 에너지를 활성화하여, 추가 공격이 발생합니다. (해제 불가)",
     "description_zh": "激活核心中聚集的能量,触发额外攻击。(无法解除)",
     "icon": "IG_Buff_4086008_Interruption"
-  },
-  {
-    "name": "IG_Buff_4086008_Interruption",
-    "category": "hidden",
-    "label": "Core Energy",
-    "label_jp": "コアの力",
-    "label_kr": "코어 에너지",
-    "label_zh": "核心能量",
-    "description": "Activates an additional attack by activating the energy gathered within the Core. (Irremovable)",
-    "description_jp": "コアに集まった力を活性化し、追加攻撃が発生する。(解除不可)",
-    "description_kr": "코어에 응집된 에너지를 활성화하여, 추가 공격이 발생합니다. (해제 불가)",
-    "description_zh": "激活核心中聚集的能量,触发额外攻击。(无法解除)",
-    "icon": "IG_Buff_4086008_Interruption"
-  },
-  {
-    "name": "BT_RUN_ACTIVE_SKILL_ON_TURN_END",
-    "category": "utility",
-    "group": "BT_EXTRA_ATTACK_ON_TURN_END",
-    "label": "Additional Attack",
-    "label_jp": "追加攻撃",
-    "label_kr": "추가타",
-    "label_zh": "额外攻击",
-    "description": "Performs an additional attack.",
-    "description_jp": "敵を通常スキルで\\n追加攻撃する。",
-    "description_kr": "추가 공격을 입힙니다.",
-    "description_zh": "造成额外攻击。",
-    "icon": "SC_Buff_Extra_Skill"
-  },
-  {
-    "name": "IG_Buff_2000110_Interruption",
-    "category": "unique",
-    "label": "Mandala",
-    "label_jp": "曼荼羅",
-    "label_kr": "만다라",
-    "label_zh": "曼陀罗",
-    "description": "Reduces the caster’s Speed by 90%. When an ally takes a turn and performs an action, the caster uses Repent! on the enemy with the highest Attack.. Then, increase the caster’s Priority by 40%. (Irremovable. Removed when a Boss Break occurs or at the end of the caster’s turn. When the caster is the only surviving ally, the Speed reduction effect is removed and will not occur.)",
-    "description_jp": "自分のスピードが90%DOWNし、\\n味方がターンを獲得して行動する時、\\n攻撃力が最も高い敵単体に\\n【懺悔なさい！】を発動する。\\nその後、\\n自分の行動ゲージが40%UPする。\\n（解除不可、ブレイクまたは\\n自分のターン終了時に解除。\\n三蔵法師・あめのみ生存時は\\nスピードDOWN効果を解除し、\\n効果は発動しない）",
-    "description_kr": "자신의 속도가 90% 감소하고, 아군이 턴을 획득하여 행동 시 참회하세요! 를 가장 공격력이 높은 적에게 사용합니다.\\n이후 자신의 행동 게이지가 40% 증가합니다.(해제 불가, 보스 브레이크 및 자신 턴 종료 시 해제, 혼자 생존 시 속도 감소 효과 제거 및 미발생)",
-    "description_zh": "自身速度降低90%，\\n当我方单位获得回合并行动时，\\n对攻击力最高的敌人使用“忏悔吧！”。\\n\\n之后自身行动值提高40%。\\n（无法驱散，\\n首领进入力竭状态及自身回合结束时解除，\\n独自生存时速度降低效果将被移除且不会触发）",
-    "icon": "IG_Buff_2000110_Interruption"
   },
   {
     "name": "MANDALA",

@@ -246,7 +246,7 @@ export function StatsContent() {
                         <>
                             <p>{lRec({ en: 'Effectiveness increases the chance of successfully applying debuffs and is countered by', jp: '効果命中はデバフ付与の成功確率を上げ、', kr: '효과 적중은 디버프 부여 성공 확률을 높이며, ', zh: '效果命中增加成功施加减益的概率，被' } satisfies LangMap, lang)} {parseText('{S/RES}')}{lRec({ en: '.', jp: 'で対抗されます。', kr: '로 대응됩니다.', zh: '对抗。' } satisfies LangMap, lang)}</p>
                             <p className="mt-2">{lRec({ en: "If your Effectiveness is equal to or higher than the enemy's Resilience, the base chance to apply a debuff is 100%.", jp: '効果命中が敵の効果抵抗以上の場合、デバフ付与の基本確率は100%です。', kr: '효과 적중이 적의 효과 저항 이상이면 디버프 부여 기본 확률은 100%입니다.', zh: '当效果命中大于等于敌人效果抵抗时，减益施加基础概率为100%。' } satisfies LangMap, lang)}</p>
-                            <p className="mt-2">{lRec({ en: "Some skills can scale with Effectiveness, such as", jp: '一部のスキルは効果命中に依存します（', kr: '일부 스킬은 효과 적중에 의존합니다(', zh: '部分技能依赖效果命中，例如' } satisfies LangMap, lang)} {parseText('{P/Gnosis Beth}')}{lRec({ en: "'s", jp: 'の', kr: '의 ', zh: '的' } satisfies LangMap, lang)} {parseText('{D/BT_DOT_2000092}')}{lRec({ en: '.', jp: 'など）。', kr: ' 등).', zh: '。' } satisfies LangMap, lang)}</p>
+                            <p className="mt-2">{lRec({ en: "Some skills can scale with Effectiveness, such as", jp: '一部のスキルは効果命中に依存します（', kr: '일부 스킬은 효과 적중에 의존합니다(', zh: '部分技能依赖效果命中，例如' } satisfies LangMap, lang)} {parseText('{P/Gnosis Beth}')}{lRec({ en: "'s", jp: 'の', kr: '의 ', zh: '的' } satisfies LangMap, lang)} {parseText('{D/ETERNAL_BLEEDING}')}{lRec({ en: '.', jp: 'など）。', kr: ' 등).', zh: '。' } satisfies LangMap, lang)}</p>
                         </>
                     }
                 />
@@ -301,7 +301,7 @@ export function FAQContent() {
                     <ul className="list-disc list-inside ml-4 mt-2">
                         <li>{parseText('{D/BT_DOT_BURN}')}</li>
                         <li>{parseText('{D/BT_DOT_CURSE}')}</li>
-                        <li>{parseText('{D/BT_DOT_2000092}')}</li>
+                        <li>{parseText('{D/ETERNAL_BLEEDING}')}</li>
                     </ul>
                     <p className="mt-3">{lRec({ en: 'Fixed damage always ignores DEF and is unaffected by Penetration.', jp: '固定ダメージは常にDEFを無視し、貫通の影響を受けません。', kr: '고정 데미지는 항상 DEF를 무시하며 관통의 영향을 받지 않습니다.', zh: '固定伤害始终忽略DEF，不受穿透影响。' } satisfies LangMap, lang)}</p>
                 </>

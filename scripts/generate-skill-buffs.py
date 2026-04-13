@@ -73,7 +73,7 @@ FORCED_TARGET = {
     ('BT_CALL_BACKUP', False): 'ME',
     ('BT_CALL_BACKUP_2', False): 'ME',
     ('BT_AP_CHARGE', False): 'ME',
-    ('BT_DOT_POISON2', True): 'ENEMY',
+    ('CORROSIVE_POISON', True): 'ENEMY',
 }
 
 
@@ -161,7 +161,7 @@ def resolve_tag(row):
 
     # BT_DOT_POISON with Poison02 icon
     if btype == 'BT_DOT_POISON' and row.get('RemoveEffect') == 'SYS_BUFF_POISON_2':
-        return 'BT_DOT_POISON2'
+        return 'CORROSIVE_POISON'
 
     # BT_HEAL_BASED → BT_CONTINU_HEAL
     if btype in ('BT_HEAL_BASED_TARGET', 'BT_HEAL_BASED_CASTER'):

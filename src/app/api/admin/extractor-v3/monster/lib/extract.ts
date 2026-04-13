@@ -9,6 +9,25 @@ import {
 } from './location'
 import { extractMonsterSkills, type MonsterSkill } from './skills'
 import { langDict, getLangTexts, type LangDict, type Row } from './common'
+import { loadEffectRules } from '../../_shared/effects/rules'
+
+// Apply the shared alias map to a comma-separated token list. Empty tokens
+// and duplicates (post-alias) are removed while preserving original order.
+function aliasCsv(csv: string): string {
+  if (!csv) return csv
+  const { aliases } = loadEffectRules()
+  const out: string[] = []
+  const seen = new Set<string>()
+  for (const raw of csv.split(',')) {
+    const trimmed = raw.trim()
+    if (!trimmed) continue
+    const mapped = aliases.get(trimmed) ?? trimmed
+    if (seen.has(mapped)) continue
+    seen.add(mapped)
+    out.push(mapped)
+  }
+  return out.join(',')
+}
 
 // ── Output type (wiki format) ───────────────────────────────────────
 
@@ -159,8 +178,8 @@ export function extractMonster(
     element: resolveElement(base.element, txt),
     level: primary?.level ?? 0,
     icons: base.faceIconId ?? '',
-    BuffImmune: base.buffImmune,
-    StatBuffImmune: base.statBuffImmune,
+    BuffImmune: aliasCsv(base.buffImmune),
+    StatBuffImmune: aliasCsv(base.statBuffImmune),
     location: {
       dungeon: dungeonDict,
       mode: modeDict,
