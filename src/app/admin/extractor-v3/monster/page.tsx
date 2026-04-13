@@ -7,7 +7,7 @@ const API = '/api/admin/extractor-v3/monster'
 
 // ── Types ───────────────────────────────────────────────────────────
 
-type DiffKind = 'value' | 'typo' | 'missing-existing' | 'missing-extracted'
+type DiffKind = 'value' | 'typo' | 'missing-existing' | 'missing-extracted' | 'asset-missing'
 interface DiffEntry {
   path: string
   extracted: unknown
@@ -18,9 +18,10 @@ interface DiffEntry {
 interface CompareEntry {
   id: string
   name: string
-  status: 'new' | 'ok' | 'diff' | 'typo' | 'missing'
+  status: 'new' | 'ok' | 'diff' | 'typo' | 'asset' | 'missing'
   diffCount: number
   typoCount: number
+  assetCount: number
   diffs: DiffEntry[]
   modes: string[]
 }
@@ -87,6 +88,7 @@ function StatusBadge({ entry }: { entry: CompareEntry }) {
     <span className="flex gap-1">
       {entry.diffCount > 0 && <span className="rounded bg-yellow-900/30 px-1.5 py-0.5 text-[10px] text-yellow-400">{entry.diffCount} diff</span>}
       {entry.typoCount > 0 && <span className="rounded bg-zinc-700/50 px-1.5 py-0.5 text-[10px] text-zinc-400">{entry.typoCount} typo</span>}
+      {entry.assetCount > 0 && <span className="rounded bg-purple-900/30 px-1.5 py-0.5 text-[10px] text-purple-300">{entry.assetCount} asset</span>}
     </span>
   )
 }
@@ -96,7 +98,7 @@ function StatusBadge({ entry }: { entry: CompareEntry }) {
 function CompareTab() {
   const [entries, setEntries] = useState<CompareEntry[]>([])
   const [search, setSearch] = useState('')
-  const [filter, setFilter] = useState<'all' | 'diff' | 'typo' | 'new' | 'ok' | 'missing'>('all')
+  const [filter, setFilter] = useState<'all' | 'diff' | 'typo' | 'asset' | 'new' | 'ok' | 'missing'>('all')
   const [expandedModes, setExpandedModes] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
   const [comparing, setComparing] = useState(false)
@@ -106,6 +108,7 @@ function CompareTab() {
   const [extractedCache, setExtractedCache] = useState<Map<string, unknown>>(new Map())
   const [fixingTypos, setFixingTypos] = useState(false)
   const [fixingModes, setFixingModes] = useState(false)
+  const [fixingAssets, setFixingAssets] = useState(false)
 
   const loadAndCompare = useCallback(async () => {
     setComparing(true)
@@ -115,16 +118,22 @@ function CompareTab() {
       const results: CompareEntry[] = (data.results ?? []).map((r: { id: string; name: string; status?: string; diffs: DiffEntry[]; modes?: string[] }) => {
         const modes = r.modes ?? []
         if (r.status === 'missing') {
-          return { id: r.id, name: r.name, status: 'missing' as const, diffCount: 0, typoCount: 0, diffs: [], modes }
+          return { id: r.id, name: r.name, status: 'missing' as const, diffCount: 0, typoCount: 0, assetCount: 0, diffs: [], modes }
         }
         const diffCount = r.diffs.filter((d) => d.kind === 'value' || d.kind === 'missing-existing' || d.kind === 'missing-extracted').length
         const typoCount = r.diffs.filter((d) => d.kind === 'typo').length
-        const status = diffCount > 0 ? ('diff' as const) : typoCount > 0 ? ('typo' as const) : ('ok' as const)
-        return { id: r.id, name: r.name, status, diffCount, typoCount, diffs: r.diffs, modes }
+        const assetCount = r.diffs.filter((d) => d.kind === 'asset-missing').length
+        const status =
+          diffCount > 0 ? ('diff' as const)
+          : typoCount > 0 ? ('typo' as const)
+          : assetCount > 0 ? ('asset' as const)
+          : ('ok' as const)
+        return { id: r.id, name: r.name, status, diffCount, typoCount, assetCount, diffs: r.diffs, modes }
       })
       results.sort((a, b) => {
         if (a.diffCount !== b.diffCount) return b.diffCount - a.diffCount
         if (a.typoCount !== b.typoCount) return b.typoCount - a.typoCount
+        if (a.assetCount !== b.assetCount) return b.assetCount - a.assetCount
         return a.name.localeCompare(b.name)
       })
       setEntries(results)
@@ -233,6 +242,36 @@ function CompareTab() {
     await loadAndCompare()
   }
 
+  async function handleFixAllAssets() {
+    const withAssetDiffs = entries.filter((e) => e.assetCount > 0)
+    if (withAssetDiffs.length === 0) return
+    setFixingAssets(true)
+    setSaveMessage({ text: `Copying assets for ${withAssetDiffs.length} entry(ies)...`, type: 'info' })
+    let totalCopied = 0
+    let totalMissingSource = 0
+    let failed = 0
+    for (const e of withAssetDiffs) {
+      try {
+        const res = await fetch(`${API}?action=copy-assets&id=${e.id}`)
+        const data = await res.json()
+        if (!res.ok) { failed++; continue }
+        totalCopied += (data.copied as string[] | undefined)?.length ?? 0
+        totalMissingSource += (data.missingSource as string[] | undefined)?.length ?? 0
+      } catch {
+        failed++
+      }
+    }
+    setSaveMessage({
+      text:
+        failed > 0 || totalMissingSource > 0
+          ? `Copied ${totalCopied} asset(s), ${totalMissingSource} source missing${failed > 0 ? `, ${failed} failed` : ''}`
+          : `Copied ${totalCopied} asset(s)`,
+      type: failed > 0 || totalMissingSource > 0 ? 'error' : 'success',
+    })
+    setFixingAssets(false)
+    await loadAndCompare()
+  }
+
   async function handleSave() {
     if (!selected) return
     setSaving(true)
@@ -284,6 +323,8 @@ function CompareTab() {
       if (e.diffCount === 0) return false
     } else if (filter === 'typo') {
       if (e.typoCount === 0) return false
+    } else if (filter === 'asset') {
+      if (e.assetCount === 0) return false
     } else if (filter !== 'all') {
       if (e.status !== filter) return false
     }
@@ -319,6 +360,7 @@ function CompareTab() {
       }),
       diffCount: items.filter((i) => i.diffCount > 0).length,
       typoCount: items.filter((i) => i.typoCount > 0).length,
+      assetCount: items.filter((i) => i.assetCount > 0).length,
       missingCount: items.filter((i) => i.status === 'missing').length,
       okCount: items.filter((i) => i.status === 'ok').length,
     }))
@@ -370,6 +412,16 @@ function CompareTab() {
                 {fixingModes ? 'Fixing...' : 'Fix all modes'}
               </button>
             )}
+            {entries.some((e) => e.assetCount > 0) && (
+              <button
+                onClick={handleFixAllAssets}
+                disabled={fixingAssets || comparing}
+                className="rounded bg-purple-700/80 px-2.5 py-1 text-xs font-semibold text-purple-100 transition hover:bg-purple-600 disabled:opacity-50"
+                title="Copy every missing boss asset (portrait, ATB, skill icons) from datamine"
+              >
+                {fixingAssets ? 'Copying...' : 'Fix all assets'}
+              </button>
+            )}
             <button
               onClick={loadAndCompare}
               disabled={comparing}
@@ -384,13 +436,14 @@ function CompareTab() {
           <span className="text-green-400">{entries.filter((e) => e.status === 'ok').length} ok</span>
           <span className="text-yellow-400">{entries.filter((e) => e.diffCount > 0).length} diff</span>
           <span className="text-zinc-400">{entries.filter((e) => e.typoCount > 0).length} typo</span>
+          <span className="text-purple-300">{entries.filter((e) => e.assetCount > 0).length} asset</span>
           <span className="text-blue-400">{entries.filter((e) => e.status === 'new').length} new</span>
           <span className="text-red-400">{entries.filter((e) => e.status === 'missing').length} missing</span>
         </div>
         <input type="text" placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)}
           className="mb-2 rounded border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm placeholder-zinc-500 focus:border-zinc-500 focus:outline-none" />
         <div className="mb-3 flex gap-1 text-xs">
-          {(['all', 'diff', 'typo', 'new', 'ok', 'missing'] as const).map((f) => (
+          {(['all', 'diff', 'typo', 'asset', 'new', 'ok', 'missing'] as const).map((f) => (
             <button key={f} onClick={() => setFilter(f)}
               className={`rounded px-2 py-1 ${filter === f ? 'bg-blue-600/20 text-blue-400' : 'text-zinc-500 hover:text-zinc-300'}`}>
               {f === 'all' ? 'All' : f.charAt(0).toUpperCase() + f.slice(1)}
@@ -411,6 +464,7 @@ function CompareTab() {
                   <span className="text-xs text-zinc-500">{g.items.length}</span>
                   {g.diffCount > 0 && <span className="rounded bg-yellow-900/30 px-1.5 py-0.5 text-[10px] text-yellow-400">{g.diffCount}</span>}
                   {g.typoCount > 0 && <span className="rounded bg-zinc-700/50 px-1.5 py-0.5 text-[10px] text-zinc-400">{g.typoCount}</span>}
+                  {g.assetCount > 0 && <span className="rounded bg-purple-900/30 px-1.5 py-0.5 text-[10px] text-purple-300">{g.assetCount}</span>}
                   {g.missingCount > 0 && <span className="rounded bg-red-900/30 px-1.5 py-0.5 text-[10px] text-red-400">{g.missingCount}</span>}
                 </button>
                 {open && (
@@ -461,12 +515,13 @@ function CompareTab() {
                 <h4 className="text-sm font-semibold text-zinc-400">
                   {selectedEntry.diffCount} difference{selectedEntry.diffCount !== 1 ? 's' : ''}
                   {selectedEntry.typoCount > 0 && ` · ${selectedEntry.typoCount} typo${selectedEntry.typoCount !== 1 ? 's' : ''}`}
+                  {selectedEntry.assetCount > 0 && ` · ${selectedEntry.assetCount} asset${selectedEntry.assetCount !== 1 ? 's' : ''}`}
                 </h4>
-                {selectedEntry.diffs.filter((d) => d.kind !== 'typo').length > 0 && (
+                {selectedEntry.diffs.filter((d) => d.kind !== 'typo' && d.kind !== 'asset-missing').length > 0 && (
                   <table className="w-full text-xs">
                     <thead><tr className="text-zinc-500"><th className="py-0.5 pr-3 text-left font-medium">Field</th><th className="py-0.5 pr-3 text-left font-medium">Existing</th><th className="py-0.5 text-left font-medium">Extracted</th></tr></thead>
                     <tbody>
-                      {selectedEntry.diffs.filter((d) => d.kind !== 'typo').map((d, i) => (
+                      {selectedEntry.diffs.filter((d) => d.kind !== 'typo' && d.kind !== 'asset-missing').map((d, i) => (
                         <tr key={i} className="border-t border-zinc-800/50">
                           <td className="py-1 pr-3 font-mono text-zinc-400 whitespace-nowrap">{d.path}</td>
                           <td className="py-1 pr-3 bg-red-950/20 whitespace-pre-wrap break-all">{formatValue(d.existing)}</td>
@@ -484,6 +539,21 @@ function CompareTab() {
                     <div className="ml-4 mt-1 space-y-0.5 text-[11px] text-zinc-600 font-mono">
                       {selectedEntry.diffs.filter((d) => d.kind === 'typo').map((d, i) => (
                         <div key={i}>{d.path}</div>
+                      ))}
+                    </div>
+                  </details>
+                )}
+                {selectedEntry.diffs.filter((d) => d.kind === 'asset-missing').length > 0 && (
+                  <details open className="rounded border border-purple-800/40 p-1.5">
+                    <summary className="cursor-pointer text-xs text-purple-300 hover:text-purple-200">
+                      {selectedEntry.assetCount} missing asset{selectedEntry.assetCount !== 1 ? 's' : ''}
+                    </summary>
+                    <div className="ml-4 mt-1 space-y-0.5 text-[11px] text-zinc-500 font-mono">
+                      {selectedEntry.diffs.filter((d) => d.kind === 'asset-missing').map((d, i) => (
+                        <div key={i} className="break-all">
+                          <span className="text-purple-300">{d.path}</span>
+                          <div className="text-zinc-600">src: {formatValue(d.extracted)}</div>
+                        </div>
                       ))}
                     </div>
                   </details>

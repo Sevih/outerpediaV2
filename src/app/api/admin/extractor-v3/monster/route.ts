@@ -232,7 +232,118 @@ type DiffEntry = {
   path: string
   extracted: unknown
   existing: unknown
-  kind: 'value' | 'typo' | 'missing-existing' | 'missing-extracted'
+  kind: 'value' | 'typo' | 'missing-existing' | 'missing-extracted' | 'asset-missing'
+}
+
+// ── Asset availability check ────────────────────────────────────────
+//
+// For each boss we verify that the PNG/WEBP assets it references exist
+// in `public/images/characters/boss/{portrait,atb,skills}`. Portrait and
+// skill icons whose id starts with `2` (playable character id) are
+// served from the shared character asset library — we skip those since
+// their presence is guaranteed by the character extractor.
+
+const DATAMINE_SPRITE_ROOT = path.join(
+  process.cwd(),
+  'datamine',
+  'extracted_astudio',
+  'assets',
+  'editor',
+  'resources',
+  'sprite',
+)
+const PUBLIC_BOSS_ROOT = path.join(process.cwd(), 'public', 'images', 'characters', 'boss')
+
+function destExists(destNoExt: string): boolean {
+  return fs.existsSync(`${destNoExt}.webp`) || fs.existsSync(`${destNoExt}.png`)
+}
+
+type AssetMiss = {
+  kind: 'portrait' | 'atb' | 'skill'
+  source: string
+  dest: string
+  filename: string
+}
+
+function checkBossAssets(extracted: Record<string, unknown>): AssetMiss[] {
+  const misses: AssetMiss[] = []
+  const icons = typeof extracted.icons === 'string' ? extracted.icons : ''
+
+  // Portrait — shared with character assets when id starts with `2`.
+  if (icons && !icons.startsWith('2')) {
+    const filename = `MT_${icons}`
+    const dest = path.join(PUBLIC_BOSS_ROOT, 'portrait', filename)
+    if (!destExists(dest)) {
+      misses.push({
+        kind: 'portrait',
+        source: path.join(DATAMINE_SPRITE_ROOT, 'at_thumbnailmonsterruntime', `${filename}.png`),
+        dest: `${dest}.png`,
+        filename,
+      })
+    }
+  }
+
+  // ATB — always in the boss atb dir. Character-id bosses (icon starts
+  // with `2`) use the `_E` variant that the game ships for playable
+  // character portraits.
+  if (icons) {
+    const filename = icons.startsWith('2') ? `IG_Turn_${icons}_E` : `IG_Turn_${icons}`
+    const dest = path.join(PUBLIC_BOSS_ROOT, 'atb', filename)
+    if (!destExists(dest)) {
+      misses.push({
+        kind: 'atb',
+        source: path.join(DATAMINE_SPRITE_ROOT, 'at_dungeonruntime', `${filename}.png`),
+        dest: `${dest}.png`,
+        filename,
+      })
+    }
+  }
+
+  // Skills — last `_`-split segment starting with `2` → character asset.
+  const skills = Array.isArray(extracted.skills) ? (extracted.skills as Array<Record<string, unknown>>) : []
+  for (const s of skills) {
+    const icon = typeof s.icon === 'string' ? s.icon : ''
+    if (!icon) continue
+    const lastSeg = icon.split('_').pop() ?? ''
+    if (lastSeg.startsWith('2')) continue
+    const dest = path.join(PUBLIC_BOSS_ROOT, 'skills', icon)
+    if (!destExists(dest)) {
+      misses.push({
+        kind: 'skill',
+        source: path.join(DATAMINE_SPRITE_ROOT, 'at_skillruntime', `${icon}.png`),
+        dest: `${dest}.png`,
+        filename: icon,
+      })
+    }
+  }
+  return misses
+}
+
+function assetMissesToDiffs(misses: AssetMiss[]): DiffEntry[] {
+  return misses.map((m) => ({
+    path: `assets.${m.kind}.${m.filename}`,
+    extracted: m.source,
+    existing: null,
+    kind: 'asset-missing' as const,
+  }))
+}
+
+function copyBossAssets(extracted: Record<string, unknown>): {
+  copied: string[]
+  missingSource: string[]
+} {
+  const copied: string[] = []
+  const missingSource: string[] = []
+  for (const m of checkBossAssets(extracted)) {
+    if (!fs.existsSync(m.source)) {
+      missingSource.push(m.filename)
+      continue
+    }
+    fs.mkdirSync(path.dirname(m.dest), { recursive: true })
+    fs.copyFileSync(m.source, m.dest)
+    copied.push(m.filename)
+  }
+  return { copied, missingSource }
 }
 
 // CJK fullwidth → halfwidth punctuation. Most diffs across JP/KR/ZH that
@@ -473,6 +584,25 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ extracted: merged, locations: raw._allLocations ?? [] })
     }
 
+    // ─── action=copy-assets — copy missing on-disk assets for one boss ─
+    if (action === 'copy-assets') {
+      const rawId = searchParams.get('id')
+      if (!rawId) return NextResponse.json({ error: 'missing id' }, { status: 400 })
+      const parsed = parseBossId(rawId)
+      if (isUntouchable(parsed)) {
+        return NextResponse.json({ error: 'archived or misc file' }, { status: 400 })
+      }
+      const raw = extractMonster(
+        parsed.monsterId,
+        parsed.variantDungeonId ? { dungeonId: parsed.variantDungeonId } : undefined,
+      )
+      if (!raw) return NextResponse.json({ error: 'not found' }, { status: 404 })
+      inheritParentLocation(raw, parsed.parentId, parsed.variantDungeonId ?? undefined)
+      const extracted = stripInternalFields(raw) as Record<string, unknown>
+      const result = copyBossAssets(extracted)
+      return NextResponse.json({ ok: true, ...result })
+    }
+
     // ─── action=compare-one — extracted + existing + diffs (single id) ─
     if (action === 'compare-one') {
       const rawId = searchParams.get('id')
@@ -492,6 +622,9 @@ export async function GET(req: NextRequest) {
       extracted.id = rawId
       if (parsed.parentId) extracted.summoned_by = parsed.parentId
       const diffs = buildDiffs(extracted, existing)
+      // Final pass: flag any missing on-disk assets. Runs after every
+      // field-level diff step so asset entries always appear at the tail.
+      diffs.push(...assetMissesToDiffs(checkBossAssets(extracted)))
       return NextResponse.json({ extracted, existing, diffs })
     }
 
@@ -529,6 +662,7 @@ export async function GET(req: NextRequest) {
           }
         }
         const diffs = buildDiffs(extracted, existing)
+        diffs.push(...assetMissesToDiffs(checkBossAssets(extracted)))
         return { id: rawId, name, status: 'ok' as const, diffs, modes: Array.from(modeSet) }
       })
       const withDiffs = results.filter((r) => r.diffs.length > 0).length
