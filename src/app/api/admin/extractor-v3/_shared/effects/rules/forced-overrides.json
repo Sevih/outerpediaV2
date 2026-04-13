@@ -115,5 +115,30 @@
   },
   "skill:Blessing of the Water Tower": {
     "*": { "clear_buff": true, "clear_debuff": true }
+  },
+  "ee:2000109": {
+    "*": {
+      "removeDebuff": ["BT_DOT_POISON"]
+    }
+  },
+  "ee:2000119": {
+    "*": {
+      "buff": ["BT_SEAL_COUNTER"]
+    }
+  },
+  "ee:2000117": {
+    "*": {
+      "buff": ["BT_SEAL_COUNTER"]
+    }
+  },
+  "ee:2000105": {
+    "*": {
+      "buff": ["BT_SEAL_COUNTER"]
+    }
+  },
+  "ee:2000092": {
+    "*": {
+      "buff": ["BT_SEAL_COUNTER"]
+    }
   }
 }

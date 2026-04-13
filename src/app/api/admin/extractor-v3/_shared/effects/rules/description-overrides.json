@@ -246,5 +246,8 @@
   },
   "Attacks all enemies.\\n\\nAfter attacking, inflicts <color=#28d9ed>Bane's Domain</color> on all allies and enemy <color=#28d9ed>Magic</color> units for <color=#28d9ed>1 turn(s)</color>. (Ignores Resilience and Immunity)\\n\\nDamage dealt increases proportional to Max Health instead of Attack.":{
     "remove_buff": ["BT_STAT|ST_DEF"]
+  },
+  "(Triggered Effect) When Demiurge Drakhan attacks, if granted a dispellable <color=#28d9ed>buff</color>, reduces Health of all enemies by <color=#28d9ed>30%</color>.":{
+    "remove_buff": ["BT_REMOVE_BUFF"]
   }
 }

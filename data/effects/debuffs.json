@@ -319,20 +319,6 @@
     "description_zh": "立即发动指定的弱化效果。会受到\\n回合数与附带数量的影响。",
     "icon": "SC_Buff_detonate"
   },
-  {
-    "name": "BT_IMMEDIATELY_BLEED",
-    "category": "dot",
-    "group": "BT_IMMEDIATELY_BURN",
-    "label": "Detonate",
-    "label_jp": "破裂",
-    "label_kr": "폭발",
-    "label_zh": "爆炸",
-    "description": "Activates certain debuffs immediately. Magnitude determined by the number of turns remaining and stacks applied.",
-    "description_jp": "指定された弱体効果の\\nダメージを即時に与える。\\n弱体効果のターン数と付与数が\\n多いほど、ダメージがUPする。",
-    "description_kr": "지정된 약화 효과를 즉시 발동시킵니다. 턴 수와 적용된 수량에 영향을 받습니다.",
-    "description_zh": "立即发动指定的弱化效果。会受到\\n回合数与附带数量的影响。",
-    "icon": "SC_Buff_detonate"
-  },
     {
     "name": "DETONATE",
     "category": "dot",
@@ -1199,33 +1185,6 @@
     "description_kr": "받는 치유 효과를 50% 감소시킵니다. (해제 불가)",
     "description_zh": "所受治愈效果降低50%。(无法解除)",
     "icon": "IG_Buff_2000057_Interruption_D"
-  },
-  {
-    "name": "BT_IMMEDIATELY_POISON",
-    "category": "dot",
-    "group": "BT_IMMEDIATELY_BURN",
-    "label": "Detonate",
-    "label_jp": "破裂",
-    "label_kr": "폭발",
-    "label_zh": "爆炸",
-    "description": "Activates certain debuffs immediately. Magnitude determined by the number of turns remaining and stacks applied.",
-    "description_jp": "指定された弱体効果の\\nダメージを即時に与える。\\n弱体効果のターン数と付与数が\\n多いほど、ダメージがUPする。",
-    "description_kr": "지정된 약화 효과를 즉시 발동시킵니다. 턴 수와 적용된 수량에 영향을 받습니다.",
-    "description_zh": "立即发动指定的弱化效果。会受到\\n回合数与附带数量的影响。",
-    "icon": "SC_Buff_detonate"
-  },
-  {
-    "name": "SYS_BUFF_AVOID_UP",
-    "category": "utility",
-    "label": "Miss Rate Decrease",
-    "label_jp": "ミスヒット発生率DOWN",
-    "label_kr": "빗나감 확률 감소",
-    "label_zh": "未命中率降低",
-    "description": "Decreases the target's Miss rate by 15%. When a Miss occurs, damage is reduced by 50%, and debuffs and critical hits do not occur.",
-    "description_jp": "対象のミスヒット発生率が15%減少します。ミスヒット発生時、ダメージが50%減少し、弱体効果および会心は発生しません。",
-    "description_kr": "대상의 빗나감 확률이 15% 감소합니다. 빗나감 발생 시 피해량이 50% 감소하며, 약화 효과와 치명타가 발생하지 않습니다.",
-    "description_zh": "目标的未命中率降低15%。发生未命中时,伤害降低50%,且不会触发弱化效果与暴击。",
-    "icon": "SC_Buff_Stat_Avoid"
   },
   {
     "name": "IG_Buff_Effect_2000109_Interruption_D",

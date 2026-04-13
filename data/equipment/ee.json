@@ -2541,8 +2541,8 @@
     "effect10_zh": "使用<color=#28d9ed>隐藏活动</color>时，全体友军强化效果持续时间<color=#28d9ed>+1</color>回合",
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "buff": [
-      "BT_SEAL_COUNTER",
-      "BT_EXTEND_BUFF"
+      "BT_EXTEND_BUFF",
+      "BT_SEAL_COUNTER"
     ],
     "debuff": [],
     "rank": "C",
@@ -2637,7 +2637,7 @@
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "buff": [],
     "debuff": [
-      "BT_DOT_POISON2"
+      "CORROSIVE_POISON"
     ],
     "rank": "A",
     "rank10": "S"

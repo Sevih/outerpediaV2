@@ -3,7 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import { LANGS, DEFAULT_LANG, type Lang } from '@/lib/i18n/config'
 import { buildTooltipMap } from '../_shared/effects/tooltip'
-import type { TooltipEntry } from '../_shared/effects/types'
+import type { TooltipEntry, EffectTables, BuffRow } from '../_shared/effects/types'
+import { classifyEffects } from '../_shared/effects'
+import { loadEffectRules } from '../_shared/effects/rules'
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 const EE_PATH = path.join(process.cwd(), 'data', 'equipment', 'ee.json')
@@ -122,11 +124,6 @@ const EE_BUFF_BLACKLIST = new Set([
   'BT_REVIVAL', 'BT_NONE', 'BT_SECOND_TRIGGER',
 ])
 
-const EE_FORCE_DEBUFF = new Set([
-  'BT_WG_REVERSE_HEAL', 'BT_IMMEDIATELY_BLEED', 'BT_IMMEDIATELY_BURN',
-  'BT_IMMEDIATELY_POISON', 'BT_IMMEDIATELY_CURSE',
-])
-
 const EE_OVERRIDES: Record<string, { buff?: string[]; debuff?: string[] }> = {
   '2000047': { buff: ['BT_SHIELD_BASED_CASTER'] },
   '2000060': { buff: ['BT_AP_CHARGE'] },
@@ -134,76 +131,106 @@ const EE_OVERRIDES: Record<string, { buff?: string[]; debuff?: string[] }> = {
   '2000093': { buff: ['BT_AP_CHARGE'] },
 }
 
-function extractEEBuffDebuff(buffTemplet: Row[], id: string, tooltipMap?: Map<string, TooltipEntry>): { buff: string[]; debuff: string[] } {
-  const buffs = new Set<string>()
-  const debuffs = new Set<string>()
-
-  const allBuffs = buffTemplet.filter((r) =>
-    r.BuffID?.startsWith(`BID_CEQUIP_${id}`) && !r.BuffID.includes('old')
-  )
-
-  const seen = new Set<string>()
-  for (const b of allBuffs) {
-    const type = b.Type ?? ''
-    const stat = b.StatType ?? ''
-    const bd = b.BuffDebuffType ?? ''
-
-    if (EE_BUFF_BLACKLIST.has(type)) continue
-    if (type === 'BT_STAT' && stat === 'ST_ACCURACY') continue
-    if (type.includes('_ENHANCE')) continue
-    if (type.startsWith('BT_DMG_')) continue
-    if (type === 'BT_STAT' && (b.TurnDuration === '-1' || b.BuffRemoveType === 'ON_SKILL_FINISH' || b.BuffCreateType === 'PASSIVE')) continue
-
-    const icon = b.IconName ?? ''
-    let effectiveType = type
-    if (icon === 'IG_Buff_Dot_Poison02') effectiveType = 'BT_DOT_POISON2'
-
-    let tag: string
-    // `BT_IMMEDIATELY_*` is the game's universal "instant DOT detonation"
-    // mechanic — every variant renders as "Detonate" in the wiki.
-    if (effectiveType.startsWith('BT_IMMEDIATELY_')) {
-      tag = 'DETONATE'
-    } else if (icon.includes('Interruption')) {
-      const base = (effectiveType === 'BT_STAT' && stat && stat !== 'ST_NONE')
-        ? `${effectiveType}|${stat}`
-        : effectiveType
-      // For well-known types (DOT, stun, freeze, etc.) always use base + _IR
-      // — the tooltip is too generic ("Bleeding", "Burned") while the wiki
-      // uses the precise BT_DOT_*_IR label. Use tooltip name only for
-      // custom/unique effects whose Type doesn't carry enough meaning.
-      const useBaseIR = effectiveType.startsWith('BT_DOT_')
-        || effectiveType === 'BT_STUN'
-        || effectiveType === 'BT_FREEZE'
-      if (useBaseIR) {
-        tag = `${base}_IR`
-      } else {
-        const ttId = b.ToolTipID ?? ''
-        const tt = ttId && tooltipMap ? tooltipMap.get(ttId) : undefined
-        tag = tt?.name ? tt.name : `${base}_IR`
-      }
-    } else {
-      tag = (effectiveType === 'BT_STAT' && stat && stat !== 'ST_NONE') ? `${effectiveType}|${stat}` : effectiveType
+function extractEEBuffDebuff(
+  buffTemplet: Row[],
+  id: string,
+  tooltipMap?: Map<string, TooltipEntry>,
+): { buff: string[]; debuff: string[] } {
+  // Collect every BuffTemplet row whose BuffID belongs to this EE. The
+  // shared classifier expects an `EffectTables.buffsByID` map keyed by
+  // BuffID, so we build a one-off table from the subset.
+  const prefix = `BID_CEQUIP_${id}`
+  const relevant = buffTemplet.filter((r) => r.BuffID?.startsWith(prefix) && !r.BuffID.includes('old'))
+  const buffIds = Array.from(new Set(relevant.map((r) => r.BuffID!)))
+  const eeBuffsByID = new Map<string, Row[]>()
+  for (const r of relevant) {
+    const k = r.BuffID!
+    let arr = eeBuffsByID.get(k)
+    if (!arr) {
+      arr = []
+      eeBuffsByID.set(k, arr)
     }
-
-    if (seen.has(tag)) continue
-    seen.add(tag)
-
-    if (EE_FORCE_DEBUFF.has(type)) {
-      debuffs.add(tag)
-    } else if (bd.startsWith('DEBUFF')) {
-      debuffs.add(tag)
-    } else if (bd === 'BUFF') {
-      buffs.add(tag)
-    }
+    arr.push(r)
   }
 
-  const overrides = EE_OVERRIDES[id]
-  if (overrides) {
-    if (overrides.buff) overrides.buff.forEach((b) => buffs.add(b))
-    if (overrides.debuff) overrides.debuff.forEach((d) => debuffs.add(d))
+  const tables: EffectTables = {
+    buffsByID: eeBuffsByID as Map<string, BuffRow[]>,
+    tooltipMap: tooltipMap ?? new Map(),
   }
 
-  return { buff: [...buffs], debuff: [...debuffs] }
+  // EE-specific row filter: drop blacklisted types, _ENHANCE modifiers,
+  // BT_DMG_* rows, the always-on ST_ACCURACY passive, and permanent /
+  // on-skill-finish / passive-create BT_STAT rows. Matches the
+  // exclusions the old hand-rolled extractor enforced.
+  const rowFilter = (row: BuffRow): boolean => {
+    const type = row.Type ?? ''
+    const stat = row.StatType ?? ''
+    if (EE_BUFF_BLACKLIST.has(type)) return false
+    if (type === 'BT_STAT' && stat === 'ST_ACCURACY') return false
+    if (type.includes('_ENHANCE')) return false
+    if (type.startsWith('BT_DMG_')) return false
+    if (
+      type === 'BT_STAT' &&
+      (row.TurnDuration === '-1' ||
+        row.BuffRemoveType === 'ON_SKILL_FINISH' ||
+        row.BuffCreateType === 'PASSIVE')
+    ) {
+      return false
+    }
+    // Force known EE debuff types onto the debuff side via `extraDebuffs`
+    // is handled outside the filter; here we just keep the row alive.
+    return true
+  }
+
+  // Tooltip discovery: the classifier's main `buffTypeLabel` only
+  // consults a row's `ToolTipID` when the icon contains "Interruption".
+  // EE variant DOTs (e.g. `IG_Buff_Dot_Poison02` → CORROSIVE_POISON)
+  // surface their tooltip name through the separate `tooltipIds`
+  // discovery path — collect every non-interruption row tooltip so the
+  // shared classifier can turn them into wiki-ready labels.
+  const tooltipIds = new Set<string>()
+  for (const r of relevant) {
+    if (!rowFilter(r as BuffRow)) continue
+    const tt = r.ToolTipID
+    if (!tt) continue
+    if ((r.IconName ?? '').includes('Interruption')) continue
+    tooltipIds.add(tt)
+  }
+
+  const { buffs, debuffs } = classifyEffects(buffIds, {
+    ownerId: id,
+    skillType: 'EE',
+    tables,
+    rowFilter,
+    tooltipIds: [...tooltipIds],
+  })
+
+  const buffOut = new Set(buffs)
+  const debuffOut = new Set(debuffs)
+
+  // Legacy hardcoded overrides.
+  const legacy = EE_OVERRIDES[id]
+  if (legacy) {
+    if (legacy.buff) legacy.buff.forEach((b) => buffOut.add(b))
+    if (legacy.debuff) legacy.debuff.forEach((d) => debuffOut.add(d))
+  }
+
+  // JSON-curated override: look up `ee:<id>` in the shared
+  // `forced-overrides.json`. The inner `'*'` entry carries the usual
+  // ForcedOverride shape (buff / debuff / removeBuff / removeDebuff /
+  // clear_buff / clear_debuff).
+  const rules = loadEffectRules()
+  const eeOverride = rules.forcedOverrides[`ee:${id}`]?.['*']
+  if (eeOverride) {
+    if (eeOverride.clearBuff) buffOut.clear()
+    if (eeOverride.clearDebuff) debuffOut.clear()
+    for (const b of eeOverride.buff ?? []) buffOut.add(b)
+    for (const d of eeOverride.debuff ?? []) debuffOut.add(d)
+    for (const b of eeOverride.removeBuff ?? []) buffOut.delete(b)
+    for (const d of eeOverride.removeDebuff ?? []) debuffOut.delete(d)
+  }
+
+  return { buff: [...buffOut], debuff: [...debuffOut] }
 }
 
 // ── MainStat extraction ─────────────────────────────────────────────
