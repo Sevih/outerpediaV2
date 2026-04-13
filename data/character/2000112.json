@@ -103,7 +103,7 @@
       "wgr": 1,
       "cd": null,
       "buff": ["BT_ACTION_GAUGE", "BT_COOL3_CHARGE", "BT_ADDITIVE_TURN"],
-      "debuff": ["BT_REDISTRIBUTE_BUFF", "BT_REVERSE_HEAL_BASED_TARGET"],
+      "debuff": ["BT_REDISTRIBUTE_BUFF", "BT_FIXED_DAMAGE"],
       "offensive": true,
       "target": "mono",
       "burnEffect": {
@@ -251,7 +251,7 @@
       "debuff": [
         "BT_REDISTRIBUTE_BUFF",
         "SPATIAL_DISTORTION_ENEMY",
-        "BT_REVERSE_HEAL_BASED_TARGET"
+        "BT_FIXED_DAMAGE"
       ],
       "offensive": true,
       "target": "multi"
@@ -320,7 +320,7 @@
       "dual_offensive": true,
       "dual_target": "mono",
       "dual_buff": [],
-      "dual_debuff": ["BT_REVERSE_HEAL_BASED_TARGET"]
+      "dual_debuff": ["BT_FIXED_DAMAGE"]
     }
   }
 }

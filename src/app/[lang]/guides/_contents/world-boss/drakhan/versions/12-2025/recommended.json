@@ -3,10 +3,10 @@
     {
       "names": ["Viella"],
       "reason": {
-        "en": "{C/Healer} with {D/BT_DOT_POISON} and {B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}.",
-        "jp": "{D/BT_DOT_POISON}と{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}を持つ{C/Healer}。",
-        "kr": "{D/BT_DOT_POISON}과 {B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}를 가진 {C/Healer}.",
-        "zh": "拥有{D/BT_DOT_POISON}和{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}的{C/Healer}。"
+        "en": "{C/Healer} with {D/BT_DOT_POISON} and {B/BT_STAT|ST_COUNTER_RATE}.",
+        "jp": "{D/BT_DOT_POISON}と{B/BT_STAT|ST_COUNTER_RATE}を持つ{C/Healer}。",
+        "kr": "{D/BT_DOT_POISON}과 {B/BT_STAT|ST_COUNTER_RATE}를 가진 {C/Healer}.",
+        "zh": "拥有{D/BT_DOT_POISON}和{B/BT_STAT|ST_COUNTER_RATE}的{C/Healer}。"
       }
     },
     {
@@ -21,10 +21,10 @@
     {
       "names": ["Hilde", "Omega Nadja", "Tamamo-no-Mae", "Regina", "Gnosis Dahlia", "Delta", "Demiurge Stella", "Core Fusion Veronica"],
       "reason": {
-        "en": "Built-in {B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} or {B/BT_REVENGE} mechanics.",
-        "jp": "{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}または{B/BT_REVENGE}メカニクス内蔵。",
-        "kr": "{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER} 또는 {B/BT_REVENGE} 메커니즘 내장.",
-        "zh": "内置{B/BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER}或{B/BT_REVENGE}机制。"
+        "en": "Built-in {B/BT_STAT|ST_COUNTER_RATE} or {B/BT_REVENGE} mechanics.",
+        "jp": "{B/BT_STAT|ST_COUNTER_RATE}または{B/BT_REVENGE}メカニクス内蔵。",
+        "kr": "{B/BT_STAT|ST_COUNTER_RATE} 또는 {B/BT_REVENGE} 메커니즘 내장.",
+        "zh": "内置{B/BT_STAT|ST_COUNTER_RATE}或{B/BT_REVENGE}机制。"
       }
     }
   ],

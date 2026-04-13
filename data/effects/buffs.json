@@ -370,20 +370,6 @@
     "icon": "SC_Buff_Revival"
   },
   {
-    "name": "BT_RUN_FIRST_SKILL_ON_TURN_END_DEFENDER",
-    "category": "utility",
-    "group": "BT_STAT|ST_COUNTER_RATE",
-    "label": "Counterattack",
-    "label_jp": "反撃",
-    "label_kr": "반격",
-    "label_zh": "反击",
-    "description": "Counterattacks when attacked.",
-    "description_jp": "敵からダメージを受けた時、\\nその敵に反撃する。",
-    "description_kr": "피격 시 대상에게 반격합니다.",
-    "description_zh": "受到攻击时,对目标进行反击。",
-    "icon": "SC_Buff_Counter"
-  },
-  {
     "name": "BT_COUNTERATTACK",
     "category": "utility",
     "group": "BT_STAT|ST_COUNTER_RATE",
@@ -396,19 +382,6 @@
     "description_kr": "피격 시 대상에게 반격합니다.",
     "description_zh": "受到攻击时,对目标进行反击。",
     "icon": "SC_Buff_Counter"
-  },
-  {
-    "name": "BT_RUN_PASSIVE_SKILL_ON_TURN_END_DEFENDER_NO_CHECK",
-    "category": "utility",
-    "label": "Agile Response",
-    "label_jp": "迅速対応",
-    "label_kr": "신속 대응",
-    "label_zh": "迅速应对",
-    "description": "Activates the skill on allies once conditions have been met.",
-    "description_jp": "特定の条件を満した場合、\\n該当するスキルを\\n味方に発動する。",
-    "description_kr": "조건 만족 시 아군에게 해당 스킬을 사용합니다.",
-    "description_zh": "满足条件时,对友军使用该技能。",
-    "icon": "IG_Buff_Effect_Revenge_Heal"
   },
   {
     "name": "BT_AGILE_RESPONSE",
@@ -900,19 +873,6 @@
     "icon": "IG_Buff_2000059_Interruption"
   },
   {
-    "name": "IG_Buff_2000063_Interruption",
-    "category": "unique",
-    "label": "Show Your Loyalty!",
-    "label_jp": "忠義をみせろ",
-    "label_kr": "충의를 보여라",
-    "label_zh": "表明你的忠心吧",
-    "description": "Takes 15% of damage suffered by Demiurge Drakhan in their place. Health cannot be reduced below 1 by this effect. (Irremovable)",
-    "description_jp": "この効果を付与している仲間は\\n【デミウルゴス・ドレイカーン】の\\n受けるダメージ15%を代わりに\\n受ける。\\nこの効果で受けたダメージでは、\\nHPが1以下にDOWNしない。\\n(解除不可)",
-    "description_kr": "드레이칸(데미우르고스)이 받는 피해의 15%를 대신 받습니다. 해당 효과로는 체력이 1 이하로 감소하지 않습니다. (해제 불가)",
-    "description_zh": "代替(创世之神)德雷坎承受其所受伤害的15%。\\n该效果不会使生命值降至1以下。(无法解除)",
-    "icon": "IG_Buff_2000063_Interruption"
-  },
-  {
     "name": "SHOW_YOUR_LOYALTY",
     "category": "unique",
     "label": "Show Your Loyalty!",
@@ -1002,19 +962,6 @@
     "description_kr": "미카즈키 1식 : 개화 이후 추가 공격이 발생합니다 (해제 불가)",
     "description_zh": "三日月1式:\\n开花后发动额外攻击(无法解除)",
     "icon": "IG_Buff_Effect_2000065_B_Interruption"
-  },
-  {
-    "name": "IG_Buff_Effect_2000067_Interruption",
-    "category": "unique",
-    "label": "Regina's World",
-    "label_jp": "レジーナワールド",
-    "label_kr": "레지나의 세계",
-    "label_zh": "蕾吉纳的世界",
-    "description": "Greatly reduces damage taken from enemies that are not granted increased Effectiveness. (Unstackable, Irremovable)",
-    "description_jp": "効果命中UP状態ではない敵から受ける\\nダメージが大幅にDOWNする。\\n(回数累積不可・解除不可)",
-    "description_kr": "효과 적중이 증가하지 않은 적에게 받는 피해가 크게 감소합니다. (횟수 누적 불가, 해제 불가)",
-    "description_zh": "受到未持有[效果命中提升]状态的敌人的伤害大幅降低。\\n(无法叠加、无法解除)",
-    "icon": "IG_Buff_Effect_2000067_Interruption"
   },
   {
     "name": "REGINAS_WORLD",

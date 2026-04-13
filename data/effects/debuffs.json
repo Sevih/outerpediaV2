@@ -370,34 +370,6 @@
     "icon": "SC_Buff_resource_down"
   },
   {
-    "name": "BT_REVERSE_HEAL_BASED_CASTER",
-    "category": "utility",
-    "group": "BT_FIXED_DAMAGE",
-    "label": "Fixed Damage",
-    "label_jp": "固定ダメージ",
-    "label_kr": "고정 피해",
-    "label_zh": "固定伤害",
-    "description": "Deals a set amount of damage based on the caster's max HP",
-    "description_jp": "自身の最大HPに応じた固定ダメージを与える。",
-    "description_kr": "자신의 최대 HP에 비례한 고정 피해를 입힙니다.",
-    "description_zh": "造成基于自身最大生命值的固定伤害。",
-    "icon": "SC_Buff_Effect_True_Dmg"
-  },
-  {
-    "name": "BT_REVERSE_HEAL_BASED_TARGET",
-    "category": "utility",
-    "group": "BT_FIXED_DAMAGE",
-    "label": "Fixed Damage",
-    "label_jp": "固定ダメージ",
-    "label_kr": "고정 피해",
-    "label_zh": "固定伤害",
-    "description": "Deals a set amount of damage based on the target's max HP",
-    "description_jp": "対象の最大HPに基づく一定量のダメージを与える。",
-    "description_kr": "대상의 최대 HP를 기준으로 한 고정 피해를 줍니다.",
-    "description_zh": "造成基于目标最大生命值的固定伤害。",
-    "icon": "SC_Buff_Effect_True_Dmg"
-  },
-  {
     "name": "BT_SEALED",
     "category": "utility",
     "label": "Unbuffable",
@@ -917,20 +889,6 @@
     "icon": "IG_Buff_Death_Timer_Interruption_D"
   },
   {
-    "name": "IG_Buff_Dot_Burn_Interruption_D",
-    "category": "dot",
-    "group": "BT_DOT_BURN",
-    "label": "Burned",
-    "label_jp": "火傷",
-    "label_kr": "화상",
-    "label_zh": "烧伤",
-    "description": "Takes damage proportional to the caster's Attack at the start of the turn. Ignores Defense. (Irremovable)",
-    "description_jp": "ターン開始時、防御力を無視する\\nダメージを受ける。\\nスキル使用者の攻撃力が高いほど\\n受けるダメージがUPする。\\n(解除不可)",
-    "description_kr": "턴 시작 시 시전자의 공격력에 비례한 피해를 입습니다. 대상의 방어력을 무시합니다. (해제 불가)",
-    "description_zh": "回合开始时,根据施展者的攻击力\\n受到等比伤害。无视目标的防御力。\\n(无法解除)",
-    "icon": "IG_Buff_Dot_Burn_Interruption_D"
-  },
-  {
     "name": "BT_DOT_BURN_IR",
     "category": "dot",
     "group": "BT_DOT_BURN",
@@ -943,20 +901,6 @@
     "description_kr": "턴 시작 시 시전자의 공격력에 비례한 피해를 입습니다. 대상의 방어력을 무시합니다. (해제 불가)",
     "description_zh": "回合开始时,根据施展者的攻击力\\n受到等比伤害。无视目标的防御力。\\n(无法解除)",
     "icon": "IG_Buff_Dot_Burn_Interruption_D"
-  },
-  {
-    "name": "IG_Buff_Dot_Curse_Interruption_D",
-    "category": "dot",
-    "group": "BT_DOT_CURSE",
-    "label": "Cursed",
-    "label_jp": "呪い",
-    "label_kr": "저주",
-    "label_zh": "诅咒",
-    "description": "Takes damage proportional to Health at the start of the turn.\\nRemoved when the caster dies. (Irremovable)",
-    "description_jp": "ターン開始時、ダメージを受ける。\\n自分のHPが高いほど、\\n受けるダメージがUPする。\\nスキル使用者が倒れると\\n解除される。\\n(解除不可)",
-    "description_kr": "턴 시작 시 자신의 체력에 비례한 피해를 받습니다.\\n시전자가 사망 시 해제됩니다. (해제 불가)",
-    "description_zh": "回合开始时,根据自身的生命值\\n受到等比伤害。\\n施展者死亡时解除。(无法解除)",
-    "icon": "IG_Buff_Dot_Curse_Interruption_D"
   },
   {
     "name": "BT_DOT_CURSE_IR",
@@ -984,20 +928,6 @@
     "description_kr": "턴 시작 시 자신의 강화 효과 지속 턴 1턴 감소하며, 적 전체의 약화 효과 지속 턴 1턴 감소시킵니다.\\n각 팀당 한 명에게만 적용되며, 다른 대상에게 효과가 생성 될 때 기존 대상의 효과는 제거 됩니다.\\n시전자가 사망 시 해제됩니다. (해제 불가)",
     "description_zh": "回合开始时,自身的强化效果持续回合减少1回合,\\n使全体敌人的弱化效果持续回合减少1回合。\\n每队仅一名套用此效果,当对其他目标造成此效果时,\\n原本目标的效果将会解除。\\n施展者死亡时解除。(无法解除)",
     "icon": "IG_Buff_Effect_2000102_Interruption_D"
-  },
-  {
-    "name": "IG_Buff_Effect_Sealed_Interruption_D",
-    "category": "utility",
-    "group": "BT_SEALED",
-    "label": "Unbuffable",
-    "label_jp": "強化不可",
-    "label_kr": "강화 불가",
-    "label_zh": "无法强化",
-    "description": "Cannot gain buffs. (Excludes certain effects; cannot be removed)",
-    "description_jp": "強化効果を獲得できない。\\n (一部の効果を除く、解除不可)",
-    "description_kr": "강화 효과를 획득할 수 없습니다. (일부 효과 제외, 해제 불가)",
-    "description_zh": "无法获得强化效果。\\n(部分效果除外,无法解除)",
-    "icon": "IG_Buff_Effect_Sealed_Interruption_D"
   },
   {
     "name": "BT_SEALED_IR",
