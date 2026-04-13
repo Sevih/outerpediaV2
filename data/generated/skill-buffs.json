@@ -412,7 +412,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_COUNTER",
+        "type": "BT_COUNTERATTACK",
         "debuff": false,
         "target": null
       }
@@ -668,7 +668,7 @@
       {
         "type": "BT_DOT_CURSE",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       }
     ]
   },
@@ -682,9 +682,9 @@
     ],
     "s2": [
       {
-        "type": "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
-        "target": "ME"
+        "target": null
       },
       {
         "type": "BT_ACTION_GAUGE",
@@ -730,9 +730,9 @@
         "target": "ME"
       },
       {
-        "type": "BT_IMMEDIATELY_BLEED",
+        "type": "DETONATE",
         "debuff": true,
-        "target": "ENEMY"
+        "target": null
       }
     ]
   },
@@ -985,7 +985,7 @@
         "target": "ENEMY_TEAM"
       },
       {
-        "type": "EXECUTION_TIME!",
+        "type": "EXECUTION_TIME",
         "debuff": true,
         "target": null
       }
@@ -1079,7 +1079,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       }
@@ -1514,7 +1514,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       }
     ]
   },
@@ -1528,9 +1528,9 @@
     ],
     "s2": [
       {
-        "type": "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
-        "target": "ME"
+        "target": null
       },
       {
         "type": "BT_STAT|ST_ATK",
@@ -1540,9 +1540,9 @@
     ],
     "s3": [
       {
-        "type": "BT_IMMEDIATELY_BURN",
+        "type": "DETONATE",
         "debuff": true,
-        "target": "ENEMY"
+        "target": null
       }
     ],
     "chain": [
@@ -1614,14 +1614,9 @@
     ],
     "s2": [
       {
-        "type": "PUREBLOOD'S_DOMINION",
+        "type": "PUREBLOODS_DOMINION",
         "debuff": false,
         "target": null
-      },
-      {
-        "type": "BT_DOT_BLEED",
-        "debuff": true,
-        "target": "ENEMY"
       },
       {
         "type": "BT_DOT_BLEED_IR",
@@ -1657,9 +1652,9 @@
     ],
     "ee": [
       {
-        "type": "IG_Buff_Dot_Bleed_Interruption_D",
+        "type": "BT_DOT_BLEED_IR",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": null
       }
     ]
   },
@@ -1673,7 +1668,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_REVENGE_HEAL",
+        "type": "BT_AGILE_RESPONSE",
         "debuff": false,
         "target": null
       },
@@ -2233,7 +2228,7 @@
   "2000047": {
     "s2": [
       {
-        "type": "SYS_BUFF_REVENGE_HEAL",
+        "type": "BT_AGILE_RESPONSE",
         "debuff": false,
         "target": null
       },
@@ -2681,7 +2676,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -2729,9 +2724,9 @@
     ],
     "ee": [
       {
-        "type": "IG_Buff_2000056_Interruption",
+        "type": "FIERCE_OFFENSIVE",
         "debuff": false,
-        "target": "ME"
+        "target": null
       },
       {
         "type": "BT_ACTION_GAUGE",
@@ -2743,9 +2738,9 @@
   "2000057": {
     "s1": [
       {
-        "type": "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
-        "target": "ME"
+        "target": null
       },
       {
         "type": "BT_STAT|ST_SPEED",
@@ -2803,7 +2798,7 @@
   "2000058": {
     "s1": [
       {
-        "type": "SYS_BUFF_ADDITIVE_SKILL",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -2863,7 +2858,7 @@
         "target": "ME"
       },
       {
-        "type": "DOLL_GARDEN'S_CARETAKER",
+        "type": "DOLL_GARDENS_CARETAKER",
         "debuff": false,
         "target": null
       },
@@ -2880,7 +2875,7 @@
     ],
     "s2": [
       {
-        "type": "DOLL_GARDEN'S_CARETAKER",
+        "type": "DOLL_GARDENS_CARETAKER",
         "debuff": false,
         "target": null
       },
@@ -2916,9 +2911,9 @@
     ],
     "ee": [
       {
-        "type": "IG_Buff_2000059_Interruption",
+        "type": "DOLL_GARDENS_CARETAKER",
         "debuff": false,
-        "target": "ME"
+        "target": null
       },
       {
         "type": "BT_AP_CHARGE",
@@ -3019,7 +3014,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_REVENGE_HEAL",
+        "type": "BT_AGILE_RESPONSE",
         "debuff": false,
         "target": null
       },
@@ -3153,7 +3148,7 @@
     ],
     "s2": [
       {
-        "type": "SHOW_YOUR_LOYALTY!",
+        "type": "SHOW_YOUR_LOYALTY",
         "debuff": false,
         "target": null
       },
@@ -3289,7 +3284,7 @@
     ],
     "s3": [
       {
-        "type": "SAKURA,_CHIRU",
+        "type": "SAKURA_CHIRU",
         "debuff": false,
         "target": null
       },
@@ -3339,7 +3334,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_SKILL",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -3406,7 +3401,7 @@
         "target": "ME"
       },
       {
-        "type": "REGINA’S_WORLD",
+        "type": "REGINAS_WORLD",
         "debuff": false,
         "target": null
       },
@@ -3428,24 +3423,24 @@
         "target": "ME"
       },
       {
-        "type": "SYS_BUFF_COUNTER",
+        "type": "BT_COUNTERATTACK",
         "debuff": false,
         "target": null
       },
       {
         "type": "BT_STAT|ST_AVOID",
         "debuff": false,
-        "target": null
+        "target": "ME"
       },
       {
-        "type": "REGINA’S_WORLD",
+        "type": "REGINAS_WORLD",
         "debuff": false,
         "target": null
       }
     ],
     "s3": [
       {
-        "type": "REGINA’S_WORLD",
+        "type": "REGINAS_WORLD",
         "debuff": false,
         "target": null
       },
@@ -3677,7 +3672,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -3687,7 +3682,7 @@
         "target": "ME"
       },
       {
-        "type": "SYS_BUFF_COUNTER",
+        "type": "BT_COUNTERATTACK",
         "debuff": false,
         "target": null
       },
@@ -3739,12 +3734,12 @@
     ],
     "s2": [
       {
-        "type": "A_NINJA'S_AFTERIMAGE",
+        "type": "A_NINJAS_AFTERIMAGE",
         "debuff": false,
         "target": null
       },
       {
-        "type": "SYS_BUFF_REVENGE_HEAL",
+        "type": "BT_AGILE_RESPONSE",
         "debuff": false,
         "target": null
       },
@@ -3803,9 +3798,9 @@
         "target": "ME"
       },
       {
-        "type": "BT_IMMEDIATELY_BURN",
+        "type": "DETONATE",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": null
       },
       {
         "type": "BT_DOT_BURN",
@@ -3936,12 +3931,12 @@
     ],
     "s2": [
       {
-        "type": "DESTROYER'S_PUNISHMENT",
+        "type": "DESTROYERS_PUNISHMENT",
         "debuff": false,
         "target": null
       },
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -4045,7 +4040,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -4209,7 +4204,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_COUNTER",
+        "type": "BT_COUNTERATTACK",
         "debuff": false,
         "target": null
       },
@@ -4269,7 +4264,7 @@
         "target": "ME"
       },
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -4348,7 +4343,7 @@
         "target": "ME"
       },
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -4429,7 +4424,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_REVENGE_HEAL",
+        "type": "BT_AGILE_RESPONSE",
         "debuff": false,
         "target": null
       },
@@ -4506,7 +4501,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_REVENGE_HEAL",
+        "type": "BT_AGILE_RESPONSE",
         "debuff": false,
         "target": null
       },
@@ -4556,9 +4551,9 @@
     ],
     "s2": [
       {
-        "type": "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
-        "target": "ME"
+        "target": null
       },
       {
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
@@ -4655,9 +4650,9 @@
         "target": "ME"
       },
       {
-        "type": "BT_IMMEDIATELY_CURSE",
+        "type": "DETONATE",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": null
       },
       {
         "type": "BT_AP_CHARGE",
@@ -4774,7 +4769,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_COUNTER",
+        "type": "BT_COUNTERATTACK",
         "debuff": false,
         "target": null
       },
@@ -4819,7 +4814,7 @@
         "target": "ME"
       },
       {
-        "type": "SYS_BUFF_ADDITIVE_SKILL",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -4859,14 +4854,14 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_COUNTER",
+        "type": "BT_COUNTERATTACK",
         "debuff": false,
         "target": null
       }
     ],
     "s3": [
       {
-        "type": "HUBRIS'S_DOMINION",
+        "type": "HUBRISS_DOMINION",
         "debuff": false,
         "target": null
       }
@@ -4995,7 +4990,7 @@
   "2000092": {
     "s1": [
       {
-        "type": "RETRIBUTION'S_DOMINION",
+        "type": "RETRIBUTIONS_DOMINION",
         "debuff": false,
         "target": null
       },
@@ -5005,14 +5000,14 @@
         "target": "MY_TEAM"
       },
       {
-        "type": "BT_DOT_2000092",
+        "type": "ETERNAL_BLEEDING",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": null
       },
       {
-        "type": "BT_IMMEDIATELY_2000092",
+        "type": "DETONATE",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": null
       }
     ],
     "s2": [
@@ -5022,21 +5017,16 @@
         "target": "MY_TEAM_WITHOUT_ME"
       },
       {
-        "type": "BT_DOT_2000092",
+        "type": "ETERNAL_BLEEDING",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": null
       }
     ],
     "s3": [
       {
-        "type": "RETRIBUTION'S_DOMINION",
+        "type": "RETRIBUTIONS_DOMINION",
         "debuff": false,
         "target": null
-      },
-      {
-        "type": "BT_IMMEDIATELY_2000092",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
       },
       {
         "type": "DETONATE",
@@ -5046,16 +5036,16 @@
     ],
     "chain": [
       {
-        "type": "BT_DOT_2000092",
+        "type": "ETERNAL_BLEEDING",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": null
       }
     ],
     "chain_dual": [
       {
-        "type": "BT_DOT_2000092",
+        "type": "ETERNAL_BLEEDING",
         "debuff": true,
-        "target": "ENEMY"
+        "target": null
       }
     ],
     "ee": [
@@ -5093,7 +5083,7 @@
       {
         "type": "BT_RANDOM_STAT",
         "debuff": false,
-        "target": null
+        "target": "MY_TEAM"
       }
     ],
     "s3": [
@@ -5177,11 +5167,6 @@
         "target": "ME"
       },
       {
-        "type": "BT_BURN_ENHANCE",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
         "type": "BT_DOT_BURN",
         "debuff": true,
         "target": "ENEMY_TEAM"
@@ -5212,11 +5197,6 @@
   "2000095": {
     "s1": [
       {
-        "type": "BT_DOT_BURN",
-        "debuff": true,
-        "target": "ENEMY"
-      },
-      {
         "type": "BT_DOT_BURN_IR",
         "debuff": true,
         "target": null
@@ -5224,17 +5204,17 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_SKILL",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
       {
-        "type": "BT_SEAL_COUNTER",
+        "type": "GRACE_OF_THE_VIRGIN_GODDESS",
         "debuff": false,
         "target": "ME"
       },
       {
-        "type": "GRACE_OF_THE_VIRGIN_GODDESS",
+        "type": "BT_SEAL_COUNTER",
         "debuff": false,
         "target": "ME"
       }
@@ -5326,7 +5306,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -5366,7 +5346,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_SKILL",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -5617,7 +5597,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_SKILL",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -5677,9 +5657,9 @@
   "2000103": {
     "s1": [
       {
-        "type": "BT_ADDITIVE_ATTACK_ON_EVENT",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
-        "target": "ME"
+        "target": null
       },
       {
         "type": "BT_CALL_BACKUP",
@@ -5909,7 +5889,7 @@
     ],
     "s3": [
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },
@@ -5969,7 +5949,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_COUNTER",
+        "type": "BT_COUNTERATTACK",
         "debuff": false,
         "target": null
       },
@@ -6017,9 +5997,9 @@
         "target": "ME"
       },
       {
-        "type": "BT_IMMEDIATELY_POISON",
+        "type": "DETONATE",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": null
       },
       {
         "type": "BT_REMOVE_BUFF",
@@ -6056,8 +6036,13 @@
         "target": "ME"
       },
       {
-        "type": "BANE’S_DOMAIN",
+        "type": "BANES_DOMAIN",
         "debuff": false,
+        "target": null
+      },
+      {
+        "type": "BANES_DOMAIN",
+        "debuff": true,
         "target": null
       },
       {
@@ -6195,14 +6180,14 @@
         "target": "ME"
       },
       {
-        "type": "BT_WG_DMG",
-        "debuff": false,
-        "target": "MY_TEAM"
-      },
-      {
         "type": "BT_CALL_BACKUP_2",
         "debuff": false,
         "target": "ME"
+      },
+      {
+        "type": "BT_WG_REVERSE_HEAL",
+        "debuff": true,
+        "target": "ENEMY"
       }
     ],
     "s2": [
@@ -6300,14 +6285,14 @@
         "type": "BT_REVERSE_HEAL_BASED_TARGET",
         "debuff": true,
         "target": "ENEMY_SKILL_TARGET"
-      },
-      {
-        "type": "BUFF_TRANSFER",
-        "debuff": true,
-        "target": null
       }
     ],
     "s2": [
+      {
+        "type": "BT_ACTION_GAUGE",
+        "debuff": false,
+        "target": "ME"
+      },
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": true,
@@ -6316,7 +6301,7 @@
     ],
     "s3": [
       {
-        "type": "SPATIAL_DISTORTION_(SELF)",
+        "type": "SPATIAL_DISTORTION_SELF",
         "debuff": false,
         "target": null
       },
@@ -6331,7 +6316,7 @@
         "target": "ENEMY_SKILL_TARGET"
       },
       {
-        "type": "SPATIAL_DISTORTION_(ENEMY)",
+        "type": "SPATIAL_DISTORTION_ENEMY",
         "debuff": true,
         "target": null
       },
@@ -6339,16 +6324,6 @@
         "type": "BT_REVERSE_HEAL_BASED_TARGET",
         "debuff": true,
         "target": "ENEMY_SKILL_TARGET"
-      },
-      {
-        "type": "BT_ACTION_GAUGE_ENHANCE_REVERSE",
-        "debuff": true,
-        "target": "ENEMY_TEAM"
-      },
-      {
-        "type": "BUFF_TRANSFER",
-        "debuff": true,
-        "target": null
       }
     ],
     "chain": [
@@ -6398,7 +6373,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_REVENGE_HEAL",
+        "type": "BT_AGILE_RESPONSE",
         "debuff": false,
         "target": null
       },
@@ -6473,14 +6448,9 @@
         "target": "ENEMY"
       },
       {
-        "type": "BT_IMMEDIATELY_BURN",
+        "type": "DETONATE",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
-      },
-      {
-        "type": "BT_IMMEDIATELY_BLEED",
-        "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": null
       }
     ],
     "s2": [
@@ -6772,7 +6742,7 @@
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_COUNTER",
+        "type": "BT_COUNTERATTACK",
         "debuff": false,
         "target": null
       },
@@ -6856,14 +6826,14 @@
         "target": "ENEMY_SKILL_TARGET"
       },
       {
-        "type": "BT_IMMEDIATELY_POISON",
+        "type": "DETONATE",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": null
       }
     ],
     "s2": [
       {
-        "type": "SYS_BUFF_ADDITIVE_ATTACK",
+        "type": "BT_ADDITIVE_ATTACK",
         "debuff": false,
         "target": null
       },

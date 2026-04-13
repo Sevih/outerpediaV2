@@ -5325,7 +5325,7 @@
     "English": "Front Line",
     "Japanese": "前列",
     "China_Simplified": "前排",
-    "China_Traditional": "前排"
+    "China_Traditional": "前列"
   },
   {
     "ID": "SYS_LINE_BACK",
@@ -5333,7 +5333,7 @@
     "English": "Back Line",
     "Japanese": "後列",
     "China_Simplified": "后排",
-    "China_Traditional": "後排"
+    "China_Traditional": "後列"
   },
   {
     "ID": "SYS_SUPPORTER",
@@ -28570,7 +28570,7 @@
   {
     "ID": "SYS_ACCOUNT_COUPON",
     "Korean": "쿠폰 등록",
-    "English": "Enter Coupon",
+    "English": "Enter Code",
     "Japanese": "クーポン登録",
     "China_Simplified": "输入优惠券",
     "China_Traditional": "登錄序號"
@@ -52755,7 +52755,7 @@
     "ID": "SYS_GUIDE_REALTIME_PVP_03_DESC",
     "Korean": "실시간 대전은 팀 편성을 매칭 이후에 진행하게 됩니다.\\n매칭으로 대전 상대가 확정되면, [프리 밴]을 진행하게 되며, 이때 자신과 대전 상대가 각각 1명의 동료를 밴하게 됩니다.\\n[프리 밴]에서 제외된 2명의 동료는 전투 팀 편성이 불가능합니다.\\n[동료 선택] 자신과 대전 상대가 번갈아가며, 전투에 참여할 동료를 5명 선택하게 됩니다.\\n5명의 동료가 모두 결정되면, 상대방 동료 5명 중 1명을 제외하는 [마지막 밴]이 진행됩니다.\\n[마지막 밴] 이후 최종 동료 4명의 설정 시간이 주어지며, 자신과 대전 상대 모두 설정 완료 시 실시간 대전에 입장합니다.",
     "English": "In Real Time Arena, team formation takes place after matchmaking.\\nOnce matched, a [Pre-Ban] phase begins where you and your opponent each ban 1 hero.\\nThe 2 banned heroes cannot be included in the battle team.\\n[Hero Selection] You and your opponent take turns selecting 5 heroes for battle.\\nOnce all 5 heroes are selected, a [Last Ban] phase begins where each player bans 1 of the opponent's 5 heroes.\\nAfter the [Last Ban], both players are given time to finalize their team with the remaining 4 heroes. Once both are ready, the Real Time Arena battle begins.",
-    "Japanese": "ワールドアリーナではマッチング以後にチーム編成が行われます。\\nマッチングで対戦相手が決まると【プレBAN】を行い、自分と対戦相手が仲間を1体ずつBANすることになります。\\n【プレBAN】された仲間2体は戦闘チームに編成\\nできません。\\n【仲間選択】自身と対戦相手が交互に参戦する仲間を5体\\n選びます。\\n5体の仲間が決まると、相手の仲間の中で1体をBANする\\n【最終BAN】を行います。\\n【最終BAN】後、最終の仲間4体の設定時間が\\n与えられます。自分と対戦相手の両方が設定を完了すると\\nワールドアリーナに入場します。",
+    "Japanese": "ワールドアリーナではマッチング以後にチーム編成が行われます。\\nマッチングで対戦相手が決まると【プリバン】を行い、自分と対戦相手が仲間を1体ずつBANすることになります。\\n【プリバン】された仲間2体は戦闘チームに編成\\nできません。\\n【仲間選択】自身と対戦相手が交互に参戦する仲間を5体\\n選びます。\\n5体の仲間が決まると、相手の仲間の中で1体をBANする\\n【最終BAN】を行います。\\n【最終BAN】後、最終の仲間4体の設定時間が\\n与えられます。自分と対戦相手の両方が設定を完了すると\\nワールドアリーナに入場します。",
     "China_Simplified": "玩家在实时对战中将分组进行对战。\\n通过匹配确定对手后，双方玩家需各选择1名【预先禁用】同伴。\\n【预先禁用】的同伴将无法配置于战斗队伍中。\\n在【选择同伴】环节，对战双方将依次交替选择5名同伴参与战斗。\\n选择完毕后，对战双方将在对方5名同伴中选择1名作为【最终禁用】。\\n选择【最终禁用】的同伴后，对战双方可在限定时间内配置最终余留的4名英雄，双方皆配置完成后，即将开启实时对战战斗。",
     "China_Traditional": "即時對戰將在配對後進行隊伍編制。\\n透過配對確定對戰的對手後，將進行【禁用同伴】。此時自己與對戰對手可分別禁用1名同伴。\\n在【禁用同伴】階段被排除的2名同伴將無法編制至戰鬥隊伍中。\\n【選擇同伴】則是自己和對戰對手輪流選擇5名參加戰鬥的同伴。\\n5名同伴全部決定後，將進行排除對手5名同伴中其中1名的【最終禁用】。\\n【最終禁用】之後，會提供配置最終4名同伴的設定時間；當自己和對戰對手全部設定完畢後，將進入即時對戰。"
   },
@@ -52867,7 +52867,7 @@
     "ID": "SYS_GUIDE_FRIENDSHIP_PVP_02_NAME",
     "Korean": "밴픽 진행",
     "English": "Ban Pick Process",
-    "Japanese": "バンピックの進行",
+    "Japanese": "BAN・PICKの進行",
     "China_Simplified": "禁用选择进行",
     "China_Traditional": "禁用選擇進行"
   },
@@ -113659,7 +113659,7 @@
     "ID": "SYS_REALTIME_ARENA_ML_FAVORITE_CHAR_DESC",
     "Korean": "등록된 동료가 [밴픽] 화면에서 우선 표기됩니다.(최대 6명)",
     "English": "Added heroes will be displayed first in the [Ban Pick] screen. (Max 6)",
-    "Japanese": "登録した仲間が[バンピック]画面で優先表示されます。(最大6名)",
+    "Japanese": "登録した仲間が[BAN・PICK]画面で優先表示されます。(最大6名)",
     "China_Simplified": "已注册的同伴将在[禁用选择]界面优先显示。(最多6名)",
     "China_Traditional": "已登錄的同伴將在[禁用選擇]介面優先顯示。(最多6名)"
   },
@@ -113731,7 +113731,7 @@
     "ID": "SYS_REALTIME_ARENA_BATTLE_POSITION_DESC_01",
     "Korean": "BAN PICK",
     "English": "Ban Pick",
-    "Japanese": "バンピック",
+    "Japanese": "BAN・PICK",
     "China_Simplified": "禁用选择",
     "China_Traditional": "禁用選擇"
   },
@@ -114422,5 +114422,21 @@
     "Japanese": "ワールドアリーナイベントミッションクリア",
     "China_Simplified": "实时对战活动任务通关",
     "China_Traditional": "即時對戰活動任務通關"
+  },
+  {
+    "ID": "SYS_LINE_MIDDLE",
+    "Korean": "중열",
+    "English": "Middle Line",
+    "Japanese": "中列",
+    "China_Simplified": "中排",
+    "China_Traditional": "中列"
+  },
+  {
+    "ID": "SYS_REALTIME_BAN",
+    "Korean": "금지 동료",
+    "English": "Banned Hero",
+    "Japanese": "禁止対象",
+    "China_Simplified": "被禁用同伴",
+    "China_Traditional": "被禁用同伴"
   }
 ]
