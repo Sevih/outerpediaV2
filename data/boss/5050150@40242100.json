@@ -51,7 +51,7 @@
       },
       "icon": "Skill_First_4024002",
       "debuff": [
-        "BT_IMMEDIATELY_POISON"
+        "DETONATE"
       ]
     },
     {
@@ -112,8 +112,7 @@
         "BT_STAT|ST_DEF_IR",
         "BT_STAT|ST_SPEED_IR",
         "BT_STAT|ST_BUFF_CHANCE_IR",
-        "BT_STAT|ST_PIERCE_POWER_RATE_IR",
-        "BT_STAT|ST_DEF"
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
       ]
     },
     {
@@ -150,6 +149,9 @@
       "buff": [
         "BT_STAT|ST_ATK_IR",
         "BT_DAMAGE_TAKEN"
+      ],
+      "debuff": [
+        "BT_DOT_POISON_IR"
       ]
     }
   ]

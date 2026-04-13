@@ -243,5 +243,8 @@
   "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 8, <color=#28d9ed>counterattacks</color> all enemies.\\nAfter counterattacking, has a <color=#28d9ed>100%</color> chance to inflict irremovable <color=#28d9ed>reduced Attack/Defense</color> and <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>9 turn(s)</color>.\\nThis attack ignores the target's Resilience and Immunity and damage dealt increases inversely proportional to the number of targets.": {
     "remove_debuff": ["BT_SEALED_RESURRECTION"],
     "add_debuff": ["BT_STAT|ST_ATK_IR", "BT_STAT|ST_DEF_IR"]
+  },
+  "Attacks all enemies.\\n\\nAfter attacking, inflicts <color=#28d9ed>Bane's Domain</color> on all allies and enemy <color=#28d9ed>Magic</color> units for <color=#28d9ed>1 turn(s)</color>. (Ignores Resilience and Immunity)\\n\\nDamage dealt increases proportional to Max Health instead of Attack.":{
+    "remove_buff": ["BT_STAT|ST_DEF"]
   }
 }

@@ -50,11 +50,11 @@
         "zh": "攻击敌人，并对全体敌人造成无视效果抵抗的<color=#28d9ed>触电</color>效果，持续<color=#28d9ed>2回合</color>。\\n此技能发动后，敌人不会触发反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_First_4014002",
-      "debuff": [
-        "BT_DOT_LIGHTNING"
-      ],
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_DOT_LIGHTNING"
       ]
     },
     {
@@ -72,11 +72,11 @@
         "zh": "攻击全体敌人。对全体敌人造成无视效果抵抗的<color=#28d9ed>触电</color>效果，持续<color=#28d9ed>4回合</color>。\\n此技能发动后，敌人不会触发反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Second_4014002",
-      "debuff": [
-        "BT_DOT_LIGHTNING"
-      ],
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_DOT_LIGHTNING"
       ]
     },
     {
@@ -94,11 +94,11 @@
         "zh": "攻击全体敌人。对附带弱化效果的目标无视效果抵抗和免疫，并使<color=#28d9ed>AP</color><color=#28d9ed>全部</color>降低。\\n此技能发动后，敌人不会触发反击、复仇、迅速应对效果。"
       },
       "icon": "Skill_Ultimate_4014002",
-      "debuff": [
-        "BT_AP_CHARGE"
-      ],
       "buff": [
         "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_AP_CHARGE"
       ]
     },
     {
@@ -159,8 +159,9 @@
       ],
       "debuff": [
         "BT_SEALED_RESURRECTION",
+        "BT_KILL_UNDER_HP_RATE",
         "BT_REMOVE_BUFF",
-        "BT_REVERSE_HEAL_BASED_TARGET"
+        "BT_KILL"
       ]
     }
   ]

@@ -71,7 +71,8 @@
       "icon": "Skill_Second_2000067",
       "buff": [
         "BT_COOL3_CHARGE",
-        "BT_COUNTERATTACK"
+        "BT_COUNTERATTACK",
+        "REGINAS_WORLD"
       ]
     },
     {
@@ -89,6 +90,9 @@
         "zh": "解除目标所有强化效果并攻击敌人。攻击后，生成<color=#28d9ed>1次</color><color=#28d9ed>蕾吉娜的世界</color>。该效果受到攻击时次数减少。\\n该技能无视目标<color=#28d9ed>30%</color>的防御力，且伤害随自身的<color=#28d9ed>暴击率</color>提升。解除强化效果无视目标的效果抵抗。"
       },
       "icon": "Skill_Ultimate_2000067",
+      "buff": [
+        "REGINAS_WORLD"
+      ],
       "debuff": [
         "BT_REMOVE_BUFF"
       ]
