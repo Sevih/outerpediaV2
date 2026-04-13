@@ -397,7 +397,9 @@ export function classifyEffects(
     s.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"')
 
   if (ctx.description) {
-    const normalizedDesc = normalizePunct(ctx.description.replace(/\\n/g, '\n'))
+    // Trim trailing whitespace so override keys don't have to worry about
+    // whether the game text ends with a stray space.
+    const normalizedDesc = normalizePunct(ctx.description.replace(/\\n/g, '\n')).trimEnd()
     // Description-derived labels intentionally bypass the label
     // blacklist: a blacklist entry is meant to suppress noisy rows
     // from BuffTemplet, but when the skill description explicitly
@@ -429,7 +431,7 @@ export function classifyEffects(
     // Both variants go through punct normalization so smart quotes match.
     const override =
       rules.descriptionOverrides.get(normalizedDesc) ??
-      rules.descriptionOverrides.get(normalizePunct(ctx.description))
+      rules.descriptionOverrides.get(normalizePunct(ctx.description).trimEnd())
     if (override) {
       if (override.clearBuff) {
         buffs.length = 0

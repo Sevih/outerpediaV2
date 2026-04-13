@@ -230,5 +230,18 @@
   },
   "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> all enemies. Damage dealt increases inversely proportional to the number of targets.": {
     "remove_debuff": ["BT_SEALED_RESURRECTION"]
+  },
+  "(Passive Effect)\\nWhen taking a critical hit, fully reduces the cooldown of <color=#28d9ed>Dragon Ruler's Breath</color>, and increases <color=#28d9ed>Priority</color> of the caster by <color=#28d9ed>35%</color>.": {
+    "remove_buff": ["BT_STAT|ST_SPEED_IR", "BT_DAMAGE_TAKEN"]
+  },
+  "At the start of battle, grants the caster irremovable <color=#28d9ed>Penetration</color> and <color=#28d9ed>DMG Reduction</color>, and reduces the <color=#28d9ed>Attack</color> of the enemy with the highest Attack by <color=#28d9ed>50%</color>.\\n\\nEach turn, increases the caster's <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>5%</color> (up to 10 stacks).\\nDamage the caster takes from <color=#28d9ed>Cursed</color> and <color=#28d9ed>Fixed Damage</color> cannot exceed <color=#28d9ed>10000</color>.": {
+    "remove_buff": ["BT_STAT|ST_SPEED_IR"],
+    "add_buff": ["BT_DAMAGE_TAKEN"],
+    "remove_debuff": ["DRAGON_FEAR"],
+    "add_debuff": ["BT_STAT|ST_ATK_IR"]
+  },
+  "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 8, <color=#28d9ed>counterattacks</color> all enemies.\\nAfter counterattacking, has a <color=#28d9ed>100%</color> chance to inflict irremovable <color=#28d9ed>reduced Attack/Defense</color> and <color=#28d9ed>Unbuffable</color> on all enemies for <color=#28d9ed>9 turn(s)</color>.\\nThis attack ignores the target's Resilience and Immunity and damage dealt increases inversely proportional to the number of targets.": {
+    "remove_debuff": ["BT_SEALED_RESURRECTION"],
+    "add_debuff": ["BT_STAT|ST_ATK_IR", "BT_STAT|ST_DEF_IR"]
   }
 }
