@@ -57,7 +57,7 @@
       "icon": "Skill_First_2000016",
       "buff": [
         "BT_ADDITIVE_TURN",
-        "BT_SHIELD_BASED_CASTER"
+        "BT_BARRIER"
       ]
     },
     {
@@ -77,7 +77,7 @@
       "icon": "Skill_Second_2000016",
       "buff": [
         "BT_IMMUNE",
-        "BT_SHIELD_BASED_CASTER"
+        "BT_BARRIER"
       ],
       "debuff": [
         "BT_STUN"
@@ -99,7 +99,7 @@
       },
       "icon": "Skill_Ultimate_2000016",
       "buff": [
-        "BT_SHIELD_BASED_CASTER",
+        "BT_BARRIER",
         "BT_INVINCIBLE_IR"
       ],
       "debuff": [
@@ -144,7 +144,7 @@
         "BT_STAT|ST_ATK_IR",
         "BT_DAMAGE_TAKEN",
         "BT_STAT|ST_DEF",
-        "BT_SHIELD_BASED_CASTER"
+        "BT_BARRIER"
       ],
       "debuff": [
         "BT_STAT|ST_ATK"

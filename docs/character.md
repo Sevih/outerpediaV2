@@ -369,7 +369,7 @@ Common patterns:
 - `BT_REMOVE_BUFF` — buff removal
 - `BT_AGGRO` — taunt
 - `BT_COOL_CHARGE` — cooldown reduction
-- `BT_SHIELD_BASED_CASTER` — barrier based on caster stats
+- `BT_BARRIER` — barrier based on caster stats
 - `BT_CALL_BACKUP` — dual attack trigger
 - `BT_ACTION_GAUGE` — AP manipulation
 

@@ -102,7 +102,7 @@ Text can contain inline tags for rich rendering. Tags stay **identical across al
 | `BT_REVIVAL` | Revival |
 | `BT_RESURRECTION` | Resurrection |
 | `BT_AP_CHARGE` | AP Charge |
-| `BT_SHIELD_BASED_CASTER` | Shield |
+| `BT_BARRIER` | Shield |
 | `BT_ADDITIVE_TURN` | Extra Turn |
 | `BT_COOL_CHARGE` | Cooldown Reduction |
 | `BT_AGILE_RESPONSE` | End-of-turn passive |

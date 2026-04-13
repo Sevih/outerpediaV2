@@ -104,7 +104,7 @@ export function StatsContent() {
                             <p className="mt-2">{lRec({ en: 'Like Attack, some skills scale with HP, such as', jp: '攻撃力と同様に、一部のスキルはHPに依存します（', kr: '공격력처럼 일부 스킬은 HP에 의존합니다(', zh: '与攻击力类似，部分技能依赖HP，例如' } satisfies LangMap, lang)} {parseText('{SK/Demiurge Drakhan|S1}')}{lRec({ en: '.', jp: 'など）。', kr: ' 등).', zh: '。' } satisfies LangMap, lang)}</p>
                             <p className="mt-3">{lRec({ en: 'You can replenish HP with healing skills, and protect it with buffs like:', jp: '回復スキルでHPを補充し、以下のようなバフで保護できます：', kr: '힐 스킬로 HP를 회복하고, 다음 버프로 보호할 수 있습니다:', zh: '可以用治疗技能补充HP，并用以下增益保护：' } satisfies LangMap, lang)}</p>
                             <ul className="list-disc list-inside ml-4 mt-2">
-                                <li>{parseText('{B/BT_SHIELD_BASED_CASTER}')}</li>
+                                <li>{parseText('{B/BT_BARRIER}')}</li>
                                 <li>{parseText('{B/BT_INVINCIBLE}')}</li>
                                 <li>{parseText('{B/BT_UNDEAD}')}</li>
                             </ul>
