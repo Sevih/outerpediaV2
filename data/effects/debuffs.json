@@ -333,6 +333,19 @@
     "description_zh": "立即发动指定的弱化效果。会受到\\n回合数与附带数量的影响。",
     "icon": "SC_Buff_detonate"
   },
+    {
+    "name": "DETONATE",
+    "category": "dot",
+    "label": "Detonate",
+    "label_jp": "破裂",
+    "label_kr": "폭발",
+    "label_zh": "爆炸",
+    "description": "Activates certain debuffs immediately. Magnitude determined by the number of turns remaining and stacks applied.",
+    "description_jp": "指定された弱体効果の\\nダメージを即時に与える。\\n弱体効果のターン数と付与数が\\n多いほど、ダメージがUPする。",
+    "description_kr": "지정된 약화 효과를 즉시 발동시킵니다. 턴 수와 적용된 수량에 영향을 받습니다.",
+    "description_zh": "立即发动指定的弱化效果。会受到\\n回合数与附带数量的影响。",
+    "icon": "SC_Buff_detonate"
+  },
   {
     "name": "BT_IMMEDIATELY_BURN",
     "category": "dot",

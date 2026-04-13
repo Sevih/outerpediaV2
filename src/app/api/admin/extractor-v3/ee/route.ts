@@ -159,7 +159,11 @@ function extractEEBuffDebuff(buffTemplet: Row[], id: string, tooltipMap?: Map<st
     if (icon === 'IG_Buff_Dot_Poison02') effectiveType = 'BT_DOT_POISON2'
 
     let tag: string
-    if (icon.includes('Interruption')) {
+    // `BT_IMMEDIATELY_*` is the game's universal "instant DOT detonation"
+    // mechanic — every variant renders as "Detonate" in the wiki.
+    if (effectiveType.startsWith('BT_IMMEDIATELY_')) {
+      tag = 'DETONATE'
+    } else if (icon.includes('Interruption')) {
       const base = (effectiveType === 'BT_STAT' && stat && stat !== 'ST_NONE')
         ? `${effectiveType}|${stat}`
         : effectiveType
