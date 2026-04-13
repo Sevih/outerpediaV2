@@ -25,6 +25,8 @@ export type ForcedOverride = {
   debuff?: string[]
   removeBuff?: string[]
   removeDebuff?: string[]
+  clearBuff?: boolean
+  clearDebuff?: boolean
 }
 
 export type ForcedOverrides = Record<string, Record<string, ForcedOverride>>
@@ -106,13 +108,29 @@ export function loadEffectRules(): CachedRules {
   if (cache) return cache
   const blacklist = readJson<string[]>('blacklist.json')
   const tooltipBl = readJson<TooltipBlacklistFile>('tooltip-blacklist.json')
-  const forced = readJson<ForcedOverrides>('forced-overrides.json')
+  type RawForcedOverride = ForcedOverride & { clear_buff?: boolean; clear_debuff?: boolean }
+  const forcedRaw = readJson<Record<string, Record<string, RawForcedOverride>>>('forced-overrides.json')
+  const forced: ForcedOverrides = {}
+  for (const [key, bySkill] of Object.entries(forcedRaw)) {
+    if (key === '_comment') continue
+    const out: Record<string, ForcedOverride> = {}
+    for (const [skillKey, ov] of Object.entries(bySkill)) {
+      out[skillKey] = {
+        buff: ov.buff,
+        debuff: ov.debuff,
+        removeBuff: ov.removeBuff,
+        removeDebuff: ov.removeDebuff,
+        clearBuff: ov.clearBuff === true || ov.clear_buff === true,
+        clearDebuff: ov.clearDebuff === true || ov.clear_debuff === true,
+      }
+    }
+    forced[key] = out
+  }
   const aliases = readJson<Record<string, string>>('aliases.json')
   const forceSideRaw = readJson<{ buff?: string[]; debuff?: string[] }>('force-side.json')
   const descPatternsRaw = readJson<RawDescriptionPattern[]>('description-patterns.json')
   const descOverridesRaw = readJson<Record<string, RawDescriptionOverride>>('description-overrides.json')
   // Strip comment keys (JSON files use `_comment` for documentation)
-  delete (forced as Record<string, unknown>)._comment
   delete (aliases as Record<string, unknown>)._comment
   delete (forceSideRaw as Record<string, unknown>)._comment
   const forceSide = new Map<string, 'buff' | 'debuff'>()
@@ -167,5 +185,5 @@ export function clearEffectRulesCache(): void {
 }
 
 // Bundle reload marker: touch this comment to invalidate the in-memory
-// rules cache via a Next.js fast-refresh. (bump 96)
+// rules cache via a Next.js fast-refresh. (bump 101)
 

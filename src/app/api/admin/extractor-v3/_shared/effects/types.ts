@@ -30,6 +30,11 @@ export type EffectContext = {
   ownerName?: string
   dungeonName?: string
   modeName?: string
+  /**
+   * Resolved English skill name. When set, the classifier can match
+   * forced-overrides keyed by `skill:<name>` (see rules file format).
+   */
+  skillName?: string
   /** SKT_FIRST / SKT_SECOND / SKT_ULTIMATE / SKT_CHAIN_PASSIVE / SKT_MONSTER_1 / ... */
   skillType: string
   tables: EffectTables

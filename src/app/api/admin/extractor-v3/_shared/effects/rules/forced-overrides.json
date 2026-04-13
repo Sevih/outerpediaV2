@@ -96,9 +96,24 @@
       "removeDebuff": ["BT_DOT_POISON"]
     }
   },
-  "Drakhan|World Boss":{
+  "Drakhan|World Boss": {
     "SKT_MONSTER_1": {
       "removeBuff": ["COURAGE_AGAINST_DESPAIR"]
     }
+  },
+  "skill:Blessing of the Earth Tower": {
+    "*": { "clear_buff": true, "clear_debuff": true }
+  },
+  "skill:Blessing of the Tower of Darkness": {
+    "*": { "clear_buff": true, "clear_debuff": true }
+  },
+  "skill:Blessing of the Tower of Light": {
+    "*": { "clear_buff": true, "clear_debuff": true }
+  },
+  "skill:Blessing of the Tower of Flames": {
+    "*": { "clear_buff": true, "clear_debuff": true }
+  },
+  "skill:Blessing of the Water Tower": {
+    "*": { "clear_buff": true, "clear_debuff": true }
   }
 }

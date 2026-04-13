@@ -17,7 +17,7 @@
   "element": "Fire",
   "level": 54,
   "icons": "2000032",
-  "BuffImmune": "BURN",
+  "BuffImmune": "",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
@@ -94,7 +94,7 @@
       },
       "icon": "Skill_Ultimate_2000032",
       "debuff": [
-        "BT_IMMEDIATELY_BURN"
+        "DETONATE"
       ]
     }
   ]

@@ -17,7 +17,7 @@
   "element": "Earth",
   "level": 96,
   "icons": "2000020",
-  "BuffImmune": "CAST_DEBUFF",
+  "BuffImmune": "",
   "StatBuffImmune": "ST_SPEED",
   "location": {
     "dungeon": {
@@ -52,7 +52,7 @@
         "en": "Attacks an enemy and, with a <color=#28d9ed>70%</color> chance, increases own <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1</color> turns.",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>効果命中</color>が<color=#28d9ed>70%</color>の確率で<color=#28d9ed>1</color>ターンの間UPする。",
         "kr": "적을 공격하고 <color=#28d9ed>70%</color> 확률로 자신의 <color=#28d9ed>효과 적중</color>을 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
-        "zh": "攻击敌人,并以<color=#28d9ed>70%</color>的概率在<color=#28d9ed>1</color>回合内提高自身<color=#28d9ed>效果命中</color>。"
+        "zh": "攻击敌人，并以<color=#28d9ed>70%</color>的概率在<color=#28d9ed>1</color>回合内提高自身<color=#28d9ed>效果命中</color>。"
       },
       "icon": "Skill_First_2000020",
       "buff": [
@@ -71,7 +71,7 @@
         "en": "When using this skill, has a <color=#28d9ed>70%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them.\\nAfter attacking, inflicts reduced <color=#28d9ed>Effectiveness</color> for <color=#28d9ed>1 turn(s)</color> on all enemies and increases <color=#28d9ed>Priority</color> by <color=#28d9ed>25%</color> for every target that was inflicted damage.",
         "jp": "スキル使用時、<color=#28d9ed>70%</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1個</color>解除し、敵全体にダメージを与える。\\n攻撃後、敵全体の<color=#28d9ed>効果命中</color>を<color=#28d9ed>1ターン</color>の間DOWNさせ、ダメージを与えた対象の数に応じて自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>25%</color>UPさせる。",
         "kr": "스킬 사용 시 <color=#28d9ed>70%</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 적 전체를 공격합니다.\\n공격 후 <color=#28d9ed>1턴</color> 동안 적 전체의 <color=#28d9ed>효과 적중</color>을 감소시키고, 피해를 준 대상마다 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>25%</color> 증가합니다.",
-        "zh": "使用技能时,有<color=#28d9ed>70%</color>的几率解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>,并攻击全体敌人。\\n攻击后,使全体敌人的<color=#28d9ed>效果命中</color>降低,持续<color=#28d9ed>1回合</color>,且每对1个目标造成伤害,自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。"
+        "zh": "使用技能时，有<color=#28d9ed>70%</color>的几率解除全体敌人的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>，并攻击全体敌人。\\n攻击后，使全体敌人的<color=#28d9ed>效果命中</color>降低，持续<color=#28d9ed>1回合</color>，且每对1个目标造成伤害，自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>25%</color>。"
       },
       "icon": "Skill_Second_2000020",
       "buff": [
@@ -94,7 +94,7 @@
         "en": "Attacks all enemies and has a <color=#28d9ed>70%</color> chance to inflict <color=#28d9ed>Unbuffable</color> for <color=#28d9ed>2 turn(s)</color>.",
         "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>70%</color>の確率で<color=#28d9ed>強化不可</color>を<color=#28d9ed>2ターン</color>の間付与する。",
         "kr": "적 전체를 공격하고 <color=#28d9ed>70%</color> 확률로 대상에게 <color=#28d9ed>강화 불가</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.",
-        "zh": "攻击全体敌人,并有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>无法强化</color>效果,持续<color=#28d9ed>2回合</color>。"
+        "zh": "攻击全体敌人，并有<color=#28d9ed>70%</color>的几率对目标造成<color=#28d9ed>无法强化</color>效果，持续<color=#28d9ed>2回合</color>。"
       },
       "icon": "Skill_Ultimate_2000020",
       "debuff": [

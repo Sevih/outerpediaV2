@@ -89,7 +89,7 @@
       },
       "icon": "Skill_Ultimate_4014005",
       "debuff": [
-        "BT_IMMEDIATELY_BURN"
+        "DETONATE"
       ]
     },
     {
@@ -108,11 +108,10 @@
       },
       "icon": "MT_Passive_1_Fire",
       "buff": [
-        "BT_STAT|ST_SPEED"
+        "BT_ACTION_GAUGE"
       ],
       "debuff": [
-        "BT_DOT_BURN_IR",
-        "BT_DOT_BURN"
+        "BT_DOT_BURN_IR"
       ]
     },
     {
@@ -153,6 +152,8 @@
         "BT_DAMAGE_TAKEN"
       ],
       "debuff": [
+        "BT_KILL_UNDER_HP_RATE",
+        "BT_REMOVE_BUFF",
         "BT_SEALED_RESURRECTION"
       ]
     }

@@ -6,6 +6,35 @@ import { searchMonstersByName } from './lib/localization'
 import { extractMonster, stripInternalFields } from './lib/extract'
 
 const BOSS_DIR = path.join(process.cwd(), 'data', 'boss')
+const DEBUFFS_PATH = path.join(process.cwd(), 'data', 'effects', 'debuffs.json')
+
+// Build a fingerprint set from the curated debuff catalog so we can tell
+// "real" BuffImmune tokens (BLEED, FREEZE, STUN, ...) apart from cosmetic
+// junk tokens (ATTACK, HEAL, ...). A token counts as known if it appears
+// as a substring of any debuff `name` field, case-insensitive.
+let debuffTokenCache: Set<string> | null = null
+function isKnownDebuffToken(token: string): boolean {
+  if (!debuffTokenCache) {
+    debuffTokenCache = new Set<string>()
+    try {
+      const raw = JSON.parse(fs.readFileSync(DEBUFFS_PATH, 'utf-8')) as Array<{ name?: string }>
+      for (const r of raw) {
+        const name = (r.name ?? '').toUpperCase()
+        if (!name) continue
+        // Index every alpha segment of the name (split on non-letters).
+        for (const seg of name.split(/[^A-Z]+/)) {
+          if (seg) debuffTokenCache.add(seg)
+        }
+      }
+    } catch {
+      // If the catalog can't be read, fall back to "everything is real"
+      // so we don't mistakenly mark genuine diffs as typos.
+      debuffTokenCache = null
+      return true
+    }
+  }
+  return debuffTokenCache.has(token.toUpperCase())
+}
 
 // "Boss-candidate" monster types. Includes CT_MONSTER because some
 // wiki-tracked bosses (e.g. Skyward Tower entries) are typed as plain
@@ -349,17 +378,21 @@ function buildDiffs(
     }
     if (JSON.stringify(e) !== JSON.stringify(x)) {
       let kind = classifyDiff(e, x)
-      // BuffImmune / StatBuffImmune: treat the common case where the only
-      // difference is the "ATTACK" token being added or removed as a typo
-      // (cosmetic curation noise — many existing files carry a stray ATTACK
-      // entry that the extractor never produces).
+      // BuffImmune / StatBuffImmune: when the symmetric difference is a
+      // single token AND that token doesn't correspond to any real debuff
+      // in `data/effects/debuffs.json`, treat it as a cosmetic typo —
+      // curated files often carry stray category tokens (`ATTACK`, `HEAL`)
+      // that the extractor never produces.
       if (k === 'BuffImmune' || k === 'StatBuffImmune') {
         const eSet = csvToSet(e)
         const xSet = csvToSet(x)
         const sym = new Set<string>()
         for (const v of eSet) if (!xSet.has(v)) sym.add(v)
         for (const v of xSet) if (!eSet.has(v)) sym.add(v)
-        if (sym.size === 1 && (sym.has('ATTACK') || sym.has('HEAL'))) kind = 'typo'
+        if (sym.size === 1) {
+          const [token] = [...sym]
+          if (!isKnownDebuffToken(token)) kind = 'typo'
+        }
       }
       diffs.push({ path: p, extracted: e, existing: x, kind })
     }

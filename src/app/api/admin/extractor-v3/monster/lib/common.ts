@@ -28,13 +28,33 @@ export function clearTableCache() {
   tableCache.clear()
 }
 
+/**
+ * Install a case-insensitive `.get` on an existing Map. Keeps the
+ * original-case map intact (so `.keys()` / `.values()` / `.entries()` /
+ * `.has()` still see each entry exactly once with its original casing)
+ * while transparently falling back to a lowercase-indexed lookup when
+ * a caller passes a key in a different casing. Cross-file case drift
+ * (e.g. `_Lv1` in MonsterSkillTemplet vs `_LV1` in TextSkill) resolves
+ * without any per-call workaround.
+ */
+export function withCaseInsensitiveGet<V>(m: Map<string, V>): Map<string, V> {
+  const originalGet = m.get.bind(m)
+  const lowerIndex = new Map<string, V>()
+  for (const [k, v] of m) {
+    const lk = k.toLowerCase()
+    if (!lowerIndex.has(lk)) lowerIndex.set(lk, v)
+  }
+  m.get = (k: string) => originalGet(k) ?? lowerIndex.get(k.toLowerCase())
+  return m
+}
+
 export function indexBy(rows: Row[], key = 'ID'): Map<string, Row> {
   const m = new Map<string, Row>()
   for (const r of rows) {
     const k = r[key]
     if (k) m.set(k, r)
   }
-  return m
+  return withCaseInsensitiveGet(m)
 }
 
 export function getLangTexts(entry: Row | undefined): Record<Lang, string> | null {

@@ -109,7 +109,7 @@
       },
       "icon": "MT_Passive_1_Fire",
       "buff": [
-        "FX_Buff_Turn_Extra",
+        "BT_ADDITIVE_ATTACK",
         "BT_SHIELD_BASED_CASTER",
         "BT_STAT|ST_SPEED"
       ],
@@ -135,6 +135,9 @@
       "buff": [
         "BT_STAT|ST_ATK_IR",
         "BT_DAMAGE_TAKEN"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
       ]
     },
     {

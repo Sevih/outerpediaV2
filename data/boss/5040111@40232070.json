@@ -18,7 +18,7 @@
   "level": 150,
   "icons": "2000092",
   "BuffImmune": "",
-  "StatBuffImmune": "DOT_2000092",
+  "StatBuffImmune": "",
   "location": {
     "dungeon": {
       "en": "Tower of Light 70F",
@@ -56,7 +56,7 @@
       },
       "icon": "Skill_First_2000092",
       "debuff": [
-        "BT_DOT_2000092"
+        "ETERNAL_BLEEDING"
       ]
     },
     {
@@ -75,7 +75,7 @@
       },
       "icon": "Skill_Second_2000092",
       "debuff": [
-        "BT_DOT_2000092"
+        "ETERNAL_BLEEDING"
       ]
     },
     {
@@ -94,7 +94,7 @@
       },
       "icon": "Skill_Ultimate_2000092",
       "debuff": [
-        "BT_IMMEDIATELY_2000092"
+        "DETONATE"
       ]
     }
   ]

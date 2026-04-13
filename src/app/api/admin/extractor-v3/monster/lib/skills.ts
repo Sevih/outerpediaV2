@@ -1,4 +1,4 @@
-import { loadTable, indexBy, getLangTexts, expandLang, num, type Row } from './common'
+import { loadTable, indexBy, withCaseInsensitiveGet, getLangTexts, expandLang, num, type Row } from './common'
 import type { Lang } from '@/lib/i18n/config'
 import {
   classifyEffects,
@@ -46,6 +46,7 @@ export function loadSkillTables(): SkillTables {
       skillLevelByID.set(r.SkillID, r)
     }
   }
+  withCaseInsensitiveGet(skillLevelByID)
 
   // Index BuffTemplet by BuffID for level 1. Multiple rows may share a BuffID
   // at level 1 (variants) — keep all for buff/debuff classification, plus a
@@ -62,6 +63,8 @@ export function loadSkillTables(): SkillTables {
     }
     arr.push(r)
   }
+  withCaseInsensitiveGet(buffsByBuffID)
+  withCaseInsensitiveGet(buffRowsByBuffID)
 
   // Build tooltip map for the shared classifier's discovery pass.
   const textSystemIndex = indexBy(loadTable('TextSystem'))
@@ -98,6 +101,11 @@ function isPermille(buff: Row): boolean {
 }
 
 function fmtValue(buff: Row): string {
+  // Some localized descriptions use `[Buff_V_*]` on buff rows that only
+  // have a `CreateRate` (and no `Value`). The game data itself is
+  // inconsistent (EN uses `C`, JP uses `V`) so we silently fall back to
+  // CreateRate when Value is missing.
+  if (!buff.Value && buff.CreateRate) return fmtCreateRate(buff)
   const v = parseInt(buff.Value ?? '0', 10)
   if (!Number.isFinite(v)) return '?'
   return isPermille(buff) ? `${Math.abs(v) / 10}%` : String(Math.abs(v))
@@ -113,17 +121,22 @@ function fmtTurn(buff: Row): string {
   return /^\d+$/.test(buff.TurnDuration ?? '') ? buff.TurnDuration! : '?'
 }
 
-const PLACEHOLDER_RE = /\[Buff_([CVT])_([^\]]+)\]/g
+// Match both cases: `[Buff_C_...]` and `[buff_c_...]`. Some skills
+// (especially tower/element variants) use the lowercase form. Both
+// the opening `[` and closing `]` are optional because a handful of
+// localized strings have typos:
+//   `Buff_V_2000088_2_2]`          — missing opening bracket
+//   `[Buff_V_irregular_dmgcap_1</color>` — missing closing bracket
+//   `[Buff_V_..._3_3個</color>`    — CJK suffix swallowed the bracket
+// The bid greedily consumes `[A-Za-z0-9_]` and stops at the first
+// char not in that class (or EOL), then optionally consumes `]`.
+const PLACEHOLDER_RE = /\[?[bB]uff_([CVTcvt])_([A-Za-z0-9_]+)\]?/g
 
 export function resolveSkillDescription(text: string, buffsByBuffID: Map<string, Row>): string {
   return text.replace(PLACEHOLDER_RE, (match, kind: string, bid: string) => {
-    // BuffID lookups are case-insensitive: some placeholders use
-    // mixed case (e.g. `Irregular_Check_Queen_1`) while BuffTemplet
-    // stores the same key fully lowercased.
-    let buff = buffsByBuffID.get(bid)
-    if (!buff) buff = buffsByBuffID.get(bid.toLowerCase())
+    const buff = buffsByBuffID.get(bid)
     if (!buff) return match
-    switch (kind) {
+    switch (kind.toUpperCase()) {
       case 'C':
         return fmtCreateRate(buff)
       case 'T':
@@ -244,6 +257,7 @@ export function extractSkill(
     tables: tables.effectTables,
     tooltipIds,
     description: descTexts?.en ?? '',
+    skillName: nameTexts?.en ?? '',
   })
 
   const out: MonsterSkill = {

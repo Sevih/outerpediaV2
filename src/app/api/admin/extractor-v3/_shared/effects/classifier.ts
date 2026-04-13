@@ -356,23 +356,38 @@ export function classifyEffects(
   // re-added to debuff and then stripped from buff via `removeBuff`.
   const mode = ctx.forcedOverridesMode ?? 'full'
   // Forced-override lookup order (most specific first):
-  //   1. `${ownerName}|${dungeonName}`  — single floor / single dungeon
-  //   2. `${ownerName}|${modeName}`     — whole game mode
-  //   3. `${ownerId}`                   — opaque ID fallback (legacy)
-  // The first key that contains an entry for `skillType` wins.
+  //   1. `skill:${skillName}`             — keyed by English skill name
+  //   2. `${ownerName}|${dungeonName}`    — single floor / single dungeon
+  //   3. `${ownerName}|${modeName}`       — whole game mode
+  //   4. `${ownerId}`                     — opaque ID fallback (legacy)
+  // The first key that contains an entry for `skillType` wins. The
+  // `skill:<name>` form uses a `'*'` sub-key so authors don't have to
+  // repeat the skill type — the name is already specific enough.
+  const skillNameKey = ctx.skillName ? `skill:${ctx.skillName}` : null
   const dungeonKey =
     ctx.ownerName && ctx.dungeonName ? `${ctx.ownerName}|${ctx.dungeonName}` : null
   const modeKey =
     ctx.ownerName && ctx.modeName ? `${ctx.ownerName}|${ctx.modeName}` : null
   const lookupForced = (key: string | null) =>
     key ? rules.forcedOverrides[key]?.[ctx.skillType] : undefined
+  const lookupForcedByName = (key: string | null) =>
+    key ? rules.forcedOverrides[key]?.['*'] ?? rules.forcedOverrides[key]?.[ctx.skillType] : undefined
   const forced =
     mode === 'none'
       ? undefined
-      : lookupForced(dungeonKey) ??
+      : lookupForcedByName(skillNameKey) ??
+        lookupForced(dungeonKey) ??
         lookupForced(modeKey) ??
         rules.forcedOverrides[ctx.ownerId]?.[ctx.skillType]
   if (forced && mode === 'full') {
+    if (forced.clearBuff) {
+      buffs.length = 0
+      seenBuff.clear()
+    }
+    if (forced.clearDebuff) {
+      debuffs.length = 0
+      seenDebuff.clear()
+    }
     for (const f of forced.buff ?? []) {
       if (!seenBuff.has(f)) { seenBuff.add(f); buffs.push(f) }
     }

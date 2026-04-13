@@ -50,11 +50,11 @@
         "zh": "用强击攻击敌人。\\n有<color=#28d9ed>80%</color>概率施加持续<color=#28d9ed>2</color>回合的不可驱散<color=#28d9ed>诅咒</color>。"
       },
       "icon": "Skill_First_2000086",
-      "debuff": [
-        "BT_DOT_CURSE_IR"
-      ],
       "buff": [
         "HEAVY_STRIKE"
+      ],
+      "debuff": [
+        "BT_DOT_CURSE_IR"
       ]
     },
     {
@@ -100,7 +100,7 @@
         "HEAVY_STRIKE"
       ],
       "debuff": [
-        "BT_IMMEDIATELY_CURSE",
+        "DETONATE",
         "BT_AP_CHARGE"
       ]
     },

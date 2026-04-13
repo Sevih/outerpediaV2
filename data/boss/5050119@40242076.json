@@ -43,7 +43,12 @@
         "zh": "代码圣甲虫"
       },
       "type": "SKT_FIRST",
-      "description": {},
+      "description": {
+        "en": "Reduces Health of the caster by <color=#28d9ed>10%</color>, then attacks the enemy.\\nHas a <color=#28d9ed>70%</color> chance to reduce Priority of the target by <color=#28d9ed>20%</color>.\\nIncreases damage dealt by this attack proportional to the caster's missing Health.\\nThe caster cannot be defeated by Health reduced from using this skill.",
+        "jp": "自分のHPを<color=#28d9ed>10%</color>DOWNさせた後、敵単体にダメージを与える。\\n<color=#28d9ed>70%</color>の確率で対象の行動ゲージを<color=#28d9ed>20%</color>DOWNさせる。\\nこのスキルは自分の残りHPが低いほどダメージがUPする。\\nこのスキルでスキル使用者が倒れることはない。",
+        "kr": "자신 체력을 <color=#28d9ed>10%</color> 감소시킨 후 적 대상을 공격합니다.\\n<color=#28d9ed>70%</color> 확률로 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소 시킵니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.\\n이 스킬로 인한 체력 감소로는 시전자가 사망하지 않습니다.",
+        "zh": "使自身生命值降低<color=#28d9ed>10%</color> 后，攻击敌人目标。\\n有<color=#28d9ed>70%</color>的几率使目标的行动值降低<color=#28d9ed>20%</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。\\n施展者不会因此技能造成的生命值降低而死亡。"
+      },
       "icon": "Skill_First_2000069",
       "debuff": [
         "BT_ACTION_GAUGE"
@@ -76,7 +81,12 @@
         "zh": "代码阿努比斯"
       },
       "type": "SKT_ULTIMATE",
-      "description": {},
+      "description": {
+        "en": "Attacks all enemies, and grants Immortality to the caster for <color=#28d9ed>1 turn(s)</color>.\\nAdditionally, has a <color=#28d9ed>70%</color> chance to inflict Stunned on the enemy for <color=#28d9ed>1 turn(s)</color>, or for <color=#28d9ed>2 turn(s)</color> when the enemy is granted Invulnerability.\\nIncreases damage dealt by this attack proportional to the caster's missing Health.",
+        "jp": "敵全体にダメージを与え、自分に<color=#28d9ed>不死</color>を<color=#28d9ed>1ターン</color>の間付与する。\\nまた、無敵状態の敵に<color=#28d9ed>70%</color>の確率でスタンを<color=#28d9ed>2ターン</color>の間付与し、無敵状態でない敵にはスタンを<color=#28d9ed>1ターン</color>の間付与する。\\nこのスキルは自分の残りHPが低いほど、ダメージがUPする。",
+        "kr": "적 전체를 공격하고, 자신은 <color=#28d9ed>1턴</color> 동안 불사 상태가됩니다.\\n또한, <color=#28d9ed>70%</color> 확률로 무적 상태의 적은 <color=#28d9ed>2턴</color> 그 외의 적은 <color=#28d9ed>1턴</color> 동안 스턴 상태로 만듭니다.\\n해당 공격은 자신이 잃은 체력 비례 피해량이 증가합니다.",
+        "zh": "攻击全体敌人，并使自身进入不死状态，持续<color=#28d9ed>1回合</color>。\\n有<color=#28d9ed>70%</color>的几率使处于无敌状态的敌人和其他敌人陷入晕眩状态，分别持续<color=#28d9ed>2回合</color>和<color=#28d9ed>1回合</color>。\\n根据自身损失的生命值等比提升该攻击的\\n伤害量。"
+      },
       "icon": "Skill_Ultimate_2000069",
       "buff": [
         "BT_UNDEAD"

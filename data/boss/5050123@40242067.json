@@ -86,7 +86,12 @@
         "zh": "世界属于我们"
       },
       "type": "SKT_ULTIMATE",
-      "description": {},
+      "description": {
+        "en": "Attacks all enemies and recovers the <color=#28d9ed>Action Points</color> of the caster by <color=#28d9ed>35</color> for each target damaged.\\n\\nIf the target has a <color=#28d9ed>Barrier</color>, damage dealt increases.",
+        "jp": "敵全体にダメージを与え、ダメージを与えた対象1体ごとに、自分の<color=#28d9ed>AP</color>を<color=#28d9ed>35</color>獲得する。\\n\\nこのスキルは対象が<color=#28d9ed>シールド</color>状態の場合、ダメージがUPする。",
+        "kr": "적 전체를 공격하고, 피해를 준 대상마다 자신의 <color=#28d9ed>AP</color>를 <color=#28d9ed>35</color> 회복합니다.\\n\\n이 스킬은 대상이 <color=#28d9ed>실드</color>를 보유하고 있을 때 피해가 증가합니다.",
+        "zh": "攻击全体敌人，每对1个目标造成伤害，则使自身<color=#28d9ed>AP</color>恢复<color=#28d9ed>35</color>。\\n\\n该技能目标附带<color=#28d9ed>护盾</color>效果时，伤害提升。"
+      },
       "icon": "Skill_Ultimate_2000070",
       "buff": [
         "BT_AP_CHARGE"
