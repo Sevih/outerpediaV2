@@ -105,6 +105,7 @@ function CompareTab() {
   const [saveMessage, setSaveMessage] = useState<{ text: string; type: 'success' | 'error' | 'info' } | null>(null)
   const [extractedCache, setExtractedCache] = useState<Map<string, unknown>>(new Map())
   const [fixingTypos, setFixingTypos] = useState(false)
+  const [fixingModes, setFixingModes] = useState(false)
 
   const loadAndCompare = useCallback(async () => {
     setComparing(true)
@@ -180,6 +181,55 @@ function CompareTab() {
       type: failed > 0 ? 'error' : 'success',
     })
     setFixingTypos(false)
+    await loadAndCompare()
+  }
+
+  async function handleFixAllModes() {
+    const withModeDiffs = entries.filter((e) =>
+      e.diffs.some((d) => d.path.startsWith('location.mode.'))
+    )
+    if (withModeDiffs.length === 0) return
+    setFixingModes(true)
+    setSaveMessage({ text: `Fixing modes in ${withModeDiffs.length} entry(ies)...`, type: 'info' })
+    let fixedEntries = 0
+    let fixedFields = 0
+    let failed = 0
+    for (const e of withModeDiffs) {
+      try {
+        const cmpRes = await fetch(`${API}?action=compare-one&id=${e.id}`)
+        const cmpData = await cmpRes.json()
+        if (!cmpRes.ok || !cmpData.existing) {
+          failed++
+          continue
+        }
+        const existing = cmpData.existing as Record<string, unknown>
+        const modeDiffs: DiffEntry[] = (cmpData.diffs ?? []).filter((d: DiffEntry) =>
+          d.path.startsWith('location.mode.')
+        )
+        if (modeDiffs.length === 0) continue
+        for (const m of modeDiffs) {
+          setByPath(existing, m.path, m.extracted)
+          fixedFields++
+        }
+        const res = await fetch(API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: e.id, data: existing }),
+        })
+        if (res.ok) fixedEntries++
+        else failed++
+      } catch {
+        failed++
+      }
+    }
+    setSaveMessage({
+      text:
+        failed > 0
+          ? `Fixed ${fixedFields} mode field(s) in ${fixedEntries} entry(ies) (${failed} failed)`
+          : `Fixed ${fixedFields} mode field(s) in ${fixedEntries} entry(ies)`,
+      type: failed > 0 ? 'error' : 'success',
+    })
+    setFixingModes(false)
     await loadAndCompare()
   }
 
@@ -308,6 +358,16 @@ function CompareTab() {
                 title="Re-save every entry whose only diffs are typos"
               >
                 {fixingTypos ? 'Fixing...' : 'Fix all typos'}
+              </button>
+            )}
+            {entries.some((e) => e.diffs.some((d) => d.path.startsWith('location.mode.'))) && (
+              <button
+                onClick={handleFixAllModes}
+                disabled={fixingModes || comparing}
+                className="rounded bg-zinc-700 px-2.5 py-1 text-xs font-semibold text-zinc-200 transition hover:bg-zinc-600 disabled:opacity-50"
+                title="Patch every location.mode field with the extracted value"
+              >
+                {fixingModes ? 'Fixing...' : 'Fix all modes'}
               </button>
             )}
             <button
