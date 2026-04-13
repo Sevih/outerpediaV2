@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from 'fs';
+import { readdirSync, mkdirSync, existsSync, unlinkSync } from 'fs';
 import { execFileSync } from 'child_process';
 import { join } from 'path';
 import { PATHS } from '../config';
@@ -10,16 +10,16 @@ const STAMP = join(PATHS.generated, '.bytes-cache-stamp');
 /**
  * bytes-cache pipeline step
  *
- * If bundles changed: extract .bytes with AssetStudioModCLI then parse all to JSON
+ * If bundles changed: extract .bytes with AssetStudioModCLI then parse all to JSON (json2 format)
  */
 export async function run() {
   if (!existsSync(PATHS.datamineBundles)) {
     return 'skipped (no bundles)';
   }
 
-  if (!bundlesChanged(STAMP, [PATHS.adminBytes, PATHS.adminJson, PATHS.adminJson2])) {
-    const count = existsSync(PATHS.adminJson)
-      ? readdirSync(PATHS.adminJson).filter(f => f.endsWith('.json')).length
+  if (!bundlesChanged(STAMP, [PATHS.adminBytes, PATHS.adminJson2])) {
+    const count = existsSync(PATHS.adminJson2)
+      ? readdirSync(PATHS.adminJson2).filter(f => f.endsWith('.json')).length
       : 0;
     return `up to date (${count} files)`;
   }
@@ -29,7 +29,6 @@ export async function run() {
   }
 
   mkdirSync(PATHS.adminBytes, { recursive: true });
-  mkdirSync(PATHS.adminJson, { recursive: true });
   mkdirSync(PATHS.adminJson2, { recursive: true });
 
   // ── Extract .bytes from bundles ──
@@ -53,30 +52,9 @@ export async function run() {
     }
   }
 
-  // ── Parse .bytes → .json ──
-
   const bytesFiles = readdirSync(PATHS.adminBytes).filter(f => f.endsWith('.bytes'));
   if (bytesFiles.length === 0) {
     return 'no bytes files found';
-  }
-
-  // Lazy import — files excluded by sparse-checkout in prod
-  const parserPath = join(__dirname, '../../src/app/admin/lib/bytes-parser');
-  if (!existsSync(parserPath + '.ts') && !existsSync(parserPath + '.js')) {
-    return 'skipped (bytes-parser not available)';
-  }
-  const { parseBytes } = await import('../../src/app/admin/lib/bytes-parser' as string);
-
-  let parsed = 0;
-  for (const file of bytesFiles) {
-    try {
-      const buffer = readFileSync(join(PATHS.adminBytes, file));
-      const result = parseBytes(Buffer.from(buffer));
-      writeFileSync(join(PATHS.adminJson, file.replace('.bytes', '.json')), JSON.stringify(result), 'utf-8');
-      parsed++;
-    } catch {
-      // Skip files that fail to parse
-    }
   }
 
   // ── Parse .bytes → .json via Python (json2) ──
@@ -94,5 +72,6 @@ export async function run() {
   }
 
   saveStamp(STAMP);
+  const parsed = readdirSync(PATHS.adminJson2).filter(f => f.endsWith('.json')).length;
   return `extracted + ${parsed} parsed`;
 }

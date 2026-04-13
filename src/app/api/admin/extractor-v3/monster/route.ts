@@ -254,8 +254,14 @@ const DATAMINE_SPRITE_ROOT = path.join(
 )
 const PUBLIC_BOSS_ROOT = path.join(process.cwd(), 'public', 'images', 'characters', 'boss')
 
+// Extensions built at runtime so Turbopack's static analyzer doesn't
+// treat the string-template path as a project-wide `.png` glob.
+const IMG_EXTS = ['webp', 'png']
 function destExists(destNoExt: string): boolean {
-  return fs.existsSync(`${destNoExt}.webp`) || fs.existsSync(`${destNoExt}.png`)
+  for (const ext of IMG_EXTS) {
+    if (fs.existsSync([destNoExt, ext].join('.'))) return true
+  }
+  return false
 }
 
 type AssetMiss = {

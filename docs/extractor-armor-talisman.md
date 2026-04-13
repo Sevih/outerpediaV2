@@ -23,7 +23,7 @@ This document provides everything needed to implement the API routes for **Armor
 - Code and comments in **English**, responses in **French**
 - **NEVER hardcode** values that can be found in game data (use TextSystem lookups, resolveEnum, etc.)
 - **NEVER assume data mappings** without verifying in actual game data files
-- All game data: `data/admin/json/` (parsed JSON from binary game assets)
+- All game data: `data/admin/json2/` (parsed JSON from binary game assets)
 - Output data: `data/equipment/` (the JSON files the website uses)
 - Placeholder values must be wrapped in `<color=#28d9ed>value</color>` tags
 - Keep `\n` in descriptions as-is
@@ -34,7 +34,7 @@ This document provides everything needed to implement the API routes for **Armor
 ## Architecture Overview
 
 ```
-data/admin/json/          ← Raw game data templets (read-only)
+data/admin/json2/          ← Raw game data templets (read-only)
   ItemTemplet.json        ← Master item database
   ItemSpecialOptionTemplet.json  ← Equipment effects (weapons, accessories, sets, talismans)
   BuffTemplet.json        ← Buff values, durations, rates
@@ -67,7 +67,7 @@ src/app/admin/extractor/equipment/
   armors/page.tsx          ← UI (already exists, expects /api/admin/extractor/armor)
   talismans/page.tsx       ← UI (already exists, expects /api/admin/extractor/talisman)
 
-src/app/admin/lib/text.ts ← Shared text utilities
+src/app/admin/lib/text-v2.ts ← Shared text utilities
 src/app/admin/components/
   extractor-ui.tsx         ← Shared UI components (LangRow, Section, DiffEntry types)
   diff-highlight.tsx       ← Word-level diff with color tag rendering
@@ -422,10 +422,10 @@ The talisman UI (`src/app/admin/extractor/equipment/talismans/page.tsx`) expects
 
 ## Shared Utilities Reference
 
-### `src/app/admin/lib/text.ts`
+### `src/app/admin/lib/text-v2.ts`
 
 ```typescript
-readTemplet(name: string)        // Read data/admin/json/{name}.json
+readTemplet(name: string)        // Read data/admin/json2/{name}.json
 buildTextMap(data)               // IDSymbol → { en, jp, kr, zh }
 expandLang(field, texts)         // → { field: en, field_jp, field_kr, field_zh }
 resolveEnum(textSys, raw, prefix, sysPrefix) // Game enum → display name
@@ -541,7 +541,7 @@ The save handler must match existing format. For arrays, match entries by name (
 ## Critical Implementation Rules
 
 1. **Guard with `devOnly()`** — all routes must check `NODE_ENV === 'development'`
-2. **Use `readTemplet()`** from `src/app/admin/lib/text.ts` to load game data
+2. **Use `readTemplet()`** from `src/app/admin/lib/text-v2.ts` to load game data
 3. **Use `buildTextMap()`** for text lookups, `expandLang()` for multilingual output
 4. **Use `resolveEnum()`** for rarity — never hardcode `"legendary"`/`"epic"`
 5. **Wrap placeholder values** in `<color=#28d9ed>value</color>` tags
