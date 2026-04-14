@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -99,11 +100,24 @@ export default function VenionGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={jan2026.teams} defaultStage="Light and Dark" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="8YNWM3dErpo"
-                title="Venion - World Boss - SSS - Extreme League"
-                author="Sevih"
-                date="27/01/2026"
+              <MultiVideoEmbed
+                hashPrefix="venion-jan2026-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: '8YNWM3dErpo',
+                    title: 'Venion — Extreme — SSS rank',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'pz-MRSpPNVk',
+                    title: 'Venion — Extreme — Score 30M',
+                    author: 'ダイス',
+                    label: 'ダイス (30M)',
+                  },
+                ]}
               />
             </>
           ),

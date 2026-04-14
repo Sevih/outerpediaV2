@@ -7,6 +7,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -55,11 +56,31 @@ export default function PursuitMutatedWyvreGuide() {
       <hr className="my-6 border-neutral-700" />
       <StageBasedTeamSelector teamData={teams} defaultStage="One Run Kill" />
       <hr className="my-6 border-neutral-700" />
-      <CombatFootage
-        videoId="PCgNRKFlRGI"
-        title={lRec(str.video_title, lang)}
-        author="Sevih"
-        date="09/05/2025"
+      <MultiVideoEmbed
+        hashPrefix="mutated-wyvre-video"
+        videos={[
+          {
+            platform: 'youtube',
+            id: 'PCgNRKFlRGI',
+            title: 'Mutated Wyvre — 1 run clear',
+            author: 'Sevih',
+            label: 'Sevih',
+          },
+          {
+            platform: 'youtube',
+            id: 'gY7jV0m7V7c',
+            title: 'Mutated Wyvre — 11 turn kill',
+            author: 'ダイス',
+            label: 'ダイス (11T)',
+          },
+          {
+            platform: 'youtube',
+            id: 'PcgGOurK-iw',
+            title: 'Mutated Wyvre — 1 run clear',
+            author: 'ダイス',
+            label: 'ダイス',
+          },
+        ]}
       />
     </GuideTemplate>
   );

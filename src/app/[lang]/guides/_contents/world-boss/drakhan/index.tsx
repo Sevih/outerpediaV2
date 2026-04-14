@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -92,11 +93,38 @@ export default function DrakhanGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={dec2025.teams} defaultStage="Phase 1" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="C-Oz2uDfuwc"
-                title="Drakhan - World Boss - SSS - Extreme League"
-                author="Sevih"
-                date="31/12/2025"
+              <MultiVideoEmbed
+                hashPrefix="drakhan-dec2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'C-Oz2uDfuwc',
+                    title: 'Drakhan — Extreme — SSS rank',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'Os93_XpApzY',
+                    title: 'Drakhan — Extreme — 1 run clear',
+                    author: 'ダイス',
+                    label: 'ダイス',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'hOeMbWkoPak',
+                    title: 'Drakhan — Extreme — SSS rank',
+                    author: 'ダイス',
+                    label: 'ダイス (SSS)',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: '-YJ_DWJkTJc',
+                    title: 'Drakhan — Extreme — Late-game comp',
+                    author: 'ダイス',
+                    label: 'ダイス (Late-game)',
+                  },
+                ]}
               />
             </>
           ),

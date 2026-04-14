@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import parseText from '@/lib/parse-text';
@@ -108,11 +109,31 @@ export default function PrimordialSentinelGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={mar2026.teams} defaultStage="Phase 1" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="2eeYmkacaqA"
-                title="Primordial Sentinel - World Boss - SSS - Extreme League"
-                author="Sevih"
-                date="14/01/2025"
+              <MultiVideoEmbed
+                hashPrefix="primordial-mar2026-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: '2eeYmkacaqA',
+                    title: 'Primordial Sentinel — Extreme — SSS rank',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'cYYZJsSWoW0',
+                    title: 'Primordial Sentinel — Extreme — Score 100M',
+                    author: 'ダイス',
+                    label: 'ダイス (100M)',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'dp4Zvw9C0Uo',
+                    title: 'Primordial Sentinel — Score 100M gear setup',
+                    author: 'ダイス',
+                    label: 'ダイス (Gear)',
+                  },
+                ]}
               />
             </>
           ),

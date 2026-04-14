@@ -7,6 +7,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -55,11 +56,38 @@ export default function PursuitBlockbusterGuide() {
       <hr className="my-6 border-neutral-700" />
       <StageBasedTeamSelector teamData={teams} defaultStage="Non-Crit Team" />
       <hr className="my-6 border-neutral-700" />
-      <CombatFootage
-        videoId="pgWkc6X6VNE"
-        title={lRec(str.video_title, lang)}
-        author="Sevih"
-        date="09/05/2025"
+      <MultiVideoEmbed
+        hashPrefix="blockbuster-video"
+        videos={[
+          {
+            platform: 'youtube',
+            id: 'pgWkc6X6VNE',
+            title: 'Blockbuster — 1 run clear',
+            author: 'Sevih',
+            label: 'Sevih',
+          },
+          {
+            platform: 'youtube',
+            id: 'cHA0BvTevSo',
+            title: 'Blockbuster — 1 run clear (gift reset, no damage, full auto)',
+            author: 'ダイス',
+            label: 'ダイス (Gift Reset)',
+          },
+          {
+            platform: 'youtube',
+            id: 'rfBH2EpszRA',
+            title: 'Blockbuster — 9 turn clear (no damage)',
+            author: 'ダイス',
+            label: 'ダイス (9T No DMG)',
+          },
+          {
+            platform: 'youtube',
+            id: 'WGWNplB0S-E',
+            title: 'Blockbuster — Very Hard — 1 run clear',
+            author: 'ダイス',
+            label: 'ダイス (VH)',
+          },
+        ]}
       />
     </GuideTemplate>
   );

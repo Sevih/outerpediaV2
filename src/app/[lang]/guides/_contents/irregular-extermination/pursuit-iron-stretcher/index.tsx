@@ -9,6 +9,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -64,11 +65,31 @@ export default function PursuitIronStretcherGuide() {
       <hr className="my-6 border-neutral-700" />
       <StageBasedTeamSelector teamData={teams} defaultStage="Recommended Team" />
       <hr className="my-6 border-neutral-700" />
-      <CombatFootage
-        videoId="Enqp_g7xCqw"
-        title={lRec(str.video_title, lang)}
-        author="Sevih"
-        date="01/01/2025"
+      <MultiVideoEmbed
+        hashPrefix="iron-stretcher-video"
+        videos={[
+          {
+            platform: 'youtube',
+            id: 'Enqp_g7xCqw',
+            title: 'Iron Stretcher — 1 run clear',
+            author: 'Sevih',
+            label: 'Sevih',
+          },
+          {
+            platform: 'youtube',
+            id: 'KZw4rTVFbdg',
+            title: 'Iron Stretcher — 1 run clear (gift reset, no damage, full auto)',
+            author: 'ダイス',
+            label: 'ダイス (Gift Reset)',
+          },
+          {
+            platform: 'youtube',
+            id: 'hXWnaSSkzQQ',
+            title: 'Iron Stretcher — Very Hard — 1 run clear',
+            author: 'ダイス',
+            label: 'ダイス (VH)',
+          },
+        ]}
       />
     </GuideTemplate>
   );

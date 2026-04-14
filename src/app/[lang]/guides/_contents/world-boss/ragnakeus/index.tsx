@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -92,11 +93,24 @@ export default function RagnakeusGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={dec2025.teams} defaultStage="Phase 1" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="8SU0TH6_DY4"
-                title="Dragon of Death Ragnakeus - World Boss - SSS - Extreme League"
-                author="Sevih"
-                date="03/12/2025"
+              <MultiVideoEmbed
+                hashPrefix="ragnakeus-dec2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: '8SU0TH6_DY4',
+                    title: 'Dragon of Death Ragnakeus — Extreme — SSS rank',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'vJy2cCOoRo0',
+                    title: 'Dragon of Death Ragnakeus — Extreme — SSS rank',
+                    author: 'ダイス',
+                    label: 'ダイス',
+                  },
+                ]}
               />
             </>
           ),

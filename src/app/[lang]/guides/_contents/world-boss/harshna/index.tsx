@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -91,11 +92,24 @@ export default function HarshnaGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={jul2025.teams} defaultStage="No Debuff Team" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="13vcQM1kMEg"
-                title="Harshna - World Boss - SSS - Extreme League"
-                author="Sevih"
-                date="01/07/2025"
+              <MultiVideoEmbed
+                hashPrefix="harshna-jul2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: '13vcQM1kMEg',
+                    title: 'Harshna — Extreme — SSS rank',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'XunI9dzNJ_U',
+                    title: 'Harshna — Extreme — Final day (Comp C)',
+                    author: 'ダイス',
+                    label: 'ダイス (Comp C)',
+                  },
+                ]}
               />
             </>
           ),
