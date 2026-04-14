@@ -6,6 +6,7 @@ import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -54,6 +55,26 @@ export default function GustavALGuide() {
       <RecommendedCharacterList entries={recommended} />
       <hr className="my-6 border-neutral-700" />
       <StageBasedTeamSelector teamData={teams} defaultStage="Standard Team" />
+      <hr className="my-6 border-neutral-700" />
+      <MultiVideoEmbed
+        hashPrefix="gustav-al-video"
+        videos={[
+          {
+            platform: 'youtube',
+            id: 'RiNDGtSiIlI',
+            title: 'Gustav — Stage 10 — 1 run clear',
+            author: 'ダイス',
+            label: 'Stage 10',
+          },
+          {
+            platform: 'youtube',
+            id: 'n4aKiuRrdk4',
+            title: 'Gustav — 1 run clear',
+            author: 'ダイス',
+            label: 'Standard',
+          },
+        ]}
+      />
     </GuideTemplate>
   );
 }

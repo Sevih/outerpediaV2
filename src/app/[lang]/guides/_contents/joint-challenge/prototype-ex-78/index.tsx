@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -85,11 +86,24 @@ export default function PrototypeEx78Guide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={mar2026.teams} defaultStage="Recommended Team" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="JojsTsS9kyU"
-                title="Prototype EX-78 - Joint Challenge - Very Hard Mode"
-                author="Sevih"
-                date="24/03/2026"
+              <MultiVideoEmbed
+                hashPrefix="ex78-mar2026-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'JojsTsS9kyU',
+                    title: 'Prototype EX-78 — Very Hard — 1 run clear',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: '1gWGk6wrGKw',
+                    title: 'Prototype EX-78 — Very Hard — 1 run clear (poison comp)',
+                    author: 'ダイス',
+                    label: 'ダイス (Poison)',
+                  },
+                ]}
               />
             </>
           ),
@@ -112,6 +126,26 @@ export default function PrototypeEx78Guide() {
               <RecommendedCharacterList entries={oct2025.recommended} />
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={oct2025.teams} defaultStage="Recommended Team" />
+              <hr className="my-6 border-neutral-700" />
+              <MultiVideoEmbed
+                hashPrefix="ex78-oct2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'pqoL50bJaRY',
+                    title: 'Prototype EX-78 — Very Hard — 1 run clear (Comp A)',
+                    author: 'ダイス',
+                    label: 'Comp A',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'FDC42YQQOM8',
+                    title: 'Prototype EX-78 — Very Hard — 1 run clear (Comp B)',
+                    author: 'ダイス',
+                    label: 'Comp B',
+                  },
+                ]}
+              />
             </>
           ),
         },

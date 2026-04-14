@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -113,11 +114,24 @@ export default function ShichifujaGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={aug2025.teams} defaultStage="Recommended Team" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="hcJ6L4DwjWA"
-                title="Shichifuja - Joint Challenge - Very Hard"
-                author="Sevih"
-                date="19/08/2025"
+              <MultiVideoEmbed
+                hashPrefix="shichifuja-aug2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'hcJ6L4DwjWA',
+                    title: 'Shichifuja — Very Hard — 1 run clear',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'FK0_YUVU1K0',
+                    title: 'Shichifuja — Very Hard — 1 run clear',
+                    author: 'ダイス',
+                    label: 'ダイス',
+                  },
+                ]}
               />
             </>
           ),

@@ -6,6 +6,7 @@ import MinionDisplay from '@/app/components/guides/MinionDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -58,6 +59,17 @@ export default function AnubisGuardianALGuide() {
       <RecommendedCharacterList entries={recommended} />
       <hr className="my-6 border-neutral-700" />
       <StageBasedTeamSelector teamData={teams} defaultStage="Recommended Team" />
+      <hr className="my-6 border-neutral-700" />
+      <MultiVideoEmbed
+        videos={[
+          {
+            platform: 'youtube',
+            id: 'UKFOFwsRjZo',
+            title: "Iota World's Giant God Soldier — Stage 10 — 1 run clear",
+            author: 'ダイス',
+          },
+        ]}
+      />
     </GuideTemplate>
   );
 }

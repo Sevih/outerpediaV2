@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -97,6 +98,17 @@ export default function DeepSeaGuardianGuide() {
               <RecommendedCharacterList entries={jan2026.recommended} />
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={jan2026.teams} defaultStage="Recommended Team" />
+              <hr className="my-6 border-neutral-700" />
+              <MultiVideoEmbed
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'BoWdGr5fnGw',
+                    title: 'Deep Sea Guardian — Very Hard — 6 turn clear',
+                    author: 'ダイス',
+                  },
+                ]}
+              />
             </>
           ),
         },
@@ -119,11 +131,31 @@ export default function DeepSeaGuardianGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={jul2025.teams} defaultStage="Recommended Team" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="ScFXrrOeVNk"
-                title="Deep Sea Guardian - Joint Challenge - Very Hard"
-                author="Sevih"
-                date="23/07/2025"
+              <MultiVideoEmbed
+                hashPrefix="deep-sea-jul2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'ScFXrrOeVNk',
+                    title: 'Deep Sea Guardian — Very Hard — 1 run clear',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: '65GWPELsbk8',
+                    title: 'Deep Sea Guardian — Very Hard — 1 run clear',
+                    author: 'ダイス',
+                    label: 'ダイス',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'phzS6t9JqbE',
+                    title: 'Deep Sea Guardian — Max single hit damage challenge',
+                    author: 'ダイス',
+                    label: 'ダイス (Max DMG)',
+                  },
+                ]}
               />
             </>
           ),

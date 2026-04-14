@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -84,6 +85,17 @@ export default function KOHMeteosGuide() {
               <RecommendedCharacterList entries={nov2025.recommended} />
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={nov2025.teams} defaultStage="Recommended Team" />
+              <hr className="my-6 border-neutral-700" />
+              <MultiVideoEmbed
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'ju7o1UgbN6I',
+                    title: 'Knight of Hope Meteos — Very Hard — 1 run clear',
+                    author: 'ダイス',
+                  },
+                ]}
+              />
             </>
           ),
         },
@@ -106,11 +118,24 @@ export default function KOHMeteosGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={may2025.teams} defaultStage="Recommended Team" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="g3LcTpm9fMo"
-                title="Knight of Hope Meteos - Joint Challenge - Very Hard Mode"
-                author="Sevih"
-                date="15/05/2025"
+              <MultiVideoEmbed
+                hashPrefix="koh-meteos-may2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'g3LcTpm9fMo',
+                    title: 'Knight of Hope Meteos — Very Hard — 1 run clear',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'KqOYqObAQdg',
+                    title: 'Knight of Hope Meteos — Very Hard — 1 run clear',
+                    author: 'ダイス',
+                    label: 'ダイス',
+                  },
+                ]}
               />
             </>
           ),

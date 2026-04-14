@@ -5,6 +5,7 @@ import BossDisplay from '@/app/components/guides/BossDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -52,6 +53,26 @@ export default function GlicysALGuide() {
       <RecommendedCharacterList entries={recommended} />
       <hr className="my-6 border-neutral-700" />
       <StageBasedTeamSelector teamData={teams} defaultStage="Team 1 – Icebreaker" />
+      <hr className="my-6 border-neutral-700" />
+      <MultiVideoEmbed
+        hashPrefix="glicys-al-video"
+        videos={[
+          {
+            platform: 'youtube',
+            id: '2xhwkl8ybr4',
+            title: 'Glicys — Stage 10 — 1 run clear (no enrage)',
+            author: 'ダイス',
+            label: 'No Enrage',
+          },
+          {
+            platform: 'youtube',
+            id: 'FuzmI5nP5d8',
+            title: 'Glicys — Stage 10 — 1 run clear',
+            author: 'ダイス',
+            label: 'Standard',
+          },
+        ]}
+      />
     </GuideTemplate>
   );
 }

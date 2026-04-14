@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -83,11 +84,24 @@ export default function AnnihilatorGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={dec2025.teams} defaultStage="Recommended Team" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="g64GWfYydvQ"
-                title="Annihilator - Joint Challenge - Very Hard Mode"
-                author="Sevih"
-                date="23/12/2025"
+              <MultiVideoEmbed
+                hashPrefix="annihilator-dec2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'g64GWfYydvQ',
+                    title: 'Annihilator — Very Hard — 1 run clear',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: '-_czdjb-JsA',
+                    title: 'Annihilator — Very Hard — 1 run clear',
+                    author: 'ダイス',
+                    label: 'ダイス',
+                  },
+                ]}
               />
             </>
           ),
@@ -111,11 +125,31 @@ export default function AnnihilatorGuide() {
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={jun2025.teams} defaultStage="Recommended Team" />
               <hr className="my-6 border-neutral-700" />
-              <CombatFootage
-                videoId="5r3gji7y6E0"
-                title="Annihilator - Joint Challenge - Very Hard Mode"
-                author="Sevih"
-                date="25/06/2025"
+              <MultiVideoEmbed
+                hashPrefix="annihilator-jun2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: '5r3gji7y6E0',
+                    title: 'Annihilator — Very Hard — 1 run clear',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'S_17kI3NbdM',
+                    title: 'Annihilator — Very Hard — 1 run clear',
+                    author: 'ダイス',
+                    label: 'ダイス',
+                  },
+                  {
+                    platform: 'youtube',
+                    id: 'kC10KWfRY9I',
+                    title: 'Annihilator — Max single hit damage challenge',
+                    author: 'ダイス',
+                    label: 'ダイス (Max DMG)',
+                  },
+                ]}
               />
             </>
           ),
