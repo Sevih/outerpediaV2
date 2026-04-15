@@ -17,7 +17,11 @@ export async function GET(req: NextRequest) {
     const data: Record<string, Record<string, unknown>> = JSON.parse(raw);
     if (req.nextUrl.searchParams.get('full') === '1') {
       const list = Object.entries(data).map(([id, v]) => ({ ID: id, ...v }));
-      list.sort((a, b) => String(a.Fullname ?? '').localeCompare(String(b.Fullname ?? '')));
+      list.sort((a, b) =>
+        String((a as Record<string, unknown>).Fullname ?? '').localeCompare(
+          String((b as Record<string, unknown>).Fullname ?? ''),
+        ),
+      );
       return NextResponse.json(list);
     }
     const list = Object.entries(data).map(([id, v]) => ({ id, name: String(v.Fullname ?? '') }));
