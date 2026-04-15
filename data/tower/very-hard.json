@@ -372,6 +372,22 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_Light"
+          ],
+          "recommended": [
+            {
+              "names": [],
+              "reason": {
+                "en": "",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
         }
       ]
     },
@@ -384,7 +400,7 @@
       ],
       "reason": [
         {
-          "en": "Buff steal is the key here.",
+          "en": "{D/BT_STEAL_BUFF} and {D/BT_REDISTRIBUTE_BUFF} is the key here.",
           "jp": "",
           "kr": "",
           "zh": ""
@@ -403,6 +419,17 @@
               ],
               "reason": {
                 "en": "{D/BT_STEAL_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000112"
+              ],
+              "reason": {
+                "en": "{D/BT_REDISTRIBUTE_BUFF} options",
                 "jp": "",
                 "kr": "",
                 "zh": ""
@@ -449,6 +476,17 @@
                 "kr": "",
                 "zh": ""
               }
+            },
+            {
+              "names": [
+                "2000112"
+              ],
+              "reason": {
+                "en": "{D/BT_REDISTRIBUTE_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
             }
           ]
         },
@@ -476,6 +514,17 @@
               ],
               "reason": {
                 "en": "{D/BT_STEAL_BUFF} options and validate the restriction.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000112"
+              ],
+              "reason": {
+                "en": "{D/BT_REDISTRIBUTE_BUFF} options",
                 "jp": "",
                 "kr": "",
                 "zh": ""
@@ -511,6 +560,17 @@
                 "kr": "",
                 "zh": ""
               }
+            },
+            {
+              "names": [
+                "2000112"
+              ],
+              "reason": {
+                "en": "{D/BT_REDISTRIBUTE_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
             }
           ]
         },
@@ -538,6 +598,59 @@
               ],
               "reason": {
                 "en": "{D/BT_STEAL_BUFF} options and validate the restriction.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000112"
+              ],
+              "reason": {
+                "en": "{D/BT_REDISTRIBUTE_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_Striker"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000112"
+              ],
+              "reason": {
+                "en": "{D/BT_REDISTRIBUTE_BUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000085",
+                "2000089"
+              ],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options and validate the restriction.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000039",
+                "2000041"
+              ],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options",
                 "jp": "",
                 "kr": "",
                 "zh": ""
@@ -2020,6 +2133,62 @@
         },
         {
           "restrictions": [
+            "AtLeast1_Light"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000084",
+                "2000074"
+              ],
+              "reason": {
+                "en": "Validate restriction and have {B/BT_REMOVE_DEBUFF} and/or {B/BT_IMMUNE}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000113",
+                "2000108",
+                "2000058"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000100",
+                "2000098",
+                "2000036"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000083"
+              ],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
             "AtLeast1_3Star"
           ],
           "recommended": [
@@ -3378,6 +3547,61 @@
                 "2000043",
                 "2000107",
                 "2000075",
+                "2000057"
+              ],
+              "reason": {
+                "en": "{D/BT_SEALED_RECEIVE_HEAL} options.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_Mage"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000086",
+                "2000091"
+              ],
+              "reason": {
+                "en": "{B/HEAVY_STRIKE} unit and validate restriction.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000107",
+                "2000043"
+              ],
+              "reason": {
+                "en": "Validate restriction and have {D/BT_SEALED_RECEIVE_HEAL}.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000008"
+              ],
+              "reason": {
+                "en": "{B/HEAVY_STRIKE} units.",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            },
+            {
+              "names": [
+                "2000075",
+                "2000072",
                 "2000057"
               ],
               "reason": {
