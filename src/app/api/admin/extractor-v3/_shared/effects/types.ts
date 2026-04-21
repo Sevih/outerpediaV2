@@ -71,6 +71,14 @@ export type EffectContext = {
    * main chain forced removes but not the additions.
    */
   forcedOverridesMode?: 'full' | 'remove-only' | 'none'
+  /**
+   * When true, skip the `labelBlacklist` filter in the main row pass
+   * (rowFilter and other pipeline steps still apply). Intended for
+   * callers like the EE extractor where every row is hand-curated and
+   * labels the shared skill blacklist drops (e.g. `BT_SEAL_COUNTER`)
+   * are in fact the desired output.
+   */
+  skipLabelBlacklist?: boolean
 }
 
 export type EffectResult = {

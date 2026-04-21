@@ -312,7 +312,8 @@ export function classifyEffects(
     const rawKind = classifyRow(row)
     if (rawKind === null) continue
     const label = buffTypeLabel(row, ctx.tables)
-    if (!label || rules.labelBlacklist.has(label)) continue
+    if (!label) continue
+    if (!ctx.skipLabelBlacklist && rules.labelBlacklist.has(label)) continue
     // `force-side.json` lets us override the game's tagging for labels
     // whose intent reads the wrong way in the wiki UI.
     const kind = rules.forceSide.get(label) ?? rawKind

@@ -146,5 +146,8 @@
       "buff": ["BT_BARRIER"],
       "removeBuff": ["BT_SHIELD_BASED_CASTER"]
     }
+  },
+  "skill:Death Sentence": {
+    "*": { "removeDebuff": ["BT_DOT_BURN"] }
   }
 }

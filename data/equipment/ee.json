@@ -2543,8 +2543,8 @@
     "effect10_zh": "使用<color=#28d9ed>隐藏活动</color>时，全体友军强化效果持续时间<color=#28d9ed>+1</color>回合",
     "icon_effect": "TI_Icon_UO_Accessary_07",
     "buff": [
-      "BT_EXTEND_BUFF",
-      "BT_SEAL_COUNTER"
+      "BT_SEAL_COUNTER",
+      "BT_EXTEND_BUFF"
     ],
     "debuff": [],
     "rank": "C",
@@ -2863,6 +2863,31 @@
     "debuff": [],
     "rank": "B",
     "rank10": "A"
+  },
+  "2700043": {
+    "name": "Broken Providence",
+    "name_jp": "壊れた摂理",
+    "name_kr": "망가진 섭리",
+    "name_zh": "残破的天道",
+    "mainStat": "Effectiveness vs Earth",
+    "mainStat_jp": "地属性対象の 効果命中",
+    "mainStat_kr": "지속성 대상 효과 적중",
+    "mainStat_zh": "土属性效果命中",
+    "effect": "Own Effectiveness increases <color=#28d9ed>+100%</color>",
+    "effect_jp": "自分の効果命中UP <color=#28d9ed>+100%</color>",
+    "effect_kr": "자신의 효과 적중 증가 <color=#28d9ed>+100%</color>",
+    "effect_zh": "自身效果命中提升 <color=#28d9ed>+100%</color>",
+    "effect10": "Right after using <color=#28d9ed>Death Sentence</color>, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+    "effect10_jp": "<color=#28d9ed>【死刑宣告】</color>使用直後、敵の反撃、復讐、迅速対応を防ぐ",
+    "effect10_kr": "<color=#28d9ed>사형 선고</color> 사용 직후 적의 반격, 복수, 신속 대응 방지",
+    "effect10_zh": "使用<color=#28d9ed>死刑宣判</color>后立即防止敌方反击、复仇、迅速应对",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "buff": [
+      "BT_SEAL_COUNTER"
+    ],
+    "debuff": [],
+    "rank": "",
+    "rank10": ""
   },
   "2700056": {
     "name": "Resolve of Earth",

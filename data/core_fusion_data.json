@@ -158,5 +158,45 @@
         "review_zh": "属性克制时+50%伤害。强化（Lv5）：效果命中+50%。"
       }
     }
+  },
+  {
+    "name": "Core Fusion Eternal",
+    "review": "More damage, stronger debuffs and a new {D/BT_ACTION_GAUGE} debuff.",
+    "review_jp": "ダメージ増加、デバフ強化、新たな{D/BT_ACTION_GAUGE}デバフを獲得。",
+    "review_kr": "피해량 증가, 디버프 강화, 새로운 {D/BT_ACTION_GAUGE} 디버프 획득.",
+    "review_zh": "伤害提升、减益强化、获得新的{D/BT_ACTION_GAUGE}减益。",
+    "recommended_level": "3 or 5",
+    "changes": {
+      "s2": {
+        "review": "Inflicts additional {D/BT_DOT_BURN} (2 turns) on {E/Earth} targets.\nBurst 1: grants {B/BT_BARRIER} to self (was Effectiveness).\nBurst 2: extends target {D/BT_DOT_BURN} by 2 turns.",
+        "review_jp": "{E/Earth}対象に追加{D/BT_DOT_BURN}（2ターン）を付与。\nバースト1：効果命中の代わりに自身に{B/BT_BARRIER}を付与。\nバースト2：対象の{D/BT_DOT_BURN}を2ターン延長。",
+        "review_kr": "{E/Earth} 상대에 추가 {D/BT_DOT_BURN} (2턴) 부여.\n버스트 1: 효과 적중 대신 자신에게 {B/BT_BARRIER} 부여.\n버스트 2: 대상 {D/BT_DOT_BURN} 2턴 연장.",
+        "review_zh": "对{E/Earth}追加{D/BT_DOT_BURN}（2回合）。\n爆发1：对自身施加{B/BT_BARRIER}（原效果命中）。\n爆发2：目标{D/BT_DOT_BURN}延长2回合。"
+      },
+      "s3": {
+        "review": "The 3 debuffs ({D/BT_STAT|ST_DEF}, {D/BT_STAT|ST_SPEED}, {D/BT_SEALED_RECEIVE_HEAL}) now last 1 extra turn. Inflicts {D/BT_ACTION_GAUGE} -20% on the enemy with the highest ATK.",
+        "review_jp": "3つのデバフ（{D/BT_STAT|ST_DEF}、{D/BT_STAT|ST_SPEED}、{D/BT_SEALED_RECEIVE_HEAL}）の持続時間が1ターン延長。最高攻撃力の敵に{D/BT_ACTION_GAUGE}-20%を付与。",
+        "review_kr": "3개 디버프 ({D/BT_STAT|ST_DEF}, {D/BT_STAT|ST_SPEED}, {D/BT_SEALED_RECEIVE_HEAL}) 지속시간 1턴 연장. 최고 공격력 적에 {D/BT_ACTION_GAUGE} -20% 부여.",
+        "review_zh": "3个减益（{D/BT_STAT|ST_DEF}、{D/BT_STAT|ST_SPEED}、{D/BT_SEALED_RECEIVE_HEAL}）持续时间延长1回合。对最高攻击力敌人施加{D/BT_ACTION_GAUGE}-20%。"
+      },
+      "chain": {
+        "review": "Chain Companion Effect: {B/BT_DMG_TARGET_BREAK} replaced by {D/BT_DOT_BURN} (2 turns, ignores Resilience) on all enemies.",
+        "review_jp": "チェーン効果：{B/BT_DMG_TARGET_BREAK}が{D/BT_DOT_BURN}（2ターン、効果抵抗無視）に置き換え（敵全体）。",
+        "review_kr": "체인 컴패니언 효과: {B/BT_DMG_TARGET_BREAK}이 적 전체 {D/BT_DOT_BURN} (2턴, 효과 저항 무시)으로 교체.",
+        "review_zh": "连携效果：{B/BT_DMG_TARGET_BREAK}替换为对全体敌人施加{D/BT_DOT_BURN}（2回合，无视效果抵抗）。"
+      },
+      "passive": {
+        "review": "On Death Sentence use: self {B/BT_STAT|ST_ATK} and {B/BT_ADDITIVE_TURN}.",
+        "review_jp": "【死刑宣告】使用時：自身{B/BT_STAT|ST_ATK}と{B/BT_ADDITIVE_TURN}を獲得。",
+        "review_kr": "사형 선고 사용 시: 자신 {B/BT_STAT|ST_ATK} 및 {B/BT_ADDITIVE_TURN} 획득.",
+        "review_zh": "使用死刑宣判时：自身获得{B/BT_STAT|ST_ATK}和{B/BT_ADDITIVE_TURN}。"
+      },
+      "transcendence": {
+        "review": "Self {B/BT_STAT|ST_SPEED} (1 turn) at battle start.",
+        "review_jp": "戦闘開始時に自身{B/BT_STAT|ST_SPEED}（1ターン）を獲得。",
+        "review_kr": "전투 시작 시 자신 {B/BT_STAT|ST_SPEED} (1턴) 획득.",
+        "review_zh": "战斗开始时获得自身{B/BT_STAT|ST_SPEED}（1回合）。"
+      }
+    }
   }
 ]

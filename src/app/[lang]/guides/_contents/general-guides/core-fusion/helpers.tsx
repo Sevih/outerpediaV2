@@ -32,6 +32,7 @@ interface HeroChanges {
   s3?: SkillChange;
   chain?: SkillChange;
   passive?: SkillChange;
+  transcendence?: SkillChange;
 }
 
 interface BaseHeroReview {
@@ -125,6 +126,12 @@ export const LABELS = {
     jp: 'フュージョンパッシブ',
     kr: '퓨전 패시브',
     zh: '融合被动',
+  },
+  transcendence: {
+    en: 'Transcendence Bonus',
+    jp: '超越ボーナス',
+    kr: '초월 보너스',
+    zh: '超越奖励',
   },
   exclusiveEquipment: {
     en: 'Exclusive Equipment',
@@ -331,6 +338,19 @@ function PassiveSection({ change, lang }: { change: SkillChange; lang: Lang }) {
   );
 }
 
+function TranscendenceSection({ change, lang }: { change: SkillChange; lang: Lang }) {
+  const review = l(change as unknown as Record<string, unknown>, 'review', lang);
+
+  return (
+    <div className="space-y-2">
+      <h4 className="text-sm font-semibold text-amber-300">{lRec(LABELS.transcendence, lang)}</h4>
+      <div className="rounded-md border border-amber-500/20 bg-amber-500/5 p-3 text-sm text-neutral-300">
+        {parseText(review)}
+      </div>
+    </div>
+  );
+}
+
 /* ===================== EEComparisonSection ===================== */
 
 function EEMiniCard({
@@ -506,6 +526,9 @@ export function HeroCard({ h, lang }: { h: HeroReview; lang: Lang }) {
 
           {/* Fusion Passive */}
           {changes.passive && <PassiveSection change={changes.passive} lang={lang} />}
+
+          {/* Transcendence Bonus */}
+          {changes.transcendence && <TranscendenceSection change={changes.transcendence} lang={lang} />}
 
           {/* EE Comparison */}
           {charId && <EEComparisonSection baseCharId={charId.replace('2700', '2000')} cfCharId={charId} lang={lang} />}

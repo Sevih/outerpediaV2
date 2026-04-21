@@ -465,6 +465,7 @@ function extractSkills(
     const { buffs, debuffs } = classifyEffects([...buffIDSet], {
       ownerId: charRow.ID,
       skillType,
+      skillName: nameText?.en ?? undefined,
       tables: effectTables,
       tooltipIds: tooltipIDs,
       extraDebuffs,

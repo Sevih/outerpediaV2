@@ -203,6 +203,10 @@ function extractEEBuffDebuff(
     tables,
     rowFilter,
     tooltipIds: [...tooltipIds],
+    // Every EE row is hand-curated by the game; labels that the
+    // skill-level blacklist suppresses as noise (e.g. `BT_SEAL_COUNTER`,
+    // `BT_BURN_ENHANCE`) are in fact the real effects we want to surface.
+    skipLabelBlacklist: true,
   })
 
   const buffOut = new Set(buffs)
