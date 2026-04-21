@@ -11,9 +11,6 @@
   "rank": "B",
   "rank_pvp": "A",
   "role": "support",
-  "tags": [
-    "ignore-defense"
-  ],
   "skill_priority": {
     "First": {
       "prio": 2
@@ -65,24 +62,24 @@
       "true_desc_levels": {
         "1": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
         "2": "Attacks an enemy, and has a <color=#28d9ed>50%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
-        "3": "Attacks an enemy, and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
-        "4": "Attacks an enemy, and has a <color=#28d9ed>60%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
-        "5": "Attacks an enemy, and has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
+        "3": "Attacks an enemy, and has a <color=#28d9ed>65%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
+        "4": "Attacks an enemy, and has a <color=#28d9ed>80%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
+        "5": "Attacks an enemy, and has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turn(s)</color>.\\nAfter attacking, when the target is inflicted with a debuff, deals <color=#28d9ed>3%</color> of the target's Max Health as fixed damage.",
         "1_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
         "2_jp": "敵単体にダメージを与え、<color=#28d9ed>50%</color>の確率で<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
-        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
-        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
-        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>75%</color>の確率で<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
+        "3_jp": "敵単体にダメージを与え、<color=#28d9ed>65%</color>の確率で<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
+        "4_jp": "敵単体にダメージを与え、<color=#28d9ed>80%</color>の確率で<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
+        "5_jp": "敵単体にダメージを与え、<color=#28d9ed>100%</color>の確率で<color=#28d9ed>標的</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n攻撃後、対象に弱体効果がある場合、対象の最大HPの<color=#28d9ed>3%</color>の固定ダメージを与える。",
         "1_kr": "적을 공격하고, <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
         "2_kr": "적을 공격하고, <color=#28d9ed>50%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
-        "3_kr": "적을 공격하고, <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
-        "4_kr": "적을 공격하고, <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
-        "5_kr": "적을 공격하고, <color=#28d9ed>75%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
+        "3_kr": "적을 공격하고, <color=#28d9ed>65%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
+        "4_kr": "적을 공격하고, <color=#28d9ed>80%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
+        "5_kr": "적을 공격하고, <color=#28d9ed>100%</color> 확률로 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>표식</color>을 부여합니다.\\n공격 후 대상이 약화 효과를 보유하고 있다면 대상 최대 체력의 <color=#28d9ed>3%</color> 만큼 고정 피해를 입힙니다.",
         "1_zh": "攻击敌人，并有<color=#28d9ed>50%</color>的几率造成<color=#28d9ed>标记</color>效果，持续<color=#28d9ed>2回合</color>。\\n攻击后，若目标附带弱化效果，则造成目标生命值上限<color=#28d9ed>2%</color>的固定伤害。",
         "2_zh": "攻击敌人，并有<color=#28d9ed>50%</color>的几率造成<color=#28d9ed>标记</color>效果，持续<color=#28d9ed>2回合</color>。\\n攻击后，若目标附带弱化效果，则造成目标生命值上限<color=#28d9ed>2%</color>的固定伤害。",
-        "3_zh": "攻击敌人，并有<color=#28d9ed>60%</color>的几率造成<color=#28d9ed>标记</color>效果，持续<color=#28d9ed>2回合</color>。\\n攻击后，若目标附带弱化效果，则造成目标生命值上限<color=#28d9ed>2%</color>的固定伤害。",
-        "4_zh": "攻击敌人，并有<color=#28d9ed>60%</color>的几率造成<color=#28d9ed>标记</color>效果，持续<color=#28d9ed>2回合</color>。\\n攻击后，若目标附带弱化效果，则造成目标生命值上限<color=#28d9ed>2%</color>的固定伤害。",
-        "5_zh": "攻击敌人，并有<color=#28d9ed>75%</color>的几率造成<color=#28d9ed>标记</color>效果，持续<color=#28d9ed>2回合</color>。\\n攻击后，若目标附带弱化效果，则造成目标生命值上限<color=#28d9ed>2%</color>的固定伤害。"
+        "3_zh": "攻击敌人，并有<color=#28d9ed>65%</color>的几率造成<color=#28d9ed>标记</color>效果，持续<color=#28d9ed>2回合</color>。\\n攻击后，若目标附带弱化效果，则造成目标生命值上限<color=#28d9ed>2%</color>的固定伤害。",
+        "4_zh": "攻击敌人，并有<color=#28d9ed>80%</color>的几率造成<color=#28d9ed>标记</color>效果，持续<color=#28d9ed>2回合</color>。\\n攻击后，若目标附带弱化效果，则造成目标生命值上限<color=#28d9ed>2%</color>的固定伤害。",
+        "5_zh": "攻击敌人，并有<color=#28d9ed>100%</color>的几率造成<color=#28d9ed>标记</color>效果，持续<color=#28d9ed>2回合</color>。\\n攻击后，若目标附带弱化效果，则造成目标生命值上限<color=#28d9ed>3%</color>的固定伤害。"
       },
       "enhancement": {
         "2": [
@@ -90,56 +87,60 @@
           "+1 Weakness Gauge damage"
         ],
         "3": [
-          "+10% effect chance"
+          "+15% effect chance"
         ],
         "4": [
-          "+10% damage"
-        ],
-        "5": [
           "+10% damage",
           "+15% effect chance"
+        ],
+        "5": [
+          "Fixed damage equal to 1% of target's Max HP",
+          "+20% effect chance"
         ],
         "2_jp": [
           "ダメージ+10%",
           "WGダメージ+1"
         ],
         "3_jp": [
-          "効果発生率+10%"
+          "効果発生率+15%"
         ],
         "4_jp": [
-          "ダメージ+10%"
-        ],
-        "5_jp": [
           "ダメージ+10%",
           "効果発生率+15%"
+        ],
+        "5_jp": [
+          "対象の最大HP比例の固定ダメージ+1%",
+          "効果発生率+20%"
         ],
         "2_kr": [
           "피해량 +10%",
           "WG 감소량 +1"
         ],
         "3_kr": [
-          "효과 발동 확률 +10%"
+          "효과 발동 확률 +15%"
         ],
         "4_kr": [
-          "피해량 +10%"
-        ],
-        "5_kr": [
           "피해량 +10%",
           "효과 발동 확률 +15%"
+        ],
+        "5_kr": [
+          "대상 최대 체력 고정 피해 +1%",
+          "효과 발동 확률 +20%"
         ],
         "2_zh": [
           "伤害量+10%",
           "WG降低量+1"
         ],
         "3_zh": [
-          "效果触发几率+10%"
+          "效果触发几率+15%"
         ],
         "4_zh": [
-          "伤害量+10%"
-        ],
-        "5_zh": [
           "伤害量+10%",
           "效果触发几率+15%"
+        ],
+        "5_zh": [
+          "目标最大生命值固定伤害+1%",
+          "效果触发几率+20%"
         ]
       },
       "wgr": 1,
@@ -155,10 +156,10 @@
       "target": "mono",
       "burnEffect": {
         "SKT_BURST_1": {
-          "effect": "Increases damage\\nIncreases chance to inflict Marked by 25%",
-          "effect_jp": "ダメージUP\\n標的発生率+25%",
-          "effect_kr": "피해 증가\\n표식 발동 확률 +25%",
-          "effect_zh": "伤害提升\\n标记触发几率+25%",
+          "effect": "DMG Increase\\nWG DMG +1",
+          "effect_jp": "ダメージUP\\nWGダメージ+1",
+          "effect_kr": "피해 증가\\nWG 피해 +1",
+          "effect_zh": "伤害提升\\nWG伤害+1",
           "cost": 80,
           "level": 1,
           "offensive": true,
@@ -195,75 +196,79 @@
       "name_kr": "아직 자기 싫어!",
       "name_zh": "还不想睡！",
       "true_desc_levels": {
-        "1": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>2%</color> (Max 5 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>75%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "2": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>3%</color> (Max 5 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>75%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "3": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>3%</color> (Max 5 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>85%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "4": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>4%</color> (Max 5 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>85%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "5": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>4%</color> (Max 5 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>100%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-        "1_jp": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>2%</color>UPさせる。この効果は最大5回まで累積する。\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>75%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
-        "2_jp": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>3%</color>UPさせる。この効果は最大5回まで累積する。\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>75%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
-        "3_jp": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>3%</color>UPさせる。この効果は最大5回まで累積する。\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>85%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
-        "4_jp": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大5回まで累積する。\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>85%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
-        "5_jp": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>4%</color>UPさせる。この効果は最大5回まで累積する。\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>100%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
-        "1_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>2%</color> 증가 시킵니다. (최대 5회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>75%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
-        "2_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>3%</color> 증가 시킵니다. (최대 5회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>75%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
-        "3_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>3%</color> 증가 시킵니다. (최대 5회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>85%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
-        "4_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가 시킵니다. (최대 5회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>85%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
-        "5_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>4%</color> 증가 시킵니다. (최대 5회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>100%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
-        "1_zh": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>2%</color>。(最多可叠加5次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>75%</color>的几率使全体敌人的行动值降低<color=#28d9ed>100%</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
-        "2_zh": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>3%</color>。(最多可叠加5次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>75%</color>的几率使全体敌人的行动值降低<color=#28d9ed>100%</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
-        "3_zh": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>3%</color>。(最多可叠加5次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>85%</color>的几率使全体敌人的行动值降低<color=#28d9ed>100%</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
-        "4_zh": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>4%</color>。(最多可叠加5次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>85%</color>的几率使全体敌人的行动值降低<color=#28d9ed>100%</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
-        "5_zh": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>4%</color>。(最多可叠加5次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>100%</color>的几率使全体敌人的行动值降低<color=#28d9ed>100%</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。"
+        "1": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>10%</color> (Max 3 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>75%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "2": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>12%</color> (Max 3 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>75%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "3": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>12%</color> (Max 3 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>85%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "4": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>15%</color> (Max 3 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>10%</color> Health. Has a <color=#28d9ed>85%</color> chance to reduce Priority of all enemies by <color=#28d9ed>100%</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+        "5": "(Passive Effect) When attacking a debuffed enemy, increases all allies' damage by <color=#28d9ed>15%</color>. (Max 3 stacks)\\n\\n(Trigger Effect) Upon death, immediately <color=#28d9ed>Revives</color> with <color=#28d9ed>10%</color> Health.\\nWith a <color=#28d9ed>100%</color> chance, reduces all enemies' Priority by <color=#28d9ed>100%</color>. Also deals fixed damage equal to <color=#28d9ed>10%</color> of Kuro's Max Health to the enemy with the highest Attack.\\nImmediately after this skill, enemies' Counterattack, Revenge, and Agile Response will not activate.",
+        "1_jp": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>10%</color>UPさせる。(最大3回)\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>75%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "2_jp": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>12%</color>UPさせる。(最大3回)\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>75%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "3_jp": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>12%</color>UPさせる。(最大3回)\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>85%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "4_jp": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>15%</color>UPさせる。(最大3回)\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>85%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "5_jp": "(パッシブ効果) 自分が弱体効果の対象を攻撃した場合、味方全体のダメージを<color=#28d9ed>15%</color>UPさせる。この効果は最大５回まで累積する。\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>10%</color>のHPで<color=#28d9ed>復活</color>する。\\n<color=#28d9ed>100%</color>の確率で敵全体の行動ゲージを<color=#28d9ed>100%</color>DOWNさせる。また、攻撃力が最も高い敵単体に自分の最大HPの<color=#28d9ed>10%</color>の固定ダメージを与える。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+        "1_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>10%</color> 증가 시킵니다. (최대 3회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>75%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "2_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>12%</color> 증가 시킵니다. (최대 3회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>75%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "3_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>12%</color> 증가 시킵니다. (최대 3회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>85%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "4_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>15%</color> 증가 시킵니다. (최대 3회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>85%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "5_kr": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>15%</color> 증가 시킵니다. (최대 3회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>10%</color>의 체력으로 <color=#28d9ed>부활</color>합니다.\\n<color=#28d9ed>100%</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>100%</color> 감소시킵니다. 또한 공격력이 가장 높은 적에게 쿠로 최대 체력의 <color=#28d9ed>10%</color> 만큼 고정 피해를 입힙니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "1_zh": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>10%</color>。(最多可叠加3次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>75%</color>的几率使全体敌人的行动值降低<color=#28d9ed>100%</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
+        "2_zh": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>12%</color>。(最多可叠加3次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>75%</color>的几率使全体敌人的行动值降低<color=#28d9ed>100%</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
+        "3_zh": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>12%</color>。(最多可叠加3次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>85%</color>的几率使全体敌人的行动值降低<color=#28d9ed>100%</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
+        "4_zh": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>15%</color>。(最多可叠加3次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>85%</color>的几率使全体敌人的行动值降低<color=#28d9ed>100%</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
+        "5_zh": "(被动效果) 自身攻击处于弱化效果状态的敌人时，使我方全体伤害提升<color=#28d9ed>15%</color>。(最多3次)\\n\\n(发动效果) 死亡后立即以<color=#28d9ed>10%</color>的生命值<color=#28d9ed>复活</color>。\\n以<color=#28d9ed>100%</color>的概率降低全体敌人的行动值<color=#28d9ed>100%</color>。此外对攻击力最高的敌人造成相当于小黑最大生命值<color=#28d9ed>10%</color>的固定伤害。\\n该技能使用后，敌方的反击、复仇、迅速应对将不会发动。"
       },
       "enhancement": {
         "2": [
-          "+1% Ally damage"
+          "Ally DMG +2%"
         ],
         "3": [
           "+10% effect chance"
         ],
         "4": [
-          "+1% Ally damage"
+          "Ally DMG +3%"
         ],
         "5": [
-          "+15% effect chance"
+          "+15% effect chance",
+          "Self Max Health fixed damage +10%"
         ],
         "2_jp": [
-          "味方全体のダメージUP+1%"
+          "味方ダメージ+2%"
         ],
         "3_jp": [
           "効果発生率+10%"
         ],
         "4_jp": [
-          "味方全体のダメージUP+1%"
+          "味方ダメージ+3%"
         ],
         "5_jp": [
-          "効果発生率+15%"
+          "効果発生率+15%",
+          "自分最大HPの固定ダメージ+10%"
         ],
         "2_kr": [
-          "아군 피해량 +1%"
+          "아군 피해량 +2%"
         ],
         "3_kr": [
           "효과 발동 확률 +10%"
         ],
         "4_kr": [
-          "아군 피해량 +1%"
+          "아군 피해량 +3%"
         ],
         "5_kr": [
-          "효과 발동 확률 +15%"
+          "효과 발동 확률 +15%",
+          "자신 최대 체력 고정 피해 +10%"
         ],
         "2_zh": [
-          "友军伤害量+1%"
+          "我方伤害量+2%"
         ],
         "3_zh": [
           "效果触发几率+10%"
         ],
         "4_zh": [
-          "友军伤害量+1%"
+          "我方伤害量+3%"
         ],
         "5_zh": [
-          "效果触发几率+15%"
+          "效果触发几率+15%",
+          "自身最大生命值固定伤害+10%"
         ]
       },
       "wgr": null,
@@ -272,7 +277,8 @@
         "BT_SEAL_COUNTER"
       ],
       "debuff": [
-        "BT_ACTION_GAUGE"
+        "BT_ACTION_GAUGE",
+        "BT_FIXED_DAMAGE"
       ],
       "offensive": false,
       "target": "multi"
@@ -286,26 +292,26 @@
       "name_kr": "영참사 놀이!",
       "name_zh": "灵斩师游戏！",
       "true_desc_levels": {
-        "1": "Attacks all enemies. Has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
-        "2": "Attacks all enemies. Has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>2%</color> of the target's Max Health as fixed damage.",
-        "3": "Attacks all enemies. Has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>5%</color> of the target's Max Health as fixed damage.",
-        "4": "Attacks all enemies. Has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>5%</color> of the target's Max Health as fixed damage.",
-        "5": "Attacks all enemies. Has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>8%</color> of the target's Max Health as fixed damage.",
-        "1_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>75%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
-        "2_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>75%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>2%</color>の固定ダメージを与える。",
-        "3_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>85%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。",
-        "4_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>85%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>5%</color>の固定ダメージを与える。",
-        "5_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>8%</color>の固定ダメージを与える。",
-        "1_kr": "적 전체를 공격합니다. <color=#28d9ed>75%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
-        "2_kr": "적 전체를 공격합니다. <color=#28d9ed>75%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>2%</color> 만큼 고정 피해를 입힙니다.",
-        "3_kr": "적 전체를 공격합니다. <color=#28d9ed>85%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>5%</color> 만큼 고정 피해를 입힙니다.",
-        "4_kr": "적 전체를 공격합니다. <color=#28d9ed>85%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>5%</color> 만큼 고정 피해를 입힙니다.",
-        "5_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>8%</color> 만큼 고정 피해를 입힙니다.",
-        "1_zh": "攻击全体敌人。有<color=#28d9ed>75%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>2%</color>的固定伤害。",
-        "2_zh": "攻击全体敌人。有<color=#28d9ed>75%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>2%</color>的固定伤害。",
-        "3_zh": "攻击全体敌人。有<color=#28d9ed>85%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>5%</color>的固定伤害。",
-        "4_zh": "攻击全体敌人。有<color=#28d9ed>85%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>5%</color>的固定伤害。",
-        "5_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>8%</color>的固定伤害。"
+        "1": "Attacks all enemies. Has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>4%</color> of the target's Max Health as fixed damage.",
+        "2": "Attacks all enemies. Has a <color=#28d9ed>75%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>4%</color> of the target's Max Health as fixed damage.",
+        "3": "Attacks all enemies. Has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>7%</color> of the target's Max Health as fixed damage.",
+        "4": "Attacks all enemies. Has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>7%</color> of the target's Max Health as fixed damage.",
+        "5": "Attacks all enemies. Has a <color=#28d9ed>100%</color> chance to inflict <color=#28d9ed>buff reversal</color> on the target, and ignores Immunity to increase debuff durations by <color=#28d9ed>1 turn(s)</color>. After attacking, when the target is not inflicted with dispellable <color=#28d9ed>reduced stat effects</color>, deals <color=#28d9ed>10%</color> of the target's Max Health as fixed damage.",
+        "1_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>75%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>4%</color>の固定ダメージを与える。",
+        "2_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>75%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>4%</color>の固定ダメージを与える。",
+        "3_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>85%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>7%</color>の固定ダメージを与える。",
+        "4_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>85%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>7%</color>の固定ダメージを与える。",
+        "5_jp": "敵全体にダメージを与える。敵に<color=#28d9ed>100%</color>の確率で<color=#28d9ed>強化逆転</color>を発生させ、免疫を無視して弱体効果の持続ターンを<color=#28d9ed>1ターン</color>増加させる。攻撃後、解除可能な<color=#28d9ed>ステータスDOWN</color>効果がない対象には、対象の最大HPの<color=#28d9ed>10%</color>の固定ダメージを与える。",
+        "1_kr": "적 전체를 공격합니다. <color=#28d9ed>75%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>4%</color> 만큼 고정 피해를 입힙니다.",
+        "2_kr": "적 전체를 공격합니다. <color=#28d9ed>75%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>4%</color> 만큼 고정 피해를 입힙니다.",
+        "3_kr": "적 전체를 공격합니다. <color=#28d9ed>85%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>7%</color> 만큼 고정 피해를 입힙니다.",
+        "4_kr": "적 전체를 공격합니다. <color=#28d9ed>85%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>7%</color> 만큼 고정 피해를 입힙니다.",
+        "5_kr": "적 전체를 공격합니다. <color=#28d9ed>100%</color> 확률로 적에게 <color=#28d9ed>강화 역전</color>을 발생시키고, 면역을 무시하고 약화 효과 지속시간을 <color=#28d9ed>1턴</color> 증가 시킵니다. 공격 후 해제 가능한 <color=#28d9ed>능력치 감소</color> 효과가 없는 대상에게는 대상 최대 체력의 <color=#28d9ed>10%</color> 만큼 고정 피해를 입힙니다.",
+        "1_zh": "攻击全体敌人。有<color=#28d9ed>75%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>4%</color>的固定伤害。",
+        "2_zh": "攻击全体敌人。有<color=#28d9ed>75%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>4%</color>的固定伤害。",
+        "3_zh": "攻击全体敌人。有<color=#28d9ed>85%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>7%</color>的固定伤害。",
+        "4_zh": "攻击全体敌人。有<color=#28d9ed>85%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>7%</color>的固定伤害。",
+        "5_zh": "攻击全体敌人。有<color=#28d9ed>100%</color>的几率对敌人造成<color=#28d9ed>强化逆转</color>效果，并无视免疫效果，且使弱化效果持续时间增加<color=#28d9ed>1回合</color>。攻击后，对未附带可解除的<color=#28d9ed>能力值降低</color>效果的目标造成相当于目标生命值上限<color=#28d9ed>10%</color>的固定伤害。"
       },
       "enhancement": {
         "2": [
@@ -393,26 +399,26 @@
       "name_kr": "체인 패시브",
       "name_zh": "连携被动",
       "true_desc_levels": {
-        "1": "<color=#ffd732>Chain Finish Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Chain Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>75%</color> chance to inflict Marked for <color=#28d9ed>2 turn(s)</color>.",
-        "2": "<color=#ffd732>Chain Finish Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Chain Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>75%</color> chance to inflict Marked for <color=#28d9ed>2 turn(s)</color>.",
-        "3": "<color=#ffd732>Chain Finish Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Chain Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>75%</color> chance to inflict Marked for <color=#28d9ed>2 turn(s)</color>.",
-        "4": "<color=#ffd732>Chain Finish Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Chain Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>75%</color> chance to inflict Marked for <color=#28d9ed>2 turn(s)</color>.",
-        "5": "<color=#ffd732>Chain Finish Effect</color>: After attacking, recovers <color=#28d9ed>25</color> Chain Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>75%</color> chance to inflict Marked for <color=#28d9ed>2 turn(s)</color>.",
-        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、CPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>75%</color>の確率で標的を<color=#28d9ed>2ターン</color>の間付与する。",
-        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、CPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>75%</color>の確率で標的を<color=#28d9ed>2ターン</color>の間付与する。",
-        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、CPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>75%</color>の確率で標的を<color=#28d9ed>2ターン</color>の間付与する。",
-        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、CPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>75%</color>の確率で標的を<color=#28d9ed>2ターン</color>の間付与する。",
-        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、CPを<color=#28d9ed>25</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>75%</color>の確率で標的を<color=#28d9ed>2ターン</color>の間付与する。",
-        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>75%</color> 확률로 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
-        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>75%</color> 확률로 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
-        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>75%</color> 확률로 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
-        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>75%</color> 확률로 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
-        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>75%</color> 확률로 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
-        "1_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，恢复<color=#28d9ed>25</color>CP。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>75%</color>的几率造成标记效果，持续<color=#28d9ed>2回合</color>",
-        "2_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，恢复<color=#28d9ed>25</color>CP。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>75%</color>的几率造成标记效果，持续<color=#28d9ed>2回合</color>",
-        "3_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，恢复<color=#28d9ed>25</color>CP。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>75%</color>的几率造成标记效果，持续<color=#28d9ed>2回合</color>",
-        "4_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，恢复<color=#28d9ed>25</color>CP。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>75%</color>的几率造成标记效果，持续<color=#28d9ed>2回合</color>",
-        "5_zh": "<color=#ffd732>连携收尾效果</color>：攻击后，恢复<color=#28d9ed>25</color>CP。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>75%</color>的几率造成标记效果，持续<color=#28d9ed>2回合</color>"
+        "1": "<color=#ffd732>Chain Finish Effect</color> : After attacking, recovers <color=#28d9ed>25</color> CP.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, inflicts <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turns</color>.",
+        "2": "<color=#ffd732>Chain Finish Effect</color> : After attacking, recovers <color=#28d9ed>25</color> CP.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, inflicts <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turns</color>.",
+        "3": "<color=#ffd732>Chain Finish Effect</color> : After attacking, recovers <color=#28d9ed>25</color> CP.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, inflicts <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turns</color>.",
+        "4": "<color=#ffd732>Chain Finish Effect</color> : After attacking, recovers <color=#28d9ed>25</color> CP.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, inflicts <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turns</color>.",
+        "5": "<color=#ffd732>Chain Finish Effect</color> : After attacking, recovers <color=#28d9ed>25</color> CP.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, inflicts <color=#28d9ed>Marked</color> for <color=#28d9ed>2 turns</color>.",
+        "1_jp": "<color=#ffd732>チェーン効果(トドメ)</color> : 攻撃後、<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>標的</color>を付与する。",
+        "2_jp": "<color=#ffd732>チェーン効果(トドメ)</color> : 攻撃後、<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>標的</color>を付与する。",
+        "3_jp": "<color=#ffd732>チェーン効果(トドメ)</color> : 攻撃後、<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>標的</color>を付与する。",
+        "4_jp": "<color=#ffd732>チェーン効果(トドメ)</color> : 攻撃後、<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>標的</color>を付与する。",
+        "5_jp": "<color=#ffd732>チェーン効果(トドメ)</color> : 攻撃後、<color=#28d9ed>25</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>標的</color>を付与する。",
+        "1_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
+        "2_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
+        "3_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
+        "4_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
+        "5_kr": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>25</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>2턴</color> 동안 표식을 부여합니다.",
+        "1_zh": "<color=#ffd732>连携收尾效果</color> : 攻击后回复<color=#28d9ed>25</color>的CP。\\n\\n<color=#ffd732>夹攻效果</color> : 攻击后附加<color=#28d9ed>2回合</color>的<color=#28d9ed>标记</color>。",
+        "2_zh": "<color=#ffd732>连携收尾效果</color> : 攻击后回复<color=#28d9ed>25</color>的CP。\\n\\n<color=#ffd732>夹攻效果</color> : 攻击后附加<color=#28d9ed>2回合</color>的<color=#28d9ed>标记</color>。",
+        "3_zh": "<color=#ffd732>连携收尾效果</color> : 攻击后回复<color=#28d9ed>25</color>的CP。\\n\\n<color=#ffd732>夹攻效果</color> : 攻击后附加<color=#28d9ed>2回合</color>的<color=#28d9ed>标记</color>。",
+        "4_zh": "<color=#ffd732>连携收尾效果</color> : 攻击后回复<color=#28d9ed>25</color>的CP。\\n\\n<color=#ffd732>夹攻效果</color> : 攻击后附加<color=#28d9ed>2回合</color>的<color=#28d9ed>标记</color>。",
+        "5_zh": "<color=#ffd732>连携收尾效果</color> : 攻击后回复<color=#28d9ed>25</color>的CP。\\n\\n<color=#ffd732>夹攻效果</color> : 攻击后附加<color=#28d9ed>2回合</color>的<color=#28d9ed>标记</color>。"
       },
       "enhancement": {
         "2": [
