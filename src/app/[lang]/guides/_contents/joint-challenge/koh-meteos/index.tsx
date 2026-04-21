@@ -98,6 +98,18 @@ export default function KOHMeteosGuide() {
               <RecommendedCharacterList entries={apr2026.recommended} />
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={apr2026.teams} defaultStage="Recommended Team" />
+              <hr className="my-6 border-neutral-700" />
+              <MultiVideoEmbed
+                hashPrefix="koh-meteos-apr2026-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'YhiXf0_bVS0',
+                    title: 'Knight of Hope Meteos - Joint Challenge - Very Hard Mode',
+                    author: 'Sevih',
+                  },
+                ]}
+              />
             </>
           ),
         },
