@@ -114,6 +114,30 @@ export const ProgressTracker = {
         needsUpdate = true
       }
 
+      // Ensure enabled task lists follow the canonical order from task definitions
+      const reorderByDefinitionOrder = (enabled: string[], validOrder: string[]): { sorted: string[]; changed: boolean } => {
+        const indexMap = new Map(validOrder.map((id, i) => [id, i]))
+        const sorted = [...enabled].sort((a, b) => (indexMap.get(a) ?? Infinity) - (indexMap.get(b) ?? Infinity))
+        const changed = sorted.some((id, i) => id !== enabled[i])
+        return { sorted, changed }
+      }
+
+      const dailyReorder = reorderByDefinitionOrder(settings.enabledTasks.daily, validDailyIds)
+      if (dailyReorder.changed) {
+        settings.enabledTasks.daily = dailyReorder.sorted
+        needsUpdate = true
+      }
+      const weeklyReorder = reorderByDefinitionOrder(settings.enabledTasks.weekly, validWeeklyIds)
+      if (weeklyReorder.changed) {
+        settings.enabledTasks.weekly = weeklyReorder.sorted
+        needsUpdate = true
+      }
+      const monthlyReorder = reorderByDefinitionOrder(settings.enabledTasks.monthly, validMonthlyIds)
+      if (monthlyReorder.changed) {
+        settings.enabledTasks.monthly = monthlyReorder.sorted
+        needsUpdate = true
+      }
+
       if (settings.hasTerminusSupportPack === undefined) {
         settings.hasTerminusSupportPack = false
         needsUpdate = true
@@ -217,7 +241,7 @@ export const ProgressTracker = {
     this.saveSettings(settings)
 
     const progress = this.getProgress()
-    const affectedTasks = ['bounty-hunter', 'bandit-chase', 'upgrade-stone-retrieval']
+    const affectedTasks = ['hypnotic-frog-hall', 'ark-raid']
     const newMaxCount = settings.hasVeronicaPremiumPack ? 4 : 3
 
     affectedTasks.forEach((taskId) => {
@@ -269,9 +293,8 @@ export const ProgressTracker = {
   toggleAllSweepContent(): void {
     const progress = this.getProgress()
     const sweepableTasks = [
-      'bounty-hunter',
-      'bandit-chase',
-      'upgrade-stone-retrieval',
+      'hypnotic-frog-hall',
+      'ark-raid',
       'defeat-doppelganger',
       'special-request-ecology',
       'special-request-identification',
@@ -427,7 +450,7 @@ export const ProgressTracker = {
       return settings.hasTerminusSupportPack ? 2 : 1
     }
 
-    if (['bounty-hunter', 'bandit-chase', 'upgrade-stone-retrieval'].includes(taskId)) {
+    if (['hypnotic-frog-hall', 'ark-raid'].includes(taskId)) {
       return settings.hasVeronicaPremiumPack ? 4 : 3
     }
 
@@ -478,6 +501,13 @@ export const ProgressTracker = {
       }
     })
 
+    // Rebuild progress.daily so key insertion order follows enabledDailyIds (definition order)
+    const reorderedDaily: Record<string, TaskProgress> = {}
+    enabledDailyIds.forEach((id) => {
+      if (progress.daily[id]) reorderedDaily[id] = progress.daily[id]
+    })
+    progress.daily = reorderedDaily as Record<DailyTaskType, TaskProgress>
+
     // Sync weekly tasks
     const currentWeeklyIds = Object.keys(progress.weekly)
     const enabledWeeklyIds = settings.enabledTasks.weekly
@@ -509,6 +539,13 @@ export const ProgressTracker = {
         }
       }
     })
+
+    // Rebuild progress.weekly so key insertion order follows enabledWeeklyIds (definition order)
+    const reorderedWeekly: Record<string, TaskProgress> = {}
+    enabledWeeklyIds.forEach((id) => {
+      if (progress.weekly[id]) reorderedWeekly[id] = progress.weekly[id]
+    })
+    progress.weekly = reorderedWeekly as Record<WeeklyTaskType, TaskProgress>
 
     // Ensure monthly tasks object exists
     if (!progress.monthly) {
@@ -546,6 +583,13 @@ export const ProgressTracker = {
         }
       }
     })
+
+    // Rebuild progress.monthly so key insertion order follows enabledMonthlyIds (definition order)
+    const reorderedMonthly: Record<string, TaskProgress> = {}
+    enabledMonthlyIds.forEach((id) => {
+      if (progress.monthly[id]) reorderedMonthly[id] = progress.monthly[id]
+    })
+    progress.monthly = reorderedMonthly as Record<MonthlyTaskType, TaskProgress>
   },
 
   createEmptyProgress(): UserProgress {

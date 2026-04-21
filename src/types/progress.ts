@@ -57,7 +57,7 @@ export interface UserSettings {
     monthly: string[] // List of enabled monthly task IDs
   }
   hasTerminusSupportPack: boolean // If true, Terminus Isle maxCount is 2 instead of 1
-  hasVeronicaPremiumPack: boolean // If true, Bounty Hunter/Bandit Chase/Upgrade Stone Retrieval maxCount is 4 instead of 3
+  hasVeronicaPremiumPack: boolean // If true, Hypnotic Frog Hall/Ark Raid maxCount is 4 instead of 3
   adventureLicenseCombatsPerStage: 2 | 3 | 4 // Number of combats per stage (2/3/4) × 3 stages = 6/9/12 total
   hasCompletedElementalTower: boolean // If true, Elemental Tower is hidden (permanent content, never resets)
   displayMode: 'tabs' | 'single-page' // How to display daily/weekly/monthly tasks

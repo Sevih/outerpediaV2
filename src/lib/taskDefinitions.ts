@@ -62,27 +62,19 @@ export const DAILY_TASK_DEFINITIONS: Record<string, TaskDefinition> = {
     permanent: true,
     maxCount: 1, // Can be increased to 2 with support pack
   },
-  'bounty-hunter': {
-    id: 'bounty-hunter',
+  'hypnotic-frog-hall': {
+    id: 'hypnotic-frog-hall',
     type: 'daily',
     category: 'task',
-    labelKey: 'progress.task.bounty-hunter',
+    labelKey: 'progress.task.hypnotic-frog-hall',
     permanent: true,
     maxCount: 3, // Can be increased to 4 with Veronica Premium Pack
   },
-  'bandit-chase': {
-    id: 'bandit-chase',
+  'ark-raid': {
+    id: 'ark-raid',
     type: 'daily',
     category: 'task',
-    labelKey: 'progress.task.bandit-chase',
-    permanent: true,
-    maxCount: 3, // Can be increased to 4 with Veronica Premium Pack
-  },
-  'upgrade-stone-retrieval': {
-    id: 'upgrade-stone-retrieval',
-    type: 'daily',
-    category: 'task',
-    labelKey: 'progress.task.upgrade-stone-retrieval',
+    labelKey: 'progress.task.ark-raid',
     permanent: true,
     maxCount: 3, // Can be increased to 4 with Veronica Premium Pack
   },

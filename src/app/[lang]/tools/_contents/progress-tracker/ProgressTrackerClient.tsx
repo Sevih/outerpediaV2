@@ -817,7 +817,7 @@ function TaskListByCategory({ progress, definitions, type, onIncrement, onToggle
         }
 
         // Regular tasks / recurring
-        const sweepableTasks = ['bounty-hunter', 'bandit-chase', 'upgrade-stone-retrieval', 'defeat-doppelganger', 'special-request-ecology', 'special-request-identification']
+        const sweepableTasks = ['hypnotic-frog-hall', 'ark-raid', 'defeat-doppelganger', 'special-request-ecology', 'special-request-identification']
         const hasSweepableTasks = category === 'task' && type === 'daily' && tasks.some(([key]) => sweepableTasks.includes(key))
 
         return (
