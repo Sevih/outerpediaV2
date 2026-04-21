@@ -14,6 +14,12 @@ import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
 
+/* -- Version: 04-2026 ---------------------------------------- */
+import v04Strings from './versions/04-2026/strings.json';
+import v04Tips from './versions/04-2026/tips.json';
+import v04Recommended from './versions/04-2026/recommended.json';
+import v04Teams from './versions/04-2026/teams.json';
+
 /* -- Version: 11-2025 ---------------------------------------- */
 import v11Strings from './versions/11-2025/strings.json';
 import v11Tips from './versions/11-2025/tips.json';
@@ -37,6 +43,13 @@ const preloadedBosses: Record<string, Boss> = {
 };
 
 /* -- Typed data ----------------------------------------------- */
+
+const apr2026 = {
+  strings: v04Strings as Record<string, LangMap>,
+  tips: v04Tips as Record<string, LangMap[]>,
+  recommended: v04Recommended as CharacterRecommendation[],
+  teams: v04Teams as TeamData,
+};
 
 const nov2025 = {
   strings: v11Strings as Record<string, LangMap>,
@@ -63,10 +76,31 @@ export default function KOHMeteosGuide() {
 
   return (
     <GuideTemplate
-      title={lRec(nov2025.strings.title, lang)}
-      introduction={lRec(nov2025.strings.intro, lang)}
-      defaultVersion="november2025"
+      title={lRec(apr2026.strings.title, lang)}
+      introduction={lRec(apr2026.strings.intro, lang)}
+      defaultVersion="april2026"
       versions={{
+        april2026: {
+          label: lRec(apr2026.strings.label, lang),
+          content: (
+            <>
+              <BossDisplay
+                bossName="Knight of Hope Meteos"
+                modeKey="Joint Challenge"
+                defaultBossId="4176152"
+                preloadedBosses={preloadedBosses}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <TacticalTips
+                sections={[{ title: 'tactical', tips: apr2026.tips.tactical }]}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <RecommendedCharacterList entries={apr2026.recommended} />
+              <hr className="my-6 border-neutral-700" />
+              <StageBasedTeamSelector teamData={apr2026.teams} defaultStage="Recommended Team" />
+            </>
+          ),
+        },
         november2025: {
           label: lRec(nov2025.strings.label, lang),
           content: (
