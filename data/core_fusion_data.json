@@ -161,23 +161,23 @@
   },
   {
     "name": "Core Fusion Eternal",
-    "review": "More damage, stronger debuffs and a new {D/BT_ACTION_GAUGE} debuff.",
-    "review_jp": "ダメージ増加、デバフ強化、新たな{D/BT_ACTION_GAUGE}デバフを獲得。",
-    "review_kr": "피해량 증가, 디버프 강화, 새로운 {D/BT_ACTION_GAUGE} 디버프 획득.",
-    "review_zh": "伤害提升、减益强化、获得新的{D/BT_ACTION_GAUGE}减益。",
+    "review": "More damage, new {D/BT_ACTION_GAUGE} debuff on S3, and {B/BT_STAT|ST_SPEED} buff at battle start from transcendence.",
+    "review_jp": "ダメージ増加、S3に新たな{D/BT_ACTION_GAUGE}デバフ、超越で戦闘開始時に{B/BT_STAT|ST_SPEED}バフを獲得。",
+    "review_kr": "피해량 증가, S3에 새로운 {D/BT_ACTION_GAUGE} 디버프, 초월로 전투 시작 시 {B/BT_STAT|ST_SPEED} 버프 획득.",
+    "review_zh": "伤害提升，S3获得新的{D/BT_ACTION_GAUGE}减益，超越战斗开始时获得{B/BT_STAT|ST_SPEED}增益。",
     "recommended_level": "3 or 5",
     "changes": {
       "s2": {
-        "review": "Inflicts additional {D/BT_DOT_BURN} (2 turns) on {E/Earth} targets.\nBurst 1: grants {B/BT_BARRIER} to self (was Effectiveness).\nBurst 2: extends target {D/BT_DOT_BURN} by 2 turns.",
-        "review_jp": "{E/Earth}対象に追加{D/BT_DOT_BURN}（2ターン）を付与。\nバースト1：効果命中の代わりに自身に{B/BT_BARRIER}を付与。\nバースト2：対象の{D/BT_DOT_BURN}を2ターン延長。",
-        "review_kr": "{E/Earth} 상대에 추가 {D/BT_DOT_BURN} (2턴) 부여.\n버스트 1: 효과 적중 대신 자신에게 {B/BT_BARRIER} 부여.\n버스트 2: 대상 {D/BT_DOT_BURN} 2턴 연장.",
-        "review_zh": "对{E/Earth}追加{D/BT_DOT_BURN}（2回合）。\n爆发1：对自身施加{B/BT_BARRIER}（原效果命中）。\n爆发2：目标{D/BT_DOT_BURN}延长2回合。"
+        "review": "Inflicts additional {D/BT_DOT_BURN} (2 turns) on {E/Earth} targets.\nBurst 1: grants {B/BT_BARRIER} to self (was Effectiveness).\nBurst 2: inflicts {D/BT_DOT_BURN} (2 turns).",
+        "review_jp": "{E/Earth}対象に追加{D/BT_DOT_BURN}（2ターン）を付与。\nバースト1：効果命中の代わりに自身に{B/BT_BARRIER}を付与。\nバースト2：{D/BT_DOT_BURN}（2ターン）を付与。",
+        "review_kr": "{E/Earth} 상대에 추가 {D/BT_DOT_BURN} (2턴) 부여.\n버스트 1: 효과 적중 대신 자신에게 {B/BT_BARRIER} 부여.\n버스트 2: {D/BT_DOT_BURN} (2턴) 부여.",
+        "review_zh": "对{E/Earth}追加{D/BT_DOT_BURN}（2回合）。\n爆发1：对自身施加{B/BT_BARRIER}（原效果命中）。\n爆发2：施加{D/BT_DOT_BURN}（2回合）。"
       },
       "s3": {
-        "review": "The 3 debuffs ({D/BT_STAT|ST_DEF}, {D/BT_STAT|ST_SPEED}, {D/BT_SEALED_RECEIVE_HEAL}) now last 1 extra turn. Inflicts {D/BT_ACTION_GAUGE} -20% on the enemy with the highest ATK.",
-        "review_jp": "3つのデバフ（{D/BT_STAT|ST_DEF}、{D/BT_STAT|ST_SPEED}、{D/BT_SEALED_RECEIVE_HEAL}）の持続時間が1ターン延長。最高攻撃力の敵に{D/BT_ACTION_GAUGE}-20%を付与。",
-        "review_kr": "3개 디버프 ({D/BT_STAT|ST_DEF}, {D/BT_STAT|ST_SPEED}, {D/BT_SEALED_RECEIVE_HEAL}) 지속시간 1턴 연장. 최고 공격력 적에 {D/BT_ACTION_GAUGE} -20% 부여.",
-        "review_zh": "3个减益（{D/BT_STAT|ST_DEF}、{D/BT_STAT|ST_SPEED}、{D/BT_SEALED_RECEIVE_HEAL}）持续时间延长1回合。对最高攻击力敌人施加{D/BT_ACTION_GAUGE}-20%。"
+        "review": "Inflicts {D/BT_ACTION_GAUGE} -20% on the enemy with the highest ATK.",
+        "review_jp": "最高攻撃力の敵に{D/BT_ACTION_GAUGE}-20%を付与。",
+        "review_kr": "최고 공격력 적에 {D/BT_ACTION_GAUGE} -20% 부여.",
+        "review_zh": "对最高攻击力敌人施加{D/BT_ACTION_GAUGE}-20%。"
       },
       "chain": {
         "review": "Chain Companion Effect: {B/BT_DMG_TARGET_BREAK} replaced by {D/BT_DOT_BURN} (2 turns, ignores Resilience) on all enemies.",
