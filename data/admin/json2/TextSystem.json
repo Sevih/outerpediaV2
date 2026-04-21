@@ -1508,8 +1508,8 @@
     "Korean": "적이 공격이 아닌 스킬 사용 시: 자신의 AP +50\\n자신보다 체력이 낮은 적 행동시 : 자신의 행동 게이지 +10%\\n\\n(해제 불가)",
     "English": "When an enemy uses a non-attack skill: increases the caster’s AP by 50\\nWhen an enemy with lower Health than the caster takes action: increases the caster’s Priority by 10%\\n\\n(Irremovable)\n\n",
     "Japanese": "敵が攻撃以外のスキル使用時\\n：自分のAP+50\\n自分よりHPが低い敵行動時\\n：自分の行動ゲージ+10％\\n\\n（解除不可）",
-    "China_Simplified": "敌人使用非攻击技能时：自身AP+50\\n生命值低于自身的敌人行动时：自身行动条 +10%\\n\\n（无法被解除）",
-    "China_Traditional": "敵人使用非攻擊技能時：自身AP +50\\n生命值低於自身的敵人行動時：自身行動條 +10%\\n\\n（無法被解除）"
+    "China_Simplified": "敌人使用非攻击技能时：自身AP+50\\n生命值低于自身的敌人行动时：\\n自身行动条 +10%\\n\\n（无法被解除）",
+    "China_Traditional": "敵人使用非攻擊技能時：自身AP +50\\n生命值低於自身的敵人行動時：\\n自身行動條 +10%\\n\\n（無法被解除）"
   },
   {
     "ID": "SYS_BUFF_NAME_2000056",
@@ -1556,8 +1556,8 @@
     "Korean": "적에게 입히는 피해가 30% 증가하며 보스에게는 80%까지 증가합니다.\\n데미우르고스 아스테가 사망하기 전까지 해제되지 않습니다.",
     "English": "Increases damage dealt to enemies by 30%, and up to 80% against Bosses.\\nCannot be removed before Demiurge Astei is slain.",
     "Japanese": "敵に与えるダメージが30%UPし、ボスには80%までUPする。\\nデミウルゴス・アステが死亡するまで解除されない。",
-    "China_Simplified": "对敌人造成的伤害提升30%，对首领提升至80%。\\n在创世之神奥斯黛死亡之前无法被解除。",
-    "China_Traditional": "對敵人造成的傷害增加30%，對首領增加至80%。\\n迪米烏哥斯‧奧斯黛死亡前不會被解除。"
+    "China_Simplified": "对敌人造成的伤害提升30%，\\n对首领提升至80%。\\n在创世之神奥斯黛死亡之前无法被解除。",
+    "China_Traditional": "對敵人造成的傷害增加30%，\\n對首領增加至80%。\\n迪米烏哥斯‧奧斯黛死亡前不會被解除。"
   },
   {
     "ID": "SYS_BUFF_NAME_2000063",
@@ -1700,16 +1700,16 @@
     "Korean": "턴 시작 시 시전자의 효과 적중에 비례한 피해를 입고, 적 전체의 행동 게이지를 5% 증가시킵니다.\\n시전자가 사망 시 해제됩니다.",
     "English": "At the start of turn, takes damage proportional to the caster's Effectiveness, and increases Priority of all enemies by 5%.\\nRemoved when the caster dies.",
     "Japanese": "ターン開始時、スキル使用者の\\n効果命中に応じたダメージを受け、\\n敵全体の行動ゲージを5%UP\\nさせる。\\nスキル使用者が倒れると解除される。",
-    "China_Simplified": "回合开始时，根据施展者效果命中受到等比例伤害，\\n且全体敌人行动值提升5%。\\n该效果在施展者死亡时解除。",
-    "China_Traditional": "回合開始時，根據施展者的效果命中等比受到傷害，\\n並使全體敵人速攻值增加5%。\\n施展者死亡時解除。"
+    "China_Simplified": "回合开始时，根据施展者\\n效果命中受到等比例伤害，\\n且全体敌人行动值提升5%。\\n该效果在施展者死亡时解除。",
+    "China_Traditional": "回合開始時，根據施展者的\\n效果命中等比受到傷害，\\n並使全體敵人速攻值增加5%。\\n施展者死亡時解除。"
   },
   {
     "ID": "SYS_BUFF_DESC_2200092",
     "Korean": "턴 시작 시 시전자의 효과 적중에 비례한 피해를 입고, 적 전체의 행동 게이지를 5% 증가시킵니다. (해제 불가)",
     "English": "At the start of turn, takes damage proportional to the caster's Effectiveness, and increases Priority of all enemies by 5%. (Irremovable)",
     "Japanese": "ターン開始時、スキル使用者の\\n効果命中に応じたダメージを受け、\\n敵全体の行動ゲージを5%UP\\nさせる。(解除不可)",
-    "China_Simplified": "回合开始时，根据施展者效果命中受到等比例伤害，且全体敌人行动值提升5%。(无法解除)",
-    "China_Traditional": "回合開始時，根據施展者的效果命中等比受到傷害，並使全體敵人速攻值增加5%。(無法解除)"
+    "China_Simplified": "回合开始时，根据施展者\\n效果命中受到等比例伤害，且全体敌人行动值提升5%。(无法解除)",
+    "China_Traditional": "回合開始時，根據施展者的\\n效果命中等比受到傷害，並使全體敵人速攻值增加5%。(無法解除)"
   },
   {
     "ID": "SYS_BUFF_NAME_2000093",
@@ -1740,8 +1740,8 @@
     "Korean": "자신이 보유한 해제 가능한 강화 효과를 특정 대상에게 부여합니다.\\n\\n선물 가능한 강화 효과\\n공격력, 방어력, 속도, 치명 확률, 치명 피해, 효과 적중, 효과 저항, 관통력",
     "English": "Grants removable buff(s) held by the caster to a specific target.\\n\\nGiftable Buffs\\nAttack, Defense, Speed, Critical Hit Chance, Critical Damage, Effectiveness, Resilience, Penetration",
     "Japanese": "自分の持つ、解除可能な強化効果を特定の対象に付与する。\\n\\nプレゼントできる強化効果\\n攻撃力、防御力、スピード、会心率、会心ダメージ、効果命中、効果抵抗、貫通力",
-    "China_Simplified": "使特定目标获得自身附带的可解除强化效果。\\n\\n可赠送的强化效果\\n攻击力、防御力、速度、暴击率、暴击伤害、效果命中、效果抵抗、穿透力",
-    "China_Traditional": "賦予特定目標自身具有的可解除強化效果。\\n\\n可贈送的強化效果\\n攻擊力、防禦力、速度、暴擊率、暴擊傷害、效果命中、效果抵抗、貫穿力"
+    "China_Simplified": "使特定目标获得自身附带的可解除强化效果。\\n\\n可赠送的强化效果\\n攻击力、防御力、速度、暴击率、\\n暴击伤害、效果命中、效果抵抗、穿透力",
+    "China_Traditional": "賦予特定目標自身具有的可解除強化效果。\\n\\n可贈送的強化效果\\n攻擊力、防禦力、速度、暴擊率、\\n暴擊傷害、效果命中、效果抵抗、貫穿力"
   },
   {
     "ID": "SYS_BUFF_NAME_2000094",
@@ -1844,8 +1844,8 @@
     "Korean": "자신의 속도가 90% 감소하고, 아군이 턴을 획득하여 행동 시 참회하세요! 를 가장 공격력이 높은 적에게 사용합니다.\\n이후 자신의 행동 게이지가 40% 증가합니다.(해제 불가, 보스 브레이크 및 자신 턴 종료 시 해제, 혼자 생존 시 속도 감소 효과 제거 및 미발생)",
     "English": "Reduces the caster’s Speed by 90%. When an ally takes a turn and performs an action, the caster uses Repent! on the enemy with the highest Attack.. Then, increase the caster’s Priority by 40%. (Irremovable. Removed when a Boss Break occurs or at the end of the caster’s turn. When the caster is the only surviving ally, the Speed reduction effect is removed and will not occur.)",
     "Japanese": "自分のスピードが90%DOWNし、\\n味方がターンを獲得して行動する時、\\n攻撃力が最も高い敵単体に\\n【懺悔なさい！】を発動する。\\nその後、\\n自分の行動ゲージが40%UPする。\\n（解除不可、ブレイクまたは\\n自分のターン終了時に解除。\\n三蔵法師・あめのみ生存時は\\nスピードDOWN効果を解除し、\\n効果は発動しない）",
-    "China_Simplified": "自身速度降低90%，\\n当我方单位获得回合并行动时，\\n对攻击力最高的敌人使用“忏悔吧！”。\\n\\n之后自身行动值提高40%。\\n（无法驱散，\\n首领进入力竭状态及自身回合结束时解除，\\n独自生存时速度降低效果将被移除且不会触发）",
-    "China_Traditional": "自身速度降低90%，\\n當我方單位獲得回合並行動時，\\n對攻擊力最高的敵人使用「懺悔吧！」。\\n之後自身行動值提高40%。\\n（無法驅散，\\n首領進入休息狀態及自身回合結束時解除，\\n獨自生存時速度降低效果將被移除且不會發生）"
+    "China_Simplified": "自身速度降低90%，\\n当我方单位获得回合并行动时，\\n对攻击力最高的敌人使用【忏悔吧!】。\\n\\n之后自身行动值提高40%。\\n（无法驱散，首领进入力竭状态及\\n自身回合结束时解除，\\n独自生存时\\n速度降低效果将被移除且不会触发）",
+    "China_Traditional": "自身速度降低90%，\\n當我方單位獲得回合並行動時，\\n對攻擊力最高的敵人使用「懺悔吧！」。\\n之後自身行動值提高40%。\\n（無法驅散，首領進入休息狀態及\\n自身回合結束時解除，\\n獨自生存時\\n速度降低效果將被移除且不會發生）"
   },
   {
     "ID": "SYS_BUFF_NAME_2000119",
@@ -1860,8 +1860,8 @@
     "Korean": "받는 최종 피해가 75% 감소합니다.(최종 피해 감소는 가장 높은 값만 적용, 해제 불가)",
     "English": "Reduces final damage taken by 75%. (Only the highest value of final damage reduction is applied, Irremovable)",
     "Japanese": "受ける最終ダメージが75%DOWN\\nする。(最終ダメージDOWNは最も\\n高い値のみ適用、解除不可)",
-    "China_Simplified": "所受的最终伤害降低75%。\\n(最终伤害降低仅生效最高值，无法解除)",
-    "China_Traditional": "受到的最終傷害減少75%。\\n(最終傷害減少僅套用最高數值，無法解除)"
+    "China_Simplified": "所受的最终伤害降低75%。\\n(最终伤害降低仅生效最高值，\\n无法解除)",
+    "China_Traditional": "受到的最終傷害減少75%。\\n(最終傷害減少僅套用最高數值，\\n無法解除)"
   },
   {
     "ID": "SYS_BUFF_NAME_2000120",
@@ -1876,8 +1876,8 @@
     "Korean": "자신을 제외한 아군이 적을수록 자신이 주는 피해가 증가합니다. (최대 150%, 해제 불가)",
     "English": "The fewer allies present (excluding the bearer), the greater the damage the bearer deals. (Up to 150%. Irremovable.)",
     "Japanese": "自分を除く味方が少ないほど、\\n自分が与えるダメージがUPする。\\n(最大150%、解除不可)",
-    "China_Simplified": "除自身以外的友军越少，自身造成的伤害越多。\\n(最多150%，无法解除)",
-    "China_Traditional": "自己除外的我軍越少，自身造成的傷害隨之增加。\\n（最多150%，無法解除）"
+    "China_Simplified": "除自身以外的友军越少，\\n自身造成的伤害越多。\\n(最多150%，无法解除)",
+    "China_Traditional": "自己除外的我軍越少，\\n自身造成的傷害隨之增加。\\n（最多150%，無法解除）"
   },
   {
     "ID": "SYS_BUFF_DESC_40103045",
@@ -3020,24 +3020,24 @@
     "Korean": "대상의 행동을 제한합니다.\\n시전자가 사망 시 해제됩니다.\\n빙결, 석화, 스턴, 황금의 저주 중 가장 지속 시간이 긴 효과 1종만 적용됩니다.",
     "English": "Restricts movement. Removed when the caster dies.\\nOnly the debuff with the longest duration among Frozen, Petrified, Stunned, and Golden Curse can be inflicted at the same time.",
     "Japanese": "一定の間行動できなくなる。\\nスキル使用者が倒れると\\n解除される。スタン・石化・凍結・黄金の呪いの\\n中で、ターンが最も残っている効果のみ\\n適用される。",
-    "China_Simplified": "限制目标行动。\\n施展者死亡时解除。\\n冰冻、石化、黄金诅咒、晕眩中持续时间最长的\\n1种效果生效。",
-    "China_Traditional": "限制目標的行動。施展者死亡時解除。\\n套用冰凍、石化、黃金詛咒、暈眩之中持續時間最長\\n的1種效果。"
+    "China_Simplified": "限制目标行动。\\n施展者死亡时解除。\\n冰冻、石化、黄金诅咒、\\n晕眩中持续时间最长的\\n1种效果生效。",
+    "China_Traditional": "限制目標的行動。施展者死亡時解除。\\n套用冰凍、石化、黃金詛咒、\\n暈眩之中持續時間最長\\n的1種效果。"
   },
   {
     "ID": "SYS_DESC_STUN",
     "Korean": "대상의 행동을 제한합니다.\\n시전자가 사망 시 해제됩니다.\\n빙결, 석화, 스턴, 황금의 저주 중 가장 지속 시간이 긴 효과 1종만 적용됩니다.",
     "English": "Restricts movement. Removed when the caster dies.\\nOnly the debuff with the longest duration among Frozen, Petrified, Stunned, and Golden Curse can be inflicted at the same time.",
     "Japanese": "一定の間行動できなくなる。\\nスキル使用者が倒れると\\n解除される。スタン・石化・凍結・黄金の呪いの\\n中で、ターンが最も残っている効果のみ\\n適用される。",
-    "China_Simplified": "限制目标行动。\\n施展者死亡时解除。\\n冰冻、石化、黄金诅咒、晕眩中持续时间最长的\\n1种效果生效。",
-    "China_Traditional": "限制目標的行動。施展者死亡時解除。\\n套用冰凍、石化、黃金詛咒、暈眩之中持續時間最長\\n的1種效果。"
+    "China_Simplified": "限制目标行动。\\n施展者死亡时解除。\\n冰冻、石化、黄金诅咒、\\n晕眩中持续时间最长的\\n1种效果生效。",
+    "China_Traditional": "限制目標的行動。施展者死亡時解除。\\n套用冰凍、石化、黃金詛咒、\\n暈眩之中持續時間最長\\n的1種效果。"
   },
   {
     "ID": "SYS_DESC_STONE",
     "Korean": "대상의 행동을 제한합니다.\\n시전자가 사망 시 해제됩니다.\\n빙결, 석화, 스턴, 황금의 저주 중 가장 지속 시간이 긴 효과 1종만 적용됩니다.",
     "English": "Restricts movement. Removed when the caster dies.\\nOnly the debuff with the longest duration among Frozen, Petrified, Stunned, and Golden Curse can be inflicted at the same time.",
     "Japanese": "一定の間行動できなくなる。\\nスキル使用者が倒れると\\n解除される。スタン・石化・凍結・黄金の呪いの\\n中で、ターンが最も残っている効果のみ\\n適用される。",
-    "China_Simplified": "限制目标行动。\\n施展者死亡时解除。\\n冰冻、石化、黄金诅咒、晕眩中持续时间最长的\\n1种效果生效。",
-    "China_Traditional": "限制目標的行動。\\n施展者死亡時解除。\\n套用冰凍、石化、黃金詛咒、暈眩之中\\n持續時間最長的1種效果。"
+    "China_Simplified": "限制目标行动。\\n施展者死亡时解除。\\n冰冻、石化、黄金诅咒、\\n晕眩中持续时间最长的\\n1种效果生效。",
+    "China_Traditional": "限制目標的行動。\\n施展者死亡時解除。\\n套用冰凍、石化、黃金詛咒、\\n暈眩之中\\n持續時間最長的1種效果。"
   },
   {
     "ID": "SYS_DESC_MARKING",
@@ -3748,8 +3748,8 @@
     "Korean": "대상의 행동을 제한하고 받는 피해를 30% 증가시킵니다.\\n시전자가 사망 시 해제됩니다.\\n빙결, 석화, 스턴, 황금의 저주 중 가장 지속 시간이 긴 효과 1종만 적용됩니다.\\n지속 시간 종료 혹은 해제 시 대상의 공격력을 1턴 동안 감소시킵니다.\\n대상이 명속성인 경우 추가로 치명 피해를 2턴 동안 감소시킵니다.\\n(공격력 감소 및 치명 피해 감소 효과는 해제 불가)",
     "English": "Applies only 1 effect with the longest duration among Frozen, Petrified, Stunned, and Golden Curse.\\nWhen the effect ends or is removed, decreases the target’s Attack for 1 turn.\\nIf the target is Light, additionally decreases Critical DMG for 2 turns.\\n(Attack Decrease and Critical DMG Decrease cannot be removed)",
     "Japanese": "対象の行動を制限し、敵から受けるダメージを30%UPさせる。スキル使用者が倒れると解除される。凍結、石化、スタン、黄金の呪いのうち、最も持続ターンが長い効果1個のみ適用される。持続ターン終了または解除時、対象の攻撃力を1ターンの間DOWNさせる。対象が光属性の場合、追加で会心ダメージを2ターンの間DOWNさせる。(攻撃力DOWNおよび会心ダメージDOWN効果は解除不可)",
-    "China_Simplified": "限制目标行动，并使受到的伤害提升30%。\\n施法者死亡时解除。\\n冰冻、石化、眩晕、黄金诅咒中，\\n仅生效持续时间最长的1种效果。\\n持续时间结束或解除时，\\n使目标的攻击力降低1回合。\\n若目标为光属性，额外使暴击伤害降低2回合。\\n(攻击力降低及暴击伤害降低效果无法解除)",
-    "China_Traditional": "限制目標行動，並使受到的傷害提升30%。\\n施法者死亡時解除。\\n冰凍、石化、暈眩、黃金詛咒中，\\n僅生效持續時間最長的1種效果。\\n持續時間結束或解除時，\\n使目標的攻擊力降低1回合。\\n若目標為光屬性，額外使暴擊傷害降低2回合。\\n(攻擊力降低及暴擊傷害降低效果無法解除)"
+    "China_Simplified": "限制目标行动，\\n并使受到的伤害提升30%。\\n施法者死亡时解除。\\n冰冻、石化、眩晕、黄金诅咒中，\\n仅生效持续时间最长的1种效果。\\n持续时间结束或解除时，\\n使目标的攻击力降低1回合。\\n若目标为光属性，\\n额外使暴击伤害降低2回合。\\n(攻击力降低及暴击伤害降低效果无法解除)",
+    "China_Traditional": "限制目標行動，\\n並使受到的傷害提升30%。\\n施法者死亡時解除。\\n冰凍、石化、暈眩、黃金詛咒中，\\n僅生效持續時間最長的1種效果。\\n持續時間結束或解除時，\\n使目標的攻擊力降低1回合。\\n若目標為光屬性，\\n額外使暴擊傷害降低2回合。\\n(攻擊力降低及暴擊傷害降低效果無法解除)"
   },
   {
     "ID": "SYS_BUFF_Start_Bulwark",
@@ -5336,6 +5336,14 @@
     "China_Traditional": "後列"
   },
   {
+    "ID": "SYS_LINE_MIDDLE",
+    "Korean": "중열",
+    "English": "Middle Line",
+    "Japanese": "中列",
+    "China_Simplified": "中排",
+    "China_Traditional": "中列"
+  },
+  {
     "ID": "SYS_SUPPORTER",
     "Korean": "서포터",
     "English": "Supporter",
@@ -5842,7 +5850,7 @@
   {
     "ID": "SYS_STAT_E_CRI_DMG_REDUCE",
     "Korean": "받는 치명 피해 감소",
-    "English": "Crit DMG Reduction",
+    "English": "Crit DMG Reduc",
     "Japanese": "被会心ダメDOWN",
     "China_Simplified": "受暴击伤害降低",
     "China_Traditional": "受暴擊傷害減少"
@@ -7657,11 +7665,11 @@
   },
   {
     "ID": "SYS_GACHA_CHARACTER_INFO_NOTICE",
-    "Korean": "최대 레벨/진화/초월/스킬 레벨이 적용된 정보입니다.",
-    "English": "Max level/upgrade/Transcend/skill level\\nhave been applied.",
-    "Japanese": "※このステータスはレベルMAX/スキルレベルMAX/進化MAX/超越MAX時のものとなります。",
-    "China_Simplified": "已适用最高进化/超越/技能等级。",
-    "China_Traditional": "已套用最高等級/進化/超越/技能等級的資訊。"
+    "Korean": "최대 레벨/초월/스킬 레벨이 적용된 정보입니다.",
+    "English": "Max level/Transcend/Skill level have been applied.",
+    "Japanese": "※このステータスはレベルMAX/スキルレベルMAX/超越MAX時のものとなります。",
+    "China_Simplified": "这是应用了最大等级/超越/技能等级的信息。",
+    "China_Traditional": "這是應用了最大等級/超越/技能等級的資訊。"
   },
   {
     "ID": "SYS_ELEMENT_EARTH",
@@ -7833,19 +7841,19 @@
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_1",
-    "Korean": "만년설 결정",
-    "English": "Permafrost Crystal",
-    "Japanese": "万年雪の結晶",
-    "China_Simplified": "万年雪结晶",
-    "China_Traditional": "萬年雪結晶"
+    "Korean": "수상한 수정",
+    "English": "Suspicious Crystal",
+    "Japanese": "あやしい水晶",
+    "China_Simplified": "可疑水晶",
+    "China_Traditional": "可疑的水晶"
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_2",
-    "Korean": "크리스마스 양말",
-    "English": "Holiday Socks",
-    "Japanese": "クリスマスの靴下",
-    "China_Simplified": "圣诞袜",
-    "China_Traditional": "聖誕襪"
+    "Korean": "드레드노트의 우상",
+    "English": "Dreadnought Totem",
+    "Japanese": "ドレッドノートの神像",
+    "China_Simplified": "无畏族神像",
+    "China_Traditional": "無畏族神像"
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_3",
@@ -8009,27 +8017,27 @@
   },
   {
     "ID": "SYS_DISC_TICKET_GOLD",
-    "Korean": "도전 컨텐츠 [현상 수배]를 진행하기 위한 티켓.",
-    "English": "A ticket needed to enter Challenge content [Bounty Hunter].",
-    "Japanese": "【指名手配】の挑戦に必要なチケット。",
-    "China_Simplified": "用于进行【悬赏通缉】挑战的票券。",
-    "China_Traditional": "用於進行挑戰內容【懸賞通緝】的票券。"
+    "Korean": "도전 컨텐츠 [최면 개구리의 전당]을 진행하기 위한 티켓.",
+    "English": "A ticket needed to enter Challenge content [Hypnotic Frog Hall].",
+    "Japanese": "【최면 개구리의 전당】の挑戦に必要なチケット。",
+    "China_Simplified": "用于进行【최면 개구리의 전당】挑战的票券。",
+    "China_Traditional": "用於進行挑戰內容【최면 개구리의 전당】的票券。"
   },
   {
     "ID": "SYS_DISC_TICKET_EXP",
-    "Korean": "도전 컨텐츠 [도적단 추격]을 진행하기 위한 티켓.",
-    "English": "A ticket needed to enter Challenge content [Bandit Chase].",
-    "Japanese": "【盗賊団追撃】の挑戦に必要なチケット。",
-    "China_Simplified": "用于进行【追击盗贼团】挑战的票券。",
-    "China_Traditional": "用於進行挑戰內容【追捕盜賊團】的\\n票券。"
+    "Korean": "도전 컨텐츠 [최면 개구리의 전당]을 진행하기 위한 티켓.",
+    "English": "A ticket needed to enter Challenge content [Hypnotic Frog Hall].",
+    "Japanese": "【최면 개구리의 전당】の挑戦に必要なチケット。",
+    "China_Simplified": "用于进行【최면 개구리의 전당】挑战的票券。",
+    "China_Traditional": "用於進行挑戰內容【최면 개구리의 전당】的票券。"
   },
   {
     "ID": "SYS_DISC_TICKET_WEEK",
-    "Korean": "도전 컨텐츠 [진화석 수거]를 진행하기 위한 티켓.",
-    "English": "A ticket needed to enter Challenge content [Upgrade Stone Retrieval].",
-    "Japanese": "【進化石収集】の挑戦に必要なチケット。",
-    "China_Simplified": "用于进行【回收进化石】挑战的票券。",
-    "China_Traditional": "用於進行挑戰內容【回收進化石】的\\n票券。"
+    "Korean": "도전 컨텐츠 [방주 습격]을 진행하기 위한 티켓.",
+    "English": "A ticket needed to enter Challenge content [Ark Raid].",
+    "Japanese": "【방주 습격】の挑戦に必要なチケット。",
+    "China_Simplified": "用于进行【방주 습격】挑战的票券。",
+    "China_Traditional": "用於進行挑戰內容【방주 습격】的\\n票券。"
   },
   {
     "ID": "SYS_DISC_TICKET_GUILD_DUNGEON",
@@ -8065,19 +8073,19 @@
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_1",
-    "Korean": "달리아가 모으고 있는 냉기의 결정. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
-    "English": "A crystal made of frost mana collected by Dahlia.\\nIt can be exchanged for goods at the Event Shop.",
-    "Japanese": "ダリアが集めている冷気の結晶。イベントショップでさまざまな商品と交換できます。",
-    "China_Simplified": "达利娅收集的冰冻魔力结晶。\\n可用于活动商店交易。",
-    "China_Traditional": "達利亞正在蒐集的冰凍魔力結晶體。\\n可在活動商店中進行交易。"
+    "Korean": "텅 비어있는 수상한 수정 조각. 용도를 알 수 없어서 더욱 불길하다. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
+    "English": "A suspiciously empty crystal fragment. Nobody knows what it's used for, making it even more ominous. You can exchange it for a variety of items in the Event Shop.",
+    "Japanese": "中身のないあやしい水晶のかけら。使い方も検討がつかず、不吉な気配が漂う。イベントショップでアイテムと交換できる。",
+    "China_Simplified": "空荡荡的可疑水晶碎片。用途不明，更不吉利。可于活动商店中兑换多种商品。",
+    "China_Traditional": "中空的可疑水晶碎片。用途不明，更顯它的不祥之氣。可在活動商店中兌換各式商品。"
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_2",
-    "Korean": "불량배 무리가 약탈해간 크리스마스 선물이 들어 있는 양말. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
-    "English": "Socks containing Christmas gifts looted by a band of thugs. Can be exchanged for various items in the Event Shop.",
-    "Japanese": "ならず者の一味が略奪したクリスマスプレゼントが入った靴下。イベントショップでさまざまな商品と交換できます。",
-    "China_Simplified": "装有被流氓团伙掠夺的圣诞礼物的袜子。可在活动商店兑换各种奖励。",
-    "China_Traditional": "裝有被流氓團夥掠奪的聖誕禮物的襪子。可在活動商店兌換各種獎勵。"
+    "Korean": "용의 마력이 담겨 있는 드레드노트들의 우상. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
+    "English": "A totem of Dreadnoughts infused with the mana of dragons. You can exchange it for a variety of items in the Event Shop.",
+    "Japanese": "竜の魔力が秘められたドレッドノートの神像。イベントショップでアイテムと交換できる。",
+    "China_Simplified": "蕴含着龙之魔力的无畏族神像。可于活动商店中兑换多种商品。",
+    "China_Traditional": "富含龍之魔力的無畏族神像。可在活動商店中兌換各式商品。"
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_3",
@@ -8745,11 +8753,11 @@
   },
   {
     "ID": "SYS_CONTENT_POPUP_DESC_EVOLUTION",
-    "Korean": "동료의 능력을 강화하는 <color=#FED434>[진화]</color> 기능 \\n진화 재료를 획득할 수 있는  <color=#FED434>[진화석 수거]</color> 컨텐츠가 활성화 되었습니다.",
-    "English": "You can now use <color=#FED434>Upgrade</color> to enhance your heroes' power and access <color=#FED434>Upgrade Stone Retrieval</color> to obtain materials needed for upgrading.",
-    "Japanese": "仲間のステータスを強化する機能<color=#FED434>【進化】</color>と\\n進化素材を獲得できる<color=#FED434>【進化石収集】</color>が解放されました。",
-    "China_Simplified": "已激活可提升同伴能力的<color=#FED434>【进化】</color>功能，\\n及可获得进化材料的<color=#FED434>【回收进化石】</color>。",
-    "China_Traditional": "已啟用能強化同伴能力的<color=#FED434>【進化】</color>功能，\\n以及可獲得進化材料的<color=#FED434>【回收進化石】</color>內容。"
+    "Korean": "다양한 재료를 획득할 수 있는  <color=#FED434>[방주 습격]</color> 컨텐츠가 활성화 되었습니다.",
+    "English": "The <color=#FED434>[Ark Raid]</color> challenge content has been enabled.",
+    "Japanese": "様々な素材を獲得できる<color=#FED434>[アーク強襲]</color>コンテンツが有効化されました。",
+    "China_Simplified": "可获得各种材料的<color=#FED434>[方舟强袭]</color>内容已激活。",
+    "China_Traditional": "可獲得各種材料的<color=#FED434>[方舟強襲]</color>內容已激活。"
   },
   {
     "ID": "SYS_CONTENT_POPUP_DESC_SMELTING",
@@ -8777,11 +8785,11 @@
   },
   {
     "ID": "SYS_CONTENT_POPUP_NAME_EVOLUTION",
-    "Korean": "진화/진화석 수거",
-    "English": "Upgrade/Upgrade Stone Retrieval",
-    "Japanese": "進化・進化石収集",
-    "China_Simplified": "进化/回收进化石",
-    "China_Traditional": "進化/回收進化石"
+    "Korean": "방주 습격",
+    "English": "Ark Raid",
+    "Japanese": "アーク強襲",
+    "China_Simplified": "方舟强袭",
+    "China_Traditional": "方舟強襲"
   },
   {
     "ID": "SYS_CONTENT_POPUP_NAME_REMAINS",
@@ -9473,19 +9481,19 @@
   },
   {
     "ID": "SYS_DUNGEON_MODE_GOLD_INFO_1",
-    "Korean": "현상 수배는 <color=#00A3FF>턴을 적게 소모</color>하여 클리어 시 <color=#00A3FF>보상이 증가</color>됩니다.",
-    "English": "You can get <color=#00A3FF>more rewards</color> in Bounty Hunter by clearing the stage in <color=#00A3FF>as few turns as possible</color>.",
-    "Japanese": "指名手配はクリアした<color=#00A3FF>ターン数が</color>少ないほど、<color=#00A3FF>報酬がたくさん</color>もらえます。",
-    "China_Simplified": "<color=#00A3FF>消耗较少回合</color>完成悬赏通缉时，<color=#00A3FF>奖励增加</color>。",
-    "China_Traditional": "<color=#00A3FF>消耗較少回合</color>通關懸賞通緝時，將會<color=#00A3FF>增加獎勵</color>。"
+    "Korean": "최면 개구리의 전당은 일정 횟수 공격 후 도망치는 적을 <color=#00A3FF>도망치기 전</color>에 처치 시 <color=#00A3FF>추가 보상을 획득</color>할 수 있습니다.",
+    "English": "In the Hypnotic Frog Hall, defeating enemies that flee after a certain number of attacks <color=#00A3FF>before they escape</color> allows you to obtain <color=#00A3FF>bonus rewards</color>.",
+    "Japanese": "催眠カエルの殿堂では、一定回数攻撃後に逃げる敵を<color=#00A3FF>逃げる前</color>に撃破すると<color=#00A3FF>追加報酬を獲得</color>できる。",
+    "China_Simplified": "在催眠青蛙殿堂，在攻击一定次数后逃跑的敌人<color=#00A3FF>逃跑前</color>将其击败，可<color=#00A3FF>获得追加奖励</color>。",
+    "China_Traditional": "在催眠青蛙殿堂，在攻擊一定次數後逃跑的敵人<color=#00A3FF>逃跑前</color>將其擊敗，可<color=#00A3FF>獲得追加獎勵</color>。"
   },
   {
     "ID": "SYS_DUNGEON_MODE_GOLD_INFO_2",
-    "Korean": "낮은 확률로 등장하는 <color=#00A3FF>황금 고블린</color>을 처치 시 <color=#00A3FF>추가 보상</color>을 획득합니다.",
-    "English": "Defeating the <color=#00A3FF>Golden Mask</color> that has a low chance of appearing will give you a <color=#00A3FF>bonus reward</color>.",
-    "Japanese": "低い確率で出現する<color=#00A3FF>黄金ゴブリン</color>を倒すと、<color=#00A3FF>追加報酬</color>を獲得できます。",
-    "China_Simplified": "击杀以低几率出现的<color=#00A3FF>黄金哥布林</color>时，获得<color=#00A3FF>额外奖励</color>。",
-    "China_Traditional": "擊敗低機率出現的<color=#00A3FF>黃金哥布林</color>時，可獲得<color=#00A3FF>追加獎勵</color>。"
+    "Korean": "도망치는 적 모두 처치 시 <color=#00A3FF>타락 조교 개구리</color>가 등장하며, 등장한 보스를 처치 시 추가 보상을 획득합니다.",
+    "English": "When all fleeing enemies are defeated, the <color=#00A3FF>Corrupted Frog Instructor</color> appears, and defeating the boss grants bonus rewards.",
+    "Japanese": "逃げる敵をすべて撃破すると<color=#00A3FF>堕落した調教師カエル</color>が登場し、登場したボスを撃破すると追加報酬を獲得する。",
+    "China_Simplified": "击败所有逃跑的敌人后，<color=#00A3FF>堕落调教青蛙</color>将登场，击败登场的首领可获得追加奖励。",
+    "China_Traditional": "擊敗所有逃跑的敵人後，<color=#00A3FF>墮落調教青蛙</color>將登場，擊敗登場的首領可獲得追加獎勵。"
   },
   {
     "ID": "SYS_DUNGEON_BATTLE_NORMAL",
@@ -9633,19 +9641,19 @@
   },
   {
     "ID": "SYS_DUNGEON_MODE_DAYOFWEEK_INFO_1",
-    "Korean": "진화석 수거는 <color=#00A3FF>모든 적 처치</color> 시 종료됩니다.",
-    "English": "Upgrade Stone Retrieval will end upon <color=#00A3FF>defeating all monsters</color>.",
-    "Japanese": "進化石収集は<color=#00A3FF>すべての敵を倒す</color>と戦闘が終了します。",
-    "China_Simplified": "回收进化石于<color=#00A3FF>击杀全部敌人</color>时结束。",
-    "China_Traditional": "<color=#00A3FF>消滅所有敵人</color>時，回收進化石將結束。"
+    "Korean": "방주 습격은 <color=#00A3FF>모든 적 처치</color> 시 종료됩니다.",
+    "English": "Ark Raid ends when <color=#00A3FF>all enemies are defeated</color>.",
+    "Japanese": "アーク強襲は<color=#00A3FF>全敵撃破</color>時に終了する。",
+    "China_Simplified": "方舟强袭在<color=#00A3FF>击败所有敌人</color>时结束。",
+    "China_Traditional": "方舟強襲在<color=#00A3FF>擊敗所有敵人</color>時結束。"
   },
   {
     "ID": "SYS_DUNGEON_MODE_DAYOFWEEK_INFO_2",
-    "Korean": "<color=#00A3FF>{0}</color> 던전은 <color=#00A3FF>{1}</color>에 진행 가능합니다.\\nUTC 0시에 초기화 됩니다.",
-    "English": "<color=#00A3FF>{0}</color> dungeon can be entered on <color=#00A3FF>{1}</color>.\\nIt will be reset on 00:00 UTC.",
-    "Japanese": "<color=#00A3FF>{0}</color>ダンジョンは<color=#00A3FF>{1}</color>に挑戦できます。\\nJST9時にリセットされます。",
-    "China_Simplified": "<color=#00A3FF>{0}</color>副本可于<color=#00A3FF>{1}</color>进行。\\n00:00(UCT)时重置。",
-    "China_Traditional": "<color=#00A3FF>{0}</color>副本可於<color=#00A3FF>{1}</color>進行。\\n將於台灣時間上午8點進行重置。"
+    "Korean": "각 방주 별로 다른 보상을 얻으실 수 있으며, 모든 방주의 클리어 단계는 공유됩니다.",
+    "English": "You can obtain different rewards from each Ark, and the clear stage is shared across all Arks.",
+    "Japanese": "各アーク別に異なる報酬を獲得でき、すべてのアークのクリア段階は共有される。",
+    "China_Simplified": "可从各方舟获得不同奖励，所有方舟的通关阶段共享。",
+    "China_Traditional": "可從各方舟獲得不同獎勵，所有方舟的通關階段共享。"
   },
   {
     "ID": "SYS_SUNDAY",
@@ -9769,11 +9777,11 @@
   },
   {
     "ID": "SYS_CONTENT_POPUP_DESC_DAYOFWEEK_DUNGEON",
-    "Korean": "도전 컨텐츠 중 \\n<color=#FED434>[진화석 수거]</color> 컨텐츠가 활성화 되었습니다.",
-    "English": "<color=#FED434>[Upgrade Stone Retrieval]</color>\\nhas been enabled among challenge content.",
-    "Japanese": "チャレンジコンテンツのうち\\n<color=#FED434>【進化石収集】</color>が解放されました。",
-    "China_Simplified": "已激活挑战内容中的\\n<color=#FED434>【回收进化石】</color>",
-    "China_Traditional": "已啟用挑戰內容中的\\n<color=#FED434>【回收進化石】</color>內容。"
+    "Korean": "도전 컨텐츠 중 \\n<color=#FED434>[방주 습격]</color> 컨텐츠가 활성화 되었습니다.",
+    "English": "<color=#FED434>[Ark Raid]</color>\\nhas been enabled among challenge content.",
+    "Japanese": "チャレンジコンテンツのうち\\n<color=#FED434>【방주 습격】</color>が解放されました。",
+    "China_Simplified": "已激活挑战内容中的\\n<color=#FED434>【방주 습격】</color>",
+    "China_Traditional": "已啟用挑戰內容中的\\n<color=#FED434>【방주 습격】</color>內容。"
   },
   {
     "ID": "SYS_TICKET_RESTORE_COMPLETE",
@@ -17753,11 +17761,11 @@
   },
   {
     "ID": "SYS_GUIDE_CHARACTER_04_DESC",
-    "Korean": "모든 동료와 적대 몬스터는 고유의 [속성]을 1종씩 가집니다.\\n속성의 종류는 [화], [수], [지], [명], [암]으로 5종이 존재합니다.\\n전투 시, 공격자와 피격자가 지닌 속성의 상성 관계에 따라 피해량의 보정을 받습니다.\\n[화 > 지 > 수 > 화] 의 상성 관계를 가지며 [명], [암] 속성은 서로 유리한 상성을 가집니다.\\n유리한 상성으로 공격 시, 피해량이 20% 증가합니다. 반대로 불리한 상성 대상을 공격하는 경우 피해량이 20% 감소합니다.\\n동료의 속성에 따라 동료 진화 시, 필요한 재료가 달라집니다.",
-    "English": "All heroes and enemies have a unique [Element].\\nThere are 5 different elements: [Fire], [Water], [Earth], [Light], and [Dark].\\nIn battle, the amount of damage dealt changes depending on which elements the attacker and the target have.\\nThe advantages are as follows: [Fire > Earth > Water > Fire]. [Light] and [Dark] are both strong against the other.\\nAttacking with an advantageous element will increase damage by 20%. Attacking with a disadvantageous element will reduce damage by 20%.\\nThe materials required to upgrade heroes differ depending on the hero's element.",
-    "Japanese": "すべての仲間と敵は、固有の【属性】を1種類ずつ持っています。\\n属性は【火】【水】【地】【光】【闇】の5種類が\\nあります。\\n戦闘時、属性の相性によってダメージが補正されます。\\n相性は【火 > 地】 【地> 水】【水 > 火】となり、\\n【光】属性と【闇】属性はお互いに有利な属性となります。\\n有利な属性で攻撃するとダメージが20%UPし、\\n不利な属性での攻撃は、ダメージが20%DOWNします。\\n仲間の属性ごとに、進化に必要な素材が異なります。",
-    "China_Simplified": "所有同伴与敌人皆拥有1种固有【属性】。\\n属性分为【火】、【水】、【土】、【光】、【暗】5种。\\n战斗时，根据攻击者与被攻击者的属性克制关系，伤害量会有所调整。\\n属性依【火＞土＞水＞火】的顺序相克，而【光】，【暗】互为属性克制优势。\\n以优势属性攻击时，伤害量提升20%。相反，以劣势属性攻击时，伤害量降低20%。\\n进化同伴时，根据同伴的属性所需材料会不同。",
-    "China_Traditional": "所有的同伴及敵方怪物都各有1種固有的【屬性】。\\n屬性共分為【火】、【水】、【大地】、【光】、【暗】\\n5種。\\n戰鬥時根據攻擊者及被攻擊者的屬性相剋關係，傷害量會有所增減。\\n相剋關係為【火＞大地＞水＞火】，【光】及【暗】屬性則\\n是互有優勢的相剋關係。\\n利用屬性優勢進行攻擊時，傷害量增加20%。反之，攻擊屬性\\n不利的目標時，傷害量減少20%。\\n進化同伴時，所需的材料將根據同伴的屬性有所不同。"
+    "Korean": "모든 동료와 적대 몬스터는 고유의 [속성]을 1종씩 가집니다.\\n속성의 종류는 [화], [수], [지], [명], [암]으로 5종이 존재합니다.\\n전투 시, 공격자와 피격자가 지닌 속성의 상성 관계에 따라 피해량의 보정을 받습니다.\\n[화 > 지 > 수 > 화] 의 상성 관계를 가지며 [명], [암] 속성은 서로 유리한 상성을 가집니다.\\n유리한 상성으로 공격 시, 피해량이 20% 증가합니다. 반대로 불리한 상성 대상을 공격하는 경우 피해량이 20% 감소합니다.",
+    "English": "All heroes and enemies have a unique [Element].\\nThere are 5 different elements: [Fire], [Water], [Earth], [Light], and [Dark].\\nIn battle, the amount of damage dealt changes depending on which elements the attacker and the target have.\\nThe advantages are as follows: [Fire > Earth > Water > Fire]. [Light] and [Dark] are both strong against the other.\\nAttacking with an advantageous element will increase damage by 20%. Attacking with a disadvantageous element will reduce damage by 20%.",
+    "Japanese": "すべての仲間と敵は、固有の【属性】を1種類ずつ持っています。\\n属性は【火】【水】【地】【光】【闇】の5種類が\\nあります。\\n戦闘時、属性の相性によってダメージが補正されます。\\n相性は【火 > 地】 【地> 水】【水 > 火】となり、\\n【光】属性と【闇】属性はお互いに有利な属性となります。\\n有利な属性で攻撃するとダメージが20%UPし、\\n不利な属性での攻撃は、ダメージが20%DOWNします。",
+    "China_Simplified": "所有同伴与敌人皆拥有1种固有【属性】。\\n属性分为【火】、【水】、【土】、【光】、【暗】5种。\\n战斗时，根据攻击者与被攻击者的属性克制关系，伤害量会有所调整。\\n属性依【火＞土＞水＞火】的顺序相克，而【光】，【暗】互为属性克制优势。\\n以优势属性攻击时，伤害量提升20%。相反，以劣势属性攻击时，伤害量降低20%。",
+    "China_Traditional": "所有的同伴及敵方怪物都各有1種固有的【屬性】。\\n屬性共分為【火】、【水】、【大地】、【光】、【暗】\\n5種。\\n戰鬥時根據攻擊者及被攻擊者的屬性相剋關係，傷害量會有所增減。\\n相剋關係為【火＞大地＞水＞火】，【光】及【暗】屬性則\\n是互有優勢的相剋關係。\\n利用屬性優勢進行攻擊時，傷害量增加20%。反之，攻擊屬性\\n不利的目標時，傷害量減少20%。"
   },
   {
     "ID": "SYS_GUIDE_CHARACTER_05_DESC",
@@ -17849,11 +17857,11 @@
   },
   {
     "ID": "SYS_GUIDE_TRUST_02_DESC",
-    "Korean": "동료 캐릭터에게 선물 아이템을 전달하여 애정도를 쌓을 수 있습니다.\\n선물에는 등급과 함께 선물 종류가 존재하며, 각각의 동료마다 좋아하는 선물 종류가 다릅니다. 좋아하는 선물을 줄 경우, 상승하는 애정도의 양이 증가합니다.\\n좋아하지 않는 선물이라도 줄 수 있지만 일반적인 애정도가 상승합니다.\\n추가로 낮은 효율로 제한적인 선물이지만, 동료 캐릭터와 동일한 속성의 진화석을 선물할 수 있습니다.",
-    "English": "You can gain the Affinity of a hero by giving them presents.\\nEach present has a grade, and there are many varieties. Each hero likes different kinds of presents. Giving them a present they like will significantly raise their Affinity level.\\nYou can give a present they don't like, but it will only raise the Affinity level by a normal amount.\\nAdditionally, you can gift Upgrade Stones of the same element as the receiving hero, but they are highly inefficient.",
-    "Japanese": "プレゼントにはさまざまなレアリティと種類が存在し、仲間ごとに好きなプレゼントが異なります。\\n好きなプレゼントを渡すと、親密度をさらにUP\\nできます。\\n好きではないプレゼントを渡しても、親密度は通常と同じ\\n量をUPできます。\\n進化石でも親密度を上げることができますが、親密度の\\nUP量がプレゼントより低くいです。",
-    "China_Simplified": "可赠送礼物给同伴累积亲密度。\\n礼物存在级别与种类，\\n且各同伴喜欢的礼物种类不同。\\n若赠送喜欢的礼物，则提升的亲密度会增加。\\n若赠送不喜欢的礼物，则提升的亲密度幅度较小。",
-    "China_Traditional": "傳達禮物道具給同伴角色可以累積信任。\\n禮物除了有等級和種類之外，每個同伴喜歡的禮物種類也\\n不同。贈送同伴喜歡的禮物時，親密度的增加量會提升。\\n雖然也可贈送同伴不喜歡的禮物，但親密度只會有一般程度的提升。"
+    "Korean": "동료 캐릭터에게 선물 아이템을 전달하여 애정도를 쌓을 수 있습니다.\\n선물에는 등급과 함께 선물 종류가 존재하며, 각각의 동료마다 좋아하는 선물 종류가 다릅니다. 좋아하는 선물을 줄 경우, 상승하는 애정도의 양이 증가합니다.\\n좋아하지 않는 선물이라도 줄 수 있지만 일반적인 애정도가 상승합니다.",
+    "English": "You can gain the Affinity of a hero by giving them presents.\\nEach present has a grade, and there are many varieties. Each hero likes different kinds of presents. Giving them a present they like will significantly raise their Affinity level.\\nYou can give a present they don't like, but it will only raise the Affinity level by a normal amount.",
+    "Japanese": "プレゼントにはさまざまなレアリティと種類が存在し、仲間ごとに好きなプレゼントが異なります。\\n好きなプレゼントを渡すと、親密度をさらにUP\\nできます。\\n好きではないプレゼントを渡しても、親密度は通常と同じ\\n量をUPできます。",
+    "China_Simplified": "可赠送礼物给同伴累积亲密度。\\n礼物存在级别与种类，\\n且各同伴喜欢的礼物种类不同。\\n若赠送喜欢的礼物，则提升的亲密度会增加。",
+    "China_Traditional": "傳達禮物道具給同伴角色可以累積信任。\\n禮物除了有等級和種類之外，每個同伴喜歡的禮物種類也\\n不同。贈送同伴喜歡的禮物時，親密度的增加量會提升。"
   },
   {
     "ID": "SYS_GUIDE_TRUST_03_DESC",
@@ -19289,11 +19297,11 @@
   },
   {
     "ID": "SYS_GUIDE_QUEST_DES_18",
-    "Korean": "베로니카를 1회 진화",
-    "English": "Upgrade Veronica 1 time",
-    "Japanese": "ヴェロニカを\\n1回進化させる",
-    "China_Simplified": "进化维罗妮卡1次",
-    "China_Traditional": "進化維羅妮卡1次"
+    "Korean": "스토리 노멀 2-9 클리어 ",
+    "English": "Clear Normal Story 2-9 ",
+    "Japanese": "ストーリー2-9(ノーマル)をクリアする",
+    "China_Simplified": "完成普通故事2-9",
+    "China_Traditional": "通關普通模式故事2-9"
   },
   {
     "ID": "SYS_GUIDE_QUEST_DES_19",
@@ -21369,11 +21377,11 @@
   },
   {
     "ID": "SYS_GOLD_DUNGEON",
-    "Korean": "현상 수배",
-    "English": "Bounty Hunter",
-    "Japanese": "指名手配",
-    "China_Simplified": "悬赏通缉",
-    "China_Traditional": "懸賞通緝"
+    "Korean": "최면 개구리의 전당",
+    "English": "Hypnotic Frog Hall",
+    "Japanese": "催眠カエルの殿堂",
+    "China_Simplified": "催眠青蛙殿堂",
+    "China_Traditional": "催眠青蛙殿堂"
   },
   {
     "ID": "SYS_TI_EVOLUTION_STONE",
@@ -22497,27 +22505,27 @@
   },
   {
     "ID": "SYS_ASSET_TICKET_GOLD",
-    "Korean": "현상 수배 티켓",
-    "English": "Bounty Hunter Ticket(s)",
-    "Japanese": "指名手配チケット",
-    "China_Simplified": "悬赏通缉券",
-    "China_Traditional": "懸賞通緝券"
+    "Korean": "개구리 전당 티켓",
+    "English": "Frog Hall Ticket",
+    "Japanese": "カエルの殿堂チケット",
+    "China_Simplified": "青蛙殿堂票券",
+    "China_Traditional": "青蛙殿堂票券"
   },
   {
     "ID": "SYS_ASSET_TICKET_EXP",
-    "Korean": "도적단 추격 티켓",
-    "English": "Bandit Chase Ticket(s)",
-    "Japanese": "盗賊団追撃チケット",
-    "China_Simplified": "盗贼团追击券",
-    "China_Traditional": "盜賊團追捕券"
+    "Korean": "개구리 전당 티켓",
+    "English": "Frog Hall Ticket",
+    "Japanese": "カエルの殿堂チケット",
+    "China_Simplified": "青蛙殿堂票券",
+    "China_Traditional": "青蛙殿堂票券"
   },
   {
     "ID": "SYS_ASSET_TICKET_WEEK",
-    "Korean": "진화석 수거 티켓",
-    "English": "Upgrade Stone Retrieval Ticket",
-    "Japanese": "進化石収集チケット",
-    "China_Simplified": "进化石回收券",
-    "China_Traditional": "進化石回收券"
+    "Korean": "방주 습격 티켓",
+    "English": "Ark Raid Ticket",
+    "Japanese": "アーク強襲チケット",
+    "China_Simplified": "方舟强袭票券",
+    "China_Traditional": "方舟強襲票券"
   },
   {
     "ID": "SYS_ASSET_TICKET_GUILD_DUNGEON",
@@ -24096,12 +24104,28 @@
     "China_Traditional": "繼承冰霜精靈部族族長之位的<Color=#FFBF00>雪諾</Color>，雖然總是遊手好閒，但如今卻在替無法避免的決戰做準備。\\n決戰前夕，在她強行進行的<Color=#FFBF00>最後一次愉快飛行</Color>中，她偶然被選為【核心融合】的適任者……\\n但她不會讓這股力量不會白白浪費。因為她比任何人都還要清楚自己肩負著族長的責任，以及必須守護的事物。\\n……沒錯，就如同那永不融化的雪山之雪一樣。\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>"
   },
   {
+    "ID": "SYS_ACHIEVE_PROFILE_2700043",
+    "Korean": "거짓된 태양신…… 또 다른 세계선의 요타왕으로부터 [코어 융합]의 대상자로 선정된 <Color=#FFBF00>이터널</Color> 씨는, 이제 인간으로 성립하지 않는 존재로 변모해 버렸어.\\n천 년 동안, 오로지 산자의 비명과 원망을 들으면서도 성실히. 그녀는 네오 엣셉흐의 존속을 위해 묵묵히 [기능]해왔지.\\n그럼에도 아직 자아를 유지할 수 있는 이유는 무엇일까? 영혼을 다루는 주술의 재능과 지식? 아니면 사령을 부리면서도 미치지 않는 강인한 정신력? 그것도 아니라면……\\n천 년이 지나도 결코 마모되지 않는 죄책감 덕분일까?\\n\\n<Color=#FFBF00>코어 융합이 완료된 동료입니다</Color>",
+    "English": "Chosen by the False Sun God... King Iota from another timeline, as a candidate for [Core Fusion], <Color=#FFBF00>Eternal</Color> has now transformed into something that can no longer truly be called human.\\nFor a thousand years, she has faithfully continued to [function] for the preservation of Neo Eseph, all while listening to the screams and resentment of the living.\\nAnd yet, how is she still able to retain her sense of self? Is it her talent and knowledge in soul-manipulating sorcery? Or her unshakable will, commanding the dead without losing her sanity? Or perhaps...\\nis it the guilt that has never worn away, even after a thousand years?\\n\\n<Color=#FFBF00>This hero has completed Core Fusion</Color>",
+    "Japanese": "偽りの太陽神……別なる世界線のイオータ王より【コアフュージョン】の対象者として選ばれた<Color=#FFBF00>エターナル</Color>さんは、もはや人間とは呼べぬ存在へと変貌してしまった。\\n千年もの間、ただひたすらに生者の悲鳴と怨嗟を聞き続けながらも、彼女はネオ・エッセプの存続のため、黙々とその【機能】を果たしてきた。\\nそれでもなお、彼女が自我を保ち続けられている理由は何なのだろう。魂を扱う呪術の才と知識ゆえだろうか。それとも、死霊を従えながらも狂わぬ強靭な精神力ゆえだろうか。あるいは……\\n千年を経ても決して摩耗することのない、罪悪感が支えとなっているのだろうか。\\n\\n<Color=#FFBF00>コアフュージョンが完了した仲間です</Color>",
+    "China_Simplified": "虚假的太阳神……被另一条世界线的佑妲王选为[核心融合]对象的<Color=#FFBF00>伊特诺</Color>小姐，如今已彻底蜕变为无法再称之为人类的存在。\\n千年来，她听着生者的哀嚎与怨念，却始终勤恳地为了尼奥埃瑟夫赫的延续而默默[运转]着。\\n即便如此，她为何仍能保持自我？是因为操控灵魂的咒术天赋与知识？还是那驱使死灵却仍未疯狂的强大精神力？又或者……\\n是因为历经千年也未曾消磨的负罪感？\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>",
+    "China_Traditional": "被虛假的太陽神……另一個世界線的佑妲王選為【核心融合】對象的<Color=#FFBF00>伊特諾</Color>小姐，如今已經變成不再是人類的存在。\\n千年以來，即使只聽著生者的哀號和怨聲，她仍然忠實地為了尼歐·約瑟夫的存續而默默地運作著【功能】至今。\\n即便如此，她能保有自我的原因是什麼？是操縱靈魂的咒術天賦和知識？還是能驅使死靈卻不會陷入瘋狂的強韌精神？抑或是……\\n那歷經千年也未曾被抹滅的罪惡感？\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>"
+  },
+  {
     "ID": "SYS_ACHIEVE_PROFILE_2700056",
     "Korean": "<Color=#FFBF00>노티아 펄라이트</Color>, 네포스 교의 대지의 사도.\\n세이크리드의 소요 사태 이후…… 국력이 쇠약해진 틈을 타 밀려오는 [현실적인 문제]들에 휘둘리면서도, 노티아 씨는 결국 쓰러지지 않았어.\\n포기하지 않고, 온갖 풍파에 정면으로 맞서는 그 불굴의 정신력이야말로, 그녀가 가진 가장 큰 장점일 거야.\\n……과연 이번에도 <Color=#FFBF00>그녀의 용기</Color>는 칭송받을 수 있을까?\\n[융합형 코어]라는 금단의 저주를 그 작은 몸으로 짊어지고서, 노티아 씨는 앞으로도 세이크리드의 대지로서 무너지지 않을 수 있을까?\\n\\n<Color=#FFBF00>코어 융합이 완료된 동료입니다</Color>",
     "English": "<Color=#FFBF00>Notia Pearlight</Color>, the Nepos Church's Disciple of Earth.\\nEven after the unrest in Sacreed left the nation weakened... and she was battered by the very [real problems] that came flooding in, Notia never fell.\\nHer greatest strength may well be that unbreakable spirit, refusing to give up, facing every storm head-on.\\n...But will <Color=#FFBF00>her courage</Color> be praised once again this time?\\nBearing the forbidden curse of a [Fusion-Type Core] in her small frame, can Notia continue to stand firm as the very earth of Sacreed?\\n\\n<Color=#FFBF00>This hero has completed Core Fusion</Color>",
     "Japanese": "<Color=#FFBF00>ノティア・パールライト</Color>、ネフォス教に仕える大地の使徒。\\nセイクリッドの騒擾事件以降……国力が衰えた隙を突くように押し寄せる【現実的な問題】に翻弄されながらも、ノティアさんは決して倒れなかった。\\n諦めることなく、あらゆる荒波に真正面から立ち向かうその不屈の精神こそが、彼女の最大の強みなのだろう。\\n……果たして今回も、<Color=#FFBF00>彼女の勇気</Color>は称えられるのだろうか。\\n【フュージョン型コア】という禁断の呪いをその小さな身に背負いながら、ノティアさんはこれからも、セイクリッドの大地として、揺らぐことなく立ち続けられるのだろうか。\\n\\n<Color=#FFBF00>コアフュージョンが完了した仲間です</Color>",
     "China_Simplified": "<Color=#FFBF00>诺缇亚·伯莱特</Color>，内泊斯教的土之使徒。\\n圣科利德动乱之后……尽管被趁国力衰退之际涌来的种种[现实问题]所困扰，但诺缇亚小姐终究没有倒下。\\n永不言弃、直面风浪的那股不屈精神，是她最大的优点。\\n……不知这一次，<Color=#FFBF00>她的勇气</Color>能否再次赢得赞颂？\\n背负着[融合型核心]这一禁忌诅咒，诺缇亚小姐用她小小的身躯，还能否继续守护圣科利德这片大地？\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>",
     "China_Traditional": "<Color=#FFBF00>諾緹亞·波萊伊特</Color>，尼波斯教的大地使徒。\\n在聖科利德的動亂之後……趁國力衰退之際接連湧現的【現實問題】撲面而來，即使如此，諾緹亞也沒有倒下。\\n她那不放棄，且正面對抗各種風浪的不屈精神，就是她最大的優點。\\n……究竟這次<Color=#FFBF00>她的勇氣</Color>仍會受到稱頌嗎？\\n諾緹亞以她小巧的身軀背負著名為【融合型核心】的禁忌詛咒，她今後仍然能作為聖科利德的大地而不倒下嗎？\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>"
+  },
+  {
+    "ID": "SYS_ACHIEVE_PROFILE_2700070",
+    "Korean": "<Color=#FFBF00>엡실론</Color>, 말이지…… 그 자동인형의 데이터는 지금 보아도 경이로워.\\n제한적이라고는 해도, [융합형 코어]가 방주 급의 던전 코어를 모방하다니 말이야.\\n사고 회로는 이미 고장 나 있었으니, 오염은 걱정이 없고. 부작용이라고 한다면, 이전보다 더 많은 안티매터와 술을 요구하게 되었다는 정도……?\\n뭐, 블라다 원수의 허리는 나날이 휘겠지만…… 이 정도면 값싼 대가 아닐까?\\n한 번의 포격으로 마을 하나는 가볍게 일소할 수 있는 행성 정화 유닛의 힘을 손에 넣은 거니까 말이야.\\n\\n<Color=#FFBF00>코어 융합이 완료된 동료입니다</Color>",
+    "English": "<Color=#FFBF00>Epsilon</Color>... Even now, the data from that automaton is nothing short of astonishing.\\nEven if only in a limited capacity, the fact that a [Fusion-Type Core] can replicate an Ark-class Dungeon Core is no small feat.\\nHer cognitive circuits were already damaged, so contamination isn't a concern. As for side effects... well, she now demands even more antimatter and alcohol than before.\\nWell, Marshal Vlada's going to feel the strain more and more by the day... but isn't that a small price to pay?\\nAfter all, we've gained the power of a Planet Purification Unit, capable of wiping out an entire town with a single bombardment.\\n\\n<Color=#FFBF00>This hero has completed Core Fusion</Color>",
+    "Japanese": "<Color=#FFBF00>イプシロン</Color>か……あのオートマタのデータは、今見ても実に驚異的だ。\\n限定的とはいえ、【フュージョン型コア】が、アーク級のダンジョンコアを模倣するとは。\\n思考回路はすでに故障していたから、汚染の心配はない。副作用があるとすれば、以前よりも多くのアンチマターと酒を要求するようになった、という程度だろうか……?\\nまあ、ヴラダ元帥の懐事情は日を追うごとに厳しくなるだろうが……この程度なら、安い代償だ。\\nなにしろ、一度の砲撃で街ひとつを軽々と消し飛ばせる、惑星浄化ユニットの力を手に入れたのだから。\\n\\n<Color=#FFBF00>コアフュージョンが完了した仲間です</Color>",
+    "China_Simplified": "说到<Color=#FFBF00>埃普西隆</Color>……那具机械人偶的数据，即便现在看来也令人惊叹。\\n虽说有限制，但[融合型核心]竟能模仿方舟级别的暗堡核心。\\n埃普西隆的思维回路早就发生了故障，所以不用担心污染问题。要说副作用嘛，大概就是她比以前要更多的反物质和酒了……？\\n唔，布拉达元帅的腰怕是要一天比一天弯了……不过这点代价，也算便宜了吧？\\n毕竟她所拥有的行星净化级别的力量，只需一炮就能轻松荡平一座村庄呢。\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>",
+    "China_Traditional": "<Color=#FFBF00>艾普西隆</Color>啊……那自動人偶的數據，即使現在看來也依舊令人驚嘆。\\n儘管有所限制，但【融合型核心】居然能夠模擬方舟級別的地城核心。\\n思考迴路本來就已經故障，因此不需要擔心會被汙染。若要說有什麼副作用的話，應該是比以前要求更多的反物質和酒……？\\n嗯，佛拉達統帥的腰可能會一天比一天更吃不消……這樣的代價應該很低廉吧？\\n畢竟，那是掌握了能用一次砲擊，就輕鬆摧毀一座村莊的行星淨化單位的力量。\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>"
   },
   {
     "ID": "SYS_STORY_TEAM_TITLE",
@@ -26233,11 +26257,11 @@
   },
   {
     "ID": "SYS_PVE_EXP_RESULT_BOSS",
-    "Korean": "펜리르 격파",
-    "English": "Defeat Fenrir",
-    "Japanese": "フェンリル撃破",
-    "China_Simplified": "击杀芬里尔",
-    "China_Traditional": "擊敗芬里爾"
+    "Korean": "타락 조교 개구리 격파",
+    "English": "Defeat Corrupted Frog Instructor",
+    "Japanese": "腐敗教練カエル撃破",
+    "China_Simplified": "击败堕落调教青蛙",
+    "China_Traditional": "擊敗墮落調教青蛙"
   },
   {
     "ID": "SYS_VOICE_TYPE_00",
@@ -30297,27 +30321,27 @@
   },
   {
     "ID": "SYS_LOADING_TIP_GOLD_DUNGEON",
-    "Korean": "<size=24><color=#dfbe5e>Tip. 현상 수배</color></size>\\n<size=18><color=#F1f1f1> 현상 수배 던전 클리어 시 많은 골드를 획득할 수 있습니다.</Color></size>",
-    "English": "<color=#29d8ed>Bounty Hunter:</color> You can obtain lots of Gold by clearing Bounty Hunter stages.",
-    "Japanese": "<color=#29d8ed>Tip.指名手配</color> 指名手配ダンジョンをクリアすると、ゴールドを獲得できます。",
-    "China_Simplified": "<color=#29d8ed>Tip.悬赏通缉</color> 完成悬赏通缉时，可获得大量金币。",
-    "China_Traditional": "<color=#29d8ed>Tip. 懸賞通緝</color>通關懸賞通緝副本時可獲得大量金幣。"
+    "Korean": "<size=24><color=#dfbe5e>Tip. 최면 개구리의 전당</color></size>\\n<size=18><color=#F1f1f1> 많은 골드와 경험치 음식을 획득할 수 있습니다.</Color></size>",
+    "English": "<size=24><color=#dfbe5e>Tip. Hypnotic Frog Hall</color></size>\\n<size=18><color=#F1f1f1> You can obtain a large amount of Gold and EXP Food.</Color></size>",
+    "Japanese": "<size=24><color=#dfbe5e>Tip. 催眠カエルの殿堂</color></size>\\n<size=18><color=#F1f1f1> 多くのゴールドと経験値食料を獲得できる。</Color></size>",
+    "China_Simplified": "<size=24><color=#dfbe5e>Tip. 催眠青蛙殿堂</color></size>\\n<size=18><color=#F1f1f1> 可以获得大量金币和经验值食物。</Color></size>",
+    "China_Traditional": "<size=24><color=#dfbe5e>Tip. 催眠青蛙殿堂</color></size>\\n<size=18><color=#F1f1f1> 可以獲得大量金幣和經驗值食物。</Color></size>"
   },
   {
     "ID": "SYS_LOADING_TIP_EXP_DUNGEON",
-    "Korean": "<size=24><color=#dfbe5e>Tip. 도적단 추격</color></size>\\n<size=18><color=#F1f1f1> 도적단 추격 던전 클리어 시 경험치 음식을 획득할 수 있습니다.</Color></size>",
-    "English": "<color=#29d8ed>Bandit Chase: </color> You can obtain Food by clearing Bandit Chase stages.",
-    "Japanese": "<color=#29d8ed>Tip.盗賊団追撃</color> 盗賊団追撃ダンジョンをクリアすると、仲間の経験値を上げる、食べ物を獲得できます。",
-    "China_Simplified": "<color=#29d8ed>Tip.追击盗贼团</color> 完成追击盗贼团时，可获得经验值食物。",
-    "China_Traditional": "<color=#29d8ed>Tip. 追捕盜賊團</color>通關追捕盜賊團副本時可獲得經驗值食物。"
+    "Korean": "<size=24><color=#dfbe5e>Tip. 최면 개구리의 전당</color></size>\\n<size=18><color=#F1f1f1> 많은 골드와 경험치 음식을 획득할 수 있습니다.</Color></size>",
+    "English": "<size=24><color=#dfbe5e>Tip. Hypnotic Frog Hall</color></size>\\n<size=18><color=#F1f1f1> You can obtain a large amount of Gold and EXP Food.</Color></size>",
+    "Japanese": "<size=24><color=#dfbe5e>Tip. 催眠カエルの殿堂</color></size>\\n<size=18><color=#F1f1f1> 多くのゴールドと経験値食料を獲得できる。</Color></size>",
+    "China_Simplified": "<size=24><color=#dfbe5e>Tip. 催眠青蛙殿堂</color></size>\\n<size=18><color=#F1f1f1> 可以获得大量金币和经验值食物。</Color></size>",
+    "China_Traditional": "<size=24><color=#dfbe5e>Tip. 催眠青蛙殿堂</color></size>\\n<size=18><color=#F1f1f1> 可以獲得大量金幣和經驗值食物。</Color></size>"
   },
   {
     "ID": "SYS_LOADING_TIP_DAYOFWEEK_DUNGEON",
-    "Korean": "<size=24><color=#dfbe5e>Tip. 진화석 수거</color></size>\\n<size=18><color=#F1f1f1> 진화석 수거 던전 클리어 시 던전에 해당하는 속성의 진화석을 획득할 수 있습니다.</Color></size>",
-    "English": "<color=#29d8ed>Upgrade Stone Retrieval:</color> You can obtain Upgrade Stones of an element corresponding to the dungeons you clear.",
-    "Japanese": "<color=#29d8ed>Tip.進化石収集</color> 進化石収集ダンジョンをクリアすると、各属性の進化石を獲得できます。",
-    "China_Simplified": "<color=#29d8ed>Tip.回收进化石</color> 完成回收进化石时，可获得与暗堡属性相对应的进化石。",
-    "China_Traditional": "<color=#29d8ed>Tip. 回收進化石</color>通關回收進化石副本時，可獲得與副本相對應的屬性進化石。"
+    "Korean": "<size=24><color=#dfbe5e>Tip. 방주 습격</color></size>\\n<size=18><color=#F1f1f1> 방주 습격을 통해 다양한 보상을 획득할 수 있습니다.</Color></size>",
+    "English": "<size=24><color=#dfbe5e>Tip. Ark Raid</color></size>\\n<size=18><color=#F1f1f1> You can obtain various rewards through Ark Raid.</Color></size>",
+    "Japanese": "<size=24><color=#dfbe5e>Tip. アーク強襲</color></size>\\n<size=18><color=#F1f1f1> アーク強襲を通じて様々な報酬を獲得できる。</Color></size>",
+    "China_Simplified": "<size=24><color=#dfbe5e>Tip. 方舟强袭</color></size>\\n<size=18><color=#F1f1f1> 可以通过方舟强袭获得各种奖励。</Color></size>",
+    "China_Traditional": "<size=24><color=#dfbe5e>Tip. 方舟強襲</color></size>\\n<size=18><color=#F1f1f1> 可以透過方舟強襲獲得各種獎勵。</Color></size>"
   },
   {
     "ID": "SYS_LOADING_TIP_RAID1_DUNGEON",
@@ -34393,19 +34417,19 @@
   },
   {
     "ID": "SYS_BUFF_EVENT_DMENTER_DESC_000",
-    "Korean": "현상 수배, 도적단 추격, 진화석 수거 일일 입장 횟수 {0}회 증가",
-    "English": "Increases daily entry count of Bounty Hunter, Bandit Chase, and Upgrade Stone Retrieval {0} time(s)",
-    "Japanese": "指名手配、盗賊団追撃、進化石収集のデイリー挑戦回数{0}回UP",
-    "China_Simplified": "悬赏通缉、追击盗贼团、回收进化石每日入场次数增加{0}次",
-    "China_Traditional": "增加懸賞通緝、追捕盜賊團、回收進化石的每日入場次數{0}次"
+    "Korean": "최면 개구리의 전당, 방주 습격 일일 입장 횟수 {0}회 증가",
+    "English": "Hypnotic Frog Hall, Ark Raid daily entry count increases by {0}",
+    "Japanese": "催眠カエルの殿堂、アーク強襲の1日の入場回数{0}回増加",
+    "China_Simplified": "催眠青蛙殿堂、方舟强袭每日入场次数增加{0}次",
+    "China_Traditional": "催眠青蛙殿堂、方舟強襲每日入場次數增加{0}次"
   },
   {
     "ID": "SYS_BUFF_EVENT_DMBONUS_DESC_000",
-    "Korean": "현상 수배, 도적단 추격, 진화석 수거 일일 추가 보상 횟수 {0}회 증가",
-    "English": "Increases daily bonus reward count of Bounty Hunter, Bandit Chase, and Upgrade Stone Retrieval {0} time(s)",
-    "Japanese": "指名手配、盗賊団追撃、進化石収集のデイリー追加報酬回数{0}回UP",
-    "China_Simplified": "悬赏通缉、追击盗贼团、回收进化石每日额外奖励次数增加{0}次",
-    "China_Traditional": "增加懸賞通緝、追捕盜賊團、回收進化石的每日額外獎勵次數{0}次"
+    "Korean": "최면 개구리의 전당, 방주 습격 일일 추가 보상 횟수 {0}회 증가",
+    "English": "Hypnotic Frog Hall, Ark Raid daily bonus reward count increases by {0}",
+    "Japanese": "催眠カエルの殿堂、アーク強襲の1日の追加報酬回数{0}回増加",
+    "China_Simplified": "催眠青蛙殿堂、方舟强袭每日追加奖励次数增加{0}次",
+    "China_Traditional": "催眠青蛙殿堂、方舟強襲每日追加獎勵次數增加{0}次"
   },
   {
     "ID": "SYS_REWARD_ACCOUNT_CONNECT_MAIL_T",
@@ -39033,11 +39057,11 @@
   },
   {
     "ID": "SYS_BUFF_GUILD_MAXHP_DESC_LEVEL_0",
-    "Korean": "스토리, 외전, 현상수배, 도적단 추격, 진화석 수거, 특별 의뢰, 비천의 탑, 길드 던전 전투 참가 동료 HP가 {0}% 증가합니다.",
-    "English": "Increases Health by {0}% for heroes participating in Story, Side Story, Bounty Hunter, Bandit Chase, Upgrade Stone Retrieval, Special Request, Skyward Tower, and Guild Dungeon.",
-    "Japanese": "以下に挑戦すると、仲間のHPが{0}%UPする。ストーリー、外伝、指名手配、盗賊団追撃、進化石収集、特別依頼、飛天の塔、ギルドダンジョン",
-    "China_Simplified": "参与故事、外传、悬赏通缉、追击盗贼团、回收进化石、特别委托、\\n飞天之塔、公会副本同伴的生命值提升{0}%。",
-    "China_Traditional": "參與故事、外傳、懸賞通緝、追捕盜賊團、回收進化石、特別委託、飛天塔、公會副本戰鬥的同伴生命力增加{0}%。"
+    "Korean": "스토리, 외전, 최면 개구리의 전당, 방주 습격, 특별 의뢰, 비천의 탑, 길드 경비 구역 전투 참가 동료 HP가 {0}% 증가합니다.",
+    "English": "HP of heroes participating in Story, Side Story, Hypnotic Frog Hall, Ark Raid, Special Request, Skyward Tower, and Guild Security Area battles increases by {0}%.",
+    "Japanese": "ストーリー、外伝、催眠カエルの殿堂、アーク強襲、特別依頼、飛天の塔、ギルド警備エリアの戦闘に参加する仲間のHPが{0}%増加する。",
+    "China_Simplified": "参与故事、外传、催眠青蛙殿堂、方舟强袭、特别委托、飞天之塔、公会警备区域战斗的同伴生命值提升{0}%。",
+    "China_Traditional": "參與故事、外傳、催眠青蛙殿堂、方舟強襲、特別委託、飛天塔、公會警戒區戰鬥的同伴生命值提升{0}%。"
   },
   {
     "ID": "SYS_GUILD_RAID_PROCEED_FAIL_GUILD_MES",
@@ -41993,11 +42017,11 @@
   },
   {
     "ID": "SYS_GROWTH_RECALL_TOOLTIP_01",
-    "Korean": "동료의 레벨, 진화, 스킬 레벨, 애정도를 초기화 하시겠습니까?\\n성장에 사용된 각종 재료가 모두 환원 됩니다.",
-    "English": "Do you wish to reset this hero's level, upgrades, skill levels, and Affinity level? All the materials used in the growth of this hero will be returned to you.",
-    "Japanese": "育成リセットを行いますか?\\n育成素材はすべて返還され、仲間のレベルや進化、\\nスキルレベル、親密度がすべてリセットされます。",
-    "China_Simplified": "是否重置同伴的等级、进化、技能等级及亲密度？\\n将返还全部成长所用的各种材料。",
-    "China_Traditional": "確定要重置同伴的等級、進化、技能等級、親密度嗎？\\n重置後將退還所有成長時所使用的共種材料。"
+    "Korean": "동료의 레벨, 스킬 레벨, 애정도를 초기화 하시겠습니까?\\n성장에 사용된 각종 재료가 모두 환원 됩니다.",
+    "English": "Would you like to reset this hero's level, skill level, and Affinity? All materials used for this hero's growth will be returned.",
+    "Japanese": "育成リセットを行いますか?\\n育成素材はすべて返還され、\\n仲間のレベルやスキルレベル、親密度がすべてリセットされます。",
+    "China_Simplified": "是否重置同伴的等级、技能等级及亲密度？\\n将返还全部成长所用的各种材料。",
+    "China_Traditional": "確定要重置同伴的等級、技能等級、親密度嗎？\\n重置後將退還所有成長時所使用的共種材料。"
   },
   {
     "ID": "SYS_GROWTH_RECALL_TOOLTIP_02",
@@ -45353,11 +45377,11 @@
   },
   {
     "ID": "SYS_GUIDE_QUEST_DES_127",
-    "Korean": "동료 4단계 진화 3명 이상 달성",
-    "English": "Reach upgrade stage 4 with at least 3 heroes",
-    "Japanese": "仲間3体の進化を\\n4段階まで上げる",
-    "China_Simplified": "第4阶段同伴达到3名以上",
-    "China_Traditional": "3名以上的同伴達成第4階段進化"
+    "Korean": "시즌 2 part1 2-5 클리어 ",
+    "English": "Clear Season 2 Part 1, 2-5",
+    "Japanese": "シーズン2冒険2-5\\n(ノーマル)をクリアする",
+    "China_Simplified": "完成第2季第1部2-5",
+    "China_Traditional": "通關第2季Part 1 2-5"
   },
   {
     "ID": "SYS_GUIDE_QUEST_DES_128",
@@ -45505,11 +45529,11 @@
   },
   {
     "ID": "SYS_GUIDE_QUEST_DES_146",
-    "Korean": "동료 5단계 진화 3명 이상 달성",
-    "English": "Reach upgrade stage 5 with at least 3 heroes",
-    "Japanese": "仲間3体の進化を\\n5段階まで上げる",
-    "China_Simplified": "第5阶段同伴达到3名以上",
-    "China_Traditional": "3名以上的同伴達成第5階段進化"
+    "Korean": "Part1 하드 1-3 클리어",
+    "English": "Clear Part 1 Hardmode 1-3",
+    "Japanese": "シーズン2冒険1-3\\n(ハード)をクリアする",
+    "China_Simplified": "完成第1部困难1-3",
+    "China_Traditional": "通關Part 1困難模式1-3"
   },
   {
     "ID": "SYS_GUIDE_QUEST_DES_147",
@@ -45689,19 +45713,19 @@
   },
   {
     "ID": "SYS_GUIDE_QUEST_DES_169",
-    "Korean": "동료 6단계 진화 3명 이상 달성",
-    "English": "Reach upgrade stage 6 with at least 3 heroes",
-    "Japanese": "仲間3体の進化を\\n6段階まで上げる",
-    "China_Simplified": "第6阶段同伴达到3名以上",
-    "China_Traditional": "3名以上的同伴達成第6階段進化"
+    "Korean": "Part1 하드 5-8 클리어",
+    "English": "Clear Part 1 Hardmode 5-8",
+    "Japanese": "シーズン2冒険5-8\\n(ハード)をクリアする",
+    "China_Simplified": "完成第1部困难5-8",
+    "China_Traditional": "通關Part 1困難模式5-8"
   },
   {
     "ID": "SYS_GUIDE_QUEST_DES_170",
-    "Korean": "Part1 하드 5-9 클리어",
-    "English": "Clear Part 1 Hardmode 5-9",
-    "Japanese": "シーズン2冒険5-9\\n(ハード)をクリアする",
-    "China_Simplified": "完成第1部困难5-9",
-    "China_Traditional": "通關Part 1困難模式5-9"
+    "Korean": "Part1 하드 5-10 클리어",
+    "English": "Clear Part 1 Hardmode 5-10",
+    "Japanese": "シーズン2冒険5-10\\n(ハード)をクリアする",
+    "China_Simplified": "完成第1部困难5-10",
+    "China_Traditional": "通關Part 1困難模式5-10"
   },
   {
     "ID": "SYS_CONTENTS_OPEN_DESC_NORMAL",
@@ -48537,18 +48561,18 @@
   },
   {
     "ID": "SYS_DESUBSCRIPBE_LEFT",
-    "Korean": "- 동료 경험치 획득량 +10%\\n- 골드 보너스 +20%\\n- 행동력 충전 시 광고 제거\\n현상 수배,도적단 추격, 진화석 수거 입장 횟수 증가\\n- 현상 수배,도적단 추격, 진화석 수거 추가 보상 횟수 증가\\n- 진화석 수거 던전 요일 제한 해제",
-    "English": "- +10% Hero experience gain\\n- +20% Gold bonus\\n- Remove Stamina Recharge Ads\\n- Increases the entry count of Bounty Hunter, Bandit Chase, and Upgrade Stone Retrieval\\n- Increases the extra reward count of Bounty Hunter, Bandit Chase, and Upgrade Stone Retrieval",
-    "Japanese": "- 仲間の経験値獲得量10%UP\\n- ゴールド獲得量20％UP\\n- 活力回復時の広告視聴なし\\n-【指名手配】【盗賊団追撃】【進化石収集】挑戦回数UP\\n-【指名手配】【盗賊団追撃】【進化石収集】追加報酬の回数UP\\n- 進化石収集の曜日制限なし",
-    "China_Simplified": "- 同伴经验值获得量+10%\\n- 金币加成+20%\\n- 充值行动力时去广告\\n- 悬赏通缉、追击盗贼团、回收进化石入场次数增加\\n-悬赏通缉、追击盗贼团、回收进化石额外奖励次数增加",
+    "Korean": "- 동료 경험치 획득량 +10%\\n- 골드 보너스 +20%\\n- 행동력 충전 시 광고 제거\\n- 최면 개구리의 전당, 방주 습격 입장 횟수 증가\\n- 최면 개구리의 전당, 방주 습격 추가 보상 횟수 증가",
+    "English": "- +10% Hero experience gain\\n- +20% Gold bonus\\n- Remove Stamina Recharge Ads\\n- Increases the entry count of Hypnotic Frog Hall, Ark Raid\\n- Increases the extra reward count of Hypnotic Frog Hall, Ark Raid",
+    "Japanese": "- 仲間の経験値獲得量10%UP\\n- ゴールド獲得量20％UP\\n- 活力回復時の広告視聴なし\\n-【최면 개구리의 전당】, 【방주 습격】挑戦回数UP\\n-【최면 개구리의 전당】, 【방주 습격】追加報酬の回数UP\\n- 進化石収集の曜日制限なし",
+    "China_Simplified": "- 同伴经验值获得量+10%\\n- 金币加成+20%\\n- 充值行动力时去广告\\n- 【최면 개구리의 전당】, 【방주 습격】入场次数增加\\n-【최면 개구리의 전당】, 【방주 습격】额外奖励次数增加",
     "China_Traditional": "- 同伴經驗值獲得量+10%\\n- 金幣加成+20%\\n- 移除補充行動力的廣告\\n- 增加懸賞通緝、追捕盜賊團、回收進化石的入場次數\\n-增加懸賞通緝、追捕盜賊團、回收進化石的額外獎勵次數"
   },
   {
     "ID": "SYS_DESUBSCRIPBE_RIGHT",
-    "Korean": "- 현상 수배,도적단 추격, 진화석 수거 입장 횟수 증가\\n- 현상 수배,도적단 추격, 진화석 수거 추가 보상 횟수 증가",
-    "English": "- Increases the entry count of Bounty Hunter, Bandit Chase, and Upgrade Stone Retrieval\\n- Increases the extra reward count of Bounty Hunter, Bandit Chase, and Upgrade Stone Retrieval",
-    "Japanese": "-【指名手配】【盗賊団追撃】【進化石収集】挑戦回数UP\\n-【指名手配】【盗賊団追撃】【進化石収集】追加報酬の回数UP",
-    "China_Simplified": "-悬赏通缉、追击盗贼团、回收进化石入场次数增加\\n-悬赏通缉、追击盗贼团、回收进化石额外奖励次数增加",
+    "Korean": "- 최면 개구리의 전당, 방주 습격 입장 횟수 증가\\n- 최면 개구리의 전당, 방주 습격 추가 보상 횟수 증가",
+    "English": "- Increases the entry count of Hypnotic Frog Hall, Ark Raid\\n- Increases the extra reward count of Hypnotic Frog Hall, Ark Raid",
+    "Japanese": "-【최면 개구리의 전당】, 【방주 습격】挑戦回数UP\\n-【최면 개구리의 전당】, 【방주 습격】追加報酬の回数UP",
+    "China_Simplified": "-【최면 개구리의 전당】, 【방주 습격】入场次数增加\\n-【최면 개구리의 전당】, 【방주 습격】额外奖励次数增加",
     "China_Traditional": "-增加懸賞通緝、追捕盜賊團、回收進化石的入場次數\\n-增加懸賞通緝、追捕盜賊團、回收進化石的額外獎勵次數"
   },
   {
@@ -48966,6 +48990,14 @@
     "Japanese": "戦闘詳細",
     "China_Simplified": "战斗详情",
     "China_Traditional": "詳細戰鬥資訊"
+  },
+  {
+    "ID": "SYS_REALTIME_BAN",
+    "Korean": "금지 동료",
+    "English": "Banned Hero",
+    "Japanese": "禁止対象",
+    "China_Simplified": "被禁用同伴",
+    "China_Traditional": "被禁用同伴"
   },
   {
     "ID": "SYS_REALTIME_ARENA_CHARACTER_BAN",
@@ -68417,11 +68449,11 @@
   },
   {
     "ID": "SYS_SYNCHRO_CONFRIM_MSG",
-    "Korean": "동료[{0}]를 싱크로 룸에 편성하시겠습니까?\\n동료에게 다음 성장 효과가 적용됩니다.\\n\\nLv : {1} → {2}\\n진화 단계 : {3} → {4}\\n스킬 레벨 : 일괄 Lv{5}",
-    "English": "Would you like to deploy the Hero, {0}, in the Synchro Room?\\nThe following growth effects will be applied:\\n\\nLv: {1} → {2}\\nUpgrade Stage: {3} → {4}\\nSkill Level: All Lv{5}",
-    "Japanese": "仲間【{0}】をシンクロルームに配置しますか？\\n配置した仲間は以下の効果が適用されます。\\n\\n仲間のレベル : {1}→{2}\\n進化段階：{3}→{4}\\nスキルレベル：すべて{5}まで強化",
-    "China_Simplified": "确定要将同伴【{0}】配置在同步空间吗？\\n对同伴应用以下成长效果。\\n\\nLv：{1}→{2}\\n进化阶段：{3}→{4}\\n技能等级：一律Lv.{5}",
-    "China_Traditional": "確定要將同伴【{0}】編制到同步室中嗎？\\n將對同伴套用以下成長效果。\\n\\nLv：{1}→{2}\\n進化階段：{3}→{4}\\n技能等級：全部升至Lv{5}"
+    "Korean": "동료[{0}]를 싱크로 룸에 편성하시겠습니까?\\n동료에게 다음 성장 효과가 적용됩니다.\\n\\nLv : {1} → {2}\\n스킬 레벨 : 일괄 Lv{3}",
+    "English": "Would you like to deploy the Hero, {0}, in the Synchro Room?\\nThe following growth effects will be applied:\\n\\nLv: {1} → {2}\\nSkill Level: All Lv{3}",
+    "Japanese": "仲間【{0}】をシンクロルームに配置しますか？\\n配置した仲間は以下の効果が適用されます。\\n\\n仲間のレベル : {1}→{2}\\nスキルレベル：すべて{3}まで強化",
+    "China_Simplified": "确定要将同伴【{0}】配置在同步空间吗？\\n对同伴应用以下成长效果。\\n\\nLv：{1}→{2}\\n技能等级：一律Lv.{3}",
+    "China_Traditional": "確定要將同伴【{0}】編制到同步室中嗎？\\n將對同伴套用以下成長效果。\\n\\nLv：{1}→{2}\\n技能等級：全部升至Lv{3}"
   },
   {
     "ID": "SYS_GUIDE_PVE_TOWER_HARD_01_NAME",
@@ -68633,11 +68665,11 @@
   },
   {
     "ID": "SYS_GUIDE_AGIT_16_DESC",
-    "Korean": "싱크로 룸은 슬롯에 동료를 배치, 해당 동료의 능력치를 설정된 수치만큼 강화할 수 있는 기능입니다.\\n시설 관리를 통해 배치 가능한 동료의 수 / 적용되는 레벨 / 진화단계 / 스킬 레벨을 강화할 수 있습니다.",
-    "English": "Synchro Room is a feature that allows you to deploy heroes in slots and enhance their stats by a certain amount.\\nThrough Manage Facilities, you can upgrade the number of heroes that can be deployed, as well as their applied level, upgrade stage, and skill level.",
-    "Japanese": "【シンクロルーム】は配置した仲間を特定のレベル/進化の段階/スキルレベルまで引き上げることができる機能です。\\nシンクロルームはアジト管理で開放・強化でき、仲間の配置スロット/仲間のレベル上限/進化段階の上限/スキルレベルの上限を強化できます。",
-    "China_Simplified": "同步空间可以在栏位中配置同伴，并可使同伴强化为设定的数值。\\n通过管理设施可以强化可配置的同伴数量/生效的等级/进化阶段/技能等级。",
-    "China_Traditional": "同步室是能將同伴配置到欄位中，並將其能力值強化至所設定之數值的功能。\\n透過管理設施，能強化可配置的同伴人數/套用等級/進化階段/技能等級。"
+    "Korean": "싱크로 룸은 슬롯에 동료를 배치, 해당 동료의 능력치를 설정된 수치만큼 강화할 수 있는 기능입니다.\\n시설 관리를 통해 배치 가능한 동료의 수 / 적용되는 레벨 / 스킬 레벨을 강화할 수 있습니다.",
+    "English": "Synchro Room is a feature that allows you to deploy heroes in slots and enhance their stats by a certain amount.\\nThrough Manage Facilities, you can upgrade the number of heroes that can be deployed, as well as their applied level, and skill level.",
+    "Japanese": "【シンクロルーム】は配置した仲間を特定のレベル/進化の段階/スキルレベルまで引き上げることができる機能です。\\nシンクロルームはアジト管理で開放・強化でき、仲間の配置スロット/仲間のレベル上限/スキルレベルの上限を強化できます。",
+    "China_Simplified": "同步空间可以在栏位中配置同伴，并可使同伴强化为设定的数值。\\n通过管理设施可以强化可配置的同伴数量/生效的等级/技能等级。",
+    "China_Traditional": "同步室是能將同伴配置到欄位中，並將其能力值強化至所設定之數值的功能。\\n透過管理設施，能強化可配置的同伴人數/套用等級/技能等級。"
   },
   {
     "ID": "SYS_GUIDE_PVE_TOWER_SKIP_02_DESC",
@@ -68801,11 +68833,11 @@
   },
   {
     "ID": "SYS_EVENT_SEASON_15",
-    "Korean": "오아시스",
-    "English": "Oasis",
-    "Japanese": "オアシス",
-    "China_Simplified": "绿洲",
-    "China_Traditional": "綠洲"
+    "Korean": "수상한 수정 상점",
+    "English": "Suspicious Crystal Shop",
+    "Japanese": "あやしい水晶ショップ",
+    "China_Simplified": "可疑水晶商店",
+    "China_Traditional": "可疑的水晶商店"
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_43",
@@ -72246,6 +72278,126 @@
     "Japanese": "【ログイン】ナイト・オブ・ザ・霊斬士",
     "China_Simplified": "【签到】非凡灵斩师之夜",
     "China_Traditional": "【簽到】在世靈斬師之夜"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_EARTH_01",
+    "Korean": "지속성 노드 버프 설명 1",
+    "English": "지속성 노드 버프 설명 1",
+    "Japanese": "지속성 노드 버프 설명 1",
+    "China_Simplified": "지속성 노드 버프 설명 1",
+    "China_Traditional": "지속성 노드 버프 설명 1"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_EARTH_02",
+    "Korean": "지속성 노드 버프 설명 2",
+    "English": "지속성 노드 버프 설명 2",
+    "Japanese": "지속성 노드 버프 설명 2",
+    "China_Simplified": "지속성 노드 버프 설명 2",
+    "China_Traditional": "지속성 노드 버프 설명 2"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_EARTH_03",
+    "Korean": "지속성 노드 버프 설명 3",
+    "English": "지속성 노드 버프 설명 3",
+    "Japanese": "지속성 노드 버프 설명 3",
+    "China_Simplified": "지속성 노드 버프 설명 3",
+    "China_Traditional": "지속성 노드 버프 설명 3"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_WATER_01",
+    "Korean": "수속성 노드 버프 설명 1",
+    "English": "수속성 노드 버프 설명 1",
+    "Japanese": "수속성 노드 버프 설명 1",
+    "China_Simplified": "수속성 노드 버프 설명 1",
+    "China_Traditional": "수속성 노드 버프 설명 1"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_WATER_02",
+    "Korean": "수속성 노드 버프 설명 2",
+    "English": "수속성 노드 버프 설명 2",
+    "Japanese": "수속성 노드 버프 설명 2",
+    "China_Simplified": "수속성 노드 버프 설명 2",
+    "China_Traditional": "수속성 노드 버프 설명 2"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_WATER_03",
+    "Korean": "수속성 노드 버프 설명 3",
+    "English": "수속성 노드 버프 설명 3",
+    "Japanese": "수속성 노드 버프 설명 3",
+    "China_Simplified": "수속성 노드 버프 설명 3",
+    "China_Traditional": "수속성 노드 버프 설명 3"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_FIRE_01",
+    "Korean": "화속성 노드 버프 설명 1",
+    "English": "화속성 노드 버프 설명 1",
+    "Japanese": "화속성 노드 버프 설명 1",
+    "China_Simplified": "화속성 노드 버프 설명 1",
+    "China_Traditional": "화속성 노드 버프 설명 1"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_FIRE_02",
+    "Korean": "화속성 노드 버프 설명 2",
+    "English": "화속성 노드 버프 설명 2",
+    "Japanese": "화속성 노드 버프 설명 2",
+    "China_Simplified": "화속성 노드 버프 설명 2",
+    "China_Traditional": "화속성 노드 버프 설명 2"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_FIRE_03",
+    "Korean": "화속성 노드 버프 설명 3",
+    "English": "화속성 노드 버프 설명 3",
+    "Japanese": "화속성 노드 버프 설명 3",
+    "China_Simplified": "화속성 노드 버프 설명 3",
+    "China_Traditional": "화속성 노드 버프 설명 3"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_LIGHT_01",
+    "Korean": "명속성 노드 버프 설명 1",
+    "English": "명속성 노드 버프 설명 1",
+    "Japanese": "명속성 노드 버프 설명 1",
+    "China_Simplified": "명속성 노드 버프 설명 1",
+    "China_Traditional": "명속성 노드 버프 설명 1"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_LIGHT_02",
+    "Korean": "명속성 노드 버프 설명 2",
+    "English": "명속성 노드 버프 설명 2",
+    "Japanese": "명속성 노드 버프 설명 2",
+    "China_Simplified": "명속성 노드 버프 설명 2",
+    "China_Traditional": "명속성 노드 버프 설명 2"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_LIGHT_03",
+    "Korean": "명속성 노드 버프 설명 3",
+    "English": "명속성 노드 버프 설명 3",
+    "Japanese": "명속성 노드 버프 설명 3",
+    "China_Simplified": "명속성 노드 버프 설명 3",
+    "China_Traditional": "명속성 노드 버프 설명 3"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_DARK_01",
+    "Korean": "암속성 노드 버프 설명 1",
+    "English": "암속성 노드 버프 설명 1",
+    "Japanese": "암속성 노드 버프 설명 1",
+    "China_Simplified": "암속성 노드 버프 설명 1",
+    "China_Traditional": "암속성 노드 버프 설명 1"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_DARK_02",
+    "Korean": "암속성 노드 버프 설명 2",
+    "English": "암속성 노드 버프 설명 2",
+    "Japanese": "암속성 노드 버프 설명 2",
+    "China_Simplified": "암속성 노드 버프 설명 2",
+    "China_Traditional": "암속성 노드 버프 설명 2"
+  },
+  {
+    "ID": "SYS_NODE_EROSION_BUFF_DARK_03",
+    "Korean": "암속성 노드 버프 설명 3",
+    "English": "암속성 노드 버프 설명 3",
+    "Japanese": "암속성 노드 버프 설명 3",
+    "China_Simplified": "암속성 노드 버프 설명 3",
+    "China_Traditional": "암속성 노드 버프 설명 3"
   },
   {
     "ID": "SYS_ADVENTURE_LICENSE_ALL_CLEAR",
@@ -86505,11 +86657,11 @@
   },
   {
     "ID": "SYS_POPUP_FULLGROWTH_CHARACTER_SELECT_DESC",
-    "Korean": "선택하신 동료를 영입합니다.\\n영입되는 동료는 동료 레벨 100 / 스킬 레벨 5 / 최대 진화 상태로 영입되며, 이미 영입하신 상태의 동료를 영입하신 경우 위의 수치만큼 동료가 강화됩니다.\\n\\n영입을 진행하시겠습니까?",
-    "English": "Recruit the selected Hero.\\nThe recruited hero will be at level 100 / skill level 5 / fully evolved, and if you already own the hero, their stats will be enhanced by those values.\\n\\nDo you want to proceed with recruitment?",
-    "Japanese": "選択した仲間をスカウトします。\\nスカウトされる仲間は仲間レベル100/スキルレベル5/最大進化を遂げた状態でスカウトされ、スカウト済みの仲間をスカウトする場合、上記の成長能力値ほど仲間が強化されます。\\n\\nスカウトしますか？",
-    "China_Simplified": "招募您选择的同伴。\\n招募的同伴将以同伴等级100/技能等级5/最大进化状态加入队伍，若已拥有该同伴，则会按上述数值强化同伴。\\n\\n是否进行招募？",
-    "China_Traditional": "召募所選的同伴。\\n招募同伴時，將會以同伴等級100/技能等級5/最大進化的狀態被招募；招募「已招募過的同伴」時，該同伴將被強化至上述數值。\\n\\n要進行招募嗎？"
+    "Korean": "선택하신 동료를 영입합니다.\\n영입되는 동료는 동료 레벨 100 / 스킬 레벨 5 상태로 영입되며, 이미 영입하신 상태의 동료를 영입하신 경우 위의 수치만큼 동료가 강화됩니다.\\n\\n영입을 진행하시겠습니까?",
+    "English": "Recruit the selected Hero.\\nThe recruited hero will join at Level 100 / Skill Level 5. If you already own this hero, they will be enhanced up to those values.\\n\\nDo you want to proceed with recruitment?",
+    "Japanese": "選択した仲間をスカウトします。\\nスカウトされる仲間は仲間レベル100/スキルレベル5を遂げた状態でスカウトされ、スカウト済みの仲間をスカウトする場合、上記の成長能力値ほど仲間が強化されます。\\n\\nスカウトしますか？",
+    "China_Simplified": "招募您选择的同伴。\\n招募的同伴将以同伴等级100/技能等级5状态加入队伍，若已拥有该同伴，则会按上述数值强化同伴。\\n\\n是否进行招募？",
+    "China_Traditional": "召募所選的同伴。\\n招募同伴時，將會以同伴等級100/技能等級5的狀態被招募；招募「已招募過的同伴」時，該同伴將被強化至上述數值。\\n\\n要進行招募嗎？"
   },
   {
     "ID": "SYS_POPUP_FULLGROWTH_CHARACTER_SELECT_DESC_2",
@@ -86521,11 +86673,11 @@
   },
   {
     "ID": "SYS_MSG_FULLGROWTH_CHARACTER_SELECT_COMPLETE",
-    "Korean": "선택하신 동료의 레벨 / 스킬레벨 / 진화 수치가 최대치로 성장하였습니다.",
-    "English": "The selected hero’s level / skill level / evolution stats have already reached their maximum.",
-    "Japanese": "選択した仲間のレベル/スキルレベル/進化値が最大まで成長しました。",
-    "China_Simplified": "您选择的同伴，等级/技能等级/进化数值已成长为最大值。",
-    "China_Traditional": "所選的同伴之「等級/技能等級/進化」數值已成長到最大值。"
+    "Korean": "선택하신 동료의 레벨 / 스킬레벨 수치가 최대치로 성장하였습니다.",
+    "English": "The selected hero's level / skill level has already reached the maximum.",
+    "Japanese": "選択した仲間のレベル/スキルレベルが最大まで成長しました。",
+    "China_Simplified": "您选择的同伴，等级/技能等级数值已成长为最大值。",
+    "China_Traditional": "所選的同伴之「等級/技能等級」數值已成長到最大值。"
   },
   {
     "ID": "SYS_MONAD_ENCHANT_NODE_01_NAME",
@@ -97369,27 +97521,27 @@
   },
   {
     "ID": "SYS_BATTLEPASS_NORMAL_MISSION_DMEXP",
-    "Korean": "<color=#E5CCFF>[일반]</color> 도적단 추격 {0}회 클리어",
-    "English": "<color=#E5CCFF>[Normal]</color> Clear Bandit Pursuit {0} time(s)",
-    "Japanese": "<color=#E5CCFF>[一般]</color> 盗賊団追跡を{0}回クリアする",
-    "China_Simplified": "<color=#E5CCFF>[一般]</color> 通关追击盗贼{0}次",
-    "China_Traditional": "<color=#E5CCFF>[一般]</color> 通關追擊盜賊{0}次"
+    "Korean": "<color=#E5CCFF>[일반]</color> 최면 개구리의 전당 {0}회 클리어",
+    "English": "<color=#E5CCFF>[Normal]</color> Clear Hypnotic Frog Hall {0} time(s)",
+    "Japanese": "<color=#E5CCFF>[ノーマル]</color> 催眠カエルの殿堂{0}回クリア",
+    "China_Simplified": "<color=#E5CCFF>[普通]</color> 通关催眠青蛙殿堂{0}次",
+    "China_Traditional": "<color=#E5CCFF>[一般]</color> 通關催眠青蛙殿堂{0}次"
   },
   {
     "ID": "SYS_BATTLEPASS_NORMAL_MISSION_DMGOLD",
-    "Korean": "<color=#E5CCFF>[일반]</color> 현상금 수배 {0}회 클리어",
-    "English": "<color=#E5CCFF>[Normal]</color> Clear Bounty Hunt {0} time(s)",
-    "Japanese": "<color=#E5CCFF>[一般]</color> 賞金首手配を{0}回クリアする",
-    "China_Simplified": "<color=#E5CCFF>[一般]</color> 通关悬赏通缉{0}次",
-    "China_Traditional": "<color=#E5CCFF>[一般]</color> 通關懸賞通緝{0}次"
+    "Korean": "<color=#E5CCFF>[일반]</color> 최면 개구리의 전당 {0}회 클리어",
+    "English": "<color=#E5CCFF>[Normal]</color> Clear Hypnotic Frog Hall {0} time(s)",
+    "Japanese": "<color=#E5CCFF>[ノーマル]</color> 催眠カエルの殿堂{0}回クリア",
+    "China_Simplified": "<color=#E5CCFF>[普通]</color> 通关催眠青蛙殿堂{0}次",
+    "China_Traditional": "<color=#E5CCFF>[一般]</color> 通關催眠青蛙殿堂{0}次"
   },
   {
     "ID": "SYS_BATTLEPASS_NORMAL_MISSION_DMDAYOFWEEK",
-    "Korean": "<color=#E5CCFF>[일반]</color> 진화석 수거 {0}회 클리어",
-    "English": "<color=#E5CCFF>[Normal]</color> Clear Evolution Stone Retrieval {0} time(s)",
-    "Japanese": "<color=#E5CCFF>[一般]</color> 進化石回収を{0}回クリアする",
-    "China_Simplified": "<color=#E5CCFF>[一般]</color> 通关进化石回收{0}次",
-    "China_Traditional": "<color=#E5CCFF>[一般]</color> 通關進化石回收{0}次"
+    "Korean": "<color=#E5CCFF>[일반]</color> 방주 습격 {0}회 클리어",
+    "English": "<color=#E5CCFF>[Normal]</color> Clear Ark Raid {0} time(s)",
+    "Japanese": "<color=#E5CCFF>[ノーマル]</color> アーク強襲{0}回クリア",
+    "China_Simplified": "<color=#E5CCFF>[普通]</color> 通关方舟强袭{0}次",
+    "China_Traditional": "<color=#E5CCFF>[一般]</color> 通關方舟強襲{0}次"
   },
   {
     "ID": "SYS_BATTLEPASS_NORMAL_MISSION_DMRAID1",
@@ -97457,27 +97609,27 @@
   },
   {
     "ID": "SYS_BATTLEPASS_DAILY_MISSION_DMEXP",
-    "Korean": "<color=#33FF33>[일일]</color> 도적단 추격 {0}회 클리어",
-    "English": "<color=#33FF33>[Daily]</color> Clear Bandit Pursuit {0} time(s)",
-    "Japanese": "<color=#33FF33>[デイリー]</color> 盗賊団追跡を{0}回クリアする",
-    "China_Simplified": "<color=#33FF33>[每日]</color> 通关追击盗贼{0}次",
-    "China_Traditional": "<color=#33FF33>[每日]</color> 通關追擊盜賊{0}次"
+    "Korean": "<color=#33FF33>[일일]</color> 최면 개구리의 전당 {0}회 클리어",
+    "English": "<color=#33FF33>[Daily]</color> Clear Hypnotic Frog Hall {0} time(s)",
+    "Japanese": "<color=#E5CCFF>[デイリー]</color> 催眠カエルの殿堂{0}回クリア",
+    "China_Simplified": "<color=#E5CCFF>[每日]</color> 通关催眠青蛙殿堂{0}次",
+    "China_Traditional": "<color=#E5CCFF>[每日]</color> 通關催眠青蛙殿堂{0}次"
   },
   {
     "ID": "SYS_BATTLEPASS_DAILY_MISSION_DMGOLD",
-    "Korean": "<color=#33FF33>[일일]</color> 현상금 수배 {0}회 클리어",
-    "English": "<color=#33FF33>[Daily]</color> Clear Bounty Hunt {0} time(s)",
-    "Japanese": "<color=#33FF33>[デイリー]</color> 賞金首手配を{0}回クリアする",
-    "China_Simplified": "<color=#33FF33>[每日]</color> 通关悬赏通缉{0}次",
-    "China_Traditional": "<color=#33FF33>[每日]</color> 通關懸賞通緝{0}次"
+    "Korean": "<color=#33FF33>[일일]</color> 최면 개구리의 전당 {0}회 클리어",
+    "English": "<color=#33FF33>[Daily]</color> Clear Hypnotic Frog Hall {0} time(s)",
+    "Japanese": "<color=#E5CCFF>[デイリー]</color> 催眠カエルの殿堂{0}回クリア",
+    "China_Simplified": "<color=#E5CCFF>[每日]</color> 通关催眠青蛙殿堂{0}次",
+    "China_Traditional": "<color=#E5CCFF>[每日]</color> 通關催眠青蛙殿堂{0}次"
   },
   {
     "ID": "SYS_BATTLEPASS_DAILY_MISSION_DMDAYOFWEEK",
-    "Korean": "<color=#33FF33>[일일]</color> 진화석 수거 {0}회 클리어",
-    "English": "<color=#33FF33>[Daily]</color> Clear Evolution Stone Retrieval {0} time(s)",
-    "Japanese": "<color=#33FF33>[デイリー]</color> 進化石回収を{0}回クリアする",
-    "China_Simplified": "<color=#33FF33>[每日]</color> 通关进化石回收{0}次",
-    "China_Traditional": "<color=#33FF33>[每日]</color> 通關進化石回收{0}次"
+    "Korean": "<color=#33FF33>[일일]</color> 방주 습격 {0}회 클리어",
+    "English": "<color=#33FF33>[Daily]</color> Clear Ark Raid {0} time(s)",
+    "Japanese": "<color=#E5CCFF>[デイリー]</color> アーク強襲{0}回クリア",
+    "China_Simplified": "<color=#E5CCFF>[每日]</color> 通关方舟强袭{0}次",
+    "China_Traditional": "<color=#E5CCFF>[每日]</color> 通關方舟強襲{0}次"
   },
   {
     "ID": "SYS_BATTLEPASS_DAILY_MISSION_PVP_PLAY",
@@ -97569,27 +97721,27 @@
   },
   {
     "ID": "SYS_BATTLEPASS_WEEKLY_MISSION_DMEXP",
-    "Korean": "<color=#FFFF99>[주간]</color> 도적단 추격 {0}회 클리어",
-    "English": "<color=#FFFF99>[Weekly]</color> Clear Bandit Pursuit {0} time(s)",
-    "Japanese": "<color=#FFFF99>[ウィークリー]</color> 盗賊団追跡を{0}回クリアする",
-    "China_Simplified": "<color=#FFFF99>[每周]</color> 通关追击盗贼{0}次",
-    "China_Traditional": "<color=#FFFF99>[每週]</color> 通關追擊盜賊{0}次"
+    "Korean": "<color=#FFFF99>[주간]</color> 최면 개구리의 전당 {0}회 클리어",
+    "English": "<color=#FFFF99>[Weekly]</color> Clear Hypnotic Frog Hall {0} time(s)",
+    "Japanese": "<color=#E5CCFF>[ウィークリー]</color> 催眠カエルの殿堂{0}回クリア",
+    "China_Simplified": "<color=#E5CCFF>[每周]</color> 通关催眠青蛙殿堂{0}次",
+    "China_Traditional": "<color=#E5CCFF>[每週]</color> 通關催眠青蛙殿堂{0}次"
   },
   {
     "ID": "SYS_BATTLEPASS_WEEKLY_MISSION_DMGOLD",
-    "Korean": "<color=#FFFF99>[주간]</color> 현상금 수배 {0}회 클리어",
-    "English": "<color=#FFFF99>[Weekly]</color> Clear Bounty Hunt {0} time(s)",
-    "Japanese": "<color=#FFFF99>[ウィークリー]</color> 賞金首手配を{0}回クリアする",
-    "China_Simplified": "<color=#FFFF99>[每周]</color> 通关悬赏通缉{0}次",
-    "China_Traditional": "<color=#FFFF99>[每週]</color> 通關懸賞通緝{0}次"
+    "Korean": "<color=#FFFF99>[주간]</color> 최면 개구리의 전당 {0}회 클리어",
+    "English": "<color=#FFFF99>[Weekly]</color> Clear Hypnotic Frog Hall {0} time(s)",
+    "Japanese": "<color=#E5CCFF>[ウィークリー]</color> 催眠カエルの殿堂{0}回クリア",
+    "China_Simplified": "<color=#E5CCFF>[每周]</color> 通关催眠青蛙殿堂{0}次",
+    "China_Traditional": "<color=#E5CCFF>[每週]</color> 通關催眠青蛙殿堂{0}次"
   },
   {
     "ID": "SYS_BATTLEPASS_WEEKLY_MISSION_DMDAYOFWEEK",
-    "Korean": "<color=#FFFF99>[주간]</color> 진화석 수거 {0}회 클리어",
-    "English": "<color=#FFFF99>[Weekly]</color> Clear Evolution Stone Retrieval {0} time(s)",
-    "Japanese": "<color=#FFFF99>[ウィークリー]</color> 進化石回収を{0}回クリアする",
-    "China_Simplified": "<color=#FFFF99>[每周]</color> 通关进化石回收{0}次",
-    "China_Traditional": "<color=#FFFF99>[每週]</color> 通關進化石回收{0}次"
+    "Korean": "<color=#FFFF99>[주간]</color> 방주 습격 {0}회 클리어",
+    "English": "<color=#FFFF99>[Weekly]</color> Clear Ark Raid {0} time(s)",
+    "Japanese": "<color=#E5CCFF>[ウィークリー]</color> アーク強襲{0}回クリア",
+    "China_Simplified": "<color=#E5CCFF>[每周]</color> 通关方舟强袭{0}次",
+    "China_Traditional": "<color=#E5CCFF>[每週]</color> 通關方舟強襲{0}次"
   },
   {
     "ID": "SYS_INFINITE_DUNGEON_FIRE_51",
@@ -100761,11 +100913,11 @@
   },
   {
     "ID": "SYS_ARCADE_EVENT_DAILY_MISSION_INFO_DESC",
-    "Korean": "미션 게이지는 아래 콘텐츠 플레이 1회 당 1씩 증가합니다.\\n\\n<color=#2d78a6> 스토리 클리어, 진화석 수거 클리어, 결투장 - 일반 대전 완료, 현상 수배 클리어, 도적단 추격 클리어</color>",
-    "English": "The mission gauge increases by 1 per play of the following content.\\n\\n<color=#2d78a6> Clear Story, Clear Upgrade Stone Retrieval, Complete Standard Match, Clear Bounty Hunt, Clear Bandit Pursuit</color>",
-    "Japanese": "ミッションゲージは下記コンテンツを1回プレイするごとに1増加します。\\n\\n<color=#2d78a6> ストーリークリア、進化石回収クリア、アリーナ(通常対戦)完了、指名手配クリア、盗賊団追撃クリア</color>",
-    "China_Simplified": "使命进度对以下内容每游玩1次+1：\\n\\n<color=#2d78a6> 通关故事、通关进化石回收、完成竞技场 - 普通对战、通关悬赏通缉、通关盗贼团追击</color>",
-    "China_Traditional": "任務進度對以下內容每遊玩1次+1：\\n\\n<color=#2d78a6> 通關故事、通關進化石收集、完成競技場、通關懸賞通緝、通關追擊盜賊團</color>"
+    "Korean": "미션 게이지는 아래 콘텐츠 플레이 1회 당 1씩 증가합니다.\\n\\n<color=#2d78a6> 스토리 클리어, 결투장 - 일반 대전 완료, 최면 개구리의 전당 클리어, 방주 습격 클리어, 특별의뢰 클리어</color>",
+    "English": "The mission gauge increases by 1 for each play of the following content.\\n\\n<color=#2d78a6> Story Clear, Arena - Standard Match Complete, Hypnotic Frog Hall Clear, Ark Raid Clear, Special Request Clear</color>",
+    "Japanese": "ミッションゲージは以下コンテンツのプレイ1回につき1増加する。\\n\\n<color=#2d78a6> ストーリークリア、アリーナ - 通常対戦完了、催眠カエルの殿堂クリア、アーク強襲クリア、特別依頼クリア</color>",
+    "China_Simplified": "任务量表每进行1次以下内容游玩增加1点。\\n\\n<color=#2d78a6> 剧情通关、竞技场 - 普通对战完成、催眠青蛙殿堂通关、方舟强袭通关、特别委托通关</color>",
+    "China_Traditional": "任務量表每進行1次以下內容遊玩增加1點。\\n\\n<color=#2d78a6> 劇情通關、決鬥場 - 一般對戰完成、催眠青蛙殿堂通關、方舟強襲通關、特別委託通關</color>"
   },
   {
     "ID": "SYS_TRANSCENDENT_PACK_PIECE_COUNT_DESC",
@@ -104185,10 +104337,10 @@
   },
   {
     "ID": "SYS_POPUP_CHARACTER_FUSION_ON_DESC_02",
-    "Korean": "<size=20>코어 융합 진행에는\\n<color=#3494ca>{0}의 ★5 초월 단계 달성</color>과 <color=#3494ca>[융합형 코어]</color>가 필요합니다.\\n코어 융합 후에도 동료의 레벨/진화/초월 수치는 유지되나,\\n<color=#b63838>융합 이후에는 원본 동료를 사용하실 수 없습니다.</color></size>",
-    "English": "<size=20>To perform Core Fusion, you must <color=#3494ca>raise {0} to 5★ Transcendence</color> and have a <color=#3494ca>[Fusion-Type Core]</color>.\\nAfter Core Fusion, the ally’s level, evolution, and transcendence are maintained, but\\n<color=#b63838>you will no longer be able to use the original ally.</color></size>",
-    "Japanese": "<size=20>コアフュージョンを行うには、\\n<color=#3494ca>{0} を★5超越段階まで育成</color>し、<color=#3494ca>【フュージョン型コア】</color>が必要です。\\nコアフュージョン後も仲間のレベル／進化／超越数値は維持されますが、\\n<color=#b63838>フュージョン後は元の仲間を使用できなくなります。</color></size>",
-    "China_Simplified": "<size=20>进行核心融合需要先将<color=#3494ca>{0} 提升至★5超越阶段</color>，并持有<color=#3494ca>【融合型核心】</color>。\\n核心融合后，同伴的等级／进化／超越数值会被保留，\\n但<color=#b63838>将无法再使用原本的同伴。</color></size>",
+    "Korean": "<size=20>코어 융합 진행에는\\n<color=#3494ca>{0}의 ★5 초월 단계 달성</color>과 <color=#3494ca>[융합형 코어]</color>가 필요합니다.\\n코어 융합 후에도 동료의 레벨/초월 수치는 유지되나,\\n<color=#b63838>융합 이후에는 원본 동료를 사용하실 수 없습니다.</color></size>",
+    "English": "<size=20>To perform Core Fusion, you must <color=#3494ca>raise {0} to 5★ Transcendence</color> and have a <color=#3494ca>[Fusion-Type Core]</color>.\\nAfter Core Fusion, the hero’s level and transcendence are maintained, but\\n<color=#b63838>you will no longer be able to use the original hero.</color></size>",
+    "Japanese": "<size=20>コアフュージョンを行うには、\\n<color=#3494ca>{0} を★5超越段階まで育成</color>し、<color=#3494ca>【フュージョン型コア】</color>が必要です。\\nコアフュージョン後も仲間のレベル／超越数値は維持されますが、\\n<color=#b63838>フュージョン後は元の仲間を使用できなくなります。</color></size>",
+    "China_Simplified": "<size=20>进行核心融合需要先将<color=#3494ca>{0} 提升至★5超越阶段</color>，并持有<color=#3494ca>【融合型核心】</color>。\\n核心融合后，同伴的等级／超越数值会被保留，\\n但<color=#b63838>将无法再使用原本的同伴。</color></size>",
     "China_Traditional": "<size=20>進行核心融合前，需要先將<color=#3494ca>{0} 提升至★5超越階段</color>，並持有<color=#3494ca>【融合型核心】</color>。\\n核心融合後，同伴的等級／進化／超越數值會被保留，\\n但<color=#b63838>之後將無法再使用原本的同伴。</color></size>"
   },
   {
@@ -113936,6 +114088,150 @@
     "China_Traditional": "決鬥場任務達成"
   },
   {
+    "ID": "SYS_SINGULARITY_MAIN_TITLE",
+    "Korean": "차원 특이점",
+    "English": "차원 특이점",
+    "Japanese": "차원 특이점",
+    "China_Simplified": "차원 특이점",
+    "China_Traditional": "차원 특이점"
+  },
+  {
+    "ID": "SYS_SINGULARITY_TITLE_01",
+    "Korean": "게이트 관측",
+    "English": "게이트 관측",
+    "Japanese": "게이트 관측",
+    "China_Simplified": "게이트 관측",
+    "China_Traditional": "게이트 관측"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BUTTON_01",
+    "Korean": "차원 특이점 모드 전환",
+    "English": "차원 특이점 모드 전환",
+    "Japanese": "차원 특이점 모드 전환",
+    "China_Simplified": "차원 특이점 모드 전환",
+    "China_Traditional": "차원 특이점 모드 전환"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BUTTON_02",
+    "Korean": "통상 관측 모드 전환",
+    "English": "통상 관측 모드 전환",
+    "Japanese": "통상 관측 모드 전환",
+    "China_Simplified": "통상 관측 모드 전환",
+    "China_Traditional": "통상 관측 모드 전환"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BUTTON_03",
+    "Korean": "장비 제작기",
+    "English": "장비 제작기",
+    "Japanese": "장비 제작기",
+    "China_Simplified": "장비 제작기",
+    "China_Traditional": "장비 제작기"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BUTTON_04",
+    "Korean": "지휘관 스킬",
+    "English": "지휘관 스킬",
+    "Japanese": "지휘관 스킬",
+    "China_Simplified": "지휘관 스킬",
+    "China_Traditional": "지휘관 스킬"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BUTTON_05",
+    "Korean": "특이점 격퇴",
+    "English": "특이점 격퇴",
+    "Japanese": "특이점 격퇴",
+    "China_Simplified": "특이점 격퇴",
+    "China_Traditional": "특이점 격퇴"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BUTTON_06",
+    "Korean": "랭킹 리포트",
+    "English": "랭킹 리포트",
+    "Japanese": "랭킹 리포트",
+    "China_Simplified": "랭킹 리포트",
+    "China_Traditional": "랭킹 리포트"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MAIN_DESC",
+    "Korean": "시시각각 변화하는 게이트의 위협을 물리치세요.",
+    "English": "시시각각 변화하는 게이트의 위협을 물리치세요.",
+    "Japanese": "시시각각 변화하는 게이트의 위협을 물리치세요.",
+    "China_Simplified": "시시각각 변화하는 게이트의 위협을 물리치세요.",
+    "China_Traditional": "시시각각 변화하는 게이트의 위협을 물리치세요."
+  },
+  {
+    "ID": "SYS_SINGULARITY_CONTENTS_DESC",
+    "Korean": "특이점 발생",
+    "English": "특이점 발생",
+    "Japanese": "특이점 발생",
+    "China_Simplified": "특이점 발생",
+    "China_Traditional": "특이점 발생"
+  },
+  {
+    "ID": "SYS_SINGULARITY_CONTENTS_INFO",
+    "Korean": "차원 특이점 정보",
+    "English": "차원 특이점 정보",
+    "Japanese": "차원 특이점 정보",
+    "China_Simplified": "차원 특이점 정보",
+    "China_Traditional": "차원 특이점 정보"
+  },
+  {
+    "ID": "SYS_SINGULARITY_CONTENTS_NOW_INFO",
+    "Korean": "현재 특이점",
+    "English": "현재 특이점",
+    "Japanese": "현재 특이점",
+    "China_Simplified": "현재 특이점",
+    "China_Traditional": "현재 특이점"
+  },
+  {
+    "ID": "SYS_SINGULARITY_CONTENTS_NEXT_INFO",
+    "Korean": "다음 특이점",
+    "English": "다음 특이점",
+    "Japanese": "다음 특이점",
+    "China_Simplified": "다음 특이점",
+    "China_Traditional": "다음 특이점"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RANKING",
+    "Korean": "현재 랭킹 : <color=#0db226>{0}</color>",
+    "English": "현재 랭킹 : <color=#0db226>{0}</color>",
+    "Japanese": "현재 랭킹 : <color=#0db226>{0}</color>",
+    "China_Simplified": "현재 랭킹 : <color=#0db226>{0}</color>",
+    "China_Traditional": "현재 랭킹 : <color=#0db226>{0}</color>"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RANKING_SCORE",
+    "Korean": "달성 최고 스코어 : {0}",
+    "English": "달성 최고 스코어 : {0}",
+    "Japanese": "달성 최고 스코어 : {0}",
+    "China_Simplified": "달성 최고 스코어 : {0}",
+    "China_Traditional": "달성 최고 스코어 : {0}"
+  },
+  {
+    "ID": "SYS_SINGULARITY_NEXT_RANKING",
+    "Korean": "다음 랭크",
+    "English": "다음 랭크",
+    "Japanese": "다음 랭크",
+    "China_Simplified": "다음 랭크",
+    "China_Traditional": "다음 랭크"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RANKING_REWARD",
+    "Korean": "랭크 달성 보상",
+    "English": "랭크 달성 보상",
+    "Japanese": "랭크 달성 보상",
+    "China_Simplified": "랭크 달성 보상",
+    "China_Traditional": "랭크 달성 보상"
+  },
+  {
+    "ID": "SYS_SINGULARITY_DAILY_REWARD",
+    "Korean": "일일 참여 보상",
+    "English": "일일 참여 보상",
+    "Japanese": "일일 참여 보상",
+    "China_Simplified": "일일 참여 보상",
+    "China_Traditional": "일일 참여 보상"
+  },
+  {
     "ID": "SYS_BUFF_REDISTRIBUTE",
     "Korean": "강화 효과 전이",
     "English": "Buff Transfer",
@@ -113946,10 +114242,10 @@
   {
     "ID": "SYS_DESC_REDISTRIBUTE",
     "Korean": "강화 효과를 제거하고 랜덤한 아군에게 옮깁니다.(면역 무시)\\n동일 강화 효과를 보유 중이라면 지속 시간이 긴 강화 효과가 적용됩니다.\\n아군이 강화 효과를 보유할 수 없는 경우에도 제거되며 해제 불가 효과는 전이되지 않습니다.",
-    "English": "Removes buffs and transfers them to a random ally. (Ignores Immunity)\\nIf the same buff is already active, the one with the longer duration is applied.\\nBuffs are removed even if allies cannot hold buffs, and effects that cannot be dispelled are not transferred.",
+    "English": "Removes a buff and transfers it to a random ally. (Ignores Immunity) For duplicate buffs, the longer duration takes effect. The buff is still removed even if the ally cannot receive buffs. Irremovable effects cannot be transferred.",
     "Japanese": "強化効果を解除し、\\nランダムな味方へ移す(免疫無視)。\\n重複時は持続ターンの\\n長い効果を適用。\\n味方が保有不可でも解除され、\\n解除不可効果は転移しない。",
-    "China_Simplified": "移除强化效果并转移给随机我方单位。(无视免疫)\\n若已拥有相同强化效果，则适用持续时间较长的强化效果。\\n即使我方无法持有强化效果也会被移除，无法解除的效果不会被转移。",
-    "China_Traditional": "移除強化效果並轉移給隨機我方單位。(無視免疫)\\n若已擁有相同強化效果，則適用持續時間較長的強化效果。\\n即使我方無法持有強化效果也會被移除，無法解除的效果不會被轉移。"
+    "China_Simplified": "移除强化效果并转移给随机我方单位。\\n(无视免疫)\\n若已拥有相同强化效果，\\n则适用持续时间较长的强化效果。\\n即使我方无法持有强化效果也会被移除，\\n无法解除的效果不会被转移。",
+    "China_Traditional": "移除強化效果並轉移給隨機我方單位。\\n(無視免疫)\\n若已擁有相同強化效果，\\n則適用持續時間較長的強化效果。\\n即使我方無法持有強化效果也會被移除，\\n無法解除的效果不會被轉移。"
   },
   {
     "ID": "SYS_BUFF_NAME_2000112",
@@ -113970,15 +114266,15 @@
   {
     "ID": "SYS_BUFF_DESC_2000112",
     "Korean": "기본 공격을 제외한 스킬로 공격 받을 때, 받는 최종 피해 -90%\\n기본 공격을 받는 경우에도 횟수 감소\\n\\n(해제 불가, 시전자 사망 시 해제, 최종 피해 감소는 가장 높은 값만 적용, 버스트 포함)",
-    "English": "When attacked by skills other than basic attacks, Final DMG taken -90%\\nStack count decreases even when hit by basic attacks\\n\\n(Cannot be dispelled, dispelled upon caster's death, only the highest value of Final DMG reduction applies, including Burst)",
+    "English": "When hit by a skill, Final DMG taken -90%. Basic attacks reduce count but don't trigger the effect. (Cannot be dispelled, removed upon caster's death; Only the highest Final DMG reduction applies, including Burst)",
     "Japanese": "通常スキル以外で被弾時、\\n最終ダメージ-90%。\\n通常スキル被弾時も回数減少。\\n(バースト含む。解除不可。\\nスキル使用者が倒れると解除。\\n最終ダメージDOWNは\\n最大値のみ適用)",
-    "China_Simplified": "受到除基本攻击以外的技能攻击时，受到的最终伤害-90%\\n受到基本攻击时也会减少层数\\n\\n(无法解除，施放者死亡时解除，最终伤害减少仅适用最高值，包含爆发)",
-    "China_Traditional": "受到除基本攻擊以外的技能攻擊時，受到的最終傷害-90%\\n受到基本攻擊時也會減少層數\\n\\n(無法解除，施放者死亡時解除，最終傷害減少僅適用最高值，包含爆發)"
+    "China_Simplified": "受到除基本攻击以外的技能攻击时，\\n受到的最终伤害-90%\\n受到基本攻击时也会减少层数\\n\\n(无法解除，施放者死亡时解除，\\n最终伤害减少仅适用最高值，包含爆发)",
+    "China_Traditional": "受到除基本攻擊以外的技能攻擊時，\\n受到的最終傷害-90%\\n受到基本攻擊時也會減少層數\\n\\n(無法解除，施放者死亡時解除，\\n最終傷害減少僅適用最高值，包含爆發)"
   },
   {
     "ID": "SYS_BUFF_DESC_2000112_Debuff",
     "Korean": "대상 관통력 -30%\\n행동 게이지 효율 -10%\\n\\n(해제 불가, 시전자 사망 시 해제)",
-    "English": "Target's Penetration -30%\\nPriority increase efficiency -10%  \\n\\n(Cannot be removed, removed upon caster's death)",
+    "English": "Target's Penetration -30%\\nPriority increase efficiency -10%  \\n(Cannot be removed, removed upon caster's death)",
     "Japanese": "対象の貫通力-30%\\n行動ゲージ効率-10%\\n(解除不可。スキル使用者が倒れると解除)",
     "China_Simplified": "目标穿透力-30%\\n行动值效率-10%\\n\\n(无法解除，施放者死亡时解除)",
     "China_Traditional": "目標貫穿力-30%\\n速攻值效率-10%\\n\\n(無法解除，施放者死亡時解除)"
@@ -114424,19 +114720,851 @@
     "China_Traditional": "即時對戰活動任務通關"
   },
   {
-    "ID": "SYS_LINE_MIDDLE",
-    "Korean": "중열",
-    "English": "Middle Line",
-    "Japanese": "中列",
-    "China_Simplified": "中排",
-    "China_Traditional": "中列"
+    "ID": "SYS_GOLD_EXP_DUNGEON_1",
+    "Korean": "최면 개구리의 전당 (1 단계)",
+    "English": "Hypnotic Frog Hall (Stage 1)",
+    "Japanese": "催眠カエルの殿堂（1段階）",
+    "China_Simplified": "催眠青蛙殿堂（第1阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第1階段）"
   },
   {
-    "ID": "SYS_REALTIME_BAN",
-    "Korean": "금지 동료",
-    "English": "Banned Hero",
-    "Japanese": "禁止対象",
-    "China_Simplified": "被禁用同伴",
-    "China_Traditional": "被禁用同伴"
+    "ID": "SYS_GOLD_EXP_DUNGEON_2",
+    "Korean": "최면 개구리의 전당 (2 단계)",
+    "English": "Hypnotic Frog Hall (Stage 2)",
+    "Japanese": "催眠カエルの殿堂（2段階）",
+    "China_Simplified": "催眠青蛙殿堂（第2阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第2階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_3",
+    "Korean": "최면 개구리의 전당 (3 단계)",
+    "English": "Hypnotic Frog Hall (Stage 3)",
+    "Japanese": "催眠カエルの殿堂（3段階）",
+    "China_Simplified": "催眠青蛙殿堂（第3阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第3階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_4",
+    "Korean": "최면 개구리의 전당 (4 단계)",
+    "English": "Hypnotic Frog Hall (Stage 4)",
+    "Japanese": "催眠カエルの殿堂（4段階）",
+    "China_Simplified": "催眠青蛙殿堂（第4阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第4階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_5",
+    "Korean": "최면 개구리의 전당 (5 단계)",
+    "English": "Hypnotic Frog Hall (Stage 5)",
+    "Japanese": "催眠カエルの殿堂（5段階）",
+    "China_Simplified": "催眠青蛙殿堂（第5阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第5階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_6",
+    "Korean": "최면 개구리의 전당 (6 단계)",
+    "English": "Hypnotic Frog Hall (Stage 6)",
+    "Japanese": "催眠カエルの殿堂（6段階）",
+    "China_Simplified": "催眠青蛙殿堂（第6阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第6階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_7",
+    "Korean": "최면 개구리의 전당 (7 단계)",
+    "English": "Hypnotic Frog Hall (Stage 7)",
+    "Japanese": "催眠カエルの殿堂（7段階）",
+    "China_Simplified": "催眠青蛙殿堂（第7阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第7階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_8",
+    "Korean": "최면 개구리의 전당 (8 단계)",
+    "English": "Hypnotic Frog Hall (Stage 8)",
+    "Japanese": "催眠カエルの殿堂（8段階）",
+    "China_Simplified": "催眠青蛙殿堂（第8阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第8階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_9",
+    "Korean": "최면 개구리의 전당 (9 단계)",
+    "English": "Hypnotic Frog Hall (Stage 9)",
+    "Japanese": "催眠カエルの殿堂（9段階）",
+    "China_Simplified": "催眠青蛙殿堂（第9阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第9階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_10",
+    "Korean": "최면 개구리의 전당 (10 단계)",
+    "English": "Hypnotic Frog Hall (Stage 10)",
+    "Japanese": "催眠カエルの殿堂（10段階）",
+    "China_Simplified": "催眠青蛙殿堂（第10阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第10階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_11",
+    "Korean": "최면 개구리의 전당 (11 단계)",
+    "English": "Hypnotic Frog Hall (Stage 11)",
+    "Japanese": "催眠カエルの殿堂（11段階）",
+    "China_Simplified": "催眠青蛙殿堂（第11阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第11階段）"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON_12",
+    "Korean": "최면 개구리의 전당 (12 단계)",
+    "English": "Hypnotic Frog Hall (Stage 12)",
+    "Japanese": "催眠カエルの殿堂（12段階）",
+    "China_Simplified": "催眠青蛙殿堂（第12阶段）",
+    "China_Traditional": "催眠青蛙殿堂（第12階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_1",
+    "Korean": "대장장이의 방주 (1 단계)",
+    "English": "Blacksmith's Ark (Stage 1)",
+    "Japanese": "鍛冶師のアーク（1段階）",
+    "China_Simplified": "铁匠的方舟（第1阶段）",
+    "China_Traditional": "鐵匠的方舟（第1階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_2",
+    "Korean": "대장장이의 방주 (2 단계)",
+    "English": "Blacksmith's Ark (Stage 2)",
+    "Japanese": "鍛冶師のアーク（2段階）",
+    "China_Simplified": "铁匠的方舟（第2阶段）",
+    "China_Traditional": "鐵匠的方舟（第2階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_3",
+    "Korean": "대장장이의 방주 (3 단계)",
+    "English": "Blacksmith's Ark (Stage 3)",
+    "Japanese": "鍛冶師のアーク（3段階）",
+    "China_Simplified": "铁匠的方舟（第3阶段）",
+    "China_Traditional": "鐵匠的方舟（第3階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_4",
+    "Korean": "대장장이의 방주 (4 단계)",
+    "English": "Blacksmith's Ark (Stage 4)",
+    "Japanese": "鍛冶師のアーク（4段階）",
+    "China_Simplified": "铁匠的方舟（第4阶段）",
+    "China_Traditional": "鐵匠的方舟（第4階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_5",
+    "Korean": "대장장이의 방주 (5 단계)",
+    "English": "Blacksmith's Ark (Stage 5)",
+    "Japanese": "鍛冶師のアーク（5段階）",
+    "China_Simplified": "铁匠的方舟（第5阶段）",
+    "China_Traditional": "鐵匠的方舟（第5階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_6",
+    "Korean": "대장장이의 방주 (6 단계)",
+    "English": "Blacksmith's Ark (Stage 6)",
+    "Japanese": "鍛冶師のアーク（6段階）",
+    "China_Simplified": "铁匠的方舟（第6阶段）",
+    "China_Traditional": "鐵匠的方舟（第6階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_7",
+    "Korean": "대장장이의 방주 (7 단계)",
+    "English": "Blacksmith's Ark (Stage 7)",
+    "Japanese": "鍛冶師のアーク（7段階）",
+    "China_Simplified": "铁匠的方舟（第7阶段）",
+    "China_Traditional": "鐵匠的方舟（第7階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_8",
+    "Korean": "대장장이의 방주 (8 단계)",
+    "English": "Blacksmith's Ark (Stage 8)",
+    "Japanese": "鍛冶師のアーク（8段階）",
+    "China_Simplified": "铁匠的方舟（第8阶段）",
+    "China_Traditional": "鐵匠的方舟（第8階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_9",
+    "Korean": "대장장이의 방주 (9 단계)",
+    "English": "Blacksmith's Ark (Stage 9)",
+    "Japanese": "鍛冶師のアーク（9段階）",
+    "China_Simplified": "铁匠的方舟（第9阶段）",
+    "China_Traditional": "鐵匠的方舟（第9階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_10",
+    "Korean": "대장장이의 방주 (10 단계)",
+    "English": "Blacksmith's Ark (Stage 10)",
+    "Japanese": "鍛冶師のアーク（10段階）",
+    "China_Simplified": "铁匠的方舟（第10阶段）",
+    "China_Traditional": "鐵匠的方舟（第10階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_11",
+    "Korean": "대장장이의 방주 (11 단계)",
+    "English": "Blacksmith's Ark (Stage 11)",
+    "Japanese": "鍛冶師のアーク（11段階）",
+    "China_Simplified": "铁匠的方舟（第11阶段）",
+    "China_Traditional": "鐵匠的方舟（第11階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE_DUNGEON_12",
+    "Korean": "대장장이의 방주 (12 단계)",
+    "English": "Blacksmith's Ark (Stage 12)",
+    "Japanese": "鍛冶師のアーク（12段階）",
+    "China_Simplified": "铁匠的方舟（第12阶段）",
+    "China_Traditional": "鐵匠的方舟（第12階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_1",
+    "Korean": "애정의 방주 (1 단계)",
+    "English": "Affinity Ark (Stage 1)",
+    "Japanese": "愛情のアーク（1段階）",
+    "China_Simplified": "爱情的方舟（第1阶段）",
+    "China_Traditional": "愛情的方舟（第1階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_2",
+    "Korean": "애정의 방주 (2 단계)",
+    "English": "Affinity Ark (Stage 2)",
+    "Japanese": "愛情のアーク（2段階）",
+    "China_Simplified": "爱情的方舟（第2阶段）",
+    "China_Traditional": "愛情的方舟（第2階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_3",
+    "Korean": "애정의 방주 (3 단계)",
+    "English": "Affinity Ark (Stage 3)",
+    "Japanese": "愛情のアーク（3段階）",
+    "China_Simplified": "爱情的方舟（第3阶段）",
+    "China_Traditional": "愛情的方舟（第3階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_4",
+    "Korean": "애정의 방주 (4 단계)",
+    "English": "Affinity Ark (Stage 4)",
+    "Japanese": "愛情のアーク（4段階）",
+    "China_Simplified": "爱情的方舟（第4阶段）",
+    "China_Traditional": "愛情的方舟（第4階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_5",
+    "Korean": "애정의 방주 (5 단계)",
+    "English": "Affinity Ark (Stage 5)",
+    "Japanese": "愛情のアーク（5段階）",
+    "China_Simplified": "爱情的方舟（第5阶段）",
+    "China_Traditional": "愛情的方舟（第5階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_6",
+    "Korean": "애정의 방주 (6 단계)",
+    "English": "Affinity Ark (Stage 6)",
+    "Japanese": "愛情のアーク（6段階）",
+    "China_Simplified": "爱情的方舟（第6阶段）",
+    "China_Traditional": "愛情的方舟（第6階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_7",
+    "Korean": "애정의 방주 (7 단계)",
+    "English": "Affinity Ark (Stage 7)",
+    "Japanese": "愛情のアーク（7段階）",
+    "China_Simplified": "爱情的方舟（第7阶段）",
+    "China_Traditional": "愛情的方舟（第7階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_8",
+    "Korean": "애정의 방주 (8 단계)",
+    "English": "Affinity Ark (Stage 8)",
+    "Japanese": "愛情のアーク（8段階）",
+    "China_Simplified": "爱情的方舟（第8阶段）",
+    "China_Traditional": "愛情的方舟（第8階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_9",
+    "Korean": "애정의 방주 (9 단계)",
+    "English": "Affinity Ark (Stage 9)",
+    "Japanese": "愛情のアーク（9段階）",
+    "China_Simplified": "爱情的方舟（第9阶段）",
+    "China_Traditional": "愛情的方舟（第9階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_10",
+    "Korean": "애정의 방주 (10 단계)",
+    "English": "Affinity Ark (Stage 10)",
+    "Japanese": "愛情のアーク（10段階）",
+    "China_Simplified": "爱情的方舟（第10阶段）",
+    "China_Traditional": "愛情的方舟（第10階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_11",
+    "Korean": "애정의 방주 (11 단계)",
+    "English": "Affinity Ark (Stage 11)",
+    "Japanese": "愛情のアーク（11段階）",
+    "China_Simplified": "爱情的方舟（第11阶段）",
+    "China_Traditional": "愛情的方舟（第11階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT_DUNGEON_12",
+    "Korean": "애정의 방주 (12 단계)",
+    "English": "Affinity Ark (Stage 12)",
+    "Japanese": "愛情のアーク（12段階）",
+    "China_Simplified": "爱情的方舟（第12阶段）",
+    "China_Traditional": "愛情的方舟（第12階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_1",
+    "Korean": "보석의 방주 (1 단계)",
+    "English": "Gem Ark (Stage 1)",
+    "Japanese": "宝石のアーク（1段階）",
+    "China_Simplified": "宝石的方舟（第1阶段）",
+    "China_Traditional": "寶石的方舟（第1階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_2",
+    "Korean": "보석의 방주 (2 단계)",
+    "English": "Gem Ark (Stage 2)",
+    "Japanese": "宝石のアーク（2段階）",
+    "China_Simplified": "宝石的方舟（第2阶段）",
+    "China_Traditional": "寶石的方舟（第2階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_3",
+    "Korean": "보석의 방주 (3 단계)",
+    "English": "Gem Ark (Stage 3)",
+    "Japanese": "宝石のアーク（3段階）",
+    "China_Simplified": "宝石的方舟（第3阶段）",
+    "China_Traditional": "寶石的方舟（第3階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_4",
+    "Korean": "보석의 방주 (4 단계)",
+    "English": "Gem Ark (Stage 4)",
+    "Japanese": "宝石のアーク（4段階）",
+    "China_Simplified": "宝石的方舟（第4阶段）",
+    "China_Traditional": "寶石的方舟（第4階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_5",
+    "Korean": "보석의 방주 (5 단계)",
+    "English": "Gem Ark (Stage 5)",
+    "Japanese": "宝石のアーク（5段階）",
+    "China_Simplified": "宝石的方舟（第5阶段）",
+    "China_Traditional": "寶石的方舟（第5階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_6",
+    "Korean": "보석의 방주 (6 단계)",
+    "English": "Gem Ark (Stage 6)",
+    "Japanese": "宝石のアーク（6段階）",
+    "China_Simplified": "宝石的方舟（第6阶段）",
+    "China_Traditional": "寶石的方舟（第6階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_7",
+    "Korean": "보석의 방주 (7 단계)",
+    "English": "Gem Ark (Stage 7)",
+    "Japanese": "宝石のアーク（7段階）",
+    "China_Simplified": "宝石的方舟（第7阶段）",
+    "China_Traditional": "寶石的方舟（第7階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_8",
+    "Korean": "보석의 방주 (8 단계)",
+    "English": "Gem Ark (Stage 8)",
+    "Japanese": "宝石のアーク（8段階）",
+    "China_Simplified": "宝石的方舟（第8阶段）",
+    "China_Traditional": "寶石的方舟（第8階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_9",
+    "Korean": "보석의 방주 (9 단계)",
+    "English": "Gem Ark (Stage 9)",
+    "Japanese": "宝石のアーク（9段階）",
+    "China_Simplified": "宝石的方舟（第9阶段）",
+    "China_Traditional": "寶石的方舟（第9階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_10",
+    "Korean": "보석의 방주 (10 단계)",
+    "English": "Gem Ark (Stage 10)",
+    "Japanese": "宝石のアーク（10段階）",
+    "China_Simplified": "宝石的方舟（第10阶段）",
+    "China_Traditional": "寶石的方舟（第10階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_11",
+    "Korean": "보석의 방주 (11 단계)",
+    "English": "Gem Ark (Stage 11)",
+    "Japanese": "宝石のアーク（11段階）",
+    "China_Simplified": "宝石的方舟（第11阶段）",
+    "China_Traditional": "寶石的方舟（第11階段）"
+  },
+  {
+    "ID": "SYS_FARMING_GEM_DUNGEON_12",
+    "Korean": "보석의 방주 (12 단계)",
+    "English": "Gem Ark (Stage 12)",
+    "Japanese": "宝石のアーク（12段階）",
+    "China_Simplified": "宝石的方舟（第12阶段）",
+    "China_Traditional": "寶石的方舟（第12階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_1",
+    "Korean": "기술의 방주 (1 단계)",
+    "English": "Skill Ark (Stage 1)",
+    "Japanese": "技術のアーク（1段階）",
+    "China_Simplified": "技术的方舟（第1阶段）",
+    "China_Traditional": "技術的方舟（第1階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_2",
+    "Korean": "기술의 방주 (2 단계)",
+    "English": "Skill Ark (Stage 2)",
+    "Japanese": "技術のアーク（2段階）",
+    "China_Simplified": "技术的方舟（第2阶段）",
+    "China_Traditional": "技術的方舟（第2階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_3",
+    "Korean": "기술의 방주 (3 단계)",
+    "English": "Skill Ark (Stage 3)",
+    "Japanese": "技術のアーク（3段階）",
+    "China_Simplified": "技术的方舟（第3阶段）",
+    "China_Traditional": "技術的方舟（第3階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_4",
+    "Korean": "기술의 방주 (4 단계)",
+    "English": "Skill Ark (Stage 4)",
+    "Japanese": "技術のアーク（4段階）",
+    "China_Simplified": "技术的方舟（第4阶段）",
+    "China_Traditional": "技術的方舟（第4階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_5",
+    "Korean": "기술의 방주 (5 단계)",
+    "English": "Skill Ark (Stage 5)",
+    "Japanese": "技術のアーク（5段階）",
+    "China_Simplified": "技术的方舟（第5阶段）",
+    "China_Traditional": "技術的方舟（第5階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_6",
+    "Korean": "기술의 방주 (6 단계)",
+    "English": "Skill Ark (Stage 6)",
+    "Japanese": "技術のアーク（6段階）",
+    "China_Simplified": "技术的方舟（第6阶段）",
+    "China_Traditional": "技術的方舟（第6階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_7",
+    "Korean": "기술의 방주 (7 단계)",
+    "English": "Skill Ark (Stage 7)",
+    "Japanese": "技術のアーク（7段階）",
+    "China_Simplified": "技术的方舟（第7阶段）",
+    "China_Traditional": "技術的方舟（第7階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_8",
+    "Korean": "기술의 방주 (8 단계)",
+    "English": "Skill Ark (Stage 8)",
+    "Japanese": "技術のアーク（8段階）",
+    "China_Simplified": "技术的方舟（第8阶段）",
+    "China_Traditional": "技術的方舟（第8階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_9",
+    "Korean": "기술의 방주 (9 단계)",
+    "English": "Skill Ark (Stage 9)",
+    "Japanese": "技術のアーク（9段階）",
+    "China_Simplified": "技术的方舟（第9阶段）",
+    "China_Traditional": "技術的方舟（第9階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_10",
+    "Korean": "기술의 방주 (10 단계)",
+    "English": "Skill Ark (Stage 10)",
+    "Japanese": "技術のアーク（10段階）",
+    "China_Simplified": "技术的方舟（第10阶段）",
+    "China_Traditional": "技術的方舟（第10階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_11",
+    "Korean": "기술의 방주 (11 단계)",
+    "English": "Skill Ark (Stage 11)",
+    "Japanese": "技術のアーク（11段階）",
+    "China_Simplified": "技术的方舟（第11阶段）",
+    "China_Traditional": "技術的方舟（第11階段）"
+  },
+  {
+    "ID": "SYS_FARMING_SKILLBOOK_DUNGEON_12",
+    "Korean": "기술의 방주 (12 단계)",
+    "English": "Skill Ark (Stage 12)",
+    "Japanese": "技術のアーク（12段階）",
+    "China_Simplified": "技术的方舟（第12阶段）",
+    "China_Traditional": "技術的方舟（第12階段）"
+  },
+  {
+    "ID": "SYS_FARMING_ENHANCE",
+    "Korean": "대장장이의 방주",
+    "English": "Blacksmith's Ark",
+    "Japanese": "鍛冶師のアーク",
+    "China_Simplified": "铁匠的方舟",
+    "China_Traditional": "鐵匠的方舟"
+  },
+  {
+    "ID": "SYS_FARMING_GIFT",
+    "Korean": "애정의 방주",
+    "English": "Affinity Ark",
+    "Japanese": "愛情のアーク",
+    "China_Simplified": "爱情的方舟",
+    "China_Traditional": "愛情的方舟"
+  },
+  {
+    "ID": "SYS_FARMING_GEM",
+    "Korean": "보석의 방주",
+    "English": "Gem Ark",
+    "Japanese": "宝石のアーク",
+    "China_Simplified": "宝石的方舟",
+    "China_Traditional": "寶石的方舟"
+  },
+  {
+    "ID": "SYS_FARMING_SKILL_BOOK",
+    "Korean": "기술의 방주",
+    "English": "Skill Ark",
+    "Japanese": "技術のアーク",
+    "China_Simplified": "技术的方舟",
+    "China_Traditional": "技術的方舟"
+  },
+  {
+    "ID": "SYS_DISC_TICKET_FARMING",
+    "Korean": "도전 컨텐츠 [방주 습격]을 진행하기 위한 티켓.",
+    "English": "A ticket required to participate in the challenge content [Ark Raid].",
+    "Japanese": "チャレンジコンテンツ[アーク強襲]を進行するためのチケット。",
+    "China_Simplified": "用于进行挑战内容[方舟强袭]的票券。",
+    "China_Traditional": "用於進行挑戰內容[方舟強襲]的票券。"
+  },
+  {
+    "ID": "SYS_ASSET_TICKET_FARMING",
+    "Korean": "방주 습격 티켓",
+    "English": "Ark Raid Ticket",
+    "Japanese": "アーク強襲チケット",
+    "China_Simplified": "方舟强袭票券",
+    "China_Traditional": "方舟強襲票券"
+  },
+  {
+    "ID": "SYS_REWARD_FARMING",
+    "Korean": "각종 성장 재료",
+    "English": "Various Growth Materials",
+    "Japanese": "各種成長素材",
+    "China_Simplified": "各类成长材料",
+    "China_Traditional": "各類成長材料"
+  },
+  {
+    "ID": "SYS_REWARD_FARMING_ENHANCE",
+    "Korean": "장비 강화 도구",
+    "English": "Gear Hammer",
+    "Japanese": "装備強化ハンマー",
+    "China_Simplified": "装备强化道具",
+    "China_Traditional": "裝備強化道具"
+  },
+  {
+    "ID": "SYS_REWARD_FARMING_GIFT",
+    "Korean": "애정도 선물",
+    "English": "Affinity Gift",
+    "Japanese": "親密度ギフト",
+    "China_Simplified": "亲密度礼物",
+    "China_Traditional": "親密度禮物"
+  },
+  {
+    "ID": "SYS_REWARD_FARMING_GEM",
+    "Korean": "보석",
+    "English": "Gem",
+    "Japanese": "宝石",
+    "China_Simplified": "宝石",
+    "China_Traditional": "寶石"
+  },
+  {
+    "ID": "SYS_REWARD_FARMING_SKILL_BOOK",
+    "Korean": "스킬 교본",
+    "English": "Skill Manual",
+    "Japanese": "スキル教本",
+    "China_Simplified": "技能教材",
+    "China_Traditional": "技能教材"
+  },
+  {
+    "ID": "SYS_FARMING_DUNGEON",
+    "Korean": "방주 습격",
+    "English": "Ark Raid",
+    "Japanese": "アーク強襲",
+    "China_Simplified": "方舟强袭",
+    "China_Traditional": "方舟強襲"
+  },
+  {
+    "ID": "SYS_GOLD_EXP_DUNGEON",
+    "Korean": "최면 개구리의 전당",
+    "English": "Hypnotic Frog Hall",
+    "Japanese": "催眠カエルの殿堂",
+    "China_Simplified": "催眠青蛙殿堂",
+    "China_Traditional": "催眠青蛙殿堂"
+  },
+  {
+    "ID": "SYS_CHARACTER_FUSION_NAME_05",
+    "Korean": "코어 융합 : 이터널",
+    "English": "Core Fusion : Eternal",
+    "Japanese": "コアフュージョン : エターナル",
+    "China_Simplified": "核心融合 : 伊特诺",
+    "China_Traditional": "核心融合 : 伊特諾"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700043_01",
+    "Korean": "이터널 코어 융합 Lv1",
+    "English": "Eternal Core Fusion Lv.1",
+    "Japanese": "エターナル コアフュージョン Lv1",
+    "China_Simplified": "伊特诺核心融合 Lv.1",
+    "China_Traditional": "伊特諾核心融合 Lv.1"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700043_02",
+    "Korean": "이터널 코어 융합 Lv2",
+    "English": "Eternal Core Fusion Lv.2",
+    "Japanese": "エターナル コアフュージョン Lv2",
+    "China_Simplified": "伊特诺核心融合 Lv.2",
+    "China_Traditional": "伊特諾核心融合 Lv.2"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700043_03",
+    "Korean": "이터널 코어 융합 Lv3",
+    "English": "Eternal Core Fusion Lv.3",
+    "Japanese": "エターナル コアフュージョン Lv3",
+    "China_Simplified": "伊特诺核心融合 Lv.3",
+    "China_Traditional": "伊特諾核心融合 Lv.3"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700043_04",
+    "Korean": "이터널 코어 융합 Lv4",
+    "English": "Eternal Core Fusion Lv.4",
+    "Japanese": "エターナル コアフュージョン Lv4",
+    "China_Simplified": "伊特诺核心融合 Lv.4",
+    "China_Traditional": "伊特諾核心融合 Lv.4"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700043_05",
+    "Korean": "이터널 코어 융합 Lv5",
+    "English": "Eternal Core Fusion Lv.5",
+    "Japanese": "エターナル コアフュージョン Lv5",
+    "China_Simplified": "伊特诺核心融合 Lv.5",
+    "China_Traditional": "伊特諾核心融合 Lv.5"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700043_01",
+    "Korean": "<size=19>이터널의 코어 융합 완료. 융합 패시브 추가</size>",
+    "English": "<size=19>Eternal’s Core Fusion complete. Fusion Passive unlocked.</size>",
+    "Japanese": "<size=19>エターナルのコアフュージョン完了。フュージョンパッシブが追加されます。</size>",
+    "China_Simplified": "<size=19>伊特诺的核心融合完成。解锁融合被动。</size>",
+    "China_Traditional": "<size=19>伊特诺的核心融合完成。解鎖融合被動。</size>"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700043_02",
+    "Korean": "<size=19>모든 스킬의 <color=#3494ca>Lv 2</color></size> (융합 패시브 제외)",
+    "English": "<size=19>All Skills <color=#3494ca>Lv 2</color></size> (Fusion Passive excluded)",
+    "Japanese": "<size=19>すべてのスキル <color=#3494ca>Lv 2</color></size>（フュージョンパッシブを除く）",
+    "China_Simplified": "<size=19>所有技能 <color=#3494ca>Lv 2</color></size>（不含融合被动）",
+    "China_Traditional": "<size=19>所有技能 <color=#3494ca>Lv 2</color></size>（不含融合被動）"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700043_03",
+    "Korean": "<size=19>모든 스킬의 <color=#3494ca>Lv 3</color></size> (융합 패시브 제외)",
+    "English": "<size=19>All Skills <color=#3494ca>Lv 3</color></size> (Fusion Passive excluded)",
+    "Japanese": "<size=19>すべてのスキル <color=#3494ca>Lv 3</color></size>（フュージョンパッシブを除く）",
+    "China_Simplified": "<size=19>所有技能 <color=#3494ca>Lv 3</color></size>（不含融合被动）",
+    "China_Traditional": "<size=19>所有技能 <color=#3494ca>Lv 3</color></size>（不含融合被動）"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700043_04",
+    "Korean": "<size=19>모든 스킬의 <color=#3494ca>Lv 4</color></size> (융합 패시브 제외)",
+    "English": "<size=19>All Skills <color=#3494ca>Lv 4</color></size> (Fusion Passive excluded)",
+    "Japanese": "<size=19>すべてのスキル <color=#3494ca>Lv 4</color></size>（フュージョンパッシブを除く）",
+    "China_Simplified": "<size=19>所有技能 <color=#3494ca>Lv 4</color></size>（不含融合被动）",
+    "China_Traditional": "<size=19>所有技能 <color=#3494ca>Lv 4</color></size>（不含融合被動）"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700043_05",
+    "Korean": "<size=19>모든 스킬의 <color=#3494ca>Lv Max</color>\\n융합 패시브 <color=#3494ca>Lv Max</color></size>",
+    "English": "<size=19>All Skills <color=#3494ca>Lv Max</color>\\nFusion Passive <color=#3494ca>Lv Max</color></size>",
+    "Japanese": "<size=19>すべてのスキル <color=#3494ca>Lv Max</color>\\nフュージョンパッシブ <color=#3494ca>Lv Max</color></size>",
+    "China_Simplified": "<size=19>所有技能 <color=#3494ca>Lv Max</color>\\n融合被动 <color=#3494ca>Lv Max</color></size>",
+    "China_Traditional": "<size=19>所有技能 <color=#3494ca>Lv Max</color>\\n融合被動 <color=#3494ca>Lv Max</color></size>"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_EVENT_04",
+    "Korean": "[사막의 악동]",
+    "English": "[Desert Rascal]",
+    "Japanese": "【砂漠のいたずらっ子】",
+    "China_Simplified": "[沙漠捣蛋鬼]",
+    "China_Traditional": "[沙漠搗蛋鬼]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_EVENT_GET_ROUTE_04",
+    "Korean": "오아시스의 수수께끼 이벤트 미션 보상",
+    "English": "Oasis Mystery Event Mission Reward",
+    "Japanese": "オアシスの謎イベントミッション報酬",
+    "China_Simplified": "绿洲之谜活动任务奖励",
+    "China_Traditional": "綠洲之謎活動任務獎勵"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_EVENT_REWARD_04",
+    "Korean": "칭호 [사막의 악동]",
+    "English": "Title [Desert Rascal]",
+    "Japanese": "称号【砂漠のいたずらっ子】",
+    "China_Simplified": "称号[沙漠捣蛋鬼]",
+    "China_Traditional": "稱號[沙漠搗蛋鬼]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_EVENT_REWARD_DESC_04",
+    "Korean": "칭호 [사막의 악동]을 얻습니다.",
+    "English": "Obtain the title [Desert Rascal].",
+    "Japanese": "称号【砂漠のいたずらっ子】を獲得する。",
+    "China_Simplified": "获得称号[沙漠捣蛋鬼]。",
+    "China_Traditional": "獲得稱號[沙漠搗蛋鬼]。"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_101",
+    "Korean": "프로필 테두리 -  사막의 악동 l",
+    "English": "Profile Frame - Desert Rascal I",
+    "Japanese": "プロフィールフレーム - 砂漠のいたずらっ子 I",
+    "China_Simplified": "头像边框 - 沙漠捣蛋鬼 I",
+    "China_Traditional": "頭像外框 - 沙漠搗蛋鬼 I"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_102",
+    "Korean": "프로필 테두리 -  사막의 악동 ll",
+    "English": "Profile Frame - Desert Rascal II",
+    "Japanese": "プロフィールフレーム - 砂漠のいたずらっ子 II",
+    "China_Simplified": "头像边框 - 沙漠捣蛋鬼 II",
+    "China_Traditional": "頭像外框 - 沙漠搗蛋鬼 II"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_DES_101",
+    "Korean": "오아시스의 수수께끼 이벤트 상점에서 구매할 수 있는 프로필 테두리입니다.",
+    "English": "A Profile Frame that can be purchased from the Oasis Mystery Event Shop.",
+    "Japanese": "オアシスの謎イベントショップで購入できるプロフィールフレームです。",
+    "China_Simplified": "可在绿洲之谜活动商店中购买的头像边框。",
+    "China_Traditional": "可在綠洲之謎活動商店中購買的頭像外框。"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_DES_102",
+    "Korean": "오아시스의 수수께끼 이벤트 상점에서 구매할 수 있는 프로필 테두리입니다.",
+    "English": "A Profile Frame that can be purchased from the Oasis Mystery Event Shop.",
+    "Japanese": "オアシスの謎イベントショップで購入できるプロフィールフレームです。",
+    "China_Simplified": "可在绿洲之谜活动商店中购买的头像边框。",
+    "China_Traditional": "可在綠洲之謎活動商店中購買的頭像外框。"
+  },
+  {
+    "ID": "SYS_MISSION_DMGOLD_REMASTER_CLEAR",
+    "Korean": "최면 개구리의 전당 {0}회 클리어",
+    "English": "Clear Hypnotic Frog Hall {0} time(s)",
+    "Japanese": "催眠カエルの殿堂{0}回クリア",
+    "China_Simplified": "通关催眠青蛙殿堂{0}次",
+    "China_Traditional": "通關催眠青蛙殿堂{0}次"
+  },
+  {
+    "ID": "SYS_MISSION_DMFARMING_CLEAR",
+    "Korean": "방주 습격 {0}회 클리어",
+    "English": "Clear Ark Raid {0} time(s)",
+    "Japanese": "アーク強襲{0}回クリア",
+    "China_Simplified": "通关方舟强袭{0}次",
+    "China_Traditional": "通關方舟強襲{0}次"
+  },
+  {
+    "ID": "SYS_GUIDE_PVE_GOLDEXP_TITLE",
+    "Korean": "최면 개구리의 전당",
+    "English": "Hypnotic Frog Hall",
+    "Japanese": "催眠カエルの殿堂",
+    "China_Simplified": "催眠青蛙殿堂",
+    "China_Traditional": "催眠青蛙殿堂"
+  },
+  {
+    "ID": "SYS_GUIDE_PVE_GOLDEXP_01_NAME",
+    "Korean": "최면 개구리의 전당 개요",
+    "English": "Hypnotic Frog Hall Overview",
+    "Japanese": "催眠カエルの殿堂概要",
+    "China_Simplified": "催眠青蛙殿堂概要",
+    "China_Traditional": "催眠青蛙殿堂簡介"
+  },
+  {
+    "ID": "SYS_GUIDE_PVE_GOLDEXP_01_DESC",
+    "Korean": "[최면 개구리의 전당] 컨텐츠에서는 골드와 음식 아이템을 입수하실 수 있습니다. 하루에 3회 입장하실 수 있으며, 추가 입장권을 에테르를 통해 구매하실 수도 있습니다. 또한 하루에 2회 추가 보상을 획득하실 수 있습니다. 단계에 따라 스테이지의 난이도가 상승하며, 획득할 수 있는 보상의 수량이 증가합니다.",
+    "English": "In the [Hypnotic Frog Hall] content, you can obtain Gold and Food items. You can enter up to 3 times per day, and additional entry tickets can also be purchased with Ether. Additionally, you can obtain bonus rewards up to 2 times per day. As the stage increases, the difficulty rises and the quantity of obtainable rewards increases.",
+    "Japanese": "[催眠カエルの殿堂]コンテンツではゴールドと食料アイテムを入手できる。1日3回入場でき、追加入場券をエーテルで購入することもできる。また1日2回追加報酬を獲得できる。段階に応じてステージの難易度が上昇し、獲得できる報酬の数量が増加する。",
+    "China_Simplified": "在[催眠青蛙殿堂]内容中，可以获得金币和食物道具。每天可入场3次，也可通过以太购买追加入场券。此外每天可获得2次追加奖励。随着阶段提升，关卡难度上升，可获得的奖励数量也会增加。",
+    "China_Traditional": "在[催眠青蛙殿堂]內容中，可以獲得金幣和食物道具。每天可入場3次，也可透過乙太購買追加入場券。此外每天可獲得2次追加獎勵。隨著階段提升，關卡難度上升，可獲得的獎勵數量也會增加。"
+  },
+  {
+    "ID": "SYS_GUIDE_PVE_GOLDEXP_02_NAME",
+    "Korean": "최면 개구리의 전당 전투",
+    "English": "Hypnotic Frog Hall Battle",
+    "Japanese": "催眠カエルの殿堂戦闘",
+    "China_Simplified": "催眠青蛙殿堂战斗",
+    "China_Traditional": "催眠青蛙殿堂戰鬥"
+  },
+  {
+    "ID": "SYS_GUIDE_PVE_GOLDEXP_02_DESC",
+    "Korean": "최면 개구리의 전당에 등장하는 적들은 일정 횟수 공격 후 후퇴합니다. 후퇴하기 전에 처치 시 추가 보상을 획득하실 수 있으며, [타락 조교 개구리] 소환 게이지가 증가합니다.\\n\\n[타락 조교 개구리] 소환 게이지가 100%가 되었을 시, 보스로 [타락 조교 개구리]를 만나실 수 있습니다. 해당 보스를 처치 시 추가 보상을 획득합니다.",
+    "English": "Enemies that appear in the Hypnotic Frog Hall retreat after a certain number of attacks. Defeating them before they retreat grants bonus rewards and increases the [Corrupted Frog Instructor] summon gauge.\\n\\nWhen the [Corrupted Frog Instructor] summon gauge reaches 100%, you can encounter [Corrupted Frog Instructor] as a boss. Defeating this boss grants bonus rewards.",
+    "Japanese": "催眠カエルの殿堂に登場する敵は一定回数攻撃後に退却する。退却前に撃破すると追加報酬を獲得でき、【堕落した調教師カエル】の召喚ゲージが増加する。\\n\\n【堕落した調教師カエル】の召喚ゲージが100%になった時、ボスとして【堕落した調教師カエル】と遭遇できる。このボスを撃破すると追加報酬を獲得する。",
+    "China_Simplified": "催眠青蛙殿堂中出现的敌人在攻击一定次数后撤退。在撤退前击败可获得追加奖励，且[堕落调教青蛙]召唤量表增加。\\n\\n[堕落调教青蛙]召唤量表达到100%时，可以作为首领遭遇[堕落调教青蛙]。击败该首领可获得追加奖励。",
+    "China_Traditional": "催眠青蛙殿堂中出現的敵人在攻擊一定次數後撤退。在撤退前擊敗可獲得追加獎勵，且[墮落調教青蛙]召喚量表增加。\\n\\n[墮落調教青蛙]召喚量表達到100%時，可以作為首領遭遇[墮落調教青蛙]。擊敗該首領可獲得追加獎勵。"
+  },
+  {
+    "ID": "SYS_GUIDE_PVE_FARMING_01_NAME",
+    "Korean": "방주 습격 개요",
+    "English": "Ark Raid Overview",
+    "Japanese": "アーク強襲",
+    "China_Simplified": "方舟强袭概要",
+    "China_Traditional": "方舟強襲簡介"
+  },
+  {
+    "ID": "SYS_GUIDE_PVE_FARMING_01_DESC",
+    "Korean": "[방주 습격] 컨텐츠에서는 각 방주 별로 다른 보상을 입수하실 수 있습니다. 하루에 3회 입장하실 수 있으며, 추가 입장권을 에테르를 통해 구매하실 수도 있습니다. 또한 하루에 2회 추가 보상을 획득하실 수 있습니다. 단계에 따라 스테이지의 난이도가 상승하며, 획득할 수 있는 보상의 수량이 증가합니다.",
+    "English": "In the [Ark Raid] content, you can obtain different rewards from each Ark. You can enter up to 3 times per day, and additional entry tickets can also be purchased with Ether. Additionally, you can obtain bonus rewards up to 2 times per day. As the stage increases, the difficulty rises and the quantity of obtainable rewards increases.",
+    "Japanese": "[アーク強襲]コンテンツでは各アーク別に異なる報酬を入手できる。1日3回入場でき、追加入場券をエーテルで購入することもできる。また1日2回追加報酬を獲得できる。段階に応じてステージの難易度が上昇し、獲得できる報酬の数量が増加する。",
+    "China_Simplified": "在[方舟强袭]内容中，可以从各方舟获得不同的奖励。每天可入场3次，也可通过以太购买追加入场券。此外每天可获得2次追加奖励。随着阶段提升，关卡难度上升，可获得的奖励数量也会增加。",
+    "China_Traditional": "在[方舟強襲]內容中，可以從各方舟獲得不同的獎勵。每天可入場3次，也可透過乙太購買追加入場券。此外每天可獲得2次追加獎勵。隨著階段提升，關卡難度上升，可獲得的獎勵數量也會增加。"
+  },
+  {
+    "ID": "SYS_GUIDE_PVE_FARMING_02_NAME",
+    "Korean": "각 방주 별 보상",
+    "English": "Rewards by Ark",
+    "Japanese": "各アーク別報酬",
+    "China_Simplified": "各方舟奖励",
+    "China_Traditional": "各方舟獎勵"
+  },
+  {
+    "ID": "SYS_GUIDE_PVE_FARMING_02_DESC",
+    "Korean": "[방주 습격] 은 아래의 방주들로 이루어져 있습니다.\\n[대장장이의 방주] : 강화 도구를 입수하실 수 있습니다.\\n[애정의 방주] : 애정도 선물을 입수하실 수 있습니다.\\n[보석의 방주] : 장비 보석을 입수하실 수 있습니다.\\n[기술의 방주] : 스킬 교본을 입수하실 수 있습니다.\\n각 방주들은 진행 단계를 공유합니다.",
+    "English": "[Ark Raid] consists of the following Arks.\\n[Blacksmith's Ark] : You can obtain Hammers.\\n[Affinity Ark] : You can obtain Affinity Gifts.\\n[Gem Ark] : You can obtain Gear Gems.\\n[Skill Ark] : You can obtain Skill Manuals.\\nAll Arks share the same progress stage.",
+    "Japanese": "[アーク強襲]は以下のアークで構成されている。\\n[鍛冶師のアーク]：強化ハンマーを入手できる。\\n[愛情のアーク]：親密度ギフトを入手できる。\\n[宝石のアーク]：装備宝石を入手できる。\\n[技術のアーク]：スキル教本を入手できる。\\n各アークは進行段階を共有する。",
+    "China_Simplified": "[方舟强袭]由以下方舟组成。\\n[铁匠的方舟]：可以获得强化道具。\\n[爱情的方舟]：可以获得亲密度礼物。\\n[宝石的方舟]：可以获得装备宝石。\\n[技术的方舟]：可以获得技能教材。\\n各方舟共享进行阶段。",
+    "China_Traditional": "[方舟強襲]由以下方舟組成。\\n[鐵匠的方舟]：可以獲得強化道具。\\n[愛情的方舟]：可以獲得親密度禮物。\\n[寶石的方舟]：可以獲得裝備寶石。\\n[技術的方舟]：可以獲得技能教材。\\n各方舟共享進行階段。"
+  },
+  {
+    "ID": "SYS_CONTENS_LOCK_PVE_FARMING_DUNGEON",
+    "Korean": "방주 습격",
+    "English": "Ark Raid",
+    "Japanese": "アーク強襲",
+    "China_Simplified": "方舟强袭",
+    "China_Traditional": "方舟強襲"
+  },
+  {
+    "ID": "SYS_CHARACTER_LEVELUP_BONUS_DESC",
+    "Korean": "20/40/60/80/100 레벨 달성 시 마다 보너스 능력치를 부여받습니다.",
+    "English": "Bonus stats are granted each time Level 20/40/60/80/100 is reached.",
+    "Japanese": "レベル20/40/60/80/100を達成するたびにボーナスステータスが付与される。",
+    "China_Simplified": "每达到20/40/60/80/100级时，获得奖励属性。",
+    "China_Traditional": "每達到20/40/60/80/100級時，獲得獎勵屬性。"
+  },
+  {
+    "ID": "SYS_FARMING_DUNGEON_REWARD_SELECT",
+    "Korean": "보상 선택",
+    "English": "Select Reward",
+    "Japanese": "報酬選択",
+    "China_Simplified": "选择奖励",
+    "China_Traditional": "選擇獎勵"
   }
 ]

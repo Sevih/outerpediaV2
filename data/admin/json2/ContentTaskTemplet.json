@@ -5103,6 +5103,13 @@
     "_unknown_0": "0"
   },
   {
+    "ID": "89225",
+    "ContentTaskType": "CTT_EVENT_BOSS_COMPLETE",
+    "ConditionValue": "25",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
     "ID": "910001",
     "ContentTaskType": "CTT_RETURN_USER_MISSION_DAY_COMPLETE",
     "ConditionValue": "1",
@@ -6688,6 +6695,13 @@
     "ID": "99032",
     "ContentTaskType": "CTT_PACKAGE_BUY_COUNT",
     "ConditionValue": "91032",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "99033",
+    "ContentTaskType": "CTT_PACKAGE_BUY_COUNT",
+    "ConditionValue": "91033",
     "ConditionValue2": "0",
     "_unknown_0": "0"
   },
@@ -8869,6 +8883,20 @@
     "_unknown_0": "0"
   },
   {
+    "ID": "1000002",
+    "ContentTaskType": "CTT_RECRUIT_COUNT",
+    "ConditionValue": "2",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "312700003",
+    "ContentTaskType": "CTT_CHARACTER_OBTAIN",
+    "ConditionValue": "2700003",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
     "ID": "280600011",
     "ContentTaskType": "CTT_DUNGEON_FIRST_CLEAR",
     "ConditionValue": "80600011",
@@ -8970,6 +8998,62 @@
     "ID": "93001",
     "ContentTaskType": "CTT_PVP_REALTIME_START",
     "ConditionValue": "0",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "76000",
+    "ContentTaskType": "CTT_DMGOLD_CLEAR",
+    "ConditionValue": "0",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "77000",
+    "ContentTaskType": "CTT_DMFARMING_CLEAR",
+    "ConditionValue": "0",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "281200013",
+    "ContentTaskType": "CTT_DUNGEON_FIRST_CLEAR",
+    "ConditionValue": "81200013",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "600630062",
+    "ContentTaskType": "CTT_BUY_PRODUCT_PID",
+    "ConditionValue": "630062",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "200100209",
+    "ContentTaskType": "CTT_DUNGEON_CLEAR",
+    "ConditionValue": "100209",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "200120205",
+    "ContentTaskType": "CTT_DUNGEON_CLEAR",
+    "ConditionValue": "120205",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "200121103",
+    "ContentTaskType": "CTT_DUNGEON_CLEAR",
+    "ConditionValue": "121103",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "200121508",
+    "ContentTaskType": "CTT_DUNGEON_CLEAR",
+    "ConditionValue": "121508",
     "ConditionValue2": "0",
     "_unknown_0": "0"
   }

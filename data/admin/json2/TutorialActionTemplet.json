@@ -2763,7 +2763,7 @@
     "ID": "215",
     "Group": "91",
     "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_EVOLUTION_002",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_ENTER_001",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "3",
@@ -2789,47 +2789,38 @@
   {
     "ID": "217",
     "Group": "92",
-    "NoticeType": "FOCUS_BOX",
-    "FocusRootUI": "CUILobby",
-    "FocusTargetUI": "LobbyMenu,StageMenu,Hero",
-    "FocusPosY": "5",
-    "FocusSizeX": "50",
-    "FocusSizeY": "50",
+    "NoticeType": "TALK_BOX",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_ENTER_002",
+    "TalkNameID": "2000009_Name",
+    "TalkImage": "2000009",
+    "TalkBoxAnchor": "3",
     "FocusFullTouch": "False",
-    "IsButton": "True",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "True"
+    "IsButton": "False",
+    "DelayTime": "1",
+    "UseSkipBtn": "False"
   },
   {
     "ID": "218",
     "Group": "92",
-    "NoticeType": "FOCUS_BOX",
-    "FocusBoxType": "1",
-    "FocusRootUI": "CUICharacterMainPage",
-    "FocusTargetUI": "2000001",
-    "FocusSizeX": "30",
-    "FocusSizeY": "30",
+    "NoticeType": "TALK_BOX",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_ENTER_003",
+    "TalkNameID": "2000009_Name",
+    "TalkImage": "2000009",
+    "TalkBoxAnchor": "3",
     "FocusFullTouch": "False",
-    "IsButton": "True",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "True"
+    "IsButton": "False",
+    "DelayTime": "1",
+    "UseSkipBtn": "False"
   },
   {
     "ID": "219",
     "Group": "92",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_EVOLUTION_005",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "4",
-    "FocusBoxType": "1",
-    "FocusRootUI": "CUICharacterInfo",
-    "FocusTargetUI": "Evolution_Icon",
-    "FocusSizeX": "10",
-    "FocusSizeY": "10",
-    "FocusFullTouch": "True",
-    "IsButton": "False",
-    "DelayTime": "1",
+    "NoticeType": "FOCUS_BOX",
+    "FocusRootUI": "CUILobby",
+    "FocusTargetUI": "LobbyMenu,StageMenu,Adventure",
+    "FocusFullTouch": "False",
+    "IsButton": "True",
+    "DelayTime": "0.5",
     "UseSkipBtn": "True"
   },
   {
@@ -2837,10 +2828,8 @@
     "Group": "92",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
-    "FocusRootUI": "CUICharacterInfo",
-    "FocusTargetUI": "Menu_Evolution,Tab_Normal",
-    "FocusSizeX": "30",
-    "FocusSizeY": "30",
+    "FocusRootUI": "CUIAdventurePage",
+    "FocusTargetUI": "Adventure_Menu_Add,Challenge",
     "FocusFullTouch": "False",
     "IsButton": "True",
     "DelayTime": "0.5",
@@ -2849,64 +2838,73 @@
   {
     "ID": "221",
     "Group": "92",
-    "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_EVOLUTION_008",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "4",
+    "NoticeType": "FOCUS_BOX",
+    "FocusBoxType": "1",
+    "FocusRootUI": "CUIPVE",
+    "FocusTargetUI": "Root,Farming",
     "FocusFullTouch": "False",
-    "IsButton": "False",
-    "DelayTime": "0.8",
+    "IsButton": "True",
+    "DelayTime": "0.5",
     "UseSkipBtn": "True"
   },
   {
     "ID": "222",
     "Group": "92",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_EVOLUTION_017",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "5",
-    "FocusBoxType": "1",
-    "FocusRootUI": "CUICharacterEvolution",
-    "FocusTargetUI": "Evolution_Info,Info",
-    "FocusFullTouch": "True",
-    "IsButton": "False",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "223",
-    "Group": "92",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_EVOLUTION_009",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "3",
-    "FocusBoxType": "1",
-    "FocusRootUI": "CUICharacterEvolution",
-    "FocusTargetUI": "Evolution_Info,Material",
-    "FocusSizeY": "30",
-    "FocusFullTouch": "True",
-    "IsButton": "False",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "224",
-    "Group": "92",
     "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_EVOLUTION_014",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_001",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "4",
     "FocusFullTouch": "False",
     "IsButton": "False",
-    "DelayTime": "0.5",
+    "DelayTime": "1",
+    "UseSkipBtn": "False"
+  },
+  {
+    "ID": "223",
+    "Group": "92",
+    "NoticeType": "FOCUS_TALK_BOX",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_002",
+    "TalkNameID": "2000009_Name",
+    "TalkImage": "2000009",
+    "TalkBoxAnchor": "4",
+    "FocusBoxType": "1",
+    "FocusRootUI": "CUIChallengeWindow",
+    "FocusTargetUI": "ToggleGroup",
+    "FocusFullTouch": "True",
+    "IsButton": "False",
     "UseSkipBtn": "True"
   },
   {
+    "ID": "224",
+    "Group": "92",
+    "NoticeType": "FOCUS_TALK_BOX",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_003",
+    "TalkNameID": "2000009_Name",
+    "TalkImage": "2000009",
+    "TalkBoxAnchor": "4",
+    "FocusBoxType": "1",
+    "FocusRootUI": "CUITopMenu",
+    "FocusTargetUI": "Tiket_Farming",
+    "FocusFullTouch": "True",
+    "IsButton": "False",
+    "DelayTime": "0.5",
+    "UseSkipBtn": "False"
+  },
+  {
     "ID": "225",
+    "Group": "92",
+    "NoticeType": "TALK_BOX",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_004",
+    "TalkNameID": "2000009_Name",
+    "TalkImage": "2000009",
+    "TalkBoxAnchor": "4",
+    "FocusFullTouch": "False",
+    "IsButton": "False",
+    "UseSkipBtn": "True"
+  },
+  {
+    "ID": "226",
     "Group": "101",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_CLEAR_001",
@@ -2919,7 +2917,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "226",
+    "ID": "227",
     "Group": "101",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_CLEAR_002",
@@ -2931,7 +2929,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "227",
+    "ID": "228",
     "Group": "101",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -2945,7 +2943,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "228",
+    "ID": "229",
     "Group": "102",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUILobby",
@@ -2959,7 +2957,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "229",
+    "ID": "230",
     "Group": "102",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -2973,7 +2971,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "230",
+    "ID": "231",
     "Group": "102",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_TALISMAN_001",
@@ -2986,7 +2984,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "231",
+    "ID": "232",
     "Group": "102",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -2998,7 +2996,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "232",
+    "ID": "233",
     "Group": "102",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_TALISMAN_002",
@@ -3011,7 +3009,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "233",
+    "ID": "234",
     "Group": "102",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -3025,7 +3023,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "234",
+    "ID": "235",
     "Group": "102",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_TALISMAN_004",
@@ -3038,7 +3036,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "235",
+    "ID": "236",
     "Group": "102",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -3052,7 +3050,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "236",
+    "ID": "237",
     "Group": "102",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTOTIAL_TALISMAN_005",
@@ -3069,7 +3067,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "237",
+    "ID": "238",
     "Group": "102",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_TALISMAN_006",
@@ -3081,7 +3079,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "238",
+    "ID": "239",
     "Group": "201",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_NEW_DIFFICULT_001",
@@ -3094,7 +3092,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "239",
+    "ID": "240",
     "Group": "201",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_NEW_DIFFICULT_002",
@@ -3107,7 +3105,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "240",
+    "ID": "241",
     "Group": "201",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_NEW_DIFFICULT_003",
@@ -3119,7 +3117,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "241",
+    "ID": "242",
     "Group": "201",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_NEW_DIFFICULT_004",
@@ -3131,7 +3129,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "242",
+    "ID": "243",
     "Group": "201",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_NEW_DIFFICULT_005",
@@ -3143,7 +3141,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "243",
+    "ID": "244",
     "Group": "201",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_NEW_DIFFICULT_006",
@@ -3155,7 +3153,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "244",
+    "ID": "245",
     "Group": "201",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_NEW_DIFFICULT_007",
@@ -3168,7 +3166,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "245",
+    "ID": "246",
     "Group": "201",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -3180,7 +3178,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "246",
+    "ID": "247",
     "Group": "202",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2NORMAL_OPEN_001",
@@ -3193,7 +3191,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "247",
+    "ID": "248",
     "Group": "202",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2NORMAL_OPEN_002",
@@ -3206,7 +3204,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "248",
+    "ID": "249",
     "Group": "202",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2NORMAL_OPEN_003",
@@ -3218,7 +3216,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "249",
+    "ID": "250",
     "Group": "202",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2NORMAL_OPEN_004",
@@ -3230,7 +3228,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "250",
+    "ID": "251",
     "Group": "202",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -3242,7 +3240,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "251",
+    "ID": "252",
     "Group": "203",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2HARD_OPEN_001",
@@ -3255,7 +3253,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "252",
+    "ID": "253",
     "Group": "203",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2HARD_OPEN_002",
@@ -3268,7 +3266,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "253",
+    "ID": "254",
     "Group": "203",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2HARD_OPEN_003",
@@ -3280,7 +3278,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "254",
+    "ID": "255",
     "Group": "203",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2HARD_OPEN_004",
@@ -3292,7 +3290,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "255",
+    "ID": "256",
     "Group": "203",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2HARD_OPEN_005",
@@ -3304,7 +3302,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "256",
+    "ID": "257",
     "Group": "203",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2HARD_OPEN_006",
@@ -3316,7 +3314,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "257",
+    "ID": "258",
     "Group": "203",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -3328,7 +3326,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "258",
+    "ID": "259",
     "Group": "204",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2P2HARD_OPEN_001",
@@ -3341,7 +3339,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "259",
+    "ID": "260",
     "Group": "204",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2P2HARD_OPEN_002",
@@ -3354,7 +3352,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "260",
+    "ID": "261",
     "Group": "204",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2P2HARD_OPEN_003",
@@ -3366,7 +3364,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "261",
+    "ID": "262",
     "Group": "204",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2P2HARD_OPEN_004",
@@ -3378,7 +3376,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "262",
+    "ID": "263",
     "Group": "204",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2P2HARD_OPEN_005",
@@ -3390,7 +3388,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "263",
+    "ID": "264",
     "Group": "204",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S2P2HARD_OPEN_006",
@@ -3402,7 +3400,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "264",
+    "ID": "265",
     "Group": "204",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -3414,7 +3412,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "265",
+    "ID": "266",
     "Group": "205",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3NORMAL_OPEN_001",
@@ -3427,7 +3425,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "266",
+    "ID": "267",
     "Group": "205",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3NORMAL_OPEN_002",
@@ -3440,7 +3438,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "267",
+    "ID": "268",
     "Group": "205",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3NORMAL_OPEN_003",
@@ -3452,7 +3450,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "268",
+    "ID": "269",
     "Group": "205",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3NORMAL_OPEN_004",
@@ -3464,7 +3462,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "269",
+    "ID": "270",
     "Group": "205",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3NORMAL_OPEN_005",
@@ -3476,7 +3474,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "270",
+    "ID": "271",
     "Group": "205",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -3488,7 +3486,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "271",
+    "ID": "272",
     "Group": "206",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3HARD_OPEN_001",
@@ -3501,7 +3499,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "272",
+    "ID": "273",
     "Group": "206",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3HARD_OPEN_002",
@@ -3514,7 +3512,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "273",
+    "ID": "274",
     "Group": "206",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3HARD_OPEN_003",
@@ -3526,7 +3524,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "274",
+    "ID": "275",
     "Group": "206",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3HARD_OPEN_004",
@@ -3538,7 +3536,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "275",
+    "ID": "276",
     "Group": "206",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S3HARD_OPEN_005",
@@ -3550,7 +3548,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "276",
+    "ID": "277",
     "Group": "206",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -3562,7 +3560,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "277",
+    "ID": "278",
     "Group": "207",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4NORMAL_OPEN_001",
@@ -3575,7 +3573,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "278",
+    "ID": "279",
     "Group": "207",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4NORMAL_OPEN_002",
@@ -3588,7 +3586,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "279",
+    "ID": "280",
     "Group": "207",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4NORMAL_OPEN_003",
@@ -3600,7 +3598,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "280",
+    "ID": "281",
     "Group": "207",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4NORMAL_OPEN_004",
@@ -3612,7 +3610,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "281",
+    "ID": "282",
     "Group": "207",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4NORMAL_OPEN_005",
@@ -3624,7 +3622,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "282",
+    "ID": "283",
     "Group": "207",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4NORMAL_OPEN_006",
@@ -3636,7 +3634,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "283",
+    "ID": "284",
     "Group": "207",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4NORMAL_OPEN_007",
@@ -3648,7 +3646,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "284",
+    "ID": "285",
     "Group": "207",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -3660,7 +3658,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "285",
+    "ID": "286",
     "Group": "208",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4HARD_OPEN_001",
@@ -3673,7 +3671,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "286",
+    "ID": "287",
     "Group": "208",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4HARD_OPEN_002",
@@ -3686,7 +3684,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "287",
+    "ID": "288",
     "Group": "208",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4HARD_OPEN_003",
@@ -3698,7 +3696,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "288",
+    "ID": "289",
     "Group": "208",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4HARD_OPEN_004",
@@ -3710,7 +3708,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "289",
+    "ID": "290",
     "Group": "208",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4HARD_OPEN_005",
@@ -3722,7 +3720,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "290",
+    "ID": "291",
     "Group": "208",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_S4HARD_OPEN_006",
@@ -3734,7 +3732,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "291",
+    "ID": "292",
     "Group": "208",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -3746,7 +3744,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "292",
+    "ID": "293",
     "Group": "301",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRANSCENDENT_001",
@@ -3759,7 +3757,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "293",
+    "ID": "294",
     "Group": "301",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRANSCENDENT_002",
@@ -3771,7 +3769,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "294",
+    "ID": "295",
     "Group": "301",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRANSCENDENT_004",
@@ -3787,7 +3785,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "295",
+    "ID": "296",
     "Group": "301",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TRANSCENDENT_005",
@@ -3806,7 +3804,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "296",
+    "ID": "297",
     "Group": "301",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TRANSCENDENT_006",
@@ -3822,7 +3820,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "297",
+    "ID": "298",
     "Group": "301",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRANSCENDENT_010",
@@ -3835,7 +3833,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "298",
+    "ID": "299",
     "Group": "302",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SKILL_ENCHANT_001",
@@ -3848,7 +3846,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "299",
+    "ID": "300",
     "Group": "302",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_SKILL_ENCHANT_002",
@@ -3867,7 +3865,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "300",
+    "ID": "301",
     "Group": "302",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -3882,7 +3880,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "301",
+    "ID": "302",
     "Group": "302",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -3894,7 +3892,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "302",
+    "ID": "303",
     "Group": "302",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SKILL_ENCHANT_004",
@@ -3907,7 +3905,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "303",
+    "ID": "304",
     "Group": "302",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SKILL_ENCHANT_006",
@@ -3919,7 +3917,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "304",
+    "ID": "305",
     "Group": "302",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SKILL_ENCHANT_007",
@@ -3931,7 +3929,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "305",
+    "ID": "306",
     "Group": "302",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_SKILL_ENCHANT_008",
@@ -3949,7 +3947,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "306",
+    "ID": "307",
     "Group": "303",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SMELTING_004",
@@ -3962,7 +3960,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "307",
+    "ID": "308",
     "Group": "303",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_SMELTING_006",
@@ -3980,7 +3978,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "308",
+    "ID": "309",
     "Group": "303",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SMELTING_007",
@@ -3992,7 +3990,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "309",
+    "ID": "310",
     "Group": "303",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_SMELTING_012",
@@ -4009,7 +4007,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "310",
+    "ID": "311",
     "Group": "303",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SMELTING_013",
@@ -4021,7 +4019,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "311",
+    "ID": "312",
     "Group": "303",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -4032,7 +4030,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "312",
+    "ID": "313",
     "Group": "304",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ITEM_BREAKLIMIT_01",
@@ -4045,7 +4043,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "313",
+    "ID": "314",
     "Group": "304",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ITEM_BREAKLIMIT_02",
@@ -4064,7 +4062,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "314",
+    "ID": "315",
     "Group": "304",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ITEM_BREAKLIMIT_03",
@@ -4076,7 +4074,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "315",
+    "ID": "316",
     "Group": "304",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ITEM_BREAKLIMIT_04",
@@ -4088,7 +4086,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "316",
+    "ID": "317",
     "Group": "304",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ITEM_BREAKLIMIT_05",
@@ -4101,7 +4099,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "317",
+    "ID": "318",
     "Group": "304",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ITEM_BREAKLIMIT_06",
@@ -4113,7 +4111,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "318",
+    "ID": "319",
     "Group": "304",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ITEM_BREAKLIMIT_07",
@@ -4125,7 +4123,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "319",
+    "ID": "320",
     "Group": "304",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -4136,10 +4134,10 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "320",
+    "ID": "321",
     "Group": "311",
     "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_GOLD_DUNGEON_001",
+    "TextID": "TUTORIAL_GOLD_EXP_DUNGEON_001",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "4",
@@ -4149,101 +4147,62 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "321",
+    "ID": "322",
     "Group": "311",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_GOLD_DUNGEON_002",
+    "NoticeType": "TALK_BOX",
+    "TextID": "TUTORIAL_GOLD_EXP_DUNGEON_002",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "5",
     "FocusBoxType": "1",
-    "FocusRootUI": "CUIPVE",
-    "FocusTargetUI": "Gold",
-    "FocusPosX": "115",
-    "FocusSizeX": "260",
-    "FocusSizeY": "20",
-    "FocusFullTouch": "True",
+    "FocusFullTouch": "False",
     "IsButton": "False",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "322",
-    "Group": "311",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_GOLD_DUNGEON_003",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "4",
-    "FocusBoxType": "1",
-    "FocusRootUI": "CUIPVE",
-    "FocusTargetUI": "Gold",
-    "FocusFullTouch": "True",
-    "IsButton": "False",
-    "DelayTime": "0.5",
     "UseSkipBtn": "True"
   },
   {
     "ID": "323",
     "Group": "311",
     "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_GOLD_DUNGEON_004",
+    "TextID": "TUTORIAL_GOLD_EXP_DUNGEON_003",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "4",
     "FocusBoxType": "1",
     "FocusRootUI": "CUIPVE",
-    "FocusTargetUI": "Text_Gold",
-    "FocusPosX": "-10",
-    "FocusFullTouch": "True",
-    "IsButton": "False",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "324",
-    "Group": "311",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_GOLD_DUNGEON_005",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "5",
-    "FocusBoxType": "1",
-    "FocusRootUI": "CUIPVE",
-    "FocusTargetUI": "Exp",
+    "FocusTargetUI": "Gold_Exp",
     "FocusFullTouch": "True",
     "IsButton": "False",
     "DelayTime": "0.5",
     "UseSkipBtn": "True"
   },
   {
-    "ID": "325",
+    "ID": "324",
     "Group": "311",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_GOLD_DUNGEON_006",
+    "NoticeType": "TALK_BOX",
+    "TextID": "TUTORIAL_GOLD_EXP_DUNGEON_004",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
-    "TalkBoxAnchor": "5",
+    "TalkBoxAnchor": "4",
     "FocusBoxType": "1",
-    "FocusRootUI": "CUIPVE",
-    "FocusTargetUI": "Text_Exp",
     "FocusPosX": "-10",
-    "FocusFullTouch": "True",
+    "FocusFullTouch": "False",
     "IsButton": "False",
     "UseSkipBtn": "True"
   },
   {
-    "ID": "326",
+    "ID": "325",
     "Group": "311",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
     "FocusRootUI": "CUIPVE",
-    "FocusTargetUI": "Exp",
+    "FocusTargetUI": "Gold_Exp",
     "FocusFullTouch": "False",
     "IsButton": "True",
     "DelayTime": "0.5",
     "UseSkipBtn": "True"
   },
   {
-    "ID": "327",
+    "ID": "326",
     "Group": "311",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -4255,10 +4214,10 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "328",
+    "ID": "327",
     "Group": "311",
     "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_GOLD_DUNGEON_007",
+    "TextID": "TUTORIAL_GOLD_EXP_DUNGEON_005",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "2",
@@ -4272,7 +4231,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "329",
+    "ID": "328",
     "Group": "311",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -4284,10 +4243,10 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "330",
+    "ID": "329",
     "Group": "311",
     "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_GOLD_DUNGEON_008",
+    "TextID": "TUTORIAL_GOLD_EXP_DUNGEON_006",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "4",
@@ -4300,10 +4259,10 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "331",
+    "ID": "330",
     "Group": "312",
     "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_DAYOFWEEK_001",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_001",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "4",
@@ -4313,22 +4272,41 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "332",
+    "ID": "331",
     "Group": "312",
-    "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_DAYOFWEEK_003",
+    "NoticeType": "FOCUS_TALK_BOX",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_002",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "4",
-    "FocusFullTouch": "False",
+    "FocusBoxType": "1",
+    "FocusRootUI": "CUIChallengeWindow",
+    "FocusTargetUI": "ToggleGroup",
+    "FocusFullTouch": "True",
     "IsButton": "False",
     "UseSkipBtn": "True"
+  },
+  {
+    "ID": "332",
+    "Group": "312",
+    "NoticeType": "FOCUS_TALK_BOX",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_003",
+    "TalkNameID": "2000009_Name",
+    "TalkImage": "2000009",
+    "TalkBoxAnchor": "4",
+    "FocusBoxType": "1",
+    "FocusRootUI": "CUITopMenu",
+    "FocusTargetUI": "Tiket_Farming",
+    "FocusFullTouch": "True",
+    "IsButton": "False",
+    "DelayTime": "0.5",
+    "UseSkipBtn": "False"
   },
   {
     "ID": "333",
     "Group": "312",
     "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_DAYOFWEEK_004",
+    "TextID": "TUTORIAL_FARMING_DUNGEON_004",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "4",
@@ -4338,50 +4316,6 @@
   },
   {
     "ID": "334",
-    "Group": "312",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_DAYOFWEEK_006",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "5",
-    "FocusBoxType": "1",
-    "FocusRootUI": "CUIChallengeWindow",
-    "FocusTargetUI": "DungeonInfo",
-    "FocusFullTouch": "True",
-    "IsButton": "False",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "335",
-    "Group": "312",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_DAYOFWEEK_008",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "4",
-    "FocusBoxType": "1",
-    "FocusRootUI": "CUITopMenu",
-    "FocusTargetUI": "Tiket_Week",
-    "FocusFullTouch": "True",
-    "IsButton": "False",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "False"
-  },
-  {
-    "ID": "336",
-    "Group": "312",
-    "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_DAYOFWEEK_009",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "4",
-    "FocusFullTouch": "False",
-    "IsButton": "False",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "337",
     "Group": "313",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_ARMOR_001",
@@ -4394,7 +4328,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "338",
+    "ID": "335",
     "Group": "313",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_ARMOR_002",
@@ -4406,7 +4340,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "339",
+    "ID": "336",
     "Group": "313",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -4420,7 +4354,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "340",
+    "ID": "337",
     "Group": "313",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_ARMOR_004",
@@ -4432,7 +4366,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "341",
+    "ID": "338",
     "Group": "313",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_ARMOR_005",
@@ -4444,7 +4378,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "342",
+    "ID": "339",
     "Group": "313",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_RAID_ARMOR_007",
@@ -4462,7 +4396,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "343",
+    "ID": "340",
     "Group": "313",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -4474,7 +4408,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "344",
+    "ID": "341",
     "Group": "313",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_ARMOR_008",
@@ -4487,7 +4421,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "345",
+    "ID": "342",
     "Group": "313",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_RAID_ARMOR_009",
@@ -4507,7 +4441,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "346",
+    "ID": "343",
     "Group": "313",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_ARMOR_012",
@@ -4520,7 +4454,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "347",
+    "ID": "344",
     "Group": "314",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_003",
@@ -4533,7 +4467,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "348",
+    "ID": "345",
     "Group": "314",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_004",
@@ -4545,7 +4479,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "349",
+    "ID": "346",
     "Group": "314",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TOWER_007",
@@ -4563,7 +4497,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "350",
+    "ID": "347",
     "Group": "314",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_008",
@@ -4576,7 +4510,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "351",
+    "ID": "348",
     "Group": "314",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_009",
@@ -4588,7 +4522,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "352",
+    "ID": "349",
     "Group": "314",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_010",
@@ -4601,7 +4535,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "353",
+    "ID": "350",
     "Group": "314",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TOWER_011",
@@ -4619,7 +4553,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "354",
+    "ID": "351",
     "Group": "314",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_012",
@@ -4632,7 +4566,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "355",
+    "ID": "352",
     "Group": "315",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_013",
@@ -4645,7 +4579,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "356",
+    "ID": "353",
     "Group": "315",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_014",
@@ -4657,7 +4591,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "357",
+    "ID": "354",
     "Group": "315",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -4671,7 +4605,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "358",
+    "ID": "355",
     "Group": "315",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TOWER_015",
@@ -4689,7 +4623,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "359",
+    "ID": "356",
     "Group": "316",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SIDESTORY_001",
@@ -4702,7 +4636,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "360",
+    "ID": "357",
     "Group": "316",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SIDESTORY_002",
@@ -4714,7 +4648,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "361",
+    "ID": "358",
     "Group": "316",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SIDESTORY_003",
@@ -4728,7 +4662,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "362",
+    "ID": "359",
     "Group": "316",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -4741,7 +4675,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "363",
+    "ID": "360",
     "Group": "316",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -4755,7 +4689,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "364",
+    "ID": "361",
     "Group": "316",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_SIDESTORY_007",
@@ -4773,7 +4707,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "365",
+    "ID": "362",
     "Group": "316",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SIDESTORY_008",
@@ -4785,7 +4719,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "366",
+    "ID": "363",
     "Group": "317",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_WEAPON_001",
@@ -4798,7 +4732,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "367",
+    "ID": "364",
     "Group": "317",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_WEAPON_002",
@@ -4810,7 +4744,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "368",
+    "ID": "365",
     "Group": "317",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_WEAPON_003",
@@ -4822,7 +4756,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "369",
+    "ID": "366",
     "Group": "317",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_WEAPON_005",
@@ -4834,7 +4768,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "370",
+    "ID": "367",
     "Group": "317",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -4848,7 +4782,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "371",
+    "ID": "368",
     "Group": "317",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_WEAPON_007",
@@ -4861,7 +4795,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "372",
+    "ID": "369",
     "Group": "317",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RAID_WEAPON_008",
@@ -4873,7 +4807,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "373",
+    "ID": "370",
     "Group": "318",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_001",
@@ -4886,7 +4820,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "374",
+    "ID": "371",
     "Group": "318",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_002",
@@ -4904,7 +4838,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "375",
+    "ID": "372",
     "Group": "318",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_003",
@@ -4922,7 +4856,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "376",
+    "ID": "373",
     "Group": "318",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_007",
@@ -4940,7 +4874,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "377",
+    "ID": "374",
     "Group": "318",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_008",
@@ -4953,7 +4887,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "378",
+    "ID": "375",
     "Group": "318",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_009",
@@ -4971,7 +4905,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "379",
+    "ID": "376",
     "Group": "318",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_010",
@@ -4983,7 +4917,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "380",
+    "ID": "377",
     "Group": "318",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_011",
@@ -4996,7 +4930,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "381",
+    "ID": "378",
     "Group": "318",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_013",
@@ -5014,7 +4948,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "382",
+    "ID": "379",
     "Group": "318",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_014",
@@ -5026,7 +4960,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "383",
+    "ID": "380",
     "Group": "318",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_017",
@@ -5038,7 +4972,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "384",
+    "ID": "381",
     "Group": "318",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5050,7 +4984,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "385",
+    "ID": "382",
     "Group": "318",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_015",
@@ -5063,7 +4997,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "386",
+    "ID": "383",
     "Group": "318",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_016",
@@ -5075,7 +5009,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "387",
+    "ID": "384",
     "Group": "318",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5087,7 +5021,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "388",
+    "ID": "385",
     "Group": "319",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_LOOP_001",
@@ -5099,7 +5033,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "389",
+    "ID": "386",
     "Group": "319",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_LOOP_002",
@@ -5110,7 +5044,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "390",
+    "ID": "387",
     "Group": "319",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_LOOP_003",
@@ -5121,7 +5055,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "391",
+    "ID": "388",
     "Group": "319",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_LOOP_004",
@@ -5132,7 +5066,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "392",
+    "ID": "389",
     "Group": "319",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_LOOP_005",
@@ -5147,7 +5081,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "393",
+    "ID": "390",
     "Group": "319",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_LOOP_006",
@@ -5159,7 +5093,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "394",
+    "ID": "391",
     "Group": "319",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_REMAINS_LOOP_007",
@@ -5171,7 +5105,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "395",
+    "ID": "392",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_001",
@@ -5184,7 +5118,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "396",
+    "ID": "393",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_002",
@@ -5196,7 +5130,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "397",
+    "ID": "394",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_003",
@@ -5208,7 +5142,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "398",
+    "ID": "395",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_004",
@@ -5220,7 +5154,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "399",
+    "ID": "396",
     "Group": "321",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTOTIAL_PVP_005",
@@ -5238,7 +5172,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "400",
+    "ID": "397",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_007",
@@ -5253,7 +5187,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "401",
+    "ID": "398",
     "Group": "321",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTOTIAL_PVP_008",
@@ -5271,7 +5205,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "402",
+    "ID": "399",
     "Group": "321",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5283,7 +5217,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "403",
+    "ID": "400",
     "Group": "321",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5295,7 +5229,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "404",
+    "ID": "401",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_010",
@@ -5308,7 +5242,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "405",
+    "ID": "402",
     "Group": "321",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5322,7 +5256,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "406",
+    "ID": "403",
     "Group": "321",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5337,7 +5271,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "407",
+    "ID": "404",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_012",
@@ -5351,7 +5285,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "408",
+    "ID": "405",
     "Group": "321",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTOTIAL_PVP_019",
@@ -5369,7 +5303,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "409",
+    "ID": "406",
     "Group": "321",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTOTIAL_PVP_020",
@@ -5385,7 +5319,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "410",
+    "ID": "407",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_024",
@@ -5398,7 +5332,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "411",
+    "ID": "408",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_025",
@@ -5410,7 +5344,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "412",
+    "ID": "409",
     "Group": "321",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTOTIAL_PVP_027",
@@ -5422,7 +5356,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "413",
+    "ID": "410",
     "Group": "322",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AGIT_003",
@@ -5435,17 +5369,17 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "414",
+    "ID": "411",
     "Group": "322",
     "StartTrigger": "CHECK_READY_AGIT_RETENSION",
     "StartTriggerValue01": "1",
-    "StartTriggerValue02": "425",
+    "StartTriggerValue02": "422",
     "FocusFullTouch": "False",
     "IsButton": "False",
     "UseSkipBtn": "False"
   },
   {
-    "ID": "415",
+    "ID": "412",
     "Group": "322",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_AGIT_004",
@@ -5461,7 +5395,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "416",
+    "ID": "413",
     "Group": "322",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_AGIT_005",
@@ -5478,7 +5412,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "417",
+    "ID": "414",
     "Group": "322",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5492,7 +5426,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "418",
+    "ID": "415",
     "Group": "322",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5506,7 +5440,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "419",
+    "ID": "416",
     "Group": "322",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5519,7 +5453,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "420",
+    "ID": "417",
     "Group": "322",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AGIT_008",
@@ -5532,7 +5466,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "421",
+    "ID": "418",
     "Group": "322",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AGIT_009",
@@ -5544,7 +5478,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "422",
+    "ID": "419",
     "Group": "322",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_AGIT_010",
@@ -5563,7 +5497,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "423",
+    "ID": "420",
     "Group": "322",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AGIT_013",
@@ -5576,7 +5510,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "424",
+    "ID": "421",
     "Group": "322",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5591,7 +5525,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "425",
+    "ID": "422",
     "Group": "322",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AGIT_014",
@@ -5604,7 +5538,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "426",
+    "ID": "423",
     "Group": "322",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_AGIT_015",
@@ -5621,7 +5555,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "427",
+    "ID": "424",
     "Group": "322",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_AGIT_016",
@@ -5638,7 +5572,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "428",
+    "ID": "425",
     "Group": "322",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_AGIT_017",
@@ -5655,7 +5589,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "429",
+    "ID": "426",
     "Group": "322",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5669,7 +5603,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "430",
+    "ID": "427",
     "Group": "322",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AGIT_022",
@@ -5683,7 +5617,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "431",
+    "ID": "428",
     "Group": "322",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AGIT_020",
@@ -5696,7 +5630,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "432",
+    "ID": "429",
     "Group": "323",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ACHIEVE_001",
@@ -5709,7 +5643,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "433",
+    "ID": "430",
     "Group": "323",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ACHIEVE_002",
@@ -5724,7 +5658,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "434",
+    "ID": "431",
     "Group": "323",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ACHIEVE_004",
@@ -5740,7 +5674,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "435",
+    "ID": "432",
     "Group": "323",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ACHIEVE_005",
@@ -5753,7 +5687,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "436",
+    "ID": "433",
     "Group": "323",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ACHIEVE_006",
@@ -5772,7 +5706,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "437",
+    "ID": "434",
     "Group": "323",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ACHIEVE_007",
@@ -5785,7 +5719,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "438",
+    "ID": "435",
     "Group": "323",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ACHIEVE_020",
@@ -5797,7 +5731,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "439",
+    "ID": "436",
     "Group": "324",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_FRIEND_001",
@@ -5810,7 +5744,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "440",
+    "ID": "437",
     "Group": "324",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_FRIEND_002",
@@ -5826,7 +5760,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "441",
+    "ID": "438",
     "Group": "324",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_FRIEND_003",
@@ -5841,7 +5775,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "442",
+    "ID": "439",
     "Group": "324",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -5853,7 +5787,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "443",
+    "ID": "440",
     "Group": "324",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_FRIEND_006",
@@ -5870,7 +5804,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "444",
+    "ID": "441",
     "Group": "324",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_FRIEND_010",
@@ -5885,7 +5819,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "445",
+    "ID": "442",
     "Group": "324",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUIFriendMain",
@@ -5898,7 +5832,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "446",
+    "ID": "443",
     "Group": "324",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_FRIEND_011",
@@ -5911,7 +5845,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "447",
+    "ID": "444",
     "Group": "324",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_FRIEND_012",
@@ -5923,7 +5857,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "448",
+    "ID": "445",
     "Group": "324",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_FRIEND_013",
@@ -5936,7 +5870,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "449",
+    "ID": "446",
     "Group": "325",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRUST_001",
@@ -5949,7 +5883,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "450",
+    "ID": "447",
     "Group": "325",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TRUST_002",
@@ -5964,7 +5898,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "451",
+    "ID": "448",
     "Group": "325",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TRUST_005",
@@ -5980,7 +5914,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "452",
+    "ID": "449",
     "Group": "325",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRUST_007",
@@ -5992,7 +5926,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "453",
+    "ID": "450",
     "Group": "325",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -6004,7 +5938,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "454",
+    "ID": "451",
     "Group": "325",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -6016,7 +5950,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "455",
+    "ID": "452",
     "Group": "325",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRUST_008",
@@ -6029,7 +5963,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "456",
+    "ID": "453",
     "Group": "325",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRUST_009",
@@ -6041,7 +5975,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "457",
+    "ID": "454",
     "Group": "325",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRUST_010",
@@ -6053,7 +5987,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "458",
+    "ID": "455",
     "Group": "325",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TRUST_012",
@@ -6066,7 +6000,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "459",
+    "ID": "456",
     "Group": "326",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_CREATE_002",
@@ -6079,7 +6013,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "460",
+    "ID": "457",
     "Group": "326",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -6093,7 +6027,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "461",
+    "ID": "458",
     "Group": "326",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_CREATE_003",
@@ -6105,7 +6039,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "462",
+    "ID": "459",
     "Group": "326",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -6118,7 +6052,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "463",
+    "ID": "460",
     "Group": "326",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -6130,7 +6064,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "464",
+    "ID": "461",
     "Group": "326",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_CREATE_006",
@@ -6142,7 +6076,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "465",
+    "ID": "462",
     "Group": "326",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_CREATE_009",
@@ -6155,7 +6089,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "466",
+    "ID": "463",
     "Group": "327",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_LOBBY_001",
@@ -6168,7 +6102,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "467",
+    "ID": "464",
     "Group": "327",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_LOBBY_002",
@@ -6180,7 +6114,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "468",
+    "ID": "465",
     "Group": "327",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_LOBBY_003",
@@ -6196,7 +6130,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "469",
+    "ID": "466",
     "Group": "327",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_LOBBY_005",
@@ -6212,7 +6146,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "470",
+    "ID": "467",
     "Group": "327",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_LOBBY_004",
@@ -6228,7 +6162,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "471",
+    "ID": "468",
     "Group": "327",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_LOBBY_006",
@@ -6241,7 +6175,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "472",
+    "ID": "469",
     "Group": "328",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -6255,7 +6189,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "473",
+    "ID": "470",
     "Group": "328",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ACCOUNT&LOBBY_01",
@@ -6268,7 +6202,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "474",
+    "ID": "471",
     "Group": "328",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ACCOUNT&LOBBY_02",
@@ -6286,7 +6220,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "475",
+    "ID": "472",
     "Group": "328",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ACCOUNT&LOBBY_03",
@@ -6303,7 +6237,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "476",
+    "ID": "473",
     "Group": "328",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ACCOUNT&LOBBY_04",
@@ -6321,7 +6255,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "477",
+    "ID": "474",
     "Group": "328",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ACCOUNT&LOBBY_05",
@@ -6337,7 +6271,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "478",
+    "ID": "475",
     "Group": "328",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ACCOUNT&LOBBY_06",
@@ -6355,7 +6289,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "479",
+    "ID": "476",
     "Group": "328",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ACCOUNT&LOBBY_07",
@@ -6368,7 +6302,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "480",
+    "ID": "477",
     "Group": "329",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_01",
@@ -6380,7 +6314,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "481",
+    "ID": "478",
     "Group": "329",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_02",
@@ -6392,7 +6326,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "482",
+    "ID": "479",
     "Group": "329",
     "NoticeType": "FOCUS_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_03",
@@ -6406,7 +6340,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "483",
+    "ID": "480",
     "Group": "329",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_04",
@@ -6425,7 +6359,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "484",
+    "ID": "481",
     "Group": "329",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_05",
@@ -6443,7 +6377,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "485",
+    "ID": "482",
     "Group": "329",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_06",
@@ -6456,7 +6390,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "486",
+    "ID": "483",
     "Group": "329",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_07",
@@ -6469,7 +6403,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "487",
+    "ID": "484",
     "Group": "329",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_08",
@@ -6482,7 +6416,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "488",
+    "ID": "485",
     "Group": "329",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_09",
@@ -6497,7 +6431,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "489",
+    "ID": "486",
     "Group": "329",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_10",
@@ -6511,7 +6445,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "490",
+    "ID": "487",
     "Group": "329",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_11",
@@ -6529,7 +6463,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "491",
+    "ID": "488",
     "Group": "329",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_12",
@@ -6542,7 +6476,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "492",
+    "ID": "489",
     "Group": "329",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_14",
@@ -6555,7 +6489,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "493",
+    "ID": "490",
     "Group": "354",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_15",
@@ -6567,7 +6501,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "494",
+    "ID": "491",
     "Group": "354",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_16",
@@ -6582,7 +6516,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "495",
+    "ID": "492",
     "Group": "354",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_17",
@@ -6594,7 +6528,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "496",
+    "ID": "493",
     "Group": "354",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_18",
@@ -6606,7 +6540,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "497",
+    "ID": "494",
     "Group": "354",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_19",
@@ -6618,7 +6552,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "498",
+    "ID": "495",
     "Group": "354",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_20",
@@ -6631,7 +6565,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "499",
+    "ID": "496",
     "Group": "354",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_21",
@@ -6649,7 +6583,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "500",
+    "ID": "497",
     "Group": "354",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_22",
@@ -6661,7 +6595,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "501",
+    "ID": "498",
     "Group": "354",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_23",
@@ -6676,7 +6610,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "502",
+    "ID": "499",
     "Group": "354",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_GUILD_RAID_24",
@@ -6688,7 +6622,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "503",
+    "ID": "500",
     "Group": "354",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -6700,7 +6634,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "504",
+    "ID": "501",
     "Group": "330",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SUPPORTSURVEY_SHOP_01",
@@ -6713,7 +6647,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "505",
+    "ID": "502",
     "Group": "330",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SUPPORTSURVEY_SHOP_02",
@@ -6726,10 +6660,48 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "506",
+    "ID": "503",
     "Group": "330",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SUPPORTSURVEY_SHOP_03",
+    "TalkNameID": "2000009_Name",
+    "TalkImage": "2000009",
+    "TalkBoxAnchor": "4",
+    "FocusFullTouch": "False",
+    "IsButton": "False",
+    "DelayTime": "0.5",
+    "UseSkipBtn": "True"
+  },
+  {
+    "ID": "504",
+    "Group": "330",
+    "NoticeType": "FOCUS_BOX",
+    "FocusBoxType": "1",
+    "FocusRootUI": "CUIWorld",
+    "FocusTargetUI": "Button_Support_Survey",
+    "FocusFullTouch": "False",
+    "IsButton": "True",
+    "DelayTime": "0.5",
+    "UseSkipBtn": "True"
+  },
+  {
+    "ID": "505",
+    "Group": "330",
+    "NoticeType": "TALK_BOX",
+    "TextID": "TUTORIAL_SUPPORTSURVEY_SHOP_04",
+    "TalkNameID": "2000009_Name",
+    "TalkImage": "2000009",
+    "TalkBoxAnchor": "4",
+    "FocusFullTouch": "False",
+    "IsButton": "False",
+    "DelayTime": "0.5",
+    "UseSkipBtn": "True"
+  },
+  {
+    "ID": "506",
+    "Group": "330",
+    "NoticeType": "TALK_BOX",
+    "TextID": "TUTORIAL_SUPPORTSURVEY_SHOP_05",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "4",
@@ -6743,44 +6715,6 @@
     "Group": "330",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
-    "FocusRootUI": "CUIWorld",
-    "FocusTargetUI": "Button_Support_Survey",
-    "FocusFullTouch": "False",
-    "IsButton": "True",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "508",
-    "Group": "330",
-    "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_SUPPORTSURVEY_SHOP_04",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "4",
-    "FocusFullTouch": "False",
-    "IsButton": "False",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "509",
-    "Group": "330",
-    "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_SUPPORTSURVEY_SHOP_05",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "4",
-    "FocusFullTouch": "False",
-    "IsButton": "False",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "510",
-    "Group": "330",
-    "NoticeType": "FOCUS_BOX",
-    "FocusBoxType": "1",
     "FocusRootUI": "CUIGeneralShop",
     "FocusTargetUI": "Button_Point",
     "FocusFullTouch": "False",
@@ -6789,7 +6723,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "511",
+    "ID": "508",
     "Group": "330",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SUPPORTSURVEY_SHOP_06",
@@ -6802,7 +6736,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "512",
+    "ID": "509",
     "Group": "330",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SUPPORTSURVEY_SHOP_07",
@@ -6815,7 +6749,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "513",
+    "ID": "510",
     "Group": "331",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_HARD_001",
@@ -6828,7 +6762,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "514",
+    "ID": "511",
     "Group": "331",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_HARD_002",
@@ -6840,7 +6774,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "515",
+    "ID": "512",
     "Group": "331",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_HARD_003",
@@ -6852,7 +6786,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "516",
+    "ID": "513",
     "Group": "331",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_HARD_004",
@@ -6864,7 +6798,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "517",
+    "ID": "514",
     "Group": "331",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TOWER_HARD_005",
@@ -6882,7 +6816,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "518",
+    "ID": "515",
     "Group": "331",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_HARD_006",
@@ -6895,7 +6829,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "519",
+    "ID": "516",
     "Group": "331",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -6907,7 +6841,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "520",
+    "ID": "517",
     "Group": "331",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TOWER_HARD_007",
@@ -6925,7 +6859,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "521",
+    "ID": "518",
     "Group": "331",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_HARD_008",
@@ -6937,7 +6871,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "522",
+    "ID": "519",
     "Group": "332",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_ELEMENT_001",
@@ -6950,7 +6884,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "523",
+    "ID": "520",
     "Group": "332",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_ELEMENT_002",
@@ -6962,7 +6896,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "524",
+    "ID": "521",
     "Group": "332",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_ELEMENT_003",
@@ -6974,7 +6908,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "525",
+    "ID": "522",
     "Group": "332",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_ELEMENT_004",
@@ -6986,7 +6920,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "526",
+    "ID": "523",
     "Group": "332",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -7000,7 +6934,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "527",
+    "ID": "524",
     "Group": "332",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_ELEMENT_005",
@@ -7012,7 +6946,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "528",
+    "ID": "525",
     "Group": "332",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_ELEMENT_006",
@@ -7024,7 +6958,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "529",
+    "ID": "526",
     "Group": "332",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -7038,7 +6972,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "530",
+    "ID": "527",
     "Group": "332",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TOWER_ELEMENT_007",
@@ -7056,7 +6990,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "531",
+    "ID": "528",
     "Group": "332",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TOWER_ELEMENT_008",
@@ -7071,7 +7005,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "532",
+    "ID": "529",
     "Group": "341",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_VERY_HARD_001",
@@ -7084,7 +7018,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "533",
+    "ID": "530",
     "Group": "341",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_VERY_HARD_002",
@@ -7096,7 +7030,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "534",
+    "ID": "531",
     "Group": "341",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_VERY_HARD_003",
@@ -7108,7 +7042,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "535",
+    "ID": "532",
     "Group": "341",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_VERY_HARD_004",
@@ -7120,7 +7054,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "536",
+    "ID": "533",
     "Group": "341",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TOWER_VERY_HARD_005",
@@ -7138,7 +7072,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "537",
+    "ID": "534",
     "Group": "341",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_VERY_HARD_006",
@@ -7151,7 +7085,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "538",
+    "ID": "535",
     "Group": "341",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -7163,7 +7097,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "539",
+    "ID": "536",
     "Group": "341",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_TOWER_VERY_HARD_007",
@@ -7181,7 +7115,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "540",
+    "ID": "537",
     "Group": "341",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_TOWER_VERY_HARD_008",
@@ -7193,7 +7127,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "541",
+    "ID": "538",
     "Group": "501",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500001",
@@ -7202,7 +7136,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "542",
+    "ID": "539",
     "Group": "501",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500001",
@@ -7211,7 +7145,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "543",
+    "ID": "540",
     "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_001",
@@ -7223,7 +7157,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "544",
+    "ID": "541",
     "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_002",
@@ -7235,7 +7169,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "545",
+    "ID": "542",
     "Group": "501",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4101021",
@@ -7246,7 +7180,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "546",
+    "ID": "543",
     "Group": "501",
     "StartTrigger": "HOLD_BATTLE_TURN_END",
     "StartTriggerValue01": "2500001",
@@ -7255,7 +7189,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "547",
+    "ID": "544",
     "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_003",
@@ -7267,7 +7201,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "548",
+    "ID": "545",
     "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_004",
@@ -7279,11 +7213,44 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "549",
+    "ID": "546",
     "Group": "501",
     "ActionEvent": "BATTLE_CONTINUE",
     "FocusFullTouch": "False",
     "IsButton": "False",
+    "UseSkipBtn": "False"
+  },
+  {
+    "ID": "547",
+    "Group": "501",
+    "StartTrigger": "BATTLE_GET_TURN",
+    "StartTriggerValue01": "2500001",
+    "FocusFullTouch": "False",
+    "IsButton": "False",
+    "UseSkipBtn": "False"
+  },
+  {
+    "ID": "548",
+    "Group": "501",
+    "NoticeType": "TALK_BOX",
+    "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_005",
+    "TalkNameID": "2000001_Name",
+    "TalkImage": "2000001",
+    "TalkBoxAnchor": "3",
+    "FocusFullTouch": "False",
+    "IsButton": "False",
+    "DelayTime": "0.5",
+    "UseSkipBtn": "False"
+  },
+  {
+    "ID": "549",
+    "Group": "501",
+    "StartTrigger": "BATTLE_GET_TARGET",
+    "StartTriggerValue01": "4101023",
+    "FocusSizeX": "114",
+    "FocusSizeY": "114",
+    "FocusFullTouch": "False",
+    "IsButton": "True",
     "UseSkipBtn": "False"
   },
   {
@@ -7299,7 +7266,7 @@
     "ID": "551",
     "Group": "501",
     "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_005",
+    "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_006",
     "TalkNameID": "2000001_Name",
     "TalkImage": "2000001",
     "TalkBoxAnchor": "3",
@@ -7311,39 +7278,6 @@
   {
     "ID": "552",
     "Group": "501",
-    "StartTrigger": "BATTLE_GET_TARGET",
-    "StartTriggerValue01": "4101023",
-    "FocusSizeX": "114",
-    "FocusSizeY": "114",
-    "FocusFullTouch": "False",
-    "IsButton": "True",
-    "UseSkipBtn": "False"
-  },
-  {
-    "ID": "553",
-    "Group": "501",
-    "StartTrigger": "BATTLE_GET_TURN",
-    "StartTriggerValue01": "2500001",
-    "FocusFullTouch": "False",
-    "IsButton": "False",
-    "UseSkipBtn": "False"
-  },
-  {
-    "ID": "554",
-    "Group": "501",
-    "NoticeType": "TALK_BOX",
-    "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_006",
-    "TalkNameID": "2000001_Name",
-    "TalkImage": "2000001",
-    "TalkBoxAnchor": "3",
-    "FocusFullTouch": "False",
-    "IsButton": "False",
-    "DelayTime": "0.5",
-    "UseSkipBtn": "False"
-  },
-  {
-    "ID": "555",
-    "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_007",
     "TalkNameID": "2000009_Name",
@@ -7354,7 +7288,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "556",
+    "ID": "553",
     "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_008",
@@ -7366,7 +7300,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "557",
+    "ID": "554",
     "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_009",
@@ -7378,7 +7312,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "558",
+    "ID": "555",
     "Group": "501",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4101023",
@@ -7389,7 +7323,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "559",
+    "ID": "556",
     "Group": "501",
     "StartTrigger": "HOLD_BATTLE_TURN_END",
     "StartTriggerValue01": "2500001",
@@ -7398,7 +7332,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "560",
+    "ID": "557",
     "Group": "501",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -7409,7 +7343,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "561",
+    "ID": "558",
     "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_010",
@@ -7421,7 +7355,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "562",
+    "ID": "559",
     "Group": "501",
     "ActionEvent": "BATTLE_CONTINUE",
     "FocusFullTouch": "False",
@@ -7429,7 +7363,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "563",
+    "ID": "560",
     "Group": "501",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500001",
@@ -7438,7 +7372,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "564",
+    "ID": "561",
     "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_011",
@@ -7450,7 +7384,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "565",
+    "ID": "562",
     "Group": "501",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_ELEMENT_012",
@@ -7462,7 +7396,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "566",
+    "ID": "563",
     "Group": "502",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500005",
@@ -7471,7 +7405,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "567",
+    "ID": "564",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500005",
@@ -7480,7 +7414,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "568",
+    "ID": "565",
     "Group": "502",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_001",
@@ -7492,7 +7426,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "569",
+    "ID": "566",
     "Group": "502",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_002",
@@ -7504,7 +7438,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "570",
+    "ID": "567",
     "Group": "502",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_003",
@@ -7516,7 +7450,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "571",
+    "ID": "568",
     "Group": "502",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_004",
@@ -7531,7 +7465,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "572",
+    "ID": "569",
     "Group": "502",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -7544,7 +7478,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "573",
+    "ID": "570",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4201022",
@@ -7555,7 +7489,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "574",
+    "ID": "571",
     "Group": "502",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500005",
@@ -7564,7 +7498,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "575",
+    "ID": "572",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500005",
@@ -7573,7 +7507,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "576",
+    "ID": "573",
     "Group": "502",
     "ActionEvent": "BATTLE_SET_MAXAP",
     "FocusFullTouch": "False",
@@ -7581,7 +7515,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "577",
+    "ID": "574",
     "Group": "502",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_005",
@@ -7599,7 +7533,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "578",
+    "ID": "575",
     "Group": "502",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -7613,7 +7547,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "579",
+    "ID": "576",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4201022",
@@ -7625,7 +7559,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "580",
+    "ID": "577",
     "Group": "502",
     "StartTrigger": "HOLD_BATTLE_TURN_END",
     "StartTriggerValue01": "2500005",
@@ -7634,7 +7568,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "581",
+    "ID": "578",
     "Group": "502",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_006",
@@ -7646,7 +7580,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "582",
+    "ID": "579",
     "Group": "502",
     "ActionEvent": "BATTLE_CONTINUE",
     "FocusFullTouch": "False",
@@ -7654,7 +7588,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "583",
+    "ID": "580",
     "Group": "502",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2600003",
@@ -7663,7 +7597,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "584",
+    "ID": "581",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2600003",
@@ -7673,7 +7607,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "585",
+    "ID": "582",
     "Group": "502",
     "ActionEvent": "BATTLE_SET_MAXAP",
     "FocusFullTouch": "False",
@@ -7681,7 +7615,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "586",
+    "ID": "583",
     "Group": "502",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_007",
@@ -7696,7 +7630,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "587",
+    "ID": "584",
     "Group": "502",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_008",
@@ -7708,7 +7642,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "588",
+    "ID": "585",
     "Group": "502",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -7721,7 +7655,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "589",
+    "ID": "586",
     "Group": "502",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -7735,7 +7669,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "590",
+    "ID": "587",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4201021",
@@ -7747,7 +7681,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "591",
+    "ID": "588",
     "Group": "502",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500015",
@@ -7756,7 +7690,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "592",
+    "ID": "589",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500015",
@@ -7765,7 +7699,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "593",
+    "ID": "590",
     "Group": "502",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_009",
@@ -7780,7 +7714,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "594",
+    "ID": "591",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4101024",
@@ -7792,7 +7726,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "595",
+    "ID": "592",
     "Group": "502",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500015",
@@ -7801,7 +7735,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "596",
+    "ID": "593",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500015",
@@ -7810,7 +7744,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "597",
+    "ID": "594",
     "Group": "502",
     "ActionEvent": "BATTLE_SET_MAXAP",
     "FocusFullTouch": "False",
@@ -7818,7 +7752,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "598",
+    "ID": "595",
     "Group": "502",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_010",
@@ -7836,7 +7770,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "599",
+    "ID": "596",
     "Group": "502",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_011",
@@ -7848,7 +7782,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "600",
+    "ID": "597",
     "Group": "502",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -7861,7 +7795,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "601",
+    "ID": "598",
     "Group": "502",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -7875,7 +7809,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "602",
+    "ID": "599",
     "Group": "502",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4101024",
@@ -7887,7 +7821,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "603",
+    "ID": "600",
     "Group": "503",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500037",
@@ -7896,7 +7830,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "604",
+    "ID": "601",
     "Group": "503",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_101",
@@ -7909,7 +7843,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "605",
+    "ID": "602",
     "Group": "503",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_102",
@@ -7921,7 +7855,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "606",
+    "ID": "603",
     "Group": "503",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_103",
@@ -7936,7 +7870,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "607",
+    "ID": "604",
     "Group": "503",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "4201021",
@@ -7945,7 +7879,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "608",
+    "ID": "605",
     "Group": "503",
     "ActionEvent": "BATTLE_SET_ATTACK_TARGET",
     "ActionEventValue": "4201021,2500037,1",
@@ -7954,7 +7888,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "609",
+    "ID": "606",
     "Group": "503",
     "StartTrigger": "HOLD_BATTLE_TURN_END",
     "StartTriggerValue01": "4201021",
@@ -7963,7 +7897,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "610",
+    "ID": "607",
     "Group": "503",
     "ActionEvent": "BATTLE_CONTINUE",
     "FocusFullTouch": "False",
@@ -7971,7 +7905,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "611",
+    "ID": "608",
     "Group": "503",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500037",
@@ -7980,7 +7914,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "612",
+    "ID": "609",
     "Group": "503",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500037",
@@ -7989,7 +7923,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "613",
+    "ID": "610",
     "Group": "503",
     "ActionEvent": "BATTLE_SET_MAXAP",
     "FocusFullTouch": "False",
@@ -7997,7 +7931,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "614",
+    "ID": "611",
     "Group": "503",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_104",
@@ -8015,7 +7949,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "615",
+    "ID": "612",
     "Group": "503",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_105",
@@ -8027,7 +7961,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "616",
+    "ID": "613",
     "Group": "503",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -8040,7 +7974,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "617",
+    "ID": "614",
     "Group": "503",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -8054,7 +7988,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "618",
+    "ID": "615",
     "Group": "503",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4201021",
@@ -8066,7 +8000,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "619",
+    "ID": "616",
     "Group": "503",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500009",
@@ -8075,7 +8009,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "620",
+    "ID": "617",
     "Group": "503",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500009",
@@ -8084,7 +8018,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "621",
+    "ID": "618",
     "Group": "503",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_106",
@@ -8099,7 +8033,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "622",
+    "ID": "619",
     "Group": "503",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "4201021",
@@ -8108,7 +8042,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "623",
+    "ID": "620",
     "Group": "503",
     "ActionEvent": "BATTLE_SET_ATTACK_TARGET",
     "ActionEventValue": "4201021,2000016,1",
@@ -8117,7 +8051,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "624",
+    "ID": "621",
     "Group": "503",
     "StartTrigger": "HOLD_BATTLE_TURN_END",
     "StartTriggerValue01": "4201021",
@@ -8126,7 +8060,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "625",
+    "ID": "622",
     "Group": "503",
     "ActionEvent": "BATTLE_CONTINUE",
     "FocusFullTouch": "False",
@@ -8134,7 +8068,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "626",
+    "ID": "623",
     "Group": "503",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500009",
@@ -8143,7 +8077,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "627",
+    "ID": "624",
     "Group": "503",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500009",
@@ -8152,7 +8086,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "628",
+    "ID": "625",
     "Group": "503",
     "ActionEvent": "BATTLE_SET_MAXAP",
     "FocusFullTouch": "False",
@@ -8160,7 +8094,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "629",
+    "ID": "626",
     "Group": "503",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_107",
@@ -8178,7 +8112,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "630",
+    "ID": "627",
     "Group": "503",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BATTLETYPE_108",
@@ -8190,7 +8124,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "631",
+    "ID": "628",
     "Group": "503",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -8203,7 +8137,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "632",
+    "ID": "629",
     "Group": "503",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -8217,7 +8151,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "633",
+    "ID": "630",
     "Group": "503",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "2000016",
@@ -8229,7 +8163,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "634",
+    "ID": "631",
     "Group": "504",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500001",
@@ -8238,7 +8172,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "635",
+    "ID": "632",
     "Group": "504",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500001",
@@ -8247,7 +8181,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "636",
+    "ID": "633",
     "Group": "504",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_001",
@@ -8259,7 +8193,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "637",
+    "ID": "634",
     "Group": "504",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_002",
@@ -8276,7 +8210,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "638",
+    "ID": "635",
     "Group": "504",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_003",
@@ -8289,7 +8223,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "639",
+    "ID": "636",
     "Group": "504",
     "ActionEvent": "BATTLE_SET_MAXAP",
     "FocusFullTouch": "False",
@@ -8298,7 +8232,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "640",
+    "ID": "637",
     "Group": "504",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_004",
@@ -8310,7 +8244,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "641",
+    "ID": "638",
     "Group": "504",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -8323,7 +8257,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "642",
+    "ID": "639",
     "Group": "504",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_005",
@@ -8341,7 +8275,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "643",
+    "ID": "640",
     "Group": "504",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_006",
@@ -8357,7 +8291,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "644",
+    "ID": "641",
     "Group": "504",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_007",
@@ -8374,7 +8308,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "645",
+    "ID": "642",
     "Group": "504",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_008",
@@ -8386,7 +8320,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "646",
+    "ID": "643",
     "Group": "504",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -8400,7 +8334,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "647",
+    "ID": "644",
     "Group": "504",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4301021",
@@ -8412,7 +8346,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "648",
+    "ID": "645",
     "Group": "504",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500003",
@@ -8421,7 +8355,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "649",
+    "ID": "646",
     "Group": "504",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_009",
@@ -8433,7 +8367,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "650",
+    "ID": "647",
     "Group": "504",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_BURST_010",
@@ -8445,7 +8379,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "651",
+    "ID": "648",
     "Group": "504",
     "ActionEvent": "BATTLE_SET_MAXAP_ALL",
     "FocusFullTouch": "False",
@@ -8453,7 +8387,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "652",
+    "ID": "649",
     "Group": "505",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2000037",
@@ -8462,7 +8396,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "653",
+    "ID": "650",
     "Group": "505",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2000037",
@@ -8471,7 +8405,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "654",
+    "ID": "651",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_001",
@@ -8484,7 +8418,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "655",
+    "ID": "652",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_002",
@@ -8496,7 +8430,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "656",
+    "ID": "653",
     "Group": "505",
     "StartTrigger": "BATTLE_BOSS_RAGE_ENTER",
     "FocusFullTouch": "False",
@@ -8504,7 +8438,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "657",
+    "ID": "654",
     "Group": "505",
     "ActionEvent": "BATTLE_AUTO_OFF",
     "FocusFullTouch": "False",
@@ -8512,7 +8446,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "658",
+    "ID": "655",
     "Group": "505",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2000016",
@@ -8521,7 +8455,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "659",
+    "ID": "656",
     "Group": "505",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2000016",
@@ -8530,7 +8464,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "660",
+    "ID": "657",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_003",
@@ -8543,7 +8477,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "661",
+    "ID": "658",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_004",
@@ -8555,7 +8489,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "662",
+    "ID": "659",
     "Group": "505",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_005",
@@ -8572,7 +8506,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "663",
+    "ID": "660",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_006",
@@ -8584,7 +8518,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "664",
+    "ID": "661",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_007",
@@ -8596,7 +8530,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "665",
+    "ID": "662",
     "Group": "505",
     "ActionEvent": "BATTLE_SET_CP",
     "ActionEventValue": "180",
@@ -8605,7 +8539,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "666",
+    "ID": "663",
     "Group": "505",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUIHud",
@@ -8618,7 +8552,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "667",
+    "ID": "664",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_008",
@@ -8631,7 +8565,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "668",
+    "ID": "665",
     "Group": "505",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -8644,7 +8578,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "669",
+    "ID": "666",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_009",
@@ -8656,7 +8590,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "670",
+    "ID": "667",
     "Group": "505",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_010",
@@ -8672,7 +8606,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "671",
+    "ID": "668",
     "Group": "505",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_011",
@@ -8688,7 +8622,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "672",
+    "ID": "669",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_012",
@@ -8700,7 +8634,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "673",
+    "ID": "670",
     "Group": "505",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -8711,7 +8645,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "674",
+    "ID": "671",
     "Group": "505",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -8723,7 +8657,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "675",
+    "ID": "672",
     "Group": "505",
     "StartTrigger": "HOLD_BATTLE_TURN_END",
     "StartTriggerValue01": "2000016",
@@ -8732,7 +8666,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "676",
+    "ID": "673",
     "Group": "505",
     "ActionEvent": "BATTLE_CONTINUE",
     "FocusFullTouch": "False",
@@ -8740,7 +8674,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "677",
+    "ID": "674",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_013",
@@ -8753,7 +8687,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "678",
+    "ID": "675",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_014",
@@ -8765,7 +8699,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "679",
+    "ID": "676",
     "Group": "505",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN_015",
@@ -8777,7 +8711,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "680",
+    "ID": "677",
     "Group": "505",
     "ActionEvent": "BATTLE_START_MISSION",
     "FocusFullTouch": "False",
@@ -8785,7 +8719,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "681",
+    "ID": "678",
     "Group": "506",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2000037",
@@ -8794,7 +8728,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "682",
+    "ID": "679",
     "Group": "506",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2000037",
@@ -8803,7 +8737,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "683",
+    "ID": "680",
     "Group": "506",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_001",
@@ -8821,7 +8755,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "684",
+    "ID": "681",
     "Group": "506",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_002",
@@ -8833,7 +8767,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "685",
+    "ID": "682",
     "Group": "506",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_003",
@@ -8845,7 +8779,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "686",
+    "ID": "683",
     "Group": "506",
     "StartTrigger": "BATTLE_BOSS_RAGE_ENTER",
     "FocusFullTouch": "False",
@@ -8853,7 +8787,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "687",
+    "ID": "684",
     "Group": "506",
     "ActionEvent": "BATTLE_AUTO_OFF",
     "FocusFullTouch": "False",
@@ -8861,7 +8795,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "688",
+    "ID": "685",
     "Group": "506",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500038",
@@ -8870,7 +8804,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "689",
+    "ID": "686",
     "Group": "506",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500038",
@@ -8879,7 +8813,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "690",
+    "ID": "687",
     "Group": "506",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_004",
@@ -8891,7 +8825,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "691",
+    "ID": "688",
     "Group": "506",
     "ActionEvent": "BATTLE_SET_CP",
     "ActionEventValue": "180",
@@ -8900,7 +8834,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "692",
+    "ID": "689",
     "Group": "506",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUIHud",
@@ -8912,7 +8846,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "693",
+    "ID": "690",
     "Group": "506",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_005",
@@ -8924,7 +8858,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "694",
+    "ID": "691",
     "Group": "506",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_006",
@@ -8936,7 +8870,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "695",
+    "ID": "692",
     "Group": "506",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_007",
@@ -8948,7 +8882,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "696",
+    "ID": "693",
     "Group": "506",
     "StartTrigger": "BATTLE_GET_TARGET",
     "StartTriggerValue01": "4244001",
@@ -8959,7 +8893,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "697",
+    "ID": "694",
     "Group": "506",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2500038",
@@ -8968,7 +8902,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "698",
+    "ID": "695",
     "Group": "506",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2500038",
@@ -8977,7 +8911,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "699",
+    "ID": "696",
     "Group": "506",
     "ActionEvent": "BATTLE_REMOVE_STUN",
     "FocusFullTouch": "False",
@@ -8985,7 +8919,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "700",
+    "ID": "697",
     "Group": "506",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUIHud",
@@ -8998,7 +8932,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "701",
+    "ID": "698",
     "Group": "506",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -9011,7 +8945,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "702",
+    "ID": "699",
     "Group": "506",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_008",
@@ -9024,7 +8958,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "703",
+    "ID": "700",
     "Group": "506",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_009",
@@ -9036,7 +8970,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "704",
+    "ID": "701",
     "Group": "506",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN2_010",
@@ -9048,7 +8982,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "705",
+    "ID": "702",
     "Group": "506",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -9059,7 +8993,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "706",
+    "ID": "703",
     "Group": "506",
     "ActionEvent": "BATTLE_START_MISSION",
     "FocusSizeX": "20",
@@ -9068,7 +9002,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "707",
+    "ID": "704",
     "Group": "507",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2000037",
@@ -9077,7 +9011,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "708",
+    "ID": "705",
     "Group": "507",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2000037",
@@ -9086,7 +9020,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "709",
+    "ID": "706",
     "Group": "507",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_001",
@@ -9099,7 +9033,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "710",
+    "ID": "707",
     "Group": "507",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_002",
@@ -9111,7 +9045,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "711",
+    "ID": "708",
     "Group": "507",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_003",
@@ -9124,7 +9058,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "712",
+    "ID": "709",
     "Group": "507",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_004",
@@ -9136,7 +9070,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "713",
+    "ID": "710",
     "Group": "507",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_005",
@@ -9155,7 +9089,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "714",
+    "ID": "711",
     "Group": "507",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_006",
@@ -9167,7 +9101,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "715",
+    "ID": "712",
     "Group": "507",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2000031",
@@ -9176,7 +9110,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "716",
+    "ID": "713",
     "Group": "507",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2000031",
@@ -9185,7 +9119,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "717",
+    "ID": "714",
     "Group": "507",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -9199,7 +9133,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "718",
+    "ID": "715",
     "Group": "507",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_007",
@@ -9211,7 +9145,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "719",
+    "ID": "716",
     "Group": "507",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_008",
@@ -9224,7 +9158,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "720",
+    "ID": "717",
     "Group": "507",
     "ActionEvent": "BATTLE_SET_TURN",
     "ActionEventValue": "2000022",
@@ -9233,7 +9167,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "721",
+    "ID": "718",
     "Group": "507",
     "StartTrigger": "BATTLE_GET_TURN",
     "StartTriggerValue01": "2000022",
@@ -9242,7 +9176,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "722",
+    "ID": "719",
     "Group": "507",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -9256,7 +9190,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "723",
+    "ID": "720",
     "Group": "507",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_009",
@@ -9268,7 +9202,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "724",
+    "ID": "721",
     "Group": "507",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_CHAIN3_010",
@@ -9281,7 +9215,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "725",
+    "ID": "722",
     "Group": "507",
     "ActionEvent": "BATTLE_SET_CP",
     "ActionEventValue": "180",
@@ -9290,7 +9224,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "726",
+    "ID": "723",
     "Group": "507",
     "NoticeType": "IMAGE_BOX",
     "FocusFullTouch": "True",
@@ -9301,7 +9235,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "727",
+    "ID": "724",
     "Group": "507",
     "ActionEvent": "BATTLE_START_MISSION",
     "FocusSizeX": "20",
@@ -9310,7 +9244,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "728",
+    "ID": "725",
     "Group": "601",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_SIMULATION_01",
@@ -9323,7 +9257,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "729",
+    "ID": "726",
     "Group": "601",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_SIMULATION_02",
@@ -9339,7 +9273,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "730",
+    "ID": "727",
     "Group": "601",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_SIMULATION_03",
@@ -9351,7 +9285,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "731",
+    "ID": "728",
     "Group": "601",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -9364,7 +9298,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "732",
+    "ID": "729",
     "Group": "601",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_SIMULATION_04",
@@ -9376,7 +9310,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "733",
+    "ID": "730",
     "Group": "601",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_COMBATGUIDE_SIMULATION_05",
@@ -9388,7 +9322,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "734",
+    "ID": "731",
     "Group": "93",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_01",
@@ -9401,7 +9335,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "735",
+    "ID": "732",
     "Group": "93",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -9415,7 +9349,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "736",
+    "ID": "733",
     "Group": "94",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_02",
@@ -9428,56 +9362,55 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "737",
+    "ID": "734",
     "Group": "94",
-    "NoticeType": "FOCUS_TALK_BOX",
+    "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_03",
     "TalkNameID": "2000009_Name",
     "TalkImage": "2000009",
     "TalkBoxAnchor": "7",
-    "FocusRootUI": "CUILobby",
-    "FocusTargetUI": "StoveEventNewsButton",
     "FocusFullTouch": "True",
     "IsButton": "False",
     "UseSkipBtn": "True"
   },
   {
-    "ID": "738",
+    "ID": "735",
     "Group": "94",
-    "ActionEvent": "LOCK_EVENT_DUNGEON_BANNER",
-    "ActionEventValue": "1",
-    "FocusBoxType": "1",
-    "FocusFullTouch": "True",
-    "IsButton": "False",
-    "UseSkipBtn": "True"
-  },
-  {
-    "ID": "739",
-    "Group": "94",
-    "NoticeType": "FOCUS_TALK_BOX",
-    "TextID": "TUTORIAL_EVENT_DUNGEON_04",
-    "TalkNameID": "2000009_Name",
-    "TalkImage": "2000009",
-    "TalkBoxAnchor": "7",
-    "FocusBoxType": "1",
+    "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUILobby",
-    "FocusTargetUI": "EVENT_DUNGEON8",
+    "FocusTargetUI": "LobbyMenu,StageMenu,AdventureRoot,Adventure",
     "FocusFullTouch": "False",
     "IsButton": "True",
     "UseSkipBtn": "True"
   },
   {
-    "ID": "740",
+    "ID": "736",
     "Group": "94",
-    "ActionEvent": "UNLOCK_BANNER",
+    "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
-    "FocusFullTouch": "True",
-    "IsButton": "False",
+    "FocusRootUI": "CUIAdventurePage",
+    "FocusTargetUI": "Adventure_Menu_Add,Event_Dungeon,Event_DungeonBtn",
+    "FocusFullTouch": "False",
+    "IsButton": "True",
+    "UseSkipBtn": "True"
+  },
+  {
+    "ID": "737",
+    "Group": "94",
+    "NoticeType": "FOCUS_TALK_BOX",
+    "TextID": "TUTORIAL_EVENT_DUNGEON_04",
+    "TalkNameID": "2000009_Name",
+    "TalkImage": "2000009",
+    "FocusBoxType": "1",
+    "FocusRootUI": "CUIEventDungeonList",
+    "FocusTargetUI": "ScrollView,Viewport,Content,10000",
+    "FocusFullTouch": "False",
+    "IsButton": "True",
     "DelayTime": "0.5",
     "UseSkipBtn": "True"
   },
   {
-    "ID": "741",
+    "ID": "738",
     "Group": "94",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_05",
@@ -9489,7 +9422,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "742",
+    "ID": "739",
     "Group": "94",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_06",
@@ -9505,7 +9438,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "743",
+    "ID": "740",
     "Group": "94",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_07",
@@ -9521,7 +9454,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "744",
+    "ID": "741",
     "Group": "94",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_08",
@@ -9537,7 +9470,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "745",
+    "ID": "742",
     "Group": "94",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_09",
@@ -9553,7 +9486,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "746",
+    "ID": "743",
     "Group": "94",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_10",
@@ -9569,7 +9502,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "747",
+    "ID": "744",
     "Group": "94",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_EVENT_DUNGEON_11",
@@ -9581,7 +9514,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "748",
+    "ID": "745",
     "Group": "333",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_ML_01",
@@ -9594,7 +9527,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "749",
+    "ID": "746",
     "Group": "333",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_ML_02",
@@ -9606,7 +9539,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "750",
+    "ID": "747",
     "Group": "333",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_ML_03",
@@ -9619,7 +9552,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "751",
+    "ID": "748",
     "Group": "333",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_ML_04",
@@ -9638,7 +9571,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "752",
+    "ID": "749",
     "Group": "333",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_05",
@@ -9657,7 +9590,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "753",
+    "ID": "750",
     "Group": "333",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_06",
@@ -9675,7 +9608,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "754",
+    "ID": "751",
     "Group": "333",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_07",
@@ -9694,7 +9627,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "755",
+    "ID": "752",
     "Group": "333",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_08",
@@ -9713,7 +9646,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "756",
+    "ID": "753",
     "Group": "333",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_ML_05",
@@ -9729,7 +9662,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "757",
+    "ID": "754",
     "Group": "333",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_ML_06",
@@ -9745,7 +9678,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "758",
+    "ID": "755",
     "Group": "333",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -9757,7 +9690,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "759",
+    "ID": "756",
     "Group": "333",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -9769,7 +9702,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "760",
+    "ID": "757",
     "Group": "333",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_ML_07",
@@ -9788,7 +9721,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "761",
+    "ID": "758",
     "Group": "333",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_ML_08",
@@ -9802,7 +9735,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "762",
+    "ID": "759",
     "Group": "333",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -9814,7 +9747,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "763",
+    "ID": "760",
     "Group": "333",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_12",
@@ -9830,7 +9763,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "764",
+    "ID": "761",
     "Group": "333",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_13",
@@ -9846,7 +9779,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "765",
+    "ID": "762",
     "Group": "334",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_01",
@@ -9859,7 +9792,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "766",
+    "ID": "763",
     "Group": "334",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_02",
@@ -9871,7 +9804,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "767",
+    "ID": "764",
     "Group": "334",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_03",
@@ -9887,7 +9820,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "768",
+    "ID": "765",
     "Group": "334",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_04",
@@ -9903,7 +9836,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "769",
+    "ID": "766",
     "Group": "334",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_05",
@@ -9919,7 +9852,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "770",
+    "ID": "767",
     "Group": "334",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_06",
@@ -9935,7 +9868,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "771",
+    "ID": "768",
     "Group": "334",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_06_02",
@@ -9949,7 +9882,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "772",
+    "ID": "769",
     "Group": "334",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_07",
@@ -9964,7 +9897,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "773",
+    "ID": "770",
     "Group": "334",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_08",
@@ -9979,7 +9912,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "774",
+    "ID": "771",
     "Group": "334",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_09",
@@ -9992,7 +9925,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "775",
+    "ID": "772",
     "Group": "334",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_FRIENDSHIP_10",
@@ -10005,7 +9938,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "776",
+    "ID": "773",
     "Group": "402",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_01",
@@ -10018,7 +9951,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "777",
+    "ID": "774",
     "Group": "402",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_02",
@@ -10030,7 +9963,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "778",
+    "ID": "775",
     "Group": "402",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_03",
@@ -10043,7 +9976,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "779",
+    "ID": "776",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_04",
@@ -10062,7 +9995,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "780",
+    "ID": "777",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_05",
@@ -10081,7 +10014,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "781",
+    "ID": "778",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_06",
@@ -10099,7 +10032,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "782",
+    "ID": "779",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_07",
@@ -10118,7 +10051,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "783",
+    "ID": "780",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_08",
@@ -10137,7 +10070,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "784",
+    "ID": "781",
     "Group": "402",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_09",
@@ -10151,7 +10084,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "785",
+    "ID": "782",
     "Group": "402",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -10164,7 +10097,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "786",
+    "ID": "783",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_10",
@@ -10181,7 +10114,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "787",
+    "ID": "784",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_11",
@@ -10201,7 +10134,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "788",
+    "ID": "785",
     "Group": "402",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_12",
@@ -10217,7 +10150,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "789",
+    "ID": "786",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_13",
@@ -10233,7 +10166,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "790",
+    "ID": "787",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_14",
@@ -10252,7 +10185,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "791",
+    "ID": "788",
     "Group": "402",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_15",
@@ -10268,7 +10201,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "792",
+    "ID": "789",
     "Group": "402",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PVP_REALTIME_TL_16",
@@ -10281,7 +10214,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "793",
+    "ID": "790",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_01",
@@ -10294,7 +10227,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "794",
+    "ID": "791",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_02",
@@ -10308,7 +10241,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "795",
+    "ID": "792",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_19",
@@ -10321,7 +10254,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "796",
+    "ID": "793",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_20",
@@ -10337,7 +10270,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "797",
+    "ID": "794",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_21",
@@ -10351,7 +10284,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "798",
+    "ID": "795",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_03",
@@ -10368,7 +10301,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "799",
+    "ID": "796",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_25",
@@ -10384,7 +10317,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "800",
+    "ID": "797",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_04",
@@ -10400,7 +10333,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "801",
+    "ID": "798",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_05",
@@ -10418,7 +10351,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "802",
+    "ID": "799",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_06",
@@ -10435,7 +10368,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "803",
+    "ID": "800",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_07",
@@ -10451,7 +10384,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "804",
+    "ID": "801",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_08",
@@ -10467,7 +10400,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "805",
+    "ID": "802",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_09",
@@ -10485,7 +10418,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "806",
+    "ID": "803",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_10",
@@ -10500,7 +10433,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "807",
+    "ID": "804",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_11",
@@ -10516,7 +10449,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "808",
+    "ID": "805",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_12",
@@ -10530,7 +10463,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "809",
+    "ID": "806",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_24",
@@ -10544,7 +10477,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "810",
+    "ID": "807",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_13",
@@ -10562,7 +10495,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "811",
+    "ID": "808",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_14",
@@ -10578,7 +10511,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "812",
+    "ID": "809",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_15",
@@ -10592,7 +10525,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "813",
+    "ID": "810",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_16",
@@ -10608,7 +10541,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "814",
+    "ID": "811",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_17",
@@ -10622,7 +10555,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "815",
+    "ID": "812",
     "Group": "372",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_22",
@@ -10638,7 +10571,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "816",
+    "ID": "813",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_23",
@@ -10651,7 +10584,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "817",
+    "ID": "814",
     "Group": "372",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_18",
@@ -10665,7 +10598,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "818",
+    "ID": "815",
     "Group": "373",
     "StartTrigger": "HOLD_BATTLE_ENTER",
     "FocusRootUI": "대사 없음",
@@ -10674,7 +10607,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "819",
+    "ID": "816",
     "Group": "373",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_BATTLE_01",
@@ -10687,7 +10620,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "820",
+    "ID": "817",
     "Group": "373",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_BATTLE_02",
@@ -10703,7 +10636,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "821",
+    "ID": "818",
     "Group": "373",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_BATTLE_03",
@@ -10719,7 +10652,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "822",
+    "ID": "819",
     "Group": "373",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_BATTLE_04",
@@ -10735,7 +10668,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "823",
+    "ID": "820",
     "Group": "373",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_WORLD_BOSS_BATTLE_05",
@@ -10748,7 +10681,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "824",
+    "ID": "821",
     "Group": "373",
     "ActionEvent": "BATTLE_CONTINUE",
     "FocusRootUI": "대사 없음",
@@ -10757,7 +10690,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "825",
+    "ID": "822",
     "Group": "337",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PIECE_DUNGEON_01",
@@ -10770,7 +10703,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "826",
+    "ID": "823",
     "Group": "337",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PIECE_DUNGEON_02",
@@ -10782,7 +10715,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "827",
+    "ID": "824",
     "Group": "337",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PIECE_DUNGEON_03",
@@ -10798,7 +10731,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "828",
+    "ID": "825",
     "Group": "337",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PIECE_DUNGEON_04",
@@ -10810,7 +10743,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "829",
+    "ID": "826",
     "Group": "337",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PIECE_DUNGEON_06",
@@ -10828,7 +10761,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "830",
+    "ID": "827",
     "Group": "337",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PIECE_DUNGEON_07",
@@ -10844,7 +10777,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "831",
+    "ID": "828",
     "Group": "337",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -10858,7 +10791,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "832",
+    "ID": "829",
     "Group": "337",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_PIECE_DUNGEON_05",
@@ -10875,7 +10808,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "833",
+    "ID": "830",
     "Group": "337",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_PIECE_DUNGEON_08",
@@ -10887,7 +10820,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "834",
+    "ID": "831",
     "Group": "338",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_001",
@@ -10900,7 +10833,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "835",
+    "ID": "832",
     "Group": "338",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_002",
@@ -10912,7 +10845,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "836",
+    "ID": "833",
     "Group": "338",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_003",
@@ -10927,7 +10860,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "837",
+    "ID": "834",
     "Group": "338",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_004",
@@ -10939,7 +10872,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "838",
+    "ID": "835",
     "Group": "338",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_005",
@@ -10951,7 +10884,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "839",
+    "ID": "836",
     "Group": "338",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -10965,7 +10898,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "840",
+    "ID": "837",
     "Group": "338",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_006",
@@ -10980,7 +10913,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "841",
+    "ID": "838",
     "Group": "338",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_007",
@@ -10992,7 +10925,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "842",
+    "ID": "839",
     "Group": "338",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_008",
@@ -11005,7 +10938,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "843",
+    "ID": "840",
     "Group": "338",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_009",
@@ -11017,7 +10950,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "844",
+    "ID": "841",
     "Group": "338",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_RUINISLAND_010",
@@ -11029,7 +10962,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "845",
+    "ID": "842",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_001",
@@ -11042,7 +10975,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "846",
+    "ID": "843",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_002",
@@ -11054,7 +10987,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "847",
+    "ID": "844",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_003",
@@ -11066,7 +10999,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "848",
+    "ID": "845",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_004",
@@ -11078,7 +11011,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "849",
+    "ID": "846",
     "Group": "339",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -11092,7 +11025,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "850",
+    "ID": "847",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_005",
@@ -11104,7 +11037,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "851",
+    "ID": "848",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_006",
@@ -11116,7 +11049,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "852",
+    "ID": "849",
     "Group": "339",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -11128,7 +11061,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "853",
+    "ID": "850",
     "Group": "339",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_007",
@@ -11146,7 +11079,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "854",
+    "ID": "851",
     "Group": "339",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_008",
@@ -11164,18 +11097,18 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "855",
+    "ID": "852",
     "Group": "339",
     "StartTrigger": "CHECK_AWAKEN_NODE_LEVEL",
     "StartTriggerValue01": "161",
-    "StartTriggerValue02": "859",
+    "StartTriggerValue02": "856",
     "TalkBoxAnchor": "3",
     "FocusFullTouch": "False",
     "IsButton": "False",
     "UseSkipBtn": "False"
   },
   {
-    "ID": "856",
+    "ID": "853",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_009",
@@ -11187,7 +11120,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "857",
+    "ID": "854",
     "Group": "339",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -11201,7 +11134,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "858",
+    "ID": "855",
     "Group": "339",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -11215,7 +11148,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "859",
+    "ID": "856",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_010",
@@ -11228,7 +11161,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "860",
+    "ID": "857",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_011",
@@ -11240,7 +11173,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "861",
+    "ID": "858",
     "Group": "339",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_AWAKENING_012",
@@ -11252,7 +11185,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "862",
+    "ID": "859",
     "Group": "340",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CUSTOMCRAFT_001",
@@ -11265,7 +11198,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "863",
+    "ID": "860",
     "Group": "340",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CUSTOMCRAFT_002",
@@ -11277,7 +11210,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "864",
+    "ID": "861",
     "Group": "340",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CUSTOMCRAFT_003",
@@ -11289,7 +11222,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "865",
+    "ID": "862",
     "Group": "340",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_CUSTOMCRAFT_004",
@@ -11304,7 +11237,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "866",
+    "ID": "863",
     "Group": "340",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CUSTOMCRAFT_005",
@@ -11316,7 +11249,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "867",
+    "ID": "864",
     "Group": "340",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CUSTOMCRAFT_006",
@@ -11328,7 +11261,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "868",
+    "ID": "865",
     "Group": "340",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CUSTOMCRAFT_007",
@@ -11340,7 +11273,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "869",
+    "ID": "866",
     "Group": "340",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CUSTOMCRAFT_008",
@@ -11352,7 +11285,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "870",
+    "ID": "867",
     "Group": "342",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SYNCHRO_001",
@@ -11365,7 +11298,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "871",
+    "ID": "868",
     "Group": "342",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_SYNCHRO_002",
@@ -11380,7 +11313,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "872",
+    "ID": "869",
     "Group": "342",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_SYNCHRO_003",
@@ -11395,7 +11328,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "873",
+    "ID": "870",
     "Group": "342",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_SYNCHRO_004",
@@ -11406,7 +11339,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "874",
+    "ID": "871",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_001",
@@ -11419,7 +11352,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "875",
+    "ID": "872",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_002",
@@ -11431,7 +11364,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "876",
+    "ID": "873",
     "Group": "343",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_003",
@@ -11446,7 +11379,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "877",
+    "ID": "874",
     "Group": "343",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_004",
@@ -11461,7 +11394,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "878",
+    "ID": "875",
     "Group": "343",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_005",
@@ -11475,7 +11408,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "879",
+    "ID": "876",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_019",
@@ -11487,7 +11420,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "880",
+    "ID": "877",
     "Group": "343",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_020",
@@ -11502,7 +11435,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "881",
+    "ID": "878",
     "Group": "343",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_010",
@@ -11517,7 +11450,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "882",
+    "ID": "879",
     "Group": "343",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_011",
@@ -11532,7 +11465,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "883",
+    "ID": "880",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_012",
@@ -11545,7 +11478,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "884",
+    "ID": "881",
     "Group": "343",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_013",
@@ -11560,7 +11493,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "885",
+    "ID": "882",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_006",
@@ -11572,7 +11505,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "886",
+    "ID": "883",
     "Group": "343",
     "NoticeType": "FOCUS_BOX",
     "TalkNameID": "2000031_Name",
@@ -11586,7 +11519,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "887",
+    "ID": "884",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_007",
@@ -11598,7 +11531,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "888",
+    "ID": "885",
     "Group": "343",
     "NoticeType": "FOCUS_BOX",
     "TalkNameID": "2000031_Name",
@@ -11612,7 +11545,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "889",
+    "ID": "886",
     "Group": "343",
     "NoticeType": "FOCUS_BOX",
     "TalkNameID": "2000031_Name",
@@ -11626,7 +11559,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "890",
+    "ID": "887",
     "Group": "343",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_008",
@@ -11640,7 +11573,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "891",
+    "ID": "888",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_009",
@@ -11652,7 +11585,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "892",
+    "ID": "889",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_014",
@@ -11664,7 +11597,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "893",
+    "ID": "890",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_015",
@@ -11676,7 +11609,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "894",
+    "ID": "891",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_016",
@@ -11688,7 +11621,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "895",
+    "ID": "892",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_017",
@@ -11700,7 +11633,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "896",
+    "ID": "893",
     "Group": "343",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_018",
@@ -11712,7 +11645,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "897",
+    "ID": "894",
     "Group": "344",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_CHALLENGE_001",
@@ -11725,7 +11658,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "898",
+    "ID": "895",
     "Group": "344",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_CHALLENGE_002",
@@ -11736,7 +11669,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "899",
+    "ID": "896",
     "Group": "344",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_CHALLENGE_003",
@@ -11748,7 +11681,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "900",
+    "ID": "897",
     "Group": "344",
     "NoticeType": "FOCUS_BOX",
     "TalkNameID": "2000031_Name",
@@ -11762,7 +11695,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "901",
+    "ID": "898",
     "Group": "344",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_CHALLENGE_004",
@@ -11776,7 +11709,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "902",
+    "ID": "899",
     "Group": "344",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_CHALLENGE_005",
@@ -11790,7 +11723,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "903",
+    "ID": "900",
     "Group": "344",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_CHALLENGE_006",
@@ -11802,7 +11735,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "904",
+    "ID": "901",
     "Group": "344",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_ADVENTURE_LICENSE_CHALLENGE_007",
@@ -11814,7 +11747,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "905",
+    "ID": "902",
     "Group": "351",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_OPEN_001",
@@ -11826,7 +11759,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "906",
+    "ID": "903",
     "Group": "351",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_OPEN_002",
@@ -11839,7 +11772,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "907",
+    "ID": "904",
     "Group": "351",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_OPEN_003",
@@ -11852,7 +11785,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "908",
+    "ID": "905",
     "Group": "351",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_OPEN_004",
@@ -11864,7 +11797,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "909",
+    "ID": "906",
     "Group": "351",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_OPEN_005",
@@ -11877,7 +11810,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "910",
+    "ID": "907",
     "Group": "351",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_OPEN_006",
@@ -11890,7 +11823,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "911",
+    "ID": "908",
     "Group": "351",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_OPEN_007",
@@ -11903,7 +11836,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "912",
+    "ID": "909",
     "Group": "351",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_OPEN_008",
@@ -11916,7 +11849,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "913",
+    "ID": "910",
     "Group": "351",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_OPEN_009",
@@ -11929,7 +11862,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "914",
+    "ID": "911",
     "Group": "351",
     "NoticeType": "FOCUS_BOX",
     "TalkBoxAnchor": "3",
@@ -11944,7 +11877,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "915",
+    "ID": "912",
     "Group": "353",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_353_001",
@@ -11956,7 +11889,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "916",
+    "ID": "913",
     "Group": "353",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_353_002",
@@ -11969,7 +11902,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "917",
+    "ID": "914",
     "Group": "353",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_353_003",
@@ -11982,7 +11915,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "918",
+    "ID": "915",
     "Group": "353",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_353_004",
@@ -11999,7 +11932,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "919",
+    "ID": "916",
     "Group": "353",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -12013,7 +11946,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "920",
+    "ID": "917",
     "Group": "353",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_353_005",
@@ -12026,7 +11959,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "921",
+    "ID": "918",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_001",
@@ -12038,7 +11971,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "922",
+    "ID": "919",
     "Group": "352",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_002",
@@ -12056,7 +11989,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "923",
+    "ID": "920",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_003",
@@ -12068,7 +12001,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "924",
+    "ID": "921",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_004",
@@ -12081,7 +12014,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "925",
+    "ID": "922",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_005",
@@ -12094,7 +12027,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "926",
+    "ID": "923",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_006",
@@ -12107,7 +12040,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "927",
+    "ID": "924",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_007",
@@ -12120,7 +12053,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "928",
+    "ID": "925",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_008",
@@ -12133,7 +12066,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "929",
+    "ID": "926",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_009",
@@ -12146,7 +12079,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "930",
+    "ID": "927",
     "Group": "352",
     "NoticeType": "FOCUS_BOX",
     "TalkBoxAnchor": "3",
@@ -12160,7 +12093,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "931",
+    "ID": "928",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_010",
@@ -12173,7 +12106,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "932",
+    "ID": "929",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_011",
@@ -12185,7 +12118,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "933",
+    "ID": "930",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_012",
@@ -12198,7 +12131,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "934",
+    "ID": "931",
     "Group": "352",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_013",
@@ -12215,7 +12148,7 @@
     "DelayTime": "0.5"
   },
   {
-    "ID": "935",
+    "ID": "932",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_014",
@@ -12227,7 +12160,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "936",
+    "ID": "933",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_015",
@@ -12240,7 +12173,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "937",
+    "ID": "934",
     "Group": "352",
     "NoticeType": "FOCUS_BOX",
     "TalkBoxAnchor": "3",
@@ -12255,7 +12188,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "938",
+    "ID": "935",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_016",
@@ -12268,7 +12201,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "939",
+    "ID": "936",
     "Group": "352",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -12282,7 +12215,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "940",
+    "ID": "937",
     "Group": "352",
     "ActionEvent": "POST_CHASE",
     "FocusBoxType": "1",
@@ -12291,7 +12224,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "941",
+    "ID": "938",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_017",
@@ -12304,7 +12237,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "942",
+    "ID": "939",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_018",
@@ -12317,7 +12250,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "943",
+    "ID": "940",
     "Group": "352",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUIChaseDetail",
@@ -12332,7 +12265,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "944",
+    "ID": "941",
     "Group": "352",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_019",
@@ -12348,7 +12281,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "945",
+    "ID": "942",
     "Group": "352",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_020",
@@ -12364,7 +12297,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "946",
+    "ID": "943",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_021",
@@ -12377,7 +12310,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "947",
+    "ID": "944",
     "Group": "352",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_022",
@@ -12396,7 +12329,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "948",
+    "ID": "945",
     "Group": "352",
     "NoticeType": "FOCUS_BOX",
     "TalkBoxAnchor": "3",
@@ -12412,7 +12345,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "949",
+    "ID": "946",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_023",
@@ -12425,7 +12358,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "950",
+    "ID": "947",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_024",
@@ -12437,7 +12370,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "951",
+    "ID": "948",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_025",
@@ -12449,7 +12382,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "952",
+    "ID": "949",
     "Group": "352",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_CHASE_OPEN_026",
@@ -12461,7 +12394,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "953",
+    "ID": "950",
     "Group": "361",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_361_001",
@@ -12474,7 +12407,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "954",
+    "ID": "951",
     "Group": "361",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "INFILTRATE_NODE",
@@ -12488,7 +12421,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "955",
+    "ID": "952",
     "Group": "361",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_361_002",
@@ -12501,7 +12434,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "956",
+    "ID": "953",
     "Group": "361",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_361_003",
@@ -12514,7 +12447,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "957",
+    "ID": "954",
     "Group": "361",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_361_004",
@@ -12531,7 +12464,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "958",
+    "ID": "955",
     "Group": "361",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_361_005",
@@ -12546,7 +12479,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "959",
+    "ID": "956",
     "Group": "361",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_361_006",
@@ -12565,7 +12498,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "960",
+    "ID": "957",
     "Group": "361",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_361_007",
@@ -12578,7 +12511,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "961",
+    "ID": "958",
     "Group": "362",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_362_001",
@@ -12596,7 +12529,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "962",
+    "ID": "959",
     "Group": "362",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -12610,7 +12543,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "963",
+    "ID": "960",
     "Group": "362",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_362_002",
@@ -12623,7 +12556,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "964",
+    "ID": "961",
     "Group": "362",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_362_003",
@@ -12641,7 +12574,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "965",
+    "ID": "962",
     "Group": "362",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_362_004",
@@ -12659,7 +12592,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "966",
+    "ID": "963",
     "Group": "362",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_362_005",
@@ -12672,7 +12605,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "967",
+    "ID": "964",
     "Group": "363",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_363_001",
@@ -12690,7 +12623,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "968",
+    "ID": "965",
     "Group": "363",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_363_002",
@@ -12703,7 +12636,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "969",
+    "ID": "966",
     "Group": "363",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_363_003",
@@ -12715,7 +12648,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "970",
+    "ID": "967",
     "Group": "363",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_363_004",
@@ -12727,7 +12660,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "971",
+    "ID": "968",
     "Group": "363",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_363_005",
@@ -12740,7 +12673,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "972",
+    "ID": "969",
     "Group": "363",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -12754,7 +12687,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "973",
+    "ID": "970",
     "Group": "363",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -12768,7 +12701,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "974",
+    "ID": "971",
     "Group": "363",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -12782,7 +12715,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "975",
+    "ID": "972",
     "Group": "364",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_364_001",
@@ -12795,7 +12728,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "976",
+    "ID": "973",
     "Group": "364",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_364_002",
@@ -12808,7 +12741,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "977",
+    "ID": "974",
     "Group": "364",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_364_003",
@@ -12821,7 +12754,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "978",
+    "ID": "975",
     "Group": "364",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_364_004",
@@ -12834,7 +12767,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "979",
+    "ID": "976",
     "Group": "364",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_364_005",
@@ -12852,7 +12785,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "980",
+    "ID": "977",
     "Group": "364",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_364_006",
@@ -12866,7 +12799,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "981",
+    "ID": "978",
     "Group": "364",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_364_007",
@@ -12879,7 +12812,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "982",
+    "ID": "979",
     "Group": "364",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_364_008",
@@ -12893,7 +12826,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "983",
+    "ID": "980",
     "Group": "365",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_365_001",
@@ -12911,7 +12844,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "984",
+    "ID": "981",
     "Group": "365",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_365_002",
@@ -12924,7 +12857,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "985",
+    "ID": "982",
     "Group": "365",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_365_003",
@@ -12936,7 +12869,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "986",
+    "ID": "983",
     "Group": "365",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_365_004",
@@ -12949,7 +12882,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "987",
+    "ID": "984",
     "Group": "366",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_366_001",
@@ -12962,7 +12895,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "988",
+    "ID": "985",
     "Group": "366",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "INFILTRATE_NODE",
@@ -12977,7 +12910,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "989",
+    "ID": "986",
     "Group": "366",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_366_002",
@@ -12990,7 +12923,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "990",
+    "ID": "987",
     "Group": "366",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_366_003",
@@ -13002,7 +12935,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "991",
+    "ID": "988",
     "Group": "366",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_366_004",
@@ -13014,7 +12947,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "992",
+    "ID": "989",
     "Group": "366",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_366_005",
@@ -13026,7 +12959,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "993",
+    "ID": "990",
     "Group": "366",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_366_006",
@@ -13038,7 +12971,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "994",
+    "ID": "991",
     "Group": "366",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_366_007",
@@ -13056,7 +12989,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "995",
+    "ID": "992",
     "Group": "366",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_366_008",
@@ -13069,7 +13002,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "996",
+    "ID": "993",
     "Group": "367",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "INFILTRATE_NODE",
@@ -13082,7 +13015,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "997",
+    "ID": "994",
     "Group": "367",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_367_001",
@@ -13095,7 +13028,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "998",
+    "ID": "995",
     "Group": "367",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_367_002",
@@ -13108,7 +13041,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "999",
+    "ID": "996",
     "Group": "367",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_367_003",
@@ -13121,7 +13054,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1000",
+    "ID": "997",
     "Group": "367",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_367_004",
@@ -13134,7 +13067,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1001",
+    "ID": "998",
     "Group": "367",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_367_005",
@@ -13147,7 +13080,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1002",
+    "ID": "999",
     "Group": "367",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_367_006",
@@ -13160,7 +13093,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1003",
+    "ID": "1000",
     "Group": "367",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_367_007",
@@ -13173,7 +13106,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1004",
+    "ID": "1001",
     "Group": "371",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_371_001",
@@ -13189,7 +13122,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1005",
+    "ID": "1002",
     "Group": "371",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_IRR_INFILTRATE_371_002",
@@ -13207,7 +13140,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1006",
+    "ID": "1003",
     "Group": "380",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_001",
@@ -13220,7 +13153,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1007",
+    "ID": "1004",
     "Group": "380",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_002",
@@ -13232,7 +13165,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1008",
+    "ID": "1005",
     "Group": "380",
     "ActionEvent": "MOVE_SCENARIO_DUNGEON_MONAD_GATE",
     "ActionEventValue": "74000401",
@@ -13241,7 +13174,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1009",
+    "ID": "1006",
     "Group": "381",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_004",
@@ -13253,7 +13186,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1010",
+    "ID": "1007",
     "Group": "381",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_005",
@@ -13265,7 +13198,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1011",
+    "ID": "1008",
     "Group": "381",
     "ActionEvent": "MOVE_SCENARIO_DUNGEON_MONAD_GATE",
     "ActionEventValue": "74000402",
@@ -13274,7 +13207,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1012",
+    "ID": "1009",
     "Group": "382",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_006",
@@ -13286,7 +13219,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1013",
+    "ID": "1010",
     "Group": "382",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_007",
@@ -13303,7 +13236,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1014",
+    "ID": "1011",
     "Group": "382",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_008",
@@ -13314,7 +13247,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1015",
+    "ID": "1012",
     "Group": "382",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_009",
@@ -13328,7 +13261,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1016",
+    "ID": "1013",
     "Group": "382",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUIMonadGate",
@@ -13342,7 +13275,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1017",
+    "ID": "1014",
     "Group": "383",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_010",
@@ -13357,7 +13290,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1018",
+    "ID": "1015",
     "Group": "383",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_011",
@@ -13369,7 +13302,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1019",
+    "ID": "1016",
     "Group": "383",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -13381,7 +13314,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1020",
+    "ID": "1017",
     "Group": "383",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_012",
@@ -13394,7 +13327,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1021",
+    "ID": "1018",
     "Group": "383",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUIMonadGate",
@@ -13408,7 +13341,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1022",
+    "ID": "1019",
     "Group": "384",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_013",
@@ -13422,7 +13355,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1023",
+    "ID": "1020",
     "Group": "384",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_014",
@@ -13436,7 +13369,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1024",
+    "ID": "1021",
     "Group": "384",
     "NoticeType": "FOCUS_BOX",
     "TalkNameID": "2000084_Name",
@@ -13452,7 +13385,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1025",
+    "ID": "1022",
     "Group": "384",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_016",
@@ -13466,7 +13399,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1026",
+    "ID": "1023",
     "Group": "384",
     "NoticeType": "FOCUS_BOX",
     "FocusRootUI": "CUIMonadGate",
@@ -13480,7 +13413,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1027",
+    "ID": "1024",
     "Group": "385",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_017",
@@ -13495,7 +13428,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1028",
+    "ID": "1025",
     "Group": "385",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_018",
@@ -13509,7 +13442,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1029",
+    "ID": "1026",
     "Group": "385",
     "NoticeType": "FOCUS_BOX",
     "TalkNameID": "2000084_Name",
@@ -13525,7 +13458,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1030",
+    "ID": "1027",
     "Group": "385",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_019",
@@ -13538,7 +13471,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1031",
+    "ID": "1028",
     "Group": "385",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -13553,7 +13486,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1032",
+    "ID": "1029",
     "Group": "385",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -13565,7 +13498,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1033",
+    "ID": "1030",
     "Group": "385",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_020",
@@ -13578,7 +13511,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1034",
+    "ID": "1031",
     "Group": "385",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_021",
@@ -13592,7 +13525,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1035",
+    "ID": "1032",
     "Group": "385",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_022",
@@ -13606,7 +13539,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1036",
+    "ID": "1033",
     "Group": "385",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_023",
@@ -13619,7 +13552,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1037",
+    "ID": "1034",
     "Group": "385",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_024",
@@ -13635,7 +13568,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1038",
+    "ID": "1035",
     "Group": "385",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_025",
@@ -13651,7 +13584,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1039",
+    "ID": "1036",
     "Group": "385",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_026",
@@ -13667,7 +13600,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1040",
+    "ID": "1037",
     "Group": "385",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_027",
@@ -13683,7 +13616,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1041",
+    "ID": "1038",
     "Group": "385",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_028",
@@ -13697,7 +13630,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1042",
+    "ID": "1039",
     "Group": "385",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -13709,7 +13642,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1043",
+    "ID": "1040",
     "Group": "385",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_029",
@@ -13723,7 +13656,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1044",
+    "ID": "1041",
     "Group": "385",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_030",
@@ -13736,7 +13669,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1045",
+    "ID": "1042",
     "Group": "385",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_031",
@@ -13749,7 +13682,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1046",
+    "ID": "1043",
     "Group": "385",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_032",
@@ -13763,7 +13696,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1047",
+    "ID": "1044",
     "Group": "385",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_033",
@@ -13776,7 +13709,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1048",
+    "ID": "1045",
     "Group": "385",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_051",
@@ -13789,7 +13722,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1049",
+    "ID": "1046",
     "Group": "385",
     "NoticeType": "FOCUS_BOX",
     "FocusBoxType": "1",
@@ -13801,7 +13734,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1050",
+    "ID": "1047",
     "Group": "388",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_034",
@@ -13815,7 +13748,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1051",
+    "ID": "1048",
     "Group": "388",
     "ActionEvent": "MOVE_SCENARIO_DUNGEON_MONAD_GATE",
     "ActionEventValue": "74000403",
@@ -13824,7 +13757,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1052",
+    "ID": "1049",
     "Group": "389",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_035",
@@ -13837,7 +13770,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1053",
+    "ID": "1050",
     "Group": "389",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_036",
@@ -13850,7 +13783,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1054",
+    "ID": "1051",
     "Group": "389",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_037",
@@ -13862,7 +13795,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1055",
+    "ID": "1052",
     "Group": "389",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_038",
@@ -13875,7 +13808,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1056",
+    "ID": "1053",
     "Group": "389",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_039",
@@ -13891,7 +13824,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1057",
+    "ID": "1054",
     "Group": "389",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_040",
@@ -13904,7 +13837,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1058",
+    "ID": "1055",
     "Group": "389",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_041",
@@ -13920,7 +13853,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1059",
+    "ID": "1056",
     "Group": "389",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_042",
@@ -13934,7 +13867,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1060",
+    "ID": "1057",
     "Group": "389",
     "NoticeType": "FOCUS_BOX",
     "TalkNameID": "2000084_Name",
@@ -13949,7 +13882,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1061",
+    "ID": "1058",
     "Group": "389",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_043",
@@ -13965,7 +13898,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1062",
+    "ID": "1059",
     "Group": "389",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_044",
@@ -13981,7 +13914,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1063",
+    "ID": "1060",
     "Group": "389",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_045",
@@ -13997,7 +13930,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1064",
+    "ID": "1061",
     "Group": "389",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_046",
@@ -14011,7 +13944,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1065",
+    "ID": "1062",
     "Group": "389",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_047",
@@ -14025,7 +13958,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1066",
+    "ID": "1063",
     "Group": "390",
     "ActionEvent": "MOVE_SCENARIO_DUNGEON_MONAD_GATE",
     "ActionEventValue": "74700401",
@@ -14034,7 +13967,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1067",
+    "ID": "1064",
     "Group": "391",
     "ActionEvent": "MOVE_SCENARIO_DUNGEON_MONAD_GATE",
     "ActionEventValue": "74700402",
@@ -14043,7 +13976,7 @@
     "UseSkipBtn": "False"
   },
   {
-    "ID": "1068",
+    "ID": "1065",
     "Group": "392",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_048",
@@ -14057,7 +13990,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1069",
+    "ID": "1066",
     "Group": "392",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_049",
@@ -14071,7 +14004,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1070",
+    "ID": "1067",
     "Group": "392",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_MONAD_GATE_050",
@@ -14085,7 +14018,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1071",
+    "ID": "1068",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_01",
@@ -14097,7 +14030,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1072",
+    "ID": "1069",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_02",
@@ -14110,7 +14043,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1073",
+    "ID": "1070",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_03",
@@ -14123,7 +14056,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1074",
+    "ID": "1071",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_04",
@@ -14136,7 +14069,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1075",
+    "ID": "1072",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_05",
@@ -14149,7 +14082,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1076",
+    "ID": "1073",
     "Group": "401",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_06",
@@ -14165,7 +14098,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1077",
+    "ID": "1074",
     "Group": "401",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_07",
@@ -14181,7 +14114,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1078",
+    "ID": "1075",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_08",
@@ -14193,7 +14126,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1079",
+    "ID": "1076",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_09",
@@ -14206,7 +14139,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1080",
+    "ID": "1077",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_10",
@@ -14218,7 +14151,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1081",
+    "ID": "1078",
     "Group": "401",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_11",
@@ -14233,7 +14166,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1082",
+    "ID": "1079",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_12",
@@ -14246,7 +14179,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1083",
+    "ID": "1080",
     "Group": "401",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_13",
@@ -14261,7 +14194,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1084",
+    "ID": "1081",
     "Group": "401",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_14",
@@ -14275,7 +14208,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1085",
+    "ID": "1082",
     "Group": "401",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_15",
@@ -14289,7 +14222,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1086",
+    "ID": "1083",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_16",
@@ -14302,7 +14235,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1087",
+    "ID": "1084",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_17",
@@ -14315,7 +14248,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1088",
+    "ID": "1085",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_18",
@@ -14327,7 +14260,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1089",
+    "ID": "1086",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_19",
@@ -14340,7 +14273,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1090",
+    "ID": "1087",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_20",
@@ -14352,7 +14285,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1091",
+    "ID": "1088",
     "Group": "401",
     "NoticeType": "FOCUS_TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_21",
@@ -14368,7 +14301,7 @@
     "UseSkipBtn": "True"
   },
   {
-    "ID": "1092",
+    "ID": "1089",
     "Group": "401",
     "NoticeType": "TALK_BOX",
     "TextID": "TUTORIAL_CHARACTER_FUSION_22",

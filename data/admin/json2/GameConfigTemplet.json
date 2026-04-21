@@ -293,7 +293,7 @@
   },
   {
     "ID": "TRUST_MATERIAL_EVO_COUNT_DAILY",
-    "ValueString": "30"
+    "ValueString": "0"
   },
   {
     "ID": "RESEARCH_OPEN_DUNGEON_ID",
@@ -421,7 +421,7 @@
   },
   {
     "ID": "RETURN_USER_BUFF_GROUP",
-    "ValueString": "49,50,51,52"
+    "ValueString": "49,50,51"
   },
   {
     "ID": "SELECT_OPTION_CRAFT_COST_PARTS",
@@ -641,7 +641,7 @@
   },
   {
     "ID": "MIRSHA_SUPPORTERS_USER_BUFF_GROUP",
-    "ValueString": "39,91,92,93"
+    "ValueString": "39,91,92"
   },
   {
     "ID": "BOX_TYPE_CHOICE_CHAR_MAX_LEVEL",
@@ -774,5 +774,9 @@
   {
     "ID": "PVP_REALTIME_BAN_GUARD_SLOT",
     "ValueString": "0"
+  },
+  {
+    "ID": "MAX_DAILY_BONUS_COUNT_FARMING_DUNGEON",
+    "ValueString": "2"
   }
 ]

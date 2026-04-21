@@ -3521,11 +3521,11 @@
   },
   {
     "ID": "SKILL_DESC_2000039_Skill03_LV1",
-    "Korean": "적을 공격하고 <color=#28d9ed>[Buff_C_2000039_3_1]</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.",
-    "English": "Attacks an enemy and has a <color=#28d9ed>[Buff_C_2000039_3_1]</color> chance to steal <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> from the target.\\nIncreases damage dealt proportional to the caster's <color=#28d9ed>Speed</color>.",
-    "Japanese": "敵単体にダメージを与え、<color=#28d9ed>[Buff_C_2000039_3_1]</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージがUPする。",
-    "China_Simplified": "攻击敌人，并有<color=#28d9ed>[Buff_C_2000039_3_1]</color>的几率夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n自身的<color=#28d9ed>速度</color>越高，则该技能的伤害越高。",
-    "China_Traditional": "攻擊敵人，以<color=#28d9ed>[Buff_C_2000039_3_1]</color>的機率奪取目標的<color=#28d9ed>所有</color><color=#28d9ed>強化效果</color>。\\n此技能造成的傷害隨自身的<color=#28d9ed>速度</color>提升而增加。"
+    "Korean": "적을 공격하고 <color=#28d9ed>[Buff_C_2000039_3_1]</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n이 스킬은 자신의 <color=#28d9ed>속도</color>가 높을수록 피해가 증가합니다.\\n대상의 방어력을 <color=#28d9ed>30%</color> 무시합니다.",
+    "English": "Attacks an enemy and has a <color=#28d9ed>[Buff_C_2000039_3_1]</color> chance to steal <color=#28d9ed>all</color> of the target's <color=#28d9ed>buffs</color>.\\nThis skill's DMG increases the higher own <color=#28d9ed>Speed</color> is.\\nIgnores <color=#28d9ed>30%</color> of the target's Defense.",
+    "Japanese": "敵にダメージを与え、<color=#28d9ed>[Buff_C_2000039_3_1]</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\nこのスキルは自分の<color=#28d9ed>スピード</color>が高いほどダメージが増加する。\\n対象の防御力を<color=#28d9ed>30%</color>無視する。",
+    "China_Simplified": "攻击敌人，以<color=#28d9ed>[Buff_C_2000039_3_1]</color>的概率夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n该技能自身<color=#28d9ed>速度</color>越高，伤害越大。\\n无视目标防御力的<color=#28d9ed>30%</color>。",
+    "China_Traditional": "攻擊敵人，以<color=#28d9ed>[Buff_C_2000039_3_1]</color>的概率奪取目標的<color=#28d9ed>所有</color><color=#28d9ed>強化效果</color>。\\n該技能自身<color=#28d9ed>速度</color>越高，傷害越大。\\n無視目標防禦力的<color=#28d9ed>30%</color>。"
   },
   {
     "ID": "SKILL_NAME_2000040_Skill01",
@@ -3790,6 +3790,78 @@
     "Japanese": "敵2体にダメージを与え、<color=#28d9ed>[Buff_C_2000043_3_1]</color>の確率で<color=#28d9ed>[Buff_T_2000043_3_1]ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>[Buff_C_2000043_3_3]</color>の確率で敵全体に<color=#28d9ed>[Buff_T_2000043_3_3]ターン</color>の間<color=#28d9ed>回復不可</color>を付与する。\\n対象が地属性の場合、ミスが発生しない。",
     "China_Simplified": "攻击2名敌人，并有<color=#28d9ed>[Buff_C_2000043_3_1]</color>的概率使全体敌人的<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低，持续<color=#28d9ed>[Buff_T_2000043_3_1]回合</color>。\\n此外，有<color=#28d9ed>[Buff_C_2000043_3_3]</color>的概率对全体敌人施加<color=#28d9ed>无法恢复</color>效果，持续<color=#28d9ed>[Buff_T_2000043_3_3]回合</color>。\\n若目标为地属性，则不会发生闪避。",
     "China_Traditional": "攻擊2名敵人，並有<color=#28d9ed>[Buff_C_2000043_3_1]</color>的機率使全體敵人的<color=#28d9ed>防禦力</color>和<color=#28d9ed>速度</color>減少，持續<color=#28d9ed>[Buff_T_2000043_3_1]回合</color>。\\n此外，有<color=#28d9ed>[Buff_C_2000043_3_3]</color>的機率對全體敵人施加<color=#28d9ed>無法恢復</color>效果，持續<color=#28d9ed>[Buff_T_2000043_3_3]回合</color>。\\n若目標為地屬性，則不會發生閃避。"
+  },
+  {
+    "ID": "SKILL_NAME_2700043_Skill01",
+    "Korean": "안락한 죽음",
+    "English": "Peaceful Death",
+    "Japanese": "安らかな死",
+    "China_Simplified": "安乐死",
+    "China_Traditional": "安樂死"
+  },
+  {
+    "ID": "SKILL_DESC_2700043_Skill01_LV1",
+    "Korean": "적 2인을 공격하고 <color=#28d9ed>[Buff_C_2700043_1_1]</color> 확률로 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[Buff_T_2700043_1_1]턴</color> 동안 감소시킵니다.",
+    "English": "Attacks 2 enemies and has a <color=#28d9ed>[Buff_C_2700043_1_1]</color> chance to decrease the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>[Buff_T_2700043_1_1] turns</color>.",
+    "Japanese": "敵2体にダメージを与え、<color=#28d9ed>[Buff_C_2700043_1_1]</color>の確率で対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>[Buff_T_2700043_1_1]ターン</color>の間DOWNさせる。",
+    "China_Simplified": "攻击2名敌人，以<color=#28d9ed>[Buff_C_2700043_1_1]</color>的概率使目标<color=#28d9ed>防御力</color>降低<color=#28d9ed>[Buff_T_2700043_1_1]回合</color>。",
+    "China_Traditional": "攻擊2名敵人，以<color=#28d9ed>[Buff_C_2700043_1_1]</color>的概率使目標<color=#28d9ed>防禦力</color>降低<color=#28d9ed>[Buff_T_2700043_1_1]回合</color>。"
+  },
+  {
+    "ID": "SKILL_NAME_2700043_Skill02",
+    "Korean": "인도하는 등불",
+    "English": "Guiding Lantern",
+    "Japanese": "導きの灯",
+    "China_Simplified": "引路灯",
+    "China_Traditional": "引路燈"
+  },
+  {
+    "ID": "SKILL_DESC_2700043_Skill02_LV1",
+    "Korean": "적 2인을 공격합니다.\\n<color=#28d9ed>[Buff_C_2700043_2_1]</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>[Buff_V_2700043_2_1]개</color> 해제하고 <color=#28d9ed>[Buff_T_2700043_2_2]턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>[Buff_T_2700043_2_2]턴</color> 동안 감소시키고 추가로 <color=#28d9ed>[Buff_T_2700043_2_2]턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.",
+    "English": "Attacks 2 enemies.\\nHas a <color=#28d9ed>[Buff_C_2700043_2_1]</color> chance to remove <color=#28d9ed>[Buff_V_2700043_2_1]</color> of the target's <color=#28d9ed>buffs</color> and inflict <color=#28d9ed>Burn</color> on the target for <color=#28d9ed>[Buff_T_2700043_2_2] turns</color>.\\nIf the target is <color=#28d9ed>Earth</color>, this attack cannot miss, decreases the target's <color=#28d9ed>Attack</color> for <color=#28d9ed>[Buff_T_2700043_2_2] turns</color>, and additionally inflicts <color=#28d9ed>Burn</color> for <color=#28d9ed>[Buff_T_2700043_2_2] turns</color>.",
+    "Japanese": "敵2体にダメージを与える。\\n<color=#28d9ed>[Buff_C_2700043_2_1]</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>[Buff_V_2700043_2_1]個</color>解除し、<color=#28d9ed>火傷</color>を<color=#28d9ed>[Buff_T_2700043_2_2]ターン</color>の間付与する。\\n対象が地属性の場合、ミスが発生せず、<color=#28d9ed>攻撃力</color>を<color=#28d9ed>[Buff_T_2700043_2_2]ターン</color>の間DOWNさせ、追加で<color=#28d9ed>火傷</color>を<color=#28d9ed>[Buff_T_2700043_2_2]ターン</color>の間付与する。",
+    "China_Simplified": "攻击2名敌人。\\n以<color=#28d9ed>[Buff_C_2700043_2_1]</color>的概率解除目标<color=#28d9ed>[Buff_V_2700043_2_1]个</color><color=#28d9ed>强化效果</color>，并附加<color=#28d9ed>[Buff_T_2700043_2_2]回合</color>的<color=#28d9ed>烧伤</color>。\\n若目标为土属性，则不发生<color=#28d9ed>闪避</color>，使<color=#28d9ed>攻击力</color>降低<color=#28d9ed>[Buff_T_2700043_2_2]回合</color>，并追加附加<color=#28d9ed>[Buff_T_2700043_2_2]回合</color>的<color=#28d9ed>烧伤</color>。",
+    "China_Traditional": "攻擊2名敵人。\\n以<color=#28d9ed>[Buff_C_2700043_2_1]</color>的概率解除目標<color=#28d9ed>[Buff_V_2700043_2_1]個</color><color=#28d9ed>強化效果</color>，並附加<color=#28d9ed>[Buff_T_2700043_2_2]回合</color>的<color=#28d9ed>燒傷</color>。\\n若目標為大地屬性，則不發生<color=#28d9ed>擊偏</color>，使<color=#28d9ed>攻擊力</color>降低<color=#28d9ed>[Buff_T_2700043_2_2]回合</color>，並追加附加<color=#28d9ed>[Buff_T_2700043_2_2]回合</color>的<color=#28d9ed>燒傷</color>。"
+  },
+  {
+    "ID": "SKILL_NAME_2700043_Skill03",
+    "Korean": "사형 선고",
+    "English": "Death Sentence",
+    "Japanese": "死刑宣告",
+    "China_Simplified": "死刑宣判",
+    "China_Traditional": "死刑宣判"
+  },
+  {
+    "ID": "SKILL_DESC_2700043_Skill03_LV1",
+    "Korean": "적 2인을 공격하고 <color=#28d9ed>[Buff_C_2700043_3_1]</color> 확률로 <color=#28d9ed>[Buff_T_2700043_3_1]턴</color> 동안 적 전체의 <color=#28d9ed>방어력</color>과 <color=#28d9ed>속도</color>를 감소시킵니다.\\n또한 <color=#28d9ed>[Buff_C_2700043_3_3]</color> 확률로 적 전체에게 <color=#28d9ed>[Buff_T_2700043_3_3]턴</color> 동안 <color=#28d9ed>회복 불가</color>를 부여하고 공격력이 가장 높은 적의 행동 게이지를 <color=#28d9ed>20%</color> 감소시킵니다.\\n\\n대상이 지속성이라면 빗나감이 발생하지 않습니다.",
+    "English": "Attacks 2 enemies and has a <color=#28d9ed>[Buff_C_2700043_3_1]</color> chance to decrease all enemies' <color=#28d9ed>Defense</color> and <color=#28d9ed>Speed</color> for <color=#28d9ed>[Buff_T_2700043_3_1] turns</color>.\\nAdditionally, has a <color=#28d9ed>[Buff_C_2700043_3_3]</color> chance to inflict <color=#28d9ed>Unhealable</color> on all enemies for <color=#28d9ed>[Buff_T_2700043_3_3] turns</color> and decreases the Priority of the enemy with the highest Attack by <color=#28d9ed>20%</color>.\\n\\nIf the target is Earth type, Miss will not occur.",
+    "Japanese": "敵2体にダメージを与え、<color=#28d9ed>[Buff_C_2700043_3_1]</color>の確率で<color=#28d9ed>[Buff_T_2700043_3_1]ターン</color>の間、敵全体の<color=#28d9ed>防御力</color>と<color=#28d9ed>スピード</color>をDOWNさせる。\\nさらに<color=#28d9ed>[Buff_C_2700043_3_3]</color>の確率で敵全体に<color=#28d9ed>回復不可</color>を<color=#28d9ed>[Buff_T_2700043_3_3]ターン</color>の間付与し、攻撃力が最も高い敵の行動ゲージを<color=#28d9ed>20%</color>DOWNさせる。\\n\\n対象が地属性の場合、ミスが発生しない。",
+    "China_Simplified": "攻击2名敌人，以<color=#28d9ed>[Buff_C_2700043_3_1]</color>的概率使全体敌人<color=#28d9ed>防御力</color>和<color=#28d9ed>速度</color>降低<color=#28d9ed>[Buff_T_2700043_3_1]回合</color>。\\n此外以<color=#28d9ed>[Buff_C_2700043_3_3]</color>的概率对全体敌人附加<color=#28d9ed>[Buff_T_2700043_3_3]回合</color>的<color=#28d9ed>无法恢复</color>，并使攻击力最高的敌人行动值降低<color=#28d9ed>20%</color>。\\n\\n若目标为土属性，则不发生<color=#28d9ed>闪避</color>。",
+    "China_Traditional": "攻擊2名敵人，以<color=#28d9ed>[Buff_C_2700043_3_1]</color>的概率使全體敵人<color=#28d9ed>防禦力</color>和<color=#28d9ed>速度</color>降低<color=#28d9ed>[Buff_T_2700043_3_1]回合</color>。\\n此外以<color=#28d9ed>[Buff_C_2700043_3_3]</color>的概率對全體敵人附加<color=#28d9ed>[Buff_T_2700043_3_3]回合</color>的<color=#28d9ed>無法恢復</color>，並使攻擊力最高的敵人速攻值降低<color=#28d9ed>20%</color>。\\n\\n若目標為大地屬性，則不發生<color=#28d9ed>擊偏</color>。"
+  },
+  {
+    "ID": "SKILL_DESC_2700043_Skill04_LV1",
+    "Korean": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 적 전체에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.(효과 저항 무시)\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[Buff_T_2700043_backup_1_1]턴</color> 동안 감소시킵니다. ",
+    "English": "<color=#ffd732>Chain Companion Effect</color> : After attacking, inflicts <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>2 turns</color>. (Ignores Resilience)\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, decreases the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>[Buff_T_2700043_backup_1_1] turns</color>.",
+    "Japanese": "<color=#ffd732>チェーン効果(汎用)</color> : 攻撃後、敵全体に<color=#28d9ed>火傷</color>を<color=#28d9ed>2ターン</color>の間付与する。(効果抵抗無視)\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>[Buff_T_2700043_backup_1_1]ターン</color>の間DOWNさせる。",
+    "China_Simplified": "<color=#ffd732>连携技能自由顺序效果</color> : 攻击后对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>。(无视效果抵抗)\\n\\n<color=#ffd732>夹攻效果</color> : 攻击后使目标<color=#28d9ed>防御力</color>降低<color=#28d9ed>[Buff_T_2700043_backup_1_1]回合</color>。",
+    "China_Traditional": "<color=#ffd732>連鎖技能同行效果</color> : 攻擊後對全體敵人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>燒傷</color>。(無視效果抵抗)\\n\\n<color=#ffd732>夾攻效果</color> : 攻擊後使目標<color=#28d9ed>防禦力</color>降低<color=#28d9ed>[Buff_T_2700043_backup_1_1]回合</color>。"
+  },
+  {
+    "ID": "SKILL_DESC_2700043_Skill23_LV1",
+    "Korean": "<color=#28d9ed>사형 선고</color> 사용 시 자신의 <color=#28d9ed>공격력</color>이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
+    "English": "When <color=#28d9ed>Death Sentence</color> is used, own <color=#28d9ed>Attack</color> increases for <color=#28d9ed>2 turns</color>.",
+    "Japanese": "<color=#28d9ed>【死刑宣告】</color>使用時、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>2ターン</color>の間UPする。",
+    "China_Simplified": "使用<color=#28d9ed>死刑宣判</color>时，自身<color=#28d9ed>攻击力</color>在<color=#28d9ed>2回合</color>内提升。",
+    "China_Traditional": "使用<color=#28d9ed>死刑宣判</color>時，自身<color=#28d9ed>攻擊力</color>在<color=#28d9ed>2回合</color>內提升。"
+  },
+  {
+    "ID": "SKILL_DESC_2700043_Skill23_LV2",
+    "Korean": "<color=#28d9ed>사형 선고</color> 사용 시 자신의 <color=#28d9ed>공격력</color>이 <color=#28d9ed>2턴</color> 동안 증가하고 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+    "English": "When <color=#28d9ed>Death Sentence</color> is used, own <color=#28d9ed>Attack</color> increases for <color=#28d9ed>2 turns</color> and gains an <color=#28d9ed>Extra Turn</color>.",
+    "Japanese": "<color=#28d9ed>【死刑宣告】</color>使用時、自分の<color=#28d9ed>攻撃力</color>が<color=#28d9ed>2ターン</color>の間UPし、<color=#28d9ed>追加ターン</color>を獲得する。",
+    "China_Simplified": "使用<color=#28d9ed>死刑宣判</color>时，自身<color=#28d9ed>攻击力</color>在<color=#28d9ed>2回合</color>内提升，并获得<color=#28d9ed>额外回合</color>。",
+    "China_Traditional": "使用<color=#28d9ed>死刑宣判</color>時，自身<color=#28d9ed>攻擊力</color>在<color=#28d9ed>2回合</color>內提升，並獲得<color=#28d9ed>追加回合</color>。"
   },
   {
     "ID": "SKILL_NAME_2000044_Skill01",
@@ -5761,11 +5833,19 @@
   },
   {
     "ID": "SKILL_DESC_2000079_Skill02_LV1",
-    "Korean": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>[Buff_V_2000079_2_1]</color> 증가 시킵니다. (최대 5회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>[Buff_V_2000079_2_2]</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>[Buff_C_2000079_2_3]</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>[Buff_V_2000079_2_3]</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
-    "English": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>[Buff_V_2000079_2_1]</color> (Max 5 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>[Buff_V_2000079_2_2]</color> Health. Has a <color=#28d9ed>[Buff_C_2000079_2_3]</color> chance to reduce Priority of all enemies by <color=#28d9ed>[Buff_V_2000079_2_3]</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-    "Japanese": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>[Buff_V_2000079_2_1]</color>UPさせる。この効果は最大5回まで累積する。\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>[Buff_V_2000079_2_2]</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>[Buff_C_2000079_2_3]</color>の確率で敵全体の行動ゲージを<color=#28d9ed>[Buff_V_2000079_2_3]</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
-    "China_Simplified": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>[Buff_V_2000079_2_1]</color>。(最多可叠加5次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>[Buff_V_2000079_2_2]</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>[Buff_C_2000079_2_3]</color>的几率使全体敌人的行动值降低<color=#28d9ed>[Buff_V_2000079_2_3]</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
-    "China_Traditional": "(被動效果)自身攻擊具有弱化效果的目標時，使全體我軍的傷害增加<color=#28d9ed>[Buff_V_2000079_2_1]</color>。(最多5次)\\n\\n(發動效果)死亡時，立即以<color=#28d9ed>[Buff_V_2000079_2_2]</color>的生命力<color=#28d9ed>復活</color>。以<color=#28d9ed>[Buff_C_2000079_2_3]</color>的機率使全體敵人的速攻值減少<color=#28d9ed>[Buff_V_2000079_2_3]</color>。使用此技能後，敵人不會發動反擊、復仇、迅速應對。"
+    "Korean": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>[Buff_V_2000079_2_1]</color> 증가 시킵니다. (최대 3회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>[Buff_V_2000079_2_2]</color>의 체력으로 <color=#28d9ed>부활</color>합니다. <color=#28d9ed>[Buff_C_2000079_2_3]</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>[Buff_V_2000079_2_3]</color> 감소시킵니다. 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+    "English": "(Passive Effect) When attacking a target inflicted with a debuff, increases damage of all allies by <color=#28d9ed>[Buff_V_2000079_2_1]</color> (Max 3 stacks).\\n\\n(Triggered Effect) Upon death, immediately <color=#28d9ed>resurrects</color> with <color=#28d9ed>[Buff_V_2000079_2_2]</color> Health. Has a <color=#28d9ed>[Buff_C_2000079_2_3]</color> chance to reduce Priority of all enemies by <color=#28d9ed>[Buff_V_2000079_2_3]</color>. Right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+    "Japanese": "(パッシブ効果)自分が弱体効果のある対象を攻撃した場合、味方全体の与えるダメージを<color=#28d9ed>[Buff_V_2000079_2_1]</color>UPさせる。(最大3回)\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>[Buff_V_2000079_2_2]</color>のHPで<color=#28d9ed>復活</color>する。<color=#28d9ed>[Buff_C_2000079_2_3]</color>の確率で敵全体の行動ゲージを<color=#28d9ed>[Buff_V_2000079_2_3]</color>DOWNさせる。このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+    "China_Simplified": "(被动效果)自身攻击附带弱化效果的目标时，使全体友军的伤害提升<color=#28d9ed>[Buff_V_2000079_2_1]</color>。(最多可叠加3次)\\n\\n(触发效果)死亡后立即以<color=#28d9ed>[Buff_V_2000079_2_2]</color>的生命值<color=#28d9ed>复活</color>。有<color=#28d9ed>[Buff_C_2000079_2_3]</color>的几率使全体敌人的行动值降低<color=#28d9ed>[Buff_V_2000079_2_3]</color>。此技能发动后，使敌人无法触发反击、复仇、迅速应对效果。",
+    "China_Traditional": "(被動效果)自身攻擊具有弱化效果的目標時，使全體我軍的傷害增加<color=#28d9ed>[Buff_V_2000079_2_1]</color>。(最多3次)\\n\\n(發動效果)死亡時，立即以<color=#28d9ed>[Buff_V_2000079_2_2]</color>的生命力<color=#28d9ed>復活</color>。以<color=#28d9ed>[Buff_C_2000079_2_3]</color>的機率使全體敵人的速攻值減少<color=#28d9ed>[Buff_V_2000079_2_3]</color>。使用此技能後，敵人不會發動反擊、復仇、迅速應對。"
+  },
+  {
+    "ID": "SKILL_DESC_2000079_Skill02_LV5",
+    "Korean": "(패시브 효과) 자신이 약화 효과 대상을 공격했을 때 아군 전체의 피해를 <color=#28d9ed>[Buff_V_2000079_2_1]</color> 증가 시킵니다. (최대 3회)\\n\\n(발동 효과) 사망 즉시 <color=#28d9ed>[Buff_V_2000079_2_2]</color>의 체력으로 <color=#28d9ed>부활</color>합니다.\\n<color=#28d9ed>[Buff_C_2000079_2_3]</color> 확률로 적 전체의 행동 게이지를 <color=#28d9ed>[Buff_V_2000079_2_3]</color> 감소시킵니다. 또한 공격력이 가장 높은 적에게 쿠로 최대 체력의 <color=#28d9ed>[Buff_V_2000079_2_10]</color> 만큼 고정 피해를 입힙니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+    "English": "(Passive Effect) When attacking a debuffed enemy, increases all allies' damage by <color=#28d9ed>[Buff_V_2000079_2_1]</color>. (Max 3 stacks)\\n\\n(Trigger Effect) Upon death, immediately <color=#28d9ed>Revives</color> with <color=#28d9ed>[Buff_V_2000079_2_2]</color> Health.\\nWith a <color=#28d9ed>[Buff_C_2000079_2_3]</color> chance, reduces all enemies' Priority by <color=#28d9ed>[Buff_V_2000079_2_3]</color>. Also deals fixed damage equal to <color=#28d9ed>[Buff_V_2000079_2_10]</color> of Kuro's Max Health to the enemy with the highest Attack.\\nImmediately after this skill, enemies' Counterattack, Revenge, and Agile Response will not activate.",
+    "Japanese": "(パッシブ効果) 自分が弱体効果の対象を攻撃した場合、味方全体のダメージを<color=#28d9ed>[Buff_V_2000079_2_1]</color>UPさせる。この効果は最大５回まで累積する。\\n\\n(発動効果)倒れた時、直ちに<color=#28d9ed>[Buff_V_2000079_2_2]</color>のHPで<color=#28d9ed>復活</color>する。\\n<color=#28d9ed>[Buff_C_2000079_2_3]</color>の確率で敵全体の行動ゲージを<color=#28d9ed>[Buff_V_2000079_2_3]</color>DOWNさせる。また、攻撃力が最も高い敵単体に自分の最大HPの<color=#28d9ed>[Buff_V_2000079_2_10]</color>の固定ダメージを与える。\\nこのスキルでは敵の反撃、復讐、迅速対応が発動しない。",
+    "China_Simplified": "(被动效果) 自身攻击处于弱化效果状态的敌人时，使我方全体伤害提升<color=#28d9ed>[Buff_V_2000079_2_1]</color>。(最多3次)\\n\\n(发动效果) 死亡后立即以<color=#28d9ed>[Buff_V_2000079_2_2]</color>的生命值<color=#28d9ed>复活</color>。\\n以<color=#28d9ed>[Buff_C_2000079_2_3]</color>的概率降低全体敌人的行动值<color=#28d9ed>[Buff_V_2000079_2_3]</color>。此外对攻击力最高的敌人造成相当于小黑最大生命值<color=#28d9ed>[Buff_V_2000079_2_10]</color>的固定伤害。\\n该技能使用后，敌方的反击、复仇、迅速应对将不会发动。",
+    "China_Traditional": "(被動效果) 自身攻擊處於弱化效果狀態的敵人時，使我方全體傷害提升<color=#28d9ed>[Buff_V_2000079_2_1]</color>。(最多3次)\\n\\n(發動效果) 死亡後立即以<color=#28d9ed>[Buff_V_2000079_2_2]</color>的生命值<color=#28d9ed>復活</color>。\\n以<color=#28d9ed>[Buff_C_2000079_2_3]</color>的概率降低全體敵人的速攻值<color=#28d9ed>[Buff_V_2000079_2_3]</color>。此外對攻擊力最高的敵人造成相當於庫蘿最大生命力<color=#28d9ed>[Buff_V_2000079_2_10]</color>的固定傷害。\\n該技能使用後，敵方的反擊、復仇、迅速應對將不會發動。"
   },
   {
     "ID": "SKILL_NAME_2000079_Skill03",
@@ -7617,7 +7697,7 @@
   },
   {
     "ID": "SKILL_DESC_2000113_Skill03_LV5",
-    "Korean": "아군 전체의 체력을 프리미네 최대 체력의 <color=#28d9ed>[Buff_V_2000113_3_1]</color> 만큼 회복시킵니다.\\n이후 아군 전체의 <color=#28d9ed>약화</color> 효과를 <color=#28d9ed>[Buff_V_2000113_3_4]개</color> 해제하고 <color=#28d9ed>[Buff_T_2000113_3_2]턴</color> 동안 <color=#28d9ed>면역</color>과 <color=#28d9ed>실드</color>를 부여합니다.\\n실드량은 프리미네의 <color=#28d9ed>최대 체력</color>에 비례하며\\n스킬 사용 후 적 전체를 <color=#28d9ed>[Buff_T_2000113_3_5]턴</color> 동안 <color=#28d9ed>침묵</color> 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
+    "Korean": "아군 전체의 체력을 프리미네 최대 체력의 <color=#28d9ed>[Buff_V_2000113_3_1]</color> 만큼 회복시킵니다.\\n이후 아군 전체의 <color=#28d9ed>약화</color> 효과를 <color=#28d9ed>[Buff_V_2000113_3_4]개</color> 해제하고 <color=#28d9ed>[Buff_T_2000113_3_2]턴</color> 동안 <color=#28d9ed>면역</color>과 <color=#28d9ed>실드</color>를 부여합니다..\\n실드량은 프리미네의 <color=#28d9ed>최대 체력</color>에 비례하며\\n스킬 사용 후 적 전체를 <color=#28d9ed>[Buff_T_2000113_3_5]턴</color> 동안 <color=#28d9ed>침묵</color> 상태로 만듭니다.\\n이 효과는 대상의 효과 저항을 무시합니다.",
     "English": "Restores Health of all allies by <color=#28d9ed>[Buff_V_2000113_3_1]</color> of Primine’s Max Health.\\nThen, removes <color=#28d9ed>[Buff_V_2000113_3_4]</color> <color=#28d9ed>debuff</color> effect(s) from all allies and grants <color=#28d9ed>Immunity</color> and <color=#28d9ed>Barrier</color> for <color=#28d9ed>[Buff_T_2000113_3_2]</color> <color=#28d9ed>turn(s)</color>.\\nBarrier strength is proportional to Primine’s <color=#28d9ed>Max Health</color>\\nAfter using the skill, makes all enemies <color=#28d9ed>Silenced</color> for <color=#28d9ed>[Buff_T_2000113_3_5]</color> <color=#28d9ed>turn(s)</color>.\\nThis effect ignores target’s Resilience.",
     "Japanese": "味方全体のHPをプリミネの最大HPの<color=#28d9ed>[Buff_V_2000113_3_1]</color>回復させる。\\nその後、味方全体の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>[Buff_V_2000113_3_4]個</color>解除し、<color=#28d9ed>[Buff_T_2000113_3_2]ターン</color>の間<color=#28d9ed>免疫</color>と<color=#28d9ed>シールド</color>を付与する。\\nシールド量はプリミネの<color=#28d9ed>最大HP</color>が高いほどUPされ、スキル使用後、敵全体を<color=#28d9ed>[Buff_T_2000113_3_5]ターン</color>の間<color=#28d9ed>沈黙</color>状態にする。この効果は対象の効果抵抗を無視する。",
     "China_Simplified": "基于普莉米妮最大生命值的<color=#28d9ed>[Buff_V_2000113_3_1]</color>恢复全体友军生命值。\\n随后解除全体友军<color=#28d9ed>[Buff_V_2000113_3_4]个</color><color=#28d9ed>弱化</color>效果，并赋予<color=#28d9ed>免疫</color>与<color=#28d9ed>护盾</color>，持续<color=#28d9ed>[Buff_T_2000113_3_2]回合</color>。\\n护盾量随普里米内<color=#28d9ed>最大生命值</color>的提升而增加。\\n使用技能后，使全体敌人陷入<color=#28d9ed>沉默</color>状态，持续<color=#28d9ed>[Buff_T_2000113_3_5]回合</color>。\\n该效果无视目标的效果抵抗。",
@@ -8225,11 +8305,11 @@
   },
   {
     "ID": "SKILL_DESC_2000039_Skill04_LV1",
-    "Korean": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>[Buff_V_2000039_chain_1_1]</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>[Buff_C_2000039_backup_1_1]</color>의 확률로 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[Buff_V_2000039_backup_1_1]</color> 감소시킵니다. ",
-    "English": "<color=#ffd732>Chain Companion Effect</color>: After attacking, recovers Action Points of the caster and the next Skill Chain caster by <color=#28d9ed>[Buff_V_2000039_chain_1_1]</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>[Buff_C_2000039_backup_1_1]</color> chance to reduce <color=#28d9ed>Priority</color> of the target by <color=#28d9ed>[Buff_V_2000039_backup_1_1]</color>.",
-    "Japanese": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、自分と次のチェーンスキル参加者のAPを<color=#28d9ed>[Buff_V_2000039_chain_1_1]</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>[Buff_C_2000039_backup_1_1]</color>の確率で対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>[Buff_V_2000039_backup_1_1]</color>DOWNさせる。",
-    "China_Simplified": "<color=#ffd732>连携技能自由顺序效果</color>：攻击后，使自身和下一个连携技能施展者的AP恢复<color=#28d9ed>[Buff_V_2000039_chain_1_1]</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>[Buff_C_2000039_backup_1_1]</color>的几率使目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>[Buff_V_2000039_backup_1_1]</color>。",
-    "China_Traditional": "<color=#ffd732>連鎖技能同行效果</color>：攻擊後，恢復自身及下個連鎖技能執行者<color=#28d9ed>[Buff_V_2000039_chain_1_1]</color>的AP。\\n\\n<color=#ffd732>夾攻效果</color>：攻擊後，以<color=#28d9ed>[Buff_C_2000039_backup_1_1]</color>的機率使目標的<color=#28d9ed>速攻值</color>減少<color=#28d9ed>[Buff_V_2000039_backup_1_1]</color>。"
+    "Korean": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 자신과 다음 스킬 체인 수행자의 AP를 <color=#28d9ed>[Buff_V_2000039_chain_1_1]</color> 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[Buff_V_2000039_backup_1_1]</color> 감소시킵니다.",
+    "English": "<color=#ffd732>Chain Companion Effect</color> : After attacking, recovers <color=#28d9ed>[Buff_V_2000039_chain_1_1]</color> AP for self and the next skill chain performer.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, decreases the target's <color=#28d9ed>Priority</color> by <color=#28d9ed>[Buff_V_2000039_backup_1_1]</color>.",
+    "Japanese": "<color=#ffd732>チェーン効果(汎用)</color> : 攻撃後、自分と次のスキルチェーン実行者のAPを<color=#28d9ed>[Buff_V_2000039_chain_1_1]</color>回復する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>[Buff_V_2000039_backup_1_1]</color>減少させる。",
+    "China_Simplified": "<color=#ffd732>连携技能自由顺序效果</color> : 攻击后使自身及下一位技能连携执行者的AP恢复<color=#28d9ed>[Buff_V_2000039_chain_1_1]</color>。\\n\\n<color=#ffd732>夹攻效果</color> : 攻击后使目标<color=#28d9ed>行动值</color>降低<color=#28d9ed>[Buff_V_2000039_backup_1_1]</color>。",
+    "China_Traditional": "<color=#ffd732>連鎖技能同行效果</color> : 攻擊後使自身及下一位技能連鎖執行者的AP恢復<color=#28d9ed>[Buff_V_2000039_chain_1_1]</color>。\\n\\n<color=#ffd732>夾攻效果</color> : 攻擊後使目標<color=#28d9ed>速攻值</color>降低<color=#28d9ed>[Buff_V_2000039_backup_1_1]</color>。"
   },
   {
     "ID": "SKILL_DESC_2000040_Skill04_LV1",
@@ -8545,11 +8625,11 @@
   },
   {
     "ID": "SKILL_DESC_2000079_Skill04_LV1",
-    "Korean": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>[Buff_V_2000079_chain_1_1]</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>[Buff_C_2000079_backup_1_1]</color> 확률로 <color=#28d9ed>[Buff_T_2000079_backup_1_1]턴</color> 동안 표식을 부여합니다.",
-    "English": "<color=#ffd732>Chain Finish Effect</color>: After attacking, recovers <color=#28d9ed>[Buff_V_2000079_chain_1_1]</color> Chain Points.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>[Buff_C_2000079_backup_1_1]</color> chance to inflict Marked for <color=#28d9ed>[Buff_T_2000079_backup_1_1] turn(s)</color>.",
-    "Japanese": "<color=#ffd732>チェーン効果(トドメ)</color>：攻撃後、CPを<color=#28d9ed>[Buff_V_2000079_chain_1_1]</color>獲得する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>[Buff_C_2000079_backup_1_1]</color>の確率で標的を<color=#28d9ed>[Buff_T_2000079_backup_1_1]ターン</color>の間付与する。",
-    "China_Simplified": "<color=#ffd732>连携收尾效果</color>：攻击后，恢复<color=#28d9ed>[Buff_V_2000079_chain_1_1]</color>CP。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>[Buff_C_2000079_backup_1_1]</color>的几率造成标记效果，持续<color=#28d9ed>[Buff_T_2000079_backup_1_1]回合</color>",
-    "China_Traditional": "<color=#ffd732>連鎖終結效果</color>：攻擊後，恢復<color=#28d9ed>[Buff_V_2000079_chain_1_1]</color>的CP。\\n\\n<color=#ffd732>夾攻效果</color>：攻擊後，以<color=#28d9ed>[Buff_C_2000079_backup_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000079_backup_1_1]回合</color>內賦予標記。"
+    "Korean": "<color=#ffd732>체인 피니시 효과</color> : 공격 후 <color=#28d9ed>[Buff_V_2000079_chain_1_1]</color>의 CP를 회복합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>[Buff_T_2000079_backup_1_1]턴</color> 동안 표식을 부여합니다.",
+    "English": "<color=#ffd732>Chain Finish Effect</color> : After attacking, recovers <color=#28d9ed>[Buff_V_2000079_chain_1_1]</color> CP.\\n\\n<color=#ffd732>Dual Attack Effect</color> : After attacking, inflicts <color=#28d9ed>Marked</color> for <color=#28d9ed>[Buff_T_2000079_backup_1_1] turns</color>.",
+    "Japanese": "<color=#ffd732>チェーン効果(トドメ)</color> : 攻撃後、<color=#28d9ed>[Buff_V_2000079_chain_1_1]</color>のCPを回復する。\\n\\n<color=#ffd732>連携効果</color> : 攻撃後、<color=#28d9ed>[Buff_T_2000079_backup_1_1]ターン</color>の間<color=#28d9ed>標的</color>を付与する。",
+    "China_Simplified": "<color=#ffd732>连携收尾效果</color> : 攻击后回复<color=#28d9ed>[Buff_V_2000079_chain_1_1]</color>的CP。\\n\\n<color=#ffd732>夹攻效果</color> : 攻击后附加<color=#28d9ed>[Buff_T_2000079_backup_1_1]回合</color>的<color=#28d9ed>标记</color>。",
+    "China_Traditional": "<color=#ffd732>連鎖終結效果</color> : 攻擊後回復<color=#28d9ed>[Buff_V_2000079_chain_1_1]</color>的CP。\\n\\n<color=#ffd732>夾攻效果</color> : 攻擊後附加<color=#28d9ed>[Buff_T_2000079_backup_1_1]回合</color>的<color=#28d9ed>標記</color>。"
   },
   {
     "ID": "SKILL_DESC_2000080_Skill04_LV1",
@@ -17153,11 +17233,11 @@
   },
   {
     "ID": "UO_CEQUIP_2000039_UPGRADE_DESC",
-    "Korean": "<color=#28d9ed>용서받지 못할 죄인</color> 사용 시 관통력 <color=#28d9ed>+30%</color>",
-    "English": "When using <color=#28d9ed>Unforgivable Sinner</color>, increases Penetration by <color=#28d9ed>30%</color>",
-    "Japanese": "<color=#28d9ed>【許しがたき罪人】</color>使用時、\\n貫通力が<color=#28d9ed>+30%</color>UPする。",
-    "China_Simplified": "使用<color=#28d9ed>无法饶恕的罪人</color>时，穿透力<color=#28d9ed>+30%</color>",
-    "China_Traditional": "使用<color=#28d9ed>無法饒恕的罪人</color>時，貫穿力<color=#28d9ed>+30%</color>"
+    "Korean": "스킬 체인 및 협공을 제외한 공격 시 아군 속도형 공격력 [+Value] (최대 3회 누적)",
+    "English": "When attacking excluding Skill Chain and Dual Attack, ally Ranger Attack [+Value] (Max 3 stacks)",
+    "Japanese": "チェーンスキルおよび連携攻撃を除く攻撃時、味方スピード型攻撃力[+Value]（最大3回累積）",
+    "China_Simplified": "非连携技能及夹攻的攻击时，我方速度型攻击力[+Value]（最多叠加3次）",
+    "China_Traditional": "非連鎖技能及夾攻的攻擊時，我方速度型攻擊力[+Value]（最多疊加3次）"
   },
   {
     "ID": "UO_CEQUIP_2000040_NAME",
@@ -17241,11 +17321,11 @@
   },
   {
     "ID": "UO_CEQUIP_2000043_DESC",
-    "Korean": "<color=#28d9ed>영원히 살 수는 없어</color> 사용 시 추가 턴 획득",
-    "English": "Gain an extra turn when using <color=#28d9ed>No One Lives Forever</color>",
-    "Japanese": "<color=#28d9ed>【永遠の命などない】</color>使用時、追加ターンを獲得する。",
-    "China_Simplified": "使用<color=#28d9ed>世上无永生</color>时，获得额外回合",
-    "China_Traditional": "使用<color=#28d9ed>世上無永生</color>時，獲得追加回合"
+    "Korean": "<color=#28d9ed>영원히 살 수는 없어 혹은 사형 선고</color> 사용 시 추가 턴 획득",
+    "English": "Gain an Extra Turn when <color=#28d9ed>No One Lives Forever or Death Sentence</color> is used",
+    "Japanese": "<color=#28d9ed>永遠の命などないまたは死刑宣告</color>使用時、追加ターン獲得",
+    "China_Simplified": "使用<color=#28d9ed>世上无永生或死刑宣判</color>时获得额外回合",
+    "China_Traditional": "使用<color=#28d9ed>世上無永生或死刑宣判</color>時獲得追加回合"
   },
   {
     "ID": "UO_CEQUIP_2000043_UPGRADE_DESC",
@@ -17254,6 +17334,30 @@
     "Japanese": "自分の効果命中UP[+Value]",
     "China_Simplified": "自身效果命中提升[+Value]",
     "China_Traditional": "自身效果命中增加[+Value]"
+  },
+  {
+    "ID": "UO_CEQUIP_2700043_NAME",
+    "Korean": "코어 융합 이터널의 전용장비",
+    "English": "Core Fusion Eternal's Exclusive Gear",
+    "Japanese": "コアフュージョン・エターナルの専用装備",
+    "China_Simplified": "核心融合伊特诺的专属装备",
+    "China_Traditional": "核心融合伊特諾的專屬裝備"
+  },
+  {
+    "ID": "UO_CEQUIP_2700043_DESC",
+    "Korean": "자신의 효과 적중 증가 [+Value]",
+    "English": "Own Effectiveness increases [+Value]",
+    "Japanese": "自分の効果命中UP [+Value]",
+    "China_Simplified": "自身效果命中提升 [+Value]",
+    "China_Traditional": "自身效果命中提升 [+Value]"
+  },
+  {
+    "ID": "UO_CEQUIP_2700043_UPGRADE_DESC",
+    "Korean": "<color=#28d9ed>사형 선고</color> 사용 직후 적의 반격, 복수, 신속 대응 방지",
+    "English": "Right after using <color=#28d9ed>Death Sentence</color>, does not trigger an enemy's Counterattack, Revenge, or Agile Response.\n",
+    "Japanese": "<color=#28d9ed>【死刑宣告】</color>使用直後、敵の反撃、復讐、迅速対応を防ぐ",
+    "China_Simplified": "使用<color=#28d9ed>死刑宣判</color>后立即防止敌方反击、复仇、迅速应对",
+    "China_Traditional": "使用<color=#28d9ed>死刑宣判</color>後立即防止敵方反擊、復仇、迅速應對"
   },
   {
     "ID": "UO_CEQUIP_2000044_NAME",
@@ -18113,11 +18217,11 @@
   },
   {
     "ID": "UO_CEQUIP_2000079_UPGRADE_DESC",
-    "Korean": "<color=#28d9ed>친구 포착!</color> 사용 시 관통력 <color=#28d9ed>+20%</color>",
-    "English": "<color=#28d9ed>Be My Friend!</color> grants Penetration <color=#28d9ed>+20%</color>",
-    "Japanese": "<color=#28d9ed>【友達発見！】</color>使用時、貫通力<color=#28d9ed>+20%</color>",
-    "China_Simplified": "使用<color=#28d9ed>发现朋友！</color>时，穿透<color=#28d9ed>+20%</color>",
-    "China_Traditional": "使用<color=#28d9ed>發現朋友！</color>時，穿透<color=#28d9ed>+20%</color>"
+    "Korean": "<color=#28d9ed>친구 포착!</color> 사용 시 자신 행동 게이지 <color=#28d9ed>+20%</color>",
+    "English": "<color=#28d9ed>Be My Friend!</color> grants Priority <color=#28d9ed>+20%</color>",
+    "Japanese": "<color=#28d9ed>【友達発見！】</color>使用時、自分の行動ゲージ<color=#28d9ed>+20%</color>",
+    "China_Simplified": "使用<color=#28d9ed>发现朋友！</color>时，自身行动值<color=#28d9ed>+20%</color>",
+    "China_Traditional": "使用<color=#28d9ed>發現朋友！</color>時，自身速攻值<color=#28d9ed>+20%</color>"
   },
   {
     "ID": "UO_CEQUIP_2000080_NAME",
@@ -31368,6 +31472,14 @@
     "China_Traditional": "解鎖爆發第3階段\\n在飛天之塔中，自身貫穿力+50%。"
   },
   {
+    "ID": "SE_DESC_SKILL08_2700043_1",
+    "Korean": "버스트 3단계 해금\\n전투 입장 시 자신 속도 +1턴",
+    "English": "Burst Stage 3 Unlocked\\nSelf Speed +1 upon entering battle",
+    "Japanese": "バースト3段階解放\\n戦闘開始時、自分のスピード+1ターン",
+    "China_Simplified": "爆发第3阶段解锁\\n进入战斗时，自身速度+1回合",
+    "China_Traditional": "爆發第3階段解鎖\\n進入戰鬥時，自身速度+1回合"
+  },
+  {
     "ID": "SE_DESC_SKILL08_2000112_4",
     "Korean": "체인 패시브의 WG 감소량 +1\\n입장 시 AP +50\\n자신 효과 적중 +100%",
     "English": "Chain Passive WG reduction +1\\nAP +50 upon entering battle\\nOwn Effectiveness +100%",
@@ -32248,6 +32360,22 @@
     "China_Traditional": "我軍傷害量+1%"
   },
   {
+    "ID": "SE_DESC_DMG_ALL_2%",
+    "Korean": "아군 피해량 +2%",
+    "English": "Ally DMG +2%",
+    "Japanese": "味方ダメージ+2%",
+    "China_Simplified": "我方伤害量+2%",
+    "China_Traditional": "我方傷害量+2%"
+  },
+  {
+    "ID": "SE_DESC_DMG_ALL_3%",
+    "Korean": "아군 피해량 +3%",
+    "English": "Ally DMG +3%",
+    "Japanese": "味方ダメージ+3%",
+    "China_Simplified": "我方伤害量+3%",
+    "China_Traditional": "我方傷害量+3%"
+  },
+  {
     "ID": "SE_DESC_TRUE_DMG_HP_3%",
     "Korean": "대상 최대 체력 고정 피해 +3%",
     "English": "+3% target's Max Health as fixed damage",
@@ -32270,6 +32398,14 @@
     "Japanese": "対象の最大HP比例の固定ダメージ+1%",
     "China_Simplified": "目标最大生命值固定伤害+1%",
     "China_Traditional": "目標最大生命力固定傷害+1%"
+  },
+  {
+    "ID": "SE_DESC_TRUE_DMG_CASTER_HP_10%",
+    "Korean": "자신 최대 체력 고정 피해 +10%",
+    "English": "Self Max Health fixed damage +10%",
+    "Japanese": "自分最大HPの固定ダメージ+10%",
+    "China_Simplified": "自身最大生命值固定伤害+10%",
+    "China_Traditional": "自身最大生命力固定傷害+10%"
   },
   {
     "ID": "SE_DESC_TRUE_DMG_CASTER_HP_5%",
@@ -32411,7 +32547,7 @@
     "ID": "SE_DESC_TEAM_ACTION_GAUGE_HEAL_V_5%",
     "Korean": "아군 행동 게이지 +5%",
     "English": "Ally Priority +5%",
-    "Japanese": "味方行動ゲージ+5%",
+    "Japanese": "味方の行動ゲージ+5%",
     "China_Simplified": "我方行动值+5%",
     "China_Traditional": "我方速攻值+5%"
   },
@@ -32419,7 +32555,7 @@
     "ID": "SE_DESC_ACTION_GAUGE_DMG_V_5%_TARGET",
     "Korean": "적 행동 게이지 -5%",
     "English": "Enemy Priority -5%",
-    "Japanese": "敵行動ゲージ-5%",
+    "Japanese": "敵の行動ゲージ-5%",
     "China_Simplified": "敌方行动值-5%",
     "China_Traditional": "敵方速攻值-5%"
   },
@@ -33446,6 +33582,22 @@
     "Japanese": "<color=#FFBF00>強化攻撃</color>\\n貫通力UP",
     "China_Simplified": "<color=#FFBF00>强化攻击</color>\\n穿透力提升",
     "China_Traditional": "<color=#FFBF00>強化攻擊</color>\\n貫穿力增加"
+  },
+  {
+    "ID": "SKILL_NAME_B_CHANGE&PIERCE_V_ALLY",
+    "Korean": "<color=#FFBF00>강화 공격</color>\\n아군 관통력 증가",
+    "English": "<color=#FFBF00>Enhanced Attack</color>\\nAlly Penetration Increase",
+    "Japanese": "<color=#FFBF00>強化攻撃</color>\\n味方貫通力UP",
+    "China_Simplified": "<color=#FFBF00>强化攻击</color>\\n我方穿透力提升",
+    "China_Traditional": "<color=#FFBF00>強化攻擊</color>\\n我方貫穿力提升"
+  },
+  {
+    "ID": "SKILL_DESC_B_CHANGE&PIERCE_V_30%_ALLY",
+    "Korean": "강화 스킬로 교체\\n스킬 사용 전 아군 전체 관통력 증가 +1턴",
+    "English": "Replace with Enhanced Skill\\nAll allies' Penetration increases +1 turn before skill use",
+    "Japanese": "強化スキルに変更\\nスキル使用前、味方全体の貫通力UP+1ターン",
+    "China_Simplified": "替换为强化技能\\n使用技能前，我方全体穿透力提升+1回合",
+    "China_Traditional": "替換為強化技能\\n使用技能前，我方全體貫穿力提升+1回合"
   },
   {
     "ID": "SKILL_NAME_B_BACKUP1",
@@ -34520,9 +34672,41 @@
     "China_Traditional": "挑釁發動機率+30%(無視效果抵抗)"
   },
   {
+    "ID": "SKILL_Name_B_2700043_1",
+    "Korean": "단일 공격으로 변경\\n피해량 증가\\n자신 실드",
+    "English": "Change to Single Target Attack\\nDMG Increase\\nOwn Barrier",
+    "Japanese": "単体攻撃に変更\\nダメージUP\\n自分シールド",
+    "China_Simplified": "变更为单体攻击\\n伤害量提升\\n自身护盾",
+    "China_Traditional": "變更為單體攻擊\\n傷害量提升\\n自身護盾"
+  },
+  {
+    "ID": "SKILL_Name_B_2700043_2",
+    "Korean": "피해 증가\\n화상",
+    "English": "DMG Increase\\nBurned",
+    "Japanese": "ダメージUP\\n火傷",
+    "China_Simplified": "伤害提升\\n烧伤",
+    "China_Traditional": "傷害提升\\n燒傷"
+  },
+  {
+    "ID": "SKILL_DESC_B_2700043_1",
+    "Korean": "단일 공격으로 변경\\n피해량 대폭 증가\\n자신 실드 +1턴 (자신 최대 체력 비례)",
+    "English": "Change to Single Target Attack\\nDMG greatly increases\\nOwn Barrier +1 turn (scales with own Max Health)",
+    "Japanese": "単体攻撃に変更\\nダメージ大幅UP\\n自分シールド+1ターン（自分の最大HP比例）",
+    "China_Simplified": "变更为单体攻击\\n伤害量大幅提升\\n自身护盾+1回合（按自身最大生命值计算）",
+    "China_Traditional": "變更為單體攻擊\\n傷害量大幅提升\\n自身護盾+1回合（按自身最大生命力計算）"
+  },
+  {
+    "ID": "SKILL_DESC_B_2700043_2",
+    "Korean": "피해 증가\\n대상 화상 +2턴",
+    "English": "DMG Increase\\nTarget Burned +2 turns",
+    "Japanese": "ダメージUP\\n対象火傷+2ターン",
+    "China_Simplified": "伤害提升\\n目标烧伤+2回合",
+    "China_Traditional": "傷害提升\\n目標燒傷+2回合"
+  },
+  {
     "ID": "SKILL_NAME_B_2000112_1",
     "Korean": "강화 효과 전이 +1개\\n피해 증가",
-    "English": "Buff Transfer +1",
+    "English": "Buff Transfer +1\\nIncreases Damage",
     "Japanese": "強化効果転移個数+1個\\nダメージUP",
     "China_Simplified": "强化效果转移+1个",
     "China_Traditional": "強化效果轉移+1個"
@@ -36150,6 +36334,22 @@
     "Japanese": "ダメージUP\\n標的発生率+25%",
     "China_Simplified": "伤害提升\\n标记触发几率+25%",
     "China_Traditional": "傷害增加\\n標記發動機率+25%"
+  },
+  {
+    "ID": "SKILL_NAME_B_DMG&WG",
+    "Korean": "피해 증가\\nWG 피해",
+    "English": "DMG Increase\\nWG DMG",
+    "Japanese": "ダメージUP\\nWGダメージ",
+    "China_Simplified": "伤害提升\\nWG伤害",
+    "China_Traditional": "傷害提升\\nWG傷害"
+  },
+  {
+    "ID": "SKILL_DESC_B_DMG&WG",
+    "Korean": "피해 증가\\nWG 피해 +1",
+    "English": "DMG Increase\\nWG DMG +1",
+    "Japanese": "ダメージUP\\nWGダメージ+1",
+    "China_Simplified": "伤害提升\\nWG伤害+1",
+    "China_Traditional": "傷害提升\\nWG傷害+1"
   },
   {
     "ID": "SKILL_DESC_B_STEAL_BUFF_ALL",
@@ -51824,6 +52024,14 @@
     "China_Traditional": "自身效果命中+50%"
   },
   {
+    "ID": "SE_DESC_CORE_PASSIVE_ADD_TURN_SKILL03",
+    "Korean": "사형 선고 사용 시 추가 턴 획득",
+    "English": "Gain an Extra Turn when Death Sentence is used",
+    "Japanese": "【死刑宣告】使用時、追加ターン獲得",
+    "China_Simplified": "使用死刑宣判时获得额外回合",
+    "China_Traditional": "使用死刑宣判時獲得追加回合"
+  },
+  {
     "ID": "UO_WEAPON_FESTIVAL_01_DESC",
     "Korean": "자신의 방어력 [Value] 마다 아군이 입히는 피해 +1% 증가 (자신 제외)",
     "English": "Increases Damage Dealt by allies by 1% per [Value] of Defense (Excluding self)",
@@ -53018,7 +53226,7 @@
   {
     "ID": "SKILL_DESC_1120917",
     "Korean": "자신에게 <color=#28d9ed>강화 효과</color>가 있으면 받는 최종 피해가 <color=#28d9ed>75%</color> 감소하고 WG 피해가 <color=#28d9ed>100%</color> 감소합니다.\\n보유한 <color=#28d9ed>강화 효과</color> 1개 마다 피해량이 <color=#28d9ed>10%</color> 증가합니다. (최대 100%)\\n\\n전투 시작 시 자신의  <color=#28d9ed>방어력</color>,<color=#28d9ed>관통력</color>,<color=#28d9ed>속도</color>를 <color=#28d9ed>[Buff_T_event_monster_buff_560]턴</color> 동안 증가시킵니다.",
-    "English": "If self has <color=#28d9ed>buffs</color>, Final DMG taken decreases by <color=#28d9ed>75%</color> and DMG dealt increases by <color=#28d9ed>10%</color> per buff held. (Max 100%)\\n\\nAt the start of battle, increases own <color=#28d9ed>Defense</color>, <color=#28d9ed>Penetration</color>, and <color=#28d9ed>Speed</color> for <color=#28d9ed>[Buff_T_event_monster_buff_560] turns</color>.",
+    "English": "If the caster has <color=#28d9ed>buffs</color>, Final DMG taken decreases by <color=#28d9ed>75%</color> and WG DMG taken decreases by <color=#28d9ed>100%</color>. DMG dealt increases by <color=#28d9ed>10%</color> per buff held. (Max 100%)\\n\\nAt the start of battle, increases own <color=#28d9ed>Defense</color>, <color=#28d9ed>Penetration</color>, and <color=#28d9ed>Speed</color> for <color=#28d9ed>[Buff_T_event_monster_buff_560] turns</color>.",
     "Japanese": "自分に<color=#28d9ed>強化効果</color>がある場合、受ける最終ダメージが<color=#28d9ed>75%</color>DOWNし、受けるWGダメージが<color=#28d9ed>100%</color>DOWNする。保有する<color=#28d9ed>強化効果1個</color>あたりダメージが<color=#28d9ed>10%</color>UPする。（最大100%）\\n\\n戦闘開始時、自分の<color=#28d9ed>防御力</color>、<color=#28d9ed>貫通力</color>、<color=#28d9ed>スピード</color>を<color=#28d9ed>[Buff_T_event_monster_buff_560]ターン</color>の間UPする。",
     "China_Simplified": "自身拥有<color=#28d9ed>强化效果</color>时，受到的最终伤害降低<color=#28d9ed>75%</color>，每持有1个效果，伤害量提升<color=#28d9ed>10%</color>。（最高100%）\\n\\n战斗开始时，使自身<color=#28d9ed>防御力</color>、<color=#28d9ed>穿透力</color>、<color=#28d9ed>速度</color>在<color=#28d9ed>[Buff_T_event_monster_buff_560]回合</color>内提升。",
     "China_Traditional": "自身擁有<color=#28d9ed>強化效果</color>時，受到的最終傷害降低<color=#28d9ed>75%</color>，每持有1個效果，傷害量提升<color=#28d9ed>10%</color>。（最高100%）\\n\\n戰鬥開始時，使自身<color=#28d9ed>防禦力</color>、<color=#28d9ed>貫穿力</color>、<color=#28d9ed>速度</color>在<color=#28d9ed>[Buff_T_event_monster_buff_560]回合</color>內提升。"
