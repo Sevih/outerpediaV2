@@ -668,6 +668,7 @@ const jp: Record<TranslationKey, string> = {
 
   // Monad Gate
   'monad.rewards': '報酬',
+  'monad.rewards.firstClear': '初回クリア報酬',
   'monad.trueEndingChoices': 'トゥルーエンディング選択肢',
   'monad.ui.trueEndingPath': 'トゥルーエンディングルート',
   'monad.ui.compact': 'コンパクト',

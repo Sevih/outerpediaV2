@@ -11,6 +11,8 @@ export interface MonadNode {
   label?: string;
   popupText?: string;
   truePath?: boolean;
+  /** Node belongs to an alternative branch that reconnects to the True Ending. */
+  altPath?: boolean;
   /** Names of key item(s) reachable from this node depending on the choice taken. */
   givesItem?: LangMap;
 }
@@ -23,4 +25,8 @@ export interface MonadEdge {
   /** Name(s) of key item(s) granted when the player takes this choice. */
   gives?: LangMap;
   truePath?: boolean;
+  /** Alternative branch that also leads to a True Ending (detour from the canonical path). */
+  altPath?: boolean;
+  /** Non-narrative mechanical event (character join, levelup, gauge op). Excluded from choices summary. */
+  service?: boolean;
 }

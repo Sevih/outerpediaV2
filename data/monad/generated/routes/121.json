@@ -1,0 +1,2021 @@
+{
+  "groupId": "121",
+  "depth": 8,
+  "routeIndex": 3,
+  "variant": 0,
+  "name": {
+    "en": "Route 3: Land of Snow and Steel",
+    "jp": "ルート3：白い雪と鋼の国",
+    "kr": "루트 3 : 하얀 눈과 강철의 나라",
+    "zh": "路缐 3：白雪与钢铁之国"
+  },
+  "nodes": [
+    {
+      "id": "N1",
+      "col": 1,
+      "row": 5,
+      "type": "start",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_START_01",
+      "truePath": true
+    },
+    {
+      "id": "N2",
+      "col": 2,
+      "row": 5,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13002",
+      "truePath": true
+    },
+    {
+      "id": "N3",
+      "col": 3,
+      "row": 5,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "301",
+      "truePath": true
+    },
+    {
+      "id": "N4",
+      "col": 4,
+      "row": 4,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001",
+      "truePath": true
+    },
+    {
+      "id": "N5",
+      "col": 4,
+      "row": 5,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N6",
+      "col": 4,
+      "row": 6,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "altPath": true
+    },
+    {
+      "id": "N7",
+      "col": 5,
+      "row": 4,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "301",
+      "truePath": true
+    },
+    {
+      "id": "N8",
+      "col": 5,
+      "row": 5,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13001",
+      "altPath": true
+    },
+    {
+      "id": "N9",
+      "col": 5,
+      "row": 6,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "301",
+      "altPath": true
+    },
+    {
+      "id": "N10",
+      "col": 6,
+      "row": 4,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13001",
+      "truePath": true
+    },
+    {
+      "id": "N11",
+      "col": 6,
+      "row": 5,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "301",
+      "altPath": true
+    },
+    {
+      "id": "N12",
+      "col": 6,
+      "row": 6,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001",
+      "altPath": true
+    },
+    {
+      "id": "N13",
+      "col": 7,
+      "row": 4,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "truePath": true
+    },
+    {
+      "id": "N14",
+      "col": 7,
+      "row": 5,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "altPath": true
+    },
+    {
+      "id": "N15",
+      "col": 7,
+      "row": 6,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N16",
+      "col": 8,
+      "row": 5,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001",
+      "truePath": true
+    },
+    {
+      "id": "N17",
+      "col": 9,
+      "row": 5,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30101",
+      "truePath": true
+    },
+    {
+      "id": "N18",
+      "col": 10,
+      "row": 4,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "302",
+      "truePath": true
+    },
+    {
+      "id": "N19",
+      "col": 10,
+      "row": 6,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10002",
+      "altPath": true
+    },
+    {
+      "id": "N20",
+      "col": 11,
+      "row": 4,
+      "type": "pinnacle",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_03",
+      "rewardId": "7002003",
+      "truePath": true
+    },
+    {
+      "id": "N21",
+      "col": 11,
+      "row": 6,
+      "type": "pinnacle",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_03",
+      "rewardId": "7002003",
+      "altPath": true
+    },
+    {
+      "id": "N22",
+      "col": 12,
+      "row": 4,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13001",
+      "truePath": true
+    },
+    {
+      "id": "N23",
+      "col": 12,
+      "row": 5,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "altPath": true
+    },
+    {
+      "id": "N24",
+      "col": 12,
+      "row": 6,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13001"
+    },
+    {
+      "id": "N25",
+      "col": 13,
+      "row": 4,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "truePath": true
+    },
+    {
+      "id": "N26",
+      "col": 13,
+      "row": 5,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N27",
+      "col": 13,
+      "row": 6,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N28",
+      "col": 14,
+      "row": 4,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_07",
+      "eventGroupId": "21001",
+      "truePath": true
+    },
+    {
+      "id": "N29",
+      "col": 14,
+      "row": 5,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001",
+      "altPath": true
+    },
+    {
+      "id": "N30",
+      "col": 14,
+      "row": 6,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_08",
+      "eventGroupId": "22001"
+    },
+    {
+      "id": "N31",
+      "col": 15,
+      "row": 4,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "truePath": true
+    },
+    {
+      "id": "N32",
+      "col": 15,
+      "row": 5,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_07",
+      "eventGroupId": "21001",
+      "altPath": true
+    },
+    {
+      "id": "N33",
+      "col": 15,
+      "row": 6,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002"
+    },
+    {
+      "id": "N34",
+      "col": 16,
+      "row": 5,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "302",
+      "truePath": true
+    },
+    {
+      "id": "N35",
+      "col": 17,
+      "row": 4,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "truePath": true
+    },
+    {
+      "id": "N36",
+      "col": 17,
+      "row": 6,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "altPath": true
+    },
+    {
+      "id": "N37",
+      "col": 18,
+      "row": 4,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "truePath": true
+    },
+    {
+      "id": "N38",
+      "col": 18,
+      "row": 6,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "altPath": true
+    },
+    {
+      "id": "N39",
+      "col": 19,
+      "row": 3,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "308",
+      "truePath": true
+    },
+    {
+      "id": "N40",
+      "col": 19,
+      "row": 4,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "altPath": true
+    },
+    {
+      "id": "N41",
+      "col": 19,
+      "row": 5,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "308",
+      "altPath": true
+    },
+    {
+      "id": "N42",
+      "col": 19,
+      "row": 6,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002"
+    },
+    {
+      "id": "N43",
+      "col": 19,
+      "row": 7,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "308"
+    },
+    {
+      "id": "N44",
+      "col": 20,
+      "row": 5,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "truePath": true
+    },
+    {
+      "id": "N45",
+      "col": 21,
+      "row": 5,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30102",
+      "truePath": true
+    },
+    {
+      "id": "N46",
+      "col": 22,
+      "row": 4,
+      "type": "pinnacle",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_03",
+      "rewardId": "7002003",
+      "truePath": true
+    },
+    {
+      "id": "N47",
+      "col": 22,
+      "row": 6,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_08",
+      "eventGroupId": "22001",
+      "altPath": true
+    },
+    {
+      "id": "N48",
+      "col": 23,
+      "row": 5,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "truePath": true
+    },
+    {
+      "id": "N49",
+      "col": 24,
+      "row": 5,
+      "type": "pinnacle",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_03",
+      "rewardId": "7002003",
+      "truePath": true
+    },
+    {
+      "id": "N50",
+      "col": 25,
+      "row": 4,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "truePath": true
+    },
+    {
+      "id": "N51",
+      "col": 25,
+      "row": 5,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N52",
+      "col": 25,
+      "row": 6,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "altPath": true
+    },
+    {
+      "id": "N53",
+      "col": 26,
+      "row": 3,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001",
+      "truePath": true
+    },
+    {
+      "id": "N54",
+      "col": 26,
+      "row": 4,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001",
+      "altPath": true
+    },
+    {
+      "id": "N55",
+      "col": 26,
+      "row": 5,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N56",
+      "col": 26,
+      "row": 6,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001"
+    },
+    {
+      "id": "N57",
+      "col": 26,
+      "row": 7,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001"
+    },
+    {
+      "id": "N58",
+      "col": 27,
+      "row": 4,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "truePath": true
+    },
+    {
+      "id": "N59",
+      "col": 27,
+      "row": 5,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001"
+    },
+    {
+      "id": "N60",
+      "col": 27,
+      "row": 6,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N61",
+      "col": 28,
+      "row": 4,
+      "type": "cube",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_CUBE_01",
+      "eventGroupId": "3",
+      "truePath": true
+    },
+    {
+      "id": "N62",
+      "col": 28,
+      "row": 5,
+      "type": "cube",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_CUBE_01",
+      "eventGroupId": "3"
+    },
+    {
+      "id": "N63",
+      "col": 28,
+      "row": 6,
+      "type": "cube",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_CUBE_01",
+      "eventGroupId": "3"
+    },
+    {
+      "id": "N64",
+      "col": 29,
+      "row": 5,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "truePath": true
+    },
+    {
+      "id": "N65",
+      "col": 30,
+      "row": 5,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30104",
+      "truePath": true
+    },
+    {
+      "id": "N66",
+      "col": 31,
+      "row": 3,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "truePath": true
+    },
+    {
+      "id": "N67",
+      "col": 31,
+      "row": 7,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101"
+    },
+    {
+      "id": "N68",
+      "col": 32,
+      "row": 2,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "truePath": true
+    },
+    {
+      "id": "N69",
+      "col": 32,
+      "row": 3,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N70",
+      "col": 32,
+      "row": 4,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N71",
+      "col": 32,
+      "row": 6,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101"
+    },
+    {
+      "id": "N72",
+      "col": 32,
+      "row": 7,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101"
+    },
+    {
+      "id": "N73",
+      "col": 32,
+      "row": 8,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101"
+    },
+    {
+      "id": "N74",
+      "col": 33,
+      "row": 2,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13002",
+      "truePath": true
+    },
+    {
+      "id": "N75",
+      "col": 33,
+      "row": 3,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13002",
+      "altPath": true
+    },
+    {
+      "id": "N76",
+      "col": 33,
+      "row": 4,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13002",
+      "altPath": true
+    },
+    {
+      "id": "N77",
+      "col": 33,
+      "row": 6,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N78",
+      "col": 33,
+      "row": 7,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N79",
+      "col": 33,
+      "row": 8,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N80",
+      "col": 34,
+      "row": 3,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "truePath": true
+    },
+    {
+      "id": "N81",
+      "col": 34,
+      "row": 7,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101"
+    },
+    {
+      "id": "N82",
+      "col": 35,
+      "row": 3,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "truePath": true
+    },
+    {
+      "id": "N83",
+      "col": 35,
+      "row": 7,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002"
+    },
+    {
+      "id": "N84",
+      "col": 36,
+      "row": 3,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30105",
+      "autoItems": [
+        "9940006"
+      ],
+      "truePath": true
+    },
+    {
+      "id": "N85",
+      "col": 36,
+      "row": 7,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30106",
+      "autoItems": [
+        "9940007"
+      ]
+    },
+    {
+      "id": "N86",
+      "col": 37,
+      "row": 3,
+      "type": "pinnacle",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_03",
+      "rewardId": "7002003",
+      "truePath": true
+    },
+    {
+      "id": "N87",
+      "col": 37,
+      "row": 7,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N88",
+      "col": 38,
+      "row": 3,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_08",
+      "eventGroupId": "22001",
+      "truePath": true
+    },
+    {
+      "id": "N89",
+      "col": 38,
+      "row": 7,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N90",
+      "col": 39,
+      "row": 4,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "201",
+      "truePath": true
+    },
+    {
+      "id": "N91",
+      "col": 39,
+      "row": 6,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "201"
+    },
+    {
+      "id": "N92",
+      "col": 40,
+      "row": 5,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_07",
+      "eventGroupId": "21001",
+      "truePath": true
+    },
+    {
+      "id": "N93",
+      "col": 41,
+      "row": 5,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30107",
+      "truePath": true
+    },
+    {
+      "id": "N94",
+      "col": 42,
+      "row": 4,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "truePath": true
+    },
+    {
+      "id": "N95",
+      "col": 42,
+      "row": 6,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13003"
+    },
+    {
+      "id": "N96",
+      "col": 43,
+      "row": 3,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_08",
+      "eventGroupId": "22001",
+      "truePath": true
+    },
+    {
+      "id": "N97",
+      "col": 43,
+      "row": 4,
+      "type": "eldritch",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_03",
+      "eventGroupId": "101",
+      "altPath": true
+    },
+    {
+      "id": "N98",
+      "col": 43,
+      "row": 6,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002"
+    },
+    {
+      "id": "N99",
+      "col": 43,
+      "row": 7,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_08",
+      "eventGroupId": "22001"
+    },
+    {
+      "id": "N100",
+      "col": 44,
+      "row": 3,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "truePath": true
+    },
+    {
+      "id": "N101",
+      "col": 44,
+      "row": 7,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002"
+    },
+    {
+      "id": "N102",
+      "col": 45,
+      "row": 3,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30108",
+      "truePath": true
+    },
+    {
+      "id": "N103",
+      "col": 45,
+      "row": 7,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30109"
+    },
+    {
+      "id": "N104",
+      "col": 46,
+      "row": 2,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_08",
+      "eventGroupId": "22001",
+      "altPath": true
+    },
+    {
+      "id": "N105",
+      "col": 46,
+      "row": 4,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "truePath": true
+    },
+    {
+      "id": "N106",
+      "col": 46,
+      "row": 6,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_08",
+      "eventGroupId": "22001"
+    },
+    {
+      "id": "N107",
+      "col": 46,
+      "row": 8,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N108",
+      "col": 47,
+      "row": 2,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N109",
+      "col": 47,
+      "row": 4,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13003",
+      "truePath": true
+    },
+    {
+      "id": "N110",
+      "col": 47,
+      "row": 6,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N111",
+      "col": 47,
+      "row": 8,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13003"
+    },
+    {
+      "id": "N112",
+      "col": 48,
+      "row": 2,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N113",
+      "col": 48,
+      "row": 4,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "truePath": true
+    },
+    {
+      "id": "N114",
+      "col": 48,
+      "row": 6,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "302"
+    },
+    {
+      "id": "N115",
+      "col": 48,
+      "row": 8,
+      "type": "moment",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_02",
+      "eventGroupId": "302"
+    },
+    {
+      "id": "N116",
+      "col": 49,
+      "row": 2,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10002",
+      "altPath": true
+    },
+    {
+      "id": "N117",
+      "col": 49,
+      "row": 4,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001",
+      "truePath": true
+    },
+    {
+      "id": "N118",
+      "col": 49,
+      "row": 6,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N119",
+      "col": 49,
+      "row": 8,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N120",
+      "col": 50,
+      "row": 2,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "altPath": true
+    },
+    {
+      "id": "N121",
+      "col": 50,
+      "row": 4,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13001",
+      "truePath": true
+    },
+    {
+      "id": "N122",
+      "col": 50,
+      "row": 6,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_08",
+      "eventGroupId": "22001"
+    },
+    {
+      "id": "N123",
+      "col": 50,
+      "row": 8,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01",
+      "eventGroupId": "10001"
+    },
+    {
+      "id": "N124",
+      "col": 51,
+      "row": 2,
+      "type": "relic",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04",
+      "eventGroupId": "13003",
+      "altPath": true
+    },
+    {
+      "id": "N125",
+      "col": 51,
+      "row": 4,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001",
+      "truePath": true
+    },
+    {
+      "id": "N126",
+      "col": 51,
+      "row": 6,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N127",
+      "col": 51,
+      "row": 8,
+      "type": "combat",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_01",
+      "rewardId": "7002001"
+    },
+    {
+      "id": "N128",
+      "col": 52,
+      "row": 3,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002",
+      "truePath": true
+    },
+    {
+      "id": "N129",
+      "col": 52,
+      "row": 7,
+      "type": "elite",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_02",
+      "rewardId": "7002002"
+    },
+    {
+      "id": "N130",
+      "col": 53,
+      "row": 3,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30110",
+      "truePath": true
+    },
+    {
+      "id": "N131",
+      "col": 53,
+      "row": 7,
+      "type": "path",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_EVENT_01",
+      "eventGroupId": "30111"
+    },
+    {
+      "id": "N132",
+      "col": 54,
+      "row": 2,
+      "type": "final",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_04",
+      "rewardId": "7120008",
+      "truePath": true
+    },
+    {
+      "id": "N133",
+      "col": 54,
+      "row": 4,
+      "type": "final",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_04",
+      "rewardId": "7120008"
+    },
+    {
+      "id": "N134",
+      "col": 54,
+      "row": 6,
+      "type": "final",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_04",
+      "rewardId": "7120008"
+    },
+    {
+      "id": "N135",
+      "col": 54,
+      "row": 8,
+      "type": "final",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_BATTLE_04",
+      "rewardId": "7120008"
+    },
+    {
+      "id": "N136",
+      "col": 55,
+      "row": 2,
+      "type": "tending",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ENDING_3_01",
+      "firstClearRewardId": "7130003",
+      "truePath": true
+    },
+    {
+      "id": "N137",
+      "col": 55,
+      "row": 4,
+      "type": "bending",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ENDING_3_02"
+    },
+    {
+      "id": "N138",
+      "col": 55,
+      "row": 6,
+      "type": "bending",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ENDING_3_03"
+    },
+    {
+      "id": "N139",
+      "col": 55,
+      "row": 8,
+      "type": "bending",
+      "typeNameKey": "SYS_MONAD_GATE_NODE_NAME_ENDING_3_02"
+    }
+  ],
+  "edges": [
+    {
+      "from": "N1",
+      "to": "N2",
+      "truePath": true
+    },
+    {
+      "from": "N2",
+      "to": "N3",
+      "truePath": true
+    },
+    {
+      "from": "N3",
+      "to": "N4",
+      "truePath": true
+    },
+    {
+      "from": "N3",
+      "to": "N5",
+      "altPath": true
+    },
+    {
+      "from": "N3",
+      "to": "N6",
+      "altPath": true
+    },
+    {
+      "from": "N4",
+      "to": "N7",
+      "truePath": true
+    },
+    {
+      "from": "N5",
+      "to": "N8",
+      "altPath": true
+    },
+    {
+      "from": "N6",
+      "to": "N9",
+      "altPath": true
+    },
+    {
+      "from": "N7",
+      "to": "N10",
+      "truePath": true
+    },
+    {
+      "from": "N8",
+      "to": "N11",
+      "altPath": true
+    },
+    {
+      "from": "N9",
+      "to": "N12",
+      "altPath": true
+    },
+    {
+      "from": "N10",
+      "to": "N13",
+      "truePath": true
+    },
+    {
+      "from": "N11",
+      "to": "N14",
+      "altPath": true
+    },
+    {
+      "from": "N12",
+      "to": "N15",
+      "altPath": true
+    },
+    {
+      "from": "N13",
+      "to": "N16",
+      "truePath": true
+    },
+    {
+      "from": "N14",
+      "to": "N16",
+      "altPath": true
+    },
+    {
+      "from": "N15",
+      "to": "N16",
+      "altPath": true
+    },
+    {
+      "from": "N16",
+      "to": "N17",
+      "truePath": true
+    },
+    {
+      "from": "N17",
+      "to": "N18",
+      "eventEndId": "73",
+      "truePath": true
+    },
+    {
+      "from": "N17",
+      "to": "N19",
+      "eventEndId": "74",
+      "altPath": true
+    },
+    {
+      "from": "N18",
+      "to": "N20",
+      "truePath": true
+    },
+    {
+      "from": "N19",
+      "to": "N21",
+      "altPath": true
+    },
+    {
+      "from": "N20",
+      "to": "N22",
+      "truePath": true
+    },
+    {
+      "from": "N20",
+      "to": "N23",
+      "altPath": true
+    },
+    {
+      "from": "N21",
+      "to": "N23",
+      "altPath": true
+    },
+    {
+      "from": "N21",
+      "to": "N24"
+    },
+    {
+      "from": "N22",
+      "to": "N25",
+      "truePath": true
+    },
+    {
+      "from": "N23",
+      "to": "N26",
+      "altPath": true
+    },
+    {
+      "from": "N24",
+      "to": "N27"
+    },
+    {
+      "from": "N25",
+      "to": "N28",
+      "truePath": true
+    },
+    {
+      "from": "N26",
+      "to": "N29",
+      "altPath": true
+    },
+    {
+      "from": "N27",
+      "to": "N30"
+    },
+    {
+      "from": "N28",
+      "to": "N31",
+      "truePath": true
+    },
+    {
+      "from": "N29",
+      "to": "N32",
+      "altPath": true
+    },
+    {
+      "from": "N30",
+      "to": "N33"
+    },
+    {
+      "from": "N31",
+      "to": "N34",
+      "truePath": true
+    },
+    {
+      "from": "N32",
+      "to": "N34",
+      "altPath": true
+    },
+    {
+      "from": "N33",
+      "to": "N34"
+    },
+    {
+      "from": "N34",
+      "to": "N35",
+      "truePath": true
+    },
+    {
+      "from": "N34",
+      "to": "N36",
+      "altPath": true
+    },
+    {
+      "from": "N35",
+      "to": "N37",
+      "truePath": true
+    },
+    {
+      "from": "N36",
+      "to": "N38",
+      "altPath": true
+    },
+    {
+      "from": "N37",
+      "to": "N39",
+      "truePath": true
+    },
+    {
+      "from": "N37",
+      "to": "N40",
+      "altPath": true
+    },
+    {
+      "from": "N37",
+      "to": "N41",
+      "altPath": true
+    },
+    {
+      "from": "N38",
+      "to": "N41",
+      "altPath": true
+    },
+    {
+      "from": "N38",
+      "to": "N42"
+    },
+    {
+      "from": "N38",
+      "to": "N43"
+    },
+    {
+      "from": "N39",
+      "to": "N44",
+      "truePath": true
+    },
+    {
+      "from": "N40",
+      "to": "N44",
+      "altPath": true
+    },
+    {
+      "from": "N41",
+      "to": "N44",
+      "altPath": true
+    },
+    {
+      "from": "N42",
+      "to": "N44"
+    },
+    {
+      "from": "N43",
+      "to": "N44"
+    },
+    {
+      "from": "N44",
+      "to": "N45",
+      "truePath": true
+    },
+    {
+      "from": "N45",
+      "to": "N46",
+      "eventEndId": "76",
+      "truePath": true
+    },
+    {
+      "from": "N45",
+      "to": "N47",
+      "eventEndId": "77",
+      "altPath": true
+    },
+    {
+      "from": "N46",
+      "to": "N48",
+      "truePath": true
+    },
+    {
+      "from": "N47",
+      "to": "N48",
+      "altPath": true
+    },
+    {
+      "from": "N48",
+      "to": "N49",
+      "truePath": true
+    },
+    {
+      "from": "N49",
+      "to": "N50",
+      "truePath": true
+    },
+    {
+      "from": "N49",
+      "to": "N51",
+      "altPath": true
+    },
+    {
+      "from": "N49",
+      "to": "N52",
+      "altPath": true
+    },
+    {
+      "from": "N50",
+      "to": "N53",
+      "truePath": true
+    },
+    {
+      "from": "N50",
+      "to": "N54",
+      "altPath": true
+    },
+    {
+      "from": "N50",
+      "to": "N55",
+      "altPath": true
+    },
+    {
+      "from": "N51",
+      "to": "N54",
+      "altPath": true
+    },
+    {
+      "from": "N51",
+      "to": "N55"
+    },
+    {
+      "from": "N51",
+      "to": "N56"
+    },
+    {
+      "from": "N52",
+      "to": "N55",
+      "altPath": true
+    },
+    {
+      "from": "N52",
+      "to": "N56"
+    },
+    {
+      "from": "N52",
+      "to": "N57"
+    },
+    {
+      "from": "N53",
+      "to": "N58",
+      "truePath": true
+    },
+    {
+      "from": "N54",
+      "to": "N58",
+      "altPath": true
+    },
+    {
+      "from": "N54",
+      "to": "N59"
+    },
+    {
+      "from": "N55",
+      "to": "N58",
+      "altPath": true
+    },
+    {
+      "from": "N55",
+      "to": "N59"
+    },
+    {
+      "from": "N55",
+      "to": "N60"
+    },
+    {
+      "from": "N56",
+      "to": "N59"
+    },
+    {
+      "from": "N56",
+      "to": "N60"
+    },
+    {
+      "from": "N57",
+      "to": "N60"
+    },
+    {
+      "from": "N58",
+      "to": "N61",
+      "truePath": true
+    },
+    {
+      "from": "N59",
+      "to": "N62"
+    },
+    {
+      "from": "N60",
+      "to": "N63"
+    },
+    {
+      "from": "N61",
+      "to": "N64",
+      "truePath": true
+    },
+    {
+      "from": "N62",
+      "to": "N64"
+    },
+    {
+      "from": "N63",
+      "to": "N64"
+    },
+    {
+      "from": "N64",
+      "to": "N65",
+      "truePath": true
+    },
+    {
+      "from": "N65",
+      "to": "N66",
+      "eventEndId": "81",
+      "truePath": true
+    },
+    {
+      "from": "N65",
+      "to": "N67",
+      "eventEndId": "82"
+    },
+    {
+      "from": "N66",
+      "to": "N68",
+      "truePath": true
+    },
+    {
+      "from": "N66",
+      "to": "N69",
+      "altPath": true
+    },
+    {
+      "from": "N66",
+      "to": "N70",
+      "altPath": true
+    },
+    {
+      "from": "N67",
+      "to": "N71"
+    },
+    {
+      "from": "N67",
+      "to": "N72"
+    },
+    {
+      "from": "N67",
+      "to": "N73"
+    },
+    {
+      "from": "N68",
+      "to": "N74",
+      "truePath": true
+    },
+    {
+      "from": "N69",
+      "to": "N75",
+      "altPath": true
+    },
+    {
+      "from": "N70",
+      "to": "N76",
+      "altPath": true
+    },
+    {
+      "from": "N71",
+      "to": "N77"
+    },
+    {
+      "from": "N72",
+      "to": "N78"
+    },
+    {
+      "from": "N73",
+      "to": "N79"
+    },
+    {
+      "from": "N74",
+      "to": "N80",
+      "truePath": true
+    },
+    {
+      "from": "N75",
+      "to": "N80",
+      "altPath": true
+    },
+    {
+      "from": "N76",
+      "to": "N80",
+      "altPath": true
+    },
+    {
+      "from": "N77",
+      "to": "N81"
+    },
+    {
+      "from": "N78",
+      "to": "N81"
+    },
+    {
+      "from": "N79",
+      "to": "N81"
+    },
+    {
+      "from": "N80",
+      "to": "N82",
+      "truePath": true
+    },
+    {
+      "from": "N81",
+      "to": "N83"
+    },
+    {
+      "from": "N82",
+      "to": "N84",
+      "truePath": true
+    },
+    {
+      "from": "N83",
+      "to": "N85"
+    },
+    {
+      "from": "N84",
+      "to": "N86",
+      "eventEndId": "84",
+      "truePath": true
+    },
+    {
+      "from": "N85",
+      "to": "N87",
+      "eventEndId": "86"
+    },
+    {
+      "from": "N86",
+      "to": "N88",
+      "truePath": true
+    },
+    {
+      "from": "N87",
+      "to": "N89"
+    },
+    {
+      "from": "N88",
+      "to": "N90",
+      "truePath": true
+    },
+    {
+      "from": "N89",
+      "to": "N91"
+    },
+    {
+      "from": "N90",
+      "to": "N92",
+      "truePath": true
+    },
+    {
+      "from": "N91",
+      "to": "N92"
+    },
+    {
+      "from": "N92",
+      "to": "N93",
+      "truePath": true
+    },
+    {
+      "from": "N93",
+      "to": "N94",
+      "eventEndId": "90",
+      "truePath": true
+    },
+    {
+      "from": "N93",
+      "to": "N95",
+      "eventEndId": "91"
+    },
+    {
+      "from": "N94",
+      "to": "N96",
+      "truePath": true
+    },
+    {
+      "from": "N94",
+      "to": "N97",
+      "altPath": true
+    },
+    {
+      "from": "N95",
+      "to": "N98"
+    },
+    {
+      "from": "N95",
+      "to": "N99"
+    },
+    {
+      "from": "N96",
+      "to": "N100",
+      "truePath": true
+    },
+    {
+      "from": "N97",
+      "to": "N100",
+      "altPath": true
+    },
+    {
+      "from": "N98",
+      "to": "N101"
+    },
+    {
+      "from": "N99",
+      "to": "N101"
+    },
+    {
+      "from": "N100",
+      "to": "N102",
+      "truePath": true
+    },
+    {
+      "from": "N101",
+      "to": "N103"
+    },
+    {
+      "from": "N102",
+      "to": "N104",
+      "eventEndId": "93",
+      "altPath": true
+    },
+    {
+      "from": "N102",
+      "to": "N105",
+      "eventEndId": "94",
+      "truePath": true
+    },
+    {
+      "from": "N103",
+      "to": "N106",
+      "eventEndId": "96"
+    },
+    {
+      "from": "N103",
+      "to": "N107",
+      "eventEndId": "97"
+    },
+    {
+      "from": "N104",
+      "to": "N108",
+      "altPath": true
+    },
+    {
+      "from": "N105",
+      "to": "N109",
+      "truePath": true
+    },
+    {
+      "from": "N106",
+      "to": "N110"
+    },
+    {
+      "from": "N107",
+      "to": "N111"
+    },
+    {
+      "from": "N108",
+      "to": "N112",
+      "altPath": true
+    },
+    {
+      "from": "N109",
+      "to": "N113",
+      "truePath": true
+    },
+    {
+      "from": "N110",
+      "to": "N114"
+    },
+    {
+      "from": "N111",
+      "to": "N115"
+    },
+    {
+      "from": "N112",
+      "to": "N116",
+      "altPath": true
+    },
+    {
+      "from": "N113",
+      "to": "N117",
+      "truePath": true
+    },
+    {
+      "from": "N114",
+      "to": "N118"
+    },
+    {
+      "from": "N115",
+      "to": "N119"
+    },
+    {
+      "from": "N116",
+      "to": "N120",
+      "altPath": true
+    },
+    {
+      "from": "N117",
+      "to": "N121",
+      "truePath": true
+    },
+    {
+      "from": "N118",
+      "to": "N122"
+    },
+    {
+      "from": "N119",
+      "to": "N123"
+    },
+    {
+      "from": "N120",
+      "to": "N124",
+      "altPath": true
+    },
+    {
+      "from": "N121",
+      "to": "N125",
+      "truePath": true
+    },
+    {
+      "from": "N122",
+      "to": "N126"
+    },
+    {
+      "from": "N123",
+      "to": "N127"
+    },
+    {
+      "from": "N124",
+      "to": "N128",
+      "altPath": true
+    },
+    {
+      "from": "N125",
+      "to": "N128",
+      "truePath": true
+    },
+    {
+      "from": "N126",
+      "to": "N129"
+    },
+    {
+      "from": "N127",
+      "to": "N129"
+    },
+    {
+      "from": "N128",
+      "to": "N130",
+      "truePath": true
+    },
+    {
+      "from": "N129",
+      "to": "N131"
+    },
+    {
+      "from": "N130",
+      "to": "N132",
+      "eventEndId": "99",
+      "truePath": true
+    },
+    {
+      "from": "N130",
+      "to": "N133",
+      "eventEndId": "100"
+    },
+    {
+      "from": "N131",
+      "to": "N134",
+      "eventEndId": "102"
+    },
+    {
+      "from": "N131",
+      "to": "N135",
+      "eventEndId": "103"
+    },
+    {
+      "from": "N132",
+      "to": "N136",
+      "truePath": true
+    },
+    {
+      "from": "N133",
+      "to": "N137"
+    },
+    {
+      "from": "N134",
+      "to": "N138"
+    },
+    {
+      "from": "N135",
+      "to": "N139"
+    }
+  ]
+}

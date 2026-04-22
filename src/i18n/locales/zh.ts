@@ -668,6 +668,7 @@ const zh: Record<TranslationKey, string> = {
 
   // Monad Gate
   'monad.rewards': '奖励',
+  'monad.rewards.firstClear': '首通奖励',
   'monad.trueEndingChoices': '真结局选择',
   'monad.ui.trueEndingPath': '真结局路线',
   'monad.ui.compact': '紧凑',

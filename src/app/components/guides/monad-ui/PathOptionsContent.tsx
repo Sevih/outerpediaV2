@@ -36,8 +36,10 @@ export const PathOptionsContent: React.FC<PathOptionsContentProps> = ({
       {outgoing.map((edge, i) => {
         const toNode = getNodeById(edge.to);
         const isTrue = edge.truePath === true;
-        const shouldDim = showTruePath && !isTrue;
+        const isAlt = edge.altPath === true;
+        const shouldDim = showTruePath && !isTrue && !isAlt;
         const highlight = showTruePath && isTrue;
+        const altHighlight = showTruePath && isAlt && !isTrue;
 
         const labelText = lRec(edge.label, lang) || t('monad.ui.unnamedPath');
         const needText = lRec(edge.need, lang);
@@ -48,7 +50,11 @@ export const PathOptionsContent: React.FC<PathOptionsContentProps> = ({
             key={i}
             className={`rounded px-3 py-2 border text-sm
               ${shouldDim ? 'bg-zinc-800 text-zinc-500 border-zinc-700' : ''}
-              ${highlight ? 'bg-green-700 text-white border-green-500' : 'bg-zinc-800 text-white border-zinc-700'}`}
+              ${highlight
+                ? 'bg-green-700 text-white border-green-500'
+                : altHighlight
+                  ? 'bg-green-900/40 text-white border-green-600 border-dashed'
+                  : 'bg-zinc-800 text-white border-zinc-700'}`}
           >
             <div className="italic">{labelText}</div>
             {needText && (

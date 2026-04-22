@@ -29,6 +29,15 @@ function indexBy<T extends Record<string, string>>(rows: T[], key = 'ID'): Map<s
   return m
 }
 
+/** Case-insensitive variant: indexes by the uppercased key. Used for text tables where the
+ *  game data sometimes mixes casing (e.g. `SYS_MG01_R03_Ev03_1_SELECT_01`) against the
+ *  consumer's (`EV03_1`). Lookups should also uppercase the query. */
+function indexByCI<T extends Record<string, string>>(rows: T[], key = 'ID'): Map<string, T> {
+  const m = new Map<string, T>()
+  for (const row of rows) if (row[key]) m.set(row[key].toUpperCase(), row)
+  return m
+}
+
 function groupBy<T extends Record<string, string>>(rows: T[], key: string): Map<string, T[]> {
   const m = new Map<string, T[]>()
   for (const row of rows) {
@@ -44,7 +53,8 @@ type LangMap = Record<Lang, string>
 
 function resolveText(key: string | undefined, textIndex: Map<string, TextRow>): LangMap | null {
   if (!key) return null
-  const row = textIndex.get(key)
+  // Try exact match first, then uppercase fallback (text tables index on uppercase via indexByCI).
+  const row = textIndex.get(key) ?? textIndex.get(key.toUpperCase())
   if (!row) return null
   const out = {} as LangMap
   for (const lang of LANGS) out[lang] = row[LANG_COLUMNS[lang]] ?? ''
@@ -71,11 +81,14 @@ function splitLabelAndNeed(full: LangMap): { label: LangMap; need: LangMap } {
   return { label: labelOut, need: needOut }
 }
 
-// Game NodeType + icon → site node type (see src/lib/monad/nodeTypes.ts)
+// Game NodeType + icon/NodeName → site node type (see src/lib/monad/nodeTypes.ts).
+// MGNT_EVENT is disambiguated via NodeName first because the icon is ambiguous: depth 4
+// reuses CM_Monad_Node_Icon_08 for both EVENT_01 (Path of Fate) and EVENT_03 (Eldritch Realm).
 function mapNodeType(stage: NodeStageRow): string {
   const nodeType = stage.NodeType
   const icon = stage.GateNodeImage
   const ending = stage.EndingImage
+  const name = stage.NodeName ?? ''
   switch (nodeType) {
     case 'MGNT_START':
       return 'start'
@@ -91,6 +104,10 @@ function mapNodeType(stage: NodeStageRow): string {
       if (ending?.includes('Normal')) return 'nending'
       return 'tending'
     case 'MGNT_EVENT':
+      if (name.endsWith('_EVENT_02')) return 'moment'
+      if (name.endsWith('_EVENT_03')) return 'eldritch'
+      if (name.endsWith('_EVENT_01')) return 'path'
+      // Fallback on icon for unknown name variants.
       if (icon === 'CM_Monad_Node_Icon_03') return 'moment'
       if (icon === 'CM_Monad_Node_Icon_09') return 'eldritch'
       return 'path'
@@ -125,8 +142,11 @@ interface ExtractedNode {
   recommendBp?: number
   givesItem?: LangMap
   truePath?: boolean
+  altPath?: boolean
   /** Localised specific label from the stage (e.g. relic type "Knight's Relic"). */
   typeName?: LangMap
+  /** Stable key into the shared stage-label table (e.g. "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_02"). */
+  stageNameKey?: string
   /** Items automatically granted when visiting the node (event with no actual choice). */
   autoGivesItemIds?: string[]
 }
@@ -138,12 +158,17 @@ interface ExtractedEdge {
   need?: LangMap
   gives?: LangMap
   truePath?: boolean
+  /** Valid detour: not on the canonical path but still leads to a True Ending. */
+  altPath?: boolean
   // Solver-internal constraints (item/gauge) captured from the game event, kept on the wire so
   // the admin UI can show them if needed.
   requireItemId?: string
   requireGauge?: number
   givesItemIds?: string[]
   gaugeDelta?: number
+  // Source event coordinates (for compact serialisation)
+  eventGroupId?: string
+  eventEndId?: string
 }
 
 const ROW_CENTER = 5 // Row5 → y = 0
@@ -186,6 +211,7 @@ function extractGroup(
         stageLevel: entry.MonadGateStageLevel ? parseInt(entry.MonadGateStageLevel, 10) : undefined,
         recommendBp: entry.RecommendBattlePower ? parseInt(entry.RecommendBattlePower, 10) : undefined,
         typeName,
+        stageNameKey: stage.NodeName || undefined,
       })
     }
   }
@@ -288,6 +314,8 @@ function extractGroup(
       if (ev.RequireItemID) edge.requireItemId = ev.RequireItemID
       if (ev.RequireThemeRuleGauge) edge.requireGauge = parseInt(ev.RequireThemeRuleGauge, 10)
       if (ev.ThemeRuleGaugeValue) edge.gaugeDelta = parseInt(ev.ThemeRuleGaugeValue, 10)
+      edge.eventGroupId = node.eventGroupId
+      edge.eventEndId = ev.ID
 
       const acquiredIds = endItemIds.get(ev.ID) ?? []
       if (acquiredIds.length > 0) edge.givesItemIds = acquiredIds
@@ -306,6 +334,39 @@ function extractGroup(
         merged[lang] = names.map((n) => n[lang] ?? '').filter(Boolean).join(' / ')
       }
       edge.gives = merged
+    }
+
+    // Passive auto events: MGET_END with no NextNodeRow represent an event with no actual choice
+    // (the player just reads a line). The outgoing edge of the node still exists through
+    // NodeTemplet's NextNodeIndex, so we propagate the event's label to every outgoing edge that
+    // hasn't been labelled by a regular MGET_END above.
+    //
+    // Service event groups (character join/levelup, gauge ops) are skipped: their MGET_END records
+    // describe which *choice* was picked (offense/defense/healing), not which *map edge* was taken,
+    // and the player-side choice is orthogonal to map movement. Propagating the first END's label
+    // to every outgoing edge would incorrectly stamp all three with the same text (e.g. "A hero
+    // specialized in offense" ×3 on D4R1).
+    const hasServiceEvent = events.some(
+      (e) =>
+        e.EventType === 'MGET_CHARACTER_JOIN' ||
+        e.EventType === 'MGET_CHARACTER_LEVELUP' ||
+        e.EventType === 'MGET_THEMERULE_GAUGE',
+    )
+    if (!hasServiceEvent) {
+      const autoEnd = events.find(
+        (ev) => ev.EventType === 'MGET_END' && !ev.NextNodeRow && ev.NameID,
+      )
+      if (autoEnd) {
+        const rawLabel = resolveText(autoEnd.NameID, textIndex)
+        if (rawLabel) {
+          for (const edge of edges) {
+            if (edge.from !== node.id || edge.label) continue
+            edge.label = rawLabel
+            edge.eventGroupId = node.eventGroupId
+            edge.eventEndId = autoEnd.ID
+          }
+        }
+      }
     }
   }
 
@@ -401,21 +462,33 @@ function markTruePaths(
   const stateKey = (s: { nodeId: string; items: string[]; gauge: number }) =>
     `${s.nodeId}|${s.items.join(',')}|${Math.floor(s.gauge / 50)}`
 
+  // Prefer edges that collect items / don't require them, to deterministically pick a single
+  // canonical path when multiple alternatives are equally valid.
+  const edgePreference = (e: ExtractedEdge): number => {
+    let score = 0
+    if (e.givesItemIds?.length) score -= 10 // prefer collecting items
+    if (e.requireItemId) score += 5          // avoid gated edges unless needed
+    if (e.requireGauge) score += 3
+    return score
+  }
+
+  // ─── Pass 1: BFS for canonical (shortest) path ───
   const queue: State[] = [initial]
   visited.add(stateKey(initial))
 
   const MAX_ITER = 200_000
   let iter = 0
+  let canonical: State | null = null
 
   while (queue.length > 0 && iter++ < MAX_ITER) {
     const cur = queue.shift()!
     if (tendings.has(cur.nodeId)) {
-      for (const n of cur.path) truePathNodes.add(n)
-      for (const e of cur.edgePath) truePathEdges.add(e)
-      continue
+      canonical = cur
+      break // BFS => first hit is the shortest path
     }
     const outs = outgoing.get(cur.nodeId) ?? []
-    for (const edge of outs) {
+    const sortedOuts = [...outs].sort((a, b) => edgePreference(a) - edgePreference(b))
+    for (const edge of sortedOuts) {
       if (edge.requireItemId && !cur.items.includes(edge.requireItemId)) continue
       if (edge.requireGauge && cur.gauge < edge.requireGauge) continue
 
@@ -438,10 +511,128 @@ function markTruePaths(
     }
   }
 
-  if (truePathNodes.size === 0) return // no valid path found, leave flags untouched
+  if (!canonical) return // no valid path found, leave flags untouched
 
-  for (const n of nodes) if (truePathNodes.has(n.id)) n.truePath = true
-  for (const e of edges) if (truePathEdges.has(edgeKey(e))) e.truePath = true
+  for (const n of canonical.path) truePathNodes.add(n)
+  for (const e of canonical.edgePath) truePathEdges.add(e)
+
+  // ─── Pass 2: detect alternative branches from each canonical node ───
+  //
+  // For every step of the canonical path, look at every outgoing edge other than the one taken.
+  // If, after taking that edge, the player can still reach a True Ending, that edge is a valid
+  // alternative branch. This survives the pass-1 visited pruning because we now run a fresh
+  // reachability BFS per candidate edge, with its own state.
+
+  // BFS from (startId, items, gauge) that returns the list of edgeKeys taken to reach a
+  // True Ending (shortest path), or null if unreachable. Used to trace the full alt detour so
+  // the player can follow it back to the canonical path.
+  const findPathToTending = (
+    startId: string,
+    startItems: string[],
+    startGauge: number,
+  ): string[] | null => {
+    const seen = new Set<string>()
+    interface LocalState {
+      id: string
+      items: string[]
+      gauge: number
+      edgePath: string[]
+    }
+    const queue: LocalState[] = [
+      { id: startId, items: startItems, gauge: startGauge, edgePath: [] },
+    ]
+    seen.add(`${startId}|${startItems.join(',')}|${Math.floor(startGauge / 50)}`)
+    const LOCAL_MAX = 20_000
+    let li = 0
+    while (queue.length && li++ < LOCAL_MAX) {
+      const cur = queue.shift()!
+      if (tendings.has(cur.id)) return cur.edgePath
+      for (const edge of outgoing.get(cur.id) ?? []) {
+        if (edge.requireItemId && !cur.items.includes(edge.requireItemId)) continue
+        if (edge.requireGauge && cur.gauge < edge.requireGauge) continue
+        const viaEdge = edge.givesItemIds
+          ? Array.from(new Set([...cur.items, ...edge.givesItemIds])).sort()
+          : cur.items
+        const nextItems = mergeAuto(edge.to, viaEdge)
+        const nextGauge = Math.max(0, Math.min(gaugeCap, cur.gauge + gaugePerMove + (edge.gaugeDelta ?? 0)))
+        const k = `${edge.to}|${nextItems.join(',')}|${Math.floor(nextGauge / 50)}`
+        if (seen.has(k)) continue
+        seen.add(k)
+        queue.push({
+          id: edge.to,
+          items: nextItems,
+          gauge: nextGauge,
+          edgePath: [...cur.edgePath, edgeKey(edge)],
+        })
+      }
+    }
+    return null
+  }
+
+  // Replay the canonical path to know the carried state at each step.
+  const stateAt: State[] = [initial]
+  for (let i = 0; i < canonical.edgePath.length; i++) {
+    const prev = stateAt[i]
+    const [fromId, toId] = canonical.edgePath[i].split(':')
+    const edge = (outgoing.get(fromId) ?? []).find((e) => e.to === toId)
+    if (!edge) break
+    const viaEdge = edge.givesItemIds
+      ? Array.from(new Set([...prev.items, ...edge.givesItemIds])).sort()
+      : prev.items
+    const nextItems = mergeAuto(edge.to, viaEdge)
+    const nextGauge = Math.max(0, Math.min(gaugeCap, prev.gauge + gaugePerMove + (edge.gaugeDelta ?? 0)))
+    stateAt.push({
+      nodeId: edge.to,
+      items: nextItems,
+      gauge: nextGauge,
+      path: [...prev.path, edge.to],
+      edgePath: [...prev.edgePath, canonical.edgePath[i]],
+    })
+  }
+
+  const altPathEdges = new Set<string>()
+  for (let i = 0; i < canonical.path.length - 1; i++) {
+    const state = stateAt[i]
+    const canonicalEdgeK = canonical.edgePath[i]
+    for (const edge of outgoing.get(canonical.path[i]) ?? []) {
+      const k = edgeKey(edge)
+      if (k === canonicalEdgeK) continue
+      if (edge.requireItemId && !state.items.includes(edge.requireItemId)) continue
+      if (edge.requireGauge && state.gauge < edge.requireGauge) continue
+      const viaEdge = edge.givesItemIds
+        ? Array.from(new Set([...state.items, ...edge.givesItemIds])).sort()
+        : state.items
+      const nextItems = mergeAuto(edge.to, viaEdge)
+      const nextGauge = Math.max(0, Math.min(gaugeCap, state.gauge + gaugePerMove + (edge.gaugeDelta ?? 0)))
+      const recovery = findPathToTending(edge.to, nextItems, nextGauge)
+      if (recovery !== null) {
+        altPathEdges.add(k)
+        // Include the whole recovery path so the player has every edge they need to follow
+        // to reconnect with the True Ending.
+        for (const ek of recovery) altPathEdges.add(ek)
+      }
+    }
+  }
+
+  for (const e of truePathEdges) altPathEdges.delete(e)
+
+  // Collect nodes touched by alt paths (both endpoints of each alt edge) so the UI can keep
+  // them fully visible when the "True Ending Path" filter is on.
+  const altPathNodes = new Set<string>()
+  for (const ek of altPathEdges) {
+    const [fromId, toId] = ek.split(':')
+    if (!truePathNodes.has(fromId)) altPathNodes.add(fromId)
+    if (!truePathNodes.has(toId)) altPathNodes.add(toId)
+  }
+
+  for (const n of nodes) {
+    if (truePathNodes.has(n.id)) n.truePath = true
+    else if (altPathNodes.has(n.id)) n.altPath = true
+  }
+  for (const e of edges) {
+    if (truePathEdges.has(edgeKey(e))) e.truePath = true
+    else if (altPathEdges.has(edgeKey(e))) e.altPath = true
+  }
 }
 
 function listRoutes(routeRows: RouteRow[], textIndex: Map<string, TextRow>) {
@@ -454,13 +645,395 @@ function listRoutes(routeRows: RouteRow[], textIndex: Map<string, TextRow>) {
   }))
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Reward resolution
+// ─────────────────────────────────────────────────────────────────────────────
+
+interface ResolvedRewardItem {
+  type: string // RIT_ITEM, RIT_ASSET, ...
+  typeId: string
+  min: number
+  max: number
+}
+
+interface ResolvedReward {
+  gold?: { min: number; max: number }
+  crystal?: { min: number; max: number }
+  items: ResolvedRewardItem[]
+}
+
+function resolveReward(
+  rewardId: string,
+  rewardIndex: Map<string, Record<string, string>>,
+  groupByGroupId: Map<string, Record<string, string>[]>,
+): ResolvedReward | null {
+  const reward = rewardIndex.get(rewardId)
+  if (!reward) return null
+  const out: ResolvedReward = { items: [] }
+  if (reward.CreditMin) {
+    out.gold = {
+      min: parseInt(reward.CreditMin, 10),
+      max: parseInt(reward.CreditMax ?? reward.CreditMin, 10),
+    }
+  }
+  if (reward.Crystal) {
+    const n = parseInt(reward.Crystal, 10)
+    out.crystal = { min: n, max: n }
+  }
+  const addGroup = (raw: string | undefined) => {
+    if (!raw) return
+    for (const gid of raw.split(',').map((g) => g.trim()).filter(Boolean)) {
+      const rows = groupByGroupId.get(gid) ?? []
+      for (const r of rows) {
+        out.items.push({
+          type: r.Type ?? '',
+          typeId: r.TypeID ?? '',
+          min: parseInt(r.MinCount ?? '0', 10),
+          max: parseInt(r.MaxCount ?? '0', 10),
+        })
+      }
+    }
+  }
+  addGroup(reward.StaticGroupID)
+  addGroup(reward.RandomGroupID)
+  return out
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Compact serialisation for data/monad/generated/
+// ─────────────────────────────────────────────────────────────────────────────
+
+interface CompactNode {
+  id: string
+  col: number
+  row: number
+  type: string
+  typeNameKey?: string
+  eventGroupId?: string
+  rewardId?: string
+  firstClearRewardId?: string
+  autoItems?: string[]
+  truePath?: boolean
+  altPath?: boolean
+}
+
+interface CompactEdge {
+  from: string
+  to: string
+  eventEndId?: string
+  truePath?: boolean
+  altPath?: boolean
+}
+
+interface CompactRoute {
+  groupId: string
+  depth: number
+  routeIndex: number
+  variant: number
+  name: LangMap | null
+  nodes: CompactNode[]
+  edges: CompactEdge[]
+}
+
+interface CompactEventEnd {
+  labelKey?: string
+  requireItemId?: string
+  requireGauge?: number
+  givesItemIds?: string[]
+  gaugeDelta?: number
+}
+
+interface CompactTheme {
+  themeId: string
+  themeName: LangMap | null
+  gauge: { perMove: number; cap: number }
+  items: Record<string, { name: LangMap }>
+  events: Record<
+    string,
+    {
+      titleKey?: string
+      ends: Record<string, CompactEventEnd>
+      /** "service" groups are recurring non-narrative events (character join/levelup,
+       *  theme rule gauge manipulation) — they shouldn't appear in True Ending Choices. */
+      kind?: 'service'
+    }
+  >
+  rewards: Record<string, ResolvedReward>
+  /** Shared label table. Keyed by the game text key (e.g. SYS_MG01_…). */
+  labels: Record<string, LangMap>
+  /** Stable per-stage labels (e.g. relic subtype, ending flavour). Keyed by the game text key. */
+  stageLabels: Record<string, LangMap>
+  routes: Array<{
+    groupId: string
+    depth: number
+    routeIndex: number
+    variant: number
+    name: LangMap | null
+  }>
+}
+
+function toCompactRoute(
+  groupId: string,
+  depth: number,
+  routeIndex: number,
+  variant: number,
+  name: LangMap | null,
+  nodes: ExtractedNode[],
+  edges: ExtractedEdge[],
+  stageByGroupId: Map<string, NodeStageRow>,
+): CompactRoute {
+  const compactNodes: CompactNode[] = nodes.map((n) => {
+    const stage = stageByGroupId.get(n.stageGroupId)
+    const out: CompactNode = {
+      id: n.id,
+      col: n.column,
+      row: n.row,
+      type: n.type,
+    }
+    if (n.stageNameKey) out.typeNameKey = n.stageNameKey
+    if (n.eventGroupId) out.eventGroupId = n.eventGroupId
+    if (stage?.RewardID) out.rewardId = stage.RewardID
+    if (stage?.FirstClearRewardID) out.firstClearRewardId = stage.FirstClearRewardID
+    if (n.autoGivesItemIds && n.autoGivesItemIds.length) out.autoItems = n.autoGivesItemIds
+    if (n.truePath) out.truePath = true
+    if (n.altPath) out.altPath = true
+    return out
+  })
+  const compactEdges: CompactEdge[] = edges.map((e) => {
+    const out: CompactEdge = { from: e.from, to: e.to }
+    if (e.eventEndId) out.eventEndId = e.eventEndId
+    if (e.truePath) out.truePath = true
+    if (e.altPath) out.altPath = true
+    return out
+  })
+  return {
+    groupId,
+    depth,
+    routeIndex,
+    variant,
+    name,
+    nodes: compactNodes,
+    edges: compactEdges,
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// POST: regenerate all JSON files under data/monad/generated/
+// ─────────────────────────────────────────────────────────────────────────────
+
+export async function POST() {
+  const routeRows = loadTable<RouteRow>('MonadGateRouteTemplet')
+  const textRows = loadTable<TextRow>('TextSystem')
+  const nodeRows = loadTable<NodeTempletRow>('MonadGateNodeTemplet')
+  const stageRows = loadTable<NodeStageRow>('MonadGateNodeStageTemplet')
+  const eventRows = loadTable<EventRow>('MonadGateEventTemplet')
+  const itemRows = loadTable<Record<string, string>>('ItemTemplet')
+  const textItemRows = loadTable<TextRow>('TextItem')
+  const themeRuleRows = loadTable<Record<string, string>>('MonadGateThemeRuleTemplet')
+  const themeRows = loadTable<Record<string, string>>('MonadGateThemeTemplet')
+  const rewardRows = loadTable<Record<string, string>>('RewardTemplet')
+  const rewardGroupRows = loadTable<Record<string, string>>('RewardGroupTemplet')
+
+  const textIndex = indexByCI(textRows)
+  const stageIndex = indexBy(stageRows, 'GroupID')
+  const eventByGroup = groupBy(eventRows, 'EventGroupID')
+  const itemIndex = indexBy(itemRows, 'ID')
+  const textItemIndex = indexByCI(textItemRows)
+  const rewardIndex = indexBy(rewardRows, 'ID')
+  const rewardGroupByGroupId = groupBy(rewardGroupRows, 'GroupID')
+
+  const themeRule = themeRuleRows[0] ?? {}
+  const gaugePerMove = parseInt(themeRule.NodeMoveGaugeIncrease ?? '20', 10)
+  const gaugeCap = parseInt(themeRule.MonadGateThemeRuleGauge ?? '1000', 10)
+  const theme = themeRows[0] ?? {}
+  const themeId = theme.ID ?? '1'
+  const themeName = resolveText(theme.MonadGateThemeName, textIndex)
+
+  // Accumulate theme registries while walking all routes
+  const themeOut: CompactTheme = {
+    themeId,
+    themeName,
+    gauge: { perMove: gaugePerMove, cap: gaugeCap },
+    items: {},
+    events: {},
+    rewards: {},
+    labels: {},
+    stageLabels: {},
+    routes: [],
+  }
+
+  // Track referenced items / rewards / stage labels so we only ship what's actually used
+  const referencedItemIds = new Set<string>()
+  const referencedRewardIds = new Set<string>()
+  const referencedEventGroups = new Set<string>()
+  const referencedStageKeys = new Set<string>()
+
+  const routes: CompactRoute[] = []
+
+  for (const routeRow of routeRows) {
+    const depth = parseInt(routeRow.DepthID, 10)
+    const routeIndex = parseInt(routeRow.StageRouteID, 10)
+    const groupIds = routeRow.NodeGroupID.split(',').map((g) => g.trim()).filter(Boolean)
+    const name = resolveText(routeRow.RouteName, textIndex)
+
+    groupIds.forEach((groupId, variantIdx) => {
+      const { nodes, edges } = extractGroup(
+        groupId,
+        nodeRows,
+        stageIndex,
+        eventByGroup,
+        textIndex,
+        itemIndex,
+        textItemIndex,
+      )
+      markTruePaths(nodes, edges, gaugePerMove, gaugeCap)
+
+      // Collect theme-level references
+      for (const n of nodes) {
+        if (n.eventGroupId) referencedEventGroups.add(n.eventGroupId)
+        if (n.stageNameKey) referencedStageKeys.add(n.stageNameKey)
+        for (const id of n.autoGivesItemIds ?? []) referencedItemIds.add(id)
+        const stage = stageIndex.get(n.stageGroupId)
+        if (stage?.RewardID) referencedRewardIds.add(stage.RewardID)
+        if (stage?.FirstClearRewardID) referencedRewardIds.add(stage.FirstClearRewardID)
+      }
+      for (const e of edges) {
+        if (e.requireItemId) referencedItemIds.add(e.requireItemId)
+        for (const id of e.givesItemIds ?? []) referencedItemIds.add(id)
+      }
+
+      routes.push(
+        toCompactRoute(groupId, depth, routeIndex, variantIdx, name, nodes, edges, stageIndex),
+      )
+      themeOut.routes.push({ groupId, depth, routeIndex, variant: variantIdx, name })
+    })
+  }
+
+  // Resolve referenced items into theme
+  for (const id of referencedItemIds) {
+    const item = itemIndex.get(id)
+    if (!item) continue
+    const n = resolveText(item.NameID, textItemIndex)
+    if (!n) continue
+    themeOut.items[id] = { name: n }
+  }
+
+  // Resolve referenced rewards into theme
+  for (const id of referencedRewardIds) {
+    const r = resolveReward(id, rewardIndex, rewardGroupByGroupId)
+    if (r) themeOut.rewards[id] = r
+  }
+
+  // Resolve referenced stage labels into theme (dedup across all routes)
+  for (const key of referencedStageKeys) {
+    const label = resolveText(key, textIndex)
+    if (label) themeOut.stageLabels[key] = label
+  }
+
+  // Resolve referenced event groups into theme (label references + constraints per end).
+  // Labels are stored by text key into the shared `labels` registry so the same translated
+  // string appears once no matter how many events reuse it.
+  const addLabel = (key: string | undefined): string | undefined => {
+    if (!key) return undefined
+    if (!themeOut.labels[key]) {
+      const resolved = resolveText(key, textIndex)
+      if (resolved) themeOut.labels[key] = resolved
+    }
+    return themeOut.labels[key] ? key : undefined
+  }
+
+  for (const egid of referencedEventGroups) {
+    const events = eventByGroup.get(egid) ?? []
+    const startEv = events.find((e) => e.EventType === 'MGET_START')
+    const titleKey = addLabel(startEv?.NameID)
+
+    // Forward DFS from MGET_START to accumulate GetKeyItemID along each branch, so each
+    // MGET_END knows the full chain of items the player collects by reaching it.
+    const eventById = new Map(events.map((e) => [e.ID, e]))
+    const endItemIds = new Map<string, string[]>()
+    const visit = (evId: string, acquired: string[], seen: Set<string>) => {
+      if (seen.has(evId)) return
+      const ev = eventById.get(evId)
+      if (!ev) return
+      const next = ev.GetKeyItemID ? [...acquired, ev.GetKeyItemID] : acquired
+      if (ev.EventType === 'MGET_END') {
+        const existing = endItemIds.get(evId)
+        if (!existing || existing.length < next.length) endItemIds.set(evId, next)
+        return
+      }
+      const seenNext = new Set(seen).add(evId)
+      for (const nid of (ev.MoveEventID || '').split(',').map((s) => s.trim()).filter(Boolean)) {
+        visit(nid, next, seenNext)
+      }
+    }
+    if (startEv) {
+      for (const nid of (startEv.MoveEventID || '').split(',').map((s) => s.trim()).filter(Boolean)) {
+        visit(nid, [], new Set([startEv.ID]))
+      }
+    }
+
+    const ends: Record<string, CompactEventEnd> = {}
+    for (const ev of events) {
+      if (ev.EventType !== 'MGET_END') continue
+      const labelKey = addLabel(ev.NameID)
+      if (!labelKey) continue
+      const entry: CompactEventEnd = { labelKey }
+      if (ev.RequireItemID) entry.requireItemId = ev.RequireItemID
+      if (ev.RequireThemeRuleGauge) entry.requireGauge = parseInt(ev.RequireThemeRuleGauge, 10)
+      if (ev.ThemeRuleGaugeValue) entry.gaugeDelta = parseInt(ev.ThemeRuleGaugeValue, 10)
+      const acquired = endItemIds.get(ev.ID) ?? []
+      if (acquired.length > 0) entry.givesItemIds = acquired
+      ends[ev.ID] = entry
+    }
+
+    // Flag recurring/mechanical event groups. Their labels are still useful in the map popup
+    // but they shouldn't appear in the narrative True Ending Choices list.
+    const isService = events.some(
+      (e) =>
+        e.EventType === 'MGET_CHARACTER_JOIN' ||
+        e.EventType === 'MGET_CHARACTER_LEVELUP' ||
+        e.EventType === 'MGET_THEMERULE_GAUGE',
+    )
+
+    themeOut.events[egid] = { titleKey, ends, ...(isService ? { kind: 'service' as const } : {}) }
+  }
+
+  // Write files
+  const outDir = path.join(process.cwd(), 'data', 'monad', 'generated')
+  const routesDir = path.join(outDir, 'routes')
+  fs.mkdirSync(routesDir, { recursive: true })
+  fs.writeFileSync(
+    path.join(outDir, `theme-${themeId}.json`),
+    JSON.stringify(themeOut, null, 2),
+    'utf-8',
+  )
+  for (const r of routes) {
+    fs.writeFileSync(
+      path.join(routesDir, `${r.groupId}.json`),
+      JSON.stringify(r, null, 2),
+      'utf-8',
+    )
+  }
+
+  return NextResponse.json({
+    ok: true,
+    themeId,
+    routesWritten: routes.length,
+    itemCount: Object.keys(themeOut.items).length,
+    rewardCount: Object.keys(themeOut.rewards).length,
+    eventGroupCount: Object.keys(themeOut.events).length,
+    stageLabelCount: Object.keys(themeOut.stageLabels).length,
+    labelCount: Object.keys(themeOut.labels).length,
+  })
+}
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const groupId = searchParams.get('groupId')
 
   const routeRows = loadTable<RouteRow>('MonadGateRouteTemplet')
   const textRows = loadTable<TextRow>('TextSystem')
-  const textIndex = indexBy(textRows)
+  const textIndex = indexByCI(textRows)
 
   if (!groupId) {
     return NextResponse.json({ routes: listRoutes(routeRows, textIndex) })
@@ -476,7 +1049,7 @@ export async function GET(req: NextRequest) {
   const stageIndex = indexBy(stageRows, 'GroupID')
   const eventByGroup = groupBy(eventRows, 'EventGroupID')
   const itemIndex = indexBy(itemRows, 'ID')
-  const textItemIndex = indexBy(textItemRows)
+  const textItemIndex = indexByCI(textItemRows)
 
   const themeRule = themeRuleRows[0] ?? {}
   const gaugePerMove = parseInt(themeRule.NodeMoveGaugeIncrease ?? '20', 10)

@@ -668,6 +668,7 @@ const en = {
 
   // Monad Gate
   'monad.rewards': 'Rewards',
+  'monad.rewards.firstClear': 'First Clear Bonus',
   'monad.trueEndingChoices': 'True Ending Choices',
   'monad.ui.trueEndingPath': 'True Ending Path',
   'monad.ui.compact': 'Compact',

@@ -59,6 +59,26 @@ export default function MonadGateExtractorPage() {
   const [rawNodes, setRawNodes] = useState<ApiNode[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [generating, setGenerating] = useState(false)
+  const [generateResult, setGenerateResult] = useState<string | null>(null)
+
+  const regenerate = useCallback(async () => {
+    setGenerating(true)
+    setGenerateResult(null)
+    setError(null)
+    try {
+      const res = await fetch(API, { method: 'POST' })
+      const data = await res.json()
+      if (!res.ok || !data.ok) throw new Error(JSON.stringify(data))
+      setGenerateResult(
+        `Wrote theme-${data.themeId}.json + ${data.routesWritten} routes · ${data.itemCount} items · ${data.rewardCount} rewards · ${data.eventGroupCount} event groups.`,
+      )
+    } catch (e) {
+      setError(String(e))
+    } finally {
+      setGenerating(false)
+    }
+  }, [])
 
   useEffect(() => {
     fetch(API)
@@ -150,7 +170,22 @@ export default function MonadGateExtractorPage() {
           })}
         </select>
         {loading && <span className="text-sm text-zinc-400">Loading…</span>}
+        <div className="ml-auto flex items-center gap-3">
+          <button
+            onClick={regenerate}
+            disabled={generating}
+            className="bg-emerald-700 hover:bg-emerald-600 disabled:bg-zinc-700 text-white border border-emerald-500 rounded px-3 py-1 text-sm"
+          >
+            {generating ? 'Regenerating…' : 'Regenerate all JSON'}
+          </button>
+        </div>
       </div>
+
+      {generateResult && (
+        <div className="p-3 bg-emerald-900/40 border border-emerald-600 rounded text-sm text-emerald-200">
+          {generateResult}
+        </div>
+      )}
 
       {error && (
         <div className="p-3 bg-red-900/40 border border-red-600 rounded text-sm text-red-200">

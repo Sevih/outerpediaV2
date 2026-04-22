@@ -1,0 +1,3724 @@
+{
+  "themeId": "1",
+  "themeName": {
+    "en": "Hope is a thing with feathers",
+    "jp": "希望は翼あるもの",
+    "kr": "희망은 날개 달린 것",
+    "zh": "希望长有翅膀"
+  },
+  "gauge": {
+    "perMove": 20,
+    "cap": 1000
+  },
+  "items": {
+    "9940001": {
+      "name": {
+        "en": "Forged ID Card",
+        "jp": "偽造身分証",
+        "kr": "위조 신분증",
+        "zh": "伪造身分证"
+      }
+    },
+    "9940002": {
+      "name": {
+        "en": "Code A1",
+        "jp": "コードA1",
+        "kr": "코드 A1",
+        "zh": "代号A1"
+      }
+    },
+    "9940003": {
+      "name": {
+        "en": "Union Emblem",
+        "jp": "連合の証",
+        "kr": "연합의 증표",
+        "zh": "联盟的信物"
+      }
+    },
+    "9940004": {
+      "name": {
+        "en": "Key to the Stone Chamber",
+        "jp": "石室の鍵",
+        "kr": "석실의 열쇠",
+        "zh": "石室钥匙"
+      }
+    },
+    "9940005": {
+      "name": {
+        "en": "Eliza's Rosary",
+        "jp": "エリーゼのロザリオ",
+        "kr": "엘리제의 로자리오",
+        "zh": "伊莉莎的十字架"
+      }
+    },
+    "9940006": {
+      "name": {
+        "en": "New Weapon Secret Code",
+        "jp": "新兵器の秘密コード",
+        "kr": "신병기 비밀 코드",
+        "zh": "新兵器秘密代号"
+      }
+    },
+    "9940007": {
+      "name": {
+        "en": "Essence of Bane",
+        "jp": "劇毒の神髄",
+        "kr": "극독의 정수",
+        "zh": "剧毒精髓"
+      }
+    },
+    "9940008": {
+      "name": {
+        "en": "Sleeping Gas",
+        "jp": "睡眠ガス",
+        "kr": "수면 가스",
+        "zh": "催眠瓦斯"
+      }
+    },
+    "9940009": {
+      "name": {
+        "en": "Hallucinogenic Gas",
+        "jp": "幻覚ガス",
+        "kr": "환각 가스",
+        "zh": "幻觉瓦斯"
+      }
+    },
+    "9940010": {
+      "name": {
+        "en": "Largissimo",
+        "jp": "ラルギッシモ",
+        "kr": "라르기시모",
+        "zh": "Largissimo"
+      }
+    },
+    "9940011": {
+      "name": {
+        "en": "Token of Trust",
+        "jp": "信頼の証",
+        "kr": "신뢰의 증표",
+        "zh": "信赖的信物"
+      }
+    },
+    "9940012": {
+      "name": {
+        "en": "Officer Felix's Core",
+        "jp": "看守ニャンのコア",
+        "kr": "간수냥이의 코어",
+        "zh": "看守喵的核心"
+      }
+    },
+    "9940013": {
+      "name": {
+        "en": "Hero's Heirloom",
+        "jp": "勇者の形見",
+        "kr": "용사의 유품",
+        "zh": "勇士的遗物"
+      }
+    },
+    "9940014": {
+      "name": {
+        "en": "Transparent Chess Piece",
+        "jp": "透明なチェスアイテム",
+        "kr": "투명한 체스 기물",
+        "zh": "透明的西洋棋棋子"
+      }
+    },
+    "9940015": {
+      "name": {
+        "en": "Prayer of the Blind",
+        "jp": "盲者の祈り",
+        "kr": "눈먼자의 기도",
+        "zh": "盲者的祈祷"
+      }
+    }
+  },
+  "events": {
+    "1": {
+      "ends": {}
+    },
+    "2": {
+      "ends": {}
+    },
+    "3": {
+      "ends": {}
+    },
+    "4": {
+      "ends": {}
+    },
+    "5": {
+      "ends": {}
+    },
+    "101": {
+      "titleKey": "SYS_MG01_FREE_EV01_NAME_01",
+      "ends": {
+        "194": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "195": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "196": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "201": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "202": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "203": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "208": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "209": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "210": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "215": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "216": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "217": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "222": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "223": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "224": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "228": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "229": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "233": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "234": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "238": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "239": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "243": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "244": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "248": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "249": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "252": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "255": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "258": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "261": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "265": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_01",
+          "gaugeDelta": -200
+        },
+        "266": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_02",
+          "gaugeDelta": 100
+        },
+        "270": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_01",
+          "gaugeDelta": -300
+        },
+        "271": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_02",
+          "gaugeDelta": 200
+        },
+        "275": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_01",
+          "gaugeDelta": -400
+        },
+        "276": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_02",
+          "gaugeDelta": 300
+        },
+        "279": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        },
+        "282": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        },
+        "285": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        },
+        "288": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        },
+        "291": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        }
+      },
+      "kind": "service"
+    },
+    "201": {
+      "titleKey": "SYS_MG01_FREE_EV01_NAME_01",
+      "ends": {
+        "296": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "297": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "298": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "303": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "304": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "305": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "310": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "311": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "312": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "317": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "318": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "319": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "324": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_01"
+        },
+        "325": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_02"
+        },
+        "326": {
+          "labelKey": "SYS_MG01_FREE_EV01_SELECT_03"
+        },
+        "330": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "331": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "335": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "336": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "340": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "341": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "345": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "346": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "350": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_01"
+        },
+        "351": {
+          "labelKey": "SYS_MG01_FREE_EV04_SELECT_02"
+        },
+        "354": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        },
+        "357": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        },
+        "360": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        },
+        "363": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        },
+        "366": {
+          "labelKey": "SYS_MG01_FREE_EV05_SELECT_01"
+        }
+      },
+      "kind": "service"
+    },
+    "301": {
+      "titleKey": "SYS_MG01_FREE_EV02_NAME_01",
+      "ends": {
+        "370": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "371": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_02"
+        }
+      },
+      "kind": "service"
+    },
+    "302": {
+      "titleKey": "SYS_MG01_FREE_EV02_NAME_01",
+      "ends": {
+        "375": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "376": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_02"
+        }
+      },
+      "kind": "service"
+    },
+    "303": {
+      "titleKey": "SYS_MG01_FREE_EV02_NAME_01",
+      "ends": {
+        "380": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "381": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_02"
+        }
+      },
+      "kind": "service"
+    },
+    "304": {
+      "titleKey": "SYS_MG01_FREE_EV02_NAME_01",
+      "ends": {
+        "385": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "386": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_02"
+        }
+      },
+      "kind": "service"
+    },
+    "305": {
+      "titleKey": "SYS_MG01_FREE_EV02_NAME_01",
+      "ends": {
+        "390": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "391": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_02"
+        }
+      },
+      "kind": "service"
+    },
+    "306": {
+      "titleKey": "SYS_MG01_FREE_EV02_NAME_01",
+      "ends": {
+        "394": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "397": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "400": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "403": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        },
+        "406": {
+          "labelKey": "SYS_MG01_FREE_EV02_SELECT_01"
+        }
+      },
+      "kind": "service"
+    },
+    "308": {
+      "titleKey": "SYS_MG01_FREE_EV03_NAME_01",
+      "ends": {
+        "425": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_01",
+          "gaugeDelta": -200
+        },
+        "426": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_02",
+          "gaugeDelta": 100
+        },
+        "430": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_01",
+          "gaugeDelta": -300
+        },
+        "431": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_02",
+          "gaugeDelta": 200
+        },
+        "435": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_01",
+          "gaugeDelta": -400
+        },
+        "436": {
+          "labelKey": "SYS_MG01_FREE_EV03_SELECT_02",
+          "gaugeDelta": 300
+        }
+      },
+      "kind": "service"
+    },
+    "10001": {
+      "ends": {}
+    },
+    "10002": {
+      "ends": {}
+    },
+    "10101": {
+      "titleKey": "SYS_MG01_R01_EV01_NAME_01",
+      "ends": {
+        "2": {
+          "labelKey": "SYS_MG01_R01_EV01_SELECT_01"
+        },
+        "3": {
+          "labelKey": "SYS_MG01_R01_EV01_SELECT_02"
+        }
+      }
+    },
+    "10102": {
+      "titleKey": "SYS_MG01_R01_EV02_NAME_01",
+      "ends": {
+        "7": {
+          "labelKey": "SYS_MG01_R01_EV02_SELECT_01"
+        },
+        "8": {
+          "labelKey": "SYS_MG01_R01_EV02_SELECT_02",
+          "givesItemIds": [
+            "9940001"
+          ]
+        }
+      }
+    },
+    "10103": {
+      "titleKey": "SYS_MG01_R01_EV03_NAME_01",
+      "ends": {
+        "10": {
+          "labelKey": "SYS_MG01_R01_EV03_SELECT_01"
+        },
+        "11": {
+          "labelKey": "SYS_MG01_R01_EV03_SELECT_02"
+        },
+        "12": {
+          "labelKey": "SYS_MG01_R01_EV03_SELECT_03",
+          "requireItemId": "9940001"
+        }
+      }
+    },
+    "10104": {
+      "titleKey": "SYS_MG01_R01_EV04_NAME_01",
+      "ends": {
+        "14": {
+          "labelKey": "SYS_MG01_R01_EV04_SELECT_01"
+        },
+        "15": {
+          "labelKey": "SYS_MG01_R01_EV04_SELECT_02"
+        }
+      }
+    },
+    "10105": {
+      "titleKey": "SYS_MG01_R01_EV05_NAME_01",
+      "ends": {
+        "17": {
+          "labelKey": "SYS_MG01_R01_EV05_SELECT_01"
+        },
+        "18": {
+          "labelKey": "SYS_MG01_R01_EV05_SELECT_02"
+        }
+      }
+    },
+    "10106": {
+      "titleKey": "SYS_MG01_R01_EV06_NAME_01",
+      "ends": {
+        "20": {
+          "labelKey": "SYS_MG01_R01_EV06_SELECT_01"
+        },
+        "21": {
+          "labelKey": "SYS_MG01_R01_EV06_SELECT_02",
+          "givesItemIds": [
+            "9940002"
+          ]
+        },
+        "22": {
+          "labelKey": "SYS_MG01_R01_EV06_SELECT_03",
+          "givesItemIds": [
+            "9940002"
+          ]
+        }
+      }
+    },
+    "10107": {
+      "titleKey": "SYS_MG01_R01_EV07_NAME_01",
+      "ends": {
+        "24": {
+          "labelKey": "SYS_MG01_R01_EV07_SELECT_01",
+          "requireGauge": 500
+        },
+        "25": {
+          "labelKey": "SYS_MG01_R01_EV07_SELECT_02"
+        }
+      }
+    },
+    "10108": {
+      "titleKey": "SYS_MG01_R01_EV08_NAME_01",
+      "ends": {
+        "27": {
+          "labelKey": "SYS_MG01_R01_EV08_SELECT_01",
+          "requireItemId": "9940002"
+        },
+        "28": {
+          "labelKey": "SYS_MG01_R01_EV08_SELECT_02"
+        }
+      }
+    },
+    "10109": {
+      "titleKey": "SYS_MG01_R01_EV09_NAME_01",
+      "ends": {
+        "30": {
+          "labelKey": "SYS_MG01_R01_EV09_SELECT_01"
+        }
+      }
+    },
+    "11001": {
+      "ends": {}
+    },
+    "11002": {
+      "ends": {}
+    },
+    "11003": {
+      "ends": {}
+    },
+    "12001": {
+      "ends": {}
+    },
+    "12002": {
+      "ends": {}
+    },
+    "12003": {
+      "ends": {}
+    },
+    "13001": {
+      "ends": {}
+    },
+    "13002": {
+      "ends": {}
+    },
+    "13003": {
+      "ends": {}
+    },
+    "14001": {
+      "ends": {}
+    },
+    "14002": {
+      "ends": {}
+    },
+    "14003": {
+      "ends": {}
+    },
+    "15001": {
+      "ends": {}
+    },
+    "15002": {
+      "ends": {}
+    },
+    "15003": {
+      "ends": {}
+    },
+    "20101": {
+      "titleKey": "SYS_MG01_R02_EV01_NAME_01",
+      "ends": {
+        "34": {
+          "labelKey": "SYS_MG01_R02_EV01_SELECT_01",
+          "givesItemIds": [
+            "9940003"
+          ]
+        },
+        "35": {
+          "labelKey": "SYS_MG01_R02_EV01_SELECT_02"
+        }
+      }
+    },
+    "20102": {
+      "titleKey": "SYS_MG01_R02_EV02_NAME_01",
+      "ends": {
+        "39": {
+          "labelKey": "SYS_MG01_R02_EV02_SELECT_01",
+          "requireItemId": "9940003"
+        },
+        "40": {
+          "labelKey": "SYS_MG01_R02_EV02_SELECT_02"
+        }
+      }
+    },
+    "20103": {
+      "titleKey": "SYS_MG01_R02_EV03_NAME_01",
+      "ends": {
+        "42": {
+          "labelKey": "SYS_MG01_R02_EV03_SELECT_01"
+        },
+        "43": {
+          "labelKey": "SYS_MG01_R02_EV03_SELECT_02",
+          "givesItemIds": [
+            "9940004"
+          ]
+        }
+      }
+    },
+    "20105": {
+      "titleKey": "SYS_MG01_R02_EV04_NAME_01",
+      "ends": {
+        "48": {
+          "labelKey": "SYS_MG01_R02_EV04_SELECT_01"
+        },
+        "49": {
+          "labelKey": "SYS_MG01_R02_EV04_SELECT_02"
+        }
+      }
+    },
+    "20106": {
+      "titleKey": "SYS_MG01_R02_EV05_NAME_01",
+      "ends": {
+        "51": {
+          "labelKey": "SYS_MG01_R02_EV05_SELECT_01"
+        },
+        "52": {
+          "labelKey": "SYS_MG01_R02_EV05_SELECT_02"
+        }
+      }
+    },
+    "20107": {
+      "titleKey": "SYS_MG01_R02_EV06_NAME_01",
+      "ends": {
+        "54": {
+          "labelKey": "SYS_MG01_R02_EV06_SELECT_01"
+        },
+        "55": {
+          "labelKey": "SYS_MG01_R02_EV06_SELECT_02"
+        }
+      }
+    },
+    "20108": {
+      "titleKey": "SYS_MG01_R02_EV07_NAME_01",
+      "ends": {
+        "57": {
+          "labelKey": "SYS_MG01_R02_EV07_SELECT_01"
+        },
+        "58": {
+          "labelKey": "SYS_MG01_R02_EV07_SELECT_02"
+        },
+        "59": {
+          "labelKey": "SYS_MG01_R02_EV07_SELECT_03",
+          "requireItemId": "9940004",
+          "givesItemIds": [
+            "9940005"
+          ]
+        }
+      }
+    },
+    "20110": {
+      "titleKey": "SYS_MG01_R02_EV08_NAME_01",
+      "ends": {
+        "64": {
+          "labelKey": "SYS_MG01_R02_EV08_SELECT_01"
+        },
+        "65": {
+          "labelKey": "SYS_MG01_R02_EV08_SELECT_02",
+          "requireGauge": 700
+        }
+      }
+    },
+    "20111": {
+      "titleKey": "SYS_MG01_R02_EV09_NAME_01",
+      "ends": {
+        "67": {
+          "labelKey": "SYS_MG01_R02_EV09_SELECT_01",
+          "requireItemId": "9940005"
+        },
+        "68": {
+          "labelKey": "SYS_MG01_R02_EV09_SELECT_02"
+        }
+      }
+    },
+    "21001": {
+      "ends": {}
+    },
+    "22001": {
+      "ends": {}
+    },
+    "30101": {
+      "titleKey": "SYS_MG01_R03_EV01_NAME_01",
+      "ends": {
+        "73": {
+          "labelKey": "SYS_MG01_R03_EV01_SELECT_01"
+        },
+        "74": {
+          "labelKey": "SYS_MG01_R03_EV01_SELECT_02"
+        }
+      }
+    },
+    "30102": {
+      "titleKey": "SYS_MG01_R03_EV02_NAME_01",
+      "ends": {
+        "76": {
+          "labelKey": "SYS_MG01_R03_EV02_SELECT_01"
+        },
+        "77": {
+          "labelKey": "SYS_MG01_R03_EV02_SELECT_02",
+          "gaugeDelta": 300
+        }
+      }
+    },
+    "30103": {
+      "titleKey": "SYS_MG01_R03_EV03_NAME_01",
+      "ends": {
+        "79": {
+          "labelKey": "SYS_MG01_R03_EV03_SELECT_01"
+        }
+      }
+    },
+    "30104": {
+      "titleKey": "SYS_MG01_R03_EV03_1_NAME_01",
+      "ends": {
+        "81": {
+          "labelKey": "SYS_MG01_R03_EV03_1_SELECT_01"
+        },
+        "82": {
+          "labelKey": "SYS_MG01_R03_EV03_1_SELECT_02"
+        }
+      }
+    },
+    "30105": {
+      "titleKey": "SYS_MG01_R03_EV04_NAME_01",
+      "ends": {
+        "84": {
+          "labelKey": "SYS_MG01_R03_EV04_SELECT_01",
+          "givesItemIds": [
+            "9940006"
+          ]
+        }
+      }
+    },
+    "30106": {
+      "titleKey": "SYS_MG01_R03_EV05_NAME_01",
+      "ends": {
+        "86": {
+          "labelKey": "SYS_MG01_R03_EV05_SELECT_01",
+          "givesItemIds": [
+            "9940007"
+          ]
+        }
+      }
+    },
+    "30107": {
+      "titleKey": "SYS_MG01_R03_EV06_NAME_01",
+      "ends": {
+        "90": {
+          "labelKey": "SYS_MG01_R03_EV06_SELECT_01",
+          "givesItemIds": [
+            "9940008"
+          ]
+        },
+        "91": {
+          "labelKey": "SYS_MG01_R03_EV06_SELECT_02"
+        }
+      }
+    },
+    "30108": {
+      "titleKey": "SYS_MG01_R03_EV07_NAME_01",
+      "ends": {
+        "93": {
+          "labelKey": "SYS_MG01_R03_EV07_SELECT_01",
+          "requireItemId": "9940008"
+        },
+        "94": {
+          "labelKey": "SYS_MG01_R03_EV07_SELECT_02"
+        }
+      }
+    },
+    "30109": {
+      "titleKey": "SYS_MG01_R03_EV08_NAME_01",
+      "ends": {
+        "96": {
+          "labelKey": "SYS_MG01_R03_EV08_SELECT_01"
+        },
+        "97": {
+          "labelKey": "SYS_MG01_R03_EV08_SELECT_02",
+          "requireItemId": "9940007"
+        }
+      }
+    },
+    "30110": {
+      "titleKey": "SYS_MG01_R03_EV09_NAME_01",
+      "ends": {
+        "99": {
+          "labelKey": "SYS_MG01_R03_EV09_SELECT_01",
+          "requireItemId": "9940006"
+        },
+        "100": {
+          "labelKey": "SYS_MG01_R03_EV09_SELECT_02"
+        }
+      }
+    },
+    "30111": {
+      "titleKey": "SYS_MG01_R03_EV10_NAME_01",
+      "ends": {
+        "102": {
+          "labelKey": "SYS_MG01_R03_EV10_SELECT_01"
+        },
+        "103": {
+          "labelKey": "SYS_MG01_R03_EV10_SELECT_02",
+          "requireItemId": "9940007"
+        }
+      }
+    },
+    "40101": {
+      "titleKey": "SYS_MG01_R04_1_EV01_NAME_01",
+      "ends": {
+        "105": {
+          "labelKey": "SYS_MG01_R04_1_EV01_SELECT_01",
+          "gaugeDelta": -100
+        },
+        "106": {
+          "labelKey": "SYS_MG01_R04_1_EV01_SELECT_02",
+          "gaugeDelta": 200
+        }
+      }
+    },
+    "40102": {
+      "titleKey": "SYS_MG01_R04_1_EV02_NAME_01",
+      "ends": {
+        "108": {
+          "labelKey": "SYS_MG01_R04_1_EV02_SELECT_01"
+        },
+        "109": {
+          "labelKey": "SYS_MG01_R04_1_EV02_SELECT_02"
+        }
+      }
+    },
+    "40103": {
+      "titleKey": "SYS_MG01_R04_1_EV03_NAME_01",
+      "ends": {
+        "113": {
+          "labelKey": "SYS_MG01_R04_1_EV03_SELECT_01",
+          "givesItemIds": [
+            "9940009"
+          ]
+        },
+        "114": {
+          "labelKey": "SYS_MG01_R04_1_EV03_SELECT_02",
+          "gaugeDelta": -100
+        }
+      }
+    },
+    "40104": {
+      "titleKey": "SYS_MG01_R04_1_EV04_NAME_01",
+      "ends": {
+        "116": {
+          "labelKey": "SYS_MG01_R04_1_EV04_SELECT_01"
+        },
+        "117": {
+          "labelKey": "SYS_MG01_R04_1_EV04_SELECT_02"
+        },
+        "118": {
+          "labelKey": "SYS_MG01_R04_1_EV04_SELECT_03",
+          "requireItemId": "9940009"
+        }
+      }
+    },
+    "40105": {
+      "titleKey": "SYS_MG01_R04_1_EV05_NAME_01",
+      "ends": {
+        "122": {
+          "labelKey": "SYS_MG01_R04_1_EV05_SELECT_01",
+          "givesItemIds": [
+            "9940010"
+          ]
+        },
+        "123": {
+          "labelKey": "SYS_MG01_R04_1_EV05_SELECT_02"
+        }
+      }
+    },
+    "40106": {
+      "titleKey": "SYS_MG01_R04_1_EV06_NAME_01",
+      "ends": {
+        "128": {
+          "labelKey": "SYS_MG01_R04_1_EV06_SELECT_01",
+          "requireItemId": "9940010"
+        },
+        "129": {
+          "labelKey": "SYS_MG01_R04_1_EV06_SELECT_02",
+          "requireGauge": 500
+        },
+        "130": {
+          "labelKey": "SYS_MG01_R04_1_EV06_SELECT_03"
+        }
+      }
+    },
+    "40201": {
+      "titleKey": "SYS_MG01_R04_2_EV01_NAME_01",
+      "ends": {
+        "132": {
+          "labelKey": "SYS_MG01_R04_2_EV01_SELECT_01"
+        },
+        "133": {
+          "labelKey": "SYS_MG01_R04_2_EV01_SELECT_02"
+        }
+      }
+    },
+    "40202": {
+      "titleKey": "SYS_MG01_R04_2_EV02_NAME_01",
+      "ends": {
+        "135": {
+          "labelKey": "SYS_MG01_R04_2_EV02_SELECT_01",
+          "gaugeDelta": -100
+        },
+        "136": {
+          "labelKey": "SYS_MG01_R04_2_EV02_SELECT_02",
+          "gaugeDelta": 150
+        }
+      }
+    },
+    "40203": {
+      "titleKey": "SYS_MG01_R04_2_EV03_NAME_01",
+      "ends": {
+        "138": {
+          "labelKey": "SYS_MG01_R04_2_EV03_SELECT_01",
+          "gaugeDelta": -100
+        },
+        "139": {
+          "labelKey": "SYS_MG01_R04_2_EV03_SELECT_02",
+          "gaugeDelta": 150
+        }
+      }
+    },
+    "40204": {
+      "titleKey": "SYS_MG01_R04_2_EV04_NAME_01",
+      "ends": {
+        "141": {
+          "labelKey": "SYS_MG01_R04_2_EV04_SELECT_01"
+        },
+        "142": {
+          "labelKey": "SYS_MG01_R04_2_EV04_SELECT_02"
+        }
+      }
+    },
+    "40205": {
+      "titleKey": "SYS_MG01_R04_2_EV05_NAME_01",
+      "ends": {
+        "144": {
+          "labelKey": "SYS_MG01_R04_2_EV05_SELECT_01",
+          "givesItemIds": [
+            "9940011"
+          ]
+        },
+        "145": {
+          "labelKey": "SYS_MG01_R04_2_EV05_SELECT_02",
+          "gaugeDelta": -200
+        }
+      }
+    },
+    "40206": {
+      "titleKey": "SYS_MG01_R04_2_EV06_NAME_01",
+      "ends": {
+        "147": {
+          "labelKey": "SYS_MG01_R04_2_EV06_SELECT_01",
+          "givesItemIds": [
+            "9940011"
+          ]
+        },
+        "148": {
+          "labelKey": "SYS_MG01_R04_2_EV06_SELECT_02",
+          "gaugeDelta": -200
+        }
+      }
+    },
+    "40207": {
+      "titleKey": "SYS_MG01_R04_2_EV07_NAME_01",
+      "ends": {
+        "150": {
+          "labelKey": "SYS_MG01_R04_2_EV07_SELECT_01",
+          "gaugeDelta": 200
+        },
+        "151": {
+          "labelKey": "SYS_MG01_R04_2_EV07_SELECT_02"
+        }
+      }
+    },
+    "40208": {
+      "titleKey": "SYS_MG01_R04_2_EV08_NAME_01",
+      "ends": {
+        "156": {
+          "labelKey": "SYS_MG01_R04_2_EV08_SELECT_01"
+        },
+        "157": {
+          "labelKey": "SYS_MG01_R04_2_EV08_SELECT_02"
+        },
+        "158": {
+          "labelKey": "SYS_MG01_R04_2_EV08_SELECT_03",
+          "requireItemId": "9940011"
+        }
+      }
+    },
+    "40209": {
+      "titleKey": "SYS_MG01_R04_2_EV09_NAME_01",
+      "ends": {
+        "160": {
+          "labelKey": "SYS_MG01_R04_2_EV09_SELECT_01",
+          "requireGauge": 800
+        },
+        "161": {
+          "labelKey": "SYS_MG01_R04_2_EV09_SELECT_02"
+        }
+      }
+    },
+    "40211": {
+      "titleKey": "SYS_MG01_R04_2_EV10_NAME_01",
+      "ends": {
+        "153": {
+          "labelKey": "SYS_MG01_R04_2_EV10_SELECT_01"
+        },
+        "154": {
+          "labelKey": "SYS_MG01_R04_2_EV10_SELECT_02"
+        }
+      }
+    },
+    "50101": {
+      "titleKey": "SYS_MG01_R05_EV01_NAME_01",
+      "ends": {
+        "163": {
+          "labelKey": "SYS_MG01_R05_EV01_SELECT_01"
+        },
+        "164": {
+          "labelKey": "SYS_MG01_R05_EV01_SELECT_02"
+        }
+      }
+    },
+    "50102": {
+      "titleKey": "SYS_MG01_R05_EV02_NAME_01",
+      "ends": {
+        "166": {
+          "labelKey": "SYS_MG01_R05_EV02_SELECT_01"
+        },
+        "167": {
+          "labelKey": "SYS_MG01_R05_EV02_SELECT_02"
+        }
+      }
+    },
+    "50103": {
+      "titleKey": "SYS_MG01_R05_EV03_NAME_01",
+      "ends": {
+        "169": {
+          "labelKey": "SYS_MG01_R05_EV03_SELECT_01"
+        },
+        "170": {
+          "labelKey": "SYS_MG01_R05_EV03_SELECT_02"
+        }
+      }
+    },
+    "50104": {
+      "titleKey": "SYS_MG01_R05_EV04_NAME_01",
+      "ends": {
+        "172": {
+          "labelKey": "SYS_MG01_R05_EV04_SELECT_01",
+          "givesItemIds": [
+            "9940012"
+          ]
+        }
+      }
+    },
+    "50105": {
+      "titleKey": "SYS_MG01_R05_EV09_NAME_01",
+      "ends": {
+        "174": {
+          "labelKey": "SYS_MG01_R05_EV09_SELECT_01",
+          "givesItemIds": [
+            "9940013"
+          ]
+        },
+        "175": {
+          "labelKey": "SYS_MG01_R05_EV09_SELECT_02",
+          "givesItemIds": [
+            "9940014"
+          ]
+        },
+        "176": {
+          "labelKey": "SYS_MG01_R05_EV09_SELECT_03",
+          "givesItemIds": [
+            "9940015"
+          ]
+        }
+      }
+    },
+    "50106": {
+      "titleKey": "SYS_MG01_R05_EV05_NAME_01",
+      "ends": {
+        "178": {
+          "labelKey": "SYS_MG01_R05_EV05_SELECT_01"
+        },
+        "179": {
+          "labelKey": "SYS_MG01_R05_EV05_SELECT_02"
+        }
+      }
+    },
+    "50107": {
+      "titleKey": "SYS_MG01_R05_EV06_NAME_01",
+      "ends": {
+        "181": {
+          "labelKey": "SYS_MG01_R05_EV06_SELECT_01",
+          "requireItemId": "9940013"
+        },
+        "182": {
+          "labelKey": "SYS_MG01_R05_EV06_SELECT_02",
+          "requireItemId": "9940014"
+        },
+        "183": {
+          "labelKey": "SYS_MG01_R05_EV06_SELECT_03",
+          "requireItemId": "9940015"
+        }
+      }
+    },
+    "50108": {
+      "titleKey": "SYS_MG01_R05_EV07_NAME_01",
+      "ends": {
+        "185": {
+          "labelKey": "SYS_MG01_R05_EV07_SELECT_01"
+        },
+        "186": {
+          "labelKey": "SYS_MG01_R05_EV07_SELECT_02",
+          "requireItemId": "9940012"
+        }
+      }
+    },
+    "50109": {
+      "titleKey": "SYS_MG01_R05_EV08_NAME_01",
+      "ends": {
+        "188": {
+          "labelKey": "SYS_MG01_R05_EV08_SELECT_01",
+          "requireItemId": "9940012"
+        },
+        "189": {
+          "labelKey": "SYS_MG01_R05_EV08_SELECT_02"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "7000001": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20002",
+          "min": 3,
+          "max": 3
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20003",
+          "min": 3,
+          "max": 3
+        }
+      ],
+      "gold": {
+        "min": 1000,
+        "max": 1000
+      }
+    },
+    "7000002": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20003",
+          "min": 3,
+          "max": 3
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20004",
+          "min": 3,
+          "max": 3
+        }
+      ],
+      "gold": {
+        "min": 5000,
+        "max": 5000
+      }
+    },
+    "7000003": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20004",
+          "min": 3,
+          "max": 3
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "gold": {
+        "min": 10000,
+        "max": 10000
+      }
+    },
+    "7000006": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        }
+      ]
+    },
+    "7001001": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30204",
+          "min": 2,
+          "max": 2
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30205",
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "gold": {
+        "min": 1000,
+        "max": 1000
+      }
+    },
+    "7001002": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30205",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30206",
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "gold": {
+        "min": 5000,
+        "max": 5000
+      }
+    },
+    "7001003": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30206",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "gold": {
+        "min": 10000,
+        "max": 10000
+      }
+    },
+    "7001006": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        }
+      ]
+    },
+    "7002001": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30204",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30205",
+          "min": 3,
+          "max": 3
+        }
+      ],
+      "gold": {
+        "min": 1000,
+        "max": 1000
+      }
+    },
+    "7002002": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30205",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30206",
+          "min": 3,
+          "max": 3
+        }
+      ],
+      "gold": {
+        "min": 5000,
+        "max": 5000
+      }
+    },
+    "7002003": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30206",
+          "min": 3,
+          "max": 3
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "gold": {
+        "min": 10000,
+        "max": 10000
+      }
+    },
+    "7002006": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        }
+      ]
+    },
+    "7003001": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21002",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21003",
+          "min": 3,
+          "max": 3
+        }
+      ],
+      "gold": {
+        "min": 1000,
+        "max": 1000
+      }
+    },
+    "7003002": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21003",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21004",
+          "min": 3,
+          "max": 3
+        }
+      ],
+      "gold": {
+        "min": 5000,
+        "max": 5000
+      }
+    },
+    "7003003": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21004",
+          "min": 3,
+          "max": 3
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "gold": {
+        "min": 10000,
+        "max": 10000
+      }
+    },
+    "7003006": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        }
+      ]
+    },
+    "7004001": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21102",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21103",
+          "min": 15,
+          "max": 15
+        }
+      ],
+      "gold": {
+        "min": 1000,
+        "max": 1000
+      }
+    },
+    "7004002": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21103",
+          "min": 20,
+          "max": 20
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21104",
+          "min": 10,
+          "max": 10
+        }
+      ],
+      "gold": {
+        "min": 5000,
+        "max": 5000
+      }
+    },
+    "7004003": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 50,
+          "max": 50
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "21104",
+          "min": 15,
+          "max": 15
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 1,
+          "max": 1
+        }
+      ],
+      "gold": {
+        "min": 10000,
+        "max": 10000
+      }
+    },
+    "7004006": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 10,
+          "max": 10
+        }
+      ]
+    },
+    "7120001": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 300,
+          "max": 300
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 250,
+          "max": 250
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "60001",
+          "min": 75,
+          "max": 75
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20004",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 2,
+          "max": 2
+        }
+      ],
+      "gold": {
+        "min": 50000,
+        "max": 50000
+      }
+    },
+    "7120002": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 300,
+          "max": 300
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 250,
+          "max": 250
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "60001",
+          "min": 80,
+          "max": 80
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20004",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 2,
+          "max": 2
+        }
+      ],
+      "gold": {
+        "min": 50000,
+        "max": 50000
+      }
+    },
+    "7120003": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 300,
+          "max": 300
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 250,
+          "max": 250
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "60001",
+          "min": 85,
+          "max": 85
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20004",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 2,
+          "max": 2
+        }
+      ],
+      "gold": {
+        "min": 50000,
+        "max": 50000
+      }
+    },
+    "7120004": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 300,
+          "max": 300
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 250,
+          "max": 250
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "60001",
+          "min": 90,
+          "max": 90
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20004",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 2,
+          "max": 2
+        }
+      ],
+      "gold": {
+        "min": 50000,
+        "max": 50000
+      }
+    },
+    "7120005": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 300,
+          "max": 300
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 250,
+          "max": 250
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "60001",
+          "min": 95,
+          "max": 95
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20004",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 2,
+          "max": 2
+        }
+      ],
+      "gold": {
+        "min": 50000,
+        "max": 50000
+      }
+    },
+    "7120008": {
+      "items": [
+        {
+          "type": "RIT_ASSET",
+          "typeId": "38",
+          "min": 300,
+          "max": 300
+        },
+        {
+          "type": "RIT_ASSET",
+          "typeId": "39",
+          "min": 250,
+          "max": 250
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "60001",
+          "min": 150,
+          "max": 150
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "20004",
+          "min": 5,
+          "max": 5
+        },
+        {
+          "type": "RIT_ITEM",
+          "typeId": "30437",
+          "min": 2,
+          "max": 2
+        }
+      ],
+      "gold": {
+        "min": 50000,
+        "max": 50000
+      }
+    },
+    "7130001": {
+      "items": [],
+      "crystal": {
+        "min": 150,
+        "max": 150
+      }
+    },
+    "7130003": {
+      "items": [],
+      "crystal": {
+        "min": 200,
+        "max": 200
+      }
+    }
+  },
+  "labels": {
+    "SYS_MG01_FREE_EV01_NAME_01": {
+      "en": "Potential of a New Relationship",
+      "jp": "新しい縁の可能性",
+      "kr": "새로운 인연의 가능성",
+      "zh": "崭新缘分的可能性"
+    },
+    "SYS_MG01_FREE_EV01_SELECT_01": {
+      "en": "A hero specialized in offense",
+      "jp": "猛攻撃に特化した仲間",
+      "kr": "맹공에 특화된 동료",
+      "zh": "擅长猛攻的同伴"
+    },
+    "SYS_MG01_FREE_EV01_SELECT_02": {
+      "en": "A hero with strong defense",
+      "jp": "守りが固い仲間",
+      "kr": "수비가 견고한 동료",
+      "zh": "防守稳固的同伴"
+    },
+    "SYS_MG01_FREE_EV01_SELECT_03": {
+      "en": "A hero skilled in healing",
+      "jp": "回復が得意な仲間",
+      "kr": "회복이 특기인 동료",
+      "zh": "擅长恢复的同伴"
+    },
+    "SYS_MG01_FREE_EV04_SELECT_01": {
+      "en": "A hero with swift movements",
+      "jp": "素早く身動きが取れる仲間",
+      "kr": "빠른 몸놀림을 지닌 동료",
+      "zh": "身手敏捷的同伴"
+    },
+    "SYS_MG01_FREE_EV04_SELECT_02": {
+      "en": "A hero with magical aptitude",
+      "jp": "魔力の才能がある仲間",
+      "kr": "마력의 소양을 지닌 동료",
+      "zh": "有魔力素养的同伴"
+    },
+    "SYS_MG01_FREE_EV05_SELECT_01": {
+      "en": "A hero with the power to transcend cognition.",
+      "jp": "人智を超える力を持つ仲間",
+      "kr": "인지를 초월하는 힘을 지닌 동료.",
+      "zh": "拥有超越认知力量的同伴。"
+    },
+    "SYS_MG01_R01_EV01_NAME_01": {
+      "en": "Path to the Capital",
+      "jp": "首都への道",
+      "kr": "수도로 들어가는 길",
+      "zh": "踏入王都之路"
+    },
+    "SYS_MG01_R01_EV01_SELECT_01": {
+      "en": "Force our way through.",
+      "jp": "強行突破する。",
+      "kr": "강행돌파한다.",
+      "zh": "强行突围。"
+    },
+    "SYS_MG01_R01_EV01_SELECT_02": {
+      "en": "Look for another way.",
+      "jp": "他の方法を探してみる。",
+      "kr": "다른 수를 찾아본다.",
+      "zh": "再另寻他法。"
+    },
+    "SYS_MG01_R01_EV02_NAME_01": {
+      "en": "The Walking Secret Shop",
+      "jp": "歩く秘密の店",
+      "kr": "걸어다니는 비밀 상점",
+      "zh": "行走的秘密商店"
+    },
+    "SYS_MG01_R01_EV02_SELECT_01": {
+      "en": "Physiognomy never lies.",
+      "jp": "顔相は科学そのものだ。",
+      "kr": "관상은 과학이다.",
+      "zh": "面相是科学。"
+    },
+    "SYS_MG01_R01_EV02_SELECT_02": {
+      "en": "Trust and buy the goods.",
+      "jp": "信じて商品を購入してみる。",
+      "kr": "믿고 물건을 구매해본다.",
+      "zh": "相信他，买点东西看看。"
+    },
+    "SYS_MG01_R01_EV03_NAME_01": {
+      "en": "Select Infiltration Route",
+      "jp": "潜入ルート選択",
+      "kr": "잠입 루트 선택",
+      "zh": "选择潜入路缐"
+    },
+    "SYS_MG01_R01_EV03_SELECT_01": {
+      "en": "Move under the cover of night.",
+      "jp": "闇に潜んで移動しよう。",
+      "kr": "밤에 숨어서 이동.",
+      "zh": "晚上偷偷移动。"
+    },
+    "SYS_MG01_R01_EV03_SELECT_02": {
+      "en": "Advance through the sewers.",
+      "jp": "地下水路で進もう。",
+      "kr": "지하수로로 전진.",
+      "zh": "从地下水道前进。"
+    },
+    "SYS_MG01_R01_EV03_SELECT_03": {
+      "en": "Advance to the shopping district. (Key Item: Fake ID)",
+      "jp": "商店街へ前進。(キーアイテム：偽造身分証)",
+      "kr": "상점가로 전진. (키 아이템 : 위조 신분증)",
+      "zh": "前往商业街。(关键物品：伪造身份证)"
+    },
+    "SYS_MG01_FREE_EV02_SELECT_01": {
+      "en": "Manifest the current strength of the bond.",
+      "jp": "縁の現在の強さを実現する。",
+      "kr": "인연의 현재 강함을 구현한다.",
+      "zh": "展现当前缘分的实力。"
+    },
+    "SYS_MG01_FREE_EV03_SELECT_01": {
+      "en": "Purify the raised corruption level.",
+      "jp": "上昇した浸食度を浄化する。",
+      "kr": "상승한 침식도를 정화한다.",
+      "zh": "净化升高的侵蚀度。"
+    },
+    "SYS_MG01_FREE_EV03_SELECT_02": {
+      "en": "Collect the poison and use it as an energy source.",
+      "jp": "毒を捕集しエネルギー源として使用する。",
+      "kr": "독을 포집하여 에너지원으로 사용한다.",
+      "zh": "收集毒素并作为能源使用。"
+    },
+    "SYS_MG01_R01_EV04_NAME_01": {
+      "en": "C?at",
+      "jp": "ね、ねこ？",
+      "kr": "고?양이",
+      "zh": "猫？咪"
+    },
+    "SYS_MG01_R01_EV04_SELECT_01": {
+      "en": "Follow it.",
+      "jp": "ついて行く。",
+      "kr": "따라가 본다.",
+      "zh": "跟过去看看。"
+    },
+    "SYS_MG01_R01_EV04_SELECT_02": {
+      "en": "Ignore it.",
+      "jp": "無視する。",
+      "kr": "무시한다.",
+      "zh": "无视牠。"
+    },
+    "SYS_MG01_R01_EV05_NAME_01": {
+      "en": "Did you really think we'd fall for that?",
+      "jp": "騙されないぞ。",
+      "kr": "누가 속을 줄 알고?",
+      "zh": "你以为可以骗到谁？"
+    },
+    "SYS_MG01_R01_EV05_SELECT_01": {
+      "en": "Follow it now.",
+      "jp": "今からでもついて行く。",
+      "kr": "지금이라도 따라간다.",
+      "zh": "趁现在跟去看看吧。"
+    },
+    "SYS_MG01_R01_EV05_SELECT_02": {
+      "en": "As if I'd follow you!",
+      "jp": "ついて行くもんか。",
+      "kr": "누가 따라갈 줄 알고?",
+      "zh": "你以为我会追上去？"
+    },
+    "SYS_MG01_R01_EV06_NAME_01": {
+      "en": "High risk, high return?",
+      "jp": "ハイリスク、ハイリターン？",
+      "kr": "하이 리스크, 하이 리턴?",
+      "zh": "高风险，高报酬？"
+    },
+    "SYS_MG01_R01_EV06_SELECT_01": {
+      "en": "Rely on Eva's Judgment.",
+      "jp": "エヴァの判断に従う。",
+      "kr": "에바의 판단에 따른다.",
+      "zh": "听从艾娃的判断。"
+    },
+    "SYS_MG01_R01_EV06_SELECT_02": {
+      "en": "Break through the knight-occupied path.",
+      "jp": "騎士団が占拠した道を突破する。",
+      "kr": "기사단이 점거한 길을 뚫는다.",
+      "zh": "突破被骑士团占据的路缐。"
+    },
+    "SYS_MG01_R01_EV06_SELECT_03": {
+      "en": "Fight through the Fiend-infested path.",
+      "jp": "魔族が塞いでいる道を突破する。",
+      "kr": "마족이 점거한 길을 뚫는다.",
+      "zh": "突破魔族占领的路。"
+    },
+    "SYS_MG01_FREE_EV02_NAME_01": {
+      "en": "Essence of the Worldline",
+      "jp": "世界線の神髄",
+      "kr": "세계선의 정수",
+      "zh": "世界线精髓"
+    },
+    "SYS_MG01_FREE_EV02_SELECT_02": {
+      "en": "Unleash the hidden potential of the bond.",
+      "jp": "縁の潜んでいる潜在能力を発現させる。",
+      "kr": "인연의 숨겨진 잠재력을 발현한다.",
+      "zh": "唤醒缘分中潜藏的潜力。"
+    },
+    "SYS_MG01_R01_EV07_NAME_01": {
+      "en": "Knight Commander of Destruction (1)",
+      "jp": "破滅の騎士団長（1）",
+      "kr": "파멸의 기사단장 (1)",
+      "zh": "毁灭的骑士团长（1）"
+    },
+    "SYS_MG01_R01_EV07_SELECT_01": {
+      "en": "Lure them into the mana-poisoned zone. (Toxic Corruption: 50% or higher)",
+      "jp": "魔力毒の濃い場所へ誘導する。(劇毒侵食度50％以上)",
+      "kr": "마력독이 짙은 장소로 유도한다. (극독 침식도 50% 이상)",
+      "zh": "引导至魔力毒浓度高的地方。(剧毒侵蚀度50%以上)"
+    },
+    "SYS_MG01_R01_EV07_SELECT_02": {
+      "en": "Resist to the end.",
+      "jp": "最後まで抵抗する。",
+      "kr": "끝까지 저항한다.",
+      "zh": "抵抗到底。"
+    },
+    "SYS_MG01_R01_EV08_NAME_01": {
+      "en": "Knight Commander of Destruction (2)",
+      "jp": "破滅の騎士団長（2）",
+      "kr": "파멸의 기사단장 (2)",
+      "zh": "毁灭的骑士团长（2）"
+    },
+    "SYS_MG01_R01_EV08_SELECT_01": {
+      "en": "Stall for time with Delta. (Key Item: Code A1)",
+      "jp": "デルタと共に時間稼ぎをする。(キーアイテム：コードA1)",
+      "kr": "델타와 함께 시간을 끈다. (키 아이템 : 코드 A1)",
+      "zh": "和德尔塔一起拖延时间。(关键物品：A1代码)"
+    },
+    "SYS_MG01_R01_EV08_SELECT_02": {
+      "en": "Resist until the end.",
+      "jp": "最後まで抵抗する。",
+      "kr": "끝까지 저항한다.",
+      "zh": "抵抗至最后。"
+    },
+    "SYS_MG01_R01_EV09_NAME_01": {
+      "en": "Knight Commander of Destruction (3)",
+      "jp": "破滅の騎士団長（3）",
+      "kr": "파멸의 기사단장 (3)",
+      "zh": "毁灭的骑士团长（3）"
+    },
+    "SYS_MG01_R01_EV09_SELECT_01": {
+      "en": "No means of resistance left.",
+      "jp": "どんな抵抗手段も持っていない。",
+      "kr": "아무런 저항 수단이 없다.",
+      "zh": "毫无抵抗手段。"
+    },
+    "SYS_MG01_R02_EV01_NAME_01": {
+      "en": "There's no paradise where we flee to.",
+      "jp": "逃げた先に楽園なんてない。",
+      "kr": "도망친 곳에 낙원은 없다.",
+      "zh": "逃亡之地，不会是乐园。"
+    },
+    "SYS_MG01_R02_EV01_SELECT_01": {
+      "en": "Use the skirmish as cover and infiltrate the dungeon.",
+      "jp": "乱戦に紛れて、ダンジョンに潜入する。",
+      "kr": "난전에 숨어, 던전에 잠입한다.",
+      "zh": "藏身于混战中潜入地城。"
+    },
+    "SYS_MG01_R02_EV01_SELECT_02": {
+      "en": "Look for a safer route.",
+      "jp": "安全なルートを探してみる。",
+      "kr": "안전한 루트를 찾아본다.",
+      "zh": "寻找安全路缐。"
+    },
+    "SYS_MG01_R02_EV02_NAME_01": {
+      "en": "Nella's Trial",
+      "jp": "ネラの試験",
+      "kr": "넬라의 시험",
+      "zh": "奈拉的试炼"
+    },
+    "SYS_MG01_R02_EV02_SELECT_01": {
+      "en": "Show the Alliance's Token. (Key Item: Alliance's Token)",
+      "jp": "連合の証を見せる。(キーアイテム：連合の証)",
+      "kr": "연합의 증표를 보여준다. (키 아이템 : 연합의 증표)",
+      "zh": "出示联盟信物。(关键物品：联盟信物)"
+    },
+    "SYS_MG01_R02_EV02_SELECT_02": {
+      "en": "Prove with strength.",
+      "jp": "力で証明する。",
+      "kr": "힘으로 증명한다.",
+      "zh": "用力量来证明。"
+    },
+    "SYS_MG01_R02_EV03_NAME_01": {
+      "en": "Tourist Attraction",
+      "jp": "観光スポット",
+      "kr": "관광 명소",
+      "zh": "观光景点"
+    },
+    "SYS_MG01_R02_EV03_SELECT_01": {
+      "en": "Open the smiling Proxxon door.",
+      "jp": "笑っているプロソンのドアを開ける。",
+      "kr": "웃고 있는 프로손 문을 연다.",
+      "zh": "打开「笑脸的弗洛森」之门。"
+    },
+    "SYS_MG01_R02_EV03_SELECT_02": {
+      "en": "Open the angry Proxxon door.",
+      "jp": "怒っているプロソンのドアを開ける。",
+      "kr": "화를 내는 프로손 문을 연다.",
+      "zh": "打开「生气的弗洛森」之门。"
+    },
+    "SYS_MG01_R02_EV04_NAME_01": {
+      "en": "Follower Breakthrough (1)",
+      "jp": "従者突破（1）",
+      "kr": "추종자 돌파 (1)",
+      "zh": "突破追随者（1）"
+    },
+    "SYS_MG01_R02_EV04_SELECT_01": {
+      "en": "Deal with the cultists.",
+      "jp": "信奉者たちを処理する。",
+      "kr": "신봉자들을 처리한다.",
+      "zh": "清除信徒。"
+    },
+    "SYS_MG01_R02_EV04_SELECT_02": {
+      "en": "Take a strategic approach.",
+      "jp": "戦略的に行動する。",
+      "kr": "전략적으로 행동한다.",
+      "zh": "采取战术性行动。"
+    },
+    "SYS_MG01_R02_EV05_NAME_01": {
+      "en": "Follower Breakthrough (2)",
+      "jp": "従者突破（2）",
+      "kr": "추종자 돌파 (2)",
+      "zh": "突破追随者（2）"
+    },
+    "SYS_MG01_R02_EV05_SELECT_01": {
+      "en": "Deal with the cultists.",
+      "jp": "信奉者たちを処理する。",
+      "kr": "신봉자들을 처리한다.",
+      "zh": "清除信徒。"
+    },
+    "SYS_MG01_R02_EV05_SELECT_02": {
+      "en": "Act strategically.",
+      "jp": "戦略的に行動する。",
+      "kr": "전략적으로 행동한다.",
+      "zh": "策略性地行动。"
+    },
+    "SYS_MG01_R02_EV06_NAME_01": {
+      "en": "Sealed Stone Chamber (1)",
+      "jp": "固く閉ざされた石室（1）",
+      "kr": "굳게 닫힌 석실 (1)",
+      "zh": "紧闭的石室（1）"
+    },
+    "SYS_MG01_R02_EV06_SELECT_01": {
+      "en": "Do not open it.",
+      "jp": "開けない。",
+      "kr": "열지 않는다.",
+      "zh": "不打开。"
+    },
+    "SYS_MG01_R02_EV06_SELECT_02": {
+      "en": "Try forcing it open.",
+      "jp": "力ずくで開けてみる。",
+      "kr": "힘으로 열어본다.",
+      "zh": "用力打开看看。"
+    },
+    "SYS_MG01_R02_EV07_NAME_01": {
+      "en": "The Tightly Sealed Chamber (2)",
+      "jp": "固く閉ざされた石室(2)",
+      "kr": "굳게 닫힌 석실 (2)",
+      "zh": "紧闭的石室(2)"
+    },
+    "SYS_MG01_R02_EV07_SELECT_01": {
+      "en": "Do not open it.",
+      "jp": "開けない。",
+      "kr": "열지 않는다.",
+      "zh": "不打开。"
+    },
+    "SYS_MG01_R02_EV07_SELECT_02": {
+      "en": "Try forcing it open.",
+      "jp": "力ずくで開けてみる。",
+      "kr": "힘으로 열어본다.",
+      "zh": "用力打开看看。"
+    },
+    "SYS_MG01_R02_EV07_SELECT_03": {
+      "en": "Use the chamber's key. (Key Item: Chamber's Key)",
+      "jp": "石室の鍵を使う。(キーアイテム：石室の鍵)",
+      "kr": "석실의 열쇠를 사용한다. (키 아이템 : 석실의 열쇠)",
+      "zh": "使用石室的钥匙。(关键物品：石室的钥匙)"
+    },
+    "SYS_MG01_R02_EV08_NAME_01": {
+      "en": "Archdemon’s Trial (1)",
+      "jp": "魔王の試練（1）",
+      "kr": "마왕의 시련 (1)",
+      "zh": "魔王的试炼（1）"
+    },
+    "SYS_MG01_R02_EV08_SELECT_01": {
+      "en": "Reluctantly face the trial.",
+      "jp": "仕方なく試練に挑む。",
+      "kr": "어쩔 수 없이 시련에 임한다.",
+      "zh": "无可奈何地接受试炼。"
+    },
+    "SYS_MG01_R02_EV08_SELECT_02": {
+      "en": "Leverage toxic corruption. (Toxic Corruption: 70% or higher)",
+      "jp": "劇毒侵食度を逆手に取る。(劇毒侵食度70％以上)",
+      "kr": "극독 침식도를 역으로 이용한다. (극독 침식도 70% 이상)",
+      "zh": "反向利用剧毒侵蚀度。(剧毒侵蚀度70%以上)"
+    },
+    "SYS_MG01_R02_EV09_NAME_01": {
+      "en": "Archdemon’s Trial (2)",
+      "jp": "魔王の試練（2）",
+      "kr": "마왕의 시련 (2)",
+      "zh": "魔王的试炼（2）"
+    },
+    "SYS_MG01_R02_EV09_SELECT_01": {
+      "en": "Taunt while clearly licking the rosary. (Key Item: Elize's Rosary)",
+      "jp": "ロザリオを舐めまわして挑発する。(キーアイテム：エリーゼのロザリオ)",
+      "kr": "로자리오를 선명하게 핥으며 도발한다.(키 아이템 : 엘리제의 로자리오)",
+      "zh": "明显地舔念珠，进行挑衅。(关键物品：伊莉莎的念珠)"
+    },
+    "SYS_MG01_R02_EV09_SELECT_02": {
+      "en": "Use the Bane corruption to your advantage.",
+      "jp": "逆に劇毒の浸食度を利用する。",
+      "kr": "극독 침식도를 역으로 이용한다.",
+      "zh": "反向利用剧毒侵蚀度。"
+    },
+    "SYS_MG01_R03_EV01_NAME_01": {
+      "en": "Say No to Obsession",
+      "jp": "執着はお断り",
+      "kr": "집착 사절",
+      "zh": "谢绝执念"
+    },
+    "SYS_MG01_R03_EV01_SELECT_01": {
+      "en": "Avoid the situation.",
+      "jp": "状況を回避する。",
+      "kr": "상황을 회피한다.",
+      "zh": "选择回避。"
+    },
+    "SYS_MG01_R03_EV01_SELECT_02": {
+      "en": "Stand and fight.",
+      "jp": "立ち向かう。",
+      "kr": "맞서싸운다.",
+      "zh": "选择正面迎战。"
+    },
+    "SYS_MG01_R03_EV02_NAME_01": {
+      "en": "Antimatter Supply Plan",
+      "jp": "アンチマター受給プラン",
+      "kr": "안티매터 수급 플랜",
+      "zh": "反物质供应计划"
+    },
+    "SYS_MG01_R03_EV02_SELECT_01": {
+      "en": "Target the core of an abandoned Assualt Suit.",
+      "jp": "捨てられている重装機兵のコアを狙う。",
+      "kr": "버려진 중장기병의 코어를 노린다.",
+      "zh": "锁定被遗弃的重骑兵核心。"
+    },
+    "SYS_MG01_R03_EV02_SELECT_02": {
+      "en": "Extract antimatter from a nearby dragon carcass.",
+      "jp": "近くの竜の遺骸からアンチマターを抽出する。",
+      "kr": "근처 용의 유해에서 안티매터를 추출한다.",
+      "zh": "从附近的龙族遗骸中提取反物质。"
+    },
+    "SYS_MG01_R03_EV03_NAME_01": {
+      "en": "Vlada Spotted",
+      "jp": "ヴラダ発見",
+      "kr": "블라다 발견",
+      "zh": "发现佛拉达"
+    },
+    "SYS_MG01_R03_EV03_SELECT_01": {
+      "en": "Ambush the retreating Vlada.",
+      "jp": "撤収中のヴラダを奇襲する。",
+      "kr": "철수중인 블라다를 기습한다.",
+      "zh": "突袭正在撤退的佛拉达。"
+    },
+    "SYS_MG01_R03_EV03_1_NAME_01": {
+      "en": "Approach to Mirozhny",
+      "jp": "ミロズニーへのアクセス方法",
+      "kr": "미로즈니 접근 방법",
+      "zh": "米罗兹尼路线"
+    },
+    "SYS_MG01_R03_EV03_1_SELECT_01": {
+      "en": "Infiltrate with caution to ensure safety.",
+      "jp": "安全を重視して潜入",
+      "kr": "안전을 도모하여 침투",
+      "zh": "选择安全第一路线"
+    },
+    "SYS_MG01_R03_EV03_1_SELECT_02": {
+      "en": "Prioritize speed and infiltrate swiftly.",
+      "jp": "スピードを重視して潜入",
+      "kr": "속도를 우선하여 침투",
+      "zh": "选择最快速的路线"
+    },
+    "SYS_MG01_R03_EV04_NAME_01": {
+      "en": "Suspicious Laboratory Assault (1)",
+      "jp": "怪しい研究施設の敵襲（1）",
+      "kr": "수상한 연구실 습격 (1)",
+      "zh": "袭击可疑的研究室（1）"
+    },
+    "SYS_MG01_R03_EV04_SELECT_01": {
+      "en": "...Take a look around.",
+      "jp": "……一度調べてみる。",
+      "kr": "……한번 살펴본다.",
+      "zh": "……进去看看。"
+    },
+    "SYS_MG01_R03_EV05_NAME_01": {
+      "en": "Suspicious Laboratory Assault (2)",
+      "jp": "怪しい研究施設の敵襲（2）",
+      "kr": "수상한 연구실 습격 (2)",
+      "zh": "袭击可疑的研究室（2）"
+    },
+    "SYS_MG01_R03_EV05_SELECT_01": {
+      "en": "Let's go. Search the whole place.",
+      "jp": "行こう。全部調べてみよう。",
+      "kr": "가자. 전부 뒤져보자.",
+      "zh": "走吧，全部搜一遍。"
+    },
+    "SYS_MG01_R03_EV06_NAME_01": {
+      "en": "Suspicious Signs",
+      "jp": "不穏な気配",
+      "kr": "수상한 낌새",
+      "zh": "可疑的征兆"
+    },
+    "SYS_MG01_R03_EV06_SELECT_01": {
+      "en": "Rush to help her.",
+      "jp": "助けに出る。",
+      "kr": "도와주러 뛰쳐나간다.",
+      "zh": "冲出去救她。"
+    },
+    "SYS_MG01_R03_EV06_SELECT_02": {
+      "en": "Observe the situation.",
+      "jp": "状況を見守る。",
+      "kr": "상황을 지켜본다.",
+      "zh": "观察情况再说。"
+    },
+    "SYS_MG01_R03_EV07_NAME_01": {
+      "en": "Expected Ambush (1)",
+      "jp": "予想した待ち伏せ (1)",
+      "kr": "예상한 매복 (1)",
+      "zh": "预料中的埋伏（1）"
+    },
+    "SYS_MG01_R03_EV07_SELECT_01": {
+      "en": "I have something prepared for this moment. (Key Item: Sleep Gas)",
+      "jp": "こんなこともあろうかと用意したものがある。(キーアイテム：睡眠ガス)",
+      "kr": "이때를 위해 준비한 물건이 있다. (키 아이템 : 수면 가스)",
+      "zh": "专门为这个时候准备的东西。(关键物品：安眠气体)"
+    },
+    "SYS_MG01_R03_EV07_SELECT_02": {
+      "en": "No need to overthink.",
+      "jp": "慎重に考える必要はない。",
+      "kr": "길게 생각할 필요는 없다.",
+      "zh": "不需要考虑太久。"
+    },
+    "SYS_MG01_R03_EV08_NAME_01": {
+      "en": "Expected Ambush (2)",
+      "jp": "予想した待ち伏せ (2)",
+      "kr": "예상한 매복 (2)",
+      "zh": "预料中的埋伏（2）"
+    },
+    "SYS_MG01_R03_EV08_SELECT_01": {
+      "en": "No need to overthink.",
+      "jp": "慎重に考える必要はない。",
+      "kr": "길게 생각할 필요는 없다.",
+      "zh": "不需要考虑太久。"
+    },
+    "SYS_MG01_R03_EV08_SELECT_02": {
+      "en": "Come to think of it... (Key Item: Essence of Bane)",
+      "jp": "そういえば……(キーアイテム：劇毒の神髄)",
+      "kr": "그러고보니…… (키 아이템 : 극독의 정수)",
+      "zh": "这么一说……(关键物品：剧毒精髓)"
+    },
+    "SYS_MG01_R03_EV09_NAME_01": {
+      "en": "Gornolf's Weapon (1)",
+      "jp": "ゴルノルフの兵器（1）",
+      "kr": "고르노프의 병기 (1)",
+      "zh": "戈尔诺夫的兵器（1）"
+    },
+    "SYS_MG01_R03_EV09_SELECT_01": {
+      "en": "Only weapons can beat weapons. (Key Item: New Weapon Secret Code)",
+      "jp": "兵器をもって兵器を制す。(キーアイテム：新兵器の秘密コード)",
+      "kr": "병기는 병기로 제압하는 법. (키 아이템 : 신병기 비밀 코드)",
+      "zh": "兵器就要用兵器来压制。(关键物品：新兵器秘密代码)"
+    },
+    "SYS_MG01_R03_EV09_SELECT_02": {
+      "en": "Fight to the death.",
+      "jp": "必死に抵抗する。",
+      "kr": "결사항전한다.",
+      "zh": "决一死战。"
+    },
+    "SYS_MG01_R03_EV10_NAME_01": {
+      "en": "Gornolf's Weapon (2)",
+      "jp": "ゴルノルフの兵器（2）",
+      "kr": "고르노프의 병기 (2)",
+      "zh": "戈尔诺夫的兵器（2）"
+    },
+    "SYS_MG01_R03_EV10_SELECT_01": {
+      "en": "Charge head-on.",
+      "jp": "正面突破する。",
+      "kr": "정면돌파한다.",
+      "zh": "正面迎战。"
+    },
+    "SYS_MG01_R03_EV10_SELECT_02": {
+      "en": "Only poison can beat poison. (Key Item: Essence of Bane)",
+      "jp": "毒をもって毒を制す。(キーアイテム：劇毒の神髄)",
+      "kr": "독은 독으로 제압하는 법. (키 아이템 : 극독의 정수)",
+      "zh": "毒就要用毒来压制。(关键物品：剧毒精髓)"
+    },
+    "SYS_MG01_R04_1_EV01_NAME_01": {
+      "en": "They've Arrived",
+      "jp": "例の奴ら、登場",
+      "kr": "그 녀석들, 등장",
+      "zh": "那两个家伙，登场"
+    },
+    "SYS_MG01_R04_1_EV01_SELECT_01": {
+      "en": "Quickly take down the twins.",
+      "jp": "双子を素早く制圧する。",
+      "kr": "쌍둥이들을 빠르게 제압한다.",
+      "zh": "尽快制伏双胞胎。"
+    },
+    "SYS_MG01_R04_1_EV01_SELECT_02": {
+      "en": "Quickly take down the surrounding forces.",
+      "jp": "周囲の兵力を素早く制圧する。",
+      "kr": "주변 병력을 빠르게 제압한다.",
+      "zh": "尽快制伏周围兵力。"
+    },
+    "SYS_MG01_R04_1_EV02_NAME_01": {
+      "en": "Holding a Concert",
+      "jp": "音楽会を開く",
+      "kr": "음악회를 열다",
+      "zh": "举办音乐会"
+    },
+    "SYS_MG01_R04_1_EV02_SELECT_01": {
+      "en": "Ruin the concert.",
+      "jp": "演奏会を台無しにする。",
+      "kr": "연주회를 망친다.",
+      "zh": "搞砸演奏会。"
+    },
+    "SYS_MG01_R04_1_EV02_SELECT_02": {
+      "en": "Let's find another way.",
+      "jp": "他の道を探してみよう。",
+      "kr": "다른 길을 찾아보자.",
+      "zh": "找找其他路吧。"
+    },
+    "SYS_MG01_R04_1_EV03_NAME_01": {
+      "en": "Battle with Apophis",
+      "jp": "アポフィスとの交戦",
+      "kr": "아포피스와의 교전",
+      "zh": "与阿波菲斯的交战"
+    },
+    "SYS_MG01_R04_1_EV03_SELECT_01": {
+      "en": "The poisonous ones always taste better.",
+      "jp": "毒が入ってるものは全部美味しいんだよね。",
+      "kr": "독이 든 건 다 맛있지.",
+      "zh": "有毒的东西吃起来才够味啊。"
+    },
+    "SYS_MG01_R04_1_EV03_SELECT_02": {
+      "en": "Sorry, I'm watching my diet...",
+      "jp": "ごめん、食事制限していて……",
+      "kr": "미안, 식단관리 중이라……",
+      "zh": "抱歉，我正在控制饮食……"
+    },
+    "SYS_MG01_R04_1_EV04_NAME_01": {
+      "en": "Those Bound by Leashes",
+      "jp": "首輪に縛られている者たち",
+      "kr": "목줄에 묶인 자들",
+      "zh": "被拴住的人们"
+    },
+    "SYS_MG01_R04_1_EV04_SELECT_01": {
+      "en": "Join the main force in battle",
+      "jp": "本隊の戦闘に合流する",
+      "kr": "본대의 전투에 합류",
+      "zh": "加入主力部队的战斗"
+    },
+    "SYS_MG01_R04_1_EV04_SELECT_02": {
+      "en": "Infiltrate the base as planned",
+      "jp": "作戦通りに拠点に潜入する",
+      "kr": "작전대로 거점에 잠입",
+      "zh": "依作战计划潜入据点"
+    },
+    "SYS_MG01_R04_1_EV04_SELECT_03": {
+      "en": "Utilize the hallucination gas. (Key Item: Hallucination Gas)",
+      "jp": "幻覚ガスを活用する。(キーアイテム：幻覚ガス)",
+      "kr": "환각 가스를 활용. (키 아이템 : 환각 가스)",
+      "zh": "利用幻觉气体。(关键物品：幻觉气体)"
+    },
+    "SYS_MG01_R04_1_EV05_NAME_01": {
+      "en": "Orchestra of Pain",
+      "jp": "苦痛のオーケストラ",
+      "kr": "고통의 오케스트라",
+      "zh": "痛苦的管弦乐团"
+    },
+    "SYS_MG01_R04_1_EV05_SELECT_01": {
+      "en": "Rescue the prisoners.",
+      "jp": "捕虜を救出する。",
+      "kr": "포로를 구출한다.",
+      "zh": "救出俘虏。"
+    },
+    "SYS_MG01_R04_1_EV05_SELECT_02": {
+      "en": "Prioritize the greater cause.",
+      "jp": "大義を優先する。",
+      "kr": "대의를 우선한다.",
+      "zh": "优先考虑大局。"
+    },
+    "SYS_MG01_R04_1_EV06_NAME_01": {
+      "en": "Francesca",
+      "jp": "フランシスカ",
+      "kr": "프란시스카",
+      "zh": "弗朗西丝卡"
+    },
+    "SYS_MG01_R04_1_EV06_SELECT_01": {
+      "en": "Search for a way to calm the madness. (Key Item: Largissimo)",
+      "jp": "狂気を鎮める手段を探す。(キーアイテム：ラルギッシモ)",
+      "kr": "광기를 진정시킬 수단을 찾는다. (키 아이템 : 라르기시모)",
+      "zh": "寻找能够稳住狂气的方法。(关键物品：极缓板)"
+    },
+    "SYS_MG01_R04_1_EV06_SELECT_02": {
+      "en": "Leverage the corruption levels. (Toxic Corruption: 50% or higher)",
+      "jp": "侵食度を活用する。(劇毒侵食度50％以上)",
+      "kr": "침식도를 활용한다. (극독 침식도 50% 이상)",
+      "zh": "利用侵蚀度。(剧毒侵蚀度50%以上)"
+    },
+    "SYS_MG01_R04_1_EV06_SELECT_03": {
+      "en": "Fight fair and square.",
+      "jp": "正々堂々と戦う。",
+      "kr": "정정당당하게 싸운다.",
+      "zh": "堂堂正正地对决。"
+    },
+    "SYS_MG01_R04_2_EV01_NAME_01": {
+      "en": "Kappa's Proposal",
+      "jp": "カッパの提案",
+      "kr": "카파의 제안",
+      "zh": "卡帕的提议"
+    },
+    "SYS_MG01_R04_2_EV01_SELECT_01": {
+      "en": "Target the data center",
+      "jp": "データセンターを攻略",
+      "kr": "데이터 센터를 공략",
+      "zh": "攻占资料中心"
+    },
+    "SYS_MG01_R04_2_EV01_SELECT_02": {
+      "en": "Recover the crashed Medjed",
+      "jp": "墜落したメジェドを回収",
+      "kr": "추락한 메제드 회수",
+      "zh": "收回坠落的梅杰德"
+    },
+    "SYS_MG01_R04_2_EV02_NAME_01": {
+      "en": "Hidden Data",
+      "jp": "隠されているデータ",
+      "kr": "숨겨진 데이터",
+      "zh": "被隐藏的资料"
+    },
+    "SYS_MG01_R04_2_EV02_SELECT_01": {
+      "en": "Try to decrypt it.",
+      "jp": "解読してみます。",
+      "kr": "해독해본다.",
+      "zh": "尝试解密。"
+    },
+    "SYS_MG01_R04_2_EV02_SELECT_02": {
+      "en": "Ignore it.",
+      "jp": "無視する。",
+      "kr": "무시한다.",
+      "zh": "忽略不管。"
+    },
+    "SYS_MG01_R04_2_EV03_NAME_01": {
+      "en": "The Lone One's Instinct",
+      "jp": "一人ぼっちの直感",
+      "kr": "외톨이의 직감",
+      "zh": "孤独者的直觉"
+    },
+    "SYS_MG01_R04_2_EV03_SELECT_01": {
+      "en": "Listen for now.",
+      "jp": "まず耳を傾けてみる。",
+      "kr": "일단 경청해본다.",
+      "zh": "先洗耳恭听。"
+    },
+    "SYS_MG01_R04_2_EV03_SELECT_02": {
+      "en": "What nonsense are you spouting, Eternal?",
+      "jp": "それってどういうことだよ、エターナル。",
+      "kr": "그게 무슨소리니, 이터널아.",
+      "zh": "伊特诺，妳到底在说什么啊？"
+    },
+    "SYS_MG01_R04_2_EV04_NAME_01": {
+      "en": "Antidote Supply Disruption",
+      "jp": "解毒剤供給の邪魔",
+      "kr": "해독제 공급 방해",
+      "zh": "妨碍解毒剂供应"
+    },
+    "SYS_MG01_R04_2_EV04_SELECT_01": {
+      "en": "Raid the antidote production factory",
+      "jp": "解毒剤生産工場を襲撃",
+      "kr": "해독제 생산 공장을 습격",
+      "zh": "袭击解毒剂生产工厂"
+    },
+    "SYS_MG01_R04_2_EV04_SELECT_02": {
+      "en": "Disrupt the antidote transportation",
+      "jp": "解毒剤の輸送を邪魔する",
+      "kr": "해독제의 수송을 방해",
+      "zh": "妨碍解毒剂运送"
+    },
+    "SYS_MG01_R04_2_EV05_NAME_01": {
+      "en": "Prisoner Rescue",
+      "jp": "捕虜救出",
+      "kr": "포로 구출",
+      "zh": "营救俘虏"
+    },
+    "SYS_MG01_R04_2_EV05_SELECT_01": {
+      "en": "Free the prisoners.",
+      "jp": "捕虜たちを解放する。",
+      "kr": "포로들을 해방한다.",
+      "zh": "解放俘虏们。"
+    },
+    "SYS_MG01_R04_2_EV05_SELECT_02": {
+      "en": "Sabotage takes priority.",
+      "jp": "破壊工作が優先だ。",
+      "kr": "파괴공작이 우선이다.",
+      "zh": "破坏作战为优先。"
+    },
+    "SYS_MG01_R04_2_EV06_NAME_01": {
+      "en": "Oasis Purification",
+      "jp": "オアシス浄化",
+      "kr": "오아시스 정화",
+      "zh": "净化绿洲"
+    },
+    "SYS_MG01_R04_2_EV06_SELECT_01": {
+      "en": "Purify the oasis.",
+      "jp": "オアシスを浄化する。",
+      "kr": "오아시스를 정화한다.",
+      "zh": "净化绿洲。"
+    },
+    "SYS_MG01_R04_2_EV06_SELECT_02": {
+      "en": "Save the antidote.",
+      "jp": "解毒剤を節約する。",
+      "kr": "해독제를 아낀다.",
+      "zh": "节省解毒剂。"
+    },
+    "SYS_MG01_R04_2_EV07_NAME_01": {
+      "en": "Uprising",
+      "jp": "蜂起",
+      "kr": "봉기",
+      "zh": "起义"
+    },
+    "SYS_MG01_R04_2_EV07_SELECT_01": {
+      "en": "Advance while subjugating the Chimeras",
+      "jp": "キメラを討伐しながら進撃する。",
+      "kr": "키메라를 토벌하며 진격",
+      "zh": "一边讨伐奇美拉一边推进"
+    },
+    "SYS_MG01_R04_2_EV07_SELECT_02": {
+      "en": "Leave it to the Resistance and head to the capital",
+      "jp": "抵抗軍に任せて、王城へ向かう。",
+      "kr": "저항군에게 맡기고, 왕성으로 향한다.",
+      "zh": "将战斗交给反抗军，我们前往王城。"
+    },
+    "SYS_MG01_R04_2_EV10_NAME_01": {
+      "en": "Final Inspection",
+      "jp": "最終チェック",
+      "kr": "최종점검",
+      "zh": "最终检查"
+    },
+    "SYS_MG01_R04_2_EV10_SELECT_01": {
+      "en": "Take a moment to catch your breath.",
+      "jp": "しばし一息つく。",
+      "kr": "잠깐 한숨을 돌린다.",
+      "zh": "稍作休息。"
+    },
+    "SYS_MG01_R04_2_EV10_SELECT_02": {
+      "en": "There's no time to hesitate.",
+      "jp": "モタモタしている時間はない。",
+      "kr": "머뭇거릴 시간은 없다.",
+      "zh": "没时间磨蹭了。"
+    },
+    "SYS_MG01_R04_2_EV08_NAME_01": {
+      "en": "Francesca, Again",
+      "jp": "再び、フランシスカ",
+      "kr": "다시, 프란시스카",
+      "zh": "再战弗朗西丝卡"
+    },
+    "SYS_MG01_R04_2_EV08_SELECT_01": {
+      "en": "Taunt her.",
+      "jp": "挑発する。",
+      "kr": "도발한다.",
+      "zh": "进行挑衅。"
+    },
+    "SYS_MG01_R04_2_EV08_SELECT_02": {
+      "en": "Fight her head-on.",
+      "jp": "正面勝負する。",
+      "kr": "정면승부한다.",
+      "zh": "正面对决。"
+    },
+    "SYS_MG01_R04_2_EV08_SELECT_03": {
+      "en": "Leave it to the Kames brothers. (Key Item: Token of Trust)",
+      "jp": "カメスら兄弟に任せる。(キーアイテム：信頼の証)",
+      "kr": "카메스 형제에게 맡긴다 (키 아이템 : 신뢰의 증표)",
+      "zh": "交给卡梅斯兄弟。(关键物品：信任信物)"
+    },
+    "SYS_MG01_R04_2_EV09_NAME_01": {
+      "en": "Revenant Dragon Harshna",
+      "jp": "死魄竜ハルシュナ",
+      "kr": "사백룡 하르슈나",
+      "zh": "死魄龙哈勒修那"
+    },
+    "SYS_MG01_R04_2_EV09_SELECT_01": {
+      "en": "Give it all you've got for a swift elimination. (Toxic Corruption: 80% or higher)",
+      "jp": "素早く排除するため、全力を出し尽くす。(劇毒侵食度80％以上)",
+      "kr": "빠른 제거를 위해 전력을 쏟아 붓는다 (극독 침식도 80% 이상)",
+      "zh": "为了快速消除而全力以赴。(剧毒侵蚀度80%以上)"
+    },
+    "SYS_MG01_R04_2_EV09_SELECT_02": {
+      "en": "Bide time, waiting for the unstable flesh to collapse.",
+      "jp": "時間稼ぎをして、不安定な肉身の崩壊を狙う。",
+      "kr": "시간을 끌어 불안정한 육신의 붕괴를 노린다.",
+      "zh": "拖延时间，等待不稳定的肉身崩溃。"
+    },
+    "SYS_MG01_R05_EV01_NAME_01": {
+      "en": "Core Retrieval",
+      "jp": "コア回収",
+      "kr": "코어 회수",
+      "zh": "收回核心"
+    },
+    "SYS_MG01_R05_EV01_SELECT_01": {
+      "en": "Recover Epsilon's Core",
+      "jp": "イプシロンのコアを回収する",
+      "kr": "엡실론의 코어를 회수",
+      "zh": "收回艾普西隆的核心"
+    },
+    "SYS_MG01_R05_EV01_SELECT_02": {
+      "en": "Recover Ksai's Core",
+      "jp": "ザイのコアを回収する",
+      "kr": "크사이의 코어를 회수",
+      "zh": "收回科赛的核心"
+    },
+    "SYS_MG01_R05_EV02_NAME_01": {
+      "en": "What You Achieved",
+      "jp": "君が成し遂げたこと",
+      "kr": "네가 이룬 것",
+      "zh": "你所完成的事"
+    },
+    "SYS_MG01_R05_EV02_SELECT_01": {
+      "en": "Call out to Delta.",
+      "jp": "デルタを呼び止める。",
+      "kr": "델타를 불러세운다.",
+      "zh": "叫住戴尔塔。"
+    },
+    "SYS_MG01_R05_EV02_SELECT_02": {
+      "en": "...Give up.",
+      "jp": "……諦める。",
+      "kr": "……단념한다.",
+      "zh": "……放弃。"
+    },
+    "SYS_MG01_R05_EV03_NAME_01": {
+      "en": "What You Achieved",
+      "jp": "君が成し遂げたこと",
+      "kr": "네가 이룬 것",
+      "zh": "你所完成的事"
+    },
+    "SYS_MG01_R05_EV03_SELECT_01": {
+      "en": "Call out to Delta.",
+      "jp": "デルタを呼び止める。",
+      "kr": "델타를 불러세운다.",
+      "zh": "叫住戴尔塔。"
+    },
+    "SYS_MG01_R05_EV03_SELECT_02": {
+      "en": "...Give up.",
+      "jp": "……諦める。",
+      "kr": "……단념한다.",
+      "zh": "……放弃。"
+    },
+    "SYS_MG01_R05_EV04_NAME_01": {
+      "en": "What She Left Behind",
+      "jp": "彼女が残したもの",
+      "kr": "그녀가 남긴 것",
+      "zh": "她留下的东西"
+    },
+    "SYS_MG01_R05_EV04_SELECT_01": {
+      "en": "...Receive the broken Core.",
+      "jp": "……壊れたコアを受け取る。",
+      "kr": "……부서진 코어를 받는다.",
+      "zh": "……接过破损的核心。"
+    },
+    "SYS_MG01_FREE_EV03_NAME_01": {
+      "en": "Air Purifier",
+      "jp": "空気清浄機",
+      "kr": "공기 청정기",
+      "zh": "空气清净机"
+    },
+    "SYS_MG01_R05_EV09_NAME_01": {
+      "en": "Eve of the Battle",
+      "jp": "前夜",
+      "kr": "전야",
+      "zh": "前夜"
+    },
+    "SYS_MG01_R05_EV09_SELECT_01": {
+      "en": "I was summoned by Veronica.",
+      "jp": "ヴェロニカに呼び出されていた。",
+      "kr": "베로니카에게 호출을 받았다.",
+      "zh": "收到了维罗妮卡的传唤。"
+    },
+    "SYS_MG01_R05_EV09_SELECT_02": {
+      "en": "I made a promise to Nella.",
+      "jp": "ネラとの約束があった。",
+      "kr": "넬라와 약속한게 있다.",
+      "zh": "和内拉约定了一个事情。"
+    },
+    "SYS_MG01_R05_EV09_SELECT_03": {
+      "en": "Eternal sent a lengthy challenge (?).",
+      "jp": "エターナルに長文の果たし状(?)を送られていた。",
+      "kr": "이터널이 장문의 도전장(?)을 보냈다.",
+      "zh": "伊特诺发来了长长的挑战书(？)。"
+    },
+    "SYS_MG01_R05_EV05_NAME_01": {
+      "en": "Charging into the Domain",
+      "jp": "領域突入",
+      "kr": "영역 돌입",
+      "zh": "进入领域"
+    },
+    "SYS_MG01_R05_EV05_SELECT_01": {
+      "en": "Go straight to the depths.",
+      "jp": "深部へ直行する。",
+      "kr": "심부로 직행한다.",
+      "zh": "直捣核心区。"
+    },
+    "SYS_MG01_R05_EV05_SELECT_02": {
+      "en": "Search for a safer route.",
+      "jp": "安全なルートを探してみる。",
+      "kr": "안전한 루트를 탐색한다.",
+      "zh": "搜寻安全的路缐。"
+    },
+    "SYS_MG01_R05_EV06_NAME_01": {
+      "en": "The Curtain Rises.",
+      "jp": "舞台の幕開け",
+      "kr": "무대의 막이 오르다.",
+      "zh": "舞台幕布升起。"
+    },
+    "SYS_MG01_R05_EV06_SELECT_01": {
+      "en": "The Battle-Hardened Knight Commander (Key Item: Relic of the Hero)",
+      "jp": "百戦錬磨の騎士団長(キーアイテム：勇者の形見)",
+      "kr": "백전불태의 기사단장 (키 아이템 : 용사의 유품)",
+      "zh": "百战不殆的骑士团长(关键物品：勇士遗物)"
+    },
+    "SYS_MG01_R05_EV06_SELECT_02": {
+      "en": "Archdemon of Salvation (Key Item: Transparent Chess Piece)",
+      "jp": "救世の魔王(キーアイテム：透明なチェスの駒)",
+      "kr": "구세의 마왕 (키 아이템 : 투명한 체스 기물)",
+      "zh": "救世魔王(关键物品：透明棋子)"
+    },
+    "SYS_MG01_R05_EV06_SELECT_03": {
+      "en": "Gospel of the Clouds (Key Item: Blind Devotion)",
+      "jp": "雲の福音(キーアイテム：盲者の祈り)",
+      "kr": "구름의 복음 (키 아이템 : 눈 먼 자의 기도)",
+      "zh": "云朵的福音(关键物品：盲者的祈祷)"
+    },
+    "SYS_MG01_R05_EV07_NAME_01": {
+      "en": "No Matter How Many Times I Fall",
+      "jp": "何度倒れても",
+      "kr": "몇 번을 쓰러져도",
+      "zh": "就算倒下无数次"
+    },
+    "SYS_MG01_R05_EV07_SELECT_01": {
+      "en": "Take Eva and escape the Gate.",
+      "jp": "エヴァを連れてゲートから脱出する。",
+      "kr": "에바를 챙겨서 게이트에서 탈출한다.",
+      "zh": "带著艾娃离开单子门。"
+    },
+    "SYS_MG01_R05_EV07_SELECT_02": {
+      "en": "Steel your resolve. (Key Item: Officer Felix’s Core)",
+      "jp": "闘志を燃やす。(キーアイテム：看守ニャンのコア)",
+      "kr": "전의를 다진다. (키 아이템 : 간수냥이의 코어)",
+      "zh": "斗志昂扬。(关键物品：看守喵核心)"
+    },
+    "SYS_MG01_R05_EV08_NAME_01": {
+      "en": "No Matter How Many Times I Fall",
+      "jp": "何度倒れても",
+      "kr": "몇 번을 쓰러져도",
+      "zh": "就算倒下无数次"
+    },
+    "SYS_MG01_R05_EV08_SELECT_01": {
+      "en": "Steel your resolve. (Key Item: Officer Felix’s Core)",
+      "jp": "闘志を燃やす。(キーアイテム：看守ニャンのコア)",
+      "kr": "전의를 다진다. (키 아이템 : 간수냥이의 코어)",
+      "zh": "斗志昂扬。(关键物品：看守喵核心)"
+    },
+    "SYS_MG01_R05_EV08_SELECT_02": {
+      "en": "Take Eva and escape the Gate.",
+      "jp": "エヴァを連れてゲートから脱出する。",
+      "kr": "에바를 챙겨서 게이트에서 탈출한다.",
+      "zh": "带着艾娃，破门逃脱。"
+    }
+  },
+  "stageLabels": {
+    "SYS_MONAD_GATE_NODE_NAME_START_01": {
+      "en": "Exploration Starting Point",
+      "jp": "探索開始ポイント",
+      "kr": "탐사 시작 포인트",
+      "zh": "探查起点"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_SCENARIO_01": {
+      "en": "The Saga of Worldlines",
+      "jp": "世界線の物語",
+      "kr": "세계선의 이야기",
+      "zh": "世界线的故事"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_EVENT_02": {
+      "en": "Moment of Maintenance",
+      "jp": "整備の時間",
+      "kr": "정비의 시간",
+      "zh": "整备时刻"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_EVENT_01": {
+      "en": "Path of Fate",
+      "jp": "運命の道",
+      "kr": "운명의 길",
+      "zh": "命运之路"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_BATTLE_01": {
+      "en": "Combat Encounter",
+      "jp": "交戦発生",
+      "kr": "교전 발생",
+      "zh": "发生交战"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_BATTLE_02": {
+      "en": "Encounter with Elite",
+      "jp": "強敵遭遇",
+      "kr": "강적 조우",
+      "zh": "遭遇强敌"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_01": {
+      "en": "Strength's Relic",
+      "jp": "力のアーティファクト",
+      "kr": "힘의 유물",
+      "zh": "力量的遗物"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_EVENT_03": {
+      "en": "Eldritch Realm",
+      "jp": "未知の領域",
+      "kr": "미지의 영역",
+      "zh": "未知领域"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_02": {
+      "en": "Knight’s Relic",
+      "jp": "騎士のアーティファクト",
+      "kr": "기사의 유물",
+      "zh": "骑士的遗物"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_BATTLE_03": {
+      "en": "Pinnacle of the Worldline",
+      "jp": "世界線の頂点",
+      "kr": "세계선의 정점",
+      "zh": "世界缐的顶峰"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_BATTLE_04": {
+      "en": "Final Gateway",
+      "jp": "最終関門",
+      "kr": "최종 관문",
+      "zh": "最终关卡"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_1_02": {
+      "en": "Normal Ending: Mutual Destruction",
+      "jp": "NORMAL END：共倒れ",
+      "kr": "노멀 엔딩 : 동귀어진",
+      "zh": "普通结局：同归于尽"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_1_03": {
+      "en": "Bad Ending: Humanity's Ultimate Evil",
+      "jp": "BAD END：人類最強の悪意",
+      "kr": "배드 엔딩 : 인류 최강의 악의",
+      "zh": "坏结局：人类最强恶意"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_1_01": {
+      "en": "True Ending: The Beginning of the Journey",
+      "jp": "TRUE END：旅の始まり",
+      "kr": "트루 엔딩 : 여정의 시작",
+      "zh": "真结局：开始旅程"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_03": {
+      "en": "Crusade Relic",
+      "jp": "聖戦のアーティファクト",
+      "kr": "성전의 유물",
+      "zh": "圣战的遗物"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_2_03": {
+      "en": "Bad Ending: The trial is over.",
+      "jp": "BAD END：試練の終わり",
+      "kr": "배드 엔딩 : 시련은 끝났다.",
+      "zh": "坏结局：试炼结束了。"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_2_02": {
+      "en": "Normal Ending: Where is A2...?",
+      "jp": "NORMAL END：A2はどこに……?",
+      "kr": "노멀 엔딩 : A2는 어디에……?",
+      "zh": "普通结局：A2在哪儿……？"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_2_01": {
+      "en": "True Ending: A Harrowing Journey to the Archdemon's Labyrinth",
+      "jp": "TRUE END：魔王の迷宮を踏破",
+      "kr": "트루 엔딩 : 마왕의 미궁 답파",
+      "zh": "真结局：征服魔王迷宫"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_04": {
+      "en": "Legion Relic",
+      "jp": "兵団のアーティファクト",
+      "kr": "병단의 유물",
+      "zh": "兵团的遗物"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_3_01": {
+      "en": "True Ending: All that remains is a mocking laugh.",
+      "jp": "TRUE END：ただ嘲笑あるのみ",
+      "kr": "트루 엔딩 : 그저, 비웃음만 있을 뿐.",
+      "zh": "真结局：只剩下，讥讽的笑声。"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_3_02": {
+      "en": "Normal Ending: Foul-Tainted Hands",
+      "jp": "NORMAL END：醜く染められた手",
+      "kr": "노멀 엔딩 : 추악하게 물든 손",
+      "zh": "普通结局：充满邪恶的手"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_3_03": {
+      "en": "Bad Ending: Never Will I kneel",
+      "jp": "BAD END：跪くものなら",
+      "kr": "배드 엔딩 : 굴복할 바에야",
+      "zh": "坏结局：与其屈服！"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_05": {
+      "en": "Desert Relic",
+      "jp": "砂漠のアーティファクト",
+      "kr": "사막의 유물",
+      "zh": "沙漠的遗物"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_4_01": {
+      "en": "True Ending: Declaration",
+      "jp": "TRUE END：宣戦布告",
+      "kr": "트루 엔딩 : 선전 포고",
+      "zh": "真结局：宣战檄文"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_4_02": {
+      "en": "Normal Ending: Rampage",
+      "jp": "NORMAL END：暴走",
+      "kr": "노멀 엔딩 : 폭주",
+      "zh": "普通结局：暴走"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_4_03": {
+      "en": "Bad Ending: Evil Never Ceases",
+      "jp": "BAD END：悪意は絶えることなく",
+      "kr": "배드 엔딩 : 악의는 끊임없이",
+      "zh": "坏结局：无尽恶意"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_5_01": {
+      "en": "True Ending: An Ending Comes Abruptly.",
+      "jp": "TRUE END：結末は不意に",
+      "kr": "트루 엔딩 : 결말이란 갑작스럽게",
+      "zh": "真结局：突然的结局"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_5_02": {
+      "en": "Bad Ending: Shattered Hope",
+      "jp": "BAD END：打ち砕かれた希望",
+      "kr": "배드 엔딩 : 부숴진 희망",
+      "zh": "坏结局：被粉碎的希望"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_06": {
+      "en": "Venom Relic",
+      "jp": "劇毒のアーティファクト",
+      "kr": "극독의 유물",
+      "zh": "剧毒的遗物"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_07": {
+      "en": "Star Relic",
+      "jp": "星のアーティファクト",
+      "kr": "별의 유물",
+      "zh": "星星的遗物"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ARTIFACT_08": {
+      "en": "Chaos Relic",
+      "jp": "混沌のアーティファクト",
+      "kr": "혼돈의 유물",
+      "zh": "混沌的遗物"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_6_02": {
+      "en": "Normal Ending: What You Stand For",
+      "jp": "NORMAL END：貴方の価値",
+      "kr": "노멀 엔딩 : 당신의 가치",
+      "zh": "普通结局：你的价值"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_6_01": {
+      "en": "True Ending: Hope Takes Flight",
+      "jp": "TRUE END：希望は翼あるもの",
+      "kr": "트루 엔딩 : 희망은 날개달린 것",
+      "zh": "真结局：希望带着翅膀"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_ENDING_6_03": {
+      "en": "Normal Ending: What You Stand For",
+      "jp": "NORMAL END：貴方の価値",
+      "kr": "노멀 엔딩 : 당신의 가치",
+      "zh": "普通结局：你的价值"
+    },
+    "SYS_MONAD_GATE_NODE_NAME_CUBE_01": {
+      "en": "Search Cube",
+      "jp": "キューブ探索",
+      "kr": "큐브 탐색",
+      "zh": "立方体探索"
+    }
+  },
+  "routes": [
+    {
+      "groupId": "101",
+      "depth": 1,
+      "routeIndex": 1,
+      "variant": 0,
+      "name": {
+        "en": "Route 1: Land of the White Falcon",
+        "jp": "ルート1：白い鷹の国",
+        "kr": "루트 1 : 하얀 매의 나라",
+        "zh": "路缐 1：白鹰之国"
+      }
+    },
+    {
+      "groupId": "102",
+      "depth": 2,
+      "routeIndex": 2,
+      "variant": 0,
+      "name": {
+        "en": "Route 2: Sacred Archipelago",
+        "jp": "ルート2：聖なる群島",
+        "kr": "루트 2 : 신성한 군도",
+        "zh": "路缐 2：神圣群岛"
+      }
+    },
+    {
+      "groupId": "103",
+      "depth": 3,
+      "routeIndex": 3,
+      "variant": 0,
+      "name": {
+        "en": "Route 3: Land of Snow and Steel",
+        "jp": "ルート3：白い雪と鋼の国",
+        "kr": "루트 3 : 하얀 눈과 강철의 나라",
+        "zh": "路缐 3：白雪与钢铁之国"
+      }
+    },
+    {
+      "groupId": "104",
+      "depth": 4,
+      "routeIndex": 4,
+      "variant": 0,
+      "name": {
+        "en": "Route 4: Land of Sandstorms [1st Part]",
+        "jp": "ルート4：砂風の国【前編】",
+        "kr": "루트 4 : 모래바람의 나라 [전편]",
+        "zh": "路线4：风沙之国【前篇】"
+      }
+    },
+    {
+      "groupId": "105",
+      "depth": 4,
+      "routeIndex": 4,
+      "variant": 0,
+      "name": {
+        "en": "Route 4: Land of Sandstorms [2nd Part]",
+        "jp": "ルート4：砂風の国【後編】",
+        "kr": "루트 4 : 모래바람의 나라 [후편]",
+        "zh": "路线4：风沙之国【后篇】"
+      }
+    },
+    {
+      "groupId": "106",
+      "depth": 5,
+      "routeIndex": 5,
+      "variant": 0,
+      "name": {
+        "en": "Route 5: Realm of Bane",
+        "jp": "ルート5：劇毒の領域",
+        "kr": "루트 5 : 극독의 영역",
+        "zh": "路缐 5：剧毒领域"
+      }
+    },
+    {
+      "groupId": "107",
+      "depth": 6,
+      "routeIndex": 1,
+      "variant": 0,
+      "name": {
+        "en": "Route 1: Land of the White Falcon",
+        "jp": "ルート1：白い鷹の国",
+        "kr": "루트 1 : 하얀 매의 나라",
+        "zh": "路缐 1：白鹰之国"
+      }
+    },
+    {
+      "groupId": "113",
+      "depth": 6,
+      "routeIndex": 2,
+      "variant": 0,
+      "name": {
+        "en": "Route 2: Sacred Archipelago",
+        "jp": "ルート2：聖なる群島",
+        "kr": "루트 2 : 신성한 군도",
+        "zh": "路缐 2：神圣群岛"
+      }
+    },
+    {
+      "groupId": "119",
+      "depth": 6,
+      "routeIndex": 3,
+      "variant": 0,
+      "name": {
+        "en": "Route 3: Land of Snow and Steel",
+        "jp": "ルート3：白い雪と鋼の国",
+        "kr": "루트 3 : 하얀 눈과 강철의 나라",
+        "zh": "路缐 3：白雪与钢铁之国"
+      }
+    },
+    {
+      "groupId": "125",
+      "depth": 6,
+      "routeIndex": 4,
+      "variant": 0,
+      "name": {
+        "en": "Route 4: Land of Sandstorms",
+        "jp": "ルート4：砂風の国",
+        "kr": "루트 4 : 모래바람의 나라",
+        "zh": "路缐 4：风沙之国"
+      }
+    },
+    {
+      "groupId": "131",
+      "depth": 6,
+      "routeIndex": 5,
+      "variant": 0,
+      "name": {
+        "en": "Route 5: Realm of Bane",
+        "jp": "ルート5：劇毒の領域",
+        "kr": "루트 5 : 극독의 영역",
+        "zh": "路缐 5：剧毒领域"
+      }
+    },
+    {
+      "groupId": "108",
+      "depth": 7,
+      "routeIndex": 1,
+      "variant": 0,
+      "name": {
+        "en": "Route 1: Land of the White Falcon",
+        "jp": "ルート1：白い鷹の国",
+        "kr": "루트 1 : 하얀 매의 나라",
+        "zh": "路缐 1：白鹰之国"
+      }
+    },
+    {
+      "groupId": "114",
+      "depth": 7,
+      "routeIndex": 2,
+      "variant": 0,
+      "name": {
+        "en": "Route 2: Sacred Archipelago",
+        "jp": "ルート2：聖なる群島",
+        "kr": "루트 2 : 신성한 군도",
+        "zh": "路缐 2：神圣群岛"
+      }
+    },
+    {
+      "groupId": "120",
+      "depth": 7,
+      "routeIndex": 3,
+      "variant": 0,
+      "name": {
+        "en": "Route 3: Land of Snow and Steel",
+        "jp": "ルート3：白い雪と鋼の国",
+        "kr": "루트 3 : 하얀 눈과 강철의 나라",
+        "zh": "路缐 3：白雪与钢铁之国"
+      }
+    },
+    {
+      "groupId": "126",
+      "depth": 7,
+      "routeIndex": 4,
+      "variant": 0,
+      "name": {
+        "en": "Route 4: Land of Sandstorms",
+        "jp": "ルート4：砂風の国",
+        "kr": "루트 4 : 모래바람의 나라",
+        "zh": "路缐 4：风沙之国"
+      }
+    },
+    {
+      "groupId": "132",
+      "depth": 7,
+      "routeIndex": 5,
+      "variant": 0,
+      "name": {
+        "en": "Route 5: Realm of Bane",
+        "jp": "ルート5：劇毒の領域",
+        "kr": "루트 5 : 극독의 영역",
+        "zh": "路缐 5：剧毒领域"
+      }
+    },
+    {
+      "groupId": "109",
+      "depth": 8,
+      "routeIndex": 1,
+      "variant": 0,
+      "name": {
+        "en": "Route 1: Land of the White Falcon",
+        "jp": "ルート1：白い鷹の国",
+        "kr": "루트 1 : 하얀 매의 나라",
+        "zh": "路缐 1：白鹰之国"
+      }
+    },
+    {
+      "groupId": "115",
+      "depth": 8,
+      "routeIndex": 2,
+      "variant": 0,
+      "name": {
+        "en": "Route 2: Sacred Archipelago",
+        "jp": "ルート2：聖なる群島",
+        "kr": "루트 2 : 신성한 군도",
+        "zh": "路缐 2：神圣群岛"
+      }
+    },
+    {
+      "groupId": "121",
+      "depth": 8,
+      "routeIndex": 3,
+      "variant": 0,
+      "name": {
+        "en": "Route 3: Land of Snow and Steel",
+        "jp": "ルート3：白い雪と鋼の国",
+        "kr": "루트 3 : 하얀 눈과 강철의 나라",
+        "zh": "路缐 3：白雪与钢铁之国"
+      }
+    },
+    {
+      "groupId": "127",
+      "depth": 8,
+      "routeIndex": 4,
+      "variant": 0,
+      "name": {
+        "en": "Route 4: Land of Sandstorms",
+        "jp": "ルート4：砂風の国",
+        "kr": "루트 4 : 모래바람의 나라",
+        "zh": "路缐 4：风沙之国"
+      }
+    },
+    {
+      "groupId": "133",
+      "depth": 8,
+      "routeIndex": 5,
+      "variant": 0,
+      "name": {
+        "en": "Route 5: Realm of Bane",
+        "jp": "ルート5：劇毒の領域",
+        "kr": "루트 5 : 극독의 영역",
+        "zh": "路缐 5：剧毒领域"
+      }
+    },
+    {
+      "groupId": "110",
+      "depth": 9,
+      "routeIndex": 1,
+      "variant": 0,
+      "name": {
+        "en": "Route 1: Land of the White Falcon",
+        "jp": "ルート1：白い鷹の国",
+        "kr": "루트 1 : 하얀 매의 나라",
+        "zh": "路缐 1：白鹰之国"
+      }
+    },
+    {
+      "groupId": "116",
+      "depth": 9,
+      "routeIndex": 2,
+      "variant": 0,
+      "name": {
+        "en": "Route 2: Sacred Archipelago",
+        "jp": "ルート2：聖なる群島",
+        "kr": "루트 2 : 신성한 군도",
+        "zh": "路缐 2：神圣群岛"
+      }
+    },
+    {
+      "groupId": "122",
+      "depth": 9,
+      "routeIndex": 3,
+      "variant": 0,
+      "name": {
+        "en": "Route 3: Land of Snow and Steel",
+        "jp": "ルート3：白い雪と鋼の国",
+        "kr": "루트 3 : 하얀 눈과 강철의 나라",
+        "zh": "路缐 3：白雪与钢铁之国"
+      }
+    },
+    {
+      "groupId": "128",
+      "depth": 9,
+      "routeIndex": 4,
+      "variant": 0,
+      "name": {
+        "en": "Route 4: Land of Sandstorms",
+        "jp": "ルート4：砂風の国",
+        "kr": "루트 4 : 모래바람의 나라",
+        "zh": "路缐 4：风沙之国"
+      }
+    },
+    {
+      "groupId": "134",
+      "depth": 9,
+      "routeIndex": 5,
+      "variant": 0,
+      "name": {
+        "en": "Route 5: Realm of Bane",
+        "jp": "ルート5：劇毒の領域",
+        "kr": "루트 5 : 극독의 영역",
+        "zh": "路缐 5：剧毒领域"
+      }
+    },
+    {
+      "groupId": "111",
+      "depth": 10,
+      "routeIndex": 1,
+      "variant": 0,
+      "name": {
+        "en": "Route 1: Land of the White Falcon",
+        "jp": "ルート1：白い鷹の国",
+        "kr": "루트 1 : 하얀 매의 나라",
+        "zh": "路缐 1：白鹰之国"
+      }
+    },
+    {
+      "groupId": "112",
+      "depth": 10,
+      "routeIndex": 1,
+      "variant": 1,
+      "name": {
+        "en": "Route 1: Land of the White Falcon",
+        "jp": "ルート1：白い鷹の国",
+        "kr": "루트 1 : 하얀 매의 나라",
+        "zh": "路缐 1：白鹰之国"
+      }
+    },
+    {
+      "groupId": "117",
+      "depth": 10,
+      "routeIndex": 2,
+      "variant": 0,
+      "name": {
+        "en": "Route 2: Sacred Archipelago",
+        "jp": "ルート2：聖なる群島",
+        "kr": "루트 2 : 신성한 군도",
+        "zh": "路缐 2：神圣群岛"
+      }
+    },
+    {
+      "groupId": "118",
+      "depth": 10,
+      "routeIndex": 2,
+      "variant": 1,
+      "name": {
+        "en": "Route 2: Sacred Archipelago",
+        "jp": "ルート2：聖なる群島",
+        "kr": "루트 2 : 신성한 군도",
+        "zh": "路缐 2：神圣群岛"
+      }
+    },
+    {
+      "groupId": "123",
+      "depth": 10,
+      "routeIndex": 3,
+      "variant": 0,
+      "name": {
+        "en": "Route 3: Land of Snow and Steel",
+        "jp": "ルート3：白い雪と鋼の国",
+        "kr": "루트 3 : 하얀 눈과 강철의 나라",
+        "zh": "路缐 3：白雪与钢铁之国"
+      }
+    },
+    {
+      "groupId": "124",
+      "depth": 10,
+      "routeIndex": 3,
+      "variant": 1,
+      "name": {
+        "en": "Route 3: Land of Snow and Steel",
+        "jp": "ルート3：白い雪と鋼の国",
+        "kr": "루트 3 : 하얀 눈과 강철의 나라",
+        "zh": "路缐 3：白雪与钢铁之国"
+      }
+    },
+    {
+      "groupId": "129",
+      "depth": 10,
+      "routeIndex": 4,
+      "variant": 0,
+      "name": {
+        "en": "Route 4: Land of Sandstorms",
+        "jp": "ルート4：砂風の国",
+        "kr": "루트 4 : 모래바람의 나라",
+        "zh": "路缐 4：风沙之国"
+      }
+    },
+    {
+      "groupId": "130",
+      "depth": 10,
+      "routeIndex": 4,
+      "variant": 1,
+      "name": {
+        "en": "Route 4: Land of Sandstorms",
+        "jp": "ルート4：砂風の国",
+        "kr": "루트 4 : 모래바람의 나라",
+        "zh": "路缐 4：风沙之国"
+      }
+    },
+    {
+      "groupId": "135",
+      "depth": 10,
+      "routeIndex": 5,
+      "variant": 0,
+      "name": {
+        "en": "Route 5: Realm of Bane",
+        "jp": "ルート5：劇毒の領域",
+        "kr": "루트 5 : 극독의 영역",
+        "zh": "路缐 5：剧毒领域"
+      }
+    },
+    {
+      "groupId": "136",
+      "depth": 10,
+      "routeIndex": 5,
+      "variant": 1,
+      "name": {
+        "en": "Route 5: Realm of Bane",
+        "jp": "ルート5：劇毒の領域",
+        "kr": "루트 5 : 극독의 영역",
+        "zh": "路缐 5：剧毒领域"
+      }
+    }
+  ]
+}

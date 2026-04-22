@@ -668,6 +668,7 @@ const kr: Record<TranslationKey, string> = {
 
   // Monad Gate
   'monad.rewards': '보상',
+  'monad.rewards.firstClear': '첫 클리어 보상',
   'monad.trueEndingChoices': '트루 엔딩 선택지',
   'monad.ui.trueEndingPath': '트루 엔딩 루트',
   'monad.ui.compact': '컴팩트',

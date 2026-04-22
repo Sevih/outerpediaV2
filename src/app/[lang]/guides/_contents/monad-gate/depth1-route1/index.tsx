@@ -1,29 +1,9 @@
 'use client';
 
-import { nodes, edges, routeTitleKey } from '@data/monad/depth1-route1';
-import { nodeTypes } from '@/lib/monad/nodeTypes';
-import MonadGateMap from '@/app/components/guides/MonadGateMap';
-import ItemInline from '@/app/components/inline/ItemInline';
-import { useI18n } from '@/lib/contexts/I18nContext';
+import route from '@data/monad/generated/routes/101.json';
+import MonadRoutePage from '@/app/components/guides/MonadRoutePage';
+import type { RouteJson } from '@/lib/monad/loadRoute';
 
 export default function Depth1Route1() {
-  const { t } = useI18n();
-
-  return (
-    <div className="space-y-4">
-      <div className="mt-6">
-        <h2 className="text-lg font-semibold mb-3">{t('monad.rewards')}</h2>
-        <div className="flex items-center gap-2">
-          <ItemInline name="Fusion-Type Core" />
-          <span className="text-zinc-400">x75</span>
-        </div>
-      </div>
-      <MonadGateMap
-        nodes={nodes}
-        edges={edges}
-        nodeTypes={nodeTypes}
-        titleKey={routeTitleKey}
-      />
-    </div>
-  );
+  return <MonadRoutePage route={route as unknown as RouteJson} titleKey="monad.route.1" />;
 }

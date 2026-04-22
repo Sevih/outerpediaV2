@@ -74,12 +74,21 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
   const contentWidth = (maxX - minX + 1) * (nodeWidth + nodeGap) + nodeGap * 2;
   const contentHeight = (maxY - minY + 1) * (nodeHeight + nodeGap) + nodeGap * 2;
 
-  const labeledTruePathEdges = useMemo(
-    () => edges.filter((edge) => edge.truePath && edge.label),
-    [edges]
-  );
-
   const nodeMap = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
+
+  // Only narrative choices (nodes of type `path`) belong in the True Ending Choices summary.
+  // Combat nodes also expose multiple edges (team/character selection etc.) but those aren't
+  // meaningful player decisions.
+  const labeledTruePathEdges = useMemo(
+    () =>
+      edges.filter((edge) => {
+        if (!(edge.truePath || edge.altPath) || !edge.label) return false;
+        if (edge.service) return false; // non-narrative mechanical event
+        const fromNode = nodeMap.get(edge.from);
+        return fromNode?.type === 'path';
+      }),
+    [edges, nodeMap],
+  );
 
   const getNodeById = useCallback(
     (id: string): MonadNode => {
@@ -356,10 +365,11 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
             </defs>
             {/* Pass 1: draw all edge paths so overlays (e.g. need locks) can sit above them. */}
             {edges
-              .filter((edge) => !showOnlyTruePath || edge.truePath)
+              .filter((edge) => !showOnlyTruePath || edge.truePath || edge.altPath)
               .map((edge, idx) => {
                 const isTruePath = edge.truePath === true;
-                const shouldDim = showOnlyTruePath && !isTruePath;
+                const isAltPath = edge.altPath === true;
+                const shouldDim = showOnlyTruePath && !isTruePath && !isAltPath;
                 const from = getNodeById(edge.from);
                 const to = getNodeById(edge.to);
                 const fromX =
@@ -374,16 +384,22 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
                 const toY =
                   (maxY - to.y) * (nodeHeight + nodeGap) + nodeHeight / 2 + nodeGap;
                 const midX = fromX + (toX - fromX) / 2;
+                const stroke = showOnlyTruePath
+                  ? isTruePath
+                    ? '#facc15' // canonical = solid yellow
+                    : isAltPath
+                      ? '#facc15' // alt = yellow too, differentiated by dashes
+                      : 'white'
+                  : 'white';
                 return (
                   <path
                     key={`path-${idx}`}
                     d={`M${fromX},${fromY} L${midX},${fromY} L${midX},${toY} L${toX},${toY}`}
                     fill="none"
-                    stroke={
-                      showOnlyTruePath ? (isTruePath ? '#facc15' : 'white') : 'white'
-                    }
+                    stroke={stroke}
                     strokeWidth={shouldDim ? 1 : 2}
-                    strokeOpacity={shouldDim ? 0.2 : 1}
+                    strokeOpacity={shouldDim ? 0.2 : isAltPath && !isTruePath ? 0.6 : 1}
+                    strokeDasharray={isAltPath && !isTruePath ? '6 4' : undefined}
                     markerEnd="url(#arrowhead)"
                     pointerEvents="stroke"
                   />
@@ -391,7 +407,7 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
               })}
             {/* Pass 2: draw need locks on top of every path. */}
             {edges
-              .filter((edge) => (!showOnlyTruePath || edge.truePath) && edge.need)
+              .filter((edge) => (!showOnlyTruePath || edge.truePath || edge.altPath) && edge.need)
               .map((edge, idx) => {
                 const from = getNodeById(edge.from);
                 const to = getNodeById(edge.to);
@@ -432,7 +448,7 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
               })}
           </svg>
           {nodes.map((node) => {
-            const isDimmed = showOnlyTruePath && !node.truePath;
+            const isDimmed = showOnlyTruePath && !node.truePath && !node.altPath;
             const giveLabel = node.givesItem ? lRec(node.givesItem, lang) : null;
             const baseLabel = (node.type === 'path' ? '' : node.label) || t(`monad.node.${node.type}`);
             const tooltipLabel = giveLabel ? `${baseLabel} · 🔑 ${giveLabel}` : baseLabel;
@@ -555,29 +571,90 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
           {tooltip.label}
         </div>
       )}
-      {labeledTruePathEdges.length > 0 && (
-        <div
-          className="relative mt-4 p-4 bg-zinc-800 rounded-lg border border-zinc-700 cursor-pointer"
-          onClick={() => setSpoilerRevealed(true)}
-        >
-          <h3 className="text-lg font-semibold mb-3 text-yellow-400">
-            {t('monad.trueEndingChoices')}
-          </h3>
-          <ul className={`space-y-2 transition-all duration-300 ${spoilerRevealed ? '' : 'blur-sm select-none'}`}>
-            {labeledTruePathEdges.map((edge, idx) => (
-              <li key={idx} className="flex items-start gap-2 text-sm">
-                <span className="text-yellow-400 mt-0.5">{'->'}</span>
-                <span className="text-zinc-200">{lRec(edge.label, lang)}</span>
-              </li>
-            ))}
-          </ul>
-          {!spoilerRevealed && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-sm text-zinc-400">{t('monad.ui.clickToReveal')}</span>
-            </div>
-          )}
-        </div>
-      )}
+      {labeledTruePathEdges.length > 0 && (() => {
+        // Preserve source-node order so steps match the actual route flow,
+        // while still grouping equivalent forks (same source) on the same step.
+        const rawGroups: (typeof labeledTruePathEdges)[] = [];
+        const groupIndex = new Map<string, number>();
+        for (const edge of labeledTruePathEdges) {
+          const existing = groupIndex.get(edge.from);
+          if (existing === undefined) {
+            groupIndex.set(edge.from, rawGroups.length);
+            rawGroups.push([edge]);
+          } else {
+            rawGroups[existing].push(edge);
+          }
+        }
+        // Collapse consecutive groups that display the same choice text. Some events span
+        // multiple sequential path nodes with identical labels (e.g. "Call out to Delta."
+        // repeated across two nodes on D5R1); keeping only one entry keeps the walkthrough tight.
+        const fingerprint = (group: typeof labeledTruePathEdges) =>
+          group
+            .map((e) => `${lRec(e.label, lang) ?? ''}|${lRec(e.gives, lang) ?? ''}`)
+            .sort()
+            .join('\n');
+        const groups: (typeof labeledTruePathEdges)[] = [];
+        let lastFp: string | null = null;
+        for (const g of rawGroups) {
+          const fp = fingerprint(g);
+          if (fp === lastFp) continue;
+          groups.push(g);
+          lastFp = fp;
+        }
+        return (
+          <div
+            className="relative mt-4 p-4 bg-zinc-800/60 rounded-lg border border-zinc-700 cursor-pointer"
+            onClick={() => setSpoilerRevealed(true)}
+          >
+            <h3 className="text-base font-semibold mb-4 text-yellow-400 flex items-center gap-2">
+              <span>★</span>
+              {t('monad.trueEndingChoices')}
+            </h3>
+            <ol className={`space-y-3 transition-all duration-300 ${spoilerRevealed ? '' : 'blur-sm select-none'}`}>
+              {groups.map((group, idx) => {
+                // Primary = canonical truePath edge; alts = equivalent altPath forks from the same node.
+                const primary = group.find((e) => e.truePath) ?? group[0];
+                const alts = group.filter((e) => e !== primary);
+                return (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-yellow-400/15 text-yellow-300 font-bold text-xs flex items-center justify-center border border-yellow-500/40 mt-0.5">
+                      {idx + 1}
+                    </span>
+                    <div className="flex-1 min-w-0 flex flex-wrap items-center gap-x-2 gap-y-1">
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-green-700/30 border border-green-600/60 text-green-100 text-sm">
+                        {lRec(primary.label, lang)}
+                      </span>
+                      {primary.gives && (
+                        <span className="inline-flex items-center gap-1 text-emerald-300 text-xs font-medium">
+                          🔑 {lRec(primary.gives, lang)}
+                        </span>
+                      )}
+                      {alts.map((edge, i) => (
+                        <React.Fragment key={i}>
+                          <span className="text-zinc-500 text-xs uppercase tracking-wide">or</span>
+                          <span className="inline-flex items-center px-2.5 py-1 rounded-md border border-dashed border-green-600/50 text-green-200/90 text-sm italic">
+                            {lRec(edge.label, lang)}
+                          </span>
+                          {edge.gives && (
+                            <span className="inline-flex items-center gap-1 text-emerald-300/90 text-xs font-medium">
+                              🔑 {lRec(edge.gives, lang)}
+                            </span>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  </li>
+                );
+              })}
+            </ol>
+            {!spoilerRevealed && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-sm text-zinc-400">{t('monad.ui.clickToReveal')}</span>
+              </div>
+            )}
+          </div>
+        );
+      })()}
     </div>
   );
 };
