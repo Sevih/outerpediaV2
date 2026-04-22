@@ -675,6 +675,7 @@ const kr: Record<TranslationKey, string> = {
   'monad.ui.fullscreen': '전체화면',
   'monad.ui.noOptions': '선택지가 없습니다.',
   'monad.ui.required': '필요',
+  'monad.ui.grants': '획득',
   'monad.ui.unnamedPath': '(이름 없는 루트)',
   'monad.ui.clickToReveal': '클릭하여 표시 (스포일러)',
   // Node types
@@ -691,6 +692,7 @@ const kr: Record<TranslationKey, string> = {
   'monad.node.pinnacle': '세계선의 정점',
   'monad.node.final': '최종 관문',
   'monad.node.saga': '세계선의 이야기',
+  'monad.node.cube': '큐브 탐색',
   'monad.node.unknown': '미답지역',
   // Routes
   'monad.route.1': '하얀 매의 나라',

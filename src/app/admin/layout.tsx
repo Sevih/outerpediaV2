@@ -26,6 +26,7 @@ const NAV_GROUPS: NavGroup[] = [
       { label: 'Armor Sets', href: '/admin/extractor-v3/equip/armors' },
       { label: 'Talismans', href: '/admin/extractor-v3/equip/talismans' },
       { label: 'Monsters', href: '/admin/extractor-v3/monster' },
+      { label: 'Monad Gate', href: '/admin/extractor-v3/monad-gate' },
       { label: 'Tower', href: '/admin/extractor/tower' },
     ],
   },

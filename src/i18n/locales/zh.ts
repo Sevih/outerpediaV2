@@ -675,6 +675,7 @@ const zh: Record<TranslationKey, string> = {
   'monad.ui.fullscreen': '全屏',
   'monad.ui.noOptions': '没有可用选项。',
   'monad.ui.required': '需要',
+  'monad.ui.grants': '获得',
   'monad.ui.unnamedPath': '(未命名路线)',
   'monad.ui.clickToReveal': '点击显示（剧透）',
   // Node types
@@ -691,6 +692,7 @@ const zh: Record<TranslationKey, string> = {
   'monad.node.pinnacle': '世界线的顶峰',
   'monad.node.final': '最终关卡',
   'monad.node.saga': '世界线的故事',
+  'monad.node.cube': '立方体探索',
   'monad.node.unknown': '未访区域',
   // Routes
   'monad.route.1': '白鹰之国',

@@ -41,6 +41,7 @@ export const PathOptionsContent: React.FC<PathOptionsContentProps> = ({
 
         const labelText = lRec(edge.label, lang) || t('monad.ui.unnamedPath');
         const needText = lRec(edge.need, lang);
+        const givesText = lRec(edge.gives, lang);
 
         return (
           <div
@@ -53,6 +54,11 @@ export const PathOptionsContent: React.FC<PathOptionsContentProps> = ({
             {needText && (
               <div className="text-xs text-yellow-400 mt-1 italic">
                 {t('monad.ui.required')} : {needText}
+              </div>
+            )}
+            {givesText && (
+              <div className="text-xs text-emerald-400 mt-1 italic">
+                🔑 {t('monad.ui.grants')} : {givesText}
               </div>
             )}
             <div className="text-xs text-gray-400 mt-1">

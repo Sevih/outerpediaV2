@@ -11,6 +11,8 @@ export interface MonadNode {
   label?: string;
   popupText?: string;
   truePath?: boolean;
+  /** Names of key item(s) reachable from this node depending on the choice taken. */
+  givesItem?: LangMap;
 }
 
 export interface MonadEdge {
@@ -18,5 +20,7 @@ export interface MonadEdge {
   to: string;
   label?: LangMap;
   need?: LangMap;
+  /** Name(s) of key item(s) granted when the player takes this choice. */
+  gives?: LangMap;
   truePath?: boolean;
 }

@@ -675,6 +675,7 @@ const jp: Record<TranslationKey, string> = {
   'monad.ui.fullscreen': 'フルスクリーン',
   'monad.ui.noOptions': '選択肢がありません。',
   'monad.ui.required': '必要',
+  'monad.ui.grants': '獲得',
   'monad.ui.unnamedPath': '(名前なしルート)',
   'monad.ui.clickToReveal': 'クリックして表示（ネタバレ）',
   // Node types
@@ -691,6 +692,7 @@ const jp: Record<TranslationKey, string> = {
   'monad.node.pinnacle': '世界線の頂点',
   'monad.node.final': '最終関門',
   'monad.node.saga': '世界線の物語',
+  'monad.node.cube': 'キューブ探索',
   'monad.node.unknown': '未確認地域',
   // Routes
   'monad.route.1': '白い鷹の国',

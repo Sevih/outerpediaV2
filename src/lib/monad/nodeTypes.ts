@@ -66,6 +66,11 @@ export const nodeTypes = {
     icon: 'CM_Monad_Node_Icon_10',
     textColor: 'text-sky-400',
   },
+  cube: {
+    label: 'Search Cube',
+    icon: 'CM_Monad_Node_Icon_05',
+    textColor: 'text-sky-400',
+  },
   unknown: {
     label: '???',
     icon: 'CM_Monad_Node_Icon_11',
@@ -87,5 +92,6 @@ export const nodeColorFilters: Record<NodeType, string> = {
   pinnacle: 'invert(86%) sepia(131%) saturate(2884%) hue-rotate(348deg) brightness(107%) contrast(96%)',
   eldritch: 'invert(44%) sepia(79%) saturate(1538%) hue-rotate(163deg) brightness(98%) contrast(94%)',
   saga: 'invert(44%) sepia(79%) saturate(1538%) hue-rotate(163deg) brightness(98%) contrast(94%)',
+  cube: 'invert(44%) sepia(79%) saturate(1538%) hue-rotate(163deg) brightness(98%) contrast(94%)',
   unknown: 'invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)',
 };

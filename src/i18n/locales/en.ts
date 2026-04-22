@@ -675,6 +675,7 @@ const en = {
   'monad.ui.fullscreen': 'Fullscreen',
   'monad.ui.noOptions': 'No options available.',
   'monad.ui.required': 'Required',
+  'monad.ui.grants': 'Grants',
   'monad.ui.unnamedPath': '(Unnamed path)',
   'monad.ui.clickToReveal': 'Click to reveal (spoiler)',
   // Node types
@@ -691,6 +692,7 @@ const en = {
   'monad.node.pinnacle': 'Pinnacle of the Worldline',
   'monad.node.final': 'Final Gateway',
   'monad.node.saga': 'The Saga of Worldlines',
+  'monad.node.cube': 'Search Cube',
   'monad.node.unknown': 'Unexplored Area',
   // Routes
   'monad.route.1': 'Land of the White Falcon',

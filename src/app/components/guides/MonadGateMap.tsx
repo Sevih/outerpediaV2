@@ -354,6 +354,7 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
                 <path d="M0,0 L0,6 L6,3 z" fill="white" />
               </marker>
             </defs>
+            {/* Pass 1: draw all edge paths so overlays (e.g. need locks) can sit above them. */}
             {edges
               .filter((edge) => !showOnlyTruePath || edge.truePath)
               .map((edge, idx) => {
@@ -374,59 +375,79 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
                   (maxY - to.y) * (nodeHeight + nodeGap) + nodeHeight / 2 + nodeGap;
                 const midX = fromX + (toX - fromX) / 2;
                 return (
-                  <g key={idx} className="cursor-pointer">
-                    <path
-                      d={`M${fromX},${fromY} L${midX},${fromY} L${midX},${toY} L${toX},${toY}`}
-                      fill="none"
-                      stroke={
-                        showOnlyTruePath ? (isTruePath ? '#facc15' : 'white') : 'white'
-                      }
-                      strokeWidth={shouldDim ? 1 : 2}
-                      strokeOpacity={shouldDim ? 0.2 : 1}
-                      markerEnd="url(#arrowhead)"
-                      pointerEvents="stroke"
+                  <path
+                    key={`path-${idx}`}
+                    d={`M${fromX},${fromY} L${midX},${fromY} L${midX},${toY} L${toX},${toY}`}
+                    fill="none"
+                    stroke={
+                      showOnlyTruePath ? (isTruePath ? '#facc15' : 'white') : 'white'
+                    }
+                    strokeWidth={shouldDim ? 1 : 2}
+                    strokeOpacity={shouldDim ? 0.2 : 1}
+                    markerEnd="url(#arrowhead)"
+                    pointerEvents="stroke"
+                  />
+                );
+              })}
+            {/* Pass 2: draw need locks on top of every path. */}
+            {edges
+              .filter((edge) => (!showOnlyTruePath || edge.truePath) && edge.need)
+              .map((edge, idx) => {
+                const from = getNodeById(edge.from);
+                const to = getNodeById(edge.to);
+                const fromX =
+                  (from.x - minX) * (nodeWidth + nodeGap) +
+                  nodeWidth +
+                  nodeGap +
+                  (compactMode ? 0 : 10);
+                const fromY =
+                  (maxY - from.y) * (nodeHeight + nodeGap) + nodeHeight / 2 + nodeGap;
+                const toX =
+                  (to.x - minX) * (nodeWidth + nodeGap) + nodeGap + (compactMode ? 0 : 27);
+                const toY =
+                  (maxY - to.y) * (nodeHeight + nodeGap) + nodeHeight / 2 + nodeGap;
+                return (
+                  <g key={`lock-${idx}`} className="pointer-events-none">
+                    <circle
+                      cx={(fromX + toX) / 2}
+                      cy={(fromY + toY) / 2}
+                      r="9"
+                      fill="#fde047"
+                      stroke="black"
+                      strokeWidth="1"
                     />
-                    {edge.need && (
-                      <>
-                        <circle
-                          cx={(fromX + toX) / 2}
-                          cy={(fromY + toY) / 2}
-                          r="9"
-                          fill="#fde047"
-                          stroke="black"
-                          strokeWidth="1"
-                        />
-                        <text
-                          x={(fromX + toX) / 2}
-                          y={(fromY + toY) / 2 + 3}
-                          fontSize="12"
-                          textAnchor="middle"
-                          alignmentBaseline="middle"
-                          fill="black"
-                          fontWeight="bold"
-                        >
-                          &#128274;
-                        </text>
-                      </>
-                    )}
+                    <text
+                      x={(fromX + toX) / 2}
+                      y={(fromY + toY) / 2 + 3}
+                      fontSize="12"
+                      textAnchor="middle"
+                      alignmentBaseline="middle"
+                      fill="black"
+                      fontWeight="bold"
+                    >
+                      &#128274;
+                    </text>
                   </g>
                 );
               })}
           </svg>
           {nodes.map((node) => {
             const isDimmed = showOnlyTruePath && !node.truePath;
+            const giveLabel = node.givesItem ? lRec(node.givesItem, lang) : null;
+            const baseLabel = (node.type === 'path' ? '' : node.label) || t(`monad.node.${node.type}`);
+            const tooltipLabel = giveLabel ? `${baseLabel} · 🔑 ${giveLabel}` : baseLabel;
             return (
               <div
                 key={node.id}
                 onClick={() => { if (node.type === 'path') setSelectedNode(node); }}
                 onMouseEnter={(e) => {
-                  if (node.type !== 'path') {
-                    setTooltip({ label: node.label || t(`monad.node.${node.type}`), x: e.clientX, y: e.clientY });
+                  if (node.type !== 'path' || giveLabel) {
+                    setTooltip({ label: tooltipLabel, x: e.clientX, y: e.clientY });
                   }
                 }}
                 onMouseMove={(e) => {
-                  if (tooltip && node.type !== 'path') {
-                    setTooltip({ label: node.label || t(`monad.node.${node.type}`), x: e.clientX, y: e.clientY });
+                  if (tooltip && (node.type !== 'path' || giveLabel)) {
+                    setTooltip({ label: tooltipLabel, x: e.clientX, y: e.clientY });
                   }
                 }}
                 onMouseLeave={() => setTooltip(null)}
@@ -463,6 +484,14 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
                       className="absolute z-10"
                       style={{ filter: nodeColorFilters[node.type] }}
                     />
+                    {giveLabel && (
+                      <span
+                        className="absolute -top-1 -right-1 z-20 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-[10px] leading-none shadow ring-1 ring-black"
+                        title={giveLabel}
+                      >
+                        🔑
+                      </span>
+                    )}
                   </div>
                 ) : (
                   <div className="relative w-full h-full flex items-center pl-10 overflow-hidden">
@@ -496,6 +525,9 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
                     >
                       <div className="font-semibold">{t(`monad.node.${node.type}`)}</div>
                       {node.label && <div className="text-[10px] italic">{node.label}</div>}
+                      {giveLabel && (
+                        <div className="text-[10px] italic text-emerald-400">🔑 {giveLabel}</div>
+                      )}
                     </div>
                   </div>
                 )}
