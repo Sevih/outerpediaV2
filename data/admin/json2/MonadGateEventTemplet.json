@@ -3235,6 +3235,82 @@
   {
     "ID": "256",
     "EventGroupID": "101",
+    "EventActGroupID": "15",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "257"
+  },
+  {
+    "ID": "257",
+    "EventGroupID": "101",
+    "EventActGroupID": "15",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "258",
+    "CharacterLevelUp": "10",
+    "CharacterEvolution": "1",
+    "SelectCharacterCount": "4"
+  },
+  {
+    "ID": "258",
+    "EventGroupID": "101",
+    "EventActGroupID": "15",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "259",
+    "EventGroupID": "101",
+    "EventActGroupID": "16",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "260"
+  },
+  {
+    "ID": "260",
+    "EventGroupID": "101",
+    "EventActGroupID": "16",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "261",
+    "CharacterLevelUp": "15",
+    "CharacterEvolution": "2",
+    "SelectCharacterCount": "4"
+  },
+  {
+    "ID": "261",
+    "EventGroupID": "101",
+    "EventActGroupID": "16",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "262",
+    "EventGroupID": "101",
     "EventActGroupID": "17",
     "NameID": "SYS_MG01_FREE_EV03_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
@@ -3242,10 +3318,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01,SYS_MG01_FREE_EV03_SELECT_02",
     "EventType": "MGET_START",
-    "MoveEventID": "257,258"
+    "MoveEventID": "263,264"
   },
   {
-    "ID": "257",
+    "ID": "263",
     "EventGroupID": "101",
     "EventActGroupID": "17",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -3254,10 +3330,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "259"
+    "MoveEventID": "265"
   },
   {
-    "ID": "258",
+    "ID": "264",
     "EventGroupID": "101",
     "EventActGroupID": "17",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -3266,10 +3342,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_02_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "260"
+    "MoveEventID": "266"
   },
   {
-    "ID": "259",
+    "ID": "265",
     "EventGroupID": "101",
     "EventActGroupID": "17",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -3281,7 +3357,7 @@
     "ThemeRuleGaugeValue": "-200"
   },
   {
-    "ID": "260",
+    "ID": "266",
     "EventGroupID": "101",
     "EventActGroupID": "17",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -3293,7 +3369,7 @@
     "ThemeRuleGaugeValue": "100"
   },
   {
-    "ID": "261",
+    "ID": "267",
     "EventGroupID": "101",
     "EventActGroupID": "18",
     "NameID": "SYS_MG01_FREE_EV03_NAME_01",
@@ -3302,10 +3378,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01,SYS_MG01_FREE_EV03_SELECT_02",
     "EventType": "MGET_START",
-    "MoveEventID": "262,263"
+    "MoveEventID": "268,269"
   },
   {
-    "ID": "262",
+    "ID": "268",
     "EventGroupID": "101",
     "EventActGroupID": "18",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -3314,10 +3390,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "264"
+    "MoveEventID": "270"
   },
   {
-    "ID": "263",
+    "ID": "269",
     "EventGroupID": "101",
     "EventActGroupID": "18",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -3326,10 +3402,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_02_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "265"
+    "MoveEventID": "271"
   },
   {
-    "ID": "264",
+    "ID": "270",
     "EventGroupID": "101",
     "EventActGroupID": "18",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -3341,7 +3417,7 @@
     "ThemeRuleGaugeValue": "-300"
   },
   {
-    "ID": "265",
+    "ID": "271",
     "EventGroupID": "101",
     "EventActGroupID": "18",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -3353,7 +3429,7 @@
     "ThemeRuleGaugeValue": "200"
   },
   {
-    "ID": "266",
+    "ID": "272",
     "EventGroupID": "101",
     "EventActGroupID": "19",
     "NameID": "SYS_MG01_FREE_EV03_NAME_01",
@@ -3362,10 +3438,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01,SYS_MG01_FREE_EV03_SELECT_02",
     "EventType": "MGET_START",
-    "MoveEventID": "267,268"
+    "MoveEventID": "273,274"
   },
   {
-    "ID": "267",
+    "ID": "273",
     "EventGroupID": "101",
     "EventActGroupID": "19",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -3374,10 +3450,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "269"
+    "MoveEventID": "275"
   },
   {
-    "ID": "268",
+    "ID": "274",
     "EventGroupID": "101",
     "EventActGroupID": "19",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -3386,10 +3462,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_02_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "270"
+    "MoveEventID": "276"
   },
   {
-    "ID": "269",
+    "ID": "275",
     "EventGroupID": "101",
     "EventActGroupID": "19",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -3401,7 +3477,7 @@
     "ThemeRuleGaugeValue": "-400"
   },
   {
-    "ID": "270",
+    "ID": "276",
     "EventGroupID": "101",
     "EventActGroupID": "19",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -3413,81 +3489,9 @@
     "ThemeRuleGaugeValue": "300"
   },
   {
-    "ID": "271",
-    "EventGroupID": "101",
-    "EventActGroupID": "20",
-    "NameID": "SYS_MG01_FREE_EV05_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventType": "MGET_START",
-    "MoveEventID": "272"
-  },
-  {
-    "ID": "272",
-    "EventGroupID": "101",
-    "EventActGroupID": "20",
-    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "273",
-    "JoinCharacterID": "2000092"
-  },
-  {
-    "ID": "273",
-    "EventGroupID": "101",
-    "EventActGroupID": "20",
-    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV05_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "274",
-    "EventGroupID": "101",
-    "EventActGroupID": "21",
-    "NameID": "SYS_MG01_FREE_EV05_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventType": "MGET_START",
-    "MoveEventID": "275"
-  },
-  {
-    "ID": "275",
-    "EventGroupID": "101",
-    "EventActGroupID": "21",
-    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "276",
-    "JoinCharacterID": "2000109"
-  },
-  {
-    "ID": "276",
-    "EventGroupID": "101",
-    "EventActGroupID": "21",
-    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV05_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
     "ID": "277",
     "EventGroupID": "101",
-    "EventActGroupID": "22",
+    "EventActGroupID": "20",
     "NameID": "SYS_MG01_FREE_EV05_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
@@ -3499,7 +3503,7 @@
   {
     "ID": "278",
     "EventGroupID": "101",
-    "EventActGroupID": "22",
+    "EventActGroupID": "20",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
@@ -3507,12 +3511,12 @@
     "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
     "MoveEventID": "279",
-    "JoinCharacterID": "2000091"
+    "JoinCharacterID": "2000092"
   },
   {
     "ID": "279",
     "EventGroupID": "101",
-    "EventActGroupID": "22",
+    "EventActGroupID": "20",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
@@ -3523,7 +3527,7 @@
   {
     "ID": "280",
     "EventGroupID": "101",
-    "EventActGroupID": "23",
+    "EventActGroupID": "21",
     "NameID": "SYS_MG01_FREE_EV05_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
@@ -3535,7 +3539,7 @@
   {
     "ID": "281",
     "EventGroupID": "101",
-    "EventActGroupID": "23",
+    "EventActGroupID": "21",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
@@ -3543,12 +3547,12 @@
     "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
     "MoveEventID": "282",
-    "JoinCharacterID": "2000063"
+    "JoinCharacterID": "2000109"
   },
   {
     "ID": "282",
     "EventGroupID": "101",
-    "EventActGroupID": "23",
+    "EventActGroupID": "21",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
@@ -3559,7 +3563,7 @@
   {
     "ID": "283",
     "EventGroupID": "101",
-    "EventActGroupID": "24",
+    "EventActGroupID": "22",
     "NameID": "SYS_MG01_FREE_EV05_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
@@ -3571,7 +3575,7 @@
   {
     "ID": "284",
     "EventGroupID": "101",
-    "EventActGroupID": "24",
+    "EventActGroupID": "22",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
@@ -3579,10 +3583,82 @@
     "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
     "MoveEventID": "285",
-    "JoinCharacterID": "2000084"
+    "JoinCharacterID": "2000091"
   },
   {
     "ID": "285",
+    "EventGroupID": "101",
+    "EventActGroupID": "22",
+    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV05_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "286",
+    "EventGroupID": "101",
+    "EventActGroupID": "23",
+    "NameID": "SYS_MG01_FREE_EV05_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "287"
+  },
+  {
+    "ID": "287",
+    "EventGroupID": "101",
+    "EventActGroupID": "23",
+    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "288",
+    "JoinCharacterID": "2000063"
+  },
+  {
+    "ID": "288",
+    "EventGroupID": "101",
+    "EventActGroupID": "23",
+    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV05_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "289",
+    "EventGroupID": "101",
+    "EventActGroupID": "24",
+    "NameID": "SYS_MG01_FREE_EV05_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "290"
+  },
+  {
+    "ID": "290",
+    "EventGroupID": "101",
+    "EventActGroupID": "24",
+    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "291",
+    "JoinCharacterID": "2000084"
+  },
+  {
+    "ID": "291",
     "EventGroupID": "101",
     "EventActGroupID": "24",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
@@ -3593,7 +3669,7 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "286",
+    "ID": "292",
     "EventGroupID": "201",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV01_NAME_01",
@@ -3602,10 +3678,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01,SYS_MG01_FREE_EV01_SELECT_02,SYS_MG01_FREE_EV01_SELECT_03",
     "EventType": "MGET_START",
-    "MoveEventID": "287,288,289"
+    "MoveEventID": "293,294,295"
   },
   {
-    "ID": "287",
+    "ID": "293",
     "EventGroupID": "201",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
@@ -3614,11 +3690,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "290",
+    "MoveEventID": "296",
     "JoinCharacterID": "2000055"
   },
   {
-    "ID": "288",
+    "ID": "294",
     "EventGroupID": "201",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
@@ -3627,11 +3703,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_02_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "291",
+    "MoveEventID": "297",
     "JoinCharacterID": "2000103"
   },
   {
-    "ID": "289",
+    "ID": "295",
     "EventGroupID": "201",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
@@ -3640,11 +3716,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_03_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "292",
+    "MoveEventID": "298",
     "JoinCharacterID": "2000098"
   },
   {
-    "ID": "290",
+    "ID": "296",
     "EventGroupID": "201",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
@@ -3655,7 +3731,7 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "291",
+    "ID": "297",
     "EventGroupID": "201",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
@@ -3666,7 +3742,7 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "292",
+    "ID": "298",
     "EventGroupID": "201",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
@@ -3674,147 +3750,63 @@
     "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_03_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_03_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "293",
-    "EventGroupID": "201",
-    "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV01_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01,SYS_MG01_FREE_EV01_SELECT_02,SYS_MG01_FREE_EV01_SELECT_03",
-    "EventType": "MGET_START",
-    "MoveEventID": "294,295,296"
-  },
-  {
-    "ID": "294",
-    "EventGroupID": "201",
-    "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "297",
-    "JoinCharacterID": "2000085"
-  },
-  {
-    "ID": "295",
-    "EventGroupID": "201",
-    "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_02_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "298",
-    "JoinCharacterID": "2000094"
-  },
-  {
-    "ID": "296",
-    "EventGroupID": "201",
-    "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_03_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_03_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "299",
-    "JoinCharacterID": "2000108"
-  },
-  {
-    "ID": "297",
-    "EventGroupID": "201",
-    "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "298",
-    "EventGroupID": "201",
-    "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_02_DESC_02",
     "EventType": "MGET_END"
   },
   {
     "ID": "299",
     "EventGroupID": "201",
     "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_03_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_03_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "300",
-    "EventGroupID": "201",
-    "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV01_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01,SYS_MG01_FREE_EV01_SELECT_02,SYS_MG01_FREE_EV01_SELECT_03",
     "EventType": "MGET_START",
-    "MoveEventID": "301,302,303"
+    "MoveEventID": "300,301,302"
   },
   {
-    "ID": "301",
+    "ID": "300",
     "EventGroupID": "201",
-    "EventActGroupID": "3",
+    "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "304",
-    "JoinCharacterID": "2000073"
+    "MoveEventID": "303",
+    "JoinCharacterID": "2000085"
   },
   {
-    "ID": "302",
+    "ID": "301",
     "EventGroupID": "201",
-    "EventActGroupID": "3",
+    "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_02_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_02_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "305",
-    "JoinCharacterID": "2000088"
+    "MoveEventID": "304",
+    "JoinCharacterID": "2000094"
   },
   {
-    "ID": "303",
+    "ID": "302",
     "EventGroupID": "201",
-    "EventActGroupID": "3",
+    "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_03_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_03_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "306",
-    "JoinCharacterID": "2000074"
+    "MoveEventID": "305",
+    "JoinCharacterID": "2000108"
   },
   {
-    "ID": "304",
+    "ID": "303",
     "EventGroupID": "201",
-    "EventActGroupID": "3",
+    "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_01_DESC_01",
@@ -3823,82 +3815,82 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "305",
+    "ID": "304",
     "EventGroupID": "201",
-    "EventActGroupID": "3",
+    "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_02_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "305",
+    "EventGroupID": "201",
+    "EventActGroupID": "2",
+    "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_03_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_03_DESC_02",
     "EventType": "MGET_END"
   },
   {
     "ID": "306",
     "EventGroupID": "201",
     "EventActGroupID": "3",
-    "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_03_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_03_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "307",
-    "EventGroupID": "201",
-    "EventActGroupID": "4",
     "NameID": "SYS_MG01_FREE_EV01_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01,SYS_MG01_FREE_EV01_SELECT_02,SYS_MG01_FREE_EV01_SELECT_03",
     "EventType": "MGET_START",
-    "MoveEventID": "308,309,310"
+    "MoveEventID": "307,308,309"
   },
   {
-    "ID": "308",
+    "ID": "307",
     "EventGroupID": "201",
-    "EventActGroupID": "4",
+    "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "311",
-    "JoinCharacterID": "2000099"
+    "MoveEventID": "310",
+    "JoinCharacterID": "2000073"
   },
   {
-    "ID": "309",
+    "ID": "308",
     "EventGroupID": "201",
-    "EventActGroupID": "4",
+    "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_02_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_02_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "312",
-    "JoinCharacterID": "2000077"
+    "MoveEventID": "311",
+    "JoinCharacterID": "2000088"
   },
   {
-    "ID": "310",
+    "ID": "309",
     "EventGroupID": "201",
-    "EventActGroupID": "4",
+    "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_03_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_03_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "313",
-    "JoinCharacterID": "2000054"
+    "MoveEventID": "312",
+    "JoinCharacterID": "2000074"
   },
   {
-    "ID": "311",
+    "ID": "310",
     "EventGroupID": "201",
-    "EventActGroupID": "4",
+    "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_01_DESC_01",
@@ -3907,20 +3899,104 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "312",
+    "ID": "311",
     "EventGroupID": "201",
-    "EventActGroupID": "4",
+    "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_02_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "312",
+    "EventGroupID": "201",
+    "EventActGroupID": "3",
+    "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_03_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_03_DESC_02",
     "EventType": "MGET_END"
   },
   {
     "ID": "313",
     "EventGroupID": "201",
     "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV01_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01,SYS_MG01_FREE_EV01_SELECT_02,SYS_MG01_FREE_EV01_SELECT_03",
+    "EventType": "MGET_START",
+    "MoveEventID": "314,315,316"
+  },
+  {
+    "ID": "314",
+    "EventGroupID": "201",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "317",
+    "JoinCharacterID": "2000099"
+  },
+  {
+    "ID": "315",
+    "EventGroupID": "201",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_02_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "318",
+    "JoinCharacterID": "2000077"
+  },
+  {
+    "ID": "316",
+    "EventGroupID": "201",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV01_SELECT_03_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_03_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "319",
+    "JoinCharacterID": "2000054"
+  },
+  {
+    "ID": "317",
+    "EventGroupID": "201",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "318",
+    "EventGroupID": "201",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV01_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "319",
+    "EventGroupID": "201",
+    "EventActGroupID": "4",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV01_RESULT_03_DESC_01",
@@ -3929,7 +4005,7 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "314",
+    "ID": "320",
     "EventGroupID": "201",
     "EventActGroupID": "5",
     "NameID": "SYS_MG01_FREE_EV01_NAME_01",
@@ -3938,10 +4014,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01,SYS_MG01_FREE_EV01_SELECT_02,SYS_MG01_FREE_EV01_SELECT_03",
     "EventType": "MGET_START",
-    "MoveEventID": "315,316,317"
+    "MoveEventID": "321,322,323"
   },
   {
-    "ID": "315",
+    "ID": "321",
     "EventGroupID": "201",
     "EventActGroupID": "5",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
@@ -3950,11 +4026,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "318",
+    "MoveEventID": "324",
     "JoinCharacterID": "2000062"
   },
   {
-    "ID": "316",
+    "ID": "322",
     "EventGroupID": "201",
     "EventActGroupID": "5",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
@@ -3963,11 +4039,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_02_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "319",
+    "MoveEventID": "325",
     "JoinCharacterID": "2000061"
   },
   {
-    "ID": "317",
+    "ID": "323",
     "EventGroupID": "201",
     "EventActGroupID": "5",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
@@ -3976,11 +4052,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV01_SELECT_03_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "320",
+    "MoveEventID": "326",
     "JoinCharacterID": "2000058"
   },
   {
-    "ID": "318",
+    "ID": "324",
     "EventGroupID": "201",
     "EventActGroupID": "5",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_01",
@@ -3991,7 +4067,7 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "319",
+    "ID": "325",
     "EventGroupID": "201",
     "EventActGroupID": "5",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_02",
@@ -4002,7 +4078,7 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "320",
+    "ID": "326",
     "EventGroupID": "201",
     "EventActGroupID": "5",
     "NameID": "SYS_MG01_FREE_EV01_SELECT_03",
@@ -4013,248 +4089,248 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "321",
-    "EventGroupID": "201",
-    "EventActGroupID": "7",
-    "NameID": "SYS_MG01_FREE_EV04_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV04_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01,SYS_MG01_FREE_EV04_SELECT_02",
-    "EventType": "MGET_START",
-    "MoveEventID": "322,323"
-  },
-  {
-    "ID": "322",
-    "EventGroupID": "201",
-    "EventActGroupID": "7",
-    "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "324",
-    "JoinCharacterID": "2000093"
-  },
-  {
-    "ID": "323",
-    "EventGroupID": "201",
-    "EventActGroupID": "7",
-    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_02_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "325",
-    "JoinCharacterID": "2000069"
-  },
-  {
-    "ID": "324",
-    "EventGroupID": "201",
-    "EventActGroupID": "7",
-    "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "325",
-    "EventGroupID": "201",
-    "EventActGroupID": "7",
-    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_02_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "326",
-    "EventGroupID": "201",
-    "EventActGroupID": "8",
-    "NameID": "SYS_MG01_FREE_EV04_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV04_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01,SYS_MG01_FREE_EV04_SELECT_02",
-    "EventType": "MGET_START",
-    "MoveEventID": "327,328"
-  },
-  {
     "ID": "327",
     "EventGroupID": "201",
-    "EventActGroupID": "8",
-    "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "329",
-    "JoinCharacterID": "2000052"
+    "EventActGroupID": "7",
+    "NameID": "SYS_MG01_FREE_EV04_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV04_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01,SYS_MG01_FREE_EV04_SELECT_02",
+    "EventType": "MGET_START",
+    "MoveEventID": "328,329"
   },
   {
     "ID": "328",
     "EventGroupID": "201",
-    "EventActGroupID": "8",
+    "EventActGroupID": "7",
+    "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "330",
+    "JoinCharacterID": "2000093"
+  },
+  {
+    "ID": "329",
+    "EventGroupID": "201",
+    "EventActGroupID": "7",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_02_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_02_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "330",
-    "JoinCharacterID": "2000068"
+    "MoveEventID": "331",
+    "JoinCharacterID": "2000069"
   },
   {
-    "ID": "329",
+    "ID": "330",
     "EventGroupID": "201",
-    "EventActGroupID": "8",
+    "EventActGroupID": "7",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "330",
-    "EventGroupID": "201",
-    "EventActGroupID": "8",
-    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_02_DESC_02",
     "EventType": "MGET_END"
   },
   {
     "ID": "331",
     "EventGroupID": "201",
-    "EventActGroupID": "9",
+    "EventActGroupID": "7",
+    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "332",
+    "EventGroupID": "201",
+    "EventActGroupID": "8",
     "NameID": "SYS_MG01_FREE_EV04_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV04_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01,SYS_MG01_FREE_EV04_SELECT_02",
     "EventType": "MGET_START",
-    "MoveEventID": "332,333"
+    "MoveEventID": "333,334"
   },
   {
-    "ID": "332",
+    "ID": "333",
     "EventGroupID": "201",
-    "EventActGroupID": "9",
+    "EventActGroupID": "8",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "334",
-    "JoinCharacterID": "2000078"
+    "MoveEventID": "335",
+    "JoinCharacterID": "2000052"
   },
   {
-    "ID": "333",
+    "ID": "334",
     "EventGroupID": "201",
-    "EventActGroupID": "9",
+    "EventActGroupID": "8",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_02_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_02_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "335",
-    "JoinCharacterID": "2000079"
+    "MoveEventID": "336",
+    "JoinCharacterID": "2000068"
   },
   {
-    "ID": "334",
+    "ID": "335",
     "EventGroupID": "201",
-    "EventActGroupID": "9",
+    "EventActGroupID": "8",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "335",
-    "EventGroupID": "201",
-    "EventActGroupID": "9",
-    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_02_DESC_02",
     "EventType": "MGET_END"
   },
   {
     "ID": "336",
     "EventGroupID": "201",
-    "EventActGroupID": "10",
+    "EventActGroupID": "8",
+    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "337",
+    "EventGroupID": "201",
+    "EventActGroupID": "9",
     "NameID": "SYS_MG01_FREE_EV04_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV04_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01,SYS_MG01_FREE_EV04_SELECT_02",
     "EventType": "MGET_START",
-    "MoveEventID": "337,338"
+    "MoveEventID": "338,339"
   },
   {
-    "ID": "337",
+    "ID": "338",
     "EventGroupID": "201",
-    "EventActGroupID": "10",
+    "EventActGroupID": "9",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "339",
-    "JoinCharacterID": "2000056"
+    "MoveEventID": "340",
+    "JoinCharacterID": "2000078"
   },
   {
-    "ID": "338",
+    "ID": "339",
     "EventGroupID": "201",
-    "EventActGroupID": "10",
+    "EventActGroupID": "9",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_02_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_02_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "340",
-    "JoinCharacterID": "2000065"
+    "MoveEventID": "341",
+    "JoinCharacterID": "2000079"
   },
   {
-    "ID": "339",
+    "ID": "340",
     "EventGroupID": "201",
-    "EventActGroupID": "10",
+    "EventActGroupID": "9",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "340",
-    "EventGroupID": "201",
-    "EventActGroupID": "10",
-    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_02_DESC_02",
     "EventType": "MGET_END"
   },
   {
     "ID": "341",
     "EventGroupID": "201",
+    "EventActGroupID": "9",
+    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "342",
+    "EventGroupID": "201",
+    "EventActGroupID": "10",
+    "NameID": "SYS_MG01_FREE_EV04_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV04_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01,SYS_MG01_FREE_EV04_SELECT_02",
+    "EventType": "MGET_START",
+    "MoveEventID": "343,344"
+  },
+  {
+    "ID": "343",
+    "EventGroupID": "201",
+    "EventActGroupID": "10",
+    "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "345",
+    "JoinCharacterID": "2000056"
+  },
+  {
+    "ID": "344",
+    "EventGroupID": "201",
+    "EventActGroupID": "10",
+    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV04_SELECT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_02_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "346",
+    "JoinCharacterID": "2000065"
+  },
+  {
+    "ID": "345",
+    "EventGroupID": "201",
+    "EventActGroupID": "10",
+    "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "346",
+    "EventGroupID": "201",
+    "EventActGroupID": "10",
+    "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV04_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV04_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "347",
+    "EventGroupID": "201",
     "EventActGroupID": "11",
     "NameID": "SYS_MG01_FREE_EV04_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
@@ -4262,10 +4338,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01,SYS_MG01_FREE_EV04_SELECT_02",
     "EventType": "MGET_START",
-    "MoveEventID": "342,343"
+    "MoveEventID": "348,349"
   },
   {
-    "ID": "342",
+    "ID": "348",
     "EventGroupID": "201",
     "EventActGroupID": "11",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
@@ -4274,11 +4350,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "344",
+    "MoveEventID": "350",
     "JoinCharacterID": "2000060"
   },
   {
-    "ID": "343",
+    "ID": "349",
     "EventGroupID": "201",
     "EventActGroupID": "11",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
@@ -4287,11 +4363,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV04_SELECT_02_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "345",
+    "MoveEventID": "351",
     "JoinCharacterID": "2000107"
   },
   {
-    "ID": "344",
+    "ID": "350",
     "EventGroupID": "201",
     "EventActGroupID": "11",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_01",
@@ -4302,7 +4378,7 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "345",
+    "ID": "351",
     "EventGroupID": "201",
     "EventActGroupID": "11",
     "NameID": "SYS_MG01_FREE_EV04_SELECT_02",
@@ -4313,81 +4389,9 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "346",
-    "EventGroupID": "201",
-    "EventActGroupID": "12",
-    "NameID": "SYS_MG01_FREE_EV05_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventType": "MGET_START",
-    "MoveEventID": "347"
-  },
-  {
-    "ID": "347",
-    "EventGroupID": "201",
-    "EventActGroupID": "12",
-    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "348",
-    "JoinCharacterID": "2000092"
-  },
-  {
-    "ID": "348",
-    "EventGroupID": "201",
-    "EventActGroupID": "12",
-    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV05_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "349",
-    "EventGroupID": "201",
-    "EventActGroupID": "13",
-    "NameID": "SYS_MG01_FREE_EV05_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventType": "MGET_START",
-    "MoveEventID": "350"
-  },
-  {
-    "ID": "350",
-    "EventGroupID": "201",
-    "EventActGroupID": "13",
-    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_JOIN",
-    "MoveEventID": "351",
-    "JoinCharacterID": "2000109"
-  },
-  {
-    "ID": "351",
-    "EventGroupID": "201",
-    "EventActGroupID": "13",
-    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV05_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
     "ID": "352",
     "EventGroupID": "201",
-    "EventActGroupID": "14",
+    "EventActGroupID": "12",
     "NameID": "SYS_MG01_FREE_EV05_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
@@ -4399,7 +4403,7 @@
   {
     "ID": "353",
     "EventGroupID": "201",
-    "EventActGroupID": "14",
+    "EventActGroupID": "12",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
@@ -4407,12 +4411,12 @@
     "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
     "MoveEventID": "354",
-    "JoinCharacterID": "2000091"
+    "JoinCharacterID": "2000092"
   },
   {
     "ID": "354",
     "EventGroupID": "201",
-    "EventActGroupID": "14",
+    "EventActGroupID": "12",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
@@ -4423,7 +4427,7 @@
   {
     "ID": "355",
     "EventGroupID": "201",
-    "EventActGroupID": "15",
+    "EventActGroupID": "13",
     "NameID": "SYS_MG01_FREE_EV05_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
@@ -4435,7 +4439,7 @@
   {
     "ID": "356",
     "EventGroupID": "201",
-    "EventActGroupID": "15",
+    "EventActGroupID": "13",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
@@ -4443,12 +4447,12 @@
     "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
     "MoveEventID": "357",
-    "JoinCharacterID": "2000063"
+    "JoinCharacterID": "2000109"
   },
   {
     "ID": "357",
     "EventGroupID": "201",
-    "EventActGroupID": "15",
+    "EventActGroupID": "13",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
@@ -4459,7 +4463,7 @@
   {
     "ID": "358",
     "EventGroupID": "201",
-    "EventActGroupID": "16",
+    "EventActGroupID": "14",
     "NameID": "SYS_MG01_FREE_EV05_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
@@ -4471,7 +4475,7 @@
   {
     "ID": "359",
     "EventGroupID": "201",
-    "EventActGroupID": "16",
+    "EventActGroupID": "14",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
@@ -4479,10 +4483,82 @@
     "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_JOIN",
     "MoveEventID": "360",
-    "JoinCharacterID": "2000084"
+    "JoinCharacterID": "2000091"
   },
   {
     "ID": "360",
+    "EventGroupID": "201",
+    "EventActGroupID": "14",
+    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV05_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "361",
+    "EventGroupID": "201",
+    "EventActGroupID": "15",
+    "NameID": "SYS_MG01_FREE_EV05_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "362"
+  },
+  {
+    "ID": "362",
+    "EventGroupID": "201",
+    "EventActGroupID": "15",
+    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "363",
+    "JoinCharacterID": "2000063"
+  },
+  {
+    "ID": "363",
+    "EventGroupID": "201",
+    "EventActGroupID": "15",
+    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV05_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV05_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "364",
+    "EventGroupID": "201",
+    "EventActGroupID": "16",
+    "NameID": "SYS_MG01_FREE_EV05_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV05_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "365"
+  },
+  {
+    "ID": "365",
+    "EventGroupID": "201",
+    "EventActGroupID": "16",
+    "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV05_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV05_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_JOIN",
+    "MoveEventID": "366",
+    "JoinCharacterID": "2000084"
+  },
+  {
+    "ID": "366",
     "EventGroupID": "201",
     "EventActGroupID": "16",
     "NameID": "SYS_MG01_FREE_EV05_SELECT_01",
@@ -4493,82 +4569,8 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "361",
-    "EventGroupID": "301",
-    "EventActGroupID": "1",
-    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventType": "MGET_START",
-    "MoveEventID": "362"
-  },
-  {
-    "ID": "362",
-    "EventGroupID": "301",
-    "EventActGroupID": "1",
-    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_LEVELUP",
-    "MoveEventID": "363",
-    "CharacterLevelUp": "10",
-    "SelectCharacterCount": "4"
-  },
-  {
-    "ID": "363",
-    "EventGroupID": "301",
-    "EventActGroupID": "1",
-    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "364",
-    "EventGroupID": "302",
-    "EventActGroupID": "1",
-    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventType": "MGET_START",
-    "MoveEventID": "365"
-  },
-  {
-    "ID": "365",
-    "EventGroupID": "302",
-    "EventActGroupID": "1",
-    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_LEVELUP",
-    "MoveEventID": "366",
-    "CharacterLevelUp": "20",
-    "SelectCharacterCount": "3"
-  },
-  {
-    "ID": "366",
-    "EventGroupID": "302",
-    "EventActGroupID": "1",
-    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
     "ID": "367",
-    "EventGroupID": "303",
+    "EventGroupID": "301",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
@@ -4580,7 +4582,7 @@
   },
   {
     "ID": "368",
-    "EventGroupID": "303",
+    "EventGroupID": "301",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
@@ -4588,36 +4590,13 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_LEVELUP",
-    "MoveEventID": "369",
-    "CharacterLevelUp": "40",
-    "SelectCharacterCount": "2"
+    "MoveEventID": "370",
+    "CharacterLevelUp": "10",
+    "SelectCharacterCount": "4"
   },
   {
     "ID": "369",
-    "EventGroupID": "303",
-    "EventActGroupID": "1",
-    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "370",
-    "EventGroupID": "304",
-    "EventActGroupID": "1",
-    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventType": "MGET_START",
-    "MoveEventID": "371"
-  },
-  {
-    "ID": "371",
-    "EventGroupID": "304",
+    "EventGroupID": "301",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
@@ -4625,13 +4604,13 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_LEVELUP",
-    "MoveEventID": "372",
-    "CharacterLevelUp": "60",
-    "SelectCharacterCount": "1"
+    "MoveEventID": "370",
+    "CharacterLevelUp": "10",
+    "SelectCharacterCount": "4"
   },
   {
-    "ID": "372",
-    "EventGroupID": "304",
+    "ID": "370",
+    "EventGroupID": "301",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
@@ -4641,8 +4620,19 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "373",
-    "EventGroupID": "305",
+    "ID": "371",
+    "EventGroupID": "301",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "372",
+    "EventGroupID": "302",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
@@ -4650,11 +4640,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventType": "MGET_START",
-    "MoveEventID": "374"
+    "MoveEventID": "373"
   },
   {
-    "ID": "374",
-    "EventGroupID": "305",
+    "ID": "373",
+    "EventGroupID": "302",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
@@ -4663,12 +4653,26 @@
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_LEVELUP",
     "MoveEventID": "375",
-    "CharacterLevelUp": "90",
-    "SelectCharacterCount": "1"
+    "CharacterLevelUp": "20",
+    "SelectCharacterCount": "3"
+  },
+  {
+    "ID": "374",
+    "EventGroupID": "302",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "375",
+    "CharacterLevelUp": "20",
+    "SelectCharacterCount": "3"
   },
   {
     "ID": "375",
-    "EventGroupID": "305",
+    "EventGroupID": "302",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
@@ -4679,7 +4683,18 @@
   },
   {
     "ID": "376",
-    "EventGroupID": "306",
+    "EventGroupID": "302",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "377",
+    "EventGroupID": "303",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
@@ -4687,11 +4702,11 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventType": "MGET_START",
-    "MoveEventID": "377"
+    "MoveEventID": "378"
   },
   {
-    "ID": "377",
-    "EventGroupID": "306",
+    "ID": "378",
+    "EventGroupID": "303",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
@@ -4699,13 +4714,27 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_LEVELUP",
-    "MoveEventID": "378",
-    "CharacterLevelUp": "10",
-    "SelectCharacterCount": "4"
+    "MoveEventID": "380",
+    "CharacterLevelUp": "40",
+    "SelectCharacterCount": "2"
   },
   {
-    "ID": "378",
-    "EventGroupID": "306",
+    "ID": "379",
+    "EventGroupID": "303",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "380",
+    "CharacterLevelUp": "40",
+    "SelectCharacterCount": "2"
+  },
+  {
+    "ID": "380",
+    "EventGroupID": "303",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
@@ -4715,46 +4744,20 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "379",
-    "EventGroupID": "306",
-    "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventType": "MGET_START",
-    "MoveEventID": "380"
-  },
-  {
-    "ID": "380",
-    "EventGroupID": "306",
-    "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_User",
-    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
-    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
-    "EventType": "MGET_CHARACTER_LEVELUP",
-    "MoveEventID": "381",
-    "CharacterLevelUp": "15",
-    "SelectCharacterCount": "4"
-  },
-  {
     "ID": "381",
-    "EventGroupID": "306",
-    "EventActGroupID": "2",
-    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventGroupID": "303",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
     "EventType": "MGET_END"
   },
   {
     "ID": "382",
-    "EventGroupID": "306",
-    "EventActGroupID": "3",
+    "EventGroupID": "304",
+    "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
@@ -4765,59 +4768,36 @@
   },
   {
     "ID": "383",
-    "EventGroupID": "306",
-    "EventActGroupID": "3",
+    "EventGroupID": "304",
+    "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_LEVELUP",
-    "MoveEventID": "384",
-    "CharacterLevelUp": "25",
-    "SelectCharacterCount": "3"
+    "MoveEventID": "385",
+    "CharacterLevelUp": "60",
+    "SelectCharacterCount": "1"
   },
   {
     "ID": "384",
-    "EventGroupID": "306",
-    "EventActGroupID": "3",
-    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
-    "EventType": "MGET_END"
-  },
-  {
-    "ID": "385",
-    "EventGroupID": "306",
-    "EventActGroupID": "4",
-    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
-    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
-    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
-    "EventFaceIcon2": "IG_MonadGate_Event_User",
-    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
-    "EventType": "MGET_START",
-    "MoveEventID": "386"
-  },
-  {
-    "ID": "386",
-    "EventGroupID": "306",
-    "EventActGroupID": "4",
+    "EventGroupID": "304",
+    "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_LEVELUP",
-    "MoveEventID": "387",
-    "CharacterLevelUp": "30",
-    "SelectCharacterCount": "2"
+    "MoveEventID": "385",
+    "CharacterLevelUp": "60",
+    "SelectCharacterCount": "1"
   },
   {
-    "ID": "387",
-    "EventGroupID": "306",
-    "EventActGroupID": "4",
+    "ID": "385",
+    "EventGroupID": "304",
+    "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
@@ -4826,21 +4806,32 @@
     "EventType": "MGET_END"
   },
   {
-    "ID": "388",
-    "EventGroupID": "306",
-    "EventActGroupID": "5",
+    "ID": "386",
+    "EventGroupID": "304",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "387",
+    "EventGroupID": "305",
+    "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_NAME_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventType": "MGET_START",
-    "MoveEventID": "389"
+    "MoveEventID": "388"
   },
   {
-    "ID": "389",
-    "EventGroupID": "306",
-    "EventActGroupID": "5",
+    "ID": "388",
+    "EventGroupID": "305",
+    "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_User",
     "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
@@ -4848,13 +4839,27 @@
     "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
     "EventType": "MGET_CHARACTER_LEVELUP",
     "MoveEventID": "390",
-    "CharacterLevelUp": "40",
+    "CharacterLevelUp": "90",
+    "SelectCharacterCount": "1"
+  },
+  {
+    "ID": "389",
+    "EventGroupID": "305",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "390",
+    "CharacterLevelUp": "90",
     "SelectCharacterCount": "1"
   },
   {
     "ID": "390",
-    "EventGroupID": "306",
-    "EventActGroupID": "5",
+    "EventGroupID": "305",
+    "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
     "EventFaceIcon1": "IG_MonadGate_Event_2000009",
     "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
@@ -4864,6 +4869,387 @@
   },
   {
     "ID": "391",
+    "EventGroupID": "305",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "392",
+    "EventGroupID": "306",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "393"
+  },
+  {
+    "ID": "393",
+    "EventGroupID": "306",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "394",
+    "CharacterLevelUp": "10",
+    "SelectCharacterCount": "4"
+  },
+  {
+    "ID": "394",
+    "EventGroupID": "306",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "395",
+    "EventGroupID": "306",
+    "EventActGroupID": "2",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "396"
+  },
+  {
+    "ID": "396",
+    "EventGroupID": "306",
+    "EventActGroupID": "2",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "397",
+    "CharacterLevelUp": "15",
+    "SelectCharacterCount": "4"
+  },
+  {
+    "ID": "397",
+    "EventGroupID": "306",
+    "EventActGroupID": "2",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "398",
+    "EventGroupID": "306",
+    "EventActGroupID": "3",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "399"
+  },
+  {
+    "ID": "399",
+    "EventGroupID": "306",
+    "EventActGroupID": "3",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "400",
+    "CharacterLevelUp": "25",
+    "SelectCharacterCount": "3"
+  },
+  {
+    "ID": "400",
+    "EventGroupID": "306",
+    "EventActGroupID": "3",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "401",
+    "EventGroupID": "306",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "402"
+  },
+  {
+    "ID": "402",
+    "EventGroupID": "306",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "403",
+    "CharacterLevelUp": "30",
+    "SelectCharacterCount": "2"
+  },
+  {
+    "ID": "403",
+    "EventGroupID": "306",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "404",
+    "EventGroupID": "306",
+    "EventActGroupID": "5",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventType": "MGET_START",
+    "MoveEventID": "405"
+  },
+  {
+    "ID": "405",
+    "EventGroupID": "306",
+    "EventActGroupID": "5",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "406",
+    "CharacterLevelUp": "40",
+    "SelectCharacterCount": "1"
+  },
+  {
+    "ID": "406",
+    "EventGroupID": "306",
+    "EventActGroupID": "5",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_01_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "407",
+    "EventGroupID": "307",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventType": "MGET_START",
+    "MoveEventID": "408"
+  },
+  {
+    "ID": "408",
+    "EventGroupID": "307",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "409",
+    "CharacterLevelUp": "10",
+    "SelectCharacterCount": "4"
+  },
+  {
+    "ID": "409",
+    "EventGroupID": "307",
+    "EventActGroupID": "1",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "410",
+    "EventGroupID": "307",
+    "EventActGroupID": "2",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventType": "MGET_START",
+    "MoveEventID": "411"
+  },
+  {
+    "ID": "411",
+    "EventGroupID": "307",
+    "EventActGroupID": "2",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "412",
+    "CharacterLevelUp": "20",
+    "SelectCharacterCount": "4"
+  },
+  {
+    "ID": "412",
+    "EventGroupID": "307",
+    "EventActGroupID": "2",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "413",
+    "EventGroupID": "307",
+    "EventActGroupID": "3",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventType": "MGET_START",
+    "MoveEventID": "414"
+  },
+  {
+    "ID": "414",
+    "EventGroupID": "307",
+    "EventActGroupID": "3",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "415",
+    "CharacterLevelUp": "30",
+    "SelectCharacterCount": "3"
+  },
+  {
+    "ID": "415",
+    "EventGroupID": "307",
+    "EventActGroupID": "3",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "416",
+    "EventGroupID": "307",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventType": "MGET_START",
+    "MoveEventID": "417"
+  },
+  {
+    "ID": "417",
+    "EventGroupID": "307",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_01_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_01_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "418",
+    "CharacterLevelUp": "40",
+    "SelectCharacterCount": "2"
+  },
+  {
+    "ID": "418",
+    "EventGroupID": "307",
+    "EventActGroupID": "4",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "419",
+    "EventGroupID": "307",
+    "EventActGroupID": "5",
+    "NameID": "SYS_MG01_FREE_EV02_NAME_01",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventType": "MGET_START",
+    "MoveEventID": "420"
+  },
+  {
+    "ID": "420",
+    "EventGroupID": "307",
+    "EventActGroupID": "5",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_User",
+    "EventDescID1": "SYS_MG01_FREE_EV02_SELECT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_2000009",
+    "EventDescID2": "SYS_MG01_FREE_EV02_SELECT_02_DESC_02",
+    "EventType": "MGET_CHARACTER_LEVELUP",
+    "MoveEventID": "421",
+    "CharacterLevelUp": "50",
+    "SelectCharacterCount": "1"
+  },
+  {
+    "ID": "421",
+    "EventGroupID": "307",
+    "EventActGroupID": "5",
+    "NameID": "SYS_MG01_FREE_EV02_SELECT_02",
+    "EventFaceIcon1": "IG_MonadGate_Event_2000009",
+    "EventDescID1": "SYS_MG01_FREE_EV02_RESULT_02_DESC_01",
+    "EventFaceIcon2": "IG_MonadGate_Event_User",
+    "EventDescID2": "SYS_MG01_FREE_EV02_RESULT_02_DESC_02",
+    "EventType": "MGET_END"
+  },
+  {
+    "ID": "422",
     "EventGroupID": "308",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV03_NAME_01",
@@ -4872,10 +5258,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01,SYS_MG01_FREE_EV03_SELECT_02",
     "EventType": "MGET_START",
-    "MoveEventID": "392,393"
+    "MoveEventID": "423,424"
   },
   {
-    "ID": "392",
+    "ID": "423",
     "EventGroupID": "308",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -4884,10 +5270,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "394"
+    "MoveEventID": "425"
   },
   {
-    "ID": "393",
+    "ID": "424",
     "EventGroupID": "308",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -4896,10 +5282,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_02_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "395"
+    "MoveEventID": "426"
   },
   {
-    "ID": "394",
+    "ID": "425",
     "EventGroupID": "308",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -4911,7 +5297,7 @@
     "ThemeRuleGaugeValue": "-200"
   },
   {
-    "ID": "395",
+    "ID": "426",
     "EventGroupID": "308",
     "EventActGroupID": "1",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -4923,7 +5309,7 @@
     "ThemeRuleGaugeValue": "100"
   },
   {
-    "ID": "396",
+    "ID": "427",
     "EventGroupID": "308",
     "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV03_NAME_01",
@@ -4932,10 +5318,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01,SYS_MG01_FREE_EV03_SELECT_02",
     "EventType": "MGET_START",
-    "MoveEventID": "397,398"
+    "MoveEventID": "428,429"
   },
   {
-    "ID": "397",
+    "ID": "428",
     "EventGroupID": "308",
     "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -4944,10 +5330,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "399"
+    "MoveEventID": "430"
   },
   {
-    "ID": "398",
+    "ID": "429",
     "EventGroupID": "308",
     "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -4956,10 +5342,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_02_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "400"
+    "MoveEventID": "431"
   },
   {
-    "ID": "399",
+    "ID": "430",
     "EventGroupID": "308",
     "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -4971,7 +5357,7 @@
     "ThemeRuleGaugeValue": "-300"
   },
   {
-    "ID": "400",
+    "ID": "431",
     "EventGroupID": "308",
     "EventActGroupID": "2",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -4983,7 +5369,7 @@
     "ThemeRuleGaugeValue": "200"
   },
   {
-    "ID": "401",
+    "ID": "432",
     "EventGroupID": "308",
     "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV03_NAME_01",
@@ -4992,10 +5378,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_User",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01,SYS_MG01_FREE_EV03_SELECT_02",
     "EventType": "MGET_START",
-    "MoveEventID": "402,403"
+    "MoveEventID": "433,434"
   },
   {
-    "ID": "402",
+    "ID": "433",
     "EventGroupID": "308",
     "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -5004,10 +5390,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_01_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "404"
+    "MoveEventID": "435"
   },
   {
-    "ID": "403",
+    "ID": "434",
     "EventGroupID": "308",
     "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",
@@ -5016,10 +5402,10 @@
     "EventFaceIcon2": "IG_MonadGate_Event_2000009",
     "EventDescID2": "SYS_MG01_FREE_EV03_SELECT_02_DESC_02",
     "EventType": "MGET_THEMERULE_GAUGE",
-    "MoveEventID": "405"
+    "MoveEventID": "436"
   },
   {
-    "ID": "404",
+    "ID": "435",
     "EventGroupID": "308",
     "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_01",
@@ -5031,7 +5417,7 @@
     "ThemeRuleGaugeValue": "-400"
   },
   {
-    "ID": "405",
+    "ID": "436",
     "EventGroupID": "308",
     "EventActGroupID": "3",
     "NameID": "SYS_MG01_FREE_EV03_SELECT_02",

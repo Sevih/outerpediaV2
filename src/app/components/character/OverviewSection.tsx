@@ -29,7 +29,7 @@ const UNIT_TYPE_ORDER = ['premium', 'limited', 'seasonal', 'collab', 'free'] as 
 export default function OverviewSection({ character, profile, tags }: Props) {
   const { lang, t } = useI18n();
   const fullname = l(character, 'Fullname', lang);
-  const { prefix, name } = splitCharacterName(character.ID, fullname, lang);
+  const { prefix, name } = splitCharacterName(fullname, lang);
   const voiceActor = l(character, 'VoiceActor', lang);
   const story = profile?.story ? lRec(profile.story, lang) : null;
 

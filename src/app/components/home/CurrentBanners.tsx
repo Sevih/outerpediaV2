@@ -47,7 +47,7 @@ export default async function CurrentBanners({ t }: Props) {
           if (!char) return null;
 
           const displayName = l(char, 'Fullname', lang);
-          const { prefix } = splitCharacterName(banner.id, displayName, lang);
+          const { prefix } = splitCharacterName(displayName, lang);
 
           return (
             <BannerWrapper key={`${banner.id}-${banner.start}`} endDate={banner.end}>

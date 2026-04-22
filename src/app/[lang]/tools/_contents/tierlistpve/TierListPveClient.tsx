@@ -122,7 +122,7 @@ export default function TierListPveClient({ characters }: Props) {
       const rank = char.rank_by_transcend?.[lvlKey] ?? char.rank;
       const role = char.role_by_transcend?.[lvlKey] as RoleType ?? char.role;
       const displayName = l(char, 'Fullname', lang);
-      const nameParts = splitCharacterName(char.ID, displayName, lang);
+      const nameParts = splitCharacterName(displayName, lang);
       const searchNames = LANGS.map(lg => l(char, 'Fullname', lg).normalize('NFKC').toLowerCase()).filter(Boolean);
       return { ...char, rank, role, displayName, prefix: nameParts.prefix, searchNames };
     }), [characters, transcendLevel, lang]);

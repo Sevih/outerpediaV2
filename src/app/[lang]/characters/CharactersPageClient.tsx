@@ -595,7 +595,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   const indexedCharacters = useMemo<IndexedCharacter[]>(() =>
     characters.map(char => {
       const displayName = l(char, 'Fullname', lang);
-      const nameParts = splitCharacterName(char.ID, displayName, lang);
+      const nameParts = splitCharacterName(displayName, lang);
       return {
         ...char,
         searchNames: getSearchableNames(char, LANGS),

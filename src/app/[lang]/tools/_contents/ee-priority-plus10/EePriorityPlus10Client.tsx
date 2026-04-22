@@ -104,7 +104,7 @@ export default function EePriorityPlus10Client({ characters }: Props) {
   const resolved = useMemo(() =>
     characters.map(char => {
       const displayName = l(char, 'Fullname', lang);
-      const nameParts = splitCharacterName(char.ID, displayName, lang);
+      const nameParts = splitCharacterName(displayName, lang);
       const searchNames = LANGS.map(lg => l(char, 'Fullname', lg).normalize('NFKC').toLowerCase()).filter(Boolean);
       return { ...char, displayName, prefix: nameParts.prefix, searchNames };
     }), [characters, lang]);

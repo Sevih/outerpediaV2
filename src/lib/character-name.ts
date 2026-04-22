@@ -3,29 +3,31 @@ import type { Lang } from '@/lib/i18n/config';
 
 type NameParts = { prefix: string; name: string } | { prefix: null; name: string };
 
-const splits = nameSplits as Record<string, Record<Lang, string>>;
+const splits = nameSplits as Record<string, Partial<Record<Exclude<Lang, 'en'>, string>>>;
 
 /**
  * Split a character's localized fullname into prefix (title) and base name.
- * Uses the official ShowNickName data from the datamine.
- * Returns { prefix, name } if the character has a displayed title, otherwise { prefix: null, name }.
+ * Scans known prefixes from name-splits.json and picks the longest match.
+ * Returns { prefix, name } if the fullname starts with a known prefix, otherwise { prefix: null, name }.
  */
-export function splitCharacterName(id: string, fullname: string, lang: Lang): NameParts {
-  const entry = splits[id];
-  if (!entry) return { prefix: null, name: fullname };
+export function splitCharacterName(fullname: string, lang: Lang): NameParts {
+  let best: { prefix: string; name: string } | null = null;
 
-  const prefix = entry[lang] || entry.en;
-  if (!prefix) return { prefix: null, name: fullname };
+  for (const [enPrefix, translations] of Object.entries(splits)) {
+    const prefix = lang === 'en' ? enPrefix : (translations[lang] || enPrefix);
 
-  // Strip prefix from fullname — handle "Prefix Name" (space) and "PrefixName" (no space, JP/ZH)
-  if (fullname.startsWith(prefix + ' ')) {
-    return { prefix, name: fullname.slice(prefix.length + 1) };
+    let name: string | null = null;
+    if (fullname.startsWith(prefix + ' ')) {
+      name = fullname.slice(prefix.length + 1);
+    } else if (fullname.startsWith(prefix)) {
+      const rest = fullname.slice(prefix.length).trim();
+      if (rest) name = rest;
+    }
+
+    if (name && (!best || prefix.length > best.prefix.length)) {
+      best = { prefix, name };
+    }
   }
-  if (fullname.startsWith(prefix)) {
-    const rest = fullname.slice(prefix.length).trim();
-    if (rest) return { prefix, name: rest };
-  }
 
-  // Fallback: can't split, return full name
-  return { prefix: null, name: fullname };
+  return best ?? { prefix: null, name: fullname };
 }

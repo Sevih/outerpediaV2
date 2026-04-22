@@ -392,7 +392,7 @@ export default function PullSimulatorClient({ characters, pool1, pool2 }: Props)
                   ?? pool1.find((c) => c.id === pull.charId))
                 : undefined;
               const charName = char ? getCharName(char, lang) : null;
-              const nameParts = charName && pull.charId ? splitCharacterName(pull.charId, charName, lang) : null;
+              const nameParts = charName && pull.charId ? splitCharacterName(charName, lang) : null;
               const textColor = pull.isFocus ? 'text-amber-300'
                 : pull.rarity === 3 ? 'text-violet-200'
                 : pull.rarity === 2 ? 'text-blue-300/80'

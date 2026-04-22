@@ -116,7 +116,7 @@ export default function TierListPvpClient({ characters }: Props) {
       .filter(char => char.rank_pvp)
       .map(char => {
         const displayName = l(char, 'Fullname', lang);
-        const nameParts = splitCharacterName(char.ID, displayName, lang);
+        const nameParts = splitCharacterName(displayName, lang);
         const searchNames = LANGS.map(lg => l(char, 'Fullname', lg).normalize('NFKC').toLowerCase()).filter(Boolean);
         return { ...char, rank: char.rank_pvp!, displayName, prefix: nameParts.prefix, searchNames };
       }), [characters, lang]);

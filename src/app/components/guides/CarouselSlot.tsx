@@ -30,7 +30,7 @@ function resolveChar(name: string, lang: Lang, nameMap: Record<string, string>, 
   const entry = indexMap[charId];
   if (!entry) return null;
   const localizedName = l(entry, 'Fullname', lang) as string;
-  const { prefix } = splitCharacterName(charId, localizedName, lang);
+  const { prefix } = splitCharacterName(localizedName, lang);
   return { charId, localizedName, prefix, slug: entry.slug, entry };
 }
 

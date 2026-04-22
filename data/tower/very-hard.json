@@ -1629,6 +1629,52 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": [
+            "BanMage"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000071",
+                "2000099",
+                "2000105",
+                "2000040",
+                "2000053"
+              ],
+              "reason": {
+                "en": "{B/BT_STAT|ST_COUNTER_RATE} in her kit.",
+                "jp": "スキルに{B/BT_STAT|ST_COUNTER_RATE}を持っています。",
+                "kr": "스킬에 {B/BT_STAT|ST_COUNTER_RATE}를 보유.",
+                "zh": "技能组中带有{B/BT_STAT|ST_COUNTER_RATE}。"
+              }
+            },
+            {
+              "names": [
+                "2000094"
+              ],
+              "reason": {
+                "en": "Inflicts {D/BT_DOT_BURN} when taking a hit.",
+                "jp": "被弾時に{D/BT_DOT_BURN}を付与します。",
+                "kr": "피격 시 {D/BT_DOT_BURN}을 부여합니다.",
+                "zh": "受击时施加{D/BT_DOT_BURN}。"
+              }
+            },
+            {
+              "names": [
+                "2000063",
+                "2000042",
+                "2000088"
+              ],
+              "reason": {
+                "en": "Will help your team to survive.",
+                "jp": "チームの生存に役立ちます。",
+                "kr": "팀의 생존에 도움이 됩니다.",
+                "zh": "有助于队伍生存。"
+              }
+            }
+          ]
         }
       ]
     },
@@ -3806,6 +3852,48 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_2Star"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000013"
+              ],
+              "reason": {
+                "en": "Validate restriction and have {D/BT_SILENCE}",
+                "jp": "制限を満たし、{D/BT_SILENCE}を持つこと",
+                "kr": "제한을 충족하고 {D/BT_SILENCE}을 보유",
+                "zh": "满足限制,并拥有{D/BT_SILENCE}"
+              }
+            },
+            {
+              "names": [
+                "2000063",
+                "2000078"
+              ],
+              "reason": {
+                "en": "{D/BT_SEALED_RESURRECTION} options.",
+                "jp": "{D/BT_SEALED_RESURRECTION}オプション。",
+                "kr": "{D/BT_SEALED_RESURRECTION} 옵션.",
+                "zh": "{D/BT_SEALED_RESURRECTION}选项。"
+              }
+            },
+            {
+              "names": [
+                "2000113",
+                "2000060"
+              ],
+              "reason": {
+                "en": "{D/BT_SILENCE} options.",
+                "jp": "{D/BT_SILENCE}オプション。",
+                "kr": "{D/BT_SILENCE} 옵션.",
+                "zh": "{D/BT_SILENCE}选项。"
+              }
+            }
+          ]
         }
       ]
     },
@@ -4165,6 +4253,64 @@
                 "jp": "その他の強力なCCオプション",
                 "kr": "기타 강력한 CC 옵션",
                 "zh": "其他强控选项"
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_Striker"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000064",
+                "2000060"
+              ],
+              "reason": {
+                "en": "{C/Ranger} with {D/BT_SEALED} or {D/BT_SILENCE}.",
+                "jp": "{D/BT_SEALED}または{D/BT_SILENCE}を持つ{C/Ranger}。",
+                "kr": "{D/BT_SEALED} 또는 {D/BT_SILENCE}을 가진 {C/Ranger}.",
+                "zh": "拥有{D/BT_SEALED}或{D/BT_SILENCE}的{C/Ranger}。"
+              }
+            },
+            {
+              "names": [
+                "2000091",
+                "2000069",
+                "2000046"
+              ],
+              "reason": {
+                "en": "100% {D/BT_STUN} options",
+                "jp": "100% {D/BT_STUN}オプション",
+                "kr": "100% {D/BT_STUN} 옵션",
+                "zh": "100% {D/BT_STUN}选项"
+              }
+            },
+            {
+              "names": [
+                "2000111",
+                "2700003",
+                "2000068",
+                "2000107",
+                "2000113"
+              ],
+              "reason": {
+                "en": "Other hard CC options",
+                "jp": "その他の強力なCCオプション",
+                "kr": "기타 강력한 CC 옵션",
+                "zh": "其他强控选项"
+              }
+            },
+            {
+              "names": [
+                "2000109"
+              ],
+              "reason": {
+                "en": "Validate restriction.",
+                "jp": "制限を満たすこと。",
+                "kr": "제한 충족.",
+                "zh": "满足限制。"
               }
             }
           ]

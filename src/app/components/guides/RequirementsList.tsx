@@ -170,7 +170,7 @@ function EntryCard({
   const localizedName = char
     ? (l(char, 'Fullname', lang as Lang) as string)
     : entry.character;
-  const nameParts = charId ? splitCharacterName(charId, localizedName, lang as Lang) : null;
+  const nameParts = charId ? splitCharacterName(localizedName, lang as Lang) : null;
   const entryNotes = resolveNotes(entry, lang);
 
   if (layout === 'mobile') {
