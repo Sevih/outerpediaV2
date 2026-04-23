@@ -60,7 +60,6 @@ export const data: TimegateData = {
             name: 'Basic Skill Manual',
             sources: [
                 { sourceKey: SK.IRREGULAR_INFILTRATION_FLOOR_3, monthly: 28 },
-                { sourceKey: SK.SURVEY_HUB, monthly: 40 },
                 { sourceKey: SK.GUILD_SHOP, weekly: 3 },
                 { sourceKey: SK.RESOURCE_SHOP, weekly: 5 },
                 { sourceKey: SK.ARENA_SHOP, weekly: 5 },
@@ -72,7 +71,6 @@ export const data: TimegateData = {
             name: 'Intermediate Skill Manual',
             sources: [
                 { sourceKey: SK.IRREGULAR_INFILTRATION_FLOOR_3, monthly: 17 },
-                { sourceKey: SK.SURVEY_HUB, monthly: 25 },
                 { sourceKey: SK.GUILD_SHOP, weekly: 2 },
                 { sourceKey: SK.RESOURCE_SHOP, weekly: 2 },
                 { sourceKey: SK.ARENA_SHOP, weekly: 3 },
@@ -85,7 +83,7 @@ export const data: TimegateData = {
             name: 'Professional Skill Manual',
             sources: [
                 { sourceKey: SK.IRREGULAR_INFILTRATION_FLOOR_3, monthly: 3 },
-                { sourceKey: SK.SURVEY_HUB, monthly: 9 },
+                { sourceKey: SK.SURVEY_HUB, monthly: 5 },
                 { sourceKey: SK.GUILD_SHOP, weekly: 1 },
                 { sourceKey: SK.ARENA_SHOP, weekly: 2 },
                 { sourceKey: SK.STARS_MEMORY_SHOP, weekly: 1 },

@@ -673,25 +673,11 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             limit: { count: 5, period: 'Monthly' }
         },
         {
-            name: 'Basic Skill Manual',
-            priority: 'S',
-            gives: { amount: 1, unit: '' },
-            costs: [{ currency: 'Survey Points', amount: 5 }],
-            limit: { count: 40, period: 'Monthly' }
-        },
-        {
-            name: 'Intermediate Skill Manual',
-            priority: 'S',
-            gives: { amount: 1, unit: '' },
-            costs: [{ currency: 'Survey Points', amount: 20 }],
-            limit: { count: 25, period: 'Monthly' }
-        },
-        {
             name: 'Professional Skill Manual',
             priority: 'S',
             gives: { amount: 1, unit: '' },
             costs: [{ currency: 'Survey Points', amount: 50 }],
-            limit: { count: 9, period: 'Monthly' }
+            limit: { count: 5, period: 'Monthly' }
         },
         {
             name: 'Stage 4 Gem Chest',
