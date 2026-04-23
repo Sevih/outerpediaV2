@@ -233,6 +233,7 @@ const en = {
   'tools.event.link': 'Event link',
   'tools.event.upcoming_placeholder': 'Details will be revealed when the event goes live. Stay tuned!',
   'tools.event.empty': 'No events at the moment.',
+  'tools.event.ends': 'Ends',
   'tools.team-planner': 'Team Planner',
   'tools.team-planner.desc': 'Build and share team compositions for any content.',
   'tools.team-planner.empty_slot': 'Empty Slot',

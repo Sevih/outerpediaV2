@@ -7,6 +7,11 @@ export type EventStatus = 'upcoming' | 'ongoing' | 'ended' | 'hidden';
 /** Per-language string record used for translatable event fields. */
 export type LangString = Record<Lang, string>;
 
+export type EventPhase = {
+  until: string;
+  label: LangString;
+};
+
 export type EventMeta = {
   slug: string;
   title: LangString;
@@ -15,6 +20,7 @@ export type EventMeta = {
   organizer: string;
   start: string;
   end: string;
+  phases?: EventPhase[];
 };
 
 export type EventDef = {

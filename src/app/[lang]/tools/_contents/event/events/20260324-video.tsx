@@ -343,7 +343,27 @@ export default {
     type: 'contest',
     organizer: 'Outerpedia / EvaMains',
     start: '2026-03-24T00:00:00Z',
-    end: '2026-04-28T00:00:00Z',
+    end: '2026-05-05T00:00:00Z',
+    phases: [
+      {
+        until: '2026-04-28T00:00:00Z',
+        label: {
+          en: 'Submissions close April 28 00:00 UTC',
+          jp: '提出期限：4月28日 00:00 UTC',
+          kr: '제출 마감: 4월 28일 00:00 UTC',
+          zh: '提交截止：4月28日 00:00 UTC',
+        },
+      },
+      {
+        until: '2026-05-05T00:00:00Z',
+        label: {
+          en: 'Voting in progress',
+          jp: '投票受付中',
+          kr: '투표 진행 중',
+          zh: '投票进行中',
+        },
+      },
+    ],
   },
   Page,
 } satisfies EventDef;

@@ -233,6 +233,7 @@ const kr: Record<TranslationKey, string> = {
   'tools.event.link': '이벤트 링크',
   'tools.event.upcoming_placeholder': '이벤트가 시작되면 상세 내용이 공개됩니다. 기대해 주세요!',
   'tools.event.empty': '현재 이벤트가 없습니다.',
+  'tools.event.ends': '종료',
   'tools.team-planner': '팀 플래너',
   'tools.team-planner.desc': '모든 콘텐츠에 맞는 팀 구성을 만들고 공유하세요.',
   'tools.team-planner.empty_slot': '빈 슬롯',

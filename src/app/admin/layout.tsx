@@ -52,6 +52,7 @@ const NAV_GROUPS: NavGroup[] = [
     label: 'Tools',
     items: [
       { label: 'Bytes Parser', href: '/admin/parser' },
+      { label: 'Damage Lab', href: '/admin/damage-lab' },
     ],
   },
 ];

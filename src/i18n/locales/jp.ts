@@ -233,6 +233,7 @@ const jp: Record<TranslationKey, string> = {
   'tools.event.link': 'イベントリンク',
   'tools.event.upcoming_placeholder': 'イベント開始時に詳細が公開されます。お楽しみに！',
   'tools.event.empty': '現在イベントはありません。',
+  'tools.event.ends': '終了',
   'tools.team-planner': 'チームプランナー',
   'tools.team-planner.desc': 'あらゆるコンテンツ向けのチーム編成を作成・共有。',
   'tools.team-planner.empty_slot': '空きスロット',

@@ -233,6 +233,7 @@ const zh: Record<TranslationKey, string> = {
   'tools.event.link': '活动链接',
   'tools.event.upcoming_placeholder': '活动开始后将公布详细内容，敬请期待！',
   'tools.event.empty': '目前没有活动。',
+  'tools.event.ends': '结束',
   'tools.team-planner': '队伍规划器',
   'tools.team-planner.desc': '创建队伍配置并分享。',
   'tools.team-planner.empty_slot': '空位',
