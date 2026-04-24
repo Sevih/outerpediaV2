@@ -8,32 +8,65 @@ import path from 'path'
  * Computes the full no-gear stat block for a playable character at lv 100,
  * fully evolved (ev6), fully transcended (max TransStar for its BasicStar),
  * with max Hero Codex, and all applicable Gift / Awakening nodes unlocked
- * (element + class + subclass; ADVENTURE_LICENSE is intentionally skipped).
- *
- * The response splits the final stats into a `contributors` array so each
- * source (base, evolution, codex, transcend, class passive, Skill_8 passive,
- * element gifts, class gifts, subclass gifts) can be audited independently
- * against the in-game display.
- *
- * All inputs come from `data/admin/json2/` tables. No value conversion is
- * done at the boundary — every per-mille → % conversion is commented where
- * it happens so the raw game values stay traceable.
+ * (element + class + subclass; ADVENTURE_LICENSE / AAT_NONE is skipped —
+ * per the in-game character sheet it doesn't contribute to the base display).
  *
  * Restricted to development (returns 403 in prod).
  *
- * Response shape:
+ * ── Data sources (all under `data/admin/json2/`) ──────────────────────────
+ *   CharacterTemplet                 — per-char base stats, class/element, skill IDs
+ *   CharacterEvolutionStatTemplet    — flat bonuses per evolution tier (ev1..ev6)
+ *   CharacterArchiveStatTemplet      — global Hero Codex %-multipliers (11 levels)
+ *   CharacterTranscendentTemplet     — per-BasicStar transcend chain + Skill_8 unlocks
+ *   CharacterSkillLevelTemplet       — buff IDs attached to each skill level
+ *   BuffTemplet                      — buff definitions (BT_STAT_PREMIUM, BT_DMG, etc.)
+ *   CharacterAwakeningNodeTemplet    — gift tree nodes (element/class/subclass)
+ *   CharacterAwakeningLevelTemplet   — per-node leveling rewards (flat or buff-backed)
+ *
+ * ── Final formula ─────────────────────────────────────────────────────────
+ * For ATK / DEF / HP — `calcStat(base, evoFlat, giftFlat, pctBonuses, codex, transcend)`:
+ *   compound = ((1 + transcend/100) × (1 + pctBonuses/100) − 1) × 100
+ *   onBase   = codex + compound               (applied to *_Max base stat)
+ *   onFlat   = compound                       (applied to evo + gift flats; codex skipped)
+ *   final    = floor(base × (1 + onBase/100) + (evoFlat + giftFlat) × (1 + onFlat/100))
+ *
+ *   Key insight: transcend% and classPct% compound multiplicatively — NOT
+ *   additively. The interaction term (transcend × classPct / 100) is what
+ *   makes 2000001 DEF reach 1507 (not 1463) and 2000002 ATK reach 1842 (not 1789).
+ *   `pctBonuses` = sum of all % bonuses on ATK/DEF/HP from class passive,
+ *   class main gift, Skill_8, etc.
+ *
+ * For SPD / EFF / RES: base + evo + giftFlat + classPass + skill8  (no multiplier).
+ * For CHC / CHD / PEN: base + evo + sum of all % additive contributions.
+ * For DMG Red / DMG Inc: base + evo + sum of all % additive contributions.
+ *
+ * ── Value encoding rules (from BuffTemplet/EvolutionTemplet) ──────────────
+ *   - Percent stats (CHC, CHD, PEN, DMG_REDUCE, DMG_BOOST): value is per-mille
+ *     (÷10 → percentage points).
+ *   - ATK / DEF / HP with OAT_RATE: per-mille → folded into atkPct/defPct/hpPct.
+ *   - ATK / DEF / HP with OAT_ADD: flat integer.
+ *   - SPD / EFF / RES with OAT_ADD: flat integer.
+ *   - SPD / EFF / RES with OAT_RATE: `floor(base × value / 1000)` — flat premium
+ *     computed on (base + evo). Example: 2000102 Skill_8 ST_BUFF_RESIST OAT_RATE 60
+ *     → floor(160 × 60/1000) = +9 → total RES 169.
+ *
+ * ── Response shape ────────────────────────────────────────────────────────
  *   {
- *     meta: { id, class, subclass, element, basicStar, level, transcendStar, evolutionLevel, codexLevel },
- *     contributors: Array<{ source, description, fields: Partial<StatBlock> }>,
+ *     meta: { id, class, subclass, element, basicStar, level, transcendStar,
+ *             evolutionLevel, codexLevel },
+ *     contributors: [
+ *       { source: 'base'           , fields: StatBlock           },  // CharacterTemplet *_Max
+ *       { source: 'evolution'      , fields: StatBlock           },  // cumulative ev1..ev6 rewards
+ *       { source: 'codex'          , fields: { atkPct, defPct, hpPct } },
+ *       { source: 'transcend'      , fields: { atkPct, defPct, hpPct } },
+ *       { source: 'classPassive'   , fields: Partial<StatBlock>  },  // Skill_22 premium buffs
+ *       { source: 'skill8Passive'  , fields: Partial<StatBlock>  },  // transcend-unlocked buffs
+ *       { source: 'elementGifts'   , fields: StatBlock           },
+ *       { source: 'classGifts'     , fields: StatBlock           },
+ *       { source: 'subclassGifts'  , fields: StatBlock           },
+ *     ],
  *     final: StatBlock,
  *   }
- *
- * where StatBlock = {
- *   atk, def, hp, spd,
- *   chc, chd, chdReduce, pen,     // %
- *   dmgInc, dmgRed,               // %
- *   eff, res,                     // raw (Outerplane displays these as flat ints)
- * }
  */
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
@@ -53,12 +86,15 @@ interface StatBlock {
   dmgRed: number      // Damage Reduction (%)
   eff: number         // Effectiveness (raw, matches BuffChance_Max display)
   res: number         // Resilience   (raw, matches BuffResist_Max display)
+  atkPct: number      // % bonus on base ATK — folded into atk multiplier
+  defPct: number      // % bonus on base DEF — folded into def multiplier
+  hpPct: number       // % bonus on base HP  — folded into hp multiplier
 }
 
 interface Contributor {
   source: string
   description: string
-  fields: Partial<StatBlock> & { atkPct?: number; defPct?: number; hpPct?: number }
+  fields: Partial<StatBlock>
 }
 
 // ── Enum mappings (mirrors src/app/api/admin/damage-lab/quirks/route.ts) ──
@@ -99,7 +135,17 @@ function zeroStats(): StatBlock {
     chc: 0, chd: 0, chdReduce: 0, pen: 0,
     dmgInc: 0, dmgRed: 0,
     eff: 0, res: 0,
+    atkPct: 0, defPct: 0, hpPct: 0,
   }
+}
+
+// Strip zero-valued keys for compact contributor payloads.
+function omitZero(s: StatBlock): Partial<StatBlock> {
+  const out: Partial<StatBlock> = {}
+  for (const [k, v] of Object.entries(s)) {
+    if (typeof v === 'number' && v !== 0) (out as Record<string, number>)[k] = v
+  }
+  return out
 }
 
 // Pick the CharacterSkillLevelTemplet row at the requested SkillLevel (or the
@@ -133,11 +179,28 @@ function pickMaxBuff(rows: Row[], buffId: string): Row | undefined {
 // 1. Base stats at lv 100 (CharacterTemplet *_Max columns).
 //    Crit rate / Crit dmg are per-mille (÷10 → %). BuffChance / BuffResist
 //    are raw (Outerplane displays them as integers, not percentages).
+//
+//    Known quirk: the in-game lv 100 base ATK/DEF is sometimes < *_Max by 1
+//    due to the engine's float32 interpolation rounding — runtime behavior we
+//    can't fully replicate from json2 alone (the binary dump is string-accurate,
+//    and neither direct nor iterative float32 emulation reproduces the pattern
+//    universally). Empirically, the 25 3-star CCT_ATTACKER / ATTACKER-subclass
+//    chars all share base 930/247/3481 and lose 1 on ATK and DEF at lv 100
+//    (HP unaffected). `needsAttackerLv100Patch` targets this template exactly.
+function needsAttackerLv100Patch(row: Row): boolean {
+  return row.Class === 'CCT_ATTACKER'
+    && row.SubClass === 'ATTACKER'
+    && num(row.BasicStar) === 3
+    && num(row.Atk_Max) === 930
+    && num(row.Def_Max) === 247
+}
+
 function extractBase(row: Row): StatBlock {
+  const patch = needsAttackerLv100Patch(row) ? 1 : 0
   return {
-    atk: num(row.Atk_Max),
-    def: num(row.Def_Max),
-    hp: num(row.HP_Max),
+    atk: num(row.Atk_Max) - patch,
+    def: num(row.Def_Max) - patch,
+    hp:  num(row.HP_Max),
     spd: num(row.Speed_Max),
     chc: num(row.CriticalRate_Max) / 10,
     chd: num(row.CriticalDMGRate_Max) / 10,
@@ -147,6 +210,7 @@ function extractBase(row: Row): StatBlock {
     dmgRed: 0,
     eff: num(row.BuffChance_Max),
     res: num(row.BuffResist_Max),
+    atkPct: 0, defPct: 0, hpPct: 0,
   }
 }
 
@@ -170,6 +234,9 @@ function extractEvolution(evoStats: Row[], charId: string): StatBlock {
       else if (t === 'ST_BUFF_RESIST')       out.res += v
       else if (t === 'ST_CRITICAL_RATE')     out.chc += v / 10
       else if (t === 'ST_CRITICAL_DMG_RATE') out.chd += v / 10
+      else if (t === 'ST_DMG_BOOST')         out.dmgInc += v / 10
+      else if (t === 'ST_DMG_REDUCE_RATE')   out.dmgRed += v / 10
+      else if (t === 'ST_PIERCE_POWER_RATE') out.pen += v / 10
     }
   }
   return out
@@ -218,6 +285,68 @@ function extractTranscend(transcendent: Row[], basicStar: number, charId: string
   }
 }
 
+// Parse a BT_STAT_PREMIUM / cond=NONE buff into a StatBlock delta. Used by both
+// the Skill_22 class passive and Skill_8 transcendent-passive contributors.
+// Returns true if the buff contributed something (so the caller can log the buffId).
+// Rules:
+//   - Percent stats (CHC / CHD / PEN / DMG_RED / DMG_INC) — value is per-mille
+//     (÷10 → percentage points), regardless of rate/add.
+//   - ATK / DEF / HP with OAT_RATE → atkPct/defPct/hpPct (applied in multiplier).
+//   - ATK / DEF / HP / SPD / EFF / RES with OAT_ADD → added as flat.
+//   - SPD / EFF / RES with OAT_RATE → computed as flat on (base + evo), matching
+//     the pipeline's `computePremiumValue` logic (floor(baseStat × value / 1000)).
+//     Example: 2000102 Skill_8 lv4 `trancendent_8_buff_resist_team_upgrade`
+//     (ST_BUFF_RESIST OAT_RATE 60) → +6% of base RES 160 = +9 → total 169.
+function applyPremiumBuff(dest: StatBlock, buff: Row, baseForRate: { spd: number; eff: number; res: number }): boolean {
+  if (buff.Type !== 'BT_STAT_PREMIUM') return false
+  if ((buff.BuffConditionType ?? 'NONE') !== 'NONE') return false
+  const value = num(buff.Value)
+  const rate  = buff.ApplyingType === 'OAT_RATE'
+  const add   = buff.ApplyingType === 'OAT_ADD'
+  if (!rate && !add) return false
+
+  // Percent stats (pure % contributions, value is per-mille)
+  if (buff.StatType === 'ST_CRITICAL_RATE')     { dest.chc    += value / 10; return true }
+  if (buff.StatType === 'ST_CRITICAL_DMG_RATE') { dest.chd    += value / 10; return true }
+  if (buff.StatType === 'ST_PIERCE_POWER_RATE') { dest.pen    += value / 10; return true }
+  if (buff.StatType === 'ST_DMG_REDUCE_RATE')   { dest.dmgRed += value / 10; return true }
+  if (buff.StatType === 'ST_DMG_BOOST')         { dest.dmgInc += value / 10; return true }
+
+  // Absolute stats — OAT_RATE goes into the %-multiplier bucket, OAT_ADD is flat.
+  if (buff.StatType === 'ST_ATK') {
+    if (rate) dest.atkPct += value / 10
+    else      dest.atk    += value
+    return true
+  }
+  if (buff.StatType === 'ST_DEF') {
+    if (rate) dest.defPct += value / 10
+    else      dest.def    += value
+    return true
+  }
+  if (buff.StatType === 'ST_HP') {
+    if (rate) dest.hpPct += value / 10
+    else      dest.hp    += value
+    return true
+  }
+  // Flat-display stats: OAT_RATE is resolved into a flat premium on base+evo.
+  if (buff.StatType === 'ST_SPEED') {
+    if (rate) dest.spd += Math.floor(baseForRate.spd * value / 1000)
+    else      dest.spd += value
+    return true
+  }
+  if (buff.StatType === 'ST_BUFF_CHANCE') {
+    if (rate) dest.eff += Math.floor(baseForRate.eff * value / 1000)
+    else      dest.eff += value
+    return true
+  }
+  if (buff.StatType === 'ST_BUFF_RESIST') {
+    if (rate) dest.res += Math.floor(baseForRate.res * value / 1000)
+    else      dest.res += value
+    return true
+  }
+  return false
+}
+
 // 5. Class passive — Skill_22 holds the ID of the class's shared passive skill
 //    (1=DEFENDER, 2=ATTACKER, ..., 5=PRIEST). The passive skill has level rows
 //    in CharacterSkillLevelTemplet whose BuffID column CSV-lists BuffTemplet
@@ -225,53 +354,44 @@ function extractTranscend(transcendent: Row[], basicStar: number, charId: string
 //    modifiers) and sum their %-rate adjustments.
 //
 //    For 2000001 (DEFENDER): Skill_22 = 1 → DEFENDER_PASSIVE_2 (+15% DEF).
+//    For 2000002 (ATTACKER): Skill_22 = 2 → ATTACKER_PASSIVE_2 (+5% CHC).
 function extractClassPassive(
   row: Row,
   skillLevels: Row[],
   buffs: Row[],
-): { atkPct: number; defPct: number; hpPct: number; breakdown: Array<{ buffId: string; stat: string; pct: number }> } {
-  const out = { atkPct: 0, defPct: 0, hpPct: 0, breakdown: [] as Array<{ buffId: string; stat: string; pct: number }> }
+  baseForRate: { spd: number; eff: number; res: number },
+): StatBlock & { breakdown: string[] } {
+  const out = Object.assign(zeroStats(), { breakdown: [] as string[] })
   const skillId = row.Skill_22
   if (!skillId) return out
   const levelRow = pickSkillLevelRow(skillLevels, skillId)
   for (const bid of splitCsv(levelRow?.BuffID)) {
     const b = pickMaxBuff(buffs, bid)
     if (!b) continue
-    if (b.Type !== 'BT_STAT_PREMIUM') continue
-    if ((b.BuffConditionType ?? 'NONE') !== 'NONE') continue
-    if (b.ApplyingType !== 'OAT_RATE') continue
-    const pct = num(b.Value) / 10
-    if (b.StatType === 'ST_ATK')      { out.atkPct += pct; out.breakdown.push({ buffId: bid, stat: 'ATK', pct }) }
-    else if (b.StatType === 'ST_DEF') { out.defPct += pct; out.breakdown.push({ buffId: bid, stat: 'DEF', pct }) }
-    else if (b.StatType === 'ST_HP')  { out.hpPct  += pct; out.breakdown.push({ buffId: bid, stat: 'HP',  pct }) }
+    if (applyPremiumBuff(out, b, baseForRate)) out.breakdown.push(bid)
   }
   return out
 }
 
 // 6. Skill_8 transcendent passive — unlocked progressively by TransStar.
-//    At TransStar 9 (SkillLevel 4 for BasicStar 2), char 2000001 gains
-//    `trancendent_8_dmg_reduce_rate_upgrade` → +4.8% DMG Reduction.
-//    We only surface ST_DMG_REDUCE_RATE here since that's the only display
-//    stat the trancendent_8_* line touches; AP / skill effects are out of
-//    scope for the character sheet.
+//    At TransStar 9 (SkillLevel 4 for BasicStar 2), 2000001 gains
+//    `trancendent_8_dmg_reduce_rate_upgrade` → +4.8% DMG Reduction, and
+//    2000002 gains `trancendent_8_cri_dmg_upgrade` → +8% CHD.
 function extractSkill8Passive(
   row: Row,
   skillLevels: Row[],
   buffs: Row[],
   skillLevel: number,
-): { dmgRedPct: number; buffId: string | null } {
-  const out: { dmgRedPct: number; buffId: string | null } = { dmgRedPct: 0, buffId: null }
+  baseForRate: { spd: number; eff: number; res: number },
+): StatBlock & { breakdown: string[] } {
+  const out = Object.assign(zeroStats(), { breakdown: [] as string[] })
   const skillId = row.Skill_8
   if (!skillId || skillLevel <= 0) return out
   const levelRow = pickSkillLevelRow(skillLevels, skillId, skillLevel)
   for (const bid of splitCsv(levelRow?.BuffID)) {
     const b = pickMaxBuff(buffs, bid)
     if (!b) continue
-    if (b.Type !== 'BT_STAT_PREMIUM') continue
-    if (b.StatType === 'ST_DMG_REDUCE_RATE' && b.ApplyingType === 'OAT_ADD') {
-      out.dmgRedPct += num(b.Value) / 10
-      out.buffId = bid
-    }
+    if (applyPremiumBuff(out, b, baseForRate)) out.breakdown.push(bid)
   }
   return out
 }
@@ -297,6 +417,11 @@ function accumulateGiftBonus(dest: StatBlock, levelRow: Row, buffs: Row[]): void
   if (levelRow.OptionType === 'IOT_BUFF' && levelRow.BuffID) {
     const b = pickMaxBuff(buffs, levelRow.BuffID)
     if (!b) return
+    // Only surface permanent stat buffs (BT_STAT_PREMIUM). BT_DMG / BT_DMG_REDUCE /
+    // BT_STAT are combat-triggered and don't show up on the no-gear character sheet.
+    // Example skipped: DEFENDER_PASSIVE_3_10 (BT_DMG_REDUCE), MAGE_PASSIVE_3_10 (BT_DMG),
+    // Awakening_Element_Dmg_10 (BT_DMG).
+    if (b.Type !== 'BT_STAT_PREMIUM') return
     statType = b.StatType
     applying = b.ApplyingType
     value    = num(b.Value)
@@ -313,19 +438,30 @@ function accumulateGiftBonus(dest: StatBlock, levelRow: Row, buffs: Row[]): void
   if (statType === 'ST_CRITICAL_DMG_RATE')       { dest.chd    += value / 10; return }
   if (statType === 'ST_PIERCE_POWER_RATE')       { dest.pen    += value / 10; return }
   if (statType === 'ST_DMG_REDUCE_RATE')         { dest.dmgRed += value / 10; return }
+  if (statType === 'ST_DMG_BOOST')               { dest.dmgInc += value / 10; return }
 
-  // Flat stats (OAT_ADD) on absolute stat types.
+  // Absolute stats — OAT_RATE goes into the %-multiplier bucket (e.g. ATTACKER
+  // class main gift ATTACKER_PASSIVE_3_10: +15% ATK); OAT_ADD is flat.
+  if (statType === 'ST_ATK') {
+    if (rate) dest.atkPct += value / 10
+    else      dest.atk    += value
+    return
+  }
+  if (statType === 'ST_DEF') {
+    if (rate) dest.defPct += value / 10
+    else      dest.def    += value
+    return
+  }
+  if (statType === 'ST_HP') {
+    if (rate) dest.hpPct += value / 10
+    else      dest.hp    += value
+    return
+  }
   if (add) {
-    if (statType === 'ST_ATK')   dest.atk += value
-    else if (statType === 'ST_DEF') dest.def += value
-    else if (statType === 'ST_HP')  dest.hp  += value
-    else if (statType === 'ST_SPEED') dest.spd += value
+    if (statType === 'ST_SPEED')       dest.spd += value
     else if (statType === 'ST_BUFF_CHANCE') dest.eff += value
     else if (statType === 'ST_BUFF_RESIST') dest.res += value
   }
-  // OAT_RATE on absolute stats (ATK/DEF/HP) would be a % bonus — our current
-  // element/class/subclass gifts don't use this shape, so we skip it to keep
-  // the contributor list auditable. Adventure License does, but it's excluded.
 }
 
 function extractGifts(
@@ -349,24 +485,22 @@ function extractGifts(
     }
   }
 
-  // Walk nodes; classify each gid into one of the three scopes.
-  // Same gid can be referenced by multiple nodes (e.g. shared across subclass
-  // variants) — first match wins, so we only count the bonus once.
-  const scope = new Map<string, 'element' | 'class' | 'subclass'>()
+  // Walk nodes; each node is an independent "slot" that contributes its max-level
+  // row. Multiple nodes referencing the same gid (e.g. three SWEEPER +100 ATK nodes
+  // all pointing to group 20601) each add their bonus separately — this matches
+  // the in-game tree where every sub-node is individually leveled.
+  const out = { element: zeroStats(), klass: zeroStats(), subclass: zeroStats() }
   for (const node of awakNodes) {
     const gid = node.AwakeningLevelGroupID
-    if (!gid || scope.has(gid)) continue
+    if (!gid) continue
     const v = num(node.AwakeningApplyTypeValue)
-    if (node.AwakeningApplyType === 'AAT_ELEMENTAL' && v === elemIdx)  scope.set(gid, 'element')
-    else if (node.AwakeningApplyType === 'AAT_CLASS' && v === classIdx) scope.set(gid, 'class')
-    else if (node.AwakeningApplyType === 'AAT_SUBCLASS' && v === subIdx) scope.set(gid, 'subclass')
-  }
-
-  const out = { element: zeroStats(), klass: zeroStats(), subclass: zeroStats() }
-  for (const [gid, kind] of scope) {
+    let bucket: StatBlock | null = null
+    if (node.AwakeningApplyType === 'AAT_ELEMENTAL' && v === elemIdx)   bucket = out.element
+    else if (node.AwakeningApplyType === 'AAT_CLASS' && v === classIdx)  bucket = out.klass
+    else if (node.AwakeningApplyType === 'AAT_SUBCLASS' && v === subIdx) bucket = out.subclass
+    if (!bucket) continue
     const lvlRow = levelByGroup.get(gid)
     if (!lvlRow) continue
-    const bucket = kind === 'element' ? out.element : kind === 'class' ? out.klass : out.subclass
     accumulateGiftBonus(bucket, lvlRow, buffs)
   }
   return out
@@ -408,49 +542,49 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   const evo        = extractEvolution(evoStats, id)
   const codex      = extractCodex(archiveStats)
   const transcend  = extractTranscend(transcendent, basicStar, id)
-  const classPass  = extractClassPassive(row, skillLevels, buffs)
-  const skill8     = extractSkill8Passive(row, skillLevels, buffs, transcend.skillLevel)
+  const baseForRate = { spd: base.spd + evo.spd, eff: base.eff + evo.eff, res: base.res + evo.res }
+  const classPass  = extractClassPassive(row, skillLevels, buffs, baseForRate)
+  const skill8     = extractSkill8Passive(row, skillLevels, buffs, transcend.skillLevel, baseForRate)
   const gifts      = extractGifts(row, awakNodes, awakLevels, buffs)
 
-  // ── Final stats formula (best-effort reconstruction from json2 alone) ─
-  //    ATK / DEF / HP: (base + evolution + giftFlat) × (1 + codex% + transcend% + classPassive%)
-  //    SPD / EFF / RES: base + evolution + giftFlat  (no % modifier)
-  //    CHC / CHD / PEN: base + evolution + giftPercent  (additive %)
-  //    DMG Reduction:   base + Skill_8 transcendent passive + giftPercent
-  //
-  //  giftFlat bundles element+class+subclass flats; giftPercent bundles the % parts.
-  const giftFlat = {
-    atk: gifts.element.atk + gifts.klass.atk + gifts.subclass.atk,
-    def: gifts.element.def + gifts.klass.def + gifts.subclass.def,
-    hp:  gifts.element.hp  + gifts.klass.hp  + gifts.subclass.hp,
-    spd: gifts.element.spd + gifts.klass.spd + gifts.subclass.spd,
-    eff: gifts.element.eff + gifts.klass.eff + gifts.subclass.eff,
-    res: gifts.element.res + gifts.klass.res + gifts.subclass.res,
-  }
-  const giftPct = {
-    chc: gifts.element.chc + gifts.klass.chc + gifts.subclass.chc,
-    chd: gifts.element.chd + gifts.klass.chd + gifts.subclass.chd,
-    pen: gifts.element.pen + gifts.klass.pen + gifts.subclass.pen,
-    dmgRed: gifts.element.dmgRed + gifts.klass.dmgRed + gifts.subclass.dmgRed,
+  // Sum every flat and percent contribution from the three gift scopes into a
+  // single giftTotal bucket. Class passive and Skill_8 contributions stay in
+  // their own blocks so the contributor breakdown remains auditable.
+  const giftTotal: StatBlock = zeroStats()
+  for (const g of [gifts.element, gifts.klass, gifts.subclass]) {
+    giftTotal.atk += g.atk; giftTotal.def += g.def; giftTotal.hp += g.hp; giftTotal.spd += g.spd
+    giftTotal.eff += g.eff; giftTotal.res += g.res
+    giftTotal.chc += g.chc; giftTotal.chd += g.chd; giftTotal.pen += g.pen
+    giftTotal.dmgRed += g.dmgRed; giftTotal.dmgInc += g.dmgInc
+    giftTotal.atkPct += g.atkPct; giftTotal.defPct += g.defPct; giftTotal.hpPct += g.hpPct
   }
 
-  const atkMult = 1 + (codex.atkPct + transcend.atkPct + classPass.atkPct) / 100
-  const defMult = 1 + (codex.defPct + transcend.defPct + classPass.defPct) / 100
-  const hpMult  = 1 + (codex.hpPct  + transcend.hpPct  + classPass.hpPct)  / 100
+  // ATK / DEF / HP formula — see header doc for full explanation.
+  function calcStat(baseMax: number, evoFlat: number, flat: number, pctBonuses: number, codexPct: number, transcendPct: number): number {
+    const compoundPct = ((1 + transcendPct / 100) * (1 + pctBonuses / 100) - 1) * 100
+    const onBase = codexPct + compoundPct
+    const onFlat = compoundPct
+    return Math.floor(baseMax * (1 + onBase / 100) + (evoFlat + flat) * (1 + onFlat / 100))
+  }
+
+  const atkPctBonus = classPass.atkPct + skill8.atkPct + giftTotal.atkPct
+  const defPctBonus = classPass.defPct + skill8.defPct + giftTotal.defPct
+  const hpPctBonus  = classPass.hpPct  + skill8.hpPct  + giftTotal.hpPct
 
   const final: StatBlock = {
-    atk: Math.round((base.atk + evo.atk + giftFlat.atk) * atkMult),
-    def: Math.round((base.def + evo.def + giftFlat.def) * defMult),
-    hp:  Math.round((base.hp  + evo.hp  + giftFlat.hp)  * hpMult),
-    spd: base.spd + evo.spd + giftFlat.spd,
-    chc: base.chc + evo.chc + giftPct.chc,
-    chd: base.chd + evo.chd + giftPct.chd,
+    atk: calcStat(base.atk, evo.atk, giftTotal.atk, atkPctBonus, codex.atkPct, transcend.atkPct),
+    def: calcStat(base.def, evo.def, giftTotal.def, defPctBonus, codex.defPct, transcend.defPct),
+    hp:  calcStat(base.hp,  evo.hp,  giftTotal.hp,  hpPctBonus,  codex.hpPct,  transcend.hpPct),
+    spd: base.spd + evo.spd + giftTotal.spd + classPass.spd + skill8.spd,
+    chc: base.chc + evo.chc + giftTotal.chc + classPass.chc + skill8.chc,
+    chd: base.chd + evo.chd + giftTotal.chd + classPass.chd + skill8.chd,
     chdReduce: 0,
-    pen: base.pen + giftPct.pen,
-    dmgInc: 0,
-    dmgRed: base.dmgRed + skill8.dmgRedPct + giftPct.dmgRed,
-    eff: base.eff + evo.eff + giftFlat.eff,
-    res: base.res + evo.res + giftFlat.res,
+    pen: base.pen + evo.pen + giftTotal.pen + classPass.pen + skill8.pen,
+    dmgInc: base.dmgInc + evo.dmgInc + giftTotal.dmgInc + classPass.dmgInc + skill8.dmgInc,
+    dmgRed: base.dmgRed + evo.dmgRed + giftTotal.dmgRed + classPass.dmgRed + skill8.dmgRed,
+    eff: base.eff + evo.eff + giftTotal.eff + classPass.eff + skill8.eff,
+    res: base.res + evo.res + giftTotal.res + classPass.res + skill8.res,
+    atkPct: 0, defPct: 0, hpPct: 0, // folded into atk/def/hp above
   }
 
   const contributors: Contributor[] = [
@@ -476,13 +610,13 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     },
     {
       source: 'classPassive',
-      description: `Skill_22 (class passive) BT_STAT_PREMIUM / cond=NONE buffs — ${classPass.breakdown.map(b => `${b.buffId} +${b.pct}% ${b.stat}`).join(', ') || 'none'}`,
-      fields: { atkPct: classPass.atkPct, defPct: classPass.defPct, hpPct: classPass.hpPct },
+      description: `Skill_22 (class passive) BT_STAT_PREMIUM / cond=NONE buffs — ${classPass.breakdown.join(', ') || 'none'}`,
+      fields: omitZero(classPass),
     },
     {
       source: 'skill8Passive',
-      description: `Skill_8 lvl ${transcend.skillLevel} — ${skill8.buffId ?? 'none'}`,
-      fields: { dmgRed: skill8.dmgRedPct },
+      description: `Skill_8 lvl ${transcend.skillLevel} — ${skill8.breakdown.join(', ') || 'none'}`,
+      fields: omitZero(skill8),
     },
     {
       source: 'elementGifts',
