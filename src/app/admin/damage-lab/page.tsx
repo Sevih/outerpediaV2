@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { computeDamage, type DamageInputs } from '@/lib/damage/formula'
 
-const LS_FORM_KEY = 'damage-lab-form-v4'
+const LS_FORM_KEY = 'damage-lab-form-v7'
 const AUTO_SAVE_DEBOUNCE_MS = 1500
 const SKILL_LEVEL = 5  // all observations at skill lvl 5
 
@@ -16,6 +16,14 @@ interface PersistedForm {
   slot: 'first' | 'second' | 'ultimate'; crit: boolean
   note: string
   C: string; ratioDivisor: string
+  // Target origin from stage picker
+  modeLabel: string
+  stageId: string
+  monsterKey: string  // `${monsterId}@${level}` — identifies a monster row within a stage
+  // Character quirks
+  transcendLevel: TranscendLevel
+  disabledQuirkIds: string[]  // nodeIds the user has unticked; all applicable quirks are ON by default
+  heroCodexLevel: number  // player's Hero Codex progression level (1..11)
 }
 
 interface SkillData {
@@ -23,16 +31,78 @@ interface SkillData {
   damageFactors: (number | null)[]
 }
 
+type TranscendLevel = '0' | '3' | '4_1' | '4_2' | '5_1' | '5_2' | '5_3' | '6'
+const TRANSCEND_LEVELS: TranscendLevel[] = ['0', '3', '4_1', '4_2', '5_1', '5_2', '5_3', '6']
+const TRANSCEND_LABELS: Record<TranscendLevel, string> = {
+  '0': 'Lv0', '3': 'Lv3', '4_1': 'Lv4-1', '4_2': 'Lv4-2',
+  '5_1': 'Lv5-1', '5_2': 'Lv5-2', '5_3': 'Lv5-3', '6': 'Lv6',
+}
+
 interface CharacterEntry {
   id: string
   name: string
   element: string
   class: string
+  subClass: string
+  atkMax: number                      // lvl 100 base (no gear/evo/awaken)
+  defMax: number
+  hpMax: number
+  chdMax: number                      // %
+  critRateMax: number                 // %
+  transcendAtkBonus: Record<TranscendLevel, number>
+  evolutionBonuses: {
+    atkFlat: number
+    defFlat: number
+    hpFlat: number
+    critRateFlat: number
+    critDmgFlat: number
+  }
+  classPassive: {
+    atkPct: number; atkFlat: number
+    defPct: number; defFlat: number
+    hpPct: number;  hpFlat: number
+    chdPct: number
+    critRatePct: number
+    penPct: number
+    poolPct: number
+  }
   skills: {
     first: SkillData | null
     second: SkillData | null
     ultimate: SkillData | null
   }
+}
+
+// Outerplane rock-paper-scissors element matrix.
+// Fire > Earth > Water > Fire. Light/Dark are handled as neutral here since the
+// formula doesn't yet model their separate +30% rule; user can toggle adv/disadv manually.
+const ELEMENT_ADV: Record<string, string> = { Fire: 'Earth', Earth: 'Water', Water: 'Fire' }
+function detectElementRelation(attacker: string, target: string): 'adv' | 'disadv' | 'none' {
+  if (!attacker || !target || attacker === target) return 'none'
+  if (ELEMENT_ADV[attacker] === target) return 'adv'
+  if (ELEMENT_ADV[target] === attacker) return 'disadv'
+  return 'none'
+}
+
+interface QuirkEffect {
+  target: 'pool' | 'atk' | 'chd' | 'pen' | 'critRate'
+  unit: '%' | 'flat'
+  amount: number
+  requires?: 'adv' | 'disadv' | 'neutral' | 'crit' | 'boss' | null
+}
+interface QuirkEntry {
+  nodeId: string
+  group: 'ELEMENTAL' | 'JOB' | 'UTILITY' | 'PVE' | 'ADVENTURE_LICENSE'
+  name: string
+  desc: string
+  maxLevel: number
+  enabledByDefault: boolean
+  appliesTo: { kind: 'element' | 'class' | 'subclass' | 'none'; value: string | null }
+  source: {
+    buffId: string; buffType: string; statType: string
+    applyingType: string; value: number; condition: string; optionType: string
+  }
+  effect: QuirkEffect | null
 }
 
 interface Observation {
@@ -57,6 +127,49 @@ interface Observation {
   crit: boolean
   obs: number
   note?: string
+  // Target origin (set when loaded from game data)
+  monsterId?: string
+  monsterName?: string
+  monsterLvl?: number
+  tClass?: string
+  tElement?: string
+  stageId?: string
+  stageName?: string
+  mode?: string
+}
+
+interface StageMonster {
+  monsterId: string
+  name: string
+  type: string
+  isBoss: boolean
+  class: string
+  element: string
+  subClass: string
+  level: number
+  defMin: number
+  defMax: number
+  drMax: number
+  atkMin: number
+  atkMax: number
+  defAtLevel: number
+  drPctAtLevel: number
+  atkAtLevel: number
+  position: number
+  slot: number
+}
+
+interface StageEntry {
+  id: string
+  name: string
+  recommendLevel: number
+  monsters: StageMonster[]
+}
+
+interface ModeEntry {
+  mode: string
+  label: string
+  stages: StageEntry[]
 }
 
 type SlotKey = 'first' | 'second' | 'ultimate'
@@ -74,7 +187,20 @@ export default function DamageLabPage() {
   // Data
   const [characters, setCharacters] = useState<CharacterEntry[]>([])
   const [observations, setObservations] = useState<Observation[]>([])
+  const [modes, setModes] = useState<ModeEntry[]>([])
+  const [heroCodexLevels, setHeroCodexLevels] = useState<{ level: number; atkPct: number; defPct: number; hpPct: number }[]>([])
+  const [heroCodexLevel, setHeroCodexLevel] = useState<number>(11)  // default to max (fully unlocked codex)
   const [loading, setLoading] = useState(true)
+
+  // Target picker (Mode → Stage → Monster)
+  const [modeLabel, setModeLabel] = useState('')
+  const [stageId, setStageId] = useState('')
+  const [monsterKey, setMonsterKey] = useState('')  // `${monsterId}@${level}`
+
+  // Character quirks (user-controllable, auto-set from context)
+  const [transcendLevel, setTranscendLevel] = useState<TranscendLevel>('6')
+  const [disabledQuirkIds, setDisabledQuirkIds] = useState<Set<string>>(new Set())
+  const [allQuirks, setAllQuirks] = useState<QuirkEntry[]>([])
 
   // Attacker
   const [characterId, setCharacterId] = useState('')
@@ -108,14 +234,21 @@ export default function DamageLabPage() {
   const [saveStatus, setSaveStatus] = useState<'idle' | 'pending' | 'saving' | 'saved' | 'error'>('idle')
   const autoSaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const formHydrated = useRef(false)
+  const prevAtkKeyRef = useRef<string | null>(null)
+  const prevElemKeyRef = useRef<string | null>(null)
 
   useEffect(() => {
     Promise.all([
       fetch('/api/admin/damage-lab/characters').then(r => r.json()),
       fetch('/api/admin/damage-lab/observations').then(r => r.json()),
-    ]).then(([chars, obs]) => {
+      fetch('/api/admin/damage-lab/stages').then(r => r.json()),
+      fetch('/api/admin/damage-lab/quirks').then(r => r.json()),
+    ]).then(([chars, obs, st, qk]) => {
       setCharacters(chars.characters ?? [])
       setObservations(obs.observations ?? [])
+      setModes(st.modes ?? [])
+      setAllQuirks(qk.quirks ?? [])
+      setHeroCodexLevels(chars.heroCodexLevels ?? [])
       setLoading(false)
     })
   }, [])
@@ -141,6 +274,12 @@ export default function DamageLabPage() {
         if (p.note != null) setNote(p.note)
         if (p.C != null) setC(p.C)
         if (p.ratioDivisor != null) setRatioDivisor(p.ratioDivisor)
+        if (p.modeLabel != null) setModeLabel(p.modeLabel)
+        if (p.stageId != null) setStageId(p.stageId)
+        if (p.monsterKey != null) setMonsterKey(p.monsterKey)
+        if (p.transcendLevel != null) setTranscendLevel(p.transcendLevel)
+        if (Array.isArray(p.disabledQuirkIds)) setDisabledQuirkIds(new Set(p.disabledQuirkIds))
+        if (typeof p.heroCodexLevel === 'number') setHeroCodexLevel(p.heroCodexLevel)
       }
     } catch { /* ignore corrupt storage */ }
     formHydrated.current = true
@@ -153,31 +292,268 @@ export default function DamageLabPage() {
       def, tgtCdmgRedPct, tgtDmgRedPct, elemental,
       isBoss, quirksDisabled,
       slot, crit, note, C, ratioDivisor,
+      modeLabel, stageId, monsterKey,
+      transcendLevel, disabledQuirkIds: Array.from(disabledQuirkIds),
+      heroCodexLevel,
     }
     try { localStorage.setItem(LS_FORM_KEY, JSON.stringify(p)) } catch { /* quota etc. */ }
   }, [characterId, atk, chdPct, penPct, dmgIncPct,
       def, tgtCdmgRedPct, tgtDmgRedPct, elemental,
       isBoss, quirksDisabled,
-      slot, crit, note, C, ratioDivisor])
+      slot, crit, note, C, ratioDivisor,
+      modeLabel, stageId, monsterKey,
+      transcendLevel, disabledQuirkIds, heroCodexLevel])
 
   const selectedChar = useMemo(
     () => characters.find(c => c.id === characterId) ?? null,
     [characters, characterId]
   )
 
+  // Filter gift nodes to those applicable to the selected character.
+  // Applicability is defined by the node's appliesTo kind/value vs the character's
+  // element / class / subclass. "none" (utility/PVE/adv-license) applies to everyone.
+  const applicableQuirks = useMemo<QuirkEntry[]>(() => {
+    if (!selectedChar) return []
+    const charEl = selectedChar.element
+    const charCls = selectedChar.class
+    const charSub = (selectedChar.subClass ?? '').toUpperCase()
+    return allQuirks.filter(q => {
+      switch (q.appliesTo.kind) {
+        case 'element':  return q.appliesTo.value === charEl
+        case 'class':    return q.appliesTo.value === charCls
+        case 'subclass': return q.appliesTo.value === charSub
+        case 'none':     return true
+      }
+    })
+  }, [allQuirks, selectedChar])
+
+  // Sum unconditional stat quirks (ATK/CHD/PEN/Crit Rate) from enabled applicable
+  // quirks. These feed into the prefill because the in-game character screen already
+  // shows them baked into the displayed stats (so we want auto-fill to match).
+  const statQuirkBonuses = useMemo(() => {
+    const bonus = {
+      atkPct: 0, atkFlat: 0,
+      chdPct: 0, chdFlat: 0,
+      penPct: 0, penFlat: 0,
+      crPct: 0,  crFlat: 0,
+    }
+    for (const q of applicableQuirks) {
+      if (disabledQuirkIds.has(q.nodeId)) continue
+      const e = q.effect
+      if (!e) continue
+      if (e.requires) continue  // conditional: only applies in combat, not to displayed stats
+      const isRate = e.unit === '%'
+      if (e.target === 'atk')      isRate ? bonus.atkPct += e.amount : bonus.atkFlat += e.amount
+      else if (e.target === 'chd') isRate ? bonus.chdPct += e.amount : bonus.chdFlat += e.amount
+      else if (e.target === 'pen') isRate ? bonus.penPct += e.amount : bonus.penFlat += e.amount
+      else if (e.target === 'critRate') isRate ? bonus.crPct += e.amount : bonus.crFlat += e.amount
+    }
+    return bonus
+  }, [applicableQuirks, disabledQuirkIds])
+
+  // Effective base stats at the current transcend level + active unconditional stat quirks.
+  // Pattern: (base + flat adds) × (1 + transcend%) × (1 + sum of stat% quirks).
+  // For CHD / PEN / CritRate, rates add as percentage points (not multiplicative),
+  // matching how the in-game screen displays them.
+  const heroCodex = useMemo(() => heroCodexLevels.find(l => l.level === heroCodexLevel) ?? { atkPct: 0, defPct: 0, hpPct: 0 }, [heroCodexLevels, heroCodexLevel])
+
+  const effectiveBase = useMemo(() => {
+    if (!selectedChar) return { atk: 0, def: 0, hp: 0, chd: 0, pen: 0, critRate: 0 }
+    const t = selectedChar.transcendAtkBonus?.[transcendLevel] ?? 0
+    const evo = selectedChar.evolutionBonuses
+    const cp = selectedChar.classPassive
+    // Empirically validated on **Rin** (3★, Striker, no class ATK passive): the game
+    // scales the base Atk_Max differently from evolution/gift flats. Hero Codex applies
+    // ONLY to statMax; transcend + class passive + quirks apply to both.
+    //
+    //   stat = statMax × (1 + trans + codex + classPct + quirkPct)
+    //        + evoFlat × (1 + trans + classPct + quirkPct)
+    //        + giftFlat × (1 + trans + classPct + quirkPct)
+    //
+    // Validated:
+    //   Rin ATK: 930 × 1.40 + 169 × 1.30 = 1521 (user 1520, off −1) ✓
+    //   Rin HP:  3481 × 1.40 + 403 × 1.30 = 5397 (user 5397, EXACT) ✓
+    //   Tio ATK (w/ 200 gift): 624 × 1.40 + 200 × 1.30 = 1133 (user 1133, EXACT) ✓
+    function calcStat(statMax: number, evoFlat: number, cpFlat: number, quirkFlat: number, cpPct: number, quirkPct: number, extraCodexOnlyOnBase: number): number {
+      const onBase = t + extraCodexOnlyOnBase + cpPct + quirkPct
+      const onEvo  = t + cpPct + quirkPct
+      return Math.floor(statMax * (1 + onBase / 100) + (evoFlat + cpFlat + quirkFlat) * (1 + onEvo / 100))
+    }
+    const atk = calcStat(selectedChar.atkMax, evo.atkFlat, cp.atkFlat, statQuirkBonuses.atkFlat, cp.atkPct, statQuirkBonuses.atkPct, heroCodex.atkPct)
+    const def = calcStat(selectedChar.defMax, evo.defFlat, cp.defFlat, 0,                        cp.defPct, 0,                       heroCodex.defPct)
+    const hp  = calcStat(selectedChar.hpMax,  evo.hpFlat,  cp.hpFlat,  0,                        cp.hpPct,  0,                       heroCodex.hpPct)
+    // CHD / Crit Rate / PEN: additive percentage points (already per-mille ÷10 from APIs).
+    const chd = selectedChar.chdMax + evo.critDmgFlat + cp.chdPct + statQuirkBonuses.chdPct + statQuirkBonuses.chdFlat
+    const pen = cp.penPct + statQuirkBonuses.penPct + statQuirkBonuses.penFlat
+    const critRate = selectedChar.critRateMax + evo.critRateFlat + cp.critRatePct + statQuirkBonuses.crPct + statQuirkBonuses.crFlat
+    return {
+      atk, def, hp,
+      chd: Math.round(chd * 10) / 10,
+      pen: Math.round(pen * 10) / 10,
+      critRate: Math.round(critRate * 10) / 10,
+    }
+  }, [selectedChar, transcendLevel, statQuirkBonuses, heroCodex])
+
+  // Auto-fill ATK / CHD / PEN with lvl 100 + transcend + stat-quirk values when the user
+  // switches characters, transcend, OR toggles a quirk (enabling it to reflect in the
+  // prefilled stats). Key-diff ref gates the first post-hydration render so saved fields
+  // aren't clobbered on F5 / page load.
+  useEffect(() => {
+    if (!formHydrated.current) return
+    if (!selectedChar) return
+    const key = `${selectedChar.id}/${transcendLevel}/${effectiveBase.atk}/${effectiveBase.chd}/${effectiveBase.pen}`
+    const prev = prevAtkKeyRef.current
+    prevAtkKeyRef.current = key
+    if (prev === null) return
+    if (prev === key) return
+    setAtk(String(effectiveBase.atk))
+    setChdPct(String(effectiveBase.chd))
+    setPenPct(String(effectiveBase.pen))
+  }, [selectedChar, transcendLevel, effectiveBase])
+
+  // When the user picks a DIFFERENT character, reset any unchecked quirks but honor
+  // each quirk's enabledByDefault flag (e.g. ADVENTURE_LICENSE is off by default).
+  const prevCharForResetRef = useRef<string | null>(null)
+  useEffect(() => {
+    if (!formHydrated.current) return
+    const id = selectedChar?.id ?? ''
+    const prev = prevCharForResetRef.current
+    prevCharForResetRef.current = id
+    if (prev === null || prev === id) return
+    const off = new Set<string>()
+    for (const q of applicableQuirks) if (!q.enabledByDefault) off.add(q.nodeId)
+    setDisabledQuirkIds(off)
+  }, [selectedChar, applicableQuirks])
+
+  // First-time init (no saved disabledQuirkIds in localStorage): auto-disable every
+  // quirk marked `enabledByDefault: false` (ADVENTURE_LICENSE nodes). Runs once when
+  // allQuirks first becomes populated. Subsequent toggles persist via LS.
+  const quirksInitializedRef = useRef(false)
+  useEffect(() => {
+    if (!formHydrated.current) return
+    if (quirksInitializedRef.current) return
+    if (allQuirks.length === 0) return
+    quirksInitializedRef.current = true
+    if (disabledQuirkIds.size > 0) return  // user already has saved toggles
+    const off = new Set<string>()
+    for (const q of allQuirks) if (!q.enabledByDefault) off.add(q.nodeId)
+    if (off.size > 0) setDisabledQuirkIds(off)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allQuirks])
+
+  const selectedMode = useMemo(
+    () => modes.find(m => m.label === modeLabel) ?? null,
+    [modes, modeLabel]
+  )
+  const selectedStage = useMemo(
+    () => selectedMode?.stages.find(s => s.id === stageId) ?? null,
+    [selectedMode, stageId]
+  )
+  const selectedMonster = useMemo(
+    () => selectedStage?.monsters.find(m => `${m.monsterId}@${m.level}` === monsterKey) ?? null,
+    [selectedStage, monsterKey]
+  )
+
+  // Auto-detect element advantage/disadvantage when both attacker and target elements
+  // are known (char loaded + monster loaded from stage). Same seed-then-fire ref
+  // pattern so saved values aren't clobbered on hydration.
+  useEffect(() => {
+    if (!formHydrated.current) return
+    const tgtElement = selectedMonster?.element ?? ''
+    const srcElement = selectedChar?.element ?? ''
+    const key = `${srcElement}>${tgtElement}`
+    const prev = prevElemKeyRef.current
+    prevElemKeyRef.current = key
+    if (prev === null) return
+    if (prev === key) return
+    if (!srcElement || !tgtElement) return
+    setElemental(detectElementRelation(srcElement, tgtElement))
+  }, [selectedChar, selectedMonster])
+
+  // When the user picks a monster, auto-fill DEF / DR / isBoss from the computed stats.
+  // Editable afterwards — the user can still tweak manually.
+  function applyMonster(m: StageMonster) {
+    setDef(m.defAtLevel.toFixed(4))
+    setTgtDmgRedPct(m.drPctAtLevel.toFixed(4))
+    setIsBoss(m.isBoss)
+  }
+
+  function handleSelectMode(label: string) {
+    setModeLabel(label)
+    setStageId('')
+    setMonsterKey('')
+  }
+  function handleSelectStage(id: string) {
+    setStageId(id)
+    const stage = selectedMode?.stages.find(s => s.id === id)
+    // Auto-pick the first boss if any, otherwise the first monster
+    const first = stage?.monsters.find(m => m.isBoss) ?? stage?.monsters[0]
+    if (first) {
+      const key = `${first.monsterId}@${first.level}`
+      setMonsterKey(key)
+      applyMonster(first)
+    } else {
+      setMonsterKey('')
+    }
+  }
+  function handleSelectMonster(key: string) {
+    setMonsterKey(key)
+    const m = selectedStage?.monsters.find(mm => `${mm.monsterId}@${mm.level}` === key)
+    if (m) applyMonster(m)
+  }
+  function clearTargetPicker() {
+    setModeLabel('')
+    setStageId('')
+    setMonsterKey('')
+  }
+
   const currentSkill = selectedChar?.skills[slot] ?? null
   const damageFactor = currentSkill?.damageFactors[skillLevel - 1] ?? null
 
+  // Whether a quirk's condition is satisfied by the current formula state.
+  // A null `requires` (unconditional) always matches.
+  function conditionMatches(requires: QuirkEffect['requires']): boolean {
+    if (!requires) return true
+    if (requires === 'adv')     return elemental === 'adv'
+    if (requires === 'disadv')  return elemental === 'disadv'
+    if (requires === 'neutral') return elemental === 'none'
+    if (requires === 'crit')    return crit
+    if (requires === 'boss')    return isBoss
+    return false
+  }
+
+  // Aggregate pool contributions (BT_DMG / ST_DMG_BOOST) from all enabled applicable
+  // quirks whose condition currently matches. Stat-type quirks (ST_ATK, ST_CRITICAL_DMG_RATE,
+  // ST_PIERCE_POWER_RATE) are displayed informationally but NOT auto-applied — the user's
+  // in-game ATK/CHD/PEN already include those stat bonuses from their unlocked gift tree.
+  const { poolBonus, activeQuirks } = useMemo(() => {
+    let bonus = 0
+    const active: QuirkEntry[] = []
+    for (const q of applicableQuirks) {
+      if (disabledQuirkIds.has(q.nodeId)) continue
+      if (!q.effect) continue
+      if (!conditionMatches(q.effect.requires)) continue
+      if (q.effect.target === 'pool' && q.effect.unit === '%') {
+        bonus += q.effect.amount
+        active.push(q)
+      }
+    }
+    return { poolBonus: bonus, activeQuirks: active }
+  }, [applicableQuirks, disabledQuirkIds, elemental, crit, isBoss])
+
   const computation = useMemo(() => {
     if (damageFactor == null) return null
+    const effectiveDmgInc = num(dmgIncPct) + poolBonus
     const inputs: DamageInputs = {
       atk: num(atk),
       damageFactor,
       chdPct: num(chdPct),
       penPct: num(penPct),
-      dmgIncPct: num(dmgIncPct),
+      dmgIncPct: effectiveDmgInc,
       crit,
-      charClass: selectedChar?.class,
+      // charClass intentionally blank — the Mage +12% now comes from the quirks data
+      // (MAGE_PASSIVE_3_10 via JOB02 MAIN) rather than the formula's hardcoded branch.
+      charClass: '',
       def: num(def),
       cdmgRedPct: num(tgtCdmgRedPct),
       dmgRedPct: num(tgtDmgRedPct),
@@ -187,7 +563,7 @@ export default function DamageLabPage() {
       ratioDivisor: num(ratioDivisor, 1000),
     }
     return computeDamage(inputs)
-  }, [atk, damageFactor, chdPct, penPct, dmgIncPct, crit, selectedChar, def, tgtCdmgRedPct, tgtDmgRedPct, isBoss, elemental, C, ratioDivisor])
+  }, [atk, damageFactor, chdPct, penPct, dmgIncPct, poolBonus, crit, def, tgtCdmgRedPct, tgtDmgRedPct, isBoss, elemental, C, ratioDivisor])
 
   const observedNum = observed.trim() === '' ? null : num(observed)
   const ratio = computation && observedNum != null && computation.calculated > 0
@@ -224,6 +600,18 @@ export default function DamageLabPage() {
       crit,
       obs: observedNum,
       ...(note.trim() ? { note: note.trim() } : {}),
+      ...(selectedMonster ? {
+        monsterId: selectedMonster.monsterId,
+        monsterName: selectedMonster.name,
+        monsterLvl: selectedMonster.level,
+        tClass: selectedMonster.class,
+        tElement: selectedMonster.element,
+      } : {}),
+      ...(selectedStage ? {
+        stageId: selectedStage.id,
+        stageName: selectedStage.name,
+      } : {}),
+      ...(selectedMode ? { mode: selectedMode.mode } : {}),
     }
     try {
       const res = await fetch('/api/admin/damage-lab/observations', {
@@ -328,6 +716,118 @@ export default function DamageLabPage() {
                 ))}
               </select>
             </label>
+            {selectedChar && (
+              <div className="space-y-1.5 rounded bg-zinc-900/60 px-2 py-1.5 text-[11px] font-mono text-zinc-500">
+                <div className="flex items-center justify-between gap-2">
+                  <span>Lv100 base: ATK {selectedChar.atkMax} · CHD {selectedChar.chdMax}% · Crit {selectedChar.critRateMax}%</span>
+                  <button
+                    onClick={() => {
+                      setAtk(String(effectiveBase.atk))
+                      setChdPct(String(effectiveBase.chd))
+                      setPenPct(String(effectiveBase.pen))
+                    }}
+                    className="text-zinc-600 hover:text-blue-400"
+                    title="Reset ATK / CHD / PEN to current transcend + stat-quirk values"
+                  >reset</button>
+                </div>
+                <label className="flex items-center justify-between gap-2 border-t border-zinc-800/70 pt-1.5">
+                  <span className="text-zinc-400">Transcendance</span>
+                  <select
+                    value={transcendLevel}
+                    onChange={e => setTranscendLevel(e.target.value as TranscendLevel)}
+                    className="rounded border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 text-[11px] font-mono text-zinc-100"
+                  >
+                    {TRANSCEND_LEVELS.map(lvl => {
+                      const bonus = selectedChar.transcendAtkBonus[lvl] ?? 0
+                      return (
+                        <option key={lvl} value={lvl}>
+                          {TRANSCEND_LABELS[lvl]}{bonus > 0 ? ` (+${bonus}%)` : ''}
+                        </option>
+                      )
+                    })}
+                  </select>
+                </label>
+                <div className="text-zinc-600">
+                  Effective: ATK {effectiveBase.atk} · CHD {effectiveBase.chd}%
+                  {effectiveBase.pen > 0 ? ` · PEN ${effectiveBase.pen}%` : ''}
+                  {effectiveBase.critRate !== selectedChar.critRateMax ? ` · Crit ${effectiveBase.critRate}%` : ''}
+                </div>
+                {heroCodexLevels.length > 0 && (
+                  <label className="flex items-center justify-between gap-2 border-t border-zinc-800/70 pt-1.5">
+                    <span className="text-zinc-400">Hero Codex <span className="text-zinc-600">(global roster bonus)</span></span>
+                    <select
+                      value={heroCodexLevel}
+                      onChange={e => setHeroCodexLevel(parseInt(e.target.value, 10))}
+                      className="rounded border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 text-[11px] font-mono text-zinc-100"
+                    >
+                      {heroCodexLevels.map(l => (
+                        <option key={l.level} value={l.level}>
+                          Lv.{l.level} (+{l.atkPct}% ATK · +{l.defPct}% DEF · +{l.hpPct}% HP)
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                )}
+              </div>
+            )}
+            {selectedChar && applicableQuirks.length > 0 && (
+              <div className="space-y-1.5 rounded bg-zinc-900/60 p-2 text-[11px]">
+                <div className="flex items-center justify-between text-zinc-400">
+                  <span className="font-semibold uppercase tracking-wider">
+                    Gift quirks <span className="text-zinc-600">({applicableQuirks.length})</span>
+                  </span>
+                  <span className="font-mono text-zinc-500">
+                    pool +{poolBonus.toFixed(1)}% · {activeQuirks.length}/{applicableQuirks.length} on
+                  </span>
+                </div>
+                <div className="max-h-64 space-y-0.5 overflow-y-auto border-t border-zinc-800/70 pt-1.5">
+                  {applicableQuirks.map(q => {
+                    const enabled = !disabledQuirkIds.has(q.nodeId)
+                    const condOK = q.effect ? conditionMatches(q.effect.requires) : true
+                    const active = enabled && condOK && q.effect?.target === 'pool' && q.effect.unit === '%'
+                    const statOnly = q.effect && q.effect.target !== 'pool'
+                    const unsupported = !q.effect
+                    return (
+                      <label
+                        key={q.nodeId}
+                        className={`flex items-start gap-2 rounded px-1 py-1 hover:bg-zinc-800/40 ${enabled ? '' : 'opacity-40'}`}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={enabled}
+                          onChange={e => {
+                            setDisabledQuirkIds(prev => {
+                              const next = new Set(prev)
+                              if (e.target.checked) next.delete(q.nodeId)
+                              else next.add(q.nodeId)
+                              return next
+                            })
+                          }}
+                          className="mt-0.5"
+                        />
+                        <div className="min-w-0 flex-1">
+                          <div className="flex flex-wrap items-center gap-1">
+                            <span className="truncate font-semibold text-zinc-300">{q.name}</span>
+                            <span className="rounded bg-zinc-800/80 px-1 font-mono text-[9px] text-zinc-500">{q.group}</span>
+                            {q.effect?.requires && (
+                              <span className="rounded bg-amber-900/30 px-1 font-mono text-[9px] text-amber-400">on {q.effect.requires}</span>
+                            )}
+                            {active && <span className="rounded bg-green-900/30 px-1 font-mono text-[9px] text-green-400">+{q.effect!.amount}% pool</span>}
+                            {enabled && !condOK && <span className="rounded bg-zinc-700/40 px-1 font-mono text-[9px] text-zinc-500">waiting</span>}
+                            {statOnly && <span className="rounded bg-blue-900/30 px-1 font-mono text-[9px] text-blue-400">{q.effect!.target} {q.effect!.amount}{q.effect!.unit}</span>}
+                            {unsupported && <span className="rounded bg-red-900/20 px-1 font-mono text-[9px] text-red-400/70">unmapped</span>}
+                          </div>
+                          <div className="truncate text-[10px] text-zinc-500" title={q.desc}>{q.desc}</div>
+                        </div>
+                      </label>
+                    )
+                  })}
+                </div>
+                <div className="border-t border-zinc-800/70 pt-1 text-[10px] text-zinc-600 leading-snug">
+                  <span className="text-blue-400">stat</span> badges are informational — the user&apos;s ATK/CHD/PEN fields already reflect those bonuses from the unlocked gift tree. Only <span className="text-green-400">pool</span> quirks are auto-added to the pool.
+                </div>
+              </div>
+            )}
             <Field label="ATK" value={atk} onChange={setAtk} />
             <Field label="Crit DMG %" value={chdPct} onChange={setChdPct} />
             <Field label="Penetration %" value={penPct} onChange={setPenPct} />
@@ -339,6 +839,75 @@ export default function DamageLabPage() {
         <section className="space-y-4">
           <div className="rounded border border-zinc-800 bg-zinc-900/40 p-4">
             <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-zinc-400">Target</h2>
+            <div className="mb-3 space-y-2 rounded border border-zinc-800/70 bg-zinc-950/30 p-2 text-sm">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-semibold uppercase tracking-wider text-zinc-500">Load from game</span>
+                {(modeLabel || stageId || monsterKey) && (
+                  <button
+                    onClick={clearTargetPicker}
+                    className="text-xs text-zinc-600 hover:text-red-400"
+                  >clear</button>
+                )}
+              </div>
+              <label className="block">
+                <span className="mb-1 block text-xs text-zinc-500">Mode ({modes.length})</span>
+                <select
+                  value={modeLabel}
+                  onChange={e => handleSelectMode(e.target.value)}
+                  className="w-full rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm text-zinc-100"
+                >
+                  <option value="">— select —</option>
+                  {modes.map(m => (
+                    <option key={m.label} value={m.label}>{m.label} ({m.stages.length})</option>
+                  ))}
+                </select>
+              </label>
+              {selectedMode && (
+                <label className="block">
+                  <span className="mb-1 block text-xs text-zinc-500">Stage ({selectedMode.stages.length})</span>
+                  <select
+                    value={stageId}
+                    onChange={e => handleSelectStage(e.target.value)}
+                    className="w-full rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm text-zinc-100"
+                  >
+                    <option value="">— select —</option>
+                    {selectedMode.stages.map(s => (
+                      <option key={s.id} value={s.id}>
+                        {s.recommendLevel > 0 ? `[Lv${s.recommendLevel}] ` : ''}{s.name}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
+              {selectedStage && selectedStage.monsters.length > 0 && (
+                <label className="block">
+                  <span className="mb-1 block text-xs text-zinc-500">Monster ({selectedStage.monsters.length})</span>
+                  <select
+                    value={monsterKey}
+                    onChange={e => handleSelectMonster(e.target.value)}
+                    className="w-full rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm text-zinc-100"
+                  >
+                    <option value="">— select —</option>
+                    {selectedStage.monsters.map(m => {
+                      const key = `${m.monsterId}@${m.level}`
+                      return (
+                        <option key={key} value={key}>
+                          {m.isBoss ? '★ ' : ''}Lv{m.level} · {m.name} ({m.element}/{m.class})
+                        </option>
+                      )
+                    })}
+                  </select>
+                </label>
+              )}
+              {selectedMonster && (
+                <div className="rounded bg-zinc-900/60 px-2 py-1.5 text-[11px] font-mono text-zinc-400">
+                  <div>Lv {selectedMonster.level} · {selectedMonster.type}{selectedMonster.subClass && selectedMonster.subClass !== 'NONE' ? ` · ${selectedMonster.subClass}` : ''}</div>
+                  <div>DEF: {selectedMonster.defAtLevel.toFixed(1)} <span className="text-zinc-600">(min {selectedMonster.defMin} / max {selectedMonster.defMax})</span></div>
+                  <div>DR: {selectedMonster.drPctAtLevel.toFixed(2)}% <span className="text-zinc-600">(raw max {selectedMonster.drMax})</span></div>
+                  <div className="text-zinc-600">ATK est: {selectedMonster.atkAtLevel.toFixed(0)}</div>
+                </div>
+              )}
+            </div>
             <div className="space-y-2 text-sm">
               <Field label="DEF" value={def} onChange={setDef} />
               <Field label="Crit DMG Reduc %" value={tgtCdmgRedPct} onChange={setTgtCdmgRedPct} />

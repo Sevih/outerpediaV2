@@ -29,6 +29,15 @@ export interface Observation {
   crit: boolean
   obs: number                 // observed damage
   note?: string
+  // Target origin — set when the target was loaded from game data (MonsterTemplet)
+  monsterId?: string
+  monsterName?: string
+  monsterLvl?: number
+  tClass?: string             // target class (Attacker/Ranger/Defender...)
+  tElement?: string           // target element
+  stageId?: string            // DungeonTemplet.ID
+  stageName?: string
+  mode?: string               // raw DungeonMode (e.g. DM_RAID_1)
 }
 
 function readStore(): Observation[] {
@@ -90,6 +99,14 @@ export async function POST(req: NextRequest) {
   if (body.class) o.class = body.class
   if (body.element) o.element = body.element
   if (body.note && body.note.trim()) o.note = body.note.trim()
+  if (body.monsterId) o.monsterId = body.monsterId
+  if (body.monsterName) o.monsterName = body.monsterName
+  if (body.monsterLvl != null) o.monsterLvl = body.monsterLvl
+  if (body.tClass) o.tClass = body.tClass
+  if (body.tElement) o.tElement = body.tElement
+  if (body.stageId) o.stageId = body.stageId
+  if (body.stageName) o.stageName = body.stageName
+  if (body.mode) o.mode = body.mode
   appendObservation(o)
   return NextResponse.json({ ok: true, observation: o })
 }
