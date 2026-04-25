@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import CharacterPortrait from '@/app/components/character/CharacterPortrait'
 import MonsterPortrait from '@/app/components/character/MonsterPortrait'
 import { computeDamage, type DamageInputs } from '@/lib/damage/formula'
@@ -978,7 +978,7 @@ export default function DamageLabPage() {
 
   // Whether a quirk's condition is satisfied by the current formula state.
   // A null `requires` (unconditional) always matches.
-  function conditionMatches(requires: QuirkEffect['requires']): boolean {
+  const conditionMatches = useCallback((requires: QuirkEffect['requires']): boolean => {
     if (!requires) return true
     if (requires === 'adv')     return elemental === 'adv'
     if (requires === 'disadv')  return elemental === 'disadv'
@@ -986,7 +986,7 @@ export default function DamageLabPage() {
     if (requires === 'crit')    return crit
     if (requires === 'boss')    return isBoss
     return false
-  }
+  }, [elemental, crit, isBoss])
 
   // Aggregate pool contributions (BT_DMG / ST_DMG_BOOST) from applicable quirks
   // whose condition currently matches. Skipped entirely when applyQuirks is off.
@@ -1003,7 +1003,7 @@ export default function DamageLabPage() {
       }
     }
     return bonus
-  }, [applyQuirks, applicableQuirks, elemental, crit, isBoss])
+  }, [applyQuirks, applicableQuirks, conditionMatches])
 
   // Boss EFF/RES debuffs from PVE Awakening_Boss_*_Down_* quirks. These apply
   // to the target monster's stats and are pushed to the monster stats endpoint
@@ -1019,7 +1019,7 @@ export default function DamageLabPage() {
       else if (q.effect.target === 'monsterRes') res += q.effect.amount
     }
     return { eff: Math.round(eff * 10), res: Math.round(res * 10) }
-  }, [applyQuirks, applicableQuirks, isBoss])
+  }, [applyQuirks, applicableQuirks, isBoss, conditionMatches])
 
   // Auto mode: fetch the validated monster stats whenever the target monster /
   // stage / level changes, then mirror them into the formula state vars

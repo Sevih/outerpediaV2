@@ -7,13 +7,13 @@ import type { CharacterIndex } from '@/types/character';
 const characters = charIndex as Record<string, CharacterIndex>;
 
 // Extra zoom to crop tightly on the face (parent overflow-hidden clips the excess)
-const FACE_ZOOM = 1.5;
+export const FACE_ZOOM = 1.5;
 
 // Default: face at ~18% from top
-const DEFAULT_CROP = 'center 18%';
+export const DEFAULT_CROP = 'center 18%';
 
 // Characters with lower face positions
-const CROP_OVERRIDES: Record<string, string> = {
+export const CROP_OVERRIDES: Record<string, string> = {
   '2000072': 'center 22%', // Edelweiss
   '2000075': 'center 22%', // Demiurge Vlada
   '2000086': 'center 22%', // Kitsune Tamamo-no-Mae

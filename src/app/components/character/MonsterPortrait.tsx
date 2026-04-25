@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import type { ElementType, ClassType } from '@/types/enums';
+import { FACE_ZOOM, DEFAULT_CROP, CROP_OVERRIDES } from './CharacterPortrait';
 
 const SIZES = {
   xxs: { px: 20, cls: 'h-5 w-5',   iconSize: 0,  starSize: 0 },
@@ -94,6 +95,15 @@ export default function MonsterPortrait({
   const alt = name ?? faceIconId;
   const bg = rarityBg(type);
 
+  // IDs starting with '2' are character models reused as monsters — there is
+  // no MT_2XXXXXX face icon, so we fall back to the CT_ character portrait
+  // with the same zoom/crop convention used by CharacterPortrait.
+  const isCharacterModel = faceIconId.startsWith('2');
+  const portraitSrc = isCharacterModel
+    ? `/images/characters/portrait/CT_${faceIconId}.webp`
+    : `/images/characters/boss/portrait/MT_${faceIconId}.webp`;
+  const cropPosition = CROP_OVERRIDES[faceIconId] ?? DEFAULT_CROP;
+
   return (
     <div className={`relative overflow-hidden rounded-lg ${s.cls} ${className}`}>
       <Image
@@ -108,10 +118,11 @@ export default function MonsterPortrait({
       {!errored ? (
         <Image
           fill
-          sizes={`${s.px}px`}
-          src={`/images/characters/boss/portrait/MT_${faceIconId}.webp`}
+          sizes={`${isCharacterModel ? Math.round(s.px * FACE_ZOOM) : s.px}px`}
+          src={portraitSrc}
           alt={alt}
           className="object-cover"
+          style={isCharacterModel ? { objectPosition: cropPosition, transform: `scale(${FACE_ZOOM})` } : undefined}
           onError={() => setErrored(true)}
         />
       ) : (
