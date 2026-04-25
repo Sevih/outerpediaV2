@@ -4,21 +4,44 @@ import path from 'path'
 
 const STORE_PATH = path.join(process.cwd(), 'data', 'admin', 'damage-lab-observations.jsonl')
 
+// Full no-gear stat block — same shape on caster (CharacterTemplet final) and
+// target (MonsterTemplet at level + dungeon advantage). Percent fields encoded
+// as % (e.g. 188 = 188%, not 1.88).
+export interface StatBlock {
+  atk: number
+  def: number
+  hp: number
+  spd: number
+  chc: number       // crit chance %
+  chd: number       // crit dmg %
+  pen: number       // penetration %
+  dmgInc: number    // damage increase %
+  dmgRed: number    // damage reduction %
+  eff: number       // effectiveness (flat)
+  res: number       // resilience (flat)
+}
+
 export interface Observation {
   id: string
   ts: string                  // ISO timestamp
   char: string                // character name
   charId: string              // character ID
-  class?: string              // attacker class (Attacker/Mage/Ranger/Defender/Priest)
+  class?: string              // attacker class (Striker/Mage/Ranger/Defender/Healer)
   element?: string            // attacker element (Fire/Water/Earth/Light/Dark)
   slot: 'S1' | 'S2' | 'S3'
-  df: number                  // damage factor (skill lvl 5)
-  // attacker
+  skillLevel?: number         // 1..5 (the DamageFactor index that was used)
+  df: number                  // damage factor (the actual numeric value at skillLevel)
+  // attacker — flat fields here are the EFFECTIVE values fed to the formula:
+  //   atk    = post-scaling effective ATK (SWAP replaces, ADD adds on top)
+  //   dmgInc = stat-typed dmgInc + conditional pool quirks (BT_DMG)
+  // The full no-gear caster block lives in `caster`; SWAP/ADD scaling info too,
+  // so observations stay reproducible if the formula evolves.
   atk: number
   chd: number                 // crit damage %
-  dmgInc: number              // damage increase %
+  dmgInc: number              // effective damage increase % (stat + pool quirks)
   pen: number                 // penetration %
-  // target
+  // target — flat fields are the values fed to the formula (incl. dungeon
+  // advantage and caster-side debuff). Full block + metadata in `target`.
   def: number
   tCdmgRed: number            // target crit dmg reduction %
   tDmgRed: number             // target dmg reduction %
@@ -33,11 +56,36 @@ export interface Observation {
   monsterId?: string
   monsterName?: string
   monsterLvl?: number
-  tClass?: string             // target class (Attacker/Ranger/Defender...)
+  monsterType?: string        // CT_BOSS_MONSTER / CT_NAMED_MONSTER / CT_MONSTER / ...
+  tClass?: string             // target class (Striker/Ranger/Defender...)
   tElement?: string           // target element
   stageId?: string            // DungeonTemplet.ID
   stageName?: string
   mode?: string               // raw DungeonMode (e.g. DM_RAID_1)
+  // Full caster snapshot — raw no-gear stats (no scaling applied), config used
+  // to compute them, and the scaling rule the character has. Optional for
+  // backward compat with pre-snapshot observations.
+  caster?: {
+    stats: StatBlock              // raw API stats at the time
+    transcendStar: number
+    codexLevel: number
+    applyQuirks: boolean
+    effectiveAtk: number          // value actually fed to the formula
+    poolBonus: number             // sum of conditional BT_DMG quirks (% added to dmgInc)
+    scaling?: {
+      swap?: { stat: string; valuePerMille: number }
+      add?:  { stat: string; valuePerMille: number }[]
+    }
+  }
+  // Full target snapshot — stats post dungeon-advantage and caster debuff,
+  // plus the per-mille adjustments themselves so we can recompute the raw
+  // monster stats if needed.
+  target?: {
+    stats: StatBlock
+    type: string                  // CT_*_MONSTER
+    advantageRate?: { atk: number; def: number; hp: number; spd: number }    // per-mille, signed
+    casterDebuff?: { eff: number; res: number }                                // per-mille, signed
+  }
 }
 
 function readStore(): Observation[] {
@@ -98,15 +146,19 @@ export async function POST(req: NextRequest) {
   }
   if (body.class) o.class = body.class
   if (body.element) o.element = body.element
+  if (body.skillLevel != null) o.skillLevel = body.skillLevel
   if (body.note && body.note.trim()) o.note = body.note.trim()
   if (body.monsterId) o.monsterId = body.monsterId
   if (body.monsterName) o.monsterName = body.monsterName
   if (body.monsterLvl != null) o.monsterLvl = body.monsterLvl
+  if (body.monsterType) o.monsterType = body.monsterType
   if (body.tClass) o.tClass = body.tClass
   if (body.tElement) o.tElement = body.tElement
   if (body.stageId) o.stageId = body.stageId
   if (body.stageName) o.stageName = body.stageName
   if (body.mode) o.mode = body.mode
+  if (body.caster) o.caster = body.caster
+  if (body.target) o.target = body.target
   appendObservation(o)
   return NextResponse.json({ ok: true, observation: o })
 }

@@ -139,7 +139,15 @@ function computeEffect(buffType: string, statType: string, applyingType: string,
   }
 
   // BT_DMG without specific stat → adds to damage pool (per-mille additive %).
+  // Skill-chain bonuses (Awakening_Chain_Dmg_*) declare BuffConditionType=NONE
+  // but only fire during a Skill Chain — the engine resolves the context via
+  // the buff name pattern, not via BuffConditionType. Same convention as the
+  // Awakening_Boss_*_Down_* boss-debuff buffs handled below. Since the
+  // damage-lab models individual skill hits (not chains), we drop these
+  // entirely. Symptom that surfaced this: 4 chain nodes summed to +100% pool
+  // and broke a 1.000 ratio → 0.57 on Caren obs.
   if (buffType === 'BT_DMG' && statType === 'ST_NONE') {
+    if (/^Awakening_Chain_Dmg_/.test(buffId)) return null
     return { target: 'pool', unit: '%', amount: rawValue / 10, requires }
   }
 

@@ -41,14 +41,20 @@ function normalizeElement(e?: string | null): string | null {
 }
 function normalizeClass(c?: string | null): string | null {
   if (!c) return null;
-  if (c.startsWith('CCT_')) {
-    const map: Record<string, string> = {
-      CCT_ATTACKER: 'Attacker', CCT_MAGE: 'Mage', CCT_RANGER: 'Ranger',
-      CCT_DEFENDER: 'Defender', CCT_PRIEST: 'Priest', CCT_HEALER: 'Healer',
-    };
-    return map[c] ?? null;
-  }
-  return c;
+  // Map both raw datamine enums (CCT_*) and human-friendly labels onto the
+  // class-icon token. 'Attacker' is the in-game monster label (preserved as
+  // text everywhere else in the UI) but the icon file is CM_Class_Striker.webp
+  // — same convention the project uses for characters. 'Priest' folds into
+  // 'Healer' for the same reason.
+  const map: Record<string, string> = {
+    CCT_ATTACKER: 'Striker', Attacker: 'Striker',
+    CCT_MAGE: 'Mage',
+    CCT_RANGER: 'Ranger',
+    CCT_DEFENDER: 'Defender',
+    CCT_PRIEST: 'Healer', Priest: 'Healer',
+    CCT_HEALER: 'Healer',
+  };
+  return map[c] ?? c;
 }
 
 // In-game slot rarity background driven by monster Type (not BasicStar — that
@@ -131,7 +137,12 @@ export default function MonsterPortrait({
             </div>
           )}
           {cls && (
-            <div className="absolute top-0.5 left-0.5 z-10">
+            // Stacked under the element icon (top-right column). gap = iconSize + 2px
+            // so the two icons sit flush against each other regardless of size.
+            <div
+              className="absolute right-0.5 z-10"
+              style={{ top: s.iconSize + 4 }}
+            >
               <Image
                 src={`/images/ui/class/CM_Class_${cls}.webp`}
                 alt={cls}
@@ -145,7 +156,7 @@ export default function MonsterPortrait({
       )}
 
       {isBoss && (
-        <div className="absolute top-0.5 left-1/2 z-10 -translate-x-1/2 rounded bg-red-900/80 px-1 text-[9px] font-bold leading-tight text-red-100 drop-shadow-md">
+        <div className="absolute top-0.5 left-0.5 z-10 rounded bg-red-900/80 px-1 text-[9px] font-bold leading-tight text-red-100 drop-shadow-md">
           BOSS
         </div>
       )}

@@ -51,6 +51,9 @@ interface CharacterCurated {
   Class?: string
   SubClass?: string
   transcend?: Record<string, string>  // keys like '3', '4_1', '4_2', '5_1', '5_2', '5_3', '6' with localized variants (suffix _jp/_kr/_zh)
+  // Set on core-fusion derivatives (ID 2700xxx). Their S1/S2 icons live under the
+  // *original* character's ID — only S3 (Ultimate) uses the fusion's own ID.
+  originalCharacter?: string
 }
 
 export type TranscendLevel = '0' | '3' | '4_1' | '4_2' | '5_1' | '5_2' | '5_3' | '6'
@@ -75,6 +78,10 @@ interface CharacterEntry {
   element: string
   class: string
   subClass: string
+  // Core-fusion source character (ID 2000xxx). Used by the UI to resolve S1/S2
+  // skill icons, which live under the original character's ID rather than the
+  // fusion's own (2700xxx). Undefined for non-fusion characters.
+  originalCharacter?: string
   basicStar: number                   // 1, 2, or 3 — drives the transcend level progression in the UI
   // Base stats at lvl 100 (Max values from CharacterTemplet, no gear/evolution/awakening bonuses)
   atkMax: number
@@ -403,6 +410,7 @@ export async function GET() {
       element: curated.Element ?? '',
       class: curated.Class ?? '',
       subClass: curated.SubClass ?? '',
+      originalCharacter: curated.originalCharacter,
       basicStar: parseInt(row.BasicStar ?? '0', 10) || 0,
       atkMax: parseInt(row.Atk_Max ?? '0', 10) || 0,
       defMax: parseInt(row.Def_Max ?? '0', 10) || 0,

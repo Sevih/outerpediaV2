@@ -119,6 +119,9 @@ interface CharacterEntry {
   element: string
   class: string
   subClass: string
+  // Core-fusion source character (ID 2000xxx). For these derivatives, S1/S2 icons
+  // live under the original ID; only S3 (Ultimate) uses the fusion's own ID.
+  originalCharacter?: string
   basicStar: number                   // 1 / 2 / 3 — drives transcend progression
   atkMax: number                      // lvl 100 base (no gear/evo/awaken)
   defMax: number
@@ -214,6 +217,13 @@ interface QuirkEntry {
   effect: QuirkEffect | null
 }
 
+// Mirror of the server-side StatBlock — full no-gear stat snapshot.
+interface ObsStatBlock {
+  atk: number; def: number; hp: number; spd: number
+  chc: number; chd: number; pen: number
+  dmgInc: number; dmgRed: number
+  eff: number; res: number
+}
 interface Observation {
   id: string
   ts: string
@@ -222,10 +232,14 @@ interface Observation {
   class?: string
   element?: string
   slot: 'S1' | 'S2' | 'S3'
+  skillLevel?: number       // 1..5 — DamageFactor index used
   df: number
+  // Flat formula-fed values. `atk` is the EFFECTIVE ATK after SWAP/ADD scaling
+  // (so SWAP chars don't record 0). `dmgInc` is stat dmgInc + conditional pool
+  // quirks (BT_DMG) — what computeDamage actually saw.
   atk: number
   chd: number
-  dmgInc: number            // full additive pool % (gear + passives + quirks user believes)
+  dmgInc: number
   pen: number
   def: number
   tCdmgRed: number
@@ -240,11 +254,34 @@ interface Observation {
   monsterId?: string
   monsterName?: string
   monsterLvl?: number
+  monsterType?: string
   tClass?: string
   tElement?: string
   stageId?: string
   stageName?: string
   mode?: string
+  // Full caster snapshot — raw API stats + scaling rule + the value actually
+  // fed to the formula. Lets us reproduce the calc when the formula evolves.
+  caster?: {
+    stats: ObsStatBlock
+    transcendStar: number
+    codexLevel: number
+    applyQuirks: boolean
+    effectiveAtk: number
+    poolBonus: number
+    scaling?: {
+      swap?: { stat: string; valuePerMille: number }
+      add?:  { stat: string; valuePerMille: number }[]
+    }
+  }
+  // Full target snapshot — stats post-advantage and post-debuff, plus the rates
+  // themselves so we can reverse to raw monster stats.
+  target?: {
+    stats: ObsStatBlock
+    type: string
+    advantageRate?: { atk: number; def: number; hp: number; spd: number }
+    casterDebuff?: { eff: number; res: number }
+  }
 }
 
 interface StageMonster {
@@ -424,7 +461,8 @@ const SLOT_LABELS: Record<SlotKey, SlotTag> = { first: 'S1', second: 'S2', ultim
 
 const NUMBER_INPUT = 'w-full rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-right text-sm text-zinc-100 focus:border-blue-500 focus:outline-none'
 
-function num(v: string, fallback = 0): number {
+function num(v: string | undefined | null, fallback = 0): number {
+  if (v == null) return fallback
   const n = parseFloat(v.replace(',', '.'))
   return Number.isFinite(n) ? n : fallback
 }
@@ -631,13 +669,17 @@ export default function DamageLabPage() {
   }, [selectedChar, transcendStar, heroCodexLevel, applyQuirks])
 
   const effectiveBase = useMemo(() => {
-    if (!apiStats?.final) return { atk: 0, def: 0, hp: 0, spd: 0, chd: 0, pen: 0, critRate: 0 }
+    if (!apiStats?.final) return { atk: 0, def: 0, hp: 0, spd: 0, chd: 0, pen: 0, critRate: 0, dmgInc: 0 }
     const f = apiStats.final
     return {
       atk: f.atk, def: f.def, hp: f.hp, spd: f.spd,
       chd: Math.round(f.chd * 10) / 10,
       pen: Math.round(f.pen * 10) / 10,
       critRate: Math.round(f.chc * 10) / 10,
+      // Caster's stat-typed DMG↑ (gear / EE / Awakening_*_DMG_UP). Auto-feeds
+      // dmgIncPct; conditional BT_DMG quirks are added separately via poolBonus
+      // — different buff types, no double-count.
+      dmgInc: Math.round(f.dmgInc * 100) / 100,
     }
   }, [apiStats])
 
@@ -679,7 +721,7 @@ export default function DamageLabPage() {
   useEffect(() => {
     if (!formHydrated.current) return
     if (!selectedChar || !apiStats) return
-    const key = `${selectedChar.id}/${transcendStar}/${heroCodexLevel}/${effectiveBase.atk}/${effectiveBase.chd}/${effectiveBase.pen}`
+    const key = `${selectedChar.id}/${transcendStar}/${heroCodexLevel}/${effectiveBase.atk}/${effectiveBase.chd}/${effectiveBase.pen}/${effectiveBase.dmgInc}`
     const prev = prevAtkKeyRef.current
     prevAtkKeyRef.current = key
     if (prev === null) return
@@ -687,6 +729,7 @@ export default function DamageLabPage() {
     setAtk(String(effectiveBase.atk))
     setChdPct(String(effectiveBase.chd))
     setPenPct(String(effectiveBase.pen))
+    setDmgIncPct(String(effectiveBase.dmgInc))
     // Refresh only the keys this char actually uses; preserve unrelated keys
     // (so a user-edited DEF for one char isn't wiped when switching to a char
     // that doesn't use DEF).
@@ -1004,11 +1047,29 @@ export default function DamageLabPage() {
     return () => { cancelled = true }
   }, [targetMode, selectedMonster, selectedStage, targetLevel, monsterDebuffs])
 
+  // Effective ATK fed to the formula, accounting for the character's scaling:
+  //   - SWAP (BT_SWAP_STAT_ATTACK) replaces ATK with stat × (valuePerMille/1000).
+  //     The ATK input is hidden in the UI for these chars, so num(atk) would be 0.
+  //   - ADD  (BT_DMG_OWNER_STAT)    adds stat × (valuePerMille/1000) on top.
+  // Each scaling entry references its own stat, pulled from the secondary
+  // `extraScale` map (auto-filled from /api/admin/characters/:id/stats).
+  const effectiveAtk = useMemo(() => {
+    if (!selectedChar) return num(atk)
+    const sc = selectedChar.scaling
+    let base = sc.swap
+      ? num(extraScale[sc.swap.stat]) * sc.swap.valuePerMille / 1000
+      : num(atk)
+    for (const a of sc.add) {
+      base += num(extraScale[a.stat]) * a.valuePerMille / 1000
+    }
+    return base
+  }, [selectedChar, atk, extraScale])
+
   const computation = useMemo(() => {
     if (damageFactor == null) return null
     const effectiveDmgInc = num(dmgIncPct) + poolBonus
     const inputs: DamageInputs = {
-      atk: num(atk),
+      atk: effectiveAtk,
       damageFactor,
       chdPct: num(chdPct),
       penPct: num(penPct),
@@ -1026,7 +1087,7 @@ export default function DamageLabPage() {
       ratioDivisor: num(ratioDivisor, 1000),
     }
     return computeDamage(inputs)
-  }, [atk, damageFactor, chdPct, penPct, dmgIncPct, poolBonus, crit, def, tgtCdmgRedPct, tgtDmgRedPct, isBoss, elemental, C, ratioDivisor])
+  }, [effectiveAtk, damageFactor, chdPct, penPct, dmgIncPct, poolBonus, crit, def, tgtCdmgRedPct, tgtDmgRedPct, isBoss, elemental, C, ratioDivisor])
 
   const observedNum = observed.trim() === '' ? null : num(observed)
   const ratio = computation && observedNum != null && computation.calculated > 0
@@ -1043,16 +1104,62 @@ export default function DamageLabPage() {
   async function saveObservation() {
     if (!selectedChar || damageFactor == null || observedNum == null) return
     setSaveStatus('saving')
+
+    // Effective values fed to the formula (mirror what `computation` used):
+    //   - atk after SWAP/ADD scaling
+    //   - dmgInc after pool-quirk pile-up
+    // Stored in the flat fields so existing recompute logic keeps working;
+    // the raw stats live in `caster`/`target` for full reproducibility.
+    const effDmgInc = num(dmgIncPct) + poolBonus
+
+    const sc = selectedChar.scaling
+    const casterBlock = apiStats?.final ? {
+      stats: {
+        atk: apiStats.final.atk, def: apiStats.final.def,
+        hp:  apiStats.final.hp,  spd: apiStats.final.spd,
+        chc: apiStats.final.chc, chd: apiStats.final.chd,
+        pen: apiStats.final.pen,
+        dmgInc: apiStats.final.dmgInc, dmgRed: apiStats.final.dmgRed,
+        eff: apiStats.final.eff, res: apiStats.final.res,
+      },
+      transcendStar,
+      codexLevel: heroCodexLevel,
+      applyQuirks,
+      effectiveAtk,
+      poolBonus,
+      ...(sc.swap || sc.add.length > 0 ? {
+        scaling: {
+          ...(sc.swap ? { swap: { stat: sc.swap.stat, valuePerMille: sc.swap.valuePerMille } } : {}),
+          ...(sc.add.length > 0 ? { add: sc.add.map(a => ({ stat: a.stat, valuePerMille: a.valuePerMille })) } : {}),
+        },
+      } : {}),
+    } : undefined
+
+    const targetBlock = apiMonsterStats?.final && selectedMonster ? {
+      stats: {
+        atk: apiMonsterStats.final.atk, def: apiMonsterStats.final.def,
+        hp:  apiMonsterStats.final.hp,  spd: apiMonsterStats.final.spd,
+        chc: apiMonsterStats.final.chc, chd: apiMonsterStats.final.chd,
+        pen: apiMonsterStats.final.pen,
+        dmgInc: apiMonsterStats.final.dmgInc, dmgRed: apiMonsterStats.final.dmgRed,
+        eff: apiMonsterStats.final.eff, res: apiMonsterStats.final.res,
+      },
+      type: selectedMonster.type,
+      advantageRate: apiMonsterStats.meta.advantageRate,
+      casterDebuff: apiMonsterStats.meta.casterDebuff,
+    } : undefined
+
     const payload: Omit<Observation, 'id' | 'ts'> = {
       char: selectedChar.name,
       charId: selectedChar.id,
       class: selectedChar.class,
       element: selectedChar.element,
       slot: SLOT_LABELS[slot],
+      skillLevel,
       df: damageFactor,
-      atk: num(atk),
+      atk: effectiveAtk,
       chd: num(chdPct),
-      dmgInc: num(dmgIncPct),
+      dmgInc: effDmgInc,
       pen: num(penPct),
       def: num(def),
       tCdmgRed: num(tgtCdmgRedPct),
@@ -1067,6 +1174,7 @@ export default function DamageLabPage() {
         monsterId: selectedMonster.monsterId,
         monsterName: selectedMonster.name,
         monsterLvl: selectedMonster.level,
+        monsterType: selectedMonster.type,
         tClass: selectedMonster.class,
         tElement: selectedMonster.element,
       } : {}),
@@ -1075,6 +1183,8 @@ export default function DamageLabPage() {
         stageName: selectedStage.name,
       } : {}),
       ...(selectedMode ? { mode: selectedMode.mode } : {}),
+      ...(casterBlock ? { caster: casterBlock } : {}),
+      ...(targetBlock ? { target: targetBlock } : {}),
     }
     try {
       const res = await fetch('/api/admin/damage-lab/observations', {
@@ -1355,8 +1465,13 @@ export default function DamageLabPage() {
                     // Skill_{First|Second|Ultimate}_{charId}.webp — naming convention
                     // shared with the in-game UI. Falls back to a label-only button
                     // when no character is picked yet.
+                    // Core-fusion derivatives (ID 2700xxx) reuse the *original* char's
+                    // S1/S2 icons; only S3 (Ultimate) uses their own ID.
                     const slotName = s === 'first' ? 'First' : s === 'second' ? 'Second' : 'Ultimate'
-                    const iconSrc = selectedChar ? `/images/characters/skills/Skill_${slotName}_${selectedChar.id}.webp` : null
+                    const iconCharId = selectedChar
+                      ? (s !== 'ultimate' && selectedChar.originalCharacter ? selectedChar.originalCharacter : selectedChar.id)
+                      : null
+                    const iconSrc = iconCharId ? `/images/characters/skills/Skill_${slotName}_${iconCharId}.webp` : null
                     const active = slot === s
                     return (
                       <button
