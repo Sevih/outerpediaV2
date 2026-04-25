@@ -47,7 +47,7 @@ interface PersistedForm {
   atk: string; chdPct: string; penPct: string; dmgIncPct: string
   def: string; tgtCdmgRedPct: string; tgtDmgRedPct: string
   elemental: 'none' | 'adv' | 'disadv'
-  isBoss: boolean; quirksDisabled: boolean
+  isBoss: boolean
   slot: 'first' | 'second' | 'ultimate'; crit: boolean
   skillLevel?: number
   note: string
@@ -516,7 +516,6 @@ export default function DamageLabPage() {
   // Metadata tags (NOT used by formula — just attached to observation for later analysis)
   const [elemental, setElemental] = useState<'none' | 'adv' | 'disadv'>('none')
   const [isBoss, setIsBoss] = useState(false)
-  const [quirksDisabled, setQuirksDisabled] = useState(false)
 
   // Skill — slot picks first/second/ultimate, skillLevel picks 1..5 (the
   // DamageFactor used by the formula scales with skillLevel).
@@ -568,7 +567,6 @@ export default function DamageLabPage() {
         if (p.tgtDmgRedPct != null) setTgtDmgRedPct(p.tgtDmgRedPct)
         if (p.elemental != null) setElemental(p.elemental)
         if (p.isBoss != null) setIsBoss(p.isBoss)
-        if (p.quirksDisabled != null) setQuirksDisabled(p.quirksDisabled)
         if (p.slot != null) setSlot(p.slot)
         if (p.crit != null) setCrit(p.crit)
         if (typeof p.skillLevel === 'number' && p.skillLevel >= 1 && p.skillLevel <= 5) setSkillLevel(p.skillLevel)
@@ -594,7 +592,7 @@ export default function DamageLabPage() {
     const p: PersistedForm = {
       characterId, atk, chdPct, penPct, dmgIncPct,
       def, tgtCdmgRedPct, tgtDmgRedPct, elemental,
-      isBoss, quirksDisabled,
+      isBoss,
       slot, crit, skillLevel, note, C, ratioDivisor,
       modeLabel, stageId, monsterKey,
       transcendStar, applyQuirks,
@@ -605,7 +603,7 @@ export default function DamageLabPage() {
     try { localStorage.setItem(LS_FORM_KEY, JSON.stringify(p)) } catch { /* quota etc. */ }
   }, [characterId, atk, chdPct, penPct, dmgIncPct,
       def, tgtCdmgRedPct, tgtDmgRedPct, elemental,
-      isBoss, quirksDisabled,
+      isBoss,
       slot, crit, skillLevel, note, C, ratioDivisor,
       modeLabel, stageId, monsterKey,
       transcendStar, applyQuirks, heroCodexLevel, extraScale,
@@ -881,14 +879,20 @@ export default function DamageLabPage() {
     setElemental(detectElementRelation(srcElement, tgtElement))
   }, [selectedChar, selectedMonster])
 
-  // When the user picks a monster, auto-fill DEF / DR / isBoss from the stages
-  // route's pre-computed values. In auto mode the API fetch below will then
-  // overwrite these with the validated /api/admin/monsters/:id/stats output.
+  // When the user picks a monster, set the target level (used by the API
+  // fetch below as a query param). In MANUAL mode we also seed DEF/DR/isBoss
+  // from the stages route's pre-computed values so the user has something
+  // sensible to edit. In AUTO mode we deliberately skip those — the API fetch
+  // overwrites them anyway with the post-advantage values, and writing twice
+  // creates a race where a fast F5 (or save) between the sync write and the
+  // async API resolve persists the stage-precompute (pre-advantage) values
+  // instead of the API's correct ones.
   function applyMonster(m: StageMonster) {
+    setTargetLevel(m.level)
+    if (targetMode === 'auto') return
     setDef(m.defAtLevel.toFixed(4))
     setTgtDmgRedPct(m.drPctAtLevel.toFixed(4))
     setIsBoss(m.isBoss)
-    setTargetLevel(m.level)
   }
 
   function handleSelectCategory(category: string) {
@@ -1028,6 +1032,10 @@ export default function DamageLabPage() {
   // Boss EFF/RES debuffs from PVE quirks ride along as effDebuff/resDebuff.
   useEffect(() => {
     if (targetMode !== 'auto') { setApiMonsterStats(null); return }
+    // Force CDMG RED to 0 as soon as we enter auto mode (regardless of monster
+    // selection). Monsters don't have this stat and any stale manual value
+    // would otherwise persist into auto-mode formula calls.
+    setTgtCdmgRedPct('0')
     if (!selectedMonster) { setApiMonsterStats(null); return }
     const params = new URLSearchParams({ level: String(targetLevel) })
     if (selectedStage?.id) params.set('dungeonId', selectedStage.id)
@@ -1042,10 +1050,18 @@ export default function DamageLabPage() {
         setDef(data.final.def.toFixed(4))
         setTgtDmgRedPct(data.final.dmgRed.toFixed(4))
         setIsBoss(data.meta.isBoss)
+        // Monsters have no CDMG_REDUCE stat in MonsterTemplet — force to 0 in auto
+        // mode. Otherwise a stale value typed in manual mode persists silently
+        // (the input is hidden in auto so the user has no way to clear it).
+        setTgtCdmgRedPct('0')
       })
       .catch(() => { if (!cancelled) setApiMonsterStats(null) })
     return () => { cancelled = true }
-  }, [targetMode, selectedMonster, selectedStage, targetLevel, monsterDebuffs])
+    // monsterDebuffs is a fresh-identity object on every render but the values
+    // (eff/res) only change when applyQuirks/applicableQuirks/isBoss changes.
+    // Depend on the primitive values directly to avoid refetching on each
+    // toggle of a condition that doesn't actually move the numbers.
+  }, [targetMode, selectedMonster, selectedStage, targetLevel, monsterDebuffs.eff, monsterDebuffs.res])
 
   // Effective ATK fed to the formula, accounting for the character's scaling:
   //   - SWAP (BT_SWAP_STAT_ATTACK) replaces ATK with stat × (valuePerMille/1000).
@@ -1166,7 +1182,6 @@ export default function DamageLabPage() {
       tDmgRed: num(tgtDmgRedPct),
       elem: elemental,
       isBoss,
-      quirksDisabled,
       crit,
       obs: observedNum,
       ...(note.trim() ? { note: note.trim() } : {}),
@@ -1215,10 +1230,13 @@ export default function DamageLabPage() {
     autoSaveTimer.current = setTimeout(() => { saveObservation() }, AUTO_SAVE_DEBOUNCE_MS)
     return () => { if (autoSaveTimer.current) clearTimeout(autoSaveTimer.current) }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [observed, characterId, slot, crit, atk, chdPct,
+  }, [observed, characterId, slot, skillLevel, crit, atk, chdPct,
       penPct, dmgIncPct,
       def, tgtCdmgRedPct, tgtDmgRedPct, elemental,
-      isBoss, quirksDisabled, note])
+      isBoss, note,
+      // Config that affects the saved snapshot (caster / target blocks)
+      transcendStar, heroCodexLevel, applyQuirks, extraScale,
+      targetMode, targetLevel, monsterKey, stageId])
 
   async function deleteObservation(id: string) {
     await fetch(`/api/admin/damage-lab/observations?id=${encodeURIComponent(id)}`, { method: 'DELETE' })
@@ -1769,10 +1787,6 @@ export default function DamageLabPage() {
                   <input type="checkbox" checked={isBoss} onChange={e => setIsBoss(e.target.checked)} />
                   <span className="text-xs text-zinc-500">Boss-type target (auto-applies +30% quirk)</span>
                 </label>
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" checked={quirksDisabled} onChange={e => setQuirksDisabled(e.target.checked)} />
-                  <span className="text-xs text-zinc-500">Quirks disabled on target (metadata tag, not yet used)</span>
-                </label>
               </div>
             )}
           </div>
@@ -1788,8 +1802,9 @@ export default function DamageLabPage() {
               <Field label="Ratio divisor (DF / x)" value={ratioDivisor} onChange={setRatioDivisor} />
             </div>
             <div className="mt-3 text-xs text-zinc-500 border-t border-zinc-800 pt-3 leading-relaxed">
-              Formula: <span className="font-mono text-zinc-400">Dmg = (DF/{ratioDivisor}) × ATK × (1 + pool/100) × {C}/({C} + (1−PEN)×DEF) × (1 − targetDR/100) × adv_mult</span>
-              <br/>pool = DMG Inc + (+30 if boss) + (+50 if adv) + (CHD−CDmgRed−100 if crit). adv_mult = 1.20 if adv, else 1.0.
+              Formula: <span className="font-mono text-zinc-400">Dmg = (DF/{ratioDivisor}) × ATK × (1 + pool/100) × {C}/({C} + (1−PEN)×DEF) × (1 − DR×dr_factor/100) × elem_mult</span>
+              <br/>pool = DMG Inc + (+30 if boss) + (CHD−CDmgRed−100 if crit). Adv +50% add comes from Awakening_Element_Dmg quirk via poolBonus.
+              <br/>dr_factor = 0.5 if crit, else 0.75 if boss, else 1.0.  elem_mult = 1.20 if adv, 0.80 if disadv, else 1.0.
             </div>
           </div>
 
@@ -1889,7 +1904,6 @@ export default function DamageLabPage() {
                   <th className="px-2 py-2 text-center border-l border-zinc-800">Crit</th>
                   <th className="px-2 py-2 text-center">Elem</th>
                   <th className="px-2 py-2 text-center">Boss</th>
-                  <th className="px-2 py-2 text-center">Q.off</th>
                   <th className="px-2 py-2 text-right border-l border-zinc-800">Observed</th>
                   <th className="px-2 py-2 text-right">Calc (live)</th>
                   <th className="px-2 py-2 text-right">Obs/Calc</th>
@@ -1916,7 +1930,6 @@ export default function DamageLabPage() {
                       <td className="px-2 py-1.5 text-center border-l border-zinc-800/50">{o.crit ? '✓' : ''}</td>
                       <td className="px-2 py-1.5 text-center">{o.elem === 'adv' ? '+' : o.elem === 'disadv' ? '−' : '='}</td>
                       <td className="px-2 py-1.5 text-center">{o.isBoss ? '✓' : ''}</td>
-                      <td className="px-2 py-1.5 text-center text-amber-400">{o.quirksDisabled ? '✓' : ''}</td>
                       <td className="px-2 py-1.5 text-right font-mono text-zinc-100 border-l border-zinc-800/50">{o.obs}</td>
                       <td className="px-2 py-1.5 text-right font-mono">{calc.toFixed(0)}</td>
                       <td className={`px-2 py-1.5 text-right font-mono ${good ? 'text-green-400' : medium ? 'text-amber-400' : 'text-red-400'}`}>

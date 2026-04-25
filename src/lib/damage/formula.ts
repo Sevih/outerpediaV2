@@ -1,8 +1,8 @@
 /**
  * Outerplane damage formula — empirically validated on Noa, Caren, Kanon,
- * Veronica (Core Fusion), Rin across 26 observations covering ATK / DEF SWAP
- * / HP SWAP scaling, neutral / disadv elements, regular / NAMED / BOSS
- * targets, and crit / no-crit on each.
+ * Veronica (Core Fusion), Rin across 31 observations covering ATK / DEF SWAP
+ * / HP SWAP scaling, neutral / adv / disadv elements, regular / NAMED / BOSS
+ * targets, and crit / no-crit on each. Final residual ±0.05% (float precision noise).
  *
  *   Dmg = (DF/1000) × ATK × (1 + pool/100) × C/(C + (1-PEN) × DEF) × (1 - target_DR_eff/100) × adv_mult
  *
@@ -17,7 +17,7 @@
  *     - boss & no crit            → 0.75 ("boss target absorbs DR at 75%")
  *     - else                      → 1.0
  *
- * VALIDATED (all 26 obs match ±0.2% with this model):
+ * VALIDATED (all 31 obs match ±0.05% with this model):
  *   - Skeleton: Dmg = skill × ATK × pool_mod × mit × DR_eff × adv_mult
  *   - C = 1000, skill = DF / 1000
  *   - Boss quirk: +30% additive in pool (sourced from Awakening_Boss_Dmg_10 PVE node)
@@ -38,11 +38,15 @@
  *               they declare BuffConditionType=NONE but the engine resolves their
  *               context via the buff name pattern, like Awakening_Boss_*_Down_*.
  *
+ *   - Mage class offensive quirk: +12% additive — sourced from MAGE_PASSIVE_3_10 quirk
+ *               (JOB02 MAIN node) via poolBonus, NOT hardcoded. Same convention as
+ *               advAddBonus. The hardcoded `mageBonus` defaults to 0 to avoid double-count.
+ *   - Striker (= "Attacker" in game data) has NO offense quirk (verified on Noa + Rin + Kanon).
+ *
  * TO VALIDATE:
- *   - Mage class offensive quirk: +12% additive (validated on Alice — separate from this dataset)
- *   - Striker (= "Attacker" in game data) has NO offense quirk (validated on Noa + Rin + Kanon)
  *   - Other class quirks (Ranger, Priest, Defender) — no test data yet
  *   - Character-specific passives (e.g. "+X% dmg vs <element>") — no test data yet
+ *   - critAdd clamp at 0 when CHD < 100 + cdmgRed — no empirical case below the floor yet
  */
 
 export type CharClass = 'Attacker' | 'Mage' | 'Ranger' | 'Defender' | 'Priest' | 'Striker' | string
@@ -75,7 +79,9 @@ export interface DamageInputs {
                               //   removing the hardcoded +50 brought it to 0.9997).
   advMult?: number            // default 1.20 (intrinsic — not data-sourced)
   disadvMult?: number         // default 0.80 (validated with Rin: pure multiplicative, no additive penalty)
-  mageBonus?: number          // default 12 (Mage class offensive quirk)
+  mageBonus?: number          // default 0 — same architecture as advAddBonus: the Mage +12% comes
+                              //   from the MAGE_PASSIVE_3_10 quirk (JOB02 MAIN node) flowing through
+                              //   poolBonus when applyQuirks is on. Hardcoding would double-count.
   critDrFactor?: number       // default 0.5  — target DR applied at this fraction when crit fires
   bossDrFactor?: number       // default 0.75 — target DR applied at this fraction when target isBoss (no crit)
   intArithmetic?: boolean     // default false — opt-in floor-at-each-step pipeline mimicking the
@@ -104,14 +110,14 @@ export function computeDamage(i: DamageInputs): DamageBreakdown {
   const advAddBonus = i.advAddBonus ?? 0
   const advMult = i.advMult ?? 1.20
   const disadvMult = i.disadvMult ?? 0.80
-  const mageBonus = i.mageBonus ?? 12
+  const mageBonus = i.mageBonus ?? 0
   const critDrFactor = i.critDrFactor ?? 0.5
   const bossDrFactor = i.bossDrFactor ?? 0.75
 
   const quirks: { name: string; value: string }[] = []
 
   let poolPct = i.dmgIncPct
-  if (i.charClass === 'Mage') {
+  if (i.charClass === 'Mage' && mageBonus !== 0) {
     poolPct += mageBonus
     quirks.push({ name: 'Mage', value: `+${mageBonus}% add` })
   }
@@ -144,7 +150,9 @@ export function computeDamage(i: DamageInputs): DamageBreakdown {
   // Target DR is applied at reduced strength when crit fires or target is boss.
   // crit takes precedence over boss when both apply (validated on tests 4/9/14/25).
   const drFactor = i.crit ? critDrFactor : (i.isBoss ? bossDrFactor : 1.0)
-  const targetDrMult = 1 - (i.dmgRedPct * drFactor) / 100
+  // Clamp at 0: a target with effective DR > 100% would otherwise produce
+  // negative damage. The game caps damage reduction at 100%.
+  const targetDrMult = Math.max(0, 1 - (i.dmgRedPct * drFactor) / 100)
   if (drFactor !== 1.0 && i.dmgRedPct > 0) {
     quirks.push({
       name: i.crit ? 'Crit DR pierce' : 'Boss DR scaling',

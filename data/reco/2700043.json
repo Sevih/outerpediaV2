@@ -1,0 +1,44 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "ATK%/HP%"
+      },
+      {
+        "name": "Thumping Odyssey",
+        "mainStat": "ATK%/HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Search and Destroy",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Mage]",
+        "mainStat": "EFF"
+      },
+      {
+        "name": "Spirit of Unification",
+        "mainStat": "EFF"
+      },
+      {
+        "name": "Steel Necklace",
+        "mainStat": "EFF"
+      }
+    ],
+    "Set": [
+      "s4"
+    ],
+    "SubstatPrio": "$dpsEFF",
+    "Note": "",
+    "Talisman": [
+      "$CPdps"
+    ]
+  }
+}
