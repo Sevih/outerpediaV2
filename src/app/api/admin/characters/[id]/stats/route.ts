@@ -13,6 +13,16 @@ import path from 'path'
  *
  * Restricted to development (returns 403 in prod).
  *
+ * ── Query params (all optional — defaults reproduce the "max everything" behavior) ──
+ *   transcendStar   — numeric TransStar (e.g. 1, 3, 5, 9). Overrides the max-reachable
+ *                     pick. BasicStar 1/2 path: 1→2→3→4→6→9; BasicStar 3 path: 3→4→5→6→7→8→9.
+ *   codexLevel      — 0..11, picks the CharacterArchiveStatTemplet row at that ID
+ *                     (defaults to max = 11; 0 disables codex entirely).
+ *   disabledNodeIds — comma-sep list of CharacterAwakeningNodeTemplet IDs to skip in
+ *                     the gift contributors (lets the UI toggle individual nodes off).
+ *   disableAllGifts — '1'/'true' to drop every element/class/subclass gift contribution
+ *                     (shortcut for "disable all quirks", avoids sending a huge CSV).
+ *
  * ── Data sources (all under `data/admin/json2/`) ──────────────────────────
  *   CharacterTemplet                 — per-char base stats, class/element, skill IDs
  *   CharacterEvolutionStatTemplet    — flat bonuses per evolution tier (ev1..ev6)
@@ -242,26 +252,29 @@ function extractEvolution(evoStats: Row[], charId: string): StatBlock {
   return out
 }
 
-// 3. Hero Codex (CharacterArchiveStatTemplet) — picks the max-ID row (Lv 11).
-//    Atk_Rate / Def_Rate / HP_Rate are per-mille (÷10 → %) multipliers applied
-//    to the base stat.
-function extractCodex(archiveStats: Row[]): { atkPct: number; defPct: number; hpPct: number; level: number } {
-  const maxRow = archiveStats.reduce((best, r) => (num(r.ID) > num(best.ID) ? r : best), archiveStats[0])
+// 3. Hero Codex (CharacterArchiveStatTemplet) — picks the row matching `targetLevel`
+//    (defaults to max = Lv 11). Atk_Rate / Def_Rate / HP_Rate are per-mille
+//    (÷10 → %) multipliers applied to the base stat.
+function extractCodex(archiveStats: Row[], targetLevel?: number): { atkPct: number; defPct: number; hpPct: number; level: number } {
+  const row = targetLevel != null
+    ? archiveStats.find(r => num(r.ID) === targetLevel)
+    : archiveStats.reduce((best, r) => (num(r.ID) > num(best.ID) ? r : best), archiveStats[0])
+  if (!row) return { atkPct: 0, defPct: 0, hpPct: 0, level: 0 }
   return {
-    atkPct: num(maxRow.Atk_Rate) / 10,
-    defPct: num(maxRow.Def_Rate) / 10,
-    hpPct:  num(maxRow.HP_Rate)  / 10,
-    level:  num(maxRow.ID),
+    atkPct: num(row.Atk_Rate) / 10,
+    defPct: num(row.Def_Rate) / 10,
+    hpPct:  num(row.HP_Rate)  / 10,
+    level:  num(row.ID),
   }
 }
 
-// 4. Transcendence (CharacterTranscendentTemplet) — picks the highest reachable
-//    TransStar row for this BasicStar (or char-specific override when the table
-//    has CharacterID != "0" rows, used for a few hand-tuned chars).
+// 4. Transcendence (CharacterTranscendentTemplet) — picks the row at `targetStar`
+//    (defaults to the highest reachable TransStar for this BasicStar), or a
+//    char-specific override when the table has CharacterID != "0" rows.
 //    The Reward*Rate columns are cumulative %-multipliers at that star,
 //    stored per-mille (÷10 → %). `skillLevel` is the Skill_8 level unlocked
 //    at that star (used by contributor #6).
-function extractTranscend(transcendent: Row[], basicStar: number, charId: string) {
+function extractTranscend(transcendent: Row[], basicStar: number, charId: string, targetStar?: number) {
   // Char-specific rows override the default BasicStar rows.
   const charSpecific = transcendent.filter(r => r.CharacterID === charId)
   const pool = charSpecific.length > 0
@@ -274,7 +287,9 @@ function extractTranscend(transcendent: Row[], basicStar: number, charId: string
     num(r.NextStar) !== 0 ||
     num(r.RewardAtkRate) + num(r.RewardDefRate) + num(r.RewardHPRate) > 0
   )
-  const row = reachable.reduce((best, r) => (num(r.TransStar) > num(best.TransStar) ? r : best), reachable[0])
+  const row = targetStar != null
+    ? reachable.find(r => num(r.TransStar) === targetStar)
+    : reachable.reduce((best, r) => (num(r.TransStar) > num(best.TransStar) ? r : best), reachable[0])
   if (!row) return { atkPct: 0, defPct: 0, hpPct: 0, star: 0, skillLevel: 0 }
   return {
     atkPct: num(row.RewardAtkRate) / 10,
@@ -469,6 +484,7 @@ function extractGifts(
   awakNodes: Row[],
   awakLevels: Row[],
   buffs: Row[],
+  disabledNodeIds: Set<string>,
 ): { element: StatBlock; klass: StatBlock; subclass: StatBlock } {
   const elemIdx  = ELEMENT_INDEX[row.Element ?? '']   ?? -1
   const classIdx = CLASS_INDEX[row.Class ?? '']       ?? -1
@@ -491,6 +507,7 @@ function extractGifts(
   // the in-game tree where every sub-node is individually leveled.
   const out = { element: zeroStats(), klass: zeroStats(), subclass: zeroStats() }
   for (const node of awakNodes) {
+    if (disabledNodeIds.has(node.ID)) continue
     const gid = node.AwakeningLevelGroupID
     if (!gid) continue
     const v = num(node.AwakeningApplyTypeValue)
@@ -508,11 +525,25 @@ function extractGifts(
 
 // ── Assembly ───────────────────────────────────────────────────────────
 
-export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   if (process.env.NODE_ENV !== 'development') {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   }
   const { id } = await params
+
+  // Optional overrides. When omitted, the route returns "max everything" stats
+  // (the original behavior): highest reachable TransStar, Codex lv 11, no disabled gifts.
+  const url = new URL(request.url)
+  const transcendStarParam   = url.searchParams.get('transcendStar')
+  const codexLevelParam      = url.searchParams.get('codexLevel')
+  const disabledParam        = url.searchParams.get('disabledNodeIds')
+  const disableAllGiftsParam = url.searchParams.get('disableAllGifts')
+  const targetTranscend = transcendStarParam != null ? parseInt(transcendStarParam, 10) : undefined
+  const targetCodex     = codexLevelParam    != null ? parseInt(codexLevelParam, 10)    : undefined
+  const disabledNodeIds = new Set(
+    (disabledParam ?? '').split(',').map(s => s.trim()).filter(Boolean),
+  )
+  const disableAllGifts = disableAllGiftsParam === '1' || disableAllGiftsParam === 'true'
 
   const [
     charTemplet,
@@ -540,12 +571,14 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   const basicStar = num(row.BasicStar)
   const base       = extractBase(row)
   const evo        = extractEvolution(evoStats, id)
-  const codex      = extractCodex(archiveStats)
-  const transcend  = extractTranscend(transcendent, basicStar, id)
+  const codex      = extractCodex(archiveStats, targetCodex)
+  const transcend  = extractTranscend(transcendent, basicStar, id, targetTranscend)
   const baseForRate = { spd: base.spd + evo.spd, eff: base.eff + evo.eff, res: base.res + evo.res }
   const classPass  = extractClassPassive(row, skillLevels, buffs, baseForRate)
   const skill8     = extractSkill8Passive(row, skillLevels, buffs, transcend.skillLevel, baseForRate)
-  const gifts      = extractGifts(row, awakNodes, awakLevels, buffs)
+  const gifts      = disableAllGifts
+    ? { element: zeroStats(), klass: zeroStats(), subclass: zeroStats() }
+    : extractGifts(row, awakNodes, awakLevels, buffs, disabledNodeIds)
 
   // Sum every flat and percent contribution from the three gift scopes into a
   // single giftTotal bucket. Class passive and Skill_8 contributions stay in

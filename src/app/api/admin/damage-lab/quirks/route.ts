@@ -57,9 +57,12 @@ interface ResolvedQuirk {
 }
 
 export interface QuirkEffect {
-  target: 'pool' | 'atk' | 'chd' | 'pen' | 'critRate'
+  // 'pool' / 'atk' / 'chd' / 'pen' / 'critRate' — caster-side bonuses (existing).
+  // 'monsterEff' / 'monsterRes' — boss-side debuffs (negative `amount`) applied
+  //                                to the target's EFF/RES when the target is a boss.
+  target: 'pool' | 'atk' | 'chd' | 'pen' | 'critRate' | 'monsterEff' | 'monsterRes'
   unit: '%' | 'flat'
-  amount: number                         // e.g. 12 for +12%
+  amount: number                         // e.g. 12 for +12%, −4 for −4% on monsterRes
   requires?: 'adv' | 'disadv' | 'neutral' | 'crit' | 'boss' | null
 }
 
@@ -112,7 +115,13 @@ const PERCENT_STATS = new Set([
 // Map a resolved source (either a Buff row or a direct IOT_STAT level row) to a
 // QuirkEffect for the damage-lab formula. Returns null for buffs/stats that don't
 // directly affect attacker-side damage (ST_HP, ST_SPEED, ST_DMG_REDUCE_RATE as attacker, ...).
-function computeEffect(buffType: string, statType: string, applyingType: string, rawValue: number, condition: string): QuirkEffect | null {
+//
+// `buffId` is needed to spot the special "Awakening_Boss_*_Down_*" buffs that
+// look like a self-debuff (BT_STAT_PREMIUM ST_BUFF_RESIST OAT_RATE −40 TargetType=ME)
+// but are actually a boss-side debuff per the in-game node description
+// ("Reduces Resilience of the Boss by X%"). The engine resolves them via the
+// buff name pattern; we mirror that here.
+function computeEffect(buffType: string, statType: string, applyingType: string, rawValue: number, condition: string, buffId: string): QuirkEffect | null {
   const isRate = applyingType === 'OAT_RATE'
   const isAdd = applyingType === 'OAT_ADD'
   if (!isRate && !isAdd) return null
@@ -132,6 +141,19 @@ function computeEffect(buffType: string, statType: string, applyingType: string,
   // BT_DMG without specific stat → adds to damage pool (per-mille additive %).
   if (buffType === 'BT_DMG' && statType === 'ST_NONE') {
     return { target: 'pool', unit: '%', amount: rawValue / 10, requires }
+  }
+
+  // Boss EFF / RES debuff — Awakening PVE nodes whose buff name follows
+  // `Awakening_Boss_*_Down_*` and stores a negative ST_BUFF_RESIST / ST_BUFF_CHANCE
+  // OAT_RATE. The engine treats these as percentage debuffs on the boss target,
+  // not on the caster, despite TargetType=ME.
+  if (buffType === 'BT_STAT_PREMIUM' && /^Awakening_Boss_.*_Down_/.test(buffId)) {
+    if (statType === 'ST_BUFF_RESIST') {
+      return { target: 'monsterRes', unit: '%', amount: rawValue / 10, requires: 'boss' }
+    }
+    if (statType === 'ST_BUFF_CHANCE') {
+      return { target: 'monsterEff', unit: '%', amount: rawValue / 10, requires: 'boss' }
+    }
   }
 
   // Percent stats: always per-mille (additive % points) regardless of OAT mode.
@@ -258,7 +280,7 @@ function build(): ResolvedQuirk[] {
       source: {
         buffId, buffType, statType, applyingType, value: rawValue, condition, optionType,
       },
-      effect: computeEffect(buffType, statType, applyingType, rawValue, condition),
+      effect: computeEffect(buffType, statType, applyingType, rawValue, condition, buffId),
     })
   }
 

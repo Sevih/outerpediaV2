@@ -6,12 +6,14 @@ import { loadLocationTables, resolveModeLabel, SUPPORTED_DUNGEON_MODES } from '@
 
 interface MonsterEntry {
   monsterId: string
+  faceIconId: string      // FaceIconID from MonsterTemplet — keys the portrait file MT_{faceIconId}.webp
   name: string            // English, falls back to ID
   type: string            // CT_BOSS_MONSTER / CT_MONSTER / ...
   isBoss: boolean         // derived from Type
   class: string           // human-friendly (Attacker/Ranger/...)
   element: string         // Fire/Water/Earth/Light/Dark
   subClass: string
+  basicStar: number       // 1/2/3 — drives star overlay on the monster portrait
   level: number           // level at which this monster spawns in this stage
   // Raw scaling bounds (from MonsterTemplet.json)
   defMin: number
@@ -28,11 +30,29 @@ interface MonsterEntry {
   slot: number            // 0..3
 }
 
+interface WaveEntry {
+  // SpawnID_Pos{position} index — each stage has up to 3 separate combat waves
+  // (Pos0/1/2). The in-game UI sequences them as fight 1 → fight 2 → fight 3.
+  position: number
+  monsters: MonsterEntry[]
+}
+
 interface StageEntry {
   id: string
   name: string            // resolved from NameID
+  // Chapter / area name for DM_NORMAL (from AreaTemplet) — null for other modes
+  // where the dungeon grouping is parsed client-side from the stage name suffix
+  // (e.g. "Skyward Tower 1F" → dungeon "Skyward Tower" + stage "1F").
+  chapter: string | null
+  // Story-only metadata. `season` and `episodeNum` come straight from
+  // AreaTemplet; `stageNum` is computed by sorting stages within (season,
+  // episodeNum) by id ascending and assigning 1..N. This lets the UI render
+  // labels like "EP 1: Outer City" + stage "1-3".
+  season: number | null
+  episodeNum: number | null
+  stageNum: number | null
   recommendLevel: number
-  monsters: MonsterEntry[]
+  waves: WaveEntry[]
 }
 
 interface ModeEntry {
@@ -60,11 +80,14 @@ const ELEMENT_LABEL: Record<string, string> = {
   CET_DARK: 'Dark',
 }
 
+// CT_NAMED_MONSTER is intentionally excluded — the in-game slot color flags it
+// as Magic (blue) rather than Rare (red), so it's a tougher named mob and not
+// the stage boss. Boss-related quirks (BT_DMG_TO_BOSS, Awakening_Boss_*) only
+// fire on the proper boss types.
 const BOSS_TYPES = new Set([
   'CT_BOSS_MONSTER',
   'CT_AREA_BOSS_MONSTER',
   'CT_SEASON_BOSS_MONSTER',
-  'CT_NAMED_MONSTER',
 ])
 
 // Empirical scaling: stat(lvl) = Min + (Max - Min) * (lvl - 1) / 99
@@ -112,13 +135,19 @@ function buildIndex(): ModeEntry[] {
     const label = resolveModeLabel(mode, areaRow?.AreaGroupType ?? null, d.NameID ?? null, loc.textSystemIndex)
     if (!label) continue
 
-    // Collect monsters from this dungeon's 3 spawn positions.
-    const monsterEntries: MonsterEntry[] = []
-    const seen = new Set<string>()  // dedupe same (monsterId, level) inside one stage
+    // Collect monsters from this dungeon's 3 spawn positions, keeping each wave
+    // as its own group so the UI can show "Fight 1 / 2 / 3" separately. Dedupe
+    // is per-wave (a wave with two identical mobs collapses to one entry, since
+    // their stats are identical and the formula doesn't care about count).
+    const waves: WaveEntry[] = []
 
     for (let position = 0; position < 3; position++) {
       const raw = d[`SpawnID_Pos${position}`]
       if (!raw) continue
+
+      const monsterEntries: MonsterEntry[] = []
+      const seen = new Set<string>()  // dedupe within this wave only
+
       for (const gid of raw.split(',').map(x => x.trim()).filter(Boolean)) {
         const rows = spawnRowsByGroup.get(gid)
         if (!rows) continue
@@ -147,12 +176,14 @@ function buildIndex(): ModeEntry[] {
 
             monsterEntries.push({
               monsterId: mid,
+              faceIconId: tmpl.FaceIconID ?? mid,
               name,
               type,
               isBoss: BOSS_TYPES.has(type),
               class: CLASS_LABEL[classKey] ?? classKey,
               element: ELEMENT_LABEL[elementKey] ?? elementKey,
               subClass: tmpl.SubClass ?? '',
+              basicStar: num(tmpl.BasicStar),
               level,
               defMin,
               defMax,
@@ -168,27 +199,72 @@ function buildIndex(): ModeEntry[] {
           }
         }
       }
+
+      if (monsterEntries.length === 0) continue
+
+      // Sort within a wave: bosses first, then by level desc, then name.
+      monsterEntries.sort((a, b) => {
+        if (a.isBoss !== b.isBoss) return a.isBoss ? -1 : 1
+        if (a.level !== b.level) return b.level - a.level
+        return a.name.localeCompare(b.name)
+      })
+
+      waves.push({ position, monsters: monsterEntries })
     }
 
-    if (monsterEntries.length === 0) continue
-
-    // Sort: bosses first, then by level desc.
-    monsterEntries.sort((a, b) => {
-      if (a.isBoss !== b.isBoss) return a.isBoss ? -1 : 1
-      if (a.level !== b.level) return b.level - a.level
-      return a.name.localeCompare(b.name)
-    })
+    if (waves.length === 0) continue
 
     const stageName = d.NameID ? loc.textSystemIndex.get(d.NameID)?.English ?? d.ID : d.ID
+
+    // Chapter (area) name — used by the UI to group story stages by chapter.
+    // Tower / raid / irregular modes use the stage NAME suffix instead and
+    // don't need chapter info.
+    let chapter: string | null = null
+    let season: number | null = null
+    let episodeNum: number | null = null
+    if (mode === 'DM_NORMAL' && areaRow) {
+      if (areaRow.NameID) chapter = loc.textSystemIndex.get(areaRow.NameID)?.English ?? null
+      season     = num(areaRow.SeasonID)   || null
+      episodeNum = num(areaRow.EpisodeNum) || null
+    }
 
     const bucket = byMode.get(label) ?? { mode, label, stages: [] }
     bucket.stages.push({
       id: d.ID,
       name: stageName,
+      chapter,
+      season,
+      episodeNum,
+      stageNum: null,  // assigned in the post-pass below
       recommendLevel: num(d.RecommandLevel),
-      monsters: monsterEntries,
+      waves,
     })
     byMode.set(label, bucket)
+  }
+
+  // Assign per-episode stageNum for story stages. The in-game numbering follows
+  // the trailing 2-digit suffix of the dungeon ID (e.g. 100912 → 9-12), even
+  // when intermediate stages have been filtered out for being monsterless
+  // (intros, cutscenes). Sequential indexing would shift visible stages and
+  // misalign with the in-game labels — so we parse the suffix directly.
+  // Falls back to the position-in-group index for IDs that don't match (rare).
+  for (const bucket of byMode.values()) {
+    if (bucket.mode !== 'DM_NORMAL') continue
+    const groups = new Map<string, StageEntry[]>()
+    for (const s of bucket.stages) {
+      if (s.season == null || s.episodeNum == null) continue
+      const key = `${s.season}/${s.episodeNum}`
+      const arr = groups.get(key) ?? []
+      arr.push(s)
+      groups.set(key, arr)
+    }
+    for (const list of groups.values()) {
+      list.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
+      list.forEach((s, i) => {
+        const m = s.id.match(/(\d{2})$/)
+        s.stageNum = m ? parseInt(m[1], 10) : i + 1
+      })
+    }
   }
 
   // Sort stages within each mode (by recommended level, then name), modes alphabetically.

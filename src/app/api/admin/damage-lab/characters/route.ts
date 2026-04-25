@@ -75,6 +75,7 @@ interface CharacterEntry {
   element: string
   class: string
   subClass: string
+  basicStar: number                   // 1, 2, or 3 — drives the transcend level progression in the UI
   // Base stats at lvl 100 (Max values from CharacterTemplet, no gear/evolution/awakening bonuses)
   atkMax: number
   defMax: number
@@ -112,6 +113,28 @@ interface CharacterEntry {
     first: SkillData | null
     second: SkillData | null
     ultimate: SkillData | null
+  }
+  // Damage scaling overrides — empirically decoded from BuffTemplet on the
+  // character's skill buff lists. By default every active skill scales on ATK
+  // via its DamageFactor; these entries describe deviations from that default.
+  //
+  //   swap: BT_SWAP_STAT_ATTACK — replaces ATK as the scaling stat. valuePerMille
+  //         is the multiplier (1000 = 1:1 swap, 1300 = the swapped stat is
+  //         boosted ×1.30 before substitution). Caren (2000089) → DEF × 1.30,
+  //         Gnosis Viella (2000109) → HP × 0.25.
+  //
+  //   add:  BT_DMG_OWNER_STAT / BT_DMG_CASTER_STAT — adds a bonus damage
+  //         component scaled on a specific stat *in addition* to ATK.
+  //         valuePerMille is the % of that stat folded into the damage equation.
+  //         Demiurge Stella (2000053) → +3% HP, Regina (2000067) → +50% CHC.
+  //
+  //   special: rarer mechanisms that don't fit the simple "stat × value" model:
+  //            BT_DMG_OWNER_LOST_HP_RATE (caster's lost-HP %), BT_DMG_TARGET_STAT
+  //            (target-stat scaling, e.g. % of target HP for execute-style hits).
+  scaling: {
+    swap: { stat: string; valuePerMille: number; buffId: string } | null
+    add:  { stat: string; valuePerMille: number; buffId: string }[]
+    special: { kind: 'lost_hp' | 'target_stat'; stat: string; valuePerMille: number; buffId: string }[]
   }
 }
 
@@ -156,6 +179,54 @@ interface ClassPassive {
 
 function emptyClassPassive(): ClassPassive {
   return { atkPct: 0, atkFlat: 0, defPct: 0, defFlat: 0, hpPct: 0, hpFlat: 0, chdPct: 0, critRatePct: 0, penPct: 0, poolPct: 0 }
+}
+
+// Resolved scaling info per character — see the CharacterEntry.scaling docstring
+// for the encoding rules.
+type ScalingInfo = CharacterEntry['scaling']
+
+const ADD_SCALING_TYPES = new Set([
+  'BT_DMG_OWNER_STAT', 'BT_DMG_CASTER_STAT',
+])
+
+// Walk every Skill_N slot of a character row, look up the max-level row in
+// CharacterSkillLevelTemplet, and inspect each referenced buff for damage-
+// scaling buff types. Aggregates the results into a per-character ScalingInfo.
+//
+// We deliberately scan ALL Skill_N keys (not just Skill_1/2/3) because the
+// scaling buff is most often hosted by a passive slot (Skill_2 marked PASSIVE
+// in CharacterSkillTemplet, or Skill_22 class passive) and applies via
+// `BuffCreateType=PASSIVE` + `TargetSkillType=SKT_NONE` to every active skill.
+function parseScaling(charRow: CharacterTempletRow, buffsById: Map<string, BuffRow>, maxSkillLevelBySkill: Map<string, SkillLevelRow>): ScalingInfo {
+  const out: ScalingInfo = { swap: null, add: [], special: [] }
+  for (const k of Object.keys(charRow)) {
+    if (!k.startsWith('Skill_')) continue
+    const skillId = (charRow as unknown as Record<string, string | undefined>)[k]
+    if (!skillId) continue
+    const lvlRow = maxSkillLevelBySkill.get(skillId)
+    if (!lvlRow?.BuffID) continue
+    for (const bid of lvlRow.BuffID.split(',').map(s => s.trim()).filter(Boolean)) {
+      const b = buffsById.get(bid)
+      if (!b) continue
+      const t = b.Type ?? ''
+      const stat = b.StatType ?? ''
+      const value = parseInt(b.Value ?? '0', 10) || 0
+      if (t === 'BT_SWAP_STAT_ATTACK') {
+        // Last writer wins — chars typically have a single SWAP buff. If a
+        // future char ever has multiple, the highest-value one is kept.
+        if (!out.swap || value > out.swap.valuePerMille) {
+          out.swap = { stat, valuePerMille: value, buffId: bid }
+        }
+      } else if (ADD_SCALING_TYPES.has(t)) {
+        out.add.push({ stat, valuePerMille: value, buffId: bid })
+      } else if (t === 'BT_DMG_OWNER_LOST_HP_RATE') {
+        out.special.push({ kind: 'lost_hp', stat: 'ST_HP_LOST', valuePerMille: value, buffId: bid })
+      } else if (t === 'BT_DMG_TARGET_STAT') {
+        out.special.push({ kind: 'target_stat', stat, valuePerMille: value, buffId: bid })
+      }
+    }
+  }
+  return out
 }
 
 export async function GET() {
@@ -332,6 +403,7 @@ export async function GET() {
       element: curated.Element ?? '',
       class: curated.Class ?? '',
       subClass: curated.SubClass ?? '',
+      basicStar: parseInt(row.BasicStar ?? '0', 10) || 0,
       atkMax: parseInt(row.Atk_Max ?? '0', 10) || 0,
       defMax: parseInt(row.Def_Max ?? '0', 10) || 0,
       hpMax: parseInt(row.HP_Max ?? '0', 10) || 0,
@@ -354,6 +426,7 @@ export async function GET() {
         second: buildSkillData(row.Skill_2, levelsBySkill),
         ultimate: buildSkillData(row.Skill_3, levelsBySkill),
       },
+      scaling: parseScaling(row, buffsById, maxSkillLevelBySkill),
     }
     // Only keep characters that have at least one active skill with a DamageFactor
     const hasAny = [entry.skills.first, entry.skills.second, entry.skills.ultimate]
