@@ -1,12 +1,18 @@
 /**
  * Outerplane damage formula — empirically validated on Noa, Caren, Kanon,
- * Veronica (Core Fusion), Rin across 31 observations covering ATK / DEF SWAP
- * / HP SWAP scaling, neutral / adv / disadv elements, regular / NAMED / BOSS
- * targets, and crit / no-crit on each. Final residual ±0.05% (float precision noise).
+ * Veronica (Core Fusion), Rin, Regina, Alice, Vera, Eliza across 45 observations
+ * covering ATK / DEF SWAP / HP SWAP / CHC ADD scaling, all 5 elements (incl.
+ * Light↔Dark mutual advantage), regular / NAMED / BOSS / AREA_BOSS targets,
+ * Mage / Striker / Ranger / Defender classes, and crit / no-crit on each.
+ * Final residual ±0.05% (float precision noise).
  *
- *   Dmg = (DF/1000) × ATK × (1 + pool/100) × C/(C + (1-PEN) × DEF) × (1 - target_DR_eff/100) × adv_mult
+ *   Dmg = main + extra
  *
- *   pool = dmgInc + boss_add (+30 if isBoss) + elem_add (+50 if adv) + crit_add ((CHD-CDmgRed-100) if crit)
+ *   main  = (DF/1000) × ATK × (1 + pool/100) × C/(C + (1-PEN) × DEF) × (1 - target_DR_eff/100) × adv_mult
+ *   extra = (DF/1000) × addAtkNoPool × C/(C + (1-PEN) × DEF) × (1 - target_DR_eff/100) × adv_mult
+ *           ↑ same shape as `main` but skips the pool modifier — see "Scaling ADD" below.
+ *
+ *   pool = dmgInc + boss_add (+30 if isBoss) + elem_add (+50 if adv on Fire/Water/Earth) + crit_add
  *   target_DR_eff = target_DR × dr_factor                 ← see below
  *   adv_mult = 1.20 if adv, 0.80 if disadv, else 1.0
  *   skill = DamageFactor / ratioDivisor (default /1000)
@@ -17,7 +23,7 @@
  *     - boss & no crit            → 0.75 ("boss target absorbs DR at 75%")
  *     - else                      → 1.0
  *
- * VALIDATED (all 31 obs match ±0.05% with this model):
+ * VALIDATED (all 45 obs match ±0.05% with this model):
  *   - Skeleton: Dmg = skill × ATK × pool_mod × mit × DR_eff × adv_mult
  *   - C = 1000, skill = DF / 1000
  *   - Boss quirk: +30% additive in pool (sourced from Awakening_Boss_Dmg_10 PVE node)
@@ -26,7 +32,17 @@
  *                        ×1.20 multiplicative (intrinsic, kept hardcoded). The "+50 add"
  *                        used to be hardcoded too but that double-counted the quirk on adv
  *                        tests with applyQuirks=on (Kanon Test 30 dropped from 1.78× over to 0.9997×).
- *   - Elem disadvantage: pure ×0.80 multiplicative (no additive penalty — asymmetric with adv)
+ *                        ⚠ Fire/Water/Earth use Awakening_Element_Dmg_10 (cond=ATTACKER_ELEMENT_WIN,
+ *                        val=500 → +50% pool). Light/Dark use Awakening_Element_Dmg_Dark_Light_10
+ *                        (cond=NONE, val=300 → +30% pool unconditional, NOT gated on adv) — so the
+ *                        +50 pool boost from adv only fires on the rock-paper-scissors trio.
+ *                        BUT the ×1.20 / ×0.80 multipliers DO fire for Light↔Dark mutual advantage
+ *                        (validated on Vera/Eliza Dark vs Light Ars Nova: ratios at 1.003 with
+ *                        ×1.20). page.tsx ELEMENT_ADV map covers both: { Fire→Earth, Earth→Water,
+ *                        Water→Fire, Light→Dark, Dark→Light }.
+ *   - Elem disadvantage: pure ×0.80 multiplicative (no additive penalty — asymmetric with adv).
+ *                        Light↔Dark relationship is mutual adv (both directions return 'adv'),
+ *                        so disadv only fires on the rock-paper-scissors trio.
  *   - Crit: (CHD - CDmgRed - 100) additive in pool (NOT a separate multiplier!)
  *           => pool_crit = pool_no_crit + (CHD - CDmgRed - 100)
  *   - PEN: (1 - PEN/100) × DEF in mitigation denominator
@@ -34,6 +50,19 @@
  *               replaces the prior "~2% boss+crit residual" mystery: it was DR
  *               being mis-scaled, not a hidden multiplier.
  *   - Scaling SWAP: BT_SWAP_STAT_ATTACK replaces ATK with stat × valuePerMille/1000.
+ *   - Scaling ADD on percentage stats (CHC, CHD, PEN%, etc.):
+ *               BT_DMG_OWNER_STAT generates a SEPARATE damage component that bypasses the
+ *               pool modifier. Validated on Regina (2000067) +50% CHC ADD across 5 obs:
+ *               extra = baseATK × (stat/100) × (valuePerMille/1000) × DF × mit × DR × elem_mult
+ *               (where stat is the percentage value, e.g. 21 for 21% CHC).
+ *               i.e. Regina with CHC=21% gives addAtkNoPool = baseATK × 0.21 × 0.5 = baseATK × 0.105.
+ *               Treating this as a flat ATK addition (`atk + 10.5`) gave a +6-7% under-estimate;
+ *               separating it as a no-pool component matched all 5 obs to ±0.02%.
+ *   - Scaling ADD on flat stats (HP, DEF, SPD): NOT YET EMPIRICALLY VALIDATED.
+ *               Current handling: added to ATK (legacy), goes through full pool path.
+ *               The semantic difference: percentage-stat ADD scales by baseATK (proportional),
+ *               flat-stat ADD adds the stat value directly (e.g. Stella +3% HP → 0.03 × HP added
+ *               to ATK as flat). This convention matches how the in-game stat readouts work.
  *   - Skill chain quirks (Awakening_Chain_Dmg_*) DO NOT apply to single-skill damage —
  *               they declare BuffConditionType=NONE but the engine resolves their
  *               context via the buff name pattern, like Awakening_Boss_*_Down_*.
@@ -41,11 +70,15 @@
  *   - Mage class offensive quirk: +12% additive — sourced from MAGE_PASSIVE_3_10 quirk
  *               (JOB02 MAIN node) via poolBonus, NOT hardcoded. Same convention as
  *               advAddBonus. The hardcoded `mageBonus` defaults to 0 to avoid double-count.
- *   - Striker (= "Attacker" in game data) has NO offense quirk (verified on Noa + Rin + Kanon).
+ *               Validated on Alice (Earth Mage) and Regina (Light Mage).
+ *   - Striker (= "Attacker" in game data) has NO offense quirk (verified on Noa + Rin + Kanon + Vera).
+ *   - Ranger has NO offense quirk either — RANGER_PASSIVE_3_10 is BT_STAT_PREMIUM ST_BUFF_CHANCE
+ *               (+50 EFF), not BT_DMG. Validated on Eliza.
  *
  * TO VALIDATE:
- *   - Other class quirks (Ranger, Priest, Defender) — no test data yet
+ *   - Defender / Priest class offense — no test data yet
  *   - Character-specific passives (e.g. "+X% dmg vs <element>") — no test data yet
+ *   - Flat-stat ADD scaling formula (HP / DEF / SPD bonuses) — no test data yet
  *   - critAdd clamp at 0 when CHD < 100 + cdmgRed — no empirical case below the floor yet
  */
 
@@ -54,6 +87,10 @@ export type CharClass = 'Attacker' | 'Mage' | 'Ranger' | 'Defender' | 'Priest' |
 export interface DamageInputs {
   // Attacker
   atk: number
+  addAtkNoPool?: number       // Optional secondary ATK contribution that produces a SEPARATE
+                              //   damage component (no pool modifier). Source: BT_DMG_OWNER_STAT
+                              //   on a percentage-display stat (e.g. Regina CHC ADD).
+                              //   Pre-computed by the caller as baseATK × (stat/100) × valPerMille/1000.
   damageFactor: number
   chdPct: number
   penPct: number
@@ -99,7 +136,9 @@ export interface DamageBreakdown {
   mitigation: number
   targetDrMult: number
   elemMult: number
-  calculated: number
+  mainCalc: number            // main path damage (atk × df × pool × mit × dr × elem)
+  extraCalc: number           // secondary path (addAtkNoPool × df × mit × dr × elem) — 0 if no addAtkNoPool
+  calculated: number          // mainCalc + extraCalc
   quirks: { name: string; value: string }[]
 }
 
@@ -165,22 +204,41 @@ export function computeDamage(i: DamageInputs): DamageBreakdown {
   const useFloor = i.intArithmetic ?? false
   const fl = (v: number) => useFloor ? Math.floor(v) : v
 
-  // Step-by-step pipeline mirroring the in-game integer arithmetic. Each multiplication
-  // commits the running total to an int, which is the source of the otherwise-mysterious
-  // ±0.05% residual the float pipeline produces on DR>0 cases.
-  //   atk_in       = floor(input atk)            ← effective ATK after SWAP/ADD scaling
+  // Main damage path. Step-by-step pipeline mirroring the in-game integer arithmetic.
+  // Each multiplication commits the running total to an int, which is the source of the
+  // otherwise-mysterious ±0.05% residual the float pipeline produces on DR>0 cases.
+  //   atk_in       = floor(input atk)            ← effective ATK after SWAP / flat ADD
   //   step_skill   = floor(atk_in × DF / 1000)
   //   step_mod     = floor(step_skill × pool_mod)
   //   step_mit     = floor(step_mod × C / (C + (1−PEN)·DEF))
   //   step_dr      = floor(step_mit × DR_mult)
-  //   final        = step_dr × elem_mult         ← elem multiplier kept floating
+  //   main         = step_dr × elem_mult         ← elem multiplier kept floating
   const atkInt = fl(i.atk)
-  let calc: number = atkInt
-  calc = fl(calc * i.damageFactor / ratioDivisor)
-  calc = fl(calc * mod)
-  calc = fl(calc * mitigation)
-  calc = fl(calc * targetDrMult)
-  const calculated = calc * elemMult
+  let mc: number = atkInt
+  mc = fl(mc * i.damageFactor / ratioDivisor)
+  mc = fl(mc * mod)
+  mc = fl(mc * mitigation)
+  mc = fl(mc * targetDrMult)
+  const mainCalc = mc * elemMult
 
-  return { poolPct, mod, mitigation, targetDrMult, elemMult, calculated, quirks }
+  // Extra path for percentage-stat ADD scaling (e.g. Regina CHC ADD). Same shape as
+  // main but skips the pool multiplier — empirically validated on 5 Regina obs at ±0.02%.
+  // Conceptually: this is a second damage hit driven by the scaling stat that doesn't
+  // benefit from class/element/boss/crit pool buffs.
+  let extraCalc = 0
+  const addAtk = i.addAtkNoPool ?? 0
+  if (addAtk > 0) {
+    const eInt = fl(addAtk)
+    let ec: number = eInt
+    ec = fl(ec * i.damageFactor / ratioDivisor)
+    // pool/mod intentionally skipped here
+    ec = fl(ec * mitigation)
+    ec = fl(ec * targetDrMult)
+    extraCalc = ec * elemMult
+    quirks.push({ name: 'Scaling+ (no pool)', value: `+${extraCalc.toFixed(0)} from addAtkNoPool=${addAtk.toFixed(1)}` })
+  }
+
+  const calculated = mainCalc + extraCalc
+
+  return { poolPct, mod, mitigation, targetDrMult, elemMult, mainCalc, extraCalc, calculated, quirks }
 }

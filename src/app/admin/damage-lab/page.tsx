@@ -185,15 +185,59 @@ interface ApiMonsterStatsResponse {
   }
 }
 
-// Outerplane rock-paper-scissors element matrix.
-// Fire > Earth > Water > Fire. Light/Dark are handled as neutral here since the
-// formula doesn't yet model their separate +30% rule; user can toggle adv/disadv manually.
-const ELEMENT_ADV: Record<string, string> = { Fire: 'Earth', Earth: 'Water', Water: 'Fire' }
+// Outerplane element relations.
+//   Fire > Earth > Water > Fire (rock-paper-scissors trio).
+//   Light ↔ Dark mutual advantage — both directions resolve to 'adv'. Validated
+//   empirically on Vera (Dark) vs Light Ars Nova (4 obs at 1.003 ratio with ×1.20
+//   intrinsic mult applied) and Eliza (Dark) vs Light (2 obs same).
+//
+// Note that the +50% pool quirk (Awakening_Element_Dmg_10, cond=ATTACKER_ELEMENT_WIN)
+// fires only on the Fire/Water/Earth trio — Light/Dark instead get the unconditional
+// +30% from Awakening_Element_Dmg_Dark_Light_10. So when Light/Dark adv triggers,
+// the pool stays at the unconditional +30% AND the ×1.20 multiplier applies on top.
+const ELEMENT_ADV: Record<string, string> = {
+  Fire: 'Earth', Earth: 'Water', Water: 'Fire',
+  Light: 'Dark', Dark: 'Light',
+}
 function detectElementRelation(attacker: string, target: string): 'adv' | 'disadv' | 'none' {
   if (!attacker || !target || attacker === target) return 'none'
   if (ELEMENT_ADV[attacker] === target) return 'adv'
   if (ELEMENT_ADV[target] === attacker) return 'disadv'
   return 'none'
+}
+
+// Stats whose value is a percentage (CHC=21 means 21%). Used to decide ADD-scaling
+// semantics: percentage-stat ADD scaling produces a separate damage component that
+// skips the pool modifier (validated on Regina CHC×0.5 ADD), whereas flat-stat ADD
+// scaling adds directly to ATK and goes through the full pool path. Mirrors the
+// PERCENT_STATS set in src/app/api/admin/damage-lab/quirks/route.ts and characters route.
+const PERCENT_SCALING_STATS = new Set([
+  'ST_CRITICAL_RATE',          // ✓ validated on Regina (+50% CHC ADD)
+  'ST_CRITICAL_DMG_RATE',      // not yet tested — assumed same convention
+  'ST_PIERCE_POWER_RATE',      // not yet tested
+  'ST_DMG_REDUCE_RATE',        // not yet tested
+  'ST_DMG_BOOST',              // not yet tested
+  'ST_BUFF_CHANCE',            // not yet tested — but EFF/RES are displayed as integers
+  'ST_BUFF_RESIST',            //   in-game so this convention may not apply; revisit when tested.
+])
+
+// Read a stat value out of a saved snapshot, given an ST_* key. Used by the obs-table
+// recompute to derive the scaling split (mainAtk + addAtkNoPool) from caster.scaling.
+function statValueFromBlock(block: ObsStatBlock, stat: string): number {
+  switch (stat) {
+    case 'ST_ATK': return block.atk
+    case 'ST_DEF': return block.def
+    case 'ST_HP':  return block.hp
+    case 'ST_SPEED': return block.spd
+    case 'ST_CRITICAL_RATE':     return block.chc
+    case 'ST_CRITICAL_DMG_RATE': return block.chd
+    case 'ST_PIERCE_POWER_RATE': return block.pen
+    case 'ST_DMG_BOOST':         return block.dmgInc
+    case 'ST_DMG_REDUCE_RATE':   return block.dmgRed
+    case 'ST_BUFF_CHANCE':       return block.eff
+    case 'ST_BUFF_RESIST':       return block.res
+    default: return 0
+  }
 }
 
 interface QuirkEffect {
@@ -234,9 +278,11 @@ interface Observation {
   slot: 'S1' | 'S2' | 'S3'
   skillLevel?: number       // 1..5 — DamageFactor index used
   df: number
-  // Flat formula-fed values. `atk` is the EFFECTIVE ATK after SWAP/ADD scaling
-  // (so SWAP chars don't record 0). `dmgInc` is stat dmgInc + conditional pool
-  // quirks (BT_DMG) — what computeDamage actually saw.
+  // Flat formula-fed values. `atk` is the MAIN ATK fed to the pool path —
+  // post-SWAP and post-flat-ADD scaling. The percentage-stat ADD contribution
+  // (e.g. Regina CHC ×0.5 ADD) lives separately in `caster.addAtkNoPool` and is
+  // re-derived from caster.scaling on recompute (see recomputeWithCurrentConstants).
+  // `dmgInc` is stat dmgInc + conditional pool quirks (BT_DMG) — what computeDamage saw.
   atk: number
   chd: number
   dmgInc: number
@@ -267,7 +313,8 @@ interface Observation {
     transcendStar: number
     codexLevel: number
     applyQuirks: boolean
-    effectiveAtk: number
+    effectiveAtk: number              // mainAtk fed to the formula (post-SWAP, post-flat-ADD)
+    addAtkNoPool?: number             // percentage-stat ADD contribution (no pool path); 0 / absent for legacy obs
     poolBonus: number
     scaling?: {
       swap?: { stat: string; valuePerMille: number }
@@ -865,7 +912,9 @@ export default function DamageLabPage() {
 
   // Auto-detect element advantage/disadvantage when both attacker and target elements
   // are known (char loaded + monster loaded from stage). Same seed-then-fire ref
-  // pattern so saved values aren't clobbered on hydration.
+  // pattern so saved values aren't clobbered on hydration. ELEMENT_ADV covers both
+  // the Fire/Water/Earth trio and the Light↔Dark mutual advantage (see ELEMENT_ADV
+  // for the empirical basis).
   useEffect(() => {
     if (!formHydrated.current) return
     const tgtElement = selectedMonster?.element ?? ''
@@ -1063,29 +1112,42 @@ export default function DamageLabPage() {
     // toggle of a condition that doesn't actually move the numbers.
   }, [targetMode, selectedMonster, selectedStage, targetLevel, monsterDebuffs.eff, monsterDebuffs.res])
 
-  // Effective ATK fed to the formula, accounting for the character's scaling:
-  //   - SWAP (BT_SWAP_STAT_ATTACK) replaces ATK with stat × (valuePerMille/1000).
-  //     The ATK input is hidden in the UI for these chars, so num(atk) would be 0.
-  //   - ADD  (BT_DMG_OWNER_STAT)    adds stat × (valuePerMille/1000) on top.
-  // Each scaling entry references its own stat, pulled from the secondary
-  // `extraScale` map (auto-filled from /api/admin/characters/:id/stats).
-  const effectiveAtk = useMemo(() => {
-    if (!selectedChar) return num(atk)
+  // Split the character's scaling into the two damage components:
+  //   - mainAtk        — primary ATK fed to the main pool path
+  //                      = SWAP'd stat (replaces ATK) OR raw input ATK,
+  //                        plus any flat-stat ADD contribution (HP / DEF / SPEED).
+  //   - addAtkNoPool   — secondary contribution that bypasses the pool modifier.
+  //                      Built from percentage-stat ADD scalings only (CHC / CHD / etc.):
+  //                        contribution = mainAtk × (stat/100) × (valuePerMille/1000)
+  //                      Validated empirically on Regina (+50% CHC ADD) — see formula.ts header.
+  // Each scaling entry references its own stat, pulled from the secondary `extraScale`
+  // map (auto-filled from /api/admin/characters/:id/stats).
+  const effectiveScaling = useMemo<{ mainAtk: number; addAtkNoPool: number }>(() => {
+    if (!selectedChar) return { mainAtk: num(atk), addAtkNoPool: 0 }
     const sc = selectedChar.scaling
-    let base = sc.swap
+    let mainAtk = sc.swap
       ? num(extraScale[sc.swap.stat]) * sc.swap.valuePerMille / 1000
       : num(atk)
+    let addAtkNoPool = 0
     for (const a of sc.add) {
-      base += num(extraScale[a.stat]) * a.valuePerMille / 1000
+      const sv = num(extraScale[a.stat])
+      if (PERCENT_SCALING_STATS.has(a.stat)) {
+        // Percentage-stat ADD scaling: separate damage component (no pool).
+        addAtkNoPool += mainAtk * (sv / 100) * (a.valuePerMille / 1000)
+      } else {
+        // Flat-stat ADD scaling: added to ATK (legacy behavior; not yet empirically validated).
+        mainAtk += sv * a.valuePerMille / 1000
+      }
     }
-    return base
+    return { mainAtk, addAtkNoPool }
   }, [selectedChar, atk, extraScale])
 
   const computation = useMemo(() => {
     if (damageFactor == null) return null
     const effectiveDmgInc = num(dmgIncPct) + poolBonus
     const inputs: DamageInputs = {
-      atk: effectiveAtk,
+      atk: effectiveScaling.mainAtk,
+      addAtkNoPool: effectiveScaling.addAtkNoPool,
       damageFactor,
       chdPct: num(chdPct),
       penPct: num(penPct),
@@ -1103,7 +1165,7 @@ export default function DamageLabPage() {
       ratioDivisor: num(ratioDivisor, 1000),
     }
     return computeDamage(inputs)
-  }, [effectiveAtk, damageFactor, chdPct, penPct, dmgIncPct, poolBonus, crit, def, tgtCdmgRedPct, tgtDmgRedPct, isBoss, elemental, C, ratioDivisor])
+  }, [effectiveScaling, damageFactor, chdPct, penPct, dmgIncPct, poolBonus, crit, def, tgtCdmgRedPct, tgtDmgRedPct, isBoss, elemental, C, ratioDivisor])
 
   const observedNum = observed.trim() === '' ? null : num(observed)
   const ratio = computation && observedNum != null && computation.calculated > 0
@@ -1141,7 +1203,8 @@ export default function DamageLabPage() {
       transcendStar,
       codexLevel: heroCodexLevel,
       applyQuirks,
-      effectiveAtk,
+      effectiveAtk: effectiveScaling.mainAtk,
+      addAtkNoPool: effectiveScaling.addAtkNoPool,
       poolBonus,
       ...(sc.swap || sc.add.length > 0 ? {
         scaling: {
@@ -1173,7 +1236,10 @@ export default function DamageLabPage() {
       slot: SLOT_LABELS[slot],
       skillLevel,
       df: damageFactor,
-      atk: effectiveAtk,
+      // `atk` is the main path input (post-SWAP, post-flat-ADD). The percentage-stat
+      // ADD contribution lives separately in `caster.addAtkNoPool` and gets re-derived
+      // on recompute from caster.scaling + caster.stats — see recomputeWithCurrentConstants.
+      atk: effectiveScaling.mainAtk,
       chd: num(chdPct),
       dmgInc: effDmgInc,
       pen: num(penPct),
@@ -1261,8 +1327,47 @@ export default function DamageLabPage() {
   }
 
   function recomputeWithCurrentConstants(o: Observation): { calc: number; ratio: number } {
+    // For characters with percentage-stat ADD scaling (e.g. Regina CHC), the legacy
+    // `o.atk` had the wrong contribution baked in (treated as flat-add). For those
+    // we re-derive both mainAtk and addAtkNoPool from caster.scaling + caster.stats.
+    //
+    // For SWAP-only / flat-ADD-only / no-scaling chars, the saved `o.atk` is the
+    // canonical effective ATK (and re-deriving from caster.stats would actually
+    // diverge on observations saved before stat-API changes — e.g. Core Fusion
+    // Veronica's old obs save effectiveAtk=1399.2 but current stats.hp × 0.2 = 1151.4).
+    // So for those cases we trust the saved `o.atk` and leave addAtkNoPool at 0.
+    let mainAtk = o.atk
+    let addAtkNoPool = o.caster?.addAtkNoPool ?? 0
+    const sc = o.caster?.scaling
+    const stats = o.caster?.stats
+    const hasPercentAdd = !!sc?.add?.some(a => PERCENT_SCALING_STATS.has(a.stat))
+    if (hasPercentAdd && sc && stats) {
+      let main = sc.swap
+        ? statValueFromBlock(stats, sc.swap.stat) * sc.swap.valuePerMille / 1000
+        : stats.atk
+      let extra = 0
+      for (const a of (sc.add ?? [])) {
+        const sv = statValueFromBlock(stats, a.stat)
+        if (PERCENT_SCALING_STATS.has(a.stat)) {
+          extra += main * (sv / 100) * (a.valuePerMille / 1000)
+        } else {
+          main += sv * a.valuePerMille / 1000
+        }
+      }
+      mainAtk = main
+      addAtkNoPool = extra
+    }
+    // Auto-detect element relation from the saved char/target elements when both are
+    // present — this lets old Light/Dark observations (saved when the UI force-locked
+    // elem='none') pick up the now-correct mutual-advantage detection. Falls back to
+    // the saved o.elem for older observations missing tElement.
+    let elem: 'none' | 'adv' | 'disadv' = o.elem
+    if (o.element && o.tElement) {
+      elem = detectElementRelation(o.element, o.tElement)
+    }
     const r = computeDamage({
-      atk: o.atk,
+      atk: mainAtk,
+      addAtkNoPool,
       damageFactor: o.df,
       chdPct: o.chd,
       penPct: o.pen,
@@ -1273,7 +1378,7 @@ export default function DamageLabPage() {
       cdmgRedPct: o.tCdmgRed,
       dmgRedPct: o.tDmgRed,
       isBoss: o.isBoss ?? false,
-      elem: o.elem,
+      elem,
       C: num(C, 1000),
       ratioDivisor: num(ratioDivisor, 1000),
     })
@@ -1772,7 +1877,9 @@ export default function DamageLabPage() {
             {targetMode === 'manual' && (
               <div className="mt-3 space-y-2 border-t border-zinc-800 pt-3 text-sm">
                 <label className="block">
-                  <span className="mb-1 block text-xs text-zinc-500">Elemental (auto-applies +50 add & ×1.20 mult if adv)</span>
+                  <span className="mb-1 block text-xs text-zinc-500">
+                    Elemental (×1.20 if adv on the rock-paper-scissors trio or Light↔Dark; +50% pool only on Fire/Water/Earth via quirk)
+                  </span>
                   <select
                     value={elemental}
                     onChange={e => setElemental(e.target.value as 'none' | 'adv' | 'disadv')}
@@ -1892,21 +1999,31 @@ export default function DamageLabPage() {
             <table className="w-full text-xs">
               <thead className="text-zinc-500">
                 <tr className="border-b border-zinc-800">
-                  <th className="px-2 py-2 text-left">Character</th>
-                  <th className="px-2 py-2 text-left">Skill</th>
-                  <th className="px-2 py-2 text-right border-l border-zinc-800">ATK</th>
-                  <th className="px-2 py-2 text-right">CHD</th>
-                  <th className="px-2 py-2 text-right">DMG Inc</th>
-                  <th className="px-2 py-2 text-right">PEN</th>
-                  <th className="px-2 py-2 text-right border-l border-zinc-800">DEF</th>
-                  <th className="px-2 py-2 text-right">CDMG Red</th>
-                  <th className="px-2 py-2 text-right">DMG Red</th>
-                  <th className="px-2 py-2 text-center border-l border-zinc-800">Crit</th>
-                  <th className="px-2 py-2 text-center">Elem</th>
-                  <th className="px-2 py-2 text-center">Boss</th>
-                  <th className="px-2 py-2 text-right border-l border-zinc-800">Observed</th>
-                  <th className="px-2 py-2 text-right">Calc (live)</th>
-                  <th className="px-2 py-2 text-right">Obs/Calc</th>
+                  {/* Caster block */}
+                  <th className="px-2 py-2 text-left">Caster</th>
+                  <th className="px-2 py-2 text-center">Skill</th>
+                  <th className="px-2 py-2 text-right border-l border-zinc-800">
+                    <div className="inline-flex items-center gap-1" title="Effective ATK (post-SWAP/ADD scaling)">
+                      <StatIcon stat="ATK" size={14} /><span className="text-zinc-400">eff</span>
+                    </div>
+                  </th>
+                  <th className="px-2 py-2 text-right" title="Critical Damage %"><StatIcon stat="CHD" size={14} /></th>
+                  <th className="px-2 py-2 text-right" title="Effective pool % (DMG Inc stat + quirks via poolBonus)">
+                    <div className="inline-flex items-center gap-1">
+                      <StatIcon stat="DMG UP%" size={14} /><span className="text-zinc-400">pool</span>
+                    </div>
+                  </th>
+                  <th className="px-2 py-2 text-right" title="Penetration %"><StatIcon stat="PEN%" size={14} /></th>
+                  {/* Target block */}
+                  <th className="px-2 py-2 text-left border-l border-zinc-800">Target</th>
+                  <th className="px-2 py-2 text-right" title="Target DEF"><StatIcon stat="DEF" size={14} /></th>
+                  <th className="px-2 py-2 text-right" title="Target DMG RED %"><StatIcon stat="DMG RED%" size={14} /></th>
+                  {/* Context flags */}
+                  <th className="px-2 py-2 text-center border-l border-zinc-800">Flags</th>
+                  {/* Result */}
+                  <th className="px-2 py-2 text-right border-l border-zinc-800">Obs</th>
+                  <th className="px-2 py-2 text-right">Calc</th>
+                  <th className="px-2 py-2 text-right" title="Observed / Calculated">Δ</th>
                   <th className="px-2 py-2 text-left">Note</th>
                   <th className="px-2 py-2"></th>
                 </tr>
@@ -1916,26 +2033,83 @@ export default function DamageLabPage() {
                   const { calc, ratio } = recomputeWithCurrentConstants(o)
                   const good = Math.abs(ratio - 1) <= 0.02
                   const medium = !good && Math.abs(ratio - 1) <= 0.05
+                  // Target's CDMG RED is virtually always 0 in auto mode (monsters
+                  // don't have this stat) — surface it as a small badge only when
+                  // a manual-mode test typed in a non-zero value, otherwise hide.
+                  const showCdmgRed = o.tCdmgRed && o.tCdmgRed !== 0
                   return (
-                    <tr key={o.id} className="border-b border-zinc-800/50 hover:bg-zinc-800/30">
-                      <td className="px-2 py-1.5 text-zinc-100">{o.char}</td>
-                      <td className="px-2 py-1.5">{o.slot}</td>
-                      <td className="px-2 py-1.5 text-right border-l border-zinc-800/50">{o.atk}</td>
-                      <td className="px-2 py-1.5 text-right">{o.chd}%</td>
-                      <td className="px-2 py-1.5 text-right">{o.dmgInc}%</td>
-                      <td className="px-2 py-1.5 text-right">{o.pen}%</td>
-                      <td className="px-2 py-1.5 text-right border-l border-zinc-800/50">{o.def}</td>
-                      <td className="px-2 py-1.5 text-right">{o.tCdmgRed}%</td>
-                      <td className="px-2 py-1.5 text-right">{o.tDmgRed}%</td>
-                      <td className="px-2 py-1.5 text-center border-l border-zinc-800/50">{o.crit ? '✓' : ''}</td>
-                      <td className="px-2 py-1.5 text-center">{o.elem === 'adv' ? '+' : o.elem === 'disadv' ? '−' : '='}</td>
-                      <td className="px-2 py-1.5 text-center">{o.isBoss ? '✓' : ''}</td>
-                      <td className="px-2 py-1.5 text-right font-mono text-zinc-100 border-l border-zinc-800/50">{o.obs}</td>
-                      <td className="px-2 py-1.5 text-right font-mono">{calc.toFixed(0)}</td>
+                    <tr key={o.id} className="border-b border-zinc-800/50 align-top hover:bg-zinc-800/30">
+                      {/* Caster: portrait + name + element/class */}
+                      <td className="px-2 py-1.5">
+                        <div className="flex items-center gap-2">
+                          {o.charId ? (
+                            <CharacterPortrait id={o.charId} size="xs" />
+                          ) : (
+                            <div className="h-8 w-8 rounded bg-zinc-800/40" />
+                          )}
+                          <div className="min-w-0">
+                            <div className="truncate text-zinc-100">{o.char}</div>
+                            {(o.element || o.class) && (
+                              <div className="text-[10px] text-zinc-500">
+                                {[o.element, o.class].filter(Boolean).join(' · ')}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </td>
+                      {/* Skill: slot + level */}
+                      <td className="px-2 py-1.5 text-center">
+                        <div className="font-mono text-zinc-100">{o.slot}</div>
+                        {o.skillLevel != null && (
+                          <div className="text-[10px] text-zinc-500">Lv{o.skillLevel}</div>
+                        )}
+                      </td>
+                      {/* Caster stats */}
+                      <td className="px-2 py-1.5 text-right font-mono border-l border-zinc-800/50">{o.atk.toFixed(0)}</td>
+                      <td className="px-2 py-1.5 text-right font-mono">{o.chd.toFixed(1)}%</td>
+                      <td className="px-2 py-1.5 text-right font-mono">{o.dmgInc.toFixed(1)}%</td>
+                      <td className="px-2 py-1.5 text-right font-mono">{o.pen.toFixed(1)}%</td>
+                      {/* Target name + level */}
+                      <td className="px-2 py-1.5 border-l border-zinc-800/50">
+                        {o.monsterName ? (
+                          <div className="min-w-0">
+                            <div className="truncate text-zinc-100">{o.monsterName}</div>
+                            <div className="text-[10px] text-zinc-500">
+                              {o.monsterLvl != null ? `Lv${o.monsterLvl}` : ''}
+                              {o.tElement ? ` · ${o.tElement}` : ''}
+                              {o.tClass ? ` · ${o.tClass}` : ''}
+                            </div>
+                          </div>
+                        ) : (
+                          <span className="text-zinc-600">—</span>
+                        )}
+                      </td>
+                      <td className="px-2 py-1.5 text-right font-mono">{o.def.toFixed(0)}</td>
+                      <td className="px-2 py-1.5 text-right font-mono">
+                        {o.tDmgRed.toFixed(1)}%
+                        {showCdmgRed && (
+                          <div className="text-[10px] text-zinc-500" title="Target CDMG RED %">
+                            CDR {o.tCdmgRed.toFixed(1)}%
+                          </div>
+                        )}
+                      </td>
+                      {/* Flags */}
+                      <td className="px-2 py-1.5 text-center border-l border-zinc-800/50">
+                        <div className="inline-flex items-center gap-1 text-[10px] font-mono">
+                          {o.crit && <span className="rounded bg-amber-900/40 px-1 text-amber-300" title="Critical hit">crit</span>}
+                          {o.elem === 'adv' && <span className="rounded bg-green-900/40 px-1 text-green-300" title="Element advantage">adv</span>}
+                          {o.elem === 'disadv' && <span className="rounded bg-red-900/40 px-1 text-red-300" title="Element disadvantage">dis</span>}
+                          {o.isBoss && <span className="rounded bg-purple-900/40 px-1 text-purple-300" title="Boss target">boss</span>}
+                          {!o.crit && o.elem === 'none' && !o.isBoss && <span className="text-zinc-700">—</span>}
+                        </div>
+                      </td>
+                      {/* Result */}
+                      <td className="px-2 py-1.5 text-right font-mono text-zinc-100 border-l border-zinc-800/50">{o.obs.toFixed(0)}</td>
+                      <td className="px-2 py-1.5 text-right font-mono text-zinc-400">{calc.toFixed(0)}</td>
                       <td className={`px-2 py-1.5 text-right font-mono ${good ? 'text-green-400' : medium ? 'text-amber-400' : 'text-red-400'}`}>
                         {ratio.toFixed(4)}
                       </td>
-                      <td className="px-2 py-1.5 text-zinc-500">{o.note ?? ''}</td>
+                      <td className="max-w-45 px-2 py-1.5 truncate text-zinc-500" title={o.note ?? ''}>{o.note ?? ''}</td>
                       <td className="px-2 py-1.5 text-right">
                         <button onClick={() => deleteObservation(o.id)} className="text-zinc-600 hover:text-red-400">×</button>
                       </td>
