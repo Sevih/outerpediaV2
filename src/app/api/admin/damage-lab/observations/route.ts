@@ -50,6 +50,12 @@ export interface Observation {
   quirksDisabled?: boolean    // target disables all quirks (e.g. lvl 99 boss)
   // context + result
   crit: boolean
+  // Set when the user marked the test as having triggered the skill's conditional
+  // additional attack (e.g. Luna's Barrier-driven extra hit). The recompute logic
+  // multiplies the listed DF by `additionalAttackRatio` to derive the extra
+  // damage component. Absent / false → no contribution.
+  additionalAttack?: boolean
+  additionalAttackRatio?: number   // snapshot of the per-skill ratio at save time
   obs: number                 // observed damage
   note?: string
   // Target origin — set when the target was loaded from game data (MonsterTemplet)
@@ -147,6 +153,8 @@ export async function POST(req: NextRequest) {
   if (body.class) o.class = body.class
   if (body.element) o.element = body.element
   if (body.skillLevel != null) o.skillLevel = body.skillLevel
+  if (body.additionalAttack) o.additionalAttack = true
+  if (body.additionalAttackRatio != null) o.additionalAttackRatio = body.additionalAttackRatio
   if (body.note && body.note.trim()) o.note = body.note.trim()
   if (body.monsterId) o.monsterId = body.monsterId
   if (body.monsterName) o.monsterName = body.monsterName

@@ -554,6 +554,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     buffs,
     awakLevels,
     awakNodes,
+    fusionTemplet,
   ] = await Promise.all([
     loadTable('CharacterTemplet'),
     loadTable('CharacterEvolutionStatTemplet'),
@@ -563,14 +564,23 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     loadTable('BuffTemplet'),
     loadTable('CharacterAwakeningLevelTemplet'),
     loadTable('CharacterAwakeningNodeTemplet'),
+    loadTable('CharacterFusionTemplet'),
   ])
 
   const row = charTemplet.find(r => r.ID === id)
   if (!row) return NextResponse.json({ error: 'Not found' }, { status: 404 })
 
+  // Core Fusion characters (e.g. 2700037) share their evolution rewards with
+  // the source character (2000037) via CharacterFusionTemplet.ChangeCharID →
+  // CharacterID. Resolve the source ID for table lookups that are keyed on
+  // CharacterID; awakening/codex/transcend lookups are unaffected (no per-char
+  // rows for fusion variants exist in those tables).
+  const fusionRow = fusionTemplet.find(r => r.ChangeCharID === id)
+  const evoCharId = fusionRow?.CharacterID ?? id
+
   const basicStar = num(row.BasicStar)
   const base       = extractBase(row)
-  const evo        = extractEvolution(evoStats, id)
+  const evo        = extractEvolution(evoStats, evoCharId)
   const codex      = extractCodex(archiveStats, targetCodex)
   const transcend  = extractTranscend(transcendent, basicStar, id, targetTranscend)
   const baseForRate = { spd: base.spd + evo.spd, eff: base.eff + evo.eff, res: base.res + evo.res }

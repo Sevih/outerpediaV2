@@ -69,6 +69,14 @@ interface PersistedForm {
 interface SkillData {
   skillId: string
   damageFactors: (number | null)[]
+  // Skill-internal additional attack proportion derived from CharacterDamageTemplet.
+  // Typical case: Luna's Barrier-triggered extra hit (ratio 0.30 = +30% DF). null
+  // when the skill has no conditional sub-attack rows.
+  additionalAttackRatio: number | null
+  // Character-specific BT_DMG_TO_BOSS pool bonus (% points) gated by CallerSkillType.
+  // Examples: Ame +50% on all skills (SKT_ALL), Stella +100% on S1 only / +300% on S3 only.
+  // Folded into the pool when the target is boss; 0 when the char/slot has no such buff.
+  bossDmgPct: number
 }
 
 // Transcend level progression per BasicStar. Each entry is a UI label + the
@@ -294,6 +302,17 @@ interface Observation {
   isBoss?: boolean
   quirksDisabled?: boolean
   crit: boolean
+  // Set when the user marks the test as having triggered the skill's conditional
+  // additional attack (e.g. Luna's Barrier-driven extra hit). The recompute logic
+  // multiplies the listed DF by the per-skill `additionalAttackRatio` (from the
+  // characters API) and feeds it as `additionalAttackDF` to computeDamage.
+  // Absent / false → no additional attack contribution.
+  additionalAttack?: boolean
+  // Snapshot of the additional-attack ratio at save time (so recompute survives a
+  // characters-API change). When absent, recompute looks it up from the live
+  // CharacterEntry; if the skill no longer has a ratio there, the additional
+  // contribution is dropped.
+  additionalAttackRatio?: number
   obs: number
   note?: string
   // Target origin (set when loaded from game data)
@@ -316,6 +335,12 @@ interface Observation {
     effectiveAtk: number              // mainAtk fed to the formula (post-SWAP, post-flat-ADD)
     addAtkNoPool?: number             // percentage-stat ADD contribution (no pool path); 0 / absent for legacy obs
     poolBonus: number
+    // Character-specific BT_DMG_TO_BOSS bonus snapshot (%, e.g. 50 for Ame all-skills,
+    // 100 for Stella S1, 300 for Stella S3). When `o.isBoss` is true, this value is
+    // already folded into the saved `o.dmgInc`; it's kept here for traceability and
+    // to let recompute distinguish "saved with the bonus already in" (this field
+    // present) from legacy obs (field absent → re-derive from live characters API).
+    charBossPoolBonus?: number
     scaling?: {
       swap?: { stat: string; valuePerMille: number }
       add?:  { stat: string; valuePerMille: number }[]
@@ -571,6 +596,11 @@ export default function DamageLabPage() {
 
   // Result
   const [crit, setCrit] = useState(false)
+  // Skill-internal additional attack toggle. Only meaningful for skills whose
+  // CharacterDamageTemplet rows include conditional sub-attacks (currentSkill
+  // .additionalAttackRatio !== null). UI auto-shows the toggle; the trigger is
+  // empirical (Luna = Barrier active, etc.) so the user picks it themselves.
+  const [additionalAttack, setAdditionalAttack] = useState(false)
   const [observed, setObserved] = useState('')
   const [note, setNote] = useState('')
 
@@ -1142,12 +1172,29 @@ export default function DamageLabPage() {
     return { mainAtk, addAtkNoPool }
   }, [selectedChar, atk, extraScale])
 
+  // Effective DF for the skill-internal additional attack — listed_DF × ratio
+  // when the user has toggled the "additional attack triggered" flag AND the
+  // selected skill exposes a non-null ratio. Otherwise 0 (no extra component).
+  const additionalAttackDF = useMemo(() => {
+    if (!additionalAttack || damageFactor == null) return 0
+    const ratio = currentSkill?.additionalAttackRatio
+    if (ratio == null || ratio <= 0) return 0
+    return damageFactor * ratio
+  }, [additionalAttack, damageFactor, currentSkill])
+
+  // Character-specific BT_DMG_TO_BOSS bonus, gated on `isBoss` AND the current slot.
+  // Sourced from CharacterEntry.skills[slot].bossDmgPct (computed server-side from
+  // the char's own buff list filtered by CallerSkillType — see characters/route.ts).
+  // Folded into the effective pool alongside the global `poolBonus`.
+  const charBossPoolBonus = isBoss ? (currentSkill?.bossDmgPct ?? 0) : 0
+
   const computation = useMemo(() => {
     if (damageFactor == null) return null
-    const effectiveDmgInc = num(dmgIncPct) + poolBonus
+    const effectiveDmgInc = num(dmgIncPct) + poolBonus + charBossPoolBonus
     const inputs: DamageInputs = {
       atk: effectiveScaling.mainAtk,
       addAtkNoPool: effectiveScaling.addAtkNoPool,
+      additionalAttackDF,
       damageFactor,
       chdPct: num(chdPct),
       penPct: num(penPct),
@@ -1165,7 +1212,7 @@ export default function DamageLabPage() {
       ratioDivisor: num(ratioDivisor, 1000),
     }
     return computeDamage(inputs)
-  }, [effectiveScaling, damageFactor, chdPct, penPct, dmgIncPct, poolBonus, crit, def, tgtCdmgRedPct, tgtDmgRedPct, isBoss, elemental, C, ratioDivisor])
+  }, [effectiveScaling, additionalAttackDF, damageFactor, chdPct, penPct, dmgIncPct, poolBonus, charBossPoolBonus, crit, def, tgtCdmgRedPct, tgtDmgRedPct, isBoss, elemental, C, ratioDivisor])
 
   const observedNum = observed.trim() === '' ? null : num(observed)
   const ratio = computation && observedNum != null && computation.calculated > 0
@@ -1185,10 +1232,10 @@ export default function DamageLabPage() {
 
     // Effective values fed to the formula (mirror what `computation` used):
     //   - atk after SWAP/ADD scaling
-    //   - dmgInc after pool-quirk pile-up
+    //   - dmgInc after pool-quirk pile-up + char-specific boss bonus
     // Stored in the flat fields so existing recompute logic keeps working;
     // the raw stats live in `caster`/`target` for full reproducibility.
-    const effDmgInc = num(dmgIncPct) + poolBonus
+    const effDmgInc = num(dmgIncPct) + poolBonus + charBossPoolBonus
 
     const sc = selectedChar.scaling
     const casterBlock = apiStats?.final ? {
@@ -1206,6 +1253,11 @@ export default function DamageLabPage() {
       effectiveAtk: effectiveScaling.mainAtk,
       addAtkNoPool: effectiveScaling.addAtkNoPool,
       poolBonus,
+      // Char-specific BT_DMG_TO_BOSS bonus actually fed (0 when target is non-boss
+      // or the skill has no such buff). Always set to 0 rather than omitted so the
+      // recompute can detect "this obs was saved with the boss-bonus path"
+      // unambiguously vs legacy obs where the field is absent.
+      charBossPoolBonus,
       ...(sc.swap || sc.add.length > 0 ? {
         scaling: {
           ...(sc.swap ? { swap: { stat: sc.swap.stat, valuePerMille: sc.swap.valuePerMille } } : {}),
@@ -1250,6 +1302,12 @@ export default function DamageLabPage() {
       isBoss,
       crit,
       obs: observedNum,
+      // Skill-internal additional attack: only saved when the user has the toggle
+      // on AND the selected skill exposes a non-null ratio. We snapshot the ratio
+      // alongside the flag so recompute is stable against characters-API changes.
+      ...(additionalAttack && currentSkill?.additionalAttackRatio != null
+        ? { additionalAttack: true, additionalAttackRatio: currentSkill.additionalAttackRatio }
+        : {}),
       ...(note.trim() ? { note: note.trim() } : {}),
       ...(selectedMonster ? {
         monsterId: selectedMonster.monsterId,
@@ -1365,13 +1423,38 @@ export default function DamageLabPage() {
     if (o.element && o.tElement) {
       elem = detectElementRelation(o.element, o.tElement)
     }
+    // Skill-internal additional attack: prefer the snapshotted ratio (stable across
+    // characters-API changes), fall back to the live value from CharacterEntry when
+    // the obs only carries the boolean flag (older save format).
+    const slotKey: SlotKey = o.slot === 'S1' ? 'first' : o.slot === 'S2' ? 'second' : 'ultimate'
+    const charEntry = characters.find(c => c.id === o.charId)
+    let additionalAttackDF = 0
+    if (o.additionalAttack) {
+      let ratio: number | undefined = o.additionalAttackRatio
+      if (ratio == null) {
+        ratio = charEntry?.skills[slotKey]?.additionalAttackRatio ?? undefined
+      }
+      if (ratio != null && ratio > 0) additionalAttackDF = o.df * ratio
+    }
+    // Char-specific BT_DMG_TO_BOSS bonus. Two cases:
+    //   - Obs saved AFTER this fix → caster.charBossPoolBonus is present (number),
+    //     and it's already folded into `o.dmgInc`. Don't double-apply.
+    //   - Obs saved BEFORE the fix → field is absent and the bonus was never folded
+    //     in. Re-derive from the live characters API and add it on top of o.dmgInc
+    //     when isBoss. This retroactively corrects old Stella/Ame obs.
+    let dmgIncForRecompute = o.dmgInc
+    if (o.caster?.charBossPoolBonus == null && (o.isBoss ?? false)) {
+      const liveBossDmgPct = charEntry?.skills[slotKey]?.bossDmgPct ?? 0
+      if (liveBossDmgPct > 0) dmgIncForRecompute += liveBossDmgPct
+    }
     const r = computeDamage({
       atk: mainAtk,
       addAtkNoPool,
+      additionalAttackDF,
       damageFactor: o.df,
       chdPct: o.chd,
       penPct: o.pen,
-      dmgIncPct: o.dmgInc,
+      dmgIncPct: dmgIncForRecompute,
       crit: o.crit,
       charClass: o.class,
       def: o.def,
@@ -1660,6 +1743,21 @@ export default function DamageLabPage() {
                 <input type="checkbox" checked={crit} onChange={e => setCrit(e.target.checked)} />
                 <span className="text-sm">Crit hit</span>
               </label>
+              {currentSkill?.additionalAttackRatio != null && currentSkill.additionalAttackRatio > 0 && (
+                <label className="flex items-center gap-2 pt-1">
+                  <input
+                    type="checkbox"
+                    checked={additionalAttack}
+                    onChange={e => setAdditionalAttack(e.target.checked)}
+                  />
+                  <span className="text-sm">
+                    Additional attack
+                    <span className="ml-1 text-[10px] text-zinc-500">
+                      (+{(currentSkill.additionalAttackRatio * 100).toFixed(0)}% DF · trigger condition is char-specific)
+                    </span>
+                  </span>
+                </label>
+              )}
             </div>
           </div>
         </section>
@@ -1999,6 +2097,7 @@ export default function DamageLabPage() {
             <table className="w-full text-xs">
               <thead className="text-zinc-500">
                 <tr className="border-b border-zinc-800">
+                  <th className="px-2 py-2 text-right" title="Insertion order in the JSONL (1-indexed)">#</th>
                   {/* Caster block */}
                   <th className="px-2 py-2 text-left">Caster</th>
                   <th className="px-2 py-2 text-center">Skill</th>
@@ -2029,16 +2128,20 @@ export default function DamageLabPage() {
                 </tr>
               </thead>
               <tbody>
-                {observations.slice().reverse().map(o => {
+                {observations.slice().reverse().map((o, idx, arr) => {
                   const { calc, ratio } = recomputeWithCurrentConstants(o)
                   const good = Math.abs(ratio - 1) <= 0.02
                   const medium = !good && Math.abs(ratio - 1) <= 0.05
+                  // Test number = 1-based position in the JSONL insertion order.
+                  // We display newest-first, so reverse the index back to recover it.
+                  const testNum = arr.length - idx
                   // Target's CDMG RED is virtually always 0 in auto mode (monsters
                   // don't have this stat) — surface it as a small badge only when
                   // a manual-mode test typed in a non-zero value, otherwise hide.
                   const showCdmgRed = o.tCdmgRed && o.tCdmgRed !== 0
                   return (
                     <tr key={o.id} className="border-b border-zinc-800/50 align-top hover:bg-zinc-800/30">
+                      <td className="px-2 py-1.5 text-right font-mono text-zinc-500">{testNum}</td>
                       {/* Caster: portrait + name + element/class */}
                       <td className="px-2 py-1.5">
                         <div className="flex items-center gap-2">
@@ -2100,7 +2203,13 @@ export default function DamageLabPage() {
                           {o.elem === 'adv' && <span className="rounded bg-green-900/40 px-1 text-green-300" title="Element advantage">adv</span>}
                           {o.elem === 'disadv' && <span className="rounded bg-red-900/40 px-1 text-red-300" title="Element disadvantage">dis</span>}
                           {o.isBoss && <span className="rounded bg-purple-900/40 px-1 text-purple-300" title="Boss target">boss</span>}
-                          {!o.crit && o.elem === 'none' && !o.isBoss && <span className="text-zinc-700">—</span>}
+                          {o.additionalAttack && (
+                            <span
+                              className="rounded bg-cyan-900/40 px-1 text-cyan-300"
+                              title={`Skill-internal additional attack triggered${o.additionalAttackRatio != null ? ` (+${(o.additionalAttackRatio * 100).toFixed(0)}% DF)` : ''}`}
+                            >+atk</span>
+                          )}
+                          {!o.crit && o.elem === 'none' && !o.isBoss && !o.additionalAttack && <span className="text-zinc-700">—</span>}
                         </div>
                       </td>
                       {/* Result */}

@@ -70,6 +70,26 @@ function parseTranscendAtkBonus(text: string | undefined): number {
 interface SkillData {
   skillId: string
   damageFactors: (number | null)[]   // index 0 = level 1, length 5
+  // Conditional additional attack ratio derived from CharacterDamageTemplet rows.
+  // Pattern: rows named `{charId}_Skill_{slot}_{N}` are MAIN attack hits; rows named
+  // `{charId}_Skill_{slot}_{N}_{M}` (3+ numeric segments) are CONDITIONAL sub-attacks
+  // that fire on a per-character condition (e.g. Luna's Barrier-triggered additional
+  // attack). The additional component contributes (sum_sub_DFs / sum_main_DFs) ×
+  // listed_DF as a separate damage hit using the same pool/mit/DR path.
+  // Validated empirically on Luna (sub: _2_1=100, _2_2=200; main: _1=300, _2=300, _3=400):
+  //   additionalRatio = 300/1000 = 0.30 → 30% extra damage on Barrier trigger,
+  //   matches the obs diff of 462 between her two test rows (no-barrier vs barrier).
+  // null when no sub-attack rows exist for that skill.
+  additionalAttackRatio: number | null
+  // Character-specific BT_DMG_TO_BOSS pool bonus (% points) gated by `CallerSkillType`.
+  // Sourced from the character's own skill buff lists (BuffID like `2000065_2_4`),
+  // filtered to BuffConditionType=NONE / ApplyingType=OAT_RATE / TargetType=ME, with
+  // a CallerSkillType list that includes either SKT_ALL or the SKT_* matching this
+  // slot (S1=SKT_FIRST, S2=SKT_SECOND, S3=SKT_ULTIMATE). Validated on:
+  //   - Ame (2000065_2_4, SKT_ALL, +50%) → applies to S1/S2/S3 on boss
+  //   - Stella (2000053_1_3 SKT_FIRST, +100%; 2000053_3_4 SKT_ULTIMATE, +300%)
+  // Applied at compute-time by adding to the pool only when the target is boss.
+  bossDmgPct: number
 }
 
 interface CharacterEntry {
@@ -149,7 +169,39 @@ function loadJson<T>(p: string): T {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
 
-function buildSkillData(skillId: string | undefined, levelsBySkill: Map<string, SkillLevel[]>): SkillData | null {
+// Walk CharacterDamageTemplet rows for a given (charId, skillSlot) and split them
+// into main vs sub-attack weights. The slot is the 1-based Skill_N index from
+// CharacterTemplet (1 / 2 / 3 for S1 / S2 / S3); CharacterDamageTemplet rows
+// follow the convention `{charId}_Skill_{slot}_{...}`.
+//
+// Naming patterns observed:
+//   {charId}_Skill_{slot}_{N}         → main attack hit (numeric suffix only)
+//   {charId}_Skill_{slot}_{N}_{M}     → conditional sub-attack (extra numeric segment)
+//   {charId}_Skill_{slot}_{N}_{LET}   → variant of hit N (alphabetic suffix, e.g. Ame's _5_B)
+// Variants are intentionally ignored here: they represent in-game alternate animations
+// of the same hit, not an additive sub-attack component.
+function computeAdditionalRatio(charId: string, slot: number, dmgRows: { ID?: string; DamageFactor?: string }[]): number | null {
+  const prefix = `${charId}_Skill_${slot}_`
+  const mainRe = new RegExp(`^${charId}_Skill_${slot}_\\d+$`)
+  const subRe  = new RegExp(`^${charId}_Skill_${slot}_\\d+_\\d+$`)
+  let mainSum = 0
+  let subSum = 0
+  for (const r of dmgRows) {
+    const id = r.ID ?? ''
+    if (!id.startsWith(prefix)) continue
+    const df = parseInt(r.DamageFactor ?? '0', 10) || 0
+    if (df === 0) continue
+    if (mainRe.test(id)) mainSum += df
+    else if (subRe.test(id)) subSum += df
+  }
+  if (mainSum === 0 || subSum === 0) return null
+  return subSum / mainSum
+}
+
+function buildSkillData(skillId: string | undefined, slot: number, charId: string,
+                       levelsBySkill: Map<string, SkillLevel[]>,
+                       dmgRows: { ID?: string; DamageFactor?: string }[],
+                       bossDmgPct: number): SkillData | null {
   if (!skillId) return null
   const rows = levelsBySkill.get(skillId)
   if (!rows || rows.length === 0) return null
@@ -160,7 +212,57 @@ function buildSkillData(skillId: string | undefined, levelsBySkill: Map<string, 
       factors[lvl - 1] = parseInt(row.DamageFactor, 10)
     }
   }
-  return { skillId, damageFactors: factors }
+  return {
+    skillId,
+    damageFactors: factors,
+    additionalAttackRatio: computeAdditionalRatio(charId, slot, dmgRows),
+    bossDmgPct,
+  }
+}
+
+// Walk every Skill_N slot of `charRow`, collect any BT_DMG_TO_BOSS passive buff
+// (cond=NONE, OAT_RATE, TargetType=ME), and return the resolved per-slot bonus
+// for S1/S2/S3 in % points. The buff's `CallerSkillType` is a CSV of SKT_*
+// entries — we include a buff in slot N's bucket when the list contains
+// SKT_ALL or the SKT_* matching that slot:
+//   slot 1 (S1) → SKT_FIRST
+//   slot 2 (S2) → SKT_SECOND
+//   slot 3 (S3) → SKT_ULTIMATE
+// Multiple matching buffs sum (no observed cases yet, but consistent with how
+// the engine handles stackable BT_DMG_TO_BOSS sources).
+const SLOT_TO_SKT: Record<number, string> = { 1: 'SKT_FIRST', 2: 'SKT_SECOND', 3: 'SKT_ULTIMATE' }
+function parseBossDmgBySlot(charRow: CharacterTempletRow, buffsById: Map<string, BuffRow>, maxSkillLevelBySkill: Map<string, SkillLevelRow>): { 1: number; 2: number; 3: number } {
+  const out = { 1: 0, 2: 0, 3: 0 } as { 1: number; 2: number; 3: number }
+  for (const k of Object.keys(charRow)) {
+    if (!k.startsWith('Skill_')) continue
+    const skillId = (charRow as unknown as Record<string, string | undefined>)[k]
+    if (!skillId) continue
+    const lvlRow = maxSkillLevelBySkill.get(skillId)
+    if (!lvlRow?.BuffID) continue
+    for (const bid of lvlRow.BuffID.split(',').map(s => s.trim()).filter(Boolean)) {
+      const b = buffsById.get(bid)
+      if (!b) continue
+      if (b.Type !== 'BT_DMG_TO_BOSS') continue
+      if ((b.BuffConditionType ?? 'NONE') !== 'NONE') continue
+      if ((b.ApplyingType ?? '') !== 'OAT_RATE') continue
+      // TargetType=ME means the buff applies to the caster (i.e. the player char).
+      // MY_TEAM / ENEMY_TEAM_* / etc. are scoped to other recipients and don't
+      // contribute to the caster's own boss-damage bonus.
+      const tt = (b as unknown as { TargetType?: string }).TargetType ?? ''
+      if (tt !== 'ME') continue
+      const csvCaller = (b as unknown as { CallerSkillType?: string }).CallerSkillType ?? ''
+      const callers = csvCaller.split(',').map(s => s.trim()).filter(Boolean)
+      const value = (parseInt(b.Value ?? '0', 10) || 0) / 10  // per-mille → % points
+      if (value === 0) continue
+      for (const slot of [1, 2, 3] as const) {
+        const skt = SLOT_TO_SKT[slot]
+        if (callers.includes('SKT_ALL') || callers.includes(skt)) {
+          out[slot] += value
+        }
+      }
+    }
+  }
+  return out
 }
 
 // Stats stored in BuffTemplet as per-mille (value / 10 = %). Consistent with the same
@@ -241,6 +343,7 @@ export async function GET() {
   const skillLevels = loadJson<SkillLevel[]>(path.join(JSON2_DIR, 'CharacterSkillLevelTemplet.json'))
   const evoStats = loadJson<EvolutionStatRow[]>(path.join(JSON2_DIR, 'CharacterEvolutionStatTemplet.json'))
   const buffs = loadJson<BuffRow[]>(path.join(JSON2_DIR, 'BuffTemplet.json'))
+  const dmgRows = loadJson<{ ID?: string; DamageFactor?: string }[]>(path.join(JSON2_DIR, 'CharacterDamageTemplet.json'))
 
   // Index buffs by BuffID — there can be several rows per id (different Level), pick max.
   const buffsById = new Map<string, BuffRow>()
@@ -429,11 +532,14 @@ export async function GET() {
         cp.critRatePct += extras.critRatePct
         return cp
       })(),
-      skills: {
-        first: buildSkillData(row.Skill_1, levelsBySkill),
-        second: buildSkillData(row.Skill_2, levelsBySkill),
-        ultimate: buildSkillData(row.Skill_3, levelsBySkill),
-      },
+      skills: (() => {
+        const boss = parseBossDmgBySlot(row, buffsById, maxSkillLevelBySkill)
+        return {
+          first: buildSkillData(row.Skill_1, 1, row.ID, levelsBySkill, dmgRows, boss[1]),
+          second: buildSkillData(row.Skill_2, 2, row.ID, levelsBySkill, dmgRows, boss[2]),
+          ultimate: buildSkillData(row.Skill_3, 3, row.ID, levelsBySkill, dmgRows, boss[3]),
+        }
+      })(),
       scaling: parseScaling(row, buffsById, maxSkillLevelBySkill),
     }
     // Only keep characters that have at least one active skill with a DamageFactor

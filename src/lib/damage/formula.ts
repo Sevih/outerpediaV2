@@ -91,6 +91,13 @@ export interface DamageInputs {
                               //   damage component (no pool modifier). Source: BT_DMG_OWNER_STAT
                               //   on a percentage-display stat (e.g. Regina CHC ADD).
                               //   Pre-computed by the caller as baseATK × (stat/100) × valPerMille/1000.
+  additionalAttackDF?: number // Optional skill-internal "additional attack" DamageFactor
+                              //   (per-mille like the main `damageFactor`). Source: per-skill
+                              //   conditional sub-attack rows in CharacterDamageTemplet (e.g.
+                              //   Luna's Barrier-triggered extra hit). Goes through the FULL
+                              //   pool path like the main attack — same skill modifiers apply.
+                              //   The caller is responsible for triggering it (UI toggle):
+                              //   set 0 / undefined when the trigger condition isn't met.
   damageFactor: number
   chdPct: number
   penPct: number
@@ -137,8 +144,9 @@ export interface DamageBreakdown {
   targetDrMult: number
   elemMult: number
   mainCalc: number            // main path damage (atk × df × pool × mit × dr × elem)
-  extraCalc: number           // secondary path (addAtkNoPool × df × mit × dr × elem) — 0 if no addAtkNoPool
-  calculated: number          // mainCalc + extraCalc
+  extraCalc: number           // ADD-scaling no-pool path (addAtkNoPool × df × mit × dr × elem) — 0 if absent
+  additionalCalc: number      // skill-internal additional attack (atk × additionalDF × pool × mit × dr × elem) — 0 if absent
+  calculated: number          // mainCalc + extraCalc + additionalCalc
   quirks: { name: string; value: string }[]
 }
 
@@ -238,7 +246,25 @@ export function computeDamage(i: DamageInputs): DamageBreakdown {
     quirks.push({ name: 'Scaling+ (no pool)', value: `+${extraCalc.toFixed(0)} from addAtkNoPool=${addAtk.toFixed(1)}` })
   }
 
-  const calculated = mainCalc + extraCalc
+  // Skill-internal additional attack (e.g. Luna's Barrier-triggered hit). Goes
+  // through the FULL pool path — same modifiers as the main attack — but uses
+  // its own DamageFactor (typically derived as listed_DF × additionalAttackRatio
+  // from CharacterDamageTemplet sub-attack weights). Validated on Luna: per-attack
+  // weights main 1000 / sub 300 → ratio 0.30, listed_DF 1450 → addDF 435,
+  // empirical diff between her 2 Amadeus tests = 462 (within float noise).
+  let additionalCalc = 0
+  const addDF = i.additionalAttackDF ?? 0
+  if (addDF > 0) {
+    let ac: number = atkInt
+    ac = fl(ac * addDF / ratioDivisor)
+    ac = fl(ac * mod)
+    ac = fl(ac * mitigation)
+    ac = fl(ac * targetDrMult)
+    additionalCalc = ac * elemMult
+    quirks.push({ name: 'Additional attack', value: `+${additionalCalc.toFixed(0)} (DF=${addDF.toFixed(0)})` })
+  }
 
-  return { poolPct, mod, mitigation, targetDrMult, elemMult, mainCalc, extraCalc, calculated, quirks }
+  const calculated = mainCalc + extraCalc + additionalCalc
+
+  return { poolPct, mod, mitigation, targetDrMult, elemMult, mainCalc, extraCalc, additionalCalc, calculated, quirks }
 }
