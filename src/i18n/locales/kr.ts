@@ -680,6 +680,7 @@ const kr: Record<TranslationKey, string> = {
   'monad.ui.grants': '획득',
   'monad.ui.unnamedPath': '(이름 없는 루트)',
   'monad.ui.clickToReveal': '클릭하여 표시 (스포일러)',
+  'monad.ui.choiceDoesntMatter': '어느 쪽을 선택해도 괜찮습니다',
   // Node types
   'monad.node.start': '탐사 시작 포인트',
   'monad.node.tending': '트루 엔딩',

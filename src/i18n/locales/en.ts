@@ -680,6 +680,7 @@ const en = {
   'monad.ui.grants': 'Grants',
   'monad.ui.unnamedPath': '(Unnamed path)',
   'monad.ui.clickToReveal': 'Click to reveal (spoiler)',
+  'monad.ui.choiceDoesntMatter': 'Either choice works',
   // Node types
   'monad.node.start': 'Exploration Starting Point',
   'monad.node.tending': 'True Ending',

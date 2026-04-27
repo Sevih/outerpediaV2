@@ -611,41 +611,38 @@ const MonadGateMap: React.FC<MonadGateMapProps> = ({
               {t('monad.trueEndingChoices')}
             </h3>
             <ol className={`space-y-3 transition-all duration-300 ${spoilerRevealed ? '' : 'blur-sm select-none'}`}>
-              {groups.map((group, idx) => {
-                // Primary = canonical truePath edge; alts = equivalent altPath forks from the same node.
-                const primary = group.find((e) => e.truePath) ?? group[0];
-                const alts = group.filter((e) => e !== primary);
-                return (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="shrink-0 w-6 h-6 rounded-full bg-yellow-400/15 text-yellow-300 font-bold text-xs flex items-center justify-center border border-yellow-500/40 mt-0.5">
-                      {idx + 1}
-                    </span>
-                    <div className="flex-1 min-w-0 flex flex-wrap items-center gap-x-2 gap-y-1">
-                      <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-green-700/30 border border-green-600/60 text-green-100 text-sm">
-                        {lRec(primary.label, lang)}
-                      </span>
-                      {primary.gives && (
-                        <span className="inline-flex items-center gap-1 text-emerald-300 text-xs font-medium">
-                          🔑 {lRec(primary.gives, lang)}
-                        </span>
-                      )}
-                      {alts.map((edge, i) => (
-                        <React.Fragment key={i}>
+              {groups.map((group, idx) => (
+                // All edges in `group` lead to a true ending — render them identically. The
+                // canonical/alt distinction at fork points is mechanical (BFS picks one), but
+                // either choice satisfies the player's goal, so we present them as equivalent.
+                <li key={idx} className="flex items-start gap-3">
+                  <span className="shrink-0 w-6 h-6 rounded-full bg-yellow-400/15 text-yellow-300 font-bold text-xs flex items-center justify-center border border-yellow-500/40 mt-0.5">
+                    {idx + 1}
+                  </span>
+                  <div className="flex-1 min-w-0 flex flex-wrap items-center gap-x-2 gap-y-1">
+                    {group.map((edge, i) => (
+                      <React.Fragment key={i}>
+                        {i > 0 && (
                           <span className="text-zinc-500 text-xs uppercase tracking-wide">or</span>
-                          <span className="inline-flex items-center px-2.5 py-1 rounded-md border border-dashed border-green-600/50 text-green-200/90 text-sm italic">
-                            {lRec(edge.label, lang)}
+                        )}
+                        <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-green-700/30 border border-green-600/60 text-green-100 text-sm">
+                          {lRec(edge.label, lang)}
+                        </span>
+                        {edge.gives && (
+                          <span className="inline-flex items-center gap-1 text-emerald-300 text-xs font-medium">
+                            🔑 {lRec(edge.gives, lang)}
                           </span>
-                          {edge.gives && (
-                            <span className="inline-flex items-center gap-1 text-emerald-300/90 text-xs font-medium">
-                              🔑 {lRec(edge.gives, lang)}
-                            </span>
-                          )}
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  </li>
-                );
-              })}
+                        )}
+                      </React.Fragment>
+                    ))}
+                    {group.length > 1 && (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded border border-red-500/60 bg-red-900/30 text-red-200 text-[10px] font-semibold">
+                        {t('monad.ui.choiceDoesntMatter')}
+                      </span>
+                    )}
+                  </div>
+                </li>
+              ))}
             </ol>
             {!spoilerRevealed && (
               <div className="absolute inset-0 flex items-center justify-center">
