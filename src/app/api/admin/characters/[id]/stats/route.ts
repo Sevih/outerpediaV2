@@ -107,7 +107,7 @@ interface Contributor {
   fields: Partial<StatBlock>
 }
 
-// ── Enum mappings (mirrors src/app/api/admin/damage-lab/quirks/route.ts) ──
+// ── Enum mappings (mirrors src/app/api/admin/damage-lab/_shared/extract-buffs.ts) ──
 // Empirically decoded from NodeName text in CharacterAwakeningNodeTemplet.
 const ELEMENT_INDEX: Record<string, number> = {
   CET_EARTH: 0, CET_WATER: 1, CET_FIRE: 2, CET_LIGHT: 3, CET_DARK: 4,

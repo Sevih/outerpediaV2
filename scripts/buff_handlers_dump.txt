@@ -1,0 +1,1017 @@
+Loading script.json…
+  221056 symbols loaded
+
+====================================================================================================
+  FindBuffAdditionalDamage  @ VA 0x2637548
+====================================================================================================
+
+--- BT_* type = 83  (cmp at 0x26376b4, branch b.ne → 0x26376ec) ---
+  matched-handler (fallthrough after b.ne):
+    0x026376bc  mov        w2, #0x17
+    0x026376c0  mov        x0, x23
+    0x026376c4  mov        x1, x21
+    0x026376c8  mov        x3, xzr
+    0x026376cc  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x026376d0  tbz        w0, #0, #0x26376ec
+    0x026376d4  ldr        s8, [x19]
+    0x026376d8  mov        x0, x23
+    0x026376dc  mov        x1, xzr
+    0x026376e0  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x026376e4  scvtf      s0, w0
+    0x026376e8  b          #0x2637a78
+    0x026376ec  mov        x0, x23
+    0x026376f0  mov        x1, xzr
+    0x026376f4  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x026376f8  cmp        w0, #0x54
+    0x026376fc  b.ne       #0x2637738
+    0x02637700  mov        w2, #0x17
+    0x02637704  mov        x0, x23
+    0x02637708  mov        x1, xzr
+    0x0263770c  mov        x3, xzr
+    0x02637710  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637714  tbz        w0, #0, #0x2637738
+    0x02637718  ldr        s12, [x19]
+    0x0263771c  mov        x0, x22
+
+--- BT_* type = 84  (cmp at 0x26376f8, branch b.ne → 0x2637738) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637700  mov        w2, #0x17
+    0x02637704  mov        x0, x23
+    0x02637708  mov        x1, xzr
+    0x0263770c  mov        x3, xzr
+    0x02637710  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637714  tbz        w0, #0, #0x2637738
+    0x02637718  ldr        s12, [x19]
+    0x0263771c  mov        x0, x22
+    0x02637720  bl         #0x262225c   ; → CCharacterBattle$$get_HPRate
+    0x02637724  mov        v8.16b, v0.16b
+    0x02637728  mov        x0, x23
+    0x0263772c  mov        x1, xzr
+    0x02637730  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637734  b          #0x2637784
+    0x02637738  mov        x0, x23
+    0x0263773c  mov        x1, xzr
+    0x02637740  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x02637744  cmp        w0, #0x55
+    0x02637748  b.ne       #0x26377a8
+    0x0263774c  mov        w2, #0x17
+    0x02637750  mov        x0, x23
+    0x02637754  mov        x1, xzr
+    0x02637758  mov        x3, xzr
+    0x0263775c  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637760  tbz        w0, #0, #0x26377a8
+
+--- BT_* type = 85  (cmp at 0x2637744, branch b.ne → 0x26377a8) ---
+  matched-handler (fallthrough after b.ne):
+    0x0263774c  mov        w2, #0x17
+    0x02637750  mov        x0, x23
+    0x02637754  mov        x1, xzr
+    0x02637758  mov        x3, xzr
+    0x0263775c  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637760  tbz        w0, #0, #0x26377a8
+    0x02637764  cbz        x21, #0x26382ec
+    0x02637768  ldr        s12, [x19]
+    0x0263776c  mov        x0, x21
+    0x02637770  bl         #0x262225c   ; → CCharacterBattle$$get_HPRate
+    0x02637774  mov        v8.16b, v0.16b
+    0x02637778  mov        x0, x23
+    0x0263777c  mov        x1, xzr
+    0x02637780  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637784  fsub       s0, s10, s8
+    0x02637788  fmin       s2, s0, s10
+    0x0263778c  fcmp       s0, #0.0
+    0x02637790  scvtf      s1, w0
+    0x02637794  fcsel      s0, s2, s11, pl
+    0x02637798  fmul       s1, s1, s9
+    0x0263779c  fmul       s0, s0, s1
+    0x026377a0  fadd       s0, s12, s0
+    0x026377a4  b          #0x2637a80
+    0x026377a8  mov        x0, x23
+    0x026377ac  mov        x1, xzr
+
+--- BT_* type = 86  (cmp at 0x26377b4, branch b.ne → 0x2637810) ---
+  matched-handler (fallthrough after b.ne):
+    0x026377bc  mov        w2, #0x17
+    0x026377c0  mov        x0, x23
+    0x026377c4  mov        x1, xzr
+    0x026377c8  mov        x3, xzr
+    0x026377cc  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x026377d0  tbz        w0, #0, #0x2637810
+    0x026377d4  ldr        x24, [x22, #0x28]
+    0x026377d8  mov        x0, x23
+    0x026377dc  mov        x1, xzr
+    0x026377e0  bl         #0x22b6d38   ; → CBuff$$get_StatType
+    0x026377e4  mov        w25, w0
+    0x026377e8  mov        x0, x23
+    0x026377ec  mov        x1, xzr
+    0x026377f0  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x026377f4  cbz        x24, #0x26382f0
+    0x026377f8  mov        w2, w0
+    0x026377fc  mov        x0, x24
+    0x02637800  mov        w1, w25
+    0x02637804  mov        x3, xzr
+    0x02637808  bl         #0x2737274   ; → CCharacterData$$GetStatValuePermille
+    0x0263780c  b          #0x2637878
+    0x02637810  mov        x0, x23
+    0x02637814  mov        x1, xzr
+    0x02637818  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x0263781c  cmp        w0, #0x57
+
+--- BT_* type = 87  (cmp at 0x263781c, branch b.ne → 0x2637894) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637824  mov        w2, #0x17
+    0x02637828  mov        x0, x23
+    0x0263782c  mov        x1, xzr
+    0x02637830  mov        x3, xzr
+    0x02637834  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637838  tbz        w0, #0, #0x2637894
+    0x0263783c  cbz        x21, #0x26382fc
+    0x02637840  ldr        x24, [x21, #0x28]
+    0x02637844  mov        x0, x23
+    0x02637848  mov        x1, xzr
+    0x0263784c  bl         #0x22b6d38   ; → CBuff$$get_StatType
+    0x02637850  mov        w25, w0
+    0x02637854  mov        x0, x23
+    0x02637858  mov        x1, xzr
+    0x0263785c  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637860  cbz        x24, #0x26382f8
+    0x02637864  mov        w2, w0
+    0x02637868  mov        x0, x24
+    0x0263786c  mov        w1, w25
+    0x02637870  mov        x3, xzr
+    0x02637874  bl         #0x2737274   ; → CCharacterData$$GetStatValuePermille
+    0x02637878  ldr        s0, [x19]
+    0x0263787c  scvtf      s1, w0
+    0x02637880  fmov       s2, w20
+    0x02637884  fminnm     s1, s1, s2
+
+--- BT_* type = 100  (cmp at 0x26378a0, branch b.ne → 0x263792c) ---
+  matched-handler (fallthrough after b.ne):
+    0x026378a8  mov        w2, #0x17
+    0x026378ac  mov        x0, x23
+    0x026378b0  mov        x1, xzr
+    0x026378b4  mov        x3, xzr
+    0x026378b8  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x026378bc  tbz        w0, #0, #0x263792c
+    0x026378c0  ldr        x0, [x28]
+    0x026378c4  ldr        x24, [x23, #0x18]
+    0x026378c8  ldr        w8, [x0, #0xe0]
+    0x026378cc  cbnz       w8, #0x26378d4
+    0x026378d0  bl         #0x21480d0
+    0x026378d4  mov        x0, x24
+    0x026378d8  mov        x1, xzr
+    0x026378dc  mov        x2, xzr
+    0x026378e0  bl         #0x4ed04d8   ; → UnityEngine.Object$$op_Inequality
+    0x026378e4  tbz        w0, #0, #0x2637690
+    0x026378e8  ldr        x8, [x23, #0x18]
+    0x026378ec  cbz        x8, #0x2638304
+    0x026378f0  ldr        x24, [x8, #0x28]
+    0x026378f4  cbz        x24, #0x2637690
+    0x026378f8  mov        x0, x23
+    0x026378fc  mov        x1, xzr
+    0x02637900  bl         #0x22b6d38   ; → CBuff$$get_StatType
+    0x02637904  mov        w25, w0
+    0x02637908  mov        x0, x23
+
+--- BT_* type = 88  (cmp at 0x2637938, branch b.ne → 0x263797c) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637940  mov        w2, #0x17
+    0x02637944  mov        x0, x23
+    0x02637948  mov        x1, xzr
+    0x0263794c  mov        x3, xzr
+    0x02637950  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637954  tbz        w0, #0, #0x263797c
+    0x02637958  ldr        s8, [x19]
+    0x0263795c  mov        x0, x22
+    0x02637960  mov        w1, wzr
+    0x02637964  bl         #0x2635ba8   ; → CCharacterBattle$$GetBuffCount
+    0x02637968  mov        w24, w0
+    0x0263796c  mov        x0, x23
+    0x02637970  mov        x1, xzr
+    0x02637974  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637978  b          #0x2637a70
+    0x0263797c  mov        x0, x23
+    0x02637980  mov        x1, xzr
+    0x02637984  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x02637988  cmp        w0, #0x59
+    0x0263798c  b.ne       #0x26379d0
+    0x02637990  mov        w2, #0x17
+    0x02637994  mov        x0, x23
+    0x02637998  mov        x1, xzr
+    0x0263799c  mov        x3, xzr
+    0x026379a0  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+
+--- BT_* type = 89  (cmp at 0x2637988, branch b.ne → 0x26379d0) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637990  mov        w2, #0x17
+    0x02637994  mov        x0, x23
+    0x02637998  mov        x1, xzr
+    0x0263799c  mov        x3, xzr
+    0x026379a0  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x026379a4  tbz        w0, #0, #0x26379d0
+    0x026379a8  ldr        x0, [x22, #0x330]
+    0x026379ac  cbz        x0, #0x2638300
+    0x026379b0  ldr        s8, [x19]
+    0x026379b4  mov        w1, wzr
+    0x026379b8  bl         #0x2635ba8   ; → CCharacterBattle$$GetBuffCount
+    0x026379bc  mov        w24, w0
+    0x026379c0  mov        x0, x23
+    0x026379c4  mov        x1, xzr
+    0x026379c8  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x026379cc  b          #0x2637a70
+    0x026379d0  mov        x0, x23
+    0x026379d4  mov        x1, xzr
+    0x026379d8  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x026379dc  cmp        w0, #0x5a
+    0x026379e0  b.ne       #0x2637a20
+    0x026379e4  mov        w2, #0x17
+    0x026379e8  mov        x0, x23
+    0x026379ec  mov        x1, xzr
+    0x026379f0  mov        x3, xzr
+
+--- BT_* type = 90  (cmp at 0x26379dc, branch b.ne → 0x2637a20) ---
+  matched-handler (fallthrough after b.ne):
+    0x026379e4  mov        w2, #0x17
+    0x026379e8  mov        x0, x23
+    0x026379ec  mov        x1, xzr
+    0x026379f0  mov        x3, xzr
+    0x026379f4  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x026379f8  tbz        w0, #0, #0x2637a20
+    0x026379fc  ldr        s8, [x19]
+    0x02637a00  mov        w1, #1
+    0x02637a04  mov        x0, x22
+    0x02637a08  bl         #0x2635ba8   ; → CCharacterBattle$$GetBuffCount
+    0x02637a0c  mov        w24, w0
+    0x02637a10  mov        x0, x23
+    0x02637a14  mov        x1, xzr
+    0x02637a18  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637a1c  b          #0x2637a70
+    0x02637a20  mov        x0, x23
+    0x02637a24  mov        x1, xzr
+    0x02637a28  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x02637a2c  cmp        w0, #0x5b
+    0x02637a30  b.ne       #0x2637a88
+    0x02637a34  mov        w2, #0x17
+    0x02637a38  mov        x0, x23
+    0x02637a3c  mov        x1, xzr
+    0x02637a40  mov        x3, xzr
+    0x02637a44  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+
+--- BT_* type = 91  (cmp at 0x2637a2c, branch b.ne → 0x2637a88) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637a34  mov        w2, #0x17
+    0x02637a38  mov        x0, x23
+    0x02637a3c  mov        x1, xzr
+    0x02637a40  mov        x3, xzr
+    0x02637a44  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637a48  tbz        w0, #0, #0x2637a88
+    0x02637a4c  ldr        x0, [x22, #0x330]
+    0x02637a50  cbz        x0, #0x2638308
+    0x02637a54  ldr        s8, [x19]
+    0x02637a58  mov        w1, #1
+    0x02637a5c  bl         #0x2635ba8   ; → CCharacterBattle$$GetBuffCount
+    0x02637a60  mov        w24, w0
+    0x02637a64  mov        x0, x23
+    0x02637a68  mov        x1, xzr
+    0x02637a6c  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637a70  mul        w8, w0, w24
+    0x02637a74  scvtf      s0, w8
+    0x02637a78  fmul       s0, s0, s9
+    0x02637a7c  fadd       s0, s8, s0
+    0x02637a80  str        s0, [x19]
+    0x02637a84  b          #0x2637690
+    0x02637a88  mov        x0, x23
+    0x02637a8c  mov        x1, xzr
+    0x02637a90  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x02637a94  cmp        w0, #0x5f
+
+--- BT_* type = 95  (cmp at 0x2637a94, branch b.ne → 0x2637ae4) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637a9c  mov        w2, #0x17
+    0x02637aa0  mov        x0, x23
+    0x02637aa4  mov        x1, xzr
+    0x02637aa8  mov        x3, xzr
+    0x02637aac  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637ab0  tbz        w0, #0, #0x2637ae4
+    0x02637ab4  ldr        x8, [x22, #0x330]
+    0x02637ab8  cbz        x8, #0x263830c
+    0x02637abc  ldr        x0, [x8, #0x360]
+    0x02637ac0  cbz        x0, #0x2638310
+    0x02637ac4  mov        x1, xzr
+    0x02637ac8  bl         #0x24337cc   ; → CRageManager$$get_IsBreak
+    0x02637acc  tbz        w0, #0, #0x2637ae4
+    0x02637ad0  ldr        s8, [x19]
+    0x02637ad4  mov        x0, x23
+    0x02637ad8  mov        x1, xzr
+    0x02637adc  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637ae0  b          #0x26376e4
+    0x02637ae4  mov        x0, x23
+    0x02637ae8  mov        x1, xzr
+    0x02637aec  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x02637af0  cmp        w0, #0x60
+    0x02637af4  b.ne       #0x2637b44
+    0x02637af8  mov        w2, #0x17
+    0x02637afc  mov        x0, x23
+
+--- BT_* type = 96  (cmp at 0x2637af0, branch b.ne → 0x2637b44) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637af8  mov        w2, #0x17
+    0x02637afc  mov        x0, x23
+    0x02637b00  mov        x1, xzr
+    0x02637b04  mov        x3, xzr
+    0x02637b08  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637b0c  tbz        w0, #0, #0x2637b44
+    0x02637b10  ldr        x8, [x22, #0x330]
+    0x02637b14  cbz        x8, #0x2638314
+    0x02637b18  ldr        x0, [x8, #0x28]
+    0x02637b1c  cbz        x0, #0x2637b44
+    0x02637b20  mov        x1, xzr
+    0x02637b24  bl         #0x2735258   ; → CCharacterData$$get_Type
+    0x02637b28  cmp        w0, #3
+    0x02637b2c  b.le       #0x2637b44
+    0x02637b30  ldr        s8, [x19]
+    0x02637b34  mov        x0, x23
+    0x02637b38  mov        x1, xzr
+    0x02637b3c  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637b40  b          #0x26376e4
+    0x02637b44  mov        x0, x23
+    0x02637b48  mov        x1, xzr
+    0x02637b4c  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x02637b50  cmp        w0, #0x61
+    0x02637b54  b.ne       #0x2637b84
+    0x02637b58  mov        w2, #0x17
+
+--- BT_* type = 97  (cmp at 0x2637b50, branch b.ne → 0x2637b84) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637b58  mov        w2, #0x17
+    0x02637b5c  mov        x0, x23
+    0x02637b60  mov        x1, x21
+    0x02637b64  mov        x3, xzr
+    0x02637b68  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637b6c  tbz        w0, #0, #0x2637b84
+    0x02637b70  ldr        s8, [x19]
+    0x02637b74  mov        x0, x23
+    0x02637b78  mov        x1, xzr
+    0x02637b7c  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637b80  b          #0x26376e4
+    0x02637b84  mov        x0, x23
+    0x02637b88  mov        x1, xzr
+    0x02637b8c  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x02637b90  cmp        w0, #0x62
+    0x02637b94  b.ne       #0x2637bf8
+    0x02637b98  mov        w2, #0x17
+    0x02637b9c  mov        x0, x23
+    0x02637ba0  mov        x1, xzr
+    0x02637ba4  mov        x3, xzr
+    0x02637ba8  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637bac  tbz        w0, #0, #0x2637bf8
+    0x02637bb0  cbz        x21, #0x263831c
+    0x02637bb4  mov        x0, x21
+    0x02637bb8  bl         #0x2622740   ; → CCharacterBattle$$get_SkillRecord
+
+--- BT_* type = 98  (cmp at 0x2637b90, branch b.ne → 0x2637bf8) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637b98  mov        w2, #0x17
+    0x02637b9c  mov        x0, x23
+    0x02637ba0  mov        x1, xzr
+    0x02637ba4  mov        x3, xzr
+    0x02637ba8  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637bac  tbz        w0, #0, #0x2637bf8
+    0x02637bb0  cbz        x21, #0x263831c
+    0x02637bb4  mov        x0, x21
+    0x02637bb8  bl         #0x2622740   ; → CCharacterBattle$$get_SkillRecord
+    0x02637bbc  cbz        x0, #0x2638318
+    0x02637bc0  ldr        w8, [x0, #0x3c]
+    0x02637bc4  cmp        w8, #1
+    0x02637bc8  b.eq       #0x2637be4
+    0x02637bcc  mov        x0, x21
+    0x02637bd0  bl         #0x2622740   ; → CCharacterBattle$$get_SkillRecord
+    0x02637bd4  cbz        x0, #0x2638324
+    0x02637bd8  ldr        w8, [x0, #0x3c]
+    0x02637bdc  cmp        w8, #3
+    0x02637be0  b.ne       #0x2637bf8
+    0x02637be4  ldr        s8, [x19]
+    0x02637be8  mov        x0, x23
+    0x02637bec  mov        x1, xzr
+    0x02637bf0  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02637bf4  b          #0x26376e4
+    0x02637bf8  mov        x0, x23
+
+--- BT_* type = 99  (cmp at 0x2637c04, branch b.ne → 0x2637c78) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637c0c  mov        w2, #0x17
+    0x02637c10  mov        x0, x23
+    0x02637c14  mov        x1, xzr
+    0x02637c18  mov        x3, xzr
+    0x02637c1c  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637c20  tbz        w0, #0, #0x2637c78
+    0x02637c24  ldrb       w8, [x26, #0xb56]
+    0x02637c28  cbnz       w8, #0x2637c40
+    0x02637c2c  adrp       x0, #0x545d000
+    0x02637c30  ldr        x0, [x0, #0x268]
+    0x02637c34  bl         #0x2147f58
+    0x02637c38  mov        w8, #1
+    0x02637c3c  strb       w8, [x26, #0xb56]
+    0x02637c40  adrp       x8, #0x545d000
+    0x02637c44  ldr        x8, [x8, #0x268]
+    0x02637c48  ldr        x8, [x8]
+    0x02637c4c  ldr        x8, [x8, #0xb8]
+    0x02637c50  ldr        x0, [x8]
+    0x02637c54  cbz        x0, #0x2638320
+    0x02637c58  mov        x1, xzr
+    0x02637c5c  bl         #0x2492e78   ; → CDungeonScene$$get_IsPvp
+    0x02637c60  tbz        w0, #0, #0x2637c78
+    0x02637c64  ldr        s8, [x19]
+    0x02637c68  mov        x0, x23
+    0x02637c6c  mov        x1, xzr
+
+--- BT_* type = 101  (cmp at 0x2637c84, branch b.ne → 0x2637d00) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637c8c  mov        w2, #0x17
+    0x02637c90  mov        x0, x23
+    0x02637c94  mov        x1, xzr
+    0x02637c98  mov        x3, xzr
+    0x02637c9c  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637ca0  tbz        w0, #0, #0x2637d00
+    0x02637ca4  ldr        x0, [x28]
+    0x02637ca8  ldr        x24, [x23, #0x18]
+    0x02637cac  ldr        w8, [x0, #0xe0]
+    0x02637cb0  cbnz       w8, #0x2637cb8
+    0x02637cb4  bl         #0x21480d0
+    0x02637cb8  mov        x0, x24
+    0x02637cbc  mov        x1, xzr
+    0x02637cc0  mov        x2, xzr
+    0x02637cc4  bl         #0x4ed04d8   ; → UnityEngine.Object$$op_Inequality
+    0x02637cc8  tbz        w0, #0, #0x2637690
+    0x02637ccc  ldr        x0, [x23, #0x18]
+    0x02637cd0  cbz        x0, #0x2638350
+    0x02637cd4  ldr        x8, [x0, #0x28]
+    0x02637cd8  cbz        x8, #0x2637690
+    0x02637cdc  ldr        s12, [x19]
+    0x02637ce0  bl         #0x262225c   ; → CCharacterBattle$$get_HPRate
+    0x02637ce4  mov        v8.16b, v0.16b
+    0x02637ce8  mov        x0, x23
+    0x02637cec  mov        x1, xzr
+
+--- BT_* type = 102  (cmp at 0x2637d0c, branch b.ne → 0x2637e14) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637d14  mov        w2, #0x17
+    0x02637d18  mov        x0, x23
+    0x02637d1c  mov        x1, xzr
+    0x02637d20  mov        x3, xzr
+    0x02637d24  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637d28  tbz        w0, #0, #0x2637e14
+    0x02637d2c  ldr        x0, [x28]
+    0x02637d30  ldr        x24, [x23, #0x20]
+    0x02637d34  ldr        w8, [x0, #0xe0]
+    0x02637d38  cbnz       w8, #0x2637d40
+    0x02637d3c  bl         #0x21480d0
+    0x02637d40  mov        x0, x24
+    0x02637d44  mov        x1, xzr
+    0x02637d48  mov        x2, xzr
+    0x02637d4c  bl         #0x4ed10c4   ; → UnityEngine.Object$$op_Equality
+    0x02637d50  tbnz       w0, #0, #0x2637690
+    0x02637d54  ldr        x0, [x23, #0x20]
+    0x02637d58  cbz        x0, #0x2638354
+    0x02637d5c  ldr        x8, [x0, #0x28]
+    0x02637d60  cbz        x8, #0x2637690
+    0x02637d64  bl         #0x2624b68   ; → CCharacterBattle$$GetTeam
+    0x02637d68  cbz        x0, #0x2637690
+    0x02637d6c  ldr        x0, [x0, #0x10]
+    0x02637d70  cbz        x0, #0x2638398
+    0x02637d74  adrp       x8, #0x545d000
+
+--- BT_* type = 103  (cmp at 0x2637e20, branch b.ne → 0x2637f0c) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637e28  mov        w2, #0x17
+    0x02637e2c  mov        x0, x23
+    0x02637e30  mov        x1, xzr
+    0x02637e34  mov        x3, xzr
+    0x02637e38  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637e3c  tbz        w0, #0, #0x2637f0c
+    0x02637e40  ldr        x0, [x28]
+    0x02637e44  ldr        x24, [x23, #0x20]
+    0x02637e48  ldr        w8, [x0, #0xe0]
+    0x02637e4c  cbnz       w8, #0x2637e54
+    0x02637e50  bl         #0x21480d0
+    0x02637e54  mov        x0, x24
+    0x02637e58  mov        x1, xzr
+    0x02637e5c  mov        x2, xzr
+    0x02637e60  bl         #0x4ed10c4   ; → UnityEngine.Object$$op_Equality
+    0x02637e64  tbnz       w0, #0, #0x2637690
+    0x02637e68  ldr        x0, [x23, #0x20]
+    0x02637e6c  cbz        x0, #0x2638358
+    0x02637e70  ldr        x8, [x0, #0x28]
+    0x02637e74  cbz        x8, #0x2637690
+    0x02637e78  bl         #0x2624b68   ; → CCharacterBattle$$GetTeam
+    0x02637e7c  cbz        x0, #0x2637690
+    0x02637e80  ldr        x0, [x0, #0x10]
+    0x02637e84  cbz        x0, #0x26383a4
+    0x02637e88  adrp       x8, #0x545d000
+
+--- BT_* type = 104  (cmp at 0x2637f18, branch b.ne → 0x2637fe0) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637f20  mov        w2, #0x17
+    0x02637f24  mov        x0, x23
+    0x02637f28  mov        x1, xzr
+    0x02637f2c  mov        x3, xzr
+    0x02637f30  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02637f34  tbz        w0, #0, #0x2637fe0
+    0x02637f38  ldrb       w8, [x26, #0xb56]
+    0x02637f3c  cbnz       w8, #0x2637f54
+    0x02637f40  adrp       x0, #0x545d000
+    0x02637f44  ldr        x0, [x0, #0x268]
+    0x02637f48  bl         #0x2147f58
+    0x02637f4c  mov        w8, #1
+    0x02637f50  strb       w8, [x26, #0xb56]
+    0x02637f54  adrp       x8, #0x545d000
+    0x02637f58  ldr        x8, [x8, #0x268]
+    0x02637f5c  ldr        x0, [x28]
+    0x02637f60  ldr        x8, [x8]
+    0x02637f64  ldr        w9, [x0, #0xe0]
+    0x02637f68  ldr        x8, [x8, #0xb8]
+    0x02637f6c  ldr        x24, [x8]
+    0x02637f70  cbnz       w9, #0x2637f78
+    0x02637f74  bl         #0x21480d0
+    0x02637f78  mov        x0, x24
+    0x02637f7c  mov        x1, xzr
+    0x02637f80  mov        x2, xzr
+
+--- BT_* type = 105  (cmp at 0x2637fec, branch b.ne → 0x2637690) ---
+  matched-handler (fallthrough after b.ne):
+    0x02637ff4  mov        w2, #0x17
+    0x02637ff8  mov        x0, x23
+    0x02637ffc  mov        x1, xzr
+    0x02638000  mov        x3, xzr
+    0x02638004  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02638008  tbz        w0, #0, #0x2637690
+    0x0263800c  ldrb       w8, [x26, #0xb56]
+    0x02638010  cbnz       w8, #0x2638028
+    0x02638014  adrp       x0, #0x545d000
+    0x02638018  ldr        x0, [x0, #0x268]
+    0x0263801c  bl         #0x2147f58
+    0x02638020  mov        w8, #1
+    0x02638024  strb       w8, [x26, #0xb56]
+    0x02638028  adrp       x8, #0x545d000
+    0x0263802c  ldr        x8, [x8, #0x268]
+    0x02638030  ldr        x0, [x28]
+    0x02638034  ldr        x8, [x8]
+    0x02638038  ldr        w9, [x0, #0xe0]
+    0x0263803c  ldr        x8, [x8, #0xb8]
+    0x02638040  ldr        x24, [x8]
+    0x02638044  cbnz       w9, #0x263804c
+    0x02638048  bl         #0x21480d0
+    0x0263804c  mov        x0, x24
+    0x02638050  mov        x1, xzr
+    0x02638054  mov        x2, xzr
+
+--- BT_* type = 93  (cmp at 0x26390b8, branch b.ne → 0x2639094) ---
+  matched-handler (fallthrough after b.ne):
+    0x026390c0  mov        w2, #0x17
+    0x026390c4  mov        x0, x20
+    0x026390c8  mov        x1, xzr
+    0x026390cc  mov        x3, xzr
+    0x026390d0  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x026390d4  tbz        w0, #0, #0x2639094
+    0x026390d8  mov        x0, x20
+    0x026390dc  mov        x1, xzr
+    0x026390e0  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x026390e4  add        w19, w0, w19
+    0x026390e8  b          #0x2639094
+    0x026390ec  ldr        x1, [x21]
+    0x026390f0  add        x0, sp, #8
+    0x026390f4  bl         #0x3ffa0b4   ; → System.Collections.Generic.List.Enumerator<object>$$Dispose
+    0x026390f8  mov        w0, w19
+    0x026390fc  ldp        x20, x19, [sp, #0x40]
+    0x02639100  ldp        x22, x21, [sp, #0x30]
+    0x02639104  ldr        x30, [sp, #0x20]
+    0x02639108  add        sp, sp, #0x50
+    0x0263910c  ret        
+
+--- BT_* type = 94  (cmp at 0x2639250, branch b.ne → 0x263922c) ---
+  matched-handler (fallthrough after b.ne):
+    0x02639258  mov        w2, #0x17
+    0x0263925c  mov        x0, x19
+    0x02639260  mov        x1, xzr
+    0x02639264  mov        x3, xzr
+    0x02639268  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x0263926c  tbz        w0, #0, #0x263922c
+    0x02639270  mov        x0, x19
+    0x02639274  mov        x1, xzr
+    0x02639278  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x0263927c  scvtf      s0, w0
+    0x02639280  fmul       s0, s0, s9
+    0x02639284  fadd       s8, s8, s0
+    0x02639288  b          #0x263922c
+    0x0263928c  ldr        x1, [x20]
+    0x02639290  add        x0, sp, #8
+    0x02639294  bl         #0x3ffa0b4   ; → System.Collections.Generic.List.Enumerator<object>$$Dispose
+    0x02639298  mov        v0.16b, v8.16b
+    0x0263929c  ldp        x20, x19, [sp, #0x40]
+    0x026392a0  ldp        x30, x21, [sp, #0x30]
+    0x026392a4  ldp        d9, d8, [sp, #0x20]
+    0x026392a8  add        sp, sp, #0x50
+    0x026392ac  ret        
+
+--- BT_* type = 140  (cmp at 0x26398e8, branch b.lt → 0x26398c4) ---
+  matched-handler (fallthrough after b.lt):
+    0x026398f0  mov        x0, x19
+    0x026398f4  mov        x1, xzr
+    0x026398f8  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x026398fc  cmp        w0, #0x8d
+    0x02639900  b.gt       #0x26398c4
+    0x02639904  b          #0x263990c
+    0x02639908  mov        x19, xzr
+    0x0263990c  ldr        x1, [x20]
+    0x02639910  add        x0, sp, #8
+    0x02639914  bl         #0x3ffa0b4   ; → System.Collections.Generic.List.Enumerator<object>$$Dispose
+    0x02639918  mov        x0, x19
+    0x0263991c  ldp        x20, x19, [sp, #0x30]
+    0x02639920  ldp        x30, x21, [sp, #0x20]
+    0x02639924  add        sp, sp, #0x40
+    0x02639928  ret        
+
+--- BT_* type = 141  (cmp at 0x26398fc, branch b.gt → 0x26398c4) ---
+  matched-handler (fallthrough after b.gt):
+    0x02639904  b          #0x263990c
+    0x02639908  mov        x19, xzr
+    0x0263990c  ldr        x1, [x20]
+    0x02639910  add        x0, sp, #8
+    0x02639914  bl         #0x3ffa0b4   ; → System.Collections.Generic.List.Enumerator<object>$$Dispose
+    0x02639918  mov        x0, x19
+    0x0263991c  ldp        x20, x19, [sp, #0x30]
+    0x02639920  ldp        x30, x21, [sp, #0x20]
+    0x02639924  add        sp, sp, #0x40
+    0x02639928  ret        
+
+--- BT_* type = 140  (cmp at 0x263a2b4, branch b.ne → 0x263a38c) ---
+  matched-handler (fallthrough after b.ne):
+    0x0263a2bc  ldr        x0, [x20, #0x2c8]
+    0x0263a2c0  cbz        x0, #0x263a410
+    0x0263a2c4  mov        x1, xzr
+    0x0263a2c8  bl         #0x2436780   ; → CSkill$$get_TriggerNameSecond
+    0x0263a2cc  mov        x1, x0
+    0x0263a2d0  str        x0, [sp, #0x18]
+    0x0263a2d4  mov        x0, x19
+    0x0263a2d8  bl         #0x2147efc
+    0x0263a2dc  add        x2, sp, #8
+    0x0263a2e0  mov        w1, #1
+    0x0263a2e4  b          #0x263a3c8
+    0x0263a2e8  adrp       x8, #0x5479000
+    0x0263a2ec  ldr        x8, [x8, #0x110]
+    0x0263a2f0  mov        x1, xzr
+    0x0263a2f4  ldr        x0, [x8]
+    0x0263a2f8  bl         #0x2b4a400   ; → CDebug$$LogWarning
+    0x0263a2fc  adrp       x8, #0x545a000
+    0x0263a300  ldr        x8, [x8, #0xcb8]
+    0x0263a304  ldr        x8, [x8]
+    0x0263a308  ldr        x19, [x8, #0xb8]
+    0x0263a30c  b          #0x263a3f4
+    0x0263a310  bl         #0x2639334   ; → CCharacterBattle$$FindBuffSecondTrigger
+    0x0263a314  cbz        x0, #0x263a3f4
+    0x0263a318  ldr        x0, [x20, #0x2c8]
+    0x0263a31c  cbz        x0, #0x263a410
+
+--- BT_* type = 141  (cmp at 0x263a398, branch b.ne → 0x263a3d0) ---
+  matched-handler (fallthrough after b.ne):
+    0x0263a3a0  ldr        x0, [x20, #0x2c8]
+    0x0263a3a4  cbz        x0, #0x263a410
+    0x0263a3a8  mov        x1, xzr
+    0x0263a3ac  bl         #0x24367dc   ; → CSkill$$get_TriggerNameThird
+    0x0263a3b0  mov        x1, x0
+    0x0263a3b4  str        x0, [sp, #0x18]
+    0x0263a3b8  mov        x0, x19
+    0x0263a3bc  bl         #0x2147efc
+    0x0263a3c0  add        x2, sp, #8
+    0x0263a3c4  mov        w1, #2
+    0x0263a3c8  mov        x0, x20
+    0x0263a3cc  bl         #0x263a414   ; → CCharacterBattle$$<GetUseTriggerName>g__CheckSkip|318_0
+    0x0263a3d0  ldr        x0, [x23]
+    0x0263a3d4  ldr        w8, [x0, #0xe0]
+    0x0263a3d8  cbnz       w8, #0x263a3e0
+    0x0263a3dc  bl         #0x21480d0
+    0x0263a3e0  adrp       x8, #0x5479000
+    0x0263a3e4  ldr        x8, [x8, #0x100]
+    0x0263a3e8  ldr        x0, [x8]
+    0x0263a3ec  mov        x1, xzr
+    0x0263a3f0  bl         #0x4eaa000   ; → UnityEngine.Debug$$LogWarning
+    0x0263a3f4  ldr        x0, [x19]
+    0x0263a3f8  ldp        x20, x19, [sp, #0x50]
+    0x0263a3fc  ldp        x22, x21, [sp, #0x40]
+    0x0263a400  ldp        x24, x23, [sp, #0x30]
+
+====================================================================================================
+  FindBuffDamageReduce  @ VA 0x2638638
+====================================================================================================
+
+--- BT_* type = 107  (cmp at 0x263876c, branch b.ne → 0x26387c0) ---
+  matched-handler (fallthrough after b.ne):
+    0x02638774  mov        w2, #0x17
+    0x02638778  mov        x0, x21
+    0x0263877c  mov        x1, x20
+    0x02638780  mov        x3, xzr
+    0x02638784  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02638788  tbz        w0, #0, #0x26387c0
+    0x0263878c  mov        x0, x21
+    0x02638790  mov        x1, xzr
+    0x02638794  bl         #0x22b6d50   ; → CBuff$$get_ApplyingType
+    0x02638798  cmp        w0, #2
+    0x0263879c  b.ne       #0x2638748
+    0x026387a0  mov        x0, x21
+    0x026387a4  mov        x1, xzr
+    0x026387a8  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x026387ac  add        w23, w0, w23
+    0x026387b0  mov        x0, x21
+    0x026387b4  mov        x1, xzr
+    0x026387b8  bl         #0x22c0e64   ; → CBuff$$MarkUsedHitOverThisSkill
+    0x026387bc  b          #0x2638748
+    0x026387c0  mov        x0, x21
+    0x026387c4  mov        x1, xzr
+    0x026387c8  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x026387cc  cmp        w0, #0x91
+    0x026387d0  b.ne       #0x2638814
+    0x026387d4  ldr        x0, [x27]
+
+--- BT_* type = 2  (cmp at 0x2638798, branch b.ne → 0x2638748) ---
+  matched-handler (fallthrough after b.ne):
+    0x026387a0  mov        x0, x21
+    0x026387a4  mov        x1, xzr
+    0x026387a8  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x026387ac  add        w23, w0, w23
+    0x026387b0  mov        x0, x21
+    0x026387b4  mov        x1, xzr
+    0x026387b8  bl         #0x22c0e64   ; → CBuff$$MarkUsedHitOverThisSkill
+    0x026387bc  b          #0x2638748
+    0x026387c0  mov        x0, x21
+    0x026387c4  mov        x1, xzr
+    0x026387c8  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x026387cc  cmp        w0, #0x91
+    0x026387d0  b.ne       #0x2638814
+    0x026387d4  ldr        x0, [x27]
+    0x026387d8  ldr        w8, [x0, #0xe0]
+    0x026387dc  cbnz       w8, #0x26387e4
+    0x026387e0  bl         #0x21480d0
+    0x026387e4  mov        x0, x20
+    0x026387e8  mov        x1, xzr
+    0x026387ec  mov        x2, xzr
+    0x026387f0  bl         #0x4ed04d8   ; → UnityEngine.Object$$op_Inequality
+    0x026387f4  tbz        w0, #0, #0x2638814
+    0x026387f8  cbz        x20, #0x26389d0
+    0x026387fc  mov        x0, x20
+    0x02638800  bl         #0x2622740   ; → CCharacterBattle$$get_SkillRecord
+
+--- BT_* type = 145  (cmp at 0x26387cc, branch b.ne → 0x2638814) ---
+  matched-handler (fallthrough after b.ne):
+    0x026387d4  ldr        x0, [x27]
+    0x026387d8  ldr        w8, [x0, #0xe0]
+    0x026387dc  cbnz       w8, #0x26387e4
+    0x026387e0  bl         #0x21480d0
+    0x026387e4  mov        x0, x20
+    0x026387e8  mov        x1, xzr
+    0x026387ec  mov        x2, xzr
+    0x026387f0  bl         #0x4ed04d8   ; → UnityEngine.Object$$op_Inequality
+    0x026387f4  tbz        w0, #0, #0x2638814
+    0x026387f8  cbz        x20, #0x26389d0
+    0x026387fc  mov        x0, x20
+    0x02638800  bl         #0x2622740   ; → CCharacterBattle$$get_SkillRecord
+    0x02638804  cbz        x0, #0x26389cc
+    0x02638808  ldr        w8, [x0, #0x20]
+    0x0263880c  cmp        w8, #1
+    0x02638810  b.ne       #0x26388fc
+    0x02638814  mov        x0, x21
+    0x02638818  mov        x1, xzr
+    0x0263881c  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x02638820  cmp        w0, #0x6e
+    0x02638824  b.ne       #0x2638748
+    0x02638828  mov        w2, #0x17
+    0x0263882c  mov        x0, x21
+    0x02638830  mov        x1, x20
+    0x02638834  mov        x3, xzr
+
+--- BT_* type = 110  (cmp at 0x2638820, branch b.ne → 0x2638748) ---
+  matched-handler (fallthrough after b.ne):
+    0x02638828  mov        w2, #0x17
+    0x0263882c  mov        x0, x21
+    0x02638830  mov        x1, x20
+    0x02638834  mov        x3, xzr
+    0x02638838  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x0263883c  tbz        w0, #0, #0x2638748
+    0x02638840  ldr        x0, [x27]
+    0x02638844  ldr        x22, [x21, #0x20]
+    0x02638848  ldr        w8, [x0, #0xe0]
+    0x0263884c  cbnz       w8, #0x2638854
+    0x02638850  bl         #0x21480d0
+    0x02638854  mov        x0, x22
+    0x02638858  mov        x1, xzr
+    0x0263885c  mov        x2, xzr
+    0x02638860  bl         #0x4ed10c4   ; → UnityEngine.Object$$op_Equality
+    0x02638864  tbnz       w0, #0, #0x2638748
+    0x02638868  ldr        x0, [x21, #0x20]
+    0x0263886c  cbz        x0, #0x26389d4
+    0x02638870  ldr        x8, [x0, #0x28]
+    0x02638874  cbz        x8, #0x2638748
+    0x02638878  bl         #0x2624b68   ; → CCharacterBattle$$GetTeam
+    0x0263887c  cbz        x0, #0x2638748
+    0x02638880  ldr        x0, [x0, #0x10]
+    0x02638884  cbz        x0, #0x2638a04
+    0x02638888  ldr        x1, [x28]
+
+--- BT_* type = 111  (cmp at 0x2638c4c, branch b.ne → 0x2638cb0) ---
+  matched-handler (fallthrough after b.ne):
+    0x02638c54  mov        w2, #0x17
+    0x02638c58  mov        x0, x21
+    0x02638c5c  mov        x1, x19
+    0x02638c60  mov        x3, xzr
+    0x02638c64  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02638c68  tbz        w0, #0, #0x2638cb0
+    0x02638c6c  ldr        s9, [x20]
+    0x02638c70  mov        x0, x21
+    0x02638c74  mov        x1, xzr
+    0x02638c78  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02638c7c  scvtf      s0, w0
+    0x02638c80  fmul       s0, s0, s8
+    0x02638c84  fcmp       s9, s0
+    0x02638c88  b.pl       #0x2638cb0
+    0x02638c8c  mov        x0, x21
+    0x02638c90  mov        x1, xzr
+    0x02638c94  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02638c98  scvtf      s0, w0
+    0x02638c9c  fmul       s0, s0, s8
+    0x02638ca0  str        s0, [x20]
+    0x02638ca4  mov        x0, x21
+    0x02638ca8  mov        x1, xzr
+    0x02638cac  bl         #0x22c0e64   ; → CBuff$$MarkUsedHitOverThisSkill
+    0x02638cb0  mov        x0, x21
+    0x02638cb4  mov        x1, xzr
+
+--- BT_* type = 112  (cmp at 0x2638cbc, branch b.ne → 0x2638db4) ---
+  matched-handler (fallthrough after b.ne):
+    0x02638cc4  mov        w2, #0x17
+    0x02638cc8  mov        x0, x21
+    0x02638ccc  mov        x1, x19
+    0x02638cd0  mov        x3, xzr
+    0x02638cd4  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02638cd8  tbz        w0, #0, #0x2638db4
+    0x02638cdc  ldr        x0, [x21, #0x20]
+    0x02638ce0  cbz        x0, #0x2638f0c
+    0x02638ce4  bl         #0x2624b68   ; → CCharacterBattle$$GetTeam
+    0x02638ce8  cbz        x0, #0x2638c00
+    0x02638cec  ldr        x0, [x0, #0x10]
+    0x02638cf0  cbz        x0, #0x2638f18
+    0x02638cf4  ldr        x1, [x27]
+    0x02638cf8  add        x8, sp, #0x18
+    0x02638cfc  bl         #0x439ad08   ; → System.Collections.Generic.List<object>$$GetEnumerator
+    0x02638d00  ldur       q0, [sp, #0x18]
+    0x02638d04  ldr        x8, [sp, #0x28]
+    0x02638d08  mov        w29, wzr
+    0x02638d0c  str        q0, [sp, #0x30]
+    0x02638d10  str        x8, [sp, #0x40]
+    0x02638d14  ldr        x1, [x28]
+    0x02638d18  add        x0, sp, #0x30
+    0x02638d1c  bl         #0x3ffa0b8   ; → System.Collections.Generic.List.Enumerator<object>$$MoveNext
+    0x02638d20  tbz        w0, #0, #0x2638d68
+    0x02638d24  ldr        x0, [x26]
+
+--- BT_* type = 113  (cmp at 0x2638dc0, branch b.ne → 0x2638e34) ---
+  matched-handler (fallthrough after b.ne):
+    0x02638dc8  cbz        x19, #0x2638ee0
+    0x02638dcc  mov        x0, x19
+    0x02638dd0  bl         #0x2622740   ; → CCharacterBattle$$get_SkillRecord
+    0x02638dd4  cbz        x0, #0x2638ed8
+    0x02638dd8  ldr        w8, [x0, #0x18]
+    0x02638ddc  cbz        w8, #0x2638e34
+    0x02638de0  mov        x0, x19
+    0x02638de4  bl         #0x2622740   ; → CCharacterBattle$$get_SkillRecord
+    0x02638de8  cbz        x0, #0x2638f08
+    0x02638dec  ldr        w2, [x0, #0x18]
+    0x02638df0  mov        x0, x21
+    0x02638df4  mov        x1, x19
+    0x02638df8  mov        x3, xzr
+    0x02638dfc  bl         #0x22c0dc8   ; → CBuff$$CheckAvailable
+    0x02638e00  tbz        w0, #0, #0x2638e34
+    0x02638e04  mov        x0, x21
+    0x02638e08  mov        x1, xzr
+    0x02638e0c  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x02638e10  ldr        s1, [x20]
+    0x02638e14  scvtf      s0, w0
+    0x02638e18  fmul       s0, s0, s8
+    0x02638e1c  fcmp       s0, s1
+    0x02638e20  b.le       #0x2638e34
+    0x02638e24  str        s0, [x20]
+    0x02638e28  mov        x0, x21
+
+--- BT_* type = 113  (cmp at 0x2638e40, branch b.ne → 0x2638c00) ---
+  matched-handler (fallthrough after b.ne):
+    0x02638e48  cbz        x19, #0x2638edc
+    0x02638e4c  mov        x0, x19
+    0x02638e50  bl         #0x2622740   ; → CCharacterBattle$$get_SkillRecord
+    0x02638e54  cbz        x0, #0x2638ee4
+    0x02638e58  ldr        w8, [x0, #0x18]
+    0x02638e5c  cbnz       w8, #0x2638c00
+    0x02638e60  mov        x0, x21
+    0x02638e64  mov        x1, xzr
+    0x02638e68  bl         #0x22c0e64   ; → CBuff$$MarkUsedHitOverThisSkill
+    0x02638e6c  b          #0x2638c00
+    0x02638e70  bl         #0x21481f4
+    0x02638e74  b          #0x2638f20
+    0x02638e78  b          #0x2638e88
+    0x02638e7c  b          #0x2638e88
+    0x02638e80  b          #0x2638e88
+    0x02638e84  b          #0x2638e88
+    0x02638e88  cmp        w1, #1
+    0x02638e8c  stp        x1, x0, [sp, #8]
+    0x02638e90  b.ne       #0x2638ee8
+    0x02638e94  ldr        x0, [sp, #0x10]
+    0x02638e98  bl         #0x51394f0
+    0x02638e9c  ldr        x22, [x0]
+    0x02638ea0  bl         #0x5139500
+    0x02638ea4  b          #0x2638d6c
+    0x02638ea8  ldr        x1, [x23]
+
+--- BT_* type = 2  (cmp at 0x2639c2c, branch b.ne → 0x2639c7c) ---
+  matched-handler (fallthrough after b.ne):
+    0x02639c34  adrp       x8, #0x1034000
+    0x02639c38  ldr        s0, [x8, #0x38]
+    0x02639c3c  mul        w8, w0, w20
+    0x02639c40  mov        w9, #0x7f800000
+    0x02639c44  scvtf      s1, w8
+    0x02639c48  fmov       s2, w9
+    0x02639c4c  fmul       s0, s1, s0
+    0x02639c50  fcvtzs     w8, s0
+    0x02639c54  fcmp       s0, s2
+    0x02639c58  mov        w9, #-0xffffffff80000000
+    0x02639c5c  csel       w0, w9, w8, eq
+    0x02639c60  b          #0x2639c80
+    0x02639c64  ldr        x0, [x20, #0x28]
+    0x02639c68  cbz        x0, #0x2639c8c
+    0x02639c6c  ldp        x20, x19, [sp, #0x10]
+    0x02639c70  mov        x1, xzr
+    0x02639c74  ldp        x30, x21, [sp], #0x20
+    0x02639c78  b          #0x2735db8
+    0x02639c7c  add        w0, w0, w20
+    0x02639c80  ldp        x20, x19, [sp, #0x10]
+    0x02639c84  ldp        x30, x21, [sp], #0x20
+    0x02639c88  ret        
+
+--- BT_* type = 2  (cmp at 0x263a278, branch b.ne → 0x263a3f4) ---
+  matched-handler (fallthrough after b.ne):
+    0x0263a280  mov        x0, x20
+    0x0263a284  bl         #0x263983c   ; → CCharacterBattle$$FindBuff2000065
+    0x0263a288  mov        x21, x0
+    0x0263a28c  mov        x0, x20
+    0x0263a290  bl         #0x2620b7c   ; → CCharacterBattle$$get_ReservedSkillType
+    0x0263a294  cbz        x21, #0x263a34c
+    0x0263a298  cbnz       w0, #0x263a2a8
+    0x0263a29c  mov        x0, x20
+    0x0263a2a0  bl         #0x262ac34   ; → CCharacterBattle$$CheckSealAdditiveAttack
+    0x0263a2a4  tbnz       w0, #0, #0x263a3d0
+    0x0263a2a8  mov        x0, x21
+    0x0263a2ac  mov        x1, xzr
+    0x0263a2b0  bl         #0x22b6bb8   ; → CBuff$$get_Type
+    0x0263a2b4  cmp        w0, #0x8c
+    0x0263a2b8  b.ne       #0x263a38c
+    0x0263a2bc  ldr        x0, [x20, #0x2c8]
+    0x0263a2c0  cbz        x0, #0x263a410
+    0x0263a2c4  mov        x1, xzr
+    0x0263a2c8  bl         #0x2436780   ; → CSkill$$get_TriggerNameSecond
+    0x0263a2cc  mov        x1, x0
+    0x0263a2d0  str        x0, [sp, #0x18]
+    0x0263a2d4  mov        x0, x19
+    0x0263a2d8  bl         #0x2147efc
+    0x0263a2dc  add        x2, sp, #8
+    0x0263a2e0  mov        w1, #1
+
+--- BT_* type = 2  (cmp at 0x263a954, branch b.eq → 0x263a998) ---
+  matched-handler (fallthrough after b.eq):
+    0x0263a95c  ldr        x0, [x27]
+    0x0263a960  mov        x1, xzr
+    0x0263a964  bl         #0x2b4a400   ; → CDebug$$LogWarning
+    0x0263a968  b          #0x263a8f4
+    0x0263a96c  mov        x0, x22
+    0x0263a970  mov        x1, xzr
+    0x0263a974  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x0263a978  cmp        w0, w25
+    0x0263a97c  mov        w23, #1
+    0x0263a980  b.ge       #0x263a8f4
+    0x0263a984  mov        w23, #1
+    0x0263a988  mov        x0, x22
+    0x0263a98c  mov        x1, xzr
+    0x0263a990  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x0263a994  b          #0x263a8f0
+    0x0263a998  ldr        x0, [x19, #0x28]
+    0x0263a99c  cbz        x0, #0x263aa90
+    0x0263a9a0  mov        x1, xzr
+    0x0263a9a4  bl         #0x27358dc   ; → CCharacterData$$get_MaxHP
+    0x0263a9a8  mov        w23, w0
+    0x0263a9ac  mov        x0, x22
+    0x0263a9b0  mov        x1, xzr
+    0x0263a9b4  bl         #0x22b6d8c   ; → CBuff$$get_Value
+    0x0263a9b8  ldrb       w8, [x28, #0xb5e]
+    0x0263a9bc  mov        w22, w0
+
+--- BT_* type = 2  (cmp at 0x263c8d0, branch b.hi → 0x263c8e8) ---
+  matched-handler (fallthrough after b.hi):
+    0x0263c8d8  adrp       x9, #0x1035000
+    0x0263c8dc  add        x9, x9, #0xf4
+    0x0263c8e0  ldr        w0, [x9, w8, sxtw #2]
+    0x0263c8e4  ret        

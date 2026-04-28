@@ -21,10 +21,18 @@ interface MonsterEntry {
   drMax: number           // raw DMGReduceRate_Max (treat as per mille, /10 for %)
   atkMin: number
   atkMax: number
-  // Computed stats at `level` (linear interpolation on lvl 1..100)
+  hpMin: number
+  hpMax: number
+  // Computed stats at `level` (linear interpolation on lvl 1..100).
+  // hpAtLevel ignores DungeonTemplet.SpawnAdvantageRate_HP and the per-dungeon
+  // boss HP overrides — those are only resolved by /api/admin/monsters/:id/stats
+  // when a dungeonId is passed. The lab's auto-mode picker calls that endpoint
+  // for accurate per-stage HP; this raw level-scaled value is the manual-mode
+  // fallback, slightly off vs in-game when the stage applies an HP rate.
   defAtLevel: number
   drPctAtLevel: number
   atkAtLevel: number
+  hpAtLevel: number
   // Spawn metadata
   position: number        // 0..2
   slot: number            // 0..3
@@ -91,11 +99,21 @@ const BOSS_TYPES = new Set([
 ])
 
 // Empirical scaling: stat(lvl) = Min + (Max - Min) * (lvl - 1) / 99
-// Validated on 2 points (Sentry Archer lvl 1 = 44, lvl 30 = 382).
+// Confirmed by binary disasm of CFormula.CalcStat (VA 0x2b52d24): the game
+// uses f32 arithmetic with the EXACT order `(max-min)/99 × (level-1) + min`
+// then `fcvtms` (= floor toward −∞) to produce an int32. Our prior float64
+// implementation drifted by up to 0.3 per-mille on DR (e.g. drMax=100, lv 30:
+// our float = 29.2929%, game's int = 29 = 2.9%). The int return matches
+// game runtime exactly — Noa S1 obs Δ = −1 → 0 with this fix.
 function interpolate(min: number, max: number, level: number): number {
   if (level <= 1) return min
   if (level >= 100) return max
-  return min + (max - min) * (level - 1) / 99
+  // Mirror CalcStat's f32 chain: (max-min)/99 × (level-1) + min, then floor.
+  const diff = Math.fround(max - min)
+  const div = Math.fround(diff / Math.fround(99))
+  const mul = Math.fround(div * Math.fround(level - 1))
+  const sum = Math.fround(mul + Math.fround(min))
+  return Math.floor(sum)
 }
 
 // ── Builder ───────────────────────────────────────────────────────────
@@ -173,6 +191,8 @@ function buildIndex(): ModeEntry[] {
             const drMax = num(tmpl.DMGReduceRate_Max)
             const atkMin = num(tmpl.Atk_Min)
             const atkMax = num(tmpl.Atk_Max)
+            const hpMin = num(tmpl.HP_Min)
+            const hpMax = num(tmpl.HP_Max)
 
             monsterEntries.push({
               monsterId: mid,
@@ -190,9 +210,12 @@ function buildIndex(): ModeEntry[] {
               drMax,
               atkMin,
               atkMax,
+              hpMin,
+              hpMax,
               defAtLevel: interpolate(defMin, defMax, level),
               drPctAtLevel: interpolate(0, drMax, level) / 10,
               atkAtLevel: interpolate(atkMin, atkMax, level),
+              hpAtLevel: interpolate(hpMin, hpMax, level),
               position,
               slot,
             })

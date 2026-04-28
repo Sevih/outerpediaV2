@@ -4,94 +4,72 @@ import path from 'path'
 
 const STORE_PATH = path.join(process.cwd(), 'data', 'admin', 'damage-lab-observations.jsonl')
 
-// Full no-gear stat block — same shape on caster (CharacterTemplet final) and
-// target (MonsterTemplet at level + dungeon advantage). Percent fields encoded
-// as % (e.g. 188 = 188%, not 1.88).
-export interface StatBlock {
-  atk: number
-  def: number
-  hp: number
-  spd: number
-  chc: number       // crit chance %
-  chd: number       // crit dmg %
-  pen: number       // penetration %
-  dmgInc: number    // damage increase %
-  dmgRed: number    // damage reduction %
-  eff: number       // effectiveness (flat)
-  res: number       // resilience (flat)
-}
-
+// Minimal observation schema — only what's needed to recompute damage from the
+// live buff list + the formula constants. No derived totals, no buff snapshots:
+// `recompute()` re-derives everything every render, so a fix to the buff parser
+// auto-propagates to every saved obs without re-saving.
 export interface Observation {
   id: string
   ts: string                  // ISO timestamp
-  char: string                // character name
-  charId: string              // character ID
-  class?: string              // attacker class (Striker/Mage/Ranger/Defender/Healer)
-  element?: string            // attacker element (Fire/Water/Earth/Light/Dark)
+
+  // Caster identity (drives buff applicability + display).
+  charId: string
+  charName: string
+  charElement: string
+  charClass: string
+  charSubclass: string
+
+  // Skill
   slot: 'S1' | 'S2' | 'S3'
-  skillLevel?: number         // 1..5 (the DamageFactor index that was used)
-  df: number                  // damage factor (the actual numeric value at skillLevel)
-  // attacker — flat fields here are the EFFECTIVE values fed to the formula:
-  //   atk    = post-scaling effective ATK (SWAP replaces, ADD adds on top)
-  //   dmgInc = stat-typed dmgInc + conditional pool quirks (BT_DMG)
-  // The full no-gear caster block lives in `caster`; SWAP/ADD scaling info too,
-  // so observations stay reproducible if the formula evolves.
-  atk: number
-  chd: number                 // crit damage %
-  dmgInc: number              // effective damage increase % (stat + pool quirks)
-  pen: number                 // penetration %
-  // target — flat fields are the values fed to the formula (incl. dungeon
-  // advantage and caster-side debuff). Full block + metadata in `target`.
-  def: number
-  tCdmgRed: number            // target crit dmg reduction %
-  tDmgRed: number             // target dmg reduction %
-  elem: 'none' | 'adv' | 'disadv'
-  isBoss?: boolean            // target is boss-type (enables PVE Boss +30% quirk)
-  quirksDisabled?: boolean    // target disables all quirks (e.g. lvl 99 boss)
-  // context + result
-  crit: boolean
-  // Set when the user marked the test as having triggered the skill's conditional
-  // additional attack (e.g. Luna's Barrier-driven extra hit). The recompute logic
-  // multiplies the listed DF by `additionalAttackRatio` to derive the extra
-  // damage component. Absent / false → no contribution.
+  skillLevel: number
+  df: number
+  // Set when the user marked the test as having triggered the skill's
+  // conditional sub-attack (e.g. Luna's Barrier). The recompute path multiplies
+  // `df` by `additionalAttackRatio` to produce the extra hit's DF.
   additionalAttack?: boolean
-  additionalAttackRatio?: number   // snapshot of the per-skill ratio at save time
-  obs: number                 // observed damage
-  note?: string
-  // Target origin — set when the target was loaded from game data (MonsterTemplet)
+  additionalAttackRatio?: number
+
+  // Caster inputs — user-typed values that feed the formula directly.
+  // No buff augmentation: live buffs are layered on top by `recompute()`.
+  atk: number
+  chd: number
+  pen: number
+  dmgInc: number
+  applyQuirks: boolean
+  extraStats?: Record<string, number>   // ST_* → numeric, for secondary scaling stats
+  // Per-char hardcoded-override flags (see `src/lib/damage/char-overrides.ts`).
+  // Example: Ame's `umeActive` / `sakuraActive` toggle her S1 alternate hit.
+  // Optional because most chars don't have any flags.
+  charFlags?: { umeActive?: boolean; sakuraActive?: boolean }
+
+  // Target inputs (user-fed; auto mode prefills from monster API).
+  targetDef: number
+  targetDmgRed: number
+  targetCdmgRed: number
+  // Target HP — needed by chars whose damage scales on it (BT_DMG_TARGET_STAT).
+  // Validated: Noa S2 (+3% × HP sub-attack). Optional because most chars don't use it.
+  targetHp?: number
+  isBoss: boolean
+  elem: 'none' | 'adv' | 'disadv'
+
+  // Mode metadata — `mode` drives the Adventure License gate; the rest is
+  // display-only.
+  mode?: string
+  stageId?: string
+  stageName?: string
+
+  // Target metadata — set when loaded from game data (auto target picker).
   monsterId?: string
   monsterName?: string
   monsterLvl?: number
-  monsterType?: string        // CT_BOSS_MONSTER / CT_NAMED_MONSTER / CT_MONSTER / ...
-  tClass?: string             // target class (Striker/Ranger/Defender...)
-  tElement?: string           // target element
-  stageId?: string            // DungeonTemplet.ID
-  stageName?: string
-  mode?: string               // raw DungeonMode (e.g. DM_RAID_1)
-  // Full caster snapshot — raw no-gear stats (no scaling applied), config used
-  // to compute them, and the scaling rule the character has. Optional for
-  // backward compat with pre-snapshot observations.
-  caster?: {
-    stats: StatBlock              // raw API stats at the time
-    transcendStar: number
-    codexLevel: number
-    applyQuirks: boolean
-    effectiveAtk: number          // value actually fed to the formula
-    poolBonus: number             // sum of conditional BT_DMG quirks (% added to dmgInc)
-    scaling?: {
-      swap?: { stat: string; valuePerMille: number }
-      add?:  { stat: string; valuePerMille: number }[]
-    }
-  }
-  // Full target snapshot — stats post dungeon-advantage and caster debuff,
-  // plus the per-mille adjustments themselves so we can recompute the raw
-  // monster stats if needed.
-  target?: {
-    stats: StatBlock
-    type: string                  // CT_*_MONSTER
-    advantageRate?: { atk: number; def: number; hp: number; spd: number }    // per-mille, signed
-    casterDebuff?: { eff: number; res: number }                                // per-mille, signed
-  }
+  monsterElement?: string
+  monsterClass?: string
+  monsterType?: string
+
+  // Result
+  crit: boolean
+  obs: number
+  note?: string
 }
 
 function readStore(): Observation[] {
@@ -133,40 +111,42 @@ export async function POST(req: NextRequest) {
   const o: Observation = {
     id: body.id ?? `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
     ts: body.ts ?? new Date().toISOString(),
-    char: body.char!,
     charId: body.charId!,
+    charName: body.charName!,
+    charElement: body.charElement ?? '',
+    charClass: body.charClass ?? '',
+    charSubclass: body.charSubclass ?? '',
     slot: body.slot!,
+    skillLevel: body.skillLevel ?? 5,
     df: body.df!,
-    atk: body.atk!,
+    atk: body.atk ?? 0,
     chd: body.chd ?? 0,
-    dmgInc: body.dmgInc ?? 0,
     pen: body.pen ?? 0,
-    def: body.def!,
-    tCdmgRed: body.tCdmgRed ?? 0,
-    tDmgRed: body.tDmgRed ?? 0,
-    elem: body.elem ?? 'none',
+    dmgInc: body.dmgInc ?? 0,
+    applyQuirks: body.applyQuirks ?? true,
+    targetDef: body.targetDef ?? 0,
+    targetDmgRed: body.targetDmgRed ?? 0,
+    targetCdmgRed: body.targetCdmgRed ?? 0,
     isBoss: body.isBoss ?? false,
-    quirksDisabled: body.quirksDisabled ?? false,
+    elem: body.elem ?? 'none',
     crit: body.crit ?? false,
     obs: body.obs!,
   }
-  if (body.class) o.class = body.class
-  if (body.element) o.element = body.element
-  if (body.skillLevel != null) o.skillLevel = body.skillLevel
   if (body.additionalAttack) o.additionalAttack = true
   if (body.additionalAttackRatio != null) o.additionalAttackRatio = body.additionalAttackRatio
-  if (body.note && body.note.trim()) o.note = body.note.trim()
+  if (body.extraStats && Object.keys(body.extraStats).length > 0) o.extraStats = body.extraStats
+  if (body.charFlags && Object.values(body.charFlags).some(v => v)) o.charFlags = body.charFlags
+  if (body.targetHp != null && body.targetHp > 0) o.targetHp = body.targetHp
+  if (body.mode) o.mode = body.mode
+  if (body.stageId) o.stageId = body.stageId
+  if (body.stageName) o.stageName = body.stageName
   if (body.monsterId) o.monsterId = body.monsterId
   if (body.monsterName) o.monsterName = body.monsterName
   if (body.monsterLvl != null) o.monsterLvl = body.monsterLvl
+  if (body.monsterElement) o.monsterElement = body.monsterElement
+  if (body.monsterClass) o.monsterClass = body.monsterClass
   if (body.monsterType) o.monsterType = body.monsterType
-  if (body.tClass) o.tClass = body.tClass
-  if (body.tElement) o.tElement = body.tElement
-  if (body.stageId) o.stageId = body.stageId
-  if (body.stageName) o.stageName = body.stageName
-  if (body.mode) o.mode = body.mode
-  if (body.caster) o.caster = body.caster
-  if (body.target) o.target = body.target
+  if (body.note && body.note.trim()) o.note = body.note.trim()
   appendObservation(o)
   return NextResponse.json({ ok: true, observation: o })
 }

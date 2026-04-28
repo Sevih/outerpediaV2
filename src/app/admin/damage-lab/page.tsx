@@ -1,10 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import CharacterPortrait from '@/app/components/character/CharacterPortrait'
 import MonsterPortrait from '@/app/components/character/MonsterPortrait'
-import { computeDamage, type DamageInputs } from '@/lib/damage/formula'
+import { applyBuffs, type ApplicableBuff, type BuffContext, type ReducedBuffs } from '@/lib/damage/buffs'
+import { recompute, detectElementRelation, type RecomputeContext } from '@/lib/damage/recompute'
 import { STAR_ICONS, starRowForLevel } from '@/lib/stars'
 import statsJson from '@data/stats.json'
 
@@ -39,7 +40,7 @@ function StatIcon({ stat, size = 18 }: { stat: string; size?: number }) {
   )
 }
 
-const LS_FORM_KEY = 'damage-lab-form-v8'
+const LS_FORM_KEY = 'damage-lab-form-v9'
 const AUTO_SAVE_DEBOUNCE_MS = 1500
 
 interface PersistedForm {
@@ -64,19 +65,17 @@ interface PersistedForm {
   // Target mode
   targetMode?: 'auto' | 'manual'  // auto: stats fetched from /api/admin/monsters/:id/stats. manual: user types values in.
   targetLevel?: number            // monster level used in auto mode (1..100); seeded from the stage spawn but overridable
+  // Per-char hardcoded-override flags. UI surfaces a toggle per relevant char.
+  umeActive?: boolean             // Ame-specific: Ume state (priority gain) — gates S1 ADD
+  sakuraActive?: boolean          // Ame-specific: Sakura state (elem superiority) — gates S1 REPLACE-on-adv
 }
 
 interface SkillData {
-  skillId: string
   damageFactors: (number | null)[]
   // Skill-internal additional attack proportion derived from CharacterDamageTemplet.
   // Typical case: Luna's Barrier-triggered extra hit (ratio 0.30 = +30% DF). null
   // when the skill has no conditional sub-attack rows.
   additionalAttackRatio: number | null
-  // Character-specific BT_DMG_TO_BOSS pool bonus (% points) gated by CallerSkillType.
-  // Examples: Ame +50% on all skills (SKT_ALL), Stella +100% on S1 only / +300% on S3 only.
-  // Folded into the pool when the target is boss; 0 when the char/slot has no such buff.
-  bossDmgPct: number
 }
 
 // Transcend level progression per BasicStar. Each entry is a UI label + the
@@ -114,11 +113,14 @@ function getTranscendOptions(basicStar: number): TranscendOption[] {
   ]
 }
 
-interface ScalingEntry { stat: string; valuePerMille: number; buffId: string }
+// Scaling info derived client-side from the unified buffs list (not part of the
+// characters API). See `useCharScaling` below — it filters allBuffs to the
+// char_skill source for the active char and groups the entries by effect kind.
+interface ScalingEntry { stat: string; valuePerMille: number }
 interface CharacterScaling {
   swap: ScalingEntry | null                                                  // BT_SWAP_STAT_ATTACK — replaces ATK
   add: ScalingEntry[]                                                        // BT_DMG_OWNER_STAT — bonus on top of ATK
-  special: { kind: 'lost_hp' | 'target_stat'; stat: string; valuePerMille: number; buffId: string }[]
+  special: { kind: 'lost_hp' | 'target_stat'; stat: string; valuePerMille: number }[]
 }
 
 interface CharacterEntry {
@@ -132,8 +134,6 @@ interface CharacterEntry {
   originalCharacter?: string
   basicStar: number                   // 1 / 2 / 3 — drives transcend progression
   atkMax: number                      // lvl 100 base (no gear/evo/awaken)
-  defMax: number
-  hpMax: number
   chdMax: number                      // %
   critRateMax: number                 // %
   skills: {
@@ -141,7 +141,6 @@ interface CharacterEntry {
     second: SkillData | null
     ultimate: SkillData | null
   }
-  scaling: CharacterScaling
 }
 
 // Short display name for ST_* enums, used by the scaling readout.
@@ -193,167 +192,58 @@ interface ApiMonsterStatsResponse {
   }
 }
 
-// Outerplane element relations.
-//   Fire > Earth > Water > Fire (rock-paper-scissors trio).
-//   Light ↔ Dark mutual advantage — both directions resolve to 'adv'. Validated
-//   empirically on Vera (Dark) vs Light Ars Nova (4 obs at 1.003 ratio with ×1.20
-//   intrinsic mult applied) and Eliza (Dark) vs Light (2 obs same).
-//
-// Note that the +50% pool quirk (Awakening_Element_Dmg_10, cond=ATTACKER_ELEMENT_WIN)
-// fires only on the Fire/Water/Earth trio — Light/Dark instead get the unconditional
-// +30% from Awakening_Element_Dmg_Dark_Light_10. So when Light/Dark adv triggers,
-// the pool stays at the unconditional +30% AND the ×1.20 multiplier applies on top.
-const ELEMENT_ADV: Record<string, string> = {
-  Fire: 'Earth', Earth: 'Water', Water: 'Fire',
-  Light: 'Dark', Dark: 'Light',
-}
-function detectElementRelation(attacker: string, target: string): 'adv' | 'disadv' | 'none' {
-  if (!attacker || !target || attacker === target) return 'none'
-  if (ELEMENT_ADV[attacker] === target) return 'adv'
-  if (ELEMENT_ADV[target] === attacker) return 'disadv'
-  return 'none'
-}
-
-// Stats whose value is a percentage (CHC=21 means 21%). Used to decide ADD-scaling
-// semantics: percentage-stat ADD scaling produces a separate damage component that
-// skips the pool modifier (validated on Regina CHC×0.5 ADD), whereas flat-stat ADD
-// scaling adds directly to ATK and goes through the full pool path. Mirrors the
-// PERCENT_STATS set in src/app/api/admin/damage-lab/quirks/route.ts and characters route.
-const PERCENT_SCALING_STATS = new Set([
-  'ST_CRITICAL_RATE',          // ✓ validated on Regina (+50% CHC ADD)
-  'ST_CRITICAL_DMG_RATE',      // not yet tested — assumed same convention
-  'ST_PIERCE_POWER_RATE',      // not yet tested
-  'ST_DMG_REDUCE_RATE',        // not yet tested
-  'ST_DMG_BOOST',              // not yet tested
-  'ST_BUFF_CHANCE',            // not yet tested — but EFF/RES are displayed as integers
-  'ST_BUFF_RESIST',            //   in-game so this convention may not apply; revisit when tested.
-])
-
-// Read a stat value out of a saved snapshot, given an ST_* key. Used by the obs-table
-// recompute to derive the scaling split (mainAtk + addAtkNoPool) from caster.scaling.
-function statValueFromBlock(block: ObsStatBlock, stat: string): number {
-  switch (stat) {
-    case 'ST_ATK': return block.atk
-    case 'ST_DEF': return block.def
-    case 'ST_HP':  return block.hp
-    case 'ST_SPEED': return block.spd
-    case 'ST_CRITICAL_RATE':     return block.chc
-    case 'ST_CRITICAL_DMG_RATE': return block.chd
-    case 'ST_PIERCE_POWER_RATE': return block.pen
-    case 'ST_DMG_BOOST':         return block.dmgInc
-    case 'ST_DMG_REDUCE_RATE':   return block.dmgRed
-    case 'ST_BUFF_CHANCE':       return block.eff
-    case 'ST_BUFF_RESIST':       return block.res
-    default: return 0
-  }
-}
-
-interface QuirkEffect {
-  target: 'pool' | 'atk' | 'chd' | 'pen' | 'critRate' | 'monsterEff' | 'monsterRes'
-  unit: '%' | 'flat'
-  amount: number
-  requires?: 'adv' | 'disadv' | 'neutral' | 'crit' | 'boss' | null
-}
-interface QuirkEntry {
-  nodeId: string
-  group: 'ELEMENTAL' | 'JOB' | 'UTILITY' | 'PVE' | 'ADVENTURE_LICENSE'
-  name: string
-  desc: string
-  maxLevel: number
-  enabledByDefault: boolean
-  appliesTo: { kind: 'element' | 'class' | 'subclass' | 'none'; value: string | null }
-  source: {
-    buffId: string; buffType: string; statType: string
-    applyingType: string; value: number; condition: string; optionType: string
-  }
-  effect: QuirkEffect | null
-}
-
-// Mirror of the server-side StatBlock — full no-gear stat snapshot.
-interface ObsStatBlock {
-  atk: number; def: number; hp: number; spd: number
-  chc: number; chd: number; pen: number
-  dmgInc: number; dmgRed: number
-  eff: number; res: number
-}
+// Mirror of the observations route's Observation type — minimal save schema
+// holding only what `recompute()` needs to derive damage from the live buffs
+// list. No derived totals, no buff snapshots: the formula gets re-applied
+// every render.
 interface Observation {
   id: string
   ts: string
-  char: string
+  // Caster identity (drives buff applicability + display).
   charId: string
-  class?: string
-  element?: string
+  charName: string
+  charElement: string
+  charClass: string
+  charSubclass: string
+  // Skill
   slot: 'S1' | 'S2' | 'S3'
-  skillLevel?: number       // 1..5 — DamageFactor index used
+  skillLevel: number
   df: number
-  // Flat formula-fed values. `atk` is the MAIN ATK fed to the pool path —
-  // post-SWAP and post-flat-ADD scaling. The percentage-stat ADD contribution
-  // (e.g. Regina CHC ×0.5 ADD) lives separately in `caster.addAtkNoPool` and is
-  // re-derived from caster.scaling on recompute (see recomputeWithCurrentConstants).
-  // `dmgInc` is stat dmgInc + conditional pool quirks (BT_DMG) — what computeDamage saw.
+  additionalAttack?: boolean
+  additionalAttackRatio?: number
+  // Caster inputs — raw user-typed values that feed the formula directly.
   atk: number
   chd: number
-  dmgInc: number
   pen: number
-  def: number
-  tCdmgRed: number
-  tDmgRed: number
+  dmgInc: number
+  applyQuirks: boolean
+  extraStats?: Record<string, number>
+  // Per-char hardcoded-override flags (see `src/lib/damage/char-overrides.ts`).
+  charFlags?: { umeActive?: boolean; sakuraActive?: boolean }
+  // Target inputs
+  targetDef: number
+  targetDmgRed: number
+  targetCdmgRed: number
+  // Target HP — needed by chars whose damage scales on it (BT_DMG_TARGET_STAT).
+  // Validated: Noa S2 (+3% × HP sub-attack). Optional because most chars don't use it.
+  targetHp?: number
+  isBoss: boolean
   elem: 'none' | 'adv' | 'disadv'
-  isBoss?: boolean
-  quirksDisabled?: boolean
-  crit: boolean
-  // Set when the user marks the test as having triggered the skill's conditional
-  // additional attack (e.g. Luna's Barrier-driven extra hit). The recompute logic
-  // multiplies the listed DF by the per-skill `additionalAttackRatio` (from the
-  // characters API) and feeds it as `additionalAttackDF` to computeDamage.
-  // Absent / false → no additional attack contribution.
-  additionalAttack?: boolean
-  // Snapshot of the additional-attack ratio at save time (so recompute survives a
-  // characters-API change). When absent, recompute looks it up from the live
-  // CharacterEntry; if the skill no longer has a ratio there, the additional
-  // contribution is dropped.
-  additionalAttackRatio?: number
-  obs: number
-  note?: string
-  // Target origin (set when loaded from game data)
+  // Mode metadata — `mode` drives the AdvLicense gate; the rest is display-only.
+  mode?: string
+  stageId?: string
+  stageName?: string
+  // Target metadata (set when loaded from game data)
   monsterId?: string
   monsterName?: string
   monsterLvl?: number
+  monsterElement?: string
+  monsterClass?: string
   monsterType?: string
-  tClass?: string
-  tElement?: string
-  stageId?: string
-  stageName?: string
-  mode?: string
-  // Full caster snapshot — raw API stats + scaling rule + the value actually
-  // fed to the formula. Lets us reproduce the calc when the formula evolves.
-  caster?: {
-    stats: ObsStatBlock
-    transcendStar: number
-    codexLevel: number
-    applyQuirks: boolean
-    effectiveAtk: number              // mainAtk fed to the formula (post-SWAP, post-flat-ADD)
-    addAtkNoPool?: number             // percentage-stat ADD contribution (no pool path); 0 / absent for legacy obs
-    poolBonus: number
-    // Character-specific BT_DMG_TO_BOSS bonus snapshot (%, e.g. 50 for Ame all-skills,
-    // 100 for Stella S1, 300 for Stella S3). When `o.isBoss` is true, this value is
-    // already folded into the saved `o.dmgInc`; it's kept here for traceability and
-    // to let recompute distinguish "saved with the bonus already in" (this field
-    // present) from legacy obs (field absent → re-derive from live characters API).
-    charBossPoolBonus?: number
-    scaling?: {
-      swap?: { stat: string; valuePerMille: number }
-      add?:  { stat: string; valuePerMille: number }[]
-    }
-  }
-  // Full target snapshot — stats post-advantage and post-debuff, plus the rates
-  // themselves so we can reverse to raw monster stats.
-  target?: {
-    stats: ObsStatBlock
-    type: string
-    advantageRate?: { atk: number; def: number; hp: number; spd: number }
-    casterDebuff?: { eff: number; res: number }
-  }
+  // Result
+  crit: boolean
+  obs: number
+  note?: string
 }
 
 interface StageMonster {
@@ -372,9 +262,12 @@ interface StageMonster {
   drMax: number
   atkMin: number
   atkMax: number
+  hpMin: number
+  hpMax: number
   defAtLevel: number
   drPctAtLevel: number
   atkAtLevel: number
+  hpAtLevel: number
   position: number
   slot: number
 }
@@ -555,7 +448,10 @@ export default function DamageLabPage() {
   // Character quirks (user-controllable, auto-set from context)
   const [transcendStar, setTranscendStar] = useState<number>(9)  // default to max (BasicStar-3 path tops at 9)
   const [applyQuirks, setApplyQuirks] = useState<boolean>(true)
-  const [allQuirks, setAllQuirks] = useState<QuirkEntry[]>([])
+  // Unified buff list — Awakening + char-specific damage modifiers in one
+  // schema. Replaces the legacy `applicableQuirks` + per-skill `bossDmgPct` +
+  // per-char `scaling` math at the consumption site (see `reducedBuffs` below).
+  const [allBuffs, setAllBuffs] = useState<ApplicableBuff[]>([])
 
   // Fetched stats from /api/admin/characters/[id]/stats (re-fetched on character /
   // transcend / codex / quirk toggle changes). `final` is the prefill source.
@@ -585,6 +481,10 @@ export default function DamageLabPage() {
   const [def, setDef] = useState('')
   const [tgtCdmgRedPct, setTgtCdmgRedPct] = useState('0')
   const [tgtDmgRedPct, setTgtDmgRedPct] = useState('0')
+  // Target HP — only used by chars with BT_DMG_TARGET_STAT scaling (Noa S2 etc.).
+  // Auto-prefilled from the monster API when in auto mode; not surfaced as an
+  // editable field in manual mode (yet — add a Field if a manual-only test needs it).
+  const [tgtHp, setTgtHp] = useState('0')
   // Metadata tags (NOT used by formula — just attached to observation for later analysis)
   const [elemental, setElemental] = useState<'none' | 'adv' | 'disadv'>('none')
   const [isBoss, setIsBoss] = useState(false)
@@ -601,12 +501,21 @@ export default function DamageLabPage() {
   // .additionalAttackRatio !== null). UI auto-shows the toggle; the trigger is
   // empirical (Luna = Barrier active, etc.) so the user picks it themselves.
   const [additionalAttack, setAdditionalAttack] = useState(false)
+  // Per-char hardcoded-override flags surfaced as UI toggles. Currently only
+  // Ame uses these (Ume / Sakura states on her S1, mutually exclusive in-game
+  // but the UI lets the user toggle each independently for testing).
+  const [umeActive, setUmeActive] = useState(false)
+  const [sakuraActive, setSakuraActive] = useState(false)
   const [observed, setObserved] = useState('')
   const [note, setNote] = useState('')
 
   // Formula constants (tunable)
   const [C, setC] = useState('1000')
   const [ratioDivisor, setRatioDivisor] = useState('1000')
+  // ARM f32 emulation — when on, every intermediate `*`/`+`/`-`/`/` is wrapped
+  // with Math.fround AND BT_DMG_TARGET_STAT folds into mod (binary-faithful path).
+  // Off by default to preserve legacy f64 calc values used in saved obs ratios.
+  const [f32Arithmetic, setF32Arithmetic] = useState(false)
 
   const [saveStatus, setSaveStatus] = useState<'idle' | 'pending' | 'saving' | 'saved' | 'error'>('idle')
   const autoSaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -619,12 +528,12 @@ export default function DamageLabPage() {
       fetch('/api/admin/damage-lab/characters').then(r => r.json()),
       fetch('/api/admin/damage-lab/observations').then(r => r.json()),
       fetch('/api/admin/damage-lab/stages').then(r => r.json()),
-      fetch('/api/admin/damage-lab/quirks').then(r => r.json()),
-    ]).then(([chars, obs, st, qk]) => {
+      fetch('/api/admin/damage-lab/buffs').then(r => r.json()),
+    ]).then(([chars, obs, st, bf]) => {
       setCharacters(chars.characters ?? [])
       setObservations(obs.observations ?? [])
       setModes(st.modes ?? [])
-      setAllQuirks(qk.quirks ?? [])
+      setAllBuffs(bf.buffs ?? [])
       setLoading(false)
     })
   }, [])
@@ -659,6 +568,8 @@ export default function DamageLabPage() {
         if (p.extraScale && typeof p.extraScale === 'object') setExtraScale(p.extraScale)
         if (p.targetMode === 'auto' || p.targetMode === 'manual') setTargetMode(p.targetMode)
         if (typeof p.targetLevel === 'number') setTargetLevel(p.targetLevel)
+        if (typeof p.umeActive === 'boolean') setUmeActive(p.umeActive)
+        if (typeof p.sakuraActive === 'boolean') setSakuraActive(p.sakuraActive)
       }
     } catch { /* ignore corrupt storage */ }
     formHydrated.current = true
@@ -676,6 +587,7 @@ export default function DamageLabPage() {
       heroCodexLevel,
       extraScale,
       targetMode, targetLevel,
+      umeActive, sakuraActive,
     }
     try { localStorage.setItem(LS_FORM_KEY, JSON.stringify(p)) } catch { /* quota etc. */ }
   }, [characterId, atk, chdPct, penPct, dmgIncPct,
@@ -684,30 +596,17 @@ export default function DamageLabPage() {
       slot, crit, skillLevel, note, C, ratioDivisor,
       modeLabel, stageId, monsterKey,
       transcendStar, applyQuirks, heroCodexLevel, extraScale,
-      targetMode, targetLevel])
+      targetMode, targetLevel,
+      umeActive, sakuraActive])
 
   const selectedChar = useMemo(
     () => characters.find(c => c.id === characterId) ?? null,
     [characters, characterId]
   )
 
-  // Filter gift nodes to those applicable to the selected character.
-  // Applicability is defined by the node's appliesTo kind/value vs the character's
-  // element / class / subclass. "none" (utility/PVE/adv-license) applies to everyone.
-  const applicableQuirks = useMemo<QuirkEntry[]>(() => {
-    if (!selectedChar) return []
-    const charEl = selectedChar.element
-    const charCls = selectedChar.class
-    const charSub = (selectedChar.subClass ?? '').toUpperCase()
-    return allQuirks.filter(q => {
-      switch (q.appliesTo.kind) {
-        case 'element':  return q.appliesTo.value === charEl
-        case 'class':    return q.appliesTo.value === charCls
-        case 'subclass': return q.appliesTo.value === charSub
-        case 'none':     return true
-      }
-    })
-  }, [allQuirks, selectedChar])
+  // (Legacy `applicableQuirks` derivation removed — the unified buff reducer
+  // (`reducedBuffs`) now handles per-char applicability filtering via the
+  // `appliesTo` field on each ApplicableBuff entry.)
 
   // When switching to a different character, snap `transcendStar` to a value that
   // exists in the new char's progression (otherwise e.g. saved TransStar 7 for a
@@ -779,28 +678,72 @@ export default function DamageLabPage() {
     }
   }
 
+  // Char-specific scaling info — derived client-side from the unified buff list.
+  // Filters allBuffs to the char_skill source for the selected char, then groups
+  // entries by effect kind (swap / add / special). Replaces the server-decoded
+  // CharacterEntry.scaling field that used to live on the characters API.
+  const charScaling = useMemo<CharacterScaling | null>(() => {
+    if (!selectedChar) return null
+    const out: CharacterScaling = { swap: null, add: [], special: [] }
+    for (const b of allBuffs) {
+      if (b.source.kind !== 'char_skill' || b.source.charId !== selectedChar.id) continue
+      const stat = b.effect.statRef ?? ''
+      const valuePerMille = b.effect.amount
+      switch (b.effect.target) {
+        case 'scaling_swap':
+          if (!out.swap || valuePerMille > out.swap.valuePerMille) {
+            out.swap = { stat, valuePerMille }
+          }
+          break
+        case 'scaling_add_pct':
+        case 'scaling_add_flat':
+          if (!out.add.some(a => a.stat === stat && a.valuePerMille === valuePerMille)) {
+            out.add.push({ stat, valuePerMille })
+          }
+          break
+        case 'pool_cond':
+          // Conditional pool buffs (BT_DMG_OWNER_LOST_HP_RATE, BT_DMG_TARGET_BREAK,
+          // BT_DMG_OWNER_BUFF, …). Surface as informational scaling entries so
+          // the user can see the char has a contextual modifier; the actual
+          // contribution is computed by the reducer when context flags are set.
+          if (b.effect.poolCond === 'owner_lost_hp' || b.effect.poolCond === 'caster_lost_hp') {
+            out.special.push({ kind: 'lost_hp', stat: 'ST_HP_LOST', valuePerMille: valuePerMille * 10 })
+          }
+          break
+        case 'scaling_target_stat':
+          out.special.push({ kind: 'target_stat', stat, valuePerMille })
+          break
+      }
+    }
+    return out
+  }, [allBuffs, selectedChar])
+
   // List of secondary scaling stats the selected char actually uses (for SWAP +
   // ADD entries; `special` is informational and doesn't gain an input).
   const scalingStatKeys = useMemo<string[]>(() => {
-    if (!selectedChar) return []
+    if (!charScaling) return []
     const set = new Set<string>()
-    if (selectedChar.scaling.swap) set.add(selectedChar.scaling.swap.stat)
-    for (const a of selectedChar.scaling.add) set.add(a.stat)
+    if (charScaling.swap) set.add(charScaling.swap.stat)
+    for (const a of charScaling.add) set.add(a.stat)
     set.delete('ST_ATK')  // ATK is already covered by the primary input
     return Array.from(set)
-  }, [selectedChar])
+  }, [charScaling])
 
   // Auto-fill ATK / CHD / PEN + secondary scaling stats whenever the API-computed
   // final stats change (char switch, transcend, codex, quirk toggle). Key-diff ref
-  // gates the first post-hydration render so saved fields aren't clobbered on F5.
+  // gates the first post-hydration render so saved fields aren't clobbered on F5
+  // — but only when there's actually a saved value to protect (otherwise the
+  // form lands empty when localStorage is fresh, e.g. after an LS_FORM_KEY bump).
   useEffect(() => {
     if (!formHydrated.current) return
     if (!selectedChar || !apiStats) return
     const key = `${selectedChar.id}/${transcendStar}/${heroCodexLevel}/${effectiveBase.atk}/${effectiveBase.chd}/${effectiveBase.pen}/${effectiveBase.dmgInc}`
     const prev = prevAtkKeyRef.current
     prevAtkKeyRef.current = key
-    if (prev === null) return
-    if (prev === key) return
+    if (prev === null) {
+      const isPristine = atk === '' && chdPct === '' && penPct === '' && dmgIncPct === ''
+      if (!isPristine) return
+    } else if (prev === key) return
     setAtk(String(effectiveBase.atk))
     setChdPct(String(effectiveBase.chd))
     setPenPct(String(effectiveBase.pen))
@@ -969,8 +912,17 @@ export default function DamageLabPage() {
   function applyMonster(m: StageMonster) {
     setTargetLevel(m.level)
     if (targetMode === 'auto') return
-    setDef(m.defAtLevel.toFixed(4))
-    setTgtDmgRedPct(m.drPctAtLevel.toFixed(4))
+    // Store full float precision — the formula's residual is bounded by input
+    // precision, and 4-decimal truncation costs ~0.00005% per stat (negligible
+    // alone but accumulates through the pipeline). String(value) preserves the
+    // JS default representation up to ~17 significant digits.
+    setDef(String(m.defAtLevel))
+    setTgtDmgRedPct(String(m.drPctAtLevel))
+    // Manual mode HP: raw level-scaled (no dungeon HpRate applied — that lives
+    // only in the auto-mode /api/admin/monsters route). Good enough for
+    // BT_DMG_TARGET_STAT testing on stages without HpRate; for stages with one
+    // (e.g. raids), prefer auto mode.
+    setTgtHp(String(m.hpAtLevel))
     setIsBoss(m.isBoss)
   }
 
@@ -1059,50 +1011,47 @@ export default function DamageLabPage() {
   const currentSkill = selectedChar?.skills[slot] ?? null
   const damageFactor = currentSkill?.damageFactors[skillLevel - 1] ?? null
 
-  // Whether a quirk's condition is satisfied by the current formula state.
-  // A null `requires` (unconditional) always matches.
-  const conditionMatches = useCallback((requires: QuirkEffect['requires']): boolean => {
-    if (!requires) return true
-    if (requires === 'adv')     return elemental === 'adv'
-    if (requires === 'disadv')  return elemental === 'disadv'
-    if (requires === 'neutral') return elemental === 'none'
-    if (requires === 'crit')    return crit
-    if (requires === 'boss')    return isBoss
-    return false
-  }, [elemental, crit, isBoss])
+  // Adventure License gating — the paid awakening tier (`licence_Awakening_*`)
+  // only fires inside the two DM_ADVENTURE_* modes. Every other category
+  // (Special Request raids, Story, Towers, Guild Raid, …) suppresses them.
+  const inAdventureLicense = useMemo(
+    () => selectedMode != null && classifyMode(selectedMode)?.category === 'Adventure License',
+    [selectedMode],
+  )
 
-  // Aggregate pool contributions (BT_DMG / ST_DMG_BOOST) from applicable quirks
-  // whose condition currently matches. Skipped entirely when applyQuirks is off.
-  // Stat-type quirks (ST_ATK, ST_CRITICAL_DMG_RATE, ST_PIERCE_POWER_RATE) come
-  // via the stats API (folded into prefilled ATK/CHD/PEN), not via this pool.
-  const poolBonus = useMemo(() => {
-    if (!applyQuirks) return 0
-    let bonus = 0
-    for (const q of applicableQuirks) {
-      if (!q.effect) continue
-      if (!conditionMatches(q.effect.requires)) continue
-      if (q.effect.target === 'pool' && q.effect.unit === '%') {
-        bonus += q.effect.amount
-      }
+  // Apply the unified buff reducer for the current caster context. Used to
+  // surface the active buffs in the UI breakdown AND to feed the monster-fetch
+  // effect with caster-side debuffs (eff/res). The full damage calc lives in
+  // `computation` below — both call into the same buff reducer (pure / cheap).
+  const reducedBuffs = useMemo<ReducedBuffs | null>(() => {
+    if (!selectedChar) return null
+    const statValues: Record<string, number> = { ST_ATK: num(atk) }
+    for (const [k, v] of Object.entries(extraScale)) statValues[k] = num(v)
+    const ctx: BuffContext = {
+      charId: selectedChar.id,
+      charElement: selectedChar.element,
+      charClass: selectedChar.class,
+      charSubclass: (selectedChar.subClass ?? '').toUpperCase(),
+      slot: SLOT_LABELS[slot],
+      isBoss, crit, elem: elemental,
+      applyQuirks,
+      inAdventureLicense,
+      baseAtk: num(atk),
+      statValues,
     }
-    return bonus
-  }, [applyQuirks, applicableQuirks, conditionMatches])
+    const relevant = allBuffs.filter(b =>
+      b.source.kind === 'awakening' || (b.source.kind === 'char_skill' && b.source.charId === selectedChar.id)
+    )
+    return applyBuffs(relevant, ctx)
+  }, [allBuffs, selectedChar, slot, isBoss, crit, elemental, applyQuirks, inAdventureLicense, atk, extraScale])
 
-  // Boss EFF/RES debuffs from PVE Awakening_Boss_*_Down_* quirks. These apply
-  // to the target monster's stats and are pushed to the monster stats endpoint
-  // as `effDebuff` / `resDebuff` query params (per-mille). `amount` is already
-  // in % points (negative); convert × 10 back to per-mille for the API.
-  const monsterDebuffs = useMemo(() => {
-    if (!applyQuirks || !isBoss) return { eff: 0, res: 0 }
-    let eff = 0, res = 0
-    for (const q of applicableQuirks) {
-      if (!q.effect) continue
-      if (!conditionMatches(q.effect.requires)) continue
-      if (q.effect.target === 'monsterEff') eff += q.effect.amount
-      else if (q.effect.target === 'monsterRes') res += q.effect.amount
-    }
-    return { eff: Math.round(eff * 10), res: Math.round(res * 10) }
-  }, [applyQuirks, applicableQuirks, isBoss, conditionMatches])
+  const monsterDebuffs = useMemo(
+    () => ({
+      eff: reducedBuffs?.monsterEffPermille ?? 0,
+      res: reducedBuffs?.monsterResPermille ?? 0,
+    }),
+    [reducedBuffs?.monsterEffPermille, reducedBuffs?.monsterResPermille],
+  )
 
   // Auto mode: fetch the validated monster stats whenever the target monster /
   // stage / level changes, then mirror them into the formula state vars
@@ -1126,8 +1075,15 @@ export default function DamageLabPage() {
       .then((data: ApiMonsterStatsResponse) => {
         if (cancelled || !data?.final) return
         setApiMonsterStats(data)
-        setDef(data.final.def.toFixed(4))
-        setTgtDmgRedPct(data.final.dmgRed.toFixed(4))
+        // Full float precision (see comment in applyMonster above). The route
+        // already floors integer stats (ATK/DEF/HP/SPD/EFF/RES) to match in-game
+        // display, but percent stats (DR/CHC/CHD/PEN/DMG↑) are kept as floats —
+        // we want to propagate that precision intact, no `.toFixed(N)` truncation.
+        setDef(String(data.final.def))
+        setTgtDmgRedPct(String(data.final.dmgRed))
+        // HP — needed by BT_DMG_TARGET_STAT chars (Noa S2 et al). Floored by the
+        // route to match in-game display; passing as String preserves it intact.
+        setTgtHp(String(data.final.hp))
         setIsBoss(data.meta.isBoss)
         // Monsters have no CDMG_REDUCE stat in MonsterTemplet — force to 0 in auto
         // mode. Otherwise a stale value typed in manual mode persists silently
@@ -1142,77 +1098,48 @@ export default function DamageLabPage() {
     // toggle of a condition that doesn't actually move the numbers.
   }, [targetMode, selectedMonster, selectedStage, targetLevel, monsterDebuffs.eff, monsterDebuffs.res])
 
-  // Split the character's scaling into the two damage components:
-  //   - mainAtk        — primary ATK fed to the main pool path
-  //                      = SWAP'd stat (replaces ATK) OR raw input ATK,
-  //                        plus any flat-stat ADD contribution (HP / DEF / SPEED).
-  //   - addAtkNoPool   — secondary contribution that bypasses the pool modifier.
-  //                      Built from percentage-stat ADD scalings only (CHC / CHD / etc.):
-  //                        contribution = mainAtk × (stat/100) × (valuePerMille/1000)
-  //                      Validated empirically on Regina (+50% CHC ADD) — see formula.ts header.
-  // Each scaling entry references its own stat, pulled from the secondary `extraScale`
-  // map (auto-filled from /api/admin/characters/:id/stats).
-  const effectiveScaling = useMemo<{ mainAtk: number; addAtkNoPool: number }>(() => {
-    if (!selectedChar) return { mainAtk: num(atk), addAtkNoPool: 0 }
-    const sc = selectedChar.scaling
-    let mainAtk = sc.swap
-      ? num(extraScale[sc.swap.stat]) * sc.swap.valuePerMille / 1000
-      : num(atk)
-    let addAtkNoPool = 0
-    for (const a of sc.add) {
-      const sv = num(extraScale[a.stat])
-      if (PERCENT_SCALING_STATS.has(a.stat)) {
-        // Percentage-stat ADD scaling: separate damage component (no pool).
-        addAtkNoPool += mainAtk * (sv / 100) * (a.valuePerMille / 1000)
-      } else {
-        // Flat-stat ADD scaling: added to ATK (legacy behavior; not yet empirically validated).
-        mainAtk += sv * a.valuePerMille / 1000
-      }
-    }
-    return { mainAtk, addAtkNoPool }
-  }, [selectedChar, atk, extraScale])
-
-  // Effective DF for the skill-internal additional attack — listed_DF × ratio
-  // when the user has toggled the "additional attack triggered" flag AND the
-  // selected skill exposes a non-null ratio. Otherwise 0 (no extra component).
-  const additionalAttackDF = useMemo(() => {
-    if (!additionalAttack || damageFactor == null) return 0
-    const ratio = currentSkill?.additionalAttackRatio
-    if (ratio == null || ratio <= 0) return 0
-    return damageFactor * ratio
-  }, [additionalAttack, damageFactor, currentSkill])
-
-  // Character-specific BT_DMG_TO_BOSS bonus, gated on `isBoss` AND the current slot.
-  // Sourced from CharacterEntry.skills[slot].bossDmgPct (computed server-side from
-  // the char's own buff list filtered by CallerSkillType — see characters/route.ts).
-  // Folded into the effective pool alongside the global `poolBonus`.
-  const charBossPoolBonus = isBoss ? (currentSkill?.bossDmgPct ?? 0) : 0
-
+  // Live damage calc — feeds `recompute()` with form state. The result holds
+  // the final number (`calculated`), the formula breakdown (pool / mit / DR /
+  // elem / additional / extra components — for the UI panel), and the reduced
+  // buff state (active buffs list + per-target deltas) shared with `reducedBuffs`
+  // above. Both memos call into the same reducer; cost is negligible.
   const computation = useMemo(() => {
-    if (damageFactor == null) return null
-    const effectiveDmgInc = num(dmgIncPct) + poolBonus + charBossPoolBonus
-    const inputs: DamageInputs = {
-      atk: effectiveScaling.mainAtk,
-      addAtkNoPool: effectiveScaling.addAtkNoPool,
-      additionalAttackDF,
+    if (!selectedChar || damageFactor == null) return null
+    const extras: Record<string, number> = {}
+    for (const [k, v] of Object.entries(extraScale)) extras[k] = num(v)
+    const ctx: RecomputeContext = {
+      charId: selectedChar.id,
+      charElement: selectedChar.element,
+      charClass: selectedChar.class,
+      charSubclass: selectedChar.subClass ?? '',
+      slot: SLOT_LABELS[slot],
       damageFactor,
-      chdPct: num(chdPct),
-      penPct: num(penPct),
-      dmgIncPct: effectiveDmgInc,
-      crit,
-      // charClass intentionally blank — the Mage +12% now comes from the quirks data
-      // (MAGE_PASSIVE_3_10 via JOB02 MAIN) rather than the formula's hardcoded branch.
-      charClass: '',
-      def: num(def),
-      cdmgRedPct: num(tgtCdmgRedPct),
-      dmgRedPct: num(tgtDmgRedPct),
+      additionalAttackRatio: (additionalAttack && currentSkill?.additionalAttackRatio != null && currentSkill.additionalAttackRatio > 0)
+        ? currentSkill.additionalAttackRatio : undefined,
+      atk: num(atk),
+      chd: num(chdPct),
+      pen: num(penPct),
+      dmgInc: num(dmgIncPct),
+      applyQuirks,
+      extraStats: extras,
+      targetDef: num(def),
+      targetDmgRed: num(tgtDmgRedPct),
+      targetCdmgRed: num(tgtCdmgRedPct),
+      targetHp: num(tgtHp) || undefined,
       isBoss,
       elem: elemental,
+      crit,
+      mode: selectedMode?.mode,
+      charFlags: { umeActive, sakuraActive },
       C: num(C, 1000),
       ratioDivisor: num(ratioDivisor, 1000),
+      f32arithmetic: f32Arithmetic,
     }
-    return computeDamage(inputs)
-  }, [effectiveScaling, additionalAttackDF, damageFactor, chdPct, penPct, dmgIncPct, poolBonus, charBossPoolBonus, crit, def, tgtCdmgRedPct, tgtDmgRedPct, isBoss, elemental, C, ratioDivisor])
+    return recompute(ctx, allBuffs)
+  }, [selectedChar, damageFactor, slot, atk, chdPct, penPct, dmgIncPct, def,
+      tgtDmgRedPct, tgtCdmgRedPct, tgtHp, isBoss, elemental, crit, applyQuirks,
+      extraScale, selectedMode, additionalAttack, currentSkill, allBuffs, C, ratioDivisor,
+      umeActive, sakuraActive, f32Arithmetic])
 
   const observedNum = observed.trim() === '' ? null : num(observed)
   const ratio = computation && observedNum != null && computation.calculated > 0
@@ -1230,100 +1157,59 @@ export default function DamageLabPage() {
     if (!selectedChar || damageFactor == null || observedNum == null) return
     setSaveStatus('saving')
 
-    // Effective values fed to the formula (mirror what `computation` used):
-    //   - atk after SWAP/ADD scaling
-    //   - dmgInc after pool-quirk pile-up + char-specific boss bonus
-    // Stored in the flat fields so existing recompute logic keeps working;
-    // the raw stats live in `caster`/`target` for full reproducibility.
-    const effDmgInc = num(dmgIncPct) + poolBonus + charBossPoolBonus
+    // Build extraStats from the form's extraScale state, narrowing to numeric values.
+    const extras: Record<string, number> = {}
+    for (const [k, v] of Object.entries(extraScale)) {
+      const n = num(v)
+      if (Number.isFinite(n) && n !== 0) extras[k] = n
+    }
 
-    const sc = selectedChar.scaling
-    const casterBlock = apiStats?.final ? {
-      stats: {
-        atk: apiStats.final.atk, def: apiStats.final.def,
-        hp:  apiStats.final.hp,  spd: apiStats.final.spd,
-        chc: apiStats.final.chc, chd: apiStats.final.chd,
-        pen: apiStats.final.pen,
-        dmgInc: apiStats.final.dmgInc, dmgRed: apiStats.final.dmgRed,
-        eff: apiStats.final.eff, res: apiStats.final.res,
-      },
-      transcendStar,
-      codexLevel: heroCodexLevel,
-      applyQuirks,
-      effectiveAtk: effectiveScaling.mainAtk,
-      addAtkNoPool: effectiveScaling.addAtkNoPool,
-      poolBonus,
-      // Char-specific BT_DMG_TO_BOSS bonus actually fed (0 when target is non-boss
-      // or the skill has no such buff). Always set to 0 rather than omitted so the
-      // recompute can detect "this obs was saved with the boss-bonus path"
-      // unambiguously vs legacy obs where the field is absent.
-      charBossPoolBonus,
-      ...(sc.swap || sc.add.length > 0 ? {
-        scaling: {
-          ...(sc.swap ? { swap: { stat: sc.swap.stat, valuePerMille: sc.swap.valuePerMille } } : {}),
-          ...(sc.add.length > 0 ? { add: sc.add.map(a => ({ stat: a.stat, valuePerMille: a.valuePerMille })) } : {}),
-        },
-      } : {}),
-    } : undefined
-
-    const targetBlock = apiMonsterStats?.final && selectedMonster ? {
-      stats: {
-        atk: apiMonsterStats.final.atk, def: apiMonsterStats.final.def,
-        hp:  apiMonsterStats.final.hp,  spd: apiMonsterStats.final.spd,
-        chc: apiMonsterStats.final.chc, chd: apiMonsterStats.final.chd,
-        pen: apiMonsterStats.final.pen,
-        dmgInc: apiMonsterStats.final.dmgInc, dmgRed: apiMonsterStats.final.dmgRed,
-        eff: apiMonsterStats.final.eff, res: apiMonsterStats.final.res,
-      },
-      type: selectedMonster.type,
-      advantageRate: apiMonsterStats.meta.advantageRate,
-      casterDebuff: apiMonsterStats.meta.casterDebuff,
-    } : undefined
-
+    // Raw save schema — all formula-feeding values are stored verbatim. The
+    // recompute path re-applies live buffs via `recompute()`, so any future
+    // fix to the buff parser auto-propagates to existing obs without re-saving.
     const payload: Omit<Observation, 'id' | 'ts'> = {
-      char: selectedChar.name,
       charId: selectedChar.id,
-      class: selectedChar.class,
-      element: selectedChar.element,
+      charName: selectedChar.name,
+      charElement: selectedChar.element,
+      charClass: selectedChar.class,
+      charSubclass: selectedChar.subClass ?? '',
       slot: SLOT_LABELS[slot],
       skillLevel,
       df: damageFactor,
-      // `atk` is the main path input (post-SWAP, post-flat-ADD). The percentage-stat
-      // ADD contribution lives separately in `caster.addAtkNoPool` and gets re-derived
-      // on recompute from caster.scaling + caster.stats — see recomputeWithCurrentConstants.
-      atk: effectiveScaling.mainAtk,
+      atk: num(atk),
       chd: num(chdPct),
-      dmgInc: effDmgInc,
       pen: num(penPct),
-      def: num(def),
-      tCdmgRed: num(tgtCdmgRedPct),
-      tDmgRed: num(tgtDmgRedPct),
-      elem: elemental,
+      dmgInc: num(dmgIncPct),
+      applyQuirks,
+      targetDef: num(def),
+      targetDmgRed: num(tgtDmgRedPct),
+      targetCdmgRed: num(tgtCdmgRedPct),
+      ...(num(tgtHp) > 0 ? { targetHp: num(tgtHp) } : {}),
       isBoss,
+      elem: elemental,
       crit,
       obs: observedNum,
-      // Skill-internal additional attack: only saved when the user has the toggle
-      // on AND the selected skill exposes a non-null ratio. We snapshot the ratio
-      // alongside the flag so recompute is stable against characters-API changes.
+      ...(Object.keys(extras).length > 0 ? { extraStats: extras } : {}),
+      ...(umeActive || sakuraActive ? {
+        charFlags: {
+          ...(umeActive ? { umeActive: true } : {}),
+          ...(sakuraActive ? { sakuraActive: true } : {}),
+        },
+      } : {}),
       ...(additionalAttack && currentSkill?.additionalAttackRatio != null
         ? { additionalAttack: true, additionalAttackRatio: currentSkill.additionalAttackRatio }
         : {}),
       ...(note.trim() ? { note: note.trim() } : {}),
+      ...(selectedMode ? { mode: selectedMode.mode } : {}),
+      ...(selectedStage ? { stageId: selectedStage.id, stageName: selectedStage.name } : {}),
       ...(selectedMonster ? {
         monsterId: selectedMonster.monsterId,
         monsterName: selectedMonster.name,
         monsterLvl: selectedMonster.level,
         monsterType: selectedMonster.type,
-        tClass: selectedMonster.class,
-        tElement: selectedMonster.element,
+        monsterElement: selectedMonster.element,
+        monsterClass: selectedMonster.class,
       } : {}),
-      ...(selectedStage ? {
-        stageId: selectedStage.id,
-        stageName: selectedStage.name,
-      } : {}),
-      ...(selectedMode ? { mode: selectedMode.mode } : {}),
-      ...(casterBlock ? { caster: casterBlock } : {}),
-      ...(targetBlock ? { target: targetBlock } : {}),
     }
     try {
       const res = await fetch('/api/admin/damage-lab/observations', {
@@ -1360,7 +1246,8 @@ export default function DamageLabPage() {
       isBoss, note,
       // Config that affects the saved snapshot (caster / target blocks)
       transcendStar, heroCodexLevel, applyQuirks, extraScale,
-      targetMode, targetLevel, monsterKey, stageId])
+      targetMode, targetLevel, monsterKey, stageId,
+      umeActive, sakuraActive])
 
   async function deleteObservation(id: string) {
     await fetch(`/api/admin/damage-lab/observations?id=${encodeURIComponent(id)}`, { method: 'DELETE' })
@@ -1385,86 +1272,34 @@ export default function DamageLabPage() {
   }
 
   function recomputeWithCurrentConstants(o: Observation): { calc: number; ratio: number } {
-    // For characters with percentage-stat ADD scaling (e.g. Regina CHC), the legacy
-    // `o.atk` had the wrong contribution baked in (treated as flat-add). For those
-    // we re-derive both mainAtk and addAtkNoPool from caster.scaling + caster.stats.
-    //
-    // For SWAP-only / flat-ADD-only / no-scaling chars, the saved `o.atk` is the
-    // canonical effective ATK (and re-deriving from caster.stats would actually
-    // diverge on observations saved before stat-API changes — e.g. Core Fusion
-    // Veronica's old obs save effectiveAtk=1399.2 but current stats.hp × 0.2 = 1151.4).
-    // So for those cases we trust the saved `o.atk` and leave addAtkNoPool at 0.
-    let mainAtk = o.atk
-    let addAtkNoPool = o.caster?.addAtkNoPool ?? 0
-    const sc = o.caster?.scaling
-    const stats = o.caster?.stats
-    const hasPercentAdd = !!sc?.add?.some(a => PERCENT_SCALING_STATS.has(a.stat))
-    if (hasPercentAdd && sc && stats) {
-      let main = sc.swap
-        ? statValueFromBlock(stats, sc.swap.stat) * sc.swap.valuePerMille / 1000
-        : stats.atk
-      let extra = 0
-      for (const a of (sc.add ?? [])) {
-        const sv = statValueFromBlock(stats, a.stat)
-        if (PERCENT_SCALING_STATS.has(a.stat)) {
-          extra += main * (sv / 100) * (a.valuePerMille / 1000)
-        } else {
-          main += sv * a.valuePerMille / 1000
-        }
-      }
-      mainAtk = main
-      addAtkNoPool = extra
-    }
-    // Auto-detect element relation from the saved char/target elements when both are
-    // present — this lets old Light/Dark observations (saved when the UI force-locked
-    // elem='none') pick up the now-correct mutual-advantage detection. Falls back to
-    // the saved o.elem for older observations missing tElement.
-    let elem: 'none' | 'adv' | 'disadv' = o.elem
-    if (o.element && o.tElement) {
-      elem = detectElementRelation(o.element, o.tElement)
-    }
-    // Skill-internal additional attack: prefer the snapshotted ratio (stable across
-    // characters-API changes), fall back to the live value from CharacterEntry when
-    // the obs only carries the boolean flag (older save format).
-    const slotKey: SlotKey = o.slot === 'S1' ? 'first' : o.slot === 'S2' ? 'second' : 'ultimate'
-    const charEntry = characters.find(c => c.id === o.charId)
-    let additionalAttackDF = 0
-    if (o.additionalAttack) {
-      let ratio: number | undefined = o.additionalAttackRatio
-      if (ratio == null) {
-        ratio = charEntry?.skills[slotKey]?.additionalAttackRatio ?? undefined
-      }
-      if (ratio != null && ratio > 0) additionalAttackDF = o.df * ratio
-    }
-    // Char-specific BT_DMG_TO_BOSS bonus. Two cases:
-    //   - Obs saved AFTER this fix → caster.charBossPoolBonus is present (number),
-    //     and it's already folded into `o.dmgInc`. Don't double-apply.
-    //   - Obs saved BEFORE the fix → field is absent and the bonus was never folded
-    //     in. Re-derive from the live characters API and add it on top of o.dmgInc
-    //     when isBoss. This retroactively corrects old Stella/Ame obs.
-    let dmgIncForRecompute = o.dmgInc
-    if (o.caster?.charBossPoolBonus == null && (o.isBoss ?? false)) {
-      const liveBossDmgPct = charEntry?.skills[slotKey]?.bossDmgPct ?? 0
-      if (liveBossDmgPct > 0) dmgIncForRecompute += liveBossDmgPct
-    }
-    const r = computeDamage({
-      atk: mainAtk,
-      addAtkNoPool,
-      additionalAttackDF,
+    const ctx: RecomputeContext = {
+      charId: o.charId,
+      charElement: o.charElement,
+      charClass: o.charClass,
+      charSubclass: o.charSubclass,
+      slot: o.slot,
       damageFactor: o.df,
-      chdPct: o.chd,
-      penPct: o.pen,
-      dmgIncPct: dmgIncForRecompute,
+      additionalAttackRatio: (o.additionalAttack && o.additionalAttackRatio != null && o.additionalAttackRatio > 0)
+        ? o.additionalAttackRatio : undefined,
+      atk: o.atk,
+      chd: o.chd,
+      pen: o.pen,
+      dmgInc: o.dmgInc,
+      applyQuirks: o.applyQuirks,
+      extraStats: o.extraStats,
+      targetDef: o.targetDef,
+      targetDmgRed: o.targetDmgRed,
+      targetCdmgRed: o.targetCdmgRed,
+      targetHp: o.targetHp,
+      isBoss: o.isBoss,
+      elem: o.elem,
       crit: o.crit,
-      charClass: o.class,
-      def: o.def,
-      cdmgRedPct: o.tCdmgRed,
-      dmgRedPct: o.tDmgRed,
-      isBoss: o.isBoss ?? false,
-      elem,
+      mode: o.mode,
+      charFlags: o.charFlags,
       C: num(C, 1000),
       ratioDivisor: num(ratioDivisor, 1000),
-    })
+    }
+    const r = recompute(ctx, allBuffs)
     return { calc: r.calculated, ratio: r.calculated > 0 ? o.obs / r.calculated : 0 }
   }
 
@@ -1618,24 +1453,24 @@ export default function DamageLabPage() {
                 </label>
               </div>
             )}
-            {selectedChar && (
+            {selectedChar && charScaling && (
               <div className="space-y-2 rounded border border-zinc-800/70 bg-zinc-950/30 p-2">
                 <div className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
                   Scaling stats
-                  {selectedChar.scaling.swap && (
+                  {charScaling.swap && (
                     <span className="ml-2 rounded bg-amber-900/40 px-1.5 py-0.5 font-mono text-[10px] text-amber-300">
-                      {statLabel(selectedChar.scaling.swap.stat)} ×{(selectedChar.scaling.swap.valuePerMille / 1000).toFixed(2)} swap
+                      {statLabel(charScaling.swap.stat)} ×{(charScaling.swap.valuePerMille / 1000).toFixed(2)} swap
                     </span>
                   )}
                 </div>
-                {!selectedChar.scaling.swap && (
+                {!charScaling.swap && (
                   <Field stat="ATK" value={atk} onChange={setAtk} />
                 )}
                 {scalingStatKeys.map(stat => {
                   // Find the corresponding scaling badge text — SWAP wins over ADD
                   // when both reference the same stat (rare but possible).
-                  const swap = selectedChar.scaling.swap?.stat === stat ? selectedChar.scaling.swap : null
-                  const add  = selectedChar.scaling.add.find(a => a.stat === stat)
+                  const swap = charScaling.swap?.stat === stat ? charScaling.swap : null
+                  const add  = charScaling.add.find(a => a.stat === stat)
                   const badge = swap
                     ? `×${(swap.valuePerMille / 1000).toFixed(2)} swap`
                     : add ? `+${(add.valuePerMille / 10).toFixed(1)}%` : ''
@@ -1649,7 +1484,7 @@ export default function DamageLabPage() {
                     />
                   )
                 })}
-                {selectedChar.scaling.special.map((s, i) => (
+                {charScaling.special.map((s, i) => (
                   <div key={i} className="px-1 text-xs text-zinc-500">
                     <span className="text-amber-400">+{(s.valuePerMille / 10).toFixed(1)}%</span>{' '}
                     {s.kind === 'lost_hp' ? 'caster lost-HP' : `target ${statLabel(s.stat)}`}
@@ -1757,6 +1592,41 @@ export default function DamageLabPage() {
                     </span>
                   </span>
                 </label>
+              )}
+              {/* Ame-specific: Ume / Sakura states gate her S1 conditional hits.
+                  Set by her S3 cast (Ume if target HP > 90%, Sakura otherwise).
+                  Mutually exclusive in-game; the UI lets the user toggle each
+                  for testing. Each maps to a different override behavior — see
+                  `src/lib/damage/char-overrides.ts`. */}
+              {selectedChar?.id === '2000065' && slot === 'first' && (
+                <div className="space-y-1 pt-1">
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={umeActive}
+                      onChange={e => setUmeActive(e.target.checked)}
+                    />
+                    <span className="text-sm">
+                      Ume active
+                      <span className="ml-1 text-[10px] text-zinc-500">
+                        (target HP &gt; 90% on S3 cast · priority gain)
+                      </span>
+                    </span>
+                  </label>
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={sakuraActive}
+                      onChange={e => setSakuraActive(e.target.checked)}
+                    />
+                    <span className="text-sm">
+                      Sakura active
+                      <span className="ml-1 text-[10px] text-zinc-500">
+                        (target HP &lt; 90% on S3 cast · element superiority on S1)
+                      </span>
+                    </span>
+                  </label>
+                </div>
               )}
             </div>
           </div>
@@ -1968,6 +1838,7 @@ export default function DamageLabPage() {
             ) : (
               <div className="space-y-2 text-sm">
                 <Field stat="DEF" value={def} onChange={setDef} />
+                <Field stat="HP" value={tgtHp} onChange={setTgtHp} />
                 <Field stat="CDMG RED%" value={tgtCdmgRedPct} onChange={setTgtCdmgRedPct} />
                 <Field stat="DMG RED%" value={tgtDmgRedPct} onChange={setTgtDmgRedPct} />
               </div>
@@ -2005,6 +1876,15 @@ export default function DamageLabPage() {
             <div className="space-y-2 text-sm">
               <Field label="C (denominator)" value={C} onChange={setC} />
               <Field label="Ratio divisor (DF / x)" value={ratioDivisor} onChange={setRatioDivisor} />
+              <label className="flex items-center gap-2 text-xs text-zinc-300 pt-2">
+                <input type="checkbox" checked={f32Arithmetic} onChange={e => setF32Arithmetic(e.target.checked)} />
+                <span>ARM f32 emulator (binary-faithful BT_DMG_TARGET_STAT)</span>
+              </label>
+              <p className="text-[11px] text-zinc-500 leading-snug pl-5">
+                Wraps every <code>*/+/−//</code> with <code>Math.fround</code> and folds <code>BT_DMG_TARGET_STAT</code>
+                into <code>mod</code> with int truncation (matches binary). Closes ~15% of the residual on Noa S2 obs;
+                remaining gap is below the precision we can extract from libil2cpp without runtime instrumentation.
+              </p>
             </div>
             <div className="mt-3 text-xs text-zinc-500 border-t border-zinc-800 pt-3 leading-relaxed">
               Formula: <span className="font-mono text-zinc-400">Dmg = (DF/{ratioDivisor}) × ATK × (1 + pool/100) × {C}/({C} + (1−PEN)×DEF) × (1 − DR×dr_factor/100) × elem_mult</span>
@@ -2017,20 +1897,46 @@ export default function DamageLabPage() {
             <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-zinc-400">Result</h2>
             {computation ? (
               <div className="space-y-1 font-mono text-xs text-zinc-400">
-                <div className="text-zinc-300">Active quirks (auto-applied):</div>
-                {computation.quirks.length > 0 ? (
-                  computation.quirks.map((q, idx) => (
-                    <div key={idx} className="pl-2 text-green-400">+ {q.name}: {q.value}</div>
-                  ))
-                ) : (
-                  <div className="pl-2 text-zinc-600">(none)</div>
+                {/* Active buffs (from the unified reducer) — every Awakening
+                    and char-specific buff whose trigger fired for the current
+                    context (slot / boss / crit / elem). Includes amount + req
+                    so the user can audit "is this buff supposed to fire?". */}
+                {computation.reduced.active.length > 0 && (
+                  <>
+                    <div className="text-zinc-300">Active buffs (from /buffs API):</div>
+                    {computation.reduced.active.map((b, idx) => {
+                      const sign = b.effect.amount >= 0 ? '+' : ''
+                      const label = b.source.kind === 'awakening'
+                        ? (b.ui?.name ?? b.source.nodeId)
+                        : `char ${b.source.charId} ${b.source.buffId}`
+                      const unit = b.effect.unit === '%' ? '%' : (b.effect.unit === 'permille' ? '‰' : '')
+                      return (
+                        <div key={idx} className="pl-2 text-cyan-400">
+                          {sign}{b.effect.amount}{unit} {b.effect.target} <span className="text-zinc-600">({label})</span>
+                        </div>
+                      )
+                    })}
+                  </>
                 )}
-                <div className="pt-1 border-t border-zinc-800">Pool: +{computation.poolPct.toFixed(1)}% → ×{computation.mod.toFixed(3)}</div>
-                <div>Mitigation: ×{computation.mitigation.toFixed(4)}</div>
-                <div>Target DR: ×{computation.targetDrMult.toFixed(4)}</div>
-                <div>Elem mult: ×{computation.elemMult.toFixed(2)}</div>
+                {/* Formula-side derivations (crit add, DR scaling, elem mult) —
+                    these aren't buffs, they're formula effects driven by the
+                    context. Skipped when their contribution is 0. */}
+                {computation.breakdown.quirks.length > 0 && (
+                  <>
+                    <div className="text-zinc-300 pt-1 border-t border-zinc-800">Formula effects:</div>
+                    {computation.breakdown.quirks.map((q, idx) => (
+                      <div key={idx} className="pl-2 text-green-400">+ {q.name}: {q.value}</div>
+                    ))}
+                  </>
+                )}
+                <div className="pt-1 border-t border-zinc-800">Pool: +{computation.breakdown.poolPct.toFixed(1)}% → ×{computation.breakdown.mod.toFixed(3)}</div>
+                <div>Mitigation: ×{computation.breakdown.mitigation.toFixed(4)}</div>
+                <div>Elem mult: ×{computation.breakdown.elemMult.toFixed(2)}</div>
                 <div className="border-t border-zinc-800 pt-1 text-lg text-zinc-100">
-                  Calc: <span className="font-bold">{computation.calculated.toFixed(0)}</span>
+                  {/* Math.floor matches the binary's `fcvtms` (= round toward −∞) at the
+                      end of CalcDamage. Default toFixed(0) does Math.round which is +1
+                      off for ~half the obs. */}
+                  Calc: <span className="font-bold">{Math.floor(computation.calculated)}</span>
                 </div>
               </div>
             ) : (
@@ -2138,7 +2044,7 @@ export default function DamageLabPage() {
                   // Target's CDMG RED is virtually always 0 in auto mode (monsters
                   // don't have this stat) — surface it as a small badge only when
                   // a manual-mode test typed in a non-zero value, otherwise hide.
-                  const showCdmgRed = o.tCdmgRed && o.tCdmgRed !== 0
+                  const showCdmgRed = o.targetCdmgRed && o.targetCdmgRed !== 0
                   return (
                     <tr key={o.id} className="border-b border-zinc-800/50 align-top hover:bg-zinc-800/30">
                       <td className="px-2 py-1.5 text-right font-mono text-zinc-500">{testNum}</td>
@@ -2151,10 +2057,10 @@ export default function DamageLabPage() {
                             <div className="h-8 w-8 rounded bg-zinc-800/40" />
                           )}
                           <div className="min-w-0">
-                            <div className="truncate text-zinc-100">{o.char}</div>
-                            {(o.element || o.class) && (
+                            <div className="truncate text-zinc-100">{o.charName}</div>
+                            {(o.charElement || o.charClass) && (
                               <div className="text-[10px] text-zinc-500">
-                                {[o.element, o.class].filter(Boolean).join(' · ')}
+                                {[o.charElement, o.charClass].filter(Boolean).join(' · ')}
                               </div>
                             )}
                           </div>
@@ -2179,20 +2085,20 @@ export default function DamageLabPage() {
                             <div className="truncate text-zinc-100">{o.monsterName}</div>
                             <div className="text-[10px] text-zinc-500">
                               {o.monsterLvl != null ? `Lv${o.monsterLvl}` : ''}
-                              {o.tElement ? ` · ${o.tElement}` : ''}
-                              {o.tClass ? ` · ${o.tClass}` : ''}
+                              {o.monsterElement ? ` · ${o.monsterElement}` : ''}
+                              {o.monsterClass ? ` · ${o.monsterClass}` : ''}
                             </div>
                           </div>
                         ) : (
                           <span className="text-zinc-600">—</span>
                         )}
                       </td>
-                      <td className="px-2 py-1.5 text-right font-mono">{o.def.toFixed(0)}</td>
+                      <td className="px-2 py-1.5 text-right font-mono">{o.targetDef.toFixed(0)}</td>
                       <td className="px-2 py-1.5 text-right font-mono">
-                        {o.tDmgRed.toFixed(1)}%
+                        {o.targetDmgRed.toFixed(1)}%
                         {showCdmgRed && (
                           <div className="text-[10px] text-zinc-500" title="Target CDMG RED %">
-                            CDR {o.tCdmgRed.toFixed(1)}%
+                            CDR {o.targetCdmgRed.toFixed(1)}%
                           </div>
                         )}
                       </td>
@@ -2214,7 +2120,7 @@ export default function DamageLabPage() {
                       </td>
                       {/* Result */}
                       <td className="px-2 py-1.5 text-right font-mono text-zinc-100 border-l border-zinc-800/50">{o.obs.toFixed(0)}</td>
-                      <td className="px-2 py-1.5 text-right font-mono text-zinc-400">{calc.toFixed(0)}</td>
+                      <td className="px-2 py-1.5 text-right font-mono text-zinc-400">{Math.floor(calc)}</td>
                       <td className={`px-2 py-1.5 text-right font-mono ${good ? 'text-green-400' : medium ? 'text-amber-400' : 'text-red-400'}`}>
                         {ratio.toFixed(4)}
                       </td>
