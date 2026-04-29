@@ -111,14 +111,30 @@
  *   2. Lab UI's calc display uses Math.floor (= binary fcvtms toward −∞) instead
  *      of toFixed(0) (= Math.round). Closes Δ=+1 on borderline cases.
  *
- * The S2 target_stat residual (+0.10%) is the LAST remaining gap. We've ruled
- * out: (a) hidden boss-side BT_DMG_REDUCE — Amadeus skills 132401-132422 only
- * have rage-state buffs that don't fire at full HP; (b) HP value mismatch — game
- * f32 chain produces exactly 22453 (matches obs); (c) buff Value mismatch —
- * BuffTemplet 2000022_2_2 Level 5 = Value 30, confirmed; (d) hidden multiplier
- * in CalcDamage post-rate. Likely culprit: ULP-level f32 drift inside one of
- * the inner functions (FindBuffElementDamageRate, GetStatValue routing) we
- * haven't fully traced. Bounded at ±0.10% on target_stat path only.
+ * The S2 target_stat residual (+0.10%) is LOCALIZED to BT_DMG_TARGET_STAT.
+ * Debug-mode back-calculation from 2 Noa S2 obs reveals:
+ *
+ *   #10 (St2 lv 30): our permille=673, required=670, Δ=−3 (HP req ≈ 22350)
+ *   #8  (St3 lv 35): our permille=790, required=787, Δ=−3 (HP req ≈ 26250)
+ *
+ * Both obs require the runtime maxHP to be ~100 less than what `floor(HPRate
+ * × CalcStat)` produces, where HPRate = 1+spawnRate/1000 from DungeonTemplet:
+ *
+ *   St2: needs HPRate ≈ 0.4243 (= spawnRate ≈ −576)  vs DungeonTemplet −574
+ *   St3: needs HPRate ≈ 0.4267 (= spawnRate ≈ −574)  vs DungeonTemplet −572
+ *
+ * Consistent +1.5 to +2.0 per-mille extra HP reduction. We've ruled out:
+ * (a) hidden BT_DMG_REDUCE on boss; (b) other Noa S2 buffs (`_2_1` is BT_RUN_PASSIVE,
+ * `_2_3` is BT_RESOURCE_CHARGE — non-damage); (c) different CalcStat ordering
+ * (f32-int and f32-raw chains both give 22453); (d) different rounding (fcvtms
+ * = floor for positive). The HPRate value at CharData+0x100 must be set to
+ * something other than `1+spawnRate/1000` for raid bosses — possibly an
+ * additional per-stage modifier we haven't located in the data files yet.
+ *
+ * The lab's debug mode (toggle in formula constants panel) shows the per-step
+ * f32 trace + back-calculated required permille so future investigation of
+ * other characters with BT_DMG_TARGET_STAT can quickly verify whether they
+ * exhibit the same +0.10% residual or behave differently.
  *
  * ── Old multiplicative DR model (deprecated) ──
  * Previous iteration used `× (1 − DR_eff/100)` with empirical fudges
@@ -286,6 +302,9 @@ export interface DamageInputs {
                               //   pipeline; otherwise the formula falls back to the legacy
                               //   `addAtkNoPool` separate-component model. Reducer sets this
                               //   alongside `addAtkNoPool` so both modes coexist.
+  debugSteps?: boolean        // When true, populate `breakdown.debugSteps` with every f32
+                              //   intermediate value (rate aggregation, mit, main path muls,
+                              //   target_stat extras). For UI debug panel.
 }
 
 export interface DamageBreakdown {
@@ -298,6 +317,11 @@ export interface DamageBreakdown {
   additionalCalc: number      // skill-internal additional attack — 0 if absent
   calculated: number          // mainCalc + extraCalc + additionalCalc
   quirks: { name: string; value: string }[]
+  // Step-by-step trace of every intermediate f32 op — populated only when
+  // `debugSteps: true` is passed in DamageInputs. Used by the lab debug panel
+  // to pinpoint where game runtime diverges from our emulation (typically on
+  // BT_DMG_TARGET_STAT obs).
+  debugSteps?: { label: string; value: number; note?: string }[]
 }
 
 export function computeDamage(i: DamageInputs): DamageBreakdown {
@@ -322,6 +346,14 @@ export function computeDamage(i: DamageInputs): DamageBreakdown {
   const PER_MILLE = f(0.001)              // binary loads this from .rodata at 0x1034038
 
   const quirks: { name: string; value: string }[] = []
+  // Debug step capture — pushes one entry per f32 intermediate so the lab UI
+  // can pinpoint where game runtime diverges from our emulation.
+  const debug: { label: string; value: number; note?: string }[] = []
+  const trace = (label: string, value: number, note?: string) => {
+    if (i.debugSteps) debug.push({ label, value, note })
+  }
+  trace('PER_MILLE constant', PER_MILLE, 'f32 of 0.001 from .rodata 0x1034038')
+  trace('Mode', useF32 ? 1 : 0, useF32 ? 'f32 emulation' : 'f64 default')
 
   // ── Rate aggregation (pool) ────────────────────────────────────────────
   // Confirmed by binary disasm of CFormula.CheckDamageRate (VA 0x2b53518):
@@ -344,64 +376,78 @@ export function computeDamage(i: DamageInputs): DamageBreakdown {
   // before adding to rate, so the f32 ordering matches the binary at the ULP.
   let rate: number
   if (i.crit) {
-    // chdPct is the % display (e.g. 208 = 2.08x). Binary loads chd_permille (= 2080)
-    // and multiplies by 0.001. Our chdPct/100 is mathematically equivalent to
-    // chd_permille × 0.001, but with a different f32 round point — we mirror the
-    // binary by using PER_MILLE explicitly rather than the constant 100.
     const chdPermille = fmul(f(i.chdPct), f(10))
+    trace('1a. chdPermille = chd × 10', chdPermille, `chd ${i.chdPct} → permille`)
     rate = fmul(chdPermille, PER_MILLE)
+    trace('1b. rate = chdPermille × 0.001', rate, 'crit base')
     if (i.cdmgRedPct > 0) {
-      // CDR uses the negative-permille decoder (.rodata 0x1033d78 = −0.001f).
       const cdrPermille = fmul(f(i.cdmgRedPct), f(10))
-      rate = fadd(rate, fmul(cdrPermille, f(-Math.fround(0.001))))
+      const cdrContrib = fmul(cdrPermille, f(-Math.fround(0.001)))
+      trace('2a. cdrContrib = cdr × −0.001', cdrContrib)
+      rate = fadd(rate, cdrContrib)
+      trace('2b. rate += cdrContrib', rate, 'after CDR sub')
     }
     quirks.push({ name: 'Crit base', value: `CHD ${i.chdPct.toFixed(1)}% → rate ${rate.toFixed(4)}` })
   } else {
     rate = f(1)
+    trace('1. rate = 1 (non-crit base)', rate)
   }
 
-  // additionalSum: target_stat contribution (BT_DMG_TARGET_STAT pool path) +
-  // dmgIncPct/100 (everything else: boss BT_DMG_TO_BOSS, BT_DMG, gear DMG UP, …).
-  // Order: target_stat first (matches binary FindBuffAdditionalDamage iteration
-  // for char-skill buffs that appear before Awakening boss in the buff list).
   const useTargetStatPool = useF32 && !!i.addAtkNoPoolPermille && i.addAtkNoPoolPermille > 0
   let additionalSum = f(0)
   if (useTargetStatPool) {
     const trunc = Math.trunc(i.addAtkNoPoolPermille!)
     const capped = Math.min(trunc, 1000)
     const contribution = fmul(f(capped), PER_MILLE)
+    trace('3a. target_stat permille (from GetStatValuePermille)', trunc, 'before cap')
+    trace('3b. target_stat capped at 1000', capped)
+    trace('3c. target_stat contrib = capped × 0.001', contribution, 'BT_DMG_TARGET_STAT add to rate')
     additionalSum = fadd(additionalSum, contribution)
+    trace('3d. additionalSum after target_stat', additionalSum)
     quirks.push({ name: 'Target-stat pool', value: `+${contribution.toFixed(4)} (permille=${trunc}, capped=${capped})` })
   }
   if (i.dmgIncPct !== 0) {
-    // Convert dmgIncPct (% display) → permille → ×0.001, mirroring binary.
     const incPermille = fmul(f(i.dmgIncPct), f(10))
-    additionalSum = fadd(additionalSum, fmul(incPermille, PER_MILLE))
+    const incContrib = fmul(incPermille, PER_MILLE)
+    trace('4a. dmgInc permille', incPermille, `dmgIncPct ${i.dmgIncPct}%`)
+    trace('4b. dmgInc contrib = permille × 0.001', incContrib, 'boss BT_DMG_TO_BOSS + Awakening + ...')
+    additionalSum = fadd(additionalSum, incContrib)
+    trace('4c. additionalSum after dmgInc', additionalSum)
   }
   if (additionalSum !== 0) {
     rate = fadd(rate, additionalSum)
+    trace('5. rate += additionalSum', rate, 'after FindBuffAdditionalDamage')
   }
 
-  // DR last (binary order step 6): rate += DR × −0.001 (= rate − DR/1000).
   if (i.dmgRedPct > 0) {
     const drPermille = fmul(f(i.dmgRedPct), f(10))
-    rate = fadd(rate, fmul(drPermille, f(-Math.fround(0.001))))
+    const drContrib = fmul(drPermille, f(-Math.fround(0.001)))
+    trace('6a. DR permille', drPermille, `targetDmgRed ${i.dmgRedPct}%`)
+    trace('6b. DR contrib = permille × −0.001', drContrib)
+    rate = fadd(rate, drContrib)
+    trace('6c. rate += DR contrib', rate, 'after DR (binary step 6)')
     quirks.push({ name: 'Target DR (red)', value: `−${i.dmgRedPct.toFixed(2)}%` })
   }
 
-  // Hard floor at 0.30 — the "Cap on Maximum Reduction" from the dev note.
   const modRaw = rate
   const mod = modRaw < rateMin ? rateMin : modRaw
+  trace('7. mod = max(rate, 0.30)', mod, 'final rate after cap')
   if (modRaw < rateMin) {
     quirks.push({ name: 'Rate cap', value: `mod clamped from ${modRaw.toFixed(3)} to ${rateMin} (max 70% reduction)` })
   }
-  // Surface poolPct for the breakdown (back-calc from rate to keep the API stable).
   const poolPct = (rate - 1) * 100
 
   // ── Mitigation ─────────────────────────────────────────────────────────
   const pen = fdiv(f(i.penPct), f(100))
-  const mitDenom = fsub(fadd(C, fmul(fsub(f(1), pen), f(i.def))), penFlat)
+  trace('8a. pen = penPct / 100', pen)
+  const oneMinusPen = fsub(f(1), pen)
+  trace('8b. (1 − pen)', oneMinusPen)
+  const defMul = fmul(oneMinusPen, f(i.def))
+  trace('8c. (1−pen) × DEF', defMul, `def ${i.def}`)
+  const mitDenom = fsub(fadd(C, defMul), penFlat)
+  trace('8d. mitDenom = C + (1−pen)×DEF − penFlat', mitDenom)
   const mitigation = mitDenom > 0 ? fdiv(C, mitDenom) : C
+  trace('8e. mit = C / mitDenom', mitigation)
 
   // ── Element / conditional multipliers ──────────────────────────────────
   const elemMult = i.elem === 'adv' ? advMult : i.elem === 'disadv' ? disadvMult : f(1)
@@ -447,16 +493,36 @@ export function computeDamage(i: DamageInputs): DamageBreakdown {
   //   s8 = s8 × (1 − finalReduce)
   //   return max(1, floor(s8))
   const atkInt = fl(f(i.atk))
+  trace('9. atk (f32)', atkInt, `input ${i.atk}`)
   let mc: number = atkInt
-  if (skillFactorMult !== 1.0) mc = fl(fmul(mc, skillFactorMult))
-  mc = fl(fmul(mc, fdiv(f(i.damageFactor), ratioDivisor)))
+  if (skillFactorMult !== 1.0) {
+    mc = fl(fmul(mc, skillFactorMult))
+    trace('10. mc × skillFactor', mc)
+  }
+  const dfRatio = fdiv(f(i.damageFactor), ratioDivisor)
+  trace('11a. dfRatio = DF / 1000', dfRatio, `DF ${i.damageFactor}`)
+  mc = fl(fmul(mc, dfRatio))
+  trace('11b. mc × dfRatio', mc, 'after ATK × DF/1000')
   mc = fl(fmul(mc, mitigation))
+  trace('12. mc × mitigation', mc, 'after mit')
   mc = fl(fmul(mc, mod))
-  if (markingFactor !== 1.0) mc = fl(fmul(mc, markingFactor))
+  trace('13. mc × mod', mc, 'pool applied (LAST step before elem)')
+  if (markingFactor !== 1.0) {
+    mc = fl(fmul(mc, markingFactor))
+    trace('14. mc × marking', mc, '×1.15 for BT_MARKING')
+  }
   mc = fmul(mc, elemMult)
-  if (missedFactor !== 1.0) mc = fl(fmul(mc, missedFactor))
-  if (finalReduceMult !== 1.0) mc = fl(fmul(mc, finalReduceMult))
+  trace('15. mc × elem', mc, `elem ${i.elem} → ×${elemMult}`)
+  if (missedFactor !== 1.0) {
+    mc = fl(fmul(mc, missedFactor))
+    trace('16. mc × missed', mc)
+  }
+  if (finalReduceMult !== 1.0) {
+    mc = fl(fmul(mc, finalReduceMult))
+    trace('17. mc × (1−finalReduce)', mc)
+  }
   const mainCalc = Math.max(1, mc)
+  trace('18. mainCalc = max(1, mc)', mainCalc, `floor → ${Math.floor(mainCalc)}`)
 
   // ── Extra path (legacy: addAtkNoPool separate component) ───────────────
   // Skipped only when target_stat is folded into mod via the f32 binary path.
@@ -495,6 +561,7 @@ export function computeDamage(i: DamageInputs): DamageBreakdown {
   }
 
   const calculated = mainCalc + extraCalc + additionalCalc
+  trace('99. final calculated', calculated, `mainCalc ${mainCalc.toFixed(3)} + extraCalc ${extraCalc.toFixed(3)} + additionalCalc ${additionalCalc.toFixed(3)} → floor = ${Math.floor(calculated)}`)
 
-  return { poolPct, mod, mitigation, elemMult, mainCalc, extraCalc, additionalCalc, calculated, quirks }
+  return { poolPct, mod, mitigation, elemMult, mainCalc, extraCalc, additionalCalc, calculated, quirks, debugSteps: i.debugSteps ? debug : undefined }
 }

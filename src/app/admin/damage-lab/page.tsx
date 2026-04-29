@@ -6,6 +6,17 @@ import CharacterPortrait from '@/app/components/character/CharacterPortrait'
 import MonsterPortrait from '@/app/components/character/MonsterPortrait'
 import { applyBuffs, type ApplicableBuff, type BuffContext, type ReducedBuffs } from '@/lib/damage/buffs'
 import { recompute, detectElementRelation, type RecomputeContext } from '@/lib/damage/recompute'
+import {
+  EXTERNAL_BUFFS,
+  makeDefaultExternalBuffsState,
+  type ExternalBuffState,
+} from '@/lib/damage/external-buffs'
+import {
+  getBossOverride,
+  makeDefaultBossMechanicsState,
+  type BossMechanicState,
+  type BossOverride,
+} from '@/lib/damage/boss-overrides'
 import { STAR_ICONS, starRowForLevel } from '@/lib/stars'
 import statsJson from '@data/stats.json'
 
@@ -68,6 +79,12 @@ interface PersistedForm {
   // Per-char hardcoded-override flags. UI surfaces a toggle per relevant char.
   umeActive?: boolean             // Ame-specific: Ume state (priority gain) — gates S1 ADD
   sakuraActive?: boolean          // Ame-specific: Sakura state (elem superiority) — gates S1 REPLACE-on-adv
+  // Click-toggleable buffs/debuffs surfaced in the lab. Map keyed by ExternalBuffDef.id.
+  externalBuffs?: Record<string, ExternalBuffState>
+  // Boss-specific damage-taken mechanics (Amadeus Prelude / Enrage etc.). Map
+  // keyed by BossMechanicDef.id; only meaningful when target boss matches a
+  // known prefix in `boss-overrides.ts`.
+  bossMechanics?: Record<string, BossMechanicState>
 }
 
 interface SkillData {
@@ -506,6 +523,12 @@ export default function DamageLabPage() {
   // but the UI lets the user toggle each independently for testing).
   const [umeActive, setUmeActive] = useState(false)
   const [sakuraActive, setSakuraActive] = useState(false)
+  // Click-toggleable buffs/debuffs (BT_STAT-style — generic stat boosts/reductions
+  // sourced from data/effects/{buffs,debuffs}.json). User edits the % per toggle.
+  const [externalBuffs, setExternalBuffs] = useState<Record<string, ExternalBuffState>>(makeDefaultExternalBuffsState)
+  // Boss-specific mechanics (Amadeus Prelude / Enrage). Auto-resets when the
+  // selected monster changes — entries keyed by mechanic id.
+  const [bossMechanics, setBossMechanics] = useState<Record<string, BossMechanicState>>({})
   const [observed, setObserved] = useState('')
   const [note, setNote] = useState('')
 
@@ -516,6 +539,11 @@ export default function DamageLabPage() {
   // with Math.fround AND BT_DMG_TARGET_STAT folds into mod (binary-faithful path).
   // Off by default to preserve legacy f64 calc values used in saved obs ratios.
   const [f32Arithmetic, setF32Arithmetic] = useState(false)
+  // Debug mode — surfaces a panel listing every f32 intermediate value, plus a
+  // back-calculated target_stat_permille deduced from the user's obs (so on a
+  // S2-with-target_stat divergence we can see exactly which step our model and
+  // the game disagree on).
+  const [debugSteps, setDebugSteps] = useState(false)
 
   const [saveStatus, setSaveStatus] = useState<'idle' | 'pending' | 'saving' | 'saved' | 'error'>('idle')
   const autoSaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -570,6 +598,21 @@ export default function DamageLabPage() {
         if (typeof p.targetLevel === 'number') setTargetLevel(p.targetLevel)
         if (typeof p.umeActive === 'boolean') setUmeActive(p.umeActive)
         if (typeof p.sakuraActive === 'boolean') setSakuraActive(p.sakuraActive)
+        if (p.externalBuffs && typeof p.externalBuffs === 'object') {
+          // Merge persisted state on top of defaults so newly added catalog
+          // entries land with their default values rather than missing.
+          const defaults = makeDefaultExternalBuffsState()
+          const merged = { ...defaults }
+          for (const [k, v] of Object.entries(p.externalBuffs)) {
+            if (v && typeof v === 'object' && k in defaults) merged[k] = { active: !!v.active, value: Number(v.value) || 0 }
+          }
+          setExternalBuffs(merged)
+        }
+        if (p.bossMechanics && typeof p.bossMechanics === 'object') {
+          // Validation happens lazily — the monster-change effect rebuilds
+          // the state if it doesn't match the current boss override.
+          setBossMechanics(p.bossMechanics as Record<string, BossMechanicState>)
+        }
       }
     } catch { /* ignore corrupt storage */ }
     formHydrated.current = true
@@ -588,6 +631,7 @@ export default function DamageLabPage() {
       extraScale,
       targetMode, targetLevel,
       umeActive, sakuraActive,
+      externalBuffs, bossMechanics,
     }
     try { localStorage.setItem(LS_FORM_KEY, JSON.stringify(p)) } catch { /* quota etc. */ }
   }, [characterId, atk, chdPct, penPct, dmgIncPct,
@@ -597,7 +641,8 @@ export default function DamageLabPage() {
       modeLabel, stageId, monsterKey,
       transcendStar, applyQuirks, heroCodexLevel, extraScale,
       targetMode, targetLevel,
-      umeActive, sakuraActive])
+      umeActive, sakuraActive,
+      externalBuffs, bossMechanics])
 
   const selectedChar = useMemo(
     () => characters.find(c => c.id === characterId) ?? null,
@@ -883,6 +928,30 @@ export default function DamageLabPage() {
     [selectedStage, monsterKey]
   )
 
+  // Resolve the boss override for the current target — drives whether the
+  // "Boss-specific mechanics" UI block renders and which mechanics it shows.
+  // Currently only Amadeus has entries; null for non-boss / unknown targets.
+  const bossOverride: BossOverride | null = useMemo(
+    () => getBossOverride(selectedMonster?.monsterId),
+    [selectedMonster?.monsterId]
+  )
+
+  // Reconcile bossMechanics state when the target boss changes: drop entries
+  // that don't belong to the new override and add missing defaults. Preserves
+  // user toggles across stage changes within the same boss family (Amadeus
+  // St2 → St3 keeps the same mechanic ids active).
+  useEffect(() => {
+    if (!formHydrated.current) return
+    const defaults = makeDefaultBossMechanicsState(bossOverride)
+    setBossMechanics(prev => {
+      const next: Record<string, BossMechanicState> = {}
+      for (const [k, v] of Object.entries(defaults)) {
+        next[k] = prev[k] ?? v
+      }
+      return next
+    })
+  }, [bossOverride])
+
   // Auto-detect element advantage/disadvantage when both attacker and target elements
   // are known (char loaded + monster loaded from stage). Same seed-then-fire ref
   // pattern so saved values aren't clobbered on hydration. ELEMENT_ADV covers both
@@ -1134,12 +1203,17 @@ export default function DamageLabPage() {
       C: num(C, 1000),
       ratioDivisor: num(ratioDivisor, 1000),
       f32arithmetic: f32Arithmetic,
+      debugSteps,
+      externalBuffs,
+      monsterId: selectedMonster?.monsterId,
+      bossMechanics,
     }
     return recompute(ctx, allBuffs)
   }, [selectedChar, damageFactor, slot, atk, chdPct, penPct, dmgIncPct, def,
       tgtDmgRedPct, tgtCdmgRedPct, tgtHp, isBoss, elemental, crit, applyQuirks,
       extraScale, selectedMode, additionalAttack, currentSkill, allBuffs, C, ratioDivisor,
-      umeActive, sakuraActive, f32Arithmetic])
+      umeActive, sakuraActive, f32Arithmetic, debugSteps,
+      externalBuffs, bossMechanics, selectedMonster?.monsterId])
 
   const observedNum = observed.trim() === '' ? null : num(observed)
   const ratio = computation && observedNum != null && computation.calculated > 0
@@ -1885,6 +1959,16 @@ export default function DamageLabPage() {
                 into <code>mod</code> with int truncation (matches binary). Closes ~15% of the residual on Noa S2 obs;
                 remaining gap is below the precision we can extract from libil2cpp without runtime instrumentation.
               </p>
+              <label className="flex items-center gap-2 text-xs text-zinc-300 pt-2">
+                <input type="checkbox" checked={debugSteps} onChange={e => setDebugSteps(e.target.checked)} />
+                <span>Debug f32 step trace</span>
+              </label>
+              <p className="text-[11px] text-zinc-500 leading-snug pl-5">
+                Logs every f32 intermediate (rate aggregation, mit, main path muls,
+                <code>GetStatValuePermille</code> chain). Also back-calculates the
+                target_stat_permille required to match obs — so on a divergent S2 you can
+                pinpoint which step diverges from game runtime.
+              </p>
             </div>
             <div className="mt-3 text-xs text-zinc-500 border-t border-zinc-800 pt-3 leading-relaxed">
               Formula: <span className="font-mono text-zinc-400">Dmg = (DF/{ratioDivisor}) × ATK × (1 + pool/100) × {C}/({C} + (1−PEN)×DEF) × (1 − DR×dr_factor/100) × elem_mult</span>
@@ -1943,6 +2027,76 @@ export default function DamageLabPage() {
               <div className="text-sm text-zinc-600">Select a character + skill level</div>
             )}
 
+            {/* ── Debug f32 step trace ──────────────────────────────────────
+                Surfaces every f32 intermediate value from the reducer (target_stat
+                GetStatValuePermille chain) and the formula (rate aggregation, mit,
+                main path multiplications). Also computes the back-calculated
+                target_stat_permille that would match the observed damage exactly
+                — so when our calc differs from obs (typically S2 with target_stat),
+                you can see WHICH step diverges. */}
+            {debugSteps && computation?.breakdown.debugSteps && computation.breakdown.debugSteps.length > 0 && (
+              <div className="mt-4 border-t border-zinc-800 pt-3">
+                <div className="mb-2 flex items-center justify-between">
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">F32 step trace</h3>
+                  <span className="text-[10px] text-zinc-600">{computation.breakdown.debugSteps.length} steps</span>
+                </div>
+                {(() => {
+                  const obsNum = observed.trim() === '' ? null : Number(observed)
+                  const breakdown = computation.breakdown
+                  const mit = breakdown.mitigation
+                  const dfRatio = (damageFactor ?? 0) / num(ratioDivisor, 1000)
+                  const atkInput = num(atk)
+                  const elemMult = breakdown.elemMult
+                  // Working back from obs: required mod = obs / (atk × dfRatio × mit × elem).
+                  // Then required target_stat_contrib = required_mod − (rate without target_stat).
+                  // (assumes target_stat is the only variable — boss/CHD/DR fixed).
+                  let backCalc: { reqMod: number; reqContrib: number; reqPermille: number; ourPermille: number; deltaPermille: number } | null = null
+                  if (obsNum != null && atkInput > 0 && mit > 0) {
+                    const reqMod = obsNum / (atkInput * dfRatio * mit * elemMult)
+                    // Find our target_stat_permille from the debug steps.
+                    const targetStatStep = breakdown.debugSteps?.find(s => s.label.includes('permille = floor(step2)'))
+                    const ourPermille = targetStatStep ? targetStatStep.value : 0
+                    const ourContrib = ourPermille / 1000
+                    const reqContrib = reqMod - (breakdown.mod - ourContrib)
+                    const reqPermille = reqContrib * 1000
+                    const deltaPermille = ourPermille - reqPermille
+                    backCalc = { reqMod, reqContrib, reqPermille, ourPermille, deltaPermille }
+                  }
+                  return (
+                    <>
+                      {backCalc && (
+                        <div className="mb-3 rounded border border-amber-900/40 bg-amber-950/20 p-2 font-mono text-[11px]">
+                          <div className="mb-1 text-xs text-amber-400 font-semibold">Back-calculated from obs</div>
+                          <div className="text-zinc-300">required mod = obs / (atk × DF/1000 × mit × elem) = <span className="text-amber-300">{backCalc.reqMod.toFixed(6)}</span></div>
+                          <div className="text-zinc-300">our mod = <span className="text-amber-300">{breakdown.mod.toFixed(6)}</span></div>
+                          <div className="text-zinc-300">Δ mod = <span className={Math.abs(backCalc.reqMod - breakdown.mod) < 0.001 ? 'text-green-400' : 'text-red-400'}>{(backCalc.reqMod - breakdown.mod).toFixed(6)}</span></div>
+                          <div className="mt-1 pt-1 border-t border-amber-900/30 text-zinc-300">target_stat_permille (ours): <span className="text-amber-300">{backCalc.ourPermille}</span></div>
+                          <div className="text-zinc-300">target_stat_permille (required to match obs): <span className="text-amber-300">{backCalc.reqPermille.toFixed(2)}</span></div>
+                          <div className="text-zinc-300">Δ permille = <span className={Math.abs(backCalc.deltaPermille) < 1 ? 'text-green-400' : 'text-red-400'}>{backCalc.deltaPermille.toFixed(2)}</span> {Math.abs(backCalc.deltaPermille) < 1 ? '(within ULP)' : '(divergent — game uses different stat)'}</div>
+                        </div>
+                      )}
+                      <div className="max-h-96 overflow-y-auto rounded border border-zinc-800 bg-zinc-950/50 font-mono text-[10px]">
+                        <table className="w-full">
+                          <tbody>
+                            {breakdown.debugSteps?.map((s, idx) => {
+                              const isHeader = s.label.startsWith('[')
+                              return (
+                                <tr key={idx} className={isHeader ? 'border-t border-zinc-800/50' : ''}>
+                                  <td className={`px-2 py-0.5 ${isHeader ? 'text-cyan-400 font-semibold' : 'text-zinc-500'}`}>{s.label}</td>
+                                  <td className="px-2 py-0.5 text-right text-zinc-200">{typeof s.value === 'number' ? s.value.toFixed(8).replace(/\.?0+$/, '') : s.value}</td>
+                                  <td className="px-2 py-0.5 text-zinc-600">{s.note ?? ''}</td>
+                                </tr>
+                              )
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                    </>
+                  )
+                })()}
+              </div>
+            )}
+
             <div className="mt-4 space-y-2 border-t border-zinc-800 pt-3 text-sm">
               <Field label="Observed damage" value={observed} onChange={setObserved} />
               {ratio != null && (
@@ -1984,6 +2138,105 @@ export default function DamageLabPage() {
           </div>
         </section>
       </div>
+
+      {/* External buffs / debuffs / boss-specific mechanics */}
+      <section className="rounded border border-zinc-800 bg-zinc-900/40 p-4">
+        <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-zinc-400">
+          Buffs / Debuffs
+        </h2>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {(['attacker', 'target'] as const).map(side => (
+            (['buff', 'debuff'] as const).map(direction => {
+              const entries = EXTERNAL_BUFFS.filter(b => b.side === side && b.direction === direction)
+              if (entries.length === 0) return null
+              const heading = side === 'attacker'
+                ? (direction === 'buff' ? 'Attacker buffs' : 'Attacker debuffs')
+                : (direction === 'buff' ? 'Target buffs' : 'Target debuffs')
+              return (
+                <div key={`${side}-${direction}`} className="rounded border border-zinc-800 bg-zinc-950/40 p-3">
+                  <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+                    {heading}
+                  </h3>
+                  <div className="space-y-1.5">
+                    {entries.map(def => {
+                      const state = externalBuffs[def.id] ?? { active: false, value: def.defaultValue }
+                      return (
+                        <label key={def.id} className="flex items-center gap-2 text-xs text-zinc-300">
+                          <input
+                            type="checkbox"
+                            checked={state.active}
+                            onChange={e => setExternalBuffs(prev => ({
+                              ...prev,
+                              [def.id]: { active: e.target.checked, value: prev[def.id]?.value ?? def.defaultValue },
+                            }))}
+                          />
+                          <span className="flex-1 truncate">{def.label}</span>
+                          <input
+                            type="number"
+                            value={state.value}
+                            onChange={e => setExternalBuffs(prev => ({
+                              ...prev,
+                              [def.id]: { active: prev[def.id]?.active ?? false, value: Number(e.target.value) || 0 },
+                            }))}
+                            className="w-14 rounded border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 text-right font-mono text-xs"
+                            disabled={!state.active}
+                          />
+                          <span className="w-3 text-zinc-500">%</span>
+                        </label>
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            })
+          ))}
+        </div>
+
+        {bossOverride && bossOverride.mechanics.length > 0 && (
+          <div className="mt-4 rounded border border-amber-900/40 bg-amber-950/10 p-3">
+            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-amber-400">
+              Boss-specific mechanics — {bossOverride.bossName}
+            </h3>
+            <p className="mb-2 text-[11px] text-zinc-500 leading-snug">
+              Final-damage multipliers applied AFTER the standard formula. Values not in datamine — calibrate empirically.
+            </p>
+            <div className="space-y-2">
+              {bossOverride.mechanics.map(m => {
+                const state = bossMechanics[m.id] ?? { active: false, value: m.defaultValue }
+                return (
+                  <label key={m.id} className="flex items-start gap-2 text-xs text-zinc-300">
+                    <input
+                      type="checkbox"
+                      checked={state.active}
+                      className="mt-0.5"
+                      onChange={e => setBossMechanics(prev => ({
+                        ...prev,
+                        [m.id]: { active: e.target.checked, value: prev[m.id]?.value ?? m.defaultValue },
+                      }))}
+                    />
+                    <div className="flex-1 min-w-0">
+                      <div className="font-medium">{m.label}</div>
+                      <div className="text-[11px] text-zinc-500 leading-snug">{m.description}</div>
+                    </div>
+                    <input
+                      type="number"
+                      step="0.01"
+                      value={state.value}
+                      onChange={e => setBossMechanics(prev => ({
+                        ...prev,
+                        [m.id]: { active: prev[m.id]?.active ?? false, value: Number(e.target.value) || 0 },
+                      }))}
+                      className="w-16 rounded border border-zinc-700 bg-zinc-900 px-1.5 py-0.5 text-right font-mono text-xs"
+                      disabled={!state.active}
+                    />
+                    <span className="w-3 text-zinc-500">×</span>
+                  </label>
+                )
+              })}
+            </div>
+          </div>
+        )}
+      </section>
 
       {/* Observations table */}
       <section className="rounded border border-zinc-800 bg-zinc-900/40 p-4">

@@ -1,0 +1,501 @@
+# Damage Lab v2 — Spec de redémarrage
+
+Document de référence pour rebuilder le compartment `/admin/damage-lab` proprement
+à partir de zéro avec le contexte technique consolidé. **Seules les informations
+validées** (par disasm binaire ou par obs empiriques convergentes) sont incluses.
+Les hypothèses non confirmées sont en section dédiée à la fin.
+
+Toolchain : Next.js 15 (App Router), TypeScript, React, Tailwind v4. Données
+datamine IL2CPP dans `data/admin/json2/*.json`. Binaire ARM64 disassemblé via
+Capstone (scripts `scripts/disasm_*.py`).
+
+---
+
+## 1. Formule de dégâts (validée bit-for-bit)
+
+Reverse-engineered de `CFormula.CalcDamage` (VA `0x2B53EC8`) et de son helper
+inner `g__CalcDamage|17_0` (VA `0x2B54660`).
+
+### Pipeline f32 (chaque étape wrappée Math.fround)
+
+```
+mit          = C / (C + (1 − PEN/1000) × DEF − PEN_flat)
+rate         = base_pool   (= 1.0 normal, CHD/1000 sur crit)
+rate        += additionalSum   (somme des BT_DMG/quirks attaquant)
+rate        -= reduceSum        (somme des BT_DMG_REDUCE défenseur)
+rate        += DMG_BOOST/1000   (gear stat attaquant)
+rate        -= DR/1000           (gear stat défenseur)
+rate         = max(rate, 0.30)   (rateMin, "Cap on Maximum Reduction")
+
+dmg          = ATK × (skillFactor/1000) × (DF/1000) × mit × rate
+            × (markingActive ? 1.15 : 1.0)   (BT_MARKING sur défenseur)
+            × elem_mult                       (1.20 adv / 0.80 disadv / 1.0 sinon)
+            × (missed ? 0.5 : 1.0)            (MISSED_DAMAGE_RATE)
+            × (1 − finalReduce/100)           (BT_DMG_REDUCE_FINAL agrégat MAX)
+
+final        = max(1, floor(dmg))   (fcvtms toward −∞)
+```
+
+### Constantes binaires (.rodata)
+
+| VA | Valeur | Usage |
+|---|---|---|
+| `0x1033D78` | `−0.0010000000474974513f` | Per-mille décodeur négatif (DR/CDR/DMG_REDUCE) |
+| `0x1034038` | `+0.0010000000474974513f` | Per-mille décodeur positif (CHD/DMG/BT_DMG) |
+| `0x1034064` | `1.149999976158142f` | Multiplicateur BT_MARKING (×1.15) |
+| `0x1034074` | `0.30000001192092896f` | rateMin (cap −70% damage reduction) |
+| `0x1033E14` | `0.800000011920929f` | Multiplicateur disadv (×0.80) |
+| `0x1033E70` | `1.2000000476837158f` | Multiplicateur adv (×1.20) |
+
+Constante intégrée :
+- `1000.0f` = cap permille (`fminnm s1, s1, 1000.0`) sur `BT_DMG_TARGET_STAT`
+- `99.0f` (= `0x42c60000`) = diviseur level interp (`CalcStat`)
+- `MISSED_DAMAGE_RATE` = `0.5` (GameConfigTemplet entry, val 500 perm)
+
+### Conversion finale int
+
+`frintm` (floor toward −∞) + `fcvtms` puis `csinc` pour `max(1, w)`. **Jamais
+`Math.round`** — toujours `Math.floor`.
+
+### Calc stat à un niveau donné (`CFormula.CalcStat` VA `0x2B52D24`)
+
+```ts
+function interpolate(min: number, max: number, level: number): number {
+  if (level <= 1) return min
+  if (level >= 100) return max
+  const diff = Math.fround(max - min)
+  const div  = Math.fround(diff / 99)
+  const mul  = Math.fround(div * (level - 1))
+  const sum  = Math.fround(mul + min)
+  return Math.floor(sum)
+}
+```
+
+### Formule master `CalcFinalStat` (VA `0x2B52E28`)
+
+```
+final = floor(
+  baseValue × ArchiveStatRate / 1000 +
+  (BuffValueRate + 1000) × (
+    ((sumValues) × (1000 + sumRates)) / 1000
+    + ItemOptionValue + BuffValue
+  ) / 1000
+)
+```
+
+Pour les monstres : `sumValues = baseValue`, `sumRates = SpawnAdvantageRate`,
+autres args = 0. Validé sur Amadeus St2 : `22453 = floor(52707 × 426 / 1000)`.
+
+---
+
+## 2. Buff types (handlers binaires confirmés)
+
+### Pool additif (`FindBuffAdditionalDamage` VA `0x2637548`)
+
+Handler générique commun (VA `0x2637A78`) :
+```
+contrib = float(buff.Value) × 0.001
+accumulator += contrib
+```
+
+| Type # | Nom | Multiplicateur additionnel | Confirmation |
+|---|---|---|---|
+| 83 | `BT_DMG` | × 1 (toujours) | disasm + Awakening_Boss/Element/Mage |
+| 84 | `BT_DMG_OWNER_LOST_HP_RATE` | × `max(0, 1 − ownerHpRate)` | disasm |
+| 85 | `BT_DMG_TARGET_LOST_HP_RATE` | × `max(0, 1 − targetHpRate)` | disasm |
+| 86 | `BT_DMG_OWNER_STAT` | scaling séparé (atk_pct/atk_flat) | disasm |
+| 87 | `BT_DMG_TARGET_STAT` | `min(floor(stat×val/1000), 1000) × 0.001` | disasm + Noa S2 obs |
+| 95 | `BT_DMG_TARGET_BREAK` | × `(target.IsBreak ? 1 : 0)` (gated par `RageManager.IsBreak`) | disasm |
+| 96 | `BT_DMG_TO_BOSS` | × 1 si cible boss, sinon 0 | disasm + Awakening_Boss_Dmg |
+| 107 | `BT_DMG_REDUCE` | soustrait à la place d'ajouter | disasm |
+
+### BT_DMG_TARGET_STAT — chain f32 exact
+
+Handler à VA `0x2637824` :
+```ts
+const PER_MILLE_F32 = Math.fround(0.001)            // .rodata 0x1034038
+const statF32 = Math.fround(targetStatValue)        // ex: ST_HP MaxHP
+const valF32  = Math.fround(buffTemplet.Value)      // ex: 30
+const step1  = Math.fround(statF32 * PER_MILLE_F32)
+const step2  = Math.fround(step1 * valF32)
+const result = Math.floor(step2)                     // = GetStatValuePermille
+const capped = Math.min(result, 1000)
+const contrib = Math.fround(capped * PER_MILLE_F32)
+accumulator = Math.fround(accumulator + contrib)
+```
+
+Routes `ST_HP` → `CCharacterData.get_MaxHP()` (VA `0x27358DC`). Le `MaxHPRate`
+(offset `0x100` de `CCharacterData`) est par défaut `1.0` (ResetMaxHPRate VA
+`0x263A0B4` + .ctor VA `0x27376E0`).
+
+### Handlers à confirmer (binaire pas encore disas en détail)
+
+- **88-91** : `BT_DMG_OWNER_BUFF/TARGET_BUFF/OWNER_DEBUFF/TARGET_DEBUFF` — multiplicateur = count des buffs/debuffs sur owner/target
+- **94** : `BT_DMG_ENEMY_TEAM_DECREASE` — handler dans une fonction différente de `FindBuffAdditionalDamage` (autour de VA `0x2639xxx`). À ré-investiguer pour pinpoint le multiplicateur exact.
+- **97** : `BT_DMG_KILL_COUNT_STACK` — value × stack count
+- **98** : `BT_DMG_NOT_CRITICAL` — 1 si pas crit
+- **99** : `BT_DMG_PVP_CONTENT` — 1 si in PvP
+- **100** : `BT_DMG_CASTER_STAT` — alias de 86 OWNER_STAT
+- **101** : `BT_DMG_CASTER_LOST_HP_RATE` — alias de 84 OWNER_LOST_HP_RATE
+- **102** : `BT_DMG_OWNER_TEAM_BUFF` — count team buffs
+- **103** : `BT_DMG_MY_TEAM_DECREASE` — count dead/decreased allies
+- **104** : `BT_DMG_MONADGATE_CONTENT` — 1 si in Monad Gate
+- **105** : `BT_DMG_TOWER_CONTENT` — 1 si in Tower
+
+### Réduction défenseur (`FindBuffDamageReduce` VA `0x2638638`)
+
+À ré-disasmer en détail. Types iterés (à confirmer un par un) :
+- 107 `BT_DMG_REDUCE`
+- 110 `BT_DMG_REDUCE_MY_TEAM_INCREASE`
+- 145 `BT_STEALTHED`
+
+### Final reduce (`GetBuffDamgeFinalReduce` VA `0x2638ADC`)
+
+Itère uniquement les types **111/112/113** et prend le **MAX** (pas la somme) :
+- 111 `BT_DMG_REDUCE_FINAL`
+- 112 `BT_DMG_REDUCE_FINAL_MY_TEAM_INCREASE`
+- 113 `BT_DMG_REDUCE_FINAL_WITH_OUT_FIRST_SKILL`
+
+Appliqué multiplicativement comme `× (1 − finalReduce/100)` après le pool.
+
+### Element rate (`GetElementeryDamageRate` VA `0x2B53C74`)
+
+Logique element :
+```
+attacker_elem ≤ 2 (Earth/Water/Fire) ET target_elem ≤ 2 → cycle rps
+attacker_elem > 2 (Light/Dark) OU target_elem > 2 → branche L/D
+```
+
+Branche L/D (`0x2B53DB4`) :
+```
+if attacker_elem < 3 → return 1.0   (attaquant F/W/E vs target L/D)
+if target_elem ≤ 2 → return 1.0      (attaquant L/D vs target F/W/E)
+if attacker_elem == target_elem → return 1.0   (Light vs Light, Dark vs Dark)
+else → goto FindBuffElementSuperiority handling, return 1.20
+```
+
+**Confirmé** : Light↔Dark donne ×1.20, **same-elem L/D donne ×1.0** (pas adv).
+
+### Element enum (`CHARACTER_ELEMENT_TYPE`)
+
+| Valeur | Élément |
+|---|---|
+| 0 | EARTH |
+| 1 | WATER |
+| 2 | FIRE |
+| 3 | LIGHT |
+| 4 | DARK |
+
+Cycle rps : `Fire > Earth > Water > Fire`. Light↔Dark : avantage mutuel.
+
+### Subclass enum
+
+| Valeur | Subclass |
+|---|---|
+| 1 | ATTACKER |
+| 2 | BRUISER |
+| 3 | WIZARD |
+| 4 | ENCHANTER |
+| 5 | VANGUARD |
+| 6 | TACTICIAN |
+| 7 | SWEEPER |
+| 8 | PHALANX |
+| 9 | RELIEVER |
+| 10 | SAGE |
+
+### Class enum
+
+| Valeur | Class |
+|---|---|
+| 1 | Defender |
+| 2 | Attacker |
+| 3 | Ranger |
+| 4 | Mage |
+| 5 | Priest |
+
+---
+
+## 3. Awakening quirks (validés)
+
+Walk de `CharacterAwakeningNodeTemplet` + `CharacterAwakeningLevelTemplet` →
+buffs dans `BuffTemplet`. Chaque node a un `AwakeningApplyType` qui filtre quels
+chars reçoivent le buff (`AAT_ELEMENTAL` / `AAT_CLASS` / `AAT_SUBCLASS` / etc.)
+et un `AwakeningLevelGroupID` qui indexe la chaîne de buffs progressifs.
+
+### Boss damage (`Awakening_Boss_Dmg_10`)
+- Type `BT_DMG_TO_BOSS` (96), Value=`300` (= +30%)
+- Apply : `AAT_PVE` (tous chars en PVE)
+- Condition : cible `boss` (intrinsèque au type 96)
+- BuffID confirmé dans `BuffTemplet` (ID 682 dans la version actuelle)
+
+### Class Mage (`MAGE_PASSIVE_3_10`)
+- Type `BT_DMG` (83), Value=`120` (= +12%)
+- Apply : `AAT_CLASS=4` (Mage)
+- Condition : `NONE` (toujours actif)
+- Node : `JOB02_MAIN`, group `20201`
+
+### Light/Dark element main (`Awakening_Element_Dmg_Dark_Light_10`)
+- Type `BT_DMG` (83), Value=`300` (= +30%)
+- Apply : `AAT_ELEMENTAL=3` (Light, group 10401) **OU** `AAT_ELEMENTAL=4` (Dark, group 10501)
+- Condition : `NONE` (toujours actif, "When attacking an enemy of any element")
+- Description in-game : *"Light Main Node: When attacking an enemy of any element, increases damage dealt by 30%"*
+
+### Earth/Water/Fire element main (`Awakening_Element_Dmg_10`)
+- Type `BT_DMG` (83), Value=`500` (= +50%)
+- Apply : `AAT_ELEMENTAL ∈ {0,1,2}` (groups 10101/10201/10301)
+- Condition : `ATTACKER_ELEMENT_WIN` (uniquement sur target adv)
+
+### Boss debuffs (`Awakening_Boss_*_Down_X`)
+- Type `BT_STAT_PREMIUM` négatif sur ST_BUFF_RESIST / ST_BUFF_CHANCE
+- Réorienté côté défenseur (boss reçoit `monster_res` / `monster_eff` debuff)
+- Apply : `AAT_PVE`, condition : cible boss
+
+---
+
+## 4. Cas char-specific (validés)
+
+### Ame (`2000065`)
+
+**S1** : `dfMultiplier = 0.5` (validé sur 8 obs unbuffed boss×elem×crit, ratio
+`0.50 ± 0.01`). Le facteur 0.5 n'apparaît dans aucun row du datamine ; c'est de
+la logique game-code spécifique à sa stance Ume/Sakura.
+
+Conditionnel S1 :
+- `umeActive` : alternate hit ADD à `mainDF × 2.0` (validé 5 obs ratio `1.000 ± 0.007`)
+- `sakuraActive` :
+  - `replaceOnAdv=true` : sur target adv, alternate REPLACE main à `× 1.0` total
+  - sinon : ADD comme Ume
+
+Limitation connue : Sakura+crit non-adv fire à `~1.83×` au lieu de `2.0×`
+(shortfall 5-6%, 3 obs). Suspect d'interaction `BT_DMG_ELEMENT_SUPERIORITY`
+avec crit DR pierce. Acceptable as-is.
+
+### Noa (`2000022`)
+
+**S2** : scaling `BT_DMG_TARGET_STAT` (BuffID `2000022_2_2` Level 5, Value=30).
+Add component séparé via `min(floor(targetHP × 30 / 1000), 1000) × 0.001` ajouté
+au pool. Validé sur 11 obs (boss × stages × crit/no-crit) ratio ±0.013% sur
+basic, +0.10% résiduel localisé sur target_stat (cause inconnue, voir §6).
+
+---
+
+## 5. Schémas de données
+
+### Pipeline conceptuel
+```
+DATAMINE (JSON)
+   │
+   │  walk awakening tree + char skills + buff templet
+   ▼
+EXTRACTOR (server)        →  ApplicableBuff[]
+   │
+   │  filter par char/awakening, apply triggers (boss/crit/adv/etc.)
+   ▼
+REDUCER (client)          →  ReducedBuffs { mainAtk, addAtk, chdBonus, penBonus, poolPct, ... }
+   │
+   │  feed into formula
+   ▼
+FORMULA                    →  DamageBreakdown { mainCalc, extraCalc, additionalCalc, calculated }
+```
+
+### `ApplicableBuff` — schéma minimum unifié
+
+```ts
+{
+  id: string                          // unique (ex: "awak:121", "char:2000022:S2:2000022_2_2")
+  source: { kind: 'awakening' | 'char_skill', ... }
+  appliesTo: { kind: 'class'|'element'|'subclass'|'pve'|'all', value: string|null }
+  effect: {
+    target: 'pool' | 'pool_cond' | 'atk_pct' | 'atk_flat' | 'chd' | 'pen'
+          | 'crit_rate' | 'monster_eff' | 'monster_res'
+          | 'scaling_swap' | 'scaling_add_pct' | 'scaling_add_flat'
+          | 'scaling_target_stat'
+    poolCondition?: PoolCondition     // si target='pool_cond'
+    statKey?: string                   // ST_HP / ST_DEF / ST_CRITICAL_RATE etc. (pour scaling)
+    amount: number                     // valeur signée (% pour pool, perm pour scaling, etc.)
+    unit: '%' | 'permille' | 'flat'
+  }
+  trigger: {
+    requires: 'always' | 'boss' | 'crit' | 'adv' | 'disadv' | 'neutral'
+    callerSlots: 'all' | ('S1'|'S2'|'S3')[]   // skill que le buff gate
+  }
+  ui?: { name, desc, defaultEnabled, maxLevel }
+}
+```
+
+### `RecomputeContext` — input formula
+
+```ts
+{
+  // Caster identity
+  charId, charElement, charClass, charSubclass
+  // Skill
+  slot: 'S1'|'S2'|'S3'
+  damageFactor: number                 // listed DF du SkillLevelTemplet
+  additionalAttackRatio?: number        // si skill a sub-attack conditionnel
+  // Caster stats (raw, post-gear/awakening déjà appliqué via API)
+  atk, chd, pen, dmgInc
+  applyQuirks: boolean
+  extraStats?: Record<ST_*, number>     // pour scaling secondaire (HP, DEF, etc.)
+  // Target stats
+  targetDef, targetDmgRed, targetCdmgRed, targetHp?
+  isBoss, elem: 'none'|'adv'|'disadv'
+  crit: boolean
+  mode?: string                          // dungeon mode pour AdvLicense gate
+  monsterId?: string                     // pour boss-overrides lookup
+  // Char-specific flags
+  charFlags?: { umeActive, sakuraActive, ... }
+  // External toggles (UI)
+  externalBuffs?: Record<string, { active, value }>
+  bossMechanics?: Record<string, { active, value }>
+  // Constantes (tunables debug)
+  C, ratioDivisor
+  f32arithmetic, debugSteps: boolean
+}
+```
+
+---
+
+## 6. UI — design retours d'expérience
+
+L'UI v1 est un patchwork. v2 doit être conçue avec ces principes dès le départ :
+
+### Layout principal (3 colonnes desktop, stacked mobile)
+
+1. **Attacker** : portrait + selector + champs ATK/CHD/PEN/DMG↑ + skill slot (S1/S2/S3) + skill level + crit toggle + per-char flags conditionnels (Ame Ume/Sakura)
+2. **Target** : monster picker (Mode → Stage → Monster) auto-fetched stats, mode manual permet d'overrider
+3. **Formula constants & Result** : C, ratioDivisor, f32 toggle, debug toggle, computed damage display, breakdown (pool/mit/elem/etc.), active buffs list
+
+### Sections globales
+
+4. **Buffs/Debuffs toggles** (sous la grille principale, full-width) :
+   - Attacker buffs (statBoosts génériques ATK/PEN/CHC/CHD/EFF avec input éditable)
+   - Attacker debuffs (statReduction)
+   - Target buffs (DEF buff)
+   - Target debuffs (DEF break — Tamara case)
+5. **Boss-specific mechanics** (visible uniquement si target boss matchant `boss-overrides.ts`) :
+   - Liste de toggles spécifiques au boss avec valeur multiplicateur éditable
+   - Chaque toggle applique un mult final sur le damage
+6. **Observations table** :
+   - Toutes les obs sauvées avec recompute live (calc + Δ obs/calc)
+   - Color-code : ratio ±2% green, ±5% amber, sinon red
+   - Save observation depuis le panneau Result
+
+### Persistence
+- Form state en `localStorage` (clé versionnée `damage-lab-form-vX`)
+- Obs sauvées via API `/api/admin/damage-lab/observations` (JSONL côté serveur)
+
+### Debug panel
+- f32 step trace (chaque opération intermédiaire avec valeur)
+- Back-calculation depuis l'obs (deduit le permille requis pour matcher)
+- Active buffs avec contribution effective
+
+---
+
+## 7. À investiguer (non confirmé)
+
+Liste des questions ouvertes — **NE PAS** encoder avant validation empirique.
+
+1. **Type 94 `BT_DMG_ENEMY_TEAM_DECREASE`** — Maxwell `2000028_1_3` (Value 100,
+   = +10%/stack). Handler dans une fonction différente de
+   `FindBuffAdditionalDamage` (VA `0x2639xxx`). Multiplicateur exact à
+   pinpointer (count des debuffs sur target ? autre ?). Hypothèse : count des
+   `monster_res`/`monster_eff` actifs sur le boss.
+
+2. **Same-element L/D pool advantage** — Maxwell Dark vs Amadeus Dark obs ratio
+   `1.175` (= +17.5% damage par rapport au calc sans). Suggère que L/D vs L/D
+   same-elem fire un quirk pool +30% qu'on ne modélise pas. Pourrait être un
+   sous-cas du point 1 (le +30 manquant viendrait de type 94 avec mult=3).
+
+3. **Light/Dark cross adv slight overshoot** — Stella Light vs Amadeus Dark
+   ratio `0.96-0.98` (calc légèrement haut). Probablement lié au point 2.
+
+4. **Amadeus St4+ "Prelude of the Waning Crescent"** — passif boss (skill
+   `132405/132408/132410/132411` selon stage). Buffs attachés identifiés
+   (`5_2/6/7/8/10/11/12/armor_common_*`) mais l'effet net sur damage taken par
+   élément attaquant pas validé contre obs. Description in-game :
+   *"Decreases damage taken from Fire/Water/Earth, increases from Light/Dark"*.
+
+5. **Amadeus Enrage (HP < 30%)** — buff "Reduced Damage Taken" se déclenche.
+   Valeur exacte non identifiée dans BuffTemplet (à chercher via condition
+   `OWNER_HPRATE_UNDER` ou similaire).
+
+6. **Noa S2 `BT_DMG_TARGET_STAT` résiduel +0.10%** — calc 673 permille vs obs
+   ~670 sur 2 obs. Tout le pipeline f32 est validé bit-for-bit, MaxHP=22453
+   confirmé via Cheat Engine sur LDPlayer. Cause non identifiée — possiblement
+   un détail runtime qu'on ne voit pas en statique. Acceptable as-is, à
+   re-tester si les fix des points 1-3 changent le comportement.
+
+---
+
+## 8. VAs binaires utiles (pour future RE)
+
+```
+0x2B53EC8  CFormula.CalcDamage
+0x2B54660  CFormula.<CalcDamage>g__CalcDamage|17_0
+0x2B53518  CFormula.CheckDamageRate
+0x2B53C74  CFormula.GetElementeryDamageRate
+0x2B52D24  CFormula.CalcStat
+0x2B52E28  CFormula.CalcFinalStat
+0x2637548  CCharacterBattle.FindBuffAdditionalDamage
+0x2638638  CCharacterBattle.FindBuffDamageReduce
+0x2638ADC  CCharacterBattle.GetBuffDamgeFinalReduce
+0x2639004  CCharacterBattle.FindBuffElementDamageRate
+0x262D294  CCharacterBattle.FindBuffElementSuperiority
+0x2639BB8  CCharacterBattle.GetAttackStat
+0x262109C  CCharacterBattle.FindBuffByType
+0x2622740  CCharacterBattle.get_SkillRecord
+0x2737274  CCharacterData.GetStatValuePermille
+0x273717C  CCharacterData.GetStatValue
+0x27358DC  CCharacterData.get_MaxHP
+0x2735E94  CCharacterData.get_Def
+0x27362E0  CCharacterData.get_PiercePowerRate
+0x2736204  CCharacterData.get_PiercePower
+0x2728574  CCharacter.get_SkillManager
+0x2439588  CSkillManager.GetSkillFactor
+0x263A0B4  CCharacterBattle.ResetMaxHPRate
+0x27376E0  CCharacterData..ctor (init MaxHPRate=1.0)
+0x22A6420  CBattleManager.ProcessDamage (CalcDamage caller)
+0x2732D38  CSkillRecord.get_DamageRate
+```
+
+Scripts disasm : `scripts/disasm_funcs.py <VA> [count]`,
+`scripts/disasm_buff_handlers.py`, `scripts/disasm_prologue.py`.
+
+Binaire : `C:/Users/Sevih/Downloads/Il2CppDumper-net7-win-v6.7.46/libil2cpp.so`,
+script.json + dump.cs au même endroit.
+
+---
+
+## 9. Fichiers existants à réutiliser ou réécrire
+
+### À garder (logique correcte)
+- `src/lib/damage/formula.ts` (header + chain f32 — la pipeline est la bonne)
+- `src/lib/damage/recompute.ts` (squelette pipeline — peut être nettoyé)
+- `src/lib/damage/buffs.ts` reducer (la logique d'agrégation est correcte, mappings à vérifier)
+- `src/lib/damage/char-overrides.ts` (Ame validé)
+- `src/app/api/admin/damage-lab/_shared/extract-buffs.ts` (la majeure partie est OK, vérifier mappings type 94/94)
+- `src/app/api/admin/damage-lab/stages/route.ts` (interpolate f32 + applyAdvantageRate validés)
+- `src/app/api/admin/monsters/[id]/stats/route.ts` (interpolate validé)
+
+### À réécrire ou repenser
+- `src/app/admin/damage-lab/page.tsx` — patchwork de patches successifs (~2300 lignes), redesign UI from scratch en suivant §6
+- `src/lib/damage/external-buffs.ts` — catalogue ok mais le scoping (4 sections : attacker buffs/debuffs × 2 sides) à reconsidérer si on inclut les "buffs de team" (Tamara debuff)
+- `src/lib/damage/boss-overrides.ts` — pour l'instant juste un placeholder Amadeus avec valeurs inventées. À refaire en s'appuyant sur les buffs réels du datamine (point 7.4 et 7.5)
+
+### Tests obs validation
+- `data/admin/damage-lab-observations.jsonl` — 6 obs courantes (Stella/Maxwell/Rin sur Amadeus St3). À conserver pour valider chaque étape du rebuild.
+
+---
+
+## 10. Roadmap de rebuild suggérée
+
+Ordre proposé pour reconstruire :
+
+1. **Spec UI complète** (wireframe + composants + state shape) avant de toucher le code
+2. **Refactor `extract-buffs.ts`** : audit du mapping de chaque BT_DMG_* type vs le binaire, fix type 94 séparé de 103
+3. **Rebuild `recompute.ts`** : pipeline propre avec `RecomputeContext` clean, sans le f32arithmetic optionnel (on l'active toujours, c'est la vraie pipeline)
+4. **Rebuild UI page.tsx** : composants découpés (AttackerPanel, TargetPanel, BuffsTogglesPanel, ResultPanel, ObsTable), state via useReducer plutôt que 30 useState
+5. **Validation obs** : re-run les 6 obs, viser ratio 1.000 sur les 3 cas où on l'avait, confirmer le fix sur Maxwell
+6. **Boss-overrides Amadeus** : empiriquement calibrer Prelude St4+ et Enrage sur de nouvelles obs ciblées (test St4+ avec différents éléments, test < 30% HP)
+7. **Documentation** : mettre à jour ce fichier avec les nouvelles validations

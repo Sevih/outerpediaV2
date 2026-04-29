@@ -12,6 +12,16 @@
 import { computeDamage, type DamageBreakdown } from './formula'
 import { applyBuffs, type ApplicableBuff, type BuffContext, type ReducedBuffs } from './buffs'
 import { getCharOverride, type CharFlags } from './char-overrides'
+import {
+  aggregateExternalBuffs,
+  type ExternalBuffState,
+  type ExternalBuffSums,
+} from './external-buffs'
+import {
+  aggregateBossMechanics,
+  getBossOverride,
+  type BossMechanicState,
+} from './boss-overrides'
 
 export type SlotTag = 'S1' | 'S2' | 'S3'
 export type ElemRelation = 'none' | 'adv' | 'disadv'
@@ -78,6 +88,19 @@ export interface RecomputeContext {
   // target-stat pool addition. Closes the residual on Noa S2 obs from ±0.12%
   // to within rounding noise. Safe default off (legacy f64 path).
   f32arithmetic?: boolean
+  // Capture every f32 intermediate value for the lab debug panel.
+  debugSteps?: boolean
+  // Click-toggleable buffs/debuffs surfaced in the lab UI (Tamara S3 break-DEF,
+  // generic +ATK / +CHD / etc.). Map keyed by ExternalBuffDef.id; entries with
+  // `active=false` are ignored. See `external-buffs.ts` for the catalog.
+  externalBuffs?: Record<string, ExternalBuffState>
+  // Boss-specific damage-taken multipliers — Amadeus's Prelude / Enrage etc.
+  // Multiplied onto the final damage value after all standard formula stages.
+  // The lab UI surfaces this only when the selected target matches a known
+  // boss prefix (see `boss-overrides.ts`). Identifies which boss override is
+  // active via `monsterId`.
+  monsterId?: string
+  bossMechanics?: Record<string, BossMechanicState>
 }
 
 export interface RecomputeResult {
@@ -87,11 +110,32 @@ export interface RecomputeResult {
 }
 
 export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): RecomputeResult {
+  // ── External buff/debuff aggregation (lab UI toggles) ──────────────────
+  // Apply user-toggled BT_STAT-style buffs to the input stats BEFORE feeding
+  // the formula: ATK / DEF use multiplicative `× (1 + Σpct/100)`, % stats
+  // (PEN / CHC / CHD / EFF) use additive points. Sums combine all active
+  // toggles (additive on the % side — mirrors in-game BT_STAT aggregation).
+  const extSums: ExternalBuffSums = ctx.externalBuffs
+    ? aggregateExternalBuffs(ctx.externalBuffs)
+    : { attackerATK: 0, attackerPEN: 0, attackerCHC: 0, attackerCHD: 0, attackerEFF: 0, targetDEF: 0 }
+
+  const effAtk = ctx.atk * (1 + extSums.attackerATK / 100)
+  const effPen = ctx.pen + extSums.attackerPEN
+  const effChd = ctx.chd + extSums.attackerCHD
+  const effTargetDef = ctx.targetDef * (1 + extSums.targetDEF / 100)
+
   // statValues — feed the reducer's scaling math (BT_DMG_OWNER_STAT, BT_SWAP_STAT_ATTACK).
-  // ST_ATK is the user-typed primary ATK; everything else flows from `extraStats`.
-  const statValues: Record<string, number> = { ST_ATK: ctx.atk }
+  // ST_ATK is the user-typed primary ATK (post-buff); other stats from `extraStats`,
+  // augmented with EFF/CHC additive contributions when those toggles are active.
+  const statValues: Record<string, number> = { ST_ATK: effAtk }
   if (ctx.extraStats) {
     for (const [k, v] of Object.entries(ctx.extraStats)) statValues[k] = v
+  }
+  if (extSums.attackerEFF !== 0) {
+    statValues.ST_BUFF_CHANCE = (statValues.ST_BUFF_CHANCE ?? 0) + extSums.attackerEFF
+  }
+  if (extSums.attackerCHC !== 0) {
+    statValues.ST_CRITICAL_RATE = (statValues.ST_CRITICAL_RATE ?? 0) + extSums.attackerCHC
   }
 
   // Target stats — fed to the reducer for `scaling_target_stat` buffs
@@ -100,7 +144,7 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
   // future char scales on those.
   const targetStatValues: Record<string, number> = {}
   if (ctx.targetHp != null) targetStatValues.ST_HP = ctx.targetHp
-  if (ctx.targetDef != null) targetStatValues.ST_DEF = ctx.targetDef
+  if (effTargetDef != null) targetStatValues.ST_DEF = effTargetDef
 
   const buffCtx: BuffContext = {
     charId: ctx.charId,
@@ -113,9 +157,10 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     elem: ctx.elem,
     applyQuirks: ctx.applyQuirks,
     inAdventureLicense: isAdventureLicenseMode(ctx.mode),
-    baseAtk: ctx.atk,
+    baseAtk: effAtk,
     statValues,
     targetStatValues,
+    debugSteps: ctx.debugSteps,
   }
 
   // Filter to buffs that can apply to this caster: every awakening buff (the
@@ -160,11 +205,11 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     addAtkNoPoolPermille: reduced.addAtkNoPoolPermille,
     additionalAttackDF,
     damageFactor: mainDF,
-    chdPct: ctx.chd + reduced.chdBonus,
-    penPct: ctx.pen + reduced.penBonus,
+    chdPct: effChd + reduced.chdBonus,
+    penPct: effPen + reduced.penBonus,
     dmgIncPct: ctx.dmgInc + reduced.poolPct,
     crit: ctx.crit,
-    def: ctx.targetDef,
+    def: effTargetDef,
     cdmgRedPct: ctx.targetCdmgRed,
     dmgRedPct: ctx.targetDmgRed,
     isBoss: ctx.isBoss,
@@ -172,7 +217,33 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     C: ctx.C ?? 1000,
     ratioDivisor: ctx.ratioDivisor ?? 1000,
     f32arithmetic: ctx.f32arithmetic,
+    debugSteps: ctx.debugSteps,
   })
+
+  // ── Boss-specific damage-taken multiplier ──────────────────────────────
+  // Applied AFTER the standard formula (post elem / mit / pool / crit / ...).
+  // For Amadeus: Prelude of Waning Crescent (St4+ Fire/Water/Earth reduction)
+  // and Enrage (HP < 30% reduced damage taken). User-editable in the UI.
+  const bossOverride = getBossOverride(ctx.monsterId)
+  const bossMult = ctx.bossMechanics
+    ? aggregateBossMechanics(bossOverride, ctx.bossMechanics)
+    : 1.0
+  if (bossMult !== 1.0) {
+    breakdown.mainCalc *= bossMult
+    breakdown.extraCalc *= bossMult
+    breakdown.additionalCalc *= bossMult
+    breakdown.calculated = breakdown.mainCalc + breakdown.extraCalc + breakdown.additionalCalc
+  }
+
+  // Merge debug steps from reducer + formula in chronological order: reducer
+  // captures GetStatValuePermille (target_stat), formula captures rate aggregation
+  // and the multiplication chain.
+  if (ctx.debugSteps) {
+    const merged: { label: string; value: number; note?: string }[] = []
+    if (reduced.debugSteps) merged.push(...reduced.debugSteps)
+    if (breakdown.debugSteps) merged.push(...breakdown.debugSteps)
+    breakdown.debugSteps = merged
+  }
 
   return { calculated: breakdown.calculated, breakdown, reduced }
 }

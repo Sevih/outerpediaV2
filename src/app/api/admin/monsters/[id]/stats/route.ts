@@ -106,12 +106,20 @@ function num(v: string | undefined): number {
 }
 
 // Linear scaling: stat(lvl) = Min + (Max − Min) × (lvl − 1) / 99.
-// Past lv 100 the formula extrapolates rather than clamping (Joint Challenge
-// content goes up to lv 120+). Same baseline as /api/admin/damage-lab/stages
-// but without the upper cap.
+// Mirrors CFormula.CalcStat (binary VA 0x2b52d24): f32 arithmetic with the
+// EXACT operation order `(max-min)/99 × (level-1) + min`, then `fcvtms`
+// (= floor toward −∞) to produce an int32. Past lv 100 the formula extrapolates
+// without the cap (Joint Challenge content goes up to lv 120+); pre-fix it
+// also relied on f64 which drifted by up to 0.3 per-mille on DR — that drift
+// re-enters the lab as a +1 unit residual on S1/S3 obs, so we use the binary's
+// exact chain.
 function interpolate(min: number, max: number, level: number): number {
   if (level <= 1) return min
-  return min + (max - min) * (level - 1) / 99
+  const diff = Math.fround(max - min)
+  const div = Math.fround(diff / Math.fround(99))
+  const mul = Math.fround(div * Math.fround(level - 1))
+  const sum = Math.fround(mul + Math.fround(min))
+  return Math.floor(sum)
 }
 
 // Strip zero-valued keys for compact contributor payloads.
@@ -212,12 +220,19 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const baseMin = snapshot(row, 'min')
   const baseMax = snapshot(row, 'max')
   const final   = resolveAtLevel(row, level)
-  // Apply dungeon advantage rate (per-mille). Only ATK/DEF/HP/SPD have rate
-  // columns; EFF/RES/CHC/CHD/PEN/DR/DMG↑ are unaffected by the dungeon table.
-  final.atk = final.atk * (1 + advantage.atk / 1000)
-  final.def = final.def * (1 + advantage.def / 1000)
-  final.hp  = final.hp  * (1 + advantage.hp  / 1000)
-  final.spd = final.spd * (1 + advantage.spd / 1000)
+  // Apply dungeon advantage rate (per-mille) using the binary's f32 chain:
+  //   stat = floor(stat × (1 + sr × 0.001))   — matches get_MaxHP / get_Atk / …
+  // Only ATK/DEF/HP/SPD have rate columns; EFF/RES/CHC/CHD/PEN/DR/DMG↑ are
+  // unaffected by the dungeon table.
+  const applyRate = (v: number, srPermille: number) => {
+    if (srPermille === 0) return v
+    const rate = Math.fround(Math.fround(1) + Math.fround(srPermille) * Math.fround(0.001))
+    return Math.fround(rate * v)
+  }
+  final.atk = applyRate(final.atk, advantage.atk)
+  final.def = applyRate(final.def, advantage.def)
+  final.hp  = applyRate(final.hp,  advantage.hp)
+  final.spd = applyRate(final.spd, advantage.spd)
   // Some boss-mode dungeons override boss HP entirely — formula+advantage HP
   // doesn't apply. Match BossID against the monster's ModelID (or ID as fallback)
   // and verify the dungeonId belongs to the entry. Sources checked:

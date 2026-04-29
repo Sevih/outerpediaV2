@@ -23,12 +23,14 @@ interface MonsterEntry {
   atkMax: number
   hpMin: number
   hpMax: number
-  // Computed stats at `level` (linear interpolation on lvl 1..100).
-  // hpAtLevel ignores DungeonTemplet.SpawnAdvantageRate_HP and the per-dungeon
-  // boss HP overrides — those are only resolved by /api/admin/monsters/:id/stats
-  // when a dungeonId is passed. The lab's auto-mode picker calls that endpoint
-  // for accurate per-stage HP; this raw level-scaled value is the manual-mode
-  // fallback, slightly off vs in-game when the stage applies an HP rate.
+  // Computed stats at `level`. As of the dual-fix (int CalcStat + SpawnAdvantageRate
+  // application), these are now the EXACT runtime values returned by the binary's
+  // get_MaxHP / get_Def / get_Atk / get_DMGReduceRate at the time of damage
+  // calculation — single source of truth between manual-mode picker and
+  // /api/admin/monsters/:id/stats?level=N&dungeonId=X. Previously hpAtLevel was
+  // pre-spawnRate (raw lv-N value) and drifted from the lab's auto-mode value;
+  // now both paths produce identical numbers (= what BT_DMG_TARGET_STAT,
+  // mit denominator, etc. read from CharacterData).
   defAtLevel: number
   drPctAtLevel: number
   atkAtLevel: number
@@ -116,6 +118,16 @@ function interpolate(min: number, max: number, level: number): number {
   return Math.floor(sum)
 }
 
+// Apply per-mille SpawnAdvantageRate to a stat — mirrors get_MaxHP's binary path:
+//   maxHP = floor(HPRate × CalcStat)  where HPRate is f32(1 + sr/1000)
+// For DEF/ATK/SPD with their own rate fields, same pattern. Returns the
+// runtime-faithful int (= the value the game's get_* getters return).
+function applyAdvantageRate(baseStat: number, ratePermille: number): number {
+  if (ratePermille === 0) return baseStat
+  const rate = Math.fround(Math.fround(1) + Math.fround(ratePermille) * Math.fround(0.001))
+  return Math.floor(Math.fround(rate * baseStat))
+}
+
 // ── Builder ───────────────────────────────────────────────────────────
 
 // Build the mode → stages → monsters index on first call, then cache.
@@ -152,6 +164,14 @@ function buildIndex(): ModeEntry[] {
     const areaRow = d.AreaID ? loc.areaIndex.get(d.AreaID) : undefined
     const label = resolveModeLabel(mode, areaRow?.AreaGroupType ?? null, d.NameID ?? null, loc.textSystemIndex)
     if (!label) continue
+
+    // Per-mille SpawnAdvantageRate from the dungeon row. Applied to ATK/DEF/HP/SPD
+    // via the binary's f32 chain (= what get_MaxHP / get_Def / get_Atk return at
+    // runtime). Empirical match: Amadeus St2 lv 30 with HP rate −574 →
+    //   floor(0.426 × 52707) = 22453, exactly what BT_DMG_TARGET_STAT reads.
+    const advAtk = num(d.SpawnAdvantageRate_Atk)
+    const advDef = num(d.SpawnAdvantageRate_Def)
+    const advHp  = num(d.SpawnAdvantageRate_HP)
 
     // Collect monsters from this dungeon's 3 spawn positions, keeping each wave
     // as its own group so the UI can show "Fight 1 / 2 / 3" separately. Dedupe
@@ -212,10 +232,15 @@ function buildIndex(): ModeEntry[] {
               atkMax,
               hpMin,
               hpMax,
-              defAtLevel: interpolate(defMin, defMax, level),
+              // Stats interpolated to monster's spawn level THEN multiplied by
+              // dungeon's SpawnAdvantageRate via f32 chain — matches binary
+              // get_MaxHP / get_Def / get_Atk / get_DMGReduceRate exactly.
+              // No rate column for DR (game's get_DMGReduceRate path doesn't
+              // apply spawnRate), so we don't multiply.
+              defAtLevel:   applyAdvantageRate(interpolate(defMin, defMax, level), advDef),
               drPctAtLevel: interpolate(0, drMax, level) / 10,
-              atkAtLevel: interpolate(atkMin, atkMax, level),
-              hpAtLevel: interpolate(hpMin, hpMax, level),
+              atkAtLevel:   applyAdvantageRate(interpolate(atkMin, atkMax, level), advAtk),
+              hpAtLevel:    applyAdvantageRate(interpolate(hpMin, hpMax, level), advHp),
               position,
               slot,
             })

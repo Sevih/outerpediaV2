@@ -141,6 +141,9 @@ export interface BuffContext {
   // ADVENTURE_LICENSE) only fires inside those modes — every other category
   // suppresses them, regardless of `applyQuirks`.
   inAdventureLicense: boolean
+  // Debug capture — when true, the reducer populates `ReducedBuffs.debugSteps`
+  // with every f32 step of GetStatValuePermille (target_stat path).
+  debugSteps?: boolean
   // Stat readouts — needed for scaling math. Map of ST_* → numeric value.
   // The reducer uses these for `scaling_add_pct` (CHC% × valuePerMille) and
   // `scaling_swap` (replaces ATK with statRef × valuePerMille / 1000).
@@ -201,6 +204,10 @@ export interface ReducedBuffs {
   addAtkNoPoolPermille: number
   // Active buffs (those whose trigger fired) — for UI breakdown / debugging.
   active: ApplicableBuff[]
+  // Debug trace — populated only when `debugSteps: true` on the BuffContext.
+  // Captures GetStatValuePermille's f32 chain step by step so the lab UI can
+  // pinpoint where game runtime diverges from our emulation.
+  debugSteps?: { label: string; value: number; note?: string }[]
 }
 
 // ── Reducer ─────────────────────────────────────────────────────────────
@@ -225,6 +232,10 @@ export function applyBuffs(buffs: ApplicableBuff[], ctx: BuffContext): ReducedBu
     monsterEffPermille: 0, monsterResPermille: 0,
     mainAtk: ctx.baseAtk, addAtkNoPool: 0, addAtkNoPoolPermille: 0,
     active: [],
+    debugSteps: ctx.debugSteps ? [] : undefined,
+  }
+  const trace = (label: string, value: number, note?: string) => {
+    if (out.debugSteps) out.debugSteps.push({ label, value, note })
   }
 
   // Track scaling intent — we apply swap before add (mainAtk is the post-swap base
@@ -286,32 +297,27 @@ export function applyBuffs(buffs: ApplicableBuff[], ctx: BuffContext): ReducedBu
         break
       }
       case 'scaling_target_stat': {
-        // BT_DMG_TARGET_STAT — confirmed by binary disasm.
-        // CCharacterData.GetStatValuePermille (VA 0x2737274) does in f32:
-        //   s9 = 0.001 (loaded from .rodata 0x1034038 = 0.0010000000474974513f)
-        //   s0 = stat × s9  (f32 fmul)            ; e.g. HP × 0.001
-        //   s8 = s0 × val   (f32 fmul)            ; (HP × 0.001) × val
-        //   result = fcvtms(s8) (= floor toward -inf, returned as int32_t)
-        // Then in the BT_DMG_TARGET_STAT handler (VA 0x2637824):
-        //   s1 = scvtf(result)
-        //   s1 = fminnm(s1, 1000.0)
-        //   contribution = s1 × 0.001 (f32 fmul)
-        //   rate += contribution (f32 fadd)
-        // We populate BOTH paths:
-        //   - addAtkNoPoolPermille: f32-emulated int from GetStatValuePermille
-        //   - addAtkNoPool:         legacy f64 separate-component
-        // The formula prefers the permille path when f32arithmetic is on.
+        // BT_DMG_TARGET_STAT — exact f32 emulation of CCharacterData.GetStatValuePermille
+        // (VA 0x2737274) followed by the FindBuffAdditionalDamage type 87 handler
+        // (VA 0x2637824). See formula.ts header for the full chain.
         const sv = ctx.targetStatValues?.[b.effect.statRef ?? ''] ?? 0
         if (sv > 0) {
-          // Exact f32 emulation of GetStatValuePermille.
           const PER_MILLE_F32 = Math.fround(0.001)
           const statF32  = Math.fround(sv)
           const valF32   = Math.fround(b.effect.amount)
           const step1    = Math.fround(statF32 * PER_MILLE_F32)   // stat × 0.001
           const step2    = Math.fround(step1 * valF32)            // × val
-          out.addAtkNoPoolPermille += Math.floor(step2)           // fcvtms (toward -inf)
-          // Legacy f64 separate-component path (kept for backwards compat).
+          const result   = Math.floor(step2)                       // fcvtms (toward -inf)
+          out.addAtkNoPoolPermille += result
           out.addAtkNoPool += out.mainAtk * sv * b.effect.amount / 1_000_000
+          // Debug trace — exposes the EXACT f32 path so the lab UI can show
+          // the user where their target_stat permille comes from. Working back
+          // from obs lets the user check if the binary's `result` differs.
+          trace(`[BT_DMG_TARGET_STAT] stat input (${b.effect.statRef})`, sv, `from buff ${b.id}`)
+          trace(`[BT_DMG_TARGET_STAT] val (per-mille)`, b.effect.amount, `from BuffTemplet Value`)
+          trace(`[BT_DMG_TARGET_STAT] step1 = stat × 0.001 (f32)`, step1, '= s0 = s1 × s9 in binary')
+          trace(`[BT_DMG_TARGET_STAT] step2 = step1 × val (f32)`, step2, '= s8 = s0 × s2 in binary')
+          trace(`[BT_DMG_TARGET_STAT] permille = floor(step2)`, result, 'fcvtms toward −∞ (return int32_t)')
         }
         break
       }
