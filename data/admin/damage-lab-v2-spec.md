@@ -90,73 +90,131 @@ autres args = 0. Validé sur Amadeus St2 : `22453 = floor(52707 × 426 / 1000)`.
 
 ## 2. Buff types (handlers binaires confirmés)
 
-### Pool additif (`FindBuffAdditionalDamage` VA `0x2637548`)
+Disas effectué en PR 4bis (RE chore) — chaque type ci-dessous a été tracé
+dans le binaire et son multiplicateur extrait depuis le code ARM64.
 
-Handler générique commun (VA `0x2637A78`) :
+### Pool additif attaquant (`FindBuffAdditionalDamage` VA `0x2637548`)
+
+Pipeline générique (incremental f32 add) :
 ```
-contrib = float(buff.Value) × 0.001
-accumulator += contrib
+contrib = (value × multiplier) × 0.001    // f32, .rodata 0x1034038
+accumulator = f32(accumulator + contrib)
 ```
 
-| Type # | Nom | Multiplicateur additionnel | Confirmation |
-|---|---|---|---|
-| 83 | `BT_DMG` | × 1 (toujours) | disasm + Awakening_Boss/Element/Mage |
-| 84 | `BT_DMG_OWNER_LOST_HP_RATE` | × `max(0, 1 − ownerHpRate)` | disasm |
-| 85 | `BT_DMG_TARGET_LOST_HP_RATE` | × `max(0, 1 − targetHpRate)` | disasm |
-| 86 | `BT_DMG_OWNER_STAT` | scaling séparé (atk_pct/atk_flat) | disasm |
-| 87 | `BT_DMG_TARGET_STAT` | `min(floor(stat×val/1000), 1000) × 0.001` | disasm + Noa S2 obs |
-| 95 | `BT_DMG_TARGET_BREAK` | × `(target.IsBreak ? 1 : 0)` (gated par `RageManager.IsBreak`) | disasm |
-| 96 | `BT_DMG_TO_BOSS` | × 1 si cible boss, sinon 0 | disasm + Awakening_Boss_Dmg |
-| 107 | `BT_DMG_REDUCE` | soustrait à la place d'ajouter | disasm |
+| Type # | Hex | Nom | Multiplicateur | VA dispatch |
+|---|---|---|---|---|
+| 83  | 0x53 | `BT_DMG`                    | 1                               | 0x26376b4 |
+| 84  | 0x54 | `BT_DMG_OWNER_LOST_HP_RATE` | `max(0, 1 − ownerHpRate)`       | 0x26376f8 |
+| 85  | 0x55 | `BT_DMG_TARGET_LOST_HP_RATE`| `max(0, 1 − targetHpRate)`      | 0x2637744 |
+| 86  | 0x56 | `BT_DMG_OWNER_STAT`         | `min(floor(ownerStat × val/1000), 1000)` (scaling chain) | 0x26377b4 |
+| 87  | 0x57 | `BT_DMG_TARGET_STAT`        | `min(floor(targetStat × val/1000), 1000)` (scaling chain) | 0x263781c |
+| 88  | 0x58 | `BT_DMG_OWNER_BUFF`         | `ownerBuffCount` (`GetBuffCount(owner, side=0)`)  | 0x2637938 |
+| 89  | 0x59 | `BT_DMG_TARGET_BUFF`        | `targetBuffCount` (side=0)      | 0x2637988 |
+| 90  | 0x5a | `BT_DMG_OWNER_DEBUFF`       | `ownerDebuffCount` (side=1)     | 0x26379dc |
+| 91  | 0x5b | `BT_DMG_TARGET_DEBUFF`      | `targetDebuffCount` (side=1)    | 0x2637a2c |
+| 95  | 0x5f | `BT_DMG_TARGET_BREAK`       | `target.RageManager.IsBreak ? 1 : 0` | 0x2637a94 |
+| 96  | 0x60 | `BT_DMG_TO_BOSS`            | `target.CharData.Type > 3 ? 1 : 0` (boss types ≥ 4) | 0x2637af0 |
+| 97  | 0x61 | `BT_DMG_KILL_COUNT_STACK`   | **1** (le stack n'est PAS dans la formule — la value est mise à jour externalement par le runtime selon kill count) | 0x2637b50 |
+| 98  | 0x62 | `BT_DMG_NOT_CRITICAL`       | `target.SkillRecord.DamageRateType ∈ {1, 3} ? 1 : 0` (= non-crit) | 0x2637b90 |
+| 99  | 0x63 | `BT_DMG_PVP_CONTENT`        | `CDungeonScene.IsPvp ? 1 : 0`   | 0x2637c04 |
+| 100 | 0x64 | `BT_DMG_CASTER_STAT`        | `min(floor(caster.CharData.GetStatValuePermille(...)), 1000)` — alias de 86 mais utilise le caster d'origine du buff (`buff[0x18]`), pas l'owner courant | 0x26378a0 |
+| 101 | 0x65 | `BT_DMG_CASTER_LOST_HP_RATE`| `max(0, 1 − casterHpRate)` (caster d'origine) | 0x2637c84 |
+| 102 | 0x66 | `BT_DMG_OWNER_TEAM_BUFF`    | `Σ teamMember.GetBuffList(side=0).Count` (somme sur l'équipe du caster du buff) | 0x2637d0c |
+| 103 | 0x67 | `BT_DMG_MY_TEAM_DECREASE`   | analogue à 102 (pattern team-iterate sur caster d'origine) | 0x2637e20 |
+| 104 | 0x68 | `BT_DMG_MONADGATE_CONTENT`  | `CDungeonScene.IsMonadGate ? 1 : 0` | 0x2637f18 |
+| 105 | 0x69 | `BT_DMG_TOWER_CONTENT`      | `CDungeonScene.IsTower ? 1 : 0` | 0x2637fec |
 
-### BT_DMG_TARGET_STAT — chain f32 exact
+**Types absents de FindBuffAdditionalDamage** : 92 (0x5c), 93 (0x5d), 94 (0x5e), 106 (0x6a). Le type 94 a son propre handler (voir ci-dessous). Les types 92/93 ne semblent pas avoir d'implémentation damage-related.
 
-Handler à VA `0x2637824` :
+### `BT_DMG_TARGET_STAT` (87) — chain f32 exact
+
+Handler inline à VA `0x2637824` :
 ```ts
 const PER_MILLE_F32 = Math.fround(0.001)            // .rodata 0x1034038
 const statF32 = Math.fround(targetStatValue)        // ex: ST_HP MaxHP
 const valF32  = Math.fround(buffTemplet.Value)      // ex: 30
-const step1  = Math.fround(statF32 * PER_MILLE_F32)
-const step2  = Math.fround(step1 * valF32)
-const result = Math.floor(step2)                     // = GetStatValuePermille
-const capped = Math.min(result, 1000)
+const step1   = Math.fround(statF32 * PER_MILLE_F32)
+const step2   = Math.fround(step1 * valF32)
+const result  = Math.floor(step2)                    // = GetStatValuePermille
+const capped  = Math.min(result, 1000)
 const contrib = Math.fround(capped * PER_MILLE_F32)
-accumulator = Math.fround(accumulator + contrib)
+accumulator   = Math.fround(accumulator + contrib)
 ```
 
 Routes `ST_HP` → `CCharacterData.get_MaxHP()` (VA `0x27358DC`). Le `MaxHPRate`
-(offset `0x100` de `CCharacterData`) est par défaut `1.0` (ResetMaxHPRate VA
-`0x263A0B4` + .ctor VA `0x27376E0`).
+(offset `0x100` de `CCharacterData`) est par défaut `1.0` (`ResetMaxHPRate` VA
+`0x263A0B4` + `.ctor` VA `0x27376E0`).
 
-### Handlers à confirmer (binaire pas encore disas en détail)
+### Type 94 `BT_DMG_ENEMY_TEAM_DECREASE` — handler dédié
 
-- **88-91** : `BT_DMG_OWNER_BUFF/TARGET_BUFF/OWNER_DEBUFF/TARGET_DEBUFF` — multiplicateur = count des buffs/debuffs sur owner/target
-- **94** : `BT_DMG_ENEMY_TEAM_DECREASE` — handler dans une fonction différente de `FindBuffAdditionalDamage` (autour de VA `0x2639xxx`). À ré-investiguer pour pinpoint le multiplicateur exact.
-- **97** : `BT_DMG_KILL_COUNT_STACK` — value × stack count
-- **98** : `BT_DMG_NOT_CRITICAL` — 1 si pas crit
-- **99** : `BT_DMG_PVP_CONTENT` — 1 si in PvP
-- **100** : `BT_DMG_CASTER_STAT` — alias de 86 OWNER_STAT
-- **101** : `BT_DMG_CASTER_LOST_HP_RATE` — alias de 84 OWNER_LOST_HP_RATE
-- **102** : `BT_DMG_OWNER_TEAM_BUFF` — count team buffs
-- **103** : `BT_DMG_MY_TEAM_DECREASE` — count dead/decreased allies
-- **104** : `BT_DMG_MONADGATE_CONTENT` — 1 si in Monad Gate
-- **105** : `BT_DMG_TOWER_CONTENT` — 1 si in Tower
+Handler : **`FindBuffEnemyTeamDecreaseDamageRate` VA `0x2639194`**.
+Wrapper appelant : **`CFormula.AddCheckEnemyTeamDecreaseDamageRate` VA `0x2B53E80`**.
+Caller : **`CCharacterBattle.UseSkill` (offset +0xBE8 = `0x262E838`)**.
+
+Contrairement aux types du dispatch principal, le type 94 vit dans une fonction
+*séparée* et est intégré au `SkillRecord.fDamageRate` *après* `CheckDamageRate`
+plutôt qu'avant. Pipeline :
+
+```
+// Inside UseSkill, AFTER CFormula.CheckDamageRate populates fDamageRate :
+w28 = count of valid (= alive, non-destroyed) members on the *enemy* team
+w23 = 4 − w28                            // = number of dead/missing enemies
+fDamageRate = SkillRecord.fDamageRate    // current rate after CheckDamageRate
+
+call AddCheckEnemyTeamDecreaseDamageRate(caster, w23, &fDamageRate):
+  s0 = FindBuffEnemyTeamDecreaseDamageRate(caster)
+                                          // sums Σ value × 0.001 over caster's
+                                          // type-94 buffs
+  fDamageRate += s0 × float(w23)          // multiplied by dead-enemy count
+
+SkillRecord.fDamageRate = fDamageRate    // store back
+```
+
+**Multiplicateur effectif = nombre d'ennemis morts/manquants sur l'équipe adverse** (max team = 4).
+
+Garde d'activation (en plus du test `CheckAvailable`) :
+- skill `TargetTeamType == 3` (skill cible les ennemis)
+- `SkillRecord.fDamageRate > 0` (skill de dégâts)
+- `SkillRecord.DamageRateType - 1 < 3` (types de dégâts standard)
+
+Pour Maxwell `2000028_1_3` Value=100 : contribution = `0.1 × deadEnemyCount` au pool de damage rate. Ex: 3 ennemis morts → +30% pool.
+
+**Important pour la lab UI** : le type 94 doit être plombé avec un input "deadEnemyCount" (par défaut 0). v2 reducer doit être étendu pour appliquer ce multiplicateur sur les buffs de type 94.
 
 ### Réduction défenseur (`FindBuffDamageReduce` VA `0x2638638`)
 
-À ré-disasmer en détail. Types iterés (à confirmer un par un) :
-- 107 `BT_DMG_REDUCE`
-- 110 `BT_DMG_REDUCE_MY_TEAM_INCREASE`
-- 145 `BT_STEALTHED`
+Pipeline : accumulateur **entier** (somme des permille), multiplié par 0.001 à la fin.
+Soustrait du rate avec le décodeur négatif `−0.001` (.rodata `0x1033D78`).
+
+| Type # | Hex | Nom | Multiplicateur | VA dispatch |
+|---|---|---|---|---|
+| 107 | 0x6b | `BT_DMG_REDUCE`                  | 1                                 | 0x263876c |
+| 110 | 0x6e | `BT_DMG_REDUCE_MY_TEAM_INCREASE` | `aliveTeamCount − 1` (count des alliés vivants moins soi) | 0x2638820 |
+| 145 | 0x91 | `BT_STEALTHED`                   | 1 (handler simple, voir disas)    | 0x26387cc |
+
+Note : type 110 itère le team du caster du buff via `GetTeam`, compte les `IsAlive`,
+soustrait 1 (exclut soi-même), multiplie le permille par ce count avant ajout au cumul.
 
 ### Final reduce (`GetBuffDamgeFinalReduce` VA `0x2638ADC`)
 
-Itère uniquement les types **111/112/113** et prend le **MAX** (pas la somme) :
-- 111 `BT_DMG_REDUCE_FINAL`
-- 112 `BT_DMG_REDUCE_FINAL_MY_TEAM_INCREASE`
-- 113 `BT_DMG_REDUCE_FINAL_WITH_OUT_FIRST_SKILL`
+Pipeline **MAX** (pas somme) — itère et garde la plus grande contribution.
 
-Appliqué multiplicativement comme `× (1 − finalReduce/100)` après le pool.
+| Type # | Hex | Nom | Multiplicateur | VA dispatch |
+|---|---|---|---|---|
+| 111 | 0x6f | `BT_DMG_REDUCE_FINAL`                       | 1                          | 0x2638c4c |
+| 112 | 0x70 | `BT_DMG_REDUCE_FINAL_MY_TEAM_INCREASE`      | `aliveTeamCount − 1`       | 0x2638cbc |
+| 113 | 0x71 | `BT_DMG_REDUCE_FINAL_WITH_OUT_FIRST_SKILL`  | gated sur "first skill"    | 0x2638dc0 |
+
+Pattern type 111 (binaire à 0x2638c64) :
+```
+s9 = *acc                       // current accumulator (= max so far)
+s0 = value × 0.001              // candidate
+if s9 < s0:                     // if candidate larger
+  *acc = s0                     // keep new max
+  buff.MarkUsedHitOverThisSkill()
+```
+
+Appliqué multiplicativement comme `× (1 − finalReduce/100)` après le pool, élément, etc.
 
 ### Element rate (`GetElementeryDamageRate` VA `0x2B53C74`)
 
@@ -396,16 +454,18 @@ L'UI v1 est un patchwork. v2 doit être conçue avec ces principes dès le dépa
 
 Liste des questions ouvertes — **NE PAS** encoder avant validation empirique.
 
-1. **Type 94 `BT_DMG_ENEMY_TEAM_DECREASE`** — Maxwell `2000028_1_3` (Value 100,
-   = +10%/stack). Handler dans une fonction différente de
-   `FindBuffAdditionalDamage` (VA `0x2639xxx`). Multiplicateur exact à
-   pinpointer (count des debuffs sur target ? autre ?). Hypothèse : count des
-   `monster_res`/`monster_eff` actifs sur le boss.
+1. ~~**Type 94 `BT_DMG_ENEMY_TEAM_DECREASE`**~~ → **résolu en PR 4bis** (RE chore).
+   Voir §2 : multiplicateur = nombre d'ennemis morts/manquants sur l'équipe
+   adverse, handler dédié `FindBuffEnemyTeamDecreaseDamageRate` VA `0x2639194`,
+   appliqué dans `UseSkill` après `CheckDamageRate`. Pour Maxwell `2000028_1_3`
+   Value 100 : +10% pool par ennemi mort.
 
 2. **Same-element L/D pool advantage** — Maxwell Dark vs Amadeus Dark obs ratio
    `1.175` (= +17.5% damage par rapport au calc sans). Suggère que L/D vs L/D
-   same-elem fire un quirk pool +30% qu'on ne modélise pas. Pourrait être un
-   sous-cas du point 1 (le +30 manquant viendrait de type 94 avec mult=3).
+   same-elem fire un quirk pool +30% qu'on ne modélise pas. **Hypothèse mise
+   à jour avec PR 4bis** : ce shift correspond exactement à 3 ennemis morts ×
+   10% du type 94 (Maxwell solo vs un boss + son équipe vidée). À re-vérifier
+   empiriquement avec un nouvel obs où on contrôle l'état de l'équipe adverse.
 
 3. **Light/Dark cross adv slight overshoot** — Stella Light vs Amadeus Dark
    ratio `0.96-0.98` (calc légèrement haut). Probablement lié au point 2.

@@ -53,12 +53,25 @@ const NAV_GROUPS: NavGroup[] = [
     items: [
       { label: 'Bytes Parser', href: '/admin/parser' },
       { label: 'Damage Lab', href: '/admin/damage-lab' },
+      { label: 'Damage Lab v2', href: '/admin/damage-lab/v2' },
     ],
   },
 ];
 
+// Active when the path matches the item AND no sibling has a more specific
+// (deeper) prefix that also matches — handles nested cases like Damage Lab vs
+// Damage Lab v2, where both share the same prefix.
+function isItemActive(pathname: string, item: NavItem, siblings: NavItem[]): boolean {
+  if (!pathname.startsWith(item.href)) return false;
+  return !siblings.some(other =>
+    other.href !== item.href
+    && other.href.startsWith(item.href + '/')
+    && pathname.startsWith(other.href)
+  );
+}
+
 function NavSection({ group, pathname }: { group: NavGroup; pathname: string }) {
-  const hasActive = group.items.some(item => pathname.startsWith(item.href));
+  const hasActive = group.items.some(item => isItemActive(pathname, item, group.items));
   const [open, setOpen] = useState(hasActive);
 
   return (
@@ -73,7 +86,7 @@ function NavSection({ group, pathname }: { group: NavGroup; pathname: string }) 
       {open && (
         <div className="space-y-0.5 pb-2">
           {group.items.map(item => {
-            const active = pathname.startsWith(item.href);
+            const active = isItemActive(pathname, item, group.items);
             if (item.disabled) {
               return (
                 <span
@@ -106,7 +119,7 @@ function NavSection({ group, pathname }: { group: NavGroup; pathname: string }) 
 }
 
 function CollapsedNavGroup({ group, pathname }: { group: NavGroup; pathname: string }) {
-  const hasActive = group.items.some(item => !item.disabled && pathname.startsWith(item.href));
+  const hasActive = group.items.some(item => !item.disabled && isItemActive(pathname, item, group.items));
 
   return (
     <div className="flex flex-col items-center gap-0.5 py-1">
@@ -115,7 +128,7 @@ function CollapsedNavGroup({ group, pathname }: { group: NavGroup; pathname: str
       </span>
       {group.items.map(item => {
         if (item.disabled) return null;
-        const active = pathname.startsWith(item.href);
+        const active = isItemActive(pathname, item, group.items);
         return (
           <Link
             key={item.href}
