@@ -87,3 +87,32 @@ export function applyAdvantageRate(stat: number, ratePermille: number): number {
   const rate = Math.fround(Math.fround(1) + Math.fround(ratePermille) * Math.fround(RODATA.PER_MILLE_POS))
   return Math.floor(Math.fround(rate * stat))
 }
+
+/**
+ * Combined `interpolate + applyAdvantageRate` with a SINGLE floor at the end.
+ *
+ * The binary's `get_MaxHP` / `get_Def` / `get_Atk` keep f32 precision between
+ * the level-interpolation step and the dungeon-rate multiplication, flooring
+ * only once when emitting the int the rest of the engine consumes. Calling
+ * `applyAdvantageRate(interpolate(...), rate)` floors twice, occasionally
+ * producing a value 1 lower than what the game shows (Ars Nova St1 lv 25 HP
+ * rate −616: 14352 in-game vs 14351 with double-floor).
+ *
+ * Use this helper for the auto-filled stat block surfaced to the lab and for
+ * stat readouts consumed by `BT_DMG_TARGET_STAT` — anywhere the value must
+ * match the binary's `get_*` getters bit-exact.
+ */
+export function interpolateRated(min: number, max: number, level: number, ratePermille: number): number {
+  if (level <= 1) {
+    return ratePermille === 0 ? min : applyAdvantageRate(min, ratePermille)
+  }
+  // Binary-faithful inner chain — same as `interpolate` but skipping the
+  // final `Math.floor` so we keep the f32 fraction for the rate multiplication.
+  const diff = Math.fround(max - min)
+  const div  = Math.fround(diff / Math.fround(RODATA.LEVEL_INTERP_DIVISOR))
+  const mul  = Math.fround(div * Math.fround(level - 1))
+  const sumF32 = Math.fround(mul + Math.fround(min))
+  if (ratePermille === 0) return Math.floor(sumF32)
+  const rate = Math.fround(Math.fround(1) + Math.fround(ratePermille) * Math.fround(RODATA.PER_MILLE_POS))
+  return Math.floor(Math.fround(rate * sumF32))
+}

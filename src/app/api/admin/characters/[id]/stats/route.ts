@@ -678,6 +678,17 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     },
   ]
 
+  // Scaling breakdown — exposes the ingredients of `calcStat` so a downstream
+  // consumer (damage-lab v2 lab) can replay the formula with an external
+  // buff added to `pctBonus`. Lets the lab apply combat-time +ATK% buffs
+  // ADDITIVELY on top of permanent %-bonuses (matching in-game stack model)
+  // instead of multiplicatively on the displayed stat.
+  const scaling = {
+    atk: { baseMax: base.atk, flat: evo.atk + giftTotal.atk, pctBonus: atkPctBonus, codexPct: codex.atkPct, transcendPct: transcend.atkPct },
+    def: { baseMax: base.def, flat: evo.def + giftTotal.def, pctBonus: defPctBonus, codexPct: codex.defPct, transcendPct: transcend.defPct },
+    hp:  { baseMax: base.hp,  flat: evo.hp  + giftTotal.hp,  pctBonus: hpPctBonus,  codexPct: codex.hpPct,  transcendPct: transcend.hpPct  },
+  }
+
   return NextResponse.json({
     meta: {
       id: row.ID,
@@ -689,6 +700,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       transcendStar: transcend.star,
       evolutionLevel: 'max',
       codexLevel: codex.level,
+      scaling,
     },
     contributors,
     final,

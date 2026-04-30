@@ -79,8 +79,18 @@ function Row({ def, active, value, onToggle, onValueChange }: {
   onValueChange: (v: number) => void
 }) {
   const iconToken = STAT_ICON[def.stat]
+  // Match EffectInline styling — `buff-icon`/`debuff-icon` filters recolor the
+  // white game icon (sky-blue/red), and the stat label takes the matching
+  // tailwind color token. Direction (buff/debuff) is conveyed by color, no
+  // need for `+`/`−` prefixes — the column header already names the direction.
+  const iconClass = active
+    ? (def.direction === 'buff' ? 'buff-icon' : 'debuff-icon')
+    : 'opacity-30 saturate-0'
+  const labelClass = active
+    ? (def.direction === 'buff' ? 'text-buff' : 'text-debuff')
+    : 'text-zinc-600'
   return (
-    <div className="flex items-center gap-2 text-xs">
+    <div className="flex items-center gap-1.5 text-xs">
       <input
         type="checkbox"
         checked={active}
@@ -92,12 +102,10 @@ function Row({ def, active, value, onToggle, onValueChange }: {
         alt={def.stat}
         width={16}
         height={16}
-        className={`shrink-0 ${active ? '' : 'opacity-40 saturate-0'}`}
+        className={`shrink-0 ${iconClass}`}
         unoptimized
       />
-      <span className={`flex-1 truncate ${active ? 'text-zinc-200' : 'text-zinc-500'}`}>
-        {def.direction === 'debuff' ? '−' : '+'}{def.stat}
-      </span>
+      <span className={`flex-1 truncate font-semibold ${labelClass}`}>{def.stat}</span>
       <input
         type="number"
         value={value}

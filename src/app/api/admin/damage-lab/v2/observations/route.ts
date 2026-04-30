@@ -41,6 +41,19 @@ export interface ObservationV2 {
   applyQuirks: boolean
   extraStats?: Record<string, number>
   charFlags?: { umeActive?: boolean; sakuraActive?: boolean }
+  /**
+   * ATK scaling breakdown captured at save time — lets the obs-table replay
+   * the calc with external buffs stacking additively against `pctBonus`
+   * (matches in-game), instead of multiplicatively on the displayed ATK.
+   * Optional: older obs without it fall back to linear `× (1 + buff/100)`.
+   */
+  atkScaling?: {
+    baseMax: number
+    flat: number
+    pctBonus: number
+    codexPct: number
+    transcendPct: number
+  }
   // Target inputs
   targetDef: number
   targetDmgRed: number
@@ -192,6 +205,7 @@ export async function POST(req: NextRequest) {
   if (body.bossMechanics && Object.values(body.bossMechanics).some(s => s.active)) {
     o.bossMechanics = body.bossMechanics
   }
+  if (body.atkScaling) o.atkScaling = body.atkScaling
   if (body.calculatedAtSave != null) o.calculatedAtSave = body.calculatedAtSave
 
   appendObservation(o)

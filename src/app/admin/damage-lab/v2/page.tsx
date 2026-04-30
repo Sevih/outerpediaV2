@@ -12,7 +12,7 @@ import { AttackerPanel } from './_components/AttackerPanel'
 import { TargetPanel } from './_components/TargetPanel'
 import { BuffsTogglesPanel } from './_components/BuffsTogglesPanel'
 import { ResultPanel } from './_components/ResultPanel'
-import { ObsTable, type ObsRow } from './_components/ObsTable'
+import { ObsTable } from './_components/ObsTable'
 import { formReducer, makeInitialFormState } from './_state/reducer'
 import { loadFormState, usePersistFormState } from './_state/persistence'
 import {
@@ -176,6 +176,7 @@ export default function DamageLabV2Page() {
             ST_BUFF_CHANCE: s.final.eff,
             ST_BUFF_RESIST: s.final.res,
           },
+          atkScaling: s.meta.scaling?.atk ?? null,
         })
       })
       .catch(e => console.warn('[damage-lab/v2] fetchCharStats failed:', e))
@@ -201,6 +202,7 @@ export default function DamageLabV2Page() {
       dmgInc: state.attacker.dmgInc,
       applyQuirks: state.attacker.applyQuirks,
       extraStats: state.attacker.extraStats,
+      atkScaling: state.attacker.atkScaling,
       targetDef: state.target.def,
       targetDmgRed: state.target.dmgRed,
       targetCdmgRed: state.target.cdmgRed,
@@ -240,23 +242,15 @@ export default function DamageLabV2Page() {
     return { ctx: c, result: recompute(c, buffs) }
   }, [selectedChar, state, buffs, selectedModeEntry])
 
-  // ── Obs table rows (live recompute on each render) ─────────────────────
-  const obsRows: ObsRow[] = useMemo(() => {
-    return observations.map(o => {
-      const calc = recomputeFromObs(o, chars ?? [], buffs)
-      return {
-        id: o.id,
-        ts: o.ts,
-        charName: o.charName,
-        charId: o.charId,
-        slot: o.slot,
-        monsterName: o.monsterName ?? '—',
-        monsterId: o.monsterId ?? '',
-        obs: o.obs,
-        calc,
-        crit: o.crit,
-      }
-    })
+  // ── Obs table calcs (live recompute on each render) ────────────────────
+  // The calc isn't stored on save — every formula tweak immediately reflects
+  // across the entire history.
+  const obsCalcs = useMemo(() => {
+    const map = new Map<string, number>()
+    for (const o of observations) {
+      map.set(o.id, recomputeFromObs(o, chars ?? [], buffs))
+    }
+    return map
   }, [observations, chars, buffs])
 
   // ── Handlers ───────────────────────────────────────────────────────────
@@ -281,6 +275,7 @@ export default function DamageLabV2Page() {
       applyQuirks: ctx.applyQuirks,
       extraStats: state.attacker.extraStats,
       charFlags: state.attacker.charFlags,
+      atkScaling: state.attacker.atkScaling ?? undefined,
       targetDef: ctx.targetDef,
       targetDmgRed: ctx.targetDmgRed,
       targetCdmgRed: ctx.targetCdmgRed,
@@ -320,7 +315,8 @@ export default function DamageLabV2Page() {
       crit: ctx.crit,
       obs: observed,
       note,
-      calculatedAtSave: result.calculated,
+      // `calculatedAtSave` intentionally omitted — the obs table recomputes
+      // every row live so formula tweaks immediately reflect across history.
     }
     const saved = await saveObservation(payload)
     setObservations(rows => [...rows, saved])
@@ -379,6 +375,7 @@ export default function DamageLabV2Page() {
           additionalAttackEnabled: o.additionalAttackEnabled ?? false,
           charFlags: o.charFlags ?? {},
           extraStats: o.extraStats ?? {},
+          atkScaling: o.atkScaling ?? null,
         },
         target: {
           // Prefer the saved modeLabel (matches a picker entry exactly). Fall
@@ -495,7 +492,8 @@ export default function DamageLabV2Page() {
       />
 
       <ObsTable
-        rows={obsRows}
+        observations={observations}
+        calcs={obsCalcs}
         onLoad={handleLoadObs}
         onDelete={handleDeleteObs}
       />
@@ -560,6 +558,7 @@ function recomputeFromObs(o: ObservationV2, chars: CharData[], buffs: Applicable
     atk: o.atk, chd: o.chd, pen: o.pen, dmgInc: o.dmgInc,
     applyQuirks: o.applyQuirks,
     extraStats: o.extraStats,
+    atkScaling: o.atkScaling,
     targetDef: o.targetDef,
     targetDmgRed: o.targetDmgRed,
     targetCdmgRed: o.targetCdmgRed,

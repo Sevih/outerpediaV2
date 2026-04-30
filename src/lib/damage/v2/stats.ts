@@ -6,8 +6,9 @@
  * handlers thin (they just load tables and assemble the JSON response).
  *
  * ── Pipeline ─────────────────────────────────────────────────────────────
- *   resolveBaseStats(row, level)       — `CalcStat`: lv-interpolated int stats
- *   applyDungeonAdvantage(stats, adv)  — `(1 + sr/1000) × stat` then floor
+ *   resolveDungeonStats(row, lvl, adv) — `CalcStat` + dungeon rate in a single
+ *                                        f32 chain (one floor at the end)
+ *   resolveBaseStats(row, level)       — `CalcStat`-only int stats (no rate)
  *   applyCasterDebuffs(stats, debuffs) — EFF/RES per-mille debuffs (additive)
  *
  * ── Decoding rules (matches v1 — empirically validated) ──────────────────
@@ -19,7 +20,7 @@
  * 0 — the binary doesn't store a `_Min` for these.
  */
 
-import { interpolate, applyAdvantageRate } from './f32'
+import { interpolate, interpolateRated } from './f32'
 
 // MonsterTemplet row — string-typed values from the JSON datamine.
 export type MonsterRow = Record<string, string>
@@ -96,22 +97,32 @@ export function resolveBaseStats(row: MonsterRow, level: number): StatBlock {
 }
 
 /**
- * Apply per-mille `SpawnAdvantageRate_*` to ATK/DEF/HP/SPD via the binary's
- * `floor(stat × (1 + sr × 0.001))` f32 chain — the runtime int the game's
- * `get_MaxHP` / `get_Def` / `get_Atk` getters return at damage-calc time.
+ * Resolve a monster's stat block at level WITH the dungeon's per-mille
+ * `SpawnAdvantageRate_*` already applied. Uses `interpolateRated` so the
+ * level-interpolation and rate-multiplication share a single f32 chain with
+ * one floor at the end — matches the binary `get_MaxHP` / `get_Def` /
+ * `get_Atk` exactly (the two-step `interpolate → applyAdvantageRate` flow
+ * floored twice and was off by 1 in edge cases like Ars Nova St1 lv 25).
  *
- * Only ATK/DEF/HP/SPD have rate columns in `DungeonTemplet`; EFF/RES/CHC/CHD/
- * PEN/DR/DMG↑ are unaffected by the dungeon table.
+ * Only ATK/DEF/HP/SPD have rate columns in `DungeonTemplet`; EFF/RES and the
+ * percent stats (CHC/CHD/PEN/DR/DMG↑) are unaffected by the dungeon table.
  *
  * Returns a new block — no mutation.
  */
-export function applyDungeonAdvantage(stats: StatBlock, advantage: AdvantageRates): StatBlock {
+export function resolveDungeonStats(row: MonsterRow, level: number, advantage: AdvantageRates): StatBlock {
+  const I = (a: number, b: number) => interpolate(a, b, level)
   return {
-    ...stats,
-    atk: applyAdvantageRate(stats.atk, advantage.atk),
-    def: applyAdvantageRate(stats.def, advantage.def),
-    hp:  applyAdvantageRate(stats.hp,  advantage.hp),
-    spd: applyAdvantageRate(stats.spd, advantage.spd),
+    atk:    interpolateRated(num(row.Atk_Min),    num(row.Atk_Max),    level, advantage.atk),
+    def:    interpolateRated(num(row.Def_Min),    num(row.Def_Max),    level, advantage.def),
+    hp:     interpolateRated(num(row.HP_Min),     num(row.HP_Max),     level, advantage.hp),
+    spd:    interpolateRated(num(row.Speed_Min),  num(row.Speed_Max),  level, advantage.spd),
+    eff:    I(num(row.BuffChance_Min),      num(row.BuffChance_Max)),
+    res:    I(num(row.BuffResist_Min),      num(row.BuffResist_Max)),
+    chc:    I(num(row.CriticalRate_Min),    num(row.CriticalRate_Max))    / 10,
+    chd:    I(num(row.CriticalDMGRate_Min), num(row.CriticalDMGRate_Max)) / 10,
+    pen:    I(num(row.PiercePowerRate_Min), num(row.PiercePowerRate_Max)) / 10,
+    dmgRed: I(0,                            num(row.DMGReduceRate_Max))   / 10,
+    dmgInc: I(0,                            num(row.DamageBoost_Max))     / 10,
   }
 }
 

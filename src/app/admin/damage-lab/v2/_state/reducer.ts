@@ -47,7 +47,8 @@ export type FormAction =
   | { type: 'attacker/setSlot';      slot: CallerSlot }
   | { type: 'attacker/setFlag';      flag: keyof CharFlags; value: boolean }
   | { type: 'attacker/autoFillStats'; stats: { atk: number; chd: number; pen: number; dmgInc: number };
-                                       extraStats?: Record<string, number> }
+                                       extraStats?: Record<string, number>;
+                                       atkScaling?: AttackerState['atkScaling'] }
   | { type: 'attacker/manualEditStat'; field: 'atk' | 'chd' | 'pen' | 'dmgInc'; value: number }
   // Target
   | { type: 'target/patch';          patch: Partial<TargetState> }
@@ -84,6 +85,7 @@ export function makeInitialFormState(): FormState {
       additionalAttackEnabled: false,
       charFlags: {},
       extraStats: {},
+      atkScaling: null,
     },
     target: {
       mode: '', stageId: null, monsterId: null, monsterName: null,
@@ -132,6 +134,7 @@ export function formReducer(state: FormState, action: FormAction): FormState {
           additionalAttackEnabled: false,
           charFlags: {},
           extraStats: {},
+          atkScaling: null,
         },
       }
 
@@ -168,6 +171,12 @@ export function formReducer(state: FormState, action: FormAction): FormState {
           pen:    state.attacker.statsAuto.pen    ? action.stats.pen    : state.attacker.pen,
           dmgInc: state.attacker.statsAuto.dmgInc ? action.stats.dmgInc : state.attacker.dmgInc,
           extraStats: action.extraStats ?? state.attacker.extraStats,
+          // Persist scaling only when ATK auto-fill actually wrote a fresh
+          // value — if the user manually edited ATK earlier, the displayed
+          // number doesn't match the scaling block anymore so we keep null.
+          atkScaling: state.attacker.statsAuto.atk
+            ? (action.atkScaling ?? null)
+            : state.attacker.atkScaling,
         },
       }
 
@@ -178,6 +187,9 @@ export function formReducer(state: FormState, action: FormAction): FormState {
           ...state.attacker,
           [action.field]: action.value,
           statsAuto: { ...state.attacker.statsAuto, [action.field]: false },
+          // Manual ATK edit invalidates the scaling block — fallback to
+          // linear external buff stacking until the user re-auto-fills.
+          atkScaling: action.field === 'atk' ? null : state.attacker.atkScaling,
         },
       }
 

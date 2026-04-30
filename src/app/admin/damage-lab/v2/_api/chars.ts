@@ -26,8 +26,37 @@ export async function fetchChars(): Promise<CharData[]> {
   return data.chars
 }
 
+/**
+ * Per-stat scaling breakdown — lets the lab replay the API's `calcStat`
+ * formula with an external buff added additively to `pctBonus`. Matches the
+ * in-game stack model where a combat-time +ATK% buff stacks ADDITIVELY with
+ * the permanent %-bonuses (class passive, gifts, etc.) rather than
+ * multiplicatively on the displayed stat.
+ */
+export interface StatScaling {
+  /** CharacterTemplet *_Max — lv 100 base value. */
+  baseMax: number
+  /** Cumulative flat bonus (evolution + gifts). */
+  flat: number
+  /** Additive %-bonus layer (class passive + Skill_8 + gifts). */
+  pctBonus: number
+  /** Codex %-multiplier (applies to baseMax only). */
+  codexPct: number
+  /** Transcend %-multiplier (compounds with `pctBonus`). */
+  transcendPct: number
+}
+
 export interface CharStatsResponse {
-  meta: { id: string; class: string | null; subclass: string | null; element: string | null; basicStar: number; level: number }
+  meta: {
+    id: string
+    class: string | null
+    subclass: string | null
+    element: string | null
+    basicStar: number
+    level: number
+    /** Optional — present when the route is the "max everything" variant. */
+    scaling?: { atk: StatScaling; def: StatScaling; hp: StatScaling }
+  }
   final: {
     atk: number
     def: number

@@ -2,8 +2,7 @@ import { NextResponse } from 'next/server'
 import fs from 'fs/promises'
 import path from 'path'
 import {
-  resolveBaseStats,
-  applyDungeonAdvantage,
+  resolveDungeonStats,
   applyCasterDebuffs,
   num,
   type StatBlock,
@@ -140,8 +139,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   }
 
   // ── Compute the stat chain ──────────────────────────────────────────
-  let final = resolveBaseStats(row, level)
-  final = applyDungeonAdvantage(final, advantage)
+  // Single-pass interpolate + advantage rate (one floor at the end) — matches
+  // the binary's `get_MaxHP` / `get_Def` / `get_Atk` chain exactly.
+  let final = resolveDungeonStats(row, level, advantage)
 
   // Boss HP override — EventBossDungeon (Joint Challenge) and IrregularChase.
   // Match BossID against the monster's ModelID (or ID as fallback) and verify

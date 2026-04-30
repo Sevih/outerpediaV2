@@ -75,6 +75,20 @@ export interface RecomputeContext {
   pen: number
   dmgInc: number
   applyQuirks: boolean
+  /**
+   * Optional ATK scaling breakdown (from the chars-stats route). When set,
+   * external ATK% buffs stack additively into `pctBonus` and the formula
+   * is replayed — matching the in-game behavior where combat-time +ATK%
+   * adds to the permanent %-layer rather than multiplying the displayed
+   * ATK. `null` falls back to linear `× (1 + buff/100)`.
+   */
+  atkScaling?: {
+    baseMax: number
+    flat: number
+    pctBonus: number
+    codexPct: number
+    transcendPct: number
+  } | null
   /** ST_* → numeric, for secondary scaling (Stella HP, Regina CHC). */
   extraStats?: Record<string, number>
   // Target inputs — also user-fed (auto mode prefills from monster API).
@@ -134,7 +148,13 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     ? aggregateExternalBuffs(ctx.externalBuffs)
     : { attackerATK: 0, attackerPEN: 0, attackerCHC: 0, attackerCHD: 0, attackerEFF: 0, targetDEF: 0 }
 
-  const effAtk = ctx.atk * (1 + extSums.attackerATK / 100)
+  // ATK with external buff. When the scaling breakdown is known, replay the
+  // chars-stats `calcStat` formula with `pctBonus + buffPct` so a +30% ATK
+  // buff stacks ADDITIVELY against the char's permanent %-layer. Without the
+  // breakdown (manual edit / older obs), fall back to linear `× (1 + buff/100)`.
+  const effAtk = ctx.atkScaling != null && extSums.attackerATK !== 0
+    ? replayStatWithBuff(ctx.atkScaling, extSums.attackerATK)
+    : ctx.atk * (1 + extSums.attackerATK / 100)
   const effPen = ctx.pen + extSums.attackerPEN
   const effChd = ctx.chd + extSums.attackerCHD
   const effTargetDef = ctx.targetDef * (1 + extSums.targetDEF / 100)
@@ -265,4 +285,21 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
   }
 
   return { calculated, breakdown, reduced }
+}
+
+/**
+ * Replay the chars-stats `calcStat` formula with an additional %-bonus
+ * (combat-time external buff) added to `pctBonus`. Mirrors
+ * `src/app/api/admin/characters/[id]/stats/route.ts` exactly so the lab
+ * matches what the API would return if the buff were a permanent stat.
+ */
+function replayStatWithBuff(
+  s: { baseMax: number; flat: number; pctBonus: number; codexPct: number; transcendPct: number },
+  buffPct: number,
+): number {
+  const totalPctBonus = s.pctBonus + buffPct
+  const compoundPct = ((1 + s.transcendPct / 100) * (1 + totalPctBonus / 100) - 1) * 100
+  const onBase = s.codexPct + compoundPct
+  const onFlat = compoundPct
+  return Math.floor(s.baseMax * (1 + onBase / 100) + s.flat * (1 + onFlat / 100))
 }

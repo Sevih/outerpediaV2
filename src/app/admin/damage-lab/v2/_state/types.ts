@@ -13,6 +13,7 @@ import type { CallerSlot } from '@/lib/damage/v2/buffs'
 import type { CharFlags } from '@/lib/damage/v2/char-overrides'
 import type { ExternalBuffState } from '@/lib/damage/v2/external-buffs'
 import type { BossMechanicState } from '@/lib/damage/v2/boss-overrides'
+import type { StatScaling } from '../_api/chars'
 
 export interface CharSummary {
   id: string
@@ -47,6 +48,14 @@ export interface AttackerState {
   charFlags: CharFlags
   /** ST_HP / ST_DEF / ST_CRITICAL_RATE / etc. — for secondary scaling. */
   extraStats: Record<string, number>
+  /**
+   * Scaling breakdown for ATK — populated by `attacker/autoFillStats`,
+   * cleared by `attacker/manualEditStat` on field 'atk'. When present, the
+   * recompute pipeline replays the API's `calcStat` with `pctBonus + buffPct`
+   * so external ATK%-buffs stack additively (matching in-game behavior).
+   * Null = fall back to linear `× (1 + buff/100)`.
+   */
+  atkScaling: StatScaling | null
 }
 
 export interface ModeOption {

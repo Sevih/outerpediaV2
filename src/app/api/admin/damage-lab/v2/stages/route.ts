@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { loadTable, indexBy, num, type Row } from '@/app/api/admin/extractor-v3/monster/lib/common'
 import { loadLocationTables, resolveModeLabel, SUPPORTED_DUNGEON_MODES } from '@/app/api/admin/extractor-v3/monster/lib/location'
-import { interpolate, applyAdvantageRate } from '@/lib/damage/v2/f32'
+import { interpolate, interpolateRated } from '@/lib/damage/v2/f32'
 
 /**
  * GET /api/admin/damage-lab/v2/stages
@@ -212,14 +212,18 @@ function buildIndex(): ModeEntry[] {
               atkMax,
               hpMin,
               hpMax,
-              // Stats interpolated to the spawn level THEN multiplied by the
-              // dungeon's `SpawnAdvantageRate` via the f32 chain — matches the
-              // binary `get_MaxHP` / `get_Def` / `get_Atk` exactly. DR has no
-              // rate column, so spawnRate doesn't apply to it.
-              defAtLevel:   applyAdvantageRate(interpolate(defMin, defMax, level), advDef),
+              // Stats interpolated to the spawn level AND multiplied by the
+              // dungeon's `SpawnAdvantageRate` in a single f32 chain (one
+              // floor at the end) — matches the binary `get_MaxHP` /
+              // `get_Def` / `get_Atk` exactly. The two-step
+              // `applyAdvantageRate(interpolate(...))` floored twice and was
+              // off by 1 on edge cases (Ars Nova St1 lv 25 HP: 14351 vs
+              // in-game 14352). DR has no rate column, so spawnRate doesn't
+              // apply to it.
+              defAtLevel:   interpolateRated(defMin, defMax, level, advDef),
               drPctAtLevel: interpolate(0, drMax, level) / 10,
-              atkAtLevel:   applyAdvantageRate(interpolate(atkMin, atkMax, level), advAtk),
-              hpAtLevel:    applyAdvantageRate(interpolate(hpMin, hpMax, level), advHp),
+              atkAtLevel:   interpolateRated(atkMin, atkMax, level, advAtk),
+              hpAtLevel:    interpolateRated(hpMin, hpMax, level, advHp),
               position,
               slot,
             })
