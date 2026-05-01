@@ -119,7 +119,8 @@
             "2000053",
             "2000089",
             "2000071",
-            "2000119"
+            "2000119",
+            "2000112"
           ],
           "reason": {
             "en": "Sturdy DPS units",
@@ -191,7 +192,8 @@
             "2000053",
             "2000089",
             "2000071",
-            "2000119"
+            "2000119",
+            "2000112"
           ],
           "reason": {
             "en": "Sturdy DPS units.",
@@ -269,7 +271,8 @@
             "2000053",
             "2000089",
             "2000071",
-            "2000119"
+            "2000119",
+            "2000112"
           ],
           "reason": {
             "en": "Sturdy DPS units.",
@@ -2278,6 +2281,63 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_1Star"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000038"
+              ],
+              "reason": {
+                "en": "Validate restriction and have {B/BT_REMOVE_DEBUFF} or {B/BT_IMMUNE}.",
+                "jp": "制限を満たし、{B/BT_REMOVE_DEBUFF}か{B/BT_IMMUNE}を持つこと。",
+                "kr": "제한을 충족하고 {B/BT_REMOVE_DEBUFF} 또는 {B/BT_IMMUNE}을 보유.",
+                "zh": "满足限制并拥有{B/BT_REMOVE_DEBUFF}或{B/BT_IMMUNE}。"
+              }
+            },
+            {
+              "names": [
+                "2000100",
+                "2000098",
+                "2000084",
+                "2000036"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "{B/BT_REMOVE_DEBUFF}オプション",
+                "kr": "{B/BT_REMOVE_DEBUFF} 옵션",
+                "zh": "{B/BT_REMOVE_DEBUFF}选项"
+              }
+            },
+            {
+              "names": [
+                "2000074",
+                "2000058",
+                "2000108",
+                "2000113"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "{B/BT_REMOVE_DEBUFF}と{B/BT_IMMUNE}のオプション",
+                "kr": "{B/BT_REMOVE_DEBUFF}와 {B/BT_IMMUNE} 옵션",
+                "zh": "{B/BT_REMOVE_DEBUFF}与{B/BT_IMMUNE}选项"
+              }
+            },
+            {
+              "names": [
+                "2000083"
+              ],
+              "reason": {
+                "en": "{B/BT_IMMUNE} options",
+                "jp": "{B/BT_IMMUNE}オプション",
+                "kr": "{B/BT_IMMUNE} 옵션",
+                "zh": "{B/BT_IMMUNE}选项"
+              }
+            }
+          ]
         }
       ]
     },
@@ -2328,6 +2388,17 @@
                 "kr": "{SK/Caren|S2}는 자동으로 {P/Fatal}을 노리고, {SK/Caren|S1}은 두 대상 모두에게 명중합니다.",
                 "zh": "{SK/Caren|S2}会自动锁定{P/Fatal},{SK/Caren|S1}会同时命中两个目标。"
               }
+            },
+            {
+              "names": [
+                "2000110"
+              ],
+              "reason": {
+                "en": "Same reason as {P/Caren}, her {SK/Mystic Sage Ame|S2} will automatically target {P/Fatal}.",
+                "jp": "{P/Caren}と同じ理由で、彼女の{SK/Mystic Sage Ame|S2}は自動で{P/Fatal}を狙います。",
+                "kr": "{P/Caren}과 같은 이유로, 그녀의 {SK/Mystic Sage Ame|S2}는 자동으로 {P/Fatal}을 노립니다.",
+                "zh": "与{P/Caren}相同的原因,她的{SK/Mystic Sage Ame|S2}会自动锁定{P/Fatal}。"
+              }
             }
           ]
         },
@@ -2364,6 +2435,17 @@
                 "kr": "{SK/Caren|S2}는 자동으로 {P/Fatal}을 노리고, {SK/Caren|S1}은 두 대상 모두에게 명중합니다.",
                 "zh": "{SK/Caren|S2}会自动锁定{P/Fatal},{SK/Caren|S1}会同时命中两个目标。"
               }
+            },
+            {
+              "names": [
+                "2000110"
+              ],
+              "reason": {
+                "en": "Same reason as {P/Caren}, her {SK/Mystic Sage Ame|S2} will automatically target {P/Fatal}.",
+                "jp": "{P/Caren}と同じ理由で、彼女の{SK/Mystic Sage Ame|S2}は自動で{P/Fatal}を狙います。",
+                "kr": "{P/Caren}과 같은 이유로, 그녀의 {SK/Mystic Sage Ame|S2}는 자동으로 {P/Fatal}을 노립니다.",
+                "zh": "与{P/Caren}相同的原因,她的{SK/Mystic Sage Ame|S2}会自动锁定{P/Fatal}。"
+              }
             }
           ]
         },
@@ -2381,6 +2463,59 @@
                 "jp": "制限を満たせば、{SK/Caren|S2}は自動で{P/Fatal}を狙い、{SK/Caren|S1}は両方の敵にヒットします。",
                 "kr": "제한을 충족하면 {SK/Caren|S2}는 자동으로 {P/Fatal}을 노리고, {SK/Caren|S1}은 두 대상 모두에게 명중합니다.",
                 "zh": "满足限制后,{SK/Caren|S2}会自动锁定{P/Fatal},{SK/Caren|S1}会同时命中两个目标。"
+              }
+            },
+            {
+              "names": [
+                "2000110"
+              ],
+              "reason": {
+                "en": "Same reason as {P/Caren}, her {SK/Mystic Sage Ame|S2} will automatically target {P/Fatal}.",
+                "jp": "{P/Caren}と同じ理由で、彼女の{SK/Mystic Sage Ame|S2}は自動で{P/Fatal}を狙います。",
+                "kr": "{P/Caren}과 같은 이유로, 그녀의 {SK/Mystic Sage Ame|S2}는 자동으로 {P/Fatal}을 노립니다.",
+                "zh": "与{P/Caren}相同的原因,她的{SK/Mystic Sage Ame|S2}会自动锁定{P/Fatal}。"
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_Earth"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000089"
+              ],
+              "reason": {
+                "en": "{SK/Caren|S2} will automatically target {P/Fatal} and {SK/Caren|S1} will hit both target.",
+                "jp": "{SK/Caren|S2}は自動で{P/Fatal}を狙い、{SK/Caren|S1}は両方の敵にヒットします。",
+                "kr": "{SK/Caren|S2}는 자동으로 {P/Fatal}을 노리고, {SK/Caren|S1}은 두 대상 모두에게 명중합니다.",
+                "zh": "{SK/Caren|S2}会自动锁定{P/Fatal},{SK/Caren|S1}会同时命中两个目标。"
+              }
+            },
+            {
+              "names": [
+                "2000110"
+              ],
+              "reason": {
+                "en": "Same reason as {P/Caren}, her {SK/Mystic Sage Ame|S2} will automatically target {P/Fatal}.",
+                "jp": "{P/Caren}と同じ理由で、彼女の{SK/Mystic Sage Ame|S2}は自動で{P/Fatal}を狙います。",
+                "kr": "{P/Caren}과 같은 이유로, 그녀의 {SK/Mystic Sage Ame|S2}는 자동으로 {P/Fatal}을 노립니다.",
+                "zh": "与{P/Caren}相同的原因,她的{SK/Mystic Sage Ame|S2}会自动锁定{P/Fatal}。"
+              }
+            },
+            {
+              "names": [
+                "2000065",
+                "2000087",
+                "2000108"
+              ],
+              "reason": {
+                "en": "Any {E/Earth} hero can do the job and validate the restriction.",
+                "jp": "どの{E/Earth}属性のヒーローでも役目を果たし、制限を満たすことができます。",
+                "kr": "어떤 {E/Earth} 속성 영웅이든 역할을 수행하며 제한을 충족할 수 있습니다.",
+                "zh": "任何{E/Earth}属性英雄都能胜任并满足限制。"
               }
             }
           ]
