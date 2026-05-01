@@ -5,7 +5,7 @@ import {
   recompute, type RecomputeContext, type RecomputeResult,
 } from '@/lib/damage/v2/recompute'
 import { EXTERNAL_BUFFS } from '@/lib/damage/v2/external-buffs'
-import { getBossOverride } from '@/lib/damage/v2/boss-overrides'
+import { bossOverrideFromMechanics } from '@/lib/damage/v2/boss-overrides'
 import type { ApplicableBuff, AppliesTo, PoolCondition } from '@/lib/damage/v2/buffs'
 
 import { AttackerPanel } from './_components/AttackerPanel'
@@ -19,7 +19,7 @@ import {
   fetchChars, fetchCharStats, getDamageFactor, getAdditionalAttackRatio, type CharData,
 } from './_api/chars'
 import {
-  fetchStages, type ModeEntry, type MonsterEntry,
+  fetchStages, fetchMonsterMechanics, type ModeEntry, type MonsterEntry,
 } from './_api/monsters'
 import { fetchBuffs } from './_api/buffs'
 import {
@@ -113,7 +113,27 @@ export default function DamageLabV2Page() {
   }, [selectedModeEntry, state.target.stageId])
 
   const selectedChar = chars?.find(c => c.id === state.attacker.charId) ?? null
-  const bossOverride = getBossOverride(state.target.monsterId)
+  const bossOverride = state.bossOverride
+
+  // Fetch boss mechanics dynamically when monster changes. The API walks
+  // MonsterTemplet → MonsterSkillTemplet → MonsterSkillLevelTemplet →
+  // BuffTemplet to extract damage-relevant passives. On every monsterId
+  // change we refetch and `bossMechanic/setOverride` with the result —
+  // null when no monster or no damage-relevant passive (panel hidden).
+  useEffect(() => {
+    const id = state.target.monsterId
+    if (!id) {
+      dispatch({ type: 'bossMechanic/setOverride', override: null })
+      return
+    }
+    let cancelled = false
+    fetchMonsterMechanics(id)
+      .then(payload => {
+        if (cancelled) return
+        dispatch({ type: 'bossMechanic/setOverride', override: bossOverrideFromMechanics(payload) })
+      })
+    return () => { cancelled = true }
+  }, [state.target.monsterId])
 
   // ── Applicable pool_cond inputs ────────────────────────────────────────
   // Walk the buff list filtered to the current char to find which BT_DMG_*
@@ -129,6 +149,14 @@ export default function DamageLabV2Page() {
       out.add(b.effect.poolCond)
     }
     return out
+  }, [buffs, selectedChar])
+
+  // Buffs applicable to the current caster — fed to PerCharFlags so the
+  // flag panel can data-drive its toggles (e.g. surface `ownerResourceMax`
+  // when the char has at least one `requires === 'resource'` buff).
+  const charApplicableBuffs = useMemo(() => {
+    if (!selectedChar) return []
+    return buffs.filter(b => appliesToCharSummary(b.appliesTo, selectedChar))
   }, [buffs, selectedChar])
 
   const selectedMonsterMeta = useMemo(() => {
@@ -238,6 +266,7 @@ export default function DamageLabV2Page() {
       inPvp:       deriveInPvp(selectedModeEntry?.mode),
       externalBuffs: state.externalBuffs,
       bossMechanics: state.bossMechanics,
+      bossOverride: state.bossOverride,
     }
     return { ctx: c, result: recompute(c, buffs) }
   }, [selectedChar, state, buffs, selectedModeEntry])
@@ -312,6 +341,10 @@ export default function DamageLabV2Page() {
       inPvp: ctx.inPvp,
       externalBuffs: state.externalBuffs,
       bossMechanics: state.bossMechanics,
+      // Snapshot the override so `recomputeFromObs` can evaluate the
+      // mechanic buffs without an async re-fetch. Only meaningful when
+      // at least one mechanic is active (server-side filter handles that).
+      bossOverride: state.bossOverride,
       crit: ctx.crit,
       obs: observed,
       note,
@@ -450,6 +483,7 @@ export default function DamageLabV2Page() {
           charCatalog={charCatalog}
           poolConds={state.poolConds}
           applicablePoolConds={applicablePoolConds}
+          charBuffs={charApplicableBuffs}
           onChange={patch => dispatch({ type: 'attacker/patch', patch })}
           onSetChar={charId => dispatch({ type: 'attacker/setChar', charId })}
           onSetSlot={slot => dispatch({ type: 'attacker/setSlot', slot })}
@@ -472,7 +506,6 @@ export default function DamageLabV2Page() {
           onAutoFill={handleReAutoFill}
           onPoolCondChange={patch => dispatch({ type: 'poolCond/patch', patch })}
           onBossMechanicToggle={(id, active) => dispatch({ type: 'bossMechanic/toggle', id, active })}
-          onBossMechanicValueChange={(id, value) => dispatch({ type: 'bossMechanic/setValue', id, value })}
         />
         <ResultPanel
           result={result}
@@ -586,6 +619,7 @@ function recomputeFromObs(o: ObservationV2, chars: CharData[], buffs: Applicable
     inPvp: o.inPvp,
     externalBuffs: o.externalBuffs,
     bossMechanics: o.bossMechanics,
+    bossOverride: o.bossOverride,
   }
   return recompute(ctx, buffs).calculated
 }

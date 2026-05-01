@@ -19,6 +19,14 @@
  *    clamped to `max(1, floor(dmg))`. v1 left the float to the UI.
  *  • `debugSteps` always produced — caller decides to display or discard.
  *
+ * ── Known limit ──────────────────────────────────────────────────────────
+ * Skills with `MaxHitCount > 1` (Maxwell S1, Skadi S3, …) drift by ~+0.11%
+ * vs in-game (proportional to `1/per_hit_damage`). The single-shot chain is
+ * binary-faithful; the multi-hit dispatch lives in `CCharacterBattle.UseSkill`
+ * (or an upstream orchestrator) reached only through IL2CPP virtual dispatch
+ * — no direct `BL #0x2B53EC8` exists in the binary. See
+ * `damage-lab-v2-spec.md` §7.7 for the full investigation.
+ *
  * ── Validation pipeline ──────────────────────────────────────────────────
  *   mit          = C / (C + (1 − PEN/100) × DEF − PEN_flat)
  *   rate         = base_pool   (= 1.0 normal, CHD/1000 on crit, − CDR/1000)

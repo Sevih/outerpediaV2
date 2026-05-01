@@ -277,10 +277,8 @@ function ObsDetails({ obs }: { obs: ObservationV2 }) {
           <div className="mt-1">
             <div className="mb-0.5 text-[10px] font-semibold uppercase text-zinc-500">Boss mech</div>
             <ul className="space-y-0.5 text-zinc-400">
-              {activeMechanics.map(([id, s]) => (
-                <li key={id} className="font-mono text-[10px]">
-                  {id} ×{s.value.toFixed(2)}
-                </li>
+              {activeMechanics.map(([id]) => (
+                <li key={id} className="font-mono text-[10px]">{id}</li>
               ))}
             </ul>
           </div>

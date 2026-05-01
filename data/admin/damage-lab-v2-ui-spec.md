@@ -1,27 +1,29 @@
 # Damage Lab v2 — UI Specification
 
-Spec UI complète pour la v2 de `/admin/damage-lab/v2`. Pendant tout le rebuild,
-la v1 (`/admin/damage-lab`) reste intacte. Ce document est la cible que les PRs
-6 à 9 implémentent (cf. `damage-lab-v2-spec.md` §10 — roadmap).
+Spec UI de référence pour `/admin/damage-lab/v2`. La v1 (`/admin/damage-lab`)
+reste intacte en parallèle. **Implémentée dans les PR 6-9** — ce document
+documente l'architecture livrée. Le code reste source de vérité ; cf. les
+fichiers sous `src/app/admin/damage-lab/v2/`.
 
 Référence pipeline calc : voir `damage-lab-v2-spec.md` §1 à §5.
 
 ---
 
-## 1. Objectifs
+## 1. Objectifs (atteints)
 
 ### Goals
-- UI reconçue from-scratch — la v1 fait 2424 lignes avec 46 `useState`, ingérable.
-- Layout desktop / mobile responsive, pensé dès le départ.
+- UI reconçue from-scratch (la v1 faisait 2424 lignes avec 46 `useState`).
+- Layout desktop / mobile responsive.
 - État unifié dans un reducer unique, persisté en `localStorage` versionné v2.
-- Une seule pipeline calc (drop du toggle `f32arithmetic`).
+- Une seule pipeline calc (pas de toggle `f32arithmetic`, f32 toujours actif).
 - Composants typés, props interfaces explicites.
-- Capacité à comparer obs sauvée vs recompute live (couleur ratio).
+- Recompute live des obs (couleur ratio).
 
 ### Non-goals
-- Pas de partage de code/route/lib avec la v1 (compartimenté, voir spec v2 §0).
-- Pas de port automatique des obs v1 — l'opérateur re-saisit pour valider la pipeline v2.
-- Pas de feature parity bit-for-bit avec la v1 — uniquement ce qui est validé en empirique ou via disasm.
+- Pas de partage de code/route/lib avec la v1 (compartimenté).
+- Pas de port automatique des obs v1.
+- Pas de feature parity bit-for-bit avec la v1 — uniquement ce qui est validé
+  en empirique ou via disasm.
 
 ---
 
@@ -60,13 +62,9 @@ Référence pipeline calc : voir `damage-lab-v2-spec.md` §1 à §5.
 │  │ CHD +50 [ ]       │              │                  │                  ││
 │  │ EFF +100 [ ]      │              │                  │                  ││
 │  └───────────────────┴──────────────┴──────────────────┴──────────────────┘│
-├─────────────────────────────────────────────────────────────────────────────┤
-│ BossMechanicsPanel (full width, visible si target boss)                     │
-│  ┌────────────────────────────────────────────────────────────────────────┐│
-│  │ Amadeus                                                                ││
-│  │  ✓ Prelude of Waning Crescent (St4+)        × 0.80                     ││
-│  │  □ Enrage (HP < 30%)                         × 0.70                    ││
-│  └────────────────────────────────────────────────────────────────────────┘│
+│ Note : BossMechanicsPanel est rendu DANS TargetPanel (sous le picker        │
+│ monstre), pas en pleine largeur séparé — c'est conditionnel et propre à     │
+│ la cible.                                                                   │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │ ObsTable (full width)                                                       │
 │  ┌────┬──────────┬────────┬──────┬──────────┬──────────┬───────┬───────┐   │
@@ -81,9 +79,9 @@ Référence pipeline calc : voir `damage-lab-v2-spec.md` §1 à §5.
 
 ### Mobile (< md, stacked)
 
-Ordre vertical : Header → AttackerPanel → TargetPanel → ResultPanel →
-BuffsTogglesPanel (accordéon, fermé par défaut) → BossMechanicsPanel
-(si applicable) → ObsTable.
+Ordre vertical : Header → AttackerPanel → TargetPanel (avec
+BossMechanicsPanel embedded si applicable) → ResultPanel → BuffsTogglesPanel
+(accordéon, fermé par défaut) → ObsTable.
 
 ObsTable : scroll horizontal sur mobile, pas de masquage de colonnes.
 
@@ -193,7 +191,7 @@ interface BuffsTogglesPanelProps {
 - Désactivé visuel quand `active=false` (input grisé mais éditable pour preset avant activation).
 - Mobile : 1 colonne par section, sections collapsibles.
 
-### 3.4 `BossMechanicsPanel`
+### 3.4 `BossMechanicsPanel` (rendu dans TargetPanel)
 
 ```ts
 interface BossMechanicsPanelProps {
@@ -205,8 +203,10 @@ interface BossMechanicsPanelProps {
 ```
 
 **Comportement**
+- Embedded à l'intérieur de `TargetPanel` (sous le monster picker), pas une
+  section pleine largeur séparée — les mécaniques sont conditionnelles et
+  propres à la cible.
 - Affiché uniquement si `override !== null` (résolu par `getBossOverride(target.monsterId)`).
-- Header : nom du boss.
 - Liste de mécaniques : checkbox + label + input numérique (multiplicateur, default `defaultValue`).
 - Tooltip sur chaque mécanique avec la description longue (`BossMechanicDef.description`).
 
@@ -254,13 +254,16 @@ interface SavedObservation {
   observed: number
   note?: string
   ctx: RecomputeContext            // tout le contexte source — recompute déterministe
-  calculatedAtSave: number         // cache au moment de la save (audit)
 }
 ```
 
 **Comportement**
-- Recompute live de chaque ligne : `recompute(obs.ctx).calculated` → Δ = obs − calc, ratio = obs / calc.
+- **Recompute live à chaque render** (pas de `calculatedAtSave` persisté) :
+  `recompute(obs.ctx).calculated` → Δ = obs − calc, ratio = obs / calc. Permet
+  aux changements de pipeline (formules, char-overrides) d'être visibles
+  immédiatement sur tout l'historique.
 - Color-code : ratio ∈ [0.98, 1.02] green, [0.95, 1.05] amber, sinon red.
+- Expand-row : breakdown détaillé Caster / Target / Modifiers de l'obs.
 - Click sur ligne : `onLoadIntoForm(obs)` repopule attacker + target + buffs depuis `obs.ctx`.
 - Bouton supprimer (avec confirm).
 - Filtres optionnels (top de table) : par charId / monsterId / slot.
@@ -398,9 +401,10 @@ function buildRecomputeCtx(
 
 ### Observations API
 - `GET    /api/admin/damage-lab/v2/observations`            → `SavedObservation[]`
-- `POST   /api/admin/damage-lab/v2/observations`            → save (génère `id`, `createdAt`, `calculatedAtSave`)
+- `POST   /api/admin/damage-lab/v2/observations`            → save (génère `id`, `createdAt`)
 - `DELETE /api/admin/damage-lab/v2/observations/[id]`
 - Backend : append-only JSONL `data/admin/damage-lab-observations-v2.jsonl`
+- Pas de `calculatedAtSave` persisté — recompute live au render.
 - Pas de migration depuis v1 — l'opérateur re-saisit les obs validées en v2.
 
 ---
@@ -420,37 +424,34 @@ function buildRecomputeCtx(
 
 ## 8. Découpage composants → fichiers
 
+Structure réelle livrée :
+
 ```
 src/app/admin/damage-lab/v2/
   page.tsx                           # entry, monte le reducer, pose le layout
   _components/
     AttackerPanel.tsx
-    TargetPanel.tsx
+    TargetPanel.tsx                  # contient BossMechanicsPanel embedded
     BuffsTogglesPanel.tsx
     BossMechanicsPanel.tsx
     ResultPanel.tsx
-    ObsTable.tsx
+    ObsTable.tsx                     # recompute live, expand-row breakdown
     CharPicker.tsx                   # autocomplete char (utilisé par AttackerPanel)
-    MonsterPicker.tsx                # cascade mode/stage/monster (utilisé par TargetPanel)
-    PerCharFlags.tsx                 # rend dynamiquement les flags du char courant
+    MonsterPicker.tsx                # cascade Category → Mode → Season → Dungeon
+                                     # → Stage → Monster (wave-buttons)
+    PerCharFlags.tsx                 # flags per-char dérivés de char-overrides
   _state/
-    reducer.ts                       # FormState + actions + reducer fn
-    persistence.ts                   # localStorage load/save versionné
-    selectors.ts                     # buildRecomputeCtx(state, char, skillData)
+    reducer.ts                       # FormState + actions + reducer + buildRecomputeCtx
+    types.ts                         # types partagés (FormState, actions)
+    persistence.ts                   # localStorage load/save versionné v2
+    mode-taxonomy.ts                 # taxonomy Category → Mode → Season → Dungeon
   _api/
     chars.ts                         # GET helper /v2/chars
-    monsters.ts                      # GET helpers /v2/stages, /v2/monsters/[id]/stats
-    skills.ts                        # GET helper /v2/skills/[id]?level=N (DF + addAttack ratio)
+    monsters.ts                      # GET /v2/stages, /v2/monsters/[id]/stats
+    buffs.ts                         # GET helper buffs catalog (awakening + char skills)
     observations.ts                  # CRUD obs helper
 ```
 
----
-
-## 9. Questions ouvertes (à valider avant PR 6)
-
-1. **Char catalog** : nouveau `/api/admin/damage-lab/v2/chars` ou réutiliser un endpoint existant (la v1 doit déjà avoir un loader) ? À pinpointer en PR 2 quand on scaffold.
-2. **Skill DF lookup** : actuellement la v1 fetch comment le `damageFactor` ? À auditer en PR 2 ; possiblement nouveau `/api/admin/damage-lab/v2/skills/[id]?level=N` qui renvoie `{ damageFactor, additionalAttackRatio }`.
-3. **Per-char flags catalog** : pour l'instant uniquement Ame. Proposition : les flags vivent dans `char-overrides.ts` v2 et l'UI les déduit du `CharOverride.conditionals[].flag` (pas de duplication). Si un char a des flags hors conditionals (ex: scaling toggle), on étend l'API du module.
-4. **Filtres ObsTable** : par charId / monsterId / slot dès la v2 ? Je propose oui — coût minime, gain réel quand la table grossit.
-5. **CharPicker scope** : tous les chars du datamine ou seulement ceux qui ont au moins une obs / un override ? Proposition : tous, ordre alpha, avec un filtre élément en topbar.
-6. **`extraStats` UI** : actuellement champ générique pour ST_HP/ST_DEF/ST_CRITICAL_RATE. v2 → on l'expose comment dans `AttackerPanel` ? Je propose un dépliant "Secondary stats" avec uniquement les ST_* nécessaires au char courant (déduit des buffs `scaling_*` du char dans `extract-buffs.ts`).
+Note : skill DF lookup intégré dans `/api/admin/characters/[id]/stats`
+(pas de `_api/skills.ts` dédié). `buildRecomputeCtx` vit dans `reducer.ts`
+(pas de `selectors.ts` séparé).

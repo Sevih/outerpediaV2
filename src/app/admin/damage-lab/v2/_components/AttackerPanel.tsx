@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import CharacterPortrait from '@/app/components/character/CharacterPortrait'
-import type { CallerSlot, PoolCondition } from '@/lib/damage/v2/buffs'
+import type { ApplicableBuff, CallerSlot, PoolCondition } from '@/lib/damage/v2/buffs'
 import type { CharFlags } from '@/lib/damage/v2/char-overrides'
 import type { ClassType, ElementType } from '@/types/enums'
 import type { AttackerState, CharSummary, PoolCondState } from '../_state/types'
@@ -24,6 +24,8 @@ interface AttackerPanelProps {
   poolConds: PoolCondState
   /** Set of pool conditions that the current char's buffs actually consume. */
   applicablePoolConds: Set<PoolCondition>
+  /** Buffs applicable to the current caster — fed to PerCharFlags so the flag list is data-driven. */
+  charBuffs: ApplicableBuff[]
   onChange: (patch: Partial<AttackerState>) => void
   onSetChar: (charId: string) => void
   onSetSlot: (slot: CallerSlot) => void
@@ -42,7 +44,7 @@ const SLOT_ICON_TOKEN: Record<CallerSlot, string> = {
 const SLOTS: CallerSlot[] = ['S1', 'S2', 'S3']
 
 export function AttackerPanel({
-  state, charCatalog, poolConds, applicablePoolConds,
+  state, charCatalog, poolConds, applicablePoolConds, charBuffs,
   onChange, onSetChar, onSetSlot, onSetFlag, onEditStat, onPoolCondChange,
 }: AttackerPanelProps) {
   const selectedChar = charCatalog.find(c => c.id === state.charId)
@@ -140,7 +142,7 @@ export function AttackerPanel({
             onChange={v => onChange({ crit: v })}
           />
           <Toggle
-            label="Apply awakening quirks"
+            label="Quirks"
             checked={state.applyQuirks}
             onChange={v => onChange({ applyQuirks: v })}
           />
@@ -156,6 +158,7 @@ export function AttackerPanel({
             charId={state.charId}
             slot={state.slot}
             flags={state.charFlags}
+            buffs={charBuffs}
             onChange={onSetFlag}
           />
         )}

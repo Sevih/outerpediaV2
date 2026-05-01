@@ -156,6 +156,7 @@ function resolveCondition(cond: string | undefined): BuffTrigger['requires'] | n
     case 'ATTACKER_ELEMENT_EQUAL': return 'neutral'
     case 'CASTER_CRITICAL':        return 'crit'
     case 'TARGET_IS_BOSS':         return 'boss'
+    case 'OWNER_RESOURCE':         return 'resource'
     default:                       return null
   }
 }

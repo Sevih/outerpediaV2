@@ -50,6 +50,22 @@ export interface ConditionalModifier {
    * is active on already-adv targets.
    */
   replaceOnAdv?: boolean
+  /**
+   * Empirical multiplier applied to the FINAL damage value, gated by crit
+   * state. Used as a stop-gap when the underlying game-code logic isn't
+   * fully reverse-engineered yet — see Ame Sakura non-adv (RE chore PR 4ter):
+   * the actual mechanism involves `BT_DMG_ELEMENT_SUPERIORITY` (type 92)
+   * with an unresolved `CASTER_HAS_BUFF=55` gate, but the deviation from
+   * our model is empirically stable enough to fold into a multiplier.
+   *
+   * Only applied when the ADD path is taken (i.e. NOT when `replaceOnAdv`
+   * fires). Applied after the formula chain (post elem mult, post final
+   * reduce) — equivalent to `damage × mult` then re-floor.
+   *
+   * Should be removed once the proper RE lands and the modifier is wired
+   * through the buff reducer.
+   */
+  empiricalMult?: { nonCrit?: number; crit?: number }
 }
 
 /**
@@ -64,6 +80,15 @@ export interface CharFlags {
    */
   umeActive?: boolean
   sakuraActive?: boolean
+  /**
+   * Caster has their unique resource maxed out (Noa: Kaizer Energy 5/5).
+   * Generic flag for any char whose datamine buff carries
+   * `BuffConditionType: OWNER_RESOURCE` — the extractor maps that condition
+   * to `requires: 'resource'`, the reducer's `triggerMatches` reads this
+   * field, and `PerCharFlags` surfaces a toggle whenever the current
+   * char/slot has at least one applicable buff with `requires === 'resource'`.
+   */
+  ownerResourceMax?: boolean
 }
 
 const CHAR_OVERRIDES: Record<string, CharOverride> = {
@@ -89,14 +114,45 @@ const CHAR_OVERRIDES: Record<string, CharOverride> = {
       // Sakura (element superiority on S1):
       //   - on adv targets the alternate REPLACES main (total = listed × 1.0,
       //     validated on Penguineer no-boss adv at ratio 1.000);
-      //   - on non-adv it ADDS like Ume (ratio 1.013-1.016 on 2 obs).
+      //   - on non-adv it ADDS like Ume (ratio 1.010-1.016 on 3 obs).
       //
-      // KNOWN LIMITATION: on non-adv + crit the add fires at ~1.83-1.85× main
-      // instead of 2.0×, producing a stable 5-6% shortfall (3 obs converging
-      // at ratio 0.942-0.951). No clean formula explains it; suspected game-code
-      // interaction between BT_DMG_ELEMENT_SUPERIORITY and crit DR pierce.
-      // Acceptable as-is — model fits 14/16 Ame obs.
-      { flag: 'sakuraActive', ratio: 2.0, replaceOnAdv: true },
+      // KNOWN LIMITATION: on non-adv + crit the obs converges at ratio ~0.948
+      // (calc OVER by 5%) — 3 obs at 0.942/0.948/0.951. No clean formula fits.
+      //
+      // ── RE trail (PR 4ter, partial) ──────────────────────────────────────
+      //   Ame S1 carries buff `2000065_1_4` of type `BT_DMG_ELEMENT_SUPERIORITY`
+      //   (= 92 / 0x5C) gated on `CASTER_HAS_BUFF=55`. Type 92 activates the
+      //   "superiority path" inside `CFormula.GetElementeryDamageRate` (VA
+      //   0x2B53C74), which calls `FindBuffElementSuperiority` (0x262D294)
+      //   then `FindBuffElementDamageRate` (0x2639004) to sum
+      //   `BT_DMG_ELEMENT_ENCHANT` (= 93 / 0x5D) values:
+      //     rate = 1.20 + (sum × 0.001)    // base 1.20 from rodata 0x1033E70
+      //   `CBattleManager.ProcessDamage` (~0x22A6118) ALSO branches on Ume
+      //   (140) vs Sakura (141) before CalcDamage and loads different skill
+      //   templates from static fields `[0x545D478]` (Ume) / `[0x545D498]`
+      //   (Sakura). `2000065_Skill_1_5_B` (DF=1100) is a Sakura variant of
+      //   the last hit (vs `_5` DF=100).
+      //
+      //   Open question: `BuffConditionValue=55` in BUFF_TYPE enum is
+      //   `BT_DOT_BLEED`, but Ame doesn't carry DOT_BLEED. Empirically the
+      //   gate fires for Sakura only (Ume non-adv tests match exactly).
+      //   Resolving this requires either: (a) a Frida hook on
+      //   `FindBuffElementSuperiority` to observe the value 55 semantics in
+      //   runtime, or (b) symbol-resolved IL2CPP metadata pass to map the
+      //   buff condition to its actual code path. Suspected interaction
+      //   with the Sakura-loaded skill swap on the additional attack and a
+      //   crit-DR-related cap in `g__CalcDamage|17_0` (post-element-mult).
+      //
+      //   Empirical correction: ratio=2.0 ADD + crit-gated multipliers on
+      //   non-adv path. nonCrit=1.010 (latest obs at 1.0097), crit=0.948
+      //   (3 obs at 0.942-0.951). To remove once §7.8 RE is closed and the
+      //   proper buff modeling lands.
+      {
+        flag: 'sakuraActive',
+        ratio: 2.0,
+        replaceOnAdv: true,
+        empiricalMult: { nonCrit: 1.010, crit: 0.948 },
+      },
     ],
   },
 }

@@ -92,7 +92,15 @@ export interface ObservationV2 {
   inPvp?: boolean
   // External buffs / boss mechanics state at save time
   externalBuffs?: Record<string, { active: boolean; value: number }>
-  bossMechanics?: Record<string, { active: boolean; value: number }>
+  bossMechanics?: Record<string, { active: boolean; value?: number }>
+  /**
+   * Snapshot of the boss override (definitions + buff lists) at save time.
+   * Required for `recomputeFromObs` — boss-mechanic effects evaluate from
+   * each passive's raw `buffs`, and the override isn't refetched async at
+   * obs-table render time. Older obs without it skip boss-mechanic deltas
+   * (none have active mechanics so no regression).
+   */
+  bossOverride?: import('@/lib/damage/v2/boss-overrides').BossOverride | null
   // Result
   crit: boolean
   obs: number
@@ -204,6 +212,10 @@ export async function POST(req: NextRequest) {
   }
   if (body.bossMechanics && Object.values(body.bossMechanics).some(s => s.active)) {
     o.bossMechanics = body.bossMechanics
+    // Persist the override snapshot only when at least one mechanic is
+    // active — otherwise the snapshot is dead weight (recomputeFromObs
+    // wouldn't read it).
+    if (body.bossOverride) o.bossOverride = body.bossOverride
   }
   if (body.atkScaling) o.atkScaling = body.atkScaling
   if (body.calculatedAtSave != null) o.calculatedAtSave = body.calculatedAtSave

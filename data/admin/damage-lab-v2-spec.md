@@ -229,10 +229,14 @@ Branche L/D (`0x2B53DB4`) :
 if attacker_elem < 3 → return 1.0   (attaquant F/W/E vs target L/D)
 if target_elem ≤ 2 → return 1.0      (attaquant L/D vs target F/W/E)
 if attacker_elem == target_elem → return 1.0   (Light vs Light, Dark vs Dark)
-else → goto FindBuffElementSuperiority handling, return 1.20
+else → 1.20   (L↔D mutual adv ; FindBuffElementSuperiority peut booster
+              au-delà via type 92/93, cf §7.5)
 ```
 
-**Confirmé** : Light↔Dark donne ×1.20, **same-elem L/D donne ×1.0** (pas adv).
+**Confirmé** : Light↔Dark donne ×1.20 (validé empiriquement, cf §1).
+Same-elem L/D donne ×1.0. Le passif awakening
+`Awakening_Element_Dmg_Dark_Light_10` (cf §3) est **séparé** et empile
++30% au pool en plus de ce multiplicateur élémentaire.
 
 ### Element enum (`CHARACTER_ELEMENT_TYPE`)
 
@@ -244,7 +248,17 @@ else → goto FindBuffElementSuperiority handling, return 1.20
 | 3 | LIGHT |
 | 4 | DARK |
 
-Cycle rps : `Fire > Earth > Water > Fire`. Light↔Dark : avantage mutuel.
+Cycle rps : `Fire > Earth > Water > Fire`. **Light ↔ Dark : avantage
+mutuel** au multiplicateur élémentaire (×1.20 dans les deux sens).
+Validé empiriquement (Maxwell Dark → Ars Nova Light × 3 obs, Skadi Light
+→ Amadeus Dark × 5 obs, ratio 1.000).
+
+⚠️ À ne pas confondre avec le passif awakening
+`Awakening_Element_Dmg_Dark_Light_10` (cf §3) qui ajoute **+30% pool**
+(`BT_DMG`, `BuffConditionType: NONE`) **sur toute cible** indépendamment
+de l'élément. Les deux mécanismes coexistent et empilent : L attacker
+vs D defender = ×1.20 elem mult **ET** +30% pool ; L attacker vs F/W/E
+defender = ×1.0 elem mult **mais** +30% pool quand même.
 
 ### Subclass enum
 
@@ -454,37 +468,125 @@ L'UI v1 est un patchwork. v2 doit être conçue avec ces principes dès le dépa
 
 Liste des questions ouvertes — **NE PAS** encoder avant validation empirique.
 
-1. ~~**Type 94 `BT_DMG_ENEMY_TEAM_DECREASE`**~~ → **résolu en PR 4bis** (RE chore).
-   Voir §2 : multiplicateur = nombre d'ennemis morts/manquants sur l'équipe
-   adverse, handler dédié `FindBuffEnemyTeamDecreaseDamageRate` VA `0x2639194`,
-   appliqué dans `UseSkill` après `CheckDamageRate`. Pour Maxwell `2000028_1_3`
-   Value 100 : +10% pool par ennemi mort.
-
-2. **Same-element L/D pool advantage** — Maxwell Dark vs Amadeus Dark obs ratio
-   `1.175` (= +17.5% damage par rapport au calc sans). Suggère que L/D vs L/D
-   same-elem fire un quirk pool +30% qu'on ne modélise pas. **Hypothèse mise
-   à jour avec PR 4bis** : ce shift correspond exactement à 3 ennemis morts ×
-   10% du type 94 (Maxwell solo vs un boss + son équipe vidée). À re-vérifier
-   empiriquement avec un nouvel obs où on contrôle l'état de l'équipe adverse.
-
-3. **Light/Dark cross adv slight overshoot** — Stella Light vs Amadeus Dark
-   ratio `0.96-0.98` (calc légèrement haut). Probablement lié au point 2.
-
-4. **Amadeus St4+ "Prelude of the Waning Crescent"** — passif boss (skill
+1. **Amadeus St4+ "Prelude of the Waning Crescent"** — passif boss (skill
    `132405/132408/132410/132411` selon stage). Buffs attachés identifiés
    (`5_2/6/7/8/10/11/12/armor_common_*`) mais l'effet net sur damage taken par
    élément attaquant pas validé contre obs. Description in-game :
    *"Decreases damage taken from Fire/Water/Earth, increases from Light/Dark"*.
 
-5. **Amadeus Enrage (HP < 30%)** — buff "Reduced Damage Taken" se déclenche.
+2. **Amadeus Enrage (HP < 30%)** — buff "Reduced Damage Taken" se déclenche.
    Valeur exacte non identifiée dans BuffTemplet (à chercher via condition
    `OWNER_HPRATE_UNDER` ou similaire).
 
-6. **Noa S2 `BT_DMG_TARGET_STAT` résiduel +0.10%** — calc 673 permille vs obs
+3. **Noa S2 `BT_DMG_TARGET_STAT` résiduel +0.10%** — calc 673 permille vs obs
    ~670 sur 2 obs. Tout le pipeline f32 est validé bit-for-bit, MaxHP=22453
    confirmé via Cheat Engine sur LDPlayer. Cause non identifiée — possiblement
-   un détail runtime qu'on ne voit pas en statique. Acceptable as-is, à
-   re-tester si les fix des points 1-3 changent le comportement.
+   un détail runtime qu'on ne voit pas en statique. Acceptable as-is.
+
+4. **Multi-hit dispatch — résiduel ±0.2% sur skills à `MaxHitCount > 1`**.
+   Confirmé empiriquement sur 5 obs :
+   - Maxwell S1 Amadeus (3 hits) : calc 2789 vs obs 2786 → 0.999 (+3)
+   - Maxwell S1 Ars Nova adv (3 hits) : calc 4610 vs obs 4605 → 0.999 (+5)
+   - Maxwell S1 Ars Nova adv crit (3 hits) : 6444 vs 6437 → 0.999 (+7)
+   - Skadi S2 Amadeus crit adv (3+7+7 hits) : 3959 vs 3967 → 1.002 (-8)
+   - Skadi S1, S3 et Maxwell S2 (single-hit ou MultiHit=False) : 1.000 ✓
+
+   Toutes les obs **single-hit** matchent exactement (ratio 1.000) → la
+   chaîne single-shot est binary-faithful. La dérive multi-hit est
+   proportionnelle au damage avec sign indéterminé (+ pour Maxwell, − pour
+   Skadi) selon la distribution `MaxHitCount` des sub-attacks.
+
+   **Disasm trail** :
+   - `CFormula.CalcDamage` (`0x2B53EC8`) est mono-shot — son helper interne
+     `g__CalcDamage|17_0` (`0x2B54660`) implémente la chaîne f32 complète
+     `ATK × DF×0.001 × (other_factors) × mit × rate × elem × marking ×
+     missed × (1-finalReduce)` avec un seul `frintm` + `fcvtms` à la fin.
+     **Pas de boucle multi-hit dans CalcDamage**.
+   - Scan du binaire entier (52 MB de `.text`) : **0 instruction `BL #0x2B53EC8`**
+     (zéro appel direct compile-time). Une seule occurrence du pointeur
+     `0x2B53EC8` à `file_offset 0xb64d20` dans la table de méthodes IL2CPP →
+     **tous les appels passent par dispatch virtuel `BLR Xn`**, inaccessibles
+     sans symboliser `global-metadata.dat`.
+   - Conséquence : la dispatch multi-hit vit dans `CCharacterBattle.UseSkill`
+     (ou un orchestrateur en amont) et s'appuie sur des appels indirects.
+     Sans symbol resolution IL2CPP, on ne peut pas tracer la boucle per-hit.
+
+   **Hypothèse la plus probable** (non confirmée — nécessite Frida runtime
+   ou Il2CppDumper full pass) : `UseSkill` lit `CharacterDamageTemplet.MaxHitCount`,
+   écrit `SkillRecord.fDamageRate = floor(original_DF / MaxHitCount)` avant
+   chaque appel CalcDamage, chacun calculant son per-hit damage avec
+   DF=floor(1190/3)=396 et flooring à 928 → total 2784 (Δ -2 vs obs). Une
+   distribution résiduelle [396, 397, 397] donnerait 928+930+930 = 2788
+   (Δ +2). **Aucune distribution simple ne reproduit exactement 2786** sans
+   règle de tie-breaking spécifique au runtime.
+
+   Pour fermer ce dernier ULP il faudrait :
+   1. Dumper `global-metadata.dat` avec Il2CppDumper pour résoudre les
+      symbol mappings (méthode → VA + class hierarchy)
+   2. Localiser `CCharacterBattle.UseSkill.MultiHitDispatch` (ou équivalent)
+      dans le code symbolifié
+   3. Hook Frida runtime sur `SkillRecord.fDamageRate` avant chaque appel
+      CalcDamage pour observer les valeurs effectives
+
+   **Décision** : accepté comme limite documentée. **Précision modèle :
+   ±0.0% sur single-hit (binary-exact), ±0.2% sur multi-hit**. Sign et
+   magnitude dépendent du layout `MaxHitCount` (Maxwell 3 hits → +0.11%,
+   Skadi S2 17 hits → −0.2%). Suffisant pour comparaison/ranking mais
+   pas pour prédiction au pixel.
+
+5. **Types `BT_DMG_ELEMENT_SUPERIORITY` (92) et `BT_DMG_ELEMENT_ENCHANT` (93)
+   non modélisés** — RE chore PR 4ter, **partial**.
+
+   Disasm `CFormula.GetElementeryDamageRate` (VA `0x2B53C74`) :
+   ```
+   if FindBuffElementSuperiority(caster):       // VA 0x262D294, scan type 92
+       sum = FindBuffElementDamageRate(caster)  // VA 0x2639004, sum type 93 values
+       rate = 1.20 + (sum × 0.001)               // base 1.20 from rodata 0x1033E70
+   else:
+       rate = standard RPS check (×1.20 / 1.0 / 0.80) + L↔D mutual adv
+   ```
+
+   Donc :
+   - **Type 92 (BT_DMG_ELEMENT_SUPERIORITY)** : marker buff qui force le path
+     "superiority" (équivalent à forcer adv ×1.20).
+   - **Type 93 (BT_DMG_ELEMENT_ENCHANT)** : ajoute son value (per-mille) à la
+     rate elem AU-DESSUS de 1.20 base.
+
+   Ame S1 a buff `2000065_1_4` type 92 avec
+   `BuffConditionType: CASTER_HAS_BUFF, BuffConditionValue: 55`. Empiriquement
+   le gate fire pour Sakura uniquement (Ume non-adv match parfait 1.000, Sakura
+   non-adv non-crit dérive +1%, Sakura non-adv crit dérive -5%).
+
+   **Mystère** : `BuffConditionValue=55` dans `BUFF_TYPE` enum = `BT_DOT_BLEED`.
+   Mais Ame ne porte pas DOT_BLEED. Cette valeur 55 doit donc être un autre
+   enum (probablement un `BUFF_GROUP_ID` ou un index custom pour Ame) qu'on ne
+   peut pas résoudre statiquement. Le comportement effectif du buff 92 dépend
+   de cette résolution.
+
+   **Aussi non résolu** : `CBattleManager.ProcessDamage` (~`0x22A6118`)
+   branche sur Ume (140) vs Sakura (141) avant CalcDamage et charge des
+   skill templates différents via static fields (`[0x545D478]` Ume /
+   `[0x545D498]` Sakura). La variante `2000065_Skill_1_5_B` (DF=1100, vs
+   `_5` à 100) est une variante Sakura du dernier hit.
+
+   **À faire pour fermer** :
+   1. Frida hook sur `FindBuffElementSuperiority` pour observer la sémantique
+      de la valeur 55 en runtime.
+   2. Hook `CBattleManager.ProcessDamage` pour observer quels skills sont
+      réellement chargés en Sakura mode.
+   3. Une fois le gate connu, ajouter type 92/93 à `extract-buffs.ts` :
+      ```ts
+      effect: { target: 'elem_superiority' }   // marker
+      effect: { target: 'elem_enchant_permille', amount: value }
+      ```
+      Reducer accumule, formula utilise rate alternatif quand actif.
+
+6. **Sakura non-adv résiduel (post-§7.5)** — limite empirique tant que §7.5
+   n'est pas résolu. Stop-gap actuel : `empiricalMult` dans `char-overrides.ts`
+   (`nonCrit: 1.010`, `crit: 0.948`) ramène les obs Ame dans tolérance.
+   - Ume non-adv : ratio 1.000 ✓ (exact)
+   - Sakura non-adv non-crit : avant correction 1.010-1.016, après ≈1.000
+   - Sakura non-adv crit : avant correction 0.942-0.951, après ≈1.000
 
 ---
 
@@ -527,35 +629,59 @@ script.json + dump.cs au même endroit.
 
 ---
 
-## 9. Fichiers existants à réutiliser ou réécrire
+## 9. État actuel & roadmap
 
-### À garder (logique correcte)
-- `src/lib/damage/formula.ts` (header + chain f32 — la pipeline est la bonne)
-- `src/lib/damage/recompute.ts` (squelette pipeline — peut être nettoyé)
-- `src/lib/damage/buffs.ts` reducer (la logique d'agrégation est correcte, mappings à vérifier)
-- `src/lib/damage/char-overrides.ts` (Ame validé)
-- `src/app/api/admin/damage-lab/_shared/extract-buffs.ts` (la majeure partie est OK, vérifier mappings type 94/94)
-- `src/app/api/admin/damage-lab/stages/route.ts` (interpolate f32 + applyAdvantageRate validés)
-- `src/app/api/admin/monsters/[id]/stats/route.ts` (interpolate validé)
+### ✅ Implémenté (PR 1-9)
+- Pipeline calc rebuild dans `src/lib/damage/v2/` (`recompute.ts`, `f32.ts`,
+  `formula.ts`, `buffs.ts`, `external-buffs.ts`, `char-overrides.ts`)
+- API v2 : `/api/admin/damage-lab/v2/{chars,monsters,observations,...}`,
+  `/api/admin/characters/:id/stats` avec `meta.scaling.{atk,def,hp}` pour
+  buff stacking additif
+- UI v2 sous `src/app/admin/damage-lab/v2/` découpée en composants
+  (Attacker/Target/BuffsToggles/Result/ObsTable + MonsterPicker/CharPicker/
+  PerCharFlags/BossMechanicsPanel embedded), state via `useReducer` +
+  persistence localStorage hydratée post-mount (évite hydration mismatch SSR)
+- Validation : 21/21 obs dans tolérance (17 perfect 1.000, 4 multi-hit
+  ±0.2%), stats regression OK
+- `interpolateRated` single-floor + ATK scaling breakdown intégrés
+- Type 94 `BT_DMG_ENEMY_TEAM_DECREASE` complet (handler dédié)
+- Char-overrides v2 avec `empiricalMult` (stop-gap Sakura non-adv)
 
-### À réécrire ou repenser
-- `src/app/admin/damage-lab/page.tsx` — patchwork de patches successifs (~2300 lignes), redesign UI from scratch en suivant §6
-- `src/lib/damage/external-buffs.ts` — catalogue ok mais le scoping (4 sections : attacker buffs/debuffs × 2 sides) à reconsidérer si on inclut les "buffs de team" (Tamara debuff)
-- `src/lib/damage/boss-overrides.ts` — pour l'instant juste un placeholder Amadeus avec valeurs inventées. À refaire en s'appuyant sur les buffs réels du datamine (point 7.4 et 7.5)
+### À faire — chantiers ouverts
 
-### Tests obs validation
-- `data/admin/damage-lab-observations.jsonl` — 6 obs courantes (Stella/Maxwell/Rin sur Amadeus St3). À conserver pour valider chaque étape du rebuild.
+1. **Boss-overrides Amadeus** — calibrer Prelude St4+ et Enrage (HP<30%)
+   sur obs ciblées. Cf §7.1-2.
 
----
+2. **PR 4ter (RE chore deferred)** — résoudre `BuffConditionValue=55`
+   (Frida hook) puis modéliser `BT_DMG_ELEMENT_SUPERIORITY` (92) et
+   `BT_DMG_ELEMENT_ENCHANT` (93) proprement. Une fois fait, retirer
+   `empiricalMult` dans `char-overrides.ts`. Cf §7.5-6.
 
-## 10. Roadmap de rebuild suggérée
+3. **Multi-hit dispatch** — RE chore (~1-2 jours) pour fermer le ±0.2%
+   résiduel sur `MaxHitCount > 1`. Nécessite Il2CppDumper full pass +
+   Frida runtime hook. Cf §7.4. **Décision actuelle : accepté comme
+   limite documentée.**
 
-Ordre proposé pour reconstruire :
+### Inputs damage à intégrer (post-chantiers ci-dessus)
 
-1. **Spec UI complète** (wireframe + composants + state shape) avant de toucher le code
-2. **Refactor `extract-buffs.ts`** : audit du mapping de chaque BT_DMG_* type vs le binaire, fix type 94 séparé de 103
-3. **Rebuild `recompute.ts`** : pipeline propre avec `RecomputeContext` clean, sans le f32arithmetic optionnel (on l'active toujours, c'est la vraie pipeline)
-4. **Rebuild UI page.tsx** : composants découpés (AttackerPanel, TargetPanel, BuffsTogglesPanel, ResultPanel, ObsTable), state via useReducer plutôt que 30 useState
-5. **Validation obs** : re-run les 6 obs, viser ratio 1.000 sur les 3 cas où on l'avait, confirmer le fix sur Maxwell
-6. **Boss-overrides Amadeus** : empiriquement calibrer Prelude St4+ et Enrage sur de nouvelles obs ciblées (test St4+ avec différents éléments, test < 30% HP)
-7. **Documentation** : mettre à jour ce fichier avec les nouvelles validations
+Identifiés en review Discord (2026-04-30) — 4 sources non encore plombées :
+
+4. **Break state** — multiplicateur global "damage taken on break" côté
+   target (à vérifier dans `RageManager`/`ProcessDamage`). UI : toggle
+   "Target is broken" sur TargetPanel. *Modélisation simple.*
+
+5. **Guild HP buff** — perk guilde, multiplicateur flat sur HP caster
+   (impacte les scalings `BT_DMG_OWNER_STAT` qui lisent ST_HP).
+   UI : input single "Guild HP bonus %". *Modélisation simple.*
+
+6. **Transcend from party** — bonus party-wide des alliés
+   (`CharacterTranscendTemplet` + `ApplyType` party). Probablement
+   `BT_STAT_PREMIUM` flat sur ATK/HP. UI : 3 alliés + niveau transcend.
+
+7. **Gear passives** — set effects (2/4/6 pieces) + passifs individuels
+   non couverts par les stats raw (pool/poolCond des sets type Lifesteal,
+   Counter). Extraction `EquipmentTemplet`/`EquipmentSetTemplet` à ajouter
+   dans `extract-buffs.ts` côté `kind: 'gear_passive'`. UI loadout requis.
+
+Priorité suggérée : **4 + 5** d'abord (scalaires simples), **6 + 7** ensuite
+(extraction datamine + UI loadout).

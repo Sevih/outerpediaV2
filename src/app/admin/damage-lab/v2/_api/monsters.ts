@@ -98,3 +98,26 @@ export async function fetchMonsterStats(
   if (!res.ok) throw new Error(`fetchMonsterStats: ${res.status}`)
   return res.json()
 }
+
+// Re-exported from the server module for client typing.
+export type {
+  MonsterMechanics, MonsterPassive, MonsterPassiveBuff,
+} from '@/lib/damage/v2/extract-monster'
+
+import type { MonsterMechanics } from '@/lib/damage/v2/extract-monster'
+
+/**
+ * Fetch the structured passive mechanics for a monster. Returns null if the
+ * monster has no entry, no passives, or the call errors out (panel stays
+ * hidden). Network failures are non-fatal — the lab keeps working without
+ * boss-specific overrides.
+ */
+export async function fetchMonsterMechanics(monsterId: string): Promise<MonsterMechanics | null> {
+  try {
+    const res = await fetch(`/api/admin/damage-lab/v2/monsters/${monsterId}/mechanics`)
+    if (!res.ok) return null
+    return (await res.json()) as MonsterMechanics
+  } catch {
+    return null
+  }
+}

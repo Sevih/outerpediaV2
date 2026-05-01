@@ -130,6 +130,28 @@ export function MonsterPicker({
     [selectedModeEntry, selectedStageId],
   )
 
+  // Auto-select the monster when the stage exposes a single one (e.g. raid
+  // bosses like Amadeus St3 — only Amadeus on the field). Saves the operator
+  // a click. Counts uniques by monsterId across all waves; only fires when
+  // exactly one and nothing is already selected (avoids fighting loadFromObs).
+  useEffect(() => {
+    if (!selectedStage || selectedMonsterId) return
+    const seen = new Set<string>()
+    let pick: { id: string; name: string; element: string; isBoss: boolean } | null = null
+    for (const w of selectedStage.waves) {
+      for (const m of w.monsters) {
+        if (seen.has(m.monsterId)) continue
+        seen.add(m.monsterId)
+        if (seen.size > 1) return  // multiple monsters → operator picks
+        pick = { id: m.monsterId, name: m.name, element: m.element, isBoss: m.isBoss }
+      }
+    }
+    if (pick) onSelectMonster(pick)
+    // `onSelectMonster` is a stable parent dispatch — excluded to avoid
+    // re-firing on every render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedStage, selectedMonsterId])
+
   // Final stages list to render in the Stage select. When the current mode
   // resolves to a single dungeon, skip the Dungeon select and dump its stages
   // directly. Story stages are sorted by stageNum so 9-10/9-11/9-12 line up

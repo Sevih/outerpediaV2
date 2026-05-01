@@ -12,7 +12,7 @@
 import type { CallerSlot } from '@/lib/damage/v2/buffs'
 import type { CharFlags } from '@/lib/damage/v2/char-overrides'
 import type { ExternalBuffState } from '@/lib/damage/v2/external-buffs'
-import type { BossMechanicState } from '@/lib/damage/v2/boss-overrides'
+import type { BossMechanicState, BossOverride } from '@/lib/damage/v2/boss-overrides'
 import type { StatScaling } from '../_api/chars'
 
 export interface CharSummary {
@@ -134,7 +134,17 @@ export interface FormState {
   attacker: AttackerState
   target: TargetState
   externalBuffs: Record<string, ExternalBuffState>
+  /**
+   * Boss-mechanic toggle states (active + multiplier value), keyed by
+   * passive `skillId`. Persisted across form reloads.
+   */
   bossMechanics: Record<string, BossMechanicState>
+  /**
+   * Currently-loaded boss override (definitions: skill → label / description /
+   * default mult). Re-fetched from `/v2/monsters/[id]/mechanics` whenever the
+   * monster changes — null when the target has no damage-relevant passive.
+   */
+  bossOverride: BossOverride | null
   poolConds: PoolCondState
   ui: { showDebug: boolean }
 }

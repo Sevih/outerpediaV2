@@ -83,7 +83,13 @@ export type PoolCondition =
   | 'monadgate_content' | 'tower_content'
 
 // ── Trigger ──────────────────────────────────────────────────────────────
-export type TriggerCondition = 'always' | 'boss' | 'crit' | 'adv' | 'disadv' | 'neutral'
+/**
+ * `resource` = `BuffConditionType: OWNER_RESOURCE` — gates a buff on the
+ * caster having maxed their unique resource stack (Noa's Kaizer Energy 5/5,
+ * etc.). The lab surfaces this as a `CharFlags.ownerResourceMax` toggle so
+ * the operator can model "S3 cast at full resource" runs.
+ */
+export type TriggerCondition = 'always' | 'boss' | 'crit' | 'adv' | 'disadv' | 'neutral' | 'resource'
 export type CallerSlot = 'S1' | 'S2' | 'S3'
 export interface BuffTrigger {
   requires: TriggerCondition
@@ -180,6 +186,12 @@ export interface BuffContext {
   inMonadGate?: boolean
   inTower?: boolean
   inPvp?: boolean
+  /**
+   * Caster has their unique resource stack maxed (Noa: Kaizer Energy 5/5,
+   * etc.). Gates buffs whose `BuffConditionType: OWNER_RESOURCE` triggered
+   * `requires: 'resource'`. Surfaced via `CharFlags.ownerResourceMax`.
+   */
+  ownerResourceMax?: boolean
 }
 
 // ── Reducer output ───────────────────────────────────────────────────────
@@ -340,11 +352,12 @@ function appliesToCaster(at: AppliesTo, ctx: BuffContext): boolean {
 function triggerMatches(t: BuffTrigger, ctx: BuffContext): boolean {
   if (t.callerSlots !== 'all' && !t.callerSlots.includes(ctx.slot)) return false
   switch (t.requires) {
-    case 'always':  return true
-    case 'boss':    return ctx.isBoss
-    case 'crit':    return ctx.crit
-    case 'adv':     return ctx.elem === 'adv'
-    case 'disadv':  return ctx.elem === 'disadv'
-    case 'neutral': return ctx.elem === 'none'
+    case 'always':   return true
+    case 'boss':     return ctx.isBoss
+    case 'crit':     return ctx.crit
+    case 'adv':      return ctx.elem === 'adv'
+    case 'disadv':   return ctx.elem === 'disadv'
+    case 'neutral':  return ctx.elem === 'none'
+    case 'resource': return !!ctx.ownerResourceMax
   }
 }

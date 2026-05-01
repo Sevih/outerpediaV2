@@ -21,9 +21,7 @@
 
 import type { CallerSlot } from '@/lib/damage/v2/buffs'
 import type { CharFlags } from '@/lib/damage/v2/char-overrides'
-import {
-  getBossOverride, makeDefaultBossMechanicsState,
-} from '@/lib/damage/v2/boss-overrides'
+import type { BossMechanicState, BossOverride } from '@/lib/damage/v2/boss-overrides'
 import {
   makeDefaultExternalBuffsState, type ExternalBuffState,
 } from '@/lib/damage/v2/external-buffs'
@@ -60,9 +58,17 @@ export type FormAction =
   // External buffs / debuffs
   | { type: 'externalBuff/toggle';   id: string; active: boolean }
   | { type: 'externalBuff/setValue'; id: string; value: number }
-  // Boss mechanics
+  // Boss mechanics — toggle on/off only. Effects evaluate from the override's
+  // raw buff list (cf. recompute.ts step 5). No multiplier knob.
   | { type: 'bossMechanic/toggle';   id: string; active: boolean }
-  | { type: 'bossMechanic/setValue'; id: string; value: number }
+  /**
+   * Set the boss override (definitions + buffs) for the currently-selected
+   * monster. Dispatched by a useEffect after `/v2/monsters/[id]/mechanics`
+   * resolves. Merges with existing toggle states so a page reload preserves
+   * the operator's picks. Pass `null` when no monster is selected or it has
+   * no damage-relevant passive.
+   */
+  | { type: 'bossMechanic/setOverride'; override: BossOverride | null }
   // Pool conditions
   | { type: 'poolCond/patch';        patch: Partial<PoolCondState> }
   | { type: 'poolCond/reset' }
@@ -96,6 +102,7 @@ export function makeInitialFormState(): FormState {
     },
     externalBuffs: makeDefaultExternalBuffsState(),
     bossMechanics: {},
+    bossOverride: null,
     poolConds: makeDefaultPoolConds(),
     ui: { showDebug: false },
   }
@@ -210,6 +217,7 @@ export function formReducer(state: FormState, action: FormAction): FormState {
           isBoss: false,
         },
         bossMechanics: {},
+        bossOverride: null,
       }
 
     case 'target/setStage':
@@ -224,11 +232,14 @@ export function formReducer(state: FormState, action: FormAction): FormState {
           isBoss: false,
         },
         bossMechanics: {},
+        bossOverride: null,
       }
 
     case 'target/setMonster': {
+      // Don't init bossMechanics here — the override comes async via
+      // `bossMechanic/setOverride` after the API fetch resolves. Until
+      // then, panel stays hidden.
       const m = action.monster
-      const override = getBossOverride(m.id)
       return {
         ...state,
         target: {
@@ -238,7 +249,8 @@ export function formReducer(state: FormState, action: FormAction): FormState {
           element: m.element,
           isBoss: m.isBoss,
         },
-        bossMechanics: makeDefaultBossMechanicsState(override),
+        bossMechanics: {},
+        bossOverride: null,
       }
     }
 
@@ -296,24 +308,27 @@ export function formReducer(state: FormState, action: FormAction): FormState {
         ...state,
         bossMechanics: {
           ...state.bossMechanics,
-          [action.id]: {
-            ...(state.bossMechanics[action.id] ?? { active: false, value: 1.0 }),
-            active: action.active,
-          },
+          [action.id]: { active: action.active },
         },
       }
 
-    case 'bossMechanic/setValue':
+    case 'bossMechanic/setOverride': {
+      // Merge: preserve existing state for keys that still exist in the new
+      // override (so a page reload doesn't wipe the operator's toggle picks),
+      // default-init keys that didn't exist before. Drop keys that aren't in
+      // the new override.
+      const next: Record<string, BossMechanicState> = {}
+      if (action.override) {
+        for (const m of action.override.mechanics) {
+          next[m.id] = state.bossMechanics[m.id] ?? { active: false }
+        }
+      }
       return {
         ...state,
-        bossMechanics: {
-          ...state.bossMechanics,
-          [action.id]: {
-            ...(state.bossMechanics[action.id] ?? { active: false, value: 1.0 }),
-            value: action.value,
-          },
-        },
+        bossOverride: action.override,
+        bossMechanics: next,
       }
+    }
 
     // ── Pool conditions ──────────────────────────────────────────────────
     case 'poolCond/patch':
@@ -350,7 +365,13 @@ export function formReducer(state: FormState, action: FormAction): FormState {
           statsAuto: { ...state.target.statsAuto, ...(loaded.target?.statsAuto ?? {}) },
         },
         externalBuffs: loaded.externalBuffs ?? state.externalBuffs,
+        // bossOverride is fetched fresh on monster select — don't restore
+        // a stale override from localStorage. bossMechanics state (toggle
+        // values) is restored if present so the user's last picks survive
+        // reload, then the page-level effect fetches the override and
+        // re-merges via setOverride if monsterId is the same.
         bossMechanics: loaded.bossMechanics ?? state.bossMechanics,
+        bossOverride: null,
         poolConds: { ...state.poolConds, ...(loaded.poolConds ?? {}) },
         ui: { ...state.ui, ...(loaded.ui ?? {}) },
       }
@@ -375,7 +396,10 @@ export function formReducer(state: FormState, action: FormAction): FormState {
           statsAuto: { def: false, dmgRed: false, cdmgRed: false, hp: false },
         },
         externalBuffs: action.payload.externalBuffs ?? init.externalBuffs,
-        bossMechanics: makeDefaultBossMechanicsState(getBossOverride(action.payload.target.monsterId)),
+        // bossOverride is fetched async after loadFromObs — page-level
+        // effect on monsterId change re-runs the fetch.
+        bossMechanics: {},
+        bossOverride: null,
         poolConds: { ...init.poolConds, ...(action.payload.poolConds ?? {}) },
         ui: state.ui,
       }

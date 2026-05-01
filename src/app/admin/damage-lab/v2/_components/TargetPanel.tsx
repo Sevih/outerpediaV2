@@ -40,14 +40,13 @@ interface TargetPanelProps {
   onAutoFill?: () => void
   onPoolCondChange: (patch: Partial<PoolCondState>) => void
   onBossMechanicToggle: (id: string, active: boolean) => void
-  onBossMechanicValueChange: (id: string, value: number) => void
 }
 
 export function TargetPanel({
   state, modeEntries, selectedMonsterMeta, poolConds, applicablePoolConds,
   bossOverride, bossMechanicsState,
   onChange, onSelectMode, onSelectStage, onSelectMonster, onAutoFill, onPoolCondChange,
-  onBossMechanicToggle, onBossMechanicValueChange,
+  onBossMechanicToggle,
 }: TargetPanelProps) {
   const [showConstants, setShowConstants] = useState(false)
 
@@ -155,7 +154,6 @@ export function TargetPanel({
           override={bossOverride}
           state={bossMechanicsState}
           onToggle={onBossMechanicToggle}
-          onValueChange={onBossMechanicValueChange}
         />
 
         <div className="border-t border-zinc-800 pt-2">
@@ -279,7 +277,7 @@ function BoolField({ label, checked, onChange }: {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded border border-zinc-800 bg-zinc-900/40 p-3">
+    <div className="min-w-0 rounded border border-zinc-800 bg-zinc-900/40 p-3">
       <h2 className="mb-2 text-xs font-semibold uppercase tracking-wider text-zinc-400">{title}</h2>
       {children}
     </div>

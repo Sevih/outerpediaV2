@@ -28,8 +28,8 @@ import {
   type ExternalBuffState, type ExternalBuffSums,
 } from './external-buffs'
 import {
-  aggregateBossMechanics, getBossOverride,
-  type BossMechanicState,
+  aggregateBossPassiveModifiers,
+  type BossMechanicState, type BossOverride,
 } from './boss-overrides'
 
 export type ElemRelation = 'none' | 'adv' | 'disadv'
@@ -37,7 +37,12 @@ export type { CallerSlot, CharFlags }
 
 // ── Element relations ────────────────────────────────────────────────────
 // Fire > Earth > Water > Fire (rps trio).
-// Light ↔ Dark mutual advantage — both directions resolve to 'adv'.
+// Light ↔ Dark mutual advantage — both directions resolve to 'adv' (×1.20
+// elem mult). Validated empirically on Maxwell Dark → Ars Nova Light (3
+// obs) and Skadi Light → Amadeus Dark (5 obs) at ratio 1.000.
+// Note: the awakening passive Awakening_Element_Dmg_Dark_Light_10
+// (BT_DMG +300‰, condition NONE) ADDS +30% pool on top of the elem
+// mult — both mechanisms stack.
 const ELEMENT_ADV: Record<string, string> = {
   Fire: 'Earth', Earth: 'Water', Water: 'Fire',
   Light: 'Dark', Dark: 'Light',
@@ -125,9 +130,22 @@ export interface RecomputeContext {
   ratioDivisor?: number
   // Click-toggleable buffs/debuffs surfaced in the lab UI.
   externalBuffs?: Record<string, ExternalBuffState>
-  /** Identifies which boss override is active (matched by `monsterId.startsWith`). */
+  /** Monster ID (kept on context for obs save/load — informational). */
   monsterId?: string
+  /**
+   * Toggle states for boss-mechanic activations, keyed by passive `skillId`
+   * (or `'enrage'`). When a mechanic is active, its raw datamine buffs are
+   * evaluated (against `ctx.elem` + `ctx.charElement`) and folded into the
+   * formula's damage-reduction sum.
+   */
   bossMechanics?: Record<string, BossMechanicState>
+  /**
+   * Boss override definitions (loaded from `/v2/monsters/[id]/mechanics`).
+   * Required to evaluate `bossMechanics` toggles — the def carries each
+   * passive's raw `buffs` list. `null` / undefined means no active boss
+   * mechanic affects this calc.
+   */
+  bossOverride?: BossOverride | null
 }
 
 export interface RecomputeResult {
@@ -212,6 +230,9 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     inMonadGate:            ctx.inMonadGate,
     inTower:                ctx.inTower,
     inPvp:                  ctx.inPvp,
+    // Caster-side resource gate (Noa Kaizer Energy 5/5, etc.). Surfaced
+    // via `CharFlags.ownerResourceMax` toggle in the lab UI.
+    ownerResourceMax:       !!ctx.charFlags?.ownerResourceMax,
   }
 
   // ── 3. Filter + reduce buffs ──────────────────────────────────────────
@@ -230,6 +251,10 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
   const override = getCharOverride(ctx.charId, ctx.slot)
   let mainDF = ctx.damageFactor
   let addRatio = ctx.additionalAttackRatio
+  // Empirical post-formula multiplier for chars whose game-code logic isn't
+  // fully RE'd (e.g. Ame Sakura non-adv). Composed across conditionals; only
+  // applies when the ADD path was taken (replaceOnAdv didn't fire).
+  let charEmpiricalMult = 1
   if (override) {
     if (override.dfMultiplier != null) mainDF = ctx.damageFactor * override.dfMultiplier
     for (const cond of override.conditionals ?? []) {
@@ -238,6 +263,10 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
         mainDF = mainDF * cond.ratio
       } else {
         addRatio = cond.ratio
+        if (cond.empiricalMult) {
+          const m = ctx.crit ? cond.empiricalMult.crit : cond.empiricalMult.nonCrit
+          if (m != null) charEmpiricalMult *= m
+        }
       }
     }
   }
@@ -245,7 +274,20 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     ? mainDF * addRatio
     : 0
 
-  // ── 5. Compute damage ─────────────────────────────────────────────────
+  // ── 5. Boss mechanic deltas ───────────────────────────────────────────
+  // Active boss passives contribute additively to the target's DR (and to
+  // the post-formula final-reduce when applicable). Evaluated against the
+  // current element matchup so per-buff gates (ATTACKER_ELEMENT_*,
+  // TARGET_ELEMENT=N) fire deterministically — no manual multiplier.
+  const bossMods = ctx.bossOverride && ctx.bossMechanics
+    ? aggregateBossPassiveModifiers(
+        ctx.bossOverride,
+        ctx.bossMechanics,
+        { elem: ctx.elem, attackerElement: ctx.charElement },
+      )
+    : { dmgRedPctDelta: 0, finalReducePctDelta: 0 }
+
+  // ── 6. Compute damage ─────────────────────────────────────────────────
   // All quirk increases (boss +30, mage +12, adv +50, etc.) flow through
   // `dmgIncPct` via the reducer's `poolPct`. Crit's CHD/CDR + target DR are
   // handled inside `computeDamage`.
@@ -259,7 +301,7 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     crit:              ctx.crit,
     def:               effTargetDef,
     cdmgRedPct:        ctx.targetCdmgRed,
-    dmgRedPct:         ctx.targetDmgRed,
+    dmgRedPct:         ctx.targetDmgRed + bossMods.dmgRedPctDelta,
     isBoss:            ctx.isBoss,
     elem:              ctx.elem,
     targetStatPermille: reduced.targetStatPermille,
@@ -267,20 +309,19 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     ratioDivisor:      ctx.ratioDivisor ?? 1000,
   })
 
-  // ── 6. Boss-specific damage-taken multiplier ──────────────────────────
-  // Applied AFTER the standard formula. For Amadeus: Prelude of Waning Crescent
-  // (St4+ Fire/Water/Earth reduction) and Enrage (HP < 30% reduced damage taken).
-  const bossOverride = getBossOverride(ctx.monsterId)
-  const bossMult = ctx.bossMechanics
-    ? aggregateBossMechanics(bossOverride, ctx.bossMechanics)
+  // ── 7. Post-formula multipliers ───────────────────────────────────────
+  // Char-empirical (RE-pending Ame Sakura non-adv) + active boss
+  // BT_DMG_REDUCE_FINAL contributions. Re-floor once after the combined
+  // mult so the breakdown numbers stay consistent with the integer output.
+  const finalReduceMult = bossMods.finalReducePctDelta !== 0
+    ? Math.max(0, 1 - bossMods.finalReducePctDelta / 100)
     : 1.0
+  const postMult = charEmpiricalMult * finalReduceMult
   let calculated = breakdown.calculated
-  if (bossMult !== 1.0) {
-    // Re-floor after the boss-mult so we still emit an integer.
-    calculated = Math.max(1, Math.floor(breakdown.mainCalc * bossMult + breakdown.additionalCalc * bossMult))
-    // Patch breakdown to surface the post-mult values for the UI.
-    breakdown.mainCalc       = breakdown.mainCalc       * bossMult
-    breakdown.additionalCalc = breakdown.additionalCalc * bossMult
+  if (postMult !== 1.0) {
+    calculated = Math.max(1, Math.floor(breakdown.mainCalc * postMult + breakdown.additionalCalc * postMult))
+    breakdown.mainCalc       = breakdown.mainCalc       * postMult
+    breakdown.additionalCalc = breakdown.additionalCalc * postMult
     breakdown.calculated     = calculated
   }
 
