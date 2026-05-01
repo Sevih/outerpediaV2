@@ -28,3 +28,34 @@ export type {
   DamageCalcAwakeningBuffs,
   DamageCalcCharBuffs,
 } from './buffs'
+
+export {
+  getDamageCalcMonsters,
+} from './monsters'
+
+export type {
+  DamageCalcLangMap,
+  DamageCalcMonsterStats,
+  DamageCalcMonsterEntry,
+  DamageCalcMonstersFile,
+} from './monsters'
+
+export {
+  getDamageCalcMechanicsIndex,
+  getDamageCalcMechanics,
+} from './mechanics'
+
+export type {
+  DamageCalcMechanicsIndex,
+  DamageCalcMechanicsFile,
+} from './mechanics'
+
+export {
+  getDamageCalcTranscend,
+} from './transcend'
+
+export type {
+  DamageCalcTranscendTier,
+  DamageCalcTranscendCharEntry,
+  DamageCalcTranscendFile,
+} from './transcend'
