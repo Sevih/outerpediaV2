@@ -18,3 +18,13 @@ export type {
   DamageCalcStatsStep,
   DamageCalcCharDetail,
 } from './chars'
+
+export {
+  getDamageCalcAwakeningBuffs,
+  getDamageCalcCharBuffs,
+} from './buffs'
+
+export type {
+  DamageCalcAwakeningBuffs,
+  DamageCalcCharBuffs,
+} from './buffs'

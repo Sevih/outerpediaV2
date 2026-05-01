@@ -1,4 +1,5 @@
 import { buildChars } from './build-chars'
+import { buildBuffs } from './build-buffs'
 
 /**
  * Damage calculator data bake — runs after `characters-index` + `character-stats`
@@ -16,12 +17,10 @@ import { buildChars } from './build-chars'
  * `public/damage-calc/<area>/`.
  */
 export async function run(): Promise<string> {
-  const tasks = [
+  const [chars, buffs] = await Promise.all([
     buildChars(),
-    // future: buildBuffs(), buildMonsters(), buildTranscend()…
-  ] as const
-
-  const results = await Promise.all(tasks)
-  const [chars] = results
-  return `${chars.chars} chars (+${chars.details} details)`
+    buildBuffs(),
+    // future: buildMonsters(), buildTranscend()…
+  ])
+  return `${chars.chars} chars + ${buffs.charFiles} buff files (${buffs.charBuffsCount} char buffs, ${buffs.awakeningCount} awakening)`
 }
