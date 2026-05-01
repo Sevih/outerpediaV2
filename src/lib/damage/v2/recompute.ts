@@ -60,6 +60,22 @@ export function isAdventureLicenseMode(mode: string | undefined): boolean {
   return mode === 'DM_ADVENTURE_MISSION' || mode === 'DM_ADVENTURE_CHALLENGE'
 }
 
+/**
+ * Guild HP buff %-multiplier indexed by guild level (0..10). Values pulled
+ * from `BuffSystemTemplet` `SYS_BUFF_GUILD_MAXHP_LEVEL_*`. Index 0 = no
+ * buff. The API doesn't expose this table; it's frozen here because the
+ * mapping is fixed by game design (verified 2026-04-30).
+ */
+export const GUILD_HP_BY_LEVEL: readonly number[] = [
+  0, 8, 8, 8, 10, 10, 10, 12, 13, 14, 15,
+]
+
+export function guildHpPctForLevel(level: number): number {
+  if (!Number.isFinite(level) || level <= 0) return 0
+  if (level >= GUILD_HP_BY_LEVEL.length) return GUILD_HP_BY_LEVEL[GUILD_HP_BY_LEVEL.length - 1]
+  return GUILD_HP_BY_LEVEL[level]
+}
+
 // ── RecomputeContext ─────────────────────────────────────────────────────
 
 export interface RecomputeContext {
@@ -96,6 +112,15 @@ export interface RecomputeContext {
   } | null
   /** ST_* → numeric, for secondary scaling (Stella HP, Regina CHC). */
   extraStats?: Record<string, number>
+  /**
+   * Guild HP buff percentage applied at battle start
+   * (`BuffSystemTemplet` `EBT_MAX_HP`). Multiplies caster `ST_HP` before the
+   * reducer sees it, so any `BT_DMG_OWNER_STAT`/`BT_SWAP_STAT_ATTACK` on
+   * `ST_HP` picks up the +X% scaling. Zero / undefined = no effect.
+   *
+   * Derived from the user-facing `guildLevel` (0-10) via `GUILD_HP_BY_LEVEL`.
+   */
+  guildHpBuffPct?: number
   // Target inputs — also user-fed (auto mode prefills from monster API).
   targetDef: number
   targetDmgRed: number
@@ -146,6 +171,23 @@ export interface RecomputeContext {
    * mechanic affects this calc.
    */
   bossOverride?: BossOverride | null
+  /**
+   * Target element name (`'Earth' | 'Water' | 'Fire' | 'Light' | 'Dark'`)
+   * — gates EE mainstat buffs whose `BuffConditionType: TARGET_ELEMENT`
+   * resolved to a `target_element_*` requires.
+   */
+  targetElement?: string
+  /** EE equipped — gates `source.kind === 'ee'` buffs in the reducer. */
+  eeEnabled?: boolean
+  /** EE level (0-10) — picks per-level value from `eeLevelValues`. */
+  eeLevel?: number
+  /**
+   * Char ID whose EE is equipped — defaults to `charId`. CF chars wearing
+   * the base char's EE pass the base char ID here so the EE filter selects
+   * the right buff catalog. The reducer's EE buffs are still scoped to a
+   * single char (the wearer), but the wearer can be the base for CF chars.
+   */
+  eeCharId?: string
 }
 
 export interface RecomputeResult {
@@ -164,7 +206,7 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
   // (PEN / CHC / CHD / EFF) use additive points.
   const extSums: ExternalBuffSums = ctx.externalBuffs
     ? aggregateExternalBuffs(ctx.externalBuffs)
-    : { attackerATK: 0, attackerPEN: 0, attackerCHC: 0, attackerCHD: 0, attackerEFF: 0, targetDEF: 0 }
+    : { attackerATK: 0, attackerDEF: 0, attackerPEN: 0, attackerCHC: 0, attackerCHD: 0, attackerEFF: 0, targetDEF: 0 }
 
   // ATK with external buff. When the scaling breakdown is known, replay the
   // chars-stats `calcStat` formula with `pctBonus + buffPct` so a +30% ATK
@@ -184,11 +226,25 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
   if (ctx.extraStats) {
     for (const [k, v] of Object.entries(ctx.extraStats)) statValues[k] = v
   }
+  // Guild HP buff — `BuffSystemTemplet` EBT_MAX_HP boosts the in-combat HP
+  // bar (survival/heal/shield), but `BT_SWAP_STAT_ATTACK` and `BT_DMG_OWNER_STAT`
+  // are PASSIVE buffs that snapshot the BASE max HP at battle start (before
+  // the system buff applies), so the scaling reads pre-guild HP. Empirically
+  // proven on Veronica core fusion S2/S3 (Amadeus, guildLevel=10): obs matches
+  // calc with raw `ST_HP`, not `ST_HP × 1.15`.
+  // → guild buff intentionally NOT applied to `statValues.ST_HP` here.
   if (extSums.attackerEFF !== 0) {
     statValues.ST_BUFF_CHANCE = (statValues.ST_BUFF_CHANCE ?? 0) + extSums.attackerEFF
   }
   if (extSums.attackerCHC !== 0) {
     statValues.ST_CRITICAL_RATE = (statValues.ST_CRITICAL_RATE ?? 0) + extSums.attackerCHC
+  }
+  // Caster Defense Up — boosts `ST_DEF` for DEF-scaling chars (DD if/when
+  // BT_SWAP_STAT_ATTACK reads ST_DEF). The same toggle ALSO sets
+  // `casterDefUp` below to gate `requires: 'caster_def_up'` buffs (Veronica
+  // core fusion DEF-buff allies damage bonus).
+  if (extSums.attackerDEF !== 0 && statValues.ST_DEF) {
+    statValues.ST_DEF = Math.floor(statValues.ST_DEF * (1 + extSums.attackerDEF / 100))
   }
 
   // Target stats — fed to the reducer for `scaling_target_stat` (BT_DMG_TARGET_STAT).
@@ -233,15 +289,29 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     // Caster-side resource gate (Noa Kaizer Energy 5/5, etc.). Surfaced
     // via `CharFlags.ownerResourceMax` toggle in the lab UI.
     ownerResourceMax:       !!ctx.charFlags?.ownerResourceMax,
+    // Caster has Defense Up — driven by the `a-buff-def` external buff
+    // toggle. Gates buffs whose `BuffConditionType: OWNER_HAS_BUFF=6`
+    // resolved to `requires: 'caster_def_up'` (Veronica core fusion's
+    // "Increases Damage for allies under Increased Defense" passive).
+    casterDefUp:            !!ctx.externalBuffs?.['a-buff-def']?.active,
+    // EE state — drives EE buff filtering and per-level value selection.
+    eeEnabled:              !!ctx.eeEnabled,
+    eeLevel:                ctx.eeLevel ?? 0,
+    // Target element — gates `target_element_*` requires (EE mainstats etc.)
+    targetElement:          ctx.targetElement,
   }
 
   // ── 3. Filter + reduce buffs ──────────────────────────────────────────
   // Filter to buffs that can apply to this caster: every awakening buff (the
   // `appliesTo` gate inside the reducer narrows further) + char_skill buffs
-  // whose charId matches. Other chars' buffs never fire for the current caster.
+  // for the caster + EE buffs for the wearer's `eeCharId` (defaults to
+  // `charId`; CF chars wearing the base EE pass the base char ID).
+  // EE buffs are further gated by `ctx.eeEnabled` inside `applyBuffs`.
+  const eeCharId = ctx.eeCharId ?? ctx.charId
   const relevant = allBuffs.filter(b =>
     b.source.kind === 'awakening' ||
-    (b.source.kind === 'char_skill' && b.source.charId === ctx.charId)
+    (b.source.kind === 'char_skill' && b.source.charId === ctx.charId) ||
+    (b.source.kind === 'ee' && b.source.charId === eeCharId)
   )
   const reduced = applyBuffs(relevant, buffCtx)
 

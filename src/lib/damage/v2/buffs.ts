@@ -88,8 +88,23 @@ export type PoolCondition =
  * caster having maxed their unique resource stack (Noa's Kaizer Energy 5/5,
  * etc.). The lab surfaces this as a `CharFlags.ownerResourceMax` toggle so
  * the operator can model "S3 cast at full resource" runs.
+ *
+ * `caster_def_up` = `BuffConditionType: OWNER_HAS_BUFF / CASTER_HAS_BUFF`
+ * with `BuffConditionValue=6` — gates a buff on the caster having a Defense
+ * Up buff active. Drives Veronica core fusion's "Increases Damage for allies
+ * under Increased Defense" passive (`core_passive_def_buff_ally_dmg`).
+ * Surfaced as the `a-buff-def` external buff toggle.
+ *
+ * `target_element_*` = `BuffConditionType: TARGET_ELEMENT` with
+ * `BuffConditionValue` indexing the element table (0=Earth, 1=Water, 2=Fire,
+ * 3=Light, 4=Dark). Drives EE mainstat damage bonuses ("DMG +17→23% vs Light"
+ * = `target_element_light`). Matched against `ctx.targetElement`.
  */
-export type TriggerCondition = 'always' | 'boss' | 'crit' | 'adv' | 'disadv' | 'neutral' | 'resource'
+export type TriggerCondition =
+  | 'always' | 'boss' | 'crit' | 'adv' | 'disadv' | 'neutral'
+  | 'resource' | 'caster_def_up'
+  | 'target_element_earth' | 'target_element_water' | 'target_element_fire'
+  | 'target_element_light' | 'target_element_dark'
 export type CallerSlot = 'S1' | 'S2' | 'S3'
 export interface BuffTrigger {
   requires: TriggerCondition
@@ -105,9 +120,22 @@ export interface AppliesTo {
 
 // ── Source ───────────────────────────────────────────────────────────────
 export type AwakeningGroup = 'PVE' | 'ELEMENTAL' | 'JOB' | 'UTILITY' | 'ADVENTURE_LICENSE'
+/**
+ * EE buff source kind — sourced from `ItemTemplet[ITS_EQUIP_EXCLUSIVE] →
+ * MainOptionGroupID/UniqueOptionID → ItemOptionTemplet/ItemSpecialOptionTemplet
+ * → BuffTemplet`. Filtered by the lab's `eeEnabled` toggle and `eeLevel` slider.
+ *
+ * `slot`:
+ *   - `'main'`: mainstat (single buff, scales by EE level via BuffTemplet
+ *     Level 1-11 = EE level 0-10).
+ *   - `'passive'`: lv0 baseline passive (extracted at buff-templet Level=1,
+ *     active when `eeLevel >= 0`).
+ *   - `'passive_add'`: lv10 IsAdd=True passive (active only when `eeLevel >= 10`).
+ */
 export type BuffSource =
   | { kind: 'awakening'; nodeId: string; group: AwakeningGroup; buffId: string }
   | { kind: 'char_skill'; charId: string; skillSlot: number; buffId: string }
+  | { kind: 'ee'; charId: string; slot: 'main' | 'passive' | 'passive_add'; buffId: string }
 
 // ── ApplicableBuff ───────────────────────────────────────────────────────
 export interface BuffEffect {
@@ -118,6 +146,13 @@ export interface BuffEffect {
   statRef?: string
   /** Discriminator for `target === 'pool_cond'`. */
   poolCond?: PoolCondition
+  /**
+   * EE-specific level-keyed amounts (length 11, index = EE level 0-10).
+   * Set on EE mainstat buffs whose `BuffTemplet` ships 11 Level rows. The
+   * reducer reads `eeLevelValues[ctx.eeLevel]` instead of `amount` when
+   * present. Non-scaling EE passives leave this `undefined` and use `amount`.
+   */
+  eeLevelValues?: number[]
 }
 
 export interface ApplicableBuff {
@@ -192,6 +227,29 @@ export interface BuffContext {
    * `requires: 'resource'`. Surfaced via `CharFlags.ownerResourceMax`.
    */
   ownerResourceMax?: boolean
+  /**
+   * Caster has a Defense Up buff active. Gates buffs whose
+   * `BuffConditionType: OWNER_HAS_BUFF=6` triggered `requires: 'caster_def_up'`
+   * (Veronica core fusion). Surfaced via the `a-buff-def` external buff
+   * toggle (active when value > 0).
+   */
+  casterDefUp?: boolean
+  /**
+   * EE equipped — gates `source.kind === 'ee'` buffs. When false, no EE buff
+   * fires regardless of `eeLevel`.
+   */
+  eeEnabled?: boolean
+  /**
+   * EE level (0-10) — picks the per-level value for scaling EE buffs and
+   * gates `source.slot === 'passive_add'` (only active when eeLevel >= 10).
+   */
+  eeLevel?: number
+  /**
+   * Target's element name (`'Earth' | 'Water' | 'Fire' | 'Light' | 'Dark'`)
+   * — drives `target_element_*` trigger conditions used by EE mainstats and
+   * boss `TARGET_ELEMENT` conditions. Sourced from monster metadata.
+   */
+  targetElement?: string
 }
 
 // ── Reducer output ───────────────────────────────────────────────────────
@@ -243,41 +301,56 @@ export function applyBuffs(buffs: ApplicableBuff[], ctx: BuffContext): ReducedBu
   let swapApplied = false
 
   for (const b of buffs) {
-    if (!appliesToCaster(b.appliesTo, ctx)) continue
+    // EE buffs bypass the `appliesToCaster` check: `appliesTo` is keyed to the
+    // EE owner (base char id), but a CF wearer's `ctx.charId` is the CF id.
+    // The recompute filter already gated EE buffs by `source.charId === eeCharId`,
+    // so the wearer/owner mismatch is intentional and correct.
+    if (b.source.kind !== 'ee' && !appliesToCaster(b.appliesTo, ctx)) continue
     if (!ctx.applyQuirks && b.source.kind === 'awakening') continue
     if (b.source.kind === 'awakening' && b.source.group === 'ADVENTURE_LICENSE' && !ctx.inAdventureLicense) continue
+    // EE gating — applies to `kind: 'ee'` buffs only.
+    if (b.source.kind === 'ee') {
+      if (!ctx.eeEnabled) continue
+      if (b.source.slot === 'passive_add' && (ctx.eeLevel ?? 0) < 10) continue
+    }
     if (!triggerMatches(b.trigger, ctx)) continue
 
     out.active.push(b)
 
+    // EE mainstat scales by EE level — use the level-keyed value when present
+    // (BuffTemplet ships 11 Level rows for the mainstat buff). Non-scaling
+    // buffs use `b.effect.amount`.
+    const eeLv = ctx.eeLevel ?? 0
+    const amt = b.effect.eeLevelValues?.[eeLv] ?? b.effect.amount
+
     switch (b.effect.target) {
       case 'pool':
-        out.poolPct += b.effect.amount
+        out.poolPct += amt
         break
       case 'pool_cond': {
         const mult = poolCondMultiplier(b.effect.poolCond, ctx)
-        if (mult !== 0) out.poolPct += b.effect.amount * mult
+        if (mult !== 0) out.poolPct += amt * mult
         break
       }
-      case 'atk_flat':  out.atkBonusFlat   += b.effect.amount; break
-      case 'atk_pct':   out.atkBonusPct    += b.effect.amount; break
-      case 'chd':       out.chdBonus       += b.effect.amount; break
-      case 'pen':       out.penBonus       += b.effect.amount; break
-      case 'crit_rate': out.critRateBonus  += b.effect.amount; break
-      case 'monster_eff': out.monsterEffPermille += b.effect.amount * 10; break  // % → per-mille
-      case 'monster_res': out.monsterResPermille += b.effect.amount * 10; break
+      case 'atk_flat':  out.atkBonusFlat   += amt; break
+      case 'atk_pct':   out.atkBonusPct    += amt; break
+      case 'chd':       out.chdBonus       += amt; break
+      case 'pen':       out.penBonus       += amt; break
+      case 'crit_rate': out.critRateBonus  += amt; break
+      case 'monster_eff': out.monsterEffPermille += amt * 10; break  // % → per-mille
+      case 'monster_res': out.monsterResPermille += amt * 10; break
       case 'scaling_swap': {
         // First swap wins (multi-swap chars don't exist today).
         if (swapApplied) break
         const sv = ctx.statValues[b.effect.statRef ?? ''] ?? 0
-        out.mainAtk = sv * b.effect.amount / 1000
+        out.mainAtk = sv * amt / 1000
         swapApplied = true
         break
       }
       case 'scaling_add_flat': {
         // Stella HP: per-mille of the stat, added flat to ATK.
         const sv = ctx.statValues[b.effect.statRef ?? ''] ?? 0
-        out.mainAtk += sv * b.effect.amount / 1000
+        out.mainAtk += sv * amt / 1000
         break
       }
       case 'scaling_add_pct': {
@@ -285,7 +358,7 @@ export function applyBuffs(buffs: ApplicableBuff[], ctx: BuffContext): ReducedBu
         // here for now via mainAtk → simpler. If a future char has both flat-add
         // and pct-add at once, the order matters — adjust then.
         const sv = ctx.statValues[b.effect.statRef ?? ''] ?? 0
-        out.atkBonusFlat += out.mainAtk * (sv / 100) * (b.effect.amount / 1000)
+        out.atkBonusFlat += out.mainAtk * (sv / 100) * (amt / 1000)
         break
       }
       case 'scaling_target_stat': {
@@ -359,5 +432,11 @@ function triggerMatches(t: BuffTrigger, ctx: BuffContext): boolean {
     case 'disadv':   return ctx.elem === 'disadv'
     case 'neutral':  return ctx.elem === 'none'
     case 'resource': return !!ctx.ownerResourceMax
+    case 'caster_def_up': return !!ctx.casterDefUp
+    case 'target_element_earth': return ctx.targetElement === 'Earth'
+    case 'target_element_water': return ctx.targetElement === 'Water'
+    case 'target_element_fire':  return ctx.targetElement === 'Fire'
+    case 'target_element_light': return ctx.targetElement === 'Light'
+    case 'target_element_dark':  return ctx.targetElement === 'Dark'
   }
 }

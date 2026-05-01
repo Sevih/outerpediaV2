@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useReducer, useState } from 'react'
 import {
-  recompute, type RecomputeContext, type RecomputeResult,
+  recompute, guildHpPctForLevel,
+  type RecomputeContext, type RecomputeResult,
 } from '@/lib/damage/v2/recompute'
 import { EXTERNAL_BUFFS } from '@/lib/damage/v2/external-buffs'
 import { bossOverrideFromMechanics } from '@/lib/damage/v2/boss-overrides'
@@ -75,6 +76,12 @@ export default function DamageLabV2Page() {
         class: c.class,
         subclass: c.subclass,
         portraitUrl: c.portraitUrl,
+        skillIcons: {
+          S1: c.skills.S1?.iconName ?? null,
+          S2: c.skills.S2?.iconName ?? null,
+          S3: c.skills.S3?.iconName ?? null,
+        },
+        baseCharId: c.baseCharId,
       }))
   }, [chars])
 
@@ -156,8 +163,57 @@ export default function DamageLabV2Page() {
   // when the char has at least one `requires === 'resource'` buff).
   const charApplicableBuffs = useMemo(() => {
     if (!selectedChar) return []
-    return buffs.filter(b => appliesToCharSummary(b.appliesTo, selectedChar))
+    return buffs.filter(b => {
+      // EE buffs are owner-keyed (`appliesTo.value = base/CF char id`) but a
+      // CF wearer can equip either variant. Surface both so the AttackerPanel's
+      // EE picker can list them — `appliesTo` is bypassed for EE buffs in the
+      // reducer too (cf. `applyBuffs`).
+      if (b.source.kind === 'ee') {
+        if (b.source.charId === selectedChar.id) return true
+        if (selectedChar.baseCharId && b.source.charId === selectedChar.baseCharId) return true
+        return false
+      }
+      return appliesToCharSummary(b.appliesTo, selectedChar)
+    })
   }, [buffs, selectedChar])
+
+  // ── Caster scaling stats (per char/slot) ─────────────────────────────
+  // Walk the char's scaling buffs filtered by the current slot:
+  //   - `scaling_swap` (statRef)        → primary scaling stat (when it fires
+  //                                       always; else ATK stays primary)
+  //   - `scaling_add_pct` / `_add_flat` → secondary scaling input
+  //
+  // Output drives the AttackerPanel: ATK is always shown, but HP / DEF /
+  // SPD / CHC / EFF inputs only appear when the current char actually
+  // uses them (Demiurge Drakhan → HP swap, Demiurge Stella → ATK + HP,
+  // Regina → ATK + CHC, etc.).
+  const { casterScalingStats, primaryScalingStat } = useMemo(() => {
+    const stats = new Set<string>()
+    let primary: string = 'ST_ATK'
+    if (!selectedChar) return { casterScalingStats: stats, primaryScalingStat: primary }
+    for (const b of charApplicableBuffs) {
+      const t = b.effect.target
+      if (t !== 'scaling_swap' && t !== 'scaling_add_pct' && t !== 'scaling_add_flat') continue
+      const slots = b.trigger.callerSlots
+      if (slots !== 'all' && !slots.includes(state.attacker.slot)) continue
+      const ref = b.effect.statRef
+      if (!ref) continue
+      stats.add(ref)
+      if (t === 'scaling_swap' && b.trigger.requires === 'always') {
+        // Last unconditional swap wins (no char today swaps twice on one slot).
+        primary = ref
+      }
+    }
+    return { casterScalingStats: stats, primaryScalingStat: primary }
+  }, [selectedChar, charApplicableBuffs, state.attacker.slot])
+
+  // Conditional sub-attack ratio for the current `(char, slot)`. Drives
+  // whether the AttackerPanel surfaces the "Additional attack" toggle —
+  // skills without a sub-hit row in CharacterDamageTemplet hide it.
+  const currentSlotAddRatio = useMemo(() => {
+    if (!selectedChar) return null
+    return getAdditionalAttackRatio(selectedChar, state.attacker.slot) ?? null
+  }, [selectedChar, state.attacker.slot])
 
   const selectedMonsterMeta = useMemo(() => {
     if (!state.target.monsterId) return null
@@ -182,7 +238,7 @@ export default function DamageLabV2Page() {
   useEffect(() => {
     if (!state.attacker.charId) return
     let cancelled = false
-    fetchCharStats(state.attacker.charId)
+    fetchCharStats(state.attacker.charId, { codexLevel: state.attacker.codexLevel })
       .then(s => {
         if (cancelled) return
         dispatch({
@@ -209,7 +265,8 @@ export default function DamageLabV2Page() {
       })
       .catch(e => console.warn('[damage-lab/v2] fetchCharStats failed:', e))
     return () => { cancelled = true }
-  }, [state.attacker.charId])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.attacker.charId, state.attacker.codexLevel])
 
   // ── Recompute context + result ─────────────────────────────────────────
   const { ctx, result } = useMemo<{ ctx: RecomputeContext | null; result: RecomputeResult | null }>(() => {
@@ -231,6 +288,7 @@ export default function DamageLabV2Page() {
       applyQuirks: state.attacker.applyQuirks,
       extraStats: state.attacker.extraStats,
       atkScaling: state.attacker.atkScaling,
+      guildHpBuffPct: guildHpPctForLevel(state.attacker.guildLevel),
       targetDef: state.target.def,
       targetDmgRed: state.target.dmgRed,
       targetCdmgRed: state.target.cdmgRed,
@@ -267,6 +325,14 @@ export default function DamageLabV2Page() {
       externalBuffs: state.externalBuffs,
       bossMechanics: state.bossMechanics,
       bossOverride: state.bossOverride,
+      // EE state — gates `kind: 'ee'` buffs (mainstat scales with eeLevel).
+      eeEnabled: state.attacker.eeEnabled,
+      eeLevel:   state.attacker.eeLevel,
+      eeCharId:  state.attacker.eeVariant === 'base' && selectedChar.baseCharId
+        ? selectedChar.baseCharId
+        : selectedChar.id,
+      // Target element drives `target_element_*` triggers (EE mainstats).
+      targetElement: state.target.element || undefined,
     }
     return { ctx: c, result: recompute(c, buffs) }
   }, [selectedChar, state, buffs, selectedModeEntry])
@@ -305,6 +371,13 @@ export default function DamageLabV2Page() {
       extraStats: state.attacker.extraStats,
       charFlags: state.attacker.charFlags,
       atkScaling: state.attacker.atkScaling ?? undefined,
+      guildLevel: state.attacker.guildLevel || undefined,
+      codexLevel: state.attacker.codexLevel !== 11 ? state.attacker.codexLevel : undefined,
+      eeEnabled: state.attacker.eeEnabled || undefined,
+      eeLevel: state.attacker.eeEnabled ? state.attacker.eeLevel : undefined,
+      eeVariant: state.attacker.eeEnabled && state.attacker.eeVariant === 'base'
+        ? 'base'
+        : undefined,
       targetDef: ctx.targetDef,
       targetDmgRed: ctx.targetDmgRed,
       targetCdmgRed: ctx.targetCdmgRed,
@@ -409,6 +482,12 @@ export default function DamageLabV2Page() {
           charFlags: o.charFlags ?? {},
           extraStats: o.extraStats ?? {},
           atkScaling: o.atkScaling ?? null,
+          guildLevel: o.guildLevel ?? 0,
+          codexLevel: o.codexLevel ?? 11,
+          assumeMaxTranscend: true,
+          eeEnabled: o.eeEnabled ?? false,
+          eeLevel: o.eeLevel ?? 10,
+          eeVariant: o.eeVariant ?? 'self',
         },
         target: {
           // Prefer the saved modeLabel (matches a picker entry exactly). Fall
@@ -484,12 +563,16 @@ export default function DamageLabV2Page() {
           poolConds={state.poolConds}
           applicablePoolConds={applicablePoolConds}
           charBuffs={charApplicableBuffs}
+          casterScalingStats={casterScalingStats}
+          primaryScalingStat={primaryScalingStat}
+          additionalAttackRatio={currentSlotAddRatio}
           onChange={patch => dispatch({ type: 'attacker/patch', patch })}
           onSetChar={charId => dispatch({ type: 'attacker/setChar', charId })}
           onSetSlot={slot => dispatch({ type: 'attacker/setSlot', slot })}
           onSetFlag={(flag, value) => dispatch({ type: 'attacker/setFlag', flag, value })}
           onEditStat={(field, value) => dispatch({ type: 'attacker/manualEditStat', field, value })}
           onPoolCondChange={patch => dispatch({ type: 'poolCond/patch', patch })}
+          onSetExtraStat={(stat, value) => dispatch({ type: 'attacker/setExtraStat', stat, value })}
         />
         <TargetPanel
           state={state.target}
@@ -592,6 +675,9 @@ function recomputeFromObs(o: ObservationV2, chars: CharData[], buffs: Applicable
     applyQuirks: o.applyQuirks,
     extraStats: o.extraStats,
     atkScaling: o.atkScaling,
+    guildHpBuffPct: o.guildLevel != null
+      ? guildHpPctForLevel(o.guildLevel)
+      : o.guildHpBuffPct,  // legacy obs that saved the raw pct
     targetDef: o.targetDef,
     targetDmgRed: o.targetDmgRed,
     targetCdmgRed: o.targetCdmgRed,
@@ -620,6 +706,12 @@ function recomputeFromObs(o: ObservationV2, chars: CharData[], buffs: Applicable
     externalBuffs: o.externalBuffs,
     bossMechanics: o.bossMechanics,
     bossOverride: o.bossOverride,
+    eeEnabled: o.eeEnabled,
+    eeLevel: o.eeLevel,
+    eeCharId: o.eeVariant === 'base'
+      ? (chars.find(c => c.id === o.charId)?.baseCharId ?? o.charId)
+      : o.charId,
+    targetElement: o.monsterElement,
   }
   return recompute(ctx, buffs).calculated
 }

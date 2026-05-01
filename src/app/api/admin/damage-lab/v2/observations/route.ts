@@ -54,6 +54,29 @@ export interface ObservationV2 {
     codexPct: number
     transcendPct: number
   }
+  /**
+   * Guild HP buff active at save time. New obs persist `guildLevel` (0-10)
+   * and the recompute path re-derives the % via `guildHpPctForLevel`.
+   * `guildHpBuffPct` is a legacy field kept readable so older obs still
+   * recompute consistently.
+   */
+  guildLevel?: number
+  guildHpBuffPct?: number
+  /** Hero Codex level used at save time (0-11; default 11 = max). */
+  codexLevel?: number
+  /**
+   * Exclusive Equipment toggle at save time. When true, EE-source buffs
+   * (mainstat / passive / passive_add) are eligible during recompute. The
+   * `eeLevel` (0-10) selects per-level value for scaling buffs and gates
+   * `passive_add` slots (≥10). Persisted independently so older obs without
+   * an explicit EE state default to "no EE active".
+   *
+   * `eeVariant` is set to `'base'` only when a CF char wears the base
+   * char's EE; absent (or `'self'`) means the wearer's own EE.
+   */
+  eeEnabled?: boolean
+  eeLevel?: number
+  eeVariant?: 'self' | 'base'
   // Target inputs
   targetDef: number
   targetDmgRed: number
@@ -218,6 +241,13 @@ export async function POST(req: NextRequest) {
     if (body.bossOverride) o.bossOverride = body.bossOverride
   }
   if (body.atkScaling) o.atkScaling = body.atkScaling
+  if (body.guildLevel != null && body.guildLevel !== 0) o.guildLevel = body.guildLevel
+  if (body.codexLevel != null && body.codexLevel !== 11) o.codexLevel = body.codexLevel
+  if (body.eeEnabled) {
+    o.eeEnabled = true
+    if (body.eeLevel != null) o.eeLevel = body.eeLevel
+    if (body.eeVariant === 'base') o.eeVariant = 'base'
+  }
   if (body.calculatedAtSave != null) o.calculatedAtSave = body.calculatedAtSave
 
   appendObservation(o)

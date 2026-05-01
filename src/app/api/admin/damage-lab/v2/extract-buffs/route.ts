@@ -4,6 +4,7 @@ import path from 'path'
 import {
   extractAwakeningBuffs, extractCharSkillBuffs,
 } from '@/lib/damage/v2/extract-buffs'
+import { extractEEBuffs } from '@/lib/damage/v2/extract-ee'
 import type { ApplicableBuff } from '@/lib/damage/v2/buffs'
 
 /**
@@ -43,6 +44,15 @@ function build(): ApplicableBuff[] {
   const charRows   = loadJson<Row[]>('CharacterTemplet.json')
   const skillLvls  = loadJson<Row[]>('CharacterSkillLevelTemplet.json')
   const textRows   = loadJson<Row[]>('TextSystem.json')
+  const items      = loadJson<Row[]>('ItemTemplet.json')
+  const itemOpts   = loadJson<Row[]>('ItemOptionTemplet.json')
+  const itemSpec   = loadJson<Row[]>('ItemSpecialOptionTemplet.json')
+  const textItemRows = loadJson<Row[]>('TextItem.json')
+
+  const textItem = new Map<string, string>()
+  for (const t of textItemRows) {
+    if (t.ID) textItem.set(t.ID, t.English ?? '')
+  }
 
   const textSystem = new Map<string, { English: string }>()
   for (const t of textRows) {
@@ -69,7 +79,18 @@ function build(): ApplicableBuff[] {
     })),
   })
 
-  cache = [...awakening, ...charSkill]
+  const ee = extractEEBuffs({
+    items, itemOptions: itemOpts, itemSpecialOptions: itemSpec, textItem,
+    buffs: buffs.map(b => ({
+      ID: b.ID, BuffID: b.BuffID, Level: b.Level, Type: b.Type,
+      StatType: b.StatType, ApplyingType: b.ApplyingType, Value: b.Value,
+      BuffConditionType: b.BuffConditionType, BuffConditionValue: b.BuffConditionValue,
+      TargetType: b.TargetType, TargetSkillType: b.TargetSkillType,
+      CallerSkillType: b.CallerSkillType, BuffCreateType: b.BuffCreateType,
+    })),
+  })
+
+  cache = [...awakening, ...charSkill, ...ee]
   return cache
 }
 

@@ -35,6 +35,7 @@ export interface ExternalBuffDef {
 export const EXTERNAL_BUFFS: ExternalBuffDef[] = [
   // Attacker buffs (statBoosts on caster)
   { id: 'a-buff-atk', side: 'attacker', direction: 'buff', stat: 'ATK', label: 'Increased Attack',           defaultValue:  30 },
+  { id: 'a-buff-def', side: 'attacker', direction: 'buff', stat: 'DEF', label: 'Increased Defense',          defaultValue:  50 },
   { id: 'a-buff-pen', side: 'attacker', direction: 'buff', stat: 'PEN', label: 'Increased Penetration',      defaultValue:  30 },
   { id: 'a-buff-chc', side: 'attacker', direction: 'buff', stat: 'CHC', label: 'Increased Crit Hit Chance',  defaultValue:  50 },
   { id: 'a-buff-chd', side: 'attacker', direction: 'buff', stat: 'CHD', label: 'Increased Critical Damage',  defaultValue:  50 },
@@ -67,6 +68,8 @@ export function makeDefaultExternalBuffsState(): Record<string, ExternalBuffStat
 export interface ExternalBuffSums {
   /** pct, applied as `× (1 + sum/100)` on ATK */
   attackerATK: number
+  /** pct, applied as `× (1 + sum/100)` on caster ST_DEF (for DEF-scaling chars). */
+  attackerDEF: number
   /** pct points, additive on PEN */
   attackerPEN: number
   /** pct points, additive on CHC (extraStats.ST_CRITICAL_RATE) */
@@ -83,7 +86,7 @@ export function aggregateExternalBuffs(
   state: Record<string, ExternalBuffState>,
 ): ExternalBuffSums {
   const sums: ExternalBuffSums = {
-    attackerATK: 0, attackerPEN: 0, attackerCHC: 0,
+    attackerATK: 0, attackerDEF: 0, attackerPEN: 0, attackerCHC: 0,
     attackerCHD: 0, attackerEFF: 0, targetDEF: 0,
   }
   for (const def of EXTERNAL_BUFFS) {
@@ -92,6 +95,7 @@ export function aggregateExternalBuffs(
     const val = s.value
     if (def.side === 'attacker') {
       if (def.stat === 'ATK')      sums.attackerATK += val
+      else if (def.stat === 'DEF') sums.attackerDEF += val
       else if (def.stat === 'PEN') sums.attackerPEN += val
       else if (def.stat === 'CHC') sums.attackerCHC += val
       else if (def.stat === 'CHD') sums.attackerCHD += val

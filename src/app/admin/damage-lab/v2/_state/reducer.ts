@@ -48,6 +48,15 @@ export type FormAction =
                                        extraStats?: Record<string, number>;
                                        atkScaling?: AttackerState['atkScaling'] }
   | { type: 'attacker/manualEditStat'; field: 'atk' | 'chd' | 'pen' | 'dmgInc'; value: number }
+  /**
+   * Operator override on a secondary caster stat (ST_HP / ST_DEF / ST_SPEED /
+   * ST_CRITICAL_RATE / ST_BUFF_CHANCE). Used when the lab UI surfaces
+   * extra inputs for chars whose buffs scale on those stats. Writes
+   * directly to `extraStats[stat]`. The `attacker/autoFillStats` flow
+   * still overwrites these on a fresh char fetch — operator re-edits
+   * after switching codex level if they want a custom value.
+   */
+  | { type: 'attacker/setExtraStat';   stat: string; value: number }
   // Target
   | { type: 'target/patch';          patch: Partial<TargetState> }
   | { type: 'target/setMode';        mode: string }
@@ -92,6 +101,12 @@ export function makeInitialFormState(): FormState {
       charFlags: {},
       extraStats: {},
       atkScaling: null,
+      guildLevel: 0,
+      codexLevel: 11,
+      assumeMaxTranscend: true,
+      eeEnabled: false,
+      eeLevel: 10,
+      eeVariant: 'self',
     },
     target: {
       mode: '', stageId: null, monsterId: null, monsterName: null,
@@ -197,6 +212,15 @@ export function formReducer(state: FormState, action: FormAction): FormState {
           // Manual ATK edit invalidates the scaling block — fallback to
           // linear external buff stacking until the user re-auto-fills.
           atkScaling: action.field === 'atk' ? null : state.attacker.atkScaling,
+        },
+      }
+
+    case 'attacker/setExtraStat':
+      return {
+        ...state,
+        attacker: {
+          ...state.attacker,
+          extraStats: { ...state.attacker.extraStats, [action.stat]: action.value },
         },
       }
 

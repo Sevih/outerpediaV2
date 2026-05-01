@@ -28,6 +28,25 @@ interface CharacterCurated {
   Element?: string
   Class?: string
   SubClass?: string
+  /**
+   * Set on the BASE entry: the CF version's char ID (e.g. base Veronica
+   * `2000037` carries `coreFusionId: "2700037"`). We invert this map to
+   * surface `baseCharId` on the CF entry so the lab can offer "equip base
+   * EE" alongside the default "equip own EE" — CF chars in-game can wear
+   * either Exclusive Equipment.
+   */
+  coreFusionId?: string
+  /**
+   * Per-slot skill metadata. Notably `IconName` may not match the
+   * `Skill_{Slot}_{charId}` convention for core-fusion chars (e.g.
+   * Veronica core fusion 2700037 inherits S1/S2 icons from base 2000037
+   * but ships its own S3 icon). We read this map verbatim instead of
+   * reconstructing the URL.
+   */
+  skills?: Partial<Record<
+    'SKT_FIRST' | 'SKT_SECOND' | 'SKT_ULTIMATE',
+    { IconName?: string }
+  >>
 }
 
 interface SkillData {
@@ -35,6 +54,13 @@ interface SkillData {
   damageFactors: (number | null)[]
   /** Conditional sub-attack ratio derived from CharacterDamageTemplet rows. Null when none. */
   additionalAttackRatio: number | null
+  /**
+   * Skill icon filename (without extension), e.g. `Skill_First_2000037`.
+   * Pulled from `data/character/{id}.json` so core-fusion chars whose
+   * skill icons reference their base char id resolve correctly.
+   * Falls back to `Skill_{Slot}_{charId}` for chars without curated data.
+   */
+  iconName: string
 }
 
 interface CharEntryV2 {
@@ -45,6 +71,12 @@ interface CharEntryV2 {
   subclass: string
   portraitUrl: string
   skills: { S1: SkillData | null; S2: SkillData | null; S3: SkillData | null }
+  /**
+   * For Core Fusion chars: the base char ID (the non-CF original). Drives
+   * the lab's "equip base EE" option so the operator can swap between the
+   * CF's own EE and the base char's EE on a CF entry.
+   */
+  baseCharId?: string
 }
 
 function loadJson<T>(p: string): T {
@@ -79,10 +111,18 @@ function computeAdditionalRatio(
   return subSum / mainSum
 }
 
+const SLOT_TOKEN: Record<number, 'First' | 'Second' | 'Ultimate'> = {
+  1: 'First', 2: 'Second', 3: 'Ultimate',
+}
+const SLOT_KEY: Record<number, 'SKT_FIRST' | 'SKT_SECOND' | 'SKT_ULTIMATE'> = {
+  1: 'SKT_FIRST', 2: 'SKT_SECOND', 3: 'SKT_ULTIMATE',
+}
+
 function buildSkillData(
   skillId: string | undefined, slot: number, charId: string,
   levelsBySkill: Map<string, SkillLevelRow[]>,
   dmgRows: { ID?: string; DamageFactor?: string }[],
+  curated: CharacterCurated | undefined,
 ): SkillData | null {
   if (!skillId) return null
   const rows = levelsBySkill.get(skillId)
@@ -94,9 +134,14 @@ function buildSkillData(
       factors[lvl - 1] = parseInt(row.DamageFactor, 10)
     }
   }
+  // Prefer curated IconName (handles core-fusion mixed icon ownership);
+  // fall back to the conventional `Skill_{Slot}_{charId}` form.
+  const curatedIcon = curated?.skills?.[SLOT_KEY[slot]]?.IconName
+  const iconName = curatedIcon || `Skill_${SLOT_TOKEN[slot]}_${charId}`
   return {
     damageFactors: factors,
     additionalAttackRatio: computeAdditionalRatio(charId, slot, dmgRows),
+    iconName,
   }
 }
 
@@ -128,6 +173,12 @@ export function GET() {
     }
   }
 
+  // CF → base inverse map (built from each base entry's `coreFusionId`).
+  const cfToBase = new Map<string, string>()
+  for (const c of curatedById.values()) {
+    if (c.coreFusionId) cfToBase.set(String(c.coreFusionId), String(c.ID))
+  }
+
   const out: CharEntryV2[] = []
   for (const row of charTemplet) {
     const curated = curatedById.get(row.ID)
@@ -140,10 +191,11 @@ export function GET() {
       subclass: curated.SubClass ?? '',
       portraitUrl: `/images/characters/atb/IG_Turn_${row.ID}.webp`,
       skills: {
-        S1: buildSkillData(row.Skill_1, 1, row.ID, levelsBySkill, dmgRows),
-        S2: buildSkillData(row.Skill_2, 2, row.ID, levelsBySkill, dmgRows),
-        S3: buildSkillData(row.Skill_3, 3, row.ID, levelsBySkill, dmgRows),
+        S1: buildSkillData(row.Skill_1, 1, row.ID, levelsBySkill, dmgRows, curated),
+        S2: buildSkillData(row.Skill_2, 2, row.ID, levelsBySkill, dmgRows, curated),
+        S3: buildSkillData(row.Skill_3, 3, row.ID, levelsBySkill, dmgRows, curated),
       },
+      baseCharId: cfToBase.get(row.ID),
     }
     // Keep only chars with at least one slot exposing a DamageFactor.
     const hasAny = [entry.skills.S1, entry.skills.S2, entry.skills.S3]

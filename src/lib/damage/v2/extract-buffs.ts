@@ -31,7 +31,7 @@ import type {
 // ── Raw row shapes ───────────────────────────────────────────────────────
 type Row = Record<string, string | undefined>
 
-interface BuffRow {
+export interface BuffRow {
   ID?: string
   BuffID?: string
   Level?: string
@@ -133,7 +133,7 @@ function splitCsv(s: string | undefined): string[] {
  *   contains SKT_FIRST/SECOND/ULTIMATE → list of matching slots (deduped)
  *   only burst-type entries           → []  (caller drops the buff — bursts not modeled)
  */
-function resolveCallerSlots(csv: string | undefined): 'all' | CallerSlot[] {
+export function resolveCallerSlots(csv: string | undefined): 'all' | CallerSlot[] {
   const list = splitCsv(csv)
   if (list.length === 0 || list.includes('SKT_ALL')) return 'all'
   const slots: CallerSlot[] = []
@@ -148,7 +148,7 @@ function resolveCallerSlots(csv: string | undefined): 'all' | CallerSlot[] {
  * Resolve a `BuffConditionType` into a `TriggerCondition`. Returns null when
  * the condition isn't representable in our context (the reducer drops the buff).
  */
-function resolveCondition(cond: string | undefined): BuffTrigger['requires'] | null {
+export function resolveCondition(cond: string | undefined, condValue?: string): BuffTrigger['requires'] | null {
   switch (cond ?? 'NONE') {
     case 'NONE':                   return 'always'
     case 'ATTACKER_ELEMENT_WIN':   return 'adv'
@@ -157,6 +157,28 @@ function resolveCondition(cond: string | undefined): BuffTrigger['requires'] | n
     case 'CASTER_CRITICAL':        return 'crit'
     case 'TARGET_IS_BOSS':         return 'boss'
     case 'OWNER_RESOURCE':         return 'resource'
+    // OWNER_HAS_BUFF / CASTER_HAS_BUFF — buff-condition catalogs.
+    // BuffConditionValue=6 = "Defense up" (validated via Veronica core fusion
+    // S1 self-debuff `2700037_1_3` whose desc reads "If the caster's Defense
+    // is currently increased…", and the core-fusion passive
+    // `core_passive_def_buff_ally_dmg`). Other values (1=ATK up, 7=Shield…)
+    // wired ad-hoc as we encounter them.
+    case 'OWNER_HAS_BUFF':
+    case 'CASTER_HAS_BUFF':
+      if (condValue === '6') return 'caster_def_up'
+      return null
+    // TARGET_ELEMENT — gates damage on the target's element (EE mainstats
+    // like Maxwell's "DMG vs Light" carry `BuffConditionValue=3`). Element
+    // index per `ELEMENT_BY_INDEX` (0=Earth, 1=Water, 2=Fire, 3=Light, 4=Dark).
+    case 'TARGET_ELEMENT':
+      switch (condValue ?? '0') {
+        case '0': return 'target_element_earth'
+        case '1': return 'target_element_water'
+        case '2': return 'target_element_fire'
+        case '3': return 'target_element_light'
+        case '4': return 'target_element_dark'
+        default:  return null
+      }
     default:                       return null
   }
 }
@@ -353,14 +375,16 @@ export interface ExtractCharSkillInput {
  * unmodeled slots — strikes / backups / bursts).
  *
  * Active : S1=Skill_1, S2=Skill_2, S3=Skill_3.
- * Passive: Skill_4 (chain), Skill_8 (transcendent), Skill_22 (class) —
- *          always-on, fire on every active cast subject to CallerSkillType.
+ * Passive: Skill_4 (chain), Skill_8 (transcendent), Skill_22 (class),
+ *          Skill_23 (core-fusion `SKT_FUSION_PASSIVE` — Veronica's CHD pop +
+ *          DEF-buff allies damage bonus, etc.) — always-on, fire on every
+ *          active cast subject to CallerSkillType.
  */
 function slotIndexToCaller(idx: number): CallerSlot | 'passive' | undefined {
   if (idx === 1) return 'S1'
   if (idx === 2) return 'S2'
   if (idx === 3) return 'S3'
-  if (idx === 4 || idx === 8 || idx === 22) return 'passive'
+  if (idx === 4 || idx === 8 || idx === 22 || idx === 23) return 'passive'
   return undefined
 }
 
@@ -396,11 +420,28 @@ export function extractCharSkillBuffs(input: ExtractCharSkillInput): ApplicableB
     for (const [bid, hostSet] of hostedSlots) {
       const b = buffsById.get(bid)
       if (!b) continue
-      if (b.TargetType !== 'ME') continue   // caster-side only
+      // Caster-side buffs only.
+      //   - `ME`        → always accepted.
+      //   - `MY_TEAM`   → accept only when `BuffCreateType` is PASSIVE/PASSIVE2.
+      //     Non-permanent MY_TEAM buffs (SKILL_START/SKILL_FINISH on a skill
+      //     cast) apply AFTER the cast — Skadi S2 grants team CHC/CHD that
+      //     benefits *next* turn, not the current S2 hit. Permanent MY_TEAM
+      //     buffs (Veronica core fusion `core_passive_def_buff_ally_dmg`)
+      //     genuinely include the caster from battle start.
+      const target = b.TargetType ?? ''
+      const teamLike = target === 'MY_TEAM'
+      const isPermanentEarly = b.BuffCreateType === 'PASSIVE' || b.BuffCreateType === 'PASSIVE2'
+      if (target !== 'ME' && !(teamLike && isPermanentEarly)) continue
+      // Drop ON_SPAWN buffs — they fire at battle start with a finite
+      // TurnDuration and we don't model turn-window state. Ex:
+      // `core_passive_cri_dmg` (+50 CHD for 2 turns) would over-apply if
+      // extracted as always-on. The user inputs final ATK/CHD/etc. already
+      // reflecting whichever turn they're on.
+      if (b.BuffCreateType === 'ON_SPAWN') continue
 
       const eff = decodeCharSkillEffect(b)
       if (!eff) continue
-      const requires = resolveCondition(b.BuffConditionType)
+      const requires = resolveCondition(b.BuffConditionType, b.BuffConditionValue)
       if (!requires) continue
 
       // BuffCreateType decides how `callerSlots` is gated:
@@ -437,18 +478,24 @@ export function extractCharSkillBuffs(input: ExtractCharSkillInput): ApplicableB
 /**
  * Decode a char-skill `BuffRow` into a `BuffEffect`. Returns null for buffs we
  * don't propagate into the formula (BT_DMG_REDUCE caster DR, BT_HEAL, etc.).
+ *
+ * Exported for reuse by `extract-ee.ts` (EE buffs share the same Type/StatType
+ * decoding rules — only the source/scaling differ).
  */
-function decodeCharSkillEffect(b: BuffRow): BuffEffect | null {
+export function decodeCharSkillEffect(b: BuffRow): BuffEffect | null {
   const t = b.Type ?? ''
   const stat = b.StatType ?? ''
   const value = num(b.Value)
   if (value === 0 && t !== 'BT_SWAP_STAT_ATTACK') return null
 
   // ── Direct pool contribution (type 83 BT_DMG, type 96 BT_DMG_TO_BOSS) ──
-  if (t === 'BT_DMG' && stat === 'ST_NONE') {
+  // Accepts ST_NONE (char-skill buffs) AND ST_DMG_BOOST (EE mainstat
+  // convention — Maxwell `BID_CEQUIP_MAIN_DMG_DARK` etc.). Both encode the
+  // same pool % addition; they only differ in their cosmetic StatType slot.
+  if (t === 'BT_DMG' && (stat === 'ST_NONE' || stat === 'ST_DMG_BOOST')) {
     return { target: 'pool', unit: '%', amount: value / 10 }
   }
-  if (t === 'BT_DMG_TO_BOSS' && stat === 'ST_NONE') {
+  if (t === 'BT_DMG_TO_BOSS' && (stat === 'ST_NONE' || stat === 'ST_DMG_BOOST')) {
     return { target: 'pool', unit: '%', amount: value / 10 }
   }
 

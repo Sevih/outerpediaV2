@@ -7,6 +7,12 @@ export interface SkillData {
   damageFactors: (number | null)[]
   /** Conditional sub-attack ratio. Null when none. */
   additionalAttackRatio: number | null
+  /**
+   * Skill icon filename without extension (e.g. `Skill_First_2000037`).
+   * For core-fusion chars, S1/S2 may keep the base char id while S3 uses
+   * the fusion id — sourced from `data/character/{id}.json` server-side.
+   */
+  iconName: string
 }
 
 export interface CharData {
@@ -17,6 +23,8 @@ export interface CharData {
   subclass: string
   portraitUrl: string
   skills: { S1: SkillData | null; S2: SkillData | null; S3: SkillData | null }
+  /** For Core Fusion chars: the base char ID — drives the EE base/CF picker. */
+  baseCharId?: string
 }
 
 export async function fetchChars(): Promise<CharData[]> {
@@ -73,8 +81,14 @@ export interface CharStatsResponse {
   }
 }
 
-export async function fetchCharStats(charId: string): Promise<CharStatsResponse> {
-  const res = await fetch(`/api/admin/characters/${charId}/stats`)
+export async function fetchCharStats(
+  charId: string,
+  opts?: { codexLevel?: number },
+): Promise<CharStatsResponse> {
+  const params = new URLSearchParams()
+  if (opts?.codexLevel != null) params.set('codexLevel', String(opts.codexLevel))
+  const qs = params.toString()
+  const res = await fetch(`/api/admin/characters/${charId}/stats${qs ? `?${qs}` : ''}`)
   if (!res.ok) throw new Error(`fetchCharStats: ${res.status}`)
   return res.json()
 }

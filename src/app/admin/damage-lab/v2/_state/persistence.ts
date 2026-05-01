@@ -15,7 +15,12 @@ import { useEffect } from 'react'
 import type { FormState } from './types'
 
 const STORAGE_KEY = 'damage-lab-form-v2'
-const STORAGE_VERSION = 2
+// v3: added `attacker.eeEnabled` + `attacker.eeLevel` (Phase 1a EE infra).
+// v4: added `attacker.eeVariant` (CF chars equip own or base EE).
+// Older blobs miss those fields → loading would surface them as `undefined`
+// in the reducer/UI. Bumping the version forces a fresh `makeInitialFormState`
+// on next load instead of merging stale shapes.
+const STORAGE_VERSION = 4
 
 interface PersistedShape {
   version: number

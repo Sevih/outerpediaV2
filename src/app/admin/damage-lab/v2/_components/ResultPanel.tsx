@@ -209,6 +209,16 @@ function formatInt(n: number): string {
  *   - Fallback: the raw `id` (shown via tooltip in any case for traceability).
  */
 function formatBuffLabel(b: ApplicableBuff, charNameById?: Map<string, string>): string {
+  // EE buffs surface first — their `ui.name` is the in-game item name (e.g.
+  // "Agateram"), not an awakening node label, so the "Quirk -" prefix below
+  // would mislabel them.
+  if (b.source.kind === 'ee') {
+    const itemName = b.ui?.name ?? b.source.charId
+    const slotLabel = b.source.slot === 'main' ? 'mainstat'
+      : b.source.slot === 'passive_add' ? 'passive (lv10)'
+      : 'passive'
+    return `${itemName} · ${slotLabel}`
+  }
   if (b.ui?.name) {
     const m = b.ui.name.match(/Node:\s*(.+)$/)
     return `Quirk - ${m ? m[1].trim() : b.ui.name}`

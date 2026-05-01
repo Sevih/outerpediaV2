@@ -201,13 +201,18 @@ export function computeDamage(i: DamageInputs): DamageBreakdown {
     trace('rate += additionalSum', rate)
   }
 
-  // DR subtraction (gear stat — last in pool).
-  if (i.dmgRedPct > 0) {
+  // DR subtraction (gear stat + folded BT_DMG_REDUCE deltas — last in pool).
+  // Negative `dmgRedPct` is legal: it represents a net negative reduce sum
+  // (boss-passive `BT_DMG_REDUCE val<0` like Amadeus Prelude buff `12`
+  // val=-150 → +15% damage taken). The binary's `rate -= reduceSum × 0.001`
+  // applies symmetrically; gating on `> 0` would silently drop the bonus.
+  if (i.dmgRedPct !== 0) {
     const drPermille = f32mul(f(i.dmgRedPct), f(10))
     const drContrib  = f32mul(drPermille, PER_MILLE_NEG)
     rate = f32add(rate, drContrib)
     trace('rate += DR × −0.001', rate, `targetDR ${i.dmgRedPct}%`)
-    quirks.push({ name: 'Target DR', value: `−${i.dmgRedPct.toFixed(2)}%` })
+    const sign = i.dmgRedPct >= 0 ? '−' : '+'
+    quirks.push({ name: 'Target DR', value: `${sign}${Math.abs(i.dmgRedPct).toFixed(2)}%` })
   }
 
   // Cap on Maximum Reduction.

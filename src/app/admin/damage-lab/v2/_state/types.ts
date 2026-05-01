@@ -24,6 +24,19 @@ export interface CharSummary {
   /** ATTACKER, BRUISER, WIZARD, … (uppercase). */
   subclass: string
   portraitUrl: string
+  /**
+   * Skill icon filenames per slot (no extension). Sourced from the
+   * curated character data so core-fusion chars (e.g. Veronica fusion
+   * 2700037 whose S1/S2 reuse base 2000037 icons) resolve correctly
+   * instead of 404'ing on a constructed `Skill_{Slot}_{id}` URL.
+   */
+  skillIcons: { S1: string | null; S2: string | null; S3: string | null }
+  /**
+   * For Core Fusion chars: the base char ID. CF chars in-game can equip
+   * either their own EE or the base char's EE — when this is set, the lab
+   * surfaces a variant picker in the EE cadre. Undefined for non-CF chars.
+   */
+  baseCharId?: string
 }
 
 export interface AttackerState {
@@ -56,6 +69,47 @@ export interface AttackerState {
    * Null = fall back to linear `× (1 + buff/100)`.
    */
   atkScaling: StatScaling | null
+  /**
+   * Guild HP buff level (0-10). Maps to `BuffSystemTemplet` `EBT_MAX_HP`:
+   *   L1-3 → 8%, L4-6 → 10%, L7 → 12%, L8 → 13%, L9 → 14%, L10 → 15%.
+   * Multiplies caster `ST_HP` at battle start. Affects only damage paths
+   * that scale on caster HP (`BT_DMG_OWNER_STAT`/`BT_SWAP_STAT_ATTACK` on
+   * `ST_HP` — Stella et al.). Zero = no buff.
+   */
+  guildLevel: number
+  /**
+   * Hero Codex level (0-11) — passed as `codexLevel` query param to
+   * `/api/admin/characters/:id/stats`. Default 11 (max). Re-fetches the
+   * char stats when changed (codex multiplies base ATK/DEF/HP).
+   */
+  codexLevel: number
+  /**
+   * UI placeholder: "Assume max transcend" — currently locked to true
+   * (the stats API already defaults to the highest reachable TransStar
+   * for the char's BasicStar). Wired so the checkbox can later become
+   * editable when we expose `transcendStar` selection.
+   */
+  assumeMaxTranscend: boolean
+  /**
+   * Exclusive Equipment toggle. When true, all `source.kind === 'ee'` buffs
+   * for the current char are eligible (subject to `eeLevel` gating for
+   * `passive_add` slots and per-buff trigger conditions). The toggle is
+   * surfaced only when the char actually has an EE with a relevant effect.
+   */
+  eeEnabled: boolean
+  /**
+   * EE upgrade level (0-10). Maps to `BuffTemplet.Level` 1-11 for the
+   * mainstat scaling buff (e.g. Maxwell DMG vs Light: lv0=17% → lv10=23%).
+   */
+  eeLevel: number
+  /**
+   * For Core Fusion chars only: which EE variant is equipped.
+   *   - `'self'` (default): the CF char's own EE (e.g. CF Veronica EE 2700037).
+   *   - `'base'`: the base char's EE worn on the CF (e.g. base Veronica EE
+   *     2000037 worn on CF Veronica) — both are valid in-game.
+   * Ignored for non-CF chars (who have no `baseCharId`).
+   */
+  eeVariant: 'self' | 'base'
 }
 
 export interface ModeOption {
