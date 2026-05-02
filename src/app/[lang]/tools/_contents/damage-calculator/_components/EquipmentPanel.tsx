@@ -4,7 +4,9 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { getRarityBgPath } from '@/lib/format-text'
 import { lRec } from '@/lib/i18n/localize'
+import { useI18n } from '@/lib/contexts/I18nContext'
 import type { Lang } from '@/lib/i18n/config'
+import type { TFunction } from '@/i18n'
 import type {
   DamageCalcEquipmentFile,
   DamageCalcEquipmentEE,
@@ -48,8 +50,11 @@ const EFFECT_ICON_BASE  = '/images/ui/effect'
 const EE_ICON_BASE      = '/images/characters/ee'
 
 export default function EquipmentPanel({ equipment, catalog, charId, charSummary, portalElement, lang, dispatch }: Props) {
+  const { t } = useI18n()
   const [openSlot, setOpenSlot] = useState<EquipSlot | null>(null)
   const disabled = !charId
+  const tier2 = t('tools.damage-calculator.equipment.tier_2pc')
+  const tier4 = t('tools.damage-calculator.equipment.tier_4pc')
 
   const weapon    = lookup(catalog.weapons,     equipment.weaponSlug)
   const accessory = lookup(catalog.accessories, equipment.accessorySlug)
@@ -79,64 +84,69 @@ export default function EquipmentPanel({ equipment, catalog, charId, charSummary
   return (
     <div className="space-y-2 rounded border border-zinc-800 bg-zinc-950 p-2">
       <div className="flex items-center justify-between">
-        <span className="text-[10px] uppercase tracking-wider text-zinc-500">Equipment passives</span>
+        <span className="text-[10px] uppercase tracking-wider text-zinc-500">{t('tools.damage-calculator.equipment.title')}</span>
         {(weapon || accessory || set1 || set2 || talisman || equipment.ee.enabled) && (
           <button
             type="button"
             onClick={() => dispatch({ type: 'attacker/clearEquipment' })}
             className="text-[10px] text-zinc-500 transition-colors hover:text-zinc-200"
           >
-            clear all
+            {t('tools.damage-calculator.common.clear_all')}
           </button>
         )}
       </div>
 
       <div className="grid grid-cols-2 gap-1.5">
         <SlotButton
-          label="Weapon"
+          label={t('page.character.gear.weapon')}
           name={weapon ? lRec(weapon.name, lang) : null}
           iconName={weapon?.iconName}
           iconBase={EQUIP_ICON_BASE}
           effectName={weapon?.effect ? lRec(weapon.effect.name, lang) : null}
           disabled={disabled}
+          empty={t('tools.damage-calculator.equipment.empty')}
           onClick={() => setOpenSlot('weapon')}
         />
         <SlotButton
-          label="Accessory"
+          label={t('tools.damage-calculator.equipment.accessory')}
           name={accessory ? lRec(accessory.name, lang) : null}
           iconName={accessory?.iconName}
           iconBase={EQUIP_ICON_BASE}
           effectName={accessory?.effect ? lRec(accessory.effect.name, lang) : null}
           disabled={disabled}
+          empty={t('tools.damage-calculator.equipment.empty')}
           onClick={() => setOpenSlot('accessory')}
         />
         <SlotButton
-          label="Set 1"
+          label={t('tower.set', { n: 1 })}
           name={set1 ? lRec(set1.name, lang) : null}
           iconName={set1?.iconName}
           iconBase={EFFECT_ICON_BASE}
-          effectName={set1 ? `${isFourPc ? '4-pc' : '2-pc'}` : null}
+          effectName={set1 ? (isFourPc ? tier4 : tier2) : null}
           disabled={disabled}
-          tier={isFourPc ? '4-pc' : set1 ? '2-pc' : undefined}
+          tier={isFourPc ? tier4 : set1 ? tier2 : undefined}
+          empty={t('tools.damage-calculator.equipment.empty')}
           onClick={() => setOpenSlot('set1')}
         />
         <SlotButton
-          label="Set 2"
+          label={t('tower.set', { n: 2 })}
           name={set2 ? lRec(set2.name, lang) : null}
           iconName={set2?.iconName}
           iconBase={EFFECT_ICON_BASE}
-          effectName={set2 ? `${isFourPc ? '4-pc' : '2-pc'}` : null}
+          effectName={set2 ? (isFourPc ? tier4 : tier2) : null}
           disabled={disabled}
-          tier={isFourPc ? '4-pc' : set2 ? '2-pc' : undefined}
+          tier={isFourPc ? tier4 : set2 ? tier2 : undefined}
+          empty={t('tools.damage-calculator.equipment.empty')}
           onClick={() => setOpenSlot('set2')}
         />
         <SlotButton
-          label="Talisman"
+          label={t('page.character.gear.talisman')}
           name={talisman ? lRec(talisman.name, lang) : null}
           iconName={talisman?.iconName}
           iconBase={EQUIP_ICON_BASE}
           effectName={talisman?.effect ? lRec(talisman.effect.name, lang) : null}
           disabled={disabled}
+          empty={t('tools.damage-calculator.equipment.empty')}
           onClick={() => setOpenSlot('talisman')}
         />
         <EESlotInline
@@ -146,6 +156,7 @@ export default function EquipmentPanel({ equipment, catalog, charId, charSummary
           state={equipment.ee}
           disabled={disabled}
           lang={lang}
+          t={t}
           dispatch={dispatch}
         />
       </div>
@@ -155,33 +166,33 @@ export default function EquipmentPanel({ equipment, catalog, charId, charSummary
         kind="weapon"
         items={catalog.weapons}
         charClass={charClass}
-        title="Pick a weapon"
+        title={t('tools.damage-calculator.equipment.pick_weapon')}
         {...slotProps('weapon', equipment.weaponSlug)}
       />
       <EquipmentPickerModal
         kind="accessory"
         items={catalog.accessories}
         charClass={charClass}
-        title="Pick an accessory"
+        title={t('tools.damage-calculator.equipment.pick_accessory')}
         {...slotProps('accessory', equipment.accessorySlug)}
       />
       <EquipmentPickerModal
         kind="set"
         items={catalog.sets}
-        title="Pick a set (slot 1)"
+        title={t('tools.damage-calculator.equipment.pick_set', { slot: t('tower.set', { n: 1 }) })}
         {...slotProps('set1', equipment.setSlots[0], equipment.setSlots[1])}
       />
       <EquipmentPickerModal
         kind="set"
         items={catalog.sets}
-        title="Pick a set (slot 2)"
+        title={t('tools.damage-calculator.equipment.pick_set', { slot: t('tower.set', { n: 2 }) })}
         {...slotProps('set2', equipment.setSlots[1], equipment.setSlots[0])}
       />
       <EquipmentPickerModal
         kind="talisman"
         items={catalog.talismans}
         charClass={charClass}
-        title="Pick a talisman"
+        title={t('tools.damage-calculator.equipment.pick_talisman')}
         {...slotProps('talisman', equipment.talismanSlug)}
       />
     </div>
@@ -203,6 +214,7 @@ function SlotButton({
   effectName,
   disabled,
   tier,
+  empty,
   onClick,
 }: {
   label: string
@@ -213,6 +225,8 @@ function SlotButton({
   disabled: boolean
   /** Optional tier badge ("2-pc" / "4-pc") for set slots. */
   tier?: string
+  /** Localized "empty" placeholder shown when no item is picked. */
+  empty: string
   onClick: () => void
 }) {
   const filled = name != null
@@ -234,7 +248,7 @@ function SlotButton({
           {tier && <span className="rounded bg-amber-500/20 px-1 py-px text-[8px] font-bold uppercase tracking-wide text-amber-300">{tier}</span>}
         </div>
         <span className={`block truncate text-[11px] ${filled ? 'font-semibold text-zinc-100' : 'text-zinc-500'}`}>
-          {filled ? name : 'Empty — click to pick'}
+          {filled ? name : empty}
         </span>
         {filled && effectName && (
           <span className="block truncate text-[10px] text-amber-300">{effectName}</span>
@@ -273,6 +287,7 @@ function EESlotInline({
   state,
   disabled,
   lang,
+  t,
   dispatch,
 }: {
   ee: DamageCalcEquipmentEE | null
@@ -281,6 +296,7 @@ function EESlotInline({
   state: EquipmentLoadout['ee']
   disabled: boolean
   lang: Lang
+  t: TFunction
   dispatch: (action: CalcAction) => void
 }) {
   const hasCfChoice = eeSelf != null && eeBase != null
@@ -303,7 +319,7 @@ function EESlotInline({
             onChange={e => dispatch({ type: 'attacker/setEEEnabled', enabled: e.target.checked })}
             className="h-3.5 w-3.5 rounded border-zinc-700 bg-zinc-900"
           />
-          EE
+          {t('tools.damage-calculator.equipment.ee')}
         </label>
         {hasCfChoice && (
           <div className="ml-1 inline-flex overflow-hidden rounded border border-zinc-700 text-[10px]">
@@ -313,7 +329,7 @@ function EESlotInline({
               onClick={() => dispatch({ type: 'attacker/setEEVariant', variant: 'self' })}
               className={`px-1.5 py-0.5 ${state.variant === 'self' ? 'bg-amber-500/30 text-amber-200' : 'text-zinc-400 hover:bg-zinc-800'}`}
             >
-              CF
+              {t('tools.damage-calculator.equipment.cf')}
             </button>
             <button
               type="button"
@@ -321,12 +337,12 @@ function EESlotInline({
               onClick={() => dispatch({ type: 'attacker/setEEVariant', variant: 'base' })}
               className={`border-l border-zinc-700 px-1.5 py-0.5 ${state.variant === 'base' ? 'bg-amber-500/30 text-amber-200' : 'text-zinc-400 hover:bg-zinc-800'}`}
             >
-              Base
+              {t('tools.damage-calculator.equipment.base')}
             </button>
           </div>
         )}
         <div className="ml-auto flex items-center gap-1 text-[10px] text-zinc-400">
-          <span>Lv</span>
+          <span>{t('tools.damage-calculator.target.lv_prefix')}</span>
           <input
             type="range"
             min={0}
@@ -355,15 +371,15 @@ function EESlotInline({
           />
           <div className="min-w-0 flex-1 space-y-1 text-[11px] leading-snug">
             <div className="font-semibold text-amber-200">{lRec(ee.name, lang)}</div>
-            <EEEffectRow label="Main"  effect={ee.mainStat}    lang={lang} level={state.level} isMainStat />
-            <EEEffectRow label="Lv0"   effect={ee.passiveLv0}  lang={lang} level={state.level} />
-            <EEEffectRow label="Lv10"  effect={ee.passiveLv10} lang={lang} level={state.level} dimUntilMax />
+            <EEEffectRow label={t('tools.damage-calculator.equipment.passive_main')}  effect={ee.mainStat}    lang={lang} level={state.level} isMainStat />
+            <EEEffectRow label={t('tools.damage-calculator.equipment.passive_lv0')}   effect={ee.passiveLv0}  lang={lang} level={state.level} />
+            <EEEffectRow label={t('tools.damage-calculator.equipment.passive_lv10')}  effect={ee.passiveLv10} lang={lang} level={state.level} dimUntilMax />
           </div>
         </div>
       )}
 
       {!hasAnyEE && (
-        <p className="mt-1 text-[10px] text-zinc-600">No EE registered for this character</p>
+        <p className="mt-1 text-[10px] text-zinc-600">{t('tools.damage-calculator.equipment.ee_no_data')}</p>
       )}
     </div>
   )

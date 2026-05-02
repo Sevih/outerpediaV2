@@ -1,4 +1,4 @@
-import type { DamageCalcCharDetail } from '@/lib/data/damage-calc'
+import type { DamageCalcCharDetail, DamageCalcMonsterStats } from '@/lib/data/damage-calc'
 
 /**
  * Equipped passives for the attacker. Slugs reference entries in the baked
@@ -98,8 +98,63 @@ export interface SettingsState {
   }
 }
 
+/**
+ * Picked target for the damage formula.
+ *
+ * Two acquisition modes share the same panel:
+ *   - `cascade` — pick a stage + monster from the baked catalog. Stat block
+ *     is the bake's at-level resolution.
+ *   - `manual`  — type stats directly. Useful for cases the bake doesn't
+ *     cover yet, hypothetical bosses, or when the user wants to perturb
+ *     a real monster's stat block ("what if HP were +20%?"). Manual state
+ *     is kept independent of the cascade selection so toggling between
+ *     the two modes is non-destructive.
+ *
+ * `stageId`   = `DungeonTemplet.ID`
+ * `monsterId` = `MonsterTemplet.ID`
+ */
+export type TargetMode = 'cascade' | 'manual'
+
+/**
+ * Free-form target description. `element` drives element advantage, `isBoss`
+ * gates PVE awakening triggers; everything else is the raw stat block the
+ * damage formula will consume. Class / level intentionally absent — the UI
+ * is stat-centric and these add noise without changing the math today.
+ */
+export interface ManualTargetState {
+  isBoss: boolean
+  /** Fire / Water / Earth / Light / Dark — must match the icon-file convention. */
+  element: string
+  stats: DamageCalcMonsterStats
+}
+
+export interface TargetState {
+  mode: TargetMode
+  stageId: string | null
+  monsterId: string | null
+  manual: ManualTargetState
+}
+
+export const INITIAL_MANUAL: ManualTargetState = {
+  isBoss: true,
+  element: 'Fire',
+  stats: {
+    hp: 1_000_000, atk: 8000, def: 2000, spd: 100,
+    chc: 5, chd: 150, pen: 0, dmgInc: 0, dmgRed: 0,
+    eff: 0, res: 0,
+  },
+}
+
+export const INITIAL_TARGET: TargetState = {
+  mode: 'cascade',
+  stageId: null,
+  monsterId: null,
+  manual: { ...INITIAL_MANUAL, stats: { ...INITIAL_MANUAL.stats } },
+}
+
 export interface CalcState {
   attacker: AttackerState
+  target: TargetState
   settings: SettingsState
   /**
    * `true` when the user has typed in the stats grid since the last
@@ -134,6 +189,7 @@ export const INITIAL_STATE: CalcState = {
     transStar: 0,
     equipment: { ...INITIAL_LOADOUT, setSlots: [...INITIAL_LOADOUT.setSlots], ee: { ...INITIAL_LOADOUT.ee } },
   },
+  target: { ...INITIAL_TARGET, manual: { ...INITIAL_MANUAL, stats: { ...INITIAL_MANUAL.stats } } },
   settings: { ...INITIAL_SETTINGS, quirks: { ...INITIAL_SETTINGS.quirks } },
   statsDirty: false,
 }

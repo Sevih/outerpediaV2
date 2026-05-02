@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import type { DamageCalcTranscendCharEntry } from '@/lib/data/damage-calc'
 import { STAR_ICONS, starRowForLevel } from '@/lib/stars'
+import { useI18n } from '@/lib/contexts/I18nContext'
 import type { CalcAction } from '../_state/reducer'
 
 /**
@@ -52,6 +53,7 @@ const LEVEL_DISPLAY: Record<string, string> = {
 }
 
 export default function TranscendControl({ entry, transStar, dispatch }: Props) {
+  const { t } = useI18n()
   const tiers = entry.tiers
   if (tiers.length === 0) return null
 
@@ -81,7 +83,7 @@ export default function TranscendControl({ entry, transStar, dispatch }: Props) 
           type="button"
           onClick={() => setTier(transStar - 1)}
           disabled={transStar <= minTier}
-          aria-label="Lower tier"
+          aria-label={t('tools.damage-calculator.attacker.tier_lower')}
           className="flex h-6 w-6 shrink-0 items-center justify-center rounded bg-zinc-700 text-sm text-white hover:bg-zinc-600 disabled:cursor-not-allowed disabled:opacity-50"
         >
           &ndash;
@@ -99,7 +101,7 @@ export default function TranscendControl({ entry, transStar, dispatch }: Props) 
             step={1}
             value={transStar}
             onChange={e => setTier(parseInt(e.target.value, 10))}
-            aria-label="Transcend tier"
+            aria-label={t('tools.damage-calculator.attacker.tier_label')}
             className="absolute left-0 top-0 h-2 w-full cursor-pointer opacity-0"
           />
         </div>
@@ -108,7 +110,7 @@ export default function TranscendControl({ entry, transStar, dispatch }: Props) 
           type="button"
           onClick={() => setTier(transStar + 1)}
           disabled={transStar >= maxTier}
-          aria-label="Raise tier"
+          aria-label={t('tools.damage-calculator.attacker.tier_raise')}
           className="flex h-6 w-6 shrink-0 items-center justify-center rounded bg-zinc-700 text-sm text-white hover:bg-zinc-600 disabled:cursor-not-allowed disabled:opacity-50"
         >
           +
@@ -145,11 +147,11 @@ export default function TranscendControl({ entry, transStar, dispatch }: Props) 
           )}
           {currentTier.burst3 ? (
             <div className="inline-block rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px] font-semibold text-amber-300">
-              Burst Lv 3 unlocked
+              {t('tools.damage-calculator.attacker.burst_unlocked', { n: 3 })}
             </div>
           ) : currentTier.burst2 ? (
             <div className="inline-block rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px] font-semibold text-amber-300">
-              Burst Lv 2 unlocked
+              {t('tools.damage-calculator.attacker.burst_unlocked', { n: 2 })}
             </div>
           ) : null}
         </div>

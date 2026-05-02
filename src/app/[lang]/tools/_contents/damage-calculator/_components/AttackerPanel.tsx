@@ -5,7 +5,9 @@ import Image from 'next/image'
 import CharacterPortrait from '@/app/components/character/CharacterPortrait'
 import { formatEffectText } from '@/lib/format-text'
 import { l } from '@/lib/i18n/localize'
+import { useI18n } from '@/lib/contexts/I18nContext'
 import type { Lang } from '@/lib/i18n/config'
+import type { TFunction } from '@/i18n'
 import type {
   DamageCalcCharSummary,
   DamageCalcTranscendFile,
@@ -18,6 +20,7 @@ import { fetchCharDetail } from '../_lib/fetch-data'
 import CharPickerModal from './CharPickerModal'
 import TranscendControl from './TranscendControl'
 import EquipmentPanel from './EquipmentPanel'
+import { ClassIcon, ElementIcon } from './StatBadges'
 
 /**
  * Attacker panel — char picker + stats input + skill controls + transcend.
@@ -149,6 +152,7 @@ function CharHeader({
   lang: Lang
   onClick: () => void
 }) {
+  const { t } = useI18n()
   if (!summary) {
     return (
       <button
@@ -157,7 +161,7 @@ function CharHeader({
         className="flex w-full items-center gap-3 rounded border border-dashed border-zinc-700 bg-zinc-950 p-3 text-left text-sm text-zinc-400 transition-colors hover:border-zinc-500 hover:text-zinc-200"
       >
         <div className="h-12 w-12 rounded bg-zinc-800" />
-        <span>Pick an attacker…</span>
+        <span>{t('tools.damage-calculator.attacker.pick')}</span>
       </button>
     )
   }
@@ -186,11 +190,15 @@ function CharHeader({
       </div>
       <div className="min-w-0 flex-1">
         <div className="truncate text-sm font-semibold text-zinc-100">{displayName}</div>
-        <div className="text-[10px] uppercase tracking-wide text-zinc-500">
-          {summary.element} · {summary.class}
+        <div className="mt-0.5 flex items-center gap-1 text-[10px] uppercase tracking-wide text-zinc-500">
+          <ElementIcon element={summary.element} size={12} />
+          <span>{summary.element}</span>
+          <span className="text-zinc-700">·</span>
+          <ClassIcon classLabel={summary.class} size={12} />
+          <span>{summary.class}</span>
         </div>
       </div>
-      <span className="text-xs text-zinc-500">change</span>
+      <span className="text-xs text-zinc-500">{t('tools.damage-calculator.common.change')}</span>
     </button>
   )
 }
@@ -228,17 +236,18 @@ function StatsGrid({
   disabled: boolean
   scalings: AttackerState['detail'] extends infer D ? (D extends { scalings: infer S } ? S : null) : null
 }) {
+  const { t } = useI18n()
   return (
     <div>
       <div className="mb-1 flex items-center justify-between">
-        <span className="text-[10px] uppercase tracking-wider text-zinc-500">Stats</span>
+        <span className="text-[10px] uppercase tracking-wider text-zinc-500">{t('tools.damage-calculator.stat.label')}</span>
         <button
           type="button"
           onClick={() => dispatch({ type: 'attacker/resetStats' })}
           disabled={disabled}
           className="text-[10px] text-zinc-500 transition-colors hover:text-zinc-200 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          reset
+          {t('tools.damage-calculator.common.reset')}
         </button>
       </div>
       <div className="grid grid-cols-2 gap-1.5">
@@ -257,6 +266,7 @@ function StatsGrid({
               value={stats[key]}
               disabled={disabled}
               role={role}
+              t={t}
               onChange={v => dispatch({ type: 'attacker/setStat', key, value: v })}
             />
           )
@@ -290,20 +300,26 @@ function StatField({
   value,
   disabled,
   role,
+  t,
   onChange,
 }: {
   statKey: StatKey
   value: number
   disabled: boolean
   role: ScalingRole
+  t: TFunction
   onChange: (v: number) => void
 }) {
   const isPct = PERCENT_STATS.has(statKey)
+  const titleHover =
+    role === 'main' ? t('tools.damage-calculator.attacker.scaling_main')
+    : role === 'secondary' ? t('tools.damage-calculator.attacker.scaling_secondary')
+    : undefined
 
   return (
     <label
       className={`flex items-center gap-1.5 rounded border px-2 py-1 transition-colors ${ROLE_CONTAINER[role]}`}
-      title={role === 'main' ? 'Main scaling stat' : role === 'secondary' ? 'Secondary scaling stat' : undefined}
+      title={titleHover}
     >
       <Image
         src={`/images/ui/effect/${STAT_ICONS[statKey]}.webp`}
@@ -352,6 +368,7 @@ function SkillControls({
   lang: Lang
   dispatch: (a: CalcAction) => void
 }) {
+  const { t } = useI18n()
   const skillData = detail?.skills[slotToKey(slot)] ?? null
   const dfAtLevel = skillData?.damageFactors[level - 1] ?? null
   const skillName = skillData ? l(skillData, 'name', lang) : null
@@ -400,7 +417,7 @@ function SkillControls({
         <div className="text-center text-sm font-semibold text-zinc-100">{skillName}</div>
       )}
       <div className="flex items-center gap-2">
-        <span className="text-[10px] uppercase tracking-wider text-zinc-500">Lv</span>
+        <span className="text-[10px] uppercase tracking-wider text-zinc-500">{t('tools.damage-calculator.target.lv_prefix')}</span>
         <input
           type="range"
           min={1}
@@ -416,7 +433,7 @@ function SkillControls({
 
       <div className="flex items-center justify-between text-xs">
         <span className="text-zinc-500">
-          DF: <span className="text-zinc-200 tabular-nums">{dfAtLevel != null ? `${(dfAtLevel / 10).toFixed(1)}%` : '—'}</span>
+          {t('tools.damage-calculator.attacker.df')}: <span className="text-zinc-200 tabular-nums">{dfAtLevel != null ? `${(dfAtLevel / 10).toFixed(1)}%` : '—'}</span>
         </span>
         <label className="flex cursor-pointer items-center gap-1.5 text-zinc-300">
           <input
@@ -425,13 +442,13 @@ function SkillControls({
             onChange={e => dispatch({ type: 'attacker/setCrit', crit: e.target.checked })}
             className="h-3.5 w-3.5 rounded border-zinc-700 bg-zinc-900"
           />
-          <span>Crit</span>
+          <span>{t('tools.damage-calculator.attacker.crit')}</span>
         </label>
       </div>
 
       {skillData?.additionalAttackRatio != null && (
         <div className="text-[10px] text-zinc-500">
-          Additional attack: <span className="text-zinc-300">+{(skillData.additionalAttackRatio * 100).toFixed(0)}%</span>
+          {t('tools.damage-calculator.attacker.additional_attack')}: <span className="text-zinc-300">+{(skillData.additionalAttackRatio * 100).toFixed(0)}%</span>
         </div>
       )}
 

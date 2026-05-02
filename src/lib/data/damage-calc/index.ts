@@ -39,9 +39,12 @@ export {
 } from './monsters'
 
 export type {
-  DamageCalcLangMap,
+  DamageCalcLangDict,
   DamageCalcMonsterStats,
   DamageCalcMonsterEntry,
+  DamageCalcWaveEntry,
+  DamageCalcStageEntry,
+  DamageCalcModeEntry,
   DamageCalcMonstersFile,
 } from './monsters'
 

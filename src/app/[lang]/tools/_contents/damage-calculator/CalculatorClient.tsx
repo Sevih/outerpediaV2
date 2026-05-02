@@ -16,6 +16,7 @@ import { INITIAL_SETTINGS, type CalcState, type SettingsState } from './_state/t
 import { computeFinalStats, pickCodexEntry } from './_lib/no-gear-stats'
 import AttackerPanel from './_components/AttackerPanel'
 import SettingsPanel from './_components/SettingsPanel'
+import TargetPanel from './_components/TargetPanel'
 
 // v3: quirks shape extended to { element, job, pve, adventureLicense } — old
 // v1/v2 blobs are silently dropped (defaults rehydrate cleanly).
@@ -120,15 +121,15 @@ export default function CalculatorClient({
           type="button"
           className="rounded bg-blue-600 px-3 py-1 text-sm font-medium text-white"
         >
-          Single
+          {t('tools.damage-calculator.tab.single')}
         </button>
         <button
           type="button"
           disabled
-          title="Coming soon"
+          title={t('common.coming_soon')}
           className="rounded bg-zinc-800 px-3 py-1 text-sm font-medium text-zinc-500 cursor-not-allowed"
         >
-          Compare 3 builds
+          {t('tools.damage-calculator.tab.compare')}
         </button>
         <button
           type="button"
@@ -160,7 +161,7 @@ export default function CalculatorClient({
 
       {/* Three-panel layout: 3-col on desktop, stacked on mobile. */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <Panel title="Attacker">
+        <Panel title={t('tools.damage-calculator.panel.attacker')}>
           <AttackerPanel
             state={state.attacker}
             dispatch={dispatch}
@@ -171,16 +172,23 @@ export default function CalculatorClient({
             lang={lang}
           />
         </Panel>
-        <Panel title="Target">
-          <Placeholder>Mode → stage → monster picker, manual override, mechanics toggles</Placeholder>
+        <Panel title={t('tools.damage-calculator.panel.target')}>
+          <TargetPanel
+            catalog={monsters}
+            state={state.target}
+            awakening={awakening}
+            settings={state.settings}
+            lang={lang}
+            dispatch={dispatch}
+          />
         </Panel>
-        <Panel title="Result">
+        <Panel title={t('tools.damage-calculator.panel.result')}>
           <Placeholder>Computed damage, breakdown, active buffs, debug toggle</Placeholder>
         </Panel>
       </div>
 
       {/* Full-width buff/debuff toggles section. */}
-      <Panel title="Buffs / Debuffs">
+      <Panel title={t('tools.damage-calculator.panel.buffs')}>
         <Placeholder>External buffs (attacker/target × buff/debuff) and gear set passives</Placeholder>
       </Panel>
 
@@ -193,7 +201,7 @@ export default function CalculatorClient({
         <ul className="mt-2 space-y-0.5 text-xs text-zinc-400">
           <li>Manifest: <span className="text-zinc-200">{manifest.chars.length}</span> chars</li>
           <li>Awakening buffs: <span className="text-zinc-200">{awakening.buffs.length}</span></li>
-          <li>Monster stages: <span className="text-zinc-200">{monsters.stages.length}</span></li>
+          <li>Monster modes: <span className="text-zinc-200">{monsters.modes.length}</span> ({monsters.modes.reduce((n, m) => n + m.stages.length, 0)} stages)</li>
           <li>Monsters with mechanics: <span className="text-zinc-200">{mechanicsIndex.monsterIds.length}</span></li>
           <li>Chars with transcend tiers: <span className="text-zinc-200">{Object.keys(transcend.byChar).length}</span></li>
         </ul>

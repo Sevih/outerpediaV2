@@ -5,7 +5,9 @@ import { createPortal } from 'react-dom'
 import { useEffect, useMemo, useState } from 'react'
 import { getRarityBgPath } from '@/lib/format-text'
 import { lRec } from '@/lib/i18n/localize'
+import { useI18n } from '@/lib/contexts/I18nContext'
 import type { Lang } from '@/lib/i18n/config'
+import type { TFunction } from '@/i18n'
 import type {
   DamageCalcEquipmentItem,
   DamageCalcEquipmentSet,
@@ -67,6 +69,7 @@ const EFFECT_ICON_BASE = '/images/ui/effect'
 
 export default function EquipmentPickerModal(props: Props) {
   const { open, onClose, onPick, selectedId, portalElement, lang, title, kind } = props
+  const { t } = useI18n()
 
   // Esc-to-close + reset search every time the modal opens.
   const [search, setSearch] = useState('')
@@ -118,7 +121,7 @@ export default function EquipmentPickerModal(props: Props) {
             disabled={!selectedId}
             className="ml-auto rounded bg-gray-700 px-2 py-1 text-xs text-gray-300 hover:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Clear slot
+            {t('tools.damage-calculator.common.clear_slot')}
           </button>
           <button
             type="button"
@@ -136,7 +139,7 @@ export default function EquipmentPickerModal(props: Props) {
             type="text"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            placeholder="Search…"
+            placeholder={t('common.search')}
             className="w-full rounded border border-gray-600 bg-gray-900 px-3 py-1.5 text-sm text-gray-100 placeholder:text-gray-500 focus:border-purple-500 focus:outline-none"
             autoFocus
           />
@@ -145,7 +148,7 @@ export default function EquipmentPickerModal(props: Props) {
         {/* Grid */}
         <div className="grid grid-cols-1 gap-2 overflow-y-auto p-3 sm:grid-cols-2">
           {filtered.length === 0 && (
-            <p className="col-span-full py-6 text-center text-sm text-gray-500">No matches</p>
+            <p className="col-span-full py-6 text-center text-sm text-gray-500">{t('tools.damage-calculator.common.no_matches')}</p>
           )}
           {kind === 'set'
             ? (filtered as DamageCalcEquipmentSet[]).map(set => (
@@ -153,6 +156,7 @@ export default function EquipmentPickerModal(props: Props) {
                   key={set.id}
                   set={set}
                   lang={lang}
+                  t={t}
                   selected={selectedId === set.id}
                   paired4pc={selectedId !== set.id && (props as BaseProps).pairedId === set.id}
                   onPick={() => { onPick(set.id); onClose() }}
@@ -163,6 +167,7 @@ export default function EquipmentPickerModal(props: Props) {
                   key={item.id}
                   item={item}
                   lang={lang}
+                  t={t}
                   selected={selectedId === item.id}
                   onPick={() => { onPick(item.id); onClose() }}
                 />
@@ -184,11 +189,13 @@ function matchSearch(name: { en?: string }, q: string, lang: Lang): boolean {
 function ItemCard({
   item,
   lang,
+  t,
   selected,
   onPick,
 }: {
   item: DamageCalcEquipmentItem
   lang: Lang
+  t: TFunction
   selected: boolean
   onPick: () => void
 }) {
@@ -211,7 +218,7 @@ function ItemCard({
             </span>
           )}
         </div>
-        <EffectName effect={item.effect} lang={lang} />
+        <EffectName effect={item.effect} lang={lang} t={t} />
       </div>
     </button>
   )
@@ -220,12 +227,14 @@ function ItemCard({
 function SetCard({
   set,
   lang,
+  t,
   selected,
   paired4pc,
   onPick,
 }: {
   set: DamageCalcEquipmentSet
   lang: Lang
+  t: TFunction
   selected: boolean
   paired4pc: boolean
   onPick: () => void
@@ -239,7 +248,7 @@ function SetCard({
         selected ? 'border-purple-500 bg-purple-500/15' : 'border-gray-700 bg-gray-900 hover:border-gray-500 hover:bg-gray-800',
         paired4pc ? 'ring-1 ring-amber-400/60' : '',
       ].filter(Boolean).join(' ')}
-      title={paired4pc ? 'Already in the other slot — pick again to unlock 4-pc' : undefined}
+      title={paired4pc ? t('tools.damage-calculator.equipment.4pc_hint') : undefined}
     >
       {/* Set icons live under /images/ui/effect, not /images/equipment. */}
       <ItemIcon iconName={set.iconName} alt={lRec(set.name, lang)} basePath={EFFECT_ICON_BASE} />
@@ -247,12 +256,12 @@ function SetCard({
         <span className="block truncate text-sm font-semibold text-gray-100">{lRec(set.name, lang)}</span>
         {set.bonus2 && (
           <div className="text-[11px] text-gray-300">
-            <span className="font-semibold text-emerald-300">2-pc</span>
+            <span className="font-semibold text-emerald-300">{t('tools.damage-calculator.equipment.tier_2pc')}</span>
           </div>
         )}
         {set.bonus4 && (
           <div className="text-[11px] text-gray-300">
-            <span className="font-semibold text-amber-300">4-pc</span>
+            <span className="font-semibold text-amber-300">{t('tools.damage-calculator.equipment.tier_4pc')}</span>
           </div>
         )}
       </div>
@@ -261,8 +270,8 @@ function SetCard({
 }
 
 /** Just the passive label — the structured buff data feeds recompute, not the picker UI. */
-function EffectName({ effect, lang }: { effect: DamageCalcEffectGroup | null; lang: Lang }) {
-  if (!effect) return <span className="text-[11px] italic text-gray-500">No passive data</span>
+function EffectName({ effect, lang, t }: { effect: DamageCalcEffectGroup | null; lang: Lang; t: TFunction }) {
+  if (!effect) return <span className="text-[11px] italic text-gray-500">{t('tools.damage-calculator.equipment.no_passive_data')}</span>
   if (!effect.name) return null
   return <div className="truncate text-[11px] font-medium text-amber-300">{lRec(effect.name, lang)}</div>
 }

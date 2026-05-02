@@ -167,13 +167,13 @@ export default function MonsterPortrait({
       )}
 
       {isBoss && (
-        <div className="absolute top-0.5 left-0.5 z-10 rounded bg-red-900/80 px-1 text-[9px] font-bold leading-tight text-red-100 drop-shadow-md">
+        <div className="absolute top-0.5 left-0 z-10 rounded bg-red-900/80 px-1 text-[9px] font-bold leading-tight text-red-100 drop-shadow-md">
           BOSS
         </div>
       )}
 
       {showStars && s.starSize > 0 && basicStar && basicStar > 0 && (
-        <div className="absolute bottom-0.5 left-0 right-0 z-10 flex items-center justify-center">
+        <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center">
           {Array.from({ length: basicStar }, (_, i) => (
             <Image
               key={i}
@@ -188,7 +188,7 @@ export default function MonsterPortrait({
       )}
 
       {showLevel && typeof level === 'number' && level > 0 && (
-        <div className="absolute bottom-0.5 right-0.5 z-10 rounded bg-black/70 px-1 text-[9px] font-bold leading-tight text-amber-300">
+        <div className="absolute bottom-3 right-0 z-10 rounded bg-black/70 px-1 text-[8px] font-bold leading-tight text-amber-300">
           Lv{level}
         </div>
       )}

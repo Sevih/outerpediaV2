@@ -1,7 +1,7 @@
-import type { DamageCalcCharDetail, DamageCalcStatsStep } from '@/lib/data/damage-calc'
+import type { DamageCalcCharDetail, DamageCalcMonsterStats, DamageCalcStatsStep } from '@/lib/data/damage-calc'
 import {
-  INITIAL_STATE, INITIAL_STATS, INITIAL_LOADOUT,
-  type CalcState, type SkillSlot, type StatKey, type StatValues,
+  INITIAL_STATE, INITIAL_STATS, INITIAL_LOADOUT, INITIAL_MANUAL,
+  type CalcState, type ManualTargetState, type SkillSlot, type StatKey, type StatValues, type TargetMode,
 } from './types'
 
 /** Equipment slot keys exposed by the picker. */
@@ -41,6 +41,12 @@ export type CalcAction =
   | { type: 'attacker/setEELevel'; level: number }
   | { type: 'attacker/setEEVariant'; variant: 'self' | 'base' }
   | { type: 'attacker/clearEquipment' }
+  | { type: 'target/pickMonster'; stageId: string | null; monsterId: string | null }
+  | { type: 'target/setMode'; mode: TargetMode }
+  | { type: 'target/setManualField'; key: 'isBoss' | 'element'; value: boolean | string }
+  | { type: 'target/setManualStat'; key: keyof DamageCalcMonsterStats; value: number }
+  | { type: 'target/seedManual'; manual: ManualTargetState }
+  | { type: 'target/resetManual' }
 
 export function calcReducer(state: CalcState, action: CalcAction): CalcState {
   switch (action.type) {
@@ -174,6 +180,48 @@ export function calcReducer(state: CalcState, action: CalcAction): CalcState {
       return { ...state, attacker: { ...state.attacker, equipment: { ...state.attacker.equipment, ee: { ...state.attacker.equipment.ee, variant: action.variant } } } }
     case 'attacker/clearEquipment':
       return { ...state, attacker: { ...state.attacker, equipment: { ...INITIAL_LOADOUT, setSlots: [...INITIAL_LOADOUT.setSlots], ee: { ...INITIAL_LOADOUT.ee } } } }
+
+    case 'target/pickMonster':
+      // No-op when the (stage, monster) pair hasn't changed — keeps the
+      // reducer pure-ish and avoids spurious re-renders downstream.
+      if (state.target.stageId === action.stageId && state.target.monsterId === action.monsterId) return state
+      return { ...state, target: { ...state.target, stageId: action.stageId, monsterId: action.monsterId } }
+
+    case 'target/setMode':
+      if (state.target.mode === action.mode) return state
+      return { ...state, target: { ...state.target, mode: action.mode } }
+
+    case 'target/setManualField': {
+      const m = state.target.manual
+      let next: ManualTargetState = m
+      if (action.key === 'isBoss')       next = { ...m, isBoss:  Boolean(action.value) }
+      else if (action.key === 'element') next = { ...m, element: String(action.value) }
+      return { ...state, target: { ...state.target, manual: next } }
+    }
+
+    case 'target/setManualStat':
+      return {
+        ...state,
+        target: {
+          ...state.target,
+          manual: {
+            ...state.target.manual,
+            stats: { ...state.target.manual.stats, [action.key]: Math.max(0, action.value) },
+          },
+        },
+      }
+
+    case 'target/seedManual':
+      return {
+        ...state,
+        target: { ...state.target, manual: { ...action.manual, stats: { ...action.manual.stats } } },
+      }
+
+    case 'target/resetManual':
+      return {
+        ...state,
+        target: { ...state.target, manual: { ...INITIAL_MANUAL, stats: { ...INITIAL_MANUAL.stats } } },
+      }
   }
 }
 

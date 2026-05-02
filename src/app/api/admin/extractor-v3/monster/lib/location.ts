@@ -1,6 +1,10 @@
 import { loadTable, indexBy, num, langDict, getLangTexts, type Row, type LangDict } from './common'
 import { LANGS } from '@/lib/i18n/config'
 
+// Re-export so consumers (e.g. the public damage-calc bake) can pull the
+// LangDict alias from the same module they get the resolvers from.
+export type { LangDict }
+
 // ── Mode label resolution ────────────────────────────────────────────
 //
 // Labels come from TextSystem, never from hardcoded strings. Two
