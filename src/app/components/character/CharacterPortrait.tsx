@@ -104,7 +104,7 @@ export default function CharacterPortrait({
       {showIcons && s.iconSize > 0 && (
         <>
           {element && (
-            <div className="absolute top-0.5 right-0.5 z-10">
+            <div className="absolute top-0 right-0 z-10">
               <Image
                 src={`/images/ui/elem/CM_Element_${element}.webp`}
                 alt={element}
@@ -115,7 +115,7 @@ export default function CharacterPortrait({
             </div>
           )}
           {classType && (
-            <div className="absolute top-1/2 right-0.5 z-10 -translate-y-1/2">
+            <div className="absolute top-1/2 right-0 z-10 -translate-y-1/2">
               <Image
                 src={`/images/ui/class/CM_Class_${classType}.webp`}
                 alt={classType}
@@ -130,7 +130,7 @@ export default function CharacterPortrait({
 
       {/* Rarity stars — bottom center */}
       {(showStars || forceStar) && s.starSize > 0 && (forceStar ?? rarity) && (
-        <div className="absolute bottom-0.5 left-0 right-0 z-10 flex items-center justify-center">
+        <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center">
           {Array.from({ length: forceStar ?? rarity! }, (_, i) => (
             <Image
               key={i}

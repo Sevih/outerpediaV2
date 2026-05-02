@@ -17,7 +17,8 @@ export function proxy(request: NextRequest) {
     pathname.startsWith('/admin') ||
     pathname.startsWith('/images') ||
     pathname.startsWith('/audio') ||
-    pathname.startsWith('/feed')
+    pathname.startsWith('/feed') ||
+    pathname.startsWith('/damage-calc/')
   ) {
     return NextResponse.next();
   }

@@ -17,6 +17,11 @@ export type {
   DamageCalcSkillDetail,
   DamageCalcStatsStep,
   DamageCalcCharDetail,
+  DamageCalcCodexEntry,
+  DamageCalcStatContribution,
+  DamageCalcNoGearStats,
+  DamageCalcStatKey,
+  DamageCalcCharScalings,
 } from './chars'
 
 export {

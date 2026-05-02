@@ -36,12 +36,12 @@ export async function getToolCategories(): Promise<ToolCategory[]> {
     .sort((a, b) => a.order - b.order);
 }
 
-/** All tools sorted by order (hidden tools only visible in dev) */
+/** All tools sorted by order (hidden + unlisted tools only visible in dev) */
 export async function getAllTools(): Promise<ToolMeta[]> {
   const raw = await loadIndex();
   return Object.entries(raw)
     .map(([slug, data]) => ({ slug, ...data }))
-    .filter((t) => isDev || t.status !== 'hidden')
+    .filter((t) => isDev || (t.status !== 'hidden' && t.status !== 'unlisted'))
     .sort((a, b) => a.order - b.order);
 }
 

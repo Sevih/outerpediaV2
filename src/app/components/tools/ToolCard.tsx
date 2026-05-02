@@ -7,7 +7,7 @@ import { localePath } from '@/lib/navigation';
 type Props = {
   slug: string;
   icon: string;
-  status: 'available' | 'coming-soon' | 'hidden';
+  status: 'available' | 'coming-soon' | 'hidden' | 'unlisted';
   href?: string;
   lang: Lang;
   t: Record<TranslationKey, string>;
@@ -45,6 +45,11 @@ export default function ToolCard({ slug, icon, status, href, lang, t, devMode }:
       {status === 'hidden' && (
         <span className="shrink-0 rounded-full bg-amber-900/50 px-2.5 py-0.5 text-xs font-medium text-amber-400">
           DEV
+        </span>
+      )}
+      {status === 'unlisted' && (
+        <span className="shrink-0 rounded-full bg-sky-900/50 px-2.5 py-0.5 text-xs font-medium text-sky-400">
+          UNLISTED
         </span>
       )}
     </>

@@ -3,7 +3,7 @@ export type ToolMeta = {
   icon: string;
   category: string;
   order: number;
-  status: 'available' | 'coming-soon' | 'hidden';
+  status: 'available' | 'coming-soon' | 'hidden' | 'unlisted';
   href?: string;
   keywords?: string[];
 };

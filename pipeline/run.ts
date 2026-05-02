@@ -7,7 +7,18 @@ type Step = {
 };
 
 // Pipeline steps — executed in order
+// Order matters. The two extraction steps must run FIRST so every downstream
+// consumer reads fresh data:
+//   - bytes-cache    → produces `data/admin/json2/`        (consumed by
+//                       character-stats, damage-calc, area-names,
+//                       bgm-extract, tower-data)
+//   - extract-assets → produces `data/extracted_astudio/`  (consumed by
+//                       wallpapers)
+// Both early-return cleanly when the source bundles are absent (typical
+// prod deploy), so moving them first doesn't break the no-datamine path.
 const steps: Step[] = [
+  { name: 'bytes-cache', run: () => import('./steps/bytes-cache').then(m => m.run()) },
+  { name: 'extract-assets', run: () => import('./steps/extract-assets').then(m => m.run()) },
   { name: 'effect-group-map', run: () => import('./steps/effect-group-map').then(m => m.run()) },
   { name: 'effects-index', run: () => import('./steps/effects-index').then(m => m.run()) },
   { name: 'boss-index', run: () => import('./steps/boss-index').then(m => m.run()) },
@@ -18,8 +29,6 @@ const steps: Step[] = [
   { name: 'area-names', run: () => import('./steps/area-names').then(m => m.run()) },
   { name: 'guide-boss-map', run: () => import('./steps/guide-boss-map').then(m => m.run()) },
   { name: 'most-used-units', run: () => import('./steps/most-used-units').then(m => m.run()) },
-  { name: 'extract-assets', run: () => import('./steps/extract-assets').then(m => m.run()) },
-  { name: 'bytes-cache', run: () => import('./steps/bytes-cache').then(m => m.run()) },
   { name: 'bgm-extract', run: () => import('./steps/bgm-extract').then(m => m.run()) },
   { name: 'wallpapers', run: () => import('./steps/wallpapers').then(m => m.run()) },
   { name: 'comics', run: () => import('./steps/comics').then(m => m.run()) },

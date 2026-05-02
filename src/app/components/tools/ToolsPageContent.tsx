@@ -9,7 +9,7 @@ import ToolCard from './ToolCard';
 type ToolData = {
   slug: string;
   icon: string;
-  status: 'available' | 'coming-soon' | 'hidden';
+  status: 'available' | 'coming-soon' | 'hidden' | 'unlisted';
   href?: string;
   category: string;
 };
