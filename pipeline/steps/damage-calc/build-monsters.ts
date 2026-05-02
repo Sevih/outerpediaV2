@@ -9,7 +9,7 @@ import {
   resolveTextDict,
   SUPPORTED_DUNGEON_MODES,
   type LangDict,
-} from '../../../src/app/api/admin/extractor-v3/monster/lib/location'
+} from './_location'
 
 /**
  * Bake the target catalog for the public damage calculator.
@@ -239,12 +239,10 @@ export async function buildMonsters(): Promise<{ stages: number; modes: number }
     spawnRowsByGroup.set(s.GroupID, arr)
   }
 
-  // The location module reads directly from disk via `loadTable` — call it
-  // after we've already loaded the same files via `loadJson2` (the second
-  // read hits its own internal cache and is essentially free). We only
-  // need its area + textSystem indexes, NOT the bridge tables (those are
-  // for monster→dungeon resolution, which we don't do here).
-  const loc = loadLocationTables()
+  // Pipeline-local location module — loads TextSystem + AreaTemplet via the
+  // same `loadJson2` cache the rest of the pipeline uses, so the second read
+  // here is essentially free.
+  const loc = await loadLocationTables()
 
   const { eventBossHpByDungeon, irregularChaseHpByDungeon } = buildOverrideMaps(eventBossRows, irregularChaseRows)
 
