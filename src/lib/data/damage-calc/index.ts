@@ -64,3 +64,16 @@ export type {
   DamageCalcTranscendCharEntry,
   DamageCalcTranscendFile,
 } from './transcend'
+
+export {
+  getDamageCalcEquipment,
+} from './equipment'
+
+export type {
+  DamageCalcBuffEntry,
+  DamageCalcEffectGroup,
+  DamageCalcEquipmentItem,
+  DamageCalcEquipmentSet,
+  DamageCalcEquipmentEE,
+  DamageCalcEquipmentFile,
+} from './equipment'

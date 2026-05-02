@@ -8,6 +8,7 @@ import type {
   DamageCalcMonstersFile,
   DamageCalcMechanicsIndex,
   DamageCalcTranscendFile,
+  DamageCalcEquipmentFile,
 } from '@/lib/data/damage-calc'
 import { useI18n } from '@/lib/contexts/I18nContext'
 import { calcReducer, INITIAL_STATE } from './_state/reducer'
@@ -39,6 +40,7 @@ interface Props {
   monsters: DamageCalcMonstersFile
   mechanicsIndex: DamageCalcMechanicsIndex
   transcend: DamageCalcTranscendFile
+  equipment: DamageCalcEquipmentFile
 }
 
 export default function CalculatorClient({
@@ -47,6 +49,7 @@ export default function CalculatorClient({
   monsters,
   mechanicsIndex,
   transcend,
+  equipment,
 }: Props) {
   const { lang, t } = useI18n()
   const [state, dispatch] = useReducer(calcReducer, INITIAL_STATE)
@@ -163,6 +166,8 @@ export default function CalculatorClient({
             dispatch={dispatch}
             manifest={manifest.chars}
             transcend={transcend}
+            equipment={equipment}
+            portalElement={portalElement}
             lang={lang}
           />
         </Panel>

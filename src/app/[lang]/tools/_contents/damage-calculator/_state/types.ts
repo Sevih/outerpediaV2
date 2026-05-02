@@ -1,6 +1,41 @@
 import type { DamageCalcCharDetail } from '@/lib/data/damage-calc'
 
 /**
+ * Equipped passives for the attacker. Slugs reference entries in the baked
+ * `equipment.json` catalog. Sets are split across two slots — same slug in
+ * both = 4-pc bonus active; different slugs = each is a 2-pc bonus only.
+ *
+ * Stays per-attacker (not in account Settings) because the equipped loadout
+ * is char-specific. Persistence will live in the URL when share-link ships.
+ */
+export interface EquipmentLoadout {
+  weaponSlug:    string | null
+  accessorySlug: string | null
+  /** Two set slots (each = 2 armor pieces). Same set in both = 4-pc tier. */
+  setSlots:      [string | null, string | null]
+  talismanSlug:  string | null
+  /** EE state — has its own toggle/level/variant since the picker is richer. */
+  ee: {
+    enabled: boolean
+    /** Slug of the EE actually equipped — usually `self` for plain chars; CF
+     *  chars can equip either their own EE or the base char's EE. */
+    slug: string | null
+    /** Enchant level 0-10. The buff catalog scales with this. */
+    level: number
+    /** For CF chars: which variant is equipped. Ignored otherwise. */
+    variant: 'self' | 'base'
+  }
+}
+
+export const INITIAL_LOADOUT: EquipmentLoadout = {
+  weaponSlug: null,
+  accessorySlug: null,
+  setSlots: [null, null],
+  talismanSlug: null,
+  ee: { enabled: false, slug: null, level: 10, variant: 'self' },
+}
+
+/**
  * Calculator state. v1 keeps it flat and explicit — no nested
  * persistence layer yet. URL/localStorage sync ships in a follow-up.
  */
@@ -26,6 +61,8 @@ export interface AttackerState {
   crit: boolean
   /** Current transcend tier — defaults to char's `BasicStar` at pick time. */
   transStar: number
+  /** Picked equipment passives — feeds the future recompute pipeline. */
+  equipment: EquipmentLoadout
 }
 
 /**
@@ -95,6 +132,7 @@ export const INITIAL_STATE: CalcState = {
     skillLevel: 5,
     crit: false,
     transStar: 0,
+    equipment: { ...INITIAL_LOADOUT, setSlots: [...INITIAL_LOADOUT.setSlots], ee: { ...INITIAL_LOADOUT.ee } },
   },
   settings: { ...INITIAL_SETTINGS, quirks: { ...INITIAL_SETTINGS.quirks } },
   statsDirty: false,

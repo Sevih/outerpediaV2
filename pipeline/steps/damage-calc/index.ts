@@ -5,6 +5,7 @@ import { buildBuffs } from './build-buffs'
 import { buildMonsters } from './build-monsters'
 import { buildMechanics } from './build-mechanics'
 import { buildTranscend } from './build-transcend'
+import { buildEquipment } from './build-equipment'
 
 /**
  * Damage calculator data bake — runs after `characters-index` + `character-stats`
@@ -31,13 +32,13 @@ export async function run(): Promise<string> {
     return 'skipped (no json2 datamine)'
   }
 
-  const [chars, buffs, monsters, mechanics, transcend] = await Promise.all([
+  const [chars, buffs, monsters, mechanics, transcend, equipment] = await Promise.all([
     buildChars(),
     buildBuffs(),
     buildMonsters(),
     buildMechanics(),
     buildTranscend(),
-    // future: buildGearPassives()…
+    buildEquipment(),
   ])
-  return `${chars.chars} chars, ${buffs.charFiles} buff files, ${monsters.stages} stages, ${mechanics.withMechanics}/${mechanics.total} with mechanics, ${transcend.chars} transcend (${transcend.tiers} tiers)`
+  return `${chars.chars} chars, ${buffs.charFiles} buff files, ${monsters.stages} stages, ${mechanics.withMechanics}/${mechanics.total} with mechanics, ${transcend.chars} transcend (${transcend.tiers} tiers), equipment ${equipment.weapons}W/${equipment.accessories}A/${equipment.sets}S/${equipment.talismans}T/${equipment.ees}EE`
 }

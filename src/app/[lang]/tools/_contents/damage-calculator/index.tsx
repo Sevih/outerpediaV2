@@ -4,6 +4,7 @@ import {
   getDamageCalcMonsters,
   getDamageCalcMechanicsIndex,
   getDamageCalcTranscend,
+  getDamageCalcEquipment,
 } from '@/lib/data/damage-calc'
 import CalculatorClient from './CalculatorClient'
 
@@ -17,12 +18,13 @@ import CalculatorClient from './CalculatorClient'
  * picker is essential to first interaction so we pre-include it.
  */
 export default async function DamageCalculatorTool() {
-  const [manifest, awakening, monsters, mechanicsIndex, transcend] = await Promise.all([
+  const [manifest, awakening, monsters, mechanicsIndex, transcend, equipment] = await Promise.all([
     getDamageCalcCharManifest(),
     getDamageCalcAwakeningBuffs(),
     getDamageCalcMonsters(),
     getDamageCalcMechanicsIndex(),
     getDamageCalcTranscend(),
+    getDamageCalcEquipment(),
   ])
 
   return (
@@ -32,6 +34,7 @@ export default async function DamageCalculatorTool() {
       monsters={monsters}
       mechanicsIndex={mechanicsIndex}
       transcend={transcend}
+      equipment={equipment}
     />
   )
 }

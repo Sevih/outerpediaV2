@@ -9,6 +9,7 @@ import type { Lang } from '@/lib/i18n/config'
 import type {
   DamageCalcCharSummary,
   DamageCalcTranscendFile,
+  DamageCalcEquipmentFile,
 } from '@/lib/data/damage-calc'
 import type { CalcAction } from '../_state/reducer'
 import type { AttackerState, SkillSlot, StatKey } from '../_state/types'
@@ -16,6 +17,7 @@ import { STAT_KEYS } from '../_state/types'
 import { fetchCharDetail } from '../_lib/fetch-data'
 import CharPickerModal from './CharPickerModal'
 import TranscendControl from './TranscendControl'
+import EquipmentPanel from './EquipmentPanel'
 
 /**
  * Attacker panel — char picker + stats input + skill controls + transcend.
@@ -33,10 +35,13 @@ interface Props {
   dispatch: (action: CalcAction) => void
   manifest: DamageCalcCharSummary[]
   transcend: DamageCalcTranscendFile
+  equipment: DamageCalcEquipmentFile
+  /** #portal-root resolved client-side; passed down to picker modals. */
+  portalElement: HTMLElement | null
   lang: Lang
 }
 
-export default function AttackerPanel({ state, dispatch, manifest, transcend, lang }: Props) {
+export default function AttackerPanel({ state, dispatch, manifest, transcend, equipment, portalElement, lang }: Props) {
   const [pickerOpen, setPickerOpen] = useState(false)
   const selectedSummary = state.charId ? manifest.find(c => c.id === state.charId) ?? null : null
 
@@ -106,6 +111,17 @@ export default function AttackerPanel({ state, dispatch, manifest, transcend, la
           dispatch={dispatch}
         />
       )}
+
+      {/* Equipment passives — 5 slots + EE inline. Per-attacker state. */}
+      <EquipmentPanel
+        equipment={state.equipment}
+        catalog={equipment}
+        charId={state.charId}
+        charSummary={selectedSummary}
+        portalElement={portalElement}
+        lang={lang}
+        dispatch={dispatch}
+      />
 
       {pickerOpen && (
         <CharPickerModal

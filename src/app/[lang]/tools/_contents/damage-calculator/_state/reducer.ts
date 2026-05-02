@@ -1,8 +1,11 @@
 import type { DamageCalcCharDetail, DamageCalcStatsStep } from '@/lib/data/damage-calc'
 import {
-  INITIAL_STATE, INITIAL_STATS,
+  INITIAL_STATE, INITIAL_STATS, INITIAL_LOADOUT,
   type CalcState, type SkillSlot, type StatKey, type StatValues,
 } from './types'
+
+/** Equipment slot keys exposed by the picker. */
+export type EquipSlot = 'weapon' | 'accessory' | 'set1' | 'set2' | 'talisman'
 
 /** Action payload for settings/applyAuto: prefilled stats from computeFinalStats. */
 export type AutoStats = StatValues
@@ -31,12 +34,20 @@ export type CalcAction =
   | { type: 'settings/setCodexLevel'; level: number }
   | { type: 'settings/setQuirk'; scope: 'element' | 'job' | 'pve' | 'adventureLicense'; enabled: boolean }
   | { type: 'settings/replace'; settings: CalcState['settings'] }
+  // Equipment loadout — slug-based picker selections. Null = empty slot.
+  | { type: 'attacker/setEquipSlot'; slot: EquipSlot; slug: string | null }
+  | { type: 'attacker/setEEEnabled'; enabled: boolean }
+  | { type: 'attacker/setEESlug'; slug: string | null }
+  | { type: 'attacker/setEELevel'; level: number }
+  | { type: 'attacker/setEEVariant'; variant: 'self' | 'base' }
+  | { type: 'attacker/clearEquipment' }
 
 export function calcReducer(state: CalcState, action: CalcAction): CalcState {
   switch (action.type) {
     case 'attacker/pickChar': {
       // Optimistic char id update — `detailLoaded` follows once the fetch
-      // resolves (or `detailFailed` clears the spinner).
+      // resolves (or `detailFailed` clears the spinner). Equipment resets
+      // because the loadout is per-char (especially EE which is char-specific).
       if (state.attacker.charId === action.charId && state.attacker.detail) return state
       return {
         ...state,
@@ -45,6 +56,7 @@ export function calcReducer(state: CalcState, action: CalcAction): CalcState {
           charId: action.charId,
           detail: null,
           loading: true,
+          equipment: { ...INITIAL_LOADOUT, setSlots: [...INITIAL_LOADOUT.setSlots], ee: { ...INITIAL_LOADOUT.ee } },
         },
       }
     }
@@ -82,6 +94,7 @@ export function calcReducer(state: CalcState, action: CalcAction): CalcState {
           charId: null, detail: null, loading: false,
           stats: { ...INITIAL_STATS },
           transStar: 0,
+          equipment: { ...INITIAL_LOADOUT, setSlots: [...INITIAL_LOADOUT.setSlots], ee: { ...INITIAL_LOADOUT.ee } },
         },
         statsDirty: false,
       }
@@ -139,6 +152,28 @@ export function calcReducer(state: CalcState, action: CalcAction): CalcState {
       }
     case 'settings/replace':
       return { ...state, settings: action.settings }
+
+    case 'attacker/setEquipSlot': {
+      const eq = state.attacker.equipment
+      let next = eq
+      if (action.slot === 'weapon')         next = { ...eq, weaponSlug:    action.slug }
+      else if (action.slot === 'accessory') next = { ...eq, accessorySlug: action.slug }
+      else if (action.slot === 'talisman')  next = { ...eq, talismanSlug:  action.slug }
+      else if (action.slot === 'set1')      next = { ...eq, setSlots: [action.slug, eq.setSlots[1]] }
+      else if (action.slot === 'set2')      next = { ...eq, setSlots: [eq.setSlots[0], action.slug] }
+      return { ...state, attacker: { ...state.attacker, equipment: next } }
+    }
+
+    case 'attacker/setEEEnabled':
+      return { ...state, attacker: { ...state.attacker, equipment: { ...state.attacker.equipment, ee: { ...state.attacker.equipment.ee, enabled: action.enabled } } } }
+    case 'attacker/setEESlug':
+      return { ...state, attacker: { ...state.attacker, equipment: { ...state.attacker.equipment, ee: { ...state.attacker.equipment.ee, slug: action.slug } } } }
+    case 'attacker/setEELevel':
+      return { ...state, attacker: { ...state.attacker, equipment: { ...state.attacker.equipment, ee: { ...state.attacker.equipment.ee, level: Math.max(0, Math.min(10, Math.floor(action.level))) } } } }
+    case 'attacker/setEEVariant':
+      return { ...state, attacker: { ...state.attacker, equipment: { ...state.attacker.equipment, ee: { ...state.attacker.equipment.ee, variant: action.variant } } } }
+    case 'attacker/clearEquipment':
+      return { ...state, attacker: { ...state.attacker, equipment: { ...INITIAL_LOADOUT, setSlots: [...INITIAL_LOADOUT.setSlots], ee: { ...INITIAL_LOADOUT.ee } } } }
   }
 }
 
