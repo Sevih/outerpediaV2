@@ -38,6 +38,12 @@ interface Props {
   catalog: DamageCalcEquipmentFile
   charId: string | null
   charSummary: DamageCalcCharSummary | null
+  /** Active skill slot for the cast — drives EE row active eval against
+   *  each buff's `CallerSkillType`. Includes burst variants (B1/B2/B3). */
+  activeSlot: 'S1' | 'S2' | 'S3' | 'B1' | 'B2' | 'B3'
+  /** Current cast's target element — drives `targetElement` gating on
+   *  EE main-stat rows. Null when no target is picked. */
+  currentTargetElement: string | null
   portalElement: HTMLElement | null
   lang: Lang
   dispatch: (action: CalcAction) => void
@@ -49,7 +55,7 @@ const EQUIP_ICON_BASE   = '/images/equipment'
 const EFFECT_ICON_BASE  = '/images/ui/effect'
 const EE_ICON_BASE      = '/images/characters/ee'
 
-export default function EquipmentPanel({ equipment, catalog, charId, charSummary, portalElement, lang, dispatch }: Props) {
+export default function EquipmentPanel({ equipment, catalog, charId, charSummary, activeSlot, currentTargetElement, portalElement, lang, dispatch }: Props) {
   const { t } = useI18n()
   const [openSlot, setOpenSlot] = useState<EquipSlot | null>(null)
   const disabled = !charId
@@ -155,6 +161,8 @@ export default function EquipmentPanel({ equipment, catalog, charId, charSummary
           eeBase={eeBase}
           state={equipment.ee}
           disabled={disabled}
+          activeSlot={activeSlot}
+          currentTargetElement={currentTargetElement}
           lang={lang}
           t={t}
           dispatch={dispatch}
@@ -286,6 +294,8 @@ function EESlotInline({
   eeBase,
   state,
   disabled,
+  activeSlot,
+  currentTargetElement,
   lang,
   t,
   dispatch,
@@ -295,6 +305,8 @@ function EESlotInline({
   eeBase: DamageCalcEquipmentEE | null
   state: EquipmentLoadout['ee']
   disabled: boolean
+  activeSlot: 'S1' | 'S2' | 'S3' | 'B1' | 'B2' | 'B3'
+  currentTargetElement: string | null
   lang: Lang
   t: TFunction
   dispatch: (action: CalcAction) => void
@@ -371,9 +383,9 @@ function EESlotInline({
           />
           <div className="min-w-0 flex-1 space-y-1 text-[11px] leading-snug">
             <div className="font-semibold text-amber-200">{lRec(ee.name, lang)}</div>
-            <EEEffectRow label={t('tools.damage-calculator.equipment.passive_main')}  effect={ee.mainStat}    lang={lang} level={state.level} isMainStat />
-            <EEEffectRow label={t('tools.damage-calculator.equipment.passive_lv0')}   effect={ee.passiveLv0}  lang={lang} level={state.level} />
-            <EEEffectRow label={t('tools.damage-calculator.equipment.passive_lv10')}  effect={ee.passiveLv10} lang={lang} level={state.level} dimUntilMax />
+            <EEEffectRow label={t('tools.damage-calculator.equipment.passive_main')}  effect={ee.mainStat}    lang={lang} level={state.level} activeSlot={activeSlot} currentTargetElement={currentTargetElement} isMainStat />
+            <EEEffectRow label={t('tools.damage-calculator.equipment.passive_lv0')}   effect={ee.passiveLv0}  lang={lang} level={state.level} activeSlot={activeSlot} currentTargetElement={currentTargetElement} />
+            <EEEffectRow label={t('tools.damage-calculator.equipment.passive_lv10')}  effect={ee.passiveLv10} lang={lang} level={state.level} activeSlot={activeSlot} currentTargetElement={currentTargetElement} dimUntilMax />
           </div>
         </div>
       )}
@@ -385,12 +397,65 @@ function EESlotInline({
   )
 }
 
+/** Map our active-slot identifier to the templet's `SKT_*` token used by
+ *  the buff catalog's `CallerSkillType` CSV. */
+const SLOT_TO_SKT: Record<'S1' | 'S2' | 'S3' | 'B1' | 'B2' | 'B3', string> = {
+  S1: 'SKT_FIRST',  S2: 'SKT_SECOND', S3: 'SKT_ULTIMATE',
+  B1: 'SKT_BURST_1', B2: 'SKT_BURST_2', B3: 'SKT_BURST_3',
+}
+
+/**
+ * Decide whether an EE effect row is currently contributing to the calc.
+ * Hard gates (level / target element / caller skill) flip to inactive when
+ * unmet; soft conditions (`OWNER_HAS_BUFF`, `CASTER_CRITICAL`, etc.) are
+ * runtime-only and treated as `'conditional'` — neither hard active nor
+ * silenced, surfaced with a neutral badge so the user knows to verify
+ * manually.
+ */
+type EERowState = 'active' | 'inactive' | 'conditional'
+
+function evaluateEERowState(
+  effect: DamageCalcEffectGroup,
+  ctx: {
+    eeLevel: number
+    isLv10Only: boolean
+    activeSlot: 'S1' | 'S2' | 'S3' | 'B1' | 'B2' | 'B3'
+    currentTargetElement: string | null
+  },
+): EERowState {
+  // Lv10-only passive needs the EE at max enchant.
+  if (ctx.isLv10Only && ctx.eeLevel < 10) return 'inactive'
+  // Main-stat row's effect-level `targetElement` (e.g. "vs Earth DMG↑%")
+  // — must match the cast's target element.
+  if (effect.targetElement && ctx.currentTargetElement !== effect.targetElement) return 'inactive'
+  // Walk each composing buff: callerSkillType narrows the casts that fire
+  // it; runtime conditions (target/owner has buff, kill streak, etc.) are
+  // conditional — flag the row neutrally so the user verifies in-game.
+  let conditional = false
+  const sktForSlot = SLOT_TO_SKT[ctx.activeSlot]
+  for (const buff of effect.buffs) {
+    const callerCsv = buff.callerSkillType
+    if (callerCsv && callerCsv !== 'SKT_ALL') {
+      const slots = callerCsv.split(',').map(s => s.trim()).filter(Boolean)
+      if (!slots.includes(sktForSlot)) return 'inactive'
+    }
+    const cond = buff.buffConditionType
+    // NONE / undefined → unconditional; element-relation gates are partly
+    // resolvable without combat state but kept conditional here since we
+    // don't have ctx.elem in scope at the EE row.
+    if (cond && cond !== 'NONE') conditional = true
+  }
+  return conditional ? 'conditional' : 'active'
+}
+
 /** EE effect row — main stat uses element-derived label, others use the passive name. */
 function EEEffectRow({
   label,
   effect,
   lang,
   level,
+  activeSlot,
+  currentTargetElement,
   dimUntilMax = false,
   isMainStat = false,
 }: {
@@ -399,19 +464,46 @@ function EEEffectRow({
   lang: Lang
   /** Current EE enchant level (0-10). Drives the per-level value display. */
   level: number
+  activeSlot: 'S1' | 'S2' | 'S3' | 'B1' | 'B2' | 'B3'
+  currentTargetElement: string | null
   /** Greys the row when level < 10 (used for Lv10-only passives). */
   dimUntilMax?: boolean
   /** True for the EE main-stat row — synthesizes a "vs Element STAT" label. */
   isMainStat?: boolean
 }) {
   if (!effect) return null
-  const dim = dimUntilMax && level < 10
+  const { t } = useI18n()
+  const rowState = evaluateEERowState(effect, {
+    eeLevel: level,
+    isLv10Only: dimUntilMax,
+    activeSlot,
+    currentTargetElement,
+  })
   const display = isMainStat
     ? eeMainStatLabel(effect)
     : (effect.name ? lRec(effect.name, lang) : '')
+  const opacityClass = rowState === 'inactive' ? 'opacity-40' : ''
   return (
-    <div className={`flex flex-wrap items-baseline gap-1 ${dim ? 'opacity-40' : ''}`}>
+    <div className={`flex flex-wrap items-baseline gap-1 ${opacityClass}`}>
       <span className="text-[9px] font-bold uppercase tracking-wider text-zinc-500">{label}</span>
+      {rowState === 'active' && (
+        <span className="rounded bg-emerald-500/20 px-1 py-px text-[8px] font-bold uppercase tracking-wider text-emerald-300">
+          {t('tools.damage-calculator.equipment.ee_active')}
+        </span>
+      )}
+      {rowState === 'inactive' && (
+        <span className="rounded bg-zinc-700/40 px-1 py-px text-[8px] font-bold uppercase tracking-wider text-zinc-500">
+          {t('tools.damage-calculator.equipment.ee_inactive')}
+        </span>
+      )}
+      {rowState === 'conditional' && (
+        <span
+          className="rounded bg-amber-500/20 px-1 py-px text-[8px] font-bold uppercase tracking-wider text-amber-300"
+          title={t('tools.damage-calculator.equipment.ee_conditional_hint')}
+        >
+          {t('tools.damage-calculator.equipment.ee_conditional')}
+        </span>
+      )}
       <span className="text-zinc-300">{display}</span>
       <div className="flex flex-wrap gap-1 text-[10px]">
         {effect.buffs.map((b, i) => (

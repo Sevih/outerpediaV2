@@ -64,6 +64,7 @@ export {
 
 export type {
   DamageCalcTranscendTier,
+  DamageCalcTranscendTeamBonus,
   DamageCalcTranscendCharEntry,
   DamageCalcTranscendFile,
 } from './transcend'
@@ -79,4 +80,5 @@ export type {
   DamageCalcEquipmentSet,
   DamageCalcEquipmentEE,
   DamageCalcEquipmentFile,
+  DamageCalcTalismanMainStat,
 } from './equipment'

@@ -361,7 +361,9 @@ export default function DamageLabV2Page() {
       charElement: ctx.charElement,
       charClass: ctx.charClass,
       charSubclass: ctx.charSubclass,
-      slot: ctx.slot,
+      // Admin lab never sets a burst slot (B1/B2/B3); narrow safely against
+      // the broader `CallerSlot` union to match the obs schema.
+      slot: ctx.slot as 'S1' | 'S2' | 'S3',
       skillLevel: state.attacker.skillLevel,
       df: ctx.damageFactor,
       additionalAttackEnabled: state.attacker.additionalAttackEnabled,

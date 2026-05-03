@@ -14,6 +14,7 @@ import type {
   DamageCalcMonsterStats,
   DamageCalcAwakeningBuffs,
 } from '@/lib/data/damage-calc'
+import type { BossMechanicState, BossOverride } from '@/lib/damage/v2/boss-overrides'
 import type { TFunction, TranslationKey } from '@/i18n'
 import type { CalcAction } from '../_state/reducer'
 import type { ManualTargetState, SettingsState, TargetState } from '../_state/types'
@@ -23,6 +24,7 @@ import {
   parseDungeonStage,
 } from '../_lib/mode-taxonomy'
 import { applyPveDebuffs, computePveBossDebuffs, type PveBossDebuffs } from '../_lib/quirks'
+import BossMechanicsPanel from './BossMechanicsPanel'
 import { ClassIcon, ElementIcon } from './StatBadges'
 
 const MANUAL_ELEMENTS = ['Fire', 'Water', 'Earth', 'Light', 'Dark'] as const
@@ -49,11 +51,15 @@ interface Props {
   awakening: DamageCalcAwakeningBuffs
   /** Account settings — `quirks.pve` gates the Counteract Strong Enemies debuffs. */
   settings: SettingsState
+  /** Boss-mechanics override for the picked monster (null = no passive). */
+  bossOverride: BossOverride | null
+  /** Per-mechanic toggle states, keyed by passive `skillId`. */
+  bossMechanics: Record<string, BossMechanicState>
   lang: Lang
   dispatch: (action: CalcAction) => void
 }
 
-export default function TargetPanel({ catalog, state, awakening, settings, lang, dispatch }: Props) {
+export default function TargetPanel({ catalog, state, awakening, settings, bossOverride, bossMechanics, lang, dispatch }: Props) {
   const { t } = useI18n()
   const modes = catalog.modes
 
@@ -430,6 +436,14 @@ export default function TargetPanel({ catalog, state, awakening, settings, lang,
           pveDebuffs={computePveBossDebuffs(awakening, settings, selectedMonster.isBoss)}
         />
       )}
+
+      {/* Boss mechanics — toggle each passive on/off. Hidden when the picked
+          monster has no damage-relevant passive (override === null). */}
+      <BossMechanicsPanel
+        override={bossOverride}
+        state={bossMechanics}
+        dispatch={dispatch}
+      />
     </div>
   )
 }

@@ -1,20 +1,22 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Image from 'next/image'
 import CharacterPortrait from '@/app/components/character/CharacterPortrait'
 import { formatEffectText } from '@/lib/format-text'
 import { l } from '@/lib/i18n/localize'
 import { useI18n } from '@/lib/contexts/I18nContext'
 import type { Lang } from '@/lib/i18n/config'
-import type { TFunction } from '@/i18n'
+import type { TFunction, TranslationKey } from '@/i18n'
 import type {
+  DamageCalcCharBuffs,
   DamageCalcCharSummary,
+  DamageCalcTranscendCharEntry,
   DamageCalcTranscendFile,
   DamageCalcEquipmentFile,
 } from '@/lib/data/damage-calc'
 import type { CalcAction } from '../_state/reducer'
-import type { AttackerState, SkillSlot, StatKey } from '../_state/types'
+import type { AttackerState, ConditionalModifiers, SkillSlot, StatKey } from '../_state/types'
 import { STAT_KEYS } from '../_state/types'
 import { fetchCharDetail } from '../_lib/fetch-data'
 import CharPickerModal from './CharPickerModal'
@@ -39,12 +41,25 @@ interface Props {
   manifest: DamageCalcCharSummary[]
   transcend: DamageCalcTranscendFile
   equipment: DamageCalcEquipmentFile
+  /** Lifted from `CalculatorClient` — also consumed by `ResultPanel` for the
+   *  buff catalog that feeds `recompute()`, so loading it once at the parent
+   *  avoids duplicate fetches. Null while loading or when no char is picked. */
+  charBuffs: DamageCalcCharBuffs | null
+  /** Per-stat team contribution (transcend ally bonuses + ally talismans)
+   *  surfaced as `(+X)` next to each stat field. Display only — the calc
+   *  applies the same deltas at recompute time. Empty record means no
+   *  ally is contributing (or no slots are filled). */
+  teamDeltaDisplay: Partial<Record<StatKey, number>>
+  /** Current cast's target element (`Earth/Water/Fire/Light/Dark`) — drives
+   *  EE active/inactive evaluation for `targetElement`-gated rows. Null
+   *  when no target is picked. */
+  currentTargetElement: string | null
   /** #portal-root resolved client-side; passed down to picker modals. */
   portalElement: HTMLElement | null
   lang: Lang
 }
 
-export default function AttackerPanel({ state, dispatch, manifest, transcend, equipment, portalElement, lang }: Props) {
+export default function AttackerPanel({ state, dispatch, manifest, transcend, equipment, charBuffs, teamDeltaDisplay, currentTargetElement, portalElement, lang }: Props) {
   const [pickerOpen, setPickerOpen] = useState(false)
   const selectedSummary = state.charId ? manifest.find(c => c.id === state.charId) ?? null : null
 
@@ -94,15 +109,28 @@ export default function AttackerPanel({ state, dispatch, manifest, transcend, eq
         dispatch={dispatch}
         disabled={!state.charId}
         scalings={state.detail?.scalings ?? null}
+        teamDeltaDisplay={teamDeltaDisplay}
       />
 
       {/* Skill controls */}
       <SkillControls
         slot={state.skillSlot}
         level={state.skillLevel}
+        burstLevel={state.burstLevel}
         crit={state.crit}
         detail={state.detail}
+        transcendEntry={transcendEntry ?? null}
+        transStar={state.transStar}
         lang={lang}
+        dispatch={dispatch}
+      />
+
+      {/* Conditional damage modifiers — only renders inputs whose matching
+          pool_cond buff exists for the active skill on the picked char. */}
+      <ConditionalInputs
+        slot={state.skillSlot}
+        conditional={state.conditional}
+        charBuffs={charBuffs}
         dispatch={dispatch}
       />
 
@@ -115,12 +143,16 @@ export default function AttackerPanel({ state, dispatch, manifest, transcend, eq
         />
       )}
 
-      {/* Equipment passives — 5 slots + EE inline. Per-attacker state. */}
+      {/* Equipment passives — 5 slots + EE inline. Per-attacker state.
+          `activeSlot` is S1/S2/S3 OR B(N) when burst is active — drives
+          the EE row active/inactive eval (CallerSkillType matching). */}
       <EquipmentPanel
         equipment={state.equipment}
         catalog={equipment}
         charId={state.charId}
         charSummary={selectedSummary}
+        activeSlot={state.skillSlot === 'S3' && state.burstLevel > 0 ? `B${state.burstLevel}` as 'B1' | 'B2' | 'B3' : state.skillSlot}
+        currentTargetElement={currentTargetElement}
         portalElement={portalElement}
         lang={lang}
         dispatch={dispatch}
@@ -222,19 +254,24 @@ const STAT_LABELS: Record<StatKey, string> = {
   PEN: 'PEN', DMG_INC: 'DMG↑',
 }
 
-/** Stats with `%` suffix in the input row. */
-const PERCENT_STATS = new Set<StatKey>(['CHC', 'CHD', 'EFF', 'RES', 'PEN', 'DMG_INC'])
+/** Stats with `%` suffix in the input row. EFF/RES are intentionally
+ *  excluded — they're flat values (matching the in-game character sheet
+ *  + monster stat block), even though they index into percent-rate buffs
+ *  internally via `floor(base × value/1000)`. */
+const PERCENT_STATS = new Set<StatKey>(['CHC', 'CHD', 'PEN', 'DMG_INC'])
 
 function StatsGrid({
   stats,
   dispatch,
   disabled,
   scalings,
+  teamDeltaDisplay,
 }: {
   stats: AttackerState['stats']
   dispatch: (a: CalcAction) => void
   disabled: boolean
   scalings: AttackerState['detail'] extends infer D ? (D extends { scalings: infer S } ? S : null) : null
+  teamDeltaDisplay: Partial<Record<StatKey, number>>
 }) {
   const { t } = useI18n()
   return (
@@ -266,6 +303,7 @@ function StatsGrid({
               value={stats[key]}
               disabled={disabled}
               role={role}
+              teamDelta={teamDeltaDisplay[key] ?? 0}
               t={t}
               onChange={v => dispatch({ type: 'attacker/setStat', key, value: v })}
             />
@@ -300,6 +338,7 @@ function StatField({
   value,
   disabled,
   role,
+  teamDelta,
   t,
   onChange,
 }: {
@@ -307,6 +346,10 @@ function StatField({
   value: number
   disabled: boolean
   role: ScalingRole
+  /** Team-contribution delta surfaced as `(+X)` next to the stat value.
+   *  Zero = nothing to show. The dealer's input still holds the BASE value
+   *  (1:1 with the in-game character sheet); the calc applies the delta. */
+  teamDelta: number
   t: TFunction
   onChange: (v: number) => void
 }) {
@@ -347,6 +390,14 @@ function StatField({
         className="min-w-0 flex-1 bg-transparent text-right text-xs font-semibold text-zinc-100 tabular-nums focus:outline-none disabled:opacity-40 [appearance:textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
       />
       {isPct && <span className="shrink-0 text-[10px] text-zinc-500">%</span>}
+      {teamDelta !== 0 && (
+        <span
+          className="shrink-0 text-[10px] font-semibold text-emerald-400 tabular-nums"
+          title={t('tools.damage-calculator.attacker.team_contribution_hint')}
+        >
+          (+{teamDelta}{isPct ? '%' : ''})
+        </span>
+      )}
     </label>
   )
 }
@@ -356,23 +407,48 @@ const SLOTS: SkillSlot[] = ['S1', 'S2', 'S3']
 function SkillControls({
   slot,
   level,
+  burstLevel,
   crit,
   detail,
+  transcendEntry,
+  transStar,
   lang,
   dispatch,
 }: {
   slot: SkillSlot
   level: 1 | 2 | 3 | 4 | 5
+  burstLevel: 0 | 1 | 2 | 3
   crit: boolean
   detail: AttackerState['detail']
+  /** Transcend entry — gates which Burst Lv pills are unlocked. */
+  transcendEntry: DamageCalcTranscendCharEntry | null
+  transStar: number
   lang: Lang
   dispatch: (a: CalcAction) => void
 }) {
   const { t } = useI18n()
-  const skillData = detail?.skills[slotToKey(slot)] ?? null
+  // When burstLevel > 0 AND the active slot is S3, the burst variant
+  // replaces S3's DF + name + description for the readout. Falls back to
+  // the S3 base when the char has no matching B(N) entry (defensive: won't
+  // happen in practice since the picker is gated on data presence).
+  const baseSkill = detail?.skills[slotToKey(slot)] ?? null
+  const burstKey = burstLevel === 0 ? null : (`B${burstLevel}` as 'B1' | 'B2' | 'B3')
+  const burstSkill = burstKey && slot === 'S3' ? detail?.skills[burstKey] ?? null : null
+  const skillData = burstSkill ?? baseSkill
   const dfAtLevel = skillData?.damageFactors[level - 1] ?? null
   const skillName = skillData ? l(skillData, 'name', lang) : null
-  const desc = skillData ? getSkillDescription(skillData, level, lang) : ''
+  const desc = baseSkill ? getSkillDescription(baseSkill, level, lang) : ''
+  // Burst-specific blurb (different from `desc` which is the S3 base text).
+  // Shown under the burst picker so the user sees the cast's extra effect
+  // (e.g. "Reduces Dark Devil Dance Cooldown by 2 turns" for B3).
+  const burstDesc = burstSkill ? getSkillDescription(burstSkill, 1, lang) : ''
+
+  // Burst Lv 1 / 2 / 3 unlock state — burst2/3 are tier-gated, B1 is
+  // available whenever the char actually has a B1 entry baked.
+  const burstUnlocks = transcendEntry
+    ? resolveBurstUnlocks(transcendEntry, transStar)
+    : { b1: false, b2: false, b3: false }
+  const charHasBursts = !!(detail?.skills.B1 || detail?.skills.B2 || detail?.skills.B3)
 
   return (
     <div className="space-y-2 rounded border border-zinc-800 bg-zinc-950 p-2">
@@ -411,6 +487,53 @@ function SkillControls({
           )
         })}
       </div>
+
+      {/* Burst Lv picker — only relevant when S3 is active and the char has
+          burst variants. Each pill is gated by the dealer's transcend tier. */}
+      {slot === 'S3' && charHasBursts && (
+        <div className="flex items-center justify-center gap-1">
+          <span className="text-[10px] uppercase tracking-wider text-zinc-500">
+            {t('tools.damage-calculator.attacker.burst_label')}
+          </span>
+          <BurstPill
+            level={0}
+            active={burstLevel === 0}
+            unlocked
+            label={t('tools.damage-calculator.attacker.burst_off')}
+            onClick={() => dispatch({ type: 'attacker/setBurstLevel', level: 0 })}
+          />
+          <BurstPill
+            level={1}
+            active={burstLevel === 1}
+            unlocked={burstUnlocks.b1 && !!detail?.skills.B1}
+            onClick={() => dispatch({ type: 'attacker/setBurstLevel', level: 1 })}
+          />
+          <BurstPill
+            level={2}
+            active={burstLevel === 2}
+            unlocked={burstUnlocks.b2 && !!detail?.skills.B2}
+            onClick={() => dispatch({ type: 'attacker/setBurstLevel', level: 2 })}
+          />
+          <BurstPill
+            level={3}
+            active={burstLevel === 3}
+            unlocked={burstUnlocks.b3 && !!detail?.skills.B3}
+            onClick={() => dispatch({ type: 'attacker/setBurstLevel', level: 3 })}
+          />
+        </div>
+      )}
+
+      {/* Burst description — shown under the picker when the burst is
+          active and the bake provides text for it. Sits BEFORE the skill
+          name + DF readout so the burst's effect is the visible focus. */}
+      {slot === 'S3' && burstSkill && burstDesc && (
+        <div className="rounded border border-amber-500/30 bg-amber-500/5 p-1.5 text-[11px] leading-relaxed text-amber-200">
+          <span className="mr-1 text-[9px] font-bold uppercase tracking-wider text-amber-400">
+            Burst Lv {burstLevel}
+          </span>
+          {formatEffectText(burstDesc)}
+        </div>
+      )}
 
       {/* Skill name + level slider + crit + DF readout */}
       {skillName && (
@@ -467,6 +590,64 @@ function slotToKey(slot: SkillSlot): 'S1' | 'S2' | 'S3' {
 }
 
 /**
+ * Resolve which Burst Lv pills are unlocked for the given transcend tier.
+ * Walks every tier ≤ current and OR's the `burst2` / `burst3` flags. B1
+ * has no flag — assumed available whenever the char carries a B1 entry
+ * (the in-game progression always opens B1 first; tiers without an
+ * explicit flag still surface it).
+ */
+function resolveBurstUnlocks(
+  entry: DamageCalcTranscendCharEntry,
+  transStar: number,
+): { b1: boolean; b2: boolean; b3: boolean } {
+  let b2 = false
+  let b3 = false
+  for (const tier of entry.tiers) {
+    if (tier.transStar > transStar) continue
+    if (tier.burst2) b2 = true
+    if (tier.burst3) b3 = true
+  }
+  // `b1` is permissive: Burst Lv 1 doesn't have a templet flag — letting
+  // the user pick it whenever the char has a baked B1 entry (gating happens
+  // at the call site via `!!detail?.skills.B1`).
+  return { b1: true, b2, b3 }
+}
+
+/** Burst Lv pill — small toggleable badge in the burst picker row. */
+function BurstPill({
+  level,
+  active,
+  unlocked,
+  label,
+  onClick,
+}: {
+  level: 0 | 1 | 2 | 3
+  active: boolean
+  unlocked: boolean
+  /** Override label — defaults to the level number. Used for the "Off" pill. */
+  label?: string
+  onClick: () => void
+}) {
+  return (
+    <button
+      type="button"
+      disabled={!unlocked}
+      onClick={onClick}
+      className={[
+        'h-6 min-w-6 rounded px-1.5 text-[10px] font-bold transition-colors',
+        active
+          ? 'bg-amber-500/30 text-amber-200'
+          : 'text-zinc-500',
+        !active && unlocked ? 'hover:bg-zinc-900 hover:text-zinc-200' : '',
+        !unlocked ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer',
+      ].filter(Boolean).join(' ')}
+    >
+      {label ?? level}
+    </button>
+  )
+}
+
+/**
  * Resolve the skill icon path. Mirrors `SkillCard` — core-fusion passive
  * icons live in a different folder (`Skill_CorePassive_*`), everything else
  * in the standard skills directory.
@@ -494,3 +675,132 @@ function getSkillDescription(
   return map[`${key}_${lang}`] ?? map[key] ?? ''
 }
 
+// ── Conditional damage modifiers ─────────────────────────────────────────────
+
+/**
+ * Per-conditional-modifier metadata: the matching `pool_cond` key(s) on the
+ * buff side, the i18n label key, and whether the input is a percentage
+ * (caster/target lost HP) or a count (debuffs, buffs, stacks).
+ *
+ * Every entry must point at a real `pool_cond` — the picker hides the
+ * input when no buff with a matching `poolCond` covers the active skill.
+ */
+const CONDITIONAL_FIELDS: Array<{
+  key: keyof ConditionalModifiers
+  poolConds: string[]
+  labelKey: TranslationKey
+  unit: 'count' | 'pct'
+}> = [
+  { key: 'targetDebuffs',     poolConds: ['target_debuff'],                    labelKey: 'tools.damage-calculator.attacker.cond.target_debuffs',      unit: 'count' },
+  { key: 'enemyTeamDeaths',   poolConds: ['enemy_team_decrease'],              labelKey: 'tools.damage-calculator.attacker.cond.enemy_team_deaths',   unit: 'count' },
+  { key: 'targetBuffs',       poolConds: ['target_buff'],                      labelKey: 'tools.damage-calculator.attacker.cond.target_buffs',        unit: 'count' },
+  { key: 'teamBuffs',         poolConds: ['team_buff'],                        labelKey: 'tools.damage-calculator.attacker.cond.team_buffs',          unit: 'count' },
+  { key: 'casterLostHpPct',   poolConds: ['owner_lost_hp', 'caster_lost_hp'],  labelKey: 'tools.damage-calculator.attacker.cond.caster_lost_hp',      unit: 'pct' },
+  { key: 'targetLostHpPct',   poolConds: ['target_lost_hp'],                   labelKey: 'tools.damage-calculator.attacker.cond.target_lost_hp',      unit: 'pct' },
+  { key: 'killStacks',        poolConds: ['kill_count_stack'],                 labelKey: 'tools.damage-calculator.attacker.cond.kill_stacks',         unit: 'count' },
+]
+
+/**
+ * Returns true when the buff trigger's `callerSlots` covers the active slot.
+ * The bake stores `callerSlots` either as an array of slot tokens
+ * (`['S1', 'S3']`) or the literal string `'all'` — handle both.
+ */
+function callerSlotsMatch(callerSlots: unknown, slot: SkillSlot): boolean {
+  if (callerSlots === 'all') return true
+  if (Array.isArray(callerSlots)) return callerSlots.includes(slot)
+  return false
+}
+
+function ConditionalInputs({
+  slot,
+  conditional,
+  charBuffs,
+  dispatch,
+}: {
+  slot: SkillSlot
+  conditional: ConditionalModifiers
+  charBuffs: DamageCalcCharBuffs | null
+  dispatch: (a: CalcAction) => void
+}) {
+  const { t } = useI18n()
+
+  // Set of `poolCond` keys that have a matching buff for the active slot.
+  // Recomputed when buffs or slot change; cheap (handful of buffs per char).
+  const activeConds = useMemo(() => {
+    const out = new Set<string>()
+    for (const b of charBuffs?.buffs ?? []) {
+      const cond = b.effect && 'poolCond' in b.effect ? b.effect.poolCond : undefined
+      if (!cond) continue
+      if (!callerSlotsMatch(b.trigger?.callerSlots, slot)) continue
+      out.add(cond)
+    }
+    return out
+  }, [charBuffs, slot])
+
+  const visibleFields = CONDITIONAL_FIELDS.filter(f => f.poolConds.some(c => activeConds.has(c)))
+  if (visibleFields.length === 0) return null
+
+  const anyDirty = visibleFields.some(f => conditional[f.key] !== 0)
+
+  return (
+    <div className="space-y-2 rounded border border-zinc-800 bg-zinc-950 p-2">
+      <div className="flex items-center justify-between">
+        <span className="text-[10px] uppercase tracking-wider text-zinc-500">
+          {t('tools.damage-calculator.attacker.cond.label')}
+        </span>
+        <button
+          type="button"
+          onClick={() => dispatch({ type: 'attacker/resetConditional' })}
+          disabled={!anyDirty}
+          className="text-[10px] text-zinc-500 transition-colors hover:text-zinc-200 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {t('tools.damage-calculator.common.reset')}
+        </button>
+      </div>
+      <div className="grid grid-cols-2 gap-1.5">
+        {visibleFields.map(f => (
+          <ConditionalField
+            key={f.key}
+            label={t(f.labelKey)}
+            unit={f.unit}
+            value={conditional[f.key]}
+            onChange={v => dispatch({ type: 'attacker/setConditional', key: f.key, value: v })}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function ConditionalField({
+  label,
+  unit,
+  value,
+  onChange,
+}: {
+  label: string
+  unit: 'count' | 'pct'
+  value: number
+  onChange: (v: number) => void
+}) {
+  const max = unit === 'pct' ? 100 : 99
+  return (
+    <label className="flex items-center gap-1.5 rounded border border-zinc-800 bg-zinc-950 px-2 py-1">
+      <span className="min-w-0 flex-1 truncate text-[11px] text-zinc-400" title={label}>{label}</span>
+      <input
+        type="number"
+        inputMode="numeric"
+        min={0}
+        max={max}
+        step={1}
+        value={value}
+        onChange={e => {
+          const n = parseInt(e.target.value, 10)
+          onChange(Number.isFinite(n) ? Math.min(max, Math.max(0, n)) : 0)
+        }}
+        className="w-12 shrink-0 bg-transparent text-right text-xs font-semibold text-zinc-100 tabular-nums focus:outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
+      />
+      {unit === 'pct' && <span className="shrink-0 text-[10px] text-zinc-500">%</span>}
+    </label>
+  )
+}

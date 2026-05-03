@@ -48,7 +48,7 @@ interface AttackerPanelProps {
   additionalAttackRatio: number | null
   onChange: (patch: Partial<AttackerState>) => void
   onSetChar: (charId: string) => void
-  onSetSlot: (slot: CallerSlot) => void
+  onSetSlot: (slot: 'S1' | 'S2' | 'S3') => void
   onSetFlag: (flag: keyof CharFlags, value: boolean) => void
   /** Edit a stat field with manual flag — sets `statsAuto[field] = false`. */
   onEditStat: (field: 'atk' | 'chd' | 'pen' | 'dmgInc', value: number) => void
@@ -56,7 +56,10 @@ interface AttackerPanelProps {
   onSetExtraStat: (stat: string, value: number) => void
 }
 
-const SLOTS: CallerSlot[] = ['S1', 'S2', 'S3']
+// Admin lab doesn't model burst variants — narrow to the active-skill
+// subset so the icon lookup stays type-safe against the broader CallerSlot
+// union (which now includes B1/B2/B3 for the public calc's burst picker).
+const SLOTS: Array<'S1' | 'S2' | 'S3'> = ['S1', 'S2', 'S3']
 
 /**
  * Secondary scaling stat → display label, in render order. The lab only
@@ -294,7 +297,7 @@ function UsedSkillCadre({
   additionalAttackEnabled: boolean
   additionalAttackRatio: number | null
   skillIcons: CharSummary['skillIcons'] | undefined
-  onSetSlot: (s: CallerSlot) => void
+  onSetSlot: (s: 'S1' | 'S2' | 'S3') => void
   onChange: (patch: Partial<AttackerState>) => void
 }) {
   return (

@@ -10,6 +10,14 @@
  */
 
 import type { CallerSlot } from '@/lib/damage/v2/buffs'
+
+/**
+ * Admin lab restricts the slot picker to active skills (S1/S2/S3) — burst
+ * variants live in the public calc only (different stack of UI controls).
+ * Narrowing here keeps the slot accessors (`getDamageFactor`, etc.) type-
+ * safe against the broader `CallerSlot` union without per-call-site casts.
+ */
+type AdminCallerSlot = Extract<CallerSlot, 'S1' | 'S2' | 'S3'>
 import type { CharFlags } from '@/lib/damage/v2/char-overrides'
 import type { ExternalBuffState } from '@/lib/damage/v2/external-buffs'
 import type { BossMechanicState, BossOverride } from '@/lib/damage/v2/boss-overrides'
@@ -41,7 +49,7 @@ export interface CharSummary {
 
 export interface AttackerState {
   charId: string
-  slot: CallerSlot
+  slot: AdminCallerSlot
   /** 1..15, default 5. */
   skillLevel: number
   atk: number

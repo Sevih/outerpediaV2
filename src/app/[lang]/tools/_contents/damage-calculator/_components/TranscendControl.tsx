@@ -5,6 +5,8 @@ import type { DamageCalcTranscendCharEntry } from '@/lib/data/damage-calc'
 import { STAR_ICONS, starRowForLevel } from '@/lib/stars'
 import { useI18n } from '@/lib/contexts/I18nContext'
 import type { CalcAction } from '../_state/reducer'
+import { TRANSCEND_LEVEL_DISPLAY, transStarToLevelId } from '../_lib/transcend'
+import TranscendActiveInfo from './TranscendActiveInfo'
 
 /**
  * Transcend tier picker for the damage-calc attacker panel.
@@ -13,43 +15,15 @@ import type { CalcAction } from '../_state/reducer'
  * −/+ steppers, star row on the right). The data side is different —
  * we already have the structured templet (HP/ATK/DEF rate per tier +
  * Burst flags), so we don't parse text descriptions and render bonuses
- * directly from the typed fields.
+ * directly from the typed fields. Tier label resolution lives in
+ * `_lib/transcend.ts` so the team panel's compact slider reuses the same
+ * mapping (`5+ / 5++ / 6` etc.).
  */
 
 interface Props {
   entry: DamageCalcTranscendCharEntry
   transStar: number
   dispatch: (action: CalcAction) => void
-}
-
-/**
- * Map raw `TransStar` (3-9 for 3★ chars, 2-9 for 2★) to an in-game tier
- * label like `'3' / '4_1' / '4_2' / '5_1' / '5_2' / '5_3' / '6'`.
- *
- * The branching only kicks in once we've passed the BasicStar tier; the
- * first 1-2 tiers are linear (`'2' → '3'`). Past that, every two templet
- * rows correspond to one in-game tier branch (4, 4+, 5, 5+, 5++).
- */
-function transStarToLevelId(transStar: number, basicStar: number): string {
-  if (transStar === basicStar) return String(basicStar)
-  if (basicStar === 2 && transStar === 3) return '3'
-  switch (transStar) {
-    case 4: return '4_1'
-    case 5: return '4_2'
-    case 6: return '5_1'
-    case 7: return '5_2'
-    case 8: return '5_3'
-    case 9: return '6'
-    default: return String(transStar)
-  }
-}
-
-/** Friendly compact label for the slider readout (`4 / 4+ / 5 / 5+ / 5++ / 6`). */
-const LEVEL_DISPLAY: Record<string, string> = {
-  '1': '1', '2': '2', '3': '3',
-  '4': '4', '4_1': '4', '4_2': '4+',
-  '5': '5', '5_1': '5', '5_2': '5+', '5_3': '5++',
-  '6': '6',
 }
 
 export default function TranscendControl({ entry, transStar, dispatch }: Props) {
@@ -59,11 +33,10 @@ export default function TranscendControl({ entry, transStar, dispatch }: Props) 
 
   const minTier = entry.basicStar
   const maxTier = tiers[tiers.length - 1].transStar
-  const currentTier = tiers.find(t => t.transStar === transStar)
 
   const levelId = transStarToLevelId(transStar, entry.basicStar)
   const stars = starRowForLevel(levelId)
-  const label = LEVEL_DISPLAY[levelId] ?? String(transStar)
+  const label = TRANSCEND_LEVEL_DISPLAY[levelId] ?? String(transStar)
 
   const range = maxTier - minTier
   const progressPct = range > 0 ? ((transStar - minTier) / range) * 100 : 100
@@ -134,28 +107,9 @@ export default function TranscendControl({ entry, transStar, dispatch }: Props) 
         </div>
       </div>
 
-      {/* Bonuses — direct render from the structured templet (no text parse). */}
-      {currentTier && (currentTier.atkRate > 0 || currentTier.burst2 || currentTier.burst3) && (
-        <div className="space-y-1 text-[11px]">
-          {currentTier.atkRate > 0 && (
-            <div className="flex items-center gap-1 text-zinc-100">
-              <Image src="/images/ui/effect/CM_Stat_Icon_ATK.webp" alt="ATK" width={14} height={14} className="object-contain" />
-              <Image src="/images/ui/effect/CM_Stat_Icon_DEF.webp" alt="DEF" width={14} height={14} className="object-contain" />
-              <Image src="/images/ui/effect/CM_Stat_Icon_HP.webp" alt="HP" width={14} height={14} className="object-contain" />
-              <span className="ml-1 font-semibold">+{currentTier.atkRate / 10}%</span>
-            </div>
-          )}
-          {currentTier.burst3 ? (
-            <div className="inline-block rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px] font-semibold text-amber-300">
-              {t('tools.damage-calculator.attacker.burst_unlocked', { n: 3 })}
-            </div>
-          ) : currentTier.burst2 ? (
-            <div className="inline-block rounded bg-amber-500/20 px-1.5 py-0.5 text-[10px] font-semibold text-amber-300">
-              {t('tools.damage-calculator.attacker.burst_unlocked', { n: 2 })}
-            </div>
-          ) : null}
-        </div>
-      )}
+      {/* Active info — rate / Burst badge / unlocked team bonuses. Shared
+          with the team panel's compact slider so both frames stay in sync. */}
+      <TranscendActiveInfo entry={entry} transStar={transStar} variant="full" />
     </div>
   )
 }

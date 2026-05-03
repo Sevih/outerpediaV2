@@ -75,6 +75,9 @@ const SUBCLASS_BY_INDEX: Record<number, string> = {
 }
 const SLOT_BY_SKT: Record<string, CallerSlot> = {
   SKT_FIRST: 'S1', SKT_SECOND: 'S2', SKT_ULTIMATE: 'S3',
+  // Burst variants replace S3 when the user casts under burst — each has
+  // its own buff list (and DamageFactor on Skill_19/20/21 in the templet).
+  SKT_BURST_1: 'B1', SKT_BURST_2: 'B2', SKT_BURST_3: 'B3',
 }
 
 /**
@@ -372,18 +375,22 @@ export interface ExtractCharSkillInput {
 
 /**
  * Map `Skill_N` index → active CallerSlot or 'passive' (or undefined for
- * unmodeled slots — strikes / backups / bursts).
+ * unmodeled slots — strikes / backups).
  *
- * Active : S1=Skill_1, S2=Skill_2, S3=Skill_3.
+ * Active : S1=Skill_1, S2=Skill_2, S3=Skill_3, B1=Skill_19, B2=Skill_20, B3=Skill_21.
  * Passive: Skill_4 (chain), Skill_8 (transcendent), Skill_22 (class),
  *          Skill_23 (core-fusion `SKT_FUSION_PASSIVE` — Veronica's CHD pop +
  *          DEF-buff allies damage bonus, etc.) — always-on, fire on every
- *          active cast subject to CallerSkillType.
+ *          active cast subject to CallerSkillType (which now includes the
+ *          burst variants when applicable).
  */
 function slotIndexToCaller(idx: number): CallerSlot | 'passive' | undefined {
   if (idx === 1) return 'S1'
   if (idx === 2) return 'S2'
   if (idx === 3) return 'S3'
+  if (idx === 19) return 'B1'
+  if (idx === 20) return 'B2'
+  if (idx === 21) return 'B3'
   if (idx === 4 || idx === 8 || idx === 22 || idx === 23) return 'passive'
   return undefined
 }
@@ -409,7 +416,10 @@ export function extractCharSkillBuffs(input: ExtractCharSkillInput): ApplicableB
       const slotIdx = parseInt(k.replace('Skill_', ''), 10)
       const caller = slotIndexToCaller(slotIdx)
       if (!caller) continue
-      const slotsToTag: CallerSlot[] = caller === 'passive' ? ['S1', 'S2', 'S3'] : [caller]
+      // Passives fire on every active cast — including burst variants since
+      // the player still rolls the same chain-passive / class-passive when
+      // casting Burst 1/2/3 over their S3.
+      const slotsToTag: CallerSlot[] = caller === 'passive' ? ['S1', 'S2', 'S3', 'B1', 'B2', 'B3'] : [caller]
       for (const bid of splitCsv(lvlRow.BuffID)) {
         const set = hostedSlots.get(bid) ?? new Set<CallerSlot>()
         for (const s of slotsToTag) set.add(s)
@@ -450,9 +460,12 @@ export function extractCharSkillBuffs(input: ExtractCharSkillInput): ApplicableB
       const isPermanent = b.BuffCreateType === 'PASSIVE' || b.BuffCreateType === 'PASSIVE2'
       const filterSlots = resolveCallerSlots(b.CallerSkillType)
       let finalSlots: CallerSlot[]
-      if (filterSlots !== 'all' && filterSlots.length === 0) continue   // burst-only — drop
+      // Empty filterSlots means CallerSkillType references no recognized slot
+      // type — drop. Bursts ARE recognized now (B1/B2/B3) so a CSV listing
+      // only burst types resolves to ['B1', 'B2', 'B3'] not the empty set.
+      if (filterSlots !== 'all' && filterSlots.length === 0) continue
       if (isPermanent) {
-        finalSlots = filterSlots === 'all' ? ['S1', 'S2', 'S3'] : filterSlots
+        finalSlots = filterSlots === 'all' ? ['S1', 'S2', 'S3', 'B1', 'B2', 'B3'] : filterSlots
       } else {
         const hostArr = Array.from(hostSet)
         finalSlots = filterSlots === 'all' ? hostArr : hostArr.filter(s => filterSlots.includes(s))

@@ -105,7 +105,16 @@ export type TriggerCondition =
   | 'resource' | 'caster_def_up'
   | 'target_element_earth' | 'target_element_water' | 'target_element_fire'
   | 'target_element_light' | 'target_element_dark'
-export type CallerSlot = 'S1' | 'S2' | 'S3'
+/**
+ * Caller slot — which char skill is casting the damage event. The base
+ * three (S1/S2/S3) cover the standard active skills; B1/B2/B3 are the
+ * burst variants that REPLACE S3 when the user casts under burst.
+ *
+ * Each burst variant has its own `Skill_19/20/21` entry in the templet
+ * with distinct `DamageFactor` + buff list, so the formula treats them
+ * as separate slots rather than S3 multipliers.
+ */
+export type CallerSlot = 'S1' | 'S2' | 'S3' | 'B1' | 'B2' | 'B3'
 export interface BuffTrigger {
   requires: TriggerCondition
   callerSlots: 'all' | CallerSlot[]

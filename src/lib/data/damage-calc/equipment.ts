@@ -113,6 +113,26 @@ export interface DamageCalcEquipmentEE {
   passiveLv10: DamageCalcEffectGroup | null
 }
 
+export interface DamageCalcTalismanMainStat {
+  /** Display stat key per `data/stats.json` (`'ATK%' / 'CHC' / ...`). */
+  stat: string
+  /**
+   * Runtime application:
+   *   - `'rate'` on ATK / DEF / HP — folded into `calcStat`'s `pctBonus`
+   *     layer (compounds with codex / transcend like classPassive).
+   *   - `'rate'` on EFF / RES — `'% of base'` → resolves to flat
+   *     `floor(base × val/100)` per the in-game premium-buff convention.
+   *   - `'add'` on CHC / CHD — additive percentage points.
+   */
+  apply: 'rate' | 'add'
+  /**
+   * Per-rarity values per enchant level. Length 1 for 4★/5★ (no enchant),
+   * length 11 for 6★ (in-game enchant +0..+10 → array indices 0..10).
+   * Values are in display units (`%` / percentage points).
+   */
+  byRarity: { '4': number[]; '5': number[]; '6': number[] }
+}
+
 export interface DamageCalcEquipmentFile {
   _v: string
   weapons: DamageCalcEquipmentItem[]
@@ -121,6 +141,9 @@ export interface DamageCalcEquipmentFile {
   sets: DamageCalcEquipmentSet[]
   /** Indexed by charId — direct lookup for the perso's EE + base CF EE. */
   ees: Record<string, DamageCalcEquipmentEE>
+  /** Talisman main-stat lookup — fed to the team panel's compact picker
+   *  so the dealer's stat sheet picks up the team's ally talisman bonuses. */
+  talismanMainStats: DamageCalcTalismanMainStat[]
 }
 
 export function getDamageCalcEquipment(): Promise<DamageCalcEquipmentFile> {

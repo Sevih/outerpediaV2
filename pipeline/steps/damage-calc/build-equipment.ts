@@ -139,6 +139,27 @@ interface EquipmentFile {
   sets: EquipmentSet[]
   /** Indexed by charId for O(1) lookup (incl. base CF picker). */
   ees: Record<string, EquipmentEE>
+  /**
+   * Talisman main-stat lookup table — per (stat × rarity × enchant level)
+   * values used by the team panel's compact talisman input. Resolved from
+   * `BID_ITEM_STAT_OOPARTS_<STAT>_<RARITY>` buffs in `BuffTemplet`. Values
+   * are in display units (% for OAT_RATE on absolute stats / percentage
+   * points for permille stats).
+   */
+  talismanMainStats: TalismanMainStatEntry[]
+}
+
+interface TalismanMainStatEntry {
+  /** Display stat key per `data/stats.json` (`'ATK%' / 'CHC' / ...`). */
+  stat: string
+  /** `'rate'` = multiplicative on dealer's ATK/DEF/HP base (folds into the
+   *  pctBonus layer alongside classPassive and team transcend bonuses).
+   *  `'add'` = additive — flat for percent stats (CHC/CHD/EFF/RES added
+   *  as percentage points / EFF-RES base-multiplier respectively). */
+  apply: 'rate' | 'add'
+  /** Values per rarity tier. Length is 1 for 4★/5★ (no enchant), length
+   *  11 for 6★ (enchant levels 0-10 → array indices 0-10). */
+  byRarity: { '4': number[]; '5': number[]; '6': number[] }
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────────
@@ -466,6 +487,71 @@ function targetElementFromBuff(buff: BuffEntry): string | undefined {
   return ELEMENT[buff.buffConditionValue ?? '']
 }
 
+// ── Talisman main-stat table ───────────────────────────────────────────────
+
+/**
+ * Resolve the (stat × rarity × level) value table for talisman main stats
+ * from the OOPARTS buff catalog.
+ *
+ *   `BID_ITEM_STAT_OOPARTS_<STAT_TAG>_<RARITY>` — one BuffID per stat per
+ *   rarity tier. Rarity 4 / 5 carry only Level=1 (no enchant). Rarity 6
+ *   carries Level 1..11 (in-game enchant +0..+10).
+ *
+ * Apply semantics (runtime dispatches on `stat` to pick the right path):
+ *   - `'rate'` on ATK / DEF / HP — value is a % bonus folded into `calcStat`'s
+ *     `pctBonus` layer (compounds with codex / transcend like classPassive).
+ *   - `'rate'` on EFF / RES — value is "% of base" → resolves to flat
+ *     `floor(base × val/100)` per the admin route's premium-buff convention.
+ *   - `'add'` on CHC / CHD / DMG↑ / DMG RED% — value is additive percentage
+ *     points (per-mille internal → %.
+ *
+ * Naming convention in the OOPARTS catalog:
+ *   `_DMG`        → ST_DMG_BOOST       (Damage Increase)
+ *   `_DMG_REDUCE` → ST_DMG_REDUCE_RATE (Damage Reduction — defensive)
+ */
+const TALISMAN_STAT_TAGS: Array<{ tag: string; key: string; apply: 'rate' | 'add' }> = [
+  { tag: 'ATK',          key: 'ATK%',    apply: 'rate' },
+  { tag: 'DEF',          key: 'DEF%',    apply: 'rate' },
+  { tag: 'HP',           key: 'HP%',     apply: 'rate' },
+  { tag: 'CRI',          key: 'CHC',     apply: 'add'  },
+  { tag: 'CRI_DMG',      key: 'CHD',     apply: 'add'  },
+  // OAT_RATE in datamine — stored as `'rate'` so runtime can apply the
+  // `floor(base × val/100)` resolution. The displayed value (post ÷10) is
+  // still in `%` units (e.g. EFF +6%).
+  { tag: 'BUFF_CHANCE',  key: 'EFF',     apply: 'rate' },
+  { tag: 'BUF_RESIST',   key: 'RES',     apply: 'rate' },
+  // DMG↑ — buff catalog uses `_DMG` (without `_REDUCE`) as the suffix.
+  { tag: 'DMG',          key: 'DMG UP%', apply: 'add'  },
+  // DMG RED% — defensive talisman; relevant for the dealer when modeling
+  // their survival, not their damage output. Surfaced for completeness.
+  { tag: 'DMG_REDUCE',   key: 'DMG RED%', apply: 'add' },
+]
+
+function bakeTalismanMainStats(buffsById: Map<string, Row[]>): TalismanMainStatEntry[] {
+  const out: TalismanMainStatEntry[] = []
+  for (const { tag, key, apply } of TALISMAN_STAT_TAGS) {
+    const byRarity: TalismanMainStatEntry['byRarity'] = { '4': [], '5': [], '6': [] }
+    let anyHit = false
+    for (const rarity of ['4', '5', '6'] as const) {
+      const buffId = `BID_ITEM_STAT_OOPARTS_${tag}_${rarity}`
+      const levels = buffsById.get(buffId)
+      if (!levels || levels.length === 0) continue
+      anyHit = true
+      // Sort by Level ascending — value at index `i` corresponds to in-game
+      // enchant `+i` (Level 1 → index 0). 4★/5★ ship a single Level row;
+      // 6★ ships Levels 1-11.
+      const sorted = [...levels].sort((a, b) => num(a.Level) - num(b.Level))
+      // Per-mille → display: divide by 10. Works for both OAT_RATE on
+      // absolute stats (50‰ = 5%) and OAT_ADD on permille percent stats
+      // (30‰ = 3% CHC). EFF/RES OAT_RATE values stay as %-of-base in the
+      // display unit; the runtime applies them as `floor(base × val/100)`.
+      byRarity[rarity] = sorted.map(r => num(r.Value) / 10)
+    }
+    if (anyHit) out.push({ stat: key, apply, byRarity })
+  }
+  return out
+}
+
 // ── Public entrypoint ──────────────────────────────────────────────────────
 
 async function loadExclude(): Promise<ExcludeFile> {
@@ -538,9 +624,12 @@ export async function buildEquipment(): Promise<{
     if (baked && !excE.has(baked.charId)) ees[baked.charId] = baked
   }
 
+  const talismanMainStats = bakeTalismanMainStats(buffsById)
+
   const file: EquipmentFile = {
     _v: SCHEMA_VERSION,
     weapons, accessories, talismans, sets, ees,
+    talismanMainStats,
   }
   await writeJsonMin('equipment.json', file)
 

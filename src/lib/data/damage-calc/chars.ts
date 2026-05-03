@@ -133,6 +133,13 @@ export interface DamageCalcCharDetail {
     S1: DamageCalcSkillDetail | null
     S2: DamageCalcSkillDetail | null
     S3: DamageCalcSkillDetail | null
+    /** Burst Lv 1 / 2 / 3 — replace S3's DamageFactor + buff list when the
+     *  user casts under Burst. Gated by the dealer's transcend (see the tier
+     *  templet's `burst2` / `burst3` flags). Null when the char has no
+     *  burst variant (Skill_19/20/21 absent in the templet). */
+    B1: DamageCalcSkillDetail | null
+    B2: DamageCalcSkillDetail | null
+    B3: DamageCalcSkillDetail | null
   }
   /** Six evolution steps (`lv1_ev0` … `lv100_ev5`). Null when no curated stats exist. */
   baseStats: Record<string, DamageCalcStatsStep> | null

@@ -407,21 +407,48 @@
   "aer": {
     "pros": [
       {
-        "en": "Can {D/BT_REMOVE_BUFF} all enemy buffs, ignoring resilience",
-        "jp": "耐性を無視して敵の全バフを{D/BT_REMOVE_BUFF}可能",
-        "kr": "인내를 무시하고 적의 모든 버프를 {D/BT_REMOVE_BUFF} 가능",
-        "zh": "可无视韧性{D/BT_REMOVE_BUFF}敌方所有增益"
+        "en": "Excels at defeating {E/Earth}-element bosses due to her built-in damage multipliers against them",
+        "jp": "{E/Earth}属性のボスに対する内蔵ダメージ倍率により、討伐に非常に優れる",
+        "kr": "{E/Earth} 속성 보스에 대한 내장된 피해 배율 덕분에 보스 처치에 매우 뛰어남",
+        "zh": "凭借自身对{E/Earth}属性Boss的内置伤害倍率，擅长击败该类Boss"
       },
       {
-        "en": "Very strong against Earth element bosses",
-        "jp": "{E/Earth}属性ボスに非常に強い",
-        "kr": "{E/Earth} 속성 보스에게 매우 강함",
-        "zh": "对{E/Earth}属性Boss非常强力"
+        "en": "Gains an {B/BT_ADDITIVE_TURN} if the target has no buffs or is defeated after using her {SK/Aer|S3}, allowing for high burst windows",
+        "jp": "{SK/Aer|S3}使用後、対象がバフを持たない、または撃破された場合に{B/BT_ADDITIVE_TURN}を獲得し、高いバーストウィンドウを実現する",
+        "kr": "{SK/Aer|S3} 사용 후 대상이 버프가 없거나 처치된 경우 {B/BT_ADDITIVE_TURN}을 획득하여 강력한 폭딜 구간을 형성함",
+        "zh": "使用{SK/Aer|S3}后，若目标无增益或被击败，可获得{B/BT_ADDITIVE_TURN}，创造高爆发窗口"
+      },
+      {
+        "en": "{SK/Aer|S2} completely strips all enemy buffs via a {S/RES}-ignoring {D/BT_REMOVE_BUFF}",
+        "jp": "{SK/Aer|S2}は{S/RES}を無視する{D/BT_REMOVE_BUFF}により、敵の全バフを完全に解除する",
+        "kr": "{SK/Aer|S2}는 {S/RES}를 무시하는 {D/BT_REMOVE_BUFF}로 적의 모든 버프를 완전히 제거함",
+        "zh": "{SK/Aer|S2}通过无视{S/RES}的{D/BT_REMOVE_BUFF}效果完全清除敌人所有增益"
+      },
+      {
+        "en": "Gains a 30% {B/BT_ACTION_GAUGE} when she uses {SK/Aer|S2} while possessing an {B/BT_STAT|ST_CRITICAL_RATE} buff, enabling excellent turn cycling",
+        "jp": "{B/BT_STAT|ST_CRITICAL_RATE}バフを所持している状態で{SK/Aer|S2}を使用すると、30%の{B/BT_ACTION_GAUGE}を獲得し、優れたターン回転を可能にする",
+        "kr": "{B/BT_STAT|ST_CRITICAL_RATE} 버프를 보유한 상태로 {SK/Aer|S2}를 사용하면 30%의 {B/BT_ACTION_GAUGE}를 획득하여 뛰어난 턴 회전이 가능함",
+        "zh": "持有{B/BT_STAT|ST_CRITICAL_RATE}增益时使用{SK/Aer|S2}可获得30%的{B/BT_ACTION_GAUGE}，实现出色的回合循环"
       }
     ],
     "cons": [
       {
-        "en": "-"
+        "en": "Her conditional extra turn mechanic is completely shut down if the enemy team can maintain their buffs",
+        "jp": "条件付きの追加ターンメカニクスは、敵チームがバフを維持できる場合に完全に封じられる",
+        "kr": "조건부 추가 행동 메커니즘은 적 팀이 버프를 유지할 수 있을 경우 완전히 봉쇄됨",
+        "zh": "其条件性额外回合机制在敌方队伍能保持自身增益时会被完全压制"
+      },
+      {
+        "en": "Heavily reliant on keeping her self-buffs active to maximize her momentum, making her vulnerable to buff strippers or {D/BT_SEALED}",
+        "jp": "勢いを最大化するためには自身のバフを維持し続ける必要があり、バフ解除や{D/BT_SEALED}に弱い",
+        "kr": "기세를 극대화하기 위해 자신의 버프를 유지해야 하므로, 버프 해제나 {D/BT_SEALED}에 취약함",
+        "zh": "高度依赖维持自身增益以最大化连携，因此对解除增益或{D/BT_SEALED}的敌人较为脆弱"
+      },
+      {
+        "en": "Strictly a single-target damage dealer, which makes her less optimal for fast AoE wave clearing",
+        "jp": "完全な単体ダメージディーラーであるため、高速な全体ウェーブ処理には向かない",
+        "kr": "철저한 단일 대상 딜러이므로 빠른 광역 웨이브 처리에는 적합하지 않음",
+        "zh": "纯粹的单体输出，因此不适合快速清理范围波次"
       }
     ]
   },
@@ -1379,6 +1406,246 @@
         "jp": "リセットを安定して発動させるために必要な高い{S/CHC}と{S/CHD}の閾値に到達するには、大きな投資が必要となる",
         "kr": "리셋을 안정적으로 발동시키기 위한 높은 {S/CHC}와 {S/CHD} 수치에 도달하려면 상당한 투자가 필요함",
         "zh": "需要大量投入才能达到稳定触发其重置机制所需的高{S/CHC}和{S/CHD}阈值"
+      }
+    ]
+  },
+  "bryn": {
+    "pros": [
+      {
+        "en": "Provides excellent offensive utility and team protection by granting a team-wide {B/BT_BARRIER} that scales off her {S/ATK} with {SK/Bryn|S2}",
+        "jp": "{SK/Bryn|S2}により{S/ATK}に応じてスケーリングするチーム全体の{B/BT_BARRIER}を付与し、優れた攻撃ユーティリティとチーム保護を提供する",
+        "kr": "{SK/Bryn|S2}로 {S/ATK}에 비례하는 팀 전체 {B/BT_BARRIER}를 부여하여 뛰어난 공격 유틸리티와 팀 보호를 제공함",
+        "zh": "通过{SK/Bryn|S2}为全队提供以{S/ATK}加成的{B/BT_BARRIER}，提供出色的攻击辅助与团队保护"
+      },
+      {
+        "en": "Applies a unique {B/CHARISMA} effect to all allies and enemies automatically at the start of battle via her {SK/Bryn|S2} passive",
+        "jp": "{SK/Bryn|S2}のパッシブにより、戦闘開始時に味方と敵全員へ自動的に独自の{B/CHARISMA}効果を付与する",
+        "kr": "{SK/Bryn|S2}의 패시브로 전투 시작 시 모든 아군과 적에게 자동으로 고유한 {B/CHARISMA} 효과를 부여함",
+        "zh": "通过{SK/Bryn|S2}被动，在战斗开始时自动为所有友军和敌人施加独特的{B/CHARISMA}效果"
+      },
+      {
+        "en": "Consistently triggers Dual Attacks from the ally with the highest {S/ATK} using {SK/Bryn|S1}, provided she is protected by a {B/BT_BARRIER}",
+        "jp": "{B/BT_BARRIER}で保護されている限り、{SK/Bryn|S1}により{S/ATK}が最も高い味方によるデュアルアタックを安定して発動させる",
+        "kr": "{B/BT_BARRIER}로 보호받고 있는 한, {SK/Bryn|S1}로 {S/ATK}가 가장 높은 아군의 듀얼 어택을 꾸준히 발동시킴",
+        "zh": "在拥有{B/BT_BARRIER}保护的情况下，使用{SK/Bryn|S1}可稳定触发{S/ATK}最高的友军发动双重攻击"
+      },
+      {
+        "en": "{SK/Bryn|S3} is a powerful AoE attack that never misses, ignores {S/RES} to apply a {D/BT_REMOVE_BUFF} effect (stripping 2 buffs), and ignores 30% of enemy {S/DEF}",
+        "jp": "{SK/Bryn|S3}は必中の強力な全体攻撃で、{S/RES}を無視して{D/BT_REMOVE_BUFF}効果（バフ2つを解除）を付与し、敵の{S/DEF}を30%無視する",
+        "kr": "{SK/Bryn|S3}는 절대 빗나가지 않는 강력한 광역 공격으로, {S/RES}를 무시하고 {D/BT_REMOVE_BUFF} 효과(버프 2개 제거)를 부여하며 적의 {S/DEF}를 30% 무시함",
+        "zh": "{SK/Bryn|S3}是必中的强力范围攻击，无视{S/RES}施加{D/BT_REMOVE_BUFF}效果（解除2个增益），并无视敌方30%的{S/DEF}"
+      },
+      {
+        "en": "{EE/Bryn} synergizes perfectly with her kit by significantly boosting the damage output of any ally possessing a {B/BT_BARRIER} by 30% (60% at level 10)",
+        "jp": "{EE/Bryn}はキットと完璧にシナジーし、{B/BT_BARRIER}を持つ味方のダメージを30%（レベル10時は60%）大幅に上昇させる",
+        "kr": "{EE/Bryn}는 그녀의 스킬셋과 완벽한 시너지를 이루며, {B/BT_BARRIER}를 보유한 아군의 피해량을 30%(10레벨 시 60%) 크게 증가시킴",
+        "zh": "{EE/Bryn}与其技能组完美契合，可大幅提升任何拥有{B/BT_BARRIER}友军30%的伤害输出（10级时为60%）"
+      },
+      {
+        "en": "Serves as an exceptional Chain Starter, utilizing her {SK/Bryn|Passive} to grant a {B/BT_STAT|ST_PIERCE_POWER_RATE} to all allies involved in the Skill Chain, greatly amplifying team burst damage",
+        "jp": "優れたチェインスターターとして、{SK/Bryn|Passive}を活用してスキルチェインに参加する全味方に{B/BT_STAT|ST_PIERCE_POWER_RATE}を付与し、チームのバーストダメージを大幅に増幅させる",
+        "kr": "뛰어난 체인 스타터로서 {SK/Bryn|Passive}를 활용하여 스킬 체인에 참여한 모든 아군에게 {B/BT_STAT|ST_PIERCE_POWER_RATE}를 부여하여 팀의 폭딜을 크게 증폭시킴",
+        "zh": "作为出色的连锁起手，利用{SK/Bryn|Passive}为所有参与连锁技的友军提供{B/BT_STAT|ST_PIERCE_POWER_RATE}，大幅放大团队爆发伤害"
+      }
+    ],
+    "cons": [
+      {
+        "en": "Her ultimate, {SK/Bryn|S3}, requires 5 'Showmanship' stacks to activate, strictly preventing her from using her most impactful skill on turn one",
+        "jp": "奥義の{SK/Bryn|S3}は発動に5つの「Showmanship」スタックを必要とするため、初ターンに最も強力なスキルを使用できない",
+        "kr": "그녀의 궁극기 {SK/Bryn|S3}는 발동을 위해 5개의 'Showmanship' 스택이 필요하므로, 첫 턴에는 가장 강력한 스킬을 사용할 수 없음",
+        "zh": "其大招{SK/Bryn|S3}需要5层「Showmanship」堆叠才能发动，严重限制她在首回合使用最具影响力的技能"
+      },
+      {
+        "en": "Her defensive utility relies entirely on maintaining a {B/BT_BARRIER}, making her and her team vulnerable to fast enemies with {D/BT_REMOVE_BUFF} or {D/BT_SEALED}",
+        "jp": "防御ユーティリティは{B/BT_BARRIER}の維持に完全に依存するため、{D/BT_REMOVE_BUFF}や{D/BT_SEALED}を持つ素早い敵に対して彼女とチームが脆弱になる",
+        "kr": "방어 유틸리티가 {B/BT_BARRIER} 유지에 전적으로 의존하므로, {D/BT_REMOVE_BUFF}나 {D/BT_SEALED}를 가진 빠른 적에게 그녀와 팀이 취약해짐",
+        "zh": "其防御辅助完全依赖维持{B/BT_BARRIER}，使她和队伍对拥有{D/BT_REMOVE_BUFF}或{D/BT_SEALED}的快速敌人较为脆弱"
+      },
+      {
+        "en": "Because her barriers scale heavily with {S/ATK}, she requires building offensive stats, which can leave her squishy if not properly supported",
+        "jp": "バリアが{S/ATK}に大きく依存するため、攻撃型ステータスを構築する必要があり、適切なサポートがなければ脆くなりがちである",
+        "kr": "방어막이 {S/ATK}에 크게 의존하므로 공격형 스탯을 구축해야 하며, 적절한 지원이 없으면 약해질 수 있음",
+        "zh": "由于其护盾大幅依赖{S/ATK}，需要堆叠攻击向属性，若缺乏适当支援可能会显得脆弱"
+      },
+      {
+        "en": "She lacks direct HP recovery, meaning she may need to be paired with a dedicated healer for prolonged encounters",
+        "jp": "直接的なHP回復手段を持たないため、長期戦では専用のヒーラーと組ませる必要がある場合がある",
+        "kr": "직접적인 HP 회복 수단이 없어, 장기전에서는 전문 힐러와 함께 편성해야 할 수 있음",
+        "zh": "缺乏直接的HP回复手段，在长时间战斗中可能需要搭配专职奶妈"
+      }
+    ]
+  },
+  "kanon": {
+    "pros": [
+      {
+        "en": "Her damage output scales purely off her {S/DEF}, allowing her to be incredibly bulky while still dealing massive damage",
+        "jp": "ダメージは完全に{S/DEF}に依存するため、非常に頑丈でありながら大ダメージを与えることができる",
+        "kr": "피해량이 전적으로 {S/DEF}에 비례하므로, 매우 단단하면서도 막대한 피해를 줄 수 있음",
+        "zh": "其伤害完全基于{S/DEF}计算，使她在极为坚韧的同时仍能造成巨大伤害"
+      },
+      {
+        "en": "Highly self-sufficient thanks to her {SK/Kanon|S2}, which triggers when an ally lands or takes a critical hit, attacking the enemy with the highest {S/ATK}, recovering her health, and pushing her {B/BT_ACTION_GAUGE} by 30%",
+        "jp": "{SK/Kanon|S2}は味方が会心を出したり受けたりしたときに発動し、{S/ATK}が最も高い敵を攻撃しつつ自身を回復し、{B/BT_ACTION_GAUGE}を30%増加させるため、自己完結性が高い",
+        "kr": "{SK/Kanon|S2}는 아군이 치명타를 가하거나 받을 때 발동되어 {S/ATK}가 가장 높은 적을 공격하고 자신을 회복하며 {B/BT_ACTION_GAUGE}를 30% 증가시키므로 자급자족 능력이 매우 높음",
+        "zh": "凭借{SK/Kanon|S2}（在友军造成或受到暴击时触发，攻击{S/ATK}最高的敌人、恢复自身生命并使{B/BT_ACTION_GAUGE}提升30%），自给能力极强"
+      },
+      {
+        "en": "Automatically grants herself a {B/BT_BARRIER} when hit by AoE attacks via her {SK/Kanon|S2} passive, making her exceptionally resilient against cleave teams",
+        "jp": "{SK/Kanon|S2}のパッシブにより全体攻撃を受けた際に自身に{B/BT_BARRIER}を自動付与し、クリーブ編成に対して非常に高い耐久力を発揮する",
+        "kr": "{SK/Kanon|S2}의 패시브로 광역 공격을 받을 때 자신에게 {B/BT_BARRIER}를 자동 부여하여, 클리브 팀에 대해 매우 높은 내구성을 보임",
+        "zh": "通过{SK/Kanon|S2}被动，在受到范围攻击时自动为自己赋予{B/BT_BARRIER}，对群攻队伍极具韧性"
+      },
+      {
+        "en": "Utilizing her {SK/Kanon|S1} while protected by a {B/BT_BARRIER} increases her {B/BT_ACTION_GAUGE} by 20%, enabling excellent turn cycling",
+        "jp": "{B/BT_BARRIER}で保護された状態で{SK/Kanon|S1}を使用すると{B/BT_ACTION_GAUGE}が20%増加し、優れたターン回転を可能にする",
+        "kr": "{B/BT_BARRIER}로 보호받는 상태에서 {SK/Kanon|S1}을 사용하면 {B/BT_ACTION_GAUGE}가 20% 증가하여 뛰어난 턴 회전이 가능함",
+        "zh": "在拥有{B/BT_BARRIER}保护的情况下使用{SK/Kanon|S1}可使{B/BT_ACTION_GAUGE}提升20%，实现出色的回合循环"
+      },
+      {
+        "en": "{SK/Kanon|S3} grants her a 3-turn {B/BT_STAT|ST_DEF} buff and, if it defeats an enemy, completely resets the cooldown of her {SK/Kanon|S2}",
+        "jp": "{SK/Kanon|S3}は3ターンの{B/BT_STAT|ST_DEF}バフを付与し、敵を撃破した場合は{SK/Kanon|S2}のクールダウンを完全にリセットする",
+        "kr": "{SK/Kanon|S3}는 3턴 {B/BT_STAT|ST_DEF} 버프를 부여하며, 적을 처치한 경우 {SK/Kanon|S2}의 쿨다운을 완전히 초기화함",
+        "zh": "{SK/Kanon|S3}赋予自身3回合的{B/BT_STAT|ST_DEF}增益，并在击败敌人时完全重置{SK/Kanon|S2}的冷却"
+      },
+      {
+        "en": "{EE/Kanon} grants innate damage reduction whenever she possesses a {B/BT_STAT|ST_DEF} buff",
+        "jp": "{EE/Kanon}は{B/BT_STAT|ST_DEF}バフを所持している間、固有のダメージ軽減を付与する",
+        "kr": "{EE/Kanon}은 {B/BT_STAT|ST_DEF} 버프를 보유하는 동안 고유한 피해 감소를 부여함",
+        "zh": "{EE/Kanon}在她拥有{B/BT_STAT|ST_DEF}增益时提供内置的伤害减免"
+      }
+    ],
+    "cons": [
+      {
+        "en": "Because her skills scale entirely off {S/DEF}, any {S/ATK} stats on her gear are completely useless, requiring highly specialized equipment",
+        "jp": "スキルが完全に{S/DEF}に依存するため、装備の{S/ATK}ステータスは全く無意味であり、高度に特化した装備を必要とする",
+        "kr": "스킬이 전적으로 {S/DEF}에 비례하므로 장비의 {S/ATK} 스탯은 완전히 쓸모없으며, 고도로 특화된 장비가 필요함",
+        "zh": "由于其技能完全基于{S/DEF}计算，装备上的任何{S/ATK}属性都毫无作用，需要高度特化的装备"
+      },
+      {
+        "en": "Heavily reliant on maintaining her {B/BT_BARRIER} and {B/BT_STAT|ST_DEF} buffs to survive and cycle turns, making her extremely vulnerable to enemies with {D/BT_REMOVE_BUFF} or {D/BT_SEALED}",
+        "jp": "生存とターン回転のために{B/BT_BARRIER}と{B/BT_STAT|ST_DEF}バフの維持に大きく依存するため、{D/BT_REMOVE_BUFF}や{D/BT_SEALED}を持つ敵に極めて弱い",
+        "kr": "생존과 턴 순환을 위해 {B/BT_BARRIER}와 {B/BT_STAT|ST_DEF} 버프 유지에 크게 의존하므로, {D/BT_REMOVE_BUFF}나 {D/BT_SEALED}를 가진 적에게 매우 취약함",
+        "zh": "高度依赖维持{B/BT_BARRIER}与{B/BT_STAT|ST_DEF}增益以生存与循环回合，因此对拥有{D/BT_REMOVE_BUFF}或{D/BT_SEALED}的敌人极为脆弱"
+      },
+      {
+        "en": "Her {SK/Kanon|S2} trigger requires allies to score or take critical hits, meaning she relies on her team having high {S/CHC} or facing enemies with high critical rates to maximize her momentum",
+        "jp": "{SK/Kanon|S2}の発動には味方が会心を出したり受けたりする必要があり、勢いを最大化するにはチームが高い{S/CHC}を持つか、会心率の高い敵と対峙する必要がある",
+        "kr": "{SK/Kanon|S2} 발동은 아군이 치명타를 가하거나 받아야 하므로, 기세를 극대화하려면 팀이 높은 {S/CHC}를 보유하거나 치명타율이 높은 적과 맞서야 함",
+        "zh": "{SK/Kanon|S2}的触发需要友军造成或受到暴击，因此需要队伍拥有较高的{S/CHC}或面对暴击率高的敌人才能最大化其连携"
+      }
+    ]
+  },
+  "core-fusion-eternal": {
+    "pros": [
+      {
+        "en": "An unparalleled debuffer capable of crippling the enemy team with a 3-turn {D/BT_STAT|ST_DEF} and {D/BT_STAT|ST_SPEED} decrease, alongside {D/BT_SEALED_RECEIVE_HEAL}, using {SK/Core Fusion Eternal|S3}",
+        "jp": "{SK/Core Fusion Eternal|S3}により3ターンの{D/BT_STAT|ST_DEF}と{D/BT_STAT|ST_SPEED}減少、さらに{D/BT_SEALED_RECEIVE_HEAL}を付与でき、敵チームを無力化する比類なきデバッファー",
+        "kr": "{SK/Core Fusion Eternal|S3}로 3턴간 {D/BT_STAT|ST_DEF}와 {D/BT_STAT|ST_SPEED} 감소, {D/BT_SEALED_RECEIVE_HEAL}을 함께 부여하여 적 팀을 무력화하는 비할 데 없는 디버퍼",
+        "zh": "无与伦比的减益型角色，能通过{SK/Core Fusion Eternal|S3}施加3回合的{D/BT_STAT|ST_DEF}与{D/BT_STAT|ST_SPEED}降低，并附带{D/BT_SEALED_RECEIVE_HEAL}，重创敌方队伍"
+      },
+      {
+        "en": "Her {SK/Core Fusion Eternal|S3} provides crucial tactical advantage by reducing the {D/BT_ACTION_GAUGE} of the enemy with the highest {S/ATK} by 20%",
+        "jp": "{SK/Core Fusion Eternal|S3}は{S/ATK}が最も高い敵の{D/BT_ACTION_GAUGE}を20%減少させ、戦術的に重要な優位性を提供する",
+        "kr": "{SK/Core Fusion Eternal|S3}는 {S/ATK}가 가장 높은 적의 {D/BT_ACTION_GAUGE}를 20% 감소시켜 전술적으로 중요한 우위를 제공함",
+        "zh": "{SK/Core Fusion Eternal|S3}通过将{S/ATK}最高的敌人{D/BT_ACTION_GAUGE}降低20%，提供至关重要的战术优势"
+      },
+      {
+        "en": "Excels at neutralizing {E/Earth} enemies with {SK/Core Fusion Eternal|S2}, utilizing a {D/BT_REMOVE_BUFF} effect to strip 2 buffs while simultaneously applying {D/BT_STAT|ST_ATK} down and multiple stacks of {D/BT_DOT_BURN}",
+        "jp": "{SK/Core Fusion Eternal|S2}により{E/Earth}属性の敵を無力化することに優れ、{D/BT_REMOVE_BUFF}効果でバフを2つ解除しつつ{D/BT_STAT|ST_ATK}減少と複数スタックの{D/BT_DOT_BURN}を同時に付与する",
+        "kr": "{SK/Core Fusion Eternal|S2}로 {E/Earth} 속성 적을 무력화하는 데 뛰어나며, {D/BT_REMOVE_BUFF} 효과로 버프 2개를 제거하는 동시에 {D/BT_STAT|ST_ATK} 감소와 다수의 {D/BT_DOT_BURN} 스택을 부여함",
+        "zh": "擅长通过{SK/Core Fusion Eternal|S2}压制{E/Earth}属性敌人，利用{D/BT_REMOVE_BUFF}效果解除2个增益，同时施加{D/BT_STAT|ST_ATK}降低与多层{D/BT_DOT_BURN}"
+      },
+      {
+        "en": "Her Level 2 Core-Fused Passive is a massive power spike, granting her an Extra Turn after using her ultimate to immediately follow up with additional pressure",
+        "jp": "レベル2のCore-Fusedパッシブは大きなパワーアップであり、奥義使用後に追加ターンを獲得し、即座に追加の圧力をかけることができる",
+        "kr": "2레벨 Core-Fused 패시브는 강력한 파워 스파이크로, 궁극기 사용 후 추가 행동을 부여하여 즉시 추가 압박을 가할 수 있음",
+        "zh": "2级Core-Fused被动是巨大的强度飞跃，使她在使用大招后获得额外回合，立即施加进一步压力"
+      },
+      {
+        "en": "Her {EE/Core Fusion Eternal} ensures her debuffs land reliably by granting a +100% Effectiveness boost, and at Level 10, Grants {B/BT_SEAL_COUNTER} to her ultimate",
+        "jp": "{EE/Core Fusion Eternal}は+100%の効果命中を付与してデバフを安定して付与できるようにし、レベル10では奥義に{B/BT_SEAL_COUNTER}を付与する",
+        "kr": "{EE/Core Fusion Eternal}는 +100% 효과 적중을 부여하여 디버프를 안정적으로 적중시키며, 10레벨에서는 궁극기에 {B/BT_SEAL_COUNTER}를 부여함",
+        "zh": "{EE/Core Fusion Eternal}通过提供+100%效果命中确保减益稳定生效，10级时还为大招赋予{B/BT_SEAL_COUNTER}"
+      }
+    ],
+    "cons": [
+      {
+        "en": "Requires monumental resource investment to unlock her full potential, specifically needing Level 2 Core Fusion for the Extra Turn mechanic and a Level 10 {EE/Core Fusion Eternal} to safely bypass enemy reactions",
+        "jp": "潜在能力を最大限引き出すには莫大なリソース投資が必要であり、特に追加ターン機構のためのレベル2Core Fusionと、敵の反応を安全に突破するためのレベル10{EE/Core Fusion Eternal}が求められる",
+        "kr": "잠재력을 완전히 발휘하기 위해서는 막대한 자원 투자가 필요하며, 특히 추가 행동 메커니즘을 위한 2레벨 Core Fusion과 적의 반응을 안전하게 우회하기 위한 10레벨 {EE/Core Fusion Eternal}이 요구됨",
+        "zh": "需要投入巨大的资源才能完全发挥其潜力，尤其需要2级Core Fusion来启用额外回合机制，以及10级{EE/Core Fusion Eternal}才能安全绕过敌方反击"
+      },
+      {
+        "en": "Heavily reliant on landing her debuffs to be effective, making her vulnerable to fast enemies that can apply team-wide {B/BT_IMMUNE} or cleanse effects before she takes her turn",
+        "jp": "効果を発揮するためにデバフの命中に大きく依存しているため、自分のターン前にチーム全体の{B/BT_IMMUNE}や解除効果を付与できる素早い敵に弱い",
+        "kr": "효과 발휘를 위해 디버프 적중에 크게 의존하므로, 자신의 턴 이전에 팀 전체 {B/BT_IMMUNE}이나 해제 효과를 부여할 수 있는 빠른 적에게 취약함",
+        "zh": "效果高度依赖减益命中，因此对能在她行动前为全队施加{B/BT_IMMUNE}或解除效果的快速敌人较为脆弱"
+      },
+      {
+        "en": "Lacks hard crowd control (such as Stun or Freeze), meaning enemies can still act if they are not killed or sufficiently crippled by her statistical debuffs",
+        "jp": "スタンや凍結のようなハードCCを欠いているため、彼女のステータスデバフで撃破または十分に弱体化されない限り、敵は依然として行動できる",
+        "kr": "기절이나 빙결과 같은 하드 CC가 없으므로, 그녀의 스탯 디버프로 처치되거나 충분히 약화되지 않는 한 적은 여전히 행동할 수 있음",
+        "zh": "缺乏硬控（如眩晕或冰冻），意味着只要敌人未被击杀或被她的属性减益充分削弱，他们仍可行动"
+      }
+    ]
+  },
+  "astei": {
+    "pros": [
+      {
+        "en": "Provides constant team sustain by having a high chance to chain her basic attack into her AoE heal",
+        "jp": "通常攻撃から全体回復に高確率で派生することで、安定したチーム維持を提供する",
+        "kr": "기본 공격에서 광역 회복으로 높은 확률로 연계되어 안정적인 팀 유지력을 제공함",
+        "zh": "凭借基础攻击有较高概率衔接群体治疗，为队伍提供稳定的持续治疗"
+      },
+      {
+        "en": "Grants team-wide {B/BT_IMMUNE} and massive healing with her {SK/Astei|S3}, making her highly valuable for debuff-heavy PvE encounters",
+        "jp": "{SK/Astei|S3}でチーム全体に{B/BT_IMMUNE}と大量の回復を付与するため、デバフが多いPvEコンテンツで非常に価値が高い",
+        "kr": "{SK/Astei|S3}로 팀 전체에 {B/BT_IMMUNE}과 막대한 회복을 부여하여, 디버프가 많은 PvE 콘텐츠에서 매우 가치가 높음",
+        "zh": "通过{SK/Astei|S3}为全队提供{B/BT_IMMUNE}与大量治疗，在减益繁多的PvE战斗中极具价值"
+      },
+      {
+        "en": "Acts as an excellent offensive support by consistently generating Action Points and pushing ally {B/BT_ACTION_GAUGE} with her {SK/Astei|S2}",
+        "jp": "{SK/Astei|S2}により安定してアクションポイントを生成し、味方の{B/BT_ACTION_GAUGE}を押し上げることで、優れた攻撃サポートとして機能する",
+        "kr": "{SK/Astei|S2}로 안정적으로 액션 포인트를 생성하고 아군의 {B/BT_ACTION_GAUGE}를 밀어주어 뛰어난 공격형 서포터 역할을 수행함",
+        "zh": "通过{SK/Astei|S2}持续生成行动点并推动友军{B/BT_ACTION_GAUGE}，担任出色的攻击型辅助"
+      },
+      {
+        "en": "Greatly mitigates incoming damage by inflicting an {S/RES}-ignoring {D/BT_STAT|ST_CRITICAL_RATE} on all enemies",
+        "jp": "全敵に{S/RES}を無視する{D/BT_STAT|ST_CRITICAL_RATE}を付与することで、被ダメージを大幅に軽減する",
+        "kr": "모든 적에게 {S/RES}를 무시하는 {D/BT_STAT|ST_CRITICAL_RATE}을 부여하여 받는 피해를 크게 경감시킴",
+        "zh": "通过对所有敌人施加无视{S/RES}的{D/BT_STAT|ST_CRITICAL_RATE}，大幅减轻受到的伤害"
+      },
+      {
+        "en": "{EE/Astei} increases her {B/BT_ACTION_GAUGE} by 5% whenever an ally is hit (8% at level 10), allowing her to cycle turns quickly}",
+        "jp": "{EE/Astei}は味方が攻撃を受けるたびに{B/BT_ACTION_GAUGE}を5%（レベル10時は8%）増加させ、迅速なターン回転を可能にする",
+        "kr": "{EE/Astei}는 아군이 피격될 때마다 {B/BT_ACTION_GAUGE}를 5%(10레벨 시 8%) 증가시켜 빠른 턴 회전을 가능하게 함",
+        "zh": "{EE/Astei}在每当友军受击时使其{B/BT_ACTION_GAUGE}提升5%（10级时为8%），实现快速的回合循环"
+      }
+    ],
+    "cons": [
+      {
+        "en": "Her {SK/Astei|S2} heal targets all allies except the caster, meaning she relies on her ultimate or Chain Skill to recover her own health",
+        "jp": "{SK/Astei|S2}の回復は使用者以外の全味方を対象とするため、自身の回復は奥義またはチェインスキルに依存する",
+        "kr": "{SK/Astei|S2}의 회복은 시전자를 제외한 모든 아군을 대상으로 하므로, 자신의 회복은 궁극기나 체인 스킬에 의존함",
+        "zh": "{SK/Astei|S2}的治疗对象为除施法者外的所有友军，因此她需依赖大招或连锁技能恢复自身生命"
+      },
+      {
+        "en": "Healing output scales entirely off her Max HP, requiring heavy gear investment in {S/HP} to maximize her effectiveness",
+        "jp": "回復量は完全に最大HPに依存するため、効果を最大化するには{S/HP}への大規模な装備投資が必要となる",
+        "kr": "회복량이 전적으로 최대 HP에 비례하므로, 효과를 극대화하려면 {S/HP}에 대한 대규모 장비 투자가 필요함",
+        "zh": "治疗量完全基于最大HP计算，需要在{S/HP}属性上大量堆叠装备才能最大化其效能"
+      },
+      {
+        "en": "Relies on RNG to trigger her extra healing from her basic attack, though the activation chance increases significantly if she has a buff",
+        "jp": "通常攻撃からの追加回復は運に依存するが、バフを所持していると発動率が大きく上昇する",
+        "kr": "기본 공격에서의 추가 회복은 운에 의존하지만, 버프를 보유하고 있으면 발동 확률이 크게 증가함",
+        "zh": "通过基础攻击触发的额外治疗依赖随机概率，但若她持有增益时触发率会显著提升"
+      },
+      {
+        "en": "Lacks revive mechanics or immediate burst mitigation (like barriers) found in healers such as Mene or Nella, making her slightly less optimal for high-tier PvP",
+        "jp": "MeneやNellaのようなヒーラーが持つ蘇生機構や即時バースト軽減（バリアなど）を欠いているため、高ランクPvPでは若干最適とは言えない",
+        "kr": "Mene나 Nella 같은 힐러가 보유한 부활 메커니즘이나 즉각적인 폭딜 완화 수단(방어막 등)이 없어, 고티어 PvP에서는 다소 최적이라 보기 어려움",
+        "zh": "缺乏Mene或Nella等治疗角色所拥有的复活机制或即时爆发减免（如护盾），因此在高端PvP中略逊一筹"
       }
     ]
   }

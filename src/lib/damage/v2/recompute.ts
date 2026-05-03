@@ -206,7 +206,7 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
   // (PEN / CHC / CHD / EFF) use additive points.
   const extSums: ExternalBuffSums = ctx.externalBuffs
     ? aggregateExternalBuffs(ctx.externalBuffs)
-    : { attackerATK: 0, attackerDEF: 0, attackerPEN: 0, attackerCHC: 0, attackerCHD: 0, attackerEFF: 0, targetDEF: 0 }
+    : { attackerATK: 0, attackerDEF: 0, attackerPEN: 0, attackerCHC: 0, attackerCHD: 0, attackerEFF: 0, attackerDMG: 0, targetDEF: 0, targetDR: 0, targetCDMGRed: 0 }
 
   // ATK with external buff. When the scaling breakdown is known, replay the
   // chars-stats `calcStat` formula with `pctBonus + buffPct` so a +30% ATK

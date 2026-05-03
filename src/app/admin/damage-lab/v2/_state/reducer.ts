@@ -42,7 +42,9 @@ export type FormAction =
   // Attacker
   | { type: 'attacker/patch';        patch: Partial<AttackerState> }
   | { type: 'attacker/setChar';      charId: string }
-  | { type: 'attacker/setSlot';      slot: CallerSlot }
+  // Admin lab supports only S1/S2/S3 — narrowed against the broader
+  // CallerSlot union which includes burst variants for the public calc.
+  | { type: 'attacker/setSlot';      slot: 'S1' | 'S2' | 'S3' }
   | { type: 'attacker/setFlag';      flag: keyof CharFlags; value: boolean }
   | { type: 'attacker/autoFillStats'; stats: { atk: number; chd: number; pen: number; dmgInc: number };
                                        extraStats?: Record<string, number>;

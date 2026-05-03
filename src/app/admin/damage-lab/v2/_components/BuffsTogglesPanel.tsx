@@ -7,12 +7,15 @@ import type {
 
 // In-game stat icons live under /images/ui/effect/CM_Stat_Icon_*.webp.
 const STAT_ICON: Record<ExternalBuffStat, string> = {
-  ATK: 'ATK',
-  DEF: 'DEF',
-  PEN: 'PIERCE_POWER',
-  CHC: 'CRITICAL',
-  CHD: 'CRITICAL_DMG',
-  EFF: 'CHANCE',
+  ATK:      'ATK',
+  DEF:      'DEF',
+  PEN:      'PIERCE_POWER',
+  CHC:      'CRITICAL',
+  CHD:      'CRITICAL_DMG',
+  EFF:      'CHANCE',
+  DR:       'ENEMY_DMG_REDUCE',
+  CDMG_RED: 'ENEMY_CRITICAL_DMG_REDUCE',
+  DMG:      'DMG_INCREASE',
 }
 
 interface BuffsTogglesPanelProps {

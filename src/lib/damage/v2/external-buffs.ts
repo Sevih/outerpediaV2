@@ -20,7 +20,14 @@
 
 export type ExternalBuffSide = 'attacker' | 'target'
 export type ExternalBuffDirection = 'buff' | 'debuff'
-export type ExternalBuffStat = 'ATK' | 'DEF' | 'PEN' | 'CHC' | 'CHD' | 'EFF'
+/**
+ * `DR` (damage reduction) and `CDMG_RED` (critical damage reduction) are
+ * speculative additions — no curated `BuffTemplet` row currently emits them
+ * as a stat boost the user would dial in, but reserving the slots lets us
+ * surface defensive target-side buffs the moment one shows up in a future
+ * patch. The aggregator emits zero sums for them today.
+ */
+export type ExternalBuffStat = 'ATK' | 'DEF' | 'PEN' | 'CHC' | 'CHD' | 'EFF' | 'DR' | 'CDMG_RED' | 'DMG'
 
 export interface ExternalBuffDef {
   id: string
@@ -40,6 +47,9 @@ export const EXTERNAL_BUFFS: ExternalBuffDef[] = [
   { id: 'a-buff-chc', side: 'attacker', direction: 'buff', stat: 'CHC', label: 'Increased Crit Hit Chance',  defaultValue:  50 },
   { id: 'a-buff-chd', side: 'attacker', direction: 'buff', stat: 'CHD', label: 'Increased Critical Damage',  defaultValue:  50 },
   { id: 'a-buff-eff', side: 'attacker', direction: 'buff', stat: 'EFF', label: 'Increased Effectiveness',    defaultValue: 100 },
+  // Speculative — see `ExternalBuffStat` doc. Pure additive % bonus on
+  // outgoing damage (matches the in-game `DMG_INCREASE` stat convention).
+  { id: 'a-buff-dmg', side: 'attacker', direction: 'buff', stat: 'DMG', label: 'Increased Damage',           defaultValue:  30 },
   // Attacker debuffs (statReduction on caster — rare but possible)
   { id: 'a-debuff-atk', side: 'attacker', direction: 'debuff', stat: 'ATK', label: 'Reduced Attack',          defaultValue: -30 },
   { id: 'a-debuff-pen', side: 'attacker', direction: 'debuff', stat: 'PEN', label: 'Reduced Penetration',     defaultValue: -30 },
@@ -47,7 +57,11 @@ export const EXTERNAL_BUFFS: ExternalBuffDef[] = [
   { id: 'a-debuff-chd', side: 'attacker', direction: 'debuff', stat: 'CHD', label: 'Reduced Critical Damage', defaultValue: -50 },
   { id: 'a-debuff-eff', side: 'attacker', direction: 'debuff', stat: 'EFF', label: 'Reduced Effectiveness',   defaultValue: -100 },
   // Target buffs (statBoosts on defender — boss self-buffs)
-  { id: 't-buff-def', side: 'target', direction: 'buff', stat: 'DEF', label: 'Increased Defense', defaultValue: 50 },
+  { id: 't-buff-def',      side: 'target', direction: 'buff', stat: 'DEF',      label: 'Increased Defense',                  defaultValue: 50 },
+  // Speculative defensive buffs — see `ExternalBuffStat` doc. No formula
+  // consumer yet; placeholders so the UI ships a slot ready to populate.
+  { id: 't-buff-dr',       side: 'target', direction: 'buff', stat: 'DR',       label: 'Increased Damage Reduction',          defaultValue: 30 },
+  { id: 't-buff-cdmg-red', side: 'target', direction: 'buff', stat: 'CDMG_RED', label: 'Increased Critical Damage Reduction', defaultValue: 30 },
   // Target debuffs (statReduction on defender — Tamara S3 case)
   { id: 't-debuff-def', side: 'target', direction: 'debuff', stat: 'DEF', label: 'Reduced Defense', defaultValue: -50 },
 ]
@@ -78,8 +92,14 @@ export interface ExternalBuffSums {
   attackerCHD: number
   /** pct points, additive on EFF (extraStats.ST_BUFF_CHANCE) */
   attackerEFF: number
+  /** Speculative — pct points additive on outgoing damage (DMG_INCREASE). */
+  attackerDMG: number
   /** pct, applied as `× (1 + sum/100)` on DEF */
   targetDEF: number
+  /** Speculative — pct points additive on target damage reduction. */
+  targetDR: number
+  /** Speculative — pct points additive on target critical damage reduction. */
+  targetCDMGRed: number
 }
 
 export function aggregateExternalBuffs(
@@ -87,7 +107,8 @@ export function aggregateExternalBuffs(
 ): ExternalBuffSums {
   const sums: ExternalBuffSums = {
     attackerATK: 0, attackerDEF: 0, attackerPEN: 0, attackerCHC: 0,
-    attackerCHD: 0, attackerEFF: 0, targetDEF: 0,
+    attackerCHD: 0, attackerEFF: 0, attackerDMG: 0,
+    targetDEF: 0, targetDR: 0, targetCDMGRed: 0,
   }
   for (const def of EXTERNAL_BUFFS) {
     const s = state[def.id]
@@ -100,8 +121,11 @@ export function aggregateExternalBuffs(
       else if (def.stat === 'CHC') sums.attackerCHC += val
       else if (def.stat === 'CHD') sums.attackerCHD += val
       else if (def.stat === 'EFF') sums.attackerEFF += val
+      else if (def.stat === 'DMG') sums.attackerDMG += val
     } else {
-      if (def.stat === 'DEF') sums.targetDEF += val
+      if (def.stat === 'DEF')           sums.targetDEF += val
+      else if (def.stat === 'DR')       sums.targetDR += val
+      else if (def.stat === 'CDMG_RED') sums.targetCDMGRed += val
     }
   }
   return sums

@@ -165,6 +165,12 @@ interface CharDetail {
     S1: SkillDetail | null
     S2: SkillDetail | null
     S3: SkillDetail | null
+    /** Burst Lv 1 — replaces S3's DamageFactor + buff list when the user
+     *  casts under Burst. Gated by transcend (`burst2`/`burst3` flags on
+     *  the tier templet). Null when the char has no burst variant. */
+    B1: SkillDetail | null
+    B2: SkillDetail | null
+    B3: SkillDetail | null
   }
   /** All 6 evolution steps. Calculator UI defaults to `lv60_ev3` (6★). */
   baseStats: Record<string, CharStatsStep> | null
@@ -263,6 +269,67 @@ function computeAdditionalRatio(charId: string, slot: number, dmgRows: DamageRow
   return subSum / mainSum
 }
 
+/**
+ * Burst skill (B1/B2/B3, slots 19/20/21) — DF + buff list per the templet,
+ * no curated text (game UI labels them generically as "Burst Lv N"). Sub-
+ * attack ratios aren't surfaced today (CharacterDamageTemplet has no rows
+ * for `<charId>_Skill_19/20/21_<N>_<M>` — burst attacks tend to be single-
+ * hit). Returns null when the char has no row at the requested skill slot.
+ *
+ * `descLevels` carries the burst's English / per-language description text
+ * resolved from `CharacterSkillTemplet.DescID` → `TextSkill`. The text is
+ * level-agnostic for bursts (single description per burst variant), so it's
+ * stored under the key `'1'` for compatibility with the level-keyed UI
+ * reader (`getSkillDescription` reads `descLevels['1']` as the fallback).
+ */
+function buildBurstDetail(
+  skillId: string | undefined,
+  burstLevel: 1 | 2 | 3,
+  charId: string,
+  levelsBySkill: Map<string, SkillLevelRow[]>,
+  skillById: Map<string, Row>,
+  textById: Map<string, Row>,
+): SkillDetail | null {
+  if (!skillId) return null
+  const rows = levelsBySkill.get(skillId)
+  if (!rows || rows.length === 0) return null
+
+  const factors: (number | null)[] = [null, null, null, null, null]
+  for (const row of rows) {
+    const lvl = parseInt(row.SkillLevel, 10)
+    if (lvl >= 1 && lvl <= 5 && row.DamageFactor != null) {
+      factors[lvl - 1] = parseInt(row.DamageFactor, 10)
+    }
+  }
+
+  // Resolve burst-specific text (name + description) from the templet.
+  // `SKILL_NAME_B_DMG` etc. are generic across chars; per-char DescIDs
+  // (`SKILL_DESC_B_<charId>`) carry the actual unique effect blurb.
+  const skillRow = skillById.get(skillId)
+  const nameRow  = skillRow?.NameID ? textById.get(skillRow.NameID) : undefined
+  const descRow  = skillRow?.DescID ? textById.get(skillRow.DescID) : undefined
+  const baseName = nameRow?.English || `Burst Lv ${burstLevel}`
+
+  const detail: SkillDetail = {
+    name: baseName,
+    iconName: `Skill_Ultimate_${charId}`,
+    damageFactors: factors,
+    additionalAttackRatio: null,
+  }
+  if (nameRow?.Japanese)         detail.name_jp = nameRow.Japanese
+  if (nameRow?.Korean)           detail.name_kr = nameRow.Korean
+  if (nameRow?.China_Simplified) detail.name_zh = nameRow.China_Simplified
+  if (descRow) {
+    const desc: Record<string, string> = {}
+    if (descRow.English)          desc['1']    = descRow.English
+    if (descRow.Japanese)         desc['1_jp'] = descRow.Japanese
+    if (descRow.Korean)           desc['1_kr'] = descRow.Korean
+    if (descRow.China_Simplified) desc['1_zh'] = descRow.China_Simplified
+    if (desc['1']) detail.descLevels = desc
+  }
+  return detail
+}
+
 function buildSkillDetail(
   skillId: string | undefined,
   slot: number,
@@ -351,6 +418,18 @@ export async function buildChars(): Promise<{ chars: number; details: number }> 
     loadGenerated<Record<string, string>>('characters-slug-to-id.json'),
     loadGenerated<Record<string, CharStatsEntry>>('character-stats.json'),
   ])
+
+  // Burst skill text — `CharacterSkillTemplet` references `NameID`/`DescID`
+  // into `TextSkill`. Loaded once and indexed for the per-char build loop
+  // so each B1/B2/B3 lookup is O(1).
+  const [skillTemplet, textSkill] = await Promise.all([
+    loadJson2<Row[]>('CharacterSkillTemplet.json'),
+    loadJson2<Row[]>('TextSkill.json'),
+  ])
+  const skillById = new Map<string, Row>()
+  for (const s of skillTemplet) if (s.ID) skillById.set(s.ID, s)
+  const textById = new Map<string, Row>()
+  for (const t of textSkill) if (t.ID) textById.set(t.ID, t)
 
   // Codex table — char-agnostic, baked once into the manifest so the picker
   // page doesn't need a second fetch to surface the Settings codex slider.
@@ -452,6 +531,12 @@ export async function buildChars(): Promise<{ chars: number; details: number }> 
       S1: buildSkillDetail(row.Skill_1, 1, row.ID, levelsBySkill, dmgRows, curated),
       S2: buildSkillDetail(row.Skill_2, 2, row.ID, levelsBySkill, dmgRows, curated),
       S3: buildSkillDetail(row.Skill_3, 3, row.ID, levelsBySkill, dmgRows, curated),
+      // Burst variants — Skill_19 = SKT_BURST_1, Skill_20 = SKT_BURST_2,
+      // Skill_21 = SKT_BURST_3. Replace S3's DF + buffs at runtime when
+      // the user picks burstLevel > 0.
+      B1: buildBurstDetail(row.Skill_19, 1, row.ID, levelsBySkill, skillById, textById),
+      B2: buildBurstDetail(row.Skill_20, 2, row.ID, levelsBySkill, skillById, textById),
+      B3: buildBurstDetail(row.Skill_21, 3, row.ID, levelsBySkill, skillById, textById),
     }
     const hasAny = [skills.S1, skills.S2, skills.S3].some(s => s?.damageFactors.some(v => v != null))
     if (!hasAny) continue   // chars without any DamageFactor row aren't usable in the calc
