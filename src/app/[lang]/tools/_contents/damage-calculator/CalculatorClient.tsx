@@ -18,6 +18,7 @@ import { INITIAL_SETTINGS, type CalcState, type SettingsState } from './_state/t
 import { computeBaseStatsAndScaling, computeTeamDeltas, pickCodexEntry, resolveTeamDeltaDisplay } from './_lib/no-gear-stats'
 import { fetchCharBuffs, fetchMonsterMechanics } from './_lib/fetch-data'
 import { runRecompute } from './_lib/compose-result'
+import { isAdventureLicenseMode } from '@/lib/damage/v2/recompute'
 import AttackerPanel from './_components/AttackerPanel'
 import BuffsPanel from './_components/BuffsPanel'
 import ObsTablePanel from './_components/ObsTablePanel'
@@ -117,10 +118,23 @@ export default function CalculatorClient({
   // Deps are narrowed to ONLY the inputs of the computation — including
   // `state` here would re-fire the effect on every dispatched
   // `applyAutoStats`, looping forever.
-  const { attacker, settings, statsDirty } = state
+  const { attacker, settings, statsDirty, target } = state
   const charId = attacker.charId
   const detail = attacker.detail
   const transStar = attacker.transStar
+  // Derive whether the picked target sits in an Adventure License dungeon
+  // mode (DM_ADVENTURE_MISSION / _CHALLENGE). Combined with the AL quirk
+  // toggle, this folds the AL stat-bonus contribution into the prefilled
+  // sheet. Manual targets have no mode → AL contribution stays off.
+  const inAdvLicenseMode = useMemo(() => {
+    if (target.mode !== 'cascade' || !target.stageId) return false
+    for (const m of monsters.modes) {
+      if (m.stages.some(s => s.id === target.stageId)) {
+        return isAdventureLicenseMode(m.mode)
+      }
+    }
+    return false
+  }, [target.mode, target.stageId, monsters])
   useEffect(() => {
     if (statsDirty) return
     if (!charId || !detail) return
@@ -132,14 +146,15 @@ export default function CalculatorClient({
     // 1:1 with the in-game character sheet so users don't have to mentally
     // subtract team buffs to verify their inputs.
     const { stats: next, atkScaling } = computeBaseStatsAndScaling({
-      noGear:        detail.noGearStats,
+      noGear:             detail.noGearStats,
       codex,
-      transcendTier: tier,
-      quirks:        settings.quirks,
+      transcendTier:      tier,
+      quirks:             settings.quirks,
       transStar,
+      inAdventureLicense: inAdvLicenseMode,
     })
     dispatch({ type: 'attacker/applyAutoStats', stats: next, atkScaling })
-  }, [charId, detail, transStar, settings, statsDirty, transcend, manifest.codexTable])
+  }, [charId, detail, transStar, settings, statsDirty, transcend, manifest.codexTable, inAdvLicenseMode])
 
   // Lazy-fetch boss mechanics whenever the picked monster changes. Mechanics
   // are gated on the index — only ~600 monsters carry damage-relevant

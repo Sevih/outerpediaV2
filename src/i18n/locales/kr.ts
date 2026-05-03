@@ -265,7 +265,6 @@ const kr: Record<TranslationKey, string> = {
   'tools.damage-calculator.settings.quirk_class': '클래스',
   'tools.damage-calculator.settings.quirk_counteract': '강적 대응',
   'tools.damage-calculator.settings.quirk_adventure_license': '모험 라이선스',
-  'tools.damage-calculator.settings.quirk_runtime_only': '런타임 데미지 보정 — 스탯 시트에는 영향이 없습니다 (결과 패널 구현 후 데미지에 반영됩니다).',
   // Panel titles
   'tools.damage-calculator.panel.attacker': '딜러',
   'tools.damage-calculator.panel.target': '타겟',

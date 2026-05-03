@@ -74,14 +74,22 @@ export interface DamageCalcNoGearStats {
   skill8ByTransStar: Record<string, DamageCalcStatContribution>
   /**
    * Quirk groups exposed to settings — mirror in-game gift menu categories.
-   * `element` covers AAT_ELEMENTAL, `job` merges AAT_CLASS + AAT_SUBCLASS
-   * (both sit under the in-game "Class" tab). UTILITY/PVE/ADVENTURE_LICENSE
-   * are NOT included — they're either no-stat (UTILITY), runtime-only
-   * (PVE BT_DMG modifiers), or mode-gated (ADVENTURE_LICENSE).
+   *   - `element`           : AAT_ELEMENTAL (always-on for the char's element)
+   *   - `job`               : AAT_CLASS + AAT_SUBCLASS (always-on, both under
+   *                            the in-game "Class" tab)
+   *   - `adventureLicense`  : AwakeningType=ADVENTURE_LICENSE sub-nodes
+   *                            (mode-gated — applied only when the picked
+   *                            target sits in DM_ADVENTURE_MISSION /
+   *                            DM_ADVENTURE_CHALLENGE; the +100% boss DMG
+   *                            main node lives in the awakening buffs catalog)
+   *
+   * UTILITY / PVE awakening sub-nodes are not surfaced here — they're either
+   * no-stat (UTILITY) or runtime-only BT_DMG modifiers (PVE Counteract).
    */
   quirks: {
     element: DamageCalcStatContribution
     job: DamageCalcStatContribution
+    adventureLicense: DamageCalcStatContribution
   }
 }
 

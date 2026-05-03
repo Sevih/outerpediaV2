@@ -46,20 +46,27 @@ export interface StatContribution {
 /**
  * Quirk groups exposed to the calc UI. Maps the templet's
  * `AwakeningType` field to in-game gift menu categories:
- *   - `element`  → AwakeningType=ELEMENTAL  (CM_Gift_Menu_01)
- *   - `job`      → AwakeningType=JOB        (CM_Gift_Menu_03) — combines
- *                  AAT_CLASS (5 main class passives) + AAT_SUBCLASS
- *                  (subclass branches under the same in-game tab)
+ *   - `element`           → AwakeningType=ELEMENTAL          (CM_Gift_Menu_01)
+ *   - `job`               → AwakeningType=JOB                (CM_Gift_Menu_03) —
+ *                            combines AAT_CLASS (5 main class passives) +
+ *                            AAT_SUBCLASS (subclass branches under the same
+ *                            in-game tab)
+ *   - `adventureLicense`  → AwakeningType=ADVENTURE_LICENSE  (CM_Gift_Menu_06) —
+ *                            mode-gated stat bonuses (apply only when the
+ *                            picked target sits in DM_ADVENTURE_MISSION /
+ *                            DM_ADVENTURE_CHALLENGE). The main-node BT_DMG
+ *                            buff (+100% pool vs boss) lives in the awakening
+ *                            buffs catalog and is gated separately by the
+ *                            recompute reducer's `inAdventureLicense` flag.
  *
  * The other AwakeningType values aren't surfaced in the no-gear sheet:
  *   - UTILITY            (no stat impact in-game by design)
  *   - PVE / Counteract   (BT_DMG-only — runtime damage formula, not stats)
- *   - ADVENTURE_LICENSE  (mode-gated — toggled at recompute time, not on
- *                         the static char sheet)
  */
 export interface QuirkContributions {
   element: StatContribution
   job: StatContribution
+  adventureLicense: StatContribution
 }
 
 export interface NoGearStats {
@@ -272,7 +279,12 @@ function extractSkill8Passive(
   return out
 }
 
-function accumulateGiftBonus(dest: StatContribution, levelRow: Row, buffs: Row[]): void {
+function accumulateGiftBonus(
+  dest: StatContribution,
+  levelRow: Row,
+  buffs: Row[],
+  baseForRate?: { spd: number; eff: number; res: number },
+): void {
   let statType = levelRow.StatType ?? 'ST_NONE'
   let applying = levelRow.ApplyingType ?? 'OAT_NONE'
   let value    = num(levelRow.OptionValue)
@@ -305,12 +317,18 @@ function accumulateGiftBonus(dest: StatContribution, levelRow: Row, buffs: Row[]
     addStat(dest, statType, value, rate)
     return
   }
-  // SPD / EFF / RES — only OAT_ADD matters for the no-gear sheet (no
-  // observed quirk uses OAT_RATE on these in practice).
-  if (add) {
-    if (statType === 'ST_SPEED')        dest.spd = (dest.spd ?? 0) + value
-    else if (statType === 'ST_BUFF_CHANCE') dest.eff = (dest.eff ?? 0) + value
-    else if (statType === 'ST_BUFF_RESIST') dest.res = (dest.res ?? 0) + value
+  // SPD / EFF / RES — OAT_ADD adds flat, OAT_RATE resolves to a flat via
+  // floor(baseForRate × value / 1000) (matches admin route + class-passive
+  // convention). Adventure License nodes use OAT_RATE on EFF/RES; older
+  // element/job quirks use OAT_ADD only.
+  if (statType === 'ST_SPEED' || statType === 'ST_BUFF_CHANCE' || statType === 'ST_BUFF_RESIST') {
+    if (rate && baseForRate) {
+      applyRateFlat(dest, statType, value, baseForRate)
+    } else if (add) {
+      if (statType === 'ST_SPEED')            dest.spd = (dest.spd ?? 0) + value
+      else if (statType === 'ST_BUFF_CHANCE') dest.eff = (dest.eff ?? 0) + value
+      else if (statType === 'ST_BUFF_RESIST') dest.res = (dest.res ?? 0) + value
+    }
   }
 }
 
@@ -319,6 +337,7 @@ function extractQuirks(
   awakNodes: Row[],
   awakLevels: Row[],
   buffs: Row[],
+  baseForRate: { spd: number; eff: number; res: number },
 ): QuirkContributions {
   const elemIdx  = ELEMENT_INDEX[row.Element ?? '']   ?? -1
   const classIdx = CLASS_INDEX[row.Class ?? '']       ?? -1
@@ -336,7 +355,7 @@ function extractQuirks(
     }
   }
 
-  const out: QuirkContributions = { element: {}, job: {} }
+  const out: QuirkContributions = { element: {}, job: {}, adventureLicense: {} }
   for (const node of awakNodes) {
     const gid = node.AwakeningLevelGroupID
     if (!gid) continue
@@ -351,9 +370,15 @@ function extractQuirks(
     // subclass index narrows to the char's subclass branch.
     else if (node.AwakeningApplyType === 'AAT_CLASS'    && v === classIdx) bucket = out.job
     else if (node.AwakeningApplyType === 'AAT_SUBCLASS' && v === subIdx)   bucket = out.job
+    // Adventure License — char-agnostic stat bonuses (AAT_NONE, applies to
+    // every char). Surface them in their own bucket so the recompute can
+    // gate them on the AL toggle + dungeon mode at apply time.
+    else if (node.AwakeningType === 'ADVENTURE_LICENSE' && node.AwakeningNodeType === 'ANT_NORMAL') {
+      bucket = out.adventureLicense
+    }
     if (!bucket) continue
     const lvlRow = levelByGroup.get(gid)
-    if (lvlRow) accumulateGiftBonus(bucket, lvlRow, buffs)
+    if (lvlRow) accumulateGiftBonus(bucket, lvlRow, buffs, baseForRate)
   }
   return out
 }
@@ -391,7 +416,7 @@ export function buildNoGearStats(args: {
     res: (base.res ?? 0) + (evolution.res ?? 0),
   }
   const classPassive = extractClassPassive(charRow, skillLevels, buffs, baseForRate)
-  const quirks = extractQuirks(charRow, awakNodes, awakLevels, buffs)
+  const quirks = extractQuirks(charRow, awakNodes, awakLevels, buffs, baseForRate)
 
   const skill8ByTransStar: Record<string, StatContribution> = {}
   for (const { transStar, skillLevel } of transcendSkillLevels) {
@@ -408,6 +433,7 @@ export function buildNoGearStats(args: {
     quirks: {
       element: trim(quirks.element),
       job: trim(quirks.job),
+      adventureLicense: trim(quirks.adventureLicense),
     },
   }
 }

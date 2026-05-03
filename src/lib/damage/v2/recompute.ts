@@ -132,6 +132,14 @@ export interface RecomputeContext {
   crit: boolean
   /** Pass the raw `DungeonMode` string for the AdvLicense gate. */
   mode?: string
+  /**
+   * Explicit override for the `inAdventureLicense` BuffContext flag. When set,
+   * takes precedence over the `mode`-based heuristic — lets the public calc
+   * gate ADVENTURE_LICENSE awakening buffs on the user's quirks toggle in
+   * addition to the dungeon mode. Falls back to `isAdventureLicenseMode(mode)`
+   * when undefined.
+   */
+  inAdventureLicense?: boolean
   /** UI-fed flags that gate per-char hardcoded overrides. */
   charFlags?: CharFlags
   // ── Pool-condition inputs (BT_DMG_*) — see `BuffContext` for defaults ──
@@ -266,7 +274,7 @@ export function recompute(ctx: RecomputeContext, allBuffs: ApplicableBuff[]): Re
     crit:         ctx.crit,
     elem:         ctx.elem,
     applyQuirks:  ctx.applyQuirks,
-    inAdventureLicense: isAdventureLicenseMode(ctx.mode),
+    inAdventureLicense: ctx.inAdventureLicense ?? isAdventureLicenseMode(ctx.mode),
     baseAtk:      effAtk,
     statValues,
     targetStatValues,

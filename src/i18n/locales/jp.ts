@@ -265,7 +265,6 @@ const jp: Record<TranslationKey, string> = {
   'tools.damage-calculator.settings.quirk_class': 'クラス',
   'tools.damage-calculator.settings.quirk_counteract': '強敵対策',
   'tools.damage-calculator.settings.quirk_adventure_license': 'アドベンチャーライセンス',
-  'tools.damage-calculator.settings.quirk_runtime_only': '実行時のダメージ補正 — ステータスシートには影響しません（結果パネル実装後にダメージへ反映されます）。',
   // Panel titles
   'tools.damage-calculator.panel.attacker': 'アタッカー',
   'tools.damage-calculator.panel.target': 'ターゲット',

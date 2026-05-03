@@ -1,5 +1,5 @@
 import type { ApplicableBuff } from '@/lib/damage/v2/buffs'
-import { detectElementRelation, recompute } from '@/lib/damage/v2/recompute'
+import { detectElementRelation, isAdventureLicenseMode, recompute } from '@/lib/damage/v2/recompute'
 import type { RecomputeContext, RecomputeResult } from '@/lib/damage/v2/recompute'
 import type {
   DamageCalcAwakeningBuffs,
@@ -81,7 +81,7 @@ export function runRecompute(
   if (!state.attacker.detail || !state.attacker.charId) return null
   const summary = manifest.find(c => c.id === state.attacker.charId) ?? null
   const cascade = resolveCascadeSelection(state, monsters)
-  const buffs = composeApplicableBuffs(awakening, charBuffs)
+  const buffs = composeApplicableBuffs(awakening, charBuffs, { pveQuirk: state.settings.quirks.pve })
   const teamDeltas = computeTeamDeltas(state.team, transcend.byChar, equipment.talismanMainStats)
   const { stats: effectiveStats, atkScaling: effectiveScaling } = applyTeamDeltasToStats(
     state.attacker.stats,
@@ -128,6 +128,11 @@ export function composeRecomputeContext(inputs: ComposeInputs, allBuffs: Applica
     : getAdditionalAttackRatio(detail, state.attacker.skillSlot)
   const elem = detectElementRelation(summary.element, target.element)
 
+  // Adventure License gate — fires only when the dungeon mode matches the
+  // AL category AND the user opted in via Settings. Manual targets have no
+  // mode, so the flag is always false there (no AL category to honor).
+  const inAdvLicense = isAdventureLicenseMode(target.mode) && state.settings.quirks.adventureLicense
+
   const ctx: RecomputeContext = {
     charId: summary.id,
     charElement: summary.element,
@@ -172,6 +177,7 @@ export function composeRecomputeContext(inputs: ComposeInputs, allBuffs: Applica
     elem,
     crit: state.attacker.crit,
     mode: target.mode ?? '',
+    inAdventureLicense: inAdvLicense,
     monsterId: target.monsterId,
     targetElement: target.element || undefined,
     // Environment auto-derived from the picked mode (mirrors admin heuristic).
@@ -218,13 +224,26 @@ export function composeRecomputeContext(inputs: ComposeInputs, allBuffs: Applica
  *
  * Returns the awakening list alone when char buffs aren't loaded yet so
  * the formula still produces a result (just missing char-specific buffs).
+ *
+ * `pveQuirk` gates the Counteract Strong Enemies awakening tree (group=PVE)
+ * — when off, the +30% pool damage vs boss + the EFF/RES debuff buffs are
+ * filtered out so the calc matches an account that hasn't unlocked the PVE
+ * quirk. (The target panel's PVE display gate is independent — see
+ * `computePveBossDebuffs`, which already keys off the same toggle.)
  */
 export function composeApplicableBuffs(
   awakening: DamageCalcAwakeningBuffs,
   charBuffs: DamageCalcCharBuffs | null,
+  opts: { pveQuirk: boolean } = { pveQuirk: true },
 ): ApplicableBuff[] {
-  if (!charBuffs) return awakening.buffs
-  return [...awakening.buffs, ...charBuffs.buffs]
+  const filterAwak = (b: ApplicableBuff): boolean => {
+    if (b.source.kind !== 'awakening') return true
+    if (!opts.pveQuirk && b.source.group === 'PVE') return false
+    return true
+  }
+  const awak = awakening.buffs.filter(filterAwak)
+  if (!charBuffs) return awak
+  return [...awak, ...charBuffs.buffs]
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────────

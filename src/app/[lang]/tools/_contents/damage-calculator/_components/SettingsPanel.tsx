@@ -19,9 +19,10 @@ import type { CalcAction } from '../_state/reducer'
  * continuity. Quirk toggles use the in-game `CM_Gift_Menu_*` icons —
  * Element (01), Class/Job (03), Counteract (05), Adventure License (06).
  *
- * Element + Class affect the prefilled stat sheet today. PVE + Adventure
- * License are persisted but inert (BT_DMG runtime modifiers, will be wired
- * into the recompute pipeline once the ResultPanel ships).
+ * Element + Class affect the prefilled stat sheet. PVE (Counteract Strong
+ * Enemies) gates the awakening +30% pool vs boss + EFF/RES debuffs.
+ * Adventure License gates the awakening +100% pool vs boss, fired only when
+ * the picked target sits in DM_ADVENTURE_MISSION / DM_ADVENTURE_CHALLENGE.
  */
 
 interface Props {
@@ -134,16 +135,12 @@ export default function SettingsPanel({ open, onClose, settings, codexTable, por
                 iconName="CM_Gift_Menu_05"
                 enabled={settings.quirks.pve}
                 onToggle={enabled => dispatch({ type: 'settings/setQuirk', scope: 'pve', enabled })}
-                runtimeOnly
-                runtimeNote={t('tools.damage-calculator.settings.quirk_runtime_only')}
               />
               <QuirkToggle
                 label={t('tools.damage-calculator.settings.quirk_adventure_license')}
                 iconName="CM_Gift_Menu_06"
                 enabled={settings.quirks.adventureLicense}
                 onToggle={enabled => dispatch({ type: 'settings/setQuirk', scope: 'adventureLicense', enabled })}
-                runtimeOnly
-                runtimeNote={t('tools.damage-calculator.settings.quirk_runtime_only')}
               />
             </div>
           </div>
@@ -178,26 +175,14 @@ function QuirkToggle({
   iconName,
   enabled,
   onToggle,
-  runtimeOnly = false,
-  runtimeNote,
 }: {
   label: string
   iconName: string
   enabled: boolean
   onToggle: (enabled: boolean) => void
-  /** True for quirks that don't yet affect the stat sheet (PVE / AdvLicense). */
-  runtimeOnly?: boolean
-  runtimeNote?: string
 }) {
-  // checkbox-style row that mirrors the progress-tracker label rows: full
-  // width clickable area, leading checkbox, icon + label, trailing tag for
-  // runtime-only quirks so the user knows toggling them is a no-op for the
-  // stat prefill (until ResultPanel ships).
   return (
-    <label
-      className="flex cursor-pointer items-center gap-3 rounded bg-gray-650/40 px-3 py-2 transition hover:bg-gray-600/40"
-      title={runtimeOnly ? runtimeNote : undefined}
-    >
+    <label className="flex cursor-pointer items-center gap-3 rounded bg-gray-650/40 px-3 py-2 transition hover:bg-gray-600/40">
       <input
         type="checkbox"
         checked={enabled}
@@ -214,12 +199,6 @@ function QuirkToggle({
       <span className={`flex-1 text-sm ${enabled ? 'text-gray-100' : 'text-gray-400'}`}>
         {label}
       </span>
-      {runtimeOnly && (
-        <span className="rounded bg-sky-500/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-sky-300">
-          {/* Static label so it's instantly recognizable across langs. */}
-          runtime
-        </span>
-      )}
     </label>
   )
 }

@@ -29,10 +29,15 @@ import { resolveActiveTeamBonuses } from '../_components/TranscendActiveInfo'
  */
 
 /**
- * In-game quirk gift categories surfaced in Settings. `pve` and
- * `adventureLicense` are accepted but currently no-op in the stat
- * computation — they're BT_DMG-only and will be wired into recompute
- * once the ResultPanel ships.
+ * In-game quirk gift categories surfaced in Settings.
+ *   - `element`/`job`        contribute to the always-on stat sheet
+ *   - `pve`                  no stat impact (pure BT_DMG modifier; gated at
+ *                            recompute time via `composeApplicableBuffs`)
+ *   - `adventureLicense`     contributes to the stat sheet ONLY when the
+ *                            picked target sits in an Adventure License
+ *                            dungeon mode (gated by `inAdventureLicense`
+ *                            below); main-node BT_DMG buff handled at
+ *                            recompute time
  */
 export interface QuirksToggles {
   element: boolean
@@ -48,6 +53,13 @@ export interface ComputeFinalStatsArgs {
   quirks: QuirksToggles
   /** TransStar key into `noGear.skill8ByTransStar`. */
   transStar: number
+  /**
+   * `true` when the picked target is in an Adventure License dungeon mode
+   * (`DM_ADVENTURE_MISSION` / `DM_ADVENTURE_CHALLENGE`). Combined with
+   * `quirks.adventureLicense`, gates the AL stat-bonus contribution. Manual
+   * targets (no mode) → always `false`.
+   */
+  inAdventureLicense?: boolean
 }
 
 /** Read a possibly-undefined sparse contribution field as a number. */
@@ -69,15 +81,20 @@ function calcStat(baseMax: number, flat: number, pctBonus: number, codexPct: num
 }
 
 export function computeFinalStats(args: ComputeFinalStatsArgs): StatValues {
-  const { noGear, codex, transcendTier, quirks, transStar } = args
+  const { noGear, codex, transcendTier, quirks, transStar, inAdventureLicense } = args
   const skill8 = noGear.skill8ByTransStar[String(transStar)] ?? {}
 
   // Active contributors. Base + evolution + classPassive + skill8 are
-  // always-on; quirks gated by per-category toggles.
+  // always-on; quirks gated by per-category toggles. Adventure License
+  // additionally needs the target to be in an AL dungeon mode.
   const flatBlocks: DamageCalcStatContribution[] = [noGear.evolution, noGear.classPassive, skill8]
   const pctBlocks: DamageCalcStatContribution[]  = [noGear.classPassive, skill8]
   if (quirks.element) { flatBlocks.push(noGear.quirks.element); pctBlocks.push(noGear.quirks.element) }
   if (quirks.job)     { flatBlocks.push(noGear.quirks.job);     pctBlocks.push(noGear.quirks.job) }
+  if (quirks.adventureLicense && inAdventureLicense && noGear.quirks.adventureLicense) {
+    flatBlocks.push(noGear.quirks.adventureLicense)
+    pctBlocks.push(noGear.quirks.adventureLicense)
+  }
 
   const transAtkPct = (transcendTier?.atkRate ?? 0) / 10
   const transDefPct = (transcendTier?.defRate ?? 0) / 10
@@ -235,13 +252,21 @@ function bonusStatToStatKey(stat: string): StatKey | null {
 export function computeBaseStatsAndScaling(
   args: ComputeFinalStatsArgs,
 ): { stats: StatValues; atkScaling: StatScaling | null } {
-  const { noGear, codex, transcendTier, quirks, transStar } = args
+  const { noGear, codex, transcendTier, quirks, transStar, inAdventureLicense } = args
   const skill8 = noGear.skill8ByTransStar[String(transStar)] ?? {}
 
   const flatBlocks: DamageCalcStatContribution[] = [noGear.evolution, noGear.classPassive, skill8]
   const pctBlocks: DamageCalcStatContribution[]  = [noGear.classPassive, skill8]
   if (quirks.element) { flatBlocks.push(noGear.quirks.element); pctBlocks.push(noGear.quirks.element) }
   if (quirks.job)     { flatBlocks.push(noGear.quirks.job);     pctBlocks.push(noGear.quirks.job) }
+  // Mode-gated AL contribution — folded into the always-on layer when both
+  // the user toggle and the dungeon-mode flag are on. Keeps the math simple
+  // (same calcStat compounding); the stat sheet just changes when the user
+  // swaps the target between AL and non-AL.
+  if (quirks.adventureLicense && inAdventureLicense && noGear.quirks.adventureLicense) {
+    flatBlocks.push(noGear.quirks.adventureLicense)
+    pctBlocks.push(noGear.quirks.adventureLicense)
+  }
 
   const transAtkPct = (transcendTier?.atkRate ?? 0) / 10
   const transDefPct = (transcendTier?.defRate ?? 0) / 10

@@ -265,7 +265,6 @@ const en = {
   'tools.damage-calculator.settings.quirk_class': 'Class',
   'tools.damage-calculator.settings.quirk_counteract': 'Counteract Strong Enemies',
   'tools.damage-calculator.settings.quirk_adventure_license': 'Adventure License',
-  'tools.damage-calculator.settings.quirk_runtime_only': 'Runtime damage modifier — no impact on the prefilled stat sheet (will affect damage once the result panel ships).',
   // Panel titles
   'tools.damage-calculator.panel.attacker': 'Damage Dealer',
   'tools.damage-calculator.panel.target': 'Target',
