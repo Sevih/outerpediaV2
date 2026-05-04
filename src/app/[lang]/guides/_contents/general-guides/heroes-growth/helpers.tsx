@@ -1,4 +1,3 @@
-import InlineIcon from '@/app/components/inline/InlineIcon';
 import ItemInline from '@/app/components/inline/ItemInline';
 import Link from 'next/link';
 import { Fragment, type ReactNode } from 'react';
@@ -31,15 +30,6 @@ const skillCosts: Record<string, Record<string, Record<string, number>>> = {
 };
 
 const skillLevels = ['lv 2', 'lv 3', 'lv 4', 'lv 5'];
-
-const upgradeStages = [
-    { icon: 'CM_Evolution_00', stage: 'stage1', cost: '', item: '' },
-    { icon: 'CM_Evolution_01', stage: 'stage2', cost: '30', item: 'Light Upgrade Stone Fragment' },
-    { icon: 'CM_Evolution_02', stage: 'stage3', cost: '35', item: 'Light Upgrade Stone Piece' },
-    { icon: 'CM_Evolution_03', stage: 'stage4', cost: '40', item: 'Light Upgrade Stone' },
-    { icon: 'CM_Evolution_04', stage: 'stage5', cost: '50', item: 'Refined Light Upgrade Stone' },
-    { icon: 'CM_Evolution_05', stage: 'stage6', cost: '200', item: 'Refined Light Upgrade Stone' },
-];
 
 const transcendenceSteps = ['1', '2', '3', '4', '4+', '5', '5+', '5++', '6'];
 
@@ -79,15 +69,15 @@ const specialEquipmentMaterials = {
 export const LABELS = {
     // Page intro
     intro: {
-        en: "There are several ways to strengthen your heroes: leveling, upgrading, transcending, gear, etc. This guide covers each method in detail.",
-        jp: "ヒーローを強化する方法はいくつかあります：レベルアップ、アップグレード、超越、装備など。このガイドでは各方法を詳しく説明します。",
-        kr: "영웅을 강화하는 방법은 여러 가지가 있습니다: 레벨업, 승급, 초월, 장비 등. 이 가이드에서는 각 방법을 자세히 설명합니다.",
-        zh: "强化英雄的方法有很多：升级、进阶、超越、装备等。本指南将详细介绍每种方法。"
+        en: "There are several ways to strengthen your heroes: leveling, limit breaking, transcending, gear, etc. This guide covers each method in detail.",
+        jp: "ヒーローを強化する方法はいくつかあります：レベルアップ、限界突破、超越、装備など。このガイドでは各方法を詳しく説明します。",
+        kr: "영웅을 강화하는 방법은 여러 가지가 있습니다: 레벨업, 한계 돌파, 초월, 장비 등. 이 가이드에서는 각 방법을 자세히 설명합니다.",
+        zh: "强化英雄的方法有很多：升级、极限突破、超越、装备等。本指南将详细介绍每种方法。"
     },
 
     // Section titles
     sectionLeveling: { en: "Leveling", jp: "レベルアップ", kr: "레벨업", zh: "升级" },
-    sectionUpgrade: { en: "Upgrade", jp: "アップグレード", kr: "승급", zh: "进阶" },
+    sectionLimitBreak: { en: "Limit Break", jp: "限界突破", kr: "한계 돌파", zh: "极限突破" },
     sectionTranscendence: { en: "Transcendence", jp: "超越", kr: "초월", zh: "超越" },
     sectionAffinity: { en: "Affinity (Friendship)", jp: "親密度（友情）", kr: "친밀도 (우정)", zh: "好感度（友情）" },
     sectionSkillUpgrade: { en: "Skill Upgrade", jp: "スキルアップグレード", kr: "스킬 강화", zh: "技能升级" },
@@ -97,10 +87,10 @@ export const LABELS = {
 
     // Leveling section
     levelingDesc1: {
-        en: "Heroes gain experience by participating in battles or by consuming XP items. Most content grants XP, but not all (e.g., Bounty Hunter). The Bandit Chase challenge mode rewards you with consumable XP food:",
-        jp: "ヒーローは戦闘に参加するか、経験値アイテムを消費することで経験値を得ます。ほとんどのコンテンツで経験値が得られますが、すべてではありません（例：賞金首狩り）。山賊討伐チャレンジモードでは消費可能な経験値フードが報酬として得られます：",
-        kr: "영웅은 전투에 참여하거나 경험치 아이템을 소비하여 경험치를 얻습니다. 대부분의 콘텐츠에서 경험치를 얻을 수 있지만, 모든 콘텐츠가 그런 것은 아닙니다(예: 현상금 사냥꾼). 산적 토벌 챌린지 모드에서는 소비 가능한 경험치 음식을 보상으로 받습니다:",
-        zh: "英雄可以通过参与战斗或消耗经验道具来获得经验值。大多数内容都会给予经验值，但不是全部（例如赏金猎人）。山贼追击挑战模式会奖励可消耗的经验食物："
+        en: "Heroes gain experience by participating in battles or by consuming XP items. Most content grants XP, but not all (e.g., Bounty Hunter). The {stageName} challenge mode rewards you with consumable XP food:",
+        jp: "ヒーローは戦闘に参加するか、経験値アイテムを消費することで経験値を得ます。ほとんどのコンテンツで経験値が得られますが、すべてではありません（例：賞金首狩り）。{stageName}チャレンジモードでは消費可能な経験値フードが報酬として得られます：",
+        kr: "영웅은 전투에 참여하거나 경험치 아이템을 소비하여 경험치를 얻습니다. 대부분의 콘텐츠에서 경험치를 얻을 수 있지만, 모든 콘텐츠가 그런 것은 아닙니다(예: 현상금 사냥꾼). {stageName} 챌린지 모드에서는 소비 가능한 경험치 음식을 보상으로 받습니다:",
+        zh: "英雄可以通过参与战斗或消耗经验道具来获得经验值。大多数内容都会给予经验值，但不是全部（例如赏金猎人）。{stageName}挑战模式会奖励可消耗的经验食物："
     },
     levelingDesc2: {
         en: "You can use various items to give XP.",
@@ -117,25 +107,18 @@ export const LABELS = {
         zh: "立即将英雄设置为100级（仅限活动/付费商店）。"
     },
 
-    // Upgrade section
-    upgradeDesc: {
-        en: "Once a hero reaches specific levels, you can upgrade their base stats permanently in Hero → Upgrade. The upgraded stats are fixed and depend on the hero's class and runes are mainly obtained via the Upgrade Stone Retrieval challenge. The requirements per stage (element vary depending of hero' one) is:",
-        jp: "ヒーローが特定のレベルに達すると、ヒーロー → アップグレードで基本ステータスを永続的にアップグレードできます。アップグレードされるステータスは固定で、ヒーローのクラスに依存し、ルーンは主にアップグレードストーン回収チャレンジで入手できます。各ステージの必要条件（属性はヒーローのものに依存）は：",
-        kr: "영웅이 특정 레벨에 도달하면 영웅 → 승급에서 기본 스탯을 영구적으로 승급할 수 있습니다. 승급되는 스탯은 고정되어 있으며 영웅의 클래스에 따라 다르고, 룬은 주로 승급석 회수 챌린지에서 얻을 수 있습니다. 각 단계의 요구 사항(속성은 영웅에 따라 다름)은:",
-        zh: "当英雄达到特定等级后，你可以在英雄 → 进阶中永久提升其基础属性。升级的属性是固定的，取决于英雄的职业，符文主要通过进阶石回收挑战获得。每个阶段的要求（元素因英雄而异）是："
+    // Limit Break section
+    limitBreakDesc: {
+        en: "Once a hero reaches Lv. 100, you can extend the level cap up to Lv. 120 through Limit Break. Each expansion consumes Gold and Limit Break Factors. After expansion, regular Food is used to level up to the new cap.",
+        jp: "ヒーローがLv.100に到達すると、限界突破でレベル上限をLv.120まで拡張できます。各拡張にはゴールドと限界突破因子が必要です。拡張後は通常のフードで新しい上限までレベルを上げます。",
+        kr: "영웅이 Lv.100에 도달하면 한계 돌파를 통해 레벨 상한을 Lv.120까지 확장할 수 있습니다. 각 확장에는 골드와 한계 돌파 인자가 필요합니다. 확장 후에는 일반 음식으로 새로운 상한까지 레벨을 올립니다.",
+        zh: "英雄达到Lv.100后，可通过极限突破将等级上限扩展至Lv.120。每次扩展需要消耗金币和极限突破因子。扩展后使用普通食物提升等级至新上限。"
     },
-    stage1: { en: "Stage 1 (Lv. 1)", jp: "ステージ1（Lv.1）", kr: "1단계 (Lv.1)", zh: "阶段1（Lv.1）" },
-    stage2: { en: "Stage 2 (Lv. 20)", jp: "ステージ2（Lv.20）", kr: "2단계 (Lv.20)", zh: "阶段2（Lv.20）" },
-    stage3: { en: "Stage 3 (Lv. 40)", jp: "ステージ3（Lv.40）", kr: "3단계 (Lv.40)", zh: "阶段3（Lv.40）" },
-    stage4: { en: "Stage 4 (Lv. 60)", jp: "ステージ4（Lv.60）", kr: "4단계 (Lv.60)", zh: "阶段4（Lv.60）" },
-    stage5: { en: "Stage 5 (Lv. 80)", jp: "ステージ5（Lv.80）", kr: "5단계 (Lv.80)", zh: "阶段5（Lv.80）" },
-    stage6: { en: "Stage 6 (Lv. 100)", jp: "ステージ6（Lv.100）", kr: "6단계 (Lv.100)", zh: "阶段6（Lv.100）" },
-    startingStage: { en: "Starting stage", jp: "開始ステージ", kr: "시작 단계", zh: "起始阶段" },
-    instantStage6: {
-        en: "instantly upgrades a hero to Stage 6 (event/cash shop only).",
-        jp: "ヒーローを即座にステージ6にアップグレードします（イベント/課金ショップ限定）。",
-        kr: "영웅을 즉시 6단계로 승급합니다(이벤트/유료 상점 전용).",
-        zh: "立即将英雄升级到阶段6（仅限活动/付费商店）。"
+    limitBreakSource: {
+        en: "Limit Break Factors are obtained by using Limit Break Memory, acquired from Dimensional Singularity. Per-hero Limit Break Factors are listed in Inventory → Materials.",
+        jp: "限界突破因子は、次元特異点で入手できる限界突破メモリーを使用して取得します。ヒーロー別の限界突破因子の所持数はインベントリ → 素材から確認できます。",
+        kr: "한계 돌파 인자는 차원 특이점에서 획득하는 한계 돌파 기억을 사용하여 얻습니다. 영웅별 한계 돌파 인자 보유 수량은 인벤토리 → 재료에서 확인할 수 있습니다.",
+        zh: "极限突破因子可使用次元奇点中获得的极限突破记忆获取。各角色的极限突破因子持有数量可在背包 → 材料中查看。"
     },
 
     // Transcendence section
@@ -226,10 +209,10 @@ export const LABELS = {
 
     // Skill Upgrade section
     skillUpgradeDesc1: {
-        en: "Each hero has 3 basic skills and 1 chain passive. Each can be upgraded 4 times for bonus effects. Upgrading is done in Hero → Skills using Skill Books found in events, shops, and rewards.",
-        jp: "各ヒーローには3つの基本スキルと1つのチェーンパッシブがあります。それぞれ4回アップグレードでき、ボーナス効果が得られます。アップグレードはヒーロー → スキルで、イベント、ショップ、報酬で入手できるスキルブックを使用して行います。",
-        kr: "각 영웅에게는 3개의 기본 스킬과 1개의 체인 패시브가 있습니다. 각각 4번 강화하여 보너스 효과를 얻을 수 있습니다. 강화는 영웅 → 스킬에서 이벤트, 상점, 보상에서 얻은 스킬북을 사용하여 수행합니다.",
-        zh: "每个英雄有3个基础技能和1个连锁被动。每个都可以升级4次以获得加成效果。升级在英雄 → 技能中进行，使用从活动、商店和奖励中获得的技能书。"
+        en: "Each hero has 3 basic skills and 1 chain passive. Each can be upgraded 4 times for bonus effects. Upgrading is done in Hero → Skills using Skill Books found in events, shops, rewards, and {arkRaidName}.",
+        jp: "各ヒーローには3つの基本スキルと1つのチェーンパッシブがあります。それぞれ4回アップグレードでき、ボーナス効果が得られます。アップグレードはヒーロー → スキルで、イベント、ショップ、報酬、{arkRaidName}で入手できるスキルブックを使用して行います。",
+        kr: "각 영웅에게는 3개의 기본 스킬과 1개의 체인 패시브가 있습니다. 각각 4번 강화하여 보너스 효과를 얻을 수 있습니다. 강화는 영웅 → 스킬에서 이벤트, 상점, 보상, {arkRaidName}에서 얻은 스킬북을 사용하여 수행합니다.",
+        zh: "每个英雄有3个基础技能和1个连锁被动。每个都可以升级4次以获得加成效果。升级在英雄 → 技能中进行，使用从活动、商店、奖励和{arkRaidName}中获得的技能书。"
     },
     skillUpgradeDesc2: {
         en: "The cost of skill upgrade depend of the hero base rarity",
@@ -288,10 +271,10 @@ export const LABELS = {
         zh: "是可以镶嵌到专属装备或护符中的特殊珠宝。其主要目的是弥补英雄缺失的属性。"
     },
     gemsDesc2: {
-        en: "For example, if a DPS unit is lacking Crit Chance, equipping a {I-I/Stage 6 Critical Hit Gem} can help reach key thresholds. Gem choices should always align with substat priorities and the character's role.",
-        jp: "例えば、DPSユニットがクリティカル率が不足している場合、{I-I/Stage 6 Critical Hit Gem}を装備することで重要な閾値に到達できます。ジェムの選択は常にサブステータスの優先順位とキャラクターの役割に合わせるべきです。",
-        kr: "예를 들어, DPS 유닛에 치명타 확률이 부족하다면 {I-I/Stage 6 Critical Hit Gem}을 장착하여 핵심 임계값에 도달할 수 있습니다. 보석 선택은 항상 서브스탯 우선순위와 캐릭터의 역할에 맞아야 합니다.",
-        zh: "例如，如果DPS角色缺少暴击率，装备{I-I/Stage 6 Critical Hit Gem}可以帮助达到关键阈值。宝石选择应始终与副属性优先级和角色定位保持一致。"
+        en: "For example, if a DPS unit is lacking Crit Chance, equipping a {I-I/Stage 6 Crit Chance Gem} can help reach key thresholds. Gem choices should always align with substat priorities and the character's role.",
+        jp: "例えば、DPSユニットがクリティカル率が不足している場合、{I-I/Stage 6 Crit Chance Gem}を装備することで重要な閾値に到達できます。ジェムの選択は常にサブステータスの優先順位とキャラクターの役割に合わせるべきです。",
+        kr: "예를 들어, DPS 유닛에 치명타 확률이 부족하다면 {I-I/Stage 6 Crit Chance Gem}을 장착하여 핵심 임계값에 도달할 수 있습니다. 보석 선택은 항상 서브스탯 우선순위와 캐릭터의 역할에 맞아야 합니다.",
+        zh: "例如，如果DPS角色缺少暴击率，装备{I-I/Stage 6 Crit Chance Gem}可以帮助达到关键阈值。宝石选择应始终与副属性优先级和角色定位保持一致。"
     },
 
     // Gear section
@@ -348,24 +331,12 @@ export const LABELS = {
 
 // ---- Components
 
-export function UpgradeTable({ lang }: { lang: Lang }) {
+export function LimitBreakSection({ lang }: { lang: Lang }) {
     return (
-        <table className="table-auto text-sm text-white">
-            <tbody>
-                {upgradeStages.map((stage, idx) => (
-                    <tr key={idx} className="align-middle">
-                        <td className="pr-2 whitespace-nowrap">
-                            <InlineIcon icon={`/images/ui/evo/${stage.icon}.webp`} label={lRec(LABELS[stage.stage as keyof typeof LABELS] as LangMap, lang)} underline={false} />
-                        </td>
-                        <td className="px-2 text-neutral-400">→</td>
-                        <td className="pr-1 text-right">{stage.cost}</td>
-                        <td>
-                            {stage.cost ? <ItemInline name={stage.item} /> : lRec(LABELS.startingStage, lang)}
-                        </td>
-                    </tr>
-                ))}
-            </tbody>
-        </table>
+        <>
+            <p>{lRec(LABELS.limitBreakDesc, lang)}</p>
+            <p>{lRec(LABELS.limitBreakSource, lang)}</p>
+        </>
     );
 }
 

@@ -11,7 +11,7 @@ import type { LangMap } from '@/types/common';
 import { StarBadge } from '@/app/components/ui/StarIcons';
 import {
     LABELS,
-    UpgradeTable,
+    LimitBreakSection,
     TranscendenceTable,
     SkillCostTable,
     XPItemsList,
@@ -22,12 +22,12 @@ import {
 
 const heading: LangMap = { en: "Growth Systems", jp: "育成システム", kr: "육성 시스템", zh: "培养系统" };
 
-const TAB_KEYS = ['leveling', 'upgrade', 'transcendence', 'affinity', 'skills', 'specialEquip', 'gems', 'gear'] as const;
+const TAB_KEYS = ['leveling', 'limitBreak', 'transcendence', 'affinity', 'skills', 'specialEquip', 'gems', 'gear'] as const;
 type TabKey = typeof TAB_KEYS[number];
 
 const TAB_LABELS: Record<TabKey, LangMap> = {
     leveling: LABELS.sectionLeveling,
-    upgrade: LABELS.sectionUpgrade,
+    limitBreak: LABELS.sectionLimitBreak,
     transcendence: LABELS.sectionTranscendence,
     affinity: LABELS.sectionAffinity,
     skills: LABELS.sectionSkillUpgrade,
@@ -37,7 +37,7 @@ const TAB_LABELS: Record<TabKey, LangMap> = {
 };
 
 export default function HeroGrowthGuide() {
-    const { lang } = useI18n();
+    const { lang, t } = useI18n();
     const [tab, setTab] = useState<TabKey>('leveling');
     const onChange = useCallback((v: string) => setTab(v as TabKey), []);
 
@@ -57,7 +57,7 @@ export default function HeroGrowthGuide() {
 
             <div className="mt-6 space-y-4">
                 {tab === 'leveling' && <>
-                    <p>{lRec(LABELS.levelingDesc1, lang)}</p>
+                    <p>{lRec(LABELS.levelingDesc1, lang).replace('{stageName}', t('progress.task.hypnotic-frog-hall'))}</p>
                     <p>{lRec(LABELS.levelingDesc2, lang)}</p>
                     <XPItemsList lang={lang} />
                     <p>
@@ -65,13 +65,7 @@ export default function HeroGrowthGuide() {
                     </p>
                 </>}
 
-                {tab === 'upgrade' && <>
-                    <p>{lRec(LABELS.upgradeDesc, lang)}</p>
-                    <UpgradeTable lang={lang} />
-                    <p>
-                        <ItemInline name="Book of Evolution" /> {lRec(LABELS.instantStage6, lang)}
-                    </p>
-                </>}
+                {tab === 'limitBreak' && <LimitBreakSection lang={lang} />}
 
                 {tab === 'transcendence' && <>
                     <p>{lRec(LABELS.transcendenceDesc1, lang)}</p>
@@ -92,7 +86,7 @@ export default function HeroGrowthGuide() {
                 </>}
 
                 {tab === 'skills' && <>
-                    <p>{lRec(LABELS.skillUpgradeDesc1, lang)}</p>
+                    <p>{lRec(LABELS.skillUpgradeDesc1, lang).replace('{arkRaidName}', t('progress.task.ark-raid'))}</p>
                     <p>{lRec(LABELS.skillUpgradeDesc2, lang)}</p>
                     <SkillCostTable lang={lang} />
                 </>}
