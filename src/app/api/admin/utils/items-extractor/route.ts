@@ -102,6 +102,20 @@ const SYNC_FIELDS = [
 ] as const;
 type SyncField = typeof SYNC_FIELDS[number];
 
+// Scope determines which fields get overwritten on apply
+const EN_FIELDS: readonly SyncField[] = ['name', 'description', 'icon'];
+const LOC_FIELDS: readonly SyncField[] = [
+  'name_jp', 'name_kr', 'name_zh',
+  'description_jp', 'description_kr', 'description_zh',
+];
+type Scope = 'all' | 'en' | 'loc';
+
+function fieldsForScope(scope: Scope): readonly SyncField[] {
+  if (scope === 'en') return EN_FIELDS;
+  if (scope === 'loc') return LOC_FIELDS;
+  return SYNC_FIELDS;
+}
+
 // ── Helpers ─────────────────────────────────────────────────────────
 
 function devOnly() {
@@ -278,10 +292,22 @@ async function diffItems(extracted: Item[], current: Item[]) {
   };
 }
 
-/** Apply data changes to items.json. Returns the updated items array. */
-function applyDataChanges(extracted: Item[], current: Item[], idsToApply: Set<string> | null): Item[] {
+/**
+ * Apply data changes to items.json. Returns the updated items array.
+ * - scope='all': overwrite all sync fields, add new items
+ * - scope='en':  overwrite only EN+icon fields on existing items, add new items (full extracted)
+ * - scope='loc': overwrite only locale fields on existing items, do NOT add new items
+ *   (new items have no locale-only meaning — adding them would also bring EN content)
+ */
+function applyDataChanges(
+  extracted: Item[],
+  current: Item[],
+  idsToApply: Set<string> | null,
+  scope: Scope,
+): Item[] {
   const byIdExtracted = new Map(extracted.map(i => [i.id, i]));
   const byIdCurrent = new Map(current.map(i => [i.id, i]));
+  const fields = fieldsForScope(scope);
 
   const merged: Item[] = [];
 
@@ -292,23 +318,25 @@ function applyDataChanges(extracted: Item[], current: Item[], idsToApply: Set<st
     if (!shouldApply) { merged.push(cur); continue; }
 
     const updated: Item = { ...cur };
-    for (const f of SYNC_FIELDS) {
+    for (const f of fields) {
       (updated as Record<string, unknown>)[f] = ex[f];
     }
     merged.push(updated);
   }
 
-  // New items (in extracted but not in current)
-  const newItems = extracted.filter(i => {
-    if (byIdCurrent.has(i.id)) return false;
-    return idsToApply === null || idsToApply.has(i.id);
-  });
-  newItems.sort((a, b) => {
-    const na = Number(a.id), nb = Number(b.id);
-    if (Number.isFinite(na) && Number.isFinite(nb)) return na - nb;
-    return a.id.localeCompare(b.id);
-  });
-  merged.push(...newItems);
+  // New items only when scope allows (all/en, since they bring canonical content)
+  if (scope !== 'loc') {
+    const newItems = extracted.filter(i => {
+      if (byIdCurrent.has(i.id)) return false;
+      return idsToApply === null || idsToApply.has(i.id);
+    });
+    newItems.sort((a, b) => {
+      const na = Number(a.id), nb = Number(b.id);
+      if (Number.isFinite(na) && Number.isFinite(nb)) return na - nb;
+      return a.id.localeCompare(b.id);
+    });
+    merged.push(...newItems);
+  }
 
   return merged;
 }
@@ -343,7 +371,7 @@ export async function GET(req: NextRequest) {
     const { extracted, current } = await loadAll();
 
     if (action === 'preview') {
-      return NextResponse.json({ items: applyDataChanges(extracted, current, null) });
+      return NextResponse.json({ items: applyDataChanges(extracted, current, null, 'all') });
     }
 
     const result = await diffItems(extracted, current);
@@ -358,6 +386,7 @@ export async function GET(req: NextRequest) {
 
 interface ApplyBody {
   ids?: string[]; // empty/missing → apply all
+  scope?: Scope; // default: 'all'
 }
 
 export async function POST(req: NextRequest) {
@@ -367,19 +396,21 @@ export async function POST(req: NextRequest) {
   try {
     const body = (await req.json().catch(() => ({}))) as ApplyBody;
     const idsToApply = body.ids && body.ids.length > 0 ? new Set(body.ids) : null;
+    const scope: Scope = body.scope === 'en' || body.scope === 'loc' ? body.scope : 'all';
 
     const { extracted, current } = await loadAll();
     const byIdExtracted = new Map(extracted.map(i => [i.id, i]));
 
-    // Determine the icon set to sync (only for items being applied)
+    // Icons are part of EN scope; loc scope skips icon sync entirely
     const iconsToSync = new Set<string>();
-    const targetIds = idsToApply ?? new Set(extracted.map(i => i.id));
-    for (const id of targetIds) {
-      const ex = byIdExtracted.get(id);
-      if (ex?.icon) iconsToSync.add(ex.icon);
+    if (scope !== 'loc') {
+      const targetIds = idsToApply ?? new Set(extracted.map(i => i.id));
+      for (const id of targetIds) {
+        const ex = byIdExtracted.get(id);
+        if (ex?.icon) iconsToSync.add(ex.icon);
+      }
     }
 
-    // Sync icons in parallel (bounded)
     const iconResults: { icon: string; copied: boolean; warning?: string }[] = [];
     const ICONS = [...iconsToSync];
     const CONCURRENCY = 8;
@@ -389,8 +420,7 @@ export async function POST(req: NextRequest) {
       iconResults.push(...out);
     }
 
-    // Apply data changes
-    const merged = applyDataChanges(extracted, current, idsToApply);
+    const merged = applyDataChanges(extracted, current, idsToApply, scope);
     await writeItemsJson(merged);
 
     const warnings = iconResults.filter(r => r.warning).map(r => r.warning!);
@@ -399,6 +429,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       ok: true,
       applied: idsToApply ? idsToApply.size : 'all',
+      scope,
       total: merged.length,
       iconsCopied,
       iconsTotal: ICONS.length,

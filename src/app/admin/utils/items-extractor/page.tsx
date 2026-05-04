@@ -36,6 +36,7 @@ interface CompareResult {
 
 interface ApplyResult {
   applied: number | 'all';
+  scope: Scope;
   total: number;
   iconsCopied: number;
   iconsTotal: number;
@@ -44,6 +45,19 @@ interface ApplyResult {
 
 type StatusFilter = 'all' | 'new' | 'changed' | 'icon-missing';
 type LangFilter = 'all' | 'en' | 'loc';
+type Scope = 'all' | 'en' | 'loc';
+
+/** Returns whether applying this diff under the given scope would actually change anything. */
+function wouldApply(diff: Diff, scope: Scope): boolean {
+  if (scope === 'all') return true;
+  if (diff.status === 'new') return scope === 'en'; // 'loc' skips new items
+  if (diff.status === 'icon-missing') return scope === 'en'; // icon goes with EN scope
+  // changed
+  const c = classifyFields(diff.fields);
+  if (scope === 'en') return c.en.length > 0 || c.icon;
+  // scope === 'loc'
+  return c.loc.length > 0;
+}
 
 const RARITY_BG: Record<string, string> = {
   normal: 'Normal',
@@ -73,6 +87,7 @@ export default function ItemsExtractorPage() {
   const [error, setError] = useState<string | null>(null);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
   const [langFilter, setLangFilter] = useState<LangFilter>('all');
+  const [scope, setScope] = useState<Scope>('all');
   const [search, setSearch] = useState('');
   const [lastApply, setLastApply] = useState<ApplyResult | null>(null);
 
@@ -131,7 +146,7 @@ export default function ItemsExtractorPage() {
     setSavingAll(true);
     setError(null);
     try {
-      const j = await postApply({});
+      const j = await postApply({ scope });
       setLastApply(j);
       await reload();
     } catch (e) {
@@ -146,12 +161,16 @@ export default function ItemsExtractorPage() {
     setSavingFiltered(true);
     setError(null);
     try {
-      const ids = filtered.map(d => d.id);
-      const j = await postApply({ ids });
+      // Only send ids that the current scope would actually affect
+      const ids = filtered.filter(d => wouldApply(d, scope)).map(d => d.id);
+      if (ids.length === 0) {
+        setError('No visible items would be affected by the current scope.');
+        return;
+      }
+      const j = await postApply({ ids, scope });
       setLastApply(j);
-      // Drop applied diffs locally
-      const applied = new Set(ids);
-      setData(prev => prev ? { ...prev, diffs: prev.diffs.filter(d => !applied.has(d.id)) } : prev);
+      // Reload to get fresh diffs since fields-only updates may leave the row in a partial state
+      await reload();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Save failed');
     } finally {
@@ -163,9 +182,14 @@ export default function ItemsExtractorPage() {
     setSavingIds(prev => new Set(prev).add(id));
     setError(null);
     try {
-      const j = await postApply({ ids: [id] });
+      const j = await postApply({ ids: [id], scope });
       setLastApply(j);
-      setData(prev => prev ? { ...prev, diffs: prev.diffs.filter(d => d.id !== id) } : prev);
+      // Partial scope leaves residual diffs (e.g. EN still pending) → reload for accurate state
+      if (scope === 'all') {
+        setData(prev => prev ? { ...prev, diffs: prev.diffs.filter(d => d.id !== id) } : prev);
+      } else {
+        await reload();
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Apply failed');
     } finally {
@@ -192,6 +216,12 @@ export default function ItemsExtractorPage() {
   const hasChanges = data.diffs.length > 0;
   const anySaving = savingAll || savingFiltered;
   const isFilterActive = statusFilter !== 'all' || langFilter !== 'all' || search.trim() !== '';
+  const filteredAffected = filtered.filter(d => wouldApply(d, scope)).length;
+  const totalAffected = data.diffs.filter(d => wouldApply(d, scope)).length;
+  const scopeColor = scope === 'en' ? 'bg-amber-600/80 hover:bg-amber-500'
+    : scope === 'loc' ? 'bg-zinc-600 hover:bg-zinc-500'
+    : 'bg-green-600/80 hover:bg-green-500';
+  const scopeLabel = scope === 'en' ? 'EN' : scope === 'loc' ? 'Loc' : '';
 
   return (
     <div className="mx-auto max-w-5xl space-y-4">
@@ -210,16 +240,40 @@ export default function ItemsExtractorPage() {
           className="rounded border border-zinc-700 px-3 py-1.5 text-xs hover:bg-zinc-800 transition disabled:opacity-40">
           Reload
         </button>
+
+        {/* Scope selector */}
+        <div className="flex items-center gap-1 rounded border border-zinc-700 bg-zinc-900 px-1 py-0.5">
+          <span className="px-1 text-[10px] uppercase tracking-wider text-zinc-500">Scope</span>
+          {(['all', 'en', 'loc'] as const).map(s => (
+            <button key={s} onClick={() => setScope(s)} disabled={anySaving}
+              className={`rounded px-2 py-1 text-[11px] font-medium transition ${
+                scope === s
+                  ? s === 'en' ? 'bg-amber-700/60 text-amber-100'
+                    : s === 'loc' ? 'bg-zinc-700 text-zinc-100'
+                    : 'bg-green-700/60 text-green-100'
+                  : 'text-zinc-500 hover:text-zinc-300'
+              }`}
+              title={
+                s === 'all' ? 'Overwrite all fields (EN + locales + icon)' :
+                s === 'en' ? 'Overwrite only name, description (EN) + icon. Locales preserved.' :
+                'Overwrite only locale fields (jp/kr/zh). EN + icon preserved.'
+              }>
+              {s === 'all' ? 'All' : s === 'en' ? 'EN' : 'Loc'}
+            </button>
+          ))}
+        </div>
+
         {isFilterActive && (
-          <button onClick={applyFiltered} disabled={anySaving || filtered.length === 0}
-            className="rounded bg-blue-600/80 px-3 py-1.5 text-xs font-semibold hover:bg-blue-500 transition disabled:opacity-40"
-            title="Apply only the currently visible items (status filter + lang filter + search)">
-            {savingFiltered ? 'Applying...' : `Apply Filtered (${filtered.length})`}
+          <button onClick={applyFiltered} disabled={anySaving || filteredAffected === 0}
+            className={`rounded ${scopeColor} px-3 py-1.5 text-xs font-semibold text-white transition disabled:opacity-40`}
+            title={`Apply ${scopeLabel || 'all'} fields to currently visible items`}>
+            {savingFiltered ? 'Applying...' : `Apply Filtered ${scopeLabel} (${filteredAffected})`.replace(/  +/g, ' ')}
           </button>
         )}
-        <button onClick={applyAll} disabled={anySaving || !hasChanges}
-          className="rounded bg-green-600/80 px-3 py-1.5 text-xs font-semibold hover:bg-green-500 transition disabled:opacity-40">
-          {savingAll ? 'Applying...' : `Apply All${hasChanges ? ` (${data.diffs.length})` : ''}`}
+        <button onClick={applyAll} disabled={anySaving || totalAffected === 0}
+          className={`rounded ${scopeColor} px-3 py-1.5 text-xs font-semibold text-white transition disabled:opacity-40`}
+          title={`Apply ${scopeLabel || 'all'} fields to all diffs`}>
+          {savingAll ? 'Applying...' : `Apply All ${scopeLabel} ${totalAffected > 0 ? `(${totalAffected})` : ''}`.replace(/  +/g, ' ').trim()}
         </button>
       </div>
 
@@ -315,6 +369,7 @@ export default function ItemsExtractorPage() {
                 <DiffRow
                   key={d.id}
                   diff={d}
+                  scope={scope}
                   onApply={() => applyOne(d.id)}
                   isApplying={savingIds.has(d.id)}
                   globalSaving={anySaving}
@@ -329,9 +384,10 @@ export default function ItemsExtractorPage() {
 }
 
 function DiffRow({
-  diff, onApply, isApplying, globalSaving,
+  diff, scope, onApply, isApplying, globalSaving,
 }: {
   diff: Diff;
+  scope: Scope;
   onApply: () => void;
   isApplying: boolean;
   globalSaving: boolean;
@@ -340,9 +396,17 @@ function DiffRow({
   const item = diff.extracted ?? diff.current;
   const rarity = item?.rarity ?? 'normal';
   const bg = RARITY_BG[rarity] ?? 'Normal';
-  const noop = diff.status === 'icon-missing' && diff.iconSourceMissing;
-  const disabled = isApplying || globalSaving || noop;
+  const sourceMissingNoop = diff.status === 'icon-missing' && diff.iconSourceMissing;
+  const wouldDoSomething = wouldApply(diff, scope);
+  const disabled = isApplying || globalSaving || sourceMissingNoop || !wouldDoSomething;
   const cls = classifyFields(diff.fields);
+  const btnColor = scope === 'en' ? 'bg-amber-700/60 hover:bg-amber-600 text-amber-100'
+    : scope === 'loc' ? 'bg-zinc-700 hover:bg-zinc-600 text-zinc-100'
+    : 'bg-green-700/60 hover:bg-green-600 text-green-100';
+  const btnLabel = scope === 'en' ? 'EN' : scope === 'loc' ? 'Loc' : 'Apply';
+  const btnTitle = !wouldDoSomething ? `Current scope (${scope}) would not affect this item`
+    : sourceMissingNoop ? 'Nothing to apply: icon-only diff but source PNG missing'
+    : `Apply ${scope} scope to this item`;
 
   return (
     <>
@@ -407,10 +471,10 @@ function DiffRow({
           <button
             onClick={onApply}
             disabled={disabled}
-            className="rounded bg-green-700/60 px-2.5 py-1 text-[11px] font-semibold text-green-100 hover:bg-green-600 transition disabled:opacity-40 disabled:cursor-not-allowed"
-            title={noop ? 'Nothing to apply: icon-only diff but source PNG missing' : 'Apply this item'}
+            className={`rounded ${btnColor} px-2.5 py-1 text-[11px] font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed`}
+            title={btnTitle}
           >
-            {isApplying ? '...' : 'Apply'}
+            {isApplying ? '...' : btnLabel}
           </button>
         </td>
       </tr>
