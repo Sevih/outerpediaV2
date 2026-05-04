@@ -430,11 +430,22 @@ function DiffRow({
         <td className="px-3 py-2 font-mono text-xs text-zinc-400">{diff.id}</td>
         <td className="px-3 py-2 text-zinc-200">
           {diff.name}
-          {diff.iconMissing && diff.status !== 'icon-missing' && (
-            <span className="ml-2 rounded bg-purple-900/30 px-1.5 py-0.5 text-[10px] text-purple-400">icon</span>
+          {/* Show "→ copy" only when there's something to do AND source is available; redundant on 'icon-missing' rows since that's the row's whole point */}
+          {diff.iconMissing && !diff.iconSourceMissing && diff.status !== 'icon-missing' && diff.status !== 'new' && (
+            <span
+              className="ml-2 rounded bg-purple-900/30 px-1.5 py-0.5 text-[10px] text-purple-300"
+              title="Image absent in public/images/items/ — will be copied from datamine on Apply"
+            >
+              → copy
+            </span>
           )}
           {diff.iconSourceMissing && (
-            <span className="ml-2 rounded bg-red-900/30 px-1.5 py-0.5 text-[10px] text-red-400" title="Icon PNG not found in datamine">no source</span>
+            <span
+              className="ml-2 rounded bg-red-900/40 px-1.5 py-0.5 text-[10px] font-semibold text-red-300"
+              title="Icon PNG not found in datamine — Apply will skip the icon copy and emit a warning"
+            >
+              ⚠ no datamine source
+            </span>
           )}
         </td>
         <td className="px-3 py-2 text-xs">
