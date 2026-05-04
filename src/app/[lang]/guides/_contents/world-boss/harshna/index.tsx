@@ -14,6 +14,12 @@ import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
 
+/* ── Version: 05-2026 ──────────────────────────────────── */
+import v05Strings from './versions/05-2026/strings.json';
+import v05Teams from './versions/05-2026/teams.json';
+import v05Recommended from './versions/05-2026/recommended.json';
+import v05Tips from './versions/05-2026/tips.json';
+
 /* ── Version: 07-2025 ──────────────────────────────────── */
 import v07Strings from './versions/07-2025/strings.json';
 import v07Teams from './versions/07-2025/teams.json';
@@ -33,6 +39,14 @@ const preloadedBosses: Record<string, Boss> = {
 import vLegacyStrings from './versions/legacy-2024/strings.json';
 
 /* ── Typed data ─────────────────────────────────────────── */
+
+const may2026 = {
+  strings: v05Strings as Record<string, LangMap>,
+  teams: v05Teams as TeamData,
+  phase1: v05Recommended.phase1 as CharacterRecommendation[],
+  phase2: v05Recommended.phase2 as CharacterRecommendation[],
+  tips: v05Tips as Record<string, LangMap[]>,
+};
 
 const jul2025 = {
   strings: v07Strings as Record<string, LangMap>,
@@ -70,10 +84,31 @@ export default function HarshnaGuide() {
 
   return (
     <GuideTemplate
-      title={lRec(jul2025.strings.title, lang)}
-      introduction={lRec(jul2025.strings.intro, lang)}
-      defaultVersion="july2025"
+      title={lRec(may2026.strings.title, lang)}
+      introduction={lRec(may2026.strings.intro, lang)}
+      updating
+      defaultVersion="may2026"
       versions={{
+        may2026: {
+          label: lRec(may2026.strings.label, lang),
+          content: (
+            <>
+              <WorldBossDisplay config={bossConfig} defaultMode="Extreme" preloadedBosses={preloadedBosses} />
+              <hr className="my-6 border-neutral-700" />
+              <TacticalTips
+                sections={[
+                  { title: 'phase1', tips: may2026.tips.phase1 },
+                  { title: 'phase2', tips: may2026.tips.phase2 },
+                ]}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <RecommendedCharacterList title="phase1" entries={may2026.phase1} />
+              <RecommendedCharacterList title="phase2" entries={may2026.phase2} />
+              <hr className="my-6 border-neutral-700" />
+              <StageBasedTeamSelector teamData={may2026.teams} defaultStage="No Debuff Team" />
+            </>
+          ),
+        },
         july2025: {
           label: lRec(jul2025.strings.label, lang),
           content: (

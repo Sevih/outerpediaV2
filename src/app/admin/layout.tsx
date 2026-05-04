@@ -45,6 +45,7 @@ const NAV_GROUPS: NavGroup[] = [
       { label: 'Promo Codes', href: '/admin/utils/promo-codes' },
       { label: 'Banners', href: '/admin/utils/banners' },
       { label: 'Tower', href: '/admin/utils/tower' },
+      { label: 'Items Extractor', href: '/admin/utils/items-extractor' },
       { label: 'Events', href: '/admin/utils/events', disabled: true },
     ],
   },
