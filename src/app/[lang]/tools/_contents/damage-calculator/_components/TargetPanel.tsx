@@ -372,10 +372,15 @@ export default function TargetPanel({ catalog, state, awakening, settings, bossO
               const baseName = lRec(s.name, lang)
               // Story: append the storyline title in parens (carries info
               // beyond the `1-12` shorthand). Otherwise just the stage part.
-              const suffix = isStoryMode && baseName && baseName !== stagePart ? ` (${baseName})` : ''
+              const storySuffix = isStoryMode && baseName && baseName !== stagePart ? ` (${baseName})` : ''
+              // AL: each tier ships as its own stage; suffix the label with
+              // `AL Lv N` so users pick the difficulty inline. Stages are
+              // sorted by `recommendLevel` (= per-tier monsterLevel) so the
+              // tiers naturally line up easiest → hardest within a dungeon.
+              const alSuffix = s.alLevel != null ? ` — AL Lv ${s.alLevel}` : ''
               return (
                 <option key={s.id} value={s.id}>
-                  {s.recommendLevel > 0 ? `[${lvPrefix}${s.recommendLevel}] ` : ''}{stagePart}{suffix}
+                  {s.recommendLevel > 0 ? `[${lvPrefix}${s.recommendLevel}] ` : ''}{stagePart}{storySuffix}{alSuffix}
                 </option>
               )
             })}

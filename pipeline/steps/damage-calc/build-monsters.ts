@@ -1,7 +1,7 @@
 import { SCHEMA_VERSION, writeJsonMin } from './shared'
 import { loadJson2 } from './raw-loader'
 import {
-  resolveDungeonStats, type MonsterRow, type StatBlock,
+  resolveDungeonStats, type AdvantageRates, type MonsterRow, type StatBlock,
 } from '../../../src/lib/damage/v2/stats'
 import {
   loadLocationTables,
@@ -56,14 +56,30 @@ interface MonsterEntry {
   element: string
   subClass: string
   basicStar: number
-  /** Spawn level for this monster in this stage. */
+  /** Spawn level for this monster in this stage. AL stages bake one
+   *  StageEntry per tier — the level here matches the tier's monsterLevel. */
   level: number
-  /** Full stat block at the spawn level (with dungeon advantage + HP overrides). */
+  /** Full stat block at this monster's level (with dungeon advantage + HP overrides). */
   stats: StatBlock
   /** Wave index (`SpawnID_Pos{position}` in DungeonTemplet). */
   position: number
   /** Slot within the spawn group (0..3 — `ID0`/`ID1`/`ID2`/`ID3`). */
   slot: number
+}
+
+/**
+ * Adventure License level tier — one entry per playable AL Level for a stage.
+ * `monsterLevel` scales every monster in the wave; `bossHp` overrides only
+ * the boss's HP after stat resolution. `advantage` is the per-tier ATK/DEF/SPD
+ * rate boost (per-mille — empty rate = 0); HP has no per-tier rate, scaling
+ * happens via `monsterLevel` + the per-tier `bossHp` override on bosses.
+ * Stages outside DM_ADVENTURE_* ship a single StageEntry as usual.
+ */
+interface AlLevelTier {
+  alLevel: number
+  monsterLevel: number
+  bossHp: number | null
+  advantage: AdvantageRates
 }
 
 interface WaveEntry {
@@ -72,7 +88,8 @@ interface WaveEntry {
 }
 
 interface StageEntry {
-  /** DungeonTemplet.ID — stable across releases. */
+  /** Stable identifier — `DungeonTemplet.ID` for plain stages,
+   *  `${dungeonId}@al${alLevel}` for the per-AL-Level expansion. */
   id: string
   /** Stage display name (LangDict). For story this is the storyline title. */
   name: LangDict
@@ -84,9 +101,18 @@ interface StageEntry {
   episodeNum: number | null
   /** Story per-episode stage number — assigned in the post-pass. null for non-story. */
   stageNum: number | null
-  /** `RecommandLevel` from DungeonTemplet (0 when not set). */
+  /** Recommended level — `DungeonTemplet.RecommandLevel` for plain stages,
+   *  the per-tier `monsterLevel` for AL stages so the picker sorts by
+   *  difficulty within an AL dungeon. */
   recommendLevel: number
   waves: WaveEntry[]
+  /**
+   * Adventure License level (1..10) when this stage is the per-tier
+   * expansion of a DM_ADVENTURE_MISSION / DM_ADVENTURE_CHALLENGE dungeon.
+   * Undefined for plain stages. The picker UI suffixes the label with
+   * "AL Lv {alLevel}" so users pick the difficulty inline.
+   */
+  alLevel?: number
 }
 
 interface ModeEntry {
@@ -173,6 +199,61 @@ function buildOverrideMaps(eventBoss: EventBossDungeonRow[], irregularChase: Irr
   return { eventBossHpByDungeon, irregularChaseHpByDungeon }
 }
 
+/** AdventureDungeonTemplet row — one entry per (Group, Level) pairing. */
+interface AdventureDungeonRow extends Row {
+  GroupID?: string
+  Level?: string
+  DungeonID?: string
+  DungeonLevel?: string
+  BossHP?: string
+  /** Per-mille rate boost on monster ATK at this AL tier. */
+  SpawnAdvantageRate_Atk?: string
+  /** Per-mille rate boost on monster DEF at this AL tier. */
+  SpawnAdvantageRate_Def?: string
+  /** Per-mille rate boost on monster SPD at this AL tier. */
+  SpawnAdvantageRate_Spd?: string
+}
+
+/**
+ * Build dungeonId → AL Level tier list. The same dungeon can appear in
+ * multiple AdventureGroups (Mission groups overlap on shared levels —
+ * group 1 covers Lv1-3, group 2 Lv2-4, etc.), so we dedupe on
+ * `(dungeonId, alLevel)` keeping the first occurrence (params are stable
+ * across groups for a given level). Sorted by alLevel ascending.
+ */
+function buildAlTierMap(rows: AdventureDungeonRow[]): Map<string, AlLevelTier[]> {
+  const out = new Map<string, AlLevelTier[]>()
+  const seen = new Set<string>()  // `${dungeonId}@${alLevel}`
+  for (const r of rows) {
+    const dungeonId = r.DungeonID
+    const alLevel = num(r.Level)
+    if (!dungeonId || alLevel <= 0) continue
+    const key = `${dungeonId}@${alLevel}`
+    if (seen.has(key)) continue
+    seen.add(key)
+    const monsterLevel = num(r.DungeonLevel)
+    const bossHp = num(r.BossHP)
+    // Per-tier ATK/DEF/SPD advantage. Empirically these REPLACE the parent
+    // DungeonTemplet's `SpawnAdvantageRate_*` (which are unset for AL
+    // dungeons) — verified against Ksai Lv 10 in-game (5639 base × 1.9 =
+    // 10714 ATK / 2626 × 1.9 = 4989 DEF / 169 × 1.2 = 202 SPD). HP has no
+    // per-tier rate; bosses use `BossHP` and minions use level scaling.
+    const advantage: AdvantageRates = {
+      atk: num(r.SpawnAdvantageRate_Atk),
+      def: num(r.SpawnAdvantageRate_Def),
+      spd: num(r.SpawnAdvantageRate_Spd),
+      hp:  0,
+    }
+    const list = out.get(dungeonId) ?? []
+    list.push({ alLevel, monsterLevel, bossHp: bossHp > 0 ? bossHp : null, advantage })
+    out.set(dungeonId, list)
+  }
+  for (const list of out.values()) {
+    list.sort((a, b) => a.alLevel - b.alLevel)
+  }
+  return out
+}
+
 // ── Stage-num post-pass (story only) ───────────────────────────────────
 
 /**
@@ -210,7 +291,7 @@ export async function buildMonsters(): Promise<{ stages: number; modes: number }
   // raw reads complete to avoid touching the same files twice.
   const [
     dungeonRows, spawnRows, monsterRows, textCharacterRows,
-    eventBossRows, irregularChaseRows,
+    eventBossRows, irregularChaseRows, adventureDungeonRows,
   ] = await Promise.all([
     loadJson2<Row[]>('DungeonTemplet.json'),
     loadJson2<Row[]>('DungeonSpawnTemplet.json'),
@@ -218,6 +299,7 @@ export async function buildMonsters(): Promise<{ stages: number; modes: number }
     loadJson2<Row[]>('TextCharacter.json'),
     loadJson2<EventBossDungeonRow[]>('EventBossDungeonTemplet.json'),
     loadJson2<IrregularChaseRow[]>('IrregularChaseTemplet.json'),
+    loadJson2<AdventureDungeonRow[]>('AdventureDungeonTemplet.json'),
   ])
 
   // Indexes for O(1) lookup. Stricter `Record<string, string>` typing on
@@ -245,6 +327,7 @@ export async function buildMonsters(): Promise<{ stages: number; modes: number }
   const loc = await loadLocationTables()
 
   const { eventBossHpByDungeon, irregularChaseHpByDungeon } = buildOverrideMaps(eventBossRows, irregularChaseRows)
+  const alTiersByDungeon = buildAlTierMap(adventureDungeonRows)
 
   // ── Build mode buckets ────────────────────────────────────────────
   const byMode = new Map<string, ModeEntry>()
@@ -280,79 +363,14 @@ export async function buildMonsters(): Promise<{ stages: number; modes: number }
     const overrideHp =
       eventBossHpByDungeon.get(d.ID) ?? irregularChaseHpByDungeon.get(d.ID) ?? null
 
-    // Walk waves (positions 0..2) → spawn groups → slots → monster.
-    const waves: WaveEntry[] = []
-    for (let position = 0; position < 3; position++) {
-      const raw = d[`SpawnID_Pos${position}`]
-      if (!raw) continue
+    // Adventure License tiers for this dungeon. When set, the dungeon expands
+    // into one StageEntry per tier (each with its own monster stats baked at
+    // the tier's monsterLevel + boss HP override).
+    const alTiers = alTiersByDungeon.get(d.ID) ?? null
 
-      const monsters: MonsterEntry[] = []
-      const seen = new Set<string>()  // dedupe within this wave only
-
-      for (const gid of raw.split(',').map(x => x.trim()).filter(Boolean)) {
-        const rows = spawnRowsByGroup.get(gid)
-        if (!rows) continue
-        for (const row of rows) {
-          for (let slot = 0; slot < 4; slot++) {
-            const mid = row[`ID${slot}`]
-            if (!mid || mid === '0') continue
-            const level = num(row[`Level${slot}`])
-            const dedupe = `${mid}@${level}`
-            if (seen.has(dedupe)) continue
-            seen.add(dedupe)
-
-            const tmpl = monsterIndex.get(mid)
-            if (!tmpl) continue
-
-            const type = tmpl.Type ?? ''
-            const isBoss = BOSS_TYPES.has(type)
-            const elementKey = tmpl.Element ?? ''
-            const classKey = tmpl.Class ?? ''
-            const nameId = tmpl.NameID ?? `${mid}_Name`
-
-            // Compute the full stat block at this monster's level via the
-            // audited f32 chain. Apply the stage HP override only to boss
-            // monsters — minions in the same wave keep formula HP.
-            let stats = resolveDungeonStats(tmpl as unknown as MonsterRow, level, advantage)
-            if (overrideHp != null && isBoss) stats = { ...stats, hp: overrideHp }
-
-            monsters.push({
-              monsterId: mid,
-              faceIconId: tmpl.FaceIconID ?? mid,
-              name: resolveTextDict(nameId, textCharIndex),
-              type,
-              isBoss,
-              class: CLASS_LABEL[classKey] ?? classKey,
-              element: ELEMENT_LABEL[elementKey] ?? elementKey,
-              subClass: tmpl.SubClass ?? '',
-              basicStar: num(tmpl.BasicStar),
-              level,
-              stats,
-              position,
-              slot,
-            })
-          }
-        }
-      }
-
-      if (monsters.length === 0) continue
-
-      // Sort within a wave: bosses first, level desc, name asc.
-      monsters.sort((a, b) => {
-        if (a.isBoss !== b.isBoss) return a.isBoss ? -1 : 1
-        if (a.level !== b.level) return b.level - a.level
-        return (a.name.en || '').localeCompare(b.name.en || '')
-      })
-
-      waves.push({ position, monsters })
-    }
-
-    if (waves.length === 0) continue
-
-    // Stage display name (LangDict). Falls back to the dungeon ID.
+    // Stage display name (LangDict). Falls back to the dungeon ID. Story
+    // metadata is only meaningful for DM_NORMAL.
     const stageName = d.NameID ? resolveTextDict(d.NameID, loc.textSystemIndex) : { en: d.ID, jp: '', kr: '', zh: '' }
-
-    // Story-only metadata.
     let chapter: LangDict | null = null
     let season: number | null = null
     let episodeNum: number | null = null
@@ -365,22 +383,129 @@ export async function buildMonsters(): Promise<{ stages: number; modes: number }
       episodeNum = num(areaRow.EpisodeNum) || null
     }
 
-    const stage: StageEntry = {
-      id: d.ID,
-      name: stageName,
-      chapter,
-      season,
-      episodeNum,
-      stageNum: null,
-      recommendLevel: num(d.RecommandLevel),
-      waves,
+    /**
+     * Build the wave list for this dungeon at a target monster level. AL
+     * stages call this once per tier (with the tier's `monsterLevel`,
+     * `alBossHp`, and per-tier `advantageOverride`); plain stages call it
+     * once with `null` everywhere so the dungeon-level `advantage` and
+     * spawn-level scaling apply. Stage `overrideHp` (EventBoss /
+     * IrregularChase) always takes precedence over AL `bossHp` — the
+     * curated event table is more specific when both exist.
+     */
+    const buildWaves = (
+      atLevel: number | null,
+      alBossHp: number | null,
+      advantageOverride: AdvantageRates | null,
+    ): WaveEntry[] => {
+      const effectiveAdvantage = advantageOverride ?? advantage
+      const waves: WaveEntry[] = []
+      for (let position = 0; position < 3; position++) {
+        const raw = d[`SpawnID_Pos${position}`]
+        if (!raw) continue
+
+        const monsters: MonsterEntry[] = []
+        const seen = new Set<string>()
+
+        for (const gid of raw.split(',').map(x => x.trim()).filter(Boolean)) {
+          const rows = spawnRowsByGroup.get(gid)
+          if (!rows) continue
+          for (const row of rows) {
+            for (let slot = 0; slot < 4; slot++) {
+              const mid = row[`ID${slot}`]
+              if (!mid || mid === '0') continue
+              const spawnLevel = num(row[`Level${slot}`])
+              // For AL stages the per-tier monsterLevel applies to every
+              // monster in the wave; for plain stages we use the spawn level.
+              const level = atLevel ?? spawnLevel
+              const dedupe = `${mid}@${level}`
+              if (seen.has(dedupe)) continue
+              seen.add(dedupe)
+
+              const tmpl = monsterIndex.get(mid)
+              if (!tmpl) continue
+
+              const type = tmpl.Type ?? ''
+              const isBoss = BOSS_TYPES.has(type)
+              const elementKey = tmpl.Element ?? ''
+              const classKey = tmpl.Class ?? ''
+              const nameId = tmpl.NameID ?? `${mid}_Name`
+
+              let stats = resolveDungeonStats(tmpl as unknown as MonsterRow, level, effectiveAdvantage)
+              if (isBoss) {
+                if (overrideHp != null)    stats = { ...stats, hp: overrideHp }
+                else if (alBossHp != null) stats = { ...stats, hp: alBossHp }
+              }
+
+              monsters.push({
+                monsterId: mid,
+                faceIconId: tmpl.FaceIconID ?? mid,
+                name: resolveTextDict(nameId, textCharIndex),
+                type,
+                isBoss,
+                class: CLASS_LABEL[classKey] ?? classKey,
+                element: ELEMENT_LABEL[elementKey] ?? elementKey,
+                subClass: tmpl.SubClass ?? '',
+                basicStar: num(tmpl.BasicStar),
+                level,
+                stats,
+                position,
+                slot,
+              })
+            }
+          }
+        }
+
+        if (monsters.length === 0) continue
+        monsters.sort((a, b) => {
+          if (a.isBoss !== b.isBoss) return a.isBoss ? -1 : 1
+          if (a.level !== b.level) return b.level - a.level
+          return (a.name.en || '').localeCompare(b.name.en || '')
+        })
+        waves.push({ position, monsters })
+      }
+      return waves
     }
 
     const bucketKey = `${mode}|${labelDict.en}`
     const bucket = byMode.get(bucketKey) ?? { mode, label: labelDict, stages: [] }
-    bucket.stages.push(stage)
+
+    if (alTiers) {
+      // AL dungeon → one StageEntry per tier. Composite id keeps each tier
+      // addressable independently; `recommendLevel` = `monsterLevel` so the
+      // picker sorts naturally by difficulty within an AL dungeon.
+      for (const tier of alTiers) {
+        const waves = buildWaves(tier.monsterLevel, tier.bossHp, tier.advantage)
+        if (waves.length === 0) continue
+        bucket.stages.push({
+          id: `${d.ID}@al${tier.alLevel}`,
+          name: stageName,
+          chapter,
+          season,
+          episodeNum,
+          stageNum: null,
+          recommendLevel: tier.monsterLevel,
+          waves,
+          alLevel: tier.alLevel,
+        })
+        totalStages++
+      }
+    } else {
+      const waves = buildWaves(null, null, null)
+      if (waves.length === 0) continue
+      bucket.stages.push({
+        id: d.ID,
+        name: stageName,
+        chapter,
+        season,
+        episodeNum,
+        stageNum: null,
+        recommendLevel: num(d.RecommandLevel),
+        waves,
+      })
+      totalStages++
+    }
+
     byMode.set(bucketKey, bucket)
-    totalStages++
   }
 
   const modes: ModeEntry[] = Array.from(byMode.values())

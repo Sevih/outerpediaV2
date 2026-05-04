@@ -62,7 +62,8 @@ export interface DamageCalcMonsterEntry {
   subClass: string
   /** Star count — 1/2/3 — drives the star overlay on the portrait. */
   basicStar: number
-  /** Spawn level for this monster in this stage. */
+  /** Spawn level for this monster in this stage. AL Mission stages bake one
+   *  StageEntry per AL Level — the level here matches the stage's tier. */
   level: number
   stats: DamageCalcMonsterStats
   /** Wave index within the stage (`SpawnID_Pos{position}`). */
@@ -77,7 +78,8 @@ export interface DamageCalcWaveEntry {
 }
 
 export interface DamageCalcStageEntry {
-  /** DungeonTemplet.ID — stable across releases. */
+  /** Stable identifier — `DungeonTemplet.ID` for plain stages,
+   *  `${dungeonId}@al${alLevel}` for the per-AL-Level expansion. */
   id: string
   /** Stage display name (LangDict). For story this is the storyline title. */
   name: DamageCalcLangDict
@@ -89,9 +91,18 @@ export interface DamageCalcStageEntry {
   episodeNum: number | null
   /** Story per-episode stage number (e.g. 12 for "1-12"). null for non-story. */
   stageNum: number | null
-  /** `RecommandLevel` from DungeonTemplet — drives the stage sort. */
+  /** Recommended level — `DungeonTemplet.RecommandLevel` for plain stages,
+   *  the per-tier `monsterLevel` for AL stages (so the picker sorts by
+   *  difficulty within an AL dungeon). */
   recommendLevel: number
   waves: DamageCalcWaveEntry[]
+  /**
+   * Adventure License level (1..10) when this stage is the per-tier
+   * expansion of a DM_ADVENTURE_MISSION / DM_ADVENTURE_CHALLENGE dungeon.
+   * Undefined for plain stages. The UI suffixes the picker label with
+   * "AL Lv {alLevel}" so users can pick the difficulty inline.
+   */
+  alLevel?: number
 }
 
 export interface DamageCalcModeEntry {

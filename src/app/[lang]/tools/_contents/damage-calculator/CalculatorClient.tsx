@@ -126,6 +126,10 @@ export default function CalculatorClient({
   // mode (DM_ADVENTURE_MISSION / _CHALLENGE). Combined with the AL quirk
   // toggle, this folds the AL stat-bonus contribution into the prefilled
   // sheet. Manual targets have no mode → AL contribution stays off.
+  // Derive whether the picked target sits in an Adventure License dungeon
+  // mode (DM_ADVENTURE_MISSION / _CHALLENGE). Combined with the AL quirk
+  // toggle, this folds the AL stat-bonus contribution into the prefilled
+  // sheet. Manual targets have no mode → AL contribution stays off.
   const inAdvLicenseMode = useMemo(() => {
     if (target.mode !== 'cascade' || !target.stageId) return false
     for (const m of monsters.modes) {
