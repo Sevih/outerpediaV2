@@ -350,12 +350,15 @@ async function writeItemsJson(items: Item[]) {
 }
 
 async function loadAll() {
-  const [templet, textItem, current] = await Promise.all([
+  // Items reference text from TextItem (ITEM_* IDs) AND TextSystem (SYS_* IDs, e.g. event coins)
+  const [templet, textItem, textSystem, current] = await Promise.all([
     loadTable<ItemTempletRow>('ItemTemplet'),
     loadTable<TextRow>('TextItem'),
+    loadTable<TextRow>('TextSystem'),
     fs.readFile(ITEMS_PATH, 'utf-8').then(s => JSON.parse(s) as Item[]).catch(() => [] as Item[]),
   ]);
-  const text = buildTextLookup(textItem);
+  // Merge both lookups; TextItem wins on ID collision (unlikely since prefixes differ)
+  const text = buildTextLookup([...textSystem, ...textItem]);
   const extracted = extractFromTemplet(templet, text);
   return { extracted, current };
 }
@@ -367,7 +370,9 @@ export async function GET(req: NextRequest) {
   if (blocked) return blocked;
 
   try {
-    const action = req.nextUrl.searchParams.get('action') ?? 'compare';
+    // Default 'full' returns the rich shape used by the items-extractor page.
+    // 'compare' / 'list' use dashboard-compatible shapes (matching extractor-v3 endpoints).
+    const action = req.nextUrl.searchParams.get('action') ?? 'full';
     const { extracted, current } = await loadAll();
 
     if (action === 'preview') {
@@ -375,6 +380,18 @@ export async function GET(req: NextRequest) {
     }
 
     const result = await diffItems(extracted, current);
+    const newCount = result.diffs.filter(d => d.status === 'new').length;
+    const withDiffs = result.diffs.filter(d => d.status !== 'new').length;
+    const total = result.totalExtracted;
+
+    if (action === 'compare') {
+      // Dashboard summary: counts existing items needing updates (new items reported via 'list')
+      return NextResponse.json({ total, ok: total - withDiffs - newCount, withDiffs });
+    }
+    if (action === 'list') {
+      return NextResponse.json({ new: newCount });
+    }
+
     return NextResponse.json(result);
   } catch (e) {
     return NextResponse.json(

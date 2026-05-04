@@ -35,6 +35,7 @@ const DIFF_CHECKS: Omit<DiffCheck, 'status'>[] = [
   { label: 'Accessories', api: '/api/admin/extractor-v3/equip/accessory?action=compare', href: '/admin/extractor-v3/equip/accessories' },
   { label: 'Armor Sets', api: '/api/admin/extractor-v3/equip/armor?action=compare', href: '/admin/extractor-v3/equip/armors' },
   { label: 'Talismans', api: '/api/admin/extractor-v3/equip/talisman?action=compare', href: '/admin/extractor-v3/equip/talismans' },
+  { label: 'Items', api: '/api/admin/utils/items-extractor?action=compare', href: '/admin/utils/items-extractor' },
 ];
 
 
