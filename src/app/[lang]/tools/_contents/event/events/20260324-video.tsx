@@ -405,6 +405,25 @@ const Page = () => {
             <p className="text-zinc-400">{l.resultsIntro}</p>
           </div>
 
+          <div className="space-y-3 rounded-lg border border-zinc-700/50 bg-zinc-800/40 p-4 text-sm text-zinc-300">
+            <p>
+              {l.rickShoutoutPrefix}
+              <a
+                href="https://youtu.be/dQw4w9WgXcQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-rose-300 underline-offset-2 transition hover:text-rose-200 hover:underline"
+              >
+                Rick
+              </a>
+              {l.rickShoutoutSuffix}
+            </p>
+            <p>{l.pendingVideos}</p>
+            <p>
+              {l.couponNotePrefix} <code className="rounded bg-rose-500/10 px-2 py-0.5 font-mono text-rose-300">OUTERPEDIA1YEAR</code> {l.couponNoteSuffix}
+            </p>
+          </div>
+
           {podium.some(Boolean) && (
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {podium.map((entry, i) =>
@@ -436,25 +455,6 @@ const Page = () => {
               </div>
             </div>
           )}
-
-          <div className="space-y-3 rounded-lg border border-zinc-700/50 bg-zinc-800/40 p-4 text-sm text-zinc-300">
-            <p>
-              {l.rickShoutoutPrefix}
-              <a
-                href="https://youtu.be/dQw4w9WgXcQ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-rose-300 underline-offset-2 transition hover:text-rose-200 hover:underline"
-              >
-                Rick
-              </a>
-              {l.rickShoutoutSuffix}
-            </p>
-            <p>{l.pendingVideos}</p>
-            <p>
-              {l.couponNotePrefix} <code className="rounded bg-rose-500/10 px-2 py-0.5 font-mono text-rose-300">OUTERPEDIA1YEAR</code> {l.couponNoteSuffix}
-            </p>
-          </div>
         </section>
       )}
 
