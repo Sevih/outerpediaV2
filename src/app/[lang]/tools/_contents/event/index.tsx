@@ -53,11 +53,26 @@ export default function EventTool() {
   const [statusFilter, setStatusFilter] = useState<EventStatus[]>([]);
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
 
-  // Auto-expand event from URL hash (e.g. /event#20260201-video)
+  // Auto-expand event from URL hash (e.g. /event#20260201-video) and scroll to it
   useEffect(() => {
     const hash = window.location.hash.slice(1);
-    if (hash) setExpandedSlug(decodeURIComponent(hash));
+    if (!hash) return;
+    const slug = decodeURIComponent(hash);
+    setExpandedSlug(slug);
+    // Defer to let the expanded content render before scrolling
+    requestAnimationFrame(() => {
+      document.getElementById(slug)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }, []);
+
+  function toggleExpand(slug: string) {
+    setExpandedSlug(prev => {
+      const next = prev === slug ? null : slug;
+      const hash = next ? `#${next}` : '';
+      history.replaceState(null, '', window.location.pathname + window.location.search + hash);
+      return next;
+    });
+  }
 
   const events = useMemo(() => {
     // Filter out hidden events in production
@@ -119,12 +134,13 @@ export default function EventTool() {
           return (
             <article
               key={meta.slug}
-              className={`rounded-lg border bg-zinc-800/50 ${status === 'ended' ? 'border-zinc-700/30 opacity-60' : status === 'hidden' ? 'border-pink-500/20 border-dashed' : 'border-zinc-700/50'}`}
+              id={meta.slug}
+              className={`scroll-mt-24 rounded-lg border bg-zinc-800/50 ${status === 'ended' ? 'border-zinc-700/30' : status === 'hidden' ? 'border-pink-500/20 border-dashed' : 'border-zinc-700/50'}`}
             >
               {/* Header */}
               <button
                 type="button"
-                onClick={() => setExpandedSlug(prev => (prev === meta.slug ? null : meta.slug))}
+                onClick={() => toggleExpand(meta.slug)}
                 className="flex w-full items-center gap-3 px-4 py-3 text-left transition hover:bg-zinc-700/30"
               >
                 {/* Status badge */}

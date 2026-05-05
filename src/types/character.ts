@@ -170,6 +170,15 @@ export type CharacterSynergies = {
   partner: CharacterPartner[];
 };
 
+/** Extra video entry for a character (in addition to legacy `character.video`) */
+export type CharacterVideo = {
+  platform: 'youtube' | 'twitch' | 'bilibili';
+  id: string;
+  title: string;
+  author?: string;
+  label?: string;
+};
+
 /** Enriched character entry for the list page (includes filter data) */
 export type CharacterListEntry = WithLocalizedFields<{
   ID: string;

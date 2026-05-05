@@ -4,7 +4,7 @@ import type { Lang } from '@/lib/i18n/config';
 import { LANGS, SUFFIX_LANGS } from '@/lib/i18n/config';
 import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT } from '@/i18n';
-import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners, getCharacterById, resolveIdToSlug } from '@/lib/data/characters';
+import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners, getCharacterVideos, getCharacterById, resolveIdToSlug } from '@/lib/data/characters';
 import { getExclusiveEquipment, getWeapons, getAmulets, getTalismans, getArmorSets } from '@/lib/data/equipment';
 import { getReviewsForCharacter } from '@/lib/data/reviews';
 import { getBossDisplayMap } from '@/lib/data/bosses';
@@ -82,12 +82,13 @@ export default async function CharacterDetailPage({ params }: Props) {
   const { lang: rawLang, slug } = await params;
   const lang = rawLang as Lang;
 
-  const [character, reco, recoPresets, prosCons, partners, eeMap, allWeapons, allAmulets, allTalismans, allSets, tagsRaw, giftItemsMap, buffsArr, debuffsArr, reviews] = await Promise.all([
+  const [character, reco, recoPresets, prosCons, partners, extraVideos, eeMap, allWeapons, allAmulets, allTalismans, allSets, tagsRaw, giftItemsMap, buffsArr, debuffsArr, reviews] = await Promise.all([
     getCharacter(slug),
     getCharacterReco(slug),
     getRecoPresets(),
     getCharacterProsCons(slug),
     getCharacterPartners(slug),
+    getCharacterVideos(slug),
     getExclusiveEquipment(),
     getWeapons(),
     getAmulets(),
@@ -208,6 +209,7 @@ export default async function CharacterDetailPage({ params }: Props) {
         coreFusionLink={coreFusionLink}
         bossMap={bossMap}
         reviews={reviews}
+        extraVideos={extraVideos}
       />
     </>
   );

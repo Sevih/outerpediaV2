@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import type { Character, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies } from '@/types/character';
+import type { Character, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies, CharacterVideo } from '@/types/character';
 import type { ExclusiveEquipment, ResolvedCharacterReco, BossDisplayMap } from '@/types/equipment';
 import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
 import type { Item } from '@/types/item';
@@ -23,7 +23,7 @@ import SynergiesSection from '@/app/components/character/SynergiesSection';
 import CoreFusionBanner from '@/app/components/character/CoreFusionBanner';
 import type { CoreFusionLink } from '@/app/components/character/CoreFusionBanner';
 import ReviewsSection from '@/app/components/character/ReviewsSection';
-import YouTubeEmbed from '@/app/components/ui/YouTubeEmbed';
+import MultiVideoEmbed, { type VideoItem } from '@/app/components/ui/MultiVideoEmbed';
 
 type TagEntry = {
   label: string;
@@ -52,6 +52,7 @@ type Props = {
   coreFusionLink: CoreFusionLink | null;
   bossMap: BossDisplayMap;
   reviews: Review[];
+  extraVideos: CharacterVideo[];
 };
 
 export default function CharacterDetailClient({
@@ -73,6 +74,7 @@ export default function CharacterDetailClient({
   coreFusionLink,
   bossMap,
   reviews,
+  extraVideos,
 }: Props) {
   const { t } = useI18n();
 
@@ -82,7 +84,20 @@ export default function CharacterDetailClient({
   const hasChainPassive = !!character.skills.SKT_CHAIN_PASSIVE;
   const hasSynergies = !!partners && partners.partner.length > 0;
   const hasReviews = reviews.length > 0;
-  const hasVideo = !!character.video;
+
+  const videos = useMemo<VideoItem[]>(() => {
+    const list: VideoItem[] = [];
+    if (character.video) {
+      list.push({
+        platform: 'youtube',
+        id: character.video,
+        title: t('page.character.toc.video'),
+      });
+    }
+    list.push(...extraVideos);
+    return list;
+  }, [character.video, extraVideos, t]);
+  const hasVideo = videos.length > 0;
   const hasBurst = !!(['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE'] as const).find(
     (k) => character.skills[k]?.burnEffect && Object.keys(character.skills[k]!.burnEffect!).length > 0
   );
@@ -168,7 +183,7 @@ export default function CharacterDetailClient({
         {hasVideo && (
           <section id="video">
             <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.video')}</h2>
-            <YouTubeEmbed videoId={character.video!} title={t('page.character.toc.video')} />
+            <MultiVideoEmbed videos={videos} hashPrefix="video" />
           </section>
         )}
       </div>

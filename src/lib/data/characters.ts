@@ -1,6 +1,6 @@
 import { readFile } from 'fs/promises';
 import { join } from 'path';
-import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies } from '@/types/character';
+import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies, CharacterVideo } from '@/types/character';
 import type { CharacterReco, RecoPresets } from '@/types/equipment';
 
 const CHARS_DIR = join(process.cwd(), 'data/character');
@@ -13,6 +13,7 @@ const SLUG_TO_ID_PATH = join(process.cwd(), 'data/generated/characters-slug-to-i
 const STATS_PATH = join(process.cwd(), 'data/generated/character-stats.json');
 const PROS_CONS_PATH = join(process.cwd(), 'data/pros-cons.json');
 const PARTNERS_PATH = join(process.cwd(), 'data/partners.json');
+const VIDEOS_PATH = join(process.cwd(), 'data/character-videos.json');
 
 type SlugToIdMap = Record<string, string>;
 
@@ -144,5 +145,16 @@ export async function getCharacterPartners(slug: string): Promise<CharacterSyner
     return all[slug] ?? null;
   } catch {
     return null;
+  }
+}
+
+/** Get extra video entries (in addition to legacy `character.video`) for a character by slug */
+export async function getCharacterVideos(slug: string): Promise<CharacterVideo[]> {
+  try {
+    const raw = await readFile(VIDEOS_PATH, 'utf-8');
+    const all = JSON.parse(raw) as Record<string, CharacterVideo[]>;
+    return all[slug] ?? [];
+  } catch {
+    return [];
   }
 }

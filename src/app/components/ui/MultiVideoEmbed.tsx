@@ -69,7 +69,14 @@ export default function MultiVideoEmbed({ videos, hashPrefix }: Props) {
   }
 
   const items = videos.map((v) => v.id);
-  const labels = videos.map((v) => v.label ?? v.title);
+  const labels = videos.map((v) => {
+    const text = v.label ?? v.title;
+    return (
+      <span title={text} className="block max-w-32 truncate sm:max-w-48">
+        {text}
+      </span>
+    );
+  });
   const active = videos.find((v) => v.id === activeId) ?? videos[0];
 
   return (

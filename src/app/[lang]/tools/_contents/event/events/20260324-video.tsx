@@ -1,7 +1,99 @@
+import Image from 'next/image';
 import ItemInline from '@/app/components/inline/ItemInline';
+import MultiVideoEmbed, { type VideoItem } from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import type { Lang } from '@/lib/i18n/config';
 import type { EventDef } from '../types';
+
+// ---------------------------------------------------------------------------
+// Results data — fill in once winners are known
+// ---------------------------------------------------------------------------
+
+type ResultEntry = {
+  author: string;
+  platform: VideoItem['platform'];
+  videoId: string;
+  title: string;
+};
+
+const podium: [ResultEntry | null, ResultEntry | null, ResultEntry | null] = [
+  { author: '39_mikulove', platform: 'youtube', videoId: 'pIQNseGWDBg', title: 'Snow - Outerpedia Event' },
+  { author: 'SkyNova', platform: 'youtube', videoId: 'G1AvFRJFVSE', title: 'OUTERPLANE RTA TACTICS LEAGUE: REVIEW' },
+  { author: 'adjen', platform: 'youtube', videoId: 'v_6s_T5hTG0', title: 'Gnosis Domine Guide & Review! [ Outerplane ]' },
+];
+
+const otherEntries: ResultEntry[] = [
+  { author: 'Hiragami', platform: 'youtube', videoId: 'e2r-aoutmgs', title: 'Outerplane: Poison Goes BOOM BOOM!' },
+  { author: 'puyotchi#8704', platform: 'youtube', videoId: 'On_dL9Cbfwo', title: '【アウタープレーン】キャラの必殺技を合体攻撃風にしてみた' },
+  { author: 'wintrydance', platform: 'bilibili', videoId: 'BV11EXHBNEt2', title: '游戏开荒攻略：异域战记。主角色配队与自动推图' },
+  { author: 'yu__zzi', platform: 'youtube', videoId: 'MhQAqceZV0Q', title: "[아우터플레인] 역대급 사기캐 '그노시스 도미네' 등장! | 성능 및 나홀로 결투장" },
+  { author: 'elara301', platform: 'bilibili', videoId: 'BV1aKXGBHEhA', title: '【异域战记】实用小技巧之皮肤篇' },
+  { author: '엘유#5059', platform: 'youtube', videoId: 'Gu6hNcjORfQ', title: "[아우터 플레인 / OUTERPLANE ] 간?단하게 신규 동료 그노시스 도미네 간단하게 살펴보는 영상 'ㅂ')/" },
+];
+
+const hasResults = podium.some(Boolean) || otherEntries.length > 0;
+
+function getVideoUrl({ platform, videoId }: ResultEntry): string {
+  switch (platform) {
+    case 'youtube':
+      return `https://youtu.be/${videoId}`;
+    case 'twitch':
+      return `https://www.twitch.tv/videos/${videoId}`;
+    case 'bilibili':
+      return `https://www.bilibili.com/video/${videoId}`;
+  }
+}
+
+function getThumbnailUrl(entry: ResultEntry): string | null {
+  if (entry.platform === 'youtube') {
+    return `https://img.youtube.com/vi/${entry.videoId}/hqdefault.jpg`;
+  }
+  return null;
+}
+
+function toVideoItem(entry: ResultEntry): VideoItem {
+  return {
+    platform: entry.platform,
+    id: entry.videoId,
+    title: entry.title,
+    author: entry.author,
+  };
+}
+
+function VideoCard({ entry }: { entry: ResultEntry }) {
+  const thumb = getThumbnailUrl(entry);
+  return (
+    <a
+      href={getVideoUrl(entry)}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex flex-col overflow-hidden rounded-lg border border-zinc-700/50 bg-zinc-800/40 transition hover:border-rose-500/40 hover:bg-zinc-800/60"
+    >
+      <div className="relative aspect-video w-full bg-zinc-900">
+        {thumb ? (
+          <Image
+            src={thumb}
+            alt={entry.title}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition group-hover:scale-[1.02]"
+            unoptimized
+          />
+        ) : (
+          <div className="flex h-full items-center justify-center text-xs uppercase tracking-wide text-zinc-500">
+            {entry.platform}
+          </div>
+        )}
+      </div>
+      <div className="flex flex-col gap-0.5 p-2.5">
+        <span className="line-clamp-2 text-sm font-medium text-zinc-100 group-hover:text-rose-300">
+          {entry.title}
+        </span>
+        <span className="text-xs text-zinc-400">{entry.author}</span>
+      </div>
+    </a>
+  );
+}
 
 // ---------------------------------------------------------------------------
 // Translations
@@ -64,6 +156,17 @@ const i18n = {
     entries: 'Event Entries',
     entriesDesc: 'Please tell us where to find your submission using the form below:',
     entriesButton: 'Submit your Entry',
+    results: 'Results',
+    resultsIntro: 'The hero video event has now ended! Every one of the 9 participants receives an extra 3 000 ether coupon in addition to their prize.',
+    podium1st: '1st place',
+    podium2nd: '2nd place',
+    podium3rd: '3rd place',
+    otherEntries: 'Other Entries',
+    rickShoutoutPrefix: "Special shoutout to everyone's honorary hero, ",
+    rickShoutoutSuffix: '!',
+    pendingVideos: "For video projects that weren't ready in time, Outerpedia will still feature them once completed.",
+    couponNotePrefix: "Don't forget to redeem coupon code",
+    couponNoteSuffix: '— available to all players. Sevih will distribute prize coupon codes to participants via Discord, so make sure he can reach you.',
   },
   jp: {
     intro:
@@ -121,6 +224,17 @@ const i18n = {
     entries: 'エントリー',
     entriesDesc: '以下のフォームから提出先をお知らせください：',
     entriesButton: 'エントリーを提出',
+    results: '結果',
+    resultsIntro: 'ヒーロー動画イベントが終了しました！9名の参加者全員が、賞品とは別に3 000エーテルのクーポンを追加で受け取ります。',
+    podium1st: '1位',
+    podium2nd: '2位',
+    podium3rd: '3位',
+    otherEntries: 'その他のエントリー',
+    rickShoutoutPrefix: 'みんなの名誉ヒーロー、',
+    rickShoutoutSuffix: 'に特別な感謝を！',
+    pendingVideos: '間に合わなかった動画プロジェクトも、完成次第Outerpediaで紹介します。',
+    couponNotePrefix: 'クーポンコードの引き換えをお忘れなく',
+    couponNoteSuffix: '— 全プレイヤー対象。賞品クーポンコードはSevihがDiscordで配布しますので、連絡が取れるようにしてください。',
   },
   kr: {
     intro:
@@ -178,6 +292,17 @@ const i18n = {
     entries: '참가 작품',
     entriesDesc: '아래 양식을 통해 제출물의 위치를 알려주세요:',
     entriesButton: '참가 제출',
+    results: '결과',
+    resultsIntro: '히어로 영상 이벤트가 종료되었습니다! 9명의 참가자 모두가 상품과 별도로 3 000 에테르 쿠폰을 추가로 받습니다.',
+    podium1st: '1위',
+    podium2nd: '2위',
+    podium3rd: '3위',
+    otherEntries: '기타 참가작',
+    rickShoutoutPrefix: '모두의 명예 히어로 ',
+    rickShoutoutSuffix: '에게 특별한 감사를!',
+    pendingVideos: '제때 완성되지 못한 영상 프로젝트도 완성되는 대로 Outerpedia에서 소개됩니다.',
+    couponNotePrefix: '쿠폰 코드 사용을 잊지 마세요',
+    couponNoteSuffix: '— 모든 플레이어 대상. 상품 쿠폰 코드는 Sevih가 Discord를 통해 배포하므로 연락이 가능하도록 해주세요.',
   },
   zh: {
     intro:
@@ -235,6 +360,17 @@ const i18n = {
     entries: '参赛作品',
     entriesDesc: '请通过以下表格告诉我们你的提交在哪里：',
     entriesButton: '提交参赛作品',
+    results: '结果',
+    resultsIntro: '英雄视频活动已结束！9位参与者每人都将在原有奖品之外，额外获得3 000以太币优惠券。',
+    podium1st: '第1名',
+    podium2nd: '第2名',
+    podium3rd: '第3名',
+    otherEntries: '其他参赛作品',
+    rickShoutoutPrefix: '特别感谢大家的荣誉同伴',
+    rickShoutoutSuffix: '！',
+    pendingVideos: '未能及时完成的视频项目，Outerpedia会在完成后继续展示。',
+    couponNotePrefix: '别忘了兑换优惠码',
+    couponNoteSuffix: '— 所有玩家均可使用。奖品优惠码将由Sevih通过Discord发放给参与者，请确保能联系到你。',
   },
 } as const satisfies Record<Lang, Record<string, string>>;
 
@@ -246,6 +382,13 @@ const Page = () => {
   const { lang } = useI18n();
   const l = i18n[lang];
 
+  const podiumLabels = [l.podium1st, l.podium2nd, l.podium3rd];
+  const podiumAccents = [
+    'border-amber-400/60 bg-amber-500/10',
+    'border-zinc-300/40 bg-zinc-400/10',
+    'border-orange-500/50 bg-orange-600/10',
+  ];
+
   return (
     <div className="space-y-10 text-zinc-200">
       <div className="mx-auto max-w-2xl space-y-3 text-center">
@@ -254,6 +397,66 @@ const Page = () => {
           {l.publisherNote}
         </p>
       </div>
+
+      {hasResults && (
+        <section className="space-y-6">
+          <div className="space-y-2 text-center">
+            <h3 className="text-3xl font-extrabold tracking-tight text-rose-300">{l.results}</h3>
+            <p className="text-zinc-400">{l.resultsIntro}</p>
+          </div>
+
+          {podium.some(Boolean) && (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {podium.map((entry, i) =>
+                entry ? (
+                  <div
+                    key={i}
+                    className={`flex flex-col gap-3 rounded-xl border p-4 ${podiumAccents[i]} ${i === 0 ? 'lg:col-span-3' : ''}`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-bold uppercase tracking-wide text-zinc-100">
+                        {podiumLabels[i]}
+                      </span>
+                      <span className="text-xs text-zinc-400">{entry.author}</span>
+                    </div>
+                    <MultiVideoEmbed videos={[toVideoItem(entry)]} />
+                  </div>
+                ) : null
+              )}
+            </div>
+          )}
+
+          {otherEntries.length > 0 && (
+            <div className="space-y-3">
+              <h4 className="text-xl font-semibold text-zinc-100">{l.otherEntries}</h4>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {otherEntries.map((entry) => (
+                  <VideoCard key={entry.videoId} entry={entry} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="space-y-3 rounded-lg border border-zinc-700/50 bg-zinc-800/40 p-4 text-sm text-zinc-300">
+            <p>
+              {l.rickShoutoutPrefix}
+              <a
+                href="https://youtu.be/dQw4w9WgXcQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-rose-300 underline-offset-2 transition hover:text-rose-200 hover:underline"
+              >
+                Rick
+              </a>
+              {l.rickShoutoutSuffix}
+            </p>
+            <p>{l.pendingVideos}</p>
+            <p>
+              {l.couponNotePrefix} <code className="rounded bg-rose-500/10 px-2 py-0.5 font-mono text-rose-300">OUTERPEDIA1YEAR</code> {l.couponNoteSuffix}
+            </p>
+          </div>
+        </section>
+      )}
 
       <section>
         <h3 className="mb-3 text-2xl font-bold">{l.prizes}</h3>
@@ -314,18 +517,20 @@ const Page = () => {
         </ul>
       </section>
 
-      <section className="space-y-3 text-center">
-        <h3 className="text-2xl font-bold">{l.entries}</h3>
-        <p className="text-zinc-300">{l.entriesDesc}</p>
-        <a
-          href="https://forms.gle/MHb8S3DwjRtRZkGSA"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-2 inline-block rounded-lg bg-rose-600 px-6 py-3 font-semibold text-white transition hover:bg-rose-500"
-        >
-          {l.entriesButton}
-        </a>
-      </section>
+      {!hasResults && (
+        <section className="space-y-3 text-center">
+          <h3 className="text-2xl font-bold">{l.entries}</h3>
+          <p className="text-zinc-300">{l.entriesDesc}</p>
+          <a
+            href="https://forms.gle/MHb8S3DwjRtRZkGSA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block rounded-lg bg-rose-600 px-6 py-3 font-semibold text-white transition hover:bg-rose-500"
+          >
+            {l.entriesButton}
+          </a>
+        </section>
+      )}
     </div>
   );
 };

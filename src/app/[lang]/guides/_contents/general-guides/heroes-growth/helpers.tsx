@@ -4,7 +4,6 @@ import { Fragment, type ReactNode } from 'react';
 import type { Lang } from '@/lib/i18n/config';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
-import type { LangMap } from '@/types/common';
 
 import { StarBadge } from '@/app/components/ui/StarIcons';
 
