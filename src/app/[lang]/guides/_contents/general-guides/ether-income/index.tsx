@@ -19,6 +19,7 @@ import {
     GUILD_RAID_REWARDS,
     WORLD_BOSS_REWARDS,
     WORLD_BOSS_LEAGUES,
+    SINGULARITY_RANKING_REWARDS,
     type WorldBossLeague,
     type Source,
     fmt,
@@ -102,6 +103,7 @@ function CompactAdjustments({
     const arenaTxt = pickLabel(LABELS.arenaRanks, ARENA_REWARDS, overrides['weekly.arena'])
     const guildTxt = pickLabel(LABELS.guildRanks, GUILD_RAID_REWARDS, overrides['monthly.guildRaid'])
     const wbTxt = `${lRec(LABELS.wbLeagues[worldBossLeague], lang)} ${pickLabel(LABELS.wbRanks, WORLD_BOSS_REWARDS[worldBossLeague], overrides['monthly.worldBoss'])}`
+    const singTxt = pickLabel(LABELS.singularityRanks, SINGULARITY_RANKING_REWARDS, overrides['daily.singularityRanking'])
 
     return (
         <details className="mx-auto max-w-3xl rounded-xl border border-neutral-700">
@@ -109,7 +111,7 @@ function CompactAdjustments({
                 <span className="font-medium">{lRec(LABELS.advancedAdjustments, lang)}</span>
                 <br />
                 <span className="ml-2 text-[11px] text-zinc-500 truncate inline-block align-middle">
-                    ({lRec(LABELS.arena, lang)}: {arenaTxt} · {lRec(LABELS.guild, lang)}: {guildTxt} · WB: {wbTxt})
+                    ({lRec(LABELS.arena, lang)}: {arenaTxt} · {lRec(LABELS.guild, lang)}: {guildTxt} · WB: {wbTxt} · {lRec(LABELS.singularity, lang)}: {singTxt})
                 </span>
             </summary>
 
@@ -168,6 +170,21 @@ function CompactAdjustments({
                         </select>
                         <EtherAmountMini value={overrides['monthly.worldBoss']} />
                     </div>
+                    <br />
+                    {/* Dimensional Singularity */}
+                    <div className="flex items-center gap-2">
+                        <span className="w-16 shrink-0 text-zinc-400 whitespace-nowrap">{lRec(LABELS.singularity, lang)}</span>
+                        <select
+                            className="h-8 min-w-40 w-44 shrink-0 rounded-md bg-neutral-900 border border-neutral-700 px-2 text-xs"
+                            value={overrides['daily.singularityRanking']}
+                            onChange={(e) => setOverride('daily.singularityRanking', Number(e.target.value))}
+                        >
+                            {SINGULARITY_RANKING_REWARDS.map(opt => (
+                                <option key={opt.id} value={opt.value}>{lRec(LABELS.singularityRanks[opt.id], lang)}</option>
+                            ))}
+                        </select>
+                        <EtherAmountMini value={overrides['daily.singularityRanking']} />
+                    </div>
                 </div>
             </div>
         </details>
@@ -191,22 +208,26 @@ export default function EtherIncomeGuide() {
         'weekly.arena': DEFAULTS.arena,
         'monthly.guildRaid': DEFAULTS.guildRaid,
         'monthly.worldBoss': DEFAULTS.worldBoss.value,
+        'daily.singularityRanking': DEFAULTS.singularityRanking,
     })
 
     // World Boss UI state
     const [worldBossLeague, setWorldBossLeague] = useState<WorldBossLeague>(DEFAULTS.worldBoss.league)
 
+    const DAILY_SOURCES_LIVE = useMemo(() => withOverrides(DAILY_SOURCES, overrides), [overrides])
     const WEEKLY_SOURCES = useMemo(() => withOverrides(WEEKLY_SOURCES_BASE, overrides), [overrides])
     const MONTHLY_SOURCES = useMemo(() => withOverrides(MONTHLY_SOURCES_BASE, overrides), [overrides])
 
     const totals = useMemo(() => {
-        const dailyBase = sum(DAILY_SOURCES, 'daily')
+        const dailyBase = sum(DAILY_SOURCES_LIVE, 'daily')
+        const weeklyFromDaily = DAILY_SOURCES_LIVE.reduce((acc, s) => acc + (s.daily ?? 0) * (s.daysPerWeek ?? 7), 0)
+        const monthlyFromDaily = Math.round(weeklyFromDaily * 30 / 7)
         const weeklySpike = sum(WEEKLY_SOURCES, 'weekly')
         const monthlySpike = sum(MONTHLY_SOURCES, 'monthly')
-        const weeklyTotal = dailyBase * 7 + weeklySpike
-        const monthlyTotal = dailyBase * 30 + weeklySpike * 4 + monthlySpike
-        return { dailyBase, weeklySpike, monthlySpike, weeklyTotal, monthlyTotal }
-    }, [WEEKLY_SOURCES, MONTHLY_SOURCES])
+        const weeklyTotal = weeklyFromDaily + weeklySpike
+        const monthlyTotal = monthlyFromDaily + weeklySpike * 4 + monthlySpike
+        return { dailyBase, weeklyFromDaily, weeklySpike, monthlySpike, weeklyTotal, monthlyTotal }
+    }, [DAILY_SOURCES_LIVE, WEEKLY_SOURCES, MONTHLY_SOURCES])
 
     const [target, setTarget] = useState<string>('')
     const [currentStock, setCurrentStock] = useState<number>(0)
@@ -219,7 +240,7 @@ export default function EtherIncomeGuide() {
         const days = clampNonNeg(Math.floor(ms / (1000 * 60 * 60 * 24)) + 1)
         const weeks = Math.floor(days / 7)
         const monthsApprox = Math.floor(days / 30)
-        const fromDaily = totals.dailyBase * days
+        const fromDaily = Math.round(totals.weeklyFromDaily * days / 7)
         const fromWeekly = totals.weeklySpike * weeks
         const fromMonthly = totals.monthlySpike * monthsApprox
         const total = currentStock + fromDaily + fromWeekly + fromMonthly
@@ -242,6 +263,10 @@ export default function EtherIncomeGuide() {
         if (s.id === 'monthly.worldBoss') {
             const cur = WORLD_BOSS_REWARDS[worldBossLeague].find(o => o.value === s.monthly)
             if (cur) label += ` (${lRec(LABELS.wbLeagues[worldBossLeague], lang)} ${lRec(LABELS.wbRanks[cur.id], lang)})`
+        }
+        if (s.id === 'daily.singularityRanking') {
+            const cur = SINGULARITY_RANKING_REWARDS.find(o => o.value === s.daily)
+            if (cur) label += ` (${lRec(LABELS.singularityRanks[cur.id], lang)})`
         }
         return label
     }
@@ -298,9 +323,12 @@ export default function EtherIncomeGuide() {
             <SectionTable
                 title={lRec(LABELS.tableDaily, lang)}
                 head={[lRec(LABELS.source, lang), lRec(LABELS.daily, lang), lRec(LABELS.weeklyApprox, lang), lRec(LABELS.monthlyApprox, lang), lRec(LABELS.notes, lang)]}
-                rows={DAILY_SOURCES.map(s => [lRec(LABELS.sources[s.id], lang) || s.id, fmt(s.daily), fmt((s.daily ?? 0) * 7), fmt((s.daily ?? 0) * 30), getNote(s)])}
+                rows={DAILY_SOURCES_LIVE.map(s => {
+                    const dpw = s.daysPerWeek ?? 7
+                    return [getSourceLabel(s), fmt(s.daily), fmt((s.daily ?? 0) * dpw), fmt(Math.round((s.daily ?? 0) * dpw * 30 / 7)), getNote(s)]
+                })}
                 footerLabel={lRec(LABELS.dailySubtotal, lang)}
-                footerValues={[fmt(sum(DAILY_SOURCES, 'daily')), fmt(sum(DAILY_SOURCES, 'daily') * 7), fmt(sum(DAILY_SOURCES, 'daily') * 30)]}
+                footerValues={[fmt(totals.dailyBase), fmt(totals.weeklyFromDaily), fmt(Math.round(totals.weeklyFromDaily * 30 / 7))]}
             />
 
             <SectionTable

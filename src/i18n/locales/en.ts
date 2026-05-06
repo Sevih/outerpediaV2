@@ -978,6 +978,7 @@ const en = {
   'progress.task.memorial-match': 'Memorial Match',
   'progress.task.ad-stamina': 'Ad Stamina',
   'progress.task.infinite-corridor': 'The Infinite Corridor',
+  'progress.task.dimensional-singularity': 'Dimensional Singularity (Wed–Sat)',
   'progress.task.shop-daily-free-gift': 'Daily Free Gift',
   'progress.task.shop-weekly-free-gift': 'Weekly Free Gift',
   'progress.task.shop-monthly-free-gift': 'Monthly Free Gift',

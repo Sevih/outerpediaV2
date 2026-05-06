@@ -469,6 +469,7 @@ export const ProgressTracker = {
     const enabledDailyIds = settings.enabledTasks.daily.filter(
       (id) => {
         if (id === 'elemental-tower' && settings.hasCompletedElementalTower) return false
+        if (id === 'dimensional-singularity' && !this.isDimensionalSingularityActive()) return false
         return true
       }
     )
@@ -599,6 +600,7 @@ export const ProgressTracker = {
     const enabledDailyIds = settings.enabledTasks.daily.filter(
       (id) => {
         if (id === 'elemental-tower' && settings.hasCompletedElementalTower) return false
+        if (id === 'dimensional-singularity' && !this.isDimensionalSingularityActive()) return false
         return true
       }
     )
@@ -780,6 +782,12 @@ export const ProgressTracker = {
     resetAfterTime.setUTCDate(resetAfterTime.getUTCDate() + def.resetIntervalDays)
 
     return resetAfterTime.getTime()
+  },
+
+  isDimensionalSingularityActive(): boolean {
+    // Open Wed 00:00 UTC → Sat 23:59 UTC (UTC days 3..6)
+    const day = new Date().getUTCDay()
+    return day >= 3 && day <= 6
   },
 
   getVHTCurrentUnlockedPhase(): number {

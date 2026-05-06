@@ -978,6 +978,7 @@ const kr: Record<TranslationKey, string> = {
   'progress.task.memorial-match': '메모리얼 대전',
   'progress.task.ad-stamina': '광고 스태미나',
   'progress.task.infinite-corridor': '무한 회랑',
+  'progress.task.dimensional-singularity': '차원 특이점 (수~토)',
   'progress.task.shop-daily-free-gift': '일일 무료 선물',
   'progress.task.shop-weekly-free-gift': '주간 무료 선물',
   'progress.task.shop-monthly-free-gift': '월간 무료 선물',

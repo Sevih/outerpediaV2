@@ -4,6 +4,7 @@ export type Source = {
     daily?: number
     weekly?: number
     monthly?: number
+    daysPerWeek?: number // for daily sources only available some days/week (default 7)
 }
 
 export type RewardOption = {
@@ -19,6 +20,7 @@ export const DEFAULTS = {
         league: 'Extreme' as const,
         value: 200,             // Top 100% (Extreme)
     },
+    singularityRanking: 5,      // Top 100% (5/day, Wed–Sat)
 }
 
 // ============= Data =============
@@ -28,6 +30,7 @@ export const DAILY_SOURCES: Source[] = [
     { id: 'daily.freePack', daily: 15 },
     { id: 'daily.missionEvent', daily: 30 },
     { id: 'daily.antiparticle', daily: 78 },
+    { id: 'daily.singularityRanking', daily: 5, daysPerWeek: 4 }, // Wed–Sat, Top 100% default
 ]
 
 export const WEEKLY_SOURCES_BASE: Source[] = [
@@ -159,6 +162,21 @@ export const WORLD_BOSS_REWARDS: Record<WorldBossLeague, RewardOption[]> = {
     ],
 }
 
+// Dimensional Singularity Daily Ranking — daily values (per active day Wed–Sat)
+// Top 1% / 10% / 50% all give 10/day, merged into a single tier
+export const SINGULARITY_RANKING_REWARDS: RewardOption[] = [
+    { id: 'sing.top100pct', value: 5 },
+    { id: 'sing.tier-pct', value: 10 },      // Top 1% / 10% / 50%
+    { id: 'sing.top100', value: 15 },
+    { id: 'sing.top50', value: 20 },
+    { id: 'sing.top10', value: 25 },
+    { id: 'sing.top5', value: 30 },
+    { id: 'sing.top4', value: 35 },
+    { id: 'sing.top3', value: 40 },
+    { id: 'sing.top2', value: 45 },
+    { id: 'sing.top1', value: 50 },
+]
+
 // ============= Helpers =============
 export function fmt(n?: number) {
     if (n === undefined) return '–'
@@ -176,6 +194,7 @@ export function withOverrides(list: Source[], overrides: Record<string, number>)
     return list.map((s) => {
         const override = overrides[s.id]
         if (override === undefined) return s
+        if (typeof s.daily === 'number') return { ...s, daily: override }
         if (typeof s.weekly === 'number') return { ...s, weekly: override }
         if (typeof s.monthly === 'number') return { ...s, monthly: override }
         return s

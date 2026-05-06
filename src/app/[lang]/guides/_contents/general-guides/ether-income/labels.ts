@@ -18,6 +18,7 @@ export const LABELS = {
     arena: { en: 'Arena', jp: 'アリーナ', kr: '아레나', zh: '竞技场' } satisfies LangMap,
     guild: { en: 'Guild', jp: 'ギルド', kr: '길드', zh: '公会' } satisfies LangMap,
     worldBoss: { en: 'World Boss', jp: 'ワールドボス', kr: '월드 보스', zh: '世界Boss' } satisfies LangMap,
+    singularity: { en: 'Singularity', jp: '特異点', kr: '특이점', zh: '奇点' } satisfies LangMap,
 
     // Tables
     tableDaily: { en: 'Daily income', jp: '日次収入', kr: '일간 수입', zh: '日常收入' } satisfies LangMap,
@@ -70,6 +71,7 @@ export const LABELS = {
         'monthly.jointMission': { en: 'Joint Mission', jp: '共同ミッション', kr: '합동 미션', zh: '联合任务' },
         'monthly.guildRaid': { en: 'Guild Raid Ranking Reward', jp: 'ギルドレイドランキング報酬', kr: '길드 레이드 랭킹 보상', zh: '公会副本排名奖励' },
         'monthly.worldBoss': { en: 'World Boss Ranking Reward', jp: 'ワールドボスランキング報酬', kr: '월드 보스 랭킹 보상', zh: '世界Boss排名奖励' },
+        'daily.singularityRanking': { en: 'Dimensional Singularity Daily Ranking (Wed–Sat)', jp: '次元特異点 デイリーランキング (水〜土)', kr: '차원 특이점 일일 랭킹 (수~토)', zh: '次元奇点每日排名 (周三~周六)' },
     } as Record<string, LangMap>,
     sourceNotes: {
         'weekly.arena': { en: '35 minimum. Can go up to 1500 for rank 1.', jp: '最低35。1位で最大1500。', kr: '최소 35. 1위 시 최대 1500.', zh: '最低35。第1名最高1500。' },
@@ -148,6 +150,20 @@ export const LABELS = {
         'Hard': { en: 'Hard', jp: 'ハード', kr: '하드', zh: '困难' },
         'Very Hard': { en: 'Very Hard', jp: 'ベリーハード', kr: '베리 하드', zh: '超难' },
         'Extreme': { en: 'Extreme', jp: 'エクストリーム', kr: '익스트림', zh: '极限' },
+    } as Record<string, LangMap>,
+
+    // Singularity Daily Ranking ranks
+    singularityRanks: {
+        'sing.top100pct': { en: 'Top 100%', jp: 'Top 100%', kr: 'Top 100%', zh: 'Top 100%' },
+        'sing.tier-pct': { en: 'Top 50% / 10% / 1%', jp: 'Top 50% / 10% / 1%', kr: 'Top 50% / 10% / 1%', zh: 'Top 50% / 10% / 1%' },
+        'sing.top100': { en: 'Top 100', jp: 'Top 100', kr: 'Top 100', zh: 'Top 100' },
+        'sing.top50': { en: 'Top 50', jp: 'Top 50', kr: 'Top 50', zh: 'Top 50' },
+        'sing.top10': { en: 'Top 10', jp: 'Top 10', kr: 'Top 10', zh: 'Top 10' },
+        'sing.top5': { en: 'Top 5', jp: 'Top 5', kr: 'Top 5', zh: 'Top 5' },
+        'sing.top4': { en: 'Top 4', jp: 'Top 4', kr: 'Top 4', zh: 'Top 4' },
+        'sing.top3': { en: 'Top 3', jp: 'Top 3', kr: 'Top 3', zh: 'Top 3' },
+        'sing.top2': { en: 'Top 2', jp: 'Top 2', kr: 'Top 2', zh: 'Top 2' },
+        'sing.top1': { en: 'Top 1', jp: 'Top 1', kr: 'Top 1', zh: 'Top 1' },
     } as Record<string, LangMap>,
 
     // Variable items

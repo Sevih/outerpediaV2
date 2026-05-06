@@ -1,4 +1,4 @@
-export type TabKey = 'books' | 'transistones' | 'special' | 'glunite' | 'limit-break'
+export type TabKey = 'books' | 'transistones' | 'special' | 'singularity-gear' | 'glunite' | 'limit-break'
 export type SourceType = 'mission' | 'guild' | 'adventurer' | 'craft'
 
 export type ResourceSource = {
@@ -16,12 +16,13 @@ export type ResourceItem = {
 
 export type TimegateData = Record<TabKey, ResourceItem[]>
 
-export const TAB_KEYS: TabKey[] = ['books', 'transistones', 'special', 'glunite', 'limit-break']
+export const TAB_KEYS: TabKey[] = ['books', 'transistones', 'special', 'singularity-gear', 'glunite', 'limit-break']
 
 export const TAB_ICONS: Record<TabKey, string> = {
     books: '/images/items/TI_Item_Growth_Book_01.webp',
     transistones: '/images/items/TI_Item_Option_Change_02.webp',
     special: '/images/items/TI_EX_Equip_Growth_Enhance_01.webp',
+    'singularity-gear': '/images/items/TI_Equip_Monad_Growth_Enhance_01.webp',
     glunite: '/images/items/TI_Equipment_Growth02.webp',
     'limit-break': '/images/items/TI_CharacterCard_07.webp',
 }
@@ -134,6 +135,7 @@ export const data: TimegateData = {
             sources: [
                 { sourceKey: SK.IRREGULAR_EXTERMINATION_POINT, monthly: 300 },
                 { sourceKey: SK.KATES_WORKSHOP, weekly: 10, costItem: 'Blue Stardust', costAmount: 30 },
+                { sourceKey: SK.SINGULARITY_RANK_REWARD, weekly: 320 }, // 80/day × 4 days
             ],
         },
         {
@@ -141,6 +143,7 @@ export const data: TimegateData = {
             sources: [
                 { sourceKey: SK.IRREGULAR_EXTERMINATION_POINT, monthly: 150 },
                 { sourceKey: SK.KATES_WORKSHOP, weekly: 70 },
+                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 20 }, // 5/day × 4 days
             ],
         },
         {
@@ -148,6 +151,24 @@ export const data: TimegateData = {
             sources: [
                 { sourceKey: SK.IRREGULAR_EXTERMINATION_POINT, monthly: 300 },
                 { sourceKey: SK.KATES_WORKSHOP, weekly: 10, costItem: 'Blue Memory Stone', costAmount: 30 },
+                { sourceKey: SK.SINGULARITY_RANK_REWARD, weekly: 320 }, // 80/day × 4 days
+            ],
+        },
+    ],
+    'singularity-gear': [
+        {
+            name: 'High-Precision Chip',
+            sources: [
+                { sourceKey: SK.SINGULARITY_RANK_REWARD, weekly: 1280 },     // 320/day × 4 days
+                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 60 },         // 15/day × 4 days
+                { sourceKey: SK.SINGULARITY_DAILY_RANKING, weekly: '20–240' }, // 5–60/day × 4 days
+            ],
+        },
+        {
+            name: 'Reload Cartridge',
+            sources: [
+                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 80 },         // 20/day × 4 days
+                { sourceKey: SK.SINGULARITY_DAILY_RANKING, weekly: '40–160' }, // 10–40/day × 4 days
             ],
         },
     ],

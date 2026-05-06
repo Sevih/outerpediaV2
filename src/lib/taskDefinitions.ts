@@ -134,6 +134,14 @@ export const DAILY_TASK_DEFINITIONS: Record<string, TaskDefinition> = {
     permanent: true,
     maxCount: 10, // 10 ads × 18 stamina = 180 stamina/day
   },
+  'dimensional-singularity': {
+    id: 'dimensional-singularity',
+    type: 'daily',
+    category: 'task',
+    labelKey: 'progress.task.dimensional-singularity',
+    permanent: true,
+    maxCount: 2, // 2 entries/day, only available Wed–Sat (filtered in syncProgressWithSettings)
+  },
   // Recurring tasks (special cycle)
   'infinite-corridor': {
     id: 'infinite-corridor',

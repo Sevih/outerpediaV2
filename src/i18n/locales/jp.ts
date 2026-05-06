@@ -978,6 +978,7 @@ const jp: Record<TranslationKey, string> = {
   'progress.task.memorial-match': 'メモリアル対戦',
   'progress.task.ad-stamina': '広告スタミナ',
   'progress.task.infinite-corridor': '無限の回廊',
+  'progress.task.dimensional-singularity': '次元特異点 (水〜土)',
   'progress.task.shop-daily-free-gift': 'デイリープレゼント',
   'progress.task.shop-weekly-free-gift': 'ウィークリー無料プレゼント',
   'progress.task.shop-monthly-free-gift': 'マンスリー無料プレゼント',
