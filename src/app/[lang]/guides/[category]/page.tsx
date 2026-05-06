@@ -33,12 +33,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = t[titleKey] ?? category;
   const description = t[descKey] ?? t['page.guides.description'];
 
+  const ogImage = categoryData?.icon ? `${categoryData.icon}.png` : undefined;
+
   return createPageMetadata({
     lang,
     path: `/guides/${category}`,
     title,
     description,
     keywords: categoryData?.keywords,
+    ...(ogImage && { ogImage, ogImageSize: { width: 150, height: 150 } }),
   });
 }
 
