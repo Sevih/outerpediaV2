@@ -453,6 +453,7 @@ const zh: Record<TranslationKey, string> = {
   'guides.category.adventure-license': '冒险许可证',
   'guides.category.guild-raid': '公会突袭',
   'guides.category.world-boss': '世界Boss',
+  'guides.category.dimensional-singularity': '次元奇点',
   'guides.category.joint-challenge': '联合挑战',
   'guides.category.special-request': '特别委托',
   'guides.category.irregular-extermination': '异形怪歼灭战',
@@ -471,6 +472,20 @@ const zh: Record<TranslationKey, string> = {
     '公会突袭综合策略——学习首领机制、参考最佳队伍以获得最高伤害或是最高分数。',
   'guides.category.world-boss.desc':
     '在世界首领战极限联赛中实现SSS排名的综合策略：优化队伍设置、学习轮换技巧和伤害最大化策略。',
+  'guides.category.dimensional-singularity.desc':
+    '每日轮换的奇点Boss攻略：日程、机制、排名分数目标，以及奇点升华装备强化。',
+  'guides.category.dimensional-singularity.intro':
+    '次元奇点是从单子门切换至「次元奇点模式」进入的终局内容。每天会出现不同的奇点Boss，当日分数将决定排名与奖励。',
+  'guides.category.dimensional-singularity.unlock':
+    '解锁条件：通关单子门深层1的真结局。',
+  'guides.category.dimensional-singularity.schedule':
+    '每周三00:00 UTC至周六23:59 UTC开放。目标Boss每日00:00 UTC更换。每日2次挑战机会。',
+  'guides.category.dimensional-singularity.feature.repel':
+    '奇点击退：开始当日的Boss战斗。',
+  'guides.category.dimensional-singularity.feature.ascension':
+    '奇点升华装置：将达到最大强化和最大重铸的装备进行升华——获得+3次重铸机会，主属性数值提升。',
+  'guides.category.dimensional-singularity.feature.ranking':
+    '排名报告：根据前一日分数领取每日奖励。',
   'guides.category.joint-challenge.desc':
     '使用高级战略在"联合挑战"中获得更高分：获悉顶尖排名的队伍组合、技能时机安排及协同技巧。',
   'guides.category.special-request.desc':

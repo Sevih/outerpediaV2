@@ -552,15 +552,46 @@ export async function GET(req: NextRequest) {
     }
 
     // ─── action=search — for the CREATE flow ────────────────────────
+    // `?mode=location` searches by dungeon mode label / dungeon name /
+    // area name instead of the boss's own name. Useful to find every
+    // boss assigned to a freshly-added game mode (e.g. "Dimensional
+    // Singularity") so the user can create their @<dungeonId> variants.
     if (action === 'search') {
       const q = (searchParams.get('q') ?? '').trim()
       if (!q) return NextResponse.json({ items: [] })
-
+      const searchMode = (searchParams.get('mode') ?? 'name').toLowerCase()
       const monsters = listMonsters({ types: BOSS_TYPES })
-      const hits = searchMonstersByName(monsters, q)
-
-      // Enrich with type so the UI can group/badge results
       const byId = new Map(monsters.map((m) => [m.ID, m]))
+
+      if (searchMode === 'location') {
+        const qLower = q.toLowerCase()
+        const items: Array<{ id: string; name: string; type: string | null; existsLocally: boolean; matchedDungeon?: { id: string; name: string; mode: string } }> = []
+        for (const m of monsters) {
+          const ex = extractMonster(m.ID)
+          const locs = ex?._allLocations ?? []
+          if (locs.length === 0) continue
+          const hit = locs.find((l) => {
+            const fields = [l.modeLabel, l.dungeonName, l.areaName].filter(Boolean) as string[]
+            return fields.some((f) => f.toLowerCase().includes(qLower))
+          })
+          if (!hit) continue
+          const name = ex?.Name?.en ?? m.ID
+          items.push({
+            id: m.ID,
+            name,
+            type: m.Type ?? null,
+            // Since locations are the entry point here, an `<id>@<dungeonId>`
+            // file already carries that variant — flag the un-suffixed form.
+            existsLocally: fs.existsSync(path.join(BOSS_DIR, `${m.ID}@${hit.dungeonId}.json`))
+              || fs.existsSync(path.join(BOSS_DIR, `${m.ID}.json`)),
+            matchedDungeon: { id: hit.dungeonId, name: hit.dungeonName ?? '', mode: hit.modeLabel },
+          })
+        }
+        items.sort((a, b) => a.name.localeCompare(b.name))
+        return NextResponse.json({ items })
+      }
+
+      const hits = searchMonstersByName(monsters, q)
       const items = hits.map((h) => ({
         id: h.id,
         name: h.name,

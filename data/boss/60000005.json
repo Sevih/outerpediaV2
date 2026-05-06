@@ -1,0 +1,178 @@
+{
+  "id": "60000005",
+  "Name": {
+    "en": "Frozen Dragon of Phantasm Harshna",
+    "jp": "氷幻帝竜ハルシュナ",
+    "kr": "빙환제룡 하르슈나",
+    "zh": "冰幻帝龙赫索纳"
+  },
+  "Surname": {
+    "en": "Ancient Foe",
+    "jp": "古代の宿敵",
+    "kr": "고대의 숙적",
+    "zh": "远古宿敌"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 100,
+  "icons": "4086026",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "",
+  "location": {
+    "dungeon": {
+      "en": "[Singularity] - Resurrected Harshna",
+      "jp": "[特異点] - 復活したハルシュナ",
+      "kr": "[특이점] - 부활한 하르슈나",
+      "zh": "[奇点] - 复活的赫索纳"
+    },
+    "mode": {
+      "en": "Dimensional Singularity",
+      "jp": "次元特異点",
+      "kr": "차원 특이점",
+      "zh": "次元奇点"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Relentless Destruction",
+        "jp": "迷いなき破壊",
+        "kr": "거침없는 파괴",
+        "zh": "无尽破坏"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Prioritizes attacking the leftmost enemy.\\nIf the target is not a <color=#28d9ed>Defender</color>, dispels <color=#28d9ed>2</color> of own <color=#28d9ed>debuffs</color>.",
+        "jp": "最も左側にいる敵を優先的に攻撃する。\\n対象が<color=#28d9ed>防御型</color>でない場合、自分の<color=#28d9ed>弱体効果</color>を<color=#28d9ed>2個</color>解除する。",
+        "kr": "가장 좌측에 있는 적을 우선적으로 공격합니다. \\n대상이 <color=#28d9ed>방어형</color>이 아니라면 자신의 <color=#28d9ed>약화 효과</color>를 <color=#28d9ed>2개</color> 해제합니다.",
+        "zh": "优先攻击最左侧的敌人。\\n若目标非<color=#28d9ed>防御型</color>，解除自身<color=#28d9ed>2个</color><color=#28d9ed>弱化效果</color>。"
+      },
+      "icon": "Skill_First_4086026",
+      "buff": [
+        "BT_REMOVE_DEBUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Slaughtering Flutter",
+        "jp": "虐殺の羽ばたき",
+        "kr": "학살의 날개짓",
+        "zh": "屠杀振翅"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and dispels <color=#28d9ed>2</color> of own <color=#28d9ed>debuffs</color> and <color=#28d9ed>2</color> of the targets' <color=#28d9ed>buffs</color> respectively.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>弱体効果</color>と対象の<color=#28d9ed>強化効果</color>をそれぞれ<color=#28d9ed>2個</color>解除する。",
+        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>약화 효과</color>와 대상 <color=#28d9ed>강화 효과</color>를 각각 <color=#28d9ed>2개</color> 해제합니다.",
+        "zh": "攻击全体敌人，分别解除自身<color=#28d9ed>2个</color><color=#28d9ed>弱化效果</color>和目标<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>。"
+      },
+      "icon": "Skill_Second_4086026",
+      "buff": [
+        "BT_REMOVE_DEBUFF"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Advent of Ruin",
+        "jp": "没落の降臨",
+        "kr": "몰락의 강림",
+        "zh": "覆灭降临"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies.\\nIncreases own <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color> and increases <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>4 turns</color>.",
+        "jp": "敵全体にダメージを与える。\\n自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>増加させ、<color=#28d9ed>会心率</color>を<color=#28d9ed>4ターン</color>の間増加させる。",
+        "kr": "적 전체를 공격합니다.\\n자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color>증가시키고 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>4턴</color> 증가합니다.",
+        "zh": "攻击全体敌人。\\n使自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>，并使<color=#28d9ed>暴击率</color>在<color=#28d9ed>4回合</color>内提升。"
+      },
+      "icon": "Skill_Ultimate_4086026",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Death Denial",
+        "jp": "死の拒絶",
+        "kr": "죽음 거부",
+        "zh": "拒绝死亡"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "If self holds no <color=#28d9ed>debuffs</color>, WG DMG decreases by <color=#28d9ed>50%</color>.\\nIf self holds <color=#28d9ed>buffs</color>, Penetration increases by <color=#28d9ed>20%</color>.\\nCurse and Fixed DMG taken by the boss cannot exceed <color=#28d9ed>50000</color>.",
+        "jp": "自分が<color=#28d9ed>弱体効果</color>を保有しない場合、WGダメージが<color=#28d9ed>50%</color>減少する。\\n自分が<color=#28d9ed>強化効果</color>を保有する場合、貫通力が<color=#28d9ed>20%</color>UPする。\\nボスが受ける呪いおよび固定ダメージは<color=#28d9ed>50000</color>を超えない。",
+        "kr": "자신이 <color=#28d9ed>약화 효과</color>를 보유하지 않은 경우 WG 피해가 <color=#28d9ed>50%</color> 감소합니다\\n자신이 <color=#28d9ed>강화 효과</color>를 보유한 경우 관통력이 <color=#28d9ed>20%</color> 증가합니다.\\n보스가 받는 저주 및 고정 피해의 피해는 <color=#28d9ed>50,000</color>을 초과하지 않습니다.",
+        "zh": "若自身未持有<color=#28d9ed>弱化效果</color>，WG伤害减少<color=#28d9ed>50%</color>。\\n若自身持有<color=#28d9ed>强化效果</color>，穿透力增加<color=#28d9ed>20%</color>。\\n首领受到的诅咒及固定伤害不超过<color=#28d9ed>50000</color>。"
+      },
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Extreme Scales",
+        "jp": "極限の鱗",
+        "kr": "극한의 비늘",
+        "zh": "极限鳞甲"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "When a target without <color=#28d9ed>Critical Damage</color> increase ends their turn, own <color=#28d9ed>Priority</color> increases by <color=#28d9ed>10%</color>.\\nDMG taken from targets with <color=#28d9ed>Critical Damage Increase</color> increases by <color=#28d9ed>100%</color>.",
+        "jp": "<color=#28d9ed>会心ダメージ</color>増加効果を保有しない対象の行動終了時、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>10%</color>増加し、\\n<color=#28d9ed>会心ダメージ増加</color>を保有する対象から受けるダメージが<color=#28d9ed>100%</color>増加する。",
+        "kr": "<color=#28d9ed>치명 피해</color> 증가 효과를 보유하지 않는 대상 행동 종료 시 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가하고\\n<color=#28d9ed>치명 피해</color> 증가 효과를 보유한 대상에게 받는 피해가 <color=#28d9ed>100%</color> 증가합니다.",
+        "zh": "持有<color=#28d9ed>暴击伤害</color>提升效果的目标行动结束时，自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>10%</color>，\\n受到持有<color=#28d9ed>暴击伤害提升</color>目标的伤害增加<color=#28d9ed>100%</color>。"
+      },
+      "icon": "MT_Passive_1_Water"
+    },
+    {
+      "name": {
+        "en": "Dimensional Rift",
+        "jp": "次元の亀裂",
+        "kr": "차원의 균열",
+        "zh": "次元裂缝"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Boss monsters' Priority increases upon entering Berserk. Additional effects are added based on rank as follows.\\n\\n<color=#ffd732>Applied from RANK D:</color> DMG dealt increases and DMG taken decreases for all attacks. The values increase as rank rises, maxing out at SSS. (Max 300%/200% respectively)\\n\\n<color=#ffd732>Applied from RANK B:</color> Final DMG and WG DMG taken from targets without elemental advantage decrease by <color=#28d9ed>70%/50%</color> respectively.\\n\\n<color=#ffd732>Applied from RANK S:</color> Increases own <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color> and decreases all enemies' <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color>.",
+        "jp": "(パッシブ効果) ボスモンスターは狂暴化突入後、行動ゲージが増加する。またランクに応じて以下の効果が追加される。\\n\\n<color=#ffd732>RANK D から適用：</color>すべての攻撃に対して与ダメージが増加し、受けるダメージが減少する。ランクが上がるほど数値が増加し、SSSで最大となる。（各最大300%/200%）\\n\\n<color=#ffd732>RANK B から適用：</color>有利な相性でない対象から受ける最終ダメージとWGダメージがそれぞれ<color=#28d9ed>70%/50%</color>減少する。\\n\\n<color=#ffd732>RANK S から適用：</color>自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>増加させ、敵全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>減少させる。",
+        "kr": "(패시브 효과) 보스 몬스터는 광폭화 진입 후 행동게이지가 증가합니다. 또한 랭크에 따라 아래 효과가 추가합니다.\\n\\n<color=#ffd732>RANK D 부터 적용:</color> 모든 공격에 대해 주는 피해가 증가하고 받는 피해가 감소합니다. 랭크가 오를수록 수치가 증가하여 SSS에서 최대가 됩니다.(각각 최대 300%/200%)\\n\\n<color=#ffd732>RANK B 부터 적용:</color> 유리한 상성이 아닌 대상에게 받는 최종 피해와 WG피해가 각각 <color=#28d9ed>70%/50%</color> 감소합니다.\\n\\n<color=#ffd732>RANK S 부터 적용:</color> 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 증가시키고 적 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "(被动效果) 首领怪物进入狂暴化后行动值提升。同时根据等级追加以下效果。\\n\\n<color=#ffd732>从RANK D开始适用：</color>所有攻击的造成伤害提升，受到伤害减少。等级越高数值越大，在SSS达到最大。（各最大300%/200%）\\n\\n<color=#ffd732>从RANK B开始适用：</color>受到非克制属性目标的最终伤害和WG伤害分别减少<color=#28d9ed>70%/50%</color>。\\n\\n<color=#ffd732>从RANK S开始适用：</color>使自身<color=#28d9ed>穿透力</color>增加<color=#28d9ed>30%</color>，使全体敌人<color=#28d9ed>穿透力</color>减少<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Passive_1_Singularity"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "jp": "狂暴化",
+        "kr": "광폭화",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state every time HP decreases by <color=#28d9ed>400,000</color>.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Deals DMG to all enemies, then grants self an undispellable Speed UP/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nGrants self Immunity for 2 turns.",
+        "jp": "HPが<color=#28d9ed>400,000</color>減少するたびに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体にダメージを与えた後、自分に解除されないスピードUP/ダメージ減少効果を1ターンの間付与し、WGを10%回復する。\\n自分に免疫効果を2ターンの間付与する。",
+        "kr": "체력이 <color=#28d9ed>400,000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 피해를 입힌 후 자신에게 해제되지 않는 속도 증가/피해 감소 효과를 1턴 동안 부여 후, WG를 10% 회복합니다.\\n자신에게 면역 효과를 2턴 동안 부여합니다.",
+        "zh": "每当HP减少<color=#28d9ed>400,000</color>时进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化突入与必杀技</color>：对全体敌人造成伤害后，对自身附加无法解除的速度提升/伤害减少效果1回合，并恢复WG10%。\\n对自身附加2回合的免疫效果。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR",
+        "BT_ACTION_GAUGE",
+        "BT_IMMUNE"
+      ]
+    }
+  ]
+}

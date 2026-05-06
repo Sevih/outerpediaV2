@@ -31,6 +31,8 @@ const MODE_TEXT_KEYS: Record<string, string> = {
   DM_IRREGULAR_INFILTRATE: 'SYS_IRR_INFILTREATE_NAME_01',
   DM_IRREGULAR_CHASE: 'SYS_IRR_CHASE_NAME_01',
   DM_WORLD_BOSS: 'SYS_WORLD_BOSS',
+  // Dimensional Singularity (Singularity tables, dungeons 75000101-115).
+  DM_MONAD_BATTLE_2: 'SYS_SINGULARITY_NAME_01',
 }
 
 const TOWER_MODES = new Set([
@@ -140,6 +142,7 @@ export const SUPPORTED_DUNGEON_MODES: string[] = [
   'DM_IRREGULAR_INFILTRATE',
   'DM_IRREGULAR_CHASE',
   'DM_WORLD_BOSS',
+  'DM_MONAD_BATTLE_2',
 ]
 
 // ── Indexes ──────────────────────────────────────────────────────────
@@ -338,6 +341,15 @@ export function loadLocationTables(): LocationTables {
       bridgeMonsterToDungeon(r.BossID, did, 'eventboss')
     }
   }
+
+  // Note: Dimensional Singularity needs no synthetic bridge.
+  // The Singularity dungeons (75000101-115, mode DM_MONAD_BATTLE_2) are
+  // wired through DungeonSpawnTemplet like any other mode — each has a
+  // spawn row whose ID0 points to the actual Singularity boss
+  // (60000001-60000010 range, NOT the legacy 4014005 family).
+  // `BossThumbnail = MT_Singularity_4014005` references the face icon,
+  // not a monster ID — parsing it as a monster ID would incorrectly
+  // attach the Singularity dungeon to the original story boss.
 
   // 4. Wave-2+ heuristic — secondary spawn groups (e.g. minion waves) are not
   //    referenced by any DungeonTemplet, but their "wave 1" sibling is. The

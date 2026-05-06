@@ -1,0 +1,167 @@
+{
+  "id": "60000008",
+  "Name": {
+    "en": "Shichifuja's Shadow",
+    "jp": "七歩蛇の影",
+    "kr": "시치후샤의 그림자",
+    "zh": "七步蛇的影子"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Earth",
+  "level": 100,
+  "icons": "4038004",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "",
+  "location": {
+    "dungeon": {
+      "en": "[Singularity] - Shichifuja Shadow",
+      "jp": "[特異点] - 七歩蛇の影",
+      "kr": "[특이점] - 시치후샤 그림자",
+      "zh": "[奇点] - 七步蛇之影"
+    },
+    "mode": {
+      "en": "Dimensional Singularity",
+      "jp": "次元特異点",
+      "kr": "차원 특이점",
+      "zh": "次元奇点"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Creeping Toxin",
+        "jp": "急襲猛毒",
+        "kr": "엄습하는 맹독",
+        "zh": "剧毒来袭"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies and DMG against targets without <color=#28d9ed>Counterattack</color> increases by <color=#28d9ed>50%</color>.",
+        "jp": "敵全体にダメージを与え、<color=#28d9ed>反撃</color>を保有しない対象への与ダメージが<color=#28d9ed>50%</color>増加する。",
+        "kr": "적 전체를 공격하고 <color=#28d9ed>반격</color>을 보유하지 않은 대상에 대한 피해가 <color=#28d9ed>50%</color> 증가합니다.",
+        "zh": "攻击全体敌人，对未持有<color=#28d9ed>反击</color>目标造成的伤害增加<color=#28d9ed>50%</color>。"
+      },
+      "icon": "MT_Attack_Smash_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Higashiyama's Master",
+        "jp": "東山ノ主",
+        "kr": "히가시야마의 주인",
+        "zh": "东山的主人"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Petrified</color> on targets that do not hold <color=#28d9ed>Counterattack</color> for <color=#28d9ed>1 turn</color>.",
+        "jp": "敵全体にダメージを与えた後、<color=#28d9ed>反撃</color>を保有しない対象に<color=#28d9ed>1ターン</color>の間<color=#28d9ed>石化</color>を付与する。",
+        "kr": "적 전체를 공격 후 <color=#28d9ed>반격</color>을 보유하지 않은 대상에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>석화</color>를 부여합니다.",
+        "zh": "攻击全体敌人后，对未持有<color=#28d9ed>反击</color>的目标附加<color=#28d9ed>1回合</color>的<color=#28d9ed>石化</color>。"
+      },
+      "icon": "MT_Attack_Hammer_1_Earth",
+      "debuff": [
+        "BT_STONE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Miasmic Restriction",
+        "jp": "毒霧結界",
+        "kr": "독안개의 결계",
+        "zh": "毒雾的结界"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Can be used when holding <color=#28d9ed>5</color> <color=#28d9ed>Unique Resource: Grudge</color>.\\n\\nAttacks all enemies. After attacking, Priority increases by <color=#28d9ed>25%</color>.\\nDMG dealt to targets with <color=#28d9ed>80%</color> or more current HP increases by <color=#28d9ed>50%</color>.\\nImmediately after this skill, enemies' Counterattack, Revenge, and Agile Response will not activate.",
+        "jp": "<color=#28d9ed>固有リソース：恨み</color>を<color=#28d9ed>5個</color>保有している場合に使用可能。\\n\\n敵全体にダメージを与える。攻撃後、行動ゲージが<color=#28d9ed>25%</color>増加する。\\n現在HPが<color=#28d9ed>80%</color>以上の対象への与ダメージが<color=#28d9ed>50%</color>増加する。\\nこのスキル直後は敵の反撃、復讐、迅速対応が発動しない。",
+        "kr": "<color=#28d9ed>고유 자원 : 원한</color>을 <color=#28d9ed>5개</color> 보유한 경우 사용 가능합니다.\\n\\n적 전체를 공격합니다. 공격 후 행동 게이지가 <color=#28d9ed>25%</color> 증가합니다. \\n현재 체력이 <color=#28d9ed>80%</color> 이상인 대상에게 입히는 피해가 <color=#28d9ed>50%</color> 증가합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "zh": "持有<color=#28d9ed>5个</color><color=#28d9ed>固有资源：怨恨</color>时可使用。\\n\\n攻击全体敌人。攻击后行动值增加<color=#28d9ed>25%</color>。\\n对当前生命值在<color=#28d9ed>80%</color>以上的目标造成的伤害增加<color=#28d9ed>50%</color>。\\n该技能使用后，敌方的反击、复仇、迅速应对将不会发动。"
+      },
+      "icon": "MT_Attack_Claw_1_Earth",
+      "buff": [
+        "BT_ACTION_GAUGE",
+        "BT_SEAL_COUNTER"
+      ]
+    },
+    {
+      "name": {
+        "en": "Archdemon's Guard Dog",
+        "jp": "魔王の番犬",
+        "kr": "마왕의 번견",
+        "zh": "魔王的看门犬"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "When self is inflicted with a debuff, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Grudge</color>.\\nAfter attacking, own <color=#28d9ed>Priority</color> increases by <color=#28d9ed>20%</color>.\\nCurse and Fixed DMG taken by the boss cannot exceed <color=#28d9ed>50000</color>.",
+        "jp": "自分に弱体効果が付与された時、<color=#28d9ed>固有リソース：恨み</color>を<color=#28d9ed>1個</color>獲得する。\\n攻撃後、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>20%</color>増加する。\\nボスが受ける呪いおよび固定ダメージは<color=#28d9ed>50000</color>を超えない。",
+        "kr": "자신에게 약화 효과가 부여될 때 <color=#28d9ed>고유 자원 : 원한</color>을 <color=#28d9ed>1개</color> 획득합니다.\\n공격 후 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>20%</color> 증가합니다.\\n보스가 받는 저주 및 고정 피해의 피해는 <color=#28d9ed>50000</color>을 초과하지 않습니다.",
+        "zh": "自身被附加弱化效果时，获得<color=#28d9ed>1个</color><color=#28d9ed>固有资源：怨恨</color>。\\n攻击后自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。\\n首领受到的诅咒及固定伤害不超过<color=#28d9ed>50000</color>。"
+      },
+      "icon": "MT_Passive_1_Earth"
+    },
+    {
+      "name": {
+        "en": "Great Demon's Henchman",
+        "jp": "大妖怪の腹心",
+        "kr": "대요괴의 심복",
+        "zh": "大妖怪的心腹"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "DMG taken decreases by <color=#28d9ed>50%</color>, but DMG taken from <color=#28d9ed>Counterattack</color>, <color=#28d9ed>Revenge</color>, and <color=#28d9ed>Dual Attack</color> increases by <color=#28d9ed>200%</color>.",
+        "jp": "受けるダメージが<color=#28d9ed>50%</color>減少するが、<color=#28d9ed>反撃</color>、<color=#28d9ed>復讐</color>、<color=#28d9ed>連携攻撃</color>で受けるダメージが<color=#28d9ed>200%</color>増加する。",
+        "kr": "받는 피해가 <color=#28d9ed>50%</color> 감소하지만 .<color=#28d9ed>반격</color>,<color=#28d9ed>복수</color>,<color=#28d9ed>협공</color>으로 입는 피해가 <color=#28d9ed>200%</color> 증가합니다.",
+        "zh": "受到的伤害减少<color=#28d9ed>50%</color>，但受到<color=#28d9ed>反击</color>、<color=#28d9ed>复仇</color>、<color=#28d9ed>夹攻</color>造成的伤害增加<color=#28d9ed>200%</color>。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dimensional Rift",
+        "jp": "次元の亀裂",
+        "kr": "차원의 균열",
+        "zh": "次元裂缝"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Boss monsters' Priority increases upon entering Berserk. Additional effects are added based on rank as follows.\\n\\n<color=#ffd732>Applied from RANK D:</color> DMG dealt increases and DMG taken decreases for all attacks. The values increase as rank rises, maxing out at SSS. (Max 300%/200% respectively)\\n\\n<color=#ffd732>Applied from RANK B:</color> Final DMG and WG DMG taken from targets without elemental advantage decrease by <color=#28d9ed>70%/50%</color> respectively.\\n\\n<color=#ffd732>Applied from RANK S:</color> Increases own <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color> and decreases all enemies' <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color>.",
+        "jp": "(パッシブ効果) ボスモンスターは狂暴化突入後、行動ゲージが増加する。またランクに応じて以下の効果が追加される。\\n\\n<color=#ffd732>RANK D から適用：</color>すべての攻撃に対して与ダメージが増加し、受けるダメージが減少する。ランクが上がるほど数値が増加し、SSSで最大となる。（各最大300%/200%）\\n\\n<color=#ffd732>RANK B から適用：</color>有利な相性でない対象から受ける最終ダメージとWGダメージがそれぞれ<color=#28d9ed>70%/50%</color>減少する。\\n\\n<color=#ffd732>RANK S から適用：</color>自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>増加させ、敵全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>減少させる。",
+        "kr": "(패시브 효과) 보스 몬스터는 광폭화 진입 후 행동게이지가 증가합니다. 또한 랭크에 따라 아래 효과가 추가합니다.\\n\\n<color=#ffd732>RANK D 부터 적용:</color> 모든 공격에 대해 주는 피해가 증가하고 받는 피해가 감소합니다. 랭크가 오를수록 수치가 증가하여 SSS에서 최대가 됩니다.(각각 최대 300%/200%)\\n\\n<color=#ffd732>RANK B 부터 적용:</color> 유리한 상성이 아닌 대상에게 받는 최종 피해와 WG피해가 각각 <color=#28d9ed>70%/50%</color> 감소합니다.\\n\\n<color=#ffd732>RANK S 부터 적용:</color> 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 증가시키고 적 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "(被动效果) 首领怪物进入狂暴化后行动值提升。同时根据等级追加以下效果。\\n\\n<color=#ffd732>从RANK D开始适用：</color>所有攻击的造成伤害提升，受到伤害减少。等级越高数值越大，在SSS达到最大。（各最大300%/200%）\\n\\n<color=#ffd732>从RANK B开始适用：</color>受到非克制属性目标的最终伤害和WG伤害分别减少<color=#28d9ed>70%/50%</color>。\\n\\n<color=#ffd732>从RANK S开始适用：</color>使自身<color=#28d9ed>穿透力</color>增加<color=#28d9ed>30%</color>，使全体敌人<color=#28d9ed>穿透力</color>减少<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Passive_1_Singularity"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "jp": "狂暴化",
+        "kr": "광폭화",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state every time enemies take 7 actions.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Attacks all enemies, then grants self an undispellable Speed UP/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nGrants self Counterattack for 2 turns.",
+        "jp": "敵が7回行動するたびに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体にダメージを与えた後、自分に解除されないスピードUP/ダメージ減少効果を1ターンの間付与し、WGを10%回復する。\\n自分に反撃効果を2ターンの間付与する。",
+        "kr": "적이 7회 행동할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> :적 전체를 공격 후 자신에게 해제되지 않는 속도 증가/피해 감소 효과를 1턴 동안 부여하고 WG를 10% 회복합니다.\\n자신에게 반격 효과를 2턴 동안 부여합니다.",
+        "zh": "敌人每行动7次进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化突入与必杀技</color>：攻击全体敌人后，对自身附加无法解除的速度提升/伤害减少效果1回合，并恢复WG10%。\\n对自身附加2回合的反击效果。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR",
+        "BT_ACTION_GAUGE",
+        "BT_STAT|ST_COUNTER_RATE"
+      ]
+    }
+  ]
+}

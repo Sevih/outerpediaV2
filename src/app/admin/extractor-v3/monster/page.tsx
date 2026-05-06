@@ -31,6 +31,8 @@ interface SearchHit {
   name: string
   type: string | null
   existsLocally: boolean
+  /** Set when the search matched a location (mode/dungeon/area). */
+  matchedDungeon?: { id: string; name: string; mode: string }
 }
 
 interface MonsterLocation {
@@ -573,6 +575,7 @@ function CompareTab() {
 
 function CreateTab() {
   const [query, setQuery] = useState('')
+  const [searchMode, setSearchMode] = useState<'name' | 'location'>('name')
   const [hits, setHits] = useState<SearchHit[]>([])
   const [searching, setSearching] = useState(false)
   const [selected, setSelected] = useState<string | null>(null)
@@ -592,7 +595,7 @@ function CreateTab() {
     const handle = setTimeout(async () => {
       setSearching(true)
       try {
-        const res = await fetch(`${API}?action=search&q=${encodeURIComponent(query)}`)
+        const res = await fetch(`${API}?action=search&q=${encodeURIComponent(query)}&mode=${searchMode}`)
         const data = await res.json()
         setHits(data.items ?? [])
       } finally {
@@ -600,14 +603,16 @@ function CreateTab() {
       }
     }, 300)
     return () => clearTimeout(handle)
-  }, [query])
+  }, [query, searchMode])
 
-  async function loadExtracted(id: string) {
+  async function loadExtracted(id: string, preselectDungeonId?: string) {
     setSelected(id)
     setExtracted(null)
     setExtractedFiltered(null)
     setAvailableLocations([])
-    setChosenDungeon(null)
+    // Pre-select the dungeon when the hit came from a location-mode search
+    // so the user doesn't have to re-pick it in the dropdown afterwards.
+    setChosenDungeon(preselectDungeonId ?? null)
     setSummonedBy('')
     setSaveMessage(null)
     const res = await fetch(`${API}?action=extract&id=${id}`)
@@ -688,12 +693,23 @@ function CreateTab() {
     <div className="flex gap-6 h-[calc(100vh-150px)]">
       <div className="w-96 shrink-0 flex flex-col border-r border-zinc-800 pr-4">
         <h2 className="mb-3 text-lg font-bold">Search monster</h2>
+        <div className="mb-2 flex gap-1 text-xs">
+          {(['name', 'location'] as const).map((m) => (
+            <button
+              key={m}
+              onClick={() => setSearchMode(m)}
+              className={`rounded px-2 py-1 ${searchMode === m ? 'bg-blue-600/20 text-blue-400' : 'text-zinc-500 hover:text-zinc-300'}`}
+            >
+              {m === 'name' ? 'By name / id' : 'By location'}
+            </button>
+          ))}
+        </div>
         <input
           type="text"
           autoFocus
           autoComplete="off"
           suppressHydrationWarning
-          placeholder="Type a name (en) or id..."
+          placeholder={searchMode === 'location' ? 'Type a mode / dungeon / area...' : 'Type a name (en) or id...'}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="mb-2 rounded border border-zinc-700 bg-zinc-900 px-3 py-1.5 text-sm placeholder-zinc-500 focus:border-zinc-500 focus:outline-none"
@@ -704,13 +720,22 @@ function CreateTab() {
         <div className="overflow-y-auto flex-1 space-y-0.5">
           {hits.map((h) => (
             <button
-              key={h.id}
-              onClick={() => loadExtracted(h.id)}
-              className={`flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm hover:bg-zinc-800 hover:text-zinc-200 ${selected === h.id ? 'bg-zinc-800 text-zinc-200' : 'text-zinc-400'}`}
+              key={h.id + (h.matchedDungeon?.id ?? '')}
+              onClick={() => loadExtracted(h.id, h.matchedDungeon?.id)}
+              className={`flex w-full flex-col gap-0.5 rounded px-2 py-1.5 text-left text-sm hover:bg-zinc-800 hover:text-zinc-200 ${selected === h.id ? 'bg-zinc-800 text-zinc-200' : 'text-zinc-400'}`}
             >
-              <span className="flex-1 truncate">{h.name}</span>
-              <span className="font-mono text-[10px] text-zinc-600">{h.id}</span>
-              {h.existsLocally && <span className="rounded bg-green-900/30 px-1 py-0.5 text-[9px] text-green-400">EXISTS</span>}
+              <div className="flex items-center gap-2">
+                <span className="flex-1 truncate">{h.name}</span>
+                <span className="font-mono text-[10px] text-zinc-600">{h.id}</span>
+                {h.existsLocally && <span className="rounded bg-green-900/30 px-1 py-0.5 text-[9px] text-green-400">EXISTS</span>}
+              </div>
+              {h.matchedDungeon && (
+                <div className="flex items-center gap-2 text-[10px] text-zinc-500">
+                  <span className="rounded bg-purple-900/30 px-1 py-0.5 text-purple-300">{h.matchedDungeon.mode}</span>
+                  <span className="truncate">{h.matchedDungeon.name || `Dungeon ${h.matchedDungeon.id}`}</span>
+                  <span className="font-mono text-zinc-600">@{h.matchedDungeon.id}</span>
+                </div>
+              )}
             </button>
           ))}
         </div>

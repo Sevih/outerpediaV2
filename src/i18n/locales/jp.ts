@@ -453,6 +453,7 @@ const jp: Record<TranslationKey, string> = {
   'guides.category.adventure-license': '冒険者ライセンス',
   'guides.category.guild-raid': 'ギルドレイド',
   'guides.category.world-boss': 'ワールドボス',
+  'guides.category.dimensional-singularity': '次元特異点',
   'guides.category.joint-challenge': '合同チャレンジ',
   'guides.category.special-request': '特別依頼',
   'guides.category.irregular-extermination': 'イレギュラー掃討',
@@ -471,6 +472,20 @@ const jp: Record<TranslationKey, string> = {
     'ギルドレイド完全攻略：ボスメカニクス、最適なチーム編成、最高スコアを狙うためのダメージ最大化戦術。',
   'guides.category.world-boss.desc':
     'エクストリームリーグのワールドボス戦でSSSランクを達成するための完全攻略：最適なチーム編成、スキルローテーション、ダメージ最大化。',
+  'guides.category.dimensional-singularity.desc':
+    '日替わりで変わる特異点ボスの攻略：スケジュール、メカニクス、ランキングスコア目標、特異点昇華装備強化。',
+  'guides.category.dimensional-singularity.intro':
+    '次元特異点はモナドゲートから「次元特異点モード」に切り替えてアクセスするエンドコンテンツです。毎日異なる特異点ボスが出現し、その日のスコアによってランキングと報酬が決まります。',
+  'guides.category.dimensional-singularity.unlock':
+    '解放条件：モナドゲート深層1の真エンディングをクリア。',
+  'guides.category.dimensional-singularity.schedule':
+    '毎週水曜00:00 UTCから土曜23:59 UTCまで開放。対象ボスは毎日00:00 UTCに変化。1日2回挑戦可能。',
+  'guides.category.dimensional-singularity.feature.repel':
+    '特異点討伐：その日のボス戦を開始する。',
+  'guides.category.dimensional-singularity.feature.ascension':
+    '特異点昇華装置：強化と再鍛造が最大に達した装備を昇華 — 再鍛造回数+3、メインオプション値が上昇する。',
+  'guides.category.dimensional-singularity.feature.ranking':
+    'ランキングレポート：前日のスコアに応じた日次報酬を受け取る。',
   'guides.category.joint-challenge.desc':
     '共同作戦で高スコアを狙うための上級攻略：最適なチーム編成、スキルタイミング、シナジー活用のコツ。',
   'guides.category.special-request.desc':

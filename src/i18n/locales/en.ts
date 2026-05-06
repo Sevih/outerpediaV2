@@ -453,6 +453,7 @@ const en = {
   'guides.category.adventure-license': 'Adventure License',
   'guides.category.guild-raid': 'Guild Raid',
   'guides.category.world-boss': 'World Boss',
+  'guides.category.dimensional-singularity': 'Dimensional Singularity',
   'guides.category.joint-challenge': 'Joint Challenge',
   'guides.category.special-request': 'Special Request',
   'guides.category.irregular-extermination': 'Irregular Extermination',
@@ -471,6 +472,20 @@ const en = {
     'Comprehensive strategies for Guild Raids: boss mechanics, optimal team setups, and damage-maximizing tactics to achieve the highest raid scores.',
   'guides.category.world-boss.desc':
     'Comprehensive strategies to achieve SSS rank in Extreme League World Boss battles: optimal team setups, rotation timing, and damage maximization.',
+  'guides.category.dimensional-singularity.desc':
+    'Daily-rotating Singularity boss guides: schedule, mechanics, ranking score targets, and Singularity Ascension gear progression.',
+  'guides.category.dimensional-singularity.intro':
+    'Dimensional Singularity is an endgame mode accessible from Monad Gate by switching to Dimensional Singularity Mode. Each day a different Singularity boss appears, and your daily score determines your ranking and rewards.',
+  'guides.category.dimensional-singularity.unlock':
+    'Unlock condition: clear Monad Gate Depth 1 True Ending.',
+  'guides.category.dimensional-singularity.schedule':
+    'Open every week from Wednesday 00:00 UTC to Saturday 23:59 UTC. The target boss changes daily at 00:00 UTC. 2 entries per day.',
+  'guides.category.dimensional-singularity.feature.repel':
+    'Singularity Repel: launch the daily boss battle.',
+  'guides.category.dimensional-singularity.feature.ascension':
+    'Singularity Ascension Device: upgrade gear that has reached max Enhancement and max Reforge — gains 3 extra Reforge attempts and a higher main option.',
+  'guides.category.dimensional-singularity.feature.ranking':
+    'Ranking Report: claim daily rewards based on your score the previous day.',
   'guides.category.joint-challenge.desc':
     'Score higher in Joint Challenge battles with advanced strategies: best team compositions, skill timing, and synergy tips for top rankings.',
   'guides.category.special-request.desc':

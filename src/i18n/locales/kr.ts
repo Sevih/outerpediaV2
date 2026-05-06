@@ -453,6 +453,7 @@ const kr: Record<TranslationKey, string> = {
   'guides.category.adventure-license': '모험 라이선스',
   'guides.category.guild-raid': '길드 레이드',
   'guides.category.world-boss': '월드 보스',
+  'guides.category.dimensional-singularity': '차원 특이점',
   'guides.category.joint-challenge': '합동 챌린지',
   'guides.category.special-request': '특별 의뢰',
   'guides.category.irregular-extermination': '이레귤러 소탕',
@@ -471,6 +472,20 @@ const kr: Record<TranslationKey, string> = {
     '길드 레이드 완벽 공략: 보스 메커닉, 최적 팀 구성, 최고 점수를 위한 데미지 극대화 전술.',
   'guides.category.world-boss.desc':
     '익스트림 리그 월드 보스전에서 SSS 등급을 달성하기 위한 완벽 공략: 최적 팀 구성, 스킬 로테이션, 데미지 극대화.',
+  'guides.category.dimensional-singularity.desc':
+    '매일 바뀌는 특이점 보스 공략: 일정, 메커닉, 랭킹 점수 목표, 특이점 승화 장비 강화.',
+  'guides.category.dimensional-singularity.intro':
+    '차원 특이점은 모나드 게이트에서 「차원 특이점 모드」로 전환하여 접근하는 엔드 콘텐츠입니다. 매일 다른 특이점 보스가 등장하며, 일일 점수에 따라 랭킹과 보상이 결정됩니다.',
+  'guides.category.dimensional-singularity.unlock':
+    '해금 조건: 모나드 게이트 심층 1 진 엔딩 클리어.',
+  'guides.category.dimensional-singularity.schedule':
+    '매주 수요일 00:00 UTC부터 토요일 23:59 UTC까지 개방. 대상 보스는 매일 00:00 UTC에 변경. 1일 2회 도전 가능.',
+  'guides.category.dimensional-singularity.feature.repel':
+    '특이점 격퇴: 당일 보스전을 시작합니다.',
+  'guides.category.dimensional-singularity.feature.ascension':
+    '특이점 승화 장치: 강화와 재련이 최대치에 도달한 장비를 승화 — 재련 횟수 +3, 메인 옵션 수치 상승.',
+  'guides.category.dimensional-singularity.feature.ranking':
+    '랭킹 보고서: 전일 점수에 따른 일일 보상을 수령합니다.',
   'guides.category.joint-challenge.desc':
     '합동 챌린지에서 높은 점수를 얻기 위한 고급 공략: 최적 팀 구성, 스킬 타이밍, 시너지 활용 팁.',
   'guides.category.special-request.desc':
