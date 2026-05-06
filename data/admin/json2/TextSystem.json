@@ -1329,11 +1329,11 @@
   },
   {
     "ID": "SYS_DESC_NOCRITICAL",
-    "Korean": "해당 공격은 치명 공격이 발생하지 않지만, 피해가 증가합니다.",
-    "English": "This attack cannot trigger a critical hit, but damage dealt is increased.",
-    "Japanese": "この攻撃は会心が発生しない代わり、\\n与えるダメージがUPする。",
-    "China_Simplified": "该攻击不会触发暴击，但伤害提升。",
-    "China_Traditional": "該攻擊雖不會產生暴擊攻擊，\\n但傷害會增加。"
+    "Korean": "해당 공격은 치명 공격이 발생하지 않지만, 주는 피해가 50% 증가하고 보스의 방어력을 30% 무시합니다.",
+    "English": "This attack cannot deal a critical hit, but DMG dealt increases by 50% and ignores 30% of the boss's Defense.",
+    "Japanese": "この攻撃は会心攻撃が発生しないが、与ダメージが50%増加し、ボスの防御力を30%無視する。",
+    "China_Simplified": "该攻击不会发生暴击，但造成的伤害提升50%，并无视首领30%的防御力。",
+    "China_Traditional": "該攻擊不會發生暴擊，但造成的傷害提升50%，並無視首領30%的防禦力。"
   },
   {
     "ID": "SYS_BUFF_CONVERT",
@@ -1656,6 +1656,22 @@
     "China_Traditional": "對敵人造成的傷害增加，\\n強化部分技能。(無法解除)"
   },
   {
+    "ID": "SYS_BUFF_NAME_2000091",
+    "Korean": "최후의 낙인",
+    "English": "Final Stigma",
+    "Japanese": "最後の烙印",
+    "China_Simplified": "最终烙印",
+    "China_Traditional": "最終烙印"
+  },
+  {
+    "ID": "SYS_BUFF_DESC_2000091",
+    "Korean": "<color=#ffd732>그노시스 넬라 사망 시 발동</color>(해제 불가)\\n\\n적 전체의 강화 효과를 2개 해제하고 침묵/속도 감소를 2턴 동안 부여합니다.\\n<color=#28d9ed>소생 시에는 발동하지 않습니다.</color>",
+    "English": "<color=#ffd732>Triggers upon Gnosis Nella's death</color> (Cannot be dispelled)\\n\\nDispels 2 buffs from all enemies and inflicts Silence/Speed reduction for 2 turns.\\n<color=#28d9ed>Does not trigger upon Revival.</color>",
+    "Japanese": "<color=#ffd732>グノーシス・ネラ死亡時に発動</color>（解除不可）\\n\\n敵全体の強化効果を2個解除し、沈黙/スピード減少を2ターンの間付与する。\\n<color=#28d9ed>蘇生時には発動しない。</color>",
+    "China_Simplified": "<color=#ffd732>格诺希斯·内拉死亡时发动</color>（无法解除）\\n\\n解除全体敌人2个强化效果，并附加2回合的沉默/速度减少。\\n<color=#28d9ed>复苏时不会发动。</color>",
+    "China_Traditional": "<color=#ffd732>格諾西斯·奈拉死亡時發動</color>（無法解除）\\n\\n解除全體敵人2個強化效果，並附加2回合的沉默/速度減少。\\n<color=#28d9ed>復甦時不會發動。</color>"
+  },
+  {
     "ID": "SYS_BUFF_NAME_2000092",
     "Korean": "징벌의 영역",
     "English": "Retribution's Dominion",
@@ -1801,11 +1817,11 @@
   },
   {
     "ID": "SYS_BUFF_DESC_2000102",
-    "Korean": "턴 시작 시 자신의 강화 효과 지속 턴 1턴 감소하며, 적 전체의 약화 효과 지속 턴 1턴 감소시킵니다.\\n각 팀당 한 명에게만 적용되며, 다른 대상에게 효과가 생성 될 때 기존 대상의 효과는 제거 됩니다.\\n시전자가 사망 시 해제됩니다. (해제 불가)",
-    "English": "At the start of the turn, the caster’s Enhancement Effect durations are reduced by 1 turn, and debuff durations of all enemies are reduced by 1 turn.\\nApplies to only one unit per team. If the effect is applied to a new target, the previous target’s effect is removed.\\nRemoved upon the caster’s death. (Irremovable)",
-    "Japanese": "ターン開始時、自分の強化効果持続\\nターンを1ターン減少させ、敵全体の\\n弱体効果持続ターンを1ターン減少\\nさせる。\\nそれぞれの編成で1体のみに付与され、\\n2体目に付与されると1体目の効果は\\n解除される。\\nスキル使用者が倒れると解除される。\\n(解除不可)",
-    "China_Simplified": "回合开始时，自身的强化效果持续回合减少1回合，\\n使全体敌人的弱化效果持续回合减少1回合。\\n每队仅一名套用此效果，当对其他目标造成此效果时，\\n原本目标的效果将会解除。\\n施展者死亡时解除。(无法解除)",
-    "China_Traditional": "回合開始時，自身的強化效果持續回合減少1回合，使全體敵人的弱化效果持續回合減少1回合。\\n每隊僅一名套用此效果，當對其他目標造成此效果時，原本目標的效果將會解除。\\n施展者死亡時解除。(無法解除)"
+    "Korean": "자신의 피해가 50% 감소하며(지속 피해 제외), 턴 시작 시 자신의 강화 효과 / 적 전체의 약화 효과 지속 시간이 각  1턴씩 감소합니다.\\n\\n시전자가 사망 시 해제됩니다. (해제 불가)",
+    "English": "Own DMG decreases by 50% (excluding DoT), and at the start of each turn, the duration of own buffs / all enemies' debuffs each decrease by 1 turn.\\n\\nDispelled upon caster's death. (Cannot be dispelled)",
+    "Japanese": "自分のダメージが50%減少し（継続ダメージを除く）、ターン開始時に自分の強化効果/敵全体の弱体効果の持続時間がそれぞれ1ターンずつ減少する。\\n\\n使用者が死亡した時に解除される。（解除不可）",
+    "China_Simplified": "自身伤害降低50%（持续伤害除外），每回合开始时，自身强化效果/全体敌人弱化效果的持续时间各减少1回合。\\n\\n施放者死亡时解除。（无法解除）",
+    "China_Traditional": "自身傷害降低50%（持續傷害除外），每回合開始時，自身強化效果/全體敵人弱化效果的持續時間各減少1回合。\\n\\n施放者死亡時解除。（無法解除）"
   },
   {
     "ID": "SYS_BUFF_NAME_2000109",
@@ -7857,7 +7873,7 @@
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_3",
-    "Korean": "좋아요 배지",
+    "Korean": "보안 카드",
     "English": "Thumbs-Up Badge",
     "Japanese": "いいねバッジ",
     "China_Simplified": "点赞徽章",
@@ -7865,7 +7881,7 @@
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_4",
-    "Korean": "애국 코인",
+    "Korean": "연료통",
     "English": "Patriot Coin",
     "Japanese": "祖国コイン",
     "China_Simplified": "爱国硬币",
@@ -8089,7 +8105,7 @@
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_3",
-    "Korean": "[특별 교무 평가]에서 학생의 평가에 반영되는 물건. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
+    "Korean": "비밀 창고의 열쇠, 특정한 보안 카드만 그 두꺼운 문을 연다. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
     "English": "An item reflecting the student's evaluation in the [Special Teacher Evaluation]. Can be exchanged for various items in the Event Shop.",
     "Japanese": "【特別教務評価】で生徒の評価に反映されるアイテム。イベントショップで様々な商品と交換できます。",
     "China_Simplified": "在[特别教务评价]中反映学生评价的物品。可在活动商店兑换各种商品。",
@@ -8097,7 +8113,7 @@
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_4",
-    "Korean": "조국에 이바지한 애국자에게 제공되는 코인. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
+    "Korean": "운송 수단으로 연료를 옮기는 도구. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
     "English": "A coin provided to patriots who have contributed to their homeland. It can be exchanged for various goods in the event shop.",
     "Japanese": "罪人の減刑に使用されるコイン。\\nイベントショップでアイテムと交換できる。",
     "China_Simplified": "囚犯们用于换取减刑的硬币。\\n可用于活动商店交易。",
@@ -24118,14 +24134,6 @@
     "Japanese": "<Color=#FFBF00>ノティア・パールライト</Color>、ネフォス教に仕える大地の使徒。\\nセイクリッドの騒擾事件以降……国力が衰えた隙を突くように押し寄せる【現実的な問題】に翻弄されながらも、ノティアさんは決して倒れなかった。\\n諦めることなく、あらゆる荒波に真正面から立ち向かうその不屈の精神こそが、彼女の最大の強みなのだろう。\\n……果たして今回も、<Color=#FFBF00>彼女の勇気</Color>は称えられるのだろうか。\\n【フュージョン型コア】という禁断の呪いをその小さな身に背負いながら、ノティアさんはこれからも、セイクリッドの大地として、揺らぐことなく立ち続けられるのだろうか。\\n\\n<Color=#FFBF00>コアフュージョンが完了した仲間です</Color>",
     "China_Simplified": "<Color=#FFBF00>诺缇亚·伯莱特</Color>，内泊斯教的土之使徒。\\n圣科利德动乱之后……尽管被趁国力衰退之际涌来的种种[现实问题]所困扰，但诺缇亚小姐终究没有倒下。\\n永不言弃、直面风浪的那股不屈精神，是她最大的优点。\\n……不知这一次，<Color=#FFBF00>她的勇气</Color>能否再次赢得赞颂？\\n背负着[融合型核心]这一禁忌诅咒，诺缇亚小姐用她小小的身躯，还能否继续守护圣科利德这片大地？\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>",
     "China_Traditional": "<Color=#FFBF00>諾緹亞·波萊伊特</Color>，尼波斯教的大地使徒。\\n在聖科利德的動亂之後……趁國力衰退之際接連湧現的【現實問題】撲面而來，即使如此，諾緹亞也沒有倒下。\\n她那不放棄，且正面對抗各種風浪的不屈精神，就是她最大的優點。\\n……究竟這次<Color=#FFBF00>她的勇氣</Color>仍會受到稱頌嗎？\\n諾緹亞以她小巧的身軀背負著名為【融合型核心】的禁忌詛咒，她今後仍然能作為聖科利德的大地而不倒下嗎？\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>"
-  },
-  {
-    "ID": "SYS_ACHIEVE_PROFILE_2700070",
-    "Korean": "<Color=#FFBF00>엡실론</Color>, 말이지…… 그 자동인형의 데이터는 지금 보아도 경이로워.\\n제한적이라고는 해도, [융합형 코어]가 방주 급의 던전 코어를 모방하다니 말이야.\\n사고 회로는 이미 고장 나 있었으니, 오염은 걱정이 없고. 부작용이라고 한다면, 이전보다 더 많은 안티매터와 술을 요구하게 되었다는 정도……?\\n뭐, 블라다 원수의 허리는 나날이 휘겠지만…… 이 정도면 값싼 대가 아닐까?\\n한 번의 포격으로 마을 하나는 가볍게 일소할 수 있는 행성 정화 유닛의 힘을 손에 넣은 거니까 말이야.\\n\\n<Color=#FFBF00>코어 융합이 완료된 동료입니다</Color>",
-    "English": "<Color=#FFBF00>Epsilon</Color>... Even now, the data from that automaton is nothing short of astonishing.\\nEven if only in a limited capacity, the fact that a [Fusion-Type Core] can replicate an Ark-class Dungeon Core is no small feat.\\nHer cognitive circuits were already damaged, so contamination isn't a concern. As for side effects... well, she now demands even more antimatter and alcohol than before.\\nWell, Marshal Vlada's going to feel the strain more and more by the day... but isn't that a small price to pay?\\nAfter all, we've gained the power of a Planet Purification Unit, capable of wiping out an entire town with a single bombardment.\\n\\n<Color=#FFBF00>This hero has completed Core Fusion</Color>",
-    "Japanese": "<Color=#FFBF00>イプシロン</Color>か……あのオートマタのデータは、今見ても実に驚異的だ。\\n限定的とはいえ、【フュージョン型コア】が、アーク級のダンジョンコアを模倣するとは。\\n思考回路はすでに故障していたから、汚染の心配はない。副作用があるとすれば、以前よりも多くのアンチマターと酒を要求するようになった、という程度だろうか……?\\nまあ、ヴラダ元帥の懐事情は日を追うごとに厳しくなるだろうが……この程度なら、安い代償だ。\\nなにしろ、一度の砲撃で街ひとつを軽々と消し飛ばせる、惑星浄化ユニットの力を手に入れたのだから。\\n\\n<Color=#FFBF00>コアフュージョンが完了した仲間です</Color>",
-    "China_Simplified": "说到<Color=#FFBF00>埃普西隆</Color>……那具机械人偶的数据，即便现在看来也令人惊叹。\\n虽说有限制，但[融合型核心]竟能模仿方舟级别的暗堡核心。\\n埃普西隆的思维回路早就发生了故障，所以不用担心污染问题。要说副作用嘛，大概就是她比以前要更多的反物质和酒了……？\\n唔，布拉达元帅的腰怕是要一天比一天弯了……不过这点代价，也算便宜了吧？\\n毕竟她所拥有的行星净化级别的力量，只需一炮就能轻松荡平一座村庄呢。\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>",
-    "China_Traditional": "<Color=#FFBF00>艾普西隆</Color>啊……那自動人偶的數據，即使現在看來也依舊令人驚嘆。\\n儘管有所限制，但【融合型核心】居然能夠模擬方舟級別的地城核心。\\n思考迴路本來就已經故障，因此不需要擔心會被汙染。若要說有什麼副作用的話，應該是比以前要求更多的反物質和酒……？\\n嗯，佛拉達統帥的腰可能會一天比一天更吃不消……這樣的代價應該很低廉吧？\\n畢竟，那是掌握了能用一次砲擊，就輕鬆摧毀一座村莊的行星淨化單位的力量。\\n\\n<Color=#FFBF00>已完成核心融合的同伴</Color>"
   },
   {
     "ID": "SYS_STORY_TEAM_TITLE",
@@ -76705,11 +76713,11 @@
   },
   {
     "ID": "SYS_EVENT_SEASON_17",
-    "Korean": "역전 세계의 자동 인형",
-    "English": "Automaton of the Reversed World",
-    "Japanese": "逆転世界のオートマタ",
-    "China_Simplified": "颠倒世界的机械人偶",
-    "China_Traditional": "逆轉世界的自動人偶"
+    "Korean": "드레드노트의 우상 상점",
+    "English": "Dreadnought's Idol Shop",
+    "Japanese": "ドレッドノートの偶像商店",
+    "China_Simplified": "德雷德诺特的偶像商店",
+    "China_Traditional": "德雷德諾特的偶像商店"
   },
   {
     "ID": "SYS_EVENT_COIN_USE_S18",
@@ -86649,11 +86657,11 @@
   },
   {
     "ID": "SYS_POPUP_FULLGROWTH_CHARACTER_SELECT_NAME",
-    "Korean": "풀 성장 동료 영입",
-    "English": "Recruit Full-Grown Hero",
-    "Japanese": "最大成長した仲間をスカウト",
-    "China_Simplified": "招募满星同伴",
-    "China_Traditional": "招募完全成長同伴"
+    "Korean": "성장 동료 영입",
+    "English": "Recruit Grown Hero",
+    "Japanese": "成長した仲間をスカウト",
+    "China_Simplified": "招募成長同伴",
+    "China_Traditional": "招募成長同伴"
   },
   {
     "ID": "SYS_POPUP_FULLGROWTH_CHARACTER_SELECT_DESC",
@@ -114090,146 +114098,146 @@
   {
     "ID": "SYS_SINGULARITY_MAIN_TITLE",
     "Korean": "차원 특이점",
-    "English": "차원 특이점",
-    "Japanese": "차원 특이점",
-    "China_Simplified": "차원 특이점",
-    "China_Traditional": "차원 특이점"
+    "English": "Dimensional Singularity",
+    "Japanese": "次元特異点",
+    "China_Simplified": "次元奇点",
+    "China_Traditional": "次元奇點"
   },
   {
     "ID": "SYS_SINGULARITY_TITLE_01",
     "Korean": "게이트 관측",
-    "English": "게이트 관측",
-    "Japanese": "게이트 관측",
-    "China_Simplified": "게이트 관측",
-    "China_Traditional": "게이트 관측"
+    "English": "Gate Observation",
+    "Japanese": "ゲート観測",
+    "China_Simplified": "门户观测",
+    "China_Traditional": "門戶觀測"
   },
   {
     "ID": "SYS_SINGULARITY_BUTTON_01",
     "Korean": "차원 특이점 모드 전환",
-    "English": "차원 특이점 모드 전환",
-    "Japanese": "차원 특이점 모드 전환",
-    "China_Simplified": "차원 특이점 모드 전환",
-    "China_Traditional": "차원 특이점 모드 전환"
+    "English": "Switch to Dimensional Singularity Mode",
+    "Japanese": "次元特異点モード切替",
+    "China_Simplified": "切换至次元奇点模式",
+    "China_Traditional": "切換至次元奇點模式"
   },
   {
     "ID": "SYS_SINGULARITY_BUTTON_02",
     "Korean": "통상 관측 모드 전환",
-    "English": "통상 관측 모드 전환",
-    "Japanese": "통상 관측 모드 전환",
-    "China_Simplified": "통상 관측 모드 전환",
-    "China_Traditional": "통상 관측 모드 전환"
+    "English": "Switch to Normal Observation Mode",
+    "Japanese": "通常観測モード切替",
+    "China_Simplified": "切换至普通观测模式",
+    "China_Traditional": "切換至普通觀測模式"
   },
   {
     "ID": "SYS_SINGULARITY_BUTTON_03",
-    "Korean": "장비 제작기",
-    "English": "장비 제작기",
-    "Japanese": "장비 제작기",
-    "China_Simplified": "장비 제작기",
-    "China_Traditional": "장비 제작기"
+    "Korean": "특이점 활성 장치",
+    "English": "Singularity Activation Device",
+    "Japanese": "特異点活性装置",
+    "China_Simplified": "奇点激活装置",
+    "China_Traditional": "奇點激活裝置"
   },
   {
     "ID": "SYS_SINGULARITY_BUTTON_04",
     "Korean": "지휘관 스킬",
-    "English": "지휘관 스킬",
-    "Japanese": "지휘관 스킬",
-    "China_Simplified": "지휘관 스킬",
-    "China_Traditional": "지휘관 스킬"
+    "English": "Commander Skill",
+    "Japanese": "指揮官スキル",
+    "China_Simplified": "指挥官技能",
+    "China_Traditional": "指揮官技能"
   },
   {
     "ID": "SYS_SINGULARITY_BUTTON_05",
     "Korean": "특이점 격퇴",
-    "English": "특이점 격퇴",
-    "Japanese": "특이점 격퇴",
-    "China_Simplified": "특이점 격퇴",
-    "China_Traditional": "특이점 격퇴"
+    "English": "Singularity Repel",
+    "Japanese": "特異点撃退",
+    "China_Simplified": "击退奇点",
+    "China_Traditional": "擊退奇點"
   },
   {
     "ID": "SYS_SINGULARITY_BUTTON_06",
     "Korean": "랭킹 리포트",
-    "English": "랭킹 리포트",
-    "Japanese": "랭킹 리포트",
-    "China_Simplified": "랭킹 리포트",
-    "China_Traditional": "랭킹 리포트"
+    "English": "Ranking Report",
+    "Japanese": "ランキングレポート",
+    "China_Simplified": "排名报告",
+    "China_Traditional": "排名報告"
   },
   {
     "ID": "SYS_SINGULARITY_MAIN_DESC",
     "Korean": "시시각각 변화하는 게이트의 위협을 물리치세요.",
-    "English": "시시각각 변화하는 게이트의 위협을 물리치세요.",
-    "Japanese": "시시각각 변화하는 게이트의 위협을 물리치세요.",
-    "China_Simplified": "시시각각 변화하는 게이트의 위협을 물리치세요.",
-    "China_Traditional": "시시각각 변화하는 게이트의 위협을 물리치세요."
+    "English": "Repel the ever-changing threat of the Gates.",
+    "Japanese": "刻々と変化するゲートの脅威を撃退してください。",
+    "China_Simplified": "击败随时变化的门户威胁。",
+    "China_Traditional": "擊敗隨時變化的門戶威脅。"
   },
   {
     "ID": "SYS_SINGULARITY_CONTENTS_DESC",
     "Korean": "특이점 발생",
-    "English": "특이점 발생",
-    "Japanese": "특이점 발생",
-    "China_Simplified": "특이점 발생",
-    "China_Traditional": "특이점 발생"
+    "English": "Singularity Occurrence",
+    "Japanese": "特異点発生",
+    "China_Simplified": "奇点发生",
+    "China_Traditional": "奇點發生"
   },
   {
     "ID": "SYS_SINGULARITY_CONTENTS_INFO",
     "Korean": "차원 특이점 정보",
-    "English": "차원 특이점 정보",
-    "Japanese": "차원 특이점 정보",
-    "China_Simplified": "차원 특이점 정보",
-    "China_Traditional": "차원 특이점 정보"
+    "English": "Dimensional Singularity Info",
+    "Japanese": "次元特異点情報",
+    "China_Simplified": "次元奇点信息",
+    "China_Traditional": "次元奇點資訊"
   },
   {
     "ID": "SYS_SINGULARITY_CONTENTS_NOW_INFO",
     "Korean": "현재 특이점",
-    "English": "현재 특이점",
-    "Japanese": "현재 특이점",
-    "China_Simplified": "현재 특이점",
-    "China_Traditional": "현재 특이점"
+    "English": "Current Singularity",
+    "Japanese": "現在の特異点",
+    "China_Simplified": "当前奇点",
+    "China_Traditional": "當前奇點"
   },
   {
     "ID": "SYS_SINGULARITY_CONTENTS_NEXT_INFO",
     "Korean": "다음 특이점",
-    "English": "다음 특이점",
-    "Japanese": "다음 특이점",
-    "China_Simplified": "다음 특이점",
-    "China_Traditional": "다음 특이점"
+    "English": "Next Singularity",
+    "Japanese": "次の特異点",
+    "China_Simplified": "下一个奇点",
+    "China_Traditional": "下一個奇點"
   },
   {
     "ID": "SYS_SINGULARITY_RANKING",
     "Korean": "현재 랭킹 : <color=#0db226>{0}</color>",
-    "English": "현재 랭킹 : <color=#0db226>{0}</color>",
-    "Japanese": "현재 랭킹 : <color=#0db226>{0}</color>",
-    "China_Simplified": "현재 랭킹 : <color=#0db226>{0}</color>",
-    "China_Traditional": "현재 랭킹 : <color=#0db226>{0}</color>"
+    "English": "Current Ranking : <color=#0db226>{0}</color>",
+    "Japanese": "現在のランキング：<color=#0db226>{0}</color>",
+    "China_Simplified": "当前排名：<color=#0db226>{0}</color>",
+    "China_Traditional": "當前排名：<color=#0db226>{0}</color>"
   },
   {
     "ID": "SYS_SINGULARITY_RANKING_SCORE",
     "Korean": "달성 최고 스코어 : {0}",
-    "English": "달성 최고 스코어 : {0}",
-    "Japanese": "달성 최고 스코어 : {0}",
-    "China_Simplified": "달성 최고 스코어 : {0}",
-    "China_Traditional": "달성 최고 스코어 : {0}"
+    "English": "Best Score Achieved : {0}",
+    "Japanese": "達成最高スコア：{0}",
+    "China_Simplified": "达成最高分数：{0}",
+    "China_Traditional": "達成最高分數：{0}"
   },
   {
     "ID": "SYS_SINGULARITY_NEXT_RANKING",
     "Korean": "다음 랭크",
-    "English": "다음 랭크",
-    "Japanese": "다음 랭크",
-    "China_Simplified": "다음 랭크",
-    "China_Traditional": "다음 랭크"
+    "English": "Next Rank",
+    "Japanese": "次のランク",
+    "China_Simplified": "下一个等级",
+    "China_Traditional": "下一個等級"
   },
   {
     "ID": "SYS_SINGULARITY_RANKING_REWARD",
     "Korean": "랭크 달성 보상",
-    "English": "랭크 달성 보상",
-    "Japanese": "랭크 달성 보상",
-    "China_Simplified": "랭크 달성 보상",
-    "China_Traditional": "랭크 달성 보상"
+    "English": "Rank Achievement Reward",
+    "Japanese": "ランク達成報酬",
+    "China_Simplified": "等级达成奖励",
+    "China_Traditional": "等級達成獎勵"
   },
   {
     "ID": "SYS_SINGULARITY_DAILY_REWARD",
     "Korean": "일일 참여 보상",
-    "English": "일일 참여 보상",
-    "Japanese": "일일 참여 보상",
-    "China_Simplified": "일일 참여 보상",
-    "China_Traditional": "일일 참여 보상"
+    "English": "Daily Participation Reward",
+    "Japanese": "日別参加報酬",
+    "China_Simplified": "每日参与奖励",
+    "China_Traditional": "每日參與獎勵"
   },
   {
     "ID": "SYS_BUFF_REDISTRIBUTE",
@@ -114656,6 +114664,174 @@
     "China_Traditional": "惡性商店"
   },
   {
+    "ID": "SYS_SINGULAR_DUNGEON_F01",
+    "Korean": "[특이점] - 흉물 사냥꾼 벨리알",
+    "English": "[Singularity] - Abomination Hunter Belial",
+    "Japanese": "[特異点] - モンスターハンター・ベリアル",
+    "China_Simplified": "[奇点] - 怪物猎手贝利亚尔",
+    "China_Traditional": "[奇點] - 怪物獵手貝利亞爾"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_F02",
+    "Korean": "[특이점] - 크사이",
+    "English": "[Singularity] - Ksai",
+    "Japanese": "[特異点] - ザイ",
+    "China_Simplified": "[奇点] - 科赛",
+    "China_Traditional": "[奇點] - 科賽"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_F03",
+    "Korean": "[특이점] - 화염기사 메테우스",
+    "English": "[Singularity] - Blazing Knight Meteos",
+    "Japanese": "[特異点] - 火炎の騎士メテウス",
+    "China_Simplified": "[奇点] - 火焰骑士梅修斯",
+    "China_Traditional": "[奇點] - 火焰騎士梅修斯"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_W01",
+    "Korean": "[특이점] - 타일런트 유생체",
+    "English": "[Singularity] - Tyrant Toddler",
+    "Japanese": "[特異点] - タイラントの幼生",
+    "China_Simplified": "[奇点] - 幼体泰兰特",
+    "China_Traditional": "[奇點] - 幼生泰蘭特"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_W02",
+    "Korean": "[특이점] - 부활한 하르슈나",
+    "English": "[Singularity] - Resurrected Harshna",
+    "Japanese": "[特異点] - 復活したハルシュナ",
+    "China_Simplified": "[奇点] - 复活的赫索纳",
+    "China_Traditional": "[奇點] - 復活的哈勒修那"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_W03",
+    "Korean": "[특이점] - 스핑크스 가디언",
+    "English": "[Singularity] - Sphinx Guardian",
+    "Japanese": "[特異点] - スフィンクスガーディアン",
+    "China_Simplified": "[奇点] - 狮身守卫",
+    "China_Traditional": "[奇點] - 人面獅身守護者"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_E01",
+    "Korean": "[특이점] - 키메라",
+    "English": "[Singularity] - Chimera",
+    "Japanese": "[特異点] - キメラ",
+    "China_Simplified": "[奇点] - 奇美拉",
+    "China_Traditional": "[奇點] - 奇美拉"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_E02",
+    "Korean": "[특이점] - 시치후샤 그림자",
+    "English": "[Singularity] - Shichifuja Shadow",
+    "Japanese": "[特異点] - 七歩蛇の影",
+    "China_Simplified": "[奇点] - 七步蛇之影",
+    "China_Traditional": "[奇點] - 七步蛇之影"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_E03",
+    "Korean": "[특이점] - VI=E-11-A",
+    "English": "[Singularity] - VI=E-11-A",
+    "Japanese": "[特異点] - VI=E-11-A",
+    "China_Simplified": "[奇点] - VI=E-11-A",
+    "China_Traditional": "[奇點] - VI=E-11-A"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_L01",
+    "Korean": "[특이점] - 울드",
+    "English": "[Singularity] - Urd",
+    "Japanese": "[特異点] - ウルド",
+    "China_Simplified": "[奇点] - 乌尔德",
+    "China_Traditional": "[奇點] - 烏爾德"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_L02",
+    "Korean": "[특이점] - 베르단디",
+    "English": "[Singularity] - Verdandi",
+    "Japanese": "[特異点] - ヴェルダンディ",
+    "China_Simplified": "[奇点] - 贝尔丹迪",
+    "China_Traditional": "[奇點] - 貝爾丹迪"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_L03",
+    "Korean": "[특이점] - 스쿨드",
+    "English": "[Singularity] - Skuld",
+    "Japanese": "[特異点] - スクルド",
+    "China_Simplified": "[奇点] - 斯库尔德",
+    "China_Traditional": "[奇點] - 斯庫爾德"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_D01",
+    "Korean": "[특이점] - 울드",
+    "English": "[Singularity] - Urd",
+    "Japanese": "[特異点] - ウルド",
+    "China_Simplified": "[奇点] - 乌尔德",
+    "China_Traditional": "[奇點] - 烏爾德"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_D02",
+    "Korean": "[특이점] - 베르단디",
+    "English": "[Singularity] - Verdandi",
+    "Japanese": "[特異点] - ヴェルダンディ",
+    "China_Simplified": "[奇点] - 贝尔丹迪",
+    "China_Traditional": "[奇點] - 貝爾丹迪"
+  },
+  {
+    "ID": "SYS_SINGULAR_DUNGEON_D03",
+    "Korean": "[특이점] - 스쿨드",
+    "English": "[Singularity] - Skuld",
+    "Japanese": "[特異点] - スクルド",
+    "China_Simplified": "[奇点] - 斯库尔德",
+    "China_Traditional": "[奇點] - 斯庫爾德"
+  },
+  {
+    "ID": "SYS_SINGULARITY_NAME_01",
+    "Korean": "차원 특이점",
+    "English": "Dimensional Singularity",
+    "Japanese": "次元特異点",
+    "China_Simplified": "次元奇点",
+    "China_Traditional": "次元奇點"
+  },
+  {
+    "ID": "SYS_SINGULARITY_NAME_02",
+    "Korean": "차원 특이점",
+    "English": "Dimensional Singularity",
+    "Japanese": "次元特異点",
+    "China_Simplified": "次元奇点",
+    "China_Traditional": "次元奇點"
+  },
+  {
+    "ID": "SYS_SINGULARITY_NAME_03",
+    "Korean": "차원 특이점",
+    "English": "Dimensional Singularity",
+    "Japanese": "次元特異点",
+    "China_Simplified": "次元奇点",
+    "China_Traditional": "次元奇點"
+  },
+  {
+    "ID": "SYS_SINGULARITY_DESC_01",
+    "Korean": "차원 특이점",
+    "English": "Dimensional Singularity",
+    "Japanese": "次元特異点",
+    "China_Simplified": "次元奇点",
+    "China_Traditional": "次元奇點"
+  },
+  {
+    "ID": "SYS_SINGULARITY_DESC_02",
+    "Korean": "차원 특이점",
+    "English": "Dimensional Singularity",
+    "Japanese": "次元特異点",
+    "China_Simplified": "次元奇点",
+    "China_Traditional": "次元奇點"
+  },
+  {
+    "ID": "SYS_SINGULARITY_DESC_03",
+    "Korean": "차원 특이점",
+    "English": "Dimensional Singularity",
+    "Japanese": "次元特異点",
+    "China_Simplified": "次元奇点",
+    "China_Traditional": "次元奇點"
+  },
+  {
     "ID": "SYS_EVENT_REALTIMEPVP_TITLE_1",
     "Korean": "실시간 대전 개시!",
     "English": "The Battle Begins!",
@@ -114718,6 +114894,270 @@
     "Japanese": "ワールドアリーナイベントミッションクリア",
     "China_Simplified": "实时对战活动任务通关",
     "China_Traditional": "即時對戰活動任務通關"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RANK_TITLE",
+    "Korean": "차원 특이점 랭크",
+    "English": "Dimensional Singularity Rank",
+    "Japanese": "次元特異点ランク",
+    "China_Simplified": "次元奇点等级",
+    "China_Traditional": "次元奇點等級"
+  },
+  {
+    "ID": "SYS_SINGULARITY_PERIOD_END",
+    "Korean": "기간 종료",
+    "English": "Period Ended",
+    "Japanese": "期間終了",
+    "China_Simplified": "期间结束",
+    "China_Traditional": "期間結束"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RANK_DESC",
+    "Korean": "보스의 약점을 파악하여, 효과적인 팀 구성으로 고랭크를 노려보세요.",
+    "English": "Learn the boss's weaknesses and aim for a high rank with an effective team composition.",
+    "Japanese": "ボスの弱点を把握し、効果的なチーム編成で高ランクを目指してください。",
+    "China_Simplified": "了解首领的弱点，以有效的队伍编成挑战高等级吧。",
+    "China_Traditional": "了解首領的弱點，以有效的隊伍編成挑戰高等級吧。"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RANKING_TITLE",
+    "Korean": "차원 특이점 랭킹",
+    "English": "Dimensional Singularity Ranking",
+    "Japanese": "次元特異点ランキング",
+    "China_Simplified": "次元奇点排名",
+    "China_Traditional": "次元奇點排名"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BATTLE_REPORT",
+    "Korean": "차원 특이점 전투기록",
+    "English": "Dimensional Singularity Battle Records",
+    "Japanese": "次元特異点戦闘記録",
+    "China_Simplified": "次元奇点战斗记录",
+    "China_Traditional": "次元奇點戰鬥記錄"
+  },
+  {
+    "ID": "SYS_SINGULARITY_TEAM",
+    "Korean": "파티 편성",
+    "English": "Party Lineup",
+    "Japanese": "パーティ編成",
+    "China_Simplified": "队伍编成",
+    "China_Traditional": "隊伍編成"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BATTLE_INFO",
+    "Korean": "보스 전투 정보",
+    "English": "Boss Battle Info",
+    "Japanese": "ボス戦闘情報",
+    "China_Simplified": "首领战斗信息",
+    "China_Traditional": "首領戰鬥資訊"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BATTLE_INFO_DESC",
+    "Korean": "최근 진행된 10회의 전투가 기록됩니다.",
+    "English": "The last 10 battles played are recorded.",
+    "Japanese": "最近行われた10回の戦闘が記録される。",
+    "China_Simplified": "记录最近进行的10次战斗。",
+    "China_Traditional": "記錄最近進行的10次戰鬥。"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RANKER_TEAM_INFO",
+    "Korean": "랭커 편성 정보",
+    "English": "Ranker Lineup Info",
+    "Japanese": "ランカー編成情報",
+    "China_Simplified": "排名者编成信息",
+    "China_Traditional": "排名者編成資訊"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_TEAM",
+    "Korean": "동료 보유 현황",
+    "English": "Hero Roster",
+    "Japanese": "仲間保有状況",
+    "China_Simplified": "同伴持有情况",
+    "China_Traditional": "同伴持有情況"
+  },
+  {
+    "ID": "SYS_SINGULARITY_FAIL",
+    "Korean": "포기시 지금 데미지로 계산됩니다.\\n전투를 포기하시겠습니까?",
+    "English": "If you forfeit, the current DMG dealt will be counted.\\nDo you wish to forfeit the battle?",
+    "Japanese": "포기時、現在のダメージで計算される。\\n戦闘を포기しますか？",
+    "China_Simplified": "若放弃，将以当前造成的伤害计算。\\n是否放弃战斗？",
+    "China_Traditional": "若放棄，將以當前造成的傷害計算。\\n是否放棄戰鬥？"
+  },
+  {
+    "ID": "SYS_SINGULARITY_TEAM_SETTING",
+    "Korean": "대상의 편성 정보를 나의 편성 정보로 등록합니다.\\n미 보유 동료는 편성되지 않습니다.",
+    "English": "The target's lineup info will be registered as your lineup.\\nHeroes you do not own will not be included.",
+    "Japanese": "対象の編成情報を自分の編成情報として登録する。\\n未保有の仲間は編成されない。",
+    "China_Simplified": "将目标的编成信息注册为我的编成信息。\\n未持有的同伴将不会被编成。",
+    "China_Traditional": "將目標的編成資訊登錄為我的編成資訊。\\n未持有的同伴將不會被編成。"
+  },
+  {
+    "ID": "SYS_SINGULARITY_TEAM_RECORD_BLANK_MSG",
+    "Korean": "저장된 전투 기록이 없습니다.",
+    "English": "No saved battle records.",
+    "Japanese": "保存された戦闘記録がない。",
+    "China_Simplified": "没有已保存的战斗记录。",
+    "China_Traditional": "沒有已保存的戰鬥記錄。"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RANK_TITLE_02",
+    "Korean": "{0} 랭크 달성 보상",
+    "English": "{0} Rank Achievement Reward",
+    "Japanese": "{0}ランク達成報酬",
+    "China_Simplified": "{0}等级达成奖励",
+    "China_Traditional": "{0}等級達成獎勵"
+  },
+  {
+    "ID": "SYS_SINGULARITY_DAILY_RANKING_REWARD",
+    "Korean": "일일 랭킹 순위 보상",
+    "English": "Daily Ranking Reward",
+    "Japanese": "日別ランキング順位報酬",
+    "China_Simplified": "每日排名奖励",
+    "China_Traditional": "每日排名獎勵"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_IN_1",
+    "Korean": "특이점 TOP 1",
+    "English": "Singularity TOP 1",
+    "Japanese": "特異点 TOP 1",
+    "China_Simplified": "奇点 TOP 1",
+    "China_Traditional": "奇點 TOP 1"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_IN_2",
+    "Korean": "특이점 TOP 2",
+    "English": "Singularity TOP 2",
+    "Japanese": "特異点 TOP 2",
+    "China_Simplified": "奇点 TOP 2",
+    "China_Traditional": "奇點 TOP 2"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_IN_3",
+    "Korean": "특이점 TOP 3",
+    "English": "Singularity TOP 3",
+    "Japanese": "特異点 TOP 3",
+    "China_Simplified": "奇点 TOP 3",
+    "China_Traditional": "奇點 TOP 3"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_IN_4",
+    "Korean": "특이점 TOP 4",
+    "English": "Singularity TOP 4",
+    "Japanese": "特異点 TOP 4",
+    "China_Simplified": "奇点 TOP 4",
+    "China_Traditional": "奇點 TOP 4"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_IN_5",
+    "Korean": "특이점 TOP 5",
+    "English": "Singularity TOP 5",
+    "Japanese": "特異点 TOP 5",
+    "China_Simplified": "奇点 TOP 5",
+    "China_Traditional": "奇點 TOP 5"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_IN_10",
+    "Korean": "특이점 TOP 10",
+    "English": "Singularity TOP 10",
+    "Japanese": "特異点 TOP 10",
+    "China_Simplified": "奇点 TOP 10",
+    "China_Traditional": "奇點 TOP 10"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_IN_50",
+    "Korean": "특이점 TOP 50",
+    "English": "Singularity TOP 50",
+    "Japanese": "特異点 TOP 50",
+    "China_Simplified": "奇点 TOP 50",
+    "China_Traditional": "奇點 TOP 50"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_IN_100",
+    "Korean": "특이점 TOP 100",
+    "English": "Singularity TOP 100",
+    "Japanese": "特異点 TOP 100",
+    "China_Simplified": "奇点 TOP 100",
+    "China_Traditional": "奇點 TOP 100"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_RATE_1",
+    "Korean": "특이점 상위 1%",
+    "English": "Singularity Top 1%",
+    "Japanese": "特異点 上位1%",
+    "China_Simplified": "奇点 前1%",
+    "China_Traditional": "奇點 前1%"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_RATE_10",
+    "Korean": "특이점 상위 10%",
+    "English": "Singularity Top 10%",
+    "Japanese": "特異点 上位10%",
+    "China_Simplified": "奇点 前10%",
+    "China_Traditional": "奇點 前10%"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_RATE_50",
+    "Korean": "특이점 상위 50%",
+    "English": "Singularity Top 50%",
+    "Japanese": "特異点 上位50%",
+    "China_Simplified": "奇点 前50%",
+    "China_Traditional": "奇點 前50%"
+  },
+  {
+    "ID": "SYS_SINGULARITY_MY_RANK_RATE_100",
+    "Korean": "특이점 상위 100%",
+    "English": "Singularity Top 100%",
+    "Japanese": "特異点 上位100%",
+    "China_Simplified": "奇点 前100%",
+    "China_Traditional": "奇點 前100%"
+  },
+  {
+    "ID": "SYS_SINGULARITY_BATTLE_TURN",
+    "Korean": "진행 턴 : {0}",
+    "English": "Turn Elapsed : {0}",
+    "Japanese": "経過ターン：{0}",
+    "China_Simplified": "进行回合：{0}",
+    "China_Traditional": "進行回合：{0}"
+  },
+  {
+    "ID": "SYS_SINGULARITY_SCORE_RANK",
+    "Korean": "스코어 랭크 : {0}",
+    "English": "Score Rank : {0}",
+    "Japanese": "スコアランク：{0}",
+    "China_Simplified": "分数等级：{0}",
+    "China_Traditional": "分數等級：{0}"
+  },
+  {
+    "ID": "SYS_SINGULARITY_SCORE_RANK_2",
+    "Korean": "스코어 랭크",
+    "English": "Score Rank",
+    "Japanese": "スコアランク",
+    "China_Simplified": "分数等级",
+    "China_Traditional": "分數等級"
+  },
+  {
+    "ID": "SYS_SINGULARITY_TOTAL_SCORE",
+    "Korean": "전체 스코어",
+    "English": "Total Score",
+    "Japanese": "総合スコア",
+    "China_Simplified": "总分数",
+    "China_Traditional": "總分數"
+  },
+  {
+    "ID": "SYS_SINGULARITY_ADJUSTMENT_MSG_PORTAL",
+    "Korean": "다음 특이점 관측 중\\n{0}",
+    "English": "Observing next Singularity\\n{0}",
+    "Japanese": "次の特異点観測中\\n{0}",
+    "China_Simplified": "正在观测下一个奇点\\n{0}",
+    "China_Traditional": "正在觀測下一個奇點\\n{0}"
+  },
+  {
+    "ID": "SYS_SINGULARITY_ADJUSTMENT_MSG",
+    "Korean": "다음 특이점을 관측 중입니다. 현재는 특이점에 입장하실 수 없습니다.",
+    "English": "The next Singularity is being observed. You cannot enter the Singularity at this time.",
+    "Japanese": "次の特異点を観測中です。現在は特異点に入場できません。",
+    "China_Simplified": "正在观测下一个奇点。当前无法进入奇点。",
+    "China_Traditional": "正在觀測下一個奇點。當前無法進入奇點。"
   },
   {
     "ID": "SYS_GOLD_EXP_DUNGEON_1",
@@ -115472,6 +115912,422 @@
     "China_Traditional": "通關方舟強襲{0}次"
   },
   {
+    "ID": "SYS_ACCOUNT_FRAME_103",
+    "Korean": "프로필 테두리 -  메이드 ll",
+    "English": "Profile Frame - Maid II",
+    "Japanese": "プロフィールフレーム - メイド II",
+    "China_Simplified": "头像边框 - 女仆 II",
+    "China_Traditional": "頭像外框 - 女僕 II"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_DES_103",
+    "Korean": "역전 세계의 자동 인형 이벤트 상점에서 구매할 수 있는 프로필 테두리입니다.",
+    "English": "A Profile Frame that can be purchased from the Reversed World Automaton Event Shop.",
+    "Japanese": "逆転世界のオートマタイベントショップで購入できるプロフィールフレームです。",
+    "China_Simplified": "可在逆转世界的机械人偶活动商店中购买的头像边框。",
+    "China_Traditional": "可在逆轉世界的自動人偶活動商店中購買的頭像外框。"
+  },
+  {
+    "ID": "SYS_SINGULARITY_SCORE",
+    "Korean": "스코어",
+    "English": "Score",
+    "Japanese": "スコア",
+    "China_Simplified": "分数",
+    "China_Traditional": "分數"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_TITLE",
+    "Korean": "특이점 활성화",
+    "English": "Singularity Activation",
+    "Japanese": "特異点活性化",
+    "China_Simplified": "奇点激活",
+    "China_Traditional": "奇點激活"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_RESULT",
+    "Korean": "특이점 활성화 결과",
+    "English": "Singularity Activation Result",
+    "Japanese": "特異点活性化結果",
+    "China_Simplified": "奇点激活结果",
+    "China_Traditional": "奇點激活結果"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_MAIN_OPTION",
+    "Korean": "메인 옵션 강화",
+    "English": "Main Option Enhancement",
+    "Japanese": "メインオプション強化",
+    "China_Simplified": "主要选项强化",
+    "China_Traditional": "主要選項強化"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_LEVEL",
+    "Korean": "강화 수치 확장",
+    "English": "Enhancement Value Expansion",
+    "Japanese": "強化数値拡張",
+    "China_Simplified": "强化数值扩展",
+    "China_Traditional": "強化數值擴展"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_SMELTING",
+    "Korean": "재련 횟수 확장",
+    "English": "Refinement Count Expansion",
+    "Japanese": "精錬回数拡張",
+    "China_Simplified": "精炼次数扩展",
+    "China_Traditional": "精煉次數擴展"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_SPECIAL_OPTION_01",
+    "Korean": "+15 강화 달성 시, 아래의 옵션 적용",
+    "English": "When +15 Enhancement is achieved, the following options apply",
+    "Japanese": "+15強化達成時、以下のオプションが適用される",
+    "China_Simplified": "达到+15强化时，适用以下选项",
+    "China_Traditional": "達到+15強化時，適用以下選項"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_SPECIAL_OPTION_02",
+    "Korean": "옵션 재산정 시, 아래의 옵션이 변화합니다",
+    "English": "When options are recalculated, the following options will change",
+    "Japanese": "オプション再算定時、以下のオプションが変化する",
+    "China_Simplified": "重新计算选项时，以下选项将发生变化",
+    "China_Traditional": "重新計算選項時，以下選項將發生變化"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_SPECIAL_OPTION_03",
+    "Korean": "추가 효과 적용",
+    "English": "Additional Effect Applied",
+    "Japanese": "追加効果適用",
+    "China_Simplified": "追加效果适用",
+    "China_Traditional": "追加效果適用"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_SPECIAL_OPTION_RERALL",
+    "Korean": "옵션 재산정",
+    "English": "Option Recalculation",
+    "Japanese": "オプション再算定",
+    "China_Simplified": "选项重新计算",
+    "China_Traditional": "選項重新計算"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_EMPTY",
+    "Korean": "강화 가능한 장비가 없습니다",
+    "English": "No Gear available for enhancement",
+    "Japanese": "強化可能な装備がない",
+    "China_Simplified": "没有可强化的装备",
+    "China_Traditional": "沒有可強化的裝備"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_COMPLETE",
+    "Korean": "특이점 활성화가 완료되었습니다\\n소지품을 확인해주세요",
+    "English": "Singularity Activation is complete.\\nPlease check your inventory.",
+    "Japanese": "特異点活性化が完了した。\\n所持品を確認してください。",
+    "China_Simplified": "奇点激活已完成。\\n请查看您的背包。",
+    "China_Traditional": "奇點激活已完成。\\n請查看您的背包。"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_SUCCESS",
+    "Korean": "강화에 성공하였습니다",
+    "English": "Enhancement succeeded.",
+    "Japanese": "強化に成功した。",
+    "China_Simplified": "强化成功。",
+    "China_Traditional": "強化成功。"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_FAIL",
+    "Korean": "강화에 실패하였습니다",
+    "English": "Enhancement failed.",
+    "Japanese": "強化に失敗した。",
+    "China_Simplified": "强化失败。",
+    "China_Traditional": "強化失敗。"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_SUCCESS",
+    "Korean": "옵션 재산정에 성공하였습니다",
+    "English": "Option recalculation succeeded.",
+    "Japanese": "オプション再算定に成功した。",
+    "China_Simplified": "选项重新计算成功。",
+    "China_Traditional": "選項重新計算成功。"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_FAIL",
+    "Korean": "옵션 재산정에 실패하였습니다",
+    "English": "Option recalculation failed.",
+    "Japanese": "オプション再算定に失敗した。",
+    "China_Simplified": "选项重新计算失败。",
+    "China_Traditional": "選項重新計算失敗。"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_TITLE",
+    "Korean": "특이점 장비 강화",
+    "English": "Singularity Gear Enhancement",
+    "Japanese": "特異点装備強化",
+    "China_Simplified": "奇点装备强化",
+    "China_Traditional": "奇點裝備強化"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_LEVEL",
+    "Korean": "강화 단계 : {0}<color=#0D99DA> >> {1}</color>",
+    "English": "Enhancement Stage : {0}<color=#0D99DA> >> {1}</color>",
+    "Japanese": "強化段階：{0}<color=#0D99DA> >> {1}</color>",
+    "China_Simplified": "强化阶段：{0}<color=#0D99DA >> {1}</color>",
+    "China_Traditional": "強化階段：{0}<color=#0D99DA> >> {1}</color>"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_WARNNING_01",
+    "Korean": "현재 강화 성공 확률이 100% 미만입니다.",
+    "English": "The current enhancement success rate is below 100%.",
+    "Japanese": "現在の強化成功確率が100%未満です。",
+    "China_Simplified": "当前强化成功概率低于100%。",
+    "China_Traditional": "當前強化成功概率低於100%。"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_WARNNING_02",
+    "Korean": "현재 강화 성공 확률 : {0}",
+    "English": "Current Enhancement Success Rate : {0}",
+    "Japanese": "現在の強化成功確率：{0}",
+    "China_Simplified": "当前强化成功概率：{0}",
+    "China_Traditional": "當前強化成功概率：{0}"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_TITLE",
+    "Korean": "특이점 장비 옵션 재산정",
+    "English": "Singularity Gear Option Recalculation",
+    "Japanese": "特異点装備オプション再算定",
+    "China_Simplified": "奇点装备选项重新计算",
+    "China_Traditional": "奇點裝備選項重新計算"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_OPTION_01",
+    "Korean": "현재 적용된 옵션",
+    "English": "Currently Applied Option",
+    "Japanese": "現在適用中のオプション",
+    "China_Simplified": "当前适用的选项",
+    "China_Traditional": "當前適用的選項"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_SUCCESS_RATE",
+    "Korean": "강화 성공 확률",
+    "English": "Enhancement Success Rate",
+    "Japanese": "強化成功確率",
+    "China_Simplified": "强化成功概率",
+    "China_Traditional": "強化成功概率"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_SUCCESS_RATE_01",
+    "Korean": "옵션 재산정 성공 확률",
+    "English": "Option Recalculation Success Rate",
+    "Japanese": "オプション再算定成功確率",
+    "China_Simplified": "选项重新计算成功概率",
+    "China_Traditional": "選項重新計算成功概率"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_SUCCESS_RATE_02",
+    "Korean": "옵션 재산정 성공 확률 : {0}",
+    "English": "Option Recalculation Success Rate : {0}",
+    "Japanese": "オプション再算定成功確率：{0}",
+    "China_Simplified": "选项重新计算成功概率：{0}",
+    "China_Traditional": "選項重新計算成功概率：{0}"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_SUCCESS_DESC",
+    "Korean": "<color=#EC4C4E>적용된 옵션을 재산정하시겠습니까?</color>",
+    "English": "<color=#EC4C4E>Do you wish to recalculate the applied options?</color>",
+    "Japanese": "<color=#EC4C4E>適用中のオプションを再算定しますか？</color>",
+    "China_Simplified": "<color=#EC4C4E>是否重新计算已适用的选项？</color>",
+    "China_Traditional": "<color=#EC4C4E>是否重新計算已適用的選項？</color>"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION",
+    "Korean": "+15강화 시 옵션",
+    "English": "Options at +15 Enhancement",
+    "Japanese": "+15強化時のオプション",
+    "China_Simplified": "+15强化时的选项",
+    "China_Traditional": "+15強化時的選項"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_OPTION_02",
+    "Korean": "현재 적용된 옵션 : {0}",
+    "English": "Currently Applied Option : {0}",
+    "Japanese": "現在適用中のオプション：{0}",
+    "China_Simplified": "当前适用的选项：{0}",
+    "China_Traditional": "當前適用的選項：{0}"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_EQUIP",
+    "Korean": "현재 장비 : {0}",
+    "English": "Current Gear : {0}",
+    "Japanese": "現在の装備：{0}",
+    "China_Simplified": "当前装备：{0}",
+    "China_Traditional": "當前裝備：{0}"
+  },
+  {
+    "ID": "SYS_SINGULAR_RERALL_OPTION_DESC",
+    "Korean": "적용 가능한 옵션 목록",
+    "English": "List of Applicable Options",
+    "Japanese": "適用可能なオプション一覧",
+    "China_Simplified": "可适用选项列表",
+    "China_Traditional": "可適用選項列表"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_WEAPON_01",
+    "Korean": "피해량 증가 +20%~50%\\n화/수/지/명/암속성 중 한가지 속성 대상 피해량 증가 +40%~100%\\n차원 특이점 내에서 피해량 증가 +90%~150%",
+    "English": "DMG increases +20%~50%\\nDMG dealt to targets of one of Fire/Water/Earth/Light/Dark increases +40%~100%\\nDMG increases +90%~150% within Dimensional Singularity",
+    "Japanese": "ダメージ増加+20%~50%\\n火/水/地/光/闇属性のうち一つの属性対象ダメージ増加+40%~100%\\n次元特異点内でダメージ増加+90%~150%",
+    "China_Simplified": "伤害量增加+20%~50%\\n对火/水/土/光/暗属性中一种属性目标的伤害量增加+40%~100%\\n在次元奇点内伤害量增加+90%~150%",
+    "China_Traditional": "傷害量增加+20%~50%\\n對火/水/大地/光/暗屬性中一種屬性目標的傷害量增加+40%~100%\\n在次元奇點內傷害量增加+90%~150%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_WEAPON_02",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상 치명 확률 증가 +25%~50%",
+    "English": "Critical Hit Chance against targets of one of Fire/Water/Earth/Light/Dark increases +25%~50%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象会心率増加+25%~50%",
+    "China_Simplified": "对火/水/土/光/暗属性中一种属性目标的暴击率增加+25%~50%",
+    "China_Traditional": "對火/水/大地/光/暗屬性中一種屬性目標的暴擊率增加+25%~50%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_WEAPON_03",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상 치명 피해 증가 +25%~50%",
+    "English": "Critical Damage against targets of one of Fire/Water/Earth/Light/Dark increases +25%~50%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象会心ダメージ増加+25%~50%",
+    "China_Simplified": "对火/水/土/光/暗属性中一种属性目标的暴击伤害增加+25%~50%",
+    "China_Traditional": "對火/水/大地/光/暗屬性中一種屬性目標的暴擊傷害增加+25%~50%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_ACCESSORY_01",
+    "Korean": "피해량 증가 +20%~50%\\n화/수/지/명/암속성 중 한가지 속성 대상 피해량 증가 +40%~100%\\n차원 특이점 내에서 피해량 증가 +90%~150%",
+    "English": "DMG increases +20%~50%\\nDMG dealt to targets of one of Fire/Water/Earth/Light/Dark increases +40%~100%\\nDMG increases +90%~150% within Dimensional Singularity",
+    "Japanese": "ダメージ増加+20%~50%\\n火/水/地/光/闇属性のうち一つの属性対象ダメージ増加+40%~100%\\n次元特異点内でダメージ増加+90%~150%",
+    "China_Simplified": "伤害量增加+20%~50%\\n对火/水/土/光/暗属性中一种属性目标的伤害量增加+40%~100%\\n在次元奇点内伤害量增加+90%~150%",
+    "China_Traditional": "傷害量增加+20%~50%\\n對火/水/大地/光/暗屬性中一種屬性目標的傷害量增加+40%~100%\\n在次元奇點內傷害量增加+90%~150%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_ACCESSORY_02",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상 관통력 증가 +25%~50%",
+    "English": "Penetration against targets of one of Fire/Water/Earth/Light/Dark increases +25%~50%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象貫通力増加+25%~50%",
+    "China_Simplified": "对火/水/土/光/暗属性中一种属性目标的穿透力增加+25%~50%",
+    "China_Traditional": "對火/水/大地/光/暗屬性中一種屬性目標的貫穿力增加+25%~50%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_ACCESSORY_03",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상 효과 적중 증가 +25%~50%",
+    "English": "Effectiveness against targets of one of Fire/Water/Earth/Light/Dark increases +25%~50%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象効果命中増加+25%~50%",
+    "China_Simplified": "对火/水/土/光/暗属性中一种属性目标的效果命中增加+25%~50%",
+    "China_Traditional": "對火/水/大地/光/暗屬性中一種屬性目標的效果命中增加+25%~50%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_HELMET_01",
+    "Korean": "피해 감소 +10%~25%\\n화/수/지/명/암속성 중 한가지 속성 대상 피해 감소 +20%~50%\\n차원 특이점 내에서 피해 감소 +45%~75%",
+    "English": "DMG taken decreases +10%~25%\\nDMG taken from targets of one of Fire/Water/Earth/Light/Dark decreases +20%~50%\\nDMG taken decreases +45%~75% within Dimensional Singularity",
+    "Japanese": "ダメージ減少+10%~25%\\n火/水/地/光/闇属性のうち一つの属性対象ダメージ減少+20%~50%\\n次元特異点内でダメージ減少+45%~75%",
+    "China_Simplified": "伤害减少+10%~25%\\n受到火/水/土/光/暗属性中一种属性目标的伤害减少+20%~50%\\n在次元奇点内伤害减少+45%~75%",
+    "China_Traditional": "傷害減少+10%~25%\\n受到火/水/大地/光/暗屬性中一種屬性目標的傷害減少+20%~50%\\n在次元奇點內傷害減少+45%~75%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_HELMET_02",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상에게 받는 치명 피해량 감소 +15%~30%",
+    "English": "Crit DMG taken from targets of one of Fire/Water/Earth/Light/Dark decreases +15%~30%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象から受ける会心ダメージ減少+15%~30%",
+    "China_Simplified": "受到火/水/土/光/暗属性中一种属性目标的暴击伤害量减少+15%~30%",
+    "China_Traditional": "受到火/水/大地/光/暗屬性中一種屬性目標的暴擊傷害量減少+15%~30%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_HELMET_03",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상에게 받는 치명 피해량 감소 +15%~30%",
+    "English": "Crit DMG taken from targets of one of Fire/Water/Earth/Light/Dark decreases +15%~30%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象から受ける会心ダメージ減少+15%~30%",
+    "China_Simplified": "受到火/水/土/光/暗属性中一种属性目标的暴击伤害量减少+15%~30%",
+    "China_Traditional": "受到火/水/大地/光/暗屬性中一種屬性目標的暴擊傷害量減少+15%~30%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_ARMOR_01",
+    "Korean": "피해 감소 +10%~25%\\n화/수/지/명/암속성 중 한가지 속성 대상 피해 감소 +20%~50%\\n차원 특이점 내에서 피해 감소 +45%~75%",
+    "English": "DMG taken decreases +10%~25%\\nDMG taken from targets of one of Fire/Water/Earth/Light/Dark decreases +20%~50%\\nDMG taken decreases +45%~75% within Dimensional Singularity",
+    "Japanese": "ダメージ減少+10%~25%\\n火/水/地/光/闇属性のうち一つの属性対象ダメージ減少+20%~50%\\n次元特異点内でダメージ減少+45%~75%",
+    "China_Simplified": "伤害减少+10%~25%\\n受到火/水/土/光/暗属性中一种属性目标的伤害减少+20%~50%\\n在次元奇点内伤害减少+45%~75%",
+    "China_Traditional": "傷害減少+10%~25%\\n受到火/水/大地/光/暗屬性中一種屬性目標的傷害減少+20%~50%\\n在次元奇點內傷害減少+45%~75%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_ARMOR_02",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상 방어력 증가 +15%~30%",
+    "English": "Defense against targets of one of Fire/Water/Earth/Light/Dark increases +15%~30%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象防御力増加+15%~30%",
+    "China_Simplified": "对火/水/土/光/暗属性中一种属性目标的防御力增加+15%~30%",
+    "China_Traditional": "對火/水/大地/光/暗屬性中一種屬性目標的防禦力增加+15%~30%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_ARMOR_03",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상 방어력 증가 +15%~30%",
+    "English": "Defense against targets of one of Fire/Water/Earth/Light/Dark increases +15%~30%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象防御力増加+15%~30%",
+    "China_Simplified": "对火/水/土/光/暗属性中一种属性目标的防御力增加+15%~30%",
+    "China_Traditional": "對火/水/大地/光/暗屬性中一種屬性目標的防禦力增加+15%~30%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_GLOVES_01",
+    "Korean": "피해 감소 +10%~25%\\n화/수/지/명/암속성 중 한가지 속성 대상 피해 감소 +20%~50%\\n차원 특이점 내에서 피해 감소 +45%~75%",
+    "English": "DMG taken decreases +10%~25%\\nDMG taken from targets of one of Fire/Water/Earth/Light/Dark decreases +20%~50%\\nDMG taken decreases +45%~75% within Dimensional Singularity",
+    "Japanese": "ダメージ減少+10%~25%\\n火/水/地/光/闇属性のうち一つの属性対象ダメージ減少+20%~50%\\n次元特異点内でダメージ減少+45%~75%",
+    "China_Simplified": "伤害减少+10%~25%\\n受到火/水/土/光/暗属性中一种属性目标的伤害减少+20%~50%\\n在次元奇点内伤害减少+45%~75%",
+    "China_Traditional": "傷害減少+10%~25%\\n受到火/水/大地/光/暗屬性中一種屬性目標的傷害減少+20%~50%\\n在次元奇點內傷害減少+45%~75%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_GLOVES_02",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상 효과 저항 증가 +15%~30%",
+    "English": "Resilience against targets of one of Fire/Water/Earth/Light/Dark increases +15%~30%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象効果抵抗増加+15%~30%",
+    "China_Simplified": "对火/水/土/光/暗属性中一种属性目标的效果抵抗增加+15%~30%",
+    "China_Traditional": "對火/水/大地/光/暗屬性中一種屬性目標的效果抵抗增加+15%~30%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_GLOVES_03",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상 효과 저항 증가 +15%~30%",
+    "English": "Resilience against targets of one of Fire/Water/Earth/Light/Dark increases +15%~30%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象効果抵抗増加+15%~30%",
+    "China_Simplified": "对火/水/土/光/暗属性中一种属性目标的效果抵抗增加+15%~30%",
+    "China_Traditional": "對火/水/大地/光/暗屬性中一種屬性目標的效果抵抗增加+15%~30%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_SHOES_01",
+    "Korean": "피해 감소 +10%~25%\\n화/수/지/명/암속성 중 한가지 속성 대상 피해 감소 +20%~50%\\n차원 특이점 내에서 피해 감소 +45%~75%",
+    "English": "DMG taken decreases +10%~25%\\nDMG taken from targets of one of Fire/Water/Earth/Light/Dark decreases +20%~50%\\nDMG taken decreases +45%~75% within Dimensional Singularity",
+    "Japanese": "ダメージ減少+10%~25%\\n火/水/地/光/闇属性のうち一つの属性対象ダメージ減少+20%~50%\\n次元特異点内でダメージ減少+45%~75%",
+    "China_Simplified": "伤害减少+10%~25%\\n受到火/水/土/光/暗属性中一种属性目标的伤害减少+20%~50%\\n在次元奇点内伤害减少+45%~75%",
+    "China_Traditional": "傷害減少+10%~25%\\n受到火/水/大地/光/暗屬性中一種屬性目標的傷害減少+20%~50%\\n在次元奇點內傷害減少+45%~75%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_SHOES_02",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상에게 받는 피해량 감소 +15%~30%",
+    "English": "DMG taken from targets of one of Fire/Water/Earth/Light/Dark decreases +15%~30%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象から受けるダメージ減少+15%~30%",
+    "China_Simplified": "受到火/水/土/光/暗属性中一种属性目标的伤害量减少+15%~30%",
+    "China_Traditional": "受到火/水/大地/光/暗屬性中一種屬性目標的傷害量減少+15%~30%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_SHOES_03",
+    "Korean": "화/수/지/명/암속성 중 한가지 속성 대상에게 받는 피해량 감소 +15%~30%",
+    "English": "DMG taken from targets of one of Fire/Water/Earth/Light/Dark decreases +15%~30%",
+    "Japanese": "火/水/地/光/闇属性のうち一つの属性対象から受けるダメージ減少+15%~30%",
+    "China_Simplified": "受到火/水/土/光/暗属性中一种属性目标的伤害量减少+15%~30%",
+    "China_Traditional": "受到火/水/大地/光/暗屬性中一種屬性目標的傷害量減少+15%~30%"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_POPUP_DESC",
+    "Korean": "<color=#EC4C4E>정말로 강화를 진행하시겠습니까?</color>",
+    "English": "<color=#EC4C4E>Are you sure you wish to proceed with the enhancement?</color>",
+    "Japanese": "<color=#EC4C4E>本当に強化を進めますか？</color>",
+    "China_Simplified": "<color=#EC4C4E>确定要进行强化吗？</color>",
+    "China_Traditional": "<color=#EC4C4E>確定要進行強化嗎？</color>"
+  },
+  {
+    "ID": "SYS_CONTENT_POPUP_DESC_SINGULARITY",
+    "Korean": "<color=#FED434>[모나드 게이트 - 차원 특이점]</color>이 오픈되었습니다.",
+    "English": "<color=#FED434>[Monad Gate - Dimensional Singularity]</color> is now open.",
+    "Japanese": "<color=#FED434>[モナドゲート - 次元特異点]</color>がオープンしました。",
+    "China_Simplified": "<color=#FED434>[单子门户 - 次元奇点]</color>已开放。",
+    "China_Traditional": "<color=#FED434>[單體門戶 - 次元奇點]</color>已開放。"
+  },
+  {
     "ID": "SYS_GUIDE_PVE_GOLDEXP_TITLE",
     "Korean": "최면 개구리의 전당",
     "English": "Hypnotic Frog Hall",
@@ -115552,12 +116408,60 @@
     "China_Traditional": "方舟強襲"
   },
   {
+    "ID": "SYS_ASSET_CHARACTER_BREAK_PIECE_NAME",
+    "Korean": "{0}의 한계 돌파 인자",
+    "English": "{0}'s Limit Break Factor",
+    "Japanese": "{0}の限界突破因子",
+    "China_Simplified": "{0}的极限突破因子",
+    "China_Traditional": "{0}的極限突破因子"
+  },
+  {
+    "ID": "SYS_ASSET_CHARACTER_BREAK_PIECE_DESC",
+    "Korean": "{0}의 성장 한계치를 돌파시킬 수 있는 귀중한 자원입니다.",
+    "English": "A precious resource that can break through {0}'s growth limit.",
+    "Japanese": "{0}の成長限界値を突破できる貴重な資源です。",
+    "China_Simplified": "可以突破{0}成长上限的珍贵资源。",
+    "China_Traditional": "可以突破{0}成長上限的珍貴資源。"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENCHANT_15_OPTION_INFO",
+    "Korean": "+15 강화 시 활성 효과",
+    "English": "Active Effect at +15 Enhancement",
+    "Japanese": "+15強化時の活性効果",
+    "China_Simplified": "+15强化时的激活效果",
+    "China_Traditional": "+15強化時的激活效果"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_WARNNING",
+    "Korean": "특이점 활성화 시 기어 리셋 모듈을 통한 장비 성장 초기화가 불가능해집니다.\\n\\n<color=#EC4C4E>특이점 활성화를 진행하시겠습니까?</color>",
+    "English": "Once Singularity is activated, resetting Gear growth via the Gear Reset Module will no longer be possible.\\n\\n<color=#EC4C4E>Do you wish to proceed with Singularity Activation?</color>",
+    "Japanese": "特異点活性化時、ギアリセットモジュールを通じた装備の成長初期化が不可能になります。\\n\\n<color=#EC4C4E>特異点活性化を進めますか？</color>",
+    "China_Simplified": "激活奇点后，将无法通过装备重置模块初始化装备成长。\\n\\n<color=#EC4C4E>是否进行奇点激活？</color>",
+    "China_Traditional": "激活奇點後，將無法透過裝備重置模組初始化裝備成長。\\n\\n<color=#EC4C4E>是否進行奇點激活？</color>"
+  },
+  {
     "ID": "SYS_CHARACTER_LEVELUP_BONUS_DESC",
-    "Korean": "20/40/60/80/100 레벨 달성 시 마다 보너스 능력치를 부여받습니다.",
+    "Korean": "레벨 달성 시 마다 보너스 능력치를 부여받습니다.",
     "English": "Bonus stats are granted each time Level 20/40/60/80/100 is reached.",
     "Japanese": "レベル20/40/60/80/100を達成するたびにボーナスステータスが付与される。",
     "China_Simplified": "每达到20/40/60/80/100级时，获得奖励属性。",
     "China_Traditional": "每達到20/40/60/80/100級時，獲得獎勵屬性。"
+  },
+  {
+    "ID": "SYS_CHARACTER_BREAK_PIECE_GET_FAIL_MSG",
+    "Korean": "현재 한계돌파 인자를 얻으실 수 없는 상태입니다.",
+    "English": "You are currently unable to obtain Limit Break Factors.",
+    "Japanese": "現在、限界突破因子を入手できない状態です。",
+    "China_Simplified": "当前无法获得极限突破因子。",
+    "China_Traditional": "當前無法獲得極限突破因子。"
+  },
+  {
+    "ID": "SYS_CHARACTER_BREAK_PIECE_GET_FAIL_MSG_2",
+    "Korean": "레벨 확장이 완료된 동료의 한계 돌파 인자는 획득하실 수 없습니다.",
+    "English": "Limit Break Factors cannot be obtained for heroes whose level expansion is complete.",
+    "Japanese": "レベル拡張が完了した仲間の限界突破因子は入手できません。",
+    "China_Simplified": "无法获得已完成等级扩展的同伴的极限突破因子。",
+    "China_Traditional": "無法獲得已完成等級擴展的同伴的極限突破因子。"
   },
   {
     "ID": "SYS_FARMING_DUNGEON_REWARD_SELECT",
@@ -115566,5 +116470,661 @@
     "Japanese": "報酬選択",
     "China_Simplified": "选择奖励",
     "China_Traditional": "選擇獎勵"
+  },
+  {
+    "ID": "SYS_SINGULAR_ENHANCE_COMPLETE_ADD_NAME",
+    "Korean": "{0} - [특이점]",
+    "English": "{0} - [Singularity]",
+    "Japanese": "{0} - [特異点]",
+    "China_Simplified": "{0} - [奇点]",
+    "China_Traditional": "{0} - [奇點]"
+  },
+  {
+    "ID": "SYS_DESC_PIERCE_POWER_RATE_DOWN_IGNORE_INTERRUPTION",
+    "Korean": "대상의 관통력이 30% 감소합니다. (해제 불가)",
+    "English": "Target's Penetration decreases by 30%. (Cannot be dispelled)",
+    "Japanese": "対象の貫通力が30%減少する。(解除不可)",
+    "China_Simplified": "目标穿透力降低30%。(无法解除)",
+    "China_Traditional": "目標貫穿力降低30%。(無法解除)"
+  },
+  {
+    "ID": "SYS_BATTLE_PASS_BUY_DIANNE_TITLE",
+    "Korean": "스페셜 패스 혜택\\n다이안 코스튬 즉시 지급",
+    "English": "Special Pass Reward\\nDianne Costume immediately granted",
+    "Japanese": "スペシャルパス特典\\nダイアンのスキン即時支給",
+    "China_Simplified": "特别通行证福利\\n黛安皮肤立即发放",
+    "China_Traditional": "特殊通行證優惠\\n黛安外觀立即發放"
+  },
+  {
+    "ID": "SYS_CONTENT_POPUP_SINGULARITY_LOCK",
+    "Korean": "<color=#FED434>[모나드 게이트 - 차원 특이점]</color>\\n\\n[모나드 게이트] 의 심도 1의 트루 엔딩 감상 이후 개방됩니다.",
+    "English": "<color=#FED434>[Monad Gate - Dimensional Singularity]</color>\\n\\nUnlocked after viewing the True Ending of [Monad Gate] Depth 1.",
+    "Japanese": "<color=#FED434>[モナドゲート - 次元特異点]</color>\\n\\n[モナドゲート]の深度1のトゥルーエンディング鑑賞後に開放される。",
+    "China_Simplified": "<color=#FED434>[单子门户 - 次元奇点]</color>\\n\\n观看[单子门户]深度1的真结局后开放。",
+    "China_Traditional": "<color=#FED434>[單體門戶 - 次元奇點]</color>\\n\\n觀看[單體門戶]深度1的真結局後開放。"
+  },
+  {
+    "ID": "SYS_ATTENDANCE_EVENT_77",
+    "Korean": "3주년 전야제 이벤트 출석",
+    "English": "3rd Anniversary Eve Event Attendance",
+    "Japanese": "3周年前夜祭イベント出席",
+    "China_Simplified": "3周年前夜祭活动签到",
+    "China_Traditional": "3週年前夜祭活動簽到"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_01_NAME",
+    "Korean": "차원 특이점 개요",
+    "English": "Dimensional Singularity Overview",
+    "Japanese": "次元特異点概要",
+    "China_Simplified": "次元奇点概述",
+    "China_Traditional": "次元奇點概述"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_02_NAME",
+    "Korean": "차원 특이점 로비",
+    "English": "Dimensional Singularity Lobby",
+    "Japanese": "次元特異点ロビー",
+    "China_Simplified": "次元奇点大厅",
+    "China_Traditional": "次元奇點大廳"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_03_NAME",
+    "Korean": "차원 특이점 진행",
+    "English": "Dimensional Singularity Progress",
+    "Japanese": "次元特異点進行",
+    "China_Simplified": "次元奇点进行",
+    "China_Traditional": "次元奇點進行"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_04_NAME",
+    "Korean": "차원 특이점 랭크",
+    "English": "Dimensional Singularity Rank",
+    "Japanese": "次元特異点ランク",
+    "China_Simplified": "次元奇点等级",
+    "China_Traditional": "次元奇點等級"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_ENCHAHNT_01_NAME",
+    "Korean": "특이점 활성화",
+    "English": "Singularity Activation",
+    "Japanese": "特異点活性化",
+    "China_Simplified": "奇点激活",
+    "China_Traditional": "奇點激活"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_ENCHAHNT_02_NAME",
+    "Korean": "특이점 강화",
+    "English": "Singularity Enhancement",
+    "Japanese": "特異点強化",
+    "China_Simplified": "奇点强化",
+    "China_Traditional": "奇點強化"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_MAX_LEVEL_01_NAME",
+    "Korean": "최대 레벨 돌파",
+    "English": "Max Level Breakthrough",
+    "Japanese": "最大レベル突破",
+    "China_Simplified": "最大等级突破",
+    "China_Traditional": "最大等級突破"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_MAX_LEVEL_02_NAME",
+    "Korean": "최대 레벨 성장",
+    "English": "Max Level Growth",
+    "Japanese": "最大レベル成長",
+    "China_Simplified": "最大等级成长",
+    "China_Traditional": "最大等級成長"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_01_DESC",
+    "Korean": "[차원 특이점] 은 평행 세계의 메르샤에서 출몰하는 [특이점] 몬스터를 격퇴하고, 랭킹을 경쟁할 수 있는 컨텐츠입니다.\\n[차원 특이점]은 모나드 게이트의 심도1을 클리어 시 플레이하실 수 있으며, 기존 모나드 게이트 로비에서 차원 특이점 모드로 전환하여 접근하실 수 있습니다.",
+    "English": "[Dimensional Singularity] is a content where you repel [Singularity] monsters appearing in the parallel world Mirsha and compete for rankings.\\n[Dimensional Singularity] can be played upon clearing Depth 1 of Monad Gate, and can be accessed by switching to Dimensional Singularity mode from the existing Monad Gate lobby.",
+    "Japanese": "[次元特異点]は、並行世界のメルシャに出没する[特異点]モンスターを撃退し、ランキングを競うことができるコンテンツです。\\n[次元特異点]はモナドゲートの深度1をクリアするとプレイでき、既存のモナドゲートロビーから次元特異点モードに切り替えてアクセスできます。",
+    "China_Simplified": "[次元奇点]是在平行世界弥乐沙出没的[奇点]怪物击退，并竞争排名的内容。\\n[次元奇点]可在通关单子门户深度1后游玩，可从现有单子门户大厅切换至次元奇点模式后进入。",
+    "China_Traditional": "[次元奇點]是在平行世界美洛沙出沒的[奇點]怪物擊退，並競爭排名的內容。\\n[次元奇點]可在通關單體門戶深度1後遊玩，可從現有單體門戶大廳切換至次元奇點模式後進入。"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_02_DESC",
+    "Korean": "[차원 특이점] 로비에는 아래의 기능을 활용하실 수 있습니다.\\n1. 특이점 활성화 장치 : 강화와 재련이 완료된 장비를 [특이점] 장비로 제작할 수 있는 장치입니다.\\n2. 랭킹 리포트 : 누적된 스코어에 따른 유저간 랭킹을 확인하실 수 있습니다.\\n3. 특이점 격퇴 : 중앙의 포탈을 터치하시면 차원 특이점 메인 화면으로 이동하실 수 있습니다.",
+    "English": "The following features are available in the [Dimensional Singularity] lobby.\\n1. Singularity Activation Device : A device for crafting fully enhanced and reforged Gear into [Singularity] Gear.\\n2. Ranking Report : You can check the rankings among users based on accumulated scores.\\n3. Singularity Repel : Touching the central portal will take you to the Dimensional Singularity main screen.",
+    "Japanese": "[次元特異点]ロビーでは以下の機能を活用できます。\\n1. 特異点活性装置：強化と精錬が完了した装備を[特異点]装備として製作できる装置です。\\n2. ランキングレポート：累積されたスコアに基づくユーザー間のランキングを確認できます。\\n3. 特異点撃退：中央のポータルをタッチすると次元特異点のメイン画面に移動できます。",
+    "China_Simplified": "[次元奇点]大厅中可使用以下功能。\\n1. 奇点激活装置：可将强化与精炼完成的装备制作为[奇点]装备的装置。\\n2. 排名报告：可确认根据累积分数的用户间排名。\\n3. 击退奇点：点击中央传送门可移动至次元奇点主界面。",
+    "China_Traditional": "[次元奇點]大廳中可使用以下功能。\\n1. 奇點激活裝置：可將強化與精煉完成的裝備製作為[奇點]裝備的裝置。\\n2. 排名報告：可確認根據累積分數的用戶間排名。\\n3. 擊退奇點：點擊中央傳送門可移動至次元奇點主介面。"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_03_DESC",
+    "Korean": "[차원 특이점] 은 일주일에 4일. 수요일부터 토요일까지 오픈되며, 토벌해야할 보스는 매일 변경됩니다. 진행 기간 동안 보스와 전투를 진행하시면 각 전투에서 기록하신 피해량에 따라 스코어가 산정됩니다. 산정된 스코어는 진행 기간 내에 누적되며, 누적된 스코어에 따라 랭킹을 산정합니다.",
+    "English": "[Dimensional Singularity] is open 4 days a week, from Wednesday to Saturday, and the boss to defeat changes every day. When you battle the boss during the active period, a score is calculated based on the DMG dealt in each battle. The calculated scores accumulate during the active period, and rankings are determined based on the accumulated scores.",
+    "Japanese": "[次元特異点]は週4日、水曜日から土曜日まで開放され、討伐するボスは毎日変更されます。進行期間中にボスと戦闘を行うと、各戦闘で記録したダメージ量に応じてスコアが算定されます。算定されたスコアは進行期間内に累積され、累積されたスコアに応じてランキングが算定されます。",
+    "China_Simplified": "[次元奇点]每周开放4天，从周三至周六，每天更换需要讨伐的首领。在进行期间与首领战斗，将根据各次战斗中记录的伤害量计算分数。计算的分数在进行期间内累积，并根据累积分数计算排名。",
+    "China_Traditional": "[次元奇點]每週開放4天，從週三至週六，每天更換需要討伐的首領。在進行期間與首領戰鬥，將根據各次戰鬥中記錄的傷害量計算分數。計算的分數在進行期間內累積，並根據累積分數計算排名。"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_04_DESC",
+    "Korean": "[차원 특이점] 에서 한번의 전투에서 기록하신 스코어에 따라 랭크가 산정되며, 달성하신 랭크에 따라 보상을 입수하실 수 있습니다.",
+    "English": "In [Dimensional Singularity], a rank is calculated based on the score recorded in a single battle, and you can obtain rewards according to the rank achieved.",
+    "Japanese": "[次元特異点]では、1回の戦闘で記録したスコアに応じてランクが算定され、達成したランクに応じて報酬を入手できます。",
+    "China_Simplified": "在[次元奇点]中，根据单次战斗中记录的分数计算等级，并可根据达成的等级获得奖励。",
+    "China_Traditional": "在[次元奇點]中，根據單次戰鬥中記錄的分數計算等級，並可根據達成的等級獲得獎勵。"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_ENCHAHNT_01_DESC",
+    "Korean": "[차원 특이점] 로비 내 특이점 활성화 장치를 통해, 기존에 강화 / 재련이 완료된 장비를 [특이점] 장비로 업그레이드하실 수 있습니다. [특이점] 장비는 기존 장비 대비 메인 옵션이 상승하며, 최대 강화 수치가 +15로 상승하고 추가 재련 횟수를 3회 얻습니다.",
+    "English": "Through the Singularity Activation Device in the [Dimensional Singularity] lobby, you can upgrade existing fully enhanced/reforged Gear into [Singularity] Gear. [Singularity] Gear has improved main options compared to regular Gear, the max enhancement value increases to +15, and you gain 3 additional reforge attempts.",
+    "Japanese": "[次元特異点]ロビー内の特異点活性装置を通じて、既存の強化/精錬が完了した装備を[特異点]装備にアップグレードできます。[特異点]装備は既存装備と比べてメインオプションが上昇し、最大強化数値が+15に上昇し、追加精錬回数を3回獲得します。",
+    "China_Simplified": "通过[次元奇点]大厅内的奇点激活装置，可将现有强化/精炼完成的装备升级为[奇点]装备。[奇点]装备相比普通装备主要选项提升，最大强化数值上升至+15，并获得额外3次精炼次数。",
+    "China_Traditional": "透過[次元奇點]大廳內的奇點激活裝置，可將現有強化/精煉完成的裝備升級為[奇點]裝備。[奇點]裝備相比普通裝備主要選項提升，最大強化數值上升至+15，並獲得額外3次精煉次數。"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_ENCHAHNT_02_DESC",
+    "Korean": "특이점 활성화가 진행된 장비는 소지품 혹은 동료 화면에서 강화를 진행하실 수 있습니다. 최대 +15단계까지 강화하실 수 있으며, 최대로 강화 시 추가적인 옵션이 적용됩니다. 적용된 옵션은 이후 재화를 소모하여 재설정이 가능합니다.",
+    "English": "Singularity-activated Gear can be enhanced from the inventory or hero screen. It can be enhanced up to a maximum of +15 stages, and when fully enhanced, additional options are applied. The applied options can later be reset by consuming currency.",
+    "Japanese": "特異点活性化が進行した装備は、所持品または仲間画面から強化を進めることができます。最大+15段階まで強化でき、最大強化時に追加オプションが適用されます。適用されたオプションはその後、財貨を消費してリセットが可能です。",
+    "China_Simplified": "激活奇点的装备可在背包或同伴界面进行强化。最多可强化至+15阶段，强化至最大时将适用追加选项。适用的选项之后可消耗货币重置。",
+    "China_Traditional": "激活奇點的裝備可在背包或同伴介面進行強化。最多可強化至+15階段，強化至最大時將適用追加選項。適用的選項之後可消耗貨幣重置。"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_MAX_LEVEL_01_DESC",
+    "Korean": "한계 돌파 인자를 활용하여 동료의 최대 레벨을 상승시킬 수 있습니다. 한계 돌파 인자는 [차원 특이점]에서 입수하실 수 있으며, 각 동료 별 별도의 한계 돌파를 지닙니다.",
+    "English": "Limit Break Factors can be used to raise a hero's max level. Limit Break Factors can be obtained in [Dimensional Singularity], and each hero has their own separate Limit Break.",
+    "Japanese": "限界突破因子を活用して仲間の最大レベルを上昇させることができます。限界突破因子は[次元特異点]で入手でき、各仲間ごとに別々の限界突破を持ちます。",
+    "China_Simplified": "可利用极限突破因子提升同伴的最大等级。极限突破因子可在[次元奇点]中获得，各同伴拥有各自独立的极限突破。",
+    "China_Traditional": "可利用極限突破因子提升同伴的最大等級。極限突破因子可在[次元奇點]中獲得，各同伴擁有各自獨立的極限突破。"
+  },
+  {
+    "ID": "SYS_GUIDE_SINGULAR_MAX_LEVEL_02_DESC",
+    "Korean": "동료의 최대 레벨은 한번 돌파 시 마다 105 / 110 / 120 레벨로 확장되며, 각 레벨 달성 시 마다 추가적인 능력치를 부여받습니다.",
+    "English": "A hero's max level expands to Level 105 / 110 / 120 with each breakthrough, and additional stats are granted each time a level is reached.",
+    "Japanese": "仲間の最大レベルは突破するたびに105/110/120レベルへと拡張され、各レベル達成時に追加ステータスが付与されます。",
+    "China_Simplified": "同伴的最大等级每次突破后扩展至105/110/120级，每达到一个等级时获得额外属性。",
+    "China_Traditional": "同伴的最大等級每次突破後擴展至105/110/120級，每達到一個等級時獲得額外屬性。"
+  },
+  {
+    "ID": "SYS_SINGULARITY_OPEN_DESC",
+    "Korean": "모나드 게이트 내에 <color=#FED434>[차원 특이점]</color>이 오픈되었습니다.",
+    "English": "<color=#FED434>[Dimensional Singularity]</color> has opened within Monad Gate.",
+    "Japanese": "モナドゲート内に<color=#FED434>[次元特異点]</color>がオープンしました。",
+    "China_Simplified": "单子门户内的<color=#FED434>[次元奇点]</color>已开放。",
+    "China_Traditional": "單體門戶內的<color=#FED434>[次元奇點]</color>已開放。"
+  },
+  {
+    "ID": "SYS_MAX_LEVEL_COMPLETE",
+    "Korean": "최대 레벨",
+    "English": "Max Level",
+    "Japanese": "最大レベル",
+    "China_Simplified": "最大等级",
+    "China_Traditional": "最大等級"
+  },
+  {
+    "ID": "SYS_MAX_LEVEL_LIMIT_UP",
+    "Korean": "성장 가능한 레벨의 상한선이 증가하였습니다.",
+    "English": "The upper limit of growable levels has increased.",
+    "Japanese": "成長可能なレベルの上限が増加しました。",
+    "China_Simplified": "可成长等级的上限已提升。",
+    "China_Traditional": "可成長等級的上限已提升。"
+  },
+  {
+    "ID": "SYS_MAX_LEVEL_LIMIT_UP_DESC",
+    "Korean": "최대 레벨 확장 시,\\n성장 가능한 레벨의 상한선이 증가합니다.",
+    "English": "When Max Level is expanded,\\nthe upper limit of growable levels increases.",
+    "Japanese": "最大レベル拡張時、\\n成長可能なレベルの上限が増加します。",
+    "China_Simplified": "最大等级扩展时，\\n可成长等级的上限将提升。",
+    "China_Traditional": "最大等級擴展時，\\n可成長等級的上限將提升。"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_01",
+    "Korean": "[초급 컨설턴트]",
+    "English": "[Novice Consultant]",
+    "Japanese": "【初級コンサルタント】",
+    "China_Simplified": "[初级顾问]",
+    "China_Traditional": "[初級顧問]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_GET_ROUTE_01",
+    "Korean": "동료 성장 업적 달성 보상",
+    "English": "Hero Growth Achievement Reward",
+    "Japanese": "仲間成長実績達成報酬",
+    "China_Simplified": "同伴成长成就达成奖励",
+    "China_Traditional": "同伴成長成就達成獎勵"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_REWARD_01",
+    "Korean": "칭호 [초급 컨설턴트]",
+    "English": "Title [Novice Consultant]",
+    "Japanese": "称号【初級コンサルタント】",
+    "China_Simplified": "称号[初级顾问]",
+    "China_Traditional": "稱號[初級顧問]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_REWARD_DESC_01",
+    "Korean": "칭호 [초급 컨설턴트]를 얻습니다.",
+    "English": "Obtain the title [Novice Consultant].",
+    "Japanese": "称号【初級コンサルタント】を獲得する。",
+    "China_Simplified": "获得称号[初级顾问]。",
+    "China_Traditional": "獲得稱號[初級顧問]。"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_02",
+    "Korean": "[중급 컨설턴트]",
+    "English": "[Intermediate Consultant]",
+    "Japanese": "【中級コンサルタント】",
+    "China_Simplified": "[中级顾问]",
+    "China_Traditional": "[中級顧問]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_GET_ROUTE_02",
+    "Korean": "동료 성장 업적 달성 보상",
+    "English": "Hero Growth Achievement Reward",
+    "Japanese": "仲間成長実績達成報酬",
+    "China_Simplified": "同伴成长成就达成奖励",
+    "China_Traditional": "同伴成長成就達成獎勵"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_REWARD_02",
+    "Korean": "칭호 [중급 컨설턴트]",
+    "English": "Title [Intermediate Consultant]",
+    "Japanese": "称号【中級コンサルタント】",
+    "China_Simplified": "称号[中级顾问]",
+    "China_Traditional": "稱號[中級顧問]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_REWARD_DESC_02",
+    "Korean": "칭호 [중급 컨설턴트]를 얻습니다.",
+    "English": "Obtain the title [Intermediate Consultant].",
+    "Japanese": "称号【中級コンサルタント】を獲得する。",
+    "China_Simplified": "获得称号[中级顾问]。",
+    "China_Traditional": "獲得稱號[中級顧問]。"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_03",
+    "Korean": "[고급 컨설턴트]",
+    "English": "[Senior Consultant]",
+    "Japanese": "【上級コンサルタント】",
+    "China_Simplified": "[高级顾问]",
+    "China_Traditional": "[高級顧問]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_GET_ROUTE_03",
+    "Korean": "동료 성장 업적 달성 보상",
+    "English": "Hero Growth Achievement Reward",
+    "Japanese": "仲間成長実績達成報酬",
+    "China_Simplified": "同伴成长成就达成奖励",
+    "China_Traditional": "同伴成長成就達成獎勵"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_REWARD_03",
+    "Korean": "칭호 [고급 컨설턴트]",
+    "English": "Title [Senior Consultant]",
+    "Japanese": "称号【上級コンサルタント】",
+    "China_Simplified": "称号[高级顾问]",
+    "China_Traditional": "稱號[高級顧問]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_REWARD_DESC_03",
+    "Korean": "칭호 [고급 컨설턴트]를 얻습니다.",
+    "English": "Obtain the title [Senior Consultant].",
+    "Japanese": "称号【上級コンサルタント】を獲得する。",
+    "China_Simplified": "获得称号[高级顾问]。",
+    "China_Traditional": "獲得稱號[高級顧問]。"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_04",
+    "Korean": "[특급 컨설턴트]",
+    "English": "[Expert Consultant]",
+    "Japanese": "【特級コンサルタント】",
+    "China_Simplified": "[特级顾问]",
+    "China_Traditional": "[特級顧問]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_GET_ROUTE_04",
+    "Korean": "동료 성장 업적 달성 보상",
+    "English": "Hero Growth Achievement Reward",
+    "Japanese": "仲間成長実績達成報酬",
+    "China_Simplified": "同伴成长成就达成奖励",
+    "China_Traditional": "同伴成長成就達成獎勵"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_REWARD_04",
+    "Korean": "칭호 [특급 컨설턴트]",
+    "English": "Title [Expert Consultant]",
+    "Japanese": "称号【特級コンサルタント】",
+    "China_Simplified": "称号[特级顾问]",
+    "China_Traditional": "稱號[特級顧問]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_ACHIEVE_REWARD_DESC_04",
+    "Korean": "칭호 [특급 컨설턴트]를 얻습니다.",
+    "English": "Obtain the title [Expert Consultant].",
+    "Japanese": "称号【特級コンサルタント】を獲得する。",
+    "China_Simplified": "获得称号[特级顾问]。",
+    "China_Traditional": "獲得稱號[特級顧問]。"
+  },
+  {
+    "ID": "SYS_MISSION_CHAR_LEVEL_105",
+    "Korean": "동료 105레벨 달성 {0}명",
+    "English": "{0} hero(es) reach Level 105",
+    "Japanese": "仲間レベル105達成{0}名",
+    "China_Simplified": "同伴达到105级{0}名",
+    "China_Traditional": "同伴達到105級{0}名"
+  },
+  {
+    "ID": "SYS_MISSION_CHAR_LEVEL_110",
+    "Korean": "동료 110레벨 달성 {0}명",
+    "English": "{0} hero(es) reach Level 110",
+    "Japanese": "仲間レベル110達成{0}名",
+    "China_Simplified": "同伴达到110级{0}名",
+    "China_Traditional": "同伴達到110級{0}名"
+  },
+  {
+    "ID": "SYS_MISSION_CHAR_LEVEL_120",
+    "Korean": "동료 120레벨 달성 {0}명",
+    "English": "{0} hero(es) reach Level 120",
+    "Japanese": "仲間レベル120達成{0}名",
+    "China_Simplified": "同伴达到120级{0}名",
+    "China_Traditional": "同伴達到120級{0}名"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_01",
+    "Korean": "칭호 버프 [초급 컨설턴트]",
+    "English": "Title Buff [Novice Consultant]",
+    "Japanese": "称号バフ【初級コンサルタント】",
+    "China_Simplified": "称号增益[初级顾问]",
+    "China_Traditional": "稱號增益[初級顧問]"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_02",
+    "Korean": "칭호 버프 [중급 컨설턴트]",
+    "English": "Title Buff [Intermediate Consultant]",
+    "Japanese": "称号バフ【中級コンサルタント】",
+    "China_Simplified": "称号增益[中级顾问]",
+    "China_Traditional": "稱號增益[中級顧問]"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_03",
+    "Korean": "칭호 버프 [고급 컨설턴트]",
+    "English": "Title Buff [Senior Consultant]",
+    "Japanese": "称号バフ【上級コンサルタント】",
+    "China_Simplified": "称号增益[高级顾问]",
+    "China_Traditional": "稱號增益[高級顧問]"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_04",
+    "Korean": "칭호 버프 [특급 컨설턴트]",
+    "English": "Title Buff [Expert Consultant]",
+    "Japanese": "称号バフ【特級コンサルタント】",
+    "China_Simplified": "称号增益[特级顾问]",
+    "China_Traditional": "稱號增益[特級顧問]"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_01_DESC",
+    "Korean": "모험, 특별의뢰 컨텐츠 진행 시 동료 경험치 +10%",
+    "English": "Hero EXP +10% when playing Adventure or Special Request content",
+    "Japanese": "冒険、特別依頼コンテンツ進行時、仲間経験値+10%",
+    "China_Simplified": "进行冒险、特别委托内容时，同伴经验值+10%",
+    "China_Traditional": "進行冒險、特別委託內容時，同伴經驗值+10%"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_02_DESC",
+    "Korean": "모험, 특별의뢰 컨텐츠 진행 시 동료 경험치 +15%",
+    "English": "Hero EXP +15% when playing Adventure or Special Request content",
+    "Japanese": "冒険、特別依頼コンテンツ進行時、仲間経験値+15%",
+    "China_Simplified": "进行冒险、特别委托内容时，同伴经验值+15%",
+    "China_Traditional": "進行冒險、特別委託內容時，同伴經驗值+15%"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_03_DESC",
+    "Korean": "모험, 특별의뢰 컨텐츠 진행 시 동료 경험치 +15%",
+    "English": "Hero EXP +15% when playing Adventure or Special Request content",
+    "Japanese": "冒険、特別依頼コンテンツ進行時、仲間経験値+15%",
+    "China_Simplified": "进行冒险、特别委托内容时，同伴经验值+15%",
+    "China_Traditional": "進行冒險、特別委託內容時，同伴經驗值+15%"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_03_1_DESC",
+    "Korean": "모험, 특별의뢰 컨텐츠 진행 시 소모 행동력 -1",
+    "English": "Stamina consumed -1 when playing Adventure or Special Request content",
+    "Japanese": "冒険、特別依頼コンテンツ進行時、消費活力-1",
+    "China_Simplified": "进行冒险、特别委托内容时，消耗行动力-1",
+    "China_Traditional": "進行冒險、特別委託內容時，消耗行動力-1"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_04_DESC",
+    "Korean": "모험, 특별의뢰 컨텐츠 진행 시 동료 경험치 +20%",
+    "English": "Hero EXP +20% when playing Adventure or Special Request content",
+    "Japanese": "冒険、特別依頼コンテンツ進行時、仲間経験値+20%",
+    "China_Simplified": "进行冒险、特别委托内容时，同伴经验值+20%",
+    "China_Traditional": "進行冒險、特別委託內容時，同伴經驗值+20%"
+  },
+  {
+    "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_04_1_DESC",
+    "Korean": "모험, 특별의뢰 컨텐츠 진행 시 소모 행동력 -1",
+    "English": "Stamina consumed -1 when playing Adventure or Special Request content",
+    "Japanese": "冒険、特別依頼コンテンツ進行時、消費活力-1",
+    "China_Simplified": "进行冒险、特别委托内容时，消耗行动力-1",
+    "China_Traditional": "進行冒險、特別委託內容時，消耗行動力-1"
+  },
+  {
+    "ID": "SYS_SINGULAR_RESULT_REPORT",
+    "Korean": "차원 특이점 결과 보고",
+    "English": "Dimensional Singularity Result Report",
+    "Japanese": "次元特異点結果報告",
+    "China_Simplified": "次元奇点结果报告",
+    "China_Traditional": "次元奇點結果報告"
+  },
+  {
+    "ID": "SYS_SINGULAR_RESULT_REPORT_COMPLETE",
+    "Korean": "확정 후 나가기",
+    "English": "Confirm and Exit",
+    "Japanese": "確定して退出",
+    "China_Simplified": "确定后退出",
+    "China_Traditional": "確定後退出"
+  },
+  {
+    "ID": "SYS_SINGULAR_RESULT_REPORT_SCORE",
+    "Korean": "이번 전투의 스코어 : <color=#0D99DA>{0}</color>",
+    "English": "Score of this battle : <color=#0D99DA>{0}</color>",
+    "Japanese": "今回の戦闘のスコア：<color=#0D99DA>{0}</color>",
+    "China_Simplified": "本次战斗的分数：<color=#0D99DA>{0}</color>",
+    "China_Traditional": "本次戰鬥的分數：<color=#0D99DA>{0}</color>"
+  },
+  {
+    "ID": "SYS_SINGULAR_RESULT_REPORT_SCORE_RANK",
+    "Korean": "스코어 랭크 : <color=#FC3A3A>{0}</color>",
+    "English": "Score Rank : <color=#FC3A3A>{0}</color>",
+    "Japanese": "スコアランク：<color=#FC3A3A>{0}</color>",
+    "China_Simplified": "分数等级：<color=#FC3A3A>{0}</color>",
+    "China_Traditional": "分數等級：<color=#FC3A3A>{0}</color>"
+  },
+  {
+    "ID": "SYS_SINGULAR_RESULT_REPORT_SCORE_CONFIRM",
+    "Korean": "전투 결과를 확정하시겠습니가?\\n결과 확정 시 입장횟수가 소모되고 스코어가 최종 스코어에 가산되며, 랭크 달성 보상을 입수하실 수 있습니다",
+    "English": "Do you wish to confirm the battle results?\\nUpon confirmation, an entry count will be consumed, the score will be added to the final score, and you will be able to obtain rank achievement rewards.",
+    "Japanese": "戦闘結果を確定しますか？\\n結果確定時、入場回数が消費され、スコアが最終スコアに加算され、ランク達成報酬を入手できます。",
+    "China_Simplified": "是否确定战斗结果？\\n确定结果时，将消耗入场次数，分数将加算至最终分数，并可获得等级达成奖励。",
+    "China_Traditional": "是否確定戰鬥結果？\\n確定結果時，將消耗入場次數，分數將加算至最終分數，並可獲得等級達成獎勵。"
+  },
+  {
+    "ID": "SYS_SINGULAR_RECORD_EMPTY",
+    "Korean": "해당 보스에 대한 전투 기록이 없습니다.",
+    "English": "There are no battle records for this boss.",
+    "Japanese": "該当ボスに対する戦闘記録がありません。",
+    "China_Simplified": "没有该首领的战斗记录。",
+    "China_Traditional": "沒有該首領的戰鬥記錄。"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULAR_ENCHANT_WARNNING_TITLE",
+    "Korean": "옵션 재산정",
+    "English": "Option Recalculation",
+    "Japanese": "オプション再算定",
+    "China_Simplified": "选项重新计算",
+    "China_Traditional": "選項重新計算"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULAR_ENCHANT_WARNNING_DESC",
+    "Korean": "현재 특이점 장비에 <color=#f24141>매우 낮은 확률의 옵션</color>이 적용되어 있습니다. 정말로 옵션 재산정을 진행하시겠습니까?",
+    "English": "The current Singularity Gear has <color=#f24141>a very rare option</color> applied. Are you sure you wish to proceed with option recalculation?",
+    "Japanese": "現在の特異点装備に<color=#f24141>非常に低い確率のオプション</color>が適用されています。本当にオプション再算定を進めますか？",
+    "China_Simplified": "当前奇点装备已适用<color=#f24141>概率极低的选项</color>。确定要进行选项重新计算吗？",
+    "China_Traditional": "當前奇點裝備已適用<color=#f24141>概率極低的選項</color>。確定要進行選項重新計算嗎？"
+  },
+  {
+    "ID": "SYS_EQUIP_FILTER_SINGULAR_ONLY",
+    "Korean": "특이점 장비만 보기",
+    "English": "Show Singularity Gear Only",
+    "Japanese": "特異点装備のみ表示",
+    "China_Simplified": "仅显示奇点装备",
+    "China_Traditional": "僅顯示奇點裝備"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RANKING_DESC",
+    "Korean": "랭킹은 누적 스코어를 통해 산정되며, 매일 보상을 얻으실 수 있습니다.",
+    "English": "Rankings are calculated based on accumulated scores, and rewards can be obtained daily.",
+    "Japanese": "ランキングは累積スコアによって算定され、毎日報酬を獲得できます。",
+    "China_Simplified": "排名根据累积分数计算，每日可获得奖励。",
+    "China_Traditional": "排名根據累積分數計算，每日可獲得獎勵。"
+  },
+  {
+    "ID": "SYS_SINGULARITY_RECORD_BRFORE",
+    "Korean": "종료된 특이점",
+    "English": "Ended Singularity",
+    "Japanese": "終了した特異点",
+    "China_Simplified": "已结束的奇点",
+    "China_Traditional": "已結束的奇點"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_DMG_01",
+    "Korean": "피해 증가",
+    "English": "DMG Increase",
+    "Japanese": "ダメージ増加",
+    "China_Simplified": "伤害提升",
+    "China_Traditional": "傷害提升"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_DMG_02",
+    "Korean": "속성 대상 피해 증가",
+    "English": "Elemental Target DMG Increase",
+    "Japanese": "属性対象ダメージ増加",
+    "China_Simplified": "属性目标伤害提升",
+    "China_Traditional": "屬性目標傷害提升"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_DMG_03",
+    "Korean": "피해 증가",
+    "English": "DMG Increase",
+    "Japanese": "ダメージ増加",
+    "China_Simplified": "伤害提升",
+    "China_Traditional": "傷害提升"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_DMG_REDUCE_01",
+    "Korean": "받는 피해 감소",
+    "English": "DMG Taken Decrease",
+    "Japanese": "受けるダメージ減少",
+    "China_Simplified": "受到伤害减少",
+    "China_Traditional": "受到傷害減少"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_DMG_REDUCE_02",
+    "Korean": "속성 대상 받는 피해 감소",
+    "English": "Elemental Target DMG Taken Decrease",
+    "Japanese": "属性対象受けるダメージ減少",
+    "China_Simplified": "受到属性目标伤害减少",
+    "China_Traditional": "受到屬性目標傷害減少"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_DMG_REDUCE_03",
+    "Korean": "받는 피해 감소",
+    "English": "DMG Taken Decrease",
+    "Japanese": "受けるダメージ減少",
+    "China_Simplified": "受到伤害减少",
+    "China_Traditional": "受到傷害減少"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_SINGULARITY_ON",
+    "Korean": "차원 특이점",
+    "English": "Dimensional Singularity",
+    "Japanese": "次元特異点",
+    "China_Simplified": "次元奇点",
+    "China_Traditional": "次元奇點"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_SINGULARITY_OFF",
+    "Korean": "모든 지역",
+    "English": "All Areas",
+    "Japanese": "すべての地域",
+    "China_Simplified": "所有地区",
+    "China_Traditional": "所有地區"
+  },
+  {
+    "ID": "SYS_POPUP_CHARACTER_MAX_LEVEL_WARNNING_TITLE",
+    "Korean": "동료 레벨 확장",
+    "English": "Hero Level Expansion",
+    "Japanese": "仲間レベル拡張",
+    "China_Simplified": "同伴等级扩展",
+    "China_Traditional": "同伴等級擴展"
+  },
+  {
+    "ID": "SYS_POPUP_CHARACTER_MAX_LEVEL_WARNNING_DESC",
+    "Korean": "100레벨을 초과한 동료는 싱크로룸에 배치하실 수 없습니다.",
+    "English": "Heroes above Level 100 cannot be placed in the Synchro Room.",
+    "Japanese": "100レベルを超えた仲間はシンクロルームに配置できません。",
+    "China_Simplified": "超过100级的同伴无法配置在同步空间中。",
+    "China_Traditional": "超過100級的同伴無法配置在同步室中。"
+  },
+  {
+    "ID": "SYS_SINGULARITY_TEAM_SET_RECORD",
+    "Korean": "편성 기록",
+    "English": "Lineup Record",
+    "Japanese": "編成記録",
+    "China_Simplified": "编成记录",
+    "China_Traditional": "編成記錄"
+  },
+  {
+    "ID": "SYS_SINGULARITY_TEAM_SET_SAVE",
+    "Korean": "현재 편성 저장",
+    "English": "Save Current Lineup",
+    "Japanese": "現在の編成を保存",
+    "China_Simplified": "保存当前编成",
+    "China_Traditional": "保存當前編成"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION",
+    "Korean": "적용 가능 효과",
+    "English": "Applicable Effects",
+    "Japanese": "適用可能効果",
+    "China_Simplified": "可适用效果",
+    "China_Traditional": "可適用效果"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_AREA",
+    "Korean": "적용 지역",
+    "English": "Applicable Area",
+    "Japanese": "適用地域",
+    "China_Simplified": "适用地区",
+    "China_Traditional": "適用地區"
+  },
+  {
+    "ID": "SYS_PROFILE_PVP_NORMAL_MATCH",
+    "Korean": "결투장 일반 대전",
+    "English": "Arena Standard Match",
+    "Japanese": "アリーナ通常対戦",
+    "China_Simplified": "竞技场普通对战",
+    "China_Traditional": "決鬥場一般對戰"
+  },
+  {
+    "ID": "SYS_MSG_SINGULARITY_TEAM_SET_SAVE",
+    "Korean": "편성 기록이 저장되었습니다.",
+    "English": "Lineup record has been saved.",
+    "Japanese": "編成記録が保存されました。",
+    "China_Simplified": "编成记录已保存。",
+    "China_Traditional": "編成記錄已保存。"
+  },
+  {
+    "ID": "SYS_POPUP_SINGULARITY_SPEIAL_OPTION_DMG_04",
+    "Korean": "필살기 피해량 증가",
+    "English": "필살기 피해량 증가",
+    "Japanese": "필살기 피해량 증가",
+    "China_Simplified": "필살기 피해량 증가",
+    "China_Traditional": "필살기 피해량 증가"
   }
 ]

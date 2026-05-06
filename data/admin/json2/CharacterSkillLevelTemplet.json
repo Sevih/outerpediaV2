@@ -39,7 +39,7 @@
     "ID": "71001",
     "SkillID": "7",
     "SkillLevel": "1",
-    "BuffID": "COMMON_CLASS_PASSIVE,ATTACKER_PASSIVE_1,2000008_passive,2000008_passive_2,PRIEST_PASSIVE_2"
+    "BuffID": "COMMON_CLASS_PASSIVE,ATTACKER_PASSIVE_1,2000008_passive,2000008_passive_2,PRIEST_PASSIVE_2,2000008_passive_3"
   },
   {
     "ID": "81001",
@@ -57,13 +57,13 @@
     "ID": "101001",
     "SkillID": "10",
     "SkillLevel": "1",
-    "BuffID": "COMMON_CLASS_PASSIVE,MAGE_PASSIVE_1,MAGE_PASSIVE_2,2000091_passive,2000091_passive_2"
+    "BuffID": "COMMON_CLASS_PASSIVE,MAGE_PASSIVE_1,MAGE_PASSIVE_2,2000091_passive,2000091_passive_2,2000091_passive_3"
   },
   {
     "ID": "111001",
     "SkillID": "11",
     "SkillLevel": "1",
-    "BuffID": "COMMON_CLASS_PASSIVE,MAGE_PASSIVE_1,MAGE_PASSIVE_2,2000086_passive,2000086_passive_2"
+    "BuffID": "COMMON_CLASS_PASSIVE,MAGE_PASSIVE_1,MAGE_PASSIVE_2,2000086_passive,2000086_passive_2,2000086_passive_3"
   },
   {
     "ID": "121001",
@@ -50306,35 +50306,55 @@
     "ID": "90021001",
     "SkillID": "9002",
     "SkillLevel": "1",
-    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3"
+    "DamageFactor": "1650",
+    "StartCool": "2",
+    "Cool": "2",
+    "WGReduce": "1",
+    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3,2000090_2_4,2000090_2_5,2000090_2_6,2000090_1_3"
   },
   {
     "ID": "90022001",
     "SkillID": "9002",
     "SkillLevel": "2",
-    "DescID": "SE_DESC_CONDITION_HP_5%",
-    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3"
+    "DescID": "SE_DESC_DMG_10%,SE_DESC_DMG_WG_V_1",
+    "DamageFactor": "1750",
+    "StartCool": "2",
+    "Cool": "2",
+    "WGReduce": "2",
+    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3,2000090_2_4,2000090_2_5,2000090_2_6,2000090_1_3"
   },
   {
     "ID": "90023001",
     "SkillID": "9002",
     "SkillLevel": "3",
-    "DescID": "SE_DESC_CONDITION_HP_5%",
-    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3"
+    "DescID": "SE_DESC_CONDITION_HP_10%",
+    "DamageFactor": "1750",
+    "StartCool": "2",
+    "Cool": "2",
+    "WGReduce": "2",
+    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3,2000090_2_4,2000090_2_5,2000090_2_6,2000090_1_3"
   },
   {
     "ID": "90024001",
     "SkillID": "9002",
     "SkillLevel": "4",
-    "DescID": "SE_DESC_CONDITION_HP_5%",
-    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3"
+    "DescID": "SE_DESC_ACTION_GAUGE_HEAL_V_5%,SE_DESC_DMG_WG_V_1",
+    "DamageFactor": "1750",
+    "StartCool": "2",
+    "Cool": "2",
+    "WGReduce": "3",
+    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3,2000090_2_4,2000090_2_5,2000090_2_6,2000090_1_3"
   },
   {
     "ID": "90025001",
     "SkillID": "9002",
     "SkillLevel": "5",
-    "DescID": "SE_DESC_CONDITION_HP_10%",
-    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3"
+    "DescID": "SE_DESC_CONDITION_HP_15%,SE_DESC_DMG_10%",
+    "DamageFactor": "1850",
+    "StartCool": "2",
+    "Cool": "2",
+    "WGReduce": "3",
+    "BuffID": "2000090_2_1,2000090_2_2,2000090_2_3,2000090_2_4,2000090_2_5,2000090_2_6,2000090_1_3"
   },
   {
     "ID": "90031001",
@@ -50344,8 +50364,8 @@
     "StartCool": "5",
     "Cool": "5",
     "WGReduce": "2",
-    "BuffID": "2000090_3_1",
-    "BuffToolTip": "2000090"
+    "BuffID": "2000090_3_1,2000090_3_3",
+    "BuffToolTip": "2000090,7"
   },
   {
     "ID": "90032001",
@@ -50356,8 +50376,8 @@
     "StartCool": "5",
     "Cool": "5",
     "WGReduce": "3",
-    "BuffID": "2000090_3_1",
-    "BuffToolTip": "2000090"
+    "BuffID": "2000090_3_1,2000090_3_3",
+    "BuffToolTip": "2000090,7"
   },
   {
     "ID": "90033001",
@@ -50368,8 +50388,8 @@
     "StartCool": "4",
     "Cool": "4",
     "WGReduce": "3",
-    "BuffID": "2000090_3_1",
-    "BuffToolTip": "2000090"
+    "BuffID": "2000090_3_1,2000090_3_3",
+    "BuffToolTip": "2000090,7"
   },
   {
     "ID": "90034001",
@@ -50380,8 +50400,8 @@
     "StartCool": "4",
     "Cool": "4",
     "WGReduce": "3",
-    "BuffID": "2000090_3_1",
-    "BuffToolTip": "2000090"
+    "BuffID": "2000090_3_1,2000090_3_3",
+    "BuffToolTip": "2000090,7"
   },
   {
     "ID": "90035001",
@@ -50392,8 +50412,8 @@
     "StartCool": "4",
     "Cool": "4",
     "WGReduce": "3",
-    "BuffID": "2000090_3_1,2000090_3_2",
-    "BuffToolTip": "2000090"
+    "BuffID": "2000090_3_1,2000090_3_2,2000090_3_3",
+    "BuffToolTip": "2000090,7"
   },
   {
     "ID": "90041001",
@@ -50562,14 +50582,14 @@
     "SkillID": "9008",
     "SkillLevel": "3",
     "DescID": "SE_DESC_SKILL08_2000090_5",
-    "BuffID": "trancendent_8_kill_cool3_charge_2,trancendent_8_cri_dmg_team_upgrade,trancendent_8_ap_upgrade"
+    "BuffID": "trancendent_8_kill_cool3_charge_2,trancendent_8_cri_dmg_team_upgrade,trancendent_8_ap_upgrade,trancendent_8_2000090_Heal"
   },
   {
     "ID": "90084001",
     "SkillID": "9008",
     "SkillLevel": "4",
     "DescID": "SE_DESC_SKILL08_2000090_6",
-    "BuffID": "trancendent_8_kill_cool3_charge_2,trancendent_8_cri_dmg_team_upgrade,trancendent_8_ap_upgrade,trancendent_8_always_2000090,trancendent_8_heal_by_kill"
+    "BuffID": "trancendent_8_kill_cool3_charge_2,trancendent_8_cri_dmg_team_upgrade,trancendent_8_ap_upgrade,trancendent_8_always_2000090,trancendent_8_2000090_Heal,trancendent_8_2000090_BossDMG"
   },
   {
     "ID": "90091001",
@@ -50741,7 +50761,7 @@
     "DamageFactor": "1650",
     "GainCP": "7",
     "WGReduce": "1",
-    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3"
+    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3,2000090_u_3_2"
   },
   {
     "ID": "90212001",
@@ -50750,7 +50770,7 @@
     "DamageFactor": "1750",
     "GainCP": "7",
     "WGReduce": "2",
-    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3"
+    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3,2000090_u_3_2"
   },
   {
     "ID": "90213001",
@@ -50759,7 +50779,7 @@
     "DamageFactor": "1750",
     "GainCP": "7",
     "WGReduce": "2",
-    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3"
+    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3,2000090_u_3_2"
   },
   {
     "ID": "90214001",
@@ -50768,7 +50788,7 @@
     "DamageFactor": "1750",
     "GainCP": "7",
     "WGReduce": "3",
-    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3"
+    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3,2000090_u_3_2"
   },
   {
     "ID": "90215001",
@@ -50777,7 +50797,7 @@
     "DamageFactor": "1850",
     "GainCP": "7",
     "WGReduce": "3",
-    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3"
+    "BuffID": "2000090_u_1,2000090_1_3,2000090_u_3,2000090_u_3_2"
   },
   {
     "ID": "91011001",
@@ -50907,7 +50927,7 @@
     "Cool": "5",
     "WGReduce": "2",
     "BuffID": "2000091_3_1,2000091_3_2,2000091_3_3",
-    "BuffToolTip": "34,87"
+    "BuffToolTip": "34,87,2100091"
   },
   {
     "ID": "91032001",
@@ -50920,7 +50940,7 @@
     "Cool": "5",
     "WGReduce": "3",
     "BuffID": "2000091_3_1,2000091_3_2,2000091_3_3",
-    "BuffToolTip": "34,87"
+    "BuffToolTip": "34,87,2100091"
   },
   {
     "ID": "91033001",
@@ -50933,7 +50953,7 @@
     "Cool": "5",
     "WGReduce": "4",
     "BuffID": "2000091_3_1,2000091_3_2,2000091_3_3",
-    "BuffToolTip": "34,87"
+    "BuffToolTip": "34,87,2100091"
   },
   {
     "ID": "91034001",
@@ -50946,7 +50966,7 @@
     "Cool": "4",
     "WGReduce": "5",
     "BuffID": "2000091_3_1,2000091_3_2,2000091_3_3",
-    "BuffToolTip": "34,87"
+    "BuffToolTip": "34,87,2100091"
   },
   {
     "ID": "91035001",
@@ -50959,7 +50979,7 @@
     "Cool": "4",
     "WGReduce": "5",
     "BuffID": "2000091_3_1,2000091_3_2,2000091_3_3",
-    "BuffToolTip": "34,87"
+    "BuffToolTip": "34,87,2100091"
   },
   {
     "ID": "91041001",
@@ -51084,28 +51104,29 @@
     "ID": "91081001",
     "SkillID": "9108",
     "SkillLevel": "1",
-    "DescID": "SE_DESC_SKILL08_BURST_LV1"
+    "DescID": "SE_DESC_SKILL08_BURST_LV1",
+    "BuffID": "trancendent_2000091_05,trancendent_2000091_01,trancendent_2000091_02,trancendent_2000091_03,trancendent_2000091_04"
   },
   {
     "ID": "91082001",
     "SkillID": "9108",
     "SkillLevel": "2",
     "DescID": "SE_DESC_SKILL08_2000091_4",
-    "BuffID": "trancendent_8_buff_chance_team_upgrade,trancendent_8_owner_buff_chance_dmg_1"
+    "BuffID": "trancendent_2000091_05,trancendent_8_buff_chance_team_upgrade,trancendent_8_owner_buff_chance_dmg_1,trancendent_2000091_01,trancendent_2000091_02,trancendent_2000091_03,trancendent_2000091_04"
   },
   {
     "ID": "91083001",
     "SkillID": "9108",
     "SkillLevel": "3",
     "DescID": "SE_DESC_SKILL08_2000091_5",
-    "BuffID": "trancendent_8_buff_chance_team_upgrade,trancendent_8_owner_buff_chance_dmg_1,trancendent_8_owner_buff_chance_dmg_2,trancendent_8_cp_charge_20,trancendent_8_ap_upgrade"
+    "BuffID": "trancendent_2000091_05,trancendent_8_buff_chance_team_upgrade,trancendent_8_owner_buff_chance_dmg_1,trancendent_8_owner_buff_chance_dmg_2,trancendent_8_cp_charge_20,trancendent_8_ap_upgrade,trancendent_2000091_01,trancendent_2000091_02,trancendent_2000091_03,trancendent_2000091_04"
   },
   {
     "ID": "91084001",
     "SkillID": "9108",
     "SkillLevel": "4",
     "DescID": "SE_DESC_SKILL08_2000091_6",
-    "BuffID": "trancendent_8_buff_chance_team_upgrade,trancendent_8_owner_buff_chance_dmg_1,trancendent_8_owner_buff_chance_dmg_2,trancendent_8_cp_charge_20,trancendent_8_ap_upgrade,trancendent_8_hp_35%,trancendent_8_allrange_dmg_action_gauge_1,trancendent_8_allrange_dmg_action_gauge_3"
+    "BuffID": "trancendent_2000091_05,trancendent_8_buff_chance_team_upgrade,trancendent_8_owner_buff_chance_dmg_1,trancendent_8_owner_buff_chance_dmg_2,trancendent_8_cp_charge_20,trancendent_8_ap_upgrade,trancendent_8_hp_35%,trancendent_8_allrange_dmg_action_gauge_1,trancendent_8_allrange_dmg_action_gauge_3,trancendent_2000091_01,trancendent_2000091_02,trancendent_2000091_03,trancendent_2000091_04"
   },
   {
     "ID": "91091001",
@@ -56899,21 +56920,21 @@
     "SkillID": "10208",
     "SkillLevel": "2",
     "DescID": "SE_DESC_SKILL08_2000102_4",
-    "BuffID": "trancendent_8_2000102_1,trancendent_8_2000102_2,2000102_buff_1_1,2000102_buff_1_2"
+    "BuffID": "trancendent_8_2000102_1,trancendent_8_2000102_1_2,trancendent_8_2000102_2,2000102_buff_1_1,2000102_buff_1_2"
   },
   {
     "ID": "102083001",
     "SkillID": "10208",
     "SkillLevel": "3",
     "DescID": "SE_DESC_SKILL08_2000102_5",
-    "BuffID": "trancendent_8_ap_upgrade,trancendent_8_buff_resist_team_upgrade,trancendent_8_2000102_1,trancendent_8_2000102_2,2000102_buff_1_1,2000102_buff_1_2"
+    "BuffID": "trancendent_8_ap_upgrade,trancendent_8_buff_resist_team_upgrade,trancendent_8_2000102_1,trancendent_8_2000102_1_2,trancendent_8_2000102_2,2000102_buff_1_1,2000102_buff_1_2"
   },
   {
     "ID": "102084001",
     "SkillID": "10208",
     "SkillLevel": "4",
     "DescID": "SE_DESC_SKILL08_2000102_6",
-    "BuffID": "trancendent_8_ap_upgrade,trancendent_8_buff_resist_team_upgrade,trancendent_8_2000102_1,trancendent_8_2000102_2,trancendent_8_2000102_3,2000102_buff_2_1,2000102_buff_2_2"
+    "BuffID": "trancendent_8_ap_upgrade,trancendent_8_buff_resist_team_upgrade,trancendent_8_2000102_1,trancendent_8_2000102_1_2,trancendent_8_2000102_2,trancendent_8_2000102_3,2000102_buff_2_1,2000102_buff_2_2"
   },
   {
     "ID": "102091001",
@@ -60908,7 +60929,7 @@
     "DamageFactor": "1466",
     "WGReduce": "2",
     "BuffID": "2000111_3_1_1,2000111_3_1_2,2000111_3_2_1_1,2000111_3_2_1_2,2000111_3_2_1_3,2000111_3_2_1_4,2000111_3_3,2000111_3_4,2000111_3_6,2000111_3_7",
-    "BuffToolTip": "17,34,104"
+    "BuffToolTip": "17104"
   },
   {
     "ID": "111032001",
@@ -60918,7 +60939,7 @@
     "DamageFactor": "1573",
     "WGReduce": "3",
     "BuffID": "2000111_3_1_1,2000111_3_1_2,2000111_3_2_1_1,2000111_3_2_1_2,2000111_3_2_1_3,2000111_3_2_1_4,2000111_3_3,2000111_3_4,2000111_3_6,2000111_3_7",
-    "BuffToolTip": "17,34,104"
+    "BuffToolTip": "17104"
   },
   {
     "ID": "111033001",
@@ -60928,7 +60949,7 @@
     "DamageFactor": "1680",
     "WGReduce": "3",
     "BuffID": "2000111_3_1_1,2000111_3_1_2,2000111_3_2_1_1,2000111_3_2_1_2,2000111_3_2_1_3,2000111_3_2_1_4,2000111_3_3,2000111_3_4,2000111_3_6,2000111_3_7",
-    "BuffToolTip": "17,34,104"
+    "BuffToolTip": "17104"
   },
   {
     "ID": "111034001",
@@ -60938,7 +60959,7 @@
     "DamageFactor": "1894",
     "WGReduce": "3",
     "BuffID": "2000111_3_1_1,2000111_3_1_2,2000111_3_2_1_1,2000111_3_2_1_2,2000111_3_2_1_3,2000111_3_2_1_4,2000111_3_3,2000111_3_4,2000111_3_6,2000111_3_7",
-    "BuffToolTip": "17,34,104"
+    "BuffToolTip": "17104"
   },
   {
     "ID": "111035001",
@@ -60948,7 +60969,7 @@
     "DamageFactor": "1894",
     "WGReduce": "3",
     "BuffID": "2000111_3_1_1,2000111_3_1_2,2000111_3_2_1_1,2000111_3_2_1_2,2000111_3_2_1_3,2000111_3_2_1_4,2000111_3_3,2000111_3_4,2000111_3_6,2000111_3_7,2000111_3_5",
-    "BuffToolTip": "17,34,104"
+    "BuffToolTip": "17104"
   },
   {
     "ID": "111041001",

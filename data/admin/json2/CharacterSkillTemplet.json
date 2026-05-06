@@ -17333,11 +17333,12 @@
     "TriggerName": "Skill2",
     "TargetTeamType": "ENEMY",
     "RangeType": "SINGLE",
-    "FocusType": "CENTER",
-    "ApproachType": "CENTER",
+    "FocusType": "ANIMATION",
+    "ApproachType": "NORMAL",
     "ApproachZ": "1.5",
     "UseJiggleBone": "True",
-    "AIType": "ATTACK"
+    "AIType": "ATTACK",
+    "PassiveSkillTarget": "HIGHEST,ST_ATK"
   },
   {
     "ID": "9003",
@@ -17479,8 +17480,8 @@
   },
   {
     "ID": "9021",
-    "NameID": "SKILL_NAME_B_ADDITIVE_TURN",
-    "DescID": "SKILL_DESC_B_ADDITIVE_TURN",
+    "NameID": "SKILL_NAME_B_2000090_3",
+    "DescID": "SKILL_NAME_B_2000090_3",
     "SkillType": "SKT_BURST_3",
     "SkillSubType": "ACTIVE",
     "TriggerName": "Burst1",

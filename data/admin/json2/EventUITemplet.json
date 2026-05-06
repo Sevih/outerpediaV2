@@ -373,7 +373,7 @@
     "ID": "73",
     "EventType": "ET_DUNGEON",
     "EventValue": "12",
-    "GroupID": "18",
+    "GroupID": "50",
     "ShortCutShopSubCategoryID": "0",
     "EventNameID": "SYS_EVENT_DUNGEON_TITLE_17",
     "EventDescID": "",
@@ -383,7 +383,7 @@
     "ID": "74",
     "EventType": "ET_ATTENDANCE",
     "EventValue": "12",
-    "GroupID": "37",
+    "GroupID": "88",
     "ShortCutShopSubCategoryID": "0",
     "EventNameID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_17",
     "EventDescID": "",
@@ -1603,7 +1603,7 @@
     "ID": "202",
     "EventType": "ET_MINI_GAME",
     "EventValue": "8",
-    "GroupID": "15",
+    "GroupID": "18",
     "ShortCutShopSubCategoryID": "0",
     "EventNameID": "SYS_EVENT_FORTUNE_BOX_S01_NAME",
     "EventDescID": "",
@@ -1798,5 +1798,15 @@
     "EventNameID": "SYS_ARCADE_EVENT_ROULETTE_MISSION_02",
     "EventDescID": "",
     "BGImage": "T_Web_Event_Banner_03.png"
+  },
+  {
+    "ID": "223",
+    "EventType": "ET_ATTENDANCE",
+    "EventValue": "61",
+    "GroupID": "1010",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_ATTENDANCE_EVENT_77",
+    "EventDescID": "",
+    "BGImage": "T_Event_Banner_Full_068.png"
   }
 ]

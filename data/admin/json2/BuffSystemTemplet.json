@@ -930,5 +930,71 @@
     "Title": "SYS_BUFF_EVENT_STAMINA_001",
     "Desc": "SYS_BUFF_EVENT_STAMINA_DESC_001",
     "PurchaseBuff": "False"
+  },
+  {
+    "ID": "95",
+    "GroupID": "95",
+    "BuffType": "EBT_CHAR_EXP",
+    "BuffValue": "10",
+    "DungeonMode": "DM_NORMAL,DM_RAID_1,DM_RAID_2",
+    "Title": "SYS_BUFF_USERNICKNAME_ACHIEVE_01",
+    "Desc": "SYS_BUFF_USERNICKNAME_ACHIEVE_01_DESC",
+    "IconName": "TI_Item_Event_Char_Exp",
+    "PurchaseBuff": "False"
+  },
+  {
+    "ID": "96",
+    "GroupID": "96",
+    "BuffType": "EBT_CHAR_EXP",
+    "BuffValue": "15",
+    "DungeonMode": "DM_NORMAL,DM_RAID_1,DM_RAID_2",
+    "Title": "SYS_BUFF_USERNICKNAME_ACHIEVE_02",
+    "Desc": "SYS_BUFF_USERNICKNAME_ACHIEVE_02_DESC",
+    "IconName": "TI_Item_Event_Char_Exp",
+    "PurchaseBuff": "False"
+  },
+  {
+    "ID": "97",
+    "GroupID": "97",
+    "BuffType": "EBT_CHAR_EXP",
+    "BuffValue": "15",
+    "DungeonMode": "DM_NORMAL,DM_RAID_1,DM_RAID_2",
+    "Title": "SYS_BUFF_USERNICKNAME_ACHIEVE_03",
+    "Desc": "SYS_BUFF_USERNICKNAME_ACHIEVE_03_DESC",
+    "IconName": "TI_Item_Event_Char_Exp",
+    "PurchaseBuff": "False"
+  },
+  {
+    "ID": "98",
+    "GroupID": "97",
+    "BuffType": "EBT_CONTENTS_STAMINA_DISCOUNT",
+    "BuffValue": "1",
+    "DungeonMode": "DM_NORMAL,DM_RAID_1,DM_RAID_2",
+    "Title": "SYS_BUFF_USERNICKNAME_ACHIEVE_03",
+    "Desc": "SYS_BUFF_USERNICKNAME_ACHIEVE_03_1_DESC",
+    "IconName": "TI_STAMINA_DISCOUNT",
+    "PurchaseBuff": "False"
+  },
+  {
+    "ID": "99",
+    "GroupID": "99",
+    "BuffType": "EBT_CHAR_EXP",
+    "BuffValue": "20",
+    "DungeonMode": "DM_NORMAL,DM_RAID_1,DM_RAID_2",
+    "Title": "SYS_BUFF_USERNICKNAME_ACHIEVE_04",
+    "Desc": "SYS_BUFF_USERNICKNAME_ACHIEVE_04_DESC",
+    "IconName": "TI_Item_Event_Char_Exp",
+    "PurchaseBuff": "False"
+  },
+  {
+    "ID": "100",
+    "GroupID": "99",
+    "BuffType": "EBT_CONTENTS_STAMINA_DISCOUNT",
+    "BuffValue": "1",
+    "DungeonMode": "DM_NORMAL,DM_RAID_1,DM_RAID_2",
+    "Title": "SYS_BUFF_USERNICKNAME_ACHIEVE_04",
+    "Desc": "SYS_BUFF_USERNICKNAME_ACHIEVE_04_1_DESC",
+    "IconName": "TI_STAMINA_DISCOUNT",
+    "PurchaseBuff": "False"
   }
 ]

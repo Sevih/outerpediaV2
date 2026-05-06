@@ -1138,5 +1138,27 @@
     "IsRewardPopup": "True",
     "RewardTextID": "SYS_COMMON_TUTORIAL_REWARD",
     "SkipList": "402"
+  },
+  {
+    "ID": "403",
+    "StartType": "TST_TRIGGER",
+    "StartTrigger": "TST_MONAD_GATE_LEVEL",
+    "TriggerValue": "2",
+    "Independent": "True",
+    "RewardID": "1",
+    "IsRewardPopup": "True",
+    "RewardTextID": "SYS_COMMON_TUTORIAL_REWARD",
+    "SkipList": "403"
+  },
+  {
+    "ID": "404",
+    "StartType": "TST_TRIGGER",
+    "StartTrigger": "TST_ENTER_WINDOW",
+    "Independent": "True",
+    "IndependentValue": "CUISingularityMain",
+    "RewardID": "1",
+    "IsRewardPopup": "True",
+    "RewardTextID": "SYS_COMMON_TUTORIAL_REWARD",
+    "SkipList": "404"
   }
 ]

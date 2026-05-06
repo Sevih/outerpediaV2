@@ -189,10 +189,28 @@
     "DescriptionNameID": "SYS_GUIDE_CHARUPGRADE_04_DESC"
   },
   {
+    "ID": "224",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "14",
+    "NameID": "SYS_GUIDE_SINGULAR_MAX_LEVEL_01_NAME",
+    "ImageName": "GUIDE_CHAR_MAX_LEVEL_01",
+    "DescriptionNameID": "SYS_GUIDE_SINGULAR_MAX_LEVEL_01_DESC"
+  },
+  {
+    "ID": "225",
+    "GroupID": "2",
+    "Type": "2",
+    "Sort": "15",
+    "NameID": "SYS_GUIDE_SINGULAR_MAX_LEVEL_02_NAME",
+    "ImageName": "GUIDE_CHAR_MAX_LEVEL_02",
+    "DescriptionNameID": "SYS_GUIDE_SINGULAR_MAX_LEVEL_02_DESC"
+  },
+  {
     "ID": "214",
     "GroupID": "2",
     "Type": "1",
-    "Sort": "14",
+    "Sort": "16",
     "NameID": "SYS_GUIDE_CHAREQUIP_TITLE",
     "ImageName": "",
     "DescriptionNameID": ""
@@ -201,7 +219,7 @@
     "ID": "215",
     "GroupID": "2",
     "Type": "2",
-    "Sort": "15",
+    "Sort": "17",
     "NameID": "SYS_GUIDE_CHAREQUIP_01_NAME",
     "ImageName": "GUIDE_CHAREQUIP_01",
     "DescriptionNameID": "SYS_GUIDE_CHAREQUIP_01_DESC"
@@ -210,7 +228,7 @@
     "ID": "216",
     "GroupID": "2",
     "Type": "2",
-    "Sort": "16",
+    "Sort": "18",
     "NameID": "SYS_IT_SPECIAL",
     "ImageName": "GUIDE_ITEMEQUIP_05",
     "DescriptionNameID": "SYS_GUIDE_CHAREQUIP_02_DESC"
@@ -219,7 +237,7 @@
     "ID": "217",
     "GroupID": "2",
     "Type": "1",
-    "Sort": "17",
+    "Sort": "19",
     "NameID": "SYS_FRIENDSHIP",
     "ImageName": "",
     "DescriptionNameID": ""
@@ -228,7 +246,7 @@
     "ID": "218",
     "GroupID": "2",
     "Type": "2",
-    "Sort": "18",
+    "Sort": "20",
     "NameID": "SYS_FRIENDSHIP",
     "ImageName": "GUIDE_TRUST_01",
     "DescriptionNameID": "SYS_GUIDE_TRUST_01_DESC"
@@ -237,7 +255,7 @@
     "ID": "219",
     "GroupID": "2",
     "Type": "2",
-    "Sort": "19",
+    "Sort": "21",
     "NameID": "SYS_PRESENT",
     "ImageName": "GUIDE_TRUST_02",
     "DescriptionNameID": "SYS_GUIDE_TRUST_02_DESC"
@@ -246,7 +264,7 @@
     "ID": "220",
     "GroupID": "2",
     "Type": "2",
-    "Sort": "20",
+    "Sort": "22",
     "NameID": "SYS_EXPRESSION",
     "ImageName": "GUIDE_TRUST_03",
     "DescriptionNameID": "SYS_GUIDE_TRUST_03_DESC"
@@ -255,7 +273,7 @@
     "ID": "221",
     "GroupID": "2",
     "Type": "2",
-    "Sort": "21",
+    "Sort": "23",
     "NameID": "SYS_VOICE",
     "ImageName": "GUIDE_TRUST_04",
     "DescriptionNameID": "SYS_GUIDE_TRUST_04_DESC"
@@ -264,7 +282,7 @@
     "ID": "222",
     "GroupID": "2",
     "Type": "1",
-    "Sort": "22",
+    "Sort": "24",
     "NameID": "SYS_GUIDE_CHAR_GIFT_TITLE",
     "ImageName": "",
     "DescriptionNameID": ""
@@ -273,7 +291,7 @@
     "ID": "223",
     "GroupID": "2",
     "Type": "2",
-    "Sort": "23",
+    "Sort": "25",
     "NameID": "SYS_GUIDE_CHAR_GIFT_TITLE",
     "ImageName": "GUIDE_GIFT_01_1,GUIDE_GIFT_01_2,GUIDE_GIFT_01_3,GUIDE_GIFT_01_4",
     "DescriptionNameID": "SYS_GUIDE_CHAR_GIFT_01_1_DESC,SYS_GUIDE_CHAR_GIFT_01_2_DESC,SYS_GUIDE_CHAR_GIFT_01_3_DESC,SYS_GUIDE_CHAR_GIFT_01_4_DESC"
@@ -405,10 +423,28 @@
     "DescriptionNameID": "SYS_GUIDE_EQUIPUPGRADE_04_1_DESC,SYS_GUIDE_EQUIPUPGRADE_04_2_DESC,SYS_GUIDE_EQUIPUPGRADE_04_3_DESC"
   },
   {
+    "ID": "318",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "15",
+    "NameID": "SYS_GUIDE_SINGULAR_ENCHAHNT_01_NAME",
+    "ImageName": "GUIDE_SINGULAR_ENCHANT_01",
+    "DescriptionNameID": "SYS_GUIDE_SINGULAR_ENCHAHNT_01_DESC"
+  },
+  {
+    "ID": "319",
+    "GroupID": "3",
+    "Type": "2",
+    "Sort": "16",
+    "NameID": "SYS_GUIDE_SINGULAR_ENCHAHNT_02_NAME",
+    "ImageName": "GUIDE_SINGULAR_ENCHANT_02",
+    "DescriptionNameID": "SYS_GUIDE_SINGULAR_ENCHAHNT_02_DESC"
+  },
+  {
     "ID": "315",
     "GroupID": "3",
     "Type": "1",
-    "Sort": "15",
+    "Sort": "17",
     "NameID": "SYS_EQUIPMENT_SPECIAL",
     "ImageName": "",
     "DescriptionNameID": ""
@@ -417,7 +453,7 @@
     "ID": "316",
     "GroupID": "3",
     "Type": "2",
-    "Sort": "16",
+    "Sort": "18",
     "NameID": "SYS_EQUIP_EXCLUSIVE",
     "ImageName": "GUIDE_ITEMEQUIP_05,GUIDE_ITEMEQUIP_05_1",
     "DescriptionNameID": "SYS_GUIDE_ITEMEQUIP_05_DESC,SYS_GUIDE_ITEMEQUIP_05_1_DESC"
@@ -426,7 +462,7 @@
     "ID": "317",
     "GroupID": "3",
     "Type": "2",
-    "Sort": "17",
+    "Sort": "19",
     "NameID": "SYS_EQUIP_OOPARTS",
     "ImageName": "GUIDE_ITEMEQUIP_05,GUIDE_ITEMEQUIP_05_2",
     "DescriptionNameID": "SYS_GUIDE_ITEMEQUIP_06_DESC,SYS_GUIDE_ITEMEQUIP_06_1_DESC"
@@ -1807,6 +1843,51 @@
     "NameID": "SYS_GUIDE_MONAD_GATE_08_NAME",
     "ImageName": "GUIDE_MONAD_GATE_08_1,GUIDE_MONAD_GATE_08_1,GUIDE_MONAD_GATE_08_2,GUIDE_MONAD_GATE_08_3,GUIDE_MONAD_GATE_08_4,GUIDE_MONAD_GATE_08_5",
     "DescriptionNameID": "SYS_GUIDE_MONAD_GATE_08_1_DESC,SYS_GUIDE_MONAD_GATE_08_2_DESC,SYS_GUIDE_MONAD_GATE_08_3_DESC,SYS_GUIDE_MONAD_GATE_08_4_DESC,SYS_GUIDE_MONAD_GATE_08_5_DESC"
+  },
+  {
+    "ID": "1810",
+    "GroupID": "18",
+    "Type": "1",
+    "Sort": "10",
+    "NameID": "SYS_SINGULARITY_MAIN_TITLE",
+    "ImageName": "",
+    "DescriptionNameID": ""
+  },
+  {
+    "ID": "1811",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "11",
+    "NameID": "SYS_GUIDE_SINGULAR_01_NAME",
+    "ImageName": "GUIDE_SINGULAR_01",
+    "DescriptionNameID": "SYS_GUIDE_SINGULAR_01_DESC"
+  },
+  {
+    "ID": "1812",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "12",
+    "NameID": "SYS_GUIDE_SINGULAR_02_NAME",
+    "ImageName": "GUIDE_SINGULAR_02",
+    "DescriptionNameID": "SYS_GUIDE_SINGULAR_02_DESC"
+  },
+  {
+    "ID": "1813",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "13",
+    "NameID": "SYS_GUIDE_SINGULAR_03_NAME",
+    "ImageName": "GUIDE_SINGULAR_03",
+    "DescriptionNameID": "SYS_GUIDE_SINGULAR_03_DESC"
+  },
+  {
+    "ID": "1814",
+    "GroupID": "18",
+    "Type": "2",
+    "Sort": "14",
+    "NameID": "SYS_GUIDE_SINGULAR_04_NAME",
+    "ImageName": "GUIDE_SINGULAR_04",
+    "DescriptionNameID": "SYS_GUIDE_SINGULAR_04_DESC"
   },
   {
     "ID": "1901",
