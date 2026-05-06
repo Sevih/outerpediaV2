@@ -483,7 +483,7 @@ const zh: Record<TranslationKey, string> = {
   'guides.category.dimensional-singularity.feature.repel':
     '奇点击退：开始当日的Boss战斗。',
   'guides.category.dimensional-singularity.feature.ascension':
-    '奇点升华装置：将达到最大强化和最大重铸的装备进行升华——获得+3次重铸机会，主属性数值提升。',
+    '奇点升华装置：将达到最大强化和最大重铸的装备进行升华。升华会提升装备的主属性数值并获得+3次重铸机会；强化等级达到+15时还会附加一项随机额外属性（类型取决于装备槽位，数值随机）。',
   'guides.category.dimensional-singularity.feature.ranking':
     '排名报告：根据前一日分数领取每日奖励。',
   'guides.category.joint-challenge.desc':
@@ -857,6 +857,7 @@ const zh: Record<TranslationKey, string> = {
   'page.character.stats.title': '基础属性',
   'page.character.stats.class_passive': '职业被动',
   'page.character.stats.no_data': '暂无属性数据',
+  'page.character.stats.limit_break_cost': '极限突破费用',
   'page.character.core_fusion.available': '核心融合可用',
   'page.character.core_fusion.original': '原始角色',
   'page.character.core_fusion.skill_info': '解锁核心融合需要{unlockCost}个{material}（技能从Lv.1开始）。每次升级消耗{upgradeCost}个{material}，所有技能等级提升1级。总计: {totalCost}个{material}即可全部满级。',

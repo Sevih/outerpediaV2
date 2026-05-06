@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ItemInline from '@/app/components/inline/ItemInline';
 import Link from 'next/link';
 import { Fragment, type ReactNode } from 'react';
@@ -6,6 +7,26 @@ import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 
 import { StarBadge } from '@/app/components/ui/StarIcons';
+
+const limitBreakCosts: Record<string, Record<string, { factors: number; gold: number }>> = {
+    '1': {
+        '100-105': { factors: 25, gold: 250_000 },
+        '105-110': { factors: 75, gold: 500_000 },
+        '110-120': { factors: 100, gold: 1_000_000 },
+    },
+    '2': {
+        '100-105': { factors: 40, gold: 400_000 },
+        '105-110': { factors: 80, gold: 800_000 },
+        '110-120': { factors: 180, gold: 1_600_000 },
+    },
+    '3': {
+        '100-105': { factors: 50, gold: 500_000 },
+        '105-110': { factors: 100, gold: 1_000_000 },
+        '110-120': { factors: 250, gold: 2_000_000 },
+    },
+};
+
+const limitBreakRanges = ['100-105', '105-110', '110-120'];
 
 const skillCosts: Record<string, Record<string, Record<string, number>>> = {
     '1': {
@@ -114,11 +135,25 @@ export const LABELS = {
         zh: "英雄达到Lv.100后，可通过极限突破将等级上限扩展至Lv.120。每次扩展需要消耗金币和极限突破因子。扩展后使用普通食物提升等级至新上限。"
     },
     limitBreakSource: {
-        en: "Limit Break Factors are obtained by using Limit Break Memory, acquired from Dimensional Singularity. Per-hero Limit Break Factors are listed in Inventory → Materials.",
-        jp: "限界突破因子は、次元特異点で入手できる限界突破メモリーを使用して取得します。ヒーロー別の限界突破因子の所持数はインベントリ → 素材から確認できます。",
-        kr: "한계 돌파 인자는 차원 특이점에서 획득하는 한계 돌파 기억을 사용하여 얻습니다. 영웅별 한계 돌파 인자 보유 수량은 인벤토리 → 재료에서 확인할 수 있습니다.",
-        zh: "极限突破因子可使用次元奇点中获得的极限突破记忆获取。各角色的极限突破因子持有数量可在背包 → 材料中查看。"
+        en: "Limit Break Factors are obtained from Dimensional Singularity through the following trade chain:",
+        jp: "限界突破因子は次元特異点で以下の交換の流れで入手できます：",
+        kr: "한계 돌파 인자는 차원 특이점에서 다음과 같은 교환 순서로 획득합니다:",
+        zh: "极限突破因子可在次元奇点通过以下兑换流程获得："
     },
+    limitBreakChainElementChoice: {
+        en: "any element",
+        jp: "任意の属性",
+        kr: "원하는 속성",
+        zh: "所选属性"
+    },
+    limitBreakChainPerHero: {
+        en: "Limit Break Factor (per-hero)",
+        jp: "限界突破因子（ヒーロー別）",
+        kr: "한계 돌파 인자 (영웅별)",
+        zh: "极限突破因子（每个角色）"
+    },
+    limitBreakCostHeader: { en: "Cost per tier", jp: "段階別コスト", kr: "단계별 비용", zh: "每阶段费用" },
+    limitBreakRangeHeader: { en: "Lv. range", jp: "Lv. 範囲", kr: "Lv. 범위", zh: "Lv. 范围" },
 
     // Transcendence section
     transcendenceDesc1: {
@@ -335,7 +370,71 @@ export function LimitBreakSection({ lang }: { lang: Lang }) {
         <>
             <p>{lRec(LABELS.limitBreakDesc, lang)}</p>
             <p>{lRec(LABELS.limitBreakSource, lang)}</p>
+            <div className="my-3 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm">
+                <ItemInline id="30519" />
+                <span className="text-zinc-400">→</span>
+                <span className="inline-flex flex-wrap items-center gap-2">
+                    <ItemInline id="30512" />
+                    <span className="text-xs italic text-zinc-400">
+                        ({lRec(LABELS.limitBreakChainElementChoice, lang)})
+                    </span>
+                </span>
+                <span className="text-zinc-400">→</span>
+                <span className="text-zinc-200">{lRec(LABELS.limitBreakChainPerHero, lang)}</span>
+            </div>
+            <LimitBreakTable lang={lang} />
         </>
+    );
+}
+
+export function LimitBreakTable({ lang }: { lang: Lang }) {
+    const stars = ['1', '2', '3'] as const;
+    return (
+        <div className="overflow-x-auto">
+            <table className="table-auto text-sm text-white">
+                <thead>
+                    <tr className="border-b border-white/10">
+                        <th className="text-left pr-4 pb-2">{lRec(LABELS.limitBreakRangeHeader, lang)}</th>
+                        {stars.map((s) => (
+                            <th key={s} className="text-center px-3 pb-2">
+                                <StarBadge level={s} />
+                            </th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody className="divide-y divide-white/10">
+                    {limitBreakRanges.map((range) => {
+                        const [from, to] = range.split('-');
+                        return (
+                            <tr key={range} className="align-middle">
+                                <td className="py-2 pr-4 font-medium whitespace-nowrap">Lv.{from} → Lv.{to}</td>
+                                {stars.map((s) => {
+                                    const cost = limitBreakCosts[s][range];
+                                    return (
+                                        <td key={s} className="py-2 text-center px-3 whitespace-nowrap">
+                                            <span className="inline-flex items-center gap-1">
+                                                <ItemInline id="30519" /> ×{cost.factors}
+                                            </span>
+                                            <br />
+                                            <span className="inline-flex items-center gap-1">
+                                                <Image
+                                                    src="/images/items/CM_Goods_Gold.webp"
+                                                    alt="Gold"
+                                                    width={16}
+                                                    height={16}
+                                                    className="object-contain"
+                                                />
+                                                {cost.gold.toLocaleString()}
+                                            </span>
+                                        </td>
+                                    );
+                                })}
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+        </div>
     );
 }
 

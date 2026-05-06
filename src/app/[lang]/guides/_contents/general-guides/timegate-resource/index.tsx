@@ -79,8 +79,9 @@ function ResourceTable({ item, badgeLabels, sourceLabels, headers, cost }: {
     headers: { source: string; weekly: string; monthly: string; total: string; grandTotal: string }
     cost: CostFormat
 }) {
-    const totalWeekly = item.sources.reduce((sum, s) => sum + (s.weekly || 0), 0)
-    const totalMonthly = item.sources.reduce((sum, s) => sum + (s.monthly || 0), 0)
+    const numericOrZero = (v: number | string | undefined) => (typeof v === 'number' ? v : 0)
+    const totalWeekly = item.sources.reduce((sum, s) => sum + numericOrZero(s.weekly), 0)
+    const totalMonthly = item.sources.reduce((sum, s) => sum + numericOrZero(s.monthly), 0)
     const grandTotalMonthly = totalMonthly + (totalWeekly * 4)
 
     const sortedSources = [...item.sources].sort((a, b) =>

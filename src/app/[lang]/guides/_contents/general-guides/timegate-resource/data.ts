@@ -1,10 +1,10 @@
-export type TabKey = 'books' | 'transistones' | 'special' | 'glunite'
+export type TabKey = 'books' | 'transistones' | 'special' | 'glunite' | 'limit-break'
 export type SourceType = 'mission' | 'guild' | 'adventurer' | 'craft'
 
 export type ResourceSource = {
     sourceKey: string
-    weekly?: number
-    monthly?: number
+    weekly?: number | string
+    monthly?: number | string
     costItem?: string
     costAmount?: number
 }
@@ -16,13 +16,14 @@ export type ResourceItem = {
 
 export type TimegateData = Record<TabKey, ResourceItem[]>
 
-export const TAB_KEYS: TabKey[] = ['books', 'transistones', 'special', 'glunite']
+export const TAB_KEYS: TabKey[] = ['books', 'transistones', 'special', 'glunite', 'limit-break']
 
 export const TAB_ICONS: Record<TabKey, string> = {
     books: '/images/items/TI_Item_Growth_Book_01.webp',
     transistones: '/images/items/TI_Item_Option_Change_02.webp',
     special: '/images/items/TI_EX_Equip_Growth_Enhance_01.webp',
     glunite: '/images/items/TI_Equipment_Growth02.webp',
+    'limit-break': '/images/items/TI_CharacterCard_07.webp',
 }
 
 const SK = {
@@ -38,6 +39,9 @@ const SK = {
     ARENA_WEEKLY_REWARD: 'timegate.source.arena-weekly-reward',
     WEEKLY_MISSION: 'timegate.source.weekly-mission',
     IRREGULAR_EXTERMINATION_POINT: 'timegate.source.irregular-extermination-point',
+    SINGULARITY_RANK_REWARD: 'timegate.source.singularity-rank-reward',
+    SINGULARITY_DAILY_RUN: 'timegate.source.singularity-daily-run',
+    SINGULARITY_DAILY_RANKING: 'timegate.source.singularity-daily-ranking',
 } as const
 
 export function getSourceType(sourceKey: string): SourceType {
@@ -171,5 +175,15 @@ export const data: TimegateData = {
                 { sourceKey: SK.SURVEY_HUB, weekly: 6 },
             ],
         }
+    ],
+    'limit-break': [
+        {
+            name: 'Limit Break Memory',
+            sources: [
+                { sourceKey: SK.SINGULARITY_RANK_REWARD, weekly: 640 },
+                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 40 },
+                { sourceKey: SK.SINGULARITY_DAILY_RANKING, weekly: '20–160' },
+            ],
+        },
     ],
 }

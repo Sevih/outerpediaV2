@@ -483,7 +483,7 @@ const jp: Record<TranslationKey, string> = {
   'guides.category.dimensional-singularity.feature.repel':
     '特異点討伐：その日のボス戦を開始する。',
   'guides.category.dimensional-singularity.feature.ascension':
-    '特異点昇華装置：強化と再鍛造が最大に達した装備を昇華 — 再鍛造回数+3、メインオプション値が上昇する。',
+    '特異点昇華装置：強化と再鍛造が最大に達した装備を昇華する。昇華により装備のメインステータスが上昇し、再鍛造回数が+3される。さらに強化+15に到達するとランダムな追加ステータスが付与される（種類は装備スロットに依存、数値はランダム）。',
   'guides.category.dimensional-singularity.feature.ranking':
     'ランキングレポート：前日のスコアに応じた日次報酬を受け取る。',
   'guides.category.joint-challenge.desc':
@@ -857,6 +857,7 @@ const jp: Record<TranslationKey, string> = {
   'page.character.stats.title': '基本ステータス',
   'page.character.stats.class_passive': 'クラスパッシブ',
   'page.character.stats.no_data': 'ステータスデータなし',
+  'page.character.stats.limit_break_cost': '限界突破コスト',
   'page.character.core_fusion.available': 'コアフュージョンあり',
   'page.character.core_fusion.original': 'オリジナルキャラクター',
   'page.character.core_fusion.skill_info': 'コアフュージョンの解放には{unlockCost}個の{material}が必要です（スキルはLv.1から開始）。スキルレベルの強化には{upgradeCost}個の{material}を消費し、全スキルのレベルが1上がります。合計: {totalCost}個の{material}で全スキル最大化。',

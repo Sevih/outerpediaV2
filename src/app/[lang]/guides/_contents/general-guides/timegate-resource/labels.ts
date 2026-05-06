@@ -16,6 +16,7 @@ export const LABELS = {
         transistones: { en: 'Transistone', jp: 'トランストーン', kr: '트랜스톤', zh: '转换石' } satisfies LangMap,
         special: { en: 'Special Gear', jp: '特殊装備', kr: '특수 장비', zh: '特殊装备' } satisfies LangMap,
         glunite: { en: 'Glunite', jp: 'グルーナイト', kr: '글루나이트', zh: '格鲁矿石' } satisfies LangMap,
+        'limit-break': { en: 'Limit Break', jp: '限界突破', kr: '한계 돌파', zh: '极限突破' } satisfies LangMap,
     },
 
     headers: {
@@ -46,6 +47,9 @@ export const LABELS = {
         'timegate.source.arena-weekly-reward': { en: 'Weekly Play Reward', jp: 'ウィークリープレイ報酬', kr: '주간 플레이 보상', zh: '每周游戏奖励' },
         'timegate.source.weekly-mission': { en: 'Weekly Mission', jp: 'ウィークリー', kr: '주간 미션', zh: '每周任务' },
         'timegate.source.irregular-extermination-point': { en: 'Irregular Extermination Project - Point Exchange', jp: 'イレギュラー殲滅戦 - ポイント交換所', kr: '이레귤러 섬멸전 - 포인트 교환소', zh: '异型怪歼灭战 - 点数兑换所' },
+        'timegate.source.singularity-rank-reward': { en: 'Dimensional Singularity – SSS++ Rank Reward (160 / day)', jp: '次元特異点 – SSS++ ランク報酬 (1日160)', kr: '차원 특이점 – SSS++ 등급 보상 (1일 160)', zh: '次元奇点 – SSS++ 评级奖励 (每日 160)' },
+        'timegate.source.singularity-daily-run': { en: 'Dimensional Singularity – Daily Run (Wed–Sat)', jp: '次元特異点 – デイリー参加 (水〜土)', kr: '차원 특이점 – 일일 참여 (수~토)', zh: '次元奇点 – 每日参与 (周三~周六)' },
+        'timegate.source.singularity-daily-ranking': { en: 'Dimensional Singularity – Daily Ranking (5–40 / day)', jp: '次元特異点 – デイリーランキング (1日5〜40)', kr: '차원 특이점 – 일일 랭킹 (1일 5~40)', zh: '次元奇点 – 每日排名 (每日 5~40)' },
     } as Record<string, LangMap>,
 
     cost: {

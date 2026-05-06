@@ -92,8 +92,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 88
+      },
+      "lv105_ev6": {
+        "ATK": 790,
+        "DEF": 601,
+        "HP": 4824,
+        "SPD": 99,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 851,
+        "DEF": 616,
+        "HP": 5281,
+        "SPD": 99,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 92
+      },
+      "lv120_ev8": {
+        "ATK": 945,
+        "DEF": 645,
+        "HP": 5595,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 96
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30512",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30512",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30512",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000002": {
     "info": {
@@ -188,8 +256,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1053,
+        "DEF": 297,
+        "HP": 3769,
+        "SPD": 129,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1129,
+        "DEF": 307,
+        "HP": 3908,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1242,
+        "DEF": 327,
+        "HP": 4386,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30516",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30516",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30516",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000003": {
     "info": {
@@ -278,8 +414,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 733,
+        "DEF": 415,
+        "HP": 4382,
+        "SPD": 153,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 791,
+        "DEF": 428,
+        "HP": 4522,
+        "SPD": 157,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 879,
+        "DEF": 455,
+        "HP": 4802,
+        "SPD": 157,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30513",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30513",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30513",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000004": {
     "info": {
@@ -374,8 +575,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 77
+      },
+      "lv105_ev6": {
+        "ATK": 804,
+        "DEF": 376,
+        "HP": 3638,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 80
+      },
+      "lv110_ev7": {
+        "ATK": 834,
+        "DEF": 410,
+        "HP": 3767,
+        "SPD": 127,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 83
+      },
+      "lv120_ev8": {
+        "ATK": 893,
+        "DEF": 454,
+        "HP": 4249,
+        "SPD": 127,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 89
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30512",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30512",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30512",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000005": {
     "info": {
@@ -470,8 +739,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 89
+      },
+      "lv105_ev6": {
+        "ATK": 970,
+        "DEF": 225,
+        "HP": 3980,
+        "SPD": 119,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 97
+      },
+      "lv110_ev7": {
+        "ATK": 1047,
+        "DEF": 232,
+        "HP": 4116,
+        "SPD": 119,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 104
+      },
+      "lv120_ev8": {
+        "ATK": 1158,
+        "DEF": 280,
+        "HP": 4493,
+        "SPD": 119,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 115
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30512",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30512",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30512",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000006": {
     "info": {
@@ -566,8 +903,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1053,
+        "DEF": 297,
+        "HP": 3769,
+        "SPD": 129,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1129,
+        "DEF": 307,
+        "HP": 3908,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1242,
+        "DEF": 327,
+        "HP": 4386,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30513",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30513",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30513",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000007": {
     "info": {
@@ -662,8 +1067,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 77
+      },
+      "lv105_ev6": {
+        "ATK": 804,
+        "DEF": 376,
+        "HP": 3638,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 80
+      },
+      "lv110_ev7": {
+        "ATK": 834,
+        "DEF": 410,
+        "HP": 3767,
+        "SPD": 127,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 83
+      },
+      "lv120_ev8": {
+        "ATK": 893,
+        "DEF": 454,
+        "HP": 4249,
+        "SPD": 127,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 89
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30513",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30513",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30513",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000008": {
     "info": {
@@ -758,8 +1231,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 495
+      },
+      "lv105_ev6": {
+        "ATK": 1054,
+        "DEF": 652,
+        "HP": 5375,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 537
+      },
+      "lv110_ev7": {
+        "ATK": 1127,
+        "DEF": 671,
+        "HP": 5799,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 579
+      },
+      "lv120_ev8": {
+        "ATK": 1239,
+        "DEF": 730,
+        "HP": 6423,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 642
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000009": {
     "info": {
@@ -854,8 +1395,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 413
+      },
+      "lv105_ev6": {
+        "ATK": 652,
+        "DEF": 524,
+        "HP": 4550,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 156,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 455
+      },
+      "lv110_ev7": {
+        "ATK": 680,
+        "DEF": 540,
+        "HP": 4966,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 496
+      },
+      "lv120_ev8": {
+        "ATK": 737,
+        "DEF": 572,
+        "HP": 5528,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 552
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30515",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30515",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30515",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000010": {
     "info": {
@@ -950,8 +1559,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 936,
+        "DEF": 597,
+        "HP": 4769,
+        "SPD": 93,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1003,
+        "DEF": 613,
+        "HP": 5175,
+        "SPD": 93,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1105,
+        "DEF": 667,
+        "HP": 5763,
+        "SPD": 93,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30514",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30514",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30514",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000011": {
     "info": {
@@ -1040,8 +1717,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 630,
+        "DEF": 368,
+        "HP": 3900,
+        "SPD": 150,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 683,
+        "DEF": 379,
+        "HP": 4019,
+        "SPD": 154,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 762,
+        "DEF": 402,
+        "HP": 4257,
+        "SPD": 154,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 25,
+        "recallItemId": "30513",
+        "gold": 250000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 75,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000012": {
     "info": {
@@ -1130,8 +1872,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000013": {
     "info": {
@@ -1226,8 +2033,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 77
+      },
+      "lv105_ev6": {
+        "ATK": 804,
+        "DEF": 376,
+        "HP": 3638,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 80
+      },
+      "lv110_ev7": {
+        "ATK": 834,
+        "DEF": 410,
+        "HP": 3767,
+        "SPD": 127,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 83
+      },
+      "lv120_ev8": {
+        "ATK": 893,
+        "DEF": 454,
+        "HP": 4249,
+        "SPD": 127,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 89
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30514",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30514",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30514",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000014": {
     "info": {
@@ -1322,8 +2197,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 77
+      },
+      "lv105_ev6": {
+        "ATK": 804,
+        "DEF": 376,
+        "HP": 3638,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 80
+      },
+      "lv110_ev7": {
+        "ATK": 834,
+        "DEF": 410,
+        "HP": 3767,
+        "SPD": 127,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 83
+      },
+      "lv120_ev8": {
+        "ATK": 893,
+        "DEF": 454,
+        "HP": 4249,
+        "SPD": 127,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 89
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30513",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30513",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30513",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000015": {
     "info": {
@@ -1418,8 +2361,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000016": {
     "info": {
@@ -1514,8 +2525,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 936,
+        "DEF": 597,
+        "HP": 4769,
+        "SPD": 93,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1003,
+        "DEF": 613,
+        "HP": 5175,
+        "SPD": 93,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1105,
+        "DEF": 667,
+        "HP": 5763,
+        "SPD": 93,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30514",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30514",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30514",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000017": {
     "info": {
@@ -1610,8 +2689,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 308
+      },
+      "lv105_ev6": {
+        "ATK": 554,
+        "DEF": 673,
+        "HP": 3455,
+        "SPD": 99,
+        "EFF": 120,
+        "RES": 181,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 345
+      },
+      "lv110_ev7": {
+        "ATK": 578,
+        "DEF": 725,
+        "HP": 3575,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 357
+      },
+      "lv120_ev8": {
+        "ATK": 626,
+        "DEF": 794,
+        "HP": 3816,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 381
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 25,
+        "recallItemId": "30512",
+        "gold": 250000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 75,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000018": {
     "info": {
@@ -1706,8 +2853,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 89
+      },
+      "lv105_ev6": {
+        "ATK": 970,
+        "DEF": 225,
+        "HP": 3980,
+        "SPD": 119,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 97
+      },
+      "lv110_ev7": {
+        "ATK": 1047,
+        "DEF": 232,
+        "HP": 4116,
+        "SPD": 119,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 104
+      },
+      "lv120_ev8": {
+        "ATK": 1158,
+        "DEF": 280,
+        "HP": 4493,
+        "SPD": 119,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 115
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30516",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30516",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30516",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000019": {
     "info": {
@@ -1802,8 +3017,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000020": {
     "info": {
@@ -1898,8 +3181,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 907,
+        "DEF": 408,
+        "HP": 4074,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 941,
+        "DEF": 444,
+        "HP": 4214,
+        "SPD": 132,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 94
+      },
+      "lv120_ev8": {
+        "ATK": 1009,
+        "DEF": 491,
+        "HP": 4719,
+        "SPD": 132,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 100
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000021": {
     "info": {
@@ -1994,8 +3345,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 86
+      },
+      "lv105_ev6": {
+        "ATK": 791,
+        "DEF": 621,
+        "HP": 6139,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 93
+      },
+      "lv110_ev7": {
+        "ATK": 825,
+        "DEF": 667,
+        "HP": 6643,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 894,
+        "DEF": 729,
+        "HP": 7352,
+        "SPD": 108,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 109
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000022": {
     "info": {
@@ -2090,8 +3509,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000023": {
     "info": {
@@ -2186,8 +3673,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 461
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 578,
+        "HP": 5043,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 156,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 504
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 596,
+        "HP": 5472,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 547
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 633,
+        "HP": 6059,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 605
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000024": {
     "info": {
@@ -2282,8 +3837,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 88
+      },
+      "lv105_ev6": {
+        "ATK": 790,
+        "DEF": 601,
+        "HP": 4824,
+        "SPD": 99,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 851,
+        "DEF": 616,
+        "HP": 5281,
+        "SPD": 99,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 92
+      },
+      "lv120_ev8": {
+        "ATK": 945,
+        "DEF": 645,
+        "HP": 5595,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 96
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30512",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30512",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30512",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000025": {
     "info": {
@@ -2378,8 +4001,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000026": {
     "info": {
@@ -2474,8 +4165,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 72
+      },
+      "lv105_ev6": {
+        "ATK": 585,
+        "DEF": 525,
+        "HP": 4873,
+        "SPD": 95,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 78
+      },
+      "lv110_ev7": {
+        "ATK": 610,
+        "DEF": 567,
+        "HP": 5332,
+        "SPD": 95,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 85
+      },
+      "lv120_ev8": {
+        "ATK": 661,
+        "DEF": 621,
+        "HP": 5950,
+        "SPD": 100,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 93
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 25,
+        "recallItemId": "30514",
+        "gold": 250000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 75,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000027": {
     "info": {
@@ -2570,8 +4329,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 355
+      },
+      "lv105_ev6": {
+        "ATK": 652,
+        "DEF": 743,
+        "HP": 3943,
+        "SPD": 102,
+        "EFF": 120,
+        "RES": 181,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 394
+      },
+      "lv110_ev7": {
+        "ATK": 680,
+        "DEF": 798,
+        "HP": 4085,
+        "SPD": 107,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 408
+      },
+      "lv120_ev8": {
+        "ATK": 737,
+        "DEF": 873,
+        "HP": 4368,
+        "SPD": 107,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 436
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30515",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30515",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30515",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000028": {
     "info": {
@@ -2666,8 +4493,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000029": {
     "info": {
@@ -2756,8 +4651,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 733,
+        "DEF": 415,
+        "HP": 4382,
+        "SPD": 153,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 791,
+        "DEF": 428,
+        "HP": 4522,
+        "SPD": 157,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 879,
+        "DEF": 455,
+        "HP": 4802,
+        "SPD": 157,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30514",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30514",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30514",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000030": {
     "info": {
@@ -2852,8 +4812,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 79
+      },
+      "lv105_ev6": {
+        "ATK": 688,
+        "DEF": 573,
+        "HP": 5512,
+        "SPD": 98,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 85
+      },
+      "lv110_ev7": {
+        "ATK": 718,
+        "DEF": 617,
+        "HP": 5999,
+        "SPD": 98,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 92
+      },
+      "lv120_ev8": {
+        "ATK": 778,
+        "DEF": 675,
+        "HP": 6673,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 101
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30512",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30512",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30512",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000031": {
     "info": {
@@ -2942,8 +4970,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 733,
+        "DEF": 415,
+        "HP": 4382,
+        "SPD": 153,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 791,
+        "DEF": 428,
+        "HP": 4522,
+        "SPD": 157,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 879,
+        "DEF": 455,
+        "HP": 4802,
+        "SPD": 157,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30513",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30513",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30513",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000032": {
     "info": {
@@ -3038,8 +5131,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1053,
+        "DEF": 297,
+        "HP": 3769,
+        "SPD": 129,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1129,
+        "DEF": 307,
+        "HP": 3908,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1242,
+        "DEF": 327,
+        "HP": 4386,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30512",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30512",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30512",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000033": {
     "info": {
@@ -3134,8 +5295,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1053,
+        "DEF": 297,
+        "HP": 3769,
+        "SPD": 129,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1129,
+        "DEF": 307,
+        "HP": 3908,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1242,
+        "DEF": 327,
+        "HP": 4386,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30513",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30513",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30513",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000034": {
     "info": {
@@ -3230,8 +5459,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 936,
+        "DEF": 597,
+        "HP": 4769,
+        "SPD": 93,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1003,
+        "DEF": 613,
+        "HP": 5175,
+        "SPD": 93,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1105,
+        "DEF": 667,
+        "HP": 5763,
+        "SPD": 93,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30512",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30512",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30512",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000035": {
     "info": {
@@ -3320,8 +5617,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000036": {
     "info": {
@@ -3416,8 +5778,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 413
+      },
+      "lv105_ev6": {
+        "ATK": 652,
+        "DEF": 524,
+        "HP": 4550,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 156,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 455
+      },
+      "lv110_ev7": {
+        "ATK": 680,
+        "DEF": 540,
+        "HP": 4966,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 496
+      },
+      "lv120_ev8": {
+        "ATK": 737,
+        "DEF": 572,
+        "HP": 5528,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 552
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30512",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30512",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30512",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000037": {
     "info": {
@@ -3512,8 +5942,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 95
+      },
+      "lv105_ev6": {
+        "ATK": 904,
+        "DEF": 651,
+        "HP": 5351,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 97
+      },
+      "lv110_ev7": {
+        "ATK": 970,
+        "DEF": 668,
+        "HP": 5822,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 1074,
+        "DEF": 702,
+        "HP": 6165,
+        "SPD": 109,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 105
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000038": {
     "info": {
@@ -3608,8 +6106,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 308
+      },
+      "lv105_ev6": {
+        "ATK": 554,
+        "DEF": 673,
+        "HP": 3455,
+        "SPD": 99,
+        "EFF": 120,
+        "RES": 181,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 345
+      },
+      "lv110_ev7": {
+        "ATK": 578,
+        "DEF": 725,
+        "HP": 3575,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 357
+      },
+      "lv120_ev8": {
+        "ATK": 626,
+        "DEF": 794,
+        "HP": 3816,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 381
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 25,
+        "recallItemId": "30513",
+        "gold": 250000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 75,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000039": {
     "info": {
@@ -3698,8 +6264,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 901,
+        "DEF": 363,
+        "HP": 3785,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 963,
+        "DEF": 376,
+        "HP": 3925,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 1059,
+        "DEF": 401,
+        "HP": 4205,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000040": {
     "info": {
@@ -3788,8 +6419,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000041": {
     "info": {
@@ -3878,8 +6574,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 800,
+        "DEF": 326,
+        "HP": 3349,
+        "SPD": 153,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 857,
+        "DEF": 337,
+        "HP": 3478,
+        "SPD": 157,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 944,
+        "DEF": 359,
+        "HP": 3736,
+        "SPD": 157,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30514",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30514",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30514",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000042": {
     "info": {
@@ -3974,8 +6735,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 86
+      },
+      "lv105_ev6": {
+        "ATK": 791,
+        "DEF": 621,
+        "HP": 6139,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 93
+      },
+      "lv110_ev7": {
+        "ATK": 825,
+        "DEF": 667,
+        "HP": 6643,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 894,
+        "DEF": 729,
+        "HP": 7352,
+        "SPD": 108,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 109
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000043": {
     "info": {
@@ -4070,8 +6899,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 907,
+        "DEF": 408,
+        "HP": 4074,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 941,
+        "DEF": 444,
+        "HP": 4214,
+        "SPD": 132,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 94
+      },
+      "lv120_ev8": {
+        "ATK": 1009,
+        "DEF": 491,
+        "HP": 4719,
+        "SPD": 132,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 100
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000044": {
     "info": {
@@ -4166,8 +7063,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000045": {
     "info": {
@@ -4262,8 +7227,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 78
+      },
+      "lv105_ev6": {
+        "ATK": 851,
+        "DEF": 202,
+        "HP": 3511,
+        "SPD": 116,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 85
+      },
+      "lv110_ev7": {
+        "ATK": 923,
+        "DEF": 208,
+        "HP": 3627,
+        "SPD": 116,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 92
+      },
+      "lv120_ev8": {
+        "ATK": 1024,
+        "DEF": 254,
+        "HP": 3964,
+        "SPD": 116,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 102
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 25,
+        "recallItemId": "30513",
+        "gold": 250000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 75,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000046": {
     "info": {
@@ -4352,8 +7385,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 630,
+        "DEF": 368,
+        "HP": 3900,
+        "SPD": 150,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 683,
+        "DEF": 379,
+        "HP": 4019,
+        "SPD": 154,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 762,
+        "DEF": 402,
+        "HP": 4257,
+        "SPD": 154,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 25,
+        "recallItemId": "30514",
+        "gold": 250000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 75,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000047": {
     "info": {
@@ -4448,8 +7546,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 413
+      },
+      "lv105_ev6": {
+        "ATK": 652,
+        "DEF": 524,
+        "HP": 4550,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 156,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 455
+      },
+      "lv110_ev7": {
+        "ATK": 680,
+        "DEF": 540,
+        "HP": 4966,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 496
+      },
+      "lv120_ev8": {
+        "ATK": 737,
+        "DEF": 572,
+        "HP": 5528,
+        "SPD": 104,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 552
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30513",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30513",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30513",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000048": {
     "info": {
@@ -4544,8 +7710,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 79
+      },
+      "lv105_ev6": {
+        "ATK": 688,
+        "DEF": 573,
+        "HP": 5512,
+        "SPD": 98,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 85
+      },
+      "lv110_ev7": {
+        "ATK": 718,
+        "DEF": 617,
+        "HP": 5999,
+        "SPD": 98,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 92
+      },
+      "lv120_ev8": {
+        "ATK": 778,
+        "DEF": 675,
+        "HP": 6673,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 101
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 40,
+        "recallItemId": "30513",
+        "gold": 400000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 80,
+        "recallItemId": "30513",
+        "gold": 800000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 180,
+        "recallItemId": "30513",
+        "gold": 1600000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000049": {
     "info": {
@@ -4640,8 +7874,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 926,
+        "DEF": 263,
+        "HP": 3293,
+        "SPD": 126,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 996,
+        "DEF": 271,
+        "HP": 3411,
+        "SPD": 126,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1098,
+        "DEF": 288,
+        "HP": 3848,
+        "SPD": 126,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 25,
+        "recallItemId": "30512",
+        "gold": 250000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 75,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000050": {
     "info": {
@@ -4736,8 +8038,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 365
+      },
+      "lv105_ev6": {
+        "ATK": 554,
+        "DEF": 468,
+        "HP": 4047,
+        "SPD": 101,
+        "EFF": 120,
+        "RES": 156,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 404
+      },
+      "lv110_ev7": {
+        "ATK": 578,
+        "DEF": 482,
+        "HP": 4441,
+        "SPD": 101,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 444
+      },
+      "lv120_ev8": {
+        "ATK": 626,
+        "DEF": 509,
+        "HP": 4959,
+        "SPD": 101,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 495
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 25,
+        "recallItemId": "30514",
+        "gold": 250000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 75,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000051": {
     "info": {
@@ -4832,8 +8202,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 817,
+        "DEF": 540,
+        "HP": 4154,
+        "SPD": 90,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 879,
+        "DEF": 554,
+        "HP": 4533,
+        "SPD": 90,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 971,
+        "DEF": 603,
+        "HP": 5066,
+        "SPD": 90,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 25,
+        "recallItemId": "30514",
+        "gold": 250000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 75,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000052": {
     "info": {
@@ -4922,8 +8360,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 901,
+        "DEF": 363,
+        "HP": 3785,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 963,
+        "DEF": 376,
+        "HP": 3925,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 1059,
+        "DEF": 401,
+        "HP": 4205,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000053": {
     "info": {
@@ -5018,8 +8521,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1054,
+        "DEF": 652,
+        "HP": 5375,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1127,
+        "DEF": 671,
+        "HP": 5799,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1239,
+        "DEF": 730,
+        "HP": 6423,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000054": {
     "info": {
@@ -5114,8 +8685,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 401
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 812,
+        "HP": 4421,
+        "SPD": 107,
+        "EFF": 120,
+        "RES": 181,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 442
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 870,
+        "HP": 4575,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 457
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 951,
+        "HP": 4883,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 488
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000055": {
     "info": {
@@ -5210,8 +8849,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000056": {
     "info": {
@@ -5300,8 +9007,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 901,
+        "DEF": 363,
+        "HP": 3785,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 963,
+        "DEF": 376,
+        "HP": 3925,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 1059,
+        "DEF": 401,
+        "HP": 4205,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000057": {
     "info": {
@@ -5396,8 +9168,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 95
+      },
+      "lv105_ev6": {
+        "ATK": 904,
+        "DEF": 651,
+        "HP": 5351,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 97
+      },
+      "lv110_ev7": {
+        "ATK": 970,
+        "DEF": 668,
+        "HP": 5822,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 1074,
+        "DEF": 702,
+        "HP": 6165,
+        "SPD": 109,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 105
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000058": {
     "info": {
@@ -5492,8 +9332,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 461
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 578,
+        "HP": 5043,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 156,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 504
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 596,
+        "HP": 5472,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 547
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 633,
+        "HP": 6059,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 605
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000059": {
     "info": {
@@ -5588,8 +9496,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000060": {
     "info": {
@@ -5678,8 +9654,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000061": {
     "info": {
@@ -5774,8 +9815,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 86
+      },
+      "lv105_ev6": {
+        "ATK": 791,
+        "DEF": 621,
+        "HP": 6139,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 93
+      },
+      "lv110_ev7": {
+        "ATK": 825,
+        "DEF": 667,
+        "HP": 6643,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 894,
+        "DEF": 729,
+        "HP": 7352,
+        "SPD": 108,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 109
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000062": {
     "info": {
@@ -5870,8 +9979,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000063": {
     "info": {
@@ -5966,8 +10143,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 95
+      },
+      "lv105_ev6": {
+        "ATK": 904,
+        "DEF": 651,
+        "HP": 5351,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 97
+      },
+      "lv110_ev7": {
+        "ATK": 970,
+        "DEF": 668,
+        "HP": 5822,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 1074,
+        "DEF": 702,
+        "HP": 6165,
+        "SPD": 109,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 105
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000064": {
     "info": {
@@ -6056,8 +10301,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000065": {
     "info": {
@@ -6152,8 +10462,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000066": {
     "info": {
@@ -6242,8 +10620,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000067": {
     "info": {
@@ -6338,8 +10781,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000068": {
     "info": {
@@ -6434,8 +10945,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 907,
+        "DEF": 408,
+        "HP": 4074,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 941,
+        "DEF": 444,
+        "HP": 4214,
+        "SPD": 132,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 94
+      },
+      "lv120_ev8": {
+        "ATK": 1009,
+        "DEF": 491,
+        "HP": 4719,
+        "SPD": 132,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 100
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000069": {
     "info": {
@@ -6530,8 +11109,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 907,
+        "DEF": 408,
+        "HP": 4074,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 941,
+        "DEF": 444,
+        "HP": 4214,
+        "SPD": 132,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 94
+      },
+      "lv120_ev8": {
+        "ATK": 1009,
+        "DEF": 491,
+        "HP": 4719,
+        "SPD": 132,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 100
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000070": {
     "info": {
@@ -6626,8 +11273,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1054,
+        "DEF": 652,
+        "HP": 5375,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1127,
+        "DEF": 671,
+        "HP": 5799,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1239,
+        "DEF": 730,
+        "HP": 6423,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000071": {
     "info": {
@@ -6722,8 +11437,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1054,
+        "DEF": 652,
+        "HP": 5375,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1127,
+        "DEF": 671,
+        "HP": 5799,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1239,
+        "DEF": 730,
+        "HP": 6423,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000072": {
     "info": {
@@ -6812,8 +11595,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000073": {
     "info": {
@@ -6908,8 +11756,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000074": {
     "info": {
@@ -7004,8 +11920,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 401
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 812,
+        "HP": 4421,
+        "SPD": 107,
+        "EFF": 120,
+        "RES": 181,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 442
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 870,
+        "HP": 4575,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 457
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 951,
+        "HP": 4883,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 488
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000075": {
     "info": {
@@ -7094,8 +12078,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 901,
+        "DEF": 363,
+        "HP": 3785,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 963,
+        "DEF": 376,
+        "HP": 3925,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 1059,
+        "DEF": 401,
+        "HP": 4205,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000076": {
     "info": {
@@ -7190,8 +12239,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000077": {
     "info": {
@@ -7286,8 +12403,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 95
+      },
+      "lv105_ev6": {
+        "ATK": 904,
+        "DEF": 651,
+        "HP": 5351,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 97
+      },
+      "lv110_ev7": {
+        "ATK": 970,
+        "DEF": 668,
+        "HP": 5822,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 1074,
+        "DEF": 702,
+        "HP": 6165,
+        "SPD": 109,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 105
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000078": {
     "info": {
@@ -7376,8 +12561,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 901,
+        "DEF": 363,
+        "HP": 3785,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 963,
+        "DEF": 376,
+        "HP": 3925,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 1059,
+        "DEF": 401,
+        "HP": 4205,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000079": {
     "info": {
@@ -7472,8 +12722,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 907,
+        "DEF": 408,
+        "HP": 4074,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 941,
+        "DEF": 444,
+        "HP": 4214,
+        "SPD": 132,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 94
+      },
+      "lv120_ev8": {
+        "ATK": 1009,
+        "DEF": 491,
+        "HP": 4719,
+        "SPD": 132,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 100
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000080": {
     "info": {
@@ -7568,8 +12886,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 907,
+        "DEF": 408,
+        "HP": 4074,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 941,
+        "DEF": 444,
+        "HP": 4214,
+        "SPD": 132,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 94
+      },
+      "lv120_ev8": {
+        "ATK": 1009,
+        "DEF": 491,
+        "HP": 4719,
+        "SPD": 132,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 100
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000081": {
     "info": {
@@ -7658,8 +13044,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 901,
+        "DEF": 363,
+        "HP": 3785,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 963,
+        "DEF": 376,
+        "HP": 3925,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 1059,
+        "DEF": 401,
+        "HP": 4205,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000082": {
     "info": {
@@ -7754,8 +13205,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000083": {
     "info": {
@@ -7850,8 +13369,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 461
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 578,
+        "HP": 5043,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 156,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 504
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 596,
+        "HP": 5472,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 547
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 633,
+        "HP": 6059,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 605
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000084": {
     "info": {
@@ -7946,8 +13533,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 401
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 812,
+        "HP": 4421,
+        "SPD": 107,
+        "EFF": 120,
+        "RES": 181,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 442
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 870,
+        "HP": 4575,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 457
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 951,
+        "HP": 4883,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 488
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000085": {
     "info": {
@@ -8042,8 +13697,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000086": {
     "info": {
@@ -8138,8 +13861,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000087": {
     "info": {
@@ -8234,8 +14025,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000088": {
     "info": {
@@ -8330,8 +14189,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 86
+      },
+      "lv105_ev6": {
+        "ATK": 791,
+        "DEF": 621,
+        "HP": 6139,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 93
+      },
+      "lv110_ev7": {
+        "ATK": 825,
+        "DEF": 667,
+        "HP": 6643,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 894,
+        "DEF": 729,
+        "HP": 7352,
+        "SPD": 108,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 109
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000089": {
     "info": {
@@ -8426,8 +14353,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1054,
+        "DEF": 652,
+        "HP": 5375,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1127,
+        "DEF": 671,
+        "HP": 5799,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1239,
+        "DEF": 730,
+        "HP": 6423,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000090": {
     "info": {
@@ -8522,8 +14517,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000091": {
     "info": {
@@ -8618,8 +14681,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 907,
+        "DEF": 408,
+        "HP": 4074,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 941,
+        "DEF": 444,
+        "HP": 4214,
+        "SPD": 132,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 94
+      },
+      "lv120_ev8": {
+        "ATK": 1009,
+        "DEF": 491,
+        "HP": 4719,
+        "SPD": 132,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 100
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000092": {
     "info": {
@@ -8708,8 +14839,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000093": {
     "info": {
@@ -8798,8 +14994,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 901,
+        "DEF": 363,
+        "HP": 3785,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 963,
+        "DEF": 376,
+        "HP": 3925,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 1059,
+        "DEF": 401,
+        "HP": 4205,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000094": {
     "info": {
@@ -8894,8 +15155,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 95
+      },
+      "lv105_ev6": {
+        "ATK": 904,
+        "DEF": 651,
+        "HP": 5351,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 97
+      },
+      "lv110_ev7": {
+        "ATK": 970,
+        "DEF": 668,
+        "HP": 5822,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 1074,
+        "DEF": 702,
+        "HP": 6165,
+        "SPD": 109,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 105
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000095": {
     "info": {
@@ -8990,8 +15319,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000096": {
     "info": {
@@ -9086,8 +15483,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000097": {
     "info": {
@@ -9176,8 +15641,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 901,
+        "DEF": 363,
+        "HP": 3785,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 963,
+        "DEF": 376,
+        "HP": 3925,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 1059,
+        "DEF": 401,
+        "HP": 4205,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000098": {
     "info": {
@@ -9272,8 +15802,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 401
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 812,
+        "HP": 4421,
+        "SPD": 107,
+        "EFF": 120,
+        "RES": 181,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 442
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 870,
+        "HP": 4575,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 457
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 951,
+        "HP": 4883,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 488
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000099": {
     "info": {
@@ -9368,8 +15966,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1054,
+        "DEF": 652,
+        "HP": 5375,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1127,
+        "DEF": 671,
+        "HP": 5799,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1239,
+        "DEF": 730,
+        "HP": 6423,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000100": {
     "info": {
@@ -9464,8 +16130,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 461
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 578,
+        "HP": 5043,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 156,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 504
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 596,
+        "HP": 5472,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 547
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 633,
+        "HP": 6059,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 605
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000101": {
     "info": {
@@ -9554,8 +16288,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000102": {
     "info": {
@@ -9650,8 +16449,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 86
+      },
+      "lv105_ev6": {
+        "ATK": 791,
+        "DEF": 621,
+        "HP": 6139,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 93
+      },
+      "lv110_ev7": {
+        "ATK": 825,
+        "DEF": 667,
+        "HP": 6643,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 894,
+        "DEF": 729,
+        "HP": 7352,
+        "SPD": 108,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 109
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000103": {
     "info": {
@@ -9746,8 +16613,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 86
+      },
+      "lv105_ev6": {
+        "ATK": 791,
+        "DEF": 621,
+        "HP": 6139,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 93
+      },
+      "lv110_ev7": {
+        "ATK": 825,
+        "DEF": 667,
+        "HP": 6643,
+        "SPD": 103,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 894,
+        "DEF": 729,
+        "HP": 7352,
+        "SPD": 108,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 4,
+        "DMG_INC": 0,
+        "premium_value": 109
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000105": {
     "info": {
@@ -9836,8 +16771,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000106": {
     "info": {
@@ -9932,8 +16932,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 95
+      },
+      "lv105_ev6": {
+        "ATK": 904,
+        "DEF": 651,
+        "HP": 5351,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 97
+      },
+      "lv110_ev7": {
+        "ATK": 970,
+        "DEF": 668,
+        "HP": 5822,
+        "SPD": 104,
+        "EFF": 80,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 100
+      },
+      "lv120_ev8": {
+        "ATK": 1074,
+        "DEF": 702,
+        "HP": 6165,
+        "SPD": 109,
+        "EFF": 80,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 105
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000107": {
     "info": {
@@ -10028,8 +17096,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 907,
+        "DEF": 408,
+        "HP": 4074,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 941,
+        "DEF": 444,
+        "HP": 4214,
+        "SPD": 132,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 94
+      },
+      "lv120_ev8": {
+        "ATK": 1009,
+        "DEF": 491,
+        "HP": 4719,
+        "SPD": 132,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 100
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000108": {
     "info": {
@@ -10124,8 +17260,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 401
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 812,
+        "HP": 4421,
+        "SPD": 107,
+        "EFF": 120,
+        "RES": 181,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 442
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 870,
+        "HP": 4575,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 457
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 951,
+        "HP": 4883,
+        "SPD": 112,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 488
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000109": {
     "info": {
@@ -10220,8 +17424,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1054,
+        "DEF": 652,
+        "HP": 5375,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1127,
+        "DEF": 671,
+        "HP": 5799,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1239,
+        "DEF": 730,
+        "HP": 6423,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000110": {
     "info": {
@@ -10310,8 +17582,73 @@
         "CHD": 150,
         "DMG_RED": 2.4,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 901,
+        "DEF": 363,
+        "HP": 3785,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 963,
+        "DEF": 376,
+        "HP": 3925,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 1059,
+        "DEF": 401,
+        "HP": 4205,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.4,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000111": {
     "info": {
@@ -10400,8 +17737,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 836,
+        "DEF": 461,
+        "HP": 4855,
+        "SPD": 158,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2
+      },
+      "lv110_ev7": {
+        "ATK": 898,
+        "DEF": 477,
+        "HP": 5007,
+        "SPD": 162,
+        "EFF": 120,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4
+      },
+      "lv120_ev8": {
+        "ATK": 995,
+        "DEF": 508,
+        "HP": 5311,
+        "SPD": 162,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000112": {
     "info": {
@@ -10496,8 +17898,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 907,
+        "DEF": 408,
+        "HP": 4074,
+        "SPD": 129,
+        "EFF": 140,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 90
+      },
+      "lv110_ev7": {
+        "ATK": 941,
+        "DEF": 444,
+        "HP": 4214,
+        "SPD": 132,
+        "EFF": 160,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 94
+      },
+      "lv120_ev8": {
+        "ATK": 1009,
+        "DEF": 491,
+        "HP": 4719,
+        "SPD": 132,
+        "EFF": 180,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 100
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000113": {
     "info": {
@@ -10592,8 +18062,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 461
+      },
+      "lv105_ev6": {
+        "ATK": 749,
+        "DEF": 578,
+        "HP": 5043,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 156,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2.5,
+        "DMG_INC": 0,
+        "premium_value": 504
+      },
+      "lv110_ev7": {
+        "ATK": 782,
+        "DEF": 596,
+        "HP": 5472,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 188,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 5,
+        "DMG_INC": 0,
+        "premium_value": 547
+      },
+      "lv120_ev8": {
+        "ATK": 847,
+        "DEF": 633,
+        "HP": 6059,
+        "SPD": 109,
+        "EFF": 120,
+        "RES": 227,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 7.5,
+        "DMG_INC": 0,
+        "premium_value": 605
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000117": {
     "info": {
@@ -10688,8 +18226,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1180,
+        "DEF": 331,
+        "HP": 4236,
+        "SPD": 134,
+        "EFF": 120,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 2,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1261,
+        "DEF": 342,
+        "HP": 4387,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1385,
+        "DEF": 365,
+        "HP": 4891,
+        "SPD": 134,
+        "EFF": 140,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000119": {
     "info": {
@@ -10784,8 +18390,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2000120": {
     "info": {
@@ -10880,8 +18554,76 @@
         "DMG_RED": 0,
         "DMG_INC": 2,
         "premium_value": 100
+      },
+      "lv105_ev6": {
+        "ATK": 1087,
+        "DEF": 247,
+        "HP": 4439,
+        "SPD": 124,
+        "EFF": 120,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 4,
+        "premium_value": 108
+      },
+      "lv110_ev7": {
+        "ATK": 1169,
+        "DEF": 255,
+        "HP": 4587,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 116
+      },
+      "lv120_ev8": {
+        "ATK": 1290,
+        "DEF": 305,
+        "HP": 4988,
+        "SPD": 124,
+        "EFF": 140,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 6,
+        "premium_value": 129
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30515",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30515",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30515",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2700003": {
     "info": {
@@ -10976,8 +18718,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 77
+      },
+      "lv105_ev6": {
+        "ATK": 791,
+        "DEF": 356,
+        "HP": 3682,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 80
+      },
+      "lv110_ev7": {
+        "ATK": 825,
+        "DEF": 372,
+        "HP": 3834,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 84
+      },
+      "lv120_ev8": {
+        "ATK": 894,
+        "DEF": 403,
+        "HP": 4138,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 91
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2700005": {
     "info": {
@@ -11072,8 +18882,76 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 87
+      },
+      "lv105_ev6": {
+        "ATK": 900,
+        "DEF": 174,
+        "HP": 3581,
+        "SPD": 124,
+        "EFF": 10,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 91
+      },
+      "lv110_ev7": {
+        "ATK": 939,
+        "DEF": 182,
+        "HP": 3729,
+        "SPD": 124,
+        "EFF": 10,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 95
+      },
+      "lv120_ev8": {
+        "ATK": 1017,
+        "DEF": 197,
+        "HP": 4025,
+        "SPD": 124,
+        "EFF": 10,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 103
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2700037": {
     "info": {
@@ -11162,8 +19040,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 876,
+        "DEF": 386,
+        "HP": 4098,
+        "SPD": 99,
+        "EFF": 10,
+        "RES": 167,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv110_ev7": {
+        "ATK": 914,
+        "DEF": 403,
+        "HP": 4269,
+        "SPD": 99,
+        "EFF": 10,
+        "RES": 174,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv120_ev8": {
+        "ATK": 990,
+        "DEF": 437,
+        "HP": 4612,
+        "SPD": 99,
+        "EFF": 10,
+        "RES": 189,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30513",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30513",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30513",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2700043": {
     "info": {
@@ -11252,8 +19195,73 @@
         "CHD": 150,
         "DMG_RED": 0,
         "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 787,
+        "DEF": 248,
+        "HP": 3402,
+        "SPD": 124,
+        "EFF": 10,
+        "RES": 104,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv110_ev7": {
+        "ATK": 821,
+        "DEF": 259,
+        "HP": 3542,
+        "SPD": 124,
+        "EFF": 10,
+        "RES": 109,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv120_ev8": {
+        "ATK": 889,
+        "DEF": 281,
+        "HP": 3823,
+        "SPD": 124,
+        "EFF": 10,
+        "RES": 118,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   },
   "2700056": {
     "info": {
@@ -11348,7 +19356,75 @@
         "DMG_RED": 0,
         "DMG_INC": 0,
         "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 777,
+        "DEF": 290,
+        "HP": 3391,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 115,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 811,
+        "DEF": 303,
+        "HP": 3531,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 879,
+        "DEF": 328,
+        "HP": 3811,
+        "SPD": 138,
+        "EFF": 10,
+        "RES": 130,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
       }
-    }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30514",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30514",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30514",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   }
 }

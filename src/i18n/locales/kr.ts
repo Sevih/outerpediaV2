@@ -483,7 +483,7 @@ const kr: Record<TranslationKey, string> = {
   'guides.category.dimensional-singularity.feature.repel':
     '특이점 격퇴: 당일 보스전을 시작합니다.',
   'guides.category.dimensional-singularity.feature.ascension':
-    '특이점 승화 장치: 강화와 재련이 최대치에 도달한 장비를 승화 — 재련 횟수 +3, 메인 옵션 수치 상승.',
+    '특이점 승화 장치: 강화와 재련이 최대치에 도달한 장비를 승화합니다. 승화 시 장비의 메인 스탯이 상승하고 재련 횟수가 +3되며, 강화 +15에 도달하면 추가 랜덤 스탯이 부여됩니다(종류는 장비 슬롯에 따라 다르며, 수치는 랜덤).',
   'guides.category.dimensional-singularity.feature.ranking':
     '랭킹 보고서: 전일 점수에 따른 일일 보상을 수령합니다.',
   'guides.category.joint-challenge.desc':
@@ -857,6 +857,7 @@ const kr: Record<TranslationKey, string> = {
   'page.character.stats.title': '기본 스탯',
   'page.character.stats.class_passive': '클래스 패시브',
   'page.character.stats.no_data': '스탯 데이터 없음',
+  'page.character.stats.limit_break_cost': '한계 돌파 비용',
   'page.character.core_fusion.available': '코어 융합 보유',
   'page.character.core_fusion.original': '오리지널 캐릭터',
   'page.character.core_fusion.skill_info': '코어 융합 해금에는 {material} {unlockCost}개가 필요합니다 (스킬 Lv.1부터 시작). 스킬 레벨 강화에는 {material} {upgradeCost}개를 소모하며, 모든 스킬 레벨이 1 상승합니다. 총: {totalCost}개의 {material}로 전체 최대화.',

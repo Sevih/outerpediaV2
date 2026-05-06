@@ -24,9 +24,16 @@ function Badge({ icon, bg, label }: { icon: string; bg: string; label: string })
   );
 }
 
-export function ItemInlineServer({ name, lang }: { name: string; lang: Lang }) {
-  const item = items.find((i) => i.name === name);
-  if (!item) return <span className="text-red-500">{name}</span>;
+type ItemInlineServerProps =
+  | { name: string; id?: never; lang: Lang }
+  | { id: string; name?: never; lang: Lang };
+
+export function ItemInlineServer(props: ItemInlineServerProps) {
+  const { lang } = props;
+  const item = props.id !== undefined
+    ? items.find((i) => i.id === props.id)
+    : items.find((i) => i.name === props.name);
+  if (!item) return <span className="text-red-500">{props.id ?? props.name}</span>;
   return <Badge icon={`/images/items/${item.icon}.webp`} bg={getRarityBgPath(item.rarity)} label={l(item, 'name', lang)} />;
 }
 

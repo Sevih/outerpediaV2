@@ -33,6 +33,7 @@ export type ItemSubType =
   | 'box_choice_item'
   | 'box_choice_char'
   | 'box_choice_char_max'
+  | 'box_choice_char_break_piece'
   // Gems
   | 'gem'
   // Tickets

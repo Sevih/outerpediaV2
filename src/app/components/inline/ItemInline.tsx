@@ -11,15 +11,19 @@ import { EquipmentBadge } from './WeaponInline';
 
 const itemsPromise = import('@data/items.json').then(m => m.default as Item[]);
 
-type Props = { name: string };
+type Props =
+  | { name: string; id?: never }
+  | { id: string; name?: never };
 
-export default function ItemInline({ name }: Props) {
+export default function ItemInline(props: Props) {
   const { lang } = useI18n();
   const items = use(itemsPromise);
-  const item = items.find((i) => i.name === name);
+  const item = props.id !== undefined
+    ? items.find((i) => i.id === props.id)
+    : items.find((i) => i.name === props.name);
 
   if (!item) {
-    return <span className="text-red-500">{name}</span>;
+    return <span className="text-red-500">{props.id ?? props.name}</span>;
   }
 
   const label = l(item, 'name', lang);

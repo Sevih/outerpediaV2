@@ -123,6 +123,16 @@ export type StatsPremium = {
   rawValue: number;
 };
 
+export type LimitBreakStep = {
+  step: number;
+  requireLevel: number;
+  maxLevel: number;
+  factors: number;
+  recallItemId: string;
+  gold: number;
+  statModifier: number;
+};
+
 export type CharacterStats = {
   info: {
     id: string;
@@ -133,6 +143,7 @@ export type CharacterStats = {
   };
   premium: StatsPremium;
   steps: Record<string, StatsStep>;
+  limitBreak: LimitBreakStep[];
 };
 
 /** Lightweight character entry (value in the ID-keyed index) */

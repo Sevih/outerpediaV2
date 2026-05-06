@@ -483,7 +483,7 @@ const en = {
   'guides.category.dimensional-singularity.feature.repel':
     'Singularity Repel: launch the daily boss battle.',
   'guides.category.dimensional-singularity.feature.ascension':
-    'Singularity Ascension Device: upgrade gear that has reached max Enhancement and max Reforge — gains 3 extra Reforge attempts and a higher main option.',
+    'Singularity Ascension Device: ascend gear that has reached max Enhancement and max Reforge. Ascending boosts the gear\'s main stat(s) and grants 3 extra Reforge attempts; reaching Enhancement +15 then adds a random bonus stat (type depends on the slot, value is random).',
   'guides.category.dimensional-singularity.feature.ranking':
     'Ranking Report: claim daily rewards based on your score the previous day.',
   'guides.category.joint-challenge.desc':
@@ -857,6 +857,7 @@ const en = {
   'page.character.stats.title': 'Base Stats',
   'page.character.stats.class_passive': 'Class Passive',
   'page.character.stats.no_data': 'No stats available',
+  'page.character.stats.limit_break_cost': 'Limit Break cost',
   'page.character.core_fusion.available': 'Core Fusion available',
   'page.character.core_fusion.original': 'Original character',
   'page.character.core_fusion.skill_info': 'Unlocking Core Fusion costs {unlockCost} {material} (skills start at Lv.1). Each skill level upgrade costs {upgradeCost} {material} and raises all skills by 1 level. Total: {totalCost} {material} to fully max all skills.',

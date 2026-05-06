@@ -12,6 +12,7 @@ const SOURCE_FILES = [
   'CharacterEvolutionStatTemplet.json',
   'CharacterSkillLevelTemplet.json',
   'BuffTemplet.json',
+  'CharacterMaxLevelTemplet.json',
 ];
 
 // Stat column mappings in CharacterTemplet
@@ -46,6 +47,9 @@ const EVO_STEPS: [number, number, number[]][] = [
   [60,  3, [2, 3, 4]],
   [80,  4, [2, 3, 4, 5]],
   [100, 5, [2, 3, 4, 5, 6]],
+  [105, 6, [2, 3, 4, 5, 6, 7]],
+  [110, 7, [2, 3, 4, 5, 6, 7, 8]],
+  [120, 8, [2, 3, 4, 5, 6, 7, 8, 9]],
 ];
 
 const ALL_STATS = ['ATK', 'DEF', 'HP', 'SPD', 'EFF', 'RES', 'CHC', 'CHD', 'DMG_RED', 'DMG_INC'];
@@ -92,6 +96,36 @@ function buildSkillLevelLookup(data: Record<string, string>[]): Record<string, S
       if (bid) lookup[sid].add(bid);
     }
   }
+  return lookup;
+}
+
+interface LimitBreakStep {
+  step: number;
+  requireLevel: number;
+  maxLevel: number;
+  factors: number;
+  recallItemId: string;
+  gold: number;
+  statModifier: number;
+}
+
+function buildMaxLevelLookup(data: Record<string, string>[]): Record<string, LimitBreakStep[]> {
+  const lookup: Record<string, LimitBreakStep[]> = {};
+  for (const entry of data) {
+    const key = `${entry.BasicStar}_${entry.Element}`;
+    const step: LimitBreakStep = {
+      step: parseInt(entry.Step ?? '0', 10),
+      requireLevel: parseInt(entry.RequireLevel ?? '0', 10),
+      maxLevel: parseInt(entry.MaxLevel ?? '0', 10),
+      factors: parseInt(entry.CharBreakPieceQuantity ?? '0', 10),
+      recallItemId: entry.CharBreakPieceRecallItemID ?? '',
+      gold: parseInt(entry.Price ?? '0', 10),
+      statModifier: parseInt(entry.LevelUpStatModifierAfter100 ?? '0', 10),
+    };
+    if (!lookup[key]) lookup[key] = [];
+    lookup[key].push(step);
+  }
+  for (const arr of Object.values(lookup)) arr.sort((a, b) => a.step - b.step);
   return lookup;
 }
 
@@ -173,11 +207,13 @@ export async function run() {
   const evoData: Record<string, string>[] = JSON.parse(readFileSync(join(PATHS.adminJson2, 'CharacterEvolutionStatTemplet.json'), 'utf-8'));
   const skillLevelData: Record<string, string>[] = JSON.parse(readFileSync(join(PATHS.adminJson2, 'CharacterSkillLevelTemplet.json'), 'utf-8'));
   const buffData: Record<string, string>[] = JSON.parse(readFileSync(join(PATHS.adminJson2, 'BuffTemplet.json'), 'utf-8'));
+  const maxLevelData: Record<string, string>[] = JSON.parse(readFileSync(join(PATHS.adminJson2, 'CharacterMaxLevelTemplet.json'), 'utf-8'));
 
   // Build lookups
   const buffLookup = buildBuffLookup(buffData);
   const skillLevelLookup = buildSkillLevelLookup(skillLevelData);
   const evoLookup = buildEvoLookup(evoData);
+  const maxLevelLookup = buildMaxLevelLookup(maxLevelData);
 
   // Find all 2000XXX / 2700XXX characters
   const characters = charData.filter((row) => {
@@ -245,6 +281,8 @@ export async function run() {
       steps[`lv${level}_ev${evoCount}`] = stepStats;
     }
 
+    const limitBreak = maxLevelLookup[`${info.star}_${info.element}`] ?? [];
+
     results[cid] = {
       info,
       premium: {
@@ -255,6 +293,7 @@ export async function run() {
         rawValue: premium?.value ?? null,
       },
       steps,
+      limitBreak,
     };
   }
 

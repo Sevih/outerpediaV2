@@ -4,6 +4,7 @@ import GuideTemplate from "@/app/components/guides/GuideTemplate";
 import BossDisplay from "@/app/components/guides/BossDisplay";
 import TacticalTips from "@/app/components/guides/TacticalTips";
 import RecommendedCharacterList from "@/app/components/guides/RecommendedCharacterList";
+import MultiVideoEmbed from "@/app/components/ui/MultiVideoEmbed";
 import { useI18n } from "@/lib/contexts/I18nContext";
 import { lRec } from "@/lib/i18n/localize";
 import type { Boss } from "@/types/boss";
@@ -45,6 +46,19 @@ export default function ShichifujaShadowGuide() {
         ]} />
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList entries={RECOMMENDED} />
+      <hr className="my-6 border-neutral-700" />
+      <MultiVideoEmbed
+        hashPrefix="shichifuja-shadow-video"
+        videos={[
+          {
+            platform: 'youtube',
+            id: 'yCIh-lHzUoo',
+            title: "Shichifuja's Shadow — Dimensional Singularity — Rank SSS++",
+            author: 'Sevih',
+            label: 'Sevih',
+          },
+        ]}
+      />
     </GuideTemplate>
   );
 }

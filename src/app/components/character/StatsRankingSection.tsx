@@ -5,6 +5,7 @@ import Image from 'next/image';
 import type { Character, CharacterStats, StatsStep } from '@/types/character';
 import type { ExclusiveEquipment } from '@/types/equipment';
 import { StatInline } from '@/app/components/inline';
+import ItemInline from '@/app/components/inline/ItemInline';
 import { useI18n } from '@/lib/contexts/I18nContext';
 
 type Props = {
@@ -13,13 +14,8 @@ type Props = {
   ee: ExclusiveEquipment | null;
 };
 
-function evoIcon(stepKey: string): string {
-  const evo = stepKey.split('_ev')[1] ?? '0';
-  return `/images/ui/evo/CM_Evolution_0${evo}.webp`;
-}
-
-function lvFromKey(key: string): string {
-  return key.split('_')[0].replace('lv', '');
+function lvFromKey(key: string): number {
+  return parseInt(key.split('_')[0].replace('lv', ''), 10) || 0;
 }
 
 type StatDef = {
@@ -118,40 +114,74 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
               </div>
 
               {/* Step selector */}
-              <div className="mt-4 flex justify-between">
-                {stepKeys.map((key, idx) => (
-                  <button
-                    key={key}
-                    onClick={() => setStepIdx(idx)}
-                    className={`relative h-8 w-8 transition-opacity ${
-                      idx === stepIdx
-                        ? 'opacity-100'
-                        : 'opacity-40 hover:opacity-70'
-                    }`}
-                  >
-                    {idx === stepIdx && (
-                      <div className="absolute -inset-2 z-0">
+              <div className="mt-4 flex flex-wrap justify-between gap-1">
+                {stepKeys.map((key, idx) => {
+                  const lv = lvFromKey(key);
+                  const selected = idx === stepIdx;
+                  return (
+                    <button
+                      key={key}
+                      onClick={() => setStepIdx(idx)}
+                      className={`flex flex-col items-center gap-0.5 transition-opacity ${
+                        selected ? 'opacity-100' : 'opacity-50 hover:opacity-80'
+                      }`}
+                      aria-label={`Lv.${lv}`}
+                    >
+                      <div className="relative h-8 w-8">
                         <Image
-                          src="/images/ui/evo/CM_Evolution_Glow.webp"
-                          alt={`${character.Fullname} glow`}
+                          src="/images/ui/evo/CM_Evolution_Tab.webp"
+                          alt=""
                           fill
-                          sizes="48px"
+                          sizes="32px"
                           className="object-contain"
                         />
+                        {selected && (
+                          <Image
+                            src="/images/ui/evo/CM_Evolution_Tab_Select.webp"
+                            alt=""
+                            fill
+                            sizes="32px"
+                            className="object-contain"
+                          />
+                        )}
                       </div>
-                    )}
-                    <div className="relative z-10 h-full w-full">
+                      <span
+                        className={`text-[10px] leading-none ${
+                          selected ? 'text-amber-300' : 'text-zinc-400'
+                        }`}
+                      >
+                        Lv.{lv}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Limit Break cost frame */}
+              {(() => {
+                const lv = lvFromKey(stepKeys[stepIdx] ?? '');
+                const lb = stats.limitBreak.find(s => s.maxLevel === lv);
+                if (!lb) return null;
+                return (
+                  <div className="mt-3 flex items-center justify-center gap-4 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-zinc-200">
+                    <span className="font-semibold text-zinc-300">{t('page.character.stats.limit_break_cost')}</span>
+                    <span className="flex items-center gap-1.5">
+                      <ItemInline id={lb.recallItemId} />
+                      <span className="text-zinc-100">×{lb.factors}</span>
+                    </span>
+                    <span className="flex items-center gap-1.5">
                       <Image
-                        src={evoIcon(key)}
-                        alt={`Evo ${idx}`}
-                        fill
-                        sizes="32px"
+                        src="/images/items/CM_Goods_Gold.webp"
+                        alt="Gold"
+                        width={20}
+                        height={20}
                         className="object-contain"
                       />
-                    </div>
-                  </button>
-                ))}
-              </div>
+                      <span className="text-zinc-100">{lb.gold.toLocaleString()}</span>
+                    </span>
+                  </div>
+                );
+              })()}
             </>
           ) : (
             <p className="text-sm italic text-zinc-500">{t('page.character.stats.no_data')}</p>

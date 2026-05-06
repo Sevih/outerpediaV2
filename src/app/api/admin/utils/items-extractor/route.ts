@@ -60,6 +60,7 @@ const SUBTYPE_MAP: Record<string, string> = {
   ITS_BOX_TYPE_CHOICE_ITEM: 'box_choice_item',
   ITS_BOX_TYPE_CHOICE_CHAR: 'box_choice_char',
   ITS_BOX_TYPE_CHOICE_CHAR_MAX: 'box_choice_char_max',
+  ITS_BOX_TYPE_CHOICE_CHAR_BREAK_PIECE: 'box_choice_char_break_piece',
   ITS_PRESENT_01: 'present',
   ITS_PRESENT_02: 'present',
   ITS_PRESENT_03: 'present',
