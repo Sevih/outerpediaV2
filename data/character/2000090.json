@@ -54,8 +54,8 @@
     "6_jp": "ATK DEF HP +30%\n【傲慢の領域】常時付与\n敵を倒した時、HP10%回復",
     "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n최후의 겨울로 적 처치 시 해당 스킬 쿨타임 -2턴\n아군 치명 피해 +8%\n체인 패시브의 WG 감소량 +1",
-    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 AP +50",
-    "6_kr": "ATK DEF HP +30%\n오만의 영역 상시 보유\n적 처치 시 체력 10% 회복",
+    "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 AP +50\n냉혹한 고문 사용 시 자신 체력 10% 회복(버스트 포함)",
+    "6_kr": "ATK DEF HP +30%\n오만의 영역 상시 보유\n보스 대상 피해 증가 +50%",
     "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n使用末日凛冬击杀敌人时，\n该技能冷却时间-2回合\n友军暴击伤害+8%\n连携被动效果的WG降低量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁3阶爆发\n入场时AP+50",
@@ -154,7 +154,8 @@
       "cd": null,
       "buff": [
         "BT_ACTION_GAUGE",
-        "BT_ADDITIVE_TURN"
+        "BT_ADDITIVE_TURN",
+        "BT_COOL3_CHARGE"
       ],
       "debuff": [],
       "offensive": true,
@@ -181,10 +182,10 @@
           "target": "mono"
         },
         "SKT_BURST_3": {
-          "effect": "Gains an extra turn",
-          "effect_jp": "追加ターン発生",
-          "effect_kr": "추가 턴 발생",
-          "effect_zh": "触发额外回合",
+          "effect": "Extra Turn\\nTerminal Winter Cooldown Reset",
+          "effect_jp": "追加ターン\\nフィンブルウィンタークールタイムリセット",
+          "effect_kr": "추가 턴\\n최후의 겨울 쿨타임 초기화",
+          "effect_zh": "额外回合\\n末日凛冬冷却时间重置",
           "cost": 160,
           "level": 3,
           "offensive": true,
@@ -202,83 +203,98 @@
       "name_zh": "触不可及",
       "true_desc_levels": {
         "1": "(Passive Effect) When granted <color=#28d9ed>Hubris's Dominion</color>, damage suffered in one attack does not exceed <color=#28d9ed>95%</color> of the caster's Max Health. (Includes Dual Attacks and Additional Attacks)\\n(Triggered Effect) Upon taking a critical hit, activates <color=#28d9ed>Cold-Blooded Torture</color> against the target.",
-        "2": "(Passive Effect) When granted <color=#28d9ed>Hubris's Dominion</color>, damage suffered in one attack does not exceed <color=#28d9ed>90%</color> of the caster's Max Health. (Includes Dual Attacks and Additional Attacks)\\n(Triggered Effect) Upon taking a critical hit, activates <color=#28d9ed>Cold-Blooded Torture</color> against the target.",
+        "2": "(Passive Effect) When granted <color=#28d9ed>Hubris's Dominion</color>, damage suffered in one attack does not exceed <color=#28d9ed>95%</color> of the caster's Max Health. (Includes Dual Attacks and Additional Attacks)\\n(Triggered Effect) Upon taking a critical hit, activates <color=#28d9ed>Cold-Blooded Torture</color> against the target.",
         "3": "(Passive Effect) When granted <color=#28d9ed>Hubris's Dominion</color>, damage suffered in one attack does not exceed <color=#28d9ed>85%</color> of the caster's Max Health. (Includes Dual Attacks and Additional Attacks)\\n(Triggered Effect) Upon taking a critical hit, activates <color=#28d9ed>Cold-Blooded Torture</color> against the target.",
-        "4": "(Passive Effect) When granted <color=#28d9ed>Hubris's Dominion</color>, damage suffered in one attack does not exceed <color=#28d9ed>80%</color> of the caster's Max Health. (Includes Dual Attacks and Additional Attacks)\\n(Triggered Effect) Upon taking a critical hit, activates <color=#28d9ed>Cold-Blooded Torture</color> against the target.",
+        "4": "(Passive Effect) When granted <color=#28d9ed>Hubris's Dominion</color>, damage suffered in one attack does not exceed <color=#28d9ed>85%</color> of the caster's Max Health. (Includes Dual Attacks and Additional Attacks)\\n(Triggered Effect) Upon taking a critical hit, activates <color=#28d9ed>Cold-Blooded Torture</color> against the target.",
         "5": "(Passive Effect) When granted <color=#28d9ed>Hubris's Dominion</color>, damage suffered in one attack does not exceed <color=#28d9ed>70%</color> of the caster's Max Health. (Includes Dual Attacks and Additional Attacks)\\n(Triggered Effect) Upon taking a critical hit, activates <color=#28d9ed>Cold-Blooded Torture</color> against the target.",
         "1_jp": "(パッシブ効果)<color=#28d9ed>【傲慢の領域】</color>がある場合、一度に受けるダメージが自分の最大HPの<color=#28d9ed>95%</color>を超えない。(連携・追加攻撃も含む)\\n(発動効果)会心ダメージを受けた場合、対象に<color=#28d9ed>【ルースレストーチャー】</color>を使用する。",
-        "2_jp": "(パッシブ効果)<color=#28d9ed>【傲慢の領域】</color>がある場合、一度に受けるダメージが自分の最大HPの<color=#28d9ed>90%</color>を超えない。(連携・追加攻撃も含む)\\n(発動効果)会心ダメージを受けた場合、対象に<color=#28d9ed>【ルースレストーチャー】</color>を使用する。",
+        "2_jp": "(パッシブ効果)<color=#28d9ed>【傲慢の領域】</color>がある場合、一度に受けるダメージが自分の最大HPの<color=#28d9ed>95%</color>を超えない。(連携・追加攻撃も含む)\\n(発動効果)会心ダメージを受けた場合、対象に<color=#28d9ed>【ルースレストーチャー】</color>を使用する。",
         "3_jp": "(パッシブ効果)<color=#28d9ed>【傲慢の領域】</color>がある場合、一度に受けるダメージが自分の最大HPの<color=#28d9ed>85%</color>を超えない。(連携・追加攻撃も含む)\\n(発動効果)会心ダメージを受けた場合、対象に<color=#28d9ed>【ルースレストーチャー】</color>を使用する。",
-        "4_jp": "(パッシブ効果)<color=#28d9ed>【傲慢の領域】</color>がある場合、一度に受けるダメージが自分の最大HPの<color=#28d9ed>80%</color>を超えない。(連携・追加攻撃も含む)\\n(発動効果)会心ダメージを受けた場合、対象に<color=#28d9ed>【ルースレストーチャー】</color>を使用する。",
+        "4_jp": "(パッシブ効果)<color=#28d9ed>【傲慢の領域】</color>がある場合、一度に受けるダメージが自分の最大HPの<color=#28d9ed>85%</color>を超えない。(連携・追加攻撃も含む)\\n(発動効果)会心ダメージを受けた場合、対象に<color=#28d9ed>【ルースレストーチャー】</color>を使用する。",
         "5_jp": "(パッシブ効果)<color=#28d9ed>【傲慢の領域】</color>がある場合、一度に受けるダメージが自分の最大HPの<color=#28d9ed>70%</color>を超えない。(連携・追加攻撃も含む)\\n(発動効果)会心ダメージを受けた場合、対象に<color=#28d9ed>【ルースレストーチャー】</color>を使用する。",
-        "1_kr": "(패시브 효과) <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>95%</color>를 초과하지 않습니다. (협공 및 추가타 포함)\\n(발동 효과) 치명 피격 시 대상에게 <color=#28d9ed>냉혹한 고문</color>을 사용합니다.",
-        "2_kr": "(패시브 효과) <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>90%</color>를 초과하지 않습니다. (협공 및 추가타 포함)\\n(발동 효과) 치명 피격 시 대상에게 <color=#28d9ed>냉혹한 고문</color>을 사용합니다.",
-        "3_kr": "(패시브 효과) <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>85%</color>를 초과하지 않습니다. (협공 및 추가타 포함)\\n(발동 효과) 치명 피격 시 대상에게 <color=#28d9ed>냉혹한 고문</color>을 사용합니다.",
-        "4_kr": "(패시브 효과) <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>80%</color>를 초과하지 않습니다. (협공 및 추가타 포함)\\n(발동 효과) 치명 피격 시 대상에게 <color=#28d9ed>냉혹한 고문</color>을 사용합니다.",
-        "5_kr": "(패시브 효과) <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>70%</color>를 초과하지 않습니다. (협공 및 추가타 포함)\\n(발동 효과) 치명 피격 시 대상에게 <color=#28d9ed>냉혹한 고문</color>을 사용합니다.",
+        "1_kr": "(패시브 효과) 피격 시 자신에게 실드를 <color=#28d9ed>1턴</color>(자신 공격력 비례) 동안 부여하고 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>95%</color>를 초과하지 않습니다. (협공 및 추가타 포함 / 지속 피해 제외)\\n\\n(발동 효과) 조건에 따라 강화된 <color=#28d9ed>냉혹한 고문</color>을 가장 공격력이 높은 적에게 사용합니다.\\n\\n<color=#28d9ed>1. 아군이 치명 공격 시(자신 포함) 추가타 사용</color>\\n<color=#28d9ed>2. 자신이 치명 공격 피격 시 대상에게 반격</color>",
+        "2_kr": "(패시브 효과) 피격 시 자신에게 실드를 <color=#28d9ed>1턴</color>(자신 공격력 비례) 동안 부여하고 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>95%</color>를 초과하지 않습니다. (협공 및 추가타 포함 / 지속 피해 제외)\\n\\n(발동 효과) 조건에 따라 강화된 <color=#28d9ed>냉혹한 고문</color>을 가장 공격력이 높은 적에게 사용합니다.\\n\\n<color=#28d9ed>1. 아군이 치명 공격 시(자신 포함) 추가타 사용</color>\\n<color=#28d9ed>2. 자신이 치명 공격 피격 시 대상에게 반격</color>",
+        "3_kr": "(패시브 효과) 피격 시 자신에게 실드를 <color=#28d9ed>1턴</color>(자신 공격력 비례) 동안 부여하고 행동 게이지가 <color=#28d9ed>10%</color> 증가합니다. <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>85%</color>를 초과하지 않습니다. (협공 및 추가타 포함 / 지속 피해 제외)\\n\\n(발동 효과) 조건에 따라 강화된 <color=#28d9ed>냉혹한 고문</color>을 가장 공격력이 높은 적에게 사용합니다.\\n\\n<color=#28d9ed>1. 아군이 치명 공격 시(자신 포함) 추가타 사용</color>\\n<color=#28d9ed>2. 자신이 치명 공격 피격 시 대상에게 반격</color>",
+        "4_kr": "(패시브 효과) 피격 시 자신에게 실드를 <color=#28d9ed>1턴</color>(자신 공격력 비례) 동안 부여하고 행동 게이지가 <color=#28d9ed>15%</color> 증가합니다. <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>85%</color>를 초과하지 않습니다. (협공 및 추가타 포함 / 지속 피해 제외)\\n\\n(발동 효과) 조건에 따라 강화된 <color=#28d9ed>냉혹한 고문</color>을 가장 공격력이 높은 적에게 사용합니다.\\n\\n<color=#28d9ed>1. 아군이 치명 공격 시(자신 포함) 추가타 사용</color>\\n<color=#28d9ed>2. 자신이 치명 공격 피격 시 대상에게 반격</color>",
+        "5_kr": "(패시브 효과) 피격 시 자신에게 실드를 <color=#28d9ed>1턴</color>(자신 공격력 비례) 동안 부여하고 행동 게이지가 <color=#28d9ed>15%</color> 증가합니다. <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>70%</color>를 초과하지 않습니다. (협공 및 추가타 포함 / 지속 피해 제외)\\n\\n(발동 효과) 조건에 따라 강화된 <color=#28d9ed>냉혹한 고문</color>을 가장 공격력이 높은 적에게 사용합니다.\\n\\n<color=#28d9ed>1. 아군이 치명 공격 시(자신 포함) 추가타 사용</color>\\n<color=#28d9ed>2. 자신이 치명 공격 피격 시 대상에게 반격</color>",
         "1_zh": "(被动效果)附带<color=#28d9ed>傲慢领域</color>效果时，单次所受伤害不会超过自身生命值上限的<color=#28d9ed>95%</color>。(包含夹攻与额外攻击)\\n(触发效果)受到暴击时，对目标使用<color=#28d9ed>严刑拷打</color>。",
-        "2_zh": "(被动效果)附带<color=#28d9ed>傲慢领域</color>效果时，单次所受伤害不会超过自身生命值上限的<color=#28d9ed>90%</color>。(包含夹攻与额外攻击)\\n(触发效果)受到暴击时，对目标使用<color=#28d9ed>严刑拷打</color>。",
+        "2_zh": "(被动效果)附带<color=#28d9ed>傲慢领域</color>效果时，单次所受伤害不会超过自身生命值上限的<color=#28d9ed>95%</color>。(包含夹攻与额外攻击)\\n(触发效果)受到暴击时，对目标使用<color=#28d9ed>严刑拷打</color>。",
         "3_zh": "(被动效果)附带<color=#28d9ed>傲慢领域</color>效果时，单次所受伤害不会超过自身生命值上限的<color=#28d9ed>85%</color>。(包含夹攻与额外攻击)\\n(触发效果)受到暴击时，对目标使用<color=#28d9ed>严刑拷打</color>。",
-        "4_zh": "(被动效果)附带<color=#28d9ed>傲慢领域</color>效果时，单次所受伤害不会超过自身生命值上限的<color=#28d9ed>80%</color>。(包含夹攻与额外攻击)\\n(触发效果)受到暴击时，对目标使用<color=#28d9ed>严刑拷打</color>。",
+        "4_zh": "(被动效果)附带<color=#28d9ed>傲慢领域</color>效果时，单次所受伤害不会超过自身生命值上限的<color=#28d9ed>85%</color>。(包含夹攻与额外攻击)\\n(触发效果)受到暴击时，对目标使用<color=#28d9ed>严刑拷打</color>。",
         "5_zh": "(被动效果)附带<color=#28d9ed>傲慢领域</color>效果时，单次所受伤害不会超过自身生命值上限的<color=#28d9ed>70%</color>。(包含夹攻与额外攻击)\\n(触发效果)受到暴击时，对目标使用<color=#28d9ed>严刑拷打</color>。"
       },
       "enhancement": {
         "2": [
-          "-5% Health Limit"
+          "+10% damage",
+          "+1 Weakness Gauge damage"
         ],
         "3": [
-          "-5% Health Limit"
-        ],
-        "4": [
-          "-5% Health Limit"
-        ],
-        "5": [
           "-10% Health Limit"
         ],
+        "4": [
+          "+5% Priority",
+          "+1 Weakness Gauge damage"
+        ],
+        "5": [
+          "-15% Health Limit",
+          "+10% damage"
+        ],
         "2_jp": [
-          "HPの条件-5%"
+          "ダメージ+10%",
+          "WGダメージ+1"
         ],
         "3_jp": [
-          "HPの条件-5%"
-        ],
-        "4_jp": [
-          "HPの条件-5%"
-        ],
-        "5_jp": [
           "HPの条件-10%"
         ],
+        "4_jp": [
+          "行動ゲージ5%UP",
+          "WGダメージ+1"
+        ],
+        "5_jp": [
+          "HPの条件-15%",
+          "ダメージ+10%"
+        ],
         "2_kr": [
-          "체력 조건 -5%"
+          "피해량 +10%",
+          "WG 감소량 +1"
         ],
         "3_kr": [
-          "체력 조건 -5%"
-        ],
-        "4_kr": [
-          "체력 조건 -5%"
-        ],
-        "5_kr": [
           "체력 조건 -10%"
         ],
+        "4_kr": [
+          "행동 게이지 +5%",
+          "WG 감소량 +1"
+        ],
+        "5_kr": [
+          "체력 조건 -15%",
+          "피해량 +10%"
+        ],
         "2_zh": [
-          "生命值条件-5%"
+          "伤害量+10%",
+          "WG降低量+1"
         ],
         "3_zh": [
-          "生命值条件-5%"
+          "生命值条件-10%"
         ],
         "4_zh": [
-          "生命值条件-5%"
+          "行动值+5%",
+          "WG降低量+1"
         ],
         "5_zh": [
-          "生命值条件-10%"
+          "生命值条件-15%",
+          "伤害量+10%"
         ]
       },
-      "wgr": null,
-      "cd": null,
+      "wgr": 1,
+      "cd": 2,
       "buff": [
-        "BT_COUNTERATTACK"
+        "BT_COUNTERATTACK",
+        "BT_ACTION_GAUGE",
+        "BT_BARRIER",
+        "BT_ADDITIVE_ATTACK"
       ],
       "debuff": [],
-      "offensive": false,
+      "offensive": true,
       "target": "mono"
     },
     "SKT_ULTIMATE": {
@@ -300,11 +316,11 @@
         "3_jp": "敵全体にダメージを与える。攻撃後、自分に<color=#28d9ed>【傲慢の領域】</color>を<color=#28d9ed>1ターン</color>の間付与する。",
         "4_jp": "敵全体にダメージを与える。攻撃後、自分に<color=#28d9ed>【傲慢の領域】</color>を<color=#28d9ed>2ターン</color>の間付与する。",
         "5_jp": "敵全体にダメージを与える。攻撃後、自分に<color=#28d9ed>【傲慢の領域】</color>を<color=#28d9ed>2ターン</color>の間付与する。\\nこのスキルは最大HPが最も高い敵単体の<color=#28d9ed>防御力</color>を<color=#28d9ed>すべて無視</color>する。",
-        "1_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득합니다.",
-        "2_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득합니다.",
-        "3_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득합니다.",
-        "4_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득합니다.",
-        "5_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득합니다.\\n이 공격은 최대 체력이 가장 높은 적의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>모두 무시</color> 합니다.",
+        "1_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득하고 자신의 공격력이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
+        "2_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득하고 자신의 공격력이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
+        "3_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득하고 자신의 공격력이 <color=#28d9ed>1턴</color> 동안 증가합니다.",
+        "4_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득하고 자신의 공격력이 <color=#28d9ed>2턴</color> 동안 증가합니다.",
+        "5_kr": "적 전체를 공격합니다. 공격 후 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>오만의 영역</color>을 획득하고 자신의 공격력이 <color=#28d9ed>2턴</color> 동안 증가합니다.\\n이 공격은 최대 체력이 가장 높은 적의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>모두 무시</color> 합니다.",
         "1_zh": "攻击全体敌人。攻击后，获得<color=#28d9ed>傲慢领域</color>，\\n持续<color=#28d9ed>1回合</color>。",
         "2_zh": "攻击全体敌人。攻击后，获得<color=#28d9ed>傲慢领域</color>，\\n持续<color=#28d9ed>1回合</color>。",
         "3_zh": "攻击全体敌人。攻击后，获得<color=#28d9ed>傲慢领域</color>，\\n持续<color=#28d9ed>1回合</color>。",
@@ -376,7 +392,8 @@
       "wgr": 2,
       "cd": 5,
       "buff": [
-        "HUBRISS_DOMINION"
+        "HUBRISS_DOMINION",
+        "BT_STAT|ST_ATK"
       ],
       "debuff": [],
       "offensive": true,
