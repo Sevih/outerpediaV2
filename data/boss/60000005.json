@@ -115,10 +115,7 @@
         "kr": "자신이 <color=#28d9ed>약화 효과</color>를 보유하지 않은 경우 WG 피해가 <color=#28d9ed>50%</color> 감소합니다\\n자신이 <color=#28d9ed>강화 효과</color>를 보유한 경우 관통력이 <color=#28d9ed>20%</color> 증가합니다.\\n보스가 받는 저주 및 고정 피해의 피해는 <color=#28d9ed>50,000</color>을 초과하지 않습니다.",
         "zh": "若自身未持有<color=#28d9ed>弱化效果</color>，WG伤害减少<color=#28d9ed>50%</color>。\\n若自身持有<color=#28d9ed>强化效果</color>，穿透力增加<color=#28d9ed>20%</color>。\\n首领受到的诅咒及固定伤害不超过<color=#28d9ed>50000</color>。"
       },
-      "icon": "MT_Passive_1_Water",
-      "buff": [
-        "BT_ACTION_GAUGE"
-      ]
+      "icon": "MT_Passive_1_Water"
     },
     {
       "name": {
@@ -134,7 +131,10 @@
         "kr": "<color=#28d9ed>치명 피해</color> 증가 효과를 보유하지 않는 대상 행동 종료 시 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>10%</color> 증가하고\\n<color=#28d9ed>치명 피해</color> 증가 효과를 보유한 대상에게 받는 피해가 <color=#28d9ed>100%</color> 증가합니다.",
         "zh": "持有<color=#28d9ed>暴击伤害</color>提升效果的目标行动结束时，自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>10%</color>，\\n受到持有<color=#28d9ed>暴击伤害提升</color>目标的伤害增加<color=#28d9ed>100%</color>。"
       },
-      "icon": "MT_Passive_1_Water"
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     },
     {
       "name": {
@@ -150,7 +150,10 @@
         "kr": "(패시브 효과) 보스 몬스터는 광폭화 진입 후 행동게이지가 증가합니다. 또한 랭크에 따라 아래 효과가 추가합니다.\\n\\n<color=#ffd732>RANK D 부터 적용:</color> 모든 공격에 대해 주는 피해가 증가하고 받는 피해가 감소합니다. 랭크가 오를수록 수치가 증가하여 SSS에서 최대가 됩니다.(각각 최대 300%/200%)\\n\\n<color=#ffd732>RANK B 부터 적용:</color> 유리한 상성이 아닌 대상에게 받는 최종 피해와 WG피해가 각각 <color=#28d9ed>70%/50%</color> 감소합니다.\\n\\n<color=#ffd732>RANK S 부터 적용:</color> 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 증가시키고 적 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 감소시킵니다.",
         "zh": "(被动效果) 首领怪物进入狂暴化后行动值提升。同时根据等级追加以下效果。\\n\\n<color=#ffd732>从RANK D开始适用：</color>所有攻击的造成伤害提升，受到伤害减少。等级越高数值越大，在SSS达到最大。（各最大300%/200%）\\n\\n<color=#ffd732>从RANK B开始适用：</color>受到非克制属性目标的最终伤害和WG伤害分别减少<color=#28d9ed>70%/50%</color>。\\n\\n<color=#ffd732>从RANK S开始适用：</color>使自身<color=#28d9ed>穿透力</color>增加<color=#28d9ed>30%</color>，使全体敌人<color=#28d9ed>穿透力</color>减少<color=#28d9ed>30%</color>。"
       },
-      "icon": "MT_Passive_1_Singularity"
+      "icon": "MT_Passive_1_Singularity",
+      "buff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ]
     },
     {
       "name": {
