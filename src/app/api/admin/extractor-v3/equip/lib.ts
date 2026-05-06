@@ -128,6 +128,19 @@ export function classFromRow(row: Row, textSystemMap: Map<string, Row>): string 
   return entry?.[LANG_COLUMNS[DEFAULT_LANG]] ?? null
 }
 
+// Per-language class names, used to suffix irregular item display names
+// like `Briareos's Recklessness [Striker]`.
+export function classNamesByLang(row: Row, textSystemMap: Map<string, Row>): Record<Lang, string> | null {
+  const raw = row.ClassLimit ?? ''
+  if (!raw || raw === 'CCT_NONE') return null
+  const sysKey = `SYS_CLASS_${raw.replace('CCT_', '')}`
+  const entry = textSystemMap.get(sysKey)
+  if (!entry) return null
+  const out = {} as Record<Lang, string>
+  for (const lang of LANGS) out[lang] = entry[LANG_COLUMNS[lang]] ?? ''
+  return out
+}
+
 export function resolveRarity(row: Row, textSystemMap: Map<string, Row>): string {
   const grade = row.ItemGrade ?? ''
   const key = `SYS_ITEM_GRADE_${grade.replace('IG_', '')}`
@@ -408,6 +421,24 @@ export function extractItems(cfg: ItemConfig, t: EquipTables, bossMap: Map<strin
     const nameTexts = getLangTexts(t.textItemMap.get(row.NameID))
     const cls = classFromRow(row, t.textSystemMap)
     const star = parseInt(row.BasicStar ?? '1')
+
+    // Irregular items (the ones with a `string[]` boss list) historically
+    // shipped with a ` [<className>]` suffix in TextItem. Recent updates
+    // dropped the suffix from the source data, so we reapply it ourselves
+    // to keep the wiki naming convention stable.
+    const isIrregular = Array.isArray(bossMap.get(id))
+    if (isIrregular && nameTexts) {
+      const classByLang = classNamesByLang(row, t.textSystemMap)
+      if (classByLang) {
+        for (const lang of LANGS) {
+          const base = (nameTexts[lang] ?? '').trim()
+          const suffix = (classByLang[lang] ?? '').trim()
+          if (!base || !suffix) continue
+          if (base.endsWith(`[${suffix}]`)) continue // already suffixed
+          nameTexts[lang] = `${base} [${suffix}]`
+        }
+      }
+    }
 
     // Find effect via UniqueOptionID → ItemSpecialOptionTemplet
     const effectOpt = row.UniqueOptionID ? t.optById.get(row.UniqueOptionID.split(',')[0].trim()) : undefined
