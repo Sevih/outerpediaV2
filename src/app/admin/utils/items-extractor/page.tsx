@@ -422,7 +422,7 @@ function DiffRow({
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={`/images/ui/bg/TI_Slot_${bg}.webp`} alt="" className="absolute inset-0 h-full w-full" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`/images/items/${item.icon}.webp`} alt="" className="absolute inset-0 h-full w-full"
+              <img src={`/api/admin/utils/items-extractor/icon?name=${encodeURIComponent(item.icon)}`} alt="" className="absolute inset-0 h-full w-full"
                 onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </div>
           ) : null}
