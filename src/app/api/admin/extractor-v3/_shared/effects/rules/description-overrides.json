@@ -249,5 +249,39 @@
   },
   "(Triggered Effect) When Demiurge Drakhan attacks, if granted a dispellable <color=#28d9ed>buff</color>, reduces Health of all enemies by <color=#28d9ed>30%</color>.":{
     "remove_buff": ["BT_REMOVE_BUFF"]
+  },
+  "(Passive Effect) Boss monsters' Priority increases upon entering Berserk. Additional effects are added based on rank as follows.\\n\\n<color=#ffd732>Applied from RANK D:</color> DMG dealt increases and DMG taken decreases for all attacks. The values increase as rank rises, maxing out at SSS. (Max 300%/200% respectively)\\n\\n<color=#ffd732>Applied from RANK B:</color> Final DMG and WG DMG taken from targets without elemental advantage decrease by <color=#28d9ed>70%/50%</color> respectively.\\n\\n<color=#ffd732>Applied from RANK S:</color> Increases own <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color> and decreases all enemies' <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color>.":{
+    "add_buff": ["BT_STAT|ST_PIERCE_POWER_RATE_IR"]
+  },
+  "DMG taken decreases by <color=#28d9ed>50%</color>, but DMG taken from <color=#28d9ed>Counterattack</color>, <color=#28d9ed>Revenge</color>, and <color=#28d9ed>Dual Attack</color> increases by <color=#28d9ed>200%</color>.":{
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "When self is inflicted with a debuff, gains <color=#28d9ed>1</color> <color=#28d9ed>Unique Resource: Grudge</color>.\\nAfter attacking, own <color=#28d9ed>Priority</color> increases by <color=#28d9ed>20%</color>.\\nCurse and Fixed DMG taken by the boss cannot exceed <color=#28d9ed>50000</color>.":{
+    "add_buff": ["BT_ACTION_GAUGE"]
+  },
+  "Enters <color=#28d9ed>Berserk</color> state every time enemies take 7 actions.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Attacks all enemies, then grants self an undispellable Speed UP/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nGrants self Counterattack for 2 turns.":{
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "Enters <color=#28d9ed>Berserk</color> state every time HP decreases by <color=#28d9ed>400,000</color>.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Deals DMG to all enemies, then grants self an undispellable Speed UP/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nGrants self Immunity for 2 turns.":{
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "When a target without <color=#28d9ed>Critical Damage</color> increase ends their turn, own <color=#28d9ed>Priority</color> increases by <color=#28d9ed>10%</color>.\\nDMG taken from targets with <color=#28d9ed>Critical Damage Increase</color> increases by <color=#28d9ed>100%</color>.":{
+    "add_buff": ["BT_ACTION_GAUGE"]
+  },
+  "If self holds no <color=#28d9ed>debuffs</color>, WG DMG decreases by <color=#28d9ed>50%</color>.\\nIf self holds <color=#28d9ed>buffs</color>, Penetration increases by <color=#28d9ed>20%</color>.\\nCurse and Fixed DMG taken by the boss cannot exceed <color=#28d9ed>50000</color>.":{
+    "remove_buff": ["BT_ACTION_GAUGE"]
+  },
+  "Upon entering battle, inflicts <color=#28d9ed>Burned</color> on all enemies for <color=#28d9ed>2 turns</color>.\\nDMG against targets with Burned increases by <color=#28d9ed>50%</color>.":{
+    "remove_buff": ["BT_REMOVE_DEBUFF"],
+    "add_debuff": ["BT_DOT_BURN"]
+  },
+  "If self is inflicted with <color=#28d9ed>Frozen</color>, DMG taken increases by <color=#28d9ed>100%</color>.\\nAt the start of each turn, dispels <color=#28d9ed>1</color> <color=#28d9ed>debuff</color>.":{
+    "add_buff": ["BT_REMOVE_DEBUFF"],
+    "remove_debuff": ["BT_DOT_BURN"]
+  },
+  "Enters <color=#28d9ed>Berserk</color> state every time HP decreases by <color=#28d9ed>400,000</color>.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Deals DMG to all enemies, then grants self an irremovable Speed Increase/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nGrants self Immunity for 2 turns.":{
+    "add_buff": ["BT_IMMUNE"],
+    "remove_buff": ["BT_ACTION_GAUGE"],
+    "remove_debuff": ["BT_DOT_BURN"]
   }
 }

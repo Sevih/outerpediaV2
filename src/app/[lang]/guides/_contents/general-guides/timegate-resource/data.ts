@@ -159,15 +159,15 @@ export const data: TimegateData = {
         {
             name: 'High-Precision Chip',
             sources: [
-                { sourceKey: SK.SINGULARITY_RANK_REWARD, weekly: 1280 },     // 320/day × 4 days
-                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 60 },         // 15/day × 4 days
+                { sourceKey: SK.SINGULARITY_RANK_REWARD, weekly: 320 },
+                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 160 },         // (15 + 25)/day × 4 days
                 { sourceKey: SK.SINGULARITY_DAILY_RANKING, weekly: '20–240' }, // 5–60/day × 4 days
             ],
         },
         {
             name: 'Reload Cartridge',
             sources: [
-                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 80 },         // 20/day × 4 days
+                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 200 },         // (20 + 30)/day × 4 days
                 { sourceKey: SK.SINGULARITY_DAILY_RANKING, weekly: '40–160' }, // 10–40/day × 4 days
             ],
         },
@@ -201,8 +201,8 @@ export const data: TimegateData = {
         {
             name: 'Limit Break Memory',
             sources: [
-                { sourceKey: SK.SINGULARITY_RANK_REWARD, weekly: 640 },
-                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 40 },
+                { sourceKey: SK.SINGULARITY_RANK_REWARD, weekly: 160 },
+                { sourceKey: SK.SINGULARITY_DAILY_RUN, weekly: 100 },         // (10 + 15)/day × 4 days
                 { sourceKey: SK.SINGULARITY_DAILY_RANKING, weekly: '20–160' },
             ],
         },
