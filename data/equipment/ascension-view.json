@@ -1,0 +1,324 @@
+{
+  "$source": "Generated from data/generated/singularity-ascension.json — do not edit by hand. Run scripts/generate-ascension-view.py to regenerate.",
+  "$generatedAt": "2026-05-07T21:21:07+00:00",
+  "totalRate": 10000,
+  "grades": ["C", "B", "A", "S", "S+"],
+  "init": {
+    "gold": 500000,
+    "chip": 50,
+    "hammer": 50,
+    "successRate": 1.0,
+    "factorOP": 0.15,
+    "addMaxLevel": 5,
+    "addReforgeCount": 3
+  },
+  "steps": [
+    {
+      "from": 10,
+      "to": 11,
+      "gold": 300000,
+      "chip": 10,
+      "hammer": 10,
+      "success": 0.9,
+      "factor": 0.1,
+      "mainStatPct": 0.02
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "gold": 400000,
+      "chip": 10,
+      "hammer": 10,
+      "success": 0.8,
+      "factor": 0.1,
+      "mainStatPct": 0.02
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "gold": 500000,
+      "chip": 10,
+      "hammer": 10,
+      "success": 0.7,
+      "factor": 0.1,
+      "mainStatPct": 0.02
+    },
+    {
+      "from": 13,
+      "to": 14,
+      "gold": 700000,
+      "chip": 15,
+      "hammer": 15,
+      "success": 0.6,
+      "factor": 0.1,
+      "mainStatPct": 0.02
+    },
+    {
+      "from": 14,
+      "to": 15,
+      "gold": 1000000,
+      "chip": 30,
+      "hammer": 30,
+      "success": 0.4,
+      "factor": 0.2,
+      "mainStatPct": 0.04,
+      "unlocksBonus": true
+    }
+  ],
+  "reroll": {
+    "gold": 500000,
+    "cartridge": 10,
+    "successRate": 1.0
+  },
+  "activation": {
+    "mainStatPct": 0.03,
+    "totalMainStatPct": 0.15
+  },
+  "groupBySlot": {
+    "weapons": "30000",
+    "accessories": "30000",
+    "Helmet": "31000",
+    "Armor": "31000",
+    "Gloves": "31000",
+    "Shoes": "31000"
+  },
+  "options": {
+    "30000": [
+      {
+        "key": "dmg",
+        "rate": 1500,
+        "name": {
+          "en": "DMG Increase to target ",
+          "jp": "対象への与ダメージUP",
+          "kr": "대상에게 주는 피해량 증가",
+          "zh": "对目标造成的伤害量增加"
+        },
+        "grades": {
+          "C": {
+            "range": "20%-26%",
+            "rate": 30
+          },
+          "B": {
+            "range": "27.5%-33.5%",
+            "rate": 25
+          },
+          "A": {
+            "range": "35%-41%",
+            "rate": 25
+          },
+          "S": {
+            "range": "42.5%-48.5%",
+            "rate": 19
+          },
+          "S+": {
+            "range": "50%",
+            "rate": 1
+          }
+        }
+      },
+      {
+        "key": "dmg_singular",
+        "rate": 1500,
+        "name": {
+          "en": "Increased DMG within Dimensional Singularity",
+          "jp": "次元特異点内での与ダメージUP",
+          "kr": "차원 특이점 내에서 주는 피해량 증가",
+          "zh": "在次元奇点内受到的伤害降低"
+        },
+        "grades": {
+          "C": {
+            "range": "90%-102%",
+            "rate": 30
+          },
+          "B": {
+            "range": "105%-117%",
+            "rate": 25
+          },
+          "A": {
+            "range": "120%-132%",
+            "rate": 25
+          },
+          "S": {
+            "range": "135%-147%",
+            "rate": 19
+          },
+          "S+": {
+            "range": "150%",
+            "rate": 1
+          }
+        }
+      },
+      {
+        "key": "dmg_skill3_singular",
+        "rate": 1000,
+        "name": {
+          "en": "Ultimate Skill DMG increases within Dimensional Singularity",
+          "jp": "次元特異点内での必殺スキルダメージUP",
+          "kr": "차원 특이점 내에서 필살기 피해량 증가",
+          "zh": "在次元奇点内必杀技伤害提升"
+        },
+        "grades": {
+          "C": {
+            "range": "100%",
+            "rate": 54
+          },
+          "B": {
+            "range": "120%",
+            "rate": 30
+          },
+          "A": {
+            "range": "140%",
+            "rate": 11
+          },
+          "S": {
+            "range": "170%",
+            "rate": 3
+          },
+          "S+": {
+            "range": "200%",
+            "rate": 2
+          }
+        }
+      },
+      {
+        "key": "dmg_to_element",
+        "rate": 6000,
+        "name": {
+          "en": "DMG Increase vs <Element>",
+          "jp": "地属性対象への与ダメージUP",
+          "kr": "지속성 대상에게 주는 피해량 증가",
+          "zh": "对土属性目标造成\\n伤害提升"
+        },
+        "grades": {
+          "C": {
+            "range": "40%-52%",
+            "rate": 30
+          },
+          "B": {
+            "range": "55%-67%",
+            "rate": 25
+          },
+          "A": {
+            "range": "70%-82%",
+            "rate": 25
+          },
+          "S": {
+            "range": "85%-97%",
+            "rate": 19
+          },
+          "S+": {
+            "range": "100%",
+            "rate": 1
+          }
+        }
+      }
+    ],
+    "31000": [
+      {
+        "key": "dmg_reduce",
+        "rate": 2000,
+        "name": {
+          "en": "Reduced DMG Taken from targets",
+          "jp": "対象からの被ダメージDOWN",
+          "kr": "대상에게 받는 피해량 감소",
+          "zh": "所受伤害降低"
+        },
+        "grades": {
+          "C": {
+            "range": "10%-13%",
+            "rate": 52
+          },
+          "B": {
+            "range": "14.5%-17.5%",
+            "rate": 26
+          },
+          "A": {
+            "range": "19%-20.5%",
+            "rate": 11
+          },
+          "S": {
+            "range": "22%-23.5%",
+            "rate": 9
+          },
+          "S+": {
+            "range": "25%",
+            "rate": 2
+          }
+        }
+      },
+      {
+        "key": "dmg_reduce_singular",
+        "rate": 2000,
+        "name": {
+          "en": "Reduced DMG taken within Dimensional Singularity",
+          "jp": "次元特異点内での被ダメージDOWN",
+          "kr": "차원 특이점 내에서 받는 피해량 감소",
+          "zh": "在次元奇点内受到的伤害降低"
+        },
+        "grades": {
+          "C": {
+            "range": "45%-51%",
+            "rate": 52
+          },
+          "B": {
+            "range": "54%-60%",
+            "rate": 26
+          },
+          "A": {
+            "range": "63%-66%",
+            "rate": 11
+          },
+          "S": {
+            "range": "69%-72%",
+            "rate": 9
+          },
+          "S+": {
+            "range": "75%",
+            "rate": 2
+          }
+        }
+      },
+      {
+        "key": "dmg_reduce_by_element",
+        "rate": 6000,
+        "name": {
+          "en": "Reduced DMG Taken vs <Element>",
+          "jp": "地属性対象からの被ダメージDOWN",
+          "kr": "지속성 대상에게 받는 피해량 감소",
+          "zh": "土属性所受伤害降低"
+        },
+        "grades": {
+          "C": {
+            "range": "20%-26%",
+            "rangeAlt": "15%-17%",
+            "rate": 52
+          },
+          "B": {
+            "range": "29%-35%",
+            "rangeAlt": "18%-20%",
+            "rate": 26
+          },
+          "A": {
+            "range": "38%-41%",
+            "rangeAlt": "21%-22%",
+            "rate": 11
+          },
+          "S": {
+            "range": "44%-47%",
+            "rangeAlt": "23%-24%",
+            "rate": 9
+          },
+          "S+": {
+            "range": "50%",
+            "rangeAlt": "25%",
+            "rate": 2
+          }
+        },
+        "splitLabels": {
+          "primary": "F/W/E",
+          "alt": "L/D"
+        }
+      }
+    ]
+  }
+}

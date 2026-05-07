@@ -4,7 +4,8 @@ import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
-import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment, getWeaponStatRanges, getAccessoryStatRanges, getArmorSetStatRanges, getTalismanStatRanges, getEEStatRange } from '@/lib/data/equipment';
+import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment, getTalismanStatRanges, getEEStatRange } from '@/lib/data/equipment';
+import { getItemStatRanges, getItemAscendedRanges, getArmorSetStatRanges, getArmorSetAscendedRanges } from '@/lib/data/stat-ranges-v2';
 import type { EquipmentLookup } from '@/lib/data/equipment';
 import { getCharacterIndex, resolveIdToSlug } from '@/lib/data/characters';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
@@ -204,17 +205,30 @@ export default async function EquipmentDetailPage({ params }: Props) {
   }
   recoCharacters.splice(15);
 
-  // Compute stat ranges
-  const weaponStatRanges = equipment.type === 'weapon'
-    ? await getWeaponStatRanges(equipment.data.rarity, equipment.data.level)
+  // Compute stat ranges (weapons + amulets resolved by itemID via stat-ranges-v2)
+  const weaponStatRanges = equipment.type === 'weapon' && equipment.data.id
+    ? await getItemStatRanges(equipment.data.id)
     : null;
 
-  const accessoryStatRanges = equipment.type === 'amulet'
-    ? await getAccessoryStatRanges(equipment.data.rarity, equipment.data.level, equipment.data.mainStats)
+  const accessoryStatRanges = equipment.type === 'amulet' && equipment.data.id
+    ? await getItemStatRanges(equipment.data.id)
     : null;
 
   const armorSetStatRanges = equipment.type === 'set'
     ? await getArmorSetStatRanges()
+    : null;
+
+  // Ascended (+15) ranges — only present for legendary 6★ items in eligible slots.
+  const weaponAscendedRanges = equipment.type === 'weapon' && equipment.data.id
+    ? await getItemAscendedRanges(equipment.data.id)
+    : null;
+
+  const accessoryAscendedRanges = equipment.type === 'amulet' && equipment.data.id
+    ? await getItemAscendedRanges(equipment.data.id)
+    : null;
+
+  const armorSetAscendedRanges = equipment.type === 'set'
+    ? await getArmorSetAscendedRanges()
     : null;
 
   const talismanStatRanges = equipment.type === 'talisman'
@@ -274,6 +288,9 @@ export default async function EquipmentDetailPage({ params }: Props) {
         weaponStatRanges={weaponStatRanges}
         accessoryStatRanges={accessoryStatRanges}
         armorSetStatRanges={armorSetStatRanges}
+        weaponAscendedRanges={weaponAscendedRanges}
+        accessoryAscendedRanges={accessoryAscendedRanges}
+        armorSetAscendedRanges={armorSetAscendedRanges}
         talismanStatRanges={talismanStatRanges}
         eeStatRange={eeStatRange}
         messages={messages}

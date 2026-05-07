@@ -4,10 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Weapon, Amulet, Talisman, ArmorSet, ExclusiveEquipment, BossDisplayMap } from '@/types/equipment';
 import type { EquipmentLookup, ArmorSetStatRanges, TalismanStatRanges, EEStatRange } from '@/lib/data/equipment';
+import type { ArmorPiece } from '@/lib/data/stat-ranges-v2';
+import { getBonusEffectsForSlot, type BonusEffect } from '@/lib/data/ascension';
+import { AscensionStepsTable, AscensionBonusEffectsTable, GradeLegend } from '@/app/[lang]/guides/_contents/general-guides/gear/helpers';
 import type { Effect } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
 import type { Messages } from '@/i18n';
 import { I18nProvider, useI18n } from '@/lib/contexts/I18nContext';
+import { lRec } from '@/lib/i18n/localize';
+import type { LangMap } from '@/types/common';
 import { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import BuffDebuffDisplay from '@/app/components/character/BuffDebuffDisplay';
 import EquipmentIcon from '@/app/components/equipment/EquipmentIcon';
@@ -43,6 +48,9 @@ type Props = {
   weaponStatRanges: Record<string, [number, number]> | null;
   accessoryStatRanges: Record<string, [number, number]> | null;
   armorSetStatRanges: ArmorSetStatRanges | null;
+  weaponAscendedRanges: Record<string, number> | null;
+  accessoryAscendedRanges: Record<string, number> | null;
+  armorSetAscendedRanges: Record<ArmorPiece, Record<string, number>> | null;
   talismanStatRanges: TalismanStatRanges | null;
   eeStatRange: EEStatRange | null;
   messages: Messages;
@@ -59,7 +67,7 @@ export default function EquipmentDetailClient(props: Props) {
   );
 }
 
-function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwner, eeCfCompanion, bossMap, weaponStatRanges, accessoryStatRanges, armorSetStatRanges, talismanStatRanges, eeStatRange, lang }: Props) {
+function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwner, eeCfCompanion, bossMap, weaponStatRanges, accessoryStatRanges, armorSetStatRanges, weaponAscendedRanges, accessoryAscendedRanges, armorSetAscendedRanges, talismanStatRanges, eeStatRange, lang }: Props) {
   const { t, href } = useI18n();
   const equipName = l(equipment.data, 'name', lang);
   useBreadcrumbOverride(equipName);
@@ -69,10 +77,10 @@ function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwn
       <Link href={href('/equipment')} className="inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-300">
         <span aria-hidden="true">&larr;</span> {t('equip.detail.back')}
       </Link>
-      {equipment.type === 'weapon' && <WeaponDetail weapon={equipment.data} lang={lang} bossMap={bossMap} statRanges={weaponStatRanges} />}
-      {equipment.type === 'amulet' && <AmuletDetail amulet={equipment.data} lang={lang} bossMap={bossMap} statRanges={accessoryStatRanges} />}
+      {equipment.type === 'weapon' && <WeaponDetail weapon={equipment.data} lang={lang} bossMap={bossMap} statRanges={weaponStatRanges} ascendedRanges={weaponAscendedRanges} />}
+      {equipment.type === 'amulet' && <AmuletDetail amulet={equipment.data} lang={lang} bossMap={bossMap} statRanges={accessoryStatRanges} ascendedRanges={accessoryAscendedRanges} />}
       {equipment.type === 'talisman' && <TalismanDetail talisman={equipment.data} lang={lang} bossMap={bossMap} statRanges={talismanStatRanges} />}
-      {equipment.type === 'set' && <SetDetail set={equipment.data} lang={lang} bossMap={bossMap} statRanges={armorSetStatRanges} />}
+      {equipment.type === 'set' && <SetDetail set={equipment.data} lang={lang} bossMap={bossMap} statRanges={armorSetStatRanges} ascendedRanges={armorSetAscendedRanges} />}
       {equipment.type === 'ee' && eeOwner && <EEDetail ee={equipment.data} owner={eeOwner} cfCompanion={eeCfCompanion} lang={lang} statRange={eeStatRange} />}
 
       {/* Recommended characters */}
@@ -95,9 +103,204 @@ function EquipmentDetailInner({ equipment, recoCharacters, totalRecoCount, eeOwn
   );
 }
 
+// ── Singularity Ascension ──
+//
+// Labels live inline as LangMaps (matching the convention used by gear/index.tsx).
+// They could be promoted to messages.json later if reused elsewhere.
+
+const ASCENSION_LABELS = {
+  title: { en: 'Singularity Ascension', jp: '特異点昇華', kr: '특이점 승화', zh: '奇点升华' },
+  ascendedStats: { en: '+10 T4 → +15 T4', jp: '+10 T4 → +15 T4', kr: '+10 T4 → +15 T4', zh: '+10 T4 → +15 T4' },
+  steps_title: { en: 'Cost +11 → +15', jp: 'コスト +11 → +15', kr: '비용 +11 → +15', zh: '成本 +11 → +15' },
+  steps_from: { en: 'Step', jp: '段階', kr: '단계', zh: '阶段' },
+  steps_success: { en: 'Success', jp: '成功率', kr: '성공률', zh: '成功率' },
+  steps_gold: { en: 'Gold', jp: 'ゴールド', kr: '골드', zh: '金币' },
+  steps_chip: { en: 'Chip', jp: 'チップ', kr: '칩', zh: '芯片' },
+  steps_hammer: { en: 'Hammer', jp: 'ハンマー', kr: '망치', zh: '锤子' },
+  steps_mainStat: { en: 'Main Stat', jp: 'メインステ', kr: '메인 스탯', zh: '主属性' },
+  steps_bonus: { en: 'Bonus', jp: 'ボーナス', kr: '보너스', zh: '加成' },
+  bonus_title: { en: 'Possible Bonus Effect at +15', jp: '+15時のボーナス効果', kr: '+15 보너스 효과', zh: '+15额外效果' },
+  bonus_effect: { en: 'Effect', jp: '効果', kr: '효과', zh: '效果' },
+  bonus_chance: { en: 'Chance', jp: '確率', kr: '확률', zh: '概率' },
+  bonus_range: { en: 'Range', jp: '範囲', kr: '범위', zh: '范围' },
+  gradeLegend: { en: 'Grades:', jp: 'グレード:', kr: '등급:', zh: '等级:' },
+} satisfies Record<string, LangMap>;
+
+const ARMOR_PIECE_LABELS_LANG: Record<ArmorPiece, LangMap> = {
+  Helmet: { en: 'Helmet', jp: 'ヘルメット', kr: '투구', zh: '头盔' },
+  Armor: { en: 'Armor', jp: '鎧', kr: '갑옷', zh: '铠甲' },
+  Gloves: { en: 'Gloves', jp: '手甲', kr: '장갑', zh: '手套' },
+  Shoes: { en: 'Shoes', jp: '靴', kr: '신발', zh: '鞋' },
+};
+
+function buildAscensionLabels(lang: Lang) {
+  return {
+    steps: {
+      from: lRec(ASCENSION_LABELS.steps_from, lang),
+      success: lRec(ASCENSION_LABELS.steps_success, lang),
+      gold: lRec(ASCENSION_LABELS.steps_gold, lang),
+      chip: lRec(ASCENSION_LABELS.steps_chip, lang),
+      hammer: lRec(ASCENSION_LABELS.steps_hammer, lang),
+      mainStat: lRec(ASCENSION_LABELS.steps_mainStat, lang),
+      bonus: lRec(ASCENSION_LABELS.steps_bonus, lang),
+    },
+    bonus: {
+      effect: lRec(ASCENSION_LABELS.bonus_effect, lang),
+      chance: lRec(ASCENSION_LABELS.bonus_chance, lang),
+      range: lRec(ASCENSION_LABELS.bonus_range, lang),
+    },
+  };
+}
+
+function StatComparisonRow({ stat, standardMax, ascendedMax }: { stat: string; standardMax: number | undefined; ascendedMax: number }) {
+  const unit = statUnit(stat);
+  return (
+    <div className="flex items-center justify-between text-sm">
+      <span className="text-zinc-300"><StatInline name={stat} /></span>
+      <span className="tabular-nums">
+        {standardMax !== undefined && (
+          <>
+            <span className="text-zinc-500">{standardMax}{unit}</span>
+            <span className="mx-2 text-zinc-600">→</span>
+          </>
+        )}
+        <span className="font-semibold text-fuchsia-300">{ascendedMax}{unit}</span>
+      </span>
+    </div>
+  );
+}
+
+/** Ascension section for single-item slots (weapons + accessories). */
+function AscensionSection({
+  slot,
+  standardRanges,
+  ascendedRanges,
+  lang,
+}: {
+  slot: 'weapons' | 'accessories';
+  standardRanges: Record<string, [number, number]> | null;
+  ascendedRanges: Record<string, number> | null;
+  lang: Lang;
+}) {
+  if (!ascendedRanges || Object.keys(ascendedRanges).length === 0) return null;
+
+  const labels = buildAscensionLabels(lang);
+  const bonusEffects = getBonusEffectsForSlot(slot);
+  const effectNames = Object.fromEntries(
+    bonusEffects.map(e => [e.key, e.name[lang] ?? e.name.en ?? e.key])
+  );
+
+  return (
+    <section className="card border border-fuchsia-700/30 p-4">
+      <div className="flex items-center justify-between gap-2">
+        <h3 className="after:hidden text-fuchsia-300">{lRec(ASCENSION_LABELS.title, lang)}</h3>
+        <span className="text-xs text-zinc-500">{lRec(ASCENSION_LABELS.ascendedStats, lang)}</span>
+      </div>
+
+      <div className="mt-3 space-y-1.5">
+        {Object.entries(ascendedRanges).map(([stat, ascMax]) => (
+          <StatComparisonRow key={stat} stat={stat} standardMax={standardRanges?.[stat]?.[1]} ascendedMax={ascMax} />
+        ))}
+      </div>
+
+      <div className="mt-4">
+        <h4 className="mb-2 text-sm font-semibold text-zinc-400">{lRec(ASCENSION_LABELS.steps_title, lang)}</h4>
+        <AscensionStepsTable labels={labels.steps} />
+      </div>
+
+      {bonusEffects.length > 0 && (
+        <div className="mt-4">
+          <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+            <h4 className="text-sm font-semibold text-zinc-400">{lRec(ASCENSION_LABELS.bonus_title, lang)}</h4>
+            <GradeLegend label={lRec(ASCENSION_LABELS.gradeLegend, lang)} />
+          </div>
+          <AscensionBonusEffectsTable
+            effects={bonusEffects as BonusEffect[]}
+            effectNames={effectNames}
+            labels={labels.bonus}
+            mode="simple"
+          />
+        </div>
+      )}
+    </section>
+  );
+}
+
+/** Ascension section for armor sets (4 pieces, defensive options). */
+function AscensionSectionForSet({
+  standardRanges,
+  ascendedRanges,
+  lang,
+}: {
+  standardRanges: ArmorSetStatRanges | null;
+  ascendedRanges: Record<ArmorPiece, Record<string, number>> | null;
+  lang: Lang;
+}) {
+  if (!ascendedRanges) return null;
+  const pieces: ArmorPiece[] = ['Helmet', 'Armor', 'Gloves', 'Shoes'];
+  const hasAny = pieces.some(p => ascendedRanges[p] && Object.keys(ascendedRanges[p]).length > 0);
+  if (!hasAny) return null;
+
+  const labels = buildAscensionLabels(lang);
+  // Defensive options are shared by all 4 pieces — pick any defensive slot.
+  const bonusEffects = getBonusEffectsForSlot('Helmet');
+  const effectNames = Object.fromEntries(
+    bonusEffects.map(e => [e.key, e.name[lang] ?? e.name.en ?? e.key])
+  );
+
+  return (
+    <section className="card border border-fuchsia-700/30 p-4">
+      <div className="flex items-center justify-between gap-2">
+        <h3 className="after:hidden text-fuchsia-300">{lRec(ASCENSION_LABELS.title, lang)}</h3>
+        <span className="text-xs text-zinc-500">{lRec(ASCENSION_LABELS.ascendedStats, lang)}</span>
+      </div>
+
+      <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        {pieces.map((piece) => {
+          const stats = ascendedRanges[piece];
+          if (!stats || Object.keys(stats).length === 0) return null;
+          const standard = standardRanges?.[piece] ?? {};
+          return (
+            <div key={piece} className="rounded-lg border border-zinc-700/50 bg-zinc-900/40 p-3">
+              <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-zinc-400">
+                {lRec(ARMOR_PIECE_LABELS_LANG[piece], lang)}
+              </div>
+              <div className="space-y-1">
+                {Object.entries(stats).map(([stat, ascMax]) => (
+                  <StatComparisonRow key={stat} stat={stat} standardMax={standard[stat]?.[1]} ascendedMax={ascMax} />
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mt-4">
+        <h4 className="mb-2 text-sm font-semibold text-zinc-400">{lRec(ASCENSION_LABELS.steps_title, lang)}</h4>
+        <AscensionStepsTable labels={labels.steps} />
+      </div>
+
+      {bonusEffects.length > 0 && (
+        <div className="mt-4">
+          <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+            <h4 className="text-sm font-semibold text-zinc-400">{lRec(ASCENSION_LABELS.bonus_title, lang)}</h4>
+            <GradeLegend label={lRec(ASCENSION_LABELS.gradeLegend, lang)} />
+          </div>
+          <AscensionBonusEffectsTable
+            effects={bonusEffects as BonusEffect[]}
+            effectNames={effectNames}
+            labels={labels.bonus}
+            mode="simple"
+          />
+        </div>
+      )}
+    </section>
+  );
+}
+
 // ── Weapon detail ──
 
-function WeaponDetail({ weapon, lang, bossMap, statRanges }: { weapon: Weapon; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null }) {
+function WeaponDetail({ weapon, lang, bossMap, statRanges, ascendedRanges }: { weapon: Weapon; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null; ascendedRanges: Record<string, number> | null }) {
   const { t } = useI18n();
   const name = l(weapon, 'name', lang);
   const effectName = weapon.effect_name ? l(weapon, 'effect_name', lang) : null;
@@ -147,6 +350,7 @@ function WeaponDetail({ weapon, lang, bossMap, statRanges }: { weapon: Weapon; l
       )}
 
       <EffectSection effectName={effectName} effectIcon={weapon.effect_icon} effectDesc1={effectDesc1} effectDesc4={effectDesc4} />
+      <AscensionSection slot="weapons" standardRanges={statRanges} ascendedRanges={ascendedRanges} lang={lang} />
       <SourceSection source={weapon.source} boss={weapon.boss} bossMap={bossMap} lang={lang} />
     </>
   );
@@ -154,7 +358,7 @@ function WeaponDetail({ weapon, lang, bossMap, statRanges }: { weapon: Weapon; l
 
 // ── Amulet detail ──
 
-function AmuletDetail({ amulet, lang, bossMap, statRanges }: { amulet: Amulet; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null }) {
+function AmuletDetail({ amulet, lang, bossMap, statRanges, ascendedRanges }: { amulet: Amulet; lang: Lang; bossMap: BossDisplayMap; statRanges: Record<string, [number, number]> | null; ascendedRanges: Record<string, number> | null }) {
   const { t } = useI18n();
   const name = l(amulet, 'name', lang);
   const effectName = amulet.effect_name ? l(amulet, 'effect_name', lang) : null;
@@ -194,6 +398,7 @@ function AmuletDetail({ amulet, lang, bossMap, statRanges }: { amulet: Amulet; l
           </div>
         </section>
       )}
+      <AscensionSection slot="accessories" standardRanges={statRanges} ascendedRanges={ascendedRanges} lang={lang} />
       <SourceSection source={amulet.source} boss={amulet.boss} bossMap={bossMap} lang={lang} />
     </>
   );
@@ -261,7 +466,7 @@ const ARMOR_PIECE_I18N: Record<string, string> = {
   Shoes: 'equip.detail.piece.shoes',
 };
 
-function SetDetail({ set, lang, bossMap, statRanges }: { set: ArmorSet; lang: Lang; bossMap: BossDisplayMap; statRanges: ArmorSetStatRanges | null }) {
+function SetDetail({ set, lang, bossMap, statRanges, ascendedRanges }: { set: ArmorSet; lang: Lang; bossMap: BossDisplayMap; statRanges: ArmorSetStatRanges | null; ascendedRanges: Record<ArmorPiece, Record<string, number>> | null }) {
   const { t } = useI18n();
   const name = l(set, 'name', lang);
   const effect21 = l(set, 'effect_2_1', lang);
@@ -361,6 +566,7 @@ function SetDetail({ set, lang, bossMap, statRanges }: { set: ArmorSet; lang: La
         </section>
       )}
 
+      <AscensionSectionForSet standardRanges={statRanges} ascendedRanges={ascendedRanges} lang={lang} />
       <SourceSection source={set.source} boss={set.boss} bossMap={bossMap} lang={lang} />
     </>
   );

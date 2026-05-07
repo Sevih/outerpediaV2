@@ -20,6 +20,7 @@ const steps: Step[] = [
   { name: 'bytes-cache', run: () => import('./steps/bytes-cache').then(m => m.run()) },
   { name: 'extract-assets', run: () => import('./steps/extract-assets').then(m => m.run()) },
   { name: 'singularity-ascension', run: () => import('./steps/singularity-ascension').then(m => m.run()) },
+  { name: 'ascension-view', run: () => import('./steps/ascension-view').then(m => m.run()) },
   { name: 'stat-ranges-v2', run: () => import('./steps/stat-ranges-v2').then(m => m.run()) },
   { name: 'item-names', run: () => import('./steps/item-names').then(m => m.run()) },
   { name: 'effect-group-map', run: () => import('./steps/effect-group-map').then(m => m.run()) },
