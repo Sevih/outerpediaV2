@@ -9,6 +9,7 @@ import {
 const JSON_PATH = path.join(process.cwd(), 'data', 'equipment', 'sets.json')
 
 const KEY_ORDER = [
+  'id',
   'name', 'name_jp', 'name_kr', 'name_zh',
   'rarity', 'set_icon',
   'effect_2_1', 'effect_2_1_jp', 'effect_2_1_kr', 'effect_2_1_zh',

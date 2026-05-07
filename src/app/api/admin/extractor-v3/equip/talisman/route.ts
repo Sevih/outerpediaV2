@@ -9,6 +9,7 @@ import {
 const JSON_PATH = path.join(process.cwd(), 'data', 'equipment', 'talisman.json')
 
 const KEY_ORDER = [
+  'id',
   'name', 'name_jp', 'name_kr', 'name_zh',
   'type', 'rarity', 'image',
   'effect_name', 'effect_name_jp', 'effect_name_kr', 'effect_name_zh',

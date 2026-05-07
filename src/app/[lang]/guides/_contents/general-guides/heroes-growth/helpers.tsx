@@ -53,13 +53,6 @@ const skillLevels = ['lv 2', 'lv 3', 'lv 4', 'lv 5'];
 
 const transcendenceSteps = ['1', '2', '3', '4', '4+', '5', '5+', '5++', '6'];
 
-const affinityUpgradeStones = [
-    { item: 'Light Upgrade Stone Fragment', points: 5 },
-    { item: 'Light Upgrade Stone Piece', points: 10 },
-    { item: 'Light Upgrade Stone', points: 25 },
-    { item: 'Refined Light Upgrade Stone', points: 50 },
-];
-
 const affinityGifts = [
     { items: ['USB Drive', "Collector's Coin", 'Mana Potion', 'Paper Crane', 'Berry'], points: 100, bonus: 50 },
     { items: ['Portable Gaming Device', 'Elegant Teacup', 'Fay Dust', 'Crystal Orb', 'Wildflower'], points: 200, bonus: 100 },
@@ -163,7 +156,7 @@ export const LABELS = {
         zh: "超越使用英雄碎片而非石头来强化英雄。你可以通过抽取重复、分身挑战、英雄商店或活动获得这些碎片。"
     },
     transcendenceDesc2: {
-        en: "Note: Demiurge and Limited units cannot be farmed via Doppelgänger and their may have different bonuses, often including unique passives instead of stat buffs (e.g., DDrak reduces AoE damage) and don't follow the generic transcendence effects.",
+        en: "Note: Demiurge and Limited units cannot be farmed via Doppelgänger and their transcends may have different bonuses, often including unique passives instead of stat buffs (e.g., DDrak reduces AoE damage) and don't follow the generic transcendence effects.",
         jp: "注意：デミウルゴスと限定ユニットはドッペルゲンガーでファームできず、異なるボーナスを持つ場合があります。多くの場合、ステータスバフの代わりにユニークなパッシブ（例：DDrakはAoEダメージを軽減）を含み、一般的な超越効果に従いません。",
         kr: "참고: 데미우르고스와 한정 유닛은 도플갱어에서 파밍할 수 없으며, 스탯 버프 대신 고유 패시브(예: DDrak은 광역 데미지 감소)를 포함하는 다른 보너스를 가질 수 있으며, 일반적인 초월 효과를 따르지 않습니다.",
         zh: "注意：造物主和限定角色无法通过分身挑战获取，它们可能有不同的加成，通常包括独特的被动技能而非属性加成（例如DDrak减少群体伤害），并且不遵循通用的超越效果。"
@@ -228,10 +221,10 @@ export const LABELS = {
 
     // Affinity section
     affinityDesc: {
-        en: "Increasing a hero's affinity level unlocks their Exclusive Equipment at level 10. You can give them any gift, but each heroes gots his preferred ones (you can check gift preference in Hero → Affinity Level top-left box). You can also give them Upgrade Stones matching their element. 170 000 total affinity points are needed for level 10.",
-        jp: "ヒーローの親密度レベルを上げると、レベル10で専用装備が解放されます。どのギフトでも渡せますが、各ヒーローには好みのギフトがあります（ヒーロー → 親密度レベルの左上ボックスでギフトの好みを確認できます）。また、属性に合ったアップグレードストーンを渡すこともできます。レベル10には合計170,000親密度ポイントが必要です。",
-        kr: "영웅의 친밀도 레벨을 올리면 레벨 10에서 전용 장비가 해금됩니다. 어떤 선물이든 줄 수 있지만, 각 영웅에게는 선호하는 선물이 있습니다(영웅 → 친밀도 레벨 왼쪽 상단 박스에서 선물 선호도를 확인할 수 있습니다). 속성에 맞는 승급석을 줄 수도 있습니다. 레벨 10에는 총 170,000 친밀도 포인트가 필요합니다.",
-        zh: "提升英雄的好感度等级可以在10级时解锁其专属装备。你可以送给他们任何礼物，但每个英雄都有自己偏好的礼物（你可以在英雄 → 好感度等级左上角框中查看礼物偏好）。你也可以送给他们与其属性匹配的进阶石。达到10级需要总共170,000好感度点数。"
+        en: "Increasing a hero's affinity level unlocks their Exclusive Equipment at level 10. You can give them any gift, but each hero has their preferred ones (you can check gift preference in Hero → Affinity Level top-left box). 170 000 total affinity points are needed for level 10.",
+        jp: "ヒーローの親密度レベルを上げると、レベル10で専用装備が解放されます。どのギフトでも渡せますが、各ヒーローには好みのギフトがあります（ヒーロー → 親密度レベルの左上ボックスでギフトの好みを確認できます）。レベル10には合計170,000親密度ポイントが必要です。",
+        kr: "영웅의 친밀도 레벨을 올리면 레벨 10에서 전용 장비가 해금됩니다. 어떤 선물이든 줄 수 있지만, 각 영웅에게는 선호하는 선물이 있습니다(영웅 → 친밀도 레벨 왼쪽 상단 박스에서 선물 선호도를 확인할 수 있습니다). 레벨 10에는 총 170,000 친밀도 포인트가 필요합니다.",
+        zh: "提升英雄的好感度等级可以在10级时解锁其专属装备。你可以送给他们任何礼物，但每个英雄都有自己偏好的礼物（你可以在英雄 → 好感度等级左上角框中查看礼物偏好）。达到10级需要总共170,000好感度点数。"
     },
     bonus: { en: "Bonus", jp: "ボーナス", kr: "보너스", zh: "加成" },
     affinityMaxItem: {
@@ -320,16 +313,16 @@ export const LABELS = {
     },
     gearEquipmentGuide: { en: "Equipment Guide", jp: "装備ガイド", kr: "장비 가이드", zh: "装备指南" },
     gearPoint1: {
-        en: "Gear comes in 4 rarities and can be upgraded up to +10",
-        jp: "装備は4つのレアリティがあり、+10までアップグレードできます",
-        kr: "장비는 4개의 레어리티가 있으며 +10까지 강화할 수 있습니다",
-        zh: "装备有4种稀有度，可以升级到+10"
+        en: "Gear comes in 4 rarities and can be upgraded up to +10 (or +15 with Singularity Ascension)",
+        jp: "装備は4つのレアリティがあり、+10まで（特異点昇華で+15まで）アップグレードできます",
+        kr: "장비는 4개의 레어리티가 있으며 +10까지 (특이점 승화로 +15까지) 강화할 수 있습니다",
+        zh: "装备有4种稀有度，可以升级到+10（通过奇点升华可达+15）"
     },
     gearPoint2: {
-        en: "Legendary Weapons and Amulets have class restrictions (e.g., only usable by Mages)",
-        jp: "レジェンダリー武器とアミュレットにはクラス制限があります（例：メイジのみ使用可能）",
-        kr: "전설 무기와 목걸이에는 클래스 제한이 있습니다(예: 마법사만 사용 가능)",
-        zh: "传说武器和护身符有职业限制（例如仅法师可用）"
+        en: "Legendary Weapons and Accessories have class restrictions (e.g., only usable by Mages)",
+        jp: "レジェンダリー武器とアクセサリーにはクラス制限があります（例：メイジのみ使用可能）",
+        kr: "전설 무기와 액세서리에는 클래스 제한이 있습니다(예: 마법사만 사용 가능)",
+        zh: "传说武器和饰品有职业限制（例如仅法师可用）"
     },
     gearPoint3: {
         en: "Armors provide set bonuses when equipped together",
@@ -344,10 +337,10 @@ export const LABELS = {
         zh: "装备可以重铸以添加副属性（最多4个）或在已有4个时强化现有属性"
     },
     gearPoint5: {
-        en: "Breakthrough increases main stats and enhance passives",
-        jp: "ブレイクスルーはメインステータスを増加させ、パッシブを強化します",
-        kr: "돌파는 메인 스탯을 증가시키고 패시브를 강화합니다",
-        zh: "突破增加主属性并强化被动"
+        en: "Breakthrough increases the main stat by 5% per tier (up to T4) and enhances skill/set effects",
+        jp: "突破はティアごとにメインステータスを5%上昇させ（T4まで）、スキル/セット効果を強化します",
+        kr: "돌파는 티어당 메인 스탯을 5% 증가시키며 (T4까지), 스킬/세트 효과를 강화합니다",
+        zh: "突破每阶段提升主属性5%（最高T4），并强化技能/套装效果"
     },
     gearPoint6: {
         en: "Main stats cannot be rerolled",
@@ -553,16 +546,6 @@ export function XPItemsList({ lang }: { lang: Lang }) {
 export function AffinityList({ lang }: { lang: Lang }) {
     return (
         <div className="space-y-4">
-            <table className="table-auto text-sm text-white">
-                <tbody className="divide-y divide-white/10">
-                    {affinityUpgradeStones.map(({ item, points }) => (
-                        <tr key={item} className="align-middle">
-                            <td className="py-1.5 pr-4 text-left"><ItemInline name={item} /></td>
-                            <td className="py-1.5">+{points}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
             <table className="table-auto text-sm text-white">
                 <tbody className="divide-y divide-white/10">
                     {affinityGifts.map(({ items: giftItems, points, bonus }, idx) => (

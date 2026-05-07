@@ -313,11 +313,7 @@ export function FAQContent() {
         { key: 'dmg-up-vs-chd', title: lRec(LABELS.faqTitles.dmgUpVsChd, lang), content: lRec(LABELS.faqContent.dmgUpVsChd, lang) },
         { key: 'dmg-red-vs-cdmg-red', title: lRec(LABELS.faqTitles.dmgRedVsCdmgRed, lang), content: lRec(LABELS.faqContent.dmgRedVsCdmgRed, lang) },
         { key: 'dmg-additive', title: lRec(LABELS.faqTitles.dmgAdditive, lang), content: lRec(LABELS.faqContent.dmgAdditive, lang) },
-        ...(lang === 'en' ? [{
-            key: 'dmg-red-cap',
-            title: lRec(LABELS.faqTitles.dmgRedCap, lang),
-            content: lRec(LABELS.faqContent.dmgRedCap, lang),
-        }] : []),
+        { key: 'dmg-red-cap', title: lRec(LABELS.faqTitles.dmgRedCap, lang), content: lRec(LABELS.faqContent.dmgRedCap, lang) },
         {
             key: 'debuff-on-miss',
             title: lRec(LABELS.faqTitles.debuffOnMiss, lang),
@@ -423,12 +419,12 @@ export function FAQContent() {
                     <p>{lRec({ en: 'The maximum theoretical speed is:', jp: '理論上の最大速度：', kr: '이론상 최대 속도:', zh: '理论最大速度：' } satisfies LangMap, lang)}</p>
                     <ul className="list-disc list-inside mt-2">
                         <li><strong>{lRec({ en: 'Base speed:', jp: '基本速度：', kr: '기본 속도:', zh: '基础速度：' } satisfies LangMap, lang)}</strong> {lang === 'en' ? <>154 hit by {parseText('{C/Ranger}')}</> : <>{parseText('{C/Ranger}')}{lRec({ en: '', jp: 'の154', kr: '의 154', zh: '的154' } satisfies LangMap, lang)}</>}</li>
-                        <li><strong>{lRec({ en: 'Gear SPD:', jp: '装備SPD：', kr: '장비 SPD:', zh: '装备SPD：' } satisfies LangMap, lang)}</strong> 138 {lRec({ en: '(18 per piece + 48 from Accessory)', jp: '（各部位18 + アクセサリー48）', kr: '(각 부위 18 + 악세사리 48)', zh: '（每部位18 + 饰品48）' } satisfies LangMap, lang)}</li>
+                        <li><strong>{lRec({ en: 'Gear SPD:', jp: '装備SPD：', kr: '장비 SPD:', zh: '装备SPD：' } satisfies LangMap, lang)}</strong> 145 {lRec({ en: '(18 per piece + 55 from Accessory)', jp: '（各部位18 + アクセサリー55）', kr: '(각 부위 18 + 악세사리 55)', zh: '（每部位18 + 饰品55）' } satisfies LangMap, lang)}</li>
                         <li><strong>{lRec({ en: 'Set SPD:', jp: 'セットSPD：', kr: '세트 SPD:', zh: '套装SPD：' } satisfies LangMap, lang)}</strong> 38 {lRec({ en: '(on a 154 character)', jp: '（154キャラで）', kr: '(154 캐릭터 기준)', zh: '（基于154角色）' } satisfies LangMap, lang)}</li>
                         <li><strong>{lRec({ en: 'Ally Speed transcend bonus:', jp: '味方速度超越ボーナス：', kr: '아군 속도 초월 보너스:', zh: '友方速度超越加成：' } satisfies LangMap, lang)}</strong> 30 ({parseText('{P/Dianne}')} + {parseText('{P/Mene}')} + {parseText('{P/Demiurge Delta}')})</li>
                     </ul>
-                    <p className="mt-3">{lRec({ en: 'Leading to a grand total of:', jp: '合計：', kr: '합계:', zh: '总计：' } satisfies LangMap, lang)} <strong>360</strong> {lRec({ en: '(468 including the speed buff)', jp: '（速度バフ込みで468）', kr: '(속도 버프 포함 시 468)', zh: '（带速度增益时468）' } satisfies LangMap, lang)}</p>
-                    <p className="mt-2">{parseText('{P/Ryu Lion}')} {lRec({ en: 'can go further with her 4 star transcend bonus:', jp: 'は4つ星超越ボーナスでさらに上げられます：', kr: '은 4성 초월 보너스로 더 올릴 수 있습니다:', zh: '的4星超越加成可进一步提升：' } satisfies LangMap, lang)} <strong>370</strong> {lRec({ en: '(481 with speed buff)', jp: '（速度バフ込みで481）', kr: '(속도 버프 포함 시 481)', zh: '（带速度增益时481）' } satisfies LangMap, lang)}</p>
+                    <p className="mt-3">{lRec({ en: 'Leading to a grand total of:', jp: '合計：', kr: '합계:', zh: '总计：' } satisfies LangMap, lang)} <strong>367</strong> {lRec({ en: '(477 including the speed buff)', jp: '（速度バフ込みで477）', kr: '(속도 버프 포함 시 477)', zh: '（带速度增益时477）' } satisfies LangMap, lang)}</p>
+                    <p className="mt-2">{parseText('{P/Ryu Lion}')} {lRec({ en: 'can go further with her 4 star transcend bonus:', jp: 'は4つ星超越ボーナスでさらに上げられます：', kr: '은 4성 초월 보너스로 더 올릴 수 있습니다:', zh: '的4星超越加成可进一步提升：' } satisfies LangMap, lang)} <strong>377</strong> {lRec({ en: '(490 with speed buff)', jp: '（速度バフ込みで490）', kr: '(속도 버프 포함 시 490)', zh: '（带速度增益时490）' } satisfies LangMap, lang)}</p>
                 </>
             ),
         },
@@ -451,8 +447,10 @@ export function FAQContent() {
                     <h4 className="font-semibold mt-4">{lRec({ en: 'Defense Mitigation', jp: '防御軽減', kr: '방어 감소', zh: '防御减免' } satisfies LangMap, lang)}</h4>
                     <p><strong>{lRec({ en: 'Formula:', jp: '計算式：', kr: '공식:', zh: '公式：' } satisfies LangMap, lang)}</strong> <code>f(DEF) = 1000 / (1000 + DEF)</code></p>
                     <p className="mt-2">{lRec({ en: 'This formula determines how much damage is reduced by defense. As DEF increases, the effect of each additional point diminishes (diminishing returns).', jp: 'この式は防御力によるダメージ軽減量を決定します。DEFが増えるほど、追加ポイントの効果は減少します（収穫逓減）。', kr: '이 공식은 방어력에 의한 데미지 감소량을 결정합니다. DEF가 증가할수록 추가 포인트의 효과가 감소합니다(수확 체감).', zh: '此公式决定防御力的伤害减免量。DEF增加时，额外点数的效果递减（收益递减）。' } satisfies LangMap, lang)}</p>
-                    <p className="mt-2">{lRec({ en: 'Effective Health (EHP) can be derived from it:', jp: '有効HP（EHP）はここから導出できます：', kr: '유효 HP(EHP)는 여기서 도출할 수 있습니다:', zh: '有效生命值(EHP)可由此推导：' } satisfies LangMap, lang)}</p>
-                    <p className="mt-1"><strong>{lRec({ en: 'Effective HP:', jp: '有効HP：', kr: '유효 HP:', zh: '有效HP：' } satisfies LangMap, lang)}</strong> <code>EHP = HP + (HP × DEF / 1000)</code></p>
+                    <p className="mt-2">{lRec({ en: 'Effective Health (EHP) can be derived from it (assuming the attacker has 0% PEN):', jp: '有効HP（EHP）はここから導出できます（攻撃者がPEN 0%の場合）：', kr: '유효 HP(EHP)는 여기서 도출할 수 있습니다 (공격자 PEN 0% 가정):', zh: '有效生命值(EHP)可由此推导（假设攻击者穿透为0%）：' } satisfies LangMap, lang)}</p>
+                    <p className="mt-1"><strong>{lRec({ en: 'Effective HP:', jp: '有効HP：', kr: '유효 HP:', zh: '有效HP：' } satisfies LangMap, lang)}</strong> <code>EHP = HP × (1 + DEF / 1000)</code></p>
+                    <p className="mt-2">{lRec({ en: 'When the attacker has Penetration, the effective DEF is reduced before mitigation kicks in:', jp: '攻撃者が貫通を持つ場合、軽減計算前に有効DEFが減少します：', kr: '공격자가 관통을 가지면 경감 계산 전에 유효 DEF가 감소합니다:', zh: '当攻击者带有穿透时，在减免计算之前有效DEF会先减少：' } satisfies LangMap, lang)}</p>
+                    <p className="mt-1"><strong>{lRec({ en: 'EHP vs PEN:', jp: 'PEN対応EHP：', kr: 'PEN 대응 EHP:', zh: '考虑穿透时的EHP：' } satisfies LangMap, lang)}</strong> <code>EHP = HP × (1 + (1 − PEN%) × DEF / 1000)</code></p>
 
                     <h4 className="font-semibold mt-4">{lRec({ en: 'Effectiveness vs Resilience', jp: '効果命中vs効果抵抗', kr: '효과 적중 vs 효과 저항', zh: '效果命中 vs 效果抵抗' } satisfies LangMap, lang)}</h4>
                     <p>{lRec({ en: 'If', jp: '', kr: '', zh: '如果' } satisfies LangMap, lang)} <code>EFF ≥ RES</code>{lRec({ en: ', the debuff success chance is 100%.', jp: 'の場合、デバフ成功確率は100%。', kr: '면 디버프 성공 확률은 100%.', zh: '，减益成功概率为100%。' } satisfies LangMap, lang)}</p>
@@ -468,22 +466,32 @@ export function FAQContent() {
             title: lRec(LABELS.faqTitles.damageFormula, lang),
             content: (
                 <>
-                    <p>{lRec({ en: 'The base formula used to calculate skill damage in Outerplane is:', jp: 'Outerplaneでスキルダメージを計算する基本式：', kr: 'Outerplane에서 스킬 데미지를 계산하는 기본 공식:', zh: 'Outerplane中计算技能伤害的基础公式：' } satisfies LangMap, lang)}</p>
+                    <p>{lRec({ en: 'The full formula used to calculate skill damage in Outerplane is:', jp: 'Outerplaneでスキルダメージを計算する完全な計算式：', kr: 'Outerplane에서 스킬 데미지를 계산하는 전체 공식:', zh: 'Outerplane中计算技能伤害的完整公式：' } satisfies LangMap, lang)}</p>
                     <p className="text-sm font-mono bg-black/40 p-2 rounded border border-white/10 w-fit mt-2">
-                        {lRec({ en: 'Dmg = Elemental × Skill × ATK × Modifiers × (1000 / (1000 + (1 − PEN%) × DEF))', jp: 'Dmg = 属性 × スキル × ATK × 修正値 × (1000 / (1000 + (1 − PEN%) × DEF))', kr: 'Dmg = 속성 × 스킬 × ATK × 수정치 × (1000 / (1000 + (1 − PEN%) × DEF))', zh: '伤害 = 属性 × 技能 × ATK × 修正 × (1000 / (1000 + (1 − PEN%) × DEF))' } satisfies LangMap, lang)}
+                        {lRec({ en: 'Dmg = ATK × Skill × Mitigation × Rate × Elemental × Marking × Missed × FinalReduce', jp: 'Dmg = ATK × スキル × 軽減 × レート × 属性 × マーキング × ミス × 最終軽減', kr: 'Dmg = ATK × 스킬 × 경감 × 레이트 × 속성 × 마킹 × 미스 × 최종 경감', zh: '伤害 = ATK × 技能 × 减免 × 速率 × 属性 × 标记 × 未命中 × 最终减免' } satisfies LangMap, lang)}
                     </p>
-                    <ul className="list-disc list-inside mt-3">
-                        <li><strong>{lRec({ en: 'Elemental', jp: '属性', kr: '속성', zh: '属性' } satisfies LangMap, lang)}</strong>: {lRec({ en: '0.8 (disadvantage), 1 (neutral), or 1.2 (advantage)', jp: '0.8（不利）、1（中立）、1.2（有利）', kr: '0.8 (불리), 1 (중립), 1.2 (유리)', zh: '0.8（被克制）、1（中立）、1.2（克制）' } satisfies LangMap, lang)}</li>
-                        <li><strong>{lRec({ en: 'Skill', jp: 'スキル', kr: '스킬', zh: '技能' } satisfies LangMap, lang)}</strong>: {lRec({ en: 'Skill multiplier', jp: 'スキル倍率', kr: '스킬 배율', zh: '技能倍率' } satisfies LangMap, lang)}</li>
+                    <ul className="list-disc list-inside mt-3 space-y-2">
                         <li><strong>ATK</strong>: {lRec({ en: "Your unit's main scaling stat (can also be HP, DEF, etc. depending on the skill/character)", jp: 'ユニットのメイン依存ステータス（スキル/キャラによってHP、DEFなども可）', kr: '유닛의 메인 의존 스탯 (스킬/캐릭터에 따라 HP, DEF 등도 가능)', zh: '单位的主要依赖属性（根据技能/角色可能是HP、DEF等）' } satisfies LangMap, lang)}</li>
-                        <li><strong>{lRec({ en: 'Modifiers', jp: '修正値', kr: '수정치', zh: '修正' } satisfies LangMap, lang)}</strong>: {lRec({ en: 'Additive pool of (CHD on crit + DMG UP + skill/equip DMG UP) minus (CDMG RED on crit + DMG RED + skill/equip DMG RED). May also include secondary scalings (like HP) and burst damage effects', jp: 'DMG UP、クリダメ（クリティカル時）、副次依存（HPなど）、バーストダメージ効果を含む — 敵のDMG REDおよびCDMG RED（クリティカル時）で軽減', kr: 'DMG UP, 치명타 데미지(치명 시), 부차 의존(HP 등), 버스트 데미지 효과 포함 — 적의 DMG RED 및 CDMG RED(치명 시)로 감소', zh: '包括DMG UP、暴击伤害（暴击时）、次要依赖（HP等）、爆发伤害效果 — 被敌方DMG RED及CDMG RED（暴击时）减免' } satisfies LangMap, lang)}</li>
-                        <li><strong>PEN%</strong>: {lRec({ en: 'Penetration', jp: '貫通', kr: '관통', zh: '穿透' } satisfies LangMap, lang)}</li>
+                        <li><strong>{lRec({ en: 'Skill', jp: 'スキル', kr: '스킬', zh: '技能' } satisfies LangMap, lang)}</strong>: {lRec({ en: 'Per-skill internal multiplier. Not displayed in-game.', jp: 'スキルごとの内部倍率。ゲーム内では表示されません。', kr: '스킬별 내부 배율. 게임 내에는 표시되지 않습니다.', zh: '每个技能的内部倍率。游戏内不显示。' } satisfies LangMap, lang)}</li>
+                        <li><strong>{lRec({ en: 'Mitigation', jp: '軽減', kr: '경감', zh: '减免' } satisfies LangMap, lang)}</strong>: <code>1000 / (1000 + (1 − PEN%) × DEF)</code> {lRec({ en: '— same defense mitigation covered above', jp: '— 上記の防御軽減と同じ', kr: '— 위의 방어 감소와 동일', zh: '— 与上述防御减免相同' } satisfies LangMap, lang)}</li>
+                        <li>
+                            <strong>{lRec({ en: 'Rate', jp: 'レート', kr: '레이트', zh: '速率' } satisfies LangMap, lang)}</strong>: {lRec({ en: 'damage modifier pool, floored at 0.30 (= up to 70% reduction). Computed as:', jp: 'ダメージ修正プール、最小値0.30で上限あり（=最大70%軽減）。計算式：', kr: '데미지 보정 풀, 최소값 0.30 상한(=최대 70% 감소). 계산:', zh: '伤害修正池，下限为0.30（=最多减免70%）。计算：' } satisfies LangMap, lang)}
+                            <p className="text-sm font-mono bg-black/40 p-2 rounded border border-white/10 w-fit mt-2 ml-4">
+                                {lRec({ en: 'Rate = max(0.30, base + (DMG UP additions) − (DMG RED + CDMG RED on crit))', jp: 'Rate = max(0.30, base + (DMG UP合計) − (DMG RED + クリ時CDMG RED))', kr: 'Rate = max(0.30, base + (DMG UP 합산) − (DMG RED + 치명 시 CDMG RED))', zh: 'Rate = max(0.30, base + (DMG UP合计) − (DMG RED + 暴击时CDMG RED))' } satisfies LangMap, lang)}
+                            </p>
+                            <p className="text-xs text-gray-400 mt-1 ml-4">{lRec({ en: 'where', jp: 'ここで', kr: '여기서', zh: '其中' } satisfies LangMap, lang)} <code>base = 1.0</code> {lRec({ en: 'on non-crit, or', jp: '（非クリティカル）／', kr: '(비치명) /', zh: '（非暴击）/' } satisfies LangMap, lang)} <code>CHD/100</code> {lRec({ en: 'on crit. Includes awakening, EE, skill, and gear contributions.', jp: 'CHD/100（クリティカル）。覚醒、EE、スキル、装備の寄与を含む。', kr: 'CHD/100 (치명). 각성, EE, 스킬, 장비의 기여 포함.', zh: 'CHD/100（暴击时）。包含觉醒、EE、技能和装备的贡献。' } satisfies LangMap, lang)}</p>
+                        </li>
+                        <li><strong>{lRec({ en: 'Elemental', jp: '属性', kr: '속성', zh: '属性' } satisfies LangMap, lang)}</strong>: {lRec({ en: '0.80 (disadvantage), 1.00 (neutral), or 1.20 (advantage)', jp: '0.80（不利）、1.00（中立）、1.20（有利）', kr: '0.80 (불리), 1.00 (중립), 1.20 (유리)', zh: '0.80（被克制）、1.00（中立）、1.20（克制）' } satisfies LangMap, lang)}</li>
+                        <li><strong>{lRec({ en: 'Marking', jp: 'マーキング', kr: '마킹', zh: '标记' } satisfies LangMap, lang)}</strong>: ×1.15 {lRec({ en: 'when the target carries the Marking debuff, else ×1.00', jp: '対象がマーキングデバフを受けている時、それ以外は×1.00', kr: '대상이 마킹 디버프를 받고 있을 때, 그 외에는 ×1.00', zh: '目标带有标记减益时，否则×1.00' } satisfies LangMap, lang)}</li>
+                        <li><strong>{lRec({ en: 'Missed', jp: 'ミス', kr: '미스', zh: '未命中' } satisfies LangMap, lang)}</strong>: ×0.5 {lRec({ en: 'when the attack misses (no crit, no debuff applied), else ×1.00', jp: '攻撃がミスした時（クリティカルなし、デバフ付与なし）、それ以外は×1.00', kr: '공격이 미스한 경우(치명타 없음, 디버프 부여 없음), 그 외에는 ×1.00', zh: '攻击未命中时（无暴击，不施加减益），否则×1.00' } satisfies LangMap, lang)}</li>
+                        <li><strong>{lRec({ en: 'FinalReduce', jp: '最終軽減', kr: '최종 경감', zh: '最终减免' } satisfies LangMap, lang)}</strong>: <code>1 − pct/100</code> {lRec({ en: 'for boss-specific final-damage-reduction passives (e.g. Amadeus Prelude). Default ×1.00.', jp: 'ボス固有の最終ダメージ軽減パッシブ（例：アマデウス序曲）に対して。デフォルト×1.00。', kr: '보스 전용 최종 데미지 감소 패시브(예: 아마데우스 프렐류드)에 대해. 기본 ×1.00.', zh: '针对首领专属的最终伤害减免被动（如阿玛迪斯前奏）。默认×1.00。' } satisfies LangMap, lang)}</li>
                     </ul>
                     <p className="text-sm text-gray-500 mt-4">
                         {lRec({ en: 'Source:', jp: '出典：', kr: '출처:', zh: '来源：' } satisfies LangMap, lang)}{' '}
                         <a href="https://discord.com/channels/1264787916660670605/1264811556059873312/1265103204128133191" target="_blank" rel="noopener noreferrer" className="underline text-blue-400">
                             {lRec({ en: 'Fabool on EvaMains Discord (July 23, 2024)', jp: 'Fabool on EvaMains Discord (2024年7月23日)', kr: 'Fabool on EvaMains Discord (2024년 7월 23일)', zh: 'Fabool on EvaMains Discord（2024年7月23日）' } satisfies LangMap, lang)}
                         </a>
+                        {' '}+ {lRec({ en: 'Outerpedia damage calc reverse-engineering', jp: 'Outerpediaダメージ計算機のリバースエンジニアリング', kr: 'Outerpedia 데미지 계산기 리버스 엔지니어링', zh: 'Outerpedia伤害计算器逆向工程' } satisfies LangMap, lang)}
                     </p>
                 </>
             ),

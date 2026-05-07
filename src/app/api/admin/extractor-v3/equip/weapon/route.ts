@@ -16,6 +16,7 @@ const CFG = {
 }
 
 const KEY_ORDER = [
+  'id',
   'name', 'name_jp', 'name_kr', 'name_zh',
   'type', 'rarity', 'image',
   'effect_name', 'effect_name_jp', 'effect_name_kr', 'effect_name_zh',

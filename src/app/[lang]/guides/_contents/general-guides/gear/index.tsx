@@ -29,6 +29,14 @@ import {
   ObtainingMethodsList,
   EquipmentIntro,
   StarLevel,
+  ASCENSION_INIT,
+  ASCENSION_BONUS_OFFENSIVE,
+  ASCENSION_BONUS_DEFENSIVE,
+  ASCENSION_REROLL,
+  AscensionStepsTable,
+  AscensionBonusEffectsTable,
+  GradeLegend,
+  type BonusTableMode,
 } from './helpers';
 
 // ============================================================================
@@ -48,6 +56,7 @@ const LABELS = {
   // ── Tabs ──
   tab_basics: { en: 'Gear Basics', jp: '装備の基本', kr: '장비 기초', zh: '装备基础' } satisfies LangMap,
   tab_upgrading: { en: 'Upgrading Gear', jp: '装備強化', kr: '장비 강화', zh: '装备强化' } satisfies LangMap,
+  tab_ascension: { en: 'Singularity Ascension', jp: '特異点昇華', kr: '특이점 승화', zh: '奇点升华' } satisfies LangMap,
   tab_obtaining: { en: 'Obtaining Gear', jp: '装備入手', kr: '장비 획득', zh: '装备获取' } satisfies LangMap,
   tab_faq: { en: 'FAQ', jp: 'よくある質問', kr: 'FAQ', zh: '常见问题' } satisfies LangMap,
 
@@ -85,7 +94,7 @@ const LABELS = {
   prop_stars: { en: 'Star Level: from 1★ yellow star to 6★ yellow', jp: 'スターレベル：1★黄色から6★黄色まで', kr: '스타 레벨: 1★ 노란색부터 6★ 노란색까지', zh: '星级：从1★黄色到6★黄色' } satisfies LangMap,
   prop_reforge: { en: 'Reforge Level: from 1★ orange to 6★ orange', jp: '再鍛造レベル：1★オレンジから6★オレンジまで', kr: '재련 레벨: 1★ 주황색부터 6★ 주황색까지', zh: '重铸等级：从1★橙色到6★橙色' } satisfies LangMap,
   prop_rarity: { en: 'Grade: Normal, Superior, Epic, Legendary', jp: 'グレード：ノーマル、スーペリア、エピック、レジェンダリー', kr: '등급: 노말, 슈페리어, 에픽, 레전드', zh: '品质：普通、精良、史诗、传说' } satisfies LangMap,
-  prop_upgrade: { en: 'Upgrade Level: from 0 to +10', jp: '強化レベル：0から+10まで', kr: '강화 레벨: 0부터 +10까지', zh: '强化等级：从0到+10' } satisfies LangMap,
+  prop_upgrade: { en: 'Upgrade Level: from 0 to +10 (or +15 with Singularity Ascension)', jp: '強化レベル：0から+10まで（特異点昇華で+15まで）', kr: '강화 레벨: 0부터 +10까지 (특이점 승화로 +15까지)', zh: '强化等级：从0到+10（通过奇点升华可达+15）' } satisfies LangMap,
   prop_tier: { en: 'Breakthrough: from T0 to T4', jp: '突破：T0からT4まで', kr: '돌파: T0부터 T4까지', zh: '突破：从T0到T4' } satisfies LangMap,
   prop_set: { en: 'Set Effect or Unique Effect', jp: 'セット効果または固有効果', kr: '세트 효과 또는 고유 효과', zh: '套装效果或独特效果' } satisfies LangMap,
   prop_class: { en: 'Class restriction (Legendary weapons & accessories)', jp: 'クラス制限（レジェンダリー武器＆アクセサリー）', kr: '클래스 제한 (레전드 무기 & 액세서리)', zh: '职业限制（传说武器和饰品）' } satisfies LangMap,
@@ -141,10 +150,10 @@ const LABELS = {
 
   // Enhance
   enhanceText: {
-    en: 'Available via the Enhance menu, using hammers to increase the item\'s enhancement level up to +10. This improves the Main Stat only, based on the item\'s grade and star level.',
-    jp: '強化メニューから利用可能。ハンマーを使用してアイテムの強化レベルを+10まで上げます。これはメインステータスのみを向上させ、アイテムのグレードと星レベルに基づきます。',
-    kr: '강화 메뉴에서 사용 가능. 망치를 사용하여 아이템의 강화 레벨을 +10까지 올립니다. 이는 아이템의 등급과 별 레벨에 따라 메인 스탯만 향상시킵니다.',
-    zh: '通过强化菜单使用锤子将装备强化等级提升至+10。这只会根据装备的品质和星级提升主属性。',
+    en: 'Available via the Enhance menu, using hammers to increase the item\'s enhancement level up to +10 (or +15 once Singularity Ascension is unlocked). This improves the Main Stat only, based on the item\'s grade and star level.',
+    jp: '強化メニューから利用可能。ハンマーを使用してアイテムの強化レベルを+10まで（特異点昇華解放後は+15まで）上げます。これはメインステータスのみを向上させ、アイテムのグレードと星レベルに基づきます。',
+    kr: '강화 메뉴에서 사용 가능. 망치를 사용하여 아이템의 강화 레벨을 +10까지 (특이점 승화 해방 후 +15까지) 올립니다. 이는 아이템의 등급과 별 레벨에 따라 메인 스탯만 향상시킵니다.',
+    zh: '通过强化菜单使用锤子将装备强化等级提升至+10（解锁奇点升华后可达+15）。这只会根据装备的品质和星级提升主属性。',
   } satisfies LangMap,
   enhanceTip1: {
     en: 'You can convert hammers to a higher grade in your inventory with a 2:1 ratio.',
@@ -270,6 +279,119 @@ const LABELS = {
     jp: 'サブステにすでに4つ以上のオレンジセグメントがある場合、トランジストーン（インディビジュアル）での再抽選は避けてください。オレンジセグメントは固定されるため、再抽選の範囲が1〜3から1〜2黄色セグメントに減少します。',
     kr: '부옵션에 이미 4개 이상의 주황색 세그먼트가 있는 경우 트랜지스톤 (개별)으로 재추첨하지 마세요. 주황색 세그먼트는 고정되므로 재추첨 범위가 1-3에서 1-2 노란색 세그먼트로 줄어듭니다.',
     zh: '如果副属性已有4条或更多橙色条段，避免使用转换石（单体）重随。因为橙色条段固定，重随范围会从1-3黄色条段降至1-2条。',
+  } satisfies LangMap,
+
+  // ── Singularity Ascension section ──
+  ascension_title: { en: 'Singularity Ascension', jp: '特異点昇華', kr: '특이점 승화', zh: '奇点升华' } satisfies LangMap,
+  ascension_intro: {
+    en: 'Singularity Ascension extends the enhancement cap of a +10 / max-Reforge gear from +10 to +15. It is performed at the Singularity Ascension Device unlocked through Dimensional Singularity (Monad Gate).',
+    jp: '特異点昇華は、+10かつ再鍛造最大の装備の強化上限を+10から+15まで拡張します。次元特異点（モナドゲート）から解放される特異点昇華装置で行います。',
+    kr: '특이점 승화는 +10이며 재련이 최대인 장비의 강화 상한을 +10에서 +15까지 확장합니다. 차원 특이점(모나드 게이트)에서 해방되는 특이점 승화 장치에서 수행합니다.',
+    zh: '奇点升华可将已达到+10且重铸已满的装备强化上限从+10扩展至+15。在通过次元奇点（莫纳德之门）解锁的奇点升华装置中进行。',
+  } satisfies LangMap,
+  ascension_prereqTitle: { en: 'Prerequisites', jp: '前提条件', kr: '전제 조건', zh: '前提条件' } satisfies LangMap,
+  ascension_prereqText: {
+    en: 'The gear must be at +10 enhancement and have its Reforge counter at maximum before activation.',
+    jp: '装備は強化+10、再鍛造カウンターも最大の状態である必要があります。',
+    kr: '장비는 강화 +10이며 재련 카운터가 최대 상태여야 활성화할 수 있습니다.',
+    zh: '装备必须达到强化+10且重铸次数已满才能进行升华。',
+  } satisfies LangMap,
+  ascension_warningTitle: { en: 'Warning — Irreversible', jp: '注意 — 不可逆', kr: '주의 — 되돌릴 수 없음', zh: '警告 — 不可逆' } satisfies LangMap,
+  ascension_warningText: {
+    en: 'Once activated, the Gear Reset Module can no longer be used on this item. Any substat locks placed by Select & Change (Transistone Individual) are also cleared. Plan your build first.',
+    jp: '一度活性化すると、ギアリセットモジュールはこの装備に使用できなくなります。選択変更（トランジストーン・インディビジュアル）で設定したサブステのロックもすべて解除されます。事前にビルドを計画してください。',
+    kr: '한 번 활성화되면 기어 리셋 모듈을 더 이상 이 장비에 사용할 수 없습니다. 선택 변경 (트랜지스톤 개별)으로 설정한 부옵 잠금도 모두 해제됩니다. 빌드를 미리 계획하세요.',
+    zh: '一旦激活，装备重置模块将无法再用于该装备。通过选择更换（转换石·单体）设置的副属性锁定也会全部解除。请先规划好你的配装。',
+  } satisfies LangMap,
+
+  // Activation card
+  ascension_activationTitle: { en: 'Activation', jp: '活性化', kr: '활성화', zh: '激活' } satisfies LangMap,
+  ascension_activationDesc: {
+    en: 'Performed on a +10 / max-Reforge gear. Activation does NOT consume an enhancement level — the gear stays at +10. It raises the underlying stat multiplier (5.00 → 5.15) and grants three immediate effects:',
+    jp: '+10かつ再鍛造最大の装備に対して行います。活性化は強化レベルを消費しません — 装備は+10のままです。内部ステータス倍率を上昇させ（5.00 → 5.15）、即時に3つの効果を付与します：',
+    kr: '+10이며 재련이 최대인 장비에 수행합니다. 활성화는 강화 레벨을 소비하지 않습니다 — 장비는 +10을 유지합니다. 내부 스탯 배율이 상승하며 (5.00 → 5.15) 즉시 세 가지 효과를 부여합니다:',
+    zh: '对+10且重铸已满的装备进行。激活不会消耗强化等级 — 装备保持+10。会提升内部属性倍率（5.00 → 5.15），并立即获得三项效果：',
+  } satisfies LangMap,
+  ascension_benefit_cap: { en: 'Unlocks the +15 enhancement cap', jp: '+15強化上限を解放', kr: '+15 강화 상한 해방', zh: '解锁+15强化上限' } satisfies LangMap,
+  ascension_benefit_reforge: { en: '+3 Reforge Attempts', jp: '再鍛造回数+3', kr: '재련 횟수 +3', zh: '重铸次数+3' } satisfies LangMap,
+  ascension_benefit_mainStat: { en: '+3% Main Stat (immediate, vs the standard +10 value)', jp: 'メインステータス+3%（即時、通常の+10時の値基準）', kr: '메인 스탯 +3% (즉시, 일반 +10 시점 값 기준)', zh: '主属性+3%（立即生效，以普通+10时数值为基准）' } satisfies LangMap,
+
+  // Steps section
+  ascension_stepsTitle: { en: 'Enhancement +11 → +15', jp: '強化 +11 → +15', kr: '강화 +11 → +15', zh: '强化 +11 → +15' } satisfies LangMap,
+  ascension_stepsDesc: {
+    en: 'Once activated, you can enhance the gear from +10 to +15 across 5 successful steps. Each step consumes Gold + Singularity materials, raises the enhancement level by 1 on success, and may fail (success rate decreases as the level rises). Each step adds to the stat multiplier independently (additive, not compounded): +0.10 for each +10→+14 step (≈+2 % vs the +10 value), +0.20 for the final +14→+15 step (≈+4 %). Cumulated with activation, total Main Stat gain at +15 is ≈+15 % over the standard +10 value. The final step also unlocks a random bonus effect (offensive for Weapon/Accessory, defensive for Armor pieces).',
+    jp: '活性化後、5回の成功で装備を+10から+15まで強化できます。各段階はゴールドと特異点素材を消費し、成功時に強化レベルを1上げます（成功率はレベルが上がるにつれて低下）。各段階は内部倍率に独立して加算（複利ではなく加算）：+10→+14は各+0.10（+10時の値の約+2%相当）、最終 +14→+15 は+0.20（約+4%相当）。活性化と合わせると、+15での累計メインステ上昇は通常の+10時の値の約+15%。最終段階ではランダムなボーナス効果も解放されます（武器・アクセサリーは攻撃系、防具は防御系）。',
+    kr: '활성화 후, 장비를 5번의 성공 단계로 +10에서 +15까지 강화할 수 있습니다. 각 단계는 골드와 특이점 재료를 소비하며, 성공 시 강화 레벨을 1 올립니다 (레벨이 오를수록 성공률 감소). 각 단계는 내부 배율에 독립적으로 가산됩니다 (복리가 아닌 가산): +10→+14 각 단계 +0.10 (+10 시점 값 기준 약 +2%), 최종 +14→+15 +0.20 (약 +4%). 활성화와 합쳐, +15에서 누적 메인 스탯 상승은 일반 +10 시점 값의 약 +15%. 최종 단계에서는 랜덤 보너스 효과도 해방됩니다 (무기/액세서리는 공격형, 방어구는 방어형).',
+    zh: '激活后，可通过 5 次成功阶段将装备从 +10 提升至 +15。每一阶段消耗金币和奇点材料，成功时强化等级 +1（随等级提升，成功率递减）。每一阶段对内部倍率独立叠加（加法，非复利）：+10→+14 每段 +0.10（相当于 +10 时数值的约 +2%），最终 +14→+15 +0.20（约 +4%）。结合激活，+15 时主属性累计提升约为普通 +10 时数值的 +15%。最终阶段还会解锁随机额外效果（武器/饰品为攻击系，防具为防御系）。',
+  } satisfies LangMap,
+  // Failure note (verified in-game)
+  ascension_failTitle: { en: 'On Failure', jp: '失敗時', kr: '실패 시', zh: '失败时' } satisfies LangMap,
+  ascension_failText: {
+    en: 'A failed step has no impact on the gear: no level loss, no stat penalty, no bonus reset. Only the Gold and materials spent on that attempt are consumed — you can simply retry.',
+    jp: '失敗しても装備への影響は一切ありません：レベル低下なし、ステータス低下なし、ボーナスのリセットなし。失敗した試行のゴールドと素材のみが消費され、そのまま再挑戦できます。',
+    kr: '실패해도 장비에 영향은 전혀 없습니다: 레벨 감소 없음, 스탯 감소 없음, 보너스 초기화 없음. 실패한 시도의 골드와 재료만 소모되며, 바로 다시 시도할 수 있습니다.',
+    zh: '失败不会对装备产生任何影响：不会掉级、不会降低属性、不会重置加成。仅消耗本次尝试所用的金币和材料，可直接重试。',
+  } satisfies LangMap,
+
+  // Steps table headers
+  ascensionTable_from: { en: 'Step', jp: '段階', kr: '단계', zh: '阶段' } satisfies LangMap,
+  ascensionTable_success: { en: 'Success', jp: '成功率', kr: '성공률', zh: '成功率' } satisfies LangMap,
+  ascensionTable_gold: { en: 'Gold', jp: 'ゴールド', kr: '골드', zh: '金币' } satisfies LangMap,
+  ascensionTable_chip: { en: 'Chip', jp: 'チップ', kr: '칩', zh: '芯片' } satisfies LangMap,
+  ascensionTable_hammer: { en: 'Hammer', jp: 'ハンマー', kr: '망치', zh: '锤子' } satisfies LangMap,
+  ascensionTable_mainStat: { en: 'Main Stat', jp: 'メインステ', kr: '메인 스탯', zh: '主属性' } satisfies LangMap,
+  ascensionTable_bonus: { en: 'Bonus', jp: 'ボーナス', kr: '보너스', zh: '加成' } satisfies LangMap,
+
+  // Bonus effects section
+  ascension_bonusTitle: { en: 'Bonus Effect at +15', jp: '+15時のボーナス効果', kr: '+15 보너스 효과', zh: '+15额外效果' } satisfies LangMap,
+  ascension_bonusDesc: {
+    en: 'When the +14 → +15 step succeeds, the gear gains one random bonus effect. The pool depends on the slot: offensive options for Weapons & Accessories, defensive options for Armor pieces. Within each pool, the rolled tier determines a grade from C (lowest) to S+ (highest).',
+    jp: '+14 → +15が成功すると、装備はランダムなボーナス効果を1つ獲得します。プールはスロットに依存します：武器・アクセサリーは攻撃系オプション、防具系は防御系オプションです。各プール内で抽選された段階により、グレードがC（最低）からS+（最高）まで決定されます。',
+    kr: '+14 → +15에 성공하면 장비는 랜덤 보너스 효과 1개를 얻습니다. 풀은 슬롯에 따라 다릅니다: 무기·액세서리는 공격형 옵션, 방어구 계열은 방어형 옵션. 각 풀 내에서 추첨된 단계에 따라 C(최저)부터 S+(최고)까지의 등급이 결정됩니다.',
+    zh: '+14 → +15 成功时装备获得一项随机额外效果。效果池根据装备槽位决定：武器与饰品为攻击型选项，防具类为防御型选项。每个池内根据抽到的阶段确定从C（最低）到S+（最高）的等级。',
+  } satisfies LangMap,
+  ascension_offensiveTitle: { en: 'Offensive Pool — Weapon & Accessory', jp: '攻撃プール — 武器＆アクセサリー', kr: '공격 풀 — 무기 & 액세서리', zh: '攻击池 — 武器与饰品' } satisfies LangMap,
+  ascension_defensiveTitle: { en: 'Defensive Pool — Helmet, Armor, Gloves, Shoes', jp: '防御プール — ヘルメット・アーマー・グローブ・シューズ', kr: '방어 풀 — 헬멧, 아머, 장갑, 신발', zh: '防御池 — 头盔、护甲、手套、鞋子' } satisfies LangMap,
+  ascension_gradeLegend: { en: 'Grade legend (C → S+):', jp: 'グレード一覧（C → S+）：', kr: '등급 표시 (C → S+):', zh: '等级图例（C → S+）：' } satisfies LangMap,
+  ascension_randomTitle: { en: 'Random Element', jp: '属性はランダム', kr: '속성 랜덤', zh: '属性随机' } satisfies LangMap,
+  ascension_randomText: {
+    en: 'For elemental options, the targeted element is rolled randomly from the 5 elements at +14 → +15 (each element has its own ~12 % pool slot). The in-game label is a generic "Elemental Target DMG Increase" / "Reduced DMG Taken vs Element"; the actual rolled element is fixed once obtained and can only change via Reload Cartridge.',
+    jp: '属性オプションでは、+14 → +15で5属性の中からランダムに対象属性が決定されます（各属性は独立して約12%のプール枠を持ちます）。ゲーム内の表示は汎用的な「属性対象ダメージUP」「属性対象受ダメージDOWN」で、抽選結果の属性はリロードカートリッジで再抽選しない限り変更できません。',
+    kr: '속성 옵션의 경우 +14 → +15 단계에서 5속성 중 하나가 랜덤으로 결정됩니다 (각 속성은 약 12% 의 풀을 차지). 게임 내 표시는 일반적인 "속성 대상 피해 증가" / "속성 대상 받는 피해 감소"이며, 일단 추첨된 속성은 리로드 카트리지로 재추첨하기 전까지 고정됩니다.',
+    zh: '对于属性类选项，目标属性在 +14 → +15 时从 5 种属性中随机抽选（每种属性独立占约 12% 池权重）。游戏内显示为通用「属性目标伤害提升」/「受属性目标伤害减免」，抽中的属性会被固定，仅能通过换弹匣重新随机。',
+  } satisfies LangMap,
+  ascension_defensiveSplitNote: {
+    en: 'F/W/E ≈ rolled vs Fire/Water/Earth (~36 % combined pool, range 20 %–50 %) · L/D ≈ rolled vs Light/Dark (~24 % combined pool, range 15 %–25 %).',
+    jp: 'F/W/E ≈ 火/水/土に対する抽選（合計約36%、範囲20%〜50%）・L/D ≈ 光/闇に対する抽選（合計約24%、範囲15%〜25%）。',
+    kr: 'F/W/E ≈ 화/수/토 추첨 (합계 약 36%, 범위 20%–50%) · L/D ≈ 광/암 추첨 (합계 약 24%, 범위 15%–25%).',
+    zh: 'F/W/E ≈ 抽中火/水/地（合计约 36%，范围 20%–50%）· L/D ≈ 抽中光/暗（合计约 24%，范围 15%–25%）。',
+  } satisfies LangMap,
+  ascension_modeSimple: { en: 'Simple', jp: 'シンプル', kr: '간단', zh: '简洁' } satisfies LangMap,
+  ascension_modeComplete: { en: 'Complete', jp: '完全', kr: '상세', zh: '完整' } satisfies LangMap,
+
+  // Bonus table headers
+  ascensionBonus_effect: { en: 'Effect', jp: '効果', kr: '효과', zh: '效果' } satisfies LangMap,
+  ascensionBonus_chance: { en: 'Pool chance', jp: '出現率', kr: '풀 확률', zh: '出现概率' } satisfies LangMap,
+  ascensionBonus_range: { en: 'Range (C → S+)', jp: '範囲（C → S+）', kr: '범위 (C → S+)', zh: '范围（C → S+）' } satisfies LangMap,
+
+  // Effect names (offensive)
+  bonus_dmg: { en: 'DMG Increase', jp: 'ダメージUP', kr: '피해 증가', zh: '伤害提升' } satisfies LangMap,
+  bonus_dmg_singular: { en: 'DMG Increase (in Singularity)', jp: 'ダメージUP（特異点内）', kr: '피해 증가 (특이점 내)', zh: '伤害提升（奇点内）' } satisfies LangMap,
+  bonus_dmg_skill3_singular: { en: 'Ultimate Skill DMG Increase (in Singularity)', jp: 'アルティメットスキルダメージUP（特異点内）', kr: '궁극기 피해 증가 (특이점 내)', zh: '终极技能伤害提升（奇点内）' } satisfies LangMap,
+  bonus_dmg_to_element: { en: 'Elemental Target DMG Increase (random element)', jp: '属性対象ダメージUP（属性ランダム）', kr: '속성 대상 피해 증가 (속성 랜덤)', zh: '属性目标伤害提升（属性随机）' } satisfies LangMap,
+
+  // Effect names (defensive)
+  bonus_dmg_reduce: { en: 'DMG Reduction', jp: '被ダメージDOWN', kr: '받는 피해 감소', zh: '受到伤害减免' } satisfies LangMap,
+  bonus_dmg_reduce_singular: { en: 'DMG Reduction (in Singularity)', jp: '被ダメージDOWN（特異点内）', kr: '받는 피해 감소 (특이점 내)', zh: '受到伤害减免（奇点内）' } satisfies LangMap,
+  bonus_dmg_reduce_by_element: { en: 'Reduced DMG Taken vs Element (random element)', jp: '属性対象受ダメージDOWN（属性ランダム）', kr: '속성 대상 받는 피해 감소 (속성 랜덤)', zh: '受属性目标伤害减免（属性随机）' } satisfies LangMap,
+
+  // Reroll
+  ascension_rerollTitle: { en: 'Reroll the Bonus (Reload Cartridge)', jp: 'ボーナス再抽選（リロードカートリッジ）', kr: '보너스 재추첨 (리로드 카트리지)', zh: '重新随机额外效果（换弹匣）' } satisfies LangMap,
+  ascension_rerollDesc: {
+    en: 'Once a bonus effect is set at +15, it can be rerolled at any time using a Reload Cartridge. The reroll changes the rolled effect within the same pool — useful for chasing higher tiers or a specific element.',
+    jp: '+15で設定されたボーナス効果は、リロードカートリッジを使用していつでも再抽選できます。再抽選は同じプール内で抽選結果を変更します — 高い段階や特定の属性を狙う際に便利です。',
+    kr: '+15에서 설정된 보너스 효과는 언제든 리로드 카트리지를 사용해 재추첨할 수 있습니다. 재추첨은 같은 풀 내에서 결과를 변경합니다 — 높은 등급이나 특정 속성을 노릴 때 유용합니다.',
+    zh: '+15 设定的额外效果可随时使用换弹匣重新随机。重新随机会在同一池中更换效果，适合追求更高等级或特定属性。',
   } satisfies LangMap,
 
   // ── Obtaining section ──
@@ -419,18 +541,25 @@ const LABELS = {
 // MAIN COMPONENT
 // ============================================================================
 
-const TAB_KEYS: TabKey[] = ['basics', 'upgrading', 'obtaining', 'faq'];
+const TAB_KEYS: TabKey[] = ['basics', 'upgrading', 'ascension', 'obtaining', 'faq'];
 
 export default function GearGuide() {
   const { lang } = useI18n();
   const [selected, setSelected] = useState<TabKey>('basics');
   const onChange = useCallback((v: string) => setSelected(v as TabKey), []);
 
-  const tabLabels = [lRec(LABELS.tab_basics, lang), lRec(LABELS.tab_upgrading, lang), lRec(LABELS.tab_obtaining, lang), lRec(LABELS.tab_faq, lang)];
+  const tabLabels = [
+    lRec(LABELS.tab_basics, lang),
+    lRec(LABELS.tab_upgrading, lang),
+    lRec(LABELS.tab_ascension, lang),
+    lRec(LABELS.tab_obtaining, lang),
+    lRec(LABELS.tab_faq, lang),
+  ];
 
   const content: Record<TabKey, React.ReactNode> = {
     basics: <GearBasicsContent />,
     upgrading: <UpgradingGearContent />,
+    ascension: <AscensionGearContent />,
     obtaining: <ObtainingGearContent />,
     faq: <FAQContent />,
   };
@@ -592,6 +721,149 @@ function UpgradingGearContent() {
         <div className="mt-4 rounded-lg border border-yellow-500/30 bg-yellow-900/20 p-4">
           <p className="font-semibold text-yellow-300">{lRec(LABELS.changeStatsWarningTitle, lang)}</p>
           <p className="mt-1 text-sm">{lRec(LABELS.changeStatsWarningText, lang)}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================================
+// SINGULARITY ASCENSION CONTENT (gear cap +10 → +15)
+// ============================================================================
+
+function AscensionGearContent() {
+  const { lang } = useI18n();
+  const [bonusMode, setBonusMode] = useState<BonusTableMode>('simple');
+
+  const stepLabels = {
+    from: lRec(LABELS.ascensionTable_from, lang),
+    success: lRec(LABELS.ascensionTable_success, lang),
+    gold: lRec(LABELS.ascensionTable_gold, lang),
+    chip: lRec(LABELS.ascensionTable_chip, lang),
+    hammer: lRec(LABELS.ascensionTable_hammer, lang),
+    mainStat: lRec(LABELS.ascensionTable_mainStat, lang),
+    bonus: lRec(LABELS.ascensionTable_bonus, lang),
+  };
+
+  const bonusLabels = {
+    effect: lRec(LABELS.ascensionBonus_effect, lang),
+    chance: lRec(LABELS.ascensionBonus_chance, lang),
+    range: lRec(LABELS.ascensionBonus_range, lang),
+  };
+
+  const offensiveNames: Record<string, string> = {
+    dmg: lRec(LABELS.bonus_dmg, lang),
+    dmg_singular: lRec(LABELS.bonus_dmg_singular, lang),
+    dmg_skill3_singular: lRec(LABELS.bonus_dmg_skill3_singular, lang),
+    dmg_to_element: lRec(LABELS.bonus_dmg_to_element, lang),
+  };
+
+  const defensiveNames: Record<string, string> = {
+    dmg_reduce: lRec(LABELS.bonus_dmg_reduce, lang),
+    dmg_reduce_singular: lRec(LABELS.bonus_dmg_reduce_singular, lang),
+    dmg_reduce_by_element: lRec(LABELS.bonus_dmg_reduce_by_element, lang),
+  };
+
+  return (
+    <div className="space-y-8">
+      <h2>{lRec(LABELS.ascension_title, lang)}</h2>
+      <p className="text-neutral-300">{lRec(LABELS.ascension_intro, lang)}</p>
+
+      {/* Prerequisites + warning */}
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-5">
+          <h3 className="font-semibold text-emerald-300">{lRec(LABELS.ascension_prereqTitle, lang)}</h3>
+          <p className="mt-2 text-sm text-neutral-300">{lRec(LABELS.ascension_prereqText, lang)}</p>
+        </div>
+        <div className="rounded-xl border border-amber-500/40 bg-amber-900/20 p-5">
+          <h3 className="font-semibold text-amber-300">{lRec(LABELS.ascension_warningTitle, lang)}</h3>
+          <p className="mt-2 text-sm text-neutral-200">{lRec(LABELS.ascension_warningText, lang)}</p>
+        </div>
+      </div>
+
+      {/* Activation */}
+      <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6 space-y-4">
+        <SectionHeader number={1} title={lRec(LABELS.ascension_activationTitle, lang)} color="emerald" />
+        <p>{lRec(LABELS.ascension_activationDesc, lang)}</p>
+        <ul className="space-y-1.5 text-sm text-neutral-200">
+          <li className="flex items-center gap-2"><span className="text-emerald-400">●</span> {lRec(LABELS.ascension_benefit_cap, lang)}</li>
+          <li className="flex items-center gap-2"><span className="text-emerald-400">●</span> {lRec(LABELS.ascension_benefit_reforge, lang)}</li>
+          <li className="flex items-center gap-2"><span className="text-emerald-400">●</span> {lRec(LABELS.ascension_benefit_mainStat, lang)}</li>
+        </ul>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-lg border border-slate-600 bg-slate-900/50 p-4 text-sm">
+          <span className="font-semibold text-amber-300">{ASCENSION_INIT.gold.toLocaleString('en')} <span className="text-xs font-normal text-neutral-400">Gold</span></span>
+          <span className="flex items-center gap-1.5"><ItemInline name="High-Precision Chip" /> ×{ASCENSION_INIT.chip}</span>
+          <span className="flex items-center gap-1.5"><ItemInline name="Artisan's Hammer" /> ×{ASCENSION_INIT.hammer}</span>
+        </div>
+      </div>
+
+      {/* Steps */}
+      <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6 space-y-4">
+        <SectionHeader number={2} title={lRec(LABELS.ascension_stepsTitle, lang)} color="amber" />
+        <p>{lRec(LABELS.ascension_stepsDesc, lang)}</p>
+        <AscensionStepsTable labels={stepLabels} />
+        <div className="rounded-lg border border-emerald-500/40 bg-emerald-900/20 p-4 text-sm">
+          <p className="font-semibold text-emerald-300">{lRec(LABELS.ascension_failTitle, lang)}</p>
+          <p className="mt-1 text-neutral-200">{lRec(LABELS.ascension_failText, lang)}</p>
+        </div>
+      </div>
+
+      {/* Bonus effects */}
+      <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6 space-y-5">
+        <SectionHeader number={3} title={lRec(LABELS.ascension_bonusTitle, lang)} color="purple" />
+        <p>{lRec(LABELS.ascension_bonusDesc, lang)}</p>
+
+        <div className="rounded-lg border border-cyan-500/40 bg-cyan-900/20 p-4 text-sm">
+          <p className="font-semibold text-cyan-300">{lRec(LABELS.ascension_randomTitle, lang)}</p>
+          <p className="mt-1 text-neutral-200">{lRec(LABELS.ascension_randomText, lang)}</p>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <GradeLegend label={lRec(LABELS.ascension_gradeLegend, lang)} />
+          <div className="inline-flex rounded-lg border border-slate-600 bg-slate-900/60 p-0.5 text-sm">
+            {(['simple', 'complete'] as const).map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => setBonusMode(m)}
+                className={`rounded-md px-3 py-1 transition-colors ${bonusMode === m ? 'bg-purple-600 font-semibold text-white' : 'text-neutral-300 hover:text-white'}`}
+              >
+                {lRec(m === 'simple' ? LABELS.ascension_modeSimple : LABELS.ascension_modeComplete, lang)}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 className="mb-2 font-semibold text-red-300">{lRec(LABELS.ascension_offensiveTitle, lang)}</h3>
+          <AscensionBonusEffectsTable
+            effects={ASCENSION_BONUS_OFFENSIVE}
+            effectNames={offensiveNames}
+            labels={bonusLabels}
+            mode={bonusMode}
+          />
+        </div>
+
+        <div>
+          <h3 className="mb-2 font-semibold text-blue-300">{lRec(LABELS.ascension_defensiveTitle, lang)}</h3>
+          <AscensionBonusEffectsTable
+            effects={ASCENSION_BONUS_DEFENSIVE}
+            effectNames={defensiveNames}
+            labels={bonusLabels}
+            mode={bonusMode}
+          />
+          <p className="mt-2 text-xs text-neutral-400 italic">{lRec(LABELS.ascension_defensiveSplitNote, lang)}</p>
+        </div>
+      </div>
+
+      {/* Reroll */}
+      <div className="rounded-xl border border-slate-700 bg-linear-to-br from-slate-800/50 to-slate-900/30 p-6 space-y-4">
+        <SectionHeader number={4} title={lRec(LABELS.ascension_rerollTitle, lang)} color="cyan" />
+        <p>{lRec(LABELS.ascension_rerollDesc, lang)}</p>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-lg border border-slate-600 bg-slate-900/50 p-4 text-sm">
+          <span className="font-semibold text-amber-300">{ASCENSION_REROLL.gold.toLocaleString('en')} <span className="text-xs font-normal text-neutral-400">Gold</span></span>
+          <span className="flex items-center gap-1.5"><ItemInline name="Reload Cartridge" /> ×{ASCENSION_REROLL.cartridge}</span>
+          <span className="rounded bg-emerald-900/40 px-2 py-0.5 text-xs text-emerald-300">100%</span>
         </div>
       </div>
     </div>

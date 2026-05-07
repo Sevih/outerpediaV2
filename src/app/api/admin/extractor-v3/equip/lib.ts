@@ -450,6 +450,7 @@ export function extractItems(cfg: ItemConfig, t: EquipTables, bossMap: Map<strin
     const maxLevel = buffIdStr ? getMaxLevel(t.buffsByID, buffIdStr) : 1
 
     const extracted: Record<string, unknown> = {
+      id,
       ...expandLang('name', nameTexts),
       type: cfg.typeName,
       rarity: resolveRarity(row, t.textSystemMap),
@@ -593,6 +594,7 @@ export function extractSets(t: EquipTables): ExtractedItem[] {
     const boss = groupToBoss.get(groupId) ?? null
 
     const extracted: Record<string, unknown> = {
+      id: groupId,
       ...expandLang('name', nameTexts),
       rarity,
       set_icon: tier0.IconName ?? '',
@@ -642,6 +644,7 @@ export function extractTalismans(t: EquipTables): ExtractedItem[] {
     const type = baseBuffId.includes('_AP_') ? 'AP' : 'CP'
 
     const extracted: Record<string, unknown> = {
+      id,
       ...expandLang('name', nameTexts),
       type,
       rarity: resolveRarity(row, t.textSystemMap),

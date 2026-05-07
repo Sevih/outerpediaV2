@@ -1,0 +1,62 @@
+import { existsSync, readFileSync, statSync, writeFileSync, mkdirSync } from 'fs';
+import { execFileSync } from 'child_process';
+import { join, dirname } from 'path';
+import { PATHS } from '../config';
+
+const SCRIPT = join(__dirname, '../../scripts/generate-singularity-ascension.py');
+const OUTPUT = join(PATHS.generated, 'singularity-ascension.json');
+const STAMP = join(PATHS.generated, '.singularity-ascension-stamp');
+
+const REQUIRED_INPUTS = [
+  'SingularityEquipEnchantTemplet',
+  'ItemSpecialOptionTemplet',
+  'TextSkill',
+  'TextItem',
+  'TextSystem',
+  'ItemTemplet',
+];
+
+function latestInputMtime(): number {
+  let latest = 0;
+  for (const name of REQUIRED_INPUTS) {
+    const p = join(PATHS.adminJson2, `${name}.json`);
+    if (!existsSync(p)) return 0;
+    const m = statSync(p).mtimeMs;
+    if (m > latest) latest = m;
+  }
+  return latest;
+}
+
+export async function run() {
+  if (!existsSync(SCRIPT)) {
+    return 'skipped (script missing)';
+  }
+
+  if (!existsSync(PATHS.adminJson2)) {
+    return existsSync(OUTPUT) ? 'skipped (no json2, using existing)' : 'skipped (no json2)';
+  }
+
+  const latest = latestInputMtime();
+  if (latest === 0) {
+    return existsSync(OUTPUT) ? 'skipped (missing inputs, using existing)' : 'skipped (missing inputs)';
+  }
+
+  // Up-to-date check
+  if (existsSync(STAMP) && existsSync(OUTPUT)) {
+    const saved = Number(readFileSync(STAMP, 'utf-8').trim());
+    if (saved >= latest) {
+      return 'up to date';
+    }
+  }
+
+  execFileSync('python', [SCRIPT], { timeout: 60_000, stdio: 'ignore' });
+
+  if (!existsSync(OUTPUT)) {
+    // Script may have skipped silently; do not write a stamp in that case.
+    return 'skipped (no output)';
+  }
+
+  mkdirSync(dirname(STAMP), { recursive: true });
+  writeFileSync(STAMP, String(latest), 'utf-8');
+  return 'regenerated';
+}
