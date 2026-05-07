@@ -5,6 +5,8 @@ import type { ItemRarity } from '@/lib/theme';
 // ── Weapon / Amulet ──
 
 type BaseEquipGear = {
+  /** ItemID from the game (`ItemTemplet.ID`). Disambiguates items that share the same name + rarity but have different base stats. */
+  id?: string;
   name: string;
   type: string;
   rarity: ItemRarity;
