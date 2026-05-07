@@ -13,6 +13,13 @@ export async function run() {
     return 'skipped (script missing)';
   }
 
+  // Upstream gate — ascension-view is a derived view of singularity-ascension.json,
+  // which itself only refreshes when the json2 datamine is present. Mirror the same
+  // skip behaviour so prod builds (no json2) reuse the committed output cleanly.
+  if (!existsSync(PATHS.adminJson2)) {
+    return existsSync(OUTPUT) ? 'skipped (no json2, using existing)' : 'skipped (no json2)';
+  }
+
   if (!existsSync(SOURCE)) {
     return existsSync(OUTPUT) ? 'skipped (no source, using existing)' : 'skipped (no source)';
   }
