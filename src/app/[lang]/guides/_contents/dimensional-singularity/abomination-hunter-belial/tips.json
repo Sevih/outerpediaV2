@@ -1,0 +1,44 @@
+{
+  "general": [
+    {
+      "en": "Boss applies {D/BT_DOT_BURN} on every hit and detonates all Burn stacks on its Ultimate, dealing AoE burst damage based on accumulated stacks.",
+      "jp": "ボスは攻撃のたびに{D/BT_DOT_BURN}を付与し、必殺技で蓄積した火傷スタックをすべて破裂させて全体に大ダメージを与える。",
+      "kr": "보스는 모든 공격마다 {D/BT_DOT_BURN}을 부여하며, 필살기로 누적된 화상 스택을 모두 폭발시켜 전체에 큰 피해를 입힙니다.",
+      "zh": "Boss每次攻击附加{D/BT_DOT_BURN}，必杀技引爆所有累积的烧伤层数对全体造成爆发伤害。"
+    },
+    {
+      "en": "{D/BT_DOT_BURN}d targets take +50% DMG from the boss (Monster Hunter's Crucible) — heal through or cleanse Burn off the carry.",
+      "jp": "{D/BT_DOT_BURN}を保有する対象はボスから受けるダメージ+50%（モンスターハンターの坩堝）。ヒールでカバーするかキャリアの火傷を解除する。",
+      "kr": "{D/BT_DOT_BURN}을 보유한 대상은 보스로부터 받는 피해 +50%(흉물 사냥꾼의 도가니) — 힐로 버티거나 메인 딜러의 화상을 정화하세요.",
+      "zh": "持有{D/BT_DOT_BURN}的目标受到Boss的伤害+50%（怪物猎手的熔炉）——通过治疗硬扛或为主C净化烧伤。"
+    },
+    {
+      "en": "The boss self-cleanses 1 of its own debuffs at the start of each turn (Hunting Time) — long-duration debuffs lose value, prefer reapplying every turn.",
+      "jp": "ボスはターン開始時に自分の弱体効果を1個解除する（狩りの時間）。長時間のデバフは価値が薄いので、毎ターン再付与する構成を優先。",
+      "kr": "보스는 턴 시작 시 자신의 약화 효과 1개를 해제합니다(수렵의 시간) — 장기 디버프는 가치가 떨어지므로 매턴 재부여가 가능한 구성이 좋습니다.",
+      "zh": "Boss每回合开始时解除自身1个弱化效果（狩猎时刻）——长持续时间的弱化效果价值较低，优先选择每回合可重新附加的角色。"
+    }
+  ],
+  "freeze": [
+    {
+      "en": "Apply {D/BT_FREEZE} on the boss to trigger Hunting Time's +100% DMG taken effect.",
+      "jp": "ボスに{D/BT_FREEZE}を付与して、狩りの時間の被ダメージ+100%効果を発動させる。",
+      "kr": "보스에게 {D/BT_FREEZE}를 부여해 수렵의 시간의 피해 +100% 효과를 발동시키세요.",
+      "zh": "对Boss附加{D/BT_FREEZE}以触发狩猎时刻的受到伤害+100%效果。"
+    },
+    {
+      "en": "Reapply Freeze every turn since the boss self-cleanses 1 debuff per turn — bring multiple Freeze sources or a frequent reapplier.",
+      "jp": "ボスは毎ターン弱体効果を1個解除するため、毎ターン{D/BT_FREEZE}を再付与する必要がある。複数の凍結源、または頻繁に再付与できるユニットを採用する。",
+      "kr": "보스가 매턴 약화 효과 1개를 해제하므로 {D/BT_FREEZE}를 매턴 재부여해야 합니다. 여러 빙결 소스나 빈번한 재부여 캐릭터를 채용하세요.",
+      "zh": "Boss每回合解除1个弱化效果，因此需要每回合重新附加{D/BT_FREEZE}——携带多个冰冻来源或可频繁重附加的角色。"
+    }
+  ],
+  "dot": [
+    {
+      "en": "Build the team around {P/Gnosis Beth} : {D/BT_EXTEND_DEBUFF} and {B/BT_CALL_BACKUP}.",
+      "jp": "{P/Gnosis Beth}を中心に編成する：{D/BT_EXTEND_DEBUFF}と{B/BT_CALL_BACKUP}。",
+      "kr": "{P/Gnosis Beth}를 중심으로 구성: {D/BT_EXTEND_DEBUFF}와 {B/BT_CALL_BACKUP}.",
+      "zh": "以{P/Gnosis Beth}为核心组队：{D/BT_EXTEND_DEBUFF}与{B/BT_CALL_BACKUP}。"
+    }
+  ]
+}
