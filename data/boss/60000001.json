@@ -107,7 +107,7 @@
         "zh": "进入战斗时对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>烧伤</color>，\\n对持有烧伤的目标造成的伤害增加<color=#28d9ed>50%</color>。"
       },
       "icon": "MT_Passive_1_Fire",
-            "debuff": [
+      "debuff": [
         "BT_DOT_BURN"
       ]
     },
@@ -126,7 +126,6 @@
         "zh": "若自身被附加<color=#28d9ed>冰冻</color>，受到的伤害增加<color=#28d9ed>100%</color>。\\n每回合开始时解除<color=#28d9ed>1个</color><color=#28d9ed>弱化效果</color>。"
       },
       "icon": "MT_Passive_1_Fire",
-      
       "buff": [
         "BT_REMOVE_DEBUFF"
       ]
@@ -166,8 +165,8 @@
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
-        "BT_DAMAGE_TAKEN",
         "BT_STAT|ST_SPEED_IR",
+        "BT_DAMAGE_TAKEN",
         "BT_IMMUNE"
       ]
     }

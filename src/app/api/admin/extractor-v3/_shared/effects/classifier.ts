@@ -357,13 +357,16 @@ export function classifyEffects(
   // re-added to debuff and then stripped from buff via `removeBuff`.
   const mode = ctx.forcedOverridesMode ?? 'full'
   // Forced-override lookup order (most specific first):
-  //   1. `skill:${skillName}`             — keyed by English skill name
-  //   2. `${ownerName}|${dungeonName}`    — single floor / single dungeon
-  //   3. `${ownerName}|${modeName}`       — whole game mode
-  //   4. `${ownerId}`                     — opaque ID fallback (legacy)
+  //   1. `skill:${skillName}|${ownerId}`  — owner-scoped skill name
+  //   2. `skill:${skillName}`             — global skill name
+  //   3. `${ownerName}|${dungeonName}`    — single floor / single dungeon
+  //   4. `${ownerName}|${modeName}`       — whole game mode
+  //   5. `${ownerId}`                     — opaque ID fallback (legacy)
   // The first key that contains an entry for `skillType` wins. The
-  // `skill:<name>` form uses a `'*'` sub-key so authors don't have to
+  // `skill:<name>` forms accept a `'*'` sub-key so authors don't have to
   // repeat the skill type — the name is already specific enough.
+  const skillNameOwnerKey =
+    ctx.skillName && ctx.ownerId ? `skill:${ctx.skillName}|${ctx.ownerId}` : null
   const skillNameKey = ctx.skillName ? `skill:${ctx.skillName}` : null
   const dungeonKey =
     ctx.ownerName && ctx.dungeonName ? `${ctx.ownerName}|${ctx.dungeonName}` : null
@@ -376,7 +379,8 @@ export function classifyEffects(
   const forced =
     mode === 'none'
       ? undefined
-      : lookupForcedByName(skillNameKey) ??
+      : lookupForcedByName(skillNameOwnerKey) ??
+        lookupForcedByName(skillNameKey) ??
         lookupForced(dungeonKey) ??
         lookupForced(modeKey) ??
         rules.forcedOverrides[ctx.ownerId]?.[ctx.skillType]

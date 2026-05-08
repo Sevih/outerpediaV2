@@ -1,0 +1,36 @@
+'use client';
+
+import GuideTemplate from '@/app/components/guides/GuideTemplate';
+import BossDisplay from '@/app/components/guides/BossDisplay';
+import { useI18n } from '@/lib/contexts/I18nContext';
+import { lRec } from '@/lib/i18n/localize';
+import type { Boss } from '@/types/boss';
+import type { LangMap } from '@/types/common';
+
+import strings from './strings.json';
+import boss60000010 from '@data/boss/60000010.json';
+
+const STRINGS = strings as Record<string, LangMap>;
+
+const preloadedBosses: Record<string, Boss> = {
+  '60000010': boss60000010 as unknown as Boss,
+};
+
+export default function UrdGuide() {
+  const { lang } = useI18n();
+
+  return (
+    <GuideTemplate
+      title={lRec(STRINGS.title, lang)}
+      introduction={lRec(STRINGS.intro, lang)}
+      updating
+    >
+      <BossDisplay
+        bossName="Urd"
+        modeKey="Dimensional Singularity"
+        defaultBossId="60000010"
+        preloadedBosses={preloadedBosses}
+      />
+    </GuideTemplate>
+  );
+}

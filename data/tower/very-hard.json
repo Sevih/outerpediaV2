@@ -391,6 +391,22 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": [
+            "BanStriker"
+          ],
+          "recommended": [
+            {
+              "names": [],
+              "reason": {
+                "en": "",
+                "jp": "",
+                "kr": "",
+                "zh": ""
+              }
+            }
+          ]
         }
       ]
     },
@@ -915,20 +931,6 @@
             },
             {
               "names": [
-                "2000074",
-                "2000058",
-                "2000113",
-                "2000108"
-              ],
-              "reason": {
-                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
-                "jp": "{B/BT_REMOVE_DEBUFF}と{B/BT_IMMUNE}のオプション",
-                "kr": "{B/BT_REMOVE_DEBUFF}와 {B/BT_IMMUNE} 옵션",
-                "zh": "{B/BT_REMOVE_DEBUFF}与{B/BT_IMMUNE}选项"
-              }
-            },
-            {
-              "names": [
                 "2000100",
                 "2000098",
                 "2000084",
@@ -1009,6 +1011,54 @@
                 "jp": "{B/BT_IMMUNE}オプション",
                 "kr": "{B/BT_IMMUNE} 옵션",
                 "zh": "{B/BT_IMMUNE}选项"
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_Dark"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000100",
+                "2000083"
+              ],
+              "reason": {
+                "en": "Validate restriction and have {B/BT_REMOVE_DEBUFF} or {B/BT_IMMUNE}.",
+                "jp": "制限を満たし、{B/BT_REMOVE_DEBUFF}を持つこと。",
+                "kr": "제한을 충족하고 {B/BT_REMOVE_DEBUFF}을 보유.",
+                "zh": "满足限制并拥有{B/BT_REMOVE_DEBUFF}。"
+              }
+            },
+            {
+              "names": [
+                "2000017",
+                "2000038",
+                "2000026",
+                "2000098",
+                "2000084"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} options",
+                "jp": "{B/BT_REMOVE_DEBUFF}オプション",
+                "kr": "{B/BT_REMOVE_DEBUFF} 옵션",
+                "zh": "{B/BT_REMOVE_DEBUFF}选项"
+              }
+            },
+            {
+              "names": [
+                "2000074",
+                "2000058",
+                "2000113",
+                "2000108"
+              ],
+              "reason": {
+                "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_IMMUNE} options",
+                "jp": "{B/BT_REMOVE_DEBUFF}と{B/BT_IMMUNE}のオプション",
+                "kr": "{B/BT_REMOVE_DEBUFF}와 {B/BT_IMMUNE} 옵션",
+                "zh": "{B/BT_REMOVE_DEBUFF}与{B/BT_IMMUNE}选项"
               }
             }
           ]
@@ -2836,6 +2886,39 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": [
+            "BanDark"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000113",
+                "2000068",
+                "2700003",
+                "2000107"
+              ],
+              "reason": {
+                "en": "{D/BT_FREEZE} options",
+                "jp": "{D/BT_FREEZE}オプション",
+                "kr": "{D/BT_FREEZE} 옵션",
+                "zh": "{D/BT_FREEZE}选项"
+              }
+            },
+            {
+              "names": [
+                "2000091",
+                "2000046"
+              ],
+              "reason": {
+                "en": "{D/BT_STUN} options",
+                "jp": "{D/BT_STUN}オプション",
+                "kr": "{D/BT_STUN} 옵션",
+                "zh": "{D/BT_STUN}选项"
+              }
+            }
+          ]
         }
       ]
     },
@@ -3285,6 +3368,24 @@
                 "jp": "制限を満たすこと。",
                 "kr": "제한 충족.",
                 "zh": "满足限制。"
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_Fire"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000055"
+              ],
+              "reason": {
+                "en": "Validate restriction and hit hard.",
+                "jp": "制限を満たし、強力な火力で殴ること。",
+                "kr": "제한을 충족하고 강력한 화력으로 공격.",
+                "zh": "满足限制并全力输出。"
               }
             }
           ]

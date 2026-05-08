@@ -106,6 +106,19 @@ export default function HarshnaGuide() {
               <RecommendedCharacterList title="phase2" entries={may2026.phase2} />
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={may2026.teams} defaultStage="No Debuff Team" />
+              <hr className="my-6 border-neutral-700" />
+              <MultiVideoEmbed
+                hashPrefix="harshna-jul2025-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 's9NPUwuSHGI',
+                    title: 'Harshna — Extreme — SSS rank',
+                    author: 'Sevih',
+                    label: 'Extreme — SSS rank',
+                  }
+                ]}
+              />
             </>
           ),
         },

@@ -1331,7 +1331,7 @@
     "ID": "SYS_DESC_NOCRITICAL",
     "Korean": "해당 공격은 치명 공격이 발생하지 않지만, 주는 피해가 50% 증가하고 보스의 방어력을 30% 무시합니다.",
     "English": "This attack cannot deal a critical hit, but DMG dealt increases by 50% and ignores 30% of the boss's Defense.",
-    "Japanese": "この攻撃は会心攻撃が発生しないが、\\n与ダメージが50%増加し、\\nボスの防御力を30%無視する。",
+    "Japanese": "この攻撃は会心攻撃が発生しないが、\\n与ダメージが50%UPされ、\\nボスの防御力を30%無視する。",
     "China_Simplified": "该攻击不会发生暴击，\\n但造成的伤害提升50%，\\n并无视首领30%的防御力。",
     "China_Traditional": "該攻擊不會發生暴擊，\\n但造成的傷害提升50%，\\n並無視首領30%的防禦力。"
   },
@@ -1667,7 +1667,7 @@
     "ID": "SYS_BUFF_DESC_2000091",
     "Korean": "<color=#ffd732>그노시스 넬라 사망 시 발동</color>(해제 불가)\\n\\n적 전체의 강화 효과를 2개 해제하고 침묵/속도 감소를 2턴 동안 부여합니다.\\n<color=#28d9ed>소생 시에는 발동하지 않습니다.</color>",
     "English": "<color=#ffd732>Triggers upon Gnosis Nella's death</color> (Cannot be dispelled)\\n\\nDispels 2 buffs from all enemies and inflicts Silence and Speed Decrease for 2 turns.\\n<color=#28d9ed>Does not trigger upon Revival.</color>",
-    "Japanese": "<color=#ffd732>グノーシス・ネラ死亡時に発動</color>（解除不可）\\n\\n敵全体の強化効果を2個解除し、\\n沈黙/スピード減少を2ターンの間付与する。\\n<color=#28d9ed>蘇生時には発動しない。</color>",
+    "Japanese": "<color=#ffd732>【グノーシス・ネラ】が倒れる際に発動</color>（解除不可）\\n\\n敵全体の強化効果を2個解除し、\\n沈黙・速度DOWNを2ターン間付与する。\\n<color=#28d9ed>蘇生時には発動しない。</color>",
     "China_Simplified": "<color=#ffd732>格诺希斯·内拉死亡时发动</color>（无法解除）\\n\\n解除全体敌人2个强化效果，\\n并附加2回合的沉默/速度减少。\\n<color=#28d9ed>复苏时不会发动。</color>",
     "China_Traditional": "<color=#ffd732>格諾西斯·奈拉死亡時發動</color>（無法解除）\\n\\n解除全體敵人2個強化效果，\\n並附加2回合的沉默/速度減少。\\n<color=#28d9ed>復甦時不會發動。</color>"
   },
@@ -1819,7 +1819,7 @@
     "ID": "SYS_BUFF_DESC_2000102",
     "Korean": "자신의 피해가 50% 감소하며(지속 피해 제외), 턴 시작 시 자신의 강화 효과 / 적 전체의 약화 효과 지속 시간이 각 1턴씩 감소합니다.\\n\\n시전자가 사망 시 해제됩니다. (해제 불가)",
     "English": "Own DMG decreases by 50% (excluding DoT), and at the start of each turn, the duration of own buffs / all enemies' debuffs each decrease by 1 turn.\\n\\nDispelled upon caster's death. (Cannot be dispelled)",
-    "Japanese": "自分のダメージが50%減少し\\n（継続ダメージを除く）、\\nターン開始時に自分の強化効果/\\n敵全体の弱体効果の持続時間が\\nそれぞれ1ターンずつ減少する。\\n\\n使用者が死亡した時に解除される。\\n（解除不可）",
+    "Japanese": "自分が与えるダメージが50%DOWNし\\n（継続ダメージを除く）、\\nターン開始時に自分の強化効果と \\n敵全体の弱化効果の持続ターンを\\nそれぞれ1ターン減少させる。 \\nスキル使用者が倒れると解除される。\\n（解除不可）",
     "China_Simplified": "自身伤害降低50%（持续伤害除外），\\n每回合开始时，自身强化效果/\\n全体敌人弱化效果的持续时间各减少1回合。\\n\\n施放者死亡时解除。（无法解除）",
     "China_Traditional": "自身傷害降低50%（持續傷害除外），\\n每回合開始時，自身強化效果/\\n全體敵人弱化效果的持續時間各減少1回合。\\n\\n施放者死亡時解除。（無法解除）"
   },
@@ -3595,7 +3595,7 @@
     "ID": "SYS_DESC_FREEZE_IGNORE_INTERRUPTION",
     "Korean": "대상의 행동을 제한합니다.\\n시전자가 사망 시 해제됩니다. (해제 불가)",
     "English": "Restricts the target's movement.\\nRemoved when the caster dies. (Irremovable)",
-    "Japanese": "一定の間行動できなくなる。\\nこの効果を付与した対象が、\\n倒れた時のみ解除できる。",
+    "Japanese": "一定の間行動できなくなる。\\nスキル使用者が倒れると\\n解除される。\\n(解除不可)",
     "China_Simplified": "限制目标的行动。\\n施展者死亡时解除。（无法解除）",
     "China_Traditional": "限制目標的行動。\\n施展者死亡時解除。(無法解除)"
   },
@@ -51793,7 +51793,7 @@
   },
   {
     "ID": "SYS_FILTER_CHAIN_COMPANION",
-    "Korean": "컴페니언",
+    "Korean": "컴패니언",
     "English": "Companion",
     "Japanese": "チェーン(汎用)",
     "China_Simplified": "自由顺序",
@@ -114115,7 +114115,7 @@
     "ID": "SYS_SINGULARITY_DAILY_REWARD",
     "Korean": "일일 참여 보상",
     "English": "Daily Participation Reward",
-    "Japanese": "日別参加報酬",
+    "Japanese": "デイリー参加報酬",
     "China_Simplified": "每日参与奖励",
     "China_Traditional": "每日參與獎勵"
   },
@@ -114835,7 +114835,7 @@
     "ID": "SYS_SINGULARITY_BATTLE_INFO_DESC",
     "Korean": "최근 진행된 10회의 전투가 기록됩니다.",
     "English": "The last 10 battles played are recorded.",
-    "Japanese": "最近行われた10回の戦闘が記録される。",
+    "Japanese": "最近行われた10回の戦闘が記録されます。",
     "China_Simplified": "记录最近进行的10次战斗。",
     "China_Traditional": "記錄最近進行的10次戰鬥。"
   },
@@ -114859,7 +114859,7 @@
     "ID": "SYS_SINGULARITY_FAIL",
     "Korean": "포기시 지금 데미지로 계산됩니다.\\n전투를 포기하시겠습니까?",
     "English": "If you forfeit, the current DMG dealt will be counted.\\nDo you want to forfeit?",
-    "Japanese": "포기時、現在のダメージで計算される。\\n戦闘を포기しますか？",
+    "Japanese": "戦闘を諦めた場合、現在までに与えたダメージでスコアが計算されます。\\n戦闘を諦めますか？",
     "China_Simplified": "若放弃，将以当前造成的伤害计算。\\n是否放弃战斗？",
     "China_Traditional": "若放棄，將以當前造成的傷害計算。\\n是否放棄戰鬥？"
   },
@@ -114867,7 +114867,7 @@
     "ID": "SYS_SINGULARITY_TEAM_SETTING",
     "Korean": "대상의 편성 정보를 나의 편성 정보로 등록합니다.\\n미 보유 동료는 편성되지 않습니다.",
     "English": "The target's lineup info will be registered as your lineup.\\nHeroes you do not own will not be included.",
-    "Japanese": "対象の編成情報を自分の編成情報として登録する。\\n未保有の仲間は編成されない。",
+    "Japanese": "対象の編成情報を自分の編成情報として登録します。\\n未保有の仲間は編成されません。",
     "China_Simplified": "将目标的编成信息注册为我的编成信息。\\n未持有的同伴将不会被编成。",
     "China_Traditional": "將目標的編成資訊登錄為我的編成資訊。\\n未持有的同伴將不會被編成。"
   },
@@ -114875,7 +114875,7 @@
     "ID": "SYS_SINGULARITY_TEAM_RECORD_BLANK_MSG",
     "Korean": "저장된 전투 기록이 없습니다.",
     "English": "No saved battle records.",
-    "Japanese": "保存された戦闘記録がない。",
+    "Japanese": "保存された戦闘記録がありません。",
     "China_Simplified": "没有已保存的战斗记录。",
     "China_Traditional": "沒有已保存的戰鬥記錄。"
   },
@@ -114891,7 +114891,7 @@
     "ID": "SYS_SINGULARITY_DAILY_RANKING_REWARD",
     "Korean": "일일 랭킹 순위 보상",
     "English": "Daily Ranking Reward",
-    "Japanese": "日別ランキング順位報酬",
+    "Japanese": "デイリーランキング順位報酬",
     "China_Simplified": "每日排名奖励",
     "China_Traditional": "每日排名獎勵"
   },
@@ -115010,7 +115010,7 @@
   {
     "ID": "SYS_SINGULARITY_SCORE_RANK_2",
     "Korean": "스코어 랭크",
-    "English": "cㅊ",
+    "English": "Score Rank",
     "Japanese": "スコアランク",
     "China_Simplified": "分数等级",
     "China_Traditional": "分數等級"
@@ -115891,7 +115891,7 @@
     "ID": "SYS_SINGULAR_ENHANCE_EMPTY",
     "Korean": "강화 가능한 장비가 없습니다",
     "English": "No Gear available for enhancement",
-    "Japanese": "強化可能な装備がない",
+    "Japanese": "強化可能な装備がありません。",
     "China_Simplified": "没有可强化的装备",
     "China_Traditional": "沒有可強化的裝備"
   },
@@ -115899,7 +115899,7 @@
     "ID": "SYS_SINGULAR_ENHANCE_COMPLETE",
     "Korean": "특이점 활성화가 완료되었습니다\\n소지품을 확인해주세요",
     "English": "Singularity Ascension is complete.\\nPlease check your inventory.",
-    "Japanese": "特異点活性化が完了した。\\nバックを確認してください。",
+    "Japanese": "特異点活性化が完了しました。\\nバッグを確認してください。",
     "China_Simplified": "奇点激活已完成。\\n请查看您的背包。",
     "China_Traditional": "奇點激活已完成。\\n請查看您的背包。"
   },
@@ -115907,7 +115907,7 @@
     "ID": "SYS_SINGULAR_ENHANCE_SUCCESS",
     "Korean": "강화에 성공하였습니다",
     "English": "Enhancement succeeded.",
-    "Japanese": "強化に成功した。",
+    "Japanese": "強化に成功しました。",
     "China_Simplified": "强化成功。",
     "China_Traditional": "強化成功。"
   },
@@ -115915,7 +115915,7 @@
     "ID": "SYS_SINGULAR_ENHANCE_FAIL",
     "Korean": "강화에 실패하였습니다",
     "English": "Enhancement failed.",
-    "Japanese": "強化に失敗した。",
+    "Japanese": "強化に失敗しました。",
     "China_Simplified": "强化失败。",
     "China_Traditional": "強化失敗。"
   },
@@ -115923,7 +115923,7 @@
     "ID": "SYS_SINGULAR_RERALL_SUCCESS",
     "Korean": "옵션 재산정에 성공하였습니다",
     "English": "Option reroll succeeded.",
-    "Japanese": "オプション再算定に成功した。",
+    "Japanese": "オプション再算定に成功しました。",
     "China_Simplified": "选项重新计算成功。",
     "China_Traditional": "選項重新計算成功。"
   },
@@ -115931,7 +115931,7 @@
     "ID": "SYS_SINGULAR_RERALL_FAIL",
     "Korean": "옵션 재산정에 실패하였습니다",
     "English": "Option reroll failed.",
-    "Japanese": "オプション再算定に失敗した。",
+    "Japanese": "オプション再算定に失敗しました。",
     "China_Simplified": "选项重新计算失败。",
     "China_Traditional": "選項重新計算失敗。"
   },
@@ -116315,7 +116315,7 @@
     "ID": "SYS_SINGULAR_ENHANCE_WARNNING",
     "Korean": "특이점 활성화 시 기어 리셋 모듈을 통한 장비 성장 초기화가 불가능해집니다.\\n\\n<color=#EC4C4E>특이점 활성화를 진행하시겠습니까?</color>",
     "English": "Once Singularity Ascension is activated, resetting Gear growth via the Gear Reset Module will no longer be possible.\\n\\n<color=#EC4C4E>Do you wish to proceed with Singularity Ascension?</color>",
-    "Japanese": "特異点活性化時、ギアリセットモジュールを通じた装備の成長初期化が不可能になります。\\n\\n<color=#EC4C4E>特異点活性化を進めますか？</color>",
+    "Japanese": "特異点を活性化すると、ギアリセットモジュールを使用した装備の成長初期化ができなくなります。\\n\\n<color=#EC4C4E>特異点を活性化しますか？</color>",
     "China_Simplified": "激活奇点后，将无法通过装备重置模块初始化装备成长。\\n\\n<color=#EC4C4E>是否进行奇点激活？</color>",
     "China_Traditional": "激活奇點後，將無法透過裝備重置模組初始化裝備成長。\\n\\n<color=#EC4C4E>是否進行奇點激活？</color>"
   },
@@ -116323,7 +116323,7 @@
     "ID": "SYS_CHARACTER_LEVELUP_BONUS_DESC",
     "Korean": "레벨 달성 시 마다 보너스 능력치를 부여받습니다.",
     "English": "Bonus stats are granted each time Level is reached.",
-    "Japanese": "レベルを達成するたびにボーナスステータスが付与される。",
+    "Japanese": "レベルを達成するたびにボーナスステータスが付与されます。",
     "China_Simplified": "每达到级时，获得奖励属性。",
     "China_Traditional": "每達到級時，獲得獎勵屬性。"
   },
@@ -116371,7 +116371,7 @@
     "ID": "SYS_BATTLE_PASS_BUY_DIANNE_TITLE",
     "Korean": "스페셜 패스 혜택\\n다이안 코스튬 즉시 지급",
     "English": "Special Pass Reward\\nDianne's Costume granted immediately",
-    "Japanese": "スペシャルパス特典\\nダイアンのスキン即時支給",
+    "Japanese": "スペシャルパス特典\\nダイアンのスキン即時獲得",
     "China_Simplified": "特别通行证福利\\n黛安皮肤立即发放",
     "China_Traditional": "特殊通行證優惠\\n黛安外觀立即發放"
   },
@@ -116379,7 +116379,7 @@
     "ID": "SYS_CONTENT_POPUP_SINGULARITY_LOCK",
     "Korean": "<color=#FED434>[모나드 게이트 - 차원 특이점]</color>\\n\\n[모나드 게이트] 의 심도 1의 트루 엔딩 감상 이후 개방됩니다.",
     "English": "<color=#FED434>[Monad Gate - Dimensional Singularity]</color>\\n\\nUnlocked after viewing the True Ending of [Monad Gate] Depth 1.",
-    "Japanese": "<color=#FED434>[モナドゲート - 次元特異点]</color>\\n\\n[モナドゲート]の深度1のトゥルーエンディング鑑賞後に開放される。",
+    "Japanese": "<color=#FED434>[モナドゲート - 次元特異点]</color>\\n\\n[モナドゲート]深度1のトゥルーエンディング鑑賞後に開放されます。",
     "China_Simplified": "<color=#FED434>[单子门户 - 次元奇点]</color>\\n\\n观看[单子门户]深度1的真结局后开放。",
     "China_Traditional": "<color=#FED434>[單體門戶 - 次元奇點]</color>\\n\\n觀看[單體門戶]深度1的真結局後開放。"
   },
@@ -116499,7 +116499,7 @@
     "ID": "SYS_GUIDE_SINGULAR_ENCHAHNT_02_DESC",
     "Korean": "특이점 활성화가 진행된 장비는 소지품 혹은 동료 화면에서 강화를 진행하실 수 있습니다. 최대 +15단계까지 강화하실 수 있으며, 최대로 강화 시 추가적인 옵션이 적용됩니다. 적용된 옵션은 이후 재화를 소모하여 재설정이 가능합니다.",
     "English": "Singularity Gear can be enhanced from the inventory or hero screen. It can be enhanced up to a maximum of +15 stages, and when fully enhanced, additional options are applied. The applied options can later be reset by using currency.",
-    "Japanese": "特異点活性化が進行した装備は、バックまたは仲間画面から強化を進めることができます。最大+15段階まで強化でき、最大強化時に追加オプションが適用されます。適用されたオプションはその後、財貨を消費してリセットが可能です。",
+    "Japanese": "特異点活性化を行った装備は、バッグまたは仲間画面から強化を進めることができます。最大+15段階まで強化でき、最大強化時に追加オプションが適用されます。適用されたオプションはその後、アイテムを消費して再算定が可能です。",
     "China_Simplified": "激活奇点的装备可在背包或同伴界面进行强化。最多可强化至+15阶段，强化至最大时将适用追加选项。适用的选项之后可消耗货币重置。",
     "China_Traditional": "激活奇點的裝備可在背包或同伴介面進行強化。最多可強化至+15階段，強化至最大時將適用追加選項。適用的選項之後可消耗貨幣重置。"
   },
@@ -116507,7 +116507,7 @@
     "ID": "SYS_GUIDE_SINGULAR_MAX_LEVEL_01_DESC",
     "Korean": "한계 돌파 인자를 활용하여 동료의 최대 레벨을 상승시킬 수 있습니다. 한계 돌파 인자는 [차원 특이점]에서 입수하실 수 있으며, 각 동료 별 별도의 한계 돌파를 지닙니다.",
     "English": "Limit Break Factors can be used to raise a hero's max level. Limit Break Factors can be obtained in [Dimensional Singularity], and each hero has their own separate Limit Break.",
-    "Japanese": "限界突破因子を活用して仲間の最大レベルを上昇させることができます。限界突破因子は[次元特異点]で入手でき、各仲間ごとに別々の限界突破を持ちます。",
+    "Japanese": "限界突破因子を活用して仲間の最大レベルを上昇させることができます。限界突破因子は[次元特異点]で入手でき、各仲間ごとに固有の限界突破因子を持ちます。",
     "China_Simplified": "可利用极限突破因子提升同伴的最大等级。极限突破因子可在[次元奇点]中获得，各同伴拥有各自独立的极限突破。",
     "China_Traditional": "可利用極限突破因子提升同伴的最大等級。極限突破因子可在[次元奇點]中獲得，各同伴擁有各自獨立的極限突破。"
   },
@@ -116539,7 +116539,7 @@
     "ID": "SYS_MAX_LEVEL_LIMIT_UP",
     "Korean": "성장 가능한 레벨의 상한선이 증가하였습니다.",
     "English": "The maximum level cap has increased.",
-    "Japanese": "成長可能なレベルの上限が増加しました。",
+    "Japanese": "強化可能な最大レベルの上限が増加しました。",
     "China_Simplified": "可成长等级的上限已提升。",
     "China_Traditional": "可成長等級的上限已提升。"
   },
@@ -116547,7 +116547,7 @@
     "ID": "SYS_MAX_LEVEL_LIMIT_UP_DESC",
     "Korean": "최대 레벨 확장 시,\\n성장 가능한 레벨의 상한선이 증가합니다.",
     "English": "When Max Level is expanded,\\nthe maximum level cap increases.",
-    "Japanese": "最大レベル拡張時、\\n成長可能なレベルの上限が増加します。",
+    "Japanese": "最大レベル拡張時、\\n強化可能なレベルの上限が増加します。",
     "China_Simplified": "最大等级扩展时，\\n可成长等级的上限将提升。",
     "China_Traditional": "最大等級擴展時，\\n可成長等級的上限將提升。"
   },
@@ -116819,7 +116819,7 @@
     "ID": "SYS_SINGULAR_RESULT_REPORT_SCORE_CONFIRM",
     "Korean": "전투 결과를 확정하시겠습니가?\\n결과 확정 시 입장횟수가 소모되고 스코어가 최종 스코어에 가산되며, 랭크 달성 보상을 입수하실 수 있습니다",
     "English": "Do you wish to confirm the battle results?\\nUpon confirmation, an entry count will be consumed, the score will be added to the final score, and you will be able to obtain rank achievement rewards.",
-    "Japanese": "戦闘結果を確定しますか？\\n結果確定時、入場回数が消費され、スコアが最終スコアに加算され、ランク達成報酬を入手できます。",
+    "Japanese": "戦闘結果を確定しますか？\\n結果を確定すると、入場回数が消費され、スコアが最終スコアに加算されて、ランク達成報酬を入手できます。",
     "China_Simplified": "是否确定战斗结果？\\n确定结果时，将消耗入场次数，分数将加算至最终分数，并可获得等级达成奖励。",
     "China_Traditional": "是否確定戰鬥結果？\\n確定結果時，將消耗入場次數，分數將加算至最終分數，並可獲得等級達成獎勵。"
   },

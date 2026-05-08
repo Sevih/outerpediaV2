@@ -296,7 +296,19 @@ function CompareTab() {
         setSaveMessage({ text: `Error: ${data.error ?? 'save failed'}`, type: 'error' })
         return
       }
-      setSaveMessage({ text: 'Saved', type: 'success' })
+      // Also copy any missing on-disk assets so the boss displays right
+      // away. Failures here are non-fatal — the JSON save already worked.
+      let assetMsg = ''
+      try {
+        const assetRes = await fetch(`${API}?action=copy-assets&id=${selected}`)
+        const assetData = await assetRes.json()
+        const copied = (assetData.copied as string[] | undefined)?.length ?? 0
+        const missingSrc = (assetData.missingSource as string[] | undefined)?.length ?? 0
+        if (copied > 0 || missingSrc > 0) {
+          assetMsg = ` · ${copied} asset(s) copied${missingSrc > 0 ? `, ${missingSrc} source missing` : ''}`
+        }
+      } catch {}
+      setSaveMessage({ text: `Saved${assetMsg}`, type: 'success' })
       await loadAndCompare()
     } catch (e) {
       setSaveMessage({ text: `Error: ${e instanceof Error ? e.message : 'Unknown'}`, type: 'error' })
@@ -677,7 +689,19 @@ function CreateTab() {
         setSaveMessage({ text: `Error: ${data.error ?? 'save failed'}`, type: 'error' })
         return
       }
-      setSaveMessage({ text: `Saved → ${data.path}`, type: 'success' })
+      // Copy any on-disk assets the boss references but doesn't have yet.
+      // Non-fatal: the JSON save already succeeded.
+      let assetMsg = ''
+      try {
+        const assetRes = await fetch(`${API}?action=copy-assets&id=${finalSaveId}`)
+        const assetData = await assetRes.json()
+        const copied = (assetData.copied as string[] | undefined)?.length ?? 0
+        const missingSrc = (assetData.missingSource as string[] | undefined)?.length ?? 0
+        if (copied > 0 || missingSrc > 0) {
+          assetMsg = ` · ${copied} asset(s) copied${missingSrc > 0 ? `, ${missingSrc} source missing` : ''}`
+        }
+      } catch {}
+      setSaveMessage({ text: `Saved → ${data.path}${assetMsg}`, type: 'success' })
     } catch (e) {
       setSaveMessage({ text: `Error: ${e instanceof Error ? e.message : 'Unknown'}`, type: 'error' })
     } finally {
