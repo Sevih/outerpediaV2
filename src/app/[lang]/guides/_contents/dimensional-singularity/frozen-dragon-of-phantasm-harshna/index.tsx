@@ -9,6 +9,7 @@ import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
+import MultiVideoEmbed from "@/app/components/ui/MultiVideoEmbed";
 
 import strings from './strings.json';
 import tips from './tips.json';
@@ -43,6 +44,19 @@ export default function FrozenDragonPhantasmHarshnaGuide() {
       ]} />
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList entries={RECOMMENDED} />
+      <hr className="my-6 border-neutral-700" />
+      <MultiVideoEmbed
+              hashPrefix="frozen-dragon-of-phantasm-harshna-video"
+              videos={[
+                {
+                  platform: "youtube",
+                  id: "bEcRDPR1q9Y",
+                  title: "Harshna — Dimensional Singularity — Rank SSS++",
+                  author: "Zeroceless",
+                  label: "Rank SSS++",
+                }
+              ]}
+            />
     </GuideTemplate>
   );
 }
