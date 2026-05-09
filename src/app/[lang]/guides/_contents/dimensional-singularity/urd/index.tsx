@@ -31,6 +31,13 @@ const DOT_TITLE: LangMap = {
   zh: "DoT策略",
 };
 
+const GDAHLIA_TITLE: LangMap = {
+  en: "GDahlia team strategy",
+  jp: "GDahliaチーム戦略",
+  kr: "GDahlia 팀 전략",
+  zh: "GDahlia队伍策略",
+};
+
 const DARK_TITLE: LangMap = {
   en: "Dark team strategy",
   jp: "闇属性編成戦略",
@@ -64,6 +71,7 @@ export default function UrdGuide() {
       <TacticalTips
         sections={[
           { title: "general", tips: TIPS.general },
+          { title: GDAHLIA_TITLE, tips: TIPS.gdahlia },
           { title: DARK_TITLE, tips: TIPS.dark },
           { title: DOT_TITLE, tips: TIPS.dot },
           { title: MERO_TITLE, tips: TIPS.mero },
