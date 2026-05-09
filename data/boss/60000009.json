@@ -1,0 +1,170 @@
+{
+  "id": "60000009",
+  "Name": {
+    "en": "VI=E-11-A",
+    "jp": "VI=E-11-A",
+    "kr": "VI=E-11-A",
+    "zh": "VI=E-11-A"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Earth",
+  "level": 100,
+  "icons": "4024002",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "",
+  "location": {
+    "dungeon": {
+      "en": "[Singularity] - VI=E-11-A",
+      "jp": "[特異点] - VI=E-11-A",
+      "kr": "[특이점] - VI=E-11-A",
+      "zh": "[奇点] - VI=E-11-A"
+    },
+    "mode": {
+      "en": "Dimensional Singularity",
+      "jp": "次元特異点",
+      "kr": "차원 특이점",
+      "zh": "次元奇点"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Harvest Sickle",
+        "jp": "収穫の鉤爪",
+        "kr": "수확의 갈고리",
+        "zh": "收割之镰"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Prioritizes attacking the leftmost enemy.\\nIf the target is not a <color=#28d9ed>Defender</color>, recovers <color=#28d9ed>all</color> of own WG.",
+        "jp": "最も左側にいる敵を優先的に攻撃する。\\n対象が<color=#28d9ed>防御型</color>でない場合、自分のWGを<color=#28d9ed>すべて</color>回復する。",
+        "kr": "가장 좌측에 있는 적을 우선적으로 공격합니다. \\n대상이 <color=#28d9ed>방어형</color>이 아니라면 자신의 WG를 <color=#28d9ed>모두</color> 회복합니다.",
+        "zh": "优先攻击最左侧的敌人。\\n若目标非<color=#28d9ed>防御型</color>，回复自身<color=#28d9ed>所有</color>WG。"
+      },
+      "icon": "Skill_First_4024002"
+    },
+    {
+      "name": {
+        "en": "Radiant Beam",
+        "jp": "放射熱線",
+        "kr": "방사열선",
+        "zh": "放射热缐"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy. If the target holds <color=#28d9ed>Poisoned</color>, DMG increases by <color=#28d9ed>50%</color>.",
+        "jp": "敵にダメージを与える。対象が<color=#28d9ed>中毒</color>を保有する場合、ダメージが<color=#28d9ed>50%</color>増加する。",
+        "kr": "적을 공격합니다. 대상이 <color=#28d9ed>중독</color> 보유 시 피해가 <color=#28d9ed>50%</color> 증가합니다.",
+        "zh": "攻击敌人。若目标持有<color=#28d9ed>中毒</color>，伤害增加<color=#28d9ed>50%</color>。"
+      },
+      "icon": "Skill_Second_4024002"
+    },
+    {
+      "name": {
+        "en": "I Shall Bestow Grace",
+        "jp": "恩を授けよう",
+        "kr": "은혜를 내리리라",
+        "zh": "降下恩典"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Poisoned</color> on targets for <color=#28d9ed>3 turns</color>.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>3ターン</color>の間<color=#28d9ed>中毒</color>を付与する。",
+        "kr": "적 전체를 공격하고 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다.",
+        "zh": "攻击全体敌人，对目标附加<color=#28d9ed>3回合</color>的<color=#28d9ed>中毒</color>。"
+      },
+      "icon": "Skill_Ultimate_4024002",
+      "debuff": [
+        "BT_DOT_POISON"
+      ]
+    },
+    {
+      "name": {
+        "en": "Incomplete Synchronization",
+        "jp": "不完全な同期",
+        "kr": "불완전 동기화",
+        "zh": "不完全同步"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "At the end of every turn, inflicts <color=#28d9ed>Poisoned</color> on the <color=#28d9ed>enemy with the highest Attack</color> and the <color=#28d9ed>fastest enemy</color> for <color=#28d9ed>1 turn</color>.",
+        "jp": "毎ターン終了時、<color=#28d9ed>攻撃力が最も高い敵</color>と<color=#28d9ed>スピードが最も速い敵</color>に<color=#28d9ed>1ターン</color>の間<color=#28d9ed>中毒</color>を付与する。",
+        "kr": "매 턴 종료 시 <color=#28d9ed>공격력이 가장 높은 적</color>과 <color=#28d9ed>속도가 가장 빠른 적</color>에게 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>중독</color>을 부여합니다.",
+        "zh": "每回合结束时，对<color=#28d9ed>攻击力最高的敌人</color>和<color=#28d9ed>速度最快的敌人</color>附加<color=#28d9ed>1回合</color>的<color=#28d9ed>中毒</color>。"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_STAT|ST_CRITICAL_RATE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Domain of Lethal Poison",
+        "jp": "猛毒の領域",
+        "kr": "극독의 영지",
+        "zh": "剧毒领域"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Upon entering battle, decreases all enemies' <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>9 turns</color>. (Ignores Resilience)\\nCritical Damage taken by self decreases by <color=#28d9ed>100%</color>.\\nAll <color=#28d9ed>DoT</color> taken by self increases by <color=#28d9ed>150%</color>. (Excluding Curse)",
+        "jp": "戦闘入場時、敵全体の<color=#28d9ed>会心率</color>を<color=#28d9ed>9ターン</color>の間減少させる。（効果抵抗無視）\\n自分が受ける会心ダメージが<color=#28d9ed>100%</color>減少する。\\n自分が受けるすべての<color=#28d9ed>継続ダメージ</color>が<color=#28d9ed>150%</color>増加する。（呪いを除く）",
+        "kr": "전투 입장 시 적 전체의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>9턴</color> 동안 감소시킵니다.(효과 저항 무시 및 해제 불가)\\n자신이 받는 치명 피해가 <color=#28d9ed>100%</color> 감소합니다.\\n자신이 받는 모든 <color=#28d9ed>지속 피해</color>가 <color=#28d9ed>150%</color> 증가합니다. (저주 제외)",
+        "zh": "进入战斗时，使全体敌人的<color=#28d9ed>暴击率</color>降低<color=#28d9ed>9回合</color>。（无视效果抵抗）\\n自身受到的暴击伤害减少<color=#28d9ed>100%</color>。\\n自身受到的所有<color=#28d9ed>持续伤害</color>增加<color=#28d9ed>150%</color>。（诅咒除外）"
+      },
+      "icon": "MT_Passive_1_Earth",
+      "debuff": [
+        "BT_DOT_POISON",
+        "BT_CURSE_ENHANCE",
+        "BT_ENHANCE_ALL"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dimensional Rift",
+        "jp": "次元の亀裂",
+        "kr": "차원의 균열",
+        "zh": "次元裂缝"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Boss monsters' Priority increases upon entering Berserk. Additional effects are added based on rank as follows.\\n\\n<color=#ffd732>Applied from RANK D:</color> DMG dealt increases and DMG taken decreases for all attacks. The values increase as rank rises, maxing out at SSS. (Max 300%/200% respectively)\\n\\n<color=#ffd732>Applied from RANK B:</color> Final DMG and WG DMG taken from targets without elemental advantage decrease by <color=#28d9ed>70%/50%</color> respectively.\\n\\n<color=#ffd732>Applied from RANK S:</color> Increases own <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color> and decreases all enemies' <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color>.",
+        "jp": "(パッシブ効果) ボスモンスターは狂暴化突入後、行動ゲージが増加する。またランクに応じて以下の効果が追加される。\\n\\n<color=#ffd732>RANK D から適用：</color>すべての攻撃に対して与ダメージが増加し、受けるダメージが減少する。ランクが上がるほど数値が増加し、SSSで最大となる。（各最大300%/200%）\\n\\n<color=#ffd732>RANK B から適用：</color>有利な相性でない対象から受ける最終ダメージとWGダメージがそれぞれ<color=#28d9ed>70%/50%</color>減少する。\\n\\n<color=#ffd732>RANK S から適用：</color>自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>増加させ、敵全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>減少させる。",
+        "kr": "(패시브 효과) 보스 몬스터는 광폭화 진입 후 행동게이지가 증가합니다. 또한 랭크에 따라 아래 효과가 추가합니다.\\n\\n<color=#ffd732>RANK D 부터 적용:</color> 모든 공격에 대해 주는 피해가 증가하고 받는 피해가 감소합니다. 랭크가 오를수록 수치가 증가하여 SSS에서 최대가 됩니다.(각각 최대 300%/200%)\\n\\n<color=#ffd732>RANK B 부터 적용:</color> 유리한 상성이 아닌 대상에게 받는 최종 피해와 WG피해가 각각 <color=#28d9ed>70%/50%</color> 감소합니다.\\n\\n<color=#ffd732>RANK S 부터 적용:</color> 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 증가시키고 적 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "(被动效果) 首领怪物进入狂暴化后行动值提升。同时根据等级追加以下效果。\\n\\n<color=#ffd732>从RANK D开始适用：</color>所有攻击的造成伤害提升，受到伤害减少。等级越高数值越大，在SSS达到最大。（各最大300%/200%）\\n\\n<color=#ffd732>从RANK B开始适用：</color>受到非克制属性目标的最终伤害和WG伤害分别减少<color=#28d9ed>70%/50%</color>。\\n\\n<color=#ffd732>从RANK S开始适用：</color>使自身<color=#28d9ed>穿透力</color>增加<color=#28d9ed>30%</color>，使全体敌人<color=#28d9ed>穿透力</color>减少<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Passive_1_Singularity"
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "jp": "狂暴化",
+        "kr": "광폭화",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state when enemies take 7 actions.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Attacks all enemies, then grants self an undispellable Speed UP/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nInflicts Poisoned on all enemies for 2 turns.",
+        "jp": "敵が7回行動すると<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体にダメージを与えた後、自分に解除されないスピードUP/ダメージ減少効果を1ターンの間付与し、WGを10%回復する。\\n敵全体に中毒効果を2ターンの間付与する。",
+        "kr": "적이 7회 행동하면 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체를 공격 후,자신에게 해제되지 않는 속도 증가/피해 감소 효과를 1턴 동안 부여하고 WG를 10% 회복합니다.\\n적 전체에게 중독 효과를 2턴 동안 부여합니다.",
+        "zh": "敌人行动7次时进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化突入与必杀技</color>：攻击全体敌人后，对自身附加无法解除的速度提升/伤害减少效果1回合，并恢复WG10%。\\n对全体敌人附加2回合的中毒效果。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR",
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_DOT_POISON"
+      ]
+    }
+  ]
+}

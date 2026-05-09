@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Outerpedia · Damage Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html, body { background: #0b0a0f; color: #e7e5e4; font-family: "Space Grotesk", system-ui, sans-serif; }
+      .calc-scope ::-webkit-scrollbar { width: 0; height: 0; }
+      .calc-scope * { scrollbar-width: none; }
+    </style>
+
+    <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-[#0b0a0f]">
+    <div id="root"></div>
+
+    <script type="text/babel" src="design-canvas.jsx"></script>
+    <script type="text/babel" src="data.jsx"></script>
+    <script type="text/babel" src="primitives.jsx"></script>
+    <script type="text/babel" src="attacker.jsx"></script>
+    <script type="text/babel" src="target.jsx"></script>
+    <script type="text/babel" src="result.jsx"></script>
+    <script type="text/babel" src="team.jsx"></script>
+    <script type="text/babel" src="buffs.jsx"></script>
+    <script type="text/babel" src="modals.jsx"></script>
+    <script type="text/babel" src="shells.jsx"></script>
+
+    <script type="text/babel">
+      const { DesignCanvas, DCSection, DCArtboard } = window;
+
+      function App() {
+        return (
+          <DesignCanvas>
+            <DCSection
+              id="layouts"
+              title="Damage Calculator · Layouts"
+              subtitle="Polished redesign of the public calculator. Same component tree at two breakpoints; modals shown in their own artboards."
+            >
+              <DCArtboard id="desktop" label="Desktop · 1440 wide" width={1440} height={1660}>
+                <div className="calc-scope h-full w-full" data-screen-label="01 Desktop · Calculator">
+                  <DesktopCalc />
+                </div>
+              </DCArtboard>
+              <DCArtboard id="mobile" label="Mobile · 390 wide" width={390} height={1100}>
+                <div className="calc-scope h-full w-full" data-screen-label="02 Mobile · Calculator">
+                  <MobileCalc />
+                </div>
+              </DCArtboard>
+            </DCSection>
+
+            <DCSection
+              id="modals"
+              title="Modals"
+              subtitle="Settings (codex slider + global quirk toggles) and Char Picker (filtered to Mage class)."
+            >
+              <DCArtboard id="settings" label="Settings modal" width={1280} height={900}>
+                <div className="calc-scope h-full w-full" data-screen-label="03 Settings modal">
+                  <SettingsArtboard />
+                </div>
+              </DCArtboard>
+              <DCArtboard id="charpicker" label="Char Picker · Mage filter" width={1280} height={900}>
+                <div className="calc-scope h-full w-full" data-screen-label="04 Char Picker (Mage)">
+                  <CharPickerArtboard />
+                </div>
+              </DCArtboard>
+            </DCSection>
+          </DesignCanvas>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>
