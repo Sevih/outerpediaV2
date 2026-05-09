@@ -1007,5 +1007,19 @@
     "description_kr": "체력 회복 효과가 적용되지 않습니다. (해제 불가)",
     "description_zh": "生命值恢复效果无效。\\n(无法解除)",
     "icon": "IG_Buff_Sealed_Receive_Heal_Interruption_D"
+  },
+  {
+    "name": "BT_STAT|ST_PIERCE_POWER_RATE_IR",
+    "category": "statReduction",
+    "group": "BT_STAT|ST_PIERCE_POWER_RATE",
+    "label": "Reduced Penetration",
+    "label_jp": "貫通力DOWN",
+    "label_kr": "관통력 감소",
+    "label_zh": "穿透力降低",
+    "description": "Target's Penetration decreases by 30%. (Cannot be removed)",
+    "description_jp": "対象の貫通力が30%減少する。(解除不可)",
+    "description_kr": "대상의 관통력이 30% 감소합니다. (해제 불가)",
+    "description_zh": "目标穿透力降低30%。(无法解除)",
+    "icon": "IG_Buff_Stat_PierceRate_Interruption_D"
   }
 ]

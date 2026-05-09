@@ -161,17 +161,11 @@
   "skill:Extreme Scales|60000005": {
     "*": { "buff": ["BT_ACTION_GAUGE"] }
   },
-  "skill:Dimensional Rift|60000005": {
-    "*": { "buff": ["BT_STAT|ST_PIERCE_POWER_RATE_IR"] }
-  },
   "skill:Monster Hunter's Crucible|60000001": {
     "*": { "clear_buff": true, "debuff": ["BT_DOT_BURN"] }
   },
   "skill:Hunting Time|60000001": {
     "*": { "clear_debuff": true, "buff": ["BT_REMOVE_DEBUFF"] }
-  },
-  "skill:Dimensional Rift|60000001": {
-    "*": { "buff": ["BT_STAT|ST_PIERCE_POWER_RATE_IR"] }
   },
   "skill:Enraged|60000001": {
     "*": {
@@ -184,23 +178,24 @@
     "*": { "buff": ["BT_ACTION_GAUGE"] }
   },
   "skill:Great Demon's Henchman|60000008": {
-    "*": { "clear_buff": true}
-  },
-  "skill:Dimensional Rift|60000008": {
-    "*": { "buff": ["BT_STAT|ST_PIERCE_POWER_RATE_IR"] }
+    "*": { "clear_buff": true }
   },
   "skill:Enraged|60000008": {
     "*": {
       "clear_debuff": true,
       "clear_buff": true,
-      "buff": ["BT_DAMAGE_TAKEN","BT_STAT|ST_SPEED_IR","BT_STAT|ST_COUNTER_RATE"]
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR",
+        "BT_STAT|ST_COUNTER_RATE"
+      ]
     }
   },
   "skill:Establish : Fate Compulsion|60000010": {
-    "*": { "clear_buff": true,"debuff": ["BT_FIXED_DAMAGE"]}
+    "*": { "clear_buff": true, "debuff": ["BT_FIXED_DAMAGE"] }
   },
   "skill:Measure : Control Logic Reinforcement|60000010": {
-    "*": { "clear_buff": true,"buff": ["BT_STAT|ST_DEF"]}
+    "*": { "clear_buff": true, "buff": ["BT_STAT|ST_DEF"] }
   },
   "skill:Objective : Past Protection|60000010": {
     "*": { "clear_buff": true }
@@ -210,13 +205,48 @@
       "buff": ["BT_ACTION_GAUGE"]
     }
   },
-  "skill:Dimensional Rift|60000010": {
-    "*": { "buff": ["BT_STAT|ST_PIERCE_POWER_RATE_IR"] }
+  "skill:Dimensional Rift": {
+    "*": {
+      "buff": ["BT_STAT|ST_PIERCE_POWER_RATE_IR"],
+      "debuff": ["BT_STAT|ST_PIERCE_POWER_RATE_IR"]
+    }
   },
   "skill:Enraged|60000010": {
     "*": {
       "clear_debuff": true,
       "clear_buff": true
+    }
+  },
+  "skill:Incomplete Synchronization|60000009": {
+    "*": {
+      "clear_buff": true,
+      "clear_debuff": true,
+      "debuff": ["BT_DOT_POISON"]
+    }
+  },
+  "skill:Domain of Lethal Poison|60000009": {
+    "*": {
+      "clear_buff": true,
+      "clear_debuff": true,
+      "buff": [
+        "BT_STAT|ST_E_CRI_DMG_REDUCE",
+        "BT_CURSE_ENHANCE",
+        "BT_ENHANCE_ALL"
+      ],
+      "debuff": ["BT_STAT|ST_CRITICAL_RATE_IR"]
+    }
+  },
+  "skill:Enraged|60000009": {
+    "*": {
+      "clear_debuff": true,
+      "clear_buff": true,
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ],
+      "debuff": [
+        "BT_DOT_POISON"
+      ]
     }
   }
 }
