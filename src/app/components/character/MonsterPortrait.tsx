@@ -134,8 +134,8 @@ export default function MonsterPortrait({
         </div>
       )}
 
-      {showIcons && showOverlays && elem && <ElementIcon element={elem} framePx={s.px} />}
-      {showIcons && showOverlays && cls && <ClassIcon classType={cls} framePx={s.px} />}
+      {showIcons && showOverlays && elem && <ElementIcon element={elem} intrinsicPx={s.px} />}
+      {showIcons && showOverlays && cls && <ClassIcon classType={cls} intrinsicPx={s.px} />}
 
       {isBoss && (
         <div className="absolute top-0.5 left-0 z-10 rounded bg-red-900/80 px-1 text-[9px] font-bold leading-tight text-red-100 drop-shadow-md">
@@ -144,7 +144,7 @@ export default function MonsterPortrait({
       )}
 
       {showStars && showOverlays && basicStar && basicStar > 0 && (
-        <StarsRow count={basicStar} framePx={s.px} />
+        <StarsRow count={basicStar} intrinsicPx={s.px} />
       )}
 
       {showLevel && typeof level === 'number' && level > 0 && (
