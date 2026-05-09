@@ -280,22 +280,14 @@ export default function BannersPage() {
 
 // ── Character Picker ────────────────────────────────────────────────
 
-// Face crop positions for characters whose face is lower than default
-const CROP_OVERRIDES: Record<string, string> = {
-  '2000072': 'center 22%', '2000075': 'center 22%', '2000086': 'center 22%',
-  '2000073': 'center 26%', '2000079': 'center 26%', '2000080': 'center 26%',
-  '2000081': 'center 26%', '2000084': 'center 26%', '2000100': 'center 26%',
-};
-
 function CharPortrait({ id, size = 24 }: { id: string; size?: number }) {
-  const pos = CROP_OVERRIDES[id] ?? 'center 18%';
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`/images/characters/portrait/CT_${id}.webp`}
+      src={`/images/characters/faceicon/FI_${id}.webp`}
       alt=""
       className="shrink-0 rounded-md border border-zinc-700 bg-zinc-900 object-cover"
-      style={{ width: size, height: size, objectPosition: pos, transform: 'scale(1.5)', transformOrigin: pos }}
+      style={{ width: size, height: size }}
       onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
     />
   );

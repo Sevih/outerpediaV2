@@ -3,15 +3,15 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import type { ElementType, ClassType } from '@/types/enums';
-import { FACE_ZOOM, DEFAULT_CROP, CROP_OVERRIDES } from './CharacterPortrait';
+import { ElementIcon, ClassIcon, StarsRow, OVERLAY_MIN_PX } from './PortraitOverlays';
 
 const SIZES = {
-  xxs: { px: 20, cls: 'h-5 w-5',   iconSize: 0,  starSize: 0 },
-  xs:  { px: 32, cls: 'h-8 w-8',   iconSize: 0,  starSize: 0 },
-  sm:  { px: 48, cls: 'h-12 w-12', iconSize: 14, starSize: 10 },
-  md:  { px: 64, cls: 'h-16 w-16', iconSize: 18, starSize: 12 },
-  mld: { px: 80, cls: 'h-20 w-20', iconSize: 20, starSize: 13 },
-  lg:  { px: 96, cls: 'h-24 w-24', iconSize: 22, starSize: 14 },
+  xxs: { px: 20, cls: 'h-5 w-5'   },
+  xs:  { px: 32, cls: 'h-8 w-8'   },
+  sm:  { px: 48, cls: 'h-12 w-12' },
+  md:  { px: 64, cls: 'h-16 w-16' },
+  mld: { px: 80, cls: 'h-20 w-20' },
+  lg:  { px: 96, cls: 'h-24 w-24' },
 } as const;
 
 export type MonsterPortraitSize = keyof typeof SIZES;
@@ -95,76 +95,47 @@ export default function MonsterPortrait({
   const alt = name ?? faceIconId;
   const bg = rarityBg(type);
 
-  // IDs starting with '2' are character models reused as monsters — there is
-  // no MT_2XXXXXX face icon, so we fall back to the CT_ character portrait
-  // with the same zoom/crop convention used by CharacterPortrait.
+  // IDs starting with '2' are character models reused as monsters — they have
+  // a pre-cropped FaceIcon (FI_<id>.webp) generated from the Unity prefab
+  // layout. Other ids fall back to the static MT_ boss portrait.
   const isCharacterModel = faceIconId.startsWith('2');
   const portraitSrc = isCharacterModel
-    ? `/images/characters/portrait/CT_${faceIconId}.webp`
+    ? `/images/characters/faceicon/FI_${faceIconId}.webp`
     : `/images/characters/boss/portrait/MT_${faceIconId}.webp`;
-  const cropPosition = CROP_OVERRIDES[faceIconId] ?? DEFAULT_CROP;
+
+  const showOverlays = s.px >= OVERLAY_MIN_PX;
 
   return (
-    <div className={`relative overflow-hidden rounded-lg ${s.cls} ${className}`}>
+    <div className={`relative ${s.cls} ${className}`}>
       <Image
         fill
         sizes={`${s.px}px`}
         src={bg}
         alt=""
         aria-hidden
-        className="object-cover"
+        className="rounded-lg object-cover"
       />
 
       {!errored ? (
         <Image
           fill
-          sizes={`${isCharacterModel ? Math.round(s.px * FACE_ZOOM) : s.px}px`}
+          sizes={`${s.px}px`}
           src={portraitSrc}
           alt={alt}
-          className="object-cover"
-          style={isCharacterModel ? { objectPosition: cropPosition, transform: `scale(${FACE_ZOOM})` } : undefined}
+          className="rounded-lg object-cover"
           onError={() => setErrored(true)}
         />
       ) : (
         // Fallback: only ~460 monsters have portraits while ~4360 exist; we swap
         // to a flat initial-tile so the selector stays usable for monsters that
         // ship without a face icon (most regular trash mobs).
-        <div className="flex h-full w-full items-center justify-center text-[10px] font-mono uppercase text-zinc-300 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+        <div className="absolute inset-0 flex items-center justify-center text-[10px] font-mono uppercase text-zinc-300 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
           {alt.slice(0, 3)}
         </div>
       )}
 
-      {showIcons && s.iconSize > 0 && (
-        <>
-          {elem && (
-            <div className="absolute top-0.5 right-0.5 z-10">
-              <Image
-                src={`/images/ui/elem/CM_Element_${elem}.webp`}
-                alt={elem}
-                width={s.iconSize}
-                height={s.iconSize}
-                className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
-              />
-            </div>
-          )}
-          {cls && (
-            // Stacked under the element icon (top-right column). gap = iconSize + 2px
-            // so the two icons sit flush against each other regardless of size.
-            <div
-              className="absolute right-0.5 z-10"
-              style={{ top: s.iconSize + 4 }}
-            >
-              <Image
-                src={`/images/ui/class/CM_Class_${cls}.webp`}
-                alt={cls}
-                width={s.iconSize}
-                height={s.iconSize}
-                className="drop-shadow-md"
-              />
-            </div>
-          )}
-        </>
-      )}
+      {showIcons && showOverlays && elem && <ElementIcon element={elem} framePx={s.px} />}
+      {showIcons && showOverlays && cls && <ClassIcon classType={cls} framePx={s.px} />}
 
       {isBoss && (
         <div className="absolute top-0.5 left-0 z-10 rounded bg-red-900/80 px-1 text-[9px] font-bold leading-tight text-red-100 drop-shadow-md">
@@ -172,19 +143,8 @@ export default function MonsterPortrait({
         </div>
       )}
 
-      {showStars && s.starSize > 0 && basicStar && basicStar > 0 && (
-        <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-center">
-          {Array.from({ length: basicStar }, (_, i) => (
-            <Image
-              key={i}
-              src="/images/ui/star/CM_icon_star_y.webp"
-              alt="Star"
-              width={s.starSize}
-              height={s.starSize}
-              className="-mx-0.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
-            />
-          ))}
-        </div>
+      {showStars && showOverlays && basicStar && basicStar > 0 && (
+        <StarsRow count={basicStar} framePx={s.px} />
       )}
 
       {showLevel && typeof level === 'number' && level > 0 && (
