@@ -4,6 +4,7 @@ import path from 'path'
 import { listMonsters } from './lib/base'
 import { searchMonstersByName } from './lib/localization'
 import { extractMonster, stripInternalFields } from './lib/extract'
+import { generateFaceIcon, type FaceIconResult } from '../_shared/face-icon'
 
 const BOSS_DIR = path.join(process.cwd(), 'data', 'boss')
 const DEBUFFS_PATH = path.join(process.cwd(), 'data', 'effects', 'debuffs.json')
@@ -352,6 +353,17 @@ function copyBossAssets(extracted: Record<string, unknown>): {
   return { copied, missingSource }
 }
 
+// Char-flavored bosses (icons starting with "2") share the playable-character
+// portrait; emit the matching square FaceIcon from it as the character
+// extractor would. No-op for monster-only bosses.
+async function maybeGenerateBossFaceIcon(
+  extracted: Record<string, unknown>,
+): Promise<FaceIconResult | null> {
+  const icons = typeof extracted.icons === 'string' ? extracted.icons : ''
+  if (!icons.startsWith('2')) return null
+  return generateFaceIcon(icons)
+}
+
 // CJK fullwidth → halfwidth punctuation. Most diffs across JP/KR/ZH that
 // look like "real" changes are actually just the translator using fullwidth
 // punctuation in one revision and halfwidth in the next.
@@ -637,7 +649,8 @@ export async function GET(req: NextRequest) {
       inheritParentLocation(raw, parsed.parentId, parsed.variantDungeonId ?? undefined)
       const extracted = stripInternalFields(raw) as Record<string, unknown>
       const result = copyBossAssets(extracted)
-      return NextResponse.json({ ok: true, ...result })
+      const faceIcon = await maybeGenerateBossFaceIcon(extracted)
+      return NextResponse.json({ ok: true, ...result, faceIcon })
     }
 
     // ─── action=compare-one — extracted + existing + diffs (single id) ─

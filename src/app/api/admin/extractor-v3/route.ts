@@ -7,6 +7,7 @@ import {
   buildTooltipMap,
   type EffectTables,
 } from './_shared/effects'
+import { generateFaceIcon } from './_shared/face-icon'
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 
@@ -1298,6 +1299,7 @@ function copyCharacterImages(id: string, extracted: Record<string, unknown>): { 
   }
 }
 
+
 export async function POST(request: NextRequest) {
   const { id, manual } = await request.json() as {
     id: string
@@ -1335,10 +1337,13 @@ export async function POST(request: NextRequest) {
   // Copy images if missing
   const imagesCopied = copyCharacterImages(id, extracted)
 
+  // Generate the square face-icon from the freshly copied portrait.
+  const faceIcon = await generateFaceIcon(id)
+
   // Update character-profiles.json
   updateCharacterProfile(id, extracted)
 
-  return NextResponse.json({ ok: true, id, images: imagesCopied })
+  return NextResponse.json({ ok: true, id, images: imagesCopied, faceIcon })
 }
 
 // ── Profile extraction ──────────────────────────────────────────────
