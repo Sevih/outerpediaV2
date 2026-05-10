@@ -12,6 +12,8 @@ interface CharacterFxProps {
   bleed?: number
   // Multiplier on shader time. 1 = raw seconds; 0.1 = ten times slower.
   speedScale?: number
+  // Compensation factor for particle world size (Canvas scaler unknown).
+  particleSizeFactor?: number
 }
 
 export default function CharacterFx({
@@ -19,6 +21,7 @@ export default function CharacterFx({
   children,
   bleed = 6,
   speedScale = 1.0,
+  particleSizeFactor = 0.25,
 }: CharacterFxProps) {
   const wrapRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -32,6 +35,7 @@ export default function CharacterFx({
     const scene = new FxScene(canvas)
     sceneRef.current = scene
     scene.setSpeedScale(speedScale)
+    scene.setParticleSizeFactor(particleSizeFactor)
     let cancelled = false
 
     const sync = () => {
@@ -61,6 +65,10 @@ export default function CharacterFx({
   useEffect(() => {
     sceneRef.current?.setSpeedScale(speedScale)
   }, [speedScale])
+
+  useEffect(() => {
+    sceneRef.current?.setParticleSizeFactor(particleSizeFactor)
+  }, [particleSizeFactor])
 
   return (
     <div

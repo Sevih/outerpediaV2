@@ -96,11 +96,22 @@ def gradient(g):
     }
 
 
+def animation_curve(c):
+    """Capture an AnimationCurve (m_Curve list of keys) as time/value pairs."""
+    if not isinstance(c, dict):
+        return None
+    keys = c.get('m_Curve', [])
+    if not keys:
+        return None
+    return [{'t': k.get('time', 0), 'v': k.get('value', 0)} for k in keys]
+
+
 def particle_module(comp):
     init = comp.get('InitialModule', {})
     color_mod = comp.get('ColorModule', {})
     emit = comp.get('EmissionModule', {})
     uv_mod = comp.get('UVModule', {})
+    size_mod = comp.get('SizeModule', {})
 
     bursts = []
     for b in emit.get('m_Bursts', []) or []:
@@ -149,6 +160,16 @@ def particle_module(comp):
             'cycles': uv_mod.get('cycles', 1),
             'animationType': uv_mod.get('animationType', 0),
             'rowMode': uv_mod.get('rowMode', 0),
+        }
+
+    if size_mod.get('enabled'):
+        size_curve = size_mod.get('curve', {})
+        out['sizeOverLifetime'] = {
+            'mode': size_curve.get('minMaxState', 0),
+            'scalar': size_curve.get('scalar', 1),
+            'minScalar': size_curve.get('minScalar', 1),
+            'curve': animation_curve(size_curve.get('maxCurve', {})),
+            'separateAxes': bool(size_mod.get('separateAxes', 0)),
         }
 
     return out

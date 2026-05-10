@@ -38,6 +38,14 @@ export interface FxUvModule {
   rowMode: number
 }
 
+export interface FxSizeOverLifetime {
+  mode: number
+  scalar: number
+  minScalar: number
+  curve: { t: number; v: number }[] | null
+  separateAxes: boolean
+}
+
 export interface FxParticle {
   duration: number
   looping: boolean
@@ -53,6 +61,7 @@ export interface FxParticle {
   colorOverLifetime?: FxColorOverLifetime
   emission?: { rateOverTime: MinMaxCurve; bursts: FxBurst[] }
   uvModule?: FxUvModule
+  sizeOverLifetime?: FxSizeOverLifetime
 }
 
 export interface FxTextureSlot {

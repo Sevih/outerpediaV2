@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import type { FxDescriptor, FxLayer, FxGradient } from './types'
+import type { FxDescriptor, FxLayer, FxGradient, FxSizeOverLifetime } from './types'
 import { VERT, FRAG } from './shaders/particle_ui'
 
 const TEXTURE_BASE = '/images/fx'
@@ -109,6 +109,7 @@ interface ParticleEmitter {
   layer: FxLayer
   particles: { mesh: THREE.Mesh; material: THREE.ShaderMaterial; state: ParticleState }[]
   gradient?: FxGradient
+  sizeOverLifetime?: FxSizeOverLifetime
 }
 
 function rangeRandom(c?: { value: number; min?: number }): number {
@@ -123,6 +124,24 @@ function rangeMid(c?: { value: number; min?: number }): number {
   if (!c) return 0
   if (c.min === undefined || c.min === c.value) return c.value
   return (c.value + c.min) / 2
+}
+
+// Sample a Unity AnimationCurve (linear interpolation between keys, scaled
+// by the scalar multiplier). t is the normalized particle age in [0, 1].
+function sampleSizeCurve(sol: FxSizeOverLifetime | undefined, t: number): number {
+  if (!sol || !sol.curve || sol.curve.length === 0) return 1
+  const keys = sol.curve
+  const scalar = sol.scalar ?? 1
+  if (t <= keys[0].t) return keys[0].v * scalar
+  if (t >= keys[keys.length - 1].t) return keys[keys.length - 1].v * scalar
+  for (let i = 0; i < keys.length - 1; i++) {
+    if (t >= keys[i].t && t <= keys[i + 1].t) {
+      const span = keys[i + 1].t - keys[i].t
+      const k = span > 0 ? (t - keys[i].t) / span : 0
+      return (keys[i].v + k * (keys[i + 1].v - keys[i].v)) * scalar
+    }
+  }
+  return scalar
 }
 
 export class FxScene {
@@ -141,6 +160,10 @@ export class FxScene {
   // `_Time.x * 20.0` which evaluates to elapsed real seconds, so 1.0 is the
   // ground-truth Unity speed. Tunable for visual A/B testing.
   private speedScale = 1.0
+  // Particle world-size compensation. Unity's startSize × localScale is
+  // expressed in Canvas units; without the Canvas scaler data we expose
+  // this as a tunable, default 0.25.
+  private particleSizeFactor = 0.25
 
   constructor(canvas: HTMLCanvasElement) {
     this.renderer = new THREE.WebGLRenderer({
@@ -196,6 +219,20 @@ export class FxScene {
       if (mainStrength >= 50 && !alphaTexOn) continue
 
       const mat = await this.makeMaterial(layer)
+      // When _MainTex is unbound the layer relies on _AlphaStrength × the
+      // mask to drive intensity. Unity emits ~30 particles with randomised
+      // rotation and per-particle gradient cycle; the in-game framebuffer
+      // ends up roughly rgb × tint.a per pixel after additive blend with the
+      // (dim) card behind. With one quad on a bright DOM card composed via
+      // plus-lighter, peak intensity blows out. Cap _AlphaStrength to 1 (so
+      // alpha doesn't saturate the mask area) and dampen rgb proportionally.
+      if (!m.textures._MainTex?.file) {
+        const aStrength = m.floats._AlphaStrength ?? 1
+        if (aStrength > 1) {
+          mat.uniforms.u_alphaStrength.value = 1
+          mat.uniforms.u_mainStrength.value *= 1 / aStrength
+        }
+      }
       const geo = new THREE.PlaneGeometry(1, 1)
       const mesh = new THREE.Mesh(geo, mat)
       mesh.renderOrder = layer.depth
@@ -213,7 +250,8 @@ export class FxScene {
       (sum, b) => sum + rangeMid(b.count) * (b.cycleCount || 1),
       0,
     )
-    const aliveCount = Math.max(2, Math.min(40, Math.ceil(rate * lifetime + burstTotal)))
+    // Cap N to avoid additive saturation when many particles overlap.
+    const aliveCount = Math.max(2, Math.min(20, Math.ceil(rate * lifetime + burstTotal)))
 
     const baseMaterial = await this.makeMaterial(layer)
     // Particles overlap and accumulate additively; some materials use
@@ -246,19 +284,30 @@ export class FxScene {
 
       // Per-particle atlas tile selection — pre-bake the tile sub-rect into
       // u_mainST so the shader doesn't need to know about UV tiling.
-      // Unity Texture Sheet Animation rowMode=LeftToRight places frame 0 at
-      // the TOP-LEFT of the file (top row, leftmost), advancing right then
-      // down. Three.js's flipY=true puts file-top at UV.y=1, so to map frame
-      // 0 to file (0, 0) we need tileY in UV = (tilesY - 1 - row).
+      // Unity TSA places frame 0 at the TOP-LEFT of the sheet (PNG row 0),
+      // advancing right then down. Three.js's flipY=true means UV.v=0 samples
+      // the BOTTOM row of the source PNG, so we mirror the row index:
+      //   tileY (UV offset row, 0=bottom-of-UV) = (tilesY-1) - unityRow.
       if (uv && uv.tilesX > 1 && uv.tilesY > 1) {
         const tilesTotal = uv.tilesX * uv.tilesY
-        const fLo = (uv.frameOverTime.value ?? 0) * tilesTotal
-        const fHi = (uv.frameOverTime.min ?? uv.frameOverTime.value ?? 1) * tilesTotal
+        let fLo = (uv.frameOverTime.value ?? 0) * tilesTotal
+        let fHi = (uv.frameOverTime.min ?? uv.frameOverTime.value ?? 1) * tilesTotal
+        // T_FX_Atlas_01 has the small star/bubble sprites in the TOP-LEFT 2
+        // rows of the PNG (Unity frames 0–15 in 8×8 layout). The middle rows
+        // hold large rings that span 2 cells; sampling them at 8×8 gives the
+        // "quarter circle" fragments the user reports. Narrow the range to
+        // the well-formed sprite band when the prefab would otherwise hit
+        // the rings.
+        const isSharedAtlas = baseMainSt?.file === 'T_FX_Atlas_01'
+        if (isSharedAtlas && uv.tilesX === 8 && uv.tilesY === 8) {
+          fLo = 0
+          fHi = 16
+        }
         const frame = Math.floor(Math.min(fLo, fHi) + Math.random() * Math.abs(fHi - fLo))
         const idx = Math.max(0, Math.min(tilesTotal - 1, frame))
         const tileX = idx % uv.tilesX
-        const row = Math.floor(idx / uv.tilesX) // 0 = top of file
-        const tileY = uv.tilesY - 1 - row
+        const unityRow = Math.floor(idx / uv.tilesX) // 0 = top of PNG
+        const tileY = uv.tilesY - 1 - unityRow       // 0 = bottom of UV (post-flipY)
         const effST = new THREE.Vector4(
           origST.x / uv.tilesX,
           origST.y / uv.tilesY,
@@ -271,19 +320,24 @@ export class FxScene {
       // Particle world size = startSize × localScale (Hierarchy scaling) in
       // Unity 100-unit space. We've moved to a pixel-uniform world (1 world
       // = 1 canvas px), so on a card of width cardW px:
-      //   size_px = (startSize × localScale / 100) × cardW × FACTOR
-      // FACTOR compensates for the parent Canvas scaling we don't have data
-      // for (Outerplane's "Scale With Screen Size" reduces particle scale).
-      const PARTICLE_SIZE_FACTOR = 1 / 4
+      //   size_px = (startSize × localScale / 100) × cardW × particleSizeFactor
+      // particleSizeFactor compensates for the parent Canvas scaling we
+      // don't have data for; tunable at runtime.
       const startSize = rangeRandom(p.startSize)
-      const sizeX = (Math.abs(localScaleX) * startSize * PARTICLE_SIZE_FACTOR) / 100
-      const sizeY = (Math.abs(localScaleY) * startSize * PARTICLE_SIZE_FACTOR) / 100
-      // Speed is in Unity world units / sec. Convert to card-fraction / sec
-      // (no size-factor reduction — drift cadence is independent of size).
-      const startSpeed = rangeRandom(p.startSpeed) / 100
+      const sizeX = (Math.abs(localScaleX) * startSize * this.particleSizeFactor) / 100
+      const sizeY = (Math.abs(localScaleY) * startSize * this.particleSizeFactor) / 100
+      // Speed is in Unity world units / sec. Outerplane's parent Canvas
+      // applies a screen-size scaling factor we don't have data for; in
+      // practice particles drift faster on screen than the raw values
+      // suggest, so apply a 5× compensation.
+      const SPEED_FACTOR = 5
+      const startSpeed = (rangeRandom(p.startSpeed) * SPEED_FACTOR) / 100
       const state: ParticleState = {
         spawnTime: -i * (lifetime / aliveCount),
-        spawnPos: [Math.random() - 0.5, Math.random() - 0.5],
+        // In-game bubbles/sparkles drift up *from the bottom* of the card,
+        // not random across the whole frame. Spawn in the lower half so the
+        // entire trajectory stays inside the card area.
+        spawnPos: [Math.random() - 0.5, Math.random() * 0.4 - 0.5],
         velocity: [0, startSpeed],
         size: (sizeX + sizeY) / 2,
         rotation: rangeRandom(p.startRotation),
@@ -293,7 +347,12 @@ export class FxScene {
     }
 
     baseMaterial.dispose()
-    this.emitters.push({ layer, particles, gradient })
+    this.emitters.push({
+      layer,
+      particles,
+      gradient,
+      sizeOverLifetime: p.sizeOverLifetime,
+    })
   }
 
   private applyMeshScales() {
@@ -432,7 +491,12 @@ export class FxScene {
           const x = (p.state.spawnPos[0] + p.state.velocity[0] * age) * this.cardW
           const y = (p.state.spawnPos[1] + p.state.velocity[1] * age) * this.cardH
           p.mesh.position.set(x, y, 0)
-          p.mesh.scale.set(p.state.size * sizePx, p.state.size * sizePx, 1)
+          // SizeOverLifetime: per-particle size scales by the curve sampled
+          // at the particle's normalized age. Without this Unity curve, the
+          // particle stays at peak size and looks too big throughout life.
+          const sizeMul = sampleSizeCurve(em.sizeOverLifetime, tNorm)
+          const px = p.state.size * sizeMul * sizePx
+          p.mesh.scale.set(px, px, 1)
           p.mesh.rotation.z = p.state.rotation
           const tint = sampleGradient(em.gradient, tNorm)
           ;(p.material.uniforms.u_tint.value as THREE.Vector4).set(...tint)
@@ -447,6 +511,18 @@ export class FxScene {
 
   setSpeedScale(scale: number) {
     this.speedScale = scale
+  }
+
+  setParticleSizeFactor(factor: number) {
+    if (factor === this.particleSizeFactor) return
+    const ratio = factor / Math.max(this.particleSizeFactor, 1e-6)
+    this.particleSizeFactor = factor
+    // Rescale every emitted particle's stored size in place.
+    for (const em of this.emitters) {
+      for (const p of em.particles) {
+        p.state.size *= ratio
+      }
+    }
   }
 
   resize(cardW: number, cardH: number, bleed: number) {
