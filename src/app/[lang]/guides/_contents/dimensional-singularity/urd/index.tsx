@@ -92,6 +92,14 @@ export default function UrdGuide() {
             author: "Sevih",
             label: "G.Beth — Rank SSS++",
           },
+          {
+            platform: "youtube",
+            id: "Ttf3-QIraNg",
+            title:
+              "OUTERPLANE - GNOSIS TEAM VS SINGULARITY BOSS - URD ",
+            author: "Zeroceless",
+            label: "G.Dahlia — Rank SSS++",
+          }
         ]}
       />
     </GuideTemplate>

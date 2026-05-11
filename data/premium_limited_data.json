@@ -1,17 +1,20 @@
 {
   "Premium": [
     {
-    "name": "Gnosis Domine",
-    "review": "A defense based Enchanter with high damage mitigation and a severe case of kleptomania. She can consistently transfer buffs from the enemy team to random allies. She wants to be the slowest on the field, and gets most of her turns from priority boosts instead. Her large defense & damage increases and frequent fixed damage give her good damage potential, but as mages are lacking in defense without the class quirks she is not recommended for beginners.",
-    "recommended_pve": "Any",
-    "recommended_pvp": "5 to 6",
-    "impact": {
-      "3": { "pve": "3", "pvp": "2" },
-      "4": { "pve": "2", "pvp": "2" },
-      "5": { "pve": "3", "pvp": "5" },
-      "6": { "pve": "2", "pvp": "4" }
-    }
-  },
+      "name": "Gnosis Domine",
+      "review": "A defense based Enchanter with high damage mitigation and a severe case of kleptomania. She can consistently transfer buffs from the enemy team to random allies. She wants to be the slowest on the field, and gets most of her turns from priority boosts instead. Her large defense & damage increases and frequent fixed damage give her good damage potential, but as mages are lacking in defense without the class quirks she is not recommended for beginners.",
+      "review_jp": "高いダメージ軽減と深刻な盗癖を持つ防御型エンチャンター。敵チームのバフをランダムな味方に安定して移し替えることができる。フィールド上で最も遅くなることを望み、ターンの大半は優先度上昇から得る。大幅な防御力と攻撃力の上昇、そして頻繁な固定ダメージにより優れたダメージポテンシャルを持つが、メイジはクラス特性なしでは防御が不足するため初心者にはおすすめしない。",
+      "review_kr": "높은 피해 감소와 심각한 도벽을 가진 방어형 인챈터. 적 팀의 버프를 무작위 아군에게 꾸준히 옮겨올 수 있다. 필드에서 가장 느린 상태를 원하며, 대부분의 턴은 우선도 상승으로 얻는다. 큰 폭의 방어력 및 데미지 증가와 잦은 고정 피해로 우수한 딜링 잠재력을 갖지만, 메이지는 클래스 특성 없이는 방어가 부족하기 때문에 초보자에게는 추천하지 않는다.",
+      "review_zh": "高减伤且有严重盗窃癖的防御型控场者。能稳定地将敌方队伍的增益效果转移到随机盟友身上。她希望在战场上最慢，主要通过优先度提升来获得行动回合。大幅的防御和伤害提升加上频繁的固定伤害赋予她不错的输出潜力，但法师在缺少职业特性时防御不足，因此不推荐新手使用。",
+      "recommended_pve": "Any",
+      "recommended_pvp": "5 to 6",
+      "impact": {
+        "3": { "pve": "3", "pvp": "2" },
+        "4": { "pve": "2", "pvp": "2" },
+        "5": { "pve": "3", "pvp": "5" },
+        "6": { "pve": "2", "pvp": "4" }
+      }
+    },
     {
       "name": "Monad Iota",
       "review": "A support in line with {E/Dark}'s selfish nature. She boosts {E/Dark} allies' damage more than other elements, and wants as many in the team as possible to ready her skill 3 faster. 5-star completes her support arsenal, giving {E/Dark} access to {B/BT_CALL_BACKUP_2} and the full array of damage increasing buffs and debuffs. Her skill 3 has a unique control effect ({D/BT_GOLDEN_CURSE}). Her 4-star and 6-star transcends allow her to set a new speed limit alongside Demiurge Vlada. This makes her a highly valuable pick for Arena. The accessibility of alternatives and her element restriction reduces her urgency in PvE.",
@@ -367,29 +370,17 @@
     },
     {
       "name": "Gnosis Dahlia",
-      "review": "A damage dealer who mainly stands out when her gimmicks are needed. Counters when crit, gains a barrier when critting and limits the damage she takes while her Dominion is active. These 3 tools make her very strong in some bossfights, such as world boss Walking Fortress Vault Venion. 6-star makes her Dominion buff permanent, which makes her a threat in arena and lets her stand alone against a number of bosses.",
-      "review_jp": "ギミックが必要な時に主に活躍するダメージディーラー。クリティカル被弾時にカウンター、クリティカル時にバリア獲得、支配中は被ダメージを制限。これら3つのツールにより、ワールドボス「歩く要塞ヴォールト・ヴェニオン」などの一部のボス戦で非常に強い。6つ星で支配バフが永続化し、アリーナでの脅威となり、多くのボスに単独で立ち向かえる。",
-      "review_kr": "기믹이 필요할 때 주로 두각을 나타내는 딜러. 치명타 피격 시 반격, 치명타 시 배리어 획득, 지배 중 받는 피해 제한. 이 3가지 도구로 월드 보스 '걸어다니는 요새 볼트 베니온' 등 일부 보스전에서 매우 강하다. 6성에서 지배 버프가 영구화되어 아레나에서 위협이 되고 많은 보스에 단독으로 맞설 수 있다.",
-      "review_zh": "主要在需要其机制时表现突出的输出。被暴击时反击，暴击时获得屏障，支配期间限制受到的伤害。这3个工具使她在某些Boss战中非常强，如世界Boss行走要塞沃特·维尼昂。6星使支配永久化，成为竞技场威胁并能单独对抗多个Boss。",
+      "review": "A damage dealer with very high survivability and turn cycling. She gains a barrier when hit or after critting and limits the damage she takes while her Dominion is active. She heals and boosts team priority when using her skill 1, which can also activate as a counter when receiving a crit or as an extra attack when allies crit (including herself). 6-star makes her Dominion buff permanent, which makes her a much bigger threat in arena and lets her stand alone against high damage bosses such as Irregular Queen or Dimensional Singularity.",
+      "review_jp": "非常に高い生存力とターン回しを持つダメージディーラー。被弾時またはクリティカル後にバリアを獲得し、支配中は受けるダメージを制限する。スキル1使用時に味方を回復させ、チームの優先度を上昇させる。このスキル1はクリティカル被弾時のカウンターとして、または味方（自身含む）のクリティカル時の追加攻撃としても発動する。6つ星で支配バフが永続化し、アリーナでの脅威が大きく増し、イレギュラークイーンや次元特異点などの高ダメージボスに単独で立ち向かえる。",
+      "review_kr": "매우 높은 생존력과 턴 순환을 갖춘 딜러. 피격 시 또는 치명타 이후에 배리어를 획득하며, 지배 중에는 받는 피해를 제한한다. 스킬 1 사용 시 아군을 회복시키고 팀 우선도를 상승시키며, 이 스킬은 치명타 피격 시 반격으로 발동되거나 아군(자신 포함) 치명타 시 추가 공격으로 발동된다. 6성에서 지배 버프가 영구화되어 아레나에서의 위협이 훨씬 커지고, 이레귤러 퀸이나 차원 특이점과 같은 고화력 보스에 단독으로 맞설 수 있다.",
+      "review_zh": "拥有极高生存能力和回合循环的输出。被攻击或暴击后获得屏障，支配期间限制受到的伤害。使用技能1时治疗队友并提升全队优先度，该技能在被暴击时可作为反击触发，或在队友（包括自身）暴击时作为额外攻击触发。6星使支配Buff永久化，使她在竞技场中成为更大的威胁，并能单独对抗异型怪女王或次元奇点等高伤害Boss。",
       "recommended_pve": "Any",
       "recommended_pvp": "6",
       "impact": {
-        "3": {
-          "pve": "3",
-          "pvp": "2"
-        },
-        "4": {
-          "pve": "3",
-          "pvp": "2"
-        },
-        "5": {
-          "pve": "3",
-          "pvp": "1"
-        },
-        "6": {
-          "pve": "4",
-          "pvp": "4"
-        }
+        "3": { "pve": "3", "pvp": "3" },
+        "4": { "pve": "3", "pvp": "3" },
+        "5": { "pve": "3", "pvp": "3" },
+        "6": { "pve": "4", "pvp": "4" }
       }
     },
     {

@@ -50,10 +50,17 @@ export default function FrozenDragonPhantasmHarshnaGuide() {
               videos={[
                 {
                   platform: "youtube",
-                  id: "bEcRDPR1q9Y",
-                  title: "Harshna — Dimensional Singularity — Rank SSS++",
+                  id: "z3i9A2EHwZ8",
+                  title: "OUTERPLANE - DELTA TEAM VS SINGULARITY BOSS - DRAGON ",
                   author: "Zeroceless",
-                  label: "Rank SSS++",
+                  label: "Rank S+",
+                },
+                {
+                  platform: "youtube",
+                  id: "8c3Ftx-y2pA",
+                  title: "OUTERPLANE - RYU TEAM VS SINGULARITY BOSS - DRAGON ",
+                  author: "Zeroceless",
+                  label: "Rank SS+",
                 }
               ]}
             />
