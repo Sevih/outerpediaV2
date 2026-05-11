@@ -9,6 +9,7 @@ import {
 } from './location'
 import { extractMonsterSkills, type MonsterSkill } from './skills'
 import { langDict, getLangTexts, type LangDict, type Row } from './common'
+import { GAME_LANGS, type GameLang } from '@/lib/i18n/config'
 import { loadEffectRules } from '../../_shared/effects/rules'
 
 // Apply the shared alias map to a comma-separated token list. Empty tokens
@@ -85,8 +86,8 @@ function resolveElement(cet: string | null, textIndex: Map<string, Row>): string
 
 function toWikiSkill(s: MonsterSkill): WikiSkill {
   // s.nameTexts / s.descTexts are the per-language records produced by skills.ts
-  const nameTexts = (s.nameTexts ?? null) as Record<'en' | 'jp' | 'kr' | 'zh', string> | null
-  const descTexts = (s.descTexts ?? null) as Record<'en' | 'jp' | 'kr' | 'zh', string> | null
+  const nameTexts = (s.nameTexts ?? null) as Record<GameLang, string> | null
+  const descTexts = (s.descTexts ?? null) as Record<GameLang, string> | null
   const out: WikiSkill = {
     name: langDict(nameTexts),
     type: String(s.type ?? ''),
@@ -144,7 +145,7 @@ export function extractMonster(
     const grade = tables.dungeonGradeMap.get(primary.dungeonId)
     if (grade) {
       const subbed: LangDict = { en: '', jp: '', kr: '', zh: '' }
-      for (const lang of ['en', 'jp', 'kr', 'zh'] as const) {
+      for (const lang of GAME_LANGS) {
         subbed[lang] = dungeonDict[lang].replace(/\{0\}/g, grade)
       }
       dungeonDict = subbed

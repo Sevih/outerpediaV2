@@ -41,9 +41,9 @@ const BADGE_COLORS: Record<string, string> = {
 };
 
 const LABELS = {
-  released: { en: 'Released:', jp: 'リリース:', kr: '출시:', zh: '发布:' } satisfies LangMap,
-  lastRerun: { en: 'Last rerun:', jp: '最終復刻:', kr: '마지막 복각:', zh: '最近复刻:' } satisfies LangMap,
-  with: { en: ' with ', jp: ' × ', kr: ' × ', zh: ' × ' } satisfies LangMap,
+  released: { en: 'Released:', jp: 'リリース:', kr: '출시:', zh: '发布:', fr: 'Sortie :' } satisfies LangMap,
+  lastRerun: { en: 'Last rerun:', jp: '最終復刻:', kr: '마지막 복각:', zh: '最近复刻:', fr: 'Dernier rerun :' } satisfies LangMap,
+  with: { en: ' with ', jp: ' × ', kr: ' × ', zh: ' × ', fr: ' avec ' } satisfies LangMap,
 };
 
 function formatDate(dateStr: string, lang: Lang): string {

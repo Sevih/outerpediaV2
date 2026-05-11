@@ -2,7 +2,7 @@ import { getWeapons, getAmulets, getTalismans, getArmorSets, getExclusiveEquipme
 import { slugifyEquipment } from '@/lib/format-text';
 import { getAllGuides } from '@/lib/data/guides';
 import type { WithLocalizedFields } from '@/types/common';
-import { SUFFIX_LANGS } from '@/lib/i18n/config';
+import { GAME_SUFFIX_LANGS } from '@/lib/i18n/config';
 
 export type EquipmentSearchItem = WithLocalizedFields<{
   slug: string;
@@ -29,7 +29,7 @@ function toSearchItem(
   image: string,
 ): EquipmentSearchItem {
   const result: EquipmentSearchItem = { slug: slugifyEquipment(item.name), name: item.name, type, image };
-  for (const lang of SUFFIX_LANGS) {
+  for (const lang of GAME_SUFFIX_LANGS) {
     const key = `name_${lang}` as const;
     if (item[key]) result[key] = item[key] as string;
   }

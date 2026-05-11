@@ -4,7 +4,7 @@ import { getCharactersForList } from '@/lib/data/characters';
 import { getWeapons, getAmulets, getArmorSets, getTalismans } from '@/lib/data/equipment';
 import type { Weapon, Amulet, Talisman } from '@/types/equipment';
 import type { WithLocalizedFields } from '@/types/common';
-import { SUFFIX_LANGS } from '@/lib/i18n/config';
+import { GAME_SUFFIX_LANGS } from '@/lib/i18n/config';
 import GearUsageStatisticsClient from './GearUsageStatisticsClient';
 
 export type GearCategory = 'weapon' | 'amulet' | 'set' | 'talisman';
@@ -37,7 +37,7 @@ type VisualInfo = WithLocalizedFields<{
 
 /** Extract localized name fields from an item */
 function localizedNames(item: { name: string } & Record<string, unknown>) {
-  return Object.fromEntries(SUFFIX_LANGS.map(l => [`name_${l}`, item[`name_${l}`]]));
+  return Object.fromEntries(GAME_SUFFIX_LANGS.map(l => [`name_${l}`, item[`name_${l}`]]));
 }
 
 /** Enrich raw usage entries with visual info + localized names */

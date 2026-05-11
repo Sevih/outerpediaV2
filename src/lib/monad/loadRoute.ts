@@ -1,7 +1,7 @@
 import type { MonadNode, MonadEdge, NodeType } from '@/types/monad';
 import type { LangMap } from '@/types/common';
-import type { Lang } from '@/lib/i18n/config';
-import { LANGS } from '@/lib/i18n/config';
+import type { Lang, GameLang } from '@/lib/i18n/config';
+import { GAME_LANGS } from '@/lib/i18n/config';
 
 // ─── JSON shapes (must match the admin generator output) ─────────────────────
 
@@ -66,17 +66,17 @@ export interface RouteJson {
 const TYPES_WITH_SPECIFIC_LABEL = new Set(['relic', 'tending', 'bending', 'nending']);
 
 function mergeItemNames(ids: string[], theme: ThemeJson): LangMap {
-  const buckets: Record<Lang, string[]> = { en: [], jp: [], kr: [], zh: [] };
+  const buckets: Record<GameLang, string[]> = { en: [], jp: [], kr: [], zh: [] };
   for (const id of ids) {
     const n = theme.items[id]?.name;
     if (!n) continue;
-    for (const lang of LANGS) {
+    for (const lang of GAME_LANGS) {
       const v = n[lang];
       if (v) buckets[lang].push(v);
     }
   }
   const out = {} as LangMap;
-  for (const lang of LANGS) out[lang] = buckets[lang].join(' / ');
+  for (const lang of GAME_LANGS) out[lang] = buckets[lang].join(' / ');
   return out;
 }
 
@@ -87,7 +87,7 @@ function mergeItemNames(ids: string[], theme: ThemeJson): LangMap {
 function splitLabelAndNeed(full: LangMap): { label: LangMap; need: LangMap } {
   const labelOut = {} as LangMap;
   const needOut = {} as LangMap;
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     const text = full[lang] ?? '';
     const m = text.match(/^([\s\S]*?)\s*[\(（]([^\(\)（）]+)[\)）]\s*$/);
     if (m) {
@@ -168,19 +168,19 @@ export function loadRoute(
   const nodes: MonadNode[] = route.nodes.map((n) => {
     const typeLabel = n.typeNameKey ? theme.stageLabels[n.typeNameKey] : undefined;
     const label = TYPES_WITH_SPECIFIC_LABEL.has(n.type) ? typeLabel?.[lang] : undefined;
-    const buckets: Record<Lang, Set<string>> = { en: new Set(), jp: new Set(), kr: new Set(), zh: new Set() };
+    const buckets: Record<GameLang, Set<string>> = { en: new Set(), jp: new Set(), kr: new Set(), zh: new Set() };
     const autoIds = autoByNode.get(n.id);
     if (autoIds) {
       const merged = mergeItemNames(Array.from(autoIds), theme);
-      for (const lg of LANGS) if (merged[lg]) buckets[lg].add(merged[lg]!);
+      for (const lg of GAME_LANGS) if (merged[lg]) buckets[lg].add(merged[lg]!);
     }
     for (const g of edgeGivesByFrom.get(n.id) ?? []) {
-      for (const lg of LANGS) if (g[lg]) buckets[lg].add(g[lg]!);
+      for (const lg of GAME_LANGS) if (g[lg]) buckets[lg].add(g[lg]!);
     }
     let givesItem: LangMap | undefined;
     if (Object.values(buckets).some((s) => s.size > 0)) {
       givesItem = {} as LangMap;
-      for (const lg of LANGS) givesItem[lg] = Array.from(buckets[lg]).join(' / ');
+      for (const lg of GAME_LANGS) givesItem[lg] = Array.from(buckets[lg]).join(' / ');
     }
     const out: MonadNode = {
       id: n.id,

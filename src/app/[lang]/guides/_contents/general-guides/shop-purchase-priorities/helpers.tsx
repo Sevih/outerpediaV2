@@ -65,18 +65,18 @@ export type ShopItem = {
 
 // ---- Tabs config
 export const SHOP_TABS: { key: ShopKey; label: LangMap; icon: string }[] = [
-    { key: 'guild', label: { en: 'Guild Shop', jp: 'ギルドショップ', kr: '길드 상점', zh: '公会商店' }, icon: '/images/ui/shop_guild.webp' },
-    { key: 'supply', label: { en: 'Supply Module', jp: '補給モジュール', kr: '보급 모듈', zh: '补给模块' }, icon: '/images/ui/shop_supply.webp' },
-    { key: 'rico', label: { en: 'Rico Secret', jp: 'リコの秘密', kr: '리코의 비밀', zh: '里科的秘密' }, icon: '/images/ui/shop_rico.webp' },
-    { key: 'event', label: { en: 'Event Shop', jp: 'イベントショップ', kr: '이벤트 상점', zh: '活动商店' }, icon: '/images/ui/shop_event.webp' },
-    { key: 'joint', label: { en: 'Joint Challenge', jp: 'ジョイントチャレンジ', kr: '조인트 챌린지', zh: '联合挑战' }, icon: '/images/ui/shop_joint.webp' },
-    { key: 'friend', label: { en: 'Friendship Point', jp: '友情ポイント', kr: '우정 포인트', zh: '友情点' }, icon: '/images/ui/shop_friend.webp' },
-    { key: 'arena', label: { en: 'Arena Shop', jp: 'アリーナショップ', kr: '아레나 상점', zh: '竞技场商店' }, icon: '/images/ui/shop_arena.webp' },
-    { key: 'stars', label: { en: "Star's Memory", jp: 'スターの記憶', kr: '스타의 기억', zh: '星之记忆' }, icon: '/images/ui/shop_stars.webp' },
-    { key: 'worldboss', label: { en: 'World Boss', jp: 'ワールドボス', kr: '월드 보스', zh: '世界首领' }, icon: '/images/ui/shop_worldboss.webp' },
-    { key: 'al', label: { en: 'Adventure License', jp: '冒険ライセンス', kr: '모험 라이선스', zh: '冒险执照' }, icon: '/images/ui/shop_al.webp' },
-    { key: 'survey', label: { en: 'Survey Hub', jp: 'サーベイハブ', kr: '서베이 허브', zh: '调查中心' }, icon: '/images/ui/shop_survey.webp' },
-    { key: 'resource', label: { en: 'General', jp: '一般', kr: '일반', zh: '通用' }, icon: '/images/ui/shop_resource.webp' },
+    { key: 'guild', label: { en: 'Guild Shop', jp: 'ギルドショップ', kr: '길드 상점', zh: '公会商店', fr: 'Guild Shop' }, icon: '/images/ui/shop_guild.webp' },
+    { key: 'supply', label: { en: 'Supply Module', jp: '補給モジュール', kr: '보급 모듈', zh: '补给模块', fr: 'Supply Module' }, icon: '/images/ui/shop_supply.webp' },
+    { key: 'rico', label: { en: 'Rico Secret', jp: 'リコの秘密', kr: '리코의 비밀', zh: '里科的秘密', fr: 'Rico Secret' }, icon: '/images/ui/shop_rico.webp' },
+    { key: 'event', label: { en: 'Event Shop', jp: 'イベントショップ', kr: '이벤트 상점', zh: '活动商店', fr: 'Event Shop' }, icon: '/images/ui/shop_event.webp' },
+    { key: 'joint', label: { en: 'Joint Challenge', jp: 'ジョイントチャレンジ', kr: '조인트 챌린지', zh: '联合挑战', fr: 'Joint Challenge' }, icon: '/images/ui/shop_joint.webp' },
+    { key: 'friend', label: { en: 'Friendship Point', jp: '友情ポイント', kr: '우정 포인트', zh: '友情点', fr: 'Friendship Point' }, icon: '/images/ui/shop_friend.webp' },
+    { key: 'arena', label: { en: 'Arena Shop', jp: 'アリーナショップ', kr: '아레나 상점', zh: '竞技场商店', fr: 'Arena Shop' }, icon: '/images/ui/shop_arena.webp' },
+    { key: 'stars', label: { en: "Star's Memory", jp: 'スターの記憶', kr: '스타의 기억', zh: '星之记忆', fr: "Star's Memory" }, icon: '/images/ui/shop_stars.webp' },
+    { key: 'worldboss', label: { en: 'World Boss', jp: 'ワールドボス', kr: '월드 보스', zh: '世界首领', fr: 'World Boss' }, icon: '/images/ui/shop_worldboss.webp' },
+    { key: 'al', label: { en: 'Adventure License', jp: '冒険ライセンス', kr: '모험 라이선스', zh: '冒险执照', fr: 'Adventure License' }, icon: '/images/ui/shop_al.webp' },
+    { key: 'survey', label: { en: 'Survey Hub', jp: 'サーベイハブ', kr: '서베이 허브', zh: '调查中心', fr: 'Survey Hub' }, icon: '/images/ui/shop_survey.webp' },
+    { key: 'resource', label: { en: 'General', jp: '一般', kr: '일반', zh: '通用', fr: 'General' }, icon: '/images/ui/shop_resource.webp' },
 ]
 
 // ---- UI Constants
@@ -94,59 +94,67 @@ export const LABELS = {
         en: "Specify exact costs and the amount given per purchase. Limits are structured as \"count / period\".",
         jp: "購入ごとの正確なコストと数量を明記。制限は「回数 / 期間」の形式です。",
         kr: "구매당 정확한 비용과 수량을 명시합니다. 제한은 \"횟수 / 기간\" 형식입니다.",
-        zh: "标明每次购买的确切成本和数量。限制以\"次数/周期\"格式显示。"
+        zh: "标明每次购买的确切成本和数量。限制以\"次数/周期\"格式显示。",
+        fr: "Indique les couts exacts et la quantite donnee par achat. Les limites sont structurees au format \"nombre / periode\"."
     },
     legendTitle: {
         en: "Legend:",
         jp: "凡例:",
         kr: "범례:",
-        zh: "图例:"
+        zh: "图例:",
+        fr: "Legende :"
     },
     legendS: {
         en: "S = must-buy",
         jp: "S = 必須購入",
         kr: "S = 필수 구매",
-        zh: "S = 必买"
+        zh: "S = 必买",
+        fr: "S = a acheter absolument"
     },
     legendA: {
         en: "A = high value",
         jp: "A = 高価値",
         kr: "A = 높은 가치",
-        zh: "A = 高价值"
+        zh: "A = 高价值",
+        fr: "A = grande valeur"
     },
     legendB: {
         en: "B = situational",
         jp: "B = 状況次第",
         kr: "B = 상황에 따라",
-        zh: "B = 视情况而定"
+        zh: "B = 视情况而定",
+        fr: "B = situationnel"
     },
     legendC: {
         en: "C = low priority",
         jp: "C = 低優先度",
         kr: "C = 낮은 우선순위",
-        zh: "C = 低优先级"
+        zh: "C = 低优先级",
+        fr: "C = faible priorite"
     },
     periodsTitle: {
         en: "Periods:",
         jp: "期間:",
         kr: "기간:",
-        zh: "周期:"
+        zh: "周期:",
+        fr: "Periodes :"
     },
-    periodD: { en: "D = Daily", jp: "D = 毎日", kr: "D = 매일", zh: "D = 每日" },
-    periodW: { en: "W = Weekly", jp: "W = 毎週", kr: "W = 매주", zh: "W = 每周" },
-    periodM: { en: "M = Monthly", jp: "M = 毎月", kr: "M = 매월", zh: "M = 每月" },
-    periodO: { en: "O = One-time", jp: "O = 一回限り", kr: "O = 일회성", zh: "O = 一次性" },
-    colPriority: { en: "Priority", jp: "優先度", kr: "우선순위", zh: "优先级" },
-    colItem: { en: "Item", jp: "アイテム", kr: "아이템", zh: "物品" },
-    colGives: { en: "Gives", jp: "獲得", kr: "획득", zh: "获得" },
-    colCost: { en: "Cost", jp: "コスト", kr: "비용", zh: "花费" },
-    colLimit: { en: "Limit", jp: "制限", kr: "제한", zh: "限制" },
-    colNotes: { en: "Notes", jp: "備考", kr: "비고", zh: "备注" },
+    periodD: { en: "D = Daily", jp: "D = 毎日", kr: "D = 매일", zh: "D = 每日", fr: "D = Quotidien" },
+    periodW: { en: "W = Weekly", jp: "W = 毎週", kr: "W = 매주", zh: "W = 每周", fr: "W = Hebdomadaire" },
+    periodM: { en: "M = Monthly", jp: "M = 毎月", kr: "M = 매월", zh: "M = 每月", fr: "M = Mensuel" },
+    periodO: { en: "O = One-time", jp: "O = 一回限り", kr: "O = 일회성", zh: "O = 一次性", fr: "O = Unique" },
+    colPriority: { en: "Priority", jp: "優先度", kr: "우선순위", zh: "优先级", fr: "Priorite" },
+    colItem: { en: "Item", jp: "アイテム", kr: "아이템", zh: "物品", fr: "Item" },
+    colGives: { en: "Gives", jp: "獲得", kr: "획득", zh: "获得", fr: "Donne" },
+    colCost: { en: "Cost", jp: "コスト", kr: "비용", zh: "花费", fr: "Cout" },
+    colLimit: { en: "Limit", jp: "制限", kr: "제한", zh: "限制", fr: "Limite" },
+    colNotes: { en: "Notes", jp: "備考", kr: "비고", zh: "备注", fr: "Notes" },
     seeGearUsageFinder: {
         en: "See Gear Usage Finder to check which characters your gear matches.",
         jp: "Gear Usage Finderで、装備がどのキャラクターに適しているか確認できます。",
         kr: "Gear Usage Finder에서 장비가 어떤 캐릭터에 맞는지 확인하세요.",
-        zh: "请查看Gear Usage Finder，确认装备适合哪些角色。"
+        zh: "请查看Gear Usage Finder，确认装备适合哪些角色。",
+        fr: "Consultez le Gear Usage Finder pour verifier a quels personnages votre gear correspond."
     },
 } as const
 
@@ -159,13 +167,15 @@ export const shopNotes: Record<ShopKey, LangMap | null> = {
         en: "Event shops vary a lot depending on the event. Adjust your priorities based on what's available, but generally focus on limited items first (cosmetics, 6★ event gear, rare manuals, transistones) before spending on more common resources.",
         jp: "イベントショップはイベントによって大きく異なります。入手可能なアイテムに基づいて優先順位を調整しますが、一般的には限定アイテム（コスメ、6★イベント装備、レアマニュアル、トランジストーン）を優先してから、より一般的なリソースに使いましょう。",
         kr: "이벤트 상점은 이벤트에 따라 크게 다릅니다. 가용 아이템에 따라 우선순위를 조정하되, 일반적으로 제한된 아이템(코스메틱, 6★ 이벤트 장비, 희귀 매뉴얼, 트랜지스톤)을 먼저 구매한 후 일반 자원에 사용하세요.",
-        zh: "活动商店因活动而异。根据可用物品调整优先级，但通常先关注限定物品（外观、6★活动装备、稀有手册、晶石）再购买常见资源。"
+        zh: "活动商店因活动而异。根据可用物品调整优先级，但通常先关注限定物品（外观、6★活动装备、稀有手册、晶石）再购买常见资源。",
+        fr: "Les Event shops varient beaucoup selon l'event. Ajustez vos priorites selon ce qui est disponible, mais concentrez-vous generalement d'abord sur les items limites (cosmetiques, 6★ event gear, manuels rares, transistones) avant de depenser sur des ressources plus communes."
     },
     joint: {
         en: "Save monthly purchases until the Joint Challenge event starts. The main concern is not having enough purchases to clear the quests. Once you can consistently max out the Joint Challenge, the currency becomes very abundant, so prioritize wisely at the start.",
         jp: "ジョイントチャレンジイベント開始まで月間購入を控えましょう。主な懸念はクエストをクリアするための購入回数が足りなくなることです。ジョイントチャレンジを安定してクリアできるようになれば通貨は非常に豊富になるので、最初は賢く優先順位をつけましょう。",
         kr: "조인트 챌린지 이벤트가 시작될 때까지 월간 구매를 아끼세요. 주요 우려사항은 퀘스트를 클리어하기 위한 구매 횟수가 부족해지는 것입니다. 조인트 챌린지를 꾸준히 클리어할 수 있게 되면 재화가 매우 풍부해지므로 처음에는 현명하게 우선순위를 정하세요.",
-        zh: "在联合挑战活动开始前保留月度购买次数。主要担忧是没有足够的购买次数来完成任务。一旦能稳定满分通关联合挑战，货币会变得非常充裕，所以开始时要明智地分配优先级。"
+        zh: "在联合挑战活动开始前保留月度购买次数。主要担忧是没有足够的购买次数来完成任务。一旦能稳定满分通关联合挑战，货币会变得非常充裕，所以开始时要明智地分配优先级。",
+        fr: "Conservez vos achats mensuels jusqu'au demarrage de l'event Joint Challenge. La principale crainte est de ne pas avoir assez d'achats pour clear les quetes. Une fois que vous pouvez constamment maxer le Joint Challenge, la monnaie devient tres abondante, donc priorisez intelligemment au debut."
     },
     friend: null,
     arena: null,
@@ -189,20 +199,23 @@ export const textOnlyShopsContent: Partial<Record<ShopKey, TextOnlyShopContent>>
                 en: "Only worth buying {I-I/Basic Skill Manual} and {I-I/Intermediate Skill Manual} for {I-I/Antimatter}.",
                 jp: "{I-I/Basic Skill Manual}と{I-I/Intermediate Skill Manual}を{I-I/Antimatter}で購入する価値があります。",
                 kr: "{I-I/Basic Skill Manual}과 {I-I/Intermediate Skill Manual}을 {I-I/Antimatter}로 구매할 가치가 있습니다.",
-                zh: "只值得用{I-I/Antimatter}购买{I-I/Basic Skill Manual}和{I-I/Intermediate Skill Manual}。"
+                zh: "只值得用{I-I/Antimatter}购买{I-I/Basic Skill Manual}和{I-I/Intermediate Skill Manual}。",
+                fr: "Ne vaut le coup d'acheter que {I-I/Basic Skill Manual} et {I-I/Intermediate Skill Manual} avec de l'{I-I/Antimatter}."
             },
             {
                 en: "{I-I/Intermediate Skill Manual} for {I-I/Free Ether} is fine if discounted and you really need them.",
                 jp: "割引があり本当に必要な場合、{I-I/Free Ether}で{I-I/Intermediate Skill Manual}を購入しても構いません。",
                 kr: "할인이 있고 정말 필요하다면 {I-I/Free Ether}로 {I-I/Intermediate Skill Manual}을 구매해도 괜찮습니다.",
-                zh: "如果有折扣且确实需要，用{I-I/Free Ether}购买{I-I/Intermediate Skill Manual}也可以。"
+                zh: "如果有折扣且确实需要，用{I-I/Free Ether}购买{I-I/Intermediate Skill Manual}也可以。",
+                fr: "Acheter des {I-I/Intermediate Skill Manual} contre de l'{I-I/Free Ether} est acceptable s'ils sont en promotion et que vous en avez vraiment besoin."
             }
         ],
         gearNote: {
             en: "6★ Legendary gear is only worth it if substats are strong: 3×3 matching the unit's stat priorities.",
             jp: "6★レジェンダリー装備はサブステータスが強力な場合のみ価値があります：ユニットのステータス優先度に一致する3×3。",
             kr: "6★ 레전더리 장비는 서브스탯이 강력한 경우에만 가치가 있습니다: 유닛의 스탯 우선순위와 일치하는 3×3.",
-            zh: "6★传说装备只有在副属性强力时才值得：3×3匹配角色的属性优先级。"
+            zh: "6★传说装备只有在副属性强力时才值得：3×3匹配角色的属性优先级。",
+            fr: "Le gear 6★ Legendary ne vaut le coup que si les substats sont solides : 3×3 correspondant aux priorites de stats de l'unite."
         }
     },
     rico: {
@@ -211,26 +224,30 @@ export const textOnlyShopsContent: Partial<Record<ShopKey, TextOnlyShopContent>>
                 en: "Always buy {I-I/Special Recruitment Ticket (Event)} when it appears for {I-I/Gold}.",
                 jp: "{I-I/Gold}で{I-I/Special Recruitment Ticket (Event)}が出たら必ず購入しましょう。",
                 kr: "{I-I/Gold}로 {I-I/Special Recruitment Ticket (Event)}가 나오면 반드시 구매하세요.",
-                zh: "当{I-I/Special Recruitment Ticket (Event)}以{I-I/Gold}出售时务必购买。"
+                zh: "当{I-I/Special Recruitment Ticket (Event)}以{I-I/Gold}出售时务必购买。",
+                fr: "Achetez toujours les {I-I/Special Recruitment Ticket (Event)} quand ils apparaissent contre du {I-I/Gold}."
             },
             {
                 en: "Purchasing {I-I/Special Recruitment Ticket} with {I-I/Free Ether} is ill-advised due to expenses that come from Premium/Limited banners and Precise crafting.",
                 jp: "{I-I/Free Ether}で{I-I/Special Recruitment Ticket}を購入するのは、プレミアム/限定ガチャや精密クラフトの出費があるためお勧めしません。",
                 kr: "{I-I/Free Ether}로 {I-I/Special Recruitment Ticket}을 구매하는 것은 프리미엄/한정 배너와 정밀 제작에 필요한 비용 때문에 권장하지 않습니다.",
-                zh: "用{I-I/Free Ether}购买{I-I/Special Recruitment Ticket}不明智，因为需要用于限定池和精准制作的开支。"
+                zh: "用{I-I/Free Ether}购买{I-I/Special Recruitment Ticket}不明智，因为需要用于限定池和精准制作的开支。",
+                fr: "Acheter des {I-I/Special Recruitment Ticket} avec de l'{I-I/Free Ether} est deconseille a cause des depenses liees aux Premium/Limited banners et au Precise crafting."
             },
             {
                 en: "{I-I/Potentium (Armor)} / {I-I/Potentium (Weapon/Accessory)} are ok if the discount is 25–30%.",
                 jp: "{I-I/Potentium (Armor)} / {I-I/Potentium (Weapon/Accessory)}は25〜30%の割引があれば購入しても良いでしょう。",
                 kr: "{I-I/Potentium (Armor)} / {I-I/Potentium (Weapon/Accessory)}는 25~30% 할인이 있다면 구매해도 괜찮습니다.",
-                zh: "如果{I-I/Potentium (Armor)} / {I-I/Potentium (Weapon/Accessory)}有25-30%的折扣可以购买。"
+                zh: "如果{I-I/Potentium (Armor)} / {I-I/Potentium (Weapon/Accessory)}有25-30%的折扣可以购买。",
+                fr: "Les {I-I/Potentium (Armor)} / {I-I/Potentium (Weapon/Accessory)} sont corrects si la promo est de 25-30%."
             }
         ],
         gearNote: {
             en: "6★ Legendary gear is only worth it if substats are strong: 3×3 or 2×3 + 1×4 matching the unit's stat priorities.",
             jp: "6★レジェンダリー装備はサブステータスが強力な場合のみ価値があります：ユニットのステータス優先度に一致する3×3または2×3 + 1×4。",
             kr: "6★ 레전더리 장비는 서브스탯이 강력한 경우에만 가치가 있습니다: 유닛의 스탯 우선순위와 일치하는 3×3 또는 2×3 + 1×4.",
-            zh: "6★传说装备只有在副属性强力时才值得：3×3或2×3 + 1×4匹配角色的属性优先级。"
+            zh: "6★传说装备只有在副属性强力时才值得：3×3或2×3 + 1×4匹配角色的属性优先级。",
+            fr: "Le gear 6★ Legendary ne vaut le coup que si les substats sont solides : 3×3 ou 2×3 + 1×4 correspondant aux priorites de stats de l'unite."
         }
     }
 }

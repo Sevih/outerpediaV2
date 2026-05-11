@@ -12,10 +12,10 @@ type Props = {
 };
 
 const LABELS = {
-  keptUntilUse: { en: 'is kept until you decide to use it.', jp: 'は使用するまで保持されます。', kr: '는 사용할 때까지 유지됩니다.', zh: '会保留直到使用。' } satisfies LangMap,
-  exchangeOptions: { en: 'Exchange options:', jp: '交換オプション:', kr: '교환 옵션:', zh: '交换选项：' } satisfies LangMap,
-  featuredHero: { en: 'Featured hero', jp: 'ピックアップヒーロー', kr: '픽업 영웅', zh: 'PICKUP同伴' } satisfies LangMap,
-  ownedBonus: { en: 'If you already own the hero, you get 15 additional', jp: '既に所持している場合は15個追加で獲得できます', kr: '이미 보유 중인 경우 15개가 추가로 지급됩니다', zh: '如已拥有该同伴，额外获得15个' } satisfies LangMap,
+  keptUntilUse: { en: 'is kept until you decide to use it.', jp: 'は使用するまで保持されます。', kr: '는 사용할 때까지 유지됩니다.', zh: '会保留直到使用。', fr: 'est conservé jusqu\'à ce que vous décidiez de l\'utiliser.' } satisfies LangMap,
+  exchangeOptions: { en: 'Exchange options:', jp: '交換オプション:', kr: '교환 옵션:', zh: '交换选项：', fr: 'Options d\'échange :' } satisfies LangMap,
+  featuredHero: { en: 'Featured hero', jp: 'ピックアップヒーロー', kr: '픽업 영웅', zh: 'PICKUP同伴', fr: 'Héros en focus' } satisfies LangMap,
+  ownedBonus: { en: 'If you already own the hero, you get 15 additional', jp: '既に所持している場合は15個追加で獲得できます', kr: '이미 보유 중인 경우 15개가 추가로 지급됩니다', zh: '如已拥有该同伴，额外获得15个', fr: 'Si vous possédez déjà le Héros, vous obtenez 15 supplémentaires' } satisfies LangMap,
 };
 
 export default function MileageInfo({ mileageItem, cost, isPersistent = true }: Props) {

@@ -1,7 +1,7 @@
 'use client';
 
 import type { ReactNode } from 'react';
-import { SUFFIX_LANGS } from '@/types/common';
+import { GAME_SUFFIX_LANGS } from '@/types/common';
 
 // ── Shared types for extractor API responses ───────────────────────
 
@@ -29,7 +29,7 @@ export interface ListResponse<T = unknown> {
 
 const LANG_LABELS = [
   { suffix: '', label: 'EN' },
-  ...SUFFIX_LANGS.map(l => ({ suffix: `_${l}`, label: l.toUpperCase() })),
+  ...GAME_SUFFIX_LANGS.map(l => ({ suffix: `_${l}`, label: l.toUpperCase() })),
 ];
 
 export function LangRow({ field, data }: { field: string; data: Record<string, string> }) {

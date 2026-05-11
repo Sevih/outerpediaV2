@@ -372,7 +372,7 @@ const i18n = {
     couponNotePrefix: '别忘了兑换优惠码',
     couponNoteSuffix: '— 所有玩家均可使用。奖品优惠码将由Sevih通过Discord发放给参与者，请确保能联系到你。',
   },
-} as const satisfies Record<Lang, Record<string, string>>;
+} as const satisfies Partial<Record<Lang, Record<string, string>>>;
 
 // ---------------------------------------------------------------------------
 // Page component
@@ -380,7 +380,7 @@ const i18n = {
 
 const Page = () => {
   const { lang } = useI18n();
-  const l = i18n[lang];
+  const l = i18n[lang as keyof typeof i18n] ?? i18n.en;
 
   const podiumLabels = [l.podium1st, l.podium2nd, l.podium3rd];
   const podiumAccents = [

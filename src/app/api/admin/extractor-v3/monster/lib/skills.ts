@@ -1,5 +1,5 @@
 import { loadTable, indexBy, withCaseInsensitiveGet, getLangTexts, expandLang, num, type Row } from './common'
-import type { Lang } from '@/lib/i18n/config'
+import type { GameLang } from '@/lib/i18n/config'
 import {
   classifyEffects,
   buildTooltipMap,
@@ -223,7 +223,7 @@ export function extractSkill(
           lang,
           resolveSkillDescription(txt, tables.buffsByBuffID),
         ])
-      ) as Record<Lang, string>)
+      ) as Record<GameLang, string>)
     : null
 
   // Monster skills use the declared BuffIDs only — unlike characters we

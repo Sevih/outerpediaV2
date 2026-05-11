@@ -1,5 +1,5 @@
 import { loadTable, indexBy, num, langDict, getLangTexts, type Row, type LangDict } from './common'
-import { LANGS } from '@/lib/i18n/config'
+import { GAME_LANGS } from '@/lib/i18n/config'
 
 // Re-export so consumers (e.g. the public damage-calc bake) can pull the
 // LangDict alias from the same module they get the resolvers from.
@@ -110,7 +110,7 @@ export function resolveModeLabelDict(
     if (!dungeonNameId) return null
     const floor = lookupDict(textIndex, dungeonNameId)
     const out: LangDict = { en: '', jp: '', kr: '', zh: '' }
-    for (const lang of LANGS) {
+    for (const lang of GAME_LANGS) {
       out[lang] = stripFloorSuffix(floor[lang])
     }
     return out.en ? out : null

@@ -20,8 +20,8 @@ type Props = {
 };
 
 const LABELS = {
-  title: { en: 'Duplicates give', jp: '重複時の獲得', kr: '중복 획득 시', zh: '重复获得时' } satisfies LangMap,
-  rarity: { en: 'Rarity', jp: 'レアリティ', kr: '희귀도', zh: '星级' } satisfies LangMap,
+  title: { en: 'Duplicates give', jp: '重複時の獲得', kr: '중복 획득 시', zh: '重复获得时', fr: 'Les doublons donnent' } satisfies LangMap,
+  rarity: { en: 'Rarity', jp: 'レアリティ', kr: '희귀도', zh: '星级', fr: 'Rareté' } satisfies LangMap,
 };
 
 const star = (

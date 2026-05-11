@@ -1,7 +1,7 @@
 import { readFile, readdir, writeFile } from 'fs/promises';
 import { join } from 'path';
 import { PATHS } from '../config';
-import { SUFFIX_LANGS } from '../../src/lib/i18n/config';
+import { GAME_SUFFIX_LANGS } from '../../src/lib/i18n/config';
 
 type SkillData = {
   buff?: string[];
@@ -226,7 +226,7 @@ export async function run() {
       if (char.role_by_transcend) listEntry.role_by_transcend = char.role_by_transcend;
 
       // Add localized Fullname suffixes to both entries
-      for (const lang of SUFFIX_LANGS) {
+      for (const lang of GAME_SUFFIX_LANGS) {
         const key = `Fullname_${lang}`;
         const value = char[key];
         if (typeof value === 'string' && value.trim()) {

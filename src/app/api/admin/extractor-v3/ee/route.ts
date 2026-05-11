@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
-import { LANGS, DEFAULT_LANG, type Lang } from '@/lib/i18n/config'
+import { GAME_LANGS, DEFAULT_LANG, type GameLang } from '@/lib/i18n/config'
 import { buildTooltipMap } from '../_shared/effects/tooltip'
 import type { TooltipEntry, EffectTables, BuffRow } from '../_shared/effects/types'
 import { classifyEffects } from '../_shared/effects'
@@ -10,7 +10,7 @@ import { loadEffectRules } from '../_shared/effects/rules'
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 const EE_PATH = path.join(process.cwd(), 'data', 'equipment', 'ee.json')
 
-const LANG_COLUMNS: Record<Lang, string> = {
+const LANG_COLUMNS: Record<GameLang, string> = {
   en: 'English',
   jp: 'Japanese',
   kr: 'Korean',
@@ -43,11 +43,11 @@ function groupBy(rows: Row[], key: string) {
   return map
 }
 
-function getText(textMap: Map<string, Row>, id: string): Record<Lang, string> | null {
+function getText(textMap: Map<string, Row>, id: string): Record<GameLang, string> | null {
   const entry = textMap.get(id) ?? textMap.get(id.toUpperCase())
   if (!entry) return null
-  const result = {} as Record<Lang, string>
-  for (const lang of LANGS) {
+  const result = {} as Record<GameLang, string>
+  for (const lang of GAME_LANGS) {
     result[lang] = entry[LANG_COLUMNS[lang]] ?? ''
   }
   return result
@@ -292,7 +292,7 @@ function extractMainStat(
       const texts = textSystemMap.get(sysKey)
       if (texts) {
         const result: Record<string, string> = {}
-        for (const lang of LANGS) {
+        for (const lang of GAME_LANGS) {
           const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
           result[`mainStat${suffix}`] = (texts[LANG_COLUMNS[lang]] ?? '').replace(/\\n/g, ' ').replace(/\s+/g, ' ').trim()
         }
@@ -424,7 +424,7 @@ function extractEE(id: string, t: Tables): Record<string, unknown> {
 
   // Name
   const nameTexts = getText(t.textItem, `ITEM_C_EQUIP_${id}_NAME`)
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
     result[`name${suffix}`] = (nameTexts?.[lang] ?? '').trim()
   }
@@ -443,7 +443,7 @@ function extractEE(id: string, t: Tables): Record<string, unknown> {
   const changeBuff2 = findEEUpgradeBuff2(t.buffsByID, id)
 
   if (descTexts) {
-    for (const lang of LANGS) {
+    for (const lang of GAME_LANGS) {
       const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
       const raw = (descTexts[lang] ?? '').trim()
       result[`effect${suffix}`] = baseBuff ? resolveEEPlaceholders(raw, baseBuff, baseBuff2) : raw
@@ -451,7 +451,7 @@ function extractEE(id: string, t: Tables): Record<string, unknown> {
   }
 
   if (upgradeDescTexts) {
-    for (const lang of LANGS) {
+    for (const lang of GAME_LANGS) {
       const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
       const raw = (upgradeDescTexts[lang] ?? '').trim()
       result[`effect10${suffix}`] = changeBuff

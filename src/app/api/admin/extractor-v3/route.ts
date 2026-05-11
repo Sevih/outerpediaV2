@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
-import { LANGS, DEFAULT_LANG, type Lang } from '@/lib/i18n/config'
+import { GAME_LANGS, DEFAULT_LANG, type GameLang } from '@/lib/i18n/config'
 import {
   classifyEffects,
   buildTooltipMap,
@@ -12,7 +12,7 @@ import { generateFaceIcon } from './_shared/face-icon'
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 
 // Maps our lang keys to column names in the game JSON tables
-const LANG_COLUMNS: Record<Lang, string> = {
+const LANG_COLUMNS: Record<GameLang, string> = {
   en: 'English',
   jp: 'Japanese',
   kr: 'Korean',
@@ -46,11 +46,11 @@ function groupBy(rows: Record<string, string>[], key: string) {
   return map
 }
 
-function getText(textMap: Map<string, Record<string, string>>, id: string): Record<Lang, string> | null {
+function getText(textMap: Map<string, Record<string, string>>, id: string): Record<GameLang, string> | null {
   const entry = textMap.get(id) ?? textMap.get(id.toUpperCase())
   if (!entry) return null
-  const result = {} as Record<Lang, string>
-  for (const lang of LANGS) {
+  const result = {} as Record<GameLang, string>
+  for (const lang of GAME_LANGS) {
     result[lang] = entry[LANG_COLUMNS[lang]] ?? ''
   }
   return result
@@ -138,13 +138,13 @@ function extractTranscend(
     // Build the output key: "4" if single, "4_1"/"4_2" if sub-levels
     const outputKey = hasSubLevels ? `${ui}_${starPlus + 1}` : ui
 
-    const parts: Record<Lang, string[]> = {} as Record<Lang, string[]>
-    for (const lang of LANGS) parts[lang] = []
+    const parts: Record<GameLang, string[]> = {} as Record<GameLang, string[]>
+    for (const lang of GAME_LANGS) parts[lang] = []
 
     // Stat line
     if (hp > 0 || atk > 0 || def > 0) {
       const pct = atk / 10
-      for (const lang of LANGS) {
+      for (const lang of GAME_LANGS) {
         parts[lang].push(`ATK DEF HP +${pct}%`)
       }
     }
@@ -157,7 +157,7 @@ function extractTranscend(
         for (const descID of descIDs) {
           const desc = getText(textMap, descID)
           if (desc) {
-            for (const lang of LANGS) {
+            for (const lang of GAME_LANGS) {
               if (desc[lang]) parts[lang].push(desc[lang].replace(/\\n/g, '\n').trim())
             }
           }
@@ -172,9 +172,9 @@ function extractTranscend(
     if (!defaultText) continue
 
     // Skip localized keys when all languages have the same content (stats-only)
-    const allSame = LANGS.every((l) => parts[l].join('\n') === defaultText)
+    const allSame = GAME_LANGS.every((l) => parts[l].join('\n') === defaultText)
 
-    for (const lang of LANGS) {
+    for (const lang of GAME_LANGS) {
       const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
       const key = `${outputKey}${suffix}`
       const text = parts[lang].join('\n')
@@ -337,7 +337,7 @@ function extractSkills(
     }
 
     // Skill name per language
-    for (const lang of LANGS) {
+    for (const lang of GAME_LANGS) {
       const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
       skillOut[`name${suffix}`] = (nameText?.[lang] ?? '').trim()
     }
@@ -350,7 +350,7 @@ function extractSkills(
       const descText = getText(textMap, descID)
       if (!descText) continue
 
-      for (const lang of LANGS) {
+      for (const lang of GAME_LANGS) {
         const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
         const key = `${lvl}${suffix}`
         trueDescLevels[key] = resolvePlaceholders(descText[lang], lvl, buffsByID).trim()
@@ -365,7 +365,7 @@ function extractSkills(
       if (lvl <= 1 || !level.DescID) continue
 
       const enhIDs = level.DescID.split(',').map((s) => s.trim())
-      for (const lang of LANGS) {
+      for (const lang of GAME_LANGS) {
         const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
         const texts = enhIDs
           .map((eid) => getText(textMap, eid)?.[lang]?.trimEnd())
@@ -516,7 +516,7 @@ function extractSkills(
         const apIdx = burstLevel - 1
 
         const burst: Record<string, unknown> = {}
-        for (const lang of LANGS) {
+        for (const lang of GAME_LANGS) {
           const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
           burst[`effect${suffix}`] = burstDescText?.[lang] ?? ''
         }
@@ -703,7 +703,7 @@ function extractCharacter(id: string, tables?: Tables) {
   const result: Record<string, unknown> = { ID: id }
 
   // Fullname per language — prefix with NickName if ShowNickName, or FusionName for core fusion
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
     let fullname = names?.[lang] ?? ''
 
@@ -737,7 +737,7 @@ function extractCharacter(id: string, tables?: Tables) {
   // VoiceActor per language: use CVName_{lang} entry, zh falls back to jp entry
   // Core Fusion chars fallback to base character's VA
   const baseCharID = fusionRow?.CharacterID ?? id
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
     const vaLang = lang === 'zh' ? 'jp' : lang
     const vaEntry = getText(t.textMap, `${id}_CVName_${vaLang}`)
@@ -1061,7 +1061,7 @@ export async function GET(request: NextRequest) {
             const storyEntry = storySym ? tables.textSystemMap.get(storySym) : undefined
             if (storyEntry) {
               const existingStory = (existingProfile.story ?? {}) as Record<string, string>
-              for (const lang of LANGS) {
+              for (const lang of GAME_LANGS) {
                 const ext = (storyEntry[LANG_COLUMNS[lang]] ?? '').trim()
                 const cur = (existingStory[lang] ?? '').trim()
                 if (ext && cur && ext !== cur) deepResult.push({ key: `profile.story_${lang}`, type: classifyDiffType(ext, cur), extracted: ext.slice(0, 80) + '...', existing: cur.slice(0, 80) + '...' })
@@ -1142,7 +1142,7 @@ export async function GET(request: NextRequest) {
           const storyEntry = storySym ? tables.textSystemMap.get(storySym) : undefined
           if (storyEntry) {
             const existingStory = (existingProfile.story ?? {}) as Record<string, string>
-            for (const lang of LANGS) {
+            for (const lang of GAME_LANGS) {
               const ext = (storyEntry[LANG_COLUMNS[lang]] ?? '').trim()
               const cur = (existingStory[lang] ?? '').trim()
               if (ext && cur && ext !== cur) diffs.push({ key: `profile.story_${lang}`, type: classifyDiffType(ext, cur), extracted: ext.slice(0, 80) + '...', existing: cur.slice(0, 80) + '...' })
@@ -1378,7 +1378,7 @@ function updateCharacterProfile(id: string, extracted: Record<string, unknown>) 
   const storyEntry = storySym ? textSystem.get(storySym) : undefined
   const story: Record<string, string> = {}
   if (storyEntry) {
-    for (const lang of LANGS) {
+    for (const lang of GAME_LANGS) {
       story[lang] = storyEntry[LANG_COLUMNS[lang]] ?? ''
     }
   }

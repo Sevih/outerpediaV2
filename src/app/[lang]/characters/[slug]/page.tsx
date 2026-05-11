@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Lang } from '@/lib/i18n/config';
-import { LANGS, SUFFIX_LANGS } from '@/lib/i18n/config';
+import { LANGS, GAME_SUFFIX_LANGS } from '@/lib/i18n/config';
 import { createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT } from '@/i18n';
 import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners, getCharacterVideos, getCharacterById, resolveIdToSlug } from '@/lib/data/characters';
@@ -181,7 +181,7 @@ export default async function CharacterDetailPage({ params }: Props) {
         id: linkedId,
         slug: linkedSlug,
         name: linkedChar.Fullname,
-        ...Object.fromEntries(SUFFIX_LANGS.map(sl => [`name_${sl}`, linkedChar[`Fullname_${sl}`]])),
+        ...Object.fromEntries(GAME_SUFFIX_LANGS.map(sl => [`name_${sl}`, linkedChar[`Fullname_${sl}`]])),
         type: character.hasCoreFusion ? 'core-fusion' : 'original',
       } as CoreFusionLink;
     }

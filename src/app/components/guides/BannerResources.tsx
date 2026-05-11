@@ -19,10 +19,10 @@ type Props = {
 };
 
 const LABELS = {
-  title: { en: 'Resources', jp: '使用できるリソース', kr: '사용 가능한 재화', zh: '可使用资源' } satisfies LangMap,
-  perRecruit: { en: 'per recruit', jp: '1回募集あたり', kr: '1회 모집당', zh: '每次招募' } satisfies LangMap,
-  grants: { en: 'Grants', jp: '獲得', kr: '획득', zh: '获得' } satisfies LangMap,
-  noMileage: { en: 'No mileage', jp: 'マイレージ加算なし', kr: '마일리지 미적용', zh: '不计入点数' } satisfies LangMap,
+  title: { en: 'Resources', jp: '使用できるリソース', kr: '사용 가능한 재화', zh: '可使用资源', fr: 'Ressources' } satisfies LangMap,
+  perRecruit: { en: 'per recruit', jp: '1回募集あたり', kr: '1회 모집당', zh: '每次招募', fr: 'par Recruit' } satisfies LangMap,
+  grants: { en: 'Grants', jp: '獲得', kr: '획득', zh: '获得', fr: 'Donne' } satisfies LangMap,
+  noMileage: { en: 'No mileage', jp: 'マイレージ加算なし', kr: '마일리지 미적용', zh: '不计入点数', fr: 'Pas de mileage' } satisfies LangMap,
 };
 
 export default function BannerResources({ resources, title, warning }: Props) {

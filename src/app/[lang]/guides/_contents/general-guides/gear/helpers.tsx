@@ -4,7 +4,7 @@ import Image from 'next/image';
 import ItemInline from '@/app/components/inline/ItemInline';
 import StatInline from '@/app/components/inline/StatInline';
 import SharedStarIcons, { YellowStars } from '@/app/components/ui/StarIcons';
-import { getRarityBgPath } from '@/lib/format-text';
+import { getRarityBgPath, formatEffectText, stripColorTags } from '@/lib/format-text';
 import type { StarColor } from '@/lib/stars';
 import type { Lang } from '@/lib/i18n/config';
 import { l } from '@/lib/i18n/localize';
@@ -369,6 +369,10 @@ export function EnhancementComparisonGrid({ labels }: { labels: { normal: string
 
 function highlightDifferences(t1Text: string | null, t4Text: string | null): React.ReactNode {
   if (!t4Text) return null;
+  // Strip Unity-style color tags before comparing & rendering so hex codes don't
+  // pollute the number diff and the markup doesn't leak into the page.
+  t1Text = t1Text ? stripColorTags(t1Text) : null;
+  t4Text = stripColorTags(t4Text);
   if (!t1Text) return <span className="text-green-400">{t4Text}</span>;
 
   const numberPattern = /(\d+(?:\.\d+)?%?)/g;
@@ -420,7 +424,7 @@ export function BreakthroughExamplesGrid({ lang }: { lang: Lang }) {
             <EquipmentCardInline data={{ type: 'Weapon', rarity: 'legendary', star: 6, reforge: 0, tier: null, level: null, class: (surefireGreatsword.class?.toLowerCase() ?? null) as EquipmentClass, effect: 11 }} />
             <div className="mt-2 text-center text-sm">
               <div className="flex items-center justify-center gap-1"><StatInline name="ATK" iconOnly /> 200</div>
-              <p className="mt-1 max-w-45 text-neutral-400">{l(surefireGreatsword, 'effect_desc1', lang)}</p>
+              <p className="mt-1 max-w-45 text-neutral-400">{formatEffectText(l(surefireGreatsword, 'effect_desc1', lang))}</p>
             </div>
           </div>
           <span className="text-neutral-500">↓ T4</span>
@@ -443,7 +447,7 @@ export function BreakthroughExamplesGrid({ lang }: { lang: Lang }) {
             <EquipmentCardInline data={{ type: 'Armor', rarity: 'legendary', star: 6, reforge: 0, tier: null, level: null, class: null, effect: 19 }} />
             <div className="mt-2 text-center text-sm">
               <div className="flex items-center justify-center gap-1"><StatInline name="DEF" iconOnly /> 100</div>
-              <p className="mt-1 max-w-45 text-neutral-400">2p: {l(immunitySet, 'effect_2_1', lang)}</p>
+              <p className="mt-1 max-w-45 text-neutral-400">2p: {formatEffectText(l(immunitySet, 'effect_2_1', lang))}</p>
             </div>
           </div>
           <span className="text-neutral-500">↓ T4</span>
@@ -455,7 +459,7 @@ export function BreakthroughExamplesGrid({ lang }: { lang: Lang }) {
                 <span className="text-neutral-400">2p: </span>
                 {highlightDifferences(l(immunitySet, 'effect_2_1', lang), l(immunitySet, 'effect_2_4', lang))}
               </p>
-              <p className="max-w-45 text-green-400">4p: {l(immunitySet, 'effect_4_4', lang)}</p>
+              <p className="max-w-45 text-green-400">4p: {formatEffectText(l(immunitySet, 'effect_4_4', lang))}</p>
             </div>
           </div>
         </div>
@@ -468,7 +472,7 @@ export function BreakthroughExamplesGrid({ lang }: { lang: Lang }) {
             <EquipmentCardInline data={{ type: 'Armor', rarity: 'legendary', star: 6, reforge: 0, tier: null, level: null, class: null, effect: 11 }} />
             <div className="mt-2 text-center text-sm">
               <div className="flex items-center justify-center gap-1"><StatInline name="DEF" iconOnly /> 100</div>
-              <p className="mt-1 max-w-45 text-neutral-400">4p: {l(penetrationSet, 'effect_4_1', lang)}</p>
+              <p className="mt-1 max-w-45 text-neutral-400">4p: {formatEffectText(l(penetrationSet, 'effect_4_1', lang))}</p>
             </div>
           </div>
           <span className="text-neutral-500">↓ T4</span>
@@ -476,7 +480,7 @@ export function BreakthroughExamplesGrid({ lang }: { lang: Lang }) {
             <EquipmentCardInline data={{ type: 'Armor', rarity: 'legendary', star: 6, reforge: 0, tier: 4, level: null, class: null, effect: 11 }} />
             <div className="mt-2 text-center text-sm">
               <div className="flex items-center justify-center gap-1"><StatInline name="DEF" iconOnly /> <span className="font-medium text-green-400">120</span></div>
-              <p className="mt-1 max-w-45 text-green-400">2p: {l(penetrationSet, 'effect_2_4', lang)}</p>
+              <p className="mt-1 max-w-45 text-green-400">2p: {formatEffectText(l(penetrationSet, 'effect_2_4', lang))}</p>
               <p className="mt-1 max-w-45">
                 <span className="text-neutral-400">4p: </span>
                 {highlightDifferences(l(penetrationSet, 'effect_4_1', lang), l(penetrationSet, 'effect_4_4', lang))}
@@ -569,9 +573,9 @@ export function ObtainingMethodsList({ content }: { content: Record<string, { ti
     <div className="space-y-6">
       {OBTAINING_METHODS.map(({ key, color }, idx) => (
         <div key={key} className={`border-l-4 border-${color}-500 pl-4`}>
-          <h2>
+          <h3>
             {idx + 1}. {content[key].title}
-          </h2>
+          </h3>
           <div className="mt-2 text-neutral-300">{content[key].content}</div>
         </div>
       ))}

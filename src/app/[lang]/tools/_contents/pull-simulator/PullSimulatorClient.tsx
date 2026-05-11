@@ -3,7 +3,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import type { TranslationKey } from '@/i18n';
-import { SUFFIX_LANGS } from '@/lib/i18n/config';
+import { GAME_SUFFIX_LANGS } from '@/lib/i18n/config';
 import type { Lang } from '@/lib/i18n/config';
 import type { BannerType, PullResult } from '@/lib/gacha';
 import {
@@ -70,7 +70,8 @@ const BANNER_CATEGORY_WEIGHT: Record<BannerType, Record<GachaCharacterEntry['cat
 
 function getCharName(char: GachaMinorEntry, lang: Lang): string {
   if (lang === 'en') return char.name;
-  return char[`name_${lang}`];
+  const key = `name_${lang}` as keyof GachaMinorEntry;
+  return (char[key] as string | undefined) ?? char.name;
 }
 
 /** Pick a random character from a pool using category-based weights */
@@ -287,7 +288,7 @@ export default function PullSimulatorClient({ characters, pool1, pool2 }: Props)
                     .filter((c) => {
                       if (!focusSearch) return true;
                       const q = focusSearch.toLowerCase();
-                      return SUFFIX_LANGS.some((l) => c[`name_${l}`].toLowerCase().includes(q))
+                      return GAME_SUFFIX_LANGS.some((l) => c[`name_${l}`].toLowerCase().includes(q))
                         || c.name.toLowerCase().includes(q);
                     })
                     .filter((c) => !selectedSlugs.includes(c.slug))

@@ -19,6 +19,7 @@ const heading: LangMap = {
   jp: 'コアフュージョン',
   kr: '코어 퓨전',
   zh: '核心融合',
+  fr: 'Core Fusion',
 };
 
 export default function CoreFusionGuide() {

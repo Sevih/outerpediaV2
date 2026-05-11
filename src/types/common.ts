@@ -1,18 +1,19 @@
-import type { Lang, SuffixLang } from '@/lib/i18n/config';
+import type { Lang, GameSuffixLang } from '@/lib/i18n/config';
 
 // Re-export language types from the single source of truth
-export type { Lang, SuffixLang } from '@/lib/i18n/config';
-export { LANGS, DEFAULT_LANG, SUFFIX_LANGS } from '@/lib/i18n/config';
+export type { Lang, SuffixLang, GameLang, GameSuffixLang } from '@/lib/i18n/config';
+export { LANGS, DEFAULT_LANG, SUFFIX_LANGS, GAME_LANGS, GAME_SUFFIX_LANGS } from '@/lib/i18n/config';
 
 /**
- * Adds localized suffix fields to a base type.
- * Suffixes are auto-derived from LANGUAGES config.
+ * Adds localized suffix fields to a base type. Suffixes cover the game's
+ * official languages only (jp/kr/zh) — fr is a community translation and
+ * is NOT produced by the extractors, so it must not appear here.
  *
  * Example: WithLocalizedFields<{ name: string }, 'name'>
  * → { name: string; name_jp?: string; name_kr?: string; name_zh?: string }
  */
 export type WithLocalizedFields<T, K extends string> = T & {
-  [P in `${K}_${SuffixLang}`]?: string;
+  [P in `${K}_${GameSuffixLang}`]?: string;
 };
 
 /**

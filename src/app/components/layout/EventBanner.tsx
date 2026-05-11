@@ -9,7 +9,7 @@ import type { Lang } from '@/lib/i18n/config';
 
 function formatDeadline(endStr: string, lang: Lang): string {
   const date = new Date(endStr);
-  const localeMap: Record<Lang, string> = { en: 'en-US', jp: 'ja-JP', kr: 'ko-KR', zh: 'zh-CN' };
+  const localeMap: Record<Lang, string> = { en: 'en-US', jp: 'ja-JP', kr: 'ko-KR', zh: 'zh-CN', fr: 'fr-FR' };
   const datePart = date.toLocaleDateString(localeMap[lang], {
     month: 'short',
     day: 'numeric',
@@ -24,7 +24,7 @@ function getCurrentPhaseLabel(meta: EventMeta, lang: Lang): string | null {
   if (!meta.phases || meta.phases.length === 0) return null;
   const now = Date.now();
   const current = meta.phases.find(p => now < new Date(p.until).getTime());
-  return current ? current.label[lang] : null;
+  return current ? (current.label[lang] ?? current.label.en ?? null) : null;
 }
 
 export default function EventBanner() {
@@ -53,7 +53,7 @@ export default function EventBanner() {
                 className="h-6 w-auto"
                 unoptimized
               />
-              <span className="text-sm font-medium text-cyan-200">{event.meta.title[lang]}</span>
+              <span className="text-sm font-medium text-cyan-200">{event.meta.title[lang] ?? event.meta.title.en}</span>
               <span className="text-xs text-cyan-300/70">
                 · {phaseLabel ?? `${t('tools.event.ends')} ${formatDeadline(event.meta.end, lang)}`}
               </span>

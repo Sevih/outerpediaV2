@@ -20,11 +20,11 @@ export const revalidate = 86400;
 type Props = { params: Promise<{ lang: string; slug: string }> };
 
 const TYPE_LABELS: Record<string, Record<Lang, string>> = {
-  weapon:   { en: 'Weapon', jp: '武器', kr: '무기', zh: '武器' },
-  amulet:   { en: 'Accessory', jp: 'アクセサリー', kr: '장신구', zh: '饰品' },
-  talisman: { en: 'Talisman', jp: 'タリスマン', kr: '부적', zh: '护符' },
-  set:      { en: 'Armor Set', jp: 'セット', kr: '세트', zh: '套装' },
-  ee:       { en: 'Exclusive Equipment', jp: '専用装備', kr: '전용 장비', zh: '专属装备' },
+  weapon:   { en: 'Weapon', jp: '武器', kr: '무기', zh: '武器', fr: 'Arme' },
+  amulet:   { en: 'Accessory', jp: 'アクセサリー', kr: '장신구', zh: '饰品', fr: 'Accessoire' },
+  talisman: { en: 'Talisman', jp: 'タリスマン', kr: '부적', zh: '护符', fr: 'Talisman' },
+  set:      { en: 'Armor Set', jp: 'セット', kr: '세트', zh: '套装', fr: 'Set d\'armure' },
+  ee:       { en: 'Exclusive Equipment', jp: '専用装備', kr: '전용 장비', zh: '专属装备', fr: 'Équipement exclusif' },
 };
 
 function buildSeoText(
@@ -126,7 +126,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let typeLabel = typeLabelMap?.[lang] ?? typeLabelMap?.en ?? '';
   // Avoid "Life Set — Armor Set" repetition: drop "Set" from type label when name already ends with it
   if (equipment.type === 'set' && /set$/i.test(name)) {
-    typeLabel = { en: 'Armor', jp: '防具', kr: '방어구', zh: '防具' }[lang] ?? 'Armor';
+    typeLabel = { en: 'Armor', jp: '防具', kr: '방어구', zh: '防具', fr: 'Armure' }[lang] ?? 'Armor';
   }
 
   let ogImage: string;

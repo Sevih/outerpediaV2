@@ -21,7 +21,7 @@ import {
 
 const TAB_KEYS: TabKey[] = TAB_CONFIG.map(t => t.key);
 
-const heading: LangMap = { en: "Premium & Limited", jp: "プレミアム＆限定", kr: "프리미엄 & 한정", zh: "高级与限定" };
+const heading: LangMap = { en: "Premium & Limited", jp: "プレミアム＆限定", kr: "프리미엄 & 한정", zh: "高级与限定", fr: "Premium & Limited" };
 
 export default function PremiumLimitedGuide() {
   const { lang } = useI18n();

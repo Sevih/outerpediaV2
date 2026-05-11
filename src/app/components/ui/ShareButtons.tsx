@@ -15,6 +15,7 @@ const PLATFORMS_BY_LANG: Record<Lang, Platform[]> = {
   jp: ['line', 'twitter', 'reddit'],
   kr: ['kakaotalk', 'naver', 'twitter'],
   zh: ['weibo', 'qq', 'twitter'],
+  fr: ['twitter', 'reddit', 'facebook', 'telegram', 'whatsapp'],
 };
 
 const PLATFORM_CONFIG: Record<Platform, { label: string; color: string; icon: string }> = {

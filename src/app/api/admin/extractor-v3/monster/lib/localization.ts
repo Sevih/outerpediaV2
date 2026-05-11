@@ -1,5 +1,5 @@
 import { loadTable, indexBy, getLangTexts, expandLang, langDict, type Row, type LangDict } from './common'
-import type { Lang } from '@/lib/i18n/config'
+import type { GameLang } from '@/lib/i18n/config'
 
 // Localized name fields are exposed as flat keys: Name, Name_jp, Name_kr, Name_zh
 // (and same for NickName when present), matching the convention used elsewhere.
@@ -18,7 +18,7 @@ export function loadTextCharacterIndex(): Map<string, Row> {
  * Resolve a single text key into a per-language record.
  * Returns null entries for each language if the key is missing.
  */
-export function resolveText(textId: string | null, index?: Map<string, Row>): Record<Lang, string> | null {
+export function resolveText(textId: string | null, index?: Map<string, Row>): Record<GameLang, string> | null {
   if (!textId) return null
   const map = index ?? loadTextCharacterIndex()
   return getLangTexts(map.get(textId))

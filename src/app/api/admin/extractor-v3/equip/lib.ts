@@ -1,14 +1,14 @@
 import { NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
-import { LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang } from '@/lib/i18n/config'
+import { GAME_LANGS, DEFAULT_LANG, GAME_SUFFIX_LANGS, type GameLang } from '@/lib/i18n/config'
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 const DATAMINE_SPRITE = path.join(process.cwd(), 'datamine', 'extracted_astudio', 'assets', 'editor', 'resources', 'sprite', 'at_thumbnailitemruntime')
 const EQUIP_IMG_DIR = path.join(process.cwd(), 'public', 'images', 'equipment')
 const EFFECT_IMG_DIR = path.join(process.cwd(), 'public', 'images', 'ui', 'effect')
 
-export const LANG_COLUMNS: Record<Lang, string> = {
+export const LANG_COLUMNS: Record<GameLang, string> = {
   en: 'English', jp: 'Japanese', kr: 'Korean', zh: 'China_Simplified',
 }
 
@@ -31,16 +31,16 @@ export function groupBy(rows: Row[], key: string) {
 }
 
 // Get localized text from a text table indexed by ID
-function getLangTexts(entry: Row | undefined): Record<Lang, string> | null {
+function getLangTexts(entry: Row | undefined): Record<GameLang, string> | null {
   if (!entry) return null
-  const r = {} as Record<Lang, string>
-  for (const lang of LANGS) r[lang] = entry[LANG_COLUMNS[lang]] ?? ''
+  const r = {} as Record<GameLang, string>
+  for (const lang of GAME_LANGS) r[lang] = entry[LANG_COLUMNS[lang]] ?? ''
   return r
 }
 
-export function expandLang(prefix: string, texts: Record<Lang, string> | null): Record<string, string | null> {
+export function expandLang(prefix: string, texts: Record<GameLang, string> | null): Record<string, string | null> {
   const r: Record<string, string | null> = {}
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
     r[`${prefix}${suffix}`] = texts?.[lang]?.trim().replace(/[\u2018\u2019]/g, "'") ?? null
   }
@@ -130,14 +130,14 @@ export function classFromRow(row: Row, textSystemMap: Map<string, Row>): string 
 
 // Per-language class names, used to suffix irregular item display names
 // like `Briareos's Recklessness [Striker]`.
-export function classNamesByLang(row: Row, textSystemMap: Map<string, Row>): Record<Lang, string> | null {
+export function classNamesByLang(row: Row, textSystemMap: Map<string, Row>): Record<GameLang, string> | null {
   const raw = row.ClassLimit ?? ''
   if (!raw || raw === 'CCT_NONE') return null
   const sysKey = `SYS_CLASS_${raw.replace('CCT_', '')}`
   const entry = textSystemMap.get(sysKey)
   if (!entry) return null
-  const out = {} as Record<Lang, string>
-  for (const lang of LANGS) out[lang] = entry[LANG_COLUMNS[lang]] ?? ''
+  const out = {} as Record<GameLang, string>
+  for (const lang of GAME_LANGS) out[lang] = entry[LANG_COLUMNS[lang]] ?? ''
   return out
 }
 
@@ -430,7 +430,7 @@ export function extractItems(cfg: ItemConfig, t: EquipTables, bossMap: Map<strin
     if (isIrregular && nameTexts) {
       const classByLang = classNamesByLang(row, t.textSystemMap)
       if (classByLang) {
-        for (const lang of LANGS) {
+        for (const lang of GAME_LANGS) {
           const base = (nameTexts[lang] ?? '').trim()
           const suffix = (classByLang[lang] ?? '').trim()
           if (!base || !suffix) continue
@@ -482,7 +482,7 @@ export function extractItems(cfg: ItemConfig, t: EquipTables, bossMap: Map<strin
     }
 
     // Effect descriptions
-    for (const lang of LANGS) {
+    for (const lang of GAME_LANGS) {
       const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
       if (descTexts && buffIdStr) {
         const raw = (descTexts[lang] ?? '').trim()
@@ -509,25 +509,25 @@ function isPermilleStat(statType: string, applyingType: string): boolean {
   return false
 }
 
-function resolveStatEffect(statType: string, applyingType: string, rawValue: string, textSystemMap: Map<string, Row>): Record<Lang, string | null> {
+function resolveStatEffect(statType: string, applyingType: string, rawValue: string, textSystemMap: Map<string, Row>): Record<GameLang, string | null> {
   if (!statType || statType === 'ST_NONE' || !rawValue || rawValue === 'OAT_NONE') {
-    const r = {} as Record<Lang, string | null>
-    for (const lang of LANGS) r[lang] = null
+    const r = {} as Record<GameLang, string | null>
+    for (const lang of GAME_LANGS) r[lang] = null
     return r
   }
   const sysKey = `SYS_STAT_${statType.slice(3)}`
   const entry = textSystemMap.get(sysKey)
   const num = parseInt(rawValue)
   const fmtd = isNaN(num) ? '' : isPermilleStat(statType, applyingType) ? `${num / 10}%` : String(num)
-  const r = {} as Record<Lang, string | null>
-  for (const lang of LANGS) {
+  const r = {} as Record<GameLang, string | null>
+  for (const lang of GAME_LANGS) {
     const name = entry?.[LANG_COLUMNS[lang]] ?? statType
     r[lang] = `${name} +${fmtd}`
   }
   return r
 }
 
-function resolveSetEffect(row: Row, piece: '2P' | '4P', t: EquipTables): Record<Lang, string | null> {
+function resolveSetEffect(row: Row, piece: '2P' | '4P', t: EquipTables): Record<GameLang, string | null> {
   const optType = row[`OptionType_${piece}`] ?? ''
   if (optType === 'IOT_STAT') {
     const rawValue = row[`OptionValue_${piece}`] ?? ''
@@ -537,27 +537,27 @@ function resolveSetEffect(row: Row, piece: '2P' | '4P', t: EquipTables): Record<
     const descIds = (row.DescID ?? row.CustomCraftDescID ?? '').split(',').map((s) => s.trim()).filter(Boolean)
     const index = piece === '4P' && (row.OptionType_2P ?? '') === 'IOT_BUFF' ? 1 : 0
     const descId = descIds[index]
-    if (!descId) { const r = {} as Record<Lang, string | null>; for (const lang of LANGS) r[lang] = null; return r }
+    if (!descId) { const r = {} as Record<GameLang, string | null>; for (const lang of GAME_LANGS) r[lang] = null; return r }
     const texts = getLangTexts(t.textSkillMap.get(descId))
-    const r = {} as Record<Lang, string | null>
-    for (const lang of LANGS) r[lang] = texts?.[lang] ?? null
+    const r = {} as Record<GameLang, string | null>
+    for (const lang of GAME_LANGS) r[lang] = texts?.[lang] ?? null
     return r
   }
-  const r = {} as Record<Lang, string | null>
-  for (const lang of LANGS) r[lang] = null
+  const r = {} as Record<GameLang, string | null>
+  for (const lang of GAME_LANGS) r[lang] = null
   return r
 }
 
-function expandEffectLang(prefix: string, langMap: Record<Lang, string | null>): Record<string, string | null> {
+function expandEffectLang(prefix: string, langMap: Record<GameLang, string | null>): Record<string, string | null> {
   const r: Record<string, string | null> = {}
   r[prefix] = langMap[DEFAULT_LANG]
-  for (const lang of SUFFIX_LANGS) r[`${prefix}_${lang}`] = langMap[lang]
+  for (const lang of GAME_SUFFIX_LANGS) r[`${prefix}_${lang}`] = langMap[lang]
   return r
 }
 
-function nullLangMap(): Record<Lang, string | null> {
-  const r = {} as Record<Lang, string | null>
-  for (const lang of LANGS) r[lang] = null
+function nullLangMap(): Record<GameLang, string | null> {
+  const r = {} as Record<GameLang, string | null>
+  for (const lang of GAME_LANGS) r[lang] = null
   return r
 }
 
@@ -657,7 +657,7 @@ export function extractTalismans(t: EquipTables): ExtractedItem[] {
       const descID = baseOpt.CustomCraftDescID ?? baseOpt.DescID
       const descTexts = descID ? getLangTexts(t.textSkillMap.get(descID)) : null
       const buffId = baseOpt.BuffID ?? ''
-      for (const lang of LANGS) {
+      for (const lang of GAME_LANGS) {
         const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
         if (descTexts && buffId && buffId !== 'OAT_NONE') {
           extracted[`effect_desc1${suffix}`] = resolvePlaceholders((descTexts[lang] ?? '').trim(), t.buffsByID, buffId, 1)
@@ -666,7 +666,7 @@ export function extractTalismans(t: EquipTables): ExtractedItem[] {
         }
       }
     } else {
-      for (const lang of LANGS) { const s = lang === DEFAULT_LANG ? '' : `_${lang}`; extracted[`effect_desc1${s}`] = null }
+      for (const lang of GAME_LANGS) { const s = lang === DEFAULT_LANG ? '' : `_${lang}`; extracted[`effect_desc1${s}`] = null }
     }
 
     // Upgraded effect
@@ -675,7 +675,7 @@ export function extractTalismans(t: EquipTables): ExtractedItem[] {
       const descTexts = descID ? getLangTexts(t.textSkillMap.get(descID)) : null
       const buffId = upgradedOpt.BuffID
       const maxLvl = getMaxLevel(t.buffsByID, buffId)
-      for (const lang of LANGS) {
+      for (const lang of GAME_LANGS) {
         const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
         if (descTexts && buffId) {
           extracted[`effect_desc4${suffix}`] = resolvePlaceholders((descTexts[lang] ?? '').trim(), t.buffsByID, buffId, maxLvl)
@@ -684,7 +684,7 @@ export function extractTalismans(t: EquipTables): ExtractedItem[] {
         }
       }
     } else {
-      for (const lang of LANGS) { const s = lang === DEFAULT_LANG ? '' : `_${lang}`; extracted[`effect_desc4${s}`] = null }
+      for (const lang of GAME_LANGS) { const s = lang === DEFAULT_LANG ? '' : `_${lang}`; extracted[`effect_desc4${s}`] = null }
     }
 
     extracted.effect_icon = baseOpt?.IconName ?? null

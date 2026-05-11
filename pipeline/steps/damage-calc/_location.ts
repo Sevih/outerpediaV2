@@ -1,5 +1,5 @@
 import { loadJson2 } from './raw-loader'
-import { LANGS, type Lang } from '../../../src/lib/i18n/config'
+import { GAME_LANGS, type GameLang } from '../../../src/lib/i18n/config'
 
 /**
  * Pipeline-local copy of the dungeon location resolvers used by the damage
@@ -20,7 +20,7 @@ export type LangDict = { en: string; jp: string; kr: string; zh: string }
 
 type Row = Record<string, string | undefined>
 
-const LANG_COLUMNS: Record<Lang, string> = {
+const LANG_COLUMNS: Record<GameLang, string> = {
   en: 'English',
   jp: 'Japanese',
   kr: 'Korean',
@@ -65,7 +65,7 @@ const STORY_HARD_KEY = 'SYS_ADVENTURE_HARD'
 function langDict(entry: Row | undefined): LangDict {
   const out: LangDict = { en: '', jp: '', kr: '', zh: '' }
   if (!entry) return out
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     const raw = entry[LANG_COLUMNS[lang]] ?? ''
     out[lang] = raw.trim().replace(/[‘’]/g, "'")
   }
@@ -100,7 +100,7 @@ export function resolveModeLabelDict(
     if (!dungeonNameId) return null
     const floor = lookupDict(textIndex, dungeonNameId)
     const out: LangDict = { en: '', jp: '', kr: '', zh: '' }
-    for (const lang of LANGS) out[lang] = stripFloorSuffix(floor[lang])
+    for (const lang of GAME_LANGS) out[lang] = stripFloorSuffix(floor[lang])
     return out.en ? out : null
   }
   const key = MODE_TEXT_KEYS[mode]

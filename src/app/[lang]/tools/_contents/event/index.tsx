@@ -129,7 +129,7 @@ export default function EventTool() {
         {events.map(({ meta, Page, status }) => {
           const isExpanded = expandedSlug === meta.slug;
           const isUpcoming = status === 'upcoming';
-          const displayTitle = isUpcoming ? t('tools.event.status.upcoming') + ' — ' + t(`tools.event.type.${meta.type}` as Parameters<typeof t>[0]) : meta.title[lang];
+          const displayTitle = isUpcoming ? t('tools.event.status.upcoming') + ' — ' + t(`tools.event.type.${meta.type}` as Parameters<typeof t>[0]) : (meta.title[lang] ?? meta.title.en ?? '');
 
           return (
             <article
@@ -188,7 +188,7 @@ export default function EventTool() {
                       <div className="relative mx-auto h-48 w-full max-w-md">
                         <Image
                           src={meta.cover}
-                          alt={meta.title[lang]}
+                          alt={meta.title[lang] ?? meta.title.en ?? ''}
                           fill
                           sizes="(max-width: 768px) 100vw, 448px"
                           className="rounded-lg object-contain"

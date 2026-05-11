@@ -68,7 +68,7 @@ const i18n = {
     footer:
       '© 2025 Outerpedia — 所有泄露均为虚构。找到此页面不会获得任何奖励。大概。',
   },
-} as const satisfies Record<Lang, Record<string, string>>;
+} as const satisfies Partial<Record<Lang, Record<string, string>>>;
 
 // ---------------------------------------------------------------------------
 // Page component
@@ -76,7 +76,7 @@ const i18n = {
 
 const Page = () => {
   const { lang } = useI18n();
-  const l = i18n[lang];
+  const l = i18n[lang as keyof typeof i18n] ?? i18n.en;
 
   return (
     <div className="mx-auto max-w-2xl space-y-6 text-center">

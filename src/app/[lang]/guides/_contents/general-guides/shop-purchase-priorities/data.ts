@@ -294,7 +294,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             gives: { amount: 1, unit: '' },
             costs: [{ currency: 'Arena Medal', amount: 200 }],
             limit: { count: 5, period: 'One-time' },
-            label: { en: 'Ether Amulet', jp: 'エーテルアミュレット', kr: '에테르 아뮬렛', zh: '以太护符' },
+            label: { en: 'Ether Amulet', jp: 'エーテルアミュレット', kr: '에테르 아뮬렛', zh: '以太护符', fr: 'Ether Amulet' },
         },
         {
             name: 'Ether Blade',
@@ -302,7 +302,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             gives: { amount: 1, unit: '' },
             costs: [{ currency: 'Arena Medal', amount: 200 }],
             limit: { count: 5, period: 'One-time' },
-            label: { en: 'Ether Blade', jp: 'エーテルブレード', kr: '에테르 블레이드', zh: '以太之刃' },
+            label: { en: 'Ether Blade', jp: 'エーテルブレード', kr: '에테르 블레이드', zh: '以太之刃', fr: 'Ether Blade' },
         },
         {
             name: '5★ Equipment',
@@ -310,7 +310,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             gives: { amount: 1, unit: '' },
             costs: [{ currency: 'Arena Medal', amount: 300 }],
             limit: { count: 4, period: 'One-time' },
-            label: { en: '5★ Equipment', jp: '5★装備', kr: '5★ 장비', zh: '5★装备' },
+            label: { en: '5★ Equipment', jp: '5★装備', kr: '5★ 장비', zh: '5★装备', fr: 'Équipement 5★' },
             notes: 'Etheric Speed Set (Helmet, Gloves, Chest Armor, Boots)',
         }
     ],
@@ -813,7 +813,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             priority: 'S',
             gives: { amount: 0, unit: '' },
             costs: [{ currency: 'TBD', amount: 0 }],
-            label: { en: 'Cosmetic', jp: 'コスメティック', kr: '코스메틱', zh: '外观' },
+            label: { en: 'Cosmetic', jp: 'コスメティック', kr: '코스메틱', zh: '外观', fr: 'Cosmetique' },
             limit: { count: 0, period: 'One-time' }
         },
         {
@@ -821,7 +821,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             priority: 'S',
             gives: { amount: 0, unit: '' },
             costs: [{ currency: 'TBD', amount: 0 }],
-            label: { en: '6★ Equipment', jp: '6★装備', kr: '6★ 장비', zh: '6★装备' },
+            label: { en: '6★ Equipment', jp: '6★装備', kr: '6★ 장비', zh: '6★装备', fr: 'Équipement 6★' },
             limit: { count: 0, period: 'One-time' }
         },
         {
@@ -886,7 +886,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             gives: { amount: 0, unit: '' },
             costs: [{ currency: 'TBD', amount: 0 }],
             limit: { count: 0, period: 'One-time' },
-            label: { en: '5★ Equipment', jp: '5★装備', kr: '5★ 장비', zh: '5★装备' },
+            label: { en: '5★ Equipment', jp: '5★装備', kr: '5★ 장비', zh: '5★装备', fr: 'Équipement 5★' },
             notes: "You can ignore it if it doesn't have a unique passive like Sacreed Edge weapon"
         },
         {

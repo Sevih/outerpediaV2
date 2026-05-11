@@ -20,7 +20,7 @@ import {
     GearSection,
 } from './helpers';
 
-const heading: LangMap = { en: "Growth Systems", jp: "育成システム", kr: "육성 시스템", zh: "培养系统" };
+const heading: LangMap = { en: "Growth Systems", jp: "育成システム", kr: "육성 시스템", zh: "培养系统", fr: "Systèmes de Croissance" };
 
 const TAB_KEYS = ['leveling', 'limitBreak', 'transcendence', 'affinity', 'skills', 'specialEquip', 'gems', 'gear'] as const;
 type TabKey = typeof TAB_KEYS[number];

@@ -23,6 +23,7 @@ const title = {
     jp: 'ショップ別おすすめ購入品',
     kr: '상점별 추천 구매 목록',
     zh: '各商店推荐购买',
+    fr: 'Achats Recommandes par Shop',
 }
 
 const TAB_KEYS = SHOP_TABS.map(t => t.key)

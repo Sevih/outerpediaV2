@@ -1,14 +1,14 @@
 import fs from 'fs'
 import path from 'path'
-import { LANGS, DEFAULT_LANG, type Lang } from '@/lib/i18n/config'
+import { GAME_LANGS, DEFAULT_LANG, type GameLang } from '@/lib/i18n/config'
 
-export type LangDict = { en: string; jp: string; kr: string; zh: string }
+export type LangDict = Record<GameLang, string>
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 
 export type Row = Record<string, string>
 
-export const LANG_COLUMNS: Record<Lang, string> = {
+export const LANG_COLUMNS: Record<GameLang, string> = {
   en: 'English',
   jp: 'Japanese',
   kr: 'Korean',
@@ -57,16 +57,16 @@ export function indexBy(rows: Row[], key = 'ID'): Map<string, Row> {
   return withCaseInsensitiveGet(m)
 }
 
-export function getLangTexts(entry: Row | undefined): Record<Lang, string> | null {
+export function getLangTexts(entry: Row | undefined): Record<GameLang, string> | null {
   if (!entry) return null
-  const r = {} as Record<Lang, string>
-  for (const lang of LANGS) r[lang] = entry[LANG_COLUMNS[lang]] ?? ''
+  const r = {} as Record<GameLang, string>
+  for (const lang of GAME_LANGS) r[lang] = entry[LANG_COLUMNS[lang]] ?? ''
   return r
 }
 
-export function expandLang(prefix: string, texts: Record<Lang, string> | null): Record<string, string | null> {
+export function expandLang(prefix: string, texts: Record<GameLang, string> | null): Record<string, string | null> {
   const r: Record<string, string | null> = {}
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     const suffix = lang === DEFAULT_LANG ? '' : `_${lang}`
     r[`${prefix}${suffix}`] = texts?.[lang]?.trim().replace(/[\u2018\u2019]/g, "'") ?? null
   }
@@ -78,10 +78,10 @@ export function expandLang(prefix: string, texts: Record<Lang, string> | null): 
  *   { en, jp, kr, zh }
  * Empty string for missing languages so the diff stays clean.
  */
-export function langDict(texts: Record<Lang, string> | null): LangDict {
+export function langDict(texts: Record<GameLang, string> | null): LangDict {
   const out: LangDict = { en: '', jp: '', kr: '', zh: '' }
   if (!texts) return out
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     out[lang] = (texts[lang] ?? '').trim().replace(/[\u2018\u2019]/g, "'")
   }
   return out

@@ -29,6 +29,7 @@ const FREEZE_TITLE: LangMap = {
   jp: "凍結戦略",
   kr: "빙결 전략",
   zh: "冰冻策略",
+  fr: "Strategie Freeze",
 };
 
 const DOT_TITLE: LangMap = {
@@ -36,6 +37,7 @@ const DOT_TITLE: LangMap = {
   jp: "DoT戦略",
   kr: "DoT 전략",
   zh: "DoT策略",
+  fr: "Strategie DoT",
 };
 
 export default function AbominationHunterBelialGuide() {

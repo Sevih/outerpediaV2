@@ -197,6 +197,7 @@ const COUPON_LINK_LABEL: LangMap = {
     jp: '詳細はこちら',
     kr: '자세히 보기',
     zh: '点击查看',
+    fr: 'voir plus ici',
 }
 
 // ============= Main Component =============

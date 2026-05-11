@@ -49,7 +49,7 @@ const geistMono = Geist_Mono({
 });
 
 const paybooc = localFont({
-  src: "../fonts/Paybooc-Bold.ttf",
+  src: "../fonts/payboocBold3-nohint.ttf",
   variable: "--font-game",
   weight: "700",
   display: "swap",

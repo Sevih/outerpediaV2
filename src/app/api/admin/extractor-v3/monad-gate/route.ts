@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
-import { LANGS, type Lang } from '@/lib/i18n/config'
+import { GAME_LANGS, type GameLang } from '@/lib/i18n/config'
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 
-const LANG_COLUMNS: Record<Lang, string> = {
+const LANG_COLUMNS: Record<GameLang, string> = {
   en: 'English',
   jp: 'Japanese',
   kr: 'Korean',
@@ -49,7 +49,7 @@ function groupBy<T extends Record<string, string>>(rows: T[], key: string): Map<
   return m
 }
 
-type LangMap = Record<Lang, string>
+type LangMap = Record<GameLang, string>
 
 function resolveText(key: string | undefined, textIndex: Map<string, TextRow>): LangMap | null {
   if (!key) return null
@@ -57,7 +57,7 @@ function resolveText(key: string | undefined, textIndex: Map<string, TextRow>): 
   const row = textIndex.get(key) ?? textIndex.get(key.toUpperCase())
   if (!row) return null
   const out = {} as LangMap
-  for (const lang of LANGS) out[lang] = row[LANG_COLUMNS[lang]] ?? ''
+  for (const lang of GAME_LANGS) out[lang] = row[LANG_COLUMNS[lang]] ?? ''
   return out
 }
 
@@ -67,7 +67,7 @@ function resolveText(key: string | undefined, textIndex: Map<string, TextRow>): 
 function splitLabelAndNeed(full: LangMap): { label: LangMap; need: LangMap } {
   const labelOut = {} as LangMap
   const needOut = {} as LangMap
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     const text = full[lang] ?? ''
     const m = text.match(/^([\s\S]*?)\s*[\(（]([^\(\)（）]+)[\)）]\s*$/)
     if (m) {
@@ -330,7 +330,7 @@ function extractGroup(
       }
       if (names.length === 0) continue
       const merged = {} as LangMap
-      for (const lang of LANGS) {
+      for (const lang of GAME_LANGS) {
         merged[lang] = names.map((n) => n[lang] ?? '').filter(Boolean).join(' / ')
       }
       edge.gives = merged
@@ -377,7 +377,7 @@ function extractGroup(
     const merged: Record<string, Set<string>> = { en: new Set(), jp: new Set(), kr: new Set(), zh: new Set() }
     for (const e of edges) {
       if (e.from !== node.id || !e.gives) continue
-      for (const lang of LANGS) {
+      for (const lang of GAME_LANGS) {
         const v = e.gives[lang]
         if (v) merged[lang].add(v)
       }
@@ -387,11 +387,11 @@ function extractGroup(
       if (!item) continue
       const name = resolveText(item.NameID, textItemIndex)
       if (!name) continue
-      for (const lang of LANGS) if (name[lang]) merged[lang].add(name[lang]!)
+      for (const lang of GAME_LANGS) if (name[lang]) merged[lang].add(name[lang]!)
     }
     if (Object.values(merged).every((s) => s.size === 0)) continue
     const out = {} as LangMap
-    for (const lang of LANGS) out[lang] = Array.from(merged[lang]).join(' / ')
+    for (const lang of GAME_LANGS) out[lang] = Array.from(merged[lang]).join(' / ')
     node.givesItem = out
   }
 

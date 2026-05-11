@@ -61,7 +61,7 @@ export default function LanguageSwitcher() {
           const cfg = LANGUAGES[l];
           return (
             <option key={l} value={l}>
-              {toFlag(cfg.flag)} {cfg.label}
+              {toFlag(cfg.flag)} {cfg.label}{l === 'fr' ? ' (WIP)' : ''}
             </option>
           );
         })}

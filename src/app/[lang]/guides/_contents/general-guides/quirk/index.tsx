@@ -20,7 +20,7 @@ const TAB_KEYS = ['guide', 'faq'] as const;
 type TabKey = typeof TAB_KEYS[number];
 
 const TAB_LABELS: Record<TabKey, LangMap> = {
-  guide: { en: 'Guide', jp: 'ガイド', kr: '가이드', zh: '指南' },
+  guide: { en: 'Guide', jp: 'ガイド', kr: '가이드', zh: '指南', fr: 'Guide' },
   faq: LABELS.faq,
 };
 

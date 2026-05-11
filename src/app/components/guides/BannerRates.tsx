@@ -20,10 +20,10 @@ type Props = {
 };
 
 const LABELS = {
-  specialFeature: { en: 'Special feature:', jp: '特徴:', kr: '특징:', zh: '特点：' } satisfies LangMap,
-  freePull: { en: '1 free pull per day', jp: '1日1回無料募集', kr: '1일 1회 무료 모집', zh: '每日1次免费招募' } satisfies LangMap,
-  focus: { en: 'focus', jp: 'ピックアップ', kr: '픽업', zh: 'UP' } satisfies LangMap,
-  'non-focus': { en: 'non-focus', jp: '非ピックアップ', kr: '비픽업', zh: '非UP' } satisfies LangMap,
+  specialFeature: { en: 'Special feature:', jp: '特徴:', kr: '특징:', zh: '特点：', fr: 'Particularité :' } satisfies LangMap,
+  freePull: { en: '1 free pull per day', jp: '1日1回無料募集', kr: '1일 1회 무료 모집', zh: '每日1次免费招募', fr: '1 pull gratuit par jour' } satisfies LangMap,
+  focus: { en: 'focus', jp: 'ピックアップ', kr: '픽업', zh: 'UP', fr: 'focus' } satisfies LangMap,
+  'non-focus': { en: 'non-focus', jp: '非ピックアップ', kr: '비픽업', zh: '非UP', fr: 'non-focus' } satisfies LangMap,
 };
 
 const star = (

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 import {
-  LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang, type LangTexts,
+  GAME_LANGS, DEFAULT_LANG, GAME_SUFFIX_LANGS, type GameLang, type LangTexts,
   readTemplet, buildTextMap, resolveEnum, emptyLang, mapLang,
   buildBuffIndex, resolveBuffPlaceholders,
 } from '@/app/admin/lib/text-v2';
@@ -169,7 +169,7 @@ function extractCharacter(
 
   const vaGeneric = textMap[row.CVNameID ?? ''];
   const vaByLang: Record<string, LangTexts | undefined> = {};
-  for (const lang of LANGS) {
+  for (const lang of GAME_LANGS) {
     vaByLang[lang] = textMap[`${id}_CVName_${lang}`];
   }
 
@@ -269,12 +269,12 @@ function extractTranscend(
         continue;
       }
 
-      const lines: Record<Lang, string[]> = {} as Record<Lang, string[]>;
-      for (const lang of LANGS) lines[lang] = [];
+      const lines: Record<GameLang, string[]> = {} as Record<GameLang, string[]>;
+      for (const lang of GAME_LANGS) lines[lang] = [];
 
       if (hpRate > 0) {
         const pct = `ATK DEF HP +${hpRate / 10}%`;
-        for (const lang of LANGS) lines[lang].push(pct);
+        for (const lang of GAME_LANGS) lines[lang].push(pct);
       }
 
       // SkillLevel 1 = "Burst Level 2 Unlocked" — always skip
@@ -285,7 +285,7 @@ function extractTranscend(
           for (const descKey of descKeys) {
             const texts = textSkillMap[descKey];
             if (!texts) continue;
-            for (const lang of LANGS) {
+            for (const lang of GAME_LANGS) {
               const txt = texts[lang];
               if (txt) lines[lang].push(txt.replace(/\\n/g, '\n').trim());
             }
@@ -296,7 +296,7 @@ function extractTranscend(
       const defaultLines = lines[DEFAULT_LANG];
       transcend[key] = defaultLines.length > 0 ? defaultLines.join('\n') : null;
 
-      for (const lang of SUFFIX_LANGS) {
+      for (const lang of GAME_SUFFIX_LANGS) {
         const langLines = lines[lang];
         if (langLines.length > 1 || (langLines.length === 1 && langLines[0] !== defaultLines[0])) {
           transcend[`${key}_${lang}`] = langLines.join('\n');
@@ -368,7 +368,7 @@ function extractSkills(
       if (!texts) continue;
       const skillLv = lvl + 1;
       descLevels[String(skillLv)] = resolveBuffPlaceholders(texts[DEFAULT_LANG], skillLv, buffIndex);
-      for (const lang of SUFFIX_LANGS) {
+      for (const lang of GAME_SUFFIX_LANGS) {
         if (texts[lang]) descLevels[`${skillLv}_${lang}`] = resolveBuffPlaceholders(texts[lang], skillLv, buffIndex);
       }
     }
@@ -397,7 +397,7 @@ function extractSkills(
       const descs = descId.split(',').map(d => d.trim()).filter(Boolean);
       if (descs.length === 0) continue;
       enhancement[lvNum] = descs.map(d => textSkillMap[d]?.[DEFAULT_LANG] ?? d);
-      for (const lang of SUFFIX_LANGS) {
+      for (const lang of GAME_SUFFIX_LANGS) {
         const langDescs = descs.map(d => textSkillMap[d]?.[lang] ?? '').filter(Boolean);
         if (langDescs.length > 0) enhancement[`${lvNum}_${lang}`] = langDescs;
       }
@@ -552,9 +552,9 @@ function compareLangField(
   existing: Record<string, unknown>,
   diffs: { field: string; existing: string; extracted: string }[],
 ) {
-  const keys: [string, Lang][] = [
-    [fieldName, 'en' as Lang],
-    ...SUFFIX_LANGS.map(l => [`${fieldName}_${l}`, l] as [string, Lang]),
+  const keys: [string, GameLang][] = [
+    [fieldName, 'en' as GameLang],
+    ...GAME_SUFFIX_LANGS.map(l => [`${fieldName}_${l}`, l] as [string, GameLang]),
   ];
   for (const [existKey, lang] of keys) {
     const e = String(existing[existKey] ?? '');
@@ -688,7 +688,7 @@ async function handleCompare() {
           diffs.push({ field: `${sk}.desc_lv${skillLv}`, existing: existingDesc, extracted: resolved });
         }
 
-        for (const lang of SUFFIX_LANGS) {
+        for (const lang of GAME_SUFFIX_LANGS) {
           const resolvedLang = resolveBuffPlaceholders(texts[lang], skillLv, buffIndex);
           const existingLang = existingSkill.true_desc_levels?.[`${skillLv}_${lang}`] ?? '';
           if (existingLang && resolvedLang && existingLang !== resolvedLang) {
@@ -716,9 +716,9 @@ async function handleCompare() {
 
           // Compare effect (multilang)
           const extrEffect = (extrBurst.effect ?? emptyLang()) as LangTexts;
-          const effectKeys: [string, Lang][] = [
-            ['effect', 'en' as Lang],
-            ...SUFFIX_LANGS.map(l => [`effect_${l}`, l] as [string, Lang]),
+          const effectKeys: [string, GameLang][] = [
+            ['effect', 'en' as GameLang],
+            ...GAME_SUFFIX_LANGS.map(l => [`effect_${l}`, l] as [string, GameLang]),
           ];
           for (const [existKey, lang] of effectKeys) {
             const e = String(exBurst[existKey] ?? '');

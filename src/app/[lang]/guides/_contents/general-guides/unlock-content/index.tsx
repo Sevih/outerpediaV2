@@ -22,30 +22,35 @@ const LABELS = {
     jp: 'ストーリー進行解放一覧',
     kr: '스토리 진행 해금 일람',
     zh: '故事进度解锁一览',
+    fr: 'Tableau de Deblocage de Progression Story',
   } satisfies LangMap,
   intro: {
     en: 'Many features in OUTERPLANE are not available right away. Here is a quick overview of when each mode unlocks during the story.',
     jp: 'OUTERPLANEの多くの機能は最初から利用できるわけではありません。ストーリー進行に応じて各モードがいつ解放されるかをまとめました。',
     kr: 'OUTERPLANE의 많은 기능은 처음부터 사용할 수 없습니다. 스토리 진행에 따라 각 모드가 언제 해금되는지 정리했습니다.',
     zh: 'OUTERPLANE的许多功能并非一开始就可用。以下是各模式在故事进程中解锁时间的概览。',
+    fr: 'De nombreuses fonctionnalites d\'OUTERPLANE ne sont pas disponibles d\'emblee. Voici un aperçu rapide du moment ou chaque mode se débloqué pendant la Story.',
   } satisfies LangMap,
   headerMode: {
     en: 'Game Mode',
     jp: 'ゲームモード',
     kr: '게임 모드',
     zh: '游戏模式',
+    fr: 'Mode de Jeu',
   } satisfies LangMap,
   headerCondition: {
     en: 'Unlock Condition',
     jp: '解放条件',
     kr: '해금 조건',
     zh: '解锁条件',
+    fr: 'Condition de Deblocage',
   } satisfies LangMap,
   headerDescription: {
     en: 'Description',
     jp: '説明',
     kr: '설명',
     zh: '描述',
+    fr: 'Description',
   } satisfies LangMap,
 }
 

@@ -27,9 +27,11 @@ export function formatBossDesc(text: string, lang?: Lang): React.ReactNode {
   let tokenOnly: RegExp | undefined;
 
   if (lang) {
-    elemMap = ELEMENT_TOKENS[lang];
-    classMap = CLASS_TOKENS[lang];
-    const allTokens = [...Object.keys(elemMap), ...Object.keys(classMap)]
+    // Tokens come from game text — fall back to EN when on a community-translated lang (e.g. fr).
+    const tokenLang = (lang in ELEMENT_TOKENS ? lang : 'en') as keyof typeof ELEMENT_TOKENS;
+    elemMap = ELEMENT_TOKENS[tokenLang];
+    classMap = CLASS_TOKENS[tokenLang];
+    const allTokens = [...Object.keys(elemMap ?? {}), ...Object.keys(classMap ?? {})]
       .sort((a, b) => b.length - a.length)
       .map(escapeRegex)
       .join('|');

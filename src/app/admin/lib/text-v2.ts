@@ -3,11 +3,12 @@
  * Reads from data/admin/json2/ (flat arrays, ID field).
  */
 
-import { LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang } from '@/lib/i18n/config';
+import { GAME_LANGS, DEFAULT_LANG, GAME_SUFFIX_LANGS, type GameLang } from '@/lib/i18n/config';
 import fs from 'fs/promises';
 import path from 'path';
 
-export { LANGS, DEFAULT_LANG, SUFFIX_LANGS, type Lang };
+// Re-export under the game-specific names for downstream extractors.
+export { GAME_LANGS, DEFAULT_LANG, GAME_SUFFIX_LANGS, type GameLang };
 
 const JSON_DIR = path.join(process.cwd(), 'data', 'admin', 'json2');
 
@@ -17,9 +18,9 @@ export async function readTemplet(name: string): Promise<Record<string, string>[
   return JSON.parse(raw);
 }
 
-export type LangTexts = Record<Lang, string>;
+export type LangTexts = Record<GameLang, string>;
 
-const LANG_COL: Record<Lang, string> = {
+const LANG_COL: Record<GameLang, string> = {
   en: 'English',
   jp: 'Japanese',
   kr: 'Korean',
@@ -33,7 +34,7 @@ export function buildTextMap(data: Record<string, string>[]): Record<string, Lan
     const key = row.ID;
     if (!key) continue;
     const texts = {} as LangTexts;
-    for (const lang of LANGS) texts[lang] = (row[LANG_COL[lang]] ?? '').trim();
+    for (const lang of GAME_LANGS) texts[lang] = (row[LANG_COL[lang]] ?? '').trim();
     map[key] = texts;
   }
   return map;
@@ -42,14 +43,14 @@ export function buildTextMap(data: Record<string, string>[]): Record<string, Lan
 /** Empty LangTexts */
 export function emptyLang(): LangTexts {
   const t = {} as LangTexts;
-  for (const lang of LANGS) t[lang] = '';
+  for (const lang of GAME_LANGS) t[lang] = '';
   return t;
 }
 
 /** Build a LangTexts by applying a fn per lang */
-export function mapLang(fn: (lang: Lang) => string): LangTexts {
+export function mapLang(fn: (lang: GameLang) => string): LangTexts {
   const t = {} as LangTexts;
-  for (const lang of LANGS) t[lang] = fn(lang);
+  for (const lang of GAME_LANGS) t[lang] = fn(lang);
   return t;
 }
 

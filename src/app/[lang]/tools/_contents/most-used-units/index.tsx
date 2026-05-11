@@ -2,8 +2,8 @@ import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { getCharactersForList } from '@/lib/data/characters';
 import { getAllGuides } from '@/lib/data/guides';
-import { SUFFIX_LANGS } from '@/lib/i18n/config';
-import type { SuffixLang } from '@/lib/i18n/config';
+import { GAME_SUFFIX_LANGS } from '@/lib/i18n/config';
+import type { GameSuffixLang } from '@/lib/i18n/config';
 import MostUsedUnitsClient from './MostUsedUnitsClient';
 
 export type MostUsedEntry = {
@@ -17,7 +17,7 @@ export type GuideTitleMap = Record<string, Record<string, string>>;
 /** Minimal character data needed by the most-used-units page */
 export type MostUsedCharacter = Pick<
   Awaited<ReturnType<typeof getCharactersForList>>[number],
-  'ID' | 'Fullname' | `Fullname_${SuffixLang}` | 'slug' | 'Element' | 'Class' | 'Rarity'
+  'ID' | 'Fullname' | `Fullname_${GameSuffixLang}` | 'slug' | 'Element' | 'Class' | 'Rarity'
 >;
 
 export default async function MostUsedUnitsTool() {
@@ -33,7 +33,7 @@ export default async function MostUsedUnitsTool() {
   const characters: MostUsedCharacter[] = allCharacters.map(c => ({
     ID: c.ID,
     Fullname: c.Fullname,
-    ...Object.fromEntries(SUFFIX_LANGS.map(l => [`Fullname_${l}`, c[`Fullname_${l}`]])),
+    ...Object.fromEntries(GAME_SUFFIX_LANGS.map(l => [`Fullname_${l}`, c[`Fullname_${l}`]])),
     slug: c.slug,
     Element: c.Element,
     Class: c.Class,

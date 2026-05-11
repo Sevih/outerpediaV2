@@ -29,6 +29,7 @@ const DOT_TITLE: LangMap = {
   jp: "DoT戦略",
   kr: "DoT 전략",
   zh: "DoT策略",
+  fr: "Strategie DoT",
 };
 
 const GDAHLIA_TITLE: LangMap = {
@@ -36,6 +37,7 @@ const GDAHLIA_TITLE: LangMap = {
   jp: "GDahliaチーム戦略",
   kr: "GDahlia 팀 전략",
   zh: "GDahlia队伍策略",
+  fr: "Strategie equipe GDahlia",
 };
 
 const DARK_TITLE: LangMap = {
@@ -43,6 +45,7 @@ const DARK_TITLE: LangMap = {
   jp: "闇属性編成戦略",
   kr: "암속성 구성 전략",
   zh: "暗属性队伍策略",
+  fr: "Strategie equipe Dark",
 };
 
 const MERO_TITLE: LangMap = {
@@ -50,6 +53,7 @@ const MERO_TITLE: LangMap = {
   jp: "メロ戦略",
   kr: "메로 전략",
   zh: "梅萝策略",
+  fr: "Strategie Mero",
 };
 
 export default function UrdGuide() {
