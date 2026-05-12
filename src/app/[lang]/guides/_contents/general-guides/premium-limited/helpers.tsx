@@ -84,14 +84,14 @@ export const LABELS = {
     jp: 'おすすめの選択',
     kr: '추천 선택',
     zh: '推荐选择',
-    fr: 'Choix Recommandes',
+    fr: 'Choix Recommandés',
   },
   priority1st: {
     en: '1st Priority',
     jp: '第1優先',
     kr: '1순위',
     zh: '第一优先',
-    fr: '1ere Priorité',
+    fr: '1ère Priorité',
   },
   priority2nd: {
     en: '2nd Priority',
@@ -147,7 +147,7 @@ export const LABELS = {
     jp: '{tab}のエントリはまだありません。',
     kr: '{tab}에 대한 항목이 아직 없습니다.',
     zh: '{tab}暂无条目。',
-    fr: 'Pas encore d\'entrees pour {tab}.',
+    fr: 'Pas encore d\'entrées pour {tab}.',
   },
 } as const;
 

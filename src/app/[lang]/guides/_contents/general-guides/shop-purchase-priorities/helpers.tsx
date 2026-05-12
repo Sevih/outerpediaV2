@@ -57,7 +57,7 @@ export type ShopItem = {
     gives?: PerPurchase
     costs?: Cost[]
     limit?: Limit
-    notes?: string
+    notes?: LangMap
     inlineType?: InlineType
     character?: string
     label?: LangMap
@@ -76,7 +76,7 @@ export const SHOP_TABS: { key: ShopKey; label: LangMap; icon: string }[] = [
     { key: 'worldboss', label: { en: 'World Boss', jp: 'ワールドボス', kr: '월드 보스', zh: '世界首领', fr: 'World Boss' }, icon: '/images/ui/shop_worldboss.webp' },
     { key: 'al', label: { en: 'Adventure License', jp: '冒険ライセンス', kr: '모험 라이선스', zh: '冒险执照', fr: 'Adventure License' }, icon: '/images/ui/shop_al.webp' },
     { key: 'survey', label: { en: 'Survey Hub', jp: 'サーベイハブ', kr: '서베이 허브', zh: '调查中心', fr: 'Survey Hub' }, icon: '/images/ui/shop_survey.webp' },
-    { key: 'resource', label: { en: 'General', jp: '一般', kr: '일반', zh: '通用', fr: 'General' }, icon: '/images/ui/shop_resource.webp' },
+    { key: 'resource', label: { en: 'General', jp: '一般', kr: '일반', zh: '通用', fr: 'Général' }, icon: '/images/ui/shop_resource.webp' },
 ]
 
 // ---- UI Constants
@@ -95,21 +95,21 @@ export const LABELS = {
         jp: "購入ごとの正確なコストと数量を明記。制限は「回数 / 期間」の形式です。",
         kr: "구매당 정확한 비용과 수량을 명시합니다. 제한은 \"횟수 / 기간\" 형식입니다.",
         zh: "标明每次购买的确切成本和数量。限制以\"次数/周期\"格式显示。",
-        fr: "Indique les couts exacts et la quantite donnee par achat. Les limites sont structurees au format \"nombre / periode\"."
+        fr: "Indique les coûts exacts et la quantité donnée par achat. Les limites sont structurées au format \"nombre / période\"."
     },
     legendTitle: {
         en: "Legend:",
         jp: "凡例:",
         kr: "범례:",
         zh: "图例:",
-        fr: "Legende :"
+        fr: "Légende :"
     },
     legendS: {
         en: "S = must-buy",
         jp: "S = 必須購入",
         kr: "S = 필수 구매",
         zh: "S = 必买",
-        fr: "S = a acheter absolument"
+        fr: "S = à acheter absolument"
     },
     legendA: {
         en: "A = high value",
@@ -130,23 +130,23 @@ export const LABELS = {
         jp: "C = 低優先度",
         kr: "C = 낮은 우선순위",
         zh: "C = 低优先级",
-        fr: "C = faible priorite"
+        fr: "C = faible priorité"
     },
     periodsTitle: {
         en: "Periods:",
         jp: "期間:",
         kr: "기간:",
         zh: "周期:",
-        fr: "Periodes :"
+        fr: "Périodes :"
     },
     periodD: { en: "D = Daily", jp: "D = 毎日", kr: "D = 매일", zh: "D = 每日", fr: "D = Quotidien" },
     periodW: { en: "W = Weekly", jp: "W = 毎週", kr: "W = 매주", zh: "W = 每周", fr: "W = Hebdomadaire" },
     periodM: { en: "M = Monthly", jp: "M = 毎月", kr: "M = 매월", zh: "M = 每月", fr: "M = Mensuel" },
     periodO: { en: "O = One-time", jp: "O = 一回限り", kr: "O = 일회성", zh: "O = 一次性", fr: "O = Unique" },
-    colPriority: { en: "Priority", jp: "優先度", kr: "우선순위", zh: "优先级", fr: "Priorite" },
+    colPriority: { en: "Priority", jp: "優先度", kr: "우선순위", zh: "优先级", fr: "Priorité" },
     colItem: { en: "Item", jp: "アイテム", kr: "아이템", zh: "物品", fr: "Item" },
     colGives: { en: "Gives", jp: "獲得", kr: "획득", zh: "获得", fr: "Donne" },
-    colCost: { en: "Cost", jp: "コスト", kr: "비용", zh: "花费", fr: "Cout" },
+    colCost: { en: "Cost", jp: "コスト", kr: "비용", zh: "花费", fr: "Coût" },
     colLimit: { en: "Limit", jp: "制限", kr: "제한", zh: "限制", fr: "Limite" },
     colNotes: { en: "Notes", jp: "備考", kr: "비고", zh: "备注", fr: "Notes" },
     seeGearUsageFinder: {
@@ -154,7 +154,7 @@ export const LABELS = {
         jp: "Gear Usage Finderで、装備がどのキャラクターに適しているか確認できます。",
         kr: "Gear Usage Finder에서 장비가 어떤 캐릭터에 맞는지 확인하세요.",
         zh: "请查看Gear Usage Finder，确认装备适合哪些角色。",
-        fr: "Consultez le Gear Usage Finder pour verifier a quels personnages votre gear correspond."
+        fr: "Consultez le Gear Usage Finder pour vérifier à quels personnages votre gear correspond."
     },
 } as const
 
@@ -168,14 +168,14 @@ export const shopNotes: Record<ShopKey, LangMap | null> = {
         jp: "イベントショップはイベントによって大きく異なります。入手可能なアイテムに基づいて優先順位を調整しますが、一般的には限定アイテム（コスメ、6★イベント装備、レアマニュアル、トランジストーン）を優先してから、より一般的なリソースに使いましょう。",
         kr: "이벤트 상점은 이벤트에 따라 크게 다릅니다. 가용 아이템에 따라 우선순위를 조정하되, 일반적으로 제한된 아이템(코스메틱, 6★ 이벤트 장비, 희귀 매뉴얼, 트랜지스톤)을 먼저 구매한 후 일반 자원에 사용하세요.",
         zh: "活动商店因活动而异。根据可用物品调整优先级，但通常先关注限定物品（外观、6★活动装备、稀有手册、晶石）再购买常见资源。",
-        fr: "Les Event shops varient beaucoup selon l'event. Ajustez vos priorites selon ce qui est disponible, mais concentrez-vous generalement d'abord sur les items limites (cosmetiques, 6★ event gear, manuels rares, transistones) avant de depenser sur des ressources plus communes."
+        fr: "Les Event shops varient beaucoup selon l'event. Ajustez vos priorités selon ce qui est disponible, mais concentrez-vous généralement d'abord sur les items limités (cosmétiques, 6★ event gear, manuels rares, transistones) avant de dépenser sur des ressources plus communes."
     },
     joint: {
         en: "Save monthly purchases until the Joint Challenge event starts. The main concern is not having enough purchases to clear the quests. Once you can consistently max out the Joint Challenge, the currency becomes very abundant, so prioritize wisely at the start.",
         jp: "ジョイントチャレンジイベント開始まで月間購入を控えましょう。主な懸念はクエストをクリアするための購入回数が足りなくなることです。ジョイントチャレンジを安定してクリアできるようになれば通貨は非常に豊富になるので、最初は賢く優先順位をつけましょう。",
         kr: "조인트 챌린지 이벤트가 시작될 때까지 월간 구매를 아끼세요. 주요 우려사항은 퀘스트를 클리어하기 위한 구매 횟수가 부족해지는 것입니다. 조인트 챌린지를 꾸준히 클리어할 수 있게 되면 재화가 매우 풍부해지므로 처음에는 현명하게 우선순위를 정하세요.",
         zh: "在联合挑战活动开始前保留月度购买次数。主要担忧是没有足够的购买次数来完成任务。一旦能稳定满分通关联合挑战，货币会变得非常充裕，所以开始时要明智地分配优先级。",
-        fr: "Conservez vos achats mensuels jusqu'au demarrage de l'event Joint Challenge. La principale crainte est de ne pas avoir assez d'achats pour clear les quetes. Une fois que vous pouvez constamment maxer le Joint Challenge, la monnaie devient tres abondante, donc priorisez intelligemment au debut."
+        fr: "Conservez vos achats mensuels jusqu'au démarrage de l'event Joint Challenge. La principale crainte est de ne pas avoir assez d'achats pour clear les quêtes. Une fois que vous pouvez constamment maxer le Joint Challenge, la monnaie devient très abondante, donc priorisez intelligemment au début."
     },
     friend: null,
     arena: null,
@@ -215,7 +215,7 @@ export const textOnlyShopsContent: Partial<Record<ShopKey, TextOnlyShopContent>>
             jp: "6★レジェンダリー装備はサブステータスが強力な場合のみ価値があります：ユニットのステータス優先度に一致する3×3。",
             kr: "6★ 레전더리 장비는 서브스탯이 강력한 경우에만 가치가 있습니다: 유닛의 스탯 우선순위와 일치하는 3×3.",
             zh: "6★传说装备只有在副属性强力时才值得：3×3匹配角色的属性优先级。",
-            fr: "Le gear 6★ Legendary ne vaut le coup que si les substats sont solides : 3×3 correspondant aux priorites de stats de l'unite."
+            fr: "Le gear 6★ Legendary ne vaut le coup que si les substats sont solides : 3×3 correspondant aux priorités de stats de l'unité."
         }
     },
     rico: {
@@ -232,7 +232,7 @@ export const textOnlyShopsContent: Partial<Record<ShopKey, TextOnlyShopContent>>
                 jp: "{I-I/Free Ether}で{I-I/Special Recruitment Ticket}を購入するのは、プレミアム/限定ガチャや精密クラフトの出費があるためお勧めしません。",
                 kr: "{I-I/Free Ether}로 {I-I/Special Recruitment Ticket}을 구매하는 것은 프리미엄/한정 배너와 정밀 제작에 필요한 비용 때문에 권장하지 않습니다.",
                 zh: "用{I-I/Free Ether}购买{I-I/Special Recruitment Ticket}不明智，因为需要用于限定池和精准制作的开支。",
-                fr: "Acheter des {I-I/Special Recruitment Ticket} avec de l'{I-I/Free Ether} est deconseille a cause des depenses liees aux Premium/Limited banners et au Precise crafting."
+                fr: "Acheter des {I-I/Special Recruitment Ticket} avec de l'{I-I/Free Ether} est déconseillé à cause des dépenses liées aux Premium/Limited banners et au Precise crafting."
             },
             {
                 en: "{I-I/Potentium (Armor)} / {I-I/Potentium (Weapon/Accessory)} are ok if the discount is 25–30%.",
@@ -247,7 +247,7 @@ export const textOnlyShopsContent: Partial<Record<ShopKey, TextOnlyShopContent>>
             jp: "6★レジェンダリー装備はサブステータスが強力な場合のみ価値があります：ユニットのステータス優先度に一致する3×3または2×3 + 1×4。",
             kr: "6★ 레전더리 장비는 서브스탯이 강력한 경우에만 가치가 있습니다: 유닛의 스탯 우선순위와 일치하는 3×3 또는 2×3 + 1×4.",
             zh: "6★传说装备只有在副属性强力时才值得：3×3或2×3 + 1×4匹配角色的属性优先级。",
-            fr: "Le gear 6★ Legendary ne vaut le coup que si les substats sont solides : 3×3 ou 2×3 + 1×4 correspondant aux priorites de stats de l'unite."
+            fr: "Le gear 6★ Legendary ne vaut le coup que si les substats sont solides : 3×3 ou 2×3 + 1×4 correspondant aux priorités de stats de l'unité."
         }
     }
 }
@@ -345,7 +345,7 @@ export function ShopTable({ items, lang }: { items: ShopItem[]; lang: Lang }) {
         [items]
     )
 
-    const hasNotes = sorted.some(it => it.notes && it.notes.trim() !== "")
+    const hasNotes = sorted.some(it => it.notes && lRec(it.notes, lang).trim() !== "")
 
     return (
         <div className="flex justify-center my-6">
@@ -372,7 +372,7 @@ export function ShopTable({ items, lang }: { items: ShopItem[]; lang: Lang }) {
                                 <td className="border border-neutral-700 px-3 py-2 text-center">{renderCosts(it.costs)}</td>
                                 <td className="border border-neutral-700 px-3 py-2 text-center">{renderLimit(it.limit)}</td>
                                 {hasNotes && (
-                                    <td className="border border-neutral-700 px-3 py-2">{it.notes ?? ''}</td>
+                                    <td className="border border-neutral-700 px-3 py-2">{it.notes ? lRec(it.notes, lang) : ''}</td>
                                 )}
                             </tr>
                         ))}

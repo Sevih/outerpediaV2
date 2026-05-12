@@ -311,7 +311,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             costs: [{ currency: 'Arena Medal', amount: 300 }],
             limit: { count: 4, period: 'One-time' },
             label: { en: '5★ Equipment', jp: '5★装備', kr: '5★ 장비', zh: '5★装备', fr: 'Équipement 5★' },
-            notes: 'Etheric Speed Set (Helmet, Gloves, Chest Armor, Boots)',
+            notes: { en: 'Etheric Speed Set (Helmet, Gloves, Chest Armor, Boots)', fr: 'Set Etheric Speed (Helmet, Gloves, Chest Armor, Boots)' },
         }
     ],
     stars: [
@@ -605,7 +605,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             gives: { amount: 1, unit: '' },
             costs: [{ currency: 'License Point', amount: 125 }],
             limit: { count: 25, period: 'Weekly' },
-            notes: "Only until you finish Adventure License Quirk then ignore it."
+            notes: { en: "Only until you finish Adventure License Quirk then ignore it.", fr: "Uniquement jusqu'à ce que vous finissiez le Quirk Adventure License, ensuite ignorez-le." }
         },
         {
             name: '6★ Legendary Boots [Burst]',
@@ -813,7 +813,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             priority: 'S',
             gives: { amount: 0, unit: '' },
             costs: [{ currency: 'TBD', amount: 0 }],
-            label: { en: 'Cosmetic', jp: 'コスメティック', kr: '코스메틱', zh: '外观', fr: 'Cosmetique' },
+            label: { en: 'Cosmetic', jp: 'コスメティック', kr: '코스메틱', zh: '外观', fr: 'Cosmétique' },
             limit: { count: 0, period: 'One-time' }
         },
         {
@@ -887,7 +887,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             costs: [{ currency: 'TBD', amount: 0 }],
             limit: { count: 0, period: 'One-time' },
             label: { en: '5★ Equipment', jp: '5★装備', kr: '5★ 장비', zh: '5★装备', fr: 'Équipement 5★' },
-            notes: "You can ignore it if it doesn't have a unique passive like Sacreed Edge weapon"
+            notes: { en: "You can ignore it if it doesn't have a unique passive like Sacreed Edge weapon", fr: "Vous pouvez l'ignorer s'il n'a pas de passive unique comme la weapon Sacreed Edge." }
         },
         {
             name: 'Event Glunite',
@@ -895,7 +895,7 @@ export const shopData: Record<ShopKey, ShopItem[]> = {
             gives: { amount: 0, unit: '' },
             costs: [{ currency: 'TBD', amount: 0 }],
             limit: { count: 0, period: 'One-time' },
-            notes: "Ignore if you didn't buy any equipment from the shop."
+            notes: { en: "Ignore if you didn't buy any equipment from the shop.", fr: "Ignorez si vous n'avez acheté aucun équipement du shop." }
         },
         {
             name: 'Food',

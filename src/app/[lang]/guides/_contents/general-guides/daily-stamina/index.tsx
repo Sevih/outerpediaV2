@@ -30,7 +30,7 @@ const SWEEP_ROWS = [
   {
     name:   { en: 'Special Request: Identification (Stage 13)',  jp: '特別依頼:正体究明（Lv.13）',  kr: '특별 의뢰 : 정체 규명 (13단계)',  zh: '特别委托:查清身份(第13关)',  fr: 'Special Request : Identification (Stage 13)' } satisfies LangMap,
     cost:   { en: '480 {I-I/Stamina}/day',            jp: '480{I-I/Stamina}/日',        kr: '480{I-I/Stamina}/일',   zh: '480{I-I/Stamina}/天',   fr: '480 {I-I/Stamina}/jour' } satisfies LangMap,
-    reason: { en: 'Special Gear materials ({I-I/Blue Memory Piece} & {I-I/Blue Star Mist}), {I-I/Gold}, 6★ legendary gear (transcend fodder if stats are bad)', jp: '特殊装備素材（{I-I/Blue Memory Piece}・{I-I/Blue Star Mist}）、{I-I/Gold}、6★伝説装備（ステータスが悪ければ超越素材）', kr: '특수 장비 재료（{I-I/Blue Memory Piece} & {I-I/Blue Star Mist}）, {I-I/Gold}, 6★ 전설 장비（스탯이 안 좋으면 초월 재료）', zh: '特殊装备材料（{I-I/Blue Memory Piece}&{I-I/Blue Star Mist}）、{I-I/Gold}、6★传说装备（属性差时用于超越材料）', fr: 'Materiaux Special Gear ({I-I/Blue Memory Piece} et {I-I/Blue Star Mist}), {I-I/Gold}, gear legendary 6★ (fodder de transcend si les stats sont mauvaises)' } satisfies LangMap,
+    reason: { en: 'Special Gear materials ({I-I/Blue Memory Piece} & {I-I/Blue Star Mist}), {I-I/Gold}, 6★ legendary gear (transcend fodder if stats are bad)', jp: '特殊装備素材（{I-I/Blue Memory Piece}・{I-I/Blue Star Mist}）、{I-I/Gold}、6★伝説装備（ステータスが悪ければ超越素材）', kr: '특수 장비 재료（{I-I/Blue Memory Piece} & {I-I/Blue Star Mist}）, {I-I/Gold}, 6★ 전설 장비（스탯이 안 좋으면 초월 재료）', zh: '特殊装备材料（{I-I/Blue Memory Piece}&{I-I/Blue Star Mist}）、{I-I/Gold}、6★传说装备（属性差时用于超越材料）', fr: 'Matériaux Special Gear ({I-I/Blue Memory Piece} et {I-I/Blue Star Mist}), {I-I/Gold}, gear legendary 6★ (fodder de transcend si les stats sont mauvaises)' } satisfies LangMap,
   },
   {
     name:   { en: 'Story Hard Final Bosses',         jp: 'ハードモード最終ボス',         kr: '하드 모드 최종 보스',    zh: '困难模式最终Boss',      fr: 'Story Hard - Bosses Finaux' } satisfies LangMap,
@@ -71,14 +71,14 @@ const LABELS = {
     jp: '{I-I/Stamina}を効率的に使うことは、このゲームで進行する上で最も重要なことの一つです — 特に長期的にプレイする予定なら。',
     kr: '{I-I/Stamina}를 효율적으로 사용하는 것은 이 게임에서 성장하는 데 가장 중요한 일 중 하나입니다 — 특히 장기 플레이를 계획한다면.',
     zh: '高效使用{I-I/Stamina}是游戏中最重要的事情之一 — 尤其是如果你计划长期游玩。',
-    fr: 'Depenser la {I-I/Stamina} efficacement est l\'une des choses les plus importantes pour progresser dans ce jeu, surtout si vous comptez jouer sur le long terme.',
+    fr: 'Dépenser la {I-I/Stamina} efficacement est l\'une des choses les plus importantes pour progresser dans ce jeu, surtout si vous comptez jouer sur le long terme.',
   } satisfies LangMap,
   introPara2: {
     en: "Here's a list of daily priorities to help you spend your {I-I/Stamina} wisely and keep resources flowing into your account:",
     jp: '以下は{I-I/Stamina}を賢く使い、アカウントにリソースを流し続けるための毎日の優先事項リストです：',
     kr: '다음은 {I-I/Stamina}를 현명하게 사용하고 계정에 지속적으로 자원을 확보하기 위한 일일 우선순위 목록입니다:',
     zh: '以下是帮助你明智使用{I-I/Stamina}并持续获取资源的每日优先事项列表：',
-    fr: "Voici une liste de priorites quotidiennes pour vous aider a depenser votre {I-I/Stamina} judicieusement et a garder un flux constant de ressources sur votre compte :",
+    fr: "Voici une liste de priorités quotidiennes pour vous aider à dépenser votre {I-I/Stamina} judicieusement et à garder un flux constant de ressources sur votre compte :",
   } satisfies LangMap,
 
   /* ── Daily Sweep ── */
@@ -95,7 +95,7 @@ const LABELS = {
     jp: 'スイープ機能で以下の3カテゴリをまとめてクリア。',
     kr: '스윕 기능으로 아래 3가지 카테고리를 한 번에 클리어.',
     zh: '使用扫荡功能一次性完成以下3个类别。',
-    fr: 'Utilisez la fonction Sweep pour clear les 3 categories ci-dessous d\'un seul coup.',
+    fr: 'Utilisez la fonction Sweep pour clear les 3 catégories ci-dessous d\'un seul coup.',
   } satisfies LangMap,
   sweep_optional: {
     en: 'Optional',
@@ -126,7 +126,7 @@ const LABELS = {
     jp: '報酬多数、特に{I-I/Effectium}、{I-I/Proof of Destiny}、{I-I/Token of Connection}、{I-I/Special Recruitment Ticket (Event)}。\nテルミナス島探査応援パック購入済みの場合、20{I-I/Stamina}で2回実行可能。',
     kr: '다양한 보상, 특히 {I-I/Effectium}, {I-I/Proof of Destiny}, {I-I/Token of Connection}, {I-I/Special Recruitment Ticket (Event)}.\n멸망의 섬 탐사 지원팩 구매 시 20{I-I/Stamina}씩 2회 실행 가능.',
     zh: '奖励丰富，最重要的有{I-I/Effectium}、{I-I/Proof of Destiny}、{I-I/Token of Connection}和{I-I/Special Recruitment Ticket (Event)}。\n购买灭亡之岛探索支援包后，可以每次20{I-I/Stamina}运行两次。',
-    fr: 'Recompenses variees, notamment {I-I/Effectium}, {I-I/Proof of Destiny}, {I-I/Token of Connection} et {I-I/Special Recruitment Ticket (Event)}.\nSi vous avez achete le Terminus Isle Exploration Support Pack, vous pouvez le lancer deux fois pour 20 {I-I/Stamina} chacun.',
+    fr: 'Récompenses variées, notamment {I-I/Effectium}, {I-I/Proof of Destiny}, {I-I/Token of Connection} et {I-I/Special Recruitment Ticket (Event)}.\nSi vous avez acheté le Terminus Isle Exploration Support Pack, vous pouvez le lancer deux fois pour 20 {I-I/Stamina} chacun.',
   } satisfies LangMap,
 
   /* ── Irregular Bosses ── */
@@ -150,7 +150,7 @@ const LABELS = {
     jp: '侵入ステージをクリア。\n追跡報酬：50K{I-I/Gold}、{I-I/Irregular Cell Type IV}、{I-I/Epic Quality Present Selection Chest}、{I-I/Random Upgrade Stone Chest}、約5%でイレギュラー装備。\n月8Kセルで{I-I/Ether}パス報酬:',
     kr: '침투 스테이지 클리어.\n추적 보상: 50K{I-I/Gold}, {I-I/Irregular Cell Type IV}, {I-I/Epic Quality Present Selection Chest}, {I-I/Random Upgrade Stone Chest} & ~5% 확률 이레귤러 장비.\n월 8K 셀 달성 시 {I-I/Ether} 패스 보상:',
     zh: '通关渗透关卡。\n追踪奖励：50K{I-I/Gold}、{I-I/Irregular Cell Type IV}、{I-I/Epic Quality Present Selection Chest}、{I-I/Random Upgrade Stone Chest}及约5%异常装备。\n刷至月8K细胞获{I-I/Ether}通行证奖励:',
-    fr: 'Clear le stage Infiltration.\nRecompenses Pursuit : 50K {I-I/Gold}, {I-I/Irregular Cell Type IV}, {I-I/Epic Quality Present Selection Chest}, {I-I/Random Upgrade Stone Chest} et ~5% de chance de drop d\'Irregular gear.\nFarmez jusqu\'à 8K cells/mois pour les récompenses du pass {I-I/Ether} :',
+    fr: 'Clear le stage Infiltration.\nRécompenses Pursuit : 50K {I-I/Gold}, {I-I/Irregular Cell Type IV}, {I-I/Epic Quality Present Selection Chest}, {I-I/Random Upgrade Stone Chest} et ~5% de chance de drop d\'Irregular gear.\nFarmez jusqu\'à 8K cells/mois pour les récompenses du pass {I-I/Ether} :',
   } satisfies LangMap,
   irregularGearFrom: {
     en: ' from ',
@@ -167,7 +167,7 @@ const LABELS = {
     jp: '塔フロア',
     kr: '탑 층',
     zh: '塔层',
-    fr: 'Etages de la Tower',
+    fr: 'Étages de la Tower',
   } satisfies LangMap,
   cost_towerFloors: {
     en: '500+ {I-I/Stamina}/month',
@@ -232,7 +232,7 @@ const LABELS = {
     jp: 'まだエンドゲーム未到達、またはスタミナを消費したい場合：',
     kr: '아직 엔드게임 미도달이거나 스태미나를 더 소비해야 한다면:',
     zh: '还未到达终局，或需要消耗更多体力？其他建议：',
-    fr: "Pas encore en endgame, ou besoin de bruler plus de Stamina ? Autres suggestions :",
+    fr: "Pas encore en endgame, ou besoin de brûler plus de Stamina ? Autres suggestions :",
   } satisfies LangMap,
   heading_farmStage12: {
     en: 'Farm Stage 12 Armor Bosses',
@@ -246,7 +246,7 @@ const LABELS = {
     jp: '：{E/Earth}、{E/Light}、{E/Dark}か{E/Water}に集中。{E/Fire}装備は特定スタット狙い以外有用性低。3体クリアで36{I-I/Stamina}消費。',
     kr: ': {E/Earth}, {E/Light}, {E/Dark} 또는 {E/Water}에 집중. {E/Fire} 장비는 특정 스탯 외엔 비효율. 보스 3개에 36{I-I/Stamina} 소모.',
     zh: '：专注于{E/Earth}、{E/Light}及{E/Dark}或{E/Water}。{E/Fire}装备除特定属性外用处不大。3个Boss消耗36{I-I/Stamina}。',
-    fr: " : Concentrez-vous sur {E/Earth}, {E/Light}, et {E/Dark} ou {E/Water}. Le gear {E/Fire} est moins utile sauf pour des stats specifiques. Coute 36 {I-I/Stamina} pour 3 bosses.",
+    fr: " : Concentrez-vous sur {E/Earth}, {E/Light}, et {E/Dark} ou {E/Water}. Le gear {E/Fire} est moins utile sauf pour des stats spécifiques. Coûte 36 {I-I/Stamina} pour 3 bosses.",
   } satisfies LangMap,
   heading_hardModeStoryBossesAlt: {
     en: 'Hard Mode Story Bosses',
@@ -291,21 +291,21 @@ const LABELS = {
     jp: 'メールボックスの「すべて受け取る」をクリックしないで',
     kr: '우편함에서 "모두 받기"를 클릭하지 마세요',
     zh: '避免点击邮箱中的「全部领取」',
-    fr: 'Evitez de cliquer sur "Receive All" dans votre boite mail',
+    fr: 'Évitez de cliquer sur "Receive All" dans votre boîte mail',
   } satisfies LangMap,
   body_avoidReceiveAll: {
     en: ': Stamina rewards stay for ~6 days. Let your bar regenerate naturally, then claim rewards as needed.',
     jp: '：スタミナ報酬は約6日間保持。バーを自然に回復させ、必要に応じて受け取りましょう。',
     kr: ': 스태미나 보상은 약 6일간 보관. 자연 회복 후 필요할 때 수령하세요.',
     zh: '：体力奖励保留约6天。让体力条自然恢复，需要时再领取。',
-    fr: " : Les recompenses de Stamina restent environ 6 jours. Laissez votre barre se regenerer naturellement, puis recuperez-les selon vos besoins.",
+    fr: " : Les récompenses de Stamina restent environ 6 jours. Laissez votre barre se régénérer naturellement, puis récupérez-les selon vos besoins.",
   } satisfies LangMap,
   body_noteOtherDailies: {
     en: 'Note: Other dailies like Bounty Hunter are also valuable, but they use {I-I/Bounty Hunter Ticket(s)}, not {I-I/Stamina}.',
     jp: '注意：バウンティハンターなど他のデイリーも価値がありますが、{I-I/Stamina}ではなく{I-I/Bounty Hunter Ticket(s)}を使用します。',
     kr: '참고: 현상금 사냥꾼 등 다른 일일 과제도 가치 있지만, {I-I/Stamina}가 아닌 {I-I/Bounty Hunter Ticket(s)}을 사용합니다.',
     zh: '注意：赏金猎人等其他每日任务也很有价值，但使用{I-I/Bounty Hunter Ticket(s)}而非{I-I/Stamina}。',
-    fr: 'Note : D\'autres dailies comme Bounty Hunter sont aussi interessantes, mais elles utilisent des {I-I/Bounty Hunter Ticket(s)} et non de la {I-I/Stamina}.',
+    fr: 'Note : D\'autres dailies comme Bounty Hunter sont aussi intéressantes, mais elles utilisent des {I-I/Bounty Hunter Ticket(s)} et non de la {I-I/Stamina}.',
   } satisfies LangMap,
 
 } as const;

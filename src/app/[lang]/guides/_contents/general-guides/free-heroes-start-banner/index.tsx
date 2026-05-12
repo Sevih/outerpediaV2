@@ -42,7 +42,7 @@ const S = {
     jp: '重複を避けよう — まだ持っていないキャラを選ぼう。ゲーム内のおすすめと違う場合は、確定入手可能なキャラ（ミッション、ストーリー進行）を除外しているため。',
     kr: '중복을 피하세요 — 아직 보유하지 않은 캐릭터를 선택하세요. 게임 내 추천과 다르다면, 확정 입수 가능한 영웅（미션、스토리 진행）을 제외했기 때문입니다.',
     zh: '避免重复选择 — 始终选择你尚未拥有的角色。如果游戏内推荐看起来不同，是因为我们已经排除了从确定来源（任务、故事进度）获得的英雄。',
-    fr: 'Evitez les doublons : choisissez toujours des personnages que vous ne possedez pas encore. Si les recommandations en jeu différent, c\'est parce que nous avons déjà exclu les Héros disponibles via des sources garanties (missions, progression de la Story).',
+    fr: 'Évitez les doublons : choisissez toujours des personnages que vous ne possédez pas encore. Si les recommandations en jeu diffèrent, c\'est parce que nous avons déjà exclu les Héros disponibles via des sources garanties (missions, progression de la Story).',
   } satisfies LangMap,
 
   tabFree: {
@@ -84,7 +84,7 @@ const S = {
   } satisfies LangMap,
 
   pullingStrategy: {
-    en: 'Pulling Strategy', jp: 'ガチャ戦略', kr: '가챠 전략', zh: '抽卡策略', fr: 'Strategie de Pull',
+    en: 'Pulling Strategy', jp: 'ガチャ戦略', kr: '가챠 전략', zh: '抽卡策略', fr: 'Stratégie de Pull',
   } satisfies LangMap,
 
   pullingDesc: {
@@ -92,7 +92,7 @@ const S = {
     jp: '新キャラの獲得を優先しよう — 限界突破はドッペルゲンガーで対応可能。新キャラはリリースから約3.5ヶ月後にカスタムプールに追加される。',
     kr: '새 캐릭터 획득을 우선시하세요 — 초월은 도플갱어로 가능합니다. 신규 유닛은 출시 약 3.5개월 후 커스텀 풀에 추가됩니다.',
     zh: '优先获取新角色 — 超越可以用分身处理。新角色在发布约3.5个月后加入自选池。',
-    fr: 'Concentrez-vous sur le deblocage de nouveaux personnages : les doppelgangers gerent la transcendance. Les nouvelles unités rejoignent le custom pool environ 3,5 mois après leur sortie.',
+    fr: 'Concentrez-vous sur le déblocage de nouveaux personnages : les doppelgangers gèrent la transcendance. Les nouvelles unités rejoignent le custom pool environ 3,5 mois après leur sortie.',
   } satisfies LangMap,
 
   pullingNote: {
@@ -104,11 +104,11 @@ const S = {
   } satisfies LangMap,
 
   recommendedPicks: {
-    en: 'Recommended Picks (by priority)', jp: 'おすすめピック（優先度順）', kr: '추천 픽 (우선순위)', zh: '推荐选择（按优先级）', fr: 'Choix Recommandes (par priorité)',
+    en: 'Recommended Picks (by priority)', jp: 'おすすめピック（優先度順）', kr: '추천 픽 (우선순위)', zh: '推荐选择（按优先级）', fr: 'Choix Recommandés (par priorité)',
   } satisfies LangMap,
 
   thRecommended: {
-    en: 'Recommended', jp: 'おすすめ', kr: '추천', zh: '推荐', fr: 'Recommande',
+    en: 'Recommended', jp: 'おすすめ', kr: '추천', zh: '推荐', fr: 'Recommandé',
   } satisfies LangMap,
   thFreeAvailable: {
     en: 'Available for free', jp: '無料入手可能', kr: '무료 획득 가능', zh: '免费获取', fr: 'Disponible gratuitement',

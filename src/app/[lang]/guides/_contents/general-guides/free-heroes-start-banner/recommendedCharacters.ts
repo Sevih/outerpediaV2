@@ -35,7 +35,7 @@ export const freeHeroesSources: FreeHeroSource[] = [
                     jp: "どれも優秀。好きなキャラを選ぼう。",
                     kr: "모두 좋은 선택지. 원하는 캐릭터를 고르세요.",
                     zh: "都是不错的选择，挑你喜欢的就好。",
-                    fr: "Tous des choix solides, prenez simplement celui que vous preferez."
+                    fr: "Tous des choix solides, prenez simplement celui que vous préférez."
                 }
             }
         ]
@@ -79,7 +79,7 @@ export const freeHeroesSources: FreeHeroSource[] = [
                     jp: "{I-I/3★ Hero Selection Ticket}。 \n 30ミッション全クリアで1枚 \n シーズン1ハード冒険10クリアで1枚。",
                     kr: "{I-I/3★ Hero Selection Ticket}. \n 30개 미션 전부 완료 시 1장 \n 시즌 1 하드 모험 10 클리어 시 1장.",
                     zh: "{I-I/3★ Hero Selection Ticket}。 \n 完成全部30个任务获得1张 \n 通关第1季困难冒险10获得1张。",
-                    fr: "{I-I/3★ Hero Selection Ticket}. \n 1 en completant les 30 missions \n 1 pour le clear de Season 1 Hardmode Adventure 10."
+                    fr: "{I-I/3★ Hero Selection Ticket}. \n 1 en complétant les 30 missions \n 1 pour le clear de Season 1 Hardmode Adventure 10."
                 }
             }
         ]
@@ -211,7 +211,7 @@ export const freeHeroesSources: FreeHeroSource[] = [
                     jp: "{E/Light}スターター — おすすめ。 \n 全員入手、{E/Dark}スターターとは排他。",
                     kr: "{E/Light} 스타터 — 추천。 \n 모두 획득、{E/Dark} 스타터와 배타적。",
                     zh: "{E/Light}新手包 - 推荐。 \n 获得全部角色，与{E/Dark}新手包互斥。",
-                    fr: "Starter {E/Light} — choix recommande. \n Obtenez tous les Heros, mutuellement exclusif avec le Starter {E/Dark}."
+                    fr: "Starter {E/Light} — choix recommandé. \n Obtenez tous les Héros, mutuellement exclusif avec le Starter {E/Dark}."
                 }
             },
             {
@@ -222,7 +222,7 @@ export const freeHeroesSources: FreeHeroSource[] = [
                     jp: "{E/Dark}スターター。 \n 全員入手、{E/Light}スターターとは排他。",
                     kr: "{E/Dark} 스타터。 \n 모두 획득、{E/Light} 스타터와 배타적。",
                     zh: "{E/Dark}新手包。 \n 获得全部角色，与{E/Light}新手包互斥。",
-                    fr: "Starter {E/Dark}. \n Obtenez tous les Heros, mutuellement exclusif avec le Starter {E/Light}."
+                    fr: "Starter {E/Dark}. \n Obtenez tous les Héros, mutuellement exclusif avec le Starter {E/Light}."
                 }
             }
         ]
@@ -281,7 +281,7 @@ export const customBannerPicks: CustomBannerPick[] = [
             jp: "スターター選択に合わせて選ぼう。",
             kr: "스타터 선택에 맞춰 고르세요.",
             zh: "根据新手包选择来挑选。",
-            fr: "A choisir selon votre selecteur de starter."
+            fr: "À choisir selon votre sélecteur de starter."
         }
     },
     {
@@ -291,7 +291,7 @@ export const customBannerPicks: CustomBannerPick[] = [
             jp: "優秀なPvPユニット。",
             kr: "우수한 PvP 유닛.",
             zh: "优秀的PvP角色。",
-            fr: "Excellentes unites PvP."
+            fr: "Excellentes unités PvP."
         }
     },
     {
@@ -301,7 +301,7 @@ export const customBannerPicks: CustomBannerPick[] = [
             jp: "汎用コンテンツ向けの高火力アタッカー。",
             kr: "범용 콘텐츠용 고화력 딜러.",
             zh: "通用内容的高伤害输出。",
-            fr: "Damage dealers eleves pour le contenu general."
+            fr: "Damage dealers élevés pour le contenu général."
         }
     },
     {
@@ -331,7 +331,7 @@ export const customBannerPicks: CustomBannerPick[] = [
             jp: "特定用途向けDPS。",
             kr: "특수 용도 DPS.",
             zh: "特殊用途的输出角色。",
-            fr: "DPS avec des cas d'usage specifiques."
+            fr: "DPS avec des cas d'usage spécifiques."
         }
     },
     {
@@ -341,7 +341,7 @@ export const customBannerPicks: CustomBannerPick[] = [
             jp: "ニッチだが特定コンテンツで有用。",
             kr: "틈새지만 특정 콘텐츠에서 유용.",
             zh: "小众但在特定内容中有用。",
-            fr: "De niche mais utiles dans des contenus specifiques."
+            fr: "De niche mais utiles dans des contenus spécifiques."
         }
     },
     {
@@ -351,7 +351,7 @@ export const customBannerPicks: CustomBannerPick[] = [
             jp: "序盤はDPSとして使えるが、後半は他に劣る。",
             kr: "초반에는 DPS로 사용 가능하지만, 후반에는 밀림.",
             zh: "前期可作为输出使用，但后期会被超越。",
-            fr: "Utilisables comme DPS au debut, mais generalement surpasses plus tard."
+            fr: "Utilisables comme DPS au début, mais généralement surpassés plus tard."
         }
     },
     {

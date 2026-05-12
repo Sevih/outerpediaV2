@@ -3,7 +3,7 @@ import type { LangMap } from '@/types/common'
 export const LABELS = {
     // Page
     title: { en: 'Daily / Weekly / Monthly Ether income', jp: 'エーテル収入（日/週/月別）', kr: '에테르 수입 (일/주/월별)', zh: '以太收入（日/周/月）', fr: 'Revenus d\'Ether Quotidiens / Hebdomadaires / Mensuels' } satisfies LangMap,
-    description: { en: 'This guide organizes your income into Daily, Weekly, and Monthly sources. Use the Advanced rank adjustments (Arena, Guild Raid, World Boss) to match your account—totals and the date projection update instantly. Event/seasonal rewards are listed separately and aren\'t counted in the totals.', jp: 'このガイドでは収入を日次、週次、月次に分類しています。詳細設定（アリーナ、ギルドレイド、ワールドボス）でアカウントに合わせると、合計と日付予測が即座に更新されます。イベント/シーズン報酬は別途記載され、合計には含まれません。', kr: '이 가이드는 수입을 일간, 주간, 월간으로 분류합니다. 고급 랭크 설정(아레나, 길드 레이드, 월드 보스)을 조정하면 합계와 날짜 예측이 즉시 업데이트됩니다. 이벤트/시즌 보상은 별도로 표시되며 합계에 포함되지 않습니다.', zh: '本指南将收入分为日常、每周和每月来源。使用高级排名设置（竞技场、公会副本、世界Boss）来匹配您的账号——总计和日期预测会即时更新。活动/季节奖励单独列出，不计入总计。', fr: 'Ce guide organise vos revenus en sources Daily, Weekly et Monthly. Utilisez les ajustements de rank avancés (Arena, Guild Raid, World Boss) pour les adapter à votre compte. Les totaux et la projection de date se mettent à jour instantanement. Les récompenses d\'event/seasonal sont listees à part et ne sont pas comptees dans les totaux.' } satisfies LangMap,
+    description: { en: 'This guide organizes your income into Daily, Weekly, and Monthly sources. Use the Advanced rank adjustments (Arena, Guild Raid, World Boss) to match your account—totals and the date projection update instantly. Event/seasonal rewards are listed separately and aren\'t counted in the totals.', jp: 'このガイドでは収入を日次、週次、月次に分類しています。詳細設定（アリーナ、ギルドレイド、ワールドボス）でアカウントに合わせると、合計と日付予測が即座に更新されます。イベント/シーズン報酬は別途記載され、合計には含まれません。', kr: '이 가이드는 수입을 일간, 주간, 월간으로 분류합니다. 고급 랭크 설정(아레나, 길드 레이드, 월드 보스)을 조정하면 합계와 날짜 예측이 즉시 업데이트됩니다. 이벤트/시즌 보상은 별도로 표시되며 합계에 포함되지 않습니다.', zh: '本指南将收入分为日常、每周和每月来源。使用高级排名设置（竞技场、公会副本、世界Boss）来匹配您的账号——总计和日期预测会即时更新。活动/季节奖励单独列出，不计入总计。', fr: 'Ce guide organise vos revenus en sources Daily, Weekly et Monthly. Utilisez les ajustements de rank avancés (Arena, Guild Raid, World Boss) pour les adapter à votre compte. Les totaux et la projection de date se mettent à jour instantanément. Les récompenses d\'event/seasonal sont listées à part et ne sont pas comptées dans les totaux.' } satisfies LangMap,
 
     // Totals
     dailyIncome: { en: 'Daily income', jp: '日次収入', kr: '일간 수입', zh: '日常收入', fr: 'Revenu quotidien' } satisfies LangMap,
@@ -16,7 +16,7 @@ export const LABELS = {
     // Adjustments
     advancedAdjustments: { en: 'Advanced rank adjustments', jp: '詳細ランク設定', kr: '고급 랭크 설정', zh: '高级排名设置', fr: 'Ajustements de rank avancés' } satisfies LangMap,
     arena: { en: 'Arena', jp: 'アリーナ', kr: '아레나', zh: '竞技场', fr: 'Arena' } satisfies LangMap,
-    guild: { en: 'Guild', jp: 'ギルド', kr: '길드', zh: '公会', fr: 'Guilde' } satisfies LangMap,
+    guild: { en: 'Guild', jp: 'ギルド', kr: '길드', zh: '公会', fr: 'Guild' } satisfies LangMap,
     worldBoss: { en: 'World Boss', jp: 'ワールドボス', kr: '월드 보스', zh: '世界Boss', fr: 'World Boss' } satisfies LangMap,
     singularity: { en: 'Singularity', jp: '特異点', kr: '특이점', zh: '奇点', fr: 'Singularity' } satisfies LangMap,
 
@@ -37,7 +37,7 @@ export const LABELS = {
     monthlySubtotal: { en: 'Monthly subtotal', jp: '月次小計', kr: '월간 소계', zh: '每月小计', fr: 'Sous-total mensuel' } satisfies LangMap,
 
     // Variable
-    variableExcluded: { en: 'Variable / Event-Driven (excluded)', jp: '変動/イベント報酬（除外）', kr: '변동/이벤트 보상 (제외)', zh: '变动/活动奖励（不计入）', fr: 'Variable / Lie aux Events (exclu)' } satisfies LangMap,
+    variableExcluded: { en: 'Variable / Event-Driven (excluded)', jp: '変動/イベント報酬（除外）', kr: '변동/이벤트 보상 (제외)', zh: '变动/活动奖励（不计入）', fr: 'Variable / Lié aux Events (exclu)' } satisfies LangMap,
     variableTitle: { en: 'Extra', jp: 'その他', kr: '기타', zh: '其他', fr: 'Extra' } satisfies LangMap,
 
     // Projection
@@ -50,7 +50,7 @@ export const LABELS = {
     fromDaily: { en: 'From Daily', jp: '日次から', kr: '일간에서', zh: '来自日常', fr: 'Depuis Daily' } satisfies LangMap,
     fromWeekly: { en: 'From Weekly', jp: '週次から', kr: '주간에서', zh: '来自每周', fr: 'Depuis Weekly' } satisfies LangMap,
     fromMonthly: { en: 'From Monthly', jp: '月次から', kr: '월간에서', zh: '来自每月', fr: 'Depuis Monthly' } satisfies LangMap,
-    projectedTotal: { en: 'Projected Total', jp: '予測合計', kr: '예상 총합', zh: '预计总计', fr: 'Total projete' } satisfies LangMap,
+    projectedTotal: { en: 'Projected Total', jp: '予測合計', kr: '예상 총합', zh: '预计总计', fr: 'Total projeté' } satisfies LangMap,
 
     // Sources
     sources: {
@@ -62,15 +62,15 @@ export const LABELS = {
         'weekly.freePack': { en: 'Weekly Free Pack', jp: 'ウィークリー無料パック', kr: '주간 무료 팩', zh: '每周免费礼包', fr: 'Pack Gratuit Hebdomadaire' },
         'weekly.arena': { en: 'Weekly Arena Ranking', jp: 'ウィークリーアリーナランキング', kr: '주간 아레나 랭킹', zh: '每周竞技场排名', fr: 'Classement Arena Hebdomadaire' },
         'weekly.missions': { en: 'Weekly Missions', jp: 'ウィークリーミッション', kr: '주간 미션', zh: '每周任务', fr: 'Weekly Missions' },
-        'weekly.guildCheckin': { en: 'Guild Check-in', jp: 'ギルドチェックイン', kr: '길드 체크인', zh: '公会签到', fr: 'Check-in Guilde' },
+        'weekly.guildCheckin': { en: 'Guild Check-in', jp: 'ギルドチェックイン', kr: '길드 체크인', zh: '公会签到', fr: 'Check-in Guild' },
         'weekly.monadGate': { en: 'Monad Gate Weekly Missions', jp: 'モナドゲートウィークリーミッション', kr: '모나드 게이트 주간 미션', zh: '莫纳德之门每周任务', fr: 'Missions Hebdomadaires Monad Gate' },
         'monthly.freePack': { en: 'Monthly Free Pack', jp: 'マンスリー無料パック', kr: '월간 무료 팩', zh: '每月免费礼包', fr: 'Pack Gratuit Mensuel' },
         'monthly.skywardTower': { en: 'Skyward Tower', jp: '昇天の塔', kr: '승천의 탑', zh: '升天之塔', fr: 'Skyward Tower' },
         'monthly.checkin': { en: 'Check-in', jp: 'チェックイン', kr: '체크인', zh: '签到', fr: 'Check-in' },
-        'monthly.maintenance': { en: 'Maintenance rewards', jp: 'メンテナンス報酬', kr: '점검 보상', zh: '维护奖励', fr: 'Recompenses de Maintenance' },
+        'monthly.maintenance': { en: 'Maintenance rewards', jp: 'メンテナンス報酬', kr: '점검 보상', zh: '维护奖励', fr: 'Récompenses de Maintenance' },
         'monthly.jointMission': { en: 'Joint Mission', jp: '共同ミッション', kr: '합동 미션', zh: '联合任务', fr: 'Joint Mission' },
-        'monthly.guildRaid': { en: 'Guild Raid Ranking Reward', jp: 'ギルドレイドランキング報酬', kr: '길드 레이드 랭킹 보상', zh: '公会副本排名奖励', fr: 'Recompense de Classement Guild Raid' },
-        'monthly.worldBoss': { en: 'World Boss Ranking Reward', jp: 'ワールドボスランキング報酬', kr: '월드 보스 랭킹 보상', zh: '世界Boss排名奖励', fr: 'Recompense de Classement World Boss' },
+        'monthly.guildRaid': { en: 'Guild Raid Ranking Reward', jp: 'ギルドレイドランキング報酬', kr: '길드 레이드 랭킹 보상', zh: '公会副本排名奖励', fr: 'Récompense de Classement Guild Raid' },
+        'monthly.worldBoss': { en: 'World Boss Ranking Reward', jp: 'ワールドボスランキング報酬', kr: '월드 보스 랭킹 보상', zh: '世界Boss排名奖励', fr: 'Récompense de Classement World Boss' },
         'daily.singularityRanking': { en: 'Dimensional Singularity Daily Ranking (Wed–Sat)', jp: '次元特異点 デイリーランキング (水〜土)', kr: '차원 특이점 일일 랭킹 (수~토)', zh: '次元奇点每日排名 (周三~周六)', fr: 'Classement Quotidien Dimensional Singularity (Mer-Sam)' },
     } as Record<string, LangMap>,
     sourceNotes: {
@@ -168,10 +168,10 @@ export const LABELS = {
 
     // Variable items
     variableItems: {
-        'variable.terminus': { en: 'Terminus Island Ether rewards (22–26 on treasure reward on Terminus 10) (5 chances everyday ×2 w/ terminus pack)', jp: 'ターミナルアイルのエーテル報酬（ターミナル10の宝箱報酬で22〜26）（毎日5回、ターミナルパックで×2）', kr: '터미널 아일 에테르 보상 (터미널 10 보물 보상에서 22~26) (매일 5회, 터미널 팩으로 ×2)', zh: '终点岛以太奖励（终点10的宝箱奖励22~26）（每天5次，终点礼包×2）', fr: 'Recompenses d\'Ether Terminus Island (22-26 sur la treasure reward de Terminus 10) (5 chances par jour ×2 avec le terminus pack)' },
+        'variable.terminus': { en: 'Terminus Island Ether rewards (22–26 on treasure reward on Terminus 10) (5 chances everyday ×2 w/ terminus pack)', jp: 'ターミナルアイルのエーテル報酬（ターミナル10の宝箱報酬で22〜26）（毎日5回、ターミナルパックで×2）', kr: '터미널 아일 에테르 보상 (터미널 10 보물 보상에서 22~26) (매일 5회, 터미널 팩으로 ×2)', zh: '终点岛以太奖励（终点10的宝箱奖励22~26）（每天5次，终点礼包×2）', fr: 'Récompenses d\'Ether Terminus Island (22-26 sur la treasure reward de Terminus 10) (5 chances par jour ×2 avec le terminus pack)' },
         'variable.updateEvent': { en: "Every update's event", jp: '各アップデートのイベント', kr: '각 업데이트 이벤트', zh: '每次更新活动', fr: "Event de chaque update" },
         'variable.sideStories': { en: 'New Side Stories every new character (non-premium/limited)', jp: '新キャラクターごとの新サイドストーリー（プレミアム/限定除く）', kr: '새 캐릭터마다 새 사이드 스토리 (프리미엄/한정 제외)', zh: '每个新角色的新外传（精选/限定除外）', fr: 'Nouvelles Side Stories pour chaque nouveau personnage (hors Premium/Limited)' },
         'variable.coupons': { en: 'Coupon codes', jp: 'クーポンコード', kr: '쿠폰 코드', zh: '兑换码', fr: 'Codes coupon' },
-        'variable.seasonalEvents': { en: 'Seasonal events (story, point shops, login chains)', jp: 'シーズンイベント（ストーリー、ポイントショップ、ログインチェーン）', kr: '시즌 이벤트 (스토리, 포인트 상점, 로그인 체인)', zh: '季节活动（剧情、积分商店、登录链）', fr: 'Events seasonal (story, point shops, login chains)' },
+        'variable.seasonalEvents': { en: 'Seasonal events (story, point shops, login chains)', jp: 'シーズンイベント（ストーリー、ポイントショップ、ログインチェーン）', kr: '시즌 이벤트 (스토리, 포인트 상점, 로그인 체인)', zh: '季节活动（剧情、积分商店、登录链）', fr: 'Events saisonniers (story, point shops, login chains)' },
     } as Record<string, LangMap>,
 } as const
