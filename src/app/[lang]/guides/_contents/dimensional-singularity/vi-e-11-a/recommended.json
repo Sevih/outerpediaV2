@@ -1,0 +1,101 @@
+[
+  {
+    "names": ["Ember"],
+    "reason": {
+      "en": "{E/Fire} {C/Defender} for the front slot — blocks S1 WG refund and extends {D/BT_DOT_BURN} durations.",
+      "jp": "最前列用の{E/Fire}{C/Defender}。S1のWG回復を阻止し、{D/BT_DOT_BURN}の持続を延長する。",
+      "kr": "최전열용 {E/Fire} {C/Defender}. S1 WG 회복을 차단하고 {D/BT_DOT_BURN} 지속시간을 연장합니다.",
+      "zh": "最前排{E/Fire}{C/Defender} — 阻止S1的WG回复并延长{D/BT_DOT_BURN}持续时间。"
+    }
+  },
+  {
+    "names": ["Vlada"],
+    "reason": {
+      "en": "Detonates {D/BT_DOT_BURN} stacks — main DPS of the Burn team.",
+      "jp": "{D/BT_DOT_BURN}スタックを破裂させる — Burn編成のメインDPS。",
+      "kr": "{D/BT_DOT_BURN} 스택을 폭발시키는 Burn 팀의 메인 딜러.",
+      "zh": "引爆{D/BT_DOT_BURN}层数 — Burn队伍的主C。"
+    }
+  },
+  {
+    "names": ["Maxie"],
+    "reason": {
+      "en": "Adds {D/BT_DOT_BURN} stacks and {D/BT_EXTEND_DEBUFF} — fits Burn, Mero and GBeth teams.",
+      "jp": "{D/BT_DOT_BURN}スタックと{D/BT_EXTEND_DEBUFF}を追加 — Burn・Mero・GBethのいずれの編成にも適合。",
+      "kr": "{D/BT_DOT_BURN} 스택과 {D/BT_EXTEND_DEBUFF}을 추가 — Burn, Mero, GBeth 팀 모두에 적합합니다.",
+      "zh": "追加{D/BT_DOT_BURN}层数与{D/BT_EXTEND_DEBUFF} — 适用于Burn、Mero及GBeth队伍。"
+    }
+  },
+  {
+    "names": ["Monad Eva"],
+    "reason": {
+      "en": "{C/Healer} with {B/BT_CALL_BACKUP}, {B/BT_AP_CHARGE} and {B/BT_REVIVAL} — lifeline utility for Burn and GBeth teams.",
+      "jp": "{B/BT_CALL_BACKUP}、{B/BT_AP_CHARGE}、{B/BT_REVIVAL}を持つ{C/Healer} — Burn・GBeth編成の保険役。",
+      "kr": "{B/BT_CALL_BACKUP}, {B/BT_AP_CHARGE}, {B/BT_REVIVAL}을 보유한 {C/Healer} — Burn 및 GBeth 팀의 라이프라인.",
+      "zh": "拥有{B/BT_CALL_BACKUP}、{B/BT_AP_CHARGE}和{B/BT_REVIVAL}的{C/Healer} — Burn与GBeth队伍的保命角色。"
+    }
+  },
+  {
+    "names": ["Mero"],
+    "reason": {
+      "en": "Main DPS for the Mero team — equips {I-W/Heartunder's Blade} for {D/BT_DOT_BURN}.",
+      "jp": "Mero編成のメインDPS — {I-W/Heartunder's Blade}で{D/BT_DOT_BURN}を付与する。",
+      "kr": "Mero 팀의 메인 딜러 — {I-W/Heartunder's Blade}로 {D/BT_DOT_BURN}을 부여합니다.",
+      "zh": "Mero队伍的主C — 装备{I-W/Heartunder's Blade}附加{D/BT_DOT_BURN}。"
+    }
+  },
+  {
+    "names": ["Mystic Sage Ame"],
+    "reason": {
+      "en": "Stacks DEF down on the boss, ATK up and damage bonus for the team — Mero team support.",
+      "jp": "ボスに防御力減少、味方に攻撃力増加とダメージボーナスを積み上げる — Mero編成のサポート。",
+      "kr": "보스에게 방어력 감소를, 아군에게 공격력 증가와 피해 보너스를 누적 — Mero 팀 서포터.",
+      "zh": "对Boss叠加防御降低，对队友叠加攻击力提升与伤害加成 — Mero队伍辅助。"
+    }
+  },
+  {
+    "names": ["Demiurge Vlada"],
+    "reason": {
+      "en": "Transcend grants +20% ATK at 6★ (10% at 4★). Any 6★ Vanguard can substitute — Mero team support.",
+      "jp": "超越で6★時+20%攻撃力（4★で10%）。6★ヴァンガードで代替可能 — Mero編成のサポート。",
+      "kr": "초월로 6★ 시 +20% 공격력(4★에서 10%). 6★ 뱅가드로 대체 가능 — Mero 팀 서포터.",
+      "zh": "超越在6★时提供+20%攻击力（4★时10%）。任意6★先锋可替代 — Mero队伍辅助。"
+    }
+  },
+  {
+    "names": ["Tamamo-no-Mae"],
+    "reason": {
+      "en": "Boss damage bonus for {E/Fire}-element allies — Mero team support.",
+      "jp": "{E/Fire}属性味方のボスダメージボーナス — Mero編成のサポート。",
+      "kr": "{E/Fire} 속성 아군의 보스 피해 보너스 — Mero 팀 서포터.",
+      "zh": "为{E/Fire}属性盟友提供Boss伤害加成 — Mero队伍辅助。"
+    }
+  },
+  {
+    "names": ["Tamara", "Skadi", "Valentine", "Holy Night's Blessing Dianne"],
+    "reason": {
+      "en": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} buffers — counteract the Crit Damage reduction.",
+      "jp": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}バッファー — 会心ダメージ減少を相殺する。",
+      "kr": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} 버퍼 — 치명 피해 감소를 상쇄합니다.",
+      "zh": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}增益型 — 抵消Boss造成的暴击伤害减少。"
+    }
+  },
+  {
+    "names": ["Summer Knight's Dream Ember", "Demiurge Drakhan"],
+    "reason": {
+      "en": "{S/PEN%} buffers for the Mero team.",
+      "jp": "Mero編成向けの{S/PEN%}バッファー。",
+      "kr": "Mero 팀의 {S/PEN%} 버퍼.",
+      "zh": "Mero队伍的{S/PEN%}增益型。"
+    }
+  },
+  {
+    "names": ["Gnosis Beth"],
+    "reason": {
+      "en": "Main DPS for the GBeth team — Eternal Bleeding scales with the boss's +150% DoT taken passive.",
+      "jp": "GBeth編成のメインDPS — 「永遠の出血」がボスのDoT被ダメ+150%パッシブで強化される。",
+      "kr": "GBeth 팀의 메인 딜러 — 영원한 출혈이 보스의 DoT 받는 피해 +150% 패시브로 강화됩니다.",
+      "zh": "GBeth队伍的主C — 永恒出血受Boss的DoT受伤+150%被动加成。"
+    }
+  }
+]

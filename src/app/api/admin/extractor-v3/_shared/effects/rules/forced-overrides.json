@@ -248,5 +248,18 @@
         "BT_DOT_POISON"
       ]
     }
+  },
+  "skill:Enraged|60000006": {
+    "*": {
+      "clear_debuff": true,
+      "clear_buff": true,
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ],
+      "debuff": [
+         "BT_STAT|ST_CRITICAL_DMG_RATE"
+      ]
+    }
   }
 }
