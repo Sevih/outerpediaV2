@@ -1,0 +1,36 @@
+{
+  "general": [
+    {
+      "en": "{D/BT_DOT_POISON} on the boss = +100% damage taken. Without {D/BT_DOT_POISON}, the boss ignores 30% of Defense on its attacks.",
+      "jp": "ボスに{D/BT_DOT_POISON}を付与すると受けるダメージ+100%。{D/BT_DOT_POISON}保有なし時はボスの全攻撃が防御力を30%無視する。",
+      "kr": "보스에게 {D/BT_DOT_POISON}을 부여하면 받는 피해 +100%. {D/BT_DOT_POISON}이 없으면 보스의 모든 공격이 방어력 30%를 무시합니다.",
+      "zh": "对Boss附加{D/BT_DOT_POISON}使其受到伤害+100%。未持有{D/BT_DOT_POISON}时，Boss所有攻击无视30%防御力。"
+    },
+    {
+      "en": "Boss self-extends its own buffs via S1 and gains {B/BT_INVINCIBLE} on its Ultimate. Immune to {D/BT_REMOVE_BUFF} — counter buff hoarding with {D/BT_SEALED} to tick down durations.",
+      "jp": "ボスはS1で自分の強化効果を延長し、必殺技で{B/BT_INVINCIBLE}を獲得する。{D/BT_REMOVE_BUFF}に免疫 — {D/BT_SEALED}でバフを徐々に剥がす。",
+      "kr": "보스는 S1으로 자신의 강화 효과를 연장하고 필살기로 {B/BT_INVINCIBLE}을 획득합니다. {D/BT_REMOVE_BUFF}에 면역 — {D/BT_SEALED}로 버프 지속시간을 점차 깎아내세요.",
+      "zh": "Boss通过S1自我延长强化效果并在必杀技中获得{B/BT_INVINCIBLE}。免疫{D/BT_REMOVE_BUFF} — 使用{D/BT_SEALED}逐回合削减Boss强化效果。"
+    },
+    {
+      "en": "Berserk triggers every 7 enemy actions and applies Crit Damage Reduction on all enemies — favor non-crit / DoT carries.",
+      "jp": "狂暴化は敵が7回行動するたびに発動し、敵全体に会心ダメージ減少を付与する — 非会心/DoTキャリアが有利。",
+      "kr": "광폭화는 적이 7회 행동할 때마다 발동하며 적 전체에게 치명 피해 감소를 부여합니다 — 비치명/DoT 메인 딜러가 유리합니다.",
+      "zh": "狂暴化由敌方每7次行动触发，对全体敌人附加暴击伤害减少 — 非暴击/DoT主C占优。"
+    }
+  ],
+  "gbeth": [
+    {
+      "en": "{P/Gnosis Beth} carries with {D/ETERNAL_BLEEDING}.",
+      "jp": "{P/Gnosis Beth}を{D/ETERNAL_BLEEDING}でキャリーする。",
+      "kr": "{P/Gnosis Beth}를 {D/ETERNAL_BLEEDING}로 운영하세요.",
+      "zh": "以{P/Gnosis Beth}为主C，使用{D/ETERNAL_BLEEDING}。"
+    },
+    {
+      "en": "Embark characters with {D/BT_SEALED} and {D/BT_EXTEND_DEBUFF}. {C/Ranger} with {I-W/Sacreed Edge} can be a source of {D/BT_DOT_POISON}.",
+      "jp": "{D/BT_SEALED}と{D/BT_EXTEND_DEBUFF}を持つキャラクターを編成する。{I-W/Sacreed Edge}を装備した{C/Ranger}は{D/BT_DOT_POISON}の供給源となる。",
+      "kr": "{D/BT_SEALED}과 {D/BT_EXTEND_DEBUFF}을 보유한 캐릭터를 채용하세요. {I-W/Sacreed Edge}를 장착한 {C/Ranger}는 {D/BT_DOT_POISON}의 공급원이 될 수 있습니다.",
+      "zh": "携带具备{D/BT_SEALED}与{D/BT_EXTEND_DEBUFF}的角色。装备{I-W/Sacreed Edge}的{C/Ranger}可作为{D/BT_DOT_POISON}的来源。"
+    }
+  ]
+}

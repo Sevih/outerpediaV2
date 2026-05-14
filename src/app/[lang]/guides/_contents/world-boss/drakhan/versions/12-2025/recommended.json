@@ -1,77 +1,115 @@
 {
   "phase1": [
     {
-      "names": ["Viella"],
+      "names": [
+        "Viella"
+      ],
       "reason": {
         "en": "{C/Healer} with {D/BT_DOT_POISON} and {B/BT_STAT|ST_COUNTER_RATE}.",
         "jp": "{D/BT_DOT_POISON}と{B/BT_STAT|ST_COUNTER_RATE}を持つ{C/Healer}。",
         "kr": "{D/BT_DOT_POISON}과 {B/BT_STAT|ST_COUNTER_RATE}를 가진 {C/Healer}.",
-        "zh": "拥有{D/BT_DOT_POISON}和{B/BT_STAT|ST_COUNTER_RATE}的{C/Healer}。"
+        "zh": "拥有{D/BT_DOT_POISON}和{B/BT_STAT|ST_COUNTER_RATE}的{C/Healer}。",
+        "fr": "{C/Healer} avec {D/BT_DOT_POISON} et {B/BT_STAT|ST_COUNTER_RATE}."
       }
     },
     {
-      "names": ["Gnosis Viella"],
+      "names": [
+        "Gnosis Viella"
+      ],
       "reason": {
         "en": "{D/CORROSIVE_POISON} source.",
         "jp": "{D/CORROSIVE_POISON}の供給源。",
         "kr": "{D/CORROSIVE_POISON} 공급원.",
-        "zh": "{D/CORROSIVE_POISON}来源。"
+        "zh": "{D/CORROSIVE_POISON}来源。",
+        "fr": "Source de {D/CORROSIVE_POISON}."
       }
     },
     {
-      "names": ["Hilde", "Omega Nadja", "Tamamo-no-Mae", "Regina", "Gnosis Dahlia", "Delta", "Demiurge Stella", "Core Fusion Veronica"],
+      "names": [
+        "Hilde",
+        "Omega Nadja",
+        "Tamamo-no-Mae",
+        "Regina",
+        "Gnosis Dahlia",
+        "Delta",
+        "Demiurge Stella",
+        "Core Fusion Veronica"
+      ],
       "reason": {
         "en": "Built-in {B/BT_STAT|ST_COUNTER_RATE} or {B/BT_REVENGE} mechanics.",
         "jp": "{B/BT_STAT|ST_COUNTER_RATE}または{B/BT_REVENGE}メカニクス内蔵。",
         "kr": "{B/BT_STAT|ST_COUNTER_RATE} 또는 {B/BT_REVENGE} 메커니즘 내장.",
-        "zh": "内置{B/BT_STAT|ST_COUNTER_RATE}或{B/BT_REVENGE}机制。"
+        "zh": "内置{B/BT_STAT|ST_COUNTER_RATE}或{B/BT_REVENGE}机制。",
+        "fr": "Mécaniques {B/BT_STAT|ST_COUNTER_RATE} ou {B/BT_REVENGE} intégrées."
       }
     }
   ],
   "phase2": [
     {
-      "names": ["Monad Eva", "Luna"],
+      "names": [
+        "Monad Eva",
+        "Luna"
+      ],
       "reason": {
         "en": "{B/BT_REMOVE_DEBUFF} and {B/BT_CALL_BACKUP}.",
         "jp": "{B/BT_REMOVE_DEBUFF}と{B/BT_CALL_BACKUP}。",
         "kr": "{B/BT_REMOVE_DEBUFF}와 {B/BT_CALL_BACKUP}.",
-        "zh": "{B/BT_REMOVE_DEBUFF}和{B/BT_CALL_BACKUP}。"
+        "zh": "{B/BT_REMOVE_DEBUFF}和{B/BT_CALL_BACKUP}。",
+        "fr": "{B/BT_REMOVE_DEBUFF} et {B/BT_CALL_BACKUP}."
       }
     },
     {
-      "names": ["Notia", "Laine", "Viella"],
+      "names": [
+        "Notia",
+        "Laine",
+        "Viella"
+      ],
       "reason": {
         "en": "{D/BT_DOT_POISON} source.",
         "jp": "{D/BT_DOT_POISON}の供給源。",
         "kr": "{D/BT_DOT_POISON} 공급원.",
-        "zh": "{D/BT_DOT_POISON}来源。"
+        "zh": "{D/BT_DOT_POISON}来源。",
+        "fr": "Source de {D/BT_DOT_POISON}."
       }
     },
     {
-      "names": ["Valentine", "Tamara", "Mystic Sage Ame", "Holy Night's Blessing Dianne", "Ryu Lion"],
+      "names": [
+        "Valentine",
+        "Tamara",
+        "Mystic Sage Ame",
+        "Holy Night's Blessing Dianne",
+        "Ryu Lion"
+      ],
       "reason": {
         "en": "Buffer options.",
         "jp": "バッファーオプション。",
         "kr": "버퍼 옵션.",
-        "zh": "增益选项。"
+        "zh": "增益选项。",
+        "fr": "Options Buffer."
       }
     },
     {
-      "names": ["Demiurge Vlada"],
+      "names": [
+        "Demiurge Vlada"
+      ],
       "reason": {
         "en": "Starting from 4 stars, reduces priority gain efficiency by 20% (50% at 5 stars).",
         "jp": "4凸から行動ゲージ上昇効率を20%減少（5凸で50%）。",
         "kr": "4성부터 행동 게이지 증가 효율 20% 감소 (5성에서 50%).",
-        "zh": "从4星开始，降低行动值增加效率20%（5星时50%）。"
+        "zh": "从4星开始，降低行动值增加效率20%（5星时50%）。",
+        "fr": "À partir de 4 étoiles, réduit l'efficacité du gain de priority de 20% (50% à 5 étoiles)."
       }
     },
     {
-      "names": ["Core Fusion Veronica"],
+      "names": [
+        "Core Fusion Veronica"
+      ],
       "reason": {
         "en": "{C/Defender} option for the front slot.",
         "jp": "前列スロット用の{C/Defender}オプション。",
         "kr": "전열 슬롯용 {C/Defender} 옵션.",
-        "zh": "前排位置的{C/Defender}选项。"
+        "zh": "前排位置的{C/Defender}选项。",
+        "fr": "Option {C/Defender} pour le slot de devant."
       }
     }
   ]
