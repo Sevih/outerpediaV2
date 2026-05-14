@@ -1,0 +1,163 @@
+{
+  "id": "60000003",
+  "Name": {
+    "en": "Blazing Knight Meteos",
+    "jp": "火炎の騎士メテウス",
+    "kr": "화염기사 메테우스",
+    "zh": "火焰骑士梅修斯"
+  },
+  "Surname": {
+    "en": "Protector of the Royal Family",
+    "jp": "王国の守護騎士",
+    "kr": "왕가의 수호자",
+    "zh": "皇家守护者"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Fire",
+  "level": 100,
+  "icons": "4076002",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "",
+  "location": {
+    "dungeon": {
+      "en": "[Singularity] - Blazing Knight Meteos",
+      "jp": "[特異点] - 火炎の騎士メテウス",
+      "kr": "[특이점] - 화염기사 메테우스",
+      "zh": "[奇点] - 火焰骑士梅修斯"
+    },
+    "mode": {
+      "en": "Dimensional Singularity",
+      "jp": "次元特異点",
+      "kr": "차원 특이점",
+      "zh": "次元奇点"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Lead Me to the Enemy...",
+        "jp": "敵はどこだ…",
+        "kr": "적은 어디냐…",
+        "zh": "敌人在哪里……"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Prioritizes attacking the leftmost enemy.\\nAfter attacking, increases own <color=#28d9ed>Speed</color> by <color=#28d9ed>10%</color>. (Max 5 stacks)",
+        "jp": "最も左側にいる敵を優先的に攻撃する。\\n攻撃後、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>10%</color>増加させる。（最大5回累積）",
+        "kr": "가장 좌측에 있는 적을 우선적으로 공격합니다. \\n공격 후 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>10%</color> 증가시킵니다. (최대 5회 누적)",
+        "zh": "优先攻击最左侧的敌人。\\n攻击后使自身<color=#28d9ed>速度</color>增加<color=#28d9ed>10%</color>。（最多叠加5次）"
+      },
+      "icon": "Skill_First_4076002"
+    },
+    {
+      "name": {
+        "en": "Protect the Royal Family...",
+        "jp": "王家を守る…",
+        "kr": "왕가를 지킨다…",
+        "zh": "必须守护王室……"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect) If Blazing Knight Meteos <color=#28d9ed>kills an enemy</color> (except by a Counterattack or an additional attack), he removes all <color=#28d9ed>buffs</color> from all enemies and deals lethal damage to all enemies. Targets killed by this attack cannot be Resurrected or Revived.",
+        "jp": "(発動効果)【火炎の騎士メテウス】が反撃、追加攻撃以外のスキルで<color=#28d9ed>敵を倒した時</color>、敵全体の<color=#28d9ed>強化効果</color>をすべて解除し、敵全体に致命的なダメージを与える。この攻撃で倒れた敵は復活と蘇生ができなくなる。",
+        "kr": "(발동 효과) 화염기사 메테우스가 반격, 추가타를 제외한 공격으로 <color=#28d9ed>적을 처치 시</color>, 적 전체의 <color=#28d9ed>강화 효과</color>를 모두 해제하고 적 전체에게 치명적인 피해를 입힙니다. 해당 공격에 피해를 받아 사망 시 부활 및 소생 효과가 발생하지 않습니다.",
+        "zh": "(触发效果)火焰骑士梅修斯使用除反击、额外攻击以外的攻击<color=#28d9ed>击杀敌人时</color>，解除全体敌人的所有<color=#28d9ed>强化效果</color>，并对全体敌人造成致命伤害。因该攻击死亡时，将无法触发复活与苏醒效果。"
+      },
+      "icon": "Skill_Ultimate_4076002",
+      "buff": [
+        "BT_ADDITIVE_ATTACK"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF",
+        "BT_SEALED_RESURRECTION"
+      ]
+    },
+    {
+      "name": {
+        "en": "Are You the Enemy?",
+        "jp": "お前が敵か？",
+        "kr": "네가 적인가?",
+        "zh": "你是敌人吗？"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "DMG taken from targets with <color=#28d9ed>Barrier</color> increases by <color=#28d9ed>100%</color>.\\nCurse and Fixed DMG taken by the boss cannot exceed <color=#28d9ed>50000</color>.",
+        "jp": "<color=#28d9ed>シールド</color>が付与された対象から受けるダメージが<color=#28d9ed>100%</color>増加する。\\nボスが受ける呪いおよび固定ダメージは<color=#28d9ed>50000</color>を超えない。",
+        "kr": "<color=#28d9ed>실드</color>가 부여된 대상에게 받는 피해가 <color=#28d9ed>100%</color> 증가합니다.\\n보스가 받는 저주 및 고정 피해의 피해는 <color=#28d9ed>50000</color>을 초과하지 않습니다.",
+        "zh": "受到持有<color=#28d9ed>护盾</color>目标的伤害增加<color=#28d9ed>100%</color>。\\n首领受到的诅咒及固定伤害不超过<color=#28d9ed>50000</color>。"
+      },
+      "icon": "MT_Passive_1_Fire"
+    },
+    {
+      "name": {
+        "en": "You Must be the Enemy...",
+        "jp": "オマエが敵か…",
+        "kr": "네가 적인가…",
+        "zh": "敌人就是你吗……"
+      },
+      "type": "SKT_MONSTER_2",
+      "description": {
+        "en": "(Triggered Effect) When Blazing Knight Meteos is hit, gains 1 <color=#28d9ed>Fierce Ember (Unique Resource)</color>.\\nAfter being hit, if <color=#28d9ed>Fierce Ember (Unique Resource)</color> owned is 5, <color=#28d9ed>counterattacks</color> all enemies. Damage dealt increases inversely proportional to the number of targets.",
+        "jp": "(発動効果)【火炎の騎士 メテウス】はダメージを受けた場合、<color=#28d9ed>【固有資源：猛烈な火種】</color>を1個獲得する。\\nダメージを受けた後、<color=#28d9ed>【固有資源：猛烈な火種】</color>が5個ある場合、敵全体に<color=#28d9ed>反撃</color>を使用する。対象が少ないほどダメージがUPする。",
+        "kr": "(발동 효과) 화염기사 메테우스는 피격 시 <color=#28d9ed>고유 자원 : 맹렬한 불씨</color>를 1개 획득합니다.\\n피격 후 <color=#28d9ed>고유 자원 : 맹렬한 불씨</color> 보유 수량이 5개라면, 적 전체에게 <color=#28d9ed>반격</color>을 사용합니다. 대상의 수가 적을수록 피해가 증가합니다.",
+        "zh": "(触发效果)火焰骑士梅修斯受到攻击时，获得1个<color=#28d9ed>固有资源：烈火</color>。\\n受到攻击后<color=#28d9ed>固有资源：烈火</color>持有数量如为5个，则对全体敌人使用<color=#28d9ed>反击</color>。目标数量越少，则该技能的伤害越高。"
+      },
+      "icon": "Skill_Second_4076002",
+      "buff": [
+        "BT_COUNTERATTACK"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dimensional Rift",
+        "jp": "次元の亀裂",
+        "kr": "차원의 균열",
+        "zh": "次元裂缝"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Boss monsters' Priority increases upon entering Berserk. Additional effects are added based on rank as follows.\\n\\n<color=#ffd732>Applied from RANK D:</color> DMG dealt increases and DMG taken decreases for all attacks. The values increase as rank rises, maxing out at SSS. (Max 300%/200% respectively)\\n\\n<color=#ffd732>Applied from RANK B:</color> Final DMG and WG DMG taken from targets without elemental advantage decrease by <color=#28d9ed>70%/50%</color> respectively.\\n\\n<color=#ffd732>Applied from RANK S:</color> Increases own <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color> and decreases all enemies' <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color>.",
+        "jp": "(パッシブ効果) ボスモンスターは狂暴化突入後、行動ゲージが増加する。またランクに応じて以下の効果が追加される。\\n\\n<color=#ffd732>RANK D から適用：</color>すべての攻撃に対して与ダメージが増加し、受けるダメージが減少する。ランクが上がるほど数値が増加し、SSSで最大となる。（各最大300%/200%）\\n\\n<color=#ffd732>RANK B から適用：</color>有利な相性でない対象から受ける最終ダメージとWGダメージがそれぞれ<color=#28d9ed>70%/50%</color>減少する。\\n\\n<color=#ffd732>RANK S から適用：</color>自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>増加させ、敵全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>減少させる。",
+        "kr": "(패시브 효과) 보스 몬스터는 광폭화 진입 후 행동게이지가 증가합니다. 또한 랭크에 따라 아래 효과가 추가합니다.\\n\\n<color=#ffd732>RANK D 부터 적용:</color> 모든 공격에 대해 주는 피해가 증가하고 받는 피해가 감소합니다. 랭크가 오를수록 수치가 증가하여 SSS에서 최대가 됩니다.(각각 최대 300%/200%)\\n\\n<color=#ffd732>RANK B 부터 적용:</color> 유리한 상성이 아닌 대상에게 받는 최종 피해와 WG피해가 각각 <color=#28d9ed>70%/50%</color> 감소합니다.\\n\\n<color=#ffd732>RANK S 부터 적용:</color> 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 증가시키고 적 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "(被动效果) 首领怪物进入狂暴化后行动值提升。同时根据等级追加以下效果。\\n\\n<color=#ffd732>从RANK D开始适用：</color>所有攻击的造成伤害提升，受到伤害减少。等级越高数值越大，在SSS达到最大。（各最大300%/200%）\\n\\n<color=#ffd732>从RANK B开始适用：</color>受到非克制属性目标的最终伤害和WG伤害分别减少<color=#28d9ed>70%/50%</color>。\\n\\n<color=#ffd732>从RANK S开始适用：</color>使自身<color=#28d9ed>穿透力</color>增加<color=#28d9ed>30%</color>，使全体敌人<color=#28d9ed>穿透力</color>减少<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Passive_1_Singularity",
+      "buff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ],
+      "debuff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "jp": "狂暴化",
+        "kr": "광폭화",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state every time enemies take 7 actions.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Deals DMG to all enemies, then grants self an undispellable Speed UP/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nInflicts Unbuffable on all enemies for 2 turns.",
+        "jp": "敵が7回行動するたびに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体にダメージを与えた後、自分に解除されないスピードUP/ダメージ減少効果を1ターンの間付与し、WGを10%回復する。\\n敵全体に強化不可を2ターン付与する。",
+        "kr": "적이 7회 행동할 때 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 피해를 입힌 후 자신에게 해제되지 않는 속도 증가/피해 감소 효과를 1턴 동안 부여하고 WG를 10% 회복합니다.\\n적 전체에게 강화 불가를 2턴 부여합니다.",
+        "zh": "敌人每行动7次进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化突入与必杀技</color>：对全体敌人造成伤害后，对自身附加无法解除的速度提升/伤害减少效果1回合，并恢复WG10%。\\n对全体敌人附加2回合的强化不可。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ],
+      "debuff": [
+        "BT_SEALED"
+      ]
+    }
+  ]
+}
