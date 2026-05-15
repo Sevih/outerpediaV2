@@ -18,26 +18,26 @@ import boss60000001 from "@data/boss/60000001.json";
 
 const STRINGS = strings as Record<string, LangMap>;
 const TIPS = tips as Record<string, LangMap[]>;
-const RECOMMENDED = recommended as CharacterRecommendation[];
+const RECOMMENDED = recommended as Record<string, CharacterRecommendation[]>;
 
 const preloadedBosses: Record<string, Boss> = {
   "60000001": boss60000001 as unknown as Boss,
 };
 
-const FREEZE_TITLE: LangMap = {
-  en: "Freeze strategy",
-  jp: "凍結戦略",
-  kr: "빙결 전략",
-  zh: "冰冻策略",
-  fr: "Strategie Freeze",
+const WATER_TITLE: LangMap = {
+  en: "Water team strategy",
+  jp: "水属性編成戦略",
+  kr: "물 속성 팀 전략",
+  zh: "水属性队伍策略",
+  fr: "Strategie equipe Water",
 };
 
-const DOT_TITLE: LangMap = {
-  en: "DoT strategy",
-  jp: "DoT戦略",
-  kr: "DoT 전략",
-  zh: "DoT策略",
-  fr: "Strategie DoT",
+const GBETH_TITLE: LangMap = {
+  en: "GBeth team strategy",
+  jp: "GBeth編成戦略",
+  kr: "GBeth 팀 전략",
+  zh: "GBeth队伍策略",
+  fr: "Strategie equipe GBeth",
 };
 
 export default function AbominationHunterBelialGuide() {
@@ -59,13 +59,16 @@ export default function AbominationHunterBelialGuide() {
       <TacticalTips
         sections={[
           { title: "general", tips: TIPS.general },
-          { title: FREEZE_TITLE, tips: TIPS.freeze },
-          { title: DOT_TITLE, tips: TIPS.dot },
+          { title: WATER_TITLE, tips: TIPS.freeze },
+          { title: GBETH_TITLE, tips: TIPS.dot },
         ]}
       />
 
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList entries={RECOMMENDED} />
+      <RecommendedCharacterList title={WATER_TITLE} entries={RECOMMENDED.water} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
 
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed

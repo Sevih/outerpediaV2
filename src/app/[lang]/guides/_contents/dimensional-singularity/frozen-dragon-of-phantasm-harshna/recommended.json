@@ -1,47 +1,49 @@
-[
-  {
-    "names": ["Kappa"],
-    "reason": {
-      "en": "{C/Defender} with teamwide {B/BT_BARRIER} and {D/BT_REMOVE_BUFF} in one slot.",
-      "jp": "{C/Defender}。全体{B/BT_BARRIER}と{D/BT_REMOVE_BUFF}を1枠で兼任。",
-      "kr": "{C/Defender}로 전체 {B/BT_BARRIER}와 {D/BT_REMOVE_BUFF}를 한 슬롯에서 담당.",
-      "zh": "{C/Defender}，一格兼具全队{B/BT_BARRIER}与{D/BT_REMOVE_BUFF}。"
+{
+  "strategy": [
+    {
+      "names": ["Kappa"],
+      "reason": {
+        "en": "{C/Defender} with teamwide {B/BT_BARRIER} and {D/BT_REMOVE_BUFF} in one slot.",
+        "jp": "{C/Defender}。全体{B/BT_BARRIER}と{D/BT_REMOVE_BUFF}を1枠で兼任。",
+        "kr": "{C/Defender}로 전체 {B/BT_BARRIER}와 {D/BT_REMOVE_BUFF}를 한 슬롯에서 담당.",
+        "zh": "{C/Defender}，一格兼具全队{B/BT_BARRIER}与{D/BT_REMOVE_BUFF}。"
+      }
+    },
+    {
+      "names": ["Summer Knight's Dream Ember", "Omega Nadja", "Luna", "Core Fusion Veronica"],
+      "reason": {
+        "en": "Other viable defender option.",
+        "jp": "他の{C/Defender}の選択肢。",
+        "kr": "다른 가능한 {C/Defender} 선택지.",
+        "zh": "其他可选的{C/Defender}。"
+      }
+    },
+    {
+      "names": ["Charlotte"],
+      "reason": {
+        "en": "{B/BT_STAT|ST_CRITICAL_DMG_RATE} buffer.",
+        "jp": "{B/BT_STAT|ST_CRITICAL_DMG_RATE}バッファー。",
+        "kr": "{B/BT_STAT|ST_CRITICAL_DMG_RATE} 버퍼.",
+        "zh": "{B/BT_STAT|ST_CRITICAL_DMG_RATE}增益型。"
+      }
+    },
+    {
+      "names": ["Monad Eva", "Viella"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} and AP battery. {P/Monad Eva} additionally provides {B/BT_REVIVAL}.",
+        "jp": "{B/BT_CALL_BACKUP}とAPバッテリー。{P/Monad Eva}は加えて{B/BT_REVIVAL}を提供する。",
+        "kr": "{B/BT_CALL_BACKUP} 및 AP 배터리. {P/Monad Eva}는 추가로 {B/BT_REVIVAL}를 제공합니다.",
+        "zh": "{B/BT_CALL_BACKUP}与AP电池。{P/Monad Eva}额外提供{B/BT_REVIVAL}。"
+      }
+    },
+    {
+      "names": ["Ryu Lion", "Ame", "Rey", "Mystic Sage Ame"],
+      "reason": {
+        "en": "Main DPS options.",
+        "jp": "メインDPSの候補。",
+        "kr": "메인 딜러 후보.",
+        "zh": "主C候选。"
+      }
     }
-  },
-  {
-    "names": ["Summer Knight's Dream Ember","Omega Nadja","Luna", "Core Fusion Veronica"],
-    "reason": {
-      "en": "Other viable defender option.",
-      "jp": "他の{C/Defender}の選択肢。",
-      "kr": "다른 가능한 {C/Defender} 선택지.",
-      "zh": "其他可选的{C/Defender}。"
-    }
-  },
-  {
-    "names": ["Charlotte"],
-    "reason": {
-      "en": "{B/BT_STAT|ST_CRITICAL_DMG_RATE} buffer.",
-      "jp": "{B/BT_STAT|ST_CRITICAL_DMG_RATE}バッファー。",
-      "kr": "{B/BT_STAT|ST_CRITICAL_DMG_RATE} 버퍼.",
-      "zh": "{B/BT_STAT|ST_CRITICAL_DMG_RATE}增益型。"
-    }
-  },
-  {
-    "names": ["Monad Eva", "Viella"],
-    "reason": {
-      "en": "{B/BT_CALL_BACKUP} and AP battery. {P/Monad Eva} additionally provides {B/BT_REVIVAL}.",
-      "jp": "{B/BT_CALL_BACKUP}とAPバッテリー。{P/Monad Eva}は加えて{B/BT_REVIVAL}を提供する。",
-      "kr": "{B/BT_CALL_BACKUP} 및 AP 배터리. {P/Monad Eva}는 추가로 {B/BT_REVIVAL}를 제공합니다.",
-      "zh": "{B/BT_CALL_BACKUP}与AP电池。{P/Monad Eva}额外提供{B/BT_REVIVAL}。"
-    }
-  },
-  {
-    "names": ["Ryu Lion", "Ame", "Rey", "Mystic Sage Ame"],
-    "reason": {
-      "en": "Main DPS options.",
-      "jp": "メインDPSの候補。",
-      "kr": "메인 딜러 후보.",
-      "zh": "主C候选。"
-    }
-  }
-]
+  ]
+}

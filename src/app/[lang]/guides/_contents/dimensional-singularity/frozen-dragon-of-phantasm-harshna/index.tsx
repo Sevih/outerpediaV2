@@ -18,7 +18,7 @@ import boss60000005 from '@data/boss/60000005.json';
 
 const STRINGS = strings as Record<string, LangMap>;
 const TIPS = tips as Record<string, LangMap[]>;
-const RECOMMENDED = recommended as CharacterRecommendation[];
+const RECOMMENDED = recommended as Record<string, CharacterRecommendation[]>;
 
 const preloadedBosses: Record<string, Boss> = {
   '60000005': boss60000005 as unknown as Boss,
@@ -43,7 +43,7 @@ export default function FrozenDragonPhantasmHarshnaGuide() {
         { title: 'strategy', tips: TIPS.strategy },
       ]} />
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList entries={RECOMMENDED} />
+      <RecommendedCharacterList entries={RECOMMENDED.strategy} />
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
               hashPrefix="frozen-dragon-of-phantasm-harshna-video"

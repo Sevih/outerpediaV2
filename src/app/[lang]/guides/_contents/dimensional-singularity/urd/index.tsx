@@ -18,18 +18,18 @@ import boss60000010 from "@data/boss/60000010.json";
 
 const STRINGS = strings as Record<string, LangMap>;
 const TIPS = tips as Record<string, LangMap[]>;
-const RECOMMENDED = recommended as CharacterRecommendation[];
+const RECOMMENDED = recommended as Record<string, CharacterRecommendation[]>;
 
 const preloadedBosses: Record<string, Boss> = {
   "60000010": boss60000010 as unknown as Boss,
 };
 
-const DOT_TITLE: LangMap = {
-  en: "DoT strategy",
-  jp: "DoT戦略",
-  kr: "DoT 전략",
-  zh: "DoT策略",
-  fr: "Strategie DoT",
+const GBETH_TITLE: LangMap = {
+  en: "GBeth team strategy",
+  jp: "GBeth編成戦略",
+  kr: "GBeth 팀 전략",
+  zh: "GBeth队伍策略",
+  fr: "Strategie equipe GBeth",
 };
 
 const GDAHLIA_TITLE: LangMap = {
@@ -77,12 +77,21 @@ export default function UrdGuide() {
           { title: "general", tips: TIPS.general },
           { title: GDAHLIA_TITLE, tips: TIPS.gdahlia },
           { title: DARK_TITLE, tips: TIPS.dark },
-          { title: DOT_TITLE, tips: TIPS.dot },
+          { title: GBETH_TITLE, tips: TIPS.gbeth },
           { title: MERO_TITLE, tips: TIPS.mero },
         ]}
       />
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList entries={RECOMMENDED} />
+      <RecommendedCharacterList title={GDAHLIA_TITLE} entries={RECOMMENDED.gdahlia} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={DARK_TITLE} entries={RECOMMENDED.dark} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={MERO_TITLE} entries={RECOMMENDED.mero} />
 
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed

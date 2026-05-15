@@ -18,7 +18,7 @@ import boss60000008 from "@data/boss/60000008.json";
 
 const STRINGS = strings as Record<string, LangMap>;
 const TIPS = tips as Record<string, LangMap[]>;
-const RECOMMENDED = recommended as CharacterRecommendation[];
+const RECOMMENDED = recommended as Record<string, CharacterRecommendation[]>;
 
 const preloadedBosses: Record<string, Boss> = {
   "60000008": boss60000008 as unknown as Boss,
@@ -45,7 +45,7 @@ export default function ShichifujaShadowGuide() {
         { title: "strategy", tips: TIPS.mero }
         ]} />
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList entries={RECOMMENDED} />
+      <RecommendedCharacterList entries={RECOMMENDED.mero} />
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
         hashPrefix="shichifuja-shadow-video"

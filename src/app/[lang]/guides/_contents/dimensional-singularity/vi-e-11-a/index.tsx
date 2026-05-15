@@ -18,7 +18,7 @@ import boss60000009 from '@data/boss/60000009.json';
 
 const STRINGS = strings as Record<string, LangMap>;
 const TIPS = tips as Record<string, LangMap[]>;
-const RECOMMENDED = recommended as CharacterRecommendation[];
+const RECOMMENDED = recommended as Record<string, CharacterRecommendation[]>;
 
 const preloadedBosses: Record<string, Boss> = {
   '60000009': boss60000009 as unknown as Boss,
@@ -74,7 +74,13 @@ export default function VIE11AGuide() {
       />
 
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList entries={RECOMMENDED} />
+      <RecommendedCharacterList title={BURN_TITLE} entries={RECOMMENDED.burn} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={MERO_TITLE} entries={RECOMMENDED.mero} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
 
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed

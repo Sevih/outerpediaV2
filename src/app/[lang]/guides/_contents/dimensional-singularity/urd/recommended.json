@@ -1,155 +1,208 @@
-[
-  {
-    "names": ["Mero"],
-    "reason": {
-      "en": "Main DPS — self-applies {B/BT_COUNTERATTACK} and {B/BT_UNDEAD}.",
-      "jp": "メインDPS — 自身に{B/BT_COUNTERATTACK}と{B/BT_UNDEAD}を付与する。",
-      "kr": "메인 딜러 — 자신에게 {B/BT_COUNTERATTACK}와 {B/BT_UNDEAD}를 부여합니다.",
-      "zh": "主C — 自身附加{B/BT_COUNTERATTACK}和{B/BT_UNDEAD}。"
+{
+  "gdahlia": [
+    {
+      "names": ["Gnosis Dahlia"],
+      "reason": {
+        "en": "Solo carry — the damage limit from Hubris's Dominion lets her survive Berserk burst phases. 6★ strongly recommended; 5★ works by resetting her S3 cooldown but costs many turns.",
+        "jp": "単騎キャリア — Hubrisのドミニオンによるダメージ制限で狂暴化バーストを耐える。6★を強く推奨。5★でもS3クールダウンをリセットすれば機能するが多くのターンを要する。",
+        "kr": "단독 메인 딜러 — Hubris's Dominion의 피해 제한으로 광폭화 폭딜 페이즈를 버팁니다. 6★를 강력히 권장하며, 5★도 S3 쿨다운 초기화로 가능하지만 많은 턴이 필요합니다.",
+        "zh": "单核主C — Hubris's Dominion提供的伤害上限可应对狂暴化爆发。强烈推荐6★，5★可通过重置S3冷却运作但需消耗大量回合。"
+      }
+    },
+    {
+      "names": ["Mystic Sage Ame"],
+      "reason": {
+        "en": "Sacrifice support (pick 3). EE boosts boss damage; she stacks buffs via Transcend (ATK at 5★, damage increase at 6★) and lowers boss {D/BT_STAT|ST_DEF} on S3. Let her die after reaching 4–5 stacks.",
+        "jp": "犠牲サポート（3体から選択）— EEでボスへのダメージが増加。超越でバフを蓄積（5★で攻撃力、6★でダメージ増加）し、S3でボスの{D/BT_STAT|ST_DEF}を減少させる。4〜5スタック貯めてから倒れさせる。",
+        "kr": "희생 서포터(3명 중 선택) — EE로 보스 피해 증가. 초월로 버프를 중첩(5★ 공격력, 6★ 피해 증가)하고 S3로 보스 {D/BT_STAT|ST_DEF}를 감소시킵니다. 4~5중첩에 도달한 뒤 사망시키세요.",
+        "zh": "牺牲型辅助（三选一）— EE提升对Boss伤害；通过超越叠加增益（5★攻击力，6★伤害提升），并以S3降低Boss{D/BT_STAT|ST_DEF}。叠满4~5层后让她阵亡。"
+      }
+    },
+    {
+      "names": ["Monad Iota"],
+      "reason": {
+        "en": "Sacrifice support (pick 3). EE grants {B/BT_STAT|ST_CRITICAL_DMG_RATE} to {E/Dark} allies. Let her die before her first turn.",
+        "jp": "犠牲サポート（3体から選択）— EEで{E/Dark}属性の味方に{B/BT_STAT|ST_CRITICAL_DMG_RATE}を付与。最初のターン前に犠牲にする。",
+        "kr": "희생 서포터(3명 중 선택) — EE로 {E/Dark} 속성 아군에게 {B/BT_STAT|ST_CRITICAL_DMG_RATE}을 부여. 첫 턴 전에 희생시키세요.",
+        "zh": "牺牲型辅助（三选一）— EE为{E/Dark}属性盟友提供{B/BT_STAT|ST_CRITICAL_DMG_RATE}。首回合前献祭。"
+      }
+    },
+    {
+      "names": ["Demiurge Vlada"],
+      "reason": {
+        "en": "Sacrifice support (pick 3). Transcend grants +20% ATK at 6★ (10% at 4★) — any 6★ Vanguard can substitute. Let her die before her first turn.",
+        "jp": "犠牲サポート（3体から選択）— 超越で6★時+20%攻撃力（4★で10%）。6★ヴァンガードで代替可能。最初のターン前に犠牲にする。",
+        "kr": "희생 서포터(3명 중 선택) — 초월로 6★ 시 +20% 공격력(4★에서 10%). 6★ 뱅가드로 대체 가능. 첫 턴 전에 희생시키세요.",
+        "zh": "牺牲型辅助（三选一）— 超越在6★时提供+20%攻击力（4★时10%），任意6★先锋可替代。首回合前献祭。"
+      }
+    },
+    {
+      "names": ["Eris"],
+      "reason": {
+        "en": "Sacrifice support (pick 3). EE grants {B/BT_STAT|ST_CRITICAL_DMG_RATE} to {C/Striker} allies. Let her die before her first turn.",
+        "jp": "犠牲サポート（3体から選択）— EEで{C/Striker}味方に{B/BT_STAT|ST_CRITICAL_DMG_RATE}を付与。最初のターン前に犠牲にする。",
+        "kr": "희생 서포터(3명 중 선택) — EE로 {C/Striker} 아군에게 {B/BT_STAT|ST_CRITICAL_DMG_RATE}을 부여. 첫 턴 전에 희생시키세요.",
+        "zh": "牺牲型辅助（三选一）— EE为{C/Striker}盟友提供{B/BT_STAT|ST_CRITICAL_DMG_RATE}。首回合前献祭。"
+      }
+    },
+    {
+      "names": ["Bryn"],
+      "reason": {
+        "en": "Sacrifice support (pick 3). EE grants +30% DMG while holding {B/BT_BARRIER} (60% at EE+10). Let her die before her first turn.",
+        "jp": "犠牲サポート（3体から選択）— EEで{B/BT_BARRIER}保有時+30%ダメージ（EE+10で60%）。最初のターン前に犠牲にする。",
+        "kr": "희생 서포터(3명 중 선택) — EE로 {B/BT_BARRIER} 보유 시 +30% 피해(EE+10에서 60%). 첫 턴 전에 희생시키세요.",
+        "zh": "牺牲型辅助（三选一）— EE在持有{B/BT_BARRIER}时提供+30%伤害（EE+10时60%）。首回合前献祭。"
+      }
     }
-  },
-  {
-    "names": ["Tamamo-no-Mae", "Dianne", "Lyla"],
-    "reason": {
-      "en": "Sustained {B/BT_CONTINU_HEAL} to ensure {P/Mero} will always have her S2 ready.",
-      "jp": "持続的な{B/BT_CONTINU_HEAL}で{P/Mero}のS2が常に発動可能な状態を維持する。",
-      "kr": "지속적인 {B/BT_CONTINU_HEAL}로 {P/Mero}의 S2가 항상 사용 가능한 상태를 유지합니다.",
-      "zh": "持续的{B/BT_CONTINU_HEAL}以确保{P/Mero}的S2始终就绪。"
+  ],
+  "dark": [
+    {
+      "names": ["Omega Nadja"],
+      "reason": {
+        "en": "{C/Defender} providing strong teamwide damage mitigation; {D/IRREGULAR_INFECTION} also shortens the boss's buff durations.",
+        "jp": "{C/Defender}。チーム全体に高いダメージ軽減を提供し、{D/IRREGULAR_INFECTION}でボスの強化効果の持続も短縮する。",
+        "kr": "{C/Defender}로 팀 전체에 강력한 피해 감소를 제공하며, {D/IRREGULAR_INFECTION}으로 보스의 강화 효과 지속시간도 단축합니다.",
+        "zh": "{C/Defender}，为全队提供高额伤害减免；{D/IRREGULAR_INFECTION}还能缩短Boss强化效果的持续时间。"
+      }
+    },
+    {
+      "names": ["Gnosis Domine"],
+      "reason": {
+        "en": "{D/BT_REDISTRIBUTE_BUFF}, {B/SPATIAL_DISTORTION_SELF} and {D/SPATIAL_DISTORTION_ENEMY}.",
+        "jp": "{D/BT_REDISTRIBUTE_BUFF}、{B/SPATIAL_DISTORTION_SELF}、{D/SPATIAL_DISTORTION_ENEMY}を提供する。",
+        "kr": "{D/BT_REDISTRIBUTE_BUFF}, {B/SPATIAL_DISTORTION_SELF}, {D/SPATIAL_DISTORTION_ENEMY}을 제공합니다.",
+        "zh": "提供{D/BT_REDISTRIBUTE_BUFF}、{B/SPATIAL_DISTORTION_SELF}与{D/SPATIAL_DISTORTION_ENEMY}。"
+      }
+    },
+    {
+      "names": ["Gnosis Viella"],
+      "reason": {
+        "en": "Damage option that also brings {B/BANES_DOMAIN} and {D/BANES_DOMAIN}.",
+        "jp": "{B/BANES_DOMAIN}と{D/BANES_DOMAIN}も持つダメージ選択肢。",
+        "kr": "{B/BANES_DOMAIN}과 {D/BANES_DOMAIN}도 보유한 딜링 선택지.",
+        "zh": "兼具{B/BANES_DOMAIN}与{D/BANES_DOMAIN}的输出选项。"
+      }
+    },
+    {
+      "names": ["Gnosis Dahlia", "Demiurge Astei", "Maxwell"],
+      "reason": {
+        "en": "DPS options that deal damage without applying debuffs.",
+        "jp": "弱体効果を付与せずにダメージを与えるDPS選択肢。",
+        "kr": "약화 효과 없이 피해를 입히는 딜러 선택지.",
+        "zh": "不附加弱化效果即可造成伤害的DPS选项。"
+      }
+    },
+    {
+      "names": ["Monad Iota"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} dual attacks and buff support.",
+        "jp": "{B/BT_CALL_BACKUP}による連携攻撃とバフサポート。",
+        "kr": "{B/BT_CALL_BACKUP} 연계 공격과 버프 지원.",
+        "zh": "{B/BT_CALL_BACKUP}连携攻击与增益支援。"
+      }
+    },
+    {
+      "names": ["Monad Eva"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} dual attacks, AP battery and {B/BT_REVIVAL} once damage ramps up.",
+        "jp": "{B/BT_CALL_BACKUP}による連携攻撃、APバッテリー、ダメージが上昇してからの{B/BT_REVIVAL}。",
+        "kr": "{B/BT_CALL_BACKUP} 연계 공격, AP 배터리, 피해가 증가할 때의 {B/BT_REVIVAL}.",
+        "zh": "{B/BT_CALL_BACKUP}连携攻击、AP电池，以及伤害递增后的{B/BT_REVIVAL}。"
+      }
+    },
+    {
+      "names": ["Nella"],
+      "reason": {
+        "en": "AP battery and {B/BT_RESURRECTION}.",
+        "jp": "APバッテリーと{B/BT_RESURRECTION}。",
+        "kr": "AP 배터리와 {B/BT_RESURRECTION}.",
+        "zh": "AP电池与{B/BT_RESURRECTION}。"
+      }
     }
-  },
-  {
-    "names": ["Mystic Sage Ame"],
-    "reason": {
-      "en": "Reduce the boss defense and boost ally damage.",
-      "jp": "ボスの防御力を減少させ、味方のダメージを増加させる。",
-      "kr": "보스의 방어력을 감소시키고 아군의 피해를 증가시킵니다.",
-      "zh": "降低Boss防御力并提升我方伤害。"
+  ],
+  "gbeth": [
+    {
+      "names": ["Gnosis Beth"],
+      "reason": {
+        "en": "Main DPS — carries with {D/ETERNAL_BLEEDING}.",
+        "jp": "メインDPS — {D/ETERNAL_BLEEDING}でキャリーする。",
+        "kr": "메인 딜러 — {D/ETERNAL_BLEEDING}로 운영합니다.",
+        "zh": "主C — 以{D/ETERNAL_BLEEDING}进行输出。"
+      }
+    },
+    {
+      "names": ["Roxie", "Maxie"],
+      "reason": {
+        "en": "{D/BT_EXTEND_DEBUFF} to keep {D/ETERNAL_BLEEDING} stacks alive.",
+        "jp": "{D/BT_EXTEND_DEBUFF}で{D/ETERNAL_BLEEDING}スタックを維持する。",
+        "kr": "{D/BT_EXTEND_DEBUFF}으로 {D/ETERNAL_BLEEDING} 스택을 유지합니다.",
+        "zh": "以{D/BT_EXTEND_DEBUFF}维持{D/ETERNAL_BLEEDING}层数。"
+      }
+    },
+    {
+      "names": ["Akari"],
+      "reason": {
+        "en": "{D/BT_SEALED} and {D/BT_EXTEND_DEBUFF}.",
+        "jp": "{D/BT_SEALED}と{D/BT_EXTEND_DEBUFF}を提供する。",
+        "kr": "{D/BT_SEALED}과 {D/BT_EXTEND_DEBUFF}을 제공합니다.",
+        "zh": "提供{D/BT_SEALED}与{D/BT_EXTEND_DEBUFF}。"
+      }
+    },
+    {
+      "names": ["Monad Eva"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} dual attacks.",
+        "jp": "{B/BT_CALL_BACKUP}による連携攻撃。",
+        "kr": "{B/BT_CALL_BACKUP} 연계 공격.",
+        "zh": "{B/BT_CALL_BACKUP}连携攻击。"
+      }
     }
-  },
-  {
-    "names": ["Tamara", "Skadi", "Valentine", "Holy Night's Blessing Dianne"],
-    "reason": {
-      "en": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} buffers.",
-      "jp": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}バッファー。",
-      "kr": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} 버퍼.",
-      "zh": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}增益型。"
+  ],
+  "mero": [
+    {
+      "names": ["Mero"],
+      "reason": {
+        "en": "Main DPS — self-applies {B/BT_COUNTERATTACK} and {B/BT_UNDEAD}.",
+        "jp": "メインDPS — 自身に{B/BT_COUNTERATTACK}と{B/BT_UNDEAD}を付与する。",
+        "kr": "메인 딜러 — 자신에게 {B/BT_COUNTERATTACK}와 {B/BT_UNDEAD}를 부여합니다.",
+        "zh": "主C — 自身附加{B/BT_COUNTERATTACK}和{B/BT_UNDEAD}。"
+      }
+    },
+    {
+      "names": ["Tamamo-no-Mae", "Dianne", "Lyla"],
+      "reason": {
+        "en": "Sustained {B/BT_CONTINU_HEAL} to ensure {P/Mero} will always have her S2 ready.",
+        "jp": "持続的な{B/BT_CONTINU_HEAL}で{P/Mero}のS2が常に発動可能な状態を維持する。",
+        "kr": "지속적인 {B/BT_CONTINU_HEAL}로 {P/Mero}의 S2가 항상 사용 가능한 상태를 유지합니다.",
+        "zh": "持续的{B/BT_CONTINU_HEAL}以确保{P/Mero}的S2始终就绪。"
+      }
+    },
+    {
+      "names": ["Mystic Sage Ame"],
+      "reason": {
+        "en": "Reduce the boss defense and boost ally damage.",
+        "jp": "ボスの防御力を減少させ、味方のダメージを増加させる。",
+        "kr": "보스의 방어력을 감소시키고 아군의 피해를 증가시킵니다.",
+        "zh": "降低Boss防御力并提升我方伤害。"
+      }
+    },
+    {
+      "names": ["Tamara", "Skadi", "Valentine", "Holy Night's Blessing Dianne"],
+      "reason": {
+        "en": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} buffers.",
+        "jp": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}バッファー。",
+        "kr": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} 버퍼.",
+        "zh": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}增益型。"
+      }
+    },
+    {
+      "names": ["Summer Knight's Dream Ember", "Demiurge Drakhan"],
+      "reason": {
+        "en": "{S/PEN%} buffers.",
+        "jp": "{S/PEN%}バッファー。",
+        "kr": "{S/PEN%} 버퍼.",
+        "zh": "{S/PEN%}增益型。"
+      }
     }
-  },
-  {
-    "names": ["Summer Knight's Dream Ember", "Demiurge Drakhan"],
-    "reason": {
-      "en": "{S/PEN%} buffers.",
-      "jp": "{S/PEN%}バッファー。",
-      "kr": "{S/PEN%} 버퍼.",
-      "zh": "{S/PEN%}增益型。"
-    }
-  },
-  {
-    "names": ["Gnosis Beth"],
-    "reason": {
-      "en": "Main DPS for the DoT strategy.",
-      "jp": "DoT戦略のメインDPS。",
-      "kr": "DoT 전략의 메인 딜러.",
-      "zh": "DoT策略的主C。"
-    }
-  },
-  {
-    "names": ["Gnosis Dahlia"],
-    "reason": {
-      "en": "Solo carry for the GDahlia team. Hubris's Dominion provides the damage limit needed to survive Berserk burst phases.",
-      "jp": "GDahliaチームの単騎キャリア。Hubrisのドミニオンによるダメージ制限で狂暴化バーストを耐える。",
-      "kr": "GDahlia 팀의 단독 메인 딜러. Hubris's Dominion의 피해 제한으로 광폭화 폭딜 페이즈를 버팁니다.",
-      "zh": "GDahlia队伍的单核主C。Hubris's Dominion提供的伤害上限可应对狂暴化爆发。"
-    }
-  },
-  {
-    "names": ["Bryn"],
-    "reason": {
-      "en": "Sacrifice support — EE grants +30% DMG with {B/BT_BARRIER} (60% at EE+10). Let her die before her first turn.",
-      "jp": "犠牲サポート — EEで{B/BT_BARRIER}保有時+30%ダメージ（EE+10で60%）。最初のターン前に犠牲にする。",
-      "kr": "희생 서포터 — EE로 {B/BT_BARRIER} 보유 시 +30% 피해(EE+10에서 60%). 첫 턴 전에 희생시키세요.",
-      "zh": "牺牲型辅助 — EE在持有{B/BT_BARRIER}时提供+30%伤害（EE+10时60%）。首回合前献祭。"
-    }
-  },
-  {
-    "names": ["Demiurge Vlada"],
-    "reason": {
-      "en": "Sacrifice support — Transcend gives +20% ATK at 6★ (10% at 4★). Any 6★ Vanguard can substitute. Let her die before her first turn.",
-      "jp": "犠牲サポート — 超越で6★時+20%攻撃力（4★で10%）。6★ヴァンガードで代替可能。最初のターン前に犠牲にする。",
-      "kr": "희생 서포터 — 초월로 6★ 시 +20% 공격력(4★에서 10%). 6★ 뱅가드로 대체 가능. 첫 턴 전에 희생시키세요.",
-      "zh": "牺牲型辅助 — 超越在6★时提供+20%攻击力（4★时10%）。任意6★先锋可替代。首回合前献祭。"
-    }
-  },
-  {
-    "names": ["Eris"],
-    "reason": {
-      "en": "Sacrifice support — EE grants +50% {B/BT_STAT|ST_CRITICAL_DMG_RATE} to {C/Striker} allies. Let her die before her first turn.",
-      "jp": "犠牲サポート — EEで{C/Striker}味方に+50%{B/BT_STAT|ST_CRITICAL_DMG_RATE}。最初のターン前に犠牲にする。",
-      "kr": "희생 서포터 — EE로 {C/Striker} 아군에게 +50% {B/BT_STAT|ST_CRITICAL_DMG_RATE}. 첫 턴 전에 희생시키세요.",
-      "zh": "牺牲型辅助 — EE为{C/Striker}盟友提供+50%{B/BT_STAT|ST_CRITICAL_DMG_RATE}。首回合前献祭。"
-    }
-  },
-  {
-    "names": ["Demiurge Astei"],
-    "reason": {
-      "en": "{E/Dark} DPS option for the Dark team — deals damage without applying debuffs.",
-      "jp": "{E/Dark}チーム向けDPS選択肢 — 弱体効果を付与せずにダメージを与える。",
-      "kr": "{E/Dark} 팀의 DPS 선택지 — 약화 효과 없이 피해를 입힙니다.",
-      "zh": "{E/Dark}队伍的DPS选项 — 不附加弱化效果即可造成伤害。"
-    }
-  },
-  {
-    "names": ["Maxie", "Akari", "Kuro"],
-    "reason": {
-      "en": "{D/BT_EXTEND_DEBUFF} options.",
-      "jp": "{D/BT_EXTEND_DEBUFF}の選択肢。",
-      "kr": "{D/BT_EXTEND_DEBUFF} 선택지.",
-      "zh": "{D/BT_EXTEND_DEBUFF}选项。"
-    }
-  },
-  {
-    "names": ["Monad Eva"],
-    "reason": {
-      "en": "{C/Healer} with {B/BT_CALL_BACKUP}, {B/BT_AP_CHARGE}, {B/BT_REVIVAL} and {B/BT_INVINCIBLE}.",
-      "jp": "{B/BT_CALL_BACKUP}、{B/BT_AP_CHARGE}、{B/BT_REVIVAL}、{B/BT_INVINCIBLE}を持つ{C/Healer}。",
-      "kr": "{B/BT_CALL_BACKUP}, {B/BT_AP_CHARGE}, {B/BT_REVIVAL}, {B/BT_INVINCIBLE}을 보유한 {C/Healer}.",
-      "zh": "拥有{B/BT_CALL_BACKUP}、{B/BT_AP_CHARGE}、{B/BT_REVIVAL}和{B/BT_INVINCIBLE}的{C/Healer}。"
-    }
-  },
-  {
-    "names": ["Nella", "Demiurge Delta"],
-    "reason": {
-      "en": "{E/Dark} {C/Healer} with {B/BT_REVIVAL} or {B/BT_RESURRECTION}.",
-      "jp": "{B/BT_REVIVAL}または{B/BT_RESURRECTION}を持つ{E/Dark}属性{C/Healer}。",
-      "kr": "{B/BT_REVIVAL} 또는 {B/BT_RESURRECTION}을 보유한 {E/Dark} {C/Healer}.",
-      "zh": "拥有{B/BT_REVIVAL}或{B/BT_RESURRECTION}的{E/Dark}{C/Healer}。"
-    }
-  },
-  {
-    "names": ["Omega Nadja", "Maxwell", "Gnosis Domine", "Sterope", "Hilde"],
-    "reason": {
-      "en": "{E/Dark} options with either {D/BT_REDISTRIBUTE_BUFF}, {D/IRREGULAR_INFECTION} or {D/BT_EXTEND_BUFF}.",
-      "jp": "{D/BT_REDISTRIBUTE_BUFF}、{D/IRREGULAR_INFECTION}、{D/BT_EXTEND_BUFF}のいずれかを持つ{E/Dark}属性の選択肢。",
-      "kr": "{D/BT_REDISTRIBUTE_BUFF}, {D/IRREGULAR_INFECTION}, {D/BT_EXTEND_BUFF} 중 하나를 보유한 {E/Dark} 선택지.",
-      "zh": "拥有{D/BT_REDISTRIBUTE_BUFF}、{D/IRREGULAR_INFECTION}或{D/BT_EXTEND_BUFF}之一的{E/Dark}选项。"
-    }
-  },
-  {
-    "names": ["Monad Iota"],
-    "reason": {
-      "en": "{E/Dark} {C/Ranger} that can wield {I-W/Sacreed Edge} and excels in mono-Dark comps.",
-      "jp": "{I-W/Sacreed Edge}を装備でき、{E/Dark}単一編成で活躍する{E/Dark}属性{C/Ranger}。",
-      "kr": "{I-W/Sacreed Edge}를 장착할 수 있고 {E/Dark} 단일 구성에서 활약하는 {E/Dark} {C/Ranger}.",
-      "zh": "可装备{I-W/Sacreed Edge}且在纯{E/Dark}队伍中表现出色的{E/Dark}{C/Ranger}。"
-    }
-  },
-  {
-    "names": ["Gnosis Viella"],
-    "reason": {
-      "en": "{D/CORROSIVE_POISON} source.",
-      "jp": "{D/CORROSIVE_POISON}の供給源。",
-      "kr": "{D/CORROSIVE_POISON} 공급원.",
-      "zh": "{D/CORROSIVE_POISON}来源。"
-    }
-  }
-]
+  ]
+}
