@@ -23,6 +23,7 @@ const GUIDE_CATEGORIES = [
   'adventure-license',
   'special-request',
   'irregular-extermination',
+  'dimensional-singularity',
   'skyward-tower',
 ] as const;
 

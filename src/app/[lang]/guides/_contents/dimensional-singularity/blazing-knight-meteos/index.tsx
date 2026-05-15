@@ -32,6 +32,30 @@ const GBETH_TITLE: LangMap = {
   fr: 'Strategie equipe GBeth',
 };
 
+const WATER_TITLE: LangMap = {
+  en: 'Water team strategy',
+  jp: '水属性編成戦略',
+  kr: '물 속성 팀 전략',
+  zh: '水属性队伍策略',
+  fr: 'Strategie equipe Water',
+};
+
+const MERO_TITLE: LangMap = {
+  en: 'Mero team strategy',
+  jp: 'メロ編成戦略',
+  kr: '메로 팀 전략',
+  zh: '梅萝队伍策略',
+  fr: 'Strategie equipe Mero',
+};
+
+const GDAHLIA_TITLE: LangMap = {
+  en: 'GDahlia team strategy',
+  jp: 'GDahlia編成戦略',
+  kr: 'GDahlia 팀 전략',
+  zh: 'GDahlia队伍策略',
+  fr: 'Strategie equipe GDahlia',
+};
+
 export default function BlazingKnightMeteosGuide() {
   const { lang } = useI18n();
 
@@ -52,11 +76,23 @@ export default function BlazingKnightMeteosGuide() {
         sections={[
           { title: 'general', tips: TIPS.general },
           { title: GBETH_TITLE, tips: TIPS.gbeth },
+          { title: WATER_TITLE, tips: TIPS.water },
+          { title: MERO_TITLE, tips: TIPS.mero },
+          { title: GDAHLIA_TITLE, tips: TIPS.gdahlia },
         ]}
       />
 
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={WATER_TITLE} entries={RECOMMENDED.water} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={MERO_TITLE} entries={RECOMMENDED.mero} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={GDAHLIA_TITLE} entries={RECOMMENDED.gdahlia} />
 
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed

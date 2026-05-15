@@ -23,6 +23,7 @@ const DIRECT_CATEGORIES = [
   'adventure-license',
   'special-request',
   'irregular-extermination',
+  'dimensional-singularity',
 ];
 
 // Categories to skip entirely (skyward-tower handled separately via data/tower/)

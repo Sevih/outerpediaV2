@@ -40,5 +40,181 @@
         "fr": "{B/BT_CALL_BACKUP} et batterie d'AP. {P/Monad Eva} apporte en plus {B/BT_REVIVAL} ; {P/Primine} octroie {B/BT_BARRIER} à toute l'équipe (activant les +100% de dégâts) et renforce les dégâts des alliés sous barrière."
       }
     }
+  ],
+  "water": [
+    {
+      "names": ["Luna", "Veronica", "Summer Knight's Dream Ember"],
+      "reason": {
+        "en": "Main tank and teamwide {B/BT_BARRIER} — keeps the +100% damage taken active.",
+        "jp": "メインタンク兼全体{B/BT_BARRIER} — 被ダメ+100%を維持する。",
+        "kr": "메인 탱커이자 전체 {B/BT_BARRIER} — +100% 피해를 유지합니다.",
+        "zh": "主坦克与全队{B/BT_BARRIER} — 维持+100%受伤。",
+        "fr": "Tank principal et {B/BT_BARRIER} pour toute l'équipe — maintient les +100% de dégâts subis."
+      }
+    },
+    {
+      "names": ["Poolside Trickster Regina"],
+      "reason": {
+        "en": "Resource Reduction to stall the boss's counterattacks.",
+        "jp": "ボスの固有資源を減らして反撃を遅らせる。",
+        "kr": "보스의 고유 자원을 줄여 반격을 지연시킵니다.",
+        "zh": "削减Boss的固有资源以拖延其反击。",
+        "fr": "Réduction de ressource pour retarder les contre-attaques du Boss."
+      }
+    },
+    {
+      "names": ["Monad Eva", "Primine"],
+      "reason": {
+        "en": "Dual attacks and healing. {P/Monad Eva} provides {B/BT_REVIVAL}; {P/Primine} grants {B/BT_BARRIER} + {B/BT_IMMUNE}.",
+        "jp": "連携攻撃と回復。{P/Monad Eva}は{B/BT_REVIVAL}を、{P/Primine}は{B/BT_BARRIER}+{B/BT_IMMUNE}を提供する。",
+        "kr": "협공과 회복. {P/Monad Eva}는 {B/BT_REVIVAL}을, {P/Primine}은 {B/BT_BARRIER}+{B/BT_IMMUNE}을 제공합니다.",
+        "zh": "夹攻与治疗。{P/Monad Eva}提供{B/BT_REVIVAL}；{P/Primine}提供{B/BT_BARRIER}+{B/BT_IMMUNE}。",
+        "fr": "Attaques doubles et soins. {P/Monad Eva} apporte {B/BT_REVIVAL} ; {P/Primine} octroie {B/BT_BARRIER} + {B/BT_IMMUNE}."
+      }
+    },
+    {
+      "names": ["Laplace"],
+      "reason": {
+        "en": "Pick one — {E/Water} damage dealer with self {B/BT_BARRIER}.",
+        "jp": "1枠選択 — 自身に{B/BT_BARRIER}を持つ{E/Water}アタッカー。",
+        "kr": "1자리 선택 — 자신에게 {B/BT_BARRIER}을 보유한 {E/Water} 딜러.",
+        "zh": "三选一 — 自带{B/BT_BARRIER}的{E/Water}输出。",
+        "fr": "Au choix — DPS {E/Water} avec {B/BT_BARRIER} sur lui-même."
+      }
+    },
+    {
+      "names": ["Mystic Sage Ame"],
+      "reason": {
+        "en": "Pick one — reduces {P/Poolside Trickster Regina}'s cooldown.",
+        "jp": "1枠選択 — {P/Poolside Trickster Regina}のクールダウンを短縮する。",
+        "kr": "1자리 선택 — {P/Poolside Trickster Regina}의 쿨다운을 단축합니다.",
+        "zh": "三选一 — 缩短{P/Poolside Trickster Regina}的冷却时间。",
+        "fr": "Au choix — réduit le cooldown de {P/Poolside Trickster Regina}."
+      }
+    },
+    {
+      "names": ["Beth", "Roxie", "Fatal", "Tamara", "Core Fusion Snow"],
+      "reason": {
+        "en": "Pick one — {E/Water} DPS options.",
+        "jp": "1枠選択 — {E/Water}DPSの選択肢。",
+        "kr": "1자리 선택 — {E/Water} 딜러 선택지.",
+        "zh": "三选一 — {E/Water}输出选项。",
+        "fr": "Au choix — options de DPS {E/Water}."
+      }
+    }
+  ],
+  "mero": [
+    {
+      "names": ["Mero"],
+      "reason": {
+        "en": "Main DPS — equips {I-W/Heartunder's Blade} for {D/BT_DOT_BURN}.",
+        "jp": "メインDPS — {I-W/Heartunder's Blade}で{D/BT_DOT_BURN}を付与する。",
+        "kr": "메인 딜러 — {I-W/Heartunder's Blade}로 {D/BT_DOT_BURN}을 부여합니다.",
+        "zh": "主C — 装备{I-W/Heartunder's Blade}附加{D/BT_DOT_BURN}。",
+        "fr": "DPS principal — équipe {I-W/Heartunder's Blade} pour {D/BT_DOT_BURN}."
+      }
+    },
+    {
+      "names": ["Mystic Sage Ame"],
+      "reason": {
+        "en": "EE increases damage to bosses. Stacks DEF down, ATK up and damage bonus — do not give her an immortality buff.",
+        "jp": "EEでボスへのダメージが増加。防御力減少・攻撃力増加・ダメージボーナスを積み上げる — 不死/無敵バフは付与しない。",
+        "kr": "EE로 보스에게 주는 피해 증가. 방어력 감소·공격력 증가·피해 보너스를 누적 — 불사/무적 버프를 부여하지 마세요.",
+        "zh": "EE提升对Boss的伤害。叠加防御降低、攻击提升与伤害加成 — 不要给她附加不死/无敌效果。",
+        "fr": "L'EE augmente les dégâts aux Boss. Empile réduction de DEF, gain d'ATK et bonus de dégâts — ne lui donnez pas de buff d'immortalité."
+      }
+    },
+    {
+      "names": ["Demiurge Vlada"],
+      "reason": {
+        "en": "ATK bonus — any 6★ Vanguard can substitute.",
+        "jp": "攻撃力ボーナス — 6★ヴァンガードで代替可能。",
+        "kr": "공격력 보너스 — 6★ 뱅가드로 대체 가능.",
+        "zh": "攻击力加成 — 任意6★先锋可替代。",
+        "fr": "Bonus d'ATK — remplaçable par n'importe quel Vanguard 6★."
+      }
+    },
+    {
+      "names": ["Tamamo-no-Mae"],
+      "reason": {
+        "en": "Boss damage bonus for {E/Fire}-element allies.",
+        "jp": "{E/Fire}属性味方のボスダメージボーナス。",
+        "kr": "{E/Fire} 속성 아군의 보스 피해 보너스.",
+        "zh": "为{E/Fire}属性盟友提供Boss伤害加成。",
+        "fr": "Bonus de dégâts au Boss pour les alliés {E/Fire}."
+      }
+    },
+    {
+      "names": ["Tamara", "Skadi", "Valentine", "Holy Night's Blessing Dianne"],
+      "reason": {
+        "en": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} buffers.",
+        "jp": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}バッファー。",
+        "kr": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} 버퍼.",
+        "zh": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}增益型。",
+        "fr": "Buffeurs de {B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}."
+      }
+    }
+  ],
+  "gdahlia": [
+    {
+      "names": ["Gnosis Dahlia"],
+      "reason": {
+        "en": "Solo carry — Hubris's Dominion provides the damage limit. 6★ highly recommended; 5★ can work by resetting her S3 cooldown.",
+        "jp": "単騎キャリー — Hubrisのドミニオンによるダメージ制限。6★を強く推奨。5★でもS3クールダウンをリセットすれば機能する。",
+        "kr": "단독 캐리 — Hubris's Dominion의 피해 제한. 6★를 강력히 권장하며, 5★도 S3 쿨다운 초기화로 가능합니다.",
+        "zh": "单核主C — Hubris's Dominion提供伤害上限。强烈推荐6★；5★可通过重置S3冷却运作。",
+        "fr": "Carry solo — Hubris's Dominion fournit le plafond de dégâts. 6★ fortement recommandé ; 5★ possible en réinitialisant le cooldown du S3."
+      }
+    },
+    {
+      "names": ["Mystic Sage Ame"],
+      "reason": {
+        "en": "EE increases damage to bosses. Stacks DEF down and transcend buffs (5★ ATK, 6★ damage increase).",
+        "jp": "EEでボスへのダメージが増加。防御力減少と超越バフ（5★で攻撃力、6★でダメージ増加）を積み上げる。",
+        "kr": "EE로 보스에게 주는 피해 증가. 방어력 감소와 초월 버프(5★ 공격력, 6★ 피해 증가)를 누적합니다.",
+        "zh": "EE提升对Boss的伤害。叠加防御降低与超越增益（5★攻击力，6★伤害提升）。",
+        "fr": "L'EE augmente les dégâts aux Boss. Empile réduction de DEF et buffs de transcendance (5★ ATK, 6★ hausse de dégâts)."
+      }
+    },
+    {
+      "names": ["Monad Iota"],
+      "reason": {
+        "en": "EE grants Increased Crit Damage to {E/Dark}-element heroes.",
+        "jp": "EEで{E/Dark}属性ヒーローに会心ダメージ増加を付与する。",
+        "kr": "EE로 {E/Dark} 속성 영웅에게 치명 피해 증가를 부여합니다.",
+        "zh": "EE为{E/Dark}属性英雄提供暴击伤害提升。",
+        "fr": "L'EE octroie une hausse de dégâts critiques aux héros {E/Dark}."
+      }
+    },
+    {
+      "names": ["Demiurge Vlada"],
+      "reason": {
+        "en": "Transcend grants +20% ATK at 6★ (10% at 4★). Any 6★ Vanguard can substitute.",
+        "jp": "超越で6★時+20%攻撃力（4★で10%）。6★ヴァンガードで代替可能。",
+        "kr": "초월로 6★ 시 +20% 공격력(4★에서 10%). 6★ 뱅가드로 대체 가능.",
+        "zh": "超越在6★时提供+20%攻击力（4★时10%）。任意6★先锋可替代。",
+        "fr": "La transcendance octroie +20% d'ATK à 6★ (10% à 4★). Remplaçable par n'importe quel Vanguard 6★."
+      }
+    },
+    {
+      "names": ["Eris"],
+      "reason": {
+        "en": "EE grants Increased Crit Damage to {C/Striker} heroes.",
+        "jp": "EEで{C/Striker}ヒーローに会心ダメージ増加を付与する。",
+        "kr": "EE로 {C/Striker} 영웅에게 치명 피해 증가를 부여합니다.",
+        "zh": "EE为{C/Striker}英雄提供暴击伤害提升。",
+        "fr": "L'EE octroie une hausse de dégâts critiques aux héros {C/Striker}."
+      }
+    },
+    {
+      "names": ["Bryn"],
+      "reason": {
+        "en": "EE grants +30% damage with {B/BT_BARRIER} (60% at EE+10).",
+        "jp": "EEで{B/BT_BARRIER}保有時+30%ダメージ（EE+10で60%）。",
+        "kr": "EE로 {B/BT_BARRIER} 보유 시 +30% 피해(EE+10에서 60%).",
+        "zh": "EE在持有{B/BT_BARRIER}时提供+30%伤害（EE+10时60%）。",
+        "fr": "L'EE octroie +30% de dégâts avec {B/BT_BARRIER} (60% à EE+10)."
+      }
+    }
   ]
 }
