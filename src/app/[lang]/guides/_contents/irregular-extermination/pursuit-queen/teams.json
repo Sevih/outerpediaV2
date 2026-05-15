@@ -127,6 +127,33 @@
           "剩余战斗很简单 — 如果Boss没有破防或S2可用，就用{P/Drakhan}进行连锁攻击。"
         ]
       }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Cette équipe demande un setup précis, mais l'avantage est qu'elle ne dépend pas du RNG."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Drakhan doit être plus rapide que le boss, et {P/Monad Eva} / {P/Regina} plus lentes.",
+          "Vous ne voulez pas que le S3 de Drakhan inflige plus de 40 000 dégâts au tour 1 — vous voulez que le boss prenne un tour avant l'enrage.",
+          "{P/Monad Eva} doit être 5 étoiles, équipée de {I-A/Saint's Ring} et {I-T/Vanguard's Charm}, tandis que les 3 autres unités utilisent Rogue ou Executioner."
+        ]
+      },
+      {
+        "type": "p",
+        "string": "Voici l'ouverture du combat :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Drakhan} commence par S3 pour déclencher un counter (donnant +50 AP à {P/Monad Eva} via {I-T/Vanguard's Charm} et +25 AP grâce aux alliés touchés via la passive de healer).",
+          "Queen utilise S2 (donnant à {P/Monad Eva} +50 AP supplémentaires via {I-T/Vanguard's Charm} et +25 AP grâce aux alliés touchés).",
+          "{P/Monad Eva} prend le tour avec 150 AP (200 si 6 étoiles avec un Vanguard +10), se cleanse avec {I-A/Saint's Ring}, et peut utiliser S1 Burn 3 pour cleanse l'équipe.",
+          "Le reste du combat est simple — utilisez Chain Attack avec {P/Drakhan} si le boss n'est pas break ou si le S2 est disponible."
+        ]
+      }
     ]
   },
   "One Run Kill": {

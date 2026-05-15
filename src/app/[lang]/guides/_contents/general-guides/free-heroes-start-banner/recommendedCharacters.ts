@@ -101,7 +101,7 @@ export const freeHeroesSources: FreeHeroSource[] = [
                     jp: "シーズン1 ノーマル冒険2-3クリア。",
                     kr: "시즌 1 노멀 모험 2-3 클리어.",
                     zh: "通关第1季普通冒险2-3。",
-                    fr: "Clear Season 1 Normal Adventure 2-3."
+                    fr: "Terminez Season 1 Normal Adventure 2-3."
                 }
             }
         ]
@@ -271,7 +271,7 @@ export const customBannerPicks: CustomBannerPick[] = [
             jp: "クリティカルバッファー。",
             kr: "치명타 버퍼.",
             zh: "暴击辅助。",
-            fr: "Crit buffers."
+            fr: "Buffers de crit."
         }
     },
     {
