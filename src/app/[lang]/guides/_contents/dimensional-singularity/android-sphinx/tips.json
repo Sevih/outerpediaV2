@@ -32,5 +32,31 @@
       "kr": "{D/BT_SEALED}과 {D/BT_EXTEND_DEBUFF}을 보유한 캐릭터를 채용하세요. {I-W/Sacreed Edge}를 장착한 {C/Ranger}는 {D/BT_DOT_POISON}의 공급원이 될 수 있습니다.",
       "zh": "携带具备{D/BT_SEALED}与{D/BT_EXTEND_DEBUFF}的角色。装备{I-W/Sacreed Edge}的{C/Ranger}可作为{D/BT_DOT_POISON}的来源。"
     }
+  ],
+  "earth": [
+    {
+      "en": "{P/Notia} stacks {D/BT_DOT_POISON} on the boss. Pair her with {E/Earth} dealers to also trigger elemental advantage.",
+      "jp": "{P/Notia}がボスに{D/BT_DOT_POISON}を蓄積する。{E/Earth}属性アタッカーと組ませて属性有利も発動させる。",
+      "kr": "{P/Notia}가 보스에게 {D/BT_DOT_POISON}을 누적시킵니다. {E/Earth} 속성 딜러와 함께 편성하면 속성 우위도 발동합니다.",
+      "zh": "{P/Notia}为Boss叠加{D/BT_DOT_POISON}。与{E/Earth}属性输出搭配可同时触发属性克制。"
+    },
+    {
+      "en": "{P/Alice} and {P/Akari} apply {D/BT_SEALED}. {P/Alice} also increases {E/Earth} damage taken and applies {D/BT_STAT|ST_SPEED} and {D/BT_STAT|ST_BUFF_CHANCE}; {P/Akari} provides {D/BT_EXTEND_DEBUFF} plus {D/BT_STAT|ST_DEF} and {D/BT_STAT|ST_ATK}.",
+      "jp": "{P/Alice}と{P/Akari}は{D/BT_SEALED}を付与する。{P/Alice}はさらに被{E/Earth}ダメージを増加させ、{D/BT_STAT|ST_SPEED}と{D/BT_STAT|ST_BUFF_CHANCE}を付与。{P/Akari}は{D/BT_EXTEND_DEBUFF}に加え{D/BT_STAT|ST_DEF}と{D/BT_STAT|ST_ATK}を付与する。",
+      "kr": "{P/Alice}와 {P/Akari}는 {D/BT_SEALED}을 부여합니다. {P/Alice}는 추가로 받는 {E/Earth} 피해를 증가시키고 {D/BT_STAT|ST_SPEED}과 {D/BT_STAT|ST_BUFF_CHANCE}을 부여하며, {P/Akari}는 {D/BT_EXTEND_DEBUFF}과 함께 {D/BT_STAT|ST_DEF}와 {D/BT_STAT|ST_ATK}을 제공합니다.",
+      "zh": "{P/Alice}与{P/Akari}施加{D/BT_SEALED}。{P/Alice}还能提升Boss受到的{E/Earth}伤害并附加{D/BT_STAT|ST_SPEED}与{D/BT_STAT|ST_BUFF_CHANCE}；{P/Akari}提供{D/BT_EXTEND_DEBUFF}以及{D/BT_STAT|ST_DEF}与{D/BT_STAT|ST_ATK}。"
+    },
+    {
+      "en": "{P/Ryu Lion}, {P/Ame}, {P/Rey} or {P/Noa} as the {E/Earth} damage dealer. {P/Ryu Lion} is preferred for her {B/BT_STAT|ST_SPEED} buff and as an extra source of {D/BT_SEALED}.",
+      "jp": "{E/Earth}属性アタッカーとして{P/Ryu Lion}、{P/Ame}、{P/Rey}、{P/Noa}を採用する。{P/Ryu Lion}は{B/BT_STAT|ST_SPEED}バフと追加の{D/BT_SEALED}供給源として推奨。",
+      "kr": "{E/Earth} 속성 딜러로 {P/Ryu Lion}, {P/Ame}, {P/Rey}, {P/Noa}를 채용하세요. {P/Ryu Lion}은 {B/BT_STAT|ST_SPEED} 버프와 추가 {D/BT_SEALED} 공급원으로 추천됩니다.",
+      "zh": "以{P/Ryu Lion}、{P/Ame}、{P/Rey}或{P/Noa}作为{E/Earth}属性输出。推荐{P/Ryu Lion}，因其提供{B/BT_STAT|ST_SPEED}增益并作为额外的{D/BT_SEALED}来源。"
+    },
+    {
+      "en": "{P/Monad Eva} or {P/Viella} for {B/BT_CALL_BACKUP} dual attacks and healing. {P/Monad Eva} additionally provides {B/BT_REVIVAL}, while {P/Viella} adds more {D/BT_DOT_POISON}.",
+      "jp": "{B/BT_CALL_BACKUP}による連携攻撃と回復のために{P/Monad Eva}または{P/Viella}を編成する。{P/Monad Eva}は加えて{B/BT_REVIVAL}を、{P/Viella}はさらに{D/BT_DOT_POISON}を提供する。",
+      "kr": "{B/BT_CALL_BACKUP} 연계 공격과 회복을 위해 {P/Monad Eva} 또는 {P/Viella}를 편성하세요. {P/Monad Eva}는 추가로 {B/BT_REVIVAL}을, {P/Viella}는 더 많은 {D/BT_DOT_POISON}을 제공합니다.",
+      "zh": "编入{P/Monad Eva}或{P/Viella}以提供{B/BT_CALL_BACKUP}连携攻击与治疗。{P/Monad Eva}额外提供{B/BT_REVIVAL}，{P/Viella}则提供更多{D/BT_DOT_POISON}。"
+    }
   ]
 }

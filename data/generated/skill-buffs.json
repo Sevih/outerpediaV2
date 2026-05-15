@@ -511,7 +511,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_STAT|ST_SPEED",
@@ -1051,7 +1051,7 @@
       {
         "type": "BT_STAT|ST_COUNTER_RATE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "ME"
       },
       {
         "type": "BT_EXTEND_BUFF",
@@ -1362,7 +1362,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_ONE"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_AP_CHARGE",
@@ -1441,7 +1441,7 @@
       {
         "type": "BT_DOT_POISON",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       }
     ],
     "chain": [
@@ -1846,7 +1846,7 @@
       {
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
         "debuff": false,
-        "target": "ME",
+        "target": "MY_TEAM",
         "burst": true
       },
       {
@@ -2025,7 +2025,7 @@
       {
         "type": "BT_AGGRO",
         "debuff": true,
-        "target": "ENEMY",
+        "target": "ENEMY_TEAM",
         "burst": true
       }
     ],
@@ -2079,7 +2079,7 @@
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       },
       {
         "type": "BT_STAT|ST_ATK",
@@ -2733,7 +2733,7 @@
       {
         "type": "BT_DOT_POISON",
         "debuff": true,
-        "target": "ENEMY_TEAM",
+        "target": "ENEMY",
         "burst": true
       }
     ],
@@ -3951,7 +3951,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       },
       {
         "type": "BT_EXTEND_BUFF",
@@ -4161,7 +4161,7 @@
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ME"
       }
     ],
     "chain": [
@@ -5489,7 +5489,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "MY_TEAM"
       }
     ],
     "chain": [
@@ -6036,7 +6036,7 @@
       {
         "type": "BT_DOT_BLEED",
         "debuff": true,
-        "target": "ENEMY_TEAM"
+        "target": "ENEMY"
       },
       {
         "type": "BT_EXTEND_DEBUFF",
@@ -6945,7 +6945,7 @@
       {
         "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
+        "target": "ME"
       },
       {
         "type": "BT_BARRIER",
@@ -7101,7 +7101,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       },
       {
         "type": "FIERCE_OFFENSIVE",

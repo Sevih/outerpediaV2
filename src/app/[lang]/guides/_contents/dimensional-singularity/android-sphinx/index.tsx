@@ -18,7 +18,7 @@ import boss60000006 from '@data/boss/60000006.json';
 
 const STRINGS = strings as Record<string, LangMap>;
 const TIPS = tips as Record<string, LangMap[]>;
-const RECOMMENDED = recommended as CharacterRecommendation[];
+const RECOMMENDED = recommended as Record<string, CharacterRecommendation[]>;
 
 const preloadedBosses: Record<string, Boss> = {
   '60000006': boss60000006 as unknown as Boss,
@@ -30,6 +30,14 @@ const GBETH_TITLE: LangMap = {
   kr: 'GBeth 팀 전략',
   zh: 'GBeth队伍策略',
   fr: 'Strategie equipe GBeth',
+};
+
+const EARTH_TITLE: LangMap = {
+  en: 'Earth team strategy',
+  jp: '地属性編成戦略',
+  kr: '땅 속성 팀 전략',
+  zh: '地属性队伍策略',
+  fr: 'Strategie equipe Terre',
 };
 
 export default function AndroidSphinxGuide() {
@@ -52,11 +60,15 @@ export default function AndroidSphinxGuide() {
         sections={[
           { title: 'general', tips: TIPS.general },
           { title: GBETH_TITLE, tips: TIPS.gbeth },
+          { title: EARTH_TITLE, tips: TIPS.earth },
         ]}
       />
 
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList entries={RECOMMENDED} />
+      <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={EARTH_TITLE} entries={RECOMMENDED.earth} />
 
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
