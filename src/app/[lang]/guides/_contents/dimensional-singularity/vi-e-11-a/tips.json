@@ -4,25 +4,29 @@
       "en": "Boss applies {D/BT_STAT|ST_CRITICAL_RATE_IR} debuff and takes reduce damage from critical hit.",
       "jp": "ボスは{D/BT_STAT|ST_CRITICAL_RATE_IR}を付与し、受ける会心ダメージが減少する。",
       "kr": "보스는 {D/BT_STAT|ST_CRITICAL_RATE_IR}을 부여하고 받는 치명 피해가 감소합니다.",
-      "zh": "Boss附加{D/BT_STAT|ST_CRITICAL_RATE_IR}并降低受到的暴击伤害。"
+      "zh": "Boss附加{D/BT_STAT|ST_CRITICAL_RATE_IR}并降低受到的暴击伤害。",
+      "fr": "Le Boss applique le debuff {D/BT_STAT|ST_CRITICAL_RATE_IR} et subit des dégâts réduits de la part des coups critiques."
     },
     {
       "en": "Boss takes +150% damage from DoTs (excluding Curse) — focus on {D/BT_DOT_BURN} / {D/ETERNAL_BLEEDING} teams.",
       "jp": "ボスはDoTから受けるダメージ+150%（呪い除く） — {D/BT_DOT_BURN} / {D/ETERNAL_BLEEDING}編成を狙う。",
       "kr": "보스가 받는 지속 피해 +150%(저주 제외) — {D/BT_DOT_BURN} / {D/ETERNAL_BLEEDING} 구성을 노리세요.",
-      "zh": "Boss受到的持续伤害+150%（诅咒除外） — 围绕{D/BT_DOT_BURN} / {D/ETERNAL_BLEEDING}构筑。"
+      "zh": "Boss受到的持续伤害+150%（诅咒除外） — 围绕{D/BT_DOT_BURN} / {D/ETERNAL_BLEEDING}构筑。",
+      "fr": "Le Boss subit +150% de dégâts des DoTs (hors Curse) — privilégiez les équipes {D/BT_DOT_BURN} / {D/ETERNAL_BLEEDING}."
     },
     {
       "en": "S1 fully refunds the boss's WG if the leftmost target is not a {C/Defender} — keep a {C/Defender} in the front slot.",
       "jp": "S1は最左の対象が{C/Defender}でない場合、ボスのWGを全回復する — 最前列に{C/Defender}を配置する。",
       "kr": "S1은 최좌측 대상이 {C/Defender}가 아니면 보스의 WG를 모두 회복합니다 — 최전열에 {C/Defender}를 배치하세요.",
-      "zh": "若最左侧目标非{C/Defender}，S1回复Boss所有WG — 最前排始终保持{C/Defender}。"
+      "zh": "若最左侧目标非{C/Defender}，S1回复Boss所有WG — 最前排始终保持{C/Defender}。",
+      "fr": "Le S1 rembourse entièrement la WG du Boss si la cible la plus à gauche n'est pas un {C/Defender} — gardez un {C/Defender} sur l'emplacement avant."
     },
     {
       "en": "Boss applies many {D/BT_DOT_POISON} debuffs but has no {D/BT_REMOVE_BUFF} — stack defensive buffs freely.",
       "jp": "ボスは多数の{D/BT_DOT_POISON}を付与するが、{D/BT_REMOVE_BUFF}は持たない — 防御バフを自由に重ねられる。",
       "kr": "보스는 다수의 {D/BT_DOT_POISON}을 부여하지만 {D/BT_REMOVE_BUFF}는 없습니다 — 방어 버프를 자유롭게 쌓을 수 있습니다.",
-      "zh": "Boss附加大量{D/BT_DOT_POISON}但不具备{D/BT_REMOVE_BUFF} — 可放心叠加防御性强化效果。"
+      "zh": "Boss附加大量{D/BT_DOT_POISON}但不具备{D/BT_REMOVE_BUFF} — 可放心叠加防御性强化效果。",
+      "fr": "Le Boss applique de nombreux debuffs {D/BT_DOT_POISON} mais n'a pas de {D/BT_REMOVE_BUFF} — empilez librement les buffs défensifs."
     }
   ],
   "burn": [
@@ -30,13 +34,15 @@
       "en": "Stack {D/BT_DOT_BURN} on the boss and detonate via {P/Vlada}.",
       "jp": "ボスに{D/BT_DOT_BURN}を積み上げ、{P/Vlada}で破裂させる。",
       "kr": "보스에게 {D/BT_DOT_BURN}을 쌓고 {P/Vlada}로 폭발시키세요.",
-      "zh": "在Boss身上叠加{D/BT_DOT_BURN}并由{P/Vlada}引爆。"
+      "zh": "在Boss身上叠加{D/BT_DOT_BURN}并由{P/Vlada}引爆。",
+      "fr": "Empilez {D/BT_DOT_BURN} sur le Boss et détonnez via {P/Vlada}."
     },
     {
       "en": "{P/Ember} sits at the front to block the S1 WG refund while extending {D/BT_DOT_BURN} durations; {P/Maxie} adds more Burn stacks and {D/BT_EXTEND_DEBUFF} (she can use {I-W/Heartunder's Blade} for more {D/BT_DOT_BURN}).",
       "jp": "{P/Ember}を最前列に配置してS1のWG回復を阻止しつつ、{D/BT_DOT_BURN}の持続を延長する。{P/Maxie}でさらに火傷スタックと{D/BT_EXTEND_DEBUFF}を追加（{I-W/Heartunder's Blade}を装備すればさらに{D/BT_DOT_BURN}を付与可能）。",
       "kr": "{P/Ember}를 최전열에 배치해 S1 WG 회복을 차단하면서 {D/BT_DOT_BURN} 지속시간을 연장하고, {P/Maxie}로 화상 스택과 {D/BT_EXTEND_DEBUFF}을 추가합니다({I-W/Heartunder's Blade}를 장착하면 {D/BT_DOT_BURN}을 더 부여할 수 있습니다).",
-      "zh": "{P/Ember}站在最前排阻止S1的WG回复并延长{D/BT_DOT_BURN}持续时间；{P/Maxie}追加更多烧伤层数与{D/BT_EXTEND_DEBUFF}（可装备{I-W/Heartunder's Blade}追加更多{D/BT_DOT_BURN}）。"
+      "zh": "{P/Ember}站在最前排阻止S1的WG回复并延长{D/BT_DOT_BURN}持续时间；{P/Maxie}追加更多烧伤层数与{D/BT_EXTEND_DEBUFF}（可装备{I-W/Heartunder's Blade}追加更多{D/BT_DOT_BURN}）。",
+      "fr": "{P/Ember} se place à l'avant pour bloquer le remboursement de WG du S1 tout en prolongeant les durées de {D/BT_DOT_BURN} ; {P/Maxie} ajoute davantage de stacks de Burn et {D/BT_EXTEND_DEBUFF} (elle peut utiliser {I-W/Heartunder's Blade} pour plus de {D/BT_DOT_BURN})."
     }
   ],
   "mero": [
@@ -44,13 +50,15 @@
       "en": "{P/Mero} carries with {I-W/Heartunder's Blade} to self-apply {D/BT_DOT_BURN} on her counterattacks. Open with S3 ({B/BT_COUNTERATTACK} and {B/BT_UNDEAD}), then repeat S2 (burst 1) each turn until turns run out.",
       "jp": "{P/Mero}を{I-W/Heartunder's Blade}でキャリーし、反撃で{D/BT_DOT_BURN}を付与する。S3（{B/BT_COUNTERATTACK}と{B/BT_UNDEAD}）で開幕後、ターン切れまで毎ターンS2（バースト1）を繰り返す。",
       "kr": "{P/Mero}를 {I-W/Heartunder's Blade}로 운영하며 반격으로 {D/BT_DOT_BURN}을 부여합니다. S3({B/BT_COUNTERATTACK}과 {B/BT_UNDEAD})로 시작 후 턴이 끝날 때까지 매턴 S2(버스트 1)을 반복하세요.",
-      "zh": "以{P/Mero}为主C，装备{I-W/Heartunder's Blade}通过反击附加{D/BT_DOT_BURN}。开局使用S3（{B/BT_COUNTERATTACK}与{B/BT_UNDEAD}），然后每回合重复S2（爆发1）直至回合用尽。"
+      "zh": "以{P/Mero}为主C，装备{I-W/Heartunder's Blade}通过反击附加{D/BT_DOT_BURN}。开局使用S3（{B/BT_COUNTERATTACK}与{B/BT_UNDEAD}），然后每回合重复S2（爆发1）直至回合用尽。",
+      "fr": "{P/Mero} porte l'équipe avec {I-W/Heartunder's Blade} pour s'appliquer elle-même {D/BT_DOT_BURN} sur ses contre-attaques. Commencez par S3 ({B/BT_COUNTERATTACK} et {B/BT_UNDEAD}), puis répétez S2 (burst 1) chaque tour jusqu'à épuisement des tours."
     },
     {
       "en": "Pick 3 supports across {S/ATK} / {S/CHC} / {S/PEN%} buffers (see recommended list).",
       "jp": "{S/ATK}・{S/CHC}・{S/PEN%}バッファーから3体選ぶ（推奨リスト参照）。",
       "kr": "{S/ATK} / {S/CHC} / {S/PEN%} 버퍼 중 3명을 선택하세요(추천 목록 참조).",
-      "zh": "从{S/ATK} / {S/CHC} / {S/PEN%}增益中选择3名（参考推荐列表）。"
+      "zh": "从{S/ATK} / {S/CHC} / {S/PEN%}增益中选择3名（参考推荐列表）。",
+      "fr": "Choisissez 3 supports parmi les buffeurs de {S/ATK} / {S/CHC} / {S/PEN%} (voir la liste recommandée)."
     }
   ],
   "gbeth": [
@@ -58,13 +66,15 @@
       "en": "{P/Gnosis Beth} carries with {D/ETERNAL_BLEEDING}.",
       "jp": "{P/Gnosis Beth}を{D/ETERNAL_BLEEDING}でキャリーする。",
       "kr": "{P/Gnosis Beth}를 {D/ETERNAL_BLEEDING}로 운영하세요.",
-      "zh": "以{P/Gnosis Beth}为主C，使用{D/ETERNAL_BLEEDING}。"
+      "zh": "以{P/Gnosis Beth}为主C，使用{D/ETERNAL_BLEEDING}。",
+      "fr": "{P/Gnosis Beth} porte l'équipe avec {D/ETERNAL_BLEEDING}."
     },
     {
       "en": "{P/Ember} at the front to block the S1 WG refund and extend DoT durations; {P/Maxie} adds {D/BT_DOT_BURN} & {D/BT_EXTEND_DEBUFF}; {P/Monad Eva} provides {B/BT_CALL_BACKUP}, {B/BT_AP_CHARGE} and {B/BT_REVIVAL} as a lifeline.",
       "jp": "{P/Ember}を最前列に配置してS1のWG回復を阻止しDoT持続を延長する。{P/Maxie}で{D/BT_DOT_BURN}と{D/BT_EXTEND_DEBUFF}を追加、{P/Monad Eva}で{B/BT_CALL_BACKUP}・{B/BT_AP_CHARGE}・{B/BT_REVIVAL}を確保。",
       "kr": "{P/Ember}를 최전열에 배치해 S1 WG 회복을 차단하고 DoT 지속을 연장. {P/Maxie}로 {D/BT_DOT_BURN}과 {D/BT_EXTEND_DEBUFF}을 추가하고, {P/Monad Eva}로 {B/BT_CALL_BACKUP}, {B/BT_AP_CHARGE}, {B/BT_REVIVAL}을 확보합니다.",
-      "zh": "{P/Ember}站在最前排阻止S1的WG回复并延长DoT持续；{P/Maxie}追加{D/BT_DOT_BURN}与{D/BT_EXTEND_DEBUFF}；{P/Monad Eva}提供{B/BT_CALL_BACKUP}、{B/BT_AP_CHARGE}和{B/BT_REVIVAL}作为保险。"
+      "zh": "{P/Ember}站在最前排阻止S1的WG回复并延长DoT持续；{P/Maxie}追加{D/BT_DOT_BURN}与{D/BT_EXTEND_DEBUFF}；{P/Monad Eva}提供{B/BT_CALL_BACKUP}、{B/BT_AP_CHARGE}和{B/BT_REVIVAL}作为保险。",
+      "fr": "{P/Ember} à l'avant pour bloquer le remboursement de WG du S1 et prolonger les durées de DoT ; {P/Maxie} ajoute {D/BT_DOT_BURN} et {D/BT_EXTEND_DEBUFF} ; {P/Monad Eva} apporte {B/BT_CALL_BACKUP}, {B/BT_AP_CHARGE} et {B/BT_REVIVAL} comme filet de sécurité."
     }
   ]
 }
