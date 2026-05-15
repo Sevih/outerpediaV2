@@ -63,7 +63,6 @@ export default function UrdGuide() {
     <GuideTemplate
       title={lRec(STRINGS.title, lang)}
       introduction={lRec(STRINGS.intro, lang)}
-      updating
     >
       <BossDisplay
         bossName="Urd"

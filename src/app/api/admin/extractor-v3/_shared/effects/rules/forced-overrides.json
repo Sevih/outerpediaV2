@@ -274,5 +274,18 @@
           "BT_SEALED"
       ]
     }
+  },
+  "skill:Enraged|60000014": {
+    "*": {
+      "clear_debuff": true,
+      "clear_buff": true,
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ],
+      "debuff": [
+          "BT_REMOVE_BUFF"
+      ]
+    }
   }
 }
