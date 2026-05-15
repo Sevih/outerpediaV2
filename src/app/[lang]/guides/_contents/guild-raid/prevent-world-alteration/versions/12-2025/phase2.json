@@ -118,6 +118,27 @@
         "string": "提示：同时击杀两个球只算击杀一个球的Geas单位死亡能量提升。为了最大伤害提升，尽可能一个一个击杀球。"
       }
     ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Prérequis généraux :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "240 de précision sur toutes",
+          "Transcendance 4★ minimum avec chain skill au niveau max pour 6 de dégâts de WG sur la chaîne"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "IMPORTANT : utilisez exactement les vitesses listées ci-dessus et ne vous en écartez pas. Le réglage de vitesse est extrêmement précis — même de petites variations peuvent faire échouer la run à cause de problèmes d'ordre de jeu."
+      },
+      {
+        "type": "p",
+        "string": "ASTUCE : tuer les deux orbs en même temps ne compte que comme la destruction d'UN seul orb pour le bonus de puissance du Geas à la mort d'une unité. Il vaut mieux tuer chaque orb un par un dès que possible pour un boost de dégâts maximal."
+      }
+    ],
     "requirements": {
       "entries": [
         {
@@ -144,6 +165,10 @@
           "notes_zh": [
             "5★也能用但除非使用{AS/Bursting}否则最后一回合无法使用爆发3",
             "如果没有{I-A/Gorgon's Vanity [Mage]}，需要用{AS/Speed}而非{AS/Revenge}"
+          ],
+          "notes_fr": [
+            "La 5★ fonctionne encore mais vous ne pouvez pas utiliser le Burst 3 à son dernier tour sauf en utilisant {AS/Bursting}",
+            "Si vous n'avez pas {I-A/Gorgon's Vanity [Mage]}, vous devrez probablement jouer avec {AS/Speed} plutôt que {AS/Revenge}"
           ]
         },
         {
@@ -169,6 +194,10 @@
           "notes_zh": [
             "{S/SPD}必须正好288，否则回合顺序会乱",
             "理想6★（战斗开始时额外AP）"
+          ],
+          "notes_fr": [
+            "Exactement 288 {S/SPD}, sinon l'ordre de jeu sera faussé.",
+            "Idéalement 6★ pour de l'AP supplémentaire en début de combat"
           ]
         },
         {
@@ -193,6 +222,10 @@
           "notes_zh": [
             "需要足够HP用{I-A/Queen of Prism}的护盾扛住两次2回合燃烧",
             "没有{I-A/Queen of Prism}时让最大HP低于{P/Roxie}以便之后从{P/Core Fusion Veronica}获得护盾（只需扛1回合燃烧）"
+          ],
+          "notes_fr": [
+            "A besoin d'assez de HP pour survivre à deux burns de 2 tours avec {I-A/Queen of Prism}",
+            "Sans {I-A/Queen of Prism}, faites en sorte que ses HP max soient inférieurs à ceux de {P/Roxie} pour qu'elle reçoive un bouclier de {P/Core Fusion Veronica} plus tard (ce qui veut dire que vous n'encaissez que des burns de 1 tour)"
           ]
         },
         {
@@ -216,6 +249,10 @@
           "notes_zh": [
             "EE+10非必需，但如果有就不要用{I-A/Chalice of Longing}饰品（否则回合顺序会乱）",
             "没有EE+10时可以用{I-A/Chalice of Longing}"
+          ],
+          "notes_fr": [
+            "EE+10 non requise, mais si vous l'avez, n'utilisez pas l'accessoire {I-A/Chalice of Longing} sinon l'ordre de jeu sera faussé.",
+            "{I-A/Chalice of Longing} convient sans EE+10"
           ]
         }
       ]

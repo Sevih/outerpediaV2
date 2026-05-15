@@ -102,6 +102,29 @@
         "type": "p",
         "string": "根据暴击率选择使用盗贼护符或贤者护符"
       }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Réglage de vitesse : {P/Sterope} > {P/Maxwell} > {P/Demiurge Astei} > {P/Omega Nadja}"
+      },
+      {
+        "type": "p",
+        "string": "Rôle :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Sterope} : S3 et lancez le Skill Chain avec elle en premier",
+          "{P/Omega Nadja} : S1B3 > S3 > S1",
+          "{P/Demiurge Astei} : S1B2 > S3 > S1",
+          "{P/Maxwell} : S3 > S2B2 > S2 > S1"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "Utilisez le Rogue's Charm / Sage's Charm selon votre taux de critique"
+      }
     ]
   },
   "Classic G.Beth": {
@@ -154,6 +177,16 @@
       {
         "type": "p",
         "string": "在Boss狂暴技能前使用{P/Monad Eva} S1B3（即使不会死也要用）"
+      }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Rien de spécial, faites simplement S2-S3-S1B3 avec {P/Gnosis Beth}"
+      },
+      {
+        "type": "p",
+        "string": "Utilisez le S1B3 de {P/Monad Eva} avant la compétence d'enrage du Boss (même si elle ne vous tuera pas)"
       }
     ]
   },
@@ -260,6 +293,29 @@
           "{P/Vlada} : 先用S3，然后只用S1直到最后一回合（理想是第19回合），再用S2B2"
         ]
       }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Réglage de vitesse : {P/Roxie} > {P/Monad Eva} > {P/Ember} > {P/Vlada}"
+      },
+      {
+        "type": "p",
+        "string": "Si vous avez {P/Ember} 5 étoiles, vous voulez qu'elle ait 20/30 de vitesse de plus que {P/Vlada} afin de prolonger la durée de {D/BT_DOT_BURN}"
+      },
+      {
+        "type": "p",
+        "string": "Rôle :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Monad Eva} : S1B2 pour recharger l'AP",
+          "{P/Roxie} : uniquement S1B3 puis S3 lors de son tour",
+          "{P/Ember} : S1B3 > S3",
+          "{P/Vlada} : S3 puis uniquement S1 jusqu'à son dernier tour (idéalement le 19e tour) et S2B2"
+        ]
+      }
     ]
   },
   "Solo Ember": {
@@ -323,6 +379,20 @@
       {
         "type": "p",
         "string": "游戏时只用S1B3延长{D/BT_DOT_BURN}持续时间"
+      }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Vous voulez : set Revenge, Vanguard Charm, l'arme Token of the Supreme Witch et un accessoire d'efficacité"
+      },
+      {
+        "type": "p",
+        "string": "Stats nécessaires : Eff > Atk > Tout le reste et vitesse faible (environ 120-130)"
+      },
+      {
+        "type": "p",
+        "string": "À chaque fois que vous jouez, faites simplement S1B3 pour prolonger la durée de votre {D/BT_DOT_BURN}"
       }
     ]
   }

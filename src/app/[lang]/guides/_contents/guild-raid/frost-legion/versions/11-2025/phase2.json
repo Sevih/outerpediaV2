@@ -102,6 +102,29 @@
         "type": "p",
         "string": "根据暴击率选择使用盗贼护符或贤者护符"
       }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Réglage de vitesse : {P/Sterope} > {P/Maxwell} > {P/Demiurge Astei} > {P/Omega Nadja}"
+      },
+      {
+        "type": "p",
+        "string": "Rôle :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Sterope} : S3 et lancez le Skill Chain avec elle en premier",
+          "{P/Omega Nadja} : S1B3 > S3 > S1",
+          "{P/Demiurge Astei} : S1B2 > S3 > S1",
+          "{P/Maxwell} : S3 > S2B2 > S2 > S1"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "Utilisez le Rogue's Charm / Sage's Charm selon votre taux de critique"
+      }
     ]
   },
   "Classic G.Beth": {
@@ -154,6 +177,16 @@
       {
         "type": "p",
         "string": "在Boss狂暴技能前使用{P/Monad Eva} S1B3（即使不会死也要用）"
+      }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Rien de spécial, faites simplement S2-S3-S1B3 avec {P/Gnosis Beth}"
+      },
+      {
+        "type": "p",
+        "string": "Utilisez le S1B3 de {P/Monad Eva} avant la compétence d'enrage du Boss (même si elle ne vous tuera pas)"
       }
     ]
   },
@@ -258,6 +291,29 @@
           "{P/Roxie} : 只用S1B3，下一回合用S3",
           "{P/Ember} : S1B3 > S3",
           "{P/Vlada} : 先用S3，然后只用S1直到最后一回合（理想是第19回合），再用S2B2"
+        ]
+      }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Réglage de vitesse : {P/Roxie} > {P/Monad Eva} > {P/Ember} > {P/Vlada}"
+      },
+      {
+        "type": "p",
+        "string": "Si vous avez {P/Ember} 5 étoiles, vous voulez qu'elle ait 20/30 de vitesse de plus que {P/Vlada} afin de prolonger la durée de {D/BT_DOT_BURN}"
+      },
+      {
+        "type": "p",
+        "string": "Rôle :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Monad Eva} : S1B2 pour recharger l'AP",
+          "{P/Roxie} : uniquement S1B3 puis S3 lors de son tour",
+          "{P/Ember} : S1B3 > S3",
+          "{P/Vlada} : S3 puis uniquement S1 jusqu'à son dernier tour (idéalement le 19e tour) et S2B2"
         ]
       }
     ]
@@ -554,6 +610,78 @@
           "使用先锋护符",
           "轮到她时：在燃烧伤害前用爆发S3或爆发2回复{P/Ember}的血量",
           "第二回合前会死"
+        ]
+      }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "NOTE : ce guide vise le stage 10+. Le Boss a des stats différentes aux stages inférieurs."
+      },
+      {
+        "type": "p",
+        "string": "Build de {P/Ember} :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Set Revenge T4 (obligatoire aux stages élevés pour un plus grand bouclier), Vanguard Charm, arme Token of the Supreme Witch",
+          "Accessoire : ATK% de préférence. Accessoire d'efficacité si vous ne pouvez pas atteindre l'efficacité requise. {I-A/Gorgon's Vanity [Defender]} en dernier recours (n'aide pas l'efficacité sur le Burst 3 et vous avez 1 tour sans le buff)",
+          "Priorité des stats : Eff > Atk > HP > Def > Taux Critique (optionnel) et vitesse faible (environ 120-130, idéalement +6-10 de vitesse pour rafraîchir le bouclier juste avant l'étourdissement)",
+          "Le Taux Critique permet au Boss de contre-attaquer pour s'appliquer plus de burns, ce qui est bon tant que votre bouclier tient",
+          "ÉVITEZ la Résilience — vous comptez sur le burn pour entrer en portée de revenge. Ember a 160 de résilience naturellement tandis que le Boss a 167 d'efficacité.",
+          "Si vous mourez après les premiers tours : échangez d'autres stats (y compris l'efficacité) contre plus d'ATK pour obtenir un plus grand bouclier",
+          "Gameplay : utilisez uniquement S1B3 pour prolonger la durée de votre {D/BT_DOT_BURN}"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "Personnages sacrifiés (pour porter les charms) :"
+      },
+      {
+        "type": "p",
+        "string": "Sacrifices idéaux avec réduction de dégâts passive (persiste après la mort) :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Omega Nadja} — Réduction de dégâts passive avec bouclier. N'utilisez PAS son EE (donne une réduction de dégâts indésirable contre Light et de l'efficacité, ce qui peut provoquer une contre-attaque infligeant un debuff de vitesse). Il peut être nécessaire de réinitialiser son niveau aux stages inférieurs.",
+          "{P/Demiurge Drakhan} — Réduction de dégâts passive (AoE uniquement)",
+          "{P/Hilde} — 15% de réduction de dégâts (AoE uniquement) avec la passive Charmer's Golden Chalice intégrée",
+          "{P/Ritri} — Réduction de dégâts passive",
+          "{P/Liselotte} avec EE — Réduction de dégâts passive avec bouclier. Son boost de vitesse passif (+5 à 4★ ou +10 à 6★) ne réduit les dégâts que si le boost place Ember au-dessus de la vitesse souhaitée. Si vous mettez de toute façon de la vitesse sur Ember, elle ne réduira pas vos dégâts."
+        ]
+      },
+      {
+        "type": "p",
+        "string": "Meilleure combinaison : {P/Omega Nadja} + {P/Demiurge Drakhan} + {P/Liselotte} fait que les coups non-critiques du Boss infligent moins de 100 de dégâts au total, même sur son ultime d'enrage, ce qui rend la survie bien plus facile."
+      },
+      {
+        "type": "p",
+        "string": "Porteurs de charms :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Charmer's Golden Chalice : n'importe quel défenseur peut le porter pour mourir plus vite. Donnez assez de résistance pour survivre au premier coup mais PAS au second, afin que le Charmer's s'active au premier + second coup.",
+          "Les défenseurs peuvent aussi porter l'Unholy Exulset",
+          "Les soigneurs peuvent porter le Starlight Road"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "Stratégie du tour 1 avec {P/Liselotte} (uniquement si vous ne survivez pas au tour 1 de manière fiable, car cela réduit vos dégâts d'1 tour) :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Placez {P/Liselotte} en première ligne (premier emplacement) pour réduire le RNG du tour 1 — si les deux atteignent 100% de priorité en même temps, Liselotte jouera toujours en premier",
+          "Vitesse faible mais plus rapide qu'Ember (environ 130 de vitesse au maximum)",
+          "0 critique, 0 précision, 0 résilience",
+          "Assez de résistance pour survivre aux 2 premiers coups (critique compris) + les dégâts de burn",
+          "Utilisez le Vanguard Charm",
+          "À son tour : utilisez le Burst S3 ou le Burst 2 pour remonter les HP d'Ember avant les dégâts de burn afin de survivre",
+          "Elle mourra avant son second tour"
         ]
       }
     ]
@@ -915,6 +1043,93 @@
           "Phantom Necrosis武器降低速度",
           "100%暴击的处刑者护符或盗贼护符",
           "行动顺序：S3 - 连锁 - S2"
+        ]
+      }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Bien plus sûr aux stages élevés avec plus de dégâts mais seulement un multiplicateur de 115%. Le réglage de vitesse est très important — essayez de suivre les vitesses le plus précisément possible."
+      },
+      {
+        "type": "p",
+        "string": "IMPORTANT : si vous avez une {P/Monad Eva} 6★, son debuff de seal de compétence supplémentaire en début de combat empêche {P/Akari} de placer la réduction de résilience. Utilisez plutôt un accessoire d'efficacité sur {P/Maxie}."
+      },
+      {
+        "type": "p",
+        "string": "Ordre de vitesse et nombre de tours :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Akari} : 292 de vitesse (6 tours au total) — il y a de la marge pour aller plus vite tant que vous êtes plus rapide que le Boss pour appliquer la réduction de résilience. Avec une {P/Monad Eva} 6★, vous ne pouvez pas appliquer la réduction de résilience.",
+          "{P/Monad Eva} : 164 de vitesse (3 tours au total) — son tour 2 doit arriver avant le tour 3 de {P/Maxie}. Son dernier tour doit être juste avant que le Boss n'utilise son ultime d'enrage pour utiliser le Burst 3. Si ce n'est pas le cas, rendez-la plus rapide.",
+          "{P/Maxie} : 178 de vitesse (8 tours au total) — si elle a plus de 8 tours, ralentissez-la ou accélérez {P/Vlada}.",
+          "{P/Vlada} : 124 de vitesse (3 tours au total) — doit jouer au dernier tour. Si ce n'est pas le cas, accélérez {P/Vlada} ou ralentissez {P/Maxie}/{P/Monad Eva}."
+        ]
+      },
+      {
+        "type": "p",
+        "string": "Builds des personnages :"
+      },
+      {
+        "type": "p",
+        "string": "{P/Monad Eva} :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Doit être 5★ minimum (la 6★ est un Pay to Lose sauf si vous utilisez de l'efficacité sur {P/Maxie})",
+          "EE entièrement maximisée",
+          "Set Burst 2 pièces + Vanguard Charm 6★ +10",
+          "Arme Royal Stinger pour plus de soins",
+          "Empilez les HP une fois la vitesse requise atteinte pour plus de soins",
+          "DOIT faire une attaque double avec {P/Maxie} et {P/Vlada} — si votre {P/Akari} a plus d'ATK que {P/Maxie}, cela faussera tout",
+          "Ordre des actions : Burst 2 - Burst 1 - Burst 3"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "{P/Akari} :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Rogue Charm avec 100% de critique ou Executioner's Charm",
+          "Set Burst 2 pièces (transcendance 6★ optionnelle pour le Burst 1 au tour 1 mais pas nécessaire)",
+          "134 d'efficacité avec l'arme Briareos's Recklessness, ou 268 sans elle",
+          "Optez pour un build résistant si vous voulez alléger la charge de soins",
+          "L'ATK doit être inférieure à celle de {P/Maxie} (pour que {P/Monad Eva} fasse son attaque double avec {P/Maxie}, pas {P/Akari})",
+          "Ordre des actions si vous appliquez la réduction de résilience : S2 - S3 - S1 - Chain - Burst 3 S2 - S3",
+          "Ordre des actions si vous N'appliquez PAS la réduction de résilience ({P/Maxie} a 268 d'efficacité) : S1 - S1 - Burst 3 S2 - Chain - S3 - S2"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "{P/Maxie} :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Set Revenge T4 de préférence",
+          "Arme Heartrender's Blade",
+          "Transcendance 6★ nécessaire pour +25 AP en début de combat (ou utilisez un set Burst 2 pièces)",
+          "134 d'efficacité ou 268 avec une {P/Monad Eva} 6★",
+          "L'ATK doit être supérieure à celle de {P/Akari} (pour que {P/Monad Eva} fasse son attaque double avec {P/Maxie})",
+          "Ordre des actions : S3 - Burst 3 x7"
+        ]
+      },
+      {
+        "type": "p",
+        "string": "{P/Vlada} :"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Set Revenge T4 de préférence",
+          "Arme Phantom Necrosis pour réduire votre vitesse",
+          "Executioner's Charm ou Rogue Charm avec 100% de critique",
+          "Ordre des actions : S3 - Chain - S2"
         ]
       }
     ]

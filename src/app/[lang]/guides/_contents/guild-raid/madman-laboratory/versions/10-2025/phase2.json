@@ -39,6 +39,12 @@
         "type": "p",
         "string": "如有需要，移除游侠誓约。"
       }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Retirez le geas ranger si nécessaire."
+      }
     ]
   },
   "Mage Team": {
@@ -179,6 +185,37 @@
           "{P/Laine} : 只用S1获取优先权",
           "{P/Skadi} : 除了第一次破坏时的连锁攻击外，只用S1燃烧Lv1",
           "{P/Alice} : 使用一次S2降低Boss速度，然后在其他破坏时使用连锁攻击"
+        ]
+      }
+    ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Réglage de vitesse : {P/Maxwell} > {P/Laine} > {P/Skadi} > {P/Alice}"
+      },
+      {
+        "type": "p",
+        "string": "Ordre de chaîne : {P/Alice} > {P/Laine} > {P/Maxwell} > {P/Skadi}"
+      },
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2 ne doivent pas dépasser 50K de dégâts (vous ne voulez pas que le Boss vous frappe avec sa compétence d'enrage)"
+      },
+      {
+        "type": "p",
+        "string": "Si vous la jouez, retirez l'EE de {P/Eternal} : vous ne voulez pas qu'elle obtienne un tour supplémentaire"
+      },
+      {
+        "type": "p",
+        "string": "Rotation de break"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "{P/Maxwell} priorité : S3 > S2 Burn Niv 2 > S1",
+          "{P/Laine} : uniquement S1 pour gagner de la priorité",
+          "{P/Skadi} : uniquement S1 Burn Niv 1 sauf pour le premier break où elle utilisera la Chain attack",
+          "{P/Alice} : utilisez S2 une fois pour ralentir le Boss puis utilisez la Chain attack sur l'autre break"
         ]
       }
     ]

@@ -40,6 +40,12 @@
         "string": "如有需要，移除游侠誓约。"
       }
     ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Retirez le geas ranger si nécessaire."
+      }
+    ],
     "requirements": {
       "entries": [
         {
@@ -52,7 +58,10 @@
           "notes": ["Only S1"],
           "notes_jp": ["S1のみ"],
           "notes_kr": ["S1만 사용"],
-          "notes_zh": ["只用S1"]
+          "notes_zh": ["只用S1"],
+          "notes_fr": [
+            "Uniquement S1"
+          ]
         },
         {
           "character": "Notia",
@@ -70,7 +79,10 @@
           "notes_kr": [
             "{B/BT_ACTION_GAUGE}를 위해 {B/FIERCE_OFFENSIVE}를 유지하세요."
           ],
-          "notes_zh": ["保持{B/FIERCE_OFFENSIVE}以获得{B/BT_ACTION_GAUGE}。"]
+          "notes_zh": ["保持{B/FIERCE_OFFENSIVE}以获得{B/BT_ACTION_GAUGE}。"],
+          "notes_fr": [
+            "Maintenez simplement {B/FIERCE_OFFENSIVE} actif pour la {B/BT_ACTION_GAUGE}."
+          ]
         },
         {
           "character": "Charlotte",
@@ -91,6 +103,9 @@
           ],
           "notes_zh": [
             "第一回合必须使用S1触发{I-W/Rampaging Caracal}和{P/Notia}的{SK/Notia|S2}"
+          ],
+          "notes_fr": [
+            "Doit faire S1 au premier tour pour déclencher {I-W/Rampaging Caracal} et le {SK/Notia|S2} de {P/Notia}"
           ]
         },
         {
@@ -103,7 +118,8 @@
           "notes": [],
           "notes_jp": [],
           "notes_kr": [],
-          "notes_zh": []
+          "notes_zh": [],
+          "notes_fr": []
         }
       ]
     }
@@ -165,6 +181,16 @@
         "string": "可以用{P/Eternal}替换{P/Alice}"
       }
     ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "{P/Maxwell} S1 + {P/Laine} S3 + {P/Skadi} S2 ne doivent pas dépasser 50K de dégâts (vous ne voulez pas que le Boss vous frappe avec sa compétence d'enrage)"
+      },
+      {
+        "type": "p",
+        "string": "Vous pouvez remplacer {P/Alice} par {P/Eternal}"
+      }
+    ],
     "requirements": {
       "entries": [
         {
@@ -178,7 +204,10 @@
           "notes": ["S3 > S2 Burn Lv 2 > S1"],
           "notes_jp": ["S3 > S2バーンLv2 > S1"],
           "notes_kr": ["S3 > S2 번 Lv 2 > S1"],
-          "notes_zh": ["S3 > S2燃烧Lv2 > S1"]
+          "notes_zh": ["S3 > S2燃烧Lv2 > S1"],
+          "notes_fr": [
+            "S3 > S2 Burn Niv 2 > S1"
+          ]
         },
         {
           "character": "Laine",
@@ -191,7 +220,10 @@
           "notes": ["Only S1 for getting priority"],
           "notes_jp": ["優先権獲得のためS1のみ"],
           "notes_kr": ["우선권 획득을 위해 S1만 사용"],
-          "notes_zh": ["只用S1获取优先权"]
+          "notes_zh": ["只用S1获取优先权"],
+          "notes_fr": [
+            "Uniquement S1 pour gagner de la priorité"
+          ]
         },
         {
           "character": "Skadi",
@@ -205,7 +237,10 @@
           ],
           "notes_jp": ["最初のブレイク時のチェイン攻撃以外はS1バーンLv1のみ"],
           "notes_kr": ["첫 브레이크 체인 공격 외에는 S1 번 Lv 1만 사용"],
-          "notes_zh": ["除了第一次破坏时的连锁攻击外，只用S1燃烧Lv1"]
+          "notes_zh": ["除了第一次破坏时的连锁攻击外，只用S1燃烧Lv1"],
+          "notes_fr": [
+            "Uniquement S1 Burn Niv 1 sauf pour le premier break où elle utilisera la Chain attack"
+          ]
         },
         {
           "character": "Eternal",
@@ -217,7 +252,10 @@
           "notes": ["remove her EE you don't want her to get an extra turn"],
           "notes_jp": ["EEを外してください：追加ターンを得させたくない"],
           "notes_kr": ["EE를 해제하세요: 추가 턴을 얻게 하고 싶지 않음"],
-          "notes_zh": ["移除她的EE：你不想让她获得额外回合"]
+          "notes_zh": ["移除她的EE：你不想让她获得额外回合"],
+          "notes_fr": [
+            "retirez son EE, vous ne voulez pas qu'elle obtienne un tour supplémentaire"
+          ]
         },
         {
           "character": "Alice",
@@ -235,7 +273,10 @@
           "notes_kr": [
             "S2를 한 번 사용해 보스 속도를 낮추고 다른 브레이크 시 체인 공격"
           ],
-          "notes_zh": ["使用一次S2降低Boss速度，然后在其他破坏时使用连锁攻击"]
+          "notes_zh": ["使用一次S2降低Boss速度，然后在其他破坏时使用连锁攻击"],
+          "notes_fr": [
+            "Utilisez S2 une fois pour ralentir le Boss puis utilisez la Chain attack sur l'autre break"
+          ]
         }
       ]
     }
@@ -265,7 +306,8 @@
           "en": "Boss acts between {P/Viella} and {P/Kuro}.",
           "jp": "ボスは{P/Viella}と{P/Kuro}の間に行動します。",
           "kr": "보스는 {P/Viella}와 {P/Kuro} 사이에 행동합니다.",
-          "zh": "Boss在{P/Viella}和{P/Kuro}之间行动。"
+          "zh": "Boss在{P/Viella}和{P/Kuro}之间行动。",
+          "fr": "Le Boss joue entre {P/Viella} et {P/Kuro}."
         }
       },
       {
@@ -307,6 +349,16 @@
         "string": "如果你的{P/Maxwell}无法承受Boss的双暴击，请给{P/Viella}装备{I-W/Iron Messiah}并将{P/Maxwell}放在第1个位置。"
       }
     ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Essayez de garder un écart de 10+ de {S/SPD} entre {P/Kuro}, {P/Demiurge Luna} et {P/Maxwell} pour réduire le risque de RNG d'ordre au tour 1."
+      },
+      {
+        "type": "p",
+        "string": "Si votre {P/Maxwell} ne peut pas survivre à un double critique du Boss, utilisez {I-W/Iron Messiah} sur {P/Viella} et placez {P/Maxwell} dans le 1er emplacement."
+      }
+    ],
     "requirements": {
       "entries": [
         {
@@ -327,6 +379,9 @@
           ],
           "notes_zh": [
             "破坏结束后需要267以上的{S/SPD}才能比Boss先行动"
+          ],
+          "notes_fr": [
+            "A besoin de 267+ de {S/SPD} pour dépasser le Boss en vitesse après la fin du break"
           ]
         },
         {
@@ -350,6 +405,9 @@
           ],
           "notes_zh": [
             "注意S3伤害不能超过5万（否则会触发Boss的狂暴技能）"
+          ],
+          "notes_fr": [
+            "Attention à ce que son S3 ne dépasse pas 50K de dégâts — cela déclencherait la compétence de revenge du Boss"
           ]
         },
         {
@@ -381,6 +439,11 @@
             "在高阶段即使只损失少量HP，{AS/Revenge}套装也是理想选择。低阶段如果Boss攻击后仍满血，可以使用{AS/Attack}套装",
             "如有可能使用+0防具以承受更多伤害，更可靠地触发{AS/Revenge}",
             "移除EE，避免她在Boss和{P/Kuro}之间插入"
+          ],
+          "notes_fr": [
+            "Le set {AS/Revenge} est idéal aux stages élevés même si elle ne perd qu'un peu de HP. Le set {AS/Attack} fonctionne aux stages inférieurs si elle reste à pleins HP après le coup du Boss",
+            "Utilisez une armure +0 si possible pour subir plus de dégâts et déclencher {AS/Revenge} plus fiablement",
+            "Retirez l'EE pour qu'elle ne s'intercale pas entre le Boss et {P/Kuro}"
           ]
         },
         {
@@ -405,6 +468,9 @@
           ],
           "notes_zh": [
             "推荐使用{AS/Revenge}套装以获得最佳效果"
+          ],
+          "notes_fr": [
+            "Set {AS/Revenge} recommandé pour les meilleurs résultats"
           ]
         }
       ]
@@ -439,7 +505,8 @@
           "en": "Boss acts before {P/Charlotte} on turn 1.",
           "jp": "ターン1ではボスが{P/Charlotte}の前に行動します。",
           "kr": "턴 1에서 보스는 {P/Charlotte}보다 먼저 행동합니다.",
-          "zh": "第1回合Boss会在{P/Charlotte}之前行动。"
+          "zh": "第1回合Boss会在{P/Charlotte}之前行动。",
+          "fr": "Le Boss joue avant {P/Charlotte} au tour 1."
         }
       },
       {
@@ -509,6 +576,24 @@
         "string": "不建议使用50% {E/Earth}攻击/HP/防御的契约，因为总分会略低。仅在需要生存时才开启。"
       }
     ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Positionnement (de gauche à droite) : {P/Ryu Lion}, {P/Charlotte}, {P/Core Fusion Notia}, {P/Pesketh}."
+      },
+      {
+        "type": "p",
+        "string": "Utilisez le set {AS/Revenge} sur {P/Ryu Lion}. Important : {P/Ryu Lion} ne doit pas équiper une arme qui applique un debuff."
+      },
+      {
+        "type": "p",
+        "string": "Grâce au geas qui réduit les dégâts des ennemis empoisonnés, le Boss inflige des dégâts constants quels que soient les critiques. Tant que vous survivez aux tours 1 et 2, la run est sûre — aucun RNG requis."
+      },
+      {
+        "type": "p",
+        "string": "Le geas 50% ATK/HP/DEF {E/Earth} n'est pas recommandé ici car il donne légèrement moins de points au total — ne l'activez que si nécessaire pour survivre."
+      }
+    ],
     "requirements": {
       "entries": [
         {
@@ -523,7 +608,10 @@
           "notes": ["Either weapon works"],
           "notes_jp": ["どちらの武器でも可"],
           "notes_kr": ["둘 중 어느 무기든 사용 가능"],
-          "notes_zh": ["两种武器均可使用"]
+          "notes_zh": ["两种武器均可使用"],
+          "notes_fr": [
+            "L'une ou l'autre arme convient"
+          ]
         },
         {
           "character": "Ryu Lion",
@@ -539,7 +627,10 @@
           "notes": ["Must not equip a weapon that applies a debuff"],
           "notes_jp": ["デバフを付与する武器を装備してはいけません"],
           "notes_kr": ["디버프를 부여하는 무기를 장착하면 안 됩니다"],
-          "notes_zh": ["不能装备会施加减益的武器"]
+          "notes_zh": ["不能装备会施加减益的武器"],
+          "notes_fr": [
+            "Ne doit pas équiper une arme qui applique un debuff"
+          ]
         },
         {
           "character": "Core Fusion Notia",
@@ -554,7 +645,8 @@
           "notes": [],
           "notes_jp": [],
           "notes_kr": [],
-          "notes_zh": []
+          "notes_zh": [],
+          "notes_fr": []
         },
         {
           "character": "Pesketh",
@@ -569,7 +661,8 @@
           "notes": [],
           "notes_jp": [],
           "notes_kr": [],
-          "notes_zh": []
+          "notes_zh": [],
+          "notes_fr": []
         }
       ]
     }

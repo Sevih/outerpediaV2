@@ -83,6 +83,24 @@
         "string": "如果能秒杀Boss，可以关闭{E/Fire}攻击力+契约以获得更多分数。"
       }
     ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Conçu pour le stage 10+. Les résultats et les prérequis peuvent varier aux stages inférieurs car le Boss a moins de {S/SPD} et de {S/RES}."
+      },
+      {
+        "type": "p",
+        "string": "Utilisez S3 dès que possible sauf si vous avez besoin du bouclier pour survivre. Si le Boss ne vous fait pas descendre sous 50% à votre premier tour, utilisez le burst 1 ensuite."
+      },
+      {
+        "type": "p",
+        "string": "Doit être en solo (aucune autre unité dans l'équipe) car le Boss frappe bien plus fort si elle obtient un kill."
+      },
+      {
+        "type": "p",
+        "string": "Si vous surclassez le Boss en dégâts, vous pouvez désactiver le geas ATK+ {E/Fire} pour plus de points."
+      }
+    ],
     "requirements": {
       "entries": [
         {
@@ -109,6 +127,10 @@
           "notes_zh": [
             "契约的{S/EFF}+150被EE翻倍，所以只需约218 {S/EFF}，仅手套位即可达到",
             "高阶段使用{I-A/Unholy Exsultet}确保第1回合存活。不需要降到50%以下时可用{I-A/Charmer's Golden Chalice}承受足够伤害"
+          ],
+          "notes_fr": [
+            "L'EE double le geas +150 {S/EFF}, vous n'avez donc besoin que d'environ 218 {S/EFF}, facilement atteint avec le seul emplacement de gants",
+            "{I-A/Unholy Exsultet} pour survivre au tour 1 aux stages élevés. {I-A/Charmer's Golden Chalice} si vous devez subir assez de dégâts pour descendre sous 50%"
           ]
         }
       ]
@@ -147,7 +169,8 @@
           "en": "Lots of flexibility as long as {P/Maxie} and {P/Roxie} are fast enough and {P/Akari} outspeeds the boss.",
           "jp": "{P/Maxie}と{P/Roxie}が十分速く、{P/Akari}がボスより速ければ調整の余地があります。",
           "kr": "{P/Maxie}와 {P/Roxie}가 충분히 빠르고 {P/Akari}가 보스보다 빠르면 조정 여지가 있습니다.",
-          "zh": "只要{P/Maxie}和{P/Roxie}足够快且{P/Akari}比Boss快，就有很大的调整空间。"
+          "zh": "只要{P/Maxie}和{P/Roxie}足够快且{P/Akari}比Boss快，就有很大的调整空间。",
+          "fr": "Beaucoup de flexibilité tant que {P/Maxie} et {P/Roxie} sont assez rapides et que {P/Akari} dépasse la vitesse du Boss."
         }
       },
       {
@@ -197,6 +220,20 @@
         "string": "如果能秒杀Boss，可以关闭{E/Fire}攻击力+契约以获得更多分数。"
       }
     ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Conçu pour le stage 10+. Les résultats et les prérequis peuvent varier aux stages inférieurs car le Boss a moins de {S/SPD} et de {S/RES}."
+      },
+      {
+        "type": "p",
+        "string": "Brisez le Boss au tour 15 avant qu'elle n'utilise son nuke S3. Si vous le faites, c'est 0 dégât subi, ce qui veut dire que ça monte sans problème dans les stages élevés."
+      },
+      {
+        "type": "p",
+        "string": "Si vous surclassez le Boss en dégâts, vous pouvez désactiver le geas ATK+ {E/Fire} pour plus de points."
+      }
+    ],
     "requirements": {
       "entries": [
         {
@@ -227,6 +264,11 @@
             "{S/EFF}518以上或使用{I-W/Briareos's Recklessness [Ranger]}时259以上",
             "如果{P/Roxie}和{P/Maxie}的{S/EFF}都达到259以上，则不需要{S/RES}降低",
             "2 {AS/Bursting}可选，用于第1回合爆发2无效化防御buff"
+          ],
+          "notes_fr": [
+            "518+ {S/EFF}, ou 259+ avec {I-W/Briareos's Recklessness [Ranger]}",
+            "Si {P/Roxie} et {P/Maxie} ont 259+ {S/EFF}, vous pouvez vous passer de la réduction de {S/RES}",
+            "2 {AS/Bursting} optionnel pour le burst 2 au tour 1 afin d'annuler le buff de défense"
           ]
         },
         {
@@ -266,6 +308,9 @@
           ],
           "notes_zh": [
             "可以最低{S/SPD}(95)但126时她能尽早行动且仅获得2回合，S3灼烧有更多延长机会"
+          ],
+          "notes_fr": [
+            "Peut être à la {S/SPD} minimale (95) mais à 126, elle joue le plus tôt possible tout en n'ayant que 2 tours, donnant à ses burns de S3 plus d'occasions d'être prolongés"
           ]
         }
       ]
@@ -371,6 +416,28 @@
         "string": "如果能秒杀Boss，可以关闭{E/Fire}攻击力+契约以获得更多分数。"
       }
     ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Conçu pour le stage 10+. Les résultats et les prérequis peuvent varier aux stages inférieurs car le Boss a moins de {S/SPD} et de {S/RES}."
+      },
+      {
+        "type": "p",
+        "string": "Équipe alternative facile similaire au Solo Ember, bien qu'elle marque moins de points que les 2 autres équipes."
+      },
+      {
+        "type": "p",
+        "string": "Les 2 autres coéquipiers ne devraient être que des porteurs de talisman qui meurent avant de pouvoir jouer. Les {C/Defender} peuvent porter {I-A/Charmer's Golden Chalice} pour mourir plus facilement si nécessaire."
+      },
+      {
+        "type": "p",
+        "string": "{P/Mero} devrait commencer par S3 puis spammer S2 dès que possible (n'utilisez pas le burst 2+). Si vous ne pouvez pas faire S2, passez à S3 puis revenez à S2."
+      },
+      {
+        "type": "p",
+        "string": "Si vous surclassez le Boss en dégâts, vous pouvez désactiver le geas ATK+ {E/Fire} pour plus de points."
+      }
+    ],
     "requirements": {
       "entries": [
         {
@@ -396,6 +463,10 @@
           "notes_zh": [
             "最低{S/SPD}。需要{S/EFF}268以上，否则开启+150 {S/EFF}契约",
             "{S/EFF}足够的话也开启{S/RES}+50/200契约"
+          ],
+          "notes_fr": [
+            "{S/SPD} minimale. 268+ {S/EFF} requis, sinon activez le geas +150 {S/EFF}",
+            "Activez le geas {S/RES} +50/200 si vous pouvez atteindre assez de {S/EFF} pour ceux-ci aussi"
           ]
         },
         {
@@ -422,6 +493,10 @@
           "notes_zh": [
             "必须比{P/Mero}慢",
             "{I-T/Vanguard's Charm}+10和EE+5也足够AP，不需要爆发套装"
+          ],
+          "notes_fr": [
+            "Doit être plus lente que {P/Mero}",
+            "{I-T/Vanguard's Charm} +10 et EE+5 devraient aussi suffire en AP sans set burst"
           ]
         }
       ]
@@ -543,11 +618,38 @@
         "string": "如果能秒杀Boss，可以关闭{E/Fire}攻击力+契约以获得更多分数。"
       }
     ],
+    "note_fr": [
+      {
+        "type": "p",
+        "string": "Conçu pour le stage 10+. Les résultats et les prérequis peuvent varier aux stages inférieurs car le Boss a moins de {S/SPD} et de {S/RES}."
+      },
+      {
+        "type": "p",
+        "string": "Variante {AS/Revenge} de la Burn Team, nettement plus de dégâts avec le même multiplicateur. Ne fonctionne que sur des stages très élevés où le Boss peut one-shot {P/Roxie} et {P/Akari} et faire descendre {P/Maxie} et {P/Vlada} à mi-HP avec son S3. 0 RNG, 100% de réussite."
+      },
+      {
+        "type": "p",
+        "string": "La différence est que vous laissez le Boss utiliser S3 pour entrer en portée de {AS/Revenge}. Le debuff de chance critique rend l'encaissement du S3 sûr. {P/Roxie} et {P/Akari} meurent intentionnellement pour ne pas consommer de tours."
+      },
+      {
+        "type": "p",
+        "string": "Si vous ne jouez pas {AS/Revenge}, restez sur la Burn Team classique."
+      },
+      {
+        "type": "p",
+        "string": "Au moins 3 unités sur 4 ont besoin d'un chain skill niveau 5 pour infliger assez de dégâts de WG (23+). Les 4 si {P/Vlada} est 3*. Si vous n'atteignez pas 23+, utilisez {I-T/Sage's Charm} +10 sur {P/Akari} pour plus de dégâts de WG."
+      },
+      {
+        "type": "p",
+        "string": "Si vous surclassez le Boss en dégâts, vous pouvez désactiver le geas ATK+ {E/Fire} pour plus de points."
+      }
+    ],
     "requirements": {
       "note": "Stick to these values for optimised damage unless you know what you're doing. {P/Roxie} and {P/Akari} move after {P/Maxie} in certain turns for more optimal debuff extension order.",
       "note_jp": "最適化されたダメージのために、理解していない限りこれらの値を守ってください。{P/Roxie}と{P/Akari}は特定のターンで{P/Maxie}の後に行動し、より最適なデバフ延長順序になります。",
       "note_kr": "최적화된 데미지를 위해 이 값을 유지하세요. {P/Roxie}와 {P/Akari}는 특정 턴에서 {P/Maxie} 이후에 행동하여 더 최적의 디버프 연장 순서가 됩니다.",
       "note_zh": "除非你知道自己在做什么，否则请保持这些数值以获得最优伤害。{P/Roxie}和{P/Akari}在某些回合中在{P/Maxie}之后行动，以获得更优的减益延长顺序。",
+      "note_fr": "Respectez ces valeurs pour des dégâts optimisés sauf si vous savez ce que vous faites. {P/Roxie} et {P/Akari} jouent après {P/Maxie} à certains tours pour un ordre d'extension des debuffs plus optimal.",
       "entries": [
         {
           "character": "Maxie",
@@ -569,6 +671,9 @@
           ],
           "notes_zh": [
             "{B/BT_STAT|ST_BUFF_CHANCE}增益不会一直生效，所以需要一些{S/EFF}"
+          ],
+          "notes_fr": [
+            "Le buff {B/BT_STAT|ST_BUFF_CHANCE} ne sera pas actif en permanence, donc un peu de {S/EFF} est nécessaire"
           ]
         },
         {
@@ -609,6 +714,11 @@
             "2 {AS/Bursting}必须，用于第1回合爆发2无效化防御buff",
             "如果没有{I-W/Briareos's Recklessness [Ranger]}，需要达到518 {S/EFF}",
             "+0头盔让她更容易被S3击杀"
+          ],
+          "notes_fr": [
+            "2 {AS/Bursting} obligatoire pour faire burst 2 au tour 1 et empêcher le buff de défense",
+            "Si vous n'avez pas {I-W/Briareos's Recklessness [Ranger]}, vous devez atteindre 518 {S/EFF}",
+            "Casque +0 pour qu'elle meure plus facilement face au S3"
           ]
         },
         {
