@@ -4,6 +4,7 @@ import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -56,6 +57,20 @@ export default function VerdandiGuide() {
 
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
+
+      <hr className="my-6 border-neutral-700" />
+      <MultiVideoEmbed
+        hashPrefix="verdandi-video"
+        videos={[
+          {
+            platform: 'youtube',
+            id: '4h2JnK2MXkM',
+            title: 'Verdandi — Dimensional Singularity — Rank SSS++',
+            author: 'Sevih',
+            label: 'Rank SSS++',
+          },
+        ]}
+      />
     </GuideTemplate>
   );
 }
