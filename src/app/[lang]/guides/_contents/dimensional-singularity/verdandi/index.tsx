@@ -32,6 +32,14 @@ const GBETH_TITLE: LangMap = {
   fr: 'Strategie equipe GBeth',
 };
 
+const LIGHT_TITLE: LangMap = {
+  en: 'Light team strategy',
+  jp: '光属性編成戦略',
+  kr: '빛 속성 팀 전략',
+  zh: '光属性队伍策略',
+  fr: 'Strategie equipe Light',
+};
+
 export default function VerdandiGuide() {
   const { lang } = useI18n();
 
@@ -52,11 +60,15 @@ export default function VerdandiGuide() {
         sections={[
           { title: 'general', tips: TIPS.general },
           { title: GBETH_TITLE, tips: TIPS.gbeth },
+          { title: LIGHT_TITLE, tips: TIPS.light },
         ]}
       />
 
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={LIGHT_TITLE} entries={RECOMMENDED.light} />
 
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
