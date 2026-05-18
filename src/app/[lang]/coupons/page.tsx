@@ -5,6 +5,7 @@ import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
 import PromoCodes from '@/app/components/home/PromoCodes';
+import { REDEEM_ENABLED } from '@/lib/redeem-config';
 
 export const revalidate = 86400;
 
@@ -36,6 +37,11 @@ export default async function PromoCodesPage({ params }: Props) {
     loadPromoCodes(),
   ]);
 
+  // Subset of i18n strings consumed by the redeem panel/buttons.
+  const redeemT = Object.fromEntries(
+    Object.entries(t).filter(([key]) => key.startsWith('coupons.redeem.'))
+  ) as Record<string, string>;
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-6 md:px-6">
       <h1 className="h1-page mb-8">{t['page.coupons.title']}</h1>
@@ -45,7 +51,10 @@ export default async function PromoCodesPage({ params }: Props) {
 
       <PromoCodes
         codes={promoCodes}
+        lang={lang}
         showAll
+        enableRedeem={REDEEM_ENABLED}
+        redeemT={redeemT}
         t={{
           title: t['home.section.codes'],
           copy: t['home.codes.copy'],
