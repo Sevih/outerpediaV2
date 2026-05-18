@@ -315,7 +315,7 @@ export const customBannerPicks: CustomBannerPick[] = [
         }
     },
     {
-        names: ["Astei", "Liselotte", "Viella"],
+        names: ["Primine","Astei", "Liselotte", "Viella"],
         reason: {
             en: "Healers.",
             jp: "ヒーラー。",
@@ -325,7 +325,7 @@ export const customBannerPicks: CustomBannerPick[] = [
         }
     },
     {
-        names: ["Drakhan", "Regina", "Caren", "Vlada", "Maxie", "Fortuna"],
+        names: ["Eris","Drakhan", "Regina", "Caren", "Vlada", "Maxie", "Fortuna"],
         reason: {
             en: "DPS with special use cases.",
             jp: "特定用途向けDPS。",

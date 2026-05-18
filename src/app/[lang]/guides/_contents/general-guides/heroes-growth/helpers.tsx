@@ -67,6 +67,16 @@ const xpItems = [
     { item: 'Steak Dish', xp: 8000 },
 ];
 
+const affinityRewards: { level: number; reward: 'stats' | 'chat' }[] = [
+    { level: 20, reward: 'stats' },
+    { level: 30, reward: 'chat' },
+    { level: 40, reward: 'stats' },
+    { level: 60, reward: 'stats' },
+    { level: 70, reward: 'chat' },
+    { level: 80, reward: 'stats' },
+    { level: 100, reward: 'stats' },
+];
+
 const specialEquipmentMaterials = {
     ee: [
         { item: 'Blue Memory Stone', range: '0-5', needed: 150 },
@@ -255,6 +265,67 @@ export const LABELS = {
         fr: "passe l'Affinity au niveau 10 (event/cash shop uniquement)."
     },
 
+    // Affinity — Level Expansion
+    affinityExpansionTitle: {
+        en: "Affinity Level Expansion",
+        jp: "親密度レベル拡張",
+        kr: "친밀도 레벨 확장",
+        zh: "好感度等级扩展",
+        fr: "Extension du niveau d'Affinity"
+    },
+    affinityExpansionDesc: {
+        en: "The maximum Affinity Level is 100. Reaching certain levels grants additional milestone rewards:",
+        jp: "親密度レベルの上限は100です。特定のレベルに到達すると追加の達成報酬が得られます：",
+        kr: "친밀도 레벨 상한은 100입니다. 특정 레벨에 도달하면 추가 달성 보상을 받습니다:",
+        zh: "好感度等级上限为100。达到特定等级可获得额外的里程碑奖励：",
+        fr: "Le niveau maximum d'Affinity est de 100. Atteindre certains niveaux octroie des récompenses de palier supplémentaires :"
+    },
+    affinityRewardLevelHeader: { en: "Level", jp: "レベル", kr: "레벨", zh: "等级", fr: "Niveau" },
+    affinityRewardHeader: { en: "Reward", jp: "報酬", kr: "보상", zh: "奖励", fr: "Récompense" },
+    rewardStats: {
+        en: "Some stats increased",
+        jp: "一部のステータス上昇",
+        kr: "일부 스탯 증가",
+        zh: "部分属性提升",
+        fr: "Certaines stats augmentées"
+    },
+    rewardChat: {
+        en: "Chat added",
+        jp: "チャット追加",
+        kr: "채팅 추가",
+        zh: "新增聊天",
+        fr: "Chat ajouté"
+    },
+
+    // Affinity — Bond & Chat
+    bondChatTitle: {
+        en: "Bond & Chat",
+        jp: "ボンド＆チャット",
+        kr: "유대 & 채팅",
+        zh: "羁绊与聊天",
+        fr: "Bond & Chat"
+    },
+    bondChatIntro: {
+        en: "The Bond and Chat features are available on the Affinity screen of 3★ heroes. They are not available for collab limited heroes, nor for 2★ and 1★ heroes.",
+        jp: "ボンドとチャット機能は3★ヒーローの親密度画面で利用できます。コラボ限定ヒーロー、および2★・1★ヒーローには適用されません。",
+        kr: "유대와 채팅 기능은 3★ 영웅의 친밀도 화면에서 사용할 수 있습니다. 콜라보 한정 영웅과 2★, 1★ 영웅에는 적용되지 않습니다.",
+        zh: "羁绊和聊天功能可在3★英雄的好感度界面使用。不适用于联动限定英雄以及2★和1★英雄。",
+        fr: "Les fonctionnalités Bond et Chat sont disponibles sur l'écran Affinity des Héros 3★. Elles ne sont pas disponibles pour les Héros collab limited, ni pour les Héros 2★ et 1★."
+    },
+    bondDesc: {
+        en: "lets you inject one Gift per day into a hero of your choice, boosting that hero's stats for 1 day — until the daily reset (00:00 UTC). When a hero's Affinity Level reaches 5 and 10, additional touchable areas unlock. Compatible heroes are added progressively.",
+        jp: "は1日1回、好きなヒーローにGiftを注入でき、そのヒーローのステータスを1日間（リセットの00:00 UTCまで）強化します。ヒーローの親密度レベルが5と10に達すると、追加のタッチ可能エリアが解放されます。対応ヒーローは順次追加されます。",
+        kr: "는 하루에 한 번 원하는 영웅에게 Gift를 주입하여 해당 영웅의 스탯을 1일간(일일 초기화 00:00 UTC까지) 강화할 수 있습니다. 영웅의 친밀도 레벨이 5와 10에 도달하면 추가 터치 가능 영역이 해금됩니다. 호환 영웅은 순차적으로 추가됩니다.",
+        zh: "可让你每天向所选英雄注入一次Gift，使该英雄的属性提升1天——直到每日重置（00:00 UTC）。当英雄的好感度等级达到5和10时，会解锁额外的可触摸区域。兼容英雄将逐步追加。",
+        fr: "permet d'injecter un Gift par jour dans le Héros de votre choix, ce qui augmente ses stats pendant 1 jour — jusqu'au reset quotidien (00:00 UTC). Quand l'Affinity d'un Héros atteint les niveaux 5 et 10, des zones tactiles supplémentaires se débloquent. Les Héros compatibles sont ajoutés progressivement."
+    },
+    chatDesc: {
+        en: "lets you chat with a hero once per day, for up to 5 different heroes per day. Depending on the dialogue option you choose, the hero's Affinity increases.",
+        jp: "は1日1回ヒーローとチャットできる機能で、1日に最大5体の異なるヒーローとチャットできます。選択した会話の選択肢によって、ヒーローの親密度が上昇します。",
+        kr: "는 하루에 한 번 영웅과 채팅하는 기능으로, 하루에 최대 5명의 다른 영웅과 채팅할 수 있습니다. 선택한 대화 선택지에 따라 영웅의 친밀도가 상승합니다.",
+        zh: "可与英雄聊天，每天一次，每天最多可与5名不同英雄聊天。根据所选的对话选项，英雄的好感度会提升。",
+        fr: "permet de discuter avec un Héros une fois par jour, pour 5 Héros différents au maximum par jour. Selon l'option de dialogue choisie, l'Affinity du Héros augmente."
+    },
     // Skill Upgrade section
     skillUpgradeDesc1: {
         en: "Each hero has 3 basic skills and 1 chain passive. Each can be upgraded 4 times for bonus effects. Upgrading is done in Hero → Skills using Skill Books found in events, shops, rewards, and {arkRaidName}.",
@@ -598,6 +669,31 @@ export function AffinityList({ lang }: { lang: Lang }) {
                                 ))}
                             </td>
                             <td className="py-2 whitespace-nowrap align-middle">+{points.toLocaleString()} ({lRec(LABELS.bonus, lang)}: +{bonus})</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+export function AffinityRewardsTable({ lang }: { lang: Lang }) {
+    return (
+        <div className="overflow-x-auto">
+            <table className="table-auto text-sm text-white">
+                <thead>
+                    <tr className="border-b border-white/10">
+                        <th className="text-left pr-6 pb-2">{lRec(LABELS.affinityRewardLevelHeader, lang)}</th>
+                        <th className="text-left pb-2">{lRec(LABELS.affinityRewardHeader, lang)}</th>
+                    </tr>
+                </thead>
+                <tbody className="divide-y divide-white/10">
+                    {affinityRewards.map(({ level, reward }) => (
+                        <tr key={level} className="align-middle">
+                            <td className="py-2 pr-6 font-medium whitespace-nowrap">Lv. {level}</td>
+                            <td className="py-2">
+                                {lRec(reward === 'chat' ? LABELS.rewardChat : LABELS.rewardStats, lang)}
+                            </td>
                         </tr>
                     ))}
                 </tbody>

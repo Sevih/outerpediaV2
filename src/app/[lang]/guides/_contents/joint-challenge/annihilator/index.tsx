@@ -14,6 +14,12 @@ import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
 
+/* -- Version: 05-2026 ---------------------------------------- */
+import v05Strings from './versions/05-2026/strings.json';
+import v05Tips from './versions/05-2026/tips.json';
+import v05Recommended from './versions/05-2026/recommended.json';
+import v05Teams from './versions/05-2026/teams.json';
+
 /* -- Version: 12-2025 ---------------------------------------- */
 import v12Strings from './versions/12-2025/strings.json';
 import v12Tips from './versions/12-2025/tips.json';
@@ -36,6 +42,13 @@ const preloadedBosses: Record<string, Boss> = {
 };
 
 /* -- Typed data ----------------------------------------------- */
+
+const may2026 = {
+  strings: v05Strings as Record<string, LangMap>,
+  tips: v05Tips as Record<string, LangMap[]>,
+  recommended: v05Recommended as CharacterRecommendation[],
+  teams: v05Teams as TeamData,
+};
 
 const dec2025 = {
   strings: v12Strings as Record<string, LangMap>,
@@ -61,10 +74,33 @@ export default function AnnihilatorGuide() {
 
   return (
     <GuideTemplate
-      title={lRec(dec2025.strings.title, lang)}
-      introduction={lRec(dec2025.strings.intro, lang)}
-      defaultVersion="december2025"
+      title={lRec(may2026.strings.title, lang)}
+      introduction={lRec(may2026.strings.intro, lang)}
+      defaultVersion="may2026"
+      updating
       versions={{
+        may2026: {
+          label: lRec(may2026.strings.label, lang),
+          content: (
+            <>
+              <BossDisplay
+                bossName="Annihilator"
+                modeKey="Joint Challenge"
+                defaultBossId="4318062"
+                preloadedBosses={preloadedBosses}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <TacticalTips
+                sections={[{ title: 'tactical', tips: may2026.tips.tactical }]}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <RecommendedCharacterList entries={may2026.recommended} />
+              <hr className="my-6 border-neutral-700" />
+              <StageBasedTeamSelector teamData={may2026.teams} defaultStage="Recommended Team" />
+              {/* TODO: add <MultiVideoEmbed hashPrefix="annihilator-may2026-video" ... /> after clear */}
+            </>
+          ),
+        },
         december2025: {
           label: lRec(dec2025.strings.label, lang),
           content: (

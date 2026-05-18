@@ -16,6 +16,7 @@ import {
     SkillCostTable,
     XPItemsList,
     AffinityList,
+    AffinityRewardsTable,
     SpecialEquipmentList,
     GearSection,
 } from './helpers';
@@ -83,6 +84,15 @@ export default function HeroGrowthGuide() {
                     <p>
                         <ItemInline name="Oath of Determination" /> {lRec(LABELS.affinityMaxItem, lang)}
                     </p>
+
+                    <p className="font-semibold text-base mt-4">{lRec(LABELS.affinityExpansionTitle, lang)}</p>
+                    <p>{lRec(LABELS.affinityExpansionDesc, lang)}</p>
+                    <AffinityRewardsTable lang={lang} />
+
+                    <p className="font-semibold text-base mt-4">{lRec(LABELS.bondChatTitle, lang)}</p>
+                    <p>{lRec(LABELS.bondChatIntro, lang)}</p>
+                    <p><strong>Bond</strong> {lRec(LABELS.bondDesc, lang)}</p>
+                    <p><strong>Chat</strong> {lRec(LABELS.chatDesc, lang)}</p>
                 </>}
 
                 {tab === 'skills' && <>
