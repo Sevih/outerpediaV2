@@ -96,7 +96,19 @@ export default function AnnihilatorGuide() {
               <RecommendedCharacterList entries={may2026.recommended} />
               <hr className="my-6 border-neutral-700" />
               <StageBasedTeamSelector teamData={may2026.teams} defaultStage="Recommended Team" />
-              {/* TODO: add <MultiVideoEmbed hashPrefix="annihilator-may2026-video" ... /> after clear */}
+                            <hr className="my-6 border-neutral-700" />
+              <MultiVideoEmbed
+                hashPrefix="annihilator-may2026-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'oN-pOB1x_Lc',
+                    title: 'Annihilator — Very Hard — 1 run clear',
+                    author: 'Sevih',
+                    label: 'Sevih',
+                  }
+                ]}
+              />
             </>
           ),
         },
