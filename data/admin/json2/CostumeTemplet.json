@@ -396,8 +396,8 @@
     "DescID": "SYS_2000056_DES",
     "ShowList": "True",
     "_unknown_0": "False",
-    "CostumePurchaseType": "CPT_EVENT_SHOP",
-    "Value": "1840"
+    "CostumePurchaseType": "NONE",
+    "Value": "0"
   },
   {
     "ID": "26",
@@ -492,8 +492,8 @@
     "DescID": "SYS_2000009_DES",
     "ShowList": "True",
     "_unknown_0": "False",
-    "CostumePurchaseType": "CPT_EVENT_SHOP",
-    "Value": "4286"
+    "CostumePurchaseType": "NONE",
+    "Value": "0"
   },
   {
     "ID": "32",
@@ -696,12 +696,12 @@
     "SpriteCostumeIcon": "TI_Costume_Clothes_2000074_02",
     "RewardCostumeIcon": "TI_Costume_Clothes_2000074_02",
     "Sort": "1",
-    "ItemGrade": "IG_NORMAL",
+    "ItemGrade": "IG_RARE",
     "DescID": "SYS_2000074_DES",
     "ShowList": "True",
     "_unknown_0": "False",
-    "CostumePurchaseType": "CPT_BATTLEPASS",
-    "Value": "14022"
+    "CostumePurchaseType": "CPT_SHOP",
+    "Value": "500076"
   },
   {
     "ID": "45",
@@ -844,7 +844,7 @@
     "DescID": "SYS_2000087_DES",
     "ShowList": "True",
     "_unknown_0": "False",
-    "CostumePurchaseType": "CPT_EVENT_SHOP",
+    "CostumePurchaseType": "NONE",
     "Value": "0"
   },
   {
@@ -1036,8 +1036,8 @@
     "DescID": "SYS_2000084_DES",
     "ShowList": "True",
     "_unknown_0": "False",
-    "CostumePurchaseType": "CPT_EVENT_SHOP",
-    "Value": "4287"
+    "CostumePurchaseType": "NONE",
+    "Value": "0"
   },
   {
     "ID": "66",
@@ -1052,7 +1052,7 @@
     "DescID": "SYS_2000001_DES",
     "ShowList": "True",
     "_unknown_0": "False",
-    "CostumePurchaseType": "CPT_SHOP",
+    "CostumePurchaseType": "NONE",
     "Value": "0"
   },
   {
@@ -1308,8 +1308,8 @@
     "DescID": "SYS_2000090_DES",
     "ShowList": "True",
     "_unknown_0": "False",
-    "CostumePurchaseType": "CPT_PACKAGE_SHOP",
-    "Value": "500075"
+    "CostumePurchaseType": "CPT_SHOP",
+    "Value": "500068"
   },
   {
     "ID": "83",
@@ -1386,7 +1386,7 @@
     "Sort": "2",
     "ItemGrade": "IG_RARE",
     "DescID": "SYS_2000112_DES",
-    "ShowList": "False",
+    "ShowList": "True",
     "_unknown_0": "False",
     "CostumePurchaseType": "NONE",
     "Value": "0"
@@ -1406,5 +1406,117 @@
     "_unknown_0": "False",
     "CostumePurchaseType": "CPT_SHOP",
     "Value": "500074"
+  },
+  {
+    "ID": "89",
+    "CharacterID": "2000071",
+    "ModelNameID": "2030071",
+    "FusionModelNameID": "0",
+    "CostumeName": "2030071_Name",
+    "SpriteCostumeIcon": "TI_Costume_Clothes_2000071_04",
+    "RewardCostumeIcon": "TI_Costume_Clothes_2000071_04",
+    "Sort": "3",
+    "ItemGrade": "IG_RARE",
+    "DescID": "SYS_2000071_DES",
+    "ShowList": "True",
+    "_unknown_0": "False",
+    "CostumePurchaseType": "NONE",
+    "Value": "0"
+  },
+  {
+    "ID": "90",
+    "CharacterID": "2000060",
+    "ModelNameID": "2030060",
+    "FusionModelNameID": "0",
+    "CostumeName": "2030060_Name",
+    "SpriteCostumeIcon": "TI_Costume_Clothes_2000060_04",
+    "RewardCostumeIcon": "TI_Costume_Clothes_2000060_04",
+    "Sort": "3",
+    "ItemGrade": "IG_RARE",
+    "DescID": "SYS_2000060_DES",
+    "ShowList": "True",
+    "_unknown_0": "False",
+    "CostumePurchaseType": "NONE",
+    "Value": "0"
+  },
+  {
+    "ID": "91",
+    "CharacterID": "2000087",
+    "ModelNameID": "2020087",
+    "FusionModelNameID": "0",
+    "CostumeName": "2020087_Name",
+    "SpriteCostumeIcon": "TI_Costume_Clothes_2000087_03",
+    "RewardCostumeIcon": "TI_Costume_Clothes_2000087_03",
+    "Sort": "2",
+    "ItemGrade": "IG_RARE",
+    "DescID": "SYS_2000087_DES",
+    "ShowList": "True",
+    "_unknown_0": "False",
+    "CostumePurchaseType": "NONE",
+    "Value": "0"
+  },
+  {
+    "ID": "92",
+    "CharacterID": "2000117",
+    "ModelNameID": "2020117",
+    "FusionModelNameID": "0",
+    "CostumeName": "2020117_Name",
+    "SpriteCostumeIcon": "TI_Costume_Clothes_2000117_03",
+    "RewardCostumeIcon": "TI_Costume_Clothes_2000117_03",
+    "Sort": "2",
+    "ItemGrade": "IG_RARE",
+    "DescID": "SYS_2000117_DES",
+    "ShowList": "True",
+    "_unknown_0": "False",
+    "CostumePurchaseType": "NONE",
+    "Value": "0"
+  },
+  {
+    "ID": "93",
+    "CharacterID": "2000087",
+    "ModelNameID": "2030087",
+    "FusionModelNameID": "0",
+    "CostumeName": "2030087_Name",
+    "SpriteCostumeIcon": "TI_Costume_Clothes_2000087_04",
+    "RewardCostumeIcon": "TI_Costume_Clothes_2000087_04",
+    "Sort": "3",
+    "ItemGrade": "IG_RARE",
+    "DescID": "SYS_2000087_DES",
+    "ShowList": "True",
+    "_unknown_0": "False",
+    "CostumePurchaseType": "CPT_BATTLEPASS",
+    "Value": "14025"
+  },
+  {
+    "ID": "94",
+    "CharacterID": "2000074",
+    "ModelNameID": "2030074",
+    "FusionModelNameID": "0",
+    "CostumeName": "2030074_Name",
+    "SpriteCostumeIcon": "TI_Costume_Clothes_2000074_04",
+    "RewardCostumeIcon": "TI_Costume_Clothes_2000074_04",
+    "Sort": "3",
+    "ItemGrade": "IG_RARE",
+    "DescID": "SYS_2000074_DES",
+    "ShowList": "True",
+    "_unknown_0": "False",
+    "CostumePurchaseType": "NONE",
+    "Value": "0"
+  },
+  {
+    "ID": "95",
+    "CharacterID": "2000114",
+    "ModelNameID": "2010114",
+    "FusionModelNameID": "0",
+    "CostumeName": "2010114_Name",
+    "SpriteCostumeIcon": "TI_Costume_Clothes_2000114_02",
+    "RewardCostumeIcon": "TI_Costume_Clothes_2000114_02",
+    "Sort": "1",
+    "ItemGrade": "IG_RARE",
+    "DescID": "SYS_2000114_DES",
+    "ShowList": "True",
+    "_unknown_0": "False",
+    "CostumePurchaseType": "CPT_SHOP",
+    "Value": "91176"
   }
 ]

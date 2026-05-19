@@ -298,13 +298,13 @@
     "Order": "1",
     "ContentType": "MAIN_MENU_SIDESTORY",
     "UnLockConditionType": "DUNGEON_CLAER",
-    "UnLockConditionValue": "100203",
+    "UnLockConditionValue": "1",
     "OpenConditionType": "DUNGEON_CLAER",
-    "OpenConditionValue": "100203",
-    "IsPopUp": "True",
+    "OpenConditionValue": "1",
+    "IsPopUp": "False",
     "ShortcutMenu": "NONE",
-    "TextID": "SYS_SIDE_STORY_TITLE",
-    "DescTextID": "SYS_CONTENT_POPUP_DESC_SIDESTORY",
+    "TextID": "0",
+    "DescTextID": "0",
     "LockTextID": "0"
   },
   {
@@ -978,5 +978,19 @@
     "TextID": "0",
     "DescTextID": "0",
     "LockTextID": "SYS_CONTENT_POPUP_SINGULARITY_LOCK"
+  },
+  {
+    "ID": "74",
+    "Order": "1",
+    "ContentType": "FESTIVAL",
+    "UnLockConditionType": "DUNGEON_CLAER",
+    "UnLockConditionValue": "100103",
+    "OpenConditionType": "DUNGEON_CLAER",
+    "OpenConditionValue": "100103",
+    "IsPopUp": "False",
+    "ShortcutMenu": "NONE",
+    "TextID": "0",
+    "DescTextID": "0",
+    "LockTextID": "0"
   }
 ]

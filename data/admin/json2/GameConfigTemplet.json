@@ -397,7 +397,7 @@
   },
   {
     "ID": "REALTIME_ARENA_BATTLE_TURN_COOL",
-    "ValueString": "15"
+    "ValueString": "10"
   },
   {
     "ID": "REALTIME_ARENA_BATTLE_START_DELAY_SEC",
@@ -553,7 +553,7 @@
   },
   {
     "ID": "IRREGULAR_HUNTER_ID",
-    "ValueString": "2000001, 2000060, 2000087, 2000089, 2000101, 2000117"
+    "ValueString": "2000001, 2000060, 2000087, 2000089, 2000101, 2000117, 2000114"
   },
   {
     "ID": "SELECT_OPTION_CRAFT_BUY_COUNT",
@@ -773,11 +773,19 @@
   },
   {
     "ID": "PVP_REALTIME_BAN_GUARD_SLOT",
-    "ValueString": "0"
+    "ValueString": "3"
   },
   {
     "ID": "MAX_DAILY_BONUS_COUNT_FARMING_DUNGEON",
     "ValueString": "2"
+  },
+  {
+    "ID": "DAILY_DIALOGUE_COUNT",
+    "ValueString": "1"
+  },
+  {
+    "ID": "DAILY_DIALOGUE_COUNT_ALL",
+    "ValueString": "5"
   },
   {
     "ID": "SINGULAR_ENCHANT_RERALL_WARNING_RATE_WEAPON",

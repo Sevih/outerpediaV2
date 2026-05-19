@@ -18133,6 +18133,170 @@
       }
     ]
   },
+  "2000114": {
+    "info": {
+      "id": "2000114",
+      "class": "CCT_ATTACKER",
+      "subclass": "BRUISER",
+      "element": "CET_FIRE",
+      "star": "3"
+    },
+    "premium": {
+      "skill_23": "16",
+      "buffID": "ATTACKER_PASSIVE_2",
+      "stat": "CHC",
+      "applyingType": "OAT_ADD",
+      "rawValue": 50
+    },
+    "steps": {
+      "lv1_ev0": {
+        "ATK": 87,
+        "DEF": 35,
+        "HP": 541,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 19,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv20_ev1": {
+        "ATK": 259,
+        "DEF": 120,
+        "HP": 1301,
+        "SPD": 94,
+        "EFF": 30,
+        "RES": 51,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv40_ev2": {
+        "ATK": 440,
+        "DEF": 209,
+        "HP": 2101,
+        "SPD": 94,
+        "EFF": 60,
+        "RES": 86,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv60_ev3": {
+        "ATK": 631,
+        "DEF": 306,
+        "HP": 2902,
+        "SPD": 94,
+        "EFF": 90,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv80_ev4": {
+        "ATK": 823,
+        "DEF": 402,
+        "HP": 3702,
+        "SPD": 94,
+        "EFF": 120,
+        "RES": 155,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv100_ev5": {
+        "ATK": 982,
+        "DEF": 613,
+        "HP": 4951,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 190,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv105_ev6": {
+        "ATK": 1054,
+        "DEF": 652,
+        "HP": 5375,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv110_ev7": {
+        "ATK": 1127,
+        "DEF": 671,
+        "HP": 5799,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      },
+      "lv120_ev8": {
+        "ATK": 1239,
+        "DEF": 730,
+        "HP": 6423,
+        "SPD": 98,
+        "EFF": 120,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 2,
+        "DMG_INC": 0,
+        "premium_value": 5
+      }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30512",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30512",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30512",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
+  },
   "2000117": {
     "info": {
       "id": "2000117",

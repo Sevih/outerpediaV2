@@ -1431,6 +1431,15 @@
     "ConvertToID": "0"
   },
   {
+    "ID": "1105",
+    "IconName": "IG_Buff_Stat_PierceRate_Interruption_D",
+    "NameID": "SYS_BUFF_PIERCE_POWER_RATE_DOWN",
+    "DescID": "SYS_DESC_PIERCE_POWER_RATE_DOWN_0_IGNORE_INTERRUPTION",
+    "IsDebuff": "True",
+    "IsIgnoreInterruption": "True",
+    "ConvertToID": "0"
+  },
+  {
     "ID": "10001",
     "IconName": "IG_Buff_Effect_Irregular_Hunter_Interruption",
     "NameID": "SYS_BUFF_NAME_IRREGULAR",
@@ -2098,6 +2107,24 @@
   },
   {
     "ID": "2000111",
+    "IconName": "",
+    "NameID": "",
+    "DescID": "",
+    "IsDebuff": "False",
+    "IsIgnoreInterruption": "True",
+    "ConvertToID": "0"
+  },
+  {
+    "ID": "2000114",
+    "IconName": "IG_Buff_Effect_2000114_Interruption",
+    "NameID": "SYS_BUFF_NAME_2000114",
+    "DescID": "SYS_BUFF_DESC_2000114",
+    "IsDebuff": "False",
+    "IsIgnoreInterruption": "True",
+    "ConvertToID": "0"
+  },
+  {
+    "ID": "2100114",
     "IconName": "",
     "NameID": "",
     "DescID": "",

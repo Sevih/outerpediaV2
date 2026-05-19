@@ -6442,7 +6442,7 @@
   {
     "ID": "SKILL_DESC_2000090_Skill02_LV1",
     "Korean": "(패시브 효과) 피격 시 자신에게 실드를 <color=#28d9ed>[Buff_T_2000090_2_5]턴</color>(자신 공격력 비례) 동안 부여하고 행동 게이지가 <color=#28d9ed>[Buff_V_2000090_2_4]</color> 증가합니다. <color=#28d9ed>오만의 영역</color> 보유 시 한번에 받는 피해는 자신 최대 체력의 <color=#28d9ed>[Buff_V_2000090_2_1]</color>를 초과하지 않습니다. (협공 및 추가타 포함 / 지속 피해 제외)\\n\\n(발동 효과) 조건에 따라 강화된 <color=#28d9ed>냉혹한 고문</color>을 가장 공격력이 높은 적에게 사용합니다.\\n\\n<color=#28d9ed>1. 아군이 치명 공격 시(자신 포함) 추가타 사용</color>\\n<color=#28d9ed>2. 자신이 치명 공격 피격 시 대상에게 반격</color>",
-    "English": "(Passive Effect) When hit, grants the caster a Barrier proportional to the caster’s Attack for <color=#28d9ed>[Buff_T_2000090_2_5] turn</color> and increases the caster’s Priority by <color=#28d9ed>[Buff_V_2000090_2_4]</color>. When granted <color=#28d9ed>Hubris’s Dominion</color>, damage suffered in one attack does not exceed <color=#28d9ed>[Buff_V_2000090_2_1]</color> of the caster’s Max Health. (Includes Dual Attacks and Additional Attacks / Excludes Continuous Damage)\\n\\n(Triggered Effect) Activates an enhanced <color=#28d9ed>Cold-Blooded Torture</color> on the enemy with the highest Attack under the following conditions.\\n<color=#28d9ed>1. When an ally, including the caster, scores a critical hit, activates it as an Additional Attack.</color>\\n<color=#28d9ed>2. When the caster takes a critical hit, counterattacks the attacker.</color>",
+    "English": "(Passive Effect) When hit, grants the caster a Barrier proportional to the caster's Attack for <color=#28d9ed>[Buff_T_2000090_2_5] turn</color> and increases the caster's Priority by <color=#28d9ed>[Buff_V_2000090_2_4]</color>. While holding <color=#28d9ed>Hubris's Dominion</color>, damage suffered in a single attack does not exceed <color=#28d9ed>[Buff_V_2000090_2_1]</color> of the caster's Max Health. (Includes Dual Attacks and Additional Attacks / Excludes DoT)\\n\\n(Triggered Effect) Activates an enhanced <color=#28d9ed>Cold-Blooded Torture</color> on the enemy with the highest Attack under the following conditions.\\n<color=#28d9ed>1. When an ally, including the caster, scores a critical hit, activates it as an Additional Attack.</color>\\n<color=#28d9ed>2. When the caster takes a critical hit, counterattacks the attacker.</color>",
     "Japanese": "(パッシブ効果) ダメージを受けた場合、自分にシールドを<color=#28d9ed>[Buff_T_2000090_2_5]ターン</color>（自分の攻撃力比例）の間付与し、行動ゲージを<color=#28d9ed>[Buff_V_2000090_2_4]</color>増加させる。<color=#28d9ed>【傲慢の領域】</color>がある場合、一度に受けるダメージは自分の最大HPの<color=#28d9ed>[Buff_V_2000090_2_1]</color>を超えない。（連携・追加攻撃も含む / 継続ダメージを除く）\\n\\n(発動効果) 条件に応じて強化された<color=#28d9ed>【ルースレストーチャー】</color>を最も攻撃力の高い敵に使用する。\\n\\n<color=#28d9ed>1. 味方が会心攻撃時（自分含む）追加攻撃を使用</color>\\n<color=#28d9ed>2. 自分が会心ダメージを受けた場合、対象に反撃</color>",
     "China_Simplified": "(被动效果) 被攻击时，对自身附加<color=#28d9ed>[Buff_T_2000090_2_5]回合</color>的护盾（按自身攻击力计算），行动值增加<color=#28d9ed>[Buff_V_2000090_2_4]</color>。持有<color=#28d9ed>傲慢领域</color>时，一次受到的伤害不超过自身最大生命值的<color=#28d9ed>[Buff_V_2000090_2_1]</color>。（包含夹攻及追加攻击 / 持续伤害除外）\\n\\n(发动效果) 根据条件对攻击力最高的敌人使用强化版<color=#28d9ed>严刑拷打</color>。\\n\\n<color=#28d9ed>1. 我方发动暴击时（含自身）使用追加攻击</color>\\n<color=#28d9ed>2. 自身被暴击时对目标进行反击</color>",
     "China_Traditional": "(被動效果) 被攻擊時，對自身附加<color=#28d9ed>[Buff_T_2000090_2_5]回合</color>的護盾（按自身攻擊力計算），速攻值增加<color=#28d9ed>[Buff_V_2000090_2_4]</color>。持有<color=#28d9ed>傲慢領域</color>時，一次受到的傷害不超過自身最大生命力的<color=#28d9ed>[Buff_V_2000090_2_1]</color>。（包含夾攻及追加攻擊 / 持續傷害除外）\\n\\n(發動效果) 根據條件對攻擊力最高的敵人使用強化版<color=#28d9ed>無情拷問</color>。\\n\\n<color=#28d9ed>1. 我方發動暴擊時（含自身）使用追加攻擊</color>\\n<color=#28d9ed>2. 自身被暴擊時對目標進行反擊</color>"
@@ -6514,7 +6514,7 @@
   {
     "ID": "SKILL_DESC_2000091_Skill03_LV1",
     "Korean": "(패시브 효과) 전투 입장, 혹은 부활 시 <color=#28d9ed>최후의 낙인</color>을 획득합니다.(해제 불가)\\n\\n(발동 효과) <color=#28d9ed>[Buff_C_2000091_3_1]</color> 확률로 적 전체의 <color=#28d9ed>강화 효과</color>를 1개 해제하고 적 전체를 <color=#28d9ed>강격</color>으로 공격합니다. 공격 후 <color=#28d9ed>[Buff_C_2000091_3_2]</color> 확률로 적 전체를 <color=#28d9ed>[Buff_T_2000091_3_2]턴</color> 동안 <color=#28d9ed>스턴</color> 상태로 만듭니다. 이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가하고, 이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
-    "English": "(Passive Effect) At the start of battle or upon revival, gains [Final Brand]. (Cannot be removed).\\n\\n(Trigger Effect) Has a <color=#28d9ed>[Buff_C_2000091_3_1]</color> chance to remove 1 <color=#28d9ed>buff</color> from all enemies, and attacks all enemies with <color=#28d9ed>Heavy Strike</color>. After attacking, has a <color=#28d9ed>[Buff_C_2000091_3_2]</color> chance to inflict <color=#28d9ed>Stunned</color> on all enemies for <color=#28d9ed>[Buff_T_2000091_3_2] turn(s)</color>. This skill's damage dealt increases proportional to Max Health instead of Attack, and right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+    "English": "(Passive Effect) At the start of battle or upon revival, gains <color=#28d9ed>Final Brand</color>. (Cannot be removed).\\n\\n(Triggered Effect) Has a <color=#28d9ed>[Buff_C_2000091_3_1]</color> chance to remove 1 <color=#28d9ed>buff</color> from all enemies, and attacks all enemies with <color=#28d9ed>Heavy Strike</color>. After attacking, has a <color=#28d9ed>[Buff_C_2000091_3_2]</color> chance to inflict <color=#28d9ed>Stunned</color> on all enemies for <color=#28d9ed>[Buff_T_2000091_3_2] turn(s)</color>. Damage from this skill scales with Max Health instead of Attack, and right after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
     "Japanese": "(パッシブ効果) 戦闘開始時または復活時に<color=#28d9ed>【最後の烙印】</color>を獲得する。（解除不可）\\n\\n(発動効果) <color=#28d9ed>[Buff_C_2000091_3_1]</color>の確率で敵全体の<color=#28d9ed>強化効果</color>を1個解除し、敵全体に<color=#28d9ed>強撃</color>でダメージを与える。攻撃後､<color=#28d9ed>[Buff_C_2000091_3_2]</color>の確率で敵全体に<color=#28d9ed>スタン</color>を<color=#28d9ed>[Buff_T_2000091_3_2]ターン</color>の間付与する。このスキルは攻撃力の代わりに最大HPが高いほどダメージがUPし、このスキルでは敵の反撃、復讐、迅速対応が発動しない。",
     "China_Simplified": "(被动效果) 进入战斗或复活时获得<color=#28d9ed>最终烙印</color>。（无法解除）\\n\\n(发动效果) 有<color=#28d9ed>[Buff_C_2000091_3_1]</color>的几率解除全体敌人的1个<color=#28d9ed>强化效果</color>，并<color=#28d9ed>强击</color>全体敌人。\\n攻击后，有<color=#28d9ed>[Buff_C_2000091_3_2]</color>的几率使全体敌人陷入<color=#28d9ed>晕眩</color>状态，持续<color=#28d9ed>[Buff_T_2000091_3_2]回合</color>。该技能根据生命值上限而非攻击力等比提升伤害。此技能发动后，不会触发敌人的反击、复仇、迅速应对效果。",
     "China_Traditional": "(被動效果) 進入戰鬥或復活時獲得<color=#28d9ed>最終烙印</color>。（無法解除）\\n\\n(發動效果) 以<color=#28d9ed>[Buff_C_2000091_3_1]</color>的機率解除全體敵人的1個<color=#28d9ed>強化效果</color>，<color=#28d9ed>強擊</color>全體敵人。攻擊後，以<color=#28d9ed>[Buff_C_2000091_3_2]</color>的機率在<color=#28d9ed>[Buff_T_2000091_3_2]回合</color>內使全體敵人進入<color=#28d9ed>暈眩</color>狀態。此技能的傷害會隨最大生命力等比增加，而非攻擊力，使用此技能後，敵人不會發動反擊、復仇、迅速應對。"
@@ -20777,11 +20777,11 @@
   },
   {
     "ID": "SKILL_DESC_135115",
-    "Korean": "스킬 체인으로 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소합니다.\\n턴 종료 시 자신이 약화 효과를 보유하지 않았다면 WG를 <color=#28d9ed>20</color> 회복하고, 적 팀의 CP를 <color=#28d9ed>50</color> 감소 시킵니다.\\n고정 피해는 최대 <color=#28d9ed>10000</color>을 초과하지 않습니다.",
-    "English": "Reduces Weakness Gauge damage taken from Skill Chains by <color=#28d9ed>50%</color>.\\nAt the end of the turn, when the caster is not inflicted with a debuff, recovers Weakness Gauge by <color=#28d9ed>20</color>, and reduces the enemy team's Chain Points by <color=#28d9ed>50</color>.\\nFixed damage does not exceed a maximum of <color=#28d9ed>10000</color>.",
-    "Japanese": "チェーンスキルで受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。\\nターン終了時に自分に弱体効果がない場合、WGを<color=#28d9ed>20</color>回復し、敵全体のCPを<color=#28d9ed>50</color>DOWNさせる。\\n固定ダメージは<color=#28d9ed>10000</color>を超えない。",
-    "China_Simplified": "通过连携技能受到的WG伤害量降低<color=#28d9ed>50%</color>。\\n回合结束时，若自身未附带弱化效果，则WG恢复<color=#28d9ed>20</color>，并降低敌方队伍CP<color=#28d9ed>50</color>。\\n固定伤害不会超过<color=#28d9ed>10000</color>。",
-    "China_Traditional": "連鎖技能所造成的WG傷害量減少<color=#28d9ed>50%</color>。\\n回合結束時，若自身不具有弱化效果，恢復<color=#28d9ed>20</color>的WG，並使敵人隊伍的CP減少<color=#28d9ed>50</color>。\\n固定傷害最多不會超過<color=#28d9ed>10000</color>。"
+    "Korean": "스킬 체인으로 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소합니다.\\n턴 종료 시 자신이 약화 효과를 보유하지 않았다면 WG를 <color=#28d9ed>20</color> 회복하고, 적 팀의 CP를 <color=#28d9ed>50</color> 감소 시킵니다.\\n고정 피해는 최대 <color=#28d9ed>30000</color>을 초과하지 않습니다.",
+    "English": "Reduces Weakness Gauge damage taken from Skill Chains by <color=#28d9ed>50%</color>.\\nAt the end of the turn, when the caster is not inflicted with a debuff, recovers Weakness Gauge by <color=#28d9ed>20</color>, and reduces the enemy team's Chain Points by <color=#28d9ed>50</color>.\\nFixed damage cannot exceed <color=#28d9ed>30000</color>.",
+    "Japanese": "チェーンスキルで受けるWGダメージが<color=#28d9ed>50%</color>DOWNする。\\nターン終了時に自分に弱体効果がない場合、WGを<color=#28d9ed>20</color>回復し、敵全体のCPを<color=#28d9ed>50</color>DOWNさせる。\\n固定ダメージは<color=#28d9ed>30000</color>を超えない。",
+    "China_Simplified": "通过连携技能受到的WG伤害量降低<color=#28d9ed>50%</color>。\\n回合结束时，若自身未附带弱化效果，则WG恢复<color=#28d9ed>20</color>，并降低敌方队伍CP<color=#28d9ed>50</color>。\\n固定伤害不会超过<color=#28d9ed>30000</color>。",
+    "China_Traditional": "連鎖技能所造成的WG傷害量減少<color=#28d9ed>50%</color>。\\n回合結束時，若自身不具有弱化效果，恢復<color=#28d9ed>20</color>的WG，並使敵人隊伍的CP減少<color=#28d9ed>50</color>。\\n固定傷害最多不會超過<color=#28d9ed>30000</color>。"
   },
   {
     "ID": "SKILL_DESC_135116",
@@ -31321,11 +31321,11 @@
   },
   {
     "ID": "SE_DESC_SKILL08_2000102_4",
-    "Korean": "전투 시작 시 명속성 및 속도가 가장 빠른 적에게 이레귤러 감염증 +1턴 (면역 무시, 해제 불가)\\n효과 적중 +40",
-    "English": "At the start of battle, inflicts Irregular Infection +1 turn on the fastest Light-type enemy (Ignores Immunity, Cannot be dispelled)\\nEffectiveness +40",
+    "Korean": "전투 시작 시 모든 명속성 적과 속도가 가장 빠른 적 하나에게 이레귤러 감염증 +1턴\\n(면역 무시, 해제 불가)\\n효과 적중 +40",
+    "English": "At the start of battle, inflicts Irregular Infection +1 turn on all Light-type enemies and the single fastest enemy\\n(Ignores Immunity, Cannot be dispelled)\\nEffectiveness +40",
     "Japanese": "戦闘開始時、光属性かつ最もスピードが速い敵にイレギュラー感染症+1ターン（免疫無視、解除不可）\\n効果命中+40",
-    "China_Simplified": "战斗开始时，对光属性且速度最快的敌人附加异形怪感染+1回合（无视免疫，无法解除）\\n效果命中+40",
-    "China_Traditional": "戰鬥開始時，對光屬性且速度最快的敵人附加異形怪感染+1回合（無視免疫，無法解除）\\n效果命中+40"
+    "China_Simplified": "战斗开始时，对所有光属性敌人及速度最快的敌人1名附加异形怪感染+1回合\\n（无视免疫，无法解除）\\n效果命中+40",
+    "China_Traditional": "戰鬥開始時，對所有光屬性敵人及速度最快的敵人1名附加異形怪感染+1回合\\n（無視免疫，無法解除）\\n效果命中+40"
   },
   {
     "ID": "SE_DESC_SKILL08_2000102_5",
@@ -34473,7 +34473,7 @@
   },
   {
     "ID": "SKILL_NAME_B_2000035",
-    "Korean": "피해 증가\\n출혈 추가",
+    "Korean": "피해 증가\\n출혈 추가 (저항 무시)",
     "English": "Increases damage\\nAdds Bleeding",
     "Japanese": "ダメージUP\\n出血追加",
     "China_Simplified": "伤害提升\\n附加出血",
@@ -35113,7 +35113,7 @@
   },
   {
     "ID": "SKILL_DESC_B_2000035",
-    "Korean": "피해 증가\\n출혈 1개 추가 발생",
+    "Korean": "피해 증가\\n출혈 1개 추가 발생 (대상 효과 저항 무시)",
     "English": "Increases damage\\nInflicts 1 Additional Bleeding effect",
     "Japanese": "ダメージUP\\n出血1個追加発生",
     "China_Simplified": "伤害提升\\n额外触发1次出血",
@@ -47481,7 +47481,7 @@
   },
   {
     "ID": "SKILL_DESC_113652",
-    "Korean": "적 전체를 공격합니다. 공격 후 적 전체의 <color=#28d9ed>공격력/치명 확률/치명 피해</color>를 <color=#28d9ed>[Buff_T_event_monster_buff_503]턴</color> 동안 감소시키고, <color=#28d9ed>회복형</color>이 아닌 적 전체의 <color=#28d9ed>행동 게이지</color>를 모두 감소시킵니다.",
+    "Korean": "적 전체를 공격합니다. 공격 후 적 전체의 <color=#28d9ed>치명 확률/치명 피해</color>를 <color=#28d9ed>[Buff_T_event_monster_buff_503]턴</color> 동안 감소시키고, <color=#28d9ed>회복형</color>이 아닌 적 전체의 <color=#28d9ed>행동 게이지</color>를 모두 감소시킵니다.",
     "English": "Attacks all enemies. Upon attack, decreases all Enemies’ <color=#28d9ed>Attack/Critical Hit Chance/Critical Damage</color> for <color=#28d9ed>[Buff_T_event_monster_buff_503] turns,</color> and reduces the <color=#28d9ed>Priority Gauge</color> of all non-<color=#28d9ed>Healer</color> Enemies to zero.",
     "Japanese": "敵全体にダメージを与える。攻撃後、敵全体の<color=#28d9ed>攻撃力/会心率/会心ダメージ</color>を<color=#28d9ed>[Buff_T_event_monster_buff_503]ターン</color>の間DOWNさせ、<color=#28d9ed>回復型</color>以外の敵全体の<color=#28d9ed>行動ゲージ</color>を全てDOWNさせる。",
     "China_Simplified": "攻击全体敌人。攻击后，使全体敌人的<color=#28d9ed>攻击力/暴击率/暴击伤害</color>降低，持续<color=#28d9ed>[Buff_T_event_monster_buff_503]回合</color>。使非<color=#28d9ed>恢复型</color>全体敌人的<color=#28d9ed>行动值</color>全部减少。",
@@ -50849,7 +50849,7 @@
   },
   {
     "ID": "SKILL_DESC_1103512",
-    "Korean": "자신이 <color=#28d9ed>저주</color> 상태라면 턴 획득 시점에 최대 체력의 <color=#28d9ed>30%</color> 만큼 고정 피해를 받으습니다.\\n턴 종료 시 자신에게 걸린 모든 <color=#28d9ed>약화 효과</color>를 해제합니다.\\n\\n<color=#28d9ed>OK~! 더 월드 이즈 아워즈</color> 사용 전 사망 시, <color=#28d9ed>99턴</color> 동안 적 전체에게 해제 불가능한 <color=#28d9ed>면역</color>을 부여하며, 자신이 입는 피해를 크게 감소시킵니다.",
+    "Korean": "자신이 <color=#28d9ed>저주</color> 상태라면 턴 획득 시점에 최대 체력의 <color=#28d9ed>30%</color> 만큼 고정 피해를 받습니다.\\n턴 종료 시 자신에게 걸린 모든 <color=#28d9ed>약화 효과</color>를 해제합니다.\\n\\n<color=#28d9ed>OK~! 더 월드 이즈 아워즈</color> 사용 전 사망 시, <color=#28d9ed>99턴</color> 동안 적 전체에게 해제 불가능한 <color=#28d9ed>면역</color>을 부여하며, 자신이 입는 피해를 크게 감소시킵니다.",
     "English": "If the caster is <color=#28d9ed>Cursed</color>, takes Fixed Damage equal to <color=#28d9ed>30%</color> of Max Health upon taking a turn.\\nAt the end of the turn, dispels all <color=#28d9ed>debuffs</color> from self.\\nIf defeated before using <color=#28d9ed>OK~! The World Is Ours</color>, grants all enemies unremovable <color=#28d9ed>Immunity</color> for <color=#28d9ed>99 turns</color> and greatly reduces damage taken by self.",
     "Japanese": "自分が<color=#28d9ed>呪い</color>状態の場合、ターン獲得時に最大HPの<color=#28d9ed>30%</color>分の固定ダメージを受ける。\\nターン終了時、自分にかかったすべての<color=#28d9ed>弱体効果</color>を解除する。\\n<color=#28d9ed>OK~! ザ・ワールド・イズ・アワーズ</color>を使用する前に戦闘不能になった場合、敵全体に解除不可の<color=#28d9ed>免疫</color>を<color=#28d9ed>99ターン</color>付与し、自分が受けるダメージを大幅にDOWNする。",
     "China_Simplified": "若自身处于<color=#28d9ed>诅咒</color>状态，则在获得回合时受到等于最大生命值<color=#28d9ed>30%</color>的固定伤害。\\n回合结束时，解除自身所有<color=#28d9ed>弱化效果</color>。\\n在使用<color=#28d9ed>OK~! The World Is Ours</color>之前被击败时，为全体敌人赋予不可解除的<color=#28d9ed>免疫</color>持续<color=#28d9ed>99回合</color>，并大幅降低自身所受伤害。",
@@ -53246,6 +53246,86 @@
     "Japanese": "空間歪曲",
     "China_Simplified": "空间扭曲",
     "China_Traditional": "空間扭曲"
+  },
+  {
+    "ID": "SKILL_DESC_1120918",
+    "Korean": "적을 공격하고, 대상에게 <color=#28d9ed>9턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n<color=#28d9ed>전열</color>에 있는 적을 우선적으로 공격합니다.",
+    "English": "Attacks an enemy and inflicts <color=#28d9ed>Burned</color> and <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>9 turns</color>.\\nPrioritizes attacking enemies in the <color=#28d9ed>Front Row</color>.",
+    "Japanese": "敵にダメージを与え、対象に<color=#28d9ed>9ターン</color>の間<color=#28d9ed>火傷</color>と<color=#28d9ed>出血</color>を付与する。\\n<color=#28d9ed>前列</color>にいる敵を優先的に攻撃する。",
+    "China_Simplified": "攻击敌人，对目标附加<color=#28d9ed>9回合</color>的<color=#28d9ed>烧伤</color>和<color=#28d9ed>出血</color>。\\n优先攻击位于<color=#28d9ed>前排</color>的敌人。",
+    "China_Traditional": "攻擊敵人，對目標附加<color=#28d9ed>9回合</color>的<color=#28d9ed>燒傷</color>和<color=#28d9ed>出血</color>。\\n優先攻擊位於<color=#28d9ed>前排</color>的敵人。"
+  },
+  {
+    "ID": "SKILL_NAME_1120918",
+    "Korean": "실적 압박",
+    "English": "Performance Pressure",
+    "Japanese": "実績プレッシャー",
+    "China_Simplified": "业绩施压",
+    "China_Traditional": "業績施壓"
+  },
+  {
+    "ID": "SKILL_DESC_1120919",
+    "Korean": "적을 공격하고 <color=#28d9ed>2턴</color> 동안 적 전체에게 <color=#28d9ed>공격력 감소</color>를 부여합니다.\\n<color=#28d9ed>전열</color>에 있는 적을 우선적으로 공격합니다.",
+    "English": "Attacks an enemy and inflicts <color=#28d9ed>Attack reduction</color> on all enemies for <color=#28d9ed>2 turns</color>.\\nPrioritizes attacking enemies in the <color=#28d9ed>Front Row</color>.",
+    "Japanese": "敵にダメージを与え、<color=#28d9ed>2ターン</color>の間、敵全体に<color=#28d9ed>攻撃力DOWN</color>を付与する。\\n<color=#28d9ed>前列</color>にいる敵を優先的に攻撃する。",
+    "China_Simplified": "攻击敌人，使全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>攻击力降低</color>。\\n优先攻击位于<color=#28d9ed>前排</color>的敌人。",
+    "China_Traditional": "攻擊敵人，使全體敵人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>攻擊力降低</color>。\\n優先攻擊位於<color=#28d9ed>前排</color>的敵人。"
+  },
+  {
+    "ID": "SKILL_NAME_1120919",
+    "Korean": "징계",
+    "English": "Disciplinary Action",
+    "Japanese": "懲戒",
+    "China_Simplified": "惩戒",
+    "China_Traditional": "懲戒"
+  },
+  {
+    "ID": "SKILL_DESC_1120920",
+    "Korean": "적을 공격합니다.\\n대상이 보유한 약화 효과 수량에 비례하여 피해가 감소하며 <color=#28d9ed>전열</color>에 있는 적을 우선적으로 공격합니다.",
+    "English": "Attacks an enemy.\\nDMG decreases proportional to the number of debuffs the target holds, and prioritizes attacking enemies in the <color=#28d9ed>Front Row</color>.",
+    "Japanese": "敵にダメージを与える。\\n対象が保有する弱体効果の数に比例してダメージが減少し、<color=#28d9ed>前列</color>にいる敵を優先的に攻撃する。",
+    "China_Simplified": "攻击敌人。\\n伤害按目标持有的弱化效果数量比例减少，并优先攻击位于<color=#28d9ed>前排</color>的敌人。",
+    "China_Traditional": "攻擊敵人。\\n傷害按目標持有的弱化效果數量比例減少，並優先攻擊位於<color=#28d9ed>前排</color>的敵人。"
+  },
+  {
+    "ID": "SKILL_NAME_1120920",
+    "Korean": "해고 통보",
+    "English": "Termination Notice",
+    "Japanese": "解雇通告",
+    "China_Simplified": "解雇通知",
+    "China_Traditional": "解僱通知"
+  },
+  {
+    "ID": "SKILL_DESC_1120921",
+    "Korean": "적에게 받는 피해가 감소합니다.\\n적이 가진 약화 효과 수량에 비례하여 받는 피해가 증가합니다.",
+    "English": "DMG taken from enemies decreases.\\nDMG taken increases proportional to the number of debuffs the enemy holds.",
+    "Japanese": "敵から受けるダメージが減少する。\\n敵が持つ弱体効果の数に比例して受けるダメージが増加する。",
+    "China_Simplified": "受到来自敌人的伤害减少。\\n受到的伤害按敌人持有的弱化效果数量比例增加。",
+    "China_Traditional": "受到來自敵人的傷害減少。\\n受到的傷害按敵人持有的弱化效果數量比例增加。"
+  },
+  {
+    "ID": "SKILL_NAME_1120921",
+    "Korean": "어나더 레벨",
+    "English": "Another Level",
+    "Japanese": "アナザーレベル",
+    "China_Simplified": "另一个境界",
+    "China_Traditional": "另一個境界"
+  },
+  {
+    "ID": "SKILL_DESC_1120922",
+    "Korean": "유리한 속성이 아닐 경우 받는 최종 피해와 WG 피해가 <color=#28d9ed>50%</color> 감소합니다.",
+    "English": "If not at an elemental advantage, Final DMG taken and WG DMG decrease by <color=#28d9ed>50%</color>.\\nWG DMG taken from Fire-type enemies increases by <color=#28d9ed>50%</color>.",
+    "Japanese": "有利属性でない場合、受ける最終ダメージとWGダメージが<color=#28d9ed>50%</color>減少する。\\n火属性の敵から受けるWGダメージが<color=#28d9ed>50%</color>増加する。",
+    "China_Simplified": "非克制属性时，受到的最终伤害和WG伤害降低<color=#28d9ed>50%</color>。\\n受到火属性敌人的WG伤害提升<color=#28d9ed>50%</color>。",
+    "China_Traditional": "非克制屬性時，受到的最終傷害和WG傷害降低<color=#28d9ed>50%</color>。\\n受到火屬性敵人的WG傷害提升<color=#28d9ed>50%</color>。"
+  },
+  {
+    "ID": "SKILL_NAME_1120922",
+    "Korean": "철저한 상하 관계",
+    "English": "Strict Hierarchy",
+    "Japanese": "徹底した上下関係",
+    "China_Simplified": "严格的上下关系",
+    "China_Traditional": "嚴格的上下關係"
   },
   {
     "ID": "SKILL_NAME_900004",
@@ -55822,5 +55902,149 @@
     "Japanese": "<color=#ff00ff>S+</color> 次元特異点内での必殺スキルダメージ<color=#0D99DA>200%</color>UP",
     "China_Simplified": "<color=#ff00ff>S+</color> 在次元奇点内必杀技伤害量增加<color=#0D99DA>200%</color>",
     "China_Traditional": "<color=#ff00ff>S+</color> 在次元奇點內必殺技傷害量增加<color=#0D99DA>200%</color>"
+  },
+  {
+    "ID": "SE_DESC_SKILL08_2000114_1",
+    "Korean": "버스트 3단계 해금\\n전투 입장 시 자신 질주 +1턴(해제 불가)\\n자신 최대 체력 +40%",
+    "English": "Burst Level 3 Unlocked\\nGrants self Rush for 1 turn upon entering (Irremovable)\\nOwn Max Health +40%",
+    "Japanese": "バースト3段階解放\\n戦闘開始時、自分の【疾走】 +1ターン(解除不可)\\n自分の最大HP+40%",
+    "China_Simplified": "爆发第3阶段解锁\\n进入战斗时自身疾驰+1回合（无法解除）\\n自身最大生命值+40%",
+    "China_Traditional": "爆發第3階段解鎖\\n進入戰鬥時自身疾馳+1回合（無法解除）\\n自身最大生命力+40%"
+  },
+  {
+    "ID": "SE_DESC_SKILL08_2000114_2",
+    "Korean": "질투 보유 시 관통력 +30%\\n전투 입장 시 자신 실드 +1턴 (해제 불가)",
+    "English": "Penetration +30% when holding Rush\\nGrants self a Barrier for 1 turn upon entering battle (Irremovable)",
+    "Japanese": "【疾走】保有時、貫通力+30%\\n戦闘開始時、自分にシールド+1ターン（解除不可）",
+    "China_Simplified": "持有疾驰时穿透力+30%\\n进入战斗时自身护盾+1回合（无法解除）",
+    "China_Traditional": "持有疾馳時貫穿力+30%\\n進入戰鬥時自身護盾+1回合（無法解除）"
+  },
+  {
+    "ID": "SKILL_NAME_2000114_Skill01",
+    "Korean": "히트&히트",
+    "English": "Hit & Hit",
+    "Japanese": "ヒット＆ヒット",
+    "China_Simplified": "连打连打",
+    "China_Traditional": "連打連打"
+  },
+  {
+    "ID": "SKILL_DESC_2000114_Skill01_LV1",
+    "Korean": "적을 공격합니다.\\n공격 후 대상의 행동 게이지를 <color=#28d9ed>[Buff_V_2000114_1_1]</color> 감소시키고 (효과 저항 무시) <color=#28d9ed>나우 유 캔 체이싱 미</color>의 피해를 <color=#28d9ed>[Buff_V_2000114_1_2_2]</color> 증가시킵니다.(최대 3회 누적)\\n<color=#28d9ed>질주</color> 보유시  스킬 발동 직후에는 적의 반격/복수/신속 대응이 발생하지 않습니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+    "English": "Attacks an enemy.\\nAfter attacking, decreases the target's Priority by <color=#28d9ed>[Buff_V_2000114_1_1]</color> (Ignores Resilience) and increases <color=#28d9ed>Catch Me If You Can</color>'s damage by <color=#28d9ed>[Buff_V_2000114_1_2_2]</color>. (Max 3 stacks)\\nIf <color=#28d9ed>Rush</color> is active, does not trigger an enemy's Counterattack, Revenge, or Agile Response immediately after this skill is used.\\nThis skill deals damage proportional to Max Health instead of Attack.",
+    "Japanese": "敵単体にダメージを与える。\\n攻撃後、対象の行動ゲージを<color=#28d9ed>[Buff_V_2000114_1_1]</color>減少させ（効果抵抗無視）、<color=#28d9ed>【捕まえてみて】</color>のダメージを<color=#28d9ed>[Buff_V_2000114_1_2_2]</color>UPさせる。（最大3回まで累積）\\n<color=#28d9ed>【疾走】</color>がある場合、このスキルでは敵の反撃/復讐/迅速対応が発動しない。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+    "China_Simplified": "攻击敌人。\\n攻击后使目标行动值减少<color=#28d9ed>[Buff_V_2000114_1_1]</color>（无视效果抵抗），并使<color=#28d9ed>【追上我啊】</color>的伤害提升<color=#28d9ed>[Buff_V_2000114_1_2_2]</color>。（最多叠加3次）\\n持有<color=#28d9ed>【疾驰】</color>时，该技能发动后敌方反击/复仇/迅速应对不会发动。\\n该技能伤害按最大生命值而非攻击力计算。",
+    "China_Traditional": "攻擊敵人。\\n攻擊後使目標速攻值減少<color=#28d9ed>[Buff_V_2000114_1_1]</color>（無視效果抵抗），並使<color=#28d9ed>【追上我啊】</color>的傷害提升<color=#28d9ed>[Buff_V_2000114_1_2_2]</color>。（最多疊加3次）\\n持有<color=#28d9ed>【疾馳】</color>時，該技能發動後敵方反擊/復仇/迅速應對不會發動。\\n該技能傷害按最大生命力而非攻擊力計算。"
+  },
+  {
+    "ID": "SKILL_NAME_2000114_Skill02",
+    "Korean": "스위티 드라이버",
+    "English": "Sweetie Driver",
+    "Japanese": "スイート・ドライバー",
+    "China_Simplified": "甜蜜驾驶员",
+    "China_Traditional": "甜蜜駕駛員"
+  },
+  {
+    "ID": "SKILL_DESC_2000114_Skill02_LV1",
+    "Korean": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(엑티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>[Buff_T_2000114_2_2]턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>[Buff_V_2000114_2_4]</color> 감소시키고 질주 보유시 <color=#28d9ed>[Buff_V_2000114_2_5]</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+    "English": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>[Buff_T_2000114_2_2] turn</color>.\\nThe Barrier amount scales with own <color=#28d9ed>Max Health</color>.\\nAdditionally, decreases the target's Priority by <color=#28d9ed>[Buff_V_2000114_2_4]</color>, or <color=#28d9ed>[Buff_V_2000114_2_5]</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience)\\nThis skill deals damage proportional to Max Health instead of Attack.",
+    "Japanese": "(パッシブ効果) 自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果) 敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>[Buff_T_2000114_2_2]ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>[Buff_V_2000114_2_4]</color>減少させ、【疾走】がある場合は<color=#28d9ed>[Buff_V_2000114_2_5]</color>減少させる。この効果は対象の効果抵抗を無視する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+    "China_Simplified": "(被动效果) 自身受到的持续伤害减少<color=#28d9ed>50%</color>，免疫<color=#28d9ed>沉默</color>和<color=#28d9ed>行动值减少</color>，且所有攻击始终以克制属性生效。\\n\\n(主动效果) 攻击全体敌人，对自身附加<color=#28d9ed>[Buff_T_2000114_2_2]回合</color>的<color=#28d9ed>护盾</color>和<color=#28d9ed>反击</color>。\\n护盾量按自身<color=#28d9ed>最大生命值</color>比例增加。\\n同时使目标行动值减少<color=#28d9ed>[Buff_V_2000114_2_4]</color>，持有【疾驰】时减少<color=#28d9ed>[Buff_V_2000114_2_5]</color>。（无视效果抵抗）\\n该技能伤害按最大生命值而非攻击力计算。",
+    "China_Traditional": "(被動效果) 自身受到的持續傷害減少<color=#28d9ed>50%</color>，免疫<color=#28d9ed>沉默</color>和<color=#28d9ed>速攻值減少</color>，且所有攻擊始終以克制屬性生效。\\n\\n(主動效果) 攻擊全體敵人，對自身附加<color=#28d9ed>[Buff_T_2000114_2_2]回合</color>的<color=#28d9ed>護盾</color>和<color=#28d9ed>反擊</color>。\\n護盾量按自身<color=#28d9ed>最大生命力</color>比例增加。\\n同時使目標速攻值減少<color=#28d9ed>[Buff_V_2000114_2_4]</color>，持有【疾馳】時減少<color=#28d9ed>[Buff_V_2000114_2_5]</color>。（無視效果抵抗）\\n該技能傷害按最大生命力而非攻擊力計算。"
+  },
+  {
+    "ID": "SKILL_NAME_2000114_Skill03",
+    "Korean": "나우 유 캔 체이싱 미",
+    "English": "Catch Me If You Can",
+    "Japanese": "捕まえてみて",
+    "China_Simplified": "追上我啊",
+    "China_Traditional": "追上我啊"
+  },
+  {
+    "ID": "SKILL_DESC_2000114_Skill03_LV1",
+    "Korean": "스킬 사용 전 자신에게 <color=#28d9ed>질주</color>를 <color=#28d9ed>[Buff_T_2000114_3_1]턴</color> 동안 부여하고(해제 불가) 자신보다 최대 체력이 낮은 대상의 강화 효과 지속 시간을 <color=#28d9ed>1턴</color> 감소 시킨 뒤, 적을 공격합니다.(효과 저항 무시) \\n<color=#28d9ed>질주</color> 보유 시 피해가 <color=#28d9ed>100%</color> 증가하고 대상이 보스인 경우 피해가 <color=#28d9ed>[Buff_V_2000114_3_3]</color> 증가합니다.\\n공격 후 <color=#28d9ed>현재 체력이 가장 낮은 적</color>에게 <color=#28d9ed>히트&히트</color>를 사용합니다.\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.\\n\\n<color=#ffd732>이레귤러 몬스터</color> 혹은 <color=#ffd732>차원 특이점 보스</color> 공격 시 피해가 <color=#28d9ed>100%</color> 증가합니다.",
+    "English": "Before using the skill, grants self <color=#28d9ed>Rush</color> for <color=#28d9ed>[Buff_T_2000114_3_1] turn</color> (Irremovable) and decreases the duration of buffs on targets with lower Max Health than self by <color=#28d9ed>1 turn</color>, then attacks an enemy. (Ignores Resilience)\\nIf <color=#28d9ed>Rush</color> is active, DMG increases by <color=#28d9ed>100%</color>, and if the target is a Boss, DMG increases by an additional <color=#28d9ed>[Buff_V_2000114_3_3]</color>.\\nAfter attacking, uses <color=#28d9ed>Hit & Hit</color> on the <color=#28d9ed>enemy with the lowest current HP</color>.\\nThis skill deals damage proportional to Max Health instead of Attack.\\n\\nWhen attacking an <color=#ffd732>Irregular Monster</color> or <color=#ffd732>Dimensional Singularity Boss</color>, DMG increases by <color=#28d9ed>100%</color>.",
+    "Japanese": "スキル使用前、自分に<color=#28d9ed>【疾走】</color>を<color=#28d9ed>[Buff_T_2000114_3_1]ターン</color>の間付与し（解除不可）、自分より最大HPが低い対象の強化効果の持続ターンを<color=#28d9ed>1ターン</color>減少させた後、敵単体にダメージを与える。\\nこの効果は対象の効果抵抗を無視する。\\n<color=#28d9ed>【疾走】</color>がある場合、ダメージが<color=#28d9ed>100%</color>UPし、対象がボスの場合はさらにダメージが<color=#28d9ed>[Buff_V_2000114_3_3]</color>UPする。\\n攻撃後、現在のHPが最も低い敵に<color=#28d9ed>【ヒット＆ヒット】</color>を使用する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。\\n\\n<color=#ffd732>イレギュラーモンスター</color>または<color=#ffd732>次元特異点のボス</color>攻撃時、与えるダメージが<color=#28d9ed>100%</color>UPする。",
+    "China_Simplified": "技能使用前，对自身附加<color=#28d9ed>【疾驰】</color><color=#28d9ed>[Buff_T_2000114_3_1]回合</color>（无法解除），并使最大生命值低于自身的目标强化效果持续时间减少<color=#28d9ed>1回合</color>，然后攻击敌人。（无视效果抵抗）\\n持有<color=#28d9ed>【疾驰】</color>时，伤害增加<color=#28d9ed>100%</color>，若目标为首领，伤害进一步增加<color=#28d9ed>[Buff_V_2000114_3_3]</color>。\\n攻击后对<color=#28d9ed>当前生命值最低的敌人</color>使用<color=#28d9ed>【连打连打】</color>。\\n该技能伤害按最大生命值而非攻击力计算。\\n\\n攻击<color=#ffd732>异形怪怪物</color>或<color=#ffd732>次元奇点首领</color>时，伤害增加<color=#28d9ed>100%</color>。",
+    "China_Traditional": "技能使用前，對自身附加<color=#28d9ed>【疾馳】</color><color=#28d9ed>[Buff_T_2000114_3_1]回合</color>（無法解除），並使最大生命力低於自身的目標強化效果持續時間減少<color=#28d9ed>1回合</color>，然後攻擊敵人。（無視效果抵抗）\\n持有<color=#28d9ed>【疾馳】</color>時，傷害增加<color=#28d9ed>100%</color>，若目標為首領，傷害進一步增加<color=#28d9ed>[Buff_V_2000114_3_3]</color>。\\n攻擊後對<color=#28d9ed>當前生命力最低的敵人</color>使用<color=#28d9ed>【連打連打】</color>。\\n該技能傷害按最大生命力而非攻擊力計算。\\n\\n攻擊<color=#ffd732>異形怪怪物</color>或<color=#ffd732>次元奇點首領</color>時，傷害增加<color=#28d9ed>100%</color>。"
+  },
+  {
+    "ID": "SKILL_DESC_2000114_Skill04_LV1",
+    "Korean": "<color=#ffd732>체인 컴패니언 효과</color> : 공격 후 대상 최대 체력의 <color=#28d9ed>5%</color> 만큼 고정 피해를 입힙니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+    "English": "<color=#ffd732>Chain Companion Effect</color>: After attacking, inflicts Fixed Damage equal to <color=#28d9ed>5%</color> of the target's Max Health.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, increases own Priority by <color=#28d9ed>20%</color>.",
+    "Japanese": "<color=#ffd732>チェーン効果(汎用)</color>：攻撃後、対象の最大HPの<color=#28d9ed>5%</color>分の固定ダメージを与える。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、自分の行動ゲージを<color=#28d9ed>20%</color>増加させる。",
+    "China_Simplified": "<color=#ffd732>连锁效果(通用)</color>：攻击后造成相当于目标最大生命值<color=#28d9ed>5%</color>的固定伤害。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后使自身行动值增加<color=#28d9ed>20%</color>。",
+    "China_Traditional": "<color=#ffd732>連鎖效果(通用)</color>：攻擊後造成相當於目標最大生命力<color=#28d9ed>5%</color>的固定傷害。\\n\\n<color=#ffd732>夾攻效果</color>：攻擊後使自身速攻值增加<color=#28d9ed>20%</color>。"
+  },
+  {
+    "ID": "SKILL_NAME_B_2000114_1",
+    "Korean": "피해 증가\\nWG 감소",
+    "English": "DMG Increase\\nWG Reduction",
+    "Japanese": "ダメージUP\\nWGダメージ",
+    "China_Simplified": "伤害提升\\nWG减少",
+    "China_Traditional": "傷害提升\\nWG減少"
+  },
+  {
+    "ID": "SKILL_NAME_B_2000114_2",
+    "Korean": "피해 증가\\n관통력 증가",
+    "English": "DMG Increase\\nPenetration Increase",
+    "Japanese": "ダメージUP\\n貫通力UP",
+    "China_Simplified": "伤害提升\\n穿透力提升",
+    "China_Traditional": "傷害提升\\n貫穿力提升"
+  },
+  {
+    "ID": "SKILL_NAME_B_2000114_3",
+    "Korean": "필살기 쿨타임 초기화\\n추가 턴",
+    "English": "Ultimate Cooldown Reset\\nExtra Turn",
+    "Japanese": "必殺スキルターンリセット\\n追加ターン",
+    "China_Simplified": "必杀技冷却时间重置\\n额外回合",
+    "China_Traditional": "必殺技冷卻時間重置\\n追加回合"
+  },
+  {
+    "ID": "SKILL_DESC_B_2000114_1",
+    "Korean": "피해 증가\\nWG 감소량 +1",
+    "English": "DMG Increase\\nWG Reduction +1",
+    "Japanese": "ダメージUP\\nWGダメージ+1",
+    "China_Simplified": "伤害提升\\nWG减少量+1",
+    "China_Traditional": "傷害提升\\nWG減少量+1"
+  },
+  {
+    "ID": "SKILL_DESC_B_2000114_2",
+    "Korean": "피해 증가\\n관통력 +30%",
+    "English": "DMG Increase\\nPenetration +30%",
+    "Japanese": "ダメージUP\\n貫通力+30%",
+    "China_Simplified": "伤害提升\\n穿透力+30%",
+    "China_Traditional": "傷害提升\\n貫穿力+30%"
+  },
+  {
+    "ID": "SKILL_DESC_B_2000114_3",
+    "Korean": "나우 유 캔 체이싱 미 쿨타임 초기화\\n추가 턴",
+    "English": "Catch Me If You Can Cooldown Reset\\nExtra Turn",
+    "Japanese": "【捕まえてみて」スキルターン初期化\\n追加ターン",
+    "China_Simplified": "【追上我啊】冷却时间重置\\n额外回合",
+    "China_Traditional": "【追上我啊】冷卻時間重置\\n追加回合"
+  },
+  {
+    "ID": "UO_CEQUIP_2000114_NAME",
+    "Korean": "미드나이트 러시 스카디의 전용장비",
+    "English": "Midnight Rush Skadi's Exclusive Equipment",
+    "Japanese": "ミッドナイトラッシュ・スカディの専用装備",
+    "China_Simplified": "午夜突袭·斯卡蒂的专属装备",
+    "China_Traditional": "午夜突襲·斯卡蒂的專屬裝備"
+  },
+  {
+    "ID": "UO_CEQUIP_2000114_DESC",
+    "Korean": "피격 시 행동 게이지 <color=#28d9ed>+30%</color> (3턴에 1회만 발동)",
+    "English": "When hit, Priority <color=#28d9ed>+30%</color> (Activates once every 3 turns)",
+    "Japanese": "被弾時、行動ゲージ<color=#28d9ed>+30%</color>（3ターンに1回のみ発動）",
+    "China_Simplified": "被攻击时行动值<color=#28d9ed>+30%</color>（每3回合仅发动1次）",
+    "China_Traditional": "被攻擊時速攻值<color=#28d9ed>+30%</color>（每3回合僅發動1次）"
+  },
+  {
+    "ID": "UO_CEQUIP_2000114_UPGRADE_DESC",
+    "Korean": "첫 턴 시작시 자신의 약화 효과 지속 시간 <color=#28d9ed>-1턴</color>",
+    "English": "At the start of the first turn, own debuff duration <color=#28d9ed>-1 turn</color>",
+    "Japanese": "最初のターン開始時、自分の弱体効果の持続ターン<color=#28d9ed>-1ターン</color>",
+    "China_Simplified": "第一回合开始时，自身弱化效果持续时间<color=#28d9ed>-1回合</color>",
+    "China_Traditional": "第一回合開始時，自身弱化效果持續時間<color=#28d9ed>-1回合</color>"
   }
 ]

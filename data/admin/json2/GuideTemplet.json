@@ -248,8 +248,8 @@
     "Type": "2",
     "Sort": "20",
     "NameID": "SYS_FRIENDSHIP",
-    "ImageName": "GUIDE_TRUST_01",
-    "DescriptionNameID": "SYS_GUIDE_TRUST_01_DESC"
+    "ImageName": "GUIDE_TRUST_01,GUIDE_TRUST_05",
+    "DescriptionNameID": "SYS_GUIDE_TRUST_01_DESC,SYS_GUIDE_TRUST_05_DESC"
   },
   {
     "ID": "219",
@@ -1930,7 +1930,7 @@
     "GroupID": "100",
     "Type": "1",
     "Sort": "1",
-    "NameID": "SYS_GUIDE_EVENT_GAME_TITLE",
+    "NameID": "SYS_EVENT_3RD_FESTIVAL",
     "ImageName": "",
     "DescriptionNameID": ""
   },
@@ -1939,8 +1939,44 @@
     "GroupID": "100",
     "Type": "2",
     "Sort": "2",
-    "NameID": "SYS_GUIDE_EVENT_GAME_01_NAME",
-    "ImageName": "GUIDE_EVENT_GAME_01",
-    "DescriptionNameID": "SYS_GUIDE_EVENT_GAME_01_DESC"
+    "NameID": "SYS_GUIDE_FESTIVAL_01_NAME",
+    "ImageName": "GUIDE_FESTIVAL_01",
+    "DescriptionNameID": "SYS_GUIDE_FESTIVAL_01_DESC"
+  },
+  {
+    "ID": "10003",
+    "GroupID": "100",
+    "Type": "2",
+    "Sort": "3",
+    "NameID": "SYS_GUIDE_FESTIVAL_02_NAME",
+    "ImageName": "GUIDE_FESTIVAL_02",
+    "DescriptionNameID": "SYS_GUIDE_FESTIVAL_02_DESC"
+  },
+  {
+    "ID": "10004",
+    "GroupID": "100",
+    "Type": "2",
+    "Sort": "4",
+    "NameID": "SYS_GUIDE_FESTIVAL_04_NAME",
+    "ImageName": "GUIDE_FESTIVAL_03",
+    "DescriptionNameID": "SYS_GUIDE_FESTIVAL_03_DESC"
+  },
+  {
+    "ID": "10005",
+    "GroupID": "100",
+    "Type": "2",
+    "Sort": "5",
+    "NameID": "SYS_GUIDE_FESTIVAL_03_NAME",
+    "ImageName": "GUIDE_FESTIVAL_04",
+    "DescriptionNameID": "SYS_GUIDE_FESTIVAL_04_DESC"
+  },
+  {
+    "ID": "10006",
+    "GroupID": "100",
+    "Type": "2",
+    "Sort": "6",
+    "NameID": "SYS_GUIDE_FESTIVAL_05_NAME",
+    "ImageName": "GUIDE_FESTIVAL_05",
+    "DescriptionNameID": "SYS_GUIDE_FESTIVAL_05_DESC"
   }
 ]

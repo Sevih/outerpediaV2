@@ -473,5 +473,24 @@
     "DungeonID": "90500000,90500100,90500200",
     "CharID": "2000119,2000076",
     "BonusTypeID": "1,2,3,4,5,6,7,8,9,10,11"
+  },
+  {
+    "ID": "26",
+    "NameID": "SYS_EVENT_BOSS_S01_NAME",
+    "StartDate": "2026-05-19 00:00:00",
+    "EndDate": "2026-05-26 00:00:00",
+    "BossID": "4318042",
+    "TurnLimit": "20,20,20",
+    "BossMonsterHP": "25000,250000,2000000",
+    "BossLocalPositionStr": "-0.5,0,-2.9",
+    "BossRotationY": "175",
+    "BossLocalScaleStr": "0.45,0.45,0.45",
+    "TitleImage": "T_Event_World_Map_04",
+    "WorldMapImage": "T_Event_World_Map_04",
+    "RollingBannerImage": "T_Banner_Event_Boss_01",
+    "BgmSoundName": "Scene_Peaceful_intro,Scene_Peaceful",
+    "DungeonID": "90100000,90100100,90100200",
+    "CharID": "2000098,2000028",
+    "BonusTypeID": "1,2,3,4,5,6,7,8,9,10,11"
   }
 ]

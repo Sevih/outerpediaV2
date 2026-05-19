@@ -996,5 +996,16 @@
     "Desc": "SYS_BUFF_USERNICKNAME_ACHIEVE_04_1_DESC",
     "IconName": "TI_STAMINA_DISCOUNT",
     "PurchaseBuff": "False"
+  },
+  {
+    "ID": "101",
+    "GroupID": "101",
+    "BuffType": "EBT_CONTENTS_STAMINA_DISCOUNT",
+    "BuffValue": "1",
+    "DungeonMode": "DM_NORMAL,DM_RAID_1,DM_RAID_2",
+    "Title": "SYS_BUFF_EVENT_STAMINA_002",
+    "Desc": "SYS_BUFF_EVENT_STAMINA_DESC_002",
+    "IconName": "TI_STAMINA_DISCOUNT",
+    "PurchaseBuff": "False"
   }
 ]

@@ -427,6 +427,13 @@
     "_unknown_0": "0"
   },
   {
+    "ID": "8051",
+    "ContentTaskType": "CTT_EVENT_DUNGEON_COMPLETE",
+    "ConditionValue": "51",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
     "ID": "22000",
     "ContentTaskType": "CTT_CHARACTER_ENCHANT",
     "ConditionValue": "0",
@@ -1746,6 +1753,13 @@
     "ID": "183200011",
     "ContentTaskType": "CTT_DUNGEON_FIRST_CLEAR",
     "ConditionValue": "83200011",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "183300010",
+    "ContentTaskType": "CTT_DUNGEON_FIRST_CLEAR",
+    "ConditionValue": "83300010",
     "ConditionValue2": "0",
     "_unknown_0": "0"
   },
@@ -5131,6 +5145,13 @@
     "_unknown_0": "0"
   },
   {
+    "ID": "89226",
+    "ContentTaskType": "CTT_EVENT_BOSS_COMPLETE",
+    "ConditionValue": "26",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
     "ID": "910001",
     "ContentTaskType": "CTT_RETURN_USER_MISSION_DAY_COMPLETE",
     "ConditionValue": "1",
@@ -5701,6 +5722,13 @@
     "ID": "950013",
     "ContentTaskType": "CTT_EVENT_GAME_COLLECT",
     "ConditionValue": "13",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "950016",
+    "ContentTaskType": "CTT_EVENT_GAME_COLLECT",
+    "ConditionValue": "16",
     "ConditionValue2": "0",
     "_unknown_0": "0"
   },
@@ -6730,6 +6758,13 @@
     "ID": "99034",
     "ContentTaskType": "CTT_PACKAGE_BUY_COUNT",
     "ConditionValue": "91034",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "99035",
+    "ContentTaskType": "CTT_PACKAGE_BUY_COUNT",
+    "ConditionValue": "91035",
     "ConditionValue2": "0",
     "_unknown_0": "0"
   },
@@ -9117,6 +9152,34 @@
     "ID": "1006106",
     "ContentTaskType": "CTT_RECRUIT_COUNT",
     "ConditionValue": "6106",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "1105010",
+    "ContentTaskType": "CTT_RECRUIT_COUNT",
+    "ConditionValue": "5010",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "312000114",
+    "ContentTaskType": "CTT_CHARACTER_OBTAIN",
+    "ConditionValue": "2000114",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "283300010",
+    "ContentTaskType": "CTT_DUNGEON_FIRST_CLEAR",
+    "ConditionValue": "83300010",
+    "ConditionValue2": "0",
+    "_unknown_0": "0"
+  },
+  {
+    "ID": "600630072",
+    "ContentTaskType": "CTT_BUY_PRODUCT_PID",
+    "ConditionValue": "630072",
     "ConditionValue2": "0",
     "_unknown_0": "0"
   }
