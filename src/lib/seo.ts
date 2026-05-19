@@ -1,11 +1,21 @@
 import type { Metadata } from 'next';
-import { LANGUAGES, LANGS } from '@/lib/i18n/config';
+import { LANGUAGES, LANGS, DEFAULT_LANG, isValidLang } from '@/lib/i18n/config';
 import type { Lang } from '@/lib/i18n/config';
+
+/**
+ * Normalize an untrusted lang value to a valid Lang.
+ * `generateMetadata` receives the raw `[lang]` route param, which can be an
+ * unexpected value (bot probes, malformed URLs). Falling back to the default
+ * language keeps these SEO helpers from throwing during SSR.
+ */
+function normalizeLang(lang: string): Lang {
+  return isValidLang(lang) ? lang : DEFAULT_LANG;
+}
 
 /** Locale-aware "Month Year" string for dynamic SEO titles (e.g. "February 2026") */
 export function getMonthYear(lang: Lang): string {
   const now = new Date();
-  return now.toLocaleString(LANGUAGES[lang].htmlLang, { month: 'long', year: 'numeric' });
+  return now.toLocaleString(LANGUAGES[normalizeLang(lang)].htmlLang, { month: 'long', year: 'numeric' });
 }
 
 const SITE_NAME = 'Outerpedia';
@@ -22,14 +32,15 @@ export function getBaseUrl(): string {
 export function buildUrl(lang: Lang, path = ''): string {
   const segment = path === '/' ? '' : path;
   const base = getBaseUrl();
+  const safeLang = normalizeLang(lang);
 
   // Dev: path-based routing
   if (process.env.NODE_ENV === 'development') {
-    return `${base}/${lang}${segment}`;
+    return `${base}/${safeLang}${segment}`;
   }
 
   // Production: subdomain-based routing
-  const sub = LANGUAGES[lang].subdomain;
+  const sub = LANGUAGES[safeLang].subdomain;
   if (sub) {
     return `https://${sub}.${BASE_DOMAIN}${segment}`;
   }
@@ -95,7 +106,7 @@ export function createPageMetadata({
       url,
       siteName: SITE_NAME,
       type: 'website',
-      locale: OG_LOCALE[lang],
+      locale: OG_LOCALE[normalizeLang(lang)],
       images: [{ url: ogImage, width, height }],
     },
     twitter: {
