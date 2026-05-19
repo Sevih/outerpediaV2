@@ -77,7 +77,6 @@ export default function AnnihilatorGuide() {
       title={lRec(may2026.strings.title, lang)}
       introduction={lRec(may2026.strings.intro, lang)}
       defaultVersion="may2026"
-      updating
       versions={{
         may2026: {
           label: lRec(may2026.strings.label, lang),
