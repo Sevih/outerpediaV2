@@ -2742,6 +2742,32 @@
     "rank": "B",
     "rank10": "C"
   },
+  "2000114": {
+    "name": "Midnight Rose",
+    "name_jp": "ミッドナイトローズ",
+    "name_kr": "미드나이트 로즈",
+    "name_zh": "午夜玫瑰",
+    "mainStat": "DMG Increase vs Earth",
+    "mainStat_jp": "地属性対象の ダメージUP",
+    "mainStat_kr": "지속성 대상 피해 증가",
+    "mainStat_zh": "对土属性目标造成 伤害提升",
+    "effect": "When hit, Priority <color=#28d9ed>+30%</color> (Activates once every 3 turns)",
+    "effect_jp": "被弾時、行動ゲージ<color=#28d9ed>+30%</color>（3ターンに1回のみ発動）",
+    "effect_kr": "피격 시 행동 게이지 <color=#28d9ed>+30%</color> (3턴에 1회만 발동)",
+    "effect_zh": "被攻击时行动值<color=#28d9ed>+30%</color>（每3回合仅发动1次）",
+    "effect10": "At the start of the first turn, own debuff duration <color=#28d9ed>-1 turn</color>",
+    "effect10_jp": "最初のターン開始時、自分の弱体効果の持続ターン<color=#28d9ed>-1ターン</color>",
+    "effect10_kr": "첫 턴 시작시 자신의 약화 효과 지속 시간 <color=#28d9ed>-1턴</color>",
+    "effect10_zh": "第一回合开始时，自身弱化效果持续时间<color=#28d9ed>-1回合</color>",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "buff": [
+      "BT_ACTION_GAUGE",
+      "BT_EXTEND_DEBUFF"
+    ],
+    "debuff": [],
+    "rank": "",
+    "rank10": ""
+  },
   "2000117": {
     "name": "Power & Ambition",
     "name_jp": "Power & Ambition",
