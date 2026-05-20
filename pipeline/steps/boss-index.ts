@@ -26,7 +26,10 @@ function extractDifficultyPriority(dungeonName: string): number {
 
 export async function run() {
   const files = await readdir(PATHS.bosses);
-  const jsonFiles = files.filter(f => f.endsWith('.json') && f !== 'index.json');
+  // Skip index.json and legacy snapshots (filename ending in -N.json, e.g. 4318062-1.json)
+  const jsonFiles = files.filter(
+    f => f.endsWith('.json') && f !== 'index.json' && !/-\d+\.json$/.test(f)
+  );
 
   // Load all boss data
   const allBosses = await Promise.all(

@@ -1,5 +1,5 @@
 {
-  "id": "4318042",
+  "id": "4318042-1",
   "Name": {
     "en": "Annihilator",
     "jp": "エクスタミネーター",
@@ -63,16 +63,17 @@
       },
       "type": "SKT_SECOND",
       "description": {
-        "en": "Attacks all enemies. Upon attack, decreases all Enemies' <color=#28d9ed>Critical Hit Chance/Critical Damage</color> for <color=#28d9ed>9 turns,</color> and reduces the <color=#28d9ed>Priority Gauge</color> of all non-<color=#28d9ed>Healer</color> Enemies to zero.",
-        "jp": "敵全体にダメージを与える。攻撃後、敵全体の<color=#28d9ed>会心率/会心ダメージ</color>を<color=#28d9ed>9ターン</color>の間DOWNさせ、<color=#28d9ed>回復型</color>以外の敵全体の<color=#28d9ed>行動ゲージ</color>を全てDOWNさせる。",
+        "en": "Attacks all enemies. Upon attack, decreases all Enemies' <color=#28d9ed>Attack/Critical Hit Chance/Critical Damage</color> for <color=#28d9ed>9 turns,</color> and reduces the <color=#28d9ed>Priority Gauge</color> of all non-<color=#28d9ed>Healer</color> Enemies to zero.",
+        "jp": "敵全体にダメージを与える。攻撃後、敵全体の<color=#28d9ed>攻撃力/会心率/会心ダメージ</color>を<color=#28d9ed>9ターン</color>の間DOWNさせ、<color=#28d9ed>回復型</color>以外の敵全体の<color=#28d9ed>行動ゲージ</color>を全てDOWNさせる。",
         "kr": "적 전체를 공격합니다. 공격 후 적 전체의 <color=#28d9ed>치명 확률/치명 피해</color>를 <color=#28d9ed>9턴</color> 동안 감소시키고, <color=#28d9ed>회복형</color>이 아닌 적 전체의 <color=#28d9ed>행동 게이지</color>를 모두 감소시킵니다.",
-        "zh": "攻击全体敌人。攻击后，使全体敌人的<color=#28d9ed>暴击率/暴击伤害</color>降低，持续<color=#28d9ed>9回合</color>。使非<color=#28d9ed>恢复型</color>全体敌人的<color=#28d9ed>行动值</color>全部减少。"
+        "zh": "攻击全体敌人。攻击后，使全体敌人的<color=#28d9ed>攻击力/暴击率/暴击伤害</color>降低，持续<color=#28d9ed>9回合</color>。使非<color=#28d9ed>恢复型</color>全体敌人的<color=#28d9ed>行动值</color>全部减少。"
       },
       "icon": "Skill_Second_4014002",
       "debuff": [
         "BT_STAT|ST_CRITICAL_RATE",
         "BT_STAT|ST_CRITICAL_DMG_RATE",
-        "BT_ACTION_GAUGE"
+        "BT_ACTION_GAUGE",
+        "BT_STAT|ST_ATK"
       ]
     },
     {

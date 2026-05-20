@@ -36,6 +36,9 @@ type Props = {
   versionIds?: string[];
   onVersionChange?: (index: number) => void;
   onBossIdChange?: (id: string) => void;
+  /** Suffix appended to the boss JSON filename (e.g. "-1" for legacy snapshots).
+   *  Dropdown values stay as the bare current id from boss-index. */
+  bossFileSuffix?: string;
 };
 
 /* ── Sub-components ─────────────────────────────────────── */
@@ -140,7 +143,7 @@ export function BossDetails({ boss, lang }: { boss: Boss; lang: Lang }) {
 
 export const bossCache = new Map<string, Boss>();
 
-export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses, versionIds, onVersionChange, onBossIdChange }: Props) {
+export default function BossDisplay({ bossName, modeKey, defaultBossId, preloadedBosses, versionIds, onVersionChange, onBossIdChange, bossFileSuffix = '' }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
   const { buffMap, debuffMap } = use(effectMapsPromise);
@@ -183,17 +186,18 @@ export default function BossDisplay({ bossName, modeKey, defaultBossId, preloade
 
   const loadBoss = useCallback(async (id: string): Promise<Boss | null> => {
     if (preloadedBosses?.[id]) return preloadedBosses[id];
-    const cached = bossCache.get(id);
+    const cacheKey = `${id}${bossFileSuffix}`;
+    const cached = bossCache.get(cacheKey);
     if (cached) return cached;
     try {
-      const mod = await import(`@data/boss/${id}.json`);
+      const mod = await import(`@data/boss/${id}${bossFileSuffix}.json`);
       const data = (mod.default ?? mod) as Boss;
-      bossCache.set(id, data);
+      bossCache.set(cacheKey, data);
       return data;
     } catch {
       return null;
     }
-  }, [preloadedBosses]);
+  }, [preloadedBosses, bossFileSuffix]);
 
   useEffect(() => {
     if (selectedId === defaultId && preloadedBoss) {
