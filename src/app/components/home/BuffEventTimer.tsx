@@ -29,9 +29,22 @@ const BUFF_COLOR: Record<string, string> = {
   other: 'bg-zinc-400',
 };
 
-// Icon per buff type — TODO: fill with real asset paths (e.g. /images/ui/...).
-// When a type has no entry, the colored marker dot is shown as a fallback.
-const BUFF_ICON: Record<string, string> = {};
+// Buff-type icons live in /public/images/ui/buffs/<type>.webp. To enable a new
+// one, drop the matching <type>.webp there and uncomment its line below. Types
+// without an icon (or whose file is missing) fall back to the colored dot.
+const BUFF_ICON: Record<string, string> = {
+  'frog-gold': '/images/ui/buffs/TI_Item_Event_Gold.webp',
+  'frog-food': '/images/ui/buffs/TI_Item_Event_User_Exp.webp',
+  'kate-workshop': '/images/ui/buffs/kate-workshop.webp',
+  'story-survey': '/images/ui/buffs/story-survey.webp',
+  //'evolution-stone': '/images/ui/buffs/TI_Item_Event_DayWeek_Open.webp', // mode de jeu abandonné
+  'ark-raid': '/images/ui/buffs/TI_Item_Event_DayWeek_Open.webp',
+  'special-ecology': '/images/ui/buffs/TI_Item_Event_Boss_Reward_000.webp',
+  'special-identification': '/images/ui/buffs/TI_Item_Event_Boss_Reward_000.webp',
+  'doppelganger': '/images/ui/buffs/EBT_CHAR_PIECE_DROP.webp',
+  // 'bounty-hunter': '/images/ui/buffs/bounty-hunter.webp', // mode de jeu abandonné
+  // 'bandit-chase': '/images/ui/buffs/bandit-chase.webp', // mode de jeu abandonné
+};
 
 /** YYYY-MM-DD for a Date, in UTC (buffs run on UTC calendar days). */
 function utcKey(d: Date): string {
@@ -53,6 +66,7 @@ export default function BuffEventTimer({ schedule, lang, t }: Props) {
   const [mounted, setMounted] = useState(false);
   const [now, setNow] = useState<number>(() => Date.now());
   const [expanded, setExpanded] = useState(false);
+  const [failedIcons, setFailedIcons] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     setMounted(true);
@@ -85,7 +99,6 @@ export default function BuffEventTimer({ schedule, lang, t }: Props) {
 
   const dateFmt = new Intl.DateTimeFormat(LANGUAGES[lang].htmlLang, {
     weekday: 'short',
-    month: 'short',
     day: 'numeric',
     timeZone: 'UTC',
   });
@@ -100,8 +113,8 @@ export default function BuffEventTimer({ schedule, lang, t }: Props) {
   };
 
   return (
-    <div className="card-interactive flex flex-col gap-2 p-4">
-      <div className="flex items-center justify-between gap-3">
+    <div className="card-interactive flex flex-col justify-center gap-1.5 p-3 md:w-80">
+      <div className="flex items-center justify-between gap-2">
         <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
           {t['home.buff.title']}
         </p>
@@ -122,20 +135,34 @@ export default function BuffEventTimer({ schedule, lang, t }: Props) {
         </p>
       )}
 
-      <ul className="flex flex-col gap-1.5">
-        {rows.map((e, i) => {
+      <ul
+        className={
+          expanded
+            ? 'flex max-h-44 flex-col gap-1 overflow-y-auto pr-1'
+            : 'flex flex-col gap-1'
+        }
+      >
+        {rows.map((e) => {
           const isToday = e.date === todayKey;
           const icon = BUFF_ICON[e.type];
+          const showIcon = icon && !failedIcons.has(e.type);
           return (
             <li
               key={e.date}
-              className={`flex items-center gap-2.5 ${i === 0 && hasToday ? '' : 'opacity-90'}`}
+              className={`flex items-center gap-2 ${isToday ? '' : 'opacity-80'}`}
             >
-              <span className="w-16 shrink-0 text-xs font-semibold text-zinc-500">
+              <span className="w-16 shrink-0 whitespace-nowrap text-xs font-semibold text-zinc-500">
                 {rowName(e.date)}
               </span>
-              {icon ? (
-                <Image src={icon} alt="" width={20} height={20} className="shrink-0" />
+              {showIcon ? (
+                <Image
+                  src={icon}
+                  alt=""
+                  width={22}
+                  height={22}
+                  className="shrink-0"
+                  onError={() => setFailedIcons((prev) => new Set(prev).add(e.type))}
+                />
               ) : (
                 <span
                   className={`size-2.5 shrink-0 rounded-full ${BUFF_COLOR[e.type] ?? BUFF_COLOR.other}`}

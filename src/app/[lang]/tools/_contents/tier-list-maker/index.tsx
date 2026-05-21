@@ -32,6 +32,7 @@ export default async function TierListMakerTool() {
       img: `/images/characters/faceicon/FI_${c.ID}.webp`,
       element: c.Element,
       cls: c.Class,
+      rarity: c.Rarity,
     }))
     .sort(byName);
 

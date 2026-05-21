@@ -1,14 +1,13 @@
 'use client';
 
 import { memo, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
 import {
   FaPlus, FaTrash, FaChevronUp, FaChevronDown, FaXmark,
   FaImage, FaLink, FaArrowRotateLeft, FaCheck,
 } from 'react-icons/fa6';
 import type { LangMap } from '@/types/common';
-import type { ElementType, ClassType } from '@/types/enums';
-import { ELEMENTS, CLASSES } from '@/types/enums';
+import type { ElementType, ClassType, RarityType } from '@/types/enums';
+import { ELEMENTS, CLASSES, RARITIES } from '@/types/enums';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { FilterSearch, FilterPill } from '@/app/components/ui/FilterPills';
@@ -21,6 +20,7 @@ export type TierSourceItem = {
   img: string;
   element?: string;
   cls?: string;
+  rarity?: number;
 };
 
 type Props = {
@@ -281,6 +281,27 @@ function removeKey(tiers: Tier[], key: string): Tier[] {
   return tiers.map((t) => ({ ...t, items: t.items.filter((k) => k !== key) }));
 }
 
+/** Greedy word-wrap for canvas text; breaks any single over-long word by character. */
+function wrapLabel(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
+  const lines: string[] = [];
+  let line = '';
+  const addChars = (chunk: string) => {
+    for (const ch of chunk) {
+      if (line && ctx.measureText(line + ch).width > maxWidth) { lines.push(line); line = ch; }
+      else line += ch;
+    }
+  };
+  text.trim().split(/\s+/).filter(Boolean).forEach((word, i) => {
+    if (i > 0) {
+      if (line && ctx.measureText(`${line} ${word}`).width > maxWidth) { lines.push(line); line = ''; }
+      else if (line) line += ' ';
+    }
+    addChars(word);
+  });
+  if (line) lines.push(line);
+  return lines.length ? lines : [''];
+}
+
 // ── Item thumbnail ──
 
 const ITEM_CLS = 'h-11 w-11 sm:h-14 sm:w-14';
@@ -320,12 +341,40 @@ const ItemView = memo(function ItemView({ item, selected, dimmed, label, onPoint
   );
 });
 
+// ── Tier label (auto-growing, word-wrapping) ──
+
+function TierLabel({
+  value, onChange, onClick,
+}: {
+  value: string;
+  onChange: (value: string) => void;
+  onClick: (e: React.MouseEvent) => void;
+}) {
+  const ref = useRef<HTMLTextAreaElement>(null);
+  // Resize to fit the content on mount and on every value change (incl. when a
+  // shared list is hydrated) — works in every browser.
+  useEffect(() => {
+    const el = ref.current;
+    if (el) { el.style.height = 'auto'; el.style.height = `${el.scrollHeight}px`; }
+  }, [value]);
+  return (
+    <textarea
+      ref={ref}
+      value={value}
+      rows={1}
+      maxLength={60}
+      onChange={(e) => onChange(e.target.value)}
+      onClick={onClick}
+      placeholder="…"
+      className="w-full resize-none overflow-hidden wrap-break-word bg-transparent text-center text-base font-bold leading-tight text-zinc-900 placeholder-zinc-700/50 focus:outline-none"
+    />
+  );
+}
+
 // ── Main component ──
 
 export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   const { lang, t } = useI18n();
-  const router = useRouter();
-  const pathname = usePathname();
 
   // Master lookup of every available item.
   const itemMap = useMemo(() => {
@@ -354,6 +403,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   const query = useDeferredValue(rawQuery);
   const [elementFilter, setElementFilter] = useState<ElementType[]>([]);
   const [classFilter, setClassFilter] = useState<ClassType[]>([]);
+  const [rarityFilter, setRarityFilter] = useState<RarityType[]>([]);
 
   // Interaction state
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
@@ -412,15 +462,18 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       const z = encodeState(title, tiers, canon);
       // Unmodified list still showing its short link → leave the URL alone.
       if (shareBaselineRef.current === z) return;
+      const path = window.location.pathname;
       const isPristine = !title && tiers.every((t) => t.items.length === 0);
-      const next = isPristine ? pathname : `${pathname}?z=${z}`;
+      const next = isPristine ? path : `${path}?z=${z}`;
       if (lastUrlRef.current !== next) {
         lastUrlRef.current = next;
-        router.replace(next as never, { scroll: false });
+        // history.replaceState updates the address bar only — no RSC fetch,
+        // no re-render, no flicker (unlike router.replace).
+        window.history.replaceState(window.history.state, '', next);
       }
     }, 400);
     return () => clearTimeout(handle);
-  }, [hydrated, title, tiers, pathname, router, canon]);
+  }, [hydrated, title, tiers, canon]);
 
   // ── Derived: placed keys + pool ──
   const placed = useMemo(() => new Set(tiers.flatMap((t) => t.items)), [tiers]);
@@ -431,13 +484,14 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       if (placed.has(it.key)) return false;
       if (elementFilter.length && (!it.element || !elementFilter.includes(it.element as ElementType))) return false;
       if (classFilter.length && (!it.cls || !classFilter.includes(it.cls as ClassType))) return false;
+      if (rarityFilter.length && (it.rarity === undefined || !rarityFilter.includes(it.rarity as RarityType))) return false;
       if (q) {
         const name = Object.values(it.name).join(' ').toLowerCase();
         if (!name.includes(q)) return false;
       }
       return true;
     });
-  }, [sourceByTab, tab, placed, query, elementFilter, classFilter]);
+  }, [sourceByTab, tab, placed, query, elementFilter, classFilter, rarityFilter]);
 
   // ── Drag & drop (pointer events, mouse + touch) ──
   const startRef = useRef<{ x: number; y: number; key: string } | null>(null);
@@ -625,7 +679,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   // self-contained "?z=" link so sharing always works.
   const copyLink = async () => {
     const z = encodeState(title, tiers, canon);
-    const base = `${window.location.origin}${pathname}`;
+    const base = `${window.location.origin}${window.location.pathname}`;
     let url = `${base}?z=${z}`;
     try {
       const res = await fetch('/api/tierlist', {
@@ -652,6 +706,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   // ── PNG export ──
   const exportPng = useCallback(async () => {
     const CELL = 76, PER_ROW = 12, PAD = 20, LABEL_W = 110;
+    const LABEL_PAD = 8, LINE_H = 24, LABEL_FONT = '700 20px system-ui, sans-serif';
     const load = (src: string) =>
       new Promise<HTMLImageElement | null>((resolve) => {
         const im = new Image();
@@ -671,19 +726,28 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       }),
     );
 
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Wrap each label, then size every row to fit both its items and its label.
+    ctx.font = LABEL_FONT;
+    const labelLines = tiers.map((tr) => wrapLabel(ctx, tr.label, LABEL_W - LABEL_PAD * 2));
+    const rowHeights = tiers.map((tr, i) => {
+      const itemsH = Math.max(1, Math.ceil(tr.items.length / PER_ROW)) * CELL;
+      const labelH = labelLines[i].length * LINE_H + LABEL_PAD * 2;
+      return Math.max(itemsH, labelH);
+    });
+
     const titleH = title.trim() ? 56 : 0;
-    const rowHeights = tiers.map((tr) => Math.max(1, Math.ceil(tr.items.length / PER_ROW)) * CELL);
     const contentW = LABEL_W + PER_ROW * CELL;
     const footerH = 30;
     const width = PAD * 2 + contentW;
     const height = PAD * 2 + titleH + rowHeights.reduce((a, b) => a + b, 0) + footerH;
 
-    const canvas = document.createElement('canvas');
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = width * dpr;
     canvas.height = height * dpr;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
     ctx.scale(dpr, dpr);
 
     ctx.fillStyle = '#18181b';
@@ -701,15 +765,16 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
 
     tiers.forEach((tr, ti) => {
       const rh = rowHeights[ti];
-      // Label cell
+      // Label cell — wrapped, vertically centred
       ctx.fillStyle = tr.color;
       ctx.fillRect(PAD, y, LABEL_W, rh);
       ctx.fillStyle = '#1a1a1a';
-      ctx.font = '700 22px system-ui, sans-serif';
+      ctx.font = LABEL_FONT;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      const label = tr.label.length > 10 ? `${tr.label.slice(0, 9)}…` : tr.label;
-      ctx.fillText(label, PAD + LABEL_W / 2, y + rh / 2);
+      const lines = labelLines[ti];
+      const startY = y + (rh - lines.length * LINE_H) / 2 + LINE_H / 2;
+      lines.forEach((ln, i) => ctx.fillText(ln, PAD + LABEL_W / 2, startY + i * LINE_H));
       // Items row background
       ctx.fillStyle = '#27272a';
       ctx.fillRect(PAD + LABEL_W, y, PER_ROW * CELL, rh);
@@ -765,8 +830,8 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder={t('tools.tier-list-maker.title_placeholder')}
-          maxLength={60}
-          className="w-full rounded-lg border border-zinc-700 bg-zinc-800/60 px-3 py-2 text-lg font-semibold text-white placeholder-zinc-500 focus:border-filter focus:outline-none sm:max-w-xs"
+          maxLength={100}
+          className="w-full rounded-lg border border-zinc-700 bg-zinc-800/60 px-3 py-2 text-lg font-semibold text-white placeholder-zinc-500 focus:border-filter focus:outline-none sm:max-w-sm"
         />
         <div className="flex flex-wrap gap-2">
           <ToolbarButton onClick={copyLink} icon={copied ? <FaCheck /> : <FaLink />}>
@@ -803,13 +868,10 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                 className="relative flex w-16 shrink-0 items-center justify-center p-1 sm:w-28"
                 style={{ backgroundColor: tier.color }}
               >
-                <input
+                <TierLabel
                   value={tier.label}
-                  onChange={(e) => updateTier(tier.id, { label: e.target.value })}
+                  onChange={(value) => updateTier(tier.id, { label: value })}
                   onClick={(e) => e.stopPropagation()}
-                  maxLength={14}
-                  className="w-full bg-transparent text-center text-base font-bold text-zinc-900 placeholder-zinc-700/50 focus:outline-none"
-                  placeholder="…"
                 />
                 <button
                   type="button"
@@ -939,6 +1001,19 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                 </FilterPill>
               ))}
             </div>
+            <div className="flex gap-1.5">
+              {RARITIES.map((r) => (
+                <FilterPill
+                  key={r}
+                  active={rarityFilter.includes(r)}
+                  onClick={() => setRarityFilter((f) => (f.includes(r) ? f.filter((x) => x !== r) : [...f, r]))}
+                  className="h-8 px-2"
+                  title={`${r}★`}
+                >
+                  <span className="text-xs font-semibold leading-none">{r}★</span>
+                </FilterPill>
+              ))}
+            </div>
           </div>
         )}
 
@@ -950,7 +1025,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
         >
           {poolItems.length === 0 ? (
             <p className="py-6 text-sm text-zinc-500">
-              {placed.size > 0 && query.trim() === '' && elementFilter.length === 0 && classFilter.length === 0
+              {placed.size > 0 && query.trim() === '' && elementFilter.length === 0 && classFilter.length === 0 && rarityFilter.length === 0
                 ? t('tools.tier-list-maker.empty_pool')
                 : t('tools.tier-list-maker.no_results')}
             </p>

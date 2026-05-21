@@ -80,13 +80,11 @@ export default async function Home({ params }: Props) {
         <p className="mx-auto max-w-2xl text-zinc-400">{t['page.home.description']}</p>
       </section>
 
-      {/* Discord + Server Resets, with the daily in-game buff below */}
-      <div className="space-y-4">
-        <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-[1fr_auto]">
-          <DiscordBanner t={t} />
-          <ServerResets t={t} />
-        </div>
+      {/* Discord + Daily Buff + Server Resets */}
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-[1fr_auto_auto]">
+        <DiscordBanner t={t} />
         <BuffEventTimer schedule={buffEvents} lang={lang} t={t} />
+        <ServerResets t={t} />
       </div>
 
       {/* Desktop: left (banners + beginner) | right (codes spanning both rows) */}
