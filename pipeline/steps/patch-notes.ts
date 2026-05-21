@@ -19,8 +19,9 @@ const DEV_LIMIT = 0;
 // schedule dated to the period start can go live days later; older posts get
 // edited and re-surfaced), so "stop at the first known post" silently misses
 // them. Re-scanning a window upserts any straggler that landed behind known
-// newer posts. Widen if the publisher ever backdates further than this.
-const RESCAN_WINDOW_DAYS = 45;
+// newer posts. Two weeks comfortably covers the buff-event cadence; widen if the
+// publisher ever backdates further than this.
+const RESCAN_WINDOW_DAYS = 14;
 
 // Rate limiting (ms)
 const DELAY_API = 500;
