@@ -40,5 +40,37 @@
         "fr": "Buffeurs de {S/PEN%}."
       }
     }
+  ],
+  "burn": [
+    {
+      "names": ["Vlada"],
+      "reason": {
+        "en": "Detonates {D/BT_DOT_BURN} stacks — main DPS of the Burn team.",
+        "jp": "{D/BT_DOT_BURN}スタックを破裂させる — Burn編成のメインDPS。",
+        "kr": "{D/BT_DOT_BURN} 스택을 폭발시키는 Burn 팀의 메인 딜러.",
+        "zh": "引爆{D/BT_DOT_BURN}层数 — Burn队伍的主C。",
+        "fr": "Fait exploser les stacks de {D/BT_DOT_BURN} — DPS principal de l'équipe Burn."
+      }
+    },
+    {
+      "names": ["Maxie", "Akari"],
+      "reason": {
+        "en": "Add {D/BT_DOT_BURN} stacks and {D/BT_EXTEND_DEBUFF} to keep them ticking.",
+        "jp": "{D/BT_DOT_BURN}スタックと{D/BT_EXTEND_DEBUFF}を追加し、火傷を維持する。",
+        "kr": "{D/BT_DOT_BURN} 스택과 {D/BT_EXTEND_DEBUFF}을 추가해 화상을 유지합니다.",
+        "zh": "追加{D/BT_DOT_BURN}层数与{D/BT_EXTEND_DEBUFF}以维持烧伤。",
+        "fr": "Ajoutent des stacks de {D/BT_DOT_BURN} et {D/BT_EXTEND_DEBUFF} pour les maintenir actifs."
+      }
+    },
+    {
+      "names": ["Monad Eva"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP}, AP battery and {B/BT_REVIVAL}.",
+        "jp": "{B/BT_CALL_BACKUP}、APバッテリー、{B/BT_REVIVAL}。",
+        "kr": "{B/BT_CALL_BACKUP}, AP 배터리, {B/BT_REVIVAL}.",
+        "zh": "{B/BT_CALL_BACKUP}、AP电池与{B/BT_REVIVAL}。",
+        "fr": "{B/BT_CALL_BACKUP}, batterie d'AP et {B/BT_REVIVAL}."
+      }
+    }
   ]
 }

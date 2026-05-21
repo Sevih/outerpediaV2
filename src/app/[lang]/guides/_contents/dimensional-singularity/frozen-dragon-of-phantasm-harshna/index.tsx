@@ -24,6 +24,22 @@ const preloadedBosses: Record<string, Boss> = {
   '60000005': boss60000005 as unknown as Boss,
 };
 
+const GENERAL_TITLE: LangMap = {
+  en: 'General team strategy',
+  jp: '汎用編成戦略',
+  kr: '범용 팀 전략',
+  zh: '通用队伍策略',
+  fr: 'Strategie equipe generale',
+};
+
+const GBETH_TITLE: LangMap = {
+  en: 'GBeth team strategy',
+  jp: 'GBeth編成戦略',
+  kr: 'GBeth 팀 전략',
+  zh: 'GBeth队伍策略',
+  fr: 'Strategie equipe GBeth',
+};
+
 export default function FrozenDragonPhantasmHarshnaGuide() {
   const { lang } = useI18n();
 
@@ -43,7 +59,9 @@ export default function FrozenDragonPhantasmHarshnaGuide() {
         { title: 'strategy', tips: TIPS.strategy },
       ]} />
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList entries={RECOMMENDED.strategy} />
+      <RecommendedCharacterList title={GENERAL_TITLE} entries={RECOMMENDED.strategy} />
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
               hashPrefix="frozen-dragon-of-phantasm-harshna-video"

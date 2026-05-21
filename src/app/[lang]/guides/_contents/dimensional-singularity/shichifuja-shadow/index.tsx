@@ -24,6 +24,22 @@ const preloadedBosses: Record<string, Boss> = {
   "60000008": boss60000008 as unknown as Boss,
 };
 
+const MERO_TITLE: LangMap = {
+  en: "Mero team strategy",
+  jp: "メロ編成戦略",
+  kr: "메로 팀 전략",
+  zh: "梅萝队伍策略",
+  fr: "Strategie equipe Mero",
+};
+
+const BURN_TITLE: LangMap = {
+  en: "Burn team strategy",
+  jp: "火傷編成戦略",
+  kr: "화상 팀 전략",
+  zh: "烧伤队伍策略",
+  fr: "Strategie equipe Burn",
+};
+
 export default function ShichifujaShadowGuide() {
   const { lang } = useI18n();
 
@@ -31,7 +47,7 @@ export default function ShichifujaShadowGuide() {
     <GuideTemplate
       title={lRec(STRINGS.title, lang)}
       introduction={lRec(STRINGS.intro, lang)}
-      
+
     >
       <BossDisplay
         bossName="Shichifuja's Shadow"
@@ -42,10 +58,13 @@ export default function ShichifujaShadowGuide() {
       <hr className="my-6 border-neutral-700" />
       <TacticalTips sections={[
         { title: "general", tips: TIPS.strategy },
-        { title: "strategy", tips: TIPS.mero }
+        { title: MERO_TITLE, tips: TIPS.mero },
+        { title: BURN_TITLE, tips: TIPS.burn }
         ]} />
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList entries={RECOMMENDED.mero} />
+      <RecommendedCharacterList title={MERO_TITLE} entries={RECOMMENDED.mero} />
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={BURN_TITLE} entries={RECOMMENDED.burn} />
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
         hashPrefix="shichifuja-shadow-video"

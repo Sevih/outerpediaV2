@@ -50,5 +50,47 @@
         "fr": "Options de DPS principal."
       }
     }
+  ],
+  "gbeth": [
+    {
+      "names": ["Gnosis Beth"],
+      "reason": {
+        "en": "Main DPS for the GBeth team.",
+        "jp": "GBeth編成のメインDPS。",
+        "kr": "GBeth 팀의 메인 딜러.",
+        "zh": "GBeth队伍的主C。",
+        "fr": "DPS principal pour l'équipe GBeth."
+      }
+    },
+    {
+      "names": ["Akari"],
+      "reason": {
+        "en": "{D/BT_SEALED} and {D/BT_EXTEND_DEBUFF} to extend the team's DoTs on the boss.",
+        "jp": "{D/BT_SEALED}と{D/BT_EXTEND_DEBUFF}でチームのDoTを延長する。",
+        "kr": "{D/BT_SEALED}과 {D/BT_EXTEND_DEBUFF}으로 팀의 DoT를 연장합니다.",
+        "zh": "以{D/BT_SEALED}与{D/BT_EXTEND_DEBUFF}延长全队对Boss的DoT。",
+        "fr": "{D/BT_SEALED} et {D/BT_EXTEND_DEBUFF} pour prolonger les DoTs de l'équipe sur le Boss."
+      }
+    },
+    {
+      "names": ["Roxie"],
+      "reason": {
+        "en": "Can take many turn thanks to her {B/BT_ACTION_GAUGE} and {I-A/Dies Irae}. Provide {D/BT_EXTEND_DEBUFF}.",
+        "jp": "{B/BT_ACTION_GAUGE}と{I-A/Dies Irae}で多くのターンを取れる。{D/BT_EXTEND_DEBUFF}を提供する。",
+        "kr": "{B/BT_ACTION_GAUGE}과 {I-A/Dies Irae} 덕분에 많은 턴을 가져갈 수 있습니다. {D/BT_EXTEND_DEBUFF}을 제공합니다.",
+        "zh": "凭借{B/BT_ACTION_GAUGE}与{I-A/Dies Irae}可获得大量回合。提供{D/BT_EXTEND_DEBUFF}。",
+        "fr": "Peut jouer de nombreux tours grâce à sa {B/BT_ACTION_GAUGE} et à {I-A/Dies Irae}. Apporte {D/BT_EXTEND_DEBUFF}."
+      }
+    },
+    {
+      "names": ["Monad Eva"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP}, AP battery and {B/BT_REVIVAL}.",
+        "jp": "{B/BT_CALL_BACKUP}、APバッテリー、{B/BT_REVIVAL}。",
+        "kr": "{B/BT_CALL_BACKUP}, AP 배터리, {B/BT_REVIVAL}.",
+        "zh": "{B/BT_CALL_BACKUP}、AP电池与{B/BT_REVIVAL}。",
+        "fr": "{B/BT_CALL_BACKUP}, batterie d'AP et {B/BT_REVIVAL}."
+      }
+    }
   ]
 }
