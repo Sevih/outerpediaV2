@@ -14,6 +14,7 @@ import {
 import { createHash } from 'crypto';
 import { join, extname, basename } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomicSync } from '../lib/write-json';
 
 // ---------------------------------------------------------------------------
 // Configuration
@@ -390,7 +391,7 @@ function generateJson(): number {
   }
 
   const outputPath = join(PATHS.generated, 'wallpapers.json');
-  writeFileSync(outputPath, JSON.stringify(result, null, 2));
+  writeFileAtomicSync(outputPath, JSON.stringify(result, null, 2));
 
   return totalCount;
 }

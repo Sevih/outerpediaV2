@@ -1,5 +1,5 @@
-import { readFile } from 'fs/promises';
 import { join } from 'path';
+import { readJson } from './_json';
 
 const FILE = join(process.cwd(), 'data/equipment/stat-ranges-v2.json');
 
@@ -52,8 +52,7 @@ let cache: Cache | null = null;
 
 async function load(): Promise<Cache> {
   if (cache) return cache;
-  const raw = await readFile(FILE, 'utf-8');
-  const data = JSON.parse(raw) as StatRangesV2;
+  const data = await readJson<StatRangesV2>(FILE);
   const byItemId = new Map<string, Map<string, StatEntry>>();
   for (const stats of Object.values(data.ranges)) {
     for (const [stat, byRarity] of Object.entries(stats)) {

@@ -1,5 +1,5 @@
-import { readFile } from 'fs/promises'
 import { join } from 'path'
+import { readJson } from '../_json'
 
 /**
  * Process-level read cache for `public/damage-calc/*.json` files.
@@ -19,7 +19,9 @@ const cache = new Map<string, Promise<unknown>>()
 export function readDamageCalcJson<T>(relPath: string): Promise<T> {
   let p = cache.get(relPath)
   if (!p) {
-    p = readFile(join(PUBLIC_DAMAGE_CALC, relPath), 'utf-8').then(s => JSON.parse(s))
+    p = readJson<unknown>(join(PUBLIC_DAMAGE_CALC, relPath))
+    // Don't poison the cache if a read fails (e.g. transient mid-rewrite).
+    p.catch(() => cache.delete(relPath))
     cache.set(relPath, p)
   }
   return p as Promise<T>

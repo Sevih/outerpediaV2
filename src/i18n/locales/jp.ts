@@ -653,6 +653,27 @@ const jp: Record<TranslationKey, string> = {
   'home.resets.weekly': 'ウィークリー',
   'home.resets.monthly': 'マンスリー',
 
+  // Buff Event (homepage widget)
+  'home.buff.title': '本日のバフ',
+  'home.buff.today': '本日',
+  'home.buff.tomorrow': '明日',
+  'home.buff.changes_in': 'あと {time} で更新',
+  'home.buff.none': '本日のバフはありません',
+  'home.buff.next_on': '次のバフ：{date}',
+  'home.buff.show_all': '今後のバフをすべて表示',
+  'home.buff.show_less': '閉じる',
+  'buff.type.frog-gold': '催眠カエルの殿堂：ゴールド +100%',
+  'buff.type.frog-food': '催眠カエルの殿堂：育成素材 +100%',
+  'buff.type.ark-raid': 'アーク強襲：アイテム +100%',
+  'buff.type.special-ecology': '特別依頼：生態調査ドロップ +30%',
+  'buff.type.special-identification': '特別依頼：正体究明ドロップ +30%',
+  'buff.type.doppelganger': '自己像幻視退治：★3ピース +1',
+  'buff.type.kate-workshop': 'ケイトの鍛冶工房：作成ゴールド 30%軽減',
+  'buff.type.story-survey': 'ストーリー：調査Pt 2倍',
+  'buff.type.evolution-stone': '進化石収集：報酬 2倍',
+  'buff.type.bounty-hunter': '指名手配：ゴールド 2倍',
+  'buff.type.bandit-chase': '盗賊団追撃：報酬 2倍',
+
   // Search
   'search.placeholder': 'キャラクター、装備、ガイドを検索...',
   'search.no_results': '結果が見つかりません',

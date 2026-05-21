@@ -1,5 +1,5 @@
-import { readFile } from 'fs/promises';
 import { join } from 'path';
+import { readJson } from './_json';
 import type { Boss, BossIndex } from '@/types/boss';
 import type { BossDisplayMap } from '@/types/equipment';
 
@@ -12,8 +12,7 @@ type BossGuideMap = Record<string, string>;
 /** Get a single boss by ID (stage ID = filename) */
 export async function getBoss(id: string): Promise<Boss | null> {
   try {
-    const raw = await readFile(join(BOSSES_DIR, `${id}.json`), 'utf-8');
-    return JSON.parse(raw) as Boss;
+    return await readJson<Boss>(join(BOSSES_DIR, `${id}.json`));
   } catch {
     return null;
   }
@@ -21,16 +20,14 @@ export async function getBoss(id: string): Promise<Boss | null> {
 
 /** Get the boss index (keyed by English boss name) */
 export async function getBossIndex(): Promise<BossIndex> {
-  const raw = await readFile(INDEX_PATH, 'utf-8');
-  return JSON.parse(raw) as BossIndex;
+  return readJson<BossIndex>(INDEX_PATH);
 }
 
 /** Load boss-guide-map.json (cached) */
 let guideMapCache: BossGuideMap | null = null;
 async function loadGuideMap(): Promise<BossGuideMap> {
   if (!guideMapCache) {
-    const raw = await readFile(GUIDE_MAP_PATH, 'utf-8');
-    guideMapCache = JSON.parse(raw) as BossGuideMap;
+    guideMapCache = await readJson<BossGuideMap>(GUIDE_MAP_PATH);
   }
   return guideMapCache;
 }

@@ -1,7 +1,8 @@
-import { readFile, readdir, writeFile } from 'fs/promises';
+import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import { PATHS } from '../config';
+import { writeFileAtomic } from '../lib/write-json';
 
 type LangMap = Partial<Record<string, string>>;
 
@@ -61,7 +62,7 @@ export async function run() {
   }
 
   const outPath = join(PATHS.generated, 'guide-boss-map.json');
-  await writeFile(outPath, JSON.stringify(map, null, 2));
+  await writeFileAtomic(outPath, JSON.stringify(map, null, 2));
 
   return `${matched} boss mappings from ${slugDirs.length} adventure guides`;
 }

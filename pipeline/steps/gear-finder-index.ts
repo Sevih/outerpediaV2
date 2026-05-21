@@ -1,6 +1,7 @@
-import { readFile, readdir, writeFile } from 'fs/promises';
+import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomic } from '../lib/write-json';
 
 type RecoGearEntry = { name: string; mainStat?: string };
 type RecoSetEntry = { name: string; count: number };
@@ -111,7 +112,7 @@ export async function run() {
   }
 
   const outPath = join(PATHS.generated, 'gear-finder-index.json');
-  await writeFile(outPath, JSON.stringify(results, null, 2));
+  await writeFileAtomic(outPath, JSON.stringify(results, null, 2));
 
   return `${results.length} builds from ${files.length} characters`;
 }

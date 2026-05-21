@@ -653,6 +653,27 @@ const zh: Record<TranslationKey, string> = {
   'home.resets.weekly': '每周',
   'home.resets.monthly': '每月',
 
+  // Buff Event (homepage widget)
+  'home.buff.title': '每日增益',
+  'home.buff.today': '今天',
+  'home.buff.tomorrow': '明天',
+  'home.buff.changes_in': '{time} 后更换',
+  'home.buff.none': '今天没有增益',
+  'home.buff.next_on': '下次增益：{date}',
+  'home.buff.show_all': '显示全部即将到来',
+  'home.buff.show_less': '收起',
+  'buff.type.frog-gold': '催眠青蛙殿堂：金币 +100%',
+  'buff.type.frog-food': '催眠青蛙殿堂：食物 +100%',
+  'buff.type.ark-raid': '方舟突袭：道具 +100%',
+  'buff.type.special-ecology': '特别委托：生态调查掉落 +30%',
+  'buff.type.special-identification': '特别委托：身份究明掉落 +30%',
+  'buff.type.doppelganger': '幻影狩猎：★3碎片 +1',
+  'buff.type.kate-workshop': '凯特工坊：制作金币 -30%',
+  'buff.type.story-survey': '剧情：调查点数 x2',
+  'buff.type.evolution-stone': '进化石回收：奖励 x2',
+  'buff.type.bounty-hunter': '悬赏通缉：金币 x2',
+  'buff.type.bandit-chase': '盗贼团追击：奖励 x2',
+
   // Search
   'search.placeholder': '搜索角色、装备、攻略…',
   'search.no_results': '未找到结果',

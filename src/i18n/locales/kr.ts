@@ -653,6 +653,27 @@ const kr: Record<TranslationKey, string> = {
   'home.resets.weekly': '주간',
   'home.resets.monthly': '월간',
 
+  // Buff Event (homepage widget)
+  'home.buff.title': '오늘의 버프',
+  'home.buff.today': '오늘',
+  'home.buff.tomorrow': '내일',
+  'home.buff.changes_in': '{time} 후 변경',
+  'home.buff.none': '오늘은 버프가 없습니다',
+  'home.buff.next_on': '다음 버프: {date}',
+  'home.buff.show_all': '예정된 버프 모두 보기',
+  'home.buff.show_less': '접기',
+  'buff.type.frog-gold': '최면 개구리의 전당: 골드 +100%',
+  'buff.type.frog-food': '최면 개구리의 전당: 음식 +100%',
+  'buff.type.ark-raid': '방주 습격: 아이템 +100%',
+  'buff.type.special-ecology': '특별의뢰: 생태조사 드롭률 +30%',
+  'buff.type.special-identification': '특별의뢰: 정체규명 드롭률 +30%',
+  'buff.type.doppelganger': '도플갱어 퇴치: 3성 조각 +1',
+  'buff.type.kate-workshop': '케이트의 공방: 제작 골드 30% 할인',
+  'buff.type.story-survey': '스토리: 조사 포인트 2배',
+  'buff.type.evolution-stone': '진화석 수거: 보상 2배',
+  'buff.type.bounty-hunter': '현상 수배: 골드 2배',
+  'buff.type.bandit-chase': '도적단 추격: 보상 2배',
+
   // Search
   'search.placeholder': '캐릭터, 장비, 가이드 검색...',
   'search.no_results': '결과 없음',

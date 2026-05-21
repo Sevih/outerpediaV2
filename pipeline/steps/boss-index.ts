@@ -1,6 +1,7 @@
-import { readFile, readdir, writeFile } from 'fs/promises';
+import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomic } from '../lib/write-json';
 import type { Boss, BossIndex } from '../../src/types/boss';
 
 /**
@@ -87,7 +88,7 @@ export async function run() {
   }
 
   const outputPath = join(PATHS.generated, 'boss-index.json');
-  await writeFile(outputPath, JSON.stringify(index, null, 2));
+  await writeFileAtomic(outputPath, JSON.stringify(index, null, 2));
 
   const bossCount = Object.keys(index).length;
   const totalVersions = allBosses.length;

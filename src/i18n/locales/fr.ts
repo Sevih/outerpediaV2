@@ -653,6 +653,27 @@ const fr: Record<TranslationKey, string> = {
   'home.resets.weekly': 'Hebdomadaire',
   'home.resets.monthly': 'Mensuel',
 
+  // Buff Event (homepage widget)
+  'home.buff.title': 'Buff du jour',
+  'home.buff.today': 'Aujourd\'hui',
+  'home.buff.tomorrow': 'Demain',
+  'home.buff.changes_in': 'Change dans {time}',
+  'home.buff.none': 'Aucun buff aujourd\'hui',
+  'home.buff.next_on': 'Prochain buff le {date}',
+  'home.buff.show_all': 'Voir tous les prochains',
+  'home.buff.show_less': 'Réduire',
+  'buff.type.frog-gold': 'Hypnotic Frog Hall : or +100%',
+  'buff.type.frog-food': 'Hypnotic Frog Hall : nourriture +100%',
+  'buff.type.ark-raid': 'Ark Raid : objets +100%',
+  'buff.type.special-ecology': 'Special Request : Ecology Study, drop +30%',
+  'buff.type.special-identification': 'Special Request : Identification, drop +30%',
+  'buff.type.doppelganger': 'Doppelgänger Hunt : fragments +1',
+  'buff.type.kate-workshop': 'Kate\'s Workshop : or de fabrication -30%',
+  'buff.type.story-survey': 'Story : points d\'enquête x2',
+  'buff.type.evolution-stone': 'Evolution Stone Retrieval : récompenses x2',
+  'buff.type.bounty-hunter': 'Bounty Hunter : récompenses x2',
+  'buff.type.bandit-chase': 'Bandit Chase : récompenses x2',
+
   // Search
   'search.placeholder': 'Rechercher personnages, équipements, guides...',
   'search.no_results': 'Aucun résultat trouvé',

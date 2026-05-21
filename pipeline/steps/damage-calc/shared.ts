@@ -1,7 +1,8 @@
 import { join } from 'path'
-import { mkdir, writeFile } from 'fs/promises'
+import { mkdir } from 'fs/promises'
 import { dirname } from 'path'
 import { PATHS } from '../../config'
+import { writeFileAtomic } from '../../lib/write-json'
 
 /**
  * Schema version of the bake outputs. Bump when the on-disk shape changes
@@ -24,7 +25,7 @@ export const OUTPUT_DIR = join(process.cwd(), 'public', 'damage-calc')
 export async function writeJsonMin(relPath: string, data: unknown): Promise<void> {
   const abs = join(OUTPUT_DIR, relPath)
   await mkdir(dirname(abs), { recursive: true })
-  await writeFile(abs, JSON.stringify(data))
+  await writeFileAtomic(abs, JSON.stringify(data))
 }
 
 /** Convenience for builders: paths to commonly-read inputs. */

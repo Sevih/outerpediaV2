@@ -1,6 +1,7 @@
-import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { existsSync, readFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomicSync } from '../lib/write-json';
 
 const OUTPUT = join(process.cwd(), 'data', 'guides', 'area_name.json');
 
@@ -91,6 +92,6 @@ export async function run() {
   }
 
   mkdirSync(dirname(OUTPUT), { recursive: true });
-  writeFileSync(OUTPUT, JSON.stringify(sorted, null, 2), 'utf-8');
+  writeFileAtomicSync(OUTPUT, JSON.stringify(sorted, null, 2));
   return `${Object.keys(sorted).length} locations`;
 }

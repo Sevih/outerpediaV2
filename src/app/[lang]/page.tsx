@@ -11,6 +11,7 @@ import BeginnerGuides from '@/app/components/home/BeginnerGuides';
 import RecentUpdates from '@/app/components/home/RecentUpdates';
 import DiscordBanner from '@/app/components/home/DiscordBanner';
 import ServerResets from '@/app/components/home/ServerResets';
+import BuffEventTimer, { type BuffScheduleEntry } from '@/app/components/home/BuffEventTimer';
 
 export const revalidate = 86400;
 
@@ -37,11 +38,24 @@ async function loadPromoCodes() {
   return JSON.parse(raw);
 }
 
+async function loadBuffEvents(): Promise<BuffScheduleEntry[]> {
+  try {
+    const raw = await readFile(
+      join(process.cwd(), 'data/patch-notes/buff-events.json'),
+      'utf-8'
+    );
+    return (JSON.parse(raw).schedule ?? []) as BuffScheduleEntry[];
+  } catch {
+    return [];
+  }
+}
+
 export default async function Home({ params }: Props) {
   const { lang } = await params;
-  const [t, promoCodes] = await Promise.all([
+  const [t, promoCodes, buffEvents] = await Promise.all([
     loadMessages(lang),
     loadPromoCodes(),
+    loadBuffEvents(),
   ]);
 
   return (
@@ -66,10 +80,13 @@ export default async function Home({ params }: Props) {
         <p className="mx-auto max-w-2xl text-zinc-400">{t['page.home.description']}</p>
       </section>
 
-      {/* Discord + Server Resets */}
-      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-[1fr_auto]">
-        <DiscordBanner t={t} />
-        <ServerResets t={t} />
+      {/* Discord + Server Resets, with the daily in-game buff below */}
+      <div className="space-y-4">
+        <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-[1fr_auto]">
+          <DiscordBanner t={t} />
+          <ServerResets t={t} />
+        </div>
+        <BuffEventTimer schedule={buffEvents} lang={lang} t={t} />
       </div>
 
       {/* Desktop: left (banners + beginner) | right (codes spanning both rows) */}

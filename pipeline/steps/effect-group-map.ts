@@ -1,6 +1,7 @@
-import { readFile, writeFile } from 'fs/promises';
+import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomic } from '../lib/write-json';
 
 type EffectEntry = {
   name: string;
@@ -22,7 +23,7 @@ export async function run() {
   }
 
   const outPath = join(PATHS.generated, 'effect-group-map.json');
-  await writeFile(outPath, JSON.stringify(groupMap, null, 2));
+  await writeFileAtomic(outPath, JSON.stringify(groupMap, null, 2));
 
   return `${Object.keys(groupMap).length} group mappings`;
 }

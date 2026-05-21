@@ -1,6 +1,7 @@
-import { readFile, readdir, writeFile } from 'fs/promises';
+import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomic } from '../lib/write-json';
 import { GAME_SUFFIX_LANGS } from '../../src/lib/i18n/config';
 
 type SkillData = {
@@ -268,10 +269,10 @@ export async function run() {
   const slugPath = join(PATHS.generated, 'characters-slug-to-id.json');
 
   await Promise.all([
-    writeFile(indexPath, JSON.stringify(index, null, 2)),
-    writeFile(namePath, JSON.stringify(nameToId, null, 2)),
-    writeFile(listPath, JSON.stringify(list)),
-    writeFile(slugPath, JSON.stringify(slugToId, null, 2)),
+    writeFileAtomic(indexPath, JSON.stringify(index, null, 2)),
+    writeFileAtomic(namePath, JSON.stringify(nameToId, null, 2)),
+    writeFileAtomic(listPath, JSON.stringify(list)),
+    writeFileAtomic(slugPath, JSON.stringify(slugToId, null, 2)),
   ]);
 
   return `${entries.length} characters, 4 index files`;

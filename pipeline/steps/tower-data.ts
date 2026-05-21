@@ -1,7 +1,8 @@
-import { readFile, writeFile } from 'fs/promises';
+import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import { PATHS } from '../config';
+import { writeFileAtomic } from '../lib/write-json';
 
 const TOWER_DIR = join(process.cwd(), 'data', 'tower');
 
@@ -186,7 +187,7 @@ export async function run() {
 
     // Write tower JSON
     const outputPath = join(TOWER_DIR, `${tower.name}.json`);
-    await writeFile(outputPath, JSON.stringify({ floors }, null, 2));
+    await writeFileAtomic(outputPath, JSON.stringify({ floors }, null, 2));
 
     // Track missing for report
     for (const id of missing) {
@@ -213,7 +214,7 @@ export async function run() {
     const role = fl?.boss_id === m.id ? 'boss' : 'minion';
     dedupMissing.push({ id: m.id, role, tower: m.tower, floor: m.floor });
   }
-  await writeFile(missingPath, JSON.stringify(dedupMissing, null, 2));
+  await writeFileAtomic(missingPath, JSON.stringify(dedupMissing, null, 2));
 
   return `${TOWERS.length} towers, ${totalFloors} floors, ${totalMissing} missing`;
 }

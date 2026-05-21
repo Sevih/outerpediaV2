@@ -2,6 +2,7 @@ import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { createHash } from 'crypto';
 import { PATHS } from '../config';
+import { writeFileAtomicSync } from '../lib/write-json';
 
 const OUTPUT_FILE = join(PATHS.generated, 'character-stats.json');
 const CHECKSUM_FILE = join(PATHS.generated, '.character-stats-checksum');
@@ -299,7 +300,7 @@ export async function run() {
 
   // Save
   mkdirSync(dirname(OUTPUT_FILE), { recursive: true });
-  writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2), 'utf-8');
+  writeFileAtomicSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
 
   const checksum = computeChecksum();
   if (checksum) {

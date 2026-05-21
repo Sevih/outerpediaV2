@@ -1,6 +1,7 @@
-import { existsSync, readdirSync, writeFileSync } from 'fs';
+import { existsSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomicSync } from '../lib/write-json';
 
 // ---------------------------------------------------------------------------
 // Scan public/images/4-Comics/{EN,JP,KR} and produce comics.json
@@ -29,7 +30,7 @@ export async function run(): Promise<string> {
   }
 
   const outputPath = join(PATHS.generated, 'comics.json');
-  writeFileSync(outputPath, JSON.stringify(result, null, 2));
+  writeFileAtomicSync(outputPath, JSON.stringify(result, null, 2));
 
   return `${total} comics (${LANGS.map((l) => `${l}: ${result[l].length}`).join(', ')})`;
 }

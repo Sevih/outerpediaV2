@@ -1,6 +1,7 @@
-import { readdirSync, readFileSync, writeFileSync, existsSync } from 'fs';
+import { readdirSync, readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomicSync } from '../lib/write-json';
 
 const OUTPUT = join(PATHS.generated, 'cf-skill-names.json');
 
@@ -78,6 +79,6 @@ export async function run() {
     }
   }
 
-  writeFileSync(OUTPUT, content, 'utf-8');
+  writeFileAtomicSync(OUTPUT, content);
   return `${Object.keys(result).length} CF heroes`;
 }

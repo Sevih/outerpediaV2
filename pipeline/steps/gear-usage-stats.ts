@@ -1,6 +1,7 @@
-import { readFile, readdir, writeFile } from 'fs/promises';
+import { readFile, readdir } from 'fs/promises';
 import { join } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomic } from '../lib/write-json';
 
 type RecoGearEntry = { name: string; mainStat?: string };
 type RecoSetEntry = { name: string; count: number };
@@ -144,7 +145,7 @@ export async function run() {
   const totalItems = output.weapon.length + output.amulet.length + output.set.length + output.talisman.length;
 
   const outPath = join(PATHS.generated, 'gear-usage-stats.json');
-  await writeFile(outPath, JSON.stringify(output, null, 2));
+  await writeFileAtomic(outPath, JSON.stringify(output, null, 2));
 
   return `${totalItems} items (${output.weapon.length}W ${output.amulet.length}A ${output.set.length}S ${output.talisman.length}T) from ${files.length} characters`;
 }

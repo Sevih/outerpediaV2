@@ -1,4 +1,5 @@
-import { readFile, readdir, writeFile, stat } from 'fs/promises';
+import { readFile, readdir, stat } from 'fs/promises';
+import { writeFileAtomic } from '../lib/write-json';
 import { join } from 'path';
 import { PATHS } from '../config';
 
@@ -340,7 +341,7 @@ export async function run() {
   }
 
   const outPath = join(PATHS.generated, 'most-used-units.json');
-  await writeFile(outPath, JSON.stringify(output, null, 2));
+  await writeFileAtomic(outPath, JSON.stringify(output, null, 2));
 
   return `${output.length} characters from ${guideCount} guides${warnings.length ? `, ${warnings.length} warning(s)` : ''}`;
 }

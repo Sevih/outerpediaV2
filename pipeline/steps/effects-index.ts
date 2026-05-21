@@ -1,7 +1,8 @@
-import { readFile, writeFile } from 'fs/promises';
+import { readFile } from 'fs/promises';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { PATHS } from '../config';
+import { writeFileAtomic } from '../lib/write-json';
 
 type EffectEntry = { name: string };
 type FilterIndex = {
@@ -49,7 +50,7 @@ export async function run() {
     tags: mergeIndex(existing.tags, Object.keys(tags)),
   };
 
-  await writeFile(outPath, JSON.stringify(index, null, 2));
+  await writeFileAtomic(outPath, JSON.stringify(index, null, 2));
 
   const newBuffs = buffs.filter(b => !(b.name in existing.buffs)).length;
   const newDebuffs = debuffs.filter(d => !(d.name in existing.debuffs)).length;

@@ -66,6 +66,8 @@ pnpm_deploy.sh
 
 # temp files
 _tmp_*
+# atomic-write temp files (writeFileAtomic: tmp + rename)
+*.tmp-*
 /serveurprodFiles
 Caddyfile
 scripts/backup-private.sh

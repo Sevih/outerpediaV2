@@ -1,5 +1,5 @@
-import { readFile } from 'fs/promises';
 import { join } from 'path';
+import { readJson } from './_json';
 import type { ToolMeta, ToolCategory } from '@/types/tool';
 
 const TOOLS_DIR = join(process.cwd(), 'data/tools');
@@ -12,16 +12,14 @@ let indexCache: Record<string, Omit<ToolMeta, 'slug'>> | null = null;
 
 async function loadCategories() {
   if (!categoriesCache) {
-    const raw = await readFile(join(TOOLS_DIR, '_categories.json'), 'utf-8');
-    categoriesCache = JSON.parse(raw);
+    categoriesCache = await readJson(join(TOOLS_DIR, '_categories.json'));
   }
   return categoriesCache!;
 }
 
 async function loadIndex() {
   if (!indexCache) {
-    const raw = await readFile(join(TOOLS_DIR, '_index.json'), 'utf-8');
-    indexCache = JSON.parse(raw);
+    indexCache = await readJson(join(TOOLS_DIR, '_index.json'));
   }
   return indexCache!;
 }

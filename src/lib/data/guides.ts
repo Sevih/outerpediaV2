@@ -1,5 +1,5 @@
-import { readFile } from 'fs/promises';
 import { join } from 'path';
+import { readJson } from './_json';
 import type { GuideMeta, GuideCategory } from '@/types/guide';
 
 const GUIDES_DIR = join(process.cwd(), 'data/guides');
@@ -11,16 +11,14 @@ let indexCache: Record<string, Omit<GuideMeta, 'slug' | 'category'> & { category
 
 async function loadCategories() {
   if (!categoriesCache) {
-    const raw = await readFile(join(GUIDES_DIR, '_categories.json'), 'utf-8');
-    categoriesCache = JSON.parse(raw);
+    categoriesCache = await readJson(join(GUIDES_DIR, '_categories.json'));
   }
   return categoriesCache!;
 }
 
 async function loadIndex() {
   if (!indexCache) {
-    const raw = await readFile(join(GUIDES_DIR, '_index.json'), 'utf-8');
-    indexCache = JSON.parse(raw);
+    indexCache = await readJson(join(GUIDES_DIR, '_index.json'));
   }
   return indexCache!;
 }

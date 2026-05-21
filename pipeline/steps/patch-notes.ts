@@ -1,8 +1,9 @@
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
-import { readFile, writeFile } from 'fs/promises';
+import { readFile } from 'fs/promises';
 import { join, basename } from 'path';
 import * as cheerio from 'cheerio';
 import { PATHS } from '../config';
+import { writeFileAtomic } from '../lib/write-json';
 
 // ---------------------------------------------------------------------------
 // Configuration
@@ -12,6 +13,14 @@ const WP_API = 'https://annoucements.outerplane.vagames.co.kr/wp-json/wp/v2/post
 
 // Dev limit — set to 0 for all posts
 const DEV_LIMIT = 0;
+
+// Incremental runs re-scan posts published within this many days, even ones we
+// already have. The announcement site publishes posts out of date-order (a buff
+// schedule dated to the period start can go live days later; older posts get
+// edited and re-surfaced), so "stop at the first known post" silently misses
+// them. Re-scanning a window upserts any straggler that landed behind known
+// newer posts. Widen if the publisher ever backdates further than this.
+const RESCAN_WINDOW_DAYS = 45;
 
 // Rate limiting (ms)
 const DELAY_API = 500;
@@ -59,6 +68,98 @@ type PatchNotesData = {
   posts: PatchNotePost[];
   lastFetched: string;
 };
+
+// ---------------------------------------------------------------------------
+// In-game Buff Event extraction
+// ---------------------------------------------------------------------------
+// "[In-game Buff Event]" posts contain a daily schedule table. We parse the
+// EN posts (cleanest table) into a normalized day → buff-type schedule that
+// powers the homepage buff widget. The display labels live in the i18n locale
+// files keyed by `type`; `raw` is kept for verification and as fallback for
+// any unrecognized buff (type "other").
+
+type BuffScheduleEntry = { date: string; type: string; raw: string };
+
+type BuffEventsData = {
+  schedule: BuffScheduleEntry[];
+  lastBuilt: string;
+};
+
+/** Keyword matchers mapping a raw EN buff string → normalized type. Order matters. */
+const BUFF_TYPE_MATCHERS: { type: string; test: RegExp }[] = [
+  { type: 'frog-gold', test: /frog hall[^]*gold|gold[^]*frog hall/i },
+  { type: 'frog-food', test: /frog hall[^]*food|food[^]*frog hall/i },
+  { type: 'ark-raid', test: /ark raid/i },
+  { type: 'special-ecology', test: /ecology/i },
+  { type: 'special-identification', test: /identification/i },
+  { type: 'doppelganger', test: /doppel/i },
+  { type: 'kate-workshop', test: /kate/i },
+  { type: 'story-survey', test: /survey/i },
+  { type: 'evolution-stone', test: /evolution stone/i },
+  { type: 'bounty-hunter', test: /bounty/i },
+  { type: 'bandit-chase', test: /bandit/i },
+];
+
+function matchBuffType(text: string): string {
+  for (const { type, test } of BUFF_TYPE_MATCHERS) {
+    if (test.test(text)) return type;
+  }
+  return 'other';
+}
+
+const DAY_MS = 86_400_000;
+
+/**
+ * Resolve a buff-table date cell ("05/06(Wed)", "1/13", "12/30") to YYYY-MM-DD.
+ * The cell carries no year, so we anchor on the post's publish date: buff rows
+ * fall on/after it, so a candidate landing far before means it rolled into the
+ * next year (e.g. a 01/12 row inside a post published 2025/12/30).
+ */
+function parseBuffDate(cell: string, postDate: string): string | null {
+  const m = cell.match(/(\d{1,2})\s*\/\s*(\d{1,2})/);
+  if (!m) return null;
+  const month = parseInt(m[1], 10);
+  const day = parseInt(m[2], 10);
+  if (month < 1 || month > 12 || day < 1 || day > 31) return null;
+
+  const anchor = Date.parse(`${postDate}T00:00:00Z`);
+  const year = new Date(anchor).getUTCFullYear();
+  let d = Date.UTC(year, month - 1, day);
+  if (anchor - d > 60 * DAY_MS) d = Date.UTC(year + 1, month - 1, day);
+  else if (d - anchor > 300 * DAY_MS) d = Date.UTC(year - 1, month - 1, day);
+
+  return new Date(d).toISOString().slice(0, 10);
+}
+
+/**
+ * Build the normalized buff schedule from all EN buff-event posts. Processes
+ * posts oldest-first so a more recent post overrides any overlapping date.
+ * The buff is always the table's last column; the date is always the first.
+ */
+function deriveBuffEvents(posts: PatchNotePost[]): BuffScheduleEntry[] {
+  const buffPosts = posts
+    .filter(p => p.lang === 'en' && /In-game Buff Event/i.test(p.title))
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  const byDate = new Map<string, BuffScheduleEntry>();
+
+  for (const post of buffPosts) {
+    const $ = cheerio.load(post.content);
+    $('table').first().find('tr').each((_i, tr) => {
+      const cells = $(tr).find('td, th');
+      if (cells.length < 3) return;
+      const first = $(cells[0]).text().trim();
+      if (/^date$/i.test(first)) return; // header row
+      const date = parseBuffDate(first, post.date);
+      if (!date) return;
+      const raw = $(cells[cells.length - 1]).text().trim();
+      if (!raw) return;
+      byDate.set(date, { date, type: matchBuffType(raw), raw });
+    });
+  }
+
+  return [...byDate.values()].sort((a, b) => a.date.localeCompare(b.date));
+}
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -184,22 +285,17 @@ export async function run(): Promise<string> {
   let skippedLangs = 0;
 
   for (const { lang, parentCategoryId } of LANGUAGES) {
-    // Quick check: fetch only the latest post — if already known, skip this language
-    if (existingIds.size > 0) {
-      try {
-        if (lang !== 'en') await sleep(DELAY_API);
-        const checkUrl = `${WP_API}?categories=${parentCategoryId}&per_page=1&_fields=id`;
-        const [latest] = await fetchJSON<WPPost[]>(checkUrl);
-        if (latest && existingIds.has(latest.id)) {
-          skippedLangs++;
-          continue;
-        }
-      } catch { /* proceed with full fetch */ }
-    }
-
     const perPage = DEV_LIMIT || 100;
+    // Cold start scans the full history; incremental runs only re-scan the
+    // recent window. Posts are returned newest-first, so we page back until the
+    // page's oldest post falls outside the window.
+    const cutoffMs = existingIds.size === 0
+      ? -Infinity
+      : Date.now() - RESCAN_WINDOW_DAYS * DAY_MS;
+
     let page = 1;
     let hasMore = true;
+    let newInLang = 0;
 
     while (hasMore) {
       const url = `${WP_API}?categories=${parentCategoryId}&per_page=${perPage}&page=${page}&_fields=id,date,slug,title,content,categories`;
@@ -211,9 +307,8 @@ export async function run(): Promise<string> {
         break; // likely 400 on empty page
       }
 
-      let hitExisting = false;
       for (const post of posts) {
-        if (existingIds.has(post.id)) { hitExisting = true; break; }
+        if (existingIds.has(post.id)) continue; // already have it — keep scanning
 
         const type = resolveType(post.categories);
         if (type === 'media') continue;
@@ -245,15 +340,20 @@ export async function run(): Promise<string> {
         });
         existingIds.add(post.id);
         newCount++;
+        newInLang++;
       }
 
-      // Stop if we hit a known post, got fewer than requested, or in dev mode
-      if (hitExisting || posts.length < perPage || DEV_LIMIT > 0) {
+      // Stop on a short (final) page, once we've paged past the re-scan window,
+      // or in dev mode. `posts` is date-desc, so its last item is the oldest.
+      const oldestMs = posts.length ? Date.parse(posts[posts.length - 1].date) : Infinity;
+      if (posts.length < perPage || oldestMs < cutoffMs || DEV_LIMIT > 0) {
         hasMore = false;
       } else {
         page++;
       }
     }
+
+    if (newInLang === 0) skippedLangs++;
   }
 
   // Sort by date descending
@@ -264,8 +364,14 @@ export async function run(): Promise<string> {
     lastFetched: new Date().toISOString(),
   };
 
-  await writeFile(outputPath, JSON.stringify(result, null, 2), 'utf-8');
+  await writeFileAtomic(outputPath, JSON.stringify(result, null, 2));
+
+  // Derive the homepage buff-event schedule (runs every time, even when no new
+  // posts were fetched, so edits to the parser/taxonomy take effect on rebuild).
+  const buffSchedule = deriveBuffEvents(allPosts);
+  const buffData: BuffEventsData = { schedule: buffSchedule, lastBuilt: new Date().toISOString() };
+  await writeFileAtomic(join(outputDir, 'buff-events.json'), JSON.stringify(buffData, null, 2));
 
   const skipInfo = skippedLangs === LANGUAGES.length ? ' (up to date)' : skippedLangs > 0 ? ` (${skippedLangs}/${LANGUAGES.length} langs up to date)` : '';
-  return `${allPosts.length} posts (${newCount} new), ${imgCount} images downloaded${skipInfo}`;
+  return `${allPosts.length} posts (${newCount} new), ${imgCount} images downloaded, ${buffSchedule.length} buff days${skipInfo}`;
 }

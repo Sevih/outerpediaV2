@@ -8,6 +8,7 @@ import { cpus } from 'os';
 import { promisify } from 'util';
 import { PATHS } from '../config';
 import { bundlesChanged, saveStamp } from '../lib/bundle-stamp';
+import { writeFileAtomicSync } from '../lib/write-json';
 
 const execFile = promisify(execFileCb);
 
@@ -307,7 +308,7 @@ export async function run() {
     }
 
     mkdirSync(parsePath(MAPPING_OUTPUT).dir, { recursive: true });
-    writeFileSync(MAPPING_OUTPUT, JSON.stringify(result, null, 2), 'utf-8');
+    writeFileAtomicSync(MAPPING_OUTPUT, JSON.stringify(result, null, 2));
     return `mapping only — ${result.length} entries`;
   }
 
@@ -371,7 +372,7 @@ export async function run() {
   }
 
   mkdirSync(parsePath(MAPPING_OUTPUT).dir, { recursive: true });
-  writeFileSync(MAPPING_OUTPUT, JSON.stringify(result, null, 2), 'utf-8');
+  writeFileAtomicSync(MAPPING_OUTPUT, JSON.stringify(result, null, 2));
 
   // Cleanup WAVs
   rmSync(AUDIO_DIR, { recursive: true, force: true });
