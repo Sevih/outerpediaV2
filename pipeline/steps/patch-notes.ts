@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { readFile } from 'fs/promises';
-import { join, basename } from 'path';
+import { join, basename, dirname } from 'path';
 import * as cheerio from 'cheerio';
 import { PATHS } from '../config';
 import { writeFileAtomic } from '../lib/write-json';
@@ -67,8 +67,11 @@ type PatchNotePost = {
 
 type PatchNotesData = {
   posts: PatchNotePost[];
-  lastFetched: string;
 };
+
+// Run timestamp lives here (gitignored) instead of inside the committed JSON,
+// where it used to flip on every run and produce an empty diff.
+const STAMP = join(PATHS.generated, '.patch-notes-stamp');
 
 // ---------------------------------------------------------------------------
 // In-game Buff Event extraction
@@ -80,11 +83,6 @@ type PatchNotesData = {
 // any unrecognized buff (type "other").
 
 type BuffScheduleEntry = { date: string; type: string; raw: string };
-
-type BuffEventsData = {
-  schedule: BuffScheduleEntry[];
-  lastBuilt: string;
-};
 
 /** Keyword matchers mapping a raw EN buff string → normalized type. Order matters. */
 const BUFF_TYPE_MATCHERS: { type: string; test: RegExp }[] = [
@@ -240,6 +238,25 @@ function sanitizeHTML(html: string, postId: number): { html: string; imageUrls: 
   return { html: $('body').html() || '', imageUrls };
 }
 
+/**
+ * Write `data` as pretty JSON only when it differs from what's already on disk,
+ * so a no-op fetch doesn't churn the committed file. Returns true when written.
+ */
+async function writeJsonIfChanged(path: string, data: unknown): Promise<boolean> {
+  const json = JSON.stringify(data, null, 2);
+  let current: string | null = null;
+  try { current = await readFile(path, 'utf-8'); } catch { /* missing → write */ }
+  if (current === json) return false;
+  await writeFileAtomic(path, json);
+  return true;
+}
+
+/** Record the run time out-of-band (gitignored) for debugging/observability. */
+function writeStamp(): void {
+  mkdirSync(dirname(STAMP), { recursive: true });
+  writeFileSync(STAMP, new Date().toISOString(), 'utf-8');
+}
+
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
@@ -255,7 +272,7 @@ export async function run(): Promise<string> {
   }
 
   // Load existing data for incremental fetch
-  let existing: PatchNotesData = { posts: [], lastFetched: '' };
+  let existing: PatchNotesData = { posts: [] };
   try {
     const raw = await readFile(outputPath, 'utf-8');
     existing = JSON.parse(raw);
@@ -283,7 +300,6 @@ export async function run(): Promise<string> {
   const allPosts: PatchNotePost[] = [...existing.posts];
   let newCount = 0;
   let imgCount = 0;
-  let skippedLangs = 0;
 
   for (const { lang, parentCategoryId } of LANGUAGES) {
     const perPage = DEV_LIMIT || 100;
@@ -296,7 +312,6 @@ export async function run(): Promise<string> {
 
     let page = 1;
     let hasMore = true;
-    let newInLang = 0;
 
     while (hasMore) {
       const url = `${WP_API}?categories=${parentCategoryId}&per_page=${perPage}&page=${page}&_fields=id,date,slug,title,content,categories`;
@@ -341,7 +356,6 @@ export async function run(): Promise<string> {
         });
         existingIds.add(post.id);
         newCount++;
-        newInLang++;
       }
 
       // Stop on a short (final) page, once we've paged past the re-scan window,
@@ -353,26 +367,25 @@ export async function run(): Promise<string> {
         page++;
       }
     }
-
-    if (newInLang === 0) skippedLangs++;
   }
 
   // Sort by date descending
   allPosts.sort((a, b) => b.date.localeCompare(a.date));
 
-  const result: PatchNotesData = {
-    posts: allPosts,
-    lastFetched: new Date().toISOString(),
-  };
+  // Only rewrite when the meaningful content changed (see writeJsonIfChanged).
+  const postsWritten = await writeJsonIfChanged(outputPath, { posts: allPosts });
 
-  await writeFileAtomic(outputPath, JSON.stringify(result, null, 2));
-
-  // Derive the homepage buff-event schedule (runs every time, even when no new
-  // posts were fetched, so edits to the parser/taxonomy take effect on rebuild).
+  // Derive the homepage buff-event schedule (recomputed every run, even when no
+  // new posts were fetched, so parser/taxonomy edits take effect on rebuild).
   const buffSchedule = deriveBuffEvents(allPosts);
-  const buffData: BuffEventsData = { schedule: buffSchedule, lastBuilt: new Date().toISOString() };
-  await writeFileAtomic(join(outputDir, 'buff-events.json'), JSON.stringify(buffData, null, 2));
+  const buffWritten = await writeJsonIfChanged(
+    join(outputDir, 'buff-events.json'),
+    { schedule: buffSchedule },
+  );
 
-  const skipInfo = skippedLangs === LANGUAGES.length ? ' (up to date)' : skippedLangs > 0 ? ` (${skippedLangs}/${LANGUAGES.length} langs up to date)` : '';
-  return `${allPosts.length} posts (${newCount} new), ${imgCount} images downloaded, ${buffSchedule.length} buff days${skipInfo}`;
+  writeStamp();
+
+  const changed = [postsWritten && 'posts.json', buffWritten && 'buff-events.json'].filter(Boolean);
+  const changeInfo = changed.length ? ` — wrote ${changed.join(', ')}` : ' — no changes';
+  return `${allPosts.length} posts (${newCount} new), ${imgCount} images, ${buffSchedule.length} buff days${changeInfo}`;
 }
