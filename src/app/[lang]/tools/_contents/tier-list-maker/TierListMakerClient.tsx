@@ -888,10 +888,17 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     }
   };
 
-  // ── PNG export ──
+  // ── PNG export (mirrors the on-screen display settings) ──
   const exportPng = useCallback(async () => {
-    const CELL = 76, PER_ROW = 12, PAD = 20, LABEL_W = 110;
+    const CELL = { s: 56, m: 76, l: 100 }[iconSize];
+    const PER_ROW = 12, PAD = 20, LABEL_W = 110;
     const LABEL_PAD = 8, LINE_H = 24, LABEL_FONT = '700 20px system-ui, sans-serif';
+    const NAME_PX = Math.max(10, Math.round(CELL * 0.16));
+    const NAME_LH = NAME_PX + 2;
+    const NAME_AREA = showNames ? NAME_LH * 2 + 4 : 0; // reserve up to 2 lines
+    const NAME_FONT = `500 ${NAME_PX}px system-ui, sans-serif`;
+    const CELL_H = CELL + NAME_AREA;
+
     const load = (src: string) =>
       new Promise<HTMLImageElement | null>((resolve) => {
         const im = new Image();
@@ -900,26 +907,27 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
         im.src = src;
       });
 
-    const usedKeys = [...new Set(tiers.flatMap((tr) => tr.items))];
-    const loaded = new Map<string, HTMLImageElement>();
-    await Promise.all(
-      usedKeys.map(async (k) => {
-        const it = itemMap.get(k);
-        if (!it) return;
-        const im = await load(it.img);
-        if (im) loaded.set(k, im);
-      }),
-    );
+    // Collect every image URL: item thumbnails + the overlays the toggles need.
+    const urls = new Set<string>();
+    for (const tr of tiers) for (const k of tr.items) {
+      const it = itemMap.get(k);
+      if (!it) continue;
+      urls.add(it.img);
+      if (showElement && it.element) urls.add(`/images/ui/elem/CM_Element_${it.element}.webp`);
+      if (showClass && it.cls) urls.add(`/images/ui/class/CM_Class_${it.cls}.webp`);
+    }
+    if (showRarity) urls.add('/images/ui/star/CM_icon_star_y.webp');
+    const img = new Map<string, HTMLImageElement>();
+    await Promise.all([...urls].map(async (u) => { const im = await load(u); if (im) img.set(u, im); }));
 
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Wrap each label, then size every row to fit both its items and its label.
     ctx.font = LABEL_FONT;
     const labelLines = tiers.map((tr) => wrapLabel(ctx, tr.label, LABEL_W - LABEL_PAD * 2));
     const rowHeights = tiers.map((tr, i) => {
-      const itemsH = Math.max(1, Math.ceil(tr.items.length / PER_ROW)) * CELL;
+      const itemsH = Math.max(1, Math.ceil(tr.items.length / PER_ROW)) * CELL_H;
       const labelH = labelLines[i].length * LINE_H + LABEL_PAD * 2;
       return Math.max(itemsH, labelH);
     });
@@ -937,6 +945,17 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
 
     ctx.fillStyle = '#18181b';
     ctx.fillRect(0, 0, width, height);
+
+    const drawCover = (im: HTMLImageElement, dx: number, dy: number, d: number) => {
+      const scale = Math.max(d / im.width, d / im.height);
+      const sw = d / scale, sh = d / scale;
+      ctx.drawImage(im, (im.width - sw) / 2, (im.height - sh) / 2, sw, sh, dx, dy, d, d);
+    };
+    const drawContain = (im: HTMLImageElement, dx: number, dy: number, d: number) => {
+      const scale = Math.min(d / im.width, d / im.height);
+      const w = im.width * scale, h = im.height * scale;
+      ctx.drawImage(im, dx + (d - w) / 2, dy + (d - h) / 2, w, h);
+    };
 
     let y = PAD;
     if (titleH) {
@@ -965,20 +984,48 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       ctx.fillRect(PAD + LABEL_W, y, PER_ROW * CELL, rh);
       // Items
       tr.items.forEach((k, idx) => {
-        const cx = PAD + LABEL_W + (idx % PER_ROW) * CELL;
-        const cy = y + Math.floor(idx / PER_ROW) * CELL;
-        const im = loaded.get(k);
-        if (!im) return;
+        const it = itemMap.get(k);
+        const im = it ? img.get(it.img) : undefined;
+        if (!it || !im) return;
+        const cellX = PAD + LABEL_W + (idx % PER_ROW) * CELL;
+        const cellY = y + Math.floor(idx / PER_ROW) * CELL_H;
         const pad = 3;
-        const cw = CELL - pad * 2;
-        const scale = Math.max(cw / im.width, cw / im.height);
-        const sw = cw / scale, sh = cw / scale;
+        const box = CELL - pad * 2;
+        const bx = cellX + pad, by = cellY + pad;
+        // Thumbnail (rounded, cover-cropped)
         ctx.save();
         ctx.beginPath();
-        ctx.roundRect(cx + pad, cy + pad, cw, cw, 6);
+        ctx.roundRect(bx, by, box, box, 6);
         ctx.clip();
-        ctx.drawImage(im, (im.width - sw) / 2, (im.height - sh) / 2, sw, sh, cx + pad, cy + pad, cw, cw);
+        drawCover(im, bx, by, box);
         ctx.restore();
+        // Badges
+        if (showElement && it.element) {
+          const el = img.get(`/images/ui/elem/CM_Element_${it.element}.webp`);
+          if (el) { const s = box * 0.40; drawContain(el, bx + box - s, by, s); }
+        }
+        if (showClass && it.cls) {
+          const cl = img.get(`/images/ui/class/CM_Class_${it.cls}.webp`);
+          if (cl) { const s = box * 0.28; drawContain(cl, bx + box - s, by + box * 0.40, s); }
+        }
+        if (showRarity && it.rarity) {
+          const star = img.get('/images/ui/star/CM_icon_star_y.webp');
+          if (star) {
+            const s = box * 0.20;
+            let sx = bx + (box - it.rarity * s) / 2;
+            const sy = by + box - s - 2;
+            for (let r = 0; r < it.rarity; r++) { drawContain(star, sx, sy, s); sx += s; }
+          }
+        }
+        // Name
+        if (showNames) {
+          ctx.font = NAME_FONT;
+          ctx.fillStyle = '#d4d4d8';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'top';
+          wrapLabel(ctx, lRec(it.name, lang), CELL - 2).slice(0, 2)
+            .forEach((ln, i) => ctx.fillText(ln, cellX + CELL / 2, cellY + CELL + 2 + i * NAME_LH));
+        }
       });
       y += rh;
     });
@@ -998,7 +1045,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       a.click();
       URL.revokeObjectURL(url);
     }, 'image/png');
-  }, [tiers, title, itemMap]);
+  }, [tiers, title, itemMap, iconSize, showNames, showElement, showClass, showRarity, lang]);
 
   // ── Render ──
   const TABS: { id: Tab; count: number }[] = [
