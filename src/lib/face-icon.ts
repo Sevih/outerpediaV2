@@ -7,6 +7,10 @@ import sharp from 'sharp'
 // per-character RectTransform layout from the FaceIcon prefab bundle to the
 // portrait already on disk. Coordinates come from
 // data/admin/face-icon-layout.json (extracted via extract_face_icons.py).
+//
+// Server/build-time only (uses sharp + child_process). Lives in src/lib so it
+// ships with the build — the admin extractor route and the data pipeline both
+// consume it, but the route's own tree is pruned from prod deploys.
 
 interface FaceIconVariant {
   frame: { w: number; h: number }

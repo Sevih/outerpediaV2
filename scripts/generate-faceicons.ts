@@ -6,7 +6,7 @@
  */
 import { readdirSync } from 'fs'
 import { join } from 'path'
-import { generateFaceIcon } from '../src/app/api/admin/extractor-v3/_shared/face-icon'
+import { generateFaceIcon } from '../src/lib/face-icon'
 
 const PORTRAIT_DIR = join(process.cwd(), 'public', 'images', 'characters', 'portrait')
 

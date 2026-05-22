@@ -4,7 +4,7 @@ import path from 'path'
 import { listMonsters } from './lib/base'
 import { searchMonstersByName } from './lib/localization'
 import { extractMonster, stripInternalFields } from './lib/extract'
-import { generateFaceIcon, type FaceIconResult } from '../_shared/face-icon'
+import { generateFaceIcon, type FaceIconResult } from '@/lib/face-icon'
 
 const BOSS_DIR = path.join(process.cwd(), 'data', 'boss')
 const DEBUFFS_PATH = path.join(process.cwd(), 'data', 'effects', 'debuffs.json')

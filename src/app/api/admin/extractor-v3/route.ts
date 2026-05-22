@@ -7,7 +7,7 @@ import {
   buildTooltipMap,
   type EffectTables,
 } from './_shared/effects'
-import { generateFaceIcon } from './_shared/face-icon'
+import { generateFaceIcon } from '@/lib/face-icon'
 
 const JSON2_DIR = path.join(process.cwd(), 'data', 'admin', 'json2')
 
