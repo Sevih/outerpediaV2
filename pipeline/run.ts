@@ -23,6 +23,7 @@ const steps: Step[] = [
   { name: 'ascension-view', run: () => import('./steps/ascension-view').then(m => m.run()) },
   { name: 'stat-ranges-v2', run: () => import('./steps/stat-ranges-v2').then(m => m.run()) },
   { name: 'item-names', run: () => import('./steps/item-names').then(m => m.run()) },
+  { name: 'character-skins', run: () => import('./steps/character-skins').then(m => m.run()) },
   { name: 'effect-group-map', run: () => import('./steps/effect-group-map').then(m => m.run()) },
   { name: 'effects-index', run: () => import('./steps/effects-index').then(m => m.run()) },
   { name: 'boss-index', run: () => import('./steps/boss-index').then(m => m.run()) },

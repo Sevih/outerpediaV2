@@ -23,6 +23,11 @@ export type TierSourceItem = {
   cls?: string;
   rarity?: number;
   tags?: string[];
+  isSkin?: boolean;
+  /** For a costume: the base character's key, used to name it as the character. */
+  baseKey?: string;
+  /** Per-language short display name (abbreviation) for cramped labels. */
+  short?: LangMap;
 };
 
 type Props = {
@@ -392,6 +397,7 @@ type ItemViewProps = {
   selected: boolean;
   dimmed: boolean;
   label: string;
+  shortLabel?: string;
   size: IconSize;
   showName: boolean;
   showElement: boolean;
@@ -401,7 +407,7 @@ type ItemViewProps = {
 };
 
 const ItemView = memo(function ItemView({
-  item, selected, dimmed, label, size, showName, showElement, showClass, showRarity, onPointerDown,
+  item, selected, dimmed, label, shortLabel, size, showName, showElement, showClass, showRarity, onPointerDown,
 }: ItemViewProps) {
   const s = ITEM_SIZES[size];
   return (
@@ -432,7 +438,7 @@ const ItemView = memo(function ItemView({
         {showRarity && item.rarity ? <StarsRow count={item.rarity} intrinsicPx={12} /> : null}
       </div>
       {showName && (
-        <span className="mt-0.5 line-clamp-2 w-full text-center text-[10px] leading-tight text-zinc-300">{label}</span>
+        <span lang="en" className="mt-0.5 w-full text-center text-[10px] leading-tight hyphens-auto text-zinc-300">{shortLabel || label}</span>
       )}
     </div>
   );
@@ -522,6 +528,8 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   const [showElement, setShowElement] = useState(false);
   const [showClass, setShowClass] = useState(false);
   const [showRarity, setShowRarity] = useState(false);
+  const [showSkins, setShowSkins] = useState(false);
+  const [showSkinNames, setShowSkinNames] = useState(true); // skin name vs base character name
   const [showSettings, setShowSettings] = useState(false);
 
   // Interaction state
@@ -542,14 +550,16 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
         if (typeof s.showElement === 'boolean') setShowElement(s.showElement);
         if (typeof s.showClass === 'boolean') setShowClass(s.showClass);
         if (typeof s.showRarity === 'boolean') setShowRarity(s.showRarity);
+        if (typeof s.showSkins === 'boolean') setShowSkins(s.showSkins);
+        if (typeof s.showSkinNames === 'boolean') setShowSkinNames(s.showSkinNames);
       }
     } catch { /* ignore */ }
   }, []);
   useEffect(() => {
     try {
-      localStorage.setItem(SETTINGS_KEY, JSON.stringify({ iconSize, showNames, showElement, showClass, showRarity }));
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify({ iconSize, showNames, showElement, showClass, showRarity, showSkins, showSkinNames }));
     } catch { /* ignore */ }
-  }, [iconSize, showNames, showElement, showClass, showRarity]);
+  }, [iconSize, showNames, showElement, showClass, showRarity, showSkins, showSkinNames]);
 
   const localName = useCallback(
     (key: string) => {
@@ -557,6 +567,23 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       return it ? lRec(it.name, lang) : key;
     },
     [itemMap, lang],
+  );
+
+  // Short display name for the current language (abbreviation), if one exists.
+  // Missing language ⇒ undefined ⇒ caller falls back to the full localized name.
+  const localShort = useCallback(
+    (key: string) => itemMap.get(key)?.short?.[lang],
+    [itemMap, lang],
+  );
+
+  // Which key to name an item by: a costume falls back to its base character's
+  // name when "skin names" is off.
+  const nameKeyFor = useCallback(
+    (key: string) => {
+      const it = itemMap.get(key);
+      return it?.isSkin && !showSkinNames && it.baseKey ? it.baseKey : key;
+    },
+    [itemMap, showSkinNames],
   );
 
   // ── URL hydrate / sync ──
@@ -621,6 +648,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     const q = query.trim().toLowerCase();
     const filtered = sourceByTab[tab].filter((it) => {
       if (placed.has(it.key)) return false;
+      if (it.isSkin && !showSkins) return false;
       if (elementFilter.length && (!it.element || !elementFilter.includes(it.element as ElementType))) return false;
       if (classFilter.length && (!it.cls || !classFilter.includes(it.cls as ClassType))) return false;
       if (rarityFilter.length && (it.rarity === undefined || !rarityFilter.includes(it.rarity as RarityType))) return false;
@@ -641,7 +669,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       arr.sort((a, b) => ELEMENT_ORDER.indexOf(a.element ?? '') - ELEMENT_ORDER.indexOf(b.element ?? '') || lRec(a.name, lang).localeCompare(lRec(b.name, lang)));
     }
     return arr;
-  }, [sourceByTab, tab, placed, query, elementFilter, classFilter, rarityFilter, tagFilter, sort, lang]);
+  }, [sourceByTab, tab, placed, query, elementFilter, classFilter, rarityFilter, tagFilter, showSkins, sort, lang]);
 
   // ── Drag & drop (pointer events, mouse + touch) ──
   const startRef = useRef<{ x: number; y: number; key: string } | null>(null);
@@ -895,9 +923,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     const LABEL_PAD = 8, LINE_H = 24, LABEL_FONT = '700 20px system-ui, sans-serif';
     const NAME_PX = Math.max(10, Math.round(CELL * 0.16));
     const NAME_LH = NAME_PX + 2;
-    const NAME_AREA = showNames ? NAME_LH * 2 + 4 : 0; // reserve up to 2 lines
     const NAME_FONT = `500 ${NAME_PX}px system-ui, sans-serif`;
-    const CELL_H = CELL + NAME_AREA;
 
     const load = (src: string) =>
       new Promise<HTMLImageElement | null>((resolve) => {
@@ -924,10 +950,29 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Pre-wrap names in full (no truncation). Each tier's cell height grows to
+    // fit its longest name, so nothing is cut and the grid stays aligned.
+    ctx.font = NAME_FONT;
+    const nameLines = new Map<string, string[]>();
+    if (showNames) {
+      for (const tr of tiers) for (const k of tr.items) {
+        const it = itemMap.get(k);
+        if (!it) continue;
+        // A costume is named after its base character when "skin names" is off.
+        const named = it.isSkin && !showSkinNames && it.baseKey ? itemMap.get(it.baseKey) ?? it : it;
+        nameLines.set(k, wrapLabel(ctx, named.short?.[lang] ?? lRec(named.name, lang), CELL - 2));
+      }
+    }
+    const cellH = tiers.map((tr) => {
+      if (!showNames) return CELL;
+      const maxLines = Math.max(1, ...tr.items.map((k) => nameLines.get(k)?.length ?? 1));
+      return CELL + maxLines * NAME_LH + 4;
+    });
+
     ctx.font = LABEL_FONT;
     const labelLines = tiers.map((tr) => wrapLabel(ctx, tr.label, LABEL_W - LABEL_PAD * 2));
     const rowHeights = tiers.map((tr, i) => {
-      const itemsH = Math.max(1, Math.ceil(tr.items.length / PER_ROW)) * CELL_H;
+      const itemsH = Math.max(1, Math.ceil(tr.items.length / PER_ROW)) * cellH[i];
       const labelH = labelLines[i].length * LINE_H + LABEL_PAD * 2;
       return Math.max(itemsH, labelH);
     });
@@ -988,7 +1033,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
         const im = it ? img.get(it.img) : undefined;
         if (!it || !im) return;
         const cellX = PAD + LABEL_W + (idx % PER_ROW) * CELL;
-        const cellY = y + Math.floor(idx / PER_ROW) * CELL_H;
+        const cellY = y + Math.floor(idx / PER_ROW) * cellH[ti];
         const pad = 3;
         const box = CELL - pad * 2;
         const bx = cellX + pad, by = cellY + pad;
@@ -1017,13 +1062,13 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
             for (let r = 0; r < it.rarity; r++) { drawContain(star, sx, sy, s); sx += s; }
           }
         }
-        // Name
+        // Name (full, wrapped — height was reserved per tier above)
         if (showNames) {
           ctx.font = NAME_FONT;
           ctx.fillStyle = '#d4d4d8';
           ctx.textAlign = 'center';
           ctx.textBaseline = 'top';
-          wrapLabel(ctx, lRec(it.name, lang), CELL - 2).slice(0, 2)
+          (nameLines.get(k) ?? [])
             .forEach((ln, i) => ctx.fillText(ln, cellX + CELL / 2, cellY + CELL + 2 + i * NAME_LH));
         }
       });
@@ -1045,11 +1090,13 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       a.click();
       URL.revokeObjectURL(url);
     }, 'image/png');
-  }, [tiers, title, itemMap, iconSize, showNames, showElement, showClass, showRarity, lang]);
+  }, [tiers, title, itemMap, iconSize, showNames, showElement, showClass, showRarity, showSkinNames, lang]);
 
   // ── Render ──
+  // Count base characters only — costumes are an opt-in extra hidden by default.
+  const baseCharCount = useMemo(() => characters.filter((c) => !c.isSkin).length, [characters]);
   const TABS: { id: Tab; count: number }[] = [
-    { id: 'characters', count: characters.length },
+    { id: 'characters', count: baseCharCount },
     { id: 'ee', count: ee.length },
     { id: 'bosses', count: bosses.length },
   ];
@@ -1105,9 +1152,17 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                     <span className="text-zinc-200">{t('tools.tier-list-maker.show_class')}</span>
                     <input type="checkbox" checked={showClass} onChange={(e) => setShowClass(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
                   </label>
-                  <label className="mb-3 flex cursor-pointer items-center justify-between">
+                  <label className="mb-2 flex cursor-pointer items-center justify-between">
                     <span className="text-zinc-200">{t('tools.tier-list-maker.show_rarity')}</span>
                     <input type="checkbox" checked={showRarity} onChange={(e) => setShowRarity(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
+                  </label>
+                  <label className="mb-2 flex cursor-pointer items-center justify-between border-t border-zinc-800 pt-2">
+                    <span className="text-zinc-200">{t('tools.tier-list-maker.show_skins')}</span>
+                    <input type="checkbox" checked={showSkins} onChange={(e) => setShowSkins(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
+                  </label>
+                  <label className="mb-3 flex cursor-pointer items-center justify-between">
+                    <span className="text-zinc-200">{t('tools.tier-list-maker.show_skin_names')}</span>
+                    <input type="checkbox" checked={showSkinNames} onChange={(e) => setShowSkinNames(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
                   </label>
                   <div className="flex gap-2 border-t border-zinc-800 pt-3">
                     <button type="button" onClick={exportJson} className="flex flex-1 items-center justify-center gap-1.5 rounded bg-zinc-800 px-2 py-1.5 text-xs text-zinc-200 hover:bg-zinc-700">
@@ -1218,7 +1273,8 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                           item={it}
                           selected={selectedKey === key}
                           dimmed={drag?.key === key}
-                          label={localName(key)}
+                          label={localName(nameKeyFor(key))}
+                          shortLabel={localShort(nameKeyFor(key))}
                           size={iconSize}
                           showName={showNames}
                           showElement={showElement}
@@ -1379,7 +1435,8 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                 item={it}
                 selected={selectedKey === it.key}
                 dimmed={drag?.key === it.key}
-                label={localName(it.key)}
+                label={localName(nameKeyFor(it.key))}
+                shortLabel={localShort(nameKeyFor(it.key))}
                 size={iconSize}
                 showName={showNames}
                 showElement={showElement}

@@ -300,6 +300,8 @@ const kr: Record<TranslationKey, string> = {
   'tools.tier-list-maker.tag.seasonal': '시즌',
   'tools.tier-list-maker.tag.free': '무료',
   'tools.tier-list-maker.tag.premium': '프리미엄',
+  'tools.tier-list-maker.show_skins': '스킨 표시',
+  'tools.tier-list-maker.show_skin_names': '스킨 이름',
   'tools.damage-calculator': '데미지 계산기',
   'tools.damage-calculator.desc': '캐릭터가 입히는 정확한 데미지를 계산합니다. 게임 내 공식과 동일합니다. 공격자, 대상, 장비, 버프를 선택하여 결과를 확인하세요.',
   'tools.damage-calculator.disclaimer': '개발 중 — 데미지 계산기는 현재 개발 중입니다. 기여 요소를 조정하고 장비/버프 지원을 추가하면서 인게임 수치와 차이가 있을 수 있습니다.',

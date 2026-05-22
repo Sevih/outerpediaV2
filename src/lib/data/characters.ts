@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { readJson } from './_json';
-import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies, CharacterVideo } from '@/types/character';
+import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile, CharacterProsCons, CharacterSkin, CharacterStats, CharacterSynergies, CharacterVideo, NameAliases } from '@/types/character';
 import type { CharacterReco, RecoPresets } from '@/types/equipment';
 
 const CHARS_DIR = join(process.cwd(), 'data/character');
@@ -14,6 +14,8 @@ const STATS_PATH = join(process.cwd(), 'data/generated/character-stats.json');
 const PROS_CONS_PATH = join(process.cwd(), 'data/pros-cons.json');
 const PARTNERS_PATH = join(process.cwd(), 'data/partners.json');
 const VIDEOS_PATH = join(process.cwd(), 'data/character-videos.json');
+const SKINS_PATH = join(process.cwd(), 'data/character-skins.json');
+const NAME_ALIASES_PATH = join(process.cwd(), 'data/name-aliases.json');
 
 type SlugToIdMap = Record<string, string>;
 
@@ -143,5 +145,23 @@ export async function getCharacterVideos(slug: string): Promise<CharacterVideo[]
     return all[slug] ?? [];
   } catch {
     return [];
+  }
+}
+
+/** Get all character skins, keyed by character ID. */
+export async function getCharacterSkins(): Promise<Record<string, CharacterSkin[]>> {
+  try {
+    return await readJson<Record<string, CharacterSkin[]>>(SKINS_PATH);
+  } catch {
+    return {};
+  }
+}
+
+/** Get manual short-name overrides (abbreviations), keyed by item id. */
+export async function getNameAliases(): Promise<NameAliases> {
+  try {
+    return await readJson<NameAliases>(NAME_ALIASES_PATH);
+  } catch {
+    return {};
   }
 }

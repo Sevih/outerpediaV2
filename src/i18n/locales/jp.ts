@@ -300,6 +300,8 @@ const jp: Record<TranslationKey, string> = {
   'tools.tier-list-maker.tag.seasonal': 'シーズン',
   'tools.tier-list-maker.tag.free': '無料',
   'tools.tier-list-maker.tag.premium': 'プレミアム',
+  'tools.tier-list-maker.show_skins': 'スキンを表示',
+  'tools.tier-list-maker.show_skin_names': 'スキン名',
   'tools.damage-calculator': 'ダメージ計算機',
   'tools.damage-calculator.desc': 'キャラクターが与える正確なダメージを計算します。ゲーム内の計算式に忠実です。攻撃側、対象、装備、バフを選択して結果を確認してください。',
   'tools.damage-calculator.disclaimer': '開発中 — 計算機は現在開発中です。コントリビューターを調整し、装備/バフ対応を追加していくため、ゲーム内の値とずれが生じる場合があります。',

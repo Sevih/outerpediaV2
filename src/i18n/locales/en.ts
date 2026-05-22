@@ -300,6 +300,8 @@ const en = {
   'tools.tier-list-maker.tag.seasonal': 'Seasonal',
   'tools.tier-list-maker.tag.free': 'Free',
   'tools.tier-list-maker.tag.premium': 'Premium',
+  'tools.tier-list-maker.show_skins': 'Show skins',
+  'tools.tier-list-maker.show_skin_names': 'Skin names',
   'tools.damage-calculator': 'Damage Calculator',
   'tools.damage-calculator.desc': 'Compute the exact damage your characters deal — bit-faithful with the in-game formula. Pick attacker, target, gear and buffs to see the result.',
   'tools.damage-calculator.disclaimer': 'Work in progress — calculator is under active development. Results may have variance compared to the in-game value as we tune contributors and add gear/buff support.',

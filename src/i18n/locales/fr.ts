@@ -300,6 +300,8 @@ const fr: Record<TranslationKey, string> = {
   'tools.tier-list-maker.tag.seasonal': 'Saisonnier',
   'tools.tier-list-maker.tag.free': 'Gratuit',
   'tools.tier-list-maker.tag.premium': 'Premium',
+  'tools.tier-list-maker.show_skins': 'Afficher les skins',
+  'tools.tier-list-maker.show_skin_names': 'Noms de skin',
   'tools.damage-calculator': 'Calculateur de dégâts',
   'tools.damage-calculator.desc': 'Calculez les dégâts exacts infligés par vos personnages — fidèle au bit près à la formule du jeu. Choisissez l\'attaquant, la cible, l\'équipement et les buffs pour voir le résultat.',
   'tools.damage-calculator.disclaimer': 'En cours de développement — le calculateur est en développement actif. Les résultats peuvent varier par rapport à la valeur du jeu pendant que nous ajustons les contributeurs et ajoutons la prise en charge de l\'équipement et des buffs.',

@@ -190,6 +190,27 @@ export type CharacterVideo = {
   label?: string;
 };
 
+/**
+ * Manual display-name overrides (abbreviations) for cramped UIs, keyed by a
+ * stable item id. `_name` is a human-readable reference only — ignored by code.
+ * Any missing language falls back to the item's full name.
+ */
+export type NameAlias = LangMap & { _name?: string };
+export type NameAliases = Record<string, NameAlias>;
+
+/** A purchasable costume/skin for a character (from data/character-skins.json) */
+export type CharacterSkin = {
+  id: string;
+  modelNameID: string;
+  fusionModelNameID?: string;
+  name: LangMap;
+  icon: string;
+  rarity: string;
+  source: string;
+  showList: boolean;
+  sort: number;
+};
+
 /** Enriched character entry for the list page (includes filter data) */
 export type CharacterListEntry = WithLocalizedFields<{
   ID: string;

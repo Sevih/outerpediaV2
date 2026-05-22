@@ -300,6 +300,8 @@ const zh: Record<TranslationKey, string> = {
   'tools.tier-list-maker.tag.seasonal': '季节',
   'tools.tier-list-maker.tag.free': '免费',
   'tools.tier-list-maker.tag.premium': '高级',
+  'tools.tier-list-maker.show_skins': '显示皮肤',
+  'tools.tier-list-maker.show_skin_names': '皮肤名称',
   'tools.damage-calculator': '伤害计算器',
   'tools.damage-calculator.desc': '精确计算角色造成的伤害——与游戏内公式逐位一致。选择攻击者、目标、装备和增益来查看结果。',
   'tools.damage-calculator.disclaimer': '开发中 — 伤害计算器正在积极开发中。在调整贡献项并添加装备/增益支持的过程中，结果可能与游戏内数值存在偏差。',
