@@ -33,6 +33,7 @@ export default async function TierListMakerTool() {
       element: c.Element,
       cls: c.Class,
       rarity: c.Rarity,
+      tags: c.tags,
     }))
     .sort(byName);
 
@@ -54,6 +55,7 @@ export default async function TierListMakerTool() {
       name: entry.name,
       img: resolveBossImage(entry.icons),
       element: entry.element,
+      cls: entry.class,
     });
   }
   bossItems.sort(byName);

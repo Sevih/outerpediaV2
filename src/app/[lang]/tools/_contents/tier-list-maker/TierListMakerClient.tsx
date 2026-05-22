@@ -3,7 +3,7 @@
 import { memo, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import {
   FaPlus, FaTrash, FaChevronUp, FaChevronDown, FaXmark,
-  FaImage, FaLink, FaArrowRotateLeft, FaCheck,
+  FaImage, FaLink, FaArrowRotateLeft, FaCheck, FaGear, FaFileExport, FaFileImport, FaGripVertical,
 } from 'react-icons/fa6';
 import type { LangMap } from '@/types/common';
 import type { ElementType, ClassType, RarityType } from '@/types/enums';
@@ -11,6 +11,7 @@ import { ELEMENTS, CLASSES, RARITIES } from '@/types/enums';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { FilterSearch, FilterPill } from '@/app/components/ui/FilterPills';
+import { ElementIcon, ClassIcon, StarsRow } from '@/app/components/character/PortraitOverlays';
 
 // ── Types ──
 
@@ -21,6 +22,7 @@ export type TierSourceItem = {
   element?: string;
   cls?: string;
   rarity?: number;
+  tags?: string[];
 };
 
 type Props = {
@@ -61,6 +63,16 @@ function makeDefaultTiers(): Tier[] {
 
 const DRAG_THRESHOLD = 6;
 const TOUCH_HOLD_MS = 220;
+
+const SETTINGS_KEY = 'tlm-settings';
+
+type SortKey = 'default' | 'name' | 'rarity' | 'element';
+const SORT_KEYS: SortKey[] = ['default', 'name', 'rarity', 'element'];
+
+/** Character tags exposed as pool filters, in display order. */
+const FILTER_TAGS = ['limited', 'collab', 'seasonal', 'free', 'premium'] as const;
+
+const ELEMENT_ORDER = ['Fire', 'Water', 'Earth', 'Light', 'Dark'];
 
 // ── URL encode / decode ──
 //
@@ -281,6 +293,69 @@ function removeKey(tiers: Tier[], key: string): Tier[] {
   return tiers.map((t) => ({ ...t, items: t.items.filter((k) => k !== key) }));
 }
 
+/** Move `key` into `tierId` at a visual insertion index computed against the
+ *  tier's full rendered list (which still includes the dragged item). */
+function moveKeyToVisualIndex(tiers: Tier[], key: string, tierId: string, vIndex: number): Tier[] {
+  const ti = tiers.findIndex((t) => t.id === tierId);
+  const oldPos = ti >= 0 ? tiers[ti].items.indexOf(key) : -1;
+  // Removing the key first shifts later positions in the same tier left by one.
+  const target = oldPos >= 0 && oldPos < vIndex ? vIndex - 1 : vIndex;
+  const cleaned = removeKey(tiers, key);
+  const ci = cleaned.findIndex((t) => t.id === tierId);
+  if (ci < 0) return cleaned;
+  const items = [...cleaned[ci].items];
+  items.splice(Math.max(0, Math.min(target, items.length)), 0, key);
+  cleaned[ci] = { ...cleaned[ci], items };
+  return cleaned;
+}
+
+/** Insertion index among the tier rows for a given pointer Y (0..count). */
+function rowIndexAtY(y: number): number {
+  const rows = Array.from(document.querySelectorAll('[data-tier-id]'));
+  for (let i = 0; i < rows.length; i++) {
+    const r = rows[i].getBoundingClientRect();
+    if (y < r.top + r.height / 2) return i;
+  }
+  return rows.length;
+}
+
+/** Move the row with `id` to the insertion index `vIndex`; returns the same
+ *  array reference when nothing changes (so a live drag doesn't re-render). */
+function moveRowToIndex(tiers: Tier[], id: string, vIndex: number): Tier[] {
+  const from = tiers.findIndex((t) => t.id === id);
+  if (from < 0) return tiers;
+  const target = Math.max(0, Math.min(from < vIndex ? vIndex - 1 : vIndex, tiers.length - 1));
+  if (target === from) return tiers;
+  const next = [...tiers];
+  const [row] = next.splice(from, 1);
+  next.splice(target, 0, row);
+  return next;
+}
+
+type DropTarget = { type: 'pool' } | { type: 'tier'; tierId: string; index: number };
+
+/** Resolve what's under the pointer into a drop target. Used for BOTH the live
+ *  insertion indicator and the actual drop, so they can never disagree. The
+ *  index is the gap position among the tier's items, before the first item the
+ *  pointer sits ahead of (earlier row, or left of its centre on the same row). */
+function computeDrop(x: number, y: number): DropTarget | null {
+  const el = document.elementFromPoint(x, y) as HTMLElement | null;
+  const zone = el?.closest('[data-drop]');
+  if (!zone) return null;
+  if (zone.getAttribute('data-drop') === 'pool') return { type: 'pool' };
+  const tierId = zone.getAttribute('data-tier-id');
+  if (!tierId) return null;
+  const box = zone.querySelector('[data-items]');
+  const els = box ? Array.from(box.querySelectorAll<HTMLElement>('[data-item-key]')) : [];
+  let index = els.length;
+  for (let i = 0; i < els.length; i++) {
+    const r = els[i].getBoundingClientRect();
+    if (y < r.top) { index = i; break; }
+    if (y <= r.bottom && x < r.left + r.width / 2) { index = i; break; }
+  }
+  return { type: 'tier', tierId, index };
+}
+
 /** Greedy word-wrap for canvas text; breaks any single over-long word by character. */
 function wrapLabel(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
   const lines: string[] = [];
@@ -304,39 +379,61 @@ function wrapLabel(ctx: CanvasRenderingContext2D, text: string, maxWidth: number
 
 // ── Item thumbnail ──
 
-const ITEM_CLS = 'h-11 w-11 sm:h-14 sm:w-14';
+type IconSize = 's' | 'm' | 'l';
+
+const ITEM_SIZES: Record<IconSize, { box: string; col: string }> = {
+  s: { box: 'h-9 w-9 sm:h-11 sm:w-11', col: 'w-9 sm:w-11' },
+  m: { box: 'h-12 w-12 sm:h-14 sm:w-14', col: 'w-12 sm:w-14' },
+  l: { box: 'h-16 w-16 sm:h-20 sm:w-20', col: 'w-16 sm:w-20' },
+};
 
 type ItemViewProps = {
   item: TierSourceItem;
   selected: boolean;
   dimmed: boolean;
   label: string;
+  size: IconSize;
+  showName: boolean;
+  showElement: boolean;
+  showClass: boolean;
+  showRarity: boolean;
   onPointerDown: (e: React.PointerEvent, key: string) => void;
 };
 
-const ItemView = memo(function ItemView({ item, selected, dimmed, label, onPointerDown }: ItemViewProps) {
+const ItemView = memo(function ItemView({
+  item, selected, dimmed, label, size, showName, showElement, showClass, showRarity, onPointerDown,
+}: ItemViewProps) {
+  const s = ITEM_SIZES[size];
   return (
     <div
       data-item-key={item.key}
       onPointerDown={(e) => onPointerDown(e, item.key)}
       title={label}
-      className={[
-        ITEM_CLS,
-        'relative shrink-0 cursor-grab touch-none select-none rounded-md',
-        'ring-offset-1 ring-offset-zinc-900 transition',
-        selected ? 'ring-2 ring-amber-400' : 'ring-1 ring-zinc-700 hover:ring-zinc-400',
-        dimmed ? 'opacity-30' : '',
-      ].join(' ')}
+      className={`relative flex shrink-0 cursor-grab touch-none select-none flex-col items-center ${showName ? s.col : ''} ${dimmed ? 'opacity-30' : ''}`}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={item.img}
-        alt={label}
-        draggable={false}
-        loading="lazy"
-        className="h-full w-full rounded-md bg-zinc-800 object-cover"
-        onError={(e) => { (e.currentTarget.style.visibility = 'hidden'); }}
-      />
+      <div
+        className={[
+          s.box,
+          'relative rounded-md ring-offset-1 ring-offset-zinc-900 transition',
+          selected ? 'ring-2 ring-amber-400' : 'ring-1 ring-zinc-700 hover:ring-zinc-400',
+        ].join(' ')}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={item.img}
+          alt={label}
+          draggable={false}
+          loading="lazy"
+          className="h-full w-full rounded-md bg-zinc-800 object-cover"
+          onError={(e) => { (e.currentTarget.style.visibility = 'hidden'); }}
+        />
+        {showElement && item.element && <ElementIcon element={item.element} intrinsicPx={18} />}
+        {showClass && item.cls && <ClassIcon classType={item.cls} intrinsicPx={14} />}
+        {showRarity && item.rarity ? <StarsRow count={item.rarity} intrinsicPx={12} /> : null}
+      </div>
+      {showName && (
+        <span className="mt-0.5 line-clamp-2 w-full text-center text-[10px] leading-tight text-zinc-300">{label}</span>
+      )}
     </div>
   );
 });
@@ -368,6 +465,18 @@ function TierLabel({
       placeholder="…"
       className="w-full resize-none overflow-hidden wrap-break-word bg-transparent text-center text-base font-bold leading-tight text-zinc-900 placeholder-zinc-700/50 focus:outline-none"
     />
+  );
+}
+
+/** Faded preview of the dragged item, shown at the insertion point during a drag. */
+function DropPreview({ src, size }: { src: string | undefined; size: IconSize }) {
+  return (
+    <div className={`${ITEM_SIZES[size].box} shrink-0 overflow-hidden rounded-md border-2 border-dashed border-amber-400/80 bg-amber-400/10`}>
+      {src && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={src} alt="" draggable={false} className="h-full w-full rounded-md object-cover opacity-40" />
+      )}
+    </div>
   );
 }
 
@@ -404,13 +513,43 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   const [elementFilter, setElementFilter] = useState<ElementType[]>([]);
   const [classFilter, setClassFilter] = useState<ClassType[]>([]);
   const [rarityFilter, setRarityFilter] = useState<RarityType[]>([]);
+  const [tagFilter, setTagFilter] = useState<string[]>([]);
+  const [sort, setSort] = useState<SortKey>('default');
+
+  // Display settings (persisted in localStorage)
+  const [iconSize, setIconSize] = useState<IconSize>('m');
+  const [showNames, setShowNames] = useState(false);
+  const [showElement, setShowElement] = useState(false);
+  const [showClass, setShowClass] = useState(false);
+  const [showRarity, setShowRarity] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
 
   // Interaction state
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [drag, setDrag] = useState<{ key: string; x: number; y: number } | null>(null);
-  const [dragOverTier, setDragOverTier] = useState<string | null>(null);
+  const [dropAt, setDropAt] = useState<{ tierId: string; index: number } | null>(null);
   const [colorRow, setColorRow] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+
+  // Load + persist display settings
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(SETTINGS_KEY);
+      if (raw) {
+        const s = JSON.parse(raw);
+        if (s.iconSize === 's' || s.iconSize === 'm' || s.iconSize === 'l') setIconSize(s.iconSize);
+        if (typeof s.showNames === 'boolean') setShowNames(s.showNames);
+        if (typeof s.showElement === 'boolean') setShowElement(s.showElement);
+        if (typeof s.showClass === 'boolean') setShowClass(s.showClass);
+        if (typeof s.showRarity === 'boolean') setShowRarity(s.showRarity);
+      }
+    } catch { /* ignore */ }
+  }, []);
+  useEffect(() => {
+    try {
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify({ iconSize, showNames, showElement, showClass, showRarity }));
+    } catch { /* ignore */ }
+  }, [iconSize, showNames, showElement, showClass, showRarity]);
 
   const localName = useCallback(
     (key: string) => {
@@ -480,18 +619,29 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
 
   const poolItems = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return sourceByTab[tab].filter((it) => {
+    const filtered = sourceByTab[tab].filter((it) => {
       if (placed.has(it.key)) return false;
       if (elementFilter.length && (!it.element || !elementFilter.includes(it.element as ElementType))) return false;
       if (classFilter.length && (!it.cls || !classFilter.includes(it.cls as ClassType))) return false;
       if (rarityFilter.length && (it.rarity === undefined || !rarityFilter.includes(it.rarity as RarityType))) return false;
+      if (tagFilter.length && !it.tags?.some((tg) => tagFilter.includes(tg))) return false;
       if (q) {
         const name = Object.values(it.name).join(' ').toLowerCase();
         if (!name.includes(q)) return false;
       }
       return true;
     });
-  }, [sourceByTab, tab, placed, query, elementFilter, classFilter, rarityFilter]);
+    if (sort === 'default') return filtered;
+    const arr = [...filtered];
+    if (sort === 'name') {
+      arr.sort((a, b) => lRec(a.name, lang).localeCompare(lRec(b.name, lang)));
+    } else if (sort === 'rarity') {
+      arr.sort((a, b) => (b.rarity ?? 0) - (a.rarity ?? 0) || lRec(a.name, lang).localeCompare(lRec(b.name, lang)));
+    } else if (sort === 'element') {
+      arr.sort((a, b) => ELEMENT_ORDER.indexOf(a.element ?? '') - ELEMENT_ORDER.indexOf(b.element ?? '') || lRec(a.name, lang).localeCompare(lRec(b.name, lang)));
+    }
+    return arr;
+  }, [sourceByTab, tab, placed, query, elementFilter, classFilter, rarityFilter, tagFilter, sort, lang]);
 
   // ── Drag & drop (pointer events, mouse + touch) ──
   const startRef = useRef<{ x: number; y: number; key: string } | null>(null);
@@ -499,60 +649,50 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   const draggingRef = useRef(false);
   const holdTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Prevent page scroll while a drag is active (touch).
+  // Row reordering by drag handle
+  const rowDragId = useRef<string | null>(null);
+  const rowDraggingRef = useRef(false);
+  const [rowDragActive, setRowDragActive] = useState<string | null>(null);
+
+  // Prevent page scroll while a drag (item or row) is active (touch).
   useEffect(() => {
-    const block = (e: TouchEvent) => { if (draggingRef.current) e.preventDefault(); };
+    const block = (e: TouchEvent) => { if (draggingRef.current || rowDraggingRef.current) e.preventDefault(); };
     document.addEventListener('touchmove', block, { passive: false });
     return () => document.removeEventListener('touchmove', block);
   }, []);
 
+  const onRowHandlePointerDown = useCallback((e: React.PointerEvent, id: string) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    e.stopPropagation();
+    rowDragId.current = id;
+    rowDraggingRef.current = true;
+    setRowDragActive(id);
+    const onMove = (ev: PointerEvent) => {
+      if (rowDragId.current) setTiers((prev) => moveRowToIndex(prev, rowDragId.current!, rowIndexAtY(ev.clientY)));
+    };
+    const onEnd = () => {
+      rowDragId.current = null;
+      rowDraggingRef.current = false;
+      setRowDragActive(null);
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('pointerup', onEnd);
+      window.removeEventListener('pointercancel', onEnd);
+    };
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onEnd);
+    window.addEventListener('pointercancel', onEnd);
+  }, []);
+
   const updateDragOver = useCallback((x: number, y: number) => {
-    const el = document.elementFromPoint(x, y) as HTMLElement | null;
-    const zone = el?.closest('[data-drop="tier"]');
-    setDragOverTier(zone?.getAttribute('data-tier-id') ?? null);
+    const d = computeDrop(x, y);
+    setDropAt(d && d.type === 'tier' ? { tierId: d.tierId, index: d.index } : null);
   }, []);
 
   const handleDrop = useCallback((key: string, x: number, y: number) => {
-    const el = document.elementFromPoint(x, y) as HTMLElement | null;
-    const zone = el?.closest('[data-drop]') as HTMLElement | null;
-    if (!zone) return;
-    const drop = zone.getAttribute('data-drop');
-    if (drop === 'pool') {
-      setTiers((prev) => removeKey(prev, key));
-      return;
-    }
-    if (drop === 'tier') {
-      const tierId = zone.getAttribute('data-tier-id');
-      if (!tierId) return;
-      const itemEl = el?.closest('[data-item-key]') as HTMLElement | null;
-      let beforeKey: string | null = itemEl?.getAttribute('data-item-key') ?? null;
-      if (beforeKey === key) beforeKey = null;
-      if (beforeKey && itemEl) {
-        const r = itemEl.getBoundingClientRect();
-        if (x > r.left + r.width / 2) beforeKey = null; // dropped past the midpoint → append-ish
-        // when past midpoint we still want it right after; recompute below
-      }
-      setTiers((prev) => {
-        // If past midpoint, insert after the hovered item.
-        if (itemEl && beforeKey === null) {
-          const hovered = itemEl.getAttribute('data-item-key');
-          if (hovered && hovered !== key) {
-            const cleaned = removeKey(prev, key);
-            const idx = cleaned.findIndex((tr) => tr.id === tierId);
-            if (idx >= 0) {
-              const items = [...cleaned[idx].items];
-              const hi = items.indexOf(hovered);
-              const pos = hi >= 0 ? hi + 1 : items.length;
-              items.splice(pos, 0, key);
-              cleaned[idx] = { ...cleaned[idx], items };
-              return cleaned;
-            }
-            return cleaned;
-          }
-        }
-        return placeKey(prev, key, tierId, beforeKey);
-      });
-    }
+    const d = computeDrop(x, y);
+    if (!d) return;
+    if (d.type === 'pool') setTiers((prev) => removeKey(prev, key));
+    else setTiers((prev) => moveKeyToVisualIndex(prev, key, d.tierId, d.index));
   }, []);
 
   const handleTap = useCallback((key: string) => {
@@ -602,7 +742,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       const wasDragging = draggingRef.current;
       cleanupPointer();
       setDrag(null);
-      setDragOverTier(null);
+      setDropAt(null);
       if (!s) return;
       if (wasDragging) handleDrop(s.key, ev.clientX, ev.clientY);
       else handleTap(s.key);
@@ -651,8 +791,12 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       return next;
     });
 
-  const deleteRow = (id: string) =>
-    setTiers((prev) => (prev.length <= 1 ? prev : prev.filter((tr) => tr.id !== id)));
+  const deleteRow = (id: string) => {
+    if (tiers.length <= 1) return;
+    const row = tiers.find((tr) => tr.id === id);
+    if (row && row.items.length > 0 && !window.confirm(t('tools.tier-list-maker.confirm_delete_row'))) return;
+    setTiers((prev) => prev.filter((tr) => tr.id !== id));
+  };
 
   const moveRow = (idx: number, dir: -1 | 1) =>
     setTiers((prev) => {
@@ -663,7 +807,10 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       return next;
     });
 
-  const clearRow = (id: string) => updateTier(id, { items: [] });
+  const clearRow = (id: string) => {
+    if (!window.confirm(t('tools.tier-list-maker.confirm_clear_row'))) return;
+    updateTier(id, { items: [] });
+  };
 
   const resetAll = () => {
     if (!window.confirm(t('tools.tier-list-maker.confirm_reset'))) return;
@@ -671,6 +818,44 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     setTiers(makeDefaultTiers());
     setSelectedKey(null);
     shareBaselineRef.current = null;
+  };
+
+  // ── JSON export / import ──
+  const importInputRef = useRef<HTMLInputElement>(null);
+
+  const exportJson = () => {
+    const data = { title, tiers: tiers.map((tr) => ({ label: tr.label, color: tr.color, items: tr.items })) };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${(title.trim() || 'tier-list').replace(/[^\w-]+/g, '_')}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const importJson = (file: File) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(String(reader.result));
+        if (!Array.isArray(data?.tiers)) throw new Error('bad');
+        const next: Tier[] = data.tiers.map((tr: { label?: unknown; color?: unknown; items?: unknown }, i: number) => ({
+          id: `t${i}-${Math.random().toString(36).slice(2, 7)}`,
+          label: typeof tr.label === 'string' ? tr.label : '',
+          color: typeof tr.color === 'string' ? tr.color : TIER_PALETTE[i % TIER_PALETTE.length],
+          items: Array.isArray(tr.items) ? tr.items.filter((k: unknown): k is string => typeof k === 'string' && itemMap.has(k)) : [],
+        }));
+        if (!next.length) throw new Error('empty');
+        setTitle(typeof data.title === 'string' ? data.title : '');
+        setTiers(next);
+        setSelectedKey(null);
+        shareBaselineRef.current = null;
+      } catch {
+        window.alert(t('tools.tier-list-maker.import_error'));
+      }
+    };
+    reader.readAsText(file);
   };
 
   // ── Share ──
@@ -823,7 +1008,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   ];
 
   return (
-    <div className="mx-auto max-w-5xl">
+    <div className="mx-auto max-w-7xl">
       {/* Title + toolbar */}
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <input
@@ -840,18 +1025,77 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
           <ToolbarButton onClick={exportPng} icon={<FaImage />}>
             {t('tools.tier-list-maker.export')}
           </ToolbarButton>
+          <div className="relative">
+            <ToolbarButton onClick={() => setShowSettings((v) => !v)} icon={<FaGear />}>
+              {t('tools.tier-list-maker.settings')}
+            </ToolbarButton>
+            {showSettings && (
+              <>
+                <div className="fixed inset-0 z-40" onClick={() => setShowSettings(false)} />
+                <div className="absolute right-0 z-50 mt-2 w-60 rounded-lg border border-zinc-700 bg-zinc-900 p-3 text-sm shadow-xl">
+                  <p className="mb-1 text-xs uppercase tracking-wide text-zinc-400">{t('tools.tier-list-maker.icon_size')}</p>
+                  <div className="mb-3 flex gap-1.5">
+                    {(['s', 'm', 'l'] as IconSize[]).map((sz) => (
+                      <button
+                        key={sz}
+                        type="button"
+                        onClick={() => setIconSize(sz)}
+                        className={['flex-1 rounded px-2 py-1 text-xs font-medium transition', iconSize === sz ? 'bg-filter text-white' : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'].join(' ')}
+                      >
+                        {t(`tools.tier-list-maker.size_${sz}` as Parameters<typeof t>[0])}
+                      </button>
+                    ))}
+                  </div>
+                  <label className="mb-2 flex cursor-pointer items-center justify-between">
+                    <span className="text-zinc-200">{t('tools.tier-list-maker.show_names')}</span>
+                    <input type="checkbox" checked={showNames} onChange={(e) => setShowNames(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
+                  </label>
+                  <label className="mb-2 flex cursor-pointer items-center justify-between">
+                    <span className="text-zinc-200">{t('tools.tier-list-maker.show_element')}</span>
+                    <input type="checkbox" checked={showElement} onChange={(e) => setShowElement(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
+                  </label>
+                  <label className="mb-2 flex cursor-pointer items-center justify-between">
+                    <span className="text-zinc-200">{t('tools.tier-list-maker.show_class')}</span>
+                    <input type="checkbox" checked={showClass} onChange={(e) => setShowClass(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
+                  </label>
+                  <label className="mb-3 flex cursor-pointer items-center justify-between">
+                    <span className="text-zinc-200">{t('tools.tier-list-maker.show_rarity')}</span>
+                    <input type="checkbox" checked={showRarity} onChange={(e) => setShowRarity(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
+                  </label>
+                  <div className="flex gap-2 border-t border-zinc-800 pt-3">
+                    <button type="button" onClick={exportJson} className="flex flex-1 items-center justify-center gap-1.5 rounded bg-zinc-800 px-2 py-1.5 text-xs text-zinc-200 hover:bg-zinc-700">
+                      <FaFileExport /> {t('tools.tier-list-maker.export_json')}
+                    </button>
+                    <button type="button" onClick={() => importInputRef.current?.click()} className="flex flex-1 items-center justify-center gap-1.5 rounded bg-zinc-800 px-2 py-1.5 text-xs text-zinc-200 hover:bg-zinc-700">
+                      <FaFileImport /> {t('tools.tier-list-maker.import_json')}
+                    </button>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
           <ToolbarButton onClick={resetAll} icon={<FaArrowRotateLeft />} danger>
             {t('tools.tier-list-maker.reset')}
           </ToolbarButton>
         </div>
       </div>
 
+      <input
+        ref={importInputRef}
+        type="file"
+        accept="application/json,.json"
+        className="hidden"
+        onChange={(e) => { const f = e.target.files?.[0]; if (f) importJson(f); e.target.value = ''; }}
+      />
+
       <p className="mb-3 text-center text-xs text-zinc-500">{t('tools.tier-list-maker.hint')}</p>
 
+      <div className="lg:flex lg:items-start lg:gap-4">
+      <div className="lg:min-w-0 lg:flex-1">
       {/* Tier rows */}
       <div className="overflow-hidden rounded-lg border border-zinc-700">
         {tiers.map((tier, idx) => {
-          const isOver = dragOverTier === tier.id;
+          const isOver = dropAt?.tierId === tier.id;
           return (
             <div
               key={tier.id}
@@ -860,6 +1104,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
               onClick={(e) => tapZone(e, tier.id)}
               className={[
                 'flex border-b border-zinc-800 last:border-b-0 transition-colors',
+                rowDragActive === tier.id ? 'relative z-10 ring-2 ring-inset ring-amber-400' : '',
                 isOver ? 'bg-amber-400/10' : selectedKey ? 'cursor-pointer hover:bg-zinc-800/40' : '',
               ].join(' ')}
             >
@@ -877,7 +1122,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                   type="button"
                   onClick={(e) => { e.stopPropagation(); setColorRow(colorRow === tier.id ? null : tier.id); }}
                   title={t('tools.tier-list-maker.color') as string}
-                  className="absolute bottom-0.5 right-0.5 h-3 w-3 rounded-full border border-zinc-900/40 bg-zinc-900/20"
+                  className="absolute bottom-0.5 right-0.5 h-4 w-4 rounded-full border border-zinc-900/40 bg-zinc-900/20"
                 />
                 {colorRow === tier.id && (
                   <>
@@ -909,25 +1154,50 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
               </div>
 
               {/* Items area */}
-              <div className="flex min-h-15 flex-1 flex-wrap content-start gap-1 bg-zinc-900 p-1.5">
-                {tier.items.map((key) => {
-                  const it = itemMap.get(key);
-                  if (!it) return null;
-                  return (
-                    <ItemView
-                      key={key}
-                      item={it}
-                      selected={selectedKey === key}
-                      dimmed={drag?.key === key}
-                      label={localName(key)}
-                      onPointerDown={onItemPointerDown}
-                    />
-                  );
-                })}
+              <div data-items className="flex min-h-15 flex-1 flex-wrap content-start gap-1 bg-zinc-900 p-1.5">
+                {(() => {
+                  const showMarker = !!drag && dropAt?.tierId === tier.id;
+                  const markerIdx = dropAt?.index ?? -1;
+                  const dragImg = drag ? itemMap.get(drag.key)?.img : undefined;
+                  const marker = <DropPreview key="drop-marker" src={dragImg} size={iconSize} />;
+                  const nodes: React.ReactNode[] = [];
+                  tier.items.forEach((key, i) => {
+                    if (showMarker && i === markerIdx) nodes.push(marker);
+                    const it = itemMap.get(key);
+                    if (it) {
+                      nodes.push(
+                        <ItemView
+                          key={key}
+                          item={it}
+                          selected={selectedKey === key}
+                          dimmed={drag?.key === key}
+                          label={localName(key)}
+                          size={iconSize}
+                          showName={showNames}
+                          showElement={showElement}
+                          showClass={showClass}
+                          showRarity={showRarity}
+                          onPointerDown={onItemPointerDown}
+                        />,
+                      );
+                    }
+                  });
+                  if (showMarker && markerIdx >= tier.items.length) nodes.push(marker);
+                  return nodes;
+                })()}
               </div>
 
               {/* Row controls */}
-              <div className="flex shrink-0 flex-col items-center justify-center gap-0.5 border-l border-zinc-800 bg-zinc-900 px-1">
+              <div className="flex shrink-0 flex-col items-center justify-center gap-1 border-l border-zinc-800 bg-zinc-900 px-1.5">
+                <button
+                  type="button"
+                  onPointerDown={(e) => onRowHandlePointerDown(e, tier.id)}
+                  onClick={(e) => e.stopPropagation()}
+                  title={t('tools.tier-list-maker.drag_row') as string}
+                  className="flex h-6 w-6 cursor-grab touch-none items-center justify-center rounded text-sm text-zinc-500 transition hover:bg-zinc-700 hover:text-white"
+                >
+                  <FaGripVertical />
+                </button>
                 <RowBtn onClick={() => moveRow(idx, -1)} disabled={idx === 0} title={t('tools.tier-list-maker.move_up') as string}>
                   <FaChevronUp />
                 </RowBtn>
@@ -948,9 +1218,10 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
           );
         })}
       </div>
+      </div>{/* end tier column */}
 
-      {/* Pool */}
-      <div className="mt-6">
+      {/* Pool — side panel on desktop, stacked below on mobile */}
+      <div className="mt-6 lg:mt-0 lg:sticky lg:top-4 lg:max-h-[calc(100dvh-1.5rem)] lg:w-96 lg:shrink-0 lg:self-start lg:overflow-y-auto">
         {/* Tabs */}
         <div className="mb-3 flex flex-wrap justify-center gap-2">
           {TABS.map(({ id, count }) => (
@@ -971,6 +1242,18 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
 
         {/* Search + filters */}
         <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={t('tools.tier-list-maker.search') as string} />
+        <div className="mt-2 flex items-center justify-center gap-2">
+          <label className="text-xs text-zinc-400">{t('tools.tier-list-maker.sort')}</label>
+          <select
+            value={sort}
+            onChange={(e) => setSort(e.target.value as SortKey)}
+            className="rounded border border-zinc-700 bg-zinc-800 px-2 py-1 text-xs text-zinc-200 focus:border-filter focus:outline-none"
+          >
+            {SORT_KEYS.map((k) => (
+              <option key={k} value={k}>{t(`tools.tier-list-maker.sort_${k}` as Parameters<typeof t>[0])}</option>
+            ))}
+          </select>
+        </div>
         {tab === 'characters' && (
           <div className="mt-3 flex flex-wrap items-center justify-center gap-3">
             <div className="flex gap-1.5">
@@ -1014,6 +1297,19 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                 </FilterPill>
               ))}
             </div>
+            <div className="flex flex-wrap justify-center gap-1.5">
+              {FILTER_TAGS.map((tg) => (
+                <FilterPill
+                  key={tg}
+                  active={tagFilter.includes(tg)}
+                  onClick={() => setTagFilter((f) => (f.includes(tg) ? f.filter((x) => x !== tg) : [...f, tg]))}
+                  className="h-8 px-2"
+                  title={t(`tools.tier-list-maker.tag.${tg}` as Parameters<typeof t>[0]) as string}
+                >
+                  <span className="text-xs font-medium leading-none">{t(`tools.tier-list-maker.tag.${tg}` as Parameters<typeof t>[0])}</span>
+                </FilterPill>
+              ))}
+            </div>
           </div>
         )}
 
@@ -1025,7 +1321,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
         >
           {poolItems.length === 0 ? (
             <p className="py-6 text-sm text-zinc-500">
-              {placed.size > 0 && query.trim() === '' && elementFilter.length === 0 && classFilter.length === 0 && rarityFilter.length === 0
+              {placed.size > 0 && query.trim() === '' && elementFilter.length === 0 && classFilter.length === 0 && rarityFilter.length === 0 && tagFilter.length === 0
                 ? t('tools.tier-list-maker.empty_pool')
                 : t('tools.tier-list-maker.no_results')}
             </p>
@@ -1037,12 +1333,18 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                 selected={selectedKey === it.key}
                 dimmed={drag?.key === it.key}
                 label={localName(it.key)}
+                size={iconSize}
+                showName={showNames}
+                showElement={showElement}
+                showClass={showClass}
+                showRarity={showRarity}
                 onPointerDown={onItemPointerDown}
               />
             ))
           )}
         </div>
       </div>
+      </div>{/* end layout */}
 
       {/* Drag ghost */}
       {drag && (
@@ -1105,7 +1407,7 @@ function RowBtn({
       disabled={disabled}
       title={title}
       className={[
-        'flex h-5 w-5 items-center justify-center rounded text-[10px] transition',
+        'flex h-6 w-6 items-center justify-center rounded text-sm transition',
         disabled
           ? 'cursor-not-allowed text-zinc-700'
           : danger

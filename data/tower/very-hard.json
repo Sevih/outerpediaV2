@@ -723,6 +723,51 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_Ranger"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000041",
+                "2000039"
+              ],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options and validate the restriction.",
+                "jp": "{D/BT_STEAL_BUFF}オプションで制限を満たすこと。",
+                "kr": "{D/BT_STEAL_BUFF} 옵션으로 제한 충족.",
+                "zh": "{D/BT_STEAL_BUFF}选项并满足限制。",
+                "fr": "Options {D/BT_STEAL_BUFF} et valide la restriction."
+              }
+            },
+            {
+              "names": [
+                "2000089",
+                "2000085"
+              ],
+              "reason": {
+                "en": "{D/BT_STEAL_BUFF} options",
+                "jp": "{D/BT_STEAL_BUFF}オプション",
+                "kr": "{D/BT_STEAL_BUFF} 옵션",
+                "zh": "{D/BT_STEAL_BUFF}选项",
+                "fr": "Options {D/BT_STEAL_BUFF}"
+              }
+            },
+            {
+              "names": [
+                "2000112"
+              ],
+              "reason": {
+                "en": "{D/BT_REDISTRIBUTE_BUFF} options",
+                "jp": "{D/BT_REDISTRIBUTE_BUFF}オプション",
+                "kr": "{D/BT_REDISTRIBUTE_BUFF} 옵션",
+                "zh": "{D/BT_REDISTRIBUTE_BUFF}选项",
+                "fr": "Options {D/BT_REDISTRIBUTE_BUFF}"
+              }
+            }
+          ]
         }
       ]
     },
@@ -3927,6 +3972,29 @@
                 "2000060",
                 "2000030",
                 "2000088",
+                "2000105"
+              ],
+              "reason": {
+                "en": "Team wide {B/BT_STAT|ST_BUFF_CHANCE} buff",
+                "jp": "全体への{B/BT_STAT|ST_BUFF_CHANCE}バフ",
+                "kr": "전체 {B/BT_STAT|ST_BUFF_CHANCE} 버프",
+                "zh": "全队{B/BT_STAT|ST_BUFF_CHANCE}增益",
+                "fr": "Buff {B/BT_STAT|ST_BUFF_CHANCE} pour toute l'équipe"
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "BanLight"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000057",
+                "2000030",
+                "2000088",
+                "2000060",
                 "2000105"
               ],
               "reason": {
